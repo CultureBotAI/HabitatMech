@@ -1,0 +1,22 @@
+identifier: BTO:0000347
+label: reticulum
+definition: The second compartment of the stomach of a ruminant in which folds of
+  the mucous membrane form hexagonal cells.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- BTO:0000480
+- habitatmech:GOLD.d3869ad37f
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6395
+  source_label: Reticulum
+  source_path: Host-associated > Mammals > Digestive system > Stomach > Reticulum
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

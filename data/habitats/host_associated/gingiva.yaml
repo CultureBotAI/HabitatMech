@@ -1,0 +1,81 @@
+identifier: BTO:0000519
+label: gingiva
+definition: 'The tissue that surrounds the necks of teeth and covers the alveolar
+  parts of the jaws; broadly: the alveolar portion of a jaw with its enveloping soft
+  tissues.'
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: gingival
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: gingivas
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: gum
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000519
+  source_label: gingiva
+  assertion_count: 12
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1290995
+  source: PREGO
+  taxon_label: Treponema pedis isoM1224
+  score: 3.0
+- taxon_id: NCBITaxon:1290998
+  source: PREGO
+  taxon_label: Treponema pedis str. T M1
+  score: 3.0
+- taxon_id: NCBITaxon:1290999
+  source: PREGO
+  taxon_label: Treponema pedis str. B 683
+  score: 3.0
+- taxon_id: NCBITaxon:1291000
+  source: PREGO
+  taxon_label: Treponema pedis isoM1111
+  score: 3.0
+- taxon_id: NCBITaxon:1291001
+  source: PREGO
+  taxon_label: Treponema pedis isoE1186
+  score: 3.0
+- taxon_id: NCBITaxon:1291002
+  source: PREGO
+  taxon_label: Treponema pedis isoM1220
+  score: 3.0
+- taxon_id: NCBITaxon:1291379
+  source: PREGO
+  taxon_label: Treponema pedis str. T A4
+  score: 3.0
+- taxon_id: NCBITaxon:1292046
+  source: PREGO
+  taxon_label: Desulfobulbus sp. oral taxon 041 str. Dsb1-5
+  score: 3.0
+- taxon_id: NCBITaxon:1408286
+  source: PREGO
+  taxon_label: Parvimonas micra A293
+  score: 3.0
+- taxon_id: NCBITaxon:1679001
+  source: PREGO
+  taxon_label: Pasteurellaceae bacterium NI1060
+  score: 3.0
+- taxon_id: NCBITaxon:242619
+  source: PREGO
+  taxon_label: Porphyromonas gingivalis W83
+  score: 3.0
+- taxon_id: NCBITaxon:553184
+  source: PREGO
+  taxon_label: Lancefieldella rimae ATCC 49626
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

@@ -1,0 +1,29 @@
+identifier: ENVO:01001155
+label: astrogeological gas
+definition: An astrogeological volatile which is composed primarily of chemical compounds
+  with boiling points around those of hydrogen and helium.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Waste-gas
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+- synonym_text: gas
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:01001154
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:waste-gas
+  source_label: Waste-gas
+  mapping_predicate: skos:closeMatch
+  assertion_count: 20
+  assertion_unit: STRAIN
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

@@ -1,0 +1,29 @@
+identifier: UBERON:0010516
+label: clasper
+definition: A male anatomical structure found some groups of animals, used in mating.
+  Male cartilaginous fish have claspers formed from the posterior portion of their
+  pelvic fin which serve as intromittent organs used to channel semen into the female's
+  cloaca during mating. The act of mating in some fish including sharks usually includes
+  one of the claspers raised to allow water into the siphon through a specific orifice.
+  The clasper is then inserted into the vagina, where it opens like an umbrella to
+  anchor its position. The siphon then begins to contract expelling water and sperm.
+  Male chimaeras have cephalic claspers on their heads, which are thought to aid in
+  holding the female during mating.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0008811
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7576
+  source_label: Clasper
+  source_path: Host-associated > Fish > Reproductive system > Intromittent organ >
+    Clasper
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

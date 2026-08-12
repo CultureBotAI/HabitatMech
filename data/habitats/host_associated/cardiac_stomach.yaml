@@ -1,0 +1,26 @@
+identifier: UBERON:0008250
+label: cardiac stomach
+definition: In starfishes the cardiac stomach is connected to a pyloric stomach which
+  is located above it. Food can be brought into the stomach through the mouth or,
+  in many species, the cardiac stomach can be extended out through the mouth to digest
+  food outside the body. Suspension-feeding starfish use their tube feet to pass food
+  to the mouth.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0004921
+- habitatmech:GOLD.fe78a4c113
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7319
+  source_label: Cardiac stomach
+  source_path: 'Host-associated > Arthropoda: Crustaceans > Digestive system > Foregut
+    > Cardiac stomach'
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

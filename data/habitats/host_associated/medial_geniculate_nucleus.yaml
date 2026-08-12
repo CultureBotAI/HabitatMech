@@ -1,0 +1,57 @@
+identifier: BTO:0002670
+label: medial geniculate nucleus
+definition: The medial geniculate nucleus is a nucleus of the thalamus that acts as
+  a relay for auditory information. It receives its input from the inferior colliculus
+  and sends information out to the auditory cortex. Nucleus within the medial geniculate
+  body.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: MGN
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: medial geniculate nuclear
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: medial geniculate nuclei
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: medial geniculate nucleuses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: nuclei corporis geniculati medialis
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: nuclei corporis geniculati medialises
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: nuclei of medial geniculate bodies
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: nuclei of medial geniculate body
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0002670
+  source_label: medial geniculate nucleus
+  assertion_count: 2
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:29557
+  source: PREGO
+  taxon_label: Mycoplasmopsis gallinarum
+  score: 3.0
+- taxon_id: NCBITaxon:29561
+  source: PREGO
+  taxon_label: Mycoplasmopsis meleagridis
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

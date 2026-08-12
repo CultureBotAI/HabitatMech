@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.6e10201167
+label: Annelida
+habitat_category: HOST_ASSOCIATED
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.d3b891e82e
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:3370
+  source_label: Annelida
+  source_path: Host-associated > Annelida
+  assertion_count: 150
+  assertion_unit: ORGANISM
+  notes: 4 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

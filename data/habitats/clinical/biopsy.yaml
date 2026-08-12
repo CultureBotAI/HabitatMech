@@ -1,0 +1,17 @@
+identifier: NCIT:C15189
+label: Biopsy
+habitat_category: CLINICAL
+grounding_status: CLOSE
+mapping_status: SEEDED
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:biopsy
+  source_label: Biopsy
+  mapping_predicate: skos:closeMatch
+  assertion_count: 95
+  assertion_unit: STRAIN
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

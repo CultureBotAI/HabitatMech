@@ -1,0 +1,41 @@
+identifier: BTO:0001432
+label: vascular tissue
+definition: The supportive and conductive tissue in plants, consisting of xylem and
+  phloem.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: vascular tissues
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001432
+  source_label: vascular tissue
+  assertion_count: 4
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:190485
+  source: PREGO
+  taxon_label: Xanthomonas campestris pv. campestris str. ATCC 33913
+  score: 3.0
+- taxon_id: NCBITaxon:190486
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:383407
+  source: PREGO
+  taxon_label: Xanthomonas oryzae pv. oryzicola BLS256
+  score: 3.0
+- taxon_id: NCBITaxon:990315
+  source: PREGO
+  taxon_label: Xanthomonas campestris pv. raphani 756C
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.344beb0a43
+label: Pleural fluid
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0001087
+- UBERON:0002402
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6843
+  source_label: Pleural fluid
+  source_path: Host-associated > Mammals > Respiratory system > Pleural cavity > Pleural
+    fluid
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

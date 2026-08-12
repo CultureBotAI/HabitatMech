@@ -1,0 +1,133 @@
+identifier: BTO:0000801
+label: macrophage
+definition: Relatively long-lived phagocytic cell of mammalian tissues, derived from
+  blood monocyte. Macrophages from different sites have distinctly different properties.
+  Main types are peritoneal and alveolar macrophages, tissue macrophages (histiocytes),
+  Kupffer cells of the liver, and osteoclasts. In response to foreign materials may
+  become stimulated or activated. Macrophages play an important role in killing of
+  some bacteria, protozoa, and tumour cells, release substances that stimulate other
+  cells of the immune system, and are involved in antigen presentation. May further
+  differentiate within chronic inflammatory lesions to epithelioid cells or may fuse
+  to form foreign body giant cells or Langhans giant cells.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: macrophages
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: macrophagocyte
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: macrophagocytes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: monocyte-derived macrophage
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: monocyte-derived macrophages
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000801
+  source_label: macrophage
+  assertion_count: 22
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1055524
+  source: PREGO
+  taxon_label: Burkholderia cenocepacia H111
+  score: 3.0
+- taxon_id: NCBITaxon:1081094
+  source: PREGO
+  taxon_label: Legionella pneumophila subsp. pneumophila str. Hextuple_2q
+  score: 3.0
+- taxon_id: NCBITaxon:1081095
+  source: PREGO
+  taxon_label: Legionella pneumophila subsp. pneumophila str. Hextuple_3a
+  score: 3.0
+- taxon_id: NCBITaxon:1133849
+  source: PREGO
+  taxon_label: Nocardia brasiliensis ATCC 700358
+  score: 3.0
+- taxon_id: NCBITaxon:1212491
+  source: PREGO
+  taxon_label: Legionella fallonii LLAP-10
+  score: 3.0
+- taxon_id: NCBITaxon:1214063
+  source: PREGO
+  taxon_label: Mycobacterium intracellulare M.i.198
+  score: 3.0
+- taxon_id: NCBITaxon:1227812
+  source: PREGO
+  taxon_label: Piscirickettsia salmonis LF-89 = ATCC VR-1361
+  score: 3.0
+- taxon_id: NCBITaxon:1273539
+  source: PREGO
+  taxon_label: Streptococcus iniae IUSA1
+  score: 3.0
+- taxon_id: NCBITaxon:1385420
+  source: PREGO
+  taxon_label: Allofrancisella heilbronnii
+  score: 3.0
+- taxon_id: NCBITaxon:1392869
+  source: PREGO
+  taxon_label: Escherichia coli K1
+  score: 3.0
+- taxon_id: NCBITaxon:1660
+  source: PREGO
+  taxon_label: Schaalia odontolytica
+  score: 3.0
+- taxon_id: NCBITaxon:272624
+  source: PREGO
+  taxon_label: Legionella pneumophila subsp. pneumophila str. Philadelphia 1
+  score: 3.0
+- taxon_id: NCBITaxon:297245
+  source: PREGO
+  taxon_label: Legionella pneumophila str. Lens
+  score: 3.0
+- taxon_id: NCBITaxon:297246
+  source: PREGO
+  taxon_label: Legionella pneumophila str. Paris
+  score: 3.0
+- taxon_id: NCBITaxon:435258
+  source: PREGO
+  taxon_label: Leishmania infantum JPCM5
+  score: 3.0
+- taxon_id: NCBITaxon:446
+  source: PREGO
+  taxon_label: Legionella pneumophila
+  score: 3.0
+- taxon_id: NCBITaxon:451
+  source: PREGO
+  taxon_label: Legionella micdadei
+  score: 3.0
+- taxon_id: NCBITaxon:553480
+  source: PREGO
+  taxon_label: Photorhabdus asymbiotica subsp. asymbiotica ATCC 43949
+  score: 3.0
+- taxon_id: NCBITaxon:66976
+  source: PREGO
+  taxon_label: Legionella pneumophila serogroup 1
+  score: 3.0
+- taxon_id: NCBITaxon:68886
+  source: PREGO
+  taxon_label: Theileria orientalis
+  score: 3.0
+- taxon_id: NCBITaxon:717522
+  source: PREGO
+  taxon_label: Mycobacterium tuberculosis variant bovis BCG str. Mexico
+  score: 3.0
+- taxon_id: NCBITaxon:869728
+  source: PREGO
+  taxon_label: Burkholderia thailandensis E555
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

@@ -1,0 +1,27 @@
+identifier: ENVO:01000922
+label: animal cage
+definition: A manufactured cage which may be used to confine, contain, or protect
+  an animal.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: cage
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:01000625
+- mesh:D000076624
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7518
+  source_label: Animal cage
+  source_path: Engineered > Built environment > Animal cage
+  mapping_predicate: skos:exactMatch
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

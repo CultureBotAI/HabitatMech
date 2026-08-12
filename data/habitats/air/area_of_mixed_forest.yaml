@@ -1,0 +1,32 @@
+identifier: ENVO:01000855
+label: area of mixed forest
+definition: An area of a planet's surface which is primarily covered by a forest in
+  which the trees are a mixture between those that lose and retain their foliage despite
+  seasonal change. The surfaces of this area (including the surface of the forest
+  canopy) are in contact with an atmospheric column extending from the planetary boundary
+  layer to the planet's exosphere with little to no physical obstruction.
+definition_source: ENVO
+habitat_category: AIR
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Indoor Air
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- ENVO:00002005
+- ENVO:01001305
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:3477
+  source_label: Indoor Air
+  source_path: Environmental > Air > Indoor Air
+  mapping_predicate: skos:exactMatch
+  assertion_count: 72
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

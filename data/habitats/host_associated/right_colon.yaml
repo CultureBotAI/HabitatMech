@@ -1,0 +1,43 @@
+identifier: BTO:0000649
+label: right colon
+definition: The proximal portion of the colon, extending from the ileocecal valve
+  usually to a point proximal to the left colic flexure; it develops embryonically
+  from the terminal portion of the midgut and functions in absorption.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: proximal colon
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: proximal colonal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: proximal colons
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: right colonal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: right colons
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000649
+  source_label: right colon
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1254439
+  source: PREGO
+  taxon_label: Bifidobacterium thermophilum RBL67
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

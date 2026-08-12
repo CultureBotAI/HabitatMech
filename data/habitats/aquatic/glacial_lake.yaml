@@ -1,0 +1,24 @@
+identifier: ENVO:00000488
+label: glacial lake
+definition: A lake which is primarily composed of glacial meltwater and which fills
+  a depression formed as a result of a glacial erosion process.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00000020
+- ENVO:01001511
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4060
+  source_label: Glacial lake
+  source_path: Environmental > Aquatic > Freshwater > Ice > Glacial lake
+  mapping_predicate: skos:exactMatch
+  assertion_count: 17
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

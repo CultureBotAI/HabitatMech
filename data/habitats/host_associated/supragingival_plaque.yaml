@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.7f04a8d6b4
+label: Supragingival plaque
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0016485
+- habitatmech:GOLD.92d1e65695
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6716
+  source_label: Supragingival plaque
+  source_path: Host-associated > Mammals > Digestive system > Oral cavity > Supragingival
+    plaque
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

@@ -1,0 +1,52 @@
+identifier: BTO:0000776
+label: B-lymphocyte
+definition: Any of the lymphocytes that have antibody molecules on the surface and
+  comprise the antibody-secreting plasma cells when mature.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: B cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: B cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: B-cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: B-cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: B-lymphocytes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000775
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000776
+  source_label: B-lymphocyte
+  assertion_count: 3
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1133849
+  source: PREGO
+  taxon_label: Nocardia brasiliensis ATCC 700358
+  score: 3.0
+- taxon_id: NCBITaxon:1359
+  source: PREGO
+  taxon_label: Lactococcus cremoris
+  score: 3.0
+- taxon_id: NCBITaxon:592205
+  source: PREGO
+  taxon_label: Helicobacter pylori B38
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

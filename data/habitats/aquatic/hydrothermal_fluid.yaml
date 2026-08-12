@@ -1,0 +1,128 @@
+identifier: ENVO:01000134
+label: hydrothermal fluid
+definition: High temperature water ejected from hydrothermal vents and laden with
+  dissolved metals and minerals as a result of percolation through crustal rocks.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: hydrothermal fluids
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00002141
+source_attestations:
+- source: PREGO
+  source_id: ENVO:01000134
+  source_label: hydrothermal fluid
+  assertion_count: 99
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1919273
+  source: PREGO
+  taxon_label: Candidatus Desulfopertinax cowenii
+  score: 3.0
+- taxon_id: NCBITaxon:1934978
+  source: PREGO
+  taxon_label: Acinetobacter sp. JdFR-94
+  score: 3.0
+- taxon_id: NCBITaxon:1934979
+  source: PREGO
+  taxon_label: Archaeoglobus sp. JdFR-22
+  score: 3.0
+- taxon_id: NCBITaxon:1934980
+  source: PREGO
+  taxon_label: Archaeoglobus sp. JdFR-23
+  score: 3.0
+- taxon_id: NCBITaxon:1934981
+  source: PREGO
+  taxon_label: Archaeoglobus sp. JdFR-24
+  score: 3.0
+- taxon_id: NCBITaxon:1934982
+  source: PREGO
+  taxon_label: Archaeoglobus sp. JdFR-25
+  score: 3.0
+- taxon_id: NCBITaxon:1934983
+  source: PREGO
+  taxon_label: Archaeoglobus sp. JdFR-26
+  score: 3.0
+- taxon_id: NCBITaxon:1934984
+  source: PREGO
+  taxon_label: Archaeoglobus sp. JdFR-27
+  score: 3.0
+- taxon_id: NCBITaxon:1934985
+  source: PREGO
+  taxon_label: Archaeoglobus sp. JdFR-28
+  score: 3.0
+- taxon_id: NCBITaxon:1934986
+  source: PREGO
+  taxon_label: Archaeoglobus sp. JdFR-29
+  score: 3.0
+- taxon_id: NCBITaxon:1934987
+  source: PREGO
+  taxon_label: Archaeoglobus sp. JdFR-30
+  score: 3.0
+- taxon_id: NCBITaxon:1934988
+  source: PREGO
+  taxon_label: Archaeoglobus sp. JdFR-31
+  score: 3.0
+- taxon_id: NCBITaxon:1934989
+  source: PREGO
+  taxon_label: Archaeoglobus sp. JdFR-32
+  score: 3.0
+- taxon_id: NCBITaxon:1934990
+  source: PREGO
+  taxon_label: Archaeoglobus sp. JdFR-33
+  score: 3.0
+- taxon_id: NCBITaxon:1934991
+  source: PREGO
+  taxon_label: Archaeoglobus sp. JdFR-34
+  score: 3.0
+- taxon_id: NCBITaxon:1934992
+  source: PREGO
+  taxon_label: Archaeoglobus sp. JdFR-35
+  score: 3.0
+- taxon_id: NCBITaxon:1934993
+  source: PREGO
+  taxon_label: Archaeoglobus sp. JdFR-36
+  score: 3.0
+- taxon_id: NCBITaxon:1934994
+  source: PREGO
+  taxon_label: Archaeoglobus sp. JdFR-37
+  score: 3.0
+- taxon_id: NCBITaxon:1934995
+  source: PREGO
+  taxon_label: Archaeoglobus sp. JdFR-38
+  score: 3.0
+- taxon_id: NCBITaxon:1934996
+  source: PREGO
+  taxon_label: Archaeoglobus sp. JdFR-39
+  score: 3.0
+- taxon_id: NCBITaxon:1934997
+  source: PREGO
+  taxon_label: Archaeoglobus sp. JdFR-40
+  score: 3.0
+- taxon_id: NCBITaxon:1934998
+  source: PREGO
+  taxon_label: Archaeoglobus sp. JdFR-41
+  score: 3.0
+- taxon_id: NCBITaxon:1934999
+  source: PREGO
+  taxon_label: Cupriavidus sp. JdFR-90
+  score: 3.0
+- taxon_id: NCBITaxon:1935000
+  source: PREGO
+  taxon_label: Pseudomonas sp. JdFR-91
+  score: 3.0
+- taxon_id: NCBITaxon:1935001
+  source: PREGO
+  taxon_label: Pseudomonas sp. JdFR-92
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

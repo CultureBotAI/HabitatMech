@@ -1,0 +1,54 @@
+identifier: BTO:0003132
+label: microsporidian
+definition: Any protozoan of the order Microsporida.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: microsporidianic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: microsporidians
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0002503
+source_attestations:
+- source: PREGO
+  source_id: BTO:0003132
+  source_label: microsporidian
+  assertion_count: 6
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1178016
+  source: PREGO
+  taxon_label: Encephalitozoon romaleae SJ-2008
+  score: 3.0
+- taxon_id: NCBITaxon:1355160
+  source: PREGO
+  taxon_label: Encephalitozoon cuniculi EcunIII-L
+  score: 3.0
+- taxon_id: NCBITaxon:481877
+  source: PREGO
+  taxon_label: Enterocytozoon bieneusi H348
+  score: 3.0
+- taxon_id: NCBITaxon:578460
+  source: PREGO
+  taxon_label: Vairimorpha ceranae BRL01
+  score: 3.0
+- taxon_id: NCBITaxon:876142
+  source: PREGO
+  taxon_label: Encephalitozoon intestinalis ATCC 50506
+  score: 3.0
+- taxon_id: NCBITaxon:907965
+  source: PREGO
+  taxon_label: Encephalitozoon hellem ATCC 50504
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

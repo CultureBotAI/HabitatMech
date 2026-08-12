@@ -1,0 +1,36 @@
+identifier: BTO:0001664
+label: hepatoblastoma cell line
+definition: Hepatoblastoma is an uncommon malignant liver cancer occurring in infants
+  and children and composed of tissue resembling fetal liver cells, mature liver cells,
+  or bile duct cells. They usually present with an abdominal mass.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: hepatoblastoma cell lines
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: hepatoblastoma cell linous
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000578
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001664
+  source_label: hepatoblastoma cell line
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:316407
+  source: PREGO
+  taxon_label: Escherichia coli str. K-12 substr. W3110
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

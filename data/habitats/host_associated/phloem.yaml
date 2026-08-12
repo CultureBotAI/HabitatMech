@@ -1,0 +1,83 @@
+identifier: BTO:0001058
+label: phloem
+definition: A complex tissue in the vascular system of higher plants that consists
+  mainly of sieve tubes and elongated parenchyma cells usually with fibers and that
+  functions in translocation and in support and storage.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: phloems
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001058
+  source_label: phloem
+  assertion_count: 14
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1009856
+  source: PREGO
+  taxon_label: Buchnera aphidicola str. USDA (Myzus persicae)
+  score: 3.0
+- taxon_id: NCBITaxon:1009857
+  source: PREGO
+  taxon_label: Buchnera aphidicola str. W106 (Myzus persicae)
+  score: 3.0
+- taxon_id: NCBITaxon:1009858
+  source: PREGO
+  taxon_label: Buchnera aphidicola str. G002 (Myzus persicae)
+  score: 3.0
+- taxon_id: NCBITaxon:1009859
+  source: PREGO
+  taxon_label: Buchnera aphidicola str. F009 (Myzus persicae)
+  score: 3.0
+- taxon_id: NCBITaxon:1163751
+  source: PREGO
+  taxon_label: Candidatus Hamiltonella defensa MED (Bemisia tabaci)
+  score: 3.0
+- taxon_id: NCBITaxon:1261131
+  source: PREGO
+  taxon_label: Candidatus Liberibacter americanus str. Sao Paulo
+  score: 3.0
+- taxon_id: NCBITaxon:1265350
+  source: PREGO
+  taxon_label: Buchnera aphidicola (Aphis glycines)
+  score: 3.0
+- taxon_id: NCBITaxon:1343076
+  source: PREGO
+  taxon_label: Candidatus Karelsulcia muelleri str. Sulcia-ALF
+  score: 3.0
+- taxon_id: NCBITaxon:1343077
+  source: PREGO
+  taxon_label: Candidatus Nasuia deltocephalinicola str. NAS-ALF
+  score: 3.0
+- taxon_id: NCBITaxon:1715285
+  source: PREGO
+  taxon_label: Candidatus Providencia siddallii
+  score: 3.0
+- taxon_id: NCBITaxon:374463
+  source: PREGO
+  taxon_label: Baumannia cicadellinicola str. Hc (Homalodisca coagulata)
+  score: 3.0
+- taxon_id: NCBITaxon:374675
+  source: PREGO
+  taxon_label: Candidatus Karelsulcia muelleri str. Hc (Homalodisca coagulata)
+  score: 3.0
+- taxon_id: NCBITaxon:537021
+  source: PREGO
+  taxon_label: Candidatus Liberibacter asiaticus str. psy62
+  score: 3.0
+- taxon_id: NCBITaxon:931202
+  source: PREGO
+  taxon_label: Candidatus Liberibacter asiaticus str. Ishi-1
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

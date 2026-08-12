@@ -1,0 +1,22 @@
+identifier: habitatmech:GOLD.1930d3bfbc
+label: Outer ear
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- BTO:0002100
+- habitatmech:GOLD.81aa9dc62f
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6405
+  source_label: Outer ear
+  source_path: Host-associated > Mammals > Auditory/Hearing system > Outer ear
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 3
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

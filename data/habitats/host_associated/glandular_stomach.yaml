@@ -1,0 +1,23 @@
+identifier: BTO:0003791
+label: glandular stomach
+definition: Stomach found in horses; includes cardiac, proper gastric and pyloric
+  glandular zones.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- BTO:0001307
+- habitatmech:GOLD.d3869ad37f
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6371
+  source_label: Glandular stomach
+  source_path: Host-associated > Mammals > Digestive system > Stomach > Glandular
+    stomach
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.cb1c796cde
+label: Bone marrow
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0002371
+- habitatmech:GOLD.28cfbd7dee
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6375
+  source_label: Bone marrow
+  source_path: Host-associated > Mammals > Skeletal system > Bone > Bone marrow
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 3
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

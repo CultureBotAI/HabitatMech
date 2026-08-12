@@ -1,0 +1,23 @@
+identifier: ENVO:00002060
+label: oil sludge
+definition: A solid or gel in motor oil caused by the oil gelling or solidifying,
+  usually at temperatures lower than 100deg C.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00002176
+- habitatmech:GOLD.e2071bbb4d
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5660
+  source_label: Oil sludge
+  source_path: Engineered > Wastewater > Industrial wastewater > Petrochemical > Oil
+    sludge
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

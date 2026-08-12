@@ -1,0 +1,21 @@
+identifier: mesh:D000076624
+label: Built environment
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.2acb39dd08
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:2888
+  source_label: Built environment
+  source_path: Engineered > Built environment
+  mapping_predicate: skos:exactMatch
+  assertion_count: 282
+  assertion_unit: ORGANISM
+  notes: 4 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

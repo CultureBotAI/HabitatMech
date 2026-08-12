@@ -1,0 +1,46 @@
+identifier: ENVO:00002114
+label: chemically enriched sediment
+definition: Sediment which has increased levels of one or more chemical compounds.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: contaminated sediment
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: contaminated sediments
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00002007
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00002114
+  source_label: chemically enriched sediment
+  assertion_count: 4
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1120954
+  source: PREGO
+  taxon_label: Aestuariimicrobium kwangyangense DSM 21549
+  score: 4.0
+- taxon_id: NCBITaxon:1123501
+  source: PREGO
+  taxon_label: Wenxinia marina DSM 24838
+  score: 4.0
+- taxon_id: NCBITaxon:665038
+  source: PREGO
+  taxon_label: Breoghania corrubedonensis
+  score: 4.0
+- taxon_id: NCBITaxon:428406
+  source: PREGO
+  taxon_label: Ralstonia pickettii 12D
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

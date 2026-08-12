@@ -1,0 +1,41 @@
+identifier: UBERON:0001295
+label: endometrium
+definition: The glandular mucous membrane lining of the uterine cavity that is hormonally
+  responsive during the estrous/menstrual cycle and during pregnancy.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: tunica mucosa (endometrium)
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: tunica mucosa uteri
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: uterine endometrium
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: uterine mucosa
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: uterine mucous membrane
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0019042
+- habitatmech:GOLD.f736cbfbc5
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6314
+  source_label: Endometrium
+  source_path: 'Host-associated > Mammals: Human > Reproductive system > Uterus >
+    Endometrium'
+  mapping_predicate: skos:exactMatch
+  assertion_count: 2
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

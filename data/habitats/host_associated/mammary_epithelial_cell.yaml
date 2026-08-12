@@ -1,0 +1,39 @@
+identifier: BTO:0004300
+label: mammary epithelial cell
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: mammary epithelial cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0004300
+  source_label: mammary epithelial cell
+  assertion_count: 4
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1358
+  source: PREGO
+  taxon_label: Lactococcus lactis
+  score: 3.0
+- taxon_id: NCBITaxon:1580
+  source: PREGO
+  taxon_label: Levilactobacillus brevis
+  score: 3.0
+- taxon_id: NCBITaxon:1590
+  source: PREGO
+  taxon_label: Lactiplantibacillus plantarum
+  score: 3.0
+- taxon_id: NCBITaxon:758831
+  source: PREGO
+  taxon_label: Escherichia coli ECC-1470
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

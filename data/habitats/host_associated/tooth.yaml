@@ -1,0 +1,93 @@
+identifier: BTO:0000397
+label: tooth
+definition: '1: One of the hard bony appendages that are borne on the jaws or in many
+  of the lower vertebrates on other bones in the walls of the mouth or pharynx and
+  serve especially for the prehension and mastication of food and as weapons of offense
+  and defense. 2: Any of various usually hard and sharp processes especially about
+  the mouth of an invertebrate.'
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: tooths
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000397
+  source_label: tooth
+  assertion_count: 16
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1114965
+  source: PREGO
+  taxon_label: Streptococcus parasanguinis FW213
+  score: 3.0
+- taxon_id: NCBITaxon:1123317
+  source: PREGO
+  taxon_label: Streptococcus sobrinus DSM 20742 = ATCC 33478
+  score: 3.0
+- taxon_id: NCBITaxon:1257037
+  source: PREGO
+  taxon_label: Streptococcus mutans 5DC8
+  score: 3.0
+- taxon_id: NCBITaxon:1257038
+  source: PREGO
+  taxon_label: Streptococcus mutans KK21
+  score: 3.0
+- taxon_id: NCBITaxon:1257039
+  source: PREGO
+  taxon_label: Streptococcus mutans KK23
+  score: 3.0
+- taxon_id: NCBITaxon:1257040
+  source: PREGO
+  taxon_label: Streptococcus mutans AC4446
+  score: 3.0
+- taxon_id: NCBITaxon:1257041
+  source: PREGO
+  taxon_label: Streptococcus mutans ATCC 25175
+  score: 3.0
+- taxon_id: NCBITaxon:1257042
+  source: PREGO
+  taxon_label: Streptococcus mutans NCTC 11060
+  score: 3.0
+- taxon_id: NCBITaxon:1292046
+  source: PREGO
+  taxon_label: Desulfobulbus sp. oral taxon 041 str. Dsb1-5
+  score: 3.0
+- taxon_id: NCBITaxon:1297534
+  source: PREGO
+  taxon_label: Streptococcus oralis subsp. dentisani 7746
+  score: 3.0
+- taxon_id: NCBITaxon:1297857
+  source: PREGO
+  taxon_label: Streptococcus oralis subsp. dentisani 7747
+  score: 3.0
+- taxon_id: NCBITaxon:1408286
+  source: PREGO
+  taxon_label: Parvimonas micra A293
+  score: 3.0
+- taxon_id: NCBITaxon:210007
+  source: PREGO
+  taxon_label: Streptococcus mutans UA159
+  score: 3.0
+- taxon_id: NCBITaxon:411465
+  source: PREGO
+  taxon_label: Parvimonas micra ATCC 33270
+  score: 3.0
+- taxon_id: NCBITaxon:467705
+  source: PREGO
+  taxon_label: Streptococcus gordonii str. Challis substr. CH1
+  score: 3.0
+- taxon_id: NCBITaxon:699248
+  source: PREGO
+  taxon_label: Streptococcus ratti FA-1 = DSM 20564
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

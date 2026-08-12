@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.e29c7e3964
+label: Amniotic fluid
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0000173
+- habitatmech:GOLD.baffd7f6c7
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7618
+  source_label: Amniotic fluid
+  source_path: Host-associated > Mammals > Fetus > Fetal tissue > Amniotic fluid
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

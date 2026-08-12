@@ -1,0 +1,37 @@
+identifier: BTO:0001758
+label: ocellus
+definition: A small simple eye, found in many invertebrates, usually consisting of
+  a few sensory cells and a single lens.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: ocellal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: ocelli
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: ocelluses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000439
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001758
+  source_label: ocellus
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:7719
+  source: PREGO
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

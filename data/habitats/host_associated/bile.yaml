@@ -1,0 +1,45 @@
+identifier: BTO:0000121
+label: bile
+definition: A fluid secreted by the liver and poured into the small intestine via
+  the bile ducts. Important constituents are conjugated bile salts, cholesterol, phospholipid,
+  bilirubin diglucuronide, and electrolytes. Bile is alkaline due to its bicarbonate
+  content, is golden brown to greenish yellow in color, and has a bitter taste. Bile
+  secreted by the liver is concentrated in the gallbladder.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: fel
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: gall
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000346
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000121
+  source_label: bile
+  assertion_count: 3
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:282199
+  source: PREGO
+  taxon_label: Nereida ignava
+  score: 3.0
+- taxon_id: NCBITaxon:440512
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:470
+  source: PREGO
+  taxon_label: Acinetobacter baumannii
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

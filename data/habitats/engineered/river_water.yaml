@@ -1,0 +1,20 @@
+identifier: ENVO:01000599
+label: river water
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:01000620
+- ENVO:03605006
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6457
+  source_label: River water
+  source_path: Engineered > Artificial ecosystem > Mesocosm > River water
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

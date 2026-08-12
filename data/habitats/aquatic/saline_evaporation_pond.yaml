@@ -1,0 +1,108 @@
+identifier: ENVO:00000055
+label: saline evaporation pond
+definition: A pond which is 1) shallow, 2) man-made, and 3) designed to produce salt
+  from seawater through evaporation.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Salt pond
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: lake
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: saline evaporation ponds
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: salt evaporation pond
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: salt evaporation pond
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: salt evaporation ponds
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: salt pond
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: salt pond
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: salt ponds
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: salt ponds
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: salt pondses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: saltern
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: saltern
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: salterns
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00000033
+- habitatmech:GOLD.115edc36f8
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7709
+  source_label: Salt pond
+  source_path: Environmental > Aquatic > Marine > Intertidal zone > Salt pond
+  mapping_predicate: skos:closeMatch
+  assertion_count: 10
+  assertion_unit: ORGANISM
+- source: PREGO
+  source_id: ENVO:00000055
+  source_label: saline evaporation pond
+  assertion_count: 8
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1121463
+  source: PREGO
+  taxon_label: Desulfobaculum senezii DSM 8436
+  score: 3.0
+- taxon_id: NCBITaxon:1121942
+  source: PREGO
+  taxon_label: Modicisalibacter ilicicola DSM 19980
+  score: 3.0
+- taxon_id: NCBITaxon:1123236
+  source: PREGO
+  taxon_label: Salinimonas chungwhensis DSM 16280
+  score: 3.0
+- taxon_id: NCBITaxon:1385511
+  source: PREGO
+  taxon_label: Pontibacillus marinus BH030004 = DSM 16465
+  score: 3.0
+- taxon_id: NCBITaxon:184067
+  source: PREGO
+  taxon_label: Kushneria indalinina
+  score: 3.0
+- taxon_id: NCBITaxon:257501
+  source: PREGO
+  taxon_label: Candidatus Chlorotrichoides halophilum
+  score: 3.0
+- taxon_id: NCBITaxon:290398
+  source: PREGO
+  taxon_label: Chromohalobacter israelensis DSM 3043
+  score: 3.0
+- taxon_id: NCBITaxon:469382
+  source: PREGO
+  taxon_label: Halogeometricum borinquense DSM 11551
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'

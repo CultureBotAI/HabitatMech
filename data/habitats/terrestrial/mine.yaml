@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.17a7055549
+label: Mine
+habitat_category: TERRESTRIAL
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00000076
+- ENVO:00001998
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4218
+  source_label: Mine
+  source_path: Environmental > Terrestrial > Soil > Unclassified > Mine
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 9
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

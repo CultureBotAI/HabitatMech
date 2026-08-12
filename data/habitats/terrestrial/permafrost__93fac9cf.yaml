@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.6821e96263
+label: Permafrost
+habitat_category: TERRESTRIAL
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00000134
+- ENVO:00001998
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4206
+  source_label: Permafrost
+  source_path: Environmental > Terrestrial > Soil > Unclassified > Permafrost
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 67
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

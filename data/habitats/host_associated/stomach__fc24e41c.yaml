@@ -1,0 +1,43 @@
+identifier: UBERON:0000945
+label: stomach
+definition: An expanded region of the vertebrate alimentary tract that serves as a
+  food storage compartment and digestive organ. A stomach is lined, in whole or in
+  part by a glandular epithelium.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Gaster
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: anterior intestine
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: gaster
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: mesenteron
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: stomach chamber
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: ventriculus
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0004921
+- UBERON:0010039
+- habitatmech:GOLD.93f0f7b66d
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7252
+  source_label: Gaster
+  source_path: 'Host-associated > Arthropoda: Insects > Abdomen > Metasoma > Gaster'
+  mapping_predicate: skos:closeMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

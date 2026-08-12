@@ -1,0 +1,150 @@
+identifier: ENVO:01000228
+label: tropical moist broadleaf forest biome
+definition: A tropical moist broadleaf forest in which dominant ecological communities
+  have reached their climax successional state.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: rain forest
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: rain forests
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: rainforest
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: rainforest biome
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: rainforest biome
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: rainforests
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: tropical moist broadleaf forest
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: tropical moist broadleaf forests
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:01000200
+- ENVO:01001800
+source_attestations:
+- source: PREGO
+  source_id: ENVO:01000228
+  source_label: tropical moist broadleaf forest biome
+  assertion_count: 267
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:104245
+  source: PREGO
+  taxon_label: Clavaria zollingeri
+  score: 4.0
+- taxon_id: NCBITaxon:105420
+  source: PREGO
+  taxon_label: Streptacidiphilus neutrinimicus
+  score: 4.0
+- taxon_id: NCBITaxon:106111
+  source: PREGO
+  taxon_label: Pedobacter sp. KP-2
+  score: 4.0
+- taxon_id: NCBITaxon:1069
+  source: PREGO
+  taxon_label: Rhodomicrobium vannielii
+  score: 4.0
+- taxon_id: NCBITaxon:1074
+  source: PREGO
+  taxon_label: Rhodoblastus acidophilus
+  score: 4.0
+- taxon_id: NCBITaxon:108015
+  source: PREGO
+  taxon_label: Bradyrhizobium yuanmingense
+  score: 4.0
+- taxon_id: NCBITaxon:1108
+  source: PREGO
+  taxon_label: Chloroflexus aurantiacus
+  score: 4.0
+- taxon_id: NCBITaxon:111805
+  source: PREGO
+  taxon_label: Actinomadura pelletieri
+  score: 4.0
+- taxon_id: NCBITaxon:112235
+  source: PREGO
+  taxon_label: Neochlamydia hartmannellae
+  score: 4.0
+- taxon_id: NCBITaxon:112248
+  source: PREGO
+  taxon_label: Seinonella peptonophila
+  score: 4.0
+- taxon_id: NCBITaxon:114715
+  source: PREGO
+  taxon_label: uncultured Ralstonia sp.
+  score: 4.0
+- taxon_id: NCBITaxon:121608
+  source: PREGO
+  taxon_label: Paenibacillus koleovorans
+  score: 4.0
+- taxon_id: NCBITaxon:128
+  source: PREGO
+  taxon_label: Isosphaera pallida
+  score: 4.0
+- taxon_id: NCBITaxon:129542
+  source: PREGO
+  taxon_label: Placynthiella icmalea
+  score: 4.0
+- taxon_id: NCBITaxon:134355
+  source: PREGO
+  taxon_label: Ceramothyrium carniolicum
+  score: 4.0
+- taxon_id: NCBITaxon:1371
+  source: PREGO
+  taxon_label: Marinococcus halophilus
+  score: 4.0
+- taxon_id: NCBITaxon:1391
+  source: PREGO
+  taxon_label: Aneurinibacillus aneurinilyticus
+  score: 4.0
+- taxon_id: NCBITaxon:1396
+  source: PREGO
+  taxon_label: Bacillus cereus
+  score: 4.0
+- taxon_id: NCBITaxon:1397
+  source: PREGO
+  taxon_label: Niallia circulans
+  score: 4.0
+- taxon_id: NCBITaxon:1406
+  source: PREGO
+  taxon_label: Paenibacillus polymyxa
+  score: 4.0
+- taxon_id: NCBITaxon:1409
+  source: PREGO
+  taxon_label: 'Bacillus sp. (in: firmicutes)'
+  score: 4.0
+- taxon_id: NCBITaxon:1451
+  source: PREGO
+  taxon_label: Paenibacillus amylolyticus
+  score: 4.0
+- taxon_id: NCBITaxon:147
+  source: PREGO
+  taxon_label: Spirochaeta aurantia
+  score: 4.0
+- taxon_id: NCBITaxon:1510
+  source: PREGO
+  taxon_label: Thermoclostridium stercorarium
+  score: 4.0
+- taxon_id: NCBITaxon:153026
+  source: PREGO
+  taxon_label: Desulforegula conservatrix
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

@@ -1,0 +1,132 @@
+identifier: ENVO:01000206
+label: temperate
+definition: A temperate condition is an environmental condition in which an environmental
+  system receives less solar irradiance than those with subpolar conditions, but greater
+  than those with subtropical conditions.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: temperates
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: tepid climate
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:01000203
+source_attestations:
+- source: PREGO
+  source_id: ENVO:01000206
+  source_label: temperate
+  assertion_count: 2623
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:104176
+  source: PREGO
+  taxon_label: Oscillochloris trichoides
+  score: 4.0
+- taxon_id: NCBITaxon:104245
+  source: PREGO
+  taxon_label: Clavaria zollingeri
+  score: 4.0
+- taxon_id: NCBITaxon:106592
+  source: PREGO
+  taxon_label: Ensifer adhaerens
+  score: 4.0
+- taxon_id: NCBITaxon:1085
+  source: PREGO
+  taxon_label: Rhodospirillum rubrum
+  score: 4.0
+- taxon_id: NCBITaxon:108560
+  source: PREGO
+  taxon_label: Pezicula cinnamomea
+  score: 4.0
+- taxon_id: NCBITaxon:108571
+  source: PREGO
+  taxon_label: Phlyctema vagabunda
+  score: 4.0
+- taxon_id: NCBITaxon:110639
+  source: PREGO
+  taxon_label: Arthrobacter sp. 'SMCC G984'
+  score: 4.0
+- taxon_id: NCBITaxon:114628
+  source: PREGO
+  taxon_label: Alkaliphilus transvaalensis
+  score: 4.0
+- taxon_id: NCBITaxon:114707
+  source: PREGO
+  taxon_label: uncultured Pseudomonas sp.
+  score: 4.0
+- taxon_id: NCBITaxon:114715
+  source: PREGO
+  taxon_label: uncultured Ralstonia sp.
+  score: 4.0
+- taxon_id: NCBITaxon:114814
+  source: PREGO
+  taxon_label: Xylaria cubensis
+  score: 4.0
+- taxon_id: NCBITaxon:126157
+  source: PREGO
+  taxon_label: Psychrobacillus psychrodurans
+  score: 4.0
+- taxon_id: NCBITaxon:1264
+  source: PREGO
+  taxon_label: Hominimerdicola alba
+  score: 4.0
+- taxon_id: NCBITaxon:1265
+  source: PREGO
+  taxon_label: Ruminococcus flavefaciens
+  score: 4.0
+- taxon_id: NCBITaxon:1270
+  source: PREGO
+  taxon_label: Micrococcus luteus
+  score: 4.0
+- taxon_id: NCBITaxon:128
+  source: PREGO
+  taxon_label: Isosphaera pallida
+  score: 4.0
+- taxon_id: NCBITaxon:1282
+  source: PREGO
+  taxon_label: Staphylococcus epidermidis
+  score: 4.0
+- taxon_id: NCBITaxon:129958
+  source: PREGO
+  taxon_label: Carboxydothermus hydrogenoformans
+  score: 4.0
+- taxon_id: NCBITaxon:132577
+  source: PREGO
+  taxon_label: Lecanicillium fusisporum
+  score: 4.0
+- taxon_id: NCBITaxon:134561
+  source: PREGO
+  taxon_label: Nocardioides sp. C190
+  score: 4.0
+- taxon_id: NCBITaxon:1396
+  source: PREGO
+  taxon_label: Bacillus cereus
+  score: 4.0
+- taxon_id: NCBITaxon:1397
+  source: PREGO
+  taxon_label: Niallia circulans
+  score: 4.0
+- taxon_id: NCBITaxon:1399
+  source: PREGO
+  taxon_label: Cytobacillus firmus
+  score: 4.0
+- taxon_id: NCBITaxon:1402
+  source: PREGO
+  taxon_label: Bacillus licheniformis
+  score: 4.0
+- taxon_id: NCBITaxon:1404
+  source: PREGO
+  taxon_label: Priestia megaterium
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

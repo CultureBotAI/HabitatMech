@@ -1,0 +1,33 @@
+identifier: UBERON:0004907
+label: lower digestive tract
+definition: The region of the digestive tract extending from the beginning of the
+  intestines to the anus[GO - gut definition].
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: gut
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: lower GI tract
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: lower gastrointestinal tract
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0004921
+- habitatmech:GOLD.617e6352cb
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7207
+  source_label: Lower digestive tract
+  source_path: 'Host-associated > Arthropoda: Insects > Digestive system > Gut > Lower
+    digestive tract'
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

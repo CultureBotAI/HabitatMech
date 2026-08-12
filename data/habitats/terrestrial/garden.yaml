@@ -1,0 +1,54 @@
+identifier: ENVO:00000011
+label: garden
+definition: An enclosure for displaying selected plant or animal life.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: PARK
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: cropland
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: gardens
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: park
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00000002
+- ENVO:00001998
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5773
+  source_label: Garden
+  source_path: Environmental > Terrestrial > Soil > Garden
+  mapping_predicate: skos:exactMatch
+  assertion_count: 5014
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: PREGO
+  source_id: ENVO:00000011
+  source_label: garden
+  assertion_count: 2
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:693444
+  source: PREGO
+  taxon_label: Enterobacteriaceae bacterium strain FGI 57
+  score: 3.0
+- taxon_id: NCBITaxon:91360
+  source: PREGO
+  taxon_label: Desulforhopalus singaporensis
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'

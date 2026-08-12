@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.d1f4d0cde1
+label: Ceca
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0001153
+- habitatmech:GOLD.b091b80314
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6885
+  source_label: Ceca
+  source_path: Host-associated > Birds > Digestive system > Large intestine > Ceca
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 407
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

@@ -1,0 +1,105 @@
+identifier: BTO:0000047
+label: adrenal gland
+definition: Either of a pair of complex endocrine organs near the anterior medial
+  border of the kidney consisting of a mesodermal cortex that produces glucocorticoid,
+  mineralocorticoid, and androgenic hormones and an ectodermal medulla that produces
+  epinephrine and norepinephrine.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: adrenal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: adrenal capsular
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: adrenal capsule
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: adrenal capsules
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: adrenal glandic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: adrenal glands
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: adrenalic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: adrenals
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: atrabiliary capsular
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: atrabiliary capsule
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: atrabiliary capsules
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: epinephros
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: epinephroses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: glandula suprarenalis
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: glandula suprarenalises
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: paranephros
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: paranephroses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: suprarenal capsular
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: suprarenal capsule
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: suprarenal capsules
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: suprarenal gland
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: suprarenal glandic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: suprarenal glands
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0001488
+- BTO:0001491
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000047
+  source_label: adrenal gland
+  assertion_count: 2
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:243365
+  source: PREGO
+  taxon_label: Chromobacterium violaceum ATCC 12472
+  score: 3.0
+- taxon_id: NCBITaxon:331112
+  source: PREGO
+  taxon_label: Escherichia coli HS
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

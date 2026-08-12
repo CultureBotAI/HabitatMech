@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.5298ffd023
+label: Biofilm
+habitat_category: AQUATIC
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00002034
+- habitatmech:GOLD.d61fa6c9ee
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5446
+  source_label: Biofilm
+  source_path: Environmental > Aquatic > Freshwater > Aquifer > Biofilm
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

@@ -1,0 +1,24 @@
+identifier: UBERON:2000165
+label: inferior lobe
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: inferior lobes
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0002616
+- habitatmech:GOLD.5bbc13545b
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6630
+  source_label: Inferior lobe
+  source_path: 'Host-associated > Mammals: Human > Respiratory system > Lung > Inferior
+    lobe'
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

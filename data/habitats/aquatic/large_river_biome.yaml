@@ -1,0 +1,133 @@
+identifier: ENVO:00000887
+label: large river biome
+definition: A freshwater river biome which is determined by a large river.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Large river
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: Large rivers
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: rivers
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: riverses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:01000253
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00000887
+  source_label: large river biome
+  assertion_count: 1775
+  assertion_unit: TAXON
+  score: 2.5246
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:2850
+  source: PREGO
+  taxon_label: Phaeodactylum tricornutum
+  score: 2.5246
+- taxon_id: NCBITaxon:452638
+  source: PREGO
+  taxon_label: Polynucleobacter necessarius STIR1
+  score: 2.45337
+- taxon_id: NCBITaxon:535289
+  source: PREGO
+  taxon_label: '[Acidovorax] ebreus TPSY'
+  score: 2.44284
+- taxon_id: NCBITaxon:312153
+  source: PREGO
+  taxon_label: Polynucleobacter asymbioticus QLW-P1DMWA-1
+  score: 2.44056
+- taxon_id: NCBITaxon:563045
+  source: PREGO
+  taxon_label: Comamonas testosteroni S44
+  score: 2.43453
+- taxon_id: NCBITaxon:232721
+  source: PREGO
+  taxon_label: Acidovorax sp. JS42
+  score: 2.43405
+- taxon_id: NCBITaxon:159087
+  source: PREGO
+  taxon_label: Dechloromonas aromatica RCB
+  score: 2.43246
+- taxon_id: NCBITaxon:279714
+  source: PREGO
+  taxon_label: Pseudogulbenkiania ferrooxidans 2002
+  score: 2.43161
+- taxon_id: NCBITaxon:375286
+  source: PREGO
+  taxon_label: Janthinobacterium sp. Marseille
+  score: 2.43154
+- taxon_id: NCBITaxon:746360
+  source: PREGO
+  taxon_label: Pseudomonas fluorescens WH6
+  score: 2.43138
+- taxon_id: NCBITaxon:398578
+  source: PREGO
+  taxon_label: Delftia acidovorans SPH-1
+  score: 2.43098
+- taxon_id: NCBITaxon:573060
+  source: PREGO
+  taxon_label: Acidovorax delafieldii 2AN
+  score: 2.4308
+- taxon_id: NCBITaxon:1218948
+  source: PREGO
+  taxon_label: Pseudomonas fluorescens PF5
+  score: 2.42859
+- taxon_id: NCBITaxon:610380
+  source: PREGO
+  score: 2.42813
+- taxon_id: NCBITaxon:205922
+  source: PREGO
+  taxon_label: Pseudomonas fluorescens Pf0-1
+  score: 2.42784
+- taxon_id: NCBITaxon:3055
+  source: PREGO
+  score: 2.42688
+- taxon_id: NCBITaxon:1058
+  source: PREGO
+  taxon_label: Thiocapsa roseopersicina
+  score: 2.4267
+- taxon_id: NCBITaxon:39947
+  source: PREGO
+  score: 2.42642
+- taxon_id: NCBITaxon:371731
+  source: PREGO
+  taxon_label: Rhodobacter ferrooxidans
+  score: 2.42641
+- taxon_id: NCBITaxon:204773
+  source: PREGO
+  taxon_label: Herminiimonas arsenicoxydans
+  score: 2.42597
+- taxon_id: NCBITaxon:292415
+  source: PREGO
+  taxon_label: Thiobacillus denitrificans ATCC 25259
+  score: 2.4255
+- taxon_id: NCBITaxon:710696
+  source: PREGO
+  taxon_label: Intrasporangium calvum DSM 43043
+  score: 2.42547
+- taxon_id: NCBITaxon:666681
+  source: PREGO
+  taxon_label: Methylotenera versatilis 301
+  score: 2.42497
+- taxon_id: NCBITaxon:365044
+  source: PREGO
+  taxon_label: Polaromonas naphthalenivorans CJ2
+  score: 2.42322
+- taxon_id: NCBITaxon:643561
+  source: PREGO
+  taxon_label: Paracidovorax avenae ATCC 19860
+  score: 2.42302
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

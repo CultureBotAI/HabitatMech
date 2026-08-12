@@ -1,0 +1,23 @@
+identifier: ENVO:00005772
+label: orchard soil
+definition: Soil in which trees from an orchard grow.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00001998
+- ENVO:00005749
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5414
+  source_label: Orchard soil
+  source_path: Environmental > Terrestrial > Soil > Unclassified > Orchard soil
+  mapping_predicate: skos:exactMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

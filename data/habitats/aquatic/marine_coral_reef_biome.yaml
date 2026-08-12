@@ -1,0 +1,108 @@
+identifier: ENVO:01000049
+label: marine coral reef biome
+definition: The marine coral reef biome comprises constructional wave-resistant entities
+  which are primarily built by corals and are often cemented together. The growth
+  of these structures is aided by zooxanthellae, algae that are symbiotic with the
+  reef-building corals.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: marine coral reef
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: marine coral reefs
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:01000029
+source_attestations:
+- source: PREGO
+  source_id: ENVO:01000049
+  source_label: marine coral reef biome
+  assertion_count: 500
+  assertion_unit: TAXON
+  score: 2.43853
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:46745
+  source: PREGO
+  score: 2.43853
+- taxon_id: NCBITaxon:48499
+  source: PREGO
+  score: 2.43688
+- taxon_id: NCBITaxon:214988
+  source: PREGO
+  score: 2.14973
+- taxon_id: NCBITaxon:3068
+  source: PREGO
+  score: 2.00812
+- taxon_id: NCBITaxon:247026
+  source: PREGO
+  score: 1.99061
+- taxon_id: NCBITaxon:7070
+  source: PREGO
+  score: 1.985
+- taxon_id: NCBITaxon:610380
+  source: PREGO
+  score: 1.98408
+- taxon_id: NCBITaxon:639602
+  source: PREGO
+  score: 1.9818
+- taxon_id: NCBITaxon:6334
+  source: PREGO
+  score: 1.98028
+- taxon_id: NCBITaxon:7209
+  source: PREGO
+  score: 1.97932
+- taxon_id: NCBITaxon:104421
+  source: PREGO
+  score: 1.97901
+- taxon_id: NCBITaxon:6087
+  source: PREGO
+  score: 1.97824
+- taxon_id: NCBITaxon:7425
+  source: PREGO
+  score: 1.97395
+- taxon_id: NCBITaxon:8090
+  source: PREGO
+  score: 1.96917
+- taxon_id: NCBITaxon:7029
+  source: PREGO
+  score: 1.96237
+- taxon_id: NCBITaxon:6669
+  source: PREGO
+  score: 1.96221
+- taxon_id: NCBITaxon:13686
+  source: PREGO
+  score: 1.95994
+- taxon_id: NCBITaxon:69293
+  source: PREGO
+  score: 1.95887
+- taxon_id: NCBITaxon:7668
+  source: PREGO
+  score: 1.95433
+- taxon_id: NCBITaxon:6238
+  source: PREGO
+  score: 1.95287
+- taxon_id: NCBITaxon:45351
+  source: PREGO
+  score: 1.94339
+- taxon_id: NCBITaxon:7719
+  source: PREGO
+  score: 1.94118
+- taxon_id: NCBITaxon:39947
+  source: PREGO
+  score: 1.93796
+- taxon_id: NCBITaxon:46687
+  source: PREGO
+  score: 1.92414
+- taxon_id: NCBITaxon:46704
+  source: PREGO
+  score: 1.92414
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

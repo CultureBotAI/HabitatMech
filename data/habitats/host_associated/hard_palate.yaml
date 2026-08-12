@@ -1,0 +1,28 @@
+identifier: UBERON:0003216
+label: hard palate
+definition: Anterior portion of the palate consisting of bone and mucous membranes
+  [GO]. The hard palate is formed from bony processes of the maxilla, premaxilla and
+  palatine bone [Kardong].
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: palatum durum
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0034921
+- habitatmech:GOLD.99880772e1
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:3918
+  source_label: Hard palate
+  source_path: 'Host-associated > Mammals: Human > Digestive system > Oral cavity
+    > Hard palate'
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

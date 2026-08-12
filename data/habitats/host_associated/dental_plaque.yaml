@@ -1,0 +1,78 @@
+identifier: BTO:0000338
+label: dental plaque
+definition: A soft, thin film of food debris, mucin, and dead epithelial cells deposited
+  on the teeth, providing the medium for the growth of various bacteria. The main
+  inorganic components are calcium and phosphorus, with small amounts of magnesium,
+  potassium, and sodium; the organic matrix consists of polysaccharides, proteins,
+  carbohydrates, lipids, and other components. Plaque plays an important etiologic
+  role in the development of dental caries and periodontal and gingival diseases and
+  provides the base for the development of materia alba; calcified plaque forms dental
+  calculus.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: bacterial plaque
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: bacterial plaques
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: dental plaques
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000338
+  source_label: dental plaque
+  assertion_count: 10
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1403829
+  source: PREGO
+  taxon_label: Streptococcus mutans PKUSS-HG01
+  score: 3.0
+- taxon_id: NCBITaxon:1404260
+  source: PREGO
+  taxon_label: Streptococcus mutans PKUSS-LG01
+  score: 3.0
+- taxon_id: NCBITaxon:1408287
+  source: PREGO
+  taxon_label: Fusobacterium nucleatum W1481
+  score: 3.0
+- taxon_id: NCBITaxon:1759399
+  source: PREGO
+  taxon_label: Streptococcus sp. A12
+  score: 3.0
+- taxon_id: NCBITaxon:1851395
+  source: PREGO
+  taxon_label: Actinomyces sp. Chiba101
+  score: 3.0
+- taxon_id: NCBITaxon:243275
+  source: PREGO
+  taxon_label: Treponema denticola ATCC 35405
+  score: 3.0
+- taxon_id: NCBITaxon:29466
+  source: PREGO
+  taxon_label: Veillonella parvula
+  score: 3.0
+- taxon_id: NCBITaxon:35703
+  source: PREGO
+  taxon_label: Citrobacter amalonaticus
+  score: 3.0
+- taxon_id: NCBITaxon:388919
+  source: PREGO
+  taxon_label: Streptococcus sanguinis SK36
+  score: 3.0
+- taxon_id: NCBITaxon:467705
+  source: PREGO
+  taxon_label: Streptococcus gordonii str. Challis substr. CH1
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

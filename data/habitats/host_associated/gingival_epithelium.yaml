@@ -1,0 +1,36 @@
+identifier: BTO:0004998
+label: gingival epithelium
+definition: A stratified squamous epithelium consisting of a basal layer; it is keratinized
+  or parakeratinized.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: gingival epithelia
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: gingival epithelial
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: gingival epitheliums
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0004998
+  source_label: gingival epithelium
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:190304
+  source: PREGO
+  taxon_label: Fusobacterium nucleatum subsp. nucleatum ATCC 25586
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

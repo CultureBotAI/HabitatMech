@@ -1,0 +1,147 @@
+identifier: BTO:0001190
+label: root nodule
+definition: Gall-like structures on the roots of legumes that contain symbiotic nitrogen-fixing
+  bacteria.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: nodular
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: nodule
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: nodules
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: root nodular
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: root nodules
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: root tuberclar
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: root tubercle
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: root tubercles
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001190
+  source_label: root nodule
+  assertion_count: 91
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:110321
+  source: PREGO
+  taxon_label: Sinorhizobium medicae
+  score: 4.0
+- taxon_id: NCBITaxon:314237
+  source: PREGO
+  taxon_label: Paramesorhizobium leguminum
+  score: 4.0
+- taxon_id: NCBITaxon:1028800
+  source: PREGO
+  taxon_label: Neorhizobium galegae bv. orientalis str. HAMBI 540
+  score: 3.0
+- taxon_id: NCBITaxon:1028801
+  source: PREGO
+  taxon_label: Neorhizobium galegae bv. officinalis bv. officinalis str. HAMBI 1141
+  score: 3.0
+- taxon_id: NCBITaxon:102891
+  source: PREGO
+  taxon_label: Frankia sp. ACN1ag
+  score: 3.0
+- taxon_id: NCBITaxon:1038869
+  source: PREGO
+  taxon_label: Paraburkholderia mimosarum LMG 23256 = NBRC 106338
+  score: 3.0
+- taxon_id: NCBITaxon:1041150
+  source: PREGO
+  taxon_label: Sinorhizobium medicae WSM244
+  score: 3.0
+- taxon_id: NCBITaxon:1041151
+  source: PREGO
+  taxon_label: Sinorhizobium meliloti 4H41
+  score: 3.0
+- taxon_id: NCBITaxon:1055526
+  source: PREGO
+  taxon_label: Candidatus Paraburkholderia kirkii UZHbot1
+  score: 3.0
+- taxon_id: NCBITaxon:106370
+  source: PREGO
+  taxon_label: Frankia casuarinae
+  score: 3.0
+- taxon_id: NCBITaxon:1069530
+  source: PREGO
+  taxon_label: Candidatus Paraburkholderia schumanniana
+  score: 3.0
+- taxon_id: NCBITaxon:1074049
+  source: PREGO
+  taxon_label: Candidatus Burkholderia crenata
+  score: 3.0
+- taxon_id: NCBITaxon:1082932
+  source: PREGO
+  taxon_label: Agrobacterium tumefaciens CCNWGS0286
+  score: 3.0
+- taxon_id: NCBITaxon:1082933
+  source: PREGO
+  taxon_label: Mesorhizobium amorphae CCNWGS0123
+  score: 3.0
+- taxon_id: NCBITaxon:1090375
+  source: PREGO
+  taxon_label: Candidatus Burkholderia pumila
+  score: 3.0
+- taxon_id: NCBITaxon:1090379
+  source: PREGO
+  taxon_label: Candidatus Burkholderia brachyanthoides
+  score: 3.0
+- taxon_id: NCBITaxon:1090471
+  source: PREGO
+  taxon_label: Candidatus Burkholderia humilis
+  score: 3.0
+- taxon_id: NCBITaxon:1107882
+  source: PREGO
+  taxon_label: Mesorhizobium alhagi CCNWXJ12-2
+  score: 3.0
+- taxon_id: NCBITaxon:1117943
+  source: PREGO
+  taxon_label: Sinorhizobium fredii HH103
+  score: 3.0
+- taxon_id: NCBITaxon:1125980
+  source: PREGO
+  taxon_label: Vibrio harveyi CAIM 1792
+  score: 3.0
+- taxon_id: NCBITaxon:1126627
+  source: PREGO
+  taxon_label: Bradyrhizobium sp. DOA9
+  score: 3.0
+- taxon_id: NCBITaxon:1132836
+  source: PREGO
+  taxon_label: Rhizobium sp. CCGE 510
+  score: 3.0
+- taxon_id: NCBITaxon:114615
+  source: PREGO
+  taxon_label: Bradyrhizobium sp. ORS 278
+  score: 3.0
+- taxon_id: NCBITaxon:1150864
+  source: PREGO
+  taxon_label: Micromonospora lupini str. Lupac 08
+  score: 3.0
+- taxon_id: NCBITaxon:115808
+  source: PREGO
+  taxon_label: Bradyrhizobium sp. ORS 285
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

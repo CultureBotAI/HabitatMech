@@ -1,0 +1,22 @@
+identifier: habitatmech:GOLD.fe4f95287e
+label: Cerebrospinal fluid
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0001359
+- habitatmech:GOLD.066547cb98
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6128
+  source_label: Cerebrospinal fluid
+  source_path: 'Host-associated > Mammals: Human > Nervous system > Subarachnoid space
+    > Cerebrospinal fluid'
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 174
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

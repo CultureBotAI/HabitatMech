@@ -1,0 +1,32 @@
+identifier: BTO:0004628
+label: aortic valve
+definition: One of the four valves in the heart, this valve is situated at exit of
+  the left ventricle of the heart where the aorta begins. The aortic valve lets blood
+  from the left ventricle be pumped up into the aorta but prevents blood once it is
+  in the aorta from returning to the heart.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: aortic valves
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0004628
+  source_label: aortic valve
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1235440
+  source: PREGO
+  taxon_label: Staphylococcus epidermidis 12142587
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

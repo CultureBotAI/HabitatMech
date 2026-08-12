@@ -1,0 +1,45 @@
+identifier: BTO:0001060
+label: photoreceptor cell
+definition: A specialized cell type in a multicellular organism that is sensitive
+  to light. This definition excludes single-celled organisms, but includes non-eye
+  receptors, such as snake infra-red detectors or photosensitive pineal gland cells.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: photoreceptor
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: photoreceptor cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: photoreceptors
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001060
+  source_label: photoreceptor cell
+  assertion_count: 3
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1188
+  source: PREGO
+  taxon_label: Tolypothrix sp. PCC 7601
+  score: 3.0
+- taxon_id: NCBITaxon:1751286
+  source: PREGO
+  taxon_label: Nostoc sp. NIES-3756
+  score: 3.0
+- taxon_id: NCBITaxon:340177
+  source: PREGO
+  taxon_label: Chlorobium chlorochromatii CaD3
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

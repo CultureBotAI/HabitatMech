@@ -1,0 +1,94 @@
+identifier: BTO:0000662
+label: nasopharynx
+definition: The upper part of the throat behind the nose. An opening on each side
+  of the nasopharynx leads into the ear.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Nasenrachenraa
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: Nasenrachenraal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: Nasenrachenraum
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: Nasenrachenraums
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: nasopharynxes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000662
+  source_label: nasopharynx
+  assertion_count: 14
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1261125
+  source: PREGO
+  taxon_label: Mannheimia haemolytica serotype 6 str. H23
+  score: 3.0
+- taxon_id: NCBITaxon:1266729
+  source: PREGO
+  taxon_label: Bordetella holmesii F627
+  score: 3.0
+- taxon_id: NCBITaxon:1281885
+  source: PREGO
+  taxon_label: Bordetella holmesii H558
+  score: 3.0
+- taxon_id: NCBITaxon:1314
+  source: PREGO
+  taxon_label: Streptococcus pyogenes
+  score: 3.0
+- taxon_id: NCBITaxon:1315307
+  source: PREGO
+  taxon_label: Streptococcus pneumoniae MNZ11b
+  score: 3.0
+- taxon_id: NCBITaxon:1315308
+  source: PREGO
+  taxon_label: Streptococcus pneumoniae MNZ14
+  score: 3.0
+- taxon_id: NCBITaxon:1315309
+  source: PREGO
+  taxon_label: Streptococcus pneumoniae MNZ37
+  score: 3.0
+- taxon_id: NCBITaxon:1315310
+  source: PREGO
+  taxon_label: Streptococcus pneumoniae MNZ41
+  score: 3.0
+- taxon_id: NCBITaxon:1315311
+  source: PREGO
+  taxon_label: Streptococcus pneumoniae MNZ85
+  score: 3.0
+- taxon_id: NCBITaxon:272831
+  source: PREGO
+  taxon_label: Neisseria meningitidis FAM18
+  score: 3.0
+- taxon_id: NCBITaxon:386891
+  source: PREGO
+  taxon_label: Moraxella bovoculi
+  score: 3.0
+- taxon_id: NCBITaxon:480
+  source: PREGO
+  taxon_label: Moraxella catarrhalis
+  score: 3.0
+- taxon_id: NCBITaxon:546263
+  source: PREGO
+  taxon_label: Neisseria elongata subsp. glycolytica ATCC 29315
+  score: 3.0
+- taxon_id: NCBITaxon:75985
+  source: PREGO
+  taxon_label: Mannheimia haemolytica
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

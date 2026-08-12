@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.7aa9e7da9a
+label: Fen
+habitat_category: TERRESTRIAL
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00000232
+- ENVO:00005774
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5804
+  source_label: Fen
+  source_path: Environmental > Terrestrial > Soil > Peat > Fen
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

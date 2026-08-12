@@ -1,0 +1,33 @@
+identifier: UBERON:0010152
+label: skin mucus
+definition: A mucous secretion that is produced by glands in the epidermis.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Epidermal mucus
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: epidermal mucus
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: skin mucous
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0000912
+- habitatmech:GOLD.92e3c832eb
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6921
+  source_label: Epidermal mucus
+  source_path: Host-associated > Fish > Integumentary system > Skin > Epidermal mucus
+  mapping_predicate: skos:closeMatch
+  assertion_count: 7
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

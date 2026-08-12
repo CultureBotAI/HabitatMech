@@ -1,0 +1,17 @@
+identifier: NCIT:C48957
+label: Cooling-tower
+habitat_category: CLINICAL
+grounding_status: CLOSE
+mapping_status: SEEDED
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:cooling-tower
+  source_label: Cooling-tower
+  mapping_predicate: skos:closeMatch
+  assertion_count: 26
+  assertion_unit: STRAIN
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

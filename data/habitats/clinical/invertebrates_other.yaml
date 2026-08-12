@@ -1,0 +1,27 @@
+identifier: NCIT:C17649
+label: Invertebrates-Other
+habitat_category: CLINICAL
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Rodentia-Other
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:invertebrates-other
+  source_label: Invertebrates-Other
+  mapping_predicate: skos:closeMatch
+  assertion_count: 596
+  assertion_unit: STRAIN
+- source: BACDIVE
+  source_id: bacdive.isolation_source:rodentia-other
+  source_label: Rodentia-Other
+  mapping_predicate: skos:closeMatch
+  assertion_count: 97
+  assertion_unit: STRAIN
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

@@ -1,0 +1,44 @@
+identifier: BTO:0002656
+label: sickle cell
+definition: An erythrocyte shaped like a sickle or crescent owing to the presence
+  of hemoglobin S, seen in sickle cell anemia and other sickle cell diseases.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: drepanocyte
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: drepanocytes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: meniscocyte
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: meniscocytes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: sickle cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000424
+source_attestations:
+- source: PREGO
+  source_id: BTO:0002656
+  source_label: sickle cell
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1172205
+  source: PREGO
+  taxon_label: Bordetella holmesii 44057
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

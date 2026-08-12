@@ -1,0 +1,93 @@
+identifier: BTO:0001158
+label: rectum
+definition: The terminal part of the intestine from the sigmoid flexure to the anus.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: intestinum recta
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: intestinum rectal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: intestinum rectum
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: intestinum rectums
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: recta
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: rectal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: rectums
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001158
+  source_label: rectum
+  assertion_count: 14
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1131757
+  source: PREGO
+  taxon_label: Pseudomonas aeruginosa MPAO1/P1
+  score: 3.0
+- taxon_id: NCBITaxon:1131758
+  source: PREGO
+  taxon_label: Pseudomonas aeruginosa MPAO1/P2
+  score: 3.0
+- taxon_id: NCBITaxon:364106
+  source: PREGO
+  taxon_label: Escherichia coli UTI89
+  score: 3.0
+- taxon_id: NCBITaxon:422214
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:422215
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:422217
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:422218
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:422219
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:422220
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:470
+  source: PREGO
+  taxon_label: Acinetobacter baumannii
+  score: 3.0
+- taxon_id: NCBITaxon:573
+  source: PREGO
+  taxon_label: Klebsiella pneumoniae
+  score: 3.0
+- taxon_id: NCBITaxon:666
+  source: PREGO
+  taxon_label: Vibrio cholerae
+  score: 3.0
+- taxon_id: NCBITaxon:873127
+  source: PREGO
+  taxon_label: Enterococcus faecium E4453
+  score: 3.0
+- taxon_id: NCBITaxon:933356
+  source: PREGO
+  taxon_label: Enterococcus faecium E4452
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

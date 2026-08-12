@@ -1,0 +1,125 @@
+identifier: ENVO:00005778
+label: tropical soil
+definition: Soil which is part of a tropical environment.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: tropical soils
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00001998
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00005778
+  source_label: tropical soil
+  assertion_count: 29
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:1275
+  source: PREGO
+  taxon_label: Kocuria rosea
+  score: 4.0
+- taxon_id: NCBITaxon:1404
+  source: PREGO
+  taxon_label: Priestia megaterium
+  score: 4.0
+- taxon_id: NCBITaxon:156977
+  source: PREGO
+  taxon_label: Microbacterium resistens
+  score: 4.0
+- taxon_id: NCBITaxon:162426
+  source: PREGO
+  taxon_label: Microbacterium hominis
+  score: 4.0
+- taxon_id: NCBITaxon:1710
+  source: PREGO
+  taxon_label: Cellulosimicrobium cellulans
+  score: 4.0
+- taxon_id: NCBITaxon:1713
+  source: PREGO
+  taxon_label: Oerskovia turbata
+  score: 4.0
+- taxon_id: NCBITaxon:173764
+  source: PREGO
+  taxon_label: Cytophaga sp. MBIC01539
+  score: 4.0
+- taxon_id: NCBITaxon:196162
+  source: PREGO
+  taxon_label: Nocardioides sp. JS614
+  score: 4.0
+- taxon_id: NCBITaxon:213071
+  source: PREGO
+  taxon_label: Nocardioides sp. SP12
+  score: 4.0
+- taxon_id: NCBITaxon:28454
+  source: PREGO
+  taxon_label: Sphingobacterium multivorum
+  score: 4.0
+- taxon_id: NCBITaxon:29345
+  source: PREGO
+  taxon_label: Sedimentibacter hydroxybenzoicus
+  score: 4.0
+- taxon_id: NCBITaxon:29549
+  source: PREGO
+  taxon_label: Rhodothermus marinus
+  score: 4.0
+- taxon_id: NCBITaxon:330214
+  source: PREGO
+  taxon_label: Nitrospira defluvii
+  score: 4.0
+- taxon_id: NCBITaxon:35761
+  source: PREGO
+  taxon_label: Nocardioides sp.
+  score: 4.0
+- taxon_id: NCBITaxon:36987
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:37330
+  source: PREGO
+  taxon_label: Nocardia nova
+  score: 4.0
+- taxon_id: NCBITaxon:385067
+  source: PREGO
+  taxon_label: Bacillus sp. N2a
+  score: 4.0
+- taxon_id: NCBITaxon:389348
+  source: PREGO
+  taxon_label: Candidatus Protochlamydia naegleriophila
+  score: 4.0
+- taxon_id: NCBITaxon:43671
+  source: PREGO
+  taxon_label: Actinotalea fermentans
+  score: 4.0
+- taxon_id: NCBITaxon:445973
+  source: PREGO
+  taxon_label: Intestinibacter bartlettii DSM 16795
+  score: 4.0
+- taxon_id: NCBITaxon:4577
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:469383
+  source: PREGO
+  taxon_label: Conexibacter woesei DSM 14684
+  score: 4.0
+- taxon_id: NCBITaxon:485371
+  source: PREGO
+  taxon_label: Bacillus sp. FSL_h8473
+  score: 4.0
+- taxon_id: NCBITaxon:548579
+  source: PREGO
+  taxon_label: Isoptericola jiangsuensis
+  score: 4.0
+- taxon_id: NCBITaxon:60443
+  source: PREGO
+  taxon_label: Terrabacter tumescens
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

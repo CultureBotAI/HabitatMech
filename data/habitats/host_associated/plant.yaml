@@ -1,0 +1,147 @@
+identifier: BTO:0001481
+label: plant
+definition: Any of a kingdom (Plantae) of living things typically lacking locomotive
+  movement or obvious nervous or sensory organs and possessing cellulose cell walls.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Pflanze
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: Pflanzes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: plantae
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: plantaes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: plantic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: plants
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: viridiplantae
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: viridiplantaes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000000
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001481
+  source_label: plant
+  assertion_count: 3150
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:10
+  source: PREGO
+  taxon_label: Cellvibrio
+  score: 4.0
+- taxon_id: NCBITaxon:1001994
+  source: PREGO
+  taxon_label: Nitrosarchaeum koreense MY1
+  score: 4.0
+- taxon_id: NCBITaxon:1004
+  source: PREGO
+  taxon_label: Chitinophaga sancti
+  score: 4.0
+- taxon_id: NCBITaxon:1005038
+  source: PREGO
+  taxon_label: Fimbriimonas
+  score: 4.0
+- taxon_id: NCBITaxon:1011
+  source: PREGO
+  taxon_label: Sporocytophaga
+  score: 4.0
+- taxon_id: NCBITaxon:101489
+  source: PREGO
+  taxon_label: Xylanimonas pachnodae
+  score: 4.0
+- taxon_id: NCBITaxon:102234
+  source: PREGO
+  taxon_label: Cyanobacterium
+  score: 4.0
+- taxon_id: NCBITaxon:102897
+  source: PREGO
+  taxon_label: Parafrankia sp. EUN1f
+  score: 4.0
+- taxon_id: NCBITaxon:1032526
+  source: PREGO
+  taxon_label: Pedosphaera
+  score: 4.0
+- taxon_id: NCBITaxon:1033992
+  source: PREGO
+  taxon_label: Ectopseudomonas oleovorans MOIL14HWK12
+  score: 4.0
+- taxon_id: NCBITaxon:1033993
+  source: PREGO
+  taxon_label: Pseudomonas sp. MOIL14HWK12:I1
+  score: 4.0
+- taxon_id: NCBITaxon:1033994
+  source: PREGO
+  taxon_label: Pseudomonas sp. MOIL14HWK12:I2
+  score: 4.0
+- taxon_id: NCBITaxon:1034377
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:1035309
+  source: PREGO
+  taxon_label: Ceratocystis fimbriata CBS 114723
+  score: 4.0
+- taxon_id: NCBITaxon:103723
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:103728
+  source: PREGO
+  taxon_label: Actinokineospora diospyrosa
+  score: 4.0
+- taxon_id: NCBITaxon:1038858
+  source: PREGO
+  taxon_label: Azorhizobium doebereinerae UFLA1-100
+  score: 4.0
+- taxon_id: NCBITaxon:1038859
+  source: PREGO
+  taxon_label: Bradyrhizobium murdochi
+  score: 4.0
+- taxon_id: NCBITaxon:1038860
+  source: PREGO
+  taxon_label: Bradyrhizobium elkanii WSM2783
+  score: 4.0
+- taxon_id: NCBITaxon:1038861
+  source: PREGO
+  taxon_label: Bradyrhizobium japonicum USDA 122
+  score: 4.0
+- taxon_id: NCBITaxon:1038862
+  source: PREGO
+  taxon_label: Bradyrhizobium japonicum USDA 124
+  score: 4.0
+- taxon_id: NCBITaxon:1038863
+  source: PREGO
+  taxon_label: Bradyrhizobium japonicum USDA 135
+  score: 4.0
+- taxon_id: NCBITaxon:1038864
+  source: PREGO
+  taxon_label: Bradyrhizobium ottawense USDA 4
+  score: 4.0
+- taxon_id: NCBITaxon:1038866
+  source: PREGO
+  taxon_label: Bradyrhizobium sp. WSM2793
+  score: 4.0
+- taxon_id: NCBITaxon:1038867
+  source: PREGO
+  taxon_label: Bradyrhizobium sp. WSM3983
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

@@ -1,0 +1,51 @@
+identifier: BTO:0000536
+label: gracilis muscle
+definition: The Gracilis is the most superficial muscle on the medial side of the
+  thigh. It is thin and flattened, broad above, narrow and tapering below. It arises
+  by a thin aponeurosis from the anterior margins of the lower half of the symphysis
+  pubis and the upper half of the pubic arch. The fibers run vertically downward,
+  and end in a rounded tendon, which passes behind the medial condyle of the femur,
+  curves around the medial condyle of the tibia, where it becomes flattened, and is
+  inserted into the upper part of the medial surface of the body of the tibia, below
+  the condyle.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: gracilis
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: gracilis musclar
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: gracilis muscles
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: gracilises
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0001367
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000536
+  source_label: gracilis muscle
+  assertion_count: 2
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1266370
+  source: PREGO
+  taxon_label: Nitrospina gracilis 3/211
+  score: 3.0
+- taxon_id: NCBITaxon:382638
+  source: PREGO
+  taxon_label: Helicobacter acinonychis str. Sheeba
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

@@ -1,0 +1,23 @@
+identifier: habitatmech:GOLD.89cf14e129
+label: Mammary gland
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0001911
+- habitatmech:GOLD.dc86c8917c
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6119
+  source_label: Mammary gland
+  source_path: 'Host-associated > Mammals: Human > Integumentary system > Mammary
+    gland'
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 4
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

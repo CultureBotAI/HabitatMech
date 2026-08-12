@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.cc5b244380
+label: Brine
+habitat_category: AQUATIC
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00003044
+- habitatmech:GOLD.713c7f352a
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5372
+  source_label: Brine
+  source_path: Environmental > Aquatic > Non-marine Saline and Alkaline > Lake > Brine
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 100
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.2127bae21d
+label: Eustachian tube
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0002393
+- habitatmech:GOLD.51e593a6a4
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6641
+  source_label: Eustachian tube
+  source_path: 'Host-associated > Mammals: Human > Auditory/Hearing system > Middle
+    ear > Eustachian tube'
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

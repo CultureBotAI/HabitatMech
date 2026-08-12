@@ -1,0 +1,28 @@
+identifier: FOODON:03530206
+label: food production
+definition: A planned process involving the rearing, manufacture or distribution of
+  food material.
+definition_source: FOODON
+habitat_category: FOOD
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: production area
+  synonym_type: EXACT_SYNONYM
+  source: FOODON
+parent_habitats:
+- habitatmech:GOLD.2acb39dd08
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:2885
+  source_label: Food production
+  source_path: Engineered > Food production
+  mapping_predicate: skos:exactMatch
+  assertion_count: 4402
+  assertion_unit: ORGANISM
+  notes: 4 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

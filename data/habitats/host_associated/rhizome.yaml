@@ -1,0 +1,26 @@
+identifier: BTO:0001181
+label: rhizome
+definition: A somewhat elongate usually horizontal subterranean plant stem that is
+  often thickened by deposits of reserve food material, produces shoots above and
+  roots below, and is distinguished from a true root in possessing buds, nodes, and
+  usually scalelike leaves.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.1b21002a97
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:3607
+  source_label: Rhizome
+  source_path: Host-associated > Plants > Rhizome
+  mapping_predicate: skos:exactMatch
+  assertion_count: 130
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

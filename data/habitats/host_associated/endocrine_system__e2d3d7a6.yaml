@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.d275fc9ccd
+label: Endocrine system
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0000949
+- habitatmech:GOLD.3d529a667e
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7592
+  source_label: Endocrine system
+  source_path: Host-associated > Fish > Endocrine system
+  mapping_predicate: skos:narrowMatch
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

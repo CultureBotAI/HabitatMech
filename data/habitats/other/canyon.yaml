@@ -1,0 +1,101 @@
+identifier: ENVO:00000169
+label: canyon
+definition: Relatively narrow, deep depression with steep sides, the bottom of which
+  generally has a continuous slope.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: barranca
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: barranca
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: barrancal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: barrancas
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: canyonal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: canyons
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: chasm
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: defilar
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: defile
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: defile
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: defiles
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: flume (natural)
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: flume (natural)
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: gap
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: gorge
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: gorge
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: gorges
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: gulch
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: quebrada
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: quebrada
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: quebradal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: quebradas
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: ravine
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: valley
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00000100
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00000169
+  source_label: canyon
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1469607
+  source: PREGO
+  taxon_label: '[Scytonema hofmanni] UTEX 2349'
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

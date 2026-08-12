@@ -1,0 +1,108 @@
+identifier: ENVO:00000477
+label: mount
+definition: A mountain or a hill.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: cerrito
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: cerrito
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: cerritoes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: cerro
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: cerro
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: cerroes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: dome
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: dome
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: hillock
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: hillocks
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: inselberg
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: inselbergs
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: knob
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: knoll
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: knolls
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: koppje
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: koppje
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: koppjes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: monadnock
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: mounts
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00000176
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00000477
+  source_label: mount
+  assertion_count: 6
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1120973
+  source: PREGO
+  taxon_label: Effusibacillus pohliae DSM 22757
+  score: 3.0
+- taxon_id: NCBITaxon:1121938
+  source: PREGO
+  taxon_label: Halobacillus kuroshimensis DSM 18393
+  score: 3.0
+- taxon_id: NCBITaxon:294699
+  source: PREGO
+  taxon_label: Anoxybacteroides amylolyticum
+  score: 3.0
+- taxon_id: NCBITaxon:563040
+  source: PREGO
+  taxon_label: Sulfurimonas autotrophica DSM 16294
+  score: 3.0
+- taxon_id: NCBITaxon:588319
+  source: PREGO
+  taxon_label: Palaeococcus ferrophilus DSM 13482
+  score: 3.0
+- taxon_id: NCBITaxon:937777
+  source: PREGO
+  taxon_label: Deinococcus peraridilitoris DSM 19664
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

@@ -1,0 +1,27 @@
+identifier: BTO:0000912
+label: nasal mucosa
+definition: The mucosa, or mucous membrane, is a type of tissue that lines the nasal
+  cavity. Mucous membranes are usually moist tissues that are bathed by secretions
+  such as in the nose.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- BTO:0000419
+- BTO:0000973
+- habitatmech:GOLD.bcb2f8b7f3
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6336
+  source_label: Nasal mucosa
+  source_path: 'Host-associated > Mammals: Human > Respiratory system > Nasal cavity
+    > Nasal mucosa'
+  mapping_predicate: skos:exactMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

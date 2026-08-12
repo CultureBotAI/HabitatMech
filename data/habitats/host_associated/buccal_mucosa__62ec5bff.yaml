@@ -1,0 +1,22 @@
+identifier: habitatmech:GOLD.4caaf1fb4f
+label: Buccal mucosa
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0006956
+- habitatmech:GOLD.92d1e65695
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4110
+  source_label: Buccal mucosa
+  source_path: Host-associated > Mammals > Digestive system > Oral cavity > Buccal
+    mucosa
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 2
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

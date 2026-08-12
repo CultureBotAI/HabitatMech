@@ -1,0 +1,22 @@
+identifier: habitatmech:GOLD.6bda0871e2
+label: Large intestine
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0000059
+- habitatmech:GOLD.c8e85f3c84
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:3660
+  source_label: Large intestine
+  source_path: Host-associated > Mammals > Digestive system > Large intestine
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 37
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

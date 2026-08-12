@@ -1,0 +1,22 @@
+identifier: habitatmech:GOLD.b4dcdc3c3b
+label: Plastic
+habitat_category: ENGINEERED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:06105101
+- habitatmech:GOLD.7dd45e072b
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8335
+  source_label: Plastic
+  source_path: Engineered > Industrial production > Engineered product > Material
+    > Plastic
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 30
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

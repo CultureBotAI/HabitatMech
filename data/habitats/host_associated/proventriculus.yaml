@@ -1,0 +1,22 @@
+identifier: UBERON:0007357
+label: proventriculus
+definition: The glandular or true stomach of a bird that is situated between the crop
+  and gizzard.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0011953
+- habitatmech:GOLD.7c20efa06b
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7431
+  source_label: Proventriculus
+  source_path: Host-associated > Birds > Digestive system > Stomach > Proventriculus
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

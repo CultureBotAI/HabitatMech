@@ -1,0 +1,133 @@
+identifier: ENVO:01000199
+label: mediterranean forest biome
+definition: A mediterranean forest in which dominant ecological communities have reached
+  their climax successional state.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: mediterranean forest
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: mediterranean forests
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:01000174
+- ENVO:01001791
+- ENVO:01001833
+source_attestations:
+- source: PREGO
+  source_id: ENVO:01000199
+  source_label: mediterranean forest biome
+  assertion_count: 124
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:102862
+  source: PREGO
+  taxon_label: Proteus penneri
+  score: 4.0
+- taxon_id: NCBITaxon:104245
+  source: PREGO
+  taxon_label: Clavaria zollingeri
+  score: 4.0
+- taxon_id: NCBITaxon:106111
+  source: PREGO
+  taxon_label: Pedobacter sp. KP-2
+  score: 4.0
+- taxon_id: NCBITaxon:1085
+  source: PREGO
+  taxon_label: Rhodospirillum rubrum
+  score: 4.0
+- taxon_id: NCBITaxon:114707
+  source: PREGO
+  taxon_label: uncultured Pseudomonas sp.
+  score: 4.0
+- taxon_id: NCBITaxon:114715
+  source: PREGO
+  taxon_label: uncultured Ralstonia sp.
+  score: 4.0
+- taxon_id: NCBITaxon:1396
+  source: PREGO
+  taxon_label: Bacillus cereus
+  score: 4.0
+- taxon_id: NCBITaxon:1404
+  source: PREGO
+  taxon_label: Priestia megaterium
+  score: 4.0
+- taxon_id: NCBITaxon:1406
+  source: PREGO
+  taxon_label: Paenibacillus polymyxa
+  score: 4.0
+- taxon_id: NCBITaxon:1409
+  source: PREGO
+  taxon_label: 'Bacillus sp. (in: firmicutes)'
+  score: 4.0
+- taxon_id: NCBITaxon:1423814
+  source: PREGO
+  taxon_label: Limosilactobacillus vaginalis DSM 5837 = ATCC 49540
+  score: 4.0
+- taxon_id: NCBITaxon:1463164
+  source: PREGO
+  taxon_label: Klebsiella quasipneumoniae subsp. similipneumoniae
+  score: 4.0
+- taxon_id: NCBITaxon:155567
+  source: PREGO
+  taxon_label: uncultured Rhizobium sp.
+  score: 4.0
+- taxon_id: NCBITaxon:158627
+  source: PREGO
+  taxon_label: Pseudomonas graminis
+  score: 4.0
+- taxon_id: NCBITaxon:158751
+  source: PREGO
+  taxon_label: uncultured Acidovorax sp.
+  score: 4.0
+- taxon_id: NCBITaxon:1747
+  source: PREGO
+  taxon_label: Cutibacterium acnes
+  score: 4.0
+- taxon_id: NCBITaxon:1769
+  source: PREGO
+  taxon_label: Mycobacterium leprae
+  score: 4.0
+- taxon_id: NCBITaxon:182690
+  source: PREGO
+  taxon_label: uncultured Achromobacter sp.
+  score: 4.0
+- taxon_id: NCBITaxon:199684
+  source: PREGO
+  taxon_label: uncultured Bradyrhizobium sp.
+  score: 4.0
+- taxon_id: NCBITaxon:231024
+  source: PREGO
+  taxon_label: Streptomyces africanus
+  score: 4.0
+- taxon_id: NCBITaxon:235279
+  source: PREGO
+  taxon_label: Helicobacter hepaticus ATCC 51449
+  score: 4.0
+- taxon_id: NCBITaxon:238
+  source: PREGO
+  taxon_label: Elizabethkingia meningoseptica
+  score: 4.0
+- taxon_id: NCBITaxon:239
+  source: PREGO
+  taxon_label: Flavobacterium sp.
+  score: 4.0
+- taxon_id: NCBITaxon:243835
+  source: PREGO
+  taxon_label: Stenotrophomonas sp. PAMU-2.32
+  score: 4.0
+- taxon_id: NCBITaxon:266940
+  source: PREGO
+  taxon_label: Kineococcus radiotolerans SRS30216 = ATCC BAA-149
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

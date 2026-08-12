@@ -1,0 +1,124 @@
+identifier: ENVO:00002121
+label: alkaline salt lake
+definition: A saline lake which has a high pH.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: alkaline salt lakes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: soda lake
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: soda lake
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: soda lakes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00000019
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00002121
+  source_label: alkaline salt lake
+  assertion_count: 22
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1069448
+  source: PREGO
+  taxon_label: Nitriliruptor alkaliphilus DSM 45188
+  score: 3.0
+- taxon_id: NCBITaxon:1121087
+  source: PREGO
+  taxon_label: Alkalicoccus chagannorensis DSM 18086
+  score: 3.0
+- taxon_id: NCBITaxon:1121915
+  source: PREGO
+  taxon_label: Geoalkalibacter ferrihydriticus DSM 17813
+  score: 3.0
+- taxon_id: NCBITaxon:1122130
+  source: PREGO
+  taxon_label: Jonesia quinghaiensis DSM 15701
+  score: 3.0
+- taxon_id: NCBITaxon:1122209
+  source: PREGO
+  taxon_label: Marinospirillum alkaliphilum DSM 21637
+  score: 3.0
+- taxon_id: NCBITaxon:1123231
+  source: PREGO
+  taxon_label: Lacicoccus alkaliphilus DSM 16010
+  score: 3.0
+- taxon_id: NCBITaxon:1123239
+  source: PREGO
+  taxon_label: Salsuginibacillus kocurii DSM 18087
+  score: 3.0
+- taxon_id: NCBITaxon:121821
+  source: PREGO
+  taxon_label: Roseinatronobacter thiooxidans
+  score: 3.0
+- taxon_id: NCBITaxon:1408424
+  source: PREGO
+  taxon_label: Alkalihalobacillus bogoriensis ATCC BAA-922
+  score: 3.0
+- taxon_id: NCBITaxon:320502
+  source: PREGO
+  taxon_label: Acetivibrio alkalicellulosi
+  score: 3.0
+- taxon_id: NCBITaxon:393762
+  source: PREGO
+  taxon_label: Natronincola ferrireducens
+  score: 3.0
+- taxon_id: NCBITaxon:396595
+  source: PREGO
+  taxon_label: Thioalkalivibrio sp. K90mix
+  score: 3.0
+- taxon_id: NCBITaxon:426128
+  source: PREGO
+  taxon_label: Natronincola peptidivorans
+  score: 3.0
+- taxon_id: NCBITaxon:441209
+  source: PREGO
+  taxon_label: Roseinatronobacter bogoriensis subsp. barguzinensis
+  score: 3.0
+- taxon_id: NCBITaxon:442899
+  source: PREGO
+  taxon_label: Halolactibacillus alkaliphilus
+  score: 3.0
+- taxon_id: NCBITaxon:517424
+  source: PREGO
+  taxon_label: Salsuginibacillus halophilus
+  score: 3.0
+- taxon_id: NCBITaxon:555088
+  source: PREGO
+  taxon_label: Dethiobacter alkaliphilus AHT 1
+  score: 3.0
+- taxon_id: NCBITaxon:555779
+  source: PREGO
+  taxon_label: Desulfonatronospira thiodismutans ASO3-1
+  score: 3.0
+- taxon_id: NCBITaxon:694430
+  source: PREGO
+  taxon_label: Natronococcus occultus SP4
+  score: 3.0
+- taxon_id: NCBITaxon:889378
+  source: PREGO
+  taxon_label: Spirochaeta africana DSM 8902
+  score: 3.0
+- taxon_id: NCBITaxon:927658
+  source: PREGO
+  taxon_label: Alkaliflexus imshenetskii DSM 15055
+  score: 3.0
+- taxon_id: NCBITaxon:942938
+  source: PREGO
+  taxon_label: Alkalispirochaeta alkalica DSM 8900
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

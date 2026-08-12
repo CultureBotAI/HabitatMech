@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.f12405f4d4
+label: Rectum
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0001052
+- habitatmech:GOLD.b091b80314
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6906
+  source_label: Rectum
+  source_path: Host-associated > Birds > Digestive system > Large intestine > Rectum
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 17
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

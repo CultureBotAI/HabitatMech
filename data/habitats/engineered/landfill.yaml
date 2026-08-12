@@ -1,0 +1,86 @@
+identifier: ENVO:00000533
+label: landfill
+definition: A depression which contains objects and materials discarded by humans
+  or their technologies.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Deponie
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: discarica
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: disposal site
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: disposal site
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: disposal sites
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: garbage dump
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: landfills
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: rubbish dump
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: vertedero
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: 垃圾掩埋場
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00000309
+- ENVO:01001884
+- mesh:D062611
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:3513
+  source_label: Landfill
+  source_path: Engineered > Solid waste > Landfill
+  mapping_predicate: skos:exactMatch
+  assertion_count: 30
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: PREGO
+  source_id: ENVO:00000533
+  source_label: landfill
+  assertion_count: 5
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1132443
+  source: PREGO
+  taxon_label: Methylosarcina fibrata AML-C10
+  score: 4.0
+- taxon_id: NCBITaxon:1385515
+  source: PREGO
+  taxon_label: Lysobacter defluvii IMMIB APB-9 = DSM 18482
+  score: 4.0
+- taxon_id: NCBITaxon:1549639
+  source: PREGO
+  taxon_label: Rufibacter quisquiliarum
+  score: 4.0
+- taxon_id: NCBITaxon:51173
+  source: PREGO
+  taxon_label: Ureibacillus thermosphaericus
+  score: 4.0
+- taxon_id: NCBITaxon:266265
+  source: PREGO
+  taxon_label: Paraburkholderia xenovorans LB400
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'

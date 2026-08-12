@@ -1,0 +1,36 @@
+identifier: ENVO:00002235
+label: cambisol
+definition: Cambisols combine soils with at least an incipient subsurface soil formation.
+  Transformation of parent material is evident from structure formation and mostly
+  brownish discoloration, increasing clay percentage, and/or carbonate removal.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: cambisolic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: cambisols
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00001998
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00002235
+  source_label: cambisol
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:395965
+  source: PREGO
+  taxon_label: Methylocella silvestris BL2
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

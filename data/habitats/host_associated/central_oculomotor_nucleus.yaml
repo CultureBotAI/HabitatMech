@@ -1,0 +1,40 @@
+identifier: UBERON:0002960
+label: central oculomotor nucleus
+habitat_category: HOST_ASSOCIATED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: C3
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: central nucleus of perlia
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: nucleus nervi oculomotorii centralis
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: nucleus of perlia
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: perlia nucleus of oculomotor nerve
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: spitzka's nucleus
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0006331
+- UBERON:0007414
+- UBERON:0009661
+- habitatmech:GOLD.d3869ad37f
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6701
+  source_label: C3
+  source_path: Host-associated > Mammals > Digestive system > Stomach > C3
+  mapping_predicate: skos:closeMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

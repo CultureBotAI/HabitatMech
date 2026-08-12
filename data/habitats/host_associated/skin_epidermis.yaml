@@ -1,0 +1,47 @@
+identifier: UBERON:0001003
+label: skin epidermis
+definition: The outer epithelial layer of the skin that is superficial to the dermis.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Epidermis
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: Skin,-Nail,-Hair
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+- synonym_text: epidermis
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: skin
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: vertebrate epidermis
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0007376
+- UBERON:3000961
+- habitatmech:GOLD.4b37ab4b76
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:skin,-nail,-hair
+  source_label: Skin,-Nail,-Hair
+  mapping_predicate: skos:closeMatch
+  assertion_count: 260
+  assertion_unit: STRAIN
+- source: GOLD
+  source_id: gold.ecosystem:6313
+  source_label: Epidermis
+  source_path: 'Host-associated > Mammals: Human > Integumentary system > Skin > Epidermis'
+  mapping_predicate: skos:exactMatch
+  assertion_count: 2
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD. Grounding:
+    EXACT.'

@@ -1,0 +1,45 @@
+identifier: UBERON:0002542
+label: scale
+definition: A small rigid plate that grows out of an animal's skin to provide protection.
+  In lepidopteran (butterfly and moth) species, scales are plates on the surface of
+  the insect wing, and provide coloration. Scales are quite common and have evolved
+  multiple times with varying structure and function.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Scales
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: scale (sensu Metazoa)
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: scale tissue
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: scales
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0003102
+- habitatmech:GOLD.56e0776270
+- habitatmech:GOLD.d980919c41
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6736
+  source_label: Scales
+  source_path: Host-associated > Mammals > Integumentary system > Scales
+  mapping_predicate: skos:closeMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: GOLD
+  source_id: gold.ecosystem:7545
+  source_label: Scale
+  source_path: Host-associated > Fish > Integumentary system > Scale
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

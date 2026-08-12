@@ -1,0 +1,25 @@
+identifier: ENVO:00003903
+label: aviation fuel
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: jet fuel
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00002985
+- habitatmech:GOLD.74bb2a619a
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5563
+  source_label: Aviation fuel
+  source_path: Engineered > Industrial production > Engineered product > Aviation
+    fuel
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

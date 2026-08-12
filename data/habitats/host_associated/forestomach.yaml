@@ -1,0 +1,42 @@
+identifier: BTO:0000480
+label: forestomach
+definition: Any of the first three stomachs of a ruminant, i.e., the rumen, reticulum,
+  or omasum.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: forestomaches
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: forestomachic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0001307
+- habitatmech:GOLD.d3869ad37f
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6370
+  source_label: Forestomach
+  source_path: Host-associated > Mammals > Digestive system > Stomach > Forestomach
+  mapping_predicate: skos:exactMatch
+- source: PREGO
+  source_id: BTO:0000480
+  source_label: forestomach
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1392836
+  source: PREGO
+  taxon_label: Lachnospiraceae bacterium TWA4
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'

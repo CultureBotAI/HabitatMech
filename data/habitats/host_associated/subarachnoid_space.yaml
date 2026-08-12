@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.066547cb98
+label: Subarachnoid space
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0000315
+- habitatmech:GOLD.11bece2c6f
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6127
+  source_label: Subarachnoid space
+  source_path: 'Host-associated > Mammals: Human > Nervous system > Subarachnoid space'
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.2bc7edd546
+label: Petroleum sludge
+habitat_category: ENGINEERED
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.808ed1c989
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4868
+  source_label: Petroleum sludge
+  source_path: Engineered > Built environment > Oil refinery > Crude oil sludge >
+    Petroleum sludge
+  assertion_count: 2
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

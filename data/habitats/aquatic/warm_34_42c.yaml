@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.486b52b120
+label: Warm (34-42C)
+habitat_category: AQUATIC
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.f0e9ce4655
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:3759
+  source_label: Warm (34-42C)
+  source_path: Environmental > Aquatic > Thermal springs > Warm (34-42C)
+  assertion_count: 1
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

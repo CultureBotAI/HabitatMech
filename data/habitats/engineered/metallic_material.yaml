@@ -1,0 +1,32 @@
+identifier: ENVO:01001069
+label: metallic material
+definition: A material which is composed primarily of one or more pure metals and
+  which shows their properties.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Metal
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: metal
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00010483
+- habitatmech:GOLD.5f0e9e816a
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:3529
+  source_label: Metal
+  source_path: Engineered > Bioremediation > Metal
+  mapping_predicate: skos:closeMatch
+  assertion_count: 13
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

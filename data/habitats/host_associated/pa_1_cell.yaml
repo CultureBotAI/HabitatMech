@@ -1,0 +1,45 @@
+identifier: BTO:0001591
+label: PA-1 cell
+definition: Human ovary ascites teratocarcinoma cell line. The line was established
+  from cells taken from ascitic fluid.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: pa1
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: pa1 cell line
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: pa1 cell lines
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: pa1 cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000811
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001591
+  source_label: PA-1 cell
+  assertion_count: 2
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1306952
+  source: PREGO
+  taxon_label: Pediococcus acidilactici D3
+  score: 3.0
+- taxon_id: NCBITaxon:287
+  source: PREGO
+  taxon_label: Pseudomonas aeruginosa
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

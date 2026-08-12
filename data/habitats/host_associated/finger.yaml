@@ -1,0 +1,69 @@
+identifier: BTO:0004669
+label: finger
+definition: Any of the five terminating members of the hand, a digit of the forelimb.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: digits
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: fingers
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: forelimb digit
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: forelimb digits
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0004669
+  source_label: finger
+  assertion_count: 9
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1141657
+  source: PREGO
+  taxon_label: Nocardia vulneris
+  score: 3.0
+- taxon_id: NCBITaxon:1402163
+  source: PREGO
+  taxon_label: Wolbachia endosymbiont wPip_Mol of Culex molestus
+  score: 3.0
+- taxon_id: NCBITaxon:1446466
+  source: PREGO
+  taxon_label: Candidatus Acetithermum autotrophicum
+  score: 3.0
+- taxon_id: NCBITaxon:195522
+  source: PREGO
+  taxon_label: Thermococcus nautili
+  score: 3.0
+- taxon_id: NCBITaxon:311458
+  source: PREGO
+  taxon_label: Candidatus Caldarchaeum subterraneum
+  score: 3.0
+- taxon_id: NCBITaxon:358
+  source: PREGO
+  taxon_label: Agrobacterium tumefaciens
+  score: 3.0
+- taxon_id: NCBITaxon:381124
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:500485
+  source: PREGO
+  taxon_label: Penicillium rubens Wisconsin 54-1255
+  score: 3.0
+- taxon_id: NCBITaxon:747
+  source: PREGO
+  taxon_label: Pasteurella multocida
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

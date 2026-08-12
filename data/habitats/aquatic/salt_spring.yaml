@@ -1,0 +1,29 @@
+identifier: ENVO:01001893
+label: salt spring
+definition: A mineral spring through which water with elevated concentrations of sodium,
+  calcium, or magnesium salts flows.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Saline spring
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: saline spring
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00000125
+- habitatmech:GOLD.22a80cbd14
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7983
+  source_label: Saline spring
+  source_path: Environmental > Aquatic > Deep subsurface > Groundwater > Saline spring
+  mapping_predicate: skos:closeMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.601cb8619f
+label: Sediment
+habitat_category: ENGINEERED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00002007
+- habitatmech:GOLD.f0461d363e
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8004
+  source_label: Sediment
+  source_path: Engineered > Artificial ecosystem > Aquaculture > Fish pond > Sediment
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

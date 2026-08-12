@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.ef605d4a71
+label: Tongue dorsum
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0009471
+- habitatmech:GOLD.99880772e1
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:3911
+  source_label: Tongue dorsum
+  source_path: 'Host-associated > Mammals: Human > Digestive system > Oral cavity
+    > Tongue dorsum'
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

@@ -1,0 +1,140 @@
+identifier: BTO:0001297
+label: sputum
+definition: Matter ejected from the lungs, bronchi, and trachea, through the mouth.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: expectoration
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: expectorational
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: expectorations
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: sputa
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: sputal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: sputums
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001297
+  source_label: sputum
+  assertion_count: 45
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1000561
+  source: PREGO
+  taxon_label: Pseudomonas aeruginosa AES-1R
+  score: 3.0
+- taxon_id: NCBITaxon:110505
+  source: PREGO
+  taxon_label: Mycobacterium heckeshornense
+  score: 3.0
+- taxon_id: NCBITaxon:1112856
+  source: PREGO
+  taxon_label: Mycoplasmoides pneumoniae 309
+  score: 3.0
+- taxon_id: NCBITaxon:1125630
+  source: PREGO
+  taxon_label: Klebsiella pneumoniae subsp. pneumoniae HS11286
+  score: 3.0
+- taxon_id: NCBITaxon:1141647
+  source: PREGO
+  taxon_label: Nocardia arizonensis
+  score: 3.0
+- taxon_id: NCBITaxon:1151061
+  source: PREGO
+  taxon_label: Tsukamurella sp. 1534
+  score: 3.0
+- taxon_id: NCBITaxon:1162286
+  source: PREGO
+  taxon_label: Mycobacteroides abscessus M172
+  score: 3.0
+- taxon_id: NCBITaxon:1162287
+  source: PREGO
+  taxon_label: Mycobacteroides abscessus M115
+  score: 3.0
+- taxon_id: NCBITaxon:1194165
+  source: PREGO
+  taxon_label: Microbacterium yannicii PS01
+  score: 3.0
+- taxon_id: NCBITaxon:1206734
+  source: PREGO
+  taxon_label: Nocardia paucivorans NBRC 100373
+  score: 3.0
+- taxon_id: NCBITaxon:1206739
+  source: PREGO
+  taxon_label: Nocardia testacea NBRC 100365
+  score: 3.0
+- taxon_id: NCBITaxon:1220554
+  source: PREGO
+  taxon_label: Actinomadura chibensis NBRC 106107
+  score: 3.0
+- taxon_id: NCBITaxon:1230343
+  source: PREGO
+  taxon_label: Legionella anisa str. Linanisette
+  score: 3.0
+- taxon_id: NCBITaxon:1334628
+  source: PREGO
+  taxon_label: Burkholderia contaminans LMG 23361
+  score: 3.0
+- taxon_id: NCBITaxon:1411141
+  source: PREGO
+  taxon_label: Serratia ficaria NBRC 102596
+  score: 3.0
+- taxon_id: NCBITaxon:1429886
+  source: PREGO
+  taxon_label: Mycobacterium tuberculosis MTB-489
+  score: 3.0
+- taxon_id: NCBITaxon:1429887
+  source: PREGO
+  taxon_label: Mycobacterium tuberculosis MTB-476
+  score: 3.0
+- taxon_id: NCBITaxon:1438822
+  source: PREGO
+  taxon_label: Mycobacterium tuberculosis variant bovis B2 7505
+  score: 3.0
+- taxon_id: NCBITaxon:1438823
+  source: PREGO
+  taxon_label: Mycobacterium tuberculosis variant bovis Bz 31150
+  score: 3.0
+- taxon_id: NCBITaxon:1458472
+  source: PREGO
+  taxon_label: Mycobacterium tuberculosis CWCFVRF MDRTB 670
+  score: 3.0
+- taxon_id: NCBITaxon:158836
+  source: PREGO
+  taxon_label: Enterobacter hormaechei
+  score: 3.0
+- taxon_id: NCBITaxon:1773
+  source: PREGO
+  taxon_label: Mycobacterium tuberculosis
+  score: 3.0
+- taxon_id: NCBITaxon:1807
+  source: PREGO
+  taxon_label: Mycolicibacterium obuense
+  score: 3.0
+- taxon_id: NCBITaxon:1812935
+  source: PREGO
+  taxon_label: Enterobacter roggenkampii
+  score: 3.0
+- taxon_id: NCBITaxon:208224
+  source: PREGO
+  taxon_label: Enterobacter kobei
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

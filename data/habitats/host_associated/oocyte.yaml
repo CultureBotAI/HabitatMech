@@ -1,0 +1,33 @@
+identifier: BTO:0000964
+label: oocyte
+definition: The immature reproductive cell prior to fertilization; it is derived from
+  an oogonium, and is called a primary oocyte prior to completion of the first maturation
+  division, and a secondary oocyte between the first and second maturation division.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: oocytes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000535
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000964
+  source_label: oocyte
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1594731
+  source: PREGO
+  taxon_label: Candidatus Westeberhardia cardiocondylae
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

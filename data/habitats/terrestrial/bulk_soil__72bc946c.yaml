@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.4a93adc46e
+label: Bulk soil
+habitat_category: TERRESTRIAL
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00005802
+- ENVO:00010624
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5867
+  source_label: Bulk soil
+  source_path: Environmental > Terrestrial > Soil > Botanical garden > Bulk soil
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

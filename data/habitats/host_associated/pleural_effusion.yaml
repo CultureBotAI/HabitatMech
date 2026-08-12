@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.13c60b19ab
+label: Pleural effusion
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0000175
+- habitatmech:GOLD.9b51772e57
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6634
+  source_label: Pleural effusion
+  source_path: 'Host-associated > Mammals: Human > Respiratory system > Pleural space/cavity
+    > Pleural effusion'
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

@@ -1,0 +1,90 @@
+identifier: BTO:0000424
+label: erythrocyte
+definition: Any of the hemoglobin-containing cells that carry oxygen to the tissues
+  and are responsible for the red color of vertebrate blood.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: RBC
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: erythrocytes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: red blood cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: red blood cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: red blood corpusclar
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: red blood corpuscle
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: red blood corpuscles
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000574
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000424
+  source_label: erythrocyte
+  assertion_count: 11
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1212765
+  source: PREGO
+  taxon_label: Candidatus Mycoplasma haematolamae str. Purdue
+  score: 3.0
+- taxon_id: NCBITaxon:283165
+  source: PREGO
+  taxon_label: Bartonella quintana str. Toulouse
+  score: 3.0
+- taxon_id: NCBITaxon:283166
+  source: PREGO
+  taxon_label: Bartonella henselae str. Houston-1
+  score: 3.0
+- taxon_id: NCBITaxon:316407
+  source: PREGO
+  taxon_label: Escherichia coli str. K-12 substr. W3110
+  score: 3.0
+- taxon_id: NCBITaxon:320483
+  source: PREGO
+  taxon_label: Anaplasma marginale str. Florida
+  score: 3.0
+- taxon_id: NCBITaxon:394935
+  source: PREGO
+  taxon_label: Chromobacterium haemolyticum
+  score: 3.0
+- taxon_id: NCBITaxon:5866
+  source: PREGO
+  taxon_label: Babesia bigemina
+  score: 3.0
+- taxon_id: NCBITaxon:591023
+  source: PREGO
+  taxon_label: Actinobacillus minor 202
+  score: 3.0
+- taxon_id: NCBITaxon:637911
+  source: PREGO
+  taxon_label: Actinobacillus minor NM305
+  score: 3.0
+- taxon_id: NCBITaxon:68886
+  source: PREGO
+  taxon_label: Theileria orientalis
+  score: 3.0
+- taxon_id: NCBITaxon:708248
+  source: PREGO
+  taxon_label: Mycoplasma suis KI3806
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

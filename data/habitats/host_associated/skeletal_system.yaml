@@ -1,0 +1,74 @@
+identifier: BTO:0001486
+label: skeletal system
+definition: The bodily system that consists of the bones, their associated cartilages,
+  and the joints, and supports and protects the body, produces blood cells, and stores
+  minerals.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Skelettsystem
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: Skelettsystems
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: skeletal systems
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: skeleton
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: skeletonal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: skeletons
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001486
+  source_label: skeletal system
+  assertion_count: 8
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1150475
+  source: PREGO
+  taxon_label: Bacillus velezensis UCMB5036
+  score: 3.0
+- taxon_id: NCBITaxon:1150867
+  source: PREGO
+  taxon_label: Kingella kingae PYKK081
+  score: 3.0
+- taxon_id: NCBITaxon:1219037
+  source: PREGO
+  taxon_label: Sphingobium xenophagum NBRC 107872
+  score: 3.0
+- taxon_id: NCBITaxon:1550035
+  source: PREGO
+  taxon_label: Streptomyces sp. NBRC 109706
+  score: 3.0
+- taxon_id: NCBITaxon:321614
+  source: PREGO
+  taxon_label: Parastagonospora nodorum SN15
+  score: 3.0
+- taxon_id: NCBITaxon:326423
+  source: PREGO
+  taxon_label: Bacillus velezensis FZB42
+  score: 3.0
+- taxon_id: NCBITaxon:439235
+  source: PREGO
+  taxon_label: Desulfatibacillum alkenivorans AK-01
+  score: 3.0
+- taxon_id: NCBITaxon:68170
+  source: PREGO
+  taxon_label: Lentzea aerocolonigenes
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.d61fa6c9ee
+label: Aquifer
+habitat_category: AQUATIC
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00002011
+- ENVO:00012408
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5373
+  source_label: Aquifer
+  source_path: Environmental > Aquatic > Freshwater > Aquifer
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

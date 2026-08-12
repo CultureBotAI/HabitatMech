@@ -1,0 +1,71 @@
+identifier: ENVO:00003043
+label: sewage plant
+definition: A waste treatment plant which equipped to treat sewage such that its potential
+  for environmental contamination is reduced.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Sewage treatment plant
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: sewage plantic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: sewage plants
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: sewage treatment plant
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: sewage treatment works
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00002272
+- habitatmech:GOLD.2acb39dd08
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5517
+  source_label: Sewage treatment plant
+  source_path: Engineered > Sewage treatment plant
+  mapping_predicate: skos:closeMatch
+- source: PREGO
+  source_id: ENVO:00003043
+  source_label: sewage plant
+  assertion_count: 6
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1121393
+  source: PREGO
+  taxon_label: Desulfatibacillum alkenivorans DSM 16219
+  score: 3.0
+- taxon_id: NCBITaxon:318586
+  source: PREGO
+  taxon_label: Paracoccus denitrificans PD1222
+  score: 3.0
+- taxon_id: NCBITaxon:402881
+  source: PREGO
+  taxon_label: Parvibaculum lavamentivorans DS-1
+  score: 3.0
+- taxon_id: NCBITaxon:555778
+  source: PREGO
+  taxon_label: Halothiobacillus neapolitanus c2
+  score: 3.0
+- taxon_id: NCBITaxon:622637
+  source: PREGO
+  taxon_label: Methylocystis sp. ATCC 49242
+  score: 3.0
+- taxon_id: NCBITaxon:656914
+  source: PREGO
+  taxon_label: Desulfonispora thiosulfatigenes DSM 11270
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'

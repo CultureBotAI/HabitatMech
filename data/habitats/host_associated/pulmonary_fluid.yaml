@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.226fcf3880
+label: Pulmonary fluid
+habitat_category: HOST_ASSOCIATED
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.5bbc13545b
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5252
+  source_label: Pulmonary fluid
+  source_path: 'Host-associated > Mammals: Human > Respiratory system > Lung > Pulmonary
+    fluid'
+  assertion_count: 10
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

@@ -1,0 +1,58 @@
+identifier: BTO:0000091
+label: ascites
+definition: Accumulation of serous fluid in the spaces between tissues and organs
+  in the cavity of the abdomen.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: ascites fluid
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: ascites fluids
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: asciteses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: ascitic fluid
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: ascitic fluids
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000091
+  source_label: ascites
+  assertion_count: 5
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1096995
+  source: PREGO
+  taxon_label: Acinetobacter baumannii BJAB07104
+  score: 3.0
+- taxon_id: NCBITaxon:1096996
+  source: PREGO
+  taxon_label: Acinetobacter baumannii BJAB0715
+  score: 3.0
+- taxon_id: NCBITaxon:1096997
+  source: PREGO
+  taxon_label: Acinetobacter baumannii BJAB0868
+  score: 3.0
+- taxon_id: NCBITaxon:1231058
+  source: PREGO
+  taxon_label: Vibrio diabolicus E0666
+  score: 3.0
+- taxon_id: NCBITaxon:401472
+  source: PREGO
+  taxon_label: Corynebacterium ureicelerivorans
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

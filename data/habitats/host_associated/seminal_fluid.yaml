@@ -1,0 +1,39 @@
+identifier: UBERON:0006530
+label: seminal fluid
+definition: A substance formed from the secretion of one or more glands of the male
+  genital tract in which sperm cells are suspended.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: male genital fluid
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: male genital secretion
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: milt
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: seminal plasma
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0000456
+- UBERON:0006536
+- habitatmech:GOLD.431474dc36
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7630
+  source_label: Seminal fluid
+  source_path: Host-associated > Mammals > Reproductive system > Seminal glands >
+    Seminal fluid
+  mapping_predicate: skos:exactMatch
+  assertion_count: 9
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

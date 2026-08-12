@@ -1,0 +1,23 @@
+identifier: ENVO:00000053
+label: freshwater marsh
+definition: A marsh in which soils are saturated with water that contains low concentrations
+  of salts.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00000035
+- habitatmech:GOLD.7465227149
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8260
+  source_label: Freshwater marsh
+  source_path: Environmental > Terrestrial > Soil > Wetland-upland transition > Freshwater
+    marsh
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

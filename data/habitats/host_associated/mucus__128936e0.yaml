@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.9ef40567be
+label: Mucus
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0000912
+- habitatmech:GOLD.8e47fd50d1
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6104
+  source_label: Mucus
+  source_path: 'Host-associated > Mammals: Human > Respiratory system > Trachea >
+    Mucus'
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

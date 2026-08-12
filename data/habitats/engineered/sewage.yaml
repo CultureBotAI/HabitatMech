@@ -1,0 +1,135 @@
+identifier: ENVO:00002018
+label: sewage
+definition: Wastewater that is contaminated with feces or urine,
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: sewages
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00002001
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4660
+  source_label: Sewage
+  source_path: Engineered > Wastewater > Sewage
+  mapping_predicate: skos:exactMatch
+  assertion_count: 467
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: PREGO
+  source_id: ENVO:00002018
+  source_label: sewage
+  assertion_count: 1162
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:1121117
+  source: PREGO
+  taxon_label: Allobrachymonas denitrificans DSM 15123
+  score: 4.0
+- taxon_id: NCBITaxon:1121318
+  source: PREGO
+  taxon_label: Clostridium homopropionicum DSM 5847
+  score: 4.0
+- taxon_id: NCBITaxon:1121952
+  source: PREGO
+  taxon_label: Humibacter albus DSM 18994
+  score: 4.0
+- taxon_id: NCBITaxon:1122239
+  source: PREGO
+  taxon_label: Microbacterium luticocti DSM 19459
+  score: 4.0
+- taxon_id: NCBITaxon:1329262
+  source: PREGO
+  taxon_label: Mobilisporobacter senegalensis
+  score: 4.0
+- taxon_id: NCBITaxon:2148
+  source: PREGO
+  taxon_label: Acholeplasma laidlawii
+  score: 4.0
+- taxon_id: NCBITaxon:247480
+  source: PREGO
+  taxon_label: Thermaerobacillus caldiproteolyticus
+  score: 4.0
+- taxon_id: NCBITaxon:257984
+  source: PREGO
+  taxon_label: Glutamicibacter mysorens
+  score: 4.0
+- taxon_id: NCBITaxon:43064
+  source: PREGO
+  taxon_label: Trichococcus pasteurii
+  score: 4.0
+- taxon_id: NCBITaxon:43775
+  source: PREGO
+  taxon_label: Syntrophus gentianae
+  score: 4.0
+- taxon_id: NCBITaxon:489632
+  source: PREGO
+  taxon_label: Ectopseudomonas chengduensis
+  score: 4.0
+- taxon_id: NCBITaxon:623280
+  source: PREGO
+  taxon_label: Parapedobacter luteus
+  score: 4.0
+- taxon_id: NCBITaxon:623281
+  source: PREGO
+  taxon_label: Parapedobacter composti
+  score: 4.0
+- taxon_id: NCBITaxon:640938
+  source: PREGO
+  taxon_label: Trichococcus ilyis
+  score: 4.0
+- taxon_id: NCBITaxon:65735
+  source: PREGO
+  taxon_label: Paracoccus alkenifer
+  score: 4.0
+- taxon_id: NCBITaxon:937334
+  source: PREGO
+  taxon_label: Caldicoprobacter faecalis
+  score: 4.0
+- taxon_id: NCBITaxon:95160
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:1123022
+  source: PREGO
+  taxon_label: Halopseudomonas xiamenensis DSM 22326
+  score: 3.0
+- taxon_id: NCBITaxon:1123392
+  source: PREGO
+  taxon_label: Thiobacillus denitrificans DSM 12475
+  score: 3.0
+- taxon_id: NCBITaxon:266779
+  source: PREGO
+  taxon_label: Chelativorans sp. BNC1
+  score: 3.0
+- taxon_id: NCBITaxon:323259
+  source: PREGO
+  taxon_label: Methanospirillum hungatei JF-1
+  score: 3.0
+- taxon_id: NCBITaxon:398578
+  source: PREGO
+  taxon_label: Delftia acidovorans SPH-1
+  score: 3.0
+- taxon_id: NCBITaxon:517417
+  source: PREGO
+  taxon_label: Chlorobaculum parvum NCIB 8327
+  score: 3.0
+- taxon_id: NCBITaxon:610130
+  source: PREGO
+  taxon_label: '[Clostridium] saccharolyticum WM1'
+  score: 3.0
+- taxon_id: NCBITaxon:706587
+  source: PREGO
+  taxon_label: Desulfomonile tiedjei DSM 6799
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'

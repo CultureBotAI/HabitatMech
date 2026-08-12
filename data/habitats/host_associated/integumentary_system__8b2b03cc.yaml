@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.dd76069e56
+label: Integumentary system
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0002416
+- habitatmech:GOLD.2959225799
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8186
+  source_label: Integumentary system
+  source_path: 'Host-associated > Arthropoda: Crustaceans > Integumentary system'
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

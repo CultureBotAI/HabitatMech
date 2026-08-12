@@ -1,0 +1,33 @@
+identifier: ENVO:00000381
+label: massif
+definition: A section of the Earths's crust that is demarcated by faults or flexures.
+  In the movement of the crust, a massif tends to retain its internal structure while
+  being displaced as a whole.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: massifs
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00000176
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00000381
+  source_label: massif
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:796891
+  source: PREGO
+  taxon_label: Rhizobium mesoamericanum STM6155
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

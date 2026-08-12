@@ -1,0 +1,22 @@
+identifier: habitatmech:GOLD.9c459b5a33
+label: Abscess
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.e7296678c2
+- mesh:D000038
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6344
+  source_label: Abscess
+  source_path: 'Host-associated > Mammals: Human > Skeletal system > Joint capsule
+    > Abscess'
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

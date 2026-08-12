@@ -1,0 +1,183 @@
+identifier: ENVO:00000019
+label: saline lake
+definition: A lake whose water contains a considerable concentration of dissolved
+  salts.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Soda lake
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: salina
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: salina
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: salinal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: salinas
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: saline lakes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: salt lake
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: salt lake
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: salt lakes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: salt lakeses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: soda lake
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: soda lake
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: soda lakes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00000020
+- ENVO:01001319
+- habitatmech:GOLD.ce244e62cd
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7281
+  source_label: Saline lake
+  source_path: Environmental > Aquatic > Non-marine Saline and Alkaline > Saline lake
+  mapping_predicate: skos:exactMatch
+  assertion_count: 58
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: GOLD
+  source_id: gold.ecosystem:7888
+  source_label: Soda lake
+  source_path: Environmental > Aquatic > Non-marine Saline and Alkaline > Soda lake
+  mapping_predicate: skos:closeMatch
+  assertion_count: 52
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: PREGO
+  source_id: ENVO:00000019
+  source_label: saline lake
+  assertion_count: 34
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1069448
+  source: PREGO
+  taxon_label: Nitriliruptor alkaliphilus DSM 45188
+  score: 3.0
+- taxon_id: NCBITaxon:1121018
+  source: PREGO
+  taxon_label: Arsenophonus nasoniae DSM 15247
+  score: 3.0
+- taxon_id: NCBITaxon:1121085
+  source: PREGO
+  taxon_label: Salibacterium aidingense DSM 18341
+  score: 3.0
+- taxon_id: NCBITaxon:1121087
+  source: PREGO
+  taxon_label: Alkalicoccus chagannorensis DSM 18086
+  score: 3.0
+- taxon_id: NCBITaxon:1121915
+  source: PREGO
+  taxon_label: Geoalkalibacter ferrihydriticus DSM 17813
+  score: 3.0
+- taxon_id: NCBITaxon:1122130
+  source: PREGO
+  taxon_label: Jonesia quinghaiensis DSM 15701
+  score: 3.0
+- taxon_id: NCBITaxon:1122209
+  source: PREGO
+  taxon_label: Marinospirillum alkaliphilum DSM 21637
+  score: 3.0
+- taxon_id: NCBITaxon:1123231
+  source: PREGO
+  taxon_label: Lacicoccus alkaliphilus DSM 16010
+  score: 3.0
+- taxon_id: NCBITaxon:1123234
+  source: PREGO
+  taxon_label: Salinimicrobium terrae DSM 17865
+  score: 3.0
+- taxon_id: NCBITaxon:1123239
+  source: PREGO
+  taxon_label: Salsuginibacillus kocurii DSM 18087
+  score: 3.0
+- taxon_id: NCBITaxon:121821
+  source: PREGO
+  taxon_label: Roseinatronobacter thiooxidans
+  score: 3.0
+- taxon_id: NCBITaxon:1408424
+  source: PREGO
+  taxon_label: Alkalihalobacillus bogoriensis ATCC BAA-922
+  score: 3.0
+- taxon_id: NCBITaxon:1462430
+  source: PREGO
+  taxon_label: Candidatus Nanohalarchaeota
+  score: 3.0
+- taxon_id: NCBITaxon:320502
+  source: PREGO
+  taxon_label: Acetivibrio alkalicellulosi
+  score: 3.0
+- taxon_id: NCBITaxon:332175
+  source: PREGO
+  taxon_label: Desulfosalsimonas propionicica
+  score: 3.0
+- taxon_id: NCBITaxon:387889
+  source: PREGO
+  taxon_label: Prauserella salsuginis
+  score: 3.0
+- taxon_id: NCBITaxon:387890
+  source: PREGO
+  taxon_label: Prauserella aidingensis
+  score: 3.0
+- taxon_id: NCBITaxon:393762
+  source: PREGO
+  taxon_label: Natronincola ferrireducens
+  score: 3.0
+- taxon_id: NCBITaxon:396595
+  source: PREGO
+  taxon_label: Thioalkalivibrio sp. K90mix
+  score: 3.0
+- taxon_id: NCBITaxon:426128
+  source: PREGO
+  taxon_label: Natronincola peptidivorans
+  score: 3.0
+- taxon_id: NCBITaxon:441209
+  source: PREGO
+  taxon_label: Roseinatronobacter bogoriensis subsp. barguzinensis
+  score: 3.0
+- taxon_id: NCBITaxon:442899
+  source: PREGO
+  taxon_label: Halolactibacillus alkaliphilus
+  score: 3.0
+- taxon_id: NCBITaxon:485914
+  source: PREGO
+  taxon_label: Halomicrobium mukohataei DSM 12286
+  score: 3.0
+- taxon_id: NCBITaxon:517424
+  source: PREGO
+  taxon_label: Salsuginibacillus halophilus
+  score: 3.0
+- taxon_id: NCBITaxon:519442
+  source: PREGO
+  taxon_label: Halorhabdus utahensis DSM 12940
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'

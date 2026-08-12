@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.9eaa63ad72
+label: Sediment
+habitat_category: AQUATIC
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00002007
+- habitatmech:GOLD.2a6cc2b868
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7988
+  source_label: Sediment
+  source_path: Environmental > Aquatic > Acidic > Acidic hypersaline lake > Sediment
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 2
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

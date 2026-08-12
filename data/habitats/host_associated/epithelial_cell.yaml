@@ -1,0 +1,105 @@
+identifier: BTO:0000414
+label: epithelial cell
+definition: Cell that cover the surface of the body and line its cavities.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: epithelial cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000414
+  source_label: epithelial cell
+  assertion_count: 20
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1118964
+  source: PREGO
+  taxon_label: Mesomycoplasma hyorhinis SK76
+  score: 3.0
+- taxon_id: NCBITaxon:1130798
+  source: PREGO
+  taxon_label: Limosilactobacillus mucosae LM1
+  score: 3.0
+- taxon_id: NCBITaxon:1254439
+  source: PREGO
+  taxon_label: Bifidobacterium thermophilum RBL67
+  score: 3.0
+- taxon_id: NCBITaxon:1292039
+  source: PREGO
+  taxon_label: Cutibacterium acnes P6
+  score: 3.0
+- taxon_id: NCBITaxon:1313
+  source: PREGO
+  taxon_label: Streptococcus pneumoniae
+  score: 3.0
+- taxon_id: NCBITaxon:1314
+  source: PREGO
+  taxon_label: Streptococcus pyogenes
+  score: 3.0
+- taxon_id: NCBITaxon:1321369
+  source: PREGO
+  taxon_label: Staphylococcus aureus Bmb9393
+  score: 3.0
+- taxon_id: NCBITaxon:137591
+  source: PREGO
+  taxon_label: Weissella cibaria
+  score: 3.0
+- taxon_id: NCBITaxon:1381124
+  source: PREGO
+  taxon_label: Limosilactobacillus fermentum 3872
+  score: 3.0
+- taxon_id: NCBITaxon:1398
+  source: PREGO
+  taxon_label: Heyndrickxia coagulans
+  score: 3.0
+- taxon_id: NCBITaxon:1423
+  source: PREGO
+  taxon_label: Bacillus subtilis
+  score: 3.0
+- taxon_id: NCBITaxon:1590
+  source: PREGO
+  taxon_label: Lactiplantibacillus plantarum
+  score: 3.0
+- taxon_id: NCBITaxon:257314
+  source: PREGO
+  taxon_label: Lactobacillus johnsonii NCC 533
+  score: 3.0
+- taxon_id: NCBITaxon:398000
+  source: PREGO
+  taxon_label: Campylobacter jejuni subsp. jejuni CG8486
+  score: 3.0
+- taxon_id: NCBITaxon:412965
+  source: PREGO
+  taxon_label: Candidatus Vesicomyidisocius calyptogenae
+  score: 3.0
+- taxon_id: NCBITaxon:562
+  source: PREGO
+  taxon_label: Escherichia coli
+  score: 3.0
+- taxon_id: NCBITaxon:813
+  source: PREGO
+  taxon_label: Chlamydia trachomatis
+  score: 3.0
+- taxon_id: NCBITaxon:941323
+  source: PREGO
+  taxon_label: Escherichia coli VR50
+  score: 3.0
+- taxon_id: NCBITaxon:945555
+  source: PREGO
+  taxon_label: Acinetobacter baumannii WM99c
+  score: 3.0
+- taxon_id: NCBITaxon:945556
+  source: PREGO
+  taxon_label: Acinetobacter baumannii D1279779
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

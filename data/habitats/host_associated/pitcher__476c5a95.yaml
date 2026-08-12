@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.bf4b4a5e8e
+label: Pitcher
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- BTO:0001069
+- habitatmech:GOLD.8e9f10356e
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8199
+  source_label: Pitcher
+  source_path: Host-associated > Plants > Phyllosphere > Phylloplane/Leaf > Pitcher
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

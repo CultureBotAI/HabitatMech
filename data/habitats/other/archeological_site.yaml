@@ -1,0 +1,126 @@
+identifier: ENVO:00000564
+label: archeological site
+definition: A place (or group of physical sites) in which evidence of past activity
+  is preserved (either prehistoric or historic or contemporary), and which is, has
+  been, or may be, investigated using the discipline of archaeology.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: archeological sites
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00000564
+  source_label: archeological site
+  assertion_count: 28
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:330214
+  source: PREGO
+  taxon_label: Nitrospira defluvii
+  score: 4.0
+- taxon_id: NCBITaxon:36987
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:592031
+  source: PREGO
+  taxon_label: Eubacterium saphenum ATCC 49989
+  score: 4.0
+- taxon_id: NCBITaxon:739
+  source: PREGO
+  taxon_label: Aggregatibacter segnis
+  score: 1.34293
+- taxon_id: NCBITaxon:176090
+  source: PREGO
+  taxon_label: Streptococcus sinensis
+  score: 1.32918
+- taxon_id: NCBITaxon:1655
+  source: PREGO
+  taxon_label: Actinomyces naeslundii
+  score: 1.29262
+- taxon_id: NCBITaxon:204
+  source: PREGO
+  taxon_label: Campylobacter showae
+  score: 1.29016
+- taxon_id: NCBITaxon:28220
+  source: PREGO
+  taxon_label: Allobrachymonas denitrificans
+  score: 1.27512
+- taxon_id: NCBITaxon:272556
+  source: PREGO
+  taxon_label: Aggregatibacter actinomycetemcomitans HK1651
+  score: 1.25813
+- taxon_id: NCBITaxon:43768
+  source: PREGO
+  taxon_label: Corynebacterium matruchotii
+  score: 1.25813
+- taxon_id: NCBITaxon:535025
+  source: PREGO
+  taxon_label: Bacillus subtilis subsp. subtilis str. JH642
+  score: 1.24293
+- taxon_id: NCBITaxon:1302
+  source: PREGO
+  taxon_label: Streptococcus gordonii
+  score: 1.24237
+- taxon_id: NCBITaxon:732
+  source: PREGO
+  taxon_label: Aggregatibacter aphrophilus
+  score: 1.2131
+- taxon_id: NCBITaxon:539
+  source: PREGO
+  taxon_label: Eikenella corrodens
+  score: 1.20193
+- taxon_id: NCBITaxon:1659
+  source: PREGO
+  taxon_label: Actinomyces israelii
+  score: 1.18141
+- taxon_id: NCBITaxon:1301
+  source: PREGO
+  taxon_label: Streptococcus
+  score: 1.17684
+- taxon_id: NCBITaxon:544580
+  source: PREGO
+  taxon_label: Actinomyces oris
+  score: 1.14789
+- taxon_id: NCBITaxon:28037
+  source: PREGO
+  taxon_label: Streptococcus mitis
+  score: 1.11467
+- taxon_id: NCBITaxon:40542
+  source: PREGO
+  taxon_label: Leptotrichia buccalis
+  score: 1.08685
+- taxon_id: NCBITaxon:497963
+  source: PREGO
+  taxon_label: Streptococcus pneumoniae SP-BS293
+  score: 1.08264
+- taxon_id: NCBITaxon:61592
+  source: PREGO
+  taxon_label: Corynebacterium durum
+  score: 1.08264
+- taxon_id: NCBITaxon:1018
+  source: PREGO
+  taxon_label: Capnocytophaga ochracea
+  score: 1.05224
+- taxon_id: NCBITaxon:467210
+  source: PREGO
+  taxon_label: Lachnoanaerobaculum saburreum
+  score: 1.04293
+- taxon_id: NCBITaxon:158
+  source: PREGO
+  taxon_label: Treponema denticola
+  score: 1.03722
+- taxon_id: NCBITaxon:41976
+  source: PREGO
+  taxon_label: Porphyromonas catoniae
+  score: 1.03249
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

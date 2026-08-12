@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.f2b3898665
+label: Sediment
+habitat_category: TERRESTRIAL
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00002007
+- habitatmech:GOLD.0a8125a01d
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6163
+  source_label: Sediment
+  source_path: Environmental > Terrestrial > Soil > Gravesite > Sediment
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

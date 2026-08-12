@@ -1,0 +1,58 @@
+identifier: BTO:0003969
+label: hair follicle outer root sheath
+definition: It surrounds the hair follicle like a sleeve all the way to the bulb.
+  The outer root sheath is essentially a stratified epithelium that is contiguous
+  with the epidermis.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: ORS
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: hair follicle outer root sheathic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: hair follicle outer root sheaths
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: outer root sheath
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: outer root sheathic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: outer root sheaths
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0003969
+  source_label: hair follicle outer root sheath
+  assertion_count: 4
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1505946
+  source: PREGO
+  taxon_label: Mesorhizobium sp. SOD10
+  score: 3.0
+- taxon_id: NCBITaxon:408180
+  source: PREGO
+  taxon_label: Mesorhizobium sp. ORS 3324
+  score: 3.0
+- taxon_id: NCBITaxon:408184
+  source: PREGO
+  taxon_label: Mesorhizobium sp. ORS 3359
+  score: 3.0
+- taxon_id: NCBITaxon:69974
+  source: PREGO
+  taxon_label: Mesorhizobium plurifarium
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

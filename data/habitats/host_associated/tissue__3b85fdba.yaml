@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.831cbd9229
+label: Tissue
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0000479
+- habitatmech:GOLD.5719bbc634
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8422
+  source_label: Tissue
+  source_path: Host-associated > Mollusca > Respiratory system > Gills > Tissue
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

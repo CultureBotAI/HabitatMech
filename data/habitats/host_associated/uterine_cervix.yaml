@@ -1,0 +1,59 @@
+identifier: BTO:0001421
+label: uterine cervix
+definition: 'A constricted portion of an organ or part; especially: the narrow outer
+  end of the uterus.'
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: cervix
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: cervix of uteral
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: cervix of uteri
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: cervix of uterus
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: cervix of uteruses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: cervixes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: neck of uteral
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: neck of uteri
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: neck of uterus
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: neck of uteruses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: uterine cervixes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001421
+  source_label: uterine cervix
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:990303
+  source: PREGO
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

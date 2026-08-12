@@ -1,0 +1,34 @@
+identifier: ENVO:01001530
+label: water ice core
+definition: An ice mass which has been drilled from an accumulation of snow and ice
+  that has built up over many years and that has recrystallized and has trapped air
+  bubbles from previous time periods.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Ice core
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: ice core
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: ice sample
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00000019
+- ENVO:01000293
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7982
+  source_label: Ice core
+  source_path: Environmental > Aquatic > Non-marine Saline and Alkaline > Saline lake
+    > Ice core
+  mapping_predicate: skos:closeMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

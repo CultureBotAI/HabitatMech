@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.f164f72e65
+label: Stem tuber
+habitat_category: HOST_ASSOCIATED
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- BTO:0001181
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4993
+  source_label: Stem tuber
+  source_path: Host-associated > Plants > Rhizome > Stem tuber
+  assertion_count: 21
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

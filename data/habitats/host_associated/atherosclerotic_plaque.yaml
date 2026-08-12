@@ -1,0 +1,135 @@
+identifier: BTO:0003120
+label: atherosclerotic plaque
+definition: A buildup of cholesterol and fatty material within a blood vessel due
+  to the effects of atherosclerosis. A fatty deposit in the intima (inner lining)
+  of an artery, resulting from atherosclerosis.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: arterial plaque
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: arterial plaques
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: atheroma cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: atheroma cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: atherosclerotic plaques
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0003120
+  source_label: atherosclerotic plaque
+  assertion_count: 39
+  assertion_unit: TAXON
+  score: 1.42024
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:1747
+  source: PREGO
+  taxon_label: Cutibacterium acnes
+  score: 1.42024
+- taxon_id: NCBITaxon:281915
+  source: PREGO
+  taxon_label: Curvibacter
+  score: 1.42024
+- taxon_id: NCBITaxon:32008
+  source: PREGO
+  taxon_label: Burkholderia
+  score: 1.42024
+- taxon_id: NCBITaxon:41294
+  source: PREGO
+  taxon_label: Nitrobacteraceae
+  score: 1.42024
+- taxon_id: NCBITaxon:41295
+  source: PREGO
+  taxon_label: Rhodospirillaceae
+  score: 1.42024
+- taxon_id: NCBITaxon:48736
+  source: PREGO
+  taxon_label: Ralstonia
+  score: 1.42024
+- taxon_id: NCBITaxon:504481
+  source: PREGO
+  taxon_label: Sediminibacterium
+  score: 1.42024
+- taxon_id: NCBITaxon:75787
+  source: PREGO
+  taxon_label: Rhodocyclaceae
+  score: 1.42024
+- taxon_id: NCBITaxon:80840
+  source: PREGO
+  taxon_label: Burkholderiales
+  score: 1.42024
+- taxon_id: NCBITaxon:80864
+  source: PREGO
+  taxon_label: Comamonadaceae
+  score: 1.42024
+- taxon_id: NCBITaxon:1869227
+  source: PREGO
+  taxon_label: bacterium
+  score: 1.39302
+- taxon_id: NCBITaxon:2
+  source: PREGO
+  taxon_label: Bacteria
+  score: 1.39302
+- taxon_id: NCBITaxon:335058
+  source: PREGO
+  score: 1.39302
+- taxon_id: NCBITaxon:35493
+  source: PREGO
+  score: 1.39302
+- taxon_id: NCBITaxon:374
+  source: PREGO
+  taxon_label: Bradyrhizobium
+  score: 1.39302
+- taxon_id: NCBITaxon:629395
+  source: PREGO
+  score: 1.39302
+- taxon_id: NCBITaxon:75682
+  source: PREGO
+  taxon_label: Oxalobacteraceae
+  score: 1.36473
+- taxon_id: NCBITaxon:32033
+  source: PREGO
+  taxon_label: Lysobacteraceae
+  score: 1.33528
+- taxon_id: NCBITaxon:169215
+  source: PREGO
+  score: 1.30458
+- taxon_id: NCBITaxon:85413
+  source: PREGO
+  taxon_label: Allobosea
+  score: 1.30458
+- taxon_id: NCBITaxon:50709
+  source: PREGO
+  taxon_label: Acidocella
+  score: 1.27252
+- taxon_id: NCBITaxon:1716
+  source: PREGO
+  taxon_label: Corynebacterium
+  score: 1.23896
+- taxon_id: NCBITaxon:356
+  source: PREGO
+  taxon_label: Hyphomicrobiales
+  score: 1.23896
+- taxon_id: NCBITaxon:563835
+  source: PREGO
+  taxon_label: Chitinophagaceae
+  score: 1.23896
+- taxon_id: NCBITaxon:82115
+  source: PREGO
+  taxon_label: Rhizobiaceae
+  score: 1.23896
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

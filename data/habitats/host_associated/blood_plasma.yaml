@@ -1,0 +1,98 @@
+identifier: BTO:0000131
+label: blood plasma
+definition: The fluid portion of the blood in which the particulate components are
+  suspended.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: blood plasmal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: blood plasmas
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: plasma
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: plasmal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: plasmas
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000131
+  source_label: blood plasma
+  assertion_count: 15
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1322345
+  source: PREGO
+  taxon_label: Escherichia coli ATCC 25922
+  score: 3.0
+- taxon_id: NCBITaxon:1415606
+  source: PREGO
+  taxon_label: Bifidobacterium animalis subsp. lactis CECT 8145
+  score: 3.0
+- taxon_id: NCBITaxon:1718
+  source: PREGO
+  taxon_label: Corynebacterium glutamicum
+  score: 3.0
+- taxon_id: NCBITaxon:203119
+  source: PREGO
+  taxon_label: Acetivibrio thermocellus ATCC 27405
+  score: 3.0
+- taxon_id: NCBITaxon:214092
+  source: PREGO
+  taxon_label: Yersinia pestis CO92
+  score: 3.0
+- taxon_id: NCBITaxon:273075
+  source: PREGO
+  taxon_label: Thermoplasma acidophilum DSM 1728
+  score: 3.0
+- taxon_id: NCBITaxon:287
+  source: PREGO
+  taxon_label: Pseudomonas aeruginosa
+  score: 3.0
+- taxon_id: NCBITaxon:316407
+  source: PREGO
+  taxon_label: Escherichia coli str. K-12 substr. W3110
+  score: 3.0
+- taxon_id: NCBITaxon:32002
+  source: PREGO
+  taxon_label: Achromobacter denitrificans
+  score: 3.0
+- taxon_id: NCBITaxon:354242
+  source: PREGO
+  taxon_label: Campylobacter jejuni subsp. jejuni 81-176
+  score: 3.0
+- taxon_id: NCBITaxon:47885
+  source: PREGO
+  taxon_label: Pseudomonas oryzihabitans
+  score: 3.0
+- taxon_id: NCBITaxon:51665
+  source: PREGO
+  taxon_label: Aerococcus urinaeequi
+  score: 3.0
+- taxon_id: NCBITaxon:525919
+  source: PREGO
+  taxon_label: Anaerococcus prevotii DSM 20548
+  score: 3.0
+- taxon_id: NCBITaxon:76759
+  source: PREGO
+  taxon_label: Pseudomonas monteilii
+  score: 3.0
+- taxon_id: NCBITaxon:83655
+  source: PREGO
+  taxon_label: Leclercia adecarboxylata
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

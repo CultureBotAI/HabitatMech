@@ -1,0 +1,40 @@
+identifier: UBERON:0010409
+label: ocular surface region
+definition: The integrated unit (of the eye) that consists of the conjunctiva, the
+  corneal surface, and the ocular mucosal adnexa including the lid margins and the
+  meibomian gland openings, the lacrimal glands and the lacrimal drainage system,
+  all which are critical to maintain ocular surface integrity and provide protection
+  from external antigens and pathogenic microorganisms.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Ocular surface
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: eye surface
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: eye surface region
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: ocular surface
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0000063
+- habitatmech:GOLD.b7f1694b87
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8176
+  source_label: Ocular surface
+  source_path: 'Host-associated > Mammals: Human > Visual system > Eye > Ocular surface'
+  mapping_predicate: skos:closeMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

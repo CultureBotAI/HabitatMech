@@ -1,0 +1,44 @@
+identifier: UBERON:0002081
+label: cardiac atrium
+definition: Cardiac chamber in which blood enters the heart.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Atria
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: atria
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: atrial tissue
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: atrium
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: atrium of heart
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: cardiac atria
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: heart atrium
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0004120
+- UBERON:0004151
+- habitatmech:GOLD.805ee181bd
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6609
+  source_label: Atria
+  source_path: 'Host-associated > Mammals: Human > Circulatory system > Heart > Atria'
+  mapping_predicate: skos:closeMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

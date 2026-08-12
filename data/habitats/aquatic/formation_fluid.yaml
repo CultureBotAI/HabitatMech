@@ -1,0 +1,22 @@
+identifier: ENVO:03600007
+label: formation fluid
+definition: A fluid environmental material which is contained in geologic formations
+  naturally.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:02000140
+- habitatmech:GOLD.f8b744283b
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5737
+  source_label: Formation fluid
+  source_path: Environmental > Aquatic > Marine > Aquifer > Formation fluid
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

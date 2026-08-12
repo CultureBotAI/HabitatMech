@@ -1,0 +1,131 @@
+identifier: BTO:0001069
+label: pitcher
+definition: A modified leaf of a pitcher plant in which the hollowed petiole and base
+  of the blade form an elongated receptacle.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: pitchers
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000713
+- habitatmech:GOLD.1b21002a97
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7300
+  source_label: Pitcher
+  source_path: Host-associated > Plants > Pitcher
+  mapping_predicate: skos:exactMatch
+- source: PREGO
+  source_id: BTO:0001069
+  source_label: pitcher
+  assertion_count: 161
+  assertion_unit: TAXON
+  score: 1.68431
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:13687
+  source: PREGO
+  taxon_label: Sphingomonas
+  score: 1.68431
+- taxon_id: NCBITaxon:28211
+  source: PREGO
+  taxon_label: Alphaproteobacteria
+  score: 1.68431
+- taxon_id: NCBITaxon:32033
+  source: PREGO
+  taxon_label: Lysobacteraceae
+  score: 1.68431
+- taxon_id: NCBITaxon:35493
+  source: PREGO
+  score: 1.68431
+- taxon_id: NCBITaxon:356
+  source: PREGO
+  taxon_label: Hyphomicrobiales
+  score: 1.68431
+- taxon_id: NCBITaxon:374
+  source: PREGO
+  taxon_label: Bradyrhizobium
+  score: 1.68431
+- taxon_id: NCBITaxon:40214
+  source: PREGO
+  taxon_label: Acinetobacter johnsonii
+  score: 1.68431
+- taxon_id: NCBITaxon:41294
+  source: PREGO
+  taxon_label: Nitrobacteraceae
+  score: 1.68431
+- taxon_id: NCBITaxon:4432
+  source: PREGO
+  score: 1.68431
+- taxon_id: NCBITaxon:469
+  source: PREGO
+  taxon_label: Acinetobacter
+  score: 1.68431
+- taxon_id: NCBITaxon:504481
+  source: PREGO
+  taxon_label: Sediminibacterium
+  score: 1.68431
+- taxon_id: NCBITaxon:665874
+  source: PREGO
+  taxon_label: Limnohabitans
+  score: 1.68431
+- taxon_id: NCBITaxon:75682
+  source: PREGO
+  taxon_label: Oxalobacteraceae
+  score: 1.68431
+- taxon_id: NCBITaxon:76892
+  source: PREGO
+  taxon_label: Caulobacteraceae
+  score: 1.68431
+- taxon_id: NCBITaxon:80864
+  source: PREGO
+  taxon_label: Comamonadaceae
+  score: 1.68431
+- taxon_id: NCBITaxon:1661425
+  source: PREGO
+  score: 1.66734
+- taxon_id: NCBITaxon:1827
+  source: PREGO
+  taxon_label: Rhodococcus <high G+C Gram-positive bacteria>
+  score: 1.66734
+- taxon_id: NCBITaxon:28216
+  source: PREGO
+  taxon_label: Betaproteobacteria
+  score: 1.66734
+- taxon_id: NCBITaxon:33882
+  source: PREGO
+  taxon_label: Microbacterium
+  score: 1.66734
+- taxon_id: NCBITaxon:34073
+  source: PREGO
+  taxon_label: Variovorax paradoxus
+  score: 1.66734
+- taxon_id: NCBITaxon:41297
+  source: PREGO
+  taxon_label: Sphingomonadaceae
+  score: 1.66734
+- taxon_id: NCBITaxon:528
+  source: PREGO
+  taxon_label: Ochrobactrum
+  score: 1.66734
+- taxon_id: NCBITaxon:1716
+  source: PREGO
+  taxon_label: Corynebacterium
+  score: 1.64995
+- taxon_id: NCBITaxon:28498
+  source: PREGO
+  score: 1.64995
+- taxon_id: NCBITaxon:48736
+  source: PREGO
+  taxon_label: Ralstonia
+  score: 1.64995
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'

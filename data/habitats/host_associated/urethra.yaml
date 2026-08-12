@@ -1,0 +1,81 @@
+identifier: BTO:0001426
+label: urethra
+definition: The tube through which urine leaves the body. It empties urine from the
+  bladder.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: urethral
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: urethras
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001426
+  source_label: urethra
+  assertion_count: 13
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1120933
+  source: PREGO
+  taxon_label: Actinotignum urinale DSM 15805
+  score: 4.0
+- taxon_id: NCBITaxon:1122247
+  source: PREGO
+  taxon_label: Mycolicibacterium hassiacum DSM 44199
+  score: 4.0
+- taxon_id: NCBITaxon:1122619
+  source: PREGO
+  taxon_label: Oligella ureolytica DSM 18253
+  score: 4.0
+- taxon_id: NCBITaxon:80878
+  source: PREGO
+  taxon_label: Acidovorax temperans
+  score: 4.0
+- taxon_id: NCBITaxon:865938
+  source: PREGO
+  taxon_label: Weeksella virosa DSM 16922
+  score: 4.0
+- taxon_id: NCBITaxon:866789
+  source: PREGO
+  taxon_label: Escherichia coli DSM 30083 = JCM 1649 = ATCC 11775
+  score: 4.0
+- taxon_id: NCBITaxon:1292038
+  source: PREGO
+  taxon_label: Cutibacterium acnes PA2
+  score: 3.0
+- taxon_id: NCBITaxon:1292046
+  source: PREGO
+  taxon_label: Desulfobulbus sp. oral taxon 041 str. Dsb1-5
+  score: 3.0
+- taxon_id: NCBITaxon:1292372
+  source: PREGO
+  taxon_label: Cutibacterium avidum TM16
+  score: 3.0
+- taxon_id: NCBITaxon:1336203
+  source: PREGO
+  taxon_label: Pseudomonas aeruginosa MH38
+  score: 3.0
+- taxon_id: NCBITaxon:287
+  source: PREGO
+  taxon_label: Pseudomonas aeruginosa
+  score: 3.0
+- taxon_id: NCBITaxon:29575
+  source: PREGO
+  taxon_label: Taylorella equigenitalis
+  score: 3.0
+- taxon_id: NCBITaxon:548477
+  source: PREGO
+  taxon_label: Corynebacterium glucuronolyticum ATCC 51867
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

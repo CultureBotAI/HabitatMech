@@ -1,0 +1,39 @@
+identifier: UBERON:0002100
+label: trunk
+definition: Organism subdivision which is the part of the body posterior to the cervical
+  region (or head, when cervical region not present) and anterior to the caudal region.
+  Includes the sacrum when present.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Rumpf
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: Torso
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+- synonym_text: thoracolumbar region
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: torso
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: trunk region
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0011676
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:torso
+  source_label: Torso
+  mapping_predicate: skos:closeMatch
+  assertion_count: 3
+  assertion_unit: STRAIN
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

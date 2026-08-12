@@ -1,0 +1,37 @@
+identifier: FOODON:03400803
+label: seafood product (eurofir)
+definition: Includes fish offal; a food product whose predominant constituent is fish
+  (e.g. dried and salted fish, smoked fish, canned fish, pickled fish, restructured
+  fish and fish analogues, surimi; fish paste, pâté).
+definition_source: FOODON
+habitat_category: FOOD
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Seafood
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- FOODON:03400801
+- FOODON:03530206
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:seafood
+  source_label: Seafood
+  mapping_predicate: skos:closeMatch
+  assertion_count: 59
+  assertion_unit: STRAIN
+- source: GOLD
+  source_id: gold.ecosystem:5930
+  source_label: Seafood
+  source_path: Engineered > Food production > Seafood
+  mapping_predicate: skos:closeMatch
+  assertion_count: 55
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD. Grounding:
+    CLOSE.'

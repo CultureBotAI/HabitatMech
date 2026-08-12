@@ -1,0 +1,148 @@
+identifier: BTO:0000203
+label: respiratory system
+definition: A system of organs subserving the function of respiration and in air-breathing
+  vertebrates consisting typically of the lungs and their nervous and circulatory
+  supply and the channels by which these are continuous with the outer air.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Atmungssystem
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: Atmungssystems
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: apparatus respiratorius
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: apparatus respiratorius s
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: respiratory systems
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: respiratory tract
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: respiratory tractic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: respiratory tracts
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000203
+  source_label: respiratory system
+  assertion_count: 100
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1001714
+  source: PREGO
+  taxon_label: Mycobacteroides abscessus subsp. massiliense CCUG 48898 = JCM 15300
+  score: 3.0
+- taxon_id: NCBITaxon:1100833
+  source: PREGO
+  taxon_label: Chlamydia trachomatis F/SWFPminus
+  score: 3.0
+- taxon_id: NCBITaxon:1110697
+  source: PREGO
+  taxon_label: Nocardia asteroides NBRC 15531
+  score: 3.0
+- taxon_id: NCBITaxon:1117322
+  source: PREGO
+  taxon_label: Glaesserella parasuis str. Nagasaki
+  score: 3.0
+- taxon_id: NCBITaxon:1138429
+  source: PREGO
+  taxon_label: Glaesserella parasuis gx033
+  score: 3.0
+- taxon_id: NCBITaxon:1162288
+  source: PREGO
+  taxon_label: Mycobacteroides abscessus M154
+  score: 3.0
+- taxon_id: NCBITaxon:1206724
+  source: PREGO
+  taxon_label: Nocardia brasiliensis NBRC 14402
+  score: 3.0
+- taxon_id: NCBITaxon:1213463
+  source: PREGO
+  taxon_label: Mycoplasmoides pneumoniae 19294
+  score: 3.0
+- taxon_id: NCBITaxon:1230480
+  source: PREGO
+  taxon_label: Escherichia coli EC302/04
+  score: 3.0
+- taxon_id: NCBITaxon:1233262
+  source: PREGO
+  taxon_label: Mycoplasmoides pneumoniae PO1
+  score: 3.0
+- taxon_id: NCBITaxon:1236904
+  source: PREGO
+  taxon_label: Mycoplasmoides pneumoniae PI 1428
+  score: 3.0
+- taxon_id: NCBITaxon:1238993
+  source: PREGO
+  taxon_label: Mycoplasmoides pneumoniae M129-B7
+  score: 3.0
+- taxon_id: NCBITaxon:1261125
+  source: PREGO
+  taxon_label: Mannheimia haemolytica serotype 6 str. H23
+  score: 3.0
+- taxon_id: NCBITaxon:1263756
+  source: PREGO
+  taxon_label: Mycoplasmoides pneumoniae 54089
+  score: 3.0
+- taxon_id: NCBITaxon:1263757
+  source: PREGO
+  taxon_label: Mycoplasmoides pneumoniae 54524
+  score: 3.0
+- taxon_id: NCBITaxon:1263758
+  source: PREGO
+  taxon_label: Mycoplasmoides pneumoniae 51494
+  score: 3.0
+- taxon_id: NCBITaxon:1263760
+  source: PREGO
+  taxon_label: Mycoplasmoides pneumoniae 85138
+  score: 3.0
+- taxon_id: NCBITaxon:1263761
+  source: PREGO
+  taxon_label: Mycoplasmoides pneumoniae 39443
+  score: 3.0
+- taxon_id: NCBITaxon:1263762
+  source: PREGO
+  taxon_label: Mycoplasmoides pneumoniae 85084
+  score: 3.0
+- taxon_id: NCBITaxon:1263763
+  source: PREGO
+  taxon_label: Mycoplasmoides pneumoniae M1139
+  score: 3.0
+- taxon_id: NCBITaxon:1263835
+  source: PREGO
+  taxon_label: Mycoplasmoides pneumoniae MAC
+  score: 3.0
+- taxon_id: NCBITaxon:1275966
+  source: PREGO
+  taxon_label: Glaesserella parasuis SW114
+  score: 3.0
+- taxon_id: NCBITaxon:1275967
+  source: PREGO
+  taxon_label: Glaesserella parasuis MN-H
+  score: 3.0
+- taxon_id: NCBITaxon:1275968
+  source: PREGO
+  taxon_label: Glaesserella parasuis 12939
+  score: 3.0
+- taxon_id: NCBITaxon:1275969
+  source: PREGO
+  taxon_label: Glaesserella parasuis 84-15995
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

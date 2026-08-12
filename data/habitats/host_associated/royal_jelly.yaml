@@ -1,0 +1,21 @@
+identifier: FOODON:03301033
+label: royal jelly
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- FOODON:00001177
+- FOODON:00001974
+- habitatmech:GOLD.bacecefac3
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7398
+  source_label: Royal jelly
+  source_path: 'Host-associated > Arthropoda: Insects > Digestive system > Pharyngeal
+    glands > Royal jelly'
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

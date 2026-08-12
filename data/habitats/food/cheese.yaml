@@ -1,0 +1,24 @@
+identifier: FOODON:03000287
+label: cheese
+definition: A dairy product that is formed by coagulation of the milk protein casein.
+definition_source: FOODON
+habitat_category: FOOD
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- FOODON:00001013
+- habitatmech:GOLD.4a2834cfef
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5509
+  source_label: Cheese
+  source_path: Engineered > Food production > Dairy products > Fermented dairy products
+    > Cheese
+  mapping_predicate: skos:exactMatch
+  assertion_count: 582
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

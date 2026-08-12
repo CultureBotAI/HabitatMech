@@ -1,0 +1,70 @@
+identifier: ENVO:00000241
+label: tidal mudflat
+definition: A level tract lying at a small depth below the surface of water, or alternately
+  covered and left bare by the tide.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: FLAT
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: FLAT
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: Tidal-flat
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+- synonym_text: tidal flat
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: tidal flat
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: tidal flatic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: tidal flats
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: tidal mudflatic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: tidal mudflats
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: wetland
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00000192
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:tidal-flat
+  source_label: Tidal-flat
+  mapping_predicate: skos:closeMatch
+  assertion_count: 246
+  assertion_unit: STRAIN
+- source: PREGO
+  source_id: ENVO:00000241
+  source_label: tidal mudflat
+  assertion_count: 2
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1712410
+  source: PREGO
+  taxon_label: Thermanaerosceptrum fracticalcis
+  score: 3.0
+- taxon_id: NCBITaxon:523791
+  source: PREGO
+  taxon_label: Kangiella koreensis DSM 16069
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, PREGO. Grounding:
+    EXACT.'

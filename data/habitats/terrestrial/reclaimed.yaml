@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.18caa9152c
+label: Reclaimed
+habitat_category: TERRESTRIAL
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.6dcf5c1705
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7741
+  source_label: Reclaimed
+  source_path: Environmental > Terrestrial > Soil > Surface mine > Reclaimed
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

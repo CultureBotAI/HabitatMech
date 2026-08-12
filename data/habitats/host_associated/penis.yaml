@@ -1,0 +1,22 @@
+identifier: habitatmech:GOLD.1d60d1c6b9
+label: Penis
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0000989
+- habitatmech:GOLD.9bfd135cfa
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7628
+  source_label: Penis
+  source_path: Host-associated > Mammals > Reproductive system > External organs >
+    Penis
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

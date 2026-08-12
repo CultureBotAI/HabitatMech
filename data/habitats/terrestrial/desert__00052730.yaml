@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.f911ae9902
+label: Desert
+habitat_category: TERRESTRIAL
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00001998
+- ENVO:01001357
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4210
+  source_label: Desert
+  source_path: Environmental > Terrestrial > Soil > Unclassified > Desert
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 66
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

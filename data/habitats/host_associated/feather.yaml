@@ -1,0 +1,49 @@
+identifier: BTO:0000447
+label: feather
+definition: Any of the light horny epidermal outgrowths that form the external covering
+  of the body of birds and that consist of a shaft bearing on each side a series of
+  barbs which bear barbules which in turn bear barbicels commonly ending in hooked
+  hamuli and interlocking with the barbules of an adjacent barb to link the barbs
+  into a continuous vane.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: feathers
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000447
+  source_label: feather
+  assertion_count: 5
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1199154
+  source: PREGO
+  taxon_label: Lysobacter sp. A03
+  score: 3.0
+- taxon_id: NCBITaxon:1230477
+  source: PREGO
+  taxon_label: Bacillus subtilis S1-4
+  score: 3.0
+- taxon_id: NCBITaxon:1297799
+  source: PREGO
+  taxon_label: Meiothermus ruber H328
+  score: 3.0
+- taxon_id: NCBITaxon:2423
+  source: PREGO
+  taxon_label: Fervidobacterium islandicum
+  score: 3.0
+- taxon_id: NCBITaxon:243274
+  source: PREGO
+  taxon_label: Thermotoga maritima MSB8
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

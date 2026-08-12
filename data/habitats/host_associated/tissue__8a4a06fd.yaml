@@ -1,0 +1,22 @@
+identifier: habitatmech:GOLD.b20c4bb2ae
+label: Tissue
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0000479
+- habitatmech:GOLD.affd2445ea
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5998
+  source_label: Tissue
+  source_path: Host-associated > Porifera > Sponge > Tissue
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 7
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

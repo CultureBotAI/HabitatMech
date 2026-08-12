@@ -1,0 +1,68 @@
+identifier: BTO:0001949
+label: HUVEC cell
+definition: A convenient source of human endothelial cells are those that line the
+  large vein in the umbilical cord which is usually discarded together with the placenta
+  after childbirth. The cells can be removed as a fairly pure suspension by mild enzymatic
+  treatment of the vein followed by some mechanical distraction and will grow relatively
+  easily in culture, retaining their differentiated characteristics for several passages.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: HUVEC
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: HUVEC cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: HUVECs
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: human umbilical cord endothelial cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: human umbilical cord endothelial cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: human umbilical vein endothelial cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: human umbilical vein endothelial cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: huvec cell line
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: huvec cell lines
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: huvec cell lineses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: huvec cell linous
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: huvec cellses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0001520
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001949
+  source_label: HUVEC cell
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:314724
+  source: PREGO
+  taxon_label: Borrelia turicatae 91E135
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

@@ -1,0 +1,129 @@
+identifier: ENVO:00005794
+label: water scum
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: water sca
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: water scal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: water scums
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00003930
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00005794
+  source_label: water scum
+  assertion_count: 39
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:1085
+  source: PREGO
+  taxon_label: Rhodospirillum rubrum
+  score: 4.0
+- taxon_id: NCBITaxon:1299
+  source: PREGO
+  taxon_label: Deinococcus radiodurans
+  score: 4.0
+- taxon_id: NCBITaxon:13690
+  source: PREGO
+  taxon_label: Sphingobium yanoikuyae
+  score: 4.0
+- taxon_id: NCBITaxon:1396
+  source: PREGO
+  taxon_label: Bacillus cereus
+  score: 4.0
+- taxon_id: NCBITaxon:157277
+  source: PREGO
+  taxon_label: uncultured Agrobacterium sp.
+  score: 4.0
+- taxon_id: NCBITaxon:158751
+  source: PREGO
+  taxon_label: uncultured Acidovorax sp.
+  score: 4.0
+- taxon_id: NCBITaxon:1833
+  source: PREGO
+  taxon_label: Rhodococcus erythropolis
+  score: 4.0
+- taxon_id: NCBITaxon:188626
+  source: PREGO
+  taxon_label: Dermacoccus sp. Ellin185
+  score: 4.0
+- taxon_id: NCBITaxon:199684
+  source: PREGO
+  taxon_label: uncultured Bradyrhizobium sp.
+  score: 4.0
+- taxon_id: NCBITaxon:2371
+  source: PREGO
+  taxon_label: Xylella fastidiosa
+  score: 4.0
+- taxon_id: NCBITaxon:266
+  source: PREGO
+  taxon_label: Paracoccus denitrificans
+  score: 4.0
+- taxon_id: NCBITaxon:266940
+  source: PREGO
+  taxon_label: Kineococcus radiotolerans SRS30216 = ATCC BAA-149
+  score: 4.0
+- taxon_id: NCBITaxon:283205
+  source: PREGO
+  taxon_label: Mycobacterium sp. THO100
+  score: 4.0
+- taxon_id: NCBITaxon:293
+  source: PREGO
+  taxon_label: Brevundimonas diminuta
+  score: 4.0
+- taxon_id: NCBITaxon:29405
+  source: PREGO
+  taxon_label: Microlunatus phosphovorus
+  score: 4.0
+- taxon_id: NCBITaxon:339
+  source: PREGO
+  taxon_label: Xanthomonas campestris
+  score: 4.0
+- taxon_id: NCBITaxon:34003
+  source: PREGO
+  taxon_label: Paracoccus aminophilus
+  score: 4.0
+- taxon_id: NCBITaxon:34062
+  source: PREGO
+  taxon_label: Faucicola osloensis
+  score: 4.0
+- taxon_id: NCBITaxon:354352
+  source: PREGO
+  taxon_label: Pseudochrobactrum saccharolyticum
+  score: 4.0
+- taxon_id: NCBITaxon:358
+  source: PREGO
+  taxon_label: Agrobacterium tumefaciens
+  score: 4.0
+- taxon_id: NCBITaxon:36987
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:37919
+  source: PREGO
+  taxon_label: Rhodococcus opacus
+  score: 4.0
+- taxon_id: NCBITaxon:39946
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:40214
+  source: PREGO
+  taxon_label: Acinetobacter johnsonii
+  score: 4.0
+- taxon_id: NCBITaxon:40215
+  source: PREGO
+  taxon_label: Acinetobacter junii
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

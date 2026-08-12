@@ -1,0 +1,29 @@
+identifier: ENVO:01000125
+label: marine littoral zone
+definition: The marine littoral zone is a littoral zone which extends, approximately,
+  from the spray region above the high tide mark to the edge of the coninental shelf.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Littoral zone
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- ENVO:00001999
+- ENVO:01000407
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7907
+  source_label: Littoral zone
+  source_path: Environmental > Aquatic > Marine > Littoral zone
+  mapping_predicate: skos:exactMatch
+  assertion_count: 3
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

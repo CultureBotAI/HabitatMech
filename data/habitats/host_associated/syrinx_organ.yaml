@@ -1,0 +1,33 @@
+identifier: UBERON:0009074
+label: syrinx organ
+definition: Vocal organ of birds, located at the base of a trachea.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Syrinx
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: avian vocal organ
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: syrinx
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0034681
+- habitatmech:GOLD.308a1c6b2e
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7439
+  source_label: Syrinx
+  source_path: Host-associated > Birds > Respiratory system > Trachea > Syrinx
+  mapping_predicate: skos:closeMatch
+  assertion_count: 21
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

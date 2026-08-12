@@ -1,0 +1,25 @@
+identifier: BTO:0000862
+label: heart ventricle
+definition: A chamber of the heart which receives blood from a corresponding atrium
+  and from which blood is forced into the arteries.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Ventricle
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- habitatmech:GOLD.805ee181bd
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6610
+  source_label: Ventricle
+  source_path: 'Host-associated > Mammals: Human > Circulatory system > Heart > Ventricle'
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

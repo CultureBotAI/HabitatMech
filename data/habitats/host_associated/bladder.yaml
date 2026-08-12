@@ -1,0 +1,135 @@
+identifier: BTO:0000123
+label: bladder
+definition: A membranous sac in animals that serves as the receptacle of a liquid
+  or contains gas.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: bladders
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0001491
+- habitatmech:GOLD.bb1e8cd107
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6653
+  source_label: Bladder
+  source_path: 'Host-associated > Mammals: Human > Benign tumor > Polyps > Bladder'
+  mapping_predicate: skos:exactMatch
+- source: PREGO
+  source_id: BTO:0000123
+  source_label: bladder
+  assertion_count: 32
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1206108
+  source: PREGO
+  taxon_label: Escherichia coli J96
+  score: 3.0
+- taxon_id: NCBITaxon:1286329
+  source: PREGO
+  taxon_label: Escherichia coli TOP379
+  score: 3.0
+- taxon_id: NCBITaxon:1286330
+  source: PREGO
+  taxon_label: Escherichia coli TOP382-1
+  score: 3.0
+- taxon_id: NCBITaxon:1286331
+  source: PREGO
+  taxon_label: Escherichia coli TOP382-2
+  score: 3.0
+- taxon_id: NCBITaxon:1286332
+  source: PREGO
+  taxon_label: Escherichia coli TOP382-3
+  score: 3.0
+- taxon_id: NCBITaxon:1286333
+  source: PREGO
+  taxon_label: Escherichia coli TOP291
+  score: 3.0
+- taxon_id: NCBITaxon:1286334
+  source: PREGO
+  taxon_label: Escherichia coli TOP293-1
+  score: 3.0
+- taxon_id: NCBITaxon:1286335
+  source: PREGO
+  taxon_label: Escherichia coli TOP293-2
+  score: 3.0
+- taxon_id: NCBITaxon:1286336
+  source: PREGO
+  taxon_label: Escherichia coli TOP293-3
+  score: 3.0
+- taxon_id: NCBITaxon:1286337
+  source: PREGO
+  taxon_label: Escherichia coli TOP293-4
+  score: 3.0
+- taxon_id: NCBITaxon:1286338
+  source: PREGO
+  taxon_label: Escherichia coli TOP498
+  score: 3.0
+- taxon_id: NCBITaxon:1286339
+  source: PREGO
+  taxon_label: Escherichia coli TOP550-1
+  score: 3.0
+- taxon_id: NCBITaxon:1286340
+  source: PREGO
+  taxon_label: Escherichia coli TOP550-2
+  score: 3.0
+- taxon_id: NCBITaxon:1286341
+  source: PREGO
+  taxon_label: Escherichia coli TOP550-3
+  score: 3.0
+- taxon_id: NCBITaxon:1286342
+  source: PREGO
+  taxon_label: Escherichia coli TOP550-4
+  score: 3.0
+- taxon_id: NCBITaxon:1286343
+  source: PREGO
+  taxon_label: Escherichia coli TOP2386
+  score: 3.0
+- taxon_id: NCBITaxon:1286344
+  source: PREGO
+  taxon_label: Escherichia coli TOP2396-1
+  score: 3.0
+- taxon_id: NCBITaxon:1286345
+  source: PREGO
+  taxon_label: Escherichia coli TOP2396-2
+  score: 3.0
+- taxon_id: NCBITaxon:1286346
+  source: PREGO
+  taxon_label: Escherichia coli TOP2396-3
+  score: 3.0
+- taxon_id: NCBITaxon:1286347
+  source: PREGO
+  taxon_label: Escherichia coli TOP2515
+  score: 3.0
+- taxon_id: NCBITaxon:1286348
+  source: PREGO
+  taxon_label: Escherichia coli TOP2522-1
+  score: 3.0
+- taxon_id: NCBITaxon:1286350
+  source: PREGO
+  taxon_label: Escherichia coli TOP2652
+  score: 3.0
+- taxon_id: NCBITaxon:1286351
+  source: PREGO
+  taxon_label: Escherichia coli TOP2662-1
+  score: 3.0
+- taxon_id: NCBITaxon:1286352
+  source: PREGO
+  taxon_label: Escherichia coli TOP2662-2
+  score: 3.0
+- taxon_id: NCBITaxon:1286353
+  source: PREGO
+  taxon_label: Escherichia coli TOP2662-3
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'

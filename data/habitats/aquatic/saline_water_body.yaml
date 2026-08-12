@@ -1,0 +1,38 @@
+identifier: ENVO:01001319
+label: saline water body
+definition: A body of water which is primarily composed of saline water.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Saline
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: saline body of water
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00000063
+- habitatmech:GOLD.ce244e62cd
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:saline
+  source_label: Saline
+  mapping_predicate: skos:closeMatch
+  assertion_count: 899
+  assertion_unit: STRAIN
+- source: GOLD
+  source_id: gold.ecosystem:3753
+  source_label: Saline
+  source_path: Environmental > Aquatic > Non-marine Saline and Alkaline > Saline
+  mapping_predicate: skos:closeMatch
+  assertion_count: 150
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD. Grounding:
+    CLOSE.'

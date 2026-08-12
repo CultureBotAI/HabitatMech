@@ -1,0 +1,192 @@
+identifier: ENVO:00000044
+label: peatland
+definition: A wetland ecosystem which accumulates acidic peat, a deposit of dead plant
+  material.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Bog
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: Mire
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: bog
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: mire
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: morass
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: morass
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: morasses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: morassic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: muskeg
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: muskeg
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: muskegs
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: peat bog
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: peat bog
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: peat bogs
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: peatlandic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: peatlands
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: turf
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: wetland
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00005774
+- ENVO:01001209
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5621
+  source_label: Bog
+  source_path: Environmental > Terrestrial > Soil > Peat > Bog
+  mapping_predicate: skos:closeMatch
+  assertion_count: 31
+  assertion_unit: ORGANISM
+- source: GOLD
+  source_id: gold.ecosystem:5809
+  source_label: Mire
+  source_path: Environmental > Terrestrial > Soil > Peat > Mire
+  mapping_predicate: skos:closeMatch
+- source: PREGO
+  source_id: ENVO:00000044
+  source_label: peatland
+  assertion_count: 1419
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:395964
+  source: PREGO
+  taxon_label: Methylocapsa acidiphila B2
+  score: 3.0
+- taxon_id: NCBITaxon:456442
+  source: PREGO
+  taxon_label: Methanoregula boonei 6A8
+  score: 3.0
+- taxon_id: NCBITaxon:926550
+  source: PREGO
+  taxon_label: Caldilinea aerophila DSM 14535 = NBRC 104270
+  score: 3.0
+- taxon_id: NCBITaxon:1501
+  source: PREGO
+  taxon_label: Clostridium pasteurianum
+  score: 2.27326
+- taxon_id: NCBITaxon:8018
+  source: PREGO
+  score: 2.2584
+- taxon_id: NCBITaxon:382514
+  source: PREGO
+  taxon_label: Telmatospirillum siberiense
+  score: 2.16176
+- taxon_id: NCBITaxon:1519
+  source: PREGO
+  taxon_label: Clostridium tyrobutyricum
+  score: 2.13448
+- taxon_id: NCBITaxon:317580
+  source: PREGO
+  taxon_label: Flavobacterium sp. 4214
+  score: 2.11469
+- taxon_id: NCBITaxon:1538
+  source: PREGO
+  taxon_label: Clostridium ljungdahlii
+  score: 2.11225
+- taxon_id: NCBITaxon:889211
+  source: PREGO
+  taxon_label: Erwinia amylovora ATCC BAA-2158
+  score: 2.08914
+- taxon_id: NCBITaxon:212717
+  source: PREGO
+  taxon_label: Clostridium tetani E88
+  score: 2.07212
+- taxon_id: NCBITaxon:441772
+  source: PREGO
+  taxon_label: Clostridium botulinum F str. Langeland
+  score: 2.06711
+- taxon_id: NCBITaxon:33075
+  source: PREGO
+  taxon_label: Acidobacterium capsulatum
+  score: 2.06619
+- taxon_id: NCBITaxon:445336
+  source: PREGO
+  taxon_label: Clostridium botulinum Bf
+  score: 2.06243
+- taxon_id: NCBITaxon:716659
+  source: PREGO
+  taxon_label: Collimonas sp. MPS11E8
+  score: 2.0567
+- taxon_id: NCBITaxon:213804
+  source: PREGO
+  taxon_label: Janthinobacterium sp. J3
+  score: 2.05406
+- taxon_id: NCBITaxon:41315
+  source: PREGO
+  taxon_label: 'Yersinia sp. (in: enterobacteria)'
+  score: 2.05291
+- taxon_id: NCBITaxon:1488
+  source: PREGO
+  taxon_label: Clostridium acetobutylicum
+  score: 2.05263
+- taxon_id: NCBITaxon:634500
+  source: PREGO
+  taxon_label: Erwinia billingiae Eb661
+  score: 2.0487
+- taxon_id: NCBITaxon:443906
+  source: PREGO
+  taxon_label: Clavibacter michiganensis subsp. michiganensis NCPPB 382
+  score: 2.04763
+- taxon_id: NCBITaxon:498213
+  source: PREGO
+  taxon_label: Clostridium botulinum B1 str. Okra
+  score: 2.0452
+- taxon_id: NCBITaxon:746360
+  source: PREGO
+  taxon_label: Pseudomonas fluorescens WH6
+  score: 2.04416
+- taxon_id: NCBITaxon:281090
+  source: PREGO
+  taxon_label: Leifsonia xyli subsp. xyli str. CTCB07
+  score: 2.04231
+- taxon_id: NCBITaxon:452863
+  source: PREGO
+  taxon_label: Pseudarthrobacter chlorophenolicus A6
+  score: 2.04112
+- taxon_id: NCBITaxon:583346
+  source: PREGO
+  taxon_label: Clostridium kluyveri NBRC 12016
+  score: 2.0407
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'

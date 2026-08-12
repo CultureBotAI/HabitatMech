@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.da02e4c756
+label: Connective tissue
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0002384
+- habitatmech:GOLD.cd0b0940e5
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6596
+  source_label: Connective tissue
+  source_path: 'Host-associated > Mammals: Human > Connective tissue'
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

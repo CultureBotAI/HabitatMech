@@ -1,0 +1,169 @@
+identifier: ENVO:00001998
+label: soil
+definition: An environmental material which is primarily composed of minerals, varying
+  proportions of sand, silt, and clay, organic material such as humus, interstitial
+  gases, liquids, and a broad range of resident micro- and macroorganisms.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: ground
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: grounds
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: regolith
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: soils
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: soilses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00000446
+- ENVO:00010483
+- ENVO:01000813
+source_attestations:
+- source: ENVIRONMENTS_TABLE
+  source_id: soil
+  source_label: soil
+  notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: GOLD
+  source_id: gold.ecosystem:3496
+  source_label: Soil
+  source_path: Environmental > Terrestrial > Soil
+  mapping_predicate: skos:exactMatch
+  assertion_count: 26399
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: PREGO
+  source_id: ENVO:00001998
+  source_label: soil
+  assertion_count: 8715
+  assertion_unit: TAXON
+  score: 4.00727
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+environmental_parameters:
+- parameter: GRADIENTS
+  qualitative_value: high
+  source: kg-microbe environments.csv (soil)
+- parameter: PRESSURE
+  qualitative_value: low
+  source: kg-microbe environments.csv (soil)
+- parameter: STRUCTURAL_COMPLEXITY
+  qualitative_value: high
+  source: kg-microbe environments.csv (soil)
+- parameter: TEMPERATURE_VARIABILITY
+  qualitative_value: medium
+  source: kg-microbe environments.csv (soil)
+characteristic_taxa:
+- taxon_id: NCBITaxon:5530
+  source: PREGO
+  taxon_label: Metarhizium anisopliae
+  score: 4.00727
+- taxon_id: NCBITaxon:167879
+  source: PREGO
+  taxon_label: Colwellia psychrerythraea 34H
+  score: 4.00702
+- taxon_id: NCBITaxon:509191
+  source: PREGO
+  taxon_label: Acetivibrio cellulolyticus CD2
+  score: 4.00702
+- taxon_id: NCBITaxon:550
+  source: PREGO
+  taxon_label: Enterobacter cloacae
+  score: 4.00689
+- taxon_id: NCBITaxon:477974
+  source: PREGO
+  taxon_label: Candidatus Desulforudis audaxviator MP104C
+  score: 4.00634
+- taxon_id: NCBITaxon:350054
+  source: PREGO
+  taxon_label: Mycolicibacterium gilvum PYR-GCK
+  score: 4.00627
+- taxon_id: NCBITaxon:236097
+  source: PREGO
+  taxon_label: Alcanivorax sp. DG881
+  score: 4.00476
+- taxon_id: NCBITaxon:698936
+  source: PREGO
+  taxon_label: Sinorhizobium meliloti BL225C
+  score: 4.00432
+- taxon_id: NCBITaxon:229533
+  source: PREGO
+  taxon_label: Fusarium graminearum PH-1
+  score: 4.00427
+- taxon_id: NCBITaxon:555779
+  source: PREGO
+  taxon_label: Desulfonatronospira thiodismutans ASO3-1
+  score: 4.00358
+- taxon_id: NCBITaxon:391587
+  source: PREGO
+  taxon_label: Kordia algicida OT-1
+  score: 4.00347
+- taxon_id: NCBITaxon:377431
+  source: PREGO
+  taxon_label: Chlorobium ferrooxidans DSM 13031
+  score: 4.00325
+- taxon_id: NCBITaxon:392917
+  source: PREGO
+  taxon_label: Paenibacillus larvae subsp. larvae BRL-230010
+  score: 4.00306
+- taxon_id: NCBITaxon:398720
+  source: PREGO
+  taxon_label: Leeuwenhoekiella blandensis MED217
+  score: 4.00297
+- taxon_id: NCBITaxon:402612
+  source: PREGO
+  taxon_label: Flavobacterium psychrophilum JIP02/86
+  score: 4.00281
+- taxon_id: NCBITaxon:324925
+  source: PREGO
+  taxon_label: Pelodictyon phaeoclathratiforme BU-1
+  score: 4.00257
+- taxon_id: NCBITaxon:391613
+  source: PREGO
+  taxon_label: Roseovarius sp. TM1035
+  score: 4.00247
+- taxon_id: NCBITaxon:232721
+  source: PREGO
+  taxon_label: Acidovorax sp. JS42
+  score: 4.00217
+- taxon_id: NCBITaxon:314277
+  source: PREGO
+  taxon_label: Marinomonas sp. MED121
+  score: 4.00181
+- taxon_id: NCBITaxon:391624
+  source: PREGO
+  taxon_label: Sulfitobacter indolifex HEL-45
+  score: 4.00128
+- taxon_id: NCBITaxon:641491
+  source: PREGO
+  taxon_label: Pseudodesulfovibrio mercurii
+  score: 4.00008
+- taxon_id: NCBITaxon:100038
+  source: PREGO
+  taxon_label: Montagnula opulenta
+  score: 4.0
+- taxon_id: NCBITaxon:100052
+  source: PREGO
+  taxon_label: Delitschia winteri
+  score: 4.0
+- taxon_id: NCBITaxon:1005740
+  source: PREGO
+  taxon_label: Aminivibrio pyruvatiphilus
+  score: 4.0
+- taxon_id: NCBITaxon:1007092
+  source: PREGO
+  taxon_label: Microlunatus terrae
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD,
+    PREGO. Grounding: EXACT.'

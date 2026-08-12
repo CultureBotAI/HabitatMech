@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.c2022a596f
+label: Meadow
+habitat_category: TERRESTRIAL
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00000108
+- ENVO:00000363
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5617
+  source_label: Meadow
+  source_path: Environmental > Terrestrial > Soil > Nature reserve > Meadow
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

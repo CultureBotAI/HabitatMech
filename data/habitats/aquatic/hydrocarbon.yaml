@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.db79f0142d
+label: Hydrocarbon
+habitat_category: AQUATIC
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.3841c9c3af
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5723
+  source_label: Hydrocarbon
+  source_path: Environmental > Aquatic > Marine > Deep subsurface > Hydrocarbon
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

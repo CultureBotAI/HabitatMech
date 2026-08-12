@@ -1,0 +1,29 @@
+identifier: ENVO:00000328
+label: vadose zone
+definition: An interface layer which 1) is primarily composed of solid materials,
+  2) separates the land surface and phreatic zone, and 3) contains groundwater at
+  atmospheric pressure.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: unsaturated zone
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00001998
+- ENVO:01001275
+- ENVO:01001684
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5819
+  source_label: Vadose zone
+  source_path: Environmental > Terrestrial > Soil > Vadose zone
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

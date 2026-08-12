@@ -1,0 +1,60 @@
+identifier: ENVO:00000369
+label: brine pool
+definition: 'MERGED DEFINITION: TARGET DEFINITION: A large area of brine on the ocean
+  basin near cold seep vents which release methane into the water. These pools are
+  concentrations of water having an extremely high salinity as compared to the surrounding
+  ocean, caused by the motion of large salt deposits through salt tectonics. --------------------
+  SOURCE DEFINITION: Marine brine pools are large areas of brine on the ocean basin.
+  These pools are bodies of water that have a salinity three to five times greater
+  than the surrounding ocean. For deep-sea brine pools the source of the salt is the
+  dissolution of large salt deposits through salt tectonics. The brine often contains
+  high concentrations of methane, providing energy to chemosynthetic animals that
+  live near the pool.'
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: brine poolic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: brine pools
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: marine brine pool
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: marine brine pool
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: marine brine poolic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: marine brine pools
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:01000617
+- ENVO:01001308
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00000369
+  source_label: brine pool
+  assertion_count: 2
+  assertion_unit: TAXON
+  score: 1.10314
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:54121
+  source: PREGO
+  taxon_label: Halanaerobium congolense
+  score: 1.10314
+- taxon_id: NCBITaxon:53245
+  source: PREGO
+  taxon_label: Desulfonatronovibrio hydrogenovorans
+  score: 1.08264
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

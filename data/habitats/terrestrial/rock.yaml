@@ -1,0 +1,148 @@
+identifier: ENVO:00001995
+label: rock
+definition: A rock is a naturally occurring solid aggregate of one or more minerals
+  or mineraloids.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:01000814
+- habitatmech:GOLD.151ba43519
+source_attestations:
+- source: ENVIRONMENTS_TABLE
+  source_id: rock
+  source_label: rock
+  notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: GOLD
+  source_id: gold.ecosystem:5325
+  source_label: Rock
+  source_path: Environmental > Terrestrial > Deep subsurface > Rock
+  mapping_predicate: skos:exactMatch
+  assertion_count: 49
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: PREGO
+  source_id: ENVO:00001995
+  source_label: rock
+  assertion_count: 158
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+environmental_parameters:
+- parameter: ORGANIC_MATTER
+  qualitative_value: low
+  source: kg-microbe environments.csv (rock)
+- parameter: SALINITY_VARIABILITY
+  qualitative_value: small
+  source: kg-microbe environments.csv (rock)
+- parameter: STRUCTURAL_COMPLEXITY
+  qualitative_value: high
+  source: kg-microbe environments.csv (rock)
+characteristic_taxa:
+- taxon_id: NCBITaxon:104245
+  source: PREGO
+  taxon_label: Clavaria zollingeri
+  score: 4.0
+- taxon_id: NCBITaxon:105420
+  source: PREGO
+  taxon_label: Streptacidiphilus neutrinimicus
+  score: 4.0
+- taxon_id: NCBITaxon:106111
+  source: PREGO
+  taxon_label: Pedobacter sp. KP-2
+  score: 4.0
+- taxon_id: NCBITaxon:1069
+  source: PREGO
+  taxon_label: Rhodomicrobium vannielii
+  score: 4.0
+- taxon_id: NCBITaxon:1074
+  source: PREGO
+  taxon_label: Rhodoblastus acidophilus
+  score: 4.0
+- taxon_id: NCBITaxon:108015
+  source: PREGO
+  taxon_label: Bradyrhizobium yuanmingense
+  score: 4.0
+- taxon_id: NCBITaxon:1108
+  source: PREGO
+  taxon_label: Chloroflexus aurantiacus
+  score: 4.0
+- taxon_id: NCBITaxon:111805
+  source: PREGO
+  taxon_label: Actinomadura pelletieri
+  score: 4.0
+- taxon_id: NCBITaxon:112235
+  source: PREGO
+  taxon_label: Neochlamydia hartmannellae
+  score: 4.0
+- taxon_id: NCBITaxon:112248
+  source: PREGO
+  taxon_label: Seinonella peptonophila
+  score: 4.0
+- taxon_id: NCBITaxon:114715
+  source: PREGO
+  taxon_label: uncultured Ralstonia sp.
+  score: 4.0
+- taxon_id: NCBITaxon:121608
+  source: PREGO
+  taxon_label: Paenibacillus koleovorans
+  score: 4.0
+- taxon_id: NCBITaxon:128
+  source: PREGO
+  taxon_label: Isosphaera pallida
+  score: 4.0
+- taxon_id: NCBITaxon:129542
+  source: PREGO
+  taxon_label: Placynthiella icmalea
+  score: 4.0
+- taxon_id: NCBITaxon:134355
+  source: PREGO
+  taxon_label: Ceramothyrium carniolicum
+  score: 4.0
+- taxon_id: NCBITaxon:1371
+  source: PREGO
+  taxon_label: Marinococcus halophilus
+  score: 4.0
+- taxon_id: NCBITaxon:1391
+  source: PREGO
+  taxon_label: Aneurinibacillus aneurinilyticus
+  score: 4.0
+- taxon_id: NCBITaxon:1396
+  source: PREGO
+  taxon_label: Bacillus cereus
+  score: 4.0
+- taxon_id: NCBITaxon:1397
+  source: PREGO
+  taxon_label: Niallia circulans
+  score: 4.0
+- taxon_id: NCBITaxon:1399
+  source: PREGO
+  taxon_label: Cytobacillus firmus
+  score: 4.0
+- taxon_id: NCBITaxon:1406
+  source: PREGO
+  taxon_label: Paenibacillus polymyxa
+  score: 4.0
+- taxon_id: NCBITaxon:1409
+  source: PREGO
+  taxon_label: 'Bacillus sp. (in: firmicutes)'
+  score: 4.0
+- taxon_id: NCBITaxon:1451
+  source: PREGO
+  taxon_label: Paenibacillus amylolyticus
+  score: 4.0
+- taxon_id: NCBITaxon:147
+  source: PREGO
+  taxon_label: Spirochaeta aurantia
+  score: 4.0
+- taxon_id: NCBITaxon:1510
+  source: PREGO
+  taxon_label: Thermoclostridium stercorarium
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD,
+    PREGO. Grounding: EXACT.'

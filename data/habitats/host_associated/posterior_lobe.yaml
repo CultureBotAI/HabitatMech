@@ -1,0 +1,50 @@
+identifier: BTO:0000561
+label: posterior lobe
+definition: The portion of the cerebellum separated from the anterior lobe by the
+  primary fissure and from the flocculonodular lobe by the dorsolateral fissure; it
+  comprises the declive, folium vermis, tuber vermis, pyramid, uvula, simple lobule,
+  inferior and superior semilunar lobules, and tonsils.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: caudal lobe
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: caudal lobes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: lobe caudalis cerebelli
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: lobe caudalis cerebellis
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: middle lobe
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: middle lobes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: posterior lobes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000561
+  source_label: posterior lobe
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1773
+  source: PREGO
+  taxon_label: Mycobacterium tuberculosis
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

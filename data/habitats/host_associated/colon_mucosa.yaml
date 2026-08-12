@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.0bb82ca5d9
+label: Colon mucosa
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0000317
+- habitatmech:GOLD.b091b80314
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7433
+  source_label: Colon mucosa
+  source_path: Host-associated > Birds > Digestive system > Large intestine > Colon
+    mucosa
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

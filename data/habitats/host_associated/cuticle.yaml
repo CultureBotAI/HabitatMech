@@ -1,0 +1,56 @@
+identifier: BTO:0001600
+label: cuticle
+definition: A layer of more or less solid substance which covers the free surface
+  of an epithelial cell.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: cuticlar
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: cuticles
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: cuticula
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: cuticulal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: cuticulas
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000634
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001600
+  source_label: cuticle
+  assertion_count: 4
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1261128
+  source: PREGO
+  taxon_label: Pantoea agglomerans 299R
+  score: 3.0
+- taxon_id: NCBITaxon:1283291
+  source: PREGO
+  taxon_label: Pseudomonas sp. URMO17WK12:I11
+  score: 3.0
+- taxon_id: NCBITaxon:1307436
+  source: PREGO
+  taxon_label: Cytobacillus firmus DS1
+  score: 3.0
+- taxon_id: NCBITaxon:53408
+  source: PREGO
+  taxon_label: Pseudomonas citronellolis
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

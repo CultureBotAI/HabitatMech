@@ -1,0 +1,42 @@
+identifier: ENVO:01000026
+label: marine bathyal zone biome
+definition: The marine bathyal zone biome comprises regions of the marine benthic
+  biome between approximately 200 m and 3000 m depth. This zone generally coincides
+  with the continental slope.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: marine bathyal zone
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: marine bathyal zones
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: marine bathyal zonous
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:01000024
+source_attestations:
+- source: PREGO
+  source_id: ENVO:01000026
+  source_label: marine bathyal zone biome
+  assertion_count: 2
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:36987
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:777
+  source: PREGO
+  taxon_label: Coxiella burnetii
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

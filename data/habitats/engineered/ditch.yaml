@@ -1,0 +1,44 @@
+identifier: ENVO:00000037
+label: ditch
+definition: A small, human-made channel which has been dug for draining or irrigating
+  the land.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: agricultural drain
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: agricultural drains
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: ditches
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: drain
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: drains
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00000121
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00000037
+  source_label: ditch
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:644282
+  source: PREGO
+  taxon_label: Desulfarculus baarsii DSM 2075
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

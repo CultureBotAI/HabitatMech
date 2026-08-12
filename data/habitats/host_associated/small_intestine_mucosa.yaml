@@ -1,0 +1,33 @@
+identifier: BTO:0001259
+label: small intestine mucosa
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Mucosa
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- BTO:0000642
+- BTO:0000651
+- habitatmech:GOLD.333c28fb9f
+- habitatmech:GOLD.7c194a46ba
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6146
+  source_label: Small intestine mucosa
+  source_path: 'Host-associated > Mammals: Human > Remains > Mummified remains > Small
+    intestine mucosa'
+  mapping_predicate: skos:exactMatch
+- source: GOLD
+  source_id: gold.ecosystem:6902
+  source_label: Mucosa
+  source_path: Host-associated > Birds > Digestive system > Small intestine > Mucosa
+  mapping_predicate: skos:exactMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

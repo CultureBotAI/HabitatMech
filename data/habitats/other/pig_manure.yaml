@@ -1,0 +1,126 @@
+identifier: ENVO:00003860
+label: pig manure
+definition: Manure which is primarily composed of pig feces.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: pig manures
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00003031
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00003860
+  source_label: pig manure
+  assertion_count: 58
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:126378
+  source: PREGO
+  taxon_label: Prevotella sp. RS2
+  score: 4.0
+- taxon_id: NCBITaxon:1264
+  source: PREGO
+  taxon_label: Hominimerdicola alba
+  score: 4.0
+- taxon_id: NCBITaxon:1265
+  source: PREGO
+  taxon_label: Ruminococcus flavefaciens
+  score: 4.0
+- taxon_id: NCBITaxon:1485
+  source: PREGO
+  taxon_label: Clostridium
+  score: 4.0
+- taxon_id: NCBITaxon:1512
+  source: PREGO
+  taxon_label: '[Clostridium] symbiosum'
+  score: 4.0
+- taxon_id: NCBITaxon:1585
+  source: PREGO
+  taxon_label: Lactobacillus delbrueckii subsp. bulgaricus
+  score: 4.0
+- taxon_id: NCBITaxon:1626
+  source: PREGO
+  taxon_label: Lacticaseibacillus sharpeae
+  score: 4.0
+- taxon_id: NCBITaxon:164
+  source: PREGO
+  taxon_label: Treponema pectinovorum
+  score: 4.0
+- taxon_id: NCBITaxon:1732
+  source: PREGO
+  taxon_label: Eubacterium oxidoreducens
+  score: 4.0
+- taxon_id: NCBITaxon:180332
+  source: PREGO
+  taxon_label: Robinsoniella peoriensis
+  score: 4.0
+- taxon_id: NCBITaxon:2087
+  source: PREGO
+  taxon_label: Anaeroplasma abactoclasticum
+  score: 4.0
+- taxon_id: NCBITaxon:213810
+  source: PREGO
+  taxon_label: Ruminococcus champanellensis 18P13 = JCM 17042
+  score: 4.0
+- taxon_id: NCBITaxon:2741
+  source: PREGO
+  taxon_label: Peptococcus niger
+  score: 4.0
+- taxon_id: NCBITaxon:28122
+  source: PREGO
+  taxon_label: Fibrobacter intestinalis
+  score: 4.0
+- taxon_id: NCBITaxon:28129
+  source: PREGO
+  taxon_label: Prevotella denticola
+  score: 4.0
+- taxon_id: NCBITaxon:28251
+  source: PREGO
+  taxon_label: Ornithobacterium rhinotracheale
+  score: 4.0
+- taxon_id: NCBITaxon:290054
+  source: PREGO
+  taxon_label: Eubacterium coprostanoligenes
+  score: 4.0
+- taxon_id: NCBITaxon:29355
+  source: PREGO
+  taxon_label: Ruminiclostridium cellobioparum
+  score: 4.0
+- taxon_id: NCBITaxon:305719
+  source: PREGO
+  taxon_label: Segatella baroniae
+  score: 4.0
+- taxon_id: NCBITaxon:308994
+  source: PREGO
+  taxon_label: Dialister propionicifaciens
+  score: 4.0
+- taxon_id: NCBITaxon:34085
+  source: PREGO
+  taxon_label: Riemerella anatipestifer
+  score: 4.0
+- taxon_id: NCBITaxon:35787
+  source: PREGO
+  taxon_label: Limosilactobacillus pontis
+  score: 4.0
+- taxon_id: NCBITaxon:360807
+  source: PREGO
+  taxon_label: Roseburia inulinivorans
+  score: 4.0
+- taxon_id: NCBITaxon:363265
+  source: PREGO
+  taxon_label: Leyella stercorea
+  score: 4.0
+- taxon_id: NCBITaxon:36987
+  source: PREGO
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

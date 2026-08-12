@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.59184b6242
+label: Laryngopharynx
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0001051
+- habitatmech:GOLD.6989261991
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6830
+  source_label: Laryngopharynx
+  source_path: Host-associated > Mammals > Respiratory system > Pharynx/Throat > Laryngopharynx
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

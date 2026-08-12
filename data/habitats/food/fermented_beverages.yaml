@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.b2c3ae1ed5
+label: Fermented beverages
+habitat_category: FOOD
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- FOODON:03530206
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:3504
+  source_label: Fermented beverages
+  source_path: Engineered > Food production > Fermented beverages
+  assertion_count: 645
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

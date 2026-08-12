@@ -1,0 +1,107 @@
+identifier: ENVO:01000024
+label: marine benthic biome
+definition: The marine benthic biome (benthic meaning 'bottom') encompasses the seafloor
+  and includes such areas as shores, littoral or intertidal areas, marine coral reefs,
+  and the deep seabed.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: marine benthic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: marine benthics
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00000447
+source_attestations:
+- source: PREGO
+  source_id: ENVO:01000024
+  source_label: marine benthic biome
+  assertion_count: 2067
+  assertion_unit: TAXON
+  score: 2.20432
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:406538
+  source: PREGO
+  score: 2.20432
+- taxon_id: NCBITaxon:406540
+  source: PREGO
+  score: 2.17394
+- taxon_id: NCBITaxon:29158
+  source: PREGO
+  score: 2.16893
+- taxon_id: NCBITaxon:6613
+  source: PREGO
+  score: 2.1433
+- taxon_id: NCBITaxon:106299
+  source: PREGO
+  score: 2.07661
+- taxon_id: NCBITaxon:80836
+  source: PREGO
+  score: 2.06162
+- taxon_id: NCBITaxon:69293
+  source: PREGO
+  score: 2.05815
+- taxon_id: NCBITaxon:8090
+  source: PREGO
+  score: 2.05671
+- taxon_id: NCBITaxon:7425
+  source: PREGO
+  score: 2.04995
+- taxon_id: NCBITaxon:104421
+  source: PREGO
+  score: 2.04463
+- taxon_id: NCBITaxon:29159
+  source: PREGO
+  score: 2.0441
+- taxon_id: NCBITaxon:6182
+  source: PREGO
+  score: 2.04167
+- taxon_id: NCBITaxon:9258
+  source: PREGO
+  score: 2.03944
+- taxon_id: NCBITaxon:483417
+  source: PREGO
+  score: 2.03916
+- taxon_id: NCBITaxon:7029
+  source: PREGO
+  score: 2.03837
+- taxon_id: NCBITaxon:6334
+  source: PREGO
+  score: 2.03537
+- taxon_id: NCBITaxon:13686
+  source: PREGO
+  score: 2.03214
+- taxon_id: NCBITaxon:6238
+  source: PREGO
+  score: 2.03124
+- taxon_id: NCBITaxon:7070
+  source: PREGO
+  score: 2.0301
+- taxon_id: NCBITaxon:483407
+  source: PREGO
+  score: 2.02846
+- taxon_id: NCBITaxon:7159
+  source: PREGO
+  score: 2.02247
+- taxon_id: NCBITaxon:9031
+  source: PREGO
+  score: 2.02238
+- taxon_id: NCBITaxon:121224
+  source: PREGO
+  score: 2.02225
+- taxon_id: NCBITaxon:6945
+  source: PREGO
+  score: 2.02187
+- taxon_id: NCBITaxon:7209
+  source: PREGO
+  score: 2.02176
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

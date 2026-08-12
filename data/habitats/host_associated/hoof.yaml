@@ -1,0 +1,26 @@
+identifier: UBERON:0008963
+label: hoof
+definition: The tip of a toe of an ungulate mammal, strengthened by a thick horny
+  (keratin) covering. The hoof consists of a hard or rubbery sole, and a hard wall
+  formed by a thick nail rolled around the tip of the toe. The weight of the animal
+  is normally borne by both the sole and the edge of the hoof wall. Hooves grow continuously,
+  and are constantly worn down by use.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0009564
+- habitatmech:GOLD.56e0776270
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6380
+  source_label: Hoof
+  source_path: Host-associated > Mammals > Integumentary system > Hoof
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

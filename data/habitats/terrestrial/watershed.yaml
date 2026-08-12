@@ -1,0 +1,40 @@
+identifier: ENVO:00000292
+label: watershed
+definition: The separation between neighbouring drainage basins (catchments). In hilly
+  country, the divide lies along topographical peaks and ridges, but in flat country
+  or on a high plateau (especially where the ground is marshy) the divide may be invisible
+  - just a more or less notional line on the ground on either side of which falling
+  raindrops will start a journey to different rivers, and even to different sides
+  of a country or continent.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: RIDGE LINE
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: divide
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: drainage basin
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: water divide
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00000191
+- ENVO:00001998
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5614
+  source_label: Watershed
+  source_path: Environmental > Terrestrial > Soil > Watershed
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

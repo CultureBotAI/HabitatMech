@@ -1,0 +1,18 @@
+identifier: habitatmech:GOLD.10fdf7ff5a
+label: Sub-biocrust
+habitat_category: TERRESTRIAL
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00001998
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7707
+  source_label: Sub-biocrust
+  source_path: Environmental > Terrestrial > Soil > Sub-biocrust
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

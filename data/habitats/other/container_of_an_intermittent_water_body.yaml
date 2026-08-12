@@ -1,0 +1,141 @@
+identifier: ENVO:00000549
+label: container of an intermittent water body
+definition: A depression which is is periodically filled with water when water supply
+  exceeds evapotranspiration and bed seepage.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: intermittent body of water
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: intermittent body of water
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: intermittent body of waters
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: intermittent water bodies
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: intermittent water body
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: intermittent water body
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00000309
+- ENVO:01001884
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00000549
+  source_label: container of an intermittent water body
+  assertion_count: 42
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:104245
+  source: PREGO
+  taxon_label: Clavaria zollingeri
+  score: 4.0
+- taxon_id: NCBITaxon:1045010
+  source: PREGO
+  taxon_label: Escherichia coli O157
+  score: 4.0
+- taxon_id: NCBITaxon:106111
+  source: PREGO
+  taxon_label: Pedobacter sp. KP-2
+  score: 4.0
+- taxon_id: NCBITaxon:114707
+  source: PREGO
+  taxon_label: uncultured Pseudomonas sp.
+  score: 4.0
+- taxon_id: NCBITaxon:1495
+  source: PREGO
+  taxon_label: Clostridium cylindrosporum
+  score: 4.0
+- taxon_id: NCBITaxon:1543
+  source: PREGO
+  taxon_label: Clostridium oceanicum
+  score: 4.0
+- taxon_id: NCBITaxon:169679
+  source: PREGO
+  taxon_label: Clostridium saccharobutylicum
+  score: 4.0
+- taxon_id: NCBITaxon:231024
+  source: PREGO
+  taxon_label: Streptomyces africanus
+  score: 4.0
+- taxon_id: NCBITaxon:237491
+  source: PREGO
+  taxon_label: Clostridium sp. Sukashi-1
+  score: 4.0
+- taxon_id: NCBITaxon:237497
+  source: PREGO
+  taxon_label: Clostridium sp. Kas107-2
+  score: 4.0
+- taxon_id: NCBITaxon:238209
+  source: PREGO
+  taxon_label: Desulfotomaculum sp. MPNeg1
+  score: 4.0
+- taxon_id: NCBITaxon:253
+  source: PREGO
+  taxon_label: Chryseobacterium indologenes
+  score: 4.0
+- taxon_id: NCBITaxon:256
+  source: PREGO
+  taxon_label: Myroides odoratus
+  score: 4.0
+- taxon_id: NCBITaxon:294
+  source: PREGO
+  taxon_label: Pseudomonas fluorescens
+  score: 4.0
+- taxon_id: NCBITaxon:303
+  source: PREGO
+  taxon_label: Pseudomonas putida
+  score: 4.0
+- taxon_id: NCBITaxon:31234
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:33953
+  source: PREGO
+  taxon_label: Clostridium aminobutyricum
+  score: 4.0
+- taxon_id: NCBITaxon:34003
+  source: PREGO
+  taxon_label: Paracoccus aminophilus
+  score: 4.0
+- taxon_id: NCBITaxon:34073
+  source: PREGO
+  taxon_label: Variovorax paradoxus
+  score: 4.0
+- taxon_id: NCBITaxon:34085
+  source: PREGO
+  taxon_label: Riemerella anatipestifer
+  score: 4.0
+- taxon_id: NCBITaxon:358
+  source: PREGO
+  taxon_label: Agrobacterium tumefaciens
+  score: 4.0
+- taxon_id: NCBITaxon:36987
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:381845
+  source: PREGO
+  taxon_label: Clostridium sp. CYP5
+  score: 4.0
+- taxon_id: NCBITaxon:39946
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:40324
+  source: PREGO
+  taxon_label: Stenotrophomonas maltophilia
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

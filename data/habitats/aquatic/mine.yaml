@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.4a33771475
+label: Mine
+habitat_category: AQUATIC
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00000076
+- habitatmech:GOLD.7f8e268653
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4168
+  source_label: Mine
+  source_path: Environmental > Aquatic > Freshwater > Groundwater > Mine
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 102
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

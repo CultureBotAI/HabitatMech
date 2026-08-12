@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.5270b6dab6
+label: Kidneys
+habitat_category: HOST_ASSOCIATED
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.7c7d2d7fc1
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:3653
+  source_label: Kidneys
+  source_path: Host-associated > Fish > Urinary system > Kidneys
+  assertion_count: 41
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

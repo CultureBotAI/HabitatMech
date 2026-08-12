@@ -1,0 +1,131 @@
+identifier: ENVO:01000179
+label: desert biome
+definition: A desert ecosystem which is undergoing climactic ecological succession.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: desert
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: deserts
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00000428
+- ENVO:01001780
+source_attestations:
+- source: PREGO
+  source_id: ENVO:01000179
+  source_label: desert biome
+  assertion_count: 278
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:100052
+  source: PREGO
+  taxon_label: Delitschia winteri
+  score: 4.0
+- taxon_id: NCBITaxon:1026
+  source: PREGO
+  taxon_label: Marinoscillum furvescens
+  score: 4.0
+- taxon_id: NCBITaxon:1027
+  source: PREGO
+  taxon_label: Microscilla marina
+  score: 4.0
+- taxon_id: NCBITaxon:103
+  source: PREGO
+  taxon_label: Flectobacillus major
+  score: 4.0
+- taxon_id: NCBITaxon:104176
+  source: PREGO
+  taxon_label: Oscillochloris trichoides
+  score: 4.0
+- taxon_id: NCBITaxon:104245
+  source: PREGO
+  taxon_label: Clavaria zollingeri
+  score: 4.0
+- taxon_id: NCBITaxon:104336
+  source: PREGO
+  taxon_label: Microbacterium foliorum
+  score: 4.0
+- taxon_id: NCBITaxon:106370
+  source: PREGO
+  taxon_label: Frankia casuarinae
+  score: 4.0
+- taxon_id: NCBITaxon:110319
+  source: PREGO
+  taxon_label: Nocardioides sp. CF8
+  score: 4.0
+- taxon_id: NCBITaxon:110933
+  source: PREGO
+  taxon_label: Leifsonia poae
+  score: 4.0
+- taxon_id: NCBITaxon:1121377
+  source: PREGO
+  taxon_label: Deinococcus apachensis DSM 19763
+  score: 4.0
+- taxon_id: NCBITaxon:112235
+  source: PREGO
+  taxon_label: Neochlamydia hartmannellae
+  score: 4.0
+- taxon_id: NCBITaxon:112248
+  source: PREGO
+  taxon_label: Seinonella peptonophila
+  score: 4.0
+- taxon_id: NCBITaxon:1123226
+  source: PREGO
+  taxon_label: Saccharibacillus kuerlensis DSM 22868
+  score: 4.0
+- taxon_id: NCBITaxon:1123233
+  source: PREGO
+  taxon_label: Salinicoccus luteus DSM 17002
+  score: 4.0
+- taxon_id: NCBITaxon:1137989
+  source: PREGO
+  taxon_label: Geodermatophilus normandii
+  score: 4.0
+- taxon_id: NCBITaxon:114628
+  source: PREGO
+  taxon_label: Alkaliphilus transvaalensis
+  score: 4.0
+- taxon_id: NCBITaxon:114715
+  source: PREGO
+  taxon_label: uncultured Ralstonia sp.
+  score: 4.0
+- taxon_id: NCBITaxon:115336
+  source: PREGO
+  taxon_label: Actinomadura vinacea
+  score: 4.0
+- taxon_id: NCBITaxon:115433
+  source: PREGO
+  taxon_label: Amycolatopsis sacchari
+  score: 4.0
+- taxon_id: NCBITaxon:1184267
+  source: PREGO
+  taxon_label: Pseudobdellovibrio exovorus JSS
+  score: 4.0
+- taxon_id: NCBITaxon:119532
+  source: PREGO
+  taxon_label: Microcoleus vaginatus
+  score: 4.0
+- taxon_id: NCBITaxon:119644
+  source: PREGO
+  taxon_label: Hymenobacter aerophilus
+  score: 4.0
+- taxon_id: NCBITaxon:121608
+  source: PREGO
+  taxon_label: Paenibacillus koleovorans
+  score: 4.0
+- taxon_id: NCBITaxon:126157
+  source: PREGO
+  taxon_label: Psychrobacillus psychrodurans
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

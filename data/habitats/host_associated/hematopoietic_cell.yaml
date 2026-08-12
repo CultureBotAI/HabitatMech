@@ -1,0 +1,85 @@
+identifier: BTO:0000574
+label: hematopoietic cell
+definition: A blood cell.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: blood cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: blood cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: haematopoietic cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: haematopoietic cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: haemopoietic cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: haemopoietic cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: hematopoietic cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: hemopoietic cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: hemopoietic cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000574
+  source_label: hematopoietic cell
+  assertion_count: 9
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:152142
+  source: PREGO
+  taxon_label: Mycolicibacterium holsaticum
+  score: 3.0
+- taxon_id: NCBITaxon:1776
+  source: PREGO
+  taxon_label: Mycolicibacterium flavescens
+  score: 3.0
+- taxon_id: NCBITaxon:1778
+  source: PREGO
+  taxon_label: Mycobacterium gordonae
+  score: 3.0
+- taxon_id: NCBITaxon:1798
+  source: PREGO
+  taxon_label: Mycolicibacillus trivialis
+  score: 3.0
+- taxon_id: NCBITaxon:243061
+  source: PREGO
+  taxon_label: Mycobacterium sherrisii
+  score: 3.0
+- taxon_id: NCBITaxon:28445
+  source: PREGO
+  taxon_label: Mycobacterium intermedium
+  score: 3.0
+- taxon_id: NCBITaxon:29313
+  source: PREGO
+  taxon_label: Mycobacterium shimoidei
+  score: 3.0
+- taxon_id: NCBITaxon:39693
+  source: PREGO
+  taxon_label: Mycolicibacterium porcinum
+  score: 3.0
+- taxon_id: NCBITaxon:5851
+  source: PREGO
+  taxon_label: Plasmodium knowlesi strain H
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

@@ -1,0 +1,166 @@
+identifier: ENVO:00000486
+label: shoreline
+definition: A two-dimensional continuant fiat boundary which is located between a
+  landmass and a water body.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Küstenlinie
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: SHOR
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: SHOR
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: coastal shoreline
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: coastal shorelines
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: coastal shorelinous
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: coastline
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: coastline
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: coastlines
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: coastlinous
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: linea costiera
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: línea costera
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: shorelines
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: shorelinous
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: 海岸線
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00000486
+  source_label: shoreline
+  assertion_count: 909
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:314230
+  source: PREGO
+  taxon_label: Blastopirellula marina DSM 3645
+  score: 4.0
+- taxon_id: NCBITaxon:344747
+  source: PREGO
+  taxon_label: Gimesia maris DSM 8797
+  score: 4.0
+- taxon_id: NCBITaxon:667019
+  source: PREGO
+  taxon_label: Curvibacter putative symbiont of Hydra magnipapillata
+  score: 4.0
+- taxon_id: NCBITaxon:926569
+  source: PREGO
+  taxon_label: Anaerolinea thermophila UNI-1
+  score: 4.0
+- taxon_id: NCBITaxon:1122225
+  source: PREGO
+  taxon_label: Mesoflavibacter zeaxanthinifaciens DSM 18436
+  score: 3.0
+- taxon_id: NCBITaxon:582855
+  source: PREGO
+  taxon_label: Streptomyces haliclonae
+  score: 3.0
+- taxon_id: NCBITaxon:416261
+  source: PREGO
+  taxon_label: Desulfobacterium sp. AK1
+  score: 1.41625
+- taxon_id: NCBITaxon:84980
+  source: PREGO
+  taxon_label: Desulfotalea psychrophila
+  score: 1.40327
+- taxon_id: NCBITaxon:8201
+  source: PREGO
+  score: 1.3254
+- taxon_id: NCBITaxon:1514140
+  source: PREGO
+  taxon_label: Trieres chinensis
+  score: 1.32313
+- taxon_id: NCBITaxon:115781
+  source: PREGO
+  taxon_label: Desulfotignum balticum
+  score: 1.3187
+- taxon_id: NCBITaxon:35816
+  source: PREGO
+  taxon_label: Pelobacter acidigallici
+  score: 1.29269
+- taxon_id: NCBITaxon:2850
+  source: PREGO
+  taxon_label: Phaeodactylum tricornutum
+  score: 1.29177
+- taxon_id: NCBITaxon:301375
+  source: PREGO
+  taxon_label: Methanothrix harundinacea
+  score: 1.26838
+- taxon_id: NCBITaxon:897
+  source: PREGO
+  taxon_label: Desulfococcus multivorans
+  score: 1.24546
+- taxon_id: NCBITaxon:58029
+  source: PREGO
+  score: 1.2439
+- taxon_id: NCBITaxon:644281
+  source: PREGO
+  taxon_label: Methanocaldococcus sp. FS406-22
+  score: 1.2063
+- taxon_id: NCBITaxon:399550
+  source: PREGO
+  taxon_label: Staphylothermus marinus F1
+  score: 1.20275
+- taxon_id: NCBITaxon:490899
+  source: PREGO
+  taxon_label: Desulfurococcus amylolyticus 1221n
+  score: 1.19839
+- taxon_id: NCBITaxon:647113
+  source: PREGO
+  taxon_label: Methanothermococcus okinawensis IH1
+  score: 1.19518
+- taxon_id: NCBITaxon:633148
+  source: PREGO
+  taxon_label: Thermosphaera aggregans DSM 11486
+  score: 1.19208
+- taxon_id: NCBITaxon:591019
+  source: PREGO
+  taxon_label: Staphylothermus hellenicus DSM 12710
+  score: 1.19183
+- taxon_id: NCBITaxon:573064
+  source: PREGO
+  taxon_label: Methanocaldococcus fervens AG86
+  score: 1.19112
+- taxon_id: NCBITaxon:419665
+  source: PREGO
+  taxon_label: Methanococcus aeolicus Nankai-3
+  score: 1.18919
+- taxon_id: NCBITaxon:573063
+  source: PREGO
+  taxon_label: Methanocaldococcus infernus ME
+  score: 1.18791
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

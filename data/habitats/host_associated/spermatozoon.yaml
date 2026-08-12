@@ -1,0 +1,68 @@
+identifier: BTO:0001277
+label: spermatozoon
+definition: A motile male gamete of an animal usually with rounded or elongate head
+  and a long posterior flagellum.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: male gamete
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: male gametes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: mature sperm cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: mature sperm cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: sperm cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: sperm cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: spermatozoan
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: spermatozoanic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: spermatozoans
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: spermatozoonal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: spermatozoons
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: zoosperm
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: zoosperms
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000535
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001277
+  source_label: spermatozoon
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:334406
+  source: PREGO
+  taxon_label: Bacillus cereus NC7401
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

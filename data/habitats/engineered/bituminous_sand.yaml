@@ -1,0 +1,37 @@
+identifier: ENVO:03600013
+label: bituminous sand
+definition: An environmental material which consists of either loose sands or partially
+  consolidated sandstone, containing a naturally occurring mixture of sand, clay,
+  and water, soaked with a dense and extremely viscous form of petroleum.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Oil sands
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: crude bitumen
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: oil sands
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: tar sands
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00000076
+- ENVO:00010483
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5840
+  source_label: Oil sands
+  source_path: Engineered > Built environment > Mine > Oil sands
+  mapping_predicate: skos:closeMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

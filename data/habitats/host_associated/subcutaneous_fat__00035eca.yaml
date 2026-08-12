@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.ba2e9c19f0
+label: Subcutaneous fat
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0002190
+- habitatmech:GOLD.6fe7c283e0
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6740
+  source_label: Subcutaneous fat
+  source_path: Host-associated > Mammals > Integumentary system > Adipose tissue >
+    Subcutaneous fat
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

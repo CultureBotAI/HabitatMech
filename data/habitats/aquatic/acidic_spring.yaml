@@ -1,0 +1,25 @@
+identifier: ENVO:01001898
+label: acidic spring
+definition: A spring through which water with a low pH flows.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: acid spring
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00000027
+- habitatmech:GOLD.22a80cbd14
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7510
+  source_label: Acidic spring
+  source_path: Environmental > Aquatic > Deep subsurface > Groundwater > Acidic spring
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

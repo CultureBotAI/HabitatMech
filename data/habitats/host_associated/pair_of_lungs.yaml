@@ -1,0 +1,37 @@
+identifier: UBERON:0000170
+label: pair of lungs
+definition: The pair of anatomical structures comprised of a left lung and right lung.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Lungs
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: lungs
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: lungs pair
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: pulmones
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: set of lungs
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0034925
+- habitatmech:GOLD.7c194a46ba
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6160
+  source_label: Lungs
+  source_path: 'Host-associated > Mammals: Human > Remains > Mummified remains > Lungs'
+  mapping_predicate: skos:closeMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

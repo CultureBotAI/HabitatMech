@@ -1,0 +1,150 @@
+identifier: ENVO:00000114
+label: agricultural field
+definition: A field which is located on land and used for agricultural purposes, such
+  as the grazing of livestock or the cultivation of crops.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: agricultural site
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: cropland
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: field
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: fields
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: grassland
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00000446
+- ENVO:01000352
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:3494
+  source_label: Agricultural field
+  source_path: Environmental > Terrestrial > Agricultural field
+  mapping_predicate: skos:exactMatch
+  assertion_count: 226
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: PREGO
+  source_id: ENVO:00000114
+  source_label: agricultural field
+  assertion_count: 2315
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:1040985
+  source: PREGO
+  taxon_label: Mesorhizobium sp. WSM2561
+  score: 4.0
+- taxon_id: NCBITaxon:1041146
+  source: PREGO
+  taxon_label: Rhizobium sullae WSM1592
+  score: 4.0
+- taxon_id: NCBITaxon:1080179
+  source: PREGO
+  taxon_label: Burkholderia sp. UYPR1.413
+  score: 4.0
+- taxon_id: NCBITaxon:1120985
+  source: PREGO
+  taxon_label: Anaeroarcus burkinensis DSM 6283
+  score: 4.0
+- taxon_id: NCBITaxon:1121015
+  source: PREGO
+  taxon_label: Arenimonas oryziterrae DSM 21050 = YC6267
+  score: 4.0
+- taxon_id: NCBITaxon:1122158
+  source: PREGO
+  taxon_label: Leeia oryzae DSM 17879
+  score: 4.0
+- taxon_id: NCBITaxon:1122990
+  source: PREGO
+  taxon_label: Segatella paludivivens DSM 17968 = JCM 13650
+  score: 4.0
+- taxon_id: NCBITaxon:1215098
+  source: PREGO
+  taxon_label: Pseudomonas cremoricolorata DSM 17059 = NBRC 16634
+  score: 4.0
+- taxon_id: NCBITaxon:1215114
+  source: PREGO
+  taxon_label: Pseudomonas parafulva NBRC 16636 = DSM 17004
+  score: 4.0
+- taxon_id: NCBITaxon:1313303
+  source: PREGO
+  taxon_label: Xanthomonas oryzae ATCC 35933
+  score: 4.0
+- taxon_id: NCBITaxon:1408420
+  source: PREGO
+  taxon_label: Paracidovorax oryzae ATCC 19882
+  score: 4.0
+- taxon_id: NCBITaxon:2036
+  source: PREGO
+  taxon_label: Curtobacterium citreum
+  score: 4.0
+- taxon_id: NCBITaxon:234267
+  source: PREGO
+  taxon_label: Candidatus Solibacter usitatus Ellin6076
+  score: 4.0
+- taxon_id: NCBITaxon:395493
+  source: PREGO
+  taxon_label: Beggiatoa alba B18LD
+  score: 4.0
+- taxon_id: NCBITaxon:395961
+  source: PREGO
+  taxon_label: Cyanothece sp. PCC 7425
+  score: 4.0
+- taxon_id: NCBITaxon:41431
+  source: PREGO
+  taxon_label: Rippkaea orientalis PCC 8801
+  score: 4.0
+- taxon_id: NCBITaxon:459529
+  source: PREGO
+  taxon_label: Sphingobacterium siyangense
+  score: 4.0
+- taxon_id: NCBITaxon:468059
+  source: PREGO
+  taxon_label: Daejeonella oryzae DSM 19973
+  score: 4.0
+- taxon_id: NCBITaxon:497965
+  source: PREGO
+  taxon_label: Gloeothece verrucosa PCC 7822
+  score: 4.0
+- taxon_id: NCBITaxon:65393
+  source: PREGO
+  taxon_label: Gloeothece citriformis PCC 7424
+  score: 4.0
+- taxon_id: NCBITaxon:694427
+  source: PREGO
+  taxon_label: Paludibacter propionicigenes WB4
+  score: 4.0
+- taxon_id: NCBITaxon:698936
+  source: PREGO
+  taxon_label: Sinorhizobium meliloti BL225C
+  score: 4.0
+- taxon_id: NCBITaxon:743720
+  source: PREGO
+  taxon_label: Pseudomonas fulva 12-X
+  score: 4.0
+- taxon_id: NCBITaxon:1069081
+  source: PREGO
+  taxon_label: Nitratiruptor tergarcus DSM 16512
+  score: 3.0
+- taxon_id: NCBITaxon:1120987
+  source: PREGO
+  taxon_label: Acetomicrobium thermoterrenum DSM 13490
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'

@@ -1,0 +1,28 @@
+identifier: ENVO:03600003
+label: drinking water pipeline network
+definition: A pipeline network which is used to transport drinking water to consumers.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Drinking water pipeline
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: drinking water pipeline
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:03600014
+- habitatmech:GOLD.edec297c39
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5700
+  source_label: Drinking water pipeline
+  source_path: Engineered > Built environment > Pipeline > Drinking water pipeline
+  mapping_predicate: skos:closeMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

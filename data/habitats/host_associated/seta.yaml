@@ -1,0 +1,22 @@
+identifier: BTO:0004212
+label: seta
+definition: A hair-like unicellular external process of the body wall or any derivative
+  of the latter, a hair, a bristle.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- BTO:0001501
+- ENVO:01000890
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8119
+  source_label: Seta
+  source_path: Host-associated > Plants > Bryophytes > Moss > Seta
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

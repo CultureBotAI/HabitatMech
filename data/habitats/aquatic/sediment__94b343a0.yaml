@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.8954c4d9a1
+label: Sediment
+habitat_category: AQUATIC
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00002007
+- habitatmech:GOLD.35b68dbb27
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8053
+  source_label: Sediment
+  source_path: Environmental > Aquatic > Marine > Deepwater/Brine lake > Sediment
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

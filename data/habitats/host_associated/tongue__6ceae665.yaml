@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.8587dba825
+label: Tongue
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0001723
+- habitatmech:GOLD.0e1023f291
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7494
+  source_label: Tongue
+  source_path: Host-associated > Birds > Digestive system > Oral/Buccal cavity > Tongue
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

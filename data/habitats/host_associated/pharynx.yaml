@@ -1,0 +1,31 @@
+identifier: BTO:0001049
+label: pharynx
+definition: The part of the vertebrate alimentary canal between the cavity of the
+  mouth and the esophagus. The pharynx of Nematodes is an efficient pump and forces
+  food into the intestines.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: pharynxes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001049
+  source_label: pharynx
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:388919
+  source: PREGO
+  taxon_label: Streptococcus sanguinis SK36
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

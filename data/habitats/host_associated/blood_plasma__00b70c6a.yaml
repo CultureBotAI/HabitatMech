@@ -1,0 +1,45 @@
+identifier: UBERON:0001969
+label: blood plasma
+definition: The liquid component of blood, in which erythrocytes are suspended.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Plasma
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: blood plasm
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: plasma
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: portion of blood plasma
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: portion of plasma
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0000179
+- habitatmech:GOLD.6c6aab19d3
+- habitatmech:GOLD.d25ff4a586
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4416
+  source_label: Plasma
+  source_path: 'Host-associated > Mammals: Human > Circulatory system > Blood > Plasma'
+  mapping_predicate: skos:exactMatch
+  assertion_count: 3
+  assertion_unit: ORGANISM
+- source: GOLD
+  source_id: gold.ecosystem:6817
+  source_label: Plasma
+  source_path: Host-associated > Mammals > Circulatory system > Blood > Plasma
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

@@ -1,0 +1,22 @@
+identifier: ENVO:01001894
+label: alkaline spring
+definition: A mineral spring through which water with a high pH flows.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00000125
+- habitatmech:GOLD.22a80cbd14
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7946
+  source_label: Alkaline spring
+  source_path: Environmental > Aquatic > Deep subsurface > Groundwater > Alkaline
+    spring
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

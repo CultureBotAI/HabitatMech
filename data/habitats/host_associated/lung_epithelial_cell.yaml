@@ -1,0 +1,41 @@
+identifier: BTO:0004299
+label: lung epithelial cell
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: lung epithelial cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: pulmonary epithelial cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: pulmonary epithelial cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0004299
+  source_label: lung epithelial cell
+  assertion_count: 3
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1367494
+  source: PREGO
+  taxon_label: Pseudomonas aeruginosa PAO1-VE13
+  score: 3.0
+- taxon_id: NCBITaxon:945555
+  source: PREGO
+  taxon_label: Acinetobacter baumannii WM99c
+  score: 3.0
+- taxon_id: NCBITaxon:945556
+  source: PREGO
+  taxon_label: Acinetobacter baumannii D1279779
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

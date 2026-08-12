@@ -1,0 +1,40 @@
+identifier: ENVO:03600074
+label: aquaculture farm
+definition: An agricultural aquatic ecosystem in which fish, crustaceans, mollusks,
+  aquatic plants and algae are cultivated.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Aquaculture
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+- synonym_text: aquaculture
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: aquafarming
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00000077
+- ENVO:01000964
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:aquaculture
+  source_label: Aquaculture
+  mapping_predicate: skos:closeMatch
+  assertion_count: 109
+  assertion_unit: STRAIN
+- source: GOLD
+  source_id: gold.ecosystem:7856
+  source_label: Aquaculture farm
+  source_path: Engineered > Wastewater > Industrial wastewater > Aquaculture farm
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD. Grounding:
+    EXACT.'

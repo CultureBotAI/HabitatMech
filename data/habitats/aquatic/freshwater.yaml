@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.4467744e70
+label: Freshwater
+habitat_category: AQUATIC
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00002011
+- habitatmech:GOLD.22a80cbd14
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6046
+  source_label: Freshwater
+  source_path: Environmental > Aquatic > Deep subsurface > Groundwater > Freshwater
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 2
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

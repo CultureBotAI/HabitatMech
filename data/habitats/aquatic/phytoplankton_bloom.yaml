@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.46309b7794
+label: Phytoplankton bloom
+habitat_category: AQUATIC
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.1a3d0aff0c
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5825
+  source_label: Phytoplankton bloom
+  source_path: Environmental > Aquatic > Marine > Coastal > Phytoplankton bloom
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

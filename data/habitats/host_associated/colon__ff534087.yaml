@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.195d07bc47
+label: Colon
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0001155
+- habitatmech:GOLD.b091b80314
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6890
+  source_label: Colon
+  source_path: Host-associated > Birds > Digestive system > Large intestine > Colon
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

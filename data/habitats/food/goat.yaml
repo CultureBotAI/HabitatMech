@@ -1,0 +1,32 @@
+identifier: FOODON:03411328
+label: goat
+definition: A whole goat.
+definition_source: FOODON
+habitat_category: FOOD
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Capra hircus Linnaeus, 1758
+  synonym_type: EXACT_SYNONYM
+  source: FOODON
+- synonym_text: Caprinae-Sheep/Goat
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+- synonym_text: caprine
+  synonym_type: EXACT_SYNONYM
+  source: FOODON
+parent_habitats:
+- FOODON:02021055
+- FOODON:03411134
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:caprinae-sheep/goat
+  source_label: Caprinae-Sheep/Goat
+  mapping_predicate: skos:closeMatch
+  assertion_count: 412
+  assertion_unit: STRAIN
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

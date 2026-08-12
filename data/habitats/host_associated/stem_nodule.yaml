@@ -1,0 +1,40 @@
+identifier: BTO:0001816
+label: stem nodule
+definition: Rhizobia interact symbiotically with leguminous plants by inducing nitrogen-fixing
+  nodules on the roots. Some plants of the genus Aeschynomene, encountered in waterlogged
+  soils or riverbanks, have the peculiar property of forming stem nodules. This very
+  unusual behavior among leguminous plants is shared only with a few species of the
+  genera Sesbania, Neptunia, and Discolobium.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: stem nodular
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: stem nodules
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001816
+  source_label: stem nodule
+  assertion_count: 2
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:114615
+  source: PREGO
+  taxon_label: Bradyrhizobium sp. ORS 278
+  score: 3.0
+- taxon_id: NCBITaxon:438753
+  source: PREGO
+  taxon_label: Azorhizobium caulinodans ORS 571
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

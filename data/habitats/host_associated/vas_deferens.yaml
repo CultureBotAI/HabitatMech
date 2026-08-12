@@ -1,0 +1,41 @@
+identifier: UBERON:0001000
+label: vas deferens
+definition: A secretory duct that transports sperm from the testis. In mammals this
+  is a continuation of the epididymis and ends in the prostatic urethra where it terminates
+  to form ejaculatory duct.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: deferent duct
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: ductus deferens
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: sperm duct
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: vas deferen
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: vasa deferentia
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0000025
+- UBERON:0005904
+- habitatmech:GOLD.abc827a582
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6567
+  source_label: Vas deferens
+  source_path: 'Host-associated > Mammals: Human > Reproductive system > Vas deferens'
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

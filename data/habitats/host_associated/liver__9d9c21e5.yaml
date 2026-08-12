@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.bea2a87b11
+label: Liver
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0002107
+- habitatmech:GOLD.6ee20226a2
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6953
+  source_label: Liver
+  source_path: Host-associated > Amphibia > Digestive system > Biliary tract > Liver
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

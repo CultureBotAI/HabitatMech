@@ -1,0 +1,141 @@
+identifier: BTO:0000753
+label: lymphoid tissue
+definition: Tissue that is particularly rich in lymphocytes (and accessory cells such
+  as macrophages and reticular cells), particularly the lymph nodes, spleen, thymus,
+  Peyer's patches, pharyngeal tonsils, adenoids, and (in birds) the Bursa of Fabricius.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: lymphoid organ
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: lymphoid organic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: lymphoid organs
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: lymphoid system
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: lymphoid systems
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: lymphoid tissues
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000753
+  source_label: lymphoid tissue
+  assertion_count: 39
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1069378
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:1125980
+  source: PREGO
+  taxon_label: Vibrio harveyi CAIM 1792
+  score: 3.0
+- taxon_id: NCBITaxon:1191279
+  source: PREGO
+  taxon_label: Helicobacter pylori FD423
+  score: 3.0
+- taxon_id: NCBITaxon:1191280
+  source: PREGO
+  taxon_label: Helicobacter pylori FD430
+  score: 3.0
+- taxon_id: NCBITaxon:1191281
+  source: PREGO
+  taxon_label: Helicobacter pylori FD506
+  score: 3.0
+- taxon_id: NCBITaxon:1191282
+  source: PREGO
+  taxon_label: Helicobacter pylori FD568
+  score: 3.0
+- taxon_id: NCBITaxon:1191283
+  source: PREGO
+  taxon_label: Helicobacter pylori FD577
+  score: 3.0
+- taxon_id: NCBITaxon:1191284
+  source: PREGO
+  taxon_label: Helicobacter pylori FD662
+  score: 3.0
+- taxon_id: NCBITaxon:1191285
+  source: PREGO
+  taxon_label: Helicobacter pylori FD703
+  score: 3.0
+- taxon_id: NCBITaxon:1191286
+  source: PREGO
+  taxon_label: Helicobacter pylori FD719
+  score: 3.0
+- taxon_id: NCBITaxon:1191287
+  source: PREGO
+  taxon_label: Helicobacter pylori GC26
+  score: 3.0
+- taxon_id: NCBITaxon:1191464
+  source: PREGO
+  taxon_label: Helicobacter pylori FD535
+  score: 3.0
+- taxon_id: NCBITaxon:1321939
+  source: PREGO
+  taxon_label: Helicobacter pylori UM037
+  score: 3.0
+- taxon_id: NCBITaxon:1321940
+  source: PREGO
+  taxon_label: Helicobacter pylori UM066
+  score: 3.0
+- taxon_id: NCBITaxon:1352343
+  source: PREGO
+  taxon_label: Helicobacter pylori UM038
+  score: 3.0
+- taxon_id: NCBITaxon:1352344
+  source: PREGO
+  taxon_label: Helicobacter pylori UM085
+  score: 3.0
+- taxon_id: NCBITaxon:1352345
+  source: PREGO
+  taxon_label: Helicobacter pylori UM111
+  score: 3.0
+- taxon_id: NCBITaxon:1352346
+  source: PREGO
+  taxon_label: Helicobacter pylori UM077
+  score: 3.0
+- taxon_id: NCBITaxon:1355528
+  source: PREGO
+  taxon_label: Helicobacter pylori UM065
+  score: 3.0
+- taxon_id: NCBITaxon:1355529
+  source: PREGO
+  taxon_label: Helicobacter pylori UM067
+  score: 3.0
+- taxon_id: NCBITaxon:1355530
+  source: PREGO
+  taxon_label: Helicobacter pylori UM084
+  score: 3.0
+- taxon_id: NCBITaxon:1355531
+  source: PREGO
+  taxon_label: Helicobacter pylori UM114
+  score: 3.0
+- taxon_id: NCBITaxon:135569
+  source: PREGO
+  taxon_label: Helicobacter apodemus
+  score: 3.0
+- taxon_id: NCBITaxon:1365636
+  source: PREGO
+  taxon_label: Helicobacter pylori UM023
+  score: 3.0
+- taxon_id: NCBITaxon:1408441
+  source: PREGO
+  taxon_label: Helicobacter bilis ATCC 51630
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

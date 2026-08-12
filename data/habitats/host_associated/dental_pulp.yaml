@@ -1,0 +1,39 @@
+identifier: BTO:0000339
+label: dental pulp
+definition: The soft sensitive tissue that fills the central cavity of a tooth.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: dental pulp cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: dental pulp cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: dental pulps
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000339
+  source_label: dental pulp
+  assertion_count: 2
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1203258
+  source: PREGO
+  taxon_label: Lacticaseibacillus rhamnosus LRHMDP2
+  score: 3.0
+- taxon_id: NCBITaxon:1203259
+  source: PREGO
+  taxon_label: Lacticaseibacillus rhamnosus LRHMDP3
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

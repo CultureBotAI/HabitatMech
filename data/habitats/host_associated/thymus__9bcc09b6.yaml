@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.43a19ec2bb
+label: Thymus
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0002370
+- habitatmech:GOLD.2f5a0b5455
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6784
+  source_label: Thymus
+  source_path: Host-associated > Mammals > Endocrine system > Endocrine gland > Thymus
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

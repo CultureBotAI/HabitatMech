@@ -1,0 +1,35 @@
+identifier: FOODON:03412115
+label: echinoderm
+definition: Echinoderm is the common name given to any member of the phylum *Echinodermata*
+  of marine animals. The adults are recognizable by their (usually five-point) radial
+  symmetry, and include such well-known animals as sea stars, sea urchins, sand dollars,
+  and sea cucumbers, as well as the sea lilies or "stone lilies". [https://en.wikipedia.org/wiki/Echinoderm]
+definition_source: FOODON
+habitat_category: HOST_ASSOCIATED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Echinodermata
+  synonym_type: EXACT_SYNONYM
+  source: FOODON
+- synonym_text: Echinodermata Klein, 1734
+  synonym_type: EXACT_SYNONYM
+  source: FOODON
+parent_habitats:
+- FOODON:00005703
+- FOODON:03411433
+- habitatmech:GOLD.4d792ac724
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:3565
+  source_label: Echinodermata
+  source_path: Host-associated > Invertebrates > Echinodermata
+  mapping_predicate: skos:closeMatch
+  assertion_count: 21
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

@@ -1,0 +1,57 @@
+identifier: BTO:0003680
+label: Mo-B cell
+definition: Human Caucasian peripheral blood hairy cell leukaemia B-lymphoblast cell
+  line.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Mo-B cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: mob
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: mob cell line
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: mob cell lines
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: mob cell lineses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: mob cell linous
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: mob cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: mob cellses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0003681
+source_attestations:
+- source: PREGO
+  source_id: BTO:0003680
+  source_label: Mo-B cell
+  assertion_count: 2
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1192868
+  source: PREGO
+  taxon_label: Pseudaminobacter salicylatoxidans KCT001
+  score: 3.0
+- taxon_id: NCBITaxon:273035
+  source: PREGO
+  taxon_label: Spiroplasma kunkelii CR2-3x
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

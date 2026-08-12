@@ -1,0 +1,44 @@
+identifier: BTO:0005436
+label: panicle
+definition: A branched indeterminate inflorescence in which the branches are racemes,
+  so that each flower has its own stalk attached to the branch. Oats and sorghum have
+  panicles.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: paniclar
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: panicles
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000628
+source_attestations:
+- source: PREGO
+  source_id: BTO:0005436
+  source_label: panicle
+  assertion_count: 3
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1417989
+  source: PREGO
+  taxon_label: Burkholderia glumae 336gr-1
+  score: 3.0
+- taxon_id: NCBITaxon:41899
+  source: PREGO
+  taxon_label: Burkholderia plantarii
+  score: 3.0
+- taxon_id: NCBITaxon:626418
+  source: PREGO
+  taxon_label: Burkholderia glumae BGR1
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

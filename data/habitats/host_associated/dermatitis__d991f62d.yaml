@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.fdd6965162
+label: Dermatitis
+habitat_category: HOST_ASSOCIATED
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.4b37ab4b76
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6340
+  source_label: Dermatitis
+  source_path: 'Host-associated > Mammals: Human > Integumentary system > Skin > Dermatitis'
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

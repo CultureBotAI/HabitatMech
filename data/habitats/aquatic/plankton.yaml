@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.23cd8889db
+label: Plankton
+habitat_category: AQUATIC
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:01000297
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5346
+  source_label: Plankton
+  source_path: Environmental > Aquatic > Freshwater > River > Plankton
+  assertion_count: 2
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

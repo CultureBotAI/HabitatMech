@@ -1,0 +1,137 @@
+identifier: ENVO:00000134
+label: permafrost
+definition: An environmental material which is 1) composed primarily of soil or rock
+  and included ice or organic material and 2) at or below the freezing point of water
+  for two or more years.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: permafrosts
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00001998
+- ENVO:00010483
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8236
+  source_label: Permafrost
+  source_path: Environmental > Terrestrial > Soil > Permafrost
+  mapping_predicate: skos:exactMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: PREGO
+  source_id: ENVO:00000134
+  source_label: permafrost
+  assertion_count: 135
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:104245
+  source: PREGO
+  taxon_label: Clavaria zollingeri
+  score: 4.0
+- taxon_id: NCBITaxon:1121419
+  source: PREGO
+  taxon_label: Desulfosporosinus hippei DSM 8344
+  score: 4.0
+- taxon_id: NCBITaxon:1121924
+  source: PREGO
+  taxon_label: Glaciibacter superstes DSM 21135
+  score: 4.0
+- taxon_id: NCBITaxon:1121959
+  source: PREGO
+  taxon_label: Hymenobacter psychrotolerans DSM 18569
+  score: 4.0
+- taxon_id: NCBITaxon:1123276
+  source: PREGO
+  taxon_label: Spirosoma luteum DSM 19990
+  score: 4.0
+- taxon_id: NCBITaxon:1123278
+  source: PREGO
+  taxon_label: Spirosoma spitsbergense DSM 19989
+  score: 4.0
+- taxon_id: NCBITaxon:128
+  source: PREGO
+  taxon_label: Isosphaera pallida
+  score: 4.0
+- taxon_id: NCBITaxon:1397695
+  source: PREGO
+  taxon_label: Exiguobacterium undae 190-11
+  score: 4.0
+- taxon_id: NCBITaxon:1397698
+  source: PREGO
+  taxon_label: Exiguobacterium artemiae 7-3
+  score: 4.0
+- taxon_id: NCBITaxon:1855
+  source: PREGO
+  taxon_label: Frankia sp.
+  score: 4.0
+- taxon_id: NCBITaxon:203264
+  source: PREGO
+  taxon_label: Corynebacterium suicordis
+  score: 4.0
+- taxon_id: NCBITaxon:231024
+  source: PREGO
+  taxon_label: Streptomyces africanus
+  score: 4.0
+- taxon_id: NCBITaxon:259536
+  source: PREGO
+  taxon_label: Psychrobacter arcticus 273-4
+  score: 4.0
+- taxon_id: NCBITaxon:262543
+  source: PREGO
+  taxon_label: Exiguobacterium artemiae 255-15
+  score: 4.0
+- taxon_id: NCBITaxon:266940
+  source: PREGO
+  taxon_label: Kineococcus radiotolerans SRS30216 = ATCC BAA-149
+  score: 4.0
+- taxon_id: NCBITaxon:28210
+  source: PREGO
+  taxon_label: Chelatococcus asaccharovorans
+  score: 4.0
+- taxon_id: NCBITaxon:29539
+  source: PREGO
+  taxon_label: Thermoleophilum album
+  score: 4.0
+- taxon_id: NCBITaxon:314345
+  source: PREGO
+  taxon_label: Mariprofundus ferrooxydans PV-1
+  score: 4.0
+- taxon_id: NCBITaxon:330214
+  source: PREGO
+  taxon_label: Nitrospira defluvii
+  score: 4.0
+- taxon_id: NCBITaxon:33075
+  source: PREGO
+  taxon_label: Acidobacterium capsulatum
+  score: 4.0
+- taxon_id: NCBITaxon:36987
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:378534
+  source: PREGO
+  taxon_label: Pseudomonas sp. Eur1 9.41
+  score: 4.0
+- taxon_id: NCBITaxon:378543
+  source: PREGO
+  taxon_label: Tumebacillus permanentifrigoris
+  score: 4.0
+- taxon_id: NCBITaxon:386456
+  source: PREGO
+  taxon_label: Methanobacterium arcticum
+  score: 4.0
+- taxon_id: NCBITaxon:39946
+  source: PREGO
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'

@@ -1,0 +1,36 @@
+identifier: BTO:0001044
+label: phagocyte
+definition: A cell, as a white blood cell, that engulfs and consumes foreign material,
+  as microorganisms, and debris.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: phagocytes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000574
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001044
+  source_label: phagocyte
+  assertion_count: 2
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1367494
+  source: PREGO
+  taxon_label: Pseudomonas aeruginosa PAO1-VE13
+  score: 3.0
+- taxon_id: NCBITaxon:391165
+  source: PREGO
+  taxon_label: Granulibacter bethesdensis CGDNIH1
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

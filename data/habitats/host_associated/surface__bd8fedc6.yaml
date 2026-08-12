@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.e80d5f6236
+label: Surface
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0002416
+- habitatmech:GOLD.e4d7d28e04
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7863
+  source_label: Surface
+  source_path: Host-associated > Mollusca > Integumentary system > Shell > Surface
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

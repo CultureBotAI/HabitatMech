@@ -1,0 +1,31 @@
+identifier: ENVO:00000138
+label: cove
+definition: A circular or round inlet with a narrow entrance.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00000137
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00000138
+  source_label: cove
+  assertion_count: 2
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1121392
+  source: PREGO
+  taxon_label: Desulfatibacillum aliphaticivorans DSM 15576
+  score: 3.0
+- taxon_id: NCBITaxon:191564
+  source: PREGO
+  taxon_label: Nonlabens xylanidelens
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

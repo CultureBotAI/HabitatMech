@@ -1,0 +1,161 @@
+identifier: ENVO:00002001
+label: waste water
+definition: Water that has been adversely affected in quality by anthropogenic influence.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Wastewater
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: waste waters
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00002186
+- ENVO:00002264
+- habitatmech:GOLD.2acb39dd08
+source_attestations:
+- source: ENVIRONMENTS_TABLE
+  source_id: wastewater
+  source_label: wastewater
+  notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: GOLD
+  source_id: gold.ecosystem:2886
+  source_label: Wastewater
+  source_path: Engineered > Wastewater
+  mapping_predicate: skos:exactMatch
+  assertion_count: 1140
+  assertion_unit: ORGANISM
+  notes: 4 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: PREGO
+  source_id: ENVO:00002001
+  source_label: waste water
+  assertion_count: 623
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+environmental_parameters:
+- parameter: NUTRIENTS
+  qualitative_value: high
+  source: kg-microbe environments.csv (wastewater)
+- parameter: PRESSURE
+  qualitative_value: low
+  source: kg-microbe environments.csv (wastewater)
+- parameter: TEMPERATURE
+  qualitative_value: medium
+  source: kg-microbe environments.csv (wastewater)
+- parameter: WATER_AVAILABILITY
+  qualitative_value: high
+  source: kg-microbe environments.csv (wastewater)
+- parameter: WATER_VARIABILITY
+  qualitative_value: permanently wet
+  source: kg-microbe environments.csv (wastewater)
+characteristic_taxa:
+- taxon_id: NCBITaxon:1046983
+  source: PREGO
+  taxon_label: Hydrogenedentes bacterium JGI 0000059-N10
+  score: 4.0
+- taxon_id: NCBITaxon:1047009
+  source: PREGO
+  taxon_label: Fidelibacterota bacterium SCGC AAA011-A05
+  score: 4.0
+- taxon_id: NCBITaxon:1047012
+  source: PREGO
+  taxon_label: Caldiserica bacterium JGI 0000059-M03
+  score: 4.0
+- taxon_id: NCBITaxon:1047053
+  source: PREGO
+  taxon_label: Atribacteria bacterium JGI 0000059-I14
+  score: 4.0
+- taxon_id: NCBITaxon:1047055
+  source: PREGO
+  taxon_label: Fidelibacterota bacterium JGI 0000039-D08
+  score: 4.0
+- taxon_id: NCBITaxon:1047056
+  source: PREGO
+  taxon_label: Fidelibacterota bacterium JGI 0000039-E15
+  score: 4.0
+- taxon_id: NCBITaxon:1047058
+  source: PREGO
+  taxon_label: Fidelibacterota bacterium JGI 0000039-O11
+  score: 4.0
+- taxon_id: NCBITaxon:1047059
+  source: PREGO
+  taxon_label: Fidelibacterota bacterium JGI 0000059-D20
+  score: 4.0
+- taxon_id: NCBITaxon:1047060
+  source: PREGO
+  taxon_label: Fidelibacterota bacterium JGI 0000059-E23
+  score: 4.0
+- taxon_id: NCBITaxon:1047061
+  source: PREGO
+  taxon_label: Fidelibacterota bacterium JGI 0000059-L03
+  score: 4.0
+- taxon_id: NCBITaxon:1047063
+  source: PREGO
+  taxon_label: WS1 bacterium JGI 0000059-K21
+  score: 4.0
+- taxon_id: NCBITaxon:1047073
+  source: PREGO
+  taxon_label: Cloacimonetes bacterium JGI 0000039-I17
+  score: 4.0
+- taxon_id: NCBITaxon:1047076
+  source: PREGO
+  taxon_label: Cloacimonetes bacterium JGI 0000039-M09
+  score: 4.0
+- taxon_id: NCBITaxon:1047077
+  source: PREGO
+  taxon_label: Cloacimonetes bacterium JGI 0000039-P09
+  score: 4.0
+- taxon_id: NCBITaxon:1047078
+  source: PREGO
+  taxon_label: Cloacimonetes bacterium JGI 0000059-F17
+  score: 4.0
+- taxon_id: NCBITaxon:1047079
+  source: PREGO
+  taxon_label: Cloacimonetes bacterium JGI 0000059-L07
+  score: 4.0
+- taxon_id: NCBITaxon:1047080
+  source: PREGO
+  taxon_label: Cloacimonetes bacterium JGI 0000059-P03
+  score: 4.0
+- taxon_id: NCBITaxon:1047081
+  source: PREGO
+  taxon_label: Cloacimonetes bacterium JGI 0000059-P11
+  score: 4.0
+- taxon_id: NCBITaxon:1058
+  source: PREGO
+  taxon_label: Thiocapsa roseopersicina
+  score: 4.0
+- taxon_id: NCBITaxon:1089553
+  source: PREGO
+  taxon_label: Thermacetogenium phaeum DSM 12270
+  score: 4.0
+- taxon_id: NCBITaxon:1104568
+  source: PREGO
+  taxon_label: Synergistetes bacterium JGI 0000079-D21
+  score: 4.0
+- taxon_id: NCBITaxon:1104603
+  source: PREGO
+  taxon_label: Atribacteria bacterium JGI 0000079-L04
+  score: 4.0
+- taxon_id: NCBITaxon:1104604
+  source: PREGO
+  taxon_label: Atribacteria bacterium JGI 0000079-F20
+  score: 4.0
+- taxon_id: NCBITaxon:1104605
+  source: PREGO
+  taxon_label: Armatimonadetes bacterium JGI 0000077-K19
+  score: 4.0
+- taxon_id: NCBITaxon:1104619
+  source: PREGO
+  taxon_label: Hydrogenedentes bacterium JGI 0000077-D07
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD,
+    PREGO. Grounding: EXACT.'

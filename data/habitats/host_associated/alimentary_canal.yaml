@@ -1,0 +1,170 @@
+identifier: BTO:0000058
+label: alimentary canal
+definition: The mucous membrane-lined tube of the digestive system through which food
+  passes, in which digestion takes place, and from which wastes are eliminated. It
+  extends from the mouth to the anus and includes the pharynx, esophagus, stomach,
+  and intestines.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: alimentary canalic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: alimentary canals
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: alimentary tract
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: alimentary tractic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: alimentary tracts
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: digestive canal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: digestive canalic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: digestive canals
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: digestive system
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: digestive systems
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: digestive tract
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: digestive tractic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: digestive tracts
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: digestive tube
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: digestive tubes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0001491
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000058
+  source_label: alimentary canal
+  assertion_count: 114
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:1263
+  source: PREGO
+  taxon_label: Ruminococcus
+  score: 4.0
+- taxon_id: NCBITaxon:1265
+  source: PREGO
+  taxon_label: Ruminococcus flavefaciens
+  score: 4.0
+- taxon_id: NCBITaxon:1380
+  source: PREGO
+  taxon_label: Atopobium
+  score: 4.0
+- taxon_id: NCBITaxon:1485
+  source: PREGO
+  taxon_label: Clostridium
+  score: 4.0
+- taxon_id: NCBITaxon:171549
+  source: PREGO
+  taxon_label: Bacteroidales
+  score: 4.0
+- taxon_id: NCBITaxon:185761
+  source: PREGO
+  taxon_label: Corynebacterium spheniscorum
+  score: 4.0
+- taxon_id: NCBITaxon:186802
+  source: PREGO
+  taxon_label: Eubacteriales
+  score: 4.0
+- taxon_id: NCBITaxon:186803
+  source: PREGO
+  taxon_label: Lachnospiraceae
+  score: 4.0
+- taxon_id: NCBITaxon:1869227
+  source: PREGO
+  taxon_label: bacterium
+  score: 4.0
+- taxon_id: NCBITaxon:2
+  source: PREGO
+  taxon_label: Bacteria
+  score: 4.0
+- taxon_id: NCBITaxon:28211
+  source: PREGO
+  taxon_label: Alphaproteobacteria
+  score: 4.0
+- taxon_id: NCBITaxon:31979
+  source: PREGO
+  taxon_label: Clostridiaceae
+  score: 4.0
+- taxon_id: NCBITaxon:33042
+  source: PREGO
+  taxon_label: Coprococcus
+  score: 4.0
+- taxon_id: NCBITaxon:541000
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:629395
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:766
+  source: PREGO
+  taxon_label: Rickettsiales
+  score: 4.0
+- taxon_id: NCBITaxon:830
+  source: PREGO
+  taxon_label: Butyrivibrio
+  score: 4.0
+- taxon_id: NCBITaxon:84107
+  source: PREGO
+  taxon_label: Coriobacteriaceae
+  score: 4.0
+- taxon_id: NCBITaxon:1219065
+  source: PREGO
+  taxon_label: Vibrio proteolyticus NBRC 13287
+  score: 3.0
+- taxon_id: NCBITaxon:1219071
+  source: PREGO
+  taxon_label: Vibrio harveyi NBRC 15634 = ATCC 14126 = KCTC 12724
+  score: 3.0
+- taxon_id: NCBITaxon:1304
+  source: PREGO
+  taxon_label: Streptococcus salivarius
+  score: 3.0
+- taxon_id: NCBITaxon:1347420
+  source: PREGO
+  taxon_label: Aeromonas veronii Hm21
+  score: 3.0
+- taxon_id: NCBITaxon:1433126
+  source: PREGO
+  taxon_label: Mucinivorans hirudinis
+  score: 3.0
+- taxon_id: NCBITaxon:1437605
+  source: PREGO
+  taxon_label: Bifidobacterium actinocoloniiforme DSM 22766
+  score: 3.0
+- taxon_id: NCBITaxon:214092
+  source: PREGO
+  taxon_label: Yersinia pestis CO92
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

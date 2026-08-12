@@ -1,0 +1,43 @@
+identifier: ENVO:00002265
+label: agricultural waste
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: agricultural wastes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00002265
+  source_label: ENVO:00002265
+  assertion_count: 5
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1048394
+  source: PREGO
+  taxon_label: Compostimonas suwonensis
+  score: 4.0
+- taxon_id: NCBITaxon:1121013
+  source: PREGO
+  taxon_label: Arenimonas composti TR7-09 = DSM 18010
+  score: 4.0
+- taxon_id: NCBITaxon:1121431
+  source: PREGO
+  taxon_label: Desulfallas thermosapovorans DSM 6562
+  score: 4.0
+- taxon_id: NCBITaxon:394503
+  source: PREGO
+  taxon_label: Ruminiclostridium cellulolyticum H10
+  score: 4.0
+- taxon_id: NCBITaxon:935865
+  source: PREGO
+  taxon_label: Nocardioides sp. J52
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

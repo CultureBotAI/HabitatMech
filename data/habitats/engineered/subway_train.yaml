@@ -1,0 +1,54 @@
+identifier: ENVO:03501109
+label: subway train
+definition: A passenger train which runs along an undergroud rail system.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: London Underground
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: SkyTrain
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: Subway
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: Tube
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: U-Bahn
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: Underground
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: metropolitana
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: subway
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: tube train
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: underground train
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00000856
+- ENVO:01000813
+- ENVO:03501108
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4395
+  source_label: Subway
+  source_path: Engineered > Built environment > City > Subway
+  mapping_predicate: skos:closeMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

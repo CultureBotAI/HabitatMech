@@ -1,0 +1,31 @@
+identifier: UBERON:0007362
+label: omasum
+definition: The third stomach of ruminants, situated on the right side of the abdomen
+  at a higher level than the fourth stomach and between this latter and the second
+  stomach, with both of which it communicates. From its inner surface project large
+  numbers of leaves or folia, each of which possesses roughened surfaces. In the center
+  of each folium is a band of muscle fibers which produces a rasping movement of the
+  leaf when it contracts. One leaf rubs against those on either side of it, and large
+  particles of food material are ground down between the rough surfaces, preparatory
+  to further digestion in the succeeeding parts of the alimentary canal. (Black's
+  Veterinary Dictionary, 17th ed).
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0011954
+- habitatmech:GOLD.d3869ad37f
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6396
+  source_label: Omasum
+  source_path: Host-associated > Mammals > Digestive system > Stomach > Omasum
+  mapping_predicate: skos:exactMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

@@ -1,0 +1,23 @@
+identifier: ENVO:01000747
+label: regolith
+definition: A solid layer which is composed primarily of loose, heterogeneous, superficial
+  material covering solid rock.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00000446
+- ENVO:01001275
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8453
+  source_label: Regolith
+  source_path: Environmental > Terrestrial > Regolith
+  mapping_predicate: skos:exactMatch
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

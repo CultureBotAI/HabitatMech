@@ -1,0 +1,48 @@
+identifier: BTO:0002096
+label: nasal cavity
+definition: The portion of the passages of the respiratory system extending from the
+  nares to the pharynx. It is divided into left and right halves by the nasal septum;
+  its floor is the hard palate, which separates it from the oral cavity; and its lateral
+  walls contain the nasal conchae and nasal meatus.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: cavitas nasalis
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: cavitas nasalises
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: cavitas nasi
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: cavitas nasis
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: nasal cavities
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0002096
+  source_label: nasal cavity
+  assertion_count: 2
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1427985
+  source: PREGO
+  taxon_label: Bordetella bronchiseptica KM22
+  score: 3.0
+- taxon_id: NCBITaxon:161895
+  source: PREGO
+  taxon_label: Corynebacterium phocae
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

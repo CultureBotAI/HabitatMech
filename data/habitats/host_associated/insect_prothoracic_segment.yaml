@@ -1,0 +1,34 @@
+identifier: UBERON:6000017
+label: insect prothoracic segment
+definition: The first (most anterior) segment of the thorax.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Prothorax
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: prothorax
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: t1
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: thoracic segment 1
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- BTO:0001368
+- UBERON:6000016
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7208
+  source_label: Prothorax
+  source_path: 'Host-associated > Arthropoda: Insects > Thorax > Prothorax'
+  mapping_predicate: skos:closeMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

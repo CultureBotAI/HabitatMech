@@ -1,0 +1,131 @@
+identifier: BTO:0001419
+label: urine
+definition: Waste material that is secreted by the kidney in vertebrates, is rich
+  in end products of protein metabolism together with salts and pigments, and forms
+  a clear amber and usually slightly acid fluid in mammals but is semisolid in birds
+  and reptiles.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: urines
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: urinous
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001419
+  source_label: urine
+  assertion_count: 345
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:1155385
+  source: PREGO
+  taxon_label: Proteiniclasticum
+  score: 4.0
+- taxon_id: NCBITaxon:117563
+  source: PREGO
+  taxon_label: Granulicatella
+  score: 4.0
+- taxon_id: NCBITaxon:119045
+  source: PREGO
+  taxon_label: Methylobacteriaceae
+  score: 4.0
+- taxon_id: NCBITaxon:1236
+  source: PREGO
+  taxon_label: Gammaproteobacteria
+  score: 4.0
+- taxon_id: NCBITaxon:1261
+  source: PREGO
+  taxon_label: Peptostreptococcus anaerobius
+  score: 4.0
+- taxon_id: NCBITaxon:1279
+  source: PREGO
+  taxon_label: Staphylococcus
+  score: 4.0
+- taxon_id: NCBITaxon:1280
+  source: PREGO
+  taxon_label: Staphylococcus aureus
+  score: 4.0
+- taxon_id: NCBITaxon:1282
+  source: PREGO
+  taxon_label: Staphylococcus epidermidis
+  score: 4.0
+- taxon_id: NCBITaxon:12916
+  source: PREGO
+  taxon_label: Acidovorax
+  score: 4.0
+- taxon_id: NCBITaxon:1300
+  source: PREGO
+  taxon_label: Streptococcaceae
+  score: 4.0
+- taxon_id: NCBITaxon:1301
+  source: PREGO
+  taxon_label: Streptococcus
+  score: 4.0
+- taxon_id: NCBITaxon:1310
+  source: PREGO
+  taxon_label: Streptococcus sobrinus
+  score: 4.0
+- taxon_id: NCBITaxon:1311
+  source: PREGO
+  taxon_label: Streptococcus agalactiae
+  score: 4.0
+- taxon_id: NCBITaxon:13159
+  source: PREGO
+  taxon_label: Mycoplana
+  score: 4.0
+- taxon_id: NCBITaxon:1328
+  source: PREGO
+  taxon_label: Streptococcus anginosus
+  score: 4.0
+- taxon_id: NCBITaxon:1350
+  source: PREGO
+  taxon_label: Enterococcus
+  score: 4.0
+- taxon_id: NCBITaxon:135621
+  source: PREGO
+  taxon_label: Pseudomonadaceae
+  score: 4.0
+- taxon_id: NCBITaxon:135624
+  source: PREGO
+  taxon_label: Aeromonadales
+  score: 4.0
+- taxon_id: NCBITaxon:1357
+  source: PREGO
+  taxon_label: Lactococcus
+  score: 4.0
+- taxon_id: NCBITaxon:13687
+  source: PREGO
+  taxon_label: Sphingomonas
+  score: 4.0
+- taxon_id: NCBITaxon:1375
+  source: PREGO
+  taxon_label: Aerococcus
+  score: 4.0
+- taxon_id: NCBITaxon:1378
+  source: PREGO
+  taxon_label: Gemella
+  score: 4.0
+- taxon_id: NCBITaxon:1380
+  source: PREGO
+  taxon_label: Atopobium
+  score: 4.0
+- taxon_id: NCBITaxon:1386
+  source: PREGO
+  taxon_label: Bacillus <firmicutes>
+  score: 4.0
+- taxon_id: NCBITaxon:147802
+  source: PREGO
+  taxon_label: Lactobacillus iners
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

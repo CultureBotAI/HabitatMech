@@ -1,0 +1,45 @@
+identifier: UBERON:0014858
+label: crustacean post-larval stage
+definition: A crustacean larval stage characterised by the use of abdominal appendages
+  (pleopods) for propulsion.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Post-larva
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: glaucothoe stage (hermit crab)
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: parva stage (shrimp)
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: post-larva
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: post-larval
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: post-larval stage
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: postlarva
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0000105
+- habitatmech:GOLD.2959225799
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7358
+  source_label: Post-larva
+  source_path: 'Host-associated > Arthropoda: Crustaceans > Post-larva'
+  mapping_predicate: skos:closeMatch
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.905d58ea72
+label: Biofilm
+habitat_category: ENGINEERED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00002034
+- ENVO:01000856
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8494
+  source_label: Biofilm
+  source_path: Engineered > Artificial ecosystem > Water channel system > Indoor >
+    Biofilm
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

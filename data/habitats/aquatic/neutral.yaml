@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.511058ef1e
+label: Neutral
+habitat_category: AQUATIC
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.c085f6141a
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:3998
+  source_label: Neutral
+  source_path: Environmental > Aquatic > Thermal springs > Hot (42-90C) > Neutral
+  assertion_count: 18
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

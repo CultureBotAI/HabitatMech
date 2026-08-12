@@ -1,0 +1,52 @@
+identifier: BTO:0001097
+label: pollen
+definition: The structure into which a haploid microspore develops; contains a halpoid
+  tube nucleus and two haploid sperm nuclei at maturity.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: male generative cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: male generative cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: pollen grain
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: pollen grains
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: pollens
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- habitatmech:GOLD.735c35525e
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4621
+  source_label: Pollen
+  source_path: Host-associated > Plants > Phyllosphere > Anthosphere > Pollen
+  mapping_predicate: skos:exactMatch
+  assertion_count: 6
+  assertion_unit: ORGANISM
+- source: PREGO
+  source_id: BTO:0001097
+  source_label: pollen
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1348660
+  source: PREGO
+  taxon_label: Serratia plymuthica S13
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'

@@ -1,0 +1,33 @@
+identifier: UBERON:0005384
+label: nasal cavity epithelium
+definition: An epithelium that lines the nasal cavity.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Epithelium
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: nasal epithelium
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: nasal mucosa
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0003350
+- UBERON:0004814
+- UBERON:0019306
+- habitatmech:GOLD.f3560ae8d1
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7446
+  source_label: Epithelium
+  source_path: Host-associated > Birds > Respiratory system > Nasal cavity > Epithelium
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

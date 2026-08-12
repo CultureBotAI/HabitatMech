@@ -1,0 +1,164 @@
+identifier: ENVO:00002010
+label: saline water
+definition: Water which contains a significant concentration of dissolved salts.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: saline waters
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: salt water
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: salt water
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: salt waters
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00002006
+- habitatmech:GOLD.277843111f
+source_attestations:
+- source: ENVIRONMENTS_TABLE
+  source_id: water_saline
+  source_label: water_saline
+  notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: GOLD
+  source_id: gold.ecosystem:5807
+  source_label: Saline water
+  source_path: Environmental > Aquatic > Non-marine Saline and Alkaline > Salt crystallizer
+    ponds > Saline water
+  mapping_predicate: skos:exactMatch
+- source: PREGO
+  source_id: ENVO:00002010
+  source_label: saline water
+  assertion_count: 46
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+environmental_parameters:
+- parameter: PH
+  qualitative_value: high
+  source: kg-microbe environments.csv (water_saline)
+- parameter: SALINITY
+  qualitative_value: high
+  source: kg-microbe environments.csv (water_saline)
+- parameter: SALINITY_VARIABILITY
+  qualitative_value: small
+  source: kg-microbe environments.csv (water_saline)
+- parameter: STRUCTURAL_COMPLEXITY
+  qualitative_value: low
+  source: kg-microbe environments.csv (water_saline)
+- parameter: WATER_AVAILABILITY
+  qualitative_value: high
+  source: kg-microbe environments.csv (water_saline)
+- parameter: WATER_VARIABILITY
+  qualitative_value: permanently wet
+  source: kg-microbe environments.csv (water_saline)
+characteristic_taxa:
+- taxon_id: NCBITaxon:163503
+  source: PREGO
+  taxon_label: Chaetoceros socialis
+  score: 4.0
+- taxon_id: NCBITaxon:168759
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:184592
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:188541
+  source: PREGO
+  taxon_label: Stellarima microtrias
+  score: 4.0
+- taxon_id: NCBITaxon:216773
+  source: PREGO
+  taxon_label: Corethron hystrix
+  score: 4.0
+- taxon_id: NCBITaxon:266940
+  source: PREGO
+  taxon_label: Kineococcus radiotolerans SRS30216 = ATCC BAA-149
+  score: 4.0
+- taxon_id: NCBITaxon:29805
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:326442
+  source: PREGO
+  taxon_label: Pseudoalteromonas translucida TAC125
+  score: 4.0
+- taxon_id: NCBITaxon:34085
+  source: PREGO
+  taxon_label: Riemerella anatipestifer
+  score: 4.0
+- taxon_id: NCBITaxon:40464
+  source: PREGO
+  taxon_label: Peniophora nuda
+  score: 4.0
+- taxon_id: NCBITaxon:411467
+  source: PREGO
+  taxon_label: Pseudoflavonifractor capillosus ATCC 29799
+  score: 4.0
+- taxon_id: NCBITaxon:411477
+  source: PREGO
+  taxon_label: Parabacteroides merdae ATCC 43184
+  score: 4.0
+- taxon_id: NCBITaxon:411485
+  source: PREGO
+  taxon_label: Faecalibacterium prausnitzii M21/2
+  score: 4.0
+- taxon_id: NCBITaxon:428125
+  source: PREGO
+  taxon_label: '[Clostridium] leptum DSM 753'
+  score: 4.0
+- taxon_id: NCBITaxon:445336
+  source: PREGO
+  taxon_label: Clostridium botulinum Bf
+  score: 4.0
+- taxon_id: NCBITaxon:457391
+  source: PREGO
+  taxon_label: Bacteroides sp. 3_1_33FAA
+  score: 4.0
+- taxon_id: NCBITaxon:457424
+  source: PREGO
+  taxon_label: Bacteroides fragilis 3_1_12
+  score: 4.0
+- taxon_id: NCBITaxon:457427
+  source: PREGO
+  taxon_label: Streptomyces himastatinicus ATCC 53653
+  score: 4.0
+- taxon_id: NCBITaxon:463619
+  source: PREGO
+  taxon_label: Chaetoceros sp. ArM0005
+  score: 4.0
+- taxon_id: NCBITaxon:49252
+  source: PREGO
+  taxon_label: Eucampia antarctica
+  score: 4.0
+- taxon_id: NCBITaxon:498761
+  source: PREGO
+  taxon_label: Heliomicrobium modesticaldum Ice1
+  score: 4.0
+- taxon_id: NCBITaxon:5066
+  source: PREGO
+  taxon_label: Aspergillus wentii
+  score: 4.0
+- taxon_id: NCBITaxon:537937
+  source: PREGO
+  taxon_label: Bifidobacterium longum subsp. infantis CCUG 52486
+  score: 4.0
+- taxon_id: NCBITaxon:55518
+  source: PREGO
+  taxon_label: Magnetospirillum gryphiswaldense
+  score: 4.0
+- taxon_id: NCBITaxon:56780
+  source: PREGO
+  taxon_label: Syntrophus aciditrophicus SB
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD,
+    PREGO. Grounding: EXACT.'

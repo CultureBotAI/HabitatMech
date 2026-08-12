@@ -1,0 +1,21 @@
+identifier: BTO:0005122
+label: ovarian cyst
+definition: Ovarian cysts are small fluid-filled sacs that develop in a woman's ovaries.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.0a69448795
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7006
+  source_label: Ovarian cyst
+  source_path: 'Host-associated > Mammals: Human > Reproductive system > Ovaries >
+    Ovarian cyst'
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

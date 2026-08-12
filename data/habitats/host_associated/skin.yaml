@@ -1,0 +1,123 @@
+identifier: BTO:0001253
+label: skin
+definition: The integument of an animal (as a fur-bearing mammal or a bird) separated
+  from the body usually with its hair or feathers.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- BTO:0000634
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001253
+  source_label: skin
+  assertion_count: 1116
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:1016
+  source: PREGO
+  taxon_label: Capnocytophaga
+  score: 4.0
+- taxon_id: NCBITaxon:1018
+  source: PREGO
+  taxon_label: Capnocytophaga ochracea
+  score: 4.0
+- taxon_id: NCBITaxon:102234
+  source: PREGO
+  taxon_label: Cyanobacterium
+  score: 4.0
+- taxon_id: NCBITaxon:1046
+  source: PREGO
+  taxon_label: Chromatiaceae
+  score: 4.0
+- taxon_id: NCBITaxon:1060
+  source: PREGO
+  taxon_label: Rhodobacter
+  score: 4.0
+- taxon_id: NCBITaxon:106589
+  source: PREGO
+  taxon_label: Cupriavidus
+  score: 4.0
+- taxon_id: NCBITaxon:106649
+  source: PREGO
+  taxon_label: Acinetobacter guillouiae
+  score: 4.0
+- taxon_id: NCBITaxon:107
+  source: PREGO
+  taxon_label: Spirosoma
+  score: 4.0
+- taxon_id: NCBITaxon:108061
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:108981
+  source: PREGO
+  taxon_label: Acinetobacter schindleri
+  score: 4.0
+- taxon_id: NCBITaxon:1107
+  source: PREGO
+  taxon_label: Chloroflexus
+  score: 4.0
+- taxon_id: NCBITaxon:110936
+  source: PREGO
+  taxon_label: Rathayibacter caricis
+  score: 4.0
+- taxon_id: NCBITaxon:1117
+  source: PREGO
+  taxon_label: Cyanobacteriota
+  score: 4.0
+- taxon_id: NCBITaxon:1129771
+  source: PREGO
+  taxon_label: Leptotrichiaceae
+  score: 4.0
+- taxon_id: NCBITaxon:114248
+  source: PREGO
+  taxon_label: Tepidimonas
+  score: 4.0
+- taxon_id: NCBITaxon:1147159
+  source: PREGO
+  taxon_label: Ornithinibacillus scapharcae
+  score: 4.0
+- taxon_id: NCBITaxon:114975
+  source: PREGO
+  taxon_label: Sporosarcina aquimarina
+  score: 4.0
+- taxon_id: NCBITaxon:1154584
+  source: PREGO
+  taxon_label: Gaiellales
+  score: 4.0
+- taxon_id: NCBITaxon:1154585
+  source: PREGO
+  taxon_label: Gaiellaceae
+  score: 4.0
+- taxon_id: NCBITaxon:117207
+  source: PREGO
+  taxon_label: Sphingopyxis alaskensis
+  score: 4.0
+- taxon_id: NCBITaxon:117563
+  source: PREGO
+  taxon_label: Granulicatella
+  score: 4.0
+- taxon_id: NCBITaxon:118747
+  source: PREGO
+  taxon_label: Bulleidia
+  score: 4.0
+- taxon_id: NCBITaxon:118882
+  source: PREGO
+  taxon_label: Brucellaceae
+  score: 4.0
+- taxon_id: NCBITaxon:118968
+  source: PREGO
+  taxon_label: Coxiellaceae
+  score: 4.0
+- taxon_id: NCBITaxon:118969
+  source: PREGO
+  taxon_label: Legionellales
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

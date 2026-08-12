@@ -1,0 +1,97 @@
+identifier: BTO:0001540
+label: goblet cell
+definition: A unicellular mucous gland found in the epithelium of various mucous membranes,
+  especially that of the respiratory passages and intestines. Droplets of mucigen
+  collect in the upper part of the cell and distend it, while the basal end remains
+  slender, and the cell assumes the shape of a goblet.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: beaker cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: beaker cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: caliciform cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: caliciform cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: chalice cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: chalice cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: goblet cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000414
+- BTO:0003689
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001540
+  source_label: goblet cell
+  assertion_count: 12
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1351
+  source: PREGO
+  taxon_label: Enterococcus faecalis
+  score: 3.0
+- taxon_id: NCBITaxon:1598
+  source: PREGO
+  taxon_label: Limosilactobacillus reuteri
+  score: 3.0
+- taxon_id: NCBITaxon:1796613
+  source: PREGO
+  taxon_label: Bacteroides caecimuris
+  score: 3.0
+- taxon_id: NCBITaxon:1796616
+  source: PREGO
+  taxon_label: Blautia pseudococcoides
+  score: 3.0
+- taxon_id: NCBITaxon:1796646
+  source: PREGO
+  taxon_label: Muribaculum intestinale
+  score: 3.0
+- taxon_id: NCBITaxon:1834196
+  source: PREGO
+  taxon_label: Lachnoclostridium sp. YL32
+  score: 3.0
+- taxon_id: NCBITaxon:1834198
+  source: PREGO
+  taxon_label: Hungateiclostridiaceae bacterium KB18
+  score: 3.0
+- taxon_id: NCBITaxon:1834205
+  source: PREGO
+  taxon_label: Burkholderiales bacterium YL45
+  score: 3.0
+- taxon_id: NCBITaxon:1834207
+  source: PREGO
+  taxon_label: Erysipelotrichaceae bacterium I46
+  score: 3.0
+- taxon_id: NCBITaxon:239935
+  source: PREGO
+  taxon_label: Akkermansia muciniphila
+  score: 3.0
+- taxon_id: NCBITaxon:292800
+  source: PREGO
+  taxon_label: Flavonifractor plautii
+  score: 3.0
+- taxon_id: NCBITaxon:302912
+  source: PREGO
+  taxon_label: Bifidobacterium animalis subsp. animalis
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

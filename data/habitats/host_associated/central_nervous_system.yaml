@@ -1,0 +1,82 @@
+identifier: BTO:0000227
+label: central nervous system
+definition: The central nervous system is that part of the nervous system that consists
+  of the brain and spinal cord. The central nervous system (CNS) is one of the two
+  major divisions of the nervous system. The other is the peripheral nervous system
+  (PNS) which is outside the brain and spinal cord.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: CNS
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: central nervous systems
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: cerebrospinal axis
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: cerebrospinal axises
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: neuraxis
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: neuraxises
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000227
+  source_label: central nervous system
+  assertion_count: 10
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1095955
+  source: PREGO
+  taxon_label: Treponema pallidum subsp. pallidum str. Sea 81-4
+  score: 3.0
+- taxon_id: NCBITaxon:1126011
+  source: PREGO
+  taxon_label: Listeria monocytogenes 07PF0776
+  score: 3.0
+- taxon_id: NCBITaxon:1292046
+  source: PREGO
+  taxon_label: Desulfobulbus sp. oral taxon 041 str. Dsb1-5
+  score: 3.0
+- taxon_id: NCBITaxon:1639
+  source: PREGO
+  taxon_label: Listeria monocytogenes
+  score: 3.0
+- taxon_id: NCBITaxon:272563
+  source: PREGO
+  taxon_label: Clostridioides difficile 630
+  score: 3.0
+- taxon_id: NCBITaxon:280871
+  source: PREGO
+  taxon_label: Mycolicibacterium llatzerense
+  score: 3.0
+- taxon_id: NCBITaxon:314724
+  source: PREGO
+  taxon_label: Borrelia turicatae 91E135
+  score: 3.0
+- taxon_id: NCBITaxon:539221
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:553198
+  source: PREGO
+  taxon_label: Propionibacterium acidifaciens F0233
+  score: 3.0
+- taxon_id: NCBITaxon:83262
+  source: PREGO
+  taxon_label: Mycobacteroides immunogenum
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

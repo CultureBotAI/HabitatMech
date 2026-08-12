@@ -1,0 +1,78 @@
+identifier: BTO:0001444
+label: Vero cell
+definition: The Vero cell line was initiated from the kidney of a normal adult African
+  green monkey on March 27, 1962, by Y. Yasumura and Y. Kawakita at the Chiba University
+  in Chiba, Japan.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Vero cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: vero
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: vero cell line
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: vero cell lines
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: vero cell lineses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: vero cell linous
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: vero cellses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000067
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001444
+  source_label: Vero cell
+  assertion_count: 9
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1093100
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:1093672
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:1225791
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:1225792
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:1225793
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:1292046
+  source: PREGO
+  taxon_label: Desulfobulbus sp. oral taxon 041 str. Dsb1-5
+  score: 3.0
+- taxon_id: NCBITaxon:1354301
+  source: PREGO
+  taxon_label: Clostridium sp. BL8
+  score: 3.0
+- taxon_id: NCBITaxon:1359204
+  source: PREGO
+  taxon_label: Rickettsia rhipicephali str. HJ#5
+  score: 3.0
+- taxon_id: NCBITaxon:1429916
+  source: PREGO
+  taxon_label: Afipia sp. P52-10
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

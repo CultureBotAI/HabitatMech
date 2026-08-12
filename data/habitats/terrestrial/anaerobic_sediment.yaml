@@ -1,0 +1,135 @@
+identifier: ENVO:00002045
+label: anaerobic sediment
+definition: Sediment characterised by the absence of oxygen.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: anaerobic sediments
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: anoxic sediment
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: anoxic sediment
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: anoxic sediments
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00002007
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00002045
+  source_label: anaerobic sediment
+  assertion_count: 42
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:114628
+  source: PREGO
+  taxon_label: Alkaliphilus transvaalensis
+  score: 4.0
+- taxon_id: NCBITaxon:120962
+  source: PREGO
+  taxon_label: Roseiflexus castenholzii
+  score: 4.0
+- taxon_id: NCBITaxon:128
+  source: PREGO
+  taxon_label: Isosphaera pallida
+  score: 4.0
+- taxon_id: NCBITaxon:1288
+  source: PREGO
+  taxon_label: Staphylococcus xylosus
+  score: 4.0
+- taxon_id: NCBITaxon:1409
+  source: PREGO
+  taxon_label: 'Bacillus sp. (in: firmicutes)'
+  score: 4.0
+- taxon_id: NCBITaxon:147
+  source: PREGO
+  taxon_label: Spirochaeta aurantia
+  score: 4.0
+- taxon_id: NCBITaxon:1505
+  source: PREGO
+  taxon_label: Paraclostridium sordellii
+  score: 4.0
+- taxon_id: NCBITaxon:214688
+  source: PREGO
+  taxon_label: Gemmata obscuriglobus UQM 2246
+  score: 4.0
+- taxon_id: NCBITaxon:2223
+  source: PREGO
+  taxon_label: Methanothrix soehngenii
+  score: 4.0
+- taxon_id: NCBITaxon:2303
+  source: PREGO
+  taxon_label: Thermoplasma acidophilum
+  score: 4.0
+- taxon_id: NCBITaxon:234267
+  source: PREGO
+  taxon_label: Candidatus Solibacter usitatus Ellin6076
+  score: 4.0
+- taxon_id: NCBITaxon:266940
+  source: PREGO
+  taxon_label: Kineococcus radiotolerans SRS30216 = ATCC BAA-149
+  score: 4.0
+- taxon_id: NCBITaxon:285106
+  source: PREGO
+  taxon_label: Tepidimicrobium ferriphilum
+  score: 4.0
+- taxon_id: NCBITaxon:29345
+  source: PREGO
+  taxon_label: Sedimentibacter hydroxybenzoicus
+  score: 4.0
+- taxon_id: NCBITaxon:293826
+  source: PREGO
+  taxon_label: Alkaliphilus metalliredigens QYMF
+  score: 4.0
+- taxon_id: NCBITaxon:29535
+  source: PREGO
+  taxon_label: Cytophaga sp.
+  score: 4.0
+- taxon_id: NCBITaxon:304371
+  source: PREGO
+  taxon_label: Methanocella paludicola SANAE
+  score: 4.0
+- taxon_id: NCBITaxon:330214
+  source: PREGO
+  taxon_label: Nitrospira defluvii
+  score: 4.0
+- taxon_id: NCBITaxon:33075
+  source: PREGO
+  taxon_label: Acidobacterium capsulatum
+  score: 4.0
+- taxon_id: NCBITaxon:338969
+  source: PREGO
+  taxon_label: Rhodoferax ferrireducens T118
+  score: 4.0
+- taxon_id: NCBITaxon:33953
+  source: PREGO
+  taxon_label: Clostridium aminobutyricum
+  score: 4.0
+- taxon_id: NCBITaxon:349307
+  source: PREGO
+  taxon_label: Methanothrix thermoacetophila PT
+  score: 4.0
+- taxon_id: NCBITaxon:350688
+  source: PREGO
+  taxon_label: Alkaliphilus oremlandii OhILAs
+  score: 4.0
+- taxon_id: NCBITaxon:36987
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:379066
+  source: PREGO
+  taxon_label: Gemmatimonas aurantiaca T-27
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

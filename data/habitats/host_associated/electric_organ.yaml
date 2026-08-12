@@ -1,0 +1,33 @@
+identifier: BTO:0000376
+label: electric organ
+definition: A specialized tract of tissue, as in the electric eel, in which electricity
+  is generated.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: electric organic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: electric organs
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000376
+  source_label: electric organ
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:316407
+  source: PREGO
+  taxon_label: Escherichia coli str. K-12 substr. W3110
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

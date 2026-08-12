@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.0632072d58
+label: Thorax
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- BTO:0001368
+- habitatmech:GOLD.bbdd2fde5b
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6762
+  source_label: Thorax
+  source_path: Host-associated > Mammals > Lymphatic system > Lymph nodes > Thorax
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

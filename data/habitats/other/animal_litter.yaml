@@ -1,0 +1,127 @@
+identifier: ENVO:00002191
+label: animal litter
+definition: Straw or other material strewn in an animal's enclosure (e.g. a stable)
+  for it to sleep on and to absorb its faeces and urine.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: animal litters
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00010483
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00002191
+  source_label: animal litter
+  assertion_count: 39
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:1505
+  source: PREGO
+  taxon_label: Paraclostridium sordellii
+  score: 4.0
+- taxon_id: NCBITaxon:1537
+  source: PREGO
+  taxon_label: Romboutsia lituseburensis
+  score: 4.0
+- taxon_id: NCBITaxon:1605
+  source: PREGO
+  taxon_label: Ligilactobacillus animalis
+  score: 4.0
+- taxon_id: NCBITaxon:1622
+  source: PREGO
+  taxon_label: Ligilactobacillus murinus
+  score: 4.0
+- taxon_id: NCBITaxon:1624
+  source: PREGO
+  taxon_label: Ligilactobacillus salivarius
+  score: 4.0
+- taxon_id: NCBITaxon:1648
+  source: PREGO
+  taxon_label: Erysipelothrix rhusiopathiae
+  score: 4.0
+- taxon_id: NCBITaxon:165179
+  source: PREGO
+  taxon_label: Segatella copri
+  score: 4.0
+- taxon_id: NCBITaxon:1732
+  source: PREGO
+  taxon_label: Eubacterium oxidoreducens
+  score: 4.0
+- taxon_id: NCBITaxon:180332
+  source: PREGO
+  taxon_label: Robinsoniella peoriensis
+  score: 4.0
+- taxon_id: NCBITaxon:2741
+  source: PREGO
+  taxon_label: Peptococcus niger
+  score: 4.0
+- taxon_id: NCBITaxon:28051
+  source: PREGO
+  taxon_label: Lachnospira multipara
+  score: 4.0
+- taxon_id: NCBITaxon:28111
+  source: PREGO
+  taxon_label: Bacteroides eggerthii
+  score: 4.0
+- taxon_id: NCBITaxon:28131
+  source: PREGO
+  taxon_label: Prevotella intermedia
+  score: 4.0
+- taxon_id: NCBITaxon:33038
+  source: PREGO
+  taxon_label: Mediterraneibacter gnavus
+  score: 4.0
+- taxon_id: NCBITaxon:33953
+  source: PREGO
+  taxon_label: Clostridium aminobutyricum
+  score: 4.0
+- taxon_id: NCBITaxon:33959
+  source: PREGO
+  taxon_label: Lactobacillus johnsonii
+  score: 4.0
+- taxon_id: NCBITaxon:36841
+  source: PREGO
+  taxon_label: Terrisporobacter glycolicus
+  score: 4.0
+- taxon_id: NCBITaxon:36987
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:411460
+  source: PREGO
+  taxon_label: '[Ruminococcus] torques ATCC 27756'
+  score: 4.0
+- taxon_id: NCBITaxon:44008
+  source: PREGO
+  taxon_label: Enterococcus cecorum
+  score: 4.0
+- taxon_id: NCBITaxon:449673
+  source: PREGO
+  taxon_label: Bacteroides stercoris ATCC 43183
+  score: 4.0
+- taxon_id: NCBITaxon:451640
+  source: PREGO
+  taxon_label: Catenibacterium mitsuokai DSM 15897
+  score: 4.0
+- taxon_id: NCBITaxon:457412
+  source: PREGO
+  taxon_label: Ruminococcus sp. 5_1_39BFAA
+  score: 4.0
+- taxon_id: NCBITaxon:469616
+  source: PREGO
+  taxon_label: Fusobacterium mortiferum ATCC 9817
+  score: 4.0
+- taxon_id: NCBITaxon:471855
+  source: PREGO
+  taxon_label: Slackia heliotrinireducens DSM 20476
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

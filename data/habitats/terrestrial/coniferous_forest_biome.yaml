@@ -1,0 +1,138 @@
+identifier: ENVO:01000196
+label: coniferous forest biome
+definition: A coniferous forest biome is a forest biome which contains densely packed
+  populations or communities of coniferous trees, strongly limiting light penetration
+  to the forest floor.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: coniferous forest
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: coniferous forests
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: pine forest
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: pine forests
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:01000174
+- ENVO:01000433
+source_attestations:
+- source: PREGO
+  source_id: ENVO:01000196
+  source_label: coniferous forest biome
+  assertion_count: 229
+  assertion_unit: TAXON
+  score: 1.73866
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:326424
+  source: PREGO
+  taxon_label: Frankia alni ACN14a
+  score: 1.73866
+- taxon_id: NCBITaxon:525909
+  source: PREGO
+  taxon_label: Acidimicrobium ferrooxidans DSM 10331
+  score: 1.73139
+- taxon_id: NCBITaxon:323097
+  source: PREGO
+  taxon_label: Nitrobacter hamburgensis X14
+  score: 1.72872
+- taxon_id: NCBITaxon:395965
+  source: PREGO
+  taxon_label: Methylocella silvestris BL2
+  score: 1.72864
+- taxon_id: NCBITaxon:114615
+  source: PREGO
+  taxon_label: Bradyrhizobium sp. ORS 278
+  score: 1.72801
+- taxon_id: NCBITaxon:471852
+  source: PREGO
+  taxon_label: Thermomonospora curvata DSM 43183
+  score: 1.72609
+- taxon_id: NCBITaxon:1772
+  source: PREGO
+  taxon_label: Mycolicibacterium smegmatis
+  score: 1.72605
+- taxon_id: NCBITaxon:536019
+  source: PREGO
+  taxon_label: Mesorhizobium opportunistum WSM2075
+  score: 1.72598
+- taxon_id: NCBITaxon:102897
+  source: PREGO
+  taxon_label: Parafrankia sp. EUN1f
+  score: 1.72489
+- taxon_id: NCBITaxon:526225
+  source: PREGO
+  taxon_label: Geodermatophilus obscurus DSM 43160
+  score: 1.72177
+- taxon_id: NCBITaxon:186484
+  source: PREGO
+  score: 1.72091
+- taxon_id: NCBITaxon:479431
+  source: PREGO
+  taxon_label: Nakamurella multipartita DSM 44233
+  score: 1.72005
+- taxon_id: NCBITaxon:2716812
+  source: PREGO
+  taxon_label: Candidatus Protofrankia datiscae
+  score: 1.71979
+- taxon_id: NCBITaxon:622637
+  source: PREGO
+  taxon_label: Methylocystis sp. ATCC 49242
+  score: 1.71953
+- taxon_id: NCBITaxon:426117
+  source: PREGO
+  taxon_label: Methylobacterium sp. 4-46
+  score: 1.71809
+- taxon_id: NCBITaxon:591158
+  source: PREGO
+  taxon_label: Streptomyces sp. AA4
+  score: 1.71696
+- taxon_id: NCBITaxon:469371
+  source: PREGO
+  taxon_label: Thermobispora bispora DSM 43833
+  score: 1.7167
+- taxon_id: NCBITaxon:666684
+  source: PREGO
+  taxon_label: Afipia sp. 1NLS2
+  score: 1.7147
+- taxon_id: NCBITaxon:298654
+  source: PREGO
+  taxon_label: Pseudofrankia inefficax
+  score: 1.71461
+- taxon_id: NCBITaxon:479433
+  source: PREGO
+  taxon_label: Catenulispora acidiphila DSM 44928
+  score: 1.71428
+- taxon_id: NCBITaxon:426355
+  source: PREGO
+  taxon_label: Methylobacterium radiotolerans JCM 2831
+  score: 1.71407
+- taxon_id: NCBITaxon:639283
+  source: PREGO
+  taxon_label: Ancylobacter novellus DSM 506
+  score: 1.714
+- taxon_id: NCBITaxon:395963
+  source: PREGO
+  taxon_label: Beijerinckia indica subsp. indica ATCC 9039
+  score: 1.71367
+- taxon_id: NCBITaxon:460265
+  source: PREGO
+  taxon_label: Methylobacterium nodulans ORS 2060
+  score: 1.71364
+- taxon_id: NCBITaxon:240015
+  source: PREGO
+  taxon_label: Acidobacterium capsulatum ATCC 51196
+  score: 1.71307
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

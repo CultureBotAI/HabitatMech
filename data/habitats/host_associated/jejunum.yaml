@@ -1,0 +1,67 @@
+identifier: BTO:0000657
+label: jejunum
+definition: The section of the small intestine that comprises the first two fifths
+  beyond the duodenum and that is larger, thicker-walled, and more vascular and has
+  more circular folds than the ileum.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: intestinum jejuna
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: intestinum jejunal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: intestinum jejunum
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: intestinum jejunums
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: jejuna
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: jejunal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: jejunums
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: mid intestine
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: mid intestines
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: mid intestinous
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: middle intestine
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: middle intestines
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: middle intestinous
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000657
+  source_label: jejunum
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1205679
+  source: PREGO
+  taxon_label: Bifidobacterium longum subsp. longum CECT 7347
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

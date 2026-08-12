@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.847a964b42
+label: Scales
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0002542
+- habitatmech:GOLD.52d3212a6a
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7456
+  source_label: Scales
+  source_path: Host-associated > Birds > Integumentary system > Skin > Scales
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

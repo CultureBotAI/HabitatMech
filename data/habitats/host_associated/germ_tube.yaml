@@ -1,0 +1,24 @@
+identifier: BTO:0004822
+label: germ tube
+definition: A germ tube is an outgrowth produced by certain species of spore-releasing
+  fungi (sporangia) during germination. The germ tube differentiates, grows, and develops
+  by mitosis to create a somatic hyphae.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- BTO:0001436
+- FOODON:03411261
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7745
+  source_label: Germ tube
+  source_path: Host-associated > Fungi > Germ tube
+  mapping_predicate: skos:exactMatch
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

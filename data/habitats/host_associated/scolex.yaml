@@ -1,0 +1,52 @@
+identifier: BTO:0002305
+label: scolex
+definition: The anterior organ of a tapeworm used for attachment to host tissues.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: holdfast
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: holdfastic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: holdfasts
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: scolexes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0001262
+source_attestations:
+- source: PREGO
+  source_id: BTO:0002305
+  source_label: scolex
+  assertion_count: 4
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1054942
+  source: PREGO
+  taxon_label: Candidatus Arthromitus sp. SFB-1
+  score: 3.0
+- taxon_id: NCBITaxon:1054943
+  source: PREGO
+  taxon_label: Candidatus Arthromitus sp. SFB-2
+  score: 3.0
+- taxon_id: NCBITaxon:388399
+  source: PREGO
+  taxon_label: Sagittula stellata E-37
+  score: 3.0
+- taxon_id: NCBITaxon:69666
+  source: PREGO
+  taxon_label: Caulobacter mirabilis
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

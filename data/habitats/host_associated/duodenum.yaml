@@ -1,0 +1,87 @@
+identifier: BTO:0000365
+label: duodenum
+definition: The first part of the small intestine extending from the pylorus to the
+  jejunum.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: anterior intestine
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: anterior intestines
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: anterior intestinous
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: duodena
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: duodenal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: duodenums
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: proximal intestine
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: proximal intestines
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: proximal intestinous
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: upper intestine
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: upper intestines
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: upper intestinous
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000365
+  source_label: duodenum
+  assertion_count: 7
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:102618
+  source: PREGO
+  taxon_label: Helicobacter pylori NCTC 11637 = CCUG 17874 = ATCC 43504 = JCM 12093
+  score: 3.0
+- taxon_id: NCBITaxon:1037411
+  source: PREGO
+  taxon_label: Lactobacillus johnsonii pf01
+  score: 3.0
+- taxon_id: NCBITaxon:210
+  source: PREGO
+  taxon_label: Helicobacter pylori
+  score: 3.0
+- taxon_id: NCBITaxon:221109
+  source: PREGO
+  taxon_label: Oceanobacillus iheyensis HTE831
+  score: 3.0
+- taxon_id: NCBITaxon:544405
+  source: PREGO
+  taxon_label: Helicobacter pylori 98-10
+  score: 3.0
+- taxon_id: NCBITaxon:544406
+  source: PREGO
+  taxon_label: Helicobacter pylori B128
+  score: 3.0
+- taxon_id: NCBITaxon:592205
+  source: PREGO
+  taxon_label: Helicobacter pylori B38
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

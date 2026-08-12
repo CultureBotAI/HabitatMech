@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.52622242c6
+label: Cement wall
+habitat_category: ENGINEERED
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- mesh:D000076624
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4810
+  source_label: Cement wall
+  source_path: Engineered > Built environment > Cement wall
+  assertion_count: 2
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

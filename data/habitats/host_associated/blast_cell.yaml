@@ -1,0 +1,135 @@
+identifier: BTO:0000125
+label: blast cell
+definition: In the monophyletic theory, the least differentiated, totipotential blood
+  cell without commitment as to its particular series, from which all blood cells
+  are derived, preceding a stem cell.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: blast
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: blast cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: blastic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: blasts
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: hematoblast
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: hematoblastic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: hematoblasts
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: hematocytoblast
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: hematocytoblastic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: hematocytoblasts
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: hemocytoblast
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: hemocytoblastic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: hemocytoblasts
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000125
+  source_label: blast cell
+  assertion_count: 18
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1123383
+  source: PREGO
+  taxon_label: Pseudothermotoga elfii DSM 9442 = NBRC 107921
+  score: 3.0
+- taxon_id: NCBITaxon:1123384
+  source: PREGO
+  taxon_label: Pseudothermotoga hypogea DSM 11164 = NBRC 106472
+  score: 3.0
+- taxon_id: NCBITaxon:1189612
+  source: PREGO
+  taxon_label: Indibacter alkaliphilus LW1
+  score: 3.0
+- taxon_id: NCBITaxon:1322346
+  source: PREGO
+  taxon_label: Glaesserella parasuis ZJ0906
+  score: 3.0
+- taxon_id: NCBITaxon:1408159
+  source: PREGO
+  taxon_label: Pseudothermotoga caldifontis AZM44c09
+  score: 3.0
+- taxon_id: NCBITaxon:1408160
+  source: PREGO
+  taxon_label: Thermotoga profunda AZM34c06
+  score: 3.0
+- taxon_id: NCBITaxon:1497681
+  source: PREGO
+  taxon_label: Paenilisteria newyorkensis
+  score: 3.0
+- taxon_id: NCBITaxon:1552123
+  source: PREGO
+  taxon_label: Listeria booriae
+  score: 3.0
+- taxon_id: NCBITaxon:1585974
+  source: PREGO
+  taxon_label: Beduini massiliensis
+  score: 3.0
+- taxon_id: NCBITaxon:187452
+  source: PREGO
+  taxon_label: Pediococcus claussenii
+  score: 3.0
+- taxon_id: NCBITaxon:240427
+  source: PREGO
+  taxon_label: Secundilactobacillus paracollinoides
+  score: 3.0
+- taxon_id: NCBITaxon:375175
+  source: PREGO
+  taxon_label: Loigolactobacillus backii
+  score: 3.0
+- taxon_id: NCBITaxon:478010
+  source: PREGO
+  taxon_label: Microterricola pindariensis
+  score: 3.0
+- taxon_id: NCBITaxon:51663
+  source: PREGO
+  taxon_label: Pediococcus damnosus
+  score: 3.0
+- taxon_id: NCBITaxon:53444
+  source: PREGO
+  taxon_label: Fructilactobacillus lindneri
+  score: 3.0
+- taxon_id: NCBITaxon:562
+  source: PREGO
+  taxon_label: Escherichia coli
+  score: 3.0
+- taxon_id: NCBITaxon:582
+  source: PREGO
+  taxon_label: Morganella morganii
+  score: 3.0
+- taxon_id: NCBITaxon:758793
+  source: PREGO
+  taxon_label: Caballeronia insecticola
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

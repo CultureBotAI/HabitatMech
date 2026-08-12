@@ -1,0 +1,60 @@
+identifier: BTO:0001477
+label: photophore
+definition: 'A light-emitting organ; especially: one of the luminous spots on various
+  marine mostly deep-sea fishes.'
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: light organ
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: light organic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: light organs
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: photogenic organ
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: photogenic organic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: photogenic organs
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: photophores
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001477
+  source_label: photophore
+  assertion_count: 4
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1088719
+  source: PREGO
+  taxon_label: Aliivibrio fischeri SR5
+  score: 3.0
+- taxon_id: NCBITaxon:312309
+  source: PREGO
+  taxon_label: Aliivibrio fischeri ES114
+  score: 3.0
+- taxon_id: NCBITaxon:388396
+  source: PREGO
+  taxon_label: Aliivibrio fischeri MJ11
+  score: 3.0
+- taxon_id: NCBITaxon:668
+  source: PREGO
+  taxon_label: Aliivibrio fischeri
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

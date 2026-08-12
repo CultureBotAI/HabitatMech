@@ -1,0 +1,178 @@
+identifier: ENVO:00000111
+label: forested area
+definition: An area with a high density of trees. A small forest may be called a wood.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Forest
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: copse
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: copses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: deciduous forest
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: deciduous forests
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: forest
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: forest
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: forest reserve
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: forest reserves
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: forests
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: grove
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: groves
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: wood
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00000109
+- ENVO:00001998
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:forest
+  source_label: Forest
+  mapping_predicate: skos:closeMatch
+  assertion_count: 420
+  assertion_unit: STRAIN
+- source: GOLD
+  source_id: gold.ecosystem:5864
+  source_label: Forest
+  source_path: Environmental > Terrestrial > Soil > Forest
+  mapping_predicate: skos:closeMatch
+  assertion_count: 433
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: PREGO
+  source_id: ENVO:00000111
+  source_label: forested area
+  assertion_count: 2798
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:104245
+  source: PREGO
+  taxon_label: Clavaria zollingeri
+  score: 4.0
+- taxon_id: NCBITaxon:128
+  source: PREGO
+  taxon_label: Isosphaera pallida
+  score: 4.0
+- taxon_id: NCBITaxon:1423814
+  source: PREGO
+  taxon_label: Limosilactobacillus vaginalis DSM 5837 = ATCC 49540
+  score: 4.0
+- taxon_id: NCBITaxon:153233
+  source: PREGO
+  taxon_label: Oceanicaulis alexandrii
+  score: 4.0
+- taxon_id: NCBITaxon:214688
+  source: PREGO
+  taxon_label: Gemmata obscuriglobus UQM 2246
+  score: 4.0
+- taxon_id: NCBITaxon:266940
+  source: PREGO
+  taxon_label: Kineococcus radiotolerans SRS30216 = ATCC BAA-149
+  score: 4.0
+- taxon_id: NCBITaxon:293
+  source: PREGO
+  taxon_label: Brevundimonas diminuta
+  score: 4.0
+- taxon_id: NCBITaxon:314230
+  source: PREGO
+  taxon_label: Blastopirellula marina DSM 3645
+  score: 4.0
+- taxon_id: NCBITaxon:33075
+  source: PREGO
+  taxon_label: Acidobacterium capsulatum
+  score: 4.0
+- taxon_id: NCBITaxon:351016
+  source: PREGO
+  taxon_label: Roseobacter sp. AzwK-3b
+  score: 4.0
+- taxon_id: NCBITaxon:393480
+  source: PREGO
+  taxon_label: Fusobacterium polymorphum ATCC 10953
+  score: 4.0
+- taxon_id: NCBITaxon:39946
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:401053
+  source: PREGO
+  taxon_label: Terriglobus saanensis SP1PR4
+  score: 4.0
+- taxon_id: NCBITaxon:411460
+  source: PREGO
+  taxon_label: '[Ruminococcus] torques ATCC 27756'
+  score: 4.0
+- taxon_id: NCBITaxon:411467
+  source: PREGO
+  taxon_label: Pseudoflavonifractor capillosus ATCC 29799
+  score: 4.0
+- taxon_id: NCBITaxon:411485
+  source: PREGO
+  taxon_label: Faecalibacterium prausnitzii M21/2
+  score: 4.0
+- taxon_id: NCBITaxon:411903
+  source: PREGO
+  taxon_label: Collinsella aerofaciens ATCC 25986
+  score: 4.0
+- taxon_id: NCBITaxon:41276
+  source: PREGO
+  taxon_label: Brevundimonas vesicularis
+  score: 4.0
+- taxon_id: NCBITaxon:428125
+  source: PREGO
+  taxon_label: '[Clostridium] leptum DSM 753'
+  score: 4.0
+- taxon_id: NCBITaxon:457427
+  source: PREGO
+  taxon_label: Streptomyces himastatinicus ATCC 53653
+  score: 4.0
+- taxon_id: NCBITaxon:469383
+  source: PREGO
+  taxon_label: Conexibacter woesei DSM 14684
+  score: 4.0
+- taxon_id: NCBITaxon:498761
+  source: PREGO
+  taxon_label: Heliomicrobium modesticaldum Ice1
+  score: 4.0
+- taxon_id: NCBITaxon:509191
+  source: PREGO
+  taxon_label: Acetivibrio cellulolyticus CD2
+  score: 4.0
+- taxon_id: NCBITaxon:520463
+  source: PREGO
+  taxon_label: Brucella pinnipedialis M163/99/10
+  score: 4.0
+- taxon_id: NCBITaxon:525245
+  source: PREGO
+  taxon_label: Gleimia coleocanis DSM 15436
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD, PREGO. Grounding:
+    EXACT.'

@@ -1,0 +1,34 @@
+identifier: BTO:0000600
+label: heterocyst
+definition: A large transparent thick-walled cell that is found in the filaments of
+  some blue-green algae and is the site of nitrogen fixation.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: heterocysts
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000600
+  source_label: heterocyst
+  assertion_count: 2
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:224013
+  source: PREGO
+  taxon_label: Nostoc piscinale CENA21
+  score: 3.0
+- taxon_id: NCBITaxon:63737
+  source: PREGO
+  taxon_label: Nostoc punctiforme PCC 73102
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

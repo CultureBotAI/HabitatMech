@@ -1,0 +1,27 @@
+identifier: ENVO:03000039
+label: cryoconite hole
+definition: A vertical thaw hole within an ice mass, formed as a result of ice melt
+  associated with local temperature increases, due to increased absorption of solar
+  radiation by cryoconite deposits.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: cryoconite holes
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:03000048
+- habitatmech:GOLD.6faa98a0aa
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7968
+  source_label: Cryoconite hole
+  source_path: Environmental > Aquatic > Freshwater > Glacier > Cryoconite hole
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

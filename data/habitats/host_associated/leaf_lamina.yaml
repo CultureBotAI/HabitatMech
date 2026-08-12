@@ -1,0 +1,42 @@
+identifier: BTO:0000719
+label: leaf lamina
+definition: The blade or flat part of a leaf.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: leaf blade
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: leaf blades
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: leaf laminal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: leaf laminas
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000719
+  source_label: leaf lamina
+  assertion_count: 2
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1716175
+  source: PREGO
+  taxon_label: Pseudoalteromonas sp. UCD-33C
+  score: 3.0
+- taxon_id: NCBITaxon:570156
+  source: PREGO
+  taxon_label: Pseudoalteromonas lipolytica
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

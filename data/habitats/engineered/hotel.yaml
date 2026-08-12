@@ -1,0 +1,22 @@
+identifier: ENVO:03501347
+label: hotel
+definition: A building which 1) containing multiple dwellings of pre-furnished accomodation
+  and 2) is rented on a short term and/or longer-term basis.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00000073
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8281
+  source_label: Hotel
+  source_path: Engineered > Built environment > Building > Hotel
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

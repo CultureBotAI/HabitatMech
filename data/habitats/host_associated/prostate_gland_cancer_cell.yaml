@@ -1,0 +1,54 @@
+identifier: BTO:0001130
+label: prostate gland cancer cell
+definition: A malignant tumour cell of glandular origin in the prostate. Over 95%
+  are adenocarcinomas.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: prostate cancer cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: prostate cancer cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: prostate carcinoma cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: prostate carcinoma cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: prostate gland cancer cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: prostate tumor cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: prostate tumor cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: prostate tumour cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: prostate tumour cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001130
+  source_label: prostate gland cancer cell
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1118964
+  source: PREGO
+  taxon_label: Mesomycoplasma hyorhinis SK76
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

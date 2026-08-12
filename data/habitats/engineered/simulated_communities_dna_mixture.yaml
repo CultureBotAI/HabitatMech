@@ -1,0 +1,18 @@
+identifier: habitatmech:GOLD.e96d7e84d0
+label: Simulated communities (DNA mixture)
+habitat_category: ENGINEERED
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.5df162af13
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:3533
+  source_label: Simulated communities (DNA mixture)
+  source_path: Engineered > Modeled > Simulated communities (DNA mixture)
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

@@ -1,0 +1,123 @@
+identifier: BTO:0004668
+label: hand
+definition: 1. The terminal part of the vertebrate forelimb when modified, as in humans,
+  as a grasping organ. 2. A part serving the function of or resembling a hand as the
+  hind foot of an ape or the chela of a crustacean.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+source_attestations:
+- source: PREGO
+  source_id: BTO:0004668
+  source_label: hand
+  assertion_count: 392
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:1016
+  source: PREGO
+  taxon_label: Capnocytophaga
+  score: 4.0
+- taxon_id: NCBITaxon:117563
+  source: PREGO
+  taxon_label: Granulicatella
+  score: 4.0
+- taxon_id: NCBITaxon:119045
+  source: PREGO
+  taxon_label: Methylobacteriaceae
+  score: 4.0
+- taxon_id: NCBITaxon:1243
+  source: PREGO
+  taxon_label: Leuconostoc
+  score: 4.0
+- taxon_id: NCBITaxon:1263
+  source: PREGO
+  taxon_label: Ruminococcus
+  score: 4.0
+- taxon_id: NCBITaxon:1268
+  source: PREGO
+  taxon_label: Micrococcaceae
+  score: 4.0
+- taxon_id: NCBITaxon:1269
+  source: PREGO
+  taxon_label: Micrococcus
+  score: 4.0
+- taxon_id: NCBITaxon:1279
+  source: PREGO
+  taxon_label: Staphylococcus
+  score: 4.0
+- taxon_id: NCBITaxon:1280
+  source: PREGO
+  taxon_label: Staphylococcus aureus
+  score: 4.0
+- taxon_id: NCBITaxon:1282
+  source: PREGO
+  taxon_label: Staphylococcus epidermidis
+  score: 4.0
+- taxon_id: NCBITaxon:1283
+  source: PREGO
+  taxon_label: Staphylococcus haemolyticus
+  score: 4.0
+- taxon_id: NCBITaxon:1301
+  source: PREGO
+  taxon_label: Streptococcus
+  score: 4.0
+- taxon_id: NCBITaxon:13159
+  source: PREGO
+  taxon_label: Mycoplana
+  score: 4.0
+- taxon_id: NCBITaxon:1350
+  source: PREGO
+  taxon_label: Enterococcus
+  score: 4.0
+- taxon_id: NCBITaxon:135621
+  source: PREGO
+  taxon_label: Pseudomonadaceae
+  score: 4.0
+- taxon_id: NCBITaxon:1357
+  source: PREGO
+  taxon_label: Lactococcus
+  score: 4.0
+- taxon_id: NCBITaxon:13687
+  source: PREGO
+  taxon_label: Sphingomonas
+  score: 4.0
+- taxon_id: NCBITaxon:1378
+  source: PREGO
+  taxon_label: Gemella
+  score: 4.0
+- taxon_id: NCBITaxon:1385
+  source: PREGO
+  taxon_label: Caryophanales
+  score: 4.0
+- taxon_id: NCBITaxon:1386
+  source: PREGO
+  taxon_label: Bacillus <firmicutes>
+  score: 4.0
+- taxon_id: NCBITaxon:1485
+  source: PREGO
+  taxon_label: Clostridium
+  score: 4.0
+- taxon_id: NCBITaxon:150022
+  source: PREGO
+  taxon_label: Finegoldia
+  score: 4.0
+- taxon_id: NCBITaxon:1578
+  source: PREGO
+  taxon_label: Lactobacillus
+  score: 4.0
+- taxon_id: NCBITaxon:162289
+  source: PREGO
+  taxon_label: Peptoniphilus
+  score: 4.0
+- taxon_id: NCBITaxon:1654
+  source: PREGO
+  taxon_label: Actinomyces
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

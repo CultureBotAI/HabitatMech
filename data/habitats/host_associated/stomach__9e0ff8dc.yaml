@@ -1,0 +1,22 @@
+identifier: habitatmech:GOLD.d30fc15bde
+label: Stomach
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0000945
+- habitatmech:GOLD.fe78a4c113
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7318
+  source_label: Stomach
+  source_path: 'Host-associated > Arthropoda: Crustaceans > Digestive system > Foregut
+    > Stomach'
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

@@ -1,0 +1,25 @@
+identifier: ENVO:03600078
+label: oil refinery
+definition: An industrial building in which crude oil is transformed and refined into
+  useful products.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00003861
+- mesh:D000076624
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4517
+  source_label: Oil refinery
+  source_path: Engineered > Built environment > Oil refinery
+  mapping_predicate: skos:exactMatch
+  assertion_count: 25
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

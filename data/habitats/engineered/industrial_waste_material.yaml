@@ -1,0 +1,32 @@
+identifier: ENVO:00002267
+label: industrial waste material
+definition: Industrial wastes are liquid, solid and gaseous wastes originating from
+  the manufacture of specific products.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Industrial waste
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: industrial waste
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00002264
+- mesh:D062611
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4937
+  source_label: Industrial waste
+  source_path: Engineered > Solid waste > Industrial waste
+  mapping_predicate: skos:closeMatch
+  assertion_count: 9
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

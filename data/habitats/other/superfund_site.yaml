@@ -1,0 +1,32 @@
+identifier: ENVO:00002156
+label: Superfund site
+definition: A highly contaminated site designated by the United States of America's
+  Comprehensive Environmental Response, Compensation, and Liability Act.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Superfund sites
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:01001264
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00002156
+  source_label: Superfund site
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:164757
+  source: PREGO
+  taxon_label: Mycobacterium sp. JLS
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

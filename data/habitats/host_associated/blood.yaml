@@ -1,0 +1,131 @@
+identifier: BTO:0000089
+label: blood
+definition: '1: The fluid that circulates in the heart, arteries, capillaries, and
+  veins of a vertebrate animal carrying nourishment and oxygen to and bringing away
+  waste products from all parts of the body. 2: A comparable fluid of an invertebrate.'
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: bloods
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: whole blood
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: whole bloods
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000089
+  source_label: blood
+  assertion_count: 206
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:1094555
+  source: PREGO
+  taxon_label: Bartonella elizabethae F9251 = ATCC 49927
+  score: 4.0
+- taxon_id: NCBITaxon:1120932
+  source: PREGO
+  taxon_label: Actinotignum schaalii DSM 15541
+  score: 4.0
+- taxon_id: NCBITaxon:1121020
+  source: PREGO
+  taxon_label: Haematomicrobium sanguinis DSM 21259
+  score: 4.0
+- taxon_id: NCBITaxon:1121098
+  source: PREGO
+  taxon_label: Phocaeicola massiliensis B84634 = Timone 84634 = DSM 17679 = JCM 13223
+  score: 4.0
+- taxon_id: NCBITaxon:1122173
+  source: PREGO
+  taxon_label: Leptotrichia trevisanii DSM 22070
+  score: 4.0
+- taxon_id: NCBITaxon:1122921
+  source: PREGO
+  taxon_label: Paenibacillus massiliensis 2301065 = DSM 16942
+  score: 4.0
+- taxon_id: NCBITaxon:1122925
+  source: PREGO
+  taxon_label: Paenibacillus sanguinis 2301083 = DSM 16941
+  score: 4.0
+- taxon_id: NCBITaxon:1122931
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:1122988
+  source: PREGO
+  taxon_label: Hoylesella nanceiensis DSM 19126 = JCM 15639
+  score: 4.0
+- taxon_id: NCBITaxon:1123034
+  source: PREGO
+  taxon_label: Psychrobacter phenylpyruvicus DSM 7000 = NBRC 102152
+  score: 4.0
+- taxon_id: NCBITaxon:1267000
+  source: PREGO
+  taxon_label: Metamycoplasma hominis ATCC 27545
+  score: 4.0
+- taxon_id: NCBITaxon:1304
+  source: PREGO
+  taxon_label: Streptococcus salivarius
+  score: 4.0
+- taxon_id: NCBITaxon:1336208
+  source: PREGO
+  taxon_label: Roseomonas gilardii subsp. rosea ATCC BAA-691
+  score: 4.0
+- taxon_id: NCBITaxon:1408438
+  source: PREGO
+  taxon_label: Hutsoniella sourekii ATCC 700629
+  score: 4.0
+- taxon_id: NCBITaxon:1408440
+  source: PREGO
+  taxon_label: Gemella sanguinis ATCC 700632
+  score: 4.0
+- taxon_id: NCBITaxon:1408452
+  source: PREGO
+  taxon_label: Mycobacterium genavense ATCC 51234
+  score: 4.0
+- taxon_id: NCBITaxon:1448136
+  source: PREGO
+  taxon_label: Roseomonas mucosa ATCC BAA-692
+  score: 4.0
+- taxon_id: NCBITaxon:147802
+  source: PREGO
+  taxon_label: Lactobacillus iners
+  score: 4.0
+- taxon_id: NCBITaxon:154288
+  source: PREGO
+  taxon_label: Turicibacter sanguinis
+  score: 4.0
+- taxon_id: NCBITaxon:1578
+  source: PREGO
+  taxon_label: Lactobacillus
+  score: 4.0
+- taxon_id: NCBITaxon:1601
+  source: PREGO
+  taxon_label: Ligilactobacillus agilis
+  score: 4.0
+- taxon_id: NCBITaxon:168808
+  source: PREGO
+  taxon_label: Sneathia
+  score: 4.0
+- taxon_id: NCBITaxon:1707330
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:171549
+  source: PREGO
+  taxon_label: Bacteroidales
+  score: 4.0
+- taxon_id: NCBITaxon:186802
+  source: PREGO
+  taxon_label: Eubacteriales
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

@@ -1,0 +1,32 @@
+identifier: ENVO:00002144
+label: cave wall
+definition: A solid surface layer which 1)  forms part of the boundary between the
+  cavity of a cave and its solid container and 2) is roughtly perpendicular to the
+  cave floor.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Wall
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- ENVO:00000067
+- ENVO:00000191
+- ENVO:01001311
+- ENVO:01001483
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4642
+  source_label: Wall
+  source_path: Environmental > Terrestrial > Cave > Wall
+  mapping_predicate: skos:exactMatch
+  assertion_count: 2
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

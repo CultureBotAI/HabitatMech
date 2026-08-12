@@ -1,0 +1,24 @@
+identifier: ENVO:00000036
+label: irrigation canal
+definition: Artificial watercourse with no flow or a controlled flow used irrigation.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: canal
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00000014
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5110
+  source_label: Irrigation canal
+  source_path: Engineered > Built environment > Canal > Irrigation canal
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

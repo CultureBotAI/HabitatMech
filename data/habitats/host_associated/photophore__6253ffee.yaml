@@ -1,0 +1,29 @@
+identifier: ENVO:01000163
+label: photophore
+definition: A photophore is a light-emitting organ which appears as luminous spots
+  on various marine animals, including fish and cephalopods. The organ can be simple,
+  or as complex as the human eye; equipped with lenses, shutters, color filters and
+  reflectors. The light can be produced from compounds during the digestion of prey,
+  from specialized mitochondrial cells in the organism, called photocytes ("light
+  producing" cells) , or, similarly, associated with symbiotic  bacteria in the organism.
+definition_source: ENVO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:01000162
+- habitatmech:GOLD.d980919c41
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6925
+  source_label: Photophore
+  source_path: Host-associated > Fish > Integumentary system > Photophore
+  mapping_predicate: skos:exactMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

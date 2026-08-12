@@ -1,0 +1,61 @@
+identifier: ENVO:01000042
+label: neritic epipelagic zone biome
+definition: The neritic epipelagic zone biome comprises the marine water column that
+  occurs above a continental shelf and extends from the surface of the ocean to a
+  depth of ca. 200-250m. Throughout the zone the light field tends to be asymmetrical
+  vertically, so that the direction and elevation of the sun can still be detected.
+  The epipelagic zone encompasses the euphotic zone and, where and when it occurs,
+  the seasonal thermocline.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: neritic epipelagic zone
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: neritic epipelagic zones
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: neritic epipelagic zonous
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:01000032
+source_attestations:
+- source: PREGO
+  source_id: ENVO:01000042
+  source_label: neritic epipelagic zone biome
+  assertion_count: 7
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:163503
+  source: PREGO
+  taxon_label: Chaetoceros socialis
+  score: 4.0
+- taxon_id: NCBITaxon:3068
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:463189
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:6669
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:777
+  source: PREGO
+  taxon_label: Coxiella burnetii
+  score: 4.0
+- taxon_id: NCBITaxon:84301
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:9541
+  source: PREGO
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

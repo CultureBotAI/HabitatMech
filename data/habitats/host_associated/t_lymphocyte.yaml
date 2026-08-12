@@ -1,0 +1,142 @@
+identifier: BTO:0000782
+label: T-lymphocyte
+definition: Any of several lymphocytes (as a helper T cell) that differentiate in
+  the thymus, possess highly specific cell-surface antigen receptors, and include
+  some that control the initiation or suppression of cell-mediated and humoral immunity
+  (as by the regulation of T and B cell maturation and proliferation) and others that
+  lyse antigen-bearing cells.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: T cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: T cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: T-cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: T-cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: T-lymphocytes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000775
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000782
+  source_label: T-lymphocyte
+  assertion_count: 32
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:11620
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:1195237
+  source: PREGO
+  taxon_label: Mycobacterium tuberculosis variant bovis BCG str. Frappier
+  score: 3.0
+- taxon_id: NCBITaxon:1195465
+  source: PREGO
+  taxon_label: Mycobacterium tuberculosis variant bovis BCG str. Glaxo
+  score: 3.0
+- taxon_id: NCBITaxon:1195466
+  source: PREGO
+  taxon_label: Mycobacterium tuberculosis variant bovis BCG str. Moreau
+  score: 3.0
+- taxon_id: NCBITaxon:1195467
+  source: PREGO
+  taxon_label: Mycobacterium tuberculosis variant bovis BCG str. Phipps
+  score: 3.0
+- taxon_id: NCBITaxon:1195468
+  source: PREGO
+  taxon_label: Mycobacterium tuberculosis variant bovis BCG str. Prague
+  score: 3.0
+- taxon_id: NCBITaxon:1195469
+  source: PREGO
+  taxon_label: Mycobacterium tuberculosis variant bovis BCG str. Sweden
+  score: 3.0
+- taxon_id: NCBITaxon:1205679
+  source: PREGO
+  taxon_label: Bifidobacterium longum subsp. longum CECT 7347
+  score: 3.0
+- taxon_id: NCBITaxon:1232438
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-01
+  score: 3.0
+- taxon_id: NCBITaxon:1232439
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-03
+  score: 3.0
+- taxon_id: NCBITaxon:1232440
+  source: PREGO
+  taxon_label: Hungatella hathewayi VE202-04
+  score: 3.0
+- taxon_id: NCBITaxon:1232442
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-06
+  score: 3.0
+- taxon_id: NCBITaxon:1232443
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-13
+  score: 3.0
+- taxon_id: NCBITaxon:1232444
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-15
+  score: 3.0
+- taxon_id: NCBITaxon:1232445
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-16
+  score: 3.0
+- taxon_id: NCBITaxon:1232446
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-18
+  score: 3.0
+- taxon_id: NCBITaxon:1232447
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-09
+  score: 3.0
+- taxon_id: NCBITaxon:1232448
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-07
+  score: 3.0
+- taxon_id: NCBITaxon:1232449
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-08
+  score: 3.0
+- taxon_id: NCBITaxon:1232452
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-14
+  score: 3.0
+- taxon_id: NCBITaxon:1232453
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-21
+  score: 3.0
+- taxon_id: NCBITaxon:1232454
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-26
+  score: 3.0
+- taxon_id: NCBITaxon:1232457
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-27
+  score: 3.0
+- taxon_id: NCBITaxon:1232458
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-29
+  score: 3.0
+- taxon_id: NCBITaxon:1232460
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-28
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

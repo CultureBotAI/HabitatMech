@@ -1,0 +1,60 @@
+identifier: BTO:0001376
+label: thigh
+definition: '1: The proximal segment of the vertebrate hind limb extending from the
+  hip to the knee and supported by a single large bone. 2: The segment of the leg
+  immediately distal to the thigh in a bird or in a quadruped in which the true thigh
+  is obscured.'
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: thighs
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001376
+  source_label: thigh
+  assertion_count: 8
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1292046
+  source: PREGO
+  taxon_label: Desulfobulbus sp. oral taxon 041 str. Dsb1-5
+  score: 3.0
+- taxon_id: NCBITaxon:1337054
+  source: PREGO
+  taxon_label: Paenibacillus sp. A3
+  score: 3.0
+- taxon_id: NCBITaxon:575564
+  source: PREGO
+  taxon_label: Acinetobacter sp. RUH 2624
+  score: 3.0
+- taxon_id: NCBITaxon:575585
+  source: PREGO
+  taxon_label: Acinetobacter calcoaceticus RUH2202
+  score: 3.0
+- taxon_id: NCBITaxon:575586
+  source: PREGO
+  taxon_label: Acinetobacter johnsonii SH046
+  score: 3.0
+- taxon_id: NCBITaxon:575587
+  source: PREGO
+  taxon_label: Acinetobacter junii SH205
+  score: 3.0
+- taxon_id: NCBITaxon:575588
+  source: PREGO
+  taxon_label: Acinetobacter lwoffii SH145
+  score: 3.0
+- taxon_id: NCBITaxon:575589
+  source: PREGO
+  taxon_label: Acinetobacter radioresistens SH164
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

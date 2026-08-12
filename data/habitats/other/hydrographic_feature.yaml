@@ -1,0 +1,162 @@
+identifier: ENVO:00000012
+label: hydrographic feature
+definition: A geographical feature associated with water.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: OVERFALLS
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: OVERFALLSs
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: eddy
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: fluvial feature
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: fluvial feature
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: fluvial features
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: hydrographic features
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: marine feature
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: marine features
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: overfallses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: overfallsic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: tidal ripp
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: tidal ripps
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00000000
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00000012
+  source_label: hydrographic feature
+  assertion_count: 1427
+  assertion_unit: TAXON
+  score: 1.81611
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:207954
+  source: PREGO
+  taxon_label: Neptuniibacter caesariensis
+  score: 1.81611
+- taxon_id: NCBITaxon:313594
+  source: PREGO
+  taxon_label: Polaribacter irgensii 23-P
+  score: 1.79016
+- taxon_id: NCBITaxon:314277
+  source: PREGO
+  taxon_label: Marinomonas sp. MED121
+  score: 1.7893
+- taxon_id: NCBITaxon:357804
+  source: PREGO
+  taxon_label: Psychromonas ingrahamii 37
+  score: 1.78824
+- taxon_id: NCBITaxon:290400
+  source: PREGO
+  taxon_label: Jannaschia sp. CCS1
+  score: 1.78491
+- taxon_id: NCBITaxon:398580
+  source: PREGO
+  taxon_label: Dinoroseobacter shibae DFL 12 = DSM 16493
+  score: 1.77955
+- taxon_id: NCBITaxon:313598
+  source: PREGO
+  taxon_label: Polaribacter sp. MED152
+  score: 1.77609
+- taxon_id: NCBITaxon:318586
+  source: PREGO
+  taxon_label: Paracoccus denitrificans PD1222
+  score: 1.76834
+- taxon_id: NCBITaxon:400668
+  source: PREGO
+  taxon_label: Marinomonas sp. MWYL1
+  score: 1.76422
+- taxon_id: NCBITaxon:349521
+  source: PREGO
+  taxon_label: Hahella chejuensis KCTC 2396
+  score: 1.76409
+- taxon_id: NCBITaxon:391626
+  source: PREGO
+  taxon_label: Octadecabacter antarcticus 307
+  score: 1.76091
+- taxon_id: NCBITaxon:439495
+  source: PREGO
+  taxon_label: Pseudovibrio sp. JE062
+  score: 1.76001
+- taxon_id: NCBITaxon:314271
+  source: PREGO
+  taxon_label: Maritimibacter alkaliphilus HTCC2654
+  score: 1.75992
+- taxon_id: NCBITaxon:371731
+  source: PREGO
+  taxon_label: Rhodobacter ferrooxidans
+  score: 1.75992
+- taxon_id: NCBITaxon:313603
+  source: PREGO
+  taxon_label: Maribacter sp. HTCC2170
+  score: 1.75859
+- taxon_id: NCBITaxon:388399
+  source: PREGO
+  taxon_label: Sagittula stellata E-37
+  score: 1.75772
+- taxon_id: NCBITaxon:342610
+  source: PREGO
+  score: 1.74946
+- taxon_id: NCBITaxon:391624
+  source: PREGO
+  taxon_label: Sulfitobacter indolifex HEL-45
+  score: 1.74897
+- taxon_id: NCBITaxon:167879
+  source: PREGO
+  taxon_label: Colwellia psychrerythraea 34H
+  score: 1.7477
+- taxon_id: NCBITaxon:314256
+  source: PREGO
+  taxon_label: Oceanicola granulosus HTCC2516
+  score: 1.74749
+- taxon_id: NCBITaxon:207949
+  source: PREGO
+  taxon_label: Bermanella marisrubri
+  score: 1.74613
+- taxon_id: NCBITaxon:290398
+  source: PREGO
+  taxon_label: Chromohalobacter israelensis DSM 3043
+  score: 1.74491
+- taxon_id: NCBITaxon:376686
+  source: PREGO
+  taxon_label: Flavobacterium johnsoniae UW101
+  score: 1.74352
+- taxon_id: NCBITaxon:411684
+  source: PREGO
+  taxon_label: Hoeflea phototrophica DFL-43
+  score: 1.74312
+- taxon_id: NCBITaxon:396588
+  source: PREGO
+  taxon_label: Thioalkalivibrio sulfidiphilus HL-EbGr7
+  score: 1.7424
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

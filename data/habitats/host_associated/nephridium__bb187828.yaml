@@ -1,0 +1,33 @@
+identifier: UBERON:0006972
+label: nephridium
+definition: An exceretory tubule that usually opens to the exterior by a nephridiopore.
+  The inner end of the tubule may be blind, ending in flame cells (protonephridium)
+  or may open into the coelom through a ciliated funnel (metanephridium).
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Nephridia
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: nephridia
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0006555
+- habitatmech:GOLD.a37f187bfe
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5194
+  source_label: Nephridia
+  source_path: Host-associated > Annelida > Excretory system > Nephridia
+  mapping_predicate: skos:closeMatch
+  assertion_count: 2
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

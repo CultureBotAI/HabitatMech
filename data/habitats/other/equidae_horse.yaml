@@ -1,0 +1,20 @@
+identifier: habitatmech:BACDIVE.09c3544e85
+label: Equidae-Horse
+habitat_category: OTHER
+grounding_status: NOT_APPLICABLE
+mapping_status: SEEDED
+xrefs:
+- NCBITaxon:9788
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:equidae-horse
+  source_label: Equidae-Horse
+  assertion_count: 269
+  assertion_unit: STRAIN
+  notes: Upstream mapping targets a non-habitat ontology (NCBITaxon:9788); kept as
+    an xref.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: NOT_APPLICABLE.'

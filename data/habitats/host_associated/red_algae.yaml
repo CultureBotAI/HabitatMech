@@ -1,0 +1,29 @@
+identifier: FOODON:03411743
+label: red algae
+definition: One of the oldest groups of eukaryotic algae, and one of the largest phyla
+  of algae, containing over 7,000 currently recognized species with taxonomic revisions
+  ongoing.
+definition_source: FOODON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Rhodophyta
+  synonym_type: EXACT_SYNONYM
+  source: FOODON
+parent_habitats:
+- FOODON:03411301
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:3619
+  source_label: Red algae
+  source_path: Host-associated > Algae > Red algae
+  mapping_predicate: skos:exactMatch
+  assertion_count: 73
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

@@ -1,0 +1,23 @@
+identifier: BTO:0004617
+label: mucilage
+definition: A gelatinous substance of various plants (as legumes or seaweeds) that
+  contains protein and polysaccharides and is similar to plant gums .
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- BTO:0001659
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7971
+  source_label: Mucilage
+  source_path: Host-associated > Plants > Roots > Aerial root > Mucilage
+  mapping_predicate: skos:exactMatch
+  assertion_count: 31
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

@@ -1,0 +1,85 @@
+identifier: BTO:0000149
+label: breast
+definition: The fore or ventral part of the body between the neck and the abdomen.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: breastic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: breasts
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000254
+- BTO:0000431
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000149
+  source_label: breast
+  assertion_count: 13
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1157946
+  source: PREGO
+  taxon_label: Streptococcus salivarius PS4
+  score: 3.0
+- taxon_id: NCBITaxon:1193128
+  source: PREGO
+  taxon_label: Parascardovia denticolens IPLA 20019
+  score: 3.0
+- taxon_id: NCBITaxon:1199187
+  source: PREGO
+  taxon_label: Mycobacterium avium subsp. paratuberculosis MAP4
+  score: 3.0
+- taxon_id: NCBITaxon:1271862
+  source: PREGO
+  taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium var. 5- str.
+    CFSAN001921
+  score: 3.0
+- taxon_id: NCBITaxon:1590
+  source: PREGO
+  taxon_label: Lactiplantibacillus plantarum
+  score: 3.0
+- taxon_id: NCBITaxon:161879
+  source: PREGO
+  taxon_label: Corynebacterium kroppenstedtii
+  score: 3.0
+- taxon_id: NCBITaxon:1679
+  source: PREGO
+  taxon_label: Bifidobacterium longum subsp. longum
+  score: 3.0
+- taxon_id: NCBITaxon:1682
+  source: PREGO
+  taxon_label: Bifidobacterium longum subsp. infantis
+  score: 3.0
+- taxon_id: NCBITaxon:205913
+  source: PREGO
+  taxon_label: Bifidobacterium longum DJO10A
+  score: 3.0
+- taxon_id: NCBITaxon:28026
+  source: PREGO
+  taxon_label: Bifidobacterium pseudocatenulatum
+  score: 3.0
+- taxon_id: NCBITaxon:391904
+  source: PREGO
+  taxon_label: Bifidobacterium longum subsp. infantis ATCC 15697 = JCM 1222 = DSM
+    20088
+  score: 3.0
+- taxon_id: NCBITaxon:439842
+  source: PREGO
+  taxon_label: Salmonella enterica subsp. enterica serovar Kentucky str. CVM29188
+  score: 3.0
+- taxon_id: NCBITaxon:484020
+  source: PREGO
+  taxon_label: Bifidobacterium bifidum BGN4
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

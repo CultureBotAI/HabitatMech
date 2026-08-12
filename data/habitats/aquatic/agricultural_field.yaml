@@ -1,0 +1,22 @@
+identifier: habitatmech:GOLD.a16a79bd0c
+label: Agricultural field
+habitat_category: AQUATIC
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00000114
+- ENVO:00002011
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5741
+  source_label: Agricultural field
+  source_path: Environmental > Aquatic > Freshwater > Agricultural field
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 8
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

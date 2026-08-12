@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.f4ad599661
+label: Umbilical cord blood
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0012168
+- habitatmech:GOLD.baffd7f6c7
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7616
+  source_label: Umbilical cord blood
+  source_path: Host-associated > Mammals > Fetus > Fetal tissue > Umbilical cord blood
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

@@ -1,0 +1,22 @@
+identifier: habitatmech:GOLD.cb4d8fc60e
+label: Cecum
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- BTO:0000166
+- habitatmech:GOLD.5b0aa7456c
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6436
+  source_label: Cecum
+  source_path: 'Host-associated > Mammals: Human > Digestive system > Large intestine
+    > Cecum'
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

@@ -1,0 +1,33 @@
+identifier: ENVO:00000364
+label: national wildlife refuge
+definition: A designation for certain protected areas of the United States managed
+  by the United States Fish and Wildlife Service. The National Wildlife Refuge system
+  is a network of lands and waters managed to protect wildlife and wildlife habitat.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: national wildlife refuges
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00000374
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00000364
+  source_label: national wildlife refuge
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:388051
+  source: PREGO
+  taxon_label: Cupriavidus sp. amp6
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

@@ -1,0 +1,34 @@
+identifier: ENVO:03600018
+label: organic horizon
+definition: A soil horizon which is composed primarily of organic matter.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Organic layer
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: organic surface layer
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: soil organic layer
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00001998
+- ENVO:03600030
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5586
+  source_label: Organic layer
+  source_path: Environmental > Terrestrial > Soil > Organic layer
+  mapping_predicate: skos:closeMatch
+  assertion_count: 16
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

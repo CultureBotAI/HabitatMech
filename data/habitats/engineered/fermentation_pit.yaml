@@ -1,0 +1,23 @@
+identifier: ENVO:03600039
+label: fermentation pit
+definition: A pit which has been constructed for use in fermentation processes that
+  will yield alcoholic spirits.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00000070
+- ENVO:01001871
+- mesh:D000076624
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5450
+  source_label: Fermentation pit
+  source_path: Engineered > Built environment > Fermentation pit
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

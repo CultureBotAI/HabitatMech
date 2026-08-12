@@ -1,0 +1,29 @@
+identifier: ENVO:00003908
+label: poultry deep litter
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: poultry deep litters
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00002192
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00003908
+  source_label: poultry deep litter
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:446465
+  source: PREGO
+  taxon_label: Brachybacterium faecium DSM 4810
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

@@ -1,0 +1,50 @@
+identifier: BTO:0000646
+label: left colon
+definition: The distal portion of the colon; it develops embryonically from the hindgut
+  and functions in the storage and elimination of waste.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: distal colon
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: distal colonal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: distal colons
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: left colonal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: left colons
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000646
+  source_label: left colon
+  assertion_count: 3
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1131757
+  source: PREGO
+  taxon_label: Pseudomonas aeruginosa MPAO1/P1
+  score: 3.0
+- taxon_id: NCBITaxon:1131758
+  source: PREGO
+  taxon_label: Pseudomonas aeruginosa MPAO1/P2
+  score: 3.0
+- taxon_id: NCBITaxon:1254439
+  source: PREGO
+  taxon_label: Bifidobacterium thermophilum RBL67
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

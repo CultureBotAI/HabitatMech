@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.9de4fdaa2a
+label: Fen
+habitat_category: AQUATIC
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00000232
+- habitatmech:GOLD.a981586d10
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5285
+  source_label: Fen
+  source_path: Environmental > Aquatic > Freshwater > Wetlands > Fen
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

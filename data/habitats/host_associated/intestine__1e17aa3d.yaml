@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.f3f5ed6008
+label: Intestine
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0000160
+- habitatmech:GOLD.867abac275
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6683
+  source_label: Intestine
+  source_path: 'Host-associated > Mammals: Human > Remains > Decomposed body > Intestine'
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

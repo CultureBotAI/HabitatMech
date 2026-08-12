@@ -1,0 +1,17 @@
+identifier: habitatmech:GOLD.df1d688f27
+label: Produced water
+habitat_category: ENGINEERED
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.c770d96590
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5505
+  source_label: Produced water
+  source_path: Engineered > Bioreactor > MBR (Membrane bioreactor) > Produced water
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

@@ -1,0 +1,83 @@
+identifier: BTO:0000784
+label: lymph node
+definition: Any of the rounded masses of lymphoid tissue that are surrounded by a
+  capsule of connective tissue, are distributed along the lymphatic vessels, and contain
+  numerous lymphocytes which filter the flow of lymph.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: lymph gland
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: lymph glandic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: lymph glands
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: lymph nodes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000753
+- BTO:0001488
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000784
+  source_label: lymph node
+  assertion_count: 11
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1159617
+  source: PREGO
+  taxon_label: Yersinia pestis INS
+  score: 3.0
+- taxon_id: NCBITaxon:1162283
+  source: PREGO
+  taxon_label: Mycobacteroides abscessus subsp. bolletii M18
+  score: 3.0
+- taxon_id: NCBITaxon:1297579
+  source: PREGO
+  taxon_label: Fusobacterium nucleatum CC53
+  score: 3.0
+- taxon_id: NCBITaxon:1765
+  source: PREGO
+  taxon_label: Mycobacterium tuberculosis variant bovis
+  score: 3.0
+- taxon_id: NCBITaxon:391165
+  source: PREGO
+  taxon_label: Granulibacter bethesdensis CGDNIH1
+  score: 3.0
+- taxon_id: NCBITaxon:439334
+  source: PREGO
+  taxon_label: Mycobacterium avium subsp. hominissuis
+  score: 3.0
+- taxon_id: NCBITaxon:471472
+  source: PREGO
+  taxon_label: Chlamydia trachomatis L2/434/Bu
+  score: 3.0
+- taxon_id: NCBITaxon:471473
+  source: PREGO
+  taxon_label: Chlamydia trachomatis L2b/UCH-1/proctitis
+  score: 3.0
+- taxon_id: NCBITaxon:487514
+  source: PREGO
+  taxon_label: Mycobacterium kyorinense
+  score: 3.0
+- taxon_id: NCBITaxon:767465
+  source: PREGO
+  taxon_label: Mycoplasmopsis bovis HB0801
+  score: 3.0
+- taxon_id: NCBITaxon:981386
+  source: PREGO
+  taxon_label: Brucella vulpis
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

@@ -1,0 +1,109 @@
+identifier: BTO:0000562
+label: heart
+definition: '1: A hollow muscular organ of vertebrate animals that by its rhythmic
+  contraction acts as a force pump maintaining the circulation of the blood. 2: A
+  structure in an invertebrate animal functionally analogous to the vertebrate heart.'
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Herz
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: heartic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: hearts
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000562
+  source_label: heart
+  assertion_count: 19
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:147802
+  source: PREGO
+  taxon_label: Lactobacillus iners
+  score: 4.0
+- taxon_id: NCBITaxon:1578
+  source: PREGO
+  taxon_label: Lactobacillus
+  score: 4.0
+- taxon_id: NCBITaxon:1601
+  source: PREGO
+  taxon_label: Ligilactobacillus agilis
+  score: 4.0
+- taxon_id: NCBITaxon:168808
+  source: PREGO
+  taxon_label: Sneathia
+  score: 4.0
+- taxon_id: NCBITaxon:2701
+  source: PREGO
+  taxon_label: Gardnerella
+  score: 4.0
+- taxon_id: NCBITaxon:286
+  source: PREGO
+  taxon_label: Pseudomonas
+  score: 4.0
+- taxon_id: NCBITaxon:82135
+  source: PREGO
+  taxon_label: Fannyhessea vaginae
+  score: 4.0
+- taxon_id: NCBITaxon:838
+  source: PREGO
+  taxon_label: Prevotella
+  score: 4.0
+- taxon_id: NCBITaxon:84107
+  source: PREGO
+  taxon_label: Coriobacteriaceae
+  score: 4.0
+- taxon_id: NCBITaxon:1069530
+  source: PREGO
+  taxon_label: Candidatus Paraburkholderia schumanniana
+  score: 3.0
+- taxon_id: NCBITaxon:1133849
+  source: PREGO
+  taxon_label: Nocardia brasiliensis ATCC 700358
+  score: 3.0
+- taxon_id: NCBITaxon:1177117
+  source: PREGO
+  taxon_label: Vreelandella stevensii S18214
+  score: 3.0
+- taxon_id: NCBITaxon:169963
+  source: PREGO
+  taxon_label: Listeria monocytogenes EGD-e
+  score: 3.0
+- taxon_id: NCBITaxon:1712031
+  source: PREGO
+  taxon_label: Streptobacillus notomytis
+  score: 3.0
+- taxon_id: NCBITaxon:272626
+  source: PREGO
+  taxon_label: Listeria innocua Clip11262
+  score: 3.0
+- taxon_id: NCBITaxon:314724
+  source: PREGO
+  taxon_label: Borrelia turicatae 91E135
+  score: 3.0
+- taxon_id: NCBITaxon:316407
+  source: PREGO
+  taxon_label: Escherichia coli str. K-12 substr. W3110
+  score: 3.0
+- taxon_id: NCBITaxon:1301
+  source: PREGO
+  taxon_label: Streptococcus
+  score: 1.6845
+- taxon_id: NCBITaxon:2050
+  source: PREGO
+  taxon_label: Mobiluncus
+  score: 1.63473
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

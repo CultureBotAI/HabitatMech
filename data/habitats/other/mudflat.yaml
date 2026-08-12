@@ -1,0 +1,45 @@
+identifier: ENVO:00000192
+label: mudflat
+definition: A wetland that forms when mud is deposited by the tides, rivers, sea or
+  oceans.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: mud flat
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: mudflatic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: mudflats
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: wetland
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00000230
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00000192
+  source_label: mudflat
+  assertion_count: 2
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1442586
+  source: PREGO
+  taxon_label: Winogradskyella wandonensis
+  score: 3.0
+- taxon_id: NCBITaxon:406327
+  source: PREGO
+  taxon_label: Methanococcus vannielii SB
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

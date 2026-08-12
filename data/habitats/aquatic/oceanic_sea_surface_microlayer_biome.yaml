@@ -1,0 +1,50 @@
+identifier: ENVO:01000034
+label: oceanic sea surface microlayer biome
+definition: The oceanic sea surface microlayer (SML) biome comprises the top 1000
+  micrometers of the marine surface waters occurring offshore, away from a continental
+  shelf. It is the boundary layer where all exchange occurs between the atmosphere
+  and the ocean. The chemical, physical, and biological properties of the SML differ
+  greatly from the sub-surface water just a few centimeters beneath.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: oceanic sea surface microlayer
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: oceanic sea surface microlayers
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:01000033
+source_attestations:
+- source: PREGO
+  source_id: ENVO:01000034
+  source_label: oceanic sea surface microlayer biome
+  assertion_count: 4
+  assertion_unit: TAXON
+  score: 1.13534
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:172371
+  source: PREGO
+  taxon_label: Alloalcanivorax venustensis
+  score: 1.13534
+- taxon_id: NCBITaxon:285271
+  source: PREGO
+  taxon_label: uncultured Methylophaga sp.
+  score: 1.09698
+- taxon_id: NCBITaxon:31910
+  source: PREGO
+  taxon_label: Halovibrio variabilis
+  score: 1.01834
+- taxon_id: NCBITaxon:550984
+  source: PREGO
+  taxon_label: Halomonas sp. HAL1
+  score: 1.00788
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

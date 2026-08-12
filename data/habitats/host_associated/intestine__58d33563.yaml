@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.8a75a65fc5
+label: Intestine
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0000160
+- habitatmech:GOLD.c1d7082e4b
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5246
+  source_label: Intestine
+  source_path: Host-associated > Invertebrates > Nematoda > Digestive system > Intestine
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 4
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

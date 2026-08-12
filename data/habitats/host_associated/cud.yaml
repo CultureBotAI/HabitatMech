@@ -1,0 +1,26 @@
+identifier: UBERON:0012114
+label: cud
+definition: A bolus of semi-degraded food regurgitated from the reticulorumen of a
+  ruminant, produced during the physical digestive process of rumination.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: bolus of cud
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0036017
+- habitatmech:GOLD.d3869ad37f
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6696
+  source_label: Cud
+  source_path: Host-associated > Mammals > Digestive system > Stomach > Cud
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

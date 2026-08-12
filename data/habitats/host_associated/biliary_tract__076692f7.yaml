@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.133311ddf9
+label: Biliary tract
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0001173
+- habitatmech:GOLD.f6720bccf0
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6088
+  source_label: Biliary tract
+  source_path: 'Host-associated > Mammals: Human > Digestive system > Biliary tract'
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

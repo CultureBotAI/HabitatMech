@@ -1,0 +1,67 @@
+identifier: BTO:0000082
+label: male reproductive system
+definition: The internal and external reproductive organs in the male.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: male genital organ
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: male genital organic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: male genital organs
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: male genital system
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: male genital systems
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: male genitalia
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: male genitalial
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: male genitalias
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: male reproductive systems
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: systema genitale masculina
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: systema genitale masculinal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: systema genitale masculinum
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: systema genitale masculinums
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000081
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000082
+  source_label: male reproductive system
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1382230
+  source: PREGO
+  taxon_label: Asaia platycodi SF2.1
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

@@ -1,0 +1,32 @@
+identifier: UBERON:0036243
+label: vaginal fluid
+definition: Fluid that lines the vaginal walls that consists of multiple secretions
+  that collect in the vagina from different glands.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Vaginal-secretion
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+- synonym_text: vaginal discharge
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: vaginal secretion
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0006314
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:vaginal-secretion
+  source_label: Vaginal-secretion
+  mapping_predicate: skos:closeMatch
+  assertion_count: 10
+  assertion_unit: STRAIN
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

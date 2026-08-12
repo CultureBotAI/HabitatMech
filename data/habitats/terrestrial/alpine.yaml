@@ -1,0 +1,26 @@
+identifier: ENVO:01000340
+label: alpine
+definition: An altitudinal condition which inheres in a bearer by virtue of the bearer
+  having a monthly mean temperature is less than 10 degrees Celsius and being located
+  at altitudes above the tree line and below the snowline.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00001998
+- ENVO:01000343
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8083
+  source_label: Alpine
+  source_path: Environmental > Terrestrial > Soil > Alpine
+  mapping_predicate: skos:exactMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

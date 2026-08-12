@@ -1,0 +1,30 @@
+identifier: UBERON:0006575
+label: mantle
+definition: A fold or lobe or pair of lobes of the body wall of a mollusk or brachiopod
+  that in shell-bearing forms lines the shell and bears shell-secreting glands.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: mantle tissue
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: pallium
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0000475
+- habitatmech:GOLD.27c88ba739
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7836
+  source_label: Mantle
+  source_path: Host-associated > Mollusca > Integumentary system > Mantle
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

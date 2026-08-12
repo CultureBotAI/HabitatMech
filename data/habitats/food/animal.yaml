@@ -1,0 +1,26 @@
+identifier: FOODON:00003004
+label: animal
+definition: A whole animal.
+definition_source: FOODON
+habitat_category: FOOD
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Decomposing-animal
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+parent_habitats:
+- FOODON:03420164
+- UBERON:0000468
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:decomposing-animal
+  source_label: Decomposing-animal
+  mapping_predicate: skos:closeMatch
+  assertion_count: 60
+  assertion_unit: STRAIN
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

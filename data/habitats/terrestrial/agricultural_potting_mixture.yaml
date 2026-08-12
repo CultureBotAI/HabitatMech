@@ -1,0 +1,33 @@
+identifier: ENVO:03000133
+label: agricultural potting mixture
+definition: An agricultural environmental material which 1) is composed of a mixture
+  of materials such as peat, composted bark, sand, perlite, or compost, and 2) serves
+  as a medium in which to grow plants.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Potting soil
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: potting soil
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00001998
+- ENVO:0010003
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5778
+  source_label: Potting soil
+  source_path: Environmental > Terrestrial > Soil > Potting soil
+  mapping_predicate: skos:closeMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

@@ -1,0 +1,39 @@
+identifier: UBERON:0011997
+label: coelom
+definition: The aggregate of the coelemic cavity lumen plus the membranes that line
+  the lumen.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: coelem
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: coelomic cavity
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: enterocoelom
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: haemocoelom
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: schizocoelom
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0000481
+- habitatmech:GOLD.6e10201167
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8446
+  source_label: Coelom
+  source_path: Host-associated > Annelida > Coelom
+  mapping_predicate: skos:exactMatch
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

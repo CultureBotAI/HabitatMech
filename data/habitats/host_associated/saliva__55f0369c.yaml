@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.4c19ae6894
+label: Saliva
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0001836
+- habitatmech:GOLD.8fd4269bef
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7517
+  source_label: Saliva
+  source_path: Host-associated > Reptilia > Digestive system > Oral cavity > Saliva
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 2
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

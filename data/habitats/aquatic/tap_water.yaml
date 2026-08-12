@@ -1,0 +1,21 @@
+identifier: ENVO:00003096
+label: tap water
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00002011
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5359
+  source_label: Tap water
+  source_path: Environmental > Aquatic > Freshwater > Tap water
+  mapping_predicate: skos:exactMatch
+  assertion_count: 17
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

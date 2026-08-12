@@ -1,0 +1,149 @@
+identifier: BTO:0001388
+label: trachea
+definition: '1: The cartilaginous and membranous tube descending from the larynx and
+  branching into the right and left main bronchi. It is kept patent by a series of
+  about twenty transverse horseshoe-shaped cartilages. Called also windpipe. 2: One
+  of a system of minute tubes ramifying throughout the body of a terrestrial arthropod
+  and delivering air to the tissues. Called also tracheal tubule.'
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: tracheal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: tracheal tubular
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: tracheal tubule
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: tracheal tubules
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: tracheas
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: windpipe
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: windpipes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000203
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001388
+  source_label: trachea
+  assertion_count: 186
+  assertion_unit: TAXON
+  score: 1.14527
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:1243
+  source: PREGO
+  taxon_label: Leuconostoc
+  score: 1.14527
+- taxon_id: NCBITaxon:1268
+  source: PREGO
+  taxon_label: Micrococcaceae
+  score: 1.14527
+- taxon_id: NCBITaxon:1279
+  source: PREGO
+  taxon_label: Staphylococcus
+  score: 1.14527
+- taxon_id: NCBITaxon:1300
+  source: PREGO
+  taxon_label: Streptococcaceae
+  score: 1.14527
+- taxon_id: NCBITaxon:1301
+  source: PREGO
+  taxon_label: Streptococcus
+  score: 1.14527
+- taxon_id: NCBITaxon:1350
+  source: PREGO
+  taxon_label: Enterococcus
+  score: 1.14527
+- taxon_id: NCBITaxon:135621
+  source: PREGO
+  taxon_label: Pseudomonadaceae
+  score: 1.14527
+- taxon_id: NCBITaxon:135622
+  source: PREGO
+  taxon_label: Alteromonadales
+  score: 1.14527
+- taxon_id: NCBITaxon:135624
+  source: PREGO
+  taxon_label: Aeromonadales
+  score: 1.14527
+- taxon_id: NCBITaxon:1386
+  source: PREGO
+  taxon_label: Bacillus <firmicutes>
+  score: 1.14527
+- taxon_id: NCBITaxon:1485
+  source: PREGO
+  taxon_label: Clostridium
+  score: 1.14527
+- taxon_id: NCBITaxon:155493
+  source: PREGO
+  taxon_label: Gallibacterium
+  score: 1.14527
+- taxon_id: NCBITaxon:1578
+  source: PREGO
+  taxon_label: Lactobacillus
+  score: 1.14527
+- taxon_id: NCBITaxon:1598
+  source: PREGO
+  taxon_label: Limosilactobacillus reuteri
+  score: 1.14527
+- taxon_id: NCBITaxon:1601
+  source: PREGO
+  taxon_label: Ligilactobacillus agilis
+  score: 1.14527
+- taxon_id: NCBITaxon:1624
+  source: PREGO
+  taxon_label: Ligilactobacillus salivarius
+  score: 1.14527
+- taxon_id: NCBITaxon:1716
+  source: PREGO
+  taxon_label: Corynebacterium
+  score: 1.14527
+- taxon_id: NCBITaxon:186802
+  source: PREGO
+  taxon_label: Eubacteriales
+  score: 1.14527
+- taxon_id: NCBITaxon:186803
+  source: PREGO
+  taxon_label: Lachnospiraceae
+  score: 1.14527
+- taxon_id: NCBITaxon:186817
+  source: PREGO
+  taxon_label: Bacillaceae
+  score: 1.14527
+- taxon_id: NCBITaxon:186818
+  source: PREGO
+  taxon_label: Caryophanaceae
+  score: 1.14527
+- taxon_id: NCBITaxon:212791
+  source: PREGO
+  taxon_label: Enhydrobacter
+  score: 1.14527
+- taxon_id: NCBITaxon:227979
+  source: PREGO
+  taxon_label: Jeotgalicoccus
+  score: 1.14527
+- taxon_id: NCBITaxon:286
+  source: PREGO
+  taxon_label: Pseudomonas
+  score: 1.14527
+- taxon_id: NCBITaxon:31979
+  source: PREGO
+  taxon_label: Clostridiaceae
+  score: 1.14527
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

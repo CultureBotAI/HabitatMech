@@ -1,0 +1,39 @@
+identifier: UBERON:2000356
+label: gill raker
+definition: Dermal bone that is a projection present on the inner surface of a branchial
+  arch.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Gill rakers
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: branchiocténie
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: branchiospine
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: gill rakers
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: gillraker
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0008907
+- habitatmech:GOLD.8a68d0f6f5
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7523
+  source_label: Gill rakers
+  source_path: Host-associated > Fish > Digestive system > Gill rakers
+  mapping_predicate: skos:closeMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

@@ -1,0 +1,34 @@
+identifier: ENVO:01000371
+label: agricultural waste material
+definition: Agricultural waste is waste produced as a result of various agricultural
+  operations. It includes manure and other wastes from farms, poultry houses and slaughterhouses;
+  harvest waste; fertilizer run- off from fields; pesticides that enter into water,
+  air or soils; and salt and silt drained from fields.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Agricultural waste
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: agricultural waste
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00002264
+- mesh:D062611
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4908
+  source_label: Agricultural waste
+  source_path: Engineered > Solid waste > Agricultural waste
+  mapping_predicate: skos:closeMatch
+  assertion_count: 2
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

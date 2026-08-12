@@ -1,0 +1,133 @@
+identifier: BTO:0001194
+label: rumen
+definition: The large first compartment of the stomach of a ruminant in which cellulose
+  is broken down by the action of symbiotic microorganisms.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: paunch
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: paunches
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: rumens
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000480
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001194
+  source_label: rumen
+  assertion_count: 231
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:102234
+  source: PREGO
+  taxon_label: Cyanobacterium
+  score: 4.0
+- taxon_id: NCBITaxon:1117
+  source: PREGO
+  taxon_label: Cyanobacteriota
+  score: 4.0
+- taxon_id: NCBITaxon:118747
+  source: PREGO
+  taxon_label: Bulleidia
+  score: 4.0
+- taxon_id: NCBITaxon:119852
+  source: PREGO
+  taxon_label: Oscillospira
+  score: 4.0
+- taxon_id: NCBITaxon:1263
+  source: PREGO
+  taxon_label: Ruminococcus
+  score: 4.0
+- taxon_id: NCBITaxon:1265
+  source: PREGO
+  taxon_label: Ruminococcus flavefaciens
+  score: 4.0
+- taxon_id: NCBITaxon:128827
+  source: PREGO
+  taxon_label: Erysipelotrichaceae
+  score: 4.0
+- taxon_id: NCBITaxon:1301
+  source: PREGO
+  taxon_label: Streptococcus
+  score: 4.0
+- taxon_id: NCBITaxon:1313211
+  source: PREGO
+  taxon_label: Lentisphaeria
+  score: 4.0
+- taxon_id: NCBITaxon:135621
+  source: PREGO
+  taxon_label: Pseudomonadaceae
+  score: 4.0
+- taxon_id: NCBITaxon:1357
+  source: PREGO
+  taxon_label: Lactococcus
+  score: 4.0
+- taxon_id: NCBITaxon:137
+  source: PREGO
+  taxon_label: Spirochaetaceae
+  score: 4.0
+- taxon_id: NCBITaxon:1380
+  source: PREGO
+  taxon_label: Atopobium
+  score: 4.0
+- taxon_id: NCBITaxon:1408194
+  source: PREGO
+  taxon_label: Endomicrobium
+  score: 4.0
+- taxon_id: NCBITaxon:1485
+  source: PREGO
+  taxon_label: Clostridium
+  score: 4.0
+- taxon_id: NCBITaxon:1526
+  source: PREGO
+  taxon_label: '[Clostridium] aminophilum'
+  score: 4.0
+- taxon_id: NCBITaxon:157
+  source: PREGO
+  taxon_label: Treponema
+  score: 4.0
+- taxon_id: NCBITaxon:1577788
+  source: PREGO
+  taxon_label: Methanomassiliicoccaceae
+  score: 4.0
+- taxon_id: NCBITaxon:1578
+  source: PREGO
+  taxon_label: Lactobacillus
+  score: 4.0
+- taxon_id: NCBITaxon:164984
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:165179
+  source: PREGO
+  taxon_label: Segatella copri
+  score: 4.0
+- taxon_id: NCBITaxon:171549
+  source: PREGO
+  taxon_label: Bacteroidales
+  score: 4.0
+- taxon_id: NCBITaxon:171550
+  source: PREGO
+  taxon_label: Rikenellaceae
+  score: 4.0
+- taxon_id: NCBITaxon:171552
+  source: PREGO
+  taxon_label: Prevotellaceae
+  score: 4.0
+- taxon_id: NCBITaxon:1716
+  source: PREGO
+  taxon_label: Corynebacterium
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

@@ -1,0 +1,32 @@
+identifier: ENVO:03501256
+label: sheet of paper
+definition: A paper product which is a thin sheet material made of processed cellulose
+  fibres.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Paper
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: paper
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: paper sheet
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00003895
+- habitatmech:GOLD.2acb39dd08
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4387
+  source_label: Paper
+  source_path: Engineered > Paper
+  mapping_predicate: skos:closeMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

@@ -1,0 +1,27 @@
+identifier: BTO:0001171
+label: spore
+definition: A primitive usually unicellular often environmentally resistant dormant
+  or reproductive body produced by plants and some microorganisms and capable of development
+  into a new individual either directly or after fusion with another spore.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- BTO:0000284
+- BTO:0000720
+- FOODON:03411261
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7742
+  source_label: Spore
+  source_path: Host-associated > Fungi > Spore
+  mapping_predicate: skos:exactMatch
+  assertion_count: 135
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

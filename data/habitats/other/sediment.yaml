@@ -1,0 +1,148 @@
+identifier: ENVO:00002007
+label: sediment
+definition: Particulate environmental material which is formed as a result of the
+  transport and deposition of particles by flowing liquid.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: sediments
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:01000060
+source_attestations:
+- source: ENVIRONMENTS_TABLE
+  source_id: sediment
+  source_label: sediment
+  notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: GOLD
+  source_id: gold.ecosystem:4162
+  source_label: Sediment
+  source_path: Sediment
+  mapping_predicate: skos:exactMatch
+- source: PREGO
+  source_id: ENVO:00002007
+  source_label: sediment
+  assertion_count: 3153
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+environmental_parameters:
+- parameter: SALINITY_VARIABILITY
+  qualitative_value: small
+  source: kg-microbe environments.csv (sediment)
+- parameter: STRUCTURAL_COMPLEXITY
+  qualitative_value: medium
+  source: kg-microbe environments.csv (sediment)
+- parameter: WATER_AVAILABILITY
+  qualitative_value: high
+  source: kg-microbe environments.csv (sediment)
+- parameter: WATER_VARIABILITY
+  qualitative_value: permanently wet
+  source: kg-microbe environments.csv (sediment)
+characteristic_taxa:
+- taxon_id: NCBITaxon:100226
+  source: PREGO
+  taxon_label: Streptomyces coelicolor A3(2)
+  score: 4.0
+- taxon_id: NCBITaxon:100884
+  source: PREGO
+  taxon_label: Coprobacillus cateniformis
+  score: 4.0
+- taxon_id: NCBITaxon:10090
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:10116
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:1015
+  source: PREGO
+  taxon_label: Bergeyella zoohelcum
+  score: 4.0
+- taxon_id: NCBITaxon:101510
+  source: PREGO
+  taxon_label: Rhodococcus jostii RHA1
+  score: 4.0
+- taxon_id: NCBITaxon:1026
+  source: PREGO
+  taxon_label: Marinoscillum furvescens
+  score: 4.0
+- taxon_id: NCBITaxon:1027
+  source: PREGO
+  taxon_label: Microscilla marina
+  score: 4.0
+- taxon_id: NCBITaxon:103
+  source: PREGO
+  taxon_label: Flectobacillus major
+  score: 4.0
+- taxon_id: NCBITaxon:1031541
+  source: PREGO
+  taxon_label: Tropicimonas sediminicola
+  score: 4.0
+- taxon_id: NCBITaxon:103810
+  source: PREGO
+  taxon_label: Riemerella columbina
+  score: 4.0
+- taxon_id: NCBITaxon:104176
+  source: PREGO
+  taxon_label: Oscillochloris trichoides
+  score: 4.0
+- taxon_id: NCBITaxon:104245
+  source: PREGO
+  taxon_label: Clavaria zollingeri
+  score: 4.0
+- taxon_id: NCBITaxon:1045010
+  source: PREGO
+  taxon_label: Escherichia coli O157
+  score: 4.0
+- taxon_id: NCBITaxon:1046935
+  source: PREGO
+  taxon_label: BRC1 bacterium SCGC AAA257-C11
+  score: 4.0
+- taxon_id: NCBITaxon:1047007
+  source: PREGO
+  taxon_label: Omnitrophica bacterium SCGC AAA257-O07
+  score: 4.0
+- taxon_id: NCBITaxon:1047054
+  source: PREGO
+  taxon_label: Fidelibacterota bacterium SCGC AAA257-N23
+  score: 4.0
+- taxon_id: NCBITaxon:1047066
+  source: PREGO
+  taxon_label: Latescibacteria bacterium SCGC AAA257-K07
+  score: 4.0
+- taxon_id: NCBITaxon:104791
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:1048340
+  source: PREGO
+  taxon_label: Marininema mesophilum
+  score: 4.0
+- taxon_id: NCBITaxon:1049583
+  source: PREGO
+  taxon_label: Kocuria marina subsp. indica
+  score: 4.0
+- taxon_id: NCBITaxon:1053
+  source: PREGO
+  taxon_label: Halorhodospira halophila
+  score: 4.0
+- taxon_id: NCBITaxon:1057
+  source: PREGO
+  taxon_label: Thiococcus pfennigii
+  score: 4.0
+- taxon_id: NCBITaxon:1061
+  source: PREGO
+  taxon_label: Rhodobacter capsulatus
+  score: 4.0
+- taxon_id: NCBITaxon:106111
+  source: PREGO
+  taxon_label: Pedobacter sp. KP-2
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD,
+    PREGO. Grounding: EXACT.'

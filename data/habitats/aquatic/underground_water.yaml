@@ -1,0 +1,146 @@
+identifier: ENVO:00005792
+label: underground water
+definition: Water which has physicochemical properties determined by processes which
+  occur beneath the planetary crust.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: subterranean streams
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: subterranean streamses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: subterranean streamsic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: subterranean water
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: subterranean water
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: subterranean waters
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: underground waters
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00002006
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00005792
+  source_label: underground water
+  assertion_count: 1118
+  assertion_unit: TAXON
+  score: 1.33759
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:205918
+  source: PREGO
+  taxon_label: Pseudomonas syringae pv. syringae B728a
+  score: 1.33759
+- taxon_id: NCBITaxon:675813
+  source: PREGO
+  taxon_label: Vibrio metschnikovii CIP 69.14
+  score: 1.32668
+- taxon_id: NCBITaxon:798130
+  source: PREGO
+  taxon_label: Pseudomonas aeruginosa 39016
+  score: 1.32413
+- taxon_id: NCBITaxon:441153
+  source: PREGO
+  taxon_label: Burkholderia pseudomallei NCTC 13177
+  score: 1.3227
+- taxon_id: NCBITaxon:326298
+  source: PREGO
+  taxon_label: Sulfurimonas denitrificans DSM 1251
+  score: 1.31594
+- taxon_id: NCBITaxon:882
+  source: PREGO
+  taxon_label: Nitratidesulfovibrio vulgaris str. Hildenborough
+  score: 1.314
+- taxon_id: NCBITaxon:675814
+  source: PREGO
+  taxon_label: Vibrio coralliilyticus ATCC BAA-450
+  score: 1.31201
+- taxon_id: NCBITaxon:94122
+  source: PREGO
+  taxon_label: Shewanella sp. ANA-3
+  score: 1.31152
+- taxon_id: NCBITaxon:314282
+  source: PREGO
+  taxon_label: Psychromonas sp. CNPT3
+  score: 1.31149
+- taxon_id: NCBITaxon:204536
+  source: PREGO
+  taxon_label: Sulfurihydrogenibium azorense Az-Fu1
+  score: 1.31034
+- taxon_id: NCBITaxon:211586
+  source: PREGO
+  taxon_label: Shewanella oneidensis MR-1
+  score: 1.31028
+- taxon_id: NCBITaxon:945550
+  source: PREGO
+  taxon_label: Vibrio sinaloensis DSM 21326
+  score: 1.31019
+- taxon_id: NCBITaxon:309807
+  source: PREGO
+  taxon_label: Salinibacter ruber DSM 13855
+  score: 1.30977
+- taxon_id: NCBITaxon:589924
+  source: PREGO
+  taxon_label: Ferroglobus placidus DSM 10642
+  score: 1.3088
+- taxon_id: NCBITaxon:335284
+  source: PREGO
+  taxon_label: Psychrobacter cryohalolentis K5
+  score: 1.30841
+- taxon_id: NCBITaxon:298386
+  source: PREGO
+  taxon_label: Photobacterium profundum SS9
+  score: 1.30785
+- taxon_id: NCBITaxon:419542
+  source: PREGO
+  taxon_label: Leptospirillum rubarum
+  score: 1.30734
+- taxon_id: NCBITaxon:523850
+  source: PREGO
+  taxon_label: Thermococcus onnurineus NA1
+  score: 1.3059
+- taxon_id: NCBITaxon:484019
+  source: PREGO
+  taxon_label: Thermosipho africanus TCF52B
+  score: 1.30374
+- taxon_id: NCBITaxon:547558
+  source: PREGO
+  taxon_label: Methanohalophilus mahii DSM 5219
+  score: 1.30298
+- taxon_id: NCBITaxon:663321
+  source: PREGO
+  taxon_label: Candidatus Regiella insecticola LSR1
+  score: 1.30215
+- taxon_id: NCBITaxon:272624
+  source: PREGO
+  taxon_label: Legionella pneumophila subsp. pneumophila str. Philadelphia 1
+  score: 1.30156
+- taxon_id: NCBITaxon:406817
+  source: PREGO
+  taxon_label: Xenorhabdus nematophila ATCC 19061
+  score: 1.30114
+- taxon_id: NCBITaxon:525898
+  source: PREGO
+  taxon_label: Sulfurospirillum deleyianum DSM 6946
+  score: 1.30002
+- taxon_id: NCBITaxon:186497
+  source: PREGO
+  taxon_label: Pyrococcus furiosus DSM 3638
+  score: 1.29982
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

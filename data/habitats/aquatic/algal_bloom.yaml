@@ -1,0 +1,24 @@
+identifier: ENVO:2000004
+label: algal bloom
+definition: A feature that arises from a rapid increase or accumulation in the population
+  of algae (typically microscopic) in an aquatic system.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00000012
+- ENVO:00000021
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5349
+  source_label: Algal bloom
+  source_path: Environmental > Aquatic > Freshwater > Lake > Algal bloom
+  mapping_predicate: skos:exactMatch
+  assertion_count: 8
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

@@ -1,0 +1,56 @@
+identifier: BTO:0000586
+label: colonic cancer cell
+definition: A malignant tumour arising from the inner wall of the large intestine.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: carcinoma cell, colon
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: colon cancer cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: colon cancer cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: colon carcinoma cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: colon carcinoma cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: colonic cancer cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: colonic carcinoma cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: colonic carcinoma cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0001533
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000586
+  source_label: colonic cancer cell
+  assertion_count: 2
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1150864
+  source: PREGO
+  taxon_label: Micromonospora lupini str. Lupac 08
+  score: 3.0
+- taxon_id: NCBITaxon:444103
+  source: PREGO
+  taxon_label: Streptomyces sp. CNQ-509
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

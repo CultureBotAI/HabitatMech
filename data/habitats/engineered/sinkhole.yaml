@@ -1,0 +1,48 @@
+identifier: ENVO:00000195
+label: sinkhole
+definition: A natural depression or hole in the surface topography caused by the removal
+  of soil or bedrock, often both, by water. Sinkholes may vary in size from less than
+  a meter to several hundred meters both in diameter and depth, and vary in form from
+  soil-lined bowls to bedrock-edged chasms.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Sink
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: basin
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: cenote
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: sink
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00000073
+- ENVO:00000309
+- ENVO:00002011
+- ENVO:01001884
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4652
+  source_label: Sinkhole
+  source_path: Environmental > Aquatic > Freshwater > Sinkhole
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: GOLD
+  source_id: gold.ecosystem:8365
+  source_label: Sink
+  source_path: Engineered > Built environment > Building > Sink
+  mapping_predicate: skos:closeMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

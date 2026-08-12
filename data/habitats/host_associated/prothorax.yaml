@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.2095a51ac4
+label: Prothorax
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:6000017
+- habitatmech:GOLD.9ad201f9cc
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6074
+  source_label: Prothorax
+  source_path: 'Host-associated > Arthropoda: Myriapoda > Integumentary system > Cuticle
+    > Prothorax'
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

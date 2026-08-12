@@ -1,0 +1,128 @@
+identifier: ENVO:01000317
+label: aquatic environment
+definition: An environment whose dynamics are strongly influenced by water.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: aquatic environments
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:01000997
+- ENVO:01000998
+source_attestations:
+- source: PREGO
+  source_id: ENVO:01000317
+  source_label: aquatic environment
+  assertion_count: 1553
+  assertion_unit: TAXON
+  score: 2.07388
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:234267
+  source: PREGO
+  taxon_label: Candidatus Solibacter usitatus Ellin6076
+  score: 2.07388
+- taxon_id: NCBITaxon:926569
+  source: PREGO
+  taxon_label: Anaerolinea thermophila UNI-1
+  score: 2.06112
+- taxon_id: NCBITaxon:330214
+  source: PREGO
+  taxon_label: Nitrospira defluvii
+  score: 2.05766
+- taxon_id: NCBITaxon:56
+  source: PREGO
+  taxon_label: Sorangium cellulosum
+  score: 2.0544
+- taxon_id: NCBITaxon:296591
+  source: PREGO
+  taxon_label: Polaromonas sp. JS666
+  score: 2.03919
+- taxon_id: NCBITaxon:418699
+  source: PREGO
+  taxon_label: Azoarcus olearius
+  score: 2.03125
+- taxon_id: NCBITaxon:543728
+  source: PREGO
+  taxon_label: Variovorax paradoxus S110
+  score: 2.02813
+- taxon_id: NCBITaxon:264462
+  source: PREGO
+  taxon_label: Bdellovibrio bacteriovorus HD100
+  score: 2.02759
+- taxon_id: NCBITaxon:159087
+  source: PREGO
+  taxon_label: Dechloromonas aromatica RCB
+  score: 2.02744
+- taxon_id: NCBITaxon:404589
+  source: PREGO
+  taxon_label: Anaeromyxobacter sp. Fw109-5
+  score: 2.02558
+- taxon_id: NCBITaxon:485913
+  source: PREGO
+  taxon_label: Ktedonobacter racemifer DSM 44963
+  score: 2.0238
+- taxon_id: NCBITaxon:196162
+  source: PREGO
+  taxon_label: Nocardioides sp. JS614
+  score: 2.0221
+- taxon_id: NCBITaxon:379066
+  source: PREGO
+  taxon_label: Gemmatimonas aurantiaca T-27
+  score: 2.02204
+- taxon_id: NCBITaxon:378806
+  source: PREGO
+  taxon_label: Allostigmatella aurantiaca DW4/3-1
+  score: 2.02147
+- taxon_id: NCBITaxon:502025
+  source: PREGO
+  taxon_label: Haliangium ochraceum DSM 14365
+  score: 2.02109
+- taxon_id: NCBITaxon:314230
+  source: PREGO
+  taxon_label: Blastopirellula marina DSM 3645
+  score: 2.01852
+- taxon_id: NCBITaxon:469383
+  source: PREGO
+  taxon_label: Conexibacter woesei DSM 14684
+  score: 2.01747
+- taxon_id: NCBITaxon:338969
+  source: PREGO
+  taxon_label: Rhodoferax ferrireducens T118
+  score: 2.01743
+- taxon_id: NCBITaxon:246197
+  source: PREGO
+  taxon_label: Myxococcus xanthus DK 1622
+  score: 2.01513
+- taxon_id: NCBITaxon:575540
+  source: PREGO
+  taxon_label: Isosphaera pallida ATCC 43644
+  score: 2.0125
+- taxon_id: NCBITaxon:224911
+  source: PREGO
+  taxon_label: Bradyrhizobium diazoefficiens USDA 110
+  score: 2.0124
+- taxon_id: NCBITaxon:214688
+  source: PREGO
+  taxon_label: Gemmata obscuriglobus UQM 2246
+  score: 2.01221
+- taxon_id: NCBITaxon:479434
+  source: PREGO
+  taxon_label: Sphaerobacter thermophilus DSM 20745
+  score: 2.0112
+- taxon_id: NCBITaxon:240016
+  source: PREGO
+  taxon_label: Verrucomicrobium spinosum DSM 4136 = JCM 18804
+  score: 2.01028
+- taxon_id: NCBITaxon:391625
+  source: PREGO
+  taxon_label: Plesiocystis pacifica SIR-1
+  score: 2.01027
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

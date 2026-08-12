@@ -1,0 +1,49 @@
+identifier: BTO:0000271
+label: colonic mucosa
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: colon mucosa
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: colon mucosal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: colon mucosas
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: colonic mucosal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: colonic mucosas
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000642
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000271
+  source_label: colonic mucosa
+  assertion_count: 3
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1292046
+  source: PREGO
+  taxon_label: Desulfobulbus sp. oral taxon 041 str. Dsb1-5
+  score: 3.0
+- taxon_id: NCBITaxon:411459
+  source: PREGO
+  taxon_label: Blautia obeum ATCC 29174
+  score: 3.0
+- taxon_id: NCBITaxon:411460
+  source: PREGO
+  taxon_label: '[Ruminococcus] torques ATCC 27756'
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

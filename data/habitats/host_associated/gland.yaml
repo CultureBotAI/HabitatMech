@@ -1,0 +1,97 @@
+identifier: BTO:0000522
+label: gland
+definition: A cell, group of cells, or organ of endothelial origin that selectively
+  removes materials from the blood, concentrates or alters them, and secretes them
+  for further use in the body or for elimination from the body.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Druese
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: Drueses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: glandic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: glands
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: glandula
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: glandulal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: glandulas
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000522
+  source_label: gland
+  assertion_count: 13
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1002340
+  source: PREGO
+  taxon_label: Leisingera sp. ANG1
+  score: 3.0
+- taxon_id: NCBITaxon:1577895
+  source: PREGO
+  taxon_label: Leisingera sp. ANG-M1
+  score: 3.0
+- taxon_id: NCBITaxon:1577896
+  source: PREGO
+  taxon_label: Leisingera sp. ANG-Vp
+  score: 3.0
+- taxon_id: NCBITaxon:1577897
+  source: PREGO
+  taxon_label: Leisingera sp. ANG-DT
+  score: 3.0
+- taxon_id: NCBITaxon:1577898
+  source: PREGO
+  taxon_label: Leisingera sp. ANG-S
+  score: 3.0
+- taxon_id: NCBITaxon:1577899
+  source: PREGO
+  taxon_label: Leisingera sp. ANG-S3
+  score: 3.0
+- taxon_id: NCBITaxon:1577900
+  source: PREGO
+  taxon_label: Leisingera sp. ANG-M6
+  score: 3.0
+- taxon_id: NCBITaxon:1577901
+  source: PREGO
+  taxon_label: Leisingera sp. ANG-S5
+  score: 3.0
+- taxon_id: NCBITaxon:1577902
+  source: PREGO
+  taxon_label: Leisingera sp. ANG-M7
+  score: 3.0
+- taxon_id: NCBITaxon:1577903
+  source: PREGO
+  taxon_label: Ruegeria sp. ANG-R
+  score: 3.0
+- taxon_id: NCBITaxon:1577904
+  source: PREGO
+  taxon_label: Ruegeria sp. ANG-S4
+  score: 3.0
+- taxon_id: NCBITaxon:1577905
+  source: PREGO
+  taxon_label: Tateyamaria sp. ANG-S1
+  score: 3.0
+- taxon_id: NCBITaxon:398579
+  source: PREGO
+  taxon_label: Shewanella pealeana ATCC 700345
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

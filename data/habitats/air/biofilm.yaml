@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.7f436f8aff
+label: Biofilm
+habitat_category: AIR
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00002034
+- habitatmech:GOLD.ebf95a8a4a
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5806
+  source_label: Biofilm
+  source_path: Environmental > Air > Indoor Air > Air scrubber > Biofilm
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

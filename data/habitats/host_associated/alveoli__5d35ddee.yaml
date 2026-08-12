@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.a74e46ebe4
+label: Alveoli
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0002299
+- habitatmech:GOLD.5bbc13545b
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6112
+  source_label: Alveoli
+  source_path: 'Host-associated > Mammals: Human > Respiratory system > Lung > Alveoli'
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.c841f68ad2
+label: Gingiva
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0001828
+- habitatmech:GOLD.92d1e65695
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5121
+  source_label: Gingiva
+  source_path: Host-associated > Mammals > Digestive system > Oral cavity > Gingiva
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

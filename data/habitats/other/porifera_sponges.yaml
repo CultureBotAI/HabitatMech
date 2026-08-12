@@ -1,0 +1,20 @@
+identifier: habitatmech:BACDIVE.18f9382d8d
+label: Porifera-Sponges
+habitat_category: OTHER
+grounding_status: NOT_APPLICABLE
+mapping_status: SEEDED
+xrefs:
+- NCBITaxon:6040
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:porifera-sponges
+  source_label: Porifera-Sponges
+  assertion_count: 86
+  assertion_unit: STRAIN
+  notes: Upstream mapping targets a non-habitat ontology (NCBITaxon:6040); kept as
+    an xref.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: NOT_APPLICABLE.'

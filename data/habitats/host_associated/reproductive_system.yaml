@@ -1,0 +1,97 @@
+identifier: BTO:0000081
+label: reproductive system
+definition: In women, the organs that are directly involved in producing eggs and
+  in conceiving and carrying babies. In men, the organs directly involved in creating,
+  storing, and delivering sperm to fertilize an egg.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Geschlechtsorgan
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: Geschlechtsorganic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: Geschlechtsorgans
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: animal reproductive system
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: animal reproductive systems
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: genital system
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: genital systems
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: genitalia
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: genitalial
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: genitalias
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: organa genitalia
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: organa genitalial
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: organa genitalias
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: reproductive systems
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: reproductive tissue
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: reproductive tissues
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: reproductive tract
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: reproductive tractic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: reproductive tracts
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000081
+  source_label: reproductive system
+  assertion_count: 4
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1306407
+  source: PREGO
+  taxon_label: Treponema phagedenis 4A
+  score: 3.0
+- taxon_id: NCBITaxon:1382230
+  source: PREGO
+  taxon_label: Asaia platycodi SF2.1
+  score: 3.0
+- taxon_id: NCBITaxon:187101
+  source: PREGO
+  taxon_label: Sneathia vaginalis
+  score: 3.0
+- taxon_id: NCBITaxon:2098
+  source: PREGO
+  taxon_label: Metamycoplasma hominis
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

@@ -1,0 +1,37 @@
+identifier: ENVO:00000311
+label: kettle
+definition: A fluvioglacial landform occurring as the result of blocks of ice calving
+  from the front of a receding glacier and becoming partially to wholly buried by
+  glacial outwash. Glacial outwash is generated when sediment laden streams of meltwater
+  flow away from the glacier and are deposited to form broad outwash plains called
+  sandurs. When the ice blocks melt, holes are left in the sandur.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Kettle hole
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: basin
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: kettle hole
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00000309
+- ENVO:00002011
+- ENVO:01001884
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5854
+  source_label: Kettle hole
+  source_path: Environmental > Aquatic > Freshwater > Kettle hole
+  mapping_predicate: skos:closeMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

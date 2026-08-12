@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.0f64d697b2
+label: Nervous system
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0001016
+- habitatmech:GOLD.1b11698aaa
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6946
+  source_label: Nervous system
+  source_path: Host-associated > Reptilia > Nervous system
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

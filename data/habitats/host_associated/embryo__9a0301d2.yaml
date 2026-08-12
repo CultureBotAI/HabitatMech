@@ -1,0 +1,41 @@
+identifier: UBERON:0000922
+label: embryo
+definition: Anatomical entity that comprises the organism in the early stages of growth
+  and differentiation that are characterized by cleavage, the laying down of fundamental
+  tissues, and the formation of primitive organs and organ systems. For example, for
+  mammals, the process would begin with zygote formation and end with birth. For insects,
+  the process would begin at zygote formation and end with larval hatching. For plant
+  zygotic embryos, this would be from zygote formation to the end of seed dormancy.
+  For plant vegetative embryos, this would be from the initial determination of the
+  cell or group of cells to form an embryo until the point when the embryo becomes
+  independent of the parent plant.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: developing organism
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: developmental tissue
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: embryonic organism
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- FOODON:02010002
+- UBERON:0000468
+- habitatmech:GOLD.3d529a667e
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7578
+  source_label: Embryo
+  source_path: Host-associated > Fish > Embryo
+  mapping_predicate: skos:exactMatch
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

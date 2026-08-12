@@ -1,0 +1,38 @@
+identifier: BTO:0001176
+label: endothelial cell
+definition: The main type of cell found in the inside lining of blood vessels, lymph
+  vessels, and the heart.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: endothelial cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001176
+  source_label: endothelial cell
+  assertion_count: 3
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:272951
+  source: PREGO
+  taxon_label: Rickettsia sibirica 246
+  score: 3.0
+- taxon_id: NCBITaxon:283165
+  source: PREGO
+  taxon_label: Bartonella quintana str. Toulouse
+  score: 3.0
+- taxon_id: NCBITaxon:283166
+  source: PREGO
+  taxon_label: Bartonella henselae str. Houston-1
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

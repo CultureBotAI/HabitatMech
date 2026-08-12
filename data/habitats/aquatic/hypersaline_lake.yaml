@@ -1,0 +1,26 @@
+identifier: ENVO:01001020
+label: hypersaline lake
+definition: A lake which is primarily composed of water with a concentration of dissolved
+  salts greater than that of ocean water.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00000019
+- habitatmech:GOLD.ce244e62cd
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7892
+  source_label: Hypersaline lake
+  source_path: Environmental > Aquatic > Non-marine Saline and Alkaline > Hypersaline
+    lake
+  mapping_predicate: skos:exactMatch
+  assertion_count: 115
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
