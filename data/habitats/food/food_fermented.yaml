@@ -6,6 +6,9 @@ habitat_category: FOOD
 grounding_status: BROAD
 mapping_status: REVIEWED
 synonyms:
+- synonym_text: Fermented
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
 - synonym_text: Fermented beverages
   synonym_type: EXACT_SYNONYM
   source: GOLD
@@ -14,6 +17,12 @@ parent_habitats:
 - FOODON:00002645
 - FOODON:03530206
 source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:fermented
+  source_label: Fermented
+  mapping_predicate: skos:broadMatch
+  assertion_count: 242
+  assertion_unit: STRAIN
 - source: GOLD
   source_id: gold.ecosystem:3504
   source_label: Fermented beverages
@@ -26,4 +35,5 @@ curation_history:
 - timestamp: '2026-08-12T00:00:00Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: BROAD.'
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD. Grounding:
+    BROAD.'

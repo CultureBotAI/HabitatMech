@@ -8,10 +8,13 @@ definition: Anatomical cavity at the start of the digestive tract that that is e
   present).
 definition_source: UBERON
 habitat_category: HOST_ASSOCIATED
-grounding_status: CLOSE
+grounding_status: EXACT
 mapping_status: SEEDED
 synonyms:
 - synonym_text: Buccal cavity
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: Oral/Buccal cavity
   synonym_type: EXACT_SYNONYM
   source: GOLD
 - synonym_text: bucca
@@ -25,16 +28,34 @@ synonyms:
   source: UBERON
 parent_habitats:
 - UBERON:0002553
+- habitatmech:GOLD.8a68d0f6f5
 - habitatmech:GOLD.bd1664969c
+- habitatmech:GOLD.fb6caa2908
 source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6965
+  source_label: Oral/Buccal cavity
+  source_path: Host-associated > Fish > Digestive system > Oral/Buccal cavity
+  mapping_predicate: skos:exactMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 - source: GOLD
   source_id: gold.ecosystem:7387
   source_label: Buccal cavity
   source_path: 'Host-associated > Arthropoda: Insects > Digestive system > Foregut
     > Buccal cavity'
   mapping_predicate: skos:closeMatch
+- source: GOLD
+  source_id: gold.ecosystem:7492
+  source_label: Oral/Buccal cavity
+  source_path: Host-associated > Birds > Digestive system > Oral/Buccal cavity
+  mapping_predicate: skos:exactMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
 - timestamp: '2026-08-12T00:00:00Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

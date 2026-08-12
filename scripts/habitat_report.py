@@ -57,6 +57,19 @@ def main(argv: list[str] | None = None) -> int:
     if not args.root.exists():
         raise SystemExit(f"no corpus at {args.root}; run `just seed-apply` first")
 
+    # Decisions taken at CLASS depth are recorded but do not promote a record to
+    # REVIEWED; reporting them with the wholly-undecided ones would hide that a
+    # sweep happened, and with the term requests would overstate it.
+    class_swept_ids: set[str] = set()
+    decisions_path = REPO_ROOT / "curation" / "decisions.tsv"
+    if decisions_path.exists():
+        with decisions_path.open(newline="", encoding="utf-8") as fh:
+            class_swept_ids = {
+                r["identifier"]
+                for r in csv.DictReader(fh, delimiter="\t")
+                if (r.get("review_depth") or "ITEM").strip().upper() == "CLASS"
+            }
+
     records = load_records(args.root)
     total = len(records)
     if not total:
@@ -75,6 +88,7 @@ def main(argv: list[str] | None = None) -> int:
     # one nobody has looked at yet is backlog. Reporting them together hides
     # all the progress and all the remaining work at once.
     term_requests: list[tuple[int, str, str]] = []
+    class_swept: list[tuple[int, str, str]] = []
     undecided: list[tuple[int, str, str]] = []
     source_totals: dict[str, int] = defaultdict(int)
     rows = []
@@ -104,9 +118,12 @@ def main(argv: list[str] | None = None) -> int:
                 field_coverage[field] += 1
 
         if doc.get("grounding_status") == "UNGROUNDED":
-            bucket = (
-                term_requests if doc.get("mapping_status") == "REVIEWED" else undecided
-            )
+            if doc.get("mapping_status") == "REVIEWED":
+                bucket = term_requests
+            elif identifier in class_swept_ids:
+                bucket = class_swept
+            else:
+                bucket = undecided
             bucket.append((assertions, doc.get("label", ""), identifier))
 
         rows.append(
@@ -146,15 +163,23 @@ def main(argv: list[str] | None = None) -> int:
 
     if term_requests:
         term_requests.sort(reverse=True)
-        print(f"\n=== ENVO term requests: {len(term_requests)} reviewed-and-still-ungrounded ===")
-        print("  (a curator confirmed these are habitats with no term that fits)")
-        for assertions, label, identifier in term_requests:
+        print(f"\n=== ENVO term requests: {len(term_requests)} examined individually ===")
+        print("  (a curator read these and confirmed no term fits)")
+        for assertions, label, identifier in term_requests[: args.ungrounded_top or len(term_requests)]:
+            print(f"  {assertions:8d}  {label[:52]:52s}  {identifier}")
+
+    if class_swept:
+        class_swept.sort(reverse=True)
+        total_assertions = sum(a for a, _, _ in class_swept)
+        print(f"\n=== class-level sweep: {len(class_swept)} ungrounded, {total_assertions} assertions ===")
+        print("  (no term matched by any lexical route, but nobody read them one by one —")
+        print("   they do NOT count as REVIEWED. `just worklist` ranks them for real curation.)")
+        for assertions, label, identifier in class_swept[: args.ungrounded_top]:
             print(f"  {assertions:8d}  {label[:52]:52s}  {identifier}")
 
     if args.ungrounded_top and undecided:
         undecided.sort(reverse=True)
-        print(f"\n=== top {args.ungrounded_top} UNDECIDED ungrounded records by assertions ===")
-        print("  (the curation backlog; `just worklist` suggests candidate terms)")
+        print(f"\n=== top {args.ungrounded_top} wholly UNDECIDED ungrounded records ===")
         for assertions, label, identifier in undecided[: args.ungrounded_top]:
             print(f"  {assertions:8d}  {label[:52]:52s}  {identifier}")
 

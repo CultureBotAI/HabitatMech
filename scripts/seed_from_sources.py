@@ -372,13 +372,25 @@ def apply_decision(default: Resolution, minted: str, decisions: dict[str, Decisi
             route=f"curated_ground_from_{default.route}",
             reviewed=True,
         )
+    if decision.decision == "GROUND_AS_PARENT":
+        # Narrower than the named term: the term becomes a parent, never the
+        # identity. Adopting it would merge every sibling that is also a kind
+        # of it — the same conflation the seeder's ambiguous-leaf rule avoids.
+        return Resolution(
+            minted,
+            decision.grounding_status,
+            mapping_predicate=_GROUNDING_TO_PREDICATE.get(decision.grounding_status),
+            extra_parents=[decision.object_id],
+            route=f"curated_ground_as_parent_from_{default.route}",
+            reviewed=True,
+        )
     if decision.decision == "NOT_APPLICABLE":
         return Resolution(
             minted,
             "NOT_APPLICABLE",
             extra_xrefs=[decision.object_id] if decision.object_id else [],
             route=f"curated_not_applicable_from_{default.route}",
-            reviewed=True,
+            reviewed=decision.counts_as_reviewed,
         )
     if decision.decision == "CONFIRM_UNGROUNDED":
         # A nearest-broader term becomes a parent, never the identity: the
@@ -390,10 +402,11 @@ def apply_decision(default: Resolution, minted: str, decisions: dict[str, Decisi
             "UNGROUNDED",
             extra_parents=[decision.object_id] if decision.object_id else [],
             route=f"curated_confirm_ungrounded_from_{default.route}",
-            reviewed=True,
+            reviewed=decision.counts_as_reviewed,
         )
     # REVIEW: the curator checked the seeder's own answer and endorsed it.
-    return replace(default, route=f"curated_review_of_{default.route}", reviewed=True)
+    return replace(default, route=f"curated_review_of_{default.route}",
+                   reviewed=decision.counts_as_reviewed)
 
 
 _GROUNDING_TO_PREDICATE = {
@@ -1011,6 +1024,82 @@ def find_stale_files(expected: set[Path]) -> list[Path]:
 SEED_TIMESTAMP = "2026-08-12T00:00:00Z"
 
 
+def break_parent_cycles(concepts: list[Concept], ontology: OntologyIndex) -> int:
+    """Remove the minimum of non-ontology parent edges needed to make
+    `parent_habitats` acyclic. Returns how many were dropped.
+
+    `parent_habitats` is fed from three places that cannot see each other: the
+    grounding ontology's own subclass edges, the GOLD parent-path link, and a
+    curator's nearest-broader term. The first is a subsumption hierarchy and is
+    acyclic by construction. The GOLD link is not — it expresses *containment
+    in a classification*, which does not always run the same direction as
+    subsumption, and once enough concepts are grounded the two orderings meet
+    and close a loop:
+
+        fresh water -> liquid water   (ENVO subclass)
+        liquid water -> canal         (GOLD path link, unsound as subsumption)
+        canal -> watercourse          (ENVO subclass)
+        watercourse -> lotic water body (ENVO subclass)
+        lotic water body -> fresh water (GOLD path link)
+
+    A cycle hangs any consumer that walks the hierarchy, so one edge has to go.
+    The ontology's edges are authoritative and are never dropped; the GOLD and
+    curated ones are heuristics, so a cycle is broken by removing the first
+    non-ontology edge on it. Iteration order is sorted, so the choice is
+    deterministic and a re-seed drops the same edge.
+    """
+    known = {c.identifier: c for c in concepts}
+    dropped = 0
+
+    def find_cycle() -> list[str] | None:
+        WHITE, GREY, BLACK = 0, 1, 2
+        color = dict.fromkeys(known, WHITE)
+
+        def visit(node: str, path: list[str]) -> list[str] | None:
+            color[node] = GREY
+            for parent in sorted(known[node].parents):
+                if parent not in known:
+                    continue
+                if color[parent] == GREY:
+                    return path + [node, parent]
+                if color[parent] == WHITE:
+                    found = visit(parent, path + [node])
+                    if found:
+                        return found
+            color[node] = BLACK
+            return None
+
+        sys.setrecursionlimit(max(10000, len(known) * 2))
+        for identifier in sorted(known):
+            if color[identifier] == WHITE:
+                found = visit(identifier, [])
+                if found:
+                    return found
+        return None
+
+    while (cycle := find_cycle()) is not None:
+        # The cycle is path + [node, parent] where parent reappears earlier;
+        # every consecutive pair in it is a real edge.
+        # Consecutive pairs along the cycle; cycle[1:] is deliberately one
+        # shorter, so this is not a strict zip.
+        edges = [(cycle[i], cycle[i + 1]) for i in range(len(cycle) - 1)]
+        target = next(
+            (
+                (child, parent)
+                for child, parent in edges
+                if parent not in ontology.direct_parents(child)
+            ),
+            None,
+        )
+        if target is None:
+            # Would mean the ontology's own hierarchy is cyclic. Refuse rather
+            # than silently mangling it.
+            raise SystemExit(f"cycle consists only of ontology edges: {' -> '.join(cycle)}")
+        known[target[0]].parents.discard(target[1])
+        dropped += 1
+    return dropped
+
+
 @dataclass
 class Corpus:
     """The harmonized concept set plus the counters describing how it was built.
@@ -1085,6 +1174,8 @@ def build_corpus() -> Corpus:
     for concept in concepts:
         if concept.category is None:
             concept.category = infer_category(concept.identifier, ontology)
+
+    stats["parent_edges_dropped_to_break_cycles"] = break_parent_cycles(concepts, ontology)
 
     counts = {"GOLD": len(gold_rows), "BacDive": len(bacdive_rows), "PREGO": len(prego_rows)}
     return Corpus(

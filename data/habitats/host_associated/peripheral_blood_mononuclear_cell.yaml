@@ -22,12 +22,24 @@ synonyms:
 - synonym_text: PBMC cells
   synonym_type: RELATED_SYNONYM
   source: PREGO
+- synonym_text: Peripheral blood mononuclear cells
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
 - synonym_text: peripheral blood mononuclear cells
   synonym_type: RELATED_SYNONYM
   source: PREGO
 parent_habitats:
 - BTO:0000878
+- habitatmech:GOLD.6c6aab19d3
 source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5112
+  source_label: Peripheral blood mononuclear cells
+  source_path: Host-associated > Mammals > Circulatory system > Blood > Peripheral
+    blood mononuclear cells
+  mapping_predicate: skos:exactMatch
+  assertion_count: 2
+  assertion_unit: ORGANISM
 - source: PREGO
   source_id: BTO:0001025
   source_label: peripheral blood mononuclear cell
@@ -60,4 +72,5 @@ curation_history:
 - timestamp: '2026-08-12T00:00:00Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'

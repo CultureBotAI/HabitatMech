@@ -1,0 +1,30 @@
+identifier: BTO:0003098
+label: scrotum
+definition: The pouch that contains the testes and their accessory organs. It is composed
+  of skin, the tunica dartos, the spermatic, cremasteric, and infundibuliform fasciae,
+  and the tunica vaginalis testis.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Scrotum/Scrotal sac
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- BTO:0003097
+- habitatmech:GOLD.5c89d5e294
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6287
+  source_label: Scrotum/Scrotal sac
+  source_path: 'Host-associated > Mammals: Human > Reproductive system > External
+    organs > Scrotum/Scrotal sac'
+  mapping_predicate: skos:exactMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

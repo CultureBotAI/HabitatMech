@@ -1,0 +1,26 @@
+identifier: BTO:0002375
+label: bronchiole
+definition: A minute thin-walled branch of a bronchus.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Bronchioles
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- habitatmech:GOLD.5bbc13545b
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6631
+  source_label: Bronchioles
+  source_path: 'Host-associated > Mammals: Human > Respiratory system > Lung > Bronchioles'
+  mapping_predicate: skos:exactMatch
+  assertion_count: 28
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

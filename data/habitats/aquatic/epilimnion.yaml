@@ -1,0 +1,48 @@
+identifier: ENVO:00002131
+label: epilimnion
+definition: The top-most layer in a thermally stratified lake, occurring above the
+  deeper hypolimnion. It is warmer and typically has a higher pH and dissolved oxygen
+  concentration than the hypolimnion.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Epilimnion/Euphotic zone
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: epilimnional
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: epilimnions
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00000021
+- ENVO:01000283
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5357
+  source_label: Epilimnion/Euphotic zone
+  source_path: Environmental > Aquatic > Freshwater > Lake > Epilimnion/Euphotic zone
+  mapping_predicate: skos:exactMatch
+  assertion_count: 7
+  assertion_unit: ORGANISM
+- source: PREGO
+  source_id: ENVO:00002131
+  source_label: epilimnion
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:204428
+  source: PREGO
+  taxon_label: Chlamydiota
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'

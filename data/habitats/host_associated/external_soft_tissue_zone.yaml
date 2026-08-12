@@ -1,0 +1,30 @@
+identifier: UBERON:0034929
+label: external soft tissue zone
+definition: A region or zone on the surface of an organism that encompasses skin and
+  any adnexa, down through muscles and bounded by underlying skeletal support structures.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: CLOSE
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Soft tissue
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- UBERON:0010000
+- UBERON:0010314
+- habitatmech:GOLD.68a62625da
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6880
+  source_label: Soft tissue
+  source_path: Host-associated > Mammals > Multiple systems > Soft tissue
+  mapping_predicate: skos:closeMatch
+  assertion_count: 38
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

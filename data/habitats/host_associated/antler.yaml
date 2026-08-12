@@ -1,0 +1,27 @@
+identifier: BTO:0001684
+label: antler
+definition: 'One of the paired deciduous solid bone processes that arise from the
+  frontal bone on the head of an animal of the deer family; also : a branch of an
+  antler.'
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Antlers
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- habitatmech:GOLD.56e0776270
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6728
+  source_label: Antlers
+  source_path: Host-associated > Mammals > Integumentary system > Antlers
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

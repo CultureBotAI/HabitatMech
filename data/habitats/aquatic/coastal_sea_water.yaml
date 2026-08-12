@@ -9,6 +9,9 @@ synonyms:
 - synonym_text: Coastal
   synonym_type: EXACT_SYNONYM
   source: GOLD
+- synonym_text: Neritic zone/Coastal water
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
 - synonym_text: coastal ocean water
   synonym_type: EXACT_SYNONYM
   source: ENVO
@@ -30,6 +33,7 @@ synonyms:
 parent_habitats:
 - ENVO:00001999
 - ENVO:00002149
+- ENVO:01000125
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3780
@@ -39,6 +43,22 @@ source_attestations:
   assertion_count: 1718
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: GOLD
+  source_id: gold.ecosystem:3781
+  source_label: Neritic zone/Coastal water
+  source_path: Environmental > Aquatic > Marine > Neritic zone/Coastal water
+  mapping_predicate: skos:closeMatch
+  assertion_count: 68
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: GOLD
+  source_id: gold.ecosystem:7912
+  source_label: Neritic zone/Coastal water
+  source_path: Environmental > Aquatic > Marine > Littoral zone > Neritic zone/Coastal
+    water
+  mapping_predicate: skos:closeMatch
+  assertion_count: 7
+  assertion_unit: ORGANISM
 - source: PREGO
   source_id: ENVO:00002150
   source_label: coastal sea water

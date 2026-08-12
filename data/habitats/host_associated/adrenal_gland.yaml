@@ -9,6 +9,9 @@ habitat_category: HOST_ASSOCIATED
 grounding_status: EXACT
 mapping_status: SEEDED
 synonyms:
+- synonym_text: Adrenal glands
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
 - synonym_text: adrenal
   synonym_type: RELATED_SYNONYM
   source: PREGO
@@ -81,7 +84,21 @@ synonyms:
 parent_habitats:
 - BTO:0001488
 - BTO:0001491
+- habitatmech:GOLD.2f5a0b5455
+- habitatmech:GOLD.c26b92ece6
 source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6551
+  source_label: Adrenal glands
+  source_path: 'Host-associated > Mammals: Human > Endocrine system > Endocrine gland
+    > Adrenal glands'
+  mapping_predicate: skos:exactMatch
+- source: GOLD
+  source_id: gold.ecosystem:6782
+  source_label: Adrenal glands
+  source_path: Host-associated > Mammals > Endocrine system > Endocrine gland > Adrenal
+    glands
+  mapping_predicate: skos:exactMatch
 - source: PREGO
   source_id: BTO:0000047
   source_label: adrenal gland
@@ -102,4 +119,5 @@ curation_history:
 - timestamp: '2026-08-12T00:00:00Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'

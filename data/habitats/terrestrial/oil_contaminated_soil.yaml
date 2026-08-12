@@ -1,0 +1,64 @@
+identifier: ENVO:00002875
+label: oil contaminated soil
+definition: Soil which has elevated concentrations of oil.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Oil-contaminated
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- ENVO:00000207
+- ENVO:00001998
+- ENVO:00002116
+- ENVO:01000017
+- habitatmech:GOLD.115edc36f8
+- habitatmech:GOLD.ceceb38473
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4011
+  source_label: Oil-contaminated
+  source_path: Environmental > Aquatic > Marine > Oceanic > Oil-contaminated
+  mapping_predicate: skos:exactMatch
+  assertion_count: 11
+  assertion_unit: ORGANISM
+- source: GOLD
+  source_id: gold.ecosystem:4020
+  source_label: Oil-contaminated
+  source_path: Environmental > Aquatic > Marine > Intertidal zone > Oil-contaminated
+  mapping_predicate: skos:exactMatch
+- source: GOLD
+  source_id: gold.ecosystem:4204
+  source_label: Oil-contaminated
+  source_path: Environmental > Terrestrial > Soil > Sand > Oil-contaminated
+  mapping_predicate: skos:exactMatch
+  assertion_count: 7
+  assertion_unit: ORGANISM
+- source: GOLD
+  source_id: gold.ecosystem:4220
+  source_label: Oil-contaminated
+  source_path: Environmental > Terrestrial > Soil > Unclassified > Oil-contaminated
+  mapping_predicate: skos:exactMatch
+  assertion_count: 96
+  assertion_unit: ORGANISM
+- source: GOLD
+  source_id: gold.ecosystem:4232
+  source_label: Oil-contaminated
+  source_path: Environmental > Terrestrial > Soil > Clay > Oil-contaminated
+  mapping_predicate: skos:exactMatch
+  assertion_count: 7
+  assertion_unit: ORGANISM
+- source: GOLD
+  source_id: gold.ecosystem:8383
+  source_label: Oil-contaminated
+  source_path: Environmental > Terrestrial > Soil > Contaminated > Oil-contaminated
+  mapping_predicate: skos:exactMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

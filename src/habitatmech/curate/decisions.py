@@ -55,11 +55,29 @@ DECISION_KINDS = {
     # a parent rather than adopted as the identity — that keeps the placement
     # machine-readable without asserting an equivalence that does not hold.
     "CONFIRM_UNGROUNDED",
+    # Narrower than an existing term: keep the minted identity, record the term
+    # as a parent, and mark the grounding NARROW. This is the curated form of
+    # the seeder's ambiguous-leaf rule. Six GOLD paths end in "Microbial mats"
+    # and only the shallowest can BE ENVO:01000008; the others are kinds of it,
+    # and grounding them all there would merge marine, hot-spring and
+    # hypersaline mats into one record.
+    "GROUND_AS_PARENT",
     # No grounding change; the curator checked the record as the seeder built it.
     "REVIEW",
 }
 
 GROUNDING_STATUSES = {"EXACT", "BROAD", "NARROW", "CLOSE"}
+
+# How closely a curator looked. ITEM means this specific concept was examined
+# against its source path and candidate terms. CLASS means it was decided as a
+# member of a mechanically-defined group — for instance "no term in the
+# vendored slice matches this label by exact, variant, composed or substring
+# search", which is verifiable but is not the same as someone having thought
+# about this habitat. Only ITEM decisions count toward mapping_status REVIEWED;
+# without the distinction a bulk sweep would report the corpus as reviewed when
+# nobody had read a line of it.
+REVIEW_DEPTHS = {"ITEM", "CLASS"}
+DEFAULT_REVIEW_DEPTH = "ITEM"
 
 REQUIRED_COLUMNS = [
     "identifier",
@@ -91,10 +109,16 @@ class Decision:
     curator: str
     date: str
     notes: str
+    review_depth: str = DEFAULT_REVIEW_DEPTH
+
+    @property
+    def counts_as_reviewed(self) -> bool:
+        """Only per-item judgement promotes a record to REVIEWED."""
+        return self.review_depth == "ITEM"
 
     @property
     def is_grounding(self) -> bool:
-        return self.decision == "GROUND"
+        return self.decision in ("GROUND", "GROUND_AS_PARENT")
 
 
 def load_decisions(path: Path) -> dict[str, Decision]:
@@ -122,6 +146,8 @@ def load_decisions(path: Path) -> dict[str, Decision]:
                 curator=(row["curator"] or "").strip(),
                 date=(row["date"] or "").strip(),
                 notes=(row["notes"] or "").strip(),
+                review_depth=(row.get("review_depth") or DEFAULT_REVIEW_DEPTH).strip().upper()
+                or DEFAULT_REVIEW_DEPTH,
             )
     return decisions
 
@@ -150,6 +176,17 @@ def validate_decisions(
                 f"expected one of {sorted(DECISION_KINDS)}"
             )
             continue
+        if decision.review_depth not in REVIEW_DEPTHS:
+            problems.append(
+                f"{prefix}: review_depth {decision.review_depth!r} not in {sorted(REVIEW_DEPTHS)}"
+            )
+        if decision.review_depth == "CLASS" and decision.is_grounding:
+            # A grounding asserts an equivalence about one concept; that is
+            # never a class-level call.
+            problems.append(
+                f"{prefix}: {decision.decision} cannot be CLASS depth — grounding a "
+                "concept to a term is a per-item judgement"
+            )
         if not decision.curator:
             problems.append(f"{prefix}: no curator")
         if not _is_iso_date(decision.date):
@@ -160,7 +197,7 @@ def validate_decisions(
                 "record why this decision was made, not just what it was"
             )
 
-        if decision.decision == "GROUND":
+        if decision.decision in ("GROUND", "GROUND_AS_PARENT"):
             if not identifier.startswith("habitatmech:"):
                 # A non-minted identifier is shared by every source concept that
                 # resolved to it, so a GROUND keyed there would silently move
@@ -170,7 +207,7 @@ def validate_decisions(
                     "(one source concept), not a shared ontology CURIE"
                 )
             if not decision.object_id:
-                problems.append(f"{prefix}: GROUND needs an object_id")
+                problems.append(f"{prefix}: {decision.decision} needs an object_id")
             if decision.grounding_status not in GROUNDING_STATUSES:
                 problems.append(
                     f"{prefix}: grounding_status {decision.grounding_status!r} "

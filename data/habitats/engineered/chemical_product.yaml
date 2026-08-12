@@ -1,0 +1,29 @@
+identifier: ENVO:2000000
+label: chemical product
+definition: A manufactured product that is some mixture of chemicals created through
+  some chemical engineering process
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Chemical products
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- ENVO:00003074
+- habitatmech:GOLD.a744ade0d8
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5579
+  source_label: Chemical products
+  source_path: Engineered > Industrial production > Chemical products
+  mapping_predicate: skos:exactMatch
+  assertion_count: 10
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

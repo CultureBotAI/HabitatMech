@@ -35,26 +35,26 @@ structurally complex, low-pressure, and strongly gradient-forming.
 
 ## Current corpus
 
-Seeded from kg-microbe, 2026-08-12. **3,284 habitat records** from 3,443 source
+Seeded from kg-microbe, 2026-08-12. **3,187 habitat records** from 3,443 source
 concepts (GOLD 2,562 · BacDive 162 · PREGO 719).
 
 | Category | Records | | Grounding | Records |
 |---|---:|---|---|---:|
-| HOST_ASSOCIATED | 1,675 | | EXACT | 962 |
-| ENGINEERED | 490 | | NARROW | 884 |
-| AQUATIC | 461 | | CLOSE | 134 |
-| TERRESTRIAL | 321 | | UNGROUNDED | 1,278 |
-| OTHER | 244 | | NOT_APPLICABLE | 23 |
-| FOOD | 67 | | BROAD | 3 |
-| CLINICAL | 16 | | | |
-| AIR | 10 | | | |
+| HOST_ASSOCIATED | 1,639 | | EXACT | 1,011 |
+| ENGINEERED | 476 | | NARROW | 922 |
+| AQUATIC | 449 | | CLOSE | 139 |
+| TERRESTRIAL | 301 | | UNGROUNDED | 1,072 |
+| OTHER | 229 | | NOT_APPLICABLE | 40 |
+| FOOD / CLINICAL / AIR | 93 | | BROAD | 3 |
 
-135 records are attested by more than one source; 26 by all three.
+**171 records (5.4%) are `REVIEWED`**, on 285 per-item curation decisions.
+Every one of the 3,443 source concepts now has a decision on file, but they are
+not all equal: 1,042 were decided by a **class-level sweep** (no term matched by
+any lexical route) and deliberately do *not* count as reviewed — see
+[Curation](#curation). 30 ungrounded records were examined individually and
+confirmed as ENVO term requests.
 
-**55 records (1.7%) are `REVIEWED`; the other 3,229 are `SEEDED`** — machine-generated
-and unverified. Of the 1,278 still ungrounded, 23 have been curator-confirmed as
-real habitats with no term that fits (the ENVO term-request list) and the rest
-are undecided backlog. Run `just report` for the live numbers and both lists.
+Run `just report` for the live numbers and all three lists.
 
 ## Quick start
 
@@ -143,10 +143,10 @@ against the vendored ontology labels and synonyms, in this order:
 
 `just report` ranks the ungrounded records by upstream assertion volume and
 splits them into curator-confirmed term requests and undecided backlog. The
-first curation pass cleared the whole head of that distribution — "Fecal",
-"Sputum/Phlegm", "Roots", "Meat products" and the rest of the top 60 are now
-decided — so the largest undecided entry is down from 40,432 upstream
-assertions to 261.
+curation pass cleared the whole head of that distribution: the largest
+individually-examined-and-still-ungrounded concept is "Mammals: Human" (40,432
+GOLD organisms, a confirmed term request), and the largest concept awaiting
+individual attention is down to 261 assertions.
 
 ## Curation
 
@@ -166,7 +166,17 @@ an upstream refresh):
 | `GROUND` | Redirect this source concept onto an ontology term. It merges with anything else resolving there. |
 | `NOT_APPLICABLE` | Not a habitat at all — a host taxon, a disease process, a temperature band. Keeps its minted id so it stays citable. |
 | `CONFIRM_UNGROUNDED` | A real habitat with no term that fits. May name a nearest-*broader* term, attached as a parent rather than adopted as identity. This is the ENVO term-request list. |
+| `GROUND_AS_PARENT` | Narrower than a term: keep the minted identity, record the term as a parent, mark the grounding NARROW. The curated form of the ambiguous-leaf rule. |
 | `REVIEW` | The curator checked the seeder's own answer and endorsed it. |
+
+Each decision also carries a **`review_depth`**: `ITEM` means this concept was
+examined against its source path and candidate terms; `CLASS` means it was
+decided as a member of a mechanically-defined group (for instance "no term in
+the vendored slice matches this label by any search route"). **Only `ITEM`
+decisions promote a record to `REVIEWED`** — without that distinction a bulk
+sweep would report the corpus as reviewed when nobody had read a line of it.
+A grounding can never be `CLASS` depth: asserting an equivalence about one
+concept is always a per-item judgement.
 
 **Every target is verified at seed time.** A `GROUND` must name both the CURIE
 and the label it expects, and the seed fails unless the term exists in the

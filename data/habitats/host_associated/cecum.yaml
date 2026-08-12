@@ -7,6 +7,9 @@ habitat_category: HOST_ASSOCIATED
 grounding_status: EXACT
 mapping_status: SEEDED
 synonyms:
+- synonym_text: Cecum/Intestinal cecum
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
 - synonym_text: blind intestine
   synonym_type: RELATED_SYNONYM
   source: PREGO
@@ -79,7 +82,15 @@ synonyms:
 - synonym_text: intestinum crassum cecums
   synonym_type: RELATED_SYNONYM
   source: PREGO
+parent_habitats:
+- habitatmech:GOLD.c336fb0bb7
 source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7832
+  source_label: Cecum/Intestinal cecum
+  source_path: Host-associated > Mollusca > Digestive system > Hindgut > Cecum/Intestinal
+    cecum
+  mapping_predicate: skos:exactMatch
 - source: PREGO
   source_id: BTO:0000166
   source_label: cecum
@@ -191,4 +202,5 @@ curation_history:
 - timestamp: '2026-08-12T00:00:00Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'

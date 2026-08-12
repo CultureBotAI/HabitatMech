@@ -1,0 +1,27 @@
+identifier: ENVO:00000327
+label: speleothem
+definition: A secondary mineral deposit formed in caves, most commonly calcite.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Speleothems
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- ENVO:01000255
+- habitatmech:GOLD.46abb9a153
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5972
+  source_label: Speleothems
+  source_path: Environmental > Terrestrial > Deep subsurface > Cave > Speleothems
+  mapping_predicate: skos:exactMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

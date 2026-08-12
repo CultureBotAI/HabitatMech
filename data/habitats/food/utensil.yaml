@@ -1,0 +1,28 @@
+identifier: ENVO:03501327
+label: utensil
+definition: A hand tool for domestic use, especially in the kitchen.
+definition_source: ENVO
+habitat_category: FOOD
+grounding_status: CLOSE
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Equipment/Utensils
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- ENVO:03501263
+- FOODON:03530206
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8314
+  source_label: Equipment/Utensils
+  source_path: Engineered > Food production > Equipment/Utensils
+  mapping_predicate: skos:closeMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

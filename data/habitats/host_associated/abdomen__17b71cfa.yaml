@@ -1,0 +1,43 @@
+identifier: UBERON:0000916
+label: abdomen
+definition: The subdivision of the vertebrate body between the thorax and pelvis.
+  The ventral part of the abdomen contains the abdominal cavity and visceral organs.
+  The dorsal part includes the abdominal section of the vertebral column.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Abdomen/Pleon
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: abdominopelvic region
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: abdominopelvis
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: adult abdomen
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: belly
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: celiac region
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0009569
+- habitatmech:GOLD.bd9662fadb
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7308
+  source_label: Abdomen/Pleon
+  source_path: 'Host-associated > Arthropoda: Crustaceans > Whole body > Abdomen/Pleon'
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

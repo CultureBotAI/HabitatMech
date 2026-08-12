@@ -1,0 +1,26 @@
+identifier: BTO:0002684
+label: lymphoid follicle
+definition: A small collection of lymphoid tissue found in such organs as the intestines.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Lymphoid follicles
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- BTO:0000784
+- habitatmech:GOLD.2a523a768a
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6538
+  source_label: Lymphoid follicles
+  source_path: 'Host-associated > Mammals: Human > Lymphatic system > Lymphoid tissue
+    > Lymphoid follicles'
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

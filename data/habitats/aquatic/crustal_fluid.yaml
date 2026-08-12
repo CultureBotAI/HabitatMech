@@ -1,0 +1,26 @@
+identifier: ENVO:03600082
+label: crustal fluid
+definition: Fluid environmental material which is present in the continental crust
+  and dictates the nature and extent of crustal deformation.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Crustal Fluids
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- ENVO:00000207
+- ENVO:02000140
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4656
+  source_label: Crustal Fluids
+  source_path: Environmental > Aquatic > Marine > Oceanic > Crustal Fluids
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

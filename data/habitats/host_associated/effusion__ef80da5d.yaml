@@ -1,9 +1,10 @@
 identifier: habitatmech:GOLD.279140e15d
 label: Effusion
 habitat_category: HOST_ASSOCIATED
-grounding_status: UNGROUNDED
-mapping_status: SEEDED
+grounding_status: NARROW
+mapping_status: REVIEWED
 parent_habitats:
+- UBERON:0000175
 - habitatmech:GOLD.33c4a7e711
 source_attestations:
 - source: GOLD
@@ -11,8 +12,9 @@ source_attestations:
   source_label: Effusion
   source_path: Host-associated > Mammals > Auditory/Hearing system > Middle ear >
     Effusion
+  mapping_predicate: skos:narrowMatch
 curation_history:
 - timestamp: '2026-08-12T00:00:00Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

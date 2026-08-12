@@ -1,0 +1,34 @@
+identifier: ENVO:03600077
+label: photobioreactor
+definition: A bioreactor which utilizes a light source to cultivate phototrophic microorganisms.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Photobioreactor (PBR)
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- ENVO:00002123
+- habitatmech:GOLD.0287e1b2a9
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5844
+  source_label: Photobioreactor (PBR)
+  source_path: Engineered > Bioreactor > Photobioreactor (PBR)
+  mapping_predicate: skos:exactMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: GOLD
+  source_id: gold.ecosystem:7996
+  source_label: Photobioreactor (PBR)
+  source_path: Engineered > Artificial ecosystem > Aquaculture > Photobioreactor (PBR)
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

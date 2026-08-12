@@ -7,6 +7,9 @@ habitat_category: HOST_ASSOCIATED
 grounding_status: EXACT
 mapping_status: SEEDED
 synonyms:
+- synonym_text: 'Beehive: Pollen'
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
 - synonym_text: male generative cell
   synonym_type: RELATED_SYNONYM
   source: PREGO
@@ -23,6 +26,7 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: PREGO
 parent_habitats:
+- habitatmech:GOLD.076eb28273
 - habitatmech:GOLD.735c35525e
 source_attestations:
 - source: GOLD
@@ -31,6 +35,13 @@ source_attestations:
   source_path: Host-associated > Plants > Phyllosphere > Anthosphere > Pollen
   mapping_predicate: skos:exactMatch
   assertion_count: 6
+  assertion_unit: ORGANISM
+- source: GOLD
+  source_id: gold.ecosystem:7641
+  source_label: 'Beehive: Pollen'
+  source_path: 'Environmental > Terrestrial > Nest > Insects nest > Beehive: Pollen'
+  mapping_predicate: skos:exactMatch
+  assertion_count: 1
   assertion_unit: ORGANISM
 - source: PREGO
   source_id: BTO:0001097

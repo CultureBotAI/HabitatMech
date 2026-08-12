@@ -172,3 +172,34 @@ def test_every_committed_decision_verifies(repo_root, raw_tsv):
     decisions = load_decisions(repo_root / "curation" / "decisions.tsv")
     assert decisions, "no curation decisions on file"
     validate_decisions(decisions, labels)
+
+
+def test_class_depth_does_not_promote_a_record_to_reviewed(tmp_path):
+    """A bulk sweep decides many concepts at once on a mechanically-checkable
+    property. That is worth recording, but it is not someone having read the
+    habitat — so it must not report the corpus as reviewed."""
+    row = ("habitatmech:GOLD.abcdef0123", "CONFIRM_UNGROUNDED", "", "", "",
+           "tester", "2026-08-12", GOOD_NOTE, "CLASS")
+    path = tmp_path / "decisions.tsv"
+    path.write_text(HEADER.rstrip("\n") + "\treview_depth\n" + "\t".join(row) + "\n",
+                    encoding="utf-8")
+    decision = load_decisions(path)["habitatmech:GOLD.abcdef0123"]
+    assert decision.review_depth == "CLASS"
+    assert decision.counts_as_reviewed is False
+
+
+def test_review_depth_defaults_to_item(tmp_path):
+    decisions = load_decisions(_write(tmp_path, _ground()))
+    assert decisions["habitatmech:GOLD.abcdef0123"].counts_as_reviewed is True
+
+
+def test_a_grounding_cannot_be_class_depth(tmp_path):
+    """Grounding a concept to a term asserts an equivalence about that one
+    concept; there is no mechanically-checkable class that licenses it."""
+    row = ("habitatmech:GOLD.abcdef0123", "GROUND", "UBERON:0001988", "feces", "EXACT",
+           "tester", "2026-08-12", GOOD_NOTE, "CLASS")
+    path = tmp_path / "decisions.tsv"
+    path.write_text(HEADER.rstrip("\n") + "\treview_depth\n" + "\t".join(row) + "\n",
+                    encoding="utf-8")
+    with pytest.raises(DecisionError, match="cannot be CLASS depth"):
+        validate_decisions(load_decisions(path), ONTOLOGY)

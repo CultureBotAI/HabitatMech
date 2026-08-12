@@ -1,0 +1,30 @@
+identifier: BTO:0001260
+label: smooth muscle
+definition: Muscle tissue that lacks cross striations, that is made up of elongated
+  spindle-shaped cells having a central nucleus, and that is found in vertebrate visceral
+  structures (as the stomach and bladder) as thin sheets performing functions not
+  subject to conscious control by the mind and in all or most of the musculature of
+  invertebrates other than arthropods.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Smooth muscles
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- BTO:0000887
+- habitatmech:GOLD.5e70fd912b
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7468
+  source_label: Smooth muscles
+  source_path: Host-associated > Birds > Muscular system > Smooth muscles
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

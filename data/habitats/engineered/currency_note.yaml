@@ -1,0 +1,30 @@
+identifier: ENVO:00003896
+label: currency note
+definition: A paper product which is used as legal tender in economic or other monetary
+  trasactions.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Currency notes
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: bank note
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00003895
+- ENVO:03501256
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4388
+  source_label: Currency notes
+  source_path: Engineered > Paper > Currency notes
+  mapping_predicate: skos:exactMatch
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

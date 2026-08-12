@@ -1,0 +1,29 @@
+identifier: ENVO:01001043
+label: hypersaline water environment
+definition: An environmental system which has its properties and dynamics determined
+  by hypersaline water.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: CLOSE
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Hypersaline
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- ENVO:01000307
+- habitatmech:GOLD.ce244e62cd
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:3754
+  source_label: Hypersaline
+  source_path: Environmental > Aquatic > Non-marine Saline and Alkaline > Hypersaline
+  mapping_predicate: skos:closeMatch
+  assertion_count: 219
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

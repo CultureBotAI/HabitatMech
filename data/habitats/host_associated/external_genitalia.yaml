@@ -7,6 +7,9 @@ habitat_category: HOST_ASSOCIATED
 grounding_status: EXACT
 mapping_status: SEEDED
 synonyms:
+- synonym_text: External genitalia/Vulva
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
 - synonym_text: external reproductive organ
   synonym_type: EXACT_SYNONYM
   source: UBERON
@@ -16,7 +19,17 @@ synonyms:
 parent_habitats:
 - UBERON:0003133
 - habitatmech:GOLD.29feb6867b
+- habitatmech:GOLD.abc827a582
 source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6245
+  source_label: External genitalia/Vulva
+  source_path: 'Host-associated > Mammals: Human > Reproductive system > External
+    genitalia/Vulva'
+  mapping_predicate: skos:exactMatch
+  assertion_count: 10
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 - source: GOLD
   source_id: gold.ecosystem:7634
   source_label: External genitalia

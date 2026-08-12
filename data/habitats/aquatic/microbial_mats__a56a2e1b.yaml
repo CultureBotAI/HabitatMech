@@ -1,20 +1,22 @@
 identifier: habitatmech:GOLD.2a0de7e155
 label: Microbial mats
 habitat_category: AQUATIC
-grounding_status: UNGROUNDED
-mapping_status: SEEDED
+grounding_status: NARROW
+mapping_status: REVIEWED
 parent_habitats:
 - ENVO:00000019
+- ENVO:01000008
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7890
   source_label: Microbial mats
   source_path: Environmental > Aquatic > Non-marine Saline and Alkaline > Soda lake
     > Microbial mats
+  mapping_predicate: skos:narrowMatch
   assertion_count: 7
   assertion_unit: ORGANISM
 curation_history:
 - timestamp: '2026-08-12T00:00:00Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

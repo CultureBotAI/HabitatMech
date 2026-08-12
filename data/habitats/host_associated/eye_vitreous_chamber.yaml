@@ -1,17 +1,19 @@
 identifier: habitatmech:GOLD.5d27b319ee
 label: 'Eye: Vitreous chamber'
 habitat_category: HOST_ASSOCIATED
-grounding_status: UNGROUNDED
-mapping_status: SEEDED
+grounding_status: NARROW
+mapping_status: REVIEWED
 parent_habitats:
+- UBERON:0000970
 - habitatmech:GOLD.4166733314
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6873
   source_label: 'Eye: Vitreous chamber'
   source_path: 'Host-associated > Mammals > Visual system > Eye: Vitreous chamber'
+  mapping_predicate: skos:narrowMatch
 curation_history:
 - timestamp: '2026-08-12T00:00:00Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

@@ -1,0 +1,40 @@
+identifier: ENVO:00002126
+label: aerobic bioreactor
+definition: A bioreactor in which the contained material is well-oxygenated.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Aerobic
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- ENVO:00002123
+- habitatmech:GOLD.24cf427e7d
+- habitatmech:GOLD.3af6ca6cc3
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4534
+  source_label: Aerobic
+  source_path: Engineered > Bioreactor > Aerobic
+  mapping_predicate: skos:exactMatch
+  assertion_count: 46
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: GOLD
+  source_id: gold.ecosystem:7774
+  source_label: Aerobic
+  source_path: Engineered > Bioreactor > SSF (Solid state fermentation) > Aerobic
+  mapping_predicate: skos:exactMatch
+- source: GOLD
+  source_id: gold.ecosystem:8428
+  source_label: Aerobic
+  source_path: Engineered > Bioreactor > DHS reactor > Aerobic
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

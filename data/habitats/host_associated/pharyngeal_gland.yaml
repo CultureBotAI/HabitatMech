@@ -1,0 +1,26 @@
+identifier: BTO:0004849
+label: pharyngeal gland
+definition: Racemose mucous glands beneath the mucous membrane of the pharynx.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Pharyngeal glands
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- habitatmech:GOLD.d7cff86ce8
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7397
+  source_label: Pharyngeal glands
+  source_path: 'Host-associated > Arthropoda: Insects > Digestive system > Pharyngeal
+    glands'
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
