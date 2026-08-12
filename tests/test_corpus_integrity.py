@@ -130,6 +130,45 @@ def test_minted_parents_resolve_to_a_record(records):
     assert not dangling, f"minted parents with no record: {dangling[:10]}"
 
 
+def test_parent_habitats_have_no_cycles(records):
+    """`parent_habitats` is assembled from three independent contributors —
+    ontology subclass parents, the GOLD parent-path link, and the ambiguous-leaf
+    rule's `extra_parents` — and none of them can see the others. A cycle would
+    hang any consumer that walks the hierarchy. There are none today; this keeps
+    it that way."""
+    parents = {doc["identifier"]: (doc.get("parent_habitats") or []) for _, doc in records}
+
+    WHITE, GREY, BLACK = 0, 1, 2
+    color = dict.fromkeys(parents, WHITE)
+
+    def walk(start: str) -> list[str] | None:
+        # Iterative DFS: the corpus is 3300 records deep enough that recursion
+        # is a needless risk, and an explicit stack makes the cycle reportable.
+        stack: list[tuple[str, list[str]]] = [(start, [])]
+        while stack:
+            node, path = stack.pop()
+            if node == "__POP__":
+                color[path[-1]] = BLACK
+                continue
+            if color[node] == BLACK:
+                continue
+            color[node] = GREY
+            stack.append(("__POP__", path + [node]))
+            for parent in parents.get(node, []):
+                if parent not in color:
+                    continue  # ontology-external parent; outside the corpus
+                if color[parent] == GREY:
+                    return path + [node, parent]
+                if color[parent] == WHITE:
+                    stack.append((parent, path + [node]))
+        return None
+
+    for identifier in parents:
+        if color[identifier] == WHITE:
+            cycle = walk(identifier)
+            assert cycle is None, f"parent_habitats cycle: {' -> '.join(cycle)}"
+
+
 def test_characteristic_taxa_are_ncbitaxon(records):
     bad = []
     for _, doc in records:

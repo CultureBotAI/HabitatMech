@@ -44,6 +44,7 @@ import hashlib
 import os
 import re
 import sqlite3
+import subprocess
 import sys
 from collections import Counter, defaultdict
 from collections.abc import Iterator
@@ -114,7 +115,7 @@ def sha256_of(path: Path, chunk: int = 1 << 20) -> str:
 # GOLD ecosystem classification
 # ---------------------------------------------------------------------------
 
-def extract_gold(kgm: Path) -> list[dict[str, Any]]:
+def extract_gold(kgm: Path) -> tuple[list[dict[str, Any]], list[str]]:
     """Reconstruct GOLD ecosystem paths and collapse them to distinct concepts.
 
     GOLD's ecosystem tree is a *path* tree: many distinct node ids spell out the
@@ -146,10 +147,18 @@ def extract_gold(kgm: Path) -> list[dict[str, Any]]:
             kind = local[:2] if local[:1] == "G" else "other"
             counts[obj][kind] += 1
 
+    truncated: list[str] = []
+
     def path_labels(node: str) -> list[str]:
-        """Root-to-node label path. Cycle-guarded: a malformed parent chain
-        must not spin forever, and returning the partial path lets the caller
-        see (and the manifest count) the damage rather than dying here."""
+        """Root-to-node label path, cycle-guarded.
+
+        A cycle in GOLD's parent chain must not spin forever, but it must not
+        pass silently either: a truncated path changes the concept's `depth`
+        (which decides who claims an ontology term in the seeder's
+        shallowest-path rule) and changes its minted identifier (hashed from
+        the path). Truncations are collected and reported by the caller rather
+        than swallowed here.
+        """
         seen: set[str] = set()
         out: list[str] = []
         cur: str | None = node
@@ -157,6 +166,8 @@ def extract_gold(kgm: Path) -> list[dict[str, Any]]:
             seen.add(cur)
             out.append(labels.get(cur, cur))
             cur = parent.get(cur)
+        if cur is not None:
+            truncated.append(node)
         out.reverse()
         if out and out[0] == GOLD_ROOT_LABEL:
             out = out[1:]
@@ -203,7 +214,7 @@ def extract_gold(kgm: Path) -> list[dict[str, Any]]:
         rows.append(entry)
 
     rows.sort(key=lambda r: (-r["total_assertions"], r["canonical_path"]))
-    return rows
+    return rows, truncated
 
 
 # ---------------------------------------------------------------------------
@@ -594,20 +605,51 @@ def extract_ontology_terms(
 # Manifest
 # ---------------------------------------------------------------------------
 
+def _describe_source(kgm: Path) -> str:
+    """Identify the kg-microbe checkout in a machine-independent way.
+
+    The absolute path is useless to anyone else and leaks a contributor's
+    local layout into a public repo. The git commit is what actually pins
+    which release of the sources the inventories came from; the per-input
+    sha256s below cover the rest.
+    """
+    try:
+        result = subprocess.run(
+            ["git", "-C", str(kgm), "rev-parse", "HEAD"],
+            capture_output=True,
+            text=True,
+            timeout=10,
+            check=False,
+        )
+        if result.returncode == 0 and result.stdout.strip():
+            return f"kg-microbe@{result.stdout.strip()}"
+    except (OSError, subprocess.SubprocessError):
+        pass
+    return f"{kgm.name} (not a git checkout; commit unknown)"
+
+
 def _utc_now_iso() -> str:
     now = datetime.datetime.now(datetime.timezone.utc)
     return now.isoformat(timespec="seconds").replace("+00:00", "Z")
 
 
 def build_manifest(
-    kgm: Path, inputs: list[Path], outputs: dict[str, int], *, hash_inputs: bool
+    kgm: Path,
+    inputs: list[Path],
+    outputs: dict[str, int],
+    *,
+    hash_inputs: bool,
+    gold_truncated_paths: int = 0,
 ) -> str:
     lines = [
         "# Provenance for the inventories in data/raw/.",
         "# Regenerate with: just extract-inventory",
         "# Emitted by scripts/extract_source_inventory.py — do not hand-edit.",
         f"extracted_at: '{_utc_now_iso()}'",
-        f"kg_microbe_root: {kgm}",
+        f"kg_microbe_source: {_describe_source(kgm)}",
+        # A non-zero count means GOLD's parent chain contained a cycle and some
+        # canonical paths are truncated — see the extractor's WARNING output.
+        f"gold_truncated_paths: {gold_truncated_paths}",
         "inputs:",
     ]
     for path in inputs:
@@ -673,8 +715,14 @@ def main(argv: list[str] | None = None) -> int:
     print(f"kg-microbe root: {kgm}")
 
     print("extracting GOLD ecosystem paths ...")
-    gold_rows = extract_gold(kgm)
+    gold_rows, gold_truncated = extract_gold(kgm)
     print(f"  {len(gold_rows)} distinct GOLD ecosystem concepts")
+    if gold_truncated:
+        print(
+            f"  WARNING: {len(gold_truncated)} ecosystem node(s) hit a cycle in the "
+            f"GOLD parent chain and have TRUNCATED paths, e.g. {gold_truncated[:3]}. "
+            "Their depth and minted identifiers are unreliable."
+        )
 
     print("extracting BacDive isolation sources ...")
     bacdive_rows = extract_bacdive(kgm)
@@ -811,6 +859,7 @@ def main(argv: list[str] | None = None) -> int:
         [p for p in manifest_inputs if p.exists()],
         {name: len(rows) for name, (_, rows) in outputs.items()},
         hash_inputs=not args.no_hash,
+        gold_truncated_paths=len(gold_truncated),
     )
     (args.out / "MANIFEST.yaml").write_text(manifest, encoding="utf-8")
     print(f"wrote {args.out / 'MANIFEST.yaml'}")

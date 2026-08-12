@@ -685,7 +685,7 @@ def order_attestation(attestation: dict[str, Any]) -> dict[str, Any]:
     return ordered
 
 
-def build_document(concept: Concept, ontology: OntologyIndex) -> dict[str, Any]:
+def build_document(concept: Concept) -> dict[str, Any]:
     doc: dict[str, Any] = {
         "identifier": concept.identifier,
         "label": concept.label,
@@ -743,9 +743,15 @@ def assign_paths(concepts: list[Concept]) -> dict[str, Path]:
     """Map each concept to its output file, resolving slug collisions.
 
     Two habitats can share a label ("Sediment" under several GOLD paths, once
-    minted separately). The first by identifier keeps the bare slug; the rest
-    get their identifier hash appended, so the filename stays stable for a
-    given identifier regardless of what else is in the corpus.
+    minted separately). Iterating in identifier order, the first to claim a
+    slug keeps the bare name and the rest get their identifier hash appended.
+    954 of the current 3299 files are resolved this way.
+
+    NOTE: the resulting filename is NOT stable under corpus change. Because
+    the bare slug goes to whichever same-slug concept sorts first, a newly
+    added concept with a lower identifier takes the bare name and renames the
+    incumbent. Filenames are therefore safe to link to only between re-seeds.
+    Tracked in issue #2.
     """
     paths: dict[str, Path] = {}
     used: dict[Path, str] = {}
@@ -863,7 +869,7 @@ def main(argv: list[str] | None = None) -> int:
         if path.exists() and not args.force:
             skipped += 1
             continue
-        doc = build_document(concept, ontology)
+        doc = build_document(concept)
         try:
             write_validated_habitat(doc, path)
         except ValidationFailedError as exc:
