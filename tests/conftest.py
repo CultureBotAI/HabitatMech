@@ -47,6 +47,16 @@ def records() -> list[tuple[Path, dict]]:
 
 
 @pytest.fixture(scope="session")
+def path_lockfile() -> dict[str, str]:
+    """The committed identifier -> slug assignments in data/habitats/PATHS.tsv."""
+    path = HABITATS_DIR / "PATHS.tsv"
+    if not path.exists():
+        pytest.skip(f"no lockfile at {path}; run `just seed-apply`")
+    with path.open(newline="", encoding="utf-8") as fh:
+        return {r["identifier"]: r["slug"] for r in csv.DictReader(fh, delimiter="\t")}
+
+
+@pytest.fixture(scope="session")
 def raw_tsv():
     """Callable returning a parsed data/raw TSV by filename."""
 

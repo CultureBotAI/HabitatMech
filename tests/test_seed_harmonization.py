@@ -8,6 +8,7 @@ BacDive source must not be re-guessed here.
 
 from __future__ import annotations
 
+import pytest
 import seed_from_sources as seed
 
 
@@ -159,6 +160,94 @@ def test_bacdive_habitat_target_is_adopted():
 
     assert res.identifier == "UBERON:0000916"
     assert res.grounding_status == "EXACT"
+
+
+class _Concept:
+    """Minimal stand-in for Concept: assign_paths only reads these three."""
+
+    def __init__(self, identifier: str, label: str, category: str):
+        self.identifier = identifier
+        self.label = label
+        self.category = category
+
+
+def test_lockfile_pins_a_slug_against_a_lower_sorting_newcomer():
+    """The bug this lockfile exists for. Without it, the bare slug goes to
+    whichever same-slug concept sorts first by identifier, so an upstream
+    refresh adding a lower-sorting concept renames the incumbent — a
+    delete+add in the diff for a record whose content identity never changed."""
+    incumbent = _Concept("ENVO:00002007", "sediment", "AQUATIC")
+    _, lock = seed.assign_paths([incumbent])
+    assert lock == {"ENVO:00002007": "sediment"}
+
+    newcomer = _Concept("BTO:0000001", "sediment", "TERRESTRIAL")
+    corpus = [newcomer, incumbent]
+
+    unpinned, _ = seed.assign_paths(corpus)
+    assert unpinned["ENVO:00002007"].name != "sediment.yaml", (
+        "guard: without a lockfile the incumbent is expected to lose the slug; "
+        "if this stops being true the test no longer covers the bug"
+    )
+
+    pinned, _ = seed.assign_paths(corpus, lock)
+    assert pinned["ENVO:00002007"].name == "sediment.yaml"
+    assert pinned["BTO:0000001"].name.startswith("sediment__")
+
+
+def test_category_change_moves_the_directory_but_keeps_the_slug():
+    """habitat_category is heuristic and expected to improve (#11), so records
+    will move between category directories. The filename must survive that."""
+    lock = {"ENVO:00002007": "sediment"}
+    paths, _ = seed.assign_paths([_Concept("ENVO:00002007", "sediment", "TERRESTRIAL")], lock)
+    assert paths["ENVO:00002007"].name == "sediment.yaml"
+    assert paths["ENVO:00002007"].parent.name == "terrestrial"
+
+
+def test_slugs_are_unique_corpus_wide_not_per_directory():
+    """Per-directory uniqueness would let a category change collide at the
+    destination. Corpus-wide uniqueness makes that impossible."""
+    corpus = [
+        _Concept("ENVO:00000001", "sediment", "AQUATIC"),
+        _Concept("ENVO:00000002", "sediment", "TERRESTRIAL"),
+    ]
+    _, lock = seed.assign_paths(corpus)
+    assert len(set(lock.values())) == 2
+
+
+def test_lockfile_entries_for_vanished_concepts_are_dropped():
+    """The lockfile is rebuilt from the current concept set, so it cannot
+    accumulate entries for concepts that no longer exist upstream."""
+    stale = {"ENVO:99999999": "gone", "ENVO:00002007": "sediment"}
+    _, lock = seed.assign_paths([_Concept("ENVO:00002007", "sediment", "AQUATIC")], stale)
+    assert lock == {"ENVO:00002007": "sediment"}
+
+
+def test_load_lockfile_rejects_a_slug_that_could_escape_the_corpus(tmp_path):
+    """The lockfile is hand-editable — that is the rename mechanism — and its
+    slugs become filenames, so a path separator must not survive the read."""
+    path = tmp_path / "PATHS.tsv"
+    path.write_text("identifier\tslug\nENVO:1\t../../etc/passwd\n", encoding="utf-8")
+    with pytest.raises(SystemExit, match="unsafe slug"):
+        seed.load_lockfile(path)
+
+
+def test_load_lockfile_rejects_two_identifiers_claiming_one_slug(tmp_path):
+    path = tmp_path / "PATHS.tsv"
+    path.write_text("identifier\tslug\nENVO:1\tsoil\nENVO:2\tsoil\n", encoding="utf-8")
+    with pytest.raises(SystemExit, match="claimed by both"):
+        seed.load_lockfile(path)
+
+
+def test_load_lockfile_is_absent_tolerant(tmp_path):
+    """A fresh corpus has no lockfile; the first seed mints every slug."""
+    assert seed.load_lockfile(tmp_path / "nope.tsv") == {}
+
+
+def test_lockfile_round_trips(tmp_path):
+    path = tmp_path / "PATHS.tsv"
+    original = {"ENVO:00002007": "sediment", "BTO:0000001": "sediment__855ef662"}
+    seed.write_lockfile(original, path)
+    assert seed.load_lockfile(path) == original
 
 
 def test_attestation_ordering_keeps_unknown_fields():

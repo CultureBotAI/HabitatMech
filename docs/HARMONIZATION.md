@@ -105,6 +105,43 @@ qualities, CHEBI chemicals, NCBITaxon organisms. Those become
 `NOT_APPLICABLE` with the target kept as an xref: the information survives, but
 the record does not claim to *be* a quality.
 
+## Filenames are pinned, not recomputed
+
+`data/habitats/PATHS.tsv` maps each identifier to its slug, and is committed.
+It exists because recomputing filenames is not stable.
+
+Two habitats can share a label — "Sediment" appears under several GOLD paths
+and, once minted separately, several records slug to it. The original scheme
+gave the bare slug to whichever same-slug concept sorted first by identifier,
+so an upstream refresh that added a lower-sorting concept silently renamed the
+incumbent: a delete + add in the diff for a record whose content identity never
+changed. 1,043 of the 3,299 files are collision-resolved, so this was not a
+corner case.
+
+With the lockfile:
+
+- a concept already listed keeps its slug, always — nothing about the rest of
+  the corpus can move it;
+- a new concept takes `slugify(label)`, or `<base>__<id hash>` if that is
+  taken. If both are taken the seeder raises rather than silently colliding;
+- slugs are unique **corpus-wide, not per-directory**. The directory comes from
+  `habitat_category`, which is heuristic and expected to improve, so records
+  will move between categories; corpus-wide uniqueness means a move can never
+  collide at its destination;
+- the lockfile is rebuilt from the current concept set on every run, so an
+  entry whose concept vanished upstream is dropped. It cannot accumulate rot.
+
+Renaming a record is therefore a deliberate edit to `PATHS.tsv` followed by a
+re-seed — an explicit, reviewable one-line diff instead of an invisible
+consequence of sort order. Because the file is hand-editable and its slugs
+become filenames, `load_lockfile()` rejects anything outside `[a-z0-9_]`; a
+slug containing a path separator would write outside the corpus.
+
+A record that changes category leaves its old file behind. `seed_from_sources.py`
+reports such stale files on every run and deletes them with `--prune`, which is
+ignored on `--only` / `--limit` runs because a partial run's path set is not
+authoritative — it would otherwise propose deleting the entire corpus.
+
 ## Two status fields, deliberately
 
 `grounding_status` is how well the identifier fits the source concept.

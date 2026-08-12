@@ -739,32 +739,138 @@ def build_document(concept: Concept) -> dict[str, Any]:
     return doc
 
 
-def assign_paths(concepts: list[Concept]) -> dict[str, Path]:
-    """Map each concept to its output file, resolving slug collisions.
+# Committed identifier -> slug lockfile. See assign_paths() for why it exists.
+PATHS_LOCKFILE = HABITATS_DIR / "PATHS.tsv"
+# A slug becomes a filename, so it must not be able to escape the corpus
+# directory. The lockfile is hand-editable (that is the rename mechanism), so
+# this is validated on load rather than assumed.
+SLUG_PATTERN = re.compile(r"^[a-z0-9][a-z0-9_]*$")
 
-    Two habitats can share a label ("Sediment" under several GOLD paths, once
-    minted separately). Iterating in identifier order, the first to claim a
-    slug keeps the bare name and the rest get their identifier hash appended.
-    954 of the current 3299 files are resolved this way.
 
-    NOTE: the resulting filename is NOT stable under corpus change. Because
-    the bare slug goes to whichever same-slug concept sorts first, a newly
-    added concept with a lower identifier takes the bare name and renames the
-    incumbent. Filenames are therefore safe to link to only between re-seeds.
-    Tracked in issue #2.
+def load_lockfile(path: Path = PATHS_LOCKFILE) -> dict[str, str]:
+    """Read the committed identifier -> slug assignments.
+
+    Missing file is not an error: the first seed of a fresh corpus mints every
+    slug. Malformed or unsafe slugs ARE an error — the file is hand-editable,
+    and a slug containing a path separator would write outside the corpus.
     """
-    paths: dict[str, Path] = {}
-    used: dict[Path, str] = {}
-    for concept in sorted(concepts, key=lambda c: c.identifier):
-        directory = HABITATS_DIR / (concept.category or "OTHER").lower()
+    if not path.exists():
+        return {}
+    lock: dict[str, str] = {}
+    with path.open(newline="", encoding="utf-8") as fh:
+        reader = csv.DictReader(fh, delimiter="\t")
+        for line_no, row in enumerate(reader, start=2):
+            identifier = (row.get("identifier") or "").strip()
+            slug = (row.get("slug") or "").strip()
+            if not identifier or not slug:
+                raise SystemExit(f"{path}:{line_no}: blank identifier or slug")
+            if not SLUG_PATTERN.match(slug):
+                raise SystemExit(
+                    f"{path}:{line_no}: unsafe slug {slug!r} — slugs must match "
+                    f"{SLUG_PATTERN.pattern} so they cannot escape {HABITATS_DIR.name}/"
+                )
+            if identifier in lock:
+                raise SystemExit(f"{path}:{line_no}: duplicate identifier {identifier}")
+            lock[identifier] = slug
+    taken: dict[str, str] = {}
+    for identifier, slug in lock.items():
+        if slug in taken:
+            raise SystemExit(
+                f"{path}: slug {slug!r} claimed by both {taken[slug]} and {identifier}"
+            )
+        taken[slug] = identifier
+    return lock
+
+
+def write_lockfile(assignments: dict[str, str], path: Path = PATHS_LOCKFILE) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", newline="", encoding="utf-8") as fh:
+        writer = csv.DictWriter(fh, fieldnames=["identifier", "slug"], delimiter="\t",
+                                lineterminator="\n")
+        writer.writeheader()
+        for identifier in sorted(assignments):
+            writer.writerow({"identifier": identifier, "slug": assignments[identifier]})
+
+
+def assign_paths(
+    concepts: list[Concept], lockfile: dict[str, str] | None = None
+) -> tuple[dict[str, Path], dict[str, str]]:
+    """Map each concept to its output file. Returns (paths, slug assignments).
+
+    Filenames are pinned by ``data/habitats/PATHS.tsv`` rather than recomputed
+    from scratch, because recomputing them is not stable. Two habitats can share
+    a label ("Sediment" under several GOLD paths, once minted separately), and
+    the previous scheme gave the bare slug to whichever of them sorted first by
+    identifier — so an upstream refresh that added a lower-sorting concept
+    renamed the incumbent, a delete+add in the diff for a record whose content
+    identity never changed. 954 of 3299 files sit on that mechanism.
+
+    With the lockfile:
+
+    * a concept already in the lockfile keeps its slug, always. Nothing about
+      the rest of the corpus can move it.
+    * a new concept takes ``slugify(label)``, or ``<base>__<id hash>`` if that
+      is taken by anything else. If both are taken this raises rather than
+      silently colliding.
+    * slugs are unique **corpus-wide**, not per-directory. The directory comes
+      from ``habitat_category``, which is heuristic and expected to improve
+      (issue #11) — corpus-wide uniqueness means a record moving between
+      categories can never collide at its destination.
+    * the lockfile is rebuilt from the current concept set each run, so an
+      entry whose concept disappeared upstream is dropped; it cannot rot.
+
+    Renaming a record is therefore a deliberate edit to PATHS.tsv followed by a
+    re-seed — an explicit, reviewable one-line diff instead of an invisible
+    consequence of sort order.
+    """
+    lockfile = lockfile or {}
+    assignments: dict[str, str] = {}
+    taken: set[str] = set()
+
+    ordered = sorted(concepts, key=lambda c: c.identifier)
+    # Honour existing assignments first, so a pinned slug is never stolen by a
+    # new concept that happens to sort earlier.
+    for concept in ordered:
+        slug = lockfile.get(concept.identifier)
+        if slug is not None:
+            assignments[concept.identifier] = slug
+            taken.add(slug)
+
+    for concept in ordered:
+        if concept.identifier in assignments:
+            continue
         base = slugify(concept.label)
-        candidate = directory / f"{base}.yaml"
-        if candidate in used:
+        if base not in taken:
+            slug = base
+        else:
             suffix = hashlib.sha1(concept.identifier.encode()).hexdigest()[:8]
-            candidate = directory / f"{base}__{suffix}.yaml"
-        used[candidate] = concept.identifier
-        paths[concept.identifier] = candidate
-    return paths
+            slug = f"{base}__{suffix}"
+            if slug in taken:
+                raise SystemExit(
+                    f"slug collision for {concept.identifier}: both {base!r} and "
+                    f"{slug!r} are taken. Resolve by hand in {PATHS_LOCKFILE}."
+                )
+        assignments[concept.identifier] = slug
+        taken.add(slug)
+
+    paths = {
+        concept.identifier: HABITATS_DIR
+        / (concept.category or "OTHER").lower()
+        / f"{assignments[concept.identifier]}.yaml"
+        for concept in ordered
+    }
+    return paths, assignments
+
+
+def find_stale_files(expected: set[Path]) -> list[Path]:
+    """Record files on disk that the current assignment does not account for.
+
+    A record whose `habitat_category` changed moves to a different directory,
+    and the old file is left behind — two files claiming one identifier, which
+    `tests/test_corpus_integrity.py::test_identifiers_are_unique` would fail on.
+    Reported always, deleted only with --prune.
+    """
+    return sorted(p for p in HABITATS_DIR.rglob("*.yaml") if p not in expected)
 
 
 SEED_TIMESTAMP = "2026-08-12T00:00:00Z"
@@ -776,6 +882,13 @@ def main(argv: list[str] | None = None) -> int:
     )
     parser.add_argument("--apply", action="store_true", help="Write files (default is a dry-run report).")
     parser.add_argument("--force", action="store_true", help="Overwrite records that already exist.")
+    parser.add_argument(
+        "--prune",
+        action="store_true",
+        help="Delete record files the current assignment does not account for "
+        "(a record whose category changed leaves its old file behind). Ignored "
+        "on --only/--limit runs, whose path set is not authoritative.",
+    )
     parser.add_argument(
         "--only",
         nargs="*",
@@ -852,7 +965,33 @@ def main(argv: list[str] | None = None) -> int:
     if args.limit:
         selected = sorted(selected, key=lambda c: c.identifier)[: args.limit]
 
-    paths = assign_paths(concepts)
+    lockfile = load_lockfile()
+    paths, assignments = assign_paths(concepts, lockfile)
+
+    # A full run covers every concept, so its path set is authoritative; a
+    # --only/--limit run's is not, and must never drive a prune.
+    full_run = not args.only and not args.limit
+    inherited = sum(1 for i in assignments if i in lockfile)
+    minted = len(assignments) - inherited
+    dropped = sorted(set(lockfile) - set(assignments))
+    stale = find_stale_files(set(paths.values())) if HABITATS_DIR.exists() else []
+
+    print("\n=== filename assignment ===")
+    print(f"  pinned by {PATHS_LOCKFILE.relative_to(REPO_ROOT)}: {inherited}")
+    print(f"  newly minted:                    {minted}")
+    if dropped:
+        print(f"  lockfile entries dropped (concept gone upstream): {len(dropped)}")
+        for identifier in dropped[:5]:
+            print(f"    {identifier} ({lockfile[identifier]})")
+    if stale:
+        label = "stale files (record moved category, or concept gone)"
+        print(f"  {label}: {len(stale)}")
+        for path in stale[:5]:
+            print(f"    {path.relative_to(REPO_ROOT)}")
+        if not full_run:
+            print("    (partial run — not pruning; re-run a full seed to reconcile)")
+        elif not args.prune:
+            print("    (pass --prune to delete them)")
 
     if not args.apply:
         print(f"\n--dry-run: would write {len(selected)} record(s) under {HABITATS_DIR}")
@@ -882,10 +1021,31 @@ def main(argv: list[str] | None = None) -> int:
             continue
         written += 1
 
+    # Written after the records, so a run that aborts on validation failures
+    # does not leave a lockfile promising files that were never created.
+    write_lockfile(assignments)
+    print(f"wrote {PATHS_LOCKFILE.relative_to(REPO_ROOT)} ({len(assignments)} assignments)")
+
+    pruned = 0
+    if stale and full_run and args.prune:
+        for path in stale:
+            path.unlink()
+            pruned += 1
+        for directory in sorted(HABITATS_DIR.rglob("*"), reverse=True):
+            if directory.is_dir() and not any(directory.iterdir()):
+                directory.rmdir()
+        print(f"pruned {pruned} stale record file(s)")
+
     print(
         f"\nwrote {written}, skipped {skipped} "
         f"(already present; --force to overwrite), failed {failed}"
     )
+    if stale and not pruned:
+        print(
+            f"WARNING: {len(stale)} stale file(s) remain on disk. Until they are "
+            "removed, more than one file may claim the same identifier.",
+            file=sys.stderr,
+        )
     return 1 if failed else 0
 
 

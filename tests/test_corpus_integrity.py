@@ -178,6 +178,48 @@ def test_characteristic_taxa_are_ncbitaxon(records):
     assert not bad, f"non-NCBITaxon characteristic_taxa: {bad[:10]}"
 
 
+def test_every_record_file_matches_the_path_lockfile(records, path_lockfile):
+    """`data/habitats/PATHS.tsv` is what makes filenames stable across re-seeds.
+    A record whose filename disagrees with its lockfile entry means someone
+    renamed a file by hand without recording it, and the next `seed-apply` will
+    recreate it under the pinned name — leaving two files for one identifier."""
+    mismatched = []
+    for path, doc in records:
+        identifier = doc["identifier"]
+        expected = path_lockfile.get(identifier)
+        if expected is None:
+            mismatched.append((str(path), identifier, "<no lockfile entry>"))
+        elif path.stem != expected:
+            mismatched.append((str(path), identifier, expected))
+    assert not mismatched, (
+        "record filenames disagree with PATHS.tsv "
+        f"({len(mismatched)}): {mismatched[:5]}. "
+        "To rename a record, edit its slug in PATHS.tsv and re-seed."
+    )
+
+
+def test_lockfile_slugs_are_unique_corpus_wide(path_lockfile):
+    """Corpus-wide (not per-directory) uniqueness is what lets a record change
+    `habitat_category` — and so change directory — without ever colliding at
+    its destination."""
+    counts = Counter(path_lockfile.values())
+    duplicates = {slug: n for slug, n in counts.items() if n > 1}
+    assert not duplicates, f"slugs claimed more than once: {duplicates}"
+
+
+def test_lockfile_has_no_entries_without_a_record(records, path_lockfile):
+    """After a full seed the two sets agree exactly. A leftover entry would
+    reserve a slug forever for a record that no longer exists."""
+    orphans = set(path_lockfile) - {doc["identifier"] for _, doc in records}
+    assert not orphans, f"lockfile entries with no record: {sorted(orphans)[:10]}"
+
+
+def test_lockfile_slugs_cannot_escape_the_corpus_directory(path_lockfile):
+    """Slugs become filenames and the lockfile is hand-editable."""
+    bad = [s for s in path_lockfile.values() if not re.match(r"^[a-z0-9][a-z0-9_]*$", s)]
+    assert not bad, f"unsafe slugs: {bad[:10]}"
+
+
 def test_seeded_records_carry_a_curation_event(records):
     bad = [doc["identifier"] for _, doc in records if not (doc.get("curation_history") or [])]
     assert not bad, f"records with no curation_history: {bad[:10]}"

@@ -31,6 +31,7 @@ just extract-inventory         # refresh data/raw/ from a kg-microbe checkout
 just seed                      # dry-run harmonization report, no writes
 just seed-canary ENVO:00001998 # ONE record, end to end
 just seed-apply --force        # rewrite the corpus
+just seed-apply --force --prune  # ...and delete files left behind by a category move
 ```
 
 ## Rules that matter here
@@ -52,6 +53,12 @@ loosen the test.
 **Canary before any bulk run.** `just seed-canary <IDENTIFIER>` writes exactly
 one record. Verify the file is on disk and its content is right — not just the
 exit code — before `seed-apply`.
+
+**Never rename a record file directly.** `data/habitats/PATHS.tsv` pins each
+identifier's slug; the seeder recreates the file under the pinned name, so a
+hand rename leaves two files claiming one identifier. To rename, edit the slug
+in `PATHS.tsv` and re-seed — that makes the rename an explicit, reviewable
+one-line diff. `tests/test_corpus_integrity.py` fails on any disagreement.
 
 **`mech_shared.yaml` is vendored byte-identical across the Mech repos.** Do not
 edit this copy. `tests/test_schema.py` pins its sha256; changing it means
