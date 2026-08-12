@@ -35,26 +35,26 @@ structurally complex, low-pressure, and strongly gradient-forming.
 
 ## Current corpus
 
-Seeded from kg-microbe, 2026-08-12. **3,299 habitat records** from 3,443 source
+Seeded from kg-microbe, 2026-08-12. **3,284 habitat records** from 3,443 source
 concepts (GOLD 2,562 · BacDive 162 · PREGO 719).
 
 | Category | Records | | Grounding | Records |
 |---|---:|---|---|---:|
-| HOST_ASSOCIATED | 1,681 | | EXACT | 954 |
-| ENGINEERED | 491 | | NARROW | 883 |
-| AQUATIC | 462 | | CLOSE | 134 |
-| TERRESTRIAL | 321 | | UNGROUNDED | 1,315 |
-| OTHER | 251 | | NOT_APPLICABLE | 13 |
-| FOOD | 67 | | | |
+| HOST_ASSOCIATED | 1,675 | | EXACT | 962 |
+| ENGINEERED | 490 | | NARROW | 884 |
+| AQUATIC | 461 | | CLOSE | 134 |
+| TERRESTRIAL | 321 | | UNGROUNDED | 1,278 |
+| OTHER | 244 | | NOT_APPLICABLE | 23 |
+| FOOD | 67 | | BROAD | 3 |
 | CLINICAL | 16 | | | |
 | AIR | 10 | | | |
 
-Identifiers: 500 ENVO, 399 BTO, 124 UBERON, 42 FOODON, 23 other, and 2,211
-minted. 128 records are attested by more than one source; 21 by all three.
+135 records are attested by more than one source; 26 by all three.
 
-**Everything is `mapping_status: SEEDED` — nothing here has been curator-reviewed
-yet.** The lexical grounding routes are unverified by construction. Run
-`just report` for the live numbers.
+**55 records (1.7%) are `REVIEWED`; the other 3,229 are `SEEDED`** — machine-generated
+and unverified. Of the 1,278 still ungrounded, 23 have been curator-confirmed as
+real habitats with no term that fits (the ENVO term-request list) and the rest
+are undecided backlog. Run `just report` for the live numbers and both lists.
 
 ## Quick start
 
@@ -141,17 +141,60 @@ against the vendored ontology labels and synonyms, in this order:
 4. the isolation-source mapping table, keyed on the leaf label;
 5. nothing — minted identifier, `UNGROUNDED`.
 
-`just report` ranks the ungrounded records by upstream assertion volume; that
-list is the ENVO term-request backlog. The current top entries — "Fecal",
-"Roots", "Sputum/Phlegm", "Meat products" — are mostly groundable with a little
-curation.
+`just report` ranks the ungrounded records by upstream assertion volume and
+splits them into curator-confirmed term requests and undecided backlog. The
+first curation pass cleared the whole head of that distribution — "Fecal",
+"Sputum/Phlegm", "Roots", "Meat products" and the rest of the top 60 are now
+decided — so the largest undecided entry is down from 40,432 upstream
+assertions to 261.
+
+## Curation
+
+Records are generated, and `just verify-corpus` gates that they reproduce
+exactly from `data/raw/` — so **curation is never a hand-edit to a record**, which
+the next re-seed would silently revert. Decisions live in
+[`curation/decisions.tsv`](curation/decisions.tsv), which the seeder reads as an
+input. A curation pass is therefore a small reviewable diff in one file, every
+decision carries its curator, date and reason, and the corpus stays reproducible.
+
+Four decisions are available, each keyed on the **minted identifier of one
+source concept** (a content hash of the GOLD path or BacDive id, so it survives
+an upstream refresh):
+
+| Decision | Meaning |
+|---|---|
+| `GROUND` | Redirect this source concept onto an ontology term. It merges with anything else resolving there. |
+| `NOT_APPLICABLE` | Not a habitat at all — a host taxon, a disease process, a temperature band. Keeps its minted id so it stays citable. |
+| `CONFIRM_UNGROUNDED` | A real habitat with no term that fits. May name a nearest-*broader* term, attached as a parent rather than adopted as identity. This is the ENVO term-request list. |
+| `REVIEW` | The curator checked the seeder's own answer and endorsed it. |
+
+**Every target is verified at seed time.** A `GROUND` must name both the CURIE
+and the label it expects, and the seed fails unless the term exists in the
+vendored ontology slice *and* its label matches. An invented term ID cannot
+pass, and neither can a real ID paired with the wrong concept — which is the
+failure mode that matters when a curation pass is LLM-assisted.
+
+A merged record is `REVIEWED` only when **every** source concept feeding it has
+been decided. A record aggregating GOLD, BacDive and PREGO is not checked until
+all three have been looked at.
+
+```bash
+just worklist                 # the backlog, ranked, with candidate terms
+just report                   # term requests vs undecided, and the numbers below
+```
 
 ## Known limitations
 
 These are real and unfixed; see the issue tracker.
 
-- **Nothing is reviewed.** All 3,299 records are `SEEDED`. Lexical matches are
-  plausible, not verified.
+- **Almost nothing is reviewed.** 55 of 3,284 records are `REVIEWED`; the rest
+  are `SEEDED`, meaning their lexical matches are plausible but unverified.
+- **ENVO has no host-clade environment terms.** "Mammals: Human" (40,432 GOLD
+  organisms, the single largest ungrounded concept), "Birds", "Fish", "Insects"
+  and the rest are real habitats with only `ENVO:01001002 animal-associated
+  environment` above them. They are deliberately *not* grounded there: every
+  host clade would merge onto one record and the host distinction is the entire
+  content. They are the highest-value term requests.
 - **PREGO scores barely discriminate.** For soil, all 8,715 taxa score between
   4.000 and 4.007, so the "top 25" kept in `characteristic_taxa` is close to
   arbitrary among the ties. Treat seeded taxa as "reported from", not

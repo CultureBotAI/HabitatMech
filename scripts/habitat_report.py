@@ -71,7 +71,11 @@ def main(argv: list[str] | None = None) -> int:
     by_source: Counter = Counter()
     corroboration: Counter = Counter()
     field_coverage: Counter = Counter()
-    ungrounded: list[tuple[int, str, str]] = []
+    # An ungrounded record that a curator has confirmed is a term request;
+    # one nobody has looked at yet is backlog. Reporting them together hides
+    # all the progress and all the remaining work at once.
+    term_requests: list[tuple[int, str, str]] = []
+    undecided: list[tuple[int, str, str]] = []
     source_totals: dict[str, int] = defaultdict(int)
     rows = []
 
@@ -100,7 +104,10 @@ def main(argv: list[str] | None = None) -> int:
                 field_coverage[field] += 1
 
         if doc.get("grounding_status") == "UNGROUNDED":
-            ungrounded.append((assertions, doc.get("label", ""), identifier))
+            bucket = (
+                term_requests if doc.get("mapping_status") == "REVIEWED" else undecided
+            )
+            bucket.append((assertions, doc.get("label", ""), identifier))
 
         rows.append(
             {
@@ -137,11 +144,18 @@ def main(argv: list[str] | None = None) -> int:
     for source, count in sorted(source_totals.items(), key=lambda kv: -kv[1]):
         print(f"  {source:22s} {count:9d}")
 
-    if args.ungrounded_top and ungrounded:
-        ungrounded.sort(reverse=True)
-        print(f"\n=== top {args.ungrounded_top} ungrounded records by upstream assertions ===")
-        print("  (highest-yield candidates for a new ENVO term or a curated mapping)")
-        for assertions, label, identifier in ungrounded[: args.ungrounded_top]:
+    if term_requests:
+        term_requests.sort(reverse=True)
+        print(f"\n=== ENVO term requests: {len(term_requests)} reviewed-and-still-ungrounded ===")
+        print("  (a curator confirmed these are habitats with no term that fits)")
+        for assertions, label, identifier in term_requests:
+            print(f"  {assertions:8d}  {label[:52]:52s}  {identifier}")
+
+    if args.ungrounded_top and undecided:
+        undecided.sort(reverse=True)
+        print(f"\n=== top {args.ungrounded_top} UNDECIDED ungrounded records by assertions ===")
+        print("  (the curation backlog; `just worklist` suggests candidate terms)")
+        for assertions, label, identifier in undecided[: args.ungrounded_top]:
             print(f"  {assertions:8d}  {label[:52]:52s}  {identifier}")
 
     if args.out:

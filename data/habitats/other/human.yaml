@@ -2,15 +2,15 @@ identifier: habitatmech:BACDIVE.c9b246fcbb
 label: Human
 habitat_category: OTHER
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+parent_habitats:
+- ENVO:01001002
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:human
   source_label: Human
   assertion_count: 11697
   assertion_unit: STRAIN
-  notes: kg-microbe's isolation-source mapping table has a row for this source with
-    no ontology target; treated as ungrounded rather than re-grounded by lexical match.
 curation_history:
 - timestamp: '2026-08-12T00:00:00Z'
   curator: seed_from_sources

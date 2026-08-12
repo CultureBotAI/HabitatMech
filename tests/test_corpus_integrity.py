@@ -220,6 +220,61 @@ def test_lockfile_slugs_cannot_escape_the_corpus_directory(path_lockfile):
     assert not bad, f"unsafe slugs: {bad[:10]}"
 
 
+def test_reviewed_records_are_backed_by_curation_decisions(records, repo_root):
+    """A record can only be REVIEWED because a curator decided every source
+    concept feeding it. If one appears without any decision behind it, the
+    review status is being set by something other than curation — which is the
+    one thing `mapping_status: REVIEWED` is supposed to mean."""
+    import csv as _csv
+
+    path = repo_root / "curation" / "decisions.tsv"
+    if not path.exists():
+        reviewed = [d["identifier"] for _, d in records if d.get("mapping_status") == "REVIEWED"]
+        assert not reviewed, "records are REVIEWED but there is no decisions file"
+        return
+
+    with path.open(newline="", encoding="utf-8") as fh:
+        decided = {r["identifier"] for r in _csv.DictReader(fh, delimiter="\t")}
+
+    # A minted record is REVIEWED iff its own identifier was decided. A merged
+    # ontology-identified record is reviewed via its constituents, whose minted
+    # keys are not the record id — so only the minted case is checkable here.
+    orphans = [
+        doc["identifier"]
+        for _, doc in records
+        if doc.get("mapping_status") == "REVIEWED"
+        and doc["identifier"].startswith("habitatmech:")
+        and doc["identifier"] not in decided
+    ]
+    assert not orphans, f"minted records REVIEWED with no decision on file: {orphans[:10]}"
+
+
+def test_not_applicable_records_are_all_curated(records, repo_root):
+    """NOT_APPLICABLE is a judgement that a source concept is not a habitat.
+    The seeder makes it automatically in exactly one case (an upstream mapping
+    to a non-habitat ontology, kept as an xref); every other one must come from
+    a decision, or something is quietly reclassifying records."""
+    import csv as _csv
+
+    path = repo_root / "curation" / "decisions.tsv"
+    decided = set()
+    if path.exists():
+        with path.open(newline="", encoding="utf-8") as fh:
+            decided = {r["identifier"] for r in _csv.DictReader(fh, delimiter="\t")}
+
+    unexplained = [
+        doc["identifier"]
+        for _, doc in records
+        if doc.get("grounding_status") == "NOT_APPLICABLE"
+        and doc["identifier"] not in decided
+        and not (doc.get("xrefs") or [])
+    ]
+    assert not unexplained, (
+        "NOT_APPLICABLE with neither a curation decision nor an upstream xref "
+        f"to justify it: {unexplained[:10]}"
+    )
+
+
 def test_seeded_records_carry_a_curation_event(records):
     bad = [doc["identifier"] for _, doc in records if not (doc.get("curation_history") or [])]
     assert not bad, f"records with no curation_history: {bad[:10]}"

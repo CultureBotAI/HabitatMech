@@ -1,0 +1,58 @@
+identifier: ENVO:01001001
+label: plant-associated environment
+definition: An environmental system determined by a green plant.
+definition_source: ENVO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Herbaceous-plants-Grass,Crops
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+- synonym_text: Plants
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: Viridiplantae-associated environment
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: plant environment
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:01001000
+- habitatmech:GOLD.d3b891e82e
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:herbaceous-plants-grass,crops
+  source_label: Herbaceous-plants-Grass,Crops
+  mapping_predicate: skos:broadMatch
+  assertion_count: 2451
+  assertion_unit: STRAIN
+- source: ENVIRONMENTS_TABLE
+  source_id: host_plant
+  source_label: host_plant
+  notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: GOLD
+  source_id: gold.ecosystem:3385
+  source_label: Plants
+  source_path: Host-associated > Plants
+  mapping_predicate: skos:exactMatch
+  assertion_count: 12638
+  assertion_unit: ORGANISM
+  notes: 4 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+environmental_parameters:
+- parameter: GRADIENTS
+  qualitative_value: high
+  source: kg-microbe environments.csv (host_plant)
+- parameter: PRESSURE
+  qualitative_value: low
+  source: kg-microbe environments.csv (host_plant)
+- parameter: SALINITY_VARIABILITY
+  qualitative_value: small
+  source: kg-microbe environments.csv (host_plant)
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, ENVIRONMENTS_TABLE,
+    GOLD. Grounding: EXACT.'

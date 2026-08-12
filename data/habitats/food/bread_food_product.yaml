@@ -1,15 +1,24 @@
-identifier: habitatmech:GOLD.b37828b7b3
-label: Bread production
+identifier: FOODON:00001183
+label: bread food product
+definition: A staple food prepared from a dough of flour (usually wheat) and water,
+  usually by baking
+definition_source: FOODON
 habitat_category: FOOD
-grounding_status: UNGROUNDED
-mapping_status: SEEDED
+grounding_status: CLOSE
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Bread production
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
 parent_habitats:
+- FOODON:00002456
 - FOODON:03530206
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5282
   source_label: Bread production
   source_path: Engineered > Food production > Bread production
+  mapping_predicate: skos:closeMatch
   assertion_count: 380
   assertion_unit: ORGANISM
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
@@ -17,4 +26,4 @@ curation_history:
 - timestamp: '2026-08-12T00:00:00Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

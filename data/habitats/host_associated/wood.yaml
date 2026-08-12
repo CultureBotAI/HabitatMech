@@ -5,10 +5,20 @@ definition: Wood is a hard, fibrous structural xylem tissue found in the stems a
 definition_source: BTO
 habitat_category: HOST_ASSOCIATED
 grounding_status: EXACT
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Timber
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
 parent_habitats:
 - BTO:0001468
 source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:timber
+  source_label: Timber
+  mapping_predicate: skos:closeMatch
+  assertion_count: 425
+  assertion_unit: STRAIN
 - source: PREGO
   source_id: BTO:0005516
   source_label: wood
@@ -115,4 +125,5 @@ curation_history:
 - timestamp: '2026-08-12T00:00:00Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, PREGO. Grounding:
+    EXACT.'

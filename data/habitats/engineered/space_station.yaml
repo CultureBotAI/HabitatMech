@@ -1,0 +1,35 @@
+identifier: ENVO:03600050
+label: space station
+definition: A spacecraft which is capable of supporting a human crew in orbit for
+  an extended period of time.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: BROAD
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: International Space Station
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: orbital space station
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: orbital station
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:01003000
+- mesh:D000076624
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4657
+  source_label: International Space Station
+  source_path: Engineered > Built environment > International Space Station
+  mapping_predicate: skos:broadMatch
+  assertion_count: 937
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: BROAD.'
