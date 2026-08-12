@@ -679,6 +679,10 @@ def ingest_prego(
         concept = store.get(identifier, identifier, res.grounding_status)
         concept.source_concepts += 1
         concept.reviewed_sources += 1 if res.reviewed else 0
+        # Both, not just xrefs: a CONFIRM_UNGROUNDED decision records its
+        # nearest-broader term as a parent, and dropping it here would silently
+        # lose the placement the curator recorded (#21).
+        concept.parents.update(res.extra_parents)
         concept.xrefs.update(res.extra_xrefs)
         # The attestation and the taxa describe the PREGO *term*, so they keep
         # using prego_id even when a curator redirected the concept elsewhere —

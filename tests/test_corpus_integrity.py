@@ -236,17 +236,39 @@ def test_reviewed_records_are_backed_by_curation_decisions(records, repo_root):
     with path.open(newline="", encoding="utf-8") as fh:
         decided = {r["identifier"] for r in _csv.DictReader(fh, delimiter="\t")}
 
-    # A minted record is REVIEWED iff its own identifier was decided. A merged
-    # ontology-identified record is reviewed via its constituents, whose minted
-    # keys are not the record id — so only the minted case is checkable here.
-    orphans = [
-        doc["identifier"]
-        for _, doc in records
-        if doc.get("mapping_status") == "REVIEWED"
-        and doc["identifier"].startswith("habitatmech:")
-        and doc["identifier"] not in decided
-    ]
-    assert not orphans, f"minted records REVIEWED with no decision on file: {orphans[:10]}"
+    # A minted record is REVIEWED iff its own identifier was decided. An
+    # ontology-identified record is reviewed via its constituent source
+    # concepts, whose minted keys are not the record id — so those are checked
+    # by reconstructing the key from each attestation, which is the same thing
+    # apply_decision() looks up. Checking only the minted case would leave the
+    # 22 grounded REVIEWED records unverified, which is most of the value.
+    import sys
+
+    sys.path.insert(0, str(repo_root / "scripts"))
+    from seed_from_sources import mint
+
+    def keys_for(doc: dict) -> list[str]:
+        out = []
+        for attestation in doc.get("source_attestations") or []:
+            source = attestation.get("source")
+            if source == "GOLD" and attestation.get("source_path"):
+                out.append(mint("GOLD", attestation["source_path"]))
+            elif source in ("BACDIVE", "PREGO") and attestation.get("source_id"):
+                out.append(mint(source, attestation["source_id"]))
+        return out
+
+    orphans = []
+    for _, doc in records:
+        if doc.get("mapping_status") != "REVIEWED":
+            continue
+        if doc["identifier"].startswith("habitatmech:"):
+            if doc["identifier"] not in decided:
+                orphans.append((doc["identifier"], "own identifier not decided"))
+            continue
+        undecided = [k for k in keys_for(doc) if k not in decided]
+        if undecided:
+            orphans.append((doc["identifier"], f"{len(undecided)} source concept(s) undecided"))
+    assert not orphans, f"REVIEWED with no decision behind it: {orphans[:10]}"
 
 
 def test_not_applicable_records_are_all_curated(records, repo_root):

@@ -136,6 +136,34 @@ def test_missing_file_is_not_an_error(tmp_path):
     assert load_decisions(tmp_path / "absent.tsv") == {}
 
 
+def test_every_committed_decision_addresses_a_real_source_concept(repo_root, raw_tsv):
+    """A decision keyed on an identifier no source concept produces is dead: it
+    never fires, the curator's intent is silently not applied, and the seeder
+    only warns on stderr where CI output buries it. This makes it a failure.
+
+    It is also the check that catches an upstream refresh removing a concept a
+    decision was written against — the minted key is a content hash, so a
+    changed GOLD path yields a different key and the old decision goes stale.
+    """
+    import sys
+
+    sys.path.insert(0, str(repo_root / "scripts"))
+    from seed_from_sources import mint
+
+    addressable = (
+        {mint("GOLD", r["canonical_path"]) for r in raw_tsv("gold_ecosystem_paths.tsv")}
+        | {mint("BACDIVE", r["bacdive_id"]) for r in raw_tsv("bacdive_isolation_sources.tsv")}
+        | {mint("PREGO", r["prego_id"]) for r in raw_tsv("prego_habitats.tsv")}
+    )
+    decisions = load_decisions(repo_root / "curation" / "decisions.tsv")
+    stale = sorted(set(decisions) - addressable)
+    assert not stale, (
+        f"{len(stale)} decision(s) match no source concept in data/raw/: {stale[:10]}. "
+        "Either the identifier is mistyped, or the concept changed upstream and "
+        "the decision needs re-targeting."
+    )
+
+
 def test_every_committed_decision_verifies(repo_root, raw_tsv):
     """The real decisions file, checked against the real ontology slice. This is
     what would catch a term that drifted out of the vendored slice after an

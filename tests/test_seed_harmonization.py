@@ -11,6 +11,8 @@ from __future__ import annotations
 import pytest
 import seed_from_sources as seed
 
+from habitatmech.curate.decisions import Decision
+
 
 def test_minted_identifiers_are_deterministic():
     """Minted ids are content-hashed so a re-seed after an upstream refresh
@@ -248,6 +250,67 @@ def test_lockfile_round_trips(tmp_path):
     original = {"ENVO:00002007": "sediment", "BTO:0000001": "sediment__855ef662"}
     seed.write_lockfile(original, path)
     assert seed.load_lockfile(path) == original
+
+
+def _ingest_with_decision(source: str, decision):
+    """Run one source concept through its ingest with `decision` applied,
+    and return the resulting Concept."""
+    store = seed.ConceptStore(seed.OntologyIndex([], []))
+    routes = seed.Counter()
+    if source == "GOLD":
+        path = "Environmental > Terrestrial > Soil"
+        row = _gold_row(path, "Soil", 3)
+        row.update({"organism_count": "1", "gold_node_ids": "gold.ecosystem:1"})
+        seed.ingest_gold(store, [row], {}, routes, {seed.mint("GOLD", path): decision})
+    elif source == "BACDIVE":
+        bid = "bacdive.isolation_source:soil"
+        row = {"bacdive_id": bid, "label": "Soil", "source_slug": "soil", "strain_count": "1"}
+        seed.ingest_bacdive(store, [row], {}, routes, {seed.mint("BACDIVE", bid): decision})
+    else:
+        pid = "ENVO:00001998"
+        row = {"prego_id": pid, "prego_synonyms": "soil", "taxon_count": "1",
+               "max_prego_score": "3", "channels": ""}
+        seed.ingest_prego(store, [row], [], routes, {seed.mint("PREGO", pid): decision})
+    return next(iter(store.concepts.values()))
+
+
+@pytest.mark.parametrize("source", ["GOLD", "BACDIVE", "PREGO"])
+def test_every_ingest_applies_a_decisions_broader_parent(source):
+    """CONFIRM_UNGROUNDED records a nearest-broader term as a parent. An ingest
+    that forgets to apply `extra_parents` silently discards the placement the
+    curator recorded, and nothing reports it — the decision still counts as
+    applied and the seed still passes. That is exactly what #21 was."""
+    decision = Decision(
+        identifier="k", decision="CONFIRM_UNGROUNDED",
+        object_id="ENVO:01001002", object_label="animal-associated environment",
+        grounding_status="", curator="t", date="2026-08-12", notes="n" * 30,
+    )
+    concept = _ingest_with_decision(source, decision)
+    assert "ENVO:01001002" in concept.parents, f"{source} ingest dropped extra_parents"
+
+
+@pytest.mark.parametrize("source", ["GOLD", "BACDIVE", "PREGO"])
+def test_every_ingest_applies_a_decisions_xref(source):
+    decision = Decision(
+        identifier="k", decision="NOT_APPLICABLE",
+        object_id="NCBITaxon:9606", object_label="", grounding_status="",
+        curator="t", date="2026-08-12", notes="n" * 30,
+    )
+    concept = _ingest_with_decision(source, decision)
+    assert "NCBITaxon:9606" in concept.xrefs, f"{source} ingest dropped extra_xrefs"
+
+
+@pytest.mark.parametrize("source", ["GOLD", "BACDIVE", "PREGO"])
+def test_every_ingest_counts_a_decision_as_a_review(source):
+    """The REVIEWED rule depends on every ingest reporting its review votes; an
+    ingest that forgot would silently hold records at SEEDED forever."""
+    decision = Decision(
+        identifier="k", decision="REVIEW", object_id="", object_label="",
+        grounding_status="", curator="t", date="2026-08-12", notes="n" * 30,
+    )
+    concept = _ingest_with_decision(source, decision)
+    assert concept.source_concepts == 1
+    assert concept.reviewed_sources == 1
 
 
 def test_attestation_ordering_keeps_unknown_fields():
