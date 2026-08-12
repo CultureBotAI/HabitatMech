@@ -1,0 +1,179 @@
+identifier: ENVO:00002011
+label: fresh water
+definition: Water which has a low concentration of dissolved solutes, particularly
+  that of sodium chloride.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Freshwater
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: fresh waters
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: freshwater
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: sweet water
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00002006
+- ENVO:00002030
+source_attestations:
+- source: ENVIRONMENTS_TABLE
+  source_id: water_fresh
+  source_label: water_fresh
+  notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: GOLD
+  source_id: gold.ecosystem:3488
+  source_label: Freshwater
+  source_path: Environmental > Aquatic > Freshwater
+  mapping_predicate: skos:closeMatch
+  assertion_count: 2055
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: PREGO
+  source_id: ENVO:00002011
+  source_label: fresh water
+  assertion_count: 4936
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+environmental_parameters:
+- parameter: GRADIENTS
+  qualitative_value: low
+  source: kg-microbe environments.csv (water_fresh)
+- parameter: PH
+  qualitative_value: medium
+  source: kg-microbe environments.csv (water_fresh)
+- parameter: PRESSURE
+  qualitative_value: low
+  source: kg-microbe environments.csv (water_fresh)
+- parameter: SALINITY
+  qualitative_value: low
+  source: kg-microbe environments.csv (water_fresh)
+- parameter: SALINITY_VARIABILITY
+  qualitative_value: small
+  source: kg-microbe environments.csv (water_fresh)
+- parameter: STRUCTURAL_COMPLEXITY
+  qualitative_value: low
+  source: kg-microbe environments.csv (water_fresh)
+- parameter: TEMPERATURE_VARIABILITY
+  qualitative_value: medium
+  source: kg-microbe environments.csv (water_fresh)
+- parameter: WATER_AVAILABILITY
+  qualitative_value: high
+  source: kg-microbe environments.csv (water_fresh)
+- parameter: WATER_VARIABILITY
+  qualitative_value: permanently wet
+  source: kg-microbe environments.csv (water_fresh)
+characteristic_taxa:
+- taxon_id: NCBITaxon:1001240
+  source: PREGO
+  taxon_label: Cryobacterium roopkundense
+  score: 4.0
+- taxon_id: NCBITaxon:1012
+  source: PREGO
+  taxon_label: Sporocytophaga cauliformis
+  score: 4.0
+- taxon_id: NCBITaxon:102232
+  source: PREGO
+  taxon_label: Gloeocapsa sp. PCC 73106
+  score: 4.0
+- taxon_id: NCBITaxon:1026
+  source: PREGO
+  taxon_label: Marinoscillum furvescens
+  score: 4.0
+- taxon_id: NCBITaxon:103
+  source: PREGO
+  taxon_label: Flectobacillus major
+  score: 4.0
+- taxon_id: NCBITaxon:103810
+  source: PREGO
+  taxon_label: Riemerella columbina
+  score: 4.0
+- taxon_id: NCBITaxon:104245
+  source: PREGO
+  taxon_label: Clavaria zollingeri
+  score: 4.0
+- taxon_id: NCBITaxon:104336
+  source: PREGO
+  taxon_label: Microbacterium foliorum
+  score: 4.0
+- taxon_id: NCBITaxon:1046938
+  source: PREGO
+  taxon_label: Candidatus Aenigmarchaeota archaeon SCGC AAA011-F07
+  score: 4.0
+- taxon_id: NCBITaxon:1046985
+  source: PREGO
+  taxon_label: Parcubacteria bacterium SCGC AAA011-A08
+  score: 4.0
+- taxon_id: NCBITaxon:1046987
+  source: PREGO
+  taxon_label: Parcubacteria bacterium SCGC AAA011-A09
+  score: 4.0
+- taxon_id: NCBITaxon:1046989
+  source: PREGO
+  taxon_label: Parcubacteria bacterium SCGC AAA011-J21
+  score: 4.0
+- taxon_id: NCBITaxon:1046996
+  source: PREGO
+  taxon_label: Parcubacteria bacterium SCGC AAA010-E09
+  score: 4.0
+- taxon_id: NCBITaxon:1047003
+  source: PREGO
+  taxon_label: Candidatus Microgenomatus auricola SCGC AAA011-E14
+  score: 4.0
+- taxon_id: NCBITaxon:1047010
+  source: PREGO
+  taxon_label: Omnitrophica bacterium SCGC AAA011-L16
+  score: 4.0
+- taxon_id: NCBITaxon:1054498
+  source: PREGO
+  taxon_label: Rivihabitans pingtungensis
+  score: 4.0
+- taxon_id: NCBITaxon:1061
+  source: PREGO
+  taxon_label: Rhodobacter capsulatus
+  score: 4.0
+- taxon_id: NCBITaxon:106111
+  source: PREGO
+  taxon_label: Pedobacter sp. KP-2
+  score: 4.0
+- taxon_id: NCBITaxon:1063
+  source: PREGO
+  taxon_label: Cereibacter sphaeroides
+  score: 4.0
+- taxon_id: NCBITaxon:106592
+  source: PREGO
+  taxon_label: Ensifer adhaerens
+  score: 4.0
+- taxon_id: NCBITaxon:1069080
+  source: PREGO
+  taxon_label: Succinispira mobilis DSM 6222
+  score: 4.0
+- taxon_id: NCBITaxon:1069082
+  source: PREGO
+  taxon_label: Halomicrobium katesii DSM 19301
+  score: 4.0
+- taxon_id: NCBITaxon:107400
+  source: PREGO
+  taxon_label: Methylobacterium fujisawaense
+  score: 4.0
+- taxon_id: NCBITaxon:107633
+  source: PREGO
+  taxon_label: Methylocystis sp. LW5
+  score: 4.0
+- taxon_id: NCBITaxon:107635
+  source: PREGO
+  taxon_label: Methylosinus sp. LW3
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD,
+    PREGO. Grounding: EXACT.'

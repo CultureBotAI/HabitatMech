@@ -1,0 +1,26 @@
+identifier: UBERON:0019315
+label: meibum
+definition: An oily substance that prevents evaporation of the eye's tear film.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: tarsal gland secretion
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0001866
+- habitatmech:GOLD.b490f9b61c
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7032
+  source_label: Meibum
+  source_path: 'Host-associated > Mammals: Human > Integumentary system > Meibomian
+    glands > Meibum'
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

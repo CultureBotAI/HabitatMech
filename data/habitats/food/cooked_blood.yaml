@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.3140150c43
+label: Cooked blood
+habitat_category: FOOD
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.09d3541be1
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6495
+  source_label: Cooked blood
+  source_path: Engineered > Food production > Meat products > Cooked meat > Cooked
+    blood
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

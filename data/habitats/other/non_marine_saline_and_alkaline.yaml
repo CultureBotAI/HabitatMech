@@ -1,0 +1,20 @@
+identifier: habitatmech:BACDIVE.9a0a53afc1
+label: Non-marine-Saline-and-Alkaline
+habitat_category: OTHER
+grounding_status: NOT_APPLICABLE
+mapping_status: SEEDED
+xrefs:
+- PATO:0001430
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:non-marine-saline-and-alkaline
+  source_label: Non-marine-Saline-and-Alkaline
+  assertion_count: 37
+  assertion_unit: STRAIN
+  notes: Upstream mapping targets a non-habitat ontology (PATO:0001430); kept as an
+    xref.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: NOT_APPLICABLE.'

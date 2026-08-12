@@ -1,0 +1,87 @@
+identifier: ENVO:00003862
+label: dairy
+definition: A dairy is a building in which animal milk is harvested and, optionally,
+  processed for human consumption.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: dairies
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00003861
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00003862
+  source_label: dairy
+  assertion_count: 15
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1089546
+  source: PREGO
+  taxon_label: Actinopolyspora halophila DSM 43834
+  score: 4.0
+- taxon_id: NCBITaxon:1111734
+  source: PREGO
+  taxon_label: Acidipropionibacterium acidipropionici DSM 4900
+  score: 4.0
+- taxon_id: NCBITaxon:1121090
+  source: PREGO
+  taxon_label: Siminovitchia fordii DSM 16014 = CIP 108821
+  score: 4.0
+- taxon_id: NCBITaxon:1121105
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:1121365
+  source: PREGO
+  taxon_label: Corynebacterium mastitidis DSM 44356
+  score: 4.0
+- taxon_id: NCBITaxon:1122237
+  source: PREGO
+  taxon_label: Microbacterium gubbeenense DSM 15944
+  score: 4.0
+- taxon_id: NCBITaxon:1122997
+  source: PREGO
+  taxon_label: Acidipropionibacterium jensenii DSM 20535
+  score: 4.0
+- taxon_id: NCBITaxon:1122998
+  source: PREGO
+  taxon_label: Acidipropionibacterium thoenii DSM 20276
+  score: 4.0
+- taxon_id: NCBITaxon:1397697
+  source: PREGO
+  taxon_label: Exiguobacterium acetylicum DSM 20416
+  score: 4.0
+- taxon_id: NCBITaxon:255205
+  source: PREGO
+  taxon_label: Pseudoclavibacter helvolus
+  score: 4.0
+- taxon_id: NCBITaxon:273384
+  source: PREGO
+  taxon_label: Brevibacterium aurantiacum
+  score: 4.0
+- taxon_id: NCBITaxon:321967
+  source: PREGO
+  taxon_label: Lacticaseibacillus paracasei ATCC 334
+  score: 4.0
+- taxon_id: NCBITaxon:732241
+  source: PREGO
+  taxon_label: Neomicrococcus lactis
+  score: 4.0
+- taxon_id: NCBITaxon:797292
+  source: PREGO
+  taxon_label: Sphingobacterium alimentarium
+  score: 4.0
+- taxon_id: NCBITaxon:927655
+  source: PREGO
+  taxon_label: Corynebacterium bovis DSM 20582 = CIP 54.80
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

@@ -1,0 +1,64 @@
+identifier: BTO:0000464
+label: flagellate
+definition: A flagellate protozoan or alga.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: flagellates
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000720
+- BTO:0002503
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000464
+  source_label: flagellate
+  assertion_count: 9
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1208918
+  source: PREGO
+  taxon_label: Candidatus Kinetoplastidibacterium crithidiae TCC036E
+  score: 3.0
+- taxon_id: NCBITaxon:1208919
+  source: PREGO
+  taxon_label: Candidatus Kinetoplastidibacterium desouzai TCC079E
+  score: 3.0
+- taxon_id: NCBITaxon:1208920
+  source: PREGO
+  taxon_label: Candidatus Kinetoplastidibacterium stringomonadis TCC290E
+  score: 3.0
+- taxon_id: NCBITaxon:1208921
+  source: PREGO
+  taxon_label: Candidatus Kinetoplastidibacterium galati TCC219
+  score: 3.0
+- taxon_id: NCBITaxon:1208922
+  source: PREGO
+  taxon_label: Candidatus Kinetoplastidibacterium blastocrithidiae TCC012E
+  score: 3.0
+- taxon_id: NCBITaxon:1402208
+  source: PREGO
+  taxon_label: Ligilactobacillus ruminis DPC 6832
+  score: 3.0
+- taxon_id: NCBITaxon:1408281
+  source: PREGO
+  taxon_label: Endomicrobium proavitum
+  score: 3.0
+- taxon_id: NCBITaxon:1623
+  source: PREGO
+  taxon_label: Ligilactobacillus ruminis
+  score: 3.0
+- taxon_id: NCBITaxon:192222
+  source: PREGO
+  taxon_label: Campylobacter jejuni subsp. jejuni NCTC 11168 = ATCC 700819
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

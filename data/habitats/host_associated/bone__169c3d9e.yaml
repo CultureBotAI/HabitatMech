@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.774bc38294
+label: Bone
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- BTO:0000140
+- habitatmech:GOLD.867abac275
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6682
+  source_label: Bone
+  source_path: 'Host-associated > Mammals: Human > Remains > Decomposed body > Bone'
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

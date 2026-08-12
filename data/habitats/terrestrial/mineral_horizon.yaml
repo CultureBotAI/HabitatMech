@@ -1,0 +1,22 @@
+identifier: ENVO:03600011
+label: mineral horizon
+definition: A soil horizon which is primarily composed of mineral material.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00001998
+- ENVO:01001275
+- ENVO:03600030
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5588
+  source_label: Mineral horizon
+  source_path: Environmental > Terrestrial > Soil > Mineral horizon
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

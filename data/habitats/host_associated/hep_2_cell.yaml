@@ -1,0 +1,58 @@
+identifier: BTO:0000976
+label: HEp-2 cell
+definition: This line was originally thought to be derived from an epidermoid carcinoma
+  of the larynx, but was subsequently found to have been established via HeLa cell
+  contamination.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: hep2
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: hep2 cell line
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: hep2 cell lines
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: hep2 cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000955
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000976
+  source_label: HEp-2 cell
+  assertion_count: 5
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1314958
+  source: PREGO
+  taxon_label: Parachlamydiaceae bacterium HS-T3
+  score: 3.0
+- taxon_id: NCBITaxon:340186
+  source: PREGO
+  taxon_label: Escherichia coli E110019
+  score: 3.0
+- taxon_id: NCBITaxon:358709
+  source: PREGO
+  taxon_label: Escherichia coli 101-1
+  score: 3.0
+- taxon_id: NCBITaxon:57743
+  source: PREGO
+  taxon_label: Salmonella enterica subsp. enterica serovar Weltevreden
+  score: 3.0
+- taxon_id: NCBITaxon:83552
+  source: PREGO
+  taxon_label: Parachlamydia acanthamoebae
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

@@ -1,0 +1,30 @@
+identifier: UBERON:0001158
+label: descending colon
+definition: The portion of the colon between the left colic flexure and the sigmoid
+  colon at the pelvic brim; the portion of the descending colon lying in the left
+  iliac fossa is sometimes called the iliac colon.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: colon descendens
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0000168
+- habitatmech:GOLD.5b0aa7456c
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5028
+  source_label: Descending colon
+  source_path: 'Host-associated > Mammals: Human > Digestive system > Large intestine
+    > Descending colon'
+  mapping_predicate: skos:exactMatch
+  assertion_count: 3
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

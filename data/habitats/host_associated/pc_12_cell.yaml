@@ -1,0 +1,46 @@
+identifier: BTO:0001009
+label: PC-12 cell
+definition: Rat adrenal pheochromocytoma established from a transplantable rat adrenal
+  pheochromocytoma in 1976; cells were described to synthesize catecholamines (dopamine,
+  norepinephrine); in response to nerve growth factor (NGF) a neuronal phenotype could
+  be induced reversibly.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: pc12
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: pc12 cell line
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: pc12 cell lines
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: pc12 cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: pheochromocytoma 12 cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000201
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001009
+  source_label: PC-12 cell
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:53409
+  source: PREGO
+  taxon_label: Pseudomonas coronafaciens
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

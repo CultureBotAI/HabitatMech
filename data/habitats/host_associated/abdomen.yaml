@@ -1,0 +1,37 @@
+identifier: BTO:0000020
+label: abdomen
+definition: '1: The part of the body between the thorax and the pelvis; also: the
+  cavity of this part of the trunk containing the chief viscera. 2: The posterior
+  section of the body behind the thorax in an arthropod.'
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: abdomens
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: abdominal cavities
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: abdominal cavity
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000020
+  source_label: abdomen
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1125980
+  source: PREGO
+  taxon_label: Vibrio harveyi CAIM 1792
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

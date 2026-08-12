@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.5d784b0218
+label: Abscess
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.4b37ab4b76
+- mesh:D000038
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6342
+  source_label: Abscess
+  source_path: 'Host-associated > Mammals: Human > Integumentary system > Skin > Abscess'
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 17
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

@@ -1,0 +1,45 @@
+identifier: BTO:0004108
+label: G cell
+definition: Endocrine cells found in the pyloric gland mucosa (antral mucosa) of the
+  stomach and responsible for the secretion of gastrin.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: G cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: g cell line
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: g cell lines
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: g cell lineses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: g cell linous
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: g cellses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0004108
+  source_label: G cell
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:69328
+  source: PREGO
+  taxon_label: Pseudomonas sp. VLB120
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

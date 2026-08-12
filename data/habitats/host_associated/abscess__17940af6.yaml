@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.8423e76015
+label: Abscess
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.752ac1c5aa
+- mesh:D000038
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6343
+  source_label: Abscess
+  source_path: 'Host-associated > Mammals: Human > Nervous system > Brain > Abscess'
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 3
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

@@ -1,0 +1,34 @@
+identifier: ENVO:01000536
+label: factory
+definition: A factory (previously manufactory) or manufacturing plant is an industrial
+  site, usually consisting of buildings and machinery, or more commonly a complex
+  having several buildings, where workers manufacture goods or operate machines processing
+  one product into another.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Plant-Factory
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+- synonym_text: manufactory
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: manufacturing plant
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00003861
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:plant-factory
+  source_label: Plant-Factory
+  mapping_predicate: skos:closeMatch
+  assertion_count: 211
+  assertion_unit: STRAIN
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

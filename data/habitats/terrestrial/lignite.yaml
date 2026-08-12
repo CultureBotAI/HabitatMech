@@ -1,0 +1,26 @@
+identifier: ENVO:2000008
+label: lignite
+definition: A soft, brown, combustible, sedimentary rock formed from naturally compressed
+  peat.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: brown coal
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00005774
+- ENVO:02000091
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6466
+  source_label: Lignite
+  source_path: Environmental > Terrestrial > Soil > Peat > Lignite
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

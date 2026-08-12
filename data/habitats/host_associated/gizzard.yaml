@@ -1,0 +1,33 @@
+identifier: UBERON:0005052
+label: gizzard
+definition: The muscular enlargement of the alimentary canal that has usually thick
+  muscular walls and a tough horny lining for grinding the food and when the crop
+  is present follows it and the proventriculus.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: gastric mill
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: gigerium
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: ventriculus
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0000945
+- habitatmech:GOLD.7c20efa06b
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7432
+  source_label: Gizzard
+  source_path: Host-associated > Birds > Digestive system > Stomach > Gizzard
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

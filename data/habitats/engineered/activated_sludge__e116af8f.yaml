@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.5d1a568147
+label: Activated sludge
+habitat_category: ENGINEERED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00002046
+- habitatmech:GOLD.bf15464676
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8225
+  source_label: Activated sludge
+  source_path: Engineered > WWTP > A/O treatment system > A/O bioreactor > Activated
+    sludge
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

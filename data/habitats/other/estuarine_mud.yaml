@@ -1,0 +1,32 @@
+identifier: ENVO:00002160
+label: estuarine mud
+definition: Mud which is part of an estuary.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: estuarine muds
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:01000001
+- ENVO:01000813
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00002160
+  source_label: estuarine mud
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:326298
+  source: PREGO
+  taxon_label: Sulfurimonas denitrificans DSM 1251
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

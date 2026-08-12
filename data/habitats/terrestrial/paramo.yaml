@@ -1,0 +1,23 @@
+identifier: ENVO:01001360
+label: Paramo
+definition: An alpine tundra ecosystem which exists above the continuous timberline
+  but below the permanent snowline on elevated land in tropical regions.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:01000340
+- ENVO:01001371
+- ENVO:01001701
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8530
+  source_label: Paramo
+  source_path: Environmental > Terrestrial > Soil > Alpine > Paramo
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

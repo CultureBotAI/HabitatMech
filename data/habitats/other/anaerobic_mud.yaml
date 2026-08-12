@@ -1,0 +1,40 @@
+identifier: ENVO:00002133
+label: anaerobic mud
+definition: Mud which has no or neglible concentrations of dissolved oxygen.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: anaerobic muds
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: anoxic mud
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: anoxic mud
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: anoxic muds
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:01000001
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00002133
+  source_label: anaerobic mud
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:439292
+  source: PREGO
+  taxon_label: '[Bacillus] selenitireducens MLS10'
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

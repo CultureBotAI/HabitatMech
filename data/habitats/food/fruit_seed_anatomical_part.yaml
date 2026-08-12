@@ -1,0 +1,29 @@
+identifier: FOODON:03420295
+label: fruit seed (anatomical part)
+definition: 'The part of a flowering plant that typically contains the embryo with
+  its protective coat and stored food and that can develop into a new plant under
+  the proper conditions; fertilised and mature ovule (Source: Webster''s).  Seeds
+  and fruits commonly called seeds include: grain, kernel, berry, ear, corn, nut.
+  (Source: Webster''s Thesaurus).'
+definition_source: FOODON
+habitat_category: FOOD
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Fruit-Seed
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+parent_habitats:
+- FOODON:03420110
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:fruit-seed
+  source_label: Fruit-Seed
+  mapping_predicate: skos:closeMatch
+  assertion_count: 228
+  assertion_unit: STRAIN
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

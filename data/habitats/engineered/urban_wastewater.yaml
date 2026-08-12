@@ -1,0 +1,17 @@
+identifier: habitatmech:GOLD.d8d3393339
+label: Urban wastewater
+habitat_category: ENGINEERED
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00002001
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8097
+  source_label: Urban wastewater
+  source_path: Engineered > Wastewater > Urban wastewater
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

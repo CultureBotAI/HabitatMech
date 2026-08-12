@@ -1,0 +1,60 @@
+identifier: BTO:0000959
+label: esophagus
+definition: A muscular tube that in humans is about nine inches (23 centimeters) long
+  and passes from the pharynx down the neck between the trachea and the spinal column
+  and behind the left bronchus where it pierces the diaphragm slightly to the left
+  of the middle line and joins the cardiac end of the stomach.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: esophagal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: esophagi
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: esophaguses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: gullet
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: gullets
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: oesophagal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: oesophagi
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: oesophagus
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: oesophaguses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000959
+  source_label: esophagus
+  assertion_count: 2
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1131757
+  source: PREGO
+  taxon_label: Pseudomonas aeruginosa MPAO1/P1
+  score: 3.0
+- taxon_id: NCBITaxon:1131758
+  source: PREGO
+  taxon_label: Pseudomonas aeruginosa MPAO1/P2
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

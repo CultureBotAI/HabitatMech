@@ -1,0 +1,36 @@
+identifier: BTO:0002854
+label: corn silk
+definition: The styles and stigmas that appear as a silky tuft or tassel at the tip
+  of an ear of corn, used as a diuretic in herbal medicine.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: corn silks
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: silk
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0001303
+- BTO:0001313
+source_attestations:
+- source: PREGO
+  source_id: BTO:0002854
+  source_label: corn silk
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1346330
+  source: PREGO
+  taxon_label: Sphingobacterium paucimobilis HER1398
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

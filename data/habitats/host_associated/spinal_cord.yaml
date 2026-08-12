@@ -1,0 +1,47 @@
+identifier: BTO:0001279
+label: spinal cord
+definition: The cord of nervous tissue that extends from the brain lengthwise along
+  the back in the vertebral canal, gives off the pairs of spinal nerves, carries impulses
+  to and from the brain, and serves as a center for initiating and coordinating many
+  reflex acts.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: medulla spinalis
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: medulla spinalises
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: spinal cords
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: spinal medulla
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: spinal medullal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: spinal medullas
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001279
+  source_label: spinal cord
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:529507
+  source: PREGO
+  taxon_label: Proteus mirabilis HI4320
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.3a27c6e1bf
+label: Colon cancer
+habitat_category: HOST_ASSOCIATED
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.9bb307824f
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6177
+  source_label: Colon cancer
+  source_path: 'Host-associated > Mammals: Human > Malignant tumor > Carcinoma > Colon
+    cancer'
+  assertion_count: 2
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

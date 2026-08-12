@@ -1,0 +1,66 @@
+identifier: ENVO:01000316
+label: alkaline environment
+definition: An alkaline environment is an environment in which entities are exposed
+  to high pH, typically greater than a pH of 9.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: alkaline environments
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:01000997
+source_attestations:
+- source: PREGO
+  source_id: ENVO:01000316
+  source_label: alkaline environment
+  assertion_count: 10
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:238
+  source: PREGO
+  taxon_label: Elizabethkingia meningoseptica
+  score: 4.0
+- taxon_id: NCBITaxon:28188
+  source: PREGO
+  taxon_label: Capnocytophaga canimorsus
+  score: 4.0
+- taxon_id: NCBITaxon:36987
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:379066
+  source: PREGO
+  taxon_label: Gemmatimonas aurantiaca T-27
+  score: 4.0
+- taxon_id: NCBITaxon:379347
+  source: PREGO
+  taxon_label: Tritonibacter mobilis
+  score: 4.0
+- taxon_id: NCBITaxon:384
+  source: PREGO
+  taxon_label: Rhizobium leguminosarum
+  score: 4.0
+- taxon_id: NCBITaxon:4558
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:996
+  source: PREGO
+  taxon_label: Flavobacterium columnare
+  score: 4.0
+- taxon_id: NCBITaxon:54121
+  source: PREGO
+  taxon_label: Halanaerobium congolense
+  score: 1.10314
+- taxon_id: NCBITaxon:53245
+  source: PREGO
+  taxon_label: Desulfonatronovibrio hydrogenovorans
+  score: 1.08264
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

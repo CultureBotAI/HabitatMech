@@ -1,0 +1,147 @@
+identifier: BTO:0000237
+label: cerebrospinal fluid
+definition: The serumlike fluid that circulates through the ventricles of the brain,
+  the cavity of the spinal cord, and the subarachnoid space, functioning in shock
+  absorption. A liquid that is comparable to serum but contains less dissolved material,
+  that is secreted from the blood into the lateral ventricles of the brain by the
+  choroid plexus, circulates through the ventricles to the spaces between the meninges
+  about the brain and spinal cord, and is resorbed into the blood through the subarachnoid
+  sinuses, and that serves chiefly to maintain uniform pressure within the brain and
+  spinal cord.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: CSF
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: cerebral spinal fluid
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: cerebral spinal fluids
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: cerebrospinal fluids
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: spinal fluid
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: spinal fluids
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000237
+  source_label: cerebrospinal fluid
+  assertion_count: 38
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1121103
+  source: PREGO
+  taxon_label: Balneatrix alpica DSM 16621
+  score: 4.0
+- taxon_id: NCBITaxon:1096995
+  source: PREGO
+  taxon_label: Acinetobacter baumannii BJAB07104
+  score: 3.0
+- taxon_id: NCBITaxon:1096996
+  source: PREGO
+  taxon_label: Acinetobacter baumannii BJAB0715
+  score: 3.0
+- taxon_id: NCBITaxon:1096997
+  source: PREGO
+  taxon_label: Acinetobacter baumannii BJAB0868
+  score: 3.0
+- taxon_id: NCBITaxon:1213463
+  source: PREGO
+  taxon_label: Mycoplasmoides pneumoniae 19294
+  score: 3.0
+- taxon_id: NCBITaxon:122587
+  source: PREGO
+  taxon_label: Neisseria meningitidis Z2491
+  score: 3.0
+- taxon_id: NCBITaxon:1233262
+  source: PREGO
+  taxon_label: Mycoplasmoides pneumoniae PO1
+  score: 3.0
+- taxon_id: NCBITaxon:1236904
+  source: PREGO
+  taxon_label: Mycoplasmoides pneumoniae PI 1428
+  score: 3.0
+- taxon_id: NCBITaxon:1238993
+  source: PREGO
+  taxon_label: Mycoplasmoides pneumoniae M129-B7
+  score: 3.0
+- taxon_id: NCBITaxon:1263756
+  source: PREGO
+  taxon_label: Mycoplasmoides pneumoniae 54089
+  score: 3.0
+- taxon_id: NCBITaxon:1263757
+  source: PREGO
+  taxon_label: Mycoplasmoides pneumoniae 54524
+  score: 3.0
+- taxon_id: NCBITaxon:1263758
+  source: PREGO
+  taxon_label: Mycoplasmoides pneumoniae 51494
+  score: 3.0
+- taxon_id: NCBITaxon:1263760
+  source: PREGO
+  taxon_label: Mycoplasmoides pneumoniae 85138
+  score: 3.0
+- taxon_id: NCBITaxon:1263761
+  source: PREGO
+  taxon_label: Mycoplasmoides pneumoniae 39443
+  score: 3.0
+- taxon_id: NCBITaxon:1263762
+  source: PREGO
+  taxon_label: Mycoplasmoides pneumoniae 85084
+  score: 3.0
+- taxon_id: NCBITaxon:1263763
+  source: PREGO
+  taxon_label: Mycoplasmoides pneumoniae M1139
+  score: 3.0
+- taxon_id: NCBITaxon:1263835
+  source: PREGO
+  taxon_label: Mycoplasmoides pneumoniae MAC
+  score: 3.0
+- taxon_id: NCBITaxon:1280940
+  source: PREGO
+  taxon_label: Mycoplasmoides pneumoniae M2592
+  score: 3.0
+- taxon_id: NCBITaxon:1313
+  source: PREGO
+  taxon_label: Streptococcus pneumoniae
+  score: 3.0
+- taxon_id: NCBITaxon:1315977
+  source: PREGO
+  taxon_label: Mycobacterium tuberculosis PR08
+  score: 3.0
+- taxon_id: NCBITaxon:1408179
+  source: PREGO
+  taxon_label: Streptococcus pneumoniae A026
+  score: 3.0
+- taxon_id: NCBITaxon:1472682
+  source: PREGO
+  taxon_label: Psychrobacter sp. 310(2012)
+  score: 3.0
+- taxon_id: NCBITaxon:1643450
+  source: PREGO
+  taxon_label: Devosia sp. H5989
+  score: 3.0
+- taxon_id: NCBITaxon:1747766
+  source: PREGO
+  taxon_label: Mycobacterium sp. NAZ190054
+  score: 3.0
+- taxon_id: NCBITaxon:1773
+  source: PREGO
+  taxon_label: Mycobacterium tuberculosis
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

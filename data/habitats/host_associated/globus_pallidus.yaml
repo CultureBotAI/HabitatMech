@@ -1,0 +1,70 @@
+identifier: BTO:0002246
+label: globus pallidus
+definition: The smaller and more medial part of the lentiform nucleus of the brain,
+  separated from the putamen by the lateral medullary lamina. In official anatomic
+  nomenclature, it is divided by the medial medullary lamina into two parts, lateral
+  and medial, both of which have extensive connections with the corpus striatum, thalamus,
+  and mesencephalon. The paleostriatum is the phylogenetically older part of the corpus
+  striatum represented by the globus pallidus.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: globus pallidal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: globus pallidi
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: globus palliduses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: pale bodies
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: pale body
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: paleostriata
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: paleostriatal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: paleostriatum
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: paleostriatums
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: pallida
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: pallidal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: pallidum
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: pallidums
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0002246
+  source_label: globus pallidus
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1155775
+  source: PREGO
+  taxon_label: Treponema pallidum str. Fribourg-Blanc
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

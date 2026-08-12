@@ -1,0 +1,179 @@
+identifier: ENVO:00000054
+label: saline marsh
+definition: A marsh whose water contains a considerable quantity of dissolved salts.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Salt marsh
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: saline marshes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: saline marshic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: salt marsh
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: salt marsh
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: salt marshes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: salt marshic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: salting
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: salting
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: saltings
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: tidal marsh
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: tidal marsh
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: tidal marshes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: tidal marshic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: wetland
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00000035
+- habitatmech:GOLD.ce244e62cd
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7711
+  source_label: Salt marsh
+  source_path: Environmental > Aquatic > Non-marine Saline and Alkaline > Salt marsh
+  mapping_predicate: skos:closeMatch
+  assertion_count: 16
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: PREGO
+  source_id: ENVO:00000054
+  source_label: saline marsh
+  assertion_count: 65
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:203122
+  source: PREGO
+  taxon_label: Saccharophagus degradans 2-40
+  score: 4.0
+- taxon_id: NCBITaxon:456320
+  source: PREGO
+  taxon_label: Methanococcus voltae A3
+  score: 4.0
+- taxon_id: NCBITaxon:485914
+  source: PREGO
+  taxon_label: Halomicrobium mukohataei DSM 12286
+  score: 4.0
+- taxon_id: NCBITaxon:69960
+  source: PREGO
+  taxon_label: Rhodospira trueperi
+  score: 4.0
+- taxon_id: NCBITaxon:765912
+  source: PREGO
+  taxon_label: Thioflavicoccus mobilis 8321
+  score: 4.0
+- taxon_id: NCBITaxon:928729
+  source: PREGO
+  taxon_label: Saccharomonospora halophila 8
+  score: 4.0
+- taxon_id: NCBITaxon:1123275
+  source: PREGO
+  taxon_label: Spirochaeta cellobiosiphila DSM 17781
+  score: 3.0
+- taxon_id: NCBITaxon:883
+  source: PREGO
+  taxon_label: Nitratidesulfovibrio vulgaris str. 'Miyazaki F'
+  score: 3.0
+- taxon_id: NCBITaxon:416261
+  source: PREGO
+  taxon_label: Desulfobacterium sp. AK1
+  score: 1.25528
+- taxon_id: NCBITaxon:480
+  source: PREGO
+  taxon_label: Moraxella catarrhalis
+  score: 1.18764
+- taxon_id: NCBITaxon:115781
+  source: PREGO
+  taxon_label: Desulfotignum balticum
+  score: 1.15774
+- taxon_id: NCBITaxon:591019
+  source: PREGO
+  taxon_label: Staphylothermus hellenicus DSM 12710
+  score: 1.10687
+- taxon_id: NCBITaxon:2850
+  source: PREGO
+  taxon_label: Phaeodactylum tricornutum
+  score: 1.09561
+- taxon_id: NCBITaxon:146919
+  source: PREGO
+  taxon_label: Salinibacter ruber
+  score: 1.08599
+- taxon_id: NCBITaxon:897
+  source: PREGO
+  taxon_label: Desulfococcus multivorans
+  score: 1.08449
+- taxon_id: NCBITaxon:644281
+  source: PREGO
+  taxon_label: Methanocaldococcus sp. FS406-22
+  score: 1.08234
+- taxon_id: NCBITaxon:399550
+  source: PREGO
+  taxon_label: Staphylothermus marinus F1
+  score: 1.07878
+- taxon_id: NCBITaxon:35816
+  source: PREGO
+  taxon_label: Pelobacter acidigallici
+  score: 1.0724
+- taxon_id: NCBITaxon:1058
+  source: PREGO
+  taxon_label: Thiocapsa roseopersicina
+  score: 1.06958
+- taxon_id: NCBITaxon:633148
+  source: PREGO
+  taxon_label: Thermosphaera aggregans DSM 11486
+  score: 1.06812
+- taxon_id: NCBITaxon:723627
+  source: PREGO
+  taxon_label: uncultured Rhizobium sp. HF0500_35F13
+  score: 1.06536
+- taxon_id: NCBITaxon:243232
+  source: PREGO
+  taxon_label: Methanocaldococcus jannaschii DSM 2661
+  score: 1.06313
+- taxon_id: NCBITaxon:579137
+  source: PREGO
+  taxon_label: Methanocaldococcus vulcanius M7
+  score: 1.06278
+- taxon_id: NCBITaxon:765177
+  source: PREGO
+  taxon_label: Desulfurococcus mucosus DSM 2162
+  score: 1.06104
+- taxon_id: NCBITaxon:340102
+  source: PREGO
+  taxon_label: Pyrobaculum arsenaticum DSM 13514
+  score: 1.05584
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'

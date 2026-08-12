@@ -1,0 +1,18 @@
+identifier: habitatmech:GOLD.9bb307824f
+label: Carcinoma
+habitat_category: HOST_ASSOCIATED
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.31d7fab4fa
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6172
+  source_label: Carcinoma
+  source_path: 'Host-associated > Mammals: Human > Malignant tumor > Carcinoma'
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

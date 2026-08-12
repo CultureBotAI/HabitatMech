@@ -1,0 +1,51 @@
+identifier: BTO:0000367
+label: duodenal mucosa
+definition: The duodenal mucosa (and that of the rest of the intestines) is classified
+  as simple columnar. The cells rest on a basal lamina, which you may be able to make
+  out in this image as a bright line underneath the cells. They sit over the lamina
+  propria, the loose collagenous CT, filled with cells, that constitutes the core
+  of each villus.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: duodenal mucosal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: duodenal mucosas
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: duodenum mucosa
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: duodenum mucosal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: duodenum mucosas
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000642
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000367
+  source_label: duodenal mucosa
+  assertion_count: 2
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:71999
+  source: PREGO
+  taxon_label: Kocuria palustris
+  score: 3.0
+- taxon_id: NCBITaxon:767452
+  source: PREGO
+  taxon_label: Serinicoccus chungangensis
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

@@ -1,0 +1,35 @@
+identifier: UBERON:0003684
+label: abdominal cavity
+definition: The part of the ventral body cavity that is within the abdomen proper
+  (excluding the pelvic cavity).
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: cavitas abdominis
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: cavity of abdominal compartment
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: cavity of compartment of abdomen
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: space of abdominal compartment
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0000464
+- habitatmech:GOLD.e889967f4f
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6742
+  source_label: Abdominal cavity
+  source_path: Host-associated > Mammals > Abdominal cavity
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

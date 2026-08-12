@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.33f4720550
+label: Contaminated
+habitat_category: AQUATIC
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.7f8e268653
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4166
+  source_label: Contaminated
+  source_path: Environmental > Aquatic > Freshwater > Groundwater > Contaminated
+  assertion_count: 22
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

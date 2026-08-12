@@ -1,0 +1,54 @@
+identifier: BTO:0001947
+label: HRT-18 cell
+definition: Human, rectum-anus, adenocarcinoma cell line.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: hrt18
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: hrt18 cell line
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: hrt18 cell lines
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: hrt18 cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0001532
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001947
+  source_label: HRT-18 cell
+  assertion_count: 6
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:422214
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:422215
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:422217
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:422218
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:422219
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:422220
+  source: PREGO
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

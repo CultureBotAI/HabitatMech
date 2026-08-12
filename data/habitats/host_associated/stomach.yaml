@@ -1,0 +1,134 @@
+identifier: BTO:0001307
+label: stomach
+definition: A dilatation of the alimentary canal of a vertebrate communicating anteriorly
+  with the esophagus and posteriorly with the duodenum.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: gaster
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: gasters
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: stomaches
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: stomachic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001307
+  source_label: stomach
+  assertion_count: 150
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1265
+  source: PREGO
+  taxon_label: Ruminococcus flavefaciens
+  score: 4.0
+- taxon_id: NCBITaxon:1335
+  source: PREGO
+  taxon_label: Streptococcus equinus
+  score: 4.0
+- taxon_id: NCBITaxon:1351
+  source: PREGO
+  taxon_label: Enterococcus faecalis
+  score: 4.0
+- taxon_id: NCBITaxon:1396
+  source: PREGO
+  taxon_label: Bacillus cereus
+  score: 4.0
+- taxon_id: NCBITaxon:1526
+  source: PREGO
+  taxon_label: '[Clostridium] aminophilum'
+  score: 4.0
+- taxon_id: NCBITaxon:163
+  source: PREGO
+  taxon_label: Treponema bryantii
+  score: 4.0
+- taxon_id: NCBITaxon:1761780
+  source: PREGO
+  taxon_label: Butyrivibrio sp. ob235
+  score: 4.0
+- taxon_id: NCBITaxon:1761782
+  source: PREGO
+  taxon_label: Enterobacter sp. kpr-6
+  score: 4.0
+- taxon_id: NCBITaxon:1761783
+  source: PREGO
+  taxon_label: Enterococcus sp. kppr-6
+  score: 4.0
+- taxon_id: NCBITaxon:1761883
+  source: PREGO
+  taxon_label: Prevotella sp. kh1p2
+  score: 4.0
+- taxon_id: NCBITaxon:1761884
+  source: PREGO
+  taxon_label: Prevotella sp. khp1
+  score: 4.0
+- taxon_id: NCBITaxon:1761885
+  source: PREGO
+  taxon_label: Prevotella sp. khp7
+  score: 4.0
+- taxon_id: NCBITaxon:1761886
+  source: PREGO
+  taxon_label: Prevotella sp. lc2012
+  score: 4.0
+- taxon_id: NCBITaxon:1797112
+  source: PREGO
+  taxon_label: Olsenella sp. kh2p3
+  score: 4.0
+- taxon_id: NCBITaxon:1798168
+  source: PREGO
+  taxon_label: Pseudobutyrivibrio sp. NOR37
+  score: 4.0
+- taxon_id: NCBITaxon:1798184
+  source: PREGO
+  taxon_label: Sarcina sp. DSM 11001
+  score: 4.0
+- taxon_id: NCBITaxon:1798185
+  source: PREGO
+  taxon_label: Pseudobutyrivibrio sp. UC1225
+  score: 4.0
+- taxon_id: NCBITaxon:1798186
+  source: PREGO
+  taxon_label: Pseudobutyrivibrio sp. OR37
+  score: 4.0
+- taxon_id: NCBITaxon:1898203
+  source: PREGO
+  taxon_label: Lachnospiraceae bacterium
+  score: 4.0
+- taxon_id: NCBITaxon:1898205
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:1898207
+  source: PREGO
+  taxon_label: Clostridiales bacterium
+  score: 4.0
+- taxon_id: NCBITaxon:1908203
+  source: PREGO
+  taxon_label: uncultured Methanomethylophilus sp.
+  score: 4.0
+- taxon_id: NCBITaxon:1945874
+  source: PREGO
+  taxon_label: Fibrobacter sp. UWB16
+  score: 4.0
+- taxon_id: NCBITaxon:1945884
+  source: PREGO
+  taxon_label: Olsenella sp. KH1P3
+  score: 4.0
+- taxon_id: NCBITaxon:253161
+  source: PREGO
+  taxon_label: uncultured Methanobrevibacter sp.
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

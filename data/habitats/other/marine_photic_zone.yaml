@@ -1,0 +1,148 @@
+identifier: ENVO:00000209
+label: marine photic zone
+definition: The zone of an ocean from the surface to where photosynthesis can occur,
+  due to the penetration of light.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: PhoticZone
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: epipelagic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: epipelagic zone
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: epipelagic zone
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: epipelagics
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: photic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: photic zone
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: photics
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:01000295
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00000209
+  source_label: marine photic zone
+  assertion_count: 1607
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:110662
+  source: PREGO
+  taxon_label: Synechococcus sp. CC9605
+  score: 4.0
+- taxon_id: NCBITaxon:316279
+  source: PREGO
+  taxon_label: Synechococcus sp. CC9902
+  score: 4.0
+- taxon_id: NCBITaxon:59920
+  source: PREGO
+  taxon_label: Prochlorococcus marinus str. NATL2A
+  score: 4.0
+- taxon_id: NCBITaxon:74546
+  source: PREGO
+  taxon_label: Prochlorococcus marinus str. MIT 9312
+  score: 4.0
+- taxon_id: NCBITaxon:74547
+  source: PREGO
+  taxon_label: Prochlorococcus marinus str. MIT 9313
+  score: 4.0
+- taxon_id: NCBITaxon:89184
+  source: PREGO
+  taxon_label: Ruegeria pomeroyi
+  score: 2.08195
+- taxon_id: NCBITaxon:86104
+  source: PREGO
+  taxon_label: Arenibacter latericius
+  score: 2.06634
+- taxon_id: NCBITaxon:320388
+  source: PREGO
+  taxon_label: Burkholderia mallei SAVP1
+  score: 2.01788
+- taxon_id: NCBITaxon:372461
+  source: PREGO
+  taxon_label: Buchnera aphidicola BCc
+  score: 2.00223
+- taxon_id: NCBITaxon:302409
+  source: PREGO
+  taxon_label: Ehrlichia ruminantium str. Gardel
+  score: 1.99942
+- taxon_id: NCBITaxon:332415
+  source: PREGO
+  taxon_label: Ehrlichia chaffeensis str. Sapulpa
+  score: 1.98201
+- taxon_id: NCBITaxon:880447
+  source: PREGO
+  taxon_label: Mycoplasma leachii PG50
+  score: 1.98193
+- taxon_id: NCBITaxon:880
+  source: PREGO
+  taxon_label: Maridesulfovibrio salexigens
+  score: 1.95036
+- taxon_id: NCBITaxon:198804
+  source: PREGO
+  taxon_label: Buchnera aphidicola str. Sg (Schizaphis graminum)
+  score: 1.92951
+- taxon_id: NCBITaxon:224915
+  source: PREGO
+  taxon_label: Buchnera aphidicola str. Bp (Baizongia pistaciae)
+  score: 1.92625
+- taxon_id: NCBITaxon:515618
+  source: PREGO
+  taxon_label: Candidatus Riesia pediculicola USDA
+  score: 1.92571
+- taxon_id: NCBITaxon:36870
+  source: PREGO
+  taxon_label: Wigglesworthia glossinidia endosymbiont of Glossina brevipalpis
+  score: 1.90248
+- taxon_id: NCBITaxon:340047
+  source: PREGO
+  taxon_label: Mycoplasma capricolum subsp. capricolum ATCC 27343
+  score: 1.89277
+- taxon_id: NCBITaxon:203907
+  source: PREGO
+  taxon_label: Candidatus Blochmanniella floridana
+  score: 1.8922
+- taxon_id: NCBITaxon:264
+  source: PREGO
+  taxon_label: Francisella tularensis subsp. novicida
+  score: 1.87989
+- taxon_id: NCBITaxon:357244
+  source: PREGO
+  taxon_label: Orientia tsutsugamushi str. Boryong
+  score: 1.87141
+- taxon_id: NCBITaxon:35845
+  source: PREGO
+  score: 1.87013
+- taxon_id: NCBITaxon:293614
+  source: PREGO
+  taxon_label: Rickettsia akari str. Hartford
+  score: 1.86007
+- taxon_id: NCBITaxon:257363
+  source: PREGO
+  taxon_label: Rickettsia typhi str. Wilmington
+  score: 1.85863
+- taxon_id: NCBITaxon:205920
+  source: PREGO
+  taxon_label: Ehrlichia chaffeensis str. Arkansas
+  score: 1.85621
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

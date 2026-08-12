@@ -1,0 +1,42 @@
+identifier: BTO:0000146
+label: brain stem
+definition: The part of the brain composed of the mesencephalon, pons, and medulla
+  oblongata and connecting the spinal cord with the forebrain and cerebrum.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: brain stems
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: truncus encephalical
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: truncus encephalici
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: truncus encephalicus
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: truncus encephalicuses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000146
+  source_label: brain stem
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1329902
+  source: PREGO
+  taxon_label: Mannheimia haemolytica MhBrain2012
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

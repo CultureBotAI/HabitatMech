@@ -1,0 +1,93 @@
+identifier: ENVO:00000363
+label: area designated as a nature reserve
+definition: A protected area of importance for wildlife, flora, fauna or features
+  of geological or other special interest, which is reserved and managed for conservation
+  and to provide special opportunities for study or research. Nature reserves may
+  be designated by government institutions in some countries, such as the United Kingdom,
+  or by private landowners, such as charities and research institutions, regardless
+  of nationality.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Nature reserve
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: natural preserve
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: natural preserve
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: natural preserves
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: natural reserve
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: natural reserve
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: natural reserves
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: nature preserve
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: nature preserve
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: nature preserves
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: nature reserve
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: nature reserve
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: nature reserves
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: protected reserves
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: protected reserveses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00000358
+- ENVO:00001998
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5616
+  source_label: Nature reserve
+  source_path: Environmental > Terrestrial > Soil > Nature reserve
+  mapping_predicate: skos:closeMatch
+- source: PREGO
+  source_id: ENVO:00000363
+  source_label: area designated as a nature reserve
+  assertion_count: 3
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1198114
+  source: PREGO
+  taxon_label: Granulicella tundricola MP5ACTX9
+  score: 3.0
+- taxon_id: NCBITaxon:405559
+  source: PREGO
+  taxon_label: Paracoccus saliphilus
+  score: 3.0
+- taxon_id: NCBITaxon:652788
+  source: PREGO
+  taxon_label: Mucilaginibacter frigoritolerans
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'

@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.ec9128257e
+label: Inner ear
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- BTO:0000630
+- habitatmech:GOLD.b842078e17
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6642
+  source_label: Inner ear
+  source_path: 'Host-associated > Mammals: Human > Auditory/Hearing system > Inner
+    ear'
+  mapping_predicate: skos:narrowMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

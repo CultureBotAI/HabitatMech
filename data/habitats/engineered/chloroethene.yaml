@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.9c0c555f09
+label: Chloroethene
+habitat_category: ENGINEERED
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.063960efcc
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:3862
+  source_label: Chloroethene
+  source_path: Engineered > Bioremediation > Tetrachloroethylene and derivatives >
+    Chloroethene
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

@@ -1,0 +1,123 @@
+identifier: BTO:0005655
+label: Th17 cell
+definition: A subset of T helper cells producing interleukin 17. They are developmentally
+  distinct from Th1 and Th2 cells. They create inflammation and tissue injury in autoimmune
+  disease such as multiple sclerosis (which was previously thought to be caused by
+  Th1 cells), psoriasis, autoimmune uveitis, juvenile diabetes, rheumatoid arthritis,
+  and Crohns disease.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: T helper 17 cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0002417
+source_attestations:
+- source: PREGO
+  source_id: BTO:0005655
+  source_label: Th17 cell
+  assertion_count: 23
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1041504
+  source: PREGO
+  taxon_label: Candidatus Arthromitus sp. SFB-rat-Yit
+  score: 3.0
+- taxon_id: NCBITaxon:1041809
+  source: PREGO
+  taxon_label: Candidatus Arthromitus sp. SFB-mouse-Yit
+  score: 3.0
+- taxon_id: NCBITaxon:1073972
+  source: PREGO
+  taxon_label: Candidatus Arthromitus sp. SFB-mouse-NYU
+  score: 3.0
+- taxon_id: NCBITaxon:1697779
+  source: PREGO
+  taxon_label: Clostridia bacterium UC5.1-1F7
+  score: 3.0
+- taxon_id: NCBITaxon:1697780
+  source: PREGO
+  taxon_label: Clostridia bacterium UC5.1-1D2
+  score: 3.0
+- taxon_id: NCBITaxon:1697781
+  source: PREGO
+  taxon_label: Clostridia bacterium UC5.1-2E3
+  score: 3.0
+- taxon_id: NCBITaxon:1697782
+  source: PREGO
+  taxon_label: Clostridia bacterium UC5.1-1A9
+  score: 3.0
+- taxon_id: NCBITaxon:1697783
+  source: PREGO
+  taxon_label: Clostridia bacterium UC5.1-1F8
+  score: 3.0
+- taxon_id: NCBITaxon:1697784
+  source: PREGO
+  taxon_label: Clostridia bacterium UC5.1-1D4
+  score: 3.0
+- taxon_id: NCBITaxon:1697785
+  source: PREGO
+  taxon_label: Clostridia bacterium UC5.1-2D9
+  score: 3.0
+- taxon_id: NCBITaxon:1697786
+  source: PREGO
+  taxon_label: Clostridia bacterium UC5.1-2E1
+  score: 3.0
+- taxon_id: NCBITaxon:1697787
+  source: PREGO
+  taxon_label: Clostridia bacterium UC5.1-1D10
+  score: 3.0
+- taxon_id: NCBITaxon:1697788
+  source: PREGO
+  taxon_label: Clostridia bacterium UC5.1-2H6
+  score: 3.0
+- taxon_id: NCBITaxon:1697789
+  source: PREGO
+  taxon_label: Clostridia bacterium UC5.1-1E3
+  score: 3.0
+- taxon_id: NCBITaxon:1697790
+  source: PREGO
+  taxon_label: Clostridia bacterium UC5.1-1C12
+  score: 3.0
+- taxon_id: NCBITaxon:1697791
+  source: PREGO
+  taxon_label: Clostridia bacterium UC5.1-2G4
+  score: 3.0
+- taxon_id: NCBITaxon:1697792
+  source: PREGO
+  taxon_label: Clostridia bacterium UC5.1-2F7
+  score: 3.0
+- taxon_id: NCBITaxon:1697793
+  source: PREGO
+  taxon_label: Clostridia bacterium UC5.1-1E11
+  score: 3.0
+- taxon_id: NCBITaxon:1697794
+  source: PREGO
+  taxon_label: Clostridia bacterium UC5.1-1D1
+  score: 3.0
+- taxon_id: NCBITaxon:1697795
+  source: PREGO
+  taxon_label: Clostridia bacterium UC5.1-2H11
+  score: 3.0
+- taxon_id: NCBITaxon:1697796
+  source: PREGO
+  taxon_label: Bacteroidia bacterium UC5.1-2G11
+  score: 3.0
+- taxon_id: NCBITaxon:1697797
+  source: PREGO
+  taxon_label: Actinobacteria bacterium UC5.1-1B11
+  score: 3.0
+- taxon_id: NCBITaxon:1697798
+  source: PREGO
+  taxon_label: Actinobacteria bacterium UC5.1-1C2
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

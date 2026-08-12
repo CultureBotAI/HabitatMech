@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.034f972dba
+label: Surface
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0002416
+- habitatmech:GOLD.e898437067
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8177
+  source_label: Surface
+  source_path: Host-associated > Plants > Phyllosphere > Carposphere > Surface
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 3
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

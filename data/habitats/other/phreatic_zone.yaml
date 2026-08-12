@@ -1,0 +1,142 @@
+identifier: ENVO:00000329
+label: phreatic zone
+definition: A compound astronomical body part which is located beneath the land surface
+  and in which all interstices are filled with water that has a hydraulic head greater
+  than atmospheric pressure due to the weight of overlying groundwater.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: phreatic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: phreatics
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: zone of saturation
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: zone of saturation
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: zone of saturational
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: zone of saturations
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:01001784
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00000329
+  source_label: phreatic zone
+  assertion_count: 48
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:1265
+  source: PREGO
+  taxon_label: Ruminococcus flavefaciens
+  score: 4.0
+- taxon_id: NCBITaxon:1409
+  source: PREGO
+  taxon_label: 'Bacillus sp. (in: firmicutes)'
+  score: 4.0
+- taxon_id: NCBITaxon:173
+  source: PREGO
+  taxon_label: Leptospira interrogans
+  score: 4.0
+- taxon_id: NCBITaxon:193
+  source: PREGO
+  taxon_label: Azospirillum lipoferum
+  score: 4.0
+- taxon_id: NCBITaxon:214688
+  source: PREGO
+  taxon_label: Gemmata obscuriglobus UQM 2246
+  score: 4.0
+- taxon_id: NCBITaxon:266940
+  source: PREGO
+  taxon_label: Kineococcus radiotolerans SRS30216 = ATCC BAA-149
+  score: 4.0
+- taxon_id: NCBITaxon:28122
+  source: PREGO
+  taxon_label: Fibrobacter intestinalis
+  score: 4.0
+- taxon_id: NCBITaxon:28262
+  source: PREGO
+  taxon_label: Thermodesulfovibrio yellowstonii
+  score: 4.0
+- taxon_id: NCBITaxon:29290
+  source: PREGO
+  taxon_label: Candidatus Magnetobacterium bavaricum
+  score: 4.0
+- taxon_id: NCBITaxon:29346
+  source: PREGO
+  taxon_label: Alkalithermobacter thermoalcaliphilus
+  score: 4.0
+- taxon_id: NCBITaxon:29539
+  source: PREGO
+  taxon_label: Thermoleophilum album
+  score: 4.0
+- taxon_id: NCBITaxon:29549
+  source: PREGO
+  taxon_label: Rhodothermus marinus
+  score: 4.0
+- taxon_id: NCBITaxon:31910
+  source: PREGO
+  taxon_label: Halovibrio variabilis
+  score: 4.0
+- taxon_id: NCBITaxon:330214
+  source: PREGO
+  taxon_label: Nitrospira defluvii
+  score: 4.0
+- taxon_id: NCBITaxon:36987
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:379066
+  source: PREGO
+  taxon_label: Gemmatimonas aurantiaca T-27
+  score: 4.0
+- taxon_id: NCBITaxon:391606
+  source: PREGO
+  taxon_label: Caldanaerobacter subterraneus subsp. pacificus DSM 12653
+  score: 4.0
+- taxon_id: NCBITaxon:393131
+  source: PREGO
+  taxon_label: Listeria monocytogenes J2818
+  score: 4.0
+- taxon_id: NCBITaxon:393480
+  source: PREGO
+  taxon_label: Fusobacterium polymorphum ATCC 10953
+  score: 4.0
+- taxon_id: NCBITaxon:39946
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:411462
+  source: PREGO
+  taxon_label: Dorea longicatena DSM 13814
+  score: 4.0
+- taxon_id: NCBITaxon:411467
+  source: PREGO
+  taxon_label: Pseudoflavonifractor capillosus ATCC 29799
+  score: 4.0
+- taxon_id: NCBITaxon:411477
+  source: PREGO
+  taxon_label: Parabacteroides merdae ATCC 43184
+  score: 4.0
+- taxon_id: NCBITaxon:411485
+  source: PREGO
+  taxon_label: Faecalibacterium prausnitzii M21/2
+  score: 4.0
+- taxon_id: NCBITaxon:411902
+  source: PREGO
+  taxon_label: Enterocloster bolteae ATCC BAA-613
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

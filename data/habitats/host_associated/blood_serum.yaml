@@ -1,0 +1,44 @@
+identifier: UBERON:0001977
+label: blood serum
+definition: The portion of blood plasma that excludes clotting factors.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Serum
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: serum
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0000179
+- habitatmech:GOLD.6c6aab19d3
+- habitatmech:GOLD.d25ff4a586
+- habitatmech:GOLD.f46a5017f9
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4430
+  source_label: Serum
+  source_path: 'Host-associated > Mammals: Human > Circulatory system > Blood > Serum'
+  mapping_predicate: skos:exactMatch
+  assertion_count: 2
+  assertion_unit: ORGANISM
+- source: GOLD
+  source_id: gold.ecosystem:6818
+  source_label: Serum
+  source_path: Host-associated > Mammals > Circulatory system > Blood > Serum
+  mapping_predicate: skos:exactMatch
+  assertion_count: 3
+  assertion_unit: ORGANISM
+- source: GOLD
+  source_id: gold.ecosystem:6898
+  source_label: Serum
+  source_path: Host-associated > Birds > Circulatory system > Blood > Serum
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

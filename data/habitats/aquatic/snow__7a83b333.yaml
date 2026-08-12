@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.f7e4e2484f
+label: Snow
+habitat_category: AQUATIC
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:01000406
+- ENVO:01001511
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5544
+  source_label: Snow
+  source_path: Environmental > Aquatic > Freshwater > Ice > Snow
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 10
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

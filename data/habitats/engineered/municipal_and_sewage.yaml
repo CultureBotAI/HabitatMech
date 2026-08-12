@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.e5e6c7a719
+label: Municipal and sewage
+habitat_category: ENGINEERED
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.df0ebca6c0
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6080
+  source_label: Municipal and sewage
+  source_path: Engineered > WWTP > Influent > Raw wastewater > Municipal and sewage
+  assertion_count: 15
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

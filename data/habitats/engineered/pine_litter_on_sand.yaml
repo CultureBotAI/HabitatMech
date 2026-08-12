@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.1d6e2dd200
+label: Pine litter on sand
+habitat_category: ENGINEERED
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.06fb1f0fdd
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6282
+  source_label: Pine litter on sand
+  source_path: Engineered > Artificial ecosystem > Nutrient-poor > Pine litter on
+    sand
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

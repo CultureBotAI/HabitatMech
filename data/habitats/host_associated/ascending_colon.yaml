@@ -1,0 +1,29 @@
+identifier: UBERON:0001156
+label: ascending colon
+definition: Section of colon which is distal to the cecum and proximal to the transversecolon.[FMA,modified].
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: colon ascendens
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: spiral colon
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0000168
+- habitatmech:GOLD.5b0aa7456c
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6106
+  source_label: Ascending colon
+  source_path: 'Host-associated > Mammals: Human > Digestive system > Large intestine
+    > Ascending colon'
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

@@ -1,0 +1,24 @@
+identifier: ENVO:01000749
+label: oceanic crust
+definition: Oceanic crust is the uppermost layer of the oceanic portion of a tectonic
+  plate.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:01000639
+- habitatmech:GOLD.fc3b904cb2
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4636
+  source_label: Oceanic crust
+  source_path: Environmental > Aquatic > Marine > Oceanic > Oceanic crust
+  mapping_predicate: skos:exactMatch
+  assertion_count: 3
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

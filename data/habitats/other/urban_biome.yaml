@@ -1,0 +1,129 @@
+identifier: ENVO:01000249
+label: urban biome
+definition: An urban biome is a dense settlement biome which has been urbanised.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: urban
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: urbanic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: urbans
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:01000248
+source_attestations:
+- source: PREGO
+  source_id: ENVO:01000249
+  source_label: urban biome
+  assertion_count: 1977
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:1111737
+  source: PREGO
+  taxon_label: Thermocrispum municipale DSM 44069
+  score: 4.0
+- taxon_id: NCBITaxon:266940
+  source: PREGO
+  taxon_label: Kineococcus radiotolerans SRS30216 = ATCC BAA-149
+  score: 4.0
+- taxon_id: NCBITaxon:36987
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:39777
+  source: PREGO
+  taxon_label: Veillonella atypica
+  score: 4.0
+- taxon_id: NCBITaxon:411461
+  source: PREGO
+  taxon_label: Dorea formicigenerans ATCC 27755
+  score: 4.0
+- taxon_id: NCBITaxon:411485
+  source: PREGO
+  taxon_label: Faecalibacterium prausnitzii M21/2
+  score: 4.0
+- taxon_id: NCBITaxon:471852
+  source: PREGO
+  taxon_label: Thermomonospora curvata DSM 43183
+  score: 4.0
+- taxon_id: NCBITaxon:501571
+  source: PREGO
+  taxon_label: Butyricicoccus pullicaecorum
+  score: 4.0
+- taxon_id: NCBITaxon:60133
+  source: PREGO
+  taxon_label: Prevotella pallens
+  score: 4.0
+- taxon_id: NCBITaxon:9606
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:4513
+  source: PREGO
+  score: 2.62879
+- taxon_id: NCBITaxon:257314
+  source: PREGO
+  taxon_label: Lactobacillus johnsonii NCC 533
+  score: 2.5968
+- taxon_id: NCBITaxon:565645
+  source: PREGO
+  taxon_label: Enterococcus faecalis Merz96
+  score: 2.59191
+- taxon_id: NCBITaxon:226185
+  source: PREGO
+  taxon_label: Enterococcus faecalis V583
+  score: 2.57483
+- taxon_id: NCBITaxon:2087
+  source: PREGO
+  taxon_label: Anaeroplasma abactoclasticum
+  score: 2.55401
+- taxon_id: NCBITaxon:1622
+  source: PREGO
+  taxon_label: Ligilactobacillus murinus
+  score: 2.5427
+- taxon_id: NCBITaxon:536231
+  source: PREGO
+  taxon_label: Roseburia intestinalis L1-82
+  score: 2.5345
+- taxon_id: NCBITaxon:695560
+  source: PREGO
+  taxon_label: Lactobacillus amylovorus GRL 1112
+  score: 2.5344
+- taxon_id: NCBITaxon:622312
+  source: PREGO
+  taxon_label: Roseburia inulinivorans DSM 16841
+  score: 2.53274
+- taxon_id: NCBITaxon:1587
+  source: PREGO
+  taxon_label: Lactobacillus helveticus
+  score: 2.53255
+- taxon_id: NCBITaxon:349741
+  source: PREGO
+  taxon_label: Akkermansia muciniphila ATCC BAA-835
+  score: 2.523
+- taxon_id: NCBITaxon:411463
+  source: PREGO
+  taxon_label: Eubacterium ventriosum ATCC 27560
+  score: 2.52298
+- taxon_id: NCBITaxon:10090
+  source: PREGO
+  score: 2.52213
+- taxon_id: NCBITaxon:411467
+  source: PREGO
+  taxon_label: Pseudoflavonifractor capillosus ATCC 29799
+  score: 2.51631
+- taxon_id: NCBITaxon:500632
+  source: PREGO
+  taxon_label: '[Clostridium] nexile DSM 1787'
+  score: 2.51444
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

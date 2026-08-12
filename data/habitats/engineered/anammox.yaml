@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.d3e01e5908
+label: Anammox
+habitat_category: ENGINEERED
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.92b66873c0
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4256
+  source_label: Anammox
+  source_path: Engineered > Wastewater > Nutrient removal > Nitrogen removal > Anammox
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

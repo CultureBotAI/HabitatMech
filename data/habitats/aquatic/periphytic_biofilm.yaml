@@ -1,0 +1,28 @@
+identifier: ENVO:03605000
+label: periphytic biofilm
+definition: Biofilm consisting of a mixture of algae, cyanobacteria, microbes, and
+  detritus.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Periphyton
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:01000156
+- ENVO:01000297
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5345
+  source_label: Periphyton
+  source_path: Environmental > Aquatic > Freshwater > River > Periphyton
+  mapping_predicate: skos:closeMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

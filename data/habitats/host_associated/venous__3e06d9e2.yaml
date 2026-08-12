@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.ba858ff7a6
+label: Venous
+habitat_category: HOST_ASSOCIATED
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.d25ff4a586
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6606
+  source_label: Venous
+  source_path: 'Host-associated > Mammals: Human > Circulatory system > Blood > Venous'
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

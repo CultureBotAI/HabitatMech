@@ -1,0 +1,46 @@
+identifier: BTO:0000975
+label: ovary
+definition: One of the typically paired essential female reproductive organs that
+  produce eggs and in vertebrates female sex hormones.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: ovaries
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000254
+- BTO:0003099
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000975
+  source_label: ovary
+  assertion_count: 4
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1331043
+  source: PREGO
+  taxon_label: Salmonella enterica subsp. enterica serovar Gallinarum/Pullorum str.
+    FCAV198
+  score: 3.0
+- taxon_id: NCBITaxon:1410383
+  source: PREGO
+  taxon_label: Candidatus Tachikawaea gelatinosa
+  score: 3.0
+- taxon_id: NCBITaxon:1462938
+  source: PREGO
+  taxon_label: Rickettsia tamurae subsp. buchneri
+  score: 3.0
+- taxon_id: NCBITaxon:1704307
+  source: PREGO
+  taxon_label: Candidatus Xiphinematobacter sp. Idaho Grape
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

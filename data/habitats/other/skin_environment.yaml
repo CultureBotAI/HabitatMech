@@ -1,0 +1,148 @@
+identifier: ENVO:2100003
+label: skin environment
+definition: An environment determined by an area or zone of skin tissue.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: skin environments
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:2100004
+source_attestations:
+- source: ENVIRONMENTS_TABLE
+  source_id: host_animal_endotherm_surface
+  source_label: host_animal_endotherm_surface
+  notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: PREGO
+  source_id: ENVO:2100003
+  source_label: skin environment
+  assertion_count: 39
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: environmental_samples
+environmental_parameters:
+- parameter: ORGANIC_MATTER
+  qualitative_value: high
+  source: kg-microbe environments.csv (host_animal_endotherm_surface)
+- parameter: PRESSURE
+  qualitative_value: low
+  source: kg-microbe environments.csv (host_animal_endotherm_surface)
+- parameter: STRUCTURAL_COMPLEXITY
+  qualitative_value: high
+  source: kg-microbe environments.csv (host_animal_endotherm_surface)
+- parameter: TEMPERATURE
+  qualitative_value: medium
+  source: kg-microbe environments.csv (host_animal_endotherm_surface)
+- parameter: TEMPERATURE_VARIABILITY
+  qualitative_value: high
+  source: kg-microbe environments.csv (host_animal_endotherm_surface)
+- parameter: WATER_VARIABILITY
+  qualitative_value: occasionally wet
+  source: kg-microbe environments.csv (host_animal_endotherm_surface)
+characteristic_taxa:
+- taxon_id: NCBITaxon:1260
+  source: PREGO
+  taxon_label: Finegoldia magna
+  score: 4.0
+- taxon_id: NCBITaxon:136093
+  source: PREGO
+  taxon_label: Globicatella sulfidifaciens
+  score: 4.0
+- taxon_id: NCBITaxon:1505
+  source: PREGO
+  taxon_label: Paraclostridium sordellii
+  score: 4.0
+- taxon_id: NCBITaxon:152
+  source: PREGO
+  taxon_label: Zuelzera stenostrepta
+  score: 4.0
+- taxon_id: NCBITaxon:156
+  source: PREGO
+  taxon_label: Teretinema zuelzerae
+  score: 4.0
+- taxon_id: NCBITaxon:158
+  source: PREGO
+  taxon_label: Treponema denticola
+  score: 4.0
+- taxon_id: NCBITaxon:164
+  source: PREGO
+  taxon_label: Treponema pectinovorum
+  score: 4.0
+- taxon_id: NCBITaxon:166
+  source: PREGO
+  taxon_label: Treponema sp.
+  score: 4.0
+- taxon_id: NCBITaxon:171291
+  source: PREGO
+  taxon_label: Mycoplasmopsis verecunda
+  score: 4.0
+- taxon_id: NCBITaxon:180295
+  source: PREGO
+  taxon_label: Atopostipes suicloacalis
+  score: 4.0
+- taxon_id: NCBITaxon:266940
+  source: PREGO
+  taxon_label: Kineococcus radiotolerans SRS30216 = ATCC BAA-149
+  score: 4.0
+- taxon_id: NCBITaxon:2778071
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:28114
+  source: PREGO
+  taxon_label: Porphyromonas levii
+  score: 4.0
+- taxon_id: NCBITaxon:28115
+  source: PREGO
+  taxon_label: Porphyromonas macacae
+  score: 4.0
+- taxon_id: NCBITaxon:285106
+  source: PREGO
+  taxon_label: Tepidimicrobium ferriphilum
+  score: 4.0
+- taxon_id: NCBITaxon:29355
+  source: PREGO
+  taxon_label: Ruminiclostridium cellobioparum
+  score: 4.0
+- taxon_id: NCBITaxon:29558
+  source: PREGO
+  taxon_label: Mycoplasmopsis hyopharyngis
+  score: 4.0
+- taxon_id: NCBITaxon:312286
+  source: PREGO
+  taxon_label: Trueperella bonasi
+  score: 4.0
+- taxon_id: NCBITaxon:322095
+  source: PREGO
+  taxon_label: Porphyromonas somerae
+  score: 4.0
+- taxon_id: NCBITaxon:33034
+  source: PREGO
+  taxon_label: Anaerococcus prevotii
+  score: 4.0
+- taxon_id: NCBITaxon:36875
+  source: PREGO
+  taxon_label: Porphyromonas canoris
+  score: 4.0
+- taxon_id: NCBITaxon:36987
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:39946
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:40091
+  source: PREGO
+  taxon_label: Helcococcus kunzii
+  score: 4.0
+- taxon_id: NCBITaxon:40518
+  source: PREGO
+  taxon_label: Ruminococcus bromii
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, PREGO.
+    Grounding: EXACT.'

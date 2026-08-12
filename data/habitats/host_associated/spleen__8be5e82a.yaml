@@ -1,0 +1,22 @@
+identifier: habitatmech:GOLD.0770f3f3ed
+label: Spleen
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0002106
+- habitatmech:GOLD.be39fe9a0e
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6754
+  source_label: Spleen
+  source_path: Host-associated > Mammals > Lymphatic system > Spleen
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 39
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

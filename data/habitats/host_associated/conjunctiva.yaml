@@ -1,0 +1,57 @@
+identifier: BTO:0003415
+label: conjunctiva
+definition: The mucous membrane that lines the inner surface of the eyelids and is
+  continued over the forepart of the eyeball.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: conjunctival
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: conjunctivas
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0003415
+  source_label: conjunctiva
+  assertion_count: 7
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1283
+  source: PREGO
+  taxon_label: Staphylococcus haemolyticus
+  score: 3.0
+- taxon_id: NCBITaxon:1405296
+  source: PREGO
+  taxon_label: Chlamydia suis MD56
+  score: 3.0
+- taxon_id: NCBITaxon:1427368
+  source: PREGO
+  taxon_label: Chlamydia pecorum IPTaLE
+  score: 3.0
+- taxon_id: NCBITaxon:1427369
+  source: PREGO
+  taxon_label: Chlamydia pecorum MC/MarsBar
+  score: 3.0
+- taxon_id: NCBITaxon:1427370
+  source: PREGO
+  taxon_label: Chlamydia pecorum DBDeUG
+  score: 3.0
+- taxon_id: NCBITaxon:1427371
+  source: PREGO
+  taxon_label: Chlamydia pecorum VR629
+  score: 3.0
+- taxon_id: NCBITaxon:813
+  source: PREGO
+  taxon_label: Chlamydia trachomatis
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

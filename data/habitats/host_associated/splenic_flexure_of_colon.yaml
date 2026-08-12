@@ -1,0 +1,39 @@
+identifier: UBERON:0022276
+label: splenic flexure of colon
+definition: The splenic (or left colic) flexure is a sharp bend between the transverse
+  and the descending colon in the left upper quadrant of humans. The left colic flexure
+  is near the spleen, and hence called the splenic flexure. There are two colic flexures
+  in the transverse colon &mdash; the other being the hepatic flexure in the right
+  upper quadrant.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Splenic flexure
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: flexura coli splenica
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: left colic flexure
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: splenic flexure
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0022275
+- habitatmech:GOLD.5b0aa7456c
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6440
+  source_label: Splenic flexure
+  source_path: 'Host-associated > Mammals: Human > Digestive system > Large intestine
+    > Splenic flexure'
+  mapping_predicate: skos:closeMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.cb827f4a50
+label: Bioreactor
+habitat_category: ENGINEERED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00002123
+- habitatmech:GOLD.52f7aa2371
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4966
+  source_label: Bioreactor
+  source_path: Engineered > Solid waste > Unknown material > Composting > Bioreactor
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

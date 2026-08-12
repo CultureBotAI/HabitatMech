@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.2f9eb7ed2f
+label: Sediment
+habitat_category: AQUATIC
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00002007
+- habitatmech:GOLD.fc3b904cb2
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4009
+  source_label: Sediment
+  source_path: Environmental > Aquatic > Marine > Oceanic > Sediment
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 929
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

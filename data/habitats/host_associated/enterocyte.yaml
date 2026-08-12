@@ -1,0 +1,97 @@
+identifier: BTO:0000398
+label: enterocyte
+definition: Cell of the intestinal epithelium.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: enterocytes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000398
+  source_label: enterocyte
+  assertion_count: 18
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1126911
+  source: PREGO
+  taxon_label: Escherichia coli C639_08
+  score: 3.0
+- taxon_id: NCBITaxon:1126932
+  source: PREGO
+  taxon_label: Escherichia coli C844_97
+  score: 3.0
+- taxon_id: NCBITaxon:1169863
+  source: PREGO
+  taxon_label: Escherichia coli NCCP15657
+  score: 3.0
+- taxon_id: NCBITaxon:1205679
+  source: PREGO
+  taxon_label: Bifidobacterium longum subsp. longum CECT 7347
+  score: 3.0
+- taxon_id: NCBITaxon:1288492
+  source: PREGO
+  taxon_label: Enterococcus durans IPLA 655
+  score: 3.0
+- taxon_id: NCBITaxon:1297617
+  source: PREGO
+  taxon_label: Intestinimonas butyriciproducens
+  score: 3.0
+- taxon_id: NCBITaxon:1436000
+  source: PREGO
+  taxon_label: Edwardsiella anguillarum ET080729
+  score: 3.0
+- taxon_id: NCBITaxon:1436301
+  source: PREGO
+  taxon_label: Edwardsiella anguillarum ET070829
+  score: 3.0
+- taxon_id: NCBITaxon:208962
+  source: PREGO
+  taxon_label: Escherichia albertii
+  score: 3.0
+- taxon_id: NCBITaxon:386585
+  source: PREGO
+  taxon_label: Escherichia coli O157:H7 str. Sakai
+  score: 3.0
+- taxon_id: NCBITaxon:397448
+  source: PREGO
+  taxon_label: Escherichia coli O119:H6
+  score: 3.0
+- taxon_id: NCBITaxon:562
+  source: PREGO
+  taxon_label: Escherichia coli
+  score: 3.0
+- taxon_id: NCBITaxon:574521
+  source: PREGO
+  taxon_label: Escherichia coli O127:H6 str. E2348/69
+  score: 3.0
+- taxon_id: NCBITaxon:636
+  source: PREGO
+  taxon_label: Edwardsiella tarda
+  score: 3.0
+- taxon_id: NCBITaxon:670484
+  source: PREGO
+  taxon_label: Citrobacter freundii str. ballerup 7851/39
+  score: 3.0
+- taxon_id: NCBITaxon:670895
+  source: PREGO
+  taxon_label: Escherichia coli EPEC11
+  score: 3.0
+- taxon_id: NCBITaxon:670899
+  source: PREGO
+  taxon_label: Escherichia coli RN587/1
+  score: 3.0
+- taxon_id: NCBITaxon:754088
+  source: PREGO
+  taxon_label: Escherichia coli STEC_H.I.8
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

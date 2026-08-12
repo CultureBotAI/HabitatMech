@@ -1,0 +1,33 @@
+identifier: BTO:0000343
+label: renal tubule
+definition: One of the minute, reabsorptive, secretory, and collecting canals, made
+  up of basement membrane lined with epithelium, that form the substance of the kidneys.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: renal tubular
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: renal tubules
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000343
+  source_label: renal tubule
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:758847
+  source: PREGO
+  taxon_label: Leptospira santarosai serovar Shermani str. LT 821
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

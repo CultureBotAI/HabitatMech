@@ -1,0 +1,22 @@
+identifier: habitatmech:GOLD.a70c6f70a3
+label: Trophosome
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:01000165
+- habitatmech:GOLD.7d68a6a275
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:3893
+  source_label: Trophosome
+  source_path: Host-associated > Annelida > Intracellular endosymbionts > Trophosome
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 3
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

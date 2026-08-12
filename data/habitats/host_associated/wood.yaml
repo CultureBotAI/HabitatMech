@@ -1,0 +1,118 @@
+identifier: BTO:0005516
+label: wood
+definition: Wood is a hard, fibrous structural xylem tissue found in the stems and
+  roots of trees and other woody plants.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- BTO:0001468
+source_attestations:
+- source: PREGO
+  source_id: BTO:0005516
+  source_label: wood
+  assertion_count: 199
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:1121927
+  source: PREGO
+  taxon_label: Gordonia hirsuta DSM 44140 = NBRC 16056
+  score: 4.0
+- taxon_id: NCBITaxon:186802
+  source: PREGO
+  taxon_label: Eubacteriales
+  score: 4.0
+- taxon_id: NCBITaxon:1869227
+  source: PREGO
+  taxon_label: bacterium
+  score: 4.0
+- taxon_id: NCBITaxon:2
+  source: PREGO
+  taxon_label: Bacteria
+  score: 4.0
+- taxon_id: NCBITaxon:286
+  source: PREGO
+  taxon_label: Pseudomonas
+  score: 4.0
+- taxon_id: NCBITaxon:32033
+  source: PREGO
+  taxon_label: Lysobacteraceae
+  score: 4.0
+- taxon_id: NCBITaxon:35493
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:3654
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:4432
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:543
+  source: PREGO
+  taxon_label: Enterobacteriaceae
+  score: 4.0
+- taxon_id: NCBITaxon:629395
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:80864
+  source: PREGO
+  taxon_label: Comamonadaceae
+  score: 4.0
+- taxon_id: NCBITaxon:85961
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:1075399
+  source: PREGO
+  taxon_label: Blattabacterium sp. (Cryptocercus punctulatus) str. Cpu
+  score: 3.0
+- taxon_id: NCBITaxon:1384051
+  source: PREGO
+  taxon_label: Bacillus amyloliquefaciens UASWS BA1
+  score: 3.0
+- taxon_id: NCBITaxon:1498499
+  source: PREGO
+  taxon_label: Legionella norrlandica
+  score: 3.0
+- taxon_id: NCBITaxon:172045
+  source: PREGO
+  taxon_label: Elizabethkingia miricola
+  score: 3.0
+- taxon_id: NCBITaxon:278956
+  source: PREGO
+  taxon_label: Opitutaceae bacterium TAV1
+  score: 3.0
+- taxon_id: NCBITaxon:5306
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:794903
+  source: PREGO
+  taxon_label: Opitutaceae bacterium TAV5
+  score: 3.0
+- taxon_id: NCBITaxon:1485
+  source: PREGO
+  taxon_label: Clostridium
+  score: 1.78703
+- taxon_id: NCBITaxon:22
+  source: PREGO
+  taxon_label: Shewanella
+  score: 1.76642
+- taxon_id: NCBITaxon:31979
+  source: PREGO
+  taxon_label: Clostridiaceae
+  score: 1.76642
+- taxon_id: NCBITaxon:374
+  source: PREGO
+  taxon_label: Bradyrhizobium
+  score: 1.73436
+- taxon_id: NCBITaxon:2745
+  source: PREGO
+  taxon_label: Halomonas
+  score: 1.72334
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

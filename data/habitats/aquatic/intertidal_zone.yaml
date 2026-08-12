@@ -1,0 +1,155 @@
+identifier: ENVO:00000316
+label: intertidal zone
+definition: The area of the foreshore and seabed that is exposed to the air at low
+  tide and submerged at high tide, i.e., the area between tide marks.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: IntertidalZone
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: coastal zone
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: intertidal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: intertidalic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: intertidals
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: littoral
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: littoral zone
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: littoral zone
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: littoralic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: littorals
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:01001201
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00000316
+  source_label: intertidal zone
+  assertion_count: 53
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1040984
+  source: PREGO
+  taxon_label: Mesorhizobium sp. WSM1293
+  score: 4.0
+- taxon_id: NCBITaxon:1048
+  source: PREGO
+  taxon_label: Marichromatium gracile
+  score: 4.0
+- taxon_id: NCBITaxon:1120965
+  source: PREGO
+  taxon_label: Algoriphagus mannitolivorans DSM 15301
+  score: 4.0
+- taxon_id: NCBITaxon:1121014
+  source: PREGO
+  taxon_label: Arenimonas donghaensis DSM 18148 = HO3-R19
+  score: 4.0
+- taxon_id: NCBITaxon:1121403
+  source: PREGO
+  taxon_label: Desulfogranum japonicum DSM 18378
+  score: 4.0
+- taxon_id: NCBITaxon:1121416
+  source: PREGO
+  taxon_label: Desulfopila aestuarii DSM 18488
+  score: 4.0
+- taxon_id: NCBITaxon:1121938
+  source: PREGO
+  taxon_label: Halobacillus kuroshimensis DSM 18393
+  score: 4.0
+- taxon_id: NCBITaxon:1122176
+  source: PREGO
+  taxon_label: Lewinella cohaerens DSM 23179
+  score: 4.0
+- taxon_id: NCBITaxon:1122197
+  source: PREGO
+  taxon_label: Marinobacter daepoensis DSM 16072
+  score: 4.0
+- taxon_id: NCBITaxon:1122599
+  source: PREGO
+  taxon_label: Neptunomonas japonica DSM 18939
+  score: 4.0
+- taxon_id: NCBITaxon:1123000
+  source: PREGO
+  taxon_label: Propionigenium maris DSM 9537
+  score: 4.0
+- taxon_id: NCBITaxon:1123503
+  source: PREGO
+  taxon_label: Woodsholea maritima DSM 17123
+  score: 4.0
+- taxon_id: NCBITaxon:1123509
+  source: PREGO
+  taxon_label: Zooshikella ganghwensis DSM 15267
+  score: 4.0
+- taxon_id: NCBITaxon:1123515
+  source: PREGO
+  taxon_label: Thiomicrorhabdus chilensis DSM 12352
+  score: 4.0
+- taxon_id: NCBITaxon:1123517
+  source: PREGO
+  taxon_label: Thiomicrospira pelophila DSM 1534
+  score: 4.0
+- taxon_id: NCBITaxon:1278307
+  source: PREGO
+  taxon_label: Psychromonas ossibalaenae ATCC BAA-1528
+  score: 4.0
+- taxon_id: NCBITaxon:1397696
+  source: PREGO
+  taxon_label: Exiguobacterium marinum DSM 16307
+  score: 4.0
+- taxon_id: NCBITaxon:1408433
+  source: PREGO
+  taxon_label: Crocinitomix catalasitica ATCC 23190
+  score: 4.0
+- taxon_id: NCBITaxon:1442586
+  source: PREGO
+  taxon_label: Winogradskyella wandonensis
+  score: 4.0
+- taxon_id: NCBITaxon:150
+  source: PREGO
+  taxon_label: Spirochaeta isovalerica
+  score: 4.0
+- taxon_id: NCBITaxon:163908
+  source: PREGO
+  taxon_label: Anabaena sp. PCC 7108
+  score: 4.0
+- taxon_id: NCBITaxon:166318
+  source: PREGO
+  taxon_label: Synechococcus sp. WH 8016
+  score: 4.0
+- taxon_id: NCBITaxon:203122
+  source: PREGO
+  taxon_label: Saccharophagus degradans 2-40
+  score: 4.0
+- taxon_id: NCBITaxon:226505
+  source: PREGO
+  taxon_label: Algoriphagus halophilus
+  score: 4.0
+- taxon_id: NCBITaxon:285258
+  source: PREGO
+  taxon_label: Tenacibaculum lutimaris
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

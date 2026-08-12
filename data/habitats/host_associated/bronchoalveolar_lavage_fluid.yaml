@@ -1,0 +1,83 @@
+identifier: BTO:0000155
+label: bronchoalveolar lavage fluid
+definition: A technique by which cells and fluid from bronchioles and lung alveoli
+  are removed for diagnosis of disease or evaluation of treatment. A bronchoscope
+  is wedged into a bronchus and sterile saline is pumped in and then removed along
+  with the fluid and cells to be analyzed.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: BAL cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: BAL cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: bronchioalveolar lavage
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: bronchioalveolar lavage s
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: bronchioalveolar lavages
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: bronchoalveolar lavage fluids
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000155
+  source_label: bronchoalveolar lavage fluid
+  assertion_count: 10
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1162284
+  source: PREGO
+  taxon_label: Mycobacteroides abscessus M24
+  score: 3.0
+- taxon_id: NCBITaxon:1162288
+  source: PREGO
+  taxon_label: Mycobacteroides abscessus M154
+  score: 3.0
+- taxon_id: NCBITaxon:1220554
+  source: PREGO
+  taxon_label: Actinomadura chibensis NBRC 106107
+  score: 3.0
+- taxon_id: NCBITaxon:1718
+  source: PREGO
+  taxon_label: Corynebacterium glutamicum
+  score: 3.0
+- taxon_id: NCBITaxon:287
+  source: PREGO
+  taxon_label: Pseudomonas aeruginosa
+  score: 3.0
+- taxon_id: NCBITaxon:32002
+  source: PREGO
+  taxon_label: Achromobacter denitrificans
+  score: 3.0
+- taxon_id: NCBITaxon:47885
+  source: PREGO
+  taxon_label: Pseudomonas oryzihabitans
+  score: 3.0
+- taxon_id: NCBITaxon:51665
+  source: PREGO
+  taxon_label: Aerococcus urinaeequi
+  score: 3.0
+- taxon_id: NCBITaxon:76759
+  source: PREGO
+  taxon_label: Pseudomonas monteilii
+  score: 3.0
+- taxon_id: NCBITaxon:83655
+  source: PREGO
+  taxon_label: Leclercia adecarboxylata
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

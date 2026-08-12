@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.3b389569f4
+label: Sweat
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0001089
+- habitatmech:GOLD.4f987722bc
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6862
+  source_label: Sweat
+  source_path: 'Host-associated > Mammals: Human > Integumentary system > Eccrine
+    sweat glands > Sweat'
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

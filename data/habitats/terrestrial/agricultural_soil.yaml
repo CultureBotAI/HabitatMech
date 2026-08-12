@@ -1,0 +1,171 @@
+identifier: ENVO:00002259
+label: agricultural soil
+definition: Soil which is part of an ecosystem used for agricultural activities.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: agricultural soils
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00001998
+- ENVO:00002258
+source_attestations:
+- source: ENVIRONMENTS_TABLE
+  source_id: soil_agricultural
+  source_label: soil_agricultural
+  notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: GOLD
+  source_id: gold.ecosystem:4244
+  source_label: Agricultural soil
+  source_path: Environmental > Terrestrial > Soil > Loam > Agricultural soil
+  mapping_predicate: skos:exactMatch
+  assertion_count: 77
+  assertion_unit: ORGANISM
+- source: PREGO
+  source_id: ENVO:00002259
+  source_label: agricultural soil
+  assertion_count: 1767
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+environmental_parameters:
+- parameter: GRADIENTS
+  qualitative_value: high
+  source: kg-microbe environments.csv (soil_agricultural)
+- parameter: NUTRIENTS
+  qualitative_value: medium
+  source: kg-microbe environments.csv (soil_agricultural)
+- parameter: ORGANIC_MATTER
+  qualitative_value: medium
+  source: kg-microbe environments.csv (soil_agricultural)
+- parameter: PRESSURE
+  qualitative_value: low
+  source: kg-microbe environments.csv (soil_agricultural)
+- parameter: SALINITY
+  qualitative_value: low
+  source: kg-microbe environments.csv (soil_agricultural)
+- parameter: SALINITY_VARIABILITY
+  qualitative_value: small
+  source: kg-microbe environments.csv (soil_agricultural)
+- parameter: STRUCTURAL_COMPLEXITY
+  qualitative_value: high
+  source: kg-microbe environments.csv (soil_agricultural)
+- parameter: TEMPERATURE_VARIABILITY
+  qualitative_value: high
+  source: kg-microbe environments.csv (soil_agricultural)
+- parameter: WATER_AVAILABILITY
+  qualitative_value: medium
+  source: kg-microbe environments.csv (soil_agricultural)
+- parameter: WATER_VARIABILITY
+  qualitative_value: occasionally dry
+  source: kg-microbe environments.csv (soil_agricultural)
+characteristic_taxa:
+- taxon_id: NCBITaxon:53254
+  source: PREGO
+  taxon_label: Allobosea thiooxidans
+  score: 3.0
+- taxon_id: NCBITaxon:526225
+  source: PREGO
+  taxon_label: Geodermatophilus obscurus DSM 43160
+  score: 2.40546
+- taxon_id: NCBITaxon:379066
+  source: PREGO
+  taxon_label: Gemmatimonas aurantiaca T-27
+  score: 2.39605
+- taxon_id: NCBITaxon:235140
+  source: PREGO
+  taxon_label: Gemmata sp. Wa1-1
+  score: 2.39292
+- taxon_id: NCBITaxon:710696
+  source: PREGO
+  taxon_label: Intrasporangium calvum DSM 43043
+  score: 2.39191
+- taxon_id: NCBITaxon:469383
+  source: PREGO
+  taxon_label: Conexibacter woesei DSM 14684
+  score: 2.39148
+- taxon_id: NCBITaxon:224911
+  source: PREGO
+  taxon_label: Bradyrhizobium diazoefficiens USDA 110
+  score: 2.39019
+- taxon_id: NCBITaxon:448385
+  source: PREGO
+  taxon_label: Sorangium cellulosum So ce56
+  score: 2.38886
+- taxon_id: NCBITaxon:296591
+  source: PREGO
+  taxon_label: Polaromonas sp. JS666
+  score: 2.3873
+- taxon_id: NCBITaxon:56
+  source: PREGO
+  taxon_label: Sorangium cellulosum
+  score: 2.38681
+- taxon_id: NCBITaxon:479431
+  source: PREGO
+  taxon_label: Nakamurella multipartita DSM 44233
+  score: 2.38676
+- taxon_id: NCBITaxon:525909
+  source: PREGO
+  taxon_label: Acidimicrobium ferrooxidans DSM 10331
+  score: 2.38656
+- taxon_id: NCBITaxon:196162
+  source: PREGO
+  taxon_label: Nocardioides sp. JS614
+  score: 2.38502
+- taxon_id: NCBITaxon:330214
+  source: PREGO
+  taxon_label: Nitrospira defluvii
+  score: 2.38449
+- taxon_id: NCBITaxon:404589
+  source: PREGO
+  taxon_label: Anaeromyxobacter sp. Fw109-5
+  score: 2.38288
+- taxon_id: NCBITaxon:246197
+  source: PREGO
+  taxon_label: Myxococcus xanthus DK 1622
+  score: 2.38174
+- taxon_id: NCBITaxon:765698
+  source: PREGO
+  taxon_label: Mesorhizobium ciceri biovar biserrulae WSM1271
+  score: 2.38076
+- taxon_id: NCBITaxon:240015
+  source: PREGO
+  taxon_label: Acidobacterium capsulatum ATCC 51196
+  score: 2.37979
+- taxon_id: NCBITaxon:391037
+  source: PREGO
+  taxon_label: Salinispora arenicola CNS-205
+  score: 2.37913
+- taxon_id: NCBITaxon:575540
+  source: PREGO
+  taxon_label: Isosphaera pallida ATCC 43644
+  score: 2.37911
+- taxon_id: NCBITaxon:426117
+  source: PREGO
+  taxon_label: Methylobacterium sp. 4-46
+  score: 2.37905
+- taxon_id: NCBITaxon:530564
+  source: PREGO
+  taxon_label: Pirellula staleyi DSM 6068
+  score: 2.37862
+- taxon_id: NCBITaxon:502025
+  source: PREGO
+  taxon_label: Haliangium ochraceum DSM 14365
+  score: 2.37839
+- taxon_id: NCBITaxon:765420
+  source: PREGO
+  taxon_label: Oscillochloris trichoides DG-6
+  score: 2.37807
+- taxon_id: NCBITaxon:106370
+  source: PREGO
+  taxon_label: Frankia casuarinae
+  score: 2.37787
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD,
+    PREGO. Grounding: EXACT.'

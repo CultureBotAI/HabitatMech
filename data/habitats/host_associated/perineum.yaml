@@ -1,0 +1,32 @@
+identifier: UBERON:0002356
+label: perineum
+definition: Subdivision of trunk proper, which is demarcated from the pelvis by the
+  inferior surface of the pelvic diaphragm and from the lower limbs by the perineofemoral
+  lines; together with the thorax, abdomen, and pelvis, it constitutes the trunk[FMA].
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: perineal region
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: regio perinealis
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0009569
+- habitatmech:GOLD.4b37ab4b76
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6289
+  source_label: Perineum
+  source_path: 'Host-associated > Mammals: Human > Integumentary system > Skin > Perineum'
+  mapping_predicate: skos:exactMatch
+  assertion_count: 13
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

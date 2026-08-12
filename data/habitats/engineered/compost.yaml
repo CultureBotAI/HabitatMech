@@ -1,0 +1,179 @@
+identifier: ENVO:00002170
+label: compost
+definition: Manure which has been derived from the aerobically decomposed remnants
+  of organic materials.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Composting
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: composts
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:03501300
+- mesh:D062611
+source_attestations:
+- source: ENVIRONMENTS_TABLE
+  source_id: compost
+  source_label: compost
+  notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: GOLD
+  source_id: gold.ecosystem:3511
+  source_label: Composting
+  source_path: Engineered > Solid waste > Composting
+  mapping_predicate: skos:exactMatch
+  assertion_count: 270
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: PREGO
+  source_id: ENVO:00002170
+  source_label: compost
+  assertion_count: 1913
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+environmental_parameters:
+- parameter: GRADIENTS
+  qualitative_value: high
+  source: kg-microbe environments.csv (compost)
+- parameter: NUTRIENTS
+  qualitative_value: high
+  source: kg-microbe environments.csv (compost)
+- parameter: ORGANIC_MATTER
+  qualitative_value: high
+  source: kg-microbe environments.csv (compost)
+- parameter: PH
+  qualitative_value: low
+  source: kg-microbe environments.csv (compost)
+- parameter: PRESSURE
+  qualitative_value: low
+  source: kg-microbe environments.csv (compost)
+- parameter: SALINITY
+  qualitative_value: low
+  source: kg-microbe environments.csv (compost)
+- parameter: SALINITY_VARIABILITY
+  qualitative_value: small
+  source: kg-microbe environments.csv (compost)
+- parameter: STRUCTURAL_COMPLEXITY
+  qualitative_value: medium
+  source: kg-microbe environments.csv (compost)
+- parameter: TEMPERATURE_VARIABILITY
+  qualitative_value: medium
+  source: kg-microbe environments.csv (compost)
+- parameter: WATER_AVAILABILITY
+  qualitative_value: medium
+  source: kg-microbe environments.csv (compost)
+- parameter: WATER_VARIABILITY
+  qualitative_value: occasionally dry
+  source: kg-microbe environments.csv (compost)
+characteristic_taxa:
+- taxon_id: NCBITaxon:1045004
+  source: PREGO
+  taxon_label: Oenococcus kitaharae DSM 17330
+  score: 3.0
+- taxon_id: NCBITaxon:1045012
+  source: PREGO
+  taxon_label: Acetivibrio clariflavus 4-2a
+  score: 3.0
+- taxon_id: NCBITaxon:1089552
+  source: PREGO
+  taxon_label: Rhodovibrio salinarum DSM 9154
+  score: 3.0
+- taxon_id: NCBITaxon:1111737
+  source: PREGO
+  taxon_label: Thermocrispum municipale DSM 44069
+  score: 3.0
+- taxon_id: NCBITaxon:1111738
+  source: PREGO
+  taxon_label: Thermocrispum agreste DSM 44070
+  score: 3.0
+- taxon_id: NCBITaxon:1121013
+  source: PREGO
+  taxon_label: Arenimonas composti TR7-09 = DSM 18010
+  score: 3.0
+- taxon_id: NCBITaxon:1121349
+  source: PREGO
+  taxon_label: Comamonas composti DSM 21721
+  score: 3.0
+- taxon_id: NCBITaxon:1121385
+  source: PREGO
+  taxon_label: Demetria terragena DSM 11295
+  score: 3.0
+- taxon_id: NCBITaxon:1121395
+  source: PREGO
+  taxon_label: Desulfitobacterium chlororespirans DSM 11544
+  score: 3.0
+- taxon_id: NCBITaxon:1121431
+  source: PREGO
+  taxon_label: Desulfallas thermosapovorans DSM 6562
+  score: 3.0
+- taxon_id: NCBITaxon:1121927
+  source: PREGO
+  taxon_label: Gordonia hirsuta DSM 44140 = NBRC 16056
+  score: 3.0
+- taxon_id: NCBITaxon:1121952
+  source: PREGO
+  taxon_label: Humibacter albus DSM 18994
+  score: 3.0
+- taxon_id: NCBITaxon:1122239
+  source: PREGO
+  taxon_label: Microbacterium luticocti DSM 19459
+  score: 3.0
+- taxon_id: NCBITaxon:1122958
+  source: PREGO
+  taxon_label: Phenylobacterium composti DSM 19425
+  score: 3.0
+- taxon_id: NCBITaxon:1123024
+  source: PREGO
+  taxon_label: Pseudonocardia asaccharolytica DSM 44247 = NBRC 16224
+  score: 3.0
+- taxon_id: NCBITaxon:1123405
+  source: PREGO
+  taxon_label: Tuberibacillus calidus DSM 17572
+  score: 3.0
+- taxon_id: NCBITaxon:1292027
+  source: PREGO
+  taxon_label: Stutzerimonas azotifigens DSM 17556
+  score: 3.0
+- taxon_id: NCBITaxon:1868734
+  source: PREGO
+  taxon_label: Aeribacillus composti
+  score: 3.0
+- taxon_id: NCBITaxon:1970199
+  source: PREGO
+  taxon_label: Sorangiineae bacterium NIC37A_2
+  score: 3.0
+- taxon_id: NCBITaxon:407022
+  source: PREGO
+  taxon_label: Olivibacter domesticus
+  score: 3.0
+- taxon_id: NCBITaxon:471852
+  source: PREGO
+  taxon_label: Thermomonospora curvata DSM 43183
+  score: 3.0
+- taxon_id: NCBITaxon:644383
+  source: PREGO
+  taxon_label: Thermosporothrix hazakensis
+  score: 3.0
+- taxon_id: NCBITaxon:649349
+  source: PREGO
+  taxon_label: Leadbetterella byssophila DSM 17132
+  score: 3.0
+- taxon_id: NCBITaxon:39650
+  source: PREGO
+  taxon_label: Cellvibrio mixtus
+  score: 2.82248
+- taxon_id: NCBITaxon:155077
+  source: PREGO
+  taxon_label: Cellvibrio japonicus
+  score: 2.77144
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD,
+    PREGO. Grounding: EXACT.'

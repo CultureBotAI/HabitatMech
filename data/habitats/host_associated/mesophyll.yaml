@@ -1,0 +1,58 @@
+identifier: BTO:0000858
+label: mesophyll
+definition: The photosynthetic parenchyma between the epidermal layers of a foliage
+  leaf.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: mesophylls
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000858
+  source_label: mesophyll
+  assertion_count: 8
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1069530
+  source: PREGO
+  taxon_label: Candidatus Paraburkholderia schumanniana
+  score: 3.0
+- taxon_id: NCBITaxon:1090375
+  source: PREGO
+  taxon_label: Candidatus Burkholderia pumila
+  score: 3.0
+- taxon_id: NCBITaxon:1090379
+  source: PREGO
+  taxon_label: Candidatus Burkholderia brachyanthoides
+  score: 3.0
+- taxon_id: NCBITaxon:1090471
+  source: PREGO
+  taxon_label: Candidatus Burkholderia humilis
+  score: 3.0
+- taxon_id: NCBITaxon:242161
+  source: PREGO
+  taxon_label: Candidatus Paraburkholderia calva
+  score: 3.0
+- taxon_id: NCBITaxon:242163
+  source: PREGO
+  taxon_label: Candidatus Burkholderia verschuerenii
+  score: 3.0
+- taxon_id: NCBITaxon:383407
+  source: PREGO
+  taxon_label: Xanthomonas oryzae pv. oryzicola BLS256
+  score: 3.0
+- taxon_id: NCBITaxon:990315
+  source: PREGO
+  taxon_label: Xanthomonas campestris pv. raphani 756C
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.2aeb0d8390
+label: Food sample
+habitat_category: FOOD
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- FOODON:03530206
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5921
+  source_label: Food sample
+  source_path: Engineered > Food production > Food sample
+  assertion_count: 3
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

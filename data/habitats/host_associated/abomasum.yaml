@@ -1,0 +1,40 @@
+identifier: UBERON:0007358
+label: abomasum
+definition: The fourth stomach of ruminating animals, which is an elongated pear-shaped
+  sac lying on the floor of the abdomen, on the right-hand side, and roughly between
+  the seventh and twelfth ribs. It leads to the beginning of the small intestine.
+  (Adapted From Black's Veterinary Dictionary, 17th ed).
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: fourth stomach
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: maw
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: read
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: rennet-bag
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: ruminant true stomach
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0011953
+- habitatmech:GOLD.d3869ad37f
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6391
+  source_label: Abomasum
+  source_path: Host-associated > Mammals > Digestive system > Stomach > Abomasum
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

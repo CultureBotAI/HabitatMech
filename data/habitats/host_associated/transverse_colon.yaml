@@ -1,0 +1,28 @@
+identifier: UBERON:0001157
+label: transverse colon
+definition: The proximal-distal subdivision of colon that runs transversely across
+  the upper part of the abdomen, from the right to the left colic flexure. Continuous
+  with the descending colon[BTO,modified].
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: colon transversum
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0000168
+- habitatmech:GOLD.5b0aa7456c
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6438
+  source_label: Transverse colon
+  source_path: 'Host-associated > Mammals: Human > Digestive system > Large intestine
+    > Transverse colon'
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

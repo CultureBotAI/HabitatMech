@@ -1,0 +1,133 @@
+identifier: ENVO:00000511
+label: blanket bog
+definition: A peatland whose development is mostly independent of basins or topographical
+  features where water collects; it simply covers the landscape like a blanket. Peat
+  develops due to a continuous supply of water from rainfall, maintaining waterlogged
+  conditions on the ground. Blanket bogs are ombrotrophic or rain fed, and as a result
+  their pH lies between 3.5 and 4.2.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: blanket bogs
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: wetland
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00000044
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00000511
+  source_label: blanket bog
+  assertion_count: 1316
+  assertion_unit: TAXON
+  score: 1.93268
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:320497
+  source: PREGO
+  taxon_label: Neoasaia chiangmaiensis
+  score: 1.93268
+- taxon_id: NCBITaxon:33059
+  source: PREGO
+  taxon_label: Acidithiobacillus caldus
+  score: 1.9094
+- taxon_id: NCBITaxon:640030
+  source: PREGO
+  taxon_label: Neisseria zalophi
+  score: 1.90244
+- taxon_id: NCBITaxon:33075
+  source: PREGO
+  taxon_label: Acidobacterium capsulatum
+  score: 1.89331
+- taxon_id: NCBITaxon:1928
+  source: PREGO
+  taxon_label: Streptomyces rochei
+  score: 1.86872
+- taxon_id: NCBITaxon:128
+  source: PREGO
+  taxon_label: Isosphaera pallida
+  score: 1.84997
+- taxon_id: NCBITaxon:375
+  source: PREGO
+  taxon_label: Bradyrhizobium japonicum
+  score: 1.84675
+- taxon_id: NCBITaxon:133552
+  source: PREGO
+  taxon_label: Methylocapsa acidiphila
+  score: 1.83385
+- taxon_id: NCBITaxon:331117
+  source: PREGO
+  taxon_label: Aspergillus fischeri NRRL 181
+  score: 1.80092
+- taxon_id: NCBITaxon:297246
+  source: PREGO
+  taxon_label: Legionella pneumophila str. Paris
+  score: 1.79483
+- taxon_id: NCBITaxon:52061
+  source: PREGO
+  score: 1.79437
+- taxon_id: NCBITaxon:441156
+  source: PREGO
+  taxon_label: Burkholderia pseudomallei 7894
+  score: 1.79309
+- taxon_id: NCBITaxon:189518
+  source: PREGO
+  taxon_label: Leptospira interrogans serovar Lai str. 56601
+  score: 1.79041
+- taxon_id: NCBITaxon:382
+  source: PREGO
+  taxon_label: Sinorhizobium meliloti
+  score: 1.78934
+- taxon_id: NCBITaxon:342110
+  source: PREGO
+  taxon_label: Ralstonia solanacearum UW551
+  score: 1.78858
+- taxon_id: NCBITaxon:441165
+  source: PREGO
+  taxon_label: Burkholderia thailandensis TXDOH
+  score: 1.788
+- taxon_id: NCBITaxon:380394
+  source: PREGO
+  taxon_label: Acidithiobacillus ferrooxidans ATCC 53993
+  score: 1.78584
+- taxon_id: NCBITaxon:426418
+  source: PREGO
+  taxon_label: Pyrenophora tritici-repentis Pt-1C-BFP
+  score: 1.78551
+- taxon_id: NCBITaxon:510516
+  source: PREGO
+  taxon_label: Aspergillus oryzae RIB40
+  score: 1.78401
+- taxon_id: NCBITaxon:190650
+  source: PREGO
+  taxon_label: Caulobacter vibrioides CB15
+  score: 1.78384
+- taxon_id: NCBITaxon:262316
+  source: PREGO
+  taxon_label: Mycobacterium avium subsp. paratuberculosis K-10
+  score: 1.78158
+- taxon_id: NCBITaxon:861557
+  source: PREGO
+  taxon_label: Pyrenophora teres f. teres 0-1
+  score: 1.78051
+- taxon_id: NCBITaxon:158899
+  source: PREGO
+  taxon_label: Collimonas fungivorans
+  score: 1.78041
+- taxon_id: NCBITaxon:182180
+  source: PREGO
+  taxon_label: Aromatoleum anaerobium
+  score: 1.77932
+- taxon_id: NCBITaxon:391774
+  source: PREGO
+  taxon_label: Nitratidesulfovibrio vulgaris DP4
+  score: 1.77926
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

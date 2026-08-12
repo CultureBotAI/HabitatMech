@@ -1,0 +1,36 @@
+identifier: ENVO:00002226
+label: borehole
+definition: A channel which is constructed by removing materials from land or submerged
+  beds.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: boreholar
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: boreholes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00000070
+- ENVO:03000117
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00002226
+  source_label: borehole
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:477974
+  source: PREGO
+  taxon_label: Candidatus Desulforudis audaxviator MP104C
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

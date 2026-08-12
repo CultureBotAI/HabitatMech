@@ -1,0 +1,22 @@
+identifier: habitatmech:GOLD.c299b80057
+label: Epilimnion
+habitat_category: AQUATIC
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00002131
+- ENVO:01001319
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:3977
+  source_label: Epilimnion
+  source_path: Environmental > Aquatic > Non-marine Saline and Alkaline > Saline >
+    Epilimnion
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 2
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

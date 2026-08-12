@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.5367726c63
+label: Whole body
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- BTO:0001489
+- habitatmech:GOLD.11ea780433
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6960
+  source_label: Whole body
+  source_path: Host-associated > Fish > Multiple systems > Multiple organs > Whole
+    body
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

@@ -1,0 +1,48 @@
+identifier: BTO:0000090
+label: ascidian
+definition: Any of a class (Ascidiacea) of solitary or colonial sessile tunicates
+  that have an oral and an atrial siphon.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: ascidianic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: ascidians
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: sea squirt
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: sea squirts
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000284
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000090
+  source_label: ascidian
+  assertion_count: 3
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1290553
+  source: PREGO
+  taxon_label: Halocynthiibacter namhaensis
+  score: 3.0
+- taxon_id: NCBITaxon:1333660
+  source: PREGO
+  taxon_label: Endozoicomonas atrinae
+  score: 3.0
+- taxon_id: NCBITaxon:7719
+  source: PREGO
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

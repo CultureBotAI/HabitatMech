@@ -1,0 +1,48 @@
+identifier: BTO:0000534
+label: gonad
+definition: A mixed gland that produces the gametes (sex cells) and sex hormones of
+  an organism. In the female of the species the reproductive cells are the egg cells,
+  and in the male the reproductive cells are the sperm. The male gonad, the testicle,
+  produces sperm in the form of spermatozoa. The female gonad, the ovary, produces
+  egg cells. Both of these gametes, are haploid germ cells.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: gonadic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: gonads
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: sexual gland
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: sexual glandic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: sexual glands
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000080
+- BTO:0000254
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000534
+  source_label: gonad
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:100901
+  source: PREGO
+  taxon_label: Wolbachia endosymbiont of Onchocerca ochengi
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

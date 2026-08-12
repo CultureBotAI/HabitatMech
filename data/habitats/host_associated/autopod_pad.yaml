@@ -1,0 +1,31 @@
+identifier: UBERON:0012348
+label: autopod pad
+definition: Pigmented, keratinised, hairless epidermis covering subcutaneous, collagenous,
+  and adipose tissue.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Paw pad
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: paw pad
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0015790
+- habitatmech:GOLD.c896f9520f
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6394
+  source_label: Paw pad
+  source_path: Host-associated > Mammals > Integumentary system > Skin > Paw pad
+  mapping_predicate: skos:closeMatch
+  assertion_count: 2
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

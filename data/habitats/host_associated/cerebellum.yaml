@@ -1,0 +1,38 @@
+identifier: BTO:0000232
+label: cerebellum
+definition: A large dorsally projecting part of the brain concerned especially with
+  the coordination of muscles and the maintenance of bodily equilibrium, situated
+  between the brain stem and the back of the cerebrum , and formed in humans of two
+  lateral lobes and a median lobe.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: cerebella
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: cerebellal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: cerebellums
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000232
+  source_label: cerebellum
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1329902
+  source: PREGO
+  taxon_label: Mannheimia haemolytica MhBrain2012
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

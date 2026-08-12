@@ -1,0 +1,20 @@
+identifier: habitatmech:BACDIVE.dded810572
+label: Decomposing-algae
+habitat_category: OTHER
+grounding_status: NOT_APPLICABLE
+mapping_status: SEEDED
+xrefs:
+- NCBITaxon:2836
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:decomposing-algae
+  source_label: Decomposing-algae
+  assertion_count: 4
+  assertion_unit: STRAIN
+  notes: Upstream mapping targets a non-habitat ontology (NCBITaxon:2836); kept as
+    an xref.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: NOT_APPLICABLE.'

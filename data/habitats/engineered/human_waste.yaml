@@ -1,0 +1,17 @@
+identifier: habitatmech:GOLD.0fd615b360
+label: Human waste
+habitat_category: ENGINEERED
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- mesh:D062611
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5898
+  source_label: Human waste
+  source_path: Engineered > Solid waste > Human waste
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

@@ -1,0 +1,166 @@
+identifier: ENVO:00005750
+label: grassland soil
+definition: A portion of soil which is found in a grassland.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: grassland soils
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00001998
+source_attestations:
+- source: ENVIRONMENTS_TABLE
+  source_id: soil_grassland
+  source_label: soil_grassland
+  notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: PREGO
+  source_id: ENVO:00005750
+  source_label: grassland soil
+  assertion_count: 222
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: environmental_samples
+environmental_parameters:
+- parameter: GRADIENTS
+  qualitative_value: high
+  source: kg-microbe environments.csv (soil_grassland)
+- parameter: NUTRIENTS
+  qualitative_value: medium
+  source: kg-microbe environments.csv (soil_grassland)
+- parameter: ORGANIC_MATTER
+  qualitative_value: medium
+  source: kg-microbe environments.csv (soil_grassland)
+- parameter: PH
+  qualitative_value: medium
+  source: kg-microbe environments.csv (soil_grassland)
+- parameter: PRESSURE
+  qualitative_value: low
+  source: kg-microbe environments.csv (soil_grassland)
+- parameter: SALINITY
+  qualitative_value: low
+  source: kg-microbe environments.csv (soil_grassland)
+- parameter: SALINITY_VARIABILITY
+  qualitative_value: small
+  source: kg-microbe environments.csv (soil_grassland)
+- parameter: STRUCTURAL_COMPLEXITY
+  qualitative_value: high
+  source: kg-microbe environments.csv (soil_grassland)
+- parameter: TEMPERATURE_VARIABILITY
+  qualitative_value: medium
+  source: kg-microbe environments.csv (soil_grassland)
+- parameter: WATER_AVAILABILITY
+  qualitative_value: medium
+  source: kg-microbe environments.csv (soil_grassland)
+- parameter: WATER_VARIABILITY
+  qualitative_value: occasionally dry
+  source: kg-microbe environments.csv (soil_grassland)
+characteristic_taxa:
+- taxon_id: NCBITaxon:1026
+  source: PREGO
+  taxon_label: Marinoscillum furvescens
+  score: 4.0
+- taxon_id: NCBITaxon:104176
+  source: PREGO
+  taxon_label: Oscillochloris trichoides
+  score: 4.0
+- taxon_id: NCBITaxon:104245
+  source: PREGO
+  taxon_label: Clavaria zollingeri
+  score: 4.0
+- taxon_id: NCBITaxon:110319
+  source: PREGO
+  taxon_label: Nocardioides sp. CF8
+  score: 4.0
+- taxon_id: NCBITaxon:110933
+  source: PREGO
+  taxon_label: Leifsonia poae
+  score: 4.0
+- taxon_id: NCBITaxon:112248
+  source: PREGO
+  taxon_label: Seinonella peptonophila
+  score: 4.0
+- taxon_id: NCBITaxon:114715
+  source: PREGO
+  taxon_label: uncultured Ralstonia sp.
+  score: 4.0
+- taxon_id: NCBITaxon:115433
+  source: PREGO
+  taxon_label: Amycolatopsis sacchari
+  score: 4.0
+- taxon_id: NCBITaxon:1264
+  source: PREGO
+  taxon_label: Hominimerdicola alba
+  score: 4.0
+- taxon_id: NCBITaxon:1265
+  source: PREGO
+  taxon_label: Ruminococcus flavefaciens
+  score: 4.0
+- taxon_id: NCBITaxon:1270
+  source: PREGO
+  taxon_label: Micrococcus luteus
+  score: 4.0
+- taxon_id: NCBITaxon:128
+  source: PREGO
+  taxon_label: Isosphaera pallida
+  score: 4.0
+- taxon_id: NCBITaxon:1282
+  source: PREGO
+  taxon_label: Staphylococcus epidermidis
+  score: 4.0
+- taxon_id: NCBITaxon:134561
+  source: PREGO
+  taxon_label: Nocardioides sp. C190
+  score: 4.0
+- taxon_id: NCBITaxon:1406
+  source: PREGO
+  taxon_label: Paenibacillus polymyxa
+  score: 4.0
+- taxon_id: NCBITaxon:1409
+  source: PREGO
+  taxon_label: 'Bacillus sp. (in: firmicutes)'
+  score: 4.0
+- taxon_id: NCBITaxon:1464
+  source: PREGO
+  taxon_label: Paenibacillus larvae
+  score: 4.0
+- taxon_id: NCBITaxon:146819
+  source: PREGO
+  taxon_label: Streptomyces europaeiscabiei
+  score: 4.0
+- taxon_id: NCBITaxon:1485
+  source: PREGO
+  taxon_label: Clostridium
+  score: 4.0
+- taxon_id: NCBITaxon:1523
+  source: PREGO
+  taxon_label: Clostridium longisporum
+  score: 4.0
+- taxon_id: NCBITaxon:153376
+  source: PREGO
+  taxon_label: Pseudonocardia zijingensis
+  score: 4.0
+- taxon_id: NCBITaxon:1563
+  source: PREGO
+  taxon_label: Desulfosporosinus orientis
+  score: 4.0
+- taxon_id: NCBITaxon:1566
+  source: PREGO
+  taxon_label: Desulfofundulus australicus
+  score: 4.0
+- taxon_id: NCBITaxon:157278
+  source: PREGO
+  taxon_label: uncultured Methylobacterium sp.
+  score: 4.0
+- taxon_id: NCBITaxon:157687
+  source: PREGO
+  taxon_label: Leptotrichia wadei
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, PREGO.
+    Grounding: EXACT.'

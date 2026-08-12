@@ -1,0 +1,118 @@
+identifier: ENVO:01000254
+label: environmental system
+definition: A system which has the disposition to environ one or more material entities.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: environment
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: environment
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: environmental systems
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: environments
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: ENVO:01000254
+  source_label: environmental system
+  assertion_count: 21
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1068980
+  source: PREGO
+  taxon_label: Amycolatopsis nigrescens CSC17Ta-90
+  score: 4.0
+- taxon_id: NCBITaxon:1096246
+  source: PREGO
+  taxon_label: Hungatella effluvii
+  score: 4.0
+- taxon_id: NCBITaxon:1101402
+  source: PREGO
+  taxon_label: Flavobacterium aciduliphilum
+  score: 4.0
+- taxon_id: NCBITaxon:1122923
+  source: PREGO
+  taxon_label: Paenibacillus pasadenensis DSM 19293
+  score: 4.0
+- taxon_id: NCBITaxon:1175486
+  source: PREGO
+  taxon_label: Nocardioides albertanoniae
+  score: 4.0
+- taxon_id: NCBITaxon:1541063
+  source: PREGO
+  taxon_label: Prolixibacter denitrificans
+  score: 4.0
+- taxon_id: NCBITaxon:154117
+  source: PREGO
+  taxon_label: Georgenia muralis
+  score: 4.0
+- taxon_id: NCBITaxon:172045
+  source: PREGO
+  taxon_label: Elizabethkingia miricola
+  score: 4.0
+- taxon_id: NCBITaxon:237611
+  source: PREGO
+  taxon_label: Sphingomonas abaci
+  score: 4.0
+- taxon_id: NCBITaxon:271432
+  source: PREGO
+  taxon_label: Arthrobacter pigmenti
+  score: 4.0
+- taxon_id: NCBITaxon:388051
+  source: PREGO
+  taxon_label: Cupriavidus sp. amp6
+  score: 4.0
+- taxon_id: NCBITaxon:420662
+  source: PREGO
+  taxon_label: Methylibium petroleiphilum PM1
+  score: 4.0
+- taxon_id: NCBITaxon:588067
+  source: PREGO
+  taxon_label: Prauserella muralis
+  score: 4.0
+- taxon_id: NCBITaxon:682979
+  source: PREGO
+  taxon_label: Microlunatus parietis
+  score: 4.0
+- taxon_id: NCBITaxon:763993
+  source: PREGO
+  taxon_label: Pseudokineococcus lusitanus
+  score: 4.0
+- taxon_id: NCBITaxon:861865
+  source: PREGO
+  taxon_label: Edaphosphingomonas laterariae
+  score: 4.0
+- taxon_id: NCBITaxon:935546
+  source: PREGO
+  taxon_label: Mesorhizobium loti NZP2037
+  score: 4.0
+- taxon_id: NCBITaxon:936138
+  source: PREGO
+  taxon_label: Phorcysia thermohydrogeniphila
+  score: 4.0
+- taxon_id: NCBITaxon:941907
+  source: PREGO
+  taxon_label: Allosphingosinicella indica
+  score: 4.0
+- taxon_id: NCBITaxon:993414
+  source: PREGO
+  taxon_label: Naumannella halotolerans
+  score: 4.0
+- taxon_id: NCBITaxon:1121019
+  source: PREGO
+  taxon_label: Arthrobacter castelli DSM 16402
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

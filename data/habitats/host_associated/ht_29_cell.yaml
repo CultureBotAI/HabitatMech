@@ -1,0 +1,117 @@
+identifier: BTO:0000182
+label: HT-29 cell
+definition: Human colon adenocarcinoma, established from the primary tumor of a 44-year-old
+  Caucasian woman with colon adenocarcinoma in 1964; described to be heterotransplantable
+  forming well-differentiated grade I tumors.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: HT29-CRC cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: ht29
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: ht29 cell line
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: ht29 cell lines
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: ht29 cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0001913
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000182
+  source_label: HT-29 cell
+  assertion_count: 19
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1254439
+  source: PREGO
+  taxon_label: Bifidobacterium thermophilum RBL67
+  score: 3.0
+- taxon_id: NCBITaxon:1352
+  source: PREGO
+  taxon_label: Enterococcus faecium
+  score: 3.0
+- taxon_id: NCBITaxon:135569
+  source: PREGO
+  taxon_label: Helicobacter apodemus
+  score: 3.0
+- taxon_id: NCBITaxon:1408441
+  source: PREGO
+  taxon_label: Helicobacter bilis ATCC 51630
+  score: 3.0
+- taxon_id: NCBITaxon:1548018
+  source: PREGO
+  taxon_label: Helicobacter saguini
+  score: 3.0
+- taxon_id: NCBITaxon:1548147
+  source: PREGO
+  taxon_label: Helicobacter sp. MIT 03-1614
+  score: 3.0
+- taxon_id: NCBITaxon:1548148
+  source: PREGO
+  taxon_label: Helicobacter sp. MIT 03-1616
+  score: 3.0
+- taxon_id: NCBITaxon:1548149
+  source: PREGO
+  taxon_label: Helicobacter sp. MIT 05-5293
+  score: 3.0
+- taxon_id: NCBITaxon:1548150
+  source: PREGO
+  taxon_label: Helicobacter sp. MIT 05-5294
+  score: 3.0
+- taxon_id: NCBITaxon:1548151
+  source: PREGO
+  taxon_label: Helicobacter sp. MIT 11-5569
+  score: 3.0
+- taxon_id: NCBITaxon:1548153
+  source: PREGO
+  taxon_label: Campylobacter sp. MIT 97-5078
+  score: 3.0
+- taxon_id: NCBITaxon:1590
+  source: PREGO
+  taxon_label: Lactiplantibacillus plantarum
+  score: 3.0
+- taxon_id: NCBITaxon:1677920
+  source: PREGO
+  taxon_label: Helicobacter jaachi
+  score: 3.0
+- taxon_id: NCBITaxon:1682
+  source: PREGO
+  taxon_label: Bifidobacterium longum subsp. infantis
+  score: 3.0
+- taxon_id: NCBITaxon:216
+  source: PREGO
+  taxon_label: Helicobacter muridarum
+  score: 3.0
+- taxon_id: NCBITaxon:37372
+  source: PREGO
+  taxon_label: Helicobacter bilis
+  score: 3.0
+- taxon_id: NCBITaxon:471858
+  source: PREGO
+  taxon_label: Helicobacter magdeburgensis
+  score: 3.0
+- taxon_id: NCBITaxon:50960
+  source: PREGO
+  taxon_label: Helicobacter trogontum
+  score: 3.0
+- taxon_id: NCBITaxon:76936
+  source: PREGO
+  taxon_label: Helicobacter typhlonius
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

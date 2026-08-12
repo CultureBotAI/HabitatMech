@@ -1,0 +1,22 @@
+identifier: habitatmech:GOLD.197861c6ca
+label: Ascites
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- BTO:0000091
+- habitatmech:GOLD.d55d24e64f
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6166
+  source_label: Ascites
+  source_path: 'Host-associated > Mammals: Human > Abdominal/Peritoneal cavity > Ascites'
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

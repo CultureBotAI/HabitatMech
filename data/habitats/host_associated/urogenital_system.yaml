@@ -1,0 +1,148 @@
+identifier: BTO:0003091
+label: urogenital system
+definition: The urinary system and genital system considered together.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: genitourinary system
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: genitourinary systems
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: genitourinary tract
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: genitourinary tractic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: genitourinary tracts
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: urogenital systems
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: urogenital tract
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: urogenital tractic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: urogenital tracts
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0003091
+  source_label: urogenital system
+  assertion_count: 25
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1072256
+  source: PREGO
+  taxon_label: Corynebacterium uterequi
+  score: 3.0
+- taxon_id: NCBITaxon:1100833
+  source: PREGO
+  taxon_label: Chlamydia trachomatis F/SWFPminus
+  score: 3.0
+- taxon_id: NCBITaxon:1292046
+  source: PREGO
+  taxon_label: Desulfobulbus sp. oral taxon 041 str. Dsb1-5
+  score: 3.0
+- taxon_id: NCBITaxon:1311
+  source: PREGO
+  taxon_label: Streptococcus agalactiae
+  score: 3.0
+- taxon_id: NCBITaxon:1427368
+  source: PREGO
+  taxon_label: Chlamydia pecorum IPTaLE
+  score: 3.0
+- taxon_id: NCBITaxon:1427369
+  source: PREGO
+  taxon_label: Chlamydia pecorum MC/MarsBar
+  score: 3.0
+- taxon_id: NCBITaxon:1427370
+  source: PREGO
+  taxon_label: Chlamydia pecorum DBDeUG
+  score: 3.0
+- taxon_id: NCBITaxon:1427371
+  source: PREGO
+  taxon_label: Chlamydia pecorum VR629
+  score: 3.0
+- taxon_id: NCBITaxon:1724
+  source: PREGO
+  taxon_label: Corynebacterium renale
+  score: 3.0
+- taxon_id: NCBITaxon:187101
+  source: PREGO
+  taxon_label: Sneathia vaginalis
+  score: 3.0
+- taxon_id: NCBITaxon:315277
+  source: PREGO
+  taxon_label: Chlamydia trachomatis A/HAR-13
+  score: 3.0
+- taxon_id: NCBITaxon:342616
+  source: PREGO
+  taxon_label: Streptococcus agalactiae COH1
+  score: 3.0
+- taxon_id: NCBITaxon:35756
+  source: PREGO
+  taxon_label: Corynebacterium pilosum
+  score: 3.0
+- taxon_id: NCBITaxon:411465
+  source: PREGO
+  taxon_label: Parvimonas micra ATCC 33270
+  score: 3.0
+- taxon_id: NCBITaxon:525264
+  source: PREGO
+  taxon_label: Corynebacterium pseudogenitalium ATCC 33035
+  score: 3.0
+- taxon_id: NCBITaxon:548476
+  source: PREGO
+  taxon_label: Corynebacterium aurimucosum ATCC 700975
+  score: 3.0
+- taxon_id: NCBITaxon:696216
+  source: PREGO
+  taxon_label: Streptococcus constellatus subsp. pharyngis C232
+  score: 3.0
+- taxon_id: NCBITaxon:756284
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:813
+  source: PREGO
+  taxon_label: Chlamydia trachomatis
+  score: 3.0
+- taxon_id: NCBITaxon:862966
+  source: PREGO
+  taxon_label: Streptococcus intermedius C270
+  score: 3.0
+- taxon_id: NCBITaxon:862967
+  source: PREGO
+  taxon_label: Streptococcus intermedius B196
+  score: 3.0
+- taxon_id: NCBITaxon:862968
+  source: PREGO
+  taxon_label: Streptococcus constellatus subsp. pharyngis C818
+  score: 3.0
+- taxon_id: NCBITaxon:862969
+  source: PREGO
+  taxon_label: Streptococcus constellatus subsp. pharyngis C1050
+  score: 3.0
+- taxon_id: NCBITaxon:862970
+  source: PREGO
+  taxon_label: Streptococcus anginosus C1051
+  score: 3.0
+- taxon_id: NCBITaxon:862971
+  source: PREGO
+  taxon_label: Streptococcus anginosus C238
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

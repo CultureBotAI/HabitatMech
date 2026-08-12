@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.1c8b5d3fe5
+label: Limnetic zone
+habitat_category: AQUATIC
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.312657c243
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4176
+  source_label: Limnetic zone
+  source_path: Environmental > Aquatic > Freshwater > Lentic > Limnetic zone
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

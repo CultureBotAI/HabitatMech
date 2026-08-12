@@ -1,0 +1,27 @@
+identifier: NCIT:C85060
+label: Animal-produced-food-natural
+habitat_category: CLINICAL
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Juice-natural
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:animal-produced-food-natural
+  source_label: Animal-produced-food-natural
+  mapping_predicate: skos:closeMatch
+  assertion_count: 38
+  assertion_unit: STRAIN
+- source: BACDIVE
+  source_id: bacdive.isolation_source:juice-natural
+  source_label: Juice-natural
+  mapping_predicate: skos:closeMatch
+  assertion_count: 36
+  assertion_unit: STRAIN
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

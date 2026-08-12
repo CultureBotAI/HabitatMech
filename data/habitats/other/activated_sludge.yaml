@@ -1,0 +1,125 @@
+identifier: ENVO:00002046
+label: activated sludge
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: activated sludges
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00002044
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00002046
+  source_label: activated sludge
+  assertion_count: 914
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:111564
+  source: PREGO
+  taxon_label: Kineosphaera limosa
+  score: 4.0
+- taxon_id: NCBITaxon:1121458
+  source: PREGO
+  taxon_label: Humidesulfovibrio mexicanus DSM 13116
+  score: 4.0
+- taxon_id: NCBITaxon:112248
+  source: PREGO
+  taxon_label: Seinonella peptonophila
+  score: 4.0
+- taxon_id: NCBITaxon:1133106
+  source: PREGO
+  taxon_label: Plasticicumulans lactativorans
+  score: 4.0
+- taxon_id: NCBITaxon:1399
+  source: PREGO
+  taxon_label: Cytobacillus firmus
+  score: 4.0
+- taxon_id: NCBITaxon:1501432
+  source: PREGO
+  taxon_label: Thiopseudomonas denitrificans
+  score: 4.0
+- taxon_id: NCBITaxon:153494
+  source: PREGO
+  taxon_label: Rarobacter incanus
+  score: 4.0
+- taxon_id: NCBITaxon:164759
+  source: PREGO
+  taxon_label: Diaphorobacter nitroreducens
+  score: 4.0
+- taxon_id: NCBITaxon:194373
+  source: PREGO
+  taxon_label: uncultured Hyphomicrobium sp.
+  score: 4.0
+- taxon_id: NCBITaxon:196162
+  source: PREGO
+  taxon_label: Nocardioides sp. JS614
+  score: 4.0
+- taxon_id: NCBITaxon:199684
+  source: PREGO
+  taxon_label: uncultured Bradyrhizobium sp.
+  score: 4.0
+- taxon_id: NCBITaxon:231024
+  source: PREGO
+  taxon_label: Streptomyces africanus
+  score: 4.0
+- taxon_id: NCBITaxon:256466
+  source: PREGO
+  taxon_label: Pseudomonas japonica
+  score: 4.0
+- taxon_id: NCBITaxon:265072
+  source: PREGO
+  taxon_label: Methylobacillus flagellatus KT
+  score: 4.0
+- taxon_id: NCBITaxon:266940
+  source: PREGO
+  taxon_label: Kineococcus radiotolerans SRS30216 = ATCC BAA-149
+  score: 4.0
+- taxon_id: NCBITaxon:28034
+  source: PREGO
+  taxon_label: Sulfobacillus thermosulfidooxidans
+  score: 4.0
+- taxon_id: NCBITaxon:28115
+  source: PREGO
+  taxon_label: Porphyromonas macacae
+  score: 4.0
+- taxon_id: NCBITaxon:283878
+  source: PREGO
+  taxon_label: Leucobacter aridicollis
+  score: 4.0
+- taxon_id: NCBITaxon:29290
+  source: PREGO
+  taxon_label: Candidatus Magnetobacterium bavaricum
+  score: 4.0
+- taxon_id: NCBITaxon:29346
+  source: PREGO
+  taxon_label: Alkalithermobacter thermoalcaliphilus
+  score: 4.0
+- taxon_id: NCBITaxon:29355
+  source: PREGO
+  taxon_label: Ruminiclostridium cellobioparum
+  score: 4.0
+- taxon_id: NCBITaxon:29539
+  source: PREGO
+  taxon_label: Thermoleophilum album
+  score: 4.0
+- taxon_id: NCBITaxon:317664
+  source: PREGO
+  taxon_label: Quadrisphaera granulorum
+  score: 4.0
+- taxon_id: NCBITaxon:330214
+  source: PREGO
+  taxon_label: Nitrospira defluvii
+  score: 4.0
+- taxon_id: NCBITaxon:34073
+  source: PREGO
+  taxon_label: Variovorax paradoxus
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

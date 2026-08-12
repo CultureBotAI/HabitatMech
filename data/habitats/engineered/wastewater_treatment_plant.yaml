@@ -1,0 +1,128 @@
+identifier: ENVO:00002043
+label: wastewater treatment plant
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: wastewater treatment plantic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: wastewater treatment plants
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00002272
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00002043
+  source_label: wastewater treatment plant
+  assertion_count: 902
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:1089553
+  source: PREGO
+  taxon_label: Thermacetogenium phaeum DSM 12270
+  score: 3.0
+- taxon_id: NCBITaxon:1120924
+  source: PREGO
+  taxon_label: Acinetobacter baylyi DSM 14961 = CIP 107474
+  score: 3.0
+- taxon_id: NCBITaxon:1120925
+  source: PREGO
+  taxon_label: Acinetobacter bouvetii DSM 14964 = CIP 107468
+  score: 3.0
+- taxon_id: NCBITaxon:1120927
+  source: PREGO
+  taxon_label: Acinetobacter tandoii DSM 14970 = CIP 107469
+  score: 3.0
+- taxon_id: NCBITaxon:1120928
+  source: PREGO
+  taxon_label: Acinetobacter tjernbergiae DSM 14971 = CIP 107465
+  score: 3.0
+- taxon_id: NCBITaxon:1120929
+  source: PREGO
+  taxon_label: Acinetobacter towneri DSM 14962 = CIP 107472
+  score: 3.0
+- taxon_id: NCBITaxon:1121889
+  source: PREGO
+  taxon_label: Flavobacterium filum DSM 17961
+  score: 3.0
+- taxon_id: NCBITaxon:1121933
+  source: PREGO
+  taxon_label: Granulicoccus phenolivorans DSM 17626 = NBRC 107789 = JCM 15570
+  score: 3.0
+- taxon_id: NCBITaxon:1122132
+  source: PREGO
+  taxon_label: Kaistia granuli DSM 23481
+  score: 3.0
+- taxon_id: NCBITaxon:1123399
+  source: PREGO
+  taxon_label: Thiolinea disciformis DSM 14473
+  score: 3.0
+- taxon_id: NCBITaxon:1123400
+  source: PREGO
+  taxon_label: Thiofilum flexile DSM 14609
+  score: 3.0
+- taxon_id: NCBITaxon:1259795
+  source: PREGO
+  taxon_label: Coprothermobacter platensis DSM 11748
+  score: 3.0
+- taxon_id: NCBITaxon:1304875
+  source: PREGO
+  taxon_label: Aminobacterium mobile DSM 12262
+  score: 3.0
+- taxon_id: NCBITaxon:1399774
+  source: PREGO
+  taxon_label: Enterobacter cloacae JD6301
+  score: 3.0
+- taxon_id: NCBITaxon:264023
+  source: PREGO
+  taxon_label: Mariniflexile fucanivorans
+  score: 3.0
+- taxon_id: NCBITaxon:265072
+  source: PREGO
+  taxon_label: Methylobacillus flagellatus KT
+  score: 3.0
+- taxon_id: NCBITaxon:28892
+  source: PREGO
+  taxon_label: Methanofollis liminatans DSM 4140
+  score: 3.0
+- taxon_id: NCBITaxon:370973
+  source: PREGO
+  taxon_label: Runella defluvii
+  score: 3.0
+- taxon_id: NCBITaxon:558173
+  source: PREGO
+  taxon_label: Corynebacterium doosanense CAU 212 = DSM 45436
+  score: 3.0
+- taxon_id: NCBITaxon:572547
+  source: PREGO
+  taxon_label: Aminobacterium colombiense DSM 12261
+  score: 3.0
+- taxon_id: NCBITaxon:584708
+  source: PREGO
+  taxon_label: Aminomonas paucivorans DSM 12260
+  score: 3.0
+- taxon_id: NCBITaxon:866499
+  source: PREGO
+  taxon_label: Cloacibacillus evryensis DSM 19522
+  score: 3.0
+- taxon_id: NCBITaxon:214688
+  source: PREGO
+  taxon_label: Gemmata obscuriglobus UQM 2246
+  score: 1.94528
+- taxon_id: NCBITaxon:338966
+  source: PREGO
+  taxon_label: Pelobacter propionicus DSM 2379
+  score: 1.93767
+- taxon_id: NCBITaxon:76114
+  source: PREGO
+  taxon_label: Aromatoleum aromaticum EbN1
+  score: 1.93534
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

@@ -1,0 +1,32 @@
+identifier: ENVO:01001529
+label: glacier snout
+definition: An ice mass which constitutes that part of a glacier which has the lowest
+  elevation.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Glacier terminus
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: glacier terminus
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: glacier toe
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:01001547
+- habitatmech:GOLD.72c624d166
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7972
+  source_label: Glacier terminus
+  source_path: Environmental > Terrestrial > Soil > Glacier > Glacier terminus
+  mapping_predicate: skos:closeMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

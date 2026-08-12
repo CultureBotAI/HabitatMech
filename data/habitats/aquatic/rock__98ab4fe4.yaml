@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.943921b1b0
+label: Rock
+habitat_category: AQUATIC
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00001995
+- habitatmech:GOLD.fc3b904cb2
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5738
+  source_label: Rock
+  source_path: Environmental > Aquatic > Marine > Oceanic > Rock
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

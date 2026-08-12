@@ -1,0 +1,24 @@
+identifier: UBERON:0013216
+label: udder
+definition: A large pendulous organ consisting of two or more mammary glands enclosed
+  in a common envelope and each provided with a single nipple.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0000481
+- habitatmech:GOLD.c896f9520f
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6400
+  source_label: Udder
+  source_path: Host-associated > Mammals > Integumentary system > Skin > Udder
+  mapping_predicate: skos:exactMatch
+  assertion_count: 6
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

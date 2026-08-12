@@ -1,0 +1,41 @@
+identifier: BTO:0002136
+label: NB-4 cell
+definition: Human acute promyelocytic leukemia cell line; established from the bone
+  marrow of a 23-year-old woman with acute promyelocytic leukemia (APL = AML FAB M3)
+  in second relapse in 1989.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: nb4
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: nb4 cell line
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: nb4 cell lines
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: nb4 cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0001883
+source_attestations:
+- source: PREGO
+  source_id: BTO:0002136
+  source_label: NB-4 cell
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1241906
+  source: PREGO
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

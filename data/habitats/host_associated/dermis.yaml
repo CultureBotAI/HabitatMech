@@ -1,0 +1,36 @@
+identifier: UBERON:0002067
+label: dermis
+definition: The dermis is a layer of skin between the epidermis (with which it makes
+  up the skin) and subcutaneous tissues, and is composed of two layers, the papillary
+  and reticular dermis[WP].
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: corium
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: cutis
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: vertebrate dermis
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0004121
+- UBERON:0004923
+- UBERON:0010314
+- UBERON:0013754
+- habitatmech:GOLD.4b37ab4b76
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6499
+  source_label: Dermis
+  source_path: 'Host-associated > Mammals: Human > Integumentary system > Skin > Dermis'
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

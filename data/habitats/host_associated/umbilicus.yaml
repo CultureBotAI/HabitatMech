@@ -1,0 +1,34 @@
+identifier: UBERON:0007118
+label: umbilicus
+definition: The pit in the center of the abdominal wall marking the point where the
+  umbilical cord entered in the fetus.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: navel
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: umbilical part of abdomen
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: umbilical region
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0000479
+- habitatmech:GOLD.4b37ab4b76
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6292
+  source_label: Umbilicus
+  source_path: 'Host-associated > Mammals: Human > Integumentary system > Skin > Umbilicus'
+  mapping_predicate: skos:exactMatch
+  assertion_count: 5
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

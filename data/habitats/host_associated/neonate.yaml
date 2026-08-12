@@ -1,0 +1,127 @@
+identifier: BTO:0001762
+label: neonate
+definition: 'A newborn child; especially: a child less than a month old.'
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: neonates
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000284
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001762
+  source_label: neonate
+  assertion_count: 78
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1045857
+  source: PREGO
+  taxon_label: Cronobacter sakazakii ES713
+  score: 3.0
+- taxon_id: NCBITaxon:1056807
+  source: PREGO
+  taxon_label: Morococcus cerebrosus
+  score: 3.0
+- taxon_id: NCBITaxon:1074000
+  source: PREGO
+  taxon_label: Cronobacter universalis NCTC 9529
+  score: 3.0
+- taxon_id: NCBITaxon:108486
+  source: PREGO
+  taxon_label: Corynebacterium falsenii
+  score: 3.0
+- taxon_id: NCBITaxon:1159489
+  source: PREGO
+  taxon_label: Cronobacter sakazakii 2151
+  score: 3.0
+- taxon_id: NCBITaxon:1159490
+  source: PREGO
+  taxon_label: Cronobacter sakazakii E764
+  score: 3.0
+- taxon_id: NCBITaxon:1159491
+  source: PREGO
+  taxon_label: Cronobacter malonaticus LMG 23826
+  score: 3.0
+- taxon_id: NCBITaxon:1159496
+  source: PREGO
+  taxon_label: Cronobacter dublinensis subsp. lactaridi LMG 23825
+  score: 3.0
+- taxon_id: NCBITaxon:1159554
+  source: PREGO
+  taxon_label: Cronobacter dublinensis subsp. dublinensis LMG 23823
+  score: 3.0
+- taxon_id: NCBITaxon:1159560
+  source: PREGO
+  taxon_label: Cronobacter dublinensis subsp. lausannensis LMG 23824
+  score: 3.0
+- taxon_id: NCBITaxon:1159613
+  source: PREGO
+  taxon_label: Cronobacter muytjensii ATCC 51329
+  score: 3.0
+- taxon_id: NCBITaxon:1159614
+  source: PREGO
+  taxon_label: Cronobacter sakazakii ES35
+  score: 3.0
+- taxon_id: NCBITaxon:1208663
+  source: PREGO
+  taxon_label: Cronobacter sakazakii 701
+  score: 3.0
+- taxon_id: NCBITaxon:1208664
+  source: PREGO
+  taxon_label: Cronobacter sakazakii 696
+  score: 3.0
+- taxon_id: NCBITaxon:1261567
+  source: PREGO
+  taxon_label: Streptococcus agalactiae 2-22
+  score: 3.0
+- taxon_id: NCBITaxon:1265684
+  source: PREGO
+  taxon_label: Streptococcus agalactiae SS1219
+  score: 3.0
+- taxon_id: NCBITaxon:1266066
+  source: PREGO
+  taxon_label: Streptococcus agalactiae LADL-90-503
+  score: 3.0
+- taxon_id: NCBITaxon:1266067
+  source: PREGO
+  taxon_label: Streptococcus agalactiae LADL_05-108a
+  score: 3.0
+- taxon_id: NCBITaxon:1266068
+  source: PREGO
+  taxon_label: Streptococcus agalactiae SS1218
+  score: 3.0
+- taxon_id: NCBITaxon:1266069
+  source: PREGO
+  taxon_label: Streptococcus agalactiae CF01173
+  score: 3.0
+- taxon_id: NCBITaxon:1266070
+  source: PREGO
+  taxon_label: Streptococcus agalactiae SS1014
+  score: 3.0
+- taxon_id: NCBITaxon:1276
+  source: PREGO
+  taxon_label: Kytococcus sedentarius
+  score: 3.0
+- taxon_id: NCBITaxon:1282
+  source: PREGO
+  taxon_label: Staphylococcus epidermidis
+  score: 3.0
+- taxon_id: NCBITaxon:1292
+  source: PREGO
+  taxon_label: Staphylococcus warneri
+  score: 3.0
+- taxon_id: NCBITaxon:1296619
+  source: PREGO
+  taxon_label: Staphylococcus capitis CR01
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

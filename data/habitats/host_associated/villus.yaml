@@ -1,0 +1,41 @@
+identifier: BTO:0003121
+label: villus
+definition: 'Any of the small, slender, vascular projections that increase the surface
+  area of a membrane. Important villous membranes include the placenta and the mucous-membrane
+  coating of the small intestine. Each villus has a central core composed of one artery
+  and one vein, a strand of muscle, a centrally located lymphatic capillary, and connective
+  tissue that adds support to the structures. Covering the core of a villus is the
+  surface mucous-membrane layer. This is mainly composed of two cell types: tall,
+  narrow, columnar cells and goblet cells.'
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: villal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: villi
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: villuses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0003121
+  source_label: villus
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1205679
+  source: PREGO
+  taxon_label: Bifidobacterium longum subsp. longum CECT 7347
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

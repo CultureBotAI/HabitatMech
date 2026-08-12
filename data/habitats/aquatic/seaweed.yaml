@@ -1,0 +1,32 @@
+identifier: FOODON:03412266
+label: seaweed
+definition: 'A macroscopic, multicellular, marine algae (kingdom Protista) that belongs
+  to one of several groups of multicellular algae: the red algae, green algae, and
+  brown algae. As these three groups are not thought to have a common multicellular
+  ancestor, the seaweeds are a polyphyletic group. In addition, some tuft-forming
+  bluegreen algae (Cyanobacteria) are sometimes considered seaweed.'
+definition_source: FOODON
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: macroalgae
+  synonym_type: EXACT_SYNONYM
+  source: FOODON
+parent_habitats:
+- ENVO:00001999
+- FOODON:03411301
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4685
+  source_label: Seaweed
+  source_path: Environmental > Aquatic > Marine > Seaweed
+  mapping_predicate: skos:exactMatch
+  assertion_count: 69
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

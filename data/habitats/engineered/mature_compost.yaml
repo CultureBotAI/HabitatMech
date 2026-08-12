@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.f73733ec5a
+label: Mature compost
+habitat_category: ENGINEERED
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.7ed31a05b3
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5900
+  source_label: Mature compost
+  source_path: Engineered > Solid waste > Human waste > Composting > Mature compost
+  assertion_count: 24
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

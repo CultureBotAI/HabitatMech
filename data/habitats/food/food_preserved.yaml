@@ -1,0 +1,28 @@
+identifier: FOODON:00002158
+label: food (preserved)
+definition: Food material which is the output of a food preservation process.
+definition_source: FOODON
+habitat_category: FOOD
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Preserved
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+- synonym_text: preserved
+  synonym_type: EXACT_SYNONYM
+  source: FOODON
+parent_habitats:
+- FOODON:00002645
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:preserved
+  source_label: Preserved
+  mapping_predicate: skos:closeMatch
+  assertion_count: 19
+  assertion_unit: STRAIN
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

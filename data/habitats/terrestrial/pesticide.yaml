@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.8ebd2ee3c5
+label: Pesticide
+habitat_category: TERRESTRIAL
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.8eb155993f
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5885
+  source_label: Pesticide
+  source_path: Environmental > Terrestrial > Soil > Contaminated > Pesticide
+  assertion_count: 9
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

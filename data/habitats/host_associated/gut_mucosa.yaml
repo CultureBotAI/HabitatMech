@@ -1,0 +1,52 @@
+identifier: BTO:0000546
+label: gut mucosa
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: gut mucosal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: gut mucosas
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000886
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000546
+  source_label: gut mucosa
+  assertion_count: 6
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1297579
+  source: PREGO
+  taxon_label: Fusobacterium nucleatum CC53
+  score: 3.0
+- taxon_id: NCBITaxon:1457191
+  source: PREGO
+  taxon_label: Lacticaseibacillus rhamnosus E800
+  score: 3.0
+- taxon_id: NCBITaxon:1457395
+  source: PREGO
+  taxon_label: Lacticaseibacillus rhamnosus PEL5
+  score: 3.0
+- taxon_id: NCBITaxon:1457396
+  source: PREGO
+  taxon_label: Lacticaseibacillus rhamnosus PEL6
+  score: 3.0
+- taxon_id: NCBITaxon:216599
+  source: PREGO
+  taxon_label: Shigella sonnei 53G
+  score: 3.0
+- taxon_id: NCBITaxon:420247
+  source: PREGO
+  taxon_label: Methanobrevibacter smithii ATCC 35061
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

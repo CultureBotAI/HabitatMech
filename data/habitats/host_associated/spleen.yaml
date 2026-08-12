@@ -1,0 +1,115 @@
+identifier: BTO:0001281
+label: spleen
+definition: A highly vascular ductless organ that is located in the left abdominal
+  region near the stomach or intestine of most vertebrates and is concerned with final
+  destruction of red blood cells, filtration and storage of blood, and production
+  of lymphocytes.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: spleens
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000753
+- BTO:0001491
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001281
+  source_label: spleen
+  assertion_count: 21
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1133849
+  source: PREGO
+  taxon_label: Nocardia brasiliensis ATCC 700358
+  score: 3.0
+- taxon_id: NCBITaxon:1194086
+  source: PREGO
+  taxon_label: Yersinia enterocolitica subsp. enterocolitica WA-314
+  score: 3.0
+- taxon_id: NCBITaxon:1273539
+  source: PREGO
+  taxon_label: Streptococcus iniae IUSA1
+  score: 3.0
+- taxon_id: NCBITaxon:1334565
+  source: PREGO
+  taxon_label: Listeria monocytogenes EGD
+  score: 3.0
+- taxon_id: NCBITaxon:1348
+  source: PREGO
+  taxon_label: Streptococcus parauberis
+  score: 3.0
+- taxon_id: NCBITaxon:1359
+  source: PREGO
+  taxon_label: Lactococcus cremoris
+  score: 3.0
+- taxon_id: NCBITaxon:1450449
+  source: PREGO
+  taxon_label: Mannheimia haemolytica serotype A1/A6 str. PKL10
+  score: 3.0
+- taxon_id: NCBITaxon:152142
+  source: PREGO
+  taxon_label: Mycolicibacterium holsaticum
+  score: 3.0
+- taxon_id: NCBITaxon:1776
+  source: PREGO
+  taxon_label: Mycolicibacterium flavescens
+  score: 3.0
+- taxon_id: NCBITaxon:1778
+  source: PREGO
+  taxon_label: Mycobacterium gordonae
+  score: 3.0
+- taxon_id: NCBITaxon:1798
+  source: PREGO
+  taxon_label: Mycolicibacillus trivialis
+  score: 3.0
+- taxon_id: NCBITaxon:1867252
+  source: PREGO
+  taxon_label: Borrelia hermsii HS1
+  score: 3.0
+- taxon_id: NCBITaxon:220341
+  source: PREGO
+  taxon_label: Salmonella enterica subsp. enterica serovar Typhi str. CT18
+  score: 3.0
+- taxon_id: NCBITaxon:243061
+  source: PREGO
+  taxon_label: Mycobacterium sherrisii
+  score: 3.0
+- taxon_id: NCBITaxon:28445
+  source: PREGO
+  taxon_label: Mycobacterium intermedium
+  score: 3.0
+- taxon_id: NCBITaxon:29313
+  source: PREGO
+  taxon_label: Mycobacterium shimoidei
+  score: 3.0
+- taxon_id: NCBITaxon:393133
+  source: PREGO
+  taxon_label: Listeria monocytogenes 10403S
+  score: 3.0
+- taxon_id: NCBITaxon:39693
+  source: PREGO
+  taxon_label: Mycolicibacterium porcinum
+  score: 3.0
+- taxon_id: NCBITaxon:573
+  source: PREGO
+  taxon_label: Klebsiella pneumoniae
+  score: 3.0
+- taxon_id: NCBITaxon:72407
+  source: PREGO
+  taxon_label: Klebsiella pneumoniae subsp. pneumoniae
+  score: 3.0
+- taxon_id: NCBITaxon:83554
+  source: PREGO
+  taxon_label: Chlamydia psittaci
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

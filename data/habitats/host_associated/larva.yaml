@@ -1,0 +1,134 @@
+identifier: BTO:0000707
+label: larva
+definition: '1: The immature, wingless, and often wormlike feeding form that hatches
+  from the egg of many insects, alters chiefly in size while passing through several
+  molts, and is finally transformed into a pupa or chrysalis from which the adult
+  emerges. 2: The early form of an animal (as a frog or sea urchin) that at birth
+  or hatching is fundamentally unlike its parent and must metamorphose before assuming
+  the adult characters.'
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: larval
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: larvas
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000174
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000707
+  source_label: larva
+  assertion_count: 96
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:1173062
+  source: PREGO
+  taxon_label: Acinetobacter sp. HA
+  score: 3.0
+- taxon_id: NCBITaxon:1197727
+  source: PREGO
+  taxon_label: Pseudomonas sp. Ag1
+  score: 3.0
+- taxon_id: NCBITaxon:1202448
+  source: PREGO
+  taxon_label: Enterobacter sp. Ag1
+  score: 3.0
+- taxon_id: NCBITaxon:1232203
+  source: PREGO
+  taxon_label: Bacillus thuringiensis serovar aizawai str. Leapi01
+  score: 3.0
+- taxon_id: NCBITaxon:1292046
+  source: PREGO
+  taxon_label: Desulfobulbus sp. oral taxon 041 str. Dsb1-5
+  score: 3.0
+- taxon_id: NCBITaxon:1301280
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:1382230
+  source: PREGO
+  taxon_label: Asaia platycodi SF2.1
+  score: 3.0
+- taxon_id: NCBITaxon:1408
+  source: PREGO
+  taxon_label: Bacillus pumilus
+  score: 3.0
+- taxon_id: NCBITaxon:1408281
+  source: PREGO
+  taxon_label: Endomicrobium proavitum
+  score: 3.0
+- taxon_id: NCBITaxon:1417985
+  source: PREGO
+  taxon_label: Bacillus thuringiensis LM1212
+  score: 3.0
+- taxon_id: NCBITaxon:1423144
+  source: PREGO
+  taxon_label: Phaeobacter gallaeciensis DSM 26640
+  score: 3.0
+- taxon_id: NCBITaxon:1526762
+  source: PREGO
+  taxon_label: Vibrio sp. B183
+  score: 3.0
+- taxon_id: NCBITaxon:1532556
+  source: PREGO
+  taxon_label: Serratia sp. Ag2
+  score: 3.0
+- taxon_id: NCBITaxon:1560217
+  source: PREGO
+  taxon_label: Clostridium sp. L74
+  score: 3.0
+- taxon_id: NCBITaxon:1576596
+  source: PREGO
+  taxon_label: Pseudovibrio sp. POLY-S9
+  score: 3.0
+- taxon_id: NCBITaxon:1647102
+  source: PREGO
+  taxon_label: Vibrio sp. VPAP30
+  score: 3.0
+- taxon_id: NCBITaxon:1710353
+  source: PREGO
+  taxon_label: Pseudoalteromonas sp. P1-8
+  score: 3.0
+- taxon_id: NCBITaxon:1710354
+  source: PREGO
+  taxon_label: Pseudoalteromonas sp. P1-9
+  score: 3.0
+- taxon_id: NCBITaxon:1715254
+  source: PREGO
+  taxon_label: Pseudoalteromonas sp. P1-11
+  score: 3.0
+- taxon_id: NCBITaxon:1723755
+  source: PREGO
+  taxon_label: Pseudoalteromonas sp. P1-7a
+  score: 3.0
+- taxon_id: NCBITaxon:1723756
+  source: PREGO
+  taxon_label: Pseudoalteromonas sp. P1-13-1a
+  score: 3.0
+- taxon_id: NCBITaxon:1723757
+  source: PREGO
+  taxon_label: Pseudoalteromonas sp. P1-16-1b
+  score: 3.0
+- taxon_id: NCBITaxon:1723758
+  source: PREGO
+  taxon_label: Pseudoalteromonas sp. P1-25
+  score: 3.0
+- taxon_id: NCBITaxon:1723759
+  source: PREGO
+  taxon_label: Pseudoalteromonas sp. P1-26
+  score: 3.0
+- taxon_id: NCBITaxon:1723760
+  source: PREGO
+  taxon_label: Pseudoalteromonas sp. P1-30
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

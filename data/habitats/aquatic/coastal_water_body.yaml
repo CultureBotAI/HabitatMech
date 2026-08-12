@@ -1,0 +1,130 @@
+identifier: ENVO:02000049
+label: coastal water body
+definition: Coastal water is a marine water body bordering a coast.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Coastal Waters
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: Coastal Waterses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: coastal water bodies
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00001999
+source_attestations:
+- source: PREGO
+  source_id: ENVO:02000049
+  source_label: coastal water body
+  assertion_count: 432
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:203124
+  source: PREGO
+  taxon_label: Trichodesmium erythraeum IMS101
+  score: 3.0
+- taxon_id: NCBITaxon:479639
+  source: PREGO
+  score: 1.27316
+- taxon_id: NCBITaxon:1423144
+  source: PREGO
+  taxon_label: Phaeobacter gallaeciensis DSM 26640
+  score: 1.15946
+- taxon_id: NCBITaxon:41880
+  source: PREGO
+  score: 1.15339
+- taxon_id: NCBITaxon:675813
+  source: PREGO
+  taxon_label: Vibrio metschnikovii CIP 69.14
+  score: 1.13742
+- taxon_id: NCBITaxon:383629
+  source: PREGO
+  taxon_label: Phaeobacter inhibens 2.10
+  score: 1.13379
+- taxon_id: NCBITaxon:314608
+  source: PREGO
+  taxon_label: Shewanella benthica KT99
+  score: 1.13164
+- taxon_id: NCBITaxon:398579
+  source: PREGO
+  taxon_label: Shewanella pealeana ATCC 700345
+  score: 1.12656
+- taxon_id: NCBITaxon:314267
+  source: PREGO
+  taxon_label: Sulfitobacter sp. NAS-14.1
+  score: 1.12444
+- taxon_id: NCBITaxon:314291
+  source: PREGO
+  taxon_label: Vibrio splendidus 12B01
+  score: 1.12068
+- taxon_id: NCBITaxon:309807
+  source: PREGO
+  taxon_label: Salinibacter ruber DSM 13855
+  score: 1.12051
+- taxon_id: NCBITaxon:298386
+  source: PREGO
+  taxon_label: Photobacterium profundum SS9
+  score: 1.11859
+- taxon_id: NCBITaxon:439497
+  source: PREGO
+  taxon_label: Ruegeria sp. R11
+  score: 1.11608
+- taxon_id: NCBITaxon:370106
+  source: PREGO
+  taxon_label: Thermococcus sp. GT
+  score: 1.1131
+- taxon_id: NCBITaxon:761659
+  source: PREGO
+  taxon_label: Salinibacter ruber M8
+  score: 1.11264
+- taxon_id: NCBITaxon:225849
+  source: PREGO
+  taxon_label: Shewanella piezotolerans WP3
+  score: 1.11248
+- taxon_id: NCBITaxon:39947
+  source: PREGO
+  score: 1.11029
+- taxon_id: NCBITaxon:234831
+  source: PREGO
+  taxon_label: Pseudoalteromonas sp. SM9913
+  score: 1.10933
+- taxon_id: NCBITaxon:526947
+  source: PREGO
+  taxon_label: Rhizobium etli GR56
+  score: 1.10523
+- taxon_id: NCBITaxon:292414
+  source: PREGO
+  taxon_label: Ruegeria sp. TM1040
+  score: 1.10441
+- taxon_id: NCBITaxon:326442
+  source: PREGO
+  taxon_label: Pseudoalteromonas translucida TAC125
+  score: 1.10411
+- taxon_id: NCBITaxon:675817
+  source: PREGO
+  taxon_label: Photobacterium damselae subsp. damselae CIP 102761
+  score: 1.10385
+- taxon_id: NCBITaxon:349106
+  source: PREGO
+  taxon_label: Psychrobacter sp. PRwf-1
+  score: 1.10365
+- taxon_id: NCBITaxon:556484
+  source: PREGO
+  taxon_label: Phaeodactylum tricornutum CCAP 1055/1
+  score: 1.10324
+- taxon_id: NCBITaxon:393595
+  source: PREGO
+  taxon_label: Alcanivorax borkumensis SK2
+  score: 1.10279
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

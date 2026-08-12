@@ -1,0 +1,50 @@
+identifier: UBERON:0008330
+label: vestibule of vagina
+definition: The space posterior to the glans clitoridis, between the labia minora;
+  located within the vestibule are the openings of the vagina, the urethra, and the
+  ducts of the lesser vestibular glands, the greater vestibular (Bartholin's) glands,
+  and the paraurethral (Skene's) glands, which release mucus into the vestibule to
+  maintain a moist, lubricated vestibular environment; the vestibule is also moistened
+  by secretions from the cervical mucus glands located in the inferior region of the
+  uterus.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Introitus
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: introitus
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: vagina vestibule
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: vaginal introitus
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: vaginal vestibule
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: vestibulum pudendi
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: vestibulum vaginae
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0001349
+- habitatmech:GOLD.1daee83236
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4141
+  source_label: Introitus
+  source_path: 'Host-associated > Mammals: Human > Reproductive system > Vagina >
+    Introitus'
+  mapping_predicate: skos:closeMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

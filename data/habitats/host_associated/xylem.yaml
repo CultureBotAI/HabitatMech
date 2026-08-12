@@ -1,0 +1,92 @@
+identifier: BTO:0001468
+label: xylem
+definition: A complex tissue in the vascular system of higher plants that consists
+  of vessels, tracheids, or both usually together with wood fibers and parenchyma
+  cells, functions chiefly in conduction of water and dissolved minerals but also
+  in support and food storage, and typically constitutes the woody element.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: xylems
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001468
+  source_label: xylem
+  assertion_count: 16
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1096546
+  source: PREGO
+  taxon_label: Methylobacterium sp. GXF4
+  score: 3.0
+- taxon_id: NCBITaxon:1189304
+  source: PREGO
+  taxon_label: Sodalis-like symbiont of Philaenus spumarius
+  score: 3.0
+- taxon_id: NCBITaxon:1343076
+  source: PREGO
+  taxon_label: Candidatus Karelsulcia muelleri str. Sulcia-ALF
+  score: 3.0
+- taxon_id: NCBITaxon:1343077
+  source: PREGO
+  taxon_label: Candidatus Nasuia deltocephalinicola str. NAS-ALF
+  score: 3.0
+- taxon_id: NCBITaxon:160492
+  source: PREGO
+  taxon_label: Xylella fastidiosa 9a5c
+  score: 3.0
+- taxon_id: NCBITaxon:1730094
+  source: PREGO
+  taxon_label: Methylobacterium sp. GXS13
+  score: 3.0
+- taxon_id: NCBITaxon:183190
+  source: PREGO
+  taxon_label: Xylella fastidiosa Temecula1
+  score: 3.0
+- taxon_id: NCBITaxon:281090
+  source: PREGO
+  taxon_label: Leifsonia xyli subsp. xyli str. CTCB07
+  score: 3.0
+- taxon_id: NCBITaxon:29447
+  source: PREGO
+  taxon_label: Xanthomonas albilineans
+  score: 3.0
+- taxon_id: NCBITaxon:305
+  source: PREGO
+  taxon_label: Ralstonia solanacearum
+  score: 3.0
+- taxon_id: NCBITaxon:374463
+  source: PREGO
+  taxon_label: Baumannia cicadellinicola str. Hc (Homalodisca coagulata)
+  score: 3.0
+- taxon_id: NCBITaxon:374675
+  source: PREGO
+  taxon_label: Candidatus Karelsulcia muelleri str. Hc (Homalodisca coagulata)
+  score: 3.0
+- taxon_id: NCBITaxon:380358
+  source: PREGO
+  taxon_label: Xanthomonas albilineans GPE PC73
+  score: 3.0
+- taxon_id: NCBITaxon:438753
+  source: PREGO
+  taxon_label: Azorhizobium caulinodans ORS 571
+  score: 3.0
+- taxon_id: NCBITaxon:443906
+  source: PREGO
+  taxon_label: Clavibacter michiganensis subsp. michiganensis NCPPB 382
+  score: 3.0
+- taxon_id: NCBITaxon:526221
+  source: PREGO
+  taxon_label: Verticillium alfalfae VaMs.102
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

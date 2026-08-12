@@ -1,0 +1,181 @@
+identifier: ENVO:00000051
+label: hot spring
+definition: A spring through which groundwater, heated by geothermal energy, flows.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: hot springs
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: hotspring
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: spring
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: thermal feature
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: thermal features
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: thermal spring
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: thermal spring
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: thermal springs
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00000027
+source_attestations:
+- source: ENVIRONMENTS_TABLE
+  source_id: water_hotspring
+  source_label: water_hotspring
+  notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: PREGO
+  source_id: ENVO:00000051
+  source_label: hot spring
+  assertion_count: 243
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates
+environmental_parameters:
+- parameter: GRADIENTS
+  qualitative_value: low
+  source: kg-microbe environments.csv (water_hotspring)
+- parameter: ORGANIC_MATTER
+  qualitative_value: low
+  source: kg-microbe environments.csv (water_hotspring)
+- parameter: PRESSURE
+  qualitative_value: low
+  source: kg-microbe environments.csv (water_hotspring)
+- parameter: SALINITY_VARIABILITY
+  qualitative_value: small
+  source: kg-microbe environments.csv (water_hotspring)
+- parameter: STRUCTURAL_COMPLEXITY
+  qualitative_value: low
+  source: kg-microbe environments.csv (water_hotspring)
+- parameter: TEMPERATURE
+  qualitative_value: high
+  source: kg-microbe environments.csv (water_hotspring)
+- parameter: TEMPERATURE_VARIABILITY
+  qualitative_value: high
+  source: kg-microbe environments.csv (water_hotspring)
+- parameter: WATER_AVAILABILITY
+  qualitative_value: high
+  source: kg-microbe environments.csv (water_hotspring)
+- parameter: WATER_VARIABILITY
+  qualitative_value: permanently wet
+  source: kg-microbe environments.csv (water_hotspring)
+characteristic_taxa:
+- taxon_id: NCBITaxon:1003
+  source: PREGO
+  taxon_label: Thermoflexibacter ruber
+  score: 4.0
+- taxon_id: NCBITaxon:1052802
+  source: PREGO
+  taxon_label: Crenarchaeota archaeon SCGC AAA471-B23
+  score: 4.0
+- taxon_id: NCBITaxon:1052803
+  source: PREGO
+  taxon_label: Crenarchaeota archaeon SCGC AAA471-C03
+  score: 4.0
+- taxon_id: NCBITaxon:1052804
+  source: PREGO
+  taxon_label: Crenarchaeota archaeon SCGC AAA471-L13
+  score: 4.0
+- taxon_id: NCBITaxon:1052805
+  source: PREGO
+  taxon_label: Crenarchaeota archaeon SCGC AAA471-L14
+  score: 4.0
+- taxon_id: NCBITaxon:1052806
+  source: PREGO
+  taxon_label: Crenarchaeota archaeon SCGC AAA471-O08
+  score: 4.0
+- taxon_id: NCBITaxon:1052810
+  source: PREGO
+  taxon_label: Calescamantes bacterium SCGC AAA471-M6
+  score: 4.0
+- taxon_id: NCBITaxon:1052811
+  source: PREGO
+  taxon_label: Candidatus Fervidibacteria bacterium JGI 0000001-B9
+  score: 4.0
+- taxon_id: NCBITaxon:1052812
+  source: PREGO
+  taxon_label: Candidatus Fervidibacteria bacterium JGI 0000001-D5
+  score: 4.0
+- taxon_id: NCBITaxon:1052813
+  source: PREGO
+  taxon_label: Candidatus Fervidibacteria bacterium JGI 0000001-G10
+  score: 4.0
+- taxon_id: NCBITaxon:1052814
+  source: PREGO
+  taxon_label: Candidatus Fervidibacteria bacterium JGI 0000054-H05
+  score: 4.0
+- taxon_id: NCBITaxon:1052828
+  source: PREGO
+  taxon_label: Aigarchaeota archaeon SCGC AAA471-E16
+  score: 4.0
+- taxon_id: NCBITaxon:1052829
+  source: PREGO
+  taxon_label: Candidatus Calditenuaceae archaeon SCGC AAA471-F17
+  score: 4.0
+- taxon_id: NCBITaxon:1052830
+  source: PREGO
+  taxon_label: Aigarchaeota archaeon SCGC AAA471-G05
+  score: 4.0
+- taxon_id: NCBITaxon:1052831
+  source: PREGO
+  taxon_label: Aigarchaeota archaeon SCGC AAA471-I13
+  score: 4.0
+- taxon_id: NCBITaxon:1052832
+  source: PREGO
+  taxon_label: Aigarchaeota archaeon SCGC AAA471-J07
+  score: 4.0
+- taxon_id: NCBITaxon:1052833
+  source: PREGO
+  taxon_label: Aigarchaeota archaeon SCGC AAA471-J08
+  score: 4.0
+- taxon_id: NCBITaxon:1052838
+  source: PREGO
+  taxon_label: Aigarchaeota archaeon JGI 0000001-A7
+  score: 4.0
+- taxon_id: NCBITaxon:1052839
+  source: PREGO
+  taxon_label: Aigarchaeota archaeon JGI 0000001-B8
+  score: 4.0
+- taxon_id: NCBITaxon:1052841
+  source: PREGO
+  taxon_label: Aigarchaeota archaeon JGI 0000001-H6
+  score: 4.0
+- taxon_id: NCBITaxon:1056495
+  source: PREGO
+  taxon_label: Caldisphaera lagunensis DSM 15908
+  score: 4.0
+- taxon_id: NCBITaxon:105850
+  source: PREGO
+  taxon_label: Acidilobus
+  score: 4.0
+- taxon_id: NCBITaxon:1104571
+  source: PREGO
+  taxon_label: Thaumarchaeota archaeon SCGC AB-179-E04
+  score: 4.0
+- taxon_id: NCBITaxon:1120989
+  source: PREGO
+  taxon_label: Anaerobranca californiensis DSM 14826
+  score: 4.0
+- taxon_id: NCBITaxon:1121256
+  source: PREGO
+  taxon_label: Caldanaerobius fijiensis DSM 17918
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, PREGO.
+    Grounding: EXACT.'

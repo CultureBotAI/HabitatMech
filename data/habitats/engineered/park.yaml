@@ -1,0 +1,64 @@
+identifier: ENVO:00000562
+label: park
+definition: A bounded area of land, or water, usually in its natural or semi-natural
+  (landscaped) state and set aside for some purpose, usually to do with recreation
+  or conservation.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00000002
+- ENVO:00000856
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4397
+  source_label: Park
+  source_path: Engineered > Built environment > City > Park
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: PREGO
+  source_id: ENVO:00000562
+  source_label: park
+  assertion_count: 8
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1121482
+  source: PREGO
+  taxon_label: Dyadobacter beijingensis DSM 21582
+  score: 3.0
+- taxon_id: NCBITaxon:1124743
+  source: PREGO
+  taxon_label: Kribbella soli
+  score: 3.0
+- taxon_id: NCBITaxon:1830138
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:29344
+  source: PREGO
+  taxon_label: Caloramator fervidus
+  score: 3.0
+- taxon_id: NCBITaxon:33950
+  source: PREGO
+  taxon_label: Thermoanaerobacterium thermosulfurigenes
+  score: 3.0
+- taxon_id: NCBITaxon:341202
+  source: PREGO
+  taxon_label: Williamsia faeni
+  score: 3.0
+- taxon_id: NCBITaxon:622637
+  source: PREGO
+  taxon_label: Methylocystis sp. ATCC 49242
+  score: 3.0
+- taxon_id: NCBITaxon:633148
+  source: PREGO
+  taxon_label: Thermosphaera aggregans DSM 11486
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'

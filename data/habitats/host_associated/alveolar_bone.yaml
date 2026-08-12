@@ -1,0 +1,38 @@
+identifier: BTO:0001383
+label: alveolar bone
+definition: The thin layer of bone making up the bony processes of the maxilla and
+  mandible, and surrounding and containing the teeth; it is pierced by many small
+  openings through which blood vessels, lymphatics, and nerve fibers pass.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: alveolar bones
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: alveolar bonous
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001383
+  source_label: alveolar bone
+  assertion_count: 2
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1408286
+  source: PREGO
+  taxon_label: Parvimonas micra A293
+  score: 3.0
+- taxon_id: NCBITaxon:1679001
+  source: PREGO
+  taxon_label: Pasteurellaceae bacterium NI1060
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

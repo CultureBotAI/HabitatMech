@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.74550d0576
+label: Clay
+habitat_category: TERRESTRIAL
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00002982
+- habitatmech:GOLD.151ba43519
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:3819
+  source_label: Clay
+  source_path: Environmental > Terrestrial > Deep subsurface > Clay
+  mapping_predicate: skos:narrowMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

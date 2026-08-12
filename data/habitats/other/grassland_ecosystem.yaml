@@ -1,0 +1,50 @@
+identifier: ENVO:01001206
+label: grassland ecosystem
+definition: An ecosystem in which grasses (Graminae) are the dominant form of vegetation
+  and determine the system's structure and dynamics.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: GRASSLAND
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: Grassland
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: down
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: downland
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: downs
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: glade
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: grassland
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: grazing area
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: herbaceous area
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:01001790
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:grassland
+  source_label: Grassland
+  mapping_predicate: skos:closeMatch
+  assertion_count: 58
+  assertion_unit: STRAIN
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

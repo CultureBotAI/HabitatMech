@@ -1,0 +1,152 @@
+identifier: ENVO:00000873
+label: freshwater biome
+definition: An aquatic biome which is determined by a body of freshwater.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Freshwater
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+- synonym_text: freshwater
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: freshwater realm
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: freshwater realm
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: freshwater realmic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: freshwater realms
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: freshwaters
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00002030
+- ENVO:01001789
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:freshwater
+  source_label: Freshwater
+  mapping_predicate: skos:closeMatch
+  assertion_count: 469
+  assertion_unit: STRAIN
+- source: PREGO
+  source_id: ENVO:00000873
+  source_label: freshwater biome
+  assertion_count: 5856
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:100038
+  source: PREGO
+  taxon_label: Montagnula opulenta
+  score: 4.0
+- taxon_id: NCBITaxon:1001240
+  source: PREGO
+  taxon_label: Cryobacterium roopkundense
+  score: 4.0
+- taxon_id: NCBITaxon:102232
+  source: PREGO
+  taxon_label: Gloeocapsa sp. PCC 73106
+  score: 4.0
+- taxon_id: NCBITaxon:1026
+  source: PREGO
+  taxon_label: Marinoscillum furvescens
+  score: 4.0
+- taxon_id: NCBITaxon:102822
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:103
+  source: PREGO
+  taxon_label: Flectobacillus major
+  score: 4.0
+- taxon_id: NCBITaxon:103810
+  source: PREGO
+  taxon_label: Riemerella columbina
+  score: 4.0
+- taxon_id: NCBITaxon:104176
+  source: PREGO
+  taxon_label: Oscillochloris trichoides
+  score: 4.0
+- taxon_id: NCBITaxon:104245
+  source: PREGO
+  taxon_label: Clavaria zollingeri
+  score: 4.0
+- taxon_id: NCBITaxon:1046938
+  source: PREGO
+  taxon_label: Candidatus Aenigmarchaeota archaeon SCGC AAA011-F07
+  score: 4.0
+- taxon_id: NCBITaxon:1046985
+  source: PREGO
+  taxon_label: Parcubacteria bacterium SCGC AAA011-A08
+  score: 4.0
+- taxon_id: NCBITaxon:1046987
+  source: PREGO
+  taxon_label: Parcubacteria bacterium SCGC AAA011-A09
+  score: 4.0
+- taxon_id: NCBITaxon:1046989
+  source: PREGO
+  taxon_label: Parcubacteria bacterium SCGC AAA011-J21
+  score: 4.0
+- taxon_id: NCBITaxon:1046996
+  source: PREGO
+  taxon_label: Parcubacteria bacterium SCGC AAA010-E09
+  score: 4.0
+- taxon_id: NCBITaxon:1047003
+  source: PREGO
+  taxon_label: Candidatus Microgenomatus auricola SCGC AAA011-E14
+  score: 4.0
+- taxon_id: NCBITaxon:1047010
+  source: PREGO
+  taxon_label: Omnitrophica bacterium SCGC AAA011-L16
+  score: 4.0
+- taxon_id: NCBITaxon:1054498
+  source: PREGO
+  taxon_label: Rivihabitans pingtungensis
+  score: 4.0
+- taxon_id: NCBITaxon:106111
+  source: PREGO
+  taxon_label: Pedobacter sp. KP-2
+  score: 4.0
+- taxon_id: NCBITaxon:1069080
+  source: PREGO
+  taxon_label: Succinispira mobilis DSM 6222
+  score: 4.0
+- taxon_id: NCBITaxon:1069082
+  source: PREGO
+  taxon_label: Halomicrobium katesii DSM 19301
+  score: 4.0
+- taxon_id: NCBITaxon:1074
+  source: PREGO
+  taxon_label: Rhodoblastus acidophilus
+  score: 4.0
+- taxon_id: NCBITaxon:107633
+  source: PREGO
+  taxon_label: Methylocystis sp. LW5
+  score: 4.0
+- taxon_id: NCBITaxon:107635
+  source: PREGO
+  taxon_label: Methylosinus sp. LW3
+  score: 4.0
+- taxon_id: NCBITaxon:107636
+  source: PREGO
+  taxon_label: Methylosinus sp. PW1
+  score: 4.0
+- taxon_id: NCBITaxon:107637
+  source: PREGO
+  taxon_label: Methylomonas sp. LW13
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, PREGO. Grounding:
+    EXACT.'

@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.3d17e0fdbe
+label: Salt marsh
+habitat_category: TERRESTRIAL
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00000054
+- habitatmech:GOLD.5f6044871d
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8216
+  source_label: Salt marsh
+  source_path: Environmental > Terrestrial > Soil > Wetlands > Salt marsh
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

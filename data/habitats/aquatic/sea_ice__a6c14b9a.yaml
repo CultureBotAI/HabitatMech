@@ -1,0 +1,22 @@
+identifier: habitatmech:GOLD.d8cd51c2a3
+label: Sea ice
+habitat_category: AQUATIC
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00002200
+- habitatmech:GOLD.89754b31f3
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8060
+  source_label: Sea ice
+  source_path: Environmental > Aquatic > Marine > Neritic zone/Coastal water > Sea
+    ice
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

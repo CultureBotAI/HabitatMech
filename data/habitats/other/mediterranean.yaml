@@ -1,0 +1,47 @@
+identifier: ENVO:01000207
+label: mediterranean
+definition: A mediterranean condition is a subtropical condition in which hot dry
+  summers and winters with moderate to high rainfall.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: mediterraneanic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: mediterraneans
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:01000205
+source_attestations:
+- source: PREGO
+  source_id: ENVO:01000207
+  source_label: mediterranean
+  assertion_count: 4
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1121868
+  source: PREGO
+  taxon_label: Enterovibrio nigricans DSM 22720
+  score: 3.0
+- taxon_id: NCBITaxon:1121912
+  source: PREGO
+  taxon_label: Gelidibacter mesophilus DSM 14095
+  score: 3.0
+- taxon_id: NCBITaxon:1121942
+  source: PREGO
+  taxon_label: Modicisalibacter ilicicola DSM 19980
+  score: 3.0
+- taxon_id: NCBITaxon:1122600
+  source: PREGO
+  taxon_label: Nereida ignava DSM 16309
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

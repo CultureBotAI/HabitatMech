@@ -1,0 +1,17 @@
+identifier: NCIT:C50344
+label: Catheter
+habitat_category: CLINICAL
+grounding_status: CLOSE
+mapping_status: SEEDED
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:catheter
+  source_label: Catheter
+  mapping_predicate: skos:closeMatch
+  assertion_count: 75
+  assertion_unit: STRAIN
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

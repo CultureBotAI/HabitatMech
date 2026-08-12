@@ -1,0 +1,68 @@
+identifier: ENVO:00000166
+label: atoll
+definition: An oceanic island, often having a characteristic ring-like shape surrounding
+  a lagoon. Atolls are formed when coral reef grows around a volcanic island that
+  later subsides into the ocean.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: ISLAND REEF
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: ISLAND REEFs
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: REEF, ISLAND
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: REEF, ISLAND
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: atolls
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: coral atoll
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: coral atoll
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: coral atolls
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: island
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: reef
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00000222
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00000166
+  source_label: atoll
+  assertion_count: 3
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1122601
+  source: PREGO
+  taxon_label: Pseudovibrio exalbescens DSM 16456
+  score: 3.0
+- taxon_id: NCBITaxon:1123030
+  source: PREGO
+  taxon_label: Pseudoxanthomonas kalamensis DSM 18571
+  score: 3.0
+- taxon_id: NCBITaxon:1307759
+  source: PREGO
+  taxon_label: Desulfohalovibrio reitneri
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

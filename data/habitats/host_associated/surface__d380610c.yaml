@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.f1e183218e
+label: Surface
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0002416
+- UBERON:0008963
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6382
+  source_label: Surface
+  source_path: Host-associated > Mammals > Integumentary system > Hoof > Surface
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

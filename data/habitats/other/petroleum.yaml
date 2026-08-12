@@ -1,0 +1,171 @@
+identifier: ENVO:00002984
+label: petroleum
+definition: A naturally occurring flammable liquid consisting of a complex mixture
+  of hydrocarbons of various molecular weights and other liquid organic compounds,
+  that are found in geologic formations beneath the planetary surfaces.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: crude oil
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: crude oil
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: crude oils
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: petrolea
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: petroleal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: petroleums
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00002985
+source_attestations:
+- source: ENVIRONMENTS_TABLE
+  source_id: petroleum
+  source_label: petroleum
+  notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: PREGO
+  source_id: ENVO:00002984
+  source_label: petroleum
+  assertion_count: 253
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+environmental_parameters:
+- parameter: GRADIENTS
+  qualitative_value: low
+  source: kg-microbe environments.csv (petroleum)
+- parameter: NUTRIENTS
+  qualitative_value: low
+  source: kg-microbe environments.csv (petroleum)
+- parameter: ORGANIC_MATTER
+  qualitative_value: high
+  source: kg-microbe environments.csv (petroleum)
+- parameter: SALINITY
+  qualitative_value: low
+  source: kg-microbe environments.csv (petroleum)
+- parameter: SALINITY_VARIABILITY
+  qualitative_value: small
+  source: kg-microbe environments.csv (petroleum)
+- parameter: STRUCTURAL_COMPLEXITY
+  qualitative_value: low
+  source: kg-microbe environments.csv (petroleum)
+- parameter: WATER_AVAILABILITY
+  qualitative_value: low
+  source: kg-microbe environments.csv (petroleum)
+characteristic_taxa:
+- taxon_id: NCBITaxon:1541063
+  source: PREGO
+  taxon_label: Prolixibacter denitrificans
+  score: 4.0
+- taxon_id: NCBITaxon:29563
+  source: PREGO
+  taxon_label: Halanaerobium salsuginis
+  score: 3.0
+- taxon_id: NCBITaxon:765067
+  source: PREGO
+  taxon_label: Cutibacterium acnes HL053PA2
+  score: 1.51314
+- taxon_id: NCBITaxon:710696
+  source: PREGO
+  taxon_label: Intrasporangium calvum DSM 43043
+  score: 1.35672
+- taxon_id: NCBITaxon:196162
+  source: PREGO
+  taxon_label: Nocardioides sp. JS614
+  score: 1.3565
+- taxon_id: NCBITaxon:266940
+  source: PREGO
+  taxon_label: Kineococcus radiotolerans SRS30216 = ATCC BAA-149
+  score: 1.35617
+- taxon_id: NCBITaxon:29320
+  source: PREGO
+  taxon_label: Paenarthrobacter nicotinovorans
+  score: 1.3535
+- taxon_id: NCBITaxon:253839
+  source: PREGO
+  taxon_label: Streptomyces sp. C
+  score: 1.34212
+- taxon_id: NCBITaxon:585531
+  source: PREGO
+  taxon_label: Aeromicrobium marinum DSM 15272
+  score: 1.33499
+- taxon_id: NCBITaxon:2045
+  source: PREGO
+  taxon_label: Pimelobacter simplex
+  score: 1.33468
+- taxon_id: NCBITaxon:573060
+  source: PREGO
+  taxon_label: Acidovorax delafieldii 2AN
+  score: 1.33215
+- taxon_id: NCBITaxon:447687
+  source: PREGO
+  taxon_label: Mesorhizobium sp. CJ1
+  score: 1.32942
+- taxon_id: NCBITaxon:526225
+  source: PREGO
+  taxon_label: Geodermatophilus obscurus DSM 43160
+  score: 1.32883
+- taxon_id: NCBITaxon:667019
+  source: PREGO
+  taxon_label: Curvibacter putative symbiont of Hydra magnipapillata
+  score: 1.32823
+- taxon_id: NCBITaxon:313589
+  source: PREGO
+  taxon_label: Janibacter sp. HTCC2649
+  score: 1.32771
+- taxon_id: NCBITaxon:446471
+  source: PREGO
+  taxon_label: Xylanimonas cellulosilytica DSM 15894
+  score: 1.32264
+- taxon_id: NCBITaxon:338969
+  source: PREGO
+  taxon_label: Rhodoferax ferrireducens T118
+  score: 1.32246
+- taxon_id: NCBITaxon:479435
+  source: PREGO
+  taxon_label: Kribbella flavida DSM 17836
+  score: 1.31827
+- taxon_id: NCBITaxon:316058
+  source: PREGO
+  taxon_label: Rhodopseudomonas palustris HaA2
+  score: 1.31504
+- taxon_id: NCBITaxon:278137
+  source: PREGO
+  taxon_label: Mycolicibacterium gilvum Spyr1
+  score: 1.31046
+- taxon_id: NCBITaxon:446465
+  source: PREGO
+  taxon_label: Brachybacterium faecium DSM 4810
+  score: 1.30972
+- taxon_id: NCBITaxon:582899
+  source: PREGO
+  taxon_label: Hyphomicrobium denitrificans ATCC 51888
+  score: 1.30217
+- taxon_id: NCBITaxon:365044
+  source: PREGO
+  taxon_label: Polaromonas naphthalenivorans CJ2
+  score: 1.29925
+- taxon_id: NCBITaxon:159087
+  source: PREGO
+  taxon_label: Dechloromonas aromatica RCB
+  score: 1.29772
+- taxon_id: NCBITaxon:316057
+  source: PREGO
+  taxon_label: Rhodopseudomonas palustris BisB5
+  score: 1.2963
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, PREGO.
+    Grounding: EXACT.'

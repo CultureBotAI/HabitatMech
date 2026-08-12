@@ -1,0 +1,50 @@
+identifier: ENVO:03501152
+label: intensive care unit facility
+definition: A hospital unit facility which is used to provide intensive medical care.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: ICU
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: ICW
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: ITU
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: critical care unit
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: critical care ward
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: intensive care ward
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: intensive therapy unit
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: intensive treatment unit
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: intensive treatment ward
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00002173
+- ENVO:03501137
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5573
+  source_label: ICU
+  source_path: Engineered > Built environment > Hospital > ICU
+  mapping_predicate: skos:closeMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

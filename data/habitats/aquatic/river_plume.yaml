@@ -1,0 +1,23 @@
+identifier: ENVO:03600070
+label: river plume
+definition: An oceanic front in which mixing of river discharge and saline seawater
+  occurs.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00001999
+- ENVO:01000071
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5366
+  source_label: River plume
+  source_path: Environmental > Aquatic > Marine > River plume
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

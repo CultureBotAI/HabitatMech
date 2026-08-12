@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.dad9be1112
+label: Plastic
+habitat_category: AQUATIC
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:06105101
+- habitatmech:GOLD.cea7ead8dd
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8418
+  source_label: Plastic
+  source_path: Environmental > Aquatic > Marine > Waste > Plastic
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 6
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

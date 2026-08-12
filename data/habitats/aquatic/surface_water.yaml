@@ -1,0 +1,126 @@
+identifier: ENVO:00002042
+label: surface water
+definition: Water that is found on the surface of an astronomical object.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: surface waters
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00002006
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00002042
+  source_label: surface water
+  assertion_count: 194
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:103
+  source: PREGO
+  taxon_label: Flectobacillus major
+  score: 4.0
+- taxon_id: NCBITaxon:104245
+  source: PREGO
+  taxon_label: Clavaria zollingeri
+  score: 4.0
+- taxon_id: NCBITaxon:106592
+  source: PREGO
+  taxon_label: Ensifer adhaerens
+  score: 4.0
+- taxon_id: NCBITaxon:111805
+  source: PREGO
+  taxon_label: Actinomadura pelletieri
+  score: 4.0
+- taxon_id: NCBITaxon:112248
+  source: PREGO
+  taxon_label: Seinonella peptonophila
+  score: 4.0
+- taxon_id: NCBITaxon:114707
+  source: PREGO
+  taxon_label: uncultured Pseudomonas sp.
+  score: 4.0
+- taxon_id: NCBITaxon:114715
+  source: PREGO
+  taxon_label: uncultured Ralstonia sp.
+  score: 4.0
+- taxon_id: NCBITaxon:117681
+  source: PREGO
+  taxon_label: Pseudomonas gingeri
+  score: 4.0
+- taxon_id: NCBITaxon:129817
+  source: PREGO
+  taxon_label: Pseudomonas brenneri
+  score: 4.0
+- taxon_id: NCBITaxon:134561
+  source: PREGO
+  taxon_label: Nocardioides sp. C190
+  score: 4.0
+- taxon_id: NCBITaxon:13690
+  source: PREGO
+  taxon_label: Sphingobium yanoikuyae
+  score: 4.0
+- taxon_id: NCBITaxon:139056
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:1399
+  source: PREGO
+  taxon_label: Cytobacillus firmus
+  score: 4.0
+- taxon_id: NCBITaxon:1406
+  source: PREGO
+  taxon_label: Paenibacillus polymyxa
+  score: 4.0
+- taxon_id: NCBITaxon:1464
+  source: PREGO
+  taxon_label: Paenibacillus larvae
+  score: 4.0
+- taxon_id: NCBITaxon:1476
+  source: PREGO
+  taxon_label: Sporosarcina psychrophila
+  score: 4.0
+- taxon_id: NCBITaxon:1495
+  source: PREGO
+  taxon_label: Clostridium cylindrosporum
+  score: 4.0
+- taxon_id: NCBITaxon:1537
+  source: PREGO
+  taxon_label: Romboutsia lituseburensis
+  score: 4.0
+- taxon_id: NCBITaxon:158899
+  source: PREGO
+  taxon_label: Collimonas fungivorans
+  score: 4.0
+- taxon_id: NCBITaxon:162209
+  source: PREGO
+  taxon_label: Paenibacillus naphthalenovorans
+  score: 4.0
+- taxon_id: NCBITaxon:173
+  source: PREGO
+  taxon_label: Leptospira interrogans
+  score: 4.0
+- taxon_id: NCBITaxon:180282
+  source: PREGO
+  taxon_label: Delftia tsuruhatensis
+  score: 4.0
+- taxon_id: NCBITaxon:1855
+  source: PREGO
+  taxon_label: Frankia sp.
+  score: 4.0
+- taxon_id: NCBITaxon:193108
+  source: PREGO
+  taxon_label: Methylocystis sp. M42/1
+  score: 4.0
+- taxon_id: NCBITaxon:204470
+  source: PREGO
+  taxon_label: Paenalicyclobacillus pomorum
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

@@ -1,0 +1,148 @@
+identifier: ENVO:00001999
+label: marine water body
+definition: A lentic water body which is composed primarily of marine water.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Marine
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: body of marine water
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: marine water bodies
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: marine waterbody
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00002030
+- ENVO:01000617
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:marine
+  source_label: Marine
+  mapping_predicate: skos:closeMatch
+  assertion_count: 2040
+  assertion_unit: STRAIN
+- source: GOLD
+  source_id: gold.ecosystem:3487
+  source_label: Marine
+  source_path: Environmental > Aquatic > Marine
+  mapping_predicate: skos:closeMatch
+  assertion_count: 6420
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: PREGO
+  source_id: ENVO:00001999
+  source_label: marine water body
+  assertion_count: 171
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:102
+  source: PREGO
+  taxon_label: Polaribacter glomeratus
+  score: 4.0
+- taxon_id: NCBITaxon:1026
+  source: PREGO
+  taxon_label: Marinoscillum furvescens
+  score: 4.0
+- taxon_id: NCBITaxon:104268
+  source: PREGO
+  taxon_label: Tenacibaculum mesophilum
+  score: 4.0
+- taxon_id: NCBITaxon:107401
+  source: PREGO
+  taxon_label: Tenacibaculum maritimum
+  score: 4.0
+- taxon_id: NCBITaxon:111770
+  source: PREGO
+  taxon_label: Thiothrix fructosivorans
+  score: 4.0
+- taxon_id: NCBITaxon:114404
+  source: PREGO
+  taxon_label: Edaphosphingomonas fennica
+  score: 4.0
+- taxon_id: NCBITaxon:1282
+  source: PREGO
+  taxon_label: Staphylococcus epidermidis
+  score: 4.0
+- taxon_id: NCBITaxon:132144
+  source: PREGO
+  taxon_label: Candidatus Glomeribacter gigasporarum
+  score: 4.0
+- taxon_id: NCBITaxon:133924
+  source: PREGO
+  taxon_label: Leisingera methylohalidivorans
+  score: 4.0
+- taxon_id: NCBITaxon:13616
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:1371
+  source: PREGO
+  taxon_label: Marinococcus halophilus
+  score: 4.0
+- taxon_id: NCBITaxon:143223
+  source: PREGO
+  taxon_label: Salegentibacter salegens
+  score: 4.0
+- taxon_id: NCBITaxon:156128
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:156133
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:158080
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:158500
+  source: PREGO
+  taxon_label: Novosphingobium resinovorum
+  score: 4.0
+- taxon_id: NCBITaxon:168275
+  source: PREGO
+  taxon_label: Psychromonas arctica
+  score: 4.0
+- taxon_id: NCBITaxon:172371
+  source: PREGO
+  taxon_label: Alloalcanivorax venustensis
+  score: 4.0
+- taxon_id: NCBITaxon:173365
+  source: PREGO
+  taxon_label: Methylobacter tundripaludum
+  score: 4.0
+- taxon_id: NCBITaxon:180542
+  source: PREGO
+  taxon_label: Salinisphaera shabanensis
+  score: 4.0
+- taxon_id: NCBITaxon:184914
+  source: PREGO
+  taxon_label: Corallococcus coralloides
+  score: 4.0
+- taxon_id: NCBITaxon:186022
+  source: PREGO
+  taxon_label: Thalassionema frauenfeldii
+  score: 4.0
+- taxon_id: NCBITaxon:188908
+  source: PREGO
+  taxon_label: Oleispira antarctica
+  score: 4.0
+- taxon_id: NCBITaxon:190308
+  source: PREGO
+  taxon_label: Shewanella schlegeliana
+  score: 4.0
+- taxon_id: NCBITaxon:191302
+  source: PREGO
+  taxon_label: Devosia neptuniae
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD, PREGO. Grounding:
+    EXACT.'

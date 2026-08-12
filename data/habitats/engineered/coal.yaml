@@ -1,0 +1,23 @@
+identifier: ENVO:02000091
+label: coal
+definition: A combustible black or brownish-black sedimentary rock usually occurring
+  in rock strata in layers or veins called coal beds or coal seams.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00002016
+- habitatmech:GOLD.7df92c13b7
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5393
+  source_label: Coal
+  source_path: Engineered > Biotransformation > Coal
+  mapping_predicate: skos:exactMatch
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

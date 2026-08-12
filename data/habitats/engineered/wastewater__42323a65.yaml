@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.b4ea9a2f17
+label: Wastewater
+habitat_category: ENGINEERED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00002001
+- habitatmech:GOLD.f6f1f08dd7
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5694
+  source_label: Wastewater
+  source_path: Engineered > Built environment > Tailings pond > Petrochemical > Wastewater
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

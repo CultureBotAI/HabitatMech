@@ -1,0 +1,45 @@
+identifier: BTO:0000377
+label: elementary body
+definition: The infectious form of chlamydiaceae. Infection occurs when the small,
+  rigid-walled extracellular form (elementary body) enters the cell and changes into
+  a larger, thin-walled form (initial body) that divides by fission. The daughter
+  cells thus formed reorganize and condense to become elementary bodies that then
+  infect other cells. The organisms are parasites of humans and other vertebrates,
+  capable of producing a variety of diseases. They have also been found in arthropods.
+  The family contains the genus Chlamydia.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: elementary bodies
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000284
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000377
+  source_label: elementary body
+  assertion_count: 3
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1444712
+  source: PREGO
+  taxon_label: Candidatus Rubidus massiliensis
+  score: 3.0
+- taxon_id: NCBITaxon:83552
+  source: PREGO
+  taxon_label: Parachlamydia acanthamoebae
+  score: 3.0
+- taxon_id: NCBITaxon:83555
+  source: PREGO
+  taxon_label: Chlamydia abortus
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

@@ -1,0 +1,47 @@
+identifier: UBERON:0002075
+label: viscus
+definition: 'An organ that is located within the body cavity (or in its extension,
+  in the scrotum); it consists of organ parts that are embryologically derived from
+  endoderm, splanchnic mesoderm or intermediate mesoderm; together with other organs,
+  the viscus constitutes the respiratory, gastrointestinal, urinary, reproductive
+  and immune systems, or is the central organ of the cardiovascular system. Examples:
+  heart, lung, esophagus, kidney, ovary, spleen.'
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Viscera
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: splanchnic tissue
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: viscera
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: visceral organ
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: visceral organ system
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: visceral tissue
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0005177
+- habitatmech:GOLD.4dbae6ecfe
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6490
+  source_label: Viscera
+  source_path: Host-associated > Mammals > Multiple systems > Multiple organs > Viscera
+  mapping_predicate: skos:closeMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

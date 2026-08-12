@@ -1,0 +1,41 @@
+identifier: ENVO:03501300
+label: manure
+definition: An environmental material consisting of organic matter from plants and/or
+  animals that is used in agriculture as fertilizer.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Liquid manure
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: animal manure
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: compost
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: farm slurry
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: green manure
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: liquid manure
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00010483
+- habitatmech:GOLD.18ee4196a9
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8076
+  source_label: Liquid manure
+  source_path: Engineered > Solid waste > Animal waste > Manure slurry > Liquid manure
+  mapping_predicate: skos:closeMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

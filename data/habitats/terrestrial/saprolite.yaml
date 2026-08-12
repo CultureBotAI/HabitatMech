@@ -1,0 +1,21 @@
+identifier: ENVO:03600016
+label: saprolite
+definition: Rock which is derived from bedrock through chemical weathering
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00001995
+- habitatmech:GOLD.e69b79f3ef
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6085
+  source_label: Saprolite
+  source_path: Environmental > Terrestrial > Saprolite–Bedrock interface > Saprolite
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

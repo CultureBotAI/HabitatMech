@@ -1,0 +1,128 @@
+identifier: BTO:0002690
+label: biofilm
+definition: A thin usually resistant layer of microorganisms (as bacteria) that form
+  on and coat various surfaces (as of water pipes and catheters).
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: biofilms
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000284
+source_attestations:
+- source: PREGO
+  source_id: BTO:0002690
+  source_label: biofilm
+  assertion_count: 188
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:1000561
+  source: PREGO
+  taxon_label: Pseudomonas aeruginosa AES-1R
+  score: 3.0
+- taxon_id: NCBITaxon:1110546
+  source: PREGO
+  taxon_label: Veillonella tobetsuensis
+  score: 3.0
+- taxon_id: NCBITaxon:1123317
+  source: PREGO
+  taxon_label: Streptococcus sobrinus DSM 20742 = ATCC 33478
+  score: 3.0
+- taxon_id: NCBITaxon:1177117
+  source: PREGO
+  taxon_label: Vreelandella stevensii S18214
+  score: 3.0
+- taxon_id: NCBITaxon:1191475
+  source: PREGO
+  taxon_label: Pseudomonas aeruginosa PAO579
+  score: 3.0
+- taxon_id: NCBITaxon:1233262
+  source: PREGO
+  taxon_label: Mycoplasmoides pneumoniae PO1
+  score: 3.0
+- taxon_id: NCBITaxon:1236904
+  source: PREGO
+  taxon_label: Mycoplasmoides pneumoniae PI 1428
+  score: 3.0
+- taxon_id: NCBITaxon:1238993
+  source: PREGO
+  taxon_label: Mycoplasmoides pneumoniae M129-B7
+  score: 3.0
+- taxon_id: NCBITaxon:1257037
+  source: PREGO
+  taxon_label: Streptococcus mutans 5DC8
+  score: 3.0
+- taxon_id: NCBITaxon:1257038
+  source: PREGO
+  taxon_label: Streptococcus mutans KK21
+  score: 3.0
+- taxon_id: NCBITaxon:1257039
+  source: PREGO
+  taxon_label: Streptococcus mutans KK23
+  score: 3.0
+- taxon_id: NCBITaxon:1257040
+  source: PREGO
+  taxon_label: Streptococcus mutans AC4446
+  score: 3.0
+- taxon_id: NCBITaxon:1257041
+  source: PREGO
+  taxon_label: Streptococcus mutans ATCC 25175
+  score: 3.0
+- taxon_id: NCBITaxon:1257042
+  source: PREGO
+  taxon_label: Streptococcus mutans NCTC 11060
+  score: 3.0
+- taxon_id: NCBITaxon:1280
+  source: PREGO
+  taxon_label: Staphylococcus aureus
+  score: 3.0
+- taxon_id: NCBITaxon:1283
+  source: PREGO
+  taxon_label: Staphylococcus haemolyticus
+  score: 3.0
+- taxon_id: NCBITaxon:1292046
+  source: PREGO
+  taxon_label: Desulfobulbus sp. oral taxon 041 str. Dsb1-5
+  score: 3.0
+- taxon_id: NCBITaxon:1321369
+  source: PREGO
+  taxon_label: Staphylococcus aureus Bmb9393
+  score: 3.0
+- taxon_id: NCBITaxon:1367494
+  source: PREGO
+  taxon_label: Pseudomonas aeruginosa PAO1-VE13
+  score: 3.0
+- taxon_id: NCBITaxon:137591
+  source: PREGO
+  taxon_label: Weissella cibaria
+  score: 3.0
+- taxon_id: NCBITaxon:1392869
+  source: PREGO
+  taxon_label: Escherichia coli K1
+  score: 3.0
+- taxon_id: NCBITaxon:1408271
+  source: PREGO
+  taxon_label: Pseudomonas aeruginosa LES400
+  score: 3.0
+- taxon_id: NCBITaxon:1408272
+  source: PREGO
+  taxon_label: Pseudomonas aeruginosa LES431
+  score: 3.0
+- taxon_id: NCBITaxon:1408273
+  source: PREGO
+  taxon_label: Pseudomonas aeruginosa LESB65
+  score: 3.0
+- taxon_id: NCBITaxon:1408274
+  source: PREGO
+  taxon_label: Pseudomonas aeruginosa LESlike1
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

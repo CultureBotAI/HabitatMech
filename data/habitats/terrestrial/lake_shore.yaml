@@ -1,0 +1,29 @@
+identifier: ENVO:00000382
+label: lake shore
+definition: That part of the land in immediate contact with a lake.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Lakeshore
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: lakeshore
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00000304
+- ENVO:00001998
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7284
+  source_label: Lakeshore
+  source_path: Environmental > Terrestrial > Soil > Lakeshore
+  mapping_predicate: skos:closeMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

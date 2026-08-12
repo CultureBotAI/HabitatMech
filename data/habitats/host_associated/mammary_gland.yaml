@@ -1,0 +1,126 @@
+identifier: BTO:0000817
+label: mammary gland
+definition: The specialized accessory gland of the skin of female mammals that secretes
+  milk. In the human female, it is a compound tubuloalveolar gland composed of 15
+  to 25 lobes arranged radially about the nipple and separated by connective and adipose
+  tissue, each lobe having its own excretory (lactiferous) duct opening on the nipple.
+  The lobes are subdivided into lobules, with the alveolar ducts and alveoli being
+  the secretory portion of the gland.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Brustdruese
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: Brustdrueses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: glandula mammaria
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: glandula mammarial
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: glandula mammarias
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: lactiferous gland
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: lactiferous glandic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: lactiferous glands
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: mamma
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: mammal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: mammary glandic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: mammary glands
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: mammas
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000817
+  source_label: mammary gland
+  assertion_count: 15
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1147128
+  source: PREGO
+  taxon_label: Bifidobacterium asteroides PRL2011
+  score: 3.0
+- taxon_id: NCBITaxon:1167694
+  source: PREGO
+  taxon_label: Escherichia coli O32:H37 str. P4
+  score: 3.0
+- taxon_id: NCBITaxon:1173689
+  source: PREGO
+  taxon_label: Escherichia coli VL2874
+  score: 3.0
+- taxon_id: NCBITaxon:1173690
+  source: PREGO
+  taxon_label: Escherichia coli VL2732
+  score: 3.0
+- taxon_id: NCBITaxon:1176728
+  source: PREGO
+  taxon_label: Escherichia coli K71
+  score: 3.0
+- taxon_id: NCBITaxon:1292039
+  source: PREGO
+  taxon_label: Cutibacterium acnes P6
+  score: 3.0
+- taxon_id: NCBITaxon:1357294
+  source: PREGO
+  taxon_label: Staphylococcus equorum UMC-CNS-924
+  score: 3.0
+- taxon_id: NCBITaxon:1358
+  source: PREGO
+  taxon_label: Lactococcus lactis
+  score: 3.0
+- taxon_id: NCBITaxon:1448137
+  source: PREGO
+  taxon_label: Staphylococcus aureus MRSA_CVM43477
+  score: 3.0
+- taxon_id: NCBITaxon:1507806
+  source: PREGO
+  taxon_label: Campylobacter fetus subsp. testudinum
+  score: 3.0
+- taxon_id: NCBITaxon:1580
+  source: PREGO
+  taxon_label: Levilactobacillus brevis
+  score: 3.0
+- taxon_id: NCBITaxon:1590
+  source: PREGO
+  taxon_label: Lactiplantibacillus plantarum
+  score: 3.0
+- taxon_id: NCBITaxon:32019
+  source: PREGO
+  taxon_label: Campylobacter fetus subsp. fetus
+  score: 3.0
+- taxon_id: NCBITaxon:520461
+  source: PREGO
+  taxon_label: Brucella pinnipedialis B2/94
+  score: 3.0
+- taxon_id: NCBITaxon:981386
+  source: PREGO
+  taxon_label: Brucella vulpis
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

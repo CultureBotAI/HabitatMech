@@ -1,0 +1,138 @@
+identifier: ENVO:00000384
+label: river bed
+definition: The channel bottom of a river; the physical confine of the normal water
+  flow.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: river beds
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: river bottom
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: river bottom
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: river bottoms
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: watercourse
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00000383
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00000384
+  source_label: river bed
+  assertion_count: 1822
+  assertion_unit: TAXON
+  score: 2.53079
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:2850
+  source: PREGO
+  taxon_label: Phaeodactylum tricornutum
+  score: 2.53079
+- taxon_id: NCBITaxon:1058
+  source: PREGO
+  taxon_label: Thiocapsa roseopersicina
+  score: 2.47325
+- taxon_id: NCBITaxon:452638
+  source: PREGO
+  taxon_label: Polynucleobacter necessarius STIR1
+  score: 2.45931
+- taxon_id: NCBITaxon:535289
+  source: PREGO
+  taxon_label: '[Acidovorax] ebreus TPSY'
+  score: 2.44845
+- taxon_id: NCBITaxon:41977
+  source: PREGO
+  taxon_label: Parazoarcus communis
+  score: 2.44793
+- taxon_id: NCBITaxon:312153
+  source: PREGO
+  taxon_label: Polynucleobacter asymbioticus QLW-P1DMWA-1
+  score: 2.43499
+- taxon_id: NCBITaxon:232721
+  source: PREGO
+  taxon_label: Acidovorax sp. JS42
+  score: 2.43405
+- taxon_id: NCBITaxon:610380
+  source: PREGO
+  score: 2.43392
+- taxon_id: NCBITaxon:159087
+  source: PREGO
+  taxon_label: Dechloromonas aromatica RCB
+  score: 2.43246
+- taxon_id: NCBITaxon:39947
+  source: PREGO
+  score: 2.43222
+- taxon_id: NCBITaxon:371731
+  source: PREGO
+  taxon_label: Rhodobacter ferrooxidans
+  score: 2.4319
+- taxon_id: NCBITaxon:292415
+  source: PREGO
+  taxon_label: Thiobacillus denitrificans ATCC 25259
+  score: 2.43091
+- taxon_id: NCBITaxon:583345
+  source: PREGO
+  taxon_label: Methylotenera mobilis JLW8
+  score: 2.42629
+- taxon_id: NCBITaxon:710696
+  source: PREGO
+  taxon_label: Intrasporangium calvum DSM 43043
+  score: 2.42547
+- taxon_id: NCBITaxon:573060
+  source: PREGO
+  taxon_label: Acidovorax delafieldii 2AN
+  score: 2.42536
+- taxon_id: NCBITaxon:666681
+  source: PREGO
+  taxon_label: Methylotenera versatilis 301
+  score: 2.42497
+- taxon_id: NCBITaxon:314232
+  source: PREGO
+  taxon_label: Yoonia vestfoldensis SKA53
+  score: 2.42391
+- taxon_id: NCBITaxon:164608
+  source: PREGO
+  taxon_label: Novosphingobium sp. KA1
+  score: 2.42366
+- taxon_id: NCBITaxon:643561
+  source: PREGO
+  taxon_label: Paracidovorax avenae ATCC 19860
+  score: 2.42302
+- taxon_id: NCBITaxon:395494
+  source: PREGO
+  taxon_label: Gallionella capsiferriformans ES-2
+  score: 2.42283
+- taxon_id: NCBITaxon:397945
+  source: PREGO
+  taxon_label: Paracidovorax citrulli AAC00-1
+  score: 2.42181
+- taxon_id: NCBITaxon:596153
+  source: PREGO
+  taxon_label: Alicycliphilus denitrificans BC
+  score: 2.4215
+- taxon_id: NCBITaxon:697282
+  source: PREGO
+  taxon_label: Methylobacter tundripaludum SV96
+  score: 2.42148
+- taxon_id: NCBITaxon:667019
+  source: PREGO
+  taxon_label: Curvibacter putative symbiont of Hydra magnipapillata
+  score: 2.42144
+- taxon_id: NCBITaxon:391593
+  source: PREGO
+  taxon_label: Roseobacter sp. CCS2
+  score: 2.42134
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

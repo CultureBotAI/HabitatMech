@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.943d5cba70
+label: Mine water
+habitat_category: AQUATIC
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.22a80cbd14
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5964
+  source_label: Mine water
+  source_path: Environmental > Aquatic > Deep subsurface > Groundwater > Mine water
+  assertion_count: 3
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

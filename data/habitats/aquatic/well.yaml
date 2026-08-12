@@ -1,0 +1,24 @@
+identifier: ENVO:00000026
+label: well
+definition: A cylindrical hole, pit, or tunnel drilled or dug down to a depth from
+  which water, oil, or gas can be pumped or brought to the surface.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00000002
+- habitatmech:GOLD.22a80cbd14
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8262
+  source_label: Well
+  source_path: Environmental > Aquatic > Deep subsurface > Groundwater > Well
+  mapping_predicate: skos:exactMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

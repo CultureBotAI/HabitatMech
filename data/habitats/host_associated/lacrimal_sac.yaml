@@ -1,0 +1,37 @@
+identifier: UBERON:0001351
+label: lacrimal sac
+definition: The upper dilated end of the nasolacrimal duct that is lodged in a deep
+  groove formed by the lacrimal bone and frontal process of the maxilla; it connects
+  the lacrimal canaliculi, which drain tears from the eye's surface, and the nasolacrimal
+  duct, which conveys this fluid into the nasal cavity; like the nasolacrimal duct,
+  the sac is lined by stratified columnar epithelium with mucus-secreting goblet cells,
+  and is surrounded by connective tissue.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: lachrymal sac
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: lacrymal sac
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: saccus lacrimalis
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0001750
+- UBERON:0034944
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6510
+  source_label: Lacrimal sac
+  source_path: 'Host-associated > Mammals: Human > Integumentary system > Lacrimal
+    apparatus > Lacrimal sac'
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

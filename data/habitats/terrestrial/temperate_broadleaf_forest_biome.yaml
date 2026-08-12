@@ -1,0 +1,107 @@
+identifier: ENVO:01000202
+label: temperate broadleaf forest biome
+definition: A broadleaf forest which is subject to temperate climate patterns.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: temperate broadleaf forest
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: temperate broadleaf forests
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:01000197
+- ENVO:01001794
+- ENVO:01001831
+source_attestations:
+- source: PREGO
+  source_id: ENVO:01000202
+  source_label: temperate broadleaf forest biome
+  assertion_count: 19
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:1365
+  source: PREGO
+  taxon_label: Pseudolactococcus plantarum
+  score: 4.0
+- taxon_id: NCBITaxon:1366
+  source: PREGO
+  taxon_label: Pseudolactococcus raffinolactis
+  score: 4.0
+- taxon_id: NCBITaxon:148604
+  source: PREGO
+  taxon_label: Limosilactobacillus ingluviei
+  score: 4.0
+- taxon_id: NCBITaxon:1624
+  source: PREGO
+  taxon_label: Ligilactobacillus salivarius
+  score: 4.0
+- taxon_id: NCBITaxon:187327
+  source: PREGO
+  taxon_label: Acidaminococcus intestini
+  score: 4.0
+- taxon_id: NCBITaxon:253
+  source: PREGO
+  taxon_label: Chryseobacterium indologenes
+  score: 4.0
+- taxon_id: NCBITaxon:266940
+  source: PREGO
+  taxon_label: Kineococcus radiotolerans SRS30216 = ATCC BAA-149
+  score: 4.0
+- taxon_id: NCBITaxon:33959
+  source: PREGO
+  taxon_label: Lactobacillus johnsonii
+  score: 4.0
+- taxon_id: NCBITaxon:36987
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:385067
+  source: PREGO
+  taxon_label: Bacillus sp. N2a
+  score: 4.0
+- taxon_id: NCBITaxon:411459
+  source: PREGO
+  taxon_label: Blautia obeum ATCC 29174
+  score: 4.0
+- taxon_id: NCBITaxon:411467
+  source: PREGO
+  taxon_label: Pseudoflavonifractor capillosus ATCC 29799
+  score: 4.0
+- taxon_id: NCBITaxon:445972
+  source: PREGO
+  taxon_label: Anaerotruncus colihominis DSM 17241
+  score: 4.0
+- taxon_id: NCBITaxon:49118
+  source: PREGO
+  taxon_label: Candidatus Arthromitus sp. SFB-mouse
+  score: 4.0
+- taxon_id: NCBITaxon:501571
+  source: PREGO
+  taxon_label: Butyricicoccus pullicaecorum
+  score: 4.0
+- taxon_id: NCBITaxon:520487
+  source: PREGO
+  taxon_label: Brucella suis bv. 3 str. 686
+  score: 4.0
+- taxon_id: NCBITaxon:537013
+  source: PREGO
+  taxon_label: '[Clostridium] methylpentosum DSM 5476'
+  score: 4.0
+- taxon_id: NCBITaxon:545696
+  source: PREGO
+  taxon_label: Holdemania filiformis DSM 12042
+  score: 4.0
+- taxon_id: NCBITaxon:749550
+  source: PREGO
+  taxon_label: Escherichia coli MS 200-1
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

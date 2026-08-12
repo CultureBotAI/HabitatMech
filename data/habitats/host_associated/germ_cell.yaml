@@ -1,0 +1,44 @@
+identifier: BTO:0000535
+label: germ cell
+definition: 1. A gamete (as an egg or sperm cell) or one of its antecedent cells.
+  2. A mature male or female germ cell usually possessing a haploid chromosome set
+  and capable of initiating formation of a new diploid individual by fusion with a
+  gamete of the opposite sex.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: gamete
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: gametes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: germ cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000535
+  source_label: germ cell
+  assertion_count: 3
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:3068
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:400682
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:439495
+  source: PREGO
+  taxon_label: Pseudovibrio sp. JE062
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

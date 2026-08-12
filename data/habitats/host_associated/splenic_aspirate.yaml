@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.6c8cf86bde
+label: Splenic aspirate
+habitat_category: HOST_ASSOCIATED
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.e43dc204ff
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6290
+  source_label: Splenic aspirate
+  source_path: 'Host-associated > Mammals: Human > Lymphatic system > Spleen > Splenic
+    aspirate'
+  assertion_count: 16
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

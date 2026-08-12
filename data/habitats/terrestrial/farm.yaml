@@ -1,0 +1,176 @@
+identifier: ENVO:00000078
+label: farm
+definition: An area of land which is used for the cultivation of crops or grazing
+  of livestock, including any agricultural constructions therein.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: agricultural site
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: farmland
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: farmlandic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: farmlands
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: farms
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: farms
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: farmses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: farmsic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: farmstead
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: farmstead
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: farmsteadic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: farmsteads
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: ranch
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: ranch
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: ranches
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: ranchic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00000077
+- ENVO:00001998
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5438
+  source_label: Farm
+  source_path: Environmental > Terrestrial > Soil > Unclassified > Farm
+  mapping_predicate: skos:exactMatch
+  assertion_count: 113
+  assertion_unit: ORGANISM
+- source: PREGO
+  source_id: ENVO:00000078
+  source_label: farm
+  assertion_count: 2943
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:10116
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:101510
+  source: PREGO
+  taxon_label: Rhodococcus jostii RHA1
+  score: 4.0
+- taxon_id: NCBITaxon:103732
+  source: PREGO
+  taxon_label: Lentzea flava
+  score: 4.0
+- taxon_id: NCBITaxon:106111
+  source: PREGO
+  taxon_label: Pedobacter sp. KP-2
+  score: 4.0
+- taxon_id: NCBITaxon:106129
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:106592
+  source: PREGO
+  taxon_label: Ensifer adhaerens
+  score: 4.0
+- taxon_id: NCBITaxon:108028
+  source: PREGO
+  taxon_label: Arcanobacterium pluranimalium
+  score: 4.0
+- taxon_id: NCBITaxon:108579
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:110319
+  source: PREGO
+  taxon_label: Nocardioides sp. CF8
+  score: 4.0
+- taxon_id: NCBITaxon:110578
+  source: PREGO
+  taxon_label: Bartonella vinsonii subsp. arupensis
+  score: 4.0
+- taxon_id: NCBITaxon:110637
+  source: PREGO
+  taxon_label: Arthrobacter sp. 'SMCC G980'
+  score: 4.0
+- taxon_id: NCBITaxon:110638
+  source: PREGO
+  taxon_label: Arthrobacter sp. 'SMCC G982'
+  score: 4.0
+- taxon_id: NCBITaxon:110639
+  source: PREGO
+  taxon_label: Arthrobacter sp. 'SMCC G984'
+  score: 4.0
+- taxon_id: NCBITaxon:110645
+  source: PREGO
+  taxon_label: Arthrobacter sp. 'SMCC ZAT004'
+  score: 4.0
+- taxon_id: NCBITaxon:110648
+  source: PREGO
+  taxon_label: Arthrobacter sp. 'SMCC ZAT013'
+  score: 4.0
+- taxon_id: NCBITaxon:110933
+  source: PREGO
+  taxon_label: Leifsonia poae
+  score: 4.0
+- taxon_id: NCBITaxon:114707
+  source: PREGO
+  taxon_label: uncultured Pseudomonas sp.
+  score: 4.0
+- taxon_id: NCBITaxon:114715
+  source: PREGO
+  taxon_label: uncultured Ralstonia sp.
+  score: 4.0
+- taxon_id: NCBITaxon:115828
+  source: PREGO
+  taxon_label: Streptomyces maritimus
+  score: 4.0
+- taxon_id: NCBITaxon:117680
+  source: PREGO
+  taxon_label: Pseudomonas reactans
+  score: 4.0
+- taxon_id: NCBITaxon:120602
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:121845
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:122866
+  source: PREGO
+  taxon_label: Arthrobacter keyseri
+  score: 4.0
+- taxon_id: NCBITaxon:1229
+  source: PREGO
+  taxon_label: Nitrosococcus oceani
+  score: 4.0
+- taxon_id: NCBITaxon:123088
+  source: PREGO
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'

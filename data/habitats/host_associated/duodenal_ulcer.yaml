@@ -1,0 +1,18 @@
+identifier: habitatmech:GOLD.9bfaa32c03
+label: Duodenal ulcer
+habitat_category: HOST_ASSOCIATED
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.f131dcac3d
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7021
+  source_label: Duodenal ulcer
+  source_path: 'Host-associated > Mammals: Human > Digestive system > Small intestine
+    > Duodenal ulcer'
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

@@ -1,0 +1,26 @@
+identifier: UBERON:0016484
+label: subgingival dental plaque
+habitat_category: HOST_ASSOCIATED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Subgingival-plaque
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+- synonym_text: subgingival plaque
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0016482
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:subgingival-plaque
+  source_label: Subgingival-plaque
+  mapping_predicate: skos:closeMatch
+  assertion_count: 33
+  assertion_unit: STRAIN
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

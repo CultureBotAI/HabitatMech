@@ -1,0 +1,51 @@
+identifier: ENVO:00002157
+label: stromatolite mat
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: stromatolite matic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: stromatolite mats
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:01000008
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00002157
+  source_label: stromatolite mat
+  assertion_count: 6
+  assertion_unit: TAXON
+  score: 1.13934
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:2850
+  source: PREGO
+  taxon_label: Phaeodactylum tricornutum
+  score: 1.13934
+- taxon_id: NCBITaxon:35845
+  source: PREGO
+  score: 1.07765
+- taxon_id: NCBITaxon:1058
+  source: PREGO
+  taxon_label: Thiocapsa roseopersicina
+  score: 1.02302
+- taxon_id: NCBITaxon:323098
+  source: PREGO
+  taxon_label: Nitrobacter winogradskyi Nb-255
+  score: 1.00664
+- taxon_id: NCBITaxon:398580
+  source: PREGO
+  taxon_label: Dinoroseobacter shibae DFL 12 = DSM 16493
+  score: 1.00055
+- taxon_id: NCBITaxon:314260
+  source: PREGO
+  taxon_label: Parvularcula bermudensis HTCC2503
+  score: 1.00026
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

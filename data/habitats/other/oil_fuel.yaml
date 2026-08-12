@@ -1,0 +1,20 @@
+identifier: habitatmech:BACDIVE.9f31ab2d87
+label: Oil-Fuel
+habitat_category: OTHER
+grounding_status: NOT_APPLICABLE
+mapping_status: SEEDED
+xrefs:
+- CHEBI:33292
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:oil-fuel
+  source_label: Oil-Fuel
+  assertion_count: 130
+  assertion_unit: STRAIN
+  notes: Upstream mapping targets a non-habitat ontology (CHEBI:33292); kept as an
+    xref.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: NOT_APPLICABLE.'

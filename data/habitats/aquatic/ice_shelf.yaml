@@ -1,0 +1,26 @@
+identifier: ENVO:00000380
+label: ice shelf
+definition: An ice mass which 1) is attached to the coast 2) at least 2 meters in
+  thickness 3) forms where a glacier or ice mass flows down to a coastline and onto
+  the ocean surface and 4) grows by annual snow accumulation or by the seaward extension
+  of land glaciers.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00001999
+- ENVO:01001547
+- UBERON:0000061
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8498
+  source_label: Ice shelf
+  source_path: Environmental > Aquatic > Marine > Ice shelf
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

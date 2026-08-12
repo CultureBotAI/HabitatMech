@@ -1,0 +1,31 @@
+identifier: UBERON:0008972
+label: right colon
+definition: The proximal portion of the colon, extending from the ileocecal valve
+  usually to a point proximal to the left colic flexure; it develops embryonically
+  from the terminal portion of the midgut and functions in absorption.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Proximal colon
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: proximal colon
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0000064
+- habitatmech:GOLD.6bda0871e2
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6386
+  source_label: Proximal colon
+  source_path: Host-associated > Mammals > Digestive system > Large intestine > Proximal
+    colon
+  mapping_predicate: skos:closeMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

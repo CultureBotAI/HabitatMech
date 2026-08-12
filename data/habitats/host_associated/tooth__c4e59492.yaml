@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.b4ad33ff8e
+label: Tooth
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- BTO:0000397
+- habitatmech:GOLD.92d1e65695
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6465
+  source_label: Tooth
+  source_path: Host-associated > Mammals > Digestive system > Oral cavity > Tooth
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 2
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

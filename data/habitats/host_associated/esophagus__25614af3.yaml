@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.5d6c618e63
+label: Esophagus
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0001043
+- habitatmech:GOLD.fe78a4c113
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7317
+  source_label: Esophagus
+  source_path: 'Host-associated > Arthropoda: Crustaceans > Digestive system > Foregut
+    > Esophagus'
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

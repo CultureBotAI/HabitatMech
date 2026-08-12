@@ -1,0 +1,18 @@
+identifier: habitatmech:GOLD.7bfc46d5f7
+label: Microbial enhanced oil recovery
+habitat_category: ENGINEERED
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.7df92c13b7
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:3535
+  source_label: Microbial enhanced oil recovery
+  source_path: Engineered > Biotransformation > Microbial enhanced oil recovery
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

@@ -1,0 +1,131 @@
+identifier: BTO:0000243
+label: vagina
+definition: A canal in a female mammal that leads from the uterus to the external
+  orifice of the genital canal.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: vaginal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: vaginas
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0003099
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000243
+  source_label: vagina
+  assertion_count: 218
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:117563
+  source: PREGO
+  taxon_label: Granulicatella
+  score: 4.0
+- taxon_id: NCBITaxon:1261
+  source: PREGO
+  taxon_label: Peptostreptococcus anaerobius
+  score: 4.0
+- taxon_id: NCBITaxon:1270
+  source: PREGO
+  taxon_label: Micrococcus luteus
+  score: 4.0
+- taxon_id: NCBITaxon:1279
+  source: PREGO
+  taxon_label: Staphylococcus
+  score: 4.0
+- taxon_id: NCBITaxon:1280
+  source: PREGO
+  taxon_label: Staphylococcus aureus
+  score: 4.0
+- taxon_id: NCBITaxon:1282
+  source: PREGO
+  taxon_label: Staphylococcus epidermidis
+  score: 4.0
+- taxon_id: NCBITaxon:1283
+  source: PREGO
+  taxon_label: Staphylococcus haemolyticus
+  score: 4.0
+- taxon_id: NCBITaxon:1301
+  source: PREGO
+  taxon_label: Streptococcus
+  score: 4.0
+- taxon_id: NCBITaxon:1311
+  source: PREGO
+  taxon_label: Streptococcus agalactiae
+  score: 4.0
+- taxon_id: NCBITaxon:1328
+  source: PREGO
+  taxon_label: Streptococcus anginosus
+  score: 4.0
+- taxon_id: NCBITaxon:1350
+  source: PREGO
+  taxon_label: Enterococcus
+  score: 4.0
+- taxon_id: NCBITaxon:135621
+  source: PREGO
+  taxon_label: Pseudomonadaceae
+  score: 4.0
+- taxon_id: NCBITaxon:1357
+  source: PREGO
+  taxon_label: Lactococcus
+  score: 4.0
+- taxon_id: NCBITaxon:1375
+  source: PREGO
+  taxon_label: Aerococcus
+  score: 4.0
+- taxon_id: NCBITaxon:1378
+  source: PREGO
+  taxon_label: Gemella
+  score: 4.0
+- taxon_id: NCBITaxon:1380
+  source: PREGO
+  taxon_label: Atopobium
+  score: 4.0
+- taxon_id: NCBITaxon:1386
+  source: PREGO
+  taxon_label: Bacillus <firmicutes>
+  score: 4.0
+- taxon_id: NCBITaxon:147802
+  source: PREGO
+  taxon_label: Lactobacillus iners
+  score: 4.0
+- taxon_id: NCBITaxon:1485
+  source: PREGO
+  taxon_label: Clostridium
+  score: 4.0
+- taxon_id: NCBITaxon:150022
+  source: PREGO
+  taxon_label: Finegoldia
+  score: 4.0
+- taxon_id: NCBITaxon:1578
+  source: PREGO
+  taxon_label: Lactobacillus
+  score: 4.0
+- taxon_id: NCBITaxon:1598
+  source: PREGO
+  taxon_label: Limosilactobacillus reuteri
+  score: 4.0
+- taxon_id: NCBITaxon:1601
+  source: PREGO
+  taxon_label: Ligilactobacillus agilis
+  score: 4.0
+- taxon_id: NCBITaxon:162289
+  source: PREGO
+  taxon_label: Peptoniphilus
+  score: 4.0
+- taxon_id: NCBITaxon:162290
+  source: PREGO
+  taxon_label: Gallicola
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

@@ -1,0 +1,53 @@
+identifier: BTO:0000195
+label: CACO-2 cell
+definition: Human colon adenocarcinoma cell line, established from the primary colon
+  tumor (adenocarcinoma) of a 72-year-old Caucasian man in 1974.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: caco2
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: caco2 cell line
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: caco2 cell lines
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: caco2 cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0001913
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000195
+  source_label: CACO-2 cell
+  assertion_count: 4
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1205679
+  source: PREGO
+  taxon_label: Bifidobacterium longum subsp. longum CECT 7347
+  score: 3.0
+- taxon_id: NCBITaxon:1392869
+  source: PREGO
+  taxon_label: Escherichia coli K1
+  score: 3.0
+- taxon_id: NCBITaxon:1580
+  source: PREGO
+  taxon_label: Levilactobacillus brevis
+  score: 3.0
+- taxon_id: NCBITaxon:557433
+  source: PREGO
+  taxon_label: Limosilactobacillus reuteri subsp. reuteri JCM 1112
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

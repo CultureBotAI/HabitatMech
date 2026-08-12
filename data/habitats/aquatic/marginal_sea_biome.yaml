@@ -1,0 +1,73 @@
+identifier: ENVO:01000046
+label: marginal sea biome
+definition: The marginal sea biome comprises parts of an ocean partially enclosed
+  by land such as islands, archipelagos, or peninsulas. Unlike mediterranean seas,
+  marginal seas have ocean currents caused by ocean winds. Many marginal seas are
+  enclosed by island arcs that were formed from the subduction of one oceanic plate
+  beneath another.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: marginal sea
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: marginal seal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: marginal seas
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00000447
+source_attestations:
+- source: PREGO
+  source_id: ENVO:01000046
+  source_label: marginal sea biome
+  assertion_count: 9
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1041152
+  source: PREGO
+  taxon_label: Sinorhizobium meliloti CIAM1775
+  score: 4.0
+- taxon_id: NCBITaxon:1121007
+  source: PREGO
+  taxon_label: Aquimarina muelleri DSM 19832
+  score: 4.0
+- taxon_id: NCBITaxon:1121912
+  source: PREGO
+  taxon_label: Gelidibacter mesophilus DSM 14095
+  score: 4.0
+- taxon_id: NCBITaxon:1122137
+  source: PREGO
+  taxon_label: Kordiimonas gwangyangensis DSM 19435 = JCM 12864
+  score: 4.0
+- taxon_id: NCBITaxon:1123053
+  source: PREGO
+  taxon_label: Rheinheimera baltica DSM 14885
+  score: 4.0
+- taxon_id: NCBITaxon:1123251
+  source: PREGO
+  taxon_label: Serinicoccus marinus DSM 15273
+  score: 4.0
+- taxon_id: NCBITaxon:1123270
+  source: PREGO
+  taxon_label: Novosphingopyxis baekryungensis DSM 16222
+  score: 4.0
+- taxon_id: NCBITaxon:59919
+  source: PREGO
+  taxon_label: Prochlorococcus marinus subsp. pastoris str. CCMP1986
+  score: 4.0
+- taxon_id: NCBITaxon:693972
+  source: PREGO
+  taxon_label: Shewanella baltica OS625
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

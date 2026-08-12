@@ -1,0 +1,58 @@
+identifier: UBERON:0000412
+label: dermal papilla
+definition: A mesodermal signaling center of the hair follicle consisting of closely
+  packed specialized mesenchymal fibroblasts. Framed by the enlarged bulb matrix in
+  anagen.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: dermal papilla cell
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: dermal papillae
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: follicular papilla
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: hair follicle dermal papilla
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: hair papilla
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: papilla corii
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: papilla dermatis
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: papilla dermis
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: papilla of corium
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: papillae dermis
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: skin papilla
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0000479
+- habitatmech:GOLD.4b37ab4b76
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7040
+  source_label: Dermal papilla
+  source_path: 'Host-associated > Mammals: Human > Integumentary system > Skin > Dermal
+    papilla'
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

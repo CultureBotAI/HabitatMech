@@ -1,0 +1,42 @@
+identifier: UBERON:0001750
+label: lacrimal apparatus
+definition: A network of orbital structures of the eye that secrete and drain tears
+  from the surface of the eyeball into the nasal cavity; these parts include the lacrimal
+  glands, lacrimal lake, lacrimal ducts, lacrimal canals, lacrimal sacs, nasolacrimal
+  ducts, and lacrimal puncta.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: apparatus lacrimalis
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: lacrimal drainage system
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: lacrymal system
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: nasolacrimal drainage system
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: nasolacrimal system
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0000467
+- habitatmech:GOLD.dc86c8917c
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6318
+  source_label: Lacrimal apparatus
+  source_path: 'Host-associated > Mammals: Human > Integumentary system > Lacrimal
+    apparatus'
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

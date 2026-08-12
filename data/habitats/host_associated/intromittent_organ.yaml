@@ -1,0 +1,34 @@
+identifier: UBERON:0008811
+label: intromittent organ
+definition: An external organ of a male organism that is specialized to deliver sperm
+  during copulation. Intromittent organs are found most often in terrestrial species,
+  as most aquatic species fertilize their eggs externally, although there are exceptions[WP].
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: aedeagus
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: copulatory organ
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: penis
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0003135
+- habitatmech:GOLD.cad831cd73
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7574
+  source_label: Intromittent organ
+  source_path: Host-associated > Fish > Reproductive system > Intromittent organ
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

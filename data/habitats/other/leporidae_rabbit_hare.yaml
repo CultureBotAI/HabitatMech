@@ -1,0 +1,20 @@
+identifier: habitatmech:BACDIVE.82dc7d11b9
+label: Leporidae-Rabbit/Hare
+habitat_category: OTHER
+grounding_status: NOT_APPLICABLE
+mapping_status: SEEDED
+xrefs:
+- NCBITaxon:9979
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:leporidae-rabbit/hare
+  source_label: Leporidae-Rabbit/Hare
+  assertion_count: 217
+  assertion_unit: STRAIN
+  notes: Upstream mapping targets a non-habitat ontology (NCBITaxon:9979); kept as
+    an xref.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: NOT_APPLICABLE.'

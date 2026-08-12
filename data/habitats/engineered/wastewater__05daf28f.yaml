@@ -1,0 +1,22 @@
+identifier: habitatmech:GOLD.353a834cfd
+label: Wastewater
+habitat_category: ENGINEERED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00002001
+- ENVO:00003043
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5521
+  source_label: Wastewater
+  source_path: Engineered > Sewage treatment plant > Wastewater
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 59
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

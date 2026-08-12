@@ -1,0 +1,136 @@
+identifier: ENVO:00000890
+label: small river biome
+definition: A freshwater river biome which is determined by a small river.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Small river
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: Small rivers
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: rivers
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: riverses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:01000253
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00000890
+  source_label: small river biome
+  assertion_count: 1473
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:1026
+  source: PREGO
+  taxon_label: Marinoscillum furvescens
+  score: 4.0
+- taxon_id: NCBITaxon:104176
+  source: PREGO
+  taxon_label: Oscillochloris trichoides
+  score: 4.0
+- taxon_id: NCBITaxon:1044
+  source: PREGO
+  taxon_label: Erythrobacter longus
+  score: 4.0
+- taxon_id: NCBITaxon:109263
+  source: PREGO
+  taxon_label: Halothiobacillus kellyi
+  score: 4.0
+- taxon_id: NCBITaxon:128
+  source: PREGO
+  taxon_label: Isosphaera pallida
+  score: 4.0
+- taxon_id: NCBITaxon:1396
+  source: PREGO
+  taxon_label: Bacillus cereus
+  score: 4.0
+- taxon_id: NCBITaxon:1423814
+  source: PREGO
+  taxon_label: Limosilactobacillus vaginalis DSM 5837 = ATCC 49540
+  score: 4.0
+- taxon_id: NCBITaxon:143223
+  source: PREGO
+  taxon_label: Salegentibacter salegens
+  score: 4.0
+- taxon_id: NCBITaxon:1502
+  source: PREGO
+  taxon_label: Clostridium perfringens
+  score: 4.0
+- taxon_id: NCBITaxon:1510
+  source: PREGO
+  taxon_label: Thermoclostridium stercorarium
+  score: 4.0
+- taxon_id: NCBITaxon:173
+  source: PREGO
+  taxon_label: Leptospira interrogans
+  score: 4.0
+- taxon_id: NCBITaxon:224438
+  source: PREGO
+  taxon_label: Marichromatium indicum
+  score: 4.0
+- taxon_id: NCBITaxon:2369
+  source: PREGO
+  taxon_label: Arhodomonas aquaeolei
+  score: 4.0
+- taxon_id: NCBITaxon:237727
+  source: PREGO
+  taxon_label: Erythrobacter sp. NAP1
+  score: 4.0
+- taxon_id: NCBITaxon:238
+  source: PREGO
+  taxon_label: Elizabethkingia meningoseptica
+  score: 4.0
+- taxon_id: NCBITaxon:241368
+  source: PREGO
+  taxon_label: Desulfovibrio ferrophilus
+  score: 4.0
+- taxon_id: NCBITaxon:262076
+  source: PREGO
+  taxon_label: Marinobacter flavimaris
+  score: 4.0
+- taxon_id: NCBITaxon:266940
+  source: PREGO
+  taxon_label: Kineococcus radiotolerans SRS30216 = ATCC BAA-149
+  score: 4.0
+- taxon_id: NCBITaxon:28122
+  source: PREGO
+  taxon_label: Fibrobacter intestinalis
+  score: 4.0
+- taxon_id: NCBITaxon:28251
+  source: PREGO
+  taxon_label: Ornithobacterium rhinotracheale
+  score: 4.0
+- taxon_id: NCBITaxon:293091
+  source: PREGO
+  taxon_label: Haloquadratum walsbyi
+  score: 4.0
+- taxon_id: NCBITaxon:301375
+  source: PREGO
+  taxon_label: Methanothrix harundinacea
+  score: 4.0
+- taxon_id: NCBITaxon:313596
+  source: PREGO
+  taxon_label: Robiginitalea biformata HTCC2501
+  score: 4.0
+- taxon_id: NCBITaxon:314260
+  source: PREGO
+  taxon_label: Parvularcula bermudensis HTCC2503
+  score: 4.0
+- taxon_id: NCBITaxon:34003
+  source: PREGO
+  taxon_label: Paracoccus aminophilus
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

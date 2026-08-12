@@ -1,0 +1,134 @@
+identifier: ENVO:00000045
+label: estuary
+definition: A semi-enclosed coastal body of water with one or more rivers or streams
+  flowing into it, and with a free connection to the open sea.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: estuaries
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: inlet
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: mouth
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00000063
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00000045
+  source_label: estuary
+  assertion_count: 1274
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:1048
+  source: PREGO
+  taxon_label: Marichromatium gracile
+  score: 4.0
+- taxon_id: NCBITaxon:1121403
+  source: PREGO
+  taxon_label: Desulfogranum japonicum DSM 18378
+  score: 4.0
+- taxon_id: NCBITaxon:1121416
+  source: PREGO
+  taxon_label: Desulfopila aestuarii DSM 18488
+  score: 4.0
+- taxon_id: NCBITaxon:1123000
+  source: PREGO
+  taxon_label: Propionigenium maris DSM 9537
+  score: 4.0
+- taxon_id: NCBITaxon:1123503
+  source: PREGO
+  taxon_label: Woodsholea maritima DSM 17123
+  score: 4.0
+- taxon_id: NCBITaxon:1123517
+  source: PREGO
+  taxon_label: Thiomicrospira pelophila DSM 1534
+  score: 4.0
+- taxon_id: NCBITaxon:326298
+  source: PREGO
+  taxon_label: Sulfurimonas denitrificans DSM 1251
+  score: 4.0
+- taxon_id: NCBITaxon:406327
+  source: PREGO
+  taxon_label: Methanococcus vannielii SB
+  score: 4.0
+- taxon_id: NCBITaxon:588581
+  source: PREGO
+  taxon_label: Ruminiclostridium papyrosolvens DSM 2782
+  score: 4.0
+- taxon_id: NCBITaxon:642492
+  source: PREGO
+  taxon_label: Cellulosilyticum lentocellum DSM 5427
+  score: 4.0
+- taxon_id: NCBITaxon:710685
+  source: PREGO
+  taxon_label: Mycolicibacterium rhodesiae NBB3
+  score: 4.0
+- taxon_id: NCBITaxon:991789
+  source: PREGO
+  taxon_label: Anaerotignum propionicum DSM 1682
+  score: 4.0
+- taxon_id: NCBITaxon:1111735
+  source: PREGO
+  taxon_label: Sedimenticola selenatireducens DSM 17993
+  score: 3.0
+- taxon_id: NCBITaxon:1120920
+  source: PREGO
+  taxon_label: Acidaminobacter hydrogenoformans DSM 2784
+  score: 3.0
+- taxon_id: NCBITaxon:1123006
+  source: PREGO
+  taxon_label: Propionivibrio pelophilus DSM 12018
+  score: 3.0
+- taxon_id: NCBITaxon:1336240
+  source: PREGO
+  taxon_label: Shewanella colwelliana ATCC 39565
+  score: 3.0
+- taxon_id: NCBITaxon:156889
+  source: PREGO
+  taxon_label: Magnetococcus marinus MC-1
+  score: 3.0
+- taxon_id: NCBITaxon:1685124
+  source: PREGO
+  taxon_label: miscellaneous Crenarchaeota group-1 archaeon SG8-32-1
+  score: 3.0
+- taxon_id: NCBITaxon:1685125
+  source: PREGO
+  taxon_label: miscellaneous Crenarchaeota group-1 archaeon SG8-32-3
+  score: 3.0
+- taxon_id: NCBITaxon:1685126
+  source: PREGO
+  taxon_label: miscellaneous Crenarchaeota group-6 archaeon AD8-1
+  score: 3.0
+- taxon_id: NCBITaxon:1685127
+  source: PREGO
+  taxon_label: miscellaneous Crenarchaeota group-15 archaeon DG-45
+  score: 3.0
+- taxon_id: NCBITaxon:1685133
+  source: PREGO
+  taxon_label: miscellaneous Crenarchaeota group archaeon SMTZ1-55
+  score: 3.0
+- taxon_id: NCBITaxon:1685135
+  source: PREGO
+  taxon_label: miscellaneous Crenarchaeota group archaeon SMTZ-80
+  score: 3.0
+- taxon_id: NCBITaxon:1703351
+  source: PREGO
+  taxon_label: Bacteroides sp. SM1_62
+  score: 3.0
+- taxon_id: NCBITaxon:1703352
+  source: PREGO
+  taxon_label: Bacteroides sp. SM23_62
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

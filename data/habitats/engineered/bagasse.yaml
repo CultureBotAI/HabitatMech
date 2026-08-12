@@ -1,0 +1,29 @@
+identifier: ENVO:00002872
+label: bagasse
+definition: The biomass remaining after sugarcane stalks are crushed to extract their
+  juice.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: sugarcane bagasse
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00002264
+- mesh:D062611
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4925
+  source_label: Bagasse
+  source_path: Engineered > Solid waste > Bagasse
+  mapping_predicate: skos:exactMatch
+  assertion_count: 23
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

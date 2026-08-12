@@ -1,0 +1,20 @@
+identifier: FOODON:03301705
+label: vinegar
+habitat_category: FOOD
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- FOODON:00001073
+- habitatmech:GOLD.b2c3ae1ed5
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5531
+  source_label: Vinegar
+  source_path: Engineered > Food production > Fermented beverages > Vinegar
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

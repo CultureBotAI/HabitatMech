@@ -1,0 +1,34 @@
+identifier: UBERON:0002134
+label: tricuspid valve
+definition: An atrioventricular valve that is part of the outflow part of the right
+  atrium.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: right atrioventricular valve
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: valva atrioventricularis dextra
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: valvula tricuspidalis
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0002133
+- UBERON:0005208
+- habitatmech:GOLD.805ee181bd
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6244
+  source_label: Tricuspid valve
+  source_path: 'Host-associated > Mammals: Human > Circulatory system > Heart > Tricuspid
+    valve'
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

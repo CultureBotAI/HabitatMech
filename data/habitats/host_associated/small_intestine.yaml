@@ -1,0 +1,134 @@
+identifier: BTO:0000651
+label: small intestine
+definition: The part of the intestine that lies between the stomach and colon, consists
+  of duodenum, jejunum, and ileum, secretes digestive enzymes, and is the chief site
+  of the absorption of digested nutrients. The proximal portion of the intestine.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: intestinum tenue
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: intestinum tenues
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: small intestines
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: small intestinous
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000651
+  source_label: small intestine
+  assertion_count: 69
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:1301
+  source: PREGO
+  taxon_label: Streptococcus
+  score: 4.0
+- taxon_id: NCBITaxon:1578
+  source: PREGO
+  taxon_label: Lactobacillus
+  score: 4.0
+- taxon_id: NCBITaxon:1598
+  source: PREGO
+  taxon_label: Limosilactobacillus reuteri
+  score: 4.0
+- taxon_id: NCBITaxon:171549
+  source: PREGO
+  taxon_label: Bacteroidales
+  score: 4.0
+- taxon_id: NCBITaxon:186802
+  source: PREGO
+  taxon_label: Eubacteriales
+  score: 4.0
+- taxon_id: NCBITaxon:35493
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:543
+  source: PREGO
+  taxon_label: Enterobacteriaceae
+  score: 4.0
+- taxon_id: NCBITaxon:1161102
+  source: PREGO
+  taxon_label: Pasteurella multocida subsp. multocida VTCCBAA264
+  score: 3.0
+- taxon_id: NCBITaxon:1304
+  source: PREGO
+  taxon_label: Streptococcus salivarius
+  score: 3.0
+- taxon_id: NCBITaxon:1316254
+  source: PREGO
+  taxon_label: Veillonella parvula HSIVP1
+  score: 3.0
+- taxon_id: NCBITaxon:1316408
+  source: PREGO
+  taxon_label: Streptococcus sp. HSISM1
+  score: 3.0
+- taxon_id: NCBITaxon:1316409
+  source: PREGO
+  taxon_label: Streptococcus sp. HSISB1
+  score: 3.0
+- taxon_id: NCBITaxon:1316410
+  source: PREGO
+  taxon_label: Streptococcus sp. HSISS1
+  score: 3.0
+- taxon_id: NCBITaxon:1316411
+  source: PREGO
+  taxon_label: Streptococcus sp. HSISS2
+  score: 3.0
+- taxon_id: NCBITaxon:1316412
+  source: PREGO
+  taxon_label: Streptococcus sp. HSISS3
+  score: 3.0
+- taxon_id: NCBITaxon:1316414
+  source: PREGO
+  taxon_label: Enterococcus sp. HSIEG1
+  score: 3.0
+- taxon_id: NCBITaxon:354242
+  source: PREGO
+  taxon_label: Campylobacter jejuni subsp. jejuni 81-176
+  score: 3.0
+- taxon_id: NCBITaxon:49082
+  source: PREGO
+  taxon_label: Candidatus Neoarthromitus
+  score: 1.78003
+- taxon_id: NCBITaxon:528
+  source: PREGO
+  taxon_label: Ochrobactrum
+  score: 1.76655
+- taxon_id: NCBITaxon:80864
+  source: PREGO
+  taxon_label: Comamonadaceae
+  score: 1.75281
+- taxon_id: NCBITaxon:186803
+  source: PREGO
+  taxon_label: Lachnospiraceae
+  score: 1.66437
+- taxon_id: NCBITaxon:1661425
+  source: PREGO
+  score: 1.64852
+- taxon_id: NCBITaxon:1827
+  source: PREGO
+  taxon_label: Rhodococcus <high G+C Gram-positive bacteria>
+  score: 1.64852
+- taxon_id: NCBITaxon:33882
+  source: PREGO
+  taxon_label: Microbacterium
+  score: 1.64852
+- taxon_id: NCBITaxon:40323
+  source: PREGO
+  taxon_label: Stenotrophomonas
+  score: 1.64852
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

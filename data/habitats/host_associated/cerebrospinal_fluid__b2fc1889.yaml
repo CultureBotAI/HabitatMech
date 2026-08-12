@@ -1,0 +1,36 @@
+identifier: UBERON:0001359
+label: cerebrospinal fluid
+definition: A clear, colorless, bodily fluid, that occupies the subarachnoid space
+  and the ventricular system around and inside the brain and spinal cord.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: CSF
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: cerebral spinal fluid
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: liquor cerebrospinalis
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: spinal fluid
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0007779
+- habitatmech:GOLD.feecbcaf98
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5287
+  source_label: Cerebrospinal fluid
+  source_path: Host-associated > Fish > Nervous system > Cerebrospinal fluid
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

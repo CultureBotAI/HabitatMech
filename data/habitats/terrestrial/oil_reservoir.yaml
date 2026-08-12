@@ -1,0 +1,153 @@
+identifier: ENVO:00002185
+label: oil reservoir
+definition: A subsurface landform which contains fluid hydrocarbons in porous or fractured
+  rock formations.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Petroleum reservoir
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: oil and gas reservoir
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: oil reservoirs
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: petroleum reservoir
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00000446
+- ENVO:00002184
+- ENVO:01000964
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:3490
+  source_label: Oil reservoir
+  source_path: Environmental > Terrestrial > Oil reservoir
+  mapping_predicate: skos:exactMatch
+  assertion_count: 77
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: GOLD
+  source_id: gold.ecosystem:7638
+  source_label: Petroleum reservoir
+  source_path: Engineered > Wastewater > Industrial wastewater > Petroleum reservoir
+  mapping_predicate: skos:closeMatch
+- source: PREGO
+  source_id: ENVO:00002185
+  source_label: oil reservoir
+  assertion_count: 28
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1121016
+  source: PREGO
+  taxon_label: Arhodomonas aquaeolei DSM 8974
+  score: 4.0
+- taxon_id: NCBITaxon:1121391
+  source: PREGO
+  taxon_label: Desulfacinum infernum DSM 9756
+  score: 4.0
+- taxon_id: NCBITaxon:1121430
+  source: PREGO
+  taxon_label: Desulfofundulus thermocisternus DSM 10259
+  score: 4.0
+- taxon_id: NCBITaxon:1121436
+  source: PREGO
+  taxon_label: Oleidesulfovibrio alaskensis DSM 16109
+  score: 4.0
+- taxon_id: NCBITaxon:1121449
+  source: PREGO
+  taxon_label: Paucidesulfovibrio gracilis DSM 16080
+  score: 4.0
+- taxon_id: NCBITaxon:1121456
+  source: PREGO
+  taxon_label: Paucidesulfovibrio longus DSM 6739
+  score: 4.0
+- taxon_id: NCBITaxon:1121911
+  source: PREGO
+  taxon_label: Garciella nitratireducens DSM 15102
+  score: 4.0
+- taxon_id: NCBITaxon:1122143
+  source: PREGO
+  taxon_label: Lacticigenium naphthae DSM 19658
+  score: 4.0
+- taxon_id: NCBITaxon:1122233
+  source: PREGO
+  taxon_label: Methermicoccus shengliensis DSM 18856
+  score: 4.0
+- taxon_id: NCBITaxon:1123373
+  source: PREGO
+  taxon_label: Thermodesulfobacterium thermophilum DSM 1276
+  score: 4.0
+- taxon_id: NCBITaxon:1123383
+  source: PREGO
+  taxon_label: Pseudothermotoga elfii DSM 9442 = NBRC 107921
+  score: 4.0
+- taxon_id: NCBITaxon:1123384
+  source: PREGO
+  taxon_label: Pseudothermotoga hypogea DSM 11164 = NBRC 106472
+  score: 4.0
+- taxon_id: NCBITaxon:156202
+  source: PREGO
+  taxon_label: Petrotoga sibirica
+  score: 4.0
+- taxon_id: NCBITaxon:156203
+  source: PREGO
+  taxon_label: Petrotoga olearia
+  score: 4.0
+- taxon_id: NCBITaxon:207559
+  source: PREGO
+  taxon_label: Oleidesulfovibrio alaskensis G20
+  score: 4.0
+- taxon_id: NCBITaxon:285070
+  source: PREGO
+  taxon_label: Petrimonas sulfuriphila
+  score: 4.0
+- taxon_id: NCBITaxon:351348
+  source: PREGO
+  taxon_label: Marinobacter nauticus VT8
+  score: 4.0
+- taxon_id: NCBITaxon:469381
+  source: PREGO
+  taxon_label: Dethiosulfovibrio peptidovorans DSM 11002
+  score: 4.0
+- taxon_id: NCBITaxon:522772
+  source: PREGO
+  taxon_label: Denitrovibrio acetiphilus DSM 12809
+  score: 4.0
+- taxon_id: NCBITaxon:573413
+  source: PREGO
+  taxon_label: Sediminispirochaeta smaragdinae DSM 11293
+  score: 4.0
+- taxon_id: NCBITaxon:580340
+  source: PREGO
+  taxon_label: Thermovirga lienii DSM 17291
+  score: 4.0
+- taxon_id: NCBITaxon:679926
+  source: PREGO
+  taxon_label: Methanolacinia petrolearia DSM 11571
+  score: 4.0
+- taxon_id: NCBITaxon:697281
+  source: PREGO
+  taxon_label: Mahella australiensis 50-1 BON
+  score: 4.0
+- taxon_id: NCBITaxon:911092
+  source: PREGO
+  taxon_label: Caldanaerobacter subterraneus
+  score: 4.0
+- taxon_id: NCBITaxon:29563
+  source: PREGO
+  taxon_label: Halanaerobium salsuginis
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'

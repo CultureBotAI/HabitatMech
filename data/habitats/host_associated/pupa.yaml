@@ -1,0 +1,37 @@
+identifier: UBERON:0003143
+label: pupa
+definition: An organism at the pupal stage. A life cycle stage of holometabolous insects
+  in which the organism is a pupa and starts with the larval-pupal apolysis and ends
+  with pupal-adult apolysis.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: aurelia
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: chrysalides
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: chrysalis
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: pupae
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0000468
+- habitatmech:GOLD.dba2a83b95
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7253
+  source_label: Pupa
+  source_path: 'Host-associated > Arthropoda: Insects > Pupa'
+  mapping_predicate: skos:exactMatch
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

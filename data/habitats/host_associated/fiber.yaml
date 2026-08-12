@@ -1,0 +1,75 @@
+identifier: BTO:0000450
+label: fiber
+definition: An elongated tapering thick-walled plant cell void at maturity that imparts
+  elasticity, flexibility, and tensile strength.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: fibers
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000450
+  source_label: fiber
+  assertion_count: 15
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1007096
+  source: PREGO
+  taxon_label: Oscillibacter ruminantium GH1
+  score: 3.0
+- taxon_id: NCBITaxon:115991
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:1341157
+  source: PREGO
+  taxon_label: Ruminococcus flavefaciens 007c
+  score: 3.0
+- taxon_id: NCBITaxon:1538552
+  source: PREGO
+  taxon_label: Clostridium sp. NCR
+  score: 3.0
+- taxon_id: NCBITaxon:1913114
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:1913117
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:407392
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:5306
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:641112
+  source: PREGO
+  taxon_label: Ruminococcus flavefaciens FD-1
+  score: 3.0
+- taxon_id: NCBITaxon:66711
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:699370
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:869724
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:869725
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:869726
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:948870
+  source: PREGO
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

@@ -1,0 +1,147 @@
+identifier: ENVO:00000086
+label: plain
+definition: A region of general uniform slope, comparatively level, and of considerable
+  extent.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: interfluve
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: llanos
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: llanos
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: llanoses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: outwash plain
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: outwash plain
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: outwash plains
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: plains
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:01001884
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00000086
+  source_label: plain
+  assertion_count: 2589
+  assertion_unit: TAXON
+  score: 2.34363
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:200616
+  source: PREGO
+  taxon_label: Rhodoplanes tepidamans
+  score: 2.34363
+- taxon_id: NCBITaxon:722413
+  source: PREGO
+  taxon_label: Bradyrhizobium sp. JS329
+  score: 2.31071
+- taxon_id: NCBITaxon:520488
+  source: PREGO
+  taxon_label: Brucella suis bv. 4 str. 40
+  score: 2.31053
+- taxon_id: NCBITaxon:200251
+  source: PREGO
+  taxon_label: Rhodococcus sp. AN-22
+  score: 2.30016
+- taxon_id: NCBITaxon:285482
+  source: PREGO
+  taxon_label: Streptomyces tsusimaensis
+  score: 2.29703
+- taxon_id: NCBITaxon:268954
+  source: PREGO
+  taxon_label: Corynebacterium sp. C12
+  score: 2.29139
+- taxon_id: NCBITaxon:83784
+  source: PREGO
+  taxon_label: Paraburkholderia sartisoli
+  score: 2.28543
+- taxon_id: NCBITaxon:104660
+  source: PREGO
+  score: 2.2789
+- taxon_id: NCBITaxon:107634
+  source: PREGO
+  taxon_label: Methylosinus sp. LW2
+  score: 2.27091
+- taxon_id: NCBITaxon:86668
+  source: PREGO
+  taxon_label: Neobacillus niacini
+  score: 2.27035
+- taxon_id: NCBITaxon:280
+  source: PREGO
+  taxon_label: Xanthobacter autotrophicus
+  score: 2.26904
+- taxon_id: NCBITaxon:53463
+  source: PREGO
+  taxon_label: Paracoccus solventivorans
+  score: 2.25882
+- taxon_id: NCBITaxon:47958
+  source: PREGO
+  taxon_label: Methylorubrum thiocyanatum
+  score: 2.25657
+- taxon_id: NCBITaxon:68895
+  source: PREGO
+  taxon_label: Cupriavidus basilensis
+  score: 2.24977
+- taxon_id: NCBITaxon:67274
+  source: PREGO
+  taxon_label: Streptomyces argenteolus
+  score: 2.24872
+- taxon_id: NCBITaxon:1961
+  source: PREGO
+  taxon_label: Streptomyces virginiae
+  score: 2.24838
+- taxon_id: NCBITaxon:328552
+  source: PREGO
+  score: 2.24753
+- taxon_id: NCBITaxon:187303
+  source: PREGO
+  taxon_label: Methylocystis hydrogenophila
+  score: 2.2426
+- taxon_id: NCBITaxon:31994
+  source: PREGO
+  taxon_label: Beijerinckia indica subsp. indica
+  score: 2.24058
+- taxon_id: NCBITaxon:1946
+  source: PREGO
+  taxon_label: Streptomyces kasugaensis
+  score: 2.24057
+- taxon_id: NCBITaxon:115828
+  source: PREGO
+  taxon_label: Streptomyces maritimus
+  score: 2.23991
+- taxon_id: NCBITaxon:92743
+  source: PREGO
+  taxon_label: Streptomyces paromomycinus
+  score: 2.23592
+- taxon_id: NCBITaxon:464
+  source: PREGO
+  taxon_label: Fluoribacter gormanii
+  score: 2.23588
+- taxon_id: NCBITaxon:1455611
+  source: PREGO
+  taxon_label: Mycobacterium tuberculosis K85
+  score: 2.23313
+- taxon_id: NCBITaxon:299254
+  source: PREGO
+  taxon_label: Streptomyces sp. NRRL 11266
+  score: 2.23163
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

@@ -1,0 +1,137 @@
+identifier: BTO:0004520
+label: regulatory T-lymphocyte
+definition: Regulatory T cells are a specialized subpopulation of T cells that act
+  to suppress activation of the immune system and thereby maintain immune system homeostasis
+  and tolerance to self-antigens.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: T suppressor cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: T suppressor cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: Treg cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: Treg cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: Ts cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: Ts cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: regulatory T-cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: regulatory T-cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: regulatory T-lymphocytes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: suppressor T-cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: suppressor T-cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: suppressor T-lymphocyte
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: suppressor T-lymphocytes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000782
+source_attestations:
+- source: PREGO
+  source_id: BTO:0004520
+  source_label: regulatory T-lymphocyte
+  assertion_count: 18
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1207542
+  source: PREGO
+  taxon_label: Bifidobacterium bifidum LMG 13195
+  score: 3.0
+- taxon_id: NCBITaxon:1232438
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-01
+  score: 3.0
+- taxon_id: NCBITaxon:1232439
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-03
+  score: 3.0
+- taxon_id: NCBITaxon:1232440
+  source: PREGO
+  taxon_label: Hungatella hathewayi VE202-04
+  score: 3.0
+- taxon_id: NCBITaxon:1232442
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-06
+  score: 3.0
+- taxon_id: NCBITaxon:1232443
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-13
+  score: 3.0
+- taxon_id: NCBITaxon:1232444
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-15
+  score: 3.0
+- taxon_id: NCBITaxon:1232445
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-16
+  score: 3.0
+- taxon_id: NCBITaxon:1232446
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-18
+  score: 3.0
+- taxon_id: NCBITaxon:1232447
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-09
+  score: 3.0
+- taxon_id: NCBITaxon:1232448
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-07
+  score: 3.0
+- taxon_id: NCBITaxon:1232449
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-08
+  score: 3.0
+- taxon_id: NCBITaxon:1232452
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-14
+  score: 3.0
+- taxon_id: NCBITaxon:1232453
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-21
+  score: 3.0
+- taxon_id: NCBITaxon:1232454
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-26
+  score: 3.0
+- taxon_id: NCBITaxon:1232457
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-27
+  score: 3.0
+- taxon_id: NCBITaxon:1232458
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-29
+  score: 3.0
+- taxon_id: NCBITaxon:1232460
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-28
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

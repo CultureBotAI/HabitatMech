@@ -1,0 +1,140 @@
+identifier: BTO:0000142
+label: brain
+definition: '1: The portion of the vertebrate central nervous system that constitutes
+  the organ of thought and neural coordination, includes all the higher nervous centers
+  receiving stimuli from the sense organs and interpreting and correlating them to
+  formulate the motor impulses, is made up of neurons and supporting and nutritive
+  structures, is enclosed within the skull, and is continuous with the spinal cord
+  through the foramen magnum. Also named encephalon. 2: A nervous center in invertebrates
+  comparable in position and function to the vertebrate brain.'
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: brains
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: encephalon
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: encephalonal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: encephalons
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000142
+  source_label: brain
+  assertion_count: 40
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:12455
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:147802
+  source: PREGO
+  taxon_label: Lactobacillus iners
+  score: 4.0
+- taxon_id: NCBITaxon:1578
+  source: PREGO
+  taxon_label: Lactobacillus
+  score: 4.0
+- taxon_id: NCBITaxon:1601
+  source: PREGO
+  taxon_label: Ligilactobacillus agilis
+  score: 4.0
+- taxon_id: NCBITaxon:168808
+  source: PREGO
+  taxon_label: Sneathia
+  score: 4.0
+- taxon_id: NCBITaxon:2701
+  source: PREGO
+  taxon_label: Gardnerella
+  score: 4.0
+- taxon_id: NCBITaxon:82135
+  source: PREGO
+  taxon_label: Fannyhessea vaginae
+  score: 4.0
+- taxon_id: NCBITaxon:838
+  source: PREGO
+  taxon_label: Prevotella
+  score: 4.0
+- taxon_id: NCBITaxon:84107
+  source: PREGO
+  taxon_label: Coriobacteriaceae
+  score: 4.0
+- taxon_id: NCBITaxon:1117644
+  source: PREGO
+  taxon_label: Mycoplasmopsis canis PG 14
+  score: 3.0
+- taxon_id: NCBITaxon:1131452
+  source: PREGO
+  taxon_label: Mycoplasmopsis canis UF31
+  score: 3.0
+- taxon_id: NCBITaxon:1131453
+  source: PREGO
+  taxon_label: Mycoplasmopsis canis UF33
+  score: 3.0
+- taxon_id: NCBITaxon:1131454
+  source: PREGO
+  taxon_label: Mycoplasmopsis canis UFG1
+  score: 3.0
+- taxon_id: NCBITaxon:1131455
+  source: PREGO
+  taxon_label: Mycoplasmopsis canis UFG4
+  score: 3.0
+- taxon_id: NCBITaxon:1133849
+  source: PREGO
+  taxon_label: Nocardia brasiliensis ATCC 700358
+  score: 3.0
+- taxon_id: NCBITaxon:1177117
+  source: PREGO
+  taxon_label: Vreelandella stevensii S18214
+  score: 3.0
+- taxon_id: NCBITaxon:1189613
+  source: PREGO
+  taxon_label: Staphylococcus massiliensis CCUG 55927
+  score: 3.0
+- taxon_id: NCBITaxon:1214102
+  source: PREGO
+  taxon_label: Mycolicibacterium fortuitum subsp. fortuitum DSM 46621 = ATCC 6841
+    = JCM 6387
+  score: 3.0
+- taxon_id: NCBITaxon:1328
+  source: PREGO
+  taxon_label: Streptococcus anginosus
+  score: 3.0
+- taxon_id: NCBITaxon:1348
+  source: PREGO
+  taxon_label: Streptococcus parauberis
+  score: 3.0
+- taxon_id: NCBITaxon:1392869
+  source: PREGO
+  taxon_label: Escherichia coli K1
+  score: 3.0
+- taxon_id: NCBITaxon:1639
+  source: PREGO
+  taxon_label: Listeria monocytogenes
+  score: 3.0
+- taxon_id: NCBITaxon:1680
+  source: PREGO
+  taxon_label: Bifidobacterium adolescentis
+  score: 3.0
+- taxon_id: NCBITaxon:1683
+  source: PREGO
+  taxon_label: Bifidobacterium angulatum
+  score: 3.0
+- taxon_id: NCBITaxon:169963
+  source: PREGO
+  taxon_label: Listeria monocytogenes EGD-e
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

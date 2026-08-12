@@ -1,0 +1,111 @@
+identifier: ENVO:00002012
+label: hypersaline water
+definition: Water which contains a highly increased concentration of dissolved salts,
+  surpassing the average salinity of seawater.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: hypersaline waters
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00002010
+source_attestations:
+- source: ENVIRONMENTS_TABLE
+  source_id: water_hypersaline
+  source_label: water_hypersaline
+  notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: PREGO
+  source_id: ENVO:00002012
+  source_label: hypersaline water
+  assertion_count: 14
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+environmental_parameters:
+- parameter: GRADIENTS
+  qualitative_value: low
+  source: kg-microbe environments.csv (water_hypersaline)
+- parameter: ORGANIC_MATTER
+  qualitative_value: low
+  source: kg-microbe environments.csv (water_hypersaline)
+- parameter: SALINITY
+  qualitative_value: high
+  source: kg-microbe environments.csv (water_hypersaline)
+- parameter: SALINITY_VARIABILITY
+  qualitative_value: small
+  source: kg-microbe environments.csv (water_hypersaline)
+- parameter: STRUCTURAL_COMPLEXITY
+  qualitative_value: low
+  source: kg-microbe environments.csv (water_hypersaline)
+- parameter: TEMPERATURE_VARIABILITY
+  qualitative_value: medium
+  source: kg-microbe environments.csv (water_hypersaline)
+- parameter: WATER_AVAILABILITY
+  qualitative_value: low
+  source: kg-microbe environments.csv (water_hypersaline)
+- parameter: WATER_VARIABILITY
+  qualitative_value: permanently wet
+  source: kg-microbe environments.csv (water_hypersaline)
+characteristic_taxa:
+- taxon_id: NCBITaxon:926690
+  source: PREGO
+  taxon_label: Haloplanus natans DSM 17983
+  score: 3.0
+- taxon_id: NCBITaxon:172371
+  source: PREGO
+  taxon_label: Alloalcanivorax venustensis
+  score: 1.31662
+- taxon_id: NCBITaxon:285271
+  source: PREGO
+  taxon_label: uncultured Methylophaga sp.
+  score: 1.24174
+- taxon_id: NCBITaxon:1334019
+  source: PREGO
+  taxon_label: Alcanivorax sp. EPR7
+  score: 1.13534
+- taxon_id: NCBITaxon:31910
+  source: PREGO
+  taxon_label: Halovibrio variabilis
+  score: 1.11467
+- taxon_id: NCBITaxon:115553
+  source: PREGO
+  taxon_label: Vreelandella sulfidaeris
+  score: 1.09383
+- taxon_id: NCBITaxon:550984
+  source: PREGO
+  taxon_label: Halomonas sp. HAL1
+  score: 1.08388
+- taxon_id: NCBITaxon:47885
+  source: PREGO
+  taxon_label: Pseudomonas oryzihabitans
+  score: 1.07684
+- taxon_id: NCBITaxon:230105
+  source: PREGO
+  score: 1.04132
+- taxon_id: NCBITaxon:285091
+  source: PREGO
+  taxon_label: Alloalcanivorax dieselolei
+  score: 1.03978
+- taxon_id: NCBITaxon:158080
+  source: PREGO
+  score: 1.03761
+- taxon_id: NCBITaxon:1188994
+  source: PREGO
+  taxon_label: Chromohalobacter sp. HS-2
+  score: 1.02755
+- taxon_id: NCBITaxon:645472
+  source: PREGO
+  taxon_label: Halomonas sp. HTNK1
+  score: 1.02538
+- taxon_id: NCBITaxon:48547
+  source: PREGO
+  score: 1.01893
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, PREGO.
+    Grounding: EXACT.'

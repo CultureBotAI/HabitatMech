@@ -1,0 +1,34 @@
+identifier: FOODON:03412112
+label: mollusc
+definition: Mollusca is a large phylum of invertebrate animals whose members are known
+  as molluscs or mollusks. Molluscs are the largest marine phylum, comprising about
+  23% of all the named marine organisms. Numerous molluscs also live in freshwater
+  and terrestrial habitats. [https://en.wikipedia.org/wiki/Mollusca]
+definition_source: FOODON
+habitat_category: HOST_ASSOCIATED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Mollusca
+  synonym_type: EXACT_SYNONYM
+  source: FOODON
+- synonym_text: mollusk
+  synonym_type: EXACT_SYNONYM
+  source: FOODON
+parent_habitats:
+- FOODON:03411433
+- habitatmech:GOLD.d3b891e82e
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:3368
+  source_label: Mollusca
+  source_path: Host-associated > Mollusca
+  mapping_predicate: skos:closeMatch
+  assertion_count: 784
+  assertion_unit: ORGANISM
+  notes: 4 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

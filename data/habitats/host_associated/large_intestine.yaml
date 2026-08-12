@@ -1,0 +1,148 @@
+identifier: BTO:0000706
+label: large intestine
+definition: The more terminal division of the vertebrate intestine that is wider and
+  shorter than the small intestine, typically divided into cecum, colon, and rectum,
+  and concerned especially with the resorption of water and the formation of feces.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: intestinum crassa
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: intestinum crassal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: intestinum crassum
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: intestinum crassums
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: large bowel
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: large bowels
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: large intestines
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: large intestinous
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000706
+  source_label: large intestine
+  assertion_count: 93
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:1005999
+  source: PREGO
+  taxon_label: Leminorella grimontii ATCC 33999 = DSM 5078
+  score: 4.0
+- taxon_id: NCBITaxon:1034346
+  source: PREGO
+  taxon_label: Dielma fastidiosa
+  score: 4.0
+- taxon_id: NCBITaxon:1077285
+  source: PREGO
+  taxon_label: Bacteroides faecis MAJ27
+  score: 4.0
+- taxon_id: NCBITaxon:1121114
+  source: PREGO
+  taxon_label: Blautia producta ATCC 27340 = DSM 2950
+  score: 4.0
+- taxon_id: NCBITaxon:1121115
+  source: PREGO
+  taxon_label: Blautia wexlerae DSM 19850
+  score: 4.0
+- taxon_id: NCBITaxon:1121308
+  source: PREGO
+  taxon_label: Clostridioides difficile ATCC 9689 = DSM 1296
+  score: 4.0
+- taxon_id: NCBITaxon:1121333
+  source: PREGO
+  taxon_label: Thomasclavelia saccharogumia DSM 17460
+  score: 4.0
+- taxon_id: NCBITaxon:1122155
+  source: PREGO
+  taxon_label: Lactonifactor longoviformis DSM 17459
+  score: 4.0
+- taxon_id: NCBITaxon:1123075
+  source: PREGO
+  taxon_label: Ruminococcus gauvreauii DSM 19829
+  score: 4.0
+- taxon_id: NCBITaxon:1123263
+  source: PREGO
+  taxon_label: Solobacterium moorei DSM 22971
+  score: 4.0
+- taxon_id: NCBITaxon:1175296
+  source: PREGO
+  taxon_label: Methanomassiliicoccus luminyensis B10
+  score: 4.0
+- taxon_id: NCBITaxon:1227482
+  source: PREGO
+  taxon_label: Halorubrum lipolyticum DSM 21995
+  score: 4.0
+- taxon_id: NCBITaxon:1236689
+  source: PREGO
+  taxon_label: Candidatus Methanomethylophilus alvi Mx1201
+  score: 4.0
+- taxon_id: NCBITaxon:1263
+  source: PREGO
+  taxon_label: Ruminococcus
+  score: 4.0
+- taxon_id: NCBITaxon:1384063
+  source: PREGO
+  taxon_label: Mediterraneibacter gnavus AGR2154
+  score: 4.0
+- taxon_id: NCBITaxon:1392497
+  source: PREGO
+  taxon_label: Clostridioides mangenotii LM2
+  score: 4.0
+- taxon_id: NCBITaxon:1408360
+  source: PREGO
+  taxon_label: Campylobacter jejuni subsp. doylei ATCC 49349
+  score: 4.0
+- taxon_id: NCBITaxon:1408478
+  source: PREGO
+  taxon_label: Vibrio cholerae ATCC 14035
+  score: 4.0
+- taxon_id: NCBITaxon:1449345
+  source: PREGO
+  taxon_label: Helicobacter rodentium ATCC 700285
+  score: 4.0
+- taxon_id: NCBITaxon:168384
+  source: PREGO
+  taxon_label: Marvinbryantia formatexigens
+  score: 4.0
+- taxon_id: NCBITaxon:171549
+  source: PREGO
+  taxon_label: Bacteroidales
+  score: 4.0
+- taxon_id: NCBITaxon:186802
+  source: PREGO
+  taxon_label: Eubacteriales
+  score: 4.0
+- taxon_id: NCBITaxon:186803
+  source: PREGO
+  taxon_label: Lachnospiraceae
+  score: 4.0
+- taxon_id: NCBITaxon:186804
+  source: PREGO
+  taxon_label: Peptostreptococcaceae
+  score: 4.0
+- taxon_id: NCBITaxon:1945871
+  source: PREGO
+  taxon_label: Hallerella porci
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

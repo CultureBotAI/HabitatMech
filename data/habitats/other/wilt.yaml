@@ -1,0 +1,18 @@
+identifier: habitatmech:BACDIVE.4c48b5114d
+label: Wilt
+habitat_category: OTHER
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:wilt
+  source_label: Wilt
+  assertion_count: 3
+  assertion_unit: STRAIN
+  notes: kg-microbe's isolation-source mapping table has a row for this source with
+    no ontology target; treated as ungrounded rather than re-grounded by lexical match.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'

@@ -1,0 +1,27 @@
+identifier: PO:0009047
+label: Spot-Leaf,Stem
+habitat_category: HOST_ASSOCIATED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Rot-Root,Stem
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:rot-root,stem
+  source_label: Rot-Root,Stem
+  mapping_predicate: skos:closeMatch
+  assertion_count: 2
+  assertion_unit: STRAIN
+- source: BACDIVE
+  source_id: bacdive.isolation_source:spot-leaf,stem
+  source_label: Spot-Leaf,Stem
+  mapping_predicate: skos:closeMatch
+  assertion_count: 5
+  assertion_unit: STRAIN
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

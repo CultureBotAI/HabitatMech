@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.29dae65d3c
+label: Floor
+habitat_category: ENGINEERED
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:03501152
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5574
+  source_label: Floor
+  source_path: Engineered > Built environment > Hospital > ICU > Floor
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

@@ -1,0 +1,121 @@
+identifier: ENVO:01000059
+label: sea grass bed
+definition: A bed of a marine, saline water body which is covered by one or more speices
+  of seagrass typically belonging to the families Posidoniaceae, Zosteraceae, Hydrocharitaceae,
+  or Cymodoceaceae.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Seagrass bed
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: sea grass beds
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: seagrass bed
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: seagrass meadow
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:01001378
+- habitatmech:GOLD.115edc36f8
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7940
+  source_label: Seagrass bed
+  source_path: Environmental > Aquatic > Marine > Intertidal zone > Seagrass bed
+  mapping_predicate: skos:closeMatch
+- source: PREGO
+  source_id: ENVO:01000059
+  source_label: sea grass bed
+  assertion_count: 316
+  assertion_unit: TAXON
+  score: 2.20432
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:406538
+  source: PREGO
+  score: 2.20432
+- taxon_id: NCBITaxon:406540
+  source: PREGO
+  score: 2.17394
+- taxon_id: NCBITaxon:29158
+  source: PREGO
+  score: 2.11412
+- taxon_id: NCBITaxon:80836
+  source: PREGO
+  score: 2.06162
+- taxon_id: NCBITaxon:6613
+  source: PREGO
+  score: 2.05413
+- taxon_id: NCBITaxon:483417
+  source: PREGO
+  score: 2.03916
+- taxon_id: NCBITaxon:483407
+  source: PREGO
+  score: 2.02846
+- taxon_id: NCBITaxon:106299
+  source: PREGO
+  score: 1.9682
+- taxon_id: NCBITaxon:311986
+  source: PREGO
+  score: 1.96348
+- taxon_id: NCBITaxon:29159
+  source: PREGO
+  score: 1.93938
+- taxon_id: NCBITaxon:118381
+  source: PREGO
+  score: 1.91825
+- taxon_id: NCBITaxon:1051067
+  source: PREGO
+  score: 1.86987
+- taxon_id: NCBITaxon:13016
+  source: PREGO
+  score: 1.84708
+- taxon_id: NCBITaxon:6182
+  source: PREGO
+  score: 1.81928
+- taxon_id: NCBITaxon:244477
+  source: PREGO
+  score: 1.81893
+- taxon_id: NCBITaxon:244466
+  source: PREGO
+  score: 1.81189
+- taxon_id: NCBITaxon:13725
+  source: PREGO
+  taxon_label: Thiocystis violacea
+  score: 1.78631
+- taxon_id: NCBITaxon:29017
+  source: PREGO
+  score: 1.77458
+- taxon_id: NCBITaxon:247006
+  source: PREGO
+  score: 1.77393
+- taxon_id: NCBITaxon:7654
+  source: PREGO
+  score: 1.76176
+- taxon_id: NCBITaxon:244472
+  source: PREGO
+  score: 1.72514
+- taxon_id: NCBITaxon:6604
+  source: PREGO
+  score: 1.72117
+- taxon_id: NCBITaxon:13686
+  source: PREGO
+  score: 1.70446
+- taxon_id: NCBITaxon:6239
+  source: PREGO
+  score: 1.67765
+- taxon_id: NCBITaxon:7070
+  source: PREGO
+  score: 1.66886
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'

@@ -1,0 +1,38 @@
+identifier: BTO:0005441
+label: lateral root
+definition: Lateral roots extend horizontally from the primary root (radicle) and
+  serve to anchor the plant securely into the soil. This branching of roots also contributes
+  to water uptake, and facilitates the extraction of nutrients required for the growth
+  and development of the plant.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: lateral roots
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0001188
+source_attestations:
+- source: PREGO
+  source_id: BTO:0005441
+  source_label: lateral root
+  assertion_count: 2
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1261128
+  source: PREGO
+  taxon_label: Pantoea agglomerans 299R
+  score: 3.0
+- taxon_id: NCBITaxon:438753
+  source: PREGO
+  taxon_label: Azorhizobium caulinodans ORS 571
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

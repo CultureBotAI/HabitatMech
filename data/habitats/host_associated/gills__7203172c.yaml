@@ -1,0 +1,22 @@
+identifier: habitatmech:GOLD.ace8211152
+label: Gills
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0011150
+- habitatmech:GOLD.20fb595426
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7264
+  source_label: Gills
+  source_path: 'Host-associated > Arthropoda: Crustaceans > Respiratory system > Gill/Bronchial
+    chamber > Gills'
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 2
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

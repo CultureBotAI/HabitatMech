@@ -1,0 +1,38 @@
+identifier: BTO:0000320
+label: cyst
+definition: 'A body resembling a cyst: as a 1: capsule formed about a minute organism
+  going into a resting or spore stage; also: this capsule with its contents. 2: a
+  resistant cover about a parasite produced by the parasite or the host.'
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- BTO:0000139
+- BTO:0000284
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000320
+  source_label: cyst
+  assertion_count: 3
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:266809
+  source: PREGO
+  taxon_label: Thalassobacter stenotrophicus
+  score: 3.0
+- taxon_id: NCBITaxon:414684
+  source: PREGO
+  taxon_label: Rhodospirillum centenum SW
+  score: 3.0
+- taxon_id: NCBITaxon:461836
+  source: PREGO
+  taxon_label: Thecamonas trahens ATCC 50062
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

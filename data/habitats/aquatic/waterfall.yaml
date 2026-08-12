@@ -1,0 +1,102 @@
+identifier: ENVO:00000040
+label: waterfall
+definition: A sudden descent of water over a step or ledge in the bed of a river.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: cascade
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: cascade
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: cascades
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: cataract
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: cataract
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: cataractic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: cataracts
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: fall
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: fall
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: falls
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: falls
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: fallses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: fallsic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: force
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: force
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: forces
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: linn
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: linn
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: waterfallic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: waterfalls
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: waterfalls
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: waterfallses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: waterfallsic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:01000618
+- ENVO:01001308
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00000040
+  source_label: waterfall
+  assertion_count: 2
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:365044
+  source: PREGO
+  taxon_label: Polaromonas naphthalenivorans CJ2
+  score: 3.0
+- taxon_id: NCBITaxon:742013
+  source: PREGO
+  taxon_label: Delftia sp. Cs1-4
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

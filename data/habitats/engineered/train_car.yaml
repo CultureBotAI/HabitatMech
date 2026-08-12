@@ -1,0 +1,22 @@
+identifier: ENVO:03600051
+label: train car
+definition: A vehicle which is used for carrying cargo or passengers on a rail transport
+  system.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:01000604
+- habitatmech:GOLD.a744ade0d8
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5576
+  source_label: Train car
+  source_path: Engineered > Industrial production > Train car
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

@@ -1,0 +1,17 @@
+identifier: habitatmech:GOLD.fd2b0ef71a
+label: Germ cell tumor
+habitat_category: HOST_ASSOCIATED
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.31d7fab4fa
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6202
+  source_label: Germ cell tumor
+  source_path: 'Host-associated > Mammals: Human > Malignant tumor > Germ cell tumor'
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

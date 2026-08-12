@@ -1,0 +1,33 @@
+identifier: ENVO:03000040
+label: melt pond
+definition: A water body which forms as a result of localised melting taking place
+  on the surface of a glacier or a mass of sea ice and which is contained in the cavity
+  formed by such melting.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: melt ponds
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: meltpond
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: meltponds
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00000063
+- ENVO:00002200
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5628
+  source_label: Melt pond
+  source_path: Environmental > Aquatic > Marine > Sea ice > Melt pond
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

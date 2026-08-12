@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.f876b2a17e
+label: Forest soil
+habitat_category: TERRESTRIAL
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00002261
+- ENVO:03600011
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5589
+  source_label: Forest soil
+  source_path: Environmental > Terrestrial > Soil > Mineral horizon > Forest soil
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

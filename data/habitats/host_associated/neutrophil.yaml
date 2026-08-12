@@ -1,0 +1,100 @@
+identifier: BTO:0000130
+label: neutrophil
+definition: A granulocyte that is the chief phagocytic white blood cell of the blood.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: neutrophil granulocyte
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: neutrophil granulocytes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: neutrophilic granulocyte
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: neutrophilic granulocytes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: neutrophilic leucocyte
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: neutrophilic leucocytes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: neutrophilic leukocyte
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: neutrophilic leukocytes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: neutrophils
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000539
+- BTO:0001044
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000130
+  source_label: neutrophil
+  assertion_count: 12
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1194085
+  source: PREGO
+  taxon_label: Staphylococcus aureus subsp. aureus SA40
+  score: 3.0
+- taxon_id: NCBITaxon:1201010
+  source: PREGO
+  taxon_label: Staphylococcus aureus subsp. aureus SA957
+  score: 3.0
+- taxon_id: NCBITaxon:1221451
+  source: PREGO
+  taxon_label: Staphylococcus aureus subsp. aureus 120
+  score: 3.0
+- taxon_id: NCBITaxon:1221452
+  source: PREGO
+  taxon_label: Staphylococcus aureus subsp. aureus 333
+  score: 3.0
+- taxon_id: NCBITaxon:1221453
+  source: PREGO
+  taxon_label: Staphylococcus aureus subsp. aureus 3989
+  score: 3.0
+- taxon_id: NCBITaxon:1329902
+  source: PREGO
+  taxon_label: Mannheimia haemolytica MhBrain2012
+  score: 3.0
+- taxon_id: NCBITaxon:1367494
+  source: PREGO
+  taxon_label: Pseudomonas aeruginosa PAO1-VE13
+  score: 3.0
+- taxon_id: NCBITaxon:1679001
+  source: PREGO
+  taxon_label: Pasteurellaceae bacterium NI1060
+  score: 3.0
+- taxon_id: NCBITaxon:243365
+  source: PREGO
+  taxon_label: Chromobacterium violaceum ATCC 12472
+  score: 3.0
+- taxon_id: NCBITaxon:354242
+  source: PREGO
+  taxon_label: Campylobacter jejuni subsp. jejuni 81-176
+  score: 3.0
+- taxon_id: NCBITaxon:573
+  source: PREGO
+  taxon_label: Klebsiella pneumoniae
+  score: 3.0
+- taxon_id: NCBITaxon:72407
+  source: PREGO
+  taxon_label: Klebsiella pneumoniae subsp. pneumoniae
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

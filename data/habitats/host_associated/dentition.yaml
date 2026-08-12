@@ -1,0 +1,42 @@
+identifier: UBERON:0003672
+label: dentition
+definition: A collection of teeth arranged in some pattern in the mouth or other part
+  of the body. The arrangement may be a simple row, a collection of rows, or a more
+  elaborate structure, such as a toooth whorl.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Teeth
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: collection of teeth
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: dentes
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: set of teeth
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: teeth
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: teeth set
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0034925
+- habitatmech:GOLD.703314058c
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7526
+  source_label: Teeth
+  source_path: Host-associated > Fish > Digestive system > Oral/Buccal cavity > Teeth
+  mapping_predicate: skos:closeMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

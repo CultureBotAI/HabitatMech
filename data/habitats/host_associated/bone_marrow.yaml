@@ -1,0 +1,72 @@
+identifier: BTO:0000141
+label: bone marrow
+definition: The soft, fatty, vascular tissue that fills most bone cavities and is
+  the source of red blood cells and many white blood cells.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: bone marrows
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: medulla of bone
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: medulla of bones
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: medulla of bonous
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: medulla ossea
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: medulla osseal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: medulla osseas
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: medulla ossia
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: medulla ossial
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: medulla ossium
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: medulla ossiums
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000141
+  source_label: bone marrow
+  assertion_count: 4
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1341644
+  source: PREGO
+  taxon_label: Pseudomonas aeruginosa WS136
+  score: 3.0
+- taxon_id: NCBITaxon:220341
+  source: PREGO
+  taxon_label: Salmonella enterica subsp. enterica serovar Typhi str. CT18
+  score: 3.0
+- taxon_id: NCBITaxon:306537
+  source: PREGO
+  taxon_label: Corynebacterium jeikeium K411
+  score: 3.0
+- taxon_id: NCBITaxon:61645
+  source: PREGO
+  taxon_label: Enterobacter asburiae
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

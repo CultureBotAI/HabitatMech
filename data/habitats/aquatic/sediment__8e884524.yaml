@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.171890b5d6
+label: Sediment
+habitat_category: AQUATIC
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00002007
+- habitatmech:GOLD.21e53e7981
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7824
+  source_label: Sediment
+  source_path: Environmental > Aquatic > Thermal springs > Acid lake > Sediment
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

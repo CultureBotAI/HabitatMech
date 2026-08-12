@@ -1,0 +1,57 @@
+identifier: ENVO:00000206
+label: marine neritic zone
+definition: The water mass of an ocean directly above a continental shelf.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: neritic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: neritic zone
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: neritics
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:01000295
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00000206
+  source_label: marine neritic zone
+  assertion_count: 6
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:156889
+  source: PREGO
+  taxon_label: Magnetococcus marinus MC-1
+  score: 4.0
+- taxon_id: NCBITaxon:203124
+  source: PREGO
+  taxon_label: Trichodesmium erythraeum IMS101
+  score: 4.0
+- taxon_id: NCBITaxon:34017
+  source: PREGO
+  taxon_label: Rhodobium orientis
+  score: 4.0
+- taxon_id: NCBITaxon:487796
+  source: PREGO
+  taxon_label: Flavobacteria bacterium MS024-2A
+  score: 4.0
+- taxon_id: NCBITaxon:487797
+  source: PREGO
+  taxon_label: Flavobacteria bacterium MS024-3C
+  score: 4.0
+- taxon_id: NCBITaxon:999552
+  source: PREGO
+  taxon_label: Leisingera methylohalidivorans DSM 14336
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

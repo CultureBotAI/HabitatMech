@@ -1,0 +1,54 @@
+identifier: UBERON:0000965
+label: lens of camera-type eye
+definition: A transparent and refractive lens located posterior to the iris. The lens
+  of camera-type eye refracts light to be focused on the retina.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Lens
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: camera-type eye lens
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: crystalline lens
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: eye lens
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: lens
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: lens crystallina
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: lenses
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: ocular lens
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0004121
+- UBERON:0005389
+- habitatmech:GOLD.4b46114446
+- habitatmech:GOLD.b7f1694b87
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6644
+  source_label: Lens
+  source_path: 'Host-associated > Mammals: Human > Visual system > Eye > Lens'
+  mapping_predicate: skos:closeMatch
+- source: GOLD
+  source_id: gold.ecosystem:6857
+  source_label: Lens
+  source_path: Host-associated > Mammals > Visual system > Eye > Lens
+  mapping_predicate: skos:closeMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

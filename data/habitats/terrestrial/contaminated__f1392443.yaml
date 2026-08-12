@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.7f389946d7
+label: Contaminated
+habitat_category: TERRESTRIAL
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.ceceb38473
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4231
+  source_label: Contaminated
+  source_path: Environmental > Terrestrial > Soil > Clay > Contaminated
+  assertion_count: 9
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

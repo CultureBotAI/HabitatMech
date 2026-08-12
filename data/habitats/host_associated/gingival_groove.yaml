@@ -1,0 +1,38 @@
+identifier: UBERON:0008805
+label: gingival groove
+definition: 'The gingival sulcus is an area of potential space between a tooth and
+  the surrounding gingival tissue and is lined by sulcular epithelium. The depth of
+  the sulcus (Latin for groove) is bounded by two entities: apically by the gingival
+  fibers of the connective tissue attachment and coronally by the free gingival margin.'
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Gingival sulcus
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: gingival sulcus
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: sulcus gingivalis
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: tooth-gingiva interface
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0000093
+- habitatmech:GOLD.92d1e65695
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5097
+  source_label: Gingival sulcus
+  source_path: Host-associated > Mammals > Digestive system > Oral cavity > Gingival
+    sulcus
+  mapping_predicate: skos:closeMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

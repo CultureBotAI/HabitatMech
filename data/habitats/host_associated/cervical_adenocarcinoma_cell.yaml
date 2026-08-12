@@ -1,0 +1,46 @@
+identifier: BTO:0003165
+label: cervical adenocarcinoma cell
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: cervical adenocarcinoma cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: cervix adenocarcinoma cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: cervix adenocarcinoma cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: uterine cervix adenocarcinoma cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: uterine cervix adenocarcinoma cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000180
+- BTO:0000604
+source_attestations:
+- source: PREGO
+  source_id: BTO:0003165
+  source_label: cervical adenocarcinoma cell
+  assertion_count: 2
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:243161
+  source: PREGO
+  taxon_label: Chlamydia muridarum str. Nigg
+  score: 3.0
+- taxon_id: NCBITaxon:647227
+  source: PREGO
+  taxon_label: Chlamydia muridarum str. Weiss
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

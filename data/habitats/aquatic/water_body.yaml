@@ -1,0 +1,160 @@
+identifier: ENVO:00000063
+label: water body
+definition: An accumulation of water of varying size.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: aquatic feature
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: aquatic feature
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: aquatic features
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: bodies of water
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: bodies of water
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: bodies of waters
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: body of water
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: body of water
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: body of waters
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: hydrographic feature
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: water bodies
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: waterbody
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:01000685
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00000063
+  source_label: water body
+  assertion_count: 61
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:1026
+  source: PREGO
+  taxon_label: Marinoscillum furvescens
+  score: 4.0
+- taxon_id: NCBITaxon:103
+  source: PREGO
+  taxon_label: Flectobacillus major
+  score: 4.0
+- taxon_id: NCBITaxon:103810
+  source: PREGO
+  taxon_label: Riemerella columbina
+  score: 4.0
+- taxon_id: NCBITaxon:114715
+  source: PREGO
+  taxon_label: uncultured Ralstonia sp.
+  score: 4.0
+- taxon_id: NCBITaxon:1270
+  source: PREGO
+  taxon_label: Micrococcus luteus
+  score: 4.0
+- taxon_id: NCBITaxon:128
+  source: PREGO
+  taxon_label: Isosphaera pallida
+  score: 4.0
+- taxon_id: NCBITaxon:13243
+  source: PREGO
+  taxon_label: Rarobacter faecitabidus
+  score: 4.0
+- taxon_id: NCBITaxon:147
+  source: PREGO
+  taxon_label: Spirochaeta aurantia
+  score: 4.0
+- taxon_id: NCBITaxon:158751
+  source: PREGO
+  taxon_label: uncultured Acidovorax sp.
+  score: 4.0
+- taxon_id: NCBITaxon:158899
+  source: PREGO
+  taxon_label: Collimonas fungivorans
+  score: 4.0
+- taxon_id: NCBITaxon:1724
+  source: PREGO
+  taxon_label: Corynebacterium renale
+  score: 4.0
+- taxon_id: NCBITaxon:1855
+  source: PREGO
+  taxon_label: Frankia sp.
+  score: 4.0
+- taxon_id: NCBITaxon:2047
+  source: PREGO
+  taxon_label: Rothia dentocariosa
+  score: 4.0
+- taxon_id: NCBITaxon:210512
+  source: PREGO
+  taxon_label: Sandarakinorhabdus limnophila
+  score: 4.0
+- taxon_id: NCBITaxon:214688
+  source: PREGO
+  taxon_label: Gemmata obscuriglobus UQM 2246
+  score: 4.0
+- taxon_id: NCBITaxon:215918
+  source: PREGO
+  taxon_label: Mycobacterium sp. IP20010947
+  score: 4.0
+- taxon_id: NCBITaxon:245
+  source: PREGO
+  taxon_label: Flavobacterium aquatile
+  score: 4.0
+- taxon_id: NCBITaxon:265072
+  source: PREGO
+  taxon_label: Methylobacillus flagellatus KT
+  score: 4.0
+- taxon_id: NCBITaxon:265599
+  source: PREGO
+  taxon_label: Hyalodiscus sp. CCMP1679
+  score: 4.0
+- taxon_id: NCBITaxon:266940
+  source: PREGO
+  taxon_label: Kineococcus radiotolerans SRS30216 = ATCC BAA-149
+  score: 4.0
+- taxon_id: NCBITaxon:28092
+  source: PREGO
+  taxon_label: Robbsia andropogonis
+  score: 4.0
+- taxon_id: NCBITaxon:28122
+  source: PREGO
+  taxon_label: Fibrobacter intestinalis
+  score: 4.0
+- taxon_id: NCBITaxon:28251
+  source: PREGO
+  taxon_label: Ornithobacterium rhinotracheale
+  score: 4.0
+- taxon_id: NCBITaxon:29290
+  source: PREGO
+  taxon_label: Candidatus Magnetobacterium bavaricum
+  score: 4.0
+- taxon_id: NCBITaxon:312286
+  source: PREGO
+  taxon_label: Trueperella bonasi
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

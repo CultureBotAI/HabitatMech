@@ -1,0 +1,24 @@
+identifier: ENVO:01000722
+label: meltwater
+definition: Meltwater is the water released by the melting of snow or ice, including
+  glacial ice, tabular icebergs and ice shelves over oceans.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00002006
+- habitatmech:GOLD.6faa98a0aa
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7297
+  source_label: Meltwater
+  source_path: Environmental > Aquatic > Freshwater > Glacier > Meltwater
+  mapping_predicate: skos:exactMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

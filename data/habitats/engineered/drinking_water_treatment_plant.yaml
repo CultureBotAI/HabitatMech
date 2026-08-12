@@ -1,0 +1,47 @@
+identifier: ENVO:03600004
+label: drinking water treatment plant
+definition: An industrial building in which water undergoes a purification process
+  to make it fit for human consumption.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Water treatment plant
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: Water-treatment-plant
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+parent_habitats:
+- ENVO:00003861
+- mesh:D000076624
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:water-treatment-plant
+  source_label: Water-treatment-plant
+  mapping_predicate: skos:closeMatch
+  assertion_count: 187
+  assertion_unit: STRAIN
+- source: GOLD
+  source_id: gold.ecosystem:4391
+  source_label: Water treatment plant
+  source_path: Engineered > Built environment > Water treatment plant
+  mapping_predicate: skos:closeMatch
+  assertion_count: 60
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: GOLD
+  source_id: gold.ecosystem:5491
+  source_label: Drinking water treatment plant
+  source_path: Engineered > Built environment > Drinking water treatment plant
+  mapping_predicate: skos:exactMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD. Grounding:
+    EXACT.'

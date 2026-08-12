@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.5b7d7e2e70
+label: Fermented meat products
+habitat_category: FOOD
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.0347e0d978
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5453
+  source_label: Fermented meat products
+  source_path: Engineered > Food production > Meat products > Fermented meat products
+  assertion_count: 6
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

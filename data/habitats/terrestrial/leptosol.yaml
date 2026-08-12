@@ -1,0 +1,29 @@
+identifier: ENVO:00002241
+label: leptosol
+definition: Leptosols are very shallow soils over continuous rock and soils that are
+  extremely gravelly and/or stony. Leptosols are azonal soils and particularly common
+  in mountainous regions.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: gravelly soil
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: stony soil
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00001998
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6001
+  source_label: Leptosol
+  source_path: Environmental > Terrestrial > Soil > Leptosol
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

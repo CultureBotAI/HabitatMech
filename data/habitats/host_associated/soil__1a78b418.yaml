@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.067f7f5e2a
+label: Soil
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00001998
+- ENVO:00005801
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5302
+  source_label: Soil
+  source_path: Host-associated > Plants > Roots > Rhizosphere > Soil
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 614
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

@@ -1,0 +1,74 @@
+identifier: ENVO:00000233
+label: swamp ecosystem
+definition: A wetland ecosystem in which land mass is permanently inundated by shallow
+  bodies of water, generally with a substantial number of hummocks, or dry-land protrusions.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Swamp
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: Wetland-Swamp
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+- synonym_text: cienaga
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: swamp
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: swamp
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: swampic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: swampies
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: swamps
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: swampy
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: wetland
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:01001209
+- habitatmech:GOLD.a981586d10
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:wetland-swamp
+  source_label: Wetland-Swamp
+  mapping_predicate: skos:closeMatch
+  assertion_count: 171
+  assertion_unit: STRAIN
+- source: GOLD
+  source_id: gold.ecosystem:4182
+  source_label: Swamp
+  source_path: Environmental > Aquatic > Freshwater > Wetlands > Swamp
+  mapping_predicate: skos:closeMatch
+  assertion_count: 8
+  assertion_unit: ORGANISM
+- source: PREGO
+  source_id: ENVO:00000233
+  source_label: swamp ecosystem
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:140314
+  source: PREGO
+  taxon_label: Trichococcus palustris
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD, PREGO. Grounding:
+    EXACT.'

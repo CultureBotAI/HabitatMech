@@ -1,0 +1,46 @@
+identifier: BTO:0003434
+label: choanomastigote
+definition: A term, in the series used to describe developmental stages of the parasitic
+  flagellates, denoting the barleycorn form of the flagellate in the genus Crithidia
+  characterised by a collarlike extension surrounding the anterior and through which
+  the single flagellum emerges.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: choanoflagellate
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: choanoflagellates
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: choanomastigotes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: collared flagellate
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: collared flagellate s
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000092
+source_attestations:
+- source: PREGO
+  source_id: BTO:0003434
+  source_label: choanomastigote
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:388413
+  source: PREGO
+  taxon_label: Algoriphagus machipongonensis
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

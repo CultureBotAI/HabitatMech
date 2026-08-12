@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.a55ac36e9b
+label: Trachea
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0003126
+- habitatmech:GOLD.801df4d7c3
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4974
+  source_label: Trachea
+  source_path: Host-associated > Reptilia > Respiratory system > Trachea
+  mapping_predicate: skos:narrowMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

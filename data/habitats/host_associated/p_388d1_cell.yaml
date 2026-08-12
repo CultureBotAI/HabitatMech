@@ -1,0 +1,40 @@
+identifier: BTO:0000984
+label: P-388D1 cell
+definition: Lymphoma cell line, established from mus musculus DBA/2. Tumors develop
+  within 21 days at 100% frequency in nude mice inoculated subcutaneously with 10(7)
+  cells.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: p388d1
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: p388d1 cell line
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: p388d1 cell lines
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: p388d1 cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000984
+  source_label: P-388D1 cell
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:169963
+  source: PREGO
+  taxon_label: Listeria monocytogenes EGD-e
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

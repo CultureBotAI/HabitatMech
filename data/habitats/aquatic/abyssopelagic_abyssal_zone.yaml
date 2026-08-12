@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.3a1e1f8fd7
+label: Abyssopelagic/Abyssal zone
+habitat_category: AQUATIC
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00000208
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7900
+  source_label: Abyssopelagic/Abyssal zone
+  source_path: Environmental > Aquatic > Marine > Pelagic zone > Abyssopelagic/Abyssal
+    zone
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

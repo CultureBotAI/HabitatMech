@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.4a29125f08
+label: Hair
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- BTO:0001501
+- habitatmech:GOLD.2f62ba7993
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6159
+  source_label: Hair
+  source_path: 'Host-associated > Mammals: Human > Remains > Skeletonized remains
+    > Hair'
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

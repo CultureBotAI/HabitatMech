@@ -1,0 +1,92 @@
+identifier: BTO:0000452
+label: fibroblast
+definition: A connective-tissue cell of mesenchymal origin that secretes proteins
+  and especially molecular collagen from which the extracellular fibrillar matrix
+  of connective tissue forms.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: fibroblastic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: fibroblasts
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000421
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000452
+  source_label: fibroblast
+  assertion_count: 15
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1273539
+  source: PREGO
+  taxon_label: Streptococcus iniae IUSA1
+  score: 3.0
+- taxon_id: NCBITaxon:1296536
+  source: PREGO
+  taxon_label: Enterobacter hormaechei subsp. xiangfangensis
+  score: 3.0
+- taxon_id: NCBITaxon:1409927
+  source: PREGO
+  taxon_label: Acinetobacter baumannii MRSN 7339
+  score: 3.0
+- taxon_id: NCBITaxon:1409961
+  source: PREGO
+  taxon_label: Klebsiella pneumoniae MRSN 1319
+  score: 3.0
+- taxon_id: NCBITaxon:152142
+  source: PREGO
+  taxon_label: Mycolicibacterium holsaticum
+  score: 3.0
+- taxon_id: NCBITaxon:1776
+  source: PREGO
+  taxon_label: Mycolicibacterium flavescens
+  score: 3.0
+- taxon_id: NCBITaxon:1778
+  source: PREGO
+  taxon_label: Mycobacterium gordonae
+  score: 3.0
+- taxon_id: NCBITaxon:1798
+  source: PREGO
+  taxon_label: Mycolicibacillus trivialis
+  score: 3.0
+- taxon_id: NCBITaxon:190304
+  source: PREGO
+  taxon_label: Fusobacterium nucleatum subsp. nucleatum ATCC 25586
+  score: 3.0
+- taxon_id: NCBITaxon:243061
+  source: PREGO
+  taxon_label: Mycobacterium sherrisii
+  score: 3.0
+- taxon_id: NCBITaxon:243161
+  source: PREGO
+  taxon_label: Chlamydia muridarum str. Nigg
+  score: 3.0
+- taxon_id: NCBITaxon:28445
+  source: PREGO
+  taxon_label: Mycobacterium intermedium
+  score: 3.0
+- taxon_id: NCBITaxon:29313
+  source: PREGO
+  taxon_label: Mycobacterium shimoidei
+  score: 3.0
+- taxon_id: NCBITaxon:39693
+  source: PREGO
+  taxon_label: Mycolicibacterium porcinum
+  score: 3.0
+- taxon_id: NCBITaxon:647227
+  source: PREGO
+  taxon_label: Chlamydia muridarum str. Weiss
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

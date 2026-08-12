@@ -1,0 +1,41 @@
+identifier: BTO:0000421
+label: connective tissue
+definition: The tissue which binds together and is the support of the various structures
+  of the body. It is made up of fibroblasts, fibroglia, collagen fibrils, and elastic
+  fibrils. It is derived from the mesoderm and in a broad sense includes the collagenous,
+  elastic, mucous, reticular, osseous, and cartilaginous tissue. Some also include
+  the blood in this group of tissues. Connective tissue is classified according to
+  concentration of fibers as loose (areolar) and dense, the latter having more abundant
+  fibers than the former.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Bindegewebe
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: Bindegewebes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: connective tissues
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000421
+  source_label: connective tissue
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1125980
+  source: PREGO
+  taxon_label: Vibrio harveyi CAIM 1792
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

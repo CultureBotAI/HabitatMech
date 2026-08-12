@@ -1,0 +1,27 @@
+identifier: ENVO:01000856
+label: temperate marginal sea biome
+definition: A marginal sea biome which is located in a region with a temperate climate.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Indoor
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- ENVO:01000046
+- ENVO:01001831
+- habitatmech:GOLD.87bf5e5370
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8490
+  source_label: Indoor
+  source_path: Engineered > Artificial ecosystem > Water channel system > Indoor
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

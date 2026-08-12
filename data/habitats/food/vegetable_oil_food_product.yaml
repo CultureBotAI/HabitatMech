@@ -1,0 +1,27 @@
+identifier: FOODON:00001087
+label: vegetable oil food product
+definition: A lipid material derived from plants. Physically, oils are liquid at room
+  temperature.
+definition_source: FOODON
+habitat_category: FOOD
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Oil-Food
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+parent_habitats:
+- FOODON:03310387
+- FOODON:03460263
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:oil-food
+  source_label: Oil-Food
+  mapping_predicate: skos:closeMatch
+  assertion_count: 7
+  assertion_unit: STRAIN
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

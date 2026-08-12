@@ -1,0 +1,127 @@
+identifier: ENVO:00005749
+label: farm soil
+definition: A portion of soil which is part of a cropland or a rangeland biome.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: farm soils
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00001998
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00005749
+  source_label: farm soil
+  assertion_count: 461
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:266940
+  source: PREGO
+  taxon_label: Kineococcus radiotolerans SRS30216 = ATCC BAA-149
+  score: 4.0
+- taxon_id: NCBITaxon:55518
+  source: PREGO
+  taxon_label: Magnetospirillum gryphiswaldense
+  score: 4.0
+- taxon_id: NCBITaxon:667019
+  source: PREGO
+  taxon_label: Curvibacter putative symbiont of Hydra magnipapillata
+  score: 4.0
+- taxon_id: NCBITaxon:106370
+  source: PREGO
+  taxon_label: Frankia casuarinae
+  score: 1.3281
+- taxon_id: NCBITaxon:457429
+  source: PREGO
+  taxon_label: Streptomyces pristinaespiralis ATCC 25486
+  score: 1.32567
+- taxon_id: NCBITaxon:227882
+  source: PREGO
+  taxon_label: Streptomyces avermitilis MA-4680 = NBRC 14893
+  score: 1.32293
+- taxon_id: NCBITaxon:269800
+  source: PREGO
+  taxon_label: Thermobifida fusca YX
+  score: 1.32271
+- taxon_id: NCBITaxon:1901
+  source: PREGO
+  taxon_label: Streptomyces clavuligerus
+  score: 1.32066
+- taxon_id: NCBITaxon:463191
+  source: PREGO
+  taxon_label: Streptomyces sviceus ATCC 29083
+  score: 1.3204
+- taxon_id: NCBITaxon:351607
+  source: PREGO
+  taxon_label: Acidothermus cellulolyticus 11B
+  score: 1.31793
+- taxon_id: NCBITaxon:253839
+  source: PREGO
+  taxon_label: Streptomyces sp. C
+  score: 1.31681
+- taxon_id: NCBITaxon:557599
+  source: PREGO
+  taxon_label: Mycobacterium kansasii ATCC 12478
+  score: 1.31681
+- taxon_id: NCBITaxon:2716812
+  source: PREGO
+  taxon_label: Candidatus Protofrankia datiscae
+  score: 1.31611
+- taxon_id: NCBITaxon:316058
+  source: PREGO
+  taxon_label: Rhodopseudomonas palustris HaA2
+  score: 1.31504
+- taxon_id: NCBITaxon:525909
+  source: PREGO
+  taxon_label: Acidimicrobium ferrooxidans DSM 10331
+  score: 1.31314
+- taxon_id: NCBITaxon:469371
+  source: PREGO
+  taxon_label: Thermobispora bispora DSM 43833
+  score: 1.31302
+- taxon_id: NCBITaxon:446468
+  source: PREGO
+  taxon_label: Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111
+  score: 1.3129
+- taxon_id: NCBITaxon:316055
+  source: PREGO
+  taxon_label: Rhodopseudomonas palustris BisA53
+  score: 1.31162
+- taxon_id: NCBITaxon:680198
+  source: PREGO
+  taxon_label: Streptomyces scabiei 87.22
+  score: 1.31102
+- taxon_id: NCBITaxon:653045
+  source: PREGO
+  taxon_label: Streptomyces violaceusniger Tu 4113
+  score: 1.31082
+- taxon_id: NCBITaxon:323097
+  source: PREGO
+  taxon_label: Nitrobacter hamburgensis X14
+  score: 1.31047
+- taxon_id: NCBITaxon:114615
+  source: PREGO
+  taxon_label: Bradyrhizobium sp. ORS 278
+  score: 1.30976
+- taxon_id: NCBITaxon:452652
+  source: PREGO
+  taxon_label: Kitasatospora setae KM-6054
+  score: 1.30956
+- taxon_id: NCBITaxon:205922
+  source: PREGO
+  taxon_label: Pseudomonas fluorescens Pf0-1
+  score: 1.30932
+- taxon_id: NCBITaxon:471852
+  source: PREGO
+  taxon_label: Thermomonospora curvata DSM 43183
+  score: 1.30784
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

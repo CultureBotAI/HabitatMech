@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.ff82e6ad1b
+label: Mineral soil
+habitat_category: TERRESTRIAL
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:01001805
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6013
+  source_label: Mineral soil
+  source_path: Environmental > Terrestrial > Soil > Temperate forest > Mineral soil
+  assertion_count: 9
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

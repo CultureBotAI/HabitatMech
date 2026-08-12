@@ -1,0 +1,127 @@
+identifier: ENVO:00000297
+label: paddy field
+definition: A flooded parcel of arable land used for growing rice and other semiaquatic
+  crops.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: paddy fields
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00000114
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00000297
+  source_label: paddy field
+  assertion_count: 704
+  assertion_unit: TAXON
+  score: 1.59474
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:614
+  source: PREGO
+  taxon_label: Serratia liquefaciens
+  score: 1.59474
+- taxon_id: NCBITaxon:637386
+  source: PREGO
+  taxon_label: Yersinia pestis Z176003
+  score: 1.53847
+- taxon_id: NCBITaxon:859
+  source: PREGO
+  taxon_label: Fusobacterium necrophorum
+  score: 1.50437
+- taxon_id: NCBITaxon:2303
+  source: PREGO
+  taxon_label: Thermoplasma acidophilum
+  score: 1.45265
+- taxon_id: NCBITaxon:50339
+  source: PREGO
+  taxon_label: Thermoplasma volcanium
+  score: 1.40312
+- taxon_id: NCBITaxon:476213
+  source: PREGO
+  taxon_label: Salmonella enterica subsp. enterica serovar Paratyphi C str. RKS4594
+  score: 1.39016
+- taxon_id: NCBITaxon:171865
+  source: PREGO
+  taxon_label: Sulfuriferula plumbiphila
+  score: 1.38802
+- taxon_id: NCBITaxon:537210
+  source: PREGO
+  taxon_label: Mycobacterium tuberculosis T17
+  score: 1.27372
+- taxon_id: NCBITaxon:454165
+  source: PREGO
+  taxon_label: Salmonella enterica subsp. enterica serovar Schwarzengrund str. SL480
+  score: 1.27178
+- taxon_id: NCBITaxon:28045
+  source: PREGO
+  taxon_label: Mycobacterium celatum
+  score: 1.27167
+- taxon_id: NCBITaxon:615
+  source: PREGO
+  taxon_label: Serratia marcescens
+  score: 1.26986
+- taxon_id: NCBITaxon:405955
+  source: PREGO
+  taxon_label: Escherichia coli APEC O1
+  score: 1.26594
+- taxon_id: NCBITaxon:675518
+  source: PREGO
+  taxon_label: Mycobacterium tuberculosis SUMu007
+  score: 1.2572
+- taxon_id: NCBITaxon:670890
+  source: PREGO
+  taxon_label: Escherichia coli LT-68
+  score: 1.24532
+- taxon_id: NCBITaxon:273057
+  source: PREGO
+  taxon_label: Saccharolobus solfataricus P2
+  score: 1.22945
+- taxon_id: NCBITaxon:935293
+  source: PREGO
+  taxon_label: Yersinia entomophaga
+  score: 1.2268
+- taxon_id: NCBITaxon:765109
+  source: PREGO
+  taxon_label: Cutibacterium modestum HL044PA1
+  score: 1.22647
+- taxon_id: NCBITaxon:249586
+  source: PREGO
+  taxon_label: Streptomyces asoensis
+  score: 1.2214
+- taxon_id: NCBITaxon:68570
+  source: PREGO
+  score: 1.21328
+- taxon_id: NCBITaxon:33059
+  source: PREGO
+  taxon_label: Acidithiobacillus caldus
+  score: 1.20721
+- taxon_id: NCBITaxon:507619
+  source: PREGO
+  taxon_label: Chromobacterium sp. DS-1
+  score: 1.19383
+- taxon_id: NCBITaxon:161213
+  source: PREGO
+  taxon_label: Micrococcus sp. 28
+  score: 1.18586
+- taxon_id: NCBITaxon:33075
+  source: PREGO
+  taxon_label: Acidobacterium capsulatum
+  score: 1.18579
+- taxon_id: NCBITaxon:40324
+  source: PREGO
+  taxon_label: Stenotrophomonas maltophilia
+  score: 1.1835
+- taxon_id: NCBITaxon:419947
+  source: PREGO
+  taxon_label: Mycobacterium tuberculosis H37Ra
+  score: 1.18213
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

@@ -1,0 +1,21 @@
+identifier: UBERON:0011256
+label: rhinarium
+definition: Moist, hairless, crenelated area around nostrils of some mammals.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0003102
+- habitatmech:GOLD.c896f9520f
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6384
+  source_label: Rhinarium
+  source_path: Host-associated > Mammals > Integumentary system > Skin > Rhinarium
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

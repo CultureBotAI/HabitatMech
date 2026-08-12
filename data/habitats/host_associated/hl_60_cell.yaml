@@ -1,0 +1,41 @@
+identifier: BTO:0000738
+label: HL-60 cell
+definition: Human acute myeloid leukemia established from the peripheral blood of
+  a 35-year-old woman with acute myeloid leukemia (AML FAB M2) in 1976.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: hl60
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: hl60 cell line
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: hl60 cell lines
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: hl60 cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0001883
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000738
+  source_label: HL-60 cell
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:212042
+  source: PREGO
+  taxon_label: Anaplasma phagocytophilum str. HZ
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

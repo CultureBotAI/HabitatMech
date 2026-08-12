@@ -1,0 +1,24 @@
+identifier: ENVO:01000621
+label: microcosm
+definition: A microcosm is a vivarium within which a simple ecosystem is artificially
+  established and used to simulate and predict the behaviour of natural ecosystems
+  under controlled conditions.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00010622
+- habitatmech:GOLD.0acae9a1a4
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8179
+  source_label: Microcosm
+  source_path: Engineered > Artificial ecosystem > Microcosm
+  mapping_predicate: skos:exactMatch
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

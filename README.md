@@ -62,6 +62,7 @@ yet.** The lexical grounding routes are unverified by construction. Run
 just install                        # uv sync --extra dev
 just report                         # corpus stats: grounding, categories, backlog
 just validate-all                   # closed-mode schema validation of every record
+just verify-corpus                  # check data/habitats/ is what data/raw/ produces
 just test                           # unit + corpus-integrity tests
 ```
 
@@ -73,12 +74,19 @@ just extract-inventory              # refresh data/raw/ from a kg-microbe checko
 just seed                           # dry-run: harmonization report, no writes
 just seed-canary ENVO:00001998      # write ONE record and check it, first
 just seed-apply --force             # rewrite the corpus
+just seed-apply --force --prune     # ...and clean up files left by a category move
 ```
 
 `just extract-inventory` is the only step that needs a local
 [kg-microbe](https://github.com/Knowledge-Graph-Hub/kg-microbe) checkout; point
 `KG_MICROBE_ROOT` or `conf/sources.yaml` at it. The derived inventories in
 `data/raw/` are committed, so seeding, validation, and tests run without it.
+
+Filenames are pinned by `data/habitats/PATHS.tsv` (identifier → slug), so a
+re-seed never renames an existing record just because the corpus grew around
+it. **To rename a record, edit its slug there and re-seed** — never rename the
+file directly, or the seeder will recreate it under the pinned name and two
+files will claim one identifier.
 
 ## Schema
 
@@ -167,7 +175,9 @@ HabitatMech/
 ├── conf/sources.yaml                     # where kg-microbe lives
 ├── data/
 │   ├── raw/                              # committed inventories + MANIFEST.yaml
-│   └── habitats/<category>/<slug>.yaml   # 3,299 HabitatRecords
+│   └── habitats/
+│       ├── PATHS.tsv                     # identifier -> slug, pins filenames
+│       └── <category>/<slug>.yaml        # 3,299 HabitatRecords
 ├── src/habitatmech/
 │   ├── schema/habitatmech.yaml           # LinkML schema
 │   ├── schema/mech_shared.yaml           # vendored, sha-pinned shared module

@@ -1,0 +1,32 @@
+identifier: UBERON:0001968
+label: semen
+definition: Organism substance that is composed of sperm cells suspended in seminal
+  fluid.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Sperm
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: ejaculate
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: sperm
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0000463
+- habitatmech:GOLD.63a1f9d0cd
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7572
+  source_label: Sperm
+  source_path: Host-associated > Fish > Reproductive system > Testes > Sperm
+  mapping_predicate: skos:closeMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

@@ -1,0 +1,54 @@
+identifier: BTO:0002990
+label: gastric ulcer
+definition: A peptic ulcer of the gastric mucosa.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: gastric ulcers
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- habitatmech:GOLD.6d0c170e7a
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7022
+  source_label: Gastric ulcer
+  source_path: 'Host-associated > Mammals: Human > Digestive system > Stomach > Gastric
+    ulcer'
+  mapping_predicate: skos:exactMatch
+- source: PREGO
+  source_id: BTO:0002990
+  source_label: gastric ulcer
+  assertion_count: 5
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:102618
+  source: PREGO
+  taxon_label: Helicobacter pylori NCTC 11637 = CCUG 17874 = ATCC 43504 = JCM 12093
+  score: 3.0
+- taxon_id: NCBITaxon:1213457
+  source: PREGO
+  taxon_label: Helicobacter pylori HLJHP193
+  score: 3.0
+- taxon_id: NCBITaxon:1214221
+  source: PREGO
+  taxon_label: Helicobacter pylori HLJHP256
+  score: 3.0
+- taxon_id: NCBITaxon:1214222
+  source: PREGO
+  taxon_label: Helicobacter pylori HLJHP271
+  score: 3.0
+- taxon_id: NCBITaxon:210
+  source: PREGO
+  taxon_label: Helicobacter pylori
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'

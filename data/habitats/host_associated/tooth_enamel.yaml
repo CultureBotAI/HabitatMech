@@ -1,0 +1,23 @@
+identifier: BTO:0001844
+label: tooth enamel
+definition: The hard, calcareous substance covering the exposed portion of a tooth.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.99880772e1
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6323
+  source_label: 'Tooth: Enamel'
+  source_path: 'Host-associated > Mammals: Human > Digestive system > Oral cavity
+    > Tooth: Enamel'
+  mapping_predicate: skos:exactMatch
+  assertion_count: 2
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

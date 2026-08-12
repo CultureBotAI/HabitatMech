@@ -1,0 +1,47 @@
+identifier: BTO:0000888
+label: muscle fibre
+definition: An elongated contractile cell that forms the muscles of the body.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: muscle cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: muscle cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: muscle fiber
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: muscle fibers
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: muscle fibres
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: myocyte
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: myocytes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000888
+  source_label: muscle fibre
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1125980
+  source: PREGO
+  taxon_label: Vibrio harveyi CAIM 1792
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

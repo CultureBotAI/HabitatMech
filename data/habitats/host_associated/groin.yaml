@@ -1,0 +1,22 @@
+identifier: BTO:0003358
+label: groin
+definition: In anatomy, the area where the upper thigh meets the trunk. More precisely,
+  the fold or depression marking the juncture of the lower abdomen and the inner part
+  of the thigh.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.bbdd2fde5b
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6765
+  source_label: Groin
+  source_path: Host-associated > Mammals > Lymphatic system > Lymph nodes > Groin
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

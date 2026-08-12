@@ -1,0 +1,24 @@
+identifier: BTO:0006181
+label: buffy coat
+definition: The buffy coat is the fraction of an anticoagulated blood sample that
+  contains most of the white blood cells and platelets following density gradient
+  centrifugation of the blood.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- BTO:0001490
+- habitatmech:GOLD.d25ff4a586
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6604
+  source_label: Buffy coat
+  source_path: 'Host-associated > Mammals: Human > Circulatory system > Blood > Buffy
+    coat'
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

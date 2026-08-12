@@ -1,0 +1,28 @@
+identifier: UBERON:0007330
+label: rhamphotheca
+definition: Thin keratinized layer of epidermis projecting from outer surface of beak[WP].
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: horny sheath of beak
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: outer keratin layer of beak
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:3000972
+- habitatmech:GOLD.52d3212a6a
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7454
+  source_label: Rhamphotheca
+  source_path: Host-associated > Birds > Integumentary system > Skin > Rhamphotheca
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

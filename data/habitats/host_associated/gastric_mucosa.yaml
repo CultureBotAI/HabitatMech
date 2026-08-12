@@ -1,0 +1,150 @@
+identifier: BTO:0001308
+label: gastric mucosa
+definition: The mucous coat of the stomach.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Magenschleimhaut
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: Magenschleimhauts
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: gastric mucosal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: gastric mucosas
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: stomach mucosa
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: stomach mucosal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: stomach mucosas
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: tunica mucosa gastris
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: tunica mucosa gastrises
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000886
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001308
+  source_label: gastric mucosa
+  assertion_count: 73
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:102618
+  source: PREGO
+  taxon_label: Helicobacter pylori NCTC 11637 = CCUG 17874 = ATCC 43504 = JCM 12093
+  score: 3.0
+- taxon_id: NCBITaxon:1069378
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:1145111
+  source: PREGO
+  taxon_label: Helicobacter pylori R030b
+  score: 3.0
+- taxon_id: NCBITaxon:1145112
+  source: PREGO
+  taxon_label: Helicobacter pylori R32b
+  score: 3.0
+- taxon_id: NCBITaxon:1145114
+  source: PREGO
+  taxon_label: Helicobacter pylori R037c
+  score: 3.0
+- taxon_id: NCBITaxon:1145115
+  source: PREGO
+  taxon_label: Helicobacter pylori R038b
+  score: 3.0
+- taxon_id: NCBITaxon:1145116
+  source: PREGO
+  taxon_label: Helicobacter pylori R046Wa
+  score: 3.0
+- taxon_id: NCBITaxon:1145118
+  source: PREGO
+  taxon_label: Helicobacter pylori R056a
+  score: 3.0
+- taxon_id: NCBITaxon:1216962
+  source: PREGO
+  taxon_label: Helicobacter heilmannii ASB1.4
+  score: 3.0
+- taxon_id: NCBITaxon:1234597
+  source: PREGO
+  taxon_label: Brucella intermedia M86
+  score: 3.0
+- taxon_id: NCBITaxon:1337887
+  source: PREGO
+  taxon_label: Brucella intermedia 229E
+  score: 3.0
+- taxon_id: NCBITaxon:1386083
+  source: PREGO
+  taxon_label: Helicobacter pylori X47-2AL
+  score: 3.0
+- taxon_id: NCBITaxon:210
+  source: PREGO
+  taxon_label: Helicobacter pylori
+  score: 3.0
+- taxon_id: NCBITaxon:85963
+  source: PREGO
+  taxon_label: Helicobacter pylori J99
+  score: 3.0
+- taxon_id: NCBITaxon:992013
+  source: PREGO
+  taxon_label: Helicobacter pylori CPY1124
+  score: 3.0
+- taxon_id: NCBITaxon:992014
+  source: PREGO
+  taxon_label: Helicobacter pylori CPY1313
+  score: 3.0
+- taxon_id: NCBITaxon:992016
+  source: PREGO
+  taxon_label: Helicobacter pylori CPY1962
+  score: 3.0
+- taxon_id: NCBITaxon:992017
+  source: PREGO
+  taxon_label: Helicobacter pylori CPY3281
+  score: 3.0
+- taxon_id: NCBITaxon:992018
+  source: PREGO
+  taxon_label: Helicobacter pylori CPY6081
+  score: 3.0
+- taxon_id: NCBITaxon:992019
+  source: PREGO
+  taxon_label: Helicobacter pylori CPY6261
+  score: 3.0
+- taxon_id: NCBITaxon:992020
+  source: PREGO
+  taxon_label: Helicobacter pylori CPY6271
+  score: 3.0
+- taxon_id: NCBITaxon:992022
+  source: PREGO
+  taxon_label: Helicobacter pylori CPY6311
+  score: 3.0
+- taxon_id: NCBITaxon:992023
+  source: PREGO
+  taxon_label: Helicobacter pylori NQ4216
+  score: 3.0
+- taxon_id: NCBITaxon:992024
+  source: PREGO
+  taxon_label: Helicobacter pylori NQ4200
+  score: 3.0
+- taxon_id: NCBITaxon:992025
+  source: PREGO
+  taxon_label: Helicobacter pylori NQ4228
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

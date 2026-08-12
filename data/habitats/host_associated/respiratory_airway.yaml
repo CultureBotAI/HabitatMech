@@ -1,0 +1,41 @@
+identifier: UBERON:0001005
+label: respiratory airway
+definition: An airway through which respiratory air passes in organisms.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Airways
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+- synonym_text: Oral-cavity-and-airways
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+- synonym_text: airway
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: airways
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0003103
+- UBERON:0004111
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:airways
+  source_label: Airways
+  mapping_predicate: skos:closeMatch
+  assertion_count: 73
+  assertion_unit: STRAIN
+- source: BACDIVE
+  source_id: bacdive.isolation_source:oral-cavity-and-airways
+  source_label: Oral-cavity-and-airways
+  mapping_predicate: skos:closeMatch
+  assertion_count: 2102
+  assertion_unit: STRAIN
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

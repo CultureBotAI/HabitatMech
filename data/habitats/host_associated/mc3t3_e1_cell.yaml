@@ -1,0 +1,43 @@
+identifier: BTO:0001957
+label: MC3T3-E1 cell
+definition: Mouse embryo/fetus calvaria fibroblasts; established from the calvaria
+  of an embryo/fetus C57BL/6 mouse; described to differentiate to osteoblasts and
+  to produce collagen.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: mc3t3e1
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: mc3t3e1 cell line
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: mc3t3e1 cell lines
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: mc3t3e1 cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0001958
+- BTO:0002052
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001957
+  source_label: MC3T3-E1 cell
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:518
+  source: PREGO
+  taxon_label: Bordetella bronchiseptica
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

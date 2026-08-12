@@ -1,0 +1,70 @@
+identifier: BTO:0001980
+label: sebaceous gland
+definition: Any of various glands in the dermis of the skin that open into a hair
+  follicle and produce and secrete sebum.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: glandula sebaceae
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: glandula sebaceaes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: sebaceous folliclar
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: sebaceous follicle
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: sebaceous follicles
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: sebaceous glandic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: sebaceous glands
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000765
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001980
+  source_label: sebaceous gland
+  assertion_count: 6
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1160719
+  source: PREGO
+  taxon_label: Cutibacterium granulosum DSM 20700
+  score: 3.0
+- taxon_id: NCBITaxon:1234380
+  source: PREGO
+  taxon_label: Cutibacterium acnes C1
+  score: 3.0
+- taxon_id: NCBITaxon:1292038
+  source: PREGO
+  taxon_label: Cutibacterium acnes PA2
+  score: 3.0
+- taxon_id: NCBITaxon:1292039
+  source: PREGO
+  taxon_label: Cutibacterium acnes P6
+  score: 3.0
+- taxon_id: NCBITaxon:1292372
+  source: PREGO
+  taxon_label: Cutibacterium avidum TM16
+  score: 3.0
+- taxon_id: NCBITaxon:267747
+  source: PREGO
+  taxon_label: Cutibacterium acnes KPA171202
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

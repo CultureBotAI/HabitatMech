@@ -1,0 +1,149 @@
+identifier: BTO:0001487
+label: adipose tissue
+definition: Connective tissue in which fat is stored and which has the cells distended
+  by droplets of fat.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: adipose
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: adipose tissues
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: adiposes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: bodyfat
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: bodyfatic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: bodyfats
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: fat
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: fat tissue
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: fat tissues
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000421
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001487
+  source_label: adipose tissue
+  assertion_count: 29
+  assertion_unit: TAXON
+  score: 1.45999
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:1578
+  source: PREGO
+  taxon_label: Lactobacillus
+  score: 1.45999
+- taxon_id: NCBITaxon:186802
+  source: PREGO
+  taxon_label: Eubacteriales
+  score: 1.45999
+- taxon_id: NCBITaxon:1301
+  source: PREGO
+  taxon_label: Streptococcus
+  score: 1.35676
+- taxon_id: NCBITaxon:186826
+  source: PREGO
+  taxon_label: Lactobacillales
+  score: 1.29902
+- taxon_id: NCBITaxon:186803
+  source: PREGO
+  taxon_label: Lachnospiraceae
+  score: 1.23626
+- taxon_id: NCBITaxon:816
+  source: PREGO
+  taxon_label: Bacteroides
+  score: 1.2027
+- taxon_id: NCBITaxon:1243
+  source: PREGO
+  taxon_label: Leuconostoc
+  score: 1.16751
+- taxon_id: NCBITaxon:1263
+  source: PREGO
+  taxon_label: Ruminococcus
+  score: 1.16751
+- taxon_id: NCBITaxon:35493
+  source: PREGO
+  score: 1.16751
+- taxon_id: NCBITaxon:541000
+  source: PREGO
+  score: 1.16751
+- taxon_id: NCBITaxon:189330
+  source: PREGO
+  taxon_label: Dorea
+  score: 1.13051
+- taxon_id: NCBITaxon:2740
+  source: PREGO
+  taxon_label: Peptococcus
+  score: 1.13051
+- taxon_id: NCBITaxon:543
+  source: PREGO
+  taxon_label: Enterobacteriaceae
+  score: 1.13051
+- taxon_id: NCBITaxon:128827
+  source: PREGO
+  taxon_label: Erysipelotrichaceae
+  score: 1.09151
+- taxon_id: NCBITaxon:1386
+  source: PREGO
+  taxon_label: Bacillus <firmicutes>
+  score: 1.09151
+- taxon_id: NCBITaxon:171550
+  source: PREGO
+  taxon_label: Rikenellaceae
+  score: 1.09151
+- taxon_id: NCBITaxon:55087
+  source: PREGO
+  score: 1.09151
+- taxon_id: NCBITaxon:572511
+  source: PREGO
+  taxon_label: Blautia
+  score: 1.09151
+- taxon_id: NCBITaxon:119852
+  source: PREGO
+  taxon_label: Oscillospira
+  score: 1.05027
+- taxon_id: NCBITaxon:1245
+  source: PREGO
+  taxon_label: Leuconostoc mesenteroides
+  score: 1.05027
+- taxon_id: NCBITaxon:33042
+  source: PREGO
+  taxon_label: Coprococcus
+  score: 1.05027
+- taxon_id: NCBITaxon:33967
+  source: PREGO
+  taxon_label: Leuconostoc mesenteroides subsp. mesenteroides
+  score: 1.05027
+- taxon_id: NCBITaxon:1350
+  source: PREGO
+  taxon_label: Enterococcus
+  score: 1.00654
+- taxon_id: NCBITaxon:1485
+  source: PREGO
+  taxon_label: Clostridium
+  score: 1.00654
+- taxon_id: NCBITaxon:171549
+  source: PREGO
+  taxon_label: Bacteroidales
+  score: 1.00654
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

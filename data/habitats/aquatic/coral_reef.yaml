@@ -1,0 +1,146 @@
+identifier: ENVO:00000150
+label: coral reef
+definition: A marine reef which is composed primarily of aragonite structures produced
+  by living organisms, found in shallow, low-nutrient waters.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: CoralReef
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: barrier reef
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: coral reefs
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: fringing reef
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: reef
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:01000143
+- habitatmech:GOLD.115edc36f8
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4014
+  source_label: Coral reef
+  source_path: Environmental > Aquatic > Marine > Intertidal zone > Coral reef
+  mapping_predicate: skos:exactMatch
+  assertion_count: 6
+  assertion_unit: ORGANISM
+- source: PREGO
+  source_id: ENVO:00000150
+  source_label: coral reef
+  assertion_count: 1322
+  assertion_unit: TAXON
+  score: 2.3477
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:214988
+  source: PREGO
+  score: 2.3477
+- taxon_id: NCBITaxon:575599
+  source: PREGO
+  taxon_label: Limosilactobacillus fermentum 28-3-CHN
+  score: 2.28431
+- taxon_id: NCBITaxon:48499
+  source: PREGO
+  score: 2.28171
+- taxon_id: NCBITaxon:313595
+  source: PREGO
+  taxon_label: Psychroflexus torquis ATCC 700755
+  score: 2.27772
+- taxon_id: NCBITaxon:598553
+  source: PREGO
+  taxon_label: Clostridium sp. enrichment culture clone 7-25
+  score: 2.27513
+- taxon_id: NCBITaxon:563036
+  source: PREGO
+  taxon_label: Streptococcus sp. C300
+  score: 2.27502
+- taxon_id: NCBITaxon:645463
+  source: PREGO
+  taxon_label: Clostridioides difficile R20291
+  score: 2.26993
+- taxon_id: NCBITaxon:883062
+  source: PREGO
+  taxon_label: Bifidobacterium bifidum S17
+  score: 2.26477
+- taxon_id: NCBITaxon:74426
+  source: PREGO
+  taxon_label: Collinsella aerofaciens
+  score: 2.25398
+- taxon_id: NCBITaxon:313603
+  source: PREGO
+  taxon_label: Maribacter sp. HTCC2170
+  score: 2.252
+- taxon_id: NCBITaxon:46745
+  source: PREGO
+  score: 2.25046
+- taxon_id: NCBITaxon:216816
+  source: PREGO
+  taxon_label: Bifidobacterium longum
+  score: 2.24497
+- taxon_id: NCBITaxon:722911
+  source: PREGO
+  taxon_label: Bifidobacterium longum subsp. longum F8
+  score: 2.24137
+- taxon_id: NCBITaxon:313606
+  source: PREGO
+  taxon_label: Microscilla marina ATCC 23134
+  score: 2.23946
+- taxon_id: NCBITaxon:853
+  source: PREGO
+  taxon_label: Faecalibacterium prausnitzii
+  score: 2.23829
+- taxon_id: NCBITaxon:887899
+  source: PREGO
+  taxon_label: Mobiluncus holmesii ATCC 35242
+  score: 2.23606
+- taxon_id: NCBITaxon:367928
+  source: PREGO
+  taxon_label: Bifidobacterium adolescentis ATCC 15703
+  score: 2.23376
+- taxon_id: NCBITaxon:499174
+  source: PREGO
+  taxon_label: Clostridioides difficile QCD-23m63
+  score: 2.23048
+- taxon_id: NCBITaxon:702459
+  source: PREGO
+  taxon_label: Bifidobacterium bifidum PRL2010
+  score: 2.22897
+- taxon_id: NCBITaxon:643867
+  source: PREGO
+  taxon_label: Marivirga tractuosa DSM 4126
+  score: 2.22446
+- taxon_id: NCBITaxon:391587
+  source: PREGO
+  taxon_label: Kordia algicida OT-1
+  score: 2.22323
+- taxon_id: NCBITaxon:391625
+  source: PREGO
+  taxon_label: Plesiocystis pacifica SIR-1
+  score: 2.22012
+- taxon_id: NCBITaxon:457416
+  source: PREGO
+  taxon_label: Veillonella sp. 3_1_44
+  score: 2.21825
+- taxon_id: NCBITaxon:451754
+  source: PREGO
+  taxon_label: Clostridium perfringens B str. ATCC 3626
+  score: 2.21802
+- taxon_id: NCBITaxon:445336
+  source: PREGO
+  taxon_label: Clostridium botulinum Bf
+  score: 2.21649
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'

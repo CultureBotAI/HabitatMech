@@ -1,0 +1,22 @@
+identifier: habitatmech:GOLD.0fe2a08dac
+label: Oropharynx
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0001729
+- habitatmech:GOLD.4c769e7f09
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6100
+  source_label: Oropharynx
+  source_path: 'Host-associated > Mammals: Human > Digestive system > Pharynx/Throat
+    > Oropharynx'
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 159
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

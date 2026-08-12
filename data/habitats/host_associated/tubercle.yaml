@@ -1,0 +1,82 @@
+identifier: BTO:0002173
+label: tubercle
+definition: The adult male dorsal surface of Schistosoma is covered in small bosses
+  called tubercles that provide purchase against the blood vessel wall when the worm
+  is crawling up the mesenteric veins carrying the female in its ventral groove. Each
+  tubercle has a thin, 2-3 micron, covering of the syncytial tegument. Enclosed entirely
+  within the tegument cytoplasm of the tubercle are a series of spines, made of actin,
+  which assist in gripping the blood vessel. The tegument is normally closely apposed
+  to the underlying circular muscle layer, and separated from it only by an extracellular
+  matrix of collagen fibres. The tubercle is the exception, where the tegument is
+  lifted up by numerous extensions of parenchymal cells. The parenchymal cell bodies
+  lie below the muscle layers and send out narrow extensions of cytoplasm which insinuate
+  between the muscles to form the packing for the tubercle.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: tuberclar
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: tubercles
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0002173
+  source_label: tubercle
+  assertion_count: 11
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1205674
+  source: PREGO
+  taxon_label: Mycobacterium canetti CIPT 140070010
+  score: 3.0
+- taxon_id: NCBITaxon:1205675
+  source: PREGO
+  taxon_label: Mycobacterium canetti CIPT 140070008
+  score: 3.0
+- taxon_id: NCBITaxon:1205676
+  source: PREGO
+  taxon_label: Mycobacterium canetti CIPT 140060008
+  score: 3.0
+- taxon_id: NCBITaxon:1205677
+  source: PREGO
+  taxon_label: Mycobacterium canetti CIPT 140070017
+  score: 3.0
+- taxon_id: NCBITaxon:1246119
+  source: PREGO
+  taxon_label: Mycobacterium canetti CIPT 140070002
+  score: 3.0
+- taxon_id: NCBITaxon:1246120
+  source: PREGO
+  taxon_label: Mycobacterium canetti CIPT 140070005
+  score: 3.0
+- taxon_id: NCBITaxon:1246121
+  source: PREGO
+  taxon_label: Mycobacterium canetti CIPT 140070013
+  score: 3.0
+- taxon_id: NCBITaxon:1246634
+  source: PREGO
+  taxon_label: Mycobacterium canetti CIPT 140070007
+  score: 3.0
+- taxon_id: NCBITaxon:233413
+  source: PREGO
+  taxon_label: Mycobacterium tuberculosis variant bovis AF2122/97
+  score: 3.0
+- taxon_id: NCBITaxon:272631
+  source: PREGO
+  taxon_label: Mycobacterium leprae TN
+  score: 3.0
+- taxon_id: NCBITaxon:83332
+  source: PREGO
+  taxon_label: Mycobacterium tuberculosis H37Rv
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

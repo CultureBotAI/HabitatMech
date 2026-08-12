@@ -1,0 +1,26 @@
+identifier: ENVO:01000140
+label: whale fall
+definition: 'Whale fall is the term used for a whale carcass that has fallen to the
+  ocean floor. When a whale dies in shallow water, its carcass is typically devoured
+  by scavengers over a relatively short period of time: within several months. However,
+  in deeper water (depths of 2,000 m/6,600 ft or greater), fewer scavenger species
+  exist, and the carcass can provide sustenance for a complex localized ecosystem
+  over periods of decades.'
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:01000139
+- habitatmech:GOLD.88e2b29307
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4000
+  source_label: Whale fall
+  source_path: Environmental > Aquatic > Marine > Fossil > Whale fall
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

@@ -1,0 +1,52 @@
+identifier: ENVO:00000418
+label: ria
+definition: A submergent coastal landform that forms where sea levels rise relative
+  to the land either as a result of eustatic sea level change; where the global sea
+  levels rise or isostatic sea level change; where the land sinks. When this happens
+  valleys which were previously at sea level become submerged.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: drowned river valley
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: drowned river valley
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: drowned river valleys
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: drowned valley
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: drowned valley
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: drowned valleys
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: valley
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00000100
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00000418
+  source_label: ria
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1122613
+  source: PREGO
+  taxon_label: Oceanicaulis alexandrii DSM 11625
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

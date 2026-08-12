@@ -1,0 +1,47 @@
+identifier: BTO:0001339
+label: synovia
+definition: A transparent viscid lubricating fluid secreted by a membrane of an articulation,
+  bursa, or tendon sheath.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: synovial
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: synovial fluid
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: synovial fluids
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: synovias
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001339
+  source_label: synovia
+  assertion_count: 3
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1234367
+  source: PREGO
+  taxon_label: Chlamydia pecorum PV3056/3
+  score: 3.0
+- taxon_id: NCBITaxon:1234368
+  source: PREGO
+  taxon_label: Chlamydia pecorum W73
+  score: 3.0
+- taxon_id: NCBITaxon:1234369
+  source: PREGO
+  taxon_label: Chlamydia pecorum P787
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

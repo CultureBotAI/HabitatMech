@@ -1,0 +1,124 @@
+identifier: ENVO:00000296
+label: rice field
+definition: A paddy field for the cultivation of rice.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: agricultural site
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: agricultural site
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: agricultural sites
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: cropland
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: rice fields
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: rice paddies
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: rice paddy
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: rice paddy
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00000117
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00000296
+  source_label: rice field
+  assertion_count: 19
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1120985
+  source: PREGO
+  taxon_label: Anaeroarcus burkinensis DSM 6283
+  score: 3.0
+- taxon_id: NCBITaxon:1121015
+  source: PREGO
+  taxon_label: Arenimonas oryziterrae DSM 21050 = YC6267
+  score: 3.0
+- taxon_id: NCBITaxon:1121034
+  source: PREGO
+  taxon_label: Niveispirillum irakense DSM 11586
+  score: 3.0
+- taxon_id: NCBITaxon:1122158
+  source: PREGO
+  taxon_label: Leeia oryzae DSM 17879
+  score: 3.0
+- taxon_id: NCBITaxon:1122963
+  source: PREGO
+  taxon_label: Pleomorphomonas oryzae DSM 16300
+  score: 3.0
+- taxon_id: NCBITaxon:1122990
+  source: PREGO
+  taxon_label: Segatella paludivivens DSM 17968 = JCM 13650
+  score: 3.0
+- taxon_id: NCBITaxon:1215098
+  source: PREGO
+  taxon_label: Pseudomonas cremoricolorata DSM 17059 = NBRC 16634
+  score: 3.0
+- taxon_id: NCBITaxon:1215114
+  source: PREGO
+  taxon_label: Pseudomonas parafulva NBRC 16636 = DSM 17004
+  score: 3.0
+- taxon_id: NCBITaxon:1313303
+  source: PREGO
+  taxon_label: Xanthomonas oryzae ATCC 35933
+  score: 3.0
+- taxon_id: NCBITaxon:1408420
+  source: PREGO
+  taxon_label: Paracidovorax oryzae ATCC 19882
+  score: 3.0
+- taxon_id: NCBITaxon:349307
+  source: PREGO
+  taxon_label: Methanothrix thermoacetophila PT
+  score: 3.0
+- taxon_id: NCBITaxon:395961
+  source: PREGO
+  taxon_label: Cyanothece sp. PCC 7425
+  score: 3.0
+- taxon_id: NCBITaxon:395962
+  source: PREGO
+  taxon_label: Rippkaea orientalis PCC 8802
+  score: 3.0
+- taxon_id: NCBITaxon:41431
+  source: PREGO
+  taxon_label: Rippkaea orientalis PCC 8801
+  score: 3.0
+- taxon_id: NCBITaxon:468059
+  source: PREGO
+  taxon_label: Daejeonella oryzae DSM 19973
+  score: 3.0
+- taxon_id: NCBITaxon:497965
+  source: PREGO
+  taxon_label: Gloeothece verrucosa PCC 7822
+  score: 3.0
+- taxon_id: NCBITaxon:622637
+  source: PREGO
+  taxon_label: Methylocystis sp. ATCC 49242
+  score: 3.0
+- taxon_id: NCBITaxon:65393
+  source: PREGO
+  taxon_label: Gloeothece citriformis PCC 7424
+  score: 3.0
+- taxon_id: NCBITaxon:915438
+  source: PREGO
+  taxon_label: Xylanibacter oryzae DSM 17970
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

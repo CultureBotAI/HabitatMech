@@ -1,0 +1,37 @@
+# Where the upstream source data lives.
+#
+# HabitatMech does not vendor kg-microbe's KGX dumps (they are multi-gigabyte).
+# scripts/extract_source_inventory.py reads them from a local kg-microbe
+# checkout and emits the small, reviewable inventories under data/raw/, which
+# ARE committed. Only re-extraction needs this path; seeding, validation, and
+# tests run entirely off data/raw/.
+#
+# Resolution order: --kg-microbe flag > KG_MICROBE_ROOT env var > this file.
+kg_microbe_root: ~/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe
+
+# Upstream provenance for the inventories, recorded so a reader can tell which
+# release of each source the committed TSVs came from. The per-file bytes/mtime
+# /sha256 of the actual inputs are captured in data/raw/MANIFEST.yaml at
+# extraction time.
+sources:
+  gold:
+    name: JGI GOLD ecosystem classification
+    url: https://gold.jgi.doe.gov/
+    via: kg-microbe data/raw/gold/GOLD_{nodes,edges}.tsv
+  bacdive:
+    name: BacDive isolation sources
+    url: https://bacdive.dsmz.de/
+    via: kg-microbe data/transformed/bacdive/{nodes,edges}.tsv
+  prego:
+    name: PREGO habitat-organism associations
+    url: https://prego.hcmr.gr/
+    via: kg-microbe data/transformed/prego/{nodes,edges}.tsv
+  environments:
+    name: Environment physicochemical parameter table (Cobo-Simon habitat axes)
+    via: kg-microbe data/raw/environments.csv
+  isolation_source_mappings:
+    name: kg-microbe curated isolation-source to ontology mappings
+    via: kg-microbe mappings/isolation_source_to_ontology.tsv
+  ontologies:
+    name: ENVO / UBERON / FOODON / BTO term slice
+    via: kg-microbe data/transformed/ontologies/*_nodes.tsv and data/raw/bto.db

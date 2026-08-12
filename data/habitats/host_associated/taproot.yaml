@@ -1,0 +1,24 @@
+identifier: BTO:0006313
+label: taproot
+definition: Main root of a primary root system, growing vertically downward. Most
+  dicotyledonous plants, such as dandelions, produce taproots, and some, such as the
+  edible roots of carrots and beets, are specialized for food storage.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- BTO:0001188
+- habitatmech:GOLD.7c6b8ca314
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5913
+  source_label: Taproot
+  source_path: Host-associated > Plants > Roots > Taproot
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

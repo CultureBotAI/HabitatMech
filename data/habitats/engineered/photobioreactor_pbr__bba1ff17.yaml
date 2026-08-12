@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.e5b2473bf3
+label: Photobioreactor (PBR)
+habitat_category: ENGINEERED
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00002123
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5844
+  source_label: Photobioreactor (PBR)
+  source_path: Engineered > Bioreactor > Photobioreactor (PBR)
+  assertion_count: 1
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

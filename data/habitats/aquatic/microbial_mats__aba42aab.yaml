@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.17c67a52e1
+label: Microbial mats
+habitat_category: AQUATIC
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.95dbf8d7ac
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8100
+  source_label: Microbial mats
+  source_path: Environmental > Aquatic > Marine > Cold seeps > Microbial mats
+  assertion_count: 3
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

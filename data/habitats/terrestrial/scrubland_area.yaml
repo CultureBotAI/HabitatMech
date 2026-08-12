@@ -1,0 +1,55 @@
+identifier: ENVO:00000300
+label: scrubland area
+definition: Area covered with low-growing or stunted perennial vegetation and usually
+  not mixed with trees.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Shrub-Scrub
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+- synonym_text: Shrubland
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: bush
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: chaparal area
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: heath
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: scrub
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: scrubland
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: shrubland
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00001998
+- ENVO:01001305
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:shrub-scrub
+  source_label: Shrub-Scrub
+  mapping_predicate: skos:closeMatch
+  assertion_count: 321
+  assertion_unit: STRAIN
+- source: GOLD
+  source_id: gold.ecosystem:7808
+  source_label: Shrubland
+  source_path: Environmental > Terrestrial > Soil > Shrubland
+  mapping_predicate: skos:closeMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD. Grounding:
+    CLOSE.'

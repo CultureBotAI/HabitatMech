@@ -1,0 +1,137 @@
+identifier: BTO:0003084
+label: vaginal fluid
+definition: The lubrication fluid contains water, pyridine, squalene, urea, acetic
+  acid, lactic acid, complex alcohols and glycols, ketones, and aldehydes. The fluid
+  is typically clear and more resembling of male pre-ejaculate than male ejaculate.
+  The normal pH of vaginal fluid is between 3.8 and 4.5, whereas male semen is typically
+  between 7.1 and 8.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: lubrication fluid
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: lubrication fluids
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: vaginal fluids
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0003632
+source_attestations:
+- source: PREGO
+  source_id: BTO:0003084
+  source_label: vaginal fluid
+  assertion_count: 213
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:1129771
+  source: PREGO
+  taxon_label: Leptotrichiaceae
+  score: 4.0
+- taxon_id: NCBITaxon:117563
+  source: PREGO
+  taxon_label: Granulicatella
+  score: 4.0
+- taxon_id: NCBITaxon:118968
+  source: PREGO
+  taxon_label: Coxiellaceae
+  score: 4.0
+- taxon_id: NCBITaxon:119045
+  source: PREGO
+  taxon_label: Methylobacteriaceae
+  score: 4.0
+- taxon_id: NCBITaxon:1261
+  source: PREGO
+  taxon_label: Peptostreptococcus anaerobius
+  score: 4.0
+- taxon_id: NCBITaxon:1279
+  source: PREGO
+  taxon_label: Staphylococcus
+  score: 4.0
+- taxon_id: NCBITaxon:1282
+  source: PREGO
+  taxon_label: Staphylococcus epidermidis
+  score: 4.0
+- taxon_id: NCBITaxon:1301
+  source: PREGO
+  taxon_label: Streptococcus
+  score: 4.0
+- taxon_id: NCBITaxon:1350
+  source: PREGO
+  taxon_label: Enterococcus
+  score: 4.0
+- taxon_id: NCBITaxon:135621
+  source: PREGO
+  taxon_label: Pseudomonadaceae
+  score: 4.0
+- taxon_id: NCBITaxon:1357
+  source: PREGO
+  taxon_label: Lactococcus
+  score: 4.0
+- taxon_id: NCBITaxon:13687
+  source: PREGO
+  taxon_label: Sphingomonas
+  score: 4.0
+- taxon_id: NCBITaxon:1375
+  source: PREGO
+  taxon_label: Aerococcus
+  score: 4.0
+- taxon_id: NCBITaxon:1378
+  source: PREGO
+  taxon_label: Gemella
+  score: 4.0
+- taxon_id: NCBITaxon:1380
+  source: PREGO
+  taxon_label: Atopobium
+  score: 4.0
+- taxon_id: NCBITaxon:1386
+  source: PREGO
+  taxon_label: Bacillus <firmicutes>
+  score: 4.0
+- taxon_id: NCBITaxon:147802
+  source: PREGO
+  taxon_label: Lactobacillus iners
+  score: 4.0
+- taxon_id: NCBITaxon:1485
+  source: PREGO
+  taxon_label: Clostridium
+  score: 4.0
+- taxon_id: NCBITaxon:150022
+  source: PREGO
+  taxon_label: Finegoldia
+  score: 4.0
+- taxon_id: NCBITaxon:1578
+  source: PREGO
+  taxon_label: Lactobacillus
+  score: 4.0
+- taxon_id: NCBITaxon:1601
+  source: PREGO
+  taxon_label: Ligilactobacillus agilis
+  score: 4.0
+- taxon_id: NCBITaxon:162289
+  source: PREGO
+  taxon_label: Peptoniphilus
+  score: 4.0
+- taxon_id: NCBITaxon:1633
+  source: PREGO
+  taxon_label: Limosilactobacillus vaginalis
+  score: 4.0
+- taxon_id: NCBITaxon:165179
+  source: PREGO
+  taxon_label: Segatella copri
+  score: 4.0
+- taxon_id: NCBITaxon:1654
+  source: PREGO
+  taxon_label: Actinomyces
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

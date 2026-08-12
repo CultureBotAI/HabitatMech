@@ -1,0 +1,41 @@
+identifier: ENVO:01000965
+label: constructed swimming pool
+definition: A construction which is designed to hold water in which humans may swim
+  or perform other leisure activities.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Swimming pool
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: paddling pool
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: pool
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: swimming bath
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: swimming pool
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: wading pool
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00000070
+- mesh:D000076624
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5594
+  source_label: Swimming pool
+  source_path: Engineered > Built environment > Swimming pool
+  mapping_predicate: skos:closeMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

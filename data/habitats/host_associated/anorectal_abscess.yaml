@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.aaf13396b6
+label: Anorectal abscess
+habitat_category: HOST_ASSOCIATED
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.5b0aa7456c
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6341
+  source_label: Anorectal abscess
+  source_path: 'Host-associated > Mammals: Human > Digestive system > Large intestine
+    > Anorectal abscess'
+  assertion_count: 3
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

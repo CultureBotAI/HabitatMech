@@ -1,0 +1,30 @@
+identifier: ENVO:00000489
+label: palsa
+definition: A frost heave which is formed as the result of a perennial ice lens forming
+  under soil, pushing a roughly oval portion land surface upwards.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: palsa bog
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: palsamoor
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00001998
+- ENVO:01001568
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7688
+  source_label: Palsa
+  source_path: Environmental > Terrestrial > Soil > Palsa
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

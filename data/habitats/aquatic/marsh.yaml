@@ -1,0 +1,86 @@
+identifier: ENVO:00000035
+label: marsh
+definition: A wetland ecosystem which includes communities of grasses, rushes, reeds,
+  typhas, sedges, and other herbaceous plants (possibly with low-growing woody plants).
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: marshes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: marshic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: marshies
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: marshland
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: marshlandic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: marshlands
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: marshy
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: marshy areas
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: marshy areases
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: marshy areasic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: quagmire
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: wetland
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:01001209
+- habitatmech:GOLD.a981586d10
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4184
+  source_label: Marsh
+  source_path: Environmental > Aquatic > Freshwater > Wetlands > Marsh
+  mapping_predicate: skos:exactMatch
+  assertion_count: 4
+  assertion_unit: ORGANISM
+- source: PREGO
+  source_id: ENVO:00000035
+  source_label: marsh
+  assertion_count: 4
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:402880
+  source: PREGO
+  taxon_label: Methanococcus maripaludis C5
+  score: 3.0
+- taxon_id: NCBITaxon:760154
+  source: PREGO
+  taxon_label: Sulfurospirillum barnesii SES-3
+  score: 3.0
+- taxon_id: NCBITaxon:765912
+  source: PREGO
+  taxon_label: Thioflavicoccus mobilis 8321
+  score: 3.0
+- taxon_id: NCBITaxon:91360
+  source: PREGO
+  taxon_label: Desulforhopalus singaporensis
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'

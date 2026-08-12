@@ -1,0 +1,22 @@
+identifier: habitatmech:GOLD.c15e1115f3
+label: Cervix
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0000002
+- habitatmech:GOLD.f736cbfbc5
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6126
+  source_label: Cervix
+  source_path: 'Host-associated > Mammals: Human > Reproductive system > Uterus >
+    Cervix'
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 28
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

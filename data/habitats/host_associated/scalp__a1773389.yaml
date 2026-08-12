@@ -1,0 +1,29 @@
+identifier: UBERON:0000403
+label: scalp
+definition: 'The outer covering of the calvaria. It is composed of several layers:
+  SKIN; subcutaneous connective tissue; the occipitofrontal muscle which includes
+  the tendonous galea aponeurotica; Loose connective tissue; and the pericranium (the
+  PERIOSTEUM of the SKULL).'
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: scalpus
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0010314
+- UBERON:0034921
+- habitatmech:GOLD.4b37ab4b76
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6129
+  source_label: Scalp
+  source_path: 'Host-associated > Mammals: Human > Integumentary system > Skin > Scalp'
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

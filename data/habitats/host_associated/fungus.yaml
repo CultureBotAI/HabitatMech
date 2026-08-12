@@ -1,0 +1,33 @@
+identifier: FOODON:03411261
+label: fungus
+definition: A member of the group of eukaryotic organisms in the kingdom Fungi that
+  includes unicellular microorganisms such as yeasts and molds, as well as multicellular
+  fungi that produce familiar fruiting forms known as mushrooms.
+definition_source: FOODON
+habitat_category: HOST_ASSOCIATED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Fungi
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: fungi
+  synonym_type: EXACT_SYNONYM
+  source: FOODON
+parent_habitats:
+- FOODON:00004336
+- habitatmech:GOLD.d3b891e82e
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:3376
+  source_label: Fungi
+  source_path: Host-associated > Fungi
+  mapping_predicate: skos:closeMatch
+  assertion_count: 635
+  assertion_unit: ORGANISM
+  notes: 4 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

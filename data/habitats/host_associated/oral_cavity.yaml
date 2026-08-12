@@ -1,0 +1,40 @@
+identifier: UBERON:0000167
+label: oral cavity
+definition: Anatomical cavity at the start of the digestive tract that that is enclosed
+  by the mouth. The boundaries and contents vary depending on the species. In vertebrates,
+  the boundaries are the oral opening, the cheeks, the palate and (if present) the
+  palatoglossal arch - if this is not present then the mouth and pharynx form the
+  oropharyngeal cavity. The buccal cavity contains the teeth, tongue and palate (when
+  present).
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Buccal cavity
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: bucca
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: buccal cavity
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: cavity of mouth
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0002553
+- habitatmech:GOLD.bd1664969c
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7387
+  source_label: Buccal cavity
+  source_path: 'Host-associated > Arthropoda: Insects > Digestive system > Foregut
+    > Buccal cavity'
+  mapping_predicate: skos:closeMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

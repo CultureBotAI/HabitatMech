@@ -1,0 +1,133 @@
+identifier: ENVO:01000246
+label: village biome
+definition: A village biome is an anthropogenic terrestrial biome which contains settlements
+  such as villages, towns, and/or small cities and which is primarily used for agricultural
+  activity.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: village
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: villages
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00000428
+- ENVO:01000773
+source_attestations:
+- source: PREGO
+  source_id: ENVO:01000246
+  source_label: village biome
+  assertion_count: 64
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:1406
+  source: PREGO
+  taxon_label: Paenibacillus polymyxa
+  score: 4.0
+- taxon_id: NCBITaxon:165813
+  source: PREGO
+  taxon_label: Sporanaerobacter acetigenes
+  score: 4.0
+- taxon_id: NCBITaxon:214688
+  source: PREGO
+  taxon_label: Gemmata obscuriglobus UQM 2246
+  score: 4.0
+- taxon_id: NCBITaxon:231024
+  source: PREGO
+  taxon_label: Streptomyces africanus
+  score: 4.0
+- taxon_id: NCBITaxon:266940
+  source: PREGO
+  taxon_label: Kineococcus radiotolerans SRS30216 = ATCC BAA-149
+  score: 4.0
+- taxon_id: NCBITaxon:29539
+  source: PREGO
+  taxon_label: Thermoleophilum album
+  score: 4.0
+- taxon_id: NCBITaxon:324057
+  source: PREGO
+  taxon_label: Paenibacillus sp. JDR-2
+  score: 4.0
+- taxon_id: NCBITaxon:330214
+  source: PREGO
+  taxon_label: Nitrospira defluvii
+  score: 4.0
+- taxon_id: NCBITaxon:379066
+  source: PREGO
+  taxon_label: Gemmatimonas aurantiaca T-27
+  score: 4.0
+- taxon_id: NCBITaxon:411467
+  source: PREGO
+  taxon_label: Pseudoflavonifractor capillosus ATCC 29799
+  score: 4.0
+- taxon_id: NCBITaxon:411485
+  source: PREGO
+  taxon_label: Faecalibacterium prausnitzii M21/2
+  score: 4.0
+- taxon_id: NCBITaxon:428125
+  source: PREGO
+  taxon_label: '[Clostridium] leptum DSM 753'
+  score: 4.0
+- taxon_id: NCBITaxon:43131
+  source: PREGO
+  taxon_label: Tissierella praeacuta
+  score: 4.0
+- taxon_id: NCBITaxon:446465
+  source: PREGO
+  taxon_label: Brachybacterium faecium DSM 4810
+  score: 4.0
+- taxon_id: NCBITaxon:457427
+  source: PREGO
+  taxon_label: Streptomyces himastatinicus ATCC 53653
+  score: 4.0
+- taxon_id: NCBITaxon:46223
+  source: PREGO
+  taxon_label: Thermoflavimicrobium dichotomicum
+  score: 4.0
+- taxon_id: NCBITaxon:469383
+  source: PREGO
+  taxon_label: Conexibacter woesei DSM 14684
+  score: 4.0
+- taxon_id: NCBITaxon:49319
+  source: PREGO
+  taxon_label: Rubrobacter xylanophilus
+  score: 4.0
+- taxon_id: NCBITaxon:498761
+  source: PREGO
+  taxon_label: Heliomicrobium modesticaldum Ice1
+  score: 4.0
+- taxon_id: NCBITaxon:500
+  source: PREGO
+  taxon_label: Thermomicrobium roseum
+  score: 4.0
+- taxon_id: NCBITaxon:509191
+  source: PREGO
+  taxon_label: Acetivibrio cellulolyticus CD2
+  score: 4.0
+- taxon_id: NCBITaxon:537937
+  source: PREGO
+  taxon_label: Bifidobacterium longum subsp. infantis CCUG 52486
+  score: 4.0
+- taxon_id: NCBITaxon:56780
+  source: PREGO
+  taxon_label: Syntrophus aciditrophicus SB
+  score: 4.0
+- taxon_id: NCBITaxon:592015
+  source: PREGO
+  taxon_label: Acetomicrobium hydrogeniformans ATCC BAA-1850
+  score: 4.0
+- taxon_id: NCBITaxon:702452
+  source: PREGO
+  taxon_label: Listeria seeligeri FSL S4-171
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.f5c2a31934
+label: Ileum-cecum
+habitat_category: HOST_ASSOCIATED
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.6451c3f0ac
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6418
+  source_label: Ileum-cecum
+  source_path: Host-associated > Mammals > Digestive system > Lower gastrointestinal
+    tract > Ileum-cecum
+  assertion_count: 2
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

@@ -1,0 +1,39 @@
+identifier: UBERON:0022277
+label: hepatic flexure of colon
+definition: Hepatic (or the right colic) flexure is the sharp bend between the ascending
+  and the transverse colon. The right colic flexure is adjacent to the liver, and
+  is therefore also known as the hepatic flexure. Thus, the left colic flexure is
+  also known as the splenic flexure (as it is close to the spleen). The hepatic flexure
+  lies in the right upper quadrant of the abdomen in humans.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Hepatic flexure
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: flexura coli heaptica
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: hepatic flexure
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: right colic flexure
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0022275
+- habitatmech:GOLD.5b0aa7456c
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6439
+  source_label: Hepatic flexure
+  source_path: 'Host-associated > Mammals: Human > Digestive system > Large intestine
+    > Hepatic flexure'
+  mapping_predicate: skos:closeMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

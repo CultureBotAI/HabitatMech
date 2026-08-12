@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.9b3b1cd806
+label: Microbial mat
+habitat_category: AQUATIC
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:01000008
+- habitatmech:GOLD.2a6cc2b868
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7989
+  source_label: Microbial mat
+  source_path: Environmental > Aquatic > Acidic > Acidic hypersaline lake > Microbial
+    mat
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

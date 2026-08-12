@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.84791b320c
+label: Agricultural land
+habitat_category: TERRESTRIAL
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00000077
+- ENVO:01001207
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5727
+  source_label: Agricultural land
+  source_path: Environmental > Terrestrial > Soil > Ranch > Agricultural land
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

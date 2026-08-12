@@ -1,0 +1,22 @@
+identifier: habitatmech:GOLD.f46a5017f9
+label: Blood
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0000178
+- habitatmech:GOLD.0552e4fd8a
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:3713
+  source_label: Blood
+  source_path: Host-associated > Birds > Circulatory system > Blood
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 30
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

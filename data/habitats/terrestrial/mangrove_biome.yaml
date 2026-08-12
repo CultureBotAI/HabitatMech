@@ -1,0 +1,39 @@
+identifier: ENVO:01000181
+label: mangrove biome
+definition: A mangrove biome is a terrestrial biome which includes, across its spatial
+  extent, mangrove plants (Rhizophoraceae). Mangrove plants are able to withstand
+  high levels of salinity as well as regions of anoxia and frequent tidal inundation.
+  Mangrove biomes often occur near tropical and sub-tropical estuaries and depositional
+  marine coastal environments where fine sediments (often with high organic content)
+  collect in areas protected from high energy wave action.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: mangrove
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: mangroves
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00000446
+source_attestations:
+- source: PREGO
+  source_id: ENVO:01000181
+  source_label: mangrove biome
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:634436
+  source: PREGO
+  taxon_label: Marisediminitalea aggregata
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

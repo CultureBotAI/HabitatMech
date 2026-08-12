@@ -1,0 +1,51 @@
+identifier: BTO:0001370
+label: THP-1 cell
+definition: Human acute monocytic leukemia established from the peripheral blood of
+  a 1-year-old boy with acute monocytic leukemia (AML) at relapse in 1978; the cells
+  can be used for induction of differentiation studies; the cells were described to
+  produce lysozyme and to be phagocytic.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: thp1
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: thp1 cell line
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: thp1 cell lines
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: thp1 cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0002332
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001370
+  source_label: THP-1 cell
+  assertion_count: 3
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1773
+  source: PREGO
+  taxon_label: Mycobacterium tuberculosis
+  score: 3.0
+- taxon_id: NCBITaxon:210
+  source: PREGO
+  taxon_label: Helicobacter pylori
+  score: 3.0
+- taxon_id: NCBITaxon:562
+  source: PREGO
+  taxon_label: Escherichia coli
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

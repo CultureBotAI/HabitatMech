@@ -1,0 +1,44 @@
+identifier: UBERON:0002224
+label: thoracic cavity
+definition: The part of the coelemic cavity lumen that is enclosed by the walls of
+  the thorax.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: cavitas thoracis
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: cavity of chest
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: cavity of thorax
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: chest cavity
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: pectoral cavity
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: space of thoracic compartment
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: thoracic lumen
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0000464
+- habitatmech:GOLD.cd0b0940e5
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6638
+  source_label: Thoracic cavity
+  source_path: 'Host-associated > Mammals: Human > Thoracic cavity'
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

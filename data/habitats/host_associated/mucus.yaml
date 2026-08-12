@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.091387f8a8
+label: Mucus
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- FOODON:03412872
+- UBERON:0000912
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8085
+  source_label: Mucus
+  source_path: Host-associated > Invertebrates > Cnidaria > Coral > Mucus
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 12
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

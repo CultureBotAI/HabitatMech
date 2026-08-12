@@ -1,0 +1,132 @@
+identifier: ENVO:02000059
+label: surface soil
+definition: A soil consisting of the upper layer of soil on the surface consisting
+  of loose material capable of supporting life composed of a mixture of mineral and
+  organic matter.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: surface soils
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: topsoil
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00001998
+source_attestations:
+- source: PREGO
+  source_id: ENVO:02000059
+  source_label: surface soil
+  assertion_count: 1784
+  assertion_unit: TAXON
+  score: 1.64209
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:426117
+  source: PREGO
+  taxon_label: Methylobacterium sp. 4-46
+  score: 1.64209
+- taxon_id: NCBITaxon:240015
+  source: PREGO
+  taxon_label: Acidobacterium capsulatum ATCC 51196
+  score: 1.63707
+- taxon_id: NCBITaxon:401053
+  source: PREGO
+  taxon_label: Terriglobus saanensis SP1PR4
+  score: 1.62727
+- taxon_id: NCBITaxon:335543
+  source: PREGO
+  taxon_label: Syntrophobacter fumaroxidans MPOB
+  score: 1.62621
+- taxon_id: NCBITaxon:379066
+  source: PREGO
+  taxon_label: Gemmatimonas aurantiaca T-27
+  score: 1.62526
+- taxon_id: NCBITaxon:575540
+  source: PREGO
+  taxon_label: Isosphaera pallida ATCC 43644
+  score: 1.62503
+- taxon_id: NCBITaxon:224911
+  source: PREGO
+  taxon_label: Bradyrhizobium diazoefficiens USDA 110
+  score: 1.62494
+- taxon_id: NCBITaxon:330214
+  source: PREGO
+  taxon_label: Nitrospira defluvii
+  score: 1.62481
+- taxon_id: NCBITaxon:530564
+  source: PREGO
+  taxon_label: Pirellula staleyi DSM 6068
+  score: 1.62455
+- taxon_id: NCBITaxon:502025
+  source: PREGO
+  taxon_label: Haliangium ochraceum DSM 14365
+  score: 1.62432
+- taxon_id: NCBITaxon:264462
+  source: PREGO
+  taxon_label: Bdellovibrio bacteriovorus HD100
+  score: 1.62391
+- taxon_id: NCBITaxon:316067
+  source: PREGO
+  taxon_label: Geotalea daltonii FRC-32
+  score: 1.62297
+- taxon_id: NCBITaxon:391625
+  source: PREGO
+  taxon_label: Plesiocystis pacifica SIR-1
+  score: 1.6228
+- taxon_id: NCBITaxon:521674
+  source: PREGO
+  taxon_label: Planctopirus limnophila DSM 3776
+  score: 1.62222
+- taxon_id: NCBITaxon:314230
+  source: PREGO
+  taxon_label: Blastopirellula marina DSM 3645
+  score: 1.62174
+- taxon_id: NCBITaxon:56
+  source: PREGO
+  taxon_label: Sorangium cellulosum
+  score: 1.62155
+- taxon_id: NCBITaxon:159254
+  source: PREGO
+  taxon_label: Parachlamydia acanthamoebae str. Hall's coccus
+  score: 1.62147
+- taxon_id: NCBITaxon:314253
+  source: PREGO
+  taxon_label: Nitrobacter sp. Nb-311A
+  score: 1.62139
+- taxon_id: NCBITaxon:469383
+  source: PREGO
+  taxon_label: Conexibacter woesei DSM 14684
+  score: 1.6207
+- taxon_id: NCBITaxon:344747
+  source: PREGO
+  taxon_label: Gimesia maris DSM 8797
+  score: 1.61997
+- taxon_id: NCBITaxon:447217
+  source: PREGO
+  taxon_label: Anaeromyxobacter sp. K
+  score: 1.61599
+- taxon_id: NCBITaxon:378806
+  source: PREGO
+  taxon_label: Allostigmatella aurantiaca DW4/3-1
+  score: 1.6155
+- taxon_id: NCBITaxon:652103
+  source: PREGO
+  taxon_label: Rhodopseudomonas palustris DX-1
+  score: 1.61391
+- taxon_id: NCBITaxon:240016
+  source: PREGO
+  taxon_label: Verrucomicrobium spinosum DSM 4136 = JCM 18804
+  score: 1.6135
+- taxon_id: NCBITaxon:422289
+  source: PREGO
+  taxon_label: Beggiatoa sp. PS
+  score: 1.61309
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

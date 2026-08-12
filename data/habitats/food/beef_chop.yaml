@@ -1,0 +1,29 @@
+identifier: FOODON:02020979
+label: beef chop
+definition: A retail cut of meat from a beef that is perpendicular to the spine, and
+  usually containing a rib or riblet part of a vertebra.
+definition_source: FOODON
+habitat_category: FOOD
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: beef meat chop
+  synonym_type: EXACT_SYNONYM
+  source: FOODON
+- synonym_text: cow chop
+  synonym_type: EXACT_SYNONYM
+  source: FOODON
+parent_habitats:
+- FOODON:00004478
+- habitatmech:GOLD.43005e4de2
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6425
+  source_label: Beef chop
+  source_path: Engineered > Food production > Meat products > Raw meat > Beef chop
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

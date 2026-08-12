@@ -1,0 +1,146 @@
+identifier: BTO:0000763
+label: lung
+definition: One of the usually paired compound saccular thoracic organs that constitute
+  the basic respiratory organ of air-breathing vertebrates.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: airway globet cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: airway globet cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: lung parenchyma
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: lung parenchymal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: lung parenchymas
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: parenchyma of lung
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: parenchyma of lungs
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000203
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000763
+  source_label: lung
+  assertion_count: 92
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1000561
+  source: PREGO
+  taxon_label: Pseudomonas aeruginosa AES-1R
+  score: 3.0
+- taxon_id: NCBITaxon:1087483
+  source: PREGO
+  taxon_label: Mycobacteroides abscessus 47J26
+  score: 3.0
+- taxon_id: NCBITaxon:1093787
+  source: PREGO
+  taxon_label: Pseudomonas aeruginosa DK2
+  score: 3.0
+- taxon_id: NCBITaxon:1110504
+  source: PREGO
+  taxon_label: Mycoplasmopsis agalactiae 14628
+  score: 3.0
+- taxon_id: NCBITaxon:1134459
+  source: PREGO
+  taxon_label: Pseudomonas aeruginosa PADK2_CF510
+  score: 3.0
+- taxon_id: NCBITaxon:1138429
+  source: PREGO
+  taxon_label: Glaesserella parasuis gx033
+  score: 3.0
+- taxon_id: NCBITaxon:1146882
+  source: PREGO
+  taxon_label: Pseudomonas aeruginosa PAHM4
+  score: 3.0
+- taxon_id: NCBITaxon:1166017
+  source: PREGO
+  taxon_label: Mycobacteroides abscessus CF
+  score: 3.0
+- taxon_id: NCBITaxon:1191475
+  source: PREGO
+  taxon_label: Pseudomonas aeruginosa PAO579
+  score: 3.0
+- taxon_id: NCBITaxon:1206722
+  source: PREGO
+  taxon_label: Nocardia araoensis NBRC 100135
+  score: 3.0
+- taxon_id: NCBITaxon:1206730
+  source: PREGO
+  taxon_label: Nocardia higoensis NBRC 100133
+  score: 3.0
+- taxon_id: NCBITaxon:1206737
+  source: PREGO
+  taxon_label: Nocardia pneumoniae NBRC 100136
+  score: 3.0
+- taxon_id: NCBITaxon:1212491
+  source: PREGO
+  taxon_label: Legionella fallonii LLAP-10
+  score: 3.0
+- taxon_id: NCBITaxon:1224142
+  source: PREGO
+  taxon_label: Actinobacillus pleuropneumoniae S8
+  score: 3.0
+- taxon_id: NCBITaxon:1280
+  source: PREGO
+  taxon_label: Staphylococcus aureus
+  score: 3.0
+- taxon_id: NCBITaxon:1290393
+  source: PREGO
+  taxon_label: Pasteurella multocida 671/90
+  score: 3.0
+- taxon_id: NCBITaxon:1311759
+  source: PREGO
+  taxon_label: Mannheimia haemolytica D171
+  score: 3.0
+- taxon_id: NCBITaxon:1329902
+  source: PREGO
+  taxon_label: Mannheimia haemolytica MhBrain2012
+  score: 3.0
+- taxon_id: NCBITaxon:1329905
+  source: PREGO
+  taxon_label: Mannheimia haemolytica D35
+  score: 3.0
+- taxon_id: NCBITaxon:1331042
+  source: PREGO
+  taxon_label: Pasteurella multocida subsp. multocida P1062
+  score: 3.0
+- taxon_id: NCBITaxon:1333540
+  source: PREGO
+  taxon_label: Pseudomonas aeruginosa str. C 763
+  score: 3.0
+- taxon_id: NCBITaxon:1333541
+  source: PREGO
+  taxon_label: Pseudomonas aeruginosa str. C 1334
+  score: 3.0
+- taxon_id: NCBITaxon:1333542
+  source: PREGO
+  taxon_label: Pseudomonas aeruginosa str. C 1426
+  score: 3.0
+- taxon_id: NCBITaxon:1333543
+  source: PREGO
+  taxon_label: Pseudomonas aeruginosa str. C 1433
+  score: 3.0
+- taxon_id: NCBITaxon:1333544
+  source: PREGO
+  taxon_label: Pseudomonas aeruginosa str. J 1385
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

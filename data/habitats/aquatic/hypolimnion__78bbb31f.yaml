@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.7daa92d793
+label: Hypolimnion
+habitat_category: AQUATIC
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00002130
+- habitatmech:GOLD.312657c243
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4173
+  source_label: Hypolimnion
+  source_path: Environmental > Aquatic > Freshwater > Lentic > Hypolimnion
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 25
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

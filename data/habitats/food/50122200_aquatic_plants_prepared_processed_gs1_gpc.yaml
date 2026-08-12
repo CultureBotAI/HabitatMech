@@ -1,0 +1,23 @@
+identifier: FOODON:03401156
+label: 50122200 - aquatic plants prepared/processed (gs1 gpc)
+habitat_category: FOOD
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Aquatic-plant
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+parent_habitats:
+- FOODON:03401124
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:aquatic-plant
+  source_label: Aquatic-plant
+  mapping_predicate: skos:closeMatch
+  assertion_count: 66
+  assertion_unit: STRAIN
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

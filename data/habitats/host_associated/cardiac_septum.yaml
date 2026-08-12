@@ -1,0 +1,42 @@
+identifier: UBERON:0002099
+label: cardiac septum
+definition: The thin membranous structure between parts of the heart, including the
+  atria, ventricles, and outflow tract.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Septum
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: cardiac septa
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: heart septa
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: heart septum
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: septum of heart
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: spiral septa
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0003037
+- UBERON:0004120
+- habitatmech:GOLD.805ee181bd
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6612
+  source_label: Septum
+  source_path: 'Host-associated > Mammals: Human > Circulatory system > Heart > Septum'
+  mapping_predicate: skos:closeMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

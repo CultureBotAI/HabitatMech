@@ -1,0 +1,24 @@
+identifier: UBERON:0006967
+label: horn
+definition: A pointed projection of the skin on the head of various animals, consisting
+  of a covering of horn (keratin and other proteins) surrounding a core of living
+  bone.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0006969
+- habitatmech:GOLD.56e0776270
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6726
+  source_label: Horn
+  source_path: Host-associated > Mammals > Integumentary system > Horn
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

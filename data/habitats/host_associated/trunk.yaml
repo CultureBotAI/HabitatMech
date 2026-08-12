@@ -1,0 +1,131 @@
+identifier: BTO:0001493
+label: trunk
+definition: '1: The human or animal body apart from the head and appendages. 2: The
+  thorax of an insect.'
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Rumpf
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: Rumpfs
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: torso
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: torsoes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: trunks
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001493
+  source_label: trunk
+  assertion_count: 125
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:1170318
+  source: PREGO
+  taxon_label: Cutibacterium avidum 44067
+  score: 3.0
+- taxon_id: NCBITaxon:394958
+  source: PREGO
+  taxon_label: Clostridium taeniosporum
+  score: 3.0
+- taxon_id: NCBITaxon:7719
+  source: PREGO
+  score: 3.0
+- taxon_id: NCBITaxon:12949
+  source: PREGO
+  score: 1.42273
+- taxon_id: NCBITaxon:13559
+  source: PREGO
+  score: 1.42273
+- taxon_id: NCBITaxon:15945
+  source: PREGO
+  score: 1.42273
+- taxon_id: NCBITaxon:286
+  source: PREGO
+  taxon_label: Pseudomonas
+  score: 1.42273
+- taxon_id: NCBITaxon:35493
+  source: PREGO
+  score: 1.42273
+- taxon_id: NCBITaxon:373
+  source: PREGO
+  taxon_label: Gillisella vitis
+  score: 1.42273
+- taxon_id: NCBITaxon:41294
+  source: PREGO
+  taxon_label: Nitrobacteraceae
+  score: 1.42273
+- taxon_id: NCBITaxon:41297
+  source: PREGO
+  taxon_label: Sphingomonadaceae
+  score: 1.42273
+- taxon_id: NCBITaxon:4432
+  source: PREGO
+  score: 1.42273
+- taxon_id: NCBITaxon:551
+  source: PREGO
+  taxon_label: Erwinia
+  score: 1.42273
+- taxon_id: NCBITaxon:665874
+  source: PREGO
+  taxon_label: Limnohabitans
+  score: 1.42273
+- taxon_id: NCBITaxon:75682
+  source: PREGO
+  taxon_label: Oxalobacteraceae
+  score: 1.42273
+- taxon_id: NCBITaxon:76892
+  source: PREGO
+  taxon_label: Caulobacteraceae
+  score: 1.42273
+- taxon_id: NCBITaxon:80864
+  source: PREGO
+  taxon_label: Comamonadaceae
+  score: 1.42273
+- taxon_id: NCBITaxon:85961
+  source: PREGO
+  score: 1.42273
+- taxon_id: NCBITaxon:119060
+  source: PREGO
+  taxon_label: Burkholderiaceae
+  score: 1.40297
+- taxon_id: NCBITaxon:1268
+  source: PREGO
+  taxon_label: Micrococcaceae
+  score: 1.40297
+- taxon_id: NCBITaxon:13687
+  source: PREGO
+  taxon_label: Sphingomonas
+  score: 1.40297
+- taxon_id: NCBITaxon:204432
+  source: PREGO
+  taxon_label: Terriglobia
+  score: 1.40297
+- taxon_id: NCBITaxon:33973
+  source: PREGO
+  taxon_label: Acidobacterium
+  score: 1.40297
+- taxon_id: NCBITaxon:34073
+  source: PREGO
+  taxon_label: Variovorax paradoxus
+  score: 1.40297
+- taxon_id: NCBITaxon:357
+  source: PREGO
+  taxon_label: Agrobacterium
+  score: 1.40297
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

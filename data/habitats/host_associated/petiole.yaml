@@ -1,0 +1,23 @@
+identifier: BTO:0001041
+label: petiole
+definition: A slender stem that supports the blade of a foliage leaf.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.7406232b7e
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5319
+  source_label: Petiole
+  source_path: Host-associated > Plants > Phyllosphere > Petiole
+  mapping_predicate: skos:exactMatch
+  assertion_count: 3
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

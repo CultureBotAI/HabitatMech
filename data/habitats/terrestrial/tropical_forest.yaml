@@ -1,0 +1,25 @@
+identifier: ENVO:01001803
+label: tropical forest
+definition: A forest ecosystem which is subject to tropical climate conditions.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00001998
+- ENVO:01001243
+- ENVO:01001701
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6014
+  source_label: Tropical forest
+  source_path: Environmental > Terrestrial > Soil > Tropical forest
+  mapping_predicate: skos:exactMatch
+  assertion_count: 3
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

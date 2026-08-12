@@ -1,0 +1,17 @@
+identifier: habitatmech:GOLD.2bf3ab7d2f
+label: Influent
+habitat_category: ENGINEERED
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00002272
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6077
+  source_label: Influent
+  source_path: Engineered > WWTP > Influent
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

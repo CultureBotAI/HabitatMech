@@ -1,0 +1,41 @@
+identifier: ENVO:02000140
+label: fluid environmental material
+definition: An environmental material which is unable to resist shear forces and continuously
+  deforms when subject to them.
+definition_source: ENVO
+habitat_category: HOST_ASSOCIATED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Rumen fluid
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: Rumen-fluid
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+- synonym_text: fluid
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00010483
+- habitatmech:GOLD.d3869ad37f
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:rumen-fluid
+  source_label: Rumen-fluid
+  mapping_predicate: skos:closeMatch
+  assertion_count: 10
+  assertion_unit: STRAIN
+- source: GOLD
+  source_id: gold.ecosystem:6389
+  source_label: Rumen fluid
+  source_path: Host-associated > Mammals > Digestive system > Stomach > Rumen fluid
+  mapping_predicate: skos:closeMatch
+  assertion_count: 21
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD. Grounding:
+    CLOSE.'

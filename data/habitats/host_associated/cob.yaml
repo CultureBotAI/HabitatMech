@@ -1,0 +1,61 @@
+identifier: BTO:0000266
+label: cob
+definition: The central axis/core of the ear (distal end of the lateral branch/ear
+  shoot) upon which the kernels (caryopses) are borne. The cob is similar to the central
+  spike of the tassel (male inflorescence) in that it produces multiple rows of paired
+  spikelets (polystichous phyllotaxy).
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: corn cob
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: corn cobs
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: corncob
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: corncobs
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: maize cob
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: maize cobs
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0001278
+- habitatmech:GOLD.7406232b7e
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5739
+  source_label: Cob
+  source_path: Host-associated > Plants > Phyllosphere > Cob
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: PREGO
+  source_id: BTO:0000266
+  source_label: cob
+  assertion_count: 2
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1110509
+  source: PREGO
+  taxon_label: Methanothrix harundinacea 6Ac
+  score: 3.0
+- taxon_id: NCBITaxon:1245026
+  source: PREGO
+  taxon_label: Heyndrickxia coagulans XZL9
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'

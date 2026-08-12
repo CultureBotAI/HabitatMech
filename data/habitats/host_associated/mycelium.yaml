@@ -1,0 +1,25 @@
+identifier: BTO:0001436
+label: mycelium
+definition: '1: The vegetative part of a fungus, consisting of a mass of branching,
+  threadlike hyphae. 2: A similar mass of fibers formed by certain bacteria.'
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- BTO:0001434
+- FOODON:03411261
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4461
+  source_label: Mycelium
+  source_path: Host-associated > Fungi > Mycelium
+  mapping_predicate: skos:exactMatch
+  assertion_count: 260
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

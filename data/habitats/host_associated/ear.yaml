@@ -1,0 +1,36 @@
+identifier: UBERON:0001690
+label: ear
+definition: Sense organ in vertebrates that is specialized for the detection of sound,
+  and the maintenance of balance. Includes the outer ear and middle ear, which collect
+  and transmit sound waves; and the inner ear, which contains the organs of balance
+  and (except in fish) hearing. Also includes the pinna, the visible part of the outer
+  ear, present in some mammals.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: auditory apparatus
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: auris
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0000020
+- UBERON:0010314
+- habitatmech:GOLD.b842078e17
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7382
+  source_label: Ear
+  source_path: 'Host-associated > Mammals: Human > Auditory/Hearing system > Ear'
+  mapping_predicate: skos:exactMatch
+  assertion_count: 9
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

@@ -1,0 +1,35 @@
+identifier: BTO:0001031
+label: peritoneal fluid
+definition: A liquid that is made in the abdominal cavity to lubricate the surface
+  of the tissue that lines the abdominal wall and pelvic cavity and covers most of
+  the organs in the abdomen.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: peritoneal fluids
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001031
+  source_label: peritoneal fluid
+  assertion_count: 2
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1216961
+  source: PREGO
+  taxon_label: Aeromonas sp. 159
+  score: 3.0
+- taxon_id: NCBITaxon:1461579
+  source: PREGO
+  taxon_label: Haemophilus massiliensis
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

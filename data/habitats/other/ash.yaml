@@ -1,0 +1,26 @@
+identifier: ENVO:02000090
+label: ash
+definition: An environmental material that is the non-aqueous, non-gaseous residues
+  that remain after something is burned.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Dust-Ash
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+parent_habitats:
+- ENVO:01000814
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:dust-ash
+  source_label: Dust-Ash
+  mapping_predicate: skos:closeMatch
+  assertion_count: 20
+  assertion_unit: STRAIN
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

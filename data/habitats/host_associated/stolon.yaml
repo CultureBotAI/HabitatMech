@@ -1,0 +1,24 @@
+identifier: BTO:0001306
+label: stolon
+definition: A horizontal branch from the base of a plant that produces new plants
+  from buds at its tip or nodes (as in the strawberry).
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- BTO:0000148
+- BTO:0001300
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8400
+  source_label: Stolon
+  source_path: Host-associated > Plants > Phyllosphere > Stem > Stolon
+  mapping_predicate: skos:exactMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

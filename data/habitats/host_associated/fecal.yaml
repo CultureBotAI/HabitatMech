@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.227b8ef4a5
+label: Fecal
+habitat_category: HOST_ASSOCIATED
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.523d63f6f3
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4968
+  source_label: Fecal
+  source_path: Host-associated > Fish > Digestive system > Intestine > Fecal
+  assertion_count: 9
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

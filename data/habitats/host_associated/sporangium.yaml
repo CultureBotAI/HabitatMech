@@ -1,0 +1,52 @@
+identifier: BTO:0001287
+label: sporangium
+definition: A structure in which spores are produced.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: sporangia
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: sporangial
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: sporangiums
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0001285
+- ENVO:01000890
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8120
+  source_label: Sporangium
+  source_path: Host-associated > Plants > Bryophytes > Moss > Sporangium
+  mapping_predicate: skos:exactMatch
+- source: PREGO
+  source_id: BTO:0001287
+  source_label: sporangium
+  assertion_count: 3
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1246995
+  source: PREGO
+  taxon_label: Actinoplanes friuliensis DSM 7358
+  score: 3.0
+- taxon_id: NCBITaxon:1834516
+  source: PREGO
+  taxon_label: Pseudofrankia asymbiotica
+  score: 3.0
+- taxon_id: NCBITaxon:588581
+  source: PREGO
+  taxon_label: Ruminiclostridium papyrosolvens DSM 2782
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'

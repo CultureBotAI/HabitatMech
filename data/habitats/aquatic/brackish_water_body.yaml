@@ -1,0 +1,28 @@
+identifier: ENVO:01001321
+label: brackish water body
+definition: A body of water which is primarily composed of brackish water.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Brackish
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+- synonym_text: brackish body of water
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:01001319
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:brackish
+  source_label: Brackish
+  mapping_predicate: skos:closeMatch
+  assertion_count: 86
+  assertion_unit: STRAIN
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

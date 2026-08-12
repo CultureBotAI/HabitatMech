@@ -1,0 +1,52 @@
+identifier: BTO:0000060
+label: alveolus
+definition: A tiny, thin-walled, capillary-rich sac in the lungs where the exchange
+  of oxygen and carbon dioxide takes place.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: air sac
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: air sacic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: air sacs
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: alveolal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: alveoli
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: alveolis
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: alveoluses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000060
+  source_label: alveolus
+  assertion_count: 2
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1204724
+  source: PREGO
+  taxon_label: Escherichia coli IMT2125
+  score: 3.0
+- taxon_id: NCBITaxon:475609
+  source: PREGO
+  taxon_label: Escherichia coli chi7122
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

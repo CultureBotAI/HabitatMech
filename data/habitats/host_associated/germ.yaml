@@ -1,0 +1,125 @@
+identifier: BTO:0000514
+label: germ
+definition: A small mass of living substance capable of developing into an organism
+  or one of its parts.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- BTO:0000174
+- BTO:0000720
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000514
+  source_label: germ
+  assertion_count: 41
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1232438
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-01
+  score: 3.0
+- taxon_id: NCBITaxon:1232439
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-03
+  score: 3.0
+- taxon_id: NCBITaxon:1232440
+  source: PREGO
+  taxon_label: Hungatella hathewayi VE202-04
+  score: 3.0
+- taxon_id: NCBITaxon:1232442
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-06
+  score: 3.0
+- taxon_id: NCBITaxon:1232443
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-13
+  score: 3.0
+- taxon_id: NCBITaxon:1232444
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-15
+  score: 3.0
+- taxon_id: NCBITaxon:1232445
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-16
+  score: 3.0
+- taxon_id: NCBITaxon:1232446
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-18
+  score: 3.0
+- taxon_id: NCBITaxon:1232447
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-09
+  score: 3.0
+- taxon_id: NCBITaxon:1232448
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-07
+  score: 3.0
+- taxon_id: NCBITaxon:1232449
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-08
+  score: 3.0
+- taxon_id: NCBITaxon:1232452
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-14
+  score: 3.0
+- taxon_id: NCBITaxon:1232453
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-21
+  score: 3.0
+- taxon_id: NCBITaxon:1232454
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-26
+  score: 3.0
+- taxon_id: NCBITaxon:1232457
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-27
+  score: 3.0
+- taxon_id: NCBITaxon:1232458
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-29
+  score: 3.0
+- taxon_id: NCBITaxon:1232460
+  source: PREGO
+  taxon_label: Clostridiales bacterium VE202-28
+  score: 3.0
+- taxon_id: NCBITaxon:1697779
+  source: PREGO
+  taxon_label: Clostridia bacterium UC5.1-1F7
+  score: 3.0
+- taxon_id: NCBITaxon:1697780
+  source: PREGO
+  taxon_label: Clostridia bacterium UC5.1-1D2
+  score: 3.0
+- taxon_id: NCBITaxon:1697781
+  source: PREGO
+  taxon_label: Clostridia bacterium UC5.1-2E3
+  score: 3.0
+- taxon_id: NCBITaxon:1697782
+  source: PREGO
+  taxon_label: Clostridia bacterium UC5.1-1A9
+  score: 3.0
+- taxon_id: NCBITaxon:1697783
+  source: PREGO
+  taxon_label: Clostridia bacterium UC5.1-1F8
+  score: 3.0
+- taxon_id: NCBITaxon:1697784
+  source: PREGO
+  taxon_label: Clostridia bacterium UC5.1-1D4
+  score: 3.0
+- taxon_id: NCBITaxon:1697785
+  source: PREGO
+  taxon_label: Clostridia bacterium UC5.1-2D9
+  score: 3.0
+- taxon_id: NCBITaxon:1697786
+  source: PREGO
+  taxon_label: Clostridia bacterium UC5.1-2E1
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

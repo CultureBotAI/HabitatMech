@@ -1,0 +1,35 @@
+identifier: ENVO:01000890
+label: area of moss-dominated vegetation
+definition: An area of a planet's surface which is primarily covered by mosses and
+  which is in contact with an atmospheric column extending from the planetary boundary
+  layer to the planet's exosphere with little to no physical obstruction.
+definition_source: ENVO
+habitat_category: HOST_ASSOCIATED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Moss
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- ENVO:01001305
+- habitatmech:GOLD.35beb98884
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:moss
+  source_label: Moss
+  mapping_predicate: skos:closeMatch
+  assertion_count: 59
+  assertion_unit: STRAIN
+- source: GOLD
+  source_id: gold.ecosystem:8110
+  source_label: Moss
+  source_path: Host-associated > Plants > Bryophytes > Moss
+  mapping_predicate: skos:closeMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD. Grounding:
+    CLOSE.'

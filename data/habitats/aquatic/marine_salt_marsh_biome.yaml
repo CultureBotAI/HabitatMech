@@ -1,0 +1,147 @@
+identifier: ENVO:01000022
+label: marine salt marsh biome
+definition: 'The marine salt marsh biome comprises marshes that are transitional intertidals
+  between land and salty or brackish marine water (e.g.: sloughs, bays, estuaries).
+  It is dominated by halophytic (salt tolerant) herbaceous plants. The daily tidal
+  surges bring in nutrients, which tend to settle in roots of the plants within the
+  salt marsh. The natural chemical activity of salty (or brackish) water and the tendency
+  of algae to bloom in the shallow unshaded water also allow for great biodiversity.'
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Salt-marsh
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+- synonym_text: marine salt marsh
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: marine salt marshes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: marine salt marshic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00000447
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:salt-marsh
+  source_label: Salt-marsh
+  mapping_predicate: skos:closeMatch
+  assertion_count: 41
+  assertion_unit: STRAIN
+- source: PREGO
+  source_id: ENVO:01000022
+  source_label: marine salt marsh biome
+  assertion_count: 121
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:1074
+  source: PREGO
+  taxon_label: Rhodoblastus acidophilus
+  score: 4.0
+- taxon_id: NCBITaxon:107401
+  source: PREGO
+  taxon_label: Tenacibaculum maritimum
+  score: 4.0
+- taxon_id: NCBITaxon:109263
+  source: PREGO
+  taxon_label: Halothiobacillus kellyi
+  score: 4.0
+- taxon_id: NCBITaxon:1265
+  source: PREGO
+  taxon_label: Ruminococcus flavefaciens
+  score: 4.0
+- taxon_id: NCBITaxon:1358
+  source: PREGO
+  taxon_label: Lactococcus lactis
+  score: 4.0
+- taxon_id: NCBITaxon:139239
+  source: PREGO
+  taxon_label: Pyrenophora lolii
+  score: 4.0
+- taxon_id: NCBITaxon:147
+  source: PREGO
+  taxon_label: Spirochaeta aurantia
+  score: 4.0
+- taxon_id: NCBITaxon:156
+  source: PREGO
+  taxon_label: Teretinema zuelzerae
+  score: 4.0
+- taxon_id: NCBITaxon:158192
+  source: PREGO
+  taxon_label: Desulfuromonas michiganensis
+  score: 4.0
+- taxon_id: NCBITaxon:163248
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:173
+  source: PREGO
+  taxon_label: Leptospira interrogans
+  score: 4.0
+- taxon_id: NCBITaxon:173764
+  source: PREGO
+  taxon_label: Cytophaga sp. MBIC01539
+  score: 4.0
+- taxon_id: NCBITaxon:174
+  source: PREGO
+  taxon_label: Leptospira borgpetersenii
+  score: 4.0
+- taxon_id: NCBITaxon:174302
+  source: PREGO
+  taxon_label: Phaeosphaeria spartinicola
+  score: 4.0
+- taxon_id: NCBITaxon:174315
+  source: PREGO
+  taxon_label: Mycosphaerella sp. 2 SAP133
+  score: 4.0
+- taxon_id: NCBITaxon:179326
+  source: PREGO
+  taxon_label: Schizothecium curvisporum
+  score: 4.0
+- taxon_id: NCBITaxon:1855
+  source: PREGO
+  taxon_label: Frankia sp.
+  score: 4.0
+- taxon_id: NCBITaxon:214688
+  source: PREGO
+  taxon_label: Gemmata obscuriglobus UQM 2246
+  score: 4.0
+- taxon_id: NCBITaxon:226126
+  source: PREGO
+  taxon_label: Saccharomyces mikatae IFO 1815
+  score: 4.0
+- taxon_id: NCBITaxon:234267
+  source: PREGO
+  taxon_label: Candidatus Solibacter usitatus Ellin6076
+  score: 4.0
+- taxon_id: NCBITaxon:264951
+  source: PREGO
+  taxon_label: Paecilomyces variotii
+  score: 4.0
+- taxon_id: NCBITaxon:266940
+  source: PREGO
+  taxon_label: Kineococcus radiotolerans SRS30216 = ATCC BAA-149
+  score: 4.0
+- taxon_id: NCBITaxon:28122
+  source: PREGO
+  taxon_label: Fibrobacter intestinalis
+  score: 4.0
+- taxon_id: NCBITaxon:28251
+  source: PREGO
+  taxon_label: Ornithobacterium rhinotracheale
+  score: 4.0
+- taxon_id: NCBITaxon:28262
+  source: PREGO
+  taxon_label: Thermodesulfovibrio yellowstonii
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, PREGO. Grounding:
+    EXACT.'

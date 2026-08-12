@@ -1,0 +1,90 @@
+identifier: ENVO:00000133
+label: glacier
+definition: An ice mass which is of sufficient mass that the action of gravity upon
+  it overcomes the frictional forces holding it in place, causing it to deform and
+  flow towards lower elevation.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: RockGlacier
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: RockGlacier
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: RockGlaciers
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: glacial feature
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: glaciers
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: rock glacier
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: rock glacier
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: rock glaciers
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00000446
+- ENVO:01001691
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8532
+  source_label: Glacier
+  source_path: Environmental > Terrestrial > Glacier
+  mapping_predicate: skos:exactMatch
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: PREGO
+  source_id: ENVO:00000133
+  source_label: glacier
+  assertion_count: 8
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:235888
+  source: PREGO
+  taxon_label: Salinibacterium
+  score: 4.0
+- taxon_id: NCBITaxon:29580
+  source: PREGO
+  taxon_label: Janthinobacterium
+  score: 4.0
+- taxon_id: NCBITaxon:459471
+  source: PREGO
+  taxon_label: Flavobacterium tiangeerense
+  score: 4.0
+- taxon_id: NCBITaxon:748908
+  source: PREGO
+  taxon_label: Alpinimonas psychrophila
+  score: 4.0
+- taxon_id: NCBITaxon:76634
+  source: PREGO
+  taxon_label: Mycetocola
+  score: 4.0
+- taxon_id: NCBITaxon:96492
+  source: PREGO
+  taxon_label: Frigoribacterium
+  score: 4.0
+- taxon_id: NCBITaxon:728004
+  source: PREGO
+  taxon_label: Glaciimonas immobilis
+  score: 3.0
+- taxon_id: NCBITaxon:84567
+  source: PREGO
+  taxon_label: Pedobacter
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'

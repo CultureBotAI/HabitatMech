@@ -1,0 +1,29 @@
+identifier: ENVO:06105211
+label: runoff
+definition: Liquid water which 1) flows over land and 2) is not absorbed or retained
+  by the materials if flows over or through.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: overland flow
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: surface runoff
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00002006
+- habitatmech:GOLD.452a98786f
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8075
+  source_label: Runoff
+  source_path: Environmental > Aquatic > Freshwater > Simulated rainfall > Runoff
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

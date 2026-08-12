@@ -1,0 +1,22 @@
+identifier: habitatmech:GOLD.391a34e025
+label: Ileum
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0002116
+- habitatmech:GOLD.f131dcac3d
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5025
+  source_label: Ileum
+  source_path: 'Host-associated > Mammals: Human > Digestive system > Small intestine
+    > Ileum'
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

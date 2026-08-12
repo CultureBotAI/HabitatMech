@@ -1,0 +1,124 @@
+identifier: ENVO:01000073
+label: marine oligotrophic desert
+definition: A marine water mass which is composed primarily of water with low concentrations
+  of nutrients.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: marine oligotrophic deserts
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:01000686
+source_attestations:
+- source: PREGO
+  source_id: ENVO:01000073
+  source_label: marine oligotrophic desert
+  assertion_count: 81
+  assertion_unit: TAXON
+  score: 1.25361
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:3068
+  source: PREGO
+  score: 1.25361
+- taxon_id: NCBITaxon:313595
+  source: PREGO
+  taxon_label: Psychroflexus torquis ATCC 700755
+  score: 1.21786
+- taxon_id: NCBITaxon:583355
+  source: PREGO
+  taxon_label: Coraliomargarita akajimensis DSM 45221
+  score: 1.20943
+- taxon_id: NCBITaxon:1774373
+  source: PREGO
+  taxon_label: Alteromonas mediterranea DE
+  score: 1.18439
+- taxon_id: NCBITaxon:756272
+  source: PREGO
+  taxon_label: Rubinisphaera brasiliensis DSM 5305
+  score: 1.17323
+- taxon_id: NCBITaxon:243090
+  source: PREGO
+  taxon_label: Rhodopirellula baltica SH 1
+  score: 1.16981
+- taxon_id: NCBITaxon:391625
+  source: PREGO
+  taxon_label: Plesiocystis pacifica SIR-1
+  score: 1.16936
+- taxon_id: NCBITaxon:378806
+  source: PREGO
+  taxon_label: Allostigmatella aurantiaca DW4/3-1
+  score: 1.16206
+- taxon_id: NCBITaxon:240016
+  source: PREGO
+  taxon_label: Verrucomicrobium spinosum DSM 4136 = JCM 18804
+  score: 1.16006
+- taxon_id: NCBITaxon:313606
+  source: PREGO
+  taxon_label: Microscilla marina ATCC 23134
+  score: 1.14785
+- taxon_id: NCBITaxon:7955
+  source: PREGO
+  score: 1.14252
+- taxon_id: NCBITaxon:225937
+  source: PREGO
+  taxon_label: Marinobacter adhaerens HP15
+  score: 1.14129
+- taxon_id: NCBITaxon:575540
+  source: PREGO
+  taxon_label: Isosphaera pallida ATCC 43644
+  score: 1.14089
+- taxon_id: NCBITaxon:530564
+  source: PREGO
+  taxon_label: Pirellula staleyi DSM 6068
+  score: 1.1404
+- taxon_id: NCBITaxon:502025
+  source: PREGO
+  taxon_label: Haliangium ochraceum DSM 14365
+  score: 1.14017
+- taxon_id: NCBITaxon:216432
+  source: PREGO
+  taxon_label: Croceibacter atlanticus HTCC2559
+  score: 1.13789
+- taxon_id: NCBITaxon:314230
+  source: PREGO
+  taxon_label: Blastopirellula marina DSM 3645
+  score: 1.1376
+- taxon_id: NCBITaxon:443152
+  source: PREGO
+  taxon_label: Marinobacter algicola DG893
+  score: 1.13642
+- taxon_id: NCBITaxon:504472
+  source: PREGO
+  taxon_label: Spirosoma linguale DSM 74
+  score: 1.13631
+- taxon_id: NCBITaxon:344747
+  source: PREGO
+  taxon_label: Gimesia maris DSM 8797
+  score: 1.13582
+- taxon_id: NCBITaxon:3055
+  source: PREGO
+  score: 1.1344
+- taxon_id: NCBITaxon:518766
+  source: PREGO
+  taxon_label: Rhodothermus marinus DSM 4252
+  score: 1.13038
+- taxon_id: NCBITaxon:313603
+  source: PREGO
+  taxon_label: Maribacter sp. HTCC2170
+  score: 1.12969
+- taxon_id: NCBITaxon:45351
+  source: PREGO
+  score: 1.12937
+- taxon_id: NCBITaxon:264462
+  source: PREGO
+  taxon_label: Bdellovibrio bacteriovorus HD100
+  score: 1.12391
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

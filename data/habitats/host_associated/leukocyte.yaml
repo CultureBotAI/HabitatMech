@@ -1,0 +1,159 @@
+identifier: BTO:0000751
+label: leukocyte
+definition: Any of the blood cells that are colorless, lack hemoglobin, contain a
+  nucleus, and include the lymphocytes, monocytes, neutrophils, eosinophils, and basophils.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: PMN cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: PMN cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: PMNC
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: immune cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: immune cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: leucocyte
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: leucocytes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: leukocytes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: polymorphonuclear cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: polymorphonuclear cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: white blood cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: white blood cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000574
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000751
+  source_label: leukocyte
+  assertion_count: 37
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:1263
+  source: PREGO
+  taxon_label: Ruminococcus
+  score: 4.0
+- taxon_id: NCBITaxon:1485
+  source: PREGO
+  taxon_label: Clostridium
+  score: 4.0
+- taxon_id: NCBITaxon:1578
+  source: PREGO
+  taxon_label: Lactobacillus
+  score: 4.0
+- taxon_id: NCBITaxon:171549
+  source: PREGO
+  taxon_label: Bacteroidales
+  score: 4.0
+- taxon_id: NCBITaxon:186802
+  source: PREGO
+  taxon_label: Eubacteriales
+  score: 4.0
+- taxon_id: NCBITaxon:191303
+  source: PREGO
+  taxon_label: Turicibacter
+  score: 4.0
+- taxon_id: NCBITaxon:248039
+  source: PREGO
+  taxon_label: Mucispirillum schaedleri
+  score: 4.0
+- taxon_id: NCBITaxon:31979
+  source: PREGO
+  taxon_label: Clostridiaceae
+  score: 4.0
+- taxon_id: NCBITaxon:541000
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:543
+  source: PREGO
+  taxon_label: Enterobacteriaceae
+  score: 4.0
+- taxon_id: NCBITaxon:1205679
+  source: PREGO
+  taxon_label: Bifidobacterium longum subsp. longum CECT 7347
+  score: 3.0
+- taxon_id: NCBITaxon:1207542
+  source: PREGO
+  taxon_label: Bifidobacterium bifidum LMG 13195
+  score: 3.0
+- taxon_id: NCBITaxon:1292046
+  source: PREGO
+  taxon_label: Desulfobulbus sp. oral taxon 041 str. Dsb1-5
+  score: 3.0
+- taxon_id: NCBITaxon:1496
+  source: PREGO
+  taxon_label: Clostridioides difficile
+  score: 3.0
+- taxon_id: NCBITaxon:212042
+  source: PREGO
+  taxon_label: Anaplasma phagocytophilum str. HZ
+  score: 3.0
+- taxon_id: NCBITaxon:354242
+  source: PREGO
+  taxon_label: Campylobacter jejuni subsp. jejuni 81-176
+  score: 3.0
+- taxon_id: NCBITaxon:68886
+  source: PREGO
+  taxon_label: Theileria orientalis
+  score: 3.0
+- taxon_id: NCBITaxon:75985
+  source: PREGO
+  taxon_label: Mannheimia haemolytica
+  score: 3.0
+- taxon_id: NCBITaxon:186803
+  source: PREGO
+  taxon_label: Lachnospiraceae
+  score: 1.78273
+- taxon_id: NCBITaxon:1598
+  source: PREGO
+  taxon_label: Limosilactobacillus reuteri
+  score: 1.69324
+- taxon_id: NCBITaxon:33042
+  source: PREGO
+  taxon_label: Coprococcus
+  score: 1.69324
+- taxon_id: NCBITaxon:119852
+  source: PREGO
+  taxon_label: Oscillospira
+  score: 1.6655
+- taxon_id: NCBITaxon:35493
+  source: PREGO
+  score: 1.65121
+- taxon_id: NCBITaxon:838
+  source: PREGO
+  taxon_label: Prevotella
+  score: 1.62176
+- taxon_id: NCBITaxon:158851
+  source: PREGO
+  taxon_label: Trabulsiella
+  score: 1.57521
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

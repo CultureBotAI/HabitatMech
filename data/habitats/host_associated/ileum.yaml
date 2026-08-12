@@ -1,0 +1,171 @@
+identifier: BTO:0000620
+label: ileum
+definition: The last division of the small intestine extending between the jejunum
+  and large intestine.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: distal intestine
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: distal intestines
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: distal intestinous
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: ilea
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: ileal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: ileums
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: intestinum ilea
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: intestinum ileal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: intestinum ileum
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: intestinum ileums
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: lower intestine
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: lower intestines
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: lower intestinous
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: posterior intestine
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: posterior intestines
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: posterior intestinous
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000620
+  source_label: ileum
+  assertion_count: 216
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:114627
+  source: PREGO
+  taxon_label: Alkaliphilus
+  score: 4.0
+- taxon_id: NCBITaxon:119852
+  source: PREGO
+  taxon_label: Oscillospira
+  score: 4.0
+- taxon_id: NCBITaxon:1263
+  source: PREGO
+  taxon_label: Ruminococcus
+  score: 4.0
+- taxon_id: NCBITaxon:1279
+  source: PREGO
+  taxon_label: Staphylococcus
+  score: 4.0
+- taxon_id: NCBITaxon:1280
+  source: PREGO
+  taxon_label: Staphylococcus aureus
+  score: 4.0
+- taxon_id: NCBITaxon:1301
+  source: PREGO
+  taxon_label: Streptococcus
+  score: 4.0
+- taxon_id: NCBITaxon:135621
+  source: PREGO
+  taxon_label: Pseudomonadaceae
+  score: 4.0
+- taxon_id: NCBITaxon:1357
+  source: PREGO
+  taxon_label: Lactococcus
+  score: 4.0
+- taxon_id: NCBITaxon:13687
+  source: PREGO
+  taxon_label: Sphingomonas
+  score: 4.0
+- taxon_id: NCBITaxon:137838
+  source: PREGO
+  taxon_label: Clostridium neonatale
+  score: 4.0
+- taxon_id: NCBITaxon:1485
+  source: PREGO
+  taxon_label: Clostridium
+  score: 4.0
+- taxon_id: NCBITaxon:1502
+  source: PREGO
+  taxon_label: Clostridium perfringens
+  score: 4.0
+- taxon_id: NCBITaxon:1578
+  source: PREGO
+  taxon_label: Lactobacillus
+  score: 4.0
+- taxon_id: NCBITaxon:1598
+  source: PREGO
+  taxon_label: Limosilactobacillus reuteri
+  score: 4.0
+- taxon_id: NCBITaxon:1633
+  source: PREGO
+  taxon_label: Limosilactobacillus vaginalis
+  score: 4.0
+- taxon_id: NCBITaxon:1678
+  source: PREGO
+  taxon_label: Bifidobacterium
+  score: 4.0
+- taxon_id: NCBITaxon:1694
+  source: PREGO
+  taxon_label: Bifidobacterium pseudolongum
+  score: 4.0
+- taxon_id: NCBITaxon:171549
+  source: PREGO
+  taxon_label: Bacteroidales
+  score: 4.0
+- taxon_id: NCBITaxon:171550
+  source: PREGO
+  taxon_label: Rikenellaceae
+  score: 4.0
+- taxon_id: NCBITaxon:1716
+  source: PREGO
+  taxon_label: Corynebacterium
+  score: 4.0
+- taxon_id: NCBITaxon:186802
+  source: PREGO
+  taxon_label: Eubacteriales
+  score: 4.0
+- taxon_id: NCBITaxon:186803
+  source: PREGO
+  taxon_label: Lachnospiraceae
+  score: 4.0
+- taxon_id: NCBITaxon:186804
+  source: PREGO
+  taxon_label: Peptostreptococcaceae
+  score: 4.0
+- taxon_id: NCBITaxon:189330
+  source: PREGO
+  taxon_label: Dorea
+  score: 4.0
+- taxon_id: NCBITaxon:194924
+  source: PREGO
+  taxon_label: Desulfovibrionaceae
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.c1f33a02a6
+label: Rumen
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0007365
+- habitatmech:GOLD.cd6e81f421
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7512
+  source_label: Rumen
+  source_path: Host-associated > Mammals > Digestive system > Foregut > Rumen
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 4989
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

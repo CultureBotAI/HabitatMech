@@ -1,0 +1,37 @@
+identifier: UBERON:0001159
+label: sigmoid colon
+definition: The part of the large intestine that is closest to the rectum and anus.
+  It forms a loop that averages about 40 cm. in length, and normally lies within the
+  pelvis, but on account of its freedom of movement it is liable to be displaced into
+  the abdominal cavity.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: colon sigmoideum
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: pelvic colon
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: sigmoid flexure
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0000168
+- habitatmech:GOLD.5b0aa7456c
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:3921
+  source_label: Sigmoid colon
+  source_path: 'Host-associated > Mammals: Human > Digestive system > Large intestine
+    > Sigmoid colon'
+  mapping_predicate: skos:exactMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

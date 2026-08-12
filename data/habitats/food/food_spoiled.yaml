@@ -1,0 +1,26 @@
+identifier: FOODON:00003366
+label: food (spoiled)
+definition: Food material unsuitable to ingest by a consumer due to spoilage related
+  to the type of material it is, or to packaging or storage.
+definition_source: FOODON
+habitat_category: FOOD
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Spoiled
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+parent_habitats:
+- FOODON:00002454
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:spoiled
+  source_label: Spoiled
+  mapping_predicate: skos:closeMatch
+  assertion_count: 3
+  assertion_unit: STRAIN
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

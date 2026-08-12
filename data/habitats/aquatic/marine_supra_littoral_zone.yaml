@@ -1,0 +1,43 @@
+identifier: ENVO:01000124
+label: marine supra-littoral zone
+definition: The supralittoral zone is the area above the spring high tide line that
+  is regularly splashed, but not submerged by ocean water. Seawater penetrates these
+  elevated areas only during storms with high tides.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Supratidal zone
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: marine supralittoral zone
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: splash zone
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: spray zone
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: supralittoral zone
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: supratidal zone
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00001999
+- ENVO:01001201
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8047
+  source_label: Supratidal zone
+  source_path: Environmental > Aquatic > Marine > Supratidal zone
+  mapping_predicate: skos:closeMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

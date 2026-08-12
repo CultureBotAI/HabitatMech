@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.0f6b0e6bf3
+label: Bark
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- BTO:0001301
+- habitatmech:GOLD.be8f52fddd
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5752
+  source_label: Bark
+  source_path: Host-associated > Plants > Phyllosphere > Caulosphere > Bark
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 131
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

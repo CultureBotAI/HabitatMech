@@ -1,0 +1,22 @@
+identifier: ENVO:2000007
+label: biochar
+definition: charcoal that is used as a soil amendment.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:01000560
+- habitatmech:GOLD.a744ade0d8
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4616
+  source_label: Biochar
+  source_path: Engineered > Industrial production > Biochar
+  mapping_predicate: skos:exactMatch
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

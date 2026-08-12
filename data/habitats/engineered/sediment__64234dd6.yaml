@@ -1,0 +1,22 @@
+identifier: habitatmech:GOLD.7e27a52150
+label: Sediment
+habitat_category: ENGINEERED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00001997
+- ENVO:00002007
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6076
+  source_label: Sediment
+  source_path: Engineered > Wastewater > Industrial wastewater > Acid mine drainage
+    > Sediment
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 3
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

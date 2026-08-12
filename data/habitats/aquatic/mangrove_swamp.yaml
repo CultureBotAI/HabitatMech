@@ -1,0 +1,68 @@
+identifier: ENVO:00000057
+label: mangrove swamp
+definition: A swamp which is located in tropical or subtropical environments and is
+  determined by communities of trees and shrubs growing saline coastal environments.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: MangroveForest
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: MangroveForest
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: MangroveForests
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: mangal
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: mangal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: mangalic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: mangals
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: mangrove swampic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: mangrove swamps
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: woodland
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00000230
+- habitatmech:GOLD.115edc36f8
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4018
+  source_label: Mangrove swamp
+  source_path: Environmental > Aquatic > Marine > Intertidal zone > Mangrove swamp
+  mapping_predicate: skos:exactMatch
+  assertion_count: 3
+  assertion_unit: ORGANISM
+- source: PREGO
+  source_id: ENVO:00000057
+  source_label: mangrove swamp
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:405436
+  source: PREGO
+  taxon_label: Micromonospora pattaloongensis
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'

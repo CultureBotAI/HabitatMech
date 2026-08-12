@@ -1,0 +1,60 @@
+identifier: ENVO:01000066
+label: marine anoxic zone
+definition: Marine anoxic zones are areas of marine water that are depleted of dissolved
+  oxygen. This condition is generally found in areas that have restricted water exchange.
+  In most cases, oxygen is prevented from reaching the deeper levels by a physical
+  barrier (sill) as well as by a pronounced density stratification. Anoxic conditions
+  will occur if the rate of oxidation of organic matter by bacteria is greater than
+  the supply of dissolved oxygen.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: dead
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: dead zone
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: dead zone
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: marine anoxic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: marine anoxics
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:01001201
+source_attestations:
+- source: PREGO
+  source_id: ENVO:01000066
+  source_label: marine anoxic zone
+  assertion_count: 4
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1089550
+  source: PREGO
+  taxon_label: Salisaeta longa DSM 21114
+  score: 3.0
+- taxon_id: NCBITaxon:35743
+  source: PREGO
+  taxon_label: Halorubrum sodomense
+  score: 3.0
+- taxon_id: NCBITaxon:43928
+  source: PREGO
+  taxon_label: Halobaculum gomorrense
+  score: 3.0
+- taxon_id: NCBITaxon:748449
+  source: PREGO
+  taxon_label: Halobacteroides halobius DSM 5150
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

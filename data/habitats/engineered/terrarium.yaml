@@ -1,0 +1,21 @@
+identifier: ENVO:00000349
+label: terrarium
+definition: A terrarium is a vivarium which simulates a terrestrial environment.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00010622
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8029
+  source_label: Terrarium
+  source_path: Engineered > Artificial ecosystem > Vivarium > Terrarium
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

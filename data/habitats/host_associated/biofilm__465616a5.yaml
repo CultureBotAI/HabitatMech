@@ -1,0 +1,22 @@
+identifier: habitatmech:GOLD.f1e0d494f8
+label: Biofilm
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00002034
+- habitatmech:GOLD.19a1ce7868
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5322
+  source_label: Biofilm
+  source_path: Host-associated > Plants > Phyllosphere > Phylloplane/Leaf surface
+    > Biofilm
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 42
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

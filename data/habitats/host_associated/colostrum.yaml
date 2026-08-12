@@ -1,0 +1,24 @@
+identifier: UBERON:0001914
+label: colostrum
+definition: The thin, yellow, serous fluid secreted by the mammary glands during pregnancy
+  and immediately postpartum before lactation begins. It consists of immunologically
+  active substances, white blood cells, water, protein, fat, and carbohydrates.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0006539
+- habitatmech:GOLD.1a6a558ccf
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6366
+  source_label: Colostrum
+  source_path: Host-associated > Mammals > Integumentary system > Mammary gland >
+    Colostrum
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

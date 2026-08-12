@@ -1,0 +1,29 @@
+identifier: FOODON:03411134
+label: mammal
+definition: Mammals (from Latin mamma "breast") are vertebrate animals constituting
+  the class Mammalia, and characterized by the presence of mammary glands which in
+  females produce milk for feeding (nursing) their young, a neocortex (a region of
+  the brain), fur or hair, and three middle ear bones.
+definition_source: FOODON
+habitat_category: FOOD
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Aquatic-mammal
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+parent_habitats:
+- FOODON:00005501
+- FOODON:03411297
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:aquatic-mammal
+  source_label: Aquatic-mammal
+  mapping_predicate: skos:closeMatch
+  assertion_count: 69
+  assertion_unit: STRAIN
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

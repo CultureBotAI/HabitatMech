@@ -1,0 +1,40 @@
+identifier: BTO:0001472
+label: peritoneum
+definition: The smooth transparent serous membrane that lines the cavity of the abdomen
+  of a mammal and is folded inward over the abdominal and pelvic viscera.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: peritonea
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: peritoneal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: peritoneums
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001472
+  source_label: peritoneum
+  assertion_count: 2
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1528099
+  source: PREGO
+  taxon_label: Lawsonella clevelandensis
+  score: 3.0
+- taxon_id: NCBITaxon:1691979
+  source: PREGO
+  taxon_label: Chitinophagaceae bacterium PMP191F
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

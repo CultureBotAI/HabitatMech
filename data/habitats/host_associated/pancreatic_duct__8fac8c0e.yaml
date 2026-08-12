@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.8306e80f10
+label: Pancreatic duct
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0007329
+- habitatmech:GOLD.0e6db1ec76
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6722
+  source_label: Pancreatic duct
+  source_path: Host-associated > Mammals > Digestive system > Pancreas > Pancreatic
+    duct
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

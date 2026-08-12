@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.854d6d1a1c
+label: Agricultural land
+habitat_category: TERRESTRIAL
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00000077
+- ENVO:01001184
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5768
+  source_label: Agricultural land
+  source_path: Environmental > Terrestrial > Soil > Arable > Agricultural land
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

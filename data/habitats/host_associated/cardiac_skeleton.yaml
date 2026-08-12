@@ -1,0 +1,51 @@
+identifier: UBERON:0004292
+label: cardiac skeleton
+definition: Dense connective tissue that separates the atria from the ventricles and
+  provides physical support for the heart.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: anulus fibrosus dexter cordis
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: anulus fibrosus sinister cordis
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: cardiac fibrous skeleton
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: fibrous skeleton of heart
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: heart fibrous skeleton
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: skeleton of heart
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: trigona fibrosa
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: trigonum fibrosum dextrum cordis
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: trigonum fibrosum sinistrum cordis
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0003837
+- habitatmech:GOLD.805ee181bd
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6613
+  source_label: Cardiac skeleton
+  source_path: 'Host-associated > Mammals: Human > Circulatory system > Heart > Cardiac
+    skeleton'
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

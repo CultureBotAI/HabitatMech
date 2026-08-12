@@ -1,0 +1,31 @@
+identifier: BTO:0001457
+label: hip
+definition: The laterally projecting region of each side of the lower or posterior
+  part of the mammalian trunk formed by the lateral parts of the pelvis and upper
+  part of the femur together with the fleshy parts covering them.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001457
+  source_label: hip
+  assertion_count: 2
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1292046
+  source: PREGO
+  taxon_label: Desulfobulbus sp. oral taxon 041 str. Dsb1-5
+  score: 3.0
+- taxon_id: NCBITaxon:411465
+  source: PREGO
+  taxon_label: Parvimonas micra ATCC 33270
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

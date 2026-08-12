@@ -1,0 +1,45 @@
+identifier: BTO:0000469
+label: flower
+definition: The reproductive structure of the anthophyta or angiosperms.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: flowers
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000469
+  source_label: flower
+  assertion_count: 6
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:1161919
+  source: PREGO
+  taxon_label: Erwinia piriflorinigrans CFBP 5888
+  score: 3.0
+- taxon_id: NCBITaxon:1225184
+  source: PREGO
+  taxon_label: Pantoea sp. A4
+  score: 3.0
+- taxon_id: NCBITaxon:15945
+  source: PREGO
+  score: 1.03652
+- taxon_id: NCBITaxon:35493
+  source: PREGO
+  score: 1.03652
+- taxon_id: NCBITaxon:3950
+  source: PREGO
+  score: 1.03652
+- taxon_id: NCBITaxon:4432
+  source: PREGO
+  score: 1.03652
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

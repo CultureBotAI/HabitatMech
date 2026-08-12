@@ -1,0 +1,749 @@
+id: https://w3id.org/habitatmech
+name: habitatmech
+title: HabitatMech - Microbial Habitat and Environment Schema
+description: |
+  LinkML schema for modeling microbial habitats and environments. Each
+  HabitatRecord is a single habitat or environmental context — "hypersaline
+  lake", "human large intestine", "activated sludge", "fermented seafood" —
+  grounded in ENVO / UBERON / FOODON / BTO and harmonized across the three
+  source vocabularies that describe where microbes are found:
+
+    * the JGI GOLD ecosystem classification (5-level ecosystem paths),
+    * BacDive isolation sources (where type strains were isolated from),
+    * PREGO habitat-organism associations (text-mined and curated).
+
+  The harmonization is the point. The same habitat is called
+  "Environmental > Aquatic > Marine > Intertidal zone" by GOLD,
+  "Marine-intertidal" by BacDive, and ENVO:00000316 by PREGO; a HabitatRecord
+  carries all three as `source_attestations` on one ontology-grounded concept,
+  with the per-source assertion counts that say how much data sits behind each.
+
+  Records are seeded from the inventories in `data/raw/` (extracted from
+  kg-microbe by `scripts/extract_source_inventory.py`) and curated
+  incrementally, mirroring the dismech / TraitMech / CultureMech workflow: one
+  YAML per habitat, an append-only curation trail, validation via
+  `just validate-all`.
+
+  The "Mech" half is `causal_graphs`: evidence-backed mechanism sketches
+  linking a habitat's physicochemical conditions to the microbial adaptations
+  they select for. Unlike the seeded descriptive fields, every causal edge must
+  carry a citation.
+
+license: https://creativecommons.org/publicdomain/zero/1.0/
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  habitatmech: https://w3id.org/habitatmech/
+  biolink: https://w3id.org/biolink/vocab/
+  # Primary habitat-grounding ontologies
+  ENVO: http://purl.obolibrary.org/obo/ENVO_
+  UBERON: http://purl.obolibrary.org/obo/UBERON_
+  FOODON: http://purl.obolibrary.org/obo/FOODON_
+  BTO: http://purl.obolibrary.org/obo/BTO_
+  PO: http://purl.obolibrary.org/obo/PO_
+  # Secondary / qualifier ontologies used by upstream mappings
+  PATO: http://purl.obolibrary.org/obo/PATO_
+  CHEBI: http://purl.obolibrary.org/obo/CHEBI_
+  GO: http://purl.obolibrary.org/obo/GO_
+  NCIT: http://purl.obolibrary.org/obo/NCIT_
+  OBI: http://purl.obolibrary.org/obo/OBI_
+  IAO: http://purl.obolibrary.org/obo/IAO_
+  RO: http://purl.obolibrary.org/obo/RO_
+  UO: http://purl.obolibrary.org/obo/UO_
+  PCO: http://purl.obolibrary.org/obo/PCO_
+  GENEPIO: http://purl.obolibrary.org/obo/GENEPIO_
+  METPO: https://w3id.org/metpo/
+  mesh: http://id.nlm.nih.gov/mesh/
+  SNOMED: http://snomed.info/id/
+  FAO: http://purl.obolibrary.org/obo/FAO_
+  PRIDE: https://www.ebi.ac.uk/pride/archive/projects/
+  # Taxonomy
+  NCBITaxon: http://purl.obolibrary.org/obo/NCBITaxon_
+  # Source vocabularies that are not ontologies — CURIE-shaped local ids
+  gold.ecosystem: https://gold.jgi.doe.gov/ecosystem/
+  bacdive.isolation_source: https://bacdive.dsmz.de/isolation-source/
+  # Provenance
+  PMID: http://www.ncbi.nlm.nih.gov/pubmed/
+  DOI: https://doi.org/
+  dcterms: http://purl.org/dc/terms/
+  skos: http://www.w3.org/2004/02/skos/core#
+  oboInOwl: http://www.geneontology.org/formats/oboInOwl#
+
+default_prefix: habitatmech
+default_range: string
+
+imports:
+  - linkml:types
+  # Shared, byte-identical Mech module: Discussion (knowledge gaps) + Dataset.
+  # Vendored + sha-pinned across the Mech repos — see culturebotai-claw#7.
+  # Do not edit this copy in isolation.
+  - mech_shared
+
+# ================================================================
+# ROOT CLASS — one YAML file per HabitatRecord
+# ================================================================
+
+classes:
+
+  HabitatRecord:
+    class_uri: habitatmech:HabitatRecord
+    tree_root: true
+    description: >-
+      A single microbial habitat or environmental context, harmonized across
+      the GOLD / BacDive / PREGO source vocabularies and grounded in an
+      environment or anatomy ontology. One YAML per record.
+    attributes:
+      identifier:
+        description: >-
+          Stable CURIE for this habitat. Records grounded in an ontology use
+          that ontology's CURIE directly (ENVO:00000019, UBERON:0001988,
+          FOODON:00001059, BTO:0000763). Source concepts with no defensible
+          ontology grounding get a minted `habitatmech:` CURIE so they remain
+          citable and can be re-grounded later without breaking references.
+        identifier: true
+        required: true
+        range: string
+        pattern: "^[A-Za-z][A-Za-z0-9._-]*:[A-Za-z0-9._-]+$"
+
+      label:
+        description: >-
+          Human-readable habitat label. For ontology-grounded records this is
+          the ontology's rdfs:label, so the record and the term agree; for
+          minted records it is the source vocabulary's label.
+        required: true
+        range: string
+
+      definition:
+        description: >-
+          Textual definition. Seeded from the grounding ontology's IAO:0000115
+          definition where one exists; curator can extend or replace.
+        range: string
+
+      definition_source:
+        description: >-
+          IAO:0000119 — citation or provenance string for the definition
+          (e.g. PMID:12345678, DOI:10.1234/abc, or "ENVO" when taken verbatim
+          from the grounding ontology).
+        range: string
+
+      habitat_category:
+        description: >-
+          Coarse-grained bucket, used for filesystem layout and reporting.
+          Seeded from the source vocabulary's own top-level split (GOLD's
+          Environmental / Host-associated / Engineered, refined by ecosystem
+          category) and overridable by a curator.
+        range: HabitatCategoryEnum
+        recommended: true
+
+      synonyms:
+        description: >-
+          Alternate labels. Seeded records carry the grounding ontology's
+          synonyms plus the *source vocabulary labels that differ from the
+          record label* — the BacDive "Hypersaline-lake" spelling and the GOLD
+          "Hypersaline" leaf are synonyms of ENVO's "salt lake", and recording
+          them is what makes the record findable from any of the three
+          upstream vocabularies.
+        multivalued: true
+        inlined_as_list: true
+        range: HabitatSynonym
+
+      parent_habitats:
+        description: >-
+          Broader habitats — CURIEs of parent concepts. Seeded from the
+          grounding ontology's rdfs:subClassOf parents and, for GOLD-derived
+          records, from the next level up the ecosystem path. Multivalued
+          because a habitat can be narrower than several broader ones
+          (a rice paddy soil is both a soil and a flooded environment).
+        multivalued: true
+        range: string
+        pattern: "^[A-Za-z][A-Za-z0-9._-]*:[A-Za-z0-9._-]+$"
+
+      xrefs:
+        description: >-
+          oboInOwl:hasDbXref — equivalent terms in other ontologies. Use only
+          for true equivalences; record broader/narrower relations as
+          `parent_habitats` or as a `source_attestations` entry with the
+          appropriate `mapping_predicate` instead.
+        multivalued: true
+        range: string
+        pattern: "^[A-Za-z][A-Za-z0-9._-]*:[A-Za-z0-9._-]+$"
+
+      source_attestations:
+        description: >-
+          Per-source evidence that this habitat is a real, used category, and
+          the bridge back to each upstream vocabulary. This is the field that
+          makes a HabitatRecord a harmonization rather than a copy: one record
+          may carry a GOLD ecosystem path, a BacDive isolation source, and a
+          PREGO habitat term, each with its own assertion count. A record with
+          attestations from several sources is better corroborated than one
+          seen only once.
+        multivalued: true
+        inlined_as_list: true
+        range: SourceAttestation
+
+      environmental_parameters:
+        description: >-
+          Physicochemical characterisation of the habitat — water availability,
+          nutrients, pH, salinity, temperature, pressure, and their
+          variability. Seeded from kg-microbe's environment parameter table
+          where the habitat matches one of its environment types; otherwise
+          curator-supplied. These are the conditions that `causal_graphs`
+          explain the microbial response to.
+        multivalued: true
+        inlined_as_list: true
+        range: EnvironmentalParameter
+
+      characteristic_taxa:
+        description: >-
+          Taxa associated with this habitat, with the count and score behind
+          the association. Seeded from PREGO habitat-organism associations and
+          from BacDive isolation records; a curator can add textbook exemplars.
+          Seeded entries are *observational* — a taxon appearing here has been
+          reported from the habitat, which is weaker than a claim that it is
+          characteristic of it. Use `is_characteristic` to mark the stronger
+          claim, and back it with a reference.
+        multivalued: true
+        inlined_as_list: true
+        range: CharacteristicTaxon
+
+      evidence:
+        description: >-
+          Optional record-level citations, populated when a curator backs the
+          habitat with literature beyond its source-vocabulary provenance.
+          Intentionally not required (compare CausalEdge.evidence): a seeded
+          record's provenance is its `source_attestations`, so requiring
+          per-record citations would force boilerplate on every seeded row.
+        multivalued: true
+        inlined_as_list: true
+        range: EvidenceItem
+
+      grounding_status:
+        description: >-
+          How well this record's `identifier` grounds the underlying source
+          concept. Kept separate from `mapping_status` (which tracks curatorial
+          review) because the two are independent: a record can be
+          curator-REVIEWED and still honestly UNGROUNDED.
+        range: GroundingStatusEnum
+        recommended: true
+
+      mapping_status:
+        description: >-
+          Curation lifecycle. SEEDED rows came straight from the source
+          inventories in data/raw/; REVIEWED rows have curator sign-off;
+          DEPRECATED rows are retained for traceability but superseded.
+        range: MappingStatusEnum
+
+      replaces:
+        description: >-
+          dcterms:replaces — CURIEs of records this one supersedes. The
+          replaced record stays in place with mapping_status DEPRECATED so
+          downstream references keep resolving; this field is the forward link
+          from the new record to the old.
+        multivalued: true
+        range: string
+        pattern: "^[A-Za-z][A-Za-z0-9._-]*:[A-Za-z0-9._-]+$"
+
+      contributors:
+        description: Curators who have edited this record.
+        multivalued: true
+        range: string
+
+      curation_history:
+        description: Append-only audit trail.
+        multivalued: true
+        inlined_as_list: true
+        range: CurationEvent
+
+      causal_graphs:
+        description: >-
+          Evidence-backed mechanism graphs explaining how this habitat's
+          conditions select for, or are modified by, microbial traits. Nodes
+          span habitats, environmental parameters, taxa, traits, processes,
+          genes/proteins, and chemicals. Every edge must carry evidence.
+        multivalued: true
+        inlined_as_list: true
+        range: CausalGraph
+
+      discussions:
+        description: >-
+          Open questions, knowledge gaps, controversies, and curation todos
+          attached to this habitat (shared Discussion supertype; anchor
+          `attaches_to` into e.g. `causal_graphs#<edge>`).
+        multivalued: true
+        inlined_as_list: true
+        range: Discussion
+
+      datasets:
+        description: Public datasets (metagenomic, amplicon, isolate) from this habitat.
+        multivalued: true
+        inlined_as_list: true
+        range: Dataset
+
+  # --------------------------------------------------------------
+  # Harmonization layer
+  # --------------------------------------------------------------
+
+  SourceAttestation:
+    description: >-
+      One upstream vocabulary's assertion of this habitat, with the volume of
+      data behind it and how the upstream label relates to this record.
+    attributes:
+      source:
+        description: Which upstream vocabulary this attestation comes from.
+        required: true
+        range: HabitatSourceEnum
+      source_id:
+        description: >-
+          Identifier in the source vocabulary — a `gold.ecosystem:` node id, a
+          `bacdive.isolation_source:` slug, or the ENVO/BTO CURIE PREGO uses.
+          Not pattern-constrained to a CURIE: the environment parameter table
+          keys on a bare env_type string with no identifier of its own.
+        range: string
+      source_label:
+        description: Verbatim label in the source vocabulary.
+        required: true
+        range: string
+      source_path:
+        description: >-
+          Full hierarchical path in the source vocabulary, " > "-joined. GOLD
+          only — its 5-level ecosystem path (Ecosystem > Ecosystem Category >
+          Ecosystem Type > Ecosystem Subtype > Specific Ecosystem) carries the
+          context that makes an otherwise ambiguous leaf like "Sediment"
+          interpretable.
+        range: string
+      mapping_predicate:
+        description: >-
+          How the source concept relates to this record's `identifier`
+          (skos:exactMatch, skos:broadMatch, skos:narrowMatch,
+          skos:closeMatch). Absent when the record IS the source concept.
+        range: string
+      assertion_count:
+        description: >-
+          How many upstream assertions link organisms/samples to this concept.
+          Comparable only within a source: GOLD counts organisms, BacDive
+          counts strains, PREGO counts distinct taxa.
+        range: integer
+      assertion_unit:
+        description: What `assertion_count` counts, so cross-source sums are not taken naively.
+        range: AssertionUnitEnum
+      score:
+        description: Source-provided confidence/association score (PREGO's prego_score).
+        range: float
+      evidence_channels:
+        description: >-
+          Source-provided evidence channels, "|"-joined (PREGO's
+          annotated_genomes_isolates / environmental_samples / literature).
+        range: string
+      notes:
+        range: string
+
+  HabitatSynonym:
+    description: An alternate label with its scope and provenance.
+    attributes:
+      synonym_text:
+        required: true
+        range: string
+      synonym_type:
+        range: SynonymTypeEnum
+      source:
+        description: >-
+          Where the synonym came from — an ontology name ("ENVO"), a source
+          vocabulary ("GOLD", "BacDive", "PREGO"), or a citation.
+        range: string
+
+  EnvironmentalParameter:
+    description: >-
+      A physicochemical property of the habitat. Values are qualitative bands
+      (low / medium / high and the like) as supplied upstream, with optional
+      numeric bounds when a curator has them.
+    attributes:
+      parameter:
+        description: Which physicochemical axis this describes.
+        required: true
+        range: EnvironmentalParameterEnum
+      qualitative_value:
+        description: >-
+          Qualitative band, verbatim from the source (e.g. "high", "low",
+          "occasionally dry"). Free text rather than an enum because the
+          upstream vocabulary is not closed and coercing it would lose detail.
+        range: string
+      minimum_value:
+        description: Lower numeric bound, when known.
+        range: float
+      maximum_value:
+        description: Upper numeric bound, when known.
+        range: float
+      unit:
+        description: Unit for the numeric bounds (UO CURIE or a plain string like "degC", "pH").
+        range: string
+      source:
+        description: Provenance for this parameter assertion (e.g. "kg-microbe environments.csv").
+        range: string
+      reference:
+        description: Citation supporting the parameter value (PMID:..., DOI:...).
+        range: string
+
+  CharacteristicTaxon:
+    description: >-
+      A taxon associated with this habitat. Seeded entries record an observed
+      association; `is_characteristic` marks the stronger curator claim that
+      the taxon typifies the habitat.
+    attributes:
+      taxon_id:
+        description: NCBITaxon CURIE.
+        required: true
+        range: string
+        pattern: "^NCBITaxon:[0-9]+$"
+      taxon_label:
+        description: Scientific name, when known.
+        range: string
+      association_count:
+        description: Number of upstream assertions linking this taxon to this habitat.
+        range: integer
+      score:
+        description: Source-provided association score.
+        range: float
+      source:
+        description: Which source asserted the association.
+        range: HabitatSourceEnum
+      is_characteristic:
+        description: >-
+          True when a curator asserts this taxon typifies the habitat, rather
+          than merely having been reported from it. Back it with `reference`.
+        range: boolean
+      note:
+        range: string
+      reference:
+        description: Citation supporting the association (PMID:..., DOI:...).
+        range: string
+
+  EvidenceItem:
+    description: A literature or database citation supporting a claim in this record.
+    attributes:
+      reference:
+        description: PMID:..., DOI:..., or an opaque URL.
+        required: true
+        range: string
+      snippet:
+        description: Verbatim quote from the source supporting the claim.
+        range: string
+      notes:
+        range: string
+
+  # --------------------------------------------------------------
+  # Mechanism layer
+  # --------------------------------------------------------------
+
+  CausalGraph:
+    description: >-
+      A directed mechanism graph associated with a habitat — typically
+      "condition X in this habitat selects for adaptation Y".
+    attributes:
+      graph_id:
+        description: Stable local graph identifier within the HabitatRecord.
+        identifier: true
+        required: true
+        range: string
+      title:
+        range: string
+      description:
+        description: Short scope note for the graph.
+        range: string
+      nodes:
+        required: true
+        multivalued: true
+        inlined_as_list: true
+        range: CausalNode
+      edges:
+        required: true
+        multivalued: true
+        inlined_as_list: true
+        range: CausalEdge
+
+  CausalNode:
+    description: A node in a habitat mechanism graph.
+    attributes:
+      node_id:
+        description: Stable local node identifier referenced by edges.
+        identifier: true
+        required: true
+        range: string
+      label:
+        required: true
+        range: string
+      node_type:
+        description: Broad semantic category, used for rendering and curation.
+        required: true
+        range: CausalNodeTypeEnum
+      grounding:
+        description: >-
+          Preferred ontology or database CURIE for the node. Label-only draft
+          nodes are permitted in v1.
+        range: string
+        pattern: "^[A-Za-z][A-Za-z0-9._-]*:[A-Za-z0-9._-]+$"
+      xrefs:
+        multivalued: true
+        range: string
+        pattern: "^[A-Za-z][A-Za-z0-9._-]*:[A-Za-z0-9._-]+$"
+      description:
+        range: string
+
+  CausalEdge:
+    description: An evidence-backed directed relationship in a habitat mechanism graph.
+    attributes:
+      subject:
+        description: Local node_id of the upstream node.
+        required: true
+        range: string
+      predicate:
+        description: Human-readable predicate label or relation CURIE.
+        required: true
+        range: string
+      predicate_id:
+        description: Optional ontology CURIE grounding the predicate.
+        range: string
+        pattern: "^[A-Za-z][A-Za-z0-9._-]*:[A-Za-z0-9._-]+$"
+      object:
+        description: Local node_id of the downstream node.
+        required: true
+        range: string
+      description:
+        range: string
+      evidence:
+        description: >-
+          Edge-level support. Required, in contrast to HabitatRecord.evidence:
+          a habitat's existence is attested by its source vocabularies, but a
+          mechanism claim is curator-asserted and nothing upstream backs it.
+        required: true
+        multivalued: true
+        inlined_as_list: true
+        range: EvidenceItem
+
+  CurationEvent:
+    description: A timestamped curator action on a HabitatRecord.
+    attributes:
+      timestamp:
+        range: datetime
+        required: true
+      curator:
+        range: string
+      action:
+        range: string
+      changes:
+        range: string
+      llm_assisted:
+        range: boolean
+
+# ================================================================
+# ENUMS
+# ================================================================
+
+enums:
+
+  HabitatSourceEnum:
+    description: Upstream vocabulary or dataset an attestation comes from.
+    permissible_values:
+      GOLD:
+        description: JGI GOLD ecosystem classification (5-level ecosystem paths).
+      BACDIVE:
+        description: BacDive isolation sources for type strains.
+      PREGO:
+        description: PREGO habitat-organism associations (ENVO and BTO terms).
+      ENVIRONMENTS_TABLE:
+        description: >-
+          kg-microbe's environment physicochemical parameter table
+          (data/raw/environments.csv upstream), which supplies the
+          water/nutrient/pH/salinity/temperature/pressure bands.
+      ONTOLOGY:
+        description: >-
+          The grounding ontology itself (ENVO / UBERON / FOODON / BTO) — used
+          when the record exists because the term exists, independent of any
+          source vocabulary asserting it.
+      CURATOR:
+        description: Curator-introduced, with no upstream source attestation.
+
+  AssertionUnitEnum:
+    description: >-
+      What a `SourceAttestation.assertion_count` counts. Recorded explicitly
+      because the sources count different things and the numbers are not
+      summable across sources.
+    permissible_values:
+      ORGANISM:
+        description: GOLD organism records (gold:Go*).
+      STUDY:
+        description: GOLD study records (gold:Gs*).
+      BIOSAMPLE:
+        description: GOLD biosample records (gold:Gb*).
+      STRAIN:
+        description: BacDive strain records.
+      TAXON:
+        description: Distinct taxa associated with the habitat (PREGO).
+      ASSERTION:
+        description: Individual assertions, where the asserting entity is not distinguished.
+
+  HabitatCategoryEnum:
+    description: >-
+      Coarse-grained habitat bucket, used for filesystem layout and reporting.
+      The top-level split follows GOLD (Environmental / Host-associated /
+      Engineered) because that is the vocabulary with the deepest hierarchy;
+      environmental habitats are further split by realm, and FOOD and CLINICAL
+      are broken out because BacDive and FOODON populate them heavily and
+      lumping them into Engineered / Host-associated would hide them.
+    permissible_values:
+      TERRESTRIAL:
+        description: Soils, sediments, subsurface, rock, and other land environments.
+      AQUATIC:
+        description: Marine, freshwater, and other water-column or aquatic-sediment environments.
+      AIR:
+        description: Atmospheric and aerosol environments.
+      HOST_ASSOCIATED:
+        description: >-
+          Habitats defined by a living host — plant, animal, or microbial —
+          including anatomical sites (UBERON/BTO) and rhizosphere/phyllosphere.
+      ENGINEERED:
+        description: >-
+          Built or managed environments: bioreactors, wastewater treatment,
+          built environment, industrial process water, agriculture.
+      FOOD:
+        description: Food and beverage matrices, including fermented products (FOODON).
+      CLINICAL:
+        description: >-
+          Clinical and diagnostic sample contexts (abscess, blood culture,
+          wound) — where a strain was isolated in a medical setting, as
+          distinct from the host anatomy itself.
+      OTHER:
+        description: Does not fit the buckets above, or too coarse to place.
+
+  EnvironmentalParameterEnum:
+    description: >-
+      Physicochemical axes characterising a habitat. Mirrors the columns of
+      kg-microbe's environment parameter table so seeded values map without
+      loss, with the variability axes kept separate from the level axes
+      (a habitat can be reliably warm, or unreliably warm, and that difference
+      drives different adaptations).
+    permissible_values:
+      WATER_AVAILABILITY:
+        description: Availability of liquid water.
+      WATER_VARIABILITY:
+        description: Temporal variability of water availability (e.g. "occasionally dry").
+      NUTRIENTS:
+        description: Inorganic nutrient availability.
+      ORGANIC_MATTER:
+        description: Organic carbon availability.
+      GRADIENTS:
+        description: Strength of spatial physicochemical gradients.
+      STRUCTURAL_COMPLEXITY:
+        description: Physical structure and surface availability of the matrix.
+      PRESSURE:
+        description: Hydrostatic or lithostatic pressure.
+      TEMPERATURE:
+        description: Temperature level.
+      TEMPERATURE_VARIABILITY:
+        description: Temporal variability of temperature.
+      SALINITY:
+        description: Salinity level.
+      SALINITY_VARIABILITY:
+        description: Temporal variability of salinity.
+      PH:
+        description: Acidity or alkalinity.
+      OXYGEN:
+        description: Oxygen availability / redox state.
+      OTHER:
+        description: An axis not covered above; describe it in `source` or on the record.
+
+  GroundingStatusEnum:
+    description: >-
+      Quality of the link between this record's `identifier` and the source
+      concept(s) it harmonizes. Tracked separately from `mapping_status` so a
+      reviewed-but-ungrounded record can be stated honestly rather than being
+      forced into a bad ontology term.
+    permissible_values:
+      EXACT:
+        description: The identifier is an exact match for the source concept.
+      BROAD:
+        description: >-
+          The identifier is broader than the source concept — the best
+          available term, but it loses specificity.
+      NARROW:
+        description: The identifier is narrower than the source concept.
+      CLOSE:
+        description: Close but not exact, and not cleanly broader or narrower.
+      UNGROUNDED:
+        description: >-
+          No defensible ontology term found; the record carries a minted
+          `habitatmech:` identifier and is a candidate for a new ENVO term.
+      NOT_APPLICABLE:
+        description: >-
+          The source concept is not a habitat (e.g. a treatment or a quality
+          that leaked into an isolation-source vocabulary), so grounding it as
+          one would be wrong.
+
+  MappingStatusEnum:
+    description: Curation lifecycle for a record.
+    permissible_values:
+      SEEDED:
+        description: >-
+          Generated from the source inventories in data/raw/ by
+          scripts/seed_from_sources.py; not yet curator-reviewed.
+      PROPOSED:
+        description: Curator-proposed habitat not present in any source vocabulary.
+      REVIEWED:
+        description: Curator has signed off on label / definition / grounding / parents.
+      DEPRECATED:
+        description: Superseded by another HabitatRecord; see `replaces` on the successor.
+
+  SynonymTypeEnum:
+    permissible_values:
+      EXACT_SYNONYM:
+      NARROW_SYNONYM:
+      BROAD_SYNONYM:
+      RELATED_SYNONYM:
+
+  CausalNodeTypeEnum:
+    description: >-
+      Broad categories for nodes in habitat mechanism graphs. Deliberately a
+      superset of TraitMech's enum — the shared values keep graphs comparable
+      across the two repos, and HABITAT / ENVIRONMENTAL_PARAMETER / TAXON are
+      the habitat-side additions.
+    permissible_values:
+      HABITAT:
+        description: A habitat or environmental context (a HabitatMech or ENVO term).
+      ENVIRONMENTAL_PARAMETER:
+        description: A physicochemical axis of the habitat (salinity, pH, temperature).
+      TAXON:
+        description: An organism or clade.
+      TRAIT:
+        description: A microbial trait (a TraitMech or METPO term).
+      PATHWAY:
+        description: A pathway or pathway-like mechanism.
+      ENVIRONMENTAL_FACTOR:
+        description: An environmental exposure or stressor that is not a measured parameter.
+      EXPERIMENTAL_FACTOR:
+        description: An assay, perturbation, or experimental condition.
+      GENE_OR_PROTEIN:
+        description: A gene, protein, gene product, or protein complex.
+      CHEMICAL:
+        description: A chemical entity.
+      CELLULAR_LOCALIZATION:
+        description: A cellular component or localization.
+      MOLECULAR_FUNCTION:
+        description: A molecular activity or function.
+      BIOLOGICAL_PROCESS:
+        description: A biological process.
+      STATE:
+        description: >-
+          A bioenergetic or molecular state of the cell (e.g. proton motive
+          force, turgor pressure) mediating a mechanism. Distinct from a
+          process: the state is the steady value, not its establishment.
+      QUALITY:
+        description: >-
+          A measurable attribute of a cellular component (e.g. membrane
+          fluidity) that modulates the mechanism.
+      CAPACITY:
+        description: >-
+          A metabolic or functional capacity — a reservoir-of-X notion that is
+          neither a single chemical species nor a process (e.g. reducing power).
+      COMMUNITY_PROCESS:
+        description: >-
+          A process at the community rather than the cell level (e.g. syntrophy,
+          succession, biofilm formation) — habitats select on these directly.

@@ -1,0 +1,34 @@
+identifier: ENVO:00000220
+label: archipelago
+definition: A group of geographically or geologically associated islands.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: ISLAND CLUSTER
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: IslandArc
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: island arc
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: island group
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00001999
+- ENVO:01001784
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5382
+  source_label: Archipelago
+  source_path: Environmental > Aquatic > Marine > Archipelago
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

@@ -1,0 +1,18 @@
+identifier: habitatmech:GOLD.0a9f2ca319
+label: Foraminifera
+habitat_category: HOST_ASSOCIATED
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.6b259c237e
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8487
+  source_label: Foraminifera
+  source_path: Host-associated > Protists > Rhizaria > Foraminifera
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

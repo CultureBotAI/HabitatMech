@@ -1,0 +1,89 @@
+identifier: ENVO:00000210
+label: marine aphotic zone
+definition: The zone of an ocean below 200m, in which photosynthesis cannot occur
+  due to the lack of light.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: AphoticZone
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: aphotic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: aphotic zone
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: aphotics
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:01000295
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00000210
+  source_label: marine aphotic zone
+  assertion_count: 13
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1150474
+  source: PREGO
+  taxon_label: Mesoaciditoga lauensis cd-1655R = DSM 25116
+  score: 4.0
+- taxon_id: NCBITaxon:1208324
+  source: PREGO
+  taxon_label: Celeribacter indicus
+  score: 4.0
+- taxon_id: NCBITaxon:1242148
+  source: PREGO
+  taxon_label: Melghirimyces profundicolus
+  score: 4.0
+- taxon_id: NCBITaxon:1267768
+  source: PREGO
+  taxon_label: Brevirhabdus pacifica
+  score: 4.0
+- taxon_id: NCBITaxon:1267769
+  source: PREGO
+  taxon_label: Allosediminivita pacifica
+  score: 4.0
+- taxon_id: NCBITaxon:1387275
+  source: PREGO
+  taxon_label: Chryseobacterium profundimaris
+  score: 4.0
+- taxon_id: NCBITaxon:1411902
+  source: PREGO
+  taxon_label: Pacificitalea manganoxidans
+  score: 4.0
+- taxon_id: NCBITaxon:1716143
+  source: PREGO
+  taxon_label: Pseudodesulfovibrio indicus
+  score: 4.0
+- taxon_id: NCBITaxon:1817405
+  source: PREGO
+  taxon_label: Abyssicoccus albus
+  score: 4.0
+- taxon_id: NCBITaxon:1836499
+  source: PREGO
+  taxon_label: Algoriphagus iocasae
+  score: 4.0
+- taxon_id: NCBITaxon:223788
+  source: PREGO
+  taxon_label: Balnearium lithotrophicum
+  score: 4.0
+- taxon_id: NCBITaxon:337701
+  source: PREGO
+  taxon_label: Roseovarius pacificus
+  score: 4.0
+- taxon_id: NCBITaxon:555512
+  source: PREGO
+  taxon_label: Salipiger marinus
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

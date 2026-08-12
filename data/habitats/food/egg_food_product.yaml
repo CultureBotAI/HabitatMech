@@ -1,0 +1,27 @@
+identifier: FOODON:00001274
+label: egg food product
+definition: A food consisting of a round or oval body laid by the female of many animals,
+  consisting of an ovum surrounded by layers of membranes and an outer casing, which
+  acts to nourish and protect a developing embryo and its nutrient reserves.
+definition_source: FOODON
+habitat_category: FOOD
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Egg
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+parent_habitats:
+- FOODON:00001092
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:egg
+  source_label: Egg
+  mapping_predicate: skos:closeMatch
+  assertion_count: 35
+  assertion_unit: STRAIN
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

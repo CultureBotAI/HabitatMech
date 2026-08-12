@@ -1,0 +1,27 @@
+identifier: UBERON:0003891
+label: stroma
+definition: Connective, non-functional supportive framework of a biological cell,
+  tissue, or organ. Contrast with parenchyma.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: stromal connective tissue
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- FOODON:03411261
+- UBERON:0000064
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8386
+  source_label: Stroma
+  source_path: Host-associated > Fungi > Stroma
+  mapping_predicate: skos:exactMatch
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

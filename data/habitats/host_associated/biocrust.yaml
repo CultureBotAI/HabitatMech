@@ -1,0 +1,27 @@
+identifier: ENVO:01000909
+label: biocrust
+definition: A surface layer of a solid environmental material which is formed by the
+  presence and activity of photosynthetic microbial assemblages colonising it.
+definition_source: ENVO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: biological crust
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:01001311
+- FOODON:03411301
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5813
+  source_label: Biocrust
+  source_path: Host-associated > Algae > Biocrust
+  mapping_predicate: skos:exactMatch
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

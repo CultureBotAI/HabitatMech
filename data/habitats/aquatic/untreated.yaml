@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.3f6b823859
+label: Untreated
+habitat_category: AQUATIC
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.99a88ecb51
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5857
+  source_label: Untreated
+  source_path: Environmental > Aquatic > Freshwater > Drinking water > Untreated
+  assertion_count: 5
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

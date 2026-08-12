@@ -1,0 +1,244 @@
+identifier: ENVO:00000023
+label: stream
+definition: A watercourse which is linear and flows across the solid portion of a
+  planetary surface.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Creek
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: Creek
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: Creeks
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: beck
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: beck
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: braided stream
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: braided stream
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: braided streamic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: braided streams
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: brook
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: brook
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: brooks
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: burn (hydrographic)
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: burn (hydrographic)
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: creek
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: fork (hydrographic
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: fork (hydrographic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: glacial stream
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: glacial streamic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: glacial streams
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: lode
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: lode
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: millstream
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: millstream
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: millstreamic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: millstreams
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: rivulet
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: stream bend
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: stream bend
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: stream bends
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: streamic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: streamlet
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: streams
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: streams
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: streamses
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: streamsic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: watercourse
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00000029
+- ENVO:00002011
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4513
+  source_label: Creek
+  source_path: Environmental > Aquatic > Freshwater > Creek
+  mapping_predicate: skos:closeMatch
+  assertion_count: 115
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: PREGO
+  source_id: ENVO:00000023
+  source_label: stream
+  assertion_count: 1608
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:105972
+  source: PREGO
+  taxon_label: Methylosarcina fibrata
+  score: 4.0
+- taxon_id: NCBITaxon:1063
+  source: PREGO
+  taxon_label: Cereibacter sphaeroides
+  score: 4.0
+- taxon_id: NCBITaxon:1069
+  source: PREGO
+  taxon_label: Rhodomicrobium vannielii
+  score: 4.0
+- taxon_id: NCBITaxon:1082
+  source: PREGO
+  taxon_label: Magnetospirillum fulvum
+  score: 4.0
+- taxon_id: NCBITaxon:1087
+  source: PREGO
+  taxon_label: Rhodovibrio salinarum
+  score: 4.0
+- taxon_id: NCBITaxon:110319
+  source: PREGO
+  taxon_label: Nocardioides sp. CF8
+  score: 4.0
+- taxon_id: NCBITaxon:111769
+  source: PREGO
+  taxon_label: Thiothrix unzii
+  score: 4.0
+- taxon_id: NCBITaxon:111770
+  source: PREGO
+  taxon_label: Thiothrix fructosivorans
+  score: 4.0
+- taxon_id: NCBITaxon:112009
+  source: PREGO
+  taxon_label: Ignatzschineria larvae
+  score: 4.0
+- taxon_id: NCBITaxon:112248
+  source: PREGO
+  taxon_label: Seinonella peptonophila
+  score: 4.0
+- taxon_id: NCBITaxon:114404
+  source: PREGO
+  taxon_label: Edaphosphingomonas fennica
+  score: 4.0
+- taxon_id: NCBITaxon:1184267
+  source: PREGO
+  taxon_label: Pseudobdellovibrio exovorus JSS
+  score: 4.0
+- taxon_id: NCBITaxon:120749
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:121845
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:1229
+  source: PREGO
+  taxon_label: Nitrosococcus oceani
+  score: 4.0
+- taxon_id: NCBITaxon:1238
+  source: PREGO
+  taxon_label: Piscirickettsia salmonis
+  score: 4.0
+- taxon_id: NCBITaxon:1264
+  source: PREGO
+  taxon_label: Hominimerdicola alba
+  score: 4.0
+- taxon_id: NCBITaxon:1265
+  source: PREGO
+  taxon_label: Ruminococcus flavefaciens
+  score: 4.0
+- taxon_id: NCBITaxon:128
+  source: PREGO
+  taxon_label: Isosphaera pallida
+  score: 4.0
+- taxon_id: NCBITaxon:1288
+  source: PREGO
+  taxon_label: Staphylococcus xylosus
+  score: 4.0
+- taxon_id: NCBITaxon:129958
+  source: PREGO
+  taxon_label: Carboxydothermus hydrogenoformans
+  score: 4.0
+- taxon_id: NCBITaxon:1309
+  source: PREGO
+  taxon_label: Streptococcus mutans
+  score: 4.0
+- taxon_id: NCBITaxon:132144
+  source: PREGO
+  taxon_label: Candidatus Glomeribacter gigasporarum
+  score: 4.0
+- taxon_id: NCBITaxon:133189
+  source: PREGO
+  taxon_label: Bdellovibrio sp. W
+  score: 4.0
+- taxon_id: NCBITaxon:133193
+  source: PREGO
+  taxon_label: Alkalilimnicola
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'

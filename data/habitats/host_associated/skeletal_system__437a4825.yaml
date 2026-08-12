@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.ea67ca30cb
+label: Skeletal system
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0001434
+- habitatmech:GOLD.cd0b0940e5
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5211
+  source_label: Skeletal system
+  source_path: 'Host-associated > Mammals: Human > Skeletal system'
+  mapping_predicate: skos:narrowMatch
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

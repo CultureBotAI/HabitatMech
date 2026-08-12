@@ -1,0 +1,35 @@
+identifier: BTO:0001347
+label: tadpole
+definition: 'A larval amphibian; specifically: a frog or toad larva that has a rounded
+  body with a long tail bordered by fins and external gills soon replaced by internal
+  gills and that undergoes a metamorphosis to the adult.'
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: tadpolar
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: tadpoles
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000707
+source_attestations:
+- source: PREGO
+  source_id: BTO:0001347
+  source_label: tadpole
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:7719
+  source: PREGO
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

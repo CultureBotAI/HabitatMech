@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.b521e12f22
+label: Cornea
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0000964
+- habitatmech:GOLD.4b46114446
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6409
+  source_label: Cornea
+  source_path: Host-associated > Mammals > Visual system > Eye > Cornea
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

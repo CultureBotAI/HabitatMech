@@ -1,0 +1,163 @@
+identifier: ENVO:2100002
+label: intestine environment
+definition: An environmental system determined by an intestine.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: intestine environments
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:01001033
+source_attestations:
+- source: ENVIRONMENTS_TABLE
+  source_id: host_animal_endotherm_intestinal
+  source_label: host_animal_endotherm_intestinal
+  notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: PREGO
+  source_id: ENVO:2100002
+  source_label: intestine environment
+  assertion_count: 2406
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: environmental_samples
+environmental_parameters:
+- parameter: GRADIENTS
+  qualitative_value: high
+  source: kg-microbe environments.csv (host_animal_endotherm_intestinal)
+- parameter: NUTRIENTS
+  qualitative_value: high
+  source: kg-microbe environments.csv (host_animal_endotherm_intestinal)
+- parameter: ORGANIC_MATTER
+  qualitative_value: high
+  source: kg-microbe environments.csv (host_animal_endotherm_intestinal)
+- parameter: PRESSURE
+  qualitative_value: low
+  source: kg-microbe environments.csv (host_animal_endotherm_intestinal)
+- parameter: SALINITY
+  qualitative_value: medium
+  source: kg-microbe environments.csv (host_animal_endotherm_intestinal)
+- parameter: SALINITY_VARIABILITY
+  qualitative_value: small
+  source: kg-microbe environments.csv (host_animal_endotherm_intestinal)
+- parameter: STRUCTURAL_COMPLEXITY
+  qualitative_value: medium
+  source: kg-microbe environments.csv (host_animal_endotherm_intestinal)
+- parameter: TEMPERATURE
+  qualitative_value: medium
+  source: kg-microbe environments.csv (host_animal_endotherm_intestinal)
+- parameter: TEMPERATURE_VARIABILITY
+  qualitative_value: low
+  source: kg-microbe environments.csv (host_animal_endotherm_intestinal)
+- parameter: WATER_AVAILABILITY
+  qualitative_value: medium
+  source: kg-microbe environments.csv (host_animal_endotherm_intestinal)
+- parameter: WATER_VARIABILITY
+  qualitative_value: permanently wet
+  source: kg-microbe environments.csv (host_animal_endotherm_intestinal)
+characteristic_taxa:
+- taxon_id: NCBITaxon:10020
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:10090
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:10116
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:1014
+  source: PREGO
+  taxon_label: Weeksella virosa
+  score: 4.0
+- taxon_id: NCBITaxon:1026
+  source: PREGO
+  taxon_label: Marinoscillum furvescens
+  score: 4.0
+- taxon_id: NCBITaxon:103810
+  source: PREGO
+  taxon_label: Riemerella columbina
+  score: 4.0
+- taxon_id: NCBITaxon:103836
+  source: PREGO
+  taxon_label: Thermopolyspora flexuosa
+  score: 4.0
+- taxon_id: NCBITaxon:103892
+  source: PREGO
+  taxon_label: Veillonella ratti
+  score: 4.0
+- taxon_id: NCBITaxon:104245
+  source: PREGO
+  taxon_label: Clavaria zollingeri
+  score: 4.0
+- taxon_id: NCBITaxon:1045010
+  source: PREGO
+  taxon_label: Escherichia coli O157
+  score: 4.0
+- taxon_id: NCBITaxon:106111
+  source: PREGO
+  taxon_label: Pedobacter sp. KP-2
+  score: 4.0
+- taxon_id: NCBITaxon:106147
+  source: PREGO
+  taxon_label: Pelistega europaea
+  score: 4.0
+- taxon_id: NCBITaxon:108028
+  source: PREGO
+  taxon_label: Arcanobacterium pluranimalium
+  score: 4.0
+- taxon_id: NCBITaxon:108328
+  source: PREGO
+  taxon_label: Anaerobranca gottschalkii
+  score: 4.0
+- taxon_id: NCBITaxon:110101
+  source: PREGO
+  taxon_label: Laceyella putida
+  score: 4.0
+- taxon_id: NCBITaxon:111844
+  source: PREGO
+  taxon_label: Mannheimia pernigra
+  score: 4.0
+- taxon_id: NCBITaxon:112002
+  source: PREGO
+  taxon_label: Psychrobacter pacificensis
+  score: 4.0
+- taxon_id: NCBITaxon:114628
+  source: PREGO
+  taxon_label: Alkaliphilus transvaalensis
+  score: 4.0
+- taxon_id: NCBITaxon:114707
+  source: PREGO
+  taxon_label: uncultured Pseudomonas sp.
+  score: 4.0
+- taxon_id: NCBITaxon:114715
+  source: PREGO
+  taxon_label: uncultured Ralstonia sp.
+  score: 4.0
+- taxon_id: NCBITaxon:116087
+  source: PREGO
+  taxon_label: Gallicola barnesae
+  score: 4.0
+- taxon_id: NCBITaxon:117680
+  source: PREGO
+  taxon_label: Pseudomonas reactans
+  score: 4.0
+- taxon_id: NCBITaxon:119206
+  source: PREGO
+  taxon_label: Aerococcus sanguinicola
+  score: 4.0
+- taxon_id: NCBITaxon:122866
+  source: PREGO
+  taxon_label: Arthrobacter keyseri
+  score: 4.0
+- taxon_id: NCBITaxon:124798
+  source: PREGO
+  taxon_label: Microbacterium phyllosphaerae
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, PREGO.
+    Grounding: EXACT.'

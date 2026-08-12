@@ -1,0 +1,127 @@
+identifier: BTO:0000213
+label: cecum mucosa
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: cecum mucosal
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: cecum mucosas
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0000642
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000213
+  source_label: cecum mucosa
+  assertion_count: 53
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:119852
+  source: PREGO
+  taxon_label: Oscillospira
+  score: 4.0
+- taxon_id: NCBITaxon:1263
+  source: PREGO
+  taxon_label: Ruminococcus
+  score: 4.0
+- taxon_id: NCBITaxon:128827
+  source: PREGO
+  taxon_label: Erysipelotrichaceae
+  score: 4.0
+- taxon_id: NCBITaxon:135569
+  source: PREGO
+  taxon_label: Helicobacter apodemus
+  score: 4.0
+- taxon_id: NCBITaxon:1578
+  source: PREGO
+  taxon_label: Lactobacillus
+  score: 4.0
+- taxon_id: NCBITaxon:1598
+  source: PREGO
+  taxon_label: Limosilactobacillus reuteri
+  score: 4.0
+- taxon_id: NCBITaxon:171549
+  source: PREGO
+  taxon_label: Bacteroidales
+  score: 4.0
+- taxon_id: NCBITaxon:171550
+  source: PREGO
+  taxon_label: Rikenellaceae
+  score: 4.0
+- taxon_id: NCBITaxon:186802
+  source: PREGO
+  taxon_label: Eubacteriales
+  score: 4.0
+- taxon_id: NCBITaxon:186803
+  source: PREGO
+  taxon_label: Lachnospiraceae
+  score: 4.0
+- taxon_id: NCBITaxon:189330
+  source: PREGO
+  taxon_label: Dorea
+  score: 4.0
+- taxon_id: NCBITaxon:194924
+  source: PREGO
+  taxon_label: Desulfovibrionaceae
+  score: 4.0
+- taxon_id: NCBITaxon:209
+  source: PREGO
+  taxon_label: Helicobacter
+  score: 4.0
+- taxon_id: NCBITaxon:2353
+  source: PREGO
+  taxon_label: Flexispira
+  score: 4.0
+- taxon_id: NCBITaxon:248039
+  source: PREGO
+  taxon_label: Mucispirillum schaedleri
+  score: 4.0
+- taxon_id: NCBITaxon:283168
+  source: PREGO
+  taxon_label: Odoribacter
+  score: 4.0
+- taxon_id: NCBITaxon:31979
+  source: PREGO
+  taxon_label: Clostridiaceae
+  score: 4.0
+- taxon_id: NCBITaxon:33038
+  source: PREGO
+  taxon_label: Mediterraneibacter gnavus
+  score: 4.0
+- taxon_id: NCBITaxon:33042
+  source: PREGO
+  taxon_label: Coprococcus
+  score: 4.0
+- taxon_id: NCBITaxon:375288
+  source: PREGO
+  taxon_label: Parabacteroides
+  score: 4.0
+- taxon_id: NCBITaxon:40544
+  source: PREGO
+  taxon_label: Sutterella
+  score: 4.0
+- taxon_id: NCBITaxon:447020
+  source: PREGO
+  taxon_label: Adlercreutzia
+  score: 4.0
+- taxon_id: NCBITaxon:51514
+  source: PREGO
+  taxon_label: Dehalobacterium
+  score: 4.0
+- taxon_id: NCBITaxon:541000
+  source: PREGO
+  score: 4.0
+- taxon_id: NCBITaxon:543
+  source: PREGO
+  taxon_label: Enterobacteriaceae
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

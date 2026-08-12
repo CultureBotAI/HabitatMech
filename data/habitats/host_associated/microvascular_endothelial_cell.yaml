@@ -1,0 +1,35 @@
+identifier: BTO:0003123
+label: microvascular endothelial cell
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: MVEC cell
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: MVEC cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: microvascular endothelial cells
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- BTO:0001854
+source_attestations:
+- source: PREGO
+  source_id: BTO:0003123
+  source_label: microvascular endothelial cell
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:439184
+  source: PREGO
+  taxon_label: Escherichia coli RS218
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

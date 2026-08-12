@@ -1,0 +1,83 @@
+identifier: UBERON:0001913
+label: milk
+definition: An emulsion of fat globules within a fluid that is secreted by the mammary
+  gland during lactation.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: mammary gland milk
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- FOODON:02010001
+- FOODON:03315150
+- UBERON:0006314
+- UBERON:0006539
+- habitatmech:GOLD.1a6a558ccf
+- habitatmech:GOLD.89cf14e129
+source_attestations:
+- source: ENVIRONMENTS_TABLE
+  source_id: milk
+  source_label: milk
+  notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: GOLD
+  source_id: gold.ecosystem:6120
+  source_label: Milk
+  source_path: 'Host-associated > Mammals: Human > Integumentary system > Mammary
+    gland > Milk'
+  mapping_predicate: skos:closeMatch
+  assertion_count: 93
+  assertion_unit: ORGANISM
+- source: GOLD
+  source_id: gold.ecosystem:6365
+  source_label: Milk
+  source_path: Host-associated > Mammals > Integumentary system > Mammary gland >
+    Milk
+  mapping_predicate: skos:closeMatch
+  assertion_count: 650
+  assertion_unit: ORGANISM
+environmental_parameters:
+- parameter: GRADIENTS
+  qualitative_value: low
+  source: kg-microbe environments.csv (milk)
+- parameter: NUTRIENTS
+  qualitative_value: high
+  source: kg-microbe environments.csv (milk)
+- parameter: ORGANIC_MATTER
+  qualitative_value: high
+  source: kg-microbe environments.csv (milk)
+- parameter: PH
+  qualitative_value: medium
+  source: kg-microbe environments.csv (milk)
+- parameter: PRESSURE
+  qualitative_value: low
+  source: kg-microbe environments.csv (milk)
+- parameter: SALINITY
+  qualitative_value: low
+  source: kg-microbe environments.csv (milk)
+- parameter: SALINITY_VARIABILITY
+  qualitative_value: small
+  source: kg-microbe environments.csv (milk)
+- parameter: STRUCTURAL_COMPLEXITY
+  qualitative_value: low
+  source: kg-microbe environments.csv (milk)
+- parameter: TEMPERATURE
+  qualitative_value: medium
+  source: kg-microbe environments.csv (milk)
+- parameter: TEMPERATURE_VARIABILITY
+  qualitative_value: medium
+  source: kg-microbe environments.csv (milk)
+- parameter: WATER_AVAILABILITY
+  qualitative_value: high
+  source: kg-microbe environments.csv (milk)
+- parameter: WATER_VARIABILITY
+  qualitative_value: permanently wet
+  source: kg-microbe environments.csv (milk)
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD.
+    Grounding: CLOSE.'

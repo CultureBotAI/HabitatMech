@@ -1,0 +1,30 @@
+identifier: BTO:0000669
+label: embryonic cell line
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: embryonic cell lines
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: embryonic cell linous
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+source_attestations:
+- source: PREGO
+  source_id: BTO:0000669
+  source_label: embryonic cell line
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1462938
+  source: PREGO
+  taxon_label: Rickettsia tamurae subsp. buchneri
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

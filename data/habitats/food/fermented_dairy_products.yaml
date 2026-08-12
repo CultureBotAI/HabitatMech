@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.4a2834cfef
+label: Fermented dairy products
+habitat_category: FOOD
+grounding_status: UNGROUNDED
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.c6aaede3c0
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5455
+  source_label: Fermented dairy products
+  source_path: Engineered > Food production > Dairy products > Fermented dairy products
+  assertion_count: 178
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

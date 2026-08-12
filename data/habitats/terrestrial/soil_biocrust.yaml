@@ -1,0 +1,51 @@
+identifier: ENVO:01000910
+label: soil biocrust
+definition: A biocrust which is formed by photosynthetic microbial assemblages colonising
+  the surface layer of a portion of arid soil. Through their successional dynamics,
+  these communities reduce the soil surface's albedo, impart it with stability against
+  erosion, modify its hydrology, and promote its fertility.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Biocrust
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: biological soil crust
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: cryptobiotic soil
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: cryptogamic soil
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: microbiotic soil
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: microphytic soil
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: soil biological crust
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00000191
+- ENVO:00001998
+- ENVO:01000909
+- ENVO:01001483
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4710
+  source_label: Biocrust
+  source_path: Environmental > Terrestrial > Soil > Biocrust
+  mapping_predicate: skos:exactMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

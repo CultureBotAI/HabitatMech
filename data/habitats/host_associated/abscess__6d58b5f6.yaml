@@ -1,0 +1,22 @@
+identifier: habitatmech:GOLD.f007734d4a
+label: Abscess
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- habitatmech:GOLD.0191e307b9
+- mesh:D000038
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7007
+  source_label: Abscess
+  source_path: 'Host-associated > Mammals: Human > Nervous system > Spinal cord >
+    Abscess'
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 4
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
