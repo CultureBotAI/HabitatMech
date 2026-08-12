@@ -18,9 +18,10 @@ MediaIngredientMech, CommunityMech. Upstream pattern: monarch-initiative/dismech
 ```bash
 just report            # corpus stats: grounding, categories, curation backlog
 just validate-all      # closed-mode schema validation of every record
+just verify-corpus     # check data/habitats/ is what data/raw/ produces
 just test              # unit + corpus-integrity tests
 just lint              # ruff
-just qc                # lint + test + validate-all + report
+just qc                # lint + test + validate-all + verify-corpus + report
 ```
 
 Re-seeding (only when upstream data changes):
@@ -46,6 +47,12 @@ enforces this over the whole corpus. It is what keeps a one-field bulk edit to a
 one-field diff instead of 3,299 reflowed files. If you hand-edit a record into a
 shape `safe_dump` would not emit, reformat it through the helper — do not
 loosen the test.
+
+**Never hand-edit a record.** `data/habitats/` is generated from `data/raw/`;
+`just verify-corpus` compares them byte-for-byte and CI runs it. A change
+that belongs in the corpus belongs in the seeder, or it is lost on the next
+re-seed. (Once curation starts and records legitimately diverge, this gate
+narrows to the seeder-owned fields — see issue #14.)
 
 **Append a `CurationEvent` on every mutation**, via
 `habitatmech.curate.curation_event.record_curation_event`.

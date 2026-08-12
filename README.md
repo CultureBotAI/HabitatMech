@@ -62,6 +62,7 @@ yet.** The lexical grounding routes are unverified by construction. Run
 just install                        # uv sync --extra dev
 just report                         # corpus stats: grounding, categories, backlog
 just validate-all                   # closed-mode schema validation of every record
+just verify-corpus                  # check data/habitats/ is what data/raw/ produces
 just test                           # unit + corpus-integrity tests
 ```
 

@@ -57,6 +57,12 @@ validate-all *args:
 validate-strict *args:
     uv run python scripts/validate_strict.py {{args}}
 
+# Verify data/habitats/ is exactly what data/raw/ produces. Schema validation
+# checks each record's shape but not its content, so without this a hand-edited
+# or drifted record passes every other check.
+verify-corpus *args:
+    uv run python scripts/verify_corpus.py {{args}}
+
 # Corpus report: records per category, grounding-status breakdown, source
 # coverage, and the multi-source corroboration counts.
 report *args:
@@ -75,4 +81,4 @@ lint-fix:
     uv run ruff check --fix .
 
 # Everything CI runs, in the order that fails cheapest-first
-qc: lint test validate-all report
+qc: lint test validate-all verify-corpus report

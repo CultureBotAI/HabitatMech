@@ -92,6 +92,33 @@ The composed two-level label is tried *first* for exactly this reason —
 "marine sediment" is a real ENVO term and a strictly better grounding than
 "sediment", so when it hits, the ambiguity never arises.
 
+### The composed route is exempt from the rule
+
+The composed-label routes deliberately do **not** apply the shallowest-claims
+guard, and that asymmetry is intentional rather than an oversight. The composed
+label already carries the path context, so the matched term is not broader than
+the path the way `sediment` is broader than `marine sediment`: `UBERON:0001977`
+*is* blood serum whether the host is a human or a bird, and the host
+distinction belongs to the taxon, not to the habitat term. Applying the guard
+would mint three near-identical serum records, which is worse than one.
+
+Six terms are consequently claimed by more than one GOLD path and merged:
+
+| Term | Paths merged |
+|---|---|
+| `UBERON:0001977` blood serum | Mammals: Human / Mammals / Birds `> Circulatory system > Blood > Serum` |
+| `ENVO:00002129` anaerobic sludge | Bioreactor `> Anaerobic`, `> DHS reactor > Anaerobic`, `> MBR > Anaerobic` |
+| `UBERON:0001913` milk | Mammals: Human / Mammals `> Mammary gland > Milk` |
+| `ENVO:00000546` lake sediment | Freshwater `> Lake`, Non-marine Saline and Alkaline `> Lake` |
+| `UBERON:0001969` blood plasma | Mammals: Human / Mammals |
+| `UBERON:0000965` eye lens | Mammals: Human / Mammals |
+
+Every path survives in `source_attestations` with its full `source_path`, so no
+provenance is lost. But `anaerobic sludge` across three bioreactor types is a
+weaker case than the anatomical ones, and nothing currently distinguishes
+"the prefix context is immaterial" (serum) from "the prefix context is material"
+(reactor type). Tracked in issue #15.
+
 ## Deferring to upstream curation
 
 kg-microbe's `isolation_source_to_ontology.tsv` has a row for all 162 BacDive

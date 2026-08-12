@@ -9,12 +9,19 @@ on:  # yamllint disable-line rule:truthy
 permissions:
   contents: read
 
+# A second push supersedes the first; nothing waits on the older run.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   qc:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.12"]
+        # 3.10 is the floor pyproject advertises, so it is tested rather than
+        # assumed; 3.12 is what developers run.
+        python-version: ["3.10", "3.12"]
       fail-fast: false
 
     steps:
@@ -46,6 +53,11 @@ jobs:
 
       - name: Validate every record against the schema (closed mode)
         run: uv run python scripts/validate_strict.py --quiet
+
+      # Schema validation checks each record's shape, not its content. Without
+      # this, a hand-edited record passes every other check in this workflow.
+      - name: Verify the corpus reproduces from data/raw/
+        run: uv run python scripts/verify_corpus.py
 
       - name: Corpus report
         run: uv run python scripts/habitat_report.py

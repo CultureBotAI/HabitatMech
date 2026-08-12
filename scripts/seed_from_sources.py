@@ -392,6 +392,21 @@ def resolve_gold(
     minted = mint("GOLD", row["canonical_path"])
     may_claim = claimants.get(leaf) == row["canonical_path"]
 
+    # NOTE: the composed routes deliberately do NOT consult `may_claim`, unlike
+    # the leaf routes below. The composed label already carries the path
+    # context, so the matched term is not broader than this path the way
+    # "sediment" is broader than "marine sediment" — UBERON:0001977 *is* blood
+    # serum whether the host is human or bird, and the host distinction belongs
+    # to the taxon, not the habitat term. Forcing the guard here would mint
+    # three near-identical serum records.
+    #
+    # The cost: 6 terms are each claimed by 2-3 GOLD paths and merged
+    # (blood serum, blood plasma, milk, eye lens, lake sediment, anaerobic
+    # sludge). Every path survives in `source_attestations` with its full
+    # `source_path`, so nothing is lost — but `anaerobic sludge` across three
+    # bioreactor types is a weaker case than the anatomical ones, and nothing
+    # here distinguishes "prefix context immaterial" from "prefix context
+    # material". Tracked in issue #15.
     if composed and composed in ontology.by_label:
         return Resolution(
             ontology.by_label[composed], "EXACT", "skos:exactMatch", route="gold_composed_label"
@@ -876,28 +891,26 @@ def find_stale_files(expected: set[Path]) -> list[Path]:
 SEED_TIMESTAMP = "2026-08-12T00:00:00Z"
 
 
-def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(
-        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
-    )
-    parser.add_argument("--apply", action="store_true", help="Write files (default is a dry-run report).")
-    parser.add_argument("--force", action="store_true", help="Overwrite records that already exist.")
-    parser.add_argument(
-        "--prune",
-        action="store_true",
-        help="Delete record files the current assignment does not account for "
-        "(a record whose category changed leaves its old file behind). Ignored "
-        "on --only/--limit runs, whose path set is not authoritative.",
-    )
-    parser.add_argument(
-        "--only",
-        nargs="*",
-        metavar="IDENTIFIER",
-        help="Seed only these identifiers. Use for the one-record canary before a bulk run.",
-    )
-    parser.add_argument("--limit", type=int, help="Seed at most N records (after sorting by identifier).")
-    args = parser.parse_args(argv)
+@dataclass
+class Corpus:
+    """The harmonized concept set plus the counters describing how it was built.
 
+    Split out of ``main`` so ``scripts/verify_corpus.py`` can run exactly the
+    same pipeline and compare its output to what is committed. A verifier that
+    reimplemented any of this would drift from the seeder and stop testing what
+    it claims to.
+    """
+
+    ontology: OntologyIndex
+    concepts: list[Concept]
+    routes: Counter
+    stats: Counter
+    source_concept_total: int
+    source_counts: dict[str, int]
+
+
+def build_corpus() -> Corpus:
+    """Read data/raw/ and harmonize it into the full concept set."""
     ontology = OntologyIndex(read_tsv("ontology_terms.tsv"), read_tsv("ontology_subclass_edges.tsv"))
     mapping: dict[str, dict[str, str]] = {}
     for row in read_tsv("isolation_source_groundings.tsv"):
@@ -925,10 +938,47 @@ def main(argv: list[str] | None = None) -> int:
         if concept.category is None:
             concept.category = infer_category(concept.identifier, ontology)
 
-    source_concept_total = len(gold_rows) + len(bacdive_rows) + len(prego_rows)
+    counts = {"GOLD": len(gold_rows), "BacDive": len(bacdive_rows), "PREGO": len(prego_rows)}
+    return Corpus(
+        ontology=ontology,
+        concepts=concepts,
+        routes=routes,
+        stats=stats,
+        source_concept_total=sum(counts.values()),
+        source_counts=counts,
+    )
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
+    )
+    parser.add_argument("--apply", action="store_true", help="Write files (default is a dry-run report).")
+    parser.add_argument("--force", action="store_true", help="Overwrite records that already exist.")
+    parser.add_argument(
+        "--prune",
+        action="store_true",
+        help="Delete record files the current assignment does not account for "
+        "(a record whose category changed leaves its old file behind). Ignored "
+        "on --only/--limit runs, whose path set is not authoritative.",
+    )
+    parser.add_argument(
+        "--only",
+        nargs="*",
+        metavar="IDENTIFIER",
+        help="Seed only these identifiers. Use for the one-record canary before a bulk run.",
+    )
+    parser.add_argument("--limit", type=int, help="Seed at most N records (after sorting by identifier).")
+    args = parser.parse_args(argv)
+
+    corpus = build_corpus()
+    concepts = corpus.concepts
+    routes, stats = corpus.routes, corpus.stats
+
+    source_concept_total = corpus.source_concept_total
     print("=== harmonization ===")
-    print(f"  source concepts in:    {source_concept_total} "
-          f"(GOLD {len(gold_rows)}, BacDive {len(bacdive_rows)}, PREGO {len(prego_rows)})")
+    breakdown = ", ".join(f"{name} {count}" for name, count in corpus.source_counts.items())
+    print(f"  source concepts in:    {source_concept_total} ({breakdown})")
     print(f"  habitat records out:   {len(concepts)}")
     print(f"  merged away:           {source_concept_total - len(concepts)}")
 
@@ -1023,8 +1073,17 @@ def main(argv: list[str] | None = None) -> int:
 
     # Written after the records, so a run that aborts on validation failures
     # does not leave a lockfile promising files that were never created.
-    write_lockfile(assignments)
-    print(f"wrote {PATHS_LOCKFILE.relative_to(REPO_ROOT)} ({len(assignments)} assignments)")
+    #
+    # Only on a full run. assign_paths() covers every concept regardless of
+    # --only/--limit (that is what keeps assignments selection-independent), so
+    # a partial run would persist 3299 entries beside a handful of files and
+    # strand the rest as orphans. A partial run needs no persistence anyway:
+    # the same concept set recomputes the same assignments.
+    if full_run:
+        write_lockfile(assignments)
+        print(f"wrote {PATHS_LOCKFILE.relative_to(REPO_ROOT)} ({len(assignments)} assignments)")
+    else:
+        print(f"partial run — {PATHS_LOCKFILE.relative_to(REPO_ROOT)} left unchanged")
 
     pruned = 0
     if stale and full_run and args.prune:
