@@ -35,44 +35,64 @@ characteristic_taxa:
   source: PREGO
   taxon_label: Streptococcus mutans PKUSS-HG01
   score: 3.0
+  rank: 1
+  candidate_pool: 10
 - taxon_id: NCBITaxon:1404260
   source: PREGO
   taxon_label: Streptococcus mutans PKUSS-LG01
   score: 3.0
+  rank: 2
+  candidate_pool: 10
 - taxon_id: NCBITaxon:1408287
   source: PREGO
   taxon_label: Fusobacterium nucleatum W1481
   score: 3.0
+  rank: 3
+  candidate_pool: 10
 - taxon_id: NCBITaxon:1759399
   source: PREGO
   taxon_label: Streptococcus sp. A12
   score: 3.0
+  rank: 4
+  candidate_pool: 10
 - taxon_id: NCBITaxon:1851395
   source: PREGO
   taxon_label: Actinomyces sp. Chiba101
   score: 3.0
+  rank: 5
+  candidate_pool: 10
 - taxon_id: NCBITaxon:243275
   source: PREGO
   taxon_label: Treponema denticola ATCC 35405
   score: 3.0
+  rank: 6
+  candidate_pool: 10
 - taxon_id: NCBITaxon:29466
   source: PREGO
   taxon_label: Veillonella parvula
   score: 3.0
+  rank: 7
+  candidate_pool: 10
 - taxon_id: NCBITaxon:35703
   source: PREGO
   taxon_label: Citrobacter amalonaticus
   score: 3.0
+  rank: 8
+  candidate_pool: 10
 - taxon_id: NCBITaxon:388919
   source: PREGO
   taxon_label: Streptococcus sanguinis SK36
   score: 3.0
+  rank: 9
+  candidate_pool: 10
 - taxon_id: NCBITaxon:467705
   source: PREGO
   taxon_label: Streptococcus gordonii str. Challis substr. CH1
   score: 3.0
+  rank: 10
+  candidate_pool: 10
 curation_history:
-- timestamp: '2026-08-13T06:49:23Z'
+- timestamp: '2026-08-13T19:01:33Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

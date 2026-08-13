@@ -28,24 +28,34 @@ characteristic_taxa:
   source: PREGO
   taxon_label: Candidatus Tokpelaia hoelldobleri
   score: 3.0
+  rank: 1
+  candidate_pool: 5
 - taxon_id: NCBITaxon:226186
   source: PREGO
   taxon_label: Bacteroides thetaiotaomicron VPI-5482
   score: 3.0
+  rank: 2
+  candidate_pool: 5
 - taxon_id: NCBITaxon:515619
   source: PREGO
   taxon_label: Agathobacter rectalis ATCC 33656
   score: 3.0
+  rank: 3
+  candidate_pool: 5
 - taxon_id: NCBITaxon:515620
   source: PREGO
   taxon_label: Lachnospira eligens ATCC 27750
   score: 3.0
+  rank: 4
+  candidate_pool: 5
 - taxon_id: NCBITaxon:574521
   source: PREGO
   taxon_label: Escherichia coli O127:H6 str. E2348/69
   score: 3.0
+  rank: 5
+  candidate_pool: 5
 curation_history:
-- timestamp: '2026-08-13T06:49:23Z'
+- timestamp: '2026-08-13T19:01:33Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

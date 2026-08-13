@@ -323,20 +323,28 @@ characteristic_taxa:
   source: PREGO
   taxon_label: Epibacterium ulvae
   score: 3.0
+  rank: 1
+  candidate_pool: 4
 - taxon_id: NCBITaxon:118166
   source: PREGO
   taxon_label: Nodosilinea nodulosa PCC 7104
   score: 3.0
+  rank: 2
+  candidate_pool: 4
 - taxon_id: NCBITaxon:317936
   source: PREGO
   taxon_label: Nostoc sp. PCC 7107
   score: 3.0
+  rank: 3
+  candidate_pool: 4
 - taxon_id: NCBITaxon:710685
   source: PREGO
   taxon_label: Mycolicibacterium rhodesiae NBB3
   score: 3.0
+  rank: 4
+  candidate_pool: 4
 curation_history:
-- timestamp: '2026-08-13T06:49:23Z'
+- timestamp: '2026-08-13T19:01:33Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

@@ -205,11 +205,16 @@ These are real and unfixed; see the issue tracker.
   environment` above them. They are deliberately *not* grounded there: every
   host clade would merge onto one record and the host distinction is the entire
   content. They are the highest-value term requests.
-- **PREGO scores barely discriminate.** For soil, all 8,715 taxa score between
-  4.000 and 4.007, so the "top 25" kept in `characteristic_taxa` is close to
-  arbitrary among the ties. Treat seeded taxa as "reported from", not
-  "characteristic of" — which is why `is_characteristic` is a separate,
-  curator-set flag.
+- **PREGO's taxon ranking is weak, though measurably not arbitrary.** For soil
+  all 8,715 taxa score between 4.000 and 4.007. Cross-checking PREGO's top-25
+  against BacDive — an independent route to taxa — gives 2.27x enrichment over
+  chance, so the ordering carries signal, and the alternatives #8 proposed have
+  4 distinct values against the score's 2,869. Every taxon therefore carries
+  `rank` and `candidate_pool` so the claim states its own strength, and the 56
+  entries corroborated across both sources are listed first. Seeded taxa still
+  mean "reported from", not "characteristic of" — `is_characteristic` remains a
+  separate curator-set flag. See
+  [docs/HARMONIZATION.md](docs/HARMONIZATION.md#taxon-ranking-and-what-the-evidence-says-about-it).
 - **Only 42 records carry environmental parameters.** 409 of the upstream rows
   describe compound environments (`sediment_marine_cold` = ENVO sediment + PATO
   cold) that no single term denotes, and are skipped rather than misattributed.

@@ -30,24 +30,34 @@ characteristic_taxa:
   source: PREGO
   taxon_label: Helicobacter pylori NCTC 11637 = CCUG 17874 = ATCC 43504 = JCM 12093
   score: 3.0
+  rank: 1
+  candidate_pool: 5
 - taxon_id: NCBITaxon:1213457
   source: PREGO
   taxon_label: Helicobacter pylori HLJHP193
   score: 3.0
+  rank: 2
+  candidate_pool: 5
 - taxon_id: NCBITaxon:1214221
   source: PREGO
   taxon_label: Helicobacter pylori HLJHP256
   score: 3.0
+  rank: 3
+  candidate_pool: 5
 - taxon_id: NCBITaxon:1214222
   source: PREGO
   taxon_label: Helicobacter pylori HLJHP271
   score: 3.0
+  rank: 4
+  candidate_pool: 5
 - taxon_id: NCBITaxon:210
   source: PREGO
   taxon_label: Helicobacter pylori
   score: 3.0
+  rank: 5
+  candidate_pool: 5
 curation_history:
-- timestamp: '2026-08-13T06:49:23Z'
+- timestamp: '2026-08-13T19:01:33Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:

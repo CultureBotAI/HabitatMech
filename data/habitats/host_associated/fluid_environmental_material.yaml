@@ -34,44 +34,62 @@ source_attestations:
   assertion_count: 21
   assertion_unit: ORGANISM
 characteristic_taxa:
-- taxon_id: NCBITaxon:1121132
-  source: BACDIVE
-  taxon_label: Butyrivibrio hungatei DSM 14810
-  association_count: 1
-- taxon_id: NCBITaxon:1123012
-  source: BACDIVE
-  taxon_label: Pseudobutyrivibrio xylanivorans DSM 14809
-  association_count: 1
-- taxon_id: NCBITaxon:1348249
-  source: BACDIVE
-  taxon_label: Methanobrevibacter boviskoreani
-  association_count: 1
-- taxon_id: NCBITaxon:1410653
-  source: BACDIVE
-  taxon_label: Clostridium lundense DSM 17049
-  association_count: 1
-- taxon_id: NCBITaxon:1712665
-  source: BACDIVE
-  taxon_label: Agathobacter ruminis
-  association_count: 1
 - taxon_id: NCBITaxon:29317
   source: BACDIVE
   taxon_label: Actinomyces sp.
   association_count: 2
+  rank: 1
+  candidate_pool: 9
+- taxon_id: NCBITaxon:1121132
+  source: BACDIVE
+  taxon_label: Butyrivibrio hungatei DSM 14810
+  association_count: 1
+  rank: 2
+  candidate_pool: 9
+- taxon_id: NCBITaxon:1123012
+  source: BACDIVE
+  taxon_label: Pseudobutyrivibrio xylanivorans DSM 14809
+  association_count: 1
+  rank: 3
+  candidate_pool: 9
+- taxon_id: NCBITaxon:1348249
+  source: BACDIVE
+  taxon_label: Methanobrevibacter boviskoreani
+  association_count: 1
+  rank: 4
+  candidate_pool: 9
+- taxon_id: NCBITaxon:1410653
+  source: BACDIVE
+  taxon_label: Clostridium lundense DSM 17049
+  association_count: 1
+  rank: 5
+  candidate_pool: 9
+- taxon_id: NCBITaxon:1712665
+  source: BACDIVE
+  taxon_label: Agathobacter ruminis
+  association_count: 1
+  rank: 6
+  candidate_pool: 9
 - taxon_id: NCBITaxon:294671
   source: BACDIVE
   taxon_label: Methanobrevibacter olleyae
   association_count: 1
+  rank: 7
+  candidate_pool: 9
 - taxon_id: NCBITaxon:604330
   source: BACDIVE
   taxon_label: Parafannyhessea umbonata
   association_count: 1
+  rank: 8
+  candidate_pool: 9
 - taxon_id: NCBITaxon:885
   source: BACDIVE
   taxon_label: Desulfovibrio sp.
   association_count: 1
+  rank: 9
+  candidate_pool: 9
 curation_history:
-- timestamp: '2026-08-13T06:49:23Z'
+- timestamp: '2026-08-13T19:01:33Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD. Grounding:

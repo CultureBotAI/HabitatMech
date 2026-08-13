@@ -21,32 +21,44 @@ source_attestations:
   assertion_count: 7
   assertion_unit: STRAIN
 characteristic_taxa:
-- taxon_id: NCBITaxon:1280
-  source: BACDIVE
-  taxon_label: Staphylococcus aureus
-  association_count: 1
-- taxon_id: NCBITaxon:1869227
-  source: BACDIVE
-  taxon_label: bacterium
-  association_count: 1
-- taxon_id: NCBITaxon:1881060
-  source: BACDIVE
-  taxon_label: Clostridium sp. USBA 49
-  association_count: 1
-- taxon_id: NCBITaxon:43666
-  source: BACDIVE
-  taxon_label: Paeniglutamicibacter sulfureus
-  association_count: 1
-- taxon_id: NCBITaxon:47846
-  source: BACDIVE
-  taxon_label: Brachybacterium conglomeratum
-  association_count: 1
 - taxon_id: NCBITaxon:69373
   source: BACDIVE
   taxon_label: Curtobacterium pusillum
   association_count: 2
+  rank: 1
+  candidate_pool: 6
+- taxon_id: NCBITaxon:1280
+  source: BACDIVE
+  taxon_label: Staphylococcus aureus
+  association_count: 1
+  rank: 2
+  candidate_pool: 6
+- taxon_id: NCBITaxon:1869227
+  source: BACDIVE
+  taxon_label: bacterium
+  association_count: 1
+  rank: 3
+  candidate_pool: 6
+- taxon_id: NCBITaxon:1881060
+  source: BACDIVE
+  taxon_label: Clostridium sp. USBA 49
+  association_count: 1
+  rank: 4
+  candidate_pool: 6
+- taxon_id: NCBITaxon:43666
+  source: BACDIVE
+  taxon_label: Paeniglutamicibacter sulfureus
+  association_count: 1
+  rank: 5
+  candidate_pool: 6
+- taxon_id: NCBITaxon:47846
+  source: BACDIVE
+  taxon_label: Brachybacterium conglomeratum
+  association_count: 1
+  rank: 6
+  candidate_pool: 6
 curation_history:
-- timestamp: '2026-08-13T06:49:23Z'
+- timestamp: '2026-08-13T19:01:33Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

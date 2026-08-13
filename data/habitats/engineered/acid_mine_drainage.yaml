@@ -42,16 +42,22 @@ characteristic_taxa:
   source: PREGO
   taxon_label: Acidipila rosea
   score: 4.0
+  rank: 1
+  candidate_pool: 3
 - taxon_id: NCBITaxon:1121877
   source: PREGO
   taxon_label: Ferrimicrobium acidiphilum DSM 19497
   score: 3.0
+  rank: 2
+  candidate_pool: 3
 - taxon_id: NCBITaxon:349163
   source: PREGO
   taxon_label: Acidiphilium cryptum JF-5
   score: 3.0
+  rank: 3
+  candidate_pool: 3
 curation_history:
-- timestamp: '2026-08-13T06:49:23Z'
+- timestamp: '2026-08-13T19:01:33Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:

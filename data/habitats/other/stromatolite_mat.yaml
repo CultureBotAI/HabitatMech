@@ -25,27 +25,39 @@ characteristic_taxa:
   source: PREGO
   taxon_label: Phaeodactylum tricornutum
   score: 1.13934
+  rank: 1
+  candidate_pool: 6
 - taxon_id: NCBITaxon:35845
   source: PREGO
   score: 1.07765
+  rank: 2
+  candidate_pool: 6
 - taxon_id: NCBITaxon:1058
   source: PREGO
   taxon_label: Thiocapsa roseopersicina
   score: 1.02302
+  rank: 3
+  candidate_pool: 6
 - taxon_id: NCBITaxon:323098
   source: PREGO
   taxon_label: Nitrobacter winogradskyi Nb-255
   score: 1.00664
+  rank: 4
+  candidate_pool: 6
 - taxon_id: NCBITaxon:398580
   source: PREGO
   taxon_label: Dinoroseobacter shibae DFL 12 = DSM 16493
   score: 1.00055
+  rank: 5
+  candidate_pool: 6
 - taxon_id: NCBITaxon:314260
   source: PREGO
   taxon_label: Parvularcula bermudensis HTCC2503
   score: 1.00026
+  rank: 6
+  candidate_pool: 6
 curation_history:
-- timestamp: '2026-08-13T06:49:23Z'
+- timestamp: '2026-08-13T19:01:33Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

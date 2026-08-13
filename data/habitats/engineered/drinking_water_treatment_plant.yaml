@@ -40,108 +40,158 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 characteristic_taxa:
-- taxon_id: NCBITaxon:1007097
-  source: BACDIVE
-  taxon_label: Gordonia caeni
-  association_count: 1
-- taxon_id: NCBITaxon:1007098
-  source: BACDIVE
-  taxon_label: Deinococcus daejeonensis
-  association_count: 1
-- taxon_id: NCBITaxon:1032
-  source: BACDIVE
-  taxon_label: Thiothrix sp.
-  association_count: 1
-- taxon_id: NCBITaxon:103817
-  source: BACDIVE
-  taxon_label: Janibacter terrae
-  association_count: 2
-- taxon_id: NCBITaxon:1046556
-  source: BACDIVE
-  taxon_label: Nocardioides daejeonensis
-  association_count: 1
-- taxon_id: NCBITaxon:1054034
-  source: BACDIVE
-  taxon_label: Arcobacter cloacae
-  association_count: 1
-- taxon_id: NCBITaxon:106649
-  source: BACDIVE
-  taxon_label: Acinetobacter guillouiae
-  association_count: 1
-- taxon_id: NCBITaxon:1078050
-  source: BACDIVE
-  taxon_label: Seleniivibrio woodruffii
-  association_count: 1
-- taxon_id: NCBITaxon:1120925
-  source: BACDIVE
-  taxon_label: Acinetobacter bouvetii DSM 14964 = CIP 107468
-  association_count: 1
-- taxon_id: NCBITaxon:1120926
-  source: BACDIVE
-  taxon_label: Acinetobacter gerneri DSM 14967 = CIP 107464 = MTCC 9824
-  association_count: 1
-- taxon_id: NCBITaxon:1120927
-  source: BACDIVE
-  taxon_label: Acinetobacter tandoii DSM 14970 = CIP 107469
-  association_count: 1
-- taxon_id: NCBITaxon:1120928
-  source: BACDIVE
-  taxon_label: Acinetobacter tjernbergiae DSM 14971 = CIP 107465
-  association_count: 1
-- taxon_id: NCBITaxon:13243
-  source: BACDIVE
-  taxon_label: Rarobacter faecitabidus
-  association_count: 2
-- taxon_id: NCBITaxon:1506
-  source: BACDIVE
-  taxon_label: Clostridium sp.
-  association_count: 2
 - taxon_id: NCBITaxon:1830
   source: BACDIVE
   taxon_label: Rhodococcus ruber
   association_count: 5
-- taxon_id: NCBITaxon:285
-  source: BACDIVE
-  taxon_label: Comamonas testosteroni
-  association_count: 3
-- taxon_id: NCBITaxon:303
-  source: BACDIVE
-  taxon_label: Pseudomonas putida
-  association_count: 4
-- taxon_id: NCBITaxon:374858
-  source: BACDIVE
-  taxon_label: Zoogloea caeni
-  association_count: 2
+  rank: 1
+  candidate_pool: 162
 - taxon_id: NCBITaxon:44753
   source: BACDIVE
   taxon_label: Tsukamurella spumae
   association_count: 5
-- taxon_id: NCBITaxon:449973
+  rank: 2
+  candidate_pool: 162
+- taxon_id: NCBITaxon:303
   source: BACDIVE
-  taxon_label: Chelativorans multitrophicus
-  association_count: 2
+  taxon_label: Pseudomonas putida
+  association_count: 4
+  rank: 3
+  candidate_pool: 162
+- taxon_id: NCBITaxon:285
+  source: BACDIVE
+  taxon_label: Comamonas testosteroni
+  association_count: 3
+  rank: 4
+  candidate_pool: 162
 - taxon_id: NCBITaxon:529
   source: BACDIVE
   taxon_label: Brucella anthropi
   association_count: 3
-- taxon_id: NCBITaxon:80866
-  source: BACDIVE
-  taxon_label: Delftia acidovorans
-  association_count: 2
-- taxon_id: NCBITaxon:82
-  source: BACDIVE
-  taxon_label: Hyphomicrobium sp.
-  association_count: 2
+  rank: 5
+  candidate_pool: 162
 - taxon_id: NCBITaxon:82367
   source: BACDIVE
   taxon_label: Paracoccus pantotrophus
   association_count: 3
+  rank: 6
+  candidate_pool: 162
+- taxon_id: NCBITaxon:103817
+  source: BACDIVE
+  taxon_label: Janibacter terrae
+  association_count: 2
+  rank: 7
+  candidate_pool: 162
+- taxon_id: NCBITaxon:13243
+  source: BACDIVE
+  taxon_label: Rarobacter faecitabidus
+  association_count: 2
+  rank: 8
+  candidate_pool: 162
+- taxon_id: NCBITaxon:1506
+  source: BACDIVE
+  taxon_label: Clostridium sp.
+  association_count: 2
+  rank: 9
+  candidate_pool: 162
+- taxon_id: NCBITaxon:374858
+  source: BACDIVE
+  taxon_label: Zoogloea caeni
+  association_count: 2
+  rank: 10
+  candidate_pool: 162
+- taxon_id: NCBITaxon:449973
+  source: BACDIVE
+  taxon_label: Chelativorans multitrophicus
+  association_count: 2
+  rank: 11
+  candidate_pool: 162
+- taxon_id: NCBITaxon:80866
+  source: BACDIVE
+  taxon_label: Delftia acidovorans
+  association_count: 2
+  rank: 12
+  candidate_pool: 162
+- taxon_id: NCBITaxon:82
+  source: BACDIVE
+  taxon_label: Hyphomicrobium sp.
+  association_count: 2
+  rank: 13
+  candidate_pool: 162
 - taxon_id: NCBITaxon:83428
   source: BACDIVE
   taxon_label: uncultured Bacillus sp.
   association_count: 2
+  rank: 14
+  candidate_pool: 162
+- taxon_id: NCBITaxon:1007097
+  source: BACDIVE
+  taxon_label: Gordonia caeni
+  association_count: 1
+  rank: 15
+  candidate_pool: 162
+- taxon_id: NCBITaxon:1007098
+  source: BACDIVE
+  taxon_label: Deinococcus daejeonensis
+  association_count: 1
+  rank: 16
+  candidate_pool: 162
+- taxon_id: NCBITaxon:1032
+  source: BACDIVE
+  taxon_label: Thiothrix sp.
+  association_count: 1
+  rank: 17
+  candidate_pool: 162
+- taxon_id: NCBITaxon:1046556
+  source: BACDIVE
+  taxon_label: Nocardioides daejeonensis
+  association_count: 1
+  rank: 18
+  candidate_pool: 162
+- taxon_id: NCBITaxon:1054034
+  source: BACDIVE
+  taxon_label: Arcobacter cloacae
+  association_count: 1
+  rank: 19
+  candidate_pool: 162
+- taxon_id: NCBITaxon:106649
+  source: BACDIVE
+  taxon_label: Acinetobacter guillouiae
+  association_count: 1
+  rank: 20
+  candidate_pool: 162
+- taxon_id: NCBITaxon:1078050
+  source: BACDIVE
+  taxon_label: Seleniivibrio woodruffii
+  association_count: 1
+  rank: 21
+  candidate_pool: 162
+- taxon_id: NCBITaxon:1120925
+  source: BACDIVE
+  taxon_label: Acinetobacter bouvetii DSM 14964 = CIP 107468
+  association_count: 1
+  rank: 22
+  candidate_pool: 162
+- taxon_id: NCBITaxon:1120926
+  source: BACDIVE
+  taxon_label: Acinetobacter gerneri DSM 14967 = CIP 107464 = MTCC 9824
+  association_count: 1
+  rank: 23
+  candidate_pool: 162
+- taxon_id: NCBITaxon:1120927
+  source: BACDIVE
+  taxon_label: Acinetobacter tandoii DSM 14970 = CIP 107469
+  association_count: 1
+  rank: 24
+  candidate_pool: 162
+- taxon_id: NCBITaxon:1120928
+  source: BACDIVE
+  taxon_label: Acinetobacter tjernbergiae DSM 14971 = CIP 107465
+  association_count: 1
+  rank: 25
+  candidate_pool: 162
 curation_history:
-- timestamp: '2026-08-13T06:49:23Z'
+- timestamp: '2026-08-13T19:01:33Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD. Grounding:

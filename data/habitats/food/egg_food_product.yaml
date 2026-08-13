@@ -21,108 +21,158 @@ source_attestations:
   assertion_count: 35
   assertion_unit: STRAIN
 characteristic_taxa:
-- taxon_id: NCBITaxon:109790
-  source: BACDIVE
-  taxon_label: Lactobacillus jensenii
-  association_count: 2
-- taxon_id: NCBITaxon:1114867
-  source: BACDIVE
-  taxon_label: Flavobacterium plurextorum
-  association_count: 1
-- taxon_id: NCBITaxon:1121116
-  source: BACDIVE
-  taxon_label: Allobrachymonas chironomi DSM 19884
-  association_count: 1
-- taxon_id: NCBITaxon:1122175
-  source: BACDIVE
-  taxon_label: Leucobacter chironomi DSM 19883
-  association_count: 1
-- taxon_id: NCBITaxon:1123347
-  source: BACDIVE
-  taxon_label: Tenacibaculum ovolyticum DSM 18103
-  association_count: 1
-- taxon_id: NCBITaxon:1215111
-  source: BACDIVE
-  taxon_label: Pseudomonas mucidolens NBRC 103159
-  association_count: 1
-- taxon_id: NCBITaxon:1340529
-  source: BACDIVE
-  taxon_label: Photobacterium panuliri
-  association_count: 1
-- taxon_id: NCBITaxon:1352
-  source: BACDIVE
-  taxon_label: Enterococcus faecium
-  association_count: 1
-- taxon_id: NCBITaxon:1381081
-  source: BACDIVE
-  taxon_label: Vibrio panuliri
-  association_count: 1
-- taxon_id: NCBITaxon:1470200
-  source: BACDIVE
-  taxon_label: Neisseria arctica
-  association_count: 1
-- taxon_id: NCBITaxon:147802
-  source: BACDIVE
-  taxon_label: Lactobacillus iners
-  association_count: 1
-- taxon_id: NCBITaxon:1596
-  source: BACDIVE
-  taxon_label: Lactobacillus gasseri
-  association_count: 1
-- taxon_id: NCBITaxon:1682
-  source: BACDIVE
-  taxon_label: Bifidobacterium longum subsp. infantis
-  association_count: 1
-- taxon_id: NCBITaxon:2051
-  source: BACDIVE
-  taxon_label: Mobiluncus curtisii
-  association_count: 1
-- taxon_id: NCBITaxon:2098
-  source: BACDIVE
-  taxon_label: Metamycoplasma hominis
-  association_count: 1
-- taxon_id: NCBITaxon:216816
-  source: BACDIVE
-  taxon_label: Bifidobacterium longum
-  association_count: 2
-- taxon_id: NCBITaxon:2702
-  source: BACDIVE
-  taxon_label: Gardnerella vaginalis
-  association_count: 2
-- taxon_id: NCBITaxon:28125
-  source: BACDIVE
-  taxon_label: Prevotella bivia
-  association_count: 1
-- taxon_id: NCBITaxon:28229
-  source: BACDIVE
-  taxon_label: Colwellia psychrerythraea
-  association_count: 1
-- taxon_id: NCBITaxon:293
-  source: BACDIVE
-  taxon_label: Brevundimonas diminuta
-  association_count: 1
-- taxon_id: NCBITaxon:294
-  source: BACDIVE
-  taxon_label: Pseudomonas fluorescens
-  association_count: 1
-- taxon_id: NCBITaxon:306
-  source: BACDIVE
-  taxon_label: Pseudomonas sp.
-  association_count: 1
 - taxon_id: NCBITaxon:33036
   source: BACDIVE
   taxon_label: Anaerococcus tetradius
   association_count: 3
+  rank: 1
+  candidate_pool: 30
+- taxon_id: NCBITaxon:109790
+  source: BACDIVE
+  taxon_label: Lactobacillus jensenii
+  association_count: 2
+  rank: 2
+  candidate_pool: 30
+- taxon_id: NCBITaxon:216816
+  source: BACDIVE
+  taxon_label: Bifidobacterium longum
+  association_count: 2
+  rank: 3
+  candidate_pool: 30
+- taxon_id: NCBITaxon:2702
+  source: BACDIVE
+  taxon_label: Gardnerella vaginalis
+  association_count: 2
+  rank: 4
+  candidate_pool: 30
+- taxon_id: NCBITaxon:1114867
+  source: BACDIVE
+  taxon_label: Flavobacterium plurextorum
+  association_count: 1
+  rank: 5
+  candidate_pool: 30
+- taxon_id: NCBITaxon:1121116
+  source: BACDIVE
+  taxon_label: Allobrachymonas chironomi DSM 19884
+  association_count: 1
+  rank: 6
+  candidate_pool: 30
+- taxon_id: NCBITaxon:1122175
+  source: BACDIVE
+  taxon_label: Leucobacter chironomi DSM 19883
+  association_count: 1
+  rank: 7
+  candidate_pool: 30
+- taxon_id: NCBITaxon:1123347
+  source: BACDIVE
+  taxon_label: Tenacibaculum ovolyticum DSM 18103
+  association_count: 1
+  rank: 8
+  candidate_pool: 30
+- taxon_id: NCBITaxon:1215111
+  source: BACDIVE
+  taxon_label: Pseudomonas mucidolens NBRC 103159
+  association_count: 1
+  rank: 9
+  candidate_pool: 30
+- taxon_id: NCBITaxon:1340529
+  source: BACDIVE
+  taxon_label: Photobacterium panuliri
+  association_count: 1
+  rank: 10
+  candidate_pool: 30
+- taxon_id: NCBITaxon:1352
+  source: BACDIVE
+  taxon_label: Enterococcus faecium
+  association_count: 1
+  rank: 11
+  candidate_pool: 30
+- taxon_id: NCBITaxon:1381081
+  source: BACDIVE
+  taxon_label: Vibrio panuliri
+  association_count: 1
+  rank: 12
+  candidate_pool: 30
+- taxon_id: NCBITaxon:1470200
+  source: BACDIVE
+  taxon_label: Neisseria arctica
+  association_count: 1
+  rank: 13
+  candidate_pool: 30
+- taxon_id: NCBITaxon:147802
+  source: BACDIVE
+  taxon_label: Lactobacillus iners
+  association_count: 1
+  rank: 14
+  candidate_pool: 30
+- taxon_id: NCBITaxon:1596
+  source: BACDIVE
+  taxon_label: Lactobacillus gasseri
+  association_count: 1
+  rank: 15
+  candidate_pool: 30
+- taxon_id: NCBITaxon:1682
+  source: BACDIVE
+  taxon_label: Bifidobacterium longum subsp. infantis
+  association_count: 1
+  rank: 16
+  candidate_pool: 30
+- taxon_id: NCBITaxon:2051
+  source: BACDIVE
+  taxon_label: Mobiluncus curtisii
+  association_count: 1
+  rank: 17
+  candidate_pool: 30
+- taxon_id: NCBITaxon:2098
+  source: BACDIVE
+  taxon_label: Metamycoplasma hominis
+  association_count: 1
+  rank: 18
+  candidate_pool: 30
+- taxon_id: NCBITaxon:28125
+  source: BACDIVE
+  taxon_label: Prevotella bivia
+  association_count: 1
+  rank: 19
+  candidate_pool: 30
+- taxon_id: NCBITaxon:28229
+  source: BACDIVE
+  taxon_label: Colwellia psychrerythraea
+  association_count: 1
+  rank: 20
+  candidate_pool: 30
+- taxon_id: NCBITaxon:293
+  source: BACDIVE
+  taxon_label: Brevundimonas diminuta
+  association_count: 1
+  rank: 21
+  candidate_pool: 30
+- taxon_id: NCBITaxon:294
+  source: BACDIVE
+  taxon_label: Pseudomonas fluorescens
+  association_count: 1
+  rank: 22
+  candidate_pool: 30
+- taxon_id: NCBITaxon:306
+  source: BACDIVE
+  taxon_label: Pseudomonas sp.
+  association_count: 1
+  rank: 23
+  candidate_pool: 30
 - taxon_id: NCBITaxon:358592
   source: BACDIVE
   taxon_label: Rheinheimera chironomi
   association_count: 1
+  rank: 24
+  candidate_pool: 30
 - taxon_id: NCBITaxon:37734
   source: BACDIVE
   taxon_label: Enterococcus casseliflavus
   association_count: 1
+  rank: 25
+  candidate_pool: 30
 curation_history:
-- timestamp: '2026-08-13T06:49:23Z'
+- timestamp: '2026-08-13T19:01:33Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

@@ -38,16 +38,22 @@ characteristic_taxa:
   source: PREGO
   taxon_label: Flavobacterium branchiophilum FL-15
   score: 3.0
+  rank: 1
+  candidate_pool: 3
 - taxon_id: NCBITaxon:1303921
   source: PREGO
   taxon_label: endosymbiont of Bathymodiolus septemdierum str. Myojin knoll
   score: 3.0
+  rank: 2
+  candidate_pool: 3
 - taxon_id: NCBITaxon:412965
   source: PREGO
   taxon_label: Candidatus Vesicomyidisocius calyptogenae
   score: 3.0
+  rank: 3
+  candidate_pool: 3
 curation_history:
-- timestamp: '2026-08-13T06:49:23Z'
+- timestamp: '2026-08-13T19:01:33Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'
