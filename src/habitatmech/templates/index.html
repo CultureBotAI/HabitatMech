@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}HabitatMech — microbial habitats, harmonized{% endblock %}
+{% block content %}
+<h1>Microbial habitats, harmonized</h1>
+<p class="lede">
+  The same habitat has three different names depending on who is describing it.
+  HabitatMech resolves them onto one ontology-grounded record and keeps every
+  source's own account of it.
+</p>
+
+<table>
+  <caption>The same habitat, named three ways</caption>
+  <thead><tr><th scope="col">Source</th><th scope="col">How it names marine sediment</th></tr></thead>
+  <tr><td>JGI GOLD</td><td><code>Environmental &gt; Aquatic &gt; Marine &gt; Sediment</code></td></tr>
+  <tr><td>BacDive</td><td><code>Marine-sediment</code></td></tr>
+  <tr><td>PREGO</td><td><code>ENVO:00002113</code></td></tr>
+</table>
+
+<div class="grid">
+  <div class="card"><div class="n">{{ stats.total }}</div><div class="k">habitat records</div></div>
+  <div class="card"><div class="n">{{ stats.grounded }}</div><div class="k">ontology-grounded</div></div>
+  <div class="card"><div class="n">{{ stats.multi_source }}</div><div class="k">corroborated by 2+ sources</div></div>
+  <div class="card"><div class="n">{{ stats.reviewed }}</div><div class="k">curator-reviewed</div></div>
+</div>
+
+<h2>Browse by category</h2>
+<table>
+  <caption>Records per category</caption>
+  <thead><tr><th scope="col">Category</th><th scope="col" class="num">Records</th><th scope="col"><span class="visually-hidden">Share</span></th></tr></thead>
+  {% for c in categories %}
+  <tr>
+    <td><a href="category/{{ c.slug }}.html">{{ c.label }}</a></td>
+    <td class="num">{{ c.count }}</td>
+    <td><div class="bar"><span style="width:{{ c.pct }}%"></span></div></td>
+  </tr>
+  {% endfor %}
+</table>
+
+<h2>What the grounding status means</h2>
+<p>
+  Every record says how well its identifier fits the source concept, separately
+  from whether a human has checked it. A record can be reviewed and still
+  honestly ungrounded — that combination is a well-formed request for a new
+  ontology term, and there are
+  <a href="term-requests.html">{{ stats.term_requests }} of them</a>.
+</p>
+<table>
+  <caption>Grounding status</caption>
+  <thead><tr><th scope="col">Status</th><th scope="col" class="num">Records</th><th scope="col">Meaning</th></tr></thead>
+  {% for g in groundings %}
+  <tr><td><span class="pill{{ ' warn' if g.name in ('UNGROUNDED','NOT_APPLICABLE') else '' }}">{{ g.name }}</span></td>
+      <td class="num">{{ g.count }}</td><td>{{ g.meaning }}</td></tr>
+  {% endfor %}
+</table>
+
+<div class="note warn">
+  <p><strong>This corpus is machine-generated.</strong> {{ stats.seeded }} of
+  {{ stats.total }} records have had no human review. The harmonization rules are
+  documented and tested, but a lexical match between a source label and an
+  ontology label is a plausible grounding, not a verified one.</p>
+</div>
+{% endblock %}
