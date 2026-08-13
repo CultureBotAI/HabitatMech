@@ -1,0 +1,34 @@
+identifier: BTO:0001067
+label: pineal gland
+definition: A small, cone-shaped organ in the brain of most vertebrates that secretes
+  the hormone melatonin.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Pineal gland/Epiphysis cerebri
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- BTO:0001488
+- habitatmech:GOLD.2f5a0b5455
+- habitatmech:GOLD.c26b92ece6
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6552
+  source_label: Pineal gland/Epiphysis cerebri
+  source_path: 'Host-associated > Mammals: Human > Endocrine system > Endocrine gland
+    > Pineal gland/Epiphysis cerebri'
+  mapping_predicate: skos:exactMatch
+- source: GOLD
+  source_id: gold.ecosystem:6783
+  source_label: Pineal gland/Epiphysis cerebri
+  source_path: Host-associated > Mammals > Endocrine system > Endocrine gland > Pineal
+    gland/Epiphysis cerebri
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-13T06:49:23Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

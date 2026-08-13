@@ -51,6 +51,7 @@ BTO:0000282	head
 BTO:0000286	cornea
 BTO:0000301	crop
 BTO:0000303	crown_gall
+BTO:0000313	hypodermis
 BTO:0000316	culture_medium
 BTO:0000318	cv_1_cell
 BTO:0000320	cyst
@@ -192,7 +193,9 @@ BTO:0001047	pharyngeal_mucosa
 BTO:0001049	pharynx
 BTO:0001058	phloem
 BTO:0001060	photoreceptor_cell
+BTO:0001067	pineal_gland
 BTO:0001069	pitcher
+BTO:0001073	hypophysis
 BTO:0001078	placenta
 BTO:0001085	vascular_system
 BTO:0001086	embryonic_stem_cell
@@ -223,7 +226,6 @@ BTO:0001202	saliva
 BTO:0001203	salivary_gland
 BTO:0001210	sgs_cell
 BTO:0001220	schwann_cell
-BTO:0001226	seed
 BTO:0001228	seedling
 BTO:0001230	semen
 BTO:0001243	shoot
@@ -424,6 +426,7 @@ BTO:0006350	polyp
 BTO:0006474	rhizoid
 BTO:0006514	foreleg
 ENVO:00000000	geographic_feature
+ENVO:00000003	mine_tailing
 ENVO:00000011	garden
 ENVO:00000012	hydrographic_feature
 ENVO:00000014	canal
@@ -649,6 +652,7 @@ ENVO:00002127	stream_sediment
 ENVO:00002129	anaerobic_sludge
 ENVO:00002130	hypolimnion
 ENVO:00002131	epilimnion
+ENVO:00002132	metalimnion
 ENVO:00002133	anaerobic_mud
 ENVO:00002137	brackish_estuary
 ENVO:00002138	beach_sand
@@ -790,6 +794,7 @@ ENVO:01000157	microbial_mat_material
 ENVO:01000159	organic_feature
 ENVO:01000161	marine_sponge_reef
 ENVO:01000163	photophore__6253ffee
+ENVO:01000164	root_nodule__0f1c7944
 ENVO:01000173	anoxic_water
 ENVO:01000174	forest_biome
 ENVO:01000177	grassland_biome
@@ -826,6 +831,7 @@ ENVO:01000277	water_ice
 ENVO:01000294	crevice
 ENVO:01000297	freshwater_river
 ENVO:01000298	continental_margin
+ENVO:01000303	endolithic_environment
 ENVO:01000305	high_temperature_environment
 ENVO:01000306	freshwater_environment
 ENVO:01000309	cold_environment
@@ -852,6 +858,7 @@ ENVO:01000620	mesocosm
 ENVO:01000621	microcosm
 ENVO:01000627	feedlot
 ENVO:01000628	plant_litter
+ENVO:01000653	slum
 ENVO:01000681	sodium_chloride_salt
 ENVO:01000722	meltwater
 ENVO:01000747	regolith
@@ -865,10 +872,15 @@ ENVO:01000905	shrimp_pond
 ENVO:01000909	biocrust
 ENVO:01000910	soil_biocrust
 ENVO:01000922	animal_cage
+ENVO:01000925	abattoir
 ENVO:01000964	industrial_wastewater
 ENVO:01000965	constructed_swimming_pool
 ENVO:01001001	plant_associated_environment
+ENVO:01001002	animal_associated_environment
+ENVO:01001004	groundwater__585f08d9
 ENVO:01001020	hypersaline_lake
+ENVO:01001029	fecal_environment
+ENVO:01001041	fungi_associated_environment
 ENVO:01001043	hypersaline_water_environment
 ENVO:01001069	metallic_material
 ENVO:01001155	astrogeological_gas
@@ -888,6 +900,7 @@ ENVO:01001529	glacier_snout
 ENVO:01001530	water_ice_core
 ENVO:01001667	thalassic
 ENVO:01001803	tropical_forest
+ENVO:01001804	subtropical_forest
 ENVO:01001805	temperate_forest
 ENVO:01001893	salt_spring
 ENVO:01001894	alkaline_spring
@@ -920,6 +933,7 @@ ENVO:03600004	drinking_water_treatment_plant
 ENVO:03600006	food_waste
 ENVO:03600007	formation_fluid
 ENVO:03600009	interstitial_water
+ENVO:03600010	membrane_bioreactor
 ENVO:03600011	mineral_horizon
 ENVO:03600013	bituminous_sand
 ENVO:03600016	saprolite
@@ -942,6 +956,7 @@ ENVO:03600087	greenhouse
 ENVO:03605000	periphytic_biofilm
 ENVO:04000007	lake_water
 ENVO:06105211	runoff
+ENVO:08000002	mouth_environment
 ENVO:2000000	chemical_product
 ENVO:2000004	algal_bloom
 ENVO:2000007	biochar
@@ -1013,13 +1028,22 @@ NCIT:C77916	protozoa
 NCIT:C85060	animal_produced_food_natural
 NCIT:C88206	humid
 PO:0004542	root_rhizome
+PO:0009005	root__722ce44f
+PO:0009010	seed
 PO:0009047	spot_leaf_stem
+PO:0025034	leaf__36ca5f79
+PO:0025281	pollen__58a9f338
+PO:0030027	thallus
+PO:0030078	rhizoid__d73561e8
+UBERON:0000020	sense_organ
 UBERON:0000029	lymph_node__7af26c8b
 UBERON:0000033	head__4e9662ea
 UBERON:0000045	ganglion
 UBERON:0000056	ureter
+UBERON:0000065	respiratory_tract
 UBERON:0000167	oral_cavity
 UBERON:0000170	pair_of_lungs
+UBERON:0000178	blood__d6f5ae05
 UBERON:0000341	throat__4f7984ed
 UBERON:0000403	scalp__a1773389
 UBERON:0000412	dermal_papilla
@@ -1028,9 +1052,11 @@ UBERON:0000473	testis
 UBERON:0000916	abdomen__17b71cfa
 UBERON:0000922	embryo__9a0301d2
 UBERON:0000945	stomach__fc24e41c
+UBERON:0000948	heart__6a45d7c5
 UBERON:0000965	lens_of_camera_type_eye
 UBERON:0000974	neck
 UBERON:0000994	spermathecum
+UBERON:0000996	vagina__96a5db8d
 UBERON:0001000	vas_deferens
 UBERON:0001003	skin_epidermis
 UBERON:0001005	respiratory_airway
@@ -1107,6 +1133,7 @@ UBERON:0007330	rhamphotheca
 UBERON:0007357	proventriculus
 UBERON:0007358	abomasum
 UBERON:0007362	omasum
+UBERON:0007365	rumen__a47ac48b
 UBERON:0008246	pyloric_stomach
 UBERON:0008250	cardiac_stomach
 UBERON:0008330	vestibule_of_vagina
@@ -1118,6 +1145,7 @@ UBERON:0008963	hoof
 UBERON:0008972	right_colon__4772e94d
 UBERON:0009074	syrinx_organ
 UBERON:0010152	skin_mucus
+UBERON:0010264	hepatopancreas__63c0469f
 UBERON:0010409	ocular_surface_region
 UBERON:0010516	clasper
 UBERON:0011150	pharyngeal_arch_derived_gill
@@ -1225,13 +1253,13 @@ habitatmech:BACDIVE.f5201ef8d6	xerophilic
 habitatmech:BACDIVE.f655f51b59	sulfuric
 habitatmech:BACDIVE.fb79ffe39f	biodegradation
 habitatmech:BACDIVE.ff945d8a69	co_culture
+habitatmech:ENVIRONMENTS_TABLE.54b570032a	host__82745511
 habitatmech:GOLD.00086e0958	cnidaria
 habitatmech:GOLD.00152db20e	midpoint
 habitatmech:GOLD.003cf7aab1	sea_ice_brine
 habitatmech:GOLD.003eca7f24	c1_glandular_saccules
 habitatmech:GOLD.004065681a	biliary_tract
 habitatmech:GOLD.00a390bd33	chelicerates_nest
-habitatmech:GOLD.00cc26ac8b	microfouling_biofilm
 habitatmech:GOLD.00de24c347	littoral_zone
 habitatmech:GOLD.00fe86978b	bioreactor__bd8d2afc
 habitatmech:GOLD.013b99db03	spacecraft_assembly_cleanrooms
@@ -1360,12 +1388,12 @@ habitatmech:GOLD.0f6b0e6bf3	bark__5b1d3b9d
 habitatmech:GOLD.0fd615b360	human_waste
 habitatmech:GOLD.0fe2a08dac	oropharynx__a35a5060
 habitatmech:GOLD.1029237e41	sludge__133813c4
+habitatmech:GOLD.1032e10222	sludge__579ac3b2
 habitatmech:GOLD.1064d1667e	breast_cancer_ductal
 habitatmech:GOLD.10c00dc3a7	harbor
 habitatmech:GOLD.10fdf7ff5a	sub_biocrust
 habitatmech:GOLD.11240edc4a	stomach__915214d3
 habitatmech:GOLD.112979e260	frozen_remains
-habitatmech:GOLD.115cc4559e	hypodermis_subcutis
 habitatmech:GOLD.115edc36f8	intertidal_zone__2f295854
 habitatmech:GOLD.116fcefc51	spent_mushroom_substrate
 habitatmech:GOLD.11bece2c6f	nervous_system__b6871e1f
@@ -1575,7 +1603,6 @@ habitatmech:GOLD.2a948ee511	circulatory_system__745592ee
 habitatmech:GOLD.2aa590f12e	biofilter__9cdb9879
 habitatmech:GOLD.2acb39dd08	engineered__900b76ad
 habitatmech:GOLD.2aeb0d8390	food_sample
-habitatmech:GOLD.2b2b2de357	hypophysis_pituitary_gland
 habitatmech:GOLD.2b2e32d265	floor__86528402
 habitatmech:GOLD.2b5caaea9b	freshwater_ras
 habitatmech:GOLD.2b6450fb55	chorionic_villi__9af464db
@@ -1627,7 +1654,6 @@ habitatmech:GOLD.31f0f33f09	gingival_crevicular_fluids
 habitatmech:GOLD.31fc4ee1b3	spleen__5aff0d84
 habitatmech:GOLD.32269ef375	mid_stream
 habitatmech:GOLD.32330da5da	embryo__3df16fcc
-habitatmech:GOLD.3294096faf	heart_dorsal_vessel
 habitatmech:GOLD.32c2a98ae8	semi_continuous
 habitatmech:GOLD.331b32cbb4	biofilm__b8c0edc9
 habitatmech:GOLD.333af3f6ef	input_fracking_water
@@ -1642,7 +1668,6 @@ habitatmech:GOLD.33ad86bb23	sludge__25c88b98
 habitatmech:GOLD.33b265d89f	sediment__0bbc27fb
 habitatmech:GOLD.33c4a7e711	middle_ear__4109a919
 habitatmech:GOLD.33fb90237d	outdoor
-habitatmech:GOLD.33fed7851a	salt_pan_flat
 habitatmech:GOLD.340845ce71	hek293
 habitatmech:GOLD.3426da4c96	fracking_water__af948aea
 habitatmech:GOLD.342d26e2ac	mine_drainage
@@ -1676,7 +1701,6 @@ habitatmech:GOLD.3892ec1c72	microbial_solubilization_of_coal
 habitatmech:GOLD.38e159af25	microbial_mats__74823fe8
 habitatmech:GOLD.38f60a7f52	hindgut__1da73b3c
 habitatmech:GOLD.38f7a3c934	intertidal_zone__37facab6
-habitatmech:GOLD.3911678ce4	microfouling_biofilm__42d5dda8
 habitatmech:GOLD.391a34e025	ileum__048460dc
 habitatmech:GOLD.391e0f7196	penis_urethra_opening
 habitatmech:GOLD.394283d34e	intestine__c829ee27
@@ -1829,7 +1853,6 @@ habitatmech:GOLD.4d5e767cac	urban_floodwater
 habitatmech:GOLD.4d792ac724	invertebrates
 habitatmech:GOLD.4d81fdaa51	eye_ciliary_body
 habitatmech:GOLD.4d8430a3ad	acid_saline_drainage
-habitatmech:GOLD.4d8a7fee2d	hepatopancreas_digestive_gland_hepatic_cecum
 habitatmech:GOLD.4d8b9e6fe9	canthus
 habitatmech:GOLD.4db3420b06	bile__22fc0a7b
 habitatmech:GOLD.4dbae6ecfe	multiple_organs__a0ce3dd7
@@ -1859,7 +1882,6 @@ habitatmech:GOLD.52092cfbb2	dry_permafrost
 habitatmech:GOLD.523243d1da	soft_tissues
 habitatmech:GOLD.523d63f6f3	intestine__add3d43a
 habitatmech:GOLD.52622242c6	cement_wall
-habitatmech:GOLD.5276c32abd	laurel_subtropical_forest
 habitatmech:GOLD.5298ffd023	biofilm__5f164a0f
 habitatmech:GOLD.52a60ba4a3	skeletal_system__c0556b96
 habitatmech:GOLD.52b1824f90	drugs_supplements
@@ -1915,7 +1937,6 @@ habitatmech:GOLD.5948923b46	composting__17c06daf
 habitatmech:GOLD.59c60b0d02	ileum__19183dda
 habitatmech:GOLD.59cb2c0cce	creek
 habitatmech:GOLD.59e8d1205d	bivalves
-habitatmech:GOLD.5a05c0fa5d	tailings
 habitatmech:GOLD.5a296e32d2	marine_basin_floor
 habitatmech:GOLD.5a41405bc3	visual_system__23837b48
 habitatmech:GOLD.5a9d059298	cibarium_preoral_cavity
@@ -1979,7 +2000,6 @@ habitatmech:GOLD.61fa6361ee	soil__ecf8b046
 habitatmech:GOLD.61fa790833	tooth__93bee995
 habitatmech:GOLD.622b91396d	skeletal_muscle__273d137b
 habitatmech:GOLD.6251bef319	cave_water__c4d82240
-habitatmech:GOLD.626e2a5033	head_cephalon
 habitatmech:GOLD.628407fcc7	abscess_pilonidal_sinus
 habitatmech:GOLD.62854e626f	leaves
 habitatmech:GOLD.62a92ea437	seafood_product
@@ -2036,7 +2056,6 @@ habitatmech:GOLD.6a1f882bb7	cellulitis
 habitatmech:GOLD.6a750836f9	cho
 habitatmech:GOLD.6a7bcba80d	amoebozoa__291e8086
 habitatmech:GOLD.6a8d0ed24a	co_culture__e1b72549
-habitatmech:GOLD.6abd6c551f	hair_fur
 habitatmech:GOLD.6ac8329647	sediment__7b8eb154
 habitatmech:GOLD.6add2e3be1	pink
 habitatmech:GOLD.6ade183144	interior_wall
@@ -2079,7 +2098,7 @@ habitatmech:GOLD.6e59960397	biofilm__ccf8005e
 habitatmech:GOLD.6e59a6cbb1	filter_chamber
 habitatmech:GOLD.6e80053dec	mixed_type
 habitatmech:GOLD.6e80125d90	fibrocartilage
-habitatmech:GOLD.6eb7b93e44	pineal_gland_epiphysis_cerebri
+habitatmech:GOLD.6eda919358	sediment__7374ab6d
 habitatmech:GOLD.6ee20226a2	biliary_tract__e6019127
 habitatmech:GOLD.6ee5e682e9	plant_nodule
 habitatmech:GOLD.6eecdf150d	digestive_system__2589c8ce
@@ -2129,11 +2148,10 @@ habitatmech:GOLD.760974c19d	sludge__bb19be97
 habitatmech:GOLD.7614a6580e	microbial_mats__59ad9a00
 habitatmech:GOLD.76339b995e	heroin
 habitatmech:GOLD.763577f3ae	fibrocartilage__9cc92423
-habitatmech:GOLD.765d4bdada	slums_informal_settlements
 habitatmech:GOLD.769955119f	platyhelminthes
 habitatmech:GOLD.76a84af82e	diabetic_foot_ulcer_dfu__cf26bdc0
+habitatmech:GOLD.76adfed69c	sediment__f7a00613
 habitatmech:GOLD.76df031f74	fossilized_remains__19772eb4
-habitatmech:GOLD.76e11cf8f1	sensory_organs
 habitatmech:GOLD.772964032b	freshwater_aquarium
 habitatmech:GOLD.774bc38294	bone__169c3d9e
 habitatmech:GOLD.7782f2f564	whole_plant_body
@@ -2190,8 +2208,8 @@ habitatmech:GOLD.7da758d9a6	p5_segment
 habitatmech:GOLD.7daa92d793	hypolimnion__78bbb31f
 habitatmech:GOLD.7db7617ea4	sediment__0d49df05
 habitatmech:GOLD.7dbe12a9d1	saline_spring_sediment
+habitatmech:GOLD.7dc780d154	sludge__03f51c5b
 habitatmech:GOLD.7dd45e072b	material
-habitatmech:GOLD.7defa41cfd	metalimnion_thermocline
 habitatmech:GOLD.7df92c13b7	biotransformation
 habitatmech:GOLD.7e1e8d505b	hydroponic_media
 habitatmech:GOLD.7e21c19f98	frozen_remains__aa25d597
@@ -2229,7 +2247,6 @@ habitatmech:GOLD.82116f395f	biofilm__a2e7867f
 habitatmech:GOLD.821fc6dd72	settled_granule
 habitatmech:GOLD.82392e43d2	liver__4e838a57
 habitatmech:GOLD.8258aa29fb	nasolacrimal_canal
-habitatmech:GOLD.8278672fe5	sputum_phlegm
 habitatmech:GOLD.827b5dbbef	effluent__7ff89bae
 habitatmech:GOLD.82a6b2e83f	biomass__545e678f
 habitatmech:GOLD.82cc79ac14	maxillary_glands
@@ -2237,14 +2254,12 @@ habitatmech:GOLD.82e499ef2e	soft_tissues__1049d581
 habitatmech:GOLD.82ed8aa45e	neutral__819b9d53
 habitatmech:GOLD.82ef35db95	muscle_abscess
 habitatmech:GOLD.82f62476b8	leaf_surface
-habitatmech:GOLD.8303f93e43	thallus_plant_body
 habitatmech:GOLD.8306e80f10	pancreatic_duct__8fac8c0e
 habitatmech:GOLD.831cbd9229	tissue__3b85fdba
 habitatmech:GOLD.8320f7058b	leaf_surface_biofilm
 habitatmech:GOLD.835443324e	delivery_networks
 habitatmech:GOLD.83818dd6ed	permafrost__db55a8c6
 habitatmech:GOLD.83a739a7b1	whole_body__07339b29
-habitatmech:GOLD.83af503d76	pineal_gland_epiphysis_cerebri__7dcffd8d
 habitatmech:GOLD.84053fba17	tailings_pond__a57fabd2
 habitatmech:GOLD.8423e76015	abscess__17940af6
 habitatmech:GOLD.84791b320c	agricultural_land__b27d5e0e
@@ -2269,7 +2284,6 @@ habitatmech:GOLD.8665a55655	tobacco_product
 habitatmech:GOLD.867362bd5a	respiratory_system__484dd4fc
 habitatmech:GOLD.8674c3da6b	testicular_cancer
 habitatmech:GOLD.867abac275	decomposed_body__7ba62861
-habitatmech:GOLD.86aef52360	paunch_p3_segment
 habitatmech:GOLD.86cf49cefb	plant_growth_chamber
 habitatmech:GOLD.86eeaad31d	sediment__d693980b
 habitatmech:GOLD.87598cbdca	sediment__1b46e4cb
@@ -2313,7 +2327,6 @@ habitatmech:GOLD.8c0dd5714b	lower_gastrointestinal_tract__ee16e3ac
 habitatmech:GOLD.8c4ad6740f	short_bone
 habitatmech:GOLD.8c5f1eb1b0	ceca__2f9665ca
 habitatmech:GOLD.8c6192908f	stone
-habitatmech:GOLD.8c67e4bec0	lacrimal_fluids
 habitatmech:GOLD.8c8c7983bf	laryngopharynx__0d3782e8
 habitatmech:GOLD.8cd1d6fe85	aquaculture__f784f173
 habitatmech:GOLD.8d1a6819a4	sludge__c3365fbe
@@ -2406,7 +2419,6 @@ habitatmech:GOLD.98d936714f	sediment__bbedc720
 habitatmech:GOLD.9942535c2d	kidney__be6e4dc6
 habitatmech:GOLD.9987a3e1d2	kidney__188c7e8b
 habitatmech:GOLD.99880772e1	oral_cavity__7cca2853
-habitatmech:GOLD.99a5a5b447	shale_gas_oil_reservoir
 habitatmech:GOLD.99a88ecb51	drinking_water__6d6ef579
 habitatmech:GOLD.99a89f10a0	verrucas
 habitatmech:GOLD.99aff88405	ectosymbionts__7a42a232
@@ -2563,6 +2575,7 @@ habitatmech:GOLD.b01e9194eb	sediment__b9940958
 habitatmech:GOLD.b0721b9326	gills__b8975be1
 habitatmech:GOLD.b076c78736	woodchip_bioreactor_wbr
 habitatmech:GOLD.b091b80314	large_intestine__deeaad00
+habitatmech:GOLD.b0b63b2192	sediment__dc3822ec
 habitatmech:GOLD.b0c80b8e45	respiratory_tract_fluid
 habitatmech:GOLD.b0f6a1ef74	aerobic_zone
 habitatmech:GOLD.b0f9e819af	head__ef8439be
@@ -2633,7 +2646,6 @@ habitatmech:GOLD.b93a06a069	sediment__e63c4954
 habitatmech:GOLD.b94dc73ee6	whole_body__941e9396
 habitatmech:GOLD.b98f04d5ad	tooth_dentin
 habitatmech:GOLD.ba2e9c19f0	subcutaneous_fat__00035eca
-habitatmech:GOLD.ba38e5e8ae	thallus_plant_body__274c204e
 habitatmech:GOLD.ba687e2c95	lung__ab16a773
 habitatmech:GOLD.ba858ff7a6	venous__3e06d9e2
 habitatmech:GOLD.ba9317369a	genetic_cross
@@ -2661,7 +2673,6 @@ habitatmech:GOLD.bd318592b2	estuary__bae88a25
 habitatmech:GOLD.bd9662fadb	whole_body__e6584d8d
 habitatmech:GOLD.bdd0c4def8	lymph_duct__35252b7a
 habitatmech:GOLD.be021eb56c	lesion__59aa3359
-habitatmech:GOLD.be1c317f16	thorax_pereon
 habitatmech:GOLD.be387c9aa8	phycosphere
 habitatmech:GOLD.be39fe9a0e	lymphatic_system__5f8baf7d
 habitatmech:GOLD.be4a7c95b6	crustaceans_pond
@@ -2686,7 +2697,6 @@ habitatmech:GOLD.c07aaa941d	anaerobic_aerobic__c424253c
 habitatmech:GOLD.c08255b2d2	benthic_zone
 habitatmech:GOLD.c085f6141a	hot_42_90c
 habitatmech:GOLD.c0b02b63b9	cave_stream
-habitatmech:GOLD.c0bdab9b90	synovium_synovial_membrane
 habitatmech:GOLD.c0ce593089	propleura
 habitatmech:GOLD.c0eea2809c	microbial_mats__c3f0268a
 habitatmech:GOLD.c15e1115f3	cervix
@@ -2734,7 +2744,6 @@ habitatmech:GOLD.c6b0b54290	abdomen__0b37a453
 habitatmech:GOLD.c6f845a8b8	sediment__a36658ce
 habitatmech:GOLD.c7074dec9b	intestinal_mucosa__2213ef4b
 habitatmech:GOLD.c7282659d0	sediment__f02aa11f
-habitatmech:GOLD.c770d96590	mbr_membrane_bioreactor
 habitatmech:GOLD.c789b4d04e	sediment__f9571146
 habitatmech:GOLD.c79068da29	granular_sludge
 habitatmech:GOLD.c7a7c79455	cervix__0de03fa8
@@ -2772,7 +2781,6 @@ habitatmech:GOLD.cb4b2d7af4	solar_solterns
 habitatmech:GOLD.cb4d8fc60e	cecum__d677e5d7
 habitatmech:GOLD.cb827f4a50	bioreactor__4c39516f
 habitatmech:GOLD.cbad89b6dd	glacier_stream
-habitatmech:GOLD.cbcb2124b2	slaughterhouse_abattoir
 habitatmech:GOLD.cbd89e2939	intestine__f3947118
 habitatmech:GOLD.cbef9ba962	sediment__6e93a95d
 habitatmech:GOLD.cc5ac8910b	activated_sludge__b1c5161b
@@ -2799,7 +2807,6 @@ habitatmech:GOLD.ce9fa1ef7f	circulatory_system__241de4de
 habitatmech:GOLD.cea7ead8dd	waste__ae37fc5e
 habitatmech:GOLD.ceceb38473	clay__0b0ee455
 habitatmech:GOLD.cf00643ee7	poultry_confinement_building
-habitatmech:GOLD.cf15f76304	hypophysis_pituitary_gland__5971f307
 habitatmech:GOLD.cf3859b25e	mouse_myeloma
 habitatmech:GOLD.cf61f100c6	mineral_soil__7f2d2064
 habitatmech:GOLD.cf8a6a7062	pancreas__1d0702a8
@@ -3001,7 +3008,6 @@ habitatmech:GOLD.e799433ca6	honeydew
 habitatmech:GOLD.e7dced4681	sediment__301877e9
 habitatmech:GOLD.e7de4a8838	bulk_soil__10935218
 habitatmech:GOLD.e80d5f6236	surface__bd8fedc6
-habitatmech:GOLD.e83536dc3f	proventriculus_gizzard
 habitatmech:GOLD.e848af2c5d	cell_line__59b8224e
 habitatmech:GOLD.e856cf26a5	stone_surface
 habitatmech:GOLD.e860ad4c9d	produced_water__4b7c7f10
@@ -3124,7 +3130,6 @@ habitatmech:GOLD.f7cc0ef1b4	bronchi__c8c64428
 habitatmech:GOLD.f7df33dbae	compact_bone__c00eaa73
 habitatmech:GOLD.f7e400b753	mixed_algae_turf
 habitatmech:GOLD.f7e4e2484f	snow__7a83b333
-habitatmech:GOLD.f8048a6e2a	microfouling_biofilm__e7048909
 habitatmech:GOLD.f87245a357	dug_well
 habitatmech:GOLD.f876b2a17e	forest_soil__c37a0f5c
 habitatmech:GOLD.f8aad47f0f	bile__612af0df

@@ -13,8 +13,25 @@ source_attestations:
   assertion_unit: STRAIN
   notes: Upstream mapping targets a non-habitat ontology (NCBITaxon:2836); kept as
     an xref.
+characteristic_taxa:
+- taxon_id: NCBITaxon:1895664
+  source: BACDIVE
+  taxon_label: Halanaerobium sp.
+  association_count: 1
+- taxon_id: NCBITaxon:226
+  source: BACDIVE
+  taxon_label: Alteromonas
+  association_count: 1
+- taxon_id: NCBITaxon:267736
+  source: BACDIVE
+  taxon_label: Halanaerobium saccharolyticum subsp. saccharolyticum
+  association_count: 1
+- taxon_id: NCBITaxon:678
+  source: BACDIVE
+  taxon_label: Vibrio sp.
+  association_count: 1
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: NOT_APPLICABLE.'

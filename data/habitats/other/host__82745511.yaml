@@ -1,0 +1,23 @@
+identifier: habitatmech:ENVIRONMENTS_TABLE.54b570032a
+label: host
+habitat_category: OTHER
+grounding_status: NOT_APPLICABLE
+mapping_status: REVIEWED
+source_attestations:
+- source: ENVIRONMENTS_TABLE
+  source_id: host
+  source_label: host
+  notes: Physicochemical parameter bands from kg-microbe's environment table.
+environmental_parameters:
+- parameter: PH
+  qualitative_value: medium
+  source: kg-microbe environments.csv (host)
+- parameter: PRESSURE
+  qualitative_value: low
+  source: kg-microbe environments.csv (host)
+curation_history:
+- timestamp: '2026-08-13T06:49:23Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE. Grounding:
+    NOT_APPLICABLE.'

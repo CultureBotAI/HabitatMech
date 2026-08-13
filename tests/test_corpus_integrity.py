@@ -11,7 +11,10 @@ from __future__ import annotations
 import re
 from collections import Counter
 
-MINTED_PATTERN = re.compile(r"^habitatmech:(GOLD|BACDIVE)\.[0-9a-f]{10}$")
+# Every source that mints keys. PREGO and ENVIRONMENTS_TABLE were absent while
+# only GOLD and BacDive minted, so the pattern silently stopped covering them as
+# each new source became curatable — keep this in step with mint() callers.
+MINTED_PATTERN = re.compile(r"^habitatmech:(GOLD|BACDIVE|PREGO|ENVIRONMENTS_TABLE)\.[0-9a-f]{10}$")
 CURIE_PATTERN = re.compile(r"^[A-Za-z][A-Za-z0-9._-]*:[A-Za-z0-9._-]+$")
 
 

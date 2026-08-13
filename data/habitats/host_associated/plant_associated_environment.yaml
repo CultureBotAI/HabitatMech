@@ -50,8 +50,109 @@ environmental_parameters:
 - parameter: SALINITY_VARIABILITY
   qualitative_value: small
   source: kg-microbe environments.csv (host_plant)
+characteristic_taxa:
+- taxon_id: NCBITaxon:1405
+  source: BACDIVE
+  taxon_label: Bacillus mycoides
+  association_count: 15
+- taxon_id: NCBITaxon:1411316
+  source: BACDIVE
+  taxon_label: Pedobacter sp.
+  association_count: 10
+- taxon_id: NCBITaxon:1428
+  source: BACDIVE
+  taxon_label: Bacillus thuringiensis
+  association_count: 12
+- taxon_id: NCBITaxon:184914
+  source: BACDIVE
+  taxon_label: Corallococcus coralloides
+  association_count: 33
+- taxon_id: NCBITaxon:1871063
+  source: BACDIVE
+  taxon_label: Aeromicrobium sp.
+  association_count: 10
+- taxon_id: NCBITaxon:1872086
+  source: BACDIVE
+  taxon_label: Ensifer sp.
+  association_count: 13
+- taxon_id: NCBITaxon:1872122
+  source: BACDIVE
+  taxon_label: Acidovorax sp.
+  association_count: 12
+- taxon_id: NCBITaxon:1930
+  source: BACDIVE
+  taxon_label: Streptomyces scabiei
+  association_count: 20
+- taxon_id: NCBITaxon:1931
+  source: BACDIVE
+  taxon_label: Streptomyces sp.
+  association_count: 20
+- taxon_id: NCBITaxon:2035
+  source: BACDIVE
+  taxon_label: Curtobacterium flaccumfaciens
+  association_count: 11
+- taxon_id: NCBITaxon:2161
+  source: BACDIVE
+  taxon_label: Methanobacterium bryantii
+  association_count: 15
+- taxon_id: NCBITaxon:28214
+  source: BACDIVE
+  taxon_label: Sphingomonas sp.
+  association_count: 46
+- taxon_id: NCBITaxon:305
+  source: BACDIVE
+  taxon_label: Ralstonia solanacearum
+  association_count: 22
+- taxon_id: NCBITaxon:306
+  source: BACDIVE
+  taxon_label: Pseudomonas sp.
+  association_count: 26
+- taxon_id: NCBITaxon:317
+  source: BACDIVE
+  taxon_label: Pseudomonas syringae
+  association_count: 33
+- taxon_id: NCBITaxon:339
+  source: BACDIVE
+  taxon_label: Xanthomonas campestris
+  association_count: 39
+- taxon_id: NCBITaxon:35761
+  source: BACDIVE
+  taxon_label: Nocardioides sp.
+  association_count: 15
+- taxon_id: NCBITaxon:391
+  source: BACDIVE
+  taxon_label: Rhizobium sp.
+  association_count: 30
+- taxon_id: NCBITaxon:409
+  source: BACDIVE
+  taxon_label: Methylobacterium sp.
+  association_count: 43
+- taxon_id: NCBITaxon:51671
+  source: BACDIVE
+  taxon_label: Microbacterium sp.
+  association_count: 18
+- taxon_id: NCBITaxon:54
+  source: BACDIVE
+  taxon_label: Nannocystis exedens
+  association_count: 35
+- taxon_id: NCBITaxon:554
+  source: BACDIVE
+  taxon_label: Pectobacterium carotovorum
+  association_count: 30
+- taxon_id: NCBITaxon:56
+  source: BACDIVE
+  taxon_label: Sorangium cellulosum
+  association_count: 39
+- taxon_id: NCBITaxon:58172
+  source: BACDIVE
+  taxon_label: Paenibacillus sp.
+  association_count: 14
+- taxon_id: NCBITaxon:83428
+  source: BACDIVE
+  taxon_label: uncultured Bacillus sp.
+  association_count: 19
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, ENVIRONMENTS_TABLE,

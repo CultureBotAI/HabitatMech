@@ -9,8 +9,37 @@ source_attestations:
   source_label: Tuberculosis
   assertion_count: 7
   assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:1121389
+  source: BACDIVE
+  taxon_label: Desmospora activa DSM 45169
+  association_count: 1
+- taxon_id: NCBITaxon:1206725
+  source: BACDIVE
+  taxon_label: Nocardia brevicatena NBRC 12119
+  association_count: 1
+- taxon_id: NCBITaxon:1274374
+  source: BACDIVE
+  taxon_label: Paenibacillus antibioticophila
+  association_count: 1
+- taxon_id: NCBITaxon:1776
+  source: BACDIVE
+  taxon_label: Mycolicibacterium flavescens
+  association_count: 1
+- taxon_id: NCBITaxon:36814
+  source: BACDIVE
+  taxon_label: Mycolicibacterium rhodesiae
+  association_count: 1
+- taxon_id: NCBITaxon:44454
+  source: BACDIVE
+  taxon_label: Mycobacterium avium subsp. avium
+  association_count: 1
+- taxon_id: NCBITaxon:47312
+  source: BACDIVE
+  taxon_label: Tsukamurella pulmonis
+  association_count: 1
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'

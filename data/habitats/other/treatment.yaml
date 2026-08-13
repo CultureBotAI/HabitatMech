@@ -9,8 +9,109 @@ source_attestations:
   source_label: Treatment
   assertion_count: 37
   assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:1091038
+  source: BACDIVE
+  taxon_label: Streptococcus thermophilus DSM 20617
+  association_count: 1
+- taxon_id: NCBITaxon:113557
+  source: BACDIVE
+  taxon_label: Lacticaseibacillus paracasei subsp. tolerans
+  association_count: 1
+- taxon_id: NCBITaxon:1219042
+  source: BACDIVE
+  taxon_label: Novosphingobium capsulatum NBRC 12533
+  association_count: 1
+- taxon_id: NCBITaxon:1220595
+  source: BACDIVE
+  taxon_label: Geobacillus kaustophilus NBRC 102445
+  association_count: 1
+- taxon_id: NCBITaxon:1255632
+  source: BACDIVE
+  taxon_label: Ornithinibacillus bavariensis CIP 109287
+  association_count: 1
+- taxon_id: NCBITaxon:1265504
+  source: BACDIVE
+  taxon_label: Curvibacter lanceolatus ATCC 14669
+  association_count: 1
+- taxon_id: NCBITaxon:1349763
+  source: BACDIVE
+  taxon_label: Curvibacter delicatus NBRC 14919
+  association_count: 1
+- taxon_id: NCBITaxon:1358026
+  source: BACDIVE
+  taxon_label: Leifsonia aquatica ATCC 14665
+  association_count: 1
+- taxon_id: NCBITaxon:1405
+  source: BACDIVE
+  taxon_label: Bacillus mycoides
+  association_count: 1
+- taxon_id: NCBITaxon:1423759
+  source: BACDIVE
+  taxon_label: Liquorilactobacillus hordei DSM 19519
+  association_count: 1
+- taxon_id: NCBITaxon:1423830
+  source: BACDIVE
+  taxon_label: Lacticaseibacillus paracasei subsp. tolerans DSM 20258
+  association_count: 1
+- taxon_id: NCBITaxon:1629
+  source: BACDIVE
+  taxon_label: Weissella viridescens
+  association_count: 1
+- taxon_id: NCBITaxon:1896336
+  source: BACDIVE
+  taxon_label: Citrobacter sp.
+  association_count: 3
+- taxon_id: NCBITaxon:2040280
+  source: BACDIVE
+  taxon_label: Marmoricola endophyticus
+  association_count: 1
+- taxon_id: NCBITaxon:2044847
+  source: BACDIVE
+  taxon_label: Streptomyces roietensis
+  association_count: 1
+- taxon_id: NCBITaxon:2057246
+  source: BACDIVE
+  taxon_label: Acidipropionibacterium virtanenii
+  association_count: 1
+- taxon_id: NCBITaxon:2182385
+  source: BACDIVE
+  taxon_label: Brachybacterium endophyticum
+  association_count: 1
+- taxon_id: NCBITaxon:2231721
+  source: BACDIVE
+  taxon_label: Muricoccus radiodurans
+  association_count: 1
+- taxon_id: NCBITaxon:2292705
+  source: BACDIVE
+  taxon_label: Paenibacillus paeoniae
+  association_count: 1
+- taxon_id: NCBITaxon:28172
+  source: BACDIVE
+  taxon_label: Vibrio metschnikovii
+  association_count: 1
+- taxon_id: NCBITaxon:409
+  source: BACDIVE
+  taxon_label: Methylobacterium sp.
+  association_count: 1
+- taxon_id: NCBITaxon:42895
+  source: BACDIVE
+  taxon_label: Enterobacter sp.
+  association_count: 1
+- taxon_id: NCBITaxon:451757
+  source: BACDIVE
+  taxon_label: Clostridium perfringens NCTC 8239
+  association_count: 1
+- taxon_id: NCBITaxon:468911
+  source: BACDIVE
+  taxon_label: Liquorilactobacillus hordei
+  association_count: 1
+- taxon_id: NCBITaxon:651
+  source: BACDIVE
+  taxon_label: Aeromonas media
+  association_count: 2
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: NOT_APPLICABLE.'

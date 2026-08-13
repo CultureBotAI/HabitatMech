@@ -1,0 +1,48 @@
+identifier: PO:0009005
+label: root
+definition: A plant axis (PO:0025004) that lacks shoot axis nodes (PO:0005004) and
+  usually grows indeterminately.
+definition_source: PO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Roots
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: aerial root (narrow)
+  synonym_type: EXACT_SYNONYM
+  source: PO
+- synonym_text: climbing root (narrow)
+  synonym_type: EXACT_SYNONYM
+  source: PO
+- synonym_text: ra&#237z (Spanish, exact)
+  synonym_type: EXACT_SYNONYM
+  source: PO
+- synonym_text: radices (exact, plural)
+  synonym_type: EXACT_SYNONYM
+  source: PO
+- synonym_text: radix (exact)
+  synonym_type: EXACT_SYNONYM
+  source: PO
+- synonym_text: 根 (Japanese, exact)
+  synonym_type: EXACT_SYNONYM
+  source: PO
+parent_habitats:
+- ENVO:01001001
+- PO:0025004
+- UBERON:0001062
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4464
+  source_label: Roots
+  source_path: Host-associated > Plants > Roots
+  mapping_predicate: skos:exactMatch
+  assertion_count: 2809
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-13T06:49:23Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

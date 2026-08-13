@@ -15,6 +15,7 @@ synonyms:
   source: BacDive
 parent_habitats:
 - FOODON:03420110
+- PO:0009010
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:fruit-seed
@@ -22,8 +23,109 @@ source_attestations:
   mapping_predicate: skos:closeMatch
   assertion_count: 228
   assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:106592
+  source: BACDIVE
+  taxon_label: Ensifer adhaerens
+  association_count: 2
+- taxon_id: NCBITaxon:1247
+  source: BACDIVE
+  taxon_label: Oenococcus oeni
+  association_count: 2
+- taxon_id: NCBITaxon:1428
+  source: BACDIVE
+  taxon_label: Bacillus thuringiensis
+  association_count: 2
+- taxon_id: NCBITaxon:1517
+  source: BACDIVE
+  taxon_label: Thermoanaerobacterium thermosaccharolyticum
+  association_count: 2
+- taxon_id: NCBITaxon:152682
+  source: BACDIVE
+  taxon_label: Sphingomonas melonis
+  association_count: 2
+- taxon_id: NCBITaxon:153721
+  source: BACDIVE
+  taxon_label: Sporocytophaga myxococcoides
+  association_count: 8
+- taxon_id: NCBITaxon:1580
+  source: BACDIVE
+  taxon_label: Levilactobacillus brevis
+  association_count: 3
+- taxon_id: NCBITaxon:1588
+  source: BACDIVE
+  taxon_label: Lentilactobacillus hilgardii
+  association_count: 2
+- taxon_id: NCBITaxon:176292
+  source: BACDIVE
+  taxon_label: Secundilactobacillus malefermentans
+  association_count: 3
+- taxon_id: NCBITaxon:184914
+  source: BACDIVE
+  taxon_label: Corallococcus coralloides
+  association_count: 9
+- taxon_id: NCBITaxon:1931
+  source: BACDIVE
+  taxon_label: Streptomyces sp.
+  association_count: 2
+- taxon_id: NCBITaxon:2371
+  source: BACDIVE
+  taxon_label: Xylella fastidiosa
+  association_count: 2
+- taxon_id: NCBITaxon:28447
+  source: BACDIVE
+  taxon_label: Clavibacter michiganensis
+  association_count: 3
+- taxon_id: NCBITaxon:298
+  source: BACDIVE
+  taxon_label: Pseudomonas marginalis
+  association_count: 2
+- taxon_id: NCBITaxon:317
+  source: BACDIVE
+  taxon_label: Pseudomonas syringae
+  association_count: 6
+- taxon_id: NCBITaxon:33
+  source: BACDIVE
+  taxon_label: Myxococcus fulvus
+  association_count: 2
+- taxon_id: NCBITaxon:339
+  source: BACDIVE
+  taxon_label: Xanthomonas campestris
+  association_count: 2
+- taxon_id: NCBITaxon:442
+  source: BACDIVE
+  taxon_label: Gluconobacter oxydans
+  association_count: 4
+- taxon_id: NCBITaxon:51663
+  source: BACDIVE
+  taxon_label: Pediococcus damnosus
+  association_count: 3
+- taxon_id: NCBITaxon:54
+  source: BACDIVE
+  taxon_label: Nannocystis exedens
+  association_count: 7
+- taxon_id: NCBITaxon:556
+  source: BACDIVE
+  taxon_label: Dickeya chrysanthemi
+  association_count: 4
+- taxon_id: NCBITaxon:56
+  source: BACDIVE
+  taxon_label: Sorangium cellulosum
+  association_count: 10
+- taxon_id: NCBITaxon:71864
+  source: BACDIVE
+  taxon_label: Herpetosiphon sp.
+  association_count: 4
+- taxon_id: NCBITaxon:83451
+  source: BACDIVE
+  taxon_label: Archangium violaceum
+  association_count: 3
+- taxon_id: NCBITaxon:84032
+  source: BACDIVE
+  taxon_label: Clostridium thermosuccinogenes
+  association_count: 3
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

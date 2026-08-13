@@ -1,0 +1,35 @@
+identifier: ENVO:00000141
+label: bank
+definition: The sloping margin of a watercourse, serving to confine it to its natural
+  channel.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: mount
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: shore
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00002000
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00000141
+  source_label: bank
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1121479
+  source: PREGO
+  taxon_label: Pseudodonghicola xiamenensis DSM 18339
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-13T06:49:23Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

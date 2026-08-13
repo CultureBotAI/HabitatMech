@@ -29,8 +29,109 @@ source_attestations:
   assertion_count: 55
   assertion_unit: ORGANISM
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+characteristic_taxa:
+- taxon_id: NCBITaxon:1077144
+  source: BACDIVE
+  taxon_label: Dietzia alimentaria 72
+  association_count: 1
+- taxon_id: NCBITaxon:1122129
+  source: BACDIVE
+  taxon_label: Jeotgalicoccus psychrophilus DSM 19085
+  association_count: 1
+- taxon_id: NCBITaxon:1122211
+  source: BACDIVE
+  taxon_label: Marinospirillum insulare DSM 21763
+  association_count: 1
+- taxon_id: NCBITaxon:112331
+  source: BACDIVE
+  taxon_label: Planococcus koreensis
+  association_count: 1
+- taxon_id: NCBITaxon:1123359
+  source: BACDIVE
+  taxon_label: Tetragenococcus muriaticus DSM 15685
+  association_count: 1
+- taxon_id: NCBITaxon:1129374
+  source: BACDIVE
+  taxon_label: Alishewanella jeotgali KCTC 22429
+  association_count: 1
+- taxon_id: NCBITaxon:121872
+  source: BACDIVE
+  taxon_label: Natrinema thermotolerans
+  association_count: 1
+- taxon_id: NCBITaxon:1227498
+  source: BACDIVE
+  taxon_label: Natronococcus jeotgali DSM 18795
+  association_count: 1
+- taxon_id: NCBITaxon:1238186
+  source: BACDIVE
+  taxon_label: Leucobacter salsicius M1-8
+  association_count: 1
+- taxon_id: NCBITaxon:1262550
+  source: BACDIVE
+  taxon_label: Brevibacterium jeotgali
+  association_count: 1
+- taxon_id: NCBITaxon:1281
+  source: BACDIVE
+  taxon_label: Staphylococcus carnosus
+  association_count: 2
+- taxon_id: NCBITaxon:1294022
+  source: BACDIVE
+  taxon_label: Piscibacillus salipiscarius JCM 13188
+  association_count: 1
+- taxon_id: NCBITaxon:129985
+  source: BACDIVE
+  taxon_label: Mesobacillus jeotgali
+  association_count: 1
+- taxon_id: NCBITaxon:135826
+  source: BACDIVE
+  taxon_label: Jeotgalibacillus alimentarius
+  association_count: 1
+- taxon_id: NCBITaxon:1423716
+  source: BACDIVE
+  taxon_label: Ligilactobacillus acidipiscis DSM 15836
+  association_count: 1
+- taxon_id: NCBITaxon:1455608
+  source: BACDIVE
+  taxon_label: Haladaptatus cibarius D43
+  association_count: 1
+- taxon_id: NCBITaxon:147248
+  source: BACDIVE
+  taxon_label: Halomonas alimentaria
+  association_count: 1
+- taxon_id: NCBITaxon:157227
+  source: BACDIVE
+  taxon_label: Jeotgalicoccus halotolerans
+  association_count: 1
+- taxon_id: NCBITaxon:1590
+  source: BACDIVE
+  taxon_label: Lactiplantibacillus plantarum
+  association_count: 1
+- taxon_id: NCBITaxon:1631871
+  source: BACDIVE
+  taxon_label: Weissella jogaejeotgali
+  association_count: 1
+- taxon_id: NCBITaxon:1690008
+  source: BACDIVE
+  taxon_label: Halomonas garicola
+  association_count: 1
+- taxon_id: NCBITaxon:179010
+  source: BACDIVE
+  taxon_label: Psychrobacter jeotgali
+  association_count: 1
+- taxon_id: NCBITaxon:1879320
+  source: BACDIVE
+  taxon_label: Ruegeria sp.
+  association_count: 1
+- taxon_id: NCBITaxon:261164
+  source: BACDIVE
+  taxon_label: Psychrobacter alimentarius
+  association_count: 2
+- taxon_id: NCBITaxon:282669
+  source: BACDIVE
+  taxon_label: Psychrobacter cibarius
+  association_count: 2
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD. Grounding:

@@ -9,8 +9,25 @@ source_attestations:
   source_label: Endosymbiont
   assertion_count: 5
   assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:1679495
+  source: BACDIVE
+  taxon_label: Variovorax gossypii
+  association_count: 1
+- taxon_id: NCBITaxon:212218
+  source: BACDIVE
+  taxon_label: uncultured Neochlamydia sp.
+  association_count: 2
+- taxon_id: NCBITaxon:35761
+  source: BACDIVE
+  taxon_label: Nocardioides sp.
+  association_count: 1
+- taxon_id: NCBITaxon:362787
+  source: BACDIVE
+  taxon_label: Candidatus Protochlamydia amoebophila
+  association_count: 1
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'

@@ -10,8 +10,37 @@ source_attestations:
   mapping_predicate: skos:closeMatch
   assertion_count: 7
   assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:1282
+  source: BACDIVE
+  taxon_label: Staphylococcus epidermidis
+  association_count: 1
+- taxon_id: NCBITaxon:2702
+  source: BACDIVE
+  taxon_label: Gardnerella vaginalis
+  association_count: 1
+- taxon_id: NCBITaxon:43771
+  source: BACDIVE
+  taxon_label: Corynebacterium urealyticum
+  association_count: 1
+- taxon_id: NCBITaxon:504474
+  source: BACDIVE
+  taxon_label: Corynebacterium urealyticum DSM 7109
+  association_count: 1
+- taxon_id: NCBITaxon:508451
+  source: BACDIVE
+  taxon_label: Lactobacillus taiwanensis
+  association_count: 1
+- taxon_id: NCBITaxon:588
+  source: BACDIVE
+  taxon_label: Providencia stuartii
+  association_count: 1
+- taxon_id: NCBITaxon:827
+  source: BACDIVE
+  taxon_label: Campylobacter ureolyticus
+  association_count: 1
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

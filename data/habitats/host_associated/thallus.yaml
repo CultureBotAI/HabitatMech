@@ -1,0 +1,45 @@
+identifier: PO:0030027
+label: thallus
+definition: A whole plant in the gametophytic phase that has a flat growth form and
+  no distinct organs.
+definition_source: PO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Thallus/Plant body
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: prothallium (broad)
+  synonym_type: EXACT_SYNONYM
+  source: PO
+- synonym_text: talo (Spanish, exact)
+  synonym_type: EXACT_SYNONYM
+  source: PO
+- synonym_text: thalli (exact, plural)
+  synonym_type: EXACT_SYNONYM
+  source: PO
+- synonym_text: 葉状体 (Japanese, exact)
+  synonym_type: EXACT_SYNONYM
+  source: PO
+parent_habitats:
+- PO:0000003
+- habitatmech:GOLD.50a1c0375b
+- habitatmech:GOLD.b2bb6d6801
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8123
+  source_label: Thallus/Plant body
+  source_path: Host-associated > Plants > Bryophytes > Liverworts > Thallus/Plant
+    body
+  mapping_predicate: skos:exactMatch
+- source: GOLD
+  source_id: gold.ecosystem:8128
+  source_label: Thallus/Plant body
+  source_path: Host-associated > Plants > Bryophytes > Hornworts > Thallus/Plant body
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-13T06:49:23Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

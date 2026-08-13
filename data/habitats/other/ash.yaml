@@ -19,8 +19,72 @@ source_attestations:
   mapping_predicate: skos:closeMatch
   assertion_count: 20
   assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:115433
+  source: BACDIVE
+  taxon_label: Amycolatopsis sacchari
+  association_count: 2
+- taxon_id: NCBITaxon:1212764
+  source: BACDIVE
+  taxon_label: Paenibacillus popilliae ATCC 14706
+  association_count: 1
+- taxon_id: NCBITaxon:1302723
+  source: BACDIVE
+  taxon_label: Agromyces ulmi JCM 13315
+  association_count: 1
+- taxon_id: NCBITaxon:163605
+  source: BACDIVE
+  association_count: 1
+- taxon_id: NCBITaxon:185949
+  source: BACDIVE
+  taxon_label: Sphingomonas aurantiaca
+  association_count: 2
+- taxon_id: NCBITaxon:185950
+  source: BACDIVE
+  taxon_label: Sphingomonas faeni
+  association_count: 1
+- taxon_id: NCBITaxon:1871047
+  source: BACDIVE
+  taxon_label: Chryseobacterium sp.
+  association_count: 1
+- taxon_id: NCBITaxon:1935
+  source: BACDIVE
+  taxon_label: Streptomyces violaceoruber
+  association_count: 1
+- taxon_id: NCBITaxon:2014
+  source: BACDIVE
+  taxon_label: Nocardiopsis dassonvillei
+  association_count: 1
+- taxon_id: NCBITaxon:336203
+  source: BACDIVE
+  taxon_label: Sphingobium fuliginis
+  association_count: 1
+- taxon_id: NCBITaxon:366289
+  source: BACDIVE
+  taxon_label: Pseudomonas delhiensis
+  association_count: 1
+- taxon_id: NCBITaxon:36813
+  source: BACDIVE
+  taxon_label: Mycolicibacterium pulveris
+  association_count: 1
+- taxon_id: NCBITaxon:393664
+  source: BACDIVE
+  taxon_label: Aliirhizobium cellulosilyticum
+  association_count: 1
+- taxon_id: NCBITaxon:529
+  source: BACDIVE
+  taxon_label: Brucella anthropi
+  association_count: 1
+- taxon_id: NCBITaxon:67263
+  source: BACDIVE
+  taxon_label: Streptomyces griseus subsp. griseus
+  association_count: 3
+- taxon_id: NCBITaxon:68175
+  source: BACDIVE
+  taxon_label: Streptomyces antimycoticus
+  association_count: 1
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

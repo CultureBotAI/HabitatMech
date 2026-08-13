@@ -43,8 +43,109 @@ source_attestations:
   mapping_predicate: skos:closeMatch
   assertion_count: 58
   assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:1081736
+  source: BACDIVE
+  taxon_label: Listeria fleischmannii subsp. coloradonensis
+  association_count: 1
+- taxon_id: NCBITaxon:1085
+  source: BACDIVE
+  taxon_label: Rhodospirillum rubrum
+  association_count: 1
+- taxon_id: NCBITaxon:1108140
+  source: BACDIVE
+  taxon_label: Burkholderia catarinensis
+  association_count: 1
+- taxon_id: NCBITaxon:1121132
+  source: BACDIVE
+  taxon_label: Butyrivibrio hungatei DSM 14810
+  association_count: 1
+- taxon_id: NCBITaxon:1169025
+  source: BACDIVE
+  taxon_label: Streptomyces pratensis
+  association_count: 1
+- taxon_id: NCBITaxon:1278232
+  source: BACDIVE
+  taxon_label: Keratinibaculum paraultunense
+  association_count: 1
+- taxon_id: NCBITaxon:12917
+  source: BACDIVE
+  taxon_label: Acidovorax facilis
+  association_count: 2
+- taxon_id: NCBITaxon:1337839
+  source: BACDIVE
+  taxon_label: Flavobacterium sp. DSM 425
+  association_count: 1
+- taxon_id: NCBITaxon:1384638
+  source: BACDIVE
+  taxon_label: Aridibacter famidurans
+  association_count: 1
+- taxon_id: NCBITaxon:1389489
+  source: BACDIVE
+  taxon_label: Leifsonia xyli subsp. cynodontis DSM 46306
+  association_count: 1
+- taxon_id: NCBITaxon:1399969
+  source: BACDIVE
+  taxon_label: Caballeronia megalochromosomata
+  association_count: 1
+- taxon_id: NCBITaxon:1646377
+  source: BACDIVE
+  taxon_label: Rouxiella badensis
+  association_count: 1
+- taxon_id: NCBITaxon:1683161
+  source: BACDIVE
+  taxon_label: Chthonobacter albigriseus
+  association_count: 1
+- taxon_id: NCBITaxon:171402
+  source: BACDIVE
+  taxon_label: Paenibacillus sp. DSM 1474
+  association_count: 1
+- taxon_id: NCBITaxon:173861
+  source: BACDIVE
+  taxon_label: Streptomyces stramineus
+  association_count: 1
+- taxon_id: NCBITaxon:1813471
+  source: BACDIVE
+  taxon_label: Actinokineospora acnipugnans
+  association_count: 1
+- taxon_id: NCBITaxon:1833
+  source: BACDIVE
+  taxon_label: Rhodococcus erythropolis
+  association_count: 1
+- taxon_id: NCBITaxon:1843237
+  source: BACDIVE
+  taxon_label: Sphingomonas prati
+  association_count: 1
+- taxon_id: NCBITaxon:1854496
+  source: BACDIVE
+  taxon_label: Microvirga soli
+  association_count: 1
+- taxon_id: NCBITaxon:1872119
+  source: BACDIVE
+  taxon_label: Acidobacterium sp.
+  association_count: 3
+- taxon_id: NCBITaxon:420952
+  source: BACDIVE
+  taxon_label: Paraburkholderia bryophila
+  association_count: 2
+- taxon_id: NCBITaxon:46609
+  source: BACDIVE
+  taxon_label: Clostridium pascui
+  association_count: 4
+- taxon_id: NCBITaxon:58172
+  source: BACDIVE
+  taxon_label: Paenibacillus sp.
+  association_count: 4
+- taxon_id: NCBITaxon:79880
+  source: BACDIVE
+  taxon_label: Shouchella clausii
+  association_count: 2
+- taxon_id: NCBITaxon:83428
+  source: BACDIVE
+  taxon_label: uncultured Bacillus sp.
+  association_count: 2
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

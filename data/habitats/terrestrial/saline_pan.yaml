@@ -18,6 +18,9 @@ synonyms:
 - synonym_text: Salt flat/Salt pan
   synonym_type: EXACT_SYNONYM
   source: GOLD
+- synonym_text: Salt pan/flat
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
 - synonym_text: salt area
   synonym_type: EXACT_SYNONYM
   source: ENVO
@@ -31,7 +34,14 @@ parent_habitats:
 - ENVO:00001998
 - ENVO:01000296
 - ENVO:01001043
+- ENVO:01001357
 source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7644
+  source_label: Salt pan/flat
+  source_path: Environmental > Terrestrial > Desert > Salt pan/flat
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 - source: GOLD
   source_id: gold.ecosystem:7927
   source_label: Salt flat/Salt pan
@@ -49,7 +59,7 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

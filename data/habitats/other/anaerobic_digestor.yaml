@@ -9,8 +9,109 @@ source_attestations:
   source_label: Anaerobic-digestor
   assertion_count: 89
   assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:100133
+  source: BACDIVE
+  taxon_label: Sporobacterium olearium
+  association_count: 1
+- taxon_id: NCBITaxon:100174
+  source: BACDIVE
+  taxon_label: Clostridium peptidivorans
+  association_count: 1
+- taxon_id: NCBITaxon:1006576
+  source: BACDIVE
+  taxon_label: Defluviitoga tunisiensis
+  association_count: 1
+- taxon_id: NCBITaxon:1069080
+  source: BACDIVE
+  taxon_label: Succinispira mobilis DSM 6222
+  association_count: 1
+- taxon_id: NCBITaxon:1121262
+  source: BACDIVE
+  taxon_label: Caloramator proteoclasticus DSM 10124
+  association_count: 1
+- taxon_id: NCBITaxon:1121327
+  source: BACDIVE
+  taxon_label: Anaerotignum neopropionicum DSM 3847
+  association_count: 1
+- taxon_id: NCBITaxon:1121345
+  source: BACDIVE
+  taxon_label: Anaerocolumna xylanovorans DSM 12503
+  association_count: 1
+- taxon_id: NCBITaxon:1121394
+  source: BACDIVE
+  taxon_label: Desulfatirhabdium butyrativorans DSM 18734
+  association_count: 1
+- taxon_id: NCBITaxon:1121458
+  source: BACDIVE
+  taxon_label: Humidesulfovibrio mexicanus DSM 13116
+  association_count: 1
+- taxon_id: NCBITaxon:1122930
+  source: BACDIVE
+  taxon_label: Papillibacter cinnamivorans DSM 12816
+  association_count: 1
+- taxon_id: NCBITaxon:1123008
+  source: BACDIVE
+  taxon_label: Proteiniphilum acetatigenes DSM 18083
+  association_count: 1
+- taxon_id: NCBITaxon:1123280
+  source: BACDIVE
+  taxon_label: Sporacetigenium mesophilum DSM 16796
+  association_count: 1
+- taxon_id: NCBITaxon:1123281
+  source: BACDIVE
+  taxon_label: Sporanaerobacter acetigenes DSM 13106
+  association_count: 1
+- taxon_id: NCBITaxon:118062
+  source: BACDIVE
+  taxon_label: Methanobacterium congolense
+  association_count: 1
+- taxon_id: NCBITaxon:125602
+  source: BACDIVE
+  taxon_label: Desulfococcus biacutus
+  association_count: 1
+- taxon_id: NCBITaxon:1266720
+  source: BACDIVE
+  taxon_label: Neomoorella stamsii
+  association_count: 1
+- taxon_id: NCBITaxon:128782
+  source: BACDIVE
+  taxon_label: Allobosea minatitlanensis
+  association_count: 1
+- taxon_id: NCBITaxon:1295128
+  source: BACDIVE
+  taxon_label: Thermodesulfovibrio aggregans JCM 13213
+  association_count: 1
+- taxon_id: NCBITaxon:1298606
+  source: BACDIVE
+  taxon_label: Methanosarcina barkeri JCM 10043
+  association_count: 1
+- taxon_id: NCBITaxon:1300163
+  source: BACDIVE
+  taxon_label: Methanobacterium formicicum JCM 10132
+  association_count: 1
+- taxon_id: NCBITaxon:1506
+  source: BACDIVE
+  taxon_label: Clostridium sp.
+  association_count: 3
+- taxon_id: NCBITaxon:1869227
+  source: BACDIVE
+  taxon_label: bacterium
+  association_count: 2
+- taxon_id: NCBITaxon:2200
+  source: BACDIVE
+  taxon_label: Methanoculleus thermophilus
+  association_count: 2
+- taxon_id: NCBITaxon:2209
+  source: BACDIVE
+  taxon_label: Methanosarcina mazei
+  association_count: 2
+- taxon_id: NCBITaxon:224999
+  source: BACDIVE
+  taxon_label: Tepidanaerobacter syntrophicus
+  association_count: 3
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'

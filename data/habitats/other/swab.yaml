@@ -9,8 +9,109 @@ source_attestations:
   source_label: Swab
   assertion_count: 273
   assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:1031542
+  source: BACDIVE
+  taxon_label: Campylobacter volucris
+  association_count: 1
+- taxon_id: NCBITaxon:1032623
+  source: BACDIVE
+  taxon_label: Otariodibacter oris
+  association_count: 1
+- taxon_id: NCBITaxon:1042321
+  source: BACDIVE
+  taxon_label: Ureaplasma miroungigenitalium
+  association_count: 1
+- taxon_id: NCBITaxon:109790
+  source: BACDIVE
+  taxon_label: Lactobacillus jensenii
+  association_count: 3
+- taxon_id: NCBITaxon:1122981
+  source: BACDIVE
+  taxon_label: Prevotella corporis DSM 18810 = JCM 8529
+  association_count: 1
+- taxon_id: NCBITaxon:1270
+  source: BACDIVE
+  taxon_label: Micrococcus luteus
+  association_count: 3
+- taxon_id: NCBITaxon:1280
+  source: BACDIVE
+  taxon_label: Staphylococcus aureus
+  association_count: 2
+- taxon_id: NCBITaxon:131112
+  source: BACDIVE
+  taxon_label: Arcanobacterium phocae
+  association_count: 4
+- taxon_id: NCBITaxon:1314
+  source: BACDIVE
+  taxon_label: Streptococcus pyogenes
+  association_count: 4
+- taxon_id: NCBITaxon:1717
+  source: BACDIVE
+  taxon_label: Corynebacterium diphtheriae
+  association_count: 2
+- taxon_id: NCBITaxon:1780362
+  source: BACDIVE
+  taxon_label: Campylobacter geochelonis
+  association_count: 3
+- taxon_id: NCBITaxon:1965234
+  source: BACDIVE
+  taxon_label: Ureaplasma sp.
+  association_count: 3
+- taxon_id: NCBITaxon:207340
+  source: BACDIVE
+  taxon_label: Roseomonas mucosa
+  association_count: 3
+- taxon_id: NCBITaxon:2108
+  source: BACDIVE
+  taxon_label: Mycoplasma sp.
+  association_count: 6
+- taxon_id: NCBITaxon:250
+  source: BACDIVE
+  taxon_label: Chryseobacterium gleum
+  association_count: 2
+- taxon_id: NCBITaxon:256
+  source: BACDIVE
+  taxon_label: Myroides odoratus
+  association_count: 12
+- taxon_id: NCBITaxon:287
+  source: BACDIVE
+  taxon_label: Pseudomonas aeruginosa
+  association_count: 9
+- taxon_id: NCBITaxon:28901
+  source: BACDIVE
+  taxon_label: Salmonella enterica
+  association_count: 2
+- taxon_id: NCBITaxon:308354
+  source: BACDIVE
+  taxon_label: Staphylococcus simiae
+  association_count: 2
+- taxon_id: NCBITaxon:400946
+  source: BACDIVE
+  taxon_label: Wohlfahrtiimonas chitiniclastica
+  association_count: 3
+- taxon_id: NCBITaxon:469
+  source: BACDIVE
+  taxon_label: Acinetobacter
+  association_count: 3
+- taxon_id: NCBITaxon:546
+  source: BACDIVE
+  taxon_label: Citrobacter freundii
+  association_count: 2
+- taxon_id: NCBITaxon:562
+  source: BACDIVE
+  taxon_label: Escherichia coli
+  association_count: 5
+- taxon_id: NCBITaxon:573
+  source: BACDIVE
+  taxon_label: Klebsiella pneumoniae
+  association_count: 82
+- taxon_id: NCBITaxon:76832
+  source: BACDIVE
+  taxon_label: Myroides odoratimimus
+  association_count: 33
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: NOT_APPLICABLE.'

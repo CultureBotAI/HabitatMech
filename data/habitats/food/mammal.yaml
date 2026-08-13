@@ -22,8 +22,109 @@ source_attestations:
   mapping_predicate: skos:closeMatch
   assertion_count: 69
   assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:1042321
+  source: BACDIVE
+  taxon_label: Ureaplasma miroungigenitalium
+  association_count: 1
+- taxon_id: NCBITaxon:108028
+  source: BACDIVE
+  taxon_label: Arcanobacterium pluranimalium
+  association_count: 1
+- taxon_id: NCBITaxon:109472
+  source: BACDIVE
+  taxon_label: Bisgaardia hudsonensis
+  association_count: 3
+- taxon_id: NCBITaxon:1121355
+  source: BACDIVE
+  taxon_label: Corynebacterium caspium DSM 44850
+  association_count: 1
+- taxon_id: NCBITaxon:1122146
+  source: BACDIVE
+  taxon_label: Ligilactobacillus ceti DSM 22408
+  association_count: 1
+- taxon_id: NCBITaxon:1122599
+  source: BACDIVE
+  taxon_label: Neptunomonas japonica DSM 18939
+  association_count: 1
+- taxon_id: NCBITaxon:1130046
+  source: BACDIVE
+  taxon_label: Oceanivirga miroungae
+  association_count: 1
+- taxon_id: NCBITaxon:119224
+  source: BACDIVE
+  taxon_label: Streptococcus phocae
+  association_count: 3
+- taxon_id: NCBITaxon:1278303
+  source: BACDIVE
+  taxon_label: Psychromonas macrocephali ATCC BAA-1527
+  association_count: 1
+- taxon_id: NCBITaxon:1278307
+  source: BACDIVE
+  taxon_label: Psychromonas ossibalaenae ATCC BAA-1528
+  association_count: 1
+- taxon_id: NCBITaxon:1278309
+  source: BACDIVE
+  taxon_label: Amphritea japonica ATCC BAA-1530
+  association_count: 1
+- taxon_id: NCBITaxon:1278310
+  source: BACDIVE
+  taxon_label: Amphritea balenae ATCC BAA-1529
+  association_count: 1
+- taxon_id: NCBITaxon:1278312
+  source: BACDIVE
+  taxon_label: Psychromonas aquimarina ATCC BAA-1526
+  association_count: 1
+- taxon_id: NCBITaxon:131112
+  source: BACDIVE
+  taxon_label: Arcanobacterium phocae
+  association_count: 4
+- taxon_id: NCBITaxon:1336234
+  source: BACDIVE
+  taxon_label: Atopobacter phocae ATCC BAA-285
+  association_count: 1
+- taxon_id: NCBITaxon:1346
+  source: BACDIVE
+  taxon_label: Streptococcus iniae
+  association_count: 2
+- taxon_id: NCBITaxon:137733
+  source: BACDIVE
+  taxon_label: Granulicatella balaenopterae
+  association_count: 1
+- taxon_id: NCBITaxon:138563
+  source: BACDIVE
+  taxon_label: Helicobacter cetorum
+  association_count: 1
+- taxon_id: NCBITaxon:156892
+  source: BACDIVE
+  taxon_label: Boudabousia marimammalium
+  association_count: 2
+- taxon_id: NCBITaxon:1965234
+  source: BACDIVE
+  taxon_label: Ureaplasma sp.
+  association_count: 3
+- taxon_id: NCBITaxon:2108
+  source: BACDIVE
+  taxon_label: Mycoplasma sp.
+  association_count: 6
+- taxon_id: NCBITaxon:269666
+  source: BACDIVE
+  taxon_label: Streptococcus marimammalium
+  association_count: 2
+- taxon_id: NCBITaxon:395087
+  source: BACDIVE
+  taxon_label: Paenimyroides ceti
+  association_count: 3
+- taxon_id: NCBITaxon:53344
+  source: BACDIVE
+  taxon_label: Staphylococcus delphini
+  association_count: 2
+- taxon_id: NCBITaxon:53364
+  source: BACDIVE
+  taxon_label: Brevibacterium otitidis
+  association_count: 4
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

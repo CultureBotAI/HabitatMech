@@ -1,0 +1,50 @@
+identifier: ENVO:00002120
+label: acidic hot spring
+definition: An acidic spring through which groundwater, heated by geothermal energy,
+  flows.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: acid hot spring
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: acid hot spring
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: acid hot springs
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: acidic hot springs
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:00000051
+- ENVO:01001898
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00002120
+  source_label: acidic hot spring
+  assertion_count: 3
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1056495
+  source: PREGO
+  taxon_label: Caldisphaera lagunensis DSM 15908
+  score: 3.0
+- taxon_id: NCBITaxon:380749
+  source: PREGO
+  taxon_label: Hydrogenobaculum sp. Y04AAS1
+  score: 3.0
+- taxon_id: NCBITaxon:397948
+  source: PREGO
+  taxon_label: Caldivirga maquilingensis IC-167
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-13T06:49:23Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

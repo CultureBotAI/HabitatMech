@@ -35,24 +35,23 @@ structurally complex, low-pressure, and strongly gradient-forming.
 
 ## Current corpus
 
-Seeded from kg-microbe, 2026-08-12. **3,187 habitat records** from 3,443 source
-concepts (GOLD 2,562 · BacDive 162 · PREGO 719).
+Seeded from kg-microbe, 2026-08-12. **3,192 habitat records** from 3,443 source
+concepts (GOLD 2,562 · BacDive 162 · PREGO 719), grounded in
+ENVO / UBERON / FOODON / BTO / PO.
 
 | Category | Records | | Grounding | Records |
 |---|---:|---|---|---:|
-| HOST_ASSOCIATED | 1,639 | | EXACT | 1,011 |
-| ENGINEERED | 476 | | NARROW | 922 |
-| AQUATIC | 449 | | CLOSE | 139 |
-| TERRESTRIAL | 301 | | UNGROUNDED | 1,072 |
-| OTHER | 229 | | NOT_APPLICABLE | 40 |
+| HOST_ASSOCIATED | 1,634 | | EXACT | 1,037 |
+| ENGINEERED | 478 | | UNGROUNDED | 972 |
+| AQUATIC | 457 | | NARROW | 950 |
+| TERRESTRIAL | 355 | | CLOSE | 139 |
+| OTHER | 172 | | NOT_APPLICABLE | 88 |
 | FOOD / CLINICAL / AIR | 93 | | BROAD | 3 |
 
-**219 records (6.9%) are `REVIEWED`**, on 333 per-item curation decisions.
-Every one of the 3,443 source concepts now has a decision on file, but they are
-not all equal: 994 were decided by a **class-level sweep** (no term matched by
-any search route) and deliberately do *not* count as reviewed — the sweep
-establishes only that no term matched, not that the concept is a habitat. See
-[Curation](#curation) and
+**258 records (8.1%) are `REVIEWED`**, on 387 per-item curation decisions.
+Every source concept has a decision on file, but they are not all equal: 940
+were decided by a **class-level sweep** and deliberately do *not* count as
+reviewed — see [Curation](#curation) and
 [docs/HARMONIZATION.md](docs/HARMONIZATION.md#class-level-sweep).
 
 Run `just report` for the live numbers and all three lists.
@@ -211,16 +210,13 @@ These are real and unfixed; see the issue tracker.
   arbitrary among the ties. Treat seeded taxa as "reported from", not
   "characteristic of" — which is why `is_characteristic` is a separate,
   curator-set flag.
-- **BacDive contributes no taxa.** Linking isolation sources to taxa requires a
-  join through strain records that the current extraction does not do.
-- **Only 29 records carry environmental parameters.** Most rows in the upstream
-  table describe compound environments (`sediment_marine_cold` = ENVO sediment
-  + PATO cold) that no single term denotes, and are skipped rather than
-  misattributed.
-- **PO and PCO are not vendored**, so plant-structure habitats like "Roots"
-  stay ungrounded even though `PO:0009005` exists.
-- **`OTHER` holds 251 records** whose category the ENVO-anchor heuristic could
-  not infer.
+- **Only 42 records carry environmental parameters.** 409 of the upstream rows
+  describe compound environments (`sediment_marine_cold` = ENVO sediment + PATO
+  cold) that no single term denotes, and are skipped rather than misattributed.
+- **PCO is not vendored** (kg-microbe does not ship it). PO now is, parsed from
+  `po.owl`.
+- **`OTHER` holds 172 records** whose category the ENVO-anchor heuristic could
+  not infer, down from 251.
 
 ## Layout
 

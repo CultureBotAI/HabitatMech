@@ -1,0 +1,56 @@
+identifier: UBERON:0000020
+label: sense organ
+definition: An organ that is capable of transducing sensory stimulus to the nervous
+  system.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Sensory organs
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: Sinnesorgan
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: organ of sense organ system
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: organ of sensory organ system
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: organ of sensory system
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: sense organ system organ
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: sensillum
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: sensor
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: sensory organ
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: sensory organ system organ
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: sensory system organ
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- FOODON:03412112
+- UBERON:0000062
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7842
+  source_label: Sensory organs
+  source_path: Host-associated > Mollusca > Sensory organs
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-13T06:49:23Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

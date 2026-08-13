@@ -19,8 +19,109 @@ source_attestations:
   mapping_predicate: skos:closeMatch
   assertion_count: 474
   assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:103817
+  source: BACDIVE
+  taxon_label: Janibacter terrae
+  association_count: 6
+- taxon_id: NCBITaxon:117567
+  source: BACDIVE
+  taxon_label: Mycolicibacterium frederiksbergense
+  association_count: 2
+- taxon_id: NCBITaxon:1211807
+  source: BACDIVE
+  taxon_label: Stutzerimonas kunmingensis
+  association_count: 3
+- taxon_id: NCBITaxon:13690
+  source: BACDIVE
+  taxon_label: Sphingobium yanoikuyae
+  association_count: 2
+- taxon_id: NCBITaxon:1402
+  source: BACDIVE
+  taxon_label: Bacillus licheniformis
+  association_count: 2
+- taxon_id: NCBITaxon:144185
+  source: BACDIVE
+  taxon_label: Leifsonia aquatica
+  association_count: 4
+- taxon_id: NCBITaxon:161493
+  source: BACDIVE
+  taxon_label: Anaeromyxobacter dehalogenans
+  association_count: 6
+- taxon_id: NCBITaxon:1667
+  source: BACDIVE
+  taxon_label: Arthrobacter sp.
+  association_count: 6
+- taxon_id: NCBITaxon:1747
+  source: BACDIVE
+  taxon_label: Cutibacterium acnes
+  association_count: 2
+- taxon_id: NCBITaxon:1804
+  source: BACDIVE
+  taxon_label: Mycolicibacterium gilvum
+  association_count: 5
+- taxon_id: NCBITaxon:1828
+  source: BACDIVE
+  taxon_label: Rhodococcoides fascians
+  association_count: 2
+- taxon_id: NCBITaxon:1830
+  source: BACDIVE
+  taxon_label: Rhodococcus ruber
+  association_count: 4
+- taxon_id: NCBITaxon:1869227
+  source: BACDIVE
+  taxon_label: bacterium
+  association_count: 2
+- taxon_id: NCBITaxon:1871052
+  source: BACDIVE
+  taxon_label: Afipia sp.
+  association_count: 2
+- taxon_id: NCBITaxon:1872122
+  source: BACDIVE
+  taxon_label: Acidovorax sp.
+  association_count: 2
+- taxon_id: NCBITaxon:1872578
+  source: BACDIVE
+  taxon_label: Aquabacterium sp.
+  association_count: 2
+- taxon_id: NCBITaxon:194249
+  source: BACDIVE
+  taxon_label: uncultured Rhodococcus sp.
+  association_count: 3
+- taxon_id: NCBITaxon:2
+  source: BACDIVE
+  taxon_label: Bacteria
+  association_count: 2
+- taxon_id: NCBITaxon:28214
+  source: BACDIVE
+  taxon_label: Sphingomonas sp.
+  association_count: 5
+- taxon_id: NCBITaxon:294
+  source: BACDIVE
+  taxon_label: Pseudomonas fluorescens
+  association_count: 3
+- taxon_id: NCBITaxon:306
+  source: BACDIVE
+  taxon_label: Pseudomonas sp.
+  association_count: 4
+- taxon_id: NCBITaxon:33935
+  source: BACDIVE
+  taxon_label: Lysinibacillus macroides
+  association_count: 4
+- taxon_id: NCBITaxon:37919
+  source: BACDIVE
+  taxon_label: Rhodococcus opacus
+  association_count: 5
+- taxon_id: NCBITaxon:38304
+  source: BACDIVE
+  taxon_label: Corynebacterium tuberculostearicum
+  association_count: 3
+- taxon_id: NCBITaxon:83428
+  source: BACDIVE
+  taxon_label: uncultured Bacillus sp.
+  association_count: 4
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

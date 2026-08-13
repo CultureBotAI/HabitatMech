@@ -10,8 +10,13 @@ source_attestations:
   mapping_predicate: skos:closeMatch
   assertion_count: 3
   assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:469
+  source: BACDIVE
+  taxon_label: Acinetobacter
+  association_count: 3
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

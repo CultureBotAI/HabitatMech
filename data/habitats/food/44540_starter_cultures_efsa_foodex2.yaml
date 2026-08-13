@@ -23,8 +23,69 @@ source_attestations:
   mapping_predicate: skos:closeMatch
   assertion_count: 19
   assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:1123511
+  source: BACDIVE
+  taxon_label: Propionispira raffinosivorans DSM 20765
+  association_count: 1
+- taxon_id: NCBITaxon:1255
+  source: BACDIVE
+  taxon_label: Pediococcus pentosaceus
+  association_count: 1
+- taxon_id: NCBITaxon:1348655
+  source: BACDIVE
+  taxon_label: Lactococcus cremoris subsp. cremoris NBRC 100676
+  association_count: 1
+- taxon_id: NCBITaxon:1358
+  source: BACDIVE
+  taxon_label: Lactococcus lactis
+  association_count: 1
+- taxon_id: NCBITaxon:1579
+  source: BACDIVE
+  taxon_label: Lactobacillus acidophilus
+  association_count: 1
+- taxon_id: NCBITaxon:1582
+  source: BACDIVE
+  taxon_label: Lacticaseibacillus casei
+  association_count: 1
+- taxon_id: NCBITaxon:1597
+  source: BACDIVE
+  taxon_label: Lacticaseibacillus paracasei
+  association_count: 1
+- taxon_id: NCBITaxon:1681
+  source: BACDIVE
+  taxon_label: Bifidobacterium bifidum
+  association_count: 1
+- taxon_id: NCBITaxon:33968
+  source: BACDIVE
+  taxon_label: Leuconostoc pseudomesenteroides
+  association_count: 2
+- taxon_id: NCBITaxon:47715
+  source: BACDIVE
+  taxon_label: Lacticaseibacillus rhamnosus
+  association_count: 1
+- taxon_id: NCBITaxon:576
+  source: BACDIVE
+  taxon_label: Klebsiella sp.
+  association_count: 1
+- taxon_id: NCBITaxon:586220
+  source: BACDIVE
+  taxon_label: Leuconostoc mesenteroides subsp. cremoris ATCC 19254
+  association_count: 1
+- taxon_id: NCBITaxon:86957
+  source: BACDIVE
+  taxon_label: Schleiferibacter lactififex
+  association_count: 1
+- taxon_id: NCBITaxon:86958
+  source: BACDIVE
+  taxon_label: Propionispira paucivorans
+  association_count: 3
+- taxon_id: NCBITaxon:86959
+  source: BACDIVE
+  taxon_label: Propionispira raffinosivorans
+  association_count: 2
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

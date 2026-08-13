@@ -9,8 +9,25 @@ source_attestations:
   source_label: Simulated-communities
   assertion_count: 4
   assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:195105
+  source: BACDIVE
+  taxon_label: Haematobacter massiliensis
+  association_count: 1
+- taxon_id: NCBITaxon:2161673
+  source: BACDIVE
+  taxon_label: Roseicyclus marinus
+  association_count: 1
+- taxon_id: NCBITaxon:302911
+  source: BACDIVE
+  taxon_label: Bifidobacterium animalis subsp. lactis
+  association_count: 1
+- taxon_id: NCBITaxon:305977
+  source: BACDIVE
+  taxon_label: Pusillimonas noertemannii
+  association_count: 1
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'

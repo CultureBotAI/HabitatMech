@@ -9,8 +9,17 @@ source_attestations:
   source_label: Heated-Burned
   assertion_count: 2
   assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:28172
+  source: BACDIVE
+  taxon_label: Vibrio metschnikovii
+  association_count: 1
+- taxon_id: NCBITaxon:451757
+  source: BACDIVE
+  taxon_label: Clostridium perfringens NCTC 8239
+  association_count: 1
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'

@@ -25,8 +25,109 @@ source_attestations:
   mapping_predicate: skos:closeMatch
   assertion_count: 412
   assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:108028
+  source: BACDIVE
+  taxon_label: Arcanobacterium pluranimalium
+  association_count: 6
+- taxon_id: NCBITaxon:1661
+  source: BACDIVE
+  taxon_label: Trueperella pyogenes
+  association_count: 4
+- taxon_id: NCBITaxon:1719
+  source: BACDIVE
+  taxon_label: Corynebacterium pseudotuberculosis
+  association_count: 4
+- taxon_id: NCBITaxon:184914
+  source: BACDIVE
+  taxon_label: Corallococcus coralloides
+  association_count: 40
+- taxon_id: NCBITaxon:1872627
+  source: BACDIVE
+  taxon_label: Archangium sp.
+  association_count: 7
+- taxon_id: NCBITaxon:1962667
+  source: BACDIVE
+  taxon_label: Nannocystis sp.
+  association_count: 4
+- taxon_id: NCBITaxon:197
+  source: BACDIVE
+  taxon_label: Campylobacter jejuni
+  association_count: 5
+- taxon_id: NCBITaxon:206
+  source: BACDIVE
+  taxon_label: Campylobacter sputorum
+  association_count: 15
+- taxon_id: NCBITaxon:28121
+  source: BACDIVE
+  taxon_label: Butyrivibrio sp.
+  association_count: 5
+- taxon_id: NCBITaxon:28450
+  source: BACDIVE
+  taxon_label: Burkholderia pseudomallei
+  association_count: 8
+- taxon_id: NCBITaxon:33
+  source: BACDIVE
+  taxon_label: Myxococcus fulvus
+  association_count: 29
+- taxon_id: NCBITaxon:34
+  source: BACDIVE
+  taxon_label: Myxococcus xanthus
+  association_count: 18
+- taxon_id: NCBITaxon:35
+  source: BACDIVE
+  taxon_label: Corallococcus macrosporus
+  association_count: 4
+- taxon_id: NCBITaxon:38
+  source: BACDIVE
+  taxon_label: Archangium disciforme
+  association_count: 10
+- taxon_id: NCBITaxon:54
+  source: BACDIVE
+  taxon_label: Nannocystis exedens
+  association_count: 27
+- taxon_id: NCBITaxon:56
+  source: BACDIVE
+  taxon_label: Sorangium cellulosum
+  association_count: 24
+- taxon_id: NCBITaxon:71864
+  source: BACDIVE
+  taxon_label: Herpetosiphon sp.
+  association_count: 11
+- taxon_id: NCBITaxon:722
+  source: BACDIVE
+  taxon_label: Actinobacillus seminis
+  association_count: 4
+- taxon_id: NCBITaxon:731
+  source: BACDIVE
+  taxon_label: Histophilus somni
+  association_count: 4
+- taxon_id: NCBITaxon:75985
+  source: BACDIVE
+  taxon_label: Mannheimia haemolytica
+  association_count: 6
+- taxon_id: NCBITaxon:82806
+  source: BACDIVE
+  taxon_label: Streptococcus ovis
+  association_count: 4
+- taxon_id: NCBITaxon:83456
+  source: BACDIVE
+  taxon_label: Myxococcus virescens
+  association_count: 16
+- taxon_id: NCBITaxon:83462
+  source: BACDIVE
+  taxon_label: Corallococcus exiguus
+  association_count: 6
+- taxon_id: NCBITaxon:85401
+  source: BACDIVE
+  taxon_label: Mannheimia glucosida
+  association_count: 6
+- taxon_id: NCBITaxon:90240
+  source: BACDIVE
+  taxon_label: Moraxella caprae
+  association_count: 7
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

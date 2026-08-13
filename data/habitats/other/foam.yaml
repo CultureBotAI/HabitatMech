@@ -9,8 +9,44 @@ source_attestations:
   source_label: Foam
   assertion_count: 13
   assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:1073081
+  source: BACDIVE
+  association_count: 1
+- taxon_id: NCBITaxon:1075090
+  source: BACDIVE
+  taxon_label: Gordonia amarae NBRC 15530
+  association_count: 1
+- taxon_id: NCBITaxon:1122154
+  source: BACDIVE
+  taxon_label: Pseudolactococcus chungangensis CAU 28 = DSM 22330
+  association_count: 1
+- taxon_id: NCBITaxon:198437
+  source: BACDIVE
+  taxon_label: uncultured Gordonia sp.
+  association_count: 1
+- taxon_id: NCBITaxon:239498
+  source: BACDIVE
+  taxon_label: Tsukamurella pseudospumae
+  association_count: 1
+- taxon_id: NCBITaxon:283718
+  source: BACDIVE
+  taxon_label: Gordonia defluvii
+  association_count: 1
+- taxon_id: NCBITaxon:36821
+  source: BACDIVE
+  taxon_label: Gordonia amarae
+  association_count: 1
+- taxon_id: NCBITaxon:39122
+  source: BACDIVE
+  taxon_label: Skermania pinensis
+  association_count: 1
+- taxon_id: NCBITaxon:44753
+  source: BACDIVE
+  taxon_label: Tsukamurella spumae
+  association_count: 5
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'

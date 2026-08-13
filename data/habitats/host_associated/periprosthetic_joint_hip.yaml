@@ -1,9 +1,10 @@
 identifier: habitatmech:GOLD.459a01a714
 label: 'Periprosthetic joint: Hip'
 habitat_category: HOST_ASSOCIATED
-grounding_status: UNGROUNDED
-mapping_status: SEEDED
+grounding_status: NARROW
+mapping_status: REVIEWED
 parent_habitats:
+- BTO:0001457
 - habitatmech:GOLD.ea67ca30cb
 source_attestations:
 - source: GOLD
@@ -11,9 +12,10 @@ source_attestations:
   source_label: 'Periprosthetic joint: Hip'
   source_path: 'Host-associated > Mammals: Human > Skeletal system > Periprosthetic
     joint: Hip'
+  mapping_predicate: skos:narrowMatch
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

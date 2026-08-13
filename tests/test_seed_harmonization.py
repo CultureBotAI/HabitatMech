@@ -108,11 +108,42 @@ def test_composed_label_beats_the_leaf():
     """"Marine sediment" is a real ENVO term and a strictly better grounding
     than "sediment", so the two-level composed label is tried first."""
     ontology = _Ontology(by_label={"sediment": "ENVO:00002007", "marine sediment": "ENVO:03000033"})
-    row = _gold_row("Environmental > Aquatic > Marine > Sediment", "Sediment", 4)
+    path = "Environmental > Aquatic > Marine > Sediment"
+    row = _gold_row(path, "Sediment", 4)
 
-    res = seed.resolve_gold(row, ontology, {}, {"sediment": None})
+    res = seed.resolve_gold(row, ontology, {}, {"sediment": None}, {"marine sediment": path})
 
     assert res.identifier == "ENVO:03000033"
+    assert res.grounding_status == "EXACT"
+
+
+def test_composed_match_shared_by_settings_does_not_merge():
+    """Three GOLD paths compose to "anaerobic sludge" under different reactor
+    types. The composed route used to ground all of them to ENVO:00002129 and
+    merge three engineered environments into one record (#15)."""
+    ontology = _Ontology(by_label={"anaerobic sludge": "ENVO:00002129"})
+    path = "Engineered > Bioreactor > MBR (Membrane bioreactor) > Anaerobic > Sludge"
+    row = _gold_row(path, "Sludge", 5)
+
+    res = seed.resolve_gold(row, ontology, {}, {"sludge": None}, {"anaerobic sludge": None})
+
+    assert res.identifier.startswith("habitatmech:GOLD.")
+    assert res.grounding_status == "NARROW"
+    assert res.extra_parents == ["ENVO:00002129"]
+
+
+def test_composed_match_shared_only_by_host_clade_still_merges():
+    """Human, mammal and bird serum all compose to "blood serum". UBERON:0001977
+    *is* blood serum whatever the host, and the host lives in the taxon, so
+    these merge — the sentinel says every path may claim it."""
+    ontology = _Ontology(by_label={"blood serum": "UBERON:0001977"})
+    row = _gold_row("Host-associated > Birds > Circulatory system > Blood > Serum", "Serum", 5)
+
+    res = seed.resolve_gold(
+        row, ontology, {}, {"serum": None}, {"blood serum": seed.ANY_PATH_MAY_CLAIM}
+    )
+
+    assert res.identifier == "UBERON:0001977"
     assert res.grounding_status == "EXACT"
 
 

@@ -1,9 +1,10 @@
 identifier: habitatmech:GOLD.c1749852f0
 label: 'Rumen: Caudodorsal blind sac'
 habitat_category: HOST_ASSOCIATED
-grounding_status: UNGROUNDED
-mapping_status: SEEDED
+grounding_status: NARROW
+mapping_status: REVIEWED
 parent_habitats:
+- UBERON:0007365
 - habitatmech:GOLD.d3869ad37f
 source_attestations:
 - source: GOLD
@@ -11,8 +12,9 @@ source_attestations:
   source_label: 'Rumen: Caudodorsal blind sac'
   source_path: 'Host-associated > Mammals > Digestive system > Stomach > Rumen: Caudodorsal
     blind sac'
+  mapping_predicate: skos:narrowMatch
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
