@@ -5,8 +5,11 @@ definition: A hospital is a building in which health care services are  provided
 definition_source: ENVO
 habitat_category: ENGINEERED
 grounding_status: EXACT
-mapping_status: SEEDED
+mapping_status: REVIEWED
 synonyms:
+- synonym_text: Medical-environment
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
 - synonym_text: hospitalic
   synonym_type: RELATED_SYNONYM
   source: PREGO
@@ -17,6 +20,12 @@ parent_habitats:
 - ENVO:03501134
 - mesh:D000076624
 source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:medical-environment
+  source_label: Medical-environment
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 438
+  assertion_unit: STRAIN
 - source: GOLD
   source_id: gold.ecosystem:4492
   source_label: Hospital
@@ -61,5 +70,5 @@ curation_history:
 - timestamp: '2026-08-12T00:00:00Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD, PREGO. Grounding:
     EXACT.'

@@ -70,7 +70,7 @@ import hashlib
 import re
 import sys
 from collections import Counter, defaultdict
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 from pathlib import Path
 from typing import Any
 
@@ -78,6 +78,11 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
 from habitatmech.curate.curation_event import record_curation_event  # noqa: E402
+from habitatmech.curate.decisions import (  # noqa: E402
+    Decision,
+    load_decisions,
+    validate_decisions,
+)
 from habitatmech.validation.write_validated import (  # noqa: E402
     ValidationFailedError,
     write_validated_habitat,
@@ -85,6 +90,7 @@ from habitatmech.validation.write_validated import (  # noqa: E402
 
 RAW_DIR = REPO_ROOT / "data" / "raw"
 HABITATS_DIR = REPO_ROOT / "data" / "habitats"
+DECISIONS_PATH = REPO_ROOT / "curation" / "decisions.tsv"
 
 GOLD_LEVELS = ["ecosystem", "ecosystem_category", "ecosystem_type", "ecosystem_subtype", "specific_ecosystem"]
 
@@ -266,6 +272,12 @@ class Concept:
     taxa: dict[str, dict[str, Any]] = field(default_factory=dict)
     # Best (most specific) grounding status seen, so a merge cannot silently
     # downgrade an EXACT record to a NARROW one or vice versa.
+    # How many source concepts feed this record, and how many a curator has
+    # signed off on. A merged record is REVIEWED only when the two agree —
+    # a record aggregating GOLD, BacDive and PREGO is not checked until all
+    # three have been looked at.
+    source_concepts: int = 0
+    reviewed_sources: int = 0
     _grounding_rank_seen: int = 0
 
     def add_synonym(self, text: str, syn_type: str, source: str) -> None:
@@ -332,6 +344,81 @@ class Resolution:
     extra_parents: list[str] = field(default_factory=list)
     extra_xrefs: list[str] = field(default_factory=list)
     route: str = ""
+    # True when a curator signed off on this source concept. A merged record is
+    # only REVIEWED when every source concept feeding it is.
+    reviewed: bool = False
+
+
+def apply_decision(default: Resolution, minted: str, decisions: dict[str, Decision]) -> Resolution:
+    """Let a curator override the seeder's automatic resolution.
+
+    Keyed on the *minted* identifier rather than the resolved one, because that
+    names exactly one source concept and is stable across re-seeds (it is a hash
+    of the GOLD path or BacDive id). The resolved identifier is shared by every
+    concept that merged onto it, so keying there would move all of them at once.
+
+    Returns the automatic resolution untouched when no decision applies, so an
+    uncurated corpus behaves exactly as before.
+    """
+    decision = decisions.get(minted)
+    if decision is None:
+        return default
+
+    if decision.decision == "GROUND":
+        return Resolution(
+            decision.object_id,
+            decision.grounding_status,
+            mapping_predicate=_GROUNDING_TO_PREDICATE.get(decision.grounding_status),
+            route=f"curated_ground_from_{default.route}",
+            # Uniform with the other branches. validate_decisions() forbids a
+            # CLASS-depth grounding, so today this is always True — but the
+            # invariant belongs in the validator as policy, not here as an
+            # assumption a future change could silently invalidate (#23).
+            reviewed=decision.counts_as_reviewed,
+        )
+    if decision.decision == "GROUND_AS_PARENT":
+        # Narrower than the named term: the term becomes a parent, never the
+        # identity. Adopting it would merge every sibling that is also a kind
+        # of it — the same conflation the seeder's ambiguous-leaf rule avoids.
+        return Resolution(
+            minted,
+            decision.grounding_status,
+            mapping_predicate=_GROUNDING_TO_PREDICATE.get(decision.grounding_status),
+            extra_parents=[decision.object_id],
+            route=f"curated_ground_as_parent_from_{default.route}",
+            reviewed=decision.counts_as_reviewed,
+        )
+    if decision.decision == "NOT_APPLICABLE":
+        return Resolution(
+            minted,
+            "NOT_APPLICABLE",
+            extra_xrefs=[decision.object_id] if decision.object_id else [],
+            route=f"curated_not_applicable_from_{default.route}",
+            reviewed=decision.counts_as_reviewed,
+        )
+    if decision.decision == "CONFIRM_UNGROUNDED":
+        # A nearest-broader term becomes a parent, never the identity: the
+        # curator has said explicitly that no term fits, and adopting a broader
+        # one would merge distinct concepts (every host clade onto
+        # "animal-associated environment", say) under a false equivalence.
+        return Resolution(
+            minted,
+            "UNGROUNDED",
+            extra_parents=[decision.object_id] if decision.object_id else [],
+            route=f"curated_confirm_ungrounded_from_{default.route}",
+            reviewed=decision.counts_as_reviewed,
+        )
+    # REVIEW: the curator checked the seeder's own answer and endorsed it.
+    return replace(default, route=f"curated_review_of_{default.route}",
+                   reviewed=decision.counts_as_reviewed)
+
+
+_GROUNDING_TO_PREDICATE = {
+    "EXACT": "skos:exactMatch",
+    "BROAD": "skos:broadMatch",
+    "NARROW": "skos:narrowMatch",
+    "CLOSE": "skos:closeMatch",
+}
 
 
 def resolve_bacdive(row: dict[str, str], mapping: dict[str, dict[str, str]]) -> Resolution:
@@ -466,14 +553,27 @@ def infer_category(identifier: str, ontology: OntologyIndex) -> str:
 # Ingest per source
 # ---------------------------------------------------------------------------
 
-def ingest_gold(store: ConceptStore, rows: list[dict[str, str]], mapping, routes: Counter) -> dict[str, str]:
+def ingest_gold(
+    store: ConceptStore,
+    rows: list[dict[str, str]],
+    mapping,
+    routes: Counter,
+    decisions: dict[str, Decision] | None = None,
+) -> dict[str, str]:
     claimants = leaf_claimants(rows)
     path_to_identifier: dict[str, str] = {}
 
+    decisions = decisions or {}
     for row in rows:
-        res = resolve_gold(row, store.ontology, mapping, claimants)
+        res = apply_decision(
+            resolve_gold(row, store.ontology, mapping, claimants),
+            mint("GOLD", row["canonical_path"]),
+            decisions,
+        )
         routes[res.route] += 1
         concept = store.get(res.identifier, row["leaf_label"], res.grounding_status)
+        concept.source_concepts += 1
+        concept.reviewed_sources += 1 if res.reviewed else 0
         path_to_identifier[row["canonical_path"]] = res.identifier
 
         levels = [row[lvl] for lvl in GOLD_LEVELS if row[lvl]]
@@ -523,11 +623,22 @@ def ingest_gold(store: ConceptStore, rows: list[dict[str, str]], mapping, routes
     return path_to_identifier
 
 
-def ingest_bacdive(store: ConceptStore, rows: list[dict[str, str]], mapping, routes: Counter) -> None:
+def ingest_bacdive(
+    store: ConceptStore,
+    rows: list[dict[str, str]],
+    mapping,
+    routes: Counter,
+    decisions: dict[str, Decision] | None = None,
+) -> None:
+    decisions = decisions or {}
     for row in rows:
-        res = resolve_bacdive(row, mapping)
+        res = apply_decision(
+            resolve_bacdive(row, mapping), mint("BACDIVE", row["bacdive_id"]), decisions
+        )
         routes[res.route] += 1
         concept = store.get(res.identifier, row["label"], res.grounding_status)
+        concept.source_concepts += 1
+        concept.reviewed_sources += 1 if res.reviewed else 0
         if concept.category is None:
             store.set_category(concept, infer_category(res.identifier, store.ontology), authoritative=False)
         concept.add_synonym(row["label"], "EXACT_SYNONYM", "BacDive")
@@ -564,15 +675,37 @@ def ingest_prego(
     rows: list[dict[str, str]],
     taxa_rows: list[dict[str, str]],
     routes: Counter,
+    decisions: dict[str, Decision] | None = None,
 ) -> None:
+    decisions = decisions or {}
     taxa_by_habitat: dict[str, list[dict[str, str]]] = defaultdict(list)
     for row in taxa_rows:
         taxa_by_habitat[row["prego_id"]].append(row)
 
     for row in rows:
-        identifier = row["prego_id"]
-        routes["prego_self_grounded"] += 1
-        concept = store.get(identifier, identifier, "EXACT")
+        # PREGO concepts ground to themselves, but they still get a minted key
+        # so a curator can address one — to endorse it, or to rule it out as a
+        # non-habitat — the same way as any other source concept.
+        res = apply_decision(
+            Resolution(row["prego_id"], "EXACT", route="prego_self_grounded"),
+            mint("PREGO", row["prego_id"]),
+            decisions,
+        )
+        identifier = res.identifier
+        routes[res.route] += 1
+        concept = store.get(identifier, identifier, res.grounding_status)
+        concept.source_concepts += 1
+        concept.reviewed_sources += 1 if res.reviewed else 0
+        # Both, not just xrefs: a CONFIRM_UNGROUNDED decision records its
+        # nearest-broader term as a parent, and dropping it here would silently
+        # lose the placement the curator recorded (#21).
+        concept.parents.update(res.extra_parents)
+        concept.xrefs.update(res.extra_xrefs)
+        # The attestation and the taxa describe the PREGO *term*, so they keep
+        # using prego_id even when a curator redirected the concept elsewhere —
+        # otherwise a redirect would silently reattribute PREGO's assertions to
+        # whatever the concept was pointed at, and drop its taxa on the floor.
+        prego_id = row["prego_id"]
         if not concept.label or concept.label == identifier:
             # PREGO nodes carry no label of their own; fall back to the first
             # synonym so a record without an ontology label is still readable.
@@ -585,8 +718,8 @@ def ingest_prego(
 
         attestation: dict[str, Any] = {
             "source": "PREGO",
-            "source_id": identifier,
-            "source_label": store.ontology.label(identifier) or identifier,
+            "source_id": prego_id,
+            "source_label": store.ontology.label(prego_id) or prego_id,
         }
         taxon_count = int(row.get("taxon_count") or 0)
         if taxon_count:
@@ -599,7 +732,7 @@ def ingest_prego(
             attestation["evidence_channels"] = row["channels"]
         concept.attestations.append(attestation)
 
-        for taxon_row in taxa_by_habitat.get(identifier, []):
+        for taxon_row in taxa_by_habitat.get(prego_id, []):
             taxon_id = taxon_row["taxon_id"]
             if not taxon_id.startswith("NCBITaxon:") or taxon_id in concept.taxa:
                 continue
@@ -711,7 +844,11 @@ def build_document(concept: Concept) -> dict[str, Any]:
         doc["definition_source"] = concept.definition_source
     doc["habitat_category"] = concept.category or "OTHER"
     doc["grounding_status"] = concept.grounding_status
-    doc["mapping_status"] = "SEEDED"
+    doc["mapping_status"] = (
+        "REVIEWED"
+        if concept.source_concepts and concept.reviewed_sources == concept.source_concepts
+        else "SEEDED"
+    )
 
     if concept.synonyms:
         doc["synonyms"] = [
@@ -891,6 +1028,96 @@ def find_stale_files(expected: set[Path]) -> list[Path]:
 SEED_TIMESTAMP = "2026-08-12T00:00:00Z"
 
 
+def break_parent_cycles(concepts: list[Concept], ontology: OntologyIndex) -> int:
+    """Remove the minimum of non-ontology parent edges needed to make
+    `parent_habitats` acyclic. Returns how many were dropped.
+
+    `parent_habitats` is fed from three places that cannot see each other: the
+    grounding ontology's own subclass edges, the GOLD parent-path link, and a
+    curator's nearest-broader term. The first is a subsumption hierarchy and is
+    acyclic by construction. The GOLD link is not — it expresses *containment
+    in a classification*, which does not always run the same direction as
+    subsumption, and once enough concepts are grounded the two orderings meet
+    and close a loop:
+
+        fresh water -> liquid water   (ENVO subclass)
+        liquid water -> canal         (GOLD path link, unsound as subsumption)
+        canal -> watercourse          (ENVO subclass)
+        watercourse -> lotic water body (ENVO subclass)
+        lotic water body -> fresh water (GOLD path link)
+
+    A cycle hangs any consumer that walks the hierarchy, so one edge has to go.
+    The ontology's edges are authoritative and are never dropped; the GOLD and
+    curated ones are heuristics, so a cycle is broken by removing the first
+    non-ontology edge on it. Iteration order is sorted, so the choice is
+    deterministic and a re-seed drops the same edge.
+    """
+    known = {c.identifier: c for c in concepts}
+    dropped = 0
+
+    def find_cycle() -> list[str] | None:
+        """Iterative DFS returning one cycle as a node path, or None.
+
+        Iterative rather than recursive on purpose: raising the interpreter's
+        recursion limit to cover a hypothetical deep graph would also disarm it
+        for everything else in the process, turning a genuine runaway into a C
+        stack overflow instead of a catchable RecursionError. The observed
+        parent-chain depth is 12, so there is nothing to cover anyway (#24).
+        """
+        WHITE, GREY, BLACK = 0, 1, 2
+        color = dict.fromkeys(known, WHITE)
+
+        for root in sorted(known):
+            if color[root] != WHITE:
+                continue
+            # Each frame is (node, iterator over its parents); `path` mirrors
+            # the frames so a discovered cycle can be reported in full.
+            stack: list[tuple[str, object]] = [(root, iter(sorted(known[root].parents)))]
+            color[root] = GREY
+            path = [root]
+            while stack:
+                node, parents = stack[-1]
+                advanced = False
+                for parent in parents:  # type: ignore[union-attr]
+                    if parent not in known:
+                        continue
+                    if color[parent] == GREY:
+                        return path[path.index(parent):] + [parent]
+                    if color[parent] == WHITE:
+                        color[parent] = GREY
+                        stack.append((parent, iter(sorted(known[parent].parents))))
+                        path.append(parent)
+                        advanced = True
+                        break
+                if not advanced:
+                    color[node] = BLACK
+                    stack.pop()
+                    path.pop()
+        return None
+
+    while (cycle := find_cycle()) is not None:
+        # The cycle is path + [node, parent] where parent reappears earlier;
+        # every consecutive pair in it is a real edge.
+        # Consecutive pairs along the cycle; cycle[1:] is deliberately one
+        # shorter, so this is not a strict zip.
+        edges = [(cycle[i], cycle[i + 1]) for i in range(len(cycle) - 1)]
+        target = next(
+            (
+                (child, parent)
+                for child, parent in edges
+                if parent not in ontology.direct_parents(child)
+            ),
+            None,
+        )
+        if target is None:
+            # Would mean the ontology's own hierarchy is cyclic. Refuse rather
+            # than silently mangling it.
+            raise SystemExit(f"cycle consists only of ontology edges: {' -> '.join(cycle)}")
+        known[target[0]].parents.discard(target[1])
+        dropped += 1
+    return dropped
+
+
 @dataclass
 class Corpus:
     """The harmonized concept set plus the counters describing how it was built.
@@ -928,15 +1155,45 @@ def build_corpus() -> Corpus:
     prego_taxa = read_tsv("prego_habitat_taxa.tsv")
     parameter_rows = read_tsv("environment_parameters.tsv")
 
-    ingest_gold(store, gold_rows, mapping, routes)
-    ingest_bacdive(store, bacdive_rows, mapping, routes)
-    ingest_prego(store, prego_rows, prego_taxa, routes)
+    # Curator decisions are validated before any of them is applied, so a
+    # single unverifiable target fails the whole seed rather than silently
+    # grounding 3298 records correctly and one to a term that does not exist.
+    decisions = load_decisions(DECISIONS_PATH)
+    validate_decisions(
+        decisions,
+        {term_id: term["label"] for term_id, term in ontology.terms.items()},
+        path=DECISIONS_PATH,
+    )
+    stats["curation_decisions_loaded"] = len(decisions)
+
+    ingest_gold(store, gold_rows, mapping, routes, decisions)
+    ingest_bacdive(store, bacdive_rows, mapping, routes, decisions)
+    ingest_prego(store, prego_rows, prego_taxa, routes, decisions)
     ingest_parameters(store, parameter_rows, stats)
+
+    addressable = (
+        {mint("GOLD", row["canonical_path"]) for row in gold_rows}
+        | {mint("BACDIVE", row["bacdive_id"]) for row in bacdive_rows}
+        | {mint("PREGO", row["prego_id"]) for row in prego_rows}
+    )
+    unused = sorted(set(decisions) - addressable)
+    if unused:
+        # A decision that matches no source concept is dead weight: the concept
+        # it names vanished upstream, or its identifier was mistyped. Either way
+        # the curator's intent is not being honoured and they should know.
+        print(
+            f"WARNING: {len(unused)} curation decision(s) matched no source concept "
+            f"(upstream change, or a typo'd identifier): {unused[:5]}",
+            file=sys.stderr,
+        )
+    stats["curation_decisions_unmatched"] = len(unused)
 
     concepts = list(store.concepts.values())
     for concept in concepts:
         if concept.category is None:
             concept.category = infer_category(concept.identifier, ontology)
+
+    stats["parent_edges_dropped_to_break_cycles"] = break_parent_cycles(concepts, ontology)
 
     counts = {"GOLD": len(gold_rows), "BacDive": len(bacdive_rows), "PREGO": len(prego_rows)}
     return Corpus(

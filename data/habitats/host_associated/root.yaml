@@ -7,8 +7,22 @@ definition: The usually underground part of a seed plant body that originates us
 definition_source: BTO
 habitat_category: HOST_ASSOCIATED
 grounding_status: EXACT
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Roots
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- ENVO:01001001
 source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4464
+  source_label: Roots
+  source_path: Host-associated > Plants > Roots
+  mapping_predicate: skos:exactMatch
+  assertion_count: 2809
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 - source: PREGO
   source_id: BTO:0001188
   source_label: root
@@ -121,4 +135,5 @@ curation_history:
 - timestamp: '2026-08-12T00:00:00Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'

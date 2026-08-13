@@ -1,0 +1,42 @@
+identifier: UBERON:0002535
+label: gill
+definition: Anatomical surface structure found in many aquatic organisms. It is a
+  respiration organ whose function is the extraction of oxygen from water and the
+  excretion of carbon dioxide. The microscopic structure of a gill is such that it
+  presents a very large surface area to the external environment. Gills usually consist
+  of thin filaments of tissue, branches, or slender tufted processes which have a
+  highly folded surface to increase surface area. A high surface area is crucial to
+  the gas exchange of aquatic organisms as water contains only 1/20 parts dissolved
+  Oxygen compared to air. With the exception of some aquatic insects, the filaments
+  and lamellae (folds) contain blood or coelomic fluid, from which gases are exchanged
+  through the thin walls. Oxygen is carried by the blood to other parts of the body.
+  Carbon dioxide passes from the blood through the thin gill tissue into the water.
+  Gills or gill-like organs, located in different parts of the body, are found in
+  various groups of aquatic animals, including mollusks, crustaceans, insects, fish,
+  and amphibians.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Gill/Bronchial chamber
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- UBERON:0000062
+- habitatmech:GOLD.7be39aac95
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7263
+  source_label: Gill/Bronchial chamber
+  source_path: 'Host-associated > Arthropoda: Crustaceans > Respiratory system > Gill/Bronchial
+    chamber'
+  mapping_predicate: skos:exactMatch
+  assertion_count: 2
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

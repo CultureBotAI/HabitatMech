@@ -7,10 +7,16 @@ definition_source: BTO
 habitat_category: HOST_ASSOCIATED
 grounding_status: EXACT
 mapping_status: SEEDED
+synonyms:
+- synonym_text: Spores
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
 parent_habitats:
 - BTO:0000284
 - BTO:0000720
+- ENVO:01000890
 - FOODON:03411261
+- habitatmech:GOLD.b2bb6d6801
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7742
@@ -20,6 +26,16 @@ source_attestations:
   assertion_count: 135
   assertion_unit: ORGANISM
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: GOLD
+  source_id: gold.ecosystem:8121
+  source_label: Spores
+  source_path: Host-associated > Plants > Bryophytes > Moss > Spores
+  mapping_predicate: skos:exactMatch
+- source: GOLD
+  source_id: gold.ecosystem:8127
+  source_label: Spores
+  source_path: Host-associated > Plants > Bryophytes > Liverworts > Spores
+  mapping_predicate: skos:exactMatch
 curation_history:
 - timestamp: '2026-08-12T00:00:00Z'
   curator: seed_from_sources

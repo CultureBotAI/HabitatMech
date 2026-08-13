@@ -1,0 +1,28 @@
+identifier: ENVO:01000618
+label: lotic water body
+definition: A lotic water body is a water body in which the accumulated water, in
+  its totality, is flowing.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Lotic
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- ENVO:00000063
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4342
+  source_label: Lotic
+  source_path: Environmental > Aquatic > Freshwater > Lotic
+  mapping_predicate: skos:exactMatch
+  assertion_count: 95
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

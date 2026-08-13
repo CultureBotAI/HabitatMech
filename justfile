@@ -57,6 +57,13 @@ validate-all *args:
 validate-strict *args:
     uv run python scripts/validate_strict.py {{args}}
 
+# The curation backlog, ranked by upstream assertion volume, with the minted
+# identifier each decision must key on and lexically-near candidate terms.
+# Suggestions are a starting point, never an answer — anything written into
+# curation/decisions.tsv is re-verified against the ontology slice at seed time.
+worklist *args:
+    uv run python scripts/curation_worklist.py {{args}}
+
 # Verify data/habitats/ is exactly what data/raw/ produces. Schema validation
 # checks each record's shape but not its content, so without this a hand-edited
 # or drifted record passes every other check.

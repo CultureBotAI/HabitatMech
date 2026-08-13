@@ -1,0 +1,23 @@
+identifier: BTO:0000476
+label: foot
+definition: '1: The terminal part of the vertebrate leg upon which an individual stands.
+  2: An invertebrate organ of locomotion or attachment; especially: a ventral muscular
+  surface or process of a mollusk.'
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+parent_habitats:
+- BTO:0001492
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:foot
+  source_label: Foot
+  mapping_predicate: skos:exactMatch
+  assertion_count: 114
+  assertion_unit: STRAIN
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: EXACT.'

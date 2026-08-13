@@ -1,0 +1,25 @@
+identifier: BTO:0000555
+label: hair root
+definition: The enlarged basal part of a hair within the skin.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Hair roots
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- BTO:0001501
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7043
+  source_label: Hair roots
+  source_path: 'Host-associated > Mammals: Human > Integumentary system > Hair > Hair
+    roots'
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

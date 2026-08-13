@@ -7,6 +7,9 @@ habitat_category: HOST_ASSOCIATED
 grounding_status: EXACT
 mapping_status: SEEDED
 synonyms:
+- synonym_text: Erythrocytes
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
 - synonym_text: RBC
   synonym_type: RELATED_SYNONYM
   source: PREGO
@@ -30,7 +33,15 @@ synonyms:
   source: PREGO
 parent_habitats:
 - BTO:0000574
+- habitatmech:GOLD.d25ff4a586
 source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6603
+  source_label: Erythrocytes
+  source_path: 'Host-associated > Mammals: Human > Circulatory system > Blood > Erythrocytes'
+  mapping_predicate: skos:exactMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
 - source: PREGO
   source_id: BTO:0000424
   source_label: erythrocyte
@@ -87,4 +98,5 @@ curation_history:
 - timestamp: '2026-08-12T00:00:00Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'

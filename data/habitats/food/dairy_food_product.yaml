@@ -1,0 +1,35 @@
+identifier: FOODON:00001256
+label: dairy food product
+definition: A dairy food product has mammilian milk or a milk component as an ingredient.
+definition_source: FOODON
+habitat_category: FOOD
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Dairy products
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: dairy product
+  synonym_type: EXACT_SYNONYM
+  source: FOODON
+- synonym_text: milk product
+  synonym_type: EXACT_SYNONYM
+  source: FOODON
+parent_habitats:
+- FOODON:00001092
+- FOODON:00005501
+- FOODON:03530206
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:3505
+  source_label: Dairy products
+  source_path: Engineered > Food production > Dairy products
+  mapping_predicate: skos:exactMatch
+  assertion_count: 1319
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

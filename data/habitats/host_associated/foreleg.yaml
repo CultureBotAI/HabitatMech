@@ -1,0 +1,25 @@
+identifier: BTO:0006514
+label: foreleg
+definition: A front leg.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Forelegs
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- BTO:0000721
+- UBERON:0000029
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6764
+  source_label: Forelegs
+  source_path: Host-associated > Mammals > Lymphatic system > Lymph nodes > Forelegs
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

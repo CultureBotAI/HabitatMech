@@ -1,0 +1,39 @@
+identifier: FOODON:00001258
+label: food (fermented)
+definition: Food material which has been fermented.
+definition_source: FOODON
+habitat_category: FOOD
+grounding_status: BROAD
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Fermented
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+- synonym_text: Fermented beverages
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- FOODON:00002501
+- FOODON:00002645
+- FOODON:03530206
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:fermented
+  source_label: Fermented
+  mapping_predicate: skos:broadMatch
+  assertion_count: 242
+  assertion_unit: STRAIN
+- source: GOLD
+  source_id: gold.ecosystem:3504
+  source_label: Fermented beverages
+  source_path: Engineered > Food production > Fermented beverages
+  mapping_predicate: skos:broadMatch
+  assertion_count: 645
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD. Grounding:
+    BROAD.'

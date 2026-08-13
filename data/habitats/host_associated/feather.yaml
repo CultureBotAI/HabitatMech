@@ -10,10 +10,20 @@ habitat_category: HOST_ASSOCIATED
 grounding_status: EXACT
 mapping_status: SEEDED
 synonyms:
+- synonym_text: Feathers
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
 - synonym_text: feathers
   synonym_type: RELATED_SYNONYM
   source: PREGO
+parent_habitats:
+- habitatmech:GOLD.52d3212a6a
 source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7453
+  source_label: Feathers
+  source_path: Host-associated > Birds > Integumentary system > Skin > Feathers
+  mapping_predicate: skos:exactMatch
 - source: PREGO
   source_id: BTO:0000447
   source_label: feather
@@ -46,4 +56,5 @@ curation_history:
 - timestamp: '2026-08-12T00:00:00Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'

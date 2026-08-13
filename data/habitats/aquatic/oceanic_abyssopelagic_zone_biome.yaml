@@ -1,0 +1,33 @@
+identifier: ENVO:01000038
+label: oceanic abyssopelagic zone biome
+definition: The abyssopelagic zone biome comprises the marine water column below the
+  bathypelagic zone biome at approximately 2500 -2700 m and extends either to the
+  hadal pelagic zone biome (at approximately 6000 m) or to the benthopelagic zone
+  biome within ca. 100 m of the seafloor. The depth of 2700 m may be critical for
+  physiological reasons as the change in hydrostatic pressure across this depth may
+  preclude organism migration.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: CLOSE
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Abyssopelagic
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- ENVO:00001999
+- ENVO:01000033
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5339
+  source_label: Abyssopelagic
+  source_path: Environmental > Aquatic > Marine > Abyssopelagic
+  mapping_predicate: skos:closeMatch
+  assertion_count: 16
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'

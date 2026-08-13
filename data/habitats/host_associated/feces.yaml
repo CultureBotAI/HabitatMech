@@ -1,0 +1,147 @@
+identifier: UBERON:0001988
+label: feces
+definition: Portion of semisolid bodily waste discharged through the anus[MW,modified].
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Fecal
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: Feces-Stool
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+- synonym_text: Guano
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: cow dung
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: cow pat
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: droppings
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: dung
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: excrement
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: excreta
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: faeces
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: fecal material
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: fecal matter
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: fewmet
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: frass
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: guano
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: ordure
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: piece of shit
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: portion of dung
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: portion of excrement
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: portion of faeces
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: portion of fecal material
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: portion of fecal matter
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: portion of feces
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: portion of guano
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: portion of scat
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: portionem cacas
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: scat
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: spoor
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: spraint
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: stool
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- ENVO:00002276
+- UBERON:0000174
+- habitatmech:GOLD.5b0aa7456c
+- habitatmech:GOLD.6bda0871e2
+- habitatmech:GOLD.b091b80314
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:feces-stool
+  source_label: Feces-Stool
+  mapping_predicate: skos:exactMatch
+  assertion_count: 2421
+  assertion_unit: STRAIN
+- source: GOLD
+  source_id: gold.ecosystem:3920
+  source_label: Fecal
+  source_path: 'Host-associated > Mammals: Human > Digestive system > Large intestine
+    > Fecal'
+  mapping_predicate: skos:exactMatch
+  assertion_count: 13744
+  assertion_unit: ORGANISM
+- source: GOLD
+  source_id: gold.ecosystem:4104
+  source_label: Fecal
+  source_path: Host-associated > Mammals > Digestive system > Large intestine > Fecal
+  mapping_predicate: skos:exactMatch
+  assertion_count: 4785
+  assertion_unit: ORGANISM
+- source: GOLD
+  source_id: gold.ecosystem:4957
+  source_label: Fecal
+  source_path: Host-associated > Birds > Digestive system > Large intestine > Fecal
+  mapping_predicate: skos:exactMatch
+  assertion_count: 1229
+  assertion_unit: ORGANISM
+- source: GOLD
+  source_id: gold.ecosystem:6471
+  source_label: Guano
+  source_path: Engineered > Solid waste > Animal waste > Guano
+  mapping_predicate: skos:broadMatch
+  assertion_count: 2
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD. Grounding:
+    EXACT.'

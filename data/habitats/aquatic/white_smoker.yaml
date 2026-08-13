@@ -1,0 +1,28 @@
+identifier: ENVO:01000257
+label: white smoker
+definition: A hydrothermal vent found on the ocean floor which emits lighter-hued
+  minerals, such as those containing barium, calcium and silicon. These alkaline hydrothermal
+  vents also continuously generate acetyl thioesters, providing both the starting
+  point for more complex organic molecules and the energy needed to produce them.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: White smokers
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- ENVO:00000215
+- ENVO:01000122
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8303
+  source_label: White smokers
+  source_path: Environmental > Aquatic > Marine > Hydrothermal vents > White smokers
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

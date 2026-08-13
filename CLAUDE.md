@@ -96,9 +96,26 @@ Several behaviours look like bugs and are deliberate. Read
 
 ## Curation
 
-`mapping_status: SEEDED` means machine-generated and unreviewed — currently all
-3,299 records. Promoting to `REVIEWED` means a human checked the label,
-definition, grounding, and parents.
+**Curation is never a hand-edit to a record.** Records are generated and
+`just verify-corpus` gates that they reproduce from `data/raw/`, so an edit is
+silently reverted by the next re-seed. Decisions go in `curation/decisions.tsv`,
+which the seeder reads as an input: `GROUND` / `NOT_APPLICABLE` /
+`CONFIRM_UNGROUNDED` / `REVIEW`, each keyed on the **minted identifier of one
+source concept** (`just worklist` prints the key to use).
+
+Every `GROUND` names both the target CURIE and the label it expects, and the
+seed fails unless the term exists in the vendored slice *and* the label matches.
+Do not weaken that check — it is the only thing standing between an
+LLM-assisted curation pass and a plausible-looking wrong term ID in the corpus.
+If a target is not in the slice, vendor the ontology (see #10); do not remove
+the check.
+
+A merged record reaches `REVIEWED` only when **every** source concept feeding it
+is decided. A partially-curated record staying `SEEDED` is the rule working, not
+a bug — `just worklist` and the report show which co-attestor is missing.
+
+`mapping_status: SEEDED` means machine-generated and unreviewed — currently
+3,229 of 3,284 records.
 
 When adding `causal_graphs`, every edge needs `evidence` with a real citation.
 That is enforced by the schema and re-checked corpus-wide in

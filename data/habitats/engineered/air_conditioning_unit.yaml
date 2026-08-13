@@ -1,0 +1,35 @@
+identifier: ENVO:00002874
+label: air conditioning unit
+definition: A manufactuered product which is capable of removing heat and controlling
+  the humidity of the air within a site.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: A/C
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: A/C unit
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: Air-conditioner
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+- synonym_text: air conditioner
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00003074
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:air-conditioner
+  source_label: Air-conditioner
+  mapping_predicate: skos:exactMatch
+  assertion_count: 16
+  assertion_unit: STRAIN
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: EXACT.'

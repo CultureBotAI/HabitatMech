@@ -220,6 +220,83 @@ def test_lockfile_slugs_cannot_escape_the_corpus_directory(path_lockfile):
     assert not bad, f"unsafe slugs: {bad[:10]}"
 
 
+def test_reviewed_records_are_backed_by_curation_decisions(records, repo_root):
+    """A record can only be REVIEWED because a curator decided every source
+    concept feeding it. If one appears without any decision behind it, the
+    review status is being set by something other than curation — which is the
+    one thing `mapping_status: REVIEWED` is supposed to mean."""
+    import csv as _csv
+
+    path = repo_root / "curation" / "decisions.tsv"
+    if not path.exists():
+        reviewed = [d["identifier"] for _, d in records if d.get("mapping_status") == "REVIEWED"]
+        assert not reviewed, "records are REVIEWED but there is no decisions file"
+        return
+
+    with path.open(newline="", encoding="utf-8") as fh:
+        decided = {r["identifier"] for r in _csv.DictReader(fh, delimiter="\t")}
+
+    # A minted record is REVIEWED iff its own identifier was decided. An
+    # ontology-identified record is reviewed via its constituent source
+    # concepts, whose minted keys are not the record id — so those are checked
+    # by reconstructing the key from each attestation, which is the same thing
+    # apply_decision() looks up. Checking only the minted case would leave the
+    # 22 grounded REVIEWED records unverified, which is most of the value.
+    import sys
+
+    sys.path.insert(0, str(repo_root / "scripts"))
+    from seed_from_sources import mint
+
+    def keys_for(doc: dict) -> list[str]:
+        out = []
+        for attestation in doc.get("source_attestations") or []:
+            source = attestation.get("source")
+            if source == "GOLD" and attestation.get("source_path"):
+                out.append(mint("GOLD", attestation["source_path"]))
+            elif source in ("BACDIVE", "PREGO") and attestation.get("source_id"):
+                out.append(mint(source, attestation["source_id"]))
+        return out
+
+    orphans = []
+    for _, doc in records:
+        if doc.get("mapping_status") != "REVIEWED":
+            continue
+        if doc["identifier"].startswith("habitatmech:"):
+            if doc["identifier"] not in decided:
+                orphans.append((doc["identifier"], "own identifier not decided"))
+            continue
+        undecided = [k for k in keys_for(doc) if k not in decided]
+        if undecided:
+            orphans.append((doc["identifier"], f"{len(undecided)} source concept(s) undecided"))
+    assert not orphans, f"REVIEWED with no decision behind it: {orphans[:10]}"
+
+
+def test_not_applicable_records_are_all_curated(records, repo_root):
+    """NOT_APPLICABLE is a judgement that a source concept is not a habitat.
+    The seeder makes it automatically in exactly one case (an upstream mapping
+    to a non-habitat ontology, kept as an xref); every other one must come from
+    a decision, or something is quietly reclassifying records."""
+    import csv as _csv
+
+    path = repo_root / "curation" / "decisions.tsv"
+    decided = set()
+    if path.exists():
+        with path.open(newline="", encoding="utf-8") as fh:
+            decided = {r["identifier"] for r in _csv.DictReader(fh, delimiter="\t")}
+
+    unexplained = [
+        doc["identifier"]
+        for _, doc in records
+        if doc.get("grounding_status") == "NOT_APPLICABLE"
+        and doc["identifier"] not in decided
+        and not (doc.get("xrefs") or [])
+    ]
+    assert not unexplained, (
+        "NOT_APPLICABLE with neither a curation decision nor an upstream xref "
+        f"to justify it: {unexplained[:10]}"
+    )
+
+
 def test_seeded_records_carry_a_curation_event(records):
     bad = [doc["identifier"] for _, doc in records if not (doc.get("curation_history") or [])]
     assert not bad, f"records with no curation_history: {bad[:10]}"

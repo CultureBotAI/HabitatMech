@@ -1,0 +1,57 @@
+identifier: UBERON:0000473
+label: testis
+definition: A gonad of a male animal. A gonad produces and releases sperm.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Testicle/Testes
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: gonad of male genitalia
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: gonad of male reproductive system
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: male gonad
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: orchis
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: testes
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: testicle
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: testiculus
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0000991
+- UBERON:0003135
+- habitatmech:GOLD.5c89d5e294
+- habitatmech:GOLD.9bfd135cfa
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6470
+  source_label: Testicle/Testes
+  source_path: Host-associated > Mammals > Reproductive system > External organs >
+    Testicle/Testes
+  mapping_predicate: skos:exactMatch
+  assertion_count: 2
+  assertion_unit: ORGANISM
+- source: GOLD
+  source_id: gold.ecosystem:6562
+  source_label: Testicle/Testes
+  source_path: 'Host-associated > Mammals: Human > Reproductive system > External
+    organs > Testicle/Testes'
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

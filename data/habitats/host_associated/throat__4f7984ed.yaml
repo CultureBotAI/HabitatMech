@@ -1,0 +1,61 @@
+identifier: UBERON:0000341
+label: throat
+definition: In anatomy, the throat is the anterior part of the neck, in front of the
+  vertebral column. It consists of the pharynx and larynx. An important feature of
+  the throat is the epiglottis, a flap which separates the esophagus from the trachea
+  and prevents inhalation of food or drink. The throat contains various blood vessels,
+  various pharyngeal muscles, the trachea (windpipe) and the esophagus. The hyoid
+  bone and the clavicle are the only bones located in the throat of mammals. It is
+  sometimes considered a synonym for fauces. [WP,unvetted].
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Pharynx/Throat
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: gula
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0034929
+- habitatmech:GOLD.e36ba981d1
+- habitatmech:GOLD.f6720bccf0
+- habitatmech:GOLD.fac4f63f3b
+- habitatmech:GOLD.fb6caa2908
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5006
+  source_label: Pharynx/Throat
+  source_path: 'Host-associated > Mammals: Human > Respiratory system > Pharynx/Throat'
+  mapping_predicate: skos:exactMatch
+  assertion_count: 334
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: GOLD
+  source_id: gold.ecosystem:5044
+  source_label: Pharynx/Throat
+  source_path: Host-associated > Mammals > Respiratory system > Pharynx/Throat
+  mapping_predicate: skos:exactMatch
+  assertion_count: 13
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: GOLD
+  source_id: gold.ecosystem:6099
+  source_label: Pharynx/Throat
+  source_path: 'Host-associated > Mammals: Human > Digestive system > Pharynx/Throat'
+  mapping_predicate: skos:exactMatch
+  assertion_count: 11
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: GOLD
+  source_id: gold.ecosystem:7495
+  source_label: Pharynx/Throat
+  source_path: Host-associated > Birds > Digestive system > Pharynx/Throat
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

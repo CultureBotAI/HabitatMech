@@ -1,0 +1,37 @@
+identifier: BTO:0001226
+label: seed
+definition: A matured ovule containing an embryo and food supply and covered by a
+  seed coat.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Seeds
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- ENVO:01001001
+- habitatmech:GOLD.7406232b7e
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4570
+  source_label: Seeds
+  source_path: Host-associated > Plants > Seeds
+  mapping_predicate: skos:exactMatch
+  assertion_count: 569
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: GOLD
+  source_id: gold.ecosystem:8476
+  source_label: Seeds
+  source_path: Host-associated > Plants > Phyllosphere > Seeds
+  mapping_predicate: skos:exactMatch
+  assertion_count: 4
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

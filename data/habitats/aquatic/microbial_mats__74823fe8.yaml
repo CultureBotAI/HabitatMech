@@ -1,17 +1,19 @@
 identifier: habitatmech:GOLD.38e159af25
 label: Microbial mats
 habitat_category: AQUATIC
-grounding_status: UNGROUNDED
-mapping_status: SEEDED
+grounding_status: NARROW
+mapping_status: REVIEWED
 parent_habitats:
 - ENVO:00000195
+- ENVO:01000008
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5361
   source_label: Microbial mats
   source_path: Environmental > Aquatic > Freshwater > Sinkhole > Microbial mats
+  mapping_predicate: skos:narrowMatch
 curation_history:
 - timestamp: '2026-08-12T00:00:00Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

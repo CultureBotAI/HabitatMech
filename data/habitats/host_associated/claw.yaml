@@ -1,0 +1,38 @@
+identifier: BTO:0001719
+label: claw
+definition: 1. A sharp, curved, horny structure at the end of a toe of a mammal, reptile,
+  or bird. 2. A chela or similar pincerlike structure on the end of a limb of a crustacean
+  or other arthropod. 3. A limb terminating in such a structure.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Claws
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: Claws/Talon
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- BTO:0001492
+- habitatmech:GOLD.56e0776270
+- habitatmech:GOLD.968051b240
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6724
+  source_label: Claws
+  source_path: Host-associated > Mammals > Integumentary system > Claws
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: GOLD
+  source_id: gold.ecosystem:7457
+  source_label: Claws/Talon
+  source_path: Host-associated > Birds > Integumentary system > Claws/Talon
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

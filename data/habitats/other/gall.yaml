@@ -2,15 +2,13 @@ identifier: habitatmech:BACDIVE.f4971616a5
 label: Gall
 habitat_category: OTHER
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:gall
   source_label: Gall
   assertion_count: 16
   assertion_unit: STRAIN
-  notes: kg-microbe's isolation-source mapping table has a row for this source with
-    no ontology target; treated as ungrounded rather than re-grounded by lexical match.
 curation_history:
 - timestamp: '2026-08-12T00:00:00Z'
   curator: seed_from_sources

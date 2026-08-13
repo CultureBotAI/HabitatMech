@@ -1,10 +1,10 @@
 identifier: habitatmech:GOLD.c085f6141a
 label: Hot (42-90C)
 habitat_category: AQUATIC
-grounding_status: UNGROUNDED
-mapping_status: SEEDED
+grounding_status: NOT_APPLICABLE
+mapping_status: REVIEWED
 parent_habitats:
-- habitatmech:GOLD.f0e9ce4655
+- ENVO:00000051
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3764
@@ -17,4 +17,4 @@ curation_history:
 - timestamp: '2026-08-12T00:00:00Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NOT_APPLICABLE.'

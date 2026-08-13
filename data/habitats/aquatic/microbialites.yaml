@@ -1,9 +1,10 @@
 identifier: habitatmech:GOLD.2d24faa338
 label: Microbialites
 habitat_category: AQUATIC
-grounding_status: UNGROUNDED
-mapping_status: SEEDED
+grounding_status: NARROW
+mapping_status: REVIEWED
 parent_habitats:
+- ENVO:03600064
 - habitatmech:GOLD.3098ee8fe8
 source_attestations:
 - source: GOLD
@@ -11,8 +12,9 @@ source_attestations:
   source_label: Microbialites
   source_path: Environmental > Aquatic > Non-marine Saline and Alkaline > Hypersaline
     soda lake > Microbialites
+  mapping_predicate: skos:narrowMatch
 curation_history:
 - timestamp: '2026-08-12T00:00:00Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

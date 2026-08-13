@@ -1,0 +1,26 @@
+identifier: BTO:0000495
+label: gametophyte
+definition: The individual or generation of a plant exhibiting alternation of generations
+  that bears sex organs.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Gametophytes
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- BTO:0000720
+- ENVO:01000890
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8117
+  source_label: Gametophytes
+  source_path: Host-associated > Plants > Bryophytes > Moss > Gametophytes
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

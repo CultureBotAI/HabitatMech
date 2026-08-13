@@ -1,0 +1,27 @@
+identifier: ENVO:00003893
+label: cosmetic product
+definition: A manufactured product which has been formulated to modifying the appearance
+  of external human anatomical parts.
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Cosmetic products
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- ENVO:00003074
+- ENVO:2000000
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8328
+  source_label: Cosmetic products
+  source_path: Engineered > Industrial production > Chemical products > Cosmetic products
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

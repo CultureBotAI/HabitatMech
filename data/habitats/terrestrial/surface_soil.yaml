@@ -8,6 +8,9 @@ habitat_category: TERRESTRIAL
 grounding_status: EXACT
 mapping_status: SEEDED
 synonyms:
+- synonym_text: A horizon/Topsoil
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
 - synonym_text: surface soils
   synonym_type: RELATED_SYNONYM
   source: PREGO
@@ -15,8 +18,41 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: ENVO
 parent_habitats:
+- ENVO:00000266
 - ENVO:00001998
+- ENVO:01000250
+- ENVO:01001803
+- ENVO:01001805
+- habitatmech:GOLD.5276c32abd
 source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6008
+  source_label: A horizon/Topsoil
+  source_path: Environmental > Terrestrial > Soil > Temperate forest > A horizon/Topsoil
+  mapping_predicate: skos:closeMatch
+- source: GOLD
+  source_id: gold.ecosystem:6019
+  source_label: A horizon/Topsoil
+  source_path: Environmental > Terrestrial > Soil > Tropical forest > A horizon/Topsoil
+  mapping_predicate: skos:closeMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+- source: GOLD
+  source_id: gold.ecosystem:6029
+  source_label: A horizon/Topsoil
+  source_path: Environmental > Terrestrial > Soil > Boreal forest/Taiga > A horizon/Topsoil
+  mapping_predicate: skos:closeMatch
+- source: GOLD
+  source_id: gold.ecosystem:8080
+  source_label: A horizon/Topsoil
+  source_path: Environmental > Terrestrial > Soil > Pasture > A horizon/Topsoil
+  mapping_predicate: skos:closeMatch
+- source: GOLD
+  source_id: gold.ecosystem:8093
+  source_label: A horizon/Topsoil
+  source_path: Environmental > Terrestrial > Soil > Laurel/Subtropical forest > A
+    horizon/Topsoil
+  mapping_predicate: skos:closeMatch
 - source: PREGO
   source_id: ENVO:02000059
   source_label: surface soil
@@ -129,4 +165,5 @@ curation_history:
 - timestamp: '2026-08-12T00:00:00Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'
