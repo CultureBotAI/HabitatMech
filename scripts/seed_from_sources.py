@@ -370,7 +370,11 @@ def apply_decision(default: Resolution, minted: str, decisions: dict[str, Decisi
             decision.grounding_status,
             mapping_predicate=_GROUNDING_TO_PREDICATE.get(decision.grounding_status),
             route=f"curated_ground_from_{default.route}",
-            reviewed=True,
+            # Uniform with the other branches. validate_decisions() forbids a
+            # CLASS-depth grounding, so today this is always True — but the
+            # invariant belongs in the validator as policy, not here as an
+            # assumption a future change could silently invalidate (#23).
+            reviewed=decision.counts_as_reviewed,
         )
     if decision.decision == "GROUND_AS_PARENT":
         # Narrower than the named term: the term becomes a parent, never the
@@ -382,7 +386,7 @@ def apply_decision(default: Resolution, minted: str, decisions: dict[str, Decisi
             mapping_predicate=_GROUNDING_TO_PREDICATE.get(decision.grounding_status),
             extra_parents=[decision.object_id],
             route=f"curated_ground_as_parent_from_{default.route}",
-            reviewed=True,
+            reviewed=decision.counts_as_reviewed,
         )
     if decision.decision == "NOT_APPLICABLE":
         return Resolution(
@@ -1052,29 +1056,43 @@ def break_parent_cycles(concepts: list[Concept], ontology: OntologyIndex) -> int
     dropped = 0
 
     def find_cycle() -> list[str] | None:
+        """Iterative DFS returning one cycle as a node path, or None.
+
+        Iterative rather than recursive on purpose: raising the interpreter's
+        recursion limit to cover a hypothetical deep graph would also disarm it
+        for everything else in the process, turning a genuine runaway into a C
+        stack overflow instead of a catchable RecursionError. The observed
+        parent-chain depth is 12, so there is nothing to cover anyway (#24).
+        """
         WHITE, GREY, BLACK = 0, 1, 2
         color = dict.fromkeys(known, WHITE)
 
-        def visit(node: str, path: list[str]) -> list[str] | None:
-            color[node] = GREY
-            for parent in sorted(known[node].parents):
-                if parent not in known:
-                    continue
-                if color[parent] == GREY:
-                    return path + [node, parent]
-                if color[parent] == WHITE:
-                    found = visit(parent, path + [node])
-                    if found:
-                        return found
-            color[node] = BLACK
-            return None
-
-        sys.setrecursionlimit(max(10000, len(known) * 2))
-        for identifier in sorted(known):
-            if color[identifier] == WHITE:
-                found = visit(identifier, [])
-                if found:
-                    return found
+        for root in sorted(known):
+            if color[root] != WHITE:
+                continue
+            # Each frame is (node, iterator over its parents); `path` mirrors
+            # the frames so a discovered cycle can be reported in full.
+            stack: list[tuple[str, object]] = [(root, iter(sorted(known[root].parents)))]
+            color[root] = GREY
+            path = [root]
+            while stack:
+                node, parents = stack[-1]
+                advanced = False
+                for parent in parents:  # type: ignore[union-attr]
+                    if parent not in known:
+                        continue
+                    if color[parent] == GREY:
+                        return path[path.index(parent):] + [parent]
+                    if color[parent] == WHITE:
+                        color[parent] = GREY
+                        stack.append((parent, iter(sorted(known[parent].parents))))
+                        path.append(parent)
+                        advanced = True
+                        break
+                if not advanced:
+                    color[node] = BLACK
+                    stack.pop()
+                    path.pop()
         return None
 
     while (cycle := find_cycle()) is not None:

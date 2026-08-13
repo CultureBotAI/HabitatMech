@@ -188,3 +188,39 @@ that no ontology term exists for it. A record can be `REVIEWED` and
   *reported from* a habitat, which is weaker than typifying it — and for soil,
   all 8,715 taxa score within 0.007 of each other, so the ranking barely
   discriminates.
+
+
+## Class-level sweep
+
+Most of `curation/decisions.tsv` is not individual research, and the file says
+so explicitly rather than letting the volume imply otherwise.
+
+Each decision carries a `review_depth`. `ITEM` means the concept was examined
+against its source path and its candidate terms. `CLASS` means it was decided
+as a member of a mechanically-defined group, and exactly one group exists: the
+concept's label matched **no** term in the vendored ENVO/UBERON/FOODON/BTO slice
+by any of
+
+* exact label,
+* plural/singular of the label,
+* slash, parenthetical, or colon variants (undoing GOLD's formatting
+  conventions — `Phylloplane/Leaf`, `AGS (Aerobic granular sludge)`,
+  `Abscess: Furuncle/Boil`),
+* the label composed with its parent path level, in both orders,
+* whole-word substring against every term label.
+
+That claim is reproducible: re-run `just worklist` and `scripts/propose_decisions.py`.
+
+**What the sweep does not establish is whether the concept is a habitat at
+all.** An earlier version of the note asserted that these were "real habitats
+with no term that fits, and therefore ENVO term-request candidates"; they are
+not known to be either. Pulling the obvious non-habitats back out — diseases,
+interventions, sampling artefacts, `Unclassified` fillers — moved 48 concepts to
+individually-decided `NOT_APPLICABLE`, and there are certainly more among the
+remainder.
+
+Consequently **`CLASS` decisions do not promote a record to `REVIEWED`**, and a
+grounding may never be `CLASS` depth: asserting that a concept *is* a particular
+ontology term is always a per-item judgement. `just report` shows the three
+buckets — individually-examined term requests, class-swept, and wholly undecided
+— separately, so the sweep can never be mistaken for curation.

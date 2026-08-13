@@ -47,12 +47,13 @@ concepts (GOLD 2,562 · BacDive 162 · PREGO 719).
 | OTHER | 229 | | NOT_APPLICABLE | 40 |
 | FOOD / CLINICAL / AIR | 93 | | BROAD | 3 |
 
-**171 records (5.4%) are `REVIEWED`**, on 285 per-item curation decisions.
+**219 records (6.9%) are `REVIEWED`**, on 333 per-item curation decisions.
 Every one of the 3,443 source concepts now has a decision on file, but they are
-not all equal: 1,042 were decided by a **class-level sweep** (no term matched by
-any lexical route) and deliberately do *not* count as reviewed — see
-[Curation](#curation). 30 ungrounded records were examined individually and
-confirmed as ENVO term requests.
+not all equal: 994 were decided by a **class-level sweep** (no term matched by
+any search route) and deliberately do *not* count as reviewed — the sweep
+establishes only that no term matched, not that the concept is a habitat. See
+[Curation](#curation) and
+[docs/HARMONIZATION.md](docs/HARMONIZATION.md#class-level-sweep).
 
 Run `just report` for the live numbers and all three lists.
 
