@@ -27,197 +27,297 @@ source_attestations:
   score: 4.0
   evidence_channels: annotated_genomes_isolates|environmental_samples
 characteristic_taxa:
-- taxon_id: NCBITaxon:1121927
-  source: PREGO
-  taxon_label: Gordonia hirsuta DSM 44140 = NBRC 16056
-  score: 4.0
-- taxon_id: NCBITaxon:186802
-  source: PREGO
-  taxon_label: Eubacteriales
-  score: 4.0
-- taxon_id: NCBITaxon:1869227
-  source: PREGO
-  taxon_label: bacterium
-  score: 4.0
-- taxon_id: NCBITaxon:286
-  source: PREGO
-  taxon_label: Pseudomonas
-  score: 4.0
-- taxon_id: NCBITaxon:32033
-  source: PREGO
-  taxon_label: Lysobacteraceae
-  score: 4.0
-- taxon_id: NCBITaxon:35493
-  source: PREGO
-  score: 4.0
-- taxon_id: NCBITaxon:3654
-  source: PREGO
-  score: 4.0
-- taxon_id: NCBITaxon:4432
-  source: PREGO
-  score: 4.0
-- taxon_id: NCBITaxon:543
-  source: PREGO
-  taxon_label: Enterobacteriaceae
-  score: 4.0
-- taxon_id: NCBITaxon:629395
-  source: PREGO
-  score: 4.0
-- taxon_id: NCBITaxon:80864
-  source: PREGO
-  taxon_label: Comamonadaceae
-  score: 4.0
-- taxon_id: NCBITaxon:85961
-  source: PREGO
-  score: 4.0
-- taxon_id: NCBITaxon:1075399
-  source: PREGO
-  taxon_label: Blattabacterium sp. (Cryptocercus punctulatus) str. Cpu
-  score: 3.0
-- taxon_id: NCBITaxon:1384051
-  source: PREGO
-  taxon_label: Bacillus amyloliquefaciens UASWS BA1
-  score: 3.0
-- taxon_id: NCBITaxon:1498499
-  source: PREGO
-  taxon_label: Legionella norrlandica
-  score: 3.0
-- taxon_id: NCBITaxon:172045
-  source: PREGO
-  taxon_label: Elizabethkingia miricola
-  score: 3.0
-- taxon_id: NCBITaxon:278956
-  source: PREGO
-  taxon_label: Opitutaceae bacterium TAV1
-  score: 3.0
-- taxon_id: NCBITaxon:5306
-  source: PREGO
-  score: 3.0
-- taxon_id: NCBITaxon:794903
-  source: PREGO
-  taxon_label: Opitutaceae bacterium TAV5
-  score: 3.0
-- taxon_id: NCBITaxon:1485
-  source: PREGO
-  taxon_label: Clostridium
-  score: 1.78703
-- taxon_id: NCBITaxon:22
-  source: PREGO
-  taxon_label: Shewanella
-  score: 1.76642
-- taxon_id: NCBITaxon:31979
-  source: PREGO
-  taxon_label: Clostridiaceae
-  score: 1.76642
-- taxon_id: NCBITaxon:374
-  source: PREGO
-  taxon_label: Bradyrhizobium
-  score: 1.73436
-- taxon_id: NCBITaxon:2745
-  source: PREGO
-  taxon_label: Halomonas
-  score: 1.72334
-- taxon_id: NCBITaxon:153721
-  source: BACDIVE
-  taxon_label: Sporocytophaga myxococcoides
-  association_count: 2
-- taxon_id: NCBITaxon:184914
-  source: BACDIVE
-  taxon_label: Corallococcus coralloides
-  association_count: 100
-- taxon_id: NCBITaxon:1872627
-  source: BACDIVE
-  taxon_label: Archangium sp.
-  association_count: 13
-- taxon_id: NCBITaxon:1962667
-  source: BACDIVE
-  taxon_label: Nannocystis sp.
-  association_count: 2
 - taxon_id: NCBITaxon:2
   source: BACDIVE
   taxon_label: Bacteria
   association_count: 8
-- taxon_id: NCBITaxon:317
+  rank: 9
+  candidate_pool: 62
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121927
+  source: PREGO
+  taxon_label: Gordonia hirsuta DSM 44140 = NBRC 16056
+  score: 4.0
+  rank: 1
+  candidate_pool: 199
+- taxon_id: NCBITaxon:184914
   source: BACDIVE
-  taxon_label: Pseudomonas syringae
-  association_count: 2
-- taxon_id: NCBITaxon:33
-  source: BACDIVE
-  taxon_label: Myxococcus fulvus
-  association_count: 45
-- taxon_id: NCBITaxon:38
-  source: BACDIVE
-  taxon_label: Archangium disciforme
-  association_count: 4
-- taxon_id: NCBITaxon:39
-  source: BACDIVE
-  taxon_label: Archangiaceae
-  association_count: 3
-- taxon_id: NCBITaxon:394090
-  source: BACDIVE
-  taxon_label: Cystobacter armeniaca
-  association_count: 5
-- taxon_id: NCBITaxon:394092
-  source: BACDIVE
-  taxon_label: Hyalangium gracile
-  association_count: 7
-- taxon_id: NCBITaxon:394093
-  source: BACDIVE
-  taxon_label: Cystobacter miniatus
-  association_count: 2
-- taxon_id: NCBITaxon:394094
-  source: BACDIVE
-  taxon_label: Cystobacter velatus
-  association_count: 2
-- taxon_id: NCBITaxon:394096
-  source: BACDIVE
-  taxon_label: Hyalangium minutum
-  association_count: 7
-- taxon_id: NCBITaxon:45
-  source: BACDIVE
-  taxon_label: Melittangium lichenicola
-  association_count: 7
-- taxon_id: NCBITaxon:54
-  source: BACDIVE
-  taxon_label: Nannocystis exedens
-  association_count: 49
+  taxon_label: Corallococcus coralloides
+  association_count: 100
+  rank: 1
+  candidate_pool: 62
+- taxon_id: NCBITaxon:186802
+  source: PREGO
+  taxon_label: Eubacteriales
+  score: 4.0
+  rank: 2
+  candidate_pool: 199
 - taxon_id: NCBITaxon:56
   source: BACDIVE
   taxon_label: Sorangium cellulosum
   association_count: 59
-- taxon_id: NCBITaxon:57
+  rank: 2
+  candidate_pool: 62
+- taxon_id: NCBITaxon:1869227
+  source: PREGO
+  taxon_label: bacterium
+  score: 4.0
+  rank: 3
+  candidate_pool: 199
+- taxon_id: NCBITaxon:54
   source: BACDIVE
-  association_count: 6
+  taxon_label: Nannocystis exedens
+  association_count: 49
+  rank: 3
+  candidate_pool: 62
+- taxon_id: NCBITaxon:33
+  source: BACDIVE
+  taxon_label: Myxococcus fulvus
+  association_count: 45
+  rank: 4
+  candidate_pool: 62
+- taxon_id: NCBITaxon:286
+  source: PREGO
+  taxon_label: Pseudomonas
+  score: 4.0
+  rank: 5
+  candidate_pool: 199
 - taxon_id: NCBITaxon:71864
   source: BACDIVE
   taxon_label: Herpetosiphon sp.
   association_count: 23
-- taxon_id: NCBITaxon:83449
-  source: BACDIVE
-  taxon_label: Cystobacter ferrugineus
-  association_count: 3
-- taxon_id: NCBITaxon:83451
-  source: BACDIVE
-  taxon_label: Archangium violaceum
-  association_count: 6
-- taxon_id: NCBITaxon:83455
-  source: BACDIVE
-  taxon_label: Myxococcus stipitatus
-  association_count: 5
+  rank: 5
+  candidate_pool: 62
+- taxon_id: NCBITaxon:32033
+  source: PREGO
+  taxon_label: Lysobacteraceae
+  score: 4.0
+  rank: 6
+  candidate_pool: 199
 - taxon_id: NCBITaxon:83456
   source: BACDIVE
   taxon_label: Myxococcus virescens
   association_count: 14
+  rank: 6
+  candidate_pool: 62
+- taxon_id: NCBITaxon:35493
+  source: PREGO
+  score: 4.0
+  rank: 7
+  candidate_pool: 199
+- taxon_id: NCBITaxon:1872627
+  source: BACDIVE
+  taxon_label: Archangium sp.
+  association_count: 13
+  rank: 7
+  candidate_pool: 62
+- taxon_id: NCBITaxon:3654
+  source: PREGO
+  score: 4.0
+  rank: 8
+  candidate_pool: 199
 - taxon_id: NCBITaxon:83462
   source: BACDIVE
   taxon_label: Corallococcus exiguus
   association_count: 9
+  rank: 8
+  candidate_pool: 62
+- taxon_id: NCBITaxon:4432
+  source: PREGO
+  score: 4.0
+  rank: 9
+  candidate_pool: 199
+- taxon_id: NCBITaxon:543
+  source: PREGO
+  taxon_label: Enterobacteriaceae
+  score: 4.0
+  rank: 10
+  candidate_pool: 199
+- taxon_id: NCBITaxon:394092
+  source: BACDIVE
+  taxon_label: Hyalangium gracile
+  association_count: 7
+  rank: 10
+  candidate_pool: 62
+- taxon_id: NCBITaxon:629395
+  source: PREGO
+  score: 4.0
+  rank: 11
+  candidate_pool: 199
+- taxon_id: NCBITaxon:394096
+  source: BACDIVE
+  taxon_label: Hyalangium minutum
+  association_count: 7
+  rank: 11
+  candidate_pool: 62
+- taxon_id: NCBITaxon:80864
+  source: PREGO
+  taxon_label: Comamonadaceae
+  score: 4.0
+  rank: 12
+  candidate_pool: 199
+- taxon_id: NCBITaxon:45
+  source: BACDIVE
+  taxon_label: Melittangium lichenicola
+  association_count: 7
+  rank: 12
+  candidate_pool: 62
+- taxon_id: NCBITaxon:85961
+  source: PREGO
+  score: 4.0
+  rank: 13
+  candidate_pool: 199
+- taxon_id: NCBITaxon:57
+  source: BACDIVE
+  association_count: 6
+  rank: 13
+  candidate_pool: 62
+- taxon_id: NCBITaxon:1075399
+  source: PREGO
+  taxon_label: Blattabacterium sp. (Cryptocercus punctulatus) str. Cpu
+  score: 3.0
+  rank: 14
+  candidate_pool: 199
+- taxon_id: NCBITaxon:83451
+  source: BACDIVE
+  taxon_label: Archangium violaceum
+  association_count: 6
+  rank: 14
+  candidate_pool: 62
+- taxon_id: NCBITaxon:1384051
+  source: PREGO
+  taxon_label: Bacillus amyloliquefaciens UASWS BA1
+  score: 3.0
+  rank: 15
+  candidate_pool: 199
+- taxon_id: NCBITaxon:394090
+  source: BACDIVE
+  taxon_label: Cystobacter armeniaca
+  association_count: 5
+  rank: 15
+  candidate_pool: 62
+- taxon_id: NCBITaxon:1498499
+  source: PREGO
+  taxon_label: Legionella norrlandica
+  score: 3.0
+  rank: 16
+  candidate_pool: 199
+- taxon_id: NCBITaxon:83455
+  source: BACDIVE
+  taxon_label: Myxococcus stipitatus
+  association_count: 5
+  rank: 16
+  candidate_pool: 62
+- taxon_id: NCBITaxon:172045
+  source: PREGO
+  taxon_label: Elizabethkingia miricola
+  score: 3.0
+  rank: 17
+  candidate_pool: 199
+- taxon_id: NCBITaxon:38
+  source: BACDIVE
+  taxon_label: Archangium disciforme
+  association_count: 4
+  rank: 17
+  candidate_pool: 62
+- taxon_id: NCBITaxon:278956
+  source: PREGO
+  taxon_label: Opitutaceae bacterium TAV1
+  score: 3.0
+  rank: 18
+  candidate_pool: 199
+- taxon_id: NCBITaxon:39
+  source: BACDIVE
+  taxon_label: Archangiaceae
+  association_count: 3
+  rank: 18
+  candidate_pool: 62
+- taxon_id: NCBITaxon:5306
+  source: PREGO
+  score: 3.0
+  rank: 19
+  candidate_pool: 199
+- taxon_id: NCBITaxon:83449
+  source: BACDIVE
+  taxon_label: Cystobacter ferrugineus
+  association_count: 3
+  rank: 19
+  candidate_pool: 62
+- taxon_id: NCBITaxon:794903
+  source: PREGO
+  taxon_label: Opitutaceae bacterium TAV5
+  score: 3.0
+  rank: 20
+  candidate_pool: 199
 - taxon_id: NCBITaxon:889274
   source: BACDIVE
   taxon_label: Polyangium sorediatum
   association_count: 3
+  rank: 20
+  candidate_pool: 62
+- taxon_id: NCBITaxon:1485
+  source: PREGO
+  taxon_label: Clostridium
+  score: 1.78703
+  rank: 21
+  candidate_pool: 199
+- taxon_id: NCBITaxon:153721
+  source: BACDIVE
+  taxon_label: Sporocytophaga myxococcoides
+  association_count: 2
+  rank: 21
+  candidate_pool: 62
+- taxon_id: NCBITaxon:22
+  source: PREGO
+  taxon_label: Shewanella
+  score: 1.76642
+  rank: 22
+  candidate_pool: 199
+- taxon_id: NCBITaxon:1962667
+  source: BACDIVE
+  taxon_label: Nannocystis sp.
+  association_count: 2
+  rank: 22
+  candidate_pool: 62
+- taxon_id: NCBITaxon:31979
+  source: PREGO
+  taxon_label: Clostridiaceae
+  score: 1.76642
+  rank: 23
+  candidate_pool: 199
+- taxon_id: NCBITaxon:317
+  source: BACDIVE
+  taxon_label: Pseudomonas syringae
+  association_count: 2
+  rank: 23
+  candidate_pool: 62
+- taxon_id: NCBITaxon:374
+  source: PREGO
+  taxon_label: Bradyrhizobium
+  score: 1.73436
+  rank: 24
+  candidate_pool: 199
+- taxon_id: NCBITaxon:394093
+  source: BACDIVE
+  taxon_label: Cystobacter miniatus
+  association_count: 2
+  rank: 24
+  candidate_pool: 62
+- taxon_id: NCBITaxon:2745
+  source: PREGO
+  taxon_label: Halomonas
+  score: 1.72334
+  rank: 25
+  candidate_pool: 199
+- taxon_id: NCBITaxon:394094
+  source: BACDIVE
+  taxon_label: Cystobacter velatus
+  association_count: 2
+  rank: 25
+  candidate_pool: 62
 curation_history:
-- timestamp: '2026-08-13T06:49:23Z'
+- timestamp: '2026-08-13T18:41:16Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, PREGO. Grounding:

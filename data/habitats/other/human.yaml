@@ -12,108 +12,158 @@ source_attestations:
   assertion_count: 11697
   assertion_unit: STRAIN
 characteristic_taxa:
-- taxon_id: NCBITaxon:1280
-  source: BACDIVE
-  taxon_label: Staphylococcus aureus
-  association_count: 156
-- taxon_id: NCBITaxon:1305
-  source: BACDIVE
-  taxon_label: Streptococcus sanguinis
-  association_count: 65
-- taxon_id: NCBITaxon:1313
-  source: BACDIVE
-  taxon_label: Streptococcus pneumoniae
-  association_count: 197
-- taxon_id: NCBITaxon:1328
-  source: BACDIVE
-  taxon_label: Streptococcus anginosus
-  association_count: 155
-- taxon_id: NCBITaxon:1352
-  source: BACDIVE
-  taxon_label: Enterococcus faecium
-  association_count: 100
-- taxon_id: NCBITaxon:1596
-  source: BACDIVE
-  taxon_label: Lactobacillus gasseri
-  association_count: 64
-- taxon_id: NCBITaxon:1655
-  source: BACDIVE
-  taxon_label: Actinomyces naeslundii
-  association_count: 66
-- taxon_id: NCBITaxon:1656
-  source: BACDIVE
-  taxon_label: Actinomyces viscosus
-  association_count: 105
-- taxon_id: NCBITaxon:1660
-  source: BACDIVE
-  taxon_label: Schaalia odontolytica
-  association_count: 76
-- taxon_id: NCBITaxon:1720
-  source: BACDIVE
-  taxon_label: Corynebacterium sp.
-  association_count: 69
-- taxon_id: NCBITaxon:197
-  source: BACDIVE
-  taxon_label: Campylobacter jejuni
-  association_count: 175
-- taxon_id: NCBITaxon:2
-  source: BACDIVE
-  taxon_label: Bacteria
-  association_count: 87
-- taxon_id: NCBITaxon:2702
-  source: BACDIVE
-  taxon_label: Gardnerella vaginalis
-  association_count: 95
-- taxon_id: NCBITaxon:28188
-  source: BACDIVE
-  taxon_label: Capnocytophaga canimorsus
-  association_count: 108
-- taxon_id: NCBITaxon:287
-  source: BACDIVE
-  taxon_label: Pseudomonas aeruginosa
-  association_count: 113
-- taxon_id: NCBITaxon:28901
-  source: BACDIVE
-  taxon_label: Salmonella enterica
-  association_count: 88
-- taxon_id: NCBITaxon:40324
-  source: BACDIVE
-  taxon_label: Stenotrophomonas maltophilia
-  association_count: 69
-- taxon_id: NCBITaxon:46124
-  source: BACDIVE
-  taxon_label: Granulicatella adiacens
-  association_count: 75
-- taxon_id: NCBITaxon:47715
-  source: BACDIVE
-  taxon_label: Lacticaseibacillus rhamnosus
-  association_count: 105
-- taxon_id: NCBITaxon:520
-  source: BACDIVE
-  taxon_label: Bordetella pertussis
-  association_count: 71
 - taxon_id: NCBITaxon:562
   source: BACDIVE
   taxon_label: Escherichia coli
   association_count: 222
-- taxon_id: NCBITaxon:59505
+  rank: 1
+  candidate_pool: 2068
+- taxon_id: NCBITaxon:1313
   source: BACDIVE
-  taxon_label: Actinotignum schaalii
-  association_count: 76
-- taxon_id: NCBITaxon:727
+  taxon_label: Streptococcus pneumoniae
+  association_count: 197
+  rank: 2
+  candidate_pool: 2068
+- taxon_id: NCBITaxon:197
   source: BACDIVE
-  taxon_label: Haemophilus influenzae
-  association_count: 110
+  taxon_label: Campylobacter jejuni
+  association_count: 175
+  rank: 3
+  candidate_pool: 2068
+- taxon_id: NCBITaxon:1280
+  source: BACDIVE
+  taxon_label: Staphylococcus aureus
+  association_count: 156
+  rank: 4
+  candidate_pool: 2068
+- taxon_id: NCBITaxon:1328
+  source: BACDIVE
+  taxon_label: Streptococcus anginosus
+  association_count: 155
+  rank: 5
+  candidate_pool: 2068
 - taxon_id: NCBITaxon:730
   source: BACDIVE
   taxon_label: '[Haemophilus] ducreyi'
   association_count: 125
+  rank: 6
+  candidate_pool: 2068
+- taxon_id: NCBITaxon:287
+  source: BACDIVE
+  taxon_label: Pseudomonas aeruginosa
+  association_count: 113
+  rank: 7
+  candidate_pool: 2068
+- taxon_id: NCBITaxon:727
+  source: BACDIVE
+  taxon_label: Haemophilus influenzae
+  association_count: 110
+  rank: 8
+  candidate_pool: 2068
+- taxon_id: NCBITaxon:28188
+  source: BACDIVE
+  taxon_label: Capnocytophaga canimorsus
+  association_count: 108
+  rank: 9
+  candidate_pool: 2068
+- taxon_id: NCBITaxon:1656
+  source: BACDIVE
+  taxon_label: Actinomyces viscosus
+  association_count: 105
+  rank: 10
+  candidate_pool: 2068
+- taxon_id: NCBITaxon:47715
+  source: BACDIVE
+  taxon_label: Lacticaseibacillus rhamnosus
+  association_count: 105
+  rank: 11
+  candidate_pool: 2068
+- taxon_id: NCBITaxon:1352
+  source: BACDIVE
+  taxon_label: Enterococcus faecium
+  association_count: 100
+  rank: 12
+  candidate_pool: 2068
+- taxon_id: NCBITaxon:2702
+  source: BACDIVE
+  taxon_label: Gardnerella vaginalis
+  association_count: 95
+  rank: 13
+  candidate_pool: 2068
+- taxon_id: NCBITaxon:28901
+  source: BACDIVE
+  taxon_label: Salmonella enterica
+  association_count: 88
+  rank: 14
+  candidate_pool: 2068
+- taxon_id: NCBITaxon:2
+  source: BACDIVE
+  taxon_label: Bacteria
+  association_count: 87
+  rank: 15
+  candidate_pool: 2068
+- taxon_id: NCBITaxon:1660
+  source: BACDIVE
+  taxon_label: Schaalia odontolytica
+  association_count: 76
+  rank: 16
+  candidate_pool: 2068
+- taxon_id: NCBITaxon:59505
+  source: BACDIVE
+  taxon_label: Actinotignum schaalii
+  association_count: 76
+  rank: 17
+  candidate_pool: 2068
+- taxon_id: NCBITaxon:46124
+  source: BACDIVE
+  taxon_label: Granulicatella adiacens
+  association_count: 75
+  rank: 18
+  candidate_pool: 2068
+- taxon_id: NCBITaxon:520
+  source: BACDIVE
+  taxon_label: Bordetella pertussis
+  association_count: 71
+  rank: 19
+  candidate_pool: 2068
+- taxon_id: NCBITaxon:1720
+  source: BACDIVE
+  taxon_label: Corynebacterium sp.
+  association_count: 69
+  rank: 20
+  candidate_pool: 2068
+- taxon_id: NCBITaxon:40324
+  source: BACDIVE
+  taxon_label: Stenotrophomonas maltophilia
+  association_count: 69
+  rank: 21
+  candidate_pool: 2068
 - taxon_id: NCBITaxon:732
   source: BACDIVE
   taxon_label: Aggregatibacter aphrophilus
   association_count: 68
+  rank: 22
+  candidate_pool: 2068
+- taxon_id: NCBITaxon:1655
+  source: BACDIVE
+  taxon_label: Actinomyces naeslundii
+  association_count: 66
+  rank: 23
+  candidate_pool: 2068
+- taxon_id: NCBITaxon:1305
+  source: BACDIVE
+  taxon_label: Streptococcus sanguinis
+  association_count: 65
+  rank: 24
+  candidate_pool: 2068
+- taxon_id: NCBITaxon:1596
+  source: BACDIVE
+  taxon_label: Lactobacillus gasseri
+  association_count: 64
+  rank: 25
+  candidate_pool: 2068
 curation_history:
-- timestamp: '2026-08-13T06:49:23Z'
+- timestamp: '2026-08-13T18:41:16Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'

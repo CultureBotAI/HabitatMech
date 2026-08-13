@@ -26,16 +26,22 @@ characteristic_taxa:
   source: PREGO
   taxon_label: Zavarzinella formosa DSM 19928
   score: 3.0
+  rank: 1
+  candidate_pool: 3
 - taxon_id: NCBITaxon:388399
   source: PREGO
   taxon_label: Sagittula stellata E-37
   score: 3.0
+  rank: 2
+  candidate_pool: 3
 - taxon_id: NCBITaxon:870187
   source: PREGO
   taxon_label: Thiothrix nivea DSM 5205
   score: 3.0
+  rank: 3
+  candidate_pool: 3
 curation_history:
-- timestamp: '2026-08-13T06:49:23Z'
+- timestamp: '2026-08-13T18:41:16Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

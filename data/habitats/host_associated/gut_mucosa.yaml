@@ -25,28 +25,40 @@ characteristic_taxa:
   source: PREGO
   taxon_label: Fusobacterium nucleatum CC53
   score: 3.0
+  rank: 1
+  candidate_pool: 6
 - taxon_id: NCBITaxon:1457191
   source: PREGO
   taxon_label: Lacticaseibacillus rhamnosus E800
   score: 3.0
+  rank: 2
+  candidate_pool: 6
 - taxon_id: NCBITaxon:1457395
   source: PREGO
   taxon_label: Lacticaseibacillus rhamnosus PEL5
   score: 3.0
+  rank: 3
+  candidate_pool: 6
 - taxon_id: NCBITaxon:1457396
   source: PREGO
   taxon_label: Lacticaseibacillus rhamnosus PEL6
   score: 3.0
+  rank: 4
+  candidate_pool: 6
 - taxon_id: NCBITaxon:216599
   source: PREGO
   taxon_label: Shigella sonnei 53G
   score: 3.0
+  rank: 5
+  candidate_pool: 6
 - taxon_id: NCBITaxon:420247
   source: PREGO
   taxon_label: Methanobrevibacter smithii ATCC 35061
   score: 3.0
+  rank: 6
+  candidate_pool: 6
 curation_history:
-- timestamp: '2026-08-13T06:49:23Z'
+- timestamp: '2026-08-13T18:41:16Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

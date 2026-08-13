@@ -10,32 +10,44 @@ source_attestations:
   assertion_count: 8
   assertion_unit: STRAIN
 characteristic_taxa:
-- taxon_id: NCBITaxon:1756185
-  source: BACDIVE
-  taxon_label: Nocardioides opuntiae
-  association_count: 1
-- taxon_id: NCBITaxon:184914
-  source: BACDIVE
-  taxon_label: Corallococcus coralloides
-  association_count: 1
-- taxon_id: NCBITaxon:54
-  source: BACDIVE
-  taxon_label: Nannocystis exedens
-  association_count: 1
 - taxon_id: NCBITaxon:56
   source: BACDIVE
   taxon_label: Sorangium cellulosum
   association_count: 3
+  rank: 1
+  candidate_pool: 6
+- taxon_id: NCBITaxon:1756185
+  source: BACDIVE
+  taxon_label: Nocardioides opuntiae
+  association_count: 1
+  rank: 2
+  candidate_pool: 6
+- taxon_id: NCBITaxon:184914
+  source: BACDIVE
+  taxon_label: Corallococcus coralloides
+  association_count: 1
+  rank: 3
+  candidate_pool: 6
+- taxon_id: NCBITaxon:54
+  source: BACDIVE
+  taxon_label: Nannocystis exedens
+  association_count: 1
+  rank: 4
+  candidate_pool: 6
 - taxon_id: NCBITaxon:69221
   source: BACDIVE
   taxon_label: Pectobacterium cacticida
   association_count: 1
+  rank: 5
+  candidate_pool: 6
 - taxon_id: NCBITaxon:71864
   source: BACDIVE
   taxon_label: Herpetosiphon sp.
   association_count: 1
+  rank: 6
+  candidate_pool: 6
 curation_history:
-- timestamp: '2026-08-13T06:49:23Z'
+- timestamp: '2026-08-13T18:41:16Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: NOT_APPLICABLE.'

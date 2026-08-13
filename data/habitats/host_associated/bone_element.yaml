@@ -39,108 +39,158 @@ source_attestations:
   mapping_predicate: skos:closeMatch
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 characteristic_taxa:
-- taxon_id: NCBITaxon:102684
-  source: BACDIVE
-  taxon_label: Streptococcus infantarius
-  association_count: 1
-- taxon_id: NCBITaxon:1121364
-  source: BACDIVE
-  taxon_label: Corynebacterium massiliense DSM 45435
-  association_count: 1
-- taxon_id: NCBITaxon:1219017
-  source: BACDIVE
-  taxon_label: Rhodococcus jostii NBRC 16295
-  association_count: 1
-- taxon_id: NCBITaxon:123899
-  source: BACDIVE
-  taxon_label: Bordetella trematum
-  association_count: 1
-- taxon_id: NCBITaxon:1265311
-  source: BACDIVE
-  taxon_label: Mycobacterium arosiense ATCC BAA-1401 = DSM 45069
-  association_count: 1
-- taxon_id: NCBITaxon:1280
-  source: BACDIVE
-  taxon_label: Staphylococcus aureus
-  association_count: 3
-- taxon_id: NCBITaxon:1283
-  source: BACDIVE
-  taxon_label: Staphylococcus haemolyticus
-  association_count: 1
-- taxon_id: NCBITaxon:1296
-  source: BACDIVE
-  taxon_label: Mammaliicoccus sciuri
-  association_count: 1
-- taxon_id: NCBITaxon:1328
-  source: BACDIVE
-  taxon_label: Streptococcus anginosus
-  association_count: 3
-- taxon_id: NCBITaxon:1402
-  source: BACDIVE
-  taxon_label: Bacillus licheniformis
-  association_count: 2
-- taxon_id: NCBITaxon:1659
-  source: BACDIVE
-  taxon_label: Actinomyces israelii
-  association_count: 3
-- taxon_id: NCBITaxon:1747
-  source: BACDIVE
-  taxon_label: Cutibacterium acnes
-  association_count: 2
-- taxon_id: NCBITaxon:29318
-  source: BACDIVE
-  taxon_label: Winkia neuii subsp. anitrata
-  association_count: 2
-- taxon_id: NCBITaxon:29394
-  source: BACDIVE
-  taxon_label: Dolosigranulum pigrum
-  association_count: 2
-- taxon_id: NCBITaxon:33010
-  source: BACDIVE
-  taxon_label: Cutibacterium avidum
-  association_count: 2
-- taxon_id: NCBITaxon:33028
-  source: BACDIVE
-  taxon_label: Staphylococcus saccharolyticus
-  association_count: 3
-- taxon_id: NCBITaxon:38284
-  source: BACDIVE
-  taxon_label: Corynebacterium accolens
-  association_count: 2
-- taxon_id: NCBITaxon:43770
-  source: BACDIVE
-  taxon_label: Corynebacterium striatum
-  association_count: 2
-- taxon_id: NCBITaxon:46124
-  source: BACDIVE
-  taxon_label: Granulicatella adiacens
-  association_count: 3
-- taxon_id: NCBITaxon:47920
-  source: BACDIVE
-  taxon_label: Acidovorax delafieldii
-  association_count: 2
 - taxon_id: NCBITaxon:504
   source: BACDIVE
   taxon_label: Kingella kingae
   association_count: 8
+  rank: 1
+  candidate_pool: 96
+- taxon_id: NCBITaxon:1280
+  source: BACDIVE
+  taxon_label: Staphylococcus aureus
+  association_count: 3
+  rank: 2
+  candidate_pool: 96
+- taxon_id: NCBITaxon:1328
+  source: BACDIVE
+  taxon_label: Streptococcus anginosus
+  association_count: 3
+  rank: 3
+  candidate_pool: 96
+- taxon_id: NCBITaxon:1659
+  source: BACDIVE
+  taxon_label: Actinomyces israelii
+  association_count: 3
+  rank: 4
+  candidate_pool: 96
+- taxon_id: NCBITaxon:33028
+  source: BACDIVE
+  taxon_label: Staphylococcus saccharolyticus
+  association_count: 3
+  rank: 5
+  candidate_pool: 96
+- taxon_id: NCBITaxon:46124
+  source: BACDIVE
+  taxon_label: Granulicatella adiacens
+  association_count: 3
+  rank: 6
+  candidate_pool: 96
+- taxon_id: NCBITaxon:1402
+  source: BACDIVE
+  taxon_label: Bacillus licheniformis
+  association_count: 2
+  rank: 7
+  candidate_pool: 96
+- taxon_id: NCBITaxon:1747
+  source: BACDIVE
+  taxon_label: Cutibacterium acnes
+  association_count: 2
+  rank: 8
+  candidate_pool: 96
+- taxon_id: NCBITaxon:29318
+  source: BACDIVE
+  taxon_label: Winkia neuii subsp. anitrata
+  association_count: 2
+  rank: 9
+  candidate_pool: 96
+- taxon_id: NCBITaxon:29394
+  source: BACDIVE
+  taxon_label: Dolosigranulum pigrum
+  association_count: 2
+  rank: 10
+  candidate_pool: 96
+- taxon_id: NCBITaxon:33010
+  source: BACDIVE
+  taxon_label: Cutibacterium avidum
+  association_count: 2
+  rank: 11
+  candidate_pool: 96
+- taxon_id: NCBITaxon:38284
+  source: BACDIVE
+  taxon_label: Corynebacterium accolens
+  association_count: 2
+  rank: 12
+  candidate_pool: 96
+- taxon_id: NCBITaxon:43770
+  source: BACDIVE
+  taxon_label: Corynebacterium striatum
+  association_count: 2
+  rank: 13
+  candidate_pool: 96
+- taxon_id: NCBITaxon:47920
+  source: BACDIVE
+  taxon_label: Acidovorax delafieldii
+  association_count: 2
+  rank: 14
+  candidate_pool: 96
 - taxon_id: NCBITaxon:598660
   source: BACDIVE
   taxon_label: Corynebacterium pyruviciproducens
   association_count: 2
+  rank: 15
+  candidate_pool: 96
 - taxon_id: NCBITaxon:66228
   source: BACDIVE
   taxon_label: Gleimia europaea
   association_count: 2
+  rank: 16
+  candidate_pool: 96
 - taxon_id: NCBITaxon:717
   source: BACDIVE
   taxon_label: Actinobacillus capsulatus
   association_count: 2
+  rank: 17
+  candidate_pool: 96
 - taxon_id: NCBITaxon:732
   source: BACDIVE
   taxon_label: Aggregatibacter aphrophilus
   association_count: 2
+  rank: 18
+  candidate_pool: 96
+- taxon_id: NCBITaxon:102684
+  source: BACDIVE
+  taxon_label: Streptococcus infantarius
+  association_count: 1
+  rank: 19
+  candidate_pool: 96
+- taxon_id: NCBITaxon:1121364
+  source: BACDIVE
+  taxon_label: Corynebacterium massiliense DSM 45435
+  association_count: 1
+  rank: 20
+  candidate_pool: 96
+- taxon_id: NCBITaxon:1219017
+  source: BACDIVE
+  taxon_label: Rhodococcus jostii NBRC 16295
+  association_count: 1
+  rank: 21
+  candidate_pool: 96
+- taxon_id: NCBITaxon:123899
+  source: BACDIVE
+  taxon_label: Bordetella trematum
+  association_count: 1
+  rank: 22
+  candidate_pool: 96
+- taxon_id: NCBITaxon:1265311
+  source: BACDIVE
+  taxon_label: Mycobacterium arosiense ATCC BAA-1401 = DSM 45069
+  association_count: 1
+  rank: 23
+  candidate_pool: 96
+- taxon_id: NCBITaxon:1283
+  source: BACDIVE
+  taxon_label: Staphylococcus haemolyticus
+  association_count: 1
+  rank: 24
+  candidate_pool: 96
+- taxon_id: NCBITaxon:1296
+  source: BACDIVE
+  taxon_label: Mammaliicoccus sciuri
+  association_count: 1
+  rank: 25
+  candidate_pool: 96
 curation_history:
-- timestamp: '2026-08-13T06:49:23Z'
+- timestamp: '2026-08-13T18:41:16Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD. Grounding:

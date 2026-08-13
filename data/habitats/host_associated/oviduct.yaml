@@ -58,20 +58,28 @@ characteristic_taxa:
   source: PREGO
   taxon_label: Chlamydia muridarum str. Nigg3 CMUT3-5
   score: 3.0
+  rank: 1
+  candidate_pool: 4
 - taxon_id: NCBITaxon:1434773
   source: PREGO
   taxon_label: Chlamydia muridarum str. Nigg CM972
   score: 3.0
+  rank: 2
+  candidate_pool: 4
 - taxon_id: NCBITaxon:562
   source: PREGO
   taxon_label: Escherichia coli
   score: 3.0
+  rank: 3
+  candidate_pool: 4
 - taxon_id: NCBITaxon:83560
   source: PREGO
   taxon_label: Chlamydia muridarum
   score: 3.0
+  rank: 4
+  candidate_pool: 4
 curation_history:
-- timestamp: '2026-08-13T06:49:23Z'
+- timestamp: '2026-08-13T18:41:16Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

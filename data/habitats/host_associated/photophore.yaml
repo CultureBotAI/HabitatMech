@@ -41,20 +41,28 @@ characteristic_taxa:
   source: PREGO
   taxon_label: Aliivibrio fischeri SR5
   score: 3.0
+  rank: 1
+  candidate_pool: 4
 - taxon_id: NCBITaxon:312309
   source: PREGO
   taxon_label: Aliivibrio fischeri ES114
   score: 3.0
+  rank: 2
+  candidate_pool: 4
 - taxon_id: NCBITaxon:388396
   source: PREGO
   taxon_label: Aliivibrio fischeri MJ11
   score: 3.0
+  rank: 3
+  candidate_pool: 4
 - taxon_id: NCBITaxon:668
   source: PREGO
   taxon_label: Aliivibrio fischeri
   score: 3.0
+  rank: 4
+  candidate_pool: 4
 curation_history:
-- timestamp: '2026-08-13T06:49:23Z'
+- timestamp: '2026-08-13T18:41:16Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

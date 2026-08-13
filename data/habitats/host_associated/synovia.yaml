@@ -32,16 +32,22 @@ characteristic_taxa:
   source: PREGO
   taxon_label: Chlamydia pecorum PV3056/3
   score: 3.0
+  rank: 1
+  candidate_pool: 3
 - taxon_id: NCBITaxon:1234368
   source: PREGO
   taxon_label: Chlamydia pecorum W73
   score: 3.0
+  rank: 2
+  candidate_pool: 3
 - taxon_id: NCBITaxon:1234369
   source: PREGO
   taxon_label: Chlamydia pecorum P787
   score: 3.0
+  rank: 3
+  candidate_pool: 3
 curation_history:
-- timestamp: '2026-08-13T06:49:23Z'
+- timestamp: '2026-08-13T18:41:16Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

@@ -749,13 +749,22 @@ def ingest_bacdive(
         # ranking discriminates: 400 strains beats 1.
         for taxon_row in taxa_by_source.get(row["bacdive_id"], []):
             taxon_id = taxon_row["taxon_id"]
-            if not taxon_id.startswith("NCBITaxon:") or taxon_id in concept.taxa:
+            if not taxon_id.startswith("NCBITaxon:"):
+                continue
+            if taxon_id in concept.taxa:
+                add_corroboration(concept.taxa[taxon_id], "BACDIVE")
                 continue
             entry: dict[str, Any] = {"taxon_id": taxon_id, "source": "BACDIVE"}
             if taxon_row.get("taxon_label"):
                 entry["taxon_label"] = taxon_row["taxon_label"]
             with contextlib.suppress(KeyError, ValueError):
                 entry["association_count"] = int(taxon_row["strain_count"])
+            with contextlib.suppress(KeyError, ValueError):
+                entry["rank"] = int(taxon_row["rank"])
+            with contextlib.suppress(KeyError, ValueError):
+                entry["candidate_pool"] = int(row["taxon_count"])
+            if taxon_row.get("corroborated_by"):
+                add_corroboration(entry, taxon_row["corroborated_by"])
             concept.taxa[taxon_id] = entry
 
 
@@ -823,13 +832,25 @@ def ingest_prego(
 
         for taxon_row in taxa_by_habitat.get(prego_id, []):
             taxon_id = taxon_row["taxon_id"]
-            if not taxon_id.startswith("NCBITaxon:") or taxon_id in concept.taxa:
+            if not taxon_id.startswith("NCBITaxon:"):
+                continue
+            if taxon_id in concept.taxa:
+                # Already asserted by another source for this record. That
+                # agreement is the strongest evidence here; dropping the second
+                # assertion on the floor threw it away (#8).
+                add_corroboration(concept.taxa[taxon_id], "PREGO")
                 continue
             entry: dict[str, Any] = {"taxon_id": taxon_id, "source": "PREGO"}
             if taxon_row.get("taxon_label"):
                 entry["taxon_label"] = taxon_row["taxon_label"]
             with contextlib.suppress(KeyError, ValueError):
                 entry["score"] = float(taxon_row["prego_score"])
+            with contextlib.suppress(KeyError, ValueError):
+                entry["rank"] = int(taxon_row["rank"])
+            with contextlib.suppress(KeyError, ValueError):
+                entry["candidate_pool"] = int(row["taxon_count"])
+            if taxon_row.get("corroborated_by"):
+                add_corroboration(entry, taxon_row["corroborated_by"])
             concept.taxa[taxon_id] = entry
 
 
@@ -954,6 +975,16 @@ ATTESTATION_FIELD_ORDER = [
 ]
 
 
+def add_corroboration(entry: dict[str, Any], source: str) -> None:
+    """Record that another source independently asserts this taxon here."""
+    if entry.get("source") == source:
+        return
+    others = entry.setdefault("corroborated_by", [])
+    if source not in others:
+        others.append(source)
+        others.sort()
+
+
 def order_attestation(attestation: dict[str, Any]) -> dict[str, Any]:
     ordered = {k: attestation[k] for k in ATTESTATION_FIELD_ORDER if k in attestation}
     # Anything not in the list would otherwise be silently dropped.
@@ -1001,8 +1032,17 @@ def build_document(concept: Concept) -> dict[str, Any]:
             concept.parameters, key=lambda p: (p["parameter"], p["qualitative_value"])
         )
     if concept.taxa:
+        # Corroborated taxa first: agreement between two independent methods
+        # outranks any single source's position, and PREGO's own ordering is
+        # weak enough (#8) that surfacing the cross-checked ones matters.
         doc["characteristic_taxa"] = sorted(
-            concept.taxa.values(), key=lambda t: (-(t.get("score") or 0), t["taxon_id"])
+            concept.taxa.values(),
+            key=lambda t: (
+                -len(t.get("corroborated_by") or []),
+                t.get("rank") or 10**6,
+                -(t.get("score") or 0),
+                t["taxon_id"],
+            ),
         )
 
     sources = sorted({a["source"] for a in concept.attestations})

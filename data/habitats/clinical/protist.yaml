@@ -15,16 +15,22 @@ characteristic_taxa:
   source: BACDIVE
   taxon_label: Methanobacterium formicicum DSM 3637
   association_count: 1
+  rank: 1
+  candidate_pool: 3
 - taxon_id: NCBITaxon:1891233
   source: BACDIVE
   taxon_label: Dysgonomonas sp.
   association_count: 1
+  rank: 2
+  candidate_pool: 3
 - taxon_id: NCBITaxon:195105
   source: BACDIVE
   taxon_label: Haematobacter massiliensis
   association_count: 1
+  rank: 3
+  candidate_pool: 3
 curation_history:
-- timestamp: '2026-08-13T06:49:23Z'
+- timestamp: '2026-08-13T18:41:16Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

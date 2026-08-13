@@ -53,16 +53,22 @@ characteristic_taxa:
   source: PREGO
   taxon_label: Pseudovibrio exalbescens DSM 16456
   score: 3.0
+  rank: 1
+  candidate_pool: 3
 - taxon_id: NCBITaxon:1123030
   source: PREGO
   taxon_label: Pseudoxanthomonas kalamensis DSM 18571
   score: 3.0
+  rank: 2
+  candidate_pool: 3
 - taxon_id: NCBITaxon:1307759
   source: PREGO
   taxon_label: Desulfohalovibrio reitneri
   score: 3.0
+  rank: 3
+  candidate_pool: 3
 curation_history:
-- timestamp: '2026-08-13T06:49:23Z'
+- timestamp: '2026-08-13T18:41:16Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

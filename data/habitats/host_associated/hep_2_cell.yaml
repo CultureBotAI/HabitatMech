@@ -35,24 +35,34 @@ characteristic_taxa:
   source: PREGO
   taxon_label: Parachlamydiaceae bacterium HS-T3
   score: 3.0
+  rank: 1
+  candidate_pool: 5
 - taxon_id: NCBITaxon:340186
   source: PREGO
   taxon_label: Escherichia coli E110019
   score: 3.0
+  rank: 2
+  candidate_pool: 5
 - taxon_id: NCBITaxon:358709
   source: PREGO
   taxon_label: Escherichia coli 101-1
   score: 3.0
+  rank: 3
+  candidate_pool: 5
 - taxon_id: NCBITaxon:57743
   source: PREGO
   taxon_label: Salmonella enterica subsp. enterica serovar Weltevreden
   score: 3.0
+  rank: 4
+  candidate_pool: 5
 - taxon_id: NCBITaxon:83552
   source: PREGO
   taxon_label: Parachlamydia acanthamoebae
   score: 3.0
+  rank: 5
+  candidate_pool: 5
 curation_history:
-- timestamp: '2026-08-13T06:49:23Z'
+- timestamp: '2026-08-13T18:41:16Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

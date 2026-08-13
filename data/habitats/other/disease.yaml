@@ -10,108 +10,158 @@ source_attestations:
   assertion_count: 1799
   assertion_unit: STRAIN
 characteristic_taxa:
-- taxon_id: NCBITaxon:1313
-  source: BACDIVE
-  taxon_label: Streptococcus pneumoniae
-  association_count: 12
-- taxon_id: NCBITaxon:1802
-  source: BACDIVE
-  taxon_label: Mycolicibacterium farcinogenes
-  association_count: 16
-- taxon_id: NCBITaxon:195
-  source: BACDIVE
-  taxon_label: Campylobacter coli
-  association_count: 12
-- taxon_id: NCBITaxon:197
-  source: BACDIVE
-  taxon_label: Campylobacter jejuni
-  association_count: 23
-- taxon_id: NCBITaxon:2702
-  source: BACDIVE
-  taxon_label: Gardnerella vaginalis
-  association_count: 21
-- taxon_id: NCBITaxon:271160
-  source: BACDIVE
-  taxon_label: Nicoletella semolina
-  association_count: 12
-- taxon_id: NCBITaxon:287
-  source: BACDIVE
-  taxon_label: Pseudomonas aeruginosa
-  association_count: 67
-- taxon_id: NCBITaxon:292
-  source: BACDIVE
-  taxon_label: Burkholderia cepacia
-  association_count: 20
-- taxon_id: NCBITaxon:36773
-  source: BACDIVE
-  taxon_label: Burkholderia sp.
-  association_count: 11
-- taxon_id: NCBITaxon:36809
-  source: BACDIVE
-  taxon_label: Mycobacteroides abscessus
-  association_count: 13
-- taxon_id: NCBITaxon:40324
-  source: BACDIVE
-  taxon_label: Stenotrophomonas maltophilia
-  association_count: 14
-- taxon_id: NCBITaxon:478
-  source: BACDIVE
-  taxon_label: Moraxella nonliquefaciens
-  association_count: 11
-- taxon_id: NCBITaxon:518
-  source: BACDIVE
-  taxon_label: Bordetella bronchiseptica
-  association_count: 17
-- taxon_id: NCBITaxon:554
-  source: BACDIVE
-  taxon_label: Pectobacterium carotovorum
-  association_count: 11
 - taxon_id: NCBITaxon:562
   source: BACDIVE
   taxon_label: Escherichia coli
   association_count: 111
-- taxon_id: NCBITaxon:59201
-  source: BACDIVE
-  taxon_label: Salmonella enterica subsp. enterica
-  association_count: 20
-- taxon_id: NCBITaxon:60552
-  source: BACDIVE
-  taxon_label: Burkholderia vietnamiensis
-  association_count: 27
-- taxon_id: NCBITaxon:666
-  source: BACDIVE
-  taxon_label: Vibrio cholerae
-  association_count: 12
-- taxon_id: NCBITaxon:674
-  source: BACDIVE
-  taxon_label: Vibrio mimicus
-  association_count: 11
-- taxon_id: NCBITaxon:727
-  source: BACDIVE
-  taxon_label: Haemophilus influenzae
-  association_count: 16
+  rank: 1
+  candidate_pool: 663
 - taxon_id: NCBITaxon:730
   source: BACDIVE
   taxon_label: '[Haemophilus] ducreyi'
   association_count: 99
-- taxon_id: NCBITaxon:731
+  rank: 2
+  candidate_pool: 663
+- taxon_id: NCBITaxon:287
   source: BACDIVE
-  taxon_label: Histophilus somni
-  association_count: 14
-- taxon_id: NCBITaxon:85698
-  source: BACDIVE
-  taxon_label: Achromobacter xylosoxidans
-  association_count: 13
+  taxon_label: Pseudomonas aeruginosa
+  association_count: 67
+  rank: 3
+  candidate_pool: 663
 - taxon_id: NCBITaxon:87883
   source: BACDIVE
   taxon_label: Burkholderia multivorans
   association_count: 41
+  rank: 4
+  candidate_pool: 663
 - taxon_id: NCBITaxon:95486
   source: BACDIVE
   taxon_label: Burkholderia cenocepacia
   association_count: 36
+  rank: 5
+  candidate_pool: 663
+- taxon_id: NCBITaxon:60552
+  source: BACDIVE
+  taxon_label: Burkholderia vietnamiensis
+  association_count: 27
+  rank: 6
+  candidate_pool: 663
+- taxon_id: NCBITaxon:197
+  source: BACDIVE
+  taxon_label: Campylobacter jejuni
+  association_count: 23
+  rank: 7
+  candidate_pool: 663
+- taxon_id: NCBITaxon:2702
+  source: BACDIVE
+  taxon_label: Gardnerella vaginalis
+  association_count: 21
+  rank: 8
+  candidate_pool: 663
+- taxon_id: NCBITaxon:292
+  source: BACDIVE
+  taxon_label: Burkholderia cepacia
+  association_count: 20
+  rank: 9
+  candidate_pool: 663
+- taxon_id: NCBITaxon:59201
+  source: BACDIVE
+  taxon_label: Salmonella enterica subsp. enterica
+  association_count: 20
+  rank: 10
+  candidate_pool: 663
+- taxon_id: NCBITaxon:518
+  source: BACDIVE
+  taxon_label: Bordetella bronchiseptica
+  association_count: 17
+  rank: 11
+  candidate_pool: 663
+- taxon_id: NCBITaxon:1802
+  source: BACDIVE
+  taxon_label: Mycolicibacterium farcinogenes
+  association_count: 16
+  rank: 12
+  candidate_pool: 663
+- taxon_id: NCBITaxon:727
+  source: BACDIVE
+  taxon_label: Haemophilus influenzae
+  association_count: 16
+  rank: 13
+  candidate_pool: 663
+- taxon_id: NCBITaxon:40324
+  source: BACDIVE
+  taxon_label: Stenotrophomonas maltophilia
+  association_count: 14
+  rank: 14
+  candidate_pool: 663
+- taxon_id: NCBITaxon:731
+  source: BACDIVE
+  taxon_label: Histophilus somni
+  association_count: 14
+  rank: 15
+  candidate_pool: 663
+- taxon_id: NCBITaxon:36809
+  source: BACDIVE
+  taxon_label: Mycobacteroides abscessus
+  association_count: 13
+  rank: 16
+  candidate_pool: 663
+- taxon_id: NCBITaxon:85698
+  source: BACDIVE
+  taxon_label: Achromobacter xylosoxidans
+  association_count: 13
+  rank: 17
+  candidate_pool: 663
+- taxon_id: NCBITaxon:1313
+  source: BACDIVE
+  taxon_label: Streptococcus pneumoniae
+  association_count: 12
+  rank: 18
+  candidate_pool: 663
+- taxon_id: NCBITaxon:195
+  source: BACDIVE
+  taxon_label: Campylobacter coli
+  association_count: 12
+  rank: 19
+  candidate_pool: 663
+- taxon_id: NCBITaxon:271160
+  source: BACDIVE
+  taxon_label: Nicoletella semolina
+  association_count: 12
+  rank: 20
+  candidate_pool: 663
+- taxon_id: NCBITaxon:666
+  source: BACDIVE
+  taxon_label: Vibrio cholerae
+  association_count: 12
+  rank: 21
+  candidate_pool: 663
+- taxon_id: NCBITaxon:36773
+  source: BACDIVE
+  taxon_label: Burkholderia sp.
+  association_count: 11
+  rank: 22
+  candidate_pool: 663
+- taxon_id: NCBITaxon:478
+  source: BACDIVE
+  taxon_label: Moraxella nonliquefaciens
+  association_count: 11
+  rank: 23
+  candidate_pool: 663
+- taxon_id: NCBITaxon:554
+  source: BACDIVE
+  taxon_label: Pectobacterium carotovorum
+  association_count: 11
+  rank: 24
+  candidate_pool: 663
+- taxon_id: NCBITaxon:674
+  source: BACDIVE
+  taxon_label: Vibrio mimicus
+  association_count: 11
+  rank: 25
+  candidate_pool: 663
 curation_history:
-- timestamp: '2026-08-13T06:49:23Z'
+- timestamp: '2026-08-13T18:41:16Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: NOT_APPLICABLE.'

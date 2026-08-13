@@ -10,24 +10,32 @@ source_attestations:
   assertion_count: 5
   assertion_unit: STRAIN
 characteristic_taxa:
-- taxon_id: NCBITaxon:1679495
-  source: BACDIVE
-  taxon_label: Variovorax gossypii
-  association_count: 1
 - taxon_id: NCBITaxon:212218
   source: BACDIVE
   taxon_label: uncultured Neochlamydia sp.
   association_count: 2
+  rank: 1
+  candidate_pool: 4
+- taxon_id: NCBITaxon:1679495
+  source: BACDIVE
+  taxon_label: Variovorax gossypii
+  association_count: 1
+  rank: 2
+  candidate_pool: 4
 - taxon_id: NCBITaxon:35761
   source: BACDIVE
   taxon_label: Nocardioides sp.
   association_count: 1
+  rank: 3
+  candidate_pool: 4
 - taxon_id: NCBITaxon:362787
   source: BACDIVE
   taxon_label: Candidatus Protochlamydia amoebophila
   association_count: 1
+  rank: 4
+  candidate_pool: 4
 curation_history:
-- timestamp: '2026-08-13T06:49:23Z'
+- timestamp: '2026-08-13T18:41:16Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'

@@ -237,7 +237,9 @@ def extract_gold(kgm: Path) -> tuple[list[dict[str, Any]], list[str]]:
 # BacDive isolation sources
 # ---------------------------------------------------------------------------
 
-def extract_bacdive(kgm: Path, top_taxa: int) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+def extract_bacdive(
+    kgm: Path, top_taxa: int
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[str, set[str]]]:
     """Return (isolation-source rows, top-taxa rows).
 
     BacDive links an isolation source to a *strain*, and the strain to a taxon,
@@ -280,12 +282,18 @@ def extract_bacdive(kgm: Path, top_taxa: int) -> tuple[list[dict[str, Any]], lis
             "label": label,
             "source_slug": src_id.split(":", 1)[-1],
             "strain_count": strain_counts.get(src_id, 0),
+            # The pool a kept taxon was ranked out of. Without it a record shows
+            # "rank 3" with no way to tell whether that is 3 of 5 or 3 of 8715.
+            "taxon_count": len(
+                {strain_taxon[st] for st in source_strains.get(src_id, ()) if st in strain_taxon}
+            ),
         }
         for src_id, label in sources.items()
     ]
     rows.sort(key=lambda r: (-r["strain_count"], r["label"]))
 
     # Second hop: isolation source -> strain -> taxon, counted by distinct strain.
+    full_taxa: dict[str, set[str]] = {}
     kept: dict[str, list[tuple[str, int]]] = {}
     needed: set[str] = set()
     for src_id, strains in source_strains.items():
@@ -294,6 +302,7 @@ def extract_bacdive(kgm: Path, top_taxa: int) -> tuple[list[dict[str, Any]], lis
             taxon = strain_taxon.get(strain)
             if taxon:
                 tally[taxon] += 1
+        full_taxa[src_id] = set(tally)
         ranked = sorted(tally.items(), key=lambda kv: (-kv[1], kv[0]))[:top_taxa]
         if ranked:
             kept[src_id] = ranked
@@ -311,14 +320,16 @@ def extract_bacdive(kgm: Path, top_taxa: int) -> tuple[list[dict[str, Any]], lis
         for src_id in sorted(kept)
         for rank, (taxon, count) in enumerate(kept[src_id], start=1)
     ]
-    return rows, taxa_rows
+    return rows, taxa_rows, full_taxa
 
 
 # ---------------------------------------------------------------------------
 # PREGO habitats
 # ---------------------------------------------------------------------------
 
-def extract_prego(kgm: Path, top_taxa: int) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+def extract_prego(
+    kgm: Path, top_taxa: int
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[str, set[str]]]:
     """Return (habitat rows, top-taxa rows).
 
     PREGO asserts up to ~8700 taxa for a single habitat, so the full
@@ -371,6 +382,7 @@ def extract_prego(kgm: Path, top_taxa: int) -> tuple[list[dict[str, Any]], list[
                 prev[2] | ({chan} if chan else set()),
             )
 
+    full_taxa: dict[str, set[str]] = {h: set(t) for h, t in best.items()}
     kept: dict[str, list[tuple[str, float, bool, set[str]]]] = {}
     needed_taxa: set[str] = set()
     for hab_id, taxa in best.items():
@@ -412,7 +424,7 @@ def extract_prego(kgm: Path, top_taxa: int) -> tuple[list[dict[str, Any]], list[
         for hab_id in sorted(kept)
         for rank, (taxon, score, is_direct, chans) in enumerate(kept[hab_id], start=1)
     ]
-    return habitat_rows, taxa_rows
+    return habitat_rows, taxa_rows, full_taxa
 
 
 def _load_taxon_labels(kgm: Path, wanted: set[str]) -> dict[str, str]:
@@ -852,11 +864,11 @@ def main(argv: list[str] | None = None) -> int:
         )
 
     print("extracting BacDive isolation sources ...")
-    bacdive_rows, bacdive_taxa_rows = extract_bacdive(kgm, args.top_taxa)
+    bacdive_rows, bacdive_taxa_rows, bacdive_full = extract_bacdive(kgm, args.top_taxa)
     print(f"  {len(bacdive_rows)} isolation sources, {len(bacdive_taxa_rows)} top-taxa rows")
 
     print("extracting PREGO habitats ...")
-    prego_rows, prego_taxa_rows = extract_prego(kgm, args.top_taxa)
+    prego_rows, prego_taxa_rows, prego_full = extract_prego(kgm, args.top_taxa)
     print(f"  {len(prego_rows)} PREGO habitat terms, {len(prego_taxa_rows)} top-taxa rows")
 
     print("extracting environment parameter table ...")
@@ -866,6 +878,45 @@ def main(argv: list[str] | None = None) -> int:
     print("extracting curated isolation-source groundings ...")
     grounding_rows = extract_groundings(kgm)
     print(f"  {len(grounding_rows)} mapping rows")
+
+    # Cross-source corroboration. PREGO reaches taxa by text mining and genome
+    # annotation, BacDive by counting strains actually isolated, so agreement
+    # between them is not one method agreeing with itself — it is the strongest
+    # evidence available for a taxon-habitat pair (#8).
+    #
+    # The comparison has to run against each source's FULL taxon set, which only
+    # exists here: intersecting the two truncated top-N lists finds almost
+    # nothing, because they rank different things out of pools of very different
+    # size. Habitats are linked through kg-microbe's isolation-source mapping,
+    # which is the same table the seeder grounds BacDive with.
+    print("computing cross-source taxon corroboration ...")
+    bacdive_target = {
+        _norm_label(row["subject_label"]): row["object_id"]
+        for row in grounding_rows
+        if row["object_id"]
+    }
+    prego_shared: dict[str, set[str]] = defaultdict(set)
+    bacdive_shared: dict[str, set[str]] = defaultdict(set)
+    linked = 0
+    for bacdive_row in bacdive_rows:
+        target = bacdive_target.get(_norm_label(bacdive_row["label"]))
+        if not target or target not in prego_full:
+            continue
+        linked += 1
+        shared = bacdive_full.get(bacdive_row["bacdive_id"], set()) & prego_full[target]
+        if shared:
+            prego_shared[target] |= shared
+            bacdive_shared[bacdive_row["bacdive_id"]] |= shared
+    for taxa_row in prego_taxa_rows:
+        if taxa_row["taxon_id"] in prego_shared.get(taxa_row["prego_id"], ()):
+            taxa_row["corroborated_by"] = "BACDIVE"
+    for taxa_row in bacdive_taxa_rows:
+        if taxa_row["taxon_id"] in bacdive_shared.get(taxa_row["bacdive_id"], ()):
+            taxa_row["corroborated_by"] = "PREGO"
+    corroborated = sum(
+        1 for r in (*prego_taxa_rows, *bacdive_taxa_rows) if r.get("corroborated_by")
+    )
+    print(f"  {linked} habitats attested by both sources; {corroborated} kept taxa corroborated")
 
     referenced: set[str] = set()
     for row in grounding_rows:
@@ -914,7 +965,7 @@ def main(argv: list[str] | None = None) -> int:
             gold_rows,
         ),
         "bacdive_isolation_sources.tsv": (
-            ["bacdive_id", "label", "source_slug", "strain_count"],
+            ["bacdive_id", "label", "source_slug", "strain_count", "taxon_count"],
             bacdive_rows,
         ),
         "prego_habitats.tsv": (
@@ -931,11 +982,12 @@ def main(argv: list[str] | None = None) -> int:
             prego_rows,
         ),
         "bacdive_source_taxa.tsv": (
-            ["bacdive_id", "rank", "taxon_id", "taxon_label", "strain_count"],
+            ["bacdive_id", "rank", "taxon_id", "taxon_label", "strain_count", "corroborated_by"],
             bacdive_taxa_rows,
         ),
         "prego_habitat_taxa.tsv": (
-            ["prego_id", "rank", "taxon_id", "taxon_label", "prego_score", "direct_flag", "channels"],
+            ["prego_id", "rank", "taxon_id", "taxon_label", "prego_score", "direct_flag",
+             "channels", "corroborated_by"],
             prego_taxa_rows,
         ),
         "environment_parameters.tsv": (

@@ -10,84 +10,122 @@ source_attestations:
   assertion_count: 61
   assertion_unit: STRAIN
 characteristic_taxa:
-- taxon_id: NCBITaxon:1123491
-  source: BACDIVE
-  taxon_label: Vibrio cincinnatiensis DSM 19608
-  association_count: 1
-- taxon_id: NCBITaxon:1313
-  source: BACDIVE
-  taxon_label: Streptococcus pneumoniae
-  association_count: 8
-- taxon_id: NCBITaxon:1639
-  source: BACDIVE
-  taxon_label: Listeria monocytogenes
-  association_count: 1
-- taxon_id: NCBITaxon:28188
-  source: BACDIVE
-  taxon_label: Capnocytophaga canimorsus
-  association_count: 1
-- taxon_id: NCBITaxon:33885
-  source: BACDIVE
-  taxon_label: Microbacterium lacticum
-  association_count: 1
-- taxon_id: NCBITaxon:34062
-  source: BACDIVE
-  taxon_label: Faucicola osloensis
-  association_count: 3
-- taxon_id: NCBITaxon:35703
-  source: BACDIVE
-  taxon_label: Citrobacter amalonaticus
-  association_count: 1
-- taxon_id: NCBITaxon:371602
-  source: BACDIVE
-  taxon_label: Aerococcus suis
-  association_count: 1
-- taxon_id: NCBITaxon:38301
-  source: BACDIVE
-  taxon_label: Corynebacterium minutissimum
-  association_count: 1
-- taxon_id: NCBITaxon:400667
-  source: BACDIVE
-  taxon_label: Acinetobacter baumannii ATCC 17978
-  association_count: 1
-- taxon_id: NCBITaxon:484
-  source: BACDIVE
-  taxon_label: Neisseria flavescens
-  association_count: 1
-- taxon_id: NCBITaxon:487
-  source: BACDIVE
-  taxon_label: Neisseria meningitidis
-  association_count: 4
-- taxon_id: NCBITaxon:488
-  source: BACDIVE
-  taxon_label: Neisseria mucosa
-  association_count: 1
-- taxon_id: NCBITaxon:52773
-  source: BACDIVE
-  taxon_label: Schaalia meyeri
-  association_count: 1
 - taxon_id: NCBITaxon:562
   source: BACDIVE
   taxon_label: Escherichia coli
   association_count: 20
-- taxon_id: NCBITaxon:573983
-  source: BACDIVE
-  taxon_label: Moraxella porci DSM 25326
-  association_count: 1
-- taxon_id: NCBITaxon:693216
-  source: BACDIVE
-  taxon_label: Cronobacter turicensis z3032
-  association_count: 1
+  rank: 1
+  candidate_pool: 19
 - taxon_id: NCBITaxon:727
   source: BACDIVE
   taxon_label: Haemophilus influenzae
   association_count: 12
+  rank: 2
+  candidate_pool: 19
+- taxon_id: NCBITaxon:1313
+  source: BACDIVE
+  taxon_label: Streptococcus pneumoniae
+  association_count: 8
+  rank: 3
+  candidate_pool: 19
+- taxon_id: NCBITaxon:487
+  source: BACDIVE
+  taxon_label: Neisseria meningitidis
+  association_count: 4
+  rank: 4
+  candidate_pool: 19
+- taxon_id: NCBITaxon:34062
+  source: BACDIVE
+  taxon_label: Faucicola osloensis
+  association_count: 3
+  rank: 5
+  candidate_pool: 19
+- taxon_id: NCBITaxon:1123491
+  source: BACDIVE
+  taxon_label: Vibrio cincinnatiensis DSM 19608
+  association_count: 1
+  rank: 6
+  candidate_pool: 19
+- taxon_id: NCBITaxon:1639
+  source: BACDIVE
+  taxon_label: Listeria monocytogenes
+  association_count: 1
+  rank: 7
+  candidate_pool: 19
+- taxon_id: NCBITaxon:28188
+  source: BACDIVE
+  taxon_label: Capnocytophaga canimorsus
+  association_count: 1
+  rank: 8
+  candidate_pool: 19
+- taxon_id: NCBITaxon:33885
+  source: BACDIVE
+  taxon_label: Microbacterium lacticum
+  association_count: 1
+  rank: 9
+  candidate_pool: 19
+- taxon_id: NCBITaxon:35703
+  source: BACDIVE
+  taxon_label: Citrobacter amalonaticus
+  association_count: 1
+  rank: 10
+  candidate_pool: 19
+- taxon_id: NCBITaxon:371602
+  source: BACDIVE
+  taxon_label: Aerococcus suis
+  association_count: 1
+  rank: 11
+  candidate_pool: 19
+- taxon_id: NCBITaxon:38301
+  source: BACDIVE
+  taxon_label: Corynebacterium minutissimum
+  association_count: 1
+  rank: 12
+  candidate_pool: 19
+- taxon_id: NCBITaxon:400667
+  source: BACDIVE
+  taxon_label: Acinetobacter baumannii ATCC 17978
+  association_count: 1
+  rank: 13
+  candidate_pool: 19
+- taxon_id: NCBITaxon:484
+  source: BACDIVE
+  taxon_label: Neisseria flavescens
+  association_count: 1
+  rank: 14
+  candidate_pool: 19
+- taxon_id: NCBITaxon:488
+  source: BACDIVE
+  taxon_label: Neisseria mucosa
+  association_count: 1
+  rank: 15
+  candidate_pool: 19
+- taxon_id: NCBITaxon:52773
+  source: BACDIVE
+  taxon_label: Schaalia meyeri
+  association_count: 1
+  rank: 16
+  candidate_pool: 19
+- taxon_id: NCBITaxon:573983
+  source: BACDIVE
+  taxon_label: Moraxella porci DSM 25326
+  association_count: 1
+  rank: 17
+  candidate_pool: 19
+- taxon_id: NCBITaxon:693216
+  source: BACDIVE
+  taxon_label: Cronobacter turicensis z3032
+  association_count: 1
+  rank: 18
+  candidate_pool: 19
 - taxon_id: NCBITaxon:732
   source: BACDIVE
   taxon_label: Aggregatibacter aphrophilus
   association_count: 1
+  rank: 19
+  candidate_pool: 19
 curation_history:
-- timestamp: '2026-08-13T06:49:23Z'
+- timestamp: '2026-08-13T18:41:16Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'

@@ -24,24 +24,34 @@ characteristic_taxa:
   source: PREGO
   taxon_label: Deinococcus frigens DSM 12807
   score: 3.0
+  rank: 1
+  candidate_pool: 5
 - taxon_id: NCBITaxon:1121381
   source: PREGO
   taxon_label: Deinococcus marmoris DSM 12784
   score: 3.0
+  rank: 2
+  candidate_pool: 5
 - taxon_id: NCBITaxon:1305835
   source: PREGO
   taxon_label: Rhodococcus sp. JG-3
   score: 3.0
+  rank: 3
+  candidate_pool: 5
 - taxon_id: NCBITaxon:1397700
   source: PREGO
   taxon_label: Exiguobacterium antarcticum DSM 14480
   score: 3.0
+  rank: 4
+  candidate_pool: 5
 - taxon_id: NCBITaxon:865937
   source: PREGO
   taxon_label: Gillisia limnaea DSM 15749
   score: 3.0
+  rank: 5
+  candidate_pool: 5
 curation_history:
-- timestamp: '2026-08-13T06:49:23Z'
+- timestamp: '2026-08-13T18:41:16Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'
