@@ -126,9 +126,15 @@ def build(out_dir: Path) -> None:
     (out_dir / "habitats").mkdir(exist_ok=True)
     (out_dir / "category").mkdir(exist_ok=True)
 
+    # First pass: corpus-wide counts. Record pages are rendered in the second
+    # pass and previously read `stats` before it was filled, so their footer
+    # printed " of 3192 records are machine-generated" with the count missing —
+    # on exactly the pages where a reader is looking at one such record (#31).
     stats = {
         "total": len(records),
         "extracted_at": extracted_at(),
+        "reviewed": sum(1 for _, d in records if d.get("mapping_status") == "REVIEWED"),
+        "seeded": sum(1 for _, d in records if d.get("mapping_status") == "SEEDED"),
     }
 
     for path, doc in records:
@@ -224,12 +230,11 @@ def build(out_dir: Path) -> None:
                 v for k, v in grounding_counts.items()
                 if k in ("EXACT", "CLOSE", "NARROW", "BROAD")
             ),
-            "reviewed": status_counts.get("REVIEWED", 0),
-            "seeded": status_counts.get("SEEDED", 0),
             "multi_source": multi_source,
             "term_requests": len(term_requests),
         }
     )
+    assert stats["seeded"] == status_counts.get("SEEDED", 0)
 
     categories = []
     for name, items in sorted(by_category.items(), key=lambda kv: -len(kv[1])):
@@ -279,6 +284,11 @@ def build(out_dir: Path) -> None:
         encoding="utf-8",
     )
     shutil.copyfile(TEMPLATES_DIR / "style.css", out_dir / "style.css")
+    # Without this, Pages runs Jekyll over the site and silently drops any path
+    # beginning with an underscore — a 404 rather than a visible error. Slugs
+    # come from habitat labels, so that is not guaranteed to stay impossible
+    # (#32). Written by the renderer so it is reproducible like everything else.
+    (out_dir / ".nojekyll").write_text("", encoding="utf-8")
 
     print(f"rendered {len(records)} habitat pages, {len(categories)} categories, "
           f"{len(term_requests)} term requests -> {out_dir}")
