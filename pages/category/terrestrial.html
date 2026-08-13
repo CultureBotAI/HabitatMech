@@ -22,7 +22,9 @@
 <p class="lede">356 habitat records. Soils, sediments, subsurface, rock and other land environments.</p>
 <input class="searchbox" id="q" type="search" placeholder="Filter these 356 records…" aria-label="Filter records">
 <table id="tbl">
-  <tr><th>Habitat</th><th>Identifier</th><th>Grounding</th><th class="num">Assertions</th><th>Sources</th></tr>
+  <caption>TERRESTRIAL habitats</caption>
+  <thead><tr><th scope="col">Habitat</th><th scope="col">Identifier</th><th scope="col">Grounding</th><th scope="col" class="num">Assertions</th><th scope="col">Sources</th></tr></thead>
+  <tbody>
   <tr>
     <td><a href="../habitats/soil-envo-00001998.html">soil</a></td>
     <td><code class="curie">ENVO:00001998</code></td>
@@ -2515,12 +2517,13 @@
     <td class="num">0</td>
     <td class="meta">GOLD</td>
   </tr>
+  </tbody>
 </table>
 <script>
 document.getElementById('q').addEventListener('input', function (e) {
   var q = e.target.value.toLowerCase();
-  var rows = document.querySelectorAll('#tbl tr');
-  for (var i = 1; i < rows.length; i++) {
+  var rows = document.querySelectorAll('#tbl tbody tr');
+  for (var i = 0; i < rows.length; i++) {
     rows[i].style.display = rows[i].textContent.toLowerCase().indexOf(q) === -1 ? 'none' : '';
   }
 });

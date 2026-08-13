@@ -22,7 +22,9 @@
 <p class="lede">16 habitat records. Clinical and diagnostic sample contexts.</p>
 <input class="searchbox" id="q" type="search" placeholder="Filter these 16 records…" aria-label="Filter records">
 <table id="tbl">
-  <tr><th>Habitat</th><th>Identifier</th><th>Grounding</th><th class="num">Assertions</th><th>Sources</th></tr>
+  <caption>CLINICAL habitats</caption>
+  <thead><tr><th scope="col">Habitat</th><th scope="col">Identifier</th><th scope="col">Grounding</th><th scope="col" class="num">Assertions</th><th scope="col">Sources</th></tr></thead>
+  <tbody>
   <tr>
     <td><a href="../habitats/fluids-ncit-c13452.html">Fluids</a></td>
     <td><code class="curie">NCIT:C13452</code></td>
@@ -135,12 +137,13 @@
     <td class="num">3</td>
     <td class="meta">BACDIVE</td>
   </tr>
+  </tbody>
 </table>
 <script>
 document.getElementById('q').addEventListener('input', function (e) {
   var q = e.target.value.toLowerCase();
-  var rows = document.querySelectorAll('#tbl tr');
-  for (var i = 1; i < rows.length; i++) {
+  var rows = document.querySelectorAll('#tbl tbody tr');
+  for (var i = 0; i < rows.length; i++) {
     rows[i].style.display = rows[i].textContent.toLowerCase().indexOf(q) === -1 ? 'none' : '';
   }
 });

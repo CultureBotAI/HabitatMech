@@ -40,6 +40,12 @@ MANIFEST_PATH = REPO_ROOT / "data" / "raw" / "MANIFEST.yaml"
 # on the page is fine, but the cap is worth naming where a reader sees it.
 TAXA_SHOWN = 25
 
+# Where the site is served from; the sitemap needs absolute URLs.
+SITE_BASE = "https://culturebotai.github.io/HabitatMech/pages/"
+
+# Where the site is served from, for absolute URLs in the sitemap.
+SITE_BASE = "https://culturebotai.github.io/HabitatMech/pages/"
+
 CATEGORY_BLURB = {
     "TERRESTRIAL": "Soils, sediments, subsurface, rock and other land environments.",
     "AQUATIC": "Marine, freshwater and other water-column or aquatic-sediment environments.",
@@ -289,6 +295,25 @@ def build(out_dir: Path) -> None:
     # come from habitat labels, so that is not guaranteed to stay impossible
     # (#32). Written by the renderer so it is reproducible like everything else.
     (out_dir / ".nojekyll").write_text("", encoding="utf-8")
+
+    # A sitemap matters more here than for a typical project site: the point of
+    # publishing is that ontology curators find the term requests and the record
+    # pages, and every record page is otherwise reachable only by following a
+    # category link — three clicks from the root, with no machine-readable index
+    # of the deepest and most numerous content (#36).
+    listed = ["index.html", "browse.html", "term-requests.html"]
+    listed += [f"category/{c['slug']}.html" for c in categories]
+    listed += [f"habitats/{slug}.html" for slug in sorted(slug_of.values())]
+    urls = "\n".join(f"  <url><loc>{SITE_BASE}{page}</loc></url>" for page in listed)
+    (out_dir / "sitemap.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        f"{urls}\n</urlset>\n",
+        encoding="utf-8",
+    )
+    (out_dir / "robots.txt").write_text(
+        f"User-agent: *\nAllow: /\nSitemap: {SITE_BASE}sitemap.xml\n", encoding="utf-8"
+    )
 
     print(f"rendered {len(records)} habitat pages, {len(categories)} categories, "
           f"{len(term_requests)} term requests -> {out_dir}")

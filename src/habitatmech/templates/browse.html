@@ -4,7 +4,8 @@
 <h1>Browse</h1>
 <p class="lede">{{ stats.total }} habitat records across {{ categories|length }} categories.</p>
 <table>
-  <tr><th>Category</th><th class="num">Records</th><th class="num">Grounded</th><th>What it holds</th></tr>
+  <caption>Habitat categories</caption>
+  <thead><tr><th scope="col">Category</th><th scope="col" class="num">Records</th><th scope="col" class="num">Grounded</th><th scope="col">What it holds</th></tr></thead>
   {% for c in categories %}
   <tr>
     <td><a href="category/{{ c.slug }}.html">{{ c.label }}</a></td>
