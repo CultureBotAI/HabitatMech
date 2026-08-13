@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block wrapclass %} wide{% endblock %}
+{% block title %}{{ category }} — HabitatMech{% endblock %}
+{% block content %}
+<h1>{{ category }}</h1>
+<p class="lede">{{ records|length }} habitat records. {{ description }}</p>
+<input class="searchbox" id="q" type="search" placeholder="Filter these {{ records|length }} records…" aria-label="Filter records">
+<table id="tbl">
+  <tr><th>Habitat</th><th>Identifier</th><th>Grounding</th><th class="num">Assertions</th><th>Sources</th></tr>
+  {% for r in records %}
+  <tr>
+    <td><a href="../habitats/{{ r.slug }}.html">{{ r.label }}</a></td>
+    <td><code class="curie">{{ r.identifier }}</code></td>
+    <td><span class="pill{{ ' warn' if r.grounding in ('UNGROUNDED','NOT_APPLICABLE') else '' }}">{{ r.grounding }}</span></td>
+    <td class="num">{{ r.assertions }}</td>
+    <td class="meta">{{ r.sources|join(', ') }}</td>
+  </tr>
+  {% endfor %}
+</table>
+<script>
+document.getElementById('q').addEventListener('input', function (e) {
+  var q = e.target.value.toLowerCase();
+  var rows = document.querySelectorAll('#tbl tr');
+  for (var i = 1; i < rows.length; i++) {
+    rows[i].style.display = rows[i].textContent.toLowerCase().indexOf(q) === -1 ? 'none' : '';
+  }
+});
+</script>
+{% endblock %}

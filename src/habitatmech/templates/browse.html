@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Browse — HabitatMech{% endblock %}
+{% block content %}
+<h1>Browse</h1>
+<p class="lede">{{ stats.total }} habitat records across {{ categories|length }} categories.</p>
+<table>
+  <tr><th>Category</th><th class="num">Records</th><th class="num">Grounded</th><th>What it holds</th></tr>
+  {% for c in categories %}
+  <tr>
+    <td><a href="category/{{ c.slug }}.html">{{ c.label }}</a></td>
+    <td class="num">{{ c.count }}</td>
+    <td class="num">{{ c.grounded }}</td>
+    <td class="meta">{{ c.description }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

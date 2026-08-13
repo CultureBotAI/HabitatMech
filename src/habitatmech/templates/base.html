@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}HabitatMech{% endblock %}</title>
+<meta name="description" content="{% block description %}Microbial habitats harmonized from GOLD, BacDive and PREGO, grounded in ENVO/UBERON/FOODON/BTO/PO.{% endblock %}">
+<link rel="stylesheet" href="{{ root }}style.css">
+</head>
+<body>
+<div class="wrap{% block wrapclass %}{% endblock %}">
+<header class="site">
+  <a class="brand" href="{{ root }}index.html">HabitatMech</a>
+  <nav>
+    <a href="{{ root }}index.html">Overview</a>
+    <a href="{{ root }}browse.html">Browse</a>
+    <a href="{{ root }}term-requests.html">ENVO term requests</a>
+    <a href="https://github.com/CultureBotAI/HabitatMech">Source</a>
+  </nav>
+</header>
+{% block content %}{% endblock %}
+<footer class="site">
+  <p>
+    {{ stats.total }} habitat records generated from
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a>
+    on {{ stats.extracted_at }}. CC0-1.0.
+  </p>
+  <p>
+    <strong>{{ stats.seeded }} of {{ stats.total }} records are machine-generated and
+    unreviewed.</strong> Grounding is by lexical match against ontology labels
+    except where a curation decision says otherwise; treat any record marked
+    <span class="pill plain">SEEDED</span> as a starting point, not a citable claim.
+  </p>
+</footer>
+</div>
+</body>
+</html>

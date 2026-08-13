@@ -70,6 +70,12 @@ worklist *args:
 verify-corpus *args:
     uv run python scripts/verify_corpus.py {{args}}
 
+# Render the browsable site under pages/ from the corpus. Committed and served
+# from the branch root, so it can go stale exactly as records can; `--check`
+# fails when it has.
+render *args:
+    uv run python scripts/render_pages.py {{args}}
+
 # Corpus report: records per category, grounding-status breakdown, source
 # coverage, and the multi-source corroboration counts.
 report *args:
@@ -88,4 +94,8 @@ lint-fix:
     uv run ruff check --fix .
 
 # Everything CI runs, in the order that fails cheapest-first
-qc: lint test validate-all verify-corpus report
+qc: lint test validate-all verify-corpus render-check report
+
+# Fail if pages/ is out of step with the corpus
+render-check:
+    uv run python scripts/render_pages.py --check

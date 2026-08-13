@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block wrapclass %} wide{% endblock %}
+{% block title %}ENVO term requests — HabitatMech{% endblock %}
+{% block content %}
+<h1>ENVO term requests</h1>
+<p class="lede">
+  Habitats that real data is attached to, that a curator has examined, and that
+  no term in ENVO, UBERON, FOODON, BTO or PO fits. These are what HabitatMech is
+  asking the ontology community for.
+</p>
+<div class="note">
+  <p>Each was individually examined against its source path and candidate terms —
+  these are not the bulk-swept remainder. The largest is the single biggest
+  ungrounded concept in the corpus.</p>
+</div>
+<table>
+  <tr><th>Habitat</th><th class="num">Upstream assertions</th><th>Sources</th><th>Why no term fits</th></tr>
+  {% for r in requests %}
+  <tr>
+    <td><a href="habitats/{{ r.slug }}.html">{{ r.label }}</a></td>
+    <td class="num">{{ r.assertions }}</td>
+    <td class="meta">{{ r.sources|join(', ') }}</td>
+    <td class="meta">{{ r.note }}</td>
+  </tr>
+  {% endfor %}
+</table>
+<p class="meta">{{ swept }} further ungrounded records were decided by a
+mechanical sweep rather than examined individually, and are not listed here —
+they are candidates for this list, not members of it.</p>
+{% endblock %}

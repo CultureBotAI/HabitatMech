@@ -21,7 +21,8 @@ just validate-all      # closed-mode schema validation of every record
 just verify-corpus     # check data/habitats/ is what data/raw/ produces
 just test              # unit + corpus-integrity tests
 just lint              # ruff
-just qc                # lint + test + validate-all + verify-corpus + report
+just render            # regenerate the browsable site under pages/
+just qc                # lint + test + validate-all + verify-corpus + render-check + report
 ```
 
 Re-seeding (only when upstream data changes):
@@ -47,6 +48,11 @@ enforces this over the whole corpus. It is what keeps a one-field bulk edit to a
 one-field diff instead of 3,299 reflowed files. If you hand-edit a record into a
 shape `safe_dump` would not emit, reformat it through the helper — do not
 loosen the test.
+
+**`pages/` is generated too.** It is committed and served from the branch root,
+so it goes stale exactly as records can. `just render` regenerates it and
+`just render-check` (in CI) fails when it has drifted. Edit
+`src/habitatmech/templates/`, never `pages/`.
 
 **Never hand-edit a record.** `data/habitats/` is generated from `data/raw/`;
 `just verify-corpus` compares them byte-for-byte and CI runs it. A change

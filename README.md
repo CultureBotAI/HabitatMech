@@ -13,6 +13,11 @@ HabitatMech is the habitat counterpart of
 [dismech](https://github.com/monarch-initiative/dismech): one YAML per entity,
 ontology-grounded, evidence-backed, schema-validated, curated incrementally.
 
+**[Browse the corpus online →](https://culturebotai.github.io/HabitatMech/)**
+— every record, browsable by category, plus the
+[ENVO term requests](https://culturebotai.github.io/HabitatMech/term-requests.html)
+this project is asking the ontology community for.
+
 ## The problem it solves
 
 The same habitat has three different names depending on who is describing it:
@@ -64,6 +69,7 @@ just report                         # corpus stats: grounding, categories, backl
 just validate-all                   # closed-mode schema validation of every record
 just verify-corpus                  # check data/habitats/ is what data/raw/ produces
 just test                           # unit + corpus-integrity tests
+just render                         # regenerate the site under pages/
 ```
 
 Re-seeding is only needed when the upstream data changes:

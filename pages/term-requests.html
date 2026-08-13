@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ENVO term requests — HabitatMech</title>
+<meta name="description" content="Microbial habitats harmonized from GOLD, BacDive and PREGO, grounded in ENVO/UBERON/FOODON/BTO/PO.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap wide">
+<header class="site">
+  <a class="brand" href="index.html">HabitatMech</a>
+  <nav>
+    <a href="index.html">Overview</a>
+    <a href="browse.html">Browse</a>
+    <a href="term-requests.html">ENVO term requests</a>
+    <a href="https://github.com/CultureBotAI/HabitatMech">Source</a>
+  </nav>
+</header>
+<h1>ENVO term requests</h1>
+<p class="lede">
+  Habitats that real data is attached to, that a curator has examined, and that
+  no term in ENVO, UBERON, FOODON, BTO or PO fits. These are what HabitatMech is
+  asking the ontology community for.
+</p>
+<div class="note">
+  <p>Each was individually examined against its source path and candidate terms —
+  these are not the bulk-swept remainder. The largest is the single biggest
+  ungrounded concept in the corpus.</p>
+</div>
+<table>
+  <tr><th>Habitat</th><th class="num">Upstream assertions</th><th>Sources</th><th>Why no term fits</th></tr>
+  <tr>
+    <td><a href="habitats/mammals-human-habitatmech-gold-cd0b0940e5.html">Mammals: Human</a></td>
+    <td class="num">40432</td>
+    <td class="meta">GOLD</td>
+    <td class="meta">Humans as host, the single largest ungrounded concept at 40432 GOLD organisms. No human-associated environment term exists in ENVO. Deliberately not grounded to animal-associated environment: every host clade would then </td>
+  </tr>
+  <tr>
+    <td><a href="habitats/host-habitatmech-bacdive-baf38460e6.html">Host</a></td>
+    <td class="num">25581</td>
+    <td class="meta">BACDIVE</td>
+    <td class="meta">BacDive&#39;s top-level &#34;Host&#34; bin, covering every host-associated isolate. A real habitat class, but ENVO has only plant-associated and animal-associated environment with no shared parent. ENVO term request for a generic or</td>
+  </tr>
+  <tr>
+    <td><a href="habitats/human-habitatmech-bacdive-c9b246fcbb.html">Human</a></td>
+    <td class="num">11697</td>
+    <td class="meta">BACDIVE</td>
+    <td class="meta">Human as host. No human-associated environment term exists in ENVO; parented to animal-associated environment. Deliberately not grounded there, because every host clade would then merge onto one record and the host disti</td>
+  </tr>
+  <tr>
+    <td><a href="habitats/engineered-habitatmech-bacdive-7d4708950e.html">Engineered</a></td>
+    <td class="num">7174</td>
+    <td class="meta">BACDIVE</td>
+    <td class="meta">BacDive&#39;s top-level &#34;Engineered&#34; bin. A real habitat class (built and managed environments) but ENVO has no single term for the whole class, only specific built environments. ENVO term request.</td>
+  </tr>
+  <tr>
+    <td><a href="habitats/mammals-habitatmech-gold-e889967f4f.html">Mammals</a></td>
+    <td class="num">6104</td>
+    <td class="meta">GOLD</td>
+    <td class="meta">Mammals as host. Parented to animal-associated environment; not grounded there because every host clade would merge onto one record. ENVO term request.</td>
+  </tr>
+  <tr>
+    <td><a href="habitats/host-associated-habitatmech-gold-d3b891e82e.html">Host-associated</a></td>
+    <td class="num">3307</td>
+    <td class="meta">GOLD</td>
+    <td class="meta">GOLD&#39;s Host-associated root. A real habitat class but ENVO has only plant-associated and animal-associated environment with no shared parent. ENVO term request for a generic organism-associated environment.</td>
+  </tr>
+  <tr>
+    <td><a href="habitats/bacteria-habitatmech-gold-029baaef9e.html">Bacteria</a></td>
+    <td class="num">3017</td>
+    <td class="meta">GOLD</td>
+    <td class="meta">GOLD&#39;s Host-associated &gt; Microbial &gt; Bacteria: bacteria acting as host for another microbe. No environment term exists for a microbial host; ENVO&#39;s organism-associated terms cover plants and animals only. ENVO term reque</td>
+  </tr>
+  <tr>
+    <td><a href="habitats/birds-habitatmech-gold-47e603cf4f.html">Birds</a></td>
+    <td class="num">1848</td>
+    <td class="meta">GOLD</td>
+    <td class="meta">Birds as host. Parented to animal-associated environment; not grounded there because every host clade would merge onto one record. ENVO term request.</td>
+  </tr>
+  <tr>
+    <td><a href="habitats/arthropoda-insects-habitatmech-gold-dba2a83b95.html">Arthropoda: Insects</a></td>
+    <td class="num">1833</td>
+    <td class="meta">GOLD</td>
+    <td class="meta">Insects as host. Parented to animal-associated environment; not grounded there because every host clade would merge onto one record. ENVO term request.</td>
+  </tr>
+  <tr>
+    <td><a href="habitats/industrial-habitatmech-bacdive-a60a058479.html">Industrial</a></td>
+    <td class="num">1758</td>
+    <td class="meta">BACDIVE</td>
+    <td class="meta">Generic &#34;Industrial&#34; bin spanning process water, buildings and waste. ENVO has specific industrial environments but nothing covering the bin; grounding to one would misattribute the rest.</td>
+  </tr>
+  <tr>
+    <td><a href="habitats/fish-habitatmech-gold-3d529a667e.html">Fish</a></td>
+    <td class="num">1350</td>
+    <td class="meta">GOLD</td>
+    <td class="meta">Fish as host. Parented to animal-associated environment; not grounded there because every host clade would merge onto one record. ENVO term request.</td>
+  </tr>
+  <tr>
+    <td><a href="habitats/rock-core-sediment-habitatmech-gold-3b04872853.html">Rock core/Sediment</a></td>
+    <td class="num">1245</td>
+    <td class="meta">GOLD</td>
+    <td class="meta">Deep subsurface rock core and sediment sampled together. GOLD conflates two materials in one node, so no single term is honest; parented to sediment as the nearer of the two.</td>
+  </tr>
+  <tr>
+    <td><a href="habitats/food-production-habitatmech-bacdive-b415adf879.html">Food-production</a></td>
+    <td class="num">1197</td>
+    <td class="meta">BACDIVE</td>
+    <td class="meta">Food-production as a setting rather than a product. ENVO:03501297 meat processing plant and similar are specific facilities; no general food-production environment term exists. ENVO term request.</td>
+  </tr>
+  <tr>
+    <td><a href="habitats/waste-habitatmech-bacdive-36df85e4a4.html">Waste</a></td>
+    <td class="num">1140</td>
+    <td class="meta">BACDIVE</td>
+    <td class="meta">Generic &#34;Waste&#34; spanning solid, liquid and industrial waste. ENVO has specific waste materials (waste water, industrial waste material) but no parent covering the whole bin; grounding to any one would misattribute the ot</td>
+  </tr>
+  <tr>
+    <td><a href="habitats/tree-habitatmech-bacdive-3192a0f47e.html">Tree</a></td>
+    <td class="num">872</td>
+    <td class="meta">BACDIVE</td>
+    <td class="meta">A tree as host. No tree-associated environment term exists; BTO:0005516 wood is the material, not the living host. Parented to plant-associated environment as the nearest broader term. ENVO term request.</td>
+  </tr>
+  <tr>
+    <td><a href="habitats/invertebrates-habitatmech-gold-4d792ac724.html">Invertebrates</a></td>
+    <td class="num">621</td>
+    <td class="meta">GOLD</td>
+    <td class="meta">Invertebrates as host. Parented to animal-associated environment; not grounded there because every host clade would merge onto one record. ENVO term request.</td>
+  </tr>
+  <tr>
+    <td><a href="habitats/arthropoda-crustaceans-habitatmech-gold-2959225799.html">Arthropoda: Crustaceans</a></td>
+    <td class="num">598</td>
+    <td class="meta">GOLD</td>
+    <td class="meta">Crustaceans as host. ENVO:01001176 environment associated with an aquatic invertebrate is close but excludes terrestrial crustaceans, so it is not a safe identity either. ENVO term request.</td>
+  </tr>
+  <tr>
+    <td><a href="habitats/arthropoda-myriapoda-habitatmech-gold-2333d6225a.html">Arthropoda: Myriapoda</a></td>
+    <td class="num">569</td>
+    <td class="meta">GOLD</td>
+    <td class="meta">Myriapods as host. Parented to animal-associated environment; not grounded there because every host clade would merge onto one record. ENVO term request.</td>
+  </tr>
+  <tr>
+    <td><a href="habitats/engineered-product-habitatmech-bacdive-9c253e43c0.html">Engineered-product</a></td>
+    <td class="num">526</td>
+    <td class="meta">BACDIVE</td>
+    <td class="meta">Engineered-product spans manufactured goods of every kind. ENVO:00003074 manufactured product is a material class rather than an environment; no term fits the concept as a habitat. ENVO term request.</td>
+  </tr>
+  <tr>
+    <td><a href="habitats/microbial-habitatmech-gold-184623c963.html">Microbial</a></td>
+    <td class="num">465</td>
+    <td class="meta">GOLD</td>
+    <td class="meta">GOLD&#39;s Host-associated &gt; Microbial: a microorganism as host. Same gap as the Bacteria child; ENVO has no microbial-host environment term.</td>
+  </tr>
+  <tr>
+    <td><a href="habitats/geologic-habitatmech-bacdive-bf10ea3ae4.html">Geologic</a></td>
+    <td class="num">381</td>
+    <td class="meta">BACDIVE</td>
+    <td class="meta">Generic &#34;Geologic&#34; bin spanning rock, sediment and subsurface. ENVO covers each specifically; nothing covers the bin without misattributing the rest.</td>
+  </tr>
+  <tr>
+    <td><a href="habitats/sponge-habitatmech-gold-affd2445ea.html">Sponge</a></td>
+    <td class="num">323</td>
+    <td class="meta">GOLD</td>
+    <td class="meta">Sponges as host. ENVO:01000161 marine sponge reef is the reef environment, not the sponge as a host, so it is not a substitute. Parented to animal-associated environment. ENVO term request.</td>
+  </tr>
+  <tr>
+    <td><a href="habitats/nematoda-habitatmech-gold-45a8229be1.html">Nematoda</a></td>
+    <td class="num">300</td>
+    <td class="meta">GOLD</td>
+    <td class="meta">Nematodes as host. Parented to animal-associated environment. ENVO term request.</td>
+  </tr>
+  <tr>
+    <td><a href="habitats/ascidians-habitatmech-gold-34c28836da.html">Ascidians</a></td>
+    <td class="num">79</td>
+    <td class="meta">GOLD</td>
+    <td class="meta">Ascidians as host. BTO:0000090 is a biological-source term rather than a habitat; treated as the other host clades are, parented to animal-associated environment. ENVO term request.</td>
+  </tr>
+  <tr>
+    <td><a href="habitats/bivalves-habitatmech-gold-59e8d1205d.html">Bivalves</a></td>
+    <td class="num">59</td>
+    <td class="meta">GOLD</td>
+    <td class="meta">Bivalves as host. FOODON:03412113 bivalve is a food product class, not a host organism, so it is the wrong kind of term entirely. Parented to animal-associated environment like the other host clades. ENVO term request.</td>
+  </tr>
+  <tr>
+    <td><a href="habitats/gall-habitatmech-bacdive-f4971616a5.html">Gall</a></td>
+    <td class="num">16</td>
+    <td class="meta">BACDIVE</td>
+    <td class="meta">GOLD&#39;s plant context means a plant gall; the proposal offered bile material, which is a different thing entirely. No plant-gall term in the vendored slice. ENVO term request. Path: Gall</td>
+  </tr>
+  <tr>
+    <td><a href="habitats/gingival-crevice-sulcus-habitatmech-gold-e97d0cb4b1.html">Gingival crevice/sulcus</a></td>
+    <td class="num">15</td>
+    <td class="meta">GOLD</td>
+    <td class="meta">The proposal offered UBERON:0000093 sulcus, the generic anatomical groove. The gingival sulcus is specific and has no term in the slice. Path: Host-associated &gt; Mammals: Human &gt; Digestive system &gt; Oral cavity &gt; Gi</td>
+  </tr>
+  <tr>
+    <td><a href="habitats/galls-habitatmech-gold-fa99e76de1.html">Galls</a></td>
+    <td class="num">4</td>
+    <td class="meta">GOLD</td>
+    <td class="meta">Plant galls. The proposal offered bile material via a synonym collision; rejected. ENVO term request. Path: Host-associated &gt; Plants &gt; Roots &gt; Galls</td>
+  </tr>
+  <tr>
+    <td><a href="habitats/oil-gas-pipeline-habitatmech-gold-74bb711f82.html">Oil/Gas pipeline</a></td>
+    <td class="num">1</td>
+    <td class="meta">GOLD</td>
+    <td class="meta">The habitat is the pipeline interior; the proposal offered ENVO:00002985 oil, the substance. No pipeline term in the slice. ENVO term request. Path: Engineered &gt; Built environment &gt; Pipeline &gt; Oil/Gas pipeline</td>
+  </tr>
+  <tr>
+    <td><a href="habitats/rock-core-sediment-habitatmech-gold-20fb5b0162.html">Rock core/Sediment</a></td>
+    <td class="num">1</td>
+    <td class="meta">GOLD</td>
+    <td class="meta">GOLD conflates rock core and sediment in one node, so neither term is honest as the identity. Pulled out of the class-level sweep, whose note wrongly claimed no term matched. Label: &#39;Rock core/Sediment&#39;.</td>
+  </tr>
+  <tr>
+    <td><a href="habitats/grains-grain-products-habitatmech-gold-c25f588dad.html">Grains/Grain products</a></td>
+    <td class="num">0</td>
+    <td class="meta">GOLD</td>
+    <td class="meta">The proposal offered ENVO:01003002 particle via the synonym grain, which is a different sense of the word. No cereal-grain habitat term in the slice. Term request. Path: Engineered &gt; Food production &gt; Grains/Grain produc</td>
+  </tr>
+  <tr>
+    <td><a href="habitats/pleural-space-cavity-habitatmech-gold-9b51772e57.html">Pleural space/cavity</a></td>
+    <td class="num">0</td>
+    <td class="meta">GOLD</td>
+    <td class="meta">UBERON:0002553 anatomical cavity is the generic class; the pleural space specifically has no term in the slice. Pulled out of the class-level sweep, whose note wrongly claimed no term matched. Label: &#39;Pleural space/cavit</td>
+  </tr>
+</table>
+<p class="meta">940 further ungrounded records were decided by a
+mechanical sweep rather than examined individually, and are not listed here —
+they are candidates for this list, not members of it.</p>
+<footer class="site">
+  <p>
+    3192 habitat records generated from
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a>
+    on 2026-08-13. CC0-1.0.
+  </p>
+  <p>
+    <strong>2929 of 3192 records are machine-generated and
+    unreviewed.</strong> Grounding is by lexical match against ontology labels
+    except where a curation decision says otherwise; treat any record marked
+    <span class="pill plain">SEEDED</span> as a starting point, not a citable claim.
+  </p>
+</footer>
+</div>
+</body>
+</html>
