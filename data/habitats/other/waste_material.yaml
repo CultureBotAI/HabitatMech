@@ -7,15 +7,6 @@ habitat_category: OTHER
 grounding_status: EXACT
 mapping_status: SEEDED
 synonyms:
-- synonym_text: Domestic-waste
-  synonym_type: EXACT_SYNONYM
-  source: BacDive
-- synonym_text: Solid-animal-waste
-  synonym_type: EXACT_SYNONYM
-  source: BacDive
-- synonym_text: Solid-plant-waste
-  synonym_type: EXACT_SYNONYM
-  source: BacDive
 - synonym_text: waste
   synonym_type: RELATED_SYNONYM
   source: PREGO
@@ -40,24 +31,6 @@ synonyms:
 parent_habitats:
 - ENVO:00010483
 source_attestations:
-- source: BACDIVE
-  source_id: bacdive.isolation_source:domestic-waste
-  source_label: Domestic-waste
-  mapping_predicate: skos:closeMatch
-  assertion_count: 14
-  assertion_unit: STRAIN
-- source: BACDIVE
-  source_id: bacdive.isolation_source:solid-animal-waste
-  source_label: Solid-animal-waste
-  mapping_predicate: skos:closeMatch
-  assertion_count: 11
-  assertion_unit: STRAIN
-- source: BACDIVE
-  source_id: bacdive.isolation_source:solid-plant-waste
-  source_label: Solid-plant-waste
-  mapping_predicate: skos:closeMatch
-  assertion_count: 17
-  assertion_unit: STRAIN
 - source: PREGO
   source_id: ENVO:00002264
   source_label: waste material
@@ -67,304 +40,105 @@ source_attestations:
   evidence_channels: annotated_genomes_isolates
 characteristic_taxa:
 - taxon_id: NCBITaxon:1121349
-  source: BACDIVE
+  source: PREGO
   taxon_label: Comamonas composti DSM 21721
-  association_count: 1
-  rank: 1
-  candidate_pool: 14
-  corroborated_by:
-  - PREGO
-- taxon_id: NCBITaxon:1122958
-  source: BACDIVE
-  taxon_label: Phenylobacterium composti DSM 19425
-  association_count: 1
-  rank: 4
-  candidate_pool: 16
-  corroborated_by:
-  - PREGO
-- taxon_id: NCBITaxon:227865
-  source: BACDIVE
-  taxon_label: Cerasibacillus quisquiliarum
-  association_count: 1
-  rank: 4
-  candidate_pool: 14
-  corroborated_by:
-  - PREGO
-- taxon_id: NCBITaxon:515415
-  source: BACDIVE
-  taxon_label: Microbacterium invictum
-  association_count: 1
-  rank: 7
-  candidate_pool: 14
-  corroborated_by:
-  - PREGO
-- taxon_id: NCBITaxon:529005
-  source: BACDIVE
-  taxon_label: Sphingobium vermicomposti
-  association_count: 1
+  score: 4.0
   rank: 8
-  candidate_pool: 14
+  candidate_pool: 52
   corroborated_by:
-  - PREGO
-- taxon_id: NCBITaxon:649349
-  source: BACDIVE
-  taxon_label: Leadbetterella byssophila DSM 17132
-  association_count: 1
-  rank: 13
-  candidate_pool: 16
+  - BACDIVE
+- taxon_id: NCBITaxon:1122958
+  source: PREGO
+  taxon_label: Phenylobacterium composti DSM 19425
+  score: 4.0
+  rank: 15
+  candidate_pool: 52
   corroborated_by:
-  - PREGO
+  - BACDIVE
 - taxon_id: NCBITaxon:1045012
   source: PREGO
   taxon_label: Acetivibrio clariflavus 4-2a
   score: 4.0
   rank: 1
   candidate_pool: 52
-- taxon_id: NCBITaxon:2021
-  source: BACDIVE
-  taxon_label: Thermobifida fusca
-  association_count: 2
-  rank: 1
-  candidate_pool: 16
 - taxon_id: NCBITaxon:1048394
   source: PREGO
   taxon_label: Compostimonas suwonensis
   score: 4.0
   rank: 2
   candidate_pool: 52
-- taxon_id: NCBITaxon:1121117
-  source: BACDIVE
-  taxon_label: Allobrachymonas denitrificans DSM 15123
-  association_count: 1
-  rank: 2
-  candidate_pool: 16
-- taxon_id: NCBITaxon:1458
-  source: BACDIVE
-  taxon_label: Metabacillus fastidiosus
-  association_count: 2
-  rank: 2
-  candidate_pool: 8
-- taxon_id: NCBITaxon:1838
-  source: BACDIVE
-  taxon_label: Saccharopolyspora hordei
-  association_count: 1
-  rank: 2
-  candidate_pool: 14
 - taxon_id: NCBITaxon:1089552
   source: PREGO
   taxon_label: Rhodovibrio salinarum DSM 9154
   score: 4.0
   rank: 3
   candidate_pool: 52
-- taxon_id: NCBITaxon:1121290
-  source: BACDIVE
-  taxon_label: Clostridium acetireducens DSM 10703
-  association_count: 1
-  rank: 3
-  candidate_pool: 16
-- taxon_id: NCBITaxon:1257027
-  source: BACDIVE
-  association_count: 1
-  rank: 3
-  candidate_pool: 8
 - taxon_id: NCBITaxon:1111737
   source: PREGO
   taxon_label: Thermocrispum municipale DSM 44069
   score: 4.0
   rank: 4
   candidate_pool: 52
-- taxon_id: NCBITaxon:1506
-  source: BACDIVE
-  taxon_label: Clostridium sp.
-  association_count: 1
-  rank: 4
-  candidate_pool: 8
 - taxon_id: NCBITaxon:1111738
   source: PREGO
   taxon_label: Thermocrispum agreste DSM 44070
   score: 4.0
   rank: 5
   candidate_pool: 52
-- taxon_id: NCBITaxon:1703
-  source: BACDIVE
-  taxon_label: Brevibacterium linens
-  association_count: 1
-  rank: 5
-  candidate_pool: 8
-- taxon_id: NCBITaxon:1931
-  source: BACDIVE
-  taxon_label: Streptomyces sp.
-  association_count: 1
-  rank: 5
-  candidate_pool: 16
 - taxon_id: NCBITaxon:1121013
   source: PREGO
   taxon_label: Arenimonas composti TR7-09 = DSM 18010
   score: 4.0
   rank: 6
   candidate_pool: 52
-- taxon_id: NCBITaxon:208304
-  source: BACDIVE
-  taxon_label: Thermoanaerobacterium bryantii
-  association_count: 1
-  rank: 6
-  candidate_pool: 16
-- taxon_id: NCBITaxon:272161
-  source: BACDIVE
-  taxon_label: Arthrobacter stackebrandtii
-  association_count: 1
-  rank: 6
-  candidate_pool: 8
-- taxon_id: NCBITaxon:398257
-  source: BACDIVE
-  taxon_label: Luteimonas composti
-  association_count: 1
-  rank: 6
-  candidate_pool: 14
 - taxon_id: NCBITaxon:1121025
   source: PREGO
   taxon_label: Atopostipes suicloacalis DSM 15692
   score: 4.0
   rank: 7
   candidate_pool: 52
-- taxon_id: NCBITaxon:314722
-  source: BACDIVE
-  taxon_label: Pseudoxanthomonas suwonensis
-  association_count: 1
-  rank: 7
-  candidate_pool: 16
-- taxon_id: NCBITaxon:3381696
-  source: BACDIVE
-  taxon_label: Methanothermobacter sp. DSM 3267
-  association_count: 1
-  rank: 8
-  candidate_pool: 16
-- taxon_id: NCBITaxon:433296
-  source: BACDIVE
-  taxon_label: Aminipila butyrica
-  association_count: 1
-  rank: 8
-  candidate_pool: 8
 - taxon_id: NCBITaxon:1121385
   source: PREGO
   taxon_label: Demetria terragena DSM 11295
   score: 4.0
   rank: 9
   candidate_pool: 52
-- taxon_id: NCBITaxon:35786
-  source: BACDIVE
-  taxon_label: Coprothermobacter proteolyticus
-  association_count: 1
-  rank: 9
-  candidate_pool: 16
-- taxon_id: NCBITaxon:544480
-  source: BACDIVE
-  taxon_label: Shinella fusca
-  association_count: 1
-  rank: 9
-  candidate_pool: 14
 - taxon_id: NCBITaxon:1121395
   source: PREGO
   taxon_label: Desulfitobacterium chlororespirans DSM 11544
   score: 4.0
   rank: 10
   candidate_pool: 52
-- taxon_id: NCBITaxon:363260
-  source: BACDIVE
-  taxon_label: Sphingobacterium composti
-  association_count: 1
-  rank: 10
-  candidate_pool: 16
-- taxon_id: NCBITaxon:57001
-  source: BACDIVE
-  taxon_label: Amaricoccus macauensis
-  association_count: 1
-  rank: 10
-  candidate_pool: 14
 - taxon_id: NCBITaxon:1121423
   source: PREGO
   taxon_label: Desulfofalx alkaliphila DSM 12257
   score: 4.0
   rank: 11
   candidate_pool: 52
-- taxon_id: NCBITaxon:570268
-  source: BACDIVE
-  taxon_label: Nocardiopsis potens DSM 45234
-  association_count: 1
-  rank: 11
-  candidate_pool: 14
-- taxon_id: NCBITaxon:623280
-  source: BACDIVE
-  taxon_label: Parapedobacter luteus
-  association_count: 1
-  rank: 11
-  candidate_pool: 16
 - taxon_id: NCBITaxon:1121431
   source: PREGO
   taxon_label: Desulfallas thermosapovorans DSM 6562
   score: 4.0
   rank: 12
   candidate_pool: 52
-- taxon_id: NCBITaxon:623281
-  source: BACDIVE
-  taxon_label: Parapedobacter composti
-  association_count: 1
-  rank: 12
-  candidate_pool: 16
-- taxon_id: NCBITaxon:700500
-  source: BACDIVE
-  taxon_label: Catenisphaera adipataccumulans
-  association_count: 1
-  rank: 12
-  candidate_pool: 14
 - taxon_id: NCBITaxon:1121927
   source: PREGO
   taxon_label: Gordonia hirsuta DSM 44140 = NBRC 16056
   score: 4.0
   rank: 13
   candidate_pool: 52
-- taxon_id: NCBITaxon:720633
-  source: BACDIVE
-  taxon_label: Lysinibacillus composti
-  association_count: 1
-  rank: 13
-  candidate_pool: 14
 - taxon_id: NCBITaxon:1121950
   source: PREGO
   taxon_label: Hespellia stercorisuis DSM 15480
   score: 4.0
   rank: 14
   candidate_pool: 52
-- taxon_id: NCBITaxon:658457
-  source: BACDIVE
-  taxon_label: Ectopseudomonas composti
-  association_count: 1
-  rank: 14
-  candidate_pool: 16
-- taxon_id: NCBITaxon:768534
-  source: BACDIVE
-  taxon_label: Sphingobacterium thermophilum
-  association_count: 1
-  rank: 14
-  candidate_pool: 14
-- taxon_id: NCBITaxon:698758
-  source: BACDIVE
-  taxon_label: Amphibacillus xylanus NBRC 15112
-  association_count: 1
-  rank: 15
-  candidate_pool: 16
 - taxon_id: NCBITaxon:1123004
   source: PREGO
   taxon_label: Propionispora vibrioides DSM 13305
   score: 4.0
   rank: 16
   candidate_pool: 52
-- taxon_id: NCBITaxon:78350
-  source: BACDIVE
-  taxon_label: Pelotomaculum schinkii
-  association_count: 1
-  rank: 16
-  candidate_pool: 16
 - taxon_id: NCBITaxon:1123405
   source: PREGO
   taxon_label: Tuberibacillus calidus DSM 17572
@@ -423,5 +197,4 @@ curation_history:
 - timestamp: '2026-08-13T19:01:33Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, PREGO. Grounding:
-    EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

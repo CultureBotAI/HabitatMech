@@ -1,19 +1,21 @@
 identifier: habitatmech:GOLD.e6839bcc8f
 label: Oil-contaminated sediment
 habitat_category: AQUATIC
-grounding_status: UNGROUNDED
-mapping_status: SEEDED
+grounding_status: NARROW
+mapping_status: REVIEWED
 parent_habitats:
 - ENVO:00000207
+- ENVO:00002149
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4007
   source_label: Oil-contaminated sediment
   source_path: Environmental > Aquatic > Marine > Oceanic > Oil-contaminated sediment
+  mapping_predicate: skos:narrowMatch
   assertion_count: 4
   assertion_unit: ORGANISM
 curation_history:
 - timestamp: '2026-08-13T19:01:33Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

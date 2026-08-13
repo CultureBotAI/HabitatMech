@@ -20,18 +20,11 @@ synonyms:
   source: PREGO
 parent_habitats:
 - ENVO:00002006
-- habitatmech:GOLD.277843111f
 source_attestations:
 - source: ENVIRONMENTS_TABLE
   source_id: water_saline
   source_label: water_saline
   notes: Physicochemical parameter bands from kg-microbe's environment table.
-- source: GOLD
-  source_id: gold.ecosystem:5807
-  source_label: Saline water
-  source_path: Environmental > Aquatic > Non-marine Saline and Alkaline > Salt crystallizer
-    ponds > Saline water
-  mapping_predicate: skos:exactMatch
 - source: PREGO
   source_id: ENVO:00002010
   source_label: saline water
@@ -210,5 +203,5 @@ curation_history:
 - timestamp: '2026-08-13T19:01:33Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD,
-    PREGO. Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, PREGO.
+    Grounding: EXACT.'

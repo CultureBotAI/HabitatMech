@@ -40,7 +40,7 @@ structurally complex, low-pressure, and strongly gradient-forming.
 
 ## Current corpus
 
-Seeded from kg-microbe, 2026-08-12. **3,192 habitat records** from 3,443 source
+Seeded from kg-microbe, 2026-08-12. **3,217 habitat records** from 3,443 source
 concepts (GOLD 2,562 · BacDive 162 · PREGO 719), grounded in
 ENVO / UBERON / FOODON / BTO / PO.
 
@@ -53,10 +53,11 @@ ENVO / UBERON / FOODON / BTO / PO.
 | OTHER | 172 | | NOT_APPLICABLE | 88 |
 | FOOD / CLINICAL / AIR | 93 | | BROAD | 3 |
 
-**258 records (8.1%) are `REVIEWED`**, on 387 per-item curation decisions.
-Every source concept has a decision on file, but they are not all equal: 940
-were decided by a **class-level sweep** and deliberately do *not* count as
-reviewed — see [Curation](#curation) and
+**421 records (13.1%) are `REVIEWED`**, on 588 per-item curation decisions —
+including all 135 records attested by more than one source, whose merges were
+read individually. Every source concept has a decision on file, but they are not
+all equal: 940 were decided by a **class-level sweep** and deliberately do *not*
+count as reviewed — see [Curation](#curation) and
 [docs/HARMONIZATION.md](docs/HARMONIZATION.md#class-level-sweep).
 
 Run `just report` for the live numbers and all three lists.
@@ -203,8 +204,10 @@ just report                   # term requests vs undecided, and the numbers belo
 
 These are real and unfixed; see the issue tracker.
 
-- **Almost nothing is reviewed.** 55 of 3,284 records are `REVIEWED`; the rest
+- **Most records are unreviewed.** 421 of 3,217 are `REVIEWED`; the other 2,796
   are `SEEDED`, meaning their lexical matches are plausible but unverified.
+  Every multi-source record has been read — 22 of those 135 merges were wrong
+  and were corrected — but single-source records have not.
 - **ENVO has no host-clade environment terms.** "Mammals: Human" (40,432 GOLD
   organisms, the single largest ungrounded concept), "Birds", "Fish", "Insects"
   and the rest are real habitats with only `ENVO:01001002 animal-associated

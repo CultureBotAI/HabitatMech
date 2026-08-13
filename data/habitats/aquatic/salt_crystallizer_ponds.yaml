@@ -1,9 +1,10 @@
 identifier: habitatmech:GOLD.277843111f
 label: Salt crystallizer ponds
 habitat_category: AQUATIC
-grounding_status: UNGROUNDED
-mapping_status: SEEDED
+grounding_status: NARROW
+mapping_status: REVIEWED
 parent_habitats:
+- ENVO:00002012
 - habitatmech:GOLD.ce244e62cd
 source_attestations:
 - source: GOLD
@@ -11,6 +12,7 @@ source_attestations:
   source_label: Salt crystallizer ponds
   source_path: Environmental > Aquatic > Non-marine Saline and Alkaline > Salt crystallizer
     ponds
+  mapping_predicate: skos:narrowMatch
   assertion_count: 103
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
@@ -18,4 +20,4 @@ curation_history:
 - timestamp: '2026-08-13T19:01:33Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

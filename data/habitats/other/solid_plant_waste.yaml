@@ -1,0 +1,120 @@
+identifier: habitatmech:BACDIVE.8086ba1250
+label: Solid-plant-waste
+habitat_category: OTHER
+grounding_status: NARROW
+mapping_status: REVIEWED
+parent_habitats:
+- ENVO:00002264
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:solid-plant-waste
+  source_label: Solid-plant-waste
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 17
+  assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:1122958
+  source: BACDIVE
+  taxon_label: Phenylobacterium composti DSM 19425
+  association_count: 1
+  rank: 4
+  candidate_pool: 16
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:649349
+  source: BACDIVE
+  taxon_label: Leadbetterella byssophila DSM 17132
+  association_count: 1
+  rank: 13
+  candidate_pool: 16
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:2021
+  source: BACDIVE
+  taxon_label: Thermobifida fusca
+  association_count: 2
+  rank: 1
+  candidate_pool: 16
+- taxon_id: NCBITaxon:1121117
+  source: BACDIVE
+  taxon_label: Allobrachymonas denitrificans DSM 15123
+  association_count: 1
+  rank: 2
+  candidate_pool: 16
+- taxon_id: NCBITaxon:1121290
+  source: BACDIVE
+  taxon_label: Clostridium acetireducens DSM 10703
+  association_count: 1
+  rank: 3
+  candidate_pool: 16
+- taxon_id: NCBITaxon:1931
+  source: BACDIVE
+  taxon_label: Streptomyces sp.
+  association_count: 1
+  rank: 5
+  candidate_pool: 16
+- taxon_id: NCBITaxon:208304
+  source: BACDIVE
+  taxon_label: Thermoanaerobacterium bryantii
+  association_count: 1
+  rank: 6
+  candidate_pool: 16
+- taxon_id: NCBITaxon:314722
+  source: BACDIVE
+  taxon_label: Pseudoxanthomonas suwonensis
+  association_count: 1
+  rank: 7
+  candidate_pool: 16
+- taxon_id: NCBITaxon:3381696
+  source: BACDIVE
+  taxon_label: Methanothermobacter sp. DSM 3267
+  association_count: 1
+  rank: 8
+  candidate_pool: 16
+- taxon_id: NCBITaxon:35786
+  source: BACDIVE
+  taxon_label: Coprothermobacter proteolyticus
+  association_count: 1
+  rank: 9
+  candidate_pool: 16
+- taxon_id: NCBITaxon:363260
+  source: BACDIVE
+  taxon_label: Sphingobacterium composti
+  association_count: 1
+  rank: 10
+  candidate_pool: 16
+- taxon_id: NCBITaxon:623280
+  source: BACDIVE
+  taxon_label: Parapedobacter luteus
+  association_count: 1
+  rank: 11
+  candidate_pool: 16
+- taxon_id: NCBITaxon:623281
+  source: BACDIVE
+  taxon_label: Parapedobacter composti
+  association_count: 1
+  rank: 12
+  candidate_pool: 16
+- taxon_id: NCBITaxon:658457
+  source: BACDIVE
+  taxon_label: Ectopseudomonas composti
+  association_count: 1
+  rank: 14
+  candidate_pool: 16
+- taxon_id: NCBITaxon:698758
+  source: BACDIVE
+  taxon_label: Amphibacillus xylanus NBRC 15112
+  association_count: 1
+  rank: 15
+  candidate_pool: 16
+- taxon_id: NCBITaxon:78350
+  source: BACDIVE
+  taxon_label: Pelotomaculum schinkii
+  association_count: 1
+  rank: 16
+  candidate_pool: 16
+curation_history:
+- timestamp: '2026-08-13T19:01:33Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: NARROW.'

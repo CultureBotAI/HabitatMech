@@ -1,0 +1,22 @@
+identifier: habitatmech:GOLD.0533686915
+label: Water
+habitat_category: ENGINEERED
+grounding_status: NARROW
+mapping_status: REVIEWED
+parent_habitats:
+- ENVO:00000014
+- ENVO:00002006
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5561
+  source_label: Water
+  source_path: Engineered > Built environment > Canal > Water
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 4
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-13T19:01:33Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
