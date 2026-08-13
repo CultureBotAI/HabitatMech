@@ -29,52 +29,74 @@ source_attestations:
   assertion_count: 16
   assertion_unit: STRAIN
 characteristic_taxa:
-- taxon_id: NCBITaxon:1122167
-  source: BACDIVE
-  taxon_label: Legionella quinlivanii DSM 21216
-  association_count: 1
-- taxon_id: NCBITaxon:1899569
-  source: BACDIVE
-  taxon_label: Spirosoma sp.
-  association_count: 1
-- taxon_id: NCBITaxon:2024
-  source: BACDIVE
-  taxon_label: Thermoactinomyces intermedius
-  association_count: 1
-- taxon_id: NCBITaxon:2026
-  source: BACDIVE
-  taxon_label: Thermoactinomyces vulgaris
-  association_count: 1
-- taxon_id: NCBITaxon:2133958
-  source: BACDIVE
-  taxon_label: Nocardioides currus
-  association_count: 1
-- taxon_id: NCBITaxon:28214
-  source: BACDIVE
-  taxon_label: Sphingomonas sp.
-  association_count: 2
-- taxon_id: NCBITaxon:34073
-  source: BACDIVE
-  taxon_label: Variovorax paradoxus
-  association_count: 1
-- taxon_id: NCBITaxon:341027
-  source: BACDIVE
-  taxon_label: Sphingobacterium sp.
-  association_count: 1
 - taxon_id: NCBITaxon:409
   source: BACDIVE
   taxon_label: Methylobacterium sp.
   association_count: 5
+  rank: 1
+  candidate_pool: 11
+- taxon_id: NCBITaxon:28214
+  source: BACDIVE
+  taxon_label: Sphingomonas sp.
+  association_count: 2
+  rank: 2
+  candidate_pool: 11
+- taxon_id: NCBITaxon:1122167
+  source: BACDIVE
+  taxon_label: Legionella quinlivanii DSM 21216
+  association_count: 1
+  rank: 3
+  candidate_pool: 11
+- taxon_id: NCBITaxon:1899569
+  source: BACDIVE
+  taxon_label: Spirosoma sp.
+  association_count: 1
+  rank: 4
+  candidate_pool: 11
+- taxon_id: NCBITaxon:2024
+  source: BACDIVE
+  taxon_label: Thermoactinomyces intermedius
+  association_count: 1
+  rank: 5
+  candidate_pool: 11
+- taxon_id: NCBITaxon:2026
+  source: BACDIVE
+  taxon_label: Thermoactinomyces vulgaris
+  association_count: 1
+  rank: 6
+  candidate_pool: 11
+- taxon_id: NCBITaxon:2133958
+  source: BACDIVE
+  taxon_label: Nocardioides currus
+  association_count: 1
+  rank: 7
+  candidate_pool: 11
+- taxon_id: NCBITaxon:34073
+  source: BACDIVE
+  taxon_label: Variovorax paradoxus
+  association_count: 1
+  rank: 8
+  candidate_pool: 11
+- taxon_id: NCBITaxon:341027
+  source: BACDIVE
+  taxon_label: Sphingobacterium sp.
+  association_count: 1
+  rank: 9
+  candidate_pool: 11
 - taxon_id: NCBITaxon:413712
   source: BACDIVE
   taxon_label: Sphingomonas pseudosanguinis
   association_count: 1
+  rank: 10
+  candidate_pool: 11
 - taxon_id: NCBITaxon:594679
   source: BACDIVE
   taxon_label: Allofrancisella guangzhouensis
   association_count: 1
+  rank: 11
+  candidate_pool: 11
 curation_history:
-- timestamp: '2026-08-13T06:49:23Z'
+- timestamp: '2026-08-13T19:01:33Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: EXACT.'

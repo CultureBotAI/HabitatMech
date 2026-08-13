@@ -20,24 +20,34 @@ characteristic_taxa:
   source: PREGO
   taxon_label: Compostimonas suwonensis
   score: 4.0
+  rank: 1
+  candidate_pool: 5
 - taxon_id: NCBITaxon:1121013
   source: PREGO
   taxon_label: Arenimonas composti TR7-09 = DSM 18010
   score: 4.0
+  rank: 2
+  candidate_pool: 5
 - taxon_id: NCBITaxon:1121431
   source: PREGO
   taxon_label: Desulfallas thermosapovorans DSM 6562
   score: 4.0
+  rank: 3
+  candidate_pool: 5
 - taxon_id: NCBITaxon:394503
   source: PREGO
   taxon_label: Ruminiclostridium cellulolyticum H10
   score: 4.0
+  rank: 4
+  candidate_pool: 5
 - taxon_id: NCBITaxon:935865
   source: PREGO
   taxon_label: Nocardioides sp. J52
   score: 4.0
+  rank: 5
+  candidate_pool: 5
 curation_history:
-- timestamp: '2026-08-13T06:49:23Z'
+- timestamp: '2026-08-13T19:01:33Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

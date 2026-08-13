@@ -403,8 +403,31 @@ classes:
       score:
         description: Source-provided association score.
         range: float
+      rank:
+        description: Position in the source's own ranking for this habitat, 1 = strongest.
+        range: integer
+      candidate_pool:
+        description: >-
+          How many taxa the source associated with this habitat in total — what
+          `rank` is out of. Recorded because the two are only interpretable
+          together: PREGO ranks 8715 taxa for soil with scores spanning
+          4.0000-4.0073, so "rank 1" there is a far weaker claim than "rank 1"
+          out of twelve, and without this the record presents them identically.
+        range: integer
+      corroborated_by:
+        description: >-
+          Other sources that independently associate this taxon with this
+          habitat. The strongest evidence available for a pair: PREGO reaches
+          taxa by text mining and genome annotation, BacDive by counting strains
+          actually isolated, so agreement between them is not one method
+          agreeing with itself. A corroborated taxon is a much better
+          `is_characteristic` candidate than a high rank from a single source.
+        multivalued: true
+        range: HabitatSourceEnum
       source:
-        description: Which source asserted the association.
+        description: >-
+          Which source asserted the association, and whose `rank`,
+          `candidate_pool` and `score` are reported.
         range: HabitatSourceEnum
       is_characteristic:
         description: >-

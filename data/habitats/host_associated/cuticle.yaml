@@ -37,20 +37,28 @@ characteristic_taxa:
   source: PREGO
   taxon_label: Pantoea agglomerans 299R
   score: 3.0
+  rank: 1
+  candidate_pool: 4
 - taxon_id: NCBITaxon:1283291
   source: PREGO
   taxon_label: Pseudomonas sp. URMO17WK12:I11
   score: 3.0
+  rank: 2
+  candidate_pool: 4
 - taxon_id: NCBITaxon:1307436
   source: PREGO
   taxon_label: Cytobacillus firmus DS1
   score: 3.0
+  rank: 3
+  candidate_pool: 4
 - taxon_id: NCBITaxon:53408
   source: PREGO
   taxon_label: Pseudomonas citronellolis
   score: 3.0
+  rank: 4
+  candidate_pool: 4
 curation_history:
-- timestamp: '2026-08-13T06:49:23Z'
+- timestamp: '2026-08-13T19:01:33Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

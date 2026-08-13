@@ -65,116 +65,172 @@ source_attestations:
   score: 3.0
   evidence_channels: annotated_genomes_isolates
 characteristic_taxa:
-- taxon_id: NCBITaxon:1712410
-  source: PREGO
-  taxon_label: Thermanaerosceptrum fracticalcis
-  score: 3.0
 - taxon_id: NCBITaxon:523791
   source: PREGO
   taxon_label: Kangiella koreensis DSM 16069
   score: 3.0
-- taxon_id: NCBITaxon:1005926
-  source: BACDIVE
-  taxon_label: Flagellimonas taeanensis
-  association_count: 1
-- taxon_id: NCBITaxon:1005928
-  source: BACDIVE
-  taxon_label: Roseovarius lutimaris
-  association_count: 1
-- taxon_id: NCBITaxon:1028742
-  source: BACDIVE
-  taxon_label: Pontixanthobacter gangjinensis
-  association_count: 1
-- taxon_id: NCBITaxon:1028750
-  source: BACDIVE
-  taxon_label: Photobacterium aestuarii
-  association_count: 1
-- taxon_id: NCBITaxon:1049582
-  source: BACDIVE
-  taxon_label: Deinococcus enclensis
-  association_count: 1
-- taxon_id: NCBITaxon:1049583
-  source: BACDIVE
-  taxon_label: Kocuria marina subsp. indica
-  association_count: 1
-- taxon_id: NCBITaxon:1085
-  source: BACDIVE
-  taxon_label: Rhodospirillum rubrum
-  association_count: 1
-- taxon_id: NCBITaxon:1110545
-  source: BACDIVE
-  taxon_label: Methanosaeta pelagica
-  association_count: 1
-- taxon_id: NCBITaxon:1117316
-  source: BACDIVE
-  taxon_label: Pseudoalteromonas marina DSM 17587
-  association_count: 1
-- taxon_id: NCBITaxon:1120953
-  source: BACDIVE
-  taxon_label: Aestuariibacter salexigens DSM 15300
-  association_count: 1
-- taxon_id: NCBITaxon:1120954
-  source: BACDIVE
-  taxon_label: Aestuariimicrobium kwangyangense DSM 21549
-  association_count: 1
-- taxon_id: NCBITaxon:1120956
-  source: BACDIVE
-  taxon_label: Afifella pfennigii DSM 17143
-  association_count: 1
-- taxon_id: NCBITaxon:1120965
-  source: BACDIVE
-  taxon_label: Algoriphagus mannitolivorans DSM 15301
-  association_count: 1
-- taxon_id: NCBITaxon:1121005
-  source: BACDIVE
-  taxon_label: Aquimarina brevivitae DSM 17196
-  association_count: 1
-- taxon_id: NCBITaxon:1121909
-  source: BACDIVE
-  taxon_label: Gaetbulibacter saemankumensis DSM 17032
-  association_count: 1
-- taxon_id: NCBITaxon:1121935
-  source: BACDIVE
-  taxon_label: Hahella ganghwensis DSM 17046
-  association_count: 1
-- taxon_id: NCBITaxon:1122134
-  source: BACDIVE
-  taxon_label: Kangiella aquimarina DSM 16071
-  association_count: 1
-- taxon_id: NCBITaxon:1156985
-  source: BACDIVE
-  taxon_label: Epibacterium ulvae
-  association_count: 2
-- taxon_id: NCBITaxon:2
-  source: BACDIVE
-  taxon_label: Bacteria
-  association_count: 2
-- taxon_id: NCBITaxon:226506
-  source: BACDIVE
-  taxon_label: Algoriphagus ornithinivorans
-  association_count: 2
-- taxon_id: NCBITaxon:267135
-  source: BACDIVE
-  taxon_label: Erythrobacter donghaensis
-  association_count: 2
-- taxon_id: NCBITaxon:28185
-  source: BACDIVE
-  taxon_label: Spirochaeta sp.
-  association_count: 2
+  rank: 2
+  candidate_pool: 2
+  corroborated_by:
+  - BACDIVE
+- taxon_id: NCBITaxon:1712410
+  source: PREGO
+  taxon_label: Thermanaerosceptrum fracticalcis
+  score: 3.0
+  rank: 1
+  candidate_pool: 2
 - taxon_id: NCBITaxon:28211
   source: BACDIVE
   taxon_label: Alphaproteobacteria
   association_count: 3
+  rank: 1
+  candidate_pool: 237
+- taxon_id: NCBITaxon:1156985
+  source: BACDIVE
+  taxon_label: Epibacterium ulvae
+  association_count: 2
+  rank: 2
+  candidate_pool: 237
+- taxon_id: NCBITaxon:2
+  source: BACDIVE
+  taxon_label: Bacteria
+  association_count: 2
+  rank: 3
+  candidate_pool: 237
+- taxon_id: NCBITaxon:226506
+  source: BACDIVE
+  taxon_label: Algoriphagus ornithinivorans
+  association_count: 2
+  rank: 4
+  candidate_pool: 237
+- taxon_id: NCBITaxon:267135
+  source: BACDIVE
+  taxon_label: Erythrobacter donghaensis
+  association_count: 2
+  rank: 5
+  candidate_pool: 237
+- taxon_id: NCBITaxon:28185
+  source: BACDIVE
+  taxon_label: Spirochaeta sp.
+  association_count: 2
+  rank: 6
+  candidate_pool: 237
 - taxon_id: NCBITaxon:58314
   source: BACDIVE
   taxon_label: Rhodovulum strictum
   association_count: 2
+  rank: 7
+  candidate_pool: 237
 - taxon_id: NCBITaxon:83428
   source: BACDIVE
   taxon_label: uncultured Bacillus sp.
   association_count: 2
+  rank: 8
+  candidate_pool: 237
+- taxon_id: NCBITaxon:1005926
+  source: BACDIVE
+  taxon_label: Flagellimonas taeanensis
+  association_count: 1
+  rank: 9
+  candidate_pool: 237
+- taxon_id: NCBITaxon:1005928
+  source: BACDIVE
+  taxon_label: Roseovarius lutimaris
+  association_count: 1
+  rank: 10
+  candidate_pool: 237
+- taxon_id: NCBITaxon:1028742
+  source: BACDIVE
+  taxon_label: Pontixanthobacter gangjinensis
+  association_count: 1
+  rank: 11
+  candidate_pool: 237
+- taxon_id: NCBITaxon:1028750
+  source: BACDIVE
+  taxon_label: Photobacterium aestuarii
+  association_count: 1
+  rank: 12
+  candidate_pool: 237
+- taxon_id: NCBITaxon:1049582
+  source: BACDIVE
+  taxon_label: Deinococcus enclensis
+  association_count: 1
+  rank: 13
+  candidate_pool: 237
+- taxon_id: NCBITaxon:1049583
+  source: BACDIVE
+  taxon_label: Kocuria marina subsp. indica
+  association_count: 1
+  rank: 14
+  candidate_pool: 237
+- taxon_id: NCBITaxon:1085
+  source: BACDIVE
+  taxon_label: Rhodospirillum rubrum
+  association_count: 1
+  rank: 15
+  candidate_pool: 237
+- taxon_id: NCBITaxon:1110545
+  source: BACDIVE
+  taxon_label: Methanosaeta pelagica
+  association_count: 1
+  rank: 16
+  candidate_pool: 237
+- taxon_id: NCBITaxon:1117316
+  source: BACDIVE
+  taxon_label: Pseudoalteromonas marina DSM 17587
+  association_count: 1
+  rank: 17
+  candidate_pool: 237
+- taxon_id: NCBITaxon:1120953
+  source: BACDIVE
+  taxon_label: Aestuariibacter salexigens DSM 15300
+  association_count: 1
+  rank: 18
+  candidate_pool: 237
+- taxon_id: NCBITaxon:1120954
+  source: BACDIVE
+  taxon_label: Aestuariimicrobium kwangyangense DSM 21549
+  association_count: 1
+  rank: 19
+  candidate_pool: 237
+- taxon_id: NCBITaxon:1120956
+  source: BACDIVE
+  taxon_label: Afifella pfennigii DSM 17143
+  association_count: 1
+  rank: 20
+  candidate_pool: 237
+- taxon_id: NCBITaxon:1120965
+  source: BACDIVE
+  taxon_label: Algoriphagus mannitolivorans DSM 15301
+  association_count: 1
+  rank: 21
+  candidate_pool: 237
+- taxon_id: NCBITaxon:1121005
+  source: BACDIVE
+  taxon_label: Aquimarina brevivitae DSM 17196
+  association_count: 1
+  rank: 22
+  candidate_pool: 237
+- taxon_id: NCBITaxon:1121909
+  source: BACDIVE
+  taxon_label: Gaetbulibacter saemankumensis DSM 17032
+  association_count: 1
+  rank: 23
+  candidate_pool: 237
+- taxon_id: NCBITaxon:1121935
+  source: BACDIVE
+  taxon_label: Hahella ganghwensis DSM 17046
+  association_count: 1
+  rank: 24
+  candidate_pool: 237
+- taxon_id: NCBITaxon:1122134
+  source: BACDIVE
+  taxon_label: Kangiella aquimarina DSM 16071
+  association_count: 1
+  rank: 25
+  candidate_pool: 237
 curation_history:
-- timestamp: '2026-08-13T06:49:23Z'
+- timestamp: '2026-08-13T19:01:33Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD, PREGO. Grounding:

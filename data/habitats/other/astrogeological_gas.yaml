@@ -23,76 +23,110 @@ source_attestations:
   assertion_count: 20
   assertion_unit: STRAIN
 characteristic_taxa:
-- taxon_id: NCBITaxon:1123024
-  source: BACDIVE
-  taxon_label: Pseudonocardia asaccharolytica DSM 44247 = NBRC 16224
-  association_count: 1
-- taxon_id: NCBITaxon:1223541
-  source: BACDIVE
-  taxon_label: Gordonia hydrophobica NBRC 16057
-  association_count: 1
 - taxon_id: NCBITaxon:1667
   source: BACDIVE
   taxon_label: Arthrobacter sp.
   association_count: 3
-- taxon_id: NCBITaxon:1720
-  source: BACDIVE
-  taxon_label: Corynebacterium sp.
-  association_count: 1
-- taxon_id: NCBITaxon:1871044
-  source: BACDIVE
-  taxon_label: Clavibacter sp.
-  association_count: 1
-- taxon_id: NCBITaxon:1871047
-  source: BACDIVE
-  taxon_label: Chryseobacterium sp.
-  association_count: 1
-- taxon_id: NCBITaxon:1871616
-  source: BACDIVE
-  taxon_label: Dietzia sp.
-  association_count: 1
-- taxon_id: NCBITaxon:1872122
-  source: BACDIVE
-  taxon_label: Acidovorax sp.
-  association_count: 1
-- taxon_id: NCBITaxon:2164
-  source: BACDIVE
-  taxon_label: Methanobacterium sp.
-  association_count: 1
-- taxon_id: NCBITaxon:306
-  source: BACDIVE
-  taxon_label: Pseudomonas sp.
-  association_count: 1
-- taxon_id: NCBITaxon:361
-  source: BACDIVE
-  taxon_label: Agrobacterium sp.
-  association_count: 1
-- taxon_id: NCBITaxon:469547
-  source: BACDIVE
-  taxon_label: Aquamicrobium segne
-  association_count: 1
-- taxon_id: NCBITaxon:469551
-  source: BACDIVE
-  taxon_label: Aquamicrobium ahrensii
-  association_count: 1
+  rank: 1
+  candidate_pool: 17
 - taxon_id: NCBITaxon:53408
   source: BACDIVE
   taxon_label: Pseudomonas citronellolis
   association_count: 2
+  rank: 2
+  candidate_pool: 17
+- taxon_id: NCBITaxon:1123024
+  source: BACDIVE
+  taxon_label: Pseudonocardia asaccharolytica DSM 44247 = NBRC 16224
+  association_count: 1
+  rank: 3
+  candidate_pool: 17
+- taxon_id: NCBITaxon:1223541
+  source: BACDIVE
+  taxon_label: Gordonia hydrophobica NBRC 16057
+  association_count: 1
+  rank: 4
+  candidate_pool: 17
+- taxon_id: NCBITaxon:1720
+  source: BACDIVE
+  taxon_label: Corynebacterium sp.
+  association_count: 1
+  rank: 5
+  candidate_pool: 17
+- taxon_id: NCBITaxon:1871044
+  source: BACDIVE
+  taxon_label: Clavibacter sp.
+  association_count: 1
+  rank: 6
+  candidate_pool: 17
+- taxon_id: NCBITaxon:1871047
+  source: BACDIVE
+  taxon_label: Chryseobacterium sp.
+  association_count: 1
+  rank: 7
+  candidate_pool: 17
+- taxon_id: NCBITaxon:1871616
+  source: BACDIVE
+  taxon_label: Dietzia sp.
+  association_count: 1
+  rank: 8
+  candidate_pool: 17
+- taxon_id: NCBITaxon:1872122
+  source: BACDIVE
+  taxon_label: Acidovorax sp.
+  association_count: 1
+  rank: 9
+  candidate_pool: 17
+- taxon_id: NCBITaxon:2164
+  source: BACDIVE
+  taxon_label: Methanobacterium sp.
+  association_count: 1
+  rank: 10
+  candidate_pool: 17
+- taxon_id: NCBITaxon:306
+  source: BACDIVE
+  taxon_label: Pseudomonas sp.
+  association_count: 1
+  rank: 11
+  candidate_pool: 17
+- taxon_id: NCBITaxon:361
+  source: BACDIVE
+  taxon_label: Agrobacterium sp.
+  association_count: 1
+  rank: 12
+  candidate_pool: 17
+- taxon_id: NCBITaxon:469547
+  source: BACDIVE
+  taxon_label: Aquamicrobium segne
+  association_count: 1
+  rank: 13
+  candidate_pool: 17
+- taxon_id: NCBITaxon:469551
+  source: BACDIVE
+  taxon_label: Aquamicrobium ahrensii
+  association_count: 1
+  rank: 14
+  candidate_pool: 17
 - taxon_id: NCBITaxon:53463
   source: BACDIVE
   taxon_label: Paracoccus solventivorans
   association_count: 1
+  rank: 15
+  candidate_pool: 17
 - taxon_id: NCBITaxon:65735
   source: BACDIVE
   taxon_label: Paracoccus alkenifer
   association_count: 1
+  rank: 16
+  candidate_pool: 17
 - taxon_id: NCBITaxon:680375
   source: BACDIVE
   taxon_label: Desulfonatronum alkalitolerans
   association_count: 1
+  rank: 17
+  candidate_pool: 17
 curation_history:
-- timestamp: '2026-08-13T06:49:23Z'
+- timestamp: '2026-08-13T19:01:33Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

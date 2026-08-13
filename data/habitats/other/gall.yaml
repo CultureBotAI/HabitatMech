@@ -10,56 +10,80 @@ source_attestations:
   assertion_count: 16
   assertion_unit: STRAIN
 characteristic_taxa:
-- taxon_id: NCBITaxon:1035271
-  source: BACDIVE
-  taxon_label: Rhizobium nepotum
-  association_count: 1
-- taxon_id: NCBITaxon:110933
-  source: BACDIVE
-  taxon_label: Leifsonia poae
-  association_count: 1
-- taxon_id: NCBITaxon:110935
-  source: BACDIVE
-  taxon_label: Agreia bicolorata
-  association_count: 1
-- taxon_id: NCBITaxon:1210098
-  source: BACDIVE
-  taxon_label: Nocardia vaccinii NBRC 15922
-  association_count: 1
-- taxon_id: NCBITaxon:1328866
-  source: BACDIVE
-  taxon_label: Rathayibacter festucae DSM 15932
-  association_count: 1
-- taxon_id: NCBITaxon:1660
-  source: BACDIVE
-  taxon_label: Schaalia odontolytica
-  association_count: 1
-- taxon_id: NCBITaxon:1938889
-  source: BACDIVE
-  taxon_label: Agreia sp. VKM Ac-1783
-  association_count: 1
-- taxon_id: NCBITaxon:306
-  source: BACDIVE
-  taxon_label: Pseudomonas sp.
-  association_count: 1
-- taxon_id: NCBITaxon:359
-  source: BACDIVE
-  taxon_label: Martinezella rhizogenes
-  association_count: 1
 - taxon_id: NCBITaxon:362
   source: BACDIVE
   taxon_label: Agrobacterium radiobacter
   association_count: 5
+  rank: 1
+  candidate_pool: 12
+- taxon_id: NCBITaxon:1035271
+  source: BACDIVE
+  taxon_label: Rhizobium nepotum
+  association_count: 1
+  rank: 2
+  candidate_pool: 12
+- taxon_id: NCBITaxon:110933
+  source: BACDIVE
+  taxon_label: Leifsonia poae
+  association_count: 1
+  rank: 3
+  candidate_pool: 12
+- taxon_id: NCBITaxon:110935
+  source: BACDIVE
+  taxon_label: Agreia bicolorata
+  association_count: 1
+  rank: 4
+  candidate_pool: 12
+- taxon_id: NCBITaxon:1210098
+  source: BACDIVE
+  taxon_label: Nocardia vaccinii NBRC 15922
+  association_count: 1
+  rank: 5
+  candidate_pool: 12
+- taxon_id: NCBITaxon:1328866
+  source: BACDIVE
+  taxon_label: Rathayibacter festucae DSM 15932
+  association_count: 1
+  rank: 6
+  candidate_pool: 12
+- taxon_id: NCBITaxon:1660
+  source: BACDIVE
+  taxon_label: Schaalia odontolytica
+  association_count: 1
+  rank: 7
+  candidate_pool: 12
+- taxon_id: NCBITaxon:1938889
+  source: BACDIVE
+  taxon_label: Agreia sp. VKM Ac-1783
+  association_count: 1
+  rank: 8
+  candidate_pool: 12
+- taxon_id: NCBITaxon:306
+  source: BACDIVE
+  taxon_label: Pseudomonas sp.
+  association_count: 1
+  rank: 9
+  candidate_pool: 12
+- taxon_id: NCBITaxon:359
+  source: BACDIVE
+  taxon_label: Martinezella rhizogenes
+  association_count: 1
+  rank: 10
+  candidate_pool: 12
 - taxon_id: NCBITaxon:75612
   source: BACDIVE
   taxon_label: Pseudomonas mandelii
   association_count: 1
+  rank: 11
+  candidate_pool: 12
 - taxon_id: NCBITaxon:984260
   source: BACDIVE
   taxon_label: Rhizobium skierniewicense
   association_count: 1
+  rank: 12
+  candidate_pool: 12
 curation_history:
-- timestamp: '2026-08-13T06:49:23Z'
+- timestamp: '2026-08-13T19:01:33Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'

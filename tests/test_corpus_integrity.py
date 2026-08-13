@@ -328,3 +328,39 @@ def test_causal_edges_reference_declared_nodes(records):
                     if edge.get(end) not in node_ids:
                         bad.append((doc["identifier"], graph.get("graph_id"), edge.get(end)))
     assert not bad, f"causal edges pointing at undeclared nodes: {bad[:10]}"
+
+
+def test_taxon_rank_always_carries_its_candidate_pool(records):
+    """`rank` without `candidate_pool` is the misreading #8 was about: "rank 1"
+    out of 8,715 near-tied taxa and "rank 1" out of twelve look identical on the
+    page, and only the second is much of a claim."""
+    bad = []
+    for _, doc in records:
+        for taxon in doc.get("characteristic_taxa") or []:
+            if taxon.get("rank") and not taxon.get("candidate_pool"):
+                bad.append((doc["identifier"], taxon["taxon_id"]))
+    assert not bad, f"rank without candidate_pool: {bad[:10]}"
+
+
+def test_corroboration_never_names_the_asserting_source(records):
+    """`corroborated_by` is for *other* sources. A source listed as corroborating
+    its own assertion would inflate the one signal in this field that is
+    genuinely independent evidence."""
+    bad = []
+    for _, doc in records:
+        for taxon in doc.get("characteristic_taxa") or []:
+            if taxon.get("source") in (taxon.get("corroborated_by") or []):
+                bad.append((doc["identifier"], taxon["taxon_id"], taxon["source"]))
+    assert not bad, f"taxa corroborated by their own source: {bad[:10]}"
+
+
+def test_corroborated_taxa_are_listed_first(records):
+    """Cross-source agreement outranks any single source's position, so the
+    corroborated entries have to be the ones a reader sees first."""
+    bad = []
+    for _, doc in records:
+        taxa = doc.get("characteristic_taxa") or []
+        depths = [len(t.get("corroborated_by") or []) for t in taxa]
+        if depths != sorted(depths, reverse=True):
+            bad.append(doc["identifier"])
+    assert not bad, f"corroborated taxa not listed first: {bad[:10]}"

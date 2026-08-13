@@ -27,20 +27,28 @@ characteristic_taxa:
   taxon_label: Salmonella enterica subsp. enterica serovar Gallinarum/Pullorum str.
     FCAV198
   score: 3.0
+  rank: 1
+  candidate_pool: 4
 - taxon_id: NCBITaxon:1410383
   source: PREGO
   taxon_label: Candidatus Tachikawaea gelatinosa
   score: 3.0
+  rank: 2
+  candidate_pool: 4
 - taxon_id: NCBITaxon:1462938
   source: PREGO
   taxon_label: Rickettsia tamurae subsp. buchneri
   score: 3.0
+  rank: 3
+  candidate_pool: 4
 - taxon_id: NCBITaxon:1704307
   source: PREGO
   taxon_label: Candidatus Xiphinematobacter sp. Idaho Grape
   score: 3.0
+  rank: 4
+  candidate_pool: 4
 curation_history:
-- timestamp: '2026-08-13T06:49:23Z'
+- timestamp: '2026-08-13T19:01:33Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

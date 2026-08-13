@@ -224,3 +224,53 @@ grounding may never be `CLASS` depth: asserting that a concept *is* a particular
 ontology term is always a per-item judgement. `just report` shows the three
 buckets — individually-examined term requests, class-swept, and wholly undecided
 — separately, so the sweep can never be mistaken for curation.
+
+
+## Taxon ranking, and what the evidence says about it
+
+Issue #8 observed that PREGO's scores for a large habitat all sit at the top of
+the range — 8,715 taxa for soil between 4.0000 and 4.0073 — and proposed ranking
+by evidence-channel breadth or direct-assertion count instead. Both proposals
+are testable, so `scripts/audit_taxon_ranking.py` tested them, and both turn out
+to be **worse**:
+
+| signal, across soil's 8,715 taxa | distinct values |
+|---|---:|
+| max PREGO score | **2,869** |
+| distinct evidence items | 4 |
+| direct assertions | 4 |
+| distinct channels | 2 |
+
+A signal taking four values cannot order 8,715 taxa. The score is the finest
+one available, and switching to any of the alternatives would replace a weak
+ordering with an almost totally flat one.
+
+Whether the score's ordering *means* anything is a separate question, and BacDive
+answers it. It reaches taxa by a completely different route — isolation source →
+strain → taxon, counted by strains actually isolated — so for the habitats both
+sources attest, the overlap between PREGO's top-25 and BacDive's taxa is a check
+no reasoning about the scores can substitute for. Against the baseline of what
+that overlap would be if PREGO's order were random:
+
+```
+top-25 hits: 25    expected by chance: 11.0    enrichment: 2.27x
+```
+
+So the ranking is **not arbitrary**, which is what the issue assumed. It is
+still weak, and the sample is six habitats, so this is evidence against
+replacing it rather than evidence that it is good.
+
+Three things follow, and all three are in the data rather than only here:
+
+* the ranking is kept, because the measurement says the alternatives are worse;
+* every taxon carries `rank` **and** `candidate_pool`, so "rank 1 of 8,715"
+  cannot be misread as "rank 1 of 12" — the record states its own weakness;
+* taxa asserted by *both* sources carry `corroborated_by` and are listed first.
+  56 entries qualify. Agreement between text-mining and strain-counting is not
+  one method agreeing with itself, which makes those the only entries in the
+  field with genuinely independent support, and the best `is_characteristic`
+  candidates for a curator.
+
+Re-run `python3 scripts/audit_taxon_ranking.py` after any upstream refresh; if
+the enrichment drops toward 1.0, the ranking has stopped carrying signal and
+should be revisited.

@@ -22,72 +22,104 @@ source_attestations:
   assertion_count: 19
   assertion_unit: STRAIN
 characteristic_taxa:
-- taxon_id: NCBITaxon:1091038
-  source: BACDIVE
-  taxon_label: Streptococcus thermophilus DSM 20617
-  association_count: 1
-- taxon_id: NCBITaxon:113557
-  source: BACDIVE
-  taxon_label: Lacticaseibacillus paracasei subsp. tolerans
-  association_count: 1
-- taxon_id: NCBITaxon:1220595
-  source: BACDIVE
-  taxon_label: Geobacillus kaustophilus NBRC 102445
-  association_count: 1
-- taxon_id: NCBITaxon:1255632
-  source: BACDIVE
-  taxon_label: Ornithinibacillus bavariensis CIP 109287
-  association_count: 1
-- taxon_id: NCBITaxon:1405
-  source: BACDIVE
-  taxon_label: Bacillus mycoides
-  association_count: 1
-- taxon_id: NCBITaxon:1423830
-  source: BACDIVE
-  taxon_label: Lacticaseibacillus paracasei subsp. tolerans DSM 20258
-  association_count: 1
-- taxon_id: NCBITaxon:1629
-  source: BACDIVE
-  taxon_label: Weissella viridescens
-  association_count: 1
 - taxon_id: NCBITaxon:1896336
   source: BACDIVE
   taxon_label: Citrobacter sp.
   association_count: 3
-- taxon_id: NCBITaxon:42895
-  source: BACDIVE
-  taxon_label: Enterobacter sp.
-  association_count: 1
-- taxon_id: NCBITaxon:549
-  source: BACDIVE
-  taxon_label: Pantoea agglomerans
-  association_count: 1
-- taxon_id: NCBITaxon:577
-  source: BACDIVE
-  taxon_label: Klebsiella terrigena
-  association_count: 1
-- taxon_id: NCBITaxon:600645
-  source: BACDIVE
-  taxon_label: Aeromonas piscicola
-  association_count: 1
-- taxon_id: NCBITaxon:615
-  source: BACDIVE
-  taxon_label: Serratia marcescens
-  association_count: 1
-- taxon_id: NCBITaxon:61646
-  source: BACDIVE
-  taxon_label: Lelliottia amnigena
-  association_count: 1
-- taxon_id: NCBITaxon:647
-  source: BACDIVE
-  taxon_label: Aeromonas sp.
-  association_count: 1
+  rank: 1
+  candidate_pool: 16
 - taxon_id: NCBITaxon:651
   source: BACDIVE
   taxon_label: Aeromonas media
   association_count: 2
+  rank: 2
+  candidate_pool: 16
+- taxon_id: NCBITaxon:1091038
+  source: BACDIVE
+  taxon_label: Streptococcus thermophilus DSM 20617
+  association_count: 1
+  rank: 3
+  candidate_pool: 16
+- taxon_id: NCBITaxon:113557
+  source: BACDIVE
+  taxon_label: Lacticaseibacillus paracasei subsp. tolerans
+  association_count: 1
+  rank: 4
+  candidate_pool: 16
+- taxon_id: NCBITaxon:1220595
+  source: BACDIVE
+  taxon_label: Geobacillus kaustophilus NBRC 102445
+  association_count: 1
+  rank: 5
+  candidate_pool: 16
+- taxon_id: NCBITaxon:1255632
+  source: BACDIVE
+  taxon_label: Ornithinibacillus bavariensis CIP 109287
+  association_count: 1
+  rank: 6
+  candidate_pool: 16
+- taxon_id: NCBITaxon:1405
+  source: BACDIVE
+  taxon_label: Bacillus mycoides
+  association_count: 1
+  rank: 7
+  candidate_pool: 16
+- taxon_id: NCBITaxon:1423830
+  source: BACDIVE
+  taxon_label: Lacticaseibacillus paracasei subsp. tolerans DSM 20258
+  association_count: 1
+  rank: 8
+  candidate_pool: 16
+- taxon_id: NCBITaxon:1629
+  source: BACDIVE
+  taxon_label: Weissella viridescens
+  association_count: 1
+  rank: 9
+  candidate_pool: 16
+- taxon_id: NCBITaxon:42895
+  source: BACDIVE
+  taxon_label: Enterobacter sp.
+  association_count: 1
+  rank: 10
+  candidate_pool: 16
+- taxon_id: NCBITaxon:549
+  source: BACDIVE
+  taxon_label: Pantoea agglomerans
+  association_count: 1
+  rank: 11
+  candidate_pool: 16
+- taxon_id: NCBITaxon:577
+  source: BACDIVE
+  taxon_label: Klebsiella terrigena
+  association_count: 1
+  rank: 12
+  candidate_pool: 16
+- taxon_id: NCBITaxon:600645
+  source: BACDIVE
+  taxon_label: Aeromonas piscicola
+  association_count: 1
+  rank: 13
+  candidate_pool: 16
+- taxon_id: NCBITaxon:615
+  source: BACDIVE
+  taxon_label: Serratia marcescens
+  association_count: 1
+  rank: 14
+  candidate_pool: 16
+- taxon_id: NCBITaxon:61646
+  source: BACDIVE
+  taxon_label: Lelliottia amnigena
+  association_count: 1
+  rank: 15
+  candidate_pool: 16
+- taxon_id: NCBITaxon:647
+  source: BACDIVE
+  taxon_label: Aeromonas sp.
+  association_count: 1
+  rank: 16
+  candidate_pool: 16
 curation_history:
-- timestamp: '2026-08-13T06:49:23Z'
+- timestamp: '2026-08-13T19:01:33Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'
