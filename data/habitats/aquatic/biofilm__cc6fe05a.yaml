@@ -1,0 +1,174 @@
+identifier: ENVO:00002034
+label: biofilm
+definition: A complex aggregation of microorganisms marked by the excretion of a protective
+  and adhesive matrix; usually adhering to a substratum.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Microfouling/Biofilm
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: biofilms
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:01000549
+- habitatmech:GOLD.3ec896865d
+- habitatmech:GOLD.4bd2954af9
+- habitatmech:GOLD.ec116f9a37
+source_attestations:
+- source: ENVIRONMENTS_TABLE
+  source_id: biofilm
+  source_label: biofilm
+  notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: GOLD
+  source_id: gold.ecosystem:8357
+  source_label: Microfouling/Biofilm
+  source_path: Environmental > Aquatic > Marine > Biofouling > Microfouling/Biofilm
+  mapping_predicate: skos:exactMatch
+- source: GOLD
+  source_id: gold.ecosystem:8359
+  source_label: Microfouling/Biofilm
+  source_path: Environmental > Aquatic > Freshwater > Biofouling > Microfouling/Biofilm
+  mapping_predicate: skos:exactMatch
+- source: GOLD
+  source_id: gold.ecosystem:8364
+  source_label: Microfouling/Biofilm
+  source_path: Environmental > Aquatic > Non-marine Saline and Alkaline > Biofouling
+    > Microfouling/Biofilm
+  mapping_predicate: skos:exactMatch
+- source: PREGO
+  source_id: ENVO:00002034
+  source_label: biofilm
+  assertion_count: 325
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+environmental_parameters:
+- parameter: GRADIENTS
+  qualitative_value: high
+  source: kg-microbe environments.csv (biofilm)
+- parameter: NUTRIENTS
+  qualitative_value: high
+  source: kg-microbe environments.csv (biofilm)
+- parameter: ORGANIC_MATTER
+  qualitative_value: high
+  source: kg-microbe environments.csv (biofilm)
+- parameter: SALINITY_VARIABILITY
+  qualitative_value: small
+  source: kg-microbe environments.csv (biofilm)
+- parameter: STRUCTURAL_COMPLEXITY
+  qualitative_value: medium
+  source: kg-microbe environments.csv (biofilm)
+- parameter: WATER_AVAILABILITY
+  qualitative_value: high
+  source: kg-microbe environments.csv (biofilm)
+characteristic_taxa:
+- taxon_id: NCBITaxon:1017
+  source: PREGO
+  taxon_label: Capnocytophaga gingivalis
+  score: 4.0
+- taxon_id: NCBITaxon:1018
+  source: PREGO
+  taxon_label: Capnocytophaga ochracea
+  score: 4.0
+- taxon_id: NCBITaxon:1019
+  source: PREGO
+  taxon_label: Capnocytophaga sputigena
+  score: 4.0
+- taxon_id: NCBITaxon:1085
+  source: PREGO
+  taxon_label: Rhodospirillum rubrum
+  score: 4.0
+- taxon_id: NCBITaxon:109328
+  source: PREGO
+  taxon_label: Leptotrichia trevisanii
+  score: 4.0
+- taxon_id: NCBITaxon:110639
+  source: PREGO
+  taxon_label: Arthrobacter sp. 'SMCC G984'
+  score: 4.0
+- taxon_id: NCBITaxon:1264
+  source: PREGO
+  taxon_label: Hominimerdicola alba
+  score: 4.0
+- taxon_id: NCBITaxon:1265
+  source: PREGO
+  taxon_label: Ruminococcus flavefaciens
+  score: 4.0
+- taxon_id: NCBITaxon:1270
+  source: PREGO
+  taxon_label: Micrococcus luteus
+  score: 4.0
+- taxon_id: NCBITaxon:1282
+  source: PREGO
+  taxon_label: Staphylococcus epidermidis
+  score: 4.0
+- taxon_id: NCBITaxon:129958
+  source: PREGO
+  taxon_label: Carboxydothermus hydrogenoformans
+  score: 4.0
+- taxon_id: NCBITaxon:1318
+  source: PREGO
+  taxon_label: Streptococcus parasanguinis
+  score: 4.0
+- taxon_id: NCBITaxon:1409
+  source: PREGO
+  taxon_label: 'Bacillus sp. (in: firmicutes)'
+  score: 4.0
+- taxon_id: NCBITaxon:1423814
+  source: PREGO
+  taxon_label: Limosilactobacillus vaginalis DSM 5837 = ATCC 49540
+  score: 4.0
+- taxon_id: NCBITaxon:1485
+  source: PREGO
+  taxon_label: Clostridium
+  score: 4.0
+- taxon_id: NCBITaxon:1512
+  source: PREGO
+  taxon_label: '[Clostridium] symbiosum'
+  score: 4.0
+- taxon_id: NCBITaxon:1526
+  source: PREGO
+  taxon_label: '[Clostridium] aminophilum'
+  score: 4.0
+- taxon_id: NCBITaxon:1527
+  source: PREGO
+  taxon_label: Anaerocolumna aminovalerica
+  score: 4.0
+- taxon_id: NCBITaxon:154046
+  source: PREGO
+  taxon_label: Hungatella hathewayi
+  score: 4.0
+- taxon_id: NCBITaxon:1550
+  source: PREGO
+  taxon_label: Clostridium subterminale
+  score: 4.0
+- taxon_id: NCBITaxon:157687
+  source: PREGO
+  taxon_label: Leptotrichia wadei
+  score: 4.0
+- taxon_id: NCBITaxon:158847
+  source: PREGO
+  taxon_label: Megamonas hypermegale
+  score: 4.0
+- taxon_id: NCBITaxon:1596
+  source: PREGO
+  taxon_label: Lactobacillus gasseri
+  score: 4.0
+- taxon_id: NCBITaxon:1623
+  source: PREGO
+  taxon_label: Ligilactobacillus ruminis
+  score: 4.0
+- taxon_id: NCBITaxon:165179
+  source: PREGO
+  taxon_label: Segatella copri
+  score: 4.0
+curation_history:
+- timestamp: '2026-08-13T06:49:23Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD,
+    PREGO. Grounding: EXACT.'

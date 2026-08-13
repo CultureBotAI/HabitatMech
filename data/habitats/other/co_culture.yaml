@@ -9,8 +9,33 @@ source_attestations:
   source_label: Co-culture
   assertion_count: 9
   assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:1306
+  source: BACDIVE
+  taxon_label: Streptococcus sp.
+  association_count: 1
+- taxon_id: NCBITaxon:136492
+  source: BACDIVE
+  taxon_label: Atopobacter phocae
+  association_count: 1
+- taxon_id: NCBITaxon:1524460
+  source: BACDIVE
+  taxon_label: Phaeodactylibacter xiamenensis
+  association_count: 1
+- taxon_id: NCBITaxon:1767
+  source: BACDIVE
+  taxon_label: Mycobacterium intracellulare
+  association_count: 1
+- taxon_id: NCBITaxon:2041036
+  source: BACDIVE
+  taxon_label: Corynebacterium gottingense
+  association_count: 2
+- taxon_id: NCBITaxon:29
+  source: BACDIVE
+  taxon_label: Myxococcales
+  association_count: 3
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'

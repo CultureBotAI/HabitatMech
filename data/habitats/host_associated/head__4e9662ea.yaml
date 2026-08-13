@@ -6,6 +6,9 @@ habitat_category: HOST_ASSOCIATED
 grounding_status: EXACT
 mapping_status: SEEDED
 synonyms:
+- synonym_text: Head/Cephalon
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
 - synonym_text: adult head
   synonym_type: EXACT_SYNONYM
   source: UBERON
@@ -17,6 +20,7 @@ synonyms:
   source: UBERON
 parent_habitats:
 - UBERON:0011676
+- habitatmech:GOLD.bd9662fadb
 - habitatmech:GOLD.dba2a83b95
 source_attestations:
 - source: GOLD
@@ -27,8 +31,14 @@ source_attestations:
   assertion_count: 26
   assertion_unit: ORGANISM
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: GOLD
+  source_id: gold.ecosystem:7304
+  source_label: Head/Cephalon
+  source_path: 'Host-associated > Arthropoda: Crustaceans > Whole body > Head/Cephalon'
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

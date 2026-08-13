@@ -10,6 +10,9 @@ synonyms:
 - synonym_text: Petroleum reservoir
   synonym_type: EXACT_SYNONYM
   source: GOLD
+- synonym_text: Shale gas/oil reservoir
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
 - synonym_text: oil and gas reservoir
   synonym_type: EXACT_SYNONYM
   source: ENVO
@@ -23,6 +26,7 @@ parent_habitats:
 - ENVO:00000446
 - ENVO:00002184
 - ENVO:01000964
+- habitatmech:GOLD.21222434e2
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3490
@@ -37,6 +41,12 @@ source_attestations:
   source_label: Petroleum reservoir
   source_path: Engineered > Wastewater > Industrial wastewater > Petroleum reservoir
   mapping_predicate: skos:closeMatch
+- source: GOLD
+  source_id: gold.ecosystem:7794
+  source_label: Shale gas/oil reservoir
+  source_path: Environmental > Aquatic > Deep subsurface > Shale gas/oil reservoir
+  mapping_predicate: skos:closeMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 - source: PREGO
   source_id: ENVO:00002185
   source_label: oil reservoir
@@ -146,7 +156,7 @@ characteristic_taxa:
   taxon_label: Halanaerobium salsuginis
   score: 3.0
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:

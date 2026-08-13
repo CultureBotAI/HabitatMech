@@ -13,8 +13,109 @@ source_attestations:
   assertion_unit: STRAIN
   notes: Upstream mapping targets a non-habitat ontology (PATO:0001430); kept as an
     xref.
+characteristic_taxa:
+- taxon_id: NCBITaxon:1008392
+  source: BACDIVE
+  taxon_label: Chitinispirillum alkaliphilum
+  association_count: 1
+- taxon_id: NCBITaxon:1227484
+  source: BACDIVE
+  taxon_label: Halorubrum saccharovorum DSM 1137
+  association_count: 1
+- taxon_id: NCBITaxon:1227493
+  source: BACDIVE
+  taxon_label: Natrialba hulunbeirensis JCM 10989
+  association_count: 1
+- taxon_id: NCBITaxon:1246445
+  source: BACDIVE
+  taxon_label: Nocardiopsis kunsanensis DSM 44524
+  association_count: 1
+- taxon_id: NCBITaxon:1454184
+  source: BACDIVE
+  taxon_label: Alkaliphilus namsaraevii
+  association_count: 1
+- taxon_id: NCBITaxon:1586233
+  source: BACDIVE
+  taxon_label: Halomicrobium urmianum
+  association_count: 1
+- taxon_id: NCBITaxon:1721088
+  source: BACDIVE
+  taxon_label: Maridesulfovibrio salinus
+  association_count: 1
+- taxon_id: NCBITaxon:1807133
+  source: BACDIVE
+  taxon_label: Natronospira proteinivora
+  association_count: 1
+- taxon_id: NCBITaxon:1812810
+  source: BACDIVE
+  taxon_label: Rhodohalobacter halophilus
+  association_count: 1
+- taxon_id: NCBITaxon:1871618
+  source: BACDIVE
+  taxon_label: Gracilibacillus sp.
+  association_count: 1
+- taxon_id: NCBITaxon:1872700
+  source: BACDIVE
+  taxon_label: Virgibacillus sp.
+  association_count: 2
+- taxon_id: NCBITaxon:1874361
+  source: BACDIVE
+  taxon_label: Idiomarina sp.
+  association_count: 1
+- taxon_id: NCBITaxon:1926584
+  source: BACDIVE
+  taxon_label: Nitrincola sp.
+  association_count: 2
+- taxon_id: NCBITaxon:2024860
+  source: BACDIVE
+  taxon_label: Spongiibacter sp.
+  association_count: 1
+- taxon_id: NCBITaxon:2183934
+  source: BACDIVE
+  taxon_label: Marinospirillum sp.
+  association_count: 3
+- taxon_id: NCBITaxon:263724
+  source: BACDIVE
+  taxon_label: Idiomarina ramblicola
+  association_count: 1
+- taxon_id: NCBITaxon:2746
+  source: BACDIVE
+  taxon_label: Halomonas elongata
+  association_count: 1
+- taxon_id: NCBITaxon:393481
+  source: BACDIVE
+  taxon_label: Roseinatronobacter monicus
+  association_count: 1
+- taxon_id: NCBITaxon:411959
+  source: BACDIVE
+  taxon_label: Virgibacillus chiguensis
+  association_count: 1
+- taxon_id: NCBITaxon:488938
+  source: BACDIVE
+  taxon_label: Desulfonatronospira delicata
+  association_count: 1
+- taxon_id: NCBITaxon:555779
+  source: BACDIVE
+  taxon_label: Desulfonatronospira thiodismutans ASO3-1
+  association_count: 1
+- taxon_id: NCBITaxon:589865
+  source: BACDIVE
+  taxon_label: Desulfurivibrio alkaliphilus AHT 2
+  association_count: 1
+- taxon_id: NCBITaxon:617000
+  source: BACDIVE
+  taxon_label: Desulfonatronovibrio thiodismutans
+  association_count: 2
+- taxon_id: NCBITaxon:617001
+  source: BACDIVE
+  taxon_label: Desulfonatronum thioautotrophicum
+  association_count: 1
+- taxon_id: NCBITaxon:83428
+  source: BACDIVE
+  taxon_label: uncultured Bacillus sp.
+  association_count: 5
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: NOT_APPLICABLE.'

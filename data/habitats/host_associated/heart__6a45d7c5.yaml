@@ -1,0 +1,43 @@
+identifier: UBERON:0000948
+label: heart
+definition: A myogenic muscular circulatory organ found in the vertebrate cardiovascular
+  system composed of chambers of cardiac muscle. It is the primary circulatory organ.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Heart/Dorsal vessel
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: branchial heart
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: cardium
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: chambered heart
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: vertebrate heart
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0004120
+- UBERON:0005181
+- UBERON:0007100
+- UBERON:0010314
+- habitatmech:GOLD.2a948ee511
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7400
+  source_label: Heart/Dorsal vessel
+  source_path: 'Host-associated > Arthropoda: Insects > Circulatory system > Heart/Dorsal
+    vessel'
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-13T06:49:23Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

@@ -19,8 +19,97 @@ source_attestations:
   mapping_predicate: skos:closeMatch
   assertion_count: 33
   assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:1035194
+  source: BACDIVE
+  taxon_label: Aggregatibacter actinomycetemcomitans Y4
+  association_count: 1
+- taxon_id: NCBITaxon:1159213
+  source: BACDIVE
+  taxon_label: Peptostreptococcus canis
+  association_count: 1
+- taxon_id: NCBITaxon:1236517
+  source: BACDIVE
+  taxon_label: Prevotella fusca JCM 17724
+  association_count: 1
+- taxon_id: NCBITaxon:1501329
+  source: BACDIVE
+  taxon_label: Oribacterium parvum
+  association_count: 1
+- taxon_id: NCBITaxon:1501332
+  source: BACDIVE
+  taxon_label: Oribacterium asaccharolyticum
+  association_count: 1
+- taxon_id: NCBITaxon:1655
+  source: BACDIVE
+  taxon_label: Actinomyces naeslundii
+  association_count: 6
+- taxon_id: NCBITaxon:1656
+  source: BACDIVE
+  taxon_label: Actinomyces viscosus
+  association_count: 4
+- taxon_id: NCBITaxon:2
+  source: BACDIVE
+  taxon_label: Bacteria
+  association_count: 1
+- taxon_id: NCBITaxon:28112
+  source: BACDIVE
+  taxon_label: Tannerella forsythia
+  association_count: 1
+- taxon_id: NCBITaxon:28113
+  source: BACDIVE
+  taxon_label: Prevotella heparinolytica
+  association_count: 1
+- taxon_id: NCBITaxon:45243
+  source: BACDIVE
+  taxon_label: Capnocytophaga haemolytica
+  association_count: 1
+- taxon_id: NCBITaxon:502
+  source: BACDIVE
+  taxon_label: Kingella denitrificans
+  association_count: 1
+- taxon_id: NCBITaxon:566549
+  source: BACDIVE
+  taxon_label: Corynebacterium matruchotii ATCC 33806
+  association_count: 1
+- taxon_id: NCBITaxon:629741
+  source: BACDIVE
+  taxon_label: Kingella oralis ATCC 51147
+  association_count: 1
+- taxon_id: NCBITaxon:641143
+  source: BACDIVE
+  taxon_label: Capnocytophaga granulosa ATCC 51502
+  association_count: 1
+- taxon_id: NCBITaxon:651822
+  source: BACDIVE
+  taxon_label: Fretibacterium fastidiosum
+  association_count: 1
+- taxon_id: NCBITaxon:671218
+  source: BACDIVE
+  taxon_label: Alloprevotella rava
+  association_count: 1
+- taxon_id: NCBITaxon:688246
+  source: BACDIVE
+  taxon_label: Hallella multisaccharivorax DSM 17128
+  association_count: 1
+- taxon_id: NCBITaxon:796937
+  source: BACDIVE
+  taxon_label: Peptoanaerobacter stomatis
+  association_count: 4
+- taxon_id: NCBITaxon:888061
+  source: BACDIVE
+  taxon_label: Desulfomicrobium orale DSM 12838
+  association_count: 1
+- taxon_id: NCBITaxon:888743
+  source: BACDIVE
+  taxon_label: Prevotella multiformis DSM 16608
+  association_count: 1
+- taxon_id: NCBITaxon:997349
+  source: BACDIVE
+  taxon_label: Olsenella profusa DSM 13989
+  association_count: 1
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

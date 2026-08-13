@@ -1,0 +1,32 @@
+identifier: UBERON:0007365
+label: rumen
+definition: The first compartment of the ruminant stomach. It lies on the left side
+  of the body, occupying the whole of the left side of the abdomen and even stretching
+  across the median plane of the body to the right side. It is capacious, divided
+  into an upper and a lower sac, each of which has a blind sac at its posterior extremity.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Paunch/P3 segment
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: paunch
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0011954
+- habitatmech:GOLD.50722c7871
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7159
+  source_label: Paunch/P3 segment
+  source_path: 'Host-associated > Arthropoda: Insects > Digestive system > Hindgut
+    > Paunch/P3 segment'
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-13T06:49:23Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

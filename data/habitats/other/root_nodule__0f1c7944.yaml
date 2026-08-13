@@ -1,0 +1,52 @@
+identifier: ENVO:01000164
+label: root nodule
+definition: Root nodules occur on the roots of plants that associate with symbiotic
+  nitrogen-fixing bacteria.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:01000162
+source_attestations:
+- source: ENVIRONMENTS_TABLE
+  source_id: host_plant_rootnodule
+  source_label: host_plant_rootnodule
+  notes: Physicochemical parameter bands from kg-microbe's environment table.
+environmental_parameters:
+- parameter: GRADIENTS
+  qualitative_value: high
+  source: kg-microbe environments.csv (host_plant_rootnodule)
+- parameter: NUTRIENTS
+  qualitative_value: high
+  source: kg-microbe environments.csv (host_plant_rootnodule)
+- parameter: ORGANIC_MATTER
+  qualitative_value: high
+  source: kg-microbe environments.csv (host_plant_rootnodule)
+- parameter: PH
+  qualitative_value: medium
+  source: kg-microbe environments.csv (host_plant_rootnodule)
+- parameter: PRESSURE
+  qualitative_value: low
+  source: kg-microbe environments.csv (host_plant_rootnodule)
+- parameter: SALINITY_VARIABILITY
+  qualitative_value: small
+  source: kg-microbe environments.csv (host_plant_rootnodule)
+- parameter: STRUCTURAL_COMPLEXITY
+  qualitative_value: high
+  source: kg-microbe environments.csv (host_plant_rootnodule)
+- parameter: TEMPERATURE_VARIABILITY
+  qualitative_value: medium
+  source: kg-microbe environments.csv (host_plant_rootnodule)
+- parameter: WATER_AVAILABILITY
+  qualitative_value: high
+  source: kg-microbe environments.csv (host_plant_rootnodule)
+- parameter: WATER_VARIABILITY
+  qualitative_value: permanently wet
+  source: kg-microbe environments.csv (host_plant_rootnodule)
+curation_history:
+- timestamp: '2026-08-13T06:49:23Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE. Grounding:
+    EXACT.'

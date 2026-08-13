@@ -10,8 +10,93 @@ source_attestations:
   mapping_predicate: skos:closeMatch
   assertion_count: 23
   assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:106590
+  source: BACDIVE
+  taxon_label: Cupriavidus necator
+  association_count: 1
+- taxon_id: NCBITaxon:1277350
+  source: BACDIVE
+  taxon_label: Geobacter sp. DSM 9736
+  association_count: 1
+- taxon_id: NCBITaxon:1293038
+  source: BACDIVE
+  taxon_label: Methanosarcina mazei JCM 9314
+  association_count: 1
+- taxon_id: NCBITaxon:1293039
+  source: BACDIVE
+  taxon_label: Methanobrevibacter arboriphilus JCM 9315
+  association_count: 1
+- taxon_id: NCBITaxon:1293042
+  source: BACDIVE
+  taxon_label: Methanoculleus chikugoensis JCM 10825
+  association_count: 1
+- taxon_id: NCBITaxon:1411316
+  source: BACDIVE
+  taxon_label: Pedobacter sp.
+  association_count: 3
+- taxon_id: NCBITaxon:1648871
+  source: BACDIVE
+  taxon_label: Mycolicibacterium oryzae
+  association_count: 1
+- taxon_id: NCBITaxon:1735038
+  source: BACDIVE
+  taxon_label: Oryzomicrobium terrae
+  association_count: 1
+- taxon_id: NCBITaxon:1742358
+  source: BACDIVE
+  taxon_label: Cytobacillus praedii
+  association_count: 1
+- taxon_id: NCBITaxon:1871047
+  source: BACDIVE
+  taxon_label: Chryseobacterium sp.
+  association_count: 1
+- taxon_id: NCBITaxon:1873897
+  source: BACDIVE
+  taxon_label: Cupriavidus sp.
+  association_count: 1
+- taxon_id: NCBITaxon:1955624
+  source: BACDIVE
+  taxon_label: Propionicimonas ferrireducens
+  association_count: 1
+- taxon_id: NCBITaxon:2047734
+  source: BACDIVE
+  taxon_label: Paenibacillus azotifigens
+  association_count: 1
+- taxon_id: NCBITaxon:2057004
+  source: BACDIVE
+  taxon_label: Paraburkholderia azotifigens
+  association_count: 1
+- taxon_id: NCBITaxon:297536
+  source: BACDIVE
+  taxon_label: Oryzihumus leptocrescens
+  association_count: 1
+- taxon_id: NCBITaxon:301154
+  source: BACDIVE
+  taxon_label: Sphingomonas oligophenolica
+  association_count: 1
+- taxon_id: NCBITaxon:409290
+  source: BACDIVE
+  taxon_label: Arthrobacter oryzae
+  association_count: 1
+- taxon_id: NCBITaxon:409291
+  source: BACDIVE
+  taxon_label: Arthrobacter humicola
+  association_count: 1
+- taxon_id: NCBITaxon:663606
+  source: BACDIVE
+  taxon_label: Actinomycetospora chibensis
+  association_count: 1
+- taxon_id: NCBITaxon:663607
+  source: BACDIVE
+  taxon_label: Actinomycetospora straminea
+  association_count: 1
+- taxon_id: NCBITaxon:663609
+  source: BACDIVE
+  taxon_label: Actinomycetospora cinnamomea
+  association_count: 1
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

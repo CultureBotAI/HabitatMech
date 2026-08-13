@@ -13,8 +13,108 @@ source_attestations:
   assertion_unit: STRAIN
   notes: Upstream mapping targets a non-habitat ontology (NCBITaxon:9979); kept as
     an xref.
+characteristic_taxa:
+- taxon_id: NCBITaxon:1077256
+  source: BACDIVE
+  taxon_label: Methanosphaera cuniculi
+  association_count: 1
+- taxon_id: NCBITaxon:184914
+  source: BACDIVE
+  taxon_label: Corallococcus coralloides
+  association_count: 24
+- taxon_id: NCBITaxon:1872627
+  source: BACDIVE
+  taxon_label: Archangium sp.
+  association_count: 9
+- taxon_id: NCBITaxon:192066
+  source: BACDIVE
+  taxon_label: Neisseria sp.
+  association_count: 3
+- taxon_id: NCBITaxon:2081794
+  source: BACDIVE
+  taxon_label: Mannheimia sp.
+  association_count: 2
+- taxon_id: NCBITaxon:28091
+  source: BACDIVE
+  taxon_label: Neisseria weaveri
+  association_count: 2
+- taxon_id: NCBITaxon:29
+  source: BACDIVE
+  taxon_label: Myxococcales
+  association_count: 3
+- taxon_id: NCBITaxon:33
+  source: BACDIVE
+  taxon_label: Myxococcus fulvus
+  association_count: 32
+- taxon_id: NCBITaxon:34
+  source: BACDIVE
+  taxon_label: Myxococcus xanthus
+  association_count: 17
+- taxon_id: NCBITaxon:38
+  source: BACDIVE
+  taxon_label: Archangium disciforme
+  association_count: 2
+- taxon_id: NCBITaxon:394091
+  source: BACDIVE
+  taxon_label: Cystobacter badius
+  association_count: 2
+- taxon_id: NCBITaxon:394092
+  source: BACDIVE
+  taxon_label: Hyalangium gracile
+  association_count: 2
+- taxon_id: NCBITaxon:43
+  source: BACDIVE
+  taxon_label: Cystobacter fuscus
+  association_count: 3
+- taxon_id: NCBITaxon:54
+  source: BACDIVE
+  taxon_label: Nannocystis exedens
+  association_count: 9
+- taxon_id: NCBITaxon:56
+  source: BACDIVE
+  taxon_label: Sorangium cellulosum
+  association_count: 5
+- taxon_id: NCBITaxon:57
+  source: BACDIVE
+  association_count: 4
+- taxon_id: NCBITaxon:633
+  source: BACDIVE
+  taxon_label: Yersinia pseudotuberculosis
+  association_count: 4
+- taxon_id: NCBITaxon:717
+  source: BACDIVE
+  taxon_label: Actinobacillus capsulatus
+  association_count: 6
+- taxon_id: NCBITaxon:71864
+  source: BACDIVE
+  taxon_label: Herpetosiphon sp.
+  association_count: 2
+- taxon_id: NCBITaxon:78344
+  source: BACDIVE
+  taxon_label: Bifidobacterium pullorum subsp. gallinarum
+  association_count: 2
+- taxon_id: NCBITaxon:83449
+  source: BACDIVE
+  taxon_label: Cystobacter ferrugineus
+  association_count: 2
+- taxon_id: NCBITaxon:83456
+  source: BACDIVE
+  taxon_label: Myxococcus virescens
+  association_count: 18
+- taxon_id: NCBITaxon:83460
+  source: BACDIVE
+  taxon_label: Allostigmatella erecta
+  association_count: 13
+- taxon_id: NCBITaxon:83462
+  source: BACDIVE
+  taxon_label: Corallococcus exiguus
+  association_count: 12
+- taxon_id: NCBITaxon:85402
+  source: BACDIVE
+  taxon_label: Mannheimia granulomatis
+  association_count: 3
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: NOT_APPLICABLE.'

@@ -138,6 +138,13 @@ ENVO_CATEGORY_ANCHORS: list[tuple[str, str]] = [
     ("ENVO:00002007", "TERRESTRIAL"),  # sediment (aquatic anchors are tried first)
     ("ENVO:00003074", "ENGINEERED"),   # manufactured product
     ("ENVO:01001813", "ENGINEERED"),   # construction
+    # Added from the observed ancestry of the terms that were falling through to
+    # OTHER, rather than guessed (#11). Aquatic anchors stay above the
+    # terrestrial ones, so a hydrographic feature is not caught by `landform`.
+    ("ENVO:00000012", "AQUATIC"),      # hydrographic feature
+    ("ENVO:01001199", "TERRESTRIAL"),  # terrestrial environmental zone
+    ("ENVO:01001886", "TERRESTRIAL"),  # landform
+    ("ENVO:00000191", "TERRESTRIAL"),  # solid astronomical body part
 ]
 
 # Ontology prefix -> category, for terms with no GOLD path and no ENVO anchor.
@@ -467,11 +474,57 @@ def leaf_claimants(rows: list[dict[str, str]]) -> dict[str, str | None]:
     return claimants
 
 
+def composed_claimants(rows: list[dict[str, str]]) -> dict[str, str | None]:
+    """Which GOLD path may take a term matched on its *composed* two-level label.
+
+    The composed route used to skip this check entirely, on the reasoning that
+    the composed label already carries its context (#15). That holds when the
+    paths sharing it differ only by HOST — UBERON:0001977 *is* blood serum
+    whether the host is human or a bird, and the host belongs to the taxon — but
+    not when they differ by SETTING. Three GOLD paths compose to "anaerobic
+    sludge" under plain Bioreactor, DHS reactor and MBR; those are different
+    engineered environments, and merging them is the same conflation the leaf
+    rule exists to prevent.
+
+    GOLD's own top level separates the two cases: under Host-associated the
+    differing prefix is a clade, everywhere else it is a setting. So paths that
+    are all Host-associated still merge, and the rest fall back to
+    shallowest-claims-it with ties left unclaimed.
+    """
+    by_composed: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for row in rows:
+        levels = [row[lvl] for lvl in GOLD_LEVELS if row[lvl]]
+        if len(levels) < 2:
+            continue
+        by_composed[norm_label(" ".join(levels[-2:]))].append(row)
+
+    claimants: dict[str, str | None] = {}
+    for composed, group in by_composed.items():
+        if len(group) == 1:
+            claimants[composed] = group[0]["canonical_path"]
+            continue
+        if all(r["canonical_path"].startswith("Host-associated") for r in group):
+            # Host clade differences are immaterial to the habitat term; every
+            # path may take it and they merge, as feces and blood serum do.
+            claimants[composed] = ANY_PATH_MAY_CLAIM
+            continue
+        shallowest = min(int(r["depth"]) for r in group)
+        tied = [r for r in group if int(r["depth"]) == shallowest]
+        claimants[composed] = tied[0]["canonical_path"] if len(tied) == 1 else None
+    return claimants
+
+
+# Sentinel: every path sharing this composed label may claim the term, because
+# they differ only by host clade and so denote the same habitat.
+ANY_PATH_MAY_CLAIM = "*"
+
+
 def resolve_gold(
     row: dict[str, str],
     ontology: OntologyIndex,
     mapping: dict[str, dict[str, str]],
     claimants: dict[str, str | None],
+    composed_claim: dict[str, str | None] | None = None,
 ) -> Resolution:
     levels = [row[lvl] for lvl in GOLD_LEVELS if row[lvl]]
     leaf = norm_label(row["leaf_label"])
@@ -494,13 +547,23 @@ def resolve_gold(
     # bioreactor types is a weaker case than the anatomical ones, and nothing
     # here distinguishes "prefix context immaterial" from "prefix context
     # material". Tracked in issue #15.
-    if composed and composed in ontology.by_label:
+    composed_claim = composed_claim or {}
+    may_claim_composed = composed_claim.get(composed) in (
+        ANY_PATH_MAY_CLAIM,
+        row["canonical_path"],
+    )
+    for index, status, predicate, route in (
+        (ontology.by_label, "EXACT", "skos:exactMatch", "gold_composed_label"),
+        (ontology.by_synonym, "CLOSE", "skos:closeMatch", "gold_composed_synonym"),
+    ):
+        if not composed or composed not in index:
+            continue
+        if may_claim_composed:
+            return Resolution(index[composed], status, predicate, route=route)
         return Resolution(
-            ontology.by_label[composed], "EXACT", "skos:exactMatch", route="gold_composed_label"
+            minted, "NARROW", "skos:narrowMatch", extra_parents=[index[composed]],
+            route=f"gold_narrower_than_{route}",
         )
-    if composed and composed in ontology.by_synonym:
-        return Resolution(ontology.by_synonym[composed], "CLOSE", "skos:closeMatch",
-                          route="gold_composed_synonym")
 
     matched = ontology.by_label.get(leaf) or ontology.by_synonym.get(leaf)
     if matched:
@@ -561,12 +624,13 @@ def ingest_gold(
     decisions: dict[str, Decision] | None = None,
 ) -> dict[str, str]:
     claimants = leaf_claimants(rows)
+    composed_claim = composed_claimants(rows)
     path_to_identifier: dict[str, str] = {}
 
     decisions = decisions or {}
     for row in rows:
         res = apply_decision(
-            resolve_gold(row, store.ontology, mapping, claimants),
+            resolve_gold(row, store.ontology, mapping, claimants, composed_claim),
             mint("GOLD", row["canonical_path"]),
             decisions,
         )
@@ -577,10 +641,17 @@ def ingest_gold(
         path_to_identifier[row["canonical_path"]] = res.identifier
 
         levels = [row[lvl] for lvl in GOLD_LEVELS if row[lvl]]
+        # Authoritative only when GOLD actually resolved a category. Falling
+        # through to OTHER is the *absence* of an answer, not a curated one, and
+        # treating it as authoritative let three detached GOLD root nodes with 0
+        # assertions ("Sediment", "Mid stream", "Low land river systems") pin
+        # real records to OTHER — ENVO:00002007 sediment sat in other/ despite
+        # being an explicit TERRESTRIAL anchor (#11).
         category = GOLD_CATEGORY_BY_CATEGORY.get(
             (levels[0], levels[1]) if len(levels) >= 2 else ("", "")
-        ) or GOLD_CATEGORY_BY_ECOSYSTEM.get(levels[0] if levels else "") or "OTHER"
-        store.set_category(concept, category, authoritative=True)
+        ) or GOLD_CATEGORY_BY_ECOSYSTEM.get(levels[0] if levels else "")
+        if category:
+            store.set_category(concept, category, authoritative=True)
 
         concept.add_synonym(row["leaf_label"], "EXACT_SYNONYM", "GOLD")
         concept.parents.update(res.extra_parents)
@@ -629,8 +700,12 @@ def ingest_bacdive(
     mapping,
     routes: Counter,
     decisions: dict[str, Decision] | None = None,
+    taxa_rows: list[dict[str, str]] | None = None,
 ) -> None:
     decisions = decisions or {}
+    taxa_by_source: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for taxon_row in taxa_rows or []:
+        taxa_by_source[taxon_row["bacdive_id"]].append(taxon_row)
     for row in rows:
         res = apply_decision(
             resolve_bacdive(row, mapping), mint("BACDIVE", row["bacdive_id"]), decisions
@@ -668,6 +743,20 @@ def ingest_bacdive(
                 f"({', '.join(res.extra_xrefs)}); kept as an xref."
             )
         concept.attestations.append(attestation)
+
+        # Taxa reached by the isolation-source -> strain -> taxon join. Counted
+        # by distinct strain, so unlike PREGO's near-tied scores (#8) the
+        # ranking discriminates: 400 strains beats 1.
+        for taxon_row in taxa_by_source.get(row["bacdive_id"], []):
+            taxon_id = taxon_row["taxon_id"]
+            if not taxon_id.startswith("NCBITaxon:") or taxon_id in concept.taxa:
+                continue
+            entry: dict[str, Any] = {"taxon_id": taxon_id, "source": "BACDIVE"}
+            if taxon_row.get("taxon_label"):
+                entry["taxon_label"] = taxon_row["taxon_label"]
+            with contextlib.suppress(KeyError, ValueError):
+                entry["association_count"] = int(taxon_row["strain_count"])
+            concept.taxa[taxon_id] = entry
 
 
 def ingest_prego(
@@ -778,8 +867,24 @@ def ingest_parameters(store: ConceptStore, rows: list[dict[str, str]], stats: Co
         identifier = term_ids[0]
         concept = store.concepts.get(identifier)
         if concept is None:
-            stats["parameter_rows_skipped_unknown_concept"] += 1
-            continue
+            # The term is real and habitat-shaped but no source vocabulary
+            # attested it, so no concept exists yet. Create one rather than
+            # dropping the parameters: the environment table is itself a source
+            # of habitats, not merely an annotation layer on other sources, and
+            # treating it as the latter is why only 29 records carried
+            # parameters (#13).
+            if identifier.split(":", 1)[0] not in HABITAT_PREFIXES:
+                stats["parameter_rows_skipped_non_habitat_term"] += 1
+                continue
+            if identifier not in store.ontology.terms:
+                stats["parameter_rows_skipped_unknown_term"] += 1
+                continue
+            concept = store.get(identifier, store.ontology.label(identifier), "EXACT")
+            concept.source_concepts += 1
+            store.set_category(
+                concept, infer_category(identifier, store.ontology), authoritative=False
+            )
+            stats["concepts_created_from_parameter_table"] += 1
         parameter = parameter_names.get(row["parameter"])
         if parameter is None:
             stats["parameter_rows_skipped_unknown_axis"] += 1
@@ -1025,7 +1130,25 @@ def find_stale_files(expected: set[Path]) -> list[Path]:
     return sorted(p for p in HABITATS_DIR.rglob("*.yaml") if p not in expected)
 
 
-SEED_TIMESTAMP = "2026-08-12T00:00:00Z"
+def _seed_timestamp() -> str:
+    """When the data this corpus is built from was extracted.
+
+    Taken from data/raw/MANIFEST.yaml rather than now(): the corpus must be
+    byte-reproducible, so a wall-clock stamp would make every re-seed a
+    3187-file diff. A frozen literal achieved that too, but lied — a re-seed in
+    six months would assert the corpus was seeded on a date it was not (#3).
+    The manifest's extracted_at is the honest answer to "when is this data
+    from", and it changes only when the data does.
+    """
+    manifest = RAW_DIR / "MANIFEST.yaml"
+    if manifest.exists():
+        for line in manifest.read_text(encoding="utf-8").splitlines():
+            if line.startswith("extracted_at:"):
+                return line.split(":", 1)[1].strip().strip("'\"")
+    return "1970-01-01T00:00:00Z"
+
+
+SEED_TIMESTAMP = _seed_timestamp()
 
 
 def break_parent_cycles(concepts: list[Concept], ontology: OntologyIndex) -> int:
@@ -1167,7 +1290,8 @@ def build_corpus() -> Corpus:
     stats["curation_decisions_loaded"] = len(decisions)
 
     ingest_gold(store, gold_rows, mapping, routes, decisions)
-    ingest_bacdive(store, bacdive_rows, mapping, routes, decisions)
+    ingest_bacdive(store, bacdive_rows, mapping, routes, decisions,
+                   taxa_rows=read_tsv("bacdive_source_taxa.tsv"))
     ingest_prego(store, prego_rows, prego_taxa, routes, decisions)
     ingest_parameters(store, parameter_rows, stats)
 

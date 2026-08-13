@@ -1,0 +1,59 @@
+identifier: ENVO:01001041
+label: fungi-associated environment
+definition: An environmental system determined by a fungal structure.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: fungus environment
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: fungus-associated environment
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:01001000
+- ENVO:2100000
+source_attestations:
+- source: ENVIRONMENTS_TABLE
+  source_id: host_fungus
+  source_label: host_fungus
+  notes: Physicochemical parameter bands from kg-microbe's environment table.
+environmental_parameters:
+- parameter: GRADIENTS
+  qualitative_value: high
+  source: kg-microbe environments.csv (host_fungus)
+- parameter: NUTRIENTS
+  qualitative_value: high
+  source: kg-microbe environments.csv (host_fungus)
+- parameter: ORGANIC_MATTER
+  qualitative_value: high
+  source: kg-microbe environments.csv (host_fungus)
+- parameter: PRESSURE
+  qualitative_value: low
+  source: kg-microbe environments.csv (host_fungus)
+- parameter: SALINITY
+  qualitative_value: low
+  source: kg-microbe environments.csv (host_fungus)
+- parameter: SALINITY_VARIABILITY
+  qualitative_value: small
+  source: kg-microbe environments.csv (host_fungus)
+- parameter: STRUCTURAL_COMPLEXITY
+  qualitative_value: high
+  source: kg-microbe environments.csv (host_fungus)
+- parameter: TEMPERATURE_VARIABILITY
+  qualitative_value: medium
+  source: kg-microbe environments.csv (host_fungus)
+- parameter: WATER_AVAILABILITY
+  qualitative_value: high
+  source: kg-microbe environments.csv (host_fungus)
+- parameter: WATER_VARIABILITY
+  qualitative_value: permanently wet
+  source: kg-microbe environments.csv (host_fungus)
+curation_history:
+- timestamp: '2026-08-13T06:49:23Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE. Grounding:
+    EXACT.'

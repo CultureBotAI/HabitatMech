@@ -39,8 +39,109 @@ source_attestations:
   mapping_predicate: skos:exactMatch
   assertion_count: 2
   assertion_unit: ORGANISM
+characteristic_taxa:
+- taxon_id: NCBITaxon:1076331
+  source: BACDIVE
+  taxon_label: Arsenicicoccus dermatophilus
+  association_count: 2
+- taxon_id: NCBITaxon:1270
+  source: BACDIVE
+  taxon_label: Micrococcus luteus
+  association_count: 3
+- taxon_id: NCBITaxon:1280
+  source: BACDIVE
+  taxon_label: Staphylococcus aureus
+  association_count: 6
+- taxon_id: NCBITaxon:1282
+  source: BACDIVE
+  taxon_label: Staphylococcus epidermidis
+  association_count: 4
+- taxon_id: NCBITaxon:1283
+  source: BACDIVE
+  taxon_label: Staphylococcus haemolyticus
+  association_count: 3
+- taxon_id: NCBITaxon:1286
+  source: BACDIVE
+  taxon_label: Staphylococcus simulans
+  association_count: 3
+- taxon_id: NCBITaxon:1288
+  source: BACDIVE
+  taxon_label: Staphylococcus xylosus
+  association_count: 3
+- taxon_id: NCBITaxon:1292
+  source: BACDIVE
+  taxon_label: Staphylococcus warneri
+  association_count: 3
+- taxon_id: NCBITaxon:1293
+  source: BACDIVE
+  taxon_label: Staphylococcus gallinarum
+  association_count: 2
+- taxon_id: NCBITaxon:1296
+  source: BACDIVE
+  taxon_label: Mammaliicoccus sciuri
+  association_count: 2
+- taxon_id: NCBITaxon:131110
+  source: BACDIVE
+  taxon_label: Schaalia radingae
+  association_count: 2
+- taxon_id: NCBITaxon:131111
+  source: BACDIVE
+  taxon_label: Schaalia turicensis
+  association_count: 2
+- taxon_id: NCBITaxon:1314
+  source: BACDIVE
+  taxon_label: Streptococcus pyogenes
+  association_count: 2
+- taxon_id: NCBITaxon:145391
+  source: BACDIVE
+  taxon_label: Staphylococcus hominis subsp. hominis
+  association_count: 2
+- taxon_id: NCBITaxon:1622
+  source: BACDIVE
+  taxon_label: Ligilactobacillus murinus
+  association_count: 2
+- taxon_id: NCBITaxon:1648
+  source: BACDIVE
+  taxon_label: Erysipelothrix rhusiopathiae
+  association_count: 2
+- taxon_id: NCBITaxon:1655
+  source: BACDIVE
+  taxon_label: Actinomyces naeslundii
+  association_count: 2
+- taxon_id: NCBITaxon:1656
+  source: BACDIVE
+  taxon_label: Actinomyces viscosus
+  association_count: 22
+- taxon_id: NCBITaxon:1747
+  source: BACDIVE
+  taxon_label: Cutibacterium acnes
+  association_count: 3
+- taxon_id: NCBITaxon:1863
+  source: BACDIVE
+  taxon_label: Dermatophilus congolensis
+  association_count: 6
+- taxon_id: NCBITaxon:2047
+  source: BACDIVE
+  taxon_label: Rothia dentocariosa
+  association_count: 3
+- taxon_id: NCBITaxon:283734
+  source: BACDIVE
+  taxon_label: Staphylococcus pseudintermedius
+  association_count: 5
+- taxon_id: NCBITaxon:29382
+  source: BACDIVE
+  taxon_label: Staphylococcus cohnii
+  association_count: 3
+- taxon_id: NCBITaxon:498
+  source: BACDIVE
+  taxon_label: Psychrobacter immobilis
+  association_count: 3
+- taxon_id: NCBITaxon:69969
+  source: BACDIVE
+  taxon_label: Macrococcus carouselicus
+  association_count: 3
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD. Grounding:

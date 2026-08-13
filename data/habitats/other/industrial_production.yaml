@@ -9,8 +9,108 @@ source_attestations:
   source_label: Industrial-production
   assertion_count: 147
   assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:105219
+  source: BACDIVE
+  taxon_label: Ralstonia mannitolilytica
+  association_count: 2
+- taxon_id: NCBITaxon:105229
+  source: BACDIVE
+  taxon_label: Neobacillus fumarioli
+  association_count: 1
+- taxon_id: NCBITaxon:1073081
+  source: BACDIVE
+  association_count: 1
+- taxon_id: NCBITaxon:1121918
+  source: BACDIVE
+  taxon_label: Geopsychrobacter electrodiphilus DSM 16401
+  association_count: 1
+- taxon_id: NCBITaxon:1122198
+  source: BACDIVE
+  taxon_label: Marinobacterium iners DSM 11526
+  association_count: 1
+- taxon_id: NCBITaxon:1123021
+  source: BACDIVE
+  taxon_label: Pseudomonas thermotolerans DSM 14292
+  association_count: 1
+- taxon_id: NCBITaxon:1235259
+  source: BACDIVE
+  taxon_label: Oceanobacillus polygoni
+  association_count: 1
+- taxon_id: NCBITaxon:1236540
+  source: BACDIVE
+  taxon_label: Prolixibacter bellariivorans JCM 13498
+  association_count: 1
+- taxon_id: NCBITaxon:1280
+  source: BACDIVE
+  taxon_label: Staphylococcus aureus
+  association_count: 1
+- taxon_id: NCBITaxon:1580
+  source: BACDIVE
+  taxon_label: Levilactobacillus brevis
+  association_count: 2
+- taxon_id: NCBITaxon:1597
+  source: BACDIVE
+  taxon_label: Lacticaseibacillus paracasei
+  association_count: 2
+- taxon_id: NCBITaxon:1697
+  source: BACDIVE
+  taxon_label: Corynebacterium ammoniagenes
+  association_count: 2
+- taxon_id: NCBITaxon:169760
+  source: BACDIVE
+  taxon_label: Paenibacillus stellifer
+  association_count: 5
+- taxon_id: NCBITaxon:1720
+  source: BACDIVE
+  taxon_label: Corynebacterium sp.
+  association_count: 2
+- taxon_id: NCBITaxon:24
+  source: BACDIVE
+  taxon_label: Shewanella putrefaciens
+  association_count: 3
+- taxon_id: NCBITaxon:294
+  source: BACDIVE
+  taxon_label: Pseudomonas fluorescens
+  association_count: 2
+- taxon_id: NCBITaxon:301
+  source: BACDIVE
+  taxon_label: Ectopseudomonas oleovorans
+  association_count: 4
+- taxon_id: NCBITaxon:35841
+  source: BACDIVE
+  taxon_label: Caldibacillus thermoamylovorans
+  association_count: 2
+- taxon_id: NCBITaxon:384602
+  source: BACDIVE
+  taxon_label: Micrococcus flavus
+  association_count: 2
+- taxon_id: NCBITaxon:44751
+  source: BACDIVE
+  taxon_label: Exiguobacterium sp.
+  association_count: 2
+- taxon_id: NCBITaxon:51665
+  source: BACDIVE
+  taxon_label: Aerococcus urinaeequi
+  association_count: 2
+- taxon_id: NCBITaxon:54061
+  source: BACDIVE
+  taxon_label: Ralstonia sp.
+  association_count: 2
+- taxon_id: NCBITaxon:554117
+  source: BACDIVE
+  taxon_label: Paenibacillus phoenicis
+  association_count: 4
+- taxon_id: NCBITaxon:58172
+  source: BACDIVE
+  taxon_label: Paenibacillus sp.
+  association_count: 3
+- taxon_id: NCBITaxon:83428
+  source: BACDIVE
+  taxon_label: uncultured Bacillus sp.
+  association_count: 3
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'

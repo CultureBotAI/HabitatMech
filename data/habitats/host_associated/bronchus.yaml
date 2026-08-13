@@ -28,8 +28,81 @@ source_attestations:
   mapping_predicate: skos:closeMatch
   assertion_count: 18
   assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:1122164
+  source: BACDIVE
+  taxon_label: Legionella lansingensis DSM 19556 = ATCC 49751
+  association_count: 1
+- taxon_id: NCBITaxon:1141647
+  source: BACDIVE
+  taxon_label: Nocardia arizonensis
+  association_count: 1
+- taxon_id: NCBITaxon:1206729
+  source: BACDIVE
+  taxon_label: Nocardia exalbida NBRC 100660
+  association_count: 1
+- taxon_id: NCBITaxon:1226751
+  source: BACDIVE
+  taxon_label: Mycolicibacterium monacense DSM 44395
+  association_count: 1
+- taxon_id: NCBITaxon:1817
+  source: BACDIVE
+  taxon_label: Nocardia
+  association_count: 1
+- taxon_id: NCBITaxon:1962118
+  source: BACDIVE
+  taxon_label: Mycobacteroides abscessus subsp. massiliense
+  association_count: 1
+- taxon_id: NCBITaxon:2074
+  source: BACDIVE
+  taxon_label: Pseudonocardia autotrophica
+  association_count: 1
+- taxon_id: NCBITaxon:222805
+  source: BACDIVE
+  taxon_label: Mycobacterium intracellulare subsp. chimaera
+  association_count: 1
+- taxon_id: NCBITaxon:238
+  source: BACDIVE
+  taxon_label: Elizabethkingia meningoseptica
+  association_count: 1
+- taxon_id: NCBITaxon:28087
+  source: BACDIVE
+  taxon_label: Legionella sainthelensi
+  association_count: 1
+- taxon_id: NCBITaxon:286804
+  source: BACDIVE
+  taxon_label: Segniliparus rugosus
+  association_count: 1
+- taxon_id: NCBITaxon:341199
+  source: BACDIVE
+  taxon_label: Nocardia kroppenstedtii
+  association_count: 1
+- taxon_id: NCBITaxon:480035
+  source: BACDIVE
+  taxon_label: Nocardia wallacei
+  association_count: 1
+- taxon_id: NCBITaxon:524884
+  source: BACDIVE
+  taxon_label: Saccharopolyspora rosea
+  association_count: 1
+- taxon_id: NCBITaxon:72407
+  source: BACDIVE
+  taxon_label: Klebsiella pneumoniae subsp. pneumoniae
+  association_count: 1
+- taxon_id: NCBITaxon:747
+  source: BACDIVE
+  taxon_label: Pasteurella multocida
+  association_count: 1
+- taxon_id: NCBITaxon:756689
+  source: BACDIVE
+  taxon_label: Nocardia amikacinitolerans
+  association_count: 1
+- taxon_id: NCBITaxon:912594
+  source: BACDIVE
+  taxon_label: Mycolicibacterium iranicum
+  association_count: 1
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

@@ -1,0 +1,27 @@
+identifier: ENVO:00002132
+label: metalimnion
+definition: A cline which is part of a lake and across which temperature changes rapidly
+  with depth.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Metalimnion/Thermocline
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- ENVO:00000021
+- ENVO:00002269
+- ENVO:01000813
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7876
+  source_label: Metalimnion/Thermocline
+  source_path: Environmental > Aquatic > Freshwater > Lake > Metalimnion/Thermocline
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-13T06:49:23Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

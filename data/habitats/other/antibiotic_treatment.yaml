@@ -9,8 +9,29 @@ source_attestations:
   source_label: Antibiotic-treatment
   assertion_count: 5
   assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:1318743
+  source: BACDIVE
+  taxon_label: Bartonella ancashensis
+  association_count: 1
+- taxon_id: NCBITaxon:1319815
+  source: BACDIVE
+  taxon_label: Cetobacterium somerae ATCC BAA-474
+  association_count: 1
+- taxon_id: NCBITaxon:1423
+  source: BACDIVE
+  taxon_label: Bacillus subtilis
+  association_count: 1
+- taxon_id: NCBITaxon:173959
+  source: BACDIVE
+  taxon_label: Brevibacillus invocatus
+  association_count: 1
+- taxon_id: NCBITaxon:405946
+  source: BACDIVE
+  taxon_label: Oceanobacillus caeni
+  association_count: 1
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: NOT_APPLICABLE.'

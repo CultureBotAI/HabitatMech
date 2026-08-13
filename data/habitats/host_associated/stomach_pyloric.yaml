@@ -1,17 +1,19 @@
 identifier: habitatmech:GOLD.15506702ab
 label: 'Stomach: Pyloric'
 habitat_category: HOST_ASSOCIATED
-grounding_status: UNGROUNDED
-mapping_status: SEEDED
+grounding_status: NARROW
+mapping_status: REVIEWED
 parent_habitats:
+- UBERON:0000945
 - habitatmech:GOLD.52f22e84ee
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7533
   source_label: 'Stomach: Pyloric'
   source_path: 'Host-associated > Fish > Digestive system > Foregut > Stomach: Pyloric'
+  mapping_predicate: skos:narrowMatch
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

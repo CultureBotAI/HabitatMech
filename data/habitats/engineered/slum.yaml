@@ -1,0 +1,29 @@
+identifier: ENVO:01000653
+label: slum
+definition: 'A slum is a heavily populated urban informal settlement with substandard
+  housing in which households lack any one of the following: access to improved water,
+  access to improved sanitation, sufficient-living area, durability of housing, or
+  security of tenure.'
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Slums/Informal settlements
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- ENVO:01000658
+- habitatmech:GOLD.d8d3393339
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8098
+  source_label: Slums/Informal settlements
+  source_path: Engineered > Wastewater > Urban wastewater > Slums/Informal settlements
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-13T06:49:23Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

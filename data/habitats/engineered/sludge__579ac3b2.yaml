@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.1032e10222
+label: Sludge
+habitat_category: ENGINEERED
+grounding_status: NARROW
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:00002124
+- ENVO:00002129
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8431
+  source_label: Sludge
+  source_path: Engineered > Bioreactor > DHS reactor > Anaerobic > Sludge
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-13T06:49:23Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

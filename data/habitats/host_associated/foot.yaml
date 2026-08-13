@@ -16,8 +16,109 @@ source_attestations:
   mapping_predicate: skos:exactMatch
   assertion_count: 114
   assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:1071886
+  source: BACDIVE
+  taxon_label: Streptococcus troglodytidis
+  association_count: 1
+- taxon_id: NCBITaxon:1076331
+  source: BACDIVE
+  taxon_label: Arsenicicoccus dermatophilus
+  association_count: 2
+- taxon_id: NCBITaxon:108980
+  source: BACDIVE
+  taxon_label: Acinetobacter ursingii
+  association_count: 1
+- taxon_id: NCBITaxon:1115512
+  source: BACDIVE
+  taxon_label: Atlantibacter hermannii NBRC 105704
+  association_count: 1
+- taxon_id: NCBITaxon:111805
+  source: BACDIVE
+  taxon_label: Actinomadura pelletieri
+  association_count: 1
+- taxon_id: NCBITaxon:1134445
+  source: BACDIVE
+  taxon_label: Streptomyces somaliensis DSM 40738
+  association_count: 1
+- taxon_id: NCBITaxon:1206744
+  source: BACDIVE
+  taxon_label: Nocardia transvalensis NBRC 15921
+  association_count: 1
+- taxon_id: NCBITaxon:1280
+  source: BACDIVE
+  taxon_label: Staphylococcus aureus
+  association_count: 3
+- taxon_id: NCBITaxon:1295
+  source: BACDIVE
+  taxon_label: Staphylococcus schleiferi
+  association_count: 2
+- taxon_id: NCBITaxon:1717
+  source: BACDIVE
+  taxon_label: Corynebacterium diphtheriae
+  association_count: 2
+- taxon_id: NCBITaxon:1993
+  source: BACDIVE
+  taxon_label: Actinomadura madurae
+  association_count: 3
+- taxon_id: NCBITaxon:24
+  source: BACDIVE
+  taxon_label: Shewanella putrefaciens
+  association_count: 2
+- taxon_id: NCBITaxon:28035
+  source: BACDIVE
+  taxon_label: Staphylococcus lugdunensis
+  association_count: 2
+- taxon_id: NCBITaxon:28264
+  source: BACDIVE
+  taxon_label: Arcanobacterium haemolyticum
+  association_count: 2
+- taxon_id: NCBITaxon:326522
+  source: BACDIVE
+  taxon_label: Neisseria animaloris
+  association_count: 2
+- taxon_id: NCBITaxon:37330
+  source: BACDIVE
+  taxon_label: Nocardia nova
+  association_count: 2
+- taxon_id: NCBITaxon:38313
+  source: BACDIVE
+  taxon_label: Shewanella algae
+  association_count: 2
+- taxon_id: NCBITaxon:40091
+  source: BACDIVE
+  taxon_label: Helcococcus kunzii
+  association_count: 2
+- taxon_id: NCBITaxon:400946
+  source: BACDIVE
+  taxon_label: Wohlfahrtiimonas chitiniclastica
+  association_count: 2
+- taxon_id: NCBITaxon:43770
+  source: BACDIVE
+  taxon_label: Corynebacterium striatum
+  association_count: 4
+- taxon_id: NCBITaxon:504
+  source: BACDIVE
+  taxon_label: Kingella kingae
+  association_count: 2
+- taxon_id: NCBITaxon:511
+  source: BACDIVE
+  taxon_label: Alcaligenes faecalis
+  association_count: 2
+- taxon_id: NCBITaxon:59561
+  source: BACDIVE
+  taxon_label: Trueperella bernardiae
+  association_count: 2
+- taxon_id: NCBITaxon:614
+  source: BACDIVE
+  taxon_label: Serratia liquefaciens
+  association_count: 2
+- taxon_id: NCBITaxon:76832
+  source: BACDIVE
+  taxon_label: Myroides odoratimimus
+  association_count: 10
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: EXACT.'

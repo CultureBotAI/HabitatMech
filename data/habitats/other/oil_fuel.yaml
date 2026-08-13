@@ -13,8 +13,109 @@ source_attestations:
   assertion_unit: STRAIN
   notes: Upstream mapping targets a non-habitat ontology (CHEBI:33292); kept as an
     xref.
+characteristic_taxa:
+- taxon_id: NCBITaxon:103817
+  source: BACDIVE
+  taxon_label: Janibacter terrae
+  association_count: 1
+- taxon_id: NCBITaxon:1045764
+  source: BACDIVE
+  taxon_label: Methanothermobacter crinale
+  association_count: 1
+- taxon_id: NCBITaxon:104665
+  source: BACDIVE
+  taxon_label: Pseudomonas sp. DSM 12877
+  association_count: 1
+- taxon_id: NCBITaxon:1117177
+  source: BACDIVE
+  taxon_label: Desulfatiferula berrensis
+  association_count: 1
+- taxon_id: NCBITaxon:1120954
+  source: BACDIVE
+  taxon_label: Aestuariimicrobium kwangyangense DSM 21549
+  association_count: 1
+- taxon_id: NCBITaxon:1120977
+  source: BACDIVE
+  taxon_label: Alkanindiges illinoisensis DSM 15370
+  association_count: 1
+- taxon_id: NCBITaxon:1121393
+  source: BACDIVE
+  taxon_label: Desulfatibacillum alkenivorans DSM 16219
+  association_count: 1
+- taxon_id: NCBITaxon:1135990
+  source: BACDIVE
+  taxon_label: Geopseudomonas sagittaria
+  association_count: 1
+- taxon_id: NCBITaxon:117503
+  source: BACDIVE
+  taxon_label: Thermosipho geolei
+  association_count: 1
+- taxon_id: NCBITaxon:1211807
+  source: BACDIVE
+  taxon_label: Stutzerimonas kunmingensis
+  association_count: 2
+- taxon_id: NCBITaxon:1215095
+  source: BACDIVE
+  taxon_label: Pseudomonas chlororaphis subsp. aureofaciens NBRC 3521
+  association_count: 1
+- taxon_id: NCBITaxon:1219036
+  source: BACDIVE
+  taxon_label: Sphingobium abikonense NBRC 16140
+  association_count: 1
+- taxon_id: NCBITaxon:1223527
+  source: BACDIVE
+  taxon_label: Microbacterium hydrocarbonoxydans NBRC 103074
+  association_count: 1
+- taxon_id: NCBITaxon:1260987
+  source: BACDIVE
+  taxon_label: Noviherbaspirillum malthae
+  association_count: 1
+- taxon_id: NCBITaxon:1276890
+  source: BACDIVE
+  taxon_label: Alteromonas sp. TK-46(2)
+  association_count: 1
+- taxon_id: NCBITaxon:1294260
+  source: BACDIVE
+  taxon_label: Geotalea toluenoxydans JCM 15764
+  association_count: 1
+- taxon_id: NCBITaxon:1296669
+  source: BACDIVE
+  taxon_label: Aquabacterium olei
+  association_count: 1
+- taxon_id: NCBITaxon:1356851
+  source: BACDIVE
+  taxon_label: Prauserella soli
+  association_count: 1
+- taxon_id: NCBITaxon:13690
+  source: BACDIVE
+  taxon_label: Sphingobium yanoikuyae
+  association_count: 1
+- taxon_id: NCBITaxon:1395571
+  source: BACDIVE
+  taxon_label: Pseudomonas taeanensis MS-3
+  association_count: 1
+- taxon_id: NCBITaxon:1667
+  source: BACDIVE
+  taxon_label: Arthrobacter sp.
+  association_count: 2
+- taxon_id: NCBITaxon:33935
+  source: BACDIVE
+  taxon_label: Lysinibacillus macroides
+  association_count: 4
+- taxon_id: NCBITaxon:415229
+  source: BACDIVE
+  taxon_label: Pseudoxanthomonas spadix
+  association_count: 2
+- taxon_id: NCBITaxon:577
+  source: BACDIVE
+  taxon_label: Klebsiella terrigena
+  association_count: 2
+- taxon_id: NCBITaxon:69373
+  source: BACDIVE
+  taxon_label: Curtobacterium pusillum
+  association_count: 2
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: NOT_APPLICABLE.'

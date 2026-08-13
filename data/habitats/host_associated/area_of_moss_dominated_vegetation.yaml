@@ -27,8 +27,109 @@ source_attestations:
   source_path: Host-associated > Plants > Bryophytes > Moss
   mapping_predicate: skos:closeMatch
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+characteristic_taxa:
+- taxon_id: NCBITaxon:1071679
+  source: BACDIVE
+  taxon_label: Caballeronia grimmiae
+  association_count: 1
+- taxon_id: NCBITaxon:1123255
+  source: BACDIVE
+  taxon_label: Simplicispira psychrophila DSM 11588
+  association_count: 1
+- taxon_id: NCBITaxon:1176176
+  source: BACDIVE
+  taxon_label: Methylobacterium haplocladii
+  association_count: 1
+- taxon_id: NCBITaxon:1176177
+  source: BACDIVE
+  taxon_label: Methylobacterium brachythecii
+  association_count: 1
+- taxon_id: NCBITaxon:1302685
+  source: BACDIVE
+  taxon_label: Chryseobacterium takakiae
+  association_count: 1
+- taxon_id: NCBITaxon:1302687
+  source: BACDIVE
+  taxon_label: Chryseobacterium polytrichastri
+  association_count: 1
+- taxon_id: NCBITaxon:1302689
+  source: BACDIVE
+  taxon_label: Mucilaginibacter polytrichastri
+  association_count: 1
+- taxon_id: NCBITaxon:1302690
+  source: BACDIVE
+  taxon_label: Cnuella takakiae
+  association_count: 1
+- taxon_id: NCBITaxon:1307457
+  source: BACDIVE
+  taxon_label: Kineosporia mikuniensis JCM 9961
+  association_count: 1
+- taxon_id: NCBITaxon:1387353
+  source: BACDIVE
+  taxon_label: Paludisphaera borealis
+  association_count: 1
+- taxon_id: NCBITaxon:1436133
+  source: BACDIVE
+  taxon_label: Actinacidiphila bryophytorum
+  association_count: 1
+- taxon_id: NCBITaxon:1460882
+  source: BACDIVE
+  taxon_label: Microbispora bryophytorum
+  association_count: 1
+- taxon_id: NCBITaxon:1490222
+  source: BACDIVE
+  taxon_label: Actinoallomurus bryophytorum
+  association_count: 1
+- taxon_id: NCBITaxon:1577474
+  source: BACDIVE
+  taxon_label: Raineyella antarctica
+  association_count: 1
+- taxon_id: NCBITaxon:1612308
+  source: BACDIVE
+  taxon_label: Methylocapsa palsarum
+  association_count: 1
+- taxon_id: NCBITaxon:1619308
+  source: BACDIVE
+  taxon_label: Cnuibacter physcomitrellae
+  association_count: 1
+- taxon_id: NCBITaxon:1619309
+  source: BACDIVE
+  taxon_label: Paenibacillus herberti
+  association_count: 1
+- taxon_id: NCBITaxon:1619310
+  source: BACDIVE
+  taxon_label: Paenibacillus marchantiophytorum
+  association_count: 1
+- taxon_id: NCBITaxon:184914
+  source: BACDIVE
+  taxon_label: Corallococcus coralloides
+  association_count: 4
+- taxon_id: NCBITaxon:1872627
+  source: BACDIVE
+  taxon_label: Archangium sp.
+  association_count: 2
+- taxon_id: NCBITaxon:33
+  source: BACDIVE
+  taxon_label: Myxococcus fulvus
+  association_count: 2
+- taxon_id: NCBITaxon:409
+  source: BACDIVE
+  taxon_label: Methylobacterium sp.
+  association_count: 4
+- taxon_id: NCBITaxon:420952
+  source: BACDIVE
+  taxon_label: Paraburkholderia bryophila
+  association_count: 10
+- taxon_id: NCBITaxon:420953
+  source: BACDIVE
+  taxon_label: Paraburkholderia megapolitana
+  association_count: 3
+- taxon_id: NCBITaxon:83456
+  source: BACDIVE
+  taxon_label: Myxococcus virescens
+  association_count: 2
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD. Grounding:

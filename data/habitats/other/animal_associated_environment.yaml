@@ -1,0 +1,34 @@
+identifier: ENVO:01001002
+label: animal-associated environment
+definition: An environmental system determined by an animal.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Metazoan-associated environment
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: animal environment
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:01001000
+source_attestations:
+- source: ENVIRONMENTS_TABLE
+  source_id: host_animal
+  source_label: host_animal
+  notes: Physicochemical parameter bands from kg-microbe's environment table.
+environmental_parameters:
+- parameter: PRESSURE
+  qualitative_value: low
+  source: kg-microbe environments.csv (host_animal)
+- parameter: TEMPERATURE_VARIABILITY
+  qualitative_value: low
+  source: kg-microbe environments.csv (host_animal)
+curation_history:
+- timestamp: '2026-08-13T06:49:23Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE. Grounding:
+    EXACT.'

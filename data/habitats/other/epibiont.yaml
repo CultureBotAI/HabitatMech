@@ -9,8 +9,41 @@ source_attestations:
   source_label: Epibiont
   assertion_count: 8
   assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:33
+  source: BACDIVE
+  taxon_label: Myxococcus fulvus
+  association_count: 1
+- taxon_id: NCBITaxon:406547
+  source: BACDIVE
+  taxon_label: Rubripirellula obstinata
+  association_count: 1
+- taxon_id: NCBITaxon:445327
+  source: BACDIVE
+  taxon_label: Neorhodopirellula lusitana
+  association_count: 1
+- taxon_id: NCBITaxon:45248
+  source: BACDIVE
+  taxon_label: Leucothrix mucor
+  association_count: 1
+- taxon_id: NCBITaxon:931625
+  source: BACDIVE
+  taxon_label: Winogradskyella ulvae
+  association_count: 1
+- taxon_id: NCBITaxon:93684
+  source: BACDIVE
+  taxon_label: Roseivivax halotolerans
+  association_count: 1
+- taxon_id: NCBITaxon:980254
+  source: BACDIVE
+  taxon_label: Roseimaritima ulvae
+  association_count: 1
+- taxon_id: NCBITaxon:980271
+  source: BACDIVE
+  taxon_label: Aporhodopirellula rubra
+  association_count: 1
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'

@@ -1,0 +1,36 @@
+identifier: BTO:0001073
+label: hypophysis
+definition: A small oval endocrine organ that is attached to the infundibulum of the
+  brain, consists of an epithelial anterior lobe joined by an intermediate part to
+  a posterior lobe of nervous origin, and produces various internal secretions directly
+  or indirectly impinging on most basic body functions.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Hypophysis/Pituitary gland
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- BTO:0001488
+- habitatmech:GOLD.2f5a0b5455
+- habitatmech:GOLD.c26b92ece6
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6548
+  source_label: Hypophysis/Pituitary gland
+  source_path: 'Host-associated > Mammals: Human > Endocrine system > Endocrine gland
+    > Hypophysis/Pituitary gland'
+  mapping_predicate: skos:exactMatch
+- source: GOLD
+  source_id: gold.ecosystem:6779
+  source_label: Hypophysis/Pituitary gland
+  source_path: Host-associated > Mammals > Endocrine system > Endocrine gland > Hypophysis/Pituitary
+    gland
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-13T06:49:23Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

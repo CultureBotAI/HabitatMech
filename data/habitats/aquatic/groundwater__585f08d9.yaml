@@ -1,0 +1,53 @@
+identifier: ENVO:01001004
+label: groundwater
+definition: Underground water which is located in pore spaces found in rock or unconsolidated
+  deposits such as soil, clay, or gravel.
+definition_source: ENVO
+habitat_category: AQUATIC
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: ground water
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00005792
+source_attestations:
+- source: ENVIRONMENTS_TABLE
+  source_id: water_groundwater
+  source_label: water_groundwater
+  notes: Physicochemical parameter bands from kg-microbe's environment table.
+environmental_parameters:
+- parameter: GRADIENTS
+  qualitative_value: low
+  source: kg-microbe environments.csv (water_groundwater)
+- parameter: ORGANIC_MATTER
+  qualitative_value: low
+  source: kg-microbe environments.csv (water_groundwater)
+- parameter: PH
+  qualitative_value: medium
+  source: kg-microbe environments.csv (water_groundwater)
+- parameter: SALINITY
+  qualitative_value: low
+  source: kg-microbe environments.csv (water_groundwater)
+- parameter: SALINITY_VARIABILITY
+  qualitative_value: small
+  source: kg-microbe environments.csv (water_groundwater)
+- parameter: STRUCTURAL_COMPLEXITY
+  qualitative_value: medium
+  source: kg-microbe environments.csv (water_groundwater)
+- parameter: TEMPERATURE_VARIABILITY
+  qualitative_value: low
+  source: kg-microbe environments.csv (water_groundwater)
+- parameter: WATER_AVAILABILITY
+  qualitative_value: high
+  source: kg-microbe environments.csv (water_groundwater)
+- parameter: WATER_VARIABILITY
+  qualitative_value: permanently wet
+  source: kg-microbe environments.csv (water_groundwater)
+curation_history:
+- timestamp: '2026-08-13T06:49:23Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE. Grounding:
+    EXACT.'

@@ -1,0 +1,121 @@
+identifier: ENVO:00000182
+label: plateau
+definition: An elevated and comparatively level expanse of land.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: highland
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: highland
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: highlandic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: highlands
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: intermontane plateau
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: intermontane plateau
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: intermontane plateaus
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: plateaus
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: table mountain
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: table mountain
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: table mountains
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: tableknoll
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: tableknoll
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: tableknolls
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: tableland
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: tableland
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: tablelandic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: tablelands
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: tablemount
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: upland
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: upland
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: uplandic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: uplands
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:01001491
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00000182
+  source_label: plateau
+  assertion_count: 7
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1121106
+  source: PREGO
+  taxon_label: Belnapia moabensis DSM 16746
+  score: 3.0
+- taxon_id: NCBITaxon:1121483
+  source: PREGO
+  taxon_label: Dyadobacter crusticola DSM 16708
+  score: 3.0
+- taxon_id: NCBITaxon:1121959
+  source: PREGO
+  taxon_label: Hymenobacter psychrotolerans DSM 18569
+  score: 3.0
+- taxon_id: NCBITaxon:1122939
+  source: PREGO
+  taxon_label: Patulibacter americanus DSM 16676
+  score: 3.0
+- taxon_id: NCBITaxon:1123064
+  source: PREGO
+  taxon_label: Roseomonas vinacea DSM 19362
+  score: 3.0
+- taxon_id: NCBITaxon:485914
+  source: PREGO
+  taxon_label: Halomicrobium mukohataei DSM 12286
+  score: 3.0
+- taxon_id: NCBITaxon:498214
+  source: PREGO
+  taxon_label: Clostridium botulinum A3 str. Loch Maree
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-13T06:49:23Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

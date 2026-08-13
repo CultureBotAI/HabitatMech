@@ -1,8 +1,8 @@
 # Provenance for the inventories in data/raw/.
 # Regenerate with: just extract-inventory
 # Emitted by scripts/extract_source_inventory.py — do not hand-edit.
-extracted_at: '2026-08-12T20:41:09Z'
-kg_microbe_source: kg-microbe@105615fef44b8ba13618a2e55bfb4caeff41f37d
+extracted_at: '2026-08-13T06:49:23Z'
+kg_microbe_source: kg-microbe@d1c90c760c9343754bb3db245e279e4175980fdc
 gold_truncated_paths: 0
 inputs:
   - path: data/raw/gold/GOLD_nodes.tsv
@@ -14,13 +14,13 @@ inputs:
     mtime: '2026-08-11T04:24:45Z'
     sha256: 54982c25de9d2c820eeebc1452aeac0b034595921d04d55b810bf1d2b1e127e0
   - path: data/transformed/bacdive/nodes.tsv
-    bytes: 26806680
-    mtime: '2026-08-06T03:02:22Z'
-    sha256: 678df3a6afd1c40741d69991471d88c83c43173546dc32ae051a6ed26d3a2e81
+    bytes: 26810725
+    mtime: '2026-08-13T01:42:56Z'
+    sha256: a2a2f9acae230636dd866347d173a32c9f025c04a377060087a4be65781628f3
   - path: data/transformed/bacdive/edges.tsv
-    bytes: 590405790
-    mtime: '2026-08-06T03:02:41Z'
-    sha256: 243efe2847942c8cacc7625740e8200062913ae894777d20baea7c25fe6e2090
+    bytes: 590839471
+    mtime: '2026-08-13T01:43:14Z'
+    sha256: ab6208bff4854db7c1a736d53d0aa04269a682ab15a1ce6f37c6d731000281d7
   - path: data/transformed/prego/nodes.tsv
     bytes: 9348425
     mtime: '2026-08-11T02:19:44Z'
@@ -40,6 +40,8 @@ inputs:
 outputs:
   - path: bacdive_isolation_sources.tsv
     rows: 162
+  - path: bacdive_source_taxa.tsv
+    rows: 3081
   - path: environment_parameters.tsv
     rows: 770
   - path: gold_ecosystem_paths.tsv
@@ -47,9 +49,9 @@ outputs:
   - path: isolation_source_groundings.tsv
     rows: 358
   - path: ontology_subclass_edges.tsv
-    rows: 9832
+    rows: 11646
   - path: ontology_terms.tsv
-    rows: 11320
+    rows: 13318
   - path: prego_habitat_taxa.tsv
     rows: 8807
   - path: prego_habitats.tsv

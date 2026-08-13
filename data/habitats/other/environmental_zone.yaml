@@ -28,8 +28,108 @@ source_attestations:
   assertion_count: 1285
   assertion_unit: ORGANISM
   notes: 5 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+characteristic_taxa:
+- taxon_id: NCBITaxon:1366054
+  source: BACDIVE
+  taxon_label: Nannocystis exedens subsp. cinnabaria
+  association_count: 35
+- taxon_id: NCBITaxon:153721
+  source: BACDIVE
+  taxon_label: Sporocytophaga myxococcoides
+  association_count: 82
+- taxon_id: NCBITaxon:184914
+  source: BACDIVE
+  taxon_label: Corallococcus coralloides
+  association_count: 1301
+- taxon_id: NCBITaxon:1872627
+  source: BACDIVE
+  taxon_label: Archangium sp.
+  association_count: 354
+- taxon_id: NCBITaxon:1876
+  source: BACDIVE
+  taxon_label: Micromonospora sp.
+  association_count: 51
+- taxon_id: NCBITaxon:1931
+  source: BACDIVE
+  taxon_label: Streptomyces sp.
+  association_count: 139
+- taxon_id: NCBITaxon:2
+  source: BACDIVE
+  taxon_label: Bacteria
+  association_count: 91
+- taxon_id: NCBITaxon:29
+  source: BACDIVE
+  taxon_label: Myxococcales
+  association_count: 45
+- taxon_id: NCBITaxon:294
+  source: BACDIVE
+  taxon_label: Pseudomonas fluorescens
+  association_count: 32
+- taxon_id: NCBITaxon:306
+  source: BACDIVE
+  taxon_label: Pseudomonas sp.
+  association_count: 50
+- taxon_id: NCBITaxon:33
+  source: BACDIVE
+  taxon_label: Myxococcus fulvus
+  association_count: 309
+- taxon_id: NCBITaxon:34
+  source: BACDIVE
+  taxon_label: Myxococcus xanthus
+  association_count: 90
+- taxon_id: NCBITaxon:38
+  source: BACDIVE
+  taxon_label: Archangium disciforme
+  association_count: 78
+- taxon_id: NCBITaxon:394092
+  source: BACDIVE
+  taxon_label: Hyalangium gracile
+  association_count: 36
+- taxon_id: NCBITaxon:54
+  source: BACDIVE
+  taxon_label: Nannocystis exedens
+  association_count: 1008
+- taxon_id: NCBITaxon:56
+  source: BACDIVE
+  taxon_label: Sorangium cellulosum
+  association_count: 1535
+- taxon_id: NCBITaxon:57
+  source: BACDIVE
+  association_count: 134
+- taxon_id: NCBITaxon:58172
+  source: BACDIVE
+  taxon_label: Paenibacillus sp.
+  association_count: 33
+- taxon_id: NCBITaxon:71864
+  source: BACDIVE
+  taxon_label: Herpetosiphon sp.
+  association_count: 218
+- taxon_id: NCBITaxon:83428
+  source: BACDIVE
+  taxon_label: uncultured Bacillus sp.
+  association_count: 160
+- taxon_id: NCBITaxon:83451
+  source: BACDIVE
+  taxon_label: Archangium violaceum
+  association_count: 81
+- taxon_id: NCBITaxon:83455
+  source: BACDIVE
+  taxon_label: Myxococcus stipitatus
+  association_count: 73
+- taxon_id: NCBITaxon:83456
+  source: BACDIVE
+  taxon_label: Myxococcus virescens
+  association_count: 167
+- taxon_id: NCBITaxon:83460
+  source: BACDIVE
+  taxon_label: Allostigmatella erecta
+  association_count: 48
+- taxon_id: NCBITaxon:83462
+  source: BACDIVE
+  taxon_label: Corallococcus exiguus
+  association_count: 108
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD. Grounding:

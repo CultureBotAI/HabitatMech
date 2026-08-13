@@ -46,6 +46,7 @@ import re
 import sqlite3
 import subprocess
 import sys
+import xml.etree.ElementTree as ET
 from collections import Counter, defaultdict
 from collections.abc import Iterator
 from pathlib import Path
@@ -134,6 +135,7 @@ def extract_gold(kgm: Path) -> tuple[list[dict[str, Any]], list[str]]:
             labels[row["id"]] = (row.get("name") or "").strip()
 
     parent: dict[str, str] = {}
+    multi_parent: list[str] = []
     # occurrence counts, split by the GOLD id class of the asserting subject
     # (Go = organism, Gs = study, Gb = biosample, Ga = analysis project).
     counts: dict[str, Counter] = defaultdict(Counter)
@@ -141,11 +143,25 @@ def extract_gold(kgm: Path) -> tuple[list[dict[str, Any]], list[str]]:
         pred = row.get("predicate")
         subj, obj = row.get("subject", ""), row.get("object", "")
         if pred == "biolink:subclass_of" and subj.startswith("gold.ecosystem:"):
+            if subj in parent and parent[subj] != obj:
+                # Single-valued by assumption. A second parent would change the
+                # node's canonical_path, hence its depth (which decides who
+                # claims an ontology term) and its minted identifier (hashed
+                # from the path) — silently. 0 of 4226 nodes have one today, so
+                # this is prophylactic; it must fail rather than pick one (#18).
+                multi_parent.append(subj)
             parent[subj] = obj
         elif pred == "biolink:occurs_in" and obj.startswith("gold.ecosystem:"):
             local = subj.split(":", 1)[-1]
             kind = local[:2] if local[:1] == "G" else "other"
             counts[obj][kind] += 1
+
+    if multi_parent:
+        raise SystemExit(
+            f"{len(multi_parent)} GOLD ecosystem node(s) have more than one subclass_of "
+            f"parent, e.g. {sorted(set(multi_parent))[:5]}. The path reconstruction "
+            "assumes a tree; decide what a multi-parent path means before proceeding (#18)."
+        )
 
     truncated: list[str] = []
 
@@ -221,7 +237,19 @@ def extract_gold(kgm: Path) -> tuple[list[dict[str, Any]], list[str]]:
 # BacDive isolation sources
 # ---------------------------------------------------------------------------
 
-def extract_bacdive(kgm: Path) -> list[dict[str, Any]]:
+def extract_bacdive(kgm: Path, top_taxa: int) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    """Return (isolation-source rows, top-taxa rows).
+
+    BacDive links an isolation source to a *strain*, and the strain to a taxon,
+    so reaching taxa needs a two-hop join that the first cut skipped (#9). It is
+    the second-largest body of evidence in the corpus — 144k strain-level
+    assertions across 162 sources — and without it host-associated and clinical
+    habitats got taxa only where a PREGO term happened to merge in.
+
+    Unlike PREGO's near-tied scores, these are counts of distinct strains, which
+    discriminate: a taxon isolated 400 times from a source is genuinely more
+    characteristic of it than one isolated once.
+    """
     nodes_path = kgm / "data" / "transformed" / "bacdive" / "nodes.tsv"
     edges_path = kgm / "data" / "transformed" / "bacdive" / "edges.tsv"
 
@@ -231,10 +259,20 @@ def extract_bacdive(kgm: Path) -> list[dict[str, Any]]:
             sources[row["id"]] = (row.get("name") or "").strip()
 
     strain_counts: Counter = Counter()
+    source_strains: dict[str, set[str]] = defaultdict(set)
+    strain_taxon: dict[str, str] = {}
     for row in read_tsv(edges_path):
-        subj = row.get("subject", "")
+        subj, obj = row.get("subject", ""), row.get("object", "")
         if subj.startswith("bacdive.isolation_source:"):
             strain_counts[subj] += 1
+            if obj.startswith("kgmicrobe.strain:"):
+                source_strains[subj].add(obj)
+        elif (
+            subj.startswith("kgmicrobe.strain:")
+            and row.get("predicate") == "biolink:subclass_of"
+            and obj.startswith("NCBITaxon:")
+        ):
+            strain_taxon[subj] = obj
 
     rows = [
         {
@@ -246,7 +284,34 @@ def extract_bacdive(kgm: Path) -> list[dict[str, Any]]:
         for src_id, label in sources.items()
     ]
     rows.sort(key=lambda r: (-r["strain_count"], r["label"]))
-    return rows
+
+    # Second hop: isolation source -> strain -> taxon, counted by distinct strain.
+    kept: dict[str, list[tuple[str, int]]] = {}
+    needed: set[str] = set()
+    for src_id, strains in source_strains.items():
+        tally: Counter = Counter()
+        for strain in strains:
+            taxon = strain_taxon.get(strain)
+            if taxon:
+                tally[taxon] += 1
+        ranked = sorted(tally.items(), key=lambda kv: (-kv[1], kv[0]))[:top_taxa]
+        if ranked:
+            kept[src_id] = ranked
+            needed.update(t for t, _ in ranked)
+
+    labels = _load_taxon_labels(kgm, needed)
+    taxa_rows = [
+        {
+            "bacdive_id": src_id,
+            "rank": rank,
+            "taxon_id": taxon,
+            "taxon_label": labels.get(taxon, ""),
+            "strain_count": count,
+        }
+        for src_id in sorted(kept)
+        for rank, (taxon, count) in enumerate(kept[src_id], start=1)
+    ]
+    return rows, taxa_rows
 
 
 # ---------------------------------------------------------------------------
@@ -482,6 +547,63 @@ def _load_tsv_ontology(kgm: Path, name: str) -> tuple[dict[str, dict[str, str]],
     return terms, edges
 
 
+def _load_owl_ontology(
+    path: Path, prefix: str
+) -> tuple[dict[str, dict[str, str]], list[tuple[str, str, str]]]:
+    """Labels/definitions/subclass edges from a plain RDF/XML OBO ontology.
+
+    kg-microbe ships PO only as ``po.owl`` — there is no KGX node/edge pair for
+    it — so it is parsed directly rather than skipped. Without PO, plant
+    structure habitats ("Roots", "Seeds", "Phylloplane/Leaf") had no term to
+    reach and were grounded to BTO equivalents as a workaround (#10).
+    """
+    if not path.exists():
+        return {}, []
+    ns = {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "obo": "http://purl.obolibrary.org/obo/",
+        "oboInOwl": "http://www.geneontology.org/formats/oboInOwl#",
+    }
+    about = f"{{{ns['rdf']}}}about"
+    resource = f"{{{ns['rdf']}}}resource"
+
+    def curie(iri: str) -> str | None:
+        if not iri or not iri.startswith(ns["obo"]):
+            return None
+        local = iri[len(ns["obo"]):]
+        return local.replace("_", ":", 1) if "_" in local else None
+
+    terms: dict[str, dict[str, str]] = {}
+    edges: list[tuple[str, str, str]] = []
+    for _, element in ET.iterparse(str(path), events=("end",)):
+        if element.tag != f"{{{ns['owl']}}}Class":
+            continue
+        term_id = curie(element.get(about) or "")
+        if term_id and term_id.startswith(prefix + ":"):
+            label = element.findtext(f"{{{ns['rdfs']}}}label") or ""
+            definition = element.findtext(f"{{{ns['obo']}}}IAO_0000115") or ""
+            synonyms = [
+                (e.text or "").strip()
+                for tag in ("hasExactSynonym", "hasNarrowSynonym", "hasBroadSynonym",
+                            "hasRelatedSynonym")
+                for e in element.findall(f"{{{ns['oboInOwl']}}}{tag}")
+            ]
+            terms[term_id] = {
+                "label": label.strip(),
+                "definition": " ".join(definition.split()),
+                "synonyms": "|".join(s for s in synonyms if s),
+                "deprecated": "",
+            }
+            for parent in element.findall(f"{{{ns['rdfs']}}}subClassOf"):
+                parent_id = curie(parent.get(resource) or "")
+                if parent_id and parent_id.startswith(prefix + ":"):
+                    edges.append((term_id, "biolink:subclass_of", parent_id))
+        element.clear()
+    return terms, edges
+
+
 def _load_bto(kgm: Path) -> tuple[dict[str, dict[str, str]], list[tuple[str, str, str]]]:
     """BTO ships as a semsql SQLite build; read labels/definitions/subclass
     edges out of its generic ``statements`` table."""
@@ -550,6 +672,9 @@ def extract_ontology_terms(
     bto_terms, bto_edges = _load_bto(kgm)
     all_terms.update(bto_terms)
     all_edges.extend(bto_edges)
+    po_terms, po_edges = _load_owl_ontology(kgm / "data" / "raw" / "po.owl", "PO")
+    all_terms.update(po_terms)
+    all_edges.extend(po_edges)
 
     parents: dict[str, set[str]] = defaultdict(set)
     for subj, pred, obj in all_edges:
@@ -558,7 +683,9 @@ def extract_ontology_terms(
 
     seeds: set[str] = {t for t in referenced if t in all_terms}
     # ENVO and BTO in full.
-    seeds |= {t for t in all_terms if t.startswith(("ENVO:", "BTO:"))}
+    # ENVO, BTO and PO in full: each is small (~4-7k terms) and each is a
+    # vocabulary a habitat can legitimately BE.
+    seeds |= {t for t in all_terms if t.startswith(("ENVO:", "BTO:", "PO:"))}
     # UBERON / FOODON by lexical need.
     if source_labels:
         for term_id, meta in all_terms.items():
@@ -725,8 +852,8 @@ def main(argv: list[str] | None = None) -> int:
         )
 
     print("extracting BacDive isolation sources ...")
-    bacdive_rows = extract_bacdive(kgm)
-    print(f"  {len(bacdive_rows)} isolation sources")
+    bacdive_rows, bacdive_taxa_rows = extract_bacdive(kgm, args.top_taxa)
+    print(f"  {len(bacdive_rows)} isolation sources, {len(bacdive_taxa_rows)} top-taxa rows")
 
     print("extracting PREGO habitats ...")
     prego_rows, prego_taxa_rows = extract_prego(kgm, args.top_taxa)
@@ -802,6 +929,10 @@ def main(argv: list[str] | None = None) -> int:
                 "prego_synonyms",
             ],
             prego_rows,
+        ),
+        "bacdive_source_taxa.tsv": (
+            ["bacdive_id", "rank", "taxon_id", "taxon_label", "strain_count"],
+            bacdive_taxa_rows,
         ),
         "prego_habitat_taxa.tsv": (
             ["prego_id", "rank", "taxon_id", "taxon_label", "prego_score", "direct_flag", "channels"],

@@ -9,8 +9,109 @@ source_attestations:
   source_label: Specimen
   assertion_count: 159
   assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:102618
+  source: BACDIVE
+  taxon_label: Helicobacter pylori NCTC 11637 = CCUG 17874 = ATCC 43504 = JCM 12093
+  association_count: 1
+- taxon_id: NCBITaxon:1123075
+  source: BACDIVE
+  taxon_label: Ruminococcus gauvreauii DSM 19829
+  association_count: 1
+- taxon_id: NCBITaxon:1123264
+  source: BACDIVE
+  taxon_label: Sphingobacterium multivorum DSM 11691
+  association_count: 1
+- taxon_id: NCBITaxon:1179467
+  source: BACDIVE
+  taxon_label: Hazenella coriacea
+  association_count: 2
+- taxon_id: NCBITaxon:1210075
+  source: BACDIVE
+  taxon_label: Nocardia ignorata NBRC 108230
+  association_count: 1
+- taxon_id: NCBITaxon:1211807
+  source: BACDIVE
+  taxon_label: Stutzerimonas kunmingensis
+  association_count: 1
+- taxon_id: NCBITaxon:1226751
+  source: BACDIVE
+  taxon_label: Mycolicibacterium monacense DSM 44395
+  association_count: 1
+- taxon_id: NCBITaxon:1236522
+  source: BACDIVE
+  taxon_label: Escherichia coli JCM 18426
+  association_count: 1
+- taxon_id: NCBITaxon:1280
+  source: BACDIVE
+  taxon_label: Staphylococcus aureus
+  association_count: 3
+- taxon_id: NCBITaxon:1301100
+  source: BACDIVE
+  taxon_label: Faecalimicrobium dakarense
+  association_count: 1
+- taxon_id: NCBITaxon:1322345
+  source: BACDIVE
+  taxon_label: Escherichia coli ATCC 25922
+  association_count: 1
+- taxon_id: NCBITaxon:132249
+  source: BACDIVE
+  taxon_label: Nocardia veterana
+  association_count: 1
+- taxon_id: NCBITaxon:1337958
+  source: BACDIVE
+  taxon_label: Amycolatopsis orientalis DSM 46075
+  association_count: 1
+- taxon_id: NCBITaxon:1348637
+  source: BACDIVE
+  taxon_label: Nocardiopsis listeri NBRC 13360
+  association_count: 1
+- taxon_id: NCBITaxon:1352223
+  source: BACDIVE
+  taxon_label: Streptococcus dentiloxodontae
+  association_count: 1
+- taxon_id: NCBITaxon:1353
+  source: BACDIVE
+  taxon_label: Enterococcus gallinarum
+  association_count: 1
+- taxon_id: NCBITaxon:144185
+  source: BACDIVE
+  taxon_label: Leifsonia aquatica
+  association_count: 4
+- taxon_id: NCBITaxon:1496
+  source: BACDIVE
+  taxon_label: Clostridioides difficile
+  association_count: 2
+- taxon_id: NCBITaxon:1513
+  source: BACDIVE
+  taxon_label: Clostridium tetani
+  association_count: 2
+- taxon_id: NCBITaxon:210
+  source: BACDIVE
+  taxon_label: Helicobacter pylori
+  association_count: 13
+- taxon_id: NCBITaxon:470
+  source: BACDIVE
+  taxon_label: Acinetobacter baumannii
+  association_count: 2
+- taxon_id: NCBITaxon:562
+  source: BACDIVE
+  taxon_label: Escherichia coli
+  association_count: 27
+- taxon_id: NCBITaxon:573
+  source: BACDIVE
+  taxon_label: Klebsiella pneumoniae
+  association_count: 4
+- taxon_id: NCBITaxon:759851
+  source: BACDIVE
+  taxon_label: Sporosarcina newyorkensis
+  association_count: 5
+- taxon_id: NCBITaxon:817
+  source: BACDIVE
+  taxon_label: Bacteroides fragilis
+  association_count: 3
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: NOT_APPLICABLE.'

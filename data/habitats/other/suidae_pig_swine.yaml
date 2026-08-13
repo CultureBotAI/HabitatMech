@@ -13,8 +13,109 @@ source_attestations:
   assertion_unit: STRAIN
   notes: Upstream mapping targets a non-habitat ontology (NCBITaxon:9823); kept as
     an xref.
+characteristic_taxa:
+- taxon_id: NCBITaxon:1159752
+  source: BACDIVE
+  taxon_label: Enterococcus lemanii
+  association_count: 3
+- taxon_id: NCBITaxon:1159753
+  source: BACDIVE
+  taxon_label: Enterococcus eurekensis
+  association_count: 3
+- taxon_id: NCBITaxon:119602
+  source: BACDIVE
+  taxon_label: Streptococcus dysgalactiae subsp. equisimilis
+  association_count: 3
+- taxon_id: NCBITaxon:1284
+  source: BACDIVE
+  taxon_label: Staphylococcus hyicus
+  association_count: 4
+- taxon_id: NCBITaxon:1288392
+  source: BACDIVE
+  taxon_label: Moraxella porci
+  association_count: 8
+- taxon_id: NCBITaxon:1307
+  source: BACDIVE
+  taxon_label: Streptococcus suis
+  association_count: 6
+- taxon_id: NCBITaxon:149015
+  source: BACDIVE
+  taxon_label: Streptococcus hyovaginalis
+  association_count: 4
+- taxon_id: NCBITaxon:1648
+  source: BACDIVE
+  taxon_label: Erysipelothrix rhusiopathiae
+  association_count: 8
+- taxon_id: NCBITaxon:1657
+  source: BACDIVE
+  taxon_label: Actinobaculum suis
+  association_count: 7
+- taxon_id: NCBITaxon:1661
+  source: BACDIVE
+  taxon_label: Trueperella pyogenes
+  association_count: 5
+- taxon_id: NCBITaxon:1725
+  source: BACDIVE
+  taxon_label: Corynebacterium xerosis
+  association_count: 4
+- taxon_id: NCBITaxon:195
+  source: BACDIVE
+  taxon_label: Campylobacter coli
+  association_count: 18
+- taxon_id: NCBITaxon:198
+  source: BACDIVE
+  taxon_label: Campylobacter hyointestinalis
+  association_count: 8
+- taxon_id: NCBITaxon:2
+  source: BACDIVE
+  taxon_label: Bacteria
+  association_count: 5
+- taxon_id: NCBITaxon:202
+  source: BACDIVE
+  taxon_label: Campylobacter mucosalis
+  association_count: 7
+- taxon_id: NCBITaxon:29316
+  source: BACDIVE
+  taxon_label: Schaalia hyovaginalis
+  association_count: 5
+- taxon_id: NCBITaxon:29389
+  source: BACDIVE
+  taxon_label: Streptococcus alactolyticus
+  association_count: 5
+- taxon_id: NCBITaxon:52767
+  source: BACDIVE
+  taxon_label: Actinomyces denticolens
+  association_count: 5
+- taxon_id: NCBITaxon:562
+  source: BACDIVE
+  taxon_label: Escherichia coli
+  association_count: 12
+- taxon_id: NCBITaxon:715
+  source: BACDIVE
+  taxon_label: Actinobacillus pleuropneumoniae
+  association_count: 7
+- taxon_id: NCBITaxon:716
+  source: BACDIVE
+  taxon_label: Actinobacillus suis
+  association_count: 4
+- taxon_id: NCBITaxon:747
+  source: BACDIVE
+  taxon_label: Pasteurella multocida
+  association_count: 6
+- taxon_id: NCBITaxon:749
+  source: BACDIVE
+  taxon_label: '[Pasteurella] aerogenes'
+  association_count: 41
+- taxon_id: NCBITaxon:91353
+  source: BACDIVE
+  taxon_label: Campylobacter hyointestinalis subsp. lawsonii
+  association_count: 7
+- taxon_id: NCBITaxon:97478
+  source: BACDIVE
+  taxon_label: Limosilactobacillus mucosae
+  association_count: 4
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: NOT_APPLICABLE.'

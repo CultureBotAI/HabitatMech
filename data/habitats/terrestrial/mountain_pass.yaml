@@ -1,0 +1,128 @@
+identifier: ENVO:00000084
+label: mountain pass
+definition: A lower point that allows easier access through a mountain range. A pass
+  has the general form of a saddle between two mountains.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: col
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: col
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: defilar
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: defile
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: defile
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: defiles
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: gap
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: mountain passes
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: mountain passic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: notch
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: notches
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: pass
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: pass
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: saddle
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: saddle (physiographic)
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: saddle (physiographic)
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: sill (physiographic)
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: sill (physiographic)
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:01001884
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00000084
+  source_label: mountain pass
+  assertion_count: 13
+  assertion_unit: TAXON
+  score: 1.28264
+  evidence_channels: environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:3197
+  source: PREGO
+  score: 1.28264
+- taxon_id: NCBITaxon:68825
+  source: PREGO
+  taxon_label: Rasamsonia emersonii
+  score: 1.16138
+- taxon_id: NCBITaxon:280637
+  source: PREGO
+  score: 1.14421
+- taxon_id: NCBITaxon:128
+  source: PREGO
+  taxon_label: Isosphaera pallida
+  score: 1.05749
+- taxon_id: NCBITaxon:634177
+  source: PREGO
+  taxon_label: Komagataeibacter medellinensis NBRC 3288
+  score: 1.01869
+- taxon_id: NCBITaxon:554155
+  source: PREGO
+  taxon_label: Microsporum canis CBS 113480
+  score: 1.01425
+- taxon_id: NCBITaxon:189918
+  source: PREGO
+  taxon_label: Mycobacterium sp. KMS
+  score: 1.01017
+- taxon_id: NCBITaxon:510516
+  source: PREGO
+  taxon_label: Aspergillus oryzae RIB40
+  score: 1.00774
+- taxon_id: NCBITaxon:535722
+  source: PREGO
+  taxon_label: Nannizzia gypsea CBS 118893
+  score: 1.0073
+- taxon_id: NCBITaxon:33075
+  source: PREGO
+  taxon_label: Acidobacterium capsulatum
+  score: 1.0045
+- taxon_id: NCBITaxon:363269
+  source: PREGO
+  score: 1.00436
+- taxon_id: NCBITaxon:707241
+  source: PREGO
+  taxon_label: Sinorhizobium meliloti SM11
+  score: 1.00309
+- taxon_id: NCBITaxon:480224
+  source: PREGO
+  taxon_label: Chloroflexus aurantiacus Y-400-fl
+  score: 1.00171
+curation_history:
+- timestamp: '2026-08-13T06:49:23Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

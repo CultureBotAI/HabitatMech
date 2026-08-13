@@ -1,9 +1,10 @@
 identifier: habitatmech:GOLD.672991e1c6
 label: 'Salivary glands: Parotid glands'
 habitat_category: HOST_ASSOCIATED
-grounding_status: UNGROUNDED
-mapping_status: SEEDED
+grounding_status: NARROW
+mapping_status: REVIEWED
 parent_habitats:
+- BTO:0001203
 - habitatmech:GOLD.99880772e1
 source_attestations:
 - source: GOLD
@@ -11,8 +12,9 @@ source_attestations:
   source_label: 'Salivary glands: Parotid glands'
   source_path: 'Host-associated > Mammals: Human > Digestive system > Oral cavity
     > Salivary glands: Parotid glands'
+  mapping_predicate: skos:narrowMatch
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

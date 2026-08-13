@@ -203,3 +203,40 @@ def test_a_grounding_cannot_be_class_depth(tmp_path):
                     encoding="utf-8")
     with pytest.raises(DecisionError, match="cannot be CLASS depth"):
         validate_decisions(load_decisions(path), ONTOLOGY)
+
+
+def test_no_class_swept_concept_has_a_lexical_candidate(repo_root):
+    """The class-level sweep's whole claim is that no term matched by any search
+    route. If a swept concept turns out to have a candidate, the note on it is
+    simply false — which is what happened when the first sweep was applied to
+    the proposal file without filtering to the `none` tier, and again when
+    vendoring PO put terms in reach that had not been there before.
+
+    This makes the claim self-checking: re-vendoring an ontology, or improving
+    the matcher, now fails the suite instead of silently invalidating 994 notes.
+    """
+    import sys
+
+    sys.path.insert(0, str(repo_root / "scripts"))
+    from propose_decisions import build_index, classify
+    from seed_from_sources import build_corpus
+
+    corpus = build_corpus()
+    swept = {
+        identifier
+        for identifier, decision in load_decisions(
+            repo_root / "curation" / "decisions.tsv"
+        ).items()
+        if decision.review_depth == "CLASS"
+    }
+    by_label, by_synonym = build_index(corpus.ontology.terms)
+    matched = [
+        (concept.label, concept.identifier)
+        for concept in corpus.concepts
+        if concept.identifier in swept and classify(concept.label, by_label, by_synonym)[0] != "none"
+    ]
+    assert not matched, (
+        f"{len(matched)} class-swept concept(s) now have a candidate term, so their "
+        f"'no term matched' note is false: {matched[:8]}. Curate them individually "
+        "(`just worklist`) rather than leaving the claim standing."
+    )

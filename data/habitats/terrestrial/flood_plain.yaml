@@ -1,0 +1,49 @@
+identifier: ENVO:00000255
+label: flood plain
+definition: An area which is subject to periodic flooding.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Floodplain
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: bottomland
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+- synonym_text: bottomland
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: bottomlandic
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: bottomlands
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: flood plains
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: floodplain
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00000086
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00000255
+  source_label: flood plain
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:475253
+  source: PREGO
+  taxon_label: Pedobacter alluvionis
+  score: 3.0
+curation_history:
+- timestamp: '2026-08-13T06:49:23Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

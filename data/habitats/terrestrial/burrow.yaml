@@ -1,0 +1,39 @@
+identifier: ENVO:01000429
+label: burrow
+definition: A burrow is a hole or tunnel excavated into the ground by an animal to
+  create a space suitable for habitation, temporary refuge, or as a byproduct of locomotion
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: CLOSE
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Animal-habitation-Nest,Burrow
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+parent_habitats:
+- ENVO:00000068
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:animal-habitation-nest,burrow
+  source_label: Animal-habitation-Nest,Burrow
+  mapping_predicate: skos:closeMatch
+  assertion_count: 3
+  assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:1436798
+  source: BACDIVE
+  taxon_label: Rickettsia fournieri
+  association_count: 1
+- taxon_id: NCBITaxon:156980
+  source: BACDIVE
+  taxon_label: Arthrobacter woluwensis
+  association_count: 1
+- taxon_id: NCBITaxon:1641715
+  source: BACDIVE
+  taxon_label: Sinobacterium norvegicum
+  association_count: 1
+curation_history:
+- timestamp: '2026-08-13T06:49:23Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

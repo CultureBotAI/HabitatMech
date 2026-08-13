@@ -1,0 +1,26 @@
+identifier: BTO:0000313
+label: hypodermis
+definition: The outer cellular layer of the body of invertebrates which secretes the
+  cuticular exoskeleton.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Hypodermis/Subcutis
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- BTO:0000634
+- habitatmech:GOLD.4b37ab4b76
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6500
+  source_label: Hypodermis/Subcutis
+  source_path: 'Host-associated > Mammals: Human > Integumentary system > Skin > Hypodermis/Subcutis'
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-13T06:49:23Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

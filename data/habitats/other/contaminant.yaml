@@ -9,8 +9,109 @@ source_attestations:
   source_label: Contaminant
   assertion_count: 61
   assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:1111140
+  source: BACDIVE
+  taxon_label: Herminiimonas contaminans
+  association_count: 1
+- taxon_id: NCBITaxon:1112212
+  source: BACDIVE
+  taxon_label: Sphingomonas echinoides ATCC 14820
+  association_count: 1
+- taxon_id: NCBITaxon:1160719
+  source: BACDIVE
+  taxon_label: Cutibacterium granulosum DSM 20700
+  association_count: 1
+- taxon_id: NCBITaxon:119219
+  source: BACDIVE
+  taxon_label: Cupriavidus metallidurans
+  association_count: 1
+- taxon_id: NCBITaxon:1219012
+  source: BACDIVE
+  taxon_label: Rhodococcoides corynebacterioides NBRC 14404
+  association_count: 1
+- taxon_id: NCBITaxon:128785
+  source: BACDIVE
+  taxon_label: Pseudoxanthomonas mexicana
+  association_count: 1
+- taxon_id: NCBITaxon:1293441
+  source: BACDIVE
+  taxon_label: Lysinibacillus contaminans
+  association_count: 1
+- taxon_id: NCBITaxon:1314
+  source: BACDIVE
+  taxon_label: Streptococcus pyogenes
+  association_count: 1
+- taxon_id: NCBITaxon:1393
+  source: BACDIVE
+  taxon_label: Brevibacillus brevis
+  association_count: 2
+- taxon_id: NCBITaxon:1396
+  source: BACDIVE
+  taxon_label: Bacillus cereus
+  association_count: 1
+- taxon_id: NCBITaxon:1402
+  source: BACDIVE
+  taxon_label: Bacillus licheniformis
+  association_count: 2
+- taxon_id: NCBITaxon:1408
+  source: BACDIVE
+  taxon_label: Bacillus pumilus
+  association_count: 1
+- taxon_id: NCBITaxon:1423789
+  source: BACDIVE
+  taxon_label: Lactiplantibacillus paraplantarum DSM 10667
+  association_count: 1
+- taxon_id: NCBITaxon:1428
+  source: BACDIVE
+  taxon_label: Bacillus thuringiensis
+  association_count: 1
+- taxon_id: NCBITaxon:1465
+  source: BACDIVE
+  taxon_label: Brevibacillus laterosporus
+  association_count: 2
+- taxon_id: NCBITaxon:1486246
+  source: BACDIVE
+  taxon_label: Halomonas sp.
+  association_count: 1
+- taxon_id: NCBITaxon:1519
+  source: BACDIVE
+  taxon_label: Clostridium tyrobutyricum
+  association_count: 1
+- taxon_id: NCBITaxon:1575
+  source: BACDIVE
+  taxon_label: Leifsonia xyli
+  association_count: 1
+- taxon_id: NCBITaxon:171399
+  source: BACDIVE
+  taxon_label: Paenibacillus sp. DSM 6358
+  association_count: 1
+- taxon_id: NCBITaxon:1720
+  source: BACDIVE
+  taxon_label: Corynebacterium sp.
+  association_count: 1
+- taxon_id: NCBITaxon:1830
+  source: BACDIVE
+  taxon_label: Rhodococcus ruber
+  association_count: 1
+- taxon_id: NCBITaxon:28214
+  source: BACDIVE
+  taxon_label: Sphingomonas sp.
+  association_count: 2
+- taxon_id: NCBITaxon:306
+  source: BACDIVE
+  taxon_label: Pseudomonas sp.
+  association_count: 2
+- taxon_id: NCBITaxon:40324
+  source: BACDIVE
+  taxon_label: Stenotrophomonas maltophilia
+  association_count: 2
+- taxon_id: NCBITaxon:83428
+  source: BACDIVE
+  taxon_label: uncultured Bacillus sp.
+  association_count: 2
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'

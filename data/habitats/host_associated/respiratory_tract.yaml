@@ -1,0 +1,52 @@
+identifier: UBERON:0000065
+label: respiratory tract
+definition: Anatomical structure that is part of the respiratory system. In mammals
+  consists of upper and lower tracts.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- UBERON:0001005
+source_attestations:
+- source: ENVIRONMENTS_TABLE
+  source_id: host_animal_endotherm_nasopharyngeal
+  source_label: host_animal_endotherm_nasopharyngeal
+  notes: Physicochemical parameter bands from kg-microbe's environment table.
+environmental_parameters:
+- parameter: GRADIENTS
+  qualitative_value: high
+  source: kg-microbe environments.csv (host_animal_endotherm_nasopharyngeal)
+- parameter: NUTRIENTS
+  qualitative_value: medium
+  source: kg-microbe environments.csv (host_animal_endotherm_nasopharyngeal)
+- parameter: ORGANIC_MATTER
+  qualitative_value: high
+  source: kg-microbe environments.csv (host_animal_endotherm_nasopharyngeal)
+- parameter: PH
+  qualitative_value: medium
+  source: kg-microbe environments.csv (host_animal_endotherm_nasopharyngeal)
+- parameter: PRESSURE
+  qualitative_value: low
+  source: kg-microbe environments.csv (host_animal_endotherm_nasopharyngeal)
+- parameter: SALINITY_VARIABILITY
+  qualitative_value: small
+  source: kg-microbe environments.csv (host_animal_endotherm_nasopharyngeal)
+- parameter: STRUCTURAL_COMPLEXITY
+  qualitative_value: high
+  source: kg-microbe environments.csv (host_animal_endotherm_nasopharyngeal)
+- parameter: TEMPERATURE
+  qualitative_value: medium
+  source: kg-microbe environments.csv (host_animal_endotherm_nasopharyngeal)
+- parameter: TEMPERATURE_VARIABILITY
+  qualitative_value: low
+  source: kg-microbe environments.csv (host_animal_endotherm_nasopharyngeal)
+- parameter: WATER_VARIABILITY
+  qualitative_value: occasionally dry
+  source: kg-microbe environments.csv (host_animal_endotherm_nasopharyngeal)
+curation_history:
+- timestamp: '2026-08-13T06:49:23Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE. Grounding:
+    EXACT.'

@@ -1,9 +1,10 @@
 identifier: habitatmech:GOLD.1bb701a40c
 label: Salt flat/Salt pan sediment
 habitat_category: AQUATIC
-grounding_status: UNGROUNDED
-mapping_status: SEEDED
+grounding_status: NARROW
+mapping_status: REVIEWED
 parent_habitats:
+- ENVO:00000279
 - ENVO:01001043
 source_attestations:
 - source: GOLD
@@ -11,10 +12,11 @@ source_attestations:
   source_label: Salt flat/Salt pan sediment
   source_path: Environmental > Aquatic > Non-marine Saline and Alkaline > Hypersaline
     > Salt flat/Salt pan sediment
+  mapping_predicate: skos:narrowMatch
   assertion_count: 4
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-13T06:49:23Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

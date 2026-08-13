@@ -1,0 +1,52 @@
+identifier: ENVO:01001029
+label: fecal environment
+definition: An environmental system which has its properties and dynamics determined
+  by feces.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:01000998
+source_attestations:
+- source: ENVIRONMENTS_TABLE
+  source_id: host_animal_endotherm_feces
+  source_label: host_animal_endotherm_feces
+  notes: Physicochemical parameter bands from kg-microbe's environment table.
+environmental_parameters:
+- parameter: GRADIENTS
+  qualitative_value: high
+  source: kg-microbe environments.csv (host_animal_endotherm_feces)
+- parameter: NUTRIENTS
+  qualitative_value: high
+  source: kg-microbe environments.csv (host_animal_endotherm_feces)
+- parameter: ORGANIC_MATTER
+  qualitative_value: high
+  source: kg-microbe environments.csv (host_animal_endotherm_feces)
+- parameter: PH
+  qualitative_value: medium
+  source: kg-microbe environments.csv (host_animal_endotherm_feces)
+- parameter: PRESSURE
+  qualitative_value: low
+  source: kg-microbe environments.csv (host_animal_endotherm_feces)
+- parameter: SALINITY
+  qualitative_value: medium
+  source: kg-microbe environments.csv (host_animal_endotherm_feces)
+- parameter: STRUCTURAL_COMPLEXITY
+  qualitative_value: medium
+  source: kg-microbe environments.csv (host_animal_endotherm_feces)
+- parameter: TEMPERATURE
+  qualitative_value: medium
+  source: kg-microbe environments.csv (host_animal_endotherm_feces)
+- parameter: TEMPERATURE_VARIABILITY
+  qualitative_value: medium
+  source: kg-microbe environments.csv (host_animal_endotherm_feces)
+- parameter: WATER_AVAILABILITY
+  qualitative_value: medium
+  source: kg-microbe environments.csv (host_animal_endotherm_feces)
+curation_history:
+- timestamp: '2026-08-13T06:49:23Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE. Grounding:
+    EXACT.'
