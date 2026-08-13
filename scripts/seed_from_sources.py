@@ -833,7 +833,12 @@ def ingest_prego(
             concept.taxa[taxon_id] = entry
 
 
-def ingest_parameters(store: ConceptStore, rows: list[dict[str, str]], stats: Counter) -> None:
+def ingest_parameters(
+    store: ConceptStore,
+    rows: list[dict[str, str]],
+    stats: Counter,
+    decisions: dict[str, Decision] | None = None,
+) -> None:
     """Attach physicochemical parameters, but only for rows that name exactly
     one term.
 
@@ -879,11 +884,29 @@ def ingest_parameters(store: ConceptStore, rows: list[dict[str, str]], stats: Co
             if identifier not in store.ontology.terms:
                 stats["parameter_rows_skipped_unknown_term"] += 1
                 continue
-            concept = store.get(identifier, store.ontology.label(identifier), "EXACT")
-            concept.source_concepts += 1
-            store.set_category(
-                concept, infer_category(identifier, store.ontology), authoritative=False
+            # Minted like every other source so a curator can address it. Without
+            # a key, apply_decision is never consulted and these concepts are
+            # permanently uncuratable — including "multicellular organism", which
+            # is a host rather than a place and needs to be sayable as
+            # NOT_APPLICABLE (#27).
+            res = apply_decision(
+                Resolution(identifier, "EXACT", route="environments_table_self_grounded"),
+                mint("ENVIRONMENTS_TABLE", row["env_type"]),
+                decisions or {},
             )
+            identifier = res.identifier
+            concept = store.concepts.get(identifier) or store.get(
+                identifier, store.ontology.label(identifier) or row["env_type"],
+                res.grounding_status,
+            )
+            concept.source_concepts += 1
+            concept.reviewed_sources += 1 if res.reviewed else 0
+            concept.parents.update(res.extra_parents)
+            concept.xrefs.update(res.extra_xrefs)
+            if concept.category is None:
+                store.set_category(
+                    concept, infer_category(identifier, store.ontology), authoritative=False
+                )
             stats["concepts_created_from_parameter_table"] += 1
         parameter = parameter_names.get(row["parameter"])
         if parameter is None:
@@ -1293,12 +1316,13 @@ def build_corpus() -> Corpus:
     ingest_bacdive(store, bacdive_rows, mapping, routes, decisions,
                    taxa_rows=read_tsv("bacdive_source_taxa.tsv"))
     ingest_prego(store, prego_rows, prego_taxa, routes, decisions)
-    ingest_parameters(store, parameter_rows, stats)
+    ingest_parameters(store, parameter_rows, stats, decisions)
 
     addressable = (
         {mint("GOLD", row["canonical_path"]) for row in gold_rows}
         | {mint("BACDIVE", row["bacdive_id"]) for row in bacdive_rows}
         | {mint("PREGO", row["prego_id"]) for row in prego_rows}
+        | {mint("ENVIRONMENTS_TABLE", row["env_type"]) for row in parameter_rows}
     )
     unused = sorted(set(decisions) - addressable)
     if unused:

@@ -154,6 +154,7 @@ def test_every_committed_decision_addresses_a_real_source_concept(repo_root, raw
         {mint("GOLD", r["canonical_path"]) for r in raw_tsv("gold_ecosystem_paths.tsv")}
         | {mint("BACDIVE", r["bacdive_id"]) for r in raw_tsv("bacdive_isolation_sources.tsv")}
         | {mint("PREGO", r["prego_id"]) for r in raw_tsv("prego_habitats.tsv")}
+        | {mint("ENVIRONMENTS_TABLE", r["env_type"]) for r in raw_tsv("environment_parameters.tsv")}
     )
     decisions = load_decisions(repo_root / "curation" / "decisions.tsv")
     stale = sorted(set(decisions) - addressable)
