@@ -3,7 +3,7 @@ label: farm
 definition: An area of land which is used for the cultivation of crops or grazing
   of livestock, including any agricultural constructions therein.
 definition_source: ENVO
-habitat_category: TERRESTRIAL
+habitat_category: OTHER
 grounding_status: EXACT
 mapping_status: SEEDED
 synonyms:
@@ -57,15 +57,7 @@ synonyms:
   source: PREGO
 parent_habitats:
 - ENVO:00000077
-- ENVO:00001998
 source_attestations:
-- source: GOLD
-  source_id: gold.ecosystem:5438
-  source_label: Farm
-  source_path: Environmental > Terrestrial > Soil > Unclassified > Farm
-  mapping_predicate: skos:exactMatch
-  assertion_count: 113
-  assertion_unit: ORGANISM
 - source: PREGO
   source_id: ENVO:00000078
   source_label: farm
@@ -222,5 +214,4 @@ curation_history:
 - timestamp: '2026-08-13T19:01:33Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
-    EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'

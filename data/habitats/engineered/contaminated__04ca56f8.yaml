@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.409eaa3602
+label: Contaminated
+habitat_category: ENGINEERED
+grounding_status: NARROW
+mapping_status: REVIEWED
+parent_habitats:
+- BTO:0000316
+- habitatmech:GOLD.e2f078996c
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5978
+  source_label: Contaminated
+  source_path: Engineered > Lab culture > Culture media > Archaea > Contaminated
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-13T19:01:33Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

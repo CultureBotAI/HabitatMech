@@ -5,7 +5,7 @@ definition: A bioreactor in which the contained material is not oxygenated (i.e.
 definition_source: ENVO
 habitat_category: ENGINEERED
 grounding_status: EXACT
-mapping_status: SEEDED
+mapping_status: REVIEWED
 synonyms:
 - synonym_text: Anaerobic
   synonym_type: EXACT_SYNONYM
@@ -16,7 +16,6 @@ synonyms:
 parent_habitats:
 - ENVO:00002123
 - ENVO:03600010
-- habitatmech:GOLD.2173317f9c
 - habitatmech:GOLD.24cf427e7d
 - habitatmech:GOLD.32c2a98ae8
 - habitatmech:GOLD.3af6ca6cc3
@@ -29,11 +28,6 @@ source_attestations:
   assertion_count: 131
   assertion_unit: ORGANISM
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
-- source: GOLD
-  source_id: gold.ecosystem:7280
-  source_label: Anaerobic
-  source_path: Host-associated > Protists > Excavata > Parabasalids > Anaerobic
-  mapping_predicate: skos:exactMatch
 - source: GOLD
   source_id: gold.ecosystem:7768
   source_label: Anaerobic

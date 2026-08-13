@@ -1,0 +1,112 @@
+identifier: habitatmech:BACDIVE.66ce48b936
+label: Domestic-waste
+habitat_category: OTHER
+grounding_status: NARROW
+mapping_status: REVIEWED
+parent_habitats:
+- ENVO:00002264
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:domestic-waste
+  source_label: Domestic-waste
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 14
+  assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:1121349
+  source: BACDIVE
+  taxon_label: Comamonas composti DSM 21721
+  association_count: 1
+  rank: 1
+  candidate_pool: 14
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:227865
+  source: BACDIVE
+  taxon_label: Cerasibacillus quisquiliarum
+  association_count: 1
+  rank: 4
+  candidate_pool: 14
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:515415
+  source: BACDIVE
+  taxon_label: Microbacterium invictum
+  association_count: 1
+  rank: 7
+  candidate_pool: 14
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:529005
+  source: BACDIVE
+  taxon_label: Sphingobium vermicomposti
+  association_count: 1
+  rank: 8
+  candidate_pool: 14
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1838
+  source: BACDIVE
+  taxon_label: Saccharopolyspora hordei
+  association_count: 1
+  rank: 2
+  candidate_pool: 14
+- taxon_id: NCBITaxon:1931
+  source: BACDIVE
+  taxon_label: Streptomyces sp.
+  association_count: 1
+  rank: 3
+  candidate_pool: 14
+- taxon_id: NCBITaxon:35786
+  source: BACDIVE
+  taxon_label: Coprothermobacter proteolyticus
+  association_count: 1
+  rank: 5
+  candidate_pool: 14
+- taxon_id: NCBITaxon:398257
+  source: BACDIVE
+  taxon_label: Luteimonas composti
+  association_count: 1
+  rank: 6
+  candidate_pool: 14
+- taxon_id: NCBITaxon:544480
+  source: BACDIVE
+  taxon_label: Shinella fusca
+  association_count: 1
+  rank: 9
+  candidate_pool: 14
+- taxon_id: NCBITaxon:57001
+  source: BACDIVE
+  taxon_label: Amaricoccus macauensis
+  association_count: 1
+  rank: 10
+  candidate_pool: 14
+- taxon_id: NCBITaxon:570268
+  source: BACDIVE
+  taxon_label: Nocardiopsis potens DSM 45234
+  association_count: 1
+  rank: 11
+  candidate_pool: 14
+- taxon_id: NCBITaxon:700500
+  source: BACDIVE
+  taxon_label: Catenisphaera adipataccumulans
+  association_count: 1
+  rank: 12
+  candidate_pool: 14
+- taxon_id: NCBITaxon:720633
+  source: BACDIVE
+  taxon_label: Lysinibacillus composti
+  association_count: 1
+  rank: 13
+  candidate_pool: 14
+- taxon_id: NCBITaxon:768534
+  source: BACDIVE
+  taxon_label: Sphingobacterium thermophilum
+  association_count: 1
+  rank: 14
+  candidate_pool: 14
+curation_history:
+- timestamp: '2026-08-13T19:01:33Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: NARROW.'
