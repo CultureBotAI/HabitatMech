@@ -3,13 +3,10 @@ label: sea water
 definition: Water which has physicochemical properties that have been determined by
   the processes occuring in a sea or ocean.
 definition_source: ENVO
-habitat_category: ENGINEERED
+habitat_category: AQUATIC
 grounding_status: EXACT
 mapping_status: SEEDED
 synonyms:
-- synonym_text: Seawater
-  synonym_type: EXACT_SYNONYM
-  source: GOLD
 - synonym_text: ocean water
   synonym_type: EXACT_SYNONYM
   source: ENVO
@@ -27,18 +24,11 @@ synonyms:
   source: ENVO
 parent_habitats:
 - ENVO:00002010
-- ENVO:01000620
 source_attestations:
 - source: ENVIRONMENTS_TABLE
   source_id: water_marine
   source_label: water_marine
   notes: Physicochemical parameter bands from kg-microbe's environment table.
-- source: GOLD
-  source_id: gold.ecosystem:6459
-  source_label: Seawater
-  source_path: Engineered > Artificial ecosystem > Mesocosm > Seawater
-  mapping_predicate: skos:closeMatch
-  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 - source: PREGO
   source_id: ENVO:00002149
   source_label: sea water
@@ -223,5 +213,5 @@ curation_history:
 - timestamp: '2026-08-13T19:01:33Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD,
-    PREGO. Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, PREGO.
+    Grounding: EXACT.'

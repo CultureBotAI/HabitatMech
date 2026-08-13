@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.2c26547de4
+label: Bladder
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: REVIEWED
+parent_habitats:
+- BTO:0006350
+- UBERON:0001255
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6653
+  source_label: Bladder
+  source_path: 'Host-associated > Mammals: Human > Benign tumor > Polyps > Bladder'
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-13T19:01:33Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

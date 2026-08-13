@@ -2,8 +2,11 @@ identifier: ENVO:00002043
 label: wastewater treatment plant
 habitat_category: ENGINEERED
 grounding_status: EXACT
-mapping_status: SEEDED
+mapping_status: REVIEWED
 synonyms:
+- synonym_text: WWTP
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
 - synonym_text: wastewater treatment plantic
   synonym_type: RELATED_SYNONYM
   source: PREGO
@@ -12,7 +15,16 @@ synonyms:
   source: PREGO
 parent_habitats:
 - ENVO:00002272
+- habitatmech:GOLD.2acb39dd08
 source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4669
+  source_label: WWTP
+  source_path: Engineered > WWTP
+  mapping_predicate: skos:exactMatch
+  assertion_count: 7
+  assertion_unit: ORGANISM
+  notes: 4 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 - source: PREGO
   source_id: ENVO:00002043
   source_label: wastewater treatment plant
@@ -175,4 +187,5 @@ curation_history:
 - timestamp: '2026-08-13T19:01:33Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'

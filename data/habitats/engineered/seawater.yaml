@@ -1,0 +1,20 @@
+identifier: habitatmech:GOLD.0cadaca0bf
+label: Seawater
+habitat_category: ENGINEERED
+grounding_status: NARROW
+mapping_status: REVIEWED
+parent_habitats:
+- ENVO:00002149
+- ENVO:01000620
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6459
+  source_label: Seawater
+  source_path: Engineered > Artificial ecosystem > Mesocosm > Seawater
+  mapping_predicate: skos:narrowMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-13T19:01:33Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

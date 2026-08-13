@@ -290,8 +290,26 @@ def build(out_dir: Path) -> None:
     # (#32). Written by the renderer so it is reproducible like everything else.
     (out_dir / ".nojekyll").write_text("", encoding="utf-8")
 
+    # Remove pages for records that no longer exist. Curation splits and merges
+    # records, so the set shrinks as well as grows; without this the site keeps
+    # serving a page for a habitat the corpus has dropped, and `--check` reports
+    # it as orphaned forever. Same reason the seeder has --prune.
+    written = {
+        out_dir / "index.html", out_dir / "browse.html",
+        out_dir / "term-requests.html", out_dir / "style.css", out_dir / ".nojekyll",
+    }
+    written |= {out_dir / "habitats" / f"{slug}.html" for slug in slug_of.values()}
+    written |= {out_dir / "category" / f"{c['slug']}.html" for c in categories}
+    pruned = 0
+    for existing in sorted(out_dir.rglob("*")):
+        if existing.is_file() and existing not in written:
+            existing.unlink()
+            pruned += 1
+
     print(f"rendered {len(records)} habitat pages, {len(categories)} categories, "
-          f"{len(term_requests)} term requests -> {out_dir}")
+          f"{len(term_requests)} term requests"
+          + (f", pruned {pruned} stale" if pruned else "")
+          + f" -> {out_dir}")
 
 
 def main(argv: list[str] | None = None) -> int:

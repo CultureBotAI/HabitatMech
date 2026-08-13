@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.77a06b1fa8
+label: Farm
+habitat_category: TERRESTRIAL
+grounding_status: NARROW
+mapping_status: REVIEWED
+parent_habitats:
+- ENVO:00000078
+- ENVO:00001998
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5438
+  source_label: Farm
+  source_path: Environmental > Terrestrial > Soil > Unclassified > Farm
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 113
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-13T19:01:33Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

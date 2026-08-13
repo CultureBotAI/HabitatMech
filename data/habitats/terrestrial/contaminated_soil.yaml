@@ -5,7 +5,7 @@ definition: A portion of contaminated soil is a portion of soil with elevated le
 definition_source: ENVO
 habitat_category: TERRESTRIAL
 grounding_status: EXACT
-mapping_status: SEEDED
+mapping_status: REVIEWED
 synonyms:
 - synonym_text: Contaminated
   synonym_type: EXACT_SYNONYM
@@ -14,27 +14,13 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: PREGO
 parent_habitats:
-- BTO:0000316
 - ENVO:00001998
 - ENVO:00002258
 - ENVO:00003082
 - ENVO:00005740
-- habitatmech:GOLD.22a80cbd14
-- habitatmech:GOLD.55a9660503
-- habitatmech:GOLD.5871068dfe
-- habitatmech:GOLD.5b8e5eddd2
-- habitatmech:GOLD.7f8e268653
 - habitatmech:GOLD.853ee40b1d
 - habitatmech:GOLD.ceceb38473
-- habitatmech:GOLD.e2f078996c
 source_attestations:
-- source: GOLD
-  source_id: gold.ecosystem:4166
-  source_label: Contaminated
-  source_path: Environmental > Aquatic > Freshwater > Groundwater > Contaminated
-  mapping_predicate: skos:exactMatch
-  assertion_count: 22
-  assertion_unit: ORGANISM
 - source: GOLD
   source_id: gold.ecosystem:4215
   source_label: Contaminated
@@ -69,41 +55,6 @@ source_attestations:
   assertion_count: 77
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
-- source: GOLD
-  source_id: gold.ecosystem:5955
-  source_label: Contaminated
-  source_path: Environmental > Aquatic > Deep subsurface > Groundwater > Contaminated
-  mapping_predicate: skos:exactMatch
-  assertion_count: 1
-  assertion_unit: ORGANISM
-- source: GOLD
-  source_id: gold.ecosystem:5975
-  source_label: Contaminated
-  source_path: Engineered > Lab culture > Culture media > Contaminated
-  mapping_predicate: skos:exactMatch
-  assertion_count: 1
-  assertion_unit: ORGANISM
-  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
-- source: GOLD
-  source_id: gold.ecosystem:5978
-  source_label: Contaminated
-  source_path: Engineered > Lab culture > Culture media > Archaea > Contaminated
-  mapping_predicate: skos:exactMatch
-- source: GOLD
-  source_id: gold.ecosystem:5980
-  source_label: Contaminated
-  source_path: Engineered > Lab culture > Culture media > Fungi > Contaminated
-  mapping_predicate: skos:exactMatch
-- source: GOLD
-  source_id: gold.ecosystem:5982
-  source_label: Contaminated
-  source_path: Engineered > Lab culture > Culture media > Algae > Contaminated
-  mapping_predicate: skos:exactMatch
-- source: GOLD
-  source_id: gold.ecosystem:5986
-  source_label: Contaminated
-  source_path: Engineered > Lab culture > Culture media > Bacteria > Contaminated
-  mapping_predicate: skos:exactMatch
 - source: GOLD
   source_id: gold.ecosystem:6044
   source_label: Contaminated soil

@@ -2,11 +2,14 @@ identifier: ENVO:00002276
 label: animal waste material
 habitat_category: ENGINEERED
 grounding_status: EXACT
-mapping_status: SEEDED
+mapping_status: REVIEWED
 synonyms:
 - synonym_text: Animal waste
   synonym_type: EXACT_SYNONYM
   source: GOLD
+- synonym_text: Solid-animal-waste
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
 - synonym_text: animal waste
   synonym_type: EXACT_SYNONYM
   source: ENVO
@@ -20,6 +23,12 @@ parent_habitats:
 - ENVO:00002873
 - mesh:D062611
 source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:solid-animal-waste
+  source_label: Solid-animal-waste
+  mapping_predicate: skos:exactMatch
+  assertion_count: 11
+  assertion_unit: STRAIN
 - source: GOLD
   source_id: gold.ecosystem:3514
   source_label: Animal waste
@@ -42,48 +51,95 @@ characteristic_taxa:
   score: 4.0
   rank: 1
   candidate_pool: 10
+- taxon_id: NCBITaxon:658457
+  source: BACDIVE
+  taxon_label: Ectopseudomonas composti
+  association_count: 3
+  rank: 1
+  candidate_pool: 8
 - taxon_id: NCBITaxon:1121423
   source: PREGO
   taxon_label: Desulfofalx alkaliphila DSM 12257
   score: 4.0
   rank: 2
   candidate_pool: 10
+- taxon_id: NCBITaxon:1458
+  source: BACDIVE
+  taxon_label: Metabacillus fastidiosus
+  association_count: 2
+  rank: 2
+  candidate_pool: 8
 - taxon_id: NCBITaxon:1121950
   source: PREGO
   taxon_label: Hespellia stercorisuis DSM 15480
   score: 4.0
   rank: 3
   candidate_pool: 10
+- taxon_id: NCBITaxon:1257027
+  source: BACDIVE
+  association_count: 1
+  rank: 3
+  candidate_pool: 8
 - taxon_id: NCBITaxon:1278308
   source: PREGO
   taxon_label: '[Zimmermannella] faecalis ATCC 13722'
   score: 4.0
   rank: 4
   candidate_pool: 10
+- taxon_id: NCBITaxon:1506
+  source: BACDIVE
+  taxon_label: Clostridium sp.
+  association_count: 1
+  rank: 4
+  candidate_pool: 8
 - taxon_id: NCBITaxon:1291048
   source: PREGO
   taxon_label: Thermoanaerobacter thermocopriae JCM 7501
   score: 4.0
   rank: 5
   candidate_pool: 10
+- taxon_id: NCBITaxon:1703
+  source: BACDIVE
+  taxon_label: Brevibacterium linens
+  association_count: 1
+  rank: 5
+  candidate_pool: 8
 - taxon_id: NCBITaxon:469371
   source: PREGO
   taxon_label: Thermobispora bispora DSM 43833
   score: 4.0
   rank: 6
   candidate_pool: 10
+- taxon_id: NCBITaxon:272161
+  source: BACDIVE
+  taxon_label: Arthrobacter stackebrandtii
+  association_count: 1
+  rank: 6
+  candidate_pool: 8
 - taxon_id: NCBITaxon:485916
   source: PREGO
   taxon_label: Desulfofarcimen acetoxidans DSM 771
   score: 4.0
   rank: 7
   candidate_pool: 10
+- taxon_id: NCBITaxon:3381696
+  source: BACDIVE
+  taxon_label: Methanothermobacter sp. DSM 3267
+  association_count: 1
+  rank: 7
+  candidate_pool: 8
 - taxon_id: NCBITaxon:644383
   source: PREGO
   taxon_label: Thermosporothrix hazakensis
   score: 4.0
   rank: 8
   candidate_pool: 10
+- taxon_id: NCBITaxon:433296
+  source: BACDIVE
+  taxon_label: Aminipila butyrica
+  association_count: 1
+  rank: 8
+  candidate_pool: 8
 - taxon_id: NCBITaxon:679937
   source: PREGO
   taxon_label: Bacteroides coprosuis DSM 18011
@@ -100,5 +156,5 @@ curation_history:
 - timestamp: '2026-08-13T19:01:33Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD, PREGO. Grounding:
     EXACT.'

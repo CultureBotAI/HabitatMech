@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.66f93e3a62
+label: Contaminated
+habitat_category: AQUATIC
+grounding_status: NARROW
+mapping_status: REVIEWED
+parent_habitats:
+- ENVO:01001004
+- habitatmech:GOLD.22a80cbd14
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5955
+  source_label: Contaminated
+  source_path: Environmental > Aquatic > Deep subsurface > Groundwater > Contaminated
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-13T19:01:33Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

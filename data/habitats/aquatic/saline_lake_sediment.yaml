@@ -4,7 +4,7 @@ definition: Saline lake sediment is sediment which covers the bottom of a saline
 definition_source: ENVO
 habitat_category: AQUATIC
 grounding_status: EXACT
-mapping_status: SEEDED
+mapping_status: REVIEWED
 synonyms:
 - synonym_text: Sediment
   synonym_type: EXACT_SYNONYM
@@ -32,14 +32,6 @@ source_attestations:
     > Sediment
   mapping_predicate: skos:exactMatch
   assertion_count: 43
-  assertion_unit: ORGANISM
-- source: GOLD
-  source_id: gold.ecosystem:7889
-  source_label: Sediment
-  source_path: Environmental > Aquatic > Non-marine Saline and Alkaline > Soda lake
-    > Sediment
-  mapping_predicate: skos:closeMatch
-  assertion_count: 91
   assertion_unit: ORGANISM
 - source: PREGO
   source_id: ENVO:00002209

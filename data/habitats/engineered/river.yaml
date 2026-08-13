@@ -7,7 +7,7 @@ definition: A stream which, through permanent or seasonal flow processes, moves 
 definition_source: ENVO
 habitat_category: ENGINEERED
 grounding_status: EXACT
-mapping_status: SEEDED
+mapping_status: REVIEWED
 synonyms:
 - synonym_text: braided river
   synonym_type: EXACT_SYNONYM
@@ -44,7 +44,7 @@ source_attestations:
   source_id: gold.ecosystem:5545
   source_label: River
   source_path: Engineered > Wastewater > River
-  mapping_predicate: skos:exactMatch
+  mapping_predicate: skos:closeMatch
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 - source: PREGO
   source_id: ENVO:00000022

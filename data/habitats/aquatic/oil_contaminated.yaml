@@ -1,0 +1,19 @@
+identifier: habitatmech:GOLD.a83d030599
+label: Oil-contaminated
+habitat_category: AQUATIC
+grounding_status: NARROW
+mapping_status: REVIEWED
+parent_habitats:
+- ENVO:00002149
+- habitatmech:GOLD.115edc36f8
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4020
+  source_label: Oil-contaminated
+  source_path: Environmental > Aquatic > Marine > Intertidal zone > Oil-contaminated
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-13T19:01:33Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

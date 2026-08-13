@@ -1,0 +1,21 @@
+identifier: habitatmech:GOLD.409867a634
+label: Rumen fluid
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: REVIEWED
+parent_habitats:
+- UBERON:0007365
+- habitatmech:GOLD.d3869ad37f
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6389
+  source_label: Rumen fluid
+  source_path: Host-associated > Mammals > Digestive system > Stomach > Rumen fluid
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 21
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-13T19:01:33Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
