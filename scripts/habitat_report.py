@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -22,6 +23,14 @@ import yaml
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 HABITATS_DIR = REPO_ROOT / "data" / "habitats"
+
+sys.path.insert(0, str(REPO_ROOT / "scripts"))
+
+# The prefixes a habitat record's identifier may use. Imported rather than
+# copied: the flag it drives separates "a wrong id here becomes a record" from
+# "a wrong id here is only an xref", and a second copy would quietly stop
+# flagging any prefix the seeder later gains (#48).
+from seed_from_sources import HABITAT_PREFIXES as _IDENTITY_PREFIXES  # noqa: E402
 
 
 def load_records(root: Path) -> list[tuple[Path, dict]]:
@@ -39,11 +48,6 @@ def table(title: str, counts: Counter, total: int) -> None:
     for key, count in counts.most_common():
         share = f"{100 * count / total:5.1f}%" if total else "    -"
         print(f"  {str(key):26s} {count:6d}  {share}")
-
-
-# Prefixes a habitat record's identifier may use. Kept in step with the
-# seeder's HABITAT_PREFIXES.
-_IDENTITY_PREFIXES = {"ENVO", "UBERON", "FOODON", "BTO", "PO", "PCO", "FAO", "NCIT", "mesh", "SNOMED"}
 
 
 def _unverifiable_mapping_targets() -> list[tuple[str, str, str, bool]]:
