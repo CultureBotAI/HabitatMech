@@ -1,8 +1,12 @@
 identifier: NCIT:C13452
-label: Fluids
+label: Other Body Fluids and Secretions
 habitat_category: CLINICAL
 grounding_status: CLOSE
 mapping_status: SEEDED
+synonyms:
+- synonym_text: Fluids
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:fluids
@@ -162,7 +166,7 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 1359
 curation_history:
-- timestamp: '2026-08-13T19:01:33Z'
+- timestamp: '2026-08-14T05:30:47Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

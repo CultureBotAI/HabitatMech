@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -22,6 +23,14 @@ import yaml
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 HABITATS_DIR = REPO_ROOT / "data" / "habitats"
+
+sys.path.insert(0, str(REPO_ROOT / "scripts"))
+
+# The prefixes a habitat record's identifier may use. Imported rather than
+# copied: the flag it drives separates "a wrong id here becomes a record" from
+# "a wrong id here is only an xref", and a second copy would quietly stop
+# flagging any prefix the seeder later gains (#48).
+from seed_from_sources import HABITAT_PREFIXES as _IDENTITY_PREFIXES  # noqa: E402
 
 
 def load_records(root: Path) -> list[tuple[Path, dict]]:
@@ -39,6 +48,33 @@ def table(title: str, counts: Counter, total: int) -> None:
     for key, count in counts.most_common():
         share = f"{100 * count / total:5.1f}%" if total else "    -"
         print(f"  {str(key):26s} {count:6d}  {share}")
+
+
+def _unverifiable_mapping_targets() -> list[tuple[str, str, str, bool]]:
+    """Upstream mapping targets whose label the seeder cannot check.
+
+    The check compares an upstream row's `object_label` against the ontology's
+    own label, which is what stops a wrong id reaching a record. It can only run
+    for terms in the vendored slice, so anything outside it passes unexamined —
+    and that silence is worth printing, because upstream has a measured error
+    rate on the rows that can be checked (#41).
+    """
+    raw = REPO_ROOT / "data" / "raw"
+    terms_path, mapping_path = raw / "ontology_terms.tsv", raw / "isolation_source_groundings.tsv"
+    if not terms_path.exists() or not mapping_path.exists():
+        return []
+    with terms_path.open(newline="", encoding="utf-8") as fh:
+        known = {r["term_id"] for r in csv.DictReader(fh, delimiter="\t")}
+    out = []
+    with mapping_path.open(newline="", encoding="utf-8") as fh:
+        for row in csv.DictReader(fh, delimiter="\t"):
+            target = (row.get("object_id") or "").strip()
+            if target and target not in known:
+                out.append((
+                    row.get("subject_label", ""), target, row.get("object_label", ""),
+                    target.split(":", 1)[0] in _IDENTITY_PREFIXES,
+                ))
+    return sorted(out, key=lambda r: (not r[3], r[0]))
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -182,6 +218,15 @@ def main(argv: list[str] | None = None) -> int:
         print(f"\n=== top {args.ungrounded_top} wholly UNDECIDED ungrounded records ===")
         for assertions, label, identifier in undecided[: args.ungrounded_top]:
             print(f"  {assertions:8d}  {label[:52]:52s}  {identifier}")
+
+    unverifiable = _unverifiable_mapping_targets()
+    if unverifiable:
+        print(f"\n=== {len(unverifiable)} upstream mapping target(s) that cannot be label-checked ===")
+        print("  (their ontology is not vendored, so a wrong id here would not be caught;")
+        print("   upstream has a measured error rate on the rows that CAN be checked)")
+        for subject, target, claimed, identity in unverifiable:
+            flag = "  <- can be a record identity" if identity else ""
+            print(f"  {subject[:26]:26s} {target:18s} claims {claimed!r}{flag}")
 
     if args.out:
         args.out.parent.mkdir(parents=True, exist_ok=True)

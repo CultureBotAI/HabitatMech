@@ -40,6 +40,7 @@ from __future__ import annotations
 import argparse
 import csv
 import datetime
+import gzip
 import hashlib
 import os
 import re
@@ -650,6 +651,115 @@ def _load_bto(kgm: Path) -> tuple[dict[str, dict[str, str]], list[tuple[str, str
         conn.close()
 
 
+def _reference_labels(kgm: Path, wanted: set[str]) -> dict[str, str]:
+    """Labels for mapping targets that live outside the four vendored ontologies.
+
+    The seeder verifies kg-microbe's isolation-source mappings by comparing the
+    row's ``object_label`` against the ontology's own label, which is what stops
+    a wrong id reaching a record (#39, and upstream kg-microbe#777). That check
+    can only run on terms present in the vendored slice, so it silently did
+    nothing for 87 of 283 mapping targets — including three that are wrong
+    (#41):
+
+        Nectar      CHEBI:50292     claims "nectar"        is cadmium sulfate
+        Heavy-metal CHEBI:25555     claims "monoatomic ion" is nitrogen atom
+        Tick        NCBITaxon:6939  claims "Ixodida"        is Ixodidae
+
+    Only the referenced terms are pulled in — roughly ninety rows — not whole
+    ontologies. NCBITaxon alone would be 925k. They are label-only: no ancestry,
+    because nothing walks the hierarchy of a CHEBI or NCIT mapping target.
+
+    Every source here is optional, so a missing file degrades to "unverifiable"
+    rather than failing — which is the wrong default to leave silent, because it
+    is indistinguishable from upstream simply not using that ontology. Anything
+    unresolved is reported by prefix, naming the paths that were tried (#45).
+    """
+    found: dict[str, str] = {}
+    remaining = set(wanted)
+    tried: dict[str, list[Path]] = defaultdict(list)
+
+    for name in ("chebi", "go", "pato", "ncbitaxon", "mondo", "upa", "ec", "hp"):
+        path = kgm / "data" / "transformed" / "ontologies" / f"{name}_nodes.tsv"
+        if not remaining:
+            continue
+        tried[name.upper()].append(path)
+        if not path.exists():
+            continue
+        for row in read_tsv(path):
+            if row["id"] in remaining and (row.get("name") or "").strip():
+                found[row["id"]] = row["name"].strip()
+                remaining.discard(row["id"])
+
+    ncit_db = kgm / "data" / "raw" / "ncit.db"
+    ncit_wanted = {t for t in remaining if t.startswith("NCIT:")}
+    if ncit_wanted:
+        tried["NCIT"].append(ncit_db)
+    if ncit_wanted and ncit_db.exists():
+        conn = sqlite3.connect(f"file:{ncit_db}?mode=ro", uri=True)
+        try:
+            placeholders = ",".join("?" * len(ncit_wanted))
+            for subject, value in conn.execute(
+                f"SELECT subject, value FROM statements WHERE predicate = 'rdfs:label' "
+                f"AND subject IN ({placeholders})",
+                sorted(ncit_wanted),
+            ):
+                if value:
+                    found[subject] = value.strip()
+                    remaining.discard(subject)
+        finally:
+            conn.close()
+
+    # The dump is named for its release — mesh2026.nt.gz — so pinning the year
+    # would quietly stop finding anything the next time MeSH is refreshed.
+    mesh_dumps = sorted((kgm / "data" / "raw").glob("mesh*.nt.gz"))
+    mesh_wanted = {t for t in remaining if t.startswith("mesh:")}
+    if mesh_wanted:
+        tried["MESH"].extend(mesh_dumps or [kgm / "data" / "raw" / "mesh*.nt.gz"])
+    if mesh_wanted and mesh_dumps:
+        locals_ = {t.split(":", 1)[1]: t for t in mesh_wanted}
+        # MeSH URIs carry the release year too: .../mesh/2026/D000038. Labels
+        # are language-tagged literals.
+        pattern = re.compile(
+            r"<http://id\.nlm\.nih\.gov/mesh/(?:\d{4}/)?([^>]+)>\s+"
+            r"<http://www\.w3\.org/2000/01/rdf-schema#label>\s+\"([^\"]+)\""
+        )
+        with gzip.open(mesh_dumps[-1], "rt", encoding="utf-8", errors="replace") as fh:
+            for line in fh:
+                match = pattern.match(line)
+                if match and match.group(1) in locals_:
+                    found[locals_[match.group(1)]] = match.group(2).strip()
+                    remaining.discard(locals_[match.group(1)])
+                    if not {t for t in remaining if t.startswith("mesh:")}:
+                        break
+
+    # A prefix we looked for and could not find a file for is a local
+    # misconfiguration; one we never had a source for is an upstream fact. Only
+    # the first is actionable, so only the first is a WARNING.
+    for prefix, unresolved in sorted(_by_prefix(remaining).items()):
+        missing = [p for p in tried.get(prefix.upper(), ()) if not p.exists()]
+        if missing:
+            print(
+                f"  WARNING: {len(unresolved)} {prefix} mapping target(s) unresolved; "
+                f"expected {', '.join(str(p) for p in missing)} — the seeder cannot "
+                "label-check them (#45)"
+            )
+    unsourced = {t for t in remaining if t.split(":", 1)[0].upper() not in tried}
+    if unsourced:
+        prefixes = ", ".join(sorted(_by_prefix(unsourced)))
+        print(
+            f"  NOTE: {len(unsourced)} mapping target(s) have no label available "
+            f"({prefixes}), so the seeder cannot check them; `just report` lists them"
+        )
+    return found
+
+
+def _by_prefix(terms: set[str]) -> dict[str, set[str]]:
+    out: dict[str, set[str]] = defaultdict(set)
+    for term in terms:
+        out[term.split(":", 1)[0]].add(term)
+    return out
+
+
 def _norm_label(text: str) -> str:
     """Fold a label to a lexical-matching key: lowercase, non-alphanumerics to
     single spaces. Deliberately aggressive so GOLD's "Rock-dwelling (endoliths)"
@@ -737,6 +847,22 @@ def extract_ontology_terms(
         for obj in sorted(parents.get(subj, ()))
         if obj in keep
     ]
+    # Mapping targets outside the four vendored ontologies, label-only. Without
+    # them the seeder's label check silently passes on 87 of 283 targets (#41).
+    extra = _reference_labels(kgm, {t for t in referenced if t not in keep})
+    term_rows.extend(
+        {
+            "term_id": term_id,
+            "ontology": term_id.split(":", 1)[0],
+            "label": label,
+            "definition": "",
+            "synonyms": "",
+            "deprecated": "",
+            "directly_referenced": "TRUE",
+        }
+        for term_id, label in sorted(extra.items())
+    )
+    term_rows.sort(key=lambda r: r["term_id"])
     return term_rows, edge_rows
 
 
@@ -798,8 +924,10 @@ def build_manifest(
         lines.append(f"    bytes: {stat.st_size}")
         stamp = mtime.isoformat(timespec="seconds").replace("+00:00", "Z")
         lines.append(f"    mtime: '{stamp}'")
-        if hash_inputs:
-            lines.append(f"    sha256: {sha256_of(path)}")
+        # Say that hashing was skipped rather than omitting the key. A manifest
+        # with no sha256 anywhere is otherwise indistinguishable from an older
+        # format or a bug, and the provenance claim quietly weakens (#44).
+        lines.append(f"    sha256: {sha256_of(path) if hash_inputs else 'skipped (--no-hash)'}")
     lines.append("outputs:")
     for name, count in sorted(outputs.items()):
         lines.append(f"  - path: {name}")

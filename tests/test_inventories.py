@@ -163,3 +163,44 @@ def test_environment_parameter_term_ids_are_curies(raw_tsv):
             if term and not curie.match(term):
                 bad.append(term)
     assert not bad, f"malformed term ids in the parameter table: {bad[:10]}"
+
+
+def test_mesh_dump_is_found_by_glob_not_by_pinned_year(tmp_path, capsys):
+    """The MeSH dump is named for its release (`mesh2026.nt.gz`), so pinning the
+    year would make the next refresh a silent no-op: the label check would stop
+    running on MeSH targets and nothing would say so (#45)."""
+    import gzip
+    import sys
+    from pathlib import Path
+
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
+    import extract_source_inventory as extract
+
+    raw = tmp_path / "data" / "raw"
+    raw.mkdir(parents=True)
+    for year, label in (("2026", "Stale"), ("2031", "Abscess")):
+        with gzip.open(raw / f"mesh{year}.nt.gz", "wt", encoding="utf-8") as fh:
+            fh.write(
+                f"<http://id.nlm.nih.gov/mesh/{year}/D000038> "
+                f'<http://www.w3.org/2000/01/rdf-schema#label> "{label}"@en .\n'
+            )
+
+    # The newest release wins, and a year nobody hardcoded still resolves.
+    assert extract._reference_labels(tmp_path, {"mesh:D000038"}) == {"mesh:D000038": "Abscess"}
+
+
+def test_a_missing_reference_source_warns_instead_of_degrading_silently(tmp_path, capsys):
+    """Every reference source is optional, so a missing one leaves the target
+    unverifiable rather than failing the run. That is the right behaviour and
+    the wrong thing to leave silent — it is indistinguishable from upstream not
+    using the ontology at all (#45)."""
+    import sys
+    from pathlib import Path
+
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
+    import extract_source_inventory as extract
+
+    (tmp_path / "data" / "raw").mkdir(parents=True)
+    assert extract._reference_labels(tmp_path, {"NCIT:C17649"}) == {}
+    out = capsys.readouterr().out
+    assert "WARNING" in out and "NCIT" in out and "ncit.db" in out

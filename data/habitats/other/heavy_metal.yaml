@@ -1,18 +1,14 @@
 identifier: habitatmech:BACDIVE.8f711387b2
 label: Heavy-metal
 habitat_category: OTHER
-grounding_status: NOT_APPLICABLE
+grounding_status: UNGROUNDED
 mapping_status: SEEDED
-xrefs:
-- CHEBI:25555
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:heavy-metal
   source_label: Heavy-metal
   assertion_count: 38
   assertion_unit: STRAIN
-  notes: Upstream mapping targets a non-habitat ontology (CHEBI:25555); kept as an
-    xref.
 characteristic_taxa:
 - taxon_id: NCBITaxon:1121896
   source: BACDIVE
@@ -164,7 +160,7 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 38
 curation_history:
-- timestamp: '2026-08-13T19:01:33Z'
+- timestamp: '2026-08-14T05:30:47Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: NOT_APPLICABLE.'
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'

@@ -1,8 +1,12 @@
 identifier: NCIT:C14258
-label: Decomposing-plant
+label: Plant
 habitat_category: CLINICAL
 grounding_status: CLOSE
 mapping_status: SEEDED
+synonyms:
+- synonym_text: Decomposing-plant
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:decomposing-plant
@@ -161,7 +165,7 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 126
 curation_history:
-- timestamp: '2026-08-13T19:01:33Z'
+- timestamp: '2026-08-14T05:30:47Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'
