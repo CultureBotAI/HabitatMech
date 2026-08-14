@@ -62,14 +62,18 @@ def test_leaf_claimants_refuses_to_break_a_tie():
 class _Ontology:
     """Minimal stand-in for OntologyIndex over a handful of terms."""
 
-    def __init__(self, by_label=None, by_synonym=None, labels=None):
+    def __init__(self, by_label=None, by_synonym=None, labels=None, synonyms=None):
         self.by_label = by_label or {}
         self.by_synonym = by_synonym or {}
         self.terms = {}
         self._labels = labels or {}
+        self._synonyms = synonyms or {}
 
     def label(self, term_id):
         return self._labels.get(term_id, "")
+
+    def synonyms(self, term_id):
+        return self._synonyms.get(term_id, [])
 
     def ancestors(self, _term_id):
         return set()
@@ -393,3 +397,37 @@ def test_upstream_mapping_is_used_when_its_label_agrees():
     ontology = _Ontology(labels={"UBERON:0000916": "abdomen"})
 
     assert seed.resolve_bacdive(row, mapping, ontology, seed.Counter()).identifier == "UBERON:0000916"
+
+
+def test_mapping_label_check_accepts_a_synonym():
+    """Ontology labels get reworded between releases while the concept stays
+    put. Rejecting on wording alone would drop good mappings for no gain, so a
+    recorded synonym counts — the same rule MediaIngredientMech's B4 uses."""
+
+    match = {"object_id": "ENVO:01000829", "object_label": "wet air"}
+    ont = _Ontology(labels={"ENVO:01000829": "water vapour saturated air"},
+                    synonyms={"ENVO:01000829": ["wet air"]})
+    assert seed.verified_mapping_target(match, ont, seed.Counter()) == "ENVO:01000829"
+
+
+def test_mapping_label_check_still_rejects_a_different_concept():
+    """The synonym allowance must not weaken the actual check: 'indoor air' is
+    not a synonym of 'area of mixed forest', it is a different thing."""
+
+    match = {"object_id": "ENVO:01000855", "object_label": "indoor air"}
+    stats = seed.Counter()
+    ont = _Ontology(labels={"ENVO:01000855": "area of mixed forest"})
+    assert seed.verified_mapping_target(match, ont, stats) is None
+    assert stats["mapping_targets_rejected_label_mismatch"] == 1
+
+
+def test_mapping_target_outside_the_slice_is_passed_through_and_counted():
+    """A target whose ontology is not vendored cannot be checked. It is used
+    rather than dropped — refusing 3 coherent mappings to guard against a
+    fraction of an expected error is a bad trade — but the silence is counted
+    so `just report` can show it (#41)."""
+
+    match = {"object_id": "FAO:0001027", "object_label": "mycorrhiza"}
+    stats = seed.Counter()
+    assert seed.verified_mapping_target(match, _Ontology(), stats) == "FAO:0001027"
+    assert stats["mapping_targets_unverifiable"] == 1

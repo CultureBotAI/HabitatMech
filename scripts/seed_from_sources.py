@@ -201,7 +201,19 @@ def verified_mapping_target(
         # prefix gate has already decided whether it is habitat-shaped.
         stats["mapping_targets_unverifiable"] += 1
         return target
-    if claimed and actual.strip().lower() != claimed.strip().lower():
+    if not claimed:
+        return target
+    # A synonym counts, as MediaIngredientMech's Rule B4 does. Ontology labels
+    # get reworded between releases while the concept stays put, and rejecting
+    # on wording alone would drop good mappings for no gain. It changes nothing
+    # for the current data — none of the four benign variants here
+    # ("Waste"/"waste material", "tundra"/"area of tundra") are recorded
+    # synonyms — but it is what keeps a label refresh from looking like
+    # corruption.
+    accepted = {actual.strip().lower()} | {
+        syn.strip().lower() for syn in ontology.synonyms(target) if syn.strip()
+    }
+    if claimed.strip().lower() not in accepted:
         stats["mapping_targets_rejected_label_mismatch"] += 1
         return None
     return target

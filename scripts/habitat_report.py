@@ -41,6 +41,38 @@ def table(title: str, counts: Counter, total: int) -> None:
         print(f"  {str(key):26s} {count:6d}  {share}")
 
 
+# Prefixes a habitat record's identifier may use. Kept in step with the
+# seeder's HABITAT_PREFIXES.
+_IDENTITY_PREFIXES = {"ENVO", "UBERON", "FOODON", "BTO", "PO", "PCO", "FAO", "NCIT", "mesh", "SNOMED"}
+
+
+def _unverifiable_mapping_targets() -> list[tuple[str, str, str, bool]]:
+    """Upstream mapping targets whose label the seeder cannot check.
+
+    The check compares an upstream row's `object_label` against the ontology's
+    own label, which is what stops a wrong id reaching a record. It can only run
+    for terms in the vendored slice, so anything outside it passes unexamined —
+    and that silence is worth printing, because upstream has a measured error
+    rate on the rows that can be checked (#41).
+    """
+    raw = REPO_ROOT / "data" / "raw"
+    terms_path, mapping_path = raw / "ontology_terms.tsv", raw / "isolation_source_groundings.tsv"
+    if not terms_path.exists() or not mapping_path.exists():
+        return []
+    with terms_path.open(newline="", encoding="utf-8") as fh:
+        known = {r["term_id"] for r in csv.DictReader(fh, delimiter="\t")}
+    out = []
+    with mapping_path.open(newline="", encoding="utf-8") as fh:
+        for row in csv.DictReader(fh, delimiter="\t"):
+            target = (row.get("object_id") or "").strip()
+            if target and target not in known:
+                out.append((
+                    row.get("subject_label", ""), target, row.get("object_label", ""),
+                    target.split(":", 1)[0] in _IDENTITY_PREFIXES,
+                ))
+    return sorted(out, key=lambda r: (not r[3], r[0]))
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=HABITATS_DIR)
@@ -182,6 +214,15 @@ def main(argv: list[str] | None = None) -> int:
         print(f"\n=== top {args.ungrounded_top} wholly UNDECIDED ungrounded records ===")
         for assertions, label, identifier in undecided[: args.ungrounded_top]:
             print(f"  {assertions:8d}  {label[:52]:52s}  {identifier}")
+
+    unverifiable = _unverifiable_mapping_targets()
+    if unverifiable:
+        print(f"\n=== {len(unverifiable)} upstream mapping target(s) that cannot be label-checked ===")
+        print("  (their ontology is not vendored, so a wrong id here would not be caught;")
+        print("   upstream has a measured error rate on the rows that CAN be checked)")
+        for subject, target, claimed, identity in unverifiable:
+            flag = "  <- can be a record identity" if identity else ""
+            print(f"  {subject[:26]:26s} {target:18s} claims {claimed!r}{flag}")
 
     if args.out:
         args.out.parent.mkdir(parents=True, exist_ok=True)
