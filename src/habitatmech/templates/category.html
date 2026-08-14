@@ -4,14 +4,18 @@
 {% block content %}
 <h1>{{ category }}</h1>
 <p class="lede">{{ records|length }} habitat records. {{ description }}</p>
+<p class="meta">The source path is shown because a record's label is only the last
+step of it: "Cattle barn" under Air is the air sampled in a cattle barn, not the
+barn.</p>
 <input class="searchbox" id="q" type="search" placeholder="Filter these {{ records|length }} records…" aria-label="Filter records">
 <table id="tbl">
   <caption>{{ category }} habitats</caption>
-  <thead><tr><th scope="col">Habitat</th><th scope="col">Identifier</th><th scope="col">Grounding</th><th scope="col" class="num">Assertions</th><th scope="col">Sources</th></tr></thead>
+  <thead><tr><th scope="col">Habitat</th><th scope="col">Source path</th><th scope="col">Identifier</th><th scope="col">Grounding</th><th scope="col" class="num">Assertions</th><th scope="col">Sources</th></tr></thead>
   <tbody>
   {% for r in records %}
   <tr>
     <td><a href="../habitats/{{ r.slug }}.html">{{ r.label }}</a></td>
+    <td class="meta">{{ r.path }}</td>
     <td><code class="curie">{{ r.identifier }}</code></td>
     <td><span class="pill{{ ' warn' if r.grounding in ('UNGROUNDED','NOT_APPLICABLE') else '' }}">{{ r.grounding }}</span></td>
     <td class="num">{{ r.assertions }}</td>

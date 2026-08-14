@@ -62,10 +62,14 @@ def test_leaf_claimants_refuses_to_break_a_tie():
 class _Ontology:
     """Minimal stand-in for OntologyIndex over a handful of terms."""
 
-    def __init__(self, by_label=None, by_synonym=None):
+    def __init__(self, by_label=None, by_synonym=None, labels=None):
         self.by_label = by_label or {}
         self.by_synonym = by_synonym or {}
         self.terms = {}
+        self._labels = labels or {}
+
+    def label(self, term_id):
+        return self._labels.get(term_id, "")
 
     def ancestors(self, _term_id):
         return set()
@@ -165,7 +169,7 @@ def test_bacdive_upstream_refusal_is_honoured():
     row = {"bacdive_id": "bacdive.isolation_source:abort", "label": "Abort", "source_slug": "abort"}
     mapping = {"abort": {"object_id": "", "predicate_id": ""}}
 
-    res = seed.resolve_bacdive(row, mapping)
+    res = seed.resolve_bacdive(row, mapping, _Ontology(), seed.Counter())
 
     assert res.grounding_status == "UNGROUNDED"
     assert res.route == "bacdive_declined_upstream"
@@ -176,9 +180,11 @@ def test_bacdive_non_habitat_target_is_kept_as_an_xref():
     property of a habitat, not a habitat, so the record must not adopt it as
     its identity — but the link is still worth keeping."""
     row = {"bacdive_id": "bacdive.isolation_source:acidic", "label": "Acidic", "source_slug": "acidic"}
-    mapping = {"acidic": {"object_id": "PATO:0001429", "predicate_id": "skos:exactMatch"}}
+    mapping = {"acidic": {"object_id": "PATO:0001429", "object_label": "acidic",
+                          "predicate_id": "skos:exactMatch"}}
+    ontology = _Ontology(labels={"PATO:0001429": "acidic"})
 
-    res = seed.resolve_bacdive(row, mapping)
+    res = seed.resolve_bacdive(row, mapping, ontology, seed.Counter())
 
     assert res.grounding_status == "NOT_APPLICABLE"
     assert res.identifier.startswith("habitatmech:BACDIVE.")
@@ -187,9 +193,11 @@ def test_bacdive_non_habitat_target_is_kept_as_an_xref():
 
 def test_bacdive_habitat_target_is_adopted():
     row = {"bacdive_id": "bacdive.isolation_source:abdomen", "label": "Abdomen", "source_slug": "abdomen"}
-    mapping = {"abdomen": {"object_id": "UBERON:0000916", "predicate_id": "skos:exactMatch"}}
+    mapping = {"abdomen": {"object_id": "UBERON:0000916", "object_label": "abdomen",
+                           "predicate_id": "skos:exactMatch"}}
+    ontology = _Ontology(labels={"UBERON:0000916": "abdomen"})
 
-    res = seed.resolve_bacdive(row, mapping)
+    res = seed.resolve_bacdive(row, mapping, ontology, seed.Counter())
 
     assert res.identifier == "UBERON:0000916"
     assert res.grounding_status == "EXACT"
@@ -352,3 +360,36 @@ def test_attestation_ordering_keeps_unknown_fields():
     )
     assert list(ordered) == ["source", "source_label", "some_future_field"]
     assert ordered["some_future_field"] == 1
+
+
+def test_upstream_mapping_is_rejected_when_its_label_disagrees():
+    """kg-microbe's table names both a target id and the label it believes that
+    id has, and for 11 of its 283 grounded rows those disagree — six of them a
+    different concept entirely: Indoor-Air points at a term ENVO calls "area of
+    mixed forest", Meat at cheddar cheese, Mushroom at a ginkgo tree.
+
+    Curation decisions have been label-verified since the decisions layer
+    existed. The upstream table was not, so exactly that got through — and
+    propagated, because five more records inherited the mis-grounded "Indoor
+    Air" as their parent.
+    """
+    row = {"bacdive_id": "bacdive.isolation_source:indoor-air", "label": "Indoor-Air",
+           "source_slug": "indoor-air"}
+    mapping = {"indoor air": {"object_id": "ENVO:01000855", "object_label": "indoor air",
+                              "predicate_id": "skos:exactMatch"}}
+    ontology = _Ontology(labels={"ENVO:01000855": "area of mixed forest"})
+
+    res = seed.resolve_bacdive(row, mapping, ontology, seed.Counter())
+
+    assert res.grounding_status == "UNGROUNDED"
+    assert res.route == "bacdive_mapping_label_mismatch"
+
+
+def test_upstream_mapping_is_used_when_its_label_agrees():
+    row = {"bacdive_id": "bacdive.isolation_source:abdomen", "label": "Abdomen",
+           "source_slug": "abdomen"}
+    mapping = {"abdomen": {"object_id": "UBERON:0000916", "object_label": "abdomen",
+                           "predicate_id": "skos:exactMatch"}}
+    ontology = _Ontology(labels={"UBERON:0000916": "abdomen"})
+
+    assert seed.resolve_bacdive(row, mapping, ontology, seed.Counter()).identifier == "UBERON:0000916"

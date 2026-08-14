@@ -168,6 +168,45 @@ PREDICATE_TO_GROUNDING = {
 SEED_CURATOR = "seed_from_sources"
 
 
+def verified_mapping_target(
+    match: dict[str, str], ontology: OntologyIndex, stats: Counter
+) -> str | None:
+    """The mapping row's target CURIE, but only if it denotes what the row says.
+
+    kg-microbe's isolation-source table names both a target id and the label it
+    believes that id has. Those disagree for 11 of its 283 grounded rows, and six
+    of the disagreements are a different concept entirely:
+
+        Indoor-Air  -> ENVO:01000855, which the table calls "indoor air"
+                       and ENVO calls "area of mixed forest"
+        Meat        -> FOODON:00001027 = "cheddar cheese food product"
+        Mushroom    -> FOODON:03411260 = "ginkgo tree"
+
+    Curation decisions have been label-verified since the decisions layer
+    existed, precisely so a plausible-looking wrong CURIE cannot reach a record.
+    The upstream table was trusted without the same check, so exactly that got
+    through — and then propagated, because five more records inherited the
+    mis-grounded "Indoor Air" as their parent.
+
+    Returns None when the label disagrees, which drops the concept to ungrounded
+    rather than grounding it to whatever the id happens to name.
+    """
+    target = (match.get("object_id") or "").strip()
+    if not target:
+        return None
+    claimed = (match.get("object_label") or "").strip()
+    actual = ontology.label(target)
+    if not actual:
+        # Outside the vendored slice: nothing to check it against, and the
+        # prefix gate has already decided whether it is habitat-shaped.
+        stats["mapping_targets_unverifiable"] += 1
+        return target
+    if claimed and actual.strip().lower() != claimed.strip().lower():
+        stats["mapping_targets_rejected_label_mismatch"] += 1
+        return None
+    return target
+
+
 def norm_label(text: str) -> str:
     """Lexical-matching key: lowercase, runs of non-alphanumerics to one space."""
     return re.sub(r"[^a-z0-9]+", " ", (text or "").lower()).strip()
@@ -351,6 +390,9 @@ class Resolution:
     extra_parents: list[str] = field(default_factory=list)
     extra_xrefs: list[str] = field(default_factory=list)
     route: str = ""
+    # Curator-set category for the record this concept lands in; overrides the
+    # seeder's GOLD-path inference.
+    category: str | None = None
     # True when a curator signed off on this source concept. A merged record is
     # only REVIEWED when every source concept feeding it is.
     reviewed: bool = False
@@ -370,6 +412,7 @@ def apply_decision(default: Resolution, minted: str, decisions: dict[str, Decisi
     decision = decisions.get(minted)
     if decision is None:
         return default
+    category_override = decision.category or None
 
     if decision.decision == "GROUND":
         return Resolution(
@@ -377,6 +420,7 @@ def apply_decision(default: Resolution, minted: str, decisions: dict[str, Decisi
             decision.grounding_status,
             mapping_predicate=_GROUNDING_TO_PREDICATE.get(decision.grounding_status),
             route=f"curated_ground_from_{default.route}",
+            category=category_override,
             # Uniform with the other branches. validate_decisions() forbids a
             # CLASS-depth grounding, so today this is always True — but the
             # invariant belongs in the validator as policy, not here as an
@@ -393,6 +437,7 @@ def apply_decision(default: Resolution, minted: str, decisions: dict[str, Decisi
             mapping_predicate=_GROUNDING_TO_PREDICATE.get(decision.grounding_status),
             extra_parents=[decision.object_id],
             route=f"curated_ground_as_parent_from_{default.route}",
+            category=category_override,
             reviewed=decision.counts_as_reviewed,
         )
     if decision.decision == "NOT_APPLICABLE":
@@ -401,6 +446,7 @@ def apply_decision(default: Resolution, minted: str, decisions: dict[str, Decisi
             "NOT_APPLICABLE",
             extra_xrefs=[decision.object_id] if decision.object_id else [],
             route=f"curated_not_applicable_from_{default.route}",
+            category=category_override,
             reviewed=decision.counts_as_reviewed,
         )
     if decision.decision == "CONFIRM_UNGROUNDED":
@@ -413,11 +459,12 @@ def apply_decision(default: Resolution, minted: str, decisions: dict[str, Decisi
             "UNGROUNDED",
             extra_parents=[decision.object_id] if decision.object_id else [],
             route=f"curated_confirm_ungrounded_from_{default.route}",
+            category=category_override,
             reviewed=decision.counts_as_reviewed,
         )
     # REVIEW: the curator checked the seeder's own answer and endorsed it.
     return replace(default, route=f"curated_review_of_{default.route}",
-                   reviewed=decision.counts_as_reviewed)
+                   category=category_override, reviewed=decision.counts_as_reviewed)
 
 
 _GROUNDING_TO_PREDICATE = {
@@ -428,17 +475,24 @@ _GROUNDING_TO_PREDICATE = {
 }
 
 
-def resolve_bacdive(row: dict[str, str], mapping: dict[str, dict[str, str]]) -> Resolution:
+def resolve_bacdive(
+    row: dict[str, str],
+    mapping: dict[str, dict[str, str]],
+    ontology: OntologyIndex,
+    stats: Counter,
+) -> Resolution:
     key = norm_label(row["label"])
     match = mapping.get(key) or mapping.get(norm_label(row["source_slug"]))
     minted = mint("BACDIVE", row["bacdive_id"])
     if match is None:
         return Resolution(minted, "UNGROUNDED", route="bacdive_unmapped")
-    object_id = (match.get("object_id") or "").strip()
-    if not object_id:
+    if not (match.get("object_id") or "").strip():
         # Upstream curator looked at this and declined to ground it. Honour
         # that rather than re-guessing with a weaker method.
         return Resolution(minted, "UNGROUNDED", route="bacdive_declined_upstream")
+    object_id = verified_mapping_target(match, ontology, stats)
+    if object_id is None:
+        return Resolution(minted, "UNGROUNDED", route="bacdive_mapping_label_mismatch")
     prefix = object_id.split(":", 1)[0]
     if prefix not in HABITAT_PREFIXES:
         # Grounded upstream, but to a quality/chemical/organism. Keep the link
@@ -525,6 +579,7 @@ def resolve_gold(
     mapping: dict[str, dict[str, str]],
     claimants: dict[str, str | None],
     composed_claim: dict[str, str | None] | None = None,
+    stats: Counter | None = None,
 ) -> Resolution:
     levels = [row[lvl] for lvl in GOLD_LEVELS if row[lvl]]
     leaf = norm_label(row["leaf_label"])
@@ -548,6 +603,7 @@ def resolve_gold(
     # here distinguishes "prefix context immaterial" from "prefix context
     # material". Tracked in issue #15.
     composed_claim = composed_claim or {}
+    stats = stats if stats is not None else Counter()
     may_claim_composed = composed_claim.get(composed) in (
         ANY_PATH_MAY_CLAIM,
         row["canonical_path"],
@@ -589,7 +645,9 @@ def resolve_gold(
 
     match = mapping.get(leaf)
     if match and (match.get("object_id") or "").strip():
-        object_id = match["object_id"].strip()
+        object_id = verified_mapping_target(match, ontology, stats)
+        if object_id is None:
+            return Resolution(minted, "UNGROUNDED", route="gold_mapping_label_mismatch")
         if object_id.split(":", 1)[0] in HABITAT_PREFIXES:
             if may_claim:
                 status = PREDICATE_TO_GROUNDING.get((match.get("predicate_id") or "").strip(), "CLOSE")
@@ -622,6 +680,7 @@ def ingest_gold(
     mapping,
     routes: Counter,
     decisions: dict[str, Decision] | None = None,
+    stats: Counter | None = None,
 ) -> dict[str, str]:
     claimants = leaf_claimants(rows)
     composed_claim = composed_claimants(rows)
@@ -630,7 +689,7 @@ def ingest_gold(
     decisions = decisions or {}
     for row in rows:
         res = apply_decision(
-            resolve_gold(row, store.ontology, mapping, claimants, composed_claim),
+            resolve_gold(row, store.ontology, mapping, claimants, composed_claim, stats),
             mint("GOLD", row["canonical_path"]),
             decisions,
         )
@@ -651,7 +710,7 @@ def ingest_gold(
             (levels[0], levels[1]) if len(levels) >= 2 else ("", "")
         ) or GOLD_CATEGORY_BY_ECOSYSTEM.get(levels[0] if levels else "")
         if category:
-            store.set_category(concept, category, authoritative=True)
+            store.set_category(concept, res.category or category, authoritative=True)
 
         concept.add_synonym(row["leaf_label"], "EXACT_SYNONYM", "GOLD")
         concept.parents.update(res.extra_parents)
@@ -701,6 +760,7 @@ def ingest_bacdive(
     routes: Counter,
     decisions: dict[str, Decision] | None = None,
     taxa_rows: list[dict[str, str]] | None = None,
+    stats: Counter | None = None,
 ) -> None:
     decisions = decisions or {}
     taxa_by_source: dict[str, list[dict[str, str]]] = defaultdict(list)
@@ -708,13 +768,17 @@ def ingest_bacdive(
         taxa_by_source[taxon_row["bacdive_id"]].append(taxon_row)
     for row in rows:
         res = apply_decision(
-            resolve_bacdive(row, mapping), mint("BACDIVE", row["bacdive_id"]), decisions
+            resolve_bacdive(row, mapping, store.ontology, stats if stats is not None else Counter()),
+            mint("BACDIVE", row["bacdive_id"]),
+            decisions,
         )
         routes[res.route] += 1
         concept = store.get(res.identifier, row["label"], res.grounding_status)
         concept.source_concepts += 1
         concept.reviewed_sources += 1 if res.reviewed else 0
-        if concept.category is None:
+        if res.category:
+            store.set_category(concept, res.category, authoritative=True)
+        elif concept.category is None:
             store.set_category(concept, infer_category(res.identifier, store.ontology), authoritative=False)
         concept.add_synonym(row["label"], "EXACT_SYNONYM", "BacDive")
         concept.parents.update(res.extra_parents)
@@ -1352,9 +1416,9 @@ def build_corpus() -> Corpus:
     )
     stats["curation_decisions_loaded"] = len(decisions)
 
-    ingest_gold(store, gold_rows, mapping, routes, decisions)
+    ingest_gold(store, gold_rows, mapping, routes, decisions, stats)
     ingest_bacdive(store, bacdive_rows, mapping, routes, decisions,
-                   taxa_rows=read_tsv("bacdive_source_taxa.tsv"))
+                   taxa_rows=read_tsv("bacdive_source_taxa.tsv"), stats=stats)
     ingest_prego(store, prego_rows, prego_taxa, routes, decisions)
     ingest_parameters(store, parameter_rows, stats, decisions)
 

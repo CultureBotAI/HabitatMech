@@ -77,6 +77,13 @@ GROUNDING_STATUSES = {"EXACT", "BROAD", "NARROW", "CLOSE"}
 # without the distinction a bulk sweep would report the corpus as reviewed when
 # nobody had read a line of it.
 REVIEW_DEPTHS = {"ITEM", "CLASS"}
+
+# Categories a decision may override the seeder's inference with. Kept in step
+# with HabitatCategoryEnum by tests/test_schema.py.
+CATEGORIES = {
+    "TERRESTRIAL", "AQUATIC", "AIR", "HOST_ASSOCIATED",
+    "ENGINEERED", "FOOD", "CLINICAL", "OTHER",
+}
 DEFAULT_REVIEW_DEPTH = "ITEM"
 
 REQUIRED_COLUMNS = [
@@ -110,6 +117,14 @@ class Decision:
     date: str
     notes: str
     review_depth: str = DEFAULT_REVIEW_DEPTH
+    # Overrides the seeder's category inference for the record this concept
+    # lands in. The inference follows GOLD's path, which encodes the SETTING a
+    # sample came from — right for "marine sediment" but wrong when the leaf
+    # names a different kind of thing entirely, as GOLD's Air branch does for
+    # the biofilm growing inside an air scrubber. Blanket rules do worse: using
+    # the matched term's own category instead would move 90 marine and lake
+    # sediments out of AQUATIC.
+    category: str = ""
 
     @property
     def counts_as_reviewed(self) -> bool:
@@ -148,6 +163,7 @@ def load_decisions(path: Path) -> dict[str, Decision]:
                 notes=(row["notes"] or "").strip(),
                 review_depth=(row.get("review_depth") or DEFAULT_REVIEW_DEPTH).strip().upper()
                 or DEFAULT_REVIEW_DEPTH,
+                category=(row.get("category") or "").strip().upper(),
             )
     return decisions
 
@@ -176,6 +192,15 @@ def validate_decisions(
                 f"expected one of {sorted(DECISION_KINDS)}"
             )
             continue
+        if decision.category and decision.category not in CATEGORIES:
+            problems.append(
+                f"{prefix}: category {decision.category!r} not in {sorted(CATEGORIES)}"
+            )
+        if decision.category and decision.review_depth != "ITEM":
+            problems.append(
+                f"{prefix}: a category override is a per-record judgement and cannot be "
+                "CLASS depth"
+            )
         if decision.review_depth not in REVIEW_DEPTHS:
             problems.append(
                 f"{prefix}: review_depth {decision.review_depth!r} not in {sorted(REVIEW_DEPTHS)}"

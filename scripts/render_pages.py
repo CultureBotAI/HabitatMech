@@ -206,6 +206,11 @@ def build(out_dir: Path) -> None:
                 "identifier": identifier,
                 "slug": slug_of[identifier],
                 "grounding": record["grounding"],
+                "path": (
+                    attestations[0].get("source_path")
+                    or attestations[0].get("source_label", "")
+                    if attestations else ""
+                ),
                 "assertions": assertions,
                 "sources": sources,
             }
