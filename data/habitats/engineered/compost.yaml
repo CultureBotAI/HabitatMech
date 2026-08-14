@@ -5,7 +5,7 @@ definition: Manure which has been derived from the aerobically decomposed remnan
 definition_source: ENVO
 habitat_category: ENGINEERED
 grounding_status: EXACT
-mapping_status: REVIEWED
+mapping_status: SEEDED
 synonyms:
 - synonym_text: Composting
   synonym_type: EXACT_SYNONYM
@@ -40,6 +40,11 @@ source_attestations:
   assertion_count: 1
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: MADIN
+  source_id: ENVO:00002170
+  source_label: compost
+  assertion_count: 112
+  assertion_unit: TAXON
 - source: PREGO
   source_id: ENVO:00002170
   source_label: compost
@@ -82,6 +87,190 @@ environmental_parameters:
   qualitative_value: occasionally dry
   source: kg-microbe environments.csv (compost)
 characteristic_taxa:
+- taxon_id: NCBITaxon:1089552
+  source: PREGO
+  taxon_label: Rhodovibrio salinarum DSM 9154
+  score: 3.0
+  rank: 3
+  candidate_pool: 1913
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1111737
+  source: PREGO
+  taxon_label: Thermocrispum municipale DSM 44069
+  score: 3.0
+  rank: 4
+  candidate_pool: 1913
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1111738
+  source: PREGO
+  taxon_label: Thermocrispum agreste DSM 44070
+  score: 3.0
+  rank: 5
+  candidate_pool: 1913
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1121013
+  source: PREGO
+  taxon_label: Arenimonas composti TR7-09 = DSM 18010
+  score: 3.0
+  rank: 6
+  candidate_pool: 1913
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1121349
+  source: PREGO
+  taxon_label: Comamonas composti DSM 21721
+  score: 3.0
+  rank: 7
+  candidate_pool: 1913
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1121385
+  source: PREGO
+  taxon_label: Demetria terragena DSM 11295
+  score: 3.0
+  rank: 8
+  candidate_pool: 1913
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1121395
+  source: PREGO
+  taxon_label: Desulfitobacterium chlororespirans DSM 11544
+  score: 3.0
+  rank: 9
+  candidate_pool: 1913
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1121927
+  source: PREGO
+  taxon_label: Gordonia hirsuta DSM 44140 = NBRC 16056
+  score: 3.0
+  rank: 11
+  candidate_pool: 1913
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1121952
+  source: PREGO
+  taxon_label: Humibacter albus DSM 18994
+  score: 3.0
+  rank: 12
+  candidate_pool: 1913
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1122239
+  source: PREGO
+  taxon_label: Microbacterium luticocti DSM 19459
+  score: 3.0
+  rank: 13
+  candidate_pool: 1913
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1122958
+  source: PREGO
+  taxon_label: Phenylobacterium composti DSM 19425
+  score: 3.0
+  rank: 14
+  candidate_pool: 1913
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1123405
+  source: PREGO
+  taxon_label: Tuberibacillus calidus DSM 17572
+  score: 3.0
+  rank: 16
+  candidate_pool: 1913
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1292027
+  source: PREGO
+  taxon_label: Stutzerimonas azotifigens DSM 17556
+  score: 3.0
+  rank: 17
+  candidate_pool: 1913
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:407022
+  source: PREGO
+  taxon_label: Olivibacter domesticus
+  score: 3.0
+  rank: 20
+  candidate_pool: 1913
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:471852
+  source: PREGO
+  taxon_label: Thermomonospora curvata DSM 43183
+  score: 3.0
+  rank: 21
+  candidate_pool: 1913
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:644383
+  source: PREGO
+  taxon_label: Thermosporothrix hazakensis
+  score: 3.0
+  rank: 22
+  candidate_pool: 1913
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:649349
+  source: PREGO
+  taxon_label: Leadbetterella byssophila DSM 17132
+  score: 3.0
+  rank: 23
+  candidate_pool: 1913
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1408
+  source: MADIN
+  taxon_label: Bacillus pumilus
+  candidate_pool: 112
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1714
+  source: MADIN
+  taxon_label: cellulomonas_uda
+  candidate_pool: 112
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:269800
+  source: MADIN
+  taxon_label: Thermobifida fusca YX
+  candidate_pool: 112
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:287
+  source: MADIN
+  taxon_label: Pseudomonas aeruginosa
+  candidate_pool: 112
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:292459
+  source: MADIN
+  taxon_label: Symbiobacterium thermophilum IAM 14863
+  candidate_pool: 112
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:36773
+  source: MADIN
+  taxon_label: burkholderia_sp
+  candidate_pool: 112
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:394503
+  source: MADIN
+  taxon_label: Ruminiclostridium cellulolyticum H10
+  candidate_pool: 112
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:743721
+  source: MADIN
+  taxon_label: Pseudoxanthomonas suwonensis 11-1
+  candidate_pool: 112
+  corroborated_by:
+  - PREGO
 - taxon_id: NCBITaxon:1045004
   source: PREGO
   taxon_label: Oenococcus kitaharae DSM 17330
@@ -94,95 +283,17 @@ characteristic_taxa:
   score: 3.0
   rank: 2
   candidate_pool: 1913
-- taxon_id: NCBITaxon:1089552
-  source: PREGO
-  taxon_label: Rhodovibrio salinarum DSM 9154
-  score: 3.0
-  rank: 3
-  candidate_pool: 1913
-- taxon_id: NCBITaxon:1111737
-  source: PREGO
-  taxon_label: Thermocrispum municipale DSM 44069
-  score: 3.0
-  rank: 4
-  candidate_pool: 1913
-- taxon_id: NCBITaxon:1111738
-  source: PREGO
-  taxon_label: Thermocrispum agreste DSM 44070
-  score: 3.0
-  rank: 5
-  candidate_pool: 1913
-- taxon_id: NCBITaxon:1121013
-  source: PREGO
-  taxon_label: Arenimonas composti TR7-09 = DSM 18010
-  score: 3.0
-  rank: 6
-  candidate_pool: 1913
-- taxon_id: NCBITaxon:1121349
-  source: PREGO
-  taxon_label: Comamonas composti DSM 21721
-  score: 3.0
-  rank: 7
-  candidate_pool: 1913
-- taxon_id: NCBITaxon:1121385
-  source: PREGO
-  taxon_label: Demetria terragena DSM 11295
-  score: 3.0
-  rank: 8
-  candidate_pool: 1913
-- taxon_id: NCBITaxon:1121395
-  source: PREGO
-  taxon_label: Desulfitobacterium chlororespirans DSM 11544
-  score: 3.0
-  rank: 9
-  candidate_pool: 1913
 - taxon_id: NCBITaxon:1121431
   source: PREGO
   taxon_label: Desulfallas thermosapovorans DSM 6562
   score: 3.0
   rank: 10
   candidate_pool: 1913
-- taxon_id: NCBITaxon:1121927
-  source: PREGO
-  taxon_label: Gordonia hirsuta DSM 44140 = NBRC 16056
-  score: 3.0
-  rank: 11
-  candidate_pool: 1913
-- taxon_id: NCBITaxon:1121952
-  source: PREGO
-  taxon_label: Humibacter albus DSM 18994
-  score: 3.0
-  rank: 12
-  candidate_pool: 1913
-- taxon_id: NCBITaxon:1122239
-  source: PREGO
-  taxon_label: Microbacterium luticocti DSM 19459
-  score: 3.0
-  rank: 13
-  candidate_pool: 1913
-- taxon_id: NCBITaxon:1122958
-  source: PREGO
-  taxon_label: Phenylobacterium composti DSM 19425
-  score: 3.0
-  rank: 14
-  candidate_pool: 1913
 - taxon_id: NCBITaxon:1123024
   source: PREGO
   taxon_label: Pseudonocardia asaccharolytica DSM 44247 = NBRC 16224
   score: 3.0
   rank: 15
-  candidate_pool: 1913
-- taxon_id: NCBITaxon:1123405
-  source: PREGO
-  taxon_label: Tuberibacillus calidus DSM 17572
-  score: 3.0
-  rank: 16
-  candidate_pool: 1913
-- taxon_id: NCBITaxon:1292027
-  source: PREGO
-  taxon_label: Stutzerimonas azotifigens DSM 17556
-  score: 3.0
-  rank: 17
   candidate_pool: 1913
 - taxon_id: NCBITaxon:1868734
   source: PREGO
@@ -195,30 +306,6 @@ characteristic_taxa:
   taxon_label: Sorangiineae bacterium NIC37A_2
   score: 3.0
   rank: 19
-  candidate_pool: 1913
-- taxon_id: NCBITaxon:407022
-  source: PREGO
-  taxon_label: Olivibacter domesticus
-  score: 3.0
-  rank: 20
-  candidate_pool: 1913
-- taxon_id: NCBITaxon:471852
-  source: PREGO
-  taxon_label: Thermomonospora curvata DSM 43183
-  score: 3.0
-  rank: 21
-  candidate_pool: 1913
-- taxon_id: NCBITaxon:644383
-  source: PREGO
-  taxon_label: Thermosporothrix hazakensis
-  score: 3.0
-  rank: 22
-  candidate_pool: 1913
-- taxon_id: NCBITaxon:649349
-  source: PREGO
-  taxon_label: Leadbetterella byssophila DSM 17132
-  score: 3.0
-  rank: 23
   candidate_pool: 1913
 - taxon_id: NCBITaxon:39650
   source: PREGO
@@ -233,8 +320,8 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 1913
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-14T22:45:54Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD,
-    PREGO. Grounding: EXACT.'
+    MADIN, PREGO. Grounding: EXACT.'

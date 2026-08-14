@@ -428,6 +428,89 @@ def extract_prego(
     return habitat_rows, taxa_rows, full_taxa
 
 
+def extract_madin(kgm: Path) -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[str, set[str]]]:
+    """Return (habitat rows, all habitat-taxon rows, full taxon sets).
+
+    Madin et al. is a literature-curated compilation, and kg-microbe already
+    transforms it into ``biolink:location_of`` edges pointing habitat -> taxon,
+    the same shape and direction PREGO uses. The habitats are already CURIEs
+    (mostly ENVO) or ``bacdive.isolation_source:`` ids that this repo already
+    carries, so almost none of the grounding work has to be redone (#40).
+
+    Unlike PREGO and BacDive this returns **every** pair rather than a top-N,
+    because Madin supplies no score to rank by and inventing an order here would
+    read as a ranking that does not exist. The trim happens after corroboration
+    is computed, where "another source agrees" is a real reason to prefer one
+    pair over another — see :func:`_trim_unranked`.
+    """
+    nodes_path = kgm / "data" / "transformed" / "madin_etal" / "nodes.tsv"
+    edges_path = kgm / "data" / "transformed" / "madin_etal" / "edges.tsv"
+    if not edges_path.exists():
+        print(f"  WARNING: {edges_path} not found; Madin is not being ingested")
+        return [], [], {}
+
+    labels: dict[str, str] = {}
+    for row in read_tsv(nodes_path):
+        if (row.get("name") or "").strip():
+            labels[row["id"]] = row["name"].strip()
+
+    taxa: dict[str, set[str]] = defaultdict(set)
+    for row in read_tsv(edges_path):
+        if row.get("predicate") != "biolink:location_of":
+            continue
+        obj = row.get("object", "")
+        if obj.startswith("NCBITaxon:"):
+            taxa[row["subject"]].add(obj)
+
+    habitat_rows = [
+        {
+            "madin_id": habitat,
+            "vocabulary": habitat.split(":", 1)[0],
+            "label": labels.get(habitat, ""),
+            "taxon_count": len(found),
+        }
+        for habitat, found in taxa.items()
+    ]
+    habitat_rows.sort(key=lambda r: (-r["taxon_count"], r["madin_id"]))
+
+    taxa_rows = [
+        {
+            "madin_id": habitat,
+            "taxon_id": taxon,
+            "taxon_label": labels.get(taxon, ""),
+            "corroborated_by": "",
+        }
+        for habitat in sorted(taxa)
+        for taxon in sorted(taxa[habitat])
+    ]
+    return habitat_rows, taxa_rows, dict(taxa)
+
+
+def _trim_unranked(
+    taxa_rows: list[dict[str, Any]], key: str, limit: int
+) -> list[dict[str, Any]]:
+    """Cut an unranked source's taxon rows to `limit` per habitat.
+
+    A source with no score still has to be cut down to what fits on a record,
+    and the choice of which to keep is a real one. Corroborated pairs go first:
+    "an independent source agrees" is the only quality signal available here,
+    and it is the one #8 established as worth more than any single source's
+    ranking. The rest fall back to taxon id, which is arbitrary but stable
+    across runs — the corpus has to be byte-reproducible.
+    """
+    by_habitat: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for row in taxa_rows:
+        by_habitat[row[key]].append(row)
+    kept: list[dict[str, Any]] = []
+    for habitat in sorted(by_habitat):
+        rows = sorted(
+            by_habitat[habitat],
+            key=lambda r: (not r.get("corroborated_by"), r["taxon_id"]),
+        )
+        kept.extend(rows[:limit])
+    return kept
+
+
 def _load_taxon_labels(kgm: Path, wanted: set[str]) -> dict[str, str]:
     """Scientific names for the taxa we kept. One pass over kg-microbe's
     ~925k-row NCBITaxon node table, filtered to `wanted`, rather than loading
@@ -999,6 +1082,10 @@ def main(argv: list[str] | None = None) -> int:
     prego_rows, prego_taxa_rows, prego_full = extract_prego(kgm, args.top_taxa)
     print(f"  {len(prego_rows)} PREGO habitat terms, {len(prego_taxa_rows)} top-taxa rows")
 
+    print("extracting Madin et al. habitat associations ...")
+    madin_rows, madin_taxa_rows, madin_full = extract_madin(kgm)
+    print(f"  {len(madin_rows)} Madin habitats, {len(madin_taxa_rows)} habitat-taxon pairs")
+
     print("extracting environment parameter table ...")
     param_rows = extract_environment_parameters(kgm)
     print(f"  {len(param_rows)} parameter assertions")
@@ -1023,28 +1110,79 @@ def main(argv: list[str] | None = None) -> int:
         for row in grounding_rows
         if row["object_id"]
     }
-    prego_shared: dict[str, set[str]] = defaultdict(set)
-    bacdive_shared: dict[str, set[str]] = defaultdict(set)
-    linked = 0
+
+    # Every source's habitats reduced to one shared key so their taxon sets can
+    # be compared. PREGO and Madin already use ontology CURIEs; BacDive reaches
+    # one through the isolation-source mapping, which is the same table the
+    # seeder grounds it with. Madin's own bacdive.isolation_source: subjects key
+    # directly on the BacDive id, so they line up without going through an
+    # ontology term at all.
+    per_source: dict[str, dict[str, set[str]]] = {
+        "PREGO": {},
+        "BACDIVE": {},
+        "MADIN": {},
+    }
+    local_key: dict[str, dict[str, str]] = {"PREGO": {}, "BACDIVE": {}, "MADIN": {}}
+    for prego_id, found in prego_full.items():
+        per_source["PREGO"].setdefault(prego_id, set()).update(found)
+        local_key["PREGO"][prego_id] = prego_id
     for bacdive_row in bacdive_rows:
-        target = bacdive_target.get(_norm_label(bacdive_row["label"]))
-        if not target or target not in prego_full:
+        bacdive_id = bacdive_row["bacdive_id"]
+        key = bacdive_target.get(_norm_label(bacdive_row["label"])) or bacdive_id
+        per_source["BACDIVE"].setdefault(key, set()).update(bacdive_full.get(bacdive_id, set()))
+        local_key["BACDIVE"][bacdive_id] = key
+    for madin_id, found in madin_full.items():
+        key = madin_id
+        if madin_id.startswith("bacdive.isolation_source:"):
+            # Madin points at the BacDive vocabulary directly; route it through
+            # the same mapping so it meets BacDive and PREGO on one key.
+            key = bacdive_target.get(_norm_label(madin_id.split(":", 1)[1])) or madin_id
+        per_source["MADIN"].setdefault(key, set()).update(found)
+        local_key["MADIN"][madin_id] = key
+
+    # For each source, which taxa at each habitat some OTHER source also
+    # asserts, and which sources those were.
+    agrees: dict[str, dict[str, dict[str, set[str]]]] = {
+        source: defaultdict(lambda: defaultdict(set)) for source in per_source
+    }
+    multi_source_habitats = 0
+    keys = {k for source in per_source.values() for k in source}
+    for key in keys:
+        present = [s for s in per_source if key in per_source[s]]
+        if len(present) < 2:
             continue
-        linked += 1
-        shared = bacdive_full.get(bacdive_row["bacdive_id"], set()) & prego_full[target]
-        if shared:
-            prego_shared[target] |= shared
-            bacdive_shared[bacdive_row["bacdive_id"]] |= shared
-    for taxa_row in prego_taxa_rows:
-        if taxa_row["taxon_id"] in prego_shared.get(taxa_row["prego_id"], ()):
-            taxa_row["corroborated_by"] = "BACDIVE"
-    for taxa_row in bacdive_taxa_rows:
-        if taxa_row["taxon_id"] in bacdive_shared.get(taxa_row["bacdive_id"], ()):
-            taxa_row["corroborated_by"] = "PREGO"
+        multi_source_habitats += 1
+        for source in present:
+            for other in present:
+                if other == source:
+                    continue
+                for taxon in per_source[source][key] & per_source[other][key]:
+                    agrees[source][key][taxon].add(other)
+
+    def _mark(rows: list[dict[str, Any]], source: str, id_column: str) -> None:
+        for row in rows:
+            key = local_key[source].get(row[id_column])
+            others = agrees[source].get(key, {}).get(row["taxon_id"]) if key else None
+            if others:
+                row["corroborated_by"] = "|".join(sorted(others))
+
+    _mark(prego_taxa_rows, "PREGO", "prego_id")
+    _mark(bacdive_taxa_rows, "BACDIVE", "bacdive_id")
+    _mark(madin_taxa_rows, "MADIN", "madin_id")
+
+    # Madin has no score, so its trim runs here — after corroboration, which is
+    # the only signal available to choose by (#40).
+    madin_taxa_rows = _trim_unranked(madin_taxa_rows, "madin_id", args.top_taxa)
+
     corroborated = sum(
-        1 for r in (*prego_taxa_rows, *bacdive_taxa_rows) if r.get("corroborated_by")
+        1
+        for r in (*prego_taxa_rows, *bacdive_taxa_rows, *madin_taxa_rows)
+        if r.get("corroborated_by")
     )
-    print(f"  {linked} habitats attested by both sources; {corroborated} kept taxa corroborated")
+    print(
+        f"  {multi_source_habitats} habitats attested by more than one source; "
+        f"{corroborated} kept taxa corroborated"
+    )
 
     referenced: set[str] = set()
     for row in grounding_rows:
@@ -1052,6 +1190,11 @@ def main(argv: list[str] | None = None) -> int:
             referenced.add(row["object_id"])
     for row in prego_rows:
         referenced.add(row["prego_id"])
+    for row in madin_rows:
+        # Madin habitats are already CURIEs, so they need vendoring the same
+        # way PREGO's do — otherwise a Madin-only habitat has no label (#40).
+        if ":" in row["madin_id"] and not row["madin_id"].startswith("bacdive."):
+            referenced.add(row["madin_id"])
     for row in param_rows:
         referenced.update(t for t in row["term_ids"].split("|") if t)
 
@@ -1118,6 +1261,16 @@ def main(argv: list[str] | None = None) -> int:
              "channels", "corroborated_by"],
             prego_taxa_rows,
         ),
+        "madin_habitats.tsv": (
+            ["madin_id", "vocabulary", "label", "taxon_count"],
+            madin_rows,
+        ),
+        # No rank and no score columns on purpose: Madin supplies neither, and a
+        # rank column filled with the sort order would read as one.
+        "madin_habitat_taxa.tsv": (
+            ["madin_id", "taxon_id", "taxon_label", "corroborated_by"],
+            madin_taxa_rows,
+        ),
         "environment_parameters.tsv": (
             ["main_group", "env_type", "cobo_simon_habitat", "parameter", "value", "term_ids", "term_labels"],
             param_rows,
@@ -1162,6 +1315,8 @@ def main(argv: list[str] | None = None) -> int:
         kgm / "data" / "transformed" / "bacdive" / "edges.tsv",
         kgm / "data" / "transformed" / "prego" / "nodes.tsv",
         kgm / "data" / "transformed" / "prego" / "edges.tsv",
+        kgm / "data" / "transformed" / "madin_etal" / "nodes.tsv",
+        kgm / "data" / "transformed" / "madin_etal" / "edges.tsv",
         kgm / "data" / "raw" / "environments.csv",
         kgm / "mappings" / "isolation_source_to_ontology.tsv",
     ]

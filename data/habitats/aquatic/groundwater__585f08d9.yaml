@@ -17,6 +17,11 @@ source_attestations:
   source_id: water_groundwater
   source_label: water_groundwater
   notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: MADIN
+  source_id: ENVO:01001004
+  source_label: groundwater
+  assertion_count: 331
+  assertion_unit: TAXON
 environmental_parameters:
 - parameter: GRADIENTS
   qualitative_value: low
@@ -45,9 +50,110 @@ environmental_parameters:
 - parameter: WATER_VARIABILITY
   qualitative_value: permanently wet
   source: kg-microbe environments.csv (water_groundwater)
+characteristic_taxa:
+- taxon_id: NCBITaxon:100
+  source: MADIN
+  taxon_label: ancylobacter_aquaticus
+  candidate_pool: 331
+- taxon_id: NCBITaxon:1001240
+  source: MADIN
+  taxon_label: cryobacterium_roopkundense
+  candidate_pool: 331
+- taxon_id: NCBITaxon:1008
+  source: MADIN
+  taxon_label: saprospira_grandis
+  candidate_pool: 331
+- taxon_id: NCBITaxon:102
+  source: MADIN
+  taxon_label: flectobacillus_glomeratus
+  candidate_pool: 331
+- taxon_id: NCBITaxon:1056810
+  source: MADIN
+  taxon_label: aquaspirillum_fasciculus
+  candidate_pool: 331
+- taxon_id: NCBITaxon:1069080
+  source: MADIN
+  taxon_label: Succinispira mobilis DSM 6222
+  candidate_pool: 331
+- taxon_id: NCBITaxon:1069082
+  source: MADIN
+  taxon_label: Halomicrobium katesii DSM 19301
+  candidate_pool: 331
+- taxon_id: NCBITaxon:1074
+  source: MADIN
+  taxon_label: rhodoblastus_acidophilus
+  candidate_pool: 331
+- taxon_id: NCBITaxon:1076
+  source: MADIN
+  taxon_label: rhodopseudomonas_palustris
+  candidate_pool: 331
+- taxon_id: NCBITaxon:107633
+  source: MADIN
+  taxon_label: Methylocystis sp. LW5
+  candidate_pool: 331
+- taxon_id: NCBITaxon:107635
+  source: MADIN
+  taxon_label: Methylosinus sp. LW3
+  candidate_pool: 331
+- taxon_id: NCBITaxon:107636
+  source: MADIN
+  taxon_label: Methylosinus sp. PW1
+  candidate_pool: 331
+- taxon_id: NCBITaxon:1076412
+  source: MADIN
+  taxon_label: Pelosinus defluvii
+  candidate_pool: 331
+- taxon_id: NCBITaxon:1077976
+  source: MADIN
+  taxon_label: Gordonia polyisoprenivorans Kd2
+  candidate_pool: 331
+- taxon_id: NCBITaxon:1081640
+  source: MADIN
+  taxon_label: Sphingomonas elodea ATCC 31461
+  candidate_pool: 331
+- taxon_id: NCBITaxon:108619
+  source: MADIN
+  taxon_label: salmonella_newport
+  candidate_pool: 331
+- taxon_id: NCBITaxon:1089433
+  source: MADIN
+  taxon_label: Francisella noatunensis subsp. noatunensis FSC772
+  candidate_pool: 331
+- taxon_id: NCBITaxon:1094
+  source: MADIN
+  taxon_label: chlorobium_phaeovibrioides
+  candidate_pool: 331
+- taxon_id: NCBITaxon:1096091
+  source: MADIN
+  taxon_label: Labrys methylaminiphilus JLW10
+  candidate_pool: 331
+- taxon_id: NCBITaxon:1100720
+  source: MADIN
+  taxon_label: Limnohabitans sp. Rim28
+  candidate_pool: 331
+- taxon_id: NCBITaxon:1100721
+  source: MADIN
+  taxon_label: Limnohabitans sp. Rim47
+  candidate_pool: 331
+- taxon_id: NCBITaxon:1104324
+  source: MADIN
+  taxon_label: pyrobaculum_ferrireducens
+  candidate_pool: 331
+- taxon_id: NCBITaxon:1111728
+  source: MADIN
+  taxon_label: Budvicia aquatica DSM 5075, ATCC 35567
+  candidate_pool: 331
+- taxon_id: NCBITaxon:1112
+  source: MADIN
+  taxon_label: porphyrobacter_neustonensis
+  candidate_pool: 331
+- taxon_id: NCBITaxon:1112272
+  source: MADIN
+  taxon_label: Hyphomicrobium sp. 802
+  candidate_pool: 331
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-14T22:45:54Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE. Grounding:
-    EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, MADIN.
+    Grounding: EXACT.'

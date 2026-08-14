@@ -4,7 +4,7 @@ definition: A permanent walled and roofed construction.
 definition_source: ENVO
 habitat_category: ENGINEERED
 grounding_status: EXACT
-mapping_status: REVIEWED
+mapping_status: SEEDED
 synonyms:
 - synonym_text: buildings
   synonym_type: RELATED_SYNONYM
@@ -31,6 +31,11 @@ source_attestations:
   assertion_count: 17
   assertion_unit: ORGANISM
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: MADIN
+  source_id: ENVO:00000073
+  source_label: building
+  assertion_count: 162
+  assertion_unit: TAXON
 - source: PREGO
   source_id: ENVO:00000073
   source_label: building
@@ -73,9 +78,109 @@ characteristic_taxa:
   score: 3.0
   rank: 1
   candidate_pool: 1
+- taxon_id: NCBITaxon:1017177
+  source: MADIN
+  taxon_label: Gluconacetobacter tumulicola
+  candidate_pool: 162
+- taxon_id: NCBITaxon:1017181
+  source: MADIN
+  taxon_label: Gluconacetobacter asukensis
+  candidate_pool: 162
+- taxon_id: NCBITaxon:104336
+  source: MADIN
+  taxon_label: microbacterium_foliorum
+  candidate_pool: 162
+- taxon_id: NCBITaxon:1046624
+  source: MADIN
+  taxon_label: Lactococcus lactis subsp. lactis IO-1
+  candidate_pool: 162
+- taxon_id: NCBITaxon:1049980
+  source: MADIN
+  taxon_label: Leptospira santarosai HAI134
+  candidate_pool: 162
+- taxon_id: NCBITaxon:1049981
+  source: MADIN
+  taxon_label: Leptospira santarosai HAI1349
+  candidate_pool: 162
+- taxon_id: NCBITaxon:1049982
+  source: MADIN
+  taxon_label: Leptospira santarosai HAI1380
+  candidate_pool: 162
+- taxon_id: NCBITaxon:1049983
+  source: MADIN
+  taxon_label: Leptospira santarosai HAI821
+  candidate_pool: 162
+- taxon_id: NCBITaxon:1050153
+  source: MADIN
+  taxon_label: ornithinimicrobium_murale
+  candidate_pool: 162
+- taxon_id: NCBITaxon:1053220
+  source: MADIN
+  taxon_label: Bacillus cereus MSX-A1
+  candidate_pool: 162
+- taxon_id: NCBITaxon:1053221
+  source: MADIN
+  taxon_label: Bacillus cereus MSX-A12
+  candidate_pool: 162
+- taxon_id: NCBITaxon:1053222
+  source: MADIN
+  taxon_label: Bacillus cereus MSX-D12
+  candidate_pool: 162
+- taxon_id: NCBITaxon:1068980
+  source: MADIN
+  taxon_label: Amycolatopsis nigrescens CSC17Ta-90, DSM 44992
+  candidate_pool: 162
+- taxon_id: NCBITaxon:1071054
+  source: MADIN
+  taxon_label: domibacillus_robiginosus
+  candidate_pool: 162
+- taxon_id: NCBITaxon:1081040
+  source: MADIN
+  taxon_label: microbacterium_murale
+  candidate_pool: 162
+- taxon_id: NCBITaxon:1085538
+  source: MADIN
+  taxon_label: Leptospira interrogans sv. Bataviae HAI135
+  candidate_pool: 162
+- taxon_id: NCBITaxon:1089456
+  source: MADIN
+  taxon_label: Pseudomonas aeruginosa NCGM2.S1
+  candidate_pool: 162
+- taxon_id: NCBITaxon:1112217
+  source: MADIN
+  taxon_label: Pseudomonas psychrotolerans L19
+  candidate_pool: 162
+- taxon_id: NCBITaxon:1122923
+  source: MADIN
+  taxon_label: Paenibacillus pasadenensis DSM 19293
+  candidate_pool: 162
+- taxon_id: NCBITaxon:1134914
+  source: MADIN
+  taxon_label: Staphylococcus haemolyticus R1P1
+  candidate_pool: 162
+- taxon_id: NCBITaxon:115979
+  source: MADIN
+  taxon_label: bacillus_nealsonii
+  candidate_pool: 162
+- taxon_id: NCBITaxon:1178541
+  source: MADIN
+  taxon_label: Bacillus safensis FO-36b
+  candidate_pool: 162
+- taxon_id: NCBITaxon:1193041
+  source: MADIN
+  taxon_label: Leptospira interrogans HAI1536
+  candidate_pool: 162
+- taxon_id: NCBITaxon:1193060
+  source: MADIN
+  taxon_label: Leptospira santarosai HAI1594
+  candidate_pool: 162
+- taxon_id: NCBITaxon:1195761
+  source: MADIN
+  taxon_label: Ornithinimicrobium tianjinense
+  candidate_pool: 162
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-14T22:45:54Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD,
-    PREGO. Grounding: EXACT.'
+    MADIN, PREGO. Grounding: EXACT.'

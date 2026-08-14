@@ -240,3 +240,36 @@ def test_label_cohorts_separate_the_defect_class_the_seeder_cannot_see():
     # The known false negative, stated rather than hidden: "sample" is shared,
     # so a plainly wrong mapping lands in the low-risk bucket.
     assert label_cohort("core sample", "Nucleotide Sequence Sample Name") == "overlap"
+
+
+def test_madin_taxa_carry_no_invented_rank_or_score(raw_tsv):
+    """Madin supplies neither a rank nor a score. The extractor must not
+    manufacture one — a `rank` column filled with the sort order reads as a
+    ranking that does not exist, and #8 established that this corpus reports
+    what a source actually says rather than what would be convenient (#40)."""
+    rows = list(raw_tsv("madin_habitat_taxa.tsv"))
+    assert rows, "no Madin taxa extracted"
+    assert set(rows[0]) == {"madin_id", "taxon_id", "taxon_label", "corroborated_by"}
+
+
+def test_madin_bacdive_vocabulary_rows_are_addressable(raw_tsv):
+    """Five Madin habitats are `bacdive.isolation_source:` ids, and they are
+    keyed under BACDIVE so that a BacDive extraction reaching the compound level
+    would merge with them rather than duplicate them. None overlap today —
+    Madin uses the compound paths (`host_animal_endotherm`), kg-microbe's
+    BacDive transform emits single tokens (`host`) — so the thing that actually
+    has to hold is that every one of them can still be addressed by a curation
+    decision (#40)."""
+    import sys
+    from pathlib import Path
+
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
+    from seed_from_sources import _madin_key, mint
+
+    shared = [
+        r["madin_id"] for r in raw_tsv("madin_habitats.tsv")
+        if r["madin_id"].startswith("bacdive.isolation_source:")
+    ]
+    assert shared, "expected Madin habitats in the BacDive vocabulary"
+    assert all(_madin_key(m) == mint("BACDIVE", m) for m in shared)
+    assert all(_madin_key(m).startswith("habitatmech:BACDIVE.") for m in shared)

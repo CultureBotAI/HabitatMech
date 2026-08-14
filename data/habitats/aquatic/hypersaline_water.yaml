@@ -17,6 +17,11 @@ source_attestations:
   source_id: water_hypersaline
   source_label: water_hypersaline
   notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: MADIN
+  source_id: ENVO:00002012
+  source_label: hypersaline water
+  assertion_count: 416
+  assertion_unit: TAXON
 - source: PREGO
   source_id: ENVO:00002012
   source_label: hypersaline water
@@ -50,6 +55,14 @@ environmental_parameters:
   qualitative_value: permanently wet
   source: kg-microbe environments.csv (water_hypersaline)
 characteristic_taxa:
+- taxon_id: NCBITaxon:31910
+  source: PREGO
+  taxon_label: Halovibrio variabilis
+  score: 1.11467
+  rank: 5
+  candidate_pool: 14
+  corroborated_by:
+  - MADIN
 - taxon_id: NCBITaxon:926690
   source: PREGO
   taxon_label: Haloplanus natans DSM 17983
@@ -73,12 +86,6 @@ characteristic_taxa:
   taxon_label: Alcanivorax sp. EPR7
   score: 1.13534
   rank: 4
-  candidate_pool: 14
-- taxon_id: NCBITaxon:31910
-  source: PREGO
-  taxon_label: Halovibrio variabilis
-  score: 1.11467
-  rank: 5
   candidate_pool: 14
 - taxon_id: NCBITaxon:115553
   source: PREGO
@@ -131,9 +138,105 @@ characteristic_taxa:
   score: 1.01893
   rank: 14
   candidate_pool: 14
+- taxon_id: NCBITaxon:1027249
+  source: MADIN
+  taxon_label: gracilibacillus_kekensis
+  candidate_pool: 416
+- taxon_id: NCBITaxon:1033802
+  source: MADIN
+  taxon_label: Salinisphaera shabanensis E1L3A
+  candidate_pool: 416
+- taxon_id: NCBITaxon:1033806
+  source: MADIN
+  taxon_label: Halorhabdus tiamatea SARL4B
+  candidate_pool: 416
+- taxon_id: NCBITaxon:1033810
+  source: MADIN
+  taxon_label: Haloplasma contractile SSD-17B
+  candidate_pool: 416
+- taxon_id: NCBITaxon:1034944
+  source: MADIN
+  taxon_label: legionella_tunisiensis
+  candidate_pool: 416
+- taxon_id: NCBITaxon:1036674
+  source: MADIN
+  taxon_label: Idiomarina sp. A28L
+  candidate_pool: 416
+- taxon_id: NCBITaxon:1048380
+  source: MADIN
+  taxon_label: Fusibacter sp. 3D3
+  candidate_pool: 416
+- taxon_id: NCBITaxon:1048396
+  source: MADIN
+  taxon_label: Halopenitus persicus
+  candidate_pool: 416
+- taxon_id: NCBITaxon:1069073
+  source: MADIN
+  taxon_label: amycolatopsis_halophila
+  candidate_pool: 416
+- taxon_id: NCBITaxon:1071078
+  source: MADIN
+  taxon_label: Bacillus sp. NSP9.1
+  candidate_pool: 416
+- taxon_id: NCBITaxon:1071079
+  source: MADIN
+  taxon_label: Bacillus sp. SB47
+  candidate_pool: 416
+- taxon_id: NCBITaxon:1076695
+  source: MADIN
+  taxon_label: Halanaerobium sehlinense
+  candidate_pool: 416
+- taxon_id: NCBITaxon:107820
+  source: MADIN
+  taxon_label: thialkalivibrio_nitratis
+  candidate_pool: 416
+- taxon_id: NCBITaxon:108003
+  source: MADIN
+  taxon_label: thialkalivibrio_denitrificans
+  candidate_pool: 416
+- taxon_id: NCBITaxon:1082479
+  source: MADIN
+  taxon_label: limimonas_halophila
+  candidate_pool: 416
+- taxon_id: NCBITaxon:1114856
+  source: MADIN
+  taxon_label: Natronorubrum tibetense DSM 13204
+  candidate_pool: 416
+- taxon_id: NCBITaxon:1118153
+  source: MADIN
+  taxon_label: Halomonas sp. GFAJ-1
+  candidate_pool: 416
+- taxon_id: NCBITaxon:1120956
+  source: MADIN
+  taxon_label: Afifella pfennigii DSM 17143
+  candidate_pool: 416
+- taxon_id: NCBITaxon:1120961
+  source: MADIN
+  taxon_label: Ahrensia kielensis DSM 5890
+  candidate_pool: 416
+- taxon_id: NCBITaxon:1120998
+  source: MADIN
+  taxon_label: Anaerovorax odorimutans DSM 5092
+  candidate_pool: 416
+- taxon_id: NCBITaxon:1121087
+  source: MADIN
+  taxon_label: Bacillus chagannorensis DSM 18086
+  candidate_pool: 416
+- taxon_id: NCBITaxon:1121317
+  source: MADIN
+  taxon_label: Clostridium halophilum DSM 5387
+  candidate_pool: 416
+- taxon_id: NCBITaxon:1121459
+  source: MADIN
+  taxon_label: Desulfovibrio oxyclinae DSM 11498
+  candidate_pool: 416
+- taxon_id: NCBITaxon:1121463
+  source: MADIN
+  taxon_label: Desulfovibrio senezii DSM 8436
+  candidate_pool: 416
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-14T22:45:54Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, PREGO.
-    Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, MADIN,
+    PREGO. Grounding: EXACT.'

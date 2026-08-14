@@ -20,6 +20,11 @@ source_attestations:
   source_id: host_fungus
   source_label: host_fungus
   notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: MADIN
+  source_id: ENVO:01001041
+  source_label: fungi-associated environment
+  assertion_count: 38
+  assertion_unit: TAXON
 environmental_parameters:
 - parameter: GRADIENTS
   qualitative_value: high
@@ -51,9 +56,110 @@ environmental_parameters:
 - parameter: WATER_VARIABILITY
   qualitative_value: permanently wet
   source: kg-microbe environments.csv (host_fungus)
+characteristic_taxa:
+- taxon_id: NCBITaxon:1030145
+  source: MADIN
+  taxon_label: Pseudomonas tolaasii PMS117
+  candidate_pool: 38
+- taxon_id: NCBITaxon:1161101
+  source: MADIN
+  taxon_label: Pseudomonas tolaasii 6264
+  candidate_pool: 38
+- taxon_id: NCBITaxon:1188261
+  source: MADIN
+  taxon_label: Bacillus marmarensis DSM 21297
+  candidate_pool: 38
+- taxon_id: NCBITaxon:1189289
+  source: MADIN
+  taxon_label: Pseudomonas sp. NS1
+  candidate_pool: 38
+- taxon_id: NCBITaxon:1224163
+  source: MADIN
+  taxon_label: Corynebacterium maris DSM 45190
+  candidate_pool: 38
+- taxon_id: NCBITaxon:1300914
+  source: MADIN
+  taxon_label: Mucilaginibacter sp. PAMC 26640
+  candidate_pool: 38
+- taxon_id: NCBITaxon:1310431
+  source: MADIN
+  taxon_label: Bacillus subtilis subtilis MP11
+  candidate_pool: 38
+- taxon_id: NCBITaxon:1349767
+  source: MADIN
+  taxon_label: Janthinobacterium agaricidamnosum NBRC 102515 = DSM 9628
+  candidate_pool: 38
+- taxon_id: NCBITaxon:1484116
+  source: MADIN
+  taxon_label: Hymenobacter sp. PAMC 26554
+  candidate_pool: 38
+- taxon_id: NCBITaxon:1484118
+  source: MADIN
+  taxon_label: Hymenobacter sp. PAMC 26628
+  candidate_pool: 38
+- taxon_id: NCBITaxon:158899
+  source: MADIN
+  taxon_label: collimonas_fungivorans
+  candidate_pool: 38
+- taxon_id: NCBITaxon:1792307
+  source: MADIN
+  taxon_label: Bosea sp. PAMC 26642
+  candidate_pool: 38
+- taxon_id: NCBITaxon:1795053
+  source: MADIN
+  taxon_label: Microbacterium sp. PAMC 28756
+  candidate_pool: 38
+- taxon_id: NCBITaxon:1795630
+  source: MADIN
+  taxon_label: Frondihabitans sp. PAMC 28766
+  candidate_pool: 38
+- taxon_id: NCBITaxon:1795631
+  source: MADIN
+  taxon_label: Variovorax sp. PAMC 28711
+  candidate_pool: 38
+- taxon_id: NCBITaxon:1911
+  source: MADIN
+  taxon_label: actinomyces_griseus
+  candidate_pool: 38
+- taxon_id: NCBITaxon:345341
+  source: MADIN
+  taxon_label: Kutzneria sp. 744
+  candidate_pool: 38
+- taxon_id: NCBITaxon:417203
+  source: MADIN
+  taxon_label: burkholderia_endofungorum
+  candidate_pool: 38
+- taxon_id: NCBITaxon:463794
+  source: MADIN
+  taxon_label: Pseudomonas fluorescens BBc6R8
+  candidate_pool: 38
+- taxon_id: NCBITaxon:53445
+  source: MADIN
+  taxon_label: streptomyces_canescens
+  candidate_pool: 38
+- taxon_id: NCBITaxon:564421
+  source: MADIN
+  taxon_label: Pseudomonas fluorescens NZ052
+  candidate_pool: 38
+- taxon_id: NCBITaxon:564422
+  source: MADIN
+  taxon_label: Pseudomonas fluorescens NZ17
+  candidate_pool: 38
+- taxon_id: NCBITaxon:564423
+  source: MADIN
+  taxon_label: Pseudomonas tolaasii NCPPB 2192
+  candidate_pool: 38
+- taxon_id: NCBITaxon:570936
+  source: MADIN
+  taxon_label: pseudonocardia_parietis
+  candidate_pool: 38
+- taxon_id: NCBITaxon:588067
+  source: MADIN
+  taxon_label: prauserella_muralis
+  candidate_pool: 38
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-14T22:45:54Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE. Grounding:
-    EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, MADIN.
+    Grounding: EXACT.'

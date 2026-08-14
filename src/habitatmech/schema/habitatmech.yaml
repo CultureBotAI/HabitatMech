@@ -572,6 +572,13 @@ enums:
         description: BacDive isolation sources for type strains.
       PREGO:
         description: PREGO habitat-organism associations (ENVO and BTO terms).
+      MADIN:
+        description: >-
+          Madin et al.'s literature-curated prokaryote phenotypic trait
+          compilation, whose `isolation_source` column kg-microbe transforms
+          into habitat-taxon associations. Curated from publications at species
+          level, which makes it independent of PREGO's text mining and of
+          BacDive's strain records.
       ENVIRONMENTS_TABLE:
         description: >-
           kg-microbe's environment physicochemical parameter table
@@ -600,7 +607,14 @@ enums:
       STRAIN:
         description: BacDive strain records.
       TAXON:
-        description: Distinct taxa associated with the habitat (PREGO).
+        description: >-
+          Distinct taxa associated with the habitat (PREGO, MADIN). The unit is
+          the same for both and the counts are the same kind of thing, but the
+          granularity is not: PREGO's taxa are largely strain-level and Madin's
+          are species-level, so a larger PREGO count does not mean a broader
+          habitat. Kept as one unit rather than split, because inventing a
+          second name for "distinct taxa" would imply a difference in what is
+          being counted rather than in how finely.
       ASSERTION:
         description: Individual assertions, where the asserting entity is not distinguished.
 

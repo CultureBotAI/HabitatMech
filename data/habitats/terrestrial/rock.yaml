@@ -5,7 +5,7 @@ definition: A rock is a naturally occurring solid aggregate of one or more miner
 definition_source: ENVO
 habitat_category: TERRESTRIAL
 grounding_status: EXACT
-mapping_status: REVIEWED
+mapping_status: SEEDED
 synonyms:
 - synonym_text: Rocks
   synonym_type: EXACT_SYNONYM
@@ -32,6 +32,11 @@ source_attestations:
   source_path: Environmental > Terrestrial > Saprolite–Bedrock interface > Saprolite
     > Rocks
   mapping_predicate: skos:exactMatch
+- source: MADIN
+  source_id: ENVO:00001995
+  source_label: rock
+  assertion_count: 190
+  assertion_unit: TAXON
 - source: PREGO
   source_id: ENVO:00001995
   source_label: rock
@@ -50,6 +55,42 @@ environmental_parameters:
   qualitative_value: high
   source: kg-microbe environments.csv (rock)
 characteristic_taxa:
+- taxon_id: NCBITaxon:1121381
+  source: MADIN
+  taxon_label: Deinococcus marmoris DSM 12784
+  candidate_pool: 190
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1122138
+  source: MADIN
+  taxon_label: Kribbella catacumbae DSM 19601
+  candidate_pool: 190
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1123057
+  source: MADIN
+  taxon_label: Rhodonellum psychrophilum GCM71, DSM 17998
+  candidate_pool: 190
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1123241
+  source: MADIN
+  taxon_label: Nakamurella lactea DSM 19367
+  candidate_pool: 190
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:471853
+  source: MADIN
+  taxon_label: Beutenbergia cavernae DSM 12333
+  candidate_pool: 190
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:70993
+  source: MADIN
+  taxon_label: flexibacter_aggregans
+  candidate_pool: 190
+  corroborated_by:
+  - PREGO
 - taxon_id: NCBITaxon:104245
   source: PREGO
   taxon_label: Clavaria zollingeri
@@ -200,9 +241,85 @@ characteristic_taxa:
   score: 4.0
   rank: 25
   candidate_pool: 158
+- taxon_id: NCBITaxon:1007104
+  source: MADIN
+  taxon_label: Sphingomonas sp. S17
+  candidate_pool: 190
+- taxon_id: NCBITaxon:102227
+  source: MADIN
+  taxon_label: pseudonocardia_kongjuensis
+  candidate_pool: 190
+- taxon_id: NCBITaxon:1026
+  source: MADIN
+  taxon_label: marinoscillum_furvescens
+  candidate_pool: 190
+- taxon_id: NCBITaxon:1043206
+  source: MADIN
+  taxon_label: Acidiphilium sp. PM, DSM 24941
+  candidate_pool: 190
+- taxon_id: NCBITaxon:1051075
+  source: MADIN
+  taxon_label: Paracoccus denitrificans SD1
+  candidate_pool: 190
+- taxon_id: NCBITaxon:105422
+  source: MADIN
+  taxon_label: streptacidiphilus_carbonis
+  candidate_pool: 190
+- taxon_id: NCBITaxon:1055466
+  source: MADIN
+  taxon_label: Rhodococcus canchipurensis
+  candidate_pool: 190
+- taxon_id: NCBITaxon:1077942
+  source: MADIN
+  taxon_label: micromonospora_kangleipakensis
+  candidate_pool: 190
+- taxon_id: NCBITaxon:1082932
+  source: MADIN
+  taxon_label: Agrobacterium tumefaciens CCNWGS0286
+  candidate_pool: 190
+- taxon_id: NCBITaxon:1112211
+  source: MADIN
+  taxon_label: Janthinobacterium lividum PAMC 25724
+  candidate_pool: 190
+- taxon_id: NCBITaxon:111781
+  source: MADIN
+  taxon_label: Leptolyngbya sp. PCC 7376
+  candidate_pool: 190
+- taxon_id: NCBITaxon:1120923
+  source: MADIN
+  taxon_label: Acidocella aminolytica DSM 11237
+  candidate_pool: 190
+- taxon_id: NCBITaxon:1120959
+  source: MADIN
+  taxon_label: Agromyces italicus DSM 16388
+  candidate_pool: 190
+- taxon_id: NCBITaxon:1121026
+  source: MADIN
+  taxon_label: Aureimonas altamirensis DSM 21988
+  candidate_pool: 190
+- taxon_id: NCBITaxon:1121432
+  source: MADIN
+  taxon_label: Desulfotomaculum thermosubterraneum DSM 16057
+  candidate_pool: 190
+- taxon_id: NCBITaxon:1121445
+  source: MADIN
+  taxon_label: Desulfovibrio desulfuricans desulfuricans DSM 642
+  candidate_pool: 190
+- taxon_id: NCBITaxon:1121468
+  source: MADIN
+  taxon_label: Desulfovirgula thermocuniculi DSM 16036
+  candidate_pool: 190
+- taxon_id: NCBITaxon:1121481
+  source: MADIN
+  taxon_label: Dyadobacter alkalitolerans DSM 23607
+  candidate_pool: 190
+- taxon_id: NCBITaxon:1121830
+  source: MADIN
+  taxon_label: fodinicurvata_fenggangensis
+  candidate_pool: 190
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-14T22:45:54Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD,
-    PREGO. Grounding: EXACT.'
+    MADIN, PREGO. Grounding: EXACT.'

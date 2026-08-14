@@ -17,6 +17,11 @@ source_attestations:
   source_id: sediment
   source_label: sediment
   notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: MADIN
+  source_id: ENVO:00002007
+  source_label: sediment
+  assertion_count: 523
+  assertion_unit: TAXON
 - source: PREGO
   source_id: ENVO:00002007
   source_label: sediment
@@ -38,6 +43,156 @@ environmental_parameters:
   qualitative_value: permanently wet
   source: kg-microbe environments.csv (sediment)
 characteristic_taxa:
+- taxon_id: NCBITaxon:1069448
+  source: MADIN
+  taxon_label: Nitriliruptor alkaliphilus DSM 45188
+  candidate_pool: 523
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1076
+  source: MADIN
+  taxon_label: rhodopseudomonas_palustris
+  candidate_pool: 523
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:107637
+  source: MADIN
+  taxon_label: Methylomonas sp. LW13
+  candidate_pool: 523
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1090322
+  source: MADIN
+  taxon_label: Methanolobus tindarius DSM 2278
+  candidate_pool: 523
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1114856
+  source: MADIN
+  taxon_label: Natronorubrum tibetense DSM 13204
+  candidate_pool: 523
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1120953
+  source: MADIN
+  taxon_label: Aestuariibacter salexigens DSM 15300
+  candidate_pool: 523
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1120998
+  source: MADIN
+  taxon_label: Anaerovorax odorimutans DSM 5092
+  candidate_pool: 523
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121012
+  source: MADIN
+  taxon_label: Arenibacter latericius DSM 15913
+  candidate_pool: 523
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121017
+  source: MADIN
+  taxon_label: Arsenicicoccus bolidensis DSM 15745
+  candidate_pool: 523
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121085
+  source: MADIN
+  taxon_label: Bacillus aidingensis DSM 18341
+  candidate_pool: 523
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121086
+  source: MADIN
+  taxon_label: Bacillus aurantiacus DSM 18675
+  candidate_pool: 523
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121317
+  source: MADIN
+  taxon_label: Clostridium halophilum DSM 5387
+  candidate_pool: 523
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121326
+  source: MADIN
+  taxon_label: Clostridium magnum DSM 2767
+  candidate_pool: 523
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121411
+  source: MADIN
+  taxon_label: Desulfomicrobium escambiense DSM 10707
+  candidate_pool: 523
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121420
+  source: MADIN
+  taxon_label: Desulfosporosinus lacus DSM 15449
+  candidate_pool: 523
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121443
+  source: MADIN
+  taxon_label: Desulfovibrio cuneatus DSM 11391
+  candidate_pool: 523
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121447
+  source: MADIN
+  taxon_label: Desulfovibrio frigidus DSM 17176
+  candidate_pool: 523
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121452
+  source: MADIN
+  taxon_label: Desulfovibrio idahonensis DSM 15450
+  candidate_pool: 523
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121455
+  source: MADIN
+  taxon_label: Desulfovibrio litoralis DSM 11393
+  candidate_pool: 523
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121878
+  source: MADIN
+  taxon_label: Ferrimonas futtsuensis DSM 18154
+  candidate_pool: 523
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121904
+  source: MADIN
+  taxon_label: Flexithrix dorotheae DSM 6795
+  candidate_pool: 523
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121909
+  source: MADIN
+  taxon_label: Gaetbulibacter saemankumensis DSM 17032
+  candidate_pool: 523
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121920
+  source: MADIN
+  taxon_label: Geothrix fermentans DSM 14018
+  candidate_pool: 523
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121929
+  source: MADIN
+  taxon_label: Gracilibacillus lacisalsi DSM 19029
+  candidate_pool: 523
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121935
+  source: MADIN
+  taxon_label: Hahella ganghwensis DSM 17046
+  candidate_pool: 523
+  corroborated_by:
+  - PREGO
 - taxon_id: NCBITaxon:100226
   source: PREGO
   taxon_label: Streptomyces coelicolor A3(2)
@@ -186,8 +341,8 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 3153
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-14T22:45:54Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, PREGO.
-    Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, MADIN,
+    PREGO. Grounding: EXACT.'

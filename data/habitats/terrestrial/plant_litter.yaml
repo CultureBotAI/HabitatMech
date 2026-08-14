@@ -47,6 +47,11 @@ source_attestations:
   source_label: Litterfall
   source_path: Environmental > Terrestrial > Plant litter > Litterfall
   mapping_predicate: skos:closeMatch
+- source: MADIN
+  source_id: ENVO:01000628
+  source_label: plant litter
+  assertion_count: 19
+  assertion_unit: TAXON
 environmental_parameters:
 - parameter: GRADIENTS
   qualitative_value: high
@@ -78,9 +83,86 @@ environmental_parameters:
 - parameter: WATER_VARIABILITY
   qualitative_value: occasionally wet
   source: kg-microbe environments.csv (litter)
+characteristic_taxa:
+- taxon_id: NCBITaxon:1071400
+  source: MADIN
+  taxon_label: Lactobacillus buchneri CD034
+  candidate_pool: 19
+- taxon_id: NCBITaxon:1120994
+  source: MADIN
+  taxon_label: anaerosphaera_aminiphila
+  candidate_pool: 19
+- taxon_id: NCBITaxon:1144750
+  source: MADIN
+  taxon_label: olleya_namhaensis
+  candidate_pool: 19
+- taxon_id: NCBITaxon:1193095
+  source: MADIN
+  taxon_label: Lactobacillus hokkaidonensis
+  candidate_pool: 19
+- taxon_id: NCBITaxon:1291742
+  source: MADIN
+  taxon_label: Lactobacillus hokkaidonensis JCM 18461
+  candidate_pool: 19
+- taxon_id: NCBITaxon:179095
+  source: MADIN
+  taxon_label: microbacterium_ulmi
+  candidate_pool: 19
+- taxon_id: NCBITaxon:228973
+  source: MADIN
+  taxon_label: xylanibacterium_ulmi
+  candidate_pool: 19
+- taxon_id: NCBITaxon:272161
+  source: MADIN
+  taxon_label: arthrobacter_stackebrandtii
+  candidate_pool: 19
+- taxon_id: NCBITaxon:328839
+  source: MADIN
+  taxon_label: Azospirillum melinis
+  candidate_pool: 19
+- taxon_id: NCBITaxon:332977
+  source: MADIN
+  taxon_label: Parapedobacter koreensis
+  candidate_pool: 19
+- taxon_id: NCBITaxon:392838
+  source: MADIN
+  taxon_label: bacteroides_propionicifaciens
+  candidate_pool: 19
+- taxon_id: NCBITaxon:393664
+  source: MADIN
+  taxon_label: rhizobium_cellulosilyticum
+  candidate_pool: 19
+- taxon_id: NCBITaxon:454153
+  source: MADIN
+  taxon_label: Luteolibacter pohnpeiensis
+  candidate_pool: 19
+- taxon_id: NCBITaxon:456299
+  source: MADIN
+  taxon_label: chryseobacterium_gregarium
+  candidate_pool: 19
+- taxon_id: NCBITaxon:542300
+  source: MADIN
+  taxon_label: acidicapsa_ligni
+  candidate_pool: 19
+- taxon_id: NCBITaxon:573737
+  source: MADIN
+  taxon_label: pandoraea_oxalativorans
+  candidate_pool: 19
+- taxon_id: NCBITaxon:663386
+  source: MADIN
+  taxon_label: pseudonocardia_babensis
+  candidate_pool: 19
+- taxon_id: NCBITaxon:755731
+  source: MADIN
+  taxon_label: Clostridium sp. BNL1100
+  candidate_pool: 19
+- taxon_id: NCBITaxon:946336
+  source: MADIN
+  taxon_label: acidicapsa_borealis
+  candidate_pool: 19
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-14T22:45:54Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD.
-    Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD,
+    MADIN. Grounding: EXACT.'

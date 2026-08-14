@@ -13,6 +13,11 @@ source_attestations:
   source_id: host_animal_endotherm_nasopharyngeal
   source_label: host_animal_endotherm_nasopharyngeal
   notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: MADIN
+  source_id: UBERON:0000065
+  source_label: respiratory tract
+  assertion_count: 735
+  assertion_unit: TAXON
 environmental_parameters:
 - parameter: GRADIENTS
   qualitative_value: high
@@ -44,9 +49,110 @@ environmental_parameters:
 - parameter: WATER_VARIABILITY
   qualitative_value: occasionally dry
   source: kg-microbe environments.csv (host_animal_endotherm_nasopharyngeal)
+characteristic_taxa:
+- taxon_id: NCBITaxon:1000561
+  source: MADIN
+  taxon_label: Pseudomonas aeruginosa AES-1R
+  candidate_pool: 735
+- taxon_id: NCBITaxon:1000570
+  source: MADIN
+  taxon_label: Streptococcus anginosus SK52
+  candidate_pool: 735
+- taxon_id: NCBITaxon:1001534
+  source: MADIN
+  taxon_label: Francisella tularensis subsp. tularensis TI0902
+  candidate_pool: 735
+- taxon_id: NCBITaxon:1001704
+  source: MADIN
+  taxon_label: Mycobacterium massiliense 1S-151-0930
+  candidate_pool: 735
+- taxon_id: NCBITaxon:1001705
+  source: MADIN
+  taxon_label: Mycobacterium massiliense 1S-152-0914
+  candidate_pool: 735
+- taxon_id: NCBITaxon:1001706
+  source: MADIN
+  taxon_label: Mycobacterium massiliense 1S-153-0915
+  candidate_pool: 735
+- taxon_id: NCBITaxon:1001707
+  source: MADIN
+  taxon_label: Mycobacterium massiliense 1S-154-0310
+  candidate_pool: 735
+- taxon_id: NCBITaxon:1001708
+  source: MADIN
+  taxon_label: Mycobacterium massiliense 2B-0626
+  candidate_pool: 735
+- taxon_id: NCBITaxon:1001709
+  source: MADIN
+  taxon_label: Mycobacterium massiliense 2B-1231
+  candidate_pool: 735
+- taxon_id: NCBITaxon:1001710
+  source: MADIN
+  taxon_label: Mycobacterium massiliense 2B-0107
+  candidate_pool: 735
+- taxon_id: NCBITaxon:1001711
+  source: MADIN
+  taxon_label: Mycobacterium massiliense 2B-0912-R
+  candidate_pool: 735
+- taxon_id: NCBITaxon:1001712
+  source: MADIN
+  taxon_label: Mycobacterium massiliense 2B-0912-S
+  candidate_pool: 735
+- taxon_id: NCBITaxon:1001713
+  source: MADIN
+  taxon_label: Mycobacterium massiliense 2B-0307
+  candidate_pool: 735
+- taxon_id: NCBITaxon:1001714
+  source: MADIN
+  taxon_label: Mycobacteroides abscessus subsp. massiliense CCUG 48898 = JCM 15300
+  candidate_pool: 735
+- taxon_id: NCBITaxon:1001715
+  source: MADIN
+  taxon_label: Mycobacterium abscessus 3A-0122-R
+  candidate_pool: 735
+- taxon_id: NCBITaxon:1001716
+  source: MADIN
+  taxon_label: Mycobacterium abscessus 3A-0122-S
+  candidate_pool: 735
+- taxon_id: NCBITaxon:1001717
+  source: MADIN
+  taxon_label: Mycobacterium abscessus 3A-0810-R
+  candidate_pool: 735
+- taxon_id: NCBITaxon:1001718
+  source: MADIN
+  taxon_label: Mycobacterium abscessus 3A-0731
+  candidate_pool: 735
+- taxon_id: NCBITaxon:1001719
+  source: MADIN
+  taxon_label: Mycobacterium abscessus 3A-0930-S
+  candidate_pool: 735
+- taxon_id: NCBITaxon:1001720
+  source: MADIN
+  taxon_label: Mycobacterium abscessus 3A-0930-R
+  candidate_pool: 735
+- taxon_id: NCBITaxon:1001721
+  source: MADIN
+  taxon_label: Mycobacterium abscessus 3A-0119-R
+  candidate_pool: 735
+- taxon_id: NCBITaxon:1001722
+  source: MADIN
+  taxon_label: Mycobacterium abscessus 4S-0303
+  candidate_pool: 735
+- taxon_id: NCBITaxon:1001723
+  source: MADIN
+  taxon_label: Mycobacterium abscessus 4S-0206
+  candidate_pool: 735
+- taxon_id: NCBITaxon:1001724
+  source: MADIN
+  taxon_label: Mycobacterium abscessus 4S-0116-S
+  candidate_pool: 735
+- taxon_id: NCBITaxon:1001725
+  source: MADIN
+  taxon_label: Mycobacterium abscessus 4S-0116-R
+  candidate_pool: 735
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-14T22:45:54Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE. Grounding:
-    EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, MADIN.
+    Grounding: EXACT.'

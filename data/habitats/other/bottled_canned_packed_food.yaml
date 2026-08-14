@@ -14,23 +14,67 @@ source_attestations:
   notes: Upstream mapping targets a non-habitat ontology (CHEBI:33290); kept as an
     xref.
 characteristic_taxa:
-- taxon_id: NCBITaxon:1607837
-  source: BACDIVE
-  taxon_label: Leuconostoc gelidum subsp. aenigmaticum
-  association_count: 3
-  rank: 1
-  candidate_pool: 37
 - taxon_id: NCBITaxon:164393
   source: BACDIVE
   taxon_label: Latilactobacillus fuchuensis
   association_count: 3
   rank: 2
   candidate_pool: 37
+  corroborated_by:
+  - MADIN
 - taxon_id: NCBITaxon:2751
   source: BACDIVE
   taxon_label: Carnobacterium maltaromaticum
   association_count: 3
   rank: 3
+  candidate_pool: 37
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:685706
+  source: BACDIVE
+  taxon_label: Yersinia nurmii
+  association_count: 2
+  rank: 7
+  candidate_pool: 37
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1046593
+  source: BACDIVE
+  taxon_label: Leuconostoc carnosum KCTC 3525
+  association_count: 1
+  rank: 8
+  candidate_pool: 37
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1367848
+  source: BACDIVE
+  taxon_label: Cronobacter sakazakii NCIMB 8272
+  association_count: 1
+  rank: 15
+  candidate_pool: 37
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1402
+  source: BACDIVE
+  taxon_label: Bacillus licheniformis
+  association_count: 1
+  rank: 17
+  candidate_pool: 37
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:214326
+  source: BACDIVE
+  taxon_label: Latilactobacillus sakei subsp. sakei
+  association_count: 1
+  rank: 25
+  candidate_pool: 37
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1607837
+  source: BACDIVE
+  taxon_label: Leuconostoc gelidum subsp. aenigmaticum
+  association_count: 3
+  rank: 1
   candidate_pool: 37
 - taxon_id: NCBITaxon:1422
   source: BACDIVE
@@ -49,18 +93,6 @@ characteristic_taxa:
   taxon_label: Carnobacterium divergens
   association_count: 2
   rank: 6
-  candidate_pool: 37
-- taxon_id: NCBITaxon:685706
-  source: BACDIVE
-  taxon_label: Yersinia nurmii
-  association_count: 2
-  rank: 7
-  candidate_pool: 37
-- taxon_id: NCBITaxon:1046593
-  source: BACDIVE
-  taxon_label: Leuconostoc carnosum KCTC 3525
-  association_count: 1
-  rank: 8
   candidate_pool: 37
 - taxon_id: NCBITaxon:1121295
   source: BACDIVE
@@ -98,23 +130,11 @@ characteristic_taxa:
   association_count: 1
   rank: 14
   candidate_pool: 37
-- taxon_id: NCBITaxon:1367848
-  source: BACDIVE
-  taxon_label: Cronobacter sakazakii NCIMB 8272
-  association_count: 1
-  rank: 15
-  candidate_pool: 37
 - taxon_id: NCBITaxon:1398
   source: BACDIVE
   taxon_label: Heyndrickxia coagulans
   association_count: 1
   rank: 16
-  candidate_pool: 37
-- taxon_id: NCBITaxon:1402
-  source: BACDIVE
-  taxon_label: Bacillus licheniformis
-  association_count: 1
-  rank: 17
   candidate_pool: 37
 - taxon_id: NCBITaxon:1423719
   source: BACDIVE
@@ -158,14 +178,8 @@ characteristic_taxa:
   association_count: 1
   rank: 24
   candidate_pool: 37
-- taxon_id: NCBITaxon:214326
-  source: BACDIVE
-  taxon_label: Latilactobacillus sakei subsp. sakei
-  association_count: 1
-  rank: 25
-  candidate_pool: 37
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-14T22:45:54Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: NOT_APPLICABLE.'

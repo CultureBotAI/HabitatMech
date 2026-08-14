@@ -3,8 +3,8 @@ label: leaf
 definition: A phyllome (PO:0006001) that is not associated with a reproductive structure.
 definition_source: PO
 habitat_category: HOST_ASSOCIATED
-grounding_status: BROAD
-mapping_status: REVIEWED
+grounding_status: EXACT
+mapping_status: SEEDED
 synonyms:
 - synonym_text: Leaf-Phyllosphere
   synonym_type: EXACT_SYNONYM
@@ -52,6 +52,11 @@ source_attestations:
   assertion_count: 1448
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: MADIN
+  source_id: PO:0025034
+  source_label: leaf
+  assertion_count: 77
+  assertion_unit: TAXON
 environmental_parameters:
 - parameter: GRADIENTS
   qualitative_value: high
@@ -219,9 +224,109 @@ characteristic_taxa:
   association_count: 4
   rank: 25
   candidate_pool: 231
+- taxon_id: NCBITaxon:1028989
+  source: MADIN
+  taxon_label: Pseudomonas sp. StFLB209
+  candidate_pool: 77
+- taxon_id: NCBITaxon:103796
+  source: MADIN
+  taxon_label: Pseudomonas syringae pv. actinidiae
+  candidate_pool: 77
+- taxon_id: NCBITaxon:104336
+  source: MADIN
+  taxon_label: microbacterium_foliorum
+  candidate_pool: 77
+- taxon_id: NCBITaxon:1090319
+  source: MADIN
+  taxon_label: Sphingomonas phyllosphaerae FA2
+  candidate_pool: 77
+- taxon_id: NCBITaxon:1094175
+  source: MADIN
+  taxon_label: Pseudomonas syringae pv. theae NCPPB 2598
+  candidate_pool: 77
+- taxon_id: NCBITaxon:1127743
+  source: MADIN
+  taxon_label: Bacillus sp. 5B6
+  candidate_pool: 77
+- taxon_id: NCBITaxon:1166158
+  source: MADIN
+  taxon_label: Methylobacterium sp. L2-4
+  candidate_pool: 77
+- taxon_id: NCBITaxon:1167641
+  source: MADIN
+  taxon_label: Pseudomonas geniculata N1
+  candidate_pool: 77
+- taxon_id: NCBITaxon:1177180
+  source: MADIN
+  taxon_label: Kosakonia radicincitans DSM 16656
+  candidate_pool: 77
+- taxon_id: NCBITaxon:1185682
+  source: MADIN
+  taxon_label: Xanthomonas axonopodis pv. manihotis IBSBF 2673
+  candidate_pool: 77
+- taxon_id: NCBITaxon:1194719
+  source: MADIN
+  taxon_label: Sinorhizobium meliloti H1
+  candidate_pool: 77
+- taxon_id: NCBITaxon:1219375
+  source: MADIN
+  taxon_label: Xanthomonas cassavae CFBP 4642
+  candidate_pool: 77
+- taxon_id: NCBITaxon:1220584
+  source: MADIN
+  taxon_label: Herbiconiux solani NBRC 106740
+  candidate_pool: 77
+- taxon_id: NCBITaxon:1235834
+  source: MADIN
+  taxon_label: Kosakonia sacchari SP1
+  candidate_pool: 77
+- taxon_id: NCBITaxon:1245
+  source: MADIN
+  taxon_label: Leuconostoc mesenteroides
+  candidate_pool: 77
+- taxon_id: NCBITaxon:124798
+  source: MADIN
+  taxon_label: microbacterium_phyllosphaerae
+  candidate_pool: 77
+- taxon_id: NCBITaxon:1306948
+  source: MADIN
+  taxon_label: Xanthomonas arboricola pv. corylina NCCB 100457
+  candidate_pool: 77
+- taxon_id: NCBITaxon:1328866
+  source: MADIN
+  taxon_label: Rathayibacter festucae DSM 15932
+  candidate_pool: 77
+- taxon_id: NCBITaxon:1343737
+  source: MADIN
+  taxon_label: Xylella fastidiosa multiplex Griffin-1
+  candidate_pool: 77
+- taxon_id: NCBITaxon:1384060
+  source: MADIN
+  taxon_label: Rhodococcus sp. P27
+  candidate_pool: 77
+- taxon_id: NCBITaxon:1395944
+  source: MADIN
+  taxon_label: Rhizobium smilacinae CCTCC AB 2013016
+  candidate_pool: 77
+- taxon_id: NCBITaxon:1396
+  source: MADIN
+  taxon_label: Bacillus cereus
+  candidate_pool: 77
+- taxon_id: NCBITaxon:1406
+  source: MADIN
+  taxon_label: bacillus_polymyxa
+  candidate_pool: 77
+- taxon_id: NCBITaxon:150121
+  source: MADIN
+  taxon_label: agreia_pratensis
+  candidate_pool: 77
+- taxon_id: NCBITaxon:150122
+  source: MADIN
+  taxon_label: curtobacterium_herbarum
+  candidate_pool: 77
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-14T22:45:54Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, ENVIRONMENTS_TABLE,
-    GOLD. Grounding: BROAD.'
+    GOLD, MADIN. Grounding: EXACT.'

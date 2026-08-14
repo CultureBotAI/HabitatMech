@@ -5,7 +5,7 @@ definition: A fissure in the Earths's surface from which geothermally heated wat
 definition_source: ENVO
 habitat_category: AQUATIC
 grounding_status: EXACT
-mapping_status: REVIEWED
+mapping_status: SEEDED
 synonyms:
 - synonym_text: Hydrothermal vents
   synonym_type: EXACT_SYNONYM
@@ -38,6 +38,11 @@ source_attestations:
   assertion_count: 581
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: MADIN
+  source_id: ENVO:00000215
+  source_label: hydrothermal vent
+  assertion_count: 229
+  assertion_unit: TAXON
 - source: PREGO
   source_id: ENVO:00000215
   source_label: hydrothermal vent
@@ -89,107 +94,195 @@ characteristic_taxa:
   score: 4.0
   rank: 1
   candidate_pool: 78
+  corroborated_by:
+  - MADIN
 - taxon_id: NCBITaxon:1069083
   source: PREGO
   taxon_label: Methanocaldococcus villosus KIN24-T80
   score: 4.0
   rank: 2
   candidate_pool: 78
+  corroborated_by:
+  - MADIN
 - taxon_id: NCBITaxon:1120797
   source: PREGO
   taxon_label: Mycobacterium sp. 141
   score: 4.0
   rank: 3
   candidate_pool: 78
+  corroborated_by:
+  - MADIN
 - taxon_id: NCBITaxon:1121264
   source: PREGO
   taxon_label: Caloranaerobacter azorensis DSM 13643
   score: 4.0
   rank: 4
   candidate_pool: 78
+  corroborated_by:
+  - MADIN
 - taxon_id: NCBITaxon:1121266
   source: PREGO
   taxon_label: Caminicella sporogenes DSM 14501
   score: 4.0
   rank: 5
   candidate_pool: 78
+  corroborated_by:
+  - MADIN
 - taxon_id: NCBITaxon:1121301
   source: PREGO
   taxon_label: Paramaledivibacter caminithermalis DSM 15212
   score: 4.0
   rank: 6
   candidate_pool: 78
+  corroborated_by:
+  - MADIN
 - taxon_id: NCBITaxon:1121390
   source: PREGO
   taxon_label: Desulfacinum hydrothermale DSM 13146
   score: 4.0
   rank: 7
   candidate_pool: 78
+  corroborated_by:
+  - MADIN
 - taxon_id: NCBITaxon:1121451
   source: PREGO
   taxon_label: Maridesulfovibrio hydrothermalis AM13 = DSM 14728
   score: 4.0
   rank: 8
   candidate_pool: 78
+  corroborated_by:
+  - MADIN
 - taxon_id: NCBITaxon:1122195
   source: PREGO
   taxon_label: Marinitoga hydrogenitolerans DSM 16785
   score: 4.0
   rank: 9
   candidate_pool: 78
+  corroborated_by:
+  - MADIN
 - taxon_id: NCBITaxon:1123349
   source: PREGO
   taxon_label: Tepidibacter formicigenes DSM 15518
   score: 4.0
   rank: 10
   candidate_pool: 78
+  corroborated_by:
+  - MADIN
 - taxon_id: NCBITaxon:1123350
   source: PREGO
   taxon_label: Tepidibacter thalassicus DSM 15285
   score: 4.0
   rank: 11
   candidate_pool: 78
+  corroborated_by:
+  - MADIN
 - taxon_id: NCBITaxon:1123371
   source: PREGO
   taxon_label: Thermodesulfatator atlanticus DSM 21156
   score: 4.0
   rank: 12
   candidate_pool: 78
+  corroborated_by:
+  - MADIN
 - taxon_id: NCBITaxon:1123380
   source: PREGO
   taxon_label: Thermosipho atlanticus DSM 15807
   score: 4.0
   rank: 13
   candidate_pool: 78
+  corroborated_by:
+  - MADIN
 - taxon_id: NCBITaxon:1125975
   source: PREGO
   taxon_label: Thermoanaerobacter ethanolicus subsp. indiensis BSB-33
   score: 4.0
   rank: 14
   candidate_pool: 78
+  corroborated_by:
+  - MADIN
 - taxon_id: NCBITaxon:126740
   source: PREGO
   taxon_label: Thermotoga sp. RQ2
   score: 4.0
   rank: 15
   candidate_pool: 78
+  corroborated_by:
+  - MADIN
 - taxon_id: NCBITaxon:1380347
   source: PREGO
   taxon_label: Geodermatophilaceae bacterium URHB0048
   score: 4.0
   rank: 16
   candidate_pool: 78
-- taxon_id: NCBITaxon:1424653
-  source: PREGO
-  taxon_label: Caminibacter pacificus
-  score: 4.0
-  rank: 17
-  candidate_pool: 78
+  corroborated_by:
+  - MADIN
 - taxon_id: NCBITaxon:1495045
   source: PREGO
   taxon_label: Thermopetrobacter sp. TC1
   score: 4.0
   rank: 18
+  candidate_pool: 78
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:161156
+  source: PREGO
+  taxon_label: Thermodesulfobacterium hydrogeniphilum
+  score: 4.0
+  rank: 20
+  candidate_pool: 78
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:198703
+  source: PREGO
+  taxon_label: Persephonella hydrogeniphila
+  score: 4.0
+  rank: 22
+  candidate_pool: 78
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:213224
+  source: PREGO
+  taxon_label: Geothermobacter ehrlichii
+  score: 4.0
+  rank: 25
+  candidate_pool: 78
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:223786
+  source: MADIN
+  taxon_label: Hydrogenimonas thermophila
+  candidate_pool: 229
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:240166
+  source: MADIN
+  taxon_label: desulfurobacterium_pacificum
+  candidate_pool: 229
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:240167
+  source: MADIN
+  taxon_label: thermovibrio_guaymasensis
+  candidate_pool: 229
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:240169
+  source: MADIN
+  taxon_label: desulfurobacterium_atlanticum
+  candidate_pool: 229
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:267990
+  source: MADIN
+  taxon_label: Lebetimonas acidiphila
+  candidate_pool: 229
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1424653
+  source: PREGO
+  taxon_label: Caminibacter pacificus
+  score: 4.0
+  rank: 17
   candidate_pool: 78
 - taxon_id: NCBITaxon:1537524
   source: PREGO
@@ -197,23 +290,11 @@ characteristic_taxa:
   score: 4.0
   rank: 19
   candidate_pool: 78
-- taxon_id: NCBITaxon:161156
-  source: PREGO
-  taxon_label: Thermodesulfobacterium hydrogeniphilum
-  score: 4.0
-  rank: 20
-  candidate_pool: 78
 - taxon_id: NCBITaxon:1734049
   source: PREGO
   taxon_label: Serpentinicella alkaliphila
   score: 4.0
   rank: 21
-  candidate_pool: 78
-- taxon_id: NCBITaxon:198703
-  source: PREGO
-  taxon_label: Persephonella hydrogeniphila
-  score: 4.0
-  rank: 22
   candidate_pool: 78
 - taxon_id: NCBITaxon:202747
   source: PREGO
@@ -227,15 +308,9 @@ characteristic_taxa:
   score: 4.0
   rank: 24
   candidate_pool: 78
-- taxon_id: NCBITaxon:213224
-  source: PREGO
-  taxon_label: Geothermobacter ehrlichii
-  score: 4.0
-  rank: 25
-  candidate_pool: 78
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-14T22:45:54Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD,
-    PREGO. Grounding: EXACT.'
+    MADIN, PREGO. Grounding: EXACT.'

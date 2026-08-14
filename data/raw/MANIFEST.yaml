@@ -1,7 +1,7 @@
 # Provenance for the inventories in data/raw/.
 # Regenerate with: just extract-inventory
 # Emitted by scripts/extract_source_inventory.py — do not hand-edit.
-extracted_at: '2026-08-14T22:31:40Z'
+extracted_at: '2026-08-14T22:45:54Z'
 kg_microbe_source: kg-microbe@bfd350e7674828874d752e829584478ecfef7bd8
 gold_truncated_paths: 0
 inputs:
@@ -29,6 +29,14 @@ inputs:
     bytes: 58546303
     mtime: '2026-08-11T02:19:44Z'
     sha256: 8863ee3197a36915865fa4833df39d10c3f8f69b64bafbb746b9cd731308a0aa
+  - path: data/transformed/madin_etal/nodes.tsv
+    bytes: 4628292
+    mtime: '2026-08-02T02:03:50Z'
+    sha256: cc5941cd677831e8e207da018dca763cd009bb1f9310b21cb4d45892316e006d
+  - path: data/transformed/madin_etal/edges.tsv
+    bytes: 19639705
+    mtime: '2026-08-02T02:03:50Z'
+    sha256: fd333634eaaa3cfe57a35cdca2f4c5b8cf0662851c1df58914d3e999d62a650e
   - path: data/raw/environments.csv
     bytes: 14087
     mtime: '2026-07-25T00:31:54Z'
@@ -48,6 +56,10 @@ outputs:
     rows: 2562
   - path: isolation_source_groundings.tsv
     rows: 358
+  - path: madin_habitat_taxa.tsv
+    rows: 1403
+  - path: madin_habitats.tsv
+    rows: 59
   - path: ontology_subclass_edges.tsv
     rows: 11640
   - path: ontology_terms.tsv

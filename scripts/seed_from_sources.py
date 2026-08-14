@@ -930,6 +930,105 @@ def ingest_prego(
             concept.taxa[taxon_id] = entry
 
 
+def _madin_key(madin_id: str) -> str:
+    """The minted identifier a Madin habitat is addressed by.
+
+    Habitats Madin names in the BacDive isolation-source vocabulary are keyed
+    under BACDIVE, not MADIN: the id belongs to that vocabulary whichever
+    dataset cites it, so keying there is what would let the two merge. Today
+    none of them do — Madin uses the compound paths
+    (``host_animal_endotherm``) and kg-microbe's BacDive transform emits the
+    single tokens (``host``, ``animal``), with zero overlap between the two
+    sets. They are still keyed this way rather than under MADIN so that a
+    BacDive extraction which later reaches the compound level merges instead of
+    creating a duplicate.
+    """
+    if madin_id.startswith("bacdive.isolation_source:"):
+        return mint("BACDIVE", madin_id)
+    return mint("MADIN", madin_id)
+
+
+def ingest_madin(
+    store: ConceptStore,
+    rows: list[dict[str, str]],
+    taxa_rows: list[dict[str, str]],
+    routes: Counter,
+    decisions: dict[str, Decision] | None = None,
+) -> None:
+    """Attach Madin et al.'s habitat-taxon associations (#40).
+
+    Madin's habitats arrive already identified: mostly ENVO CURIEs, which ground
+    to themselves as PREGO's do, plus five ``bacdive.isolation_source:`` ids that
+    resolve onto the very same minted identifier ``ingest_bacdive`` uses — so
+    those taxa land on the existing BacDive record instead of creating a
+    parallel one. Habitats in a non-habitat vocabulary (CHEBI ``food``,
+    ``NCBITaxon:1``) fall through to the same NOT_APPLICABLE rule every other
+    source's non-habitat targets do, keeping the link as an xref.
+    """
+    decisions = decisions or {}
+    taxa_by_habitat: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for row in taxa_rows:
+        taxa_by_habitat[row["madin_id"]].append(row)
+
+    for row in rows:
+        madin_id = row["madin_id"]
+        minted = _madin_key(madin_id)
+        if madin_id.startswith("bacdive.isolation_source:"):
+            default = Resolution(minted, "UNGROUNDED", route="madin_bacdive_vocabulary")
+        elif madin_id.split(":", 1)[0] in HABITAT_PREFIXES:
+            default = Resolution(madin_id, "EXACT", route="madin_self_grounded")
+        else:
+            default = Resolution(
+                minted, "NOT_APPLICABLE", extra_xrefs=[madin_id],
+                route="madin_non_habitat_vocabulary",
+            )
+        res = apply_decision(default, minted, decisions)
+        routes[res.route] += 1
+
+        identifier = res.identifier
+        concept = store.get(identifier, identifier, res.grounding_status)
+        concept.source_concepts += 1
+        concept.reviewed_sources += 1 if res.reviewed else 0
+        concept.parents.update(res.extra_parents)
+        concept.xrefs.update(res.extra_xrefs)
+        if not concept.label or concept.label == identifier:
+            concept.label = store.ontology.label(identifier) or row.get("label") or identifier
+        if concept.category is None:
+            store.set_category(concept, infer_category(identifier, store.ontology), authoritative=False)
+
+        attestation: dict[str, Any] = {
+            "source": "MADIN",
+            "source_id": madin_id,
+            "source_label": row.get("label") or store.ontology.label(madin_id) or madin_id,
+        }
+        taxon_count = int(row.get("taxon_count") or 0)
+        if taxon_count:
+            attestation["assertion_count"] = taxon_count
+            attestation["assertion_unit"] = "TAXON"
+        concept.attestations.append(attestation)
+
+        for taxon_row in taxa_by_habitat.get(madin_id, []):
+            taxon_id = taxon_row["taxon_id"]
+            if not taxon_id.startswith("NCBITaxon:"):
+                continue
+            if taxon_id in concept.taxa:
+                add_corroboration(concept.taxa[taxon_id], "MADIN")
+                continue
+            # No rank and no score: Madin supplies neither, and the extractor
+            # deliberately does not manufacture one. `candidate_pool` still
+            # says how many were available, so a reader can see this is a
+            # selection rather than the whole set.
+            entry: dict[str, Any] = {"taxon_id": taxon_id, "source": "MADIN"}
+            if taxon_row.get("taxon_label"):
+                entry["taxon_label"] = taxon_row["taxon_label"]
+            if taxon_count:
+                entry["candidate_pool"] = taxon_count
+            for other in (taxon_row.get("corroborated_by") or "").split("|"):
+                if other.strip():
+                    add_corroboration(entry, other.strip())
+            concept.taxa[taxon_id] = entry
+
+
 def ingest_parameters(
     store: ConceptStore,
     rows: list[dict[str, str]],
@@ -1415,6 +1514,8 @@ def build_corpus() -> Corpus:
     bacdive_rows = read_tsv("bacdive_isolation_sources.tsv")
     prego_rows = read_tsv("prego_habitats.tsv")
     prego_taxa = read_tsv("prego_habitat_taxa.tsv")
+    madin_rows = read_tsv("madin_habitats.tsv")
+    madin_taxa = read_tsv("madin_habitat_taxa.tsv")
     parameter_rows = read_tsv("environment_parameters.tsv")
 
     # Curator decisions are validated before any of them is applied, so a
@@ -1432,12 +1533,14 @@ def build_corpus() -> Corpus:
     ingest_bacdive(store, bacdive_rows, mapping, routes, decisions,
                    taxa_rows=read_tsv("bacdive_source_taxa.tsv"), stats=stats)
     ingest_prego(store, prego_rows, prego_taxa, routes, decisions)
+    ingest_madin(store, madin_rows, madin_taxa, routes, decisions)
     ingest_parameters(store, parameter_rows, stats, decisions)
 
     addressable = (
         {mint("GOLD", row["canonical_path"]) for row in gold_rows}
         | {mint("BACDIVE", row["bacdive_id"]) for row in bacdive_rows}
         | {mint("PREGO", row["prego_id"]) for row in prego_rows}
+        | {_madin_key(row["madin_id"]) for row in madin_rows}
         | {mint("ENVIRONMENTS_TABLE", row["env_type"]) for row in parameter_rows}
     )
     unused = sorted(set(decisions) - addressable)

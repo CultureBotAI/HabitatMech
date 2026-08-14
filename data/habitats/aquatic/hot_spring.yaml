@@ -4,7 +4,7 @@ definition: A spring through which groundwater, heated by geothermal energy, flo
 definition_source: ENVO
 habitat_category: AQUATIC
 grounding_status: EXACT
-mapping_status: REVIEWED
+mapping_status: SEEDED
 synonyms:
 - synonym_text: Thermal springs
   synonym_type: EXACT_SYNONYM
@@ -49,6 +49,11 @@ source_attestations:
   assertion_count: 744
   assertion_unit: ORGANISM
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: MADIN
+  source_id: ENVO:00000051
+  source_label: hot spring
+  assertion_count: 371
+  assertion_unit: TAXON
 - source: PREGO
   source_id: ENVO:00000051
   source_label: hot spring
@@ -91,6 +96,158 @@ characteristic_taxa:
   score: 4.0
   rank: 1
   candidate_pool: 243
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1056495
+  source: PREGO
+  taxon_label: Caldisphaera lagunensis DSM 15908
+  score: 4.0
+  rank: 21
+  candidate_pool: 243
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1120989
+  source: PREGO
+  taxon_label: Anaerobranca californiensis DSM 14826
+  score: 4.0
+  rank: 24
+  candidate_pool: 243
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1121256
+  source: PREGO
+  taxon_label: Caldanaerobius fijiensis DSM 17918
+  score: 4.0
+  rank: 25
+  candidate_pool: 243
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1004304
+  source: MADIN
+  taxon_label: hydrotalea_sandarakina
+  candidate_pool: 371
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121259
+  source: MADIN
+  taxon_label: Caldicellulosiruptor acetigenus DSM 7040
+  candidate_pool: 371
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121270
+  source: MADIN
+  taxon_label: Carboxydocella sporoproducens DSM 16521
+  candidate_pool: 371
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121383
+  source: MADIN
+  taxon_label: Deinococcus murrayi DSM 11303
+  candidate_pool: 371
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121412
+  source: MADIN
+  taxon_label: Desulfomicrobium thermophilum DSM 16697
+  candidate_pool: 371
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121428
+  source: MADIN
+  taxon_label: Desulfotomaculum hydrothermale Lam5
+  candidate_pool: 371
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121861
+  source: MADIN
+  taxon_label: Elioraea tepidiphila DSM 17972
+  candidate_pool: 371
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121881
+  source: MADIN
+  taxon_label: Ferrithrix thermotolerans DSM 19514
+  candidate_pool: 371
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121902
+  source: MADIN
+  taxon_label: Eisenibacter elegans DSM 3317
+  candidate_pool: 371
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121903
+  source: MADIN
+  taxon_label: Hugenholtzia roseola DSM 9546
+  candidate_pool: 371
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1122221
+  source: MADIN
+  taxon_label: Meiothermus cerbereus DSM 11376
+  candidate_pool: 371
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1122222
+  source: MADIN
+  taxon_label: Meiothermus taiwanensis DSM 14542
+  candidate_pool: 371
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1122970
+  source: MADIN
+  taxon_label: Porphyrobacter cryptus DSM 12079
+  candidate_pool: 371
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1123031
+  source: MADIN
+  taxon_label: Pseudoxanthomonas taiwanensis DSM 22914
+  candidate_pool: 371
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1123072
+  source: MADIN
+  taxon_label: Rubritepida flocculans DSM 14296
+  candidate_pool: 371
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1123253
+  source: MADIN
+  taxon_label: Silanimonas lenta DSM 16282
+  candidate_pool: 371
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1123368
+  source: MADIN
+  taxon_label: Thermithiobacillus tepidarius DSM 3134
+  candidate_pool: 371
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1123369
+  source: MADIN
+  taxon_label: Thermoanaerobacter uzonensis DSM 18761
+  candidate_pool: 371
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1123372
+  source: MADIN
+  taxon_label: Thermodesulfobacterium hveragerdense DSM 12571
+  candidate_pool: 371
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1123374
+  source: MADIN
+  taxon_label: Thermodesulfovibrio hydrogeniphilus DSM 18151
+  candidate_pool: 371
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1123375
+  source: MADIN
+  taxon_label: Thermodesulfovibrio islandicus DSM 12570
+  candidate_pool: 371
+  corroborated_by:
+  - PREGO
 - taxon_id: NCBITaxon:1052802
   source: PREGO
   taxon_label: Crenarchaeota archaeon SCGC AAA471-B23
@@ -205,12 +362,6 @@ characteristic_taxa:
   score: 4.0
   rank: 20
   candidate_pool: 243
-- taxon_id: NCBITaxon:1056495
-  source: PREGO
-  taxon_label: Caldisphaera lagunensis DSM 15908
-  score: 4.0
-  rank: 21
-  candidate_pool: 243
 - taxon_id: NCBITaxon:105850
   source: PREGO
   taxon_label: Acidilobus
@@ -223,21 +374,9 @@ characteristic_taxa:
   score: 4.0
   rank: 23
   candidate_pool: 243
-- taxon_id: NCBITaxon:1120989
-  source: PREGO
-  taxon_label: Anaerobranca californiensis DSM 14826
-  score: 4.0
-  rank: 24
-  candidate_pool: 243
-- taxon_id: NCBITaxon:1121256
-  source: PREGO
-  taxon_label: Caldanaerobius fijiensis DSM 17918
-  score: 4.0
-  rank: 25
-  candidate_pool: 243
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-14T22:45:54Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD,
-    PREGO. Grounding: EXACT.'
+    MADIN, PREGO. Grounding: EXACT.'

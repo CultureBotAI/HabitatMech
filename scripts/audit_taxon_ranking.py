@@ -21,6 +21,13 @@ Two questions:
    be if PREGO's order were random, which is the fraction of PREGO's taxa that
    BacDive knows at all, times N.
 
+   Madin et al. is a second yardstick, literature-curated at species level, and
+   independent of BacDive as well as of PREGO (#40). One yardstick agreeing
+   could be one route's bias meeting another's; two independent yardsticks
+   agreeing is harder to explain that way. They are reported separately rather
+   than pooled, because pooling would let the larger overlap carry the smaller
+   one and hide a disagreement between them.
+
 Usage:
     python3 scripts/audit_taxon_ranking.py --kg-microbe /path/to/kg-microbe
 """
@@ -85,19 +92,22 @@ def main(argv: list[str] | None = None) -> int:
     kgm = args.kg_microbe
 
     corpus = build_corpus()
-    both: dict[str, tuple[str, str, str]] = {}
-    for concept in corpus.concepts:
-        sources = {a["source"] for a in concept.attestations}
-        if not {"PREGO", "BACDIVE"} <= sources:
-            continue
-        prego_id = next((a["source_id"] for a in concept.attestations if a["source"] == "PREGO"), None)
-        bacdive_id = next(
-            (a["source_id"] for a in concept.attestations if a["source"] == "BACDIVE"), None
-        )
-        if prego_id and bacdive_id:
-            both[concept.identifier] = (concept.label, prego_id, bacdive_id)
 
-    wanted_prego = {p for _, p, _ in both.values()} | {args.example}
+    def paired_with(other: str) -> dict[str, tuple[str, str, str]]:
+        """Habitats PREGO and `other` both attest, with each one's source id."""
+        found: dict[str, tuple[str, str, str]] = {}
+        for concept in corpus.concepts:
+            ids = {a["source"]: a.get("source_id") for a in concept.attestations}
+            if ids.get("PREGO") and ids.get(other):
+                found[concept.identifier] = (concept.label, ids["PREGO"], ids[other])
+        return found
+
+    both = paired_with("BACDIVE")
+    with_madin = paired_with("MADIN")
+
+    wanted_prego = (
+        {p for _, p, _ in both.values()} | {p for _, p, _ in with_madin.values()} | {args.example}
+    )
     prego: dict[str, dict[str, float]] = defaultdict(dict)
     example_edges: list[dict[str, str]] = []
     with (kgm / "data" / "transformed" / "prego" / "edges.tsv").open(newline="", encoding="utf-8") as fh:
@@ -133,22 +143,45 @@ def main(argv: list[str] | None = None) -> int:
         for src, strains in source_strains.items()
     }
 
-    print(f"\n=== 2. does PREGO's top-{args.top} beat chance against BacDive? ===")
-    print(f"  {len(both)} habitats attested by both sources")
-    header = f"  {'habitat':28s} {'|PREGO|':>8} {'|BacDive|':>10} {'shared':>7} {'hits':>5} {'chance':>7}"
-    print(header)
+    madin: dict[str, set[str]] = defaultdict(set)
+    madin_edges = kgm / "data" / "transformed" / "madin_etal" / "edges.tsv"
+    if madin_edges.exists():
+        with madin_edges.open(newline="", encoding="utf-8") as fh:
+            for row in csv.DictReader(fh, delimiter="\t"):
+                if row.get("predicate") == "biolink:location_of" and row["object"].startswith(
+                    "NCBITaxon:"
+                ):
+                    madin[row["subject"]].add(row["object"])
+
+    yardsticks = [("BacDive", both, bacdive), ("Madin", with_madin, dict(madin))]
+    for name, pairs, known_by_id in yardsticks:
+        _enrichment(name, pairs, prego, known_by_id, args.top)
+    return 0
+
+
+def _enrichment(
+    name: str,
+    pairs: dict[str, tuple[str, str, str]],
+    prego: dict[str, dict[str, float]],
+    known_by_id: dict[str, set[str]],
+    top_n: int,
+) -> None:
+    print(f"\n=== does PREGO's top-{top_n} beat chance against {name}? ===")
+    print(f"  {len(pairs)} habitats attested by both sources")
+    other = f"|{name}|"
+    print(f"  {'habitat':28s} {'|PREGO|':>8} {other:>10} {'shared':>7} {'hits':>5} {'chance':>7}")
     hits_total = expected_total = 0.0
     tested = 0
-    for label, prego_id, bacdive_id in sorted(both.values()):
-        pool, known = prego.get(prego_id, {}), bacdive.get(bacdive_id, set())
+    for label, prego_id, other_id in sorted(pairs.values()):
+        pool, known = prego.get(prego_id, {}), known_by_id.get(other_id, set())
         shared = set(pool) & known
         if len(pool) < 50 or len(known) < 10 or len(shared) < 5:
             continue
-        top = sorted(pool, key=lambda t: -pool[t])[: args.top]
+        top = sorted(pool, key=lambda t: -pool[t])[:top_n]
         hits = len(set(top) & known)
         # If PREGO's order carried no information, a top-N slice would contain
-        # the same fraction of BacDive-known taxa as the pool as a whole.
-        expected = args.top * len(shared) / len(pool)
+        # the same fraction of yardstick-known taxa as the pool as a whole.
+        expected = top_n * len(shared) / len(pool)
         hits_total += hits
         expected_total += expected
         tested += 1
@@ -158,15 +191,14 @@ def main(argv: list[str] | None = None) -> int:
         )
 
     print(f"\n  habitats tested: {tested}")
-    print(f"  top-{args.top} hits: {hits_total:.0f}   expected by chance: {expected_total:.1f}")
+    print(f"  top-{top_n} hits: {hits_total:.0f}   expected by chance: {expected_total:.1f}")
     if expected_total:
-        print(f"  enrichment: {hits_total / expected_total:.2f}x")
+        print(f"  enrichment vs {name}: {hits_total / expected_total:.2f}x")
         print(
             "\n  A ratio near 1.0 would mean the ranking is noise and should be replaced.\n"
             "  Above 1.0 means it carries signal — but note the sample is small, so this\n"
             "  is evidence that the ranking is not arbitrary, not that it is good."
         )
-    return 0
 
 
 if __name__ == "__main__":

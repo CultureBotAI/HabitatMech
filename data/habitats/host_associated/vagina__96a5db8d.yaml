@@ -25,6 +25,11 @@ source_attestations:
   source_id: host_animal_endotherm_vagina
   source_label: host_animal_endotherm_vagina
   notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: MADIN
+  source_id: UBERON:0000996
+  source_label: vagina
+  assertion_count: 304
+  assertion_unit: TAXON
 environmental_parameters:
 - parameter: GRADIENTS
   qualitative_value: high
@@ -62,9 +67,110 @@ environmental_parameters:
 - parameter: WATER_VARIABILITY
   qualitative_value: permanently wet
   source: kg-microbe environments.csv (host_animal_endotherm_vagina)
+characteristic_taxa:
+- taxon_id: NCBITaxon:100469
+  source: MADIN
+  taxon_label: Actinomyces canis
+  candidate_pool: 304
+- taxon_id: NCBITaxon:1009464
+  source: MADIN
+  taxon_label: Gardnerella vaginalis HMP9231
+  candidate_pool: 304
+- taxon_id: NCBITaxon:1033813
+  source: MADIN
+  taxon_label: Escherichia coli NA114
+  candidate_pool: 304
+- taxon_id: NCBITaxon:103621
+  source: MADIN
+  taxon_label: Actinomyces urogenitalis
+  candidate_pool: 304
+- taxon_id: NCBITaxon:1048689
+  source: MADIN
+  taxon_label: Escherichia coli O55:H7 str. RM12579
+  candidate_pool: 304
+- taxon_id: NCBITaxon:1072256
+  source: MADIN
+  taxon_label: Corynebacterium uterequi
+  candidate_pool: 304
+- taxon_id: NCBITaxon:1075089
+  source: MADIN
+  taxon_label: Pasteurella multocida 36950
+  candidate_pool: 304
+- taxon_id: NCBITaxon:1095745
+  source: MADIN
+  taxon_label: Haemophilus parainfluenzae HK262
+  candidate_pool: 304
+- taxon_id: NCBITaxon:1095749
+  source: MADIN
+  taxon_label: Pasteurella bettyae CCUG 2042
+  candidate_pool: 304
+- taxon_id: NCBITaxon:109790
+  source: MADIN
+  taxon_label: Lactobacillus jensenii
+  candidate_pool: 304
+- taxon_id: NCBITaxon:1111121
+  source: MADIN
+  taxon_label: Atopobium sp. BV3AC4
+  candidate_pool: 304
+- taxon_id: NCBITaxon:1111454
+  source: MADIN
+  taxon_label: Megasphaera sp. BV3C16-1
+  candidate_pool: 304
+- taxon_id: NCBITaxon:1121102
+  source: MADIN
+  taxon_label: Campylobacter ureolyticus DSM 20703
+  candidate_pool: 304
+- taxon_id: NCBITaxon:1121356
+  source: MADIN
+  taxon_label: Corynebacterium ciconiae DSM 44920
+  candidate_pool: 304
+- taxon_id: NCBITaxon:1122248
+  source: MADIN
+  taxon_label: Mycoplasma gallinarum DSM 19816
+  candidate_pool: 304
+- taxon_id: NCBITaxon:1122935
+  source: MADIN
+  taxon_label: Pasteurella langaaensis DSM 22999
+  candidate_pool: 304
+- taxon_id: NCBITaxon:1122981
+  source: MADIN
+  taxon_label: Prevotella corporis DSM 18810
+  candidate_pool: 304
+- taxon_id: NCBITaxon:1136177
+  source: MADIN
+  taxon_label: Lactobacillus pentosus KCA1
+  candidate_pool: 304
+- taxon_id: NCBITaxon:114880
+  source: MADIN
+  taxon_label: mycoplasma_columbinasale
+  candidate_pool: 304
+- taxon_id: NCBITaxon:1154817
+  source: MADIN
+  taxon_label: Streptococcus agalactiae CCUG 44077
+  candidate_pool: 304
+- taxon_id: NCBITaxon:1154820
+  source: MADIN
+  taxon_label: Streptococcus agalactiae LMG 15091
+  candidate_pool: 304
+- taxon_id: NCBITaxon:1154821
+  source: MADIN
+  taxon_label: Streptococcus agalactiae LMG 15092
+  candidate_pool: 304
+- taxon_id: NCBITaxon:1154822
+  source: MADIN
+  taxon_label: Streptococcus agalactiae LMG 15093
+  candidate_pool: 304
+- taxon_id: NCBITaxon:1154823
+  source: MADIN
+  taxon_label: Streptococcus agalactiae LMG 15094
+  candidate_pool: 304
+- taxon_id: NCBITaxon:1154862
+  source: MADIN
+  taxon_label: Streptococcus agalactiae CCUG 34230
+  candidate_pool: 304
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-14T22:45:54Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE. Grounding:
-    EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, MADIN.
+    Grounding: EXACT.'

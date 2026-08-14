@@ -13,6 +13,11 @@ source_attestations:
   source_id: host_animal_endotherm_feces
   source_label: host_animal_endotherm_feces
   notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: MADIN
+  source_id: ENVO:01001029
+  source_label: fecal environment
+  assertion_count: 146
+  assertion_unit: TAXON
 environmental_parameters:
 - parameter: GRADIENTS
   qualitative_value: high
@@ -44,9 +49,110 @@ environmental_parameters:
 - parameter: WATER_AVAILABILITY
   qualitative_value: medium
   source: kg-microbe environments.csv (host_animal_endotherm_feces)
+characteristic_taxa:
+- taxon_id: NCBITaxon:1027633
+  source: MADIN
+  taxon_label: enteractinococcus_coprophilus
+  candidate_pool: 146
+- taxon_id: NCBITaxon:1031746
+  source: MADIN
+  taxon_label: Campylobacter hyointestinalis subsp. hyointestinalis LMG 9260
+  candidate_pool: 146
+- taxon_id: NCBITaxon:106649
+  source: MADIN
+  taxon_label: acinetobacter_guillouiae
+  candidate_pool: 146
+- taxon_id: NCBITaxon:1080712
+  source: MADIN
+  taxon_label: methanomassiliicoccus_luminyensis
+  candidate_pool: 146
+- taxon_id: NCBITaxon:1099853
+  source: MADIN
+  taxon_label: coprobacter_fastidiosus
+  candidate_pool: 146
+- taxon_id: NCBITaxon:1108812
+  source: MADIN
+  taxon_label: Mycobacterium longobardum
+  candidate_pool: 146
+- taxon_id: NCBITaxon:1121025
+  source: MADIN
+  taxon_label: Atopostipes suicloacalis DSM 15692
+  candidate_pool: 146
+- taxon_id: NCBITaxon:1121423
+  source: MADIN
+  taxon_label: Desulfotomaculum alkaliphilum DSM 12257
+  candidate_pool: 146
+- taxon_id: NCBITaxon:1121950
+  source: MADIN
+  taxon_label: Hespellia stercorisuis DSM 15480
+  candidate_pool: 146
+- taxon_id: NCBITaxon:1150298
+  source: MADIN
+  taxon_label: fusicatenibacter_saccharivorans
+  candidate_pool: 146
+- taxon_id: NCBITaxon:1160721
+  source: MADIN
+  taxon_label: Ruminococcus bicirculans
+  candidate_pool: 146
+- taxon_id: NCBITaxon:1161942
+  source: MADIN
+  taxon_label: ruminococcus_champanellensis
+  candidate_pool: 146
+- taxon_id: NCBITaxon:1203033
+  source: MADIN
+  taxon_label: Lactobacillus hominis
+  candidate_pool: 146
+- taxon_id: NCBITaxon:1242245
+  source: MADIN
+  taxon_label: Acinetobacter johnsonii XBB1
+  candidate_pool: 146
+- taxon_id: NCBITaxon:1254
+  source: MADIN
+  taxon_label: Pediococcus acidilactici
+  candidate_pool: 146
+- taxon_id: NCBITaxon:1254439
+  source: MADIN
+  taxon_label: Bifidobacterium thermophilum RBL67
+  candidate_pool: 146
+- taxon_id: NCBITaxon:126385
+  source: MADIN
+  taxon_label: providencia_alcalifaciens
+  candidate_pool: 146
+- taxon_id: NCBITaxon:1278308
+  source: MADIN
+  taxon_label: Zimmermannella faecalis ATCC 13722
+  candidate_pool: 146
+- taxon_id: NCBITaxon:1288
+  source: MADIN
+  taxon_label: Staphylococcus xylosus
+  candidate_pool: 146
+- taxon_id: NCBITaxon:1295009
+  source: MADIN
+  taxon_label: Candidatus Methanomassiliicoccus intestinalis Issoire-Mx1
+  candidate_pool: 146
+- taxon_id: NCBITaxon:1297617
+  source: MADIN
+  taxon_label: intestinimonas_butyriciproducens
+  candidate_pool: 146
+- taxon_id: NCBITaxon:1324350
+  source: MADIN
+  taxon_label: Acinetobacter equi
+  candidate_pool: 146
+- taxon_id: NCBITaxon:1341692
+  source: MADIN
+  taxon_label: Clostridium autoethanogenum DSM 10061
+  candidate_pool: 146
+- taxon_id: NCBITaxon:1352
+  source: MADIN
+  taxon_label: Enterococcus faecium
+  candidate_pool: 146
+- taxon_id: NCBITaxon:137357
+  source: MADIN
+  taxon_label: Lactobacillus equi
+  candidate_pool: 146
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-14T22:45:54Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE. Grounding:
-    EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, MADIN.
+    Grounding: EXACT.'

@@ -4,7 +4,7 @@ definition: An environmental system determined by a green plant.
 definition_source: ENVO
 habitat_category: HOST_ASSOCIATED
 grounding_status: EXACT
-mapping_status: REVIEWED
+mapping_status: SEEDED
 synonyms:
 - synonym_text: Herbaceous-plants-Grass,Crops
   synonym_type: EXACT_SYNONYM
@@ -40,6 +40,11 @@ source_attestations:
   assertion_count: 12638
   assertion_unit: ORGANISM
   notes: 4 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: MADIN
+  source_id: ENVO:01001001
+  source_label: plant-associated environment
+  assertion_count: 1206
+  assertion_unit: TAXON
 environmental_parameters:
 - parameter: GRADIENTS
   qualitative_value: high
@@ -201,9 +206,109 @@ characteristic_taxa:
   association_count: 10
   rank: 25
   candidate_pool: 1394
+- taxon_id: NCBITaxon:1002809
+  source: MADIN
+  taxon_label: Solibacillus silvestris StLB046
+  candidate_pool: 1206
+- taxon_id: NCBITaxon:1003091
+  source: MADIN
+  taxon_label: methylobacterium_thuringiense
+  candidate_pool: 1206
+- taxon_id: NCBITaxon:1003092
+  source: MADIN
+  taxon_label: Methylobacterium trifolii
+  candidate_pool: 1206
+- taxon_id: NCBITaxon:1003237
+  source: MADIN
+  taxon_label: Nitrospirillum amazonense Y2
+  candidate_pool: 1206
+- taxon_id: NCBITaxon:1004279
+  source: MADIN
+  taxon_label: mesorhizobium_muleiense
+  candidate_pool: 1206
+- taxon_id: NCBITaxon:1005048
+  source: MADIN
+  taxon_label: Collimonas fungivorans Ter331
+  candidate_pool: 1206
+- taxon_id: NCBITaxon:1005527
+  source: MADIN
+  taxon_label: Escherichia coli EC4421
+  candidate_pool: 1206
+- taxon_id: NCBITaxon:1005528
+  source: MADIN
+  taxon_label: Escherichia coli EC4422
+  candidate_pool: 1206
+- taxon_id: NCBITaxon:1005996
+  source: MADIN
+  taxon_label: Raoultella planticola ATCC 33531
+  candidate_pool: 1206
+- taxon_id: NCBITaxon:1006155
+  source: MADIN
+  taxon_label: listeria_weihenstephanensis
+  candidate_pool: 1206
+- taxon_id: NCBITaxon:1006551
+  source: MADIN
+  taxon_label: Klebsiella michiganensis KCTC 1686
+  candidate_pool: 1206
+- taxon_id: NCBITaxon:1007656
+  source: MADIN
+  taxon_label: Pseudomonas fluorescens Wayne1
+  candidate_pool: 1206
+- taxon_id: NCBITaxon:1009853
+  source: MADIN
+  taxon_label: Xanthomonas oryzae X11-5A
+  candidate_pool: 1206
+- taxon_id: NCBITaxon:1009854
+  source: MADIN
+  taxon_label: Xanthomonas oryzae X8-1A
+  candidate_pool: 1206
+- taxon_id: NCBITaxon:1010610
+  source: MADIN
+  taxon_label: methylobacterium_gnaphalii
+  candidate_pool: 1206
+- taxon_id: NCBITaxon:101571
+  source: MADIN
+  taxon_label: burkholderia_ubonensis
+  candidate_pool: 1206
+- taxon_id: NCBITaxon:102897
+  source: MADIN
+  taxon_label: Frankia sp. EUN1f
+  candidate_pool: 1206
+- taxon_id: NCBITaxon:1031711
+  source: MADIN
+  taxon_label: Ralstonia solanacearum Po82
+  candidate_pool: 1206
+- taxon_id: NCBITaxon:103232
+  source: MADIN
+  taxon_label: streptomyces_ipomoeae
+  candidate_pool: 1206
+- taxon_id: NCBITaxon:1036778
+  source: MADIN
+  taxon_label: bosea_lathyri
+  candidate_pool: 1206
+- taxon_id: NCBITaxon:1036779
+  source: MADIN
+  taxon_label: bosea_lupini
+  candidate_pool: 1206
+- taxon_id: NCBITaxon:1036780
+  source: MADIN
+  taxon_label: bosea_robiniae
+  candidate_pool: 1206
+- taxon_id: NCBITaxon:1037911
+  source: MADIN
+  taxon_label: Pseudomonas fluorescens A506
+  candidate_pool: 1206
+- taxon_id: NCBITaxon:1038922
+  source: MADIN
+  taxon_label: Pseudomonas fluorescens Q2-87
+  candidate_pool: 1206
+- taxon_id: NCBITaxon:1038923
+  source: MADIN
+  taxon_label: Pseudomonas fluorescens Q8r1-96
+  candidate_pool: 1206
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-14T22:45:54Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, ENVIRONMENTS_TABLE,
-    GOLD. Grounding: EXACT.'
+    GOLD, MADIN. Grounding: EXACT.'

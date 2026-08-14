@@ -1,0 +1,147 @@
+identifier: ENVO:02500019
+label: alga
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+source_attestations:
+- source: ENVIRONMENTS_TABLE
+  source_id: host_algae
+  source_label: host_algae
+  notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: MADIN
+  source_id: ENVO:02500019
+  source_label: alga
+  assertion_count: 88
+  assertion_unit: TAXON
+environmental_parameters:
+- parameter: GRADIENTS
+  qualitative_value: high
+  source: kg-microbe environments.csv (host_algae)
+- parameter: NUTRIENTS
+  qualitative_value: high
+  source: kg-microbe environments.csv (host_algae)
+- parameter: ORGANIC_MATTER
+  qualitative_value: high
+  source: kg-microbe environments.csv (host_algae)
+- parameter: PRESSURE
+  qualitative_value: low
+  source: kg-microbe environments.csv (host_algae)
+- parameter: STRUCTURAL_COMPLEXITY
+  qualitative_value: high
+  source: kg-microbe environments.csv (host_algae)
+- parameter: TEMPERATURE_VARIABILITY
+  qualitative_value: low
+  source: kg-microbe environments.csv (host_algae)
+- parameter: WATER_AVAILABILITY
+  qualitative_value: high
+  source: kg-microbe environments.csv (host_algae)
+- parameter: WATER_VARIABILITY
+  qualitative_value: permanently wet
+  source: kg-microbe environments.csv (host_algae)
+characteristic_taxa:
+- taxon_id: NCBITaxon:102127
+  source: MADIN
+  taxon_label: Geitlerinema sp. ATCC 29120
+  candidate_pool: 88
+- taxon_id: NCBITaxon:104269
+  source: MADIN
+  taxon_label: tenacibaculum_amylolyticum
+  candidate_pool: 88
+- taxon_id: NCBITaxon:1044
+  source: MADIN
+  taxon_label: erythrobacter_longus
+  candidate_pool: 88
+- taxon_id: NCBITaxon:1087449
+  source: MADIN
+  taxon_label: aquimarina_agarilytica
+  candidate_pool: 88
+- taxon_id: NCBITaxon:1121011
+  source: MADIN
+  taxon_label: Arenibacter certesii DSM 19833
+  candidate_pool: 88
+- taxon_id: NCBITaxon:1122135
+  source: MADIN
+  taxon_label: Kiloniella laminariae DSM 19542
+  candidate_pool: 88
+- taxon_id: NCBITaxon:1122191
+  source: MADIN
+  taxon_label: Maribacter antarcticus DSM 21422
+  candidate_pool: 88
+- taxon_id: NCBITaxon:1128113
+  source: MADIN
+  taxon_label: Algimonas porphyrae
+  candidate_pool: 88
+- taxon_id: NCBITaxon:113355
+  source: MADIN
+  taxon_label: Geminocystis herdmanii PCC 6308
+  candidate_pool: 88
+- taxon_id: NCBITaxon:1137780
+  source: MADIN
+  taxon_label: Polaribacter porphyrae
+  candidate_pool: 88
+- taxon_id: NCBITaxon:1141221
+  source: MADIN
+  taxon_label: Chryseobacterium taihuense
+  candidate_pool: 88
+- taxon_id: NCBITaxon:1142394
+  source: MADIN
+  taxon_label: Phycisphaera mikurensis NBRC 102666
+  candidate_pool: 88
+- taxon_id: NCBITaxon:1154763
+  source: MADIN
+  taxon_label: Oceanicaulis sp. NGOC
+  candidate_pool: 88
+- taxon_id: NCBITaxon:1156985
+  source: MADIN
+  taxon_label: epibacterium_ulvae
+  candidate_pool: 88
+- taxon_id: NCBITaxon:1158132
+  source: MADIN
+  taxon_label: Bordetella sp. NGBO
+  candidate_pool: 88
+- taxon_id: NCBITaxon:1158134
+  source: MADIN
+  taxon_label: Roseobacter sp. NGRO
+  candidate_pool: 88
+- taxon_id: NCBITaxon:1170562
+  source: MADIN
+  taxon_label: Calothrix sp. PCC 6303
+  candidate_pool: 88
+- taxon_id: NCBITaxon:1236544
+  source: MADIN
+  taxon_label: Shewanella algae NBRC 103173
+  candidate_pool: 88
+- taxon_id: NCBITaxon:1279017
+  source: MADIN
+  taxon_label: Microbulbifer variabilis ATCC 700307
+  candidate_pool: 88
+- taxon_id: NCBITaxon:1314
+  source: MADIN
+  taxon_label: Streptococcus pyogenes
+  candidate_pool: 88
+- taxon_id: NCBITaxon:152297
+  source: MADIN
+  taxon_label: pseudoalteromonas_issachenkonii
+  candidate_pool: 88
+- taxon_id: NCBITaxon:1842533
+  source: MADIN
+  taxon_label: Acidovorax sp. RAC01
+  candidate_pool: 88
+- taxon_id: NCBITaxon:1842534
+  source: MADIN
+  taxon_label: Sinorhizobium sp. RAC02
+  candidate_pool: 88
+- taxon_id: NCBITaxon:1842535
+  source: MADIN
+  taxon_label: Blastomonas sp. RAC04
+  candidate_pool: 88
+- taxon_id: NCBITaxon:1842536
+  source: MADIN
+  taxon_label: Agrobacterium sp. RAC06
+  candidate_pool: 88
+curation_history:
+- timestamp: '2026-08-14T22:45:54Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, MADIN.
+    Grounding: EXACT.'

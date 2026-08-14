@@ -1,0 +1,153 @@
+identifier: UBERON:0000468
+label: multicellular organism
+definition: Anatomical structure that is an individual member of a species and consists
+  of more than one cell.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: Koerper
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: body
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: multi-cellular organism
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: organism
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: whole body
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: whole organism
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0010000
+source_attestations:
+- source: ENVIRONMENTS_TABLE
+  source_id: host
+  source_label: host
+  notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: MADIN
+  source_id: UBERON:0000468
+  source_label: multicellular organism
+  assertion_count: 1249
+  assertion_unit: TAXON
+environmental_parameters:
+- parameter: PH
+  qualitative_value: medium
+  source: kg-microbe environments.csv (host)
+- parameter: PRESSURE
+  qualitative_value: low
+  source: kg-microbe environments.csv (host)
+characteristic_taxa:
+- taxon_id: NCBITaxon:1000950
+  source: MADIN
+  taxon_label: Vibrio cholerae HC-55C1
+  candidate_pool: 1249
+- taxon_id: NCBITaxon:1001223
+  source: MADIN
+  taxon_label: Avibacterium paragallinarum 72C
+  candidate_pool: 1249
+- taxon_id: NCBITaxon:1001224
+  source: MADIN
+  taxon_label: Avibacterium paragallinarum 72C1
+  candidate_pool: 1249
+- taxon_id: NCBITaxon:1003200
+  source: MADIN
+  taxon_label: Achromobacter xylosoxidans AXX-A
+  candidate_pool: 1249
+- taxon_id: NCBITaxon:1005046
+  source: MADIN
+  taxon_label: Haemophilus ducreyi ATCC 33921
+  candidate_pool: 1249
+- taxon_id: NCBITaxon:1007064
+  source: MADIN
+  taxon_label: Streptococcus suis ST3
+  candidate_pool: 1249
+- taxon_id: NCBITaxon:1009856
+  source: MADIN
+  taxon_label: Buchnera aphidicola str. USDA (Myzus persicae)
+  candidate_pool: 1249
+- taxon_id: NCBITaxon:1009857
+  source: MADIN
+  taxon_label: Buchnera aphidicola str. W106 (Myzus persicae)
+  candidate_pool: 1249
+- taxon_id: NCBITaxon:1009858
+  source: MADIN
+  taxon_label: Buchnera aphidicola str. G002 (Myzus persicae)
+  candidate_pool: 1249
+- taxon_id: NCBITaxon:1009859
+  source: MADIN
+  taxon_label: Buchnera aphidicola str. F009 (Myzus persicae)
+  candidate_pool: 1249
+- taxon_id: NCBITaxon:1017264
+  source: MADIN
+  taxon_label: Bordetella pertussis CS
+  candidate_pool: 1249
+- taxon_id: NCBITaxon:102129
+  source: MADIN
+  taxon_label: Leptolyngbya sp. ATCC 29409
+  candidate_pool: 1249
+- taxon_id: NCBITaxon:1027273
+  source: MADIN
+  taxon_label: Endozoicomonas montiporae
+  candidate_pool: 1249
+- taxon_id: NCBITaxon:1028307
+  source: MADIN
+  taxon_label: Klebsiella aerogenes KCTC 2190
+  candidate_pool: 1249
+- taxon_id: NCBITaxon:1029822
+  source: MADIN
+  taxon_label: Lactobacillus salivarius NIAS840
+  candidate_pool: 1249
+- taxon_id: NCBITaxon:1030843
+  source: MADIN
+  taxon_label: Porphyromonas gingivalis TDC60
+  candidate_pool: 1249
+- taxon_id: NCBITaxon:1033991
+  source: MADIN
+  taxon_label: Rhizobium leguminosarum bv. trifolii CB782
+  candidate_pool: 1249
+- taxon_id: NCBITaxon:1035817
+  source: MADIN
+  taxon_label: Bifidobacterium longum subsp. longum KACC 91563
+  candidate_pool: 1249
+- taxon_id: NCBITaxon:1037409
+  source: MADIN
+  taxon_label: Bradyrhizobium japonicum USDA 6
+  candidate_pool: 1249
+- taxon_id: NCBITaxon:1038869
+  source: MADIN
+  taxon_label: Paraburkholderia mimosarum LMG 23256
+  candidate_pool: 1249
+- taxon_id: NCBITaxon:1040964
+  source: MADIN
+  taxon_label: Lactobacillus ruminis SPM0211
+  candidate_pool: 1249
+- taxon_id: NCBITaxon:1041141
+  source: MADIN
+  taxon_label: Rhizobium leguminosarum bv. viciae 128C53
+  candidate_pool: 1249
+- taxon_id: NCBITaxon:1042403
+  source: MADIN
+  taxon_label: Bifidobacterium animalis subsp. lactis CNCM I-2494
+  candidate_pool: 1249
+- taxon_id: NCBITaxon:1046629
+  source: MADIN
+  taxon_label: Streptococcus salivarius 57.I
+  candidate_pool: 1249
+- taxon_id: NCBITaxon:1048245
+  source: MADIN
+  taxon_label: Mycobacterium canettii CIPT 140010059
+  candidate_pool: 1249
+curation_history:
+- timestamp: '2026-08-14T22:45:54Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, MADIN.
+    Grounding: EXACT.'

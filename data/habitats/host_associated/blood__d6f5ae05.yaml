@@ -22,6 +22,11 @@ source_attestations:
   source_id: host_animal_endotherm_blood
   source_label: host_animal_endotherm_blood
   notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: MADIN
+  source_id: UBERON:0000178
+  source_label: blood
+  assertion_count: 440
+  assertion_unit: TAXON
 environmental_parameters:
 - parameter: GRADIENTS
   qualitative_value: high
@@ -59,9 +64,110 @@ environmental_parameters:
 - parameter: WATER_VARIABILITY
   qualitative_value: permanently wet
   source: kg-microbe environments.csv (host_animal_endotherm_blood)
+characteristic_taxa:
+- taxon_id: NCBITaxon:1000935
+  source: MADIN
+  taxon_label: Anaplasma marginale Florida Relapse
+  candidate_pool: 440
+- taxon_id: NCBITaxon:1000936
+  source: MADIN
+  taxon_label: Anaplasma marginale Okeechobee
+  candidate_pool: 440
+- taxon_id: NCBITaxon:1000937
+  source: MADIN
+  taxon_label: Anaplasma marginale Washington Okanogan
+  candidate_pool: 440
+- taxon_id: NCBITaxon:1000938
+  source: MADIN
+  taxon_label: Anaplasma marginale Oklahoma
+  candidate_pool: 440
+- taxon_id: NCBITaxon:1000939
+  source: MADIN
+  taxon_label: Anaplasma marginale South Idaho
+  candidate_pool: 440
+- taxon_id: NCBITaxon:1002339
+  source: MADIN
+  taxon_label: Psychrobacter sp. 1501
+  candidate_pool: 440
+- taxon_id: NCBITaxon:1003201
+  source: MADIN
+  taxon_label: Rickettsia typhi str. TH1527
+  candidate_pool: 440
+- taxon_id: NCBITaxon:1005704
+  source: MADIN
+  taxon_label: Streptococcus oralis SK255
+  candidate_pool: 440
+- taxon_id: NCBITaxon:1005705
+  source: MADIN
+  taxon_label: Streptococcus infantis SK1076
+  candidate_pool: 440
+- taxon_id: NCBITaxon:1008452
+  source: MADIN
+  taxon_label: Streptococcus mitis SK1073
+  candidate_pool: 440
+- taxon_id: NCBITaxon:1008453
+  source: MADIN
+  taxon_label: Streptococcus mitis SK1080
+  candidate_pool: 440
+- taxon_id: NCBITaxon:1028806
+  source: MADIN
+  taxon_label: Haemophilus haemolyticus M21639
+  candidate_pool: 440
+- taxon_id: NCBITaxon:1032071
+  source: MADIN
+  taxon_label: Arcobacter cryaerophilus CDC D2610
+  candidate_pool: 440
+- taxon_id: NCBITaxon:1035187
+  source: MADIN
+  taxon_label: Streptococcus mitis SK569
+  candidate_pool: 440
+- taxon_id: NCBITaxon:1035189
+  source: MADIN
+  taxon_label: Streptococcus infantis SK970
+  candidate_pool: 440
+- taxon_id: NCBITaxon:103855
+  source: MADIN
+  taxon_label: bordetella_hinzii
+  candidate_pool: 440
+- taxon_id: NCBITaxon:1051654
+  source: MADIN
+  taxon_label: Lactobacillus casei CRF28
+  candidate_pool: 440
+- taxon_id: NCBITaxon:106654
+  source: MADIN
+  taxon_label: acinetobacter_nosocomialis
+  candidate_pool: 440
+- taxon_id: NCBITaxon:1069609
+  source: MADIN
+  taxon_label: Neisseria meningitidis 93004
+  candidate_pool: 440
+- taxon_id: NCBITaxon:1069614
+  source: MADIN
+  taxon_label: Neisseria meningitidis 69166
+  candidate_pool: 440
+- taxon_id: NCBITaxon:1069618
+  source: MADIN
+  taxon_label: Neisseria meningitidis 92045
+  candidate_pool: 440
+- taxon_id: NCBITaxon:1069621
+  source: MADIN
+  taxon_label: Neisseria meningitidis NM3081
+  candidate_pool: 440
+- taxon_id: NCBITaxon:1069623
+  source: MADIN
+  taxon_label: Streptococcus pneumoniae GA05578
+  candidate_pool: 440
+- taxon_id: NCBITaxon:1069627
+  source: MADIN
+  taxon_label: Streptococcus pneumoniae GA04672
+  candidate_pool: 440
+- taxon_id: NCBITaxon:1073382
+  source: MADIN
+  taxon_label: Aeromonas veronii AER39
+  candidate_pool: 440
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-14T22:45:54Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE. Grounding:
-    EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, MADIN.
+    Grounding: EXACT.'

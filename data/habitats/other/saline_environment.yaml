@@ -1,0 +1,123 @@
+identifier: ENVO:01001040
+label: saline environment
+definition: An environment which is determined by materials which bear significant
+  concentrations of salts.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:01000314
+- ENVO:01000998
+source_attestations:
+- source: MADIN
+  source_id: ENVO:01001040
+  source_label: saline environment
+  assertion_count: 29
+  assertion_unit: TAXON
+characteristic_taxa:
+- taxon_id: NCBITaxon:104205
+  source: MADIN
+  taxon_label: streptomonospora_salina
+  candidate_pool: 29
+- taxon_id: NCBITaxon:1307761
+  source: MADIN
+  taxon_label: salinispira_pacifica
+  candidate_pool: 29
+- taxon_id: NCBITaxon:1333523
+  source: MADIN
+  taxon_label: Salinarchaeum sp. Harcht-Bsk1
+  candidate_pool: 29
+- taxon_id: NCBITaxon:1354791
+  source: MADIN
+  taxon_label: Halorhodospira halochloris A
+  candidate_pool: 29
+- taxon_id: NCBITaxon:148449
+  source: MADIN
+  taxon_label: halopiger_aswanensis
+  candidate_pool: 29
+- taxon_id: NCBITaxon:1592728
+  source: MADIN
+  taxon_label: Haloarcula sp. CBA1115
+  candidate_pool: 29
+- taxon_id: NCBITaxon:1868325
+  source: MADIN
+  taxon_label: Prosthecochloris sp. CIB 2401
+  candidate_pool: 29
+- taxon_id: NCBITaxon:2177
+  source: MADIN
+  taxon_label: methanohalophilus_halophilus
+  candidate_pool: 29
+- taxon_id: NCBITaxon:280236
+  source: MADIN
+  taxon_label: nocardiopsis_gilva
+  candidate_pool: 29
+- taxon_id: NCBITaxon:280237
+  source: MADIN
+  taxon_label: nocardiopsis_rosea
+  candidate_pool: 29
+- taxon_id: NCBITaxon:280238
+  source: MADIN
+  taxon_label: nocardiopsis_rhodophaea
+  candidate_pool: 29
+- taxon_id: NCBITaxon:280239
+  source: MADIN
+  taxon_label: nocardiopsis_chromatogenes
+  candidate_pool: 29
+- taxon_id: NCBITaxon:280240
+  source: MADIN
+  taxon_label: nocardiopsis_baichengensis
+  candidate_pool: 29
+- taxon_id: NCBITaxon:284578
+  source: MADIN
+  taxon_label: lentibacillus_salarius
+  candidate_pool: 29
+- taxon_id: NCBITaxon:284579
+  source: MADIN
+  taxon_label: bacillus_salarius
+  candidate_pool: 29
+- taxon_id: NCBITaxon:284580
+  source: MADIN
+  taxon_label: bacillus_seohaeanensis
+  candidate_pool: 29
+- taxon_id: NCBITaxon:333138
+  source: MADIN
+  taxon_label: bacillus_okhensis
+  candidate_pool: 29
+- taxon_id: NCBITaxon:342944
+  source: MADIN
+  taxon_label: sinobaca_qinghaiensis
+  candidate_pool: 29
+- taxon_id: NCBITaxon:349124
+  source: MADIN
+  taxon_label: Halorhodospira halophila SL1
+  candidate_pool: 29
+- taxon_id: NCBITaxon:463301
+  source: MADIN
+  taxon_label: halomonas_korlensis
+  candidate_pool: 29
+- taxon_id: NCBITaxon:470864
+  source: MADIN
+  taxon_label: gracilibacillus_halophilus
+  candidate_pool: 29
+- taxon_id: NCBITaxon:470866
+  source: MADIN
+  taxon_label: salinimicrobium_terrae
+  candidate_pool: 29
+- taxon_id: NCBITaxon:507626
+  source: MADIN
+  taxon_label: Halomonas chromatireducens
+  candidate_pool: 29
+- taxon_id: NCBITaxon:511062
+  source: MADIN
+  taxon_label: Oceanimonas sp. GK1
+  candidate_pool: 29
+- taxon_id: NCBITaxon:531814
+  source: MADIN
+  taxon_label: gracilibacillus_ureilyticus
+  candidate_pool: 29
+curation_history:
+- timestamp: '2026-08-14T22:45:54Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by MADIN. Grounding: EXACT.'

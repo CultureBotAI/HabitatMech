@@ -1,0 +1,33 @@
+identifier: FOODON:03420174
+label: part of plant
+habitat_category: FOOD
+grounding_status: EXACT
+mapping_status: SEEDED
+source_attestations:
+- source: MADIN
+  source_id: FOODON:03420174
+  source_label: part of plant
+  assertion_count: 4
+  assertion_unit: TAXON
+characteristic_taxa:
+- taxon_id: NCBITaxon:324057
+  source: MADIN
+  taxon_label: Paenibacillus sp. JDR-2
+  candidate_pool: 4
+- taxon_id: NCBITaxon:399742
+  source: MADIN
+  taxon_label: Enterobacter sp. 638
+  candidate_pool: 4
+- taxon_id: NCBITaxon:456493
+  source: MADIN
+  taxon_label: saccharibacillus_sacchari
+  candidate_pool: 4
+- taxon_id: NCBITaxon:519050
+  source: MADIN
+  taxon_label: Lactobacillus sucicola
+  candidate_pool: 4
+curation_history:
+- timestamp: '2026-08-14T22:45:54Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by MADIN. Grounding: EXACT.'

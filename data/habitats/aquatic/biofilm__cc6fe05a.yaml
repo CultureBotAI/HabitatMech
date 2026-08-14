@@ -5,7 +5,7 @@ definition: A complex aggregation of microorganisms marked by the excretion of a
 definition_source: ENVO
 habitat_category: AQUATIC
 grounding_status: EXACT
-mapping_status: REVIEWED
+mapping_status: SEEDED
 synonyms:
 - synonym_text: Microfouling/Biofilm
   synonym_type: EXACT_SYNONYM
@@ -39,6 +39,11 @@ source_attestations:
   source_path: Environmental > Aquatic > Non-marine Saline and Alkaline > Biofouling
     > Microfouling/Biofilm
   mapping_predicate: skos:exactMatch
+- source: MADIN
+  source_id: ENVO:00002034
+  source_label: biofilm
+  assertion_count: 39
+  assertion_unit: TAXON
 - source: PREGO
   source_id: ENVO:00002034
   source_label: biofilm
@@ -66,6 +71,18 @@ environmental_parameters:
   qualitative_value: high
   source: kg-microbe environments.csv (biofilm)
 characteristic_taxa:
+- taxon_id: NCBITaxon:216903
+  source: MADIN
+  taxon_label: chryseobacterium_molle
+  candidate_pool: 39
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:616997
+  source: MADIN
+  taxon_label: hoyosella_altamirensis
+  candidate_pool: 39
+  corroborated_by:
+  - PREGO
 - taxon_id: NCBITaxon:1017
   source: PREGO
   taxon_label: Capnocytophaga gingivalis
@@ -216,9 +233,101 @@ characteristic_taxa:
   score: 4.0
   rank: 25
   candidate_pool: 325
+- taxon_id: NCBITaxon:1029756
+  source: MADIN
+  taxon_label: Hyphomicrobium nitrativorans NL23
+  candidate_pool: 39
+- taxon_id: NCBITaxon:1087448
+  source: MADIN
+  taxon_label: Exiguobacterium antarcticum B7
+  candidate_pool: 39
+- taxon_id: NCBITaxon:1121938
+  source: MADIN
+  taxon_label: Halobacillus kuroshimensis DSM 18393
+  candidate_pool: 39
+- taxon_id: NCBITaxon:1134435
+  source: MADIN
+  taxon_label: thauera_humireducens
+  candidate_pool: 39
+- taxon_id: NCBITaxon:1175486
+  source: MADIN
+  taxon_label: nocardioides_albertanoniae
+  candidate_pool: 39
+- taxon_id: NCBITaxon:1188229
+  source: MADIN
+  taxon_label: Candidatus Gloeomargarita lithophora D10
+  candidate_pool: 39
+- taxon_id: NCBITaxon:1245526
+  source: MADIN
+  taxon_label: pseudomonas_guangdongensis
+  candidate_pool: 39
+- taxon_id: NCBITaxon:150172
+  source: MADIN
+  taxon_label: flavobacterium_tegetincola
+  candidate_pool: 39
+- taxon_id: NCBITaxon:195907
+  source: MADIN
+  taxon_label: gillisia_limnaea
+  candidate_pool: 39
+- taxon_id: NCBITaxon:195913
+  source: MADIN
+  taxon_label: loktanella_salsilacus
+  candidate_pool: 39
+- taxon_id: NCBITaxon:209897
+  source: MADIN
+  taxon_label: afifella_pfennigii
+  candidate_pool: 39
+- taxon_id: NCBITaxon:245187
+  source: MADIN
+  taxon_label: loktanella_fryxellensis
+  candidate_pool: 39
+- taxon_id: NCBITaxon:245188
+  source: MADIN
+  taxon_label: loktanella_vestfoldensis
+  candidate_pool: 39
+- taxon_id: NCBITaxon:249351
+  source: MADIN
+  taxon_label: flavobacterium_psychrolimnae
+  candidate_pool: 39
+- taxon_id: NCBITaxon:249352
+  source: MADIN
+  taxon_label: flavobacterium_fryxellicola
+  candidate_pool: 39
+- taxon_id: NCBITaxon:287844
+  source: MADIN
+  taxon_label: Lactobacillus concavus
+  candidate_pool: 39
+- taxon_id: NCBITaxon:293890
+  source: MADIN
+  taxon_label: agromyces_subbeticus
+  candidate_pool: 39
+- taxon_id: NCBITaxon:295419
+  source: MADIN
+  taxon_label: rubellimicrobium_thermophilum
+  candidate_pool: 39
+- taxon_id: NCBITaxon:321267
+  source: MADIN
+  taxon_label: shimia_marina
+  candidate_pool: 39
+- taxon_id: NCBITaxon:325473
+  source: MADIN
+  taxon_label: Psychroserpens mesophilus
+  candidate_pool: 39
+- taxon_id: NCBITaxon:329406
+  source: MADIN
+  taxon_label: thiorhodococcus_mannitoliphagus
+  candidate_pool: 39
+- taxon_id: NCBITaxon:332168
+  source: MADIN
+  taxon_label: Halococcus hamelinensis
+  candidate_pool: 39
+- taxon_id: NCBITaxon:343403
+  source: MADIN
+  taxon_label: Costertonia aggregata
+  candidate_pool: 39
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-14T22:45:54Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD,
-    PREGO. Grounding: EXACT.'
+    MADIN, PREGO. Grounding: EXACT.'

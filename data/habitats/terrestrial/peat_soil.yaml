@@ -5,7 +5,7 @@ definition: A histosol which is formed by the decomposition of vegetation or org
 definition_source: ENVO
 habitat_category: TERRESTRIAL
 grounding_status: EXACT
-mapping_status: REVIEWED
+mapping_status: SEEDED
 synonyms:
 - synonym_text: Peat
   synonym_type: EXACT_SYNONYM
@@ -38,6 +38,11 @@ source_attestations:
   assertion_count: 17
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: MADIN
+  source_id: ENVO:00005774
+  source_label: peat soil
+  assertion_count: 27
+  assertion_unit: TAXON
 - source: PREGO
   source_id: ENVO:00005774
   source_label: peat soil
@@ -83,6 +88,28 @@ environmental_parameters:
   qualitative_value: occasionally dry
   source: kg-microbe environments.csv (soil_organic_peat)
 characteristic_taxa:
+- taxon_id: NCBITaxon:69370
+  source: PREGO
+  taxon_label: Microbacterium trichothecenolyticum
+  score: 4.0
+  rank: 3
+  candidate_pool: 1320
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:471857
+  source: PREGO
+  taxon_label: Saccharomonospora viridis DSM 43017
+  score: 3.0
+  rank: 4
+  candidate_pool: 1320
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:303
+  source: MADIN
+  taxon_label: Pseudomonas putida
+  candidate_pool: 27
+  corroborated_by:
+  - PREGO
 - taxon_id: NCBITaxon:1302689
   source: PREGO
   taxon_label: Mucilaginibacter polytrichastri
@@ -94,18 +121,6 @@ characteristic_taxa:
   taxon_label: Kaistella jeonii
   score: 4.0
   rank: 2
-  candidate_pool: 1320
-- taxon_id: NCBITaxon:69370
-  source: PREGO
-  taxon_label: Microbacterium trichothecenolyticum
-  score: 4.0
-  rank: 3
-  candidate_pool: 1320
-- taxon_id: NCBITaxon:471857
-  source: PREGO
-  taxon_label: Saccharomonospora viridis DSM 43017
-  score: 3.0
-  rank: 4
   candidate_pool: 1320
 - taxon_id: NCBITaxon:886293
   source: PREGO
@@ -232,9 +247,97 @@ characteristic_taxa:
   score: 1.78384
   rank: 25
   candidate_pool: 1320
+- taxon_id: NCBITaxon:103816
+  source: MADIN
+  taxon_label: rhodococcus_pyridinivorans
+  candidate_pool: 27
+- taxon_id: NCBITaxon:1118379
+  source: MADIN
+  taxon_label: mycobacterium_minnesotense
+  candidate_pool: 27
+- taxon_id: NCBITaxon:1173263
+  source: MADIN
+  taxon_label: Synechococcus sp. PCC 7502
+  candidate_pool: 27
+- taxon_id: NCBITaxon:132476
+  source: MADIN
+  taxon_label: pseudomonas_kilonensis
+  candidate_pool: 27
+- taxon_id: NCBITaxon:1387353
+  source: MADIN
+  taxon_label: paludisphaera_borealis
+  candidate_pool: 27
+- taxon_id: NCBITaxon:1710
+  source: MADIN
+  taxon_label: Cellulosimicrobium cellulans
+  candidate_pool: 27
+- taxon_id: NCBITaxon:227605
+  source: MADIN
+  taxon_label: methylocella_tundrae
+  candidate_pool: 27
+- taxon_id: NCBITaxon:333368
+  source: MADIN
+  taxon_label: Rhodoblastus sphagnicola
+  candidate_pool: 27
+- taxon_id: NCBITaxon:358766
+  source: MADIN
+  taxon_label: methanoregula_boonei
+  candidate_pool: 27
+- taxon_id: NCBITaxon:360054
+  source: MADIN
+  taxon_label: bryobacter_aggregatus
+  candidate_pool: 27
+- taxon_id: NCBITaxon:423350
+  source: MADIN
+  taxon_label: Mucilaginibacter gracilis
+  candidate_pool: 27
+- taxon_id: NCBITaxon:423351
+  source: MADIN
+  taxon_label: mucilaginibacter_paludis
+  candidate_pool: 27
+- taxon_id: NCBITaxon:474949
+  source: MADIN
+  taxon_label: granulicella_aggregans
+  candidate_pool: 27
+- taxon_id: NCBITaxon:474950
+  source: MADIN
+  taxon_label: granulicella_pectinivorans
+  candidate_pool: 27
+- taxon_id: NCBITaxon:474951
+  source: MADIN
+  taxon_label: granulicella_paludicola
+  candidate_pool: 27
+- taxon_id: NCBITaxon:474952
+  source: MADIN
+  taxon_label: granulicella_rosea
+  candidate_pool: 27
+- taxon_id: NCBITaxon:474953
+  source: MADIN
+  taxon_label: telmatobacter_bradus
+  candidate_pool: 27
+- taxon_id: NCBITaxon:546115
+  source: MADIN
+  taxon_label: microbacterium_ginsengiterrae
+  candidate_pool: 27
+- taxon_id: NCBITaxon:555372
+  source: MADIN
+  taxon_label: actinaurispora_siamensis
+  candidate_pool: 27
+- taxon_id: NCBITaxon:643672
+  source: MADIN
+  taxon_label: singulisphaera_rosea
+  candidate_pool: 27
+- taxon_id: NCBITaxon:70775
+  source: MADIN
+  taxon_label: pseudomonas_plecoglossicida
+  candidate_pool: 27
+- taxon_id: NCBITaxon:863522
+  source: MADIN
+  taxon_label: Bryocella elongata
+  candidate_pool: 27
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-14T22:45:54Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD,
-    PREGO. Grounding: EXACT.'
+    MADIN, PREGO. Grounding: EXACT.'

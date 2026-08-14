@@ -6,7 +6,7 @@ definition: An environmental material which is 1) composed primarily of soil or 
 definition_source: ENVO
 habitat_category: TERRESTRIAL
 grounding_status: EXACT
-mapping_status: REVIEWED
+mapping_status: SEEDED
 synonyms:
 - synonym_text: permafrosts
   synonym_type: RELATED_SYNONYM
@@ -23,6 +23,11 @@ source_attestations:
   assertion_count: 1
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: MADIN
+  source_id: ENVO:00000134
+  source_label: permafrost
+  assertion_count: 25
+  assertion_unit: TAXON
 - source: PREGO
   source_id: ENVO:00000134
   source_label: permafrost
@@ -31,41 +36,103 @@ source_attestations:
   score: 4.0
   evidence_channels: annotated_genomes_isolates|environmental_samples
 characteristic_taxa:
-- taxon_id: NCBITaxon:104245
-  source: PREGO
-  taxon_label: Clavaria zollingeri
-  score: 4.0
-  rank: 1
-  candidate_pool: 135
 - taxon_id: NCBITaxon:1121419
   source: PREGO
   taxon_label: Desulfosporosinus hippei DSM 8344
   score: 4.0
   rank: 2
   candidate_pool: 135
+  corroborated_by:
+  - MADIN
 - taxon_id: NCBITaxon:1121924
   source: PREGO
   taxon_label: Glaciibacter superstes DSM 21135
   score: 4.0
   rank: 3
   candidate_pool: 135
+  corroborated_by:
+  - MADIN
 - taxon_id: NCBITaxon:1121959
   source: PREGO
   taxon_label: Hymenobacter psychrotolerans DSM 18569
   score: 4.0
   rank: 4
   candidate_pool: 135
+  corroborated_by:
+  - MADIN
 - taxon_id: NCBITaxon:1123276
   source: PREGO
   taxon_label: Spirosoma luteum DSM 19990
   score: 4.0
   rank: 5
   candidate_pool: 135
+  corroborated_by:
+  - MADIN
 - taxon_id: NCBITaxon:1123278
   source: PREGO
   taxon_label: Spirosoma spitsbergense DSM 19989
   score: 4.0
   rank: 6
+  candidate_pool: 135
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:259536
+  source: PREGO
+  taxon_label: Psychrobacter arcticus 273-4
+  score: 4.0
+  rank: 13
+  candidate_pool: 135
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:262543
+  source: PREGO
+  taxon_label: Exiguobacterium artemiae 255-15
+  score: 4.0
+  rank: 14
+  candidate_pool: 135
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:378534
+  source: PREGO
+  taxon_label: Pseudomonas sp. Eur1 9.41
+  score: 4.0
+  rank: 22
+  candidate_pool: 135
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:378543
+  source: PREGO
+  taxon_label: Tumebacillus permanentifrigoris
+  score: 4.0
+  rank: 23
+  candidate_pool: 135
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:386456
+  source: PREGO
+  taxon_label: Methanobacterium arcticum
+  score: 4.0
+  rank: 24
+  candidate_pool: 135
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:408577
+  source: MADIN
+  taxon_label: Methanobacterium veterum
+  candidate_pool: 25
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:431489
+  source: MADIN
+  taxon_label: demequina_lutea
+  candidate_pool: 25
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:104245
+  source: PREGO
+  taxon_label: Clavaria zollingeri
+  score: 4.0
+  rank: 1
   candidate_pool: 135
 - taxon_id: NCBITaxon:128
   source: PREGO
@@ -102,18 +169,6 @@ characteristic_taxa:
   taxon_label: Streptomyces africanus
   score: 4.0
   rank: 12
-  candidate_pool: 135
-- taxon_id: NCBITaxon:259536
-  source: PREGO
-  taxon_label: Psychrobacter arcticus 273-4
-  score: 4.0
-  rank: 13
-  candidate_pool: 135
-- taxon_id: NCBITaxon:262543
-  source: PREGO
-  taxon_label: Exiguobacterium artemiae 255-15
-  score: 4.0
-  rank: 14
   candidate_pool: 135
 - taxon_id: NCBITaxon:266940
   source: PREGO
@@ -156,32 +211,66 @@ characteristic_taxa:
   score: 4.0
   rank: 21
   candidate_pool: 135
-- taxon_id: NCBITaxon:378534
-  source: PREGO
-  taxon_label: Pseudomonas sp. Eur1 9.41
-  score: 4.0
-  rank: 22
-  candidate_pool: 135
-- taxon_id: NCBITaxon:378543
-  source: PREGO
-  taxon_label: Tumebacillus permanentifrigoris
-  score: 4.0
-  rank: 23
-  candidate_pool: 135
-- taxon_id: NCBITaxon:386456
-  source: PREGO
-  taxon_label: Methanobacterium arcticum
-  score: 4.0
-  rank: 24
-  candidate_pool: 135
 - taxon_id: NCBITaxon:39946
   source: PREGO
   score: 4.0
   rank: 25
   candidate_pool: 135
+- taxon_id: NCBITaxon:1005941
+  source: MADIN
+  taxon_label: Planococcus halocryophilus Or1
+  candidate_pool: 25
+- taxon_id: NCBITaxon:1126681
+  source: MADIN
+  taxon_label: Bacillus cereus F
+  candidate_pool: 25
+- taxon_id: NCBITaxon:1266845
+  source: MADIN
+  taxon_label: Carnobacterium inhibens subsp. gilichinskyi
+  candidate_pool: 25
+- taxon_id: NCBITaxon:1435425
+  source: MADIN
+  taxon_label: Pseudomonas sp. QTF5
+  candidate_pool: 25
+- taxon_id: NCBITaxon:1646498
+  source: MADIN
+  taxon_label: Acinetobacter sp. TTH0-4
+  candidate_pool: 25
+- taxon_id: NCBITaxon:330922
+  source: MADIN
+  taxon_label: Psychrobacter cryopegella
+  candidate_pool: 25
+- taxon_id: NCBITaxon:334543
+  source: MADIN
+  taxon_label: psychrobacter_arcticus
+  candidate_pool: 25
+- taxon_id: NCBITaxon:344998
+  source: MADIN
+  taxon_label: hymenobacter_psychrotolerans
+  candidate_pool: 25
+- taxon_id: NCBITaxon:360422
+  source: MADIN
+  taxon_label: Clostridium tagluense
+  candidate_pool: 25
+- taxon_id: NCBITaxon:469869
+  source: MADIN
+  taxon_label: virgibacillus_arcticus
+  candidate_pool: 25
+- taxon_id: NCBITaxon:501023
+  source: MADIN
+  taxon_label: glaciibacter_superstes
+  candidate_pool: 25
+- taxon_id: NCBITaxon:569859
+  source: MADIN
+  taxon_label: desulfosporosinus_hippei
+  candidate_pool: 25
+- taxon_id: NCBITaxon:630403
+  source: MADIN
+  taxon_label: tomitella_biformata
+  candidate_pool: 25
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-14T22:45:54Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, MADIN, PREGO. Grounding:
     EXACT.'

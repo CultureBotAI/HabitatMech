@@ -29,6 +29,11 @@ source_attestations:
   assertion_count: 1035
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: MADIN
+  source_id: ENVO:03000033
+  source_label: marine sediment
+  assertion_count: 837
+  assertion_unit: TAXON
 environmental_parameters:
 - parameter: PH
   qualitative_value: high
@@ -51,9 +56,110 @@ environmental_parameters:
 - parameter: WATER_VARIABILITY
   qualitative_value: permanently wet
   source: kg-microbe environments.csv (sediment_marine)
+characteristic_taxa:
+- taxon_id: NCBITaxon:1003110
+  source: MADIN
+  taxon_label: verrucosispora_maris
+  candidate_pool: 837
+- taxon_id: NCBITaxon:1005925
+  source: MADIN
+  taxon_label: Kordiimonas aestuarii
+  candidate_pool: 837
+- taxon_id: NCBITaxon:1005926
+  source: MADIN
+  taxon_label: Muricauda taeanensis
+  candidate_pool: 837
+- taxon_id: NCBITaxon:1005928
+  source: MADIN
+  taxon_label: roseovarius_lutimaris
+  candidate_pool: 837
+- taxon_id: NCBITaxon:1006
+  source: MADIN
+  taxon_label: flexibacter_tractuosus
+  candidate_pool: 837
+- taxon_id: NCBITaxon:1007105
+  source: MADIN
+  taxon_label: Pusillimonas sp. T7-7
+  candidate_pool: 837
+- taxon_id: NCBITaxon:1017277
+  source: MADIN
+  taxon_label: exiguobacterium_enclense
+  candidate_pool: 837
+- taxon_id: NCBITaxon:1027373
+  source: MADIN
+  taxon_label: Nitrosopumilus sp. AR
+  candidate_pool: 837
+- taxon_id: NCBITaxon:1027374
+  source: MADIN
+  taxon_label: Nitrosopumilus sp. SJ
+  candidate_pool: 837
+- taxon_id: NCBITaxon:1028566
+  source: MADIN
+  taxon_label: Sulfolobus acidocaldarius N8
+  candidate_pool: 837
+- taxon_id: NCBITaxon:1028742
+  source: MADIN
+  taxon_label: Altererythrobacter gangjinensis
+  candidate_pool: 837
+- taxon_id: NCBITaxon:1028743
+  source: MADIN
+  taxon_label: Arenibacter hampyeongensis
+  candidate_pool: 837
+- taxon_id: NCBITaxon:1028745
+  source: MADIN
+  taxon_label: Aestuariibaculum suncheonense
+  candidate_pool: 837
+- taxon_id: NCBITaxon:1028746
+  source: MADIN
+  taxon_label: Gramella aestuarii
+  candidate_pool: 837
+- taxon_id: NCBITaxon:1028749
+  source: MADIN
+  taxon_label: Microbulbifer gwangyangensis
+  candidate_pool: 837
+- taxon_id: NCBITaxon:1028752
+  source: MADIN
+  taxon_label: Shewanella aestuarii
+  candidate_pool: 837
+- taxon_id: NCBITaxon:1031273
+  source: MADIN
+  taxon_label: Gaetbulibacter lutimaris
+  candidate_pool: 837
+- taxon_id: NCBITaxon:1031541
+  source: MADIN
+  taxon_label: tropicimonas_sediminicola
+  candidate_pool: 837
+- taxon_id: NCBITaxon:1038845
+  source: MADIN
+  taxon_label: flavobacterium_rakeshii
+  candidate_pool: 837
+- taxon_id: NCBITaxon:1038928
+  source: MADIN
+  taxon_label: streptomyces_xinghaiensis
+  candidate_pool: 837
+- taxon_id: NCBITaxon:1038929
+  source: MADIN
+  taxon_label: Streptomyces xinghaiensis S187
+  candidate_pool: 837
+- taxon_id: NCBITaxon:1042877
+  source: MADIN
+  taxon_label: Thermococcus sp. 4557
+  candidate_pool: 837
+- taxon_id: NCBITaxon:1045558
+  source: MADIN
+  taxon_label: Neptunomonas qingdaonensis
+  candidate_pool: 837
+- taxon_id: NCBITaxon:1048
+  source: MADIN
+  taxon_label: marichromatium_gracile
+  candidate_pool: 837
+- taxon_id: NCBITaxon:1048221
+  source: MADIN
+  taxon_label: Mucilaginibacter litoreus
+  candidate_pool: 837
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-14T22:45:54Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD.
-    Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD,
+    MADIN. Grounding: EXACT.'
