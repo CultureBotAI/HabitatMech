@@ -1,0 +1,29 @@
+identifier: habitatmech:BACDIVE.04ddbbeabe
+label: Rot-Root,Stem
+habitat_category: OTHER
+grounding_status: UNGROUNDED
+mapping_status: REVIEWED
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:rot-root,stem
+  source_label: Rot-Root,Stem
+  assertion_count: 2
+  assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:2042057
+  source: BACDIVE
+  taxon_label: Pectobacterium polaris
+  association_count: 1
+  rank: 1
+  candidate_pool: 2
+- taxon_id: NCBITaxon:554
+  source: BACDIVE
+  taxon_label: Pectobacterium carotovorum
+  association_count: 1
+  rank: 2
+  candidate_pool: 2
+curation_history:
+- timestamp: '2026-08-14T05:30:47Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'

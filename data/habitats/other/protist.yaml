@@ -1,0 +1,37 @@
+identifier: habitatmech:BACDIVE.a7f6b12719
+label: Protist
+habitat_category: OTHER
+grounding_status: NOT_APPLICABLE
+mapping_status: REVIEWED
+xrefs:
+- NCIT:C77914
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:protist
+  source_label: Protist
+  assertion_count: 3
+  assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:1204725
+  source: BACDIVE
+  taxon_label: Methanobacterium formicicum DSM 3637
+  association_count: 1
+  rank: 1
+  candidate_pool: 3
+- taxon_id: NCBITaxon:1891233
+  source: BACDIVE
+  taxon_label: Dysgonomonas sp.
+  association_count: 1
+  rank: 2
+  candidate_pool: 3
+- taxon_id: NCBITaxon:195105
+  source: BACDIVE
+  taxon_label: Haematobacter massiliensis
+  association_count: 1
+  rank: 3
+  candidate_pool: 3
+curation_history:
+- timestamp: '2026-08-14T05:30:47Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: NOT_APPLICABLE.'

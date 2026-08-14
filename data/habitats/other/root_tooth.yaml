@@ -1,0 +1,125 @@
+identifier: habitatmech:BACDIVE.5bac6e6496
+label: Root-Tooth
+habitat_category: OTHER
+grounding_status: UNGROUNDED
+mapping_status: REVIEWED
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:root-tooth
+  source_label: Root-Tooth
+  assertion_count: 28
+  assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:231233
+  source: BACDIVE
+  taxon_label: Streptococcus devriesei
+  association_count: 5
+  rank: 1
+  candidate_pool: 18
+- taxon_id: NCBITaxon:203
+  source: BACDIVE
+  taxon_label: Campylobacter rectus
+  association_count: 4
+  rank: 2
+  candidate_pool: 18
+- taxon_id: NCBITaxon:1659
+  source: BACDIVE
+  taxon_label: Actinomyces israelii
+  association_count: 3
+  rank: 3
+  candidate_pool: 18
+- taxon_id: NCBITaxon:1656
+  source: BACDIVE
+  taxon_label: Actinomyces viscosus
+  association_count: 2
+  rank: 4
+  candidate_pool: 18
+- taxon_id: NCBITaxon:1292
+  source: BACDIVE
+  taxon_label: Staphylococcus warneri
+  association_count: 1
+  rank: 5
+  candidate_pool: 18
+- taxon_id: NCBITaxon:134034
+  source: BACDIVE
+  taxon_label: Corynebacterium freneyi
+  association_count: 1
+  rank: 6
+  candidate_pool: 18
+- taxon_id: NCBITaxon:192066
+  source: BACDIVE
+  taxon_label: Neisseria sp.
+  association_count: 1
+  rank: 7
+  candidate_pool: 18
+- taxon_id: NCBITaxon:200
+  source: BACDIVE
+  taxon_label: Campylobacter curvus
+  association_count: 1
+  rank: 8
+  candidate_pool: 18
+- taxon_id: NCBITaxon:204
+  source: BACDIVE
+  taxon_label: Campylobacter showae
+  association_count: 1
+  rank: 9
+  candidate_pool: 18
+- taxon_id: NCBITaxon:315405
+  source: BACDIVE
+  taxon_label: Streptococcus gallolyticus
+  association_count: 1
+  rank: 10
+  candidate_pool: 18
+- taxon_id: NCBITaxon:44737
+  source: BACDIVE
+  taxon_label: Capnocytophaga sp.
+  association_count: 1
+  rank: 11
+  candidate_pool: 18
+- taxon_id: NCBITaxon:68891
+  source: BACDIVE
+  taxon_label: Streptococcus peroris
+  association_count: 1
+  rank: 12
+  candidate_pool: 18
+- taxon_id: NCBITaxon:68892
+  source: BACDIVE
+  taxon_label: Streptococcus infantis
+  association_count: 1
+  rank: 13
+  candidate_pool: 18
+- taxon_id: NCBITaxon:714
+  source: BACDIVE
+  taxon_label: Aggregatibacter actinomycetemcomitans
+  association_count: 1
+  rank: 14
+  candidate_pool: 18
+- taxon_id: NCBITaxon:732
+  source: BACDIVE
+  taxon_label: Aggregatibacter aphrophilus
+  association_count: 1
+  rank: 15
+  candidate_pool: 18
+- taxon_id: NCBITaxon:824
+  source: BACDIVE
+  taxon_label: Campylobacter gracilis
+  association_count: 1
+  rank: 16
+  candidate_pool: 18
+- taxon_id: NCBITaxon:826
+  source: BACDIVE
+  taxon_label: Sebaldella termitidis
+  association_count: 1
+  rank: 17
+  candidate_pool: 18
+- taxon_id: NCBITaxon:908937
+  source: BACDIVE
+  taxon_label: Prevotella dentalis DSM 3688
+  association_count: 1
+  rank: 18
+  candidate_pool: 18
+curation_history:
+- timestamp: '2026-08-14T05:30:47Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
