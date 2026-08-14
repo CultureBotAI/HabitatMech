@@ -1,0 +1,167 @@
+identifier: habitatmech:BACDIVE.3974b3f169
+label: Oral-cavity-and-airways
+habitat_category: OTHER
+grounding_status: UNGROUNDED
+mapping_status: REVIEWED
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:oral-cavity-and-airways
+  source_label: Oral-cavity-and-airways
+  assertion_count: 2102
+  assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:1656
+  source: BACDIVE
+  taxon_label: Actinomyces viscosus
+  association_count: 74
+  rank: 1
+  candidate_pool: 881
+- taxon_id: NCBITaxon:520
+  source: BACDIVE
+  taxon_label: Bordetella pertussis
+  association_count: 60
+  rank: 2
+  candidate_pool: 881
+- taxon_id: NCBITaxon:1660
+  source: BACDIVE
+  taxon_label: Schaalia odontolytica
+  association_count: 33
+  rank: 3
+  candidate_pool: 881
+- taxon_id: NCBITaxon:287
+  source: BACDIVE
+  taxon_label: Pseudomonas aeruginosa
+  association_count: 33
+  rank: 4
+  candidate_pool: 881
+- taxon_id: NCBITaxon:1328
+  source: BACDIVE
+  taxon_label: Streptococcus anginosus
+  association_count: 32
+  rank: 5
+  candidate_pool: 881
+- taxon_id: NCBITaxon:1655
+  source: BACDIVE
+  taxon_label: Actinomyces naeslundii
+  association_count: 29
+  rank: 6
+  candidate_pool: 881
+- taxon_id: NCBITaxon:727
+  source: BACDIVE
+  taxon_label: Haemophilus influenzae
+  association_count: 28
+  rank: 7
+  candidate_pool: 881
+- taxon_id: NCBITaxon:573
+  source: BACDIVE
+  taxon_label: Klebsiella pneumoniae
+  association_count: 27
+  rank: 8
+  candidate_pool: 881
+- taxon_id: NCBITaxon:1313
+  source: BACDIVE
+  taxon_label: Streptococcus pneumoniae
+  association_count: 25
+  rank: 9
+  candidate_pool: 881
+- taxon_id: NCBITaxon:1305
+  source: BACDIVE
+  taxon_label: Streptococcus sanguinis
+  association_count: 23
+  rank: 10
+  candidate_pool: 881
+- taxon_id: NCBITaxon:1717
+  source: BACDIVE
+  taxon_label: Corynebacterium diphtheriae
+  association_count: 23
+  rank: 11
+  candidate_pool: 881
+- taxon_id: NCBITaxon:1303
+  source: BACDIVE
+  taxon_label: Streptococcus oralis
+  association_count: 18
+  rank: 12
+  candidate_pool: 881
+- taxon_id: NCBITaxon:28251
+  source: BACDIVE
+  taxon_label: Ornithobacterium rhinotracheale
+  association_count: 18
+  rank: 13
+  candidate_pool: 881
+- taxon_id: NCBITaxon:2
+  source: BACDIVE
+  taxon_label: Bacteria
+  association_count: 17
+  rank: 14
+  candidate_pool: 881
+- taxon_id: NCBITaxon:519
+  source: BACDIVE
+  taxon_label: Bordetella parapertussis
+  association_count: 17
+  rank: 15
+  candidate_pool: 881
+- taxon_id: NCBITaxon:55565
+  source: BACDIVE
+  taxon_label: Actinomyces graevenitzii
+  association_count: 17
+  rank: 16
+  candidate_pool: 881
+- taxon_id: NCBITaxon:238
+  source: BACDIVE
+  taxon_label: Elizabethkingia meningoseptica
+  association_count: 16
+  rank: 17
+  candidate_pool: 881
+- taxon_id: NCBITaxon:732
+  source: BACDIVE
+  taxon_label: Aggregatibacter aphrophilus
+  association_count: 16
+  rank: 18
+  candidate_pool: 881
+- taxon_id: NCBITaxon:1302
+  source: BACDIVE
+  taxon_label: Streptococcus gordonii
+  association_count: 15
+  rank: 19
+  candidate_pool: 881
+- taxon_id: NCBITaxon:1306
+  source: BACDIVE
+  taxon_label: Streptococcus sp.
+  association_count: 15
+  rank: 20
+  candidate_pool: 881
+- taxon_id: NCBITaxon:1314
+  source: BACDIVE
+  taxon_label: Streptococcus pyogenes
+  association_count: 15
+  rank: 21
+  candidate_pool: 881
+- taxon_id: NCBITaxon:502
+  source: BACDIVE
+  taxon_label: Kingella denitrificans
+  association_count: 14
+  rank: 22
+  candidate_pool: 881
+- taxon_id: NCBITaxon:69392
+  source: BACDIVE
+  taxon_label: Stenotrophomonas sp.
+  association_count: 14
+  rank: 23
+  candidate_pool: 881
+- taxon_id: NCBITaxon:731
+  source: BACDIVE
+  taxon_label: Histophilus somni
+  association_count: 14
+  rank: 24
+  candidate_pool: 881
+- taxon_id: NCBITaxon:1280
+  source: BACDIVE
+  taxon_label: Staphylococcus aureus
+  association_count: 13
+  rank: 25
+  candidate_pool: 881
+curation_history:
+- timestamp: '2026-08-14T05:30:47Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'

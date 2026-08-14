@@ -1,0 +1,41 @@
+identifier: habitatmech:BACDIVE.31392c69b9
+label: Spot-Leaf,Stem
+habitat_category: OTHER
+grounding_status: UNGROUNDED
+mapping_status: REVIEWED
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:spot-leaf,stem
+  source_label: Spot-Leaf,Stem
+  assertion_count: 5
+  assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:339
+  source: BACDIVE
+  taxon_label: Xanthomonas campestris
+  association_count: 2
+  rank: 1
+  candidate_pool: 4
+- taxon_id: NCBITaxon:1958950
+  source: BACDIVE
+  taxon_label: Pseudomonas floridensis
+  association_count: 1
+  rank: 2
+  candidate_pool: 4
+- taxon_id: NCBITaxon:317
+  source: BACDIVE
+  taxon_label: Pseudomonas syringae
+  association_count: 1
+  rank: 3
+  candidate_pool: 4
+- taxon_id: NCBITaxon:548
+  source: BACDIVE
+  taxon_label: Klebsiella aerogenes
+  association_count: 1
+  rank: 4
+  candidate_pool: 4
+curation_history:
+- timestamp: '2026-08-14T05:30:47Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'

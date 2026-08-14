@@ -204,3 +204,39 @@ def test_a_missing_reference_source_warns_instead_of_degrading_silently(tmp_path
     assert extract._reference_labels(tmp_path, {"NCIT:C17649"}) == {}
     out = capsys.readouterr().out
     assert "WARNING" in out and "NCIT" in out and "ncit.db" in out
+
+
+def test_label_cohorts_separate_the_defect_class_the_seeder_cannot_see():
+    """The seeder checks an upstream mapping's object_id against its
+    object_label, so it is blind by construction when those agree and the
+    mapping itself is wrong. The cohorts rank that second class: a target whose
+    label is a strict subset of the subject's words dropped modifiers
+    (`Cooling-tower` -> Tower), and one sharing no word was matched on a
+    synonym, where over-narrowing hides (`Reptilia` -> Lepidosauria).
+
+    It ranks, it does not decide — half the subset cohort is correct, because
+    the subject is an enumeration and dropping an alternative is right."""
+    import sys
+    from pathlib import Path
+
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
+    from habitat_report import label_cohort
+
+    assert label_cohort("abscess", "Abscess") == "identical"
+    assert label_cohort("cooling tower", "Tower") == "subset"
+    assert label_cohort("feces stool", "feces") == "subset"       # dropped, correctly
+    assert label_cohort("chicken", "Gallus gallus") == "disjoint"
+    # Tokenization artefacts, not mapping defects: same letters, different
+    # spacing or an inflectional tail. Flagging these buried the real findings
+    # under repeats of "Composting" once GOLD's route was joined (#52).
+    assert label_cohort("wastewater", "waste water") == "identical"
+    assert label_cohort("composting", "compost") == "identical"
+    assert label_cohort("clean room", "cleanroom") == "identical"
+    # ...but the narrowness has to hold: a dropped word that IS the meaning
+    # must still be caught.
+    assert label_cohort("cooling tower", "Tower") == "subset"
+    assert label_cohort("plant factory", "factory") == "subset"
+    assert label_cohort("acid mine drainage", "acid mine drainage site") == "overlap"
+    # The known false negative, stated rather than hidden: "sample" is shared,
+    # so a plainly wrong mapping lands in the low-risk bucket.
+    assert label_cohort("core sample", "Nucleotide Sequence Sample Name") == "overlap"

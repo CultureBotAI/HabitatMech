@@ -1,0 +1,134 @@
+identifier: habitatmech:BACDIVE.57e74dd487
+label: Animal-produced-food-natural
+habitat_category: OTHER
+grounding_status: NARROW
+mapping_status: REVIEWED
+parent_habitats:
+- FOODON:00004242
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:animal-produced-food-natural
+  source_label: Animal-produced-food-natural
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 38
+  assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:1464
+  source: BACDIVE
+  taxon_label: Paenibacillus larvae
+  association_count: 16
+  rank: 1
+  candidate_pool: 19
+- taxon_id: NCBITaxon:1926289
+  source: BACDIVE
+  taxon_label: Herminiimonas sp.
+  association_count: 3
+  rank: 2
+  candidate_pool: 19
+- taxon_id: NCBITaxon:33885
+  source: BACDIVE
+  taxon_label: Microbacterium lacticum
+  association_count: 2
+  rank: 3
+  candidate_pool: 19
+- taxon_id: NCBITaxon:83428
+  source: BACDIVE
+  taxon_label: uncultured Bacillus sp.
+  association_count: 2
+  rank: 4
+  candidate_pool: 19
+- taxon_id: NCBITaxon:1280
+  source: BACDIVE
+  taxon_label: Staphylococcus aureus
+  association_count: 1
+  rank: 5
+  candidate_pool: 19
+- taxon_id: NCBITaxon:1334
+  source: BACDIVE
+  taxon_label: Streptococcus dysgalactiae
+  association_count: 1
+  rank: 6
+  candidate_pool: 19
+- taxon_id: NCBITaxon:1348
+  source: BACDIVE
+  taxon_label: Streptococcus parauberis
+  association_count: 1
+  rank: 7
+  candidate_pool: 19
+- taxon_id: NCBITaxon:1358
+  source: BACDIVE
+  taxon_label: Lactococcus lactis
+  association_count: 1
+  rank: 8
+  candidate_pool: 19
+- taxon_id: NCBITaxon:1366
+  source: BACDIVE
+  taxon_label: Pseudolactococcus raffinolactis
+  association_count: 1
+  rank: 9
+  candidate_pool: 19
+- taxon_id: NCBITaxon:1402
+  source: BACDIVE
+  taxon_label: Bacillus licheniformis
+  association_count: 1
+  rank: 10
+  candidate_pool: 19
+- taxon_id: NCBITaxon:1421
+  source: BACDIVE
+  taxon_label: Lysinibacillus sphaericus
+  association_count: 1
+  rank: 11
+  candidate_pool: 19
+- taxon_id: NCBITaxon:1582
+  source: BACDIVE
+  taxon_label: Lacticaseibacillus casei
+  association_count: 1
+  rank: 12
+  candidate_pool: 19
+- taxon_id: NCBITaxon:1597
+  source: BACDIVE
+  taxon_label: Lacticaseibacillus paracasei
+  association_count: 1
+  rank: 13
+  candidate_pool: 19
+- taxon_id: NCBITaxon:1661
+  source: BACDIVE
+  taxon_label: Trueperella pyogenes
+  association_count: 1
+  rank: 14
+  candidate_pool: 19
+- taxon_id: NCBITaxon:315405
+  source: BACDIVE
+  taxon_label: Streptococcus gallolyticus
+  association_count: 1
+  rank: 15
+  candidate_pool: 19
+- taxon_id: NCBITaxon:46224
+  source: BACDIVE
+  taxon_label: Heyndrickxia sporothermodurans
+  association_count: 1
+  rank: 16
+  candidate_pool: 19
+- taxon_id: NCBITaxon:586733
+  source: BACDIVE
+  taxon_label: Staphylococcus devriesei
+  association_count: 1
+  rank: 17
+  candidate_pool: 19
+- taxon_id: NCBITaxon:665913
+  source: BACDIVE
+  taxon_label: Mixta calida
+  association_count: 1
+  rank: 18
+  candidate_pool: 19
+- taxon_id: NCBITaxon:69218
+  source: BACDIVE
+  taxon_label: Enterobacter cancerogenus
+  association_count: 1
+  rank: 19
+  candidate_pool: 19
+curation_history:
+- timestamp: '2026-08-14T05:30:47Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: NARROW.'

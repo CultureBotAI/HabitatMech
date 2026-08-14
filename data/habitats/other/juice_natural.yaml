@@ -1,0 +1,158 @@
+identifier: habitatmech:BACDIVE.0b7fa25ca9
+label: Juice-natural
+habitat_category: OTHER
+grounding_status: NARROW
+mapping_status: REVIEWED
+parent_habitats:
+- BTO:0000659
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:juice-natural
+  source_label: Juice-natural
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 36
+  assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:1479
+  source: BACDIVE
+  taxon_label: Bacillus smithii
+  association_count: 5
+  rank: 1
+  candidate_pool: 23
+- taxon_id: NCBITaxon:1516
+  source: BACDIVE
+  taxon_label: Thermoanaerobacter ethanolicus subsp. thermohydrosulfuricus
+  association_count: 4
+  rank: 2
+  candidate_pool: 23
+- taxon_id: NCBITaxon:1421
+  source: BACDIVE
+  taxon_label: Lysinibacillus sphaericus
+  association_count: 3
+  rank: 3
+  candidate_pool: 23
+- taxon_id: NCBITaxon:1422
+  source: BACDIVE
+  taxon_label: Geobacillus stearothermophilus
+  association_count: 3
+  rank: 4
+  candidate_pool: 23
+- taxon_id: NCBITaxon:184914
+  source: BACDIVE
+  taxon_label: Corallococcus coralloides
+  association_count: 3
+  rank: 5
+  candidate_pool: 23
+- taxon_id: NCBITaxon:1052017
+  source: BACDIVE
+  taxon_label: Leucobacter margaritiformis
+  association_count: 1
+  rank: 6
+  candidate_pool: 23
+- taxon_id: NCBITaxon:1307920
+  source: BACDIVE
+  taxon_label: Acetobacter tropicalis NRIC 0312
+  association_count: 1
+  rank: 7
+  candidate_pool: 23
+- taxon_id: NCBITaxon:1307939
+  source: BACDIVE
+  taxon_label: Komagataeibacter rhaeticus DSM 16663
+  association_count: 1
+  rank: 8
+  candidate_pool: 23
+- taxon_id: NCBITaxon:1307943
+  source: BACDIVE
+  taxon_label: Komagataeibacter swingsii DSM 16373
+  association_count: 1
+  rank: 9
+  candidate_pool: 23
+- taxon_id: NCBITaxon:1413215
+  source: BACDIVE
+  taxon_label: Geobacillus thermodenitrificans subsp. thermodenitrificans DSM 465
+  association_count: 1
+  rank: 10
+  candidate_pool: 23
+- taxon_id: NCBITaxon:143495
+  source: BACDIVE
+  taxon_label: Aneurinibacillus thermoaerophilus
+  association_count: 1
+  rank: 11
+  candidate_pool: 23
+- taxon_id: NCBITaxon:1450
+  source: BACDIVE
+  taxon_label: Alicyclobacillus acidoterrestris
+  association_count: 1
+  rank: 12
+  candidate_pool: 23
+- taxon_id: NCBITaxon:1511749
+  source: BACDIVE
+  taxon_label: Geobacillus thermodenitrificans subsp. thermodenitrificans
+  association_count: 1
+  rank: 13
+  candidate_pool: 23
+- taxon_id: NCBITaxon:1513898
+  source: BACDIVE
+  taxon_label: Tetragenococcus halophilus subsp. flandriensis
+  association_count: 1
+  rank: 14
+  candidate_pool: 23
+- taxon_id: NCBITaxon:1613
+  source: BACDIVE
+  taxon_label: Limosilactobacillus fermentum
+  association_count: 1
+  rank: 15
+  candidate_pool: 23
+- taxon_id: NCBITaxon:265948
+  source: BACDIVE
+  taxon_label: Anoxybacteroides tepidamans
+  association_count: 1
+  rank: 16
+  candidate_pool: 23
+- taxon_id: NCBITaxon:394090
+  source: BACDIVE
+  taxon_label: Cystobacter armeniaca
+  association_count: 1
+  rank: 17
+  candidate_pool: 23
+- taxon_id: NCBITaxon:440
+  source: BACDIVE
+  taxon_label: Acetobacter sp.
+  association_count: 1
+  rank: 18
+  candidate_pool: 23
+- taxon_id: NCBITaxon:526944
+  source: BACDIVE
+  taxon_label: Tetragenococcus osmophilus
+  association_count: 1
+  rank: 19
+  candidate_pool: 23
+- taxon_id: NCBITaxon:542
+  source: BACDIVE
+  taxon_label: Zymomonas mobilis
+  association_count: 1
+  rank: 20
+  candidate_pool: 23
+- taxon_id: NCBITaxon:83451
+  source: BACDIVE
+  taxon_label: Archangium violaceum
+  association_count: 1
+  rank: 21
+  candidate_pool: 23
+- taxon_id: NCBITaxon:864732
+  source: BACDIVE
+  taxon_label: Acetobacter musti
+  association_count: 1
+  rank: 22
+  candidate_pool: 23
+- taxon_id: NCBITaxon:935295
+  source: BACDIVE
+  taxon_label: Leuconostoc pseudomesenteroides KCTC 3652
+  association_count: 1
+  rank: 23
+  candidate_pool: 23
+curation_history:
+- timestamp: '2026-08-14T05:30:47Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: NARROW.'

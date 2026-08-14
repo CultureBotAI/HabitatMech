@@ -6,6 +6,9 @@ habitat_category: TERRESTRIAL
 grounding_status: EXACT
 mapping_status: REVIEWED
 synonyms:
+- synonym_text: Animal-habitation-Nest,Burrow
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
 - synonym_text: Nest
   synonym_type: EXACT_SYNONYM
   source: GOLD
@@ -40,6 +43,12 @@ parent_habitats:
 - ENVO:00000446
 - ENVO:01001813
 source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:animal-habitation-nest,burrow
+  source_label: Animal-habitation-Nest,Burrow
+  mapping_predicate: skos:exactMatch
+  assertion_count: 3
+  assertion_unit: STRAIN
 - source: GOLD
   source_id: gold.ecosystem:4839
   source_label: Nest
@@ -60,18 +69,36 @@ characteristic_taxa:
   score: 4.0
   rank: 1
   candidate_pool: 32
+- taxon_id: NCBITaxon:1436798
+  source: BACDIVE
+  taxon_label: Rickettsia fournieri
+  association_count: 1
+  rank: 1
+  candidate_pool: 3
 - taxon_id: NCBITaxon:1265
   source: PREGO
   taxon_label: Ruminococcus flavefaciens
   score: 4.0
   rank: 2
   candidate_pool: 32
+- taxon_id: NCBITaxon:156980
+  source: BACDIVE
+  taxon_label: Arthrobacter woluwensis
+  association_count: 1
+  rank: 2
+  candidate_pool: 3
 - taxon_id: NCBITaxon:1423814
   source: PREGO
   taxon_label: Limosilactobacillus vaginalis DSM 5837 = ATCC 49540
   score: 4.0
   rank: 3
   candidate_pool: 32
+- taxon_id: NCBITaxon:1641715
+  source: BACDIVE
+  taxon_label: Sinobacterium norvegicum
+  association_count: 1
+  rank: 3
+  candidate_pool: 3
 - taxon_id: NCBITaxon:1526
   source: PREGO
   taxon_label: '[Clostridium] aminophilum'
@@ -206,5 +233,5 @@ curation_history:
 - timestamp: '2026-08-14T05:30:47Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD, PREGO. Grounding:
     EXACT.'
