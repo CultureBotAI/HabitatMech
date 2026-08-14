@@ -226,6 +226,16 @@ def test_label_cohorts_separate_the_defect_class_the_seeder_cannot_see():
     assert label_cohort("cooling tower", "Tower") == "subset"
     assert label_cohort("feces stool", "feces") == "subset"       # dropped, correctly
     assert label_cohort("chicken", "Gallus gallus") == "disjoint"
+    # Tokenization artefacts, not mapping defects: same letters, different
+    # spacing or an inflectional tail. Flagging these buried the real findings
+    # under repeats of "Composting" once GOLD's route was joined (#52).
+    assert label_cohort("wastewater", "waste water") == "identical"
+    assert label_cohort("composting", "compost") == "identical"
+    assert label_cohort("clean room", "cleanroom") == "identical"
+    # ...but the narrowness has to hold: a dropped word that IS the meaning
+    # must still be caught.
+    assert label_cohort("cooling tower", "Tower") == "subset"
+    assert label_cohort("plant factory", "factory") == "subset"
     assert label_cohort("acid mine drainage", "acid mine drainage site") == "overlap"
     # The known false negative, stated rather than hidden: "sample" is shared,
     # so a plainly wrong mapping lands in the low-risk bucket.

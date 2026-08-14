@@ -63,10 +63,31 @@ def _words(text: str) -> set[str]:
     return {w for w in norm_label(text).split() if w}
 
 
+# Longest suffix an inflection may add before two labels stop counting as the
+# same word: "compost"/"composting" is 3, and nothing useful is longer.
+_INFLECTION_SLACK = 3
+
+
 def label_cohort(subject: str, object_label: str) -> str:
     subject_words, object_words = _words(subject), _words(object_label)
     if not object_words:
         return "overlap"
+
+    # Word-set comparison alone calls "Wastewater" -> "waste water" and
+    # "Composting" -> "compost" disjoint, which is a tokenization artefact
+    # rather than a mapping defect. Comparing the labels with the spaces taken
+    # out catches both, and dropping a short inflectional tail catches the
+    # second. Deliberately narrow: it must not swallow "Cooling-tower" ->
+    # "Tower", where the missing word is the whole of the meaning.
+    flat_subject, flat_object = "".join(sorted(subject_words)), "".join(sorted(object_words))
+    joined_subject = norm_label(subject).replace(" ", "")
+    joined_object = norm_label(object_label).replace(" ", "")
+    if flat_subject == flat_object or joined_subject == joined_object:
+        return "identical"
+    longer, shorter = sorted((joined_subject, joined_object), key=len, reverse=True)
+    if shorter and longer.startswith(shorter) and len(longer) - len(shorter) <= _INFLECTION_SLACK:
+        return "identical"
+
     if subject_words == object_words:
         return "identical"
     if object_words < subject_words:
@@ -120,32 +141,46 @@ def _unverifiable_mapping_targets() -> list[tuple[str, str, str, bool]]:
     return sorted(out, key=lambda r: (not r[3], r[0]))
 
 
-def _mapping_cohorts(decided: set[str]) -> tuple[Counter, list[tuple]]:
+def _mapping_cohorts(decided: set[str]) -> tuple[Counter, int, list[tuple]]:
     """Split the upstream mappings by cohort and rank the undecided risky ones.
 
-    A row is "decided" once the BacDive concept it feeds has an entry in
-    curation/decisions.tsv, so this shrinks as the review proceeds — like the
+    A row is "decided" once every source concept it feeds has a per-item entry
+    in curation/decisions.tsv, so this shrinks as the review proceeds — like the
     ungrounded backlog, and unlike a one-off audit.
+
+    Both routes into the mapping table are joined. BacDive resolves a source by
+    normalized label falling back to slug; GOLD reaches the same table by its
+    leaf label. Joining only the first understated the backlog by 52 concepts
+    and blamed the gap on rows this corpus does not carry (#52).
     """
     raw = REPO_ROOT / "data" / "raw"
-    mapping_path, sources_path = (
-        raw / "isolation_source_groundings.tsv",
-        raw / "bacdive_isolation_sources.tsv",
-    )
+    mapping_path = raw / "isolation_source_groundings.tsv"
+    sources_path = raw / "bacdive_isolation_sources.tsv"
+    gold_path = raw / "gold_ecosystem_paths.tsv"
     if not mapping_path.exists() or not sources_path.exists():
-        return Counter(), []
+        return Counter(), 0, []
 
-    # The seeder joins a BacDive source to a mapping row on the normalized
-    # label, falling back to the slug; invert that so a mapping row can name the
-    # minted identifier a decision must key on.
-    by_key: dict[str, list[dict]] = defaultdict(list)
+    # Invert each source's own join so a mapping row can name the minted
+    # identifiers a decision would have to key on. Value is (minted id, volume).
+    by_key: dict[str, list[tuple[str, int]]] = defaultdict(list)
     with sources_path.open(newline="", encoding="utf-8") as fh:
         for row in csv.DictReader(fh, delimiter="\t"):
+            entry = (mint("BACDIVE", row["bacdive_id"]), int(row.get("strain_count") or 0))
             for key in (norm_label(row["label"]), norm_label(row["source_slug"])):
                 if key:
-                    by_key[key].append(row)
+                    by_key[key].append(entry)
+    if gold_path.exists():
+        with gold_path.open(newline="", encoding="utf-8") as fh:
+            for row in csv.DictReader(fh, delimiter="\t"):
+                key = norm_label(row.get("leaf_label", ""))
+                if key:
+                    by_key[key].append((
+                        mint("GOLD", row["canonical_path"]),
+                        int(row.get("total_assertions") or 0),
+                    ))
 
     counts: Counter = Counter()
+    risky = 0
     backlog = []
     with mapping_path.open(newline="", encoding="utf-8") as fh:
         for row in csv.DictReader(fh, delimiter="\t"):
@@ -156,12 +191,11 @@ def _mapping_cohorts(decided: set[str]) -> tuple[Counter, list[tuple]]:
             counts[cohort] += 1
             if cohort not in RISK_COHORTS:
                 continue
-            counts["_risky"] += 1
-            # A source is indexed under both its label and its slug, which
-            # collide for most of them — dedupe or every row lists twice.
+            risky += 1
+            # A source is indexed under several keys that collide for most of
+            # them — dedupe or a row lists once per key that matched.
             seen: set[str] = set()
-            for source in by_key.get(norm_label(row["subject_label"]), ()):
-                identifier = mint("BACDIVE", source["bacdive_id"])
+            for identifier, volume in by_key.get(norm_label(row["subject_label"]), ()):
                 if identifier in decided or identifier in seen:
                     continue
                 seen.add(identifier)
@@ -170,10 +204,10 @@ def _mapping_cohorts(decided: set[str]) -> tuple[Counter, list[tuple]]:
                     # is worth more attention than one it can only keep as an
                     # xref, so rank on that before assertion volume.
                     target.split(":", 1)[0] in _IDENTITY_PREFIXES,
-                    int(source.get("strain_count") or 0), cohort,
+                    volume, cohort,
                     row["subject_label"], target, row["object_label"], identifier,
                 ))
-    return counts, sorted(backlog, reverse=True)
+    return counts, risky, sorted(backlog, reverse=True)
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -321,7 +355,7 @@ def main(argv: list[str] | None = None) -> int:
         for assertions, label, identifier in undecided[: args.ungrounded_top]:
             print(f"  {assertions:8d}  {label[:52]:52s}  {identifier}")
 
-    cohorts, cohort_backlog = _mapping_cohorts(item_decided)
+    cohorts, risky_total, cohort_backlog = _mapping_cohorts(item_decided)
     if cohorts:
         total_mapped = sum(cohorts[c] for c in COHORTS)
         print(f"\n=== {total_mapped} upstream mappings, by how the object label relates "
@@ -335,11 +369,12 @@ def main(argv: list[str] | None = None) -> int:
     if cohort_backlog and args.ungrounded_top:
         identity = sum(1 for row in cohort_backlog if row[0])
         shown = min(args.ungrounded_top, len(cohort_backlog))
-        print(f"\n=== {len(cohort_backlog)} of {cohorts['_risky']} risky mappings still "
+        print(f"\n=== {len(cohort_backlog)} of {risky_total} risky mappings still "
               "undecided ===")
         print(f"  ({identity} would become a record's identity and rank first; the rest are")
-        print("   kept only as an xref. The gap to the cohort totals is rows already decided,")
-        print(f"   or naming a source this corpus does not carry. Showing {shown}.)")
+        print("   kept only as an xref. The gap to the cohort total is rows already decided")
+        print("   per-item, or naming a subject neither BacDive nor GOLD brings into this")
+        print(f"   corpus. Volume is strains for BacDive, assertions for GOLD. Showing {shown}.)")
         for is_identity, strains, cohort, subject, target, label, identifier in (
             cohort_backlog[: args.ungrounded_top]
         ):
