@@ -1,16 +1,16 @@
-identifier: habitatmech:GOLD.228c68bdf2
-label: Composting facility
-habitat_category: AIR
+identifier: habitatmech:GOLD.d808a23d62
+label: Tundra
+habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
-- habitatmech:GOLD.40979f5751
+- ENVO:00001998
 source_attestations:
 - source: GOLD
-  source_id: gold.ecosystem:7107
-  source_label: Composting facility
-  source_path: Environmental > Air > Indoor Air > Composting facility
-  assertion_count: 1
+  source_id: gold.ecosystem:5902
+  source_label: Tundra
+  source_path: Environmental > Terrestrial > Soil > Tundra
+  assertion_count: 98
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
