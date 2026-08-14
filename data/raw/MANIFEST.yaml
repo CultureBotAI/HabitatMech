@@ -1,34 +1,42 @@
 # Provenance for the inventories in data/raw/.
 # Regenerate with: just extract-inventory
 # Emitted by scripts/extract_source_inventory.py — do not hand-edit.
-extracted_at: '2026-08-14T05:30:47Z'
-kg_microbe_source: kg-microbe@07b1ca7e3f75cab4ebf546c7de413a24b8bc72e0
+extracted_at: '2026-08-14T22:31:40Z'
+kg_microbe_source: kg-microbe@bfd350e7674828874d752e829584478ecfef7bd8
 gold_truncated_paths: 0
 inputs:
   - path: data/raw/gold/GOLD_nodes.tsv
     bytes: 121818977
     mtime: '2026-08-11T04:24:45Z'
+    sha256: c13c21bdd04619c75ce16e63b05e51577b0cefec5b61765d383313f654ab3fae
   - path: data/raw/gold/GOLD_edges.tsv
     bytes: 184164126
     mtime: '2026-08-11T04:24:45Z'
+    sha256: 54982c25de9d2c820eeebc1452aeac0b034595921d04d55b810bf1d2b1e127e0
   - path: data/transformed/bacdive/nodes.tsv
     bytes: 26810725
     mtime: '2026-08-13T01:42:56Z'
+    sha256: a2a2f9acae230636dd866347d173a32c9f025c04a377060087a4be65781628f3
   - path: data/transformed/bacdive/edges.tsv
     bytes: 590839471
     mtime: '2026-08-13T01:43:14Z'
+    sha256: ab6208bff4854db7c1a736d53d0aa04269a682ab15a1ce6f37c6d731000281d7
   - path: data/transformed/prego/nodes.tsv
     bytes: 9348425
     mtime: '2026-08-11T02:19:44Z'
+    sha256: 020de3afc71495571ddb05000c83a58d009272f53735b5f7c9326c1293e0415c
   - path: data/transformed/prego/edges.tsv
     bytes: 58546303
     mtime: '2026-08-11T02:19:44Z'
+    sha256: 8863ee3197a36915865fa4833df39d10c3f8f69b64bafbb746b9cd731308a0aa
   - path: data/raw/environments.csv
     bytes: 14087
     mtime: '2026-07-25T00:31:54Z'
+    sha256: 99299fe635159712f95568783ad3b484230fb31781262f1f6f8bd84db4bc3048
   - path: mappings/isolation_source_to_ontology.tsv
-    bytes: 78098
-    mtime: '2026-05-06T18:00:24Z'
+    bytes: 80118
+    mtime: '2026-08-14T06:17:14Z'
+    sha256: 2dea3d1bb20c72a04b6f64a67e2bb2bdc4f3649b809c5935390239be2791ef1f
 outputs:
   - path: bacdive_isolation_sources.tsv
     rows: 162
@@ -41,9 +49,9 @@ outputs:
   - path: isolation_source_groundings.tsv
     rows: 358
   - path: ontology_subclass_edges.tsv
-    rows: 11646
+    rows: 11640
   - path: ontology_terms.tsv
-    rows: 13399
+    rows: 13391
   - path: prego_habitat_taxa.tsv
     rows: 8807
   - path: prego_habitats.tsv
