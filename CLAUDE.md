@@ -49,6 +49,17 @@ one-field diff instead of 3,299 reflowed files. If you hand-edit a record into a
 shape `safe_dump` would not emit, reformat it through the helper — do not
 loosen the test.
 
+**Re-extraction refuses when an upstream input has changed.** The extractor
+compares each input's sha256 against `data/raw/MANIFEST.yaml` and stops before
+reading anything if any differ, naming them. That is not paranoia: seven of the
+eight inputs are *untracked* working-tree files in the kg-microbe checkout, so
+its commit says nothing about their content, and a checkout sitting on a
+different branch once swapped 16 mapping rows back to their pre-fix values and
+reverted a merged PR with nothing failing — `verify-corpus` passes either way,
+because the corpus faithfully reproduces from the newly-wrong `data/raw/`. Look
+at what changed, then `--allow-drift` to take it, or `--mappings PATH` with
+`--mappings-from` to pin the table while the checkout sits elsewhere (#72).
+
 **A re-seed that retires a record needs a second pass.**
 `data/habitats/RETIRED.tsv` maps URLs curation has retired to the records that
 absorbed them, and `just redirects` rebuilds it from git history — so a page

@@ -381,3 +381,46 @@ def test_no_decision_grounds_onto_a_term_with_no_place_in_a_hierarchy(raw_tsv):
             if r["decision"] in ("GROUND", "GROUND_AS_PARENT") and r["object_id"] in label_only
         ]
     assert not offenders, f"groundings onto an unplaced term: {offenders[:5]}"
+
+
+def test_the_drift_guard_compares_by_role_not_by_staged_path():
+    """The mapping table is recorded under its role however it was staged, so
+    the comparison survives switching between reading it from the checkout and
+    pinning it with --mappings. Keying on the staged path meant the two runs
+    recorded different names, the lookup found nothing, and the guard passed
+    silently — which is how it failed the first time (#72)."""
+    import sys
+    from pathlib import Path
+
+    root = Path(__file__).resolve().parent.parent
+    sys.path.insert(0, str(root / "scripts"))
+    from extract_source_inventory import MAPPINGS_ROLE, _manifest_inputs
+
+    fake = root / "conf"  # any real directory; only the naming is under test
+    staged = root / "conf" / "sources.yaml"
+    names_unpinned = {name for name, _ in _manifest_inputs(fake, None)}
+    names_pinned = {name for name, _ in _manifest_inputs(fake, staged)}
+    assert MAPPINGS_ROLE in names_pinned, "a pinned table must still record its role"
+    # The only difference between the two may be which files happened to exist,
+    # never the NAME the mapping table is recorded under.
+    assert names_pinned - names_unpinned <= {MAPPINGS_ROLE}
+    pinned = dict(_manifest_inputs(fake, staged))
+    assert pinned[MAPPINGS_ROLE] == staged, "the role must point at the staged file"
+
+
+def test_manifest_records_every_input_it_hashes(raw_tsv):
+    """The drift guard compares what the manifest recorded, so an input that is
+    read but not recorded is one the guard can never notice changing (#72)."""
+    import re
+    from pathlib import Path
+
+    manifest = (Path(__file__).resolve().parent.parent / "data" / "raw" / "MANIFEST.yaml")
+    text = manifest.read_text(encoding="utf-8")
+    paths = re.findall(r"^\s+- path: (.+)$", text, re.M)
+    inputs = [p for p in paths if "/" in p]
+    assert inputs, "manifest lists no inputs"
+    hashed = len(re.findall(r"^\s+sha256: (?!skipped)", text, re.M))
+    assert hashed == len(inputs), (
+        f"{len(inputs)} inputs recorded but {hashed} carry a real sha256; "
+        "an unhashed input is invisible to the drift guard"
+    )

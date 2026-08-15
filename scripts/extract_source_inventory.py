@@ -1150,6 +1150,70 @@ def _utc_now_iso() -> str:
     return now.isoformat(timespec="seconds").replace("+00:00", "Z")
 
 
+def _changed_inputs(manifest: Path, inputs: list[tuple[str, Path]]) -> list[str]:
+    """Inputs whose sha256 differs from the last extraction's manifest.
+
+    Returns display names, newest-first is irrelevant — the caller prints them
+    all. An input the previous manifest never recorded is not "changed": it is
+    new, and saying otherwise would cry wolf on the first run after adding one.
+    """
+    if not manifest.exists():
+        return []
+    recorded: dict[str, str] = {}
+    name = None
+    for line in manifest.read_text(encoding="utf-8").splitlines():
+        stripped = line.strip()
+        if stripped.startswith("- path:"):
+            name = stripped.split(":", 1)[1].strip()
+        elif stripped.startswith("sha256:") and name:
+            recorded[name] = stripped.split(":", 1)[1].strip()
+            name = None
+    if not recorded:
+        return []
+    out = []
+    for shown, path in inputs:
+        was = recorded.get(shown)
+        if was and not was.startswith("skipped") and was != sha256_of(path):
+            out.append(shown)
+    return out
+
+
+# The mapping table is recorded under this name however it was staged, so a
+# drift comparison still lines up when someone switches between reading it from
+# the checkout and pinning it with --mappings (#72).
+MAPPINGS_ROLE = "mappings/isolation_source_to_ontology.tsv"
+
+
+def _manifest_inputs(kgm: Path, mappings: Path | None) -> list[tuple[str, Path]]:
+    """(display name, path) for every file an extraction reads.
+
+    One list, used both by the drift check and by the manifest, so the thing
+    that is compared is exactly the thing that gets recorded.
+    """
+    found = [
+        (str(path.relative_to(kgm)), path)
+        for path in (
+            kgm / "data" / "raw" / "gold" / "GOLD_nodes.tsv",
+            kgm / "data" / "raw" / "gold" / "GOLD_edges.tsv",
+            kgm / "data" / "transformed" / "bacdive" / "nodes.tsv",
+            kgm / "data" / "transformed" / "bacdive" / "edges.tsv",
+            kgm / "data" / "transformed" / "prego" / "nodes.tsv",
+            kgm / "data" / "transformed" / "prego" / "edges.tsv",
+            kgm / "data" / "transformed" / "madin_etal" / "nodes.tsv",
+            kgm / "data" / "transformed" / "madin_etal" / "edges.tsv",
+            kgm / "data" / "raw" / "environments.csv",
+        )
+        if path.exists()
+    ]
+    # Recorded under its role rather than wherever it was staged, so the drift
+    # comparison still lines up across a switch between reading it from the
+    # checkout and pinning it with --mappings.
+    table = mappings or (kgm / "mappings" / "isolation_source_to_ontology.tsv")
+    if table.exists():
+        found.append((MAPPINGS_ROLE, table))
+    return found
+
+
 def build_manifest(
     kgm: Path,
     inputs: list[Path],
@@ -1179,15 +1243,9 @@ def build_manifest(
         f"gold_truncated_paths: {gold_truncated_paths}",
         "inputs:",
     ]
-    for path in inputs:
+    for shown, path in inputs:
         stat = path.stat()
         mtime = datetime.datetime.fromtimestamp(stat.st_mtime, datetime.timezone.utc)
-        # An input pinned with --mappings lives outside the checkout, so it has
-        # no path relative to it. Name it as given rather than crashing (#72).
-        try:
-            shown = path.relative_to(kgm)
-        except ValueError:
-            shown = path
         lines.append(f"  - path: {shown}")
         lines.append(f"    bytes: {stat.st_size}")
         stamp = mtime.isoformat(timespec="seconds").replace("+00:00", "Z")
@@ -1237,6 +1295,10 @@ def main(argv: list[str] | None = None) -> int:
         help="Read the isolation-source mapping table from here instead of the "
              "checkout, to pin it while the checkout sits on another branch (#72).")
     parser.add_argument(
+        "--allow-drift", action="store_true",
+        help="Proceed even though inputs have changed since the committed "
+             "inventories were extracted. Say what changed in the commit message.")
+    parser.add_argument(
         "--mappings-from",
         help="Where the pinned table came from, e.g. kg-microbe@bfd350e:mappings/... "
              "Recorded in the manifest, because the local path it was staged at is "
@@ -1257,6 +1319,32 @@ def main(argv: list[str] | None = None) -> int:
         parser.error(f"kg-microbe path is not a directory: {kgm}")
 
     print(f"kg-microbe root: {kgm}")
+
+    # Before reading anything. A checkout on a different branch once swapped 16
+    # mapping rows back to their pre-fix values and reverted #53 with nothing
+    # failing, so this refuses rather than warns — and it refuses BEFORE writing
+    # any output, because a check that runs at the end cannot prevent the very
+    # thing it detects (#72).
+    #
+    # Compared by sha256, not by commit: seven of the eight inputs are untracked
+    # working-tree artifacts in kg-microbe (the GOLD dump, the transformed
+    # BacDive/PREGO/Madin KGX, environments.csv), so a commit says nothing about
+    # their content. Only the mapping table is tracked there.
+    inputs_for_drift = _manifest_inputs(kgm, args.mappings)
+    changed = _changed_inputs(RAW_DIR / "MANIFEST.yaml", inputs_for_drift)
+    if changed:
+        detail = "\n".join(f"           {name}" for name in changed)
+        if not args.allow_drift:
+            raise SystemExit(
+                f"{len(changed)} input(s) differ from the ones the committed inventories "
+                f"were extracted from:\n{detail}\n"
+                "         Re-extracting folds those changes into whatever else you are "
+                "doing, and nothing downstream will notice: verify-corpus still passes, "
+                "because the corpus faithfully reproduces from the newly-wrong data/raw.\n"
+                "         Look at what changed, then pass --allow-drift to proceed, or "
+                "--mappings PATH to pin the table while the checkout sits elsewhere."
+            )
+        print(f"  WARNING: --allow-drift given; {len(changed)} input(s) changed:\n{detail}")
 
     print("extracting GOLD ecosystem paths ...")
     gold_rows, gold_truncated = extract_gold(kgm)
@@ -1503,37 +1591,11 @@ def main(argv: list[str] | None = None) -> int:
         write_tsv(args.out / name, fields, rows)
         print(f"wrote {args.out / name} ({len(rows)} rows)")
 
-    manifest_inputs = [
-        kgm / "data" / "raw" / "gold" / "GOLD_nodes.tsv",
-        kgm / "data" / "raw" / "gold" / "GOLD_edges.tsv",
-        kgm / "data" / "transformed" / "bacdive" / "nodes.tsv",
-        kgm / "data" / "transformed" / "bacdive" / "edges.tsv",
-        kgm / "data" / "transformed" / "prego" / "nodes.tsv",
-        kgm / "data" / "transformed" / "prego" / "edges.tsv",
-        kgm / "data" / "transformed" / "madin_etal" / "nodes.tsv",
-        kgm / "data" / "transformed" / "madin_etal" / "edges.tsv",
-        kgm / "data" / "raw" / "environments.csv",
-        args.mappings or (kgm / "mappings" / "isolation_source_to_ontology.tsv"),
-    ]
-    # The checkout is not pinned anywhere, so a re-extraction can silently read
-    # a different branch than the one the committed inventories came from. Say
-    # so rather than letting it through unnoticed (#72).
-    previous = RAW_DIR / "MANIFEST.yaml"
-    if previous.exists():
-        for line in previous.read_text(encoding="utf-8").splitlines():
-            if line.startswith("kg_microbe_source:"):
-                was = line.split(":", 1)[1].strip()
-                now = _describe_source(kgm)
-                if was != now:
-                    print(f"  WARNING: the checkout has moved since the committed "
-                          f"inventories were extracted\n           was {was}\n"
-                          f"           now {now}\n"
-                          f"           Check what changed before committing this.")
-                break
+    manifest_inputs = _manifest_inputs(kgm, args.mappings)
 
     manifest = build_manifest(
         kgm,
-        [p for p in manifest_inputs if p.exists()],
+        manifest_inputs,
         {name: len(rows) for name, (_, rows) in outputs.items()},
         hash_inputs=not args.no_hash,
         gold_truncated_paths=len(gold_truncated),

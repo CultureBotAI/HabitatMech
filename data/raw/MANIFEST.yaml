@@ -1,7 +1,7 @@
 # Provenance for the inventories in data/raw/.
 # Regenerate with: just extract-inventory
 # Emitted by scripts/extract_source_inventory.py — do not hand-edit.
-extracted_at: '2026-08-15T05:06:21Z'
+extracted_at: '2026-08-15T05:22:36Z'
 kg_microbe_source: kg-microbe@d65c577a5296229c2ca887a92979e21e253bcf73
 mappings_source: kg-microbe@bfd350e:mappings/isolation_source_to_ontology.tsv
 mappings_staged_at: build/pinned/isolation_source_to_ontology.tsv
@@ -44,7 +44,7 @@ inputs:
     bytes: 14087
     mtime: '2026-07-25T00:31:54Z'
     sha256: 99299fe635159712f95568783ad3b484230fb31781262f1f6f8bd84db4bc3048
-  - path: build/pinned/isolation_source_to_ontology.tsv
+  - path: mappings/isolation_source_to_ontology.tsv
     bytes: 80118
     mtime: '2026-08-15T04:46:15Z'
     sha256: 2dea3d1bb20c72a04b6f64a67e2bb2bdc4f3649b809c5935390239be2791ef1f
