@@ -303,3 +303,28 @@ def test_environment_table_decision_survives_another_source_attesting_the_term()
     )
     for identifier in ruled_out:
         assert by_id[identifier].grounding_status == "NOT_APPLICABLE"
+
+
+def test_narrowed_grounding_is_forgiven_when_the_path_already_said_it():
+    """"Sediment" grounded to "marine sediment" looks like the record claiming
+    specificity the source never had — until you see GOLD's path is
+    Environmental > Aquatic > Marine > Sediment. Checking the path is what
+    separates a real over-narrowing from the seeder correctly using the context
+    it was handed, and it cut this cohort from 67 to 30 (#67)."""
+    import sys
+    from pathlib import Path
+
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
+    from habitat_report import grounding_cohort
+
+    assert grounding_cohort("Sediment", "marine sediment") == "narrowed"
+    assert grounding_cohort(
+        "Sediment", "marine sediment", "Environmental > Aquatic > Marine > Sediment"
+    ) == "same"
+    # A head noun the ontology adds by convention narrows nothing, path or not.
+    assert grounding_cohort("Laboratory", "laboratory facility") == "same"
+    assert grounding_cohort("Volcanic", "volcanic feature") == "same"
+    # ...but a real added modifier the path does not support must still show.
+    assert grounding_cohort(
+        "Raw milk", "cow milk (raw)", "Engineered > Food production > Dairy products > Raw milk"
+    ) == "narrowed"

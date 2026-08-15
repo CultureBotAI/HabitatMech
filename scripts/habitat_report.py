@@ -111,6 +111,17 @@ GROUNDING_COHORTS = {
     "disjoint": "no shared word — matched on a synonym, across domains",
 }
 GROUNDING_RISK = ("disjoint", "narrowed")
+
+# Head nouns an ontology adds as a naming convention rather than as a claim:
+# "Laboratory" -> "laboratory facility", "Volcanic" -> "volcanic feature",
+# "Rumen mucosa" -> "mucosa of rumen". They narrow nothing.
+_GENERIC_HEADS = {
+    "anatomical", "area", "biome", "body", "device", "ecosystem", "environment",
+    "facility", "feature", "gland", "material", "network", "of", "or", "organ",
+    "pair",
+    "part", "piece", "procedure", "product", "region", "segment", "sheet",
+    "structure", "system", "type", "whole", "zone",
+}
 _CURIE = re.compile(r"^[A-Za-z][A-Za-z0-9._-]*:[A-Za-z0-9._-]+$")
 
 
@@ -126,7 +137,7 @@ def _stems(text: str) -> set[str]:
     return {w[:-1] if len(w) > 3 and w.endswith("s") else w for w in _words(text)}
 
 
-def grounding_cohort(source_label: str, record_label: str) -> str:
+def grounding_cohort(source_label: str, record_label: str, source_path: str = "") -> str:
     # PREGO nodes carry no label of their own, so the attestation repeats the
     # CURIE. Comparing a CURIE to a label is meaningless and always "disjoint".
     if _CURIE.match(source_label.strip()):
@@ -137,7 +148,19 @@ def grounding_cohort(source_label: str, record_label: str) -> str:
     if label_cohort(source_label, record_label) == "identical":
         return "same"
     if source_words < record_words:
-        return "narrowed"
+        # The added words are only a claim if the source did not already carry
+        # them. GOLD's path usually does: "Sediment" grounded to "marine
+        # sediment" looks like an over-claim until you see the path is
+        # Environmental > Aquatic > Marine > Sediment. Checking that is what
+        # separates a real over-narrowing from the seeder correctly using the
+        # context it was given (#67).
+        #
+        # It compares stems, so a path word and a label word that mean the same
+        # thing still read as an addition: GOLD's "... > Heart > Septum" grounded
+        # to "cardiac septum" is correct and still flagged. That is the right way
+        # round for a screen — it over-reports rather than hiding a real claim.
+        claimed = _stems(source_path) | _GENERIC_HEADS
+        return "same" if (record_words - source_words) <= claimed else "narrowed"
     if record_words < source_words:
         return "dropped"
     if not source_words & record_words:
@@ -440,7 +463,8 @@ def main(argv: list[str] | None = None) -> int:
             continue  # minted: nothing was claimed, so nothing to check
         for attestation in doc.get("source_attestations") or []:
             source_label = attestation.get("source_label") or ""
-            cohort = grounding_cohort(source_label, doc.get("label", ""))
+            cohort = grounding_cohort(
+                source_label, doc.get("label", ""), attestation.get("source_path") or "")
             grounding_counts[cohort] += 1
             if cohort in GROUNDING_RISK and doc.get("mapping_status") != "REVIEWED":
                 grounding_backlog.append((
