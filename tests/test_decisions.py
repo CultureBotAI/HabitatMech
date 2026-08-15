@@ -318,3 +318,54 @@ def test_the_recorded_sample_is_the_one_the_sampler_draws(repo_root):
         f"{len(on_file)} records; selection is not stable under corpus change"
     )
     assert all(r["verdict"] for r in rows), "recorded sample has unjudged rows"
+
+
+def test_curation_notes_do_not_cite_evidence_that_does_not_exist(repo_root, raw_tsv):
+    """`object_id` and `object_label` are verified; `notes` are prose and were
+    verified by nothing — yet they are the only record of WHY a decision was
+    made, and they are most of what an LLM-assisted pass produces. A
+    plausible-sounding citation is as hard to spot as a plausible-looking CURIE
+    was before #39 (#51).
+
+    Three claims a note can make that are checkable against the repo:
+    a GOLD path, a term id, and a label quoted next to that id.
+    """
+    import csv
+    import re
+    import sys
+
+    sys.path.insert(0, str(repo_root / "scripts"))
+    from seed_from_sources import mint
+
+    paths = {
+        mint("GOLD", r["canonical_path"]): r["canonical_path"]
+        for r in raw_tsv("gold_ecosystem_paths.tsv")
+    }
+    labels = {r["term_id"]: r["label"] for r in raw_tsv("ontology_terms.tsv")}
+    curie = re.compile(r"\b((?:[A-Z][A-Za-z]{1,9}|mesh):(?:C\d+|D\d+|\d{4,}))\b")
+
+    invented, wrong_path, wrong_label = [], [], []
+    with (repo_root / "curation" / "decisions.tsv").open(newline="", encoding="utf-8") as fh:
+        for row in csv.DictReader(fh, delimiter="\t"):
+            note = row["notes"] or ""
+
+            claimed = re.search(r"\bPath:\s*(.+?)\s*$", note)
+            actual = paths.get(row["identifier"])
+            if claimed and actual:
+                said = claimed.group(1).strip()
+                # Either direction is fine: the worklist truncates a long path
+                # for display, and a note may continue with prose after it.
+                if not (actual.startswith(said) or said.startswith(actual)):
+                    wrong_path.append((row["identifier"], said[:60], actual[:60]))
+
+            for found in curie.findall(note):
+                if found not in labels:
+                    invented.append((row["identifier"], found))
+                    continue
+                quoted = re.search(re.escape(found) + r"\s+'([^']{2,80})'", note)
+                if quoted and quoted.group(1).strip().lower() != labels[found].strip().lower():
+                    wrong_label.append((row["identifier"], found, quoted.group(1)))
+
+    assert not invented, f"notes citing a term not in the vendored slice: {invented[:5]}"
+    assert not wrong_path, f"notes citing the wrong GOLD path: {wrong_path[:5]}"
+    assert not wrong_label, f"notes quoting a label the term does not have: {wrong_label[:5]}"
