@@ -329,7 +329,6 @@ BTO:0002099	middle_ear
 BTO:0002100	outer_ear
 BTO:0002136	nb_4_cell
 BTO:0002168	juvenile
-BTO:0002173	tubercle
 BTO:0002196	a10_cell
 BTO:0002246	globus_pallidus
 BTO:0002254	vas_efferens
@@ -870,6 +869,7 @@ ENVO:01000922	animal_cage
 ENVO:01000925	abattoir
 ENVO:01000964	industrial_wastewater
 ENVO:01000965	constructed_swimming_pool
+ENVO:01000989	plumbing_fixture
 ENVO:01001001	plant_associated_environment
 ENVO:01001002	animal_associated_environment
 ENVO:01001004	groundwater__585f08d9
@@ -901,6 +901,7 @@ ENVO:01001893	salt_spring
 ENVO:01001894	alkaline_spring
 ENVO:01001898	acidic_spring
 ENVO:01003000	spacecraft
+ENVO:02000001	textile
 ENVO:02000008	cell_culture
 ENVO:02000049	coastal_water_body
 ENVO:02000059	surface_soil
@@ -988,13 +989,11 @@ FOODON:03412345	lichen
 FOODON:03412395	brown_algae
 FOODON:03412502	green_algae
 FOODON:03420295	fruit_seed_anatomical_part
-FOODON:03500045	food_grade_textile_surface
 FOODON:03530206	food_production
 NCIT:C15189	biopsy
 NCIT:C171504	tracheal_aspirate
 NCIT:C26707	bladder_stone
 NCIT:C50344	catheter
-NCIT:C77916	protozoa
 PO:0009005	root__722ce44f
 PO:0009010	seed
 PO:0025034	leaf__36ca5f79
@@ -1018,7 +1017,6 @@ UBERON:0000464	anatomical_space
 UBERON:0000473	testis
 UBERON:0000916	abdomen__17b71cfa
 UBERON:0000922	embryo__9a0301d2
-UBERON:0000945	stomach__fc24e41c
 UBERON:0000948	heart__6a45d7c5
 UBERON:0000965	lens_of_camera_type_eye
 UBERON:0000974	neck
@@ -1027,7 +1025,6 @@ UBERON:0000996	vagina__96a5db8d
 UBERON:0001000	vas_deferens
 UBERON:0001003	skin_epidermis
 UBERON:0001005	respiratory_airway
-UBERON:0001093	vertebral_bone_2
 UBERON:0001156	ascending_colon
 UBERON:0001157	transverse_colon
 UBERON:0001158	descending_colon
@@ -1066,11 +1063,9 @@ UBERON:0002356	perineum
 UBERON:0002367	prostate_gland__c7644935
 UBERON:0002385	muscle_tissue
 UBERON:0002402	pleural_cavity
-UBERON:0002416	integumental_system
 UBERON:0002530	gland__456b9722
 UBERON:0002535	gill__8d87864f
 UBERON:0002542	scale__9e0da5ec
-UBERON:0002960	central_oculomotor_nucleus
 UBERON:0003142	prepupa
 UBERON:0003143	pupa
 UBERON:0003216	hard_palate
@@ -1996,6 +1991,7 @@ habitatmech:GOLD.5eaebd18a7	biofilm__3aa782aa
 habitatmech:GOLD.5f05ab4527	benign_tumor_tissue
 habitatmech:GOLD.5f0e9e816a	bioremediation__2261f921
 habitatmech:GOLD.5f3cbd7563	partial_nitrification_anammox_pna
+habitatmech:GOLD.5f6ed7c41e	c3
 habitatmech:GOLD.5f9ddabb4f	filtered_water
 habitatmech:GOLD.5fb1b5daae	synovial_fluid
 habitatmech:GOLD.601cb8619f	sediment__5aa3b4f2
@@ -2011,6 +2007,7 @@ habitatmech:GOLD.61d10c8224	low_land_river_systems
 habitatmech:GOLD.61fa6361ee	soil__ecf8b046
 habitatmech:GOLD.61fa790833	tooth__93bee995
 habitatmech:GOLD.622b91396d	skeletal_muscle__273d137b
+habitatmech:GOLD.623ff8e506	gaster
 habitatmech:GOLD.6251bef319	cave_water__c4d82240
 habitatmech:GOLD.628407fcc7	abscess_pilonidal_sinus
 habitatmech:GOLD.62854e626f	leaves
@@ -2704,6 +2701,7 @@ habitatmech:GOLD.be4a7c95b6	crustaceans_pond
 habitatmech:GOLD.be8bc688c1	undefined_media
 habitatmech:GOLD.be8f52fddd	caulosphere
 habitatmech:GOLD.bea2a87b11	liver__9d9c21e5
+habitatmech:GOLD.bed15b95b1	surface__a1f5df1d
 habitatmech:GOLD.bef31e166b	evaporite
 habitatmech:GOLD.bef53c8bcc	microbial_mats__42c901d2
 habitatmech:GOLD.bf15464676	a_o_bioreactor
@@ -3046,6 +3044,7 @@ habitatmech:GOLD.e860ad4c9d	produced_water__4b7c7f10
 habitatmech:GOLD.e87336ed95	riparian_zone
 habitatmech:GOLD.e889967f4f	mammals
 habitatmech:GOLD.e898437067	carposphere
+habitatmech:GOLD.e89f860f72	c2
 habitatmech:GOLD.e8a2c6cf87	lung__d55ac9c2
 habitatmech:GOLD.e8d686e00d	paranasal_sinuses_frontal
 habitatmech:GOLD.e8d7f5a282	granular_sludge__16dfa645
@@ -3127,6 +3126,7 @@ habitatmech:GOLD.f34b5a3ef3	hela
 habitatmech:GOLD.f3560ae8d1	nasal_cavity__ee1870e8
 habitatmech:GOLD.f386e4764b	endocrine_system__a22b6ca6
 habitatmech:GOLD.f3b93cb911	sediment__69d4893f
+habitatmech:GOLD.f3d8c3793f	protozoa
 habitatmech:GOLD.f3dc60ff11	glacier_meltwater
 habitatmech:GOLD.f3de85dd9b	sbr_ebpr
 habitatmech:GOLD.f3f5ed6008	intestine__1e17aa3d
@@ -3229,6 +3229,7 @@ habitatmech:MADIN.81cb9e74cb	food
 habitatmech:MADIN.8eaf8ee93c	arid
 habitatmech:MADIN.d6e2979509	multicellular_organism
 habitatmech:MADIN.ece0235b87	soil_pollution
+habitatmech:PREGO.c312b0d6fc	tuberclar
 mesh:D000038	abscess__35b7623f
 mesh:D000076624	built_environment
 mesh:D062611	solid_waste

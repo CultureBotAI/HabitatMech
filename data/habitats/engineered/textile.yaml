@@ -1,0 +1,27 @@
+identifier: ENVO:02000001
+label: textile
+definition: A textile is a manufactured product comprised of a network of natural
+  or artificial fibers (often referred to as thread or yarn).
+definition_source: ENVO
+habitat_category: ENGINEERED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Fabric
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- ENVO:00003074
+- habitatmech:GOLD.7dd45e072b
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:8336
+  source_label: Fabric
+  source_path: Engineered > Industrial production > Engineered product > Material
+    > Fabric
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-15T00:10:17Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

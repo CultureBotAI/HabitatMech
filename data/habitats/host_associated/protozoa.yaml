@@ -1,16 +1,17 @@
-identifier: NCIT:C77916
+identifier: habitatmech:GOLD.f3d8c3793f
 label: Protozoa
 habitat_category: HOST_ASSOCIATED
-grounding_status: EXACT
-mapping_status: SEEDED
+grounding_status: NOT_APPLICABLE
+mapping_status: REVIEWED
 parent_habitats:
 - habitatmech:GOLD.d3b891e82e
+xrefs:
+- NCIT:C77916
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3389
   source_label: Protozoa
   source_path: Host-associated > Protozoa
-  mapping_predicate: skos:exactMatch
   assertion_count: 32
   assertion_unit: ORGANISM
   notes: 4 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
@@ -18,4 +19,4 @@ curation_history:
 - timestamp: '2026-08-15T00:10:17Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NOT_APPLICABLE.'

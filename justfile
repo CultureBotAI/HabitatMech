@@ -76,6 +76,12 @@ verify-corpus *args:
 render *args:
     uv run python scripts/render_pages.py {{args}}
 
+# Draw a reproducible sample of a grounding population, to estimate its error
+# rate when the slice is too big to read and too uniform to screen.
+# `just sample --grounding EXACT --size 40 --found 2`
+sample *args:
+    uv run python scripts/sample_groundings.py {{args}}
+
 # Rebuild data/habitats/RETIRED.tsv — the map from record URLs curation has
 # retired to the records that absorbed them. A record page is named after its
 # label and identifier, so improving either moves the URL; the map is what keeps
