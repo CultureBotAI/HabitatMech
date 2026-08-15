@@ -42,9 +42,9 @@ complex, low-pressure, and strongly gradient-forming.
 
 ## Current corpus
 
-Seeded from kg-microbe, 2026-08-14. **3,234 habitat records** from 3,502 source
-concepts (GOLD 2,562 · BacDive 162 · PREGO 719 · Madin 58), grounded in
-ENVO / UBERON / FOODON / BTO / PO.
+Seeded from kg-microbe, 2026-08-14. **3,234 habitat records** from 3,503 source
+concepts (GOLD 2,562 · PREGO 719 · BacDive 162 · Madin 58 · environment table
+42), grounded in ENVO / UBERON / FOODON / BTO / PO.
 
 | Category | Records | | Grounding | Records |
 |---|---:|---|---|---:|
