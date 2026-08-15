@@ -73,6 +73,12 @@ def slugify(text: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", (text or "").lower()).strip("-") or "unnamed"
 
 
+def _trim_category_prefix(path: str) -> str:
+    """Drop the leading path segment when it only restates the category."""
+    head, sep, tail = path.partition(" > ")
+    return tail if sep and tail else path
+
+
 def term_iri(curie: str) -> str | None:
     prefix, _, local = curie.partition(":")
     if prefix in OBO_PREFIXES:
@@ -207,6 +213,15 @@ def build(out_dir: Path) -> None:
                 "slug": slug_of[identifier],
                 "grounding": record["grounding"],
                 "path": (
+                    attestations[0].get("source_path")
+                    or attestations[0].get("source_label", "")
+                    if attestations else ""
+                ),
+                # Same path with the category prefix trimmed. Every row on a
+                # category page repeats it — "Host-associated > " 1643 times —
+                # and the page it is on already says which category this is
+                # (#34). The untrimmed `path` still feeds the search key.
+                "short_path": _trim_category_prefix(
                     attestations[0].get("source_path")
                     or attestations[0].get("source_label", "")
                     if attestations else ""

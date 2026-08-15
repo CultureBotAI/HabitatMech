@@ -6,17 +6,18 @@
 <p class="lede">{{ records|length }} habitat records. {{ description }}</p>
 <p class="meta">The source path is shown because a record's label is only the last
 step of it: "Cattle barn" under Air is the air sampled in a cattle barn, not the
-barn.</p>
+barn. The category prefix is trimmed off it, and the identifier lives on each
+record's own page — the link already carries it.</p>
 <input class="searchbox" id="q" type="search" placeholder="Filter these {{ records|length }} records…" aria-label="Filter records">
+<p class="meta" id="count" aria-live="polite"></p>
 <table id="tbl">
   <caption>{{ category }} habitats</caption>
-  <thead><tr><th scope="col">Habitat</th><th scope="col">Source path</th><th scope="col">Identifier</th><th scope="col">Grounding</th><th scope="col" class="num">Assertions</th><th scope="col">Sources</th></tr></thead>
+  <thead><tr><th scope="col">Habitat</th><th scope="col">Source path</th><th scope="col">Grounding</th><th scope="col" class="num">Assertions</th><th scope="col">Sources</th></tr></thead>
   <tbody>
   {% for r in records %}
   <tr>
     <td><a href="../habitats/{{ r.slug }}.html">{{ r.label }}</a></td>
-    <td class="meta">{{ r.path }}</td>
-    <td><code class="curie">{{ r.identifier }}</code></td>
+    <td class="meta">{{ r.short_path }}</td>
     <td><span class="pill{{ ' warn' if r.grounding in ('UNGROUNDED','NOT_APPLICABLE') else '' }}">{{ r.grounding }}</span></td>
     <td class="num">{{ r.assertions }}</td>
     <td class="meta">{{ r.sources|join(', ') }}</td>
@@ -25,12 +26,49 @@ barn.</p>
   </tbody>
 </table>
 <script>
-document.getElementById('q').addEventListener('input', function (e) {
-  var q = e.target.value.toLowerCase();
-  var rows = document.querySelectorAll('#tbl tbody tr');
-  for (var i = 0; i < rows.length; i++) {
-    rows[i].style.display = rows[i].textContent.toLowerCase().indexOf(q) === -1 ? 'none' : '';
+(function () {
+  var box = document.getElementById('q'), out = document.getElementById('count');
+  // Collected once. Re-running querySelectorAll per keystroke was a real part
+  // of the cost on the biggest category, before any matching happened at all.
+  var rows = [].slice.call(document.querySelectorAll('#tbl tbody tr'));
+  // Search keys are read from the DOM once, on the first keystroke, rather than
+  // shipped as an attribute per row: emitting them cost more bytes than the
+  // identifier column they replaced, and measuring said so. The read is O(rows)
+  // once; before, it was O(rows) per character.
+  var keys = null;
+  var hidden = rows.map(function () { return false; });
+  var pending = null;
+  function apply() {
+    pending = null;
+    if (keys === null) {
+      // The href is folded in so an identifier is still findable now the
+      // column has gone — the page name embeds the slugified CURIE.
+      keys = rows.map(function (r) {
+        var a = r.querySelector('a');
+        return (r.textContent + ' ' + (a ? a.getAttribute('href') : '')).toLowerCase();
+      });
+    }
+    var raw = box.value.toLowerCase();
+    // A pasted CURIE is matched in its slugified form too, since that is how
+    // the href spells it: "ENVO:00001998" -> "envo-00001998".
+    var slugged = raw.replace(/[^a-z0-9]+/g, '-');
+    var q = raw, shown = 0;
+    for (var i = 0; i < rows.length; i++) {
+      var hit = !q || keys[i].indexOf(q) !== -1 || keys[i].indexOf(slugged) !== -1;
+      // Only rows whose state actually changes are touched; a class toggle also
+      // batches better than writing style.display directly.
+      if (hit === hidden[i]) {
+        rows[i].classList.toggle('is-hidden', !hit);
+        hidden[i] = !hit;
+      }
+      if (hit) { shown++; }
+    }
+    out.textContent = q ? shown + ' of ' + rows.length + ' shown' : '';
   }
-});
+  box.addEventListener('input', function () {
+    // At most one pass per frame, however fast the typing.
+    if (pending === null) { pending = requestAnimationFrame(apply); }
+  });
+})();
 </script>
 {% endblock %}
