@@ -290,3 +290,31 @@ def test_a_category_override_actually_moves_the_record(repo_root, records):
                     ignored.append((key, overrides[key], doc.get("habitat_category")))
     assert seen, "no category override could be matched to a record at all"
     assert not ignored, f"category overrides that had no effect: {ignored[:5]}"
+
+
+def test_the_recorded_sample_is_the_one_the_sampler_draws(repo_root):
+    """A rate is a claim about a specific set of records. Selecting by position
+    made the draw a function of the whole population, so curating two records
+    inside one PR silently invalidated the sample that had just been judged
+    (#71). Selection by identifier hash survives the corpus moving; this pins
+    that the committed sample is still the one the script produces."""
+    import csv
+    import sys
+
+    sys.path.insert(0, str(repo_root / "scripts"))
+    from sample_groundings import DEFAULT_SEED, population, select
+
+    recorded = repo_root / "curation" / "samples" / f"exact-{DEFAULT_SEED}.tsv"
+    if not recorded.exists():
+        return
+    with recorded.open(newline="", encoding="utf-8") as fh:
+        rows = list(csv.DictReader(fh, delimiter="\t"))
+    drawn = {d["identifier"] for d in select(population("EXACT", False), len(rows), DEFAULT_SEED)}
+    on_file = {r["identifier"] for r in rows}
+    # Curating a sampled record removes it from the SEEDED population, which is
+    # expected and fine — what must not happen is the rest of the draw moving.
+    assert on_file - drawn == set() or len(on_file - drawn) < len(on_file) / 4, (
+        f"the recorded sample and a fresh draw diverge by {len(on_file - drawn)} of "
+        f"{len(on_file)} records; selection is not stable under corpus change"
+    )
+    assert all(r["verdict"] for r in rows), "recorded sample has unjudged rows"

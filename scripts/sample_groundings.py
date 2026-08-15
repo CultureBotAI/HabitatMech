@@ -20,7 +20,8 @@ Usage:
 from __future__ import annotations
 
 import argparse
-import random
+import csv
+import hashlib
 from pathlib import Path
 
 import yaml
@@ -31,6 +32,7 @@ HABITATS_DIR = REPO_ROOT / "data" / "habitats"
 # Fixed so the sample is a property of the corpus rather than of when it ran.
 # Changing it invalidates any error rate previously reported against it.
 DEFAULT_SEED = 20260814
+SAMPLES_DIR = REPO_ROOT / "curation" / "samples"
 
 
 def population(grounding: str, reviewed: bool) -> list[dict]:
@@ -43,6 +45,26 @@ def population(grounding: str, reviewed: bool) -> list[dict]:
             continue
         found.append(doc)
     return found
+
+
+def select(pool: list[dict], size: int, seed: int) -> list[dict]:
+    """The `size` records with the lowest hash of (seed, identifier).
+
+    Selecting by position — which is what random.sample does — makes the draw a
+    function of the whole list, so removing one record permutes the entire
+    sample. The population here IS the curation backlog, so it shrinks every
+    time anyone acts on it: curating two records inside one PR moved it from 856
+    to 854 and silently invalidated the sample that had just been judged (#71).
+
+    Hashing the identifier instead gives the standard consistent-sampling
+    property — a record's membership depends only on that record, so the draw
+    survives the corpus changing around it.
+    """
+    keyed = sorted(
+        pool,
+        key=lambda d: hashlib.sha1(f"{seed}:{d['identifier']}".encode()).hexdigest(),
+    )
+    return keyed[:size]
 
 
 def wilson(hits: int, n: int) -> tuple[float, float]:
@@ -64,14 +86,16 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--seed", type=int, default=DEFAULT_SEED)
     parser.add_argument("--include-reviewed", action="store_true")
     parser.add_argument("--found", type=int, help="Defects found, to report a rate.")
+    parser.add_argument("--record", action="store_true",
+                        help="Write the drawn sample to curation/samples/ so the rate "
+                             "reported against it stays auditable.")
     args = parser.parse_args(argv)
 
     pool = population(args.grounding, args.include_reviewed)
     if not pool:
         raise SystemExit(f"no {args.grounding} records to sample")
     size = min(args.size, len(pool))
-    random.seed(args.seed)
-    sample = random.sample(pool, size)
+    sample = select(pool, size, args.seed)
 
     print(f"population: {len(pool)} {args.grounding} records "
           f"({'incl.' if args.include_reviewed else 'excl.'} reviewed)")
@@ -81,6 +105,18 @@ def main(argv: list[str] | None = None) -> int:
         print(f"{n:3d}. {attestation.get('source_label', '')[:24]:24s} -> "
               f"{doc.get('label', '')[:30]:30s} {doc['identifier'][:20]:20s} "
               f"{(attestation.get('source_path') or '')[:44]}")
+
+    if args.record:
+        SAMPLES_DIR.mkdir(parents=True, exist_ok=True)
+        out = SAMPLES_DIR / f"{args.grounding.lower()}-{args.seed}.tsv"
+        with out.open("w", newline="", encoding="utf-8") as fh:
+            writer = csv.writer(fh, delimiter="\t", lineterminator="\n")
+            writer.writerow(["identifier", "label", "source_label", "source_path", "verdict"])
+            for doc in sorted(sample, key=lambda d: d["identifier"]):
+                a = (doc.get("source_attestations") or [{}])[0]
+                writer.writerow([doc["identifier"], doc.get("label", ""),
+                                 a.get("source_label", ""), a.get("source_path", ""), ""])
+        print(f"\nwrote {out.relative_to(REPO_ROOT)} — fill in `verdict` per row")
 
     if args.found is not None:
         low, high = wilson(args.found, size)
