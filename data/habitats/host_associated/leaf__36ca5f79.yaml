@@ -32,6 +32,8 @@ source_attestations:
   mapping_predicate: skos:broadMatch
   assertion_count: 500
   assertion_unit: STRAIN
+  notes: kg-microbe's isolation-source mapping table has a row for this source with
+    no ontology target; treated as ungrounded rather than re-grounded by lexical match.
 - source: ENVIRONMENTS_TABLE
   source_id: host_plant_leaf-associated
   source_label: host_plant_leaf-associated

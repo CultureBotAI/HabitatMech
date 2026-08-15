@@ -19,6 +19,8 @@ source_attestations:
   mapping_predicate: skos:closeMatch
   assertion_count: 425
   assertion_unit: STRAIN
+  notes: kg-microbe's isolation-source mapping table has a row for this source with
+    no ontology target; treated as ungrounded rather than re-grounded by lexical match.
 - source: PREGO
   source_id: BTO:0005516
   source_label: wood

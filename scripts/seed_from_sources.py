@@ -807,13 +807,18 @@ def ingest_bacdive(
         if strains:
             attestation["assertion_count"] = strains
             attestation["assertion_unit"] = "STRAIN"
-        if res.route == "bacdive_declined_upstream":
+        # Matched on the route's SUFFIX: apply_decision wraps it when a curator
+        # acts, so exact equality meant a reviewed record silently explained
+        # LESS than an unreviewed one — 81 records lost the note saying where
+        # their xref came from, or that upstream deliberately declined to ground
+        # them. Both notes describe the data, which curation does not change (#80).
+        if res.route.endswith("bacdive_declined_upstream"):
             attestation["notes"] = (
                 "kg-microbe's isolation-source mapping table has a row for this "
                 "source with no ontology target; treated as ungrounded rather "
                 "than re-grounded by lexical match."
             )
-        elif res.route == "bacdive_non_habitat_target":
+        elif res.route.endswith("bacdive_non_habitat_target"):
             attestation["notes"] = (
                 "Upstream mapping targets a non-habitat ontology "
                 f"({', '.join(res.extra_xrefs)}); kept as an xref."

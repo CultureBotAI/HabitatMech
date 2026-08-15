@@ -23,6 +23,8 @@ source_attestations:
   mapping_predicate: skos:broadMatch
   assertion_count: 242
   assertion_unit: STRAIN
+  notes: kg-microbe's isolation-source mapping table has a row for this source with
+    no ontology target; treated as ungrounded rather than re-grounded by lexical match.
 - source: GOLD
   source_id: gold.ecosystem:3504
   source_label: Fermented beverages
