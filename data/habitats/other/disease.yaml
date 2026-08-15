@@ -9,6 +9,8 @@ source_attestations:
   source_label: Disease
   assertion_count: 1799
   assertion_unit: STRAIN
+  notes: kg-microbe's isolation-source mapping table has a row for this source with
+    no ontology target; treated as ungrounded rather than re-grounded by lexical match.
 characteristic_taxa:
 - taxon_id: NCBITaxon:562
   source: BACDIVE

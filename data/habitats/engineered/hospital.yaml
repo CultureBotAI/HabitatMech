@@ -26,6 +26,8 @@ source_attestations:
   mapping_predicate: skos:narrowMatch
   assertion_count: 438
   assertion_unit: STRAIN
+  notes: kg-microbe's isolation-source mapping table has a row for this source with
+    no ontology target; treated as ungrounded rather than re-grounded by lexical match.
 - source: GOLD
   source_id: gold.ecosystem:4492
   source_label: Hospital
