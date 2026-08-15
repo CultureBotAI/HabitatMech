@@ -362,7 +362,12 @@ def test_curation_notes_do_not_cite_evidence_that_does_not_exist(repo_root, raw_
                 if found not in labels:
                     invented.append((row["identifier"], found))
                     continue
-                quoted = re.search(re.escape(found) + r"\s+'([^']{2,80})'", note)
+                # Either quote character: one note uses double quotes, and a
+                # form the check does not recognise is a claim nobody verifies,
+                # which is the failure this whole test is about (#78).
+                quoted = re.search(
+                    re.escape(found) + r"""\s+['"]([^'"]{2,80})['"]""", note
+                )
                 if quoted and quoted.group(1).strip().lower() != labels[found].strip().lower():
                     wrong_label.append((row["identifier"], found, quoted.group(1)))
 
