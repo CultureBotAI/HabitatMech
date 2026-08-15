@@ -210,7 +210,7 @@ def test_category_pages_are_paginated_and_the_index_covers_the_whole_category(re
             f"{index.name} holds {len(entries)} records but the page claims {total}; "
             "the filter would silently search a subset"
         )
-        for label, slug, *_ in entries[:50]:
+        for _label, slug, *_ in entries[:50]:
             assert (repo_root / "pages" / "habitats" / f"{slug}.html").exists(), (
                 f"{index.name} points at a record page that does not exist: {slug}"
             )
