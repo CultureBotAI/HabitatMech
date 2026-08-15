@@ -1,20 +1,26 @@
-identifier: habitatmech:GOLD.5e0fdcfc35
-label: Periodontal pockets
+identifier: mesh:D010514
+label: Periodontal Pocket
 habitat_category: HOST_ASSOCIATED
-grounding_status: UNGROUNDED
-mapping_status: SEEDED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Periodontal pockets
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
 parent_habitats:
 - habitatmech:GOLD.99880772e1
+- mesh:D010518
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3908
   source_label: Periodontal pockets
   source_path: 'Host-associated > Mammals: Human > Digestive system > Oral cavity
     > Periodontal pockets'
+  mapping_predicate: skos:exactMatch
   assertion_count: 21
   assertion_unit: ORGANISM
 curation_history:
 - timestamp: '2026-08-15T05:30:07Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

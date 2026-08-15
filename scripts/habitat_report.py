@@ -264,41 +264,63 @@ def _stale_class_sweeps(class_swept: set[str], records: list[tuple[Path, dict]])
     """Class-swept concepts the growing slice has since given a match.
 
     A class-level sweep asserts a NEGATIVE — "no term in the vendored slice
-    matched this label by any lexical route" — and that claim decays as the
-    slice grows. Vendoring PO (#10) and then the referenced ancestry (#46) made
-    it false for 20 of the 933 swept concepts, and nothing re-checked it: the
-    decision still reads as a considered judgement while its stated reason has
-    stopped being true (#12).
+    matched this label by exact, variant or composed search". That is a claim
+    about the SLICE, not the concept, and it decays as the slice grows.
+    Vendoring PO (#10) and the referenced ancestry (#46) falsified it for 20 of
+    933 swept concepts while each still read as a considered judgement (#12).
+
+    Re-tested with `propose_decisions.classify` — the same function the sweep
+    used, so the claim is checked by the code that made it rather than by a
+    reimplementation that could drift from it (#84). A concept the sweep put in
+    the "none" tier that no longer lands there is a stale decision.
     """
-    raw = REPO_ROOT / "data" / "raw" / "ontology_terms.tsv"
-    if not raw.exists() or not class_swept:
+    if not class_swept:
         return []
-    by_label: dict[str, str] = {}
-    by_synonym: dict[str, str] = {}
-    with raw.open(newline="", encoding="utf-8") as fh:
-        for row in csv.DictReader(fh, delimiter="\t"):
-            key = norm_label(row["label"])
-            if key:
-                by_label.setdefault(key, row["term_id"])
-            for synonym in (row["synonyms"] or "").split("|"):
-                skey = norm_label(synonym)
-                if skey:
-                    by_synonym.setdefault(skey, row["term_id"])
+    try:
+        from propose_decisions import PRIORITY, classify
+        from seed_from_sources import OntologyIndex, read_tsv
+    except ImportError:
+        return []
+    ontology = OntologyIndex(read_tsv("ontology_terms.tsv"), read_tsv("ontology_subclass_edges.tsv"))
+    # `classify` supplies the variant logic — plural, slash, parenthetical,
+    # colon — which is the part worth reusing. Its index is built here rather
+    # than by propose_decisions.build_index, which filters to the five grounding
+    # ontologies: that is right when proposing a grounding and exactly wrong
+    # here, because the staleness this looks for was CAUSED by vendoring NCIT,
+    # mesh and CHEBI. Using the filtered index found 0 of the 20 known cases.
+    by_label: dict[str, list[tuple[str, str]]] = defaultdict(list)
+    by_synonym: dict[str, list[tuple[str, str]]] = defaultdict(list)
+    for term_id, term in ontology.terms.items():
+        key = norm_label(term["label"])
+        if key:
+            by_label[key].append((term_id, term["label"]))
+        for synonym in (term.get("synonyms") or "").split("|"):
+            skey = norm_label(synonym)
+            if skey:
+                by_synonym[skey].append((term_id, term["label"]))
+    # Same ordering build_index applies, with the non-grounding ontologies
+    # falling to the end rather than being dropped: an NCIT or mesh match still
+    # counts as staleness, but where an ENVO term also matches, that is the one
+    # to name. Without this the check reported BTO:0003809 for "soil" instead of
+    # ENVO:00001998 — detection was right and the example was misleading (#86).
+    for index in (by_label, by_synonym):
+        for key in index:
+            index[key].sort(key=lambda t: (PRIORITY.get(t[0].split(":", 1)[0], 9), t[0]))
     out = []
     for _, doc in records:
         if doc.get("identifier") not in class_swept:
             continue
         for attestation in doc.get("source_attestations") or []:
-            key = norm_label(attestation.get("source_label") or "")
-            found = by_label.get(key) or by_synonym.get(key)
-            if not found:
+            label = attestation.get("source_label") or ""
+            if not label:
                 continue
-            assertions = sum(
-                a.get("assertion_count") or 0 for a in doc.get("source_attestations") or []
-            )
-            out.append((assertions, attestation.get("source_label", ""), found,
-                        doc["identifier"]))
-            break
+            tier, candidates, _ = classify(label, by_label, by_synonym)
+            if tier != "none" and candidates:
+                assertions = sum(
+                    a.get("assertion_count") or 0 for a in doc.get("source_attestations") or []
+                )
+                out.append((assertions, label, candidates[0][0], doc["identifier"]))
+                break
     return sorted(out, reverse=True)
 
 
@@ -582,15 +604,13 @@ def main(argv: list[str] | None = None) -> int:
 
     stale = _stale_class_sweeps(class_swept_ids, records)
     print(f"\n=== {len(stale)} class-level sweep(s) the slice has since contradicted ===")
-    print("  (a sweep claims no term matched by exact, variant, composed OR substring")
-    print("   search; this re-tests the exact label-or-synonym part only, which is the")
-    print("   cheapest and strongest of them. Vendoring an ontology makes that negative")
-    print("   stale and nothing else re-checks it — but a clean line here is not the")
-    print("   whole claim re-verified. See #84.)")
+    print("  (re-tested with propose_decisions.classify — the same function the sweep")
+    print("   used — so the claim is checked by the code that made it. Vendoring an")
+    print("   ontology makes that negative stale and nothing else re-checks it.)")
     for assertions, label, found, identifier in stale[: args.ungrounded_top or None]:
         print(f"  {assertions:8d}  {label[:28]:28s} -> {found:18s} {identifier}")
     if not stale:
-        print("  none — no sweep is contradicted by an exact label or synonym match")
+        print("  none — every sweep still lands in the tier it claimed")
 
     organism = _organism_identities(records)
     print(f"\n=== {len(organism)} unreviewed record(s) whose identity is an organism ===")
