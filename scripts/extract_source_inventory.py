@@ -1158,6 +1158,7 @@ def build_manifest(
     hash_inputs: bool,
     gold_truncated_paths: int = 0,
     mappings_override: Path | None = None,
+    mappings_source: str | None = None,
 ) -> str:
     lines = [
         "# Provenance for the inventories in data/raw/.",
@@ -1168,8 +1169,10 @@ def build_manifest(
         # Recording the commit while having read the mapping table from
         # somewhere else would be a provenance lie, and provenance is this
         # file's entire job (#72).
-        *([f"mappings_read_from: {mappings_override}",
-           "mappings_note: pinned separately; kg_microbe_source describes every OTHER input"]
+        *([f"mappings_source: {mappings_source or 'unrecorded — pass --mappings-from'}",
+           f"mappings_staged_at: {mappings_override}",
+           "mappings_note: pinned separately, so kg_microbe_source describes every OTHER "
+           "input. mappings_staged_at is a local path; the sha256 below identifies the bytes."]
           if mappings_override else []),
         # A non-zero count means GOLD's parent chain contained a cycle and some
         # canonical paths are truncated — see the extractor's WARNING output.
@@ -1233,6 +1236,11 @@ def main(argv: list[str] | None = None) -> int:
         "--mappings", type=Path,
         help="Read the isolation-source mapping table from here instead of the "
              "checkout, to pin it while the checkout sits on another branch (#72).")
+    parser.add_argument(
+        "--mappings-from",
+        help="Where the pinned table came from, e.g. kg-microbe@bfd350e:mappings/... "
+             "Recorded in the manifest, because the local path it was staged at is "
+             "not something anyone else can look up (#74).")
     parser.add_argument(
         "--top-taxa",
         type=int,
@@ -1530,6 +1538,7 @@ def main(argv: list[str] | None = None) -> int:
         hash_inputs=not args.no_hash,
         gold_truncated_paths=len(gold_truncated),
         mappings_override=args.mappings,
+        mappings_source=args.mappings_from,
     )
     (args.out / "MANIFEST.yaml").write_text(manifest, encoding="utf-8")
     print(f"wrote {args.out / 'MANIFEST.yaml'}")

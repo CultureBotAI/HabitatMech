@@ -1,10 +1,11 @@
 # Provenance for the inventories in data/raw/.
 # Regenerate with: just extract-inventory
 # Emitted by scripts/extract_source_inventory.py — do not hand-edit.
-extracted_at: '2026-08-15T04:56:29Z'
+extracted_at: '2026-08-15T05:06:21Z'
 kg_microbe_source: kg-microbe@d65c577a5296229c2ca887a92979e21e253bcf73
-mappings_read_from: build/pinned/isolation_source_to_ontology.tsv
-mappings_note: pinned separately; kg_microbe_source describes every OTHER input
+mappings_source: kg-microbe@bfd350e:mappings/isolation_source_to_ontology.tsv
+mappings_staged_at: build/pinned/isolation_source_to_ontology.tsv
+mappings_note: pinned separately, so kg_microbe_source describes every OTHER input. mappings_staged_at is a local path; the sha256 below identifies the bytes.
 gold_truncated_paths: 0
 inputs:
   - path: data/raw/gold/GOLD_nodes.tsv
