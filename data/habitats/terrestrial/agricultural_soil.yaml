@@ -4,7 +4,7 @@ definition: Soil which is part of an ecosystem used for agricultural activities.
 definition_source: ENVO
 habitat_category: TERRESTRIAL
 grounding_status: EXACT
-mapping_status: REVIEWED
+mapping_status: SEEDED
 synonyms:
 - synonym_text: agricultural soils
   synonym_type: RELATED_SYNONYM
@@ -24,6 +24,11 @@ source_attestations:
   mapping_predicate: skos:exactMatch
   assertion_count: 77
   assertion_unit: ORGANISM
+- source: MADIN
+  source_id: ENVO:00002259
+  source_label: agricultural soil
+  assertion_count: 117
+  assertion_unit: TAXON
 - source: PREGO
   source_id: ENVO:00002259
   source_label: agricultural soil
@@ -63,6 +68,90 @@ environmental_parameters:
   qualitative_value: occasionally dry
   source: kg-microbe environments.csv (soil_agricultural)
 characteristic_taxa:
+- taxon_id: NCBITaxon:1911
+  source: MADIN
+  taxon_label: actinomyces_griseus
+  candidate_pool: 117
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:205922
+  source: MADIN
+  taxon_label: Pseudomonas fluorescens Pf0-1
+  candidate_pool: 117
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:234267
+  source: MADIN
+  taxon_label: Candidatus Solibacter usitatus Ellin6076
+  candidate_pool: 117
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:271848
+  source: MADIN
+  taxon_label: Burkholderia thailandensis E264
+  candidate_pool: 117
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:304371
+  source: MADIN
+  taxon_label: Methanocella paludicola SANAE
+  candidate_pool: 117
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:331272
+  source: MADIN
+  taxon_label: Burkholderia cenocepacia HI2424
+  candidate_pool: 117
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:406425
+  source: MADIN
+  taxon_label: Burkholderia cenocepacia MC0-3
+  candidate_pool: 117
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:436717
+  source: MADIN
+  taxon_label: Acinetobacter oleivorans DR1
+  candidate_pool: 117
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:479432
+  source: MADIN
+  taxon_label: Streptosporangium roseum DSM 43021
+  candidate_pool: 117
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:498211
+  source: MADIN
+  taxon_label: Cellvibrio japonicus Ueda107
+  candidate_pool: 117
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:527028
+  source: MADIN
+  taxon_label: Bacillus thuringiensis sv. pulsiensis BGSC 4CC1
+  candidate_pool: 117
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:658172
+  source: MADIN
+  taxon_label: Candidatus Liberibacter solanacearum CLso-ZC1
+  candidate_pool: 117
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:694427
+  source: MADIN
+  taxon_label: Paludibacter propionicigenes WB4
+  candidate_pool: 117
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:698936
+  source: MADIN
+  taxon_label: Sinorhizobium meliloti BL225C
+  candidate_pool: 117
+  corroborated_by:
+  - PREGO
 - taxon_id: NCBITaxon:53254
   source: PREGO
   taxon_label: Allobosea thiooxidans
@@ -213,9 +302,53 @@ characteristic_taxa:
   score: 2.37787
   rank: 25
   candidate_pool: 1767
+- taxon_id: NCBITaxon:1001585
+  source: MADIN
+  taxon_label: Pseudomonas mendocina NK-01
+  candidate_pool: 117
+- taxon_id: NCBITaxon:103796
+  source: MADIN
+  taxon_label: Pseudomonas syringae pv. actinidiae
+  candidate_pool: 117
+- taxon_id: NCBITaxon:1040985
+  source: MADIN
+  taxon_label: Mesorhizobium sp. WSM2561
+  candidate_pool: 117
+- taxon_id: NCBITaxon:1041146
+  source: MADIN
+  taxon_label: Rhizobium sullae WSM1592
+  candidate_pool: 117
+- taxon_id: NCBITaxon:1041930
+  source: MADIN
+  taxon_label: Methanocella conradii HZ254
+  candidate_pool: 117
+- taxon_id: NCBITaxon:1080179
+  source: MADIN
+  taxon_label: Burkholderia sp. UYPR1.413
+  candidate_pool: 117
+- taxon_id: NCBITaxon:109214
+  source: MADIN
+  taxon_label: xanthomonas_cynarae
+  candidate_pool: 117
+- taxon_id: NCBITaxon:1097668
+  source: MADIN
+  taxon_label: Burkholderia sp. YI23
+  candidate_pool: 117
+- taxon_id: NCBITaxon:1120985
+  source: MADIN
+  taxon_label: Anaeroarcus burkinensis DSM 6283
+  candidate_pool: 117
+- taxon_id: NCBITaxon:1121015
+  source: MADIN
+  taxon_label: Arenimonas oryziterrae YC6267
+  candidate_pool: 117
+- taxon_id: NCBITaxon:1122158
+  source: MADIN
+  taxon_label: Leeia oryzae DSM 17879
+  candidate_pool: 117
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-15T00:10:17Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD,
-    PREGO. Grounding: EXACT.'
+    MADIN, PREGO. Grounding: EXACT.'

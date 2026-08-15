@@ -16,6 +16,11 @@ source_attestations:
   source_id: host_animal_endotherm_surface
   source_label: host_animal_endotherm_surface
   notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: MADIN
+  source_id: ENVO:2100003
+  source_label: skin environment
+  assertion_count: 372
+  assertion_unit: TAXON
 - source: PREGO
   source_id: ENVO:2100003
   source_label: skin environment
@@ -43,6 +48,22 @@ environmental_parameters:
   qualitative_value: occasionally wet
   source: kg-microbe environments.csv (host_animal_endotherm_surface)
 characteristic_taxa:
+- taxon_id: NCBITaxon:312286
+  source: PREGO
+  taxon_label: Trueperella bonasi
+  score: 4.0
+  rank: 18
+  candidate_pool: 39
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:322095
+  source: PREGO
+  taxon_label: Porphyromonas somerae
+  score: 4.0
+  rank: 19
+  candidate_pool: 39
+  corroborated_by:
+  - MADIN
 - taxon_id: NCBITaxon:1260
   source: PREGO
   taxon_label: Finegoldia magna
@@ -144,18 +165,6 @@ characteristic_taxa:
   score: 4.0
   rank: 17
   candidate_pool: 39
-- taxon_id: NCBITaxon:312286
-  source: PREGO
-  taxon_label: Trueperella bonasi
-  score: 4.0
-  rank: 18
-  candidate_pool: 39
-- taxon_id: NCBITaxon:322095
-  source: PREGO
-  taxon_label: Porphyromonas somerae
-  score: 4.0
-  rank: 19
-  candidate_pool: 39
 - taxon_id: NCBITaxon:33034
   source: PREGO
   taxon_label: Anaerococcus prevotii
@@ -190,9 +199,101 @@ characteristic_taxa:
   score: 4.0
   rank: 25
   candidate_pool: 39
+- taxon_id: NCBITaxon:1000590
+  source: MADIN
+  taxon_label: Staphylococcus epidermidis 14.1.R1.SE
+  candidate_pool: 372
+- taxon_id: NCBITaxon:1008454
+  source: MADIN
+  taxon_label: Staphylococcus epidermidis FS1
+  candidate_pool: 372
+- taxon_id: NCBITaxon:102148
+  source: MADIN
+  taxon_label: solobacterium_moorei
+  candidate_pool: 372
+- taxon_id: NCBITaxon:1030841
+  source: MADIN
+  taxon_label: Neisseria wadsworthii 9715
+  candidate_pool: 372
+- taxon_id: NCBITaxon:1049790
+  source: MADIN
+  taxon_label: Leptospira inadai sv. Lyme 10
+  candidate_pool: 372
+- taxon_id: NCBITaxon:1050174
+  source: MADIN
+  taxon_label: corynebacterium_epidermidicanis
+  candidate_pool: 372
+- taxon_id: NCBITaxon:1051006
+  source: MADIN
+  taxon_label: Propionibacterium acnes SK182B-JCVI
+  candidate_pool: 372
+- taxon_id: NCBITaxon:1056807
+  source: MADIN
+  taxon_label: morococcus_cerebrosus
+  candidate_pool: 372
+- taxon_id: NCBITaxon:1087453
+  source: MADIN
+  taxon_label: Corynebacterium pseudotuberculosis 42/02-A
+  candidate_pool: 372
+- taxon_id: NCBITaxon:1088875
+  source: MADIN
+  taxon_label: Francisella philomiragia FSC145
+  candidate_pool: 372
+- taxon_id: NCBITaxon:1089446
+  source: MADIN
+  taxon_label: Corynebacterium pseudotuberculosis 267
+  candidate_pool: 372
+- taxon_id: NCBITaxon:1091045
+  source: MADIN
+  taxon_label: Cutibacterium acnes subsp. defendens ATCC 11828
+  candidate_pool: 372
+- taxon_id: NCBITaxon:1115512
+  source: MADIN
+  taxon_label: Atlantibacter hermannii NBRC 105704
+  candidate_pool: 372
+- taxon_id: NCBITaxon:1120941
+  source: MADIN
+  taxon_label: Actinomyces dentalis DSM 19115
+  candidate_pool: 372
+- taxon_id: NCBITaxon:1120943
+  source: MADIN
+  taxon_label: Actinomyces gerencseriae DSM 6844
+  candidate_pool: 372
+- taxon_id: NCBITaxon:1120944
+  source: MADIN
+  taxon_label: Actinomyces israelii DSM 43320
+  candidate_pool: 372
+- taxon_id: NCBITaxon:1120946
+  source: MADIN
+  taxon_label: Actinomyces suimastitidis DSM 15538
+  candidate_pool: 372
+- taxon_id: NCBITaxon:1120957
+  source: MADIN
+  taxon_label: Aggregatibacter actinomycetemcomitans sv. C DSM 8324
+  candidate_pool: 372
+- taxon_id: NCBITaxon:1121100
+  source: MADIN
+  taxon_label: Bacteroides pyogenes DSM 20611
+  candidate_pool: 372
+- taxon_id: NCBITaxon:1121370
+  source: MADIN
+  taxon_label: Corynebacterium ulceribovis DSM 45146
+  candidate_pool: 372
+- taxon_id: NCBITaxon:1121387
+  source: MADIN
+  taxon_label: Dermatophilus congolensis DSM 44180
+  candidate_pool: 372
+- taxon_id: NCBITaxon:1121485
+  source: MADIN
+  taxon_label: Dysgonomonas capnocytophagoides DSM 22835
+  candidate_pool: 372
+- taxon_id: NCBITaxon:1121914
+  source: MADIN
+  taxon_label: Gemella cuniculi DSM 15828
+  candidate_pool: 372
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-15T00:10:17Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, PREGO.
-    Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, MADIN,
+    PREGO. Grounding: EXACT.'

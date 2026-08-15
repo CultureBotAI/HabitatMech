@@ -16,6 +16,11 @@ source_attestations:
   source_id: soil_grassland
   source_label: soil_grassland
   notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: MADIN
+  source_id: ENVO:00005750
+  source_label: grassland soil
+  assertion_count: 35
+  assertion_unit: TAXON
 - source: PREGO
   source_id: ENVO:00005750
   source_label: grassland soil
@@ -208,9 +213,109 @@ characteristic_taxa:
   score: 4.0
   rank: 25
   candidate_pool: 222
+- taxon_id: NCBITaxon:1257080
+  source: MADIN
+  taxon_label: Paenibacillus sp. PAMC 26794
+  candidate_pool: 35
+- taxon_id: NCBITaxon:1267547
+  source: MADIN
+  taxon_label: Bacillus subtilis MB732
+  candidate_pool: 35
+- taxon_id: NCBITaxon:1298856
+  source: MADIN
+  taxon_label: Sphingomonas sp. URHD0007
+  candidate_pool: 35
+- taxon_id: NCBITaxon:1298857
+  source: MADIN
+  taxon_label: Solirubrobacter sp. URHD0082
+  candidate_pool: 35
+- taxon_id: NCBITaxon:1298859
+  source: MADIN
+  taxon_label: Burkholderia sp. URHA0054
+  candidate_pool: 35
+- taxon_id: NCBITaxon:1298861
+  source: MADIN
+  taxon_label: Lysobacter sp. URHA0019
+  candidate_pool: 35
+- taxon_id: NCBITaxon:1298862
+  source: MADIN
+  taxon_label: Caulobacter sp. URHA0033
+  candidate_pool: 35
+- taxon_id: NCBITaxon:1298863
+  source: MADIN
+  taxon_label: Marmoricola sp. URHB0036
+  candidate_pool: 35
+- taxon_id: NCBITaxon:1298864
+  source: MADIN
+  taxon_label: Mycobacterium sp. URHD0025
+  candidate_pool: 35
+- taxon_id: NCBITaxon:1302620
+  source: MADIN
+  taxon_label: Cellulomonas sp. URHD0024
+  candidate_pool: 35
+- taxon_id: NCBITaxon:1338436
+  source: MADIN
+  taxon_label: sinomonas_humi
+  candidate_pool: 35
+- taxon_id: NCBITaxon:1380346
+  source: MADIN
+  taxon_label: Streptomyces sp. URHA0041
+  candidate_pool: 35
+- taxon_id: NCBITaxon:1380349
+  source: MADIN
+  taxon_label: Micromonosporaceae bacterium URHE0070
+  candidate_pool: 35
+- taxon_id: NCBITaxon:1380350
+  source: MADIN
+  taxon_label: Mesorhizobium sp. URHC0008
+  candidate_pool: 35
+- taxon_id: NCBITaxon:1380351
+  source: MADIN
+  taxon_label: Mesorhizobium sp. URHB0007
+  candidate_pool: 35
+- taxon_id: NCBITaxon:1380352
+  source: MADIN
+  taxon_label: Bradyrhizobium sp. URHA0013
+  candidate_pool: 35
+- taxon_id: NCBITaxon:1380353
+  source: MADIN
+  taxon_label: Geodermatophilaceae bacterium URHB0062
+  candidate_pool: 35
+- taxon_id: NCBITaxon:1380354
+  source: MADIN
+  taxon_label: Cellulomonas sp. URHE0023
+  candidate_pool: 35
+- taxon_id: NCBITaxon:1380355
+  source: MADIN
+  taxon_label: Bradyrhizobium sp. URHD0069
+  candidate_pool: 35
+- taxon_id: NCBITaxon:1380356
+  source: MADIN
+  taxon_label: Blastococcus sp. URHD0036
+  candidate_pool: 35
+- taxon_id: NCBITaxon:1380357
+  source: MADIN
+  taxon_label: Rhodospirillales bacterium URHD0017
+  candidate_pool: 35
+- taxon_id: NCBITaxon:1380385
+  source: MADIN
+  taxon_label: Variovorax sp. URHB0020
+  candidate_pool: 35
+- taxon_id: NCBITaxon:1380386
+  source: MADIN
+  taxon_label: Mycobacterium sp. URHB0044
+  candidate_pool: 35
+- taxon_id: NCBITaxon:1380388
+  source: MADIN
+  taxon_label: Nocardioides sp. URHA0032
+  candidate_pool: 35
+- taxon_id: NCBITaxon:1380389
+  source: MADIN
+  taxon_label: Sphingomonas sp. URHD0057
+  candidate_pool: 35
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-15T00:10:17Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, PREGO.
-    Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, MADIN,
+    PREGO. Grounding: EXACT.'

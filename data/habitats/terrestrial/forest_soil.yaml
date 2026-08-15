@@ -16,6 +16,11 @@ source_attestations:
   source_id: soil_forest
   source_label: soil_forest
   notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: MADIN
+  source_id: ENVO:00002261
+  source_label: forest soil
+  assertion_count: 67
+  assertion_unit: TAXON
 - source: PREGO
   source_id: ENVO:00002261
   source_label: forest soil
@@ -55,6 +60,178 @@ environmental_parameters:
   qualitative_value: occasionally dry
   source: kg-microbe environments.csv (soil_forest)
 characteristic_taxa:
+- taxon_id: NCBITaxon:1054862
+  source: PREGO
+  taxon_label: Streptomyces bottropensis ATCC 25435
+  score: 4.0
+  rank: 3
+  candidate_pool: 2139
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1078846
+  source: PREGO
+  taxon_label: Methylovulum miyakonense HT12
+  score: 4.0
+  rank: 5
+  candidate_pool: 2139
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1120934
+  source: PREGO
+  taxon_label: Actinokineospora enzanensis DSM 44649
+  score: 4.0
+  rank: 9
+  candidate_pool: 2139
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1120996
+  source: PREGO
+  taxon_label: Anaerosporobacter mobilis DSM 15930
+  score: 4.0
+  rank: 10
+  candidate_pool: 2139
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1120999
+  source: PREGO
+  taxon_label: Andreprevotia chitinilytica DSM 18519
+  score: 4.0
+  rank: 11
+  candidate_pool: 2139
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1121322
+  source: PREGO
+  taxon_label: Anaerocolumna jejuensis DSM 15929
+  score: 4.0
+  rank: 12
+  candidate_pool: 2139
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1121480
+  source: PREGO
+  taxon_label: Pseudoduganella violaceinigra DSM 15887
+  score: 4.0
+  rank: 13
+  candidate_pool: 2139
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1121946
+  source: PREGO
+  taxon_label: Hamadaea tsunoensis DSM 44101
+  score: 4.0
+  rank: 14
+  candidate_pool: 2139
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1168170
+  source: PREGO
+  taxon_label: Klebsiella oxytoca BRL6-2
+  score: 4.0
+  rank: 19
+  candidate_pool: 2139
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1298860
+  source: PREGO
+  taxon_label: Microbacterium sp. URHA0036
+  score: 4.0
+  rank: 24
+  candidate_pool: 2139
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1298868
+  source: PREGO
+  taxon_label: Flavobacterium sp. URHB0058
+  score: 4.0
+  rank: 25
+  candidate_pool: 2139
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1380348
+  source: MADIN
+  taxon_label: Acidobacteriaceae bacterium URHE0068
+  candidate_pool: 67
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1380394
+  source: MADIN
+  taxon_label: Rhodospirillales bacterium URHD0088
+  candidate_pool: 67
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1560005
+  source: MADIN
+  taxon_label: edaphobacter_dinghuensis
+  candidate_pool: 67
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:258050
+  source: MADIN
+  taxon_label: kitasatospora_gansuensis
+  candidate_pool: 67
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:29581
+  source: MADIN
+  taxon_label: chromobacterium_amethystinum
+  candidate_pool: 67
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:357809
+  source: MADIN
+  taxon_label: Lachnoclostridium phytofermentans ISDg
+  candidate_pool: 67
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:395965
+  source: MADIN
+  taxon_label: Methylocella silvestris BL2
+  candidate_pool: 67
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:39691
+  source: MADIN
+  taxon_label: mycobacterium_moriokaense
+  candidate_pool: 67
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:446787
+  source: MADIN
+  taxon_label: actinopolymorpha_rutila
+  candidate_pool: 67
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:469383
+  source: MADIN
+  taxon_label: Conexibacter woesei DSM 14684
+  candidate_pool: 67
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:479430
+  source: MADIN
+  taxon_label: Actinospica robiniae DSM 44927
+  candidate_pool: 67
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:479433
+  source: MADIN
+  taxon_label: Catenulispora acidiphila DSM 44928
+  candidate_pool: 67
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:482957
+  source: MADIN
+  taxon_label: burkholderia_lata
+  candidate_pool: 67
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:485918
+  source: MADIN
+  taxon_label: Chitinophaga pinensis DSM 2588
+  candidate_pool: 67
+  corroborated_by:
+  - PREGO
 - taxon_id: NCBITaxon:104176
   source: PREGO
   taxon_label: Oscillochloris trichoides
@@ -67,23 +244,11 @@ characteristic_taxa:
   score: 4.0
   rank: 2
   candidate_pool: 2139
-- taxon_id: NCBITaxon:1054862
-  source: PREGO
-  taxon_label: Streptomyces bottropensis ATCC 25435
-  score: 4.0
-  rank: 3
-  candidate_pool: 2139
 - taxon_id: NCBITaxon:106592
   source: PREGO
   taxon_label: Ensifer adhaerens
   score: 4.0
   rank: 4
-  candidate_pool: 2139
-- taxon_id: NCBITaxon:1078846
-  source: PREGO
-  taxon_label: Methylovulum miyakonense HT12
-  score: 4.0
-  rank: 5
   candidate_pool: 2139
 - taxon_id: NCBITaxon:108560
   source: PREGO
@@ -102,42 +267,6 @@ characteristic_taxa:
   taxon_label: Ignatzschineria larvae
   score: 4.0
   rank: 8
-  candidate_pool: 2139
-- taxon_id: NCBITaxon:1120934
-  source: PREGO
-  taxon_label: Actinokineospora enzanensis DSM 44649
-  score: 4.0
-  rank: 9
-  candidate_pool: 2139
-- taxon_id: NCBITaxon:1120996
-  source: PREGO
-  taxon_label: Anaerosporobacter mobilis DSM 15930
-  score: 4.0
-  rank: 10
-  candidate_pool: 2139
-- taxon_id: NCBITaxon:1120999
-  source: PREGO
-  taxon_label: Andreprevotia chitinilytica DSM 18519
-  score: 4.0
-  rank: 11
-  candidate_pool: 2139
-- taxon_id: NCBITaxon:1121322
-  source: PREGO
-  taxon_label: Anaerocolumna jejuensis DSM 15929
-  score: 4.0
-  rank: 12
-  candidate_pool: 2139
-- taxon_id: NCBITaxon:1121480
-  source: PREGO
-  taxon_label: Pseudoduganella violaceinigra DSM 15887
-  score: 4.0
-  rank: 13
-  candidate_pool: 2139
-- taxon_id: NCBITaxon:1121946
-  source: PREGO
-  taxon_label: Hamadaea tsunoensis DSM 44101
-  score: 4.0
-  rank: 14
   candidate_pool: 2139
 - taxon_id: NCBITaxon:114628
   source: PREGO
@@ -163,12 +292,6 @@ characteristic_taxa:
   score: 4.0
   rank: 18
   candidate_pool: 2139
-- taxon_id: NCBITaxon:1168170
-  source: PREGO
-  taxon_label: Klebsiella oxytoca BRL6-2
-  score: 4.0
-  rank: 19
-  candidate_pool: 2139
 - taxon_id: NCBITaxon:121619
   source: PREGO
   score: 4.0
@@ -192,21 +315,9 @@ characteristic_taxa:
   score: 4.0
   rank: 23
   candidate_pool: 2139
-- taxon_id: NCBITaxon:1298860
-  source: PREGO
-  taxon_label: Microbacterium sp. URHA0036
-  score: 4.0
-  rank: 24
-  candidate_pool: 2139
-- taxon_id: NCBITaxon:1298868
-  source: PREGO
-  taxon_label: Flavobacterium sp. URHB0058
-  score: 4.0
-  rank: 25
-  candidate_pool: 2139
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-15T00:10:17Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, PREGO.
-    Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, MADIN,
+    PREGO. Grounding: EXACT.'

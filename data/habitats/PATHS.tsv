@@ -824,6 +824,7 @@ ENVO:01000250	subpolar_coniferous_forest_biome
 ENVO:01000252	freshwater_lake_biome
 ENVO:01000254	environmental_system
 ENVO:01000255	mineral_deposit
+ENVO:01000256	mineral_material
 ENVO:01000257	white_smoker
 ENVO:01000262	seep
 ENVO:01000263	cold_seep
@@ -841,6 +842,7 @@ ENVO:01000316	alkaline_environment
 ENVO:01000317	aquatic_environment
 ENVO:01000320	marine_environment
 ENVO:01000340	alpine
+ENVO:01000357	alkaline_water
 ENVO:01000371	agricultural_waste_material
 ENVO:01000372	household_waste_material
 ENVO:01000406	snow
@@ -875,6 +877,7 @@ ENVO:01001002	animal_associated_environment
 ENVO:01001004	groundwater__585f08d9
 ENVO:01001020	hypersaline_lake
 ENVO:01001029	fecal_environment
+ENVO:01001040	saline_environment
 ENVO:01001041	fungi_associated_environment
 ENVO:01001043	hypersaline_water_environment
 ENVO:01001069	metallic_material
@@ -1061,6 +1064,7 @@ UBERON:0001969	blood_plasma__00b70c6a
 UBERON:0001970	bile__57dd7796
 UBERON:0001977	blood_serum
 UBERON:0001988	feces
+UBERON:0002049	vasculature
 UBERON:0002067	dermis
 UBERON:0002074	hair_shaft
 UBERON:0002075	viscus
@@ -1176,15 +1180,18 @@ habitatmech:BACDIVE.1dbb2b0c6f	machines_and_devices
 habitatmech:BACDIVE.25af5eede6	rumen_fluid
 habitatmech:BACDIVE.27fe5ab8fb	sterilized_plant_part
 habitatmech:BACDIVE.2acf2810c5	bottled_canned_packed_food
+habitatmech:BACDIVE.2b1959f1f0	food_fermented__fb6aa2db
 habitatmech:BACDIVE.2f22b1d05b	plant_infections
 habitatmech:BACDIVE.31392c69b9	spot_leaf_stem
 habitatmech:BACDIVE.3192a0f47e	tree
+habitatmech:BACDIVE.319ac5f8f8	host_animal_endotherm_intratissue
 habitatmech:BACDIVE.33fde10528	canidae_dog
 habitatmech:BACDIVE.36df85e4a4	waste
 habitatmech:BACDIVE.3974b3f169	oral_cavity_and_airways
 habitatmech:BACDIVE.3a13ee8a57	suidae_pig_swine
 habitatmech:BACDIVE.3abed720b8	xerophytic
 habitatmech:BACDIVE.3bf519722c	core_sample
+habitatmech:BACDIVE.3d543e6b49	host_animal_endotherm
 habitatmech:BACDIVE.3e4680f074	endosphere
 habitatmech:BACDIVE.3edb563d49	in_situ
 habitatmech:BACDIVE.499e641dc2	coalbed_water
@@ -1245,10 +1252,12 @@ habitatmech:BACDIVE.df2f59b773	foam
 habitatmech:BACDIVE.e01be4868f	microbial
 habitatmech:BACDIVE.e3272331b8	treatment
 habitatmech:BACDIVE.e5d21f85b7	tuberculosis
+habitatmech:BACDIVE.e68bf42dcb	host_animal_ectotherm
 habitatmech:BACDIVE.e6b73de092	felidae_cat
 habitatmech:BACDIVE.e864a16f03	invertebrates_other
 habitatmech:BACDIVE.ebdac6db98	swab
 habitatmech:BACDIVE.ec17e237ad	livestock_husbandry
+habitatmech:BACDIVE.ed51f3e74a	host_animal_endotherm_rumen
 habitatmech:BACDIVE.ef2153283d	cnidaria_corals
 habitatmech:BACDIVE.f4971616a5	gall
 habitatmech:BACDIVE.f4eb470a03	epibiont
@@ -3214,6 +3223,13 @@ habitatmech:GOLD.ff82e6ad1b	mineral_soil__5474c25b
 habitatmech:GOLD.ff83a59297	posterior_nares__bcf52745
 habitatmech:GOLD.ffd1fda259	chyme__0bfd2730
 habitatmech:GOLD.ffea544c70	microbial_mats__54849ba0
+habitatmech:MADIN.25325947e2	part_of_plant
+habitatmech:MADIN.5eeeec4db2	alga
+habitatmech:MADIN.6d3f5f967f	hydrocarbon__b1f62927
+habitatmech:MADIN.81cb9e74cb	food
+habitatmech:MADIN.8eaf8ee93c	arid
+habitatmech:MADIN.d6e2979509	multicellular_organism
+habitatmech:MADIN.ece0235b87	soil_pollution
 mesh:D000038	abscess__35b7623f
 mesh:D000076624	built_environment
 mesh:D062611	solid_waste

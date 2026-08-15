@@ -7,7 +7,7 @@ definition: A biomaterial containment unit which is capable of 1) containing a m
 definition_source: ENVO
 habitat_category: ENGINEERED
 grounding_status: EXACT
-mapping_status: REVIEWED
+mapping_status: SEEDED
 synonyms:
 - synonym_text: bioreactors
   synonym_type: RELATED_SYNONYM
@@ -28,6 +28,11 @@ source_attestations:
   assertion_count: 604
   assertion_unit: ORGANISM
   notes: 4 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: MADIN
+  source_id: ENVO:00002123
+  source_label: bioreactor
+  assertion_count: 232
+  assertion_unit: TAXON
 - source: PREGO
   source_id: ENVO:00002123
   source_label: bioreactor
@@ -52,17 +57,31 @@ environmental_parameters:
   qualitative_value: permanently wet
   source: kg-microbe environments.csv (bioreactor/digester)
 characteristic_taxa:
-- taxon_id: NCBITaxon:1082276
-  source: PREGO
-  taxon_label: Hydrogenispora ethanolica
-  score: 4.0
-  rank: 1
-  candidate_pool: 101
 - taxon_id: NCBITaxon:1209989
   source: PREGO
   taxon_label: Tepidanaerobacter acetatoxydans Re1
   score: 4.0
   rank: 2
+  candidate_pool: 101
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1121298
+  source: MADIN
+  taxon_label: clostridium_amylolyticum
+  candidate_pool: 232
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:659425
+  source: MADIN
+  taxon_label: clostridium_caenicola
+  candidate_pool: 232
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1082276
+  source: PREGO
+  taxon_label: Hydrogenispora ethanolica
+  score: 4.0
+  rank: 1
   candidate_pool: 101
 - taxon_id: NCBITaxon:1297750
   source: PREGO
@@ -202,9 +221,97 @@ characteristic_taxa:
   score: 4.0
   rank: 25
   candidate_pool: 101
+- taxon_id: NCBITaxon:1000560
+  source: MADIN
+  taxon_label: Escherichia coli VDP
+  candidate_pool: 232
+- taxon_id: NCBITaxon:100226
+  source: MADIN
+  taxon_label: Streptomyces coelicolor A3(2)
+  candidate_pool: 232
+- taxon_id: NCBITaxon:1027372
+  source: MADIN
+  taxon_label: Enterococcus faecalis OG1X
+  candidate_pool: 232
+- taxon_id: NCBITaxon:1028799
+  source: MADIN
+  taxon_label: Staphylococcus aureus subsp. aureus VC40
+  candidate_pool: 232
+- taxon_id: NCBITaxon:1033854
+  source: MADIN
+  taxon_label: Thioalkalivibrio sulfidiphilus
+  candidate_pool: 232
+- taxon_id: NCBITaxon:1036743
+  source: MADIN
+  taxon_label: Rhodospirillum rubrum F11
+  candidate_pool: 232
+- taxon_id: NCBITaxon:1042209
+  source: MADIN
+  taxon_label: Pseudomonas fluorescens HK44
+  candidate_pool: 232
+- taxon_id: NCBITaxon:1051353
+  source: MADIN
+  taxon_label: Escherichia coli ATCC 700728
+  candidate_pool: 232
+- taxon_id: NCBITaxon:1056982
+  source: MADIN
+  taxon_label: Gordonia phosphorivorans
+  candidate_pool: 232
+- taxon_id: NCBITaxon:1069495
+  source: MADIN
+  taxon_label: Escherichia coli XH001
+  candidate_pool: 232
+- taxon_id: NCBITaxon:1075088
+  source: MADIN
+  taxon_label: Corynebacterium glutamicum S9114
+  candidate_pool: 232
+- taxon_id: NCBITaxon:1076
+  source: MADIN
+  taxon_label: rhodopseudomonas_palustris
+  candidate_pool: 232
+- taxon_id: NCBITaxon:1081094
+  source: MADIN
+  taxon_label: Legionella pneumophila subsp. pneumophila str. Hextuple_2q
+  candidate_pool: 232
+- taxon_id: NCBITaxon:1081095
+  source: MADIN
+  taxon_label: Legionella pneumophila subsp. pneumophila str. Hextuple_3a
+  candidate_pool: 232
+- taxon_id: NCBITaxon:1086030
+  source: MADIN
+  taxon_label: Shigella flexneri 5a M90T
+  candidate_pool: 232
+- taxon_id: NCBITaxon:110319
+  source: MADIN
+  taxon_label: Nocardioides sp. CF8
+  candidate_pool: 232
+- taxon_id: NCBITaxon:1111677
+  source: MADIN
+  taxon_label: Enterococcus faecalis M7
+  candidate_pool: 232
+- taxon_id: NCBITaxon:1112212
+  source: MADIN
+  taxon_label: Sphingomonas echinoides ATCC 14820
+  candidate_pool: 232
+- taxon_id: NCBITaxon:1121353
+  source: MADIN
+  taxon_label: Corynebacterium callunae DSM 20147
+  candidate_pool: 232
+- taxon_id: NCBITaxon:1121422
+  source: MADIN
+  taxon_label: Desulfotomaculum alcoholivorax DSM 16058
+  candidate_pool: 232
+- taxon_id: NCBITaxon:1121472
+  source: MADIN
+  taxon_label: Desulfurispora thermophila DSM 16022
+  candidate_pool: 232
+- taxon_id: NCBITaxon:1122602
+  source: MADIN
+  taxon_label: Nesterenkonia alba DSM 19423
+  candidate_pool: 232
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-15T00:10:17Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD,
-    PREGO. Grounding: EXACT.'
+    MADIN, PREGO. Grounding: EXACT.'

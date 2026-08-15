@@ -12,6 +12,11 @@ source_attestations:
   source_id: host_animal_endotherm_oral
   source_label: host_animal_endotherm_oral
   notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: MADIN
+  source_id: ENVO:08000002
+  source_label: mouth environment
+  assertion_count: 608
+  assertion_unit: TAXON
 environmental_parameters:
 - parameter: GRADIENTS
   qualitative_value: high
@@ -46,9 +51,110 @@ environmental_parameters:
 - parameter: WATER_VARIABILITY
   qualitative_value: permanently wet
   source: kg-microbe environments.csv (host_animal_endotherm_oral)
+characteristic_taxa:
+- taxon_id: NCBITaxon:102148
+  source: MADIN
+  taxon_label: solobacterium_moorei
+  candidate_pool: 608
+- taxon_id: NCBITaxon:1032505
+  source: MADIN
+  taxon_label: Fusobacterium sp. OBRC1
+  candidate_pool: 608
+- taxon_id: NCBITaxon:1032623
+  source: MADIN
+  taxon_label: Otariodibacter oris
+  candidate_pool: 608
+- taxon_id: NCBITaxon:1035188
+  source: MADIN
+  taxon_label: Haemophilus pittmaniae HK 85
+  candidate_pool: 608
+- taxon_id: NCBITaxon:1035196
+  source: MADIN
+  taxon_label: Peptostreptococcus anaerobius VPI 4330
+  candidate_pool: 608
+- taxon_id: NCBITaxon:1035839
+  source: MADIN
+  taxon_label: Haemophilus parainfluenzae CCUG 13788
+  candidate_pool: 608
+- taxon_id: NCBITaxon:1069221
+  source: MADIN
+  taxon_label: mycobacterium_parakoreense
+  candidate_pool: 608
+- taxon_id: NCBITaxon:1071947
+  source: MADIN
+  taxon_label: pasteurella_oralis
+  candidate_pool: 608
+- taxon_id: NCBITaxon:1074112
+  source: MADIN
+  taxon_label: Streptococcus mutans TCI-99
+  candidate_pool: 608
+- taxon_id: NCBITaxon:1080071
+  source: MADIN
+  taxon_label: Streptococcus orisasini
+  candidate_pool: 608
+- taxon_id: NCBITaxon:1080072
+  source: MADIN
+  taxon_label: Streptococcus dentasini
+  candidate_pool: 608
+- taxon_id: NCBITaxon:1095727
+  source: MADIN
+  taxon_label: Streptococcus sp. SK643
+  candidate_pool: 608
+- taxon_id: NCBITaxon:110845
+  source: MADIN
+  taxon_label: Jeotgalicoccus pinnipedialis
+  candidate_pool: 608
+- taxon_id: NCBITaxon:111015
+  source: MADIN
+  taxon_label: Actinomyces radicidentis
+  candidate_pool: 608
+- taxon_id: NCBITaxon:1110546
+  source: MADIN
+  taxon_label: Veillonella tobetsuensis
+  candidate_pool: 608
+- taxon_id: NCBITaxon:1111760
+  source: MADIN
+  taxon_label: Streptococcus troglodytae
+  candidate_pool: 608
+- taxon_id: NCBITaxon:1114965
+  source: MADIN
+  taxon_label: Streptococcus parasanguinis FW213
+  candidate_pool: 608
+- taxon_id: NCBITaxon:1115809
+  source: MADIN
+  taxon_label: Prevotella baroniae F0067
+  candidate_pool: 608
+- taxon_id: NCBITaxon:1117644
+  source: MADIN
+  taxon_label: Mycoplasma canis PG 14
+  candidate_pool: 608
+- taxon_id: NCBITaxon:1120942
+  source: MADIN
+  taxon_label: Actinomyces georgiae DSM 6843
+  candidate_pool: 608
+- taxon_id: NCBITaxon:1120979
+  source: MADIN
+  taxon_label: Alloscardovia omnicolens DSM 21503
+  candidate_pool: 608
+- taxon_id: NCBITaxon:1121268
+  source: MADIN
+  taxon_label: Campylobacter curvus DSM 6644
+  candidate_pool: 608
+- taxon_id: NCBITaxon:1122171
+  source: MADIN
+  taxon_label: Leptotrichia hofstadii DSM 21651
+  candidate_pool: 608
+- taxon_id: NCBITaxon:1122174
+  source: MADIN
+  taxon_label: Leptotrichia wadei DSM 19758
+  candidate_pool: 608
+- taxon_id: NCBITaxon:1122980
+  source: MADIN
+  taxon_label: Prevotella baroniae DSM 16972
+  candidate_pool: 608
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-15T00:10:17Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE. Grounding:
-    EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, MADIN.
+    Grounding: EXACT.'

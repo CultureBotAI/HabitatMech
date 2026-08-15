@@ -4,7 +4,7 @@ definition: An emulsion of fat globules within a fluid that is secreted by the m
   gland during lactation.
 definition_source: UBERON
 habitat_category: HOST_ASSOCIATED
-grounding_status: CLOSE
+grounding_status: EXACT
 mapping_status: SEEDED
 synonyms:
 - synonym_text: mammary gland milk
@@ -38,6 +38,11 @@ source_attestations:
   mapping_predicate: skos:closeMatch
   assertion_count: 650
   assertion_unit: ORGANISM
+- source: MADIN
+  source_id: UBERON:0001913
+  source_label: milk
+  assertion_count: 70
+  assertion_unit: TAXON
 environmental_parameters:
 - parameter: GRADIENTS
   qualitative_value: low
@@ -75,9 +80,110 @@ environmental_parameters:
 - parameter: WATER_VARIABILITY
   qualitative_value: permanently wet
   source: kg-microbe environments.csv (milk)
+characteristic_taxa:
+- taxon_id: NCBITaxon:1030009
+  source: MADIN
+  taxon_label: Listeria monocytogenes M7
+  candidate_pool: 70
+- taxon_id: NCBITaxon:1036735
+  source: MADIN
+  taxon_label: Bifidobacterium breve 26M2
+  candidate_pool: 70
+- taxon_id: NCBITaxon:1112912
+  source: MADIN
+  taxon_label: Brucella suis VBI22
+  candidate_pool: 70
+- taxon_id: NCBITaxon:1121088
+  source: MADIN
+  taxon_label: Bacillus coagulans DSM 1 = ATCC 7050
+  candidate_pool: 70
+- taxon_id: NCBITaxon:113557
+  source: MADIN
+  taxon_label: Lactobacillus paracasei subsp. tolerans
+  candidate_pool: 70
+- taxon_id: NCBITaxon:1137135
+  source: MADIN
+  taxon_label: Escherichia coli O157:H43 T22
+  candidate_pool: 70
+- taxon_id: NCBITaxon:1144300
+  source: MADIN
+  taxon_label: Lactobacillus gastricus PS3
+  candidate_pool: 70
+- taxon_id: NCBITaxon:1157946
+  source: MADIN
+  taxon_label: Streptococcus salivarius PS4
+  candidate_pool: 70
+- taxon_id: NCBITaxon:1160091
+  source: MADIN
+  taxon_label: alloscardovia_macacae
+  candidate_pool: 70
+- taxon_id: NCBITaxon:1167694
+  source: MADIN
+  taxon_label: Escherichia coli O32:H37 P4
+  candidate_pool: 70
+- taxon_id: NCBITaxon:1185324
+  source: MADIN
+  taxon_label: Lactobacillus gasseri CECT 5714
+  candidate_pool: 70
+- taxon_id: NCBITaxon:1185325
+  source: MADIN
+  taxon_label: Lactobacillus coryniformis coryniformis CECT 5711
+  candidate_pool: 70
+- taxon_id: NCBITaxon:1188238
+  source: MADIN
+  taxon_label: Mycoplasma capricolum capricolum 14232
+  candidate_pool: 70
+- taxon_id: NCBITaxon:1193128
+  source: MADIN
+  taxon_label: Parascardovia denticolens IPLA 20019
+  candidate_pool: 70
+- taxon_id: NCBITaxon:1223499
+  source: MADIN
+  taxon_label: Mycobacterium vaccae NBRC 14118
+  candidate_pool: 70
+- taxon_id: NCBITaxon:1244087
+  source: MADIN
+  taxon_label: Paenibacillus lentimorbus NRRL B-30488
+  candidate_pool: 70
+- taxon_id: NCBITaxon:1246
+  source: MADIN
+  taxon_label: Leuconostoc lactis
+  candidate_pool: 70
+- taxon_id: NCBITaxon:1255628
+  source: MADIN
+  taxon_label: Staphylococcus fleurettii CIP 106114
+  candidate_pool: 70
+- taxon_id: NCBITaxon:1265302
+  source: MADIN
+  taxon_label: Staphylococcus aureus PB32
+  candidate_pool: 70
+- taxon_id: NCBITaxon:1272
+  source: MADIN
+  taxon_label: kocuria_varians
+  candidate_pool: 70
+- taxon_id: NCBITaxon:1286405
+  source: MADIN
+  taxon_label: Lactobacillus rhamnosus CRL1505
+  candidate_pool: 70
+- taxon_id: NCBITaxon:1308
+  source: MADIN
+  taxon_label: Streptococcus salivarius subsp. thermophilus
+  candidate_pool: 70
+- taxon_id: NCBITaxon:1311
+  source: MADIN
+  taxon_label: Streptococcus agalactiae
+  candidate_pool: 70
+- taxon_id: NCBITaxon:1396
+  source: MADIN
+  taxon_label: Bacillus cereus
+  candidate_pool: 70
+- taxon_id: NCBITaxon:1405
+  source: MADIN
+  taxon_label: bacillus_mycoides
+  candidate_pool: 70
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-15T00:10:17Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD.
-    Grounding: CLOSE.'
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD,
+    MADIN. Grounding: EXACT.'

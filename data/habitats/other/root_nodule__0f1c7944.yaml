@@ -13,6 +13,11 @@ source_attestations:
   source_id: host_plant_rootnodule
   source_label: host_plant_rootnodule
   notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: MADIN
+  source_id: ENVO:01000164
+  source_label: root nodule
+  assertion_count: 40
+  assertion_unit: TAXON
 environmental_parameters:
 - parameter: GRADIENTS
   qualitative_value: high
@@ -44,9 +49,110 @@ environmental_parameters:
 - parameter: WATER_VARIABILITY
   qualitative_value: permanently wet
   source: kg-microbe environments.csv (host_plant_rootnodule)
+characteristic_taxa:
+- taxon_id: NCBITaxon:1028800
+  source: MADIN
+  taxon_label: Neorhizobium galegae bv. orientalis str. HAMBI 540
+  candidate_pool: 40
+- taxon_id: NCBITaxon:1223566
+  source: MADIN
+  taxon_label: Bradyrhizobium sp. CCGE-LA001
+  candidate_pool: 40
+- taxon_id: NCBITaxon:1274631
+  source: MADIN
+  taxon_label: Bradyrhizobium icense
+  candidate_pool: 40
+- taxon_id: NCBITaxon:1703960
+  source: MADIN
+  taxon_label: Rhizobium sp. N113
+  candidate_pool: 40
+- taxon_id: NCBITaxon:1703961
+  source: MADIN
+  taxon_label: Rhizobium sp. N1314
+  candidate_pool: 40
+- taxon_id: NCBITaxon:1703962
+  source: MADIN
+  taxon_label: Rhizobium sp. N1341
+  candidate_pool: 40
+- taxon_id: NCBITaxon:1703963
+  source: MADIN
+  taxon_label: Rhizobium sp. N561
+  candidate_pool: 40
+- taxon_id: NCBITaxon:1703964
+  source: MADIN
+  taxon_label: Rhizobium sp. N621
+  candidate_pool: 40
+- taxon_id: NCBITaxon:1703965
+  source: MADIN
+  taxon_label: Rhizobium sp. N6212
+  candidate_pool: 40
+- taxon_id: NCBITaxon:1703966
+  source: MADIN
+  taxon_label: Rhizobium sp. N731
+  candidate_pool: 40
+- taxon_id: NCBITaxon:1703967
+  source: MADIN
+  taxon_label: Rhizobium sp. N741
+  candidate_pool: 40
+- taxon_id: NCBITaxon:1703968
+  source: MADIN
+  taxon_label: Rhizobium sp. N871
+  candidate_pool: 40
+- taxon_id: NCBITaxon:1703969
+  source: MADIN
+  taxon_label: Rhizobium sp. N324
+  candidate_pool: 40
+- taxon_id: NCBITaxon:1703970
+  source: MADIN
+  taxon_label: Rhizobium sp. N541
+  candidate_pool: 40
+- taxon_id: NCBITaxon:1703971
+  source: MADIN
+  taxon_label: Rhizobium sp. N941
+  candidate_pool: 40
+- taxon_id: NCBITaxon:1825933
+  source: MADIN
+  taxon_label: Rhizobium sp. WYCCWR10014
+  candidate_pool: 40
+- taxon_id: NCBITaxon:194963
+  source: MADIN
+  taxon_label: sinorhizobium_americanum
+  candidate_pool: 40
+- taxon_id: NCBITaxon:273251
+  source: MADIN
+  taxon_label: burkholderia_sabiae
+  candidate_pool: 40
+- taxon_id: NCBITaxon:291602
+  source: MADIN
+  taxon_label: kribbella_lupini
+  candidate_pool: 40
+- taxon_id: NCBITaxon:298653
+  source: MADIN
+  taxon_label: Frankia sp. EAN1pec
+  candidate_pool: 40
+- taxon_id: NCBITaxon:314237
+  source: MADIN
+  taxon_label: Phyllobacterium leguminum
+  candidate_pool: 40
+- taxon_id: NCBITaxon:314238
+  source: MADIN
+  taxon_label: Phyllobacterium ifriqiyense
+  candidate_pool: 40
+- taxon_id: NCBITaxon:391287
+  source: MADIN
+  taxon_label: ochrobactrum_ciceri
+  candidate_pool: 40
+- taxon_id: NCBITaxon:396
+  source: MADIN
+  taxon_label: rhizobium_phaseoli
+  candidate_pool: 40
+- taxon_id: NCBITaxon:407152
+  source: MADIN
+  taxon_label: ochrobactrum_cytisi
+  candidate_pool: 40
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-15T00:10:17Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE. Grounding:
-    EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, MADIN.
+    Grounding: EXACT.'

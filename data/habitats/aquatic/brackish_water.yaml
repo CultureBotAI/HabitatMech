@@ -17,6 +17,11 @@ source_attestations:
   source_id: water_brackish
   source_label: water_brackish
   notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: MADIN
+  source_id: ENVO:00002019
+  source_label: brackish water
+  assertion_count: 64
+  assertion_unit: TAXON
 - source: PREGO
   source_id: ENVO:00002019
   source_label: brackish water
@@ -206,9 +211,109 @@ characteristic_taxa:
   score: 3.0
   rank: 25
   candidate_pool: 1015
+- taxon_id: NCBITaxon:1084519
+  source: MADIN
+  taxon_label: Nibribacter koreensis
+  candidate_pool: 64
+- taxon_id: NCBITaxon:1124597
+  source: MADIN
+  taxon_label: Magnetococcus marinus
+  candidate_pool: 64
+- taxon_id: NCBITaxon:1132696
+  source: MADIN
+  taxon_label: Chryseobacterium rigui
+  candidate_pool: 64
+- taxon_id: NCBITaxon:1165090
+  source: MADIN
+  taxon_label: imtechella_halotolerans
+  candidate_pool: 64
+- taxon_id: NCBITaxon:1194079
+  source: MADIN
+  taxon_label: streptomyces_chilikensis
+  candidate_pool: 64
+- taxon_id: NCBITaxon:152268
+  source: MADIN
+  taxon_label: bacillus_litoralis
+  candidate_pool: 64
+- taxon_id: NCBITaxon:1727163
+  source: MADIN
+  taxon_label: Algoriphagus sp. M8-2
+  candidate_pool: 64
+- taxon_id: NCBITaxon:205844
+  source: MADIN
+  taxon_label: novosphingobium_pentaromativorans
+  candidate_pool: 64
+- taxon_id: NCBITaxon:226504
+  source: MADIN
+  taxon_label: algoriphagus_mannitolivorans
+  candidate_pool: 64
+- taxon_id: NCBITaxon:226505
+  source: MADIN
+  taxon_label: algoriphagus_halophilus
+  candidate_pool: 64
+- taxon_id: NCBITaxon:226506
+  source: MADIN
+  taxon_label: algoriphagus_ornithinivorans
+  candidate_pool: 64
+- taxon_id: NCBITaxon:23
+  source: MADIN
+  taxon_label: alteromonas_colwelliana
+  candidate_pool: 64
+- taxon_id: NCBITaxon:231438
+  source: MADIN
+  taxon_label: desulfoluna_butyratoxydans
+  candidate_pool: 64
+- taxon_id: NCBITaxon:231440
+  source: MADIN
+  taxon_label: desulfopila_aestuarii
+  candidate_pool: 64
+- taxon_id: NCBITaxon:231447
+  source: MADIN
+  taxon_label: desulfobulbus_japonicus
+  candidate_pool: 64
+- taxon_id: NCBITaxon:247022
+  source: MADIN
+  taxon_label: microbulbifer_maritimus
+  candidate_pool: 64
+- taxon_id: NCBITaxon:252230
+  source: MADIN
+  taxon_label: nocardioides_ganghwensis
+  candidate_pool: 64
+- taxon_id: NCBITaxon:252231
+  source: MADIN
+  taxon_label: Nocardioides aestuarii
+  candidate_pool: 64
+- taxon_id: NCBITaxon:252597
+  source: MADIN
+  taxon_label: alteromonas_litorea
+  candidate_pool: 64
+- taxon_id: NCBITaxon:255984
+  source: MADIN
+  taxon_label: erythrobacter_aquimaris
+  candidate_pool: 64
+- taxon_id: NCBITaxon:259390
+  source: MADIN
+  taxon_label: nocardia_takedensis
+  candidate_pool: 64
+- taxon_id: NCBITaxon:285109
+  source: MADIN
+  taxon_label: thioclava_pacifica
+  candidate_pool: 64
+- taxon_id: NCBITaxon:288019
+  source: MADIN
+  taxon_label: Yeosuana aromativorans
+  candidate_pool: 64
+- taxon_id: NCBITaxon:288022
+  source: MADIN
+  taxon_label: kordiimonas_gwangyangensis
+  candidate_pool: 64
+- taxon_id: NCBITaxon:29494
+  source: MADIN
+  taxon_label: vibrio_furnissii
+  candidate_pool: 64
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-15T00:10:17Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, PREGO.
-    Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, MADIN,
+    PREGO. Grounding: EXACT.'

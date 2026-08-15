@@ -19,6 +19,11 @@ source_attestations:
   source_id: host_animal
   source_label: host_animal
   notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: MADIN
+  source_id: ENVO:01001002
+  source_label: animal-associated environment
+  assertion_count: 144
+  assertion_unit: TAXON
 environmental_parameters:
 - parameter: PRESSURE
   qualitative_value: low
@@ -26,9 +31,110 @@ environmental_parameters:
 - parameter: TEMPERATURE_VARIABILITY
   qualitative_value: low
   source: kg-microbe environments.csv (host_animal)
+characteristic_taxa:
+- taxon_id: NCBITaxon:1001
+  source: MADIN
+  taxon_label: flexibacter_polymorphus
+  candidate_pool: 144
+- taxon_id: NCBITaxon:1001732
+  source: MADIN
+  taxon_label: Mycobacterium abscessus 5S-0921
+  candidate_pool: 144
+- taxon_id: NCBITaxon:1004165
+  source: MADIN
+  taxon_label: Photorhabdus luminescens caribbeanensis HG29
+  candidate_pool: 144
+- taxon_id: NCBITaxon:1004166
+  source: MADIN
+  taxon_label: Photorhabdus luminescens hainanensis C8404
+  candidate_pool: 144
+- taxon_id: NCBITaxon:102862
+  source: MADIN
+  taxon_label: proteus_penneri
+  candidate_pool: 144
+- taxon_id: NCBITaxon:1028805
+  source: MADIN
+  taxon_label: Haemophilus haemolyticus M21621
+  candidate_pool: 144
+- taxon_id: NCBITaxon:1049564
+  source: MADIN
+  taxon_label: endosymbiont of Tevnia jerichonana (vent Tica)
+  candidate_pool: 144
+- taxon_id: NCBITaxon:1084229
+  source: MADIN
+  taxon_label: Yersinia pestis bv. Orientalis BA200901703
+  candidate_pool: 144
+- taxon_id: NCBITaxon:110933
+  source: MADIN
+  taxon_label: leifsonia_poae
+  candidate_pool: 144
+- taxon_id: NCBITaxon:1123042
+  source: MADIN
+  taxon_label: Photorhabdus temperata stackebrandtii GPS11
+  candidate_pool: 144
+- taxon_id: NCBITaxon:1123520
+  source: MADIN
+  taxon_label: Neisseria meningitidis DE9686
+  candidate_pool: 144
+- taxon_id: NCBITaxon:1123521
+  source: MADIN
+  taxon_label: Neisseria meningitidis DE9622
+  candidate_pool: 144
+- taxon_id: NCBITaxon:1123522
+  source: MADIN
+  taxon_label: Neisseria meningitidis DE9938
+  candidate_pool: 144
+- taxon_id: NCBITaxon:1125973
+  source: MADIN
+  taxon_label: Bosea sp. 117
+  candidate_pool: 144
+- taxon_id: NCBITaxon:1128912
+  source: MADIN
+  taxon_label: Paraglaciecola mesophila KMM 241
+  candidate_pool: 144
+- taxon_id: NCBITaxon:1136416
+  source: MADIN
+  taxon_label: Salinispora pacifica CNT001
+  candidate_pool: 144
+- taxon_id: NCBITaxon:1137251
+  source: MADIN
+  taxon_label: Salinispora arenicola CNH905
+  candidate_pool: 144
+- taxon_id: NCBITaxon:1137255
+  source: MADIN
+  taxon_label: Salinispora arenicola CNT005
+  candidate_pool: 144
+- taxon_id: NCBITaxon:1137257
+  source: MADIN
+  taxon_label: Salinispora arenicola CNX508
+  candidate_pool: 144
+- taxon_id: NCBITaxon:1156842
+  source: MADIN
+  taxon_label: Streptomyces sp. LaPpAH-180
+  candidate_pool: 144
+- taxon_id: NCBITaxon:115862
+  source: MADIN
+  taxon_label: mycobacterium_caprae
+  candidate_pool: 144
+- taxon_id: NCBITaxon:1159489
+  source: MADIN
+  taxon_label: Cronobacter sakazakii 2151
+  candidate_pool: 144
+- taxon_id: NCBITaxon:1187845
+  source: MADIN
+  taxon_label: Vibrio genomosp. F10 9ZB36
+  candidate_pool: 144
+- taxon_id: NCBITaxon:1187846
+  source: MADIN
+  taxon_label: Vibrio genomosp. F10 9ZD137
+  candidate_pool: 144
+- taxon_id: NCBITaxon:1187847
+  source: MADIN
+  taxon_label: Vibrio genomosp. F10 9ZC157
+  candidate_pool: 144
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-15T00:10:17Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE. Grounding:
-    EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, MADIN.
+    Grounding: EXACT.'

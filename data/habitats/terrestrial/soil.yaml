@@ -6,7 +6,7 @@ definition: An environmental material which is primarily composed of minerals, v
 definition_source: ENVO
 habitat_category: TERRESTRIAL
 grounding_status: EXACT
-mapping_status: REVIEWED
+mapping_status: SEEDED
 synonyms:
 - synonym_text: ground
   synonym_type: RELATED_SYNONYM
@@ -40,6 +40,11 @@ source_attestations:
   assertion_count: 26399
   assertion_unit: ORGANISM
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: MADIN
+  source_id: ENVO:00001998
+  source_label: soil
+  assertion_count: 2934
+  assertion_unit: TAXON
 - source: PREGO
   source_id: ENVO:00001998
   source_label: soil
@@ -61,6 +66,174 @@ environmental_parameters:
   qualitative_value: medium
   source: kg-microbe environments.csv (soil)
 characteristic_taxa:
+- taxon_id: NCBITaxon:550
+  source: PREGO
+  taxon_label: Enterobacter cloacae
+  score: 4.00689
+  rank: 4
+  candidate_pool: 8715
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:232721
+  source: PREGO
+  taxon_label: Acidovorax sp. JS42
+  score: 4.00217
+  rank: 18
+  candidate_pool: 8715
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1005740
+  source: PREGO
+  taxon_label: Aminivibrio pyruvatiphilus
+  score: 4.0
+  rank: 24
+  candidate_pool: 8715
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:101510
+  source: MADIN
+  taxon_label: Rhodococcus jostii RHA1
+  candidate_pool: 2934
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1032476
+  source: MADIN
+  taxon_label: nonomuraea_soli
+  candidate_pool: 2934
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1036180
+  source: MADIN
+  taxon_label: Massilia lurida
+  candidate_pool: 2934
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:103725
+  source: MADIN
+  taxon_label: kutzneria_kofuensis
+  candidate_pool: 2934
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:103732
+  source: MADIN
+  taxon_label: actinomadura_flava
+  candidate_pool: 2934
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:103836
+  source: MADIN
+  taxon_label: actinomadura_flexuosa
+  candidate_pool: 2934
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:103838
+  source: MADIN
+  taxon_label: actinomadura_turkmeniaca
+  candidate_pool: 2934
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:104100
+  source: MADIN
+  taxon_label: acetobacter_lovaniensis
+  candidate_pool: 2934
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1045776
+  source: MADIN
+  taxon_label: kutzneria_buriramensis
+  candidate_pool: 2934
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:104662
+  source: MADIN
+  taxon_label: chitinophaga_japonensis
+  candidate_pool: 2934
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:104663
+  source: MADIN
+  taxon_label: chitinophaga_filiformis
+  candidate_pool: 2934
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1048339
+  source: MADIN
+  taxon_label: Sporichthya polymorpha DSM 43042
+  candidate_pool: 2934
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1050202
+  source: MADIN
+  taxon_label: Actinopolyspora mortivallis HS-1, DSM 44261
+  candidate_pool: 2934
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1052260
+  source: MADIN
+  taxon_label: geodermatophilus_soli
+  candidate_pool: 2934
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1054860
+  source: MADIN
+  taxon_label: Streptomyces purpureus KA281, ATCC 21405
+  candidate_pool: 2934
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:106590
+  source: MADIN
+  taxon_label: alcaligenes_eutrophus
+  candidate_pool: 2934
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:106592
+  source: MADIN
+  taxon_label: ensifer_adhaerens
+  candidate_pool: 2934
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1068978
+  source: MADIN
+  taxon_label: Amycolatopsis methanolica 239
+  candidate_pool: 2934
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1068979
+  source: MADIN
+  taxon_label: Amycolatopsis thermoflava N1165, DSM 44574
+  candidate_pool: 2934
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1076
+  source: MADIN
+  taxon_label: rhodopseudomonas_palustris
+  candidate_pool: 2934
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1077936
+  source: MADIN
+  taxon_label: Pontibacter lucknowensis
+  candidate_pool: 2934
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1089545
+  source: MADIN
+  taxon_label: Amycolatopsis balhimycina FH 1894
+  candidate_pool: 2934
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1089548
+  source: MADIN
+  taxon_label: Thermicanus aegyptius DSM 12793
+  candidate_pool: 2934
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1089549
+  source: MADIN
+  taxon_label: Haloglycomyces albus DSM 45210
+  candidate_pool: 2934
+  corroborated_by:
+  - PREGO
 - taxon_id: NCBITaxon:5530
   source: PREGO
   taxon_label: Metarhizium anisopliae
@@ -78,12 +251,6 @@ characteristic_taxa:
   taxon_label: Colwellia psychrerythraea 34H
   score: 4.00702
   rank: 3
-  candidate_pool: 8715
-- taxon_id: NCBITaxon:550
-  source: PREGO
-  taxon_label: Enterobacter cloacae
-  score: 4.00689
-  rank: 4
   candidate_pool: 8715
 - taxon_id: NCBITaxon:477974
   source: PREGO
@@ -163,12 +330,6 @@ characteristic_taxa:
   score: 4.00247
   rank: 17
   candidate_pool: 8715
-- taxon_id: NCBITaxon:232721
-  source: PREGO
-  taxon_label: Acidovorax sp. JS42
-  score: 4.00217
-  rank: 18
-  candidate_pool: 8715
 - taxon_id: NCBITaxon:314277
   source: PREGO
   taxon_label: Marinomonas sp. MED121
@@ -199,12 +360,6 @@ characteristic_taxa:
   score: 4.0
   rank: 23
   candidate_pool: 8715
-- taxon_id: NCBITaxon:1005740
-  source: PREGO
-  taxon_label: Aminivibrio pyruvatiphilus
-  score: 4.0
-  rank: 24
-  candidate_pool: 8715
 - taxon_id: NCBITaxon:1007092
   source: PREGO
   taxon_label: Microlunatus terrae
@@ -212,8 +367,8 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 8715
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-15T00:10:17Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD,
-    PREGO. Grounding: EXACT.'
+    MADIN, PREGO. Grounding: EXACT.'

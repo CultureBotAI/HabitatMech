@@ -5,7 +5,7 @@ definition: The residual semi-solid material left from domestic or industrial pr
 definition_source: ENVO
 habitat_category: OTHER
 grounding_status: EXACT
-mapping_status: REVIEWED
+mapping_status: SEEDED
 synonyms:
 - synonym_text: Mud-Sludge
   synonym_type: EXACT_SYNONYM
@@ -35,6 +35,11 @@ source_attestations:
   source_id: sludge
   source_label: sludge
   notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: MADIN
+  source_id: ENVO:00002044
+  source_label: sludge
+  assertion_count: 153
+  assertion_unit: TAXON
 - source: PREGO
   source_id: ENVO:00002044
   source_label: sludge
@@ -68,6 +73,14 @@ environmental_parameters:
   qualitative_value: permanently wet
   source: kg-microbe environments.csv (sludge)
 characteristic_taxa:
+- taxon_id: NCBITaxon:224999
+  source: BACDIVE
+  taxon_label: Tepidanaerobacter syntrophicus
+  association_count: 3
+  rank: 3
+  candidate_pool: 128
+  corroborated_by:
+  - MADIN
 - taxon_id: NCBITaxon:54
   source: BACDIVE
   taxon_label: Nannocystis exedens
@@ -84,6 +97,14 @@ characteristic_taxa:
   candidate_pool: 441
   corroborated_by:
   - PREGO
+- taxon_id: NCBITaxon:1270
+  source: PREGO
+  taxon_label: Micrococcus luteus
+  score: 4.0
+  rank: 13
+  candidate_pool: 803
+  corroborated_by:
+  - MADIN
 - taxon_id: NCBITaxon:39441
   source: BACDIVE
   taxon_label: Methanobrevibacter arboriphilus
@@ -124,6 +145,144 @@ characteristic_taxa:
   candidate_pool: 128
   corroborated_by:
   - PREGO
+- taxon_id: NCBITaxon:1007097
+  source: MADIN
+  taxon_label: gordonia_caeni
+  candidate_pool: 153
+  corroborated_by:
+  - BACDIVE
+- taxon_id: NCBITaxon:1122236
+  source: MADIN
+  taxon_label: Methylophilus methylotrophus DSM 46235
+  candidate_pool: 153
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1266720
+  source: MADIN
+  taxon_label: Moorella stamsii
+  candidate_pool: 153
+  corroborated_by:
+  - BACDIVE
+- taxon_id: NCBITaxon:151276
+  source: MADIN
+  taxon_label: bacteroides_coprosuis
+  candidate_pool: 153
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:164330
+  source: MADIN
+  taxon_label: thauera_aminoaromatica
+  candidate_pool: 153
+  corroborated_by:
+  - BACDIVE
+- taxon_id: NCBITaxon:164400
+  source: MADIN
+  taxon_label: thauera_phenylacetica
+  candidate_pool: 153
+  corroborated_by:
+  - BACDIVE
+- taxon_id: NCBITaxon:204773
+  source: MADIN
+  taxon_label: herminiimonas_arsenicoxydans
+  candidate_pool: 153
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:215580
+  source: MADIN
+  taxon_label: caenibacterium_thermophilum
+  candidate_pool: 153
+  corroborated_by:
+  - BACDIVE
+- taxon_id: NCBITaxon:229919
+  source: MADIN
+  taxon_label: Anaerolinea thermolimosa
+  candidate_pool: 153
+  corroborated_by:
+  - BACDIVE
+- taxon_id: NCBITaxon:229920
+  source: MADIN
+  taxon_label: Leptolinea tardivitalis
+  candidate_pool: 153
+  corroborated_by:
+  - BACDIVE
+- taxon_id: NCBITaxon:229921
+  source: MADIN
+  taxon_label: Levilinea saccharolytica
+  candidate_pool: 153
+  corroborated_by:
+  - BACDIVE
+- taxon_id: NCBITaxon:253239
+  source: MADIN
+  taxon_label: ethanoligenens_harbinense
+  candidate_pool: 153
+  corroborated_by:
+  - BACDIVE
+- taxon_id: NCBITaxon:265072
+  source: MADIN
+  taxon_label: Methylobacillus flagellatus KT
+  candidate_pool: 153
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:266123
+  source: MADIN
+  taxon_label: castellaniella_caeni
+  candidate_pool: 153
+  corroborated_by:
+  - BACDIVE
+- taxon_id: NCBITaxon:266126
+  source: MADIN
+  taxon_label: Azonexus caeni
+  candidate_pool: 153
+  corroborated_by:
+  - BACDIVE
+- taxon_id: NCBITaxon:316
+  source: MADIN
+  taxon_label: Pseudomonas stutzeri
+  candidate_pool: 153
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:343013
+  source: MADIN
+  taxon_label: acidovorax_caeni
+  candidate_pool: 153
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:360411
+  source: MADIN
+  taxon_label: Bellilinea caldifistulae
+  candidate_pool: 153
+  corroborated_by:
+  - BACDIVE
+- taxon_id: NCBITaxon:370979
+  source: MADIN
+  taxon_label: flavobacterium_defluvii
+  candidate_pool: 153
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:399795
+  source: MADIN
+  taxon_label: Comamonas testosteroni KF-1
+  candidate_pool: 153
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:414052
+  source: MADIN
+  taxon_label: Caenispirillum bisanense
+  candidate_pool: 153
+  corroborated_by:
+  - BACDIVE
+- taxon_id: NCBITaxon:415015
+  source: MADIN
+  taxon_label: proteiniborus_ethanoligenes
+  candidate_pool: 153
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:439612
+  source: MADIN
+  taxon_label: daeguia_caeni
+  candidate_pool: 153
+  corroborated_by:
+  - BACDIVE
 - taxon_id: NCBITaxon:104176
   source: PREGO
   taxon_label: Oscillochloris trichoides
@@ -172,12 +331,6 @@ characteristic_taxa:
   association_count: 7
   rank: 3
   candidate_pool: 441
-- taxon_id: NCBITaxon:224999
-  source: BACDIVE
-  taxon_label: Tepidanaerobacter syntrophicus
-  association_count: 3
-  rank: 3
-  candidate_pool: 128
 - taxon_id: NCBITaxon:112248
   source: PREGO
   taxon_label: Seinonella peptonophila
@@ -316,12 +469,6 @@ characteristic_taxa:
   association_count: 3
   rank: 12
   candidate_pool: 441
-- taxon_id: NCBITaxon:1270
-  source: PREGO
-  taxon_label: Micrococcus luteus
-  score: 4.0
-  rank: 13
-  candidate_pool: 803
 - taxon_id: NCBITaxon:361581
   source: BACDIVE
   taxon_label: Tenacibaculum discolor
@@ -515,8 +662,8 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 441
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-15T00:10:17Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, ENVIRONMENTS_TABLE,
-    PREGO. Grounding: EXACT.'
+    MADIN, PREGO. Grounding: EXACT.'

@@ -148,12 +148,16 @@ def test_every_committed_decision_addresses_a_real_source_concept(repo_root, raw
     import sys
 
     sys.path.insert(0, str(repo_root / "scripts"))
-    from seed_from_sources import mint
+    from seed_from_sources import _madin_key, mint
 
+    # Every source that mints a key. A source added without being listed here
+    # makes its decisions look stale, which is the same drift MINTED_PATTERN
+    # hit in test_corpus_integrity — keep both in step with mint() callers.
     addressable = (
         {mint("GOLD", r["canonical_path"]) for r in raw_tsv("gold_ecosystem_paths.tsv")}
         | {mint("BACDIVE", r["bacdive_id"]) for r in raw_tsv("bacdive_isolation_sources.tsv")}
         | {mint("PREGO", r["prego_id"]) for r in raw_tsv("prego_habitats.tsv")}
+        | {_madin_key(r["madin_id"]) for r in raw_tsv("madin_habitats.tsv")}
         | {mint("ENVIRONMENTS_TABLE", r["env_type"]) for r in raw_tsv("environment_parameters.tsv")}
     )
     decisions = load_decisions(repo_root / "curation" / "decisions.tsv")

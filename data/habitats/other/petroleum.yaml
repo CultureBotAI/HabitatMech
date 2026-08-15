@@ -33,6 +33,11 @@ source_attestations:
   source_id: petroleum
   source_label: petroleum
   notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: MADIN
+  source_id: ENVO:00002984
+  source_label: petroleum
+  assertion_count: 99
+  assertion_unit: TAXON
 - source: PREGO
   source_id: ENVO:00002984
   source_label: petroleum
@@ -63,6 +68,12 @@ environmental_parameters:
   qualitative_value: low
   source: kg-microbe environments.csv (petroleum)
 characteristic_taxa:
+- taxon_id: NCBITaxon:418699
+  source: MADIN
+  taxon_label: azoarcus_olearius
+  candidate_pool: 99
+  corroborated_by:
+  - PREGO
 - taxon_id: NCBITaxon:1541063
   source: PREGO
   taxon_label: Prolixibacter denitrificans
@@ -213,9 +224,105 @@ characteristic_taxa:
   score: 1.2963
   rank: 25
   candidate_pool: 253
+- taxon_id: NCBITaxon:1007105
+  source: MADIN
+  taxon_label: Pusillimonas sp. T7-7
+  candidate_pool: 99
+- taxon_id: NCBITaxon:1120954
+  source: MADIN
+  taxon_label: Aestuariimicrobium kwangyangense DSM 21549
+  candidate_pool: 99
+- taxon_id: NCBITaxon:1121016
+  source: MADIN
+  taxon_label: Arhodomonas aquaeolei DSM 8974
+  candidate_pool: 99
+- taxon_id: NCBITaxon:1121391
+  source: MADIN
+  taxon_label: Desulfacinum infernum DSM 9756
+  candidate_pool: 99
+- taxon_id: NCBITaxon:1121398
+  source: MADIN
+  taxon_label: Desulfobacter vibrioformis DSM 8776
+  candidate_pool: 99
+- taxon_id: NCBITaxon:1121415
+  source: MADIN
+  taxon_label: Desulfonauticus autotrophicus DSM 4206
+  candidate_pool: 99
+- taxon_id: NCBITaxon:1121430
+  source: MADIN
+  taxon_label: Desulfotomaculum thermocisternum DSM 10259
+  candidate_pool: 99
+- taxon_id: NCBITaxon:1121436
+  source: MADIN
+  taxon_label: Desulfovibrio alaskensis DSM 16109
+  candidate_pool: 99
+- taxon_id: NCBITaxon:1121449
+  source: MADIN
+  taxon_label: Desulfovibrio gracilis DSM 16080
+  candidate_pool: 99
+- taxon_id: NCBITaxon:1121456
+  source: MADIN
+  taxon_label: Desulfovibrio longus DSM 6739
+  candidate_pool: 99
+- taxon_id: NCBITaxon:1121479
+  source: MADIN
+  taxon_label: Pseudodonghicola xiamenensis DSM 18339
+  candidate_pool: 99
+- taxon_id: NCBITaxon:1121911
+  source: MADIN
+  taxon_label: Garciella nitratireducens DSM 15102
+  candidate_pool: 99
+- taxon_id: NCBITaxon:1122143
+  source: MADIN
+  taxon_label: Lacticigenium naphtae DSM 19658
+  candidate_pool: 99
+- taxon_id: NCBITaxon:1122233
+  source: MADIN
+  taxon_label: Methermicoccus shengliensis DSM 18856
+  candidate_pool: 99
+- taxon_id: NCBITaxon:1122953
+  source: MADIN
+  taxon_label: Petrotoga halophila DSM 16923
+  candidate_pool: 99
+- taxon_id: NCBITaxon:1122955
+  source: MADIN
+  taxon_label: Petrotoga olearia DSM 13574
+  candidate_pool: 99
+- taxon_id: NCBITaxon:1122956
+  source: MADIN
+  taxon_label: Petrotoga sibirica DSM 13575
+  candidate_pool: 99
+- taxon_id: NCBITaxon:1123373
+  source: MADIN
+  taxon_label: Thermodesulfobacterium thermophilum DSM 1276
+  candidate_pool: 99
+- taxon_id: NCBITaxon:1123383
+  source: MADIN
+  taxon_label: Pseudothermotoga elfii DSM 9442 = NBRC 107921
+  candidate_pool: 99
+- taxon_id: NCBITaxon:1123384
+  source: MADIN
+  taxon_label: Pseudothermotoga hypogea DSM 11164 = NBRC 106472
+  candidate_pool: 99
+- taxon_id: NCBITaxon:1123385
+  source: MADIN
+  taxon_label: Pseudothermotoga subterranea DSM 9912
+  candidate_pool: 99
+- taxon_id: NCBITaxon:1123501
+  source: MADIN
+  taxon_label: Wenxinia marina DSM 24838
+  candidate_pool: 99
+- taxon_id: NCBITaxon:1157947
+  source: MADIN
+  taxon_label: Thermotoga sp. Cell2
+  candidate_pool: 99
+- taxon_id: NCBITaxon:1163748
+  source: MADIN
+  taxon_label: Marinobacter hydrocarbonoclasticus ATCC 49840
+  candidate_pool: 99
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-15T00:10:17Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, PREGO.
-    Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, MADIN,
+    PREGO. Grounding: EXACT.'

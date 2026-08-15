@@ -1,0 +1,141 @@
+identifier: habitatmech:MADIN.81cb9e74cb
+label: food
+habitat_category: OTHER
+grounding_status: NOT_APPLICABLE
+mapping_status: SEEDED
+xrefs:
+- CHEBI:33290
+source_attestations:
+- source: MADIN
+  source_id: CHEBI:33290
+  source_label: food
+  assertion_count: 851
+  assertion_unit: TAXON
+characteristic_taxa:
+- taxon_id: NCBITaxon:1046593
+  source: MADIN
+  taxon_label: Leuconostoc carnosum KCTC 3525
+  candidate_pool: 851
+  corroborated_by:
+  - BACDIVE
+- taxon_id: NCBITaxon:1367848
+  source: MADIN
+  taxon_label: Cronobacter sakazakii NCIMB 8272
+  candidate_pool: 851
+  corroborated_by:
+  - BACDIVE
+- taxon_id: NCBITaxon:1402
+  source: MADIN
+  taxon_label: bacillus_licheniformis
+  candidate_pool: 851
+  corroborated_by:
+  - BACDIVE
+- taxon_id: NCBITaxon:164393
+  source: MADIN
+  taxon_label: Lactobacillus fuchuensis
+  candidate_pool: 851
+  corroborated_by:
+  - BACDIVE
+- taxon_id: NCBITaxon:214326
+  source: MADIN
+  taxon_label: Lactobacillus sakei subsp. sakei
+  candidate_pool: 851
+  corroborated_by:
+  - BACDIVE
+- taxon_id: NCBITaxon:2751
+  source: MADIN
+  taxon_label: Carnobacterium maltaromaticum
+  candidate_pool: 851
+  corroborated_by:
+  - BACDIVE
+- taxon_id: NCBITaxon:373672
+  source: MADIN
+  taxon_label: chryseobacterium_gambrini
+  candidate_pool: 851
+  corroborated_by:
+  - BACDIVE
+- taxon_id: NCBITaxon:569
+  source: MADIN
+  taxon_label: enterobacter_hafniae
+  candidate_pool: 851
+  corroborated_by:
+  - BACDIVE
+- taxon_id: NCBITaxon:685706
+  source: MADIN
+  taxon_label: yersinia_nurmii
+  candidate_pool: 851
+  corroborated_by:
+  - BACDIVE
+- taxon_id: NCBITaxon:86185
+  source: MADIN
+  taxon_label: Pseudomonas lundensis
+  candidate_pool: 851
+  corroborated_by:
+  - BACDIVE
+- taxon_id: NCBITaxon:94868
+  source: MADIN
+  taxon_label: clostridium_algidixylanolyticum
+  candidate_pool: 851
+  corroborated_by:
+  - BACDIVE
+- taxon_id: NCBITaxon:1001582
+  source: MADIN
+  taxon_label: Bacillus amyloliquefaciens LL3
+  candidate_pool: 851
+- taxon_id: NCBITaxon:1002526
+  source: MADIN
+  taxon_label: Pseudomonas formosensis
+  candidate_pool: 851
+- taxon_id: NCBITaxon:1002795
+  source: MADIN
+  taxon_label: pectinatus_sottacetonis
+  candidate_pool: 851
+- taxon_id: NCBITaxon:1003188
+  source: MADIN
+  taxon_label: Salmonella enterica enterica sv. Agona SA-4
+  candidate_pool: 851
+- taxon_id: NCBITaxon:1003191
+  source: MADIN
+  taxon_label: Salmonella enterica subsp. enterica serovar Tennessee str. TXSC_TXSC08-19
+  candidate_pool: 851
+- taxon_id: NCBITaxon:1003192
+  source: MADIN
+  taxon_label: Salmonella enterica enterica sv. Tennessee TXSC_TXSC08-21
+  candidate_pool: 851
+- taxon_id: NCBITaxon:100468
+  source: MADIN
+  taxon_label: Lactobacillus perolens
+  candidate_pool: 851
+- taxon_id: NCBITaxon:1004836
+  source: MADIN
+  taxon_label: Gluconacetobacter sp. SXCC-1
+  candidate_pool: 851
+- taxon_id: NCBITaxon:1005403
+  source: MADIN
+  taxon_label: Escherichia coli 93.0055
+  candidate_pool: 851
+- taxon_id: NCBITaxon:1005404
+  source: MADIN
+  taxon_label: Escherichia coli 93.0056
+  candidate_pool: 851
+- taxon_id: NCBITaxon:1005405
+  source: MADIN
+  taxon_label: Escherichia coli 94.0618
+  candidate_pool: 851
+- taxon_id: NCBITaxon:1005462
+  source: MADIN
+  taxon_label: Escherichia coli 8.0566
+  candidate_pool: 851
+- taxon_id: NCBITaxon:1005463
+  source: MADIN
+  taxon_label: Escherichia coli 8.0416
+  candidate_pool: 851
+- taxon_id: NCBITaxon:1005464
+  source: MADIN
+  taxon_label: Escherichia coli 8.0569
+  candidate_pool: 851
+curation_history:
+- timestamp: '2026-08-15T00:10:17Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by MADIN. Grounding: NOT_APPLICABLE.'

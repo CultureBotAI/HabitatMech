@@ -29,6 +29,11 @@ source_attestations:
   source_id: water_marine
   source_label: water_marine
   notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: MADIN
+  source_id: ENVO:00002149
+  source_label: sea water
+  assertion_count: 1211
+  assertion_unit: TAXON
 - source: PREGO
   source_id: ENVO:00002149
   source_label: sea water
@@ -59,6 +64,172 @@ environmental_parameters:
   qualitative_value: permanently wet
   source: kg-microbe environments.csv (water_marine)
 characteristic_taxa:
+- taxon_id: NCBITaxon:1229
+  source: PREGO
+  taxon_label: Nitrosococcus oceani
+  score: 4.0
+  rank: 17
+  candidate_pool: 1887
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:143224
+  source: PREGO
+  taxon_label: Zobellia uliginosa
+  score: 4.0
+  rank: 23
+  candidate_pool: 1887
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1089439
+  source: MADIN
+  taxon_label: Fangia hongkongensis DSM 21703
+  candidate_pool: 1211
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1117647
+  source: MADIN
+  taxon_label: Simiduia agarivorans SA1 = DSM 21679
+  candidate_pool: 1211
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1120951
+  source: MADIN
+  taxon_label: Aequorivita capsosiphonis DSM 23843
+  candidate_pool: 1211
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1120963
+  source: MADIN
+  taxon_label: Algicola sagamiensis DSM 14643
+  candidate_pool: 1211
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1120966
+  source: MADIN
+  taxon_label: Algoriphagus marincola DSM 16067
+  candidate_pool: 1211
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1120969
+  source: MADIN
+  taxon_label: Aliagarivorans marinus DSM 23064
+  candidate_pool: 1211
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1120970
+  source: MADIN
+  taxon_label: Aliagarivorans taiwanensis DSM 22990
+  candidate_pool: 1211
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121007
+  source: MADIN
+  taxon_label: Aquimarina muelleri DSM 19832
+  candidate_pool: 1211
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121867
+  source: MADIN
+  taxon_label: Enterovibrio calviensis DSM 14347
+  candidate_pool: 1211
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121875
+  source: MADIN
+  taxon_label: Eudoraea adriatica DSM 19308
+  candidate_pool: 1211
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121912
+  source: MADIN
+  taxon_label: Gelidibacter mesophilus DSM 14095
+  candidate_pool: 1211
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121921
+  source: MADIN
+  taxon_label: Gilvimarinus chinensis DSM 19667
+  candidate_pool: 1211
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121922
+  source: MADIN
+  taxon_label: Glaciecola pallidula DSM 14239
+  candidate_pool: 1211
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121937
+  source: MADIN
+  taxon_label: Haliea salexigens DSM 19537
+  candidate_pool: 1211
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121949
+  source: MADIN
+  taxon_label: Henriciella marina DSM 19595
+  candidate_pool: 1211
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1122159
+  source: MADIN
+  taxon_label: Leeuwenhoekiella marinoflava DSM 3653
+  candidate_pool: 1211
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1122197
+  source: MADIN
+  taxon_label: Marinobacter daepoensis DSM 16072
+  candidate_pool: 1211
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1122200
+  source: MADIN
+  taxon_label: Marinobacterium jannaschii DSM 6295
+  candidate_pool: 1211
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1122201
+  source: MADIN
+  taxon_label: Marinobacterium litorale DSM 23545
+  candidate_pool: 1211
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1122206
+  source: MADIN
+  taxon_label: Marinomonas polaris DSM 16579
+  candidate_pool: 1211
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1122224
+  source: MADIN
+  taxon_label: Spongiibacter marinus DSM 19753
+  candidate_pool: 1211
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1122225
+  source: MADIN
+  taxon_label: Mesoflavibacter zeaxanthinifaciens DSM 18436
+  candidate_pool: 1211
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1122226
+  source: MADIN
+  taxon_label: Mesonia mobilis DSM 19841
+  candidate_pool: 1211
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1122600
+  source: MADIN
+  taxon_label: Nereida ignava DSM 16309
+  candidate_pool: 1211
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1122615
+  source: MADIN
+  taxon_label: Oceanobacter kriegii DSM 6294
+  candidate_pool: 1211
+  corroborated_by:
+  - PREGO
 - taxon_id: NCBITaxon:1014
   source: PREGO
   taxon_label: Weeksella virosa
@@ -155,12 +326,6 @@ characteristic_taxa:
   score: 4.0
   rank: 16
   candidate_pool: 1887
-- taxon_id: NCBITaxon:1229
-  source: PREGO
-  taxon_label: Nitrosococcus oceani
-  score: 4.0
-  rank: 17
-  candidate_pool: 1887
 - taxon_id: NCBITaxon:1238
   source: PREGO
   taxon_label: Piscirickettsia salmonis
@@ -191,12 +356,6 @@ characteristic_taxa:
   score: 4.0
   rank: 22
   candidate_pool: 1887
-- taxon_id: NCBITaxon:143224
-  source: PREGO
-  taxon_label: Zobellia uliginosa
-  score: 4.0
-  rank: 23
-  candidate_pool: 1887
 - taxon_id: NCBITaxon:143802
   source: PREGO
   taxon_label: Ralstonia sp. HAB-11
@@ -210,8 +369,8 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 1887
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-15T00:10:17Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, PREGO.
-    Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, MADIN,
+    PREGO. Grounding: EXACT.'

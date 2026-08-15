@@ -4,7 +4,7 @@ definition: Water that has been adversely affected in quality by anthropogenic i
 definition_source: ENVO
 habitat_category: ENGINEERED
 grounding_status: EXACT
-mapping_status: REVIEWED
+mapping_status: SEEDED
 synonyms:
 - synonym_text: Wastewater
   synonym_type: EXACT_SYNONYM
@@ -29,6 +29,11 @@ source_attestations:
   assertion_count: 1140
   assertion_unit: ORGANISM
   notes: 4 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: MADIN
+  source_id: ENVO:00002001
+  source_label: waste water
+  assertion_count: 524
+  assertion_unit: TAXON
 - source: PREGO
   source_id: ENVO:00002001
   source_label: waste water
@@ -53,6 +58,160 @@ environmental_parameters:
   qualitative_value: permanently wet
   source: kg-microbe environments.csv (wastewater)
 characteristic_taxa:
+- taxon_id: NCBITaxon:1058
+  source: PREGO
+  taxon_label: Thiocapsa roseopersicina
+  score: 4.0
+  rank: 19
+  candidate_pool: 623
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1089553
+  source: PREGO
+  taxon_label: Thermacetogenium phaeum DSM 12270
+  score: 4.0
+  rank: 20
+  candidate_pool: 623
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1120924
+  source: MADIN
+  taxon_label: Acinetobacter baylyi DSM 14961
+  candidate_pool: 524
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1120925
+  source: MADIN
+  taxon_label: Acinetobacter bouvetii DSM 14964
+  candidate_pool: 524
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1120927
+  source: MADIN
+  taxon_label: Acinetobacter tandoii DSM 14970
+  candidate_pool: 524
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1120928
+  source: MADIN
+  taxon_label: Acinetobacter tjernbergiae DSM 14971
+  candidate_pool: 524
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1120929
+  source: MADIN
+  taxon_label: Acinetobacter towneri DSM 14962
+  candidate_pool: 524
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1120962
+  source: MADIN
+  taxon_label: Alcaligenes faecalis phenolicus DSM 16503
+  candidate_pool: 524
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121109
+  source: MADIN
+  taxon_label: Bifidobacterium minimum DSM 20102
+  candidate_pool: 524
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121110
+  source: MADIN
+  taxon_label: Bifidobacterium subtile DSM 20096
+  candidate_pool: 524
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121111
+  source: MADIN
+  taxon_label: Bifidobacterium thermacidophilum thermacidophilum DSM 15837
+  candidate_pool: 524
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121123
+  source: MADIN
+  taxon_label: Brevundimonas aveniformis DSM 17977
+  candidate_pool: 524
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121255
+  source: MADIN
+  taxon_label: Caenimonas koreensis DSM 17982
+  candidate_pool: 524
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121262
+  source: MADIN
+  taxon_label: Caloramator proteoclasticus DSM 10124
+  candidate_pool: 524
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121271
+  source: MADIN
+  taxon_label: Gemmobacter nectariphilus DSM 15620
+  candidate_pool: 524
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121285
+  source: MADIN
+  taxon_label: Chryseobacterium caeni DSM 17710
+  candidate_pool: 524
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121286
+  source: MADIN
+  taxon_label: Chryseobacterium daeguense DSM 19388
+  candidate_pool: 524
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121344
+  source: MADIN
+  taxon_label: Clostridium viride DSM 6836
+  candidate_pool: 524
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121348
+  source: MADIN
+  taxon_label: Comamonas badia DSM 17552
+  candidate_pool: 524
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121378
+  source: MADIN
+  taxon_label: Deinococcus aquatilis DSM 23025
+  candidate_pool: 524
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121393
+  source: MADIN
+  taxon_label: Desulfatibacillum alkenivorans DSM 16219
+  candidate_pool: 524
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121405
+  source: MADIN
+  taxon_label: Desulfococcus multivorans DSM 2059
+  candidate_pool: 524
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121433
+  source: MADIN
+  taxon_label: Desulfovermiculus halophilus DSM 18834
+  candidate_pool: 524
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121438
+  source: MADIN
+  taxon_label: Desulfovibrio alcoholivorans DSM 5433
+  candidate_pool: 524
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121440
+  source: MADIN
+  taxon_label: Desulfovibrio aminophilus DSM 12254
+  candidate_pool: 524
+  corroborated_by:
+  - PREGO
 - taxon_id: NCBITaxon:1046983
   source: PREGO
   taxon_label: Hydrogenedentes bacterium JGI 0000059-N10
@@ -161,18 +320,6 @@ characteristic_taxa:
   score: 4.0
   rank: 18
   candidate_pool: 623
-- taxon_id: NCBITaxon:1058
-  source: PREGO
-  taxon_label: Thiocapsa roseopersicina
-  score: 4.0
-  rank: 19
-  candidate_pool: 623
-- taxon_id: NCBITaxon:1089553
-  source: PREGO
-  taxon_label: Thermacetogenium phaeum DSM 12270
-  score: 4.0
-  rank: 20
-  candidate_pool: 623
 - taxon_id: NCBITaxon:1104568
   source: PREGO
   taxon_label: Synergistetes bacterium JGI 0000079-D21
@@ -204,8 +351,8 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 623
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-15T00:10:17Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD,
-    PREGO. Grounding: EXACT.'
+    MADIN, PREGO. Grounding: EXACT.'

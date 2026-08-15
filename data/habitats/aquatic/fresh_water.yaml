@@ -5,7 +5,7 @@ definition: Water which has a low concentration of dissolved solutes, particular
 definition_source: ENVO
 habitat_category: AQUATIC
 grounding_status: EXACT
-mapping_status: REVIEWED
+mapping_status: SEEDED
 synonyms:
 - synonym_text: Freshwater
   synonym_type: EXACT_SYNONYM
@@ -35,6 +35,11 @@ source_attestations:
   assertion_count: 2055
   assertion_unit: ORGANISM
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: MADIN
+  source_id: ENVO:00002011
+  source_label: fresh water
+  assertion_count: 645
+  assertion_unit: TAXON
 - source: PREGO
   source_id: ENVO:00002011
   source_label: fresh water
@@ -71,6 +76,158 @@ environmental_parameters:
   qualitative_value: permanently wet
   source: kg-microbe environments.csv (water_fresh)
 characteristic_taxa:
+- taxon_id: NCBITaxon:102232
+  source: PREGO
+  taxon_label: Gloeocapsa sp. PCC 73106
+  score: 4.0
+  rank: 3
+  candidate_pool: 4936
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1079
+  source: MADIN
+  taxon_label: blastochloris_viridis
+  candidate_pool: 645
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1082345
+  source: MADIN
+  taxon_label: sphingobium_boeckii
+  candidate_pool: 645
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:111780
+  source: MADIN
+  taxon_label: Stanieria cyanosphaera PCC 7437
+  candidate_pool: 645
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121004
+  source: MADIN
+  taxon_label: Aquaspirillum serpens DSM 68
+  candidate_pool: 645
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121032
+  source: MADIN
+  taxon_label: Azonexus hydrophilus DSM 23864
+  candidate_pool: 645
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121104
+  source: MADIN
+  taxon_label: Balneola vulgaris DSM 17893
+  candidate_pool: 645
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121124
+  source: MADIN
+  taxon_label: Brevundimonas bacteroides DSM 4726
+  candidate_pool: 645
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121279
+  source: MADIN
+  taxon_label: Chitinimonas taiwanensis DSM 18899
+  candidate_pool: 645
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121291
+  source: MADIN
+  taxon_label: Clostridium acidisoli DSM 12555
+  candidate_pool: 645
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121302
+  source: MADIN
+  taxon_label: Clostridium cavendishii DSM 21758
+  candidate_pool: 645
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121319
+  source: MADIN
+  taxon_label: Clostridium hydrogeniformans DSM 21757
+  candidate_pool: 645
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121406
+  source: MADIN
+  taxon_label: Desulfocurvus vexinensis DSM 17965
+  candidate_pool: 645
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121435
+  source: MADIN
+  taxon_label: Desulfovibrio africanus DSM 2603
+  candidate_pool: 645
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121441
+  source: MADIN
+  taxon_label: Desulfovibrio bastinii DSM 16055
+  candidate_pool: 645
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121448
+  source: MADIN
+  taxon_label: Desulfovibrio gigas DSM 1382, ATCC 19364
+  candidate_pool: 645
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121462
+  source: MADIN
+  taxon_label: Desulfovibrio putealis DSM 16056
+  candidate_pool: 645
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121466
+  source: MADIN
+  taxon_label: Desulfovibrio vietnamensis DSM 10520
+  candidate_pool: 645
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121895
+  source: MADIN
+  taxon_label: Flavobacterium rivuli DSM 21788
+  candidate_pool: 645
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121898
+  source: MADIN
+  taxon_label: Flavobacterium subsaxonicum DSM 21790
+  candidate_pool: 645
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1121948
+  source: MADIN
+  taxon_label: Hellea balneolensis DSM 19091
+  candidate_pool: 645
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1122133
+  source: MADIN
+  taxon_label: Kaistia soli DSM 19436
+  candidate_pool: 645
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1122603
+  source: MADIN
+  taxon_label: Nevskia ramosa DSM 11499
+  candidate_pool: 645
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1122607
+  source: MADIN
+  taxon_label: Nisaea denitrificans DSM 18348
+  candidate_pool: 645
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1122612
+  source: MADIN
+  taxon_label: Novosphingobium acidiphilum DSM 19966
+  candidate_pool: 645
+  corroborated_by:
+  - PREGO
 - taxon_id: NCBITaxon:1001240
   source: PREGO
   taxon_label: Cryobacterium roopkundense
@@ -82,12 +239,6 @@ characteristic_taxa:
   taxon_label: Sporocytophaga cauliformis
   score: 4.0
   rank: 2
-  candidate_pool: 4936
-- taxon_id: NCBITaxon:102232
-  source: PREGO
-  taxon_label: Gloeocapsa sp. PCC 73106
-  score: 4.0
-  rank: 3
   candidate_pool: 4936
 - taxon_id: NCBITaxon:1026
   source: PREGO
@@ -222,8 +373,8 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 4936
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-15T00:10:17Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD,
-    PREGO. Grounding: EXACT.'
+    MADIN, PREGO. Grounding: EXACT.'

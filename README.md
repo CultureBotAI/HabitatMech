@@ -1,7 +1,7 @@
 # HabitatMech
 
 Knowledge base of **microbial habitats and environments**, harmonized from the
-three source vocabularies that describe where microbes are found and grounded
+four source vocabularies that describe where microbes are found and grounded
 in ENVO / UBERON / FOODON / BTO.
 
 HabitatMech is the habitat counterpart of
@@ -27,6 +27,7 @@ The same habitat has three different names depending on who is describing it:
 | JGI GOLD | `Environmental > Aquatic > Marine > Sediment` (5-level ecosystem path) |
 | BacDive | `Marine-sediment` (flat isolation-source label) |
 | PREGO | `ENVO:00002113` (ontology CURIE) |
+| Madin et al. | `ENVO:00002113` (ontology CURIE, literature-curated) |
 
 Each becomes a *source concept*. Every source concept is resolved to an
 identifier — an ontology CURIE where one is defensible, otherwise a minted,
@@ -35,28 +36,31 @@ identifier merge into one `HabitatRecord` carrying all their attestations.
 
 That merge is the product. `data/habitats/terrestrial/soil.yaml` is one record
 grounded in `ENVO:00001998` that knows GOLD saw 26,399 organisms there, PREGO
-associates 8,715 taxa with it, and kg-microbe's environment table says it is
-structurally complex, low-pressure, and strongly gradient-forming.
+associates 8,715 taxa with it, Madin's literature curation independently
+associates 2,934, and kg-microbe's environment table says it is structurally
+complex, low-pressure, and strongly gradient-forming.
 
 ## Current corpus
 
-Seeded from kg-microbe, 2026-08-12. **3,217 habitat records** from 3,443 source
-concepts (GOLD 2,562 · BacDive 162 · PREGO 719), grounded in
+Seeded from kg-microbe, 2026-08-14. **3,234 habitat records** from 3,502 source
+concepts (GOLD 2,562 · BacDive 162 · PREGO 719 · Madin 58), grounded in
 ENVO / UBERON / FOODON / BTO / PO.
 
 | Category | Records | | Grounding | Records |
 |---|---:|---|---|---:|
-| HOST_ASSOCIATED | 1,634 | | EXACT | 1,037 |
-| ENGINEERED | 478 | | UNGROUNDED | 972 |
-| AQUATIC | 457 | | NARROW | 950 |
-| TERRESTRIAL | 355 | | CLOSE | 139 |
-| OTHER | 172 | | NOT_APPLICABLE | 88 |
-| FOOD / CLINICAL / AIR | 93 | | BROAD | 3 |
+| HOST_ASSOCIATED | 1,638 | | EXACT | 1,041 |
+| ENGINEERED | 486 | | UNGROUNDED | 992 |
+| AQUATIC | 468 | | NARROW | 976 |
+| TERRESTRIAL | 355 | | CLOSE | 117 |
+| OTHER | 211 | | NOT_APPLICABLE | 101 |
+| FOOD / CLINICAL / AIR | 76 | | BROAD | 7 |
 
-**421 records (13.1%) are `REVIEWED`**, on 588 per-item curation decisions —
-including all 135 records attested by more than one source, whose merges were
-read individually. Every source concept has a decision on file, but they are not
-all equal: 940 were decided by a **class-level sweep** and deliberately do *not*
+165 records are attested by more than one source, 15 of them by all four.
+
+**440 records (13.6%) are `REVIEWED`**, on 684 per-item curation decisions —
+including every record attested by more than one source, whose merges were read
+individually. Every source concept has a decision on file, but they are not all
+equal: 935 were decided by a **class-level sweep** and deliberately do *not*
 count as reviewed — see [Curation](#curation) and
 [docs/HARMONIZATION.md](docs/HARMONIZATION.md#class-level-sweep).
 
@@ -204,10 +208,10 @@ just report                   # term requests vs undecided, and the numbers belo
 
 These are real and unfixed; see the issue tracker.
 
-- **Most records are unreviewed.** 421 of 3,217 are `REVIEWED`; the other 2,796
+- **Most records are unreviewed.** 440 of 3,234 are `REVIEWED`; the other 2,794
   are `SEEDED`, meaning their lexical matches are plausible but unverified.
-  Every multi-source record has been read — 22 of those 135 merges were wrong
-  and were corrected — but single-source records have not.
+  Every multi-source record has been read — 22 of those merges were wrong and
+  were corrected — but single-source records have not.
 - **ENVO has no host-clade environment terms.** "Mammals: Human" (40,432 GOLD
   organisms, the single largest ungrounded concept), "Birds", "Fish", "Insects"
   and the rest are real habitats with only `ENVO:01001002 animal-associated
@@ -216,11 +220,12 @@ These are real and unfixed; see the issue tracker.
   content. They are the highest-value term requests.
 - **PREGO's taxon ranking is weak, though measurably not arbitrary.** For soil
   all 8,715 taxa score between 4.000 and 4.007. Cross-checking PREGO's top-25
-  against BacDive — an independent route to taxa — gives 2.27x enrichment over
-  chance, so the ordering carries signal, and the alternatives #8 proposed have
-  4 distinct values against the score's 2,869. Every taxon therefore carries
-  `rank` and `candidate_pool` so the claim states its own strength, and the 56
-  entries corroborated across both sources are listed first. Seeded taxa still
+  against two independent routes to taxa gives 2.48x enrichment over chance
+  against BacDive and 2.22x against Madin, so the ordering carries signal, and
+  the alternatives #8 proposed have 4 distinct values against the score's 2,869.
+  Every taxon therefore carries `rank` and `candidate_pool` so the claim states
+  its own strength, and the 508 entries corroborated across sources are listed
+  first. Seeded taxa still
   mean "reported from", not "characteristic of" — `is_characteristic` remains a
   separate curator-set flag. See
   [docs/HARMONIZATION.md](docs/HARMONIZATION.md#taxon-ranking-and-what-the-evidence-says-about-it).
@@ -260,6 +265,9 @@ HabitatMech/
 - **GOLD** — [JGI Genomes OnLine Database](https://gold.jgi.doe.gov/) ecosystem classification
 - **BacDive** — [DSMZ BacDive](https://bacdive.dsmz.de/) isolation sources
 - **PREGO** — [PREGO](https://prego.hcmr.gr/) habitat-organism associations
+- **Madin et al.** — [prokaryotic phenotypic trait
+  compilation](https://doi.org/10.1038/s41597-020-0497-4), literature-curated
+  at species level; its `isolation_source` column is the habitat vocabulary
 - **ENVO / UBERON / FOODON / BTO** — via
   [kg-microbe](https://github.com/Knowledge-Graph-Hub/kg-microbe), which
   supplies all of the above in harmonized KGX form and contributes the curated

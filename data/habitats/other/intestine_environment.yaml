@@ -16,6 +16,11 @@ source_attestations:
   source_id: host_animal_endotherm_intestinal
   source_label: host_animal_endotherm_intestinal
   notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: MADIN
+  source_id: ENVO:2100002
+  source_label: intestine environment
+  assertion_count: 1963
+  assertion_unit: TAXON
 - source: PREGO
   source_id: ENVO:2100002
   source_label: intestine environment
@@ -58,6 +63,158 @@ environmental_parameters:
   qualitative_value: permanently wet
   source: kg-microbe environments.csv (host_animal_endotherm_intestinal)
 characteristic_taxa:
+- taxon_id: NCBITaxon:1045010
+  source: PREGO
+  taxon_label: Escherichia coli O157
+  score: 4.0
+  rank: 10
+  candidate_pool: 2406
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1265
+  source: MADIN
+  taxon_label: ruminococcus_flavefaciens
+  candidate_pool: 1963
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1280
+  source: MADIN
+  taxon_label: Staphylococcus aureus
+  candidate_pool: 1963
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1304
+  source: MADIN
+  taxon_label: Streptococcus salivarius
+  candidate_pool: 1963
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1335
+  source: MADIN
+  taxon_label: Streptococcus equinus
+  candidate_pool: 1963
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1351
+  source: MADIN
+  taxon_label: Enterococcus faecalis
+  candidate_pool: 1963
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1352
+  source: MADIN
+  taxon_label: Enterococcus faecium
+  candidate_pool: 1963
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1396
+  source: MADIN
+  taxon_label: Bacillus cereus
+  candidate_pool: 1963
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1408
+  source: MADIN
+  taxon_label: Bacillus pumilus
+  candidate_pool: 1963
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:145262
+  source: MADIN
+  taxon_label: Methanothermobacter thermautotrophicus
+  candidate_pool: 1963
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1492
+  source: MADIN
+  taxon_label: clostridium_butyricum
+  candidate_pool: 1963
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1496
+  source: MADIN
+  taxon_label: Clostridium difficile
+  candidate_pool: 1963
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1502
+  source: MADIN
+  taxon_label: Clostridium perfringens
+  candidate_pool: 1963
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:150248
+  source: MADIN
+  taxon_label: Anoxybacillus pushchinensis
+  candidate_pool: 1963
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1504
+  source: MADIN
+  taxon_label: clostridium_septicum
+  candidate_pool: 1963
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1526
+  source: MADIN
+  taxon_label: clostridium_aminophilum
+  candidate_pool: 1963
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1561
+  source: MADIN
+  taxon_label: clostridium_barati
+  candidate_pool: 1963
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1580
+  source: MADIN
+  taxon_label: Lactobacillus brevis
+  candidate_pool: 1963
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1587
+  source: MADIN
+  taxon_label: Lactobacillus helveticus
+  candidate_pool: 1963
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1590
+  source: MADIN
+  taxon_label: Lactobacillus plantarum
+  candidate_pool: 1963
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1596
+  source: MADIN
+  taxon_label: Lactobacillus gasseri
+  candidate_pool: 1963
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1598
+  source: MADIN
+  taxon_label: Lactobacillus reuteri
+  candidate_pool: 1963
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1613
+  source: MADIN
+  taxon_label: Lactobacillus fermentum
+  candidate_pool: 1963
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1624
+  source: MADIN
+  taxon_label: Lactobacillus salivarius
+  candidate_pool: 1963
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:163
+  source: MADIN
+  taxon_label: treponema_bryantii
+  candidate_pool: 1963
+  corroborated_by:
+  - PREGO
 - taxon_id: NCBITaxon:10020
   source: PREGO
   score: 4.0
@@ -108,12 +265,6 @@ characteristic_taxa:
   taxon_label: Clavaria zollingeri
   score: 4.0
   rank: 9
-  candidate_pool: 2406
-- taxon_id: NCBITaxon:1045010
-  source: PREGO
-  taxon_label: Escherichia coli O157
-  score: 4.0
-  rank: 10
   candidate_pool: 2406
 - taxon_id: NCBITaxon:106111
   source: PREGO
@@ -206,8 +357,8 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 2406
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-15T00:10:17Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, PREGO.
-    Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, MADIN,
+    PREGO. Grounding: EXACT.'

@@ -1,0 +1,43 @@
+identifier: UBERON:0002049
+label: vasculature
+definition: 'An interconnected tubular multi-tissue structure contains fluid that
+  is actively transported around the organism[ZFA]. Examples: vasculature of lung,
+  vasculature of face.'
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: vascular network
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0000477
+source_attestations:
+- source: MADIN
+  source_id: UBERON:0002049
+  source_label: vasculature
+  assertion_count: 4
+  assertion_unit: TAXON
+characteristic_taxa:
+- taxon_id: NCBITaxon:324057
+  source: MADIN
+  taxon_label: Paenibacillus sp. JDR-2
+  candidate_pool: 4
+- taxon_id: NCBITaxon:399742
+  source: MADIN
+  taxon_label: Enterobacter sp. 638
+  candidate_pool: 4
+- taxon_id: NCBITaxon:456493
+  source: MADIN
+  taxon_label: saccharibacillus_sacchari
+  candidate_pool: 4
+- taxon_id: NCBITaxon:519050
+  source: MADIN
+  taxon_label: Lactobacillus sucicola
+  candidate_pool: 4
+curation_history:
+- timestamp: '2026-08-15T00:10:17Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by MADIN. Grounding: EXACT.'

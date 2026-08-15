@@ -1,0 +1,124 @@
+identifier: ENVO:01000256
+label: mineral material
+definition: A mineral material is an environmental material which is primarily composed
+  of some substance that is naturally occurring, solid and stable at room temperature,
+  representable by a chemical formula, usually abiogenic, and that has an ordered
+  atomic structure.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: EXACT
+mapping_status: SEEDED
+parent_habitats:
+- ENVO:01000814
+source_attestations:
+- source: MADIN
+  source_id: ENVO:01000256
+  source_label: mineral material
+  assertion_count: 32
+  assertion_unit: TAXON
+characteristic_taxa:
+- taxon_id: NCBITaxon:1001240
+  source: MADIN
+  taxon_label: cryobacterium_roopkundense
+  candidate_pool: 32
+- taxon_id: NCBITaxon:1190417
+  source: MADIN
+  taxon_label: geodermatophilus_telluris
+  candidate_pool: 32
+- taxon_id: NCBITaxon:1260359
+  source: MADIN
+  taxon_label: Enterococcus faecalis 06-MB-S-04
+  candidate_pool: 32
+- taxon_id: NCBITaxon:1302659
+  source: MADIN
+  taxon_label: Planococcus versutus
+  candidate_pool: 32
+- taxon_id: NCBITaxon:1323664
+  source: MADIN
+  taxon_label: Paraburkholderia caribensis MBA4
+  candidate_pool: 32
+- taxon_id: NCBITaxon:145996
+  source: MADIN
+  taxon_label: Kibdelosporangium aridum largum DSM 44150
+  candidate_pool: 32
+- taxon_id: NCBITaxon:151654
+  source: MADIN
+  taxon_label: cupriavidus_laharis
+  candidate_pool: 32
+- taxon_id: NCBITaxon:159346
+  source: MADIN
+  taxon_label: roseibacterium_elongatum
+  candidate_pool: 32
+- taxon_id: NCBITaxon:168695
+  source: MADIN
+  taxon_label: salinispora_tropica
+  candidate_pool: 32
+- taxon_id: NCBITaxon:168697
+  source: MADIN
+  taxon_label: salinispora_arenicola
+  candidate_pool: 32
+- taxon_id: NCBITaxon:1788301
+  source: MADIN
+  taxon_label: Pseudomonas versuta
+  candidate_pool: 32
+- taxon_id: NCBITaxon:1902251
+  source: MADIN
+  taxon_label: Natrialbaceae archaeon JW/NM-HA 15
+  candidate_pool: 32
+- taxon_id: NCBITaxon:248026
+  source: MADIN
+  taxon_label: cupriavidus_pinatubonensis
+  candidate_pool: 32
+- taxon_id: NCBITaxon:28254
+  source: MADIN
+  taxon_label: alteromonas_communis
+  candidate_pool: 32
+- taxon_id: NCBITaxon:309483
+  source: MADIN
+  taxon_label: exiguobacterium_soli
+  candidate_pool: 32
+- taxon_id: NCBITaxon:345632
+  source: MADIN
+  taxon_label: geobacter_pickeringii
+  candidate_pool: 32
+- taxon_id: NCBITaxon:400091
+  source: MADIN
+  taxon_label: hymenobacter_xinjiangensis
+  candidate_pool: 32
+- taxon_id: NCBITaxon:400092
+  source: MADIN
+  taxon_label: Pontibacter korlensis
+  candidate_pool: 32
+- taxon_id: NCBITaxon:404385
+  source: MADIN
+  taxon_label: nonomuraea_bangladeshensis
+  candidate_pool: 32
+- taxon_id: NCBITaxon:404386
+  source: MADIN
+  taxon_label: nonomuraea_coxensis
+  candidate_pool: 32
+- taxon_id: NCBITaxon:454148
+  source: MADIN
+  taxon_label: Roseibacillus persicicus
+  candidate_pool: 32
+- taxon_id: NCBITaxon:472166
+  source: MADIN
+  taxon_label: brevundimonas_basaltis
+  candidate_pool: 32
+- taxon_id: NCBITaxon:472181
+  source: MADIN
+  taxon_label: pseudomonas_sabulinigri
+  candidate_pool: 32
+- taxon_id: NCBITaxon:472183
+  source: MADIN
+  taxon_label: Shewanella basaltis
+  candidate_pool: 32
+- taxon_id: NCBITaxon:472186
+  source: MADIN
+  taxon_label: vibrio_areninigrae
+  candidate_pool: 32
+curation_history:
+- timestamp: '2026-08-15T00:10:17Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by MADIN. Grounding: EXACT.'

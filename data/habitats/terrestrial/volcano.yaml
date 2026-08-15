@@ -20,6 +20,11 @@ source_attestations:
   source_id: volcanic_active
   source_label: volcanic_active
   notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: MADIN
+  source_id: ENVO:00000247
+  source_label: volcano
+  assertion_count: 28
+  assertion_unit: TAXON
 - source: PREGO
   source_id: ENVO:00000247
   source_label: volcano
@@ -65,17 +70,21 @@ characteristic_taxa:
   score: 3.0
   rank: 1
   candidate_pool: 6
-- taxon_id: NCBITaxon:427317
-  source: PREGO
-  taxon_label: Saccharolobus islandicus M.14.25
-  score: 3.0
-  rank: 2
-  candidate_pool: 6
+  corroborated_by:
+  - MADIN
 - taxon_id: NCBITaxon:427318
   source: PREGO
   taxon_label: Saccharolobus islandicus M.16.27
   score: 3.0
   rank: 3
+  candidate_pool: 6
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:427317
+  source: PREGO
+  taxon_label: Saccharolobus islandicus M.14.25
+  score: 3.0
+  rank: 2
   candidate_pool: 6
 - taxon_id: NCBITaxon:574699
   source: PREGO
@@ -95,9 +104,101 @@ characteristic_taxa:
   score: 3.0
   rank: 6
   candidate_pool: 6
+- taxon_id: NCBITaxon:1122961
+  source: MADIN
+  taxon_label: Picrophilus oshimae DSM 9789
+  candidate_pool: 28
+- taxon_id: NCBITaxon:120958
+  source: MADIN
+  taxon_label: Thermoanaerobacter sulfurigignens
+  candidate_pool: 28
+- taxon_id: NCBITaxon:1241935
+  source: MADIN
+  taxon_label: Sulfolobus islandicus LAL14/1
+  candidate_pool: 28
+- taxon_id: NCBITaxon:1365176
+  source: MADIN
+  taxon_label: Thermofilum adornatus
+  candidate_pool: 28
+- taxon_id: NCBITaxon:162154
+  source: MADIN
+  taxon_label: Arcobacter sulfidicus
+  candidate_pool: 28
+- taxon_id: NCBITaxon:1838280
+  source: MADIN
+  taxon_label: Desulfotomaculum copahuensis CINDEFI1
+  candidate_pool: 28
+- taxon_id: NCBITaxon:190967
+  source: MADIN
+  taxon_label: desulfotomaculum_solfataricum
+  candidate_pool: 28
+- taxon_id: NCBITaxon:2181
+  source: MADIN
+  taxon_label: Methanothermus sociabilis
+  candidate_pool: 28
+- taxon_id: NCBITaxon:2283
+  source: MADIN
+  taxon_label: Acidianus ambivalens
+  candidate_pool: 28
+- taxon_id: NCBITaxon:263820
+  source: MADIN
+  taxon_label: Picrophilus torridus DSM 9790
+  candidate_pool: 28
+- taxon_id: NCBITaxon:35616
+  source: MADIN
+  taxon_label: Pyrodictium brockii
+  candidate_pool: 28
+- taxon_id: NCBITaxon:380174
+  source: MADIN
+  taxon_label: cohnella_laeviribosi
+  candidate_pool: 28
+- taxon_id: NCBITaxon:399579
+  source: MADIN
+  taxon_label: thermogymnomonas_acidicola
+  candidate_pool: 28
+- taxon_id: NCBITaxon:471514
+  source: MADIN
+  taxon_label: alicyclobacillus_ferrooxydans
+  candidate_pool: 28
+- taxon_id: NCBITaxon:523846
+  source: MADIN
+  taxon_label: Methanothermus fervidus DSM 2088
+  candidate_pool: 28
+- taxon_id: NCBITaxon:667306
+  source: MADIN
+  taxon_label: aciditerrimonas_ferrireducens
+  candidate_pool: 28
+- taxon_id: NCBITaxon:675631
+  source: MADIN
+  taxon_label: Desulfurococcus mobilis DSM 2161
+  candidate_pool: 28
+- taxon_id: NCBITaxon:688269
+  source: MADIN
+  taxon_label: Pseudothermotoga thermarum DSM 5069
+  candidate_pool: 28
+- taxon_id: NCBITaxon:69014
+  source: MADIN
+  taxon_label: Thermococcus kodakarensis KOD1
+  candidate_pool: 28
+- taxon_id: NCBITaxon:765177
+  source: MADIN
+  taxon_label: Desulfurococcus mucosus DSM 2162
+  candidate_pool: 28
+- taxon_id: NCBITaxon:85993
+  source: MADIN
+  taxon_label: Hydrogenophilus hirschii
+  candidate_pool: 28
+- taxon_id: NCBITaxon:929558
+  source: MADIN
+  taxon_label: Campylobacterales sp. GD 1
+  candidate_pool: 28
+- taxon_id: NCBITaxon:930943
+  source: MADIN
+  taxon_label: Sulfolobus islandicus HVE10/4
+  candidate_pool: 28
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-15T00:10:17Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, PREGO.
-    Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, MADIN,
+    PREGO. Grounding: EXACT.'

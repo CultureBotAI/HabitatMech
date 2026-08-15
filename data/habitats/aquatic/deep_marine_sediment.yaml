@@ -30,6 +30,11 @@ source_attestations:
   source_id: sediment_marine_deep
   source_label: sediment_marine_deep
   notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: MADIN
+  source_id: ENVO:00002113
+  source_label: deep marine sediment
+  assertion_count: 19
+  assertion_unit: TAXON
 - source: PREGO
   source_id: ENVO:00002113
   source_label: deep marine sediment
@@ -69,6 +74,24 @@ environmental_parameters:
   qualitative_value: permanently wet
   source: kg-microbe environments.csv (sediment_marine_deep)
 characteristic_taxa:
+- taxon_id: NCBITaxon:234831
+  source: MADIN
+  taxon_label: Pseudoalteromonas sp. SM9913
+  candidate_pool: 19
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:252514
+  source: MADIN
+  taxon_label: microbulbifer_thermotolerans
+  candidate_pool: 19
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:555079
+  source: MADIN
+  taxon_label: Thermosediminibacter oceani DSM 16646
+  candidate_pool: 19
+  corroborated_by:
+  - PREGO
 - taxon_id: NCBITaxon:1026
   source: PREGO
   taxon_label: Marinoscillum furvescens
@@ -218,9 +241,73 @@ characteristic_taxa:
   score: 4.0
   rank: 25
   candidate_pool: 2065
+- taxon_id: NCBITaxon:1208324
+  source: MADIN
+  taxon_label: celeribacter_indicus
+  candidate_pool: 19
+- taxon_id: NCBITaxon:1267766
+  source: MADIN
+  taxon_label: Altererythrobacter atlanticus
+  candidate_pool: 19
+- taxon_id: NCBITaxon:1648404
+  source: MADIN
+  taxon_label: Erythrobacter atlanticus
+  candidate_pool: 19
+- taxon_id: NCBITaxon:1798213
+  source: MADIN
+  taxon_label: Pseudovibrio sp. Tun.PSC04-5.I4
+  candidate_pool: 19
+- taxon_id: NCBITaxon:195522
+  source: MADIN
+  taxon_label: Thermococcus nautili
+  candidate_pool: 19
+- taxon_id: NCBITaxon:211669
+  source: MADIN
+  taxon_label: psychromonas_hadalis
+  candidate_pool: 19
+- taxon_id: NCBITaxon:260552
+  source: MADIN
+  taxon_label: microbulbifer_agarilyticus
+  candidate_pool: 19
+- taxon_id: NCBITaxon:263358
+  source: MADIN
+  taxon_label: Verrucosispora maris AB-18-032
+  candidate_pool: 19
+- taxon_id: NCBITaxon:358099
+  source: MADIN
+  taxon_label: brevibacterium_oceani
+  candidate_pool: 19
+- taxon_id: NCBITaxon:358100
+  source: MADIN
+  taxon_label: microbacterium_indicum
+  candidate_pool: 19
+- taxon_id: NCBITaxon:385025
+  source: MADIN
+  taxon_label: Cycloclasticus sp. P1
+  candidate_pool: 19
+- taxon_id: NCBITaxon:388746
+  source: MADIN
+  taxon_label: puniceicoccus_vermicola
+  candidate_pool: 19
+- taxon_id: NCBITaxon:490759
+  source: MADIN
+  taxon_label: Marinobacter sp. BSs20148
+  candidate_pool: 19
+- taxon_id: NCBITaxon:74109
+  source: MADIN
+  taxon_label: photobacterium_profundum
+  candidate_pool: 19
+- taxon_id: NCBITaxon:748449
+  source: MADIN
+  taxon_label: Halobacteroides halobius DSM 5150
+  candidate_pool: 19
+- taxon_id: NCBITaxon:89067
+  source: MADIN
+  taxon_label: moritella_japonica
+  candidate_pool: 19
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-15T00:10:17Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, PREGO.
-    Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, MADIN,
+    PREGO. Grounding: EXACT.'

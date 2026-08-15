@@ -23,6 +23,11 @@ source_attestations:
   source_id: water
   source_label: water
   notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: MADIN
+  source_id: ENVO:00002006
+  source_label: liquid water
+  assertion_count: 312
+  assertion_unit: TAXON
 - source: PREGO
   source_id: ENVO:00002006
   source_label: liquid water
@@ -44,6 +49,156 @@ environmental_parameters:
   qualitative_value: permanently wet
   source: kg-microbe environments.csv (water)
 characteristic_taxa:
+- taxon_id: NCBITaxon:1270
+  source: MADIN
+  taxon_label: Micrococcus luteus
+  candidate_pool: 312
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1280
+  source: MADIN
+  taxon_label: Staphylococcus aureus
+  candidate_pool: 312
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1402
+  source: MADIN
+  taxon_label: bacillus_licheniformis
+  candidate_pool: 312
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1525
+  source: MADIN
+  taxon_label: Clostridium thermoaceticum
+  candidate_pool: 312
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1639
+  source: MADIN
+  taxon_label: Listeria monocytogenes
+  candidate_pool: 312
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:172045
+  source: MADIN
+  taxon_label: chryseobacterium_miricola
+  candidate_pool: 312
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:1768
+  source: MADIN
+  taxon_label: Mycobacterium kansasii
+  candidate_pool: 312
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:204773
+  source: MADIN
+  taxon_label: herminiimonas_arsenicoxydans
+  candidate_pool: 312
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:244366
+  source: MADIN
+  taxon_label: klebsiella_singaporensis
+  candidate_pool: 312
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:286698
+  source: MADIN
+  taxon_label: Geobacter psychrophilus
+  candidate_pool: 312
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:287
+  source: MADIN
+  taxon_label: Pseudomonas aeruginosa
+  candidate_pool: 312
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:292
+  source: MADIN
+  taxon_label: burkholderia_cepacia
+  candidate_pool: 312
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:293
+  source: MADIN
+  taxon_label: Brevundimonas diminuta
+  candidate_pool: 312
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:300
+  source: MADIN
+  taxon_label: pseudomonas_mendocina
+  candidate_pool: 312
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:304
+  source: MADIN
+  taxon_label: Pelomonas saccharophila
+  candidate_pool: 312
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:313606
+  source: MADIN
+  taxon_label: Microscilla marina ATCC 23134
+  candidate_pool: 312
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:316
+  source: MADIN
+  taxon_label: Pseudomonas stutzeri
+  candidate_pool: 312
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:358
+  source: MADIN
+  taxon_label: achromobacter_radiobacter
+  candidate_pool: 312
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:40214
+  source: MADIN
+  taxon_label: acinetobacter_johnsonii
+  candidate_pool: 312
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:42256
+  source: MADIN
+  taxon_label: Rubrobacter radiotolerans
+  candidate_pool: 312
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:441157
+  source: MADIN
+  taxon_label: Burkholderia thailandensis MSMB43
+  candidate_pool: 312
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:521674
+  source: MADIN
+  taxon_label: Planctopirus limnophila DSM 3776
+  candidate_pool: 312
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:548
+  source: MADIN
+  taxon_label: Aerobacter aerogenes
+  candidate_pool: 312
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:562
+  source: MADIN
+  taxon_label: Escherichia coli
+  candidate_pool: 312
+  corroborated_by:
+  - PREGO
+- taxon_id: NCBITaxon:573060
+  source: MADIN
+  taxon_label: Acidovorax delafieldii 2AN
+  candidate_pool: 312
+  corroborated_by:
+  - PREGO
 - taxon_id: NCBITaxon:1026
   source: PREGO
   taxon_label: Marinoscillum furvescens
@@ -195,8 +350,8 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 2679
 curation_history:
-- timestamp: '2026-08-14T22:31:40Z'
+- timestamp: '2026-08-15T00:10:17Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, PREGO.
-    Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, MADIN,
+    PREGO. Grounding: EXACT.'
