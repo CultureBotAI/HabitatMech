@@ -60,6 +60,54 @@ COHORTS = {
 RISK_COHORTS = ("subset", "disjoint")
 
 
+# Tops of the "this term is an ORGANISM" hierarchies, reachable now that #46
+# vendors ancestry for referenced terms. This is the one defect an exact label
+# match cannot catch and #69 could not screen for: NCIT:C77916 "Protozoa" IS
+# labelled Protozoa, and is a taxon rather than a place.
+ORGANISM_ROOTS = {"NCIT:C14250", "mesh:D056890", "mesh:D056891"}
+
+
+def _ancestors(term: str, parents: dict[str, list[str]], limit: int = 14) -> set[str]:
+    seen: set[str] = set()
+    frontier, depth = [term], 0
+    while frontier and depth < limit:
+        nxt = []
+        for node in frontier:
+            for parent in parents.get(node, ()):
+                if parent not in seen:
+                    seen.add(parent)
+                    nxt.append(parent)
+        frontier, depth = nxt, depth + 1
+    return seen
+
+
+def _organism_identities(records: list[tuple[Path, dict]]) -> list[tuple]:
+    """Records whose identity is an organism rather than a place.
+
+    A screen that returns nothing because it is broken looks exactly like one
+    that returns nothing because the corpus is clean, so a test pins that it
+    still detects NCIT:C77916 and still rejects NCIT:C17649 (#46, #69).
+    """
+    edges_path = REPO_ROOT / "data" / "raw" / "ontology_subclass_edges.tsv"
+    if not edges_path.exists():
+        return []
+    parents: dict[str, list[str]] = defaultdict(list)
+    with edges_path.open(newline="", encoding="utf-8") as fh:
+        for row in csv.DictReader(fh, delimiter="\t"):
+            parents[row["subject"]].append(row["object"])
+    out = []
+    for _, doc in records:
+        identifier = doc.get("identifier", "")
+        if identifier.startswith("habitatmech:") or doc.get("mapping_status") == "REVIEWED":
+            continue
+        if _ancestors(identifier, parents) & ORGANISM_ROOTS:
+            assertions = sum(
+                a.get("assertion_count") or 0 for a in doc.get("source_attestations") or []
+            )
+            out.append((assertions, identifier, doc.get("label", "")))
+    return sorted(out, reverse=True)
+
+
 def _words(text: str) -> set[str]:
     return {w for w in norm_label(text).split() if w}
 
@@ -489,6 +537,16 @@ def main(argv: list[str] | None = None) -> int:
         ):
             print(f"  {assertions:7d}  {cohort:8s} {source_label[:24]:24s} -> "
                   f"{label[:32]:32s} {identifier}")
+
+    organism = _organism_identities(records)
+    print(f"\n=== {len(organism)} unreviewed record(s) whose identity is an organism ===")
+    print("  (a taxon is not a habitat. An exact label match cannot see this — ")
+    print("   NCIT:C77916 really is labelled Protozoa — so it is asked of the")
+    print("   ontology's own ancestry instead, vendored by #46.)")
+    for assertions, identifier, label in organism[: args.ungrounded_top or None]:
+        print(f"  {assertions:8d}  {label[:40]:40s} {identifier}")
+    if not organism:
+        print("  none — the class is currently empty, and stays visible if it refills")
 
     unverifiable = _unverifiable_mapping_targets()
     if unverifiable:

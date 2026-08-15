@@ -173,12 +173,18 @@ def validate_decisions(
     ontology_label: dict[str, str],
     *,
     path: Path | None = None,
+    label_only: set[str] | None = None,
 ) -> None:
     """Fail loudly on any decision that is malformed or cannot be verified.
 
     ``ontology_label`` maps term id -> label for the vendored slice. A GROUND
     target absent from it is either invented or outside what the repo vendors;
     either way the seeder must not act on it silently.
+
+    ``label_only`` names the terms the slice has a label for but no place for —
+    pulled in to check a mapping target, never positioned in a hierarchy. A
+    record grounded onto one has no parents, no siblings and nothing above it,
+    and until #46 that was indistinguishable here from a properly vendored term.
     """
     where = f"{path}: " if path else ""
     problems: list[str] = []
@@ -267,6 +273,13 @@ def validate_decisions(
                 problems.append(
                     f"{prefix}: {decision.object_id} is {actual!r}, "
                     f"not {decision.object_label!r} — wrong term, or wrong label"
+                )
+            elif decision.is_grounding and decision.object_id in (label_only or set()):
+                problems.append(
+                    f"{prefix}: {decision.object_id} is in the slice as a bare label with "
+                    "no position in any hierarchy, so grounding onto it would produce a "
+                    "record with no parents and no siblings. Vendor its ancestry (see "
+                    "_reference_ancestry in the extractor) or ground somewhere placed (#46)"
                 )
 
     if problems:

@@ -328,3 +328,56 @@ def test_narrowed_grounding_is_forgiven_when_the_path_already_said_it():
     assert grounding_cohort(
         "Raw milk", "cow milk (raw)", "Engineered > Food production > Dairy products > Raw milk"
     ) == "narrowed"
+
+
+def test_the_organism_screen_still_detects_a_known_taxon():
+    """A screen that returns nothing because it is broken looks exactly like
+    one that returns nothing because the corpus is clean — and this one returns
+    nothing today. So pin both directions against terms whose answer is known:
+    NCIT:C77916 "Protozoa" reaches Organism, NCIT:C17649 "Other" does not (#46)."""
+    import csv
+    import sys
+    from collections import defaultdict
+    from pathlib import Path
+
+    root = Path(__file__).resolve().parent.parent
+    sys.path.insert(0, str(root / "scripts"))
+    from habitat_report import ORGANISM_ROOTS, _ancestors
+
+    parents = defaultdict(list)
+    with (root / "data" / "raw" / "ontology_subclass_edges.tsv").open(
+        newline="", encoding="utf-8"
+    ) as fh:
+        for row in csv.DictReader(fh, delimiter="\t"):
+            parents[row["subject"]].append(row["object"])
+
+    assert _ancestors("NCIT:C77916", parents) & ORGANISM_ROOTS, (
+        "Protozoa no longer reaches an organism root — the vendored ancestry has "
+        "regressed and the screen is silently answering 'clean' for everything"
+    )
+    assert _ancestors("mesh:D044003", parents) & ORGANISM_ROOTS, "Sphagnopsida is a plant"
+    assert not _ancestors("NCIT:C17649", parents) & ORGANISM_ROOTS, (
+        "NCIT 'Other' is a qualifier, not an organism — the screen is over-reporting"
+    )
+
+
+def test_no_decision_grounds_onto_a_term_with_no_place_in_a_hierarchy(raw_tsv):
+    """A record grounded onto a bare label has no parents and no siblings. The
+    slice marks those rows explicitly rather than leaving them to be inferred
+    from a missing subclass edge — 2444 fully vendored terms have none either,
+    because they are leaves or their parents fell outside the slice (#46)."""
+    import csv
+    from pathlib import Path
+
+    root = Path(__file__).resolve().parent.parent
+    label_only = {
+        r["term_id"] for r in raw_tsv("ontology_terms.tsv") if r.get("label_only") == "TRUE"
+    }
+    assert label_only, "nothing marked label_only; the marker is not being written"
+    with (root / "curation" / "decisions.tsv").open(newline="", encoding="utf-8") as fh:
+        offenders = [
+            (r["identifier"], r["object_id"])
+            for r in csv.DictReader(fh, delimiter="\t")
+            if r["decision"] in ("GROUND", "GROUND_AS_PARENT") and r["object_id"] in label_only
+        ]
+    assert not offenders, f"groundings onto an unplaced term: {offenders[:5]}"

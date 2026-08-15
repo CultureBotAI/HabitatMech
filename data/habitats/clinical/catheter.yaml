@@ -7,6 +7,8 @@ synonyms:
 - synonym_text: Catheter
   synonym_type: EXACT_SYNONYM
   source: BacDive
+parent_habitats:
+- NCIT:C49755
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:catheter
@@ -166,7 +168,7 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 52
 curation_history:
-- timestamp: '2026-08-15T00:10:17Z'
+- timestamp: '2026-08-15T05:06:21Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

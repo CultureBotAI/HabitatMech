@@ -499,6 +499,125 @@ def extract_madin(kgm: Path) -> tuple[list[dict[str, Any]], list[dict[str, Any]]
     return habitat_rows, taxa_rows, dict(taxa)
 
 
+def _reference_ancestry(
+    kgm: Path, seeds: set[str], max_depth: int = 12
+) -> tuple[dict[str, str], list[tuple[str, str]]]:
+    """Ancestors of the referenced terms, so they are not left dangling.
+
+    #41 pulled in labels for mapping targets outside the four vendored
+    ontologies, deliberately without ancestry — nothing walked the hierarchy of
+    a CHEBI or NCIT target at the time. Two consequences followed, and this
+    fixes both:
+
+    * a curator could GROUND onto one of them and get a record with no parents,
+      no siblings and no placement, which `validate_decisions` could not tell
+      apart from a properly vendored term (#46);
+    * and #69 wanted to screen the 856 exact-match groundings for the one defect
+      an exact match cannot catch — a term that is an ORGANISM rather than a
+      place, like NCIT:C77916 "Protozoa". That needs exactly this: Protozoa ->
+      Protista -> Eukaryota -> NCIT:C14250 "Organism".
+
+    Returns (labels of every ancestor reached, child->parent edges). Depth is
+    capped because NCBITaxon chains run to the root of life and nothing here
+    needs the top of that.
+    """
+    labels: dict[str, str] = {}
+    edges: list[tuple[str, str]] = []
+
+    def walk(parents_of: dict[str, list[str]], names: dict[str, str], wanted: set[str]) -> None:
+        frontier, depth = set(wanted), 0
+        seen: set[str] = set()
+        while frontier and depth < max_depth:
+            nxt: set[str] = set()
+            for node in frontier:
+                for parent in parents_of.get(node, ()):
+                    edges.append((node, parent))
+                    if parent not in seen:
+                        nxt.add(parent)
+                    # An ancestor we cannot name is worse than no ancestor: it
+                    # puts an unlabelled row in the slice that renders as a bare
+                    # CURIE. BFO shows up this way through CHEBI's upper levels.
+                    if names.get(parent):
+                        labels[parent] = names[parent]
+                seen.add(node)
+            frontier, depth = nxt - seen, depth + 1
+
+    # NCBITaxon is deliberately absent: kg-microbe exports a "removed subset"
+    # of it, so most of the taxa referenced here have no edge in that file. It
+    # costs nothing — NCBITaxon is not in HABITAT_PREFIXES, so a taxon can never
+    # become a record identity, and the prefix alone already says "organism".
+    for name in ("chebi", "go", "pato"):
+        wanted = {t for t in seeds if t.startswith(name.upper().replace("NCBITAXON", "NCBITaxon") + ":")}
+        edges_path = kgm / "data" / "transformed" / "ontologies" / f"{name}_edges.tsv"
+        nodes_path = kgm / "data" / "transformed" / "ontologies" / f"{name}_nodes.tsv"
+        if not wanted or not edges_path.exists():
+            continue
+        names = {r["id"]: (r.get("name") or "").strip() for r in read_tsv(nodes_path)}
+        parents_of: dict[str, list[str]] = defaultdict(list)
+        for row in read_tsv(edges_path):
+            if row.get("predicate") == "biolink:subclass_of":
+                parents_of[row["subject"]].append(row["object"])
+        walk(parents_of, names, wanted)
+
+    ncit_wanted = {t for t in seeds if t.startswith("NCIT:")}
+    ncit_db = kgm / "data" / "raw" / "ncit.db"
+    if ncit_wanted and ncit_db.exists():
+        conn = sqlite3.connect(f"file:{ncit_db}?mode=ro", uri=True)
+        try:
+            frontier, depth, seen = set(ncit_wanted), 0, set()
+            while frontier and depth < max_depth:
+                placeholders = ",".join("?" * len(frontier))
+                found = conn.execute(
+                    f"SELECT subject, object FROM statements WHERE predicate = 'rdfs:subClassOf' "
+                    f"AND object LIKE 'NCIT:%' AND subject IN ({placeholders})",
+                    sorted(frontier),
+                ).fetchall()
+                seen |= frontier
+                nxt = set()
+                for child, parent in found:
+                    edges.append((child, parent))
+                    if parent not in seen:
+                        nxt.add(parent)
+                for parent in nxt:
+                    label = conn.execute(
+                        "SELECT value FROM statements WHERE subject = ? AND predicate = 'rdfs:label'",
+                        (parent,),
+                    ).fetchone()
+                    if label and label[0]:
+                        labels[parent] = label[0].strip()
+                frontier, depth = nxt, depth + 1
+        finally:
+            conn.close()
+
+    mesh_wanted = {t for t in seeds if t.startswith("mesh:")}
+    mesh_dumps = sorted((kgm / "data" / "raw").glob("mesh*.nt.gz"))
+    if mesh_wanted and mesh_dumps:
+        # MeSH spells the hierarchy as broaderDescriptor rather than subClassOf.
+        broader = re.compile(
+            r"<http://id\.nlm\.nih\.gov/mesh/(?:\d{4}/)?([^>]+)>\s+"
+            r"<http://id\.nlm\.nih\.gov/mesh/vocab#broaderDescriptor>\s+"
+            r"<http://id\.nlm\.nih\.gov/mesh/(?:\d{4}/)?([^>]+)>"
+        )
+        label_of = re.compile(
+            r"<http://id\.nlm\.nih\.gov/mesh/(?:\d{4}/)?([^>]+)>\s+"
+            r"<http://www\.w3\.org/2000/01/rdf-schema#label>\s+\"([^\"]+)\""
+        )
+        parents_of: dict[str, list[str]] = defaultdict(list)
+        names: dict[str, str] = {}
+        with gzip.open(mesh_dumps[-1], "rt", encoding="utf-8", errors="replace") as fh:
+            for line in fh:
+                found = broader.match(line)
+                if found:
+                    parents_of[f"mesh:{found.group(1)}"].append(f"mesh:{found.group(2)}")
+                    continue
+                named = label_of.match(line)
+                if named:
+                    names[f"mesh:{named.group(1)}"] = named.group(2).strip()
+        walk(parents_of, names, mesh_wanted)
+
+    return labels, edges
+
+
 def _trim_unranked(
     taxa_rows: list[dict[str, Any]], key: str, limit: int
 ) -> list[dict[str, Any]]:
@@ -609,8 +728,17 @@ def extract_environment_parameters(kgm: Path) -> list[dict[str, Any]]:
 # Curated isolation-source groundings
 # ---------------------------------------------------------------------------
 
-def extract_groundings(kgm: Path) -> list[dict[str, Any]]:
-    path = kgm / "mappings" / "isolation_source_to_ontology.tsv"
+def extract_groundings(kgm: Path, mappings: Path | None = None) -> list[dict[str, Any]]:
+    """The curated isolation-source mapping table.
+
+    ``mappings`` overrides where it is read from. That exists because the
+    extractor otherwise reads whatever branch the kg-microbe checkout happens to
+    be sitting on, and the mapping table is the file that varies most between
+    them: a re-extraction silently swapped in a branch that never carried the
+    kg-microbe#777 fixes and reverted #53's ingest, with nothing failing until
+    the label check started rejecting sixteen rows again (#72).
+    """
+    path = mappings or (kgm / "mappings" / "isolation_source_to_ontology.tsv")
     rows = []
     for row in read_tsv(path):
         rows.append(
@@ -934,6 +1062,7 @@ def extract_ontology_terms(
             "synonyms": all_terms[term_id]["synonyms"],
             "deprecated": all_terms[term_id]["deprecated"],
             "directly_referenced": "TRUE" if term_id in referenced else "FALSE",
+            "label_only": "FALSE",
         }
         for term_id in sorted(keep)
     ]
@@ -946,6 +1075,18 @@ def extract_ontology_terms(
     # Mapping targets outside the four vendored ontologies, label-only. Without
     # them the seeder's label check silently passes on 87 of 283 targets (#41).
     extra = _reference_labels(kgm, {t for t in referenced if t not in keep})
+    # ...and their ancestors, so a referenced term is a real slice member rather
+    # than a floating label. Without this a GROUND onto one produced a record
+    # with no placement at all, indistinguishable to validate_decisions from a
+    # properly vendored term (#46), and there was no way to ask whether a term
+    # is an organism rather than a place (#69).
+    ancestor_labels, ancestor_edges = _reference_ancestry(kgm, set(extra))
+    referenced_terms = {**ancestor_labels, **extra}
+    # "Placed" means the term sits somewhere in a hierarchy we vendored, as a
+    # child OR as a parent. Testing only for a parent marks every ROOT as
+    # unplaced — NCIT:C14250 "Organism" and mesh:D005842 "Geographic Locations"
+    # have no parent because they are the top, not because they are floating.
+    placed = {child for child, _ in ancestor_edges} | {p for _, p in ancestor_edges}
     term_rows.extend(
         {
             "term_id": term_id,
@@ -954,11 +1095,26 @@ def extract_ontology_terms(
             "definition": "",
             "synonyms": "",
             "deprecated": "",
-            "directly_referenced": "TRUE",
+            "directly_referenced": "TRUE" if term_id in extra else "FALSE",
+            # The marker #46 asked for. A row that is still only a label cannot
+            # be grounded onto, and saying so explicitly beats inferring it from
+            # a missing subclass edge — 2444 fully vendored terms have none
+            # either, because they are leaves or their parents fell outside.
+            "label_only": "FALSE" if term_id in placed else "TRUE",
         }
-        for term_id, label in sorted(extra.items())
+        for term_id, label in sorted(referenced_terms.items())
+    )
+    known = {r["term_id"] for r in term_rows}
+    edge_rows.extend(
+        {"subject": child, "predicate": "rdfs:subClassOf", "object": parent}
+        for child, parent in sorted(set(ancestor_edges))
+        if child in known and parent in known
     )
     term_rows.sort(key=lambda r: r["term_id"])
+    edge_rows.sort(key=lambda r: (r["subject"], r["object"]))
+    still_label_only = sum(1 for r in term_rows if r.get("label_only") == "TRUE")
+    print(f"  vendored ancestry for {len(placed)} referenced term(s), "
+          f"{len(ancestor_labels)} ancestor(s) pulled in; {still_label_only} still label-only")
     return term_rows, edge_rows
 
 
@@ -1001,6 +1157,8 @@ def build_manifest(
     *,
     hash_inputs: bool,
     gold_truncated_paths: int = 0,
+    mappings_override: Path | None = None,
+    mappings_source: str | None = None,
 ) -> str:
     lines = [
         "# Provenance for the inventories in data/raw/.",
@@ -1008,6 +1166,14 @@ def build_manifest(
         "# Emitted by scripts/extract_source_inventory.py — do not hand-edit.",
         f"extracted_at: '{_utc_now_iso()}'",
         f"kg_microbe_source: {_describe_source(kgm)}",
+        # Recording the commit while having read the mapping table from
+        # somewhere else would be a provenance lie, and provenance is this
+        # file's entire job (#72).
+        *([f"mappings_source: {mappings_source or 'unrecorded — pass --mappings-from'}",
+           f"mappings_staged_at: {mappings_override}",
+           "mappings_note: pinned separately, so kg_microbe_source describes every OTHER "
+           "input. mappings_staged_at is a local path; the sha256 below identifies the bytes."]
+          if mappings_override else []),
         # A non-zero count means GOLD's parent chain contained a cycle and some
         # canonical paths are truncated — see the extractor's WARNING output.
         f"gold_truncated_paths: {gold_truncated_paths}",
@@ -1016,7 +1182,13 @@ def build_manifest(
     for path in inputs:
         stat = path.stat()
         mtime = datetime.datetime.fromtimestamp(stat.st_mtime, datetime.timezone.utc)
-        lines.append(f"  - path: {path.relative_to(kgm)}")
+        # An input pinned with --mappings lives outside the checkout, so it has
+        # no path relative to it. Name it as given rather than crashing (#72).
+        try:
+            shown = path.relative_to(kgm)
+        except ValueError:
+            shown = path
+        lines.append(f"  - path: {shown}")
         lines.append(f"    bytes: {stat.st_size}")
         stamp = mtime.isoformat(timespec="seconds").replace("+00:00", "Z")
         lines.append(f"    mtime: '{stamp}'")
@@ -1061,6 +1233,15 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--dry-run", action="store_true", help="Report counts without writing files.")
     parser.add_argument("--no-hash", action="store_true", help="Skip sha256 of inputs in the manifest.")
     parser.add_argument(
+        "--mappings", type=Path,
+        help="Read the isolation-source mapping table from here instead of the "
+             "checkout, to pin it while the checkout sits on another branch (#72).")
+    parser.add_argument(
+        "--mappings-from",
+        help="Where the pinned table came from, e.g. kg-microbe@bfd350e:mappings/... "
+             "Recorded in the manifest, because the local path it was staged at is "
+             "not something anyone else can look up (#74).")
+    parser.add_argument(
         "--top-taxa",
         type=int,
         default=25,
@@ -1104,7 +1285,7 @@ def main(argv: list[str] | None = None) -> int:
     print(f"  {len(param_rows)} parameter assertions")
 
     print("extracting curated isolation-source groundings ...")
-    grounding_rows = extract_groundings(kgm)
+    grounding_rows = extract_groundings(kgm, args.mappings)
     print(f"  {len(grounding_rows)} mapping rows")
 
     # Cross-source corroboration. PREGO reaches taxa by text mining and genome
@@ -1305,7 +1486,8 @@ def main(argv: list[str] | None = None) -> int:
             grounding_rows,
         ),
         "ontology_terms.tsv": (
-            ["term_id", "ontology", "label", "definition", "synonyms", "deprecated", "directly_referenced"],
+            ["term_id", "ontology", "label", "definition", "synonyms", "deprecated",
+             "directly_referenced", "label_only"],
             term_rows,
         ),
         "ontology_subclass_edges.tsv": (["subject", "predicate", "object"], edge_rows),
@@ -1331,14 +1513,32 @@ def main(argv: list[str] | None = None) -> int:
         kgm / "data" / "transformed" / "madin_etal" / "nodes.tsv",
         kgm / "data" / "transformed" / "madin_etal" / "edges.tsv",
         kgm / "data" / "raw" / "environments.csv",
-        kgm / "mappings" / "isolation_source_to_ontology.tsv",
+        args.mappings or (kgm / "mappings" / "isolation_source_to_ontology.tsv"),
     ]
+    # The checkout is not pinned anywhere, so a re-extraction can silently read
+    # a different branch than the one the committed inventories came from. Say
+    # so rather than letting it through unnoticed (#72).
+    previous = RAW_DIR / "MANIFEST.yaml"
+    if previous.exists():
+        for line in previous.read_text(encoding="utf-8").splitlines():
+            if line.startswith("kg_microbe_source:"):
+                was = line.split(":", 1)[1].strip()
+                now = _describe_source(kgm)
+                if was != now:
+                    print(f"  WARNING: the checkout has moved since the committed "
+                          f"inventories were extracted\n           was {was}\n"
+                          f"           now {now}\n"
+                          f"           Check what changed before committing this.")
+                break
+
     manifest = build_manifest(
         kgm,
         [p for p in manifest_inputs if p.exists()],
         {name: len(rows) for name, (_, rows) in outputs.items()},
         hash_inputs=not args.no_hash,
         gold_truncated_paths=len(gold_truncated),
+        mappings_override=args.mappings,
+        mappings_source=args.mappings_from,
     )
     (args.out / "MANIFEST.yaml").write_text(manifest, encoding="utf-8")
     print(f"wrote {args.out / 'MANIFEST.yaml'}")
