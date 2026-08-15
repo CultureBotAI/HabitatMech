@@ -260,6 +260,48 @@ def _unverifiable_mapping_targets() -> list[tuple[str, str, str, bool]]:
     return sorted(out, key=lambda r: (not r[3], r[0]))
 
 
+def _stale_class_sweeps(class_swept: set[str], records: list[tuple[Path, dict]]) -> list[tuple]:
+    """Class-swept concepts the growing slice has since given a match.
+
+    A class-level sweep asserts a NEGATIVE — "no term in the vendored slice
+    matched this label by any lexical route" — and that claim decays as the
+    slice grows. Vendoring PO (#10) and then the referenced ancestry (#46) made
+    it false for 20 of the 933 swept concepts, and nothing re-checked it: the
+    decision still reads as a considered judgement while its stated reason has
+    stopped being true (#12).
+    """
+    raw = REPO_ROOT / "data" / "raw" / "ontology_terms.tsv"
+    if not raw.exists() or not class_swept:
+        return []
+    by_label: dict[str, str] = {}
+    by_synonym: dict[str, str] = {}
+    with raw.open(newline="", encoding="utf-8") as fh:
+        for row in csv.DictReader(fh, delimiter="\t"):
+            key = norm_label(row["label"])
+            if key:
+                by_label.setdefault(key, row["term_id"])
+            for synonym in (row["synonyms"] or "").split("|"):
+                skey = norm_label(synonym)
+                if skey:
+                    by_synonym.setdefault(skey, row["term_id"])
+    out = []
+    for _, doc in records:
+        if doc.get("identifier") not in class_swept:
+            continue
+        for attestation in doc.get("source_attestations") or []:
+            key = norm_label(attestation.get("source_label") or "")
+            found = by_label.get(key) or by_synonym.get(key)
+            if not found:
+                continue
+            assertions = sum(
+                a.get("assertion_count") or 0 for a in doc.get("source_attestations") or []
+            )
+            out.append((assertions, attestation.get("source_label", ""), found,
+                        doc["identifier"]))
+            break
+    return sorted(out, reverse=True)
+
+
 def _mapping_cohorts(decided: set[str]) -> tuple[Counter, int, list[tuple]]:
     """Split the upstream mappings by cohort and rank the undecided risky ones.
 
@@ -537,6 +579,15 @@ def main(argv: list[str] | None = None) -> int:
         ):
             print(f"  {assertions:7d}  {cohort:8s} {source_label[:24]:24s} -> "
                   f"{label[:32]:32s} {identifier}")
+
+    stale = _stale_class_sweeps(class_swept_ids, records)
+    print(f"\n=== {len(stale)} class-level sweep(s) the slice has since contradicted ===")
+    print("  (the sweep asserted no term matched; one does now. Vendoring an")
+    print("   ontology makes that negative stale, and nothing else re-checks it.)")
+    for assertions, label, found, identifier in stale[: args.ungrounded_top or None]:
+        print(f"  {assertions:8d}  {label[:28]:28s} -> {found:18s} {identifier}")
+    if not stale:
+        print("  none — every sweep's claim still holds against the current slice")
 
     organism = _organism_identities(records)
     print(f"\n=== {len(organism)} unreviewed record(s) whose identity is an organism ===")

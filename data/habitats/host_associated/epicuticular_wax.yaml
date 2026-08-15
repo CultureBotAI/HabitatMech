@@ -1,18 +1,30 @@
-identifier: habitatmech:GOLD.284cf93966
-label: Epicuticular wax
+identifier: PO:0025388
+label: epicuticular wax
+definition: A portion of cuticular wax (PO:0025386) that forms crystalloids or a smooth
+  film on the exterior of a plant cuticle (PO:0000022).
+definition_source: PO
 habitat_category: HOST_ASSOCIATED
-grounding_status: UNGROUNDED
-mapping_status: SEEDED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: cera epicuticular (Spanish, exact)
+  synonym_type: EXACT_SYNONYM
+  source: PO
+- synonym_text: エピクチクラワックス (Japanese, exact)
+  synonym_type: EXACT_SYNONYM
+  source: PO
 parent_habitats:
 - PO:0025034
+- PO:0025386
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8139
   source_label: Epicuticular wax
   source_path: Host-associated > Plants > Phyllosphere > Phylloplane/Leaf > Epicuticular
     wax
+  mapping_predicate: skos:exactMatch
 curation_history:
 - timestamp: '2026-08-15T05:30:07Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

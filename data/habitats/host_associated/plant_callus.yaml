@@ -1,18 +1,36 @@
-identifier: habitatmech:GOLD.d2a012ea0c
-label: Plant callus
+identifier: PO:0005052
+label: plant callus
+definition: A portion of plant tissue (PO:0009007) that consists of mass of undifferentiated
+  plant cells (PO:0009002).
+definition_source: PO
 habitat_category: HOST_ASSOCIATED
-grounding_status: UNGROUNDED
-mapping_status: SEEDED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: callo (Spanish, exact)
+  synonym_type: EXACT_SYNONYM
+  source: PO
+- synonym_text: callus (broad)
+  synonym_type: EXACT_SYNONYM
+  source: PO
+- synonym_text: portion of plant callus tissue (exact)
+  synonym_type: EXACT_SYNONYM
+  source: PO
+- synonym_text: 植物カルス (Japanese, exact)
+  synonym_type: EXACT_SYNONYM
+  source: PO
 parent_habitats:
 - ENVO:01001001
+- PO:0009007
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5275
   source_label: Plant callus
   source_path: Host-associated > Plants > Plant callus
+  mapping_predicate: skos:exactMatch
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
 - timestamp: '2026-08-15T05:30:07Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
