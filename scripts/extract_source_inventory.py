@@ -1170,11 +1170,32 @@ def _changed_inputs(manifest: Path, inputs: list[tuple[str, Path]]) -> list[str]
             name = None
     if not recorded:
         return []
+    present = {shown for shown, _ in inputs}
     out = []
+    # An input the manifest recorded and the checkout no longer has. Filtering
+    # the input list on exists() hid these completely, so a source could vanish
+    # and the extraction would emit a corpus missing it, in silence (#76).
+    out.extend(
+        f"{shown} (recorded before, now MISSING)"
+        for shown in sorted(recorded)
+        if shown not in present
+    )
+    unchecked = 0
     for shown, path in inputs:
         was = recorded.get(shown)
-        if was and not was.startswith("skipped") and was != sha256_of(path):
+        if not was:
+            continue
+        if was.startswith("skipped"):
+            # Recorded by a --no-hash run. One of those leaves every later run
+            # with nothing to compare, and the guard would stay dead without
+            # ever saying so — the failure #44 already had once (#76).
+            unchecked += 1
+            continue
+        if was != sha256_of(path):
             out.append(shown)
+    if unchecked:
+        print(f"  NOTE: {unchecked} input(s) have no recorded sha256 to compare against "
+              "(a previous run used --no-hash), so drift in them cannot be detected")
     return out
 
 

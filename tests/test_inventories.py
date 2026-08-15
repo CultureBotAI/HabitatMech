@@ -424,3 +424,35 @@ def test_manifest_records_every_input_it_hashes(raw_tsv):
         f"{len(inputs)} inputs recorded but {hashed} carry a real sha256; "
         "an unhashed input is invisible to the drift guard"
     )
+
+
+def test_the_drift_guard_reports_a_vanished_input_and_an_uncheckable_one(tmp_path, capsys):
+    """Two ways for a guard to stop guarding without saying so (#76):
+
+    an input the manifest recorded that the checkout no longer has — filtering
+    the input list on exists() hid those entirely, so a source could disappear
+    and the extraction would emit a corpus missing it in silence;
+
+    and an input recorded by a --no-hash run, which leaves nothing to compare
+    against on every later run. That is the failure #44 already had once."""
+    import sys
+    from pathlib import Path
+
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
+    from extract_source_inventory import _changed_inputs
+
+    manifest = tmp_path / "MANIFEST.yaml"
+    manifest.write_text(
+        "inputs:\n"
+        "  - path: gone.tsv\n    sha256: aaa\n"
+        "  - path: unhashed.tsv\n    sha256: skipped (--no-hash)\n",
+        encoding="utf-8",
+    )
+    still_here = tmp_path / "unhashed.tsv"
+    still_here.write_text("x", encoding="utf-8")
+
+    changed = _changed_inputs(manifest, [("unhashed.tsv", still_here)])
+    assert any("MISSING" in c for c in changed), "a vanished input must be reported"
+    assert "no recorded sha256" in capsys.readouterr().out, (
+        "an uncheckable input must say so rather than passing as unchanged"
+    )
