@@ -42,25 +42,25 @@ complex, low-pressure, and strongly gradient-forming.
 
 ## Current corpus
 
-Seeded from kg-microbe, 2026-08-14. **3,234 habitat records** from 3,502 source
-concepts (GOLD 2,562 · BacDive 162 · PREGO 719 · Madin 58), grounded in
-ENVO / UBERON / FOODON / BTO / PO.
+Seeded from kg-microbe, 2026-08-14. **3,234 habitat records** from 3,503 source
+concepts (GOLD 2,562 · PREGO 719 · BacDive 162 · Madin 58 · environment table
+42), grounded in ENVO / UBERON / FOODON / BTO / PO.
 
 | Category | Records | | Grounding | Records |
 |---|---:|---|---|---:|
-| HOST_ASSOCIATED | 1,638 | | EXACT | 1,041 |
-| ENGINEERED | 486 | | UNGROUNDED | 992 |
-| AQUATIC | 468 | | NARROW | 976 |
-| TERRESTRIAL | 355 | | CLOSE | 117 |
-| OTHER | 211 | | NOT_APPLICABLE | 101 |
-| FOOD / CLINICAL / AIR | 76 | | BROAD | 7 |
+| HOST_ASSOCIATED | 1,641 | | EXACT | 1,044 |
+| ENGINEERED | 486 | | UNGROUNDED | 984 |
+| AQUATIC | 469 | | NARROW | 979 |
+| TERRESTRIAL | 354 | | NOT_APPLICABLE | 122 |
+| OTHER | 212 | | CLOSE | 97 |
+| FOOD / CLINICAL / AIR | 72 | | BROAD | 8 |
 
 165 records are attested by more than one source, 15 of them by all four.
 
-**440 records (13.6%) are `REVIEWED`**, on 684 per-item curation decisions —
+**508 records (15.7%) are `REVIEWED`**, on 753 per-item curation decisions —
 including every record attested by more than one source, whose merges were read
 individually. Every source concept has a decision on file, but they are not all
-equal: 935 were decided by a **class-level sweep** and deliberately do *not*
+equal: 908 were decided by a **class-level sweep** and deliberately do *not*
 count as reviewed — see [Curation](#curation) and
 [docs/HARMONIZATION.md](docs/HARMONIZATION.md#class-level-sweep).
 
@@ -208,10 +208,16 @@ just report                   # term requests vs undecided, and the numbers belo
 
 These are real and unfixed; see the issue tracker.
 
-- **Most records are unreviewed.** 440 of 3,234 are `REVIEWED`; the other 2,794
+- **Most records are unreviewed.** 508 of 3,234 are `REVIEWED`; the other 2,726
   are `SEEDED`, meaning their lexical matches are plausible but unverified.
-  Every multi-source record has been read — 22 of those merges were wrong and
-  were corrected — but single-source records have not.
+  Every multi-source record has been read, and so has every upstream mapping the
+  label check cannot see. What remains splits by the method each part needs: 908
+  class-swept concepts are individually readable and ranked by volume in
+  `just worklist`; the ~1,000 EXACT ones were sampled rather than read, at 0 of
+  40 wrong (95% CI 0–8.8%), because reading them all is 40-plus judgements per
+  defect; and the 979 NARROW ones have no screen, because a parent legitimately
+  has a different label from its child and a label-difference screen flags 155
+  records of which a fair sample was 12 out of 12 correct.
 - **ENVO has no host-clade environment terms.** "Mammals: Human" (40,432 GOLD
   organisms, the single largest ungrounded concept), "Birds", "Fish", "Insects"
   and the rest are real habitats with only `ENVO:01001002 animal-associated
