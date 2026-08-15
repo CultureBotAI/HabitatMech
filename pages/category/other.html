@@ -1554,6 +1554,19 @@ record's own page — the link already carries it.</p>
     out.textContent = hits.length + ' of ' + box.getAttribute('data-total') +
       ' match' + (hits.length > 500 ? ' (first 500 shown)' : '');
   }
+  // When the page already holds every record there is nothing to fetch, and
+  // fetching would make filtering depend on a network round trip that can fail
+  // — it used to work offline, on a saved page, from file:// (#82). Four of the
+  // eight categories fit on one page.
+  var rendered = body.querySelectorAll('tr').length;
+  if (rendered >= parseInt(box.getAttribute('data-total'), 10)) {
+    index = [].slice.call(body.querySelectorAll('tr')).map(function (tr) {
+      var td = tr.querySelectorAll('td'), a = tr.querySelector('a');
+      return [td[0].textContent, a ? a.getAttribute('href').replace(/.*\/|\.html$/g, '') : '',
+              td[1].textContent, td[2].textContent, td[3].textContent, td[4].textContent];
+    });
+  }
+
   box.addEventListener('input', function () {
     if (index === null) {
       // Fetched once, on the first keystroke — a reader who only browses never
