@@ -1,19 +1,14 @@
-identifier: FOODON:03520493
-label: semiarid climatic zone
-habitat_category: FOOD
-grounding_status: CLOSE
-mapping_status: SEEDED
-synonyms:
-- synonym_text: Semiarid
-  synonym_type: EXACT_SYNONYM
-  source: BacDive
-parent_habitats:
-- FOODON:03520492
+identifier: habitatmech:BACDIVE.766cd9f54f
+label: Semiarid
+habitat_category: OTHER
+grounding_status: NOT_APPLICABLE
+mapping_status: REVIEWED
+xrefs:
+- FOODON:03520493
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:semiarid
   source_label: Semiarid
-  mapping_predicate: skos:closeMatch
   assertion_count: 5
   assertion_unit: STRAIN
 characteristic_taxa:
@@ -51,4 +46,4 @@ curation_history:
 - timestamp: '2026-08-15T00:10:17Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: NOT_APPLICABLE.'
