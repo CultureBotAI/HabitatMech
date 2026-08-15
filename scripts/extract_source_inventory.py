@@ -1163,6 +1163,11 @@ def _changed_inputs(manifest: Path, inputs: list[tuple[str, Path]]) -> list[str]
     name = None
     for line in manifest.read_text(encoding="utf-8").splitlines():
         stripped = line.strip()
+        # The outputs section repeats `- path:` for the emitted TSVs. Stopping
+        # here keeps a future output field from binding a sha256 to an output
+        # name; nothing does today, which is exactly when to fix it.
+        if stripped == "outputs:":
+            break
         if stripped.startswith("- path:"):
             name = stripped.split(":", 1)[1].strip()
         elif stripped.startswith("sha256:") and name:
