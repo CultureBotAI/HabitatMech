@@ -136,3 +136,7 @@ caption {
 /* Filter hides rows by class rather than inline style, so the browser can
    batch the change instead of laying out per row per keystroke (#34). */
 .is-hidden { display: none; }
+
+.pager { margin: 1rem 0; display: flex; gap: .4rem; flex-wrap: wrap; }
+.pager a, .pager span { padding: .15rem .5rem; border-radius: 4px; }
+.pager a { background: var(--code-bg); }

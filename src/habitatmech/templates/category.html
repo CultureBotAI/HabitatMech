@@ -3,12 +3,12 @@
 {% block title %}{{ category }} — HabitatMech{% endblock %}
 {% block content %}
 <h1>{{ category }}</h1>
-<p class="lede">{{ records|length }} habitat records. {{ description }}</p>
+<p class="lede">{{ total }} habitat records. {{ description }}</p>
 <p class="meta">The source path is shown because a record's label is only the last
 step of it: "Cattle barn" under Air is the air sampled in a cattle barn, not the
 barn. The category prefix is trimmed off it, and the identifier lives on each
 record's own page — the link already carries it.</p>
-<input class="searchbox" id="q" type="search" placeholder="Filter these {{ records|length }} records…" aria-label="Filter records">
+<input class="searchbox" id="q" type="search" data-index="{{ index_url }}" data-total="{{ total }}" placeholder="Filter all {{ total }} records…" aria-label="Filter records">
 <p class="meta" id="count" aria-live="polite"></p>
 <table id="tbl">
   <caption>{{ category }} habitats</caption>
@@ -25,48 +25,74 @@ record's own page — the link already carries it.</p>
   {% endfor %}
   </tbody>
 </table>
+{% if pager %}
+<nav class="pager" aria-label="Pages">
+  {% for pg in pager %}{% if pg.n == page %}<span class="pill plain" aria-current="page">{{ pg.n }}</span>{% else %}<a href="{{ pg.href }}">{{ pg.n }}</a>{% endif %} {% endfor %}
+</nav>
+<p class="meta">Showing {{ records|length }} of {{ total }}. The filter searches all
+{{ total }}, not just this page.</p>
+{% endif %}
 <script>
 (function () {
   var box = document.getElementById('q'), out = document.getElementById('count');
-  // Collected once. Re-running querySelectorAll per keystroke was a real part
-  // of the cost on the biggest category, before any matching happened at all.
-  var rows = [].slice.call(document.querySelectorAll('#tbl tbody tr'));
-  // Search keys are read from the DOM once, on the first keystroke, rather than
-  // shipped as an attribute per row: emitting them cost more bytes than the
-  // identifier column they replaced, and measuring said so. The read is O(rows)
-  // once; before, it was O(rows) per character.
-  var keys = null;
-  var hidden = rows.map(function () { return false; });
-  var pending = null;
+  var body = document.querySelector('#tbl tbody');
+  var original = body.innerHTML;
+  var index = null, pending = null;
+
+  function esc(t) {
+    return String(t).replace(/[&<>"]/g, function (c) {
+      return {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c];
+    });
+  }
+  // Rows are rebuilt from the index rather than hidden in place, because the
+  // page only holds its own slice — hiding would filter 300 records and call
+  // it the answer for 1641 (#34).
+  function draw(rows) {
+    body.innerHTML = rows.map(function (r) {
+      var warn = (r[3] === 'UNGROUNDED' || r[3] === 'NOT_APPLICABLE') ? ' warn' : '';
+      return '<tr><td><a href="../habitats/' + esc(r[1]) + '.html">' + esc(r[0]) +
+             '</a></td><td class="meta">' + esc(r[2]) +
+             '</td><td><span class="pill' + warn + '">' + esc(r[3]) +
+             '</span></td><td class="num">' + esc(r[4]) +
+             '</td><td class="meta">' + esc(r[5]) + '</td></tr>';
+    }).join('');
+  }
   function apply() {
     pending = null;
-    if (keys === null) {
-      // The href is folded in so an identifier is still findable now the
-      // column has gone — the page name embeds the slugified CURIE.
-      keys = rows.map(function (r) {
-        var a = r.querySelector('a');
-        return (r.textContent + ' ' + (a ? a.getAttribute('href') : '')).toLowerCase();
-      });
-    }
     var raw = box.value.toLowerCase();
-    // A pasted CURIE is matched in its slugified form too, since that is how
-    // the href spells it: "ENVO:00001998" -> "envo-00001998".
+    if (!raw) { body.innerHTML = original; out.textContent = ''; return; }
     var slugged = raw.replace(/[^a-z0-9]+/g, '-');
-    var q = raw, shown = 0;
-    for (var i = 0; i < rows.length; i++) {
-      var hit = !q || keys[i].indexOf(q) !== -1 || keys[i].indexOf(slugged) !== -1;
-      // Only rows whose state actually changes are touched; a class toggle also
-      // batches better than writing style.display directly.
-      if (hit === hidden[i]) {
-        rows[i].classList.toggle('is-hidden', !hit);
-        hidden[i] = !hit;
-      }
-      if (hit) { shown++; }
-    }
-    out.textContent = q ? shown + ' of ' + rows.length + ' shown' : '';
+    var hits = index.filter(function (r) {
+      var k = (r[0] + ' ' + r[2] + ' ' + r[1] + ' ' + r[5]).toLowerCase();
+      return k.indexOf(raw) !== -1 || k.indexOf(slugged) !== -1;
+    });
+    draw(hits.slice(0, 500));
+    out.textContent = hits.length + ' of ' + box.getAttribute('data-total') +
+      ' match' + (hits.length > 500 ? ' (first 500 shown)' : '');
   }
+  // When the page already holds every record there is nothing to fetch, and
+  // fetching would make filtering depend on a network round trip that can fail
+  // — it used to work offline, on a saved page, from file:// (#82). Four of the
+  // eight categories fit on one page.
+  var rendered = body.querySelectorAll('tr').length;
+  if (rendered >= parseInt(box.getAttribute('data-total'), 10)) {
+    index = [].slice.call(body.querySelectorAll('tr')).map(function (tr) {
+      var td = tr.querySelectorAll('td'), a = tr.querySelector('a');
+      return [td[0].textContent, a ? a.getAttribute('href').replace(/.*\/|\.html$/g, '') : '',
+              td[1].textContent, td[2].textContent, td[3].textContent, td[4].textContent];
+    });
+  }
+
   box.addEventListener('input', function () {
-    // At most one pass per frame, however fast the typing.
+    if (index === null) {
+      // Fetched once, on the first keystroke — a reader who only browses never
+      // pays for it.
+      out.textContent = 'loading…';
+      fetch(box.getAttribute('data-index')).then(function (r) { return r.json(); })
+        .then(function (data) { index = data; apply(); })
+        .catch(function () { out.textContent = 'filter unavailable'; });
+      return;
+    }
     if (pending === null) { pending = requestAnimationFrame(apply); }
   });
 })();
