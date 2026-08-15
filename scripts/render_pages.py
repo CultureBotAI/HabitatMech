@@ -73,10 +73,19 @@ def slugify(text: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", (text or "").lower()).strip("-") or "unnamed"
 
 
-def _trim_category_prefix(path: str) -> str:
-    """Drop the leading path segment when it only restates the category."""
+def _trim_category_prefix(path: str, category: str) -> str:
+    """Drop the leading path segment only when it restates the category.
+
+    Trimming unconditionally looked like a free saving and was not: GOLD's top
+    level (Environmental / Host-associated / Engineered) is a different axis
+    from habitat_category, so 707 rows lost a branch the reader needs — on a
+    page that says the path is shown precisely because the label is only its
+    last step (#66).
+    """
     head, sep, tail = path.partition(" > ")
-    return tail if sep and tail else path
+    if not sep or not tail:
+        return path
+    return tail if head.upper().replace("-", "_").replace(" ", "_") == category else path
 
 
 def term_iri(curie: str) -> str | None:
@@ -222,9 +231,12 @@ def build(out_dir: Path) -> None:
                 # and the page it is on already says which category this is
                 # (#34). The untrimmed `path` still feeds the search key.
                 "short_path": _trim_category_prefix(
-                    attestations[0].get("source_path")
-                    or attestations[0].get("source_label", "")
-                    if attestations else ""
+                    (
+                        attestations[0].get("source_path")
+                        or attestations[0].get("source_label", "")
+                        if attestations else ""
+                    ),
+                    record["category"],
                 ),
                 "assertions": assertions,
                 "sources": sources,
