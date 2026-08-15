@@ -1558,6 +1558,10 @@ def build_corpus() -> Corpus:
         decisions,
         {term_id: term["label"] for term_id, term in ontology.terms.items()},
         path=DECISIONS_PATH,
+        label_only={
+            term_id for term_id, term in ontology.terms.items()
+            if str(term.get("label_only", "")).upper() == "TRUE"
+        },
     )
     stats["curation_decisions_loaded"] = len(decisions)
 

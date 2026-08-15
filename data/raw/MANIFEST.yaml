@@ -1,8 +1,10 @@
 # Provenance for the inventories in data/raw/.
 # Regenerate with: just extract-inventory
 # Emitted by scripts/extract_source_inventory.py — do not hand-edit.
-extracted_at: '2026-08-15T00:10:17Z'
-kg_microbe_source: kg-microbe@bfd350e7674828874d752e829584478ecfef7bd8
+extracted_at: '2026-08-15T04:56:29Z'
+kg_microbe_source: kg-microbe@d65c577a5296229c2ca887a92979e21e253bcf73
+mappings_read_from: build/pinned/isolation_source_to_ontology.tsv
+mappings_note: pinned separately; kg_microbe_source describes every OTHER input
 gold_truncated_paths: 0
 inputs:
   - path: data/raw/gold/GOLD_nodes.tsv
@@ -41,9 +43,9 @@ inputs:
     bytes: 14087
     mtime: '2026-07-25T00:31:54Z'
     sha256: 99299fe635159712f95568783ad3b484230fb31781262f1f6f8bd84db4bc3048
-  - path: mappings/isolation_source_to_ontology.tsv
+  - path: build/pinned/isolation_source_to_ontology.tsv
     bytes: 80118
-    mtime: '2026-08-14T06:17:14Z'
+    mtime: '2026-08-15T04:46:15Z'
     sha256: 2dea3d1bb20c72a04b6f64a67e2bb2bdc4f3649b809c5935390239be2791ef1f
 outputs:
   - path: bacdive_isolation_sources.tsv
@@ -61,9 +63,9 @@ outputs:
   - path: madin_habitats.tsv
     rows: 58
   - path: ontology_subclass_edges.tsv
-    rows: 11640
+    rows: 11824
   - path: ontology_terms.tsv
-    rows: 13391
+    rows: 13529
   - path: prego_habitat_taxa.tsv
     rows: 8807
   - path: prego_habitats.tsv
