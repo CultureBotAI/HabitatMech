@@ -1,12 +1,10 @@
-identifier: ENVO:02500038
+identifier: habitatmech:MADIN.ece0235b87
 label: soil pollution
-definition: A pollution process during which contaminants are released into soil.
-definition_source: ENVO
 habitat_category: OTHER
-grounding_status: EXACT
-mapping_status: SEEDED
-parent_habitats:
-- ENVO:02500036
+grounding_status: NOT_APPLICABLE
+mapping_status: REVIEWED
+xrefs:
+- ENVO:02500038
 source_attestations:
 - source: MADIN
   source_id: ENVO:02500038
@@ -115,7 +113,7 @@ characteristic_taxa:
   taxon_label: Pseudomonas indica NBRC 103045
   candidate_pool: 161
 curation_history:
-- timestamp: '2026-08-14T22:45:54Z'
+- timestamp: '2026-08-15T00:10:17Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by MADIN. Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by MADIN. Grounding: NOT_APPLICABLE.'

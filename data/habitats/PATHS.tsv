@@ -816,7 +816,6 @@ ENVO:01000211	temperate_coniferous_forest_biome
 ENVO:01000212	temperate_mixed_forest_biome
 ENVO:01000219	anthropogenic_terrestrial_biome
 ENVO:01000228	tropical_moist_broadleaf_forest_biome
-ENVO:01000230	arid
 ENVO:01000236	basalt
 ENVO:01000245	cropland_biome
 ENVO:01000246	village_biome
@@ -911,8 +910,6 @@ ENVO:02000059	surface_soil
 ENVO:02000091	coal
 ENVO:02000136	research_nuclear_reactor
 ENVO:02000138	mangrove_biome_soil
-ENVO:02500019	alga
-ENVO:02500038	soil_pollution
 ENVO:03000033	marine_sediment
 ENVO:03000039	cryoconite_hole
 ENVO:03000040	melt_pond
@@ -1000,7 +997,6 @@ FOODON:03412345	lichen
 FOODON:03412395	brown_algae
 FOODON:03412502	green_algae
 FOODON:03412872	barramundi
-FOODON:03420174	part_of_plant
 FOODON:03420295	fruit_seed_anatomical_part
 FOODON:03500045	food_grade_textile_surface
 FOODON:03520493	semiarid_climatic_zone
@@ -1033,7 +1029,6 @@ UBERON:0000341	throat__4f7984ed
 UBERON:0000403	scalp__a1773389
 UBERON:0000412	dermal_papilla
 UBERON:0000464	anatomical_space
-UBERON:0000468	multicellular_organism
 UBERON:0000473	testis
 UBERON:0000916	abdomen__17b71cfa
 UBERON:0000922	embryo__9a0301d2
@@ -1270,6 +1265,7 @@ habitatmech:BACDIVE.f5201ef8d6	xerophilic
 habitatmech:BACDIVE.f655f51b59	sulfuric
 habitatmech:BACDIVE.fb79ffe39f	biodegradation
 habitatmech:BACDIVE.ff945d8a69	co_culture
+habitatmech:ENVIRONMENTS_TABLE.54b570032a	host__82745511
 habitatmech:GOLD.00086e0958	cnidaria
 habitatmech:GOLD.00152db20e	midpoint
 habitatmech:GOLD.003cf7aab1	sea_ice_brine
@@ -3227,9 +3223,13 @@ habitatmech:GOLD.ff82e6ad1b	mineral_soil__5474c25b
 habitatmech:GOLD.ff83a59297	posterior_nares__bcf52745
 habitatmech:GOLD.ffd1fda259	chyme__0bfd2730
 habitatmech:GOLD.ffea544c70	microbial_mats__54849ba0
+habitatmech:MADIN.25325947e2	part_of_plant
+habitatmech:MADIN.5eeeec4db2	alga
 habitatmech:MADIN.6d3f5f967f	hydrocarbon__b1f62927
 habitatmech:MADIN.81cb9e74cb	food
-habitatmech:MADIN.89e19ce726	root__93f83d1d
+habitatmech:MADIN.8eaf8ee93c	arid
+habitatmech:MADIN.d6e2979509	multicellular_organism
+habitatmech:MADIN.ece0235b87	soil_pollution
 mesh:D000038	abscess__35b7623f
 mesh:D000076624	built_environment
 mesh:D062611	solid_waste

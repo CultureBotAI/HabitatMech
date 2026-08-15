@@ -1,43 +1,16 @@
-identifier: ENVO:02500019
+identifier: habitatmech:MADIN.5eeeec4db2
 label: alga
 habitat_category: OTHER
-grounding_status: EXACT
+grounding_status: UNGROUNDED
 mapping_status: SEEDED
+xrefs:
+- ENVO:02500019
 source_attestations:
-- source: ENVIRONMENTS_TABLE
-  source_id: host_algae
-  source_label: host_algae
-  notes: Physicochemical parameter bands from kg-microbe's environment table.
 - source: MADIN
   source_id: ENVO:02500019
   source_label: alga
   assertion_count: 88
   assertion_unit: TAXON
-environmental_parameters:
-- parameter: GRADIENTS
-  qualitative_value: high
-  source: kg-microbe environments.csv (host_algae)
-- parameter: NUTRIENTS
-  qualitative_value: high
-  source: kg-microbe environments.csv (host_algae)
-- parameter: ORGANIC_MATTER
-  qualitative_value: high
-  source: kg-microbe environments.csv (host_algae)
-- parameter: PRESSURE
-  qualitative_value: low
-  source: kg-microbe environments.csv (host_algae)
-- parameter: STRUCTURAL_COMPLEXITY
-  qualitative_value: high
-  source: kg-microbe environments.csv (host_algae)
-- parameter: TEMPERATURE_VARIABILITY
-  qualitative_value: low
-  source: kg-microbe environments.csv (host_algae)
-- parameter: WATER_AVAILABILITY
-  qualitative_value: high
-  source: kg-microbe environments.csv (host_algae)
-- parameter: WATER_VARIABILITY
-  qualitative_value: permanently wet
-  source: kg-microbe environments.csv (host_algae)
 characteristic_taxa:
 - taxon_id: NCBITaxon:102127
   source: MADIN
@@ -140,8 +113,7 @@ characteristic_taxa:
   taxon_label: Agrobacterium sp. RAC06
   candidate_pool: 88
 curation_history:
-- timestamp: '2026-08-14T22:45:54Z'
+- timestamp: '2026-08-15T00:10:17Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, MADIN.
-    Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by MADIN. Grounding: UNGROUNDED.'

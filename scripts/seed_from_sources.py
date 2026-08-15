@@ -954,6 +954,7 @@ def ingest_madin(
     taxa_rows: list[dict[str, str]],
     routes: Counter,
     decisions: dict[str, Decision] | None = None,
+    stats: Counter | None = None,
 ) -> None:
     """Attach Madin et al.'s habitat-taxon associations (#40).
 
@@ -966,6 +967,7 @@ def ingest_madin(
     source's non-habitat targets do, keeping the link as an xref.
     """
     decisions = decisions or {}
+    stats = stats if stats is not None else Counter()
     taxa_by_habitat: dict[str, list[dict[str, str]]] = defaultdict(list)
     for row in taxa_rows:
         taxa_by_habitat[row["madin_id"]].append(row)
@@ -975,13 +977,26 @@ def ingest_madin(
         minted = _madin_key(madin_id)
         if madin_id.startswith("bacdive.isolation_source:"):
             default = Resolution(minted, "UNGROUNDED", route="madin_bacdive_vocabulary")
-        elif madin_id.split(":", 1)[0] in HABITAT_PREFIXES:
-            default = Resolution(madin_id, "EXACT", route="madin_self_grounded")
-        else:
+        elif madin_id.split(":", 1)[0] not in HABITAT_PREFIXES:
             default = Resolution(
                 minted, "NOT_APPLICABLE", extra_xrefs=[madin_id],
                 route="madin_non_habitat_vocabulary",
             )
+        elif madin_id not in store.ontology.terms:
+            # Habitat-shaped, but the repo cannot confirm the term exists — it
+            # is obsolete, or newer than kg-microbe's ontology build. Every
+            # other route already refuses this (verified_mapping_target returns
+            # None, ingest_parameters counts a skip, validate_decisions fails
+            # the seed), and EXACT is the strongest claim the schema can make.
+            # Mint and keep the term as an xref: Madin's taxa survive, the
+            # unverifiable identity is not asserted (#58).
+            stats["madin_targets_outside_the_slice"] += 1
+            default = Resolution(
+                minted, "UNGROUNDED", extra_xrefs=[madin_id],
+                route="madin_target_not_in_slice",
+            )
+        else:
+            default = Resolution(madin_id, "EXACT", route="madin_self_grounded")
         res = apply_decision(default, minted, decisions)
         routes[res.route] += 1
 
@@ -1065,7 +1080,23 @@ def ingest_parameters(
         if len(term_ids) != 1:
             stats["parameter_rows_skipped_multi_term"] += 1
             continue
-        identifier = term_ids[0]
+        term = term_ids[0]
+        # The decision is consulted unconditionally, BEFORE looking the concept
+        # up. Doing it only when no concept existed meant a curator's ruling
+        # held exactly until some other source happened to attest the same term,
+        # and then silently stopped: Madin self-grounding UBERON:0000468 deleted
+        # the record a curator had ruled NOT_APPLICABLE and replaced it with the
+        # EXACT-grounded one they had refused, with nothing failing (#56).
+        # Minted like every other source so a curator can address it at all
+        # (#27); with no decision on file the resolution is the term itself, so
+        # the ordinary case — parameters landing on the existing `soil` record —
+        # is unchanged.
+        res = apply_decision(
+            Resolution(term, "EXACT", route="environments_table_self_grounded"),
+            mint("ENVIRONMENTS_TABLE", row["env_type"]),
+            decisions or {},
+        )
+        identifier = res.identifier
         concept = store.concepts.get(identifier)
         if concept is None:
             # The term is real and habitat-shaped but no source vocabulary
@@ -1073,25 +1104,16 @@ def ingest_parameters(
             # dropping the parameters: the environment table is itself a source
             # of habitats, not merely an annotation layer on other sources, and
             # treating it as the latter is why only 29 records carried
-            # parameters (#13).
-            if identifier.split(":", 1)[0] not in HABITAT_PREFIXES:
-                stats["parameter_rows_skipped_non_habitat_term"] += 1
-                continue
-            if identifier not in store.ontology.terms:
-                stats["parameter_rows_skipped_unknown_term"] += 1
-                continue
-            # Minted like every other source so a curator can address it. Without
-            # a key, apply_decision is never consulted and these concepts are
-            # permanently uncuratable — including "multicellular organism", which
-            # is a host rather than a place and needs to be sayable as
-            # NOT_APPLICABLE (#27).
-            res = apply_decision(
-                Resolution(identifier, "EXACT", route="environments_table_self_grounded"),
-                mint("ENVIRONMENTS_TABLE", row["env_type"]),
-                decisions or {},
-            )
-            identifier = res.identifier
-            concept = store.concepts.get(identifier) or store.get(
+            # parameters (#13). The shape guards test the *term*: a decision has
+            # already been validated and may legitimately name a minted id.
+            if res.route == "environments_table_self_grounded":
+                if term.split(":", 1)[0] not in HABITAT_PREFIXES:
+                    stats["parameter_rows_skipped_non_habitat_term"] += 1
+                    continue
+                if term not in store.ontology.terms:
+                    stats["parameter_rows_skipped_unknown_term"] += 1
+                    continue
+            concept = store.get(
                 identifier, store.ontology.label(identifier) or row["env_type"],
                 res.grounding_status,
             )
@@ -1533,7 +1555,7 @@ def build_corpus() -> Corpus:
     ingest_bacdive(store, bacdive_rows, mapping, routes, decisions,
                    taxa_rows=read_tsv("bacdive_source_taxa.tsv"), stats=stats)
     ingest_prego(store, prego_rows, prego_taxa, routes, decisions)
-    ingest_madin(store, madin_rows, madin_taxa, routes, decisions)
+    ingest_madin(store, madin_rows, madin_taxa, routes, decisions, stats=stats)
     ingest_parameters(store, parameter_rows, stats, decisions)
 
     addressable = (

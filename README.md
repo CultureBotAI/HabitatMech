@@ -43,21 +43,21 @@ complex, low-pressure, and strongly gradient-forming.
 ## Current corpus
 
 Seeded from kg-microbe, 2026-08-14. **3,234 habitat records** from 3,502 source
-concepts (GOLD 2,562 · BacDive 162 · PREGO 719 · Madin 59), grounded in
+concepts (GOLD 2,562 · BacDive 162 · PREGO 719 · Madin 58), grounded in
 ENVO / UBERON / FOODON / BTO / PO.
 
 | Category | Records | | Grounding | Records |
 |---|---:|---|---|---:|
-| HOST_ASSOCIATED | 1,639 | | EXACT | 1,047 |
-| ENGINEERED | 486 | | UNGROUNDED | 990 |
+| HOST_ASSOCIATED | 1,638 | | EXACT | 1,041 |
+| ENGINEERED | 486 | | UNGROUNDED | 992 |
 | AQUATIC | 468 | | NARROW | 976 |
 | TERRESTRIAL | 355 | | CLOSE | 117 |
-| OTHER | 209 | | NOT_APPLICABLE | 97 |
-| FOOD / CLINICAL / AIR | 77 | | BROAD | 7 |
+| OTHER | 211 | | NOT_APPLICABLE | 101 |
+| FOOD / CLINICAL / AIR | 76 | | BROAD | 7 |
 
 165 records are attested by more than one source, 15 of them by all four.
 
-**434 records (13.4%) are `REVIEWED`**, on 679 per-item curation decisions —
+**440 records (13.6%) are `REVIEWED`**, on 684 per-item curation decisions —
 including every record attested by more than one source, whose merges were read
 individually. Every source concept has a decision on file, but they are not all
 equal: 935 were decided by a **class-level sweep** and deliberately do *not*
@@ -208,7 +208,7 @@ just report                   # term requests vs undecided, and the numbers belo
 
 These are real and unfixed; see the issue tracker.
 
-- **Most records are unreviewed.** 434 of 3,234 are `REVIEWED`; the other 2,800
+- **Most records are unreviewed.** 440 of 3,234 are `REVIEWED`; the other 2,794
   are `SEEDED`, meaning their lexical matches are plausible but unverified.
   Every multi-source record has been read — 22 of those merges were wrong and
   were corrected — but single-source records have not.

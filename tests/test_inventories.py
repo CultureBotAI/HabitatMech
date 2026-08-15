@@ -273,3 +273,33 @@ def test_madin_bacdive_vocabulary_rows_are_addressable(raw_tsv):
     assert shared, "expected Madin habitats in the BacDive vocabulary"
     assert all(_madin_key(m) == mint("BACDIVE", m) for m in shared)
     assert all(_madin_key(m).startswith("habitatmech:BACDIVE.") for m in shared)
+
+
+def test_environment_table_decision_survives_another_source_attesting_the_term():
+    """A curator's decision on an environment-table row must hold regardless of
+    what else attested the same term. Consulting `apply_decision` only when no
+    concept existed meant the ruling held until some other source happened to
+    attest that term and then silently stopped — Madin self-grounding
+    UBERON:0000468 deleted the record ruled NOT_APPLICABLE and replaced it with
+    the EXACT one the curator had refused, with nothing failing (#56)."""
+    import sys
+    from pathlib import Path
+
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
+    import seed_from_sources as seed
+
+    corpus = seed.build_corpus()
+    by_id = {c.identifier: c for c in corpus.concepts}
+
+    ruled_out = {
+        d.identifier for d in seed.load_decisions(seed.DECISIONS_PATH).values()
+        if d.decision == "NOT_APPLICABLE" and d.identifier.startswith("habitatmech:ENVIRONMENTS_TABLE.")
+    }
+    assert ruled_out, "expected at least one NOT_APPLICABLE environment-table decision"
+    missing = [i for i in ruled_out if i not in by_id]
+    assert not missing, (
+        f"decisions ruled these NOT_APPLICABLE but no concept carries the minted id: {missing}. "
+        "The decision stopped applying — another source now attests the term it names."
+    )
+    for identifier in ruled_out:
+        assert by_id[identifier].grounding_status == "NOT_APPLICABLE"

@@ -455,12 +455,25 @@ def extract_madin(kgm: Path) -> tuple[list[dict[str, Any]], list[dict[str, Any]]
             labels[row["id"]] = row["name"].strip()
 
     taxa: dict[str, set[str]] = defaultdict(set)
+    dropped = 0
     for row in read_tsv(edges_path):
         if row.get("predicate") != "biolink:location_of":
             continue
         obj = row.get("object", "")
-        if obj.startswith("NCBITaxon:"):
-            taxa[row["subject"]].add(obj)
+        if not obj.startswith("NCBITaxon:"):
+            continue
+        # NCBITaxon:1 is the taxonomy root. As a *habitat* subject it does not
+        # mean "found everywhere", it means the row recorded no source at all —
+        # so its 624 taxa are an absence of evidence, and admitting it produces
+        # a public record labelled "root" that reads as a plant or tooth root.
+        # Dropped here rather than left to the non-habitat-prefix rule, which
+        # would keep it as a NOT_APPLICABLE record (#55 review).
+        if row["subject"] == "NCBITaxon:1":
+            dropped += 1
+            continue
+        taxa[row["subject"]].add(obj)
+    if dropped:
+        print(f"  dropped {dropped} pair(s) on NCBITaxon:1 (taxonomy root = no source recorded)")
 
     habitat_rows = [
         {
