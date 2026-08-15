@@ -49,6 +49,14 @@ one-field diff instead of 3,299 reflowed files. If you hand-edit a record into a
 shape `safe_dump` would not emit, reformat it through the helper — do not
 loosen the test.
 
+**A re-seed that retires a record needs a second pass.**
+`data/habitats/RETIRED.tsv` maps URLs curation has retired to the records that
+absorbed them, and `just redirects` rebuilds it from git history — so a page
+deleted in the working tree is invisible to it until the deletion is committed.
+The order is: `just seed-apply` → commit → `just redirects` → `just render` →
+commit. CI runs `build_redirects.py --check` and fails if you skip it, which is
+the point: a skipped pass means a published record URL now 404s (#54).
+
 **`pages/` is generated too.** It is committed and served from the branch root,
 so it goes stale exactly as records can. `just render` regenerates it and
 `just render-check` (in CI) fails when it has drifted. Edit

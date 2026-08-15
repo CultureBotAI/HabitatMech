@@ -885,7 +885,9 @@ def ingest_prego(
             # synonym so a record without an ontology label is still readable.
             synonyms = [s for s in (row.get("prego_synonyms") or "").split("|") if s]
             concept.label = store.ontology.label(identifier) or (synonyms[0] if synonyms else identifier)
-        if concept.category is None:
+        if res.category:
+            store.set_category(concept, res.category, authoritative=True)
+        elif concept.category is None:
             store.set_category(concept, infer_category(identifier, store.ontology), authoritative=False)
         for syn in (row.get("prego_synonyms") or "").split("|"):
             concept.add_synonym(syn.strip(), "RELATED_SYNONYM", "PREGO")
@@ -1008,7 +1010,13 @@ def ingest_madin(
         concept.xrefs.update(res.extra_xrefs)
         if not concept.label or concept.label == identifier:
             concept.label = store.ontology.label(identifier) or row.get("label") or identifier
-        if concept.category is None:
+        # A curator's category override has to win here as it does on the other
+        # routes; ignoring res.category silently dropped it, and a minted Madin
+        # identifier gives infer_category nothing to read, so OTHER was the only
+        # thing it could ever produce (#57).
+        if res.category:
+            store.set_category(concept, res.category, authoritative=True)
+        elif concept.category is None:
             store.set_category(concept, infer_category(identifier, store.ontology), authoritative=False)
 
         attestation: dict[str, Any] = {
@@ -1121,7 +1129,9 @@ def ingest_parameters(
             concept.reviewed_sources += 1 if res.reviewed else 0
             concept.parents.update(res.extra_parents)
             concept.xrefs.update(res.extra_xrefs)
-            if concept.category is None:
+            if res.category:
+                store.set_category(concept, res.category, authoritative=True)
+            elif concept.category is None:
                 store.set_category(
                     concept, infer_category(identifier, store.ontology), authoritative=False
                 )

@@ -1,0 +1,22 @@
+identifier: habitatmech:GOLD.a8fc5001d1
+label: Fungi
+habitat_category: HOST_ASSOCIATED
+grounding_status: NOT_APPLICABLE
+mapping_status: REVIEWED
+parent_habitats:
+- habitatmech:GOLD.d3b891e82e
+xrefs:
+- FOODON:03411261
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:3376
+  source_label: Fungi
+  source_path: Host-associated > Fungi
+  assertion_count: 635
+  assertion_unit: ORGANISM
+  notes: 4 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-15T00:10:17Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NOT_APPLICABLE.'

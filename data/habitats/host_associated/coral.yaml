@@ -1,0 +1,22 @@
+identifier: habitatmech:GOLD.a12eda25e9
+label: Coral
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: REVIEWED
+parent_habitats:
+- ENVO:01001179
+- habitatmech:GOLD.00086e0958
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:3643
+  source_label: Coral
+  source_path: Host-associated > Invertebrates > Cnidaria > Coral
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 382
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-15T00:10:17Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
