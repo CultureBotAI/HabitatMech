@@ -320,6 +320,48 @@ def build(out_dir: Path) -> None:
         f"User-agent: *\nAllow: /\nSitemap: {SITE_BASE}sitemap.xml\n", encoding="utf-8"
     )
 
+    # Redirect stubs for records curation retired. A record page is named
+    # slugify(label + identifier), so improving either moves the URL — which is
+    # most of what curation does. Without these, every improvement 404s a
+    # published address and a content-hashed identifier stops being citable
+    # (#54). data/habitats/RETIRED.tsv is rebuilt by `just redirects`.
+    retired_written: set[Path] = set()
+    retired_path = REPO_ROOT / "data" / "habitats" / "RETIRED.tsv"
+    if retired_path.exists():
+        with retired_path.open(newline="", encoding="utf-8") as fh:
+            for row in csv.DictReader(fh, delimiter="\t"):
+                targets = [
+                    {"identifier": t, "label": label_of.get(t, t), "slug": slug_of[t]}
+                    for t in row["current_identifiers"].split("|")
+                    if t in slug_of
+                ]
+                if not targets:
+                    continue
+                if row["retired_slug"] in slug_of.values():
+                    # A retired slug that a live record now uses. Overwriting it
+                    # would replace a real habitat with a redirect away from
+                    # itself; the live record wins and the stub is dropped.
+                    continue
+                stub = out_dir / "habitats" / f"{row['retired_slug']}.html"
+                stub.write_text(
+                    env.get_template("redirect.html").render(
+                        r={
+                            "retired_identifier": row["retired_identifier"],
+                            "retired_label": row["retired_slug"].replace("-", " "),
+                            "resolved_by": row["resolved_by"],
+                            "targets": targets,
+                        },
+                        root="../", site_base=SITE_BASE, stats=stats,
+                    ),
+                    encoding="utf-8",
+                )
+                retired_written.add(stub)
+
+    (out_dir / "404.html").write_text(
+        env.get_template("not_found.html").render(root="", stats=stats),
+        encoding="utf-8",
+    )
+
     # Remove pages for records that no longer exist. Curation splits records as
     # well as merging them, so the set shrinks too; without this the site keeps
     # serving a page for a habitat the corpus has dropped, and --check reports it
@@ -327,8 +369,9 @@ def build(out_dir: Path) -> None:
     written = {
         out_dir / "index.html", out_dir / "browse.html", out_dir / "term-requests.html",
         out_dir / "style.css", out_dir / ".nojekyll", out_dir / "sitemap.xml",
-        out_dir / "robots.txt",
+        out_dir / "robots.txt", out_dir / "404.html",
     }
+    written |= retired_written
     written |= {out_dir / "habitats" / f"{slug}.html" for slug in slug_of.values()}
     written |= {out_dir / "category" / f"{c['slug']}.html" for c in categories}
     pruned = 0
@@ -337,8 +380,8 @@ def build(out_dir: Path) -> None:
             existing.unlink()
             pruned += 1
 
-    print(f"rendered {len(records)} habitat pages, {len(categories)} categories, "
-          f"{len(term_requests)} term requests"
+    print(f"rendered {len(records)} habitat pages, {len(retired_written)} redirect stubs, "
+          f"{len(categories)} categories, {len(term_requests)} term requests"
           + (f", pruned {pruned} stale" if pruned else "")
           + f" -> {out_dir}")
 

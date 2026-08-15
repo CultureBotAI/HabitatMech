@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block head %}
+{% if r.targets|length == 1 %}<meta http-equiv="refresh" content="3; url=../habitats/{{ r.targets[0].slug }}.html">{% endif %}
+<link rel="canonical" href="{{ site_base }}pages/habitats/{{ r.targets[0].slug }}.html">
+<meta name="robots" content="noindex, follow">
+{% endblock %}
+{% block title %}{{ r.retired_label }} has moved — HabitatMech{% endblock %}
+{% block content %}
+<h1>This record has moved</h1>
+{% if r.targets|length == 1 %}
+<p class="lede">
+  <code>{{ r.retired_identifier }}</code> is no longer a record of its own. Its
+  source concepts are now part of
+  <a href="../habitats/{{ r.targets[0].slug }}.html">{{ r.targets[0].label }}</a>,
+  which is where this page is taking you.
+</p>
+<div class="note">
+  <p>{% if r.resolved_by == 'label_changed' %}The record still exists under the
+  same identifier — only its label changed, so the page name did too. Adopting
+  the grounding ontology's own label is what moved it.{% else %}Curation
+  re-grounded or merged this concept. The upstream assertions that were here
+  were not discarded: they are attestations on the record above, alongside
+  whatever else attests it.{% endif %}</p>
+</div>
+<p><a href="../habitats/{{ r.targets[0].slug }}.html">Go there now</a></p>
+{% else %}
+<p class="lede">
+  <code>{{ r.retired_identifier }}</code> held more than one habitat, and curation
+  separated them. There is no single page this should send you to, so it does not
+  guess — pick the one you meant:
+</p>
+<ul>
+  {% for t in r.targets %}
+  <li><a href="../habitats/{{ t.slug }}.html">{{ t.label }}</a>
+      <span class="meta">{{ t.identifier }}</span></li>
+  {% endfor %}
+</ul>
+<div class="note">
+  <p>A record that merges several source concepts onto one over-general
+  ontology term is a conflation, not a harmonization. Splitting them is the
+  fix; this page is the cost of that fix, kept rather than left as a 404.</p>
+</div>
+{% endif %}
+<p class="meta"><a href="../browse.html">Browse all habitats</a></p>
+{% endblock %}

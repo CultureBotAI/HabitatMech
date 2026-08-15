@@ -76,6 +76,17 @@ verify-corpus *args:
 render *args:
     uv run python scripts/render_pages.py {{args}}
 
+# Rebuild data/habitats/RETIRED.tsv — the map from record URLs curation has
+# retired to the records that absorbed them. A record page is named after its
+# label and identifier, so improving either moves the URL; the map is what keeps
+# the old address resolving instead of 404ing.
+redirects *args:
+    uv run python scripts/build_redirects.py {{args}}
+
+# Fail if RETIRED.tsv is out of date with git history
+redirects-check:
+    uv run python scripts/build_redirects.py --check
+
 # Corpus report: records per category, grounding-status breakdown, source
 # coverage, and the multi-source corroboration counts.
 report *args:
@@ -94,7 +105,7 @@ lint-fix:
     uv run ruff check --fix .
 
 # Everything CI runs, in the order that fails cheapest-first
-qc: lint test validate-all verify-corpus render-check report
+qc: lint test validate-all verify-corpus render-check redirects-check report
 
 # Fail if pages/ is out of step with the corpus
 render-check:

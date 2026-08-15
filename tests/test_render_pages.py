@@ -56,3 +56,59 @@ def test_nojekyll_is_present(repo_root):
     """Without it, Pages runs Jekyll and silently drops paths beginning with an
     underscore — a 404 rather than an error anyone sees (#32)."""
     assert (repo_root / "pages" / ".nojekyll").exists()
+
+
+def test_every_retired_url_resolves_to_a_live_record(repo_root):
+    """A record page is named after its label and identifier, so improving
+    either moves the URL — which is most of what curation does. RETIRED.tsv is
+    what keeps the old address resolving; a row pointing at a record that no
+    longer exists is a 404 with extra steps (#54)."""
+    import csv
+
+    import yaml
+
+    retired = repo_root / "data" / "habitats" / "RETIRED.tsv"
+    if not retired.exists():
+        return
+    live = set()
+    for path in (repo_root / "data" / "habitats").rglob("*.yaml"):
+        doc = yaml.safe_load(path.read_text(encoding="utf-8"))
+        if isinstance(doc, dict) and "identifier" in doc:
+            live.add(doc["identifier"])
+    with retired.open(newline="", encoding="utf-8") as fh:
+        rows = list(csv.DictReader(fh, delimiter="\t"))
+    assert rows, "no retired URLs recorded"
+    dangling = [
+        (r["retired_slug"], t)
+        for r in rows
+        for t in r["current_identifiers"].split("|")
+        if t not in live
+    ]
+    assert not dangling, f"retired URLs pointing at records that do not exist: {dangling[:5]}"
+
+
+def test_a_retired_slug_never_shadows_a_live_record(repo_root):
+    """Writing a stub at a filename a live record uses would replace a real
+    habitat with a redirect away from itself."""
+    import csv
+    import sys
+
+    import yaml
+
+    sys.path.insert(0, str(repo_root / "scripts"))
+    from render_pages import slugify
+
+    retired = repo_root / "data" / "habitats" / "RETIRED.tsv"
+    if not retired.exists():
+        return
+    live_slugs = set()
+    for path in (repo_root / "data" / "habitats").rglob("*.yaml"):
+        doc = yaml.safe_load(path.read_text(encoding="utf-8"))
+        if isinstance(doc, dict) and "identifier" in doc:
+            live_slugs.add(slugify(f"{doc['label']}-{doc['identifier']}"))
+    with retired.open(newline="", encoding="utf-8") as fh:
+        collisions = [
+            r["retired_slug"] for r in csv.DictReader(fh, delimiter="\t")
+            if r["retired_slug"] in live_slugs
+        ]
+    assert not collisions, f"retired slugs shadowing live records: {collisions[:5]}"
