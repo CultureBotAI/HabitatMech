@@ -506,7 +506,6 @@ ENVO:00000165	asphalt_lake
 ENVO:00000166	atoll
 ENVO:00000167	bar
 ENVO:00000169	canyon
-ENVO:00000172	sandy_desert
 ENVO:00000173	rocky_desert
 ENVO:00000177	moraine
 ENVO:00000182	plateau
@@ -881,7 +880,6 @@ ENVO:01001040	saline_environment
 ENVO:01001041	fungi_associated_environment
 ENVO:01001043	hypersaline_water_environment
 ENVO:01001069	metallic_material
-ENVO:01001155	astrogeological_gas
 ENVO:01001181	rhizoplane
 ENVO:01001184	arable
 ENVO:01001206	grassland_ecosystem
@@ -984,26 +982,19 @@ FOODON:03310002	soybean_paste
 FOODON:03315272	pastry
 FOODON:03316428	sweets
 FOODON:03400803	seafood_product_eurofir
-FOODON:03401156	50122200_aquatic_plants_prepared_processed_gs1_gpc
 FOODON:03411224	oyster
-FOODON:03411261	fungus
 FOODON:03411301	algae
 FOODON:03411743	red_algae
 FOODON:03412107	sea_urchin
-FOODON:03412112	mollusc
-FOODON:03412115	echinoderm
 FOODON:03412266	seaweed
 FOODON:03412345	lichen
 FOODON:03412395	brown_algae
 FOODON:03412502	green_algae
-FOODON:03412872	barramundi
 FOODON:03420295	fruit_seed_anatomical_part
 FOODON:03500045	food_grade_textile_surface
 FOODON:03520493	semiarid_climatic_zone
 FOODON:03520502	subarctic_climatic_zone
 FOODON:03530206	food_production
-FOODON:03544454	44540_starter_cultures_efsa_foodex2
-NCIT:C13452	fluids
 NCIT:C15189	biopsy
 NCIT:C171504	tracheal_aspirate
 NCIT:C26707	bladder_stone
@@ -1092,7 +1083,6 @@ UBERON:0003672	dentition
 UBERON:0003684	abdominal_cavity
 UBERON:0003891	stroma
 UBERON:0003903	bursa_of_fabricius
-UBERON:0004083	cerebellum_vermis_lobule_x
 UBERON:0004176	external_genitalia
 UBERON:0004292	cardiac_skeleton
 UBERON:0004796	prostate_gland_secretion
@@ -1187,6 +1177,7 @@ habitatmech:BACDIVE.3192a0f47e	tree
 habitatmech:BACDIVE.319ac5f8f8	host_animal_endotherm_intratissue
 habitatmech:BACDIVE.33fde10528	canidae_dog
 habitatmech:BACDIVE.36df85e4a4	waste
+habitatmech:BACDIVE.38260eea00	aquatic_plant
 habitatmech:BACDIVE.3974b3f169	oral_cavity_and_airways
 habitatmech:BACDIVE.3a13ee8a57	suidae_pig_swine
 habitatmech:BACDIVE.3abed720b8	xerophytic
@@ -1194,6 +1185,7 @@ habitatmech:BACDIVE.3bf519722c	core_sample
 habitatmech:BACDIVE.3d543e6b49	host_animal_endotherm
 habitatmech:BACDIVE.3e4680f074	endosphere
 habitatmech:BACDIVE.3edb563d49	in_situ
+habitatmech:BACDIVE.3eec8fcfc4	waste_gas
 habitatmech:BACDIVE.499e641dc2	coalbed_water
 habitatmech:BACDIVE.4b8650dee7	dust_ash
 habitatmech:BACDIVE.4c48b5114d	wilt
@@ -1208,6 +1200,7 @@ habitatmech:BACDIVE.5fa4710934	simulated_communities
 habitatmech:BACDIVE.66ce48b936	domestic_waste
 habitatmech:BACDIVE.6911460a4a	surface_swab
 habitatmech:BACDIVE.693692f9f6	meningitis
+habitatmech:BACDIVE.6add57f329	fluids
 habitatmech:BACDIVE.6d5784a4c5	mycosis
 habitatmech:BACDIVE.6e0d8a73f2	lab_enrichment
 habitatmech:BACDIVE.6e3154acd8	paddy_ricefield
@@ -1227,6 +1220,7 @@ habitatmech:BACDIVE.9a0a53afc1	non_marine_saline_and_alkaline
 habitatmech:BACDIVE.9ae6cfc178	cave_water
 habitatmech:BACDIVE.9b21b7d13b	condition
 habitatmech:BACDIVE.9c253e43c0	engineered_product
+habitatmech:BACDIVE.9eabedc3a1	starter_culture
 habitatmech:BACDIVE.9f31ab2d87	oil_fuel
 habitatmech:BACDIVE.a0bdf011ac	cystic_fibrosis
 habitatmech:BACDIVE.a2edc55556	defined_media
@@ -1235,6 +1229,7 @@ habitatmech:BACDIVE.a60a058479	industrial
 habitatmech:BACDIVE.a7f6b12719	protist
 habitatmech:BACDIVE.aabf4aeae4	sterilized_desinfected
 habitatmech:BACDIVE.ab17ecb10f	muridae_mouse_rat
+habitatmech:BACDIVE.b3b3dfff91	sandy
 habitatmech:BACDIVE.b415adf879	food_production__8d3fdbcc
 habitatmech:BACDIVE.b61f30c070	abort
 habitatmech:BACDIVE.b8fea19ee8	patient
@@ -2078,6 +2073,7 @@ habitatmech:GOLD.6a750836f9	cho
 habitatmech:GOLD.6a7bcba80d	amoebozoa__291e8086
 habitatmech:GOLD.6a8d0ed24a	co_culture__e1b72549
 habitatmech:GOLD.6ac8329647	sediment__7b8eb154
+habitatmech:GOLD.6acc0797e9	mollusca
 habitatmech:GOLD.6add2e3be1	pink
 habitatmech:GOLD.6ade183144	interior_wall
 habitatmech:GOLD.6afe6868a8	tunicates
@@ -2508,6 +2504,7 @@ habitatmech:GOLD.a00fd807eb	artificial_seawater
 habitatmech:GOLD.a0372e2d63	microbial_mats__522cc2c0
 habitatmech:GOLD.a043efaa03	auricle_pinna
 habitatmech:GOLD.a06aa6619e	biocathode
+habitatmech:GOLD.a12eda25e9	coral
 habitatmech:GOLD.a16a79bd0c	agricultural_field__c2942601
 habitatmech:GOLD.a170fb9296	sonicate_fluid__718e8d4f
 habitatmech:GOLD.a179efbe4f	fallopian_tubes
@@ -2554,6 +2551,7 @@ habitatmech:GOLD.a89d29a4f5	whole_body__4862860b
 habitatmech:GOLD.a8a343cf61	lymphatic_system__e4f4d251
 habitatmech:GOLD.a8a45ccf82	lymph_duct
 habitatmech:GOLD.a8f8c792c1	cecum__79e270ae
+habitatmech:GOLD.a8fc5001d1	fungi__136600ff
 habitatmech:GOLD.a904b6974e	crustaceans_raceway
 habitatmech:GOLD.a964ef903a	bulk_soil__6e19ccdc
 habitatmech:GOLD.a9d2df6ba5	sediment__58c2d02d
@@ -2989,6 +2987,7 @@ habitatmech:GOLD.e13608a63a	oil_sands_pit_lake
 habitatmech:GOLD.e1b5f9301d	cartilage__bd8c407c
 habitatmech:GOLD.e1c2f5f7d4	brain__e9ca95b7
 habitatmech:GOLD.e1d4d584d2	reptile_cage
+habitatmech:GOLD.e1f435d44b	echinodermata
 habitatmech:GOLD.e2071bbb4d	petrochemical
 habitatmech:GOLD.e21234318e	eczema
 habitatmech:GOLD.e287a243a5	dental_plaque__384bd6e9

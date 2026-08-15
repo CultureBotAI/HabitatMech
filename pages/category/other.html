@@ -19,19 +19,20 @@
   </nav>
 </header>
 <h1>OTHER</h1>
-<p class="lede">211 habitat records. Records the category heuristic could not place.</p>
+<p class="lede">209 habitat records. Records the category heuristic could not place.</p>
 <p class="meta">The source path is shown because a record's label is only the last
 step of it: "Cattle barn" under Air is the air sampled in a cattle barn, not the
-barn.</p>
-<input class="searchbox" id="q" type="search" placeholder="Filter these 211 records…" aria-label="Filter records">
+barn. The category prefix is trimmed off it, and the identifier lives on each
+record's own page — the link already carries it.</p>
+<input class="searchbox" id="q" type="search" placeholder="Filter these 209 records…" aria-label="Filter records">
+<p class="meta" id="count" aria-live="polite"></p>
 <table id="tbl">
   <caption>OTHER habitats</caption>
-  <thead><tr><th scope="col">Habitat</th><th scope="col">Source path</th><th scope="col">Identifier</th><th scope="col">Grounding</th><th scope="col" class="num">Assertions</th><th scope="col">Sources</th></tr></thead>
+  <thead><tr><th scope="col">Habitat</th><th scope="col">Source path</th><th scope="col">Grounding</th><th scope="col" class="num">Assertions</th><th scope="col">Sources</th></tr></thead>
   <tbody>
   <tr>
     <td><a href="../habitats/host-habitatmech-bacdive-baf38460e6.html">Host</a></td>
     <td class="meta">Host</td>
-    <td><code class="curie">habitatmech:BACDIVE.baf38460e6</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">25581</td>
     <td class="meta">BACDIVE</td>
@@ -39,7 +40,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/environmental-habitatmech-bacdive-0f1e92a02c.html">Environmental</a></td>
     <td class="meta">Environmental</td>
-    <td><code class="curie">habitatmech:BACDIVE.0f1e92a02c</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">18454</td>
     <td class="meta">BACDIVE</td>
@@ -47,7 +47,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/human-habitatmech-bacdive-c9b246fcbb.html">Human</a></td>
     <td class="meta">Human</td>
-    <td><code class="curie">habitatmech:BACDIVE.c9b246fcbb</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">11697</td>
     <td class="meta">BACDIVE</td>
@@ -55,7 +54,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/infection-habitatmech-bacdive-995fbdda26.html">Infection</a></td>
     <td class="meta">Infection</td>
-    <td><code class="curie">habitatmech:BACDIVE.995fbdda26</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">8971</td>
     <td class="meta">BACDIVE</td>
@@ -63,7 +61,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/patient-habitatmech-bacdive-b8fea19ee8.html">Patient</a></td>
     <td class="meta">Patient</td>
-    <td><code class="curie">habitatmech:BACDIVE.b8fea19ee8</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">7992</td>
     <td class="meta">BACDIVE</td>
@@ -71,23 +68,20 @@ barn.</p>
   <tr>
     <td><a href="../habitats/engineered-habitatmech-bacdive-7d4708950e.html">Engineered</a></td>
     <td class="meta">Engineered</td>
-    <td><code class="curie">habitatmech:BACDIVE.7d4708950e</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">7174</td>
     <td class="meta">BACDIVE</td>
   </tr>
   <tr>
-    <td><a href="../habitats/host-animal-endotherm-habitatmech-bacdive-3d543e6b49.html">host_animal_endotherm</a></td>
-    <td class="meta">host_animal_endotherm</td>
-    <td><code class="curie">habitatmech:BACDIVE.3d543e6b49</code></td>
+    <td><a href="../habitats/fluids-habitatmech-bacdive-6add57f329.html">Fluids</a></td>
+    <td class="meta">Fluids</td>
     <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">5130</td>
-    <td class="meta">MADIN</td>
+    <td class="num">6001</td>
+    <td class="meta">BACDIVE</td>
   </tr>
   <tr>
     <td><a href="../habitats/intestine-environment-envo-2100002.html">intestine environment</a></td>
     <td class="meta">host_animal_endotherm_intestinal</td>
-    <td><code class="curie">ENVO:2100002</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">4369</td>
     <td class="meta">ENVIRONMENTS_TABLE, MADIN, PREGO</td>
@@ -95,7 +89,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/organic-feature-envo-01000159.html">organic feature</a></td>
     <td class="meta">ENVO:01000159</td>
-    <td><code class="curie">ENVO:01000159</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">4003</td>
     <td class="meta">PREGO</td>
@@ -103,7 +96,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/biotope-envo-00002036.html">biotope</a></td>
     <td class="meta">ENVO:00002036</td>
-    <td><code class="curie">ENVO:00002036</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">3869</td>
     <td class="meta">PREGO</td>
@@ -111,7 +103,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/organic-material-envo-01000155.html">organic material</a></td>
     <td class="meta">organic material</td>
-    <td><code class="curie">ENVO:01000155</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">3590</td>
     <td class="meta">PREGO</td>
@@ -119,7 +110,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/anthropogenic-environment-envo-01000313.html">anthropogenic environment</a></td>
     <td class="meta">anthropogenic environment</td>
-    <td><code class="curie">ENVO:01000313</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">3087</td>
     <td class="meta">PREGO</td>
@@ -127,7 +117,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/organic-object-formed-through-microbial-activity-envo-01000007.html">organic object formed through microbial activity</a></td>
     <td class="meta">organic object formed through microbial activity</td>
-    <td><code class="curie">ENVO:01000007</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">3039</td>
     <td class="meta">PREGO</td>
@@ -135,7 +124,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/farm-envo-00000078.html">farm</a></td>
     <td class="meta">farm</td>
-    <td><code class="curie">ENVO:00000078</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">2943</td>
     <td class="meta">PREGO</td>
@@ -143,7 +131,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/ground-water-envo-00002041.html">ground water</a></td>
     <td class="meta">ENVO:00002041</td>
-    <td><code class="curie">ENVO:00002041</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">2855</td>
     <td class="meta">PREGO</td>
@@ -151,7 +138,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/tropical-envo-01000204.html">tropical</a></td>
     <td class="meta">tropical</td>
-    <td><code class="curie">ENVO:01000204</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">2670</td>
     <td class="meta">PREGO</td>
@@ -159,7 +145,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/temperate-envo-01000206.html">temperate</a></td>
     <td class="meta">temperate</td>
-    <td><code class="curie">ENVO:01000206</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">2623</td>
     <td class="meta">PREGO</td>
@@ -167,7 +152,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/anthropogenic-environmental-material-envo-0010001.html">anthropogenic environmental material</a></td>
     <td class="meta">anthropogenic environmental material</td>
-    <td><code class="curie">ENVO:0010001</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">2418</td>
     <td class="meta">PREGO</td>
@@ -175,7 +159,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/biome-envo-00000428.html">biome</a></td>
     <td class="meta">biome</td>
-    <td><code class="curie">ENVO:00000428</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">2394</td>
     <td class="meta">PREGO</td>
@@ -183,7 +166,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/condition-habitatmech-bacdive-9b21b7d13b.html">Condition</a></td>
     <td class="meta">Condition</td>
-    <td><code class="curie">habitatmech:BACDIVE.9b21b7d13b</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">2365</td>
     <td class="meta">BACDIVE</td>
@@ -191,7 +173,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/biofilm-material-envo-01000156.html">biofilm material</a></td>
     <td class="meta">biofilm material</td>
-    <td><code class="curie">ENVO:01000156</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">2205</td>
     <td class="meta">PREGO</td>
@@ -199,7 +180,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/other-habitatmech-bacdive-1cc8e3791c.html">Other</a></td>
     <td class="meta">Other</td>
-    <td><code class="curie">habitatmech:BACDIVE.1cc8e3791c</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">2203</td>
     <td class="meta">BACDIVE</td>
@@ -207,7 +187,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/marine-environment-envo-01000320.html">marine environment</a></td>
     <td class="meta">marine environment</td>
-    <td><code class="curie">ENVO:01000320</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">2202</td>
     <td class="meta">PREGO</td>
@@ -215,7 +194,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/clay-envo-00002982.html">clay</a></td>
     <td class="meta">clay</td>
-    <td><code class="curie">ENVO:00002982</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">2194</td>
     <td class="meta">PREGO</td>
@@ -223,7 +201,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/oral-cavity-and-airways-habitatmech-bacdive-3974b3f169.html">Oral-cavity-and-airways</a></td>
     <td class="meta">Oral-cavity-and-airways</td>
-    <td><code class="curie">habitatmech:BACDIVE.3974b3f169</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">2102</td>
     <td class="meta">BACDIVE</td>
@@ -231,7 +208,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/animal-manure-envo-00003031.html">animal manure</a></td>
     <td class="meta">animal manure</td>
-    <td><code class="curie">ENVO:00003031</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">2077</td>
     <td class="meta">PREGO</td>
@@ -239,7 +215,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/urban-biome-envo-01000249.html">urban biome</a></td>
     <td class="meta">urban biome</td>
-    <td><code class="curie">ENVO:01000249</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">1977</td>
     <td class="meta">PREGO</td>
@@ -247,7 +222,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/disease-habitatmech-bacdive-c659c7e939.html">Disease</a></td>
     <td class="meta">Disease</td>
-    <td><code class="curie">habitatmech:BACDIVE.c659c7e939</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">1799</td>
     <td class="meta">BACDIVE</td>
@@ -255,7 +229,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/industrial-habitatmech-bacdive-a60a058479.html">Industrial</a></td>
     <td class="meta">Industrial</td>
-    <td><code class="curie">habitatmech:BACDIVE.a60a058479</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">1758</td>
     <td class="meta">BACDIVE</td>
@@ -263,7 +236,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/sludge-envo-00002044.html">sludge</a></td>
     <td class="meta">Mud-Sludge</td>
-    <td><code class="curie">ENVO:00002044</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">1648</td>
     <td class="meta">BACDIVE, ENVIRONMENTS_TABLE, MADIN, PREGO</td>
@@ -271,7 +243,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/aquatic-environment-envo-01000317.html">aquatic environment</a></td>
     <td class="meta">aquatic environment</td>
-    <td><code class="curie">ENVO:01000317</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">1553</td>
     <td class="meta">PREGO</td>
@@ -279,7 +250,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/environmental-material-envo-00010483.html">environmental material</a></td>
     <td class="meta">environmental material</td>
-    <td><code class="curie">ENVO:00010483</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">1509</td>
     <td class="meta">PREGO</td>
@@ -287,7 +257,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/microbial-mat-material-envo-01000157.html">microbial mat material</a></td>
     <td class="meta">microbial mat material</td>
-    <td><code class="curie">ENVO:01000157</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">1377</td>
     <td class="meta">PREGO</td>
@@ -295,7 +264,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/blanket-bog-envo-00000511.html">blanket bog</a></td>
     <td class="meta">blanket bog</td>
-    <td><code class="curie">ENVO:00000511</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">1316</td>
     <td class="meta">PREGO</td>
@@ -303,7 +271,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/environmental-habitatmech-gold-c3fa7fc4c2.html">Environmental</a></td>
     <td class="meta">Environmental</td>
-    <td><code class="curie">habitatmech:GOLD.c3fa7fc4c2</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">1285</td>
     <td class="meta">GOLD</td>
@@ -311,7 +278,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/multicellular-organism-habitatmech-madin-d6e2979509.html">multicellular organism</a></td>
     <td class="meta">multicellular organism</td>
-    <td><code class="curie">habitatmech:MADIN.d6e2979509</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">1249</td>
     <td class="meta">MADIN</td>
@@ -319,7 +285,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/food-production-habitatmech-bacdive-b415adf879.html">Food-production</a></td>
     <td class="meta">Food-production</td>
-    <td><code class="curie">habitatmech:BACDIVE.b415adf879</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">1197</td>
     <td class="meta">BACDIVE</td>
@@ -327,23 +292,13 @@ barn.</p>
   <tr>
     <td><a href="../habitats/waste-habitatmech-bacdive-36df85e4a4.html">Waste</a></td>
     <td class="meta">Waste</td>
-    <td><code class="curie">habitatmech:BACDIVE.36df85e4a4</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">1140</td>
     <td class="meta">BACDIVE</td>
   </tr>
   <tr>
-    <td><a href="../habitats/host-animal-ectotherm-habitatmech-bacdive-e68bf42dcb.html">host_animal_ectotherm</a></td>
-    <td class="meta">host_animal_ectotherm</td>
-    <td><code class="curie">habitatmech:BACDIVE.e68bf42dcb</code></td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">999</td>
-    <td class="meta">MADIN</td>
-  </tr>
-  <tr>
     <td><a href="../habitats/activated-sludge-envo-00002046.html">activated sludge</a></td>
     <td class="meta">activated sludge</td>
-    <td><code class="curie">ENVO:00002046</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">914</td>
     <td class="meta">PREGO</td>
@@ -351,7 +306,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/shoreline-envo-00000486.html">shoreline</a></td>
     <td class="meta">shoreline</td>
-    <td><code class="curie">ENVO:00000486</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">909</td>
     <td class="meta">PREGO</td>
@@ -359,7 +313,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/tree-habitatmech-bacdive-3192a0f47e.html">Tree</a></td>
     <td class="meta">Tree</td>
-    <td><code class="curie">habitatmech:BACDIVE.3192a0f47e</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">872</td>
     <td class="meta">BACDIVE</td>
@@ -367,7 +320,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/food-habitatmech-madin-81cb9e74cb.html">food</a></td>
     <td class="meta">food</td>
-    <td><code class="curie">habitatmech:MADIN.81cb9e74cb</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">851</td>
     <td class="meta">MADIN</td>
@@ -375,7 +327,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/paddy-field-envo-00000297.html">paddy field</a></td>
     <td class="meta">paddy field</td>
-    <td><code class="curie">ENVO:00000297</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">704</td>
     <td class="meta">PREGO</td>
@@ -383,7 +334,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/cultivated-environment-envo-01000311.html">cultivated environment</a></td>
     <td class="meta">cultivated environment</td>
-    <td><code class="curie">ENVO:01000311</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">662</td>
     <td class="meta">PREGO</td>
@@ -391,7 +341,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/root-rhizome-habitatmech-bacdive-7945156e00.html">Root-Rhizome</a></td>
     <td class="meta">Root-Rhizome</td>
-    <td><code class="curie">habitatmech:BACDIVE.7945156e00</code></td>
     <td><span class="pill">NARROW</span></td>
     <td class="num">647</td>
     <td class="meta">BACDIVE</td>
@@ -399,7 +348,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/fresh-animal-manure-envo-00003032.html">fresh animal manure</a></td>
     <td class="meta">fresh animal manure</td>
-    <td><code class="curie">ENVO:00003032</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">628</td>
     <td class="meta">PREGO</td>
@@ -407,7 +355,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/decomposing-plant-habitatmech-bacdive-5d6bbfabf0.html">Decomposing-plant</a></td>
     <td class="meta">Decomposing-plant</td>
-    <td><code class="curie">habitatmech:BACDIVE.5d6bbfabf0</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">625</td>
     <td class="meta">BACDIVE</td>
@@ -415,7 +362,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/bovinae-cow-cattle-habitatmech-bacdive-a4a67c4a7f.html">Bovinae-Cow,-Cattle</a></td>
     <td class="meta">Bovinae-Cow,-Cattle</td>
-    <td><code class="curie">habitatmech:BACDIVE.a4a67c4a7f</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">619</td>
     <td class="meta">BACDIVE</td>
@@ -423,15 +369,20 @@ barn.</p>
   <tr>
     <td><a href="../habitats/mouth-environment-envo-08000002.html">mouth environment</a></td>
     <td class="meta">host_animal_endotherm_oral</td>
-    <td><code class="curie">ENVO:08000002</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">608</td>
     <td class="meta">ENVIRONMENTS_TABLE, MADIN</td>
   </tr>
   <tr>
+    <td><a href="../habitats/sandy-habitatmech-bacdive-b3b3dfff91.html">Sandy</a></td>
+    <td class="meta">Sandy</td>
+    <td><span class="pill warn">UNGROUNDED</span></td>
+    <td class="num">607</td>
+    <td class="meta">BACDIVE</td>
+  </tr>
+  <tr>
     <td><a href="../habitats/invertebrates-other-habitatmech-bacdive-e864a16f03.html">Invertebrates-Other</a></td>
     <td class="meta">Invertebrates-Other</td>
-    <td><code class="curie">habitatmech:BACDIVE.e864a16f03</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">596</td>
     <td class="meta">BACDIVE</td>
@@ -439,7 +390,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/engineered-product-habitatmech-bacdive-9c253e43c0.html">Engineered-product</a></td>
     <td class="meta">Engineered-product</td>
-    <td><code class="curie">habitatmech:BACDIVE.9c253e43c0</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">526</td>
     <td class="meta">BACDIVE</td>
@@ -447,7 +397,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/suidae-pig-swine-habitatmech-bacdive-3a13ee8a57.html">Suidae-Pig,Swine</a></td>
     <td class="meta">Suidae-Pig,Swine</td>
-    <td><code class="curie">habitatmech:BACDIVE.3a13ee8a57</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">521</td>
     <td class="meta">BACDIVE</td>
@@ -455,7 +404,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/anthropogenic-contamination-feature-envo-00002204.html">anthropogenic contamination feature</a></td>
     <td class="meta">Contamination</td>
-    <td><code class="curie">ENVO:00002204</code></td>
     <td><span class="pill">CLOSE</span></td>
     <td class="num">474</td>
     <td class="meta">BACDIVE</td>
@@ -463,7 +411,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/caprinae-sheep-goat-habitatmech-bacdive-4d3086a839.html">Caprinae-Sheep/Goat</a></td>
     <td class="meta">Caprinae-Sheep/Goat</td>
-    <td><code class="curie">habitatmech:BACDIVE.4d3086a839</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">412</td>
     <td class="meta">BACDIVE</td>
@@ -471,7 +418,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/skin-environment-envo-2100003.html">skin environment</a></td>
     <td class="meta">host_animal_endotherm_surface</td>
-    <td><code class="curie">ENVO:2100003</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">411</td>
     <td class="meta">ENVIRONMENTS_TABLE, MADIN, PREGO</td>
@@ -479,7 +425,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/geographic-feature-envo-00000000.html">geographic feature</a></td>
     <td class="meta">geographic feature</td>
-    <td><code class="curie">ENVO:00000000</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">408</td>
     <td class="meta">PREGO</td>
@@ -487,7 +432,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/aquifer-envo-00012408.html">aquifer</a></td>
     <td class="meta">aquifer</td>
-    <td><code class="curie">ENVO:00012408</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">395</td>
     <td class="meta">PREGO</td>
@@ -495,7 +439,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/cystic-fibrosis-habitatmech-bacdive-a0bdf011ac.html">Cystic-fibrosis</a></td>
     <td class="meta">Cystic-fibrosis</td>
-    <td><code class="curie">habitatmech:BACDIVE.a0bdf011ac</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">393</td>
     <td class="meta">BACDIVE</td>
@@ -503,7 +446,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/mesoscopic-physical-object-envo-00002004.html">mesoscopic physical object</a></td>
     <td class="meta">ENVO:00002004</td>
-    <td><code class="curie">ENVO:00002004</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">386</td>
     <td class="meta">PREGO</td>
@@ -511,7 +453,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/geologic-habitatmech-bacdive-bf10ea3ae4.html">Geologic</a></td>
     <td class="meta">Geologic</td>
-    <td><code class="curie">habitatmech:BACDIVE.bf10ea3ae4</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">381</td>
     <td class="meta">BACDIVE</td>
@@ -519,7 +460,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/freshwater-environment-envo-01000306.html">freshwater environment</a></td>
     <td class="meta">freshwater environment</td>
-    <td><code class="curie">ENVO:01000306</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">377</td>
     <td class="meta">MADIN, PREGO</td>
@@ -527,7 +467,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/biodegradation-habitatmech-bacdive-fb79ffe39f.html">Biodegradation</a></td>
     <td class="meta">Biodegradation</td>
-    <td><code class="curie">habitatmech:BACDIVE.fb79ffe39f</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">371</td>
     <td class="meta">BACDIVE</td>
@@ -535,7 +474,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/petroleum-envo-00002984.html">petroleum</a></td>
     <td class="meta">petroleum</td>
-    <td><code class="curie">ENVO:00002984</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">352</td>
     <td class="meta">ENVIRONMENTS_TABLE, MADIN, PREGO</td>
@@ -543,23 +481,13 @@ barn.</p>
   <tr>
     <td><a href="../habitats/canidae-dog-habitatmech-bacdive-33fde10528.html">Canidae-Dog</a></td>
     <td class="meta">Canidae-Dog</td>
-    <td><code class="curie">habitatmech:BACDIVE.33fde10528</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">344</td>
     <td class="meta">BACDIVE</td>
   </tr>
   <tr>
-    <td><a href="../habitats/host-animal-endotherm-intratissue-habitatmech-bacdive-319ac5f8f8.html">host_animal_endotherm_intratissue</a></td>
-    <td class="meta">host_animal_endotherm_intratissue</td>
-    <td><code class="curie">habitatmech:BACDIVE.319ac5f8f8</code></td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">341</td>
-    <td class="meta">MADIN</td>
-  </tr>
-  <tr>
     <td><a href="../habitats/muridae-mouse-rat-habitatmech-bacdive-ab17ecb10f.html">Muridae-Mouse/Rat</a></td>
     <td class="meta">Muridae-Mouse/Rat</td>
-    <td><code class="curie">habitatmech:BACDIVE.ab17ecb10f</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">325</td>
     <td class="meta">BACDIVE</td>
@@ -567,7 +495,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/desert-biome-envo-01000179.html">desert biome</a></td>
     <td class="meta">desert biome</td>
-    <td><code class="curie">ENVO:01000179</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">278</td>
     <td class="meta">PREGO</td>
@@ -575,7 +502,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/swab-habitatmech-bacdive-ebdac6db98.html">Swab</a></td>
     <td class="meta">Swab</td>
-    <td><code class="curie">habitatmech:BACDIVE.ebdac6db98</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">273</td>
     <td class="meta">BACDIVE</td>
@@ -583,7 +509,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/equidae-horse-habitatmech-bacdive-09c3544e85.html">Equidae-Horse</a></td>
     <td class="meta">Equidae-Horse</td>
-    <td><code class="curie">habitatmech:BACDIVE.09c3544e85</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">269</td>
     <td class="meta">BACDIVE</td>
@@ -591,7 +516,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/microbial-habitatmech-bacdive-e01be4868f.html">Microbial</a></td>
     <td class="meta">Microbial</td>
-    <td><code class="curie">habitatmech:BACDIVE.e01be4868f</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">261</td>
     <td class="meta">BACDIVE</td>
@@ -599,7 +523,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/marine-benthic-feature-envo-01000105.html">marine benthic feature</a></td>
     <td class="meta">ENVO:01000105</td>
-    <td><code class="curie">ENVO:01000105</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">231</td>
     <td class="meta">PREGO</td>
@@ -607,7 +530,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/leporidae-rabbit-hare-habitatmech-bacdive-82dc7d11b9.html">Leporidae-Rabbit/Hare</a></td>
     <td class="meta">Leporidae-Rabbit/Hare</td>
-    <td><code class="curie">habitatmech:BACDIVE.82dc7d11b9</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">217</td>
     <td class="meta">BACDIVE</td>
@@ -615,7 +537,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/medical-practice-habitatmech-bacdive-ddf5f83abc.html">Medical-practice</a></td>
     <td class="meta">Medical-practice</td>
-    <td><code class="curie">habitatmech:BACDIVE.ddf5f83abc</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">206</td>
     <td class="meta">BACDIVE</td>
@@ -623,7 +544,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/freshwater-wetland-ecosystem-envo-00000243.html">freshwater wetland ecosystem</a></td>
     <td class="meta">freshwater wetland ecosystem</td>
-    <td><code class="curie">ENVO:00000243</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">201</td>
     <td class="meta">PREGO</td>
@@ -631,7 +551,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/subtropical-envo-01000205.html">subtropical</a></td>
     <td class="meta">subtropical</td>
-    <td><code class="curie">ENVO:01000205</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">196</td>
     <td class="meta">PREGO</td>
@@ -639,7 +558,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/climate-habitatmech-bacdive-1599585546.html">Climate</a></td>
     <td class="meta">Climate</td>
-    <td><code class="curie">habitatmech:BACDIVE.1599585546</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">193</td>
     <td class="meta">BACDIVE</td>
@@ -647,7 +565,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/lab-enrichment-habitatmech-bacdive-6e0d8a73f2.html">Lab-enrichment</a></td>
     <td class="meta">Lab-enrichment</td>
-    <td><code class="curie">habitatmech:BACDIVE.6e0d8a73f2</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">192</td>
     <td class="meta">BACDIVE</td>
@@ -655,23 +572,13 @@ barn.</p>
   <tr>
     <td><a href="../habitats/water-treatment-plant-habitatmech-bacdive-13ab77c66c.html">Water-treatment-plant</a></td>
     <td class="meta">Water-treatment-plant</td>
-    <td><code class="curie">habitatmech:BACDIVE.13ab77c66c</code></td>
     <td><span class="pill">BROAD</span></td>
     <td class="num">187</td>
     <td class="meta">BACDIVE</td>
   </tr>
   <tr>
-    <td><a href="../habitats/food-fermented-habitatmech-bacdive-2b1959f1f0.html">food_fermented</a></td>
-    <td class="meta">food_fermented</td>
-    <td><code class="curie">habitatmech:BACDIVE.2b1959f1f0</code></td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">173</td>
-    <td class="meta">MADIN</td>
-  </tr>
-  <tr>
     <td><a href="../habitats/soil-pollution-habitatmech-madin-ece0235b87.html">soil pollution</a></td>
     <td class="meta">soil pollution</td>
-    <td><code class="curie">habitatmech:MADIN.ece0235b87</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">161</td>
     <td class="meta">MADIN</td>
@@ -679,7 +586,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/specimen-habitatmech-bacdive-db240195f6.html">Specimen</a></td>
     <td class="meta">Specimen</td>
-    <td><code class="curie">habitatmech:BACDIVE.db240195f6</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">159</td>
     <td class="meta">BACDIVE</td>
@@ -687,7 +593,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/sterilized-plant-part-habitatmech-bacdive-27fe5ab8fb.html">Sterilized-plant-part</a></td>
     <td class="meta">Sterilized-plant-part</td>
-    <td><code class="curie">habitatmech:BACDIVE.27fe5ab8fb</code></td>
     <td><span class="pill">NARROW</span></td>
     <td class="num">156</td>
     <td class="meta">BACDIVE</td>
@@ -695,7 +600,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/industrial-production-habitatmech-bacdive-cb34a860e6.html">Industrial-production</a></td>
     <td class="meta">Industrial-production</td>
-    <td><code class="curie">habitatmech:BACDIVE.cb34a860e6</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">147</td>
     <td class="meta">BACDIVE</td>
@@ -703,7 +607,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/fecal-environment-envo-01001029.html">fecal environment</a></td>
     <td class="meta">host_animal_endotherm_feces</td>
-    <td><code class="curie">ENVO:01001029</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">146</td>
     <td class="meta">ENVIRONMENTS_TABLE, MADIN</td>
@@ -711,7 +614,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/animal-associated-environment-envo-01001002.html">animal-associated environment</a></td>
     <td class="meta">host_animal</td>
-    <td><code class="curie">ENVO:01001002</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">144</td>
     <td class="meta">ENVIRONMENTS_TABLE, MADIN</td>
@@ -719,7 +621,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/medical-device-habitatmech-bacdive-7ea89610a2.html">Medical-device</a></td>
     <td class="meta">Medical-device</td>
-    <td><code class="curie">habitatmech:BACDIVE.7ea89610a2</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">141</td>
     <td class="meta">BACDIVE</td>
@@ -727,23 +628,13 @@ barn.</p>
   <tr>
     <td><a href="../habitats/biotic-mesoscopic-physical-object-envo-01000009.html">biotic mesoscopic physical object</a></td>
     <td class="meta">ENVO:01000009</td>
-    <td><code class="curie">ENVO:01000009</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">133</td>
     <td class="meta">PREGO</td>
   </tr>
   <tr>
-    <td><a href="../habitats/host-animal-endotherm-rumen-habitatmech-bacdive-ed51f3e74a.html">host_animal_endotherm_rumen</a></td>
-    <td class="meta">host_animal_endotherm_rumen</td>
-    <td><code class="curie">habitatmech:BACDIVE.ed51f3e74a</code></td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">132</td>
-    <td class="meta">MADIN</td>
-  </tr>
-  <tr>
     <td><a href="../habitats/oil-fuel-habitatmech-bacdive-9f31ab2d87.html">Oil-Fuel</a></td>
     <td class="meta">Oil-Fuel</td>
-    <td><code class="curie">habitatmech:BACDIVE.9f31ab2d87</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">130</td>
     <td class="meta">BACDIVE</td>
@@ -751,7 +642,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/mud-envo-01000001.html">mud</a></td>
     <td class="meta">mud</td>
-    <td><code class="curie">ENVO:01000001</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">126</td>
     <td class="meta">PREGO</td>
@@ -759,7 +649,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/volcanic-field-envo-00000354.html">volcanic field</a></td>
     <td class="meta">volcanic field</td>
-    <td><code class="curie">ENVO:00000354</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">108</td>
     <td class="meta">PREGO</td>
@@ -767,7 +656,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/environmental-feature-envo-00002297.html">environmental feature</a></td>
     <td class="meta">ENVO:00002297</td>
-    <td><code class="curie">ENVO:00002297</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">107</td>
     <td class="meta">PREGO</td>
@@ -775,7 +663,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/high-temperature-environment-envo-01000305.html">high temperature environment</a></td>
     <td class="meta">high temperature environment</td>
-    <td><code class="curie">ENVO:01000305</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">105</td>
     <td class="meta">PREGO</td>
@@ -783,7 +670,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/sulfuric-habitatmech-bacdive-f655f51b59.html">Sulfuric</a></td>
     <td class="meta">Sulfuric</td>
-    <td><code class="curie">habitatmech:BACDIVE.f655f51b59</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">102</td>
     <td class="meta">BACDIVE</td>
@@ -791,7 +677,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/rodentia-other-habitatmech-bacdive-745e245512.html">Rodentia-Other</a></td>
     <td class="meta">Rodentia-Other</td>
-    <td><code class="curie">habitatmech:BACDIVE.745e245512</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">97</td>
     <td class="meta">BACDIVE</td>
@@ -799,7 +684,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/felidae-cat-habitatmech-bacdive-e6b73de092.html">Felidae-Cat</a></td>
     <td class="meta">Felidae-Cat</td>
-    <td><code class="curie">habitatmech:BACDIVE.e6b73de092</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">95</td>
     <td class="meta">BACDIVE</td>
@@ -807,7 +691,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/anaerobic-digestor-habitatmech-bacdive-0180300130.html">Anaerobic-digestor</a></td>
     <td class="meta">Anaerobic-digestor</td>
-    <td><code class="curie">habitatmech:BACDIVE.0180300130</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">89</td>
     <td class="meta">BACDIVE</td>
@@ -815,7 +698,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/alga-habitatmech-madin-5eeeec4db2.html">alga</a></td>
     <td class="meta">alga</td>
-    <td><code class="curie">habitatmech:MADIN.5eeeec4db2</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">88</td>
     <td class="meta">MADIN</td>
@@ -823,7 +705,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/porifera-sponges-habitatmech-bacdive-18f9382d8d.html">Porifera-Sponges</a></td>
     <td class="meta">Porifera-Sponges</td>
-    <td><code class="curie">habitatmech:BACDIVE.18f9382d8d</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">86</td>
     <td class="meta">BACDIVE</td>
@@ -831,7 +712,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/livestock-husbandry-habitatmech-bacdive-ec17e237ad.html">Livestock-Husbandry</a></td>
     <td class="meta">Livestock-Husbandry</td>
-    <td><code class="curie">habitatmech:BACDIVE.ec17e237ad</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">84</td>
     <td class="meta">BACDIVE</td>
@@ -839,7 +719,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/iucn-national-park-envo-00000367.html">IUCN national park</a></td>
     <td class="meta">IUCN national park</td>
-    <td><code class="curie">ENVO:00000367</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">76</td>
     <td class="meta">PREGO</td>
@@ -847,7 +726,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/cnidaria-corals-habitatmech-bacdive-ef2153283d.html">Cnidaria-Corals</a></td>
     <td class="meta">Cnidaria-Corals</td>
-    <td><code class="curie">habitatmech:BACDIVE.ef2153283d</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">75</td>
     <td class="meta">BACDIVE</td>
@@ -855,7 +733,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/aquatic-mammal-habitatmech-bacdive-15180e7ff9.html">Aquatic-mammal</a></td>
     <td class="meta">Aquatic-mammal</td>
-    <td><code class="curie">habitatmech:BACDIVE.15180e7ff9</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">69</td>
     <td class="meta">BACDIVE</td>
@@ -863,15 +740,20 @@ barn.</p>
   <tr>
     <td><a href="../habitats/xerophilic-habitatmech-bacdive-f5201ef8d6.html">Xerophilic</a></td>
     <td class="meta">Xerophilic</td>
-    <td><code class="curie">habitatmech:BACDIVE.f5201ef8d6</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">67</td>
     <td class="meta">BACDIVE</td>
   </tr>
   <tr>
+    <td><a href="../habitats/aquatic-plant-habitatmech-bacdive-38260eea00.html">Aquatic-plant</a></td>
+    <td class="meta">Aquatic-plant</td>
+    <td><span class="pill warn">UNGROUNDED</span></td>
+    <td class="num">66</td>
+    <td class="meta">BACDIVE</td>
+  </tr>
+  <tr>
     <td><a href="../habitats/village-biome-envo-01000246.html">village biome</a></td>
     <td class="meta">village biome</td>
-    <td><code class="curie">ENVO:01000246</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">64</td>
     <td class="meta">PREGO</td>
@@ -879,7 +761,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/contaminant-habitatmech-bacdive-4d06ff4bb5.html">Contaminant</a></td>
     <td class="meta">Contaminant</td>
-    <td><code class="curie">habitatmech:BACDIVE.4d06ff4bb5</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">61</td>
     <td class="meta">BACDIVE</td>
@@ -887,7 +768,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/meningitis-habitatmech-bacdive-693692f9f6.html">Meningitis</a></td>
     <td class="meta">Meningitis</td>
-    <td><code class="curie">habitatmech:BACDIVE.693692f9f6</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">61</td>
     <td class="meta">BACDIVE</td>
@@ -895,7 +775,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/carcass-envo-00002033.html">carcass</a></td>
     <td class="meta">Decomposing-animal</td>
-    <td><code class="curie">ENVO:00002033</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">61</td>
     <td class="meta">BACDIVE, PREGO</td>
@@ -903,7 +782,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/core-sample-habitatmech-bacdive-3bf519722c.html">Core-sample</a></td>
     <td class="meta">Core-sample</td>
-    <td><code class="curie">habitatmech:BACDIVE.3bf519722c</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">60</td>
     <td class="meta">BACDIVE</td>
@@ -911,7 +789,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/vegetable-incl-grains-habitatmech-bacdive-d843032e51.html">Vegetable-incl.-Grains</a></td>
     <td class="meta">Vegetable-incl.-Grains</td>
-    <td><code class="curie">habitatmech:BACDIVE.d843032e51</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">59</td>
     <td class="meta">BACDIVE</td>
@@ -919,7 +796,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/hydrocarbon-habitatmech-madin-6d3f5f967f.html">hydrocarbon</a></td>
     <td class="meta">hydrocarbon</td>
-    <td><code class="curie">habitatmech:MADIN.6d3f5f967f</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">59</td>
     <td class="meta">MADIN</td>
@@ -927,7 +803,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/grassland-ecosystem-envo-01001206.html">grassland ecosystem</a></td>
     <td class="meta">Grassland</td>
-    <td><code class="curie">ENVO:01001206</code></td>
     <td><span class="pill">CLOSE</span></td>
     <td class="num">58</td>
     <td class="meta">BACDIVE</td>
@@ -935,7 +810,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/pig-manure-envo-00003860.html">pig manure</a></td>
     <td class="meta">pig manure</td>
-    <td><code class="curie">ENVO:00003860</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">58</td>
     <td class="meta">PREGO</td>
@@ -943,7 +817,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/arid-habitatmech-madin-8eaf8ee93c.html">arid</a></td>
     <td class="meta">arid</td>
-    <td><code class="curie">habitatmech:MADIN.8eaf8ee93c</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">53</td>
     <td class="meta">MADIN</td>
@@ -951,7 +824,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/waste-material-envo-00002264.html">waste material</a></td>
     <td class="meta">waste material</td>
-    <td><code class="curie">ENVO:00002264</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">52</td>
     <td class="meta">PREGO</td>
@@ -959,7 +831,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/desert-sand-envo-00005800.html">desert sand</a></td>
     <td class="meta">desert sand</td>
-    <td><code class="curie">ENVO:00005800</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">50</td>
     <td class="meta">PREGO</td>
@@ -967,7 +838,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/phreatic-zone-envo-00000329.html">phreatic zone</a></td>
     <td class="meta">phreatic zone</td>
-    <td><code class="curie">ENVO:00000329</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">48</td>
     <td class="meta">PREGO</td>
@@ -975,7 +845,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/bottled-canned-packed-food-habitatmech-bacdive-2acf2810c5.html">Bottled,-canned,-packed-food</a></td>
     <td class="meta">Bottled,-canned,-packed-food</td>
-    <td><code class="curie">habitatmech:BACDIVE.2acf2810c5</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">47</td>
     <td class="meta">BACDIVE</td>
@@ -983,7 +852,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/bioremediation-habitatmech-bacdive-99663bb3ee.html">Bioremediation</a></td>
     <td class="meta">Bioremediation</td>
-    <td><code class="curie">habitatmech:BACDIVE.99663bb3ee</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">45</td>
     <td class="meta">BACDIVE</td>
@@ -991,7 +859,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/painting-habitatmech-bacdive-0bfb662164.html">Painting</a></td>
     <td class="meta">Painting</td>
-    <td><code class="curie">habitatmech:BACDIVE.0bfb662164</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">45</td>
     <td class="meta">BACDIVE</td>
@@ -999,7 +866,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/mid-ocean-ridge-envo-00000406.html">mid-ocean ridge</a></td>
     <td class="meta">mid-ocean ridge</td>
-    <td><code class="curie">ENVO:00000406</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">45</td>
     <td class="meta">PREGO</td>
@@ -1007,7 +873,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/emulsion-envo-00010506.html">emulsion</a></td>
     <td class="meta">emulsion</td>
-    <td><code class="curie">ENVO:00010506</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">42</td>
     <td class="meta">PREGO</td>
@@ -1015,7 +880,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/lagoon-envo-00000038.html">lagoon</a></td>
     <td class="meta">lagoon</td>
-    <td><code class="curie">ENVO:00000038</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">42</td>
     <td class="meta">PREGO</td>
@@ -1023,23 +887,13 @@ barn.</p>
   <tr>
     <td><a href="../habitats/plant-infections-habitatmech-bacdive-2f22b1d05b.html">Plant-infections</a></td>
     <td class="meta">Plant-infections</td>
-    <td><code class="curie">habitatmech:BACDIVE.2f22b1d05b</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">41</td>
     <td class="meta">BACDIVE</td>
   </tr>
   <tr>
-    <td><a href="../habitats/root-nodule-envo-01000164.html">root nodule</a></td>
-    <td class="meta">host_plant_rootnodule</td>
-    <td><code class="curie">ENVO:01000164</code></td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">40</td>
-    <td class="meta">ENVIRONMENTS_TABLE, MADIN</td>
-  </tr>
-  <tr>
     <td><a href="../habitats/abort-habitatmech-bacdive-b61f30c070.html">Abort</a></td>
     <td class="meta">Abort</td>
-    <td><code class="curie">habitatmech:BACDIVE.b61f30c070</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">39</td>
     <td class="meta">BACDIVE</td>
@@ -1047,7 +901,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/animal-litter-envo-00002191.html">animal litter</a></td>
     <td class="meta">animal litter</td>
-    <td><code class="curie">ENVO:00002191</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">39</td>
     <td class="meta">PREGO</td>
@@ -1055,7 +908,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/water-scum-envo-00005794.html">water scum</a></td>
     <td class="meta">water scum</td>
-    <td><code class="curie">ENVO:00005794</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">39</td>
     <td class="meta">PREGO</td>
@@ -1063,7 +915,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/animal-produced-food-natural-habitatmech-bacdive-57e74dd487.html">Animal-produced-food-natural</a></td>
     <td class="meta">Animal-produced-food-natural</td>
-    <td><code class="curie">habitatmech:BACDIVE.57e74dd487</code></td>
     <td><span class="pill">NARROW</span></td>
     <td class="num">38</td>
     <td class="meta">BACDIVE</td>
@@ -1071,7 +922,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/heavy-metal-habitatmech-bacdive-8f711387b2.html">Heavy-metal</a></td>
     <td class="meta">Heavy-metal</td>
-    <td><code class="curie">habitatmech:BACDIVE.8f711387b2</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">38</td>
     <td class="meta">BACDIVE</td>
@@ -1079,7 +929,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/fungi-associated-environment-envo-01001041.html">fungi-associated environment</a></td>
     <td class="meta">host_fungus</td>
-    <td><code class="curie">ENVO:01001041</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">38</td>
     <td class="meta">ENVIRONMENTS_TABLE, MADIN</td>
@@ -1087,7 +936,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/non-marine-saline-and-alkaline-habitatmech-bacdive-9a0a53afc1.html">Non-marine-Saline-and-Alkaline</a></td>
     <td class="meta">Non-marine-Saline-and-Alkaline</td>
-    <td><code class="curie">habitatmech:BACDIVE.9a0a53afc1</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">37</td>
     <td class="meta">BACDIVE</td>
@@ -1095,7 +943,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/treatment-habitatmech-bacdive-e3272331b8.html">Treatment</a></td>
     <td class="meta">Treatment</td>
-    <td><code class="curie">habitatmech:BACDIVE.e3272331b8</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">37</td>
     <td class="meta">BACDIVE</td>
@@ -1103,7 +950,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/juice-natural-habitatmech-bacdive-0b7fa25ca9.html">Juice-natural</a></td>
     <td class="meta">Juice-natural</td>
-    <td><code class="curie">habitatmech:BACDIVE.0b7fa25ca9</code></td>
     <td><span class="pill">NARROW</span></td>
     <td class="num">36</td>
     <td class="meta">BACDIVE</td>
@@ -1111,7 +957,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/cold-environment-envo-01000309.html">cold environment</a></td>
     <td class="meta">cold environment</td>
-    <td><code class="curie">ENVO:01000309</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">34</td>
     <td class="meta">PREGO</td>
@@ -1119,7 +964,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/mineral-material-envo-01000256.html">mineral material</a></td>
     <td class="meta">mineral material</td>
-    <td><code class="curie">ENVO:01000256</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">32</td>
     <td class="meta">MADIN</td>
@@ -1127,7 +971,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/sterilized-desinfected-habitatmech-bacdive-aabf4aeae4.html">Sterilized-Desinfected</a></td>
     <td class="meta">Sterilized-Desinfected</td>
-    <td><code class="curie">habitatmech:BACDIVE.aabf4aeae4</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">30</td>
     <td class="meta">BACDIVE</td>
@@ -1135,7 +978,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/machines-and-devices-habitatmech-bacdive-1dbb2b0c6f.html">Machines-and-devices</a></td>
     <td class="meta">Machines-and-devices</td>
-    <td><code class="curie">habitatmech:BACDIVE.1dbb2b0c6f</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">29</td>
     <td class="meta">BACDIVE</td>
@@ -1143,7 +985,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/saline-environment-envo-01001040.html">saline environment</a></td>
     <td class="meta">saline environment</td>
-    <td><code class="curie">ENVO:01001040</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">29</td>
     <td class="meta">MADIN</td>
@@ -1151,7 +992,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/defined-media-habitatmech-bacdive-a2edc55556.html">Defined-media</a></td>
     <td class="meta">Defined-media</td>
-    <td><code class="curie">habitatmech:BACDIVE.a2edc55556</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">28</td>
     <td class="meta">BACDIVE</td>
@@ -1159,7 +999,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/root-tooth-habitatmech-bacdive-5bac6e6496.html">Root-Tooth</a></td>
     <td class="meta">Root-Tooth</td>
-    <td><code class="curie">habitatmech:BACDIVE.5bac6e6496</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">28</td>
     <td class="meta">BACDIVE</td>
@@ -1167,7 +1006,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/archeological-site-envo-00000564.html">archeological site</a></td>
     <td class="meta">archeological site</td>
-    <td><code class="curie">ENVO:00000564</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">28</td>
     <td class="meta">PREGO</td>
@@ -1175,7 +1013,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/oil-spill-envo-00002061.html">oil spill</a></td>
     <td class="meta">oil spill</td>
-    <td><code class="curie">ENVO:00002061</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">28</td>
     <td class="meta">PREGO</td>
@@ -1183,7 +1020,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/cooling-tower-habitatmech-bacdive-71d5f01e03.html">Cooling-tower</a></td>
     <td class="meta">Cooling-tower</td>
-    <td><code class="curie">habitatmech:BACDIVE.71d5f01e03</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">26</td>
     <td class="meta">BACDIVE</td>
@@ -1191,7 +1027,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/humid-habitatmech-bacdive-0fa0234f43.html">Humid</a></td>
     <td class="meta">Humid</td>
-    <td><code class="curie">habitatmech:BACDIVE.0fa0234f43</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">23</td>
     <td class="meta">BACDIVE</td>
@@ -1199,7 +1034,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/medical-product-habitatmech-bacdive-5209e5b46e.html">Medical-product</a></td>
     <td class="meta">Medical-product</td>
-    <td><code class="curie">habitatmech:BACDIVE.5209e5b46e</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">21</td>
     <td class="meta">BACDIVE</td>
@@ -1207,7 +1041,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/environmental-system-envo-01000254.html">environmental system</a></td>
     <td class="meta">environmental system</td>
-    <td><code class="curie">ENVO:01000254</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">21</td>
     <td class="meta">PREGO</td>
@@ -1215,7 +1048,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/food-product-envo-00002002.html">food product</a></td>
     <td class="meta">ENVO:00002002</td>
-    <td><code class="curie">ENVO:00002002</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">21</td>
     <td class="meta">PREGO</td>
@@ -1223,23 +1055,27 @@ barn.</p>
   <tr>
     <td><a href="../habitats/dust-ash-habitatmech-bacdive-4b8650dee7.html">Dust-Ash</a></td>
     <td class="meta">Dust-Ash</td>
-    <td><code class="curie">habitatmech:BACDIVE.4b8650dee7</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">20</td>
     <td class="meta">BACDIVE</td>
   </tr>
   <tr>
-    <td><a href="../habitats/astrogeological-gas-envo-01001155.html">astrogeological gas</a></td>
+    <td><a href="../habitats/waste-gas-habitatmech-bacdive-3eec8fcfc4.html">Waste-gas</a></td>
     <td class="meta">Waste-gas</td>
-    <td><code class="curie">ENVO:01001155</code></td>
-    <td><span class="pill">CLOSE</span></td>
+    <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">20</td>
+    <td class="meta">BACDIVE</td>
+  </tr>
+  <tr>
+    <td><a href="../habitats/starter-culture-habitatmech-bacdive-9eabedc3a1.html">Starter-culture</a></td>
+    <td class="meta">Starter-culture</td>
+    <td><span class="pill warn">UNGROUNDED</span></td>
+    <td class="num">19</td>
     <td class="meta">BACDIVE</td>
   </tr>
   <tr>
     <td><a href="../habitats/rice-field-envo-00000296.html">rice field</a></td>
     <td class="meta">rice field</td>
-    <td><code class="curie">ENVO:00000296</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">19</td>
     <td class="meta">PREGO</td>
@@ -1247,7 +1083,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/solid-plant-waste-habitatmech-bacdive-8086ba1250.html">Solid-plant-waste</a></td>
     <td class="meta">Solid-plant-waste</td>
-    <td><code class="curie">habitatmech:BACDIVE.8086ba1250</code></td>
     <td><span class="pill">NARROW</span></td>
     <td class="num">17</td>
     <td class="meta">BACDIVE</td>
@@ -1255,7 +1090,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/gall-habitatmech-bacdive-f4971616a5.html">Gall</a></td>
     <td class="meta">Gall</td>
-    <td><code class="curie">habitatmech:BACDIVE.f4971616a5</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">16</td>
     <td class="meta">BACDIVE</td>
@@ -1263,7 +1097,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/domestic-waste-habitatmech-bacdive-66ce48b936.html">Domestic-waste</a></td>
     <td class="meta">Domestic-waste</td>
-    <td><code class="curie">habitatmech:BACDIVE.66ce48b936</code></td>
     <td><span class="pill">NARROW</span></td>
     <td class="num">14</td>
     <td class="meta">BACDIVE</td>
@@ -1271,7 +1104,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/foam-habitatmech-bacdive-df2f59b773.html">Foam</a></td>
     <td class="meta">Foam</td>
-    <td><code class="curie">habitatmech:BACDIVE.df2f59b773</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">13</td>
     <td class="meta">BACDIVE</td>
@@ -1279,7 +1111,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/rumen-fluid-habitatmech-bacdive-25af5eede6.html">Rumen-fluid</a></td>
     <td class="meta">Rumen-fluid</td>
-    <td><code class="curie">habitatmech:BACDIVE.25af5eede6</code></td>
     <td><span class="pill">NARROW</span></td>
     <td class="num">10</td>
     <td class="meta">BACDIVE</td>
@@ -1287,7 +1118,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/alkaline-environment-envo-01000316.html">alkaline environment</a></td>
     <td class="meta">alkaline environment</td>
-    <td><code class="curie">ENVO:01000316</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">10</td>
     <td class="meta">PREGO</td>
@@ -1295,7 +1125,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/co-culture-habitatmech-bacdive-ff945d8a69.html">Co-culture</a></td>
     <td class="meta">Co-culture</td>
-    <td><code class="curie">habitatmech:BACDIVE.ff945d8a69</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">9</td>
     <td class="meta">BACDIVE</td>
@@ -1303,7 +1132,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/epibiont-habitatmech-bacdive-f4eb470a03.html">Epibiont</a></td>
     <td class="meta">Epibiont</td>
-    <td><code class="curie">habitatmech:BACDIVE.f4eb470a03</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">8</td>
     <td class="meta">BACDIVE</td>
@@ -1311,7 +1139,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/xerophytic-habitatmech-bacdive-3abed720b8.html">Xerophytic</a></td>
     <td class="meta">Xerophytic</td>
-    <td><code class="curie">habitatmech:BACDIVE.3abed720b8</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">8</td>
     <td class="meta">BACDIVE</td>
@@ -1319,7 +1146,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/tuberculosis-habitatmech-bacdive-e5d21f85b7.html">Tuberculosis</a></td>
     <td class="meta">Tuberculosis</td>
-    <td><code class="curie">habitatmech:BACDIVE.e5d21f85b7</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">7</td>
     <td class="meta">BACDIVE</td>
@@ -1327,7 +1153,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/water-ice-envo-01000277.html">water ice</a></td>
     <td class="meta">water ice</td>
-    <td><code class="curie">ENVO:01000277</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">7</td>
     <td class="meta">PREGO</td>
@@ -1335,7 +1160,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/marine-neritic-zone-envo-00000206.html">marine neritic zone</a></td>
     <td class="meta">marine neritic zone</td>
-    <td><code class="curie">ENVO:00000206</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">6</td>
     <td class="meta">PREGO</td>
@@ -1343,7 +1167,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/stromatolite-mat-envo-00002157.html">stromatolite mat</a></td>
     <td class="meta">stromatolite mat</td>
-    <td><code class="curie">ENVO:00002157</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">6</td>
     <td class="meta">PREGO</td>
@@ -1351,7 +1174,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/antibiotic-treatment-habitatmech-bacdive-bb97519ae8.html">Antibiotic-treatment</a></td>
     <td class="meta">Antibiotic-treatment</td>
-    <td><code class="curie">habitatmech:BACDIVE.bb97519ae8</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">5</td>
     <td class="meta">BACDIVE</td>
@@ -1359,7 +1181,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/endosymbiont-habitatmech-bacdive-7d840c7ddc.html">Endosymbiont</a></td>
     <td class="meta">Endosymbiont</td>
-    <td><code class="curie">habitatmech:BACDIVE.7d840c7ddc</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">5</td>
     <td class="meta">BACDIVE</td>
@@ -1367,7 +1188,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/spot-leaf-stem-habitatmech-bacdive-31392c69b9.html">Spot-Leaf,Stem</a></td>
     <td class="meta">Spot-Leaf,Stem</td>
-    <td><code class="curie">habitatmech:BACDIVE.31392c69b9</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">5</td>
     <td class="meta">BACDIVE</td>
@@ -1375,7 +1195,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/surface-swab-habitatmech-bacdive-6911460a4a.html">Surface-swab</a></td>
     <td class="meta">Surface-swab</td>
-    <td><code class="curie">habitatmech:BACDIVE.6911460a4a</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">5</td>
     <td class="meta">BACDIVE</td>
@@ -1383,7 +1202,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/agricultural-waste-envo-00002265.html">agricultural waste</a></td>
     <td class="meta">ENVO:00002265</td>
-    <td><code class="curie">ENVO:00002265</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">5</td>
     <td class="meta">PREGO</td>
@@ -1391,7 +1209,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/sea-sand-envo-00002118.html">sea sand</a></td>
     <td class="meta">sea sand</td>
-    <td><code class="curie">ENVO:00002118</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">5</td>
     <td class="meta">PREGO</td>
@@ -1399,7 +1216,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/decomposing-algae-habitatmech-bacdive-dded810572.html">Decomposing-algae</a></td>
     <td class="meta">Decomposing-algae</td>
-    <td><code class="curie">habitatmech:BACDIVE.dded810572</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">4</td>
     <td class="meta">BACDIVE</td>
@@ -1407,7 +1223,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/paddy-ricefield-habitatmech-bacdive-6e3154acd8.html">Paddy-Ricefield</a></td>
     <td class="meta">Paddy-Ricefield</td>
-    <td><code class="curie">habitatmech:BACDIVE.6e3154acd8</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">4</td>
     <td class="meta">BACDIVE</td>
@@ -1415,7 +1230,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/simulated-communities-habitatmech-bacdive-5fa4710934.html">Simulated-communities</a></td>
     <td class="meta">Simulated-communities</td>
-    <td><code class="curie">habitatmech:BACDIVE.5fa4710934</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">4</td>
     <td class="meta">BACDIVE</td>
@@ -1423,7 +1237,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/mediterranean-envo-01000207.html">mediterranean</a></td>
     <td class="meta">mediterranean</td>
-    <td><code class="curie">ENVO:01000207</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">4</td>
     <td class="meta">PREGO</td>
@@ -1431,7 +1244,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/part-of-plant-habitatmech-madin-25325947e2.html">part of plant</a></td>
     <td class="meta">part of plant</td>
-    <td><code class="curie">habitatmech:MADIN.25325947e2</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">4</td>
     <td class="meta">MADIN</td>
@@ -1439,7 +1251,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/cotton-other-fibres-habitatmech-bacdive-009b89b30a.html">Cotton-other-fibres</a></td>
     <td class="meta">Cotton-other-fibres</td>
-    <td><code class="curie">habitatmech:BACDIVE.009b89b30a</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">3</td>
     <td class="meta">BACDIVE</td>
@@ -1447,7 +1258,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/in-situ-habitatmech-bacdive-3edb563d49.html">In-situ</a></td>
     <td class="meta">In-situ</td>
-    <td><code class="curie">habitatmech:BACDIVE.3edb563d49</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">3</td>
     <td class="meta">BACDIVE</td>
@@ -1455,7 +1265,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/lab-synthesis-habitatmech-bacdive-0e92e77cd4.html">Lab-synthesis</a></td>
     <td class="meta">Lab-synthesis</td>
-    <td><code class="curie">habitatmech:BACDIVE.0e92e77cd4</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">3</td>
     <td class="meta">BACDIVE</td>
@@ -1463,7 +1272,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/protist-habitatmech-bacdive-a7f6b12719.html">Protist</a></td>
     <td class="meta">Protist</td>
-    <td><code class="curie">habitatmech:BACDIVE.a7f6b12719</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">3</td>
     <td class="meta">BACDIVE</td>
@@ -1471,7 +1279,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/wilt-habitatmech-bacdive-4c48b5114d.html">Wilt</a></td>
     <td class="meta">Wilt</td>
-    <td><code class="curie">habitatmech:BACDIVE.4c48b5114d</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">3</td>
     <td class="meta">BACDIVE</td>
@@ -1479,7 +1286,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/microbial-mat-envo-01000008.html">microbial mat</a></td>
     <td class="meta">microbial mat</td>
-    <td><code class="curie">ENVO:01000008</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">3</td>
     <td class="meta">PREGO</td>
@@ -1487,7 +1293,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/silage-envo-00003030.html">silage</a></td>
     <td class="meta">silage</td>
-    <td><code class="curie">ENVO:00003030</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">3</td>
     <td class="meta">PREGO</td>
@@ -1495,7 +1300,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/cave-water-habitatmech-bacdive-9ae6cfc178.html">Cave-water</a></td>
     <td class="meta">Cave-water</td>
-    <td><code class="curie">habitatmech:BACDIVE.9ae6cfc178</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">2</td>
     <td class="meta">BACDIVE</td>
@@ -1503,7 +1307,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/endosphere-habitatmech-bacdive-3e4680f074.html">Endosphere</a></td>
     <td class="meta">Endosphere</td>
-    <td><code class="curie">habitatmech:BACDIVE.3e4680f074</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">2</td>
     <td class="meta">BACDIVE</td>
@@ -1511,7 +1314,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/heated-burned-habitatmech-bacdive-8bf2766463.html">Heated-Burned</a></td>
     <td class="meta">Heated-Burned</td>
-    <td><code class="curie">habitatmech:BACDIVE.8bf2766463</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">2</td>
     <td class="meta">BACDIVE</td>
@@ -1519,7 +1321,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/immunocompromised-habitatmech-bacdive-0d6b871731.html">Immunocompromised</a></td>
     <td class="meta">Immunocompromised</td>
-    <td><code class="curie">habitatmech:BACDIVE.0d6b871731</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">2</td>
     <td class="meta">BACDIVE</td>
@@ -1527,7 +1328,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/mycosis-habitatmech-bacdive-6d5784a4c5.html">Mycosis</a></td>
     <td class="meta">Mycosis</td>
-    <td><code class="curie">habitatmech:BACDIVE.6d5784a4c5</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">2</td>
     <td class="meta">BACDIVE</td>
@@ -1535,7 +1335,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/post-mortem-habitatmech-bacdive-4e5b25adcb.html">Post-mortem</a></td>
     <td class="meta">Post-mortem</td>
-    <td><code class="curie">habitatmech:BACDIVE.4e5b25adcb</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">2</td>
     <td class="meta">BACDIVE</td>
@@ -1543,7 +1342,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/rot-root-stem-habitatmech-bacdive-04ddbbeabe.html">Rot-Root,Stem</a></td>
     <td class="meta">Rot-Root,Stem</td>
-    <td><code class="curie">habitatmech:BACDIVE.04ddbbeabe</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">2</td>
     <td class="meta">BACDIVE</td>
@@ -1551,7 +1349,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/transportation-ways-roads-habitatmech-bacdive-1b4071cb1d.html">Transportation-ways-Roads</a></td>
     <td class="meta">Transportation-ways-Roads</td>
-    <td><code class="curie">habitatmech:BACDIVE.1b4071cb1d</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">2</td>
     <td class="meta">BACDIVE</td>
@@ -1559,7 +1356,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/mudflat-envo-00000192.html">mudflat</a></td>
     <td class="meta">mudflat</td>
-    <td><code class="curie">ENVO:00000192</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">2</td>
     <td class="meta">PREGO</td>
@@ -1567,7 +1363,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/canker-habitatmech-bacdive-0f078d72a7.html">Canker</a></td>
     <td class="meta">Canker</td>
-    <td><code class="curie">habitatmech:BACDIVE.0f078d72a7</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">1</td>
     <td class="meta">BACDIVE</td>
@@ -1575,7 +1370,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/coalbed-water-habitatmech-bacdive-499e641dc2.html">Coalbed-water</a></td>
     <td class="meta">Coalbed-water</td>
-    <td><code class="curie">habitatmech:BACDIVE.499e641dc2</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">1</td>
     <td class="meta">BACDIVE</td>
@@ -1583,7 +1377,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/superfund-site-envo-00002156.html">Superfund site</a></td>
     <td class="meta">Superfund site</td>
-    <td><code class="curie">ENVO:00002156</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">1</td>
     <td class="meta">PREGO</td>
@@ -1591,7 +1384,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/anaerobic-mud-envo-00002133.html">anaerobic mud</a></td>
     <td class="meta">anaerobic mud</td>
-    <td><code class="curie">ENVO:00002133</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">1</td>
     <td class="meta">PREGO</td>
@@ -1599,7 +1391,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/area-of-national-forest-envo-00000360.html">area of national forest</a></td>
     <td class="meta">area of national forest</td>
-    <td><code class="curie">ENVO:00000360</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">1</td>
     <td class="meta">PREGO</td>
@@ -1607,7 +1398,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/beach-sand-envo-00002138.html">beach sand</a></td>
     <td class="meta">beach sand</td>
-    <td><code class="curie">ENVO:00002138</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">1</td>
     <td class="meta">PREGO</td>
@@ -1615,7 +1405,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/coarse-beach-sand-envo-00002148.html">coarse beach sand</a></td>
     <td class="meta">coarse beach sand</td>
-    <td><code class="curie">ENVO:00002148</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">1</td>
     <td class="meta">PREGO</td>
@@ -1623,7 +1412,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/estuarine-mud-envo-00002160.html">estuarine mud</a></td>
     <td class="meta">estuarine mud</td>
-    <td><code class="curie">ENVO:00002160</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">1</td>
     <td class="meta">PREGO</td>
@@ -1631,7 +1419,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/fen-envo-00000232.html">fen</a></td>
     <td class="meta">fen</td>
-    <td><code class="curie">ENVO:00000232</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">1</td>
     <td class="meta">PREGO</td>
@@ -1639,7 +1426,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/geothermal-field-envo-00000373.html">geothermal field</a></td>
     <td class="meta">ENVO:00000373</td>
-    <td><code class="curie">ENVO:00000373</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">1</td>
     <td class="meta">PREGO</td>
@@ -1647,7 +1433,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/national-wildlife-refuge-envo-00000364.html">national wildlife refuge</a></td>
     <td class="meta">national wildlife refuge</td>
-    <td><code class="curie">ENVO:00000364</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">1</td>
     <td class="meta">PREGO</td>
@@ -1655,7 +1440,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/plantation-envo-00000117.html">plantation</a></td>
     <td class="meta">plantation</td>
-    <td><code class="curie">ENVO:00000117</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">1</td>
     <td class="meta">PREGO</td>
@@ -1663,7 +1447,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/poultry-deep-litter-envo-00003908.html">poultry deep litter</a></td>
     <td class="meta">poultry deep litter</td>
-    <td><code class="curie">ENVO:00003908</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">1</td>
     <td class="meta">PREGO</td>
@@ -1671,7 +1454,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/zoological-garden-envo-00010625.html">zoological garden</a></td>
     <td class="meta">zoological garden</td>
-    <td><code class="curie">ENVO:00010625</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">1</td>
     <td class="meta">PREGO</td>
@@ -1679,7 +1461,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/low-land-river-systems-habitatmech-gold-61d10c8224.html">Low land river systems</a></td>
     <td class="meta">Low land river systems</td>
-    <td><code class="curie">habitatmech:GOLD.61d10c8224</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">0</td>
     <td class="meta">GOLD</td>
@@ -1687,7 +1468,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/mid-stream-habitatmech-gold-32269ef375.html">Mid stream</a></td>
     <td class="meta">Mid stream</td>
-    <td><code class="curie">habitatmech:GOLD.32269ef375</code></td>
     <td><span class="pill warn">UNGROUNDED</span></td>
     <td class="num">0</td>
     <td class="meta">GOLD</td>
@@ -1695,7 +1475,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/sediment-habitatmech-gold-6eda919358.html">Sediment</a></td>
     <td class="meta">Sediment</td>
-    <td><code class="curie">habitatmech:GOLD.6eda919358</code></td>
     <td><span class="pill">NARROW</span></td>
     <td class="num">0</td>
     <td class="meta">GOLD</td>
@@ -1703,7 +1482,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/endolithic-environment-envo-01000303.html">endolithic environment</a></td>
     <td class="meta">rock_endolithic</td>
-    <td><code class="curie">ENVO:01000303</code></td>
     <td><span class="pill">EXACT</span></td>
     <td class="num">0</td>
     <td class="meta">ENVIRONMENTS_TABLE</td>
@@ -1711,7 +1489,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/host-habitatmech-environments-table-54b570032a.html">host</a></td>
     <td class="meta">host</td>
-    <td><code class="curie">habitatmech:ENVIRONMENTS_TABLE.54b570032a</code></td>
     <td><span class="pill warn">NOT_APPLICABLE</span></td>
     <td class="num">0</td>
     <td class="meta">ENVIRONMENTS_TABLE</td>
@@ -1719,13 +1496,50 @@ barn.</p>
   </tbody>
 </table>
 <script>
-document.getElementById('q').addEventListener('input', function (e) {
-  var q = e.target.value.toLowerCase();
-  var rows = document.querySelectorAll('#tbl tbody tr');
-  for (var i = 0; i < rows.length; i++) {
-    rows[i].style.display = rows[i].textContent.toLowerCase().indexOf(q) === -1 ? 'none' : '';
+(function () {
+  var box = document.getElementById('q'), out = document.getElementById('count');
+  // Collected once. Re-running querySelectorAll per keystroke was a real part
+  // of the cost on the biggest category, before any matching happened at all.
+  var rows = [].slice.call(document.querySelectorAll('#tbl tbody tr'));
+  // Search keys are read from the DOM once, on the first keystroke, rather than
+  // shipped as an attribute per row: emitting them cost more bytes than the
+  // identifier column they replaced, and measuring said so. The read is O(rows)
+  // once; before, it was O(rows) per character.
+  var keys = null;
+  var hidden = rows.map(function () { return false; });
+  var pending = null;
+  function apply() {
+    pending = null;
+    if (keys === null) {
+      // The href is folded in so an identifier is still findable now the
+      // column has gone — the page name embeds the slugified CURIE.
+      keys = rows.map(function (r) {
+        var a = r.querySelector('a');
+        return (r.textContent + ' ' + (a ? a.getAttribute('href') : '')).toLowerCase();
+      });
+    }
+    var raw = box.value.toLowerCase();
+    // A pasted CURIE is matched in its slugified form too, since that is how
+    // the href spells it: "ENVO:00001998" -> "envo-00001998".
+    var slugged = raw.replace(/[^a-z0-9]+/g, '-');
+    var q = raw, shown = 0;
+    for (var i = 0; i < rows.length; i++) {
+      var hit = !q || keys[i].indexOf(q) !== -1 || keys[i].indexOf(slugged) !== -1;
+      // Only rows whose state actually changes are touched; a class toggle also
+      // batches better than writing style.display directly.
+      if (hit === hidden[i]) {
+        rows[i].classList.toggle('is-hidden', !hit);
+        hidden[i] = !hit;
+      }
+      if (hit) { shown++; }
+    }
+    out.textContent = q ? shown + ' of ' + rows.length + ' shown' : '';
   }
-});
+  box.addEventListener('input', function () {
+    // At most one pass per frame, however fast the typing.
+    if (pending === null) { pending = requestAnimationFrame(apply); }
+  });
+})();
 </script>
 <footer class="site">
   <p>

@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import re
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -95,6 +96,53 @@ def label_cohort(subject: str, object_label: str) -> str:
     if not subject_words & object_words:
         return "disjoint"
     return "overlap"
+
+
+# How a record's own label relates to the label of the source concept that
+# grounded it. The mapping cohorts above watch kg-microbe's table; these watch
+# the seeder's OWN lexical routes, which ground by matching a source label
+# against an ontology term's SYNONYMS and had no guard at all — that is how
+# "Coral" became barramundi, a fish whose Bengali name is coral, and "Nodule"
+# became a lobule of the cerebellum (#62).
+GROUNDING_COHORTS = {
+    "same": "label matched; nothing to add",
+    "dropped": "record label lost words the source had",
+    "narrowed": "record label adds words the source never claimed",
+    "disjoint": "no shared word — matched on a synonym, across domains",
+}
+GROUNDING_RISK = ("disjoint", "narrowed")
+_CURIE = re.compile(r"^[A-Za-z][A-Za-z0-9._-]*:[A-Za-z0-9._-]+$")
+
+
+def _stems(text: str) -> set[str]:
+    """Words with a trailing plural 's' folded off.
+
+    `label_cohort` compares whole joined labels, so it folds "compost"/
+    "composting" but not "Plants"/"plant-associated environment" — the
+    inflection is on one word inside a longer phrase. Without this, every
+    plural source label reads as a cross-domain synonym match and buries the
+    real ones.
+    """
+    return {w[:-1] if len(w) > 3 and w.endswith("s") else w for w in _words(text)}
+
+
+def grounding_cohort(source_label: str, record_label: str) -> str:
+    # PREGO nodes carry no label of their own, so the attestation repeats the
+    # CURIE. Comparing a CURIE to a label is meaningless and always "disjoint".
+    if _CURIE.match(source_label.strip()):
+        return "same"
+    source_words, record_words = _stems(source_label), _stems(record_label)
+    if not source_words or not record_words:
+        return "same"
+    if label_cohort(source_label, record_label) == "identical":
+        return "same"
+    if source_words < record_words:
+        return "narrowed"
+    if record_words < source_words:
+        return "dropped"
+    if not source_words & record_words:
+        return "disjoint"
+    return "same"
 
 
 def load_records(root: Path) -> list[tuple[Path, dict]]:
@@ -381,6 +429,42 @@ def main(argv: list[str] | None = None) -> int:
             flag = "id " if is_identity else "   "
             print(f"  {flag}{strains:7d}  {cohort:8s} {subject[:26]:26s} -> {target:18s} "
                   f"{label[:26]:26s} {identifier}")
+
+    # The same idea one level in: not what upstream mapped, but what the
+    # seeder's own lexical routes grounded (#62).
+    grounding_counts: Counter = Counter()
+    grounding_backlog: list[tuple] = []
+    for _, doc in records:
+        identifier = doc.get("identifier", "")
+        if identifier.startswith("habitatmech:"):
+            continue  # minted: nothing was claimed, so nothing to check
+        for attestation in doc.get("source_attestations") or []:
+            source_label = attestation.get("source_label") or ""
+            cohort = grounding_cohort(source_label, doc.get("label", ""))
+            grounding_counts[cohort] += 1
+            if cohort in GROUNDING_RISK and doc.get("mapping_status") != "REVIEWED":
+                grounding_backlog.append((
+                    attestation.get("assertion_count") or 0, cohort, source_label,
+                    identifier, doc.get("label", ""),
+                ))
+    if grounding_counts:
+        total_att = sum(grounding_counts[c] for c in GROUNDING_COHORTS)
+        print(f"\n=== {total_att} groundings, by how the record's label relates "
+              "to its source's ===")
+        print("  (the seeder grounds on ontology SYNONYMS too, and a synonym is")
+        print("   ambiguous across domains — nothing else checks this route)")
+        for cohort, why in GROUNDING_COHORTS.items():
+            marker = "  <-" if cohort in GROUNDING_RISK else "    "
+            print(f"  {cohort:10s} {grounding_counts.get(cohort, 0):6d}{marker} {why}")
+
+    if grounding_backlog and args.ungrounded_top:
+        grounding_backlog.sort(reverse=True)
+        print(f"\n=== {len(grounding_backlog)} risky groundings not yet reviewed ===")
+        for assertions, cohort, source_label, identifier, label in (
+            grounding_backlog[: args.ungrounded_top]
+        ):
+            print(f"  {assertions:7d}  {cohort:8s} {source_label[:24]:24s} -> "
+                  f"{label[:32]:32s} {identifier}")
 
     unverifiable = _unverifiable_mapping_targets()
     if unverifiable:

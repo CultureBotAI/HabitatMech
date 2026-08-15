@@ -19,27 +19,20 @@
   </nav>
 </header>
 <h1>CLINICAL</h1>
-<p class="lede">5 habitat records. Clinical and diagnostic sample contexts.</p>
+<p class="lede">4 habitat records. Clinical and diagnostic sample contexts.</p>
 <p class="meta">The source path is shown because a record's label is only the last
 step of it: "Cattle barn" under Air is the air sampled in a cattle barn, not the
-barn.</p>
-<input class="searchbox" id="q" type="search" placeholder="Filter these 5 records…" aria-label="Filter records">
+barn. The category prefix is trimmed off it, and the identifier lives on each
+record's own page — the link already carries it.</p>
+<input class="searchbox" id="q" type="search" placeholder="Filter these 4 records…" aria-label="Filter records">
+<p class="meta" id="count" aria-live="polite"></p>
 <table id="tbl">
   <caption>CLINICAL habitats</caption>
-  <thead><tr><th scope="col">Habitat</th><th scope="col">Source path</th><th scope="col">Identifier</th><th scope="col">Grounding</th><th scope="col" class="num">Assertions</th><th scope="col">Sources</th></tr></thead>
+  <thead><tr><th scope="col">Habitat</th><th scope="col">Source path</th><th scope="col">Grounding</th><th scope="col" class="num">Assertions</th><th scope="col">Sources</th></tr></thead>
   <tbody>
-  <tr>
-    <td><a href="../habitats/other-body-fluids-and-secretions-ncit-c13452.html">Other Body Fluids and Secretions</a></td>
-    <td class="meta">Fluids</td>
-    <td><code class="curie">NCIT:C13452</code></td>
-    <td><span class="pill">CLOSE</span></td>
-    <td class="num">6001</td>
-    <td class="meta">BACDIVE</td>
-  </tr>
   <tr>
     <td><a href="../habitats/biopsy-procedure-ncit-c15189.html">Biopsy Procedure</a></td>
     <td class="meta">Biopsy</td>
-    <td><code class="curie">NCIT:C15189</code></td>
     <td><span class="pill">CLOSE</span></td>
     <td class="num">95</td>
     <td class="meta">BACDIVE</td>
@@ -47,7 +40,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/catheter-device-ncit-c50344.html">Catheter Device</a></td>
     <td class="meta">Catheter</td>
-    <td><code class="curie">NCIT:C50344</code></td>
     <td><span class="pill">CLOSE</span></td>
     <td class="num">75</td>
     <td class="meta">BACDIVE</td>
@@ -55,7 +47,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/urinary-bladder-stone-ncit-c26707.html">Urinary Bladder Stone</a></td>
     <td class="meta">Bladder-stone</td>
-    <td><code class="curie">NCIT:C26707</code></td>
     <td><span class="pill">CLOSE</span></td>
     <td class="num">7</td>
     <td class="meta">BACDIVE</td>
@@ -63,7 +54,6 @@ barn.</p>
   <tr>
     <td><a href="../habitats/endotracheal-fluid-ncit-c171504.html">Endotracheal Fluid</a></td>
     <td class="meta">Tracheal-aspirate</td>
-    <td><code class="curie">NCIT:C171504</code></td>
     <td><span class="pill">CLOSE</span></td>
     <td class="num">3</td>
     <td class="meta">BACDIVE</td>
@@ -71,13 +61,50 @@ barn.</p>
   </tbody>
 </table>
 <script>
-document.getElementById('q').addEventListener('input', function (e) {
-  var q = e.target.value.toLowerCase();
-  var rows = document.querySelectorAll('#tbl tbody tr');
-  for (var i = 0; i < rows.length; i++) {
-    rows[i].style.display = rows[i].textContent.toLowerCase().indexOf(q) === -1 ? 'none' : '';
+(function () {
+  var box = document.getElementById('q'), out = document.getElementById('count');
+  // Collected once. Re-running querySelectorAll per keystroke was a real part
+  // of the cost on the biggest category, before any matching happened at all.
+  var rows = [].slice.call(document.querySelectorAll('#tbl tbody tr'));
+  // Search keys are read from the DOM once, on the first keystroke, rather than
+  // shipped as an attribute per row: emitting them cost more bytes than the
+  // identifier column they replaced, and measuring said so. The read is O(rows)
+  // once; before, it was O(rows) per character.
+  var keys = null;
+  var hidden = rows.map(function () { return false; });
+  var pending = null;
+  function apply() {
+    pending = null;
+    if (keys === null) {
+      // The href is folded in so an identifier is still findable now the
+      // column has gone — the page name embeds the slugified CURIE.
+      keys = rows.map(function (r) {
+        var a = r.querySelector('a');
+        return (r.textContent + ' ' + (a ? a.getAttribute('href') : '')).toLowerCase();
+      });
+    }
+    var raw = box.value.toLowerCase();
+    // A pasted CURIE is matched in its slugified form too, since that is how
+    // the href spells it: "ENVO:00001998" -> "envo-00001998".
+    var slugged = raw.replace(/[^a-z0-9]+/g, '-');
+    var q = raw, shown = 0;
+    for (var i = 0; i < rows.length; i++) {
+      var hit = !q || keys[i].indexOf(q) !== -1 || keys[i].indexOf(slugged) !== -1;
+      // Only rows whose state actually changes are touched; a class toggle also
+      // batches better than writing style.display directly.
+      if (hit === hidden[i]) {
+        rows[i].classList.toggle('is-hidden', !hit);
+        hidden[i] = !hit;
+      }
+      if (hit) { shown++; }
+    }
+    out.textContent = q ? shown + ' of ' + rows.length + ' shown' : '';
   }
-});
+  box.addEventListener('input', function () {
+    // At most one pass per frame, however fast the typing.
+    if (pending === null) { pending = requestAnimationFrame(apply); }
+  });
+})();
 </script>
 <footer class="site">
   <p>

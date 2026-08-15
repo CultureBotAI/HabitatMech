@@ -1,26 +1,12 @@
-identifier: FOODON:03544454
-label: 44540 - starter cultures (efsa foodex2)
-definition: The group includes any type of bacteria used as starter cultures, i.e.
-  a microbial preparation based on bacteria used in food production intentionally
-  inoculated in a raw material to initiate and carry out fermentations. For example,
-  starter cultures are used in meat and dairy technology. The part consumed/analysed
-  is by default the whole marketed unit or a homogeneous representative portion.[https://en.wikipedia.org/wiki/Starter_cultures]
-  and [https://www.google.co.uk/search?tbm=isch&q=Starter cultures]
-definition_source: FOODON
-habitat_category: FOOD
-grounding_status: CLOSE
-mapping_status: SEEDED
-synonyms:
-- synonym_text: Starter-culture
-  synonym_type: EXACT_SYNONYM
-  source: BacDive
-parent_habitats:
-- FOODON:03544453
+identifier: habitatmech:BACDIVE.9eabedc3a1
+label: Starter-culture
+habitat_category: OTHER
+grounding_status: UNGROUNDED
+mapping_status: REVIEWED
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:starter-culture
   source_label: Starter-culture
-  mapping_predicate: skos:closeMatch
   assertion_count: 19
   assertion_unit: STRAIN
 characteristic_taxa:
@@ -118,4 +104,4 @@ curation_history:
 - timestamp: '2026-08-15T00:10:17Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'

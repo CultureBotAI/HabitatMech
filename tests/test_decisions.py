@@ -245,3 +245,48 @@ def test_no_class_swept_concept_has_a_lexical_candidate(repo_root):
         f"'no term matched' note is false: {matched[:8]}. Curate them individually "
         "(`just worklist`) rather than leaving the claim standing."
     )
+
+
+def test_a_category_override_actually_moves_the_record(repo_root, records):
+    """`apply_decision` puts the override on the Resolution, but three of the
+    five ingest routes only read `res.category` back when it was still None —
+    so the override validated, looked live, and did nothing. A minted Madin or
+    PREGO identifier gives `infer_category` nothing to read, so the override is
+    the only way to fix those at all (#63)."""
+    import sys
+
+    sys.path.insert(0, str(repo_root / "scripts"))
+    from seed_from_sources import _madin_key, mint
+
+    from habitatmech.curate.decisions import load_decisions
+
+    overrides = {
+        d.identifier: d.category
+        for d in load_decisions(repo_root / "curation" / "decisions.tsv").values()
+        if d.category
+    }
+    if not overrides:
+        return
+
+    def keys_of(attestation: dict) -> list[str]:
+        """The minted keys a decision could use to address this attestation."""
+        source, source_id = attestation.get("source"), attestation.get("source_id") or ""
+        if source == "GOLD" and attestation.get("source_path"):
+            return [mint("GOLD", attestation["source_path"])]
+        if source == "MADIN":
+            return [_madin_key(source_id)]
+        if source in ("BACDIVE", "PREGO", "ENVIRONMENTS_TABLE"):
+            return [mint(source, source_id)]
+        return []
+
+    ignored, seen = [], set()
+    for _, doc in records:
+        for attestation in doc.get("source_attestations") or []:
+            for key in keys_of(attestation):
+                if key not in overrides:
+                    continue
+                seen.add(key)
+                if doc.get("habitat_category") != overrides[key]:
+                    ignored.append((key, overrides[key], doc.get("habitat_category")))
+    assert seen, "no category override could be matched to a record at all"
+    assert not ignored, f"category overrides that had no effect: {ignored[:5]}"

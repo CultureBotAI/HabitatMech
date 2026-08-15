@@ -161,3 +161,26 @@ def test_split_stubs_assert_no_canonical(repo_root):
             if len(row["current_identifiers"].split("|")) > 1:
                 assert "canonical" not in html, f"{stub.name} claims a canonical for a split"
                 assert "http-equiv" not in html, f"{stub.name} auto-redirects a split"
+
+
+def test_every_stub_on_disk_has_a_row_in_the_map(repo_root):
+    """A stub with no row is one the next render will prune, turning a working
+    redirect back into a 404. That is how the map decayed: it was rebuilt from
+    page deletions, and writing a stub replaces the page rather than deleting
+    it, so the evidence disappeared one commit later (#64)."""
+    import csv
+    import re
+
+    retired = repo_root / "data" / "habitats" / "RETIRED.tsv"
+    pages = repo_root / "pages" / "habitats"
+    if not retired.exists() or not pages.exists():
+        return
+    with retired.open(newline="", encoding="utf-8") as fh:
+        mapped = {r["retired_slug"] for r in csv.DictReader(fh, delimiter="\t")}
+    stubs = {
+        p.stem for p in pages.glob("*.html")
+        if re.search(r"has moved — HabitatMech", p.read_text(encoding="utf-8"))
+    }
+    assert stubs, "no redirect stubs rendered"
+    orphaned = sorted(stubs - mapped)
+    assert not orphaned, f"stubs with no row in RETIRED.tsv: {orphaned[:5]}"

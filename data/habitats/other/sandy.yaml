@@ -1,27 +1,12 @@
-identifier: ENVO:00000172
-label: sandy desert
-definition: A desert plain characterized by a surface veneer of sand.
-definition_source: ENVO
-habitat_category: TERRESTRIAL
-grounding_status: CLOSE
-mapping_status: SEEDED
-synonyms:
-- synonym_text: Sandy
-  synonym_type: EXACT_SYNONYM
-  source: BacDive
-- synonym_text: desert
-  synonym_type: EXACT_SYNONYM
-  source: ENVO
-- synonym_text: sandy area
-  synonym_type: EXACT_SYNONYM
-  source: ENVO
-parent_habitats:
-- ENVO:00000097
+identifier: habitatmech:BACDIVE.b3b3dfff91
+label: Sandy
+habitat_category: OTHER
+grounding_status: UNGROUNDED
+mapping_status: REVIEWED
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:sandy
   source_label: Sandy
-  mapping_predicate: skos:closeMatch
   assertion_count: 607
   assertion_unit: STRAIN
 characteristic_taxa:
@@ -178,4 +163,4 @@ curation_history:
 - timestamp: '2026-08-15T00:10:17Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'

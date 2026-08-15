@@ -68,45 +68,24 @@ def git(*args: str) -> str:
     return result.stdout if result.returncode == 0 else ""
 
 
-def dead_page_slugs(live: set[str]) -> dict[str, str]:
-    """Retired page slug -> the commit whose parent still had the file.
+def ever_published_slugs() -> set[str]:
+    """Every page name `pages/habitats/` has ever contained.
 
-    `live` is derived from the corpus rather than from what is on disk under
-    pages/: once the stubs are written they occupy those very filenames, so
-    reading the directory would make every retired slug look alive again and
-    the map would empty itself on the second run.
+    Listed per commit rather than inferred from deletions: a retired page is
+    replaced in place by its own stub, so a deletion-based walk goes blind as
+    soon as the stub lands. Used only to answer "was this URL ever real" — a
+    redirect for an address nobody could have linked to is noise.
     """
-    out: dict[str, str] = {}
-    commit = ""
-    for line in git("log", "--diff-filter=DR", "--name-status", "--format=%H",
-                    "--", "pages/habitats").splitlines():
-        if line and "\t" not in line:
-            commit = line.strip()
+    found: set[str] = set()
+    for commit in git("log", "--format=%H", "--", "pages/habitats").splitlines():
+        commit = commit.strip()
+        if not commit:
             continue
-        parts = line.split("\t")
-        if len(parts) < 2 or not commit:
-            continue
-        # A rename retires the old path just as a delete does.
-        slug = Path(parts[1]).stem
-        if slug not in live:
-            out.setdefault(slug, commit)
-    return out
-
-
-def identifier_of_dead_page(slug: str, commit: str) -> str:
-    html = git("show", f"{commit}^:pages/habitats/{slug}.html")
-    desc = _META_DESC.search(html)
-    if not desc:
-        return ""
-    # Rightmost match: the identifier group is the last one before "): ".
-    candidates = [m for m in _DESC_ID.finditer(desc.group(1))]
-    for match in reversed(candidates):
-        found = match.group(1).strip()
-        # Checked rather than trusted — a mis-parse must fail loudly by finding
-        # nothing, not quietly resolve to some other record.
-        if _CURIE.match(found):
-            return found
-    return ""
+        for path in git("ls-tree", "-r", "--name-only", commit,
+                        "--", "pages/habitats").splitlines():
+            if path.endswith(".html"):
+                found.add(Path(path).stem)
+    return found
 
 
 def retired_record_details() -> tuple[dict[str, set[str]], dict[str, str]]:
@@ -179,10 +158,33 @@ def build() -> list[dict[str, str]]:
     by_id, by_source = load_corpus()
     retired_sources, retired_labels = retired_record_details()
     live_slugs = {slug_for(doc) for doc in by_id.values()}
+    published = ever_published_slugs()
     rows: list[dict[str, str]] = []
-    for slug, commit in sorted(dead_page_slugs(live_slugs).items()):
-        identifier = identifier_of_dead_page(slug, commit)
-        if not identifier:
+    # Derived from RECORD history, not page history. A retired page is replaced
+    # in place by its own redirect stub, so git logs a modification rather than
+    # a deletion and any page-based detection stops seeing it the moment the
+    # stub is committed — the map erased itself one release after being built.
+    # Records are never replaced that way, and they carry both halves of the
+    # page name.
+    # Label changes need their own signal. PATHS.tsv deliberately pins a
+    # record's FILENAME so it survives re-labelling, so a label change is an
+    # in-place edit that record history cannot see — but the page name embeds
+    # the label, so the URL moves anyway. Any published slug that ends in a live
+    # record's identifier but is not its current slug is one of those.
+    for identifier, doc in sorted(by_id.items()):
+        suffix = "-" + slugify(identifier)
+        current = slug_for(doc)
+        for slug in sorted(published):
+            if slug != current and slug.endswith(suffix) and slug not in live_slugs:
+                rows.append({
+                    "retired_slug": slug, "retired_identifier": identifier,
+                    "retired_label": doc["label"],
+                    "current_identifiers": identifier, "resolved_by": "label_changed",
+                })
+
+    for identifier, label in sorted(retired_labels.items()):
+        slug = slugify(f"{label}-{identifier}")
+        if slug in live_slugs or slug not in published:
             continue
         if identifier in by_id:
             # The record is alive; only its label moved. Nothing to look up.
