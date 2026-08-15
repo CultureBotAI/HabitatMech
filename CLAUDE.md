@@ -128,6 +128,14 @@ which the seeder reads as an input: `GROUND` / `NOT_APPLICABLE` /
 `CONFIRM_UNGROUNDED` / `REVIEW`, each keyed on the **minted identifier of one
 source concept** (`just worklist` prints the key to use).
 
+**A note's claims are checked too.** `notes` is the only record of *why* a
+decision was made and is most of what an LLM-assisted pass produces, so a
+plausible-sounding citation is as hard to spot as a plausible-looking CURIE was
+before #39. `tests/test_decisions.py` verifies the three claims a note can make
+against the repo: a `Path:` must match the concept's own canonical path, any
+term id must exist in the vendored slice, and a label quoted next to an id must
+be that term's label (#51).
+
 Every `GROUND` names both the target CURIE and the label it expects, and the
 seed fails unless the term exists in the vendored slice *and* the label matches.
 Do not weaken that check — it is the only thing standing between an
