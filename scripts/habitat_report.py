@@ -277,7 +277,7 @@ def _stale_class_sweeps(class_swept: set[str], records: list[tuple[Path, dict]])
     if not class_swept:
         return []
     try:
-        from propose_decisions import classify
+        from propose_decisions import PRIORITY, classify
         from seed_from_sources import OntologyIndex, read_tsv
     except ImportError:
         return []
@@ -298,6 +298,14 @@ def _stale_class_sweeps(class_swept: set[str], records: list[tuple[Path, dict]])
             skey = norm_label(synonym)
             if skey:
                 by_synonym[skey].append((term_id, term["label"]))
+    # Same ordering build_index applies, with the non-grounding ontologies
+    # falling to the end rather than being dropped: an NCIT or mesh match still
+    # counts as staleness, but where an ENVO term also matches, that is the one
+    # to name. Without this the check reported BTO:0003809 for "soil" instead of
+    # ENVO:00001998 — detection was right and the example was misleading (#86).
+    for index in (by_label, by_synonym):
+        for key in index:
+            index[key].sort(key=lambda t: (PRIORITY.get(t[0].split(":", 1)[0], 9), t[0]))
     out = []
     for _, doc in records:
         if doc.get("identifier") not in class_swept:
