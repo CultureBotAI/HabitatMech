@@ -184,3 +184,33 @@ def test_every_stub_on_disk_has_a_row_in_the_map(repo_root):
     assert stubs, "no redirect stubs rendered"
     orphaned = sorted(stubs - mapped)
     assert not orphaned, f"stubs with no row in RETIRED.tsv: {orphaned[:5]}"
+
+
+def test_category_pages_are_paginated_and_the_index_covers_the_whole_category(repo_root):
+    """99% of a category page was its table body, and the biggest was 1641 rows
+    in 461 KB — the likeliest first click from Browse. Paginating cuts that, but
+    only helps if the filter still searches the WHOLE category: filtering the
+    300 rows in front of you and calling it the answer for 1641 would be worse
+    than the weight (#34)."""
+    import json
+    import re
+
+    pages = repo_root / "pages" / "category"
+    if not pages.exists():
+        return
+    biggest = max(pages.glob("*.html"), key=lambda p: p.stat().st_size)
+    assert biggest.stat().st_size < 200_000, (
+        f"{biggest.name} is {biggest.stat().st_size // 1024} KB; pagination has stopped working"
+    )
+    for index in pages.glob("*.json"):
+        html = (pages / f"{index.stem}.html").read_text(encoding="utf-8")
+        total = int(re.search(r'data-total="(\d+)"', html).group(1))
+        entries = json.loads(index.read_text(encoding="utf-8"))
+        assert len(entries) == total, (
+            f"{index.name} holds {len(entries)} records but the page claims {total}; "
+            "the filter would silently search a subset"
+        )
+        for label, slug, *_ in entries[:50]:
+            assert (repo_root / "pages" / "habitats" / f"{slug}.html").exists(), (
+                f"{index.name} points at a record page that does not exist: {slug}"
+            )

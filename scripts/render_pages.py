@@ -20,6 +20,7 @@ from __future__ import annotations
 import argparse
 import csv
 import filecmp
+import json
 import re
 import shutil
 import sys
@@ -43,8 +44,16 @@ TAXA_SHOWN = 25
 # Where the site is served from; the sitemap needs absolute URLs.
 SITE_BASE = "https://culturebotai.github.io/HabitatMech/pages/"
 
+# Rows per category page. 300 keeps the biggest category near 90 KB instead of
+# 461 KB; the filter still searches the whole category via the JSON index.
+CATEGORY_PAGE_SIZE = 300
+
 # Where the site is served from, for absolute URLs in the sitemap.
 SITE_BASE = "https://culturebotai.github.io/HabitatMech/pages/"
+
+# Rows per category page. 300 keeps the biggest category near 90 KB instead of
+# 461 KB; the filter still searches the whole category via the JSON index.
+CATEGORY_PAGE_SIZE = 300
 
 CATEGORY_BLURB = {
     "TERRESTRIAL": "Soils, sediments, subsurface, rock and other land environments.",
@@ -275,6 +284,7 @@ def build(out_dir: Path) -> None:
     assert stats["seeded"] == status_counts.get("SEEDED", 0)
 
     categories = []
+    category_pages: list[str] = []
     for name, items in sorted(by_category.items(), key=lambda kv: -len(kv[1])):
         categories.append(
             {
@@ -286,13 +296,42 @@ def build(out_dir: Path) -> None:
                 "description": CATEGORY_BLURB.get(name, ""),
             }
         )
-        (out_dir / "category" / f"{slugify(name)}.html").write_text(
-            env.get_template("category.html").render(
-                category=name,
-                description=CATEGORY_BLURB.get(name, ""),
-                records=sorted(items, key=lambda r: (-r["assertions"], r["label"])),
-                root="../",
-                stats=stats,
+        ordered = sorted(items, key=lambda r: (-r["assertions"], r["label"]))
+        slug = slugify(name)
+        # Paginated because 99% of a category page is its table body, and the
+        # biggest was 1641 rows in 461 KB — the likeliest first click from
+        # Browse, and by far the heaviest page on the site (#34).
+        chunks = [ordered[i:i + CATEGORY_PAGE_SIZE]
+                  for i in range(0, len(ordered), CATEGORY_PAGE_SIZE)] or [[]]
+        pager = [
+            {"n": n, "href": f"{slug}.html" if n == 1 else f"{slug}-{n}.html"}
+            for n in range(1, len(chunks) + 1)
+        ]
+        for n, chunk in enumerate(chunks, start=1):
+            target = out_dir / "category" / (f"{slug}.html" if n == 1 else f"{slug}-{n}.html")
+            target.write_text(
+                env.get_template("category.html").render(
+                    category=name,
+                    description=CATEGORY_BLURB.get(name, ""),
+                    records=chunk,
+                    total=len(ordered),
+                    page=n,
+                    pager=pager if len(pager) > 1 else [],
+                    index_url=f"{slug}.json",
+                    root="../",
+                    stats=stats,
+                ),
+                encoding="utf-8",
+            )
+            category_pages.append(f"category/{target.name}")
+        # A compact index so the filter can still search the WHOLE category
+        # rather than only the page in front of you. Fetched on the first
+        # keystroke, not on load, so it costs nothing to a reader who browses.
+        (out_dir / "category" / f"{slug}.json").write_text(
+            json.dumps(
+                [[r["label"], r["slug"], r["short_path"], r["grounding"],
+                  r["assertions"], ", ".join(r["sources"])] for r in ordered],
+                separators=(",", ":"), ensure_ascii=False,
             ),
             encoding="utf-8",
         )
@@ -334,7 +373,7 @@ def build(out_dir: Path) -> None:
     # category link — three clicks from the root, with no machine-readable index
     # of the deepest and most numerous content (#36).
     listed = ["index.html", "browse.html", "term-requests.html"]
-    listed += [f"category/{c['slug']}.html" for c in categories]
+    listed += category_pages
     listed += [f"habitats/{slug}.html" for slug in sorted(slug_of.values())]
     urls = "\n".join(f"  <url><loc>{SITE_BASE}{page}</loc></url>" for page in listed)
     (out_dir / "sitemap.xml").write_text(
@@ -400,7 +439,8 @@ def build(out_dir: Path) -> None:
     }
     written |= retired_written
     written |= {out_dir / "habitats" / f"{slug}.html" for slug in slug_of.values()}
-    written |= {out_dir / "category" / f"{c['slug']}.html" for c in categories}
+    written |= {out_dir / name for name in category_pages}
+    written |= {out_dir / "category" / f"{c['slug']}.json" for c in categories}
     pruned = 0
     for existing in sorted(out_dir.rglob("*")):
         if existing.is_file() and existing not in written:
