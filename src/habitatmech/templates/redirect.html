@@ -1,12 +1,17 @@
 {% extends "base.html" %}
 {% block head %}
-{% if r.targets|length == 1 %}<meta http-equiv="refresh" content="3; url=../habitats/{{ r.targets[0].slug }}.html">{% endif %}
+{% if r.targets|length == 1 %}
+<meta http-equiv="refresh" content="3; url=../habitats/{{ r.targets[0].slug }}.html">
+{# Only when there is genuinely one target. A split page is not a duplicate of
+   any single record, so asserting a canonical would claim the opposite of what
+   the page says (#61). #}
 <link rel="canonical" href="{{ site_base }}pages/habitats/{{ r.targets[0].slug }}.html">
+{% endif %}
 <meta name="robots" content="noindex, follow">
 {% endblock %}
 {% block title %}{{ r.retired_label }} has moved — HabitatMech{% endblock %}
 {% block content %}
-<h1>This record has moved</h1>
+<h1>{{ r.retired_label }} has moved</h1>
 {% if r.targets|length == 1 %}
 <p class="lede">
   <code>{{ r.retired_identifier }}</code> is no longer a record of its own. Its

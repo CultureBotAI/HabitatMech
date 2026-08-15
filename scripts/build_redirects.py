@@ -48,10 +48,16 @@ from render_pages import slugify  # noqa: E402
 
 HABITATS_DIR = REPO_ROOT / "data" / "habitats"
 RETIRED_PATH = HABITATS_DIR / "RETIRED.tsv"
-COLUMNS = ["retired_slug", "retired_identifier", "current_identifiers", "resolved_by"]
+COLUMNS = ["retired_slug", "retired_identifier", "retired_label",
+           "current_identifiers", "resolved_by"]
 
-# The identifier as the page's own meta description states it: "label (ID): ...".
-_META_ID = re.compile(r'<meta name="description" content="[^"(]*\(([^)]+)\)')
+# The page's meta description reads "{label} ({identifier}): a microbial
+# habitat ...". Anchoring on the "): " is what makes this unambiguous when the
+# label has parentheses of its own — 37 records do, and a leading [^"(]* would
+# capture "MNF" out of "Mixotrophic (MNF)" instead of the identifier (#60).
+_META_DESC = re.compile(r'<meta name="description" content="([^"]*)"')
+_DESC_ID = re.compile(r"\(([^()]+)\):\s")
+_CURIE = re.compile(r"^[A-Za-z][A-Za-z0-9._-]*:[A-Za-z0-9._-]+$")
 
 
 def git(*args: str) -> str:
@@ -89,11 +95,21 @@ def dead_page_slugs(live: set[str]) -> dict[str, str]:
 
 def identifier_of_dead_page(slug: str, commit: str) -> str:
     html = git("show", f"{commit}^:pages/habitats/{slug}.html")
-    match = _META_ID.search(html)
-    return match.group(1).strip() if match else ""
+    desc = _META_DESC.search(html)
+    if not desc:
+        return ""
+    # Rightmost match: the identifier group is the last one before "): ".
+    candidates = [m for m in _DESC_ID.finditer(desc.group(1))]
+    for match in reversed(candidates):
+        found = match.group(1).strip()
+        # Checked rather than trusted — a mis-parse must fail loudly by finding
+        # nothing, not quietly resolve to some other record.
+        if _CURIE.match(found):
+            return found
+    return ""
 
 
-def retired_record_source_ids() -> dict[str, set[str]]:
+def retired_record_details() -> tuple[dict[str, set[str]], dict[str, str]]:
     """Every retired record's identifier -> the source ids it carried.
 
     Source ids are upstream keys (``gold.ecosystem:5826``), so they survive the
@@ -105,6 +121,7 @@ def retired_record_source_ids() -> dict[str, set[str]]:
     naive form is thousands of `git show` calls.
     """
     found: dict[str, set[str]] = {}
+    labels: dict[str, str] = {}
     commit = ""
     for line in git("log", "--diff-filter=DR", "--name-status", "--format=%H",
                     "--", "data/habitats").splitlines():
@@ -130,7 +147,9 @@ def retired_record_source_ids() -> dict[str, set[str]]:
         # Latest wins: `git log` is newest-first, so the first sighting of an
         # identifier is the state it was in when it was retired.
         found.setdefault(doc["identifier"], source_ids)
-    return found
+        if doc.get("label"):
+            labels.setdefault(doc["identifier"], doc["label"])
+    return found, labels
 
 
 def slug_for(doc: dict) -> str:
@@ -158,7 +177,7 @@ def load_corpus() -> tuple[dict[str, dict], dict[str, str]]:
 
 def build() -> list[dict[str, str]]:
     by_id, by_source = load_corpus()
-    retired_sources = retired_record_source_ids()
+    retired_sources, retired_labels = retired_record_details()
     live_slugs = {slug_for(doc) for doc in by_id.values()}
     rows: list[dict[str, str]] = []
     for slug, commit in sorted(dead_page_slugs(live_slugs).items()):
@@ -169,6 +188,7 @@ def build() -> list[dict[str, str]]:
             # The record is alive; only its label moved. Nothing to look up.
             rows.append({
                 "retired_slug": slug, "retired_identifier": identifier,
+                "retired_label": retired_labels.get(identifier, by_id[identifier]["label"]),
                 "current_identifiers": identifier, "resolved_by": "label_changed",
             })
             continue
@@ -186,6 +206,7 @@ def build() -> list[dict[str, str]]:
         # wrong habitat — so all of them are kept and the stub offers a choice.
         rows.append({
             "retired_slug": slug, "retired_identifier": identifier,
+            "retired_label": retired_labels.get(identifier, ""),
             "current_identifiers": "|".join(landed),
             "resolved_by": "source_concepts_split" if len(landed) > 1 else "source_concepts_merged",
         })

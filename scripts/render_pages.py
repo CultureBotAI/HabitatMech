@@ -347,7 +347,7 @@ def build(out_dir: Path) -> None:
                     env.get_template("redirect.html").render(
                         r={
                             "retired_identifier": row["retired_identifier"],
-                            "retired_label": row["retired_slug"].replace("-", " "),
+                            "retired_label": row.get("retired_label") or row["retired_identifier"],
                             "resolved_by": row["resolved_by"],
                             "targets": targets,
                         },
