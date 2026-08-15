@@ -383,7 +383,11 @@ def test_no_class_sweep_asserts_a_negative_the_slice_now_contradicts(repo_root, 
     falsified it for 20 of 933 swept concepts, while each decision still read as
     a considered judgement (#12).
 
-    Nothing else re-checks a negative, so this does."""
+    Nothing else re-checks a negative, so this does — but only the exact
+    label-or-synonym part of it. The sweep also claimed no VARIANT, COMPOSED or
+    SUBSTRING match, and verifying those means driving the seeder's own routes
+    over every swept label, which is #84. A pass here is the strongest part of
+    the claim, not all of it."""
     import csv
     import sys
 

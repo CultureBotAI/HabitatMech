@@ -582,12 +582,15 @@ def main(argv: list[str] | None = None) -> int:
 
     stale = _stale_class_sweeps(class_swept_ids, records)
     print(f"\n=== {len(stale)} class-level sweep(s) the slice has since contradicted ===")
-    print("  (the sweep asserted no term matched; one does now. Vendoring an")
-    print("   ontology makes that negative stale, and nothing else re-checks it.)")
+    print("  (a sweep claims no term matched by exact, variant, composed OR substring")
+    print("   search; this re-tests the exact label-or-synonym part only, which is the")
+    print("   cheapest and strongest of them. Vendoring an ontology makes that negative")
+    print("   stale and nothing else re-checks it — but a clean line here is not the")
+    print("   whole claim re-verified. See #84.)")
     for assertions, label, found, identifier in stale[: args.ungrounded_top or None]:
         print(f"  {assertions:8d}  {label[:28]:28s} -> {found:18s} {identifier}")
     if not stale:
-        print("  none — every sweep's claim still holds against the current slice")
+        print("  none — no sweep is contradicted by an exact label or synonym match")
 
     organism = _organism_identities(records)
     print(f"\n=== {len(organism)} unreviewed record(s) whose identity is an organism ===")
