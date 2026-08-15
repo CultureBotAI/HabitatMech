@@ -5,13 +5,10 @@ definition: A natural depression or hole in the surface topography caused by the
   a meter to several hundred meters both in diameter and depth, and vary in form from
   soil-lined bowls to bedrock-edged chasms.
 definition_source: ENVO
-habitat_category: ENGINEERED
+habitat_category: AQUATIC
 grounding_status: EXACT
 mapping_status: SEEDED
 synonyms:
-- synonym_text: Sink
-  synonym_type: EXACT_SYNONYM
-  source: GOLD
 - synonym_text: basin
   synonym_type: EXACT_SYNONYM
   source: ENVO
@@ -22,7 +19,6 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: ENVO
 parent_habitats:
-- ENVO:00000073
 - ENVO:00000309
 - ENVO:00002011
 - ENVO:01001884
@@ -32,14 +28,6 @@ source_attestations:
   source_label: Sinkhole
   source_path: Environmental > Aquatic > Freshwater > Sinkhole
   mapping_predicate: skos:exactMatch
-  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
-- source: GOLD
-  source_id: gold.ecosystem:8365
-  source_label: Sink
-  source_path: Engineered > Built environment > Building > Sink
-  mapping_predicate: skos:closeMatch
-  assertion_count: 1
-  assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
 - timestamp: '2026-08-15T00:10:17Z'
