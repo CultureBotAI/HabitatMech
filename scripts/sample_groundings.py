@@ -35,11 +35,32 @@ DEFAULT_SEED = 20260814
 SAMPLES_DIR = REPO_ROOT / "curation" / "samples"
 
 
+def class_swept_ids() -> set[str]:
+    """Concepts decided by a class-level sweep — "no term matched by any lexical
+    route" — which deliberately does NOT count as reviewed. They are the largest
+    group nobody has read one by one, so they are worth sampling as a group."""
+    path = REPO_ROOT / "curation" / "decisions.tsv"
+    if not path.exists():
+        return set()
+    import csv as _csv
+    with path.open(newline="", encoding="utf-8") as fh:
+        return {
+            r["identifier"] for r in _csv.DictReader(fh, delimiter="\t")
+            if (r.get("review_depth") or "ITEM").strip().upper() == "CLASS"
+        }
+
+
 def population(grounding: str, reviewed: bool) -> list[dict]:
+    swept = class_swept_ids() if grounding == "CLASS_SWEPT" else set()
     found = []
     for path in sorted(HABITATS_DIR.rglob("*.yaml")):
         doc = yaml.safe_load(path.read_text(encoding="utf-8"))
-        if not isinstance(doc, dict) or doc.get("grounding_status") != grounding:
+        if not isinstance(doc, dict):
+            continue
+        if grounding == "CLASS_SWEPT":
+            if doc.get("identifier") not in swept:
+                continue
+        elif doc.get("grounding_status") != grounding:
             continue
         if not reviewed and doc.get("mapping_status") == "REVIEWED":
             continue
@@ -81,7 +102,9 @@ def wilson(hits: int, n: int) -> tuple[float, float]:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--grounding", default="EXACT")
+    parser.add_argument("--grounding", default="EXACT",
+                        help="A grounding_status, or CLASS_SWEPT for the concepts a "
+                             "class-level sweep decided without anyone reading them.")
     parser.add_argument("--size", type=int, default=40)
     parser.add_argument("--seed", type=int, default=DEFAULT_SEED)
     parser.add_argument("--include-reviewed", action="store_true")

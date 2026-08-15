@@ -1,10 +1,12 @@
 identifier: habitatmech:GOLD.6e10201167
 label: Annelida
 habitat_category: HOST_ASSOCIATED
-grounding_status: UNGROUNDED
-mapping_status: SEEDED
+grounding_status: NOT_APPLICABLE
+mapping_status: REVIEWED
 parent_habitats:
 - habitatmech:GOLD.d3b891e82e
+xrefs:
+- NCBITaxon:6340
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3370
@@ -17,4 +19,4 @@ curation_history:
 - timestamp: '2026-08-15T05:30:07Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NOT_APPLICABLE.'

@@ -374,3 +374,54 @@ def test_curation_notes_do_not_cite_evidence_that_does_not_exist(repo_root, raw_
     assert not invented, f"notes citing a term not in the vendored slice: {invented[:5]}"
     assert not wrong_path, f"notes citing the wrong GOLD path: {wrong_path[:5]}"
     assert not wrong_label, f"notes quoting a label the term does not have: {wrong_label[:5]}"
+
+
+def test_no_class_sweep_asserts_a_negative_the_slice_now_contradicts(repo_root, records, raw_tsv):
+    """A class-level sweep asserts "no term in the vendored slice matched this
+    label by any lexical route". That is a claim about the slice, and it decays
+    as the slice grows: vendoring PO (#10) and the referenced ancestry (#46)
+    falsified it for 20 of 933 swept concepts, while each decision still read as
+    a considered judgement (#12).
+
+    Nothing else re-checks a negative, so this does — but only the exact
+    label-or-synonym part of it. The sweep also claimed no VARIANT, COMPOSED or
+    SUBSTRING match, and verifying those means driving the seeder's own routes
+    over every swept label, which is #84. A pass here is the strongest part of
+    the claim, not all of it."""
+    import csv
+    import sys
+
+    sys.path.insert(0, str(repo_root / "scripts"))
+    from seed_from_sources import norm_label
+
+    by_label, by_synonym = {}, {}
+    for row in raw_tsv("ontology_terms.tsv"):
+        key = norm_label(row["label"])
+        if key:
+            by_label.setdefault(key, row["term_id"])
+        for synonym in (row["synonyms"] or "").split("|"):
+            skey = norm_label(synonym)
+            if skey:
+                by_synonym.setdefault(skey, row["term_id"])
+
+    with (repo_root / "curation" / "decisions.tsv").open(newline="", encoding="utf-8") as fh:
+        swept = {
+            r["identifier"] for r in csv.DictReader(fh, delimiter="\t")
+            if (r.get("review_depth") or "ITEM").strip().upper() == "CLASS"
+        }
+    assert swept, "no class-level sweep decisions found"
+
+    contradicted = []
+    for _, doc in records:
+        if doc.get("identifier") not in swept:
+            continue
+        for attestation in doc.get("source_attestations") or []:
+            key = norm_label(attestation.get("source_label") or "")
+            found = by_label.get(key) or by_synonym.get(key)
+            if found:
+                contradicted.append((doc["identifier"], attestation.get("source_label"), found))
+                break
+    assert not contradicted, (
+        f"{len(contradicted)} sweep(s) claim no term matched, but one does now: "
+        f"{contradicted[:5]}. Vendoring an ontology invalidates the claim; re-decide them."
+    )

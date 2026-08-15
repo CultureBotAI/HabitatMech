@@ -1,10 +1,12 @@
 identifier: habitatmech:GOLD.a89688e0ba
 label: Bacteria
 habitat_category: HOST_ASSOCIATED
-grounding_status: UNGROUNDED
-mapping_status: SEEDED
+grounding_status: NOT_APPLICABLE
+mapping_status: REVIEWED
 parent_habitats:
 - habitatmech:GOLD.895a2372e5
+xrefs:
+- NCBITaxon:2
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4383
@@ -17,4 +19,4 @@ curation_history:
 - timestamp: '2026-08-15T05:30:07Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NOT_APPLICABLE.'
