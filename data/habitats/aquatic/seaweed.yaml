@@ -1,32 +1,34 @@
-identifier: FOODON:03412266
-label: seaweed
-definition: 'A macroscopic, multicellular, marine algae (kingdom Protista) that belongs
-  to one of several groups of multicellular algae: the red algae, green algae, and
-  brown algae. As these three groups are not thought to have a common multicellular
-  ancestor, the seaweeds are a polyphyletic group. In addition, some tuft-forming
-  bluegreen algae (Cyanobacteria) are sometimes considered seaweed.'
-definition_source: FOODON
+identifier: habitatmech:GOLD.0e7a5162bb
+label: Seaweed
 habitat_category: AQUATIC
-grounding_status: EXACT
-mapping_status: SEEDED
-synonyms:
-- synonym_text: macroalgae
-  synonym_type: EXACT_SYNONYM
-  source: FOODON
+grounding_status: UNGROUNDED
+mapping_status: REVIEWED
 parent_habitats:
 - ENVO:00001999
-- FOODON:03411301
+xrefs:
+- FOODON:03412266
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4685
   source_label: Seaweed
   source_path: Environmental > Aquatic > Marine > Seaweed
-  mapping_predicate: skos:exactMatch
   assertion_count: 69
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader
+    term FOODON:03412266 ''seaweed'' attached as a parent. Non-habitat screen (#12):
+    grounded EXACT to FOODON:03412266 ''seaweed'', defined there as ''a macroscopic,
+    multicellular, marine algae (kingdom Protista)'' — the organism, not the habitat.
+    The concept under Environmental > Aquatic > Marine is the seaweed as a place microbes
+    live, its surface and the bed it forms. No term for that is in the vendored slice,
+    so the organism term is kept as an xref (#99) and this is a term-request candidate
+    distinct from the host-taxon family: it wants a macroalgal-bed style environment
+    term. (source concept habitatmech:GOLD.0e7a5162bb)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

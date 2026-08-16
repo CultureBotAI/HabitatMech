@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>algae — HabitatMech</title>
-<meta name="description" content="algae (FOODON:03411301): a microbial habitat harmonized from GOLD.">
+<title>Algae — HabitatMech</title>
+<meta name="description" content="Algae (habitatmech:GOLD.02383c20a7): a microbial habitat harmonized from GOLD.">
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -18,17 +18,15 @@
     <a href="https://github.com/CultureBotAI/HabitatMech">Source</a>
   </nav>
 </header>
-<h1>algae</h1>
+<h1>Algae</h1>
 <p class="meta">
-  <code class="curie">FOODON:03411301</code>
-<span class="sep">·</span><a href="http://purl.obolibrary.org/obo/FOODON_03411301">resolve</a>  <span class="sep">·</span><a href="../category/host-associated.html">HOST_ASSOCIATED</a>
-  <span class="sep">·</span><span class="pill">EXACT</span>
-  <span class="pill plain">SEEDED</span>
+  <code class="curie">habitatmech:GOLD.02383c20a7</code>
+  <span class="sep">·</span><a href="../category/host-associated.html">HOST_ASSOCIATED</a>
+  <span class="sep">·</span><span class="pill warn">UNGROUNDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
-<p>An informal term for a large, diverse group of photosynthetic eukaryotic organisms that are not necessarily closely related, and is thus polyphyletic.  <span class="meta">— FOODON</span></p>
-<div class="note warn"><p>Machine-generated and unreviewed. Its grounding comes
-from the seeder's rules, not from a curator.</p></div>
+
 
 <h2>Source attestations</h2>
 <p class="meta">Each upstream vocabulary's own account of this habitat. Assertion
@@ -48,13 +46,30 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="../habitats/environmental-system-determined-by-an-organism-envo-01001000.html">environmental system determined by an organism</a>      <code class="curie">ENVO:01001000</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/FOODON_00001184">algae material</a>      <code class="curie">FOODON:00001184</code></li>
 </ul>
 
 
 
+<h2>Related terms</h2>
+<p class="meta">Terms a source linked to this concept without this record
+claiming to be one of them, or to be narrower than one. A cross-reference, not
+a grounding.</p>
+<ul class="plain">
+  <li><a href="http://purl.obolibrary.org/obo/FOODON_03411301">algae</a>
+<code class="curie">FOODON:03411301</code></li>
+</ul>
 
 
+<h2>Curation</h2>
+<p class="meta">What a curator decided about this record, and why. A record built
+from several source concepts can carry one decision per concept.</p>
+<ol class="events">
+  <li>
+    <span class="pill">CONFIRM_UNGROUNDED</span>
+    <span class="meta">2026-08-16 · claude-opus-5</span>
+    <p>Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader term FOODON:03411301 &#39;algae&#39; attached as a parent. Non-habitat screen (#12): &#39;Host-associated &gt; Algae&#39; was grounded EXACT to FOODON:03411301 &#39;algae&#39;, which FOODON defines as &#39;an informal term for a large, diverse group of photosynthetic eukaryotic ORGANISMS&#39;. An organism is not a habitat, and because the seeder derives a GOLD child&#39;s parent from its path node, that identity also became the parent_habitats entry of 14 records under Host-associated &gt; Algae — publishing &#39;is-a algae the organism group&#39; as a broader-habitat claim 14 times over. The existing organism-identity screen could not see it: it tests ancestry against NCIT and mesh roots, and FOODON files both the organism and the material under one &#39;organism material&#39; root, so there is no structural signal to test. The concept itself is real — algae as host — and is the same family as the sponge, nematode and reptile requests, so it becomes a term request with the FOODON term kept as an xref (#99) rather than an identity. (source concept habitatmech:GOLD.02383c20a7)</p>
+  </li>
+</ol>
 
 <h2>Provenance</h2>
 <p class="meta">

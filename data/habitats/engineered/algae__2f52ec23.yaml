@@ -2,10 +2,9 @@ identifier: habitatmech:GOLD.5b8e5eddd2
 label: Algae
 habitat_category: ENGINEERED
 grounding_status: NARROW
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
 - BTO:0000316
-- FOODON:03411301
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5981
@@ -14,6 +13,18 @@ source_attestations:
   mapping_predicate: skos:narrowMatch
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND_AS_PARENT
+  changes: 'BTO:0000316 ''culture medium'' attached as a parent, not adopted as the
+    identity (NARROW). Non-habitat screen (#12): the last record inheriting FOODON:03411301
+    ''algae'' as a parent. It reached it through the ambiguous-leaf rule — a second
+    GOLD path ending in ''Algae'' keeps a minted id with the matched term as a parent
+    — and survived ungrounding the host-associated Algae node. An algal culture medium
+    is not a KIND of algae, which is what parent_habitats asserts, so the organism
+    term goes and BTO:0000316 ''culture medium'' takes its place: the path is Engineered
+    > Lab culture > Culture media > Algae, and a medium for growing algae is a culture
+    medium. (source concept habitatmech:GOLD.5b8e5eddd2)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

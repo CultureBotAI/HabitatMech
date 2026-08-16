@@ -1,25 +1,39 @@
-identifier: FOODON:03411301
-label: algae
-definition: An informal term for a large, diverse group of photosynthetic eukaryotic
-  organisms that are not necessarily closely related, and is thus polyphyletic.
-definition_source: FOODON
+identifier: habitatmech:GOLD.02383c20a7
+label: Algae
 habitat_category: HOST_ASSOCIATED
-grounding_status: EXACT
-mapping_status: SEEDED
+grounding_status: UNGROUNDED
+mapping_status: REVIEWED
 parent_habitats:
 - ENVO:01001000
-- FOODON:00001184
+xrefs:
+- FOODON:03411301
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3387
   source_label: Algae
   source_path: Host-associated > Algae
-  mapping_predicate: skos:exactMatch
   assertion_count: 394
   assertion_unit: ORGANISM
   notes: 4 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader
+    term FOODON:03411301 ''algae'' attached as a parent. Non-habitat screen (#12):
+    ''Host-associated > Algae'' was grounded EXACT to FOODON:03411301 ''algae'', which
+    FOODON defines as ''an informal term for a large, diverse group of photosynthetic
+    eukaryotic ORGANISMS''. An organism is not a habitat, and because the seeder derives
+    a GOLD child''s parent from its path node, that identity also became the parent_habitats
+    entry of 14 records under Host-associated > Algae — publishing ''is-a algae the
+    organism group'' as a broader-habitat claim 14 times over. The existing organism-identity
+    screen could not see it: it tests ancestry against NCIT and mesh roots, and FOODON
+    files both the organism and the material under one ''organism material'' root,
+    so there is no structural signal to test. The concept itself is real — algae as
+    host — and is the same family as the sponge, nematode and reptile requests, so
+    it becomes a term request with the FOODON term kept as an xref (#99) rather than
+    an identity. (source concept habitatmech:GOLD.02383c20a7)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
