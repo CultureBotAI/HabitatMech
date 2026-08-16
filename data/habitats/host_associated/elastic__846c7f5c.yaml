@@ -1,25 +1,30 @@
 identifier: habitatmech:GOLD.f1f87de0bb
 label: Elastic
 habitat_category: HOST_ASSOCIATED
-grounding_status: UNGROUNDED
-mapping_status: SEEDED
+grounding_status: NARROW
+mapping_status: REVIEWED
 parent_habitats:
+- UBERON:0001996
 - habitatmech:GOLD.53fd337784
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6586
   source_label: Elastic
   source_path: 'Host-associated > Mammals: Human > Skeletal system > Cartilage > Elastic'
+  mapping_predicate: skos:narrowMatch
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-16T00:00:00Z'
   curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.f1f87de0bb)'
-- timestamp: '2026-08-16T03:37:15Z'
+  action: GROUND_AS_PARENT
+  changes: 'UBERON:0001996 ''elastic cartilage tissue'' attached as a parent, not
+    adopted as the identity (NARROW). Compound-path screen (#12, #97): the GOLD leaf
+    alone names nothing, or the wrong thing — every search route reads it in isolation,
+    which is why the class-level sweep recorded no match. The last two path steps
+    together, ''Cartilage > Elastic'', name elastic cartilage tissue. This is the
+    ''Mammals: Human'' path; it is attached as a parent rather than adopted so it
+    does not merge with the generic ''Mammals'' path grounded to the same term and
+    lose the host distinction. (source concept habitatmech:GOLD.f1f87de0bb)'
+- timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
