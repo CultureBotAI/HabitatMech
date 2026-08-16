@@ -22,7 +22,7 @@
 <p class="meta">
   <code class="curie">habitatmech:BACDIVE.0c0740efd8</code>
   <span class="sep">·</span><a href="../category/other.html">OTHER</a>
-  <span class="sep">·</span><span class="pill">BROAD</span>
+  <span class="sep">·</span><span class="pill warn">UNGROUNDED</span>
   <span class="pill">REVIEWED</span>
 </p>
 
@@ -43,10 +43,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
   </tr>
 </table>
 
-<h2>Broader habitats</h2>
-<ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/ENVO_00002204">ENVO:00002204</a>      <code class="curie">ENVO:00002204</code></li>
-</ul>
 
 
 <h2>Associated taxa</h2>
@@ -240,9 +236,9 @@ second, independent source are listed first.</p>
 from several source concepts can carry one decision per concept.</p>
 <ol class="events">
   <li>
-    <span class="pill">GROUND_AS_PARENT</span>
+    <span class="pill">CONFIRM_UNGROUNDED</span>
     <span class="meta">2026-08-16 · claude-opus-5</span>
-    <p>ENVO:00002204 &#39;anthropogenic contamination feature&#39; attached as a parent, not adopted as the identity (BROAD). Risky-grounding review (#12): the seeder made ENVO:00002204 &#39;anthropogenic contamination feature&#39; the identity of BacDive&#39;s &#39;Contamination&#39; category — the highest-volume risky grounding at 474 strains. The term asserts two things BacDive does not: that the contamination is anthropogenic, and that the thing is a geographic feature. BacDive&#39;s category is a bare statement that the strain came from a contamination, of any origin and in any setting. Kept as a parent so the 474 attestations are not filed under a claim their source never made. (source concept habitatmech:BACDIVE.0c0740efd8)</p>
+    <p>Confirmed UNGROUNDED: no ontology term fits this concept. Risky-grounding review (#12): the seeder made ENVO:00002204 &#39;anthropogenic contamination feature&#39; the identity of BacDive&#39;s &#39;Contamination&#39; category — the highest-volume risky grounding at 474 strains. The term asserts two things BacDive does not: that the contamination is anthropogenic, and that the thing is a geographic feature with elevated contaminants in its materials. BacDive&#39;s category says only that a strain was isolated as a contaminant, which is as often of a product, a culture or a cleanroom as of a place. These are different concepts rather than a broader and a narrower one, so the term is not attached as a parent either: parent_habitats asserts the parent is BROADER, and this one is not. The concept keeps its own minted identity and no ontology term. A term for &#39;isolated as a contaminant&#39; would be a term request. (source concept habitatmech:BACDIVE.0c0740efd8)</p>
   </li>
 </ol>
 
