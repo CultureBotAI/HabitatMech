@@ -97,6 +97,17 @@ def _trim_category_prefix(path: str, category: str) -> str:
     return tail if head.upper().replace("-", "_").replace(" ", "_") == category else path
 
 
+def _slice_labels() -> list[dict]:
+    """Labels for the vendored ontology slice. Empty when it is absent, so the
+    site still renders from a corpus alone."""
+    path = REPO_ROOT / "data" / "raw" / "ontology_terms.tsv"
+    if not path.exists():
+        return []
+    import csv as _csv
+    with path.open(newline="", encoding="utf-8") as fh:
+        return list(_csv.DictReader(fh, delimiter="\t"))
+
+
 def term_iri(curie: str) -> str | None:
     prefix, _, local = curie.partition(":")
     if prefix in OBO_PREFIXES:
@@ -144,6 +155,12 @@ def build(out_dir: Path) -> None:
 
     slug_of = {doc["identifier"]: slugify(f"{doc['label']}-{doc['identifier']}") for _, doc in records}
     label_of = {doc["identifier"]: doc["label"] for _, doc in records}
+    # A cross-referenced term is usually NOT a record — that is what makes it a
+    # cross-reference — so the corpus cannot name it. Falling back to the
+    # vendored slice is the difference between "ENVO:00002204" and
+    # "anthropogenic contamination feature" on the page.
+    for _row in _slice_labels():
+        label_of.setdefault(_row["term_id"], _row["label"])
 
     by_category: dict[str, list[dict]] = defaultdict(list)
     grounding_counts: Counter = Counter()
@@ -202,6 +219,17 @@ def build(out_dir: Path) -> None:
                     "href": f"../habitats/{slug_of[p]}.html" if p in slug_of else term_iri(p),
                 }
                 for p in (doc.get("parent_habitats") or [])
+            ],
+            # Terms upstream linked to this concept without this repo asserting
+            # they are the same thing or that one is broader (#99). 48 records
+            # carry one and none of them reached the page before.
+            "xrefs": [
+                {
+                    "id": x,
+                    "label": label_of.get(x, ""),
+                    "href": f"../habitats/{slug_of[x]}.html" if x in slug_of else term_iri(x),
+                }
+                for x in (doc.get("xrefs") or [])
             ],
             "taxa": [
                 {
