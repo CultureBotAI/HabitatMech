@@ -100,6 +100,71 @@ def wilson(hits: int, n: int) -> tuple[float, float]:
     return (max(0.0, centre - half), min(1.0, centre + half))
 
 
+# A verdict is prose — "ok — homonym risk (lung vs tooth alveolus) but PREGO
+# named the CURIE itself" is a real one — so only the leading token is read, and
+# the rest is the judgement's reasoning. Both vocabularies in use are accepted:
+# the first sample said "ok" and the second "correct", and rewriting a committed
+# verdict to normalise it would edit the evidence.
+VERDICT_PASS = {"ok", "correct", "right", "good"}
+VERDICT_FAIL = {"wrong", "bad", "incorrect", "defect", "error"}
+
+
+def verdict_of(raw: str) -> str | None:
+    """`pass`, `fail`, or None when the token is not one this knows.
+
+    None rather than a default, because a rate computed over verdicts nobody
+    parsed is worse than no rate: reading "ok" as a defect silently reported
+    the EXACT slice as 100% wrong.
+    """
+    token = (raw or "").strip().lower().split()[0].strip("—-:,.") if (raw or "").strip() else ""
+    if token in VERDICT_PASS:
+        return "pass"
+    if token in VERDICT_FAIL:
+        return "fail"
+    return None
+
+
+def recorded_samples() -> list[dict]:
+    """Every sample drawn, judged and committed under curation/samples/.
+
+    A sample is only an argument if the draw and the verdicts are both on
+    record: "we checked 40 and found none wrong" is unfalsifiable without the
+    40. These files are what makes the rate in `just report` something a reader
+    can audit rather than take on trust.
+
+    Reports the CURRENT population, not the one at draw time. Hash-based
+    selection means the sample stays valid as the population shrinks (#71), but
+    the extrapolation has to be to the population now.
+    """
+    out = []
+    if not SAMPLES_DIR.exists():
+        return out
+    for path in sorted(SAMPLES_DIR.glob("*.tsv")):
+        grounding = path.stem.split("-")[0].upper()
+        with path.open(newline="", encoding="utf-8") as fh:
+            rows = list(csv.DictReader(fh, delimiter="\t"))
+        verdicts = [(r, verdict_of(r.get("verdict", ""))) for r in rows]
+        judged = [r for r, v in verdicts if v is not None]
+        wrong = [r for r, v in verdicts if v == "fail"]
+        unparsed = [r for r, v in verdicts
+                    if v is None and (r.get("verdict") or "").strip()]
+        try:
+            live = len(population(grounding, reviewed=False))
+        except Exception:
+            live = 0
+        out.append({
+            "file": path.name,
+            "grounding": grounding,
+            "drawn": len(rows),
+            "judged": len(judged),
+            "wrong": len(wrong),
+            "unparsed": len(unparsed),
+            "population": live,
+            "interval": wilson(len(wrong), len(judged)) if judged else (0.0, 0.0),
+        })
+    return out
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--grounding", default="EXACT",
