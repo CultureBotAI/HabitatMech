@@ -1349,10 +1349,24 @@ def _decision_summary(decision: Decision) -> str:
                 f" Nearest broader term {decision.object_id} "
                 f"'{decision.object_label}' attached as a parent."
             )
-    else:
+    elif decision.decision == "REVIEW":
         what = "Reviewed and endorsed the seeder's own resolution."
+    else:
+        # Not a fallback. A decision kind added without a summary here would
+        # otherwise be published as whichever branch happened to be last,
+        # describing the record as something it is not.
+        raise SystemExit(
+            f"{decision.identifier}: no curation-event summary for decision kind "
+            f"{decision.decision!r}. Add one to _decision_summary()."
+        )
     scope = "" if decision.review_depth == "ITEM" else f" [{decision.review_depth}-level]"
-    return f"{what}{scope} {decision.notes}"
+    # Names the source concept decided, not the record. A merged record can be
+    # fed by several, and two class-level sweeps share their rationale verbatim
+    # — without this, 110 records showed the same paragraph twice with nothing
+    # to say they were about different concepts. It is also the key
+    # decisions.tsv is keyed on and `just worklist` prints, so it is the
+    # pointer that lets a reader find the decision itself.
+    return f"{what}{scope} {decision.notes} (source concept {decision.identifier})"
 
 
 # Committed identifier -> slug lockfile. See assign_paths() for why it exists.

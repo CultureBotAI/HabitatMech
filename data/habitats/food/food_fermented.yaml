@@ -190,13 +190,13 @@ curation_history:
   action: GROUND
   changes: 'Grounded to FOODON:00001258 ''food (fermented)'' (BROAD). BacDive''s Fermented
     bin covers all fermented matrices; the FOODON class is broader than any one. Path:
-    Fermented'
+    Fermented (source concept habitatmech:BACDIVE.556e1e04f8)'
 - timestamp: '2026-08-12T00:00:00Z'
   curator: claude-opus-5
   action: GROUND
   changes: Grounded to FOODON:00001258 'food (fermented)' (BROAD). Fermented beverages.
     The vendored FOODON slice has no fermented-beverage term, only the general fermented-food
-    class, which is broader than the source concept.
+    class, which is broader than the source concept. (source concept habitatmech:GOLD.b2c3ae1ed5)
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

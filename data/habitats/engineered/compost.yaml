@@ -325,13 +325,13 @@ curation_history:
   action: GROUND
   changes: 'Grounded to ENVO:00002170 ''compost'' (CLOSE). GOLD names the composting
     process, ENVO the resulting material; close but not exact. Path: Engineered >
-    Solid waste > Composting'
+    Solid waste > Composting (source concept habitatmech:GOLD.4741a9f8bb)'
 - timestamp: '2026-08-13T00:00:00Z'
   curator: claude-opus-5
   action: GROUND
   changes: 'Grounded to ENVO:00002170 ''compost'' (CLOSE). GOLD names the composting
     process, ENVO the resulting material; close but not exact. Path: Engineered >
-    Solid waste > Composting > Oil palm'
+    Solid waste > Composting > Oil palm (source concept habitatmech:GOLD.981cf7502c)'
 - timestamp: '2026-08-13T00:00:00Z'
   curator: claude-opus-5
   action: REVIEW
@@ -340,7 +340,7 @@ curation_history:
     source''s label or path was read against the record''s ontology term to check
     the merge is right. It agrees. Source concepts in the same pass whose labels did
     not agree were re-decided rather than endorsed; see the pass''s other decisions
-    of the same date.'
+    of the same date. (source concept habitatmech:PREGO.e2f1a69477)'
 - timestamp: '2026-08-15T00:00:00Z'
   curator: claude-opus-5
   action: REVIEW
@@ -348,7 +348,7 @@ curation_history:
     (#12): this source names the ontology CURIE itself, so its grounding is definitional
     rather than a lexical guess — the record IS the term the source pointed at. Recorded
     so the record it co-attests can reach REVIEWED, which needs every source concept
-    decided.'
+    decided. (source concept habitatmech:MADIN.87d709b6aa)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

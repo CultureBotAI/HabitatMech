@@ -179,19 +179,19 @@ curation_history:
   action: GROUND
   changes: 'Grounded to ENVO:01000024 ''marine benthic biome'' (CLOSE). ENVO frames
     the benthic as a biome; GOLD''s node is the zone, hence CLOSE. Path: Environmental
-    > Aquatic > Marine > Oceanic > Benthic'
+    > Aquatic > Marine > Oceanic > Benthic (source concept habitatmech:GOLD.01adfdcfa4)'
 - timestamp: '2026-08-12T00:00:00Z'
   curator: claude-opus-5
   action: GROUND
   changes: 'Grounded to ENVO:01000024 ''marine benthic biome'' (CLOSE). ENVO frames
     the benthic as a biome; GOLD''s node is the zone, hence CLOSE. Path: Environmental
-    > Aquatic > Freshwater > Desert springs > Benthic'
+    > Aquatic > Freshwater > Desert springs > Benthic (source concept habitatmech:GOLD.8911f04011)'
 - timestamp: '2026-08-12T00:00:00Z'
   curator: claude-opus-5
   action: GROUND
   changes: 'Grounded to ENVO:01000024 ''marine benthic biome'' (CLOSE). ENVO frames
     the benthic as a biome; GOLD''s node is the zone, hence CLOSE. Path: Environmental
-    > Aquatic > Marine > Benthic'
+    > Aquatic > Marine > Benthic (source concept habitatmech:GOLD.d0bf6f6843)'
 - timestamp: '2026-08-13T00:00:00Z'
   curator: claude-opus-5
   action: REVIEW
@@ -200,7 +200,7 @@ curation_history:
     source''s label or path was read against the record''s ontology term to check
     the merge is right. It agrees. Source concepts in the same pass whose labels did
     not agree were re-decided rather than endorsed; see the pass''s other decisions
-    of the same date.'
+    of the same date. (source concept habitatmech:PREGO.41a65dc075)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

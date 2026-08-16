@@ -314,13 +314,15 @@ curation_history:
   action: GROUND
   changes: Grounded to ENVO:01001001 'plant-associated environment' (BROAD). Herbaceous
     plants, grasses and crops as hosts. ENVO:01001001 covers all plant-associated
-    environments and so is broader than this specific host group.
+    environments and so is broader than this specific host group. (source concept
+    habitatmech:BACDIVE.d3209b6b2d)
 - timestamp: '2026-08-12T00:00:00Z'
   curator: claude-opus-5
   action: GROUND
   changes: Grounded to ENVO:01001001 'plant-associated environment' (EXACT). GOLD's
     Host-associated > Plants is exactly what ENVO:01001001 denotes. Unlike the animal
-    clades there is a single matching term, so no conflation risk.
+    clades there is a single matching term, so no conflation risk. (source concept
+    habitatmech:GOLD.1b21002a97)
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

@@ -11,6 +11,7 @@ from __future__ import annotations
 import pytest
 
 from habitatmech.curate.decisions import (
+    Decision,
     DecisionError,
     load_decisions,
     validate_decisions,
@@ -508,3 +509,54 @@ def test_curation_history_is_in_chronological_order(records):
         f"{len(out_of_order)} record(s) with a non-chronological history: "
         f"{out_of_order[:5]}"
     )
+
+
+def test_no_record_repeats_the_same_curation_event(records):
+    """Two class-level sweeps share their rationale verbatim, so a merged record
+    fed by two swept concepts published the same paragraph twice with nothing to
+    say they were about different concepts — 110 records did. Each event names
+    the source concept it decided, which is what makes it distinct."""
+    repeated, multi = [], 0
+    for _path, doc in records:
+        events = [
+            (e.get("action"), e.get("curator"), e.get("timestamp"), e.get("changes"))
+            for e in (doc.get("curation_history") or [])
+            if e.get("action") != "SEEDED_FROM_SOURCES"
+        ]
+        multi += len(events) > 1
+        if len(events) != len(set(events)):
+            repeated.append(doc["identifier"])
+
+    assert multi, "no record has two decisions — duplication would be untested"
+    assert not repeated, f"{len(repeated)} record(s) repeating an event: {repeated[:5]}"
+
+
+def test_every_decision_kind_has_a_curation_event_summary(repo_root):
+    """A kind added without a summary used to fall through to REVIEW's wording,
+    publishing "reviewed and endorsed the seeder's resolution" about a record
+    where no such thing happened. It now refuses instead."""
+    import sys
+
+    sys.path.insert(0, str(repo_root / "scripts"))
+    from seed_from_sources import _decision_summary
+
+    from habitatmech.curate.decisions import DECISION_KINDS
+
+    for kind in sorted(DECISION_KINDS):
+        decision = Decision(
+            identifier="habitatmech:GOLD.abcdef0123", decision=kind,
+            object_id="ENVO:00000051", object_label="hot spring",
+            grounding_status="EXACT" if kind == "GROUND" else "",
+            curator="tester", date="2026-08-12", notes=GOOD_NOTE,
+        )
+        summary = _decision_summary(decision)
+        assert summary.strip(), f"{kind} produced an empty summary"
+        assert GOOD_NOTE in summary, f"{kind} dropped the curator's reasoning"
+
+    unknown = Decision(
+        identifier="habitatmech:GOLD.abcdef0123", decision="INVENTED_KIND",
+        object_id="", object_label="", grounding_status="",
+        curator="tester", date="2026-08-12", notes=GOOD_NOTE,
+    )
+    with pytest.raises(SystemExit, match="no curation-event summary"):
+        _decision_summary(unknown)

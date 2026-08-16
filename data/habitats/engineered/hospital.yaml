@@ -237,19 +237,19 @@ curation_history:
   changes: Grounded to ENVO:00002173 'hospital' (NARROW). Medical-environment covers
     hospitals plus clinics and other care settings, so ENVO:00002173 hospital is narrower
     than the source concept. Best available; a generic healthcare-facility environment
-    term would be better.
+    term would be better. (source concept habitatmech:BACDIVE.5e52ea1bba)
 - timestamp: '2026-08-12T00:00:00Z'
   curator: claude-opus-5
   action: GROUND
   changes: Grounded to ENVO:00002173 'hospital' (EXACT). GOLD's Built environment
     > Hospital is exactly the ENVO hospital term. Completes the hospital record alongside
-    BacDive's broader Medical-environment.
+    BacDive's broader Medical-environment. (source concept habitatmech:GOLD.8380a08a4e)
 - timestamp: '2026-08-12T00:00:00Z'
   curator: claude-opus-5
   action: REVIEW
   changes: Reviewed and endorsed the seeder's own resolution. PREGO asserts ENVO:00002173
     hospital directly; the self-grounding is correct. Endorsed to complete the hospital
-    record.
+    record. (source concept habitatmech:PREGO.abddadaea9)
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
