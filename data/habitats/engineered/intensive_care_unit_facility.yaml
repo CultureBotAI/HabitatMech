@@ -4,7 +4,7 @@ definition: A hospital unit facility which is used to provide intensive medical 
 definition_source: ENVO
 habitat_category: ENGINEERED
 grounding_status: CLOSE
-mapping_status: SEEDED
+mapping_status: REVIEWED
 synonyms:
 - synonym_text: ICU
   synonym_type: EXACT_SYNONYM
@@ -44,6 +44,13 @@ source_attestations:
   mapping_predicate: skos:closeMatch
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: REVIEW
+  changes: 'Reviewed and endorsed the seeder''s own resolution. Risky-grounding review
+    (#12): the flag is lexical: the source label and the term label are different
+    names for the same thing, so they share no word by construction. Read against
+    the source path, the term is the concept. (source concept habitatmech:GOLD.570ad87007)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

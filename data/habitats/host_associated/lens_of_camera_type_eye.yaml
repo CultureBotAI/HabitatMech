@@ -5,7 +5,7 @@ definition: A transparent and refractive lens located posterior to the iris. The
 definition_source: UBERON
 habitat_category: HOST_ASSOCIATED
 grounding_status: CLOSE
-mapping_status: SEEDED
+mapping_status: REVIEWED
 synonyms:
 - synonym_text: Lens
   synonym_type: EXACT_SYNONYM
@@ -48,6 +48,20 @@ source_attestations:
   source_path: Host-associated > Mammals > Visual system > Eye > Lens
   mapping_predicate: skos:closeMatch
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: REVIEW
+  changes: 'Reviewed and endorsed the seeder''s own resolution. Risky-grounding review
+    (#12): the flag is lexical: the term''s label spells out a qualifier that the
+    GOLD path supplies positionally rather than in the leaf. The path pins the sense,
+    and it is the term''s. (source concept habitatmech:GOLD.1c3e7d355d)'
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: REVIEW
+  changes: 'Reviewed and endorsed the seeder''s own resolution. Risky-grounding review
+    (#12): the flag is lexical: the term''s label spells out a qualifier that the
+    GOLD path supplies positionally rather than in the leaf. The path pins the sense,
+    and it is the term''s. (source concept habitatmech:GOLD.2fac83fb23)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

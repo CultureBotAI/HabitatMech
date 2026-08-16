@@ -1,0 +1,30 @@
+identifier: habitatmech:GOLD.53e4290463
+label: Anterior chamber
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: REVIEWED
+parent_habitats:
+- BTO:0000510
+- habitatmech:GOLD.19840c718e
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7325
+  source_label: Anterior chamber
+  source_path: 'Host-associated > Arthropoda: Crustaceans > Digestive system > Hindgut
+    > Anterior chamber'
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND_AS_PARENT
+  changes: 'BTO:0000510 ''hindgut'' attached as a parent, not adopted as the identity
+    (NARROW). Risky-grounding review (#12): the seeder grounded ''Arthropoda: Crustaceans
+    > Digestive system > Hindgut > Anterior chamber'' to UBERON:0001766 ''anterior
+    chamber of eyeball''. The path says hindgut; the term is an eye structure. The
+    leaf label matched a term from an entirely different organ. Attached to BTO:0000510
+    ''hindgut'' as a parent, since the anterior chamber of the crustacean hindgut
+    has no term of its own in the slice. (source concept habitatmech:GOLD.53e4290463)'
+- timestamp: '2026-08-16T03:37:15Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

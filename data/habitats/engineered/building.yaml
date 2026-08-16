@@ -4,7 +4,7 @@ definition: A permanent walled and roofed construction.
 definition_source: ENVO
 habitat_category: ENGINEERED
 grounding_status: EXACT
-mapping_status: SEEDED
+mapping_status: REVIEWED
 synonyms:
 - synonym_text: buildings
   synonym_type: RELATED_SYNONYM
@@ -197,6 +197,17 @@ curation_history:
     the merge is right. It agrees. Source concepts in the same pass whose labels did
     not agree were re-decided rather than endorsed; see the pass''s other decisions
     of the same date. (source concept habitatmech:PREGO.c2f45fa68b)'
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: REVIEW
+  changes: 'Reviewed and endorsed the seeder''s own resolution. Risky-grounding review
+    (#12), co-attestor pass: this source concept feeds a record whose grounding was
+    flagged and reviewed, and the record could not reach REVIEWED until every source
+    feeding it was decided. This one is a self-grounding: the source vocabulary names
+    the concept with the ontology term''s own label, so there is nothing to adjudicate
+    between the two — checked that the term is the one the label denotes, and that
+    the record it merges into is the same concept rather than a homonym. (source concept
+    habitatmech:MADIN.2b0f480418)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

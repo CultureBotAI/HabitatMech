@@ -1,0 +1,29 @@
+identifier: habitatmech:GOLD.e934089993
+label: Sperm
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: REVIEWED
+parent_habitats:
+- UBERON:0001968
+- habitatmech:GOLD.63a1f9d0cd
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7572
+  source_label: Sperm
+  source_path: Host-associated > Fish > Reproductive system > Testes > Sperm
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND_AS_PARENT
+  changes: 'UBERON:0001968 ''semen'' attached as a parent, not adopted as the identity
+    (NARROW). Risky-grounding review (#12): the seeder merged ''Fish > Reproductive
+    system > Testes > Sperm'' onto UBERON:0001968 ''semen'' together with the human
+    ''Semen/Seminal fluid'' path. Fish milt and mammalian semen are not the same material,
+    and merging them puts two hosts'' attestations on one record. Attached as a parent
+    so the fish concept keeps its own identity; the human path keeps the term. (source
+    concept habitatmech:GOLD.e934089993)'
+- timestamp: '2026-08-16T03:37:15Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

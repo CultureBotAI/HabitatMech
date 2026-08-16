@@ -1,0 +1,31 @@
+identifier: habitatmech:GOLD.b78135fb93
+label: Gills
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: REVIEWED
+parent_habitats:
+- BTO:0000518
+- habitatmech:GOLD.6e10201167
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4819
+  source_label: Gills
+  source_path: Host-associated > Annelida > Gills
+  mapping_predicate: skos:narrowMatch
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND_AS_PARENT
+  changes: 'BTO:0000518 ''gill'' attached as a parent, not adopted as the identity
+    (NARROW). Risky-grounding review (#12): the seeder grounded ''Host-associated
+    > Annelida > Gills'' to UBERON:0011150 ''pharyngeal arch derived gill''. Annelid
+    gills are not pharyngeal-arch derived — that term is vertebrate-specific, and
+    annelids have no pharyngeal arches — so the identity was an anatomical error the
+    label match could not see. Attached to the general BTO:0000518 ''gill'' as a parent
+    instead, not adopted, because Mollusca and Fish paths also end in ''Gills'' and
+    grounding them all to it would merge three phyla. (source concept habitatmech:GOLD.b78135fb93)'
+- timestamp: '2026-08-16T03:37:15Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

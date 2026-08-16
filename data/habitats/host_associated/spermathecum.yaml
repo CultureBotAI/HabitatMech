@@ -6,7 +6,7 @@ definition: An organ of the female reproductive tract that functions to receive 
 definition_source: UBERON
 habitat_category: HOST_ASSOCIATED
 grounding_status: CLOSE
-mapping_status: SEEDED
+mapping_status: REVIEWED
 synonyms:
 - synonym_text: Spermathecae
   synonym_type: EXACT_SYNONYM
@@ -35,6 +35,14 @@ source_attestations:
   mapping_predicate: skos:closeMatch
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: REVIEW
+  changes: 'Reviewed and endorsed the seeder''s own resolution. Risky-grounding review
+    (#12): the flag is lexical, not substantive: the source label is a plural or a
+    variant of the term''s own label, so a word-overlap test sees a mismatch where
+    there is none. Read against the source path, the term is the concept. (source
+    concept habitatmech:GOLD.010599a8ab)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

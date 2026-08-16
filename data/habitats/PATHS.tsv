@@ -679,7 +679,6 @@ ENVO:00002191	animal_litter
 ENVO:00002192	poultry_litter
 ENVO:00002196	aquarium
 ENVO:00002200	sea_ice
-ENVO:00002204	anthropogenic_contamination_feature
 ENVO:00002209	saline_lake_sediment
 ENVO:00002213	anaerobic_sludge_blanket_reactor
 ENVO:00002215	geothermal_power_plant
@@ -977,7 +976,6 @@ FOODON:03000287	cheese
 FOODON:03000288	bread
 FOODON:03301033	royal_jelly
 FOODON:03301705	vinegar
-FOODON:03302481	sourdough_bread
 FOODON:03306052	spice
 FOODON:03306632	nut_whole_or_pieces
 FOODON:03309475	meat_trimming
@@ -1022,7 +1020,6 @@ UBERON:0000178	blood__d6f5ae05
 UBERON:0000341	throat__4f7984ed
 UBERON:0000403	scalp__a1773389
 UBERON:0000412	dermal_papilla
-UBERON:0000464	anatomical_space
 UBERON:0000473	testis
 UBERON:0000916	abdomen__17b71cfa
 UBERON:0000922	embryo__9a0301d2
@@ -1051,7 +1048,6 @@ UBERON:0001728	nasopharynx__087171fc
 UBERON:0001750	lacrimal_apparatus
 UBERON:0001757	pinna
 UBERON:0001760	frontal_sinus
-UBERON:0001766	anterior_chamber_of_eyeball
 UBERON:0001770	lacrimal_canaliculus
 UBERON:0001796	aqueous_humor_of_eyeball
 UBERON:0001817	lacrimal_gland
@@ -1136,7 +1132,6 @@ UBERON:0010152	skin_mucus
 UBERON:0010264	hepatopancreas__63c0469f
 UBERON:0010409	ocular_surface_region
 UBERON:0010516	clasper
-UBERON:0011150	pharyngeal_arch_derived_gill
 UBERON:0011256	rhinarium
 UBERON:0011985	infraorbital_sinus
 UBERON:0011997	coelom__d65ea80b
@@ -1174,6 +1169,7 @@ habitatmech:BACDIVE.09c3544e85	equidae_horse
 habitatmech:BACDIVE.09ded89de7	subarctic
 habitatmech:BACDIVE.0b7fa25ca9	juice_natural
 habitatmech:BACDIVE.0bfb662164	painting
+habitatmech:BACDIVE.0c0740efd8	contamination
 habitatmech:BACDIVE.0d6b871731	immunocompromised
 habitatmech:BACDIVE.0e92e77cd4	lab_synthesis
 habitatmech:BACDIVE.0f078d72a7	canker
@@ -1674,6 +1670,7 @@ habitatmech:GOLD.3135685b09	white
 habitatmech:GOLD.313d56a2db	unspecified_organ
 habitatmech:GOLD.313e2bf386	subtidal_zone__792000f9
 habitatmech:GOLD.3140150c43	cooked_blood
+habitatmech:GOLD.3153798c1a	sourdough
 habitatmech:GOLD.31577394a0	midgut__6150b7ba
 habitatmech:GOLD.319c3f351e	frass
 habitatmech:GOLD.31d7fab4fa	malignant_tumor
@@ -1922,6 +1919,7 @@ habitatmech:GOLD.53337a753d	cast
 habitatmech:GOLD.5367726c63	whole_body__4c96bb01
 habitatmech:GOLD.539290062d	conjunctiva__482ca0a7
 habitatmech:GOLD.53d8f8bf68	poultry_farm
+habitatmech:GOLD.53e4290463	anterior_chamber
 habitatmech:GOLD.53fd337784	cartilage
 habitatmech:GOLD.54055df52f	intertidal_zone__3d85893c
 habitatmech:GOLD.5413be957b	stomach_cardiac
@@ -2657,6 +2655,7 @@ habitatmech:GOLD.b72faf3adf	sediment__a0cc3ecc
 habitatmech:GOLD.b75e4aa08f	anoxic_zone
 habitatmech:GOLD.b76e4c6e4a	microbial_mats__2265bbbd
 habitatmech:GOLD.b77f846671	biofilm__33e704d3
+habitatmech:GOLD.b78135fb93	gills__629359b2
 habitatmech:GOLD.b7f1694b87	eye__810dedbb
 habitatmech:GOLD.b7f85ae39f	excavata
 habitatmech:GOLD.b7fcb62675	hair_follicle__fd4fab66
@@ -3050,6 +3049,7 @@ habitatmech:GOLD.e898437067	carposphere
 habitatmech:GOLD.e89f860f72	c2
 habitatmech:GOLD.e8a2c6cf87	lung__d55ac9c2
 habitatmech:GOLD.e8d7f5a282	granular_sludge__16dfa645
+habitatmech:GOLD.e934089993	sperm
 habitatmech:GOLD.e943a08596	cryptomonads_cryptophytes
 habitatmech:GOLD.e96d7e84d0	simulated_communities_dna_mixture
 habitatmech:GOLD.e979bbb99c	composting__fe5ff5cf
@@ -3128,6 +3128,7 @@ habitatmech:GOLD.f3b93cb911	sediment__69d4893f
 habitatmech:GOLD.f3d8c3793f	protozoa
 habitatmech:GOLD.f3dc60ff11	glacier_meltwater
 habitatmech:GOLD.f3de85dd9b	sbr_ebpr
+habitatmech:GOLD.f3e0b27db6	lumen
 habitatmech:GOLD.f3f5ed6008	intestine__1e17aa3d
 habitatmech:GOLD.f3fef23d8d	ascites__f2c36f2c
 habitatmech:GOLD.f404388f36	testes__e80bd156

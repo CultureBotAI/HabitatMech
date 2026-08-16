@@ -9,7 +9,7 @@ definition: 'An organ that is located within the body cavity (or in its extensio
 definition_source: UBERON
 habitat_category: HOST_ASSOCIATED
 grounding_status: CLOSE
-mapping_status: SEEDED
+mapping_status: REVIEWED
 synonyms:
 - synonym_text: Viscera
   synonym_type: EXACT_SYNONYM
@@ -41,6 +41,14 @@ source_attestations:
   assertion_count: 1
   assertion_unit: ORGANISM
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: REVIEW
+  changes: 'Reviewed and endorsed the seeder''s own resolution. Risky-grounding review
+    (#12): the flag is lexical, not substantive: the source label is a plural or a
+    variant of the term''s own label, so a word-overlap test sees a mismatch where
+    there is none. Read against the source path, the term is the concept. (source
+    concept habitatmech:GOLD.5a27f8cfce)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
