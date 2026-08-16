@@ -1,25 +1,32 @@
 identifier: habitatmech:GOLD.9de23ceed5
 label: Arterial
 habitat_category: HOST_ASSOCIATED
-grounding_status: UNGROUNDED
-mapping_status: SEEDED
+grounding_status: NARROW
+mapping_status: REVIEWED
 parent_habitats:
+- BTO:0006188
 - habitatmech:GOLD.d25ff4a586
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6605
   source_label: Arterial
   source_path: 'Host-associated > Mammals: Human > Circulatory system > Blood > Arterial'
+  mapping_predicate: skos:narrowMatch
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-16T00:00:00Z'
   curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.9de23ceed5)'
+  action: GROUND_AS_PARENT
+  changes: 'BTO:0006188 ''arterial blood'' attached as a parent, not adopted as the
+    identity (NARROW). Compound-path screen (#12): every search route reads the GOLD
+    leaf alone, but the leaf is only the last step of the path — ''Arterial'' under
+    ''Blood'' means ''arterial blood''. Searched on its own it matches nothing (or
+    the wrong sense entirely: ''Hyaline'' finds PATO''s transparent), which is why
+    the class-level sweep recorded no match. The compound names BTO:0006188 ''arterial
+    blood'' exactly. Read against the full path before deciding. This is the ''Mammals:
+    Human'' path, which is a narrower kind of the same thing as the generic ''Mammals''
+    path grounded to the same term; it is attached as a parent rather than adopted
+    so the two do not merge and lose the host distinction. (source concept habitatmech:GOLD.9de23ceed5)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

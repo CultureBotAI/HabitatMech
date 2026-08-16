@@ -324,6 +324,75 @@ def _stale_class_sweeps(class_swept: set[str], records: list[tuple[Path, dict]])
     return sorted(out, reverse=True)
 
 
+def _compound_path_candidates(
+    class_swept: set[str], records: list[tuple[Path, dict]]
+) -> list[tuple]:
+    """Swept concepts whose <parent> <leaf> path steps name a term, though the
+    leaf alone names nothing.
+
+    Every search route the seeder and the sweeps use takes the leaf label on its
+    own. But a GOLD leaf is only the last step of a path, and for a whole class
+    of anatomy it is an adjective that means nothing by itself:
+
+        Host-associated > ... > Cartilage > Hyaline   -> hyaline cartilage tissue
+        Host-associated > ... > Blood > Venous        -> venous blood
+        Host-associated > ... > Canthus > Outer       -> outer canthus
+
+    Searching "Hyaline" finds PATO's *transparent*; searching "hyaline
+    cartilage" finds UBERON:0001994. So the sweeps' claim — "no term matched by
+    any search route" — is true of the routes and false of the concept.
+
+    Both orderings are tried because GOLD is inconsistent about which step
+    carries the modifier. Restricted to the habitat-grounding prefixes: the
+    leaf-only version of this screen returned 23 candidates that were entirely
+    chemicals, host taxa and qualities, none of them a habitat term the sweep
+    had missed.
+
+    Ranks; does not decide. The compound is specific enough that precision is
+    high, but "specific enough" is not "verified" — each still needs reading
+    against its own path.
+    """
+    if not class_swept:
+        return []
+    try:
+        from seed_from_sources import HABITAT_PREFIXES, OntologyIndex, read_tsv
+    except ImportError:
+        return []
+    ontology = OntologyIndex(read_tsv("ontology_terms.tsv"), read_tsv("ontology_subclass_edges.tsv"))
+    index: dict[str, tuple[str, str]] = {}
+    for term_id, term in ontology.terms.items():
+        if term_id.split(":", 1)[0] not in HABITAT_PREFIXES:
+            continue
+        names = [term["label"], *(term.get("synonyms") or "").split("|")]
+        for name in names:
+            key = norm_label(name)
+            if key and key not in index:
+                index[key] = (term_id, term["label"])
+
+    out, seen = [], set()
+    for _, doc in records:
+        identifier = doc.get("identifier")
+        if identifier not in class_swept or identifier in seen:
+            continue
+        for attestation in doc.get("source_attestations") or []:
+            steps = [s.strip() for s in (attestation.get("source_path") or "").split(">") if s.strip()]
+            if len(steps) < 2:
+                continue
+            for compound in (f"{steps[-2]} {steps[-1]}", f"{steps[-1]} {steps[-2]}"):
+                hit = index.get(norm_label(compound))
+                if not hit:
+                    continue
+                assertions = sum(
+                    a.get("assertion_count") or 0 for a in doc.get("source_attestations") or []
+                )
+                out.append((assertions, " > ".join(steps[-2:]), hit[0], hit[1], identifier))
+                seen.add(identifier)
+                break
+            if identifier in seen:
+                break
+    return sorted(out, reverse=True)
+
+
 def _mapping_cohorts(decided: set[str]) -> tuple[Counter, int, list[tuple]]:
     """Split the upstream mappings by cohort and rank the undecided risky ones.
 
@@ -611,6 +680,16 @@ def main(argv: list[str] | None = None) -> int:
         print(f"  {assertions:8d}  {label[:28]:28s} -> {found:18s} {identifier}")
     if not stale:
         print("  none — every sweep still lands in the tier it claimed")
+
+    compound = _compound_path_candidates(class_swept_ids, records)
+    print(f"\n=== {len(compound)} swept concept(s) whose PATH names a term the leaf does not ===")
+    print("  (every search route reads the leaf alone, but a GOLD leaf is the last step")
+    print("   of a path: \"Hyaline\" under Cartilage is hyaline cartilage, and on its own")
+    print("   it finds PATO's *transparent*. Ranks candidates; each still needs reading.)")
+    for assertions, path, term_id, label, identifier in compound[: args.ungrounded_top or None]:
+        print(f"  {assertions:8d}  {path[:30]:30s} -> {term_id:16s} {label[:28]:28s} {identifier}")
+    if not compound:
+        print("  none — no swept concept's parent+leaf compound matches a habitat term")
 
     organism = _organism_identities(records)
     print(f"\n=== {len(organism)} unreviewed record(s) whose identity is an organism ===")

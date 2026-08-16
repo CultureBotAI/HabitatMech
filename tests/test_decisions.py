@@ -560,3 +560,32 @@ def test_every_decision_kind_has_a_curation_event_summary(repo_root):
     )
     with pytest.raises(SystemExit, match="no curation-event summary"):
         _decision_summary(unknown)
+
+
+def test_no_swept_concept_is_named_by_its_own_path(repo_root, records):
+    """A class-level sweep asserts "no term matched by any search route". Every
+    route reads the GOLD leaf alone, so the claim was false for a whole class of
+    anatomy where the leaf is a bare adjective — "Hyaline" under Cartilage is
+    hyaline cartilage, and searched alone it finds PATO's *transparent*.
+
+    Kept as a gate rather than a one-off cleanup because the population grows:
+    a new GOLD path, or a term newly vendored, can refill it, and nothing else
+    re-checks a sweep's negative.
+    """
+    import csv
+    import sys
+
+    sys.path.insert(0, str(repo_root / "scripts"))
+    import habitat_report as report
+
+    with (repo_root / "curation" / "decisions.tsv").open(newline="", encoding="utf-8") as fh:
+        swept = {
+            r["identifier"] for r in csv.DictReader(fh, delimiter="\t")
+            if (r.get("review_depth") or "ITEM").strip().upper() == "CLASS"
+        }
+    assert swept, "no class-level sweep decisions found"
+    named = report._compound_path_candidates(swept, records)
+    assert not named, (
+        f"{len(named)} sweep(s) claim no term matched, but their own path names one: "
+        f"{[(n[1], n[2], n[3]) for n in named[:5]]}. Read each against its full path."
+    )
