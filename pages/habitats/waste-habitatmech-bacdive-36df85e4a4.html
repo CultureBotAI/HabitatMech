@@ -22,7 +22,7 @@
 <p class="meta">
   <code class="curie">habitatmech:BACDIVE.36df85e4a4</code>
   <span class="sep">·</span><a href="../category/other.html">OTHER</a>
-  <span class="sep">·</span><span class="pill warn">UNGROUNDED</span>
+  <span class="sep">·</span><span class="pill">BROAD</span>
   <span class="pill">REVIEWED</span>
 </p>
 
@@ -43,6 +43,10 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
   </tr>
 </table>
 
+<h2>Broader habitats</h2>
+<ul class="plain">
+  <li><a href="../habitats/waste-material-envo-00002264.html">waste material</a>      <code class="curie">ENVO:00002264</code></li>
+</ul>
 
 
 <h2>Associated taxa</h2>
@@ -237,9 +241,9 @@ second, independent source are listed first.</p>
 from several source concepts can carry one decision per concept.</p>
 <ol class="events">
   <li>
-    <span class="pill">CONFIRM_UNGROUNDED</span>
-    <span class="meta">2026-08-12 · claude-opus-5</span>
-    <p>Confirmed UNGROUNDED: no ontology term fits this concept. Generic &#34;Waste&#34; spanning solid, liquid and industrial waste. ENVO has specific waste materials (waste water, industrial waste material) but no parent covering the whole bin; grounding to any one would misattribute the other strains. (source concept habitatmech:BACDIVE.36df85e4a4)</p>
+    <span class="pill">GROUND_AS_PARENT</span>
+    <span class="meta">2026-08-16 · claude-opus-5</span>
+    <p>ENVO:00002264 &#39;waste material&#39; attached as a parent, not adopted as the identity (BROAD). Term-request re-check (#12), after ENVO:01001000 showed these claims were never machine-rechecked: &#39;Waste&#39; spans solid, liquid and industrial waste. ENVO:00002264 &#39;waste material&#39; — &#39;a material which is not the desired output of a process&#39; — is broader than all three, so it is the parent that covers the bin without grounding it to any one member. (source concept habitatmech:BACDIVE.36df85e4a4)</p>
   </li>
 </ol>
 

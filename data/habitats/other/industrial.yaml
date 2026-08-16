@@ -1,12 +1,15 @@
 identifier: habitatmech:BACDIVE.a60a058479
 label: Industrial
 habitat_category: OTHER
-grounding_status: UNGROUNDED
+grounding_status: BROAD
 mapping_status: REVIEWED
+parent_habitats:
+- ENVO:01000313
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:industrial
   source_label: Industrial
+  mapping_predicate: skos:broadMatch
   assertion_count: 1758
   assertion_unit: STRAIN
   notes: kg-microbe's isolation-source mapping table has a row for this source with
@@ -163,14 +166,17 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 988
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-16T00:00:00Z'
   curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Generic "Industrial"
-    bin spanning process water, buildings and waste. ENVO has specific industrial
-    environments but nothing covering the bin; grounding to one would misattribute
-    the rest. (source concept habitatmech:BACDIVE.a60a058479)'
+  action: GROUND_AS_PARENT
+  changes: 'ENVO:01000313 ''anthropogenic environment'' attached as a parent, not
+    adopted as the identity (BROAD). Term-request re-check (#12), after ENVO:01001000
+    showed these claims were never machine-rechecked: ''Industrial'' spans process
+    water, buildings and waste, so no specific industrial term fits. ENVO:01000313
+    ''anthropogenic environment'' is broader than all of them and true of each, so
+    it is attached as a parent — which says what the bin has in common without misattributing
+    any one member''s setting to the rest. (source concept habitatmech:BACDIVE.a60a058479)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: BROAD.'
