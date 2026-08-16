@@ -1,0 +1,50 @@
+identifier: UBERON:0002183
+label: lobar bronchus
+definition: The lobar bronchus is the major airway within the respiratory tree that
+  starts by division of the principal bronchi on both sides and ends at the point
+  of its own subdivision into tertiary or segmental bronchi[GO].
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Secondary
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: bronchi lobaris
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: lobar bronchi
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: secondary bronchi
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: secondary bronchus
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0035767
+- habitatmech:GOLD.67ad6b3f36
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6625
+  source_label: Secondary
+  source_path: 'Host-associated > Mammals: Human > Respiratory system > Bronchi >
+    Secondary'
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to UBERON:0002183 ''lobar bronchus'' (EXACT). Compound-path screen
+    (#12, #97): the GOLD leaf alone names nothing, or the wrong thing — every search
+    route reads it in isolation, which is why the class-level sweep recorded no match.
+    The last two path steps together, ''Bronchi > Secondary'', match lobar bronchus
+    on its exact synonym ''secondary bronchus'' — the two are the same airway, the
+    lobar name being anatomical and the secondary name positional in the branching
+    order. (source concept habitatmech:GOLD.f8d8ec5388)'
+- timestamp: '2026-08-16T05:58:02Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

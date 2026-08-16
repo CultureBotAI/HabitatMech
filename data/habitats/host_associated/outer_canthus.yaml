@@ -1,0 +1,52 @@
+identifier: UBERON:0006726
+label: outer canthus
+definition: A corner of the outer (lateral) part of an eye.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Outer
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: lateral angle of eye
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: lateral canthus
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: lateral canthus of eye
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: lateral palpebral commissure
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: outer canthi
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: temporal canthus
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0006742
+- UBERON:0015212
+- habitatmech:GOLD.9d97d0af50
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6240
+  source_label: Outer
+  source_path: 'Host-associated > Mammals: Human > Visual system > Canthus > Outer'
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to UBERON:0006726 ''outer canthus'' (EXACT). Compound-path screen
+    (#12, #97): the GOLD leaf alone names nothing, or the wrong thing — every search
+    route reads it in isolation, which is why the class-level sweep recorded no match.
+    The last two path steps together, ''Canthus > Outer'', name outer canthus exactly.
+    ''Outer'' alone is meaningless. (source concept habitatmech:GOLD.0f1636fe06)'
+- timestamp: '2026-08-16T05:58:02Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

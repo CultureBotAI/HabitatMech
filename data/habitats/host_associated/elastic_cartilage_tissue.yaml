@@ -1,0 +1,50 @@
+identifier: UBERON:0001996
+label: elastic cartilage tissue
+definition: Cartilage tissue that is flexible and contains abundant elastic fibers.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Elastic
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: elastic cartilage
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: reticular cartilage
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: yellow cartilage
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: yellow elastic cartilage
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: yellow elastic cartilage tissue
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0011589
+- habitatmech:GOLD.d8b9309d5e
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6807
+  source_label: Elastic
+  source_path: Host-associated > Mammals > Skeletal system > Cartilage > Elastic
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to UBERON:0001996 ''elastic cartilage tissue'' (EXACT). Compound-path
+    screen (#12, #97): the GOLD leaf alone names nothing, or the wrong thing — every
+    search route reads it in isolation, which is why the class-level sweep recorded
+    no match. The last two path steps together, ''Cartilage > Elastic'', name elastic
+    cartilage tissue exactly. The term was not in the vendored slice, so this decision
+    is what pulls it in (#97) — extraction reads decisions.tsv and vendors every term
+    it references. (source concept habitatmech:GOLD.d6c49dfec6)'
+- timestamp: '2026-08-16T05:58:02Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
