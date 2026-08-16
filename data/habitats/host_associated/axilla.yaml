@@ -1,0 +1,52 @@
+identifier: UBERON:0009472
+label: axilla
+definition: The axilla is the area directly under the joint where the forelimb connects
+  to the shoulder.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Axilla/Armpit
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: arm pit
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: armpit
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: armpits
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: axillae
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: axillary region
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: oxter
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: regio axillaris
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: underarm
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0034929
+- habitatmech:GOLD.4b37ab4b76
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6117
+  source_label: Axilla/Armpit
+  source_path: 'Host-associated > Mammals: Human > Integumentary system > Skin > Axilla/Armpit'
+  mapping_predicate: skos:exactMatch
+  assertion_count: 4
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-16T03:05:28Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

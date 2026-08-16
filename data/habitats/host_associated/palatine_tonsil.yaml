@@ -1,0 +1,37 @@
+identifier: UBERON:0002373
+label: palatine tonsil
+definition: Tonsils on the left and right sides at the back of the throat. one of
+  the mucosa-associated lymphoid tissues (MALT), located at the entrance to the upper
+  respiratory and gastrointestinal tracts to protect the body from the entry of exogenous
+  material through mucosal sites[WP].
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Palatine/Faucial
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: faucial tonsil
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: tonsil
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: tonsilla palatina
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- BTO:0001387
+- UBERON:0002372
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6142
+  source_label: Palatine/Faucial
+  source_path: 'Host-associated > Mammals: Human > Lymphatic system > Tonsils > Palatine/Faucial'
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-16T03:05:28Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

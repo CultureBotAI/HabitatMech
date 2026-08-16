@@ -1,0 +1,44 @@
+identifier: UBERON:0001817
+label: lacrimal gland
+definition: The lacrimal glands are paired almond-shaped glands, located in or near
+  the orbital region, that secrete the aqueous layer of the tear film.[WP].
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Lacrimal glands
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: glandula lacrimalis
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: glandula praeorbitalis
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: lacrimal-preorbital gland
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: preorbital gland
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: tear gland
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0001750
+- UBERON:0002365
+- UBERON:0004859
+- UBERON:0015154
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6507
+  source_label: Lacrimal glands
+  source_path: 'Host-associated > Mammals: Human > Integumentary system > Lacrimal
+    apparatus > Lacrimal glands'
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-16T03:05:28Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

@@ -499,6 +499,10 @@ def extract_madin(kgm: Path) -> tuple[list[dict[str, Any]], list[dict[str, Any]]
     return habitat_rows, taxa_rows, dict(taxa)
 
 
+# CURIEs a curation note may cite, in the shapes the ontologies here use.
+_NOTE_CURIE = re.compile(r"\b((?:[A-Z][A-Za-z]{1,9}|mesh):(?:C\d+|D\d+|\d{4,}))\b")
+
+
 def _reference_ancestry(
     kgm: Path, seeds: set[str], max_depth: int = 12
 ) -> tuple[dict[str, str], list[tuple[str, str]]]:
@@ -1505,6 +1509,27 @@ def main(argv: list[str] | None = None) -> int:
             referenced.add(row["madin_id"])
     for row in param_rows:
         referenced.update(t for t in row["term_ids"].split("|") if t)
+    # Terms a curator has already decided to use. Without this the slice can
+    # only contain what a source happened to name, so grounding a record to the
+    # right term is impossible whenever that term is not itself a source label —
+    # "Auricle/Pinna" needs UBERON:0001757 'pinna', which nothing upstream says.
+    # decisions.tsv is already an input to the seeder; making it one here too is
+    # what lets curation reach beyond the vocabulary of the sources (#10).
+    decisions_path = REPO_ROOT / "curation" / "decisions.tsv"
+    if decisions_path.exists():
+        with decisions_path.open(newline="", encoding="utf-8") as fh:
+            wanted = set()
+            for row in csv.DictReader(fh, delimiter="\t"):
+                wanted.add((row.get("object_id") or "").strip())
+                # Terms a note NAMES as well as terms a decision ADOPTS. A note
+                # explaining why UBERON:0001682 'palatine bone' is wrong for a
+                # tonsil is only checkable if that term is in the slice — and a
+                # rejected term needs verifying at least as much as an accepted
+                # one, since the note's whole claim is about what it denotes.
+                wanted.update(_NOTE_CURIE.findall(row.get("notes") or ""))
+        wanted.discard("")
+        print(f"  {len(wanted)} term(s) named by curation decisions will be kept in the slice")
+        referenced |= wanted
 
     # Label pool the seeder will try to ground lexically — used to decide which
     # UBERON/FOODON terms are worth vendoring.

@@ -1,0 +1,62 @@
+identifier: UBERON:0000998
+label: seminal vesicle
+definition: Either of a pair of glandular pouches that lie one on either side of the
+  male reproductive tract posterolateral to the urinary bladder and in the human male
+  secrete a sugar- and protein-containing fluid into the ejaculatory duct.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Seminal glands
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: glandula seminalis
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: glandula vesiculosa
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: gonecyst
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: seminal gland
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: vas efferens
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: vesicula seminalis
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: vesiculae seminales
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: vesicular gland
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: vesicular glands
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: vesicular seminalis
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: vesiculæ seminales
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0004120
+- UBERON:0006868
+- habitatmech:GOLD.29feb6867b
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7629
+  source_label: Seminal glands
+  source_path: Host-associated > Mammals > Reproductive system > Seminal glands
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-16T03:05:28Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

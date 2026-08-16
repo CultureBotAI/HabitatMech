@@ -1,0 +1,34 @@
+identifier: UBERON:0001760
+label: frontal sinus
+definition: The frontal sinus occupies the dorsal part of the skull medial to the
+  orbit. It overlaps cranial and nasal cavities and is often referred to as the conchofrontal
+  sinus.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: 'Paranasal sinuses: Frontal'
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: cavity of frontal bone
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: sinus frontales
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0001825
+- habitatmech:GOLD.bcb2f8b7f3
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6617
+  source_label: 'Paranasal sinuses: Frontal'
+  source_path: 'Host-associated > Mammals: Human > Respiratory system > Nasal cavity
+    > Paranasal sinuses: Frontal'
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-16T03:05:28Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

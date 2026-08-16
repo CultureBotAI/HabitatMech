@@ -1,0 +1,47 @@
+identifier: UBERON:0001757
+label: pinna
+definition: The part of the ear that projects from the head, connecting to the external
+  acoustic meatus.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Auricle/Pinna
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: auricle
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: auricle of ear
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: auricle of external ear
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: auricula
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: auricula (auris externa)
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: pinna of ear
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: pinnae
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0001444
+- habitatmech:GOLD.4b37ab4b76
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6502
+  source_label: Auricle/Pinna
+  source_path: 'Host-associated > Mammals: Human > Integumentary system > Skin > Auricle/Pinna'
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-16T03:05:28Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
