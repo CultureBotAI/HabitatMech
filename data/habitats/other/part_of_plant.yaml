@@ -1,10 +1,10 @@
 identifier: habitatmech:MADIN.25325947e2
 label: part of plant
 habitat_category: OTHER
-grounding_status: UNGROUNDED
-mapping_status: SEEDED
-xrefs:
-- FOODON:03420174
+grounding_status: NARROW
+mapping_status: REVIEWED
+parent_habitats:
+- ENVO:01001057
 source_attestations:
 - source: MADIN
   source_id: FOODON:03420174
@@ -32,4 +32,4 @@ curation_history:
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by MADIN. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by MADIN. Grounding: NARROW.'

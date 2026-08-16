@@ -344,6 +344,21 @@ def test_curation_notes_do_not_cite_evidence_that_does_not_exist(repo_root, raw_
     labels = {r["term_id"]: r["label"] for r in raw_tsv("ontology_terms.tsv")}
     curie = re.compile(r"\b((?:[A-Z][A-Za-z]{1,9}|mesh):(?:C\d+|D\d+|\d{4,}))\b")
 
+    # A term can be real without being in the vendored slice: Madin names its
+    # habitats *by* ontology id, and some of those ids are not in kg-microbe's
+    # ENVO/FOODON builds, so the record carries them as an xref instead of an
+    # identity (#58). A note explaining that decision has to be able to say
+    # which term it is talking about. These ids are still checked against
+    # committed data — data/raw/ rather than the slice — so this widens what
+    # counts as evidence, not whether evidence is required.
+    attested = set()
+    for name, columns in (("madin_habitats.tsv", ("madin_id",)),
+                          ("environment_parameters.tsv", ("term_ids",)),
+                          ("isolation_source_groundings.tsv", ("object_id",))):
+        for row in raw_tsv(name):
+            for column in columns:
+                attested.update(curie.findall(row.get(column) or ""))
+
     invented, wrong_path, wrong_label = [], [], []
     with (repo_root / "curation" / "decisions.tsv").open(newline="", encoding="utf-8") as fh:
         for row in csv.DictReader(fh, delimiter="\t"):
@@ -359,7 +374,7 @@ def test_curation_notes_do_not_cite_evidence_that_does_not_exist(repo_root, raw_
                     wrong_path.append((row["identifier"], said[:60], actual[:60]))
 
             for found in curie.findall(note):
-                if found not in labels:
+                if found not in labels and found not in attested:
                     invented.append((row["identifier"], found))
                     continue
                 # Either quote character: one note uses double quotes, and a
@@ -368,7 +383,14 @@ def test_curation_notes_do_not_cite_evidence_that_does_not_exist(repo_root, raw_
                 quoted = re.search(
                     re.escape(found) + r"""\s+['"]([^'"]{2,80})['"]""", note
                 )
-                if quoted and quoted.group(1).strip().lower() != labels[found].strip().lower():
+                if not quoted:
+                    continue
+                if found not in labels:
+                    # Attested upstream but unlabelable here, so quoting a label
+                    # for it asserts something nobody in this repo can check —
+                    # exactly the unverified claim the test exists to catch.
+                    wrong_label.append((row["identifier"], found, "no label in the slice"))
+                elif quoted.group(1).strip().lower() != labels[found].strip().lower():
                     wrong_label.append((row["identifier"], found, quoted.group(1)))
 
     assert not invented, f"notes citing a term not in the vendored slice: {invented[:5]}"
@@ -406,3 +428,39 @@ def test_no_class_sweep_asserts_a_negative_the_slice_now_contradicts(repo_root, 
         f"{len(contradicted)} sweep(s) claim no term matched, but one does now: "
         f"{contradicted[:5]}. Vendoring an ontology invalidates the claim; re-decide them."
     )
+
+
+def test_decision_dates_are_not_in_the_future(repo_root):
+    """`date` is when a human or an assisted pass made the call, and it is the
+    only thing distinguishing a decision made before a re-seed from one made
+    after it. Nothing read the field back, so a wrong one would sit there.
+
+    Compared against **UTC**, because that is what everything else in the repo
+    is stamped in — MANIFEST's `extracted_at` and every `curation_history`
+    timestamp end in `Z`. Reading it in local time is what makes a correct row
+    look a day ahead: at 21:30 Pacific it is already tomorrow in UTC, and a
+    check anchored locally would flag every decision written that evening.
+
+    A day of slack on top, since a curator in UTC+13 writing their own local
+    date is a day ahead of UTC and is not wrong either.
+    """
+    import csv
+    import datetime
+
+    today = datetime.datetime.now(datetime.timezone.utc).date()
+    limit = today + datetime.timedelta(days=1)
+    ahead = []
+    with (repo_root / "curation" / "decisions.tsv").open(newline="", encoding="utf-8") as fh:
+        for row in csv.DictReader(fh, delimiter="\t"):
+            raw = (row.get("date") or "").strip()
+            if not raw:
+                continue
+            try:
+                when = datetime.date.fromisoformat(raw)
+            except ValueError:
+                ahead.append((row["identifier"], raw, "not an ISO date"))
+                continue
+            if when > limit:
+                ahead.append((row["identifier"], raw, f"after {limit.isoformat()}"))
+
+    assert not ahead, f"decisions dated in the future: {ahead[:5]}"
