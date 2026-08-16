@@ -1,0 +1,37 @@
+identifier: UBERON:0001796
+label: aqueous humor of eyeball
+definition: A thick watery refractive medium that fills the space between the lens
+  and the cornea[WP].
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Intraocular fluid/Aqueous humor
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: aqueous humor
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: aqueous humour
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: humor aquosus
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0006312
+- UBERON:0006314
+- habitatmech:GOLD.aceda5f881
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6876
+  source_label: Intraocular fluid/Aqueous humor
+  source_path: 'Host-associated > Mammals > Visual system > Eye: Ciliary body > Intraocular
+    fluid/Aqueous humor'
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-16T03:05:28Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

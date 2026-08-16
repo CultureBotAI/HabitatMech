@@ -1,8 +1,8 @@
 # Provenance for the inventories in data/raw/.
 # Regenerate with: just extract-inventory
 # Emitted by scripts/extract_source_inventory.py — do not hand-edit.
-extracted_at: '2026-08-15T05:30:07Z'
-kg_microbe_source: kg-microbe@d65c577a5296229c2ca887a92979e21e253bcf73
+extracted_at: '2026-08-16T03:05:28Z'
+kg_microbe_source: kg-microbe@cf76865ad02ae7ab0daf93003efd8c3f39f06ce0
 mappings_source: kg-microbe@bfd350e:mappings/isolation_source_to_ontology.tsv
 mappings_staged_at: build/pinned/isolation_source_to_ontology.tsv
 mappings_note: pinned separately, so kg_microbe_source describes every OTHER input. mappings_staged_at is a local path; the sha256 below identifies the bytes.
@@ -64,9 +64,9 @@ outputs:
   - path: madin_habitats.tsv
     rows: 58
   - path: ontology_subclass_edges.tsv
-    rows: 11824
+    rows: 11907
   - path: ontology_terms.tsv
-    rows: 13529
+    rows: 13584
   - path: prego_habitat_taxa.tsv
     rows: 8807
   - path: prego_habitats.tsv

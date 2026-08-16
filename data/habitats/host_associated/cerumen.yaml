@@ -1,0 +1,33 @@
+identifier: UBERON:0002297
+label: cerumen
+definition: The yellow or brown waxy secretions produced by vestigial apocrine sweat
+  glands in the external ear canal[MESH].
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Cerumen/Earwax
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: ear wax
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: earwax
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0001089
+- UBERON:0013211
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7025
+  source_label: Cerumen/Earwax
+  source_path: 'Host-associated > Mammals: Human > Integumentary system > Ceruminous
+    glands > Cerumen/Earwax'
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-16T03:05:28Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

@@ -1,0 +1,31 @@
+identifier: UBERON:0009963
+label: antennal gland
+definition: Excretory gland situated in the basal article of the antennal peduncle.
+  It functions to rehulate ionic balance.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Antennal/Green glands
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: green gland
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0009962
+- habitatmech:GOLD.d0a97e09fe
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7330
+  source_label: Antennal/Green glands
+  source_path: 'Host-associated > Arthropoda: Crustaceans > Excretory system > Antennal/Green
+    glands'
+  mapping_predicate: skos:exactMatch
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-16T03:05:28Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

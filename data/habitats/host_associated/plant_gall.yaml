@@ -1,20 +1,29 @@
-identifier: habitatmech:GOLD.fa99e76de1
-label: Galls
+identifier: PO:0025626
+label: plant gall
+definition: A multi-tissue plant structure (PO:0025496) that develops in response
+  to a biotic stress (PSO:0000011).
+definition_source: PO
 habitat_category: HOST_ASSOCIATED
-grounding_status: UNGROUNDED
+grounding_status: EXACT
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Galls
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
 parent_habitats:
 - PO:0009005
+- PO:0025496
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5785
   source_label: Galls
   source_path: Host-associated > Plants > Roots > Galls
+  mapping_predicate: skos:exactMatch
   assertion_count: 4
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-15T05:30:07Z'
+- timestamp: '2026-08-16T03:05:28Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

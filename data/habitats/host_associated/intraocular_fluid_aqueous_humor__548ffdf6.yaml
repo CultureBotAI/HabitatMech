@@ -1,9 +1,10 @@
 identifier: habitatmech:GOLD.6fd3cde4e9
 label: Intraocular fluid/Aqueous humor
 habitat_category: HOST_ASSOCIATED
-grounding_status: UNGROUNDED
-mapping_status: SEEDED
+grounding_status: NARROW
+mapping_status: REVIEWED
 parent_habitats:
+- UBERON:0001796
 - habitatmech:GOLD.4d81fdaa51
 source_attestations:
 - source: GOLD
@@ -11,8 +12,9 @@ source_attestations:
   source_label: Intraocular fluid/Aqueous humor
   source_path: 'Host-associated > Mammals: Human > Visual system > Eye: Ciliary body
     > Intraocular fluid/Aqueous humor'
+  mapping_predicate: skos:narrowMatch
 curation_history:
-- timestamp: '2026-08-15T05:30:07Z'
+- timestamp: '2026-08-16T03:05:28Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
