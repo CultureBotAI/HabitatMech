@@ -46,6 +46,10 @@ import yaml
 REPO_ROOT = Path(__file__).resolve().parent.parent
 HABITATS_DIR = REPO_ROOT / "data" / "habitats"
 REQUESTS_TSV = REPO_ROOT / "curation" / "term_requests.tsv"
+# Concepts examined and deliberately NOT asked for. Without this, the pending
+# count conflates "nobody has written this yet" with "this will never be a
+# term", and a backlog that cannot reach zero stops being read.
+EXCLUDED_TSV = REPO_ROOT / "curation" / "term_requests_excluded.tsv"
 OUT_DIR = REPO_ROOT / "curation" / "term_requests"
 SITE_BASE = "https://culturebotai.github.io/HabitatMech/pages/"
 
@@ -206,6 +210,15 @@ def build(requests: list[dict], corpus: dict[str, dict]) -> list[dict]:
     return out
 
 
+def excluded() -> dict[str, str]:
+    """Examined, and deliberately not asked for — with the reason."""
+    if not EXCLUDED_TSV.exists():
+        return {}
+    with EXCLUDED_TSV.open(newline="", encoding="utf-8") as fh:
+        return {r["identifier"]: r["why_not_a_term_request"]
+                for r in csv.DictReader(fh, delimiter="\t")}
+
+
 def unrequested(corpus: dict[str, dict], requested: set[str],
                 decisions: dict[str, dict]) -> list[tuple]:
     """Individually-examined ungrounded records with no request written yet.
@@ -223,7 +236,7 @@ def unrequested(corpus: dict[str, dict], requested: set[str],
         decision = decisions.get(identifier, {})
         if (decision.get("review_depth") or "ITEM").upper() != "ITEM":
             continue
-        if identifier in requested:
+        if identifier in requested or identifier in excluded():
             continue
         assertions = sum(a.get("assertion_count") or 0
                          for a in doc.get("source_attestations") or [])
@@ -272,13 +285,15 @@ def main(argv: list[str] | None = None) -> int:
         with decisions_path.open(newline="", encoding="utf-8") as fh:
             decisions = {r["identifier"]: r for r in csv.DictReader(fh, delimiter="\t")}
     pending = unrequested(corpus, {r["identifier"] for r in requests}, decisions)
+    skipped = excluded()
     covered = sum(r["_assertions"] for r in rows)
     print(f"\n{len(pending)} examined-ungrounded record(s) still have no request written. "
           f"Top by volume:")
     for assertions, label, identifier in pending[:10]:
         print(f"  {assertions:7d}  {label[:34]:34s} {identifier}")
     print(f"\ncovered {covered} upstream assertions; "
-          f"{sum(p[0] for p in pending)} still unrequested")
+          f"{sum(p[0] for p in pending)} still unrequested across {len(pending)} record(s); "
+          f"{len(skipped)} examined and deliberately not asked for")
     print("\n`created by` is empty: it wants pipe-delimited full ORCID IRIs and this "
           "script cannot know them.\nFill it in before submitting.")
     return 0

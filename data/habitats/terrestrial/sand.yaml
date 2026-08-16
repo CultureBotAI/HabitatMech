@@ -7,6 +7,9 @@ habitat_category: TERRESTRIAL
 grounding_status: EXACT
 mapping_status: REVIEWED
 synonyms:
+- synonym_text: Sandy
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
 - synonym_text: sandies
   synonym_type: RELATED_SYNONYM
   source: PREGO
@@ -26,6 +29,12 @@ parent_habitats:
 - ENVO:00001998
 - ENVO:01000060
 source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:sandy
+  source_label: Sandy
+  mapping_predicate: skos:closeMatch
+  assertion_count: 607
+  assertion_unit: STRAIN
 - source: GOLD
   source_id: gold.ecosystem:3811
   source_label: Sand
@@ -42,108 +51,211 @@ source_attestations:
   score: 4.0
   evidence_channels: annotated_genomes_isolates
 characteristic_taxa:
+- taxon_id: NCBITaxon:1137988
+  source: BACDIVE
+  taxon_label: Geodermatophilus tzadiensis
+  association_count: 3
+  rank: 18
+  candidate_pool: 236
+  corroborated_by:
+  - PREGO
 - taxon_id: NCBITaxon:1125876
   source: PREGO
   taxon_label: Halpernia frigidisoli
   score: 4.0
   rank: 1
   candidate_pool: 31
-- taxon_id: NCBITaxon:1137988
-  source: PREGO
-  taxon_label: Geodermatophilus tzadiensis
-  score: 4.0
+- taxon_id: NCBITaxon:56
+  source: BACDIVE
+  taxon_label: Sorangium cellulosum
+  association_count: 115
+  rank: 1
+  candidate_pool: 236
+- taxon_id: NCBITaxon:184914
+  source: BACDIVE
+  taxon_label: Corallococcus coralloides
+  association_count: 62
   rank: 2
-  candidate_pool: 31
+  candidate_pool: 236
 - taxon_id: NCBITaxon:1137989
   source: PREGO
   taxon_label: Geodermatophilus normandii
   score: 4.0
   rank: 3
   candidate_pool: 31
+- taxon_id: NCBITaxon:1872627
+  source: BACDIVE
+  taxon_label: Archangium sp.
+  association_count: 39
+  rank: 3
+  candidate_pool: 236
 - taxon_id: NCBITaxon:1137991
   source: PREGO
   taxon_label: Geodermatophilus siccatus
   score: 4.0
   rank: 4
   candidate_pool: 31
+- taxon_id: NCBITaxon:54
+  source: BACDIVE
+  taxon_label: Nannocystis exedens
+  association_count: 37
+  rank: 4
+  candidate_pool: 236
 - taxon_id: NCBITaxon:1137993
   source: PREGO
   taxon_label: Geodermatophilus africanus
   score: 4.0
   rank: 5
   candidate_pool: 31
+- taxon_id: NCBITaxon:33
+  source: BACDIVE
+  taxon_label: Myxococcus fulvus
+  association_count: 20
+  rank: 5
+  candidate_pool: 236
 - taxon_id: NCBITaxon:1137994
   source: PREGO
   taxon_label: Geodermatophilus saharensis
   score: 4.0
   rank: 6
   candidate_pool: 31
+- taxon_id: NCBITaxon:71864
+  source: BACDIVE
+  taxon_label: Herpetosiphon sp.
+  association_count: 17
+  rank: 6
+  candidate_pool: 236
 - taxon_id: NCBITaxon:1190417
   source: PREGO
   taxon_label: Geodermatophilus telluris
   score: 4.0
   rank: 7
   candidate_pool: 31
+- taxon_id: NCBITaxon:57
+  source: BACDIVE
+  association_count: 14
+  rank: 7
+  candidate_pool: 236
 - taxon_id: NCBITaxon:307120
   source: PREGO
   taxon_label: Micromonospora marina
   score: 4.0
   rank: 8
   candidate_pool: 31
+- taxon_id: NCBITaxon:34
+  source: BACDIVE
+  taxon_label: Myxococcus xanthus
+  association_count: 12
+  rank: 8
+  candidate_pool: 236
 - taxon_id: NCBITaxon:364199
   source: PREGO
   taxon_label: Paracoccus homiensis
   score: 4.0
   rank: 9
   candidate_pool: 31
+- taxon_id: NCBITaxon:153721
+  source: BACDIVE
+  taxon_label: Sporocytophaga myxococcoides
+  association_count: 8
+  rank: 9
+  candidate_pool: 236
 - taxon_id: NCBITaxon:364200
   source: PREGO
   taxon_label: Cognatiyoonia koreensis
   score: 4.0
   rank: 10
   candidate_pool: 31
+- taxon_id: NCBITaxon:83428
+  source: BACDIVE
+  taxon_label: uncultured Bacillus sp.
+  association_count: 8
+  rank: 10
+  candidate_pool: 236
 - taxon_id: NCBITaxon:390807
   source: PREGO
   taxon_label: Jannaschia pohangensis
   score: 4.0
   rank: 11
   candidate_pool: 31
+- taxon_id: NCBITaxon:83462
+  source: BACDIVE
+  taxon_label: Corallococcus exiguus
+  association_count: 8
+  rank: 11
+  candidate_pool: 236
 - taxon_id: NCBITaxon:512762
   source: PREGO
   taxon_label: Kineococcus xinjiangensis
   score: 4.0
   rank: 12
   candidate_pool: 31
+- taxon_id: NCBITaxon:83456
+  source: BACDIVE
+  taxon_label: Myxococcus virescens
+  association_count: 6
+  rank: 12
+  candidate_pool: 236
 - taxon_id: NCBITaxon:521013
   source: PREGO
   taxon_label: Limimaricola pyoseonensis
   score: 4.0
   rank: 13
   candidate_pool: 31
+- taxon_id: NCBITaxon:292587
+  source: BACDIVE
+  taxon_label: Synechococcus rubescens
+  association_count: 5
+  rank: 13
+  candidate_pool: 236
 - taxon_id: NCBITaxon:643568
   source: PREGO
   taxon_label: Sphingomonas xinjiangensis
   score: 4.0
   rank: 14
   candidate_pool: 31
+- taxon_id: NCBITaxon:47254
+  source: BACDIVE
+  taxon_label: Leptolyngbya sp.
+  association_count: 5
+  rank: 14
+  candidate_pool: 236
 - taxon_id: NCBITaxon:675864
   source: PREGO
   taxon_label: Auraticoccus monumenti
   score: 4.0
   rank: 15
   candidate_pool: 31
+- taxon_id: NCBITaxon:83449
+  source: BACDIVE
+  taxon_label: Cystobacter ferrugineus
+  association_count: 5
+  rank: 15
+  candidate_pool: 236
 - taxon_id: NCBITaxon:688867
   source: PREGO
   taxon_label: Ohtaekwangia koreensis
   score: 4.0
   rank: 16
   candidate_pool: 31
+- taxon_id: NCBITaxon:2
+  source: BACDIVE
+  taxon_label: Bacteria
+  association_count: 4
+  rank: 16
+  candidate_pool: 236
 - taxon_id: NCBITaxon:688913
   source: PREGO
   taxon_label: Ohtaekwangia kribbensis
   score: 4.0
   rank: 17
   candidate_pool: 31
+- taxon_id: NCBITaxon:83460
+  source: BACDIVE
+  taxon_label: Allostigmatella erecta
+  association_count: 4
+  rank: 17
+  candidate_pool: 236
 - taxon_id: NCBITaxon:1026
   source: PREGO
   taxon_label: Marinoscillum furvescens
@@ -156,42 +268,84 @@ characteristic_taxa:
   score: 3.0
   rank: 19
   candidate_pool: 31
+- taxon_id: NCBITaxon:39
+  source: BACDIVE
+  taxon_label: Archangiaceae
+  association_count: 3
+  rank: 19
+  candidate_pool: 236
 - taxon_id: NCBITaxon:1121481
   source: PREGO
   taxon_label: Dyadobacter alkalitolerans DSM 23607
   score: 3.0
   rank: 20
   candidate_pool: 31
+- taxon_id: NCBITaxon:394094
+  source: BACDIVE
+  taxon_label: Cystobacter velatus
+  association_count: 3
+  rank: 20
+  candidate_pool: 236
 - taxon_id: NCBITaxon:1122611
   source: PREGO
   taxon_label: Nonomuraea coxensis DSM 45129
   score: 3.0
   rank: 21
   candidate_pool: 31
+- taxon_id: NCBITaxon:83451
+  source: BACDIVE
+  taxon_label: Archangium violaceum
+  association_count: 3
+  rank: 21
+  candidate_pool: 236
 - taxon_id: NCBITaxon:1122920
   source: PREGO
   taxon_label: Paenibacillus harenae DSM 16969
   score: 3.0
   rank: 22
   candidate_pool: 31
+- taxon_id: NCBITaxon:83455
+  source: BACDIVE
+  taxon_label: Myxococcus stipitatus
+  association_count: 3
+  rank: 22
+  candidate_pool: 236
 - taxon_id: NCBITaxon:232991
   source: PREGO
   taxon_label: Dulcicalothrix desertica PCC 7102
   score: 3.0
   rank: 23
   candidate_pool: 31
+- taxon_id: NCBITaxon:1002689
+  source: BACDIVE
+  taxon_label: Occallatibacter riparius
+  association_count: 2
+  rank: 23
+  candidate_pool: 236
 - taxon_id: NCBITaxon:364197
   source: PREGO
   taxon_label: Pseudomonas pohangensis
   score: 3.0
   rank: 24
   candidate_pool: 31
+- taxon_id: NCBITaxon:2093377
+  source: BACDIVE
+  taxon_label: Sorangium sp.
+  association_count: 2
+  rank: 24
+  candidate_pool: 236
 - taxon_id: NCBITaxon:369723
   source: PREGO
   taxon_label: Salinispora tropica CNB-440
   score: 3.0
   rank: 25
   candidate_pool: 31
+- taxon_id: NCBITaxon:29
+  source: BACDIVE
+  taxon_label: Myxococcales
+  association_count: 2
+  rank: 25
+  candidate_pool: 236
 curation_history:
 - timestamp: '2026-08-13T00:00:00Z'
   curator: claude-opus-5
@@ -211,8 +365,18 @@ curation_history:
     the merge is right. It agrees. Source concepts in the same pass whose labels did
     not agree were re-decided rather than endorsed; see the pass''s other decisions
     of the same date. (source concept habitatmech:PREGO.5810144d5a)'
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to ENVO:01000017 ''sand'' (CLOSE). Term-request re-check (#12):
+    ''Sandy'' was left ungrounded after ENVO:00000172 ''sandy desert'' was refused
+    via its ''sandy area'' synonym — correctly, since a sandy isolation source need
+    not be a desert. But ENVO:01000017 ''sand'', ''particulate environmental material
+    composed primarily of particles of sand'', carries no such extra claim and is
+    what the bin names. CLOSE because BacDive''s label is an adjective describing
+    a sampling substrate rather than the material class itself. (source concept habitatmech:BACDIVE.b3b3dfff91)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD, PREGO. Grounding:
     EXACT.'

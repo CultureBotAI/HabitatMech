@@ -1,12 +1,15 @@
 identifier: habitatmech:BACDIVE.b415adf879
 label: Food-production
 habitat_category: OTHER
-grounding_status: UNGROUNDED
+grounding_status: BROAD
 mapping_status: REVIEWED
+parent_habitats:
+- ENVO:01000313
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:food-production
   source_label: Food-production
+  mapping_predicate: skos:broadMatch
   assertion_count: 1197
   assertion_unit: STRAIN
   notes: kg-microbe's isolation-source mapping table has a row for this source with
@@ -163,14 +166,16 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 792
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-16T00:00:00Z'
   curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Food-production
-    as a setting rather than a product. ENVO:03501297 meat processing plant and similar
-    are specific facilities; no general food-production environment term exists. ENVO
-    term request. (source concept habitatmech:BACDIVE.b415adf879)'
+  action: GROUND_AS_PARENT
+  changes: 'ENVO:01000313 ''anthropogenic environment'' attached as a parent, not
+    adopted as the identity (BROAD). Term-request re-check (#12), after ENVO:01001000
+    showed these claims were never machine-rechecked: ''Food-production'' as a setting
+    rather than a product. ENVO''s food-production terms are specific monitoring zones
+    and named facilities; the bin is broader than any of them and narrower than anthropogenic
+    environment, which is therefore the honest parent. (source concept habitatmech:BACDIVE.b415adf879)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: BROAD.'

@@ -1,12 +1,23 @@
-identifier: habitatmech:BACDIVE.6add57f329
-label: Fluids
+identifier: ENVO:02000019
+label: bodily fluid material
+definition: An organic material which is primarily composed of some natural bodily
+  fluid or secretion such as blood, semen, saliva, blood plasma, intracellular and
+  interstitial fluids.
+definition_source: ENVO
 habitat_category: OTHER
-grounding_status: UNGROUNDED
+grounding_status: CLOSE
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Fluids
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+parent_habitats:
+- ENVO:01000155
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:fluids
   source_label: Fluids
+  mapping_predicate: skos:closeMatch
   assertion_count: 6001
   assertion_unit: STRAIN
 characteristic_taxa:
@@ -161,15 +172,20 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 1359
 curation_history:
-- timestamp: '2026-08-14T00:00:00Z'
+- timestamp: '2026-08-16T00:00:00Z'
   curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Grounding-cohort
-    review (#62): was NCIT:C13452 ''Other Body Fluids and Secretions'', a residual
-    bucket like the NCIT ''Other'' terms already refused in #43, and the largest single
-    case in this pass at 6001 strains. Body fluid is a real habitat; a bucket named
-    for what it is not cannot be its identity. (source concept habitatmech:BACDIVE.6add57f329)'
+  action: GROUND
+  changes: 'Grounded to ENVO:02000019 ''bodily fluid material'' (CLOSE). Term-request
+    re-check (#12), after ENVO:01001000 showed these claims were never machine-rechecked:
+    ''Fluids'' was left ungrounded after ENVO''s NCIT:C13452 ''Other Body Fluids and
+    Secretions'' was refused as a residual bucket. That refusal was right and the
+    conclusion was not: ENVO:02000019 ''bodily fluid material'' is a proper class
+    — ''an organic material primarily composed of some natural bodily fluid or secretion
+    such as blood, semen, saliva'' — and that is what BacDive''s bin holds, as its
+    Digestive-fluid and Rumen-fluid children show. CLOSE rather than EXACT because
+    BacDive''s is a sampling bin and ENVO''s is the material, which is the same framing
+    difference CLOSE records elsewhere in the corpus. (source concept habitatmech:BACDIVE.6add57f329)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'

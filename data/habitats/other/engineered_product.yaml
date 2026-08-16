@@ -1,12 +1,15 @@
 identifier: habitatmech:BACDIVE.9c253e43c0
 label: Engineered-product
 habitat_category: OTHER
-grounding_status: UNGROUNDED
+grounding_status: BROAD
 mapping_status: REVIEWED
+parent_habitats:
+- ENVO:00003074
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:engineered-product
   source_label: Engineered-product
+  mapping_predicate: skos:broadMatch
   assertion_count: 526
   assertion_unit: STRAIN
   notes: kg-microbe's isolation-source mapping table has a row for this source with
@@ -163,14 +166,18 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 378
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-16T00:00:00Z'
   curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Engineered-product
-    spans manufactured goods of every kind. ENVO:00003074 manufactured product is
-    a material class rather than an environment; no term fits the concept as a habitat.
-    ENVO term request. (source concept habitatmech:BACDIVE.9c253e43c0)'
+  action: GROUND_AS_PARENT
+  changes: 'ENVO:00003074 ''manufactured product'' attached as a parent, not adopted
+    as the identity (BROAD). Term-request re-check (#12), after ENVO:01001000 showed
+    these claims were never machine-rechecked: ''Engineered-product'' spans manufactured
+    goods of every kind. ENVO:00003074 ''manufactured product'' — ''a material entity
+    that has been processed by humans or their technology in any way'' — is broader
+    than the bin and true of every member. The earlier note refused it as ''a material
+    class rather than an environment'', which is a reason not to adopt it as an identity
+    and not a reason to drop the link. (source concept habitatmech:BACDIVE.9c253e43c0)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: BROAD.'

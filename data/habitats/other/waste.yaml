@@ -1,12 +1,15 @@
 identifier: habitatmech:BACDIVE.36df85e4a4
 label: Waste
 habitat_category: OTHER
-grounding_status: UNGROUNDED
+grounding_status: BROAD
 mapping_status: REVIEWED
+parent_habitats:
+- ENVO:00002264
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:waste
   source_label: Waste
+  mapping_predicate: skos:broadMatch
   assertion_count: 1140
   assertion_unit: STRAIN
   notes: kg-microbe's isolation-source mapping table has a row for this source with
@@ -163,14 +166,16 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 891
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-16T00:00:00Z'
   curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Generic "Waste"
-    spanning solid, liquid and industrial waste. ENVO has specific waste materials
-    (waste water, industrial waste material) but no parent covering the whole bin;
-    grounding to any one would misattribute the other strains. (source concept habitatmech:BACDIVE.36df85e4a4)'
+  action: GROUND_AS_PARENT
+  changes: 'ENVO:00002264 ''waste material'' attached as a parent, not adopted as
+    the identity (BROAD). Term-request re-check (#12), after ENVO:01001000 showed
+    these claims were never machine-rechecked: ''Waste'' spans solid, liquid and industrial
+    waste. ENVO:00002264 ''waste material'' — ''a material which is not the desired
+    output of a process'' — is broader than all three, so it is the parent that covers
+    the bin without grounding it to any one member. (source concept habitatmech:BACDIVE.36df85e4a4)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: BROAD.'

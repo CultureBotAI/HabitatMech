@@ -22,7 +22,7 @@
 <p class="meta">
   <code class="curie">habitatmech:BACDIVE.7d4708950e</code>
   <span class="sep">·</span><a href="../category/other.html">OTHER</a>
-  <span class="sep">·</span><span class="pill warn">UNGROUNDED</span>
+  <span class="sep">·</span><span class="pill">BROAD</span>
   <span class="pill">REVIEWED</span>
 </p>
 
@@ -43,6 +43,10 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
   </tr>
 </table>
 
+<h2>Broader habitats</h2>
+<ul class="plain">
+  <li><a href="../habitats/anthropogenic-environment-envo-01000313.html">anthropogenic environment</a>      <code class="curie">ENVO:01000313</code></li>
+</ul>
 
 
 <h2>Associated taxa</h2>
@@ -237,9 +241,9 @@ second, independent source are listed first.</p>
 from several source concepts can carry one decision per concept.</p>
 <ol class="events">
   <li>
-    <span class="pill">CONFIRM_UNGROUNDED</span>
-    <span class="meta">2026-08-12 · claude-opus-5</span>
-    <p>Confirmed UNGROUNDED: no ontology term fits this concept. BacDive&#39;s top-level &#34;Engineered&#34; bin. A real habitat class (built and managed environments) but ENVO has no single term for the whole class, only specific built environments. ENVO term request. (source concept habitatmech:BACDIVE.7d4708950e)</p>
+    <span class="pill">GROUND_AS_PARENT</span>
+    <span class="meta">2026-08-16 · claude-opus-5</span>
+    <p>ENVO:01000313 &#39;anthropogenic environment&#39; attached as a parent, not adopted as the identity (BROAD). Term-request re-check (#12), after ENVO:01001000 showed these claims were never machine-rechecked: &#39;Engineered&#39; was left ungrounded for want of &#39;a single term for the whole class&#39;. ENVO:01000313 &#39;anthropogenic environment&#39; — &#39;an environmental system which is the product of human activity&#39; — covers it. It is attached as a parent rather than adopted because it is BROADER than the bin: an anthropised rice paddy is a product of human activity too and sits under BacDive&#39;s Environmental, not Engineered. (source concept habitatmech:BACDIVE.7d4708950e)</p>
   </li>
 </ol>
 

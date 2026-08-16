@@ -1,12 +1,15 @@
 identifier: habitatmech:BACDIVE.7d4708950e
 label: Engineered
 habitat_category: OTHER
-grounding_status: UNGROUNDED
+grounding_status: BROAD
 mapping_status: REVIEWED
+parent_habitats:
+- ENVO:01000313
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:engineered
   source_label: Engineered
+  mapping_predicate: skos:broadMatch
   assertion_count: 7174
   assertion_unit: STRAIN
   notes: kg-microbe's isolation-source mapping table has a row for this source with
@@ -163,14 +166,18 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 3884
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-16T00:00:00Z'
   curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. BacDive''s top-level
-    "Engineered" bin. A real habitat class (built and managed environments) but ENVO
-    has no single term for the whole class, only specific built environments. ENVO
-    term request. (source concept habitatmech:BACDIVE.7d4708950e)'
+  action: GROUND_AS_PARENT
+  changes: 'ENVO:01000313 ''anthropogenic environment'' attached as a parent, not
+    adopted as the identity (BROAD). Term-request re-check (#12), after ENVO:01001000
+    showed these claims were never machine-rechecked: ''Engineered'' was left ungrounded
+    for want of ''a single term for the whole class''. ENVO:01000313 ''anthropogenic
+    environment'' — ''an environmental system which is the product of human activity''
+    — covers it. It is attached as a parent rather than adopted because it is BROADER
+    than the bin: an anthropised rice paddy is a product of human activity too and
+    sits under BacDive''s Environmental, not Engineered. (source concept habitatmech:BACDIVE.7d4708950e)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: BROAD.'
