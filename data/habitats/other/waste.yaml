@@ -163,6 +163,13 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 891
 curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Generic "Waste"
+    spanning solid, liquid and industrial waste. ENVO has specific waste materials
+    (waste water, industrial waste material) but no parent covering the whole bin;
+    grounding to any one would misattribute the other strains.'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

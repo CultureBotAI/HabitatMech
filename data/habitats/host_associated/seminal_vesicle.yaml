@@ -56,6 +56,14 @@ source_attestations:
   mapping_predicate: skos:exactMatch
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to UBERON:0000998 ''seminal vesicle'' (EXACT). Variant-match
+    review (#12): the seeder grounds on exact labels only, so GOLD''s slash and plural
+    conventions hid a term that says exactly this. ''Seminal gland'' is UBERON''s
+    exact synonym for the seminal vesicle, and the path is Mammals > Reproductive
+    system. Path: Host-associated > Mammals > Reproductive system > Seminal glands'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

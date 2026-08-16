@@ -11,6 +11,14 @@ source_attestations:
   source_label: C2
   source_path: Host-associated > Mammals > Digestive system > Stomach > C2
 curation_history:
+- timestamp: '2026-08-14T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Disjoint-grounding
+    review (#62): was UBERON:0001093 ''vertebral bone 2''. The path is Host-associated
+    > Mammals > Digestive system > Stomach > C2, so C2 is the second compartment of
+    a camelid stomach, not a neck vertebra. The slice has no term for it. Path: Host-associated
+    > Mammals > Digestive system > Stomach > C2'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

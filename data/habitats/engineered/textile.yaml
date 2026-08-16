@@ -21,6 +21,14 @@ source_attestations:
     > Fabric
   mapping_predicate: skos:exactMatch
 curation_history:
+- timestamp: '2026-08-14T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to ENVO:02000001 ''textile'' (EXACT). Disjoint-grounding review
+    (#62): was FOODON:03500045 ''food-grade textile surface'', which asserts a food-contact
+    context the path does not support. ENVO:02000001 ''textile'' says exactly what
+    the source says. Path: Engineered > Industrial production > Engineered product
+    > Material > Fabric'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

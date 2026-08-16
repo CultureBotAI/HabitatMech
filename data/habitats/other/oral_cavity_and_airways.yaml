@@ -161,6 +161,15 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 881
 curation_history:
+- timestamp: '2026-08-14T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Cohort review
+    (subset/disjoint mapping screen): a composite of two sites. UBERON:0001005 ''respiratory
+    airway'' covers only the airways half and drops the oral cavity, and it is also
+    the correct target for the separate ''Airways'' source — adopting it here would
+    merge the two. No single term covers mouth plus airway; the respiratory-tract
+    terms exclude the oral cavity.'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

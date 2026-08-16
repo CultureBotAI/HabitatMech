@@ -12,6 +12,13 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 5 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. GOLD''s Host-associated
+    root. A real habitat class but ENVO has only plant-associated and animal-associated
+    environment with no shared parent. ENVO term request for a generic organism-associated
+    environment.'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

@@ -165,6 +165,15 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 2068
 curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader
+    term ENVO:01001002 ''animal-associated environment'' attached as a parent. Human
+    as host. No human-associated environment term exists in ENVO; parented to animal-associated
+    environment. Deliberately not grounded there, because every host clade would then
+    merge onto one record and the host distinction is the entire content. ENVO term
+    request.'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

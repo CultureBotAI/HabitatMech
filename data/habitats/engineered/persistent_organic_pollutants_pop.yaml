@@ -14,6 +14,17 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Variant-match
+    review (#12): the variant route strips GOLD''s parenthetical and reaches UBERON:0002622
+    ''preoptic periventricular nucleus'', a structure in the BRAIN, for a class of
+    industrial chemicals. The path is Engineered > Bioremediation > Persistent organic
+    pollutants (POP), so the habitat is the contaminated material being remediated;
+    the pollutants themselves are chemicals rather than places, and no term in the
+    slice names the habitat. Path: Engineered > Bioremediation > Persistent organic
+    pollutants (POP)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

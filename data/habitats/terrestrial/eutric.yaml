@@ -11,6 +11,16 @@ source_attestations:
   source_label: Eutric
   source_path: Environmental > Terrestrial > Soil > Leptosol > Eutric
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Soil-classification
+    review: ''Eutric'' is a WRB QUALIFIER (base saturation >=50%), not a reference
+    soil group, so there is no term for it and there should not be — the same reading
+    already recorded for Acidic, Humid, Arid and the climatic zones. The concept the
+    path names is a eutric leptosol, which is a real habitat, and ENVO:00002241 ''leptosol''
+    is already attached as its parent. Confirmed rather than grounded. Path: Environmental
+    > Terrestrial > Soil > Leptosol > Eutric'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

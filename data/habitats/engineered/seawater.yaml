@@ -14,6 +14,13 @@ source_attestations:
   mapping_predicate: skos:narrowMatch
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-13T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND_AS_PARENT
+  changes: 'ENVO:00002149 ''sea water'' attached as a parent, not adopted as the identity
+    (NARROW). Mesocosm seawater is experimental, held in an artificial ecosystem;
+    merging it with in-situ sea water conflates the two. Path: Engineered > Artificial
+    ecosystem > Mesocosm > Seawater'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

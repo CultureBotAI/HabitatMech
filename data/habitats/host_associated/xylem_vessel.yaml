@@ -32,6 +32,14 @@ source_attestations:
   assertion_count: 1
   assertion_unit: ORGANISM
 curation_history:
+- timestamp: '2026-08-14T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to PO:0025417 ''xylem vessel'' (EXACT). Stale-sweep review (#84):
+    the sweep predates PO being vendored (#10). PO:0025417 ''xylem vessel'' matches
+    the leaf''s singular exactly and the path is Plants > Phyllosphere > Phylloplane/Leaf
+    > Xylem vessels, so it is the same thing. Path: Host-associated > Plants > Phyllosphere
+    > Phylloplane/Leaf > Xylem vessels'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

@@ -41,6 +41,14 @@ source_attestations:
   source_path: 'Host-associated > Mammals: Human > Integumentary system > Skin > Auricle/Pinna'
   mapping_predicate: skos:exactMatch
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to UBERON:0001757 ''pinna'' (EXACT). Variant-match review (#12):
+    the seeder grounds on exact labels only, so GOLD''s slash and plural conventions
+    hid a term that says exactly this. The pinna is the part of the ear projecting
+    from the head; the path is Human > Integumentary system > Skin. Path: Host-associated
+    > Mammals: Human > Integumentary system > Skin > Auricle/Pinna'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

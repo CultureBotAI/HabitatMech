@@ -38,6 +38,14 @@ source_attestations:
     apparatus > Lacrimal glands'
   mapping_predicate: skos:exactMatch
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to UBERON:0001817 ''lacrimal gland'' (EXACT). Variant-match review
+    (#12): the seeder grounds on exact labels only, so GOLD''s slash and plural conventions
+    hid a term that says exactly this. Plural only; the path is Human > Integumentary
+    system > Lacrimal apparatus. Path: Host-associated > Mammals: Human > Integumentary
+    system > Lacrimal apparatus > Lacrimal glands'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

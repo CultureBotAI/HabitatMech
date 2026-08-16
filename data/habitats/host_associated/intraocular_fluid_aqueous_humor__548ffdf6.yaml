@@ -14,6 +14,15 @@ source_attestations:
     > Intraocular fluid/Aqueous humor'
   mapping_predicate: skos:narrowMatch
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND_AS_PARENT
+  changes: 'UBERON:0001796 ''aqueous humor of eyeball'' attached as a parent, not
+    adopted as the identity (NARROW). Sibling-path review (#12): the human aqueous
+    humor is a narrower kind of the Mammals concept that claims UBERON:0001796. Same
+    treatment as the seminal glands sibling — kept distinct rather than merged. Path:
+    Host-associated > Mammals: Human > Visual system > Eye: Ciliary body > Intraocular
+    fluid/Aqueous humor'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

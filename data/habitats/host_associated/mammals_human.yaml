@@ -15,6 +15,15 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 4 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader
+    term ENVO:01001002 ''animal-associated environment'' attached as a parent. Humans
+    as host, the single largest ungrounded concept at 40432 GOLD organisms. No human-associated
+    environment term exists in ENVO. Deliberately not grounded to animal-associated
+    environment: every host clade would then merge onto one record and the host distinction
+    is the entire content. Highest-value ENVO term request.'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

@@ -12,6 +12,16 @@ source_attestations:
   source_path: 'Host-associated > Arthropoda: Insects > Respiratory system > Trachea
     > Air sacs'
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Sibling-path
+    review (#12): grounding the bird ''Air sacs'' concept made this one''s sweep stale,
+    but UBERON''s air sacs are ALL vertebrate — UBERON:0009060 is defined as extensions
+    of the lungs of birds, and every sibling term is avian or cetacean. The path is
+    Insects > Respiratory system > Trachea, where an air sac is a tracheal dilation.
+    UBERON has no insect air sac. Path: Host-associated > Arthropoda: Insects > Respiratory
+    system > Trachea > Air sacs'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

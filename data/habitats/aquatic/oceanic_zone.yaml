@@ -195,6 +195,17 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 533
 curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: Grounded to ENVO:00000207 'oceanic zone' (EXACT). GOLD's Marine > Oceanic.
+    ENVO:00000207 oceanic zone is the exact concept.
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: REVIEW
+  changes: Reviewed and endorsed the seeder's own resolution. PREGO asserts ENVO:00000207
+    oceanic zone directly; the self-grounding is correct. Endorsed to complete the
+    oceanic record.
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

@@ -113,6 +113,15 @@ characteristic_taxa:
   taxon_label: Mycobacterium canettii CIPT 140010059
   candidate_pool: 1249
 curation_history:
+- timestamp: '2026-08-14T00:00:00Z'
+  curator: claude-opus-5
+  action: NOT_APPLICABLE
+  changes: 'Marked NOT_APPLICABLE: the source concept does not denote a habitat. UBERON:0000468
+    kept as an xref. #40 named this one: Madin''s rows for a shared term must follow
+    the existing decision rather than re-create the grounding. UBERON''s own definition
+    is ''anatomical structure that is an individual member of a species'', so it is
+    the host itself and not a place — the same reading already recorded for the environment
+    table''s ''host'' row. Link kept as an xref.'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

@@ -12,6 +12,14 @@ source_attestations:
   source_path: Engineered > Industrial production > Engineered product > Material
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-14T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Stale-sweep
+    review (#12): NCIT:C48187 ''Material'' matches the label and carries none of the
+    meaning — a residual bucket like the NCIT ''Other'' and ''Part'' terms already
+    refused in #43. Path: Engineered > Industrial production > Engineered product
+    > Material'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

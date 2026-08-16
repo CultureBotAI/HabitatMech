@@ -28,6 +28,14 @@ source_attestations:
     > Paranasal sinuses: Frontal'
   mapping_predicate: skos:exactMatch
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to UBERON:0001760 ''frontal sinus'' (EXACT). Variant-match review
+    (#12): the variant route reaches UBERON:0000209 ''tetrapod frontal BONE''. The
+    path is Respiratory system > Nasal cavity > Paranasal sinuses, so the frontal
+    SINUS is meant — the cavity, not the bone around it. Path: Host-associated > Mammals:
+    Human > Respiratory system > Nasal cavity > Paranasal sinuses: Frontal'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

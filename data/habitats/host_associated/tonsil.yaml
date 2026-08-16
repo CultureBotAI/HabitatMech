@@ -57,6 +57,23 @@ characteristic_taxa:
   rank: 1
   candidate_pool: 1
 curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to BTO:0001387 ''tonsil'' (EXACT). Leaf label equals the BTO
+    label exactly and no other source concept claims it. Path: Host-associated > Mammals:
+    Human > Lymphatic system > Tonsils'
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: Grounded to BTO:0001387 'tonsil' (EXACT). GOLD's Lymphatic system > Tonsils.
+    BTO:0001387 tonsil is the exact site.
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: REVIEW
+  changes: Reviewed and endorsed the seeder's own resolution. PREGO asserts BTO:0001387
+    tonsil directly; the self-grounding is correct. Endorsed to complete the tonsil
+    record.
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

@@ -11,6 +11,14 @@ source_attestations:
   source_label: Spicules
   source_path: Environmental > Terrestrial > Deep subsurface > Cave > Spicules
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Variant-match
+    review (#12): the variant route reaches UBERON:3010830 ''spicule'', which is animal
+    anatomy. The path is Terrestrial > Deep subsurface > Cave, where a spicule is
+    a mineral speleothem — a homonym across kingdoms of the kind that put Coral on
+    a fish. Path: Environmental > Terrestrial > Deep subsurface > Cave > Spicules'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

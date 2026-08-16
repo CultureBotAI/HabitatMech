@@ -319,6 +319,18 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 62
 curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: Grounded to BTO:0005516 'wood' (CLOSE). Timber is processed wood. BTO:0005516
+    wood is the closest available material term; not exact because timber implies
+    the worked product rather than the tissue.
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: REVIEW
+  changes: Reviewed and endorsed the seeder's own resolution. PREGO asserts BTO:0005516
+    wood directly; the self-grounding is correct. Endorsed to complete the wood record,
+    whose BacDive Timber attestation is already curated.
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

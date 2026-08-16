@@ -14,6 +14,15 @@ source_attestations:
   mapping_predicate: skos:narrowMatch
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND_AS_PARENT
+  changes: 'UBERON:0001705 ''nail'' attached as a parent, not adopted as the identity
+    (NARROW). Variant-match review (#12): ''Nails'' plural hid UBERON:0001705. Two
+    GOLD paths end in this leaf at equal depth, so the broader Mammals path claims
+    the term and the human one is recorded as narrower — keeping the two host clades
+    on separate records. Path: Host-associated > Mammals: Human > Integumentary system
+    > Nails'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

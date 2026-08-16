@@ -14,6 +14,16 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-14T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Stale-sweep
+    review (#84): the variant search reaches PATO:0001456 ''anaerobic'' by taking
+    the parenthetical from ''Dissolved organics (anaerobic)''. A quality is not a
+    habitat — the call already recorded for Acidic, Humid, Arid and the climatic zones
+    — and the habitat here is the wastewater, not its oxygen state. The sweep''s answer
+    stands; its stated reason no longer does. Path: Engineered > Wastewater > Nutrient
+    removal > Dissolved organics (anaerobic)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

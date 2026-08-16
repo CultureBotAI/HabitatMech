@@ -111,6 +111,16 @@ characteristic_taxa:
   taxon_label: Agrobacterium sp. RAC06
   candidate_pool: 88
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: NOT_APPLICABLE
+  changes: 'Marked NOT_APPLICABLE: the source concept does not denote a habitat. Last-undecided
+    review (#12): Madin''s ''alga'' names ENVO:02500019, which is not in kg-microbe''s
+    ENVO build, so the record already carries it as an xref rather than an identity
+    (#58). An alga is an organism in any case — the habitat is the water or surface
+    it lives on — so this is the host-taxon call already recorded for Protista, Fungi,
+    Mollusca, Echinodermata and the tunicates. The unverifiable xref is kept as the
+    only trace of what upstream said.'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

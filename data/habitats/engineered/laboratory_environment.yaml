@@ -24,6 +24,12 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 4 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: Grounded to ENVO:01001405 'laboratory environment' (BROAD). GOLD's Lab
+    synthesis node. The laboratory environment term is broader than synthesis specifically,
+    but it is the right environment and nothing narrower exists.
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

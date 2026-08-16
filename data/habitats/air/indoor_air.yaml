@@ -14,6 +14,15 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-13T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader
+    term ENVO:00002005 ''air'' attached as a parent. Indoor air. kg-microbe''s mapping
+    table pointed this at ENVO:01000855, which it labels ''indoor air'' and ENVO labels
+    ''area of mixed forest'' — a different concept, now rejected by the label check.
+    No indoor-air term exists in the vendored slice, so this is a genuine term request;
+    parented to air.'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

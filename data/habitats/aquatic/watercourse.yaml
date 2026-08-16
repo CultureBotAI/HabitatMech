@@ -494,6 +494,14 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 287
 curation_history:
+- timestamp: '2026-08-14T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to ENVO:00000029 ''watercourse'' (CLOSE). Cohort review: NCIT:C43963
+    ''Creek'' drops the river half. ENVO:00000029 ''watercourse'' is the genus of
+    both river and creek, so it covers the source instead of picking one branch of
+    it. Merges with the existing GOLD watercourse record, which is the harmonization
+    working.'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

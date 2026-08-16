@@ -59,6 +59,24 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to ENVO:00000279 ''saline pan'' (EXACT). Slash alternative; saline
+    pan is the ENVO label for a salt flat. Path: Environmental > Terrestrial > Soil
+    > Salt flat/Salt pan'
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to ENVO:00000279 ''saline pan'' (EXACT). Slash alternative naming
+    one thing; grounded to the head term. Pulled out of the class-level sweep, whose
+    note wrongly claimed no term matched. Label: ''Salt pan/flat''.'
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to ENVO:00000279 ''saline pan'' (EXACT). Slash alternative; saline
+    pan is the ENVO label for a salt flat. Path: Environmental > Aquatic > Non-marine
+    Saline and Alkaline > Hypersaline'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

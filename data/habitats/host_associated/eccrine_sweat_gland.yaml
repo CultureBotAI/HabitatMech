@@ -24,6 +24,12 @@ source_attestations:
   mapping_predicate: skos:exactMatch
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to BTO:0002323 ''eccrine sweat gland'' (EXACT). Leaf label equals
+    the BTO label exactly and no other source concept claims it. Path: Host-associated
+    > Mammals: Human > Integumentary system > Eccrine sweat glands'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

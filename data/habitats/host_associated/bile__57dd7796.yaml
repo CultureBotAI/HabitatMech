@@ -39,6 +39,18 @@ source_attestations:
     > Bile ducts: Bile'
   mapping_predicate: skos:exactMatch
 curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to UBERON:0001970 ''bile'' (EXACT). The habitat sampled is the
+    bile. Path: Host-associated > Mammals: Human > Digestive system > Biliary tract
+    >'
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to UBERON:0001970 ''bile'' (EXACT). The habitat sampled is the
+    bile, not the organ; the proposal offered the gallbladder. Path: Host-associated
+    > Mammals: Human > Digestive system > Biliary tract >'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

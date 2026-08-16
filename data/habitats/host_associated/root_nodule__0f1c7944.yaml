@@ -164,6 +164,14 @@ characteristic_taxa:
   taxon_label: ochrobactrum_cytisi
   candidate_pool: 40
 curation_history:
+- timestamp: '2026-08-14T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to ENVO:01000164 ''root nodule'' (EXACT). Grounding-cohort review
+    (#62): was UBERON:0004083 ''cerebellum vermis lobule X'', matched because that
+    term carries ''nodule'' as a synonym. GOLD''s path is Host-associated > Plants
+    > Nodule, so this is a plant root nodule. Merges with the environment table''s
+    and Madin''s root-nodule records, which is three sources agreeing on one habitat.'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

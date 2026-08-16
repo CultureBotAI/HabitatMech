@@ -14,6 +14,13 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. GOLD''s Host-associated
+    > Microbial > Bacteria: bacteria acting as host for another microbe. No environment
+    term exists for a microbial host; ENVO''s organism-associated terms cover plants
+    and animals only. ENVO term request.'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

@@ -13,6 +13,13 @@ source_attestations:
   source_path: Environmental > Aquatic > Freshwater > Lake > Aphotic zone
   mapping_predicate: skos:narrowMatch
 curation_history:
+- timestamp: '2026-08-13T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND_AS_PARENT
+  changes: 'ENVO:00000020 ''lake'' attached as a parent, not adopted as the identity
+    (NARROW). A lake''s aphotic zone is not MARINE. The earlier decision keyed on
+    the bare leaf ''Aphotic zone'' and grounded every path ending in it to the marine
+    term. Path: Environmental > Aquatic > Freshwater > Lake > Aphotic zone'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

@@ -375,6 +375,27 @@ characteristic_taxa:
   rank: 23
   candidate_pool: 243
 curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: Grounded to ENVO:00000051 'hot spring' (EXACT). GOLD's Aquatic > Thermal
+    springs. ENVO:00000051 hot spring is the exact concept.
+- timestamp: '2026-08-15T00:00:00Z'
+  curator: claude-opus-5
+  action: REVIEW
+  changes: 'Reviewed and endorsed the seeder''s own resolution. Co-attestor review
+    (#12): this source names the ontology CURIE itself, so its grounding is definitional
+    rather than a lexical guess — the record IS the term the source pointed at. Recorded
+    so the record it co-attests can reach REVIEWED, which needs every source concept
+    decided.'
+- timestamp: '2026-08-15T00:00:00Z'
+  curator: claude-opus-5
+  action: REVIEW
+  changes: 'Reviewed and endorsed the seeder''s own resolution. Co-attestor review
+    (#12): this source names the ontology CURIE itself, so its grounding is definitional
+    rather than a lexical guess — the record IS the term the source pointed at. Recorded
+    so the record it co-attests can reach REVIEWED, which needs every source concept
+    decided.'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

@@ -25,6 +25,13 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: Grounded to FOODON:00001006 'mammalian meat food product' (NARROW). GOLD's
+    meat products bin includes poultry and fish, so the mammalian-meat term is narrower
+    than the source concept. Best available in the vendored FOODON slice; a generic
+    meat food product term would be better.
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

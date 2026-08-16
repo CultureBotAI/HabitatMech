@@ -13,6 +13,15 @@ source_attestations:
   assertion_count: 81
   assertion_unit: ORGANISM
 curation_history:
+- timestamp: '2026-08-14T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Stale-sweep
+    review (#12): NCIT:C3824 ''Lesion'' matches the label now, but it is a pathological
+    finding rather than a place, and the habitat here is the skin the lesion is on.
+    The sweep''s answer was right and its stated reason has stopped being true, so
+    it is re-recorded with the reason that holds. Path: Host-associated > Mammals:
+    Human > Integumentary system > Skin > Lesion'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

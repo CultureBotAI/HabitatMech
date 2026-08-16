@@ -111,6 +111,14 @@ characteristic_taxa:
   taxon_label: Selenomonas ruminantium ATCC 12561
   candidate_pool: 132
 curation_history:
+- timestamp: '2026-08-14T00:00:00Z'
+  curator: claude-opus-5
+  action: REVIEW
+  changes: 'Reviewed and endorsed the seeder''s own resolution. Category override
+    (#57): a minted identifier gives infer_category nothing to read — no ontology
+    term, no GOLD path — so every Madin habitat named in the BacDive vocabulary fell
+    to OTHER. The rumen is an anatomical compartment of a warm-blooded host, so HOST_ASSOCIATED
+    rather than the FOOD its contents came from.'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

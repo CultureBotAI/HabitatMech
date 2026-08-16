@@ -34,6 +34,24 @@ source_attestations:
   mapping_predicate: skos:exactMatch
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to ENVO:00002126 ''aerobic bioreactor'' (EXACT). GOLD qualifies
+    the parent Bioreactor node; the composed label is exactly this ENVO term. Path:
+    Engineered > Bioreactor > DHS reactor > Aerobic'
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to ENVO:00002126 ''aerobic bioreactor'' (EXACT). GOLD qualifies
+    the parent Bioreactor node; the composed label is exactly this ENVO term. Path:
+    Engineered > Bioreactor > SSF (Solid state fermentation) > Aerobic'
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to ENVO:00002126 ''aerobic bioreactor'' (EXACT). GOLD qualifies
+    the parent Bioreactor node; the composed label is exactly this ENVO term. Path:
+    Engineered > Bioreactor > Aerobic'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

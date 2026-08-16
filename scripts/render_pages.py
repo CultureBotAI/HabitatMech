@@ -216,6 +216,22 @@ def build(out_dir: Path) -> None:
             ],
             "taxa_total": len(taxa),
             "taxa_truncated": len(taxa) > TAXA_SHOWN,
+            # Everything except the seed event: a curator's decisions, which
+            # are the part of the history a reader cannot get anywhere else.
+            # decisions.tsv is a seeder input, not something the site serves,
+            # so before #94 a curated grounding was indistinguishable from a
+            # machine-generated one on the page.
+            "decisions": [
+                {
+                    "action": e.get("action", ""),
+                    "curator": e.get("curator", ""),
+                    "date": (e.get("timestamp") or "")[:10],
+                    "changes": e.get("changes", "").replace("[CLASS-level] ", ""),
+                    "class_level": "[CLASS-level]" in (e.get("changes") or ""),
+                }
+                for e in (doc.get("curation_history") or [])
+                if e.get("action") != "SEEDED_FROM_SOURCES"
+            ],
             "repo_path": str(path.relative_to(REPO_ROOT)),
         }
 

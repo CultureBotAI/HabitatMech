@@ -12,6 +12,13 @@ source_attestations:
   source_path: Engineered > Drugs production > Tobacco production > Snuff
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
+    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
+    vendored slice matched this label by any search route. Whether the concept is
+    a habitat at all was NOT assessed, so this is not yet a term-request candidate.'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

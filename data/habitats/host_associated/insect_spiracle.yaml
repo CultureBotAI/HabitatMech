@@ -20,6 +20,14 @@ source_attestations:
   mapping_predicate: skos:exactMatch
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to UBERON:6005054 ''insect spiracle'' (EXACT). Variant-match
+    review (#12): the variant route reaches UBERON:0010019 ''spiracle (sensu Vertebrata)''
+    — a hole behind the eye in some fish. The path is Arthropoda: Insects > Respiratory
+    system, and UBERON has a separate insect spiracle. The two are homonyms across
+    phyla. Path: Host-associated > Arthropoda: Insects > Respiratory system > Spiracles'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

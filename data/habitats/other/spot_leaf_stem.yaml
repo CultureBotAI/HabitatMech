@@ -35,6 +35,13 @@ characteristic_taxa:
   rank: 4
   candidate_pool: 4
 curation_history:
+- timestamp: '2026-08-14T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Cohort review:
+    a leaf-or-stem lesion. PO:0009047 ''stem'' drops the leaf and is also the target
+    of ''Rot-Root,Stem'', so adopting it would merge two different plant diseases
+    onto one record.'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

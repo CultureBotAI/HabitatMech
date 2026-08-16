@@ -15,6 +15,13 @@ source_attestations:
   assertion_count: 1
   assertion_unit: ORGANISM
 curation_history:
+- timestamp: '2026-08-14T00:00:00Z'
+  curator: claude-opus-5
+  action: NOT_APPLICABLE
+  changes: 'Marked NOT_APPLICABLE: the source concept does not denote a habitat. CHEBI:24632
+    kept as an xref. Stale-sweep review (#12): the class sweep said no term matched;
+    one does now. A chemical is not a habitat, so NOT_APPLICABLE with the link kept
+    as an xref.'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

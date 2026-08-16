@@ -29,6 +29,17 @@ characteristic_taxa:
   taxon_label: Lactobacillus sucicola
   candidate_pool: 4
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND_AS_PARENT
+  changes: 'ENVO:01001057 ''environment associated with a plant part or small plant''
+    attached as a parent, not adopted as the identity (NARROW). Last-undecided review
+    (#12): Madin''s ''part of plant'' names FOODON:03420174, which is not in kg-microbe''s
+    FOODON build, so it is an xref rather than an identity (#58). The concept is a
+    plant part as a place a microbe lives, which is what ENVO:01001057 denotes; kept
+    as a narrower kind of it rather than grounded, because the same term is already
+    the parent of Root-Rhizome and Sterilized-plant-part and adopting it here would
+    merge all three.'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

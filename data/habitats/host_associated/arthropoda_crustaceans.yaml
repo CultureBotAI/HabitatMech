@@ -15,6 +15,14 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 4 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader
+    term ENVO:01001002 ''animal-associated environment'' attached as a parent. Crustaceans
+    as host. ENVO:01001176 environment associated with an aquatic invertebrate is
+    close but excludes terrestrial crustaceans, so it is not a safe identity either.
+    ENVO term request.'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

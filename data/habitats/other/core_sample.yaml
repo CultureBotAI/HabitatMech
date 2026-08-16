@@ -161,6 +161,15 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 49
 curation_history:
+- timestamp: '2026-08-14T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Cohort review:
+    the screen''s known blind spot, caught by reading the corpus rather than the ranking.
+    NCIT:C180316 "Nucleotide Sequence Sample Name" is a metadata field name, not a
+    place; it shares the word "sample" with the subject, so it lands in the low-risk
+    overlap bucket. A sediment or ice core is a real habitat and no term in the slice
+    names it.'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
