@@ -12,6 +12,9 @@ synonyms:
 - synonym_text: Biocrust
   synonym_type: EXACT_SYNONYM
   source: GOLD
+- synonym_text: Biological
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
 - synonym_text: biological soil crust
   synonym_type: EXACT_SYNONYM
   source: ENVO
@@ -35,6 +38,7 @@ parent_habitats:
 - ENVO:00001998
 - ENVO:01000909
 - ENVO:01001483
+- habitatmech:GOLD.b1b5044bde
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4710
@@ -44,7 +48,24 @@ source_attestations:
   assertion_count: 1
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: GOLD
+  source_id: gold.ecosystem:7686
+  source_label: Biological
+  source_path: Environmental > Terrestrial > Soil > Soil crust > Biological
+  mapping_predicate: skos:exactMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to ENVO:01000910 ''soil biocrust'' (EXACT). Compound-path screen
+    (#12): every search route reads the GOLD leaf alone, but the leaf is only the
+    last step of the path — ''Biological'' under ''Soil crust'' means ''biological
+    soil crust''. Searched on its own it matches nothing (or the wrong sense entirely:
+    ''Hyaline'' finds PATO''s transparent), which is why the class-level sweep recorded
+    no match. The compound names ENVO:01000910 ''soil biocrust'' exactly. Read against
+    the full path before deciding. (source concept habitatmech:GOLD.eeb3ba4bc5)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

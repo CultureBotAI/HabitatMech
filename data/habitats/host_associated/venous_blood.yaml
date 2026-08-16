@@ -1,0 +1,36 @@
+identifier: BTO:0006187
+label: venous blood
+definition: Blood found in the veins. Except in the pulmonary vein venous blood is
+  rich in carbon dioxide and poor in oxygen.
+definition_source: BTO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Venous
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+parent_habitats:
+- BTO:0000089
+- habitatmech:GOLD.6c6aab19d3
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6821
+  source_label: Venous
+  source_path: Host-associated > Mammals > Circulatory system > Blood > Venous
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to BTO:0006187 ''venous blood'' (EXACT). Compound-path screen
+    (#12): every search route reads the GOLD leaf alone, but the leaf is only the
+    last step of the path — ''Venous'' under ''Blood'' means ''venous blood''. Searched
+    on its own it matches nothing (or the wrong sense entirely: ''Hyaline'' finds
+    PATO''s transparent), which is why the class-level sweep recorded no match. The
+    compound names BTO:0006187 ''venous blood'' exactly. Read against the full path
+    before deciding. (source concept habitatmech:GOLD.12da3e7025)'
+- timestamp: '2026-08-16T03:37:15Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'

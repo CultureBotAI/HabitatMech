@@ -1,0 +1,42 @@
+identifier: UBERON:0001994
+label: hyaline cartilage tissue
+definition: Cartilage tissue primarily composed of type II collagen (thin fibrils)
+  and a glassy appearance.
+definition_source: UBERON
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Hyaline
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: chondroid cartilage
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+- synonym_text: hyaline cartilage
+  synonym_type: EXACT_SYNONYM
+  source: UBERON
+parent_habitats:
+- UBERON:0002418
+- habitatmech:GOLD.d8b9309d5e
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:6808
+  source_label: Hyaline
+  source_path: Host-associated > Mammals > Skeletal system > Cartilage > Hyaline
+  mapping_predicate: skos:exactMatch
+curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to UBERON:0001994 ''hyaline cartilage tissue'' (EXACT). Compound-path
+    screen (#12): every search route reads the GOLD leaf alone, but the leaf is only
+    the last step of the path — ''Hyaline'' under ''Cartilage'' means ''hyaline cartilage''.
+    Searched on its own it matches nothing (or the wrong sense entirely: ''Hyaline''
+    finds PATO''s transparent), which is why the class-level sweep recorded no match.
+    The compound names UBERON:0001994 ''hyaline cartilage tissue'' exactly. Read against
+    the full path before deciding. (source concept habitatmech:GOLD.c44e436e0a)'
+- timestamp: '2026-08-16T03:37:15Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
