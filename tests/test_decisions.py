@@ -644,3 +644,31 @@ def test_xref_relation_places_the_term_as_an_xref_not_a_parent(repo_root):
     assert _placement(make("xref")) == {"extra_parents": [], "extra_xrefs": ["ENVO:00000051"]}
     assert _placement(make("parent")) == {"extra_parents": ["ENVO:00000051"], "extra_xrefs": []}
     assert _placement(make("xref", "")) == {"extra_parents": [], "extra_xrefs": []}
+
+
+def test_every_recorded_sample_is_fully_judged(repo_root):
+    """A sample is only an argument if the draw AND the verdicts are on record.
+    "We checked 40 and found none wrong" is unfalsifiable without the 40, and a
+    blank or unrecognised verdict silently shrinks the denominator — which makes
+    the published rate better than the evidence supports."""
+    import sys
+
+    sys.path.insert(0, str(repo_root / "scripts"))
+    from sample_groundings import recorded_samples, verdict_of
+
+    samples = recorded_samples()
+    assert samples, "no recorded samples — the sampling argument rests on nothing"
+    for sample in samples:
+        assert sample["judged"] == sample["drawn"], (
+            f"{sample['file']}: {sample['drawn']} drawn but {sample['judged']} judged — "
+            "an unjudged row is a claim with no evidence behind it"
+        )
+        assert not sample["unparsed"], (
+            f"{sample['file']}: {sample['unparsed']} verdict(s) not understood. "
+            "Reading 'ok' as a defect once reported a clean slice as 100% wrong."
+        )
+
+    assert verdict_of("ok — homonym risk, but PREGO named the CURIE") == "pass"
+    assert verdict_of("wrong: the term is an eye structure") == "fail"
+    assert verdict_of("probably fine?") is None
+    assert verdict_of("") is None

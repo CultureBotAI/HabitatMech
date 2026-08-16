@@ -696,6 +696,27 @@ def main(argv: list[str] | None = None) -> int:
     if not compound:
         print("  none — no swept concept's parent+leaf compound matches a habitat term")
 
+    try:
+        from sample_groundings import recorded_samples
+        samples = recorded_samples()
+    except ImportError:
+        samples = []
+    if samples:
+        print("\n=== sampled slices: what has been measured rather than read ===")
+        print("  (slices too large to review one by one. The draw and the verdicts are")
+        print("   committed under curation/samples/, so the rate is auditable, and the")
+        print("   interval is Wilson — the normal approximation puts the lower bound")
+        print("   below zero at these counts.)")
+        for s in samples:
+            low, high = s["interval"]
+            print(f"  {s['grounding']:10s} {s['wrong']}/{s['judged']} wrong "
+                  f"= {100 * s['wrong'] / s['judged'] if s['judged'] else 0:.1f}%, "
+                  f"95% CI {100 * low:.1f}-{100 * high:.1f}%  "
+                  f"-> at most {high * s['population']:.0f} of {s['population']} unreviewed")
+            if s["unparsed"]:
+                print(f"    {s['unparsed']} verdict(s) not understood and excluded — "
+                      "the rate above is over the rest")
+
     organism = _organism_identities(records)
     print(f"\n=== {len(organism)} unreviewed record(s) whose identity is an organism ===")
     print("  (a taxon is not a habitat. An exact label match cannot see this — ")
