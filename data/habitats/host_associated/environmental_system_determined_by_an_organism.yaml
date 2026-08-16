@@ -1,16 +1,39 @@
-identifier: habitatmech:BACDIVE.baf38460e6
-label: Host
-habitat_category: OTHER
-grounding_status: UNGROUNDED
+identifier: ENVO:01001000
+label: environmental system determined by an organism
+definition: An environmental system which is determined by a living organism.
+definition_source: ENVO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Host
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+- synonym_text: Host-associated
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: host-associated environment
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:01000254
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:host
   source_label: Host
+  mapping_predicate: skos:exactMatch
   assertion_count: 25581
   assertion_unit: STRAIN
   notes: kg-microbe's isolation-source mapping table has a row for this source with
     no ontology target; treated as ungrounded rather than re-grounded by lexical match.
+- source: GOLD
+  source_id: gold.ecosystem:3373
+  source_label: Host-associated
+  source_path: Host-associated
+  mapping_predicate: skos:exactMatch
+  assertion_count: 3307
+  assertion_unit: ORGANISM
+  notes: 5 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 characteristic_taxa:
 - taxon_id: NCBITaxon:56
   source: BACDIVE
@@ -162,15 +185,38 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 6801
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
+- timestamp: '2026-08-16T00:00:00Z'
   curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. BacDive''s top-level
-    "Host" bin, covering every host-associated isolate. A real habitat class, but
-    ENVO has only plant-associated and animal-associated environment with no shared
-    parent. ENVO term request for a generic organism-associated environment. (source
-    concept habitatmech:BACDIVE.baf38460e6)'
+  action: GROUND
+  changes: 'Grounded to ENVO:01001000 ''environmental system determined by an organism''
+    (EXACT). Term-request re-check (#12): this was recorded as an ENVO term request
+    on the premise that "ENVO has only plant-associated and animal-associated environment
+    with no shared parent". That premise is false. ENVO:01001000 ''environmental system
+    determined by an organism'' is that shared parent — the vendored subclass edges
+    show plant-associated (ENVO:01001001), animal-associated (ENVO:01001002) and fungi-associated
+    (ENVO:01001041) environment all asserted under it — and it has been in the slice
+    the whole time. Its definition, ''an environmental system which is determined
+    by a living organism'', is exactly what this top-level bin means: an isolate whose
+    habitat is a living host. Grounded EXACT. The claim was made by hand and never
+    machine-rechecked, which is the same staleness the class-level sweeps have a gate
+    for and individually-decided records did not. (source concept habitatmech:BACDIVE.baf38460e6)'
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to ENVO:01001000 ''environmental system determined by an organism''
+    (EXACT). Term-request re-check (#12): this was recorded as an ENVO term request
+    on the premise that "ENVO has only plant-associated and animal-associated environment
+    with no shared parent". That premise is false. ENVO:01001000 ''environmental system
+    determined by an organism'' is that shared parent — the vendored subclass edges
+    show plant-associated (ENVO:01001001), animal-associated (ENVO:01001002) and fungi-associated
+    (ENVO:01001041) environment all asserted under it — and it has been in the slice
+    the whole time. Its definition, ''an environmental system which is determined
+    by a living organism'', is exactly what this top-level bin means: an isolate whose
+    habitat is a living host. Grounded EXACT. The claim was made by hand and never
+    machine-rechecked, which is the same staleness the class-level sweeps have a gate
+    for and individually-decided records did not. (source concept habitatmech:GOLD.d3b891e82e)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD. Grounding:
+    EXACT.'

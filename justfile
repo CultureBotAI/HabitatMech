@@ -111,8 +111,16 @@ lint-fix:
     uv run ruff check --fix .
 
 # Everything CI runs, in the order that fails cheapest-first
-qc: lint test validate-all verify-corpus render-check redirects-check report
+qc: lint test validate-all verify-corpus render-check redirects-check term-requests-check report
 
 # Fail if pages/ is out of step with the corpus
 render-check:
     uv run python scripts/render_pages.py --check
+
+# Rebuild the ENVO batch term-request table from curation/term_requests.tsv
+term-requests:
+    uv run python scripts/build_term_requests.py
+
+# Fail if the committed term-request table is out of step with the corpus
+term-requests-check:
+    uv run python scripts/build_term_requests.py --check
