@@ -324,6 +324,100 @@ def _stale_class_sweeps(class_swept: set[str], records: list[tuple[Path, dict]])
     return sorted(out, reverse=True)
 
 
+def _kg_microbe_ontologies() -> Path | None:
+    """The kg-microbe transformed-ontology directory, or None.
+
+    None rather than an error: kg-microbe is a multi-gigabyte checkout that only
+    re-extraction needs, and `just report` has to keep working without it — CI
+    runs entirely off data/raw/. The screen that uses this simply reports
+    nothing when it is absent, and says so.
+    """
+    try:
+        from extract_source_inventory import default_kg_microbe_root
+    except ImportError:
+        return None
+    root = default_kg_microbe_root()
+    if root is None:
+        return None
+    return Path(root) / "data" / "transformed" / "ontologies"
+
+
+# Ontologies whose terms are, by construction, not habitats. A swept concept
+# whose label matches one of these is evidence about WHAT KIND of thing the
+# concept is — the question a class-level sweep explicitly does not ask.
+NON_HABITAT_ONTOLOGIES = {
+    "chebi": "a chemical",
+    "ncbitaxon": "an organism",
+    "pato": "a quality",
+    "go": "a process or cellular component",
+    "mondo": "a disease",
+    "hp": "a phenotype",
+}
+
+
+def _non_habitat_candidates(
+    class_swept: set[str], records: list[tuple[Path, dict]], kgm: Path | None = None
+) -> list[tuple]:
+    """Swept concepts whose label names a chemical, organism, quality or disease.
+
+    A class-level sweep records one negative — "no term in the vendored slice
+    matched by any search route" — and its note says outright that whether the
+    concept is a habitat AT ALL was not assessed. That leaves the question
+    nobody has asked of 863 records, and it is the question that decides whether
+    each is a term request or a NOT_APPLICABLE.
+
+    Matching against the ontologies that exist to name non-habitats answers it
+    from evidence rather than from reading. It RANKS: the path decides, and the
+    path routinely overturns the match. "White" under Muscles is white muscle
+    tissue, a habitat, not PATO's *white*; "Rubber" under Marine > Waste is a
+    substrate microbes colonise, not merely a chemical. Roughly half of what
+    this surfaces is a false positive, which is why it produces a worklist and
+    not a decision.
+
+    What it is good at is the systematic case. A whole GOLD branch grounded to
+    an organism group — Host-associated > Algae to FOODON's *algae*, which
+    FOODON defines as "a large, diverse group of photosynthetic eukaryotic
+    organisms" — put that organism in the parent_habitats of 14 records, and
+    the existing organism-identity screen could not see it because that screen
+    tests ancestry against NCIT and mesh roots while FOODON files the organism
+    and the material under one shared root.
+    """
+    if not class_swept:
+        return []
+    kgm = kgm or _kg_microbe_ontologies()
+    if kgm is None or not kgm.exists():
+        return []
+    index: dict[str, tuple[str, str, str]] = {}
+    for ontology, kind in NON_HABITAT_ONTOLOGIES.items():
+        path = kgm / f"{ontology}_nodes.tsv"
+        if not path.exists():
+            continue
+        with path.open(newline="", encoding="utf-8") as fh:
+            for row in csv.DictReader(fh, delimiter="\t"):
+                if not row.get("name"):
+                    continue
+                for name in [row["name"], *(row.get("synonym") or "").split("|")]:
+                    key = norm_label(name)
+                    if key and key not in index:
+                        index[key] = (row["id"], row["name"], kind)
+
+    out = []
+    for _, doc in records:
+        if doc.get("identifier") not in class_swept:
+            continue
+        for attestation in doc.get("source_attestations") or []:
+            hit = index.get(norm_label(attestation.get("source_label") or ""))
+            if not hit:
+                continue
+            assertions = sum(
+                a.get("assertion_count") or 0 for a in doc.get("source_attestations") or []
+            )
+            out.append((assertions, attestation.get("source_label") or "", hit[2], hit[0],
+                        doc["identifier"]))
+            break
+    return sorted(out, reverse=True)
+
+
 def _compound_path_candidates(
     class_swept: set[str], records: list[tuple[Path, dict]]
 ) -> list[tuple]:
@@ -685,6 +779,24 @@ def main(argv: list[str] | None = None) -> int:
         print(f"  {assertions:8d}  {label[:28]:28s} -> {found:18s} {identifier}")
     if not stale:
         print("  none — every sweep still lands in the tier it claimed")
+
+    nonhab = _non_habitat_candidates(class_swept_ids, records)
+    if _kg_microbe_ontologies() is None:
+        print("\n=== swept concepts that may not be habitats: not checked ===")
+        print("  (needs a kg-microbe checkout for the non-habitat ontologies; set")
+        print("   KG_MICROBE_ROOT or conf/sources.yaml. Absent here, so this is unknown,")
+        print("   not clean.)")
+    else:
+        print(f"\n=== {len(nonhab)} swept concept(s) whose label names a non-habitat ===")
+        print("  (a class-level sweep says outright that whether the concept is a habitat")
+        print("   at all was NOT assessed. This asks that question against the ontologies")
+        print("   that exist to name chemicals, organisms, qualities and diseases. It")
+        print("   RANKS — the path overturns roughly half: \"White\" under Muscles is white")
+        print("   muscle tissue, not PATO's *white*.)")
+        for assertions, label, kind, term_id, identifier in nonhab[: args.ungrounded_top or None]:
+            print(f"  {assertions:7d}  {label[:24]:24s} = {kind:32s} {term_id:16s} {identifier}")
+        if not nonhab:
+            print("  none — no swept concept's label names a chemical, organism or quality")
 
     compound = _compound_path_candidates(class_swept_ids, records)
     print(f"\n=== {len(compound)} swept concept(s) whose PATH names a term the leaf does not ===")
