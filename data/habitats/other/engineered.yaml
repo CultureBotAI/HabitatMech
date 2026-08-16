@@ -163,6 +163,13 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 3884
 curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. BacDive''s top-level
+    "Engineered" bin. A real habitat class (built and managed environments) but ENVO
+    has no single term for the whole class, only specific built environments. ENVO
+    term request. (source concept habitatmech:BACDIVE.7d4708950e)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

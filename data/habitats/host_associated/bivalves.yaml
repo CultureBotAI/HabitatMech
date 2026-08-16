@@ -15,6 +15,14 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader
+    term ENVO:01001002 ''animal-associated environment'' attached as a parent. Bivalves
+    as host. FOODON:03412113 bivalve is a food product class, not a host organism,
+    so it is the wrong kind of term entirely. Parented to animal-associated environment
+    like the other host clades. ENVO term request. (source concept habitatmech:GOLD.59e8d1205d)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

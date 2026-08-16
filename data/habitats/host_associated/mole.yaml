@@ -29,6 +29,14 @@ source_attestations:
   mapping_predicate: skos:exactMatch
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to UBERON:1000010 ''mole'' (EXACT). Variant-match review (#12):
+    the seeder grounds on exact labels only, so GOLD''s slash and plural conventions
+    hid a term that says exactly this. UBERON''s ''mole'' here is defined as a benign
+    pigmented skin tumor, not the animal, and the path is Human > Benign tumor. Path:
+    Host-associated > Mammals: Human > Benign tumor > Nevi/Moles (source concept habitatmech:GOLD.95bd495814)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

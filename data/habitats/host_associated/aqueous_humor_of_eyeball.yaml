@@ -31,6 +31,15 @@ source_attestations:
     fluid/Aqueous humor'
   mapping_predicate: skos:exactMatch
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to UBERON:0001796 ''aqueous humor of eyeball'' (EXACT). Variant-match
+    review (#12): the seeder grounds on exact labels only, so GOLD''s slash and plural
+    conventions hid a term that says exactly this. Aqueous humor fills the space between
+    lens and cornea, and the path is Visual system > Eye: Ciliary body. Path: Host-associated
+    > Mammals > Visual system > Eye: Ciliary body > Intraocular fluid/Aqueous humor
+    (source concept habitatmech:GOLD.2a1b56ffda)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

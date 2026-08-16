@@ -68,6 +68,13 @@ environmental_parameters:
   qualitative_value: occasionally dry
   source: kg-microbe environments.csv (host_plant_root-associated)
 curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: Grounded to PO:0009005 'root' (EXACT). Plant roots as habitat. Grounded
+    to PO, the authoritative plant anatomy ontology, now that it is vendored (#10).
+    Re-grounded from BTO:0001188 to PO:0009005 now that PO is vendored (#10). (source
+    concept habitatmech:GOLD.7c6b8ca314)
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

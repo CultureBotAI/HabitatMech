@@ -160,6 +160,16 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 126
 curation_history:
+- timestamp: '2026-08-14T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Cohort review:
+    NCIT:C14258 ''Plant'' is the organism, not decomposing plant material — a plainly
+    wrong target that passed the label check because its id and label agree. ENVO:01000628
+    ''plant litter'' is the near miss but is narrower (litter is decomposing plant
+    matter on the ground) and is already claimed by the ''Plant-litter-Forest'' source
+    and the environment table. Genuinely a habitat, genuinely no term. (source concept
+    habitatmech:BACDIVE.5d6bbfabf0)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

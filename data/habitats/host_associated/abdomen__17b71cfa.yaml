@@ -37,6 +37,12 @@ source_attestations:
   mapping_predicate: skos:exactMatch
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to UBERON:0000916 ''abdomen'' (EXACT). Slash alternative; pleon
+    is the arthropod abdomen. Path: Host-associated > Arthropoda: Crustaceans > Whole
+    body > Abdomen/Pleon (source concept habitatmech:GOLD.1e0a05a113)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

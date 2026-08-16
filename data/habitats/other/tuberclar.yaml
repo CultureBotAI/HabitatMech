@@ -86,6 +86,14 @@ characteristic_taxa:
   rank: 11
   candidate_pool: 11
 curation_history:
+- timestamp: '2026-08-14T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. EXACT-grounding
+    sample (#69): BTO:0002173 ''tubercle'' matches the label exactly, but BTO defines
+    it as the dorsal bosses on adult male Schistosoma. A tubercle as an isolation
+    source is a tuberculous lesion; the two share a word and nothing else. The slice
+    has no term for the lesion. (source concept habitatmech:PREGO.c312b0d6fc)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

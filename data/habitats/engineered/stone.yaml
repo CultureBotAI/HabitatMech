@@ -11,6 +11,14 @@ source_attestations:
   source_label: Stone
   source_path: Engineered > Built environment > Monument > Stone
 curation_history:
+- timestamp: '2026-08-14T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Stale-sweep
+    review (#12): NCIT:C35708 ''Stone'' matches the label, but the path is Built environment
+    > Monument > Stone, and NCIT''s term is not the building material. Stonework is
+    a real habitat with no term in the slice. Path: Engineered > Built environment
+    > Monument > Stone (source concept habitatmech:GOLD.8c6192908f)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

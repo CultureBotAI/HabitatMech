@@ -13,6 +13,14 @@ source_attestations:
   source_path: Engineered > Lab culture > Culture media > Fungi > Contaminated
   mapping_predicate: skos:narrowMatch
 curation_history:
+- timestamp: '2026-08-13T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND_AS_PARENT
+  changes: 'BTO:0000316 ''culture medium'' attached as a parent, not adopted as the
+    identity (NARROW). Contaminated culture medium, not contaminated soil. The earlier
+    decision keyed on the bare leaf ''Contaminated'' and applied to every path ending
+    in it, regardless of what the path qualifies. Path: Engineered > Lab culture >
+    Culture media > Fungi > Contaminated (source concept habitatmech:GOLD.0415cd7ce3)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

@@ -20,6 +20,13 @@ source_attestations:
   source_path: 'Host-associated > Mammals: Human > Integumentary system > Skin > Hypodermis/Subcutis'
   mapping_predicate: skos:exactMatch
 curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to BTO:0000313 ''hypodermis'' (EXACT). Slash alternative naming
+    one thing; grounded to the head term. Pulled out of the class-level sweep, whose
+    note wrongly claimed no term matched. Label: ''Hypodermis/Subcutis''. (source
+    concept habitatmech:GOLD.115cc4559e)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

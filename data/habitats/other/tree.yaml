@@ -164,6 +164,14 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 481
 curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader
+    term ENVO:01001001 ''plant-associated environment'' attached as a parent. A tree
+    as host. No tree-associated environment term exists; BTO:0005516 wood is the material,
+    not the living host. Parented to plant-associated environment as the nearest broader
+    term. ENVO term request. (source concept habitatmech:BACDIVE.3192a0f47e)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

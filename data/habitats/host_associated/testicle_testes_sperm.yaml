@@ -14,6 +14,13 @@ source_attestations:
     organs > Testicle/Testes: Sperm'
   mapping_predicate: skos:narrowMatch
 curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND_AS_PARENT
+  changes: 'UBERON:0000473 ''testis'' attached as a parent, not adopted as the identity
+    (NARROW). Sperm sampled from the testis; the organ is the parent. Pulled out of
+    the class-level sweep, whose note wrongly claimed no term matched. Label: ''Testicle/Testes:
+    Sperm''. (source concept habitatmech:GOLD.06797221f4)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

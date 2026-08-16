@@ -14,6 +14,15 @@ source_attestations:
   mapping_predicate: skos:narrowMatch
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND_AS_PARENT
+  changes: 'UBERON:0000998 ''seminal vesicle'' attached as a parent, not adopted as
+    the identity (NARROW). Sibling-path review (#12): the human seminal glands are
+    a narrower kind of the Mammals concept that claims UBERON:0000998, so this keeps
+    its minted identity with the term as a parent rather than merging the two host
+    clades onto one record. Path: Host-associated > Mammals: Human > Reproductive
+    system > Seminal glands (source concept habitatmech:GOLD.f33cee3a15)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

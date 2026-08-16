@@ -16,6 +16,15 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 4 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-14T00:00:00Z'
+  curator: claude-opus-5
+  action: NOT_APPLICABLE
+  changes: 'Marked NOT_APPLICABLE: the source concept does not denote a habitat. NCBITaxon:8292
+    kept as an xref. Stale-sweep review (#12): the class sweep said no term matched;
+    one does now, because the slice grew. It is a taxon rather than a habitat, though
+    — the call already recorded for Protozoa, Protista, Fungi, Mollusca, Echinodermata
+    and Anthozoa — so it becomes NOT_APPLICABLE with the link kept as an xref rather
+    than a grounding. (source concept habitatmech:GOLD.0cd585a031)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

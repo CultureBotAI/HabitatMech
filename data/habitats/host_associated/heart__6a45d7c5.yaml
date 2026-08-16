@@ -37,6 +37,13 @@ source_attestations:
   mapping_predicate: skos:exactMatch
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to UBERON:0000948 ''heart'' (EXACT). Slash alternative naming
+    one thing; grounded to the head term. The dorsal vessel is the arthropod heart.
+    Pulled out of the class-level sweep, whose note wrongly claimed no term matched.
+    Label: ''Heart/Dorsal vessel''. (source concept habitatmech:GOLD.3294096faf)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

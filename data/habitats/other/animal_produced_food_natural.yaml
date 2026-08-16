@@ -128,6 +128,14 @@ characteristic_taxa:
   rank: 19
   candidate_pool: 19
 curation_history:
+- timestamp: '2026-08-14T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND_AS_PARENT
+  changes: 'FOODON:00004242 ''animal food product'' attached as a parent, not adopted
+    as the identity (NARROW). Cohort review: NCIT:C85060 ''Natural'' is a bucket term
+    that this source shares with ''Juice-natural'' — two unrelated foods on one record.
+    Naturally-produced animal food is a narrower kind of animal food product; kept
+    as a parent so the natural/processed distinction survives. (source concept habitatmech:BACDIVE.57e74dd487)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

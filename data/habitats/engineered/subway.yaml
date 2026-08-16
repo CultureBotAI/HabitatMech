@@ -12,6 +12,14 @@ source_attestations:
   source_path: Engineered > Built environment > City > Subway
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-14T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Narrowed-grounding
+    review (#67): was ENVO:03501109 ''subway train''. GOLD''s path is Engineered >
+    Built environment > City > Subway, which is the system or the station rather than
+    the rolling stock; the slice has train terms but nothing for the subway environment
+    itself. (source concept habitatmech:GOLD.961229841c)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

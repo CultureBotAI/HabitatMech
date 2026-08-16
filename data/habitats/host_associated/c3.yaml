@@ -11,6 +11,14 @@ source_attestations:
   source_label: C3
   source_path: Host-associated > Mammals > Digestive system > Stomach > C3
 curation_history:
+- timestamp: '2026-08-14T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Disjoint-grounding
+    review (#62): was UBERON:0002960 ''central oculomotor nucleus'', a brainstem structure.
+    Same as C2 — the path is Digestive system > Stomach > C3, a camelid stomach compartment.
+    Path: Host-associated > Mammals > Digestive system > Stomach > C3 (source concept
+    habitatmech:GOLD.5f6ed7c41e)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

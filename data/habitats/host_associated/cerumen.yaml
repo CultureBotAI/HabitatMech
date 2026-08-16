@@ -27,6 +27,15 @@ source_attestations:
     glands > Cerumen/Earwax'
   mapping_predicate: skos:exactMatch
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to UBERON:0002297 ''cerumen'' (EXACT). Variant-match review (#12):
+    the seeder grounds on exact labels only, so GOLD''s slash and plural conventions
+    hid a term that says exactly this. Cerumen is earwax, defined by UBERON as the
+    waxy secretion of the external auditory canal. Path: Host-associated > Mammals:
+    Human > Integumentary system > Ceruminous glands > Cerumen/Earwax (source concept
+    habitatmech:GOLD.aea4a5fe91)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

@@ -14,6 +14,15 @@ source_attestations:
   assertion_count: 15
   assertion_unit: ORGANISM
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Variant-match
+    review (#12): the variant route reaches UBERON:0000093 ''sulcus'', defined as
+    any depression or fissure in the surface of an organ — a bucket that would collect
+    every groove in the body. UBERON has no gingival sulcus term. The gingival crevice
+    is a real and heavily sampled habitat. Path: Host-associated > Mammals: Human
+    > Digestive system > Oral cavity > Gingival crevice/sulcus (source concept habitatmech:GOLD.e97d0cb4b1)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

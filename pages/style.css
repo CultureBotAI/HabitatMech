@@ -94,6 +94,13 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 ul.plain { list-style: none; padding: 0; margin: .5rem 0; }
 ul.plain li { padding: .3rem 0; border-bottom: 1px solid var(--line); }
 
+/* Curation decisions. Unnumbered because the count is not the point and a
+   record with one decision should not read as "1." of an implied series. */
+ol.events { list-style: none; padding: 0; margin: .5rem 0; }
+ol.events li { padding: .6rem 0; border-bottom: 1px solid var(--line); }
+ol.events li > p { margin: .4rem 0 0; }
+ol.events .meta { margin: 0 0 0 .4rem; display: inline; }
+
 .note {
   border-left: 3px solid var(--accent);
   background: var(--accent-soft);

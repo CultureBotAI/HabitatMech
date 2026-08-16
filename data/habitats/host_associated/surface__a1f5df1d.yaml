@@ -14,6 +14,15 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-14T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Disjoint-grounding
+    review (#62): was UBERON:0002416 ''integumental system'', an ANIMAL organ system,
+    for a plant leaf surface — matched across kingdoms on a synonym. The slice has
+    no plain plant-surface or phyllosphere term; the nearest, ENVO:01001032, is specifically
+    a biofilm on one. Path: Host-associated > Plants > Phyllosphere > Surface (source
+    concept habitatmech:GOLD.bed15b95b1)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

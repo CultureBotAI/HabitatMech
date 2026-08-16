@@ -336,6 +336,11 @@ class Concept:
     # three have been looked at.
     source_concepts: int = 0
     reviewed_sources: int = 0
+    # Decisions that shaped this record, one per source concept a curator
+    # decided. A merged record can carry several, and each is a separate event
+    # in the history: they were made independently, sometimes by different
+    # curators on different days (#94).
+    decisions_applied: list[Decision] = field(default_factory=list)
     _grounding_rank_seen: int = 0
 
     def add_synonym(self, text: str, syn_type: str, source: str) -> None:
@@ -408,6 +413,10 @@ class Resolution:
     # True when a curator signed off on this source concept. A merged record is
     # only REVIEWED when every source concept feeding it is.
     reviewed: bool = False
+    # The decision this resolution came from, when a curator made one. Carried
+    # so the record can record who decided it and why, rather than attributing
+    # a curated grounding to the seeder (#94). None for automatic routes.
+    decision: Decision | None = None
 
 
 def apply_decision(default: Resolution, minted: str, decisions: dict[str, Decision]) -> Resolution:
@@ -420,10 +429,19 @@ def apply_decision(default: Resolution, minted: str, decisions: dict[str, Decisi
 
     Returns the automatic resolution untouched when no decision applies, so an
     uncurated corpus behaves exactly as before.
+
+    The decision is attached to whatever `_decided` returns, in one place rather
+    than on each branch — a branch that forgot would silently drop the record's
+    only trace of who made the call (#94).
     """
     decision = decisions.get(minted)
     if decision is None:
         return default
+    return replace(_decided(default, minted, decision), decision=decision)
+
+
+def _decided(default: Resolution, minted: str, decision: Decision) -> Resolution:
+    """The resolution a decision produces, per decision kind."""
     category_override = decision.category or None
 
     if decision.decision == "GROUND":
@@ -709,6 +727,8 @@ def ingest_gold(
         concept = store.get(res.identifier, row["leaf_label"], res.grounding_status)
         concept.source_concepts += 1
         concept.reviewed_sources += 1 if res.reviewed else 0
+        if res.decision is not None:
+            concept.decisions_applied.append(res.decision)
         path_to_identifier[row["canonical_path"]] = res.identifier
 
         levels = [row[lvl] for lvl in GOLD_LEVELS if row[lvl]]
@@ -788,6 +808,8 @@ def ingest_bacdive(
         concept = store.get(res.identifier, row["label"], res.grounding_status)
         concept.source_concepts += 1
         concept.reviewed_sources += 1 if res.reviewed else 0
+        if res.decision is not None:
+            concept.decisions_applied.append(res.decision)
         if res.category:
             store.set_category(concept, res.category, authoritative=True)
         elif concept.category is None:
@@ -875,6 +897,8 @@ def ingest_prego(
         concept = store.get(identifier, identifier, res.grounding_status)
         concept.source_concepts += 1
         concept.reviewed_sources += 1 if res.reviewed else 0
+        if res.decision is not None:
+            concept.decisions_applied.append(res.decision)
         # Both, not just xrefs: a CONFIRM_UNGROUNDED decision records its
         # nearest-broader term as a parent, and dropping it here would silently
         # lose the placement the curator recorded (#21).
@@ -1011,6 +1035,8 @@ def ingest_madin(
         concept = store.get(identifier, identifier, res.grounding_status)
         concept.source_concepts += 1
         concept.reviewed_sources += 1 if res.reviewed else 0
+        if res.decision is not None:
+            concept.decisions_applied.append(res.decision)
         concept.parents.update(res.extra_parents)
         concept.xrefs.update(res.extra_xrefs)
         if not concept.label or concept.label == identifier:
@@ -1132,6 +1158,8 @@ def ingest_parameters(
             )
             concept.source_concepts += 1
             concept.reviewed_sources += 1 if res.reviewed else 0
+            if res.decision is not None:
+                concept.decisions_applied.append(res.decision)
             concept.parents.update(res.extra_parents)
             concept.xrefs.update(res.extra_xrefs)
             if res.category:
@@ -1268,7 +1296,77 @@ def build_document(concept: Concept) -> dict[str, Any]:
         ),
         timestamp=SEED_TIMESTAMP,
     )
+    # One event per curated source concept. Without these the record is the
+    # only published artifact and says a curated grounding came from the
+    # seeder — the decisions TSV is not served, so a reader had no way to see
+    # that a human decided this, who, or why (#94).
+    #
+    # Timestamped from the decision's own date rather than the clock, so a
+    # re-seed reproduces byte-identically. Sorted so the order is a property of
+    # the decisions, not of which source happened to be ingested first.
+    for decision in sorted(
+        concept.decisions_applied, key=lambda d: (d.date, d.identifier)
+    ):
+        record_curation_event(
+            doc,
+            curator=decision.curator,
+            action=decision.decision,
+            changes=_decision_summary(decision),
+            timestamp=f"{decision.date}T00:00:00Z",
+        )
+    # Chronological, so the history reads as one. The seed event is stamped
+    # from the extraction time, which is usually *later* than the decisions
+    # applied on top of it — appending in construction order would show the
+    # record being seeded after it was curated.
+    doc["curation_history"].sort(key=lambda e: e["timestamp"])
     return doc
+
+
+def _decision_summary(decision: Decision) -> str:
+    """What the decision did, then why, in the record itself.
+
+    The notes are the curator's reasoning and the reason this is worth
+    publishing at all, so they are carried verbatim rather than summarised.
+    """
+    if decision.decision == "GROUND":
+        what = (
+            f"Grounded to {decision.object_id} '{decision.object_label}' "
+            f"({decision.grounding_status})."
+        )
+    elif decision.decision == "GROUND_AS_PARENT":
+        what = (
+            f"{decision.object_id} '{decision.object_label}' attached as a parent, "
+            f"not adopted as the identity ({decision.grounding_status})."
+        )
+    elif decision.decision == "NOT_APPLICABLE":
+        what = "Marked NOT_APPLICABLE: the source concept does not denote a habitat."
+        if decision.object_id:
+            what += f" {decision.object_id} kept as an xref."
+    elif decision.decision == "CONFIRM_UNGROUNDED":
+        what = "Confirmed UNGROUNDED: no ontology term fits this concept."
+        if decision.object_id:
+            what += (
+                f" Nearest broader term {decision.object_id} "
+                f"'{decision.object_label}' attached as a parent."
+            )
+    elif decision.decision == "REVIEW":
+        what = "Reviewed and endorsed the seeder's own resolution."
+    else:
+        # Not a fallback. A decision kind added without a summary here would
+        # otherwise be published as whichever branch happened to be last,
+        # describing the record as something it is not.
+        raise SystemExit(
+            f"{decision.identifier}: no curation-event summary for decision kind "
+            f"{decision.decision!r}. Add one to _decision_summary()."
+        )
+    scope = "" if decision.review_depth == "ITEM" else f" [{decision.review_depth}-level]"
+    # Names the source concept decided, not the record. A merged record can be
+    # fed by several, and two class-level sweeps share their rationale verbatim
+    # — without this, 110 records showed the same paragraph twice with nothing
+    # to say they were about different concepts. It is also the key
+    # decisions.tsv is keyed on and `just worklist` prints, so it is the
+    # pointer that lets a reader find the decision itself.
+    return f"{what}{scope} {decision.notes} (source concept {decision.identifier})"
 
 
 # Committed identifier -> slug lockfile. See assign_paths() for why it exists.

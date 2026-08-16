@@ -12,6 +12,14 @@ source_attestations:
   source_path: Host-associated > Mammals > Integumentary system > Ceros
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Variant-match
+    review (#12): the variant route reaches FOODON:03413986 ''cero'', which is a mackerel.
+    The path is Mammals > Integumentary system, so this is a keratinous integumentary
+    structure, not a fish. No term in the slice fits. Path: Host-associated > Mammals
+    > Integumentary system > Ceros (source concept habitatmech:GOLD.98bf2e4e7d)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

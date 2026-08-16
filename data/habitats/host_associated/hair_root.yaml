@@ -19,6 +19,12 @@ source_attestations:
     roots'
   mapping_predicate: skos:exactMatch
 curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to BTO:0000555 ''hair root'' (EXACT). Leaf label equals the BTO
+    label exactly and no other source concept claims it. Path: Host-associated > Mammals:
+    Human > Integumentary system > Hair > Hair roots (source concept habitatmech:GOLD.80d194e32a)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

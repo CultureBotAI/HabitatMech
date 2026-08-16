@@ -152,6 +152,14 @@ characteristic_taxa:
   rank: 23
   candidate_pool: 23
 curation_history:
+- timestamp: '2026-08-14T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND_AS_PARENT
+  changes: 'BTO:0000659 ''juice'' attached as a parent, not adopted as the identity
+    (NARROW). Cohort review: the other half of the NCIT:C85060 ''Natural'' merge.
+    BTO:0000659 ''juice'' already carries GOLD''s generic Juice path, so grounding
+    here would drop the natural/processed distinction this source exists to make.
+    (source concept habitatmech:BACDIVE.0b7fa25ca9)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

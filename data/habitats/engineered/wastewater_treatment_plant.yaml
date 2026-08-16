@@ -184,6 +184,19 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 902
 curation_history:
+- timestamp: '2026-08-13T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: Grounded to ENVO:00002043 'wastewater treatment plant' (EXACT). GOLD's
+    WWTP is a wastewater treatment plant specifically; it was grounded to the broader
+    ENVO:00002272 waste treatment plant. (source concept habitatmech:GOLD.f1d23444f9)
+- timestamp: '2026-08-13T00:00:00Z'
+  curator: claude-opus-5
+  action: REVIEW
+  changes: 'Reviewed and endorsed the seeder''s own resolution. Multi-source review
+    pass: joined this record when GOLD''s WWTP node was re-grounded from waste treatment
+    plant to wastewater treatment plant. Both sources name the same facility type.
+    (source concept habitatmech:PREGO.02eb522a5c)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

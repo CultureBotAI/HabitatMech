@@ -111,6 +111,15 @@ characteristic_taxa:
   taxon_label: Flavobacterium columnare ATCC 49512
   candidate_pool: 999
 curation_history:
+- timestamp: '2026-08-14T00:00:00Z'
+  curator: claude-opus-5
+  action: REVIEW
+  changes: 'Reviewed and endorsed the seeder''s own resolution. Category override
+    (#57): a minted identifier gives infer_category nothing to read — no ontology
+    term, no GOLD path — so every Madin habitat named in the BacDive vocabulary fell
+    to OTHER. A cold-blooded animal host is HOST_ASSOCIATED for the same reason as
+    the endotherm one; the thermal distinction is a property of the host, not a different
+    kind of habitat. (source concept habitatmech:BACDIVE.e68bf42dcb)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

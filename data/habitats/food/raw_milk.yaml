@@ -16,6 +16,15 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-14T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND_AS_PARENT
+  changes: 'UBERON:0001913 ''milk'' attached as a parent, not adopted as the identity
+    (NARROW). Narrowed-grounding review (#67): was FOODON:03307455 ''cow milk (raw)''.
+    GOLD''s path is Engineered > Food production > Dairy products > Raw milk and names
+    no species, so ''cow'' is a claim the source never made — dairy is as often goat,
+    sheep or buffalo. Raw milk is a narrower kind of milk; the slice has no species-neutral
+    raw-milk term. (source concept habitatmech:GOLD.d750ff157a)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

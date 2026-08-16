@@ -203,6 +203,21 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 1607
 curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to ENVO:00000209 ''marine photic zone'' (EXACT). GOLD''s Marine
+    > Photic zone is exactly this ENVO zone. Path: Environmental > Aquatic > Marine
+    > Oceanic > Photic zone (source concept habitatmech:GOLD.7d154f5642)'
+- timestamp: '2026-08-13T00:00:00Z'
+  curator: claude-opus-5
+  action: REVIEW
+  changes: 'Reviewed and endorsed the seeder''s own resolution. Multi-source review
+    pass: this record is attested by more than one independent vocabulary, and this
+    source''s label or path was read against the record''s ontology term to check
+    the merge is right. It agrees. Source concepts in the same pass whose labels did
+    not agree were re-decided rather than endorsed; see the pass''s other decisions
+    of the same date. (source concept habitatmech:PREGO.ecfad8372c)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

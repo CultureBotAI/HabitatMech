@@ -111,6 +111,15 @@ characteristic_taxa:
   taxon_label: staphylococcus_jettensis
   candidate_pool: 341
 curation_history:
+- timestamp: '2026-08-14T00:00:00Z'
+  curator: claude-opus-5
+  action: REVIEW
+  changes: 'Reviewed and endorsed the seeder''s own resolution. Category override
+    (#57): a minted identifier gives infer_category nothing to read — no ontology
+    term, no GOLD path — so every Madin habitat named in the BacDive vocabulary fell
+    to OTHER. Inside the tissue of a warm-blooded animal host — more specific than
+    the endotherm source, and host-associated for the same reason. (source concept
+    habitatmech:BACDIVE.319ac5f8f8)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

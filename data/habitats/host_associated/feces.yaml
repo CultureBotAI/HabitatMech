@@ -291,6 +291,41 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 984
 curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: Grounded to UBERON:0001988 'feces' (EXACT). BacDive's Feces-Stool isolation
+    source is exactly feces. Completes the feces record, whose other four attestations
+    are already curated. (source concept habitatmech:BACDIVE.cf280d9e3d)
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to UBERON:0001988 ''feces'' (EXACT). Mammalian fecal material.
+    Grounded with the human and bird fecal paths onto one feces record: feces is feces,
+    and the host distinction lives in the taxon rather than the habitat term. Each
+    GOLD path survives in source_attestations with its full host context. (source
+    concept habitatmech:GOLD.3671b973b2)'
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: Grounded to UBERON:0001988 'feces' (EXACT). Avian fecal material. Merges
+    with the human and mammalian fecal paths; see the note on the mammalian one for
+    why the host distinction does not block the merge. (source concept habitatmech:GOLD.515763f493)
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: Grounded to UBERON:0001988 'feces' (BROAD). Guano is bird and bat excrement,
+    a kind of feces, so UBERON:0001988 is broader than the source concept. Merges
+    into the shared feces record alongside the three GOLD fecal paths. (source concept
+    habitatmech:GOLD.c668d78963)
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to UBERON:0001988 ''feces'' (EXACT). Human fecal material, the
+    largest single fecal path. Grounded onto the shared feces record; the human context
+    survives in source_attestations. This is the case issue #12 called out as blocked
+    on the shallowest-depth tie, resolved by curation rather than by loosening the
+    tie rule. (source concept habitatmech:GOLD.d11c365b20)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

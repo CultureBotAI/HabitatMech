@@ -13,6 +13,13 @@ source_attestations:
   assertion_count: 1
   assertion_unit: ORGANISM
 curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. GOLD conflates
+    rock core and sediment in one node, so neither term is honest as the identity.
+    Pulled out of the class-level sweep, whose note wrongly claimed no term matched.
+    Label: ''Rock core/Sediment''. (source concept habitatmech:GOLD.20fb5b0162)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

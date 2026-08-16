@@ -113,6 +113,13 @@ characteristic_taxa:
   rank: 17
   candidate_pool: 17
 curation_history:
+- timestamp: '2026-08-14T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Grounding-cohort
+    review (#62): was ENVO:01001155 ''astrogeological gas'', which carries the bare
+    synonym ''gas'' and so matches any gas source at all. Waste gas from an industrial
+    process is a real habitat and the slice has no term for it. (source concept habitatmech:BACDIVE.3eec8fcfc4)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

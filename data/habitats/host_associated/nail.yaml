@@ -30,6 +30,15 @@ source_attestations:
   mapping_predicate: skos:exactMatch
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to UBERON:0001705 ''nail'' (EXACT). Sibling-path review (#12):
+    two GOLD paths end in ''Nails'' at equal depth, so the seeder''s ambiguous-leaf
+    rule leaves both unclaimed. The Mammals path is the more general of the two and
+    is the better claimant for the unqualified UBERON term; the Mammals: Human path
+    is recorded as narrower. Path: Host-associated > Mammals > Integumentary system
+    > Nails (source concept habitatmech:GOLD.f071d1bc9b)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

@@ -31,6 +31,14 @@ source_attestations:
   source_path: 'Host-associated > Mammals: Human > Lymphatic system > Tonsils > Palatine/Faucial'
   mapping_predicate: skos:exactMatch
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to UBERON:0002373 ''palatine tonsil'' (EXACT). Variant-match
+    review (#12): the variant route reaches UBERON:0001682 ''palatine BONE'', which
+    is a mid-palate dermal bone. The path is Lymphatic system > Tonsils, so the palatine
+    (faucial) tonsil is meant. Path: Host-associated > Mammals: Human > Lymphatic
+    system > Tonsils > Palatine/Faucial (source concept habitatmech:GOLD.c4555cf242)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

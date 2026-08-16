@@ -24,6 +24,12 @@ source_attestations:
   mapping_predicate: skos:exactMatch
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to ENVO:00003896 ''currency note'' (EXACT). Leaf label equals
+    the ENVO label exactly and no other source concept claims it. Path: Engineered
+    > Paper > Currency notes (source concept habitatmech:GOLD.54bc9674a9)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

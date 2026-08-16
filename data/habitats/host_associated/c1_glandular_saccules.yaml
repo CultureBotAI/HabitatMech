@@ -12,6 +12,15 @@ source_attestations:
   source_path: Host-associated > Mammals > Digestive system > Stomach > C1/Glandular
     saccules
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Variant-match
+    review (#12): the variant route reaches UBERON:0001092 ''vertebral bone 1''. The
+    path is Mammals > Digestive system > Stomach, so C1 is the first compartment of
+    a camelid stomach — the same reading already recorded for C2 and C3. The slice
+    has no term for it. Path: Host-associated > Mammals > Digestive system > Stomach
+    > C1/Glandular saccules (source concept habitatmech:GOLD.003eca7f24)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

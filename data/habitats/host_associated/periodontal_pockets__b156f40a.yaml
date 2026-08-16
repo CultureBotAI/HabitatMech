@@ -16,6 +16,15 @@ source_attestations:
   assertion_count: 3
   assertion_unit: ORGANISM
 curation_history:
+- timestamp: '2026-08-14T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND_AS_PARENT
+  changes: 'mesh:D010514 ''Periodontal Pocket'' attached as a parent, not adopted
+    as the identity (NARROW). Stale-sweep review (#84): the non-human mammal periodontal
+    pocket. The human path is the shallower claimant of mesh:D010514, so this is kept
+    as a narrower kind of it rather than merged onto it — the ambiguous-leaf rule.
+    Path: Host-associated > Mammals > Digestive system > Oral cavity > Periodontal
+    pockets (source concept habitatmech:GOLD.d45cb18103)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

@@ -15,6 +15,14 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-13T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND_AS_PARENT
+  changes: 'BTO:0000316 ''culture medium'' attached as a parent, not adopted as the
+    identity (NARROW). Contaminated culture medium, not contaminated soil. The earlier
+    decision keyed on the bare leaf ''Contaminated'' and applied to every path ending
+    in it, regardless of what the path qualifies. Path: Engineered > Lab culture >
+    Culture media > Contaminated (source concept habitatmech:GOLD.f63f2d7ddd)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

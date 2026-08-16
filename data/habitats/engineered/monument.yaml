@@ -14,6 +14,14 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-14T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Narrowed-grounding
+    review (#67): was ENVO:00000359 ''natural monument'', which is a protected-area
+    designation. GOLD''s path is Engineered > Built environment > Monument, so this
+    is a built stone monument — close to the opposite. Stonework is a real habitat
+    and the slice has no term for it. (source concept habitatmech:GOLD.a8b8ee2424)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

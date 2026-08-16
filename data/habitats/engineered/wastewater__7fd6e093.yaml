@@ -16,6 +16,14 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-13T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND_AS_PARENT
+  changes: 'ENVO:03600004 ''drinking water treatment plant'' attached as a parent,
+    not adopted as the identity (BROAD). A generic water treatment plant may treat
+    wastewater rather than drinking water, so the drinking-water term is narrower
+    than this node, not equal to it. Path: Engineered > Built environment > Water
+    treatment plant > Wastewater (source concept habitatmech:GOLD.a2d3d5127a)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

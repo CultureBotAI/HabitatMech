@@ -11,6 +11,7 @@ from __future__ import annotations
 import pytest
 
 from habitatmech.curate.decisions import (
+    Decision,
     DecisionError,
     load_decisions,
     validate_decisions,
@@ -464,3 +465,98 @@ def test_decision_dates_are_not_in_the_future(repo_root):
                 ahead.append((row["identifier"], raw, f"after {limit.isoformat()}"))
 
     assert not ahead, f"decisions dated in the future: {ahead[:5]}"
+
+
+def test_a_curated_record_records_who_curated_it(records):
+    """A decision that shaped a record has to be visible *in* the record.
+
+    `curation/decisions.tsv` is an input, not a published artifact — the site
+    serves the YAML. Before #94 every REVIEWED record's history held one event,
+    `curator: seed_from_sources`, which attributed a human's grounding to the
+    seeder and gave a reader no way to see who decided it or why.
+
+    Checked as an invariant rather than a count, so it holds as curation grows.
+    """
+    seed_only, checked = [], 0
+    for _path, doc in records:
+        if doc.get("mapping_status") != "REVIEWED":
+            continue
+        checked += 1
+        actions = {e.get("action") for e in doc.get("curation_history") or []}
+        if actions <= {"SEEDED_FROM_SOURCES"}:
+            seed_only.append(doc["identifier"])
+
+    assert checked, "no REVIEWED records — this test would pass vacuously"
+    assert not seed_only, (
+        f"{len(seed_only)} REVIEWED record(s) whose history names no decision: "
+        f"{seed_only[:5]}"
+    )
+
+
+def test_curation_history_is_in_chronological_order(records):
+    """The seed event is stamped from the extraction time, which is normally
+    *later* than the decisions applied on top of it — so appending in
+    construction order showed records being seeded after they were curated."""
+    out_of_order, multi = [], 0
+    for _path, doc in records:
+        stamps = [e.get("timestamp") or "" for e in doc.get("curation_history") or []]
+        multi += len(stamps) > 1
+        if stamps != sorted(stamps):
+            out_of_order.append(doc["identifier"])
+
+    assert multi, "no record has two events — ordering would be untested"
+    assert not out_of_order, (
+        f"{len(out_of_order)} record(s) with a non-chronological history: "
+        f"{out_of_order[:5]}"
+    )
+
+
+def test_no_record_repeats_the_same_curation_event(records):
+    """Two class-level sweeps share their rationale verbatim, so a merged record
+    fed by two swept concepts published the same paragraph twice with nothing to
+    say they were about different concepts — 110 records did. Each event names
+    the source concept it decided, which is what makes it distinct."""
+    repeated, multi = [], 0
+    for _path, doc in records:
+        events = [
+            (e.get("action"), e.get("curator"), e.get("timestamp"), e.get("changes"))
+            for e in (doc.get("curation_history") or [])
+            if e.get("action") != "SEEDED_FROM_SOURCES"
+        ]
+        multi += len(events) > 1
+        if len(events) != len(set(events)):
+            repeated.append(doc["identifier"])
+
+    assert multi, "no record has two decisions — duplication would be untested"
+    assert not repeated, f"{len(repeated)} record(s) repeating an event: {repeated[:5]}"
+
+
+def test_every_decision_kind_has_a_curation_event_summary(repo_root):
+    """A kind added without a summary used to fall through to REVIEW's wording,
+    publishing "reviewed and endorsed the seeder's resolution" about a record
+    where no such thing happened. It now refuses instead."""
+    import sys
+
+    sys.path.insert(0, str(repo_root / "scripts"))
+    from seed_from_sources import _decision_summary
+
+    from habitatmech.curate.decisions import DECISION_KINDS
+
+    for kind in sorted(DECISION_KINDS):
+        decision = Decision(
+            identifier="habitatmech:GOLD.abcdef0123", decision=kind,
+            object_id="ENVO:00000051", object_label="hot spring",
+            grounding_status="EXACT" if kind == "GROUND" else "",
+            curator="tester", date="2026-08-12", notes=GOOD_NOTE,
+        )
+        summary = _decision_summary(decision)
+        assert summary.strip(), f"{kind} produced an empty summary"
+        assert GOOD_NOTE in summary, f"{kind} dropped the curator's reasoning"
+
+    unknown = Decision(
+        identifier="habitatmech:GOLD.abcdef0123", decision="INVENTED_KIND",
+        object_id="", object_label="", grounding_status="",
+        curator="tester", date="2026-08-12", notes=GOOD_NOTE,
+    )
+    with pytest.raises(SystemExit, match="no curation-event summary"):
+        _decision_summary(unknown)

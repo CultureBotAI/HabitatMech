@@ -15,6 +15,15 @@ source_attestations:
   assertion_count: 9
   assertion_unit: ORGANISM
 curation_history:
+- timestamp: '2026-08-12T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND_AS_PARENT
+  changes: 'ENVO:01000008 ''microbial mat'' attached as a parent, not adopted as the
+    identity (NARROW). 20 GOLD paths share this leaf but differ in setting, not host,
+    so each is a kind of microbial mat rather than microbial mat itself. Grounding
+    them all to ENVO:01000008 would merge distinct environments; ENVO:01000008 is
+    recorded as a parent instead. Path: Environmental > Aquatic > Marine > Hydrothermal
+    vents > Microbial mats (source concept habitatmech:GOLD.b3e7b4ce80)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
