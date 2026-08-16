@@ -1,10 +1,12 @@
 identifier: habitatmech:GOLD.6afe6868a8
 label: Tunicates
 habitat_category: HOST_ASSOCIATED
-grounding_status: UNGROUNDED
-mapping_status: SEEDED
+grounding_status: NOT_APPLICABLE
+mapping_status: REVIEWED
 parent_habitats:
 - habitatmech:GOLD.4d792ac724
+xrefs:
+- FOODON:03414466
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8463
@@ -12,7 +14,7 @@ source_attestations:
   source_path: Host-associated > Invertebrates > Tunicates
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-16T03:05:28Z'
+- timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NOT_APPLICABLE.'
