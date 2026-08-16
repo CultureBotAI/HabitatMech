@@ -4,7 +4,7 @@ definition: A whole nut or some substance made from a processed nut.
 definition_source: FOODON
 habitat_category: FOOD
 grounding_status: CLOSE
-mapping_status: SEEDED
+mapping_status: REVIEWED
 synonyms:
 - synonym_text: Nuts
   synonym_type: EXACT_SYNONYM
@@ -28,6 +28,13 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: REVIEW
+  changes: 'Reviewed and endorsed the seeder''s own resolution. CLOSE-grounding review
+    (#12): read against the full source path and the term''s own definition. The grounding
+    is right and CLOSE is the honest status — the term is the concept with a difference
+    of framing or specificity that EXACT would overstate. (source concept habitatmech:GOLD.84d2657848)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

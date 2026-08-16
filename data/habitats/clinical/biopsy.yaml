@@ -1,19 +1,14 @@
-identifier: NCIT:C15189
-label: Biopsy Procedure
+identifier: habitatmech:BACDIVE.3d4fdc29fb
+label: Biopsy
 habitat_category: CLINICAL
-grounding_status: CLOSE
-mapping_status: SEEDED
-synonyms:
-- synonym_text: Biopsy
-  synonym_type: EXACT_SYNONYM
-  source: BacDive
-parent_habitats:
-- NCIT:C18020
+grounding_status: UNGROUNDED
+mapping_status: REVIEWED
+xrefs:
+- NCIT:C15189
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:biopsy
   source_label: Biopsy
-  mapping_predicate: skos:closeMatch
   assertion_count: 95
   assertion_unit: STRAIN
 characteristic_taxa:
@@ -168,7 +163,22 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 73
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader
+    term NCIT:C15189 ''Biopsy Procedure'' attached as a parent. CLOSE-grounding review
+    (#12): the seeder made NCIT:C15189 ''Biopsy Procedure'' the identity of BacDive''s
+    ''Biopsy'' category, 95 strains. A procedure is not a habitat — it is the act
+    of taking the sample, not the place the organism lived, the same category error
+    as grounding a record to an organism or a quality. The habitat is whichever tissue
+    was biopsied, which BacDive does not say, so no term fits. The procedure term
+    is kept as an xref (#99) to record what upstream matched without this repo asserting
+    the record is a procedure. The record was CLINICAL while it carried the NCIT term
+    and would fall to OTHER without one, because the category is inferred from the
+    grounding; a biopsy is a clinical source whether or not a term fits, so the category
+    is pinned rather than lost with the grounding. (source concept habitatmech:BACDIVE.3d4fdc29fb)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'

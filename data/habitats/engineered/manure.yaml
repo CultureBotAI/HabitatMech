@@ -5,7 +5,7 @@ definition: An environmental material consisting of organic matter from plants a
 definition_source: ENVO
 habitat_category: ENGINEERED
 grounding_status: CLOSE
-mapping_status: SEEDED
+mapping_status: REVIEWED
 synonyms:
 - synonym_text: Liquid manure
   synonym_type: EXACT_SYNONYM
@@ -35,6 +35,13 @@ source_attestations:
   source_path: Engineered > Solid waste > Animal waste > Manure slurry > Liquid manure
   mapping_predicate: skos:closeMatch
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: REVIEW
+  changes: 'Reviewed and endorsed the seeder''s own resolution. CLOSE-grounding review
+    (#12): read against the full source path and the term''s own definition. The grounding
+    is right and CLOSE is the honest status — the term is the concept with a difference
+    of framing or specificity that EXACT would overstate. (source concept habitatmech:GOLD.21f78f18dd)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
