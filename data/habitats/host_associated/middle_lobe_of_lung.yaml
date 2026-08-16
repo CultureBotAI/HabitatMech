@@ -5,7 +5,7 @@ definition: A lobe of the lung that is situated somewhere between an upper lobe 
 definition_source: UBERON
 habitat_category: HOST_ASSOCIATED
 grounding_status: CLOSE
-mapping_status: SEEDED
+mapping_status: REVIEWED
 synonyms:
 - synonym_text: Middle lobe
   synonym_type: EXACT_SYNONYM
@@ -24,6 +24,13 @@ source_attestations:
     lobe'
   mapping_predicate: skos:closeMatch
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: REVIEW
+  changes: 'Reviewed and endorsed the seeder''s own resolution. CLOSE-grounding review
+    (#12): read against the full source path and the term''s own definition. The grounding
+    is right and CLOSE is the honest status — the term is the concept with a difference
+    of framing or specificity that EXACT would overstate. (source concept habitatmech:GOLD.f04a8adfd6)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

@@ -1,0 +1,31 @@
+identifier: habitatmech:GOLD.d89135723c
+label: Hepatic caecum
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: REVIEWED
+parent_habitats:
+- BTO:0000863
+- habitatmech:GOLD.67c565f695
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7202
+  source_label: Hepatic caecum
+  source_path: 'Host-associated > Arthropoda: Insects > Digestive system > Midgut
+    > Hepatic caecum'
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND_AS_PARENT
+  changes: 'BTO:0000863 ''midgut'' attached as a parent, not adopted as the identity
+    (NARROW). CLOSE-grounding review (#12): the seeder grounded ''Arthropoda: Insects
+    > Digestive system > Midgut > Hepatic caecum'' to UBERON:0012474 ''hepatic cecum'',
+    whose definition is ''a ventral evagination extending anteriorly in the mid-portion
+    of the intestine in Amphioxi'' — a cephalochordate structure, not an insect one.
+    BTO:0002855 carries the same Amphioxus definition, so neither ontology has the
+    insect caecum. Attached to BTO:0000863 ''midgut'' instead, which is both the correct
+    broader structure and the path''s own parent step. (source concept habitatmech:GOLD.d89135723c)'
+- timestamp: '2026-08-16T05:58:02Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

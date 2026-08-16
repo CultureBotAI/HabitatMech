@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Biopsy Procedure — HabitatMech</title>
-<meta name="description" content="Biopsy Procedure (NCIT:C15189): a microbial habitat harmonized from BACDIVE.">
+<title>Biopsy — HabitatMech</title>
+<meta name="description" content="Biopsy (habitatmech:BACDIVE.3d4fdc29fb): a microbial habitat harmonized from BACDIVE.">
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -18,17 +18,15 @@
     <a href="https://github.com/CultureBotAI/HabitatMech">Source</a>
   </nav>
 </header>
-<h1>Biopsy Procedure</h1>
+<h1>Biopsy</h1>
 <p class="meta">
-  <code class="curie">NCIT:C15189</code>
-<span class="sep">·</span><a href="http://purl.obolibrary.org/obo/NCIT_C15189">resolve</a>  <span class="sep">·</span><a href="../category/clinical.html">CLINICAL</a>
-  <span class="sep">·</span><span class="pill">CLOSE</span>
-  <span class="pill plain">SEEDED</span>
+  <code class="curie">habitatmech:BACDIVE.3d4fdc29fb</code>
+  <span class="sep">·</span><a href="../category/clinical.html">CLINICAL</a>
+  <span class="sep">·</span><span class="pill warn">UNGROUNDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 
-<div class="note warn"><p>Machine-generated and unreviewed. Its grounding comes
-from the seeder's rules, not from a curator.</p></div>
 
 <h2>Source attestations</h2>
 <p class="meta">Each upstream vocabulary's own account of this habitat. Assertion
@@ -45,10 +43,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
   </tr>
 </table>
 
-<h2>Broader habitats</h2>
-<ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/NCIT_C18020">Diagnostic Procedure</a>      <code class="curie">NCIT:C18020</code></li>
-</ul>
 
 
 <h2>Associated taxa</h2>
@@ -236,11 +230,26 @@ second, independent source are listed first.</p>
   </tr>
 </table>
 
-
-<h2>Also called</h2>
+<h2>Related terms</h2>
+<p class="meta">Terms a source linked to this concept without this record
+claiming to be one of them, or to be narrower than one. A cross-reference, not
+a grounding.</p>
 <ul class="plain">
-<li>Biopsy <span class="meta">— BacDive</span></li></ul>
+  <li><a href="http://purl.obolibrary.org/obo/NCIT_C15189">Biopsy Procedure</a>
+<code class="curie">NCIT:C15189</code></li>
+</ul>
 
+
+<h2>Curation</h2>
+<p class="meta">What a curator decided about this record, and why. A record built
+from several source concepts can carry one decision per concept.</p>
+<ol class="events">
+  <li>
+    <span class="pill">CONFIRM_UNGROUNDED</span>
+    <span class="meta">2026-08-16 · claude-opus-5</span>
+    <p>Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader term NCIT:C15189 &#39;Biopsy Procedure&#39; attached as a parent. CLOSE-grounding review (#12): the seeder made NCIT:C15189 &#39;Biopsy Procedure&#39; the identity of BacDive&#39;s &#39;Biopsy&#39; category, 95 strains. A procedure is not a habitat — it is the act of taking the sample, not the place the organism lived, the same category error as grounding a record to an organism or a quality. The habitat is whichever tissue was biopsied, which BacDive does not say, so no term fits. The procedure term is kept as an xref (#99) to record what upstream matched without this repo asserting the record is a procedure. The record was CLINICAL while it carried the NCIT term and would fall to OTHER without one, because the category is inferred from the grounding; a biopsy is a clinical source whether or not a term fits, so the category is pinned rather than lost with the grounding. (source concept habitatmech:BACDIVE.3d4fdc29fb)</p>
+  </li>
+</ol>
 
 <h2>Provenance</h2>
 <p class="meta">
