@@ -1,0 +1,32 @@
+identifier: habitatmech:GOLD.f3e0b27db6
+label: Lumen
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: REVIEWED
+parent_habitats:
+- UBERON:0000464
+- habitatmech:GOLD.d3e8ec1eb1
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4151
+  source_label: Lumen
+  source_path: Host-associated > Birds > Digestive system > Crop > Lumen
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 2
+  assertion_unit: ORGANISM
+curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND_AS_PARENT
+  changes: 'UBERON:0000464 ''anatomical space'' attached as a parent, not adopted
+    as the identity (NARROW). Risky-grounding review (#12): the seeder grounded ''Birds
+    > Digestive system > Crop > Lumen'' to UBERON:0000464 ''anatomical space'' as
+    its identity. Every lumen is an anatomical space, so the term is true but far
+    too broad to be an identity — it would collect every lumen in the corpus onto
+    one record. Kept as a parent instead. The concept is the lumen of the avian crop;
+    BTO:0000301 ''crop'' exists as a record but a lumen is not a kind of crop. (source
+    concept habitatmech:GOLD.f3e0b27db6)'
+- timestamp: '2026-08-16T03:37:15Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'

@@ -662,7 +662,10 @@ def main(argv: list[str] | None = None) -> int:
             marker = "  <-" if cohort in GROUNDING_RISK else "    "
             print(f"  {cohort:10s} {grounding_counts.get(cohort, 0):6d}{marker} {why}")
 
-    if grounding_backlog and args.ungrounded_top:
+    if args.ungrounded_top:
+        # Printed even when empty, like the screens below it. A section that
+        # disappears once it is clean reads as "not run" rather than "nothing
+        # to report", and this is the cohort whose emptiness is the result.
         grounding_backlog.sort(reverse=True)
         print(f"\n=== {len(grounding_backlog)} risky groundings not yet reviewed ===")
         for assertions, cohort, source_label, identifier, label in (
@@ -670,6 +673,8 @@ def main(argv: list[str] | None = None) -> int:
         ):
             print(f"  {assertions:7d}  {cohort:8s} {source_label[:24]:24s} -> "
                   f"{label[:32]:32s} {identifier}")
+        if not grounding_backlog:
+            print("  none — every disjoint or narrowed grounding has been read")
 
     stale = _stale_class_sweeps(class_swept_ids, records)
     print(f"\n=== {len(stale)} class-level sweep(s) the slice has since contradicted ===")

@@ -5,7 +5,7 @@ definition: Leaf litter is dead plant material, such as leaves, bark, needles, a
 definition_source: ENVO
 habitat_category: TERRESTRIAL
 grounding_status: EXACT
-mapping_status: SEEDED
+mapping_status: REVIEWED
 synonyms:
 - synonym_text: Litterfall
   synonym_type: EXACT_SYNONYM
@@ -161,6 +161,33 @@ characteristic_taxa:
   taxon_label: acidicapsa_borealis
   candidate_pool: 19
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: REVIEW
+  changes: 'Reviewed and endorsed the seeder''s own resolution. Risky-grounding review
+    (#12): the flag is lexical: the term''s label spells out a qualifier that the
+    GOLD path supplies positionally rather than in the leaf. The path pins the sense,
+    and it is the term''s. (source concept habitatmech:GOLD.0d89d93335)'
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: REVIEW
+  changes: 'Reviewed and endorsed the seeder''s own resolution. Risky-grounding review
+    (#12), co-attestor pass: this source concept feeds a record whose grounding was
+    flagged and reviewed, and the record could not reach REVIEWED until every source
+    feeding it was decided. The GOLD path''s leaf is the term''s label and the path''s
+    parent steps agree with the term''s sense, so the seeder''s resolution is endorsed.
+    (source concept habitatmech:GOLD.e797d3ba16)'
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: REVIEW
+  changes: 'Reviewed and endorsed the seeder''s own resolution. Risky-grounding review
+    (#12), co-attestor pass: this source concept feeds a record whose grounding was
+    flagged and reviewed, and the record could not reach REVIEWED until every source
+    feeding it was decided. This one is a self-grounding: the source vocabulary names
+    the concept with the ontology term''s own label, so there is nothing to adjudicate
+    between the two — checked that the term is the one the label denotes, and that
+    the record it merges into is the same concept rather than a homonym. (source concept
+    habitatmech:MADIN.c7c13007c1)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

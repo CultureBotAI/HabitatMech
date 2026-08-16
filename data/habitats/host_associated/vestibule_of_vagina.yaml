@@ -10,7 +10,7 @@ definition: The space posterior to the glans clitoridis, between the labia minor
 definition_source: UBERON
 habitat_category: HOST_ASSOCIATED
 grounding_status: CLOSE
-mapping_status: SEEDED
+mapping_status: REVIEWED
 synonyms:
 - synonym_text: Introitus
   synonym_type: EXACT_SYNONYM
@@ -44,6 +44,13 @@ source_attestations:
     Introitus'
   mapping_predicate: skos:closeMatch
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: REVIEW
+  changes: 'Reviewed and endorsed the seeder''s own resolution. Risky-grounding review
+    (#12): the flag is lexical: the source label and the term label are different
+    names for the same thing, so they share no word by construction. Read against
+    the source path, the term is the concept. (source concept habitatmech:GOLD.ad4dabd552)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

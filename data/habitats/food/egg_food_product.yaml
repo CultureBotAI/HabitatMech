@@ -6,7 +6,7 @@ definition: A food consisting of a round or oval body laid by the female of many
 definition_source: FOODON
 habitat_category: FOOD
 grounding_status: CLOSE
-mapping_status: SEEDED
+mapping_status: REVIEWED
 synonyms:
 - synonym_text: Egg
   synonym_type: EXACT_SYNONYM
@@ -172,6 +172,15 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 30
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: REVIEW
+  changes: 'Reviewed and endorsed the seeder''s own resolution. Risky-grounding review
+    (#12): the flag is a narrowing one: FOODON''s label adds the food-product framing
+    that BacDive''s bare category leaves implicit. BacDive''s isolation sources in
+    this part of the vocabulary are foods, so the framing is right, and the grounding
+    is recorded as CLOSE rather than EXACT to keep that a visible approximation. (source
+    concept habitatmech:BACDIVE.d48ce9485d)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

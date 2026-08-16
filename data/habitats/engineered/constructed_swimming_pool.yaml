@@ -5,7 +5,7 @@ definition: A construction which is designed to hold water in which humans may s
 definition_source: ENVO
 habitat_category: ENGINEERED
 grounding_status: CLOSE
-mapping_status: SEEDED
+mapping_status: REVIEWED
 synonyms:
 - synonym_text: Swimming pool
   synonym_type: EXACT_SYNONYM
@@ -35,6 +35,13 @@ source_attestations:
   source_path: Engineered > Built environment > Swimming pool
   mapping_predicate: skos:closeMatch
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: REVIEW
+  changes: 'Reviewed and endorsed the seeder''s own resolution. Risky-grounding review
+    (#12): the flag is lexical: the term''s label spells out a qualifier that the
+    GOLD path supplies positionally rather than in the leaf. The path pins the sense,
+    and it is the term''s. (source concept habitatmech:GOLD.38dc52b40a)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

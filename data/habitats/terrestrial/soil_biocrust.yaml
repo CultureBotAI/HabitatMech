@@ -7,7 +7,7 @@ definition: A biocrust which is formed by photosynthetic microbial assemblages c
 definition_source: ENVO
 habitat_category: TERRESTRIAL
 grounding_status: EXACT
-mapping_status: SEEDED
+mapping_status: REVIEWED
 synonyms:
 - synonym_text: Biocrust
   synonym_type: EXACT_SYNONYM
@@ -66,6 +66,15 @@ curation_history:
     ''Hyaline'' finds PATO''s transparent), which is why the class-level sweep recorded
     no match. The compound names ENVO:01000910 ''soil biocrust'' exactly. Read against
     the full path before deciding. (source concept habitatmech:GOLD.eeb3ba4bc5)'
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: REVIEW
+  changes: 'Reviewed and endorsed the seeder''s own resolution. Risky-grounding review
+    (#12), co-attestor pass: this source concept feeds a record whose grounding was
+    flagged and reviewed, and the record could not reach REVIEWED until every source
+    feeding it was decided. The GOLD path''s leaf is the term''s label and the path''s
+    parent steps agree with the term''s sense, so the seeder''s resolution is endorsed.
+    (source concept habitatmech:GOLD.f9e01b9603)'
 - timestamp: '2026-08-16T03:37:15Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
