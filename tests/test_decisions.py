@@ -19,7 +19,8 @@ from habitatmech.curate.decisions import (
 
 ONTOLOGY = {"UBERON:0001988": "feces", "ENVO:00000051": "hot spring"}
 
-HEADER = "identifier\tdecision\tobject_id\tobject_label\tgrounding_status\tcurator\tdate\tnotes\n"
+HEADER = ("identifier\tdecision\tobject_id\tobject_label\tgrounding_status\tcurator\t"
+          "date\tnotes\treview_depth\tcategory\trelation\n")
 GOOD_NOTE = "Verified against the source path; this is the exact concept."
 
 
@@ -30,8 +31,10 @@ def _write(tmp_path, *rows):
 
 
 def _ground(identifier="habitatmech:GOLD.abcdef0123", object_id="UBERON:0001988",
-            label="feces", status="EXACT", curator="tester", date="2026-08-12", notes=GOOD_NOTE):
-    return (identifier, "GROUND", object_id, label, status, curator, date, notes)
+            label="feces", status="EXACT", curator="tester", date="2026-08-12", notes=GOOD_NOTE,
+            depth="ITEM", category="", relation=""):
+    return (identifier, "GROUND", object_id, label, status, curator, date, notes,
+            depth, category, relation)
 
 
 def test_a_valid_grounding_passes(tmp_path):
@@ -185,11 +188,8 @@ def test_class_depth_does_not_promote_a_record_to_reviewed(tmp_path):
     property. That is worth recording, but it is not someone having read the
     habitat — so it must not report the corpus as reviewed."""
     row = ("habitatmech:GOLD.abcdef0123", "CONFIRM_UNGROUNDED", "", "", "",
-           "tester", "2026-08-12", GOOD_NOTE, "CLASS")
-    path = tmp_path / "decisions.tsv"
-    path.write_text(HEADER.rstrip("\n") + "\treview_depth\n" + "\t".join(row) + "\n",
-                    encoding="utf-8")
-    decision = load_decisions(path)["habitatmech:GOLD.abcdef0123"]
+           "tester", "2026-08-12", GOOD_NOTE, "CLASS", "", "")
+    decision = load_decisions(_write(tmp_path, row))["habitatmech:GOLD.abcdef0123"]
     assert decision.review_depth == "CLASS"
     assert decision.counts_as_reviewed is False
 
@@ -202,13 +202,9 @@ def test_review_depth_defaults_to_item(tmp_path):
 def test_a_grounding_cannot_be_class_depth(tmp_path):
     """Grounding a concept to a term asserts an equivalence about that one
     concept; there is no mechanically-checkable class that licenses it."""
-    row = ("habitatmech:GOLD.abcdef0123", "GROUND", "UBERON:0001988", "feces", "EXACT",
-           "tester", "2026-08-12", GOOD_NOTE, "CLASS")
-    path = tmp_path / "decisions.tsv"
-    path.write_text(HEADER.rstrip("\n") + "\treview_depth\n" + "\t".join(row) + "\n",
-                    encoding="utf-8")
+    decisions = load_decisions(_write(tmp_path, _ground(depth="CLASS")))
     with pytest.raises(DecisionError, match="cannot be CLASS depth"):
-        validate_decisions(load_decisions(path), ONTOLOGY)
+        validate_decisions(decisions, ONTOLOGY)
 
 
 def test_no_class_swept_concept_has_a_lexical_candidate(repo_root):
@@ -589,3 +585,62 @@ def test_no_swept_concept_is_named_by_its_own_path(repo_root, records):
         f"{len(named)} sweep(s) claim no term matched, but their own path names one: "
         f"{[(n[1], n[2], n[3]) for n in named[:5]]}. Read each against its full path."
     )
+
+
+def test_relation_defaults_to_parent(tmp_path):
+    """Decisions written before `relation` existed keep the behaviour they were
+    reviewed under, so adding the column cannot silently move 1,700 terms."""
+    decisions = load_decisions(_write(tmp_path, _ground()))
+    assert decisions["habitatmech:GOLD.abcdef0123"].relation == "parent"
+
+
+def test_xref_relation_keeps_a_term_without_asserting_is_a(tmp_path):
+    """The case that motivated it: a term related to the concept but neither its
+    identity nor broader than it. `parent_habitats` means "broader habitats", so
+    a parent would publish the same over-claim as a grounding (#99)."""
+    row = ("habitatmech:GOLD.abcdef0123", "CONFIRM_UNGROUNDED", "ENVO:00000051",
+           "hot spring", "", "tester", "2026-08-12", GOOD_NOTE, "ITEM", "", "xref")
+    decisions = load_decisions(_write(tmp_path, row))
+    validate_decisions(decisions, ONTOLOGY)
+    assert decisions["habitatmech:GOLD.abcdef0123"].relation == "xref"
+
+
+def test_unknown_relation_is_rejected(tmp_path):
+    row = ("habitatmech:GOLD.abcdef0123", "CONFIRM_UNGROUNDED", "ENVO:00000051",
+           "hot spring", "", "tester", "2026-08-12", GOOD_NOTE, "ITEM", "", "sibling")
+    with pytest.raises(DecisionError, match="relation 'sibling' not in"):
+        validate_decisions(load_decisions(_write(tmp_path, row)), ONTOLOGY)
+
+
+def test_xref_relation_on_a_grounding_is_rejected(tmp_path):
+    """GROUND adopts the term as the record's identity, so there is nothing left
+    for a relation to weaken — accepting it would let a curator believe they had
+    asked for a looser link than they got."""
+    with pytest.raises(DecisionError, match="meaningless on GROUND"):
+        validate_decisions(load_decisions(_write(tmp_path, _ground(relation="xref"))), ONTOLOGY)
+
+
+def test_relation_without_an_object_is_rejected(tmp_path):
+    row = ("habitatmech:GOLD.abcdef0123", "CONFIRM_UNGROUNDED", "", "", "",
+           "tester", "2026-08-12", GOOD_NOTE, "ITEM", "", "xref")
+    with pytest.raises(DecisionError, match="no object_id for it to place"):
+        validate_decisions(load_decisions(_write(tmp_path, row)), ONTOLOGY)
+
+
+def test_xref_relation_places_the_term_as_an_xref_not_a_parent(repo_root):
+    """End to end through the seeder's own placement, not just the dataclass."""
+    import sys
+
+    sys.path.insert(0, str(repo_root / "scripts"))
+    from seed_from_sources import _placement
+
+    def make(relation, object_id="ENVO:00000051"):
+        return Decision(identifier="habitatmech:GOLD.abcdef0123",
+                        decision="CONFIRM_UNGROUNDED", object_id=object_id,
+                        object_label="hot spring", grounding_status="",
+                        curator="tester", date="2026-08-12", notes=GOOD_NOTE,
+                        relation=relation)
+
+    assert _placement(make("xref")) == {"extra_parents": [], "extra_xrefs": ["ENVO:00000051"]}
+    assert _placement(make("parent")) == {"extra_parents": ["ENVO:00000051"], "extra_xrefs": []}
+    assert _placement(make("xref", "")) == {"extra_parents": [], "extra_xrefs": []}

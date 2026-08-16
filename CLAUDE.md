@@ -124,9 +124,19 @@ Several behaviours look like bugs and are deliberate. Read
 **Curation is never a hand-edit to a record.** Records are generated and
 `just verify-corpus` gates that they reproduce from `data/raw/`, so an edit is
 silently reverted by the next re-seed. Decisions go in `curation/decisions.tsv`,
-which the seeder reads as an input: `GROUND` / `NOT_APPLICABLE` /
-`CONFIRM_UNGROUNDED` / `REVIEW`, each keyed on the **minted identifier of one
-source concept** (`just worklist` prints the key to use).
+which the seeder reads as an input: `GROUND` / `GROUND_AS_PARENT` /
+`NOT_APPLICABLE` / `CONFIRM_UNGROUNDED` / `REVIEW`, each keyed on the **minted
+identifier of one source concept** (`just worklist` prints the key to use).
+
+**`parent_habitats` means *broader*, so do not attach a term there unless it
+is.** A term that is related to a concept but neither its identity nor broader
+than it goes in the `relation` column as `xref` instead of the default
+`parent`. This is not a formality: ENVO's *anthropogenic contamination feature*
+asserts an anthropogenic origin and geographic feature-hood that BacDive's
+474-strain "Contamination" category never claims, so both grounding it and
+parenting it publish the same over-claim, one as identity and one as an is-a
+(#99). `relation: xref` keeps the link upstream saw without this repo asserting
+one.
 
 **A note's claims are checked too.** `notes` is the only record of *why* a
 decision was made and is most of what an LLM-assisted pass produces, so a

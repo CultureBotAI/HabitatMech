@@ -440,6 +440,22 @@ def apply_decision(default: Resolution, minted: str, decisions: dict[str, Decisi
     return replace(_decided(default, minted, decision), decision=decision)
 
 
+def _placement(decision: Decision) -> dict[str, list[str]]:
+    """Where a decision's object_id attaches: as a parent, or only as an xref.
+
+    `parent_habitats` is defined as "broader habitats", so attaching a term
+    there asserts an is-a. That is wrong for a term which is related to the
+    concept but neither its identity nor broader than it — and until #99 there
+    was no way to say so, which cost the ENVO link on BacDive's 474-strain
+    "Contamination" category entirely.
+    """
+    if not decision.object_id:
+        return {"extra_parents": [], "extra_xrefs": []}
+    if decision.relation == "xref":
+        return {"extra_parents": [], "extra_xrefs": [decision.object_id]}
+    return {"extra_parents": [decision.object_id], "extra_xrefs": []}
+
+
 def _decided(default: Resolution, minted: str, decision: Decision) -> Resolution:
     """The resolution a decision produces, per decision kind."""
     category_override = decision.category or None
@@ -465,7 +481,7 @@ def _decided(default: Resolution, minted: str, decision: Decision) -> Resolution
             minted,
             decision.grounding_status,
             mapping_predicate=_GROUNDING_TO_PREDICATE.get(decision.grounding_status),
-            extra_parents=[decision.object_id],
+            **_placement(decision),
             route=f"curated_ground_as_parent_from_{default.route}",
             category=category_override,
             reviewed=decision.counts_as_reviewed,
@@ -487,7 +503,7 @@ def _decided(default: Resolution, minted: str, decision: Decision) -> Resolution
         return Resolution(
             minted,
             "UNGROUNDED",
-            extra_parents=[decision.object_id] if decision.object_id else [],
+            **_placement(decision),
             route=f"curated_confirm_ungrounded_from_{default.route}",
             category=category_override,
             reviewed=decision.counts_as_reviewed,

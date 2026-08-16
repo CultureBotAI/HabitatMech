@@ -86,6 +86,16 @@ CATEGORIES = {
 }
 DEFAULT_REVIEW_DEPTH = "ITEM"
 
+# How a decision's object_id attaches to the record. `parent` asserts the term
+# is BROADER than the concept, which is what parent_habitats means; `xref`
+# asserts only that the two are related. Without the second, a term that is
+# neither the concept's identity nor broader than it could not be kept at all:
+# BacDive's "Contamination" against ENVO's *anthropogenic contamination
+# feature* had to drop the link entirely, because every kind that placed a term
+# placed it as an identity or an is-a (#99).
+RELATIONS = {"parent", "xref"}
+DEFAULT_RELATION = "parent"
+
 REQUIRED_COLUMNS = [
     "identifier",
     "decision",
@@ -125,6 +135,9 @@ class Decision:
     # the matched term's own category instead would move 90 marine and lake
     # sediments out of AQUATIC.
     category: str = ""
+    # See RELATIONS. Defaults to `parent`, so decisions written before this
+    # existed keep the behaviour they were reviewed under.
+    relation: str = DEFAULT_RELATION
 
     @property
     def counts_as_reviewed(self) -> bool:
@@ -164,6 +177,8 @@ def load_decisions(path: Path) -> dict[str, Decision]:
                 review_depth=(row.get("review_depth") or DEFAULT_REVIEW_DEPTH).strip().upper()
                 or DEFAULT_REVIEW_DEPTH,
                 category=(row.get("category") or "").strip().upper(),
+                relation=(row.get("relation") or DEFAULT_RELATION).strip().lower()
+                or DEFAULT_RELATION,
             )
     return decisions
 
@@ -206,6 +221,23 @@ def validate_decisions(
             problems.append(
                 f"{prefix}: a category override is a per-record judgement and cannot be "
                 "CLASS depth"
+            )
+        if decision.relation not in RELATIONS:
+            problems.append(
+                f"{prefix}: relation {decision.relation!r} not in {sorted(RELATIONS)}"
+            )
+        if decision.relation == "xref" and decision.decision == "GROUND":
+            # GROUND makes the term the record's identity; there is nothing
+            # left for a relation to say, and accepting it would let a curator
+            # believe they had asked for a weaker link than they got.
+            problems.append(
+                f"{prefix}: relation 'xref' is meaningless on GROUND, which adopts "
+                "the term as the record's identity"
+            )
+        if decision.relation != DEFAULT_RELATION and not decision.object_id:
+            problems.append(
+                f"{prefix}: relation {decision.relation!r} set but there is no "
+                "object_id for it to place"
             )
         if decision.review_depth not in REVIEW_DEPTHS:
             problems.append(
