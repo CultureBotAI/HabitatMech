@@ -1,28 +1,35 @@
 identifier: habitatmech:GOLD.62e447374d
 label: 'Larva: Nauplius'
 habitat_category: HOST_ASSOCIATED
-grounding_status: NARROW
+grounding_status: UNGROUNDED
 mapping_status: REVIEWED
 parent_habitats:
-- UBERON:0002548
 - habitatmech:GOLD.2959225799
+xrefs:
+- UBERON:0002548
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7348
   source_label: 'Larva: Nauplius'
   source_path: 'Host-associated > Arthropoda: Crustaceans > Larva: Nauplius'
-  mapping_predicate: skos:narrowMatch
   assertion_count: 1
   assertion_unit: ORGANISM
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: GROUND_AS_PARENT
-  changes: 'UBERON:0002548 ''larva'' attached as a parent, not adopted as the identity
-    (NARROW). A nauplius is one crustacean larval stage. Path: Host-associated > Arthropoda:
-    Crustaceans > Larva: Nauplius (source concept habitatmech:GOLD.62e447374d)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-08-17T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader
+    term UBERON:0002548 ''larva'' attached as a parent. Life-stage review (#112):
+    carried UBERON:0002548 ''larva'' as a parent, reached by the ambiguous-leaf rule
+    rather than the path — several GOLD paths end in the same leaf, so the ones that
+    do not claim the term keep it as a parent. parent_habitats asserts the parent
+    is BROADER, and a larva or embryo is a whole organism rather than a broader kind
+    of place, so this is the same over-claim the identity cases had one level up.
+    Kept as an xref (#99). Per the rule #114 settled: the whole host organism gets
+    its own identity and an <X>-associated environment term; parts of a host ground
+    to the anatomy term. (source concept habitatmech:GOLD.62e447374d)'

@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>prepupa — HabitatMech</title>
-<meta name="description" content="prepupa (UBERON:0003142): a microbial habitat harmonized from GOLD.">
+<title>Prepupa — HabitatMech</title>
+<meta name="description" content="Prepupa (habitatmech:GOLD.ccdfcd10b9): a microbial habitat harmonized from GOLD.">
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -18,17 +18,15 @@
     <a href="https://github.com/CultureBotAI/HabitatMech">Source</a>
   </nav>
 </header>
-<h1>prepupa</h1>
+<h1>Prepupa</h1>
 <p class="meta">
-  <code class="curie">UBERON:0003142</code>
-<span class="sep">·</span><a href="http://purl.obolibrary.org/obo/UBERON_0003142">resolve</a>  <span class="sep">·</span><a href="../category/host-associated.html">HOST_ASSOCIATED</a>
-  <span class="sep">·</span><span class="pill">EXACT</span>
-  <span class="pill plain">SEEDED</span>
+  <code class="curie">habitatmech:GOLD.ccdfcd10b9</code>
+  <span class="sep">·</span><a href="../category/host-associated.html">HOST_ASSOCIATED</a>
+  <span class="sep">·</span><span class="pill warn">UNGROUNDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
-<p>An organism at the prepupal stage. The prepupal stage is a life stage interposed between the larval and the pupal stages in insects that undergo a complete metamorphosis. The start of the pre-pupal stage is marked by pupariation, and the end is marked by pupation.  <span class="meta">— UBERON</span></p>
-<div class="note warn"><p>Machine-generated and unreviewed. Its grounding comes
-from the seeder's rules, not from a curator.</p></div>
+
 
 <h2>Source attestations</h2>
 <p class="meta">Each upstream vocabulary's own account of this habitat. Assertion
@@ -47,14 +45,31 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 <h2>Broader habitats</h2>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/UBERON_0000468">multicellular organism</a>      <code class="curie">UBERON:0000468</code></li>
   <li><a href="../habitats/arthropoda-insects-habitatmech-gold-dba2a83b95.html">Arthropoda: Insects</a>      <code class="curie">habitatmech:GOLD.dba2a83b95</code></li>
 </ul>
 
 
 
+<h2>Related terms</h2>
+<p class="meta">Terms a source linked to this concept without this record
+claiming to be one of them, or to be narrower than one. A cross-reference, not
+a grounding.</p>
+<ul class="plain">
+  <li><a href="http://purl.obolibrary.org/obo/UBERON_0003142">prepupa</a>
+<code class="curie">UBERON:0003142</code></li>
+</ul>
 
 
+<h2>Curation</h2>
+<p class="meta">What a curator decided about this record, and why. A record built
+from several source concepts can carry one decision per concept.</p>
+<ol class="events">
+  <li>
+    <span class="pill">CONFIRM_UNGROUNDED</span>
+    <span class="meta">2026-08-17 · claude-opus-5</span>
+    <p>Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader term UBERON:0003142 &#39;prepupa&#39; attached as a parent. Life-stage review (#112), applying the rule #114 settled: the whole host ORGANISM gets its own identity plus an &lt;X&gt;-associated environment term, while PARTS of a host ground to the anatomy term as gut, skin and lung already do. A larva, pupa, prepupa or embryo is the whole organism at a stage, not a part of one, so UBERON:0003142 &#39;prepupa&#39; is the organism rather than the place — the same shape as Mollusca, Porifera and the host clades. Kept as an xref (#99); the concept keeps its own identity as a term-request candidate.This is the line that makes both calls fall out of one rule, rather than an exception for terms that happen to live in UBERON: a cocoon is a STRUCTURE an insect builds and stays grounded, because it is not the organism. (source concept habitatmech:GOLD.ccdfcd10b9)</p>
+  </li>
+</ol>
 
 <h2>Provenance</h2>
 <p class="meta">
