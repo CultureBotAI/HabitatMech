@@ -575,6 +575,46 @@ COVERAGE_KINDS = (
 )
 
 
+def _same_as_candidates(records: list[tuple[Path, dict]]) -> list[tuple]:
+    """Novel concepts from different sources sharing a normalised label.
+
+    Two source concepts merge only when they resolve to the same ONTOLOGY term.
+    For a concept no ontology names there is nothing to merge on, so two sources
+    describing one habitat produce two permanent records — GOLD's
+    "Mammals: Human" and BacDive's "Human" held 40,432 and 11,697 assertions for
+    one habitat until a SAME_AS decision joined them (#116).
+
+    A shared label is evidence, not proof, so this RANKS. "Microbial" from GOLD
+    and from BacDive may or may not be the same concept, and that is a reading.
+    It is also only a lower bound in the other direction: the human case has
+    different labels on the two sides and this screen cannot see it.
+
+    Records already merged drop out, because a merged record has one identifier.
+    """
+    by_label: dict[str, list[tuple]] = defaultdict(list)
+    for _, doc in records:
+        identifier = doc.get("identifier", "")
+        if not identifier.startswith("habitatmech:"):
+            continue
+        attestations = doc.get("source_attestations") or []
+        sources = {a["source"] for a in attestations}
+        volume = sum(a.get("assertion_count") or 0 for a in attestations)
+        by_label[norm_label(doc.get("label", ""))].append((identifier, sources, volume))
+
+    out = []
+    for label, members in by_label.items():
+        if len(members) < 2:
+            continue
+        # Same source twice is the ambiguous-leaf rule working as designed —
+        # several GOLD paths end in "Sediment" and they are genuinely distinct.
+        # Only a collision ACROSS sources suggests one concept named twice.
+        if len({s for _, sources, _ in members for s in sources}) < 2:
+            continue
+        out.append((sum(v for _, _, v in members), label,
+                    [(i, sorted(s), v) for i, s, v in members]))
+    return sorted(out, reverse=True)
+
+
 def _coverage_over_ontologies(records: list[tuple[Path, dict]]) -> tuple[Counter, Counter]:
     """Split the corpus by whether an ontology already names each concept.
 
@@ -924,6 +964,17 @@ def main(argv: list[str] | None = None) -> int:
             print(f"  {assertions:7d}  {label[:24]:24s} = {kind:32s} {term_id:16s} {identifier}")
         if not nonhab:
             print("  none — no swept concept's label names a chemical, organism or quality")
+
+    same_as = _same_as_candidates(records)
+    print(f"\n=== {len(same_as)} novel label(s) held by records from different sources ===")
+    print("  (nothing merges two concepts unless they share an ONTOLOGY term, so two")
+    print("   sources naming one habitat nothing names produce two permanent records.")
+    print("   A shared label is evidence, not proof — decide with SAME_AS after reading.)")
+    for volume, label, members in same_as[: args.ungrounded_top or None]:
+        print(f"  {volume:7d}  {label[:34]:34s} "
+              f"{[(i.split('.')[0].replace('habitatmech:', ''), v) for i, _s, v in members]}")
+    if not same_as:
+        print("  none — no novel label is shared across sources")
 
     kinds, kind_assertions = _coverage_over_ontologies(records)
     total = sum(kinds.values())

@@ -716,3 +716,91 @@ def test_not_applicable_is_never_used_on_an_organism_target(repo_root):
         f"{len(offenders)} NOT_APPLICABLE decision(s) target an organism term. A host is a "
         f"habitat; use CONFIRM_UNGROUNDED with relation=xref instead: {offenders[:5]}"
     )
+
+
+def _same_as(identifier="habitatmech:GOLD.abcdef0123", target="habitatmech:BACDIVE.0123456789",
+             relation=""):
+    return (identifier, "SAME_AS", target, "some other concept", "", "tester",
+            "2026-08-12", GOOD_NOTE, "ITEM", "", relation)
+
+
+def test_same_as_merges_two_novel_concepts(tmp_path):
+    """The gap it closes: merging otherwise only happens when two concepts
+    resolve to the same ONTOLOGY term, so two sources naming one habitat that no
+    ontology names produced two permanent records (#116)."""
+    decisions = load_decisions(_write(tmp_path, _same_as()))
+    validate_decisions(decisions, ONTOLOGY)
+    assert decisions["habitatmech:GOLD.abcdef0123"].object_id == "habitatmech:BACDIVE.0123456789"
+
+
+def test_same_as_onto_an_ontology_term_is_rejected(tmp_path):
+    """That is what GROUND is for, and accepting it here would give two
+    different decisions the same effect by two different code paths."""
+    with pytest.raises(DecisionError, match="must name another minted"):
+        validate_decisions(load_decisions(_write(tmp_path, _same_as(target="ENVO:00000051"))),
+                           ONTOLOGY)
+
+
+def test_same_as_itself_is_rejected(tmp_path):
+    with pytest.raises(DecisionError, match="names itself"):
+        validate_decisions(
+            load_decisions(_write(tmp_path, _same_as(target="habitatmech:GOLD.abcdef0123"))),
+            ONTOLOGY,
+        )
+
+
+def test_relation_on_same_as_is_rejected(tmp_path):
+    """The target IS the record's identity, so there is nothing beside it for a
+    relation to place."""
+    with pytest.raises(DecisionError, match="meaningless on SAME_AS"):
+        validate_decisions(load_decisions(_write(tmp_path, _same_as(relation="xref"))), ONTOLOGY)
+
+
+def test_same_as_chains_resolve_to_the_end(tmp_path):
+    """Three sources naming one concept means two SAME_AS rows. Requiring both
+    to point at the same winner would make the second decision depend on the
+    first having been written first."""
+    from habitatmech.curate.decisions import resolve_same_as
+
+    rows = (
+        _same_as("habitatmech:GOLD.aaaaaaaaaa", "habitatmech:GOLD.bbbbbbbbbb"),
+        _same_as("habitatmech:GOLD.bbbbbbbbbb", "habitatmech:GOLD.cccccccccc"),
+    )
+    resolved = resolve_same_as(load_decisions(_write(tmp_path, *rows)))
+    assert resolved["habitatmech:GOLD.aaaaaaaaaa"] == "habitatmech:GOLD.cccccccccc"
+    assert resolved["habitatmech:GOLD.bbbbbbbbbb"] == "habitatmech:GOLD.cccccccccc"
+
+
+def test_same_as_cycles_are_rejected(tmp_path):
+    """A -> B -> A has no answer, and picking one silently would make the corpus
+    depend on dict ordering."""
+    from habitatmech.curate.decisions import resolve_same_as
+
+    rows = (
+        _same_as("habitatmech:GOLD.aaaaaaaaaa", "habitatmech:GOLD.bbbbbbbbbb"),
+        _same_as("habitatmech:GOLD.bbbbbbbbbb", "habitatmech:GOLD.aaaaaaaaaa"),
+    )
+    with pytest.raises(DecisionError, match="SAME_AS cycle"):
+        resolve_same_as(load_decisions(_write(tmp_path, *rows)))
+
+
+def test_a_merged_record_keeps_every_source_attestation(records):
+    """Merging must not lose evidence. The human record is the case: 40,432 GOLD
+    organisms and 11,697 BacDive strains for one habitat, which read as two
+    separate records until #116."""
+    merged = [
+        doc for _path, doc in records
+        if doc.get("identifier", "").startswith("habitatmech:")
+        and len({a["source"] for a in doc.get("source_attestations") or []}) > 1
+    ]
+    assert merged, "no minted record merges two sources — SAME_AS is not exercised"
+    for doc in merged:
+        attestations = doc.get("source_attestations") or []
+        sources = {a["source"] for a in attestations}
+        # Merging pools evidence rather than replacing it: both sources are
+        # still named, and each keeps its own count so a reader can still see
+        # where the number came from.
+        assert len(sources) >= 2, f"{doc['identifier']}: merged but only {sources}"
+        assert all((a.get("assertion_count") or 0) > 0 for a in attestations), (
+            f"{doc['identifier']}: an attestation lost its count in the merge"
+        )

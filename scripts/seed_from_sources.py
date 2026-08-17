@@ -81,6 +81,7 @@ from habitatmech.curate.curation_event import record_curation_event  # noqa: E40
 from habitatmech.curate.decisions import (  # noqa: E402
     Decision,
     load_decisions,
+    resolve_same_as,
     validate_decisions,
 )
 from habitatmech.validation.write_validated import (  # noqa: E402
@@ -440,6 +441,12 @@ def apply_decision(default: Resolution, minted: str, decisions: dict[str, Decisi
     return replace(_decided(default, minted, decision), decision=decision)
 
 
+# Filled in by load_curation_decisions() before any resolution runs. A module
+# global because apply_decision is called from five ingest sites that would
+# otherwise all have to thread it through.
+_SAME_AS_TARGETS: dict[str, str] = {}
+
+
 def _placement(decision: Decision) -> dict[str, list[str]]:
     """Where a decision's object_id attaches: as a parent, or only as an xref.
 
@@ -483,6 +490,23 @@ def _decided(default: Resolution, minted: str, decision: Decision) -> Resolution
             mapping_predicate=_GROUNDING_TO_PREDICATE.get(decision.grounding_status),
             **_placement(decision),
             route=f"curated_ground_as_parent_from_{default.route}",
+            category=category_override,
+            reviewed=decision.counts_as_reviewed,
+        )
+    if decision.decision == "SAME_AS":
+        # Resolving to ANOTHER minted identifier is the whole mechanism: the
+        # ConceptStore keys on the resolved identifier, so two source concepts
+        # that land on one id merge exactly as two concepts sharing an ontology
+        # term already do. Nothing else has to change.
+        #
+        # The target is the chain's end, not this row's object_id, so a curator
+        # can write A->B and B->C without the second decision depending on the
+        # first having been written first.
+        return Resolution(
+            _SAME_AS_TARGETS.get(minted, decision.object_id),
+            default.grounding_status,
+            mapping_predicate=default.mapping_predicate,
+            route=f"curated_same_as_from_{default.route}",
             category=category_override,
             reviewed=decision.counts_as_reviewed,
         )
@@ -1365,6 +1389,11 @@ def _decision_summary(decision: Decision) -> str:
                 f" Nearest broader term {decision.object_id} "
                 f"'{decision.object_label}' attached as a parent."
             )
+    elif decision.decision == "SAME_AS":
+        what = (
+            f"Merged into {decision.object_id} '{decision.object_label}': the same concept "
+            "under another source's name."
+        )
     elif decision.decision == "REVIEW":
         what = "Reviewed and endorsed the seeder's own resolution."
     else:
@@ -1683,6 +1712,11 @@ def build_corpus() -> Corpus:
         },
     )
     stats["curation_decisions_loaded"] = len(decisions)
+    # Resolved once, before any ingest runs, so every SAME_AS row sees the same
+    # end-of-chain target regardless of which source is ingested first.
+    _SAME_AS_TARGETS.clear()
+    _SAME_AS_TARGETS.update(resolve_same_as(decisions))
+    stats["curation_same_as_merges"] = len(_SAME_AS_TARGETS)
 
     ingest_gold(store, gold_rows, mapping, routes, decisions, stats)
     ingest_bacdive(store, bacdive_rows, mapping, routes, decisions,
