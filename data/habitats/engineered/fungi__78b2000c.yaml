@@ -2,10 +2,9 @@ identifier: habitatmech:GOLD.55a9660503
 label: Fungi
 habitat_category: ENGINEERED
 grounding_status: NARROW
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
 - BTO:0000316
-- FOODON:03411261
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5979
@@ -16,6 +15,16 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND_AS_PARENT
+  changes: 'BTO:0000316 ''culture medium'' attached as a parent, not adopted as the
+    identity (NARROW). Organism-identity screen (#109): carried FOODON:03411261 ''fungus''
+    as a parent — ''a member of the group of eukaryotic organisms in the kingdom Fungi''
+    — reached through the ambiguous-leaf rule rather than through the path. A fungal
+    culture medium is not a KIND of fungus, which is what parent_habitats asserts.
+    BTO:0000316 ''culture medium'' takes its place, matching the treatment the algae
+    culture medium already has. (source concept habitatmech:GOLD.55a9660503)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

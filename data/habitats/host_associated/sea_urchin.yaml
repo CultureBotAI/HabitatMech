@@ -1,22 +1,35 @@
-identifier: FOODON:03412107
-label: sea urchin
+identifier: habitatmech:GOLD.b19422ad27
+label: Sea Urchin
 habitat_category: HOST_ASSOCIATED
-grounding_status: EXACT
-mapping_status: SEEDED
+grounding_status: UNGROUNDED
+mapping_status: REVIEWED
 parent_habitats:
-- FOODON:03412115
 - habitatmech:GOLD.e1f435d44b
+xrefs:
+- FOODON:03412107
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3644
   source_label: Sea Urchin
   source_path: Host-associated > Invertebrates > Echinodermata > Sea Urchin
-  mapping_predicate: skos:exactMatch
   assertion_count: 53
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader
+    term FOODON:03412107 ''sea urchin'' attached as a parent. Organism-identity screen
+    (#109): grounded EXACT to FOODON:03412107 ''sea urchin'', which is an echinoderm
+    — an organism, not a place. The screen that exists to catch exactly this reported
+    0 for months because it tested only NCIT and mesh ancestry and only the record''s
+    identity; widening it to UBERON:0000468 and to parent_habitats surfaced this family.
+    The GOLD path says host-associated, so the concept is the environment the organism
+    provides, which is the same family as the sponge, nematode and reptile term requests.
+    The organism term is kept as an xref (#99) rather than an identity. (source concept
+    habitatmech:GOLD.b19422ad27)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

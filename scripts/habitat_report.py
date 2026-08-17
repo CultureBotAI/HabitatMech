@@ -64,7 +64,52 @@ RISK_COHORTS = ("subset", "disjoint")
 # vendors ancestry for referenced terms. This is the one defect an exact label
 # match cannot catch and #69 could not screen for: NCIT:C77916 "Protozoa" IS
 # labelled Protozoa, and is a taxon rather than a place.
-ORGANISM_ROOTS = {"NCIT:C14250", "mesh:D056890", "mesh:D056891"}
+#
+# UBERON:0000468 was added after this screen reported 0 while being blind to
+# the case that actually occurred (#109). It is precise here — it reaches 6
+# identities and 6 parent terms, all of them organisms or life stages, and
+# nothing else. FOODON's own "organism material" root is NOT usable for this:
+# it also reaches cheese, ice cream, milk, leaf, bone marrow and wood, which
+# are legitimate habitats.
+ORGANISM_ROOTS = {
+    "NCIT:C14250", "mesh:D056890", "mesh:D056891",
+    "UBERON:0000468",  # multicellular organism
+}
+
+# Any term in a taxonomy is an organism, so the prefix settles it without
+# needing ancestry. Nothing in the corpus matches today; this is a guard
+# against a re-seed introducing one, which is the failure mode that let the
+# FOODON case sit unnoticed.
+ORGANISM_PREFIXES = ("NCBITaxon:",)
+
+# FOODON taxa that no organism root reaches, because FOODON files the organism
+# under a "<X> material" parent: `algae` -> `algae material` -> `organism
+# material`. There is no structural signal separating the taxon from the
+# material in that branch, so these are pinned by hand and each is verified
+# against its own definition by a test — `algae` is "an informal term for a
+# large, diverse group of photosynthetic eukaryotic ORGANISMS", `mollusc` is
+# "a large phylum of invertebrate animals", `lichen` is "a composite ORGANISM".
+ORGANISM_TERMS = {
+    "FOODON:03411301",  # algae
+    "FOODON:03411743",  # red algae
+    "FOODON:03412395",  # brown algae
+    "FOODON:03412502",  # green algae
+    "FOODON:03412266",  # seaweed
+    "FOODON:03411261",  # fungus
+    "FOODON:03412345",  # lichen
+    "FOODON:03412112",  # mollusc
+    "FOODON:03411433",  # shellfish species
+    "FOODON:00002581",  # aquatic invertebrate
+    "FOODON:03411021",  # fish or lower water animal
+}
+
+
+def _is_organism(term: str, parents: dict[str, list[str]]) -> bool:
+    return (
+        term.startswith(ORGANISM_PREFIXES)
+        or term in ORGANISM_TERMS
+        or bool(_ancestors(term, parents) & ORGANISM_ROOTS)
+    )
 
 
 def _ancestors(term: str, parents: dict[str, list[str]], limit: int = 14) -> set[str]:
@@ -82,7 +127,27 @@ def _ancestors(term: str, parents: dict[str, list[str]], limit: int = 14) -> set
 
 
 def _organism_identities(records: list[tuple[Path, dict]]) -> list[tuple]:
-    """Records whose identity is an organism rather than a place.
+    """Records that claim an organism is a habitat — as their identity, or as a
+    broader habitat.
+
+    Checking only the identity is what let the FOODON algae case through (#109).
+    `parent_habitats` means "broader habitats", so an organism there is the same
+    over-claim one level up, and it is the level that PROPAGATES: the seeder
+    derives a GOLD child's parent from its path node, so one wrong identity on
+    `Host-associated > Algae` put "is-a algae, the organism group" into 14
+    records. The identity was one defect; the parents were fourteen.
+
+    Two kinds of hit, and they are NOT the same judgement:
+
+    * A **taxonomic grouping** — FOODON's `algae`, "an informal term for a
+      large, diverse group of photosynthetic eukaryotic organisms" — can never
+      be a habitat. A group of taxa is not a place. These are defects, and a
+      test pins them at zero.
+    * A **life stage** — UBERON's `larva`, `embryo`, `pupa` — names an organism
+      at a stage, and an insect larva plausibly IS a habitat, in the same way
+      this corpus treats a sponge or a mammal as one. Whether it should instead
+      keep its own identity with a term request, as the host clades do, is a
+      curation call and not a thing to sweep along with the first kind.
 
     A screen that returns nothing because it is broken looks exactly like one
     that returns nothing because the corpus is clean, so a test pins that it
@@ -98,13 +163,23 @@ def _organism_identities(records: list[tuple[Path, dict]]) -> list[tuple]:
     out = []
     for _, doc in records:
         identifier = doc.get("identifier", "")
-        if identifier.startswith("habitatmech:") or doc.get("mapping_status") == "REVIEWED":
-            continue
-        if _ancestors(identifier, parents) & ORGANISM_ROOTS:
-            assertions = sum(
-                a.get("assertion_count") or 0 for a in doc.get("source_attestations") or []
-            )
-            out.append((assertions, identifier, doc.get("label", "")))
+        assertions = sum(
+            a.get("assertion_count") or 0 for a in doc.get("source_attestations") or []
+        )
+        # An identity a curator signed off on is their call; a parent is not,
+        # because parents are derived by the seeder from the path and from the
+        # ontology's own edges. So REVIEWED exempts the identity and never the
+        # parents.
+        reviewed = doc.get("mapping_status") == "REVIEWED"
+        if (not identifier.startswith("habitatmech:") and not reviewed
+                and _is_organism(identifier, parents)):
+            out.append((assertions, identifier, doc.get("label", ""), "identity"))
+        for parent in doc.get("parent_habitats") or []:
+            if parent.startswith("habitatmech:"):
+                continue
+            if _is_organism(parent, parents):
+                out.append((assertions, identifier, f"{doc.get('label', '')} -> {parent}",
+                            "parent"))
     return sorted(out, reverse=True)
 
 
@@ -830,12 +905,12 @@ def main(argv: list[str] | None = None) -> int:
                       "the rate above is over the rest")
 
     organism = _organism_identities(records)
-    print(f"\n=== {len(organism)} unreviewed record(s) whose identity is an organism ===")
+    print(f"\n=== {len(organism)} record(s) claiming an organism is a habitat ===")
     print("  (a taxon is not a habitat. An exact label match cannot see this — ")
     print("   NCIT:C77916 really is labelled Protozoa — so it is asked of the")
     print("   ontology's own ancestry instead, vendored by #46.)")
-    for assertions, identifier, label in organism[: args.ungrounded_top or None]:
-        print(f"  {assertions:8d}  {label[:40]:40s} {identifier}")
+    for assertions, identifier, label, where in organism[: args.ungrounded_top or None]:
+        print(f"  {assertions:8d}  [{where:8s}] {label[:44]:44s} {identifier}")
     if not organism:
         print("  none — the class is currently empty, and stays visible if it refills")
 

@@ -1,20 +1,30 @@
 identifier: habitatmech:GOLD.1ab59245f7
 label: Fungi
 habitat_category: HOST_ASSOCIATED
-grounding_status: NARROW
-mapping_status: SEEDED
+grounding_status: UNGROUNDED
+mapping_status: REVIEWED
 parent_habitats:
-- FOODON:03411261
 - habitatmech:GOLD.895a2372e5
+xrefs:
+- FOODON:03411261
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3558
   source_label: Fungi
   source_path: Host-associated > Endosymbionts > Fungi
-  mapping_predicate: skos:narrowMatch
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader
+    term FOODON:03411261 ''fungus'' attached as a parent. Organism-identity screen
+    (#109): carried FOODON:03411261 ''fungus'' as a parent, a taxonomic grouping rather
+    than a place, reached by the ambiguous-leaf rule. The concept is fungi acting
+    as host to an endosymbiont, so it is the same family as the sponge and nematode
+    term requests: it keeps its own identity, and the taxon term is kept as an xref
+    (#99). (source concept habitatmech:GOLD.1ab59245f7)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

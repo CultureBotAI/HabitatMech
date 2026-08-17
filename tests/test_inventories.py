@@ -456,3 +456,86 @@ def test_the_drift_guard_reports_a_vanished_input_and_an_uncheckable_one(tmp_pat
     assert "no recorded sha256" in capsys.readouterr().out, (
         "an uncheckable input must say so rather than passing as unchanged"
     )
+
+
+def test_no_record_claims_a_taxonomic_grouping_is_a_habitat(repo_root, records):
+    """A group of taxa is not a place, ever.
+
+    This is the half of the organism screen that admits no judgement. FOODON's
+    `algae` is "an informal term for a large, diverse group of photosynthetic
+    eukaryotic organisms"; `mollusc` is "a large phylum of invertebrate
+    animals". Neither can be a habitat or a broader habitat, whatever the path
+    says.
+
+    It reached 14 records' `parent_habitats` before anything noticed, because
+    the screen tested only NCIT/mesh ancestry and only the identity (#109). The
+    corpus is at zero now and this keeps it there — including through a re-seed,
+    which is how it got there in the first place.
+    """
+    import sys
+
+    sys.path.insert(0, str(repo_root / "scripts"))
+    import habitat_report as report
+
+    offenders = []
+    for _path, doc in records:
+        for term in [doc.get("identifier", ""), *(doc.get("parent_habitats") or [])]:
+            if term in report.ORGANISM_TERMS:
+                offenders.append((doc.get("identifier"), doc.get("label"), term))
+
+    assert not offenders, (
+        f"{len(offenders)} record(s) claim a taxonomic grouping is a habitat: "
+        f"{offenders[:5]}"
+    )
+
+
+def test_the_pinned_organism_terms_really_are_organisms(repo_root, raw_tsv):
+    """ORGANISM_TERMS is hand-pinned because FOODON files the organism and the
+    material under one root, so there is no structural signal to test against.
+    Hand-pinned means it can be wrong, and a wrong entry here would suppress a
+    legitimate habitat — so each is checked against its own definition."""
+    import sys
+
+    sys.path.insert(0, str(repo_root / "scripts"))
+    from collections import defaultdict
+
+    import habitat_report as report
+
+    definitions = {r["term_id"]: (r.get("definition") or "") for r in raw_tsv("ontology_terms.tsv")}
+    up = defaultdict(list)
+    for row in raw_tsv("ontology_subclass_edges.tsv"):
+        up[row["subject"]].append(row["object"])
+
+    # What an organism definition says about itself. Deliberately literal: a
+    # looser rule would justify anything, and the point is that a hand-pinned
+    # list stays answerable to the data.
+    marks = ("organism", "phylum", "animal", "invertebrate", "vertebrate",
+             "species", "group of", "kingdom", "algae", "shellfish")
+
+    def says_organism(term: str) -> bool:
+        return any(m in definitions.get(term, "").lower() for m in marks)
+
+    def justified(term: str, depth: int = 0) -> bool:
+        # Two of these have NO definition at all — FOODON leaves `brown algae`
+        # and `green algae` undefined — so the justification has to come from
+        # an ancestor that does have one. That is not a loophole: `brown algae`
+        # is a subclass of `algae`, and if `algae` is a taxonomic grouping then
+        # so is any subclass of it.
+        if says_organism(term):
+            return True
+        if depth >= 6:
+            return False
+        return any(justified(parent, depth + 1) for parent in up.get(term, []))
+
+    missing, unjustified = [], []
+    for term in sorted(report.ORGANISM_TERMS):
+        if term not in definitions:
+            missing.append(term)
+        elif not justified(term):
+            unjustified.append((term, definitions.get(term, "")[:70] or "(no definition)"))
+
+    assert not missing, f"pinned as an organism but not in the vendored slice: {missing}"
+    assert not unjustified, (
+        "pinned as an organism, but neither its definition nor any ancestor's says so: "
+        f"{unjustified}"
+    )
