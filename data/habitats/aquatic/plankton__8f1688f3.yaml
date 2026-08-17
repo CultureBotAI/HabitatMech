@@ -1,7 +1,7 @@
 identifier: habitatmech:GOLD.aeb3ec93d9
 label: Plankton
 habitat_category: AQUATIC
-grounding_status: NOT_APPLICABLE
+grounding_status: UNGROUNDED
 mapping_status: REVIEWED
 parent_habitats:
 - ENVO:03600070
@@ -13,13 +13,19 @@ source_attestations:
   source_label: Plankton
   source_path: Environmental > Aquatic > Marine > River plume > Plankton
 curation_history:
-- timestamp: '2026-08-14T00:00:00Z'
+- timestamp: '2026-08-16T00:00:00Z'
   curator: claude-opus-5
-  action: NOT_APPLICABLE
-  changes: 'Marked NOT_APPLICABLE: the source concept does not denote a habitat. mesh:D010933
-    kept as an xref. Stale-sweep review (#12): the river-plume plankton concept, same
-    call — organisms rather than a place. Link kept as an xref. (source concept habitatmech:GOLD.aeb3ec93d9)'
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader
+    term mesh:D010933 ''Plankton'' attached as a parent. Host-taxon reversal (#114):
+    NOT_APPLICABLE on the reasoning that plankton is ''an assemblage of organisms
+    rather than a place''. Organisms can be habitats — plankton hosts epibiotic and
+    particle-attached microbial communities, which is a well-described habitat distinct
+    from the free-living water column. What is not a place is the TAXON TERM, so mesh:D010933
+    stays an xref (#99) and the concept keeps its own identity. NOT_APPLICABLE asserted
+    the concept is not a habitat, which is stronger than the evidence and stronger
+    than what was meant. (source concept habitatmech:GOLD.aeb3ec93d9)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NOT_APPLICABLE.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

@@ -1,7 +1,7 @@
 identifier: habitatmech:GOLD.e3fede2aea
 label: Cnidaria
 habitat_category: HOST_ASSOCIATED
-grounding_status: NOT_APPLICABLE
+grounding_status: UNGROUNDED
 mapping_status: REVIEWED
 parent_habitats:
 - ENVO:01001000
@@ -16,16 +16,24 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 4 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-14T00:00:00Z'
+- timestamp: '2026-08-16T00:00:00Z'
   curator: claude-opus-5
-  action: NOT_APPLICABLE
-  changes: 'Marked NOT_APPLICABLE: the source concept does not denote a habitat. mesh:D003063
-    kept as an xref. Stale-sweep review (#12): the class sweep said no term matched;
-    one does now, because the slice grew. It is a taxon rather than a habitat, though
-    — the call already recorded for Protozoa, Protista, Fungi, Mollusca, Echinodermata
-    and Anthozoa — so it becomes NOT_APPLICABLE with the link kept as an xref rather
-    than a grounding. (source concept habitatmech:GOLD.e3fede2aea)'
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader
+    term mesh:D003063 ''Cnidaria'' attached as a parent. Host-taxon reversal (#114):
+    this was NOT_APPLICABLE on the reasoning that ''a host taxon is not a habitat''.
+    That reasoning is wrong, and the corpus already contradicted it — the same kind
+    of concept was treated as a habitat for Sponge, Nematoda, Reptilia, Mammals, Birds
+    and Fish, which keep their own identity and a term request for an <X>-associated
+    environment. Host-associated > Porifera was NOT_APPLICABLE while its own child
+    Porifera > Sponge was a term request.An organism acting as a host IS a habitat:
+    it is where the microbe lives, and ENVO models exactly this at plant-associated,
+    animal-associated and fungi-associated environment. What is not a habitat is the
+    TAXON TERM — a phylum is a class of organisms, not a place — so the taxon stays
+    an xref (#99) and the concept keeps its own identity as a term-request candidate.
+    NOT_APPLICABLE said the concept is not a habitat, which is a stronger and false
+    claim. (source concept habitatmech:GOLD.e3fede2aea)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NOT_APPLICABLE.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'

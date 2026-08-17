@@ -22,7 +22,7 @@
 <p class="meta">
   <code class="curie">habitatmech:GOLD.f3d8c3793f</code>
   <span class="sep">·</span><a href="../category/host-associated.html">HOST_ASSOCIATED</a>
-  <span class="sep">·</span><span class="pill warn">NOT_APPLICABLE</span>
+  <span class="sep">·</span><span class="pill warn">UNGROUNDED</span>
   <span class="pill">REVIEWED</span>
 </p>
 
@@ -65,9 +65,9 @@ a grounding.</p>
 from several source concepts can carry one decision per concept.</p>
 <ol class="events">
   <li>
-    <span class="pill">NOT_APPLICABLE</span>
-    <span class="meta">2026-08-14 · claude-opus-5</span>
-    <p>Marked NOT_APPLICABLE: the source concept does not denote a habitat. NCIT:C77916 kept as an xref. EXACT-grounding sample (#69): the label matches exactly and the grounding is still wrong in kind — Protozoa is a taxon, not a habitat, the call already recorded for Protista, Fungi, Mollusca and Anthozoa. An exact label match cannot tell a host organism from a place. Link kept as an xref. Path: Host-associated &gt; Protozoa (source concept habitatmech:GOLD.f3d8c3793f)</p>
+    <span class="pill">CONFIRM_UNGROUNDED</span>
+    <span class="meta">2026-08-16 · claude-opus-5</span>
+    <p>Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader term NCIT:C77916 &#39;Protozoa&#39; attached as a parent. Host-taxon reversal (#114): this was NOT_APPLICABLE on the reasoning that &#39;a host taxon is not a habitat&#39;. That reasoning is wrong, and the corpus already contradicted it — the same kind of concept was treated as a habitat for Sponge, Nematoda, Reptilia, Mammals, Birds and Fish, which keep their own identity and a term request for an &lt;X&gt;-associated environment. Host-associated &gt; Porifera was NOT_APPLICABLE while its own child Porifera &gt; Sponge was a term request.An organism acting as a host IS a habitat: it is where the microbe lives, and ENVO models exactly this at plant-associated, animal-associated and fungi-associated environment. What is not a habitat is the TAXON TERM — a phylum is a class of organisms, not a place — so the taxon stays an xref (#99) and the concept keeps its own identity as a term-request candidate. NOT_APPLICABLE said the concept is not a habitat, which is a stronger and false claim. (source concept habitatmech:GOLD.f3d8c3793f)</p>
   </li>
 </ol>
 

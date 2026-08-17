@@ -138,6 +138,23 @@ parenting it publish the same over-claim, one as identity and one as an is-a
 (#99). `relation: xref` keeps the link upstream saw without this repo asserting
 one.
 
+**An organism acting as a host IS a habitat; the taxon term is not.** These are
+two different claims and conflating them cost 4,920 assertions. "A host taxon is
+not a habitat" was recorded on 24 records — Mollusca, Porifera, Fungi, Bovinae,
+Protozoa — as `NOT_APPLICABLE`, while the identical concept was treated as a
+habitat for Sponge, Nematoda, Reptilia, Mammals and Birds. `Host-associated >
+Porifera` was NOT_APPLICABLE while its own child `Porifera > Sponge` was a term
+request (#114).
+
+A host is where the microbe lives, and ENVO models exactly this at
+plant-associated, animal-associated and fungi-associated environment. What is
+not a place is the *taxon term* — a phylum is a class of organisms. So the
+taxon goes in `relation: xref` and the concept keeps its own identity as a
+term-request candidate. `NOT_APPLICABLE` says the concept is not a habitat,
+which is a stronger and different claim: reserve it for diseases, qualities,
+processes and procedures. `tests/test_decisions.py` fails on a NOT_APPLICABLE
+whose target is an organism term.
+
 **A note's claims are checked too.** `notes` is the only record of *why* a
 decision was made and is most of what an LLM-assisted pass produces, so a
 plausible-sounding citation is as hard to spot as a plausible-looking CURIE was

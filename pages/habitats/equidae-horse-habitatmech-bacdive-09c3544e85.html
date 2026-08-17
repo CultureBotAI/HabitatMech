@@ -22,7 +22,7 @@
 <p class="meta">
   <code class="curie">habitatmech:BACDIVE.09c3544e85</code>
   <span class="sep">·</span><a href="../category/other.html">OTHER</a>
-  <span class="sep">·</span><span class="pill warn">NOT_APPLICABLE</span>
+  <span class="sep">·</span><span class="pill warn">UNGROUNDED</span>
   <span class="pill">REVIEWED</span>
 </p>
 
@@ -37,7 +37,7 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
   <thead><tr><th scope="col">Source</th><th scope="col">Label / path</th><th scope="col" class="num">Assertions</th><th scope="col">Unit</th></tr></thead>
   <tr>
     <td><span class="pill plain">BACDIVE</span></td>
-    <td>Equidae-Horse<br><span class="meta">Upstream mapping targets a non-habitat ontology (NCBITaxon:9788); kept as an xref.</span></td>
+    <td>Equidae-Horse<br><span class="meta">Upstream mapping targets a non-habitat ontology (); kept as an xref.</span></td>
     <td class="num">269</td>
     <td>STRAIN</td>
   </tr>
@@ -230,14 +230,6 @@ second, independent source are listed first.</p>
   </tr>
 </table>
 
-<h2>Related terms</h2>
-<p class="meta">Terms a source linked to this concept without this record
-claiming to be one of them, or to be narrower than one. A cross-reference, not
-a grounding.</p>
-<ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/NCBITaxon_9788">Equidae</a>
-<code class="curie">NCBITaxon:9788</code></li>
-</ul>
 
 
 <h2>Curation</h2>
@@ -245,9 +237,9 @@ a grounding.</p>
 from several source concepts can carry one decision per concept.</p>
 <ol class="events">
   <li>
-    <span class="pill">REVIEW</span>
-    <span class="meta">2026-08-14 · claude-opus-5</span>
-    <p>Reviewed and endorsed the seeder&#39;s own resolution. xref-only review (#43): a host taxon kept as an xref. The target is the family and the source names the horse, so the xref is broader than the source rather than narrower — safe. (source concept habitatmech:BACDIVE.09c3544e85)</p>
+    <span class="pill">CONFIRM_UNGROUNDED</span>
+    <span class="meta">2026-08-16 · claude-opus-5</span>
+    <p>Confirmed UNGROUNDED: no ontology term fits this concept. Host-taxon reversal (#114): this was NOT_APPLICABLE on the reasoning that &#39;a host taxon is not a habitat&#39;. That reasoning is wrong, and the corpus already contradicted it — the same kind of concept was treated as a habitat for Sponge, Nematoda, Reptilia, Mammals, Birds and Fish, which keep their own identity and a term request for an &lt;X&gt;-associated environment. Host-associated &gt; Porifera was NOT_APPLICABLE while its own child Porifera &gt; Sponge was a term request.An organism acting as a host IS a habitat: it is where the microbe lives, and ENVO models exactly this at plant-associated, animal-associated and fungi-associated environment. What is not a habitat is the TAXON TERM — a phylum is a class of organisms, not a place — so the taxon stays an xref (#99) and the concept keeps its own identity as a term-request candidate. NOT_APPLICABLE said the concept is not a habitat, which is a stronger and false claim. (source concept habitatmech:BACDIVE.09c3544e85)</p>
   </li>
 </ol>
 
