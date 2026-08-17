@@ -894,8 +894,16 @@ def main(argv: list[str] | None = None) -> int:
         print("   committed under curation/samples/, so the rate is auditable, and the")
         print("   interval is Wilson — the normal approximation puts the lower bound")
         print("   below zero at these counts.)")
+        # "wrong" is not the same claim in every slice, and reading it as one
+        # makes 175 non-habitats look like 175 defects.
+        MEANS = {
+            "CLASS_SWEPT_UNSCREENED": "not a habitat at all, so NOT_APPLICABLE rather "
+                                      "than a term request",
+        }
         for s in samples:
             low, high = s["interval"]
+            gloss = MEANS.get(s["grounding"], "a defective grounding")
+            print(f"  [{s['grounding']}] a defect here means: {gloss}")
             print(f"  {s['grounding']:10s} {s['wrong']}/{s['judged']} wrong "
                   f"= {100 * s['wrong'] / s['judged'] if s['judged'] else 0:.1f}%, "
                   f"95% CI {100 * low:.1f}-{100 * high:.1f}%  "
