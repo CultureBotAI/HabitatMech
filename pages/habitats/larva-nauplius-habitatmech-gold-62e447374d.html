@@ -22,7 +22,7 @@
 <p class="meta">
   <code class="curie">habitatmech:GOLD.62e447374d</code>
   <span class="sep">·</span><a href="../category/host-associated.html">HOST_ASSOCIATED</a>
-  <span class="sep">·</span><span class="pill">NARROW</span>
+  <span class="sep">·</span><span class="pill warn">UNGROUNDED</span>
   <span class="pill">REVIEWED</span>
 </p>
 
@@ -45,12 +45,19 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 <h2>Broader habitats</h2>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/UBERON_0002548">larva</a>      <code class="curie">UBERON:0002548</code></li>
   <li><a href="../habitats/arthropoda-crustaceans-habitatmech-gold-2959225799.html">Arthropoda: Crustaceans</a>      <code class="curie">habitatmech:GOLD.2959225799</code></li>
 </ul>
 
 
 
+<h2>Related terms</h2>
+<p class="meta">Terms a source linked to this concept without this record
+claiming to be one of them, or to be narrower than one. A cross-reference, not
+a grounding.</p>
+<ul class="plain">
+  <li><a href="http://purl.obolibrary.org/obo/UBERON_0002548">larva</a>
+<code class="curie">UBERON:0002548</code></li>
+</ul>
 
 
 <h2>Curation</h2>
@@ -58,9 +65,9 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 from several source concepts can carry one decision per concept.</p>
 <ol class="events">
   <li>
-    <span class="pill">GROUND_AS_PARENT</span>
-    <span class="meta">2026-08-12 · claude-opus-5</span>
-    <p>UBERON:0002548 &#39;larva&#39; attached as a parent, not adopted as the identity (NARROW). A nauplius is one crustacean larval stage. Path: Host-associated &gt; Arthropoda: Crustaceans &gt; Larva: Nauplius (source concept habitatmech:GOLD.62e447374d)</p>
+    <span class="pill">CONFIRM_UNGROUNDED</span>
+    <span class="meta">2026-08-17 · claude-opus-5</span>
+    <p>Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader term UBERON:0002548 &#39;larva&#39; attached as a parent. Life-stage review (#112): carried UBERON:0002548 &#39;larva&#39; as a parent, reached by the ambiguous-leaf rule rather than the path — several GOLD paths end in the same leaf, so the ones that do not claim the term keep it as a parent. parent_habitats asserts the parent is BROADER, and a larva or embryo is a whole organism rather than a broader kind of place, so this is the same over-claim the identity cases had one level up. Kept as an xref (#99). Per the rule #114 settled: the whole host organism gets its own identity and an &lt;X&gt;-associated environment term; parts of a host ground to the anatomy term. (source concept habitatmech:GOLD.62e447374d)</p>
   </li>
 </ol>
 

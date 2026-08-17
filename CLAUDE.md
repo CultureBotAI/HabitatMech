@@ -138,6 +138,17 @@ parenting it publish the same over-claim, one as identity and one as an is-a
 (#99). `relation: xref` keeps the link upstream saw without this repo asserting
 one.
 
+**A host's PARTS ground to the anatomy term; the WHOLE host organism does not.**
+This is the line that decides every organism-as-habitat case, and getting it
+wrong twice is what #114 and #112 cost. `gut`, `skin`, `lung` and `blood` are
+parts, and grounding a habitat to them is right and routine. `Mollusca`,
+`Porifera`, `larva`, `pupa` and `embryo` are the whole organism — as a clade or
+at a life stage — and those keep their own minted identity, carry the organism
+term as `relation: xref`, and want an `<X>-associated environment` term instead.
+A `cocoon` is a structure an insect builds rather than the insect, so it grounds
+normally. Applying the rule to the term's ontology rather than to what it
+denotes is the mistake: UBERON holds both `skin of body` and `larva`.
+
 **An organism acting as a host IS a habitat; the taxon term is not.** These are
 two different claims and conflating them cost 4,920 assertions. "A host taxon is
 not a habitat" was recorded on 24 records — Mollusca, Porifera, Fungi, Bovinae,
