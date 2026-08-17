@@ -1,18 +1,15 @@
 identifier: habitatmech:BACDIVE.3a13ee8a57
 label: Suidae-Pig,Swine
 habitat_category: OTHER
-grounding_status: NOT_APPLICABLE
+grounding_status: UNGROUNDED
 mapping_status: REVIEWED
-xrefs:
-- NCBITaxon:9823
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:suidae-pig,swine
   source_label: Suidae-Pig,Swine
   assertion_count: 521
   assertion_unit: STRAIN
-  notes: Upstream mapping targets a non-habitat ontology (NCBITaxon:9823); kept as
-    an xref.
+  notes: Upstream mapping targets a non-habitat ontology (); kept as an xref.
 characteristic_taxa:
 - taxon_id: NCBITaxon:749
   source: BACDIVE
@@ -165,13 +162,23 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 300
 curation_history:
-- timestamp: '2026-08-14T00:00:00Z'
+- timestamp: '2026-08-16T00:00:00Z'
   curator: claude-opus-5
-  action: REVIEW
-  changes: 'Reviewed and endorsed the seeder''s own resolution. xref-only review (#43):
-    a host taxon kept as an xref. Pig and swine are Sus scrofa, so the species-level
-    target says what the source says. (source concept habitatmech:BACDIVE.3a13ee8a57)'
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Host-taxon reversal
+    (#114): this was NOT_APPLICABLE on the reasoning that ''a host taxon is not a
+    habitat''. That reasoning is wrong, and the corpus already contradicted it — the
+    same kind of concept was treated as a habitat for Sponge, Nematoda, Reptilia,
+    Mammals, Birds and Fish, which keep their own identity and a term request for
+    an <X>-associated environment. Host-associated > Porifera was NOT_APPLICABLE while
+    its own child Porifera > Sponge was a term request.An organism acting as a host
+    IS a habitat: it is where the microbe lives, and ENVO models exactly this at plant-associated,
+    animal-associated and fungi-associated environment. What is not a habitat is the
+    TAXON TERM — a phylum is a class of organisms, not a place — so the taxon stays
+    an xref (#99) and the concept keeps its own identity as a term-request candidate.
+    NOT_APPLICABLE said the concept is not a habitat, which is a stronger and false
+    claim. (source concept habitatmech:BACDIVE.3a13ee8a57)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: NOT_APPLICABLE.'
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'

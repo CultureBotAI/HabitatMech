@@ -1,7 +1,7 @@
 identifier: habitatmech:BACDIVE.4d3086a839
 label: Caprinae-Sheep/Goat
 habitat_category: OTHER
-grounding_status: NOT_APPLICABLE
+grounding_status: UNGROUNDED
 mapping_status: REVIEWED
 xrefs:
 - FOODON:03411328
@@ -163,14 +163,24 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 137
 curation_history:
-- timestamp: '2026-08-14T00:00:00Z'
+- timestamp: '2026-08-16T00:00:00Z'
   curator: claude-opus-5
-  action: NOT_APPLICABLE
-  changes: 'Marked NOT_APPLICABLE: the source concept does not denote a habitat. FOODON:03411328
-    kept as an xref. Cohort review: a host taxon is not a habitat, the same call as
-    every other animal source here. The mapping also drops the sheep half of ''Sheep/Goat''.
-    Link kept as an xref. (source concept habitatmech:BACDIVE.4d3086a839)'
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader
+    term FOODON:03411328 ''goat'' attached as a parent. Host-taxon reversal (#114):
+    this was NOT_APPLICABLE on the reasoning that ''a host taxon is not a habitat''.
+    That reasoning is wrong, and the corpus already contradicted it — the same kind
+    of concept was treated as a habitat for Sponge, Nematoda, Reptilia, Mammals, Birds
+    and Fish, which keep their own identity and a term request for an <X>-associated
+    environment. Host-associated > Porifera was NOT_APPLICABLE while its own child
+    Porifera > Sponge was a term request.An organism acting as a host IS a habitat:
+    it is where the microbe lives, and ENVO models exactly this at plant-associated,
+    animal-associated and fungi-associated environment. What is not a habitat is the
+    TAXON TERM — a phylum is a class of organisms, not a place — so the taxon stays
+    an xref (#99) and the concept keeps its own identity as a term-request candidate.
+    NOT_APPLICABLE said the concept is not a habitat, which is a stronger and false
+    claim. (source concept habitatmech:BACDIVE.4d3086a839)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: NOT_APPLICABLE.'
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'

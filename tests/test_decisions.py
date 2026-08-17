@@ -672,3 +672,47 @@ def test_every_recorded_sample_is_fully_judged(repo_root):
     assert verdict_of("wrong: the term is an eye structure") == "fail"
     assert verdict_of("probably fine?") is None
     assert verdict_of("") is None
+
+
+def test_not_applicable_is_never_used_on_an_organism_target(repo_root):
+    """NOT_APPLICABLE says the CONCEPT is not a habitat. An organism target says
+    only that the TERM is not a place, and those are different claims.
+
+    Conflating them marked 4,920 assertions as non-habitats — Mollusca,
+    Porifera, Fungi, Bovinae, Protozoa — while the identical concept was a term
+    request for Sponge, Nematoda and Mammals. `Host-associated > Porifera` was
+    NOT_APPLICABLE while its own child `Porifera > Sponge` was not (#114).
+
+    A host is where the microbe lives. The right shape is CONFIRM_UNGROUNDED
+    with the taxon as an xref, which keeps the upstream link without asserting
+    either that the record IS a phylum or that it is not a habitat.
+    """
+    import collections
+    import csv
+    import sys
+
+    sys.path.insert(0, str(repo_root / "scripts"))
+    import habitat_report as report
+
+    up = collections.defaultdict(list)
+    with (repo_root / "data" / "raw" / "ontology_subclass_edges.tsv").open(
+        newline="", encoding="utf-8"
+    ) as fh:
+        for row in csv.DictReader(fh, delimiter="\t"):
+            up[row["subject"]].append(row["object"])
+
+    offenders, checked = [], 0
+    with (repo_root / "curation" / "decisions.tsv").open(newline="", encoding="utf-8") as fh:
+        for row in csv.DictReader(fh, delimiter="\t"):
+            if row["decision"] != "NOT_APPLICABLE":
+                continue
+            checked += 1
+            target = (row.get("object_id") or "").strip()
+            if target and report._is_organism(target, up):
+                offenders.append((row["identifier"], target, row.get("object_label")))
+
+    assert checked, "no NOT_APPLICABLE decisions — this would pass vacuously"
+    assert not offenders, (
+        f"{len(offenders)} NOT_APPLICABLE decision(s) target an organism term. A host is a "
+        f"habitat; use CONFIRM_UNGROUNDED with relation=xref instead: {offenders[:5]}"
+    )

@@ -22,7 +22,7 @@
 <p class="meta">
   <code class="curie">habitatmech:GOLD.5871068dfe</code>
   <span class="sep">·</span><a href="../category/engineered.html">ENGINEERED</a>
-  <span class="sep">·</span><span class="pill warn">NOT_APPLICABLE</span>
+  <span class="sep">·</span><span class="pill">NARROW</span>
   <span class="pill">REVIEWED</span>
 </p>
 
@@ -50,14 +50,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 
 
-<h2>Related terms</h2>
-<p class="meta">Terms a source linked to this concept without this record
-claiming to be one of them, or to be narrower than one. A cross-reference, not
-a grounding.</p>
-<ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/NCBITaxon_2">Bacteria</a>
-<code class="curie">NCBITaxon:2</code></li>
-</ul>
 
 
 <h2>Curation</h2>
@@ -65,9 +57,9 @@ a grounding.</p>
 from several source concepts can carry one decision per concept.</p>
 <ol class="events">
   <li>
-    <span class="pill">NOT_APPLICABLE</span>
-    <span class="meta">2026-08-14 · claude-opus-5</span>
-    <p>Marked NOT_APPLICABLE: the source concept does not denote a habitat. NCBITaxon:2 kept as an xref. Stale-sweep review (#12): the class sweep said no term matched; one does now, because the slice grew. It is a taxon rather than a habitat, though — the call already recorded for Protozoa, Protista, Fungi, Mollusca, Echinodermata and Anthozoa — so it becomes NOT_APPLICABLE with the link kept as an xref rather than a grounding. (source concept habitatmech:GOLD.5871068dfe)</p>
+    <span class="pill">GROUND_AS_PARENT</span>
+    <span class="meta">2026-08-16 · claude-opus-5</span>
+    <p>BTO:0000316 &#39;culture medium&#39; attached as a parent, not adopted as the identity (NARROW). Host-taxon reversal (#114): NOT_APPLICABLE on the grounds that Bacteria is a taxon. The taxon term is indeed not a habitat, but the CONCEPT is &#39;Engineered &gt; Lab culture &gt; Culture media &gt; Bacteria&#39; — a bacterial culture medium, which is a habitat and one of the better-defined ones in the corpus. BTO:0000316 &#39;culture medium&#39; becomes the parent, matching the treatment the algae and fungi culture media already have. (source concept habitatmech:GOLD.5871068dfe)</p>
   </li>
 </ol>
 
