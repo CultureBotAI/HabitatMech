@@ -366,3 +366,59 @@ def test_corroborated_taxa_are_listed_first(records):
         if depths != sorted(depths, reverse=True):
             bad.append(doc["identifier"])
     assert not bad, f"corroborated taxa not listed first: {bad[:10]}"
+
+
+def test_coverage_over_ontologies_partitions_the_corpus(repo_root, records):
+    """HabitatMech's headline claim is how much it holds that ENVO does not, so
+    the arithmetic behind it has to be a partition — every record in exactly one
+    bucket. A double-counted record inflates the contribution; a dropped one
+    understates it, and neither is visible in a percentage.
+    """
+    import sys
+
+    sys.path.insert(0, str(repo_root / "scripts"))
+    from habitat_report import COVERAGE_KINDS, _coverage_over_ontologies
+
+    kinds, assertions = _coverage_over_ontologies(records)
+    assert set(kinds) <= {key for key, _ in COVERAGE_KINDS}, (
+        f"a bucket exists that COVERAGE_KINDS does not describe, so the site "
+        f"would silently omit it: {set(kinds) - {k for k, _ in COVERAGE_KINDS}}"
+    )
+    assert sum(kinds.values()) == len(records), (
+        f"buckets hold {sum(kinds.values())} of {len(records)} records — not a partition"
+    )
+
+    corpus_assertions = sum(
+        a.get("assertion_count") or 0
+        for _p, doc in records
+        for a in (doc.get("source_attestations") or [])
+    )
+    assert sum(assertions.values()) == corpus_assertions
+
+    # A record with an ENVO identity is covered; one that merely hangs under an
+    # ENVO term is not, because the ambiguous-leaf rule mints an identifier
+    # exactly when the matched term is BROADER than the concept. Counting those
+    # as covered would understate the contribution by hundreds of records.
+    envo_identities = sum(
+        1 for _p, doc in records if doc.get("identifier", "").startswith("ENVO:")
+    )
+    assert kinds["named_by_envo"] == envo_identities
+
+
+def test_no_record_is_counted_as_covered_by_a_term_it_only_hangs_under(repo_root, records):
+    """The distinction the headline number rests on, asserted directly."""
+    import sys
+
+    sys.path.insert(0, str(repo_root / "scripts"))
+    from habitat_report import _coverage_over_ontologies
+
+    kinds, _ = _coverage_over_ontologies(records)
+    minted_under_envo = [
+        doc["identifier"]
+        for _p, doc in records
+        if doc.get("identifier", "").startswith("habitatmech:")
+        and any(p.startswith("ENVO:") for p in (doc.get("parent_habitats") or []))
+    ]
+    assert minted_under_envo, "no minted record hangs under an ENVO term — check the fixture"
+    assert kinds["refines_envo"] == len(minted_under_envo)
+    assert kinds["named_by_envo"] + kinds["named_by_other_obo"] < len(records)

@@ -1,22 +1,29 @@
 #!/usr/bin/env python3
-"""Emit the ENVO batch term-request table, in ENVO's own ROBOT-template format.
+"""Emit HabitatMech's own new-term definitions, in ENVO's ROBOT-template format.
 
-ENVO takes a batch of new-term requests as one GitHub issue plus a filled copy
-of its template spreadsheet, which ENVO engineers compile with `robot template`
-and merge. The column set below is that sheet's header, verbatim:
+HabitatMech is intended to supersede ENVO for microbial habitats, so these are
+not requests to anyone: they are the labels and definitions this project supplies
+for concepts no ontology names. 2,699 of 3,231 records are concepts ENVO has no
+term for, and `just report` tracks that as the headline number.
+
+The format is still ENVO's. That is deliberate and costs nothing: a ROBOT
+template is the interchange format the OBO tooling already reads, so writing
+definitions in it keeps them loadable by `robot template`, diffable, and usable
+by anyone who wants to consume or contribute them — without the project owing
+anyone a submission. The column set below is ENVO's template header, verbatim:
 
     Ontology ID | label | parent class | definition | definition cross reference
     | comment | comment cross reference | editors note | exact synonym
     | broad synonym | narrow synonym | related synonym | in subset
     | cross reference | subclass axiom | creation date | created by
 
-**The request text is curated, not generated.** Deriving labels and definitions
+**The term text is curated, not generated.** Deriving labels and definitions
 from source labels mechanically produced things like "A environmental system
 determined by an organism which is determined by microbial." and "A sediment
-which is determined by rock core/Sediment." A term request is a public ask of
-volunteer editors, so it is written by a curator in `curation/term_requests.tsv`
-and this script only assembles, validates and formats it — the same split as
-`decisions.tsv` and the seeder.
+which is determined by rock core/Sediment." A definition is the part of a term
+that carries its meaning, so it is written by a curator in
+`curation/term_requests.tsv` and this script only assembles, validates and
+formats it — the same split as `decisions.tsv` and the seeder.
 
 What this script contributes is the part a curator should not retype: the
 assertion counts, the attesting sources, the source path, and the record URL,
@@ -31,8 +38,8 @@ editor will expect; following the written rule would make this batch the odd
 one out in its own branch.
 
 `created by` wants pipe-delimited full ORCID IRIs. This script cannot know them,
-so it leaves the column empty and says so — a guessed attribution on a public
-submission is worse than none.
+so it leaves the column empty and says so — a guessed attribution is worse than
+none.
 """
 
 from __future__ import annotations
@@ -295,7 +302,7 @@ def main(argv: list[str] | None = None) -> int:
           f"{sum(p[0] for p in pending)} still unrequested across {len(pending)} record(s); "
           f"{len(skipped)} examined and deliberately not asked for")
     print("\n`created by` is empty: it wants pipe-delimited full ORCID IRIs and this "
-          "script cannot know them.\nFill it in before submitting.")
+          "script cannot know them.")
     return 0
 
 

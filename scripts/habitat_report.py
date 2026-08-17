@@ -562,6 +562,58 @@ def _compound_path_candidates(
     return sorted(out, reverse=True)
 
 
+# What HabitatMech contributes that a given ontology does not already name.
+# The project's aim is to supersede ENVO for microbial habitats, so "how many
+# habitat concepts do we hold that ENVO has no term for" is the headline
+# number, not a curation backlog.
+COVERAGE_KINDS = (
+    ("named_by_envo", "ENVO names this concept directly"),
+    ("named_by_other_obo", "another vendored OBO ontology names it; ENVO does not"),
+    ("refines_envo", "no term, but narrower than an ENVO term it hangs under"),
+    ("refines_other", "no term, but narrower than a non-ENVO term"),
+    ("unnamed", "no ontology term names it or anything above it"),
+)
+
+
+def _coverage_over_ontologies(records: list[tuple[Path, dict]]) -> tuple[Counter, Counter]:
+    """Split the corpus by whether an ontology already names each concept.
+
+    Two numbers fall out and they answer different questions:
+
+    * **New over ENVO** — every record ENVO does not name, whether or not some
+      other ontology does. This is the count that matters for superseding ENVO.
+    * **New over everything vendored** — records no vendored ontology names at
+      all. This is the count of genuinely novel concepts, the ones whose labels
+      and definitions HabitatMech has to supply itself.
+
+    A record that merely *hangs under* an ENVO term is counted as new, not
+    covered: the ambiguous-leaf rule mints an identifier precisely because the
+    matched term is BROADER than the concept, so ENVO naming the parent is not
+    ENVO naming the concept. Counting those as covered would understate the
+    contribution by 667 records.
+    """
+    kinds: Counter = Counter()
+    assertions: Counter = Counter()
+    for _, doc in records:
+        identifier = doc.get("identifier", "")
+        volume = sum(a.get("assertion_count") or 0 for a in doc.get("source_attestations") or [])
+        if not identifier.startswith("habitatmech:"):
+            kind = "named_by_envo" if identifier.startswith("ENVO:") else "named_by_other_obo"
+        else:
+            ontology_parents = [
+                p for p in (doc.get("parent_habitats") or []) if not p.startswith("habitatmech:")
+            ]
+            if any(p.startswith("ENVO:") for p in ontology_parents):
+                kind = "refines_envo"
+            elif ontology_parents:
+                kind = "refines_other"
+            else:
+                kind = "unnamed"
+        kinds[kind] += 1
+        assertions[kind] += volume
+    return kinds, assertions
+
+
 def _mapping_cohorts(decided: set[str]) -> tuple[Counter, int, list[tuple]]:
     """Split the upstream mappings by cohort and rank the undecided risky ones.
 
@@ -872,6 +924,22 @@ def main(argv: list[str] | None = None) -> int:
             print(f"  {assertions:7d}  {label[:24]:24s} = {kind:32s} {term_id:16s} {identifier}")
         if not nonhab:
             print("  none — no swept concept's label names a chemical, organism or quality")
+
+    kinds, kind_assertions = _coverage_over_ontologies(records)
+    total = sum(kinds.values())
+    new_over_envo = total - kinds["named_by_envo"]
+    novel = kinds["unnamed"] + kinds["refines_envo"] + kinds["refines_other"]
+    print("\n=== what HabitatMech adds over the ontologies it grounds to ===")
+    for key, why in COVERAGE_KINDS:
+        print(f"  {kinds[key]:5d} ({100 * kinds[key] / total:4.1f}%)  "
+              f"{kind_assertions[key]:7d} assertions   {why}")
+    print(f"\n  new over ENVO:              {new_over_envo:5d} of {total} "
+          f"({100 * new_over_envo / total:.1f}%) — concepts ENVO has no term for")
+    print(f"  new over every vendored OBO:{novel:6d} of {total} "
+          f"({100 * novel / total:.1f}%) — HabitatMech supplies the label and definition")
+    print("  (a concept that merely hangs UNDER an ENVO term counts as new: the")
+    print("   ambiguous-leaf rule mints an id precisely because the matched term is")
+    print("   broader, so ENVO naming the parent is not ENVO naming the concept.)")
 
     compound = _compound_path_candidates(class_swept_ids, records)
     print(f"\n=== {len(compound)} swept concept(s) whose PATH names a term the leaf does not ===")
