@@ -119,6 +119,26 @@ Several behaviours look like bugs and are deliberate. Read
 - **`assertion_count` is meaningless without `assertion_unit`.** GOLD counts
   organisms, BacDive strains, PREGO taxa. Never sum them across sources.
 
+## Deep research
+
+`just research <identifier>` runs deep-research-client against one novel term and
+writes a report under `research/habitats/`. **The report is an input to a
+curator, not a record.** Nothing reads it automatically, for the same reason
+`data/raw/` is separate from `data/habitats/`: a model's prose is evidence to
+weigh, and a definition written straight from an unread report is exactly the
+plausible-sounding unverifiable claim `tests/test_decisions.py` exists to catch.
+
+**Canary before any batch, and read the result.** A run costs money and takes
+about ten minutes. The first canary here failed in 8 seconds because the
+`cborg` route asks for `o3-deep-research-2025-06-26` and the CBORG key exposes
+1,084 models with no deep-research model among them; the default is
+`claude_code`, which needs no extra credential and whose defaults are read-only.
+
+**Do not reach the client with `uv run --python 3.12`.** It requires Python
+3.12 while this project still supports 3.10, and `uv run --python` tears down
+and recreates the project's `.venv` as a side effect. The default launcher is an
+isolated `uvx`, and `--client-command` takes the whole launcher as one string.
+
 ## Curation
 
 **Curation is never a hand-edit to a record.** Records are generated and
