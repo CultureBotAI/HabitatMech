@@ -23,6 +23,23 @@
   <div class="card"><div class="n">{{ stats.reviewed }}</div><div class="k">curator-reviewed</div></div>
 </div>
 
+<h2>What HabitatMech adds</h2>
+<p>HabitatMech is not a re-labelling of ENVO. Most of what it holds, ENVO has no
+term for — and a concept that merely hangs <em>under</em> an ENVO term counts as
+new, because the identifier is minted precisely when the matched term is broader
+than the concept.</p>
+<div class="grid">
+  <div class="card"><div class="n">{{ stats.new_over_envo }}</div><div class="k">concepts ENVO has no term for</div></div>
+  <div class="card"><div class="n">{{ stats.novel }}</div><div class="k">named by no vendored ontology</div></div>
+</div>
+<table>
+  <caption>Coverage against the ontologies HabitatMech grounds to</caption>
+  <thead><tr><th scope="col" class="num">Records</th><th scope="col" class="num">Assertions</th><th scope="col">Status</th></tr></thead>
+  {% for c in coverage %}
+  <tr><td class="num">{{ c.count }}</td><td class="num">{{ c.assertions }}</td><td>{{ c.why }}</td></tr>
+  {% endfor %}
+</table>
+
 <h2>Browse by category</h2>
 <table>
   <caption>Records per category</caption>

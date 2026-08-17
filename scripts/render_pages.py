@@ -325,6 +325,24 @@ def build(out_dir: Path) -> None:
             "term_requests": len(term_requests),
         }
     )
+    # What HabitatMech contributes over the ontologies it grounds to. Computed
+    # by the report so the site and `just report` cannot disagree about the
+    # project's headline claim.
+    coverage_rows = []
+    try:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        from habitat_report import COVERAGE_KINDS, _coverage_over_ontologies
+
+        kinds, kind_assertions = _coverage_over_ontologies(records)
+        coverage_rows = [
+            {"count": kinds[key], "assertions": kind_assertions[key], "why": why}
+            for key, why in COVERAGE_KINDS
+        ]
+        stats["new_over_envo"] = sum(kinds.values()) - kinds["named_by_envo"]
+        stats["novel"] = kinds["unnamed"] + kinds["refines_envo"] + kinds["refines_other"]
+    except ImportError:
+        stats["new_over_envo"] = 0
+        stats["novel"] = 0
     assert stats["seeded"] == status_counts.get("SEEDED", 0)
 
     categories = []
@@ -387,7 +405,8 @@ def build(out_dir: Path) -> None:
 
     (out_dir / "index.html").write_text(
         env.get_template("index.html").render(
-            stats=stats, categories=categories, groundings=groundings, root=""
+            stats=stats, categories=categories, groundings=groundings,
+            coverage=coverage_rows, root=""
         ),
         encoding="utf-8",
     )
