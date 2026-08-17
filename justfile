@@ -117,6 +117,23 @@ qc: lint test validate-all verify-corpus render-check redirects-check term-reque
 render-check:
     uv run python scripts/render_pages.py --check
 
+# Which novel terms still need a definition, ranked by upstream volume
+research-worklist:
+    uv run python -c "import sys; sys.path.insert(0,'scripts'); \
+    from research_habitat import undefined_novel_terms; \
+    w=undefined_novel_terms(); print(f'{len(w)} novel terms need a definition'); \
+    [print(f'{v:7d}  {l[:34]:34s} {i}') for v,l,i in w[:25]]"
+
+# Free check: print the provider command for one record without calling it
+research-dry IDENTIFIER:
+    uv run python scripts/research_habitat.py --identifier {{IDENTIFIER}} --dry-run
+
+# Research ONE novel term. Costs a real provider call and takes ~10 minutes.
+# Run this before any batch and read the result: the first canary failed in 8
+# seconds because the cborg route wanted a model the key does not expose.
+research IDENTIFIER *args:
+    uv run python scripts/research_habitat.py --identifier {{IDENTIFIER}} {{args}}
+
 # Rebuild the ENVO batch term-request table from curation/term_requests.tsv
 term-requests:
     uv run python scripts/build_term_requests.py
