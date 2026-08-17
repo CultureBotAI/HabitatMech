@@ -55,6 +55,13 @@ DECISION_KINDS = {
     # a parent rather than adopted as the identity — that keeps the placement
     # machine-readable without asserting an equivalence that does not hold.
     "CONFIRM_UNGROUNDED",
+    # This source concept IS the concept another minted identifier already
+    # names. Merging otherwise only happens when two concepts resolve to the
+    # same ONTOLOGY term, so before this there was no way to say that two novel
+    # concepts — ones no ontology names — are the same thing. GOLD's
+    # "Mammals: Human" and BacDive's "Human" sat as two permanent records
+    # holding 40,432 and 11,697 assertions for one habitat (#116).
+    "SAME_AS",
     # Narrower than an existing term: keep the minted identity, record the term
     # as a parent, and mark the grounding NARROW. This is the curated form of
     # the seeder's ambiguous-leaf rule. Six GOLD paths end in "Microbial mats"
@@ -183,6 +190,34 @@ def load_decisions(path: Path) -> dict[str, Decision]:
     return decisions
 
 
+def resolve_same_as(decisions: dict[str, Decision]) -> dict[str, str]:
+    """Follow SAME_AS chains to the identifier each concept finally lands on.
+
+    Chains are allowed because they arise naturally — three sources naming one
+    concept means two SAME_AS rows, and requiring a curator to point both at the
+    same winner makes the second decision depend on the first. Cycles are not:
+    A SAME_AS B SAME_AS A has no answer, and silently picking one would make the
+    corpus depend on dict ordering.
+    """
+    targets = {
+        identifier: decision.object_id
+        for identifier, decision in decisions.items()
+        if decision.decision == "SAME_AS" and decision.object_id
+    }
+    resolved: dict[str, str] = {}
+    for start in targets:
+        seen, node = [start], start
+        while node in targets:
+            node = targets[node]
+            if node in seen:
+                raise DecisionError(
+                    "SAME_AS cycle: " + " -> ".join([*seen, node])
+                )
+            seen.append(node)
+        resolved[start] = node
+    return resolved
+
+
 def validate_decisions(
     decisions: dict[str, Decision],
     ontology_label: dict[str, str],
@@ -285,6 +320,23 @@ def validate_decisions(
         # CONFIRM_UNGROUNDED may name a nearest-broader term (attached as a
         # parent, not adopted as the identity), so object_id is allowed here —
         # but it is still label-verified below, like every other target.
+
+        if decision.decision == "SAME_AS":
+            # The target is another SOURCE CONCEPT, not an ontology term, so the
+            # slice check below does not apply and would reject every valid one.
+            if not decision.object_id.startswith("habitatmech:"):
+                problems.append(
+                    f"{prefix}: SAME_AS must name another minted habitatmech: identifier "
+                    f"(got {decision.object_id!r}). To merge onto an ontology term, use GROUND"
+                )
+            elif decision.object_id == identifier:
+                problems.append(f"{prefix}: SAME_AS names itself")
+            if decision.relation != DEFAULT_RELATION:
+                problems.append(
+                    f"{prefix}: relation is meaningless on SAME_AS — the target is the "
+                    "record's own identity, not a term placed beside it"
+                )
+            continue
 
         # The anti-hallucination check. Applies to GROUND targets and to the
         # xref an NOT_APPLICABLE decision may carry.
