@@ -50,14 +50,44 @@ def class_swept_ids() -> set[str]:
         }
 
 
+def non_habitat_screened() -> set[str]:
+    """Swept concepts the non-habitat screen already flags.
+
+    They are excluded from the UNSCREENED population because they are not the
+    unknown: the screen has said something about them, and sampling a mixture of
+    "already has evidence" and "has none" answers neither question. Needs a
+    kg-microbe checkout; without one this is empty and the population falls back
+    to every swept concept, which the caller is told.
+    """
+    import sys
+
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    try:
+        import habitat_report as report
+    except ImportError:
+        return set()
+    if report._kg_microbe_ontologies() is None:
+        return set()
+    records = []
+    for path in sorted(HABITATS_DIR.rglob("*.yaml")):
+        doc = yaml.safe_load(path.read_text(encoding="utf-8"))
+        if isinstance(doc, dict):
+            records.append((path, doc))
+    return {row[4] for row in report._non_habitat_candidates(class_swept_ids(), records)}
+
+
 def population(grounding: str, reviewed: bool) -> list[dict]:
-    swept = class_swept_ids() if grounding == "CLASS_SWEPT" else set()
+    swept = set()
+    if grounding in ("CLASS_SWEPT", "CLASS_SWEPT_UNSCREENED"):
+        swept = class_swept_ids()
+        if grounding == "CLASS_SWEPT_UNSCREENED":
+            swept -= non_habitat_screened()
     found = []
     for path in sorted(HABITATS_DIR.rglob("*.yaml")):
         doc = yaml.safe_load(path.read_text(encoding="utf-8"))
         if not isinstance(doc, dict):
             continue
-        if grounding == "CLASS_SWEPT":
+        if grounding in ("CLASS_SWEPT", "CLASS_SWEPT_UNSCREENED"):
             if doc.get("identifier") not in swept:
                 continue
         elif doc.get("grounding_status") != grounding:
@@ -168,8 +198,10 @@ def recorded_samples() -> list[dict]:
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--grounding", default="EXACT",
-                        help="A grounding_status, or CLASS_SWEPT for the concepts a "
-                             "class-level sweep decided without anyone reading them.")
+                        help="A grounding_status; CLASS_SWEPT for the concepts a class-level "
+                             "sweep decided without anyone reading them; or "
+                             "CLASS_SWEPT_UNSCREENED for those of them the non-habitat screen "
+                             "does not already flag, which is the genuinely unassessed set.")
     parser.add_argument("--size", type=int, default=40)
     parser.add_argument("--seed", type=int, default=DEFAULT_SEED)
     parser.add_argument("--include-reviewed", action="store_true")
