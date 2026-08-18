@@ -16,6 +16,10 @@ htmlcov/
 
 # Generated reports — regenerate with `just report` / `just validate-all`
 reports/
+# ...except the research manifest, which is NOT regenerable. It records what
+# was actually paid for: which novel terms were researched, how long each took,
+# and which failed and why. Re-running would cost the whole batch again.
+!reports/habitat_research_manifest.tsv
 
 # Generated from the LinkML schema by `just gen-schema`
 src/habitatmech/schema/habitatmech_dataclasses.py
@@ -30,6 +34,5 @@ local/
 .idea/
 .vscode/
 
-# Batch runner console log. The durable record is the manifest, which is
-# appended as work completes; this is just the tail a human watches.
-reports/habitat_research_batch.log
+# The batch runner's console log stays ignored: it is the tail a human watches,
+# and the manifest above is the durable record of the same run.
