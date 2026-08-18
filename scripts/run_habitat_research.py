@@ -85,7 +85,30 @@ def provider_error(stderr: str | None) -> str:
     return lines[-1][:300]
 
 
+# The claude_code provider fails opaquely under load — "Claude Code exited with
+# code 1: <no stderr>", sometimes in 4 seconds and sometimes 240 seconds in. The
+# same records succeed when retried later, so it is rate limiting rather than
+# anything about the record. Retrying in-process is much cheaper than a rerun:
+# resume only skips COMPLETED work, so without this a failed record waits for a
+# whole new pass.
+RETRY_ATTEMPTS = 3
+RETRY_BACKOFF_SECONDS = 90
+
+
 def run_one(identifier: str, label: str, assertions: int, provider: str) -> dict:
+    for attempt in range(1, RETRY_ATTEMPTS + 1):
+        row = _attempt_one(identifier, label, assertions, provider)
+        if row["status"] == "ok" or attempt == RETRY_ATTEMPTS:
+            if attempt > 1:
+                row["detail"] = f"[attempt {attempt}] {row['detail']}"
+            return row
+        # Linear, not exponential: the limit is a rolling window, so waiting
+        # longer each time mostly wastes the window rather than clearing it.
+        time.sleep(RETRY_BACKOFF_SECONDS * attempt)
+    raise AssertionError("unreachable")
+
+
+def _attempt_one(identifier: str, label: str, assertions: int, provider: str) -> dict:
     started = time.monotonic()
     command = [
         sys.executable, str(REPO_ROOT / "scripts" / "research_habitat.py"),
@@ -129,9 +152,11 @@ def append_manifest(row: dict) -> None:
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--provider", default=DEFAULT_PROVIDER)
-    parser.add_argument("--workers", type=int, default=4,
-                        help="concurrent provider calls. Each spawns a research agent "
-                             "for ~10 minutes, so this is machine load as much as rate limit.")
+    parser.add_argument("--workers", type=int, default=2,
+                        help="concurrent provider calls. 2 is measured, not guessed: at 4, "
+                             "13 of 16 calls failed in under 10 seconds with 'Claude Code "
+                             "exited with code 1: <no stderr>', while the same records "
+                             "succeeded one at a time. At 2, 10 of 10 succeeded.")
     parser.add_argument("--limit", type=int, help="research only the top N by volume")
     parser.add_argument("--dry-run", action="store_true",
                         help="list what would run, and what resume already covers. Free.")
