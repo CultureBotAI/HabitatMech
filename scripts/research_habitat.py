@@ -157,6 +157,26 @@ def template_vars(doc: dict) -> dict[str, str]:
     }
 
 
+# A report shorter than this is a failed call that happened to write something.
+# Mirrors deep-research-client's own min_report_chars default, which exists for
+# the same reason: "a shorter result raises rather than writing a well-formed
+# file with no research in it".
+MIN_REPORT_BYTES = 200
+
+
+def completed_report(doc: dict, provider: str) -> Path | None:
+    """The report this record can resume from, or None.
+
+    One function, called by both the single-record script and the batch runner.
+    They used to test different things — `exists()` here and `exists() and
+    non-empty` in the runner — so a partial write followed by a retry was
+    skipped as done and then recorded as ok, permanently (#122). Resume must
+    mean the same thing to whoever asks.
+    """
+    out = output_path(doc, provider)
+    return out if out.exists() and out.stat().st_size >= MIN_REPORT_BYTES else None
+
+
 def output_path(doc: dict, provider: str) -> Path:
     slug = re.sub(r"[^a-z0-9]+", "-", (doc.get("label") or "").lower()).strip("-") or "unnamed"
     ident = re.sub(r"[^a-z0-9]+", "-", doc.get("identifier", "").lower()).strip("-")
@@ -210,9 +230,12 @@ def main(argv: list[str] | None = None) -> int:
               "already names it — research is for concepts that have none", file=sys.stderr)
 
     out = output_path(doc, provider)
-    if out.exists() and not args.force:
+    if completed_report(doc, provider) and not args.force:
         print(f"already researched: {_repo_relative(out)}\nPass --force to pay for it again.")
         return 0
+    if out.exists() and out.stat().st_size < MIN_REPORT_BYTES:
+        print(f"re-running: {_repo_relative(out)} is {out.stat().st_size} bytes, "
+              f"below the {MIN_REPORT_BYTES}-byte floor", file=sys.stderr)
 
     variables = template_vars(doc)
     command = build_command(provider=provider, output_file=out, variables=variables,
@@ -228,8 +251,12 @@ def main(argv: list[str] | None = None) -> int:
 
     # Verify the side effect, not the exit code: a run can report success, cost
     # real money, and persist nothing.
-    if not out.exists() or not out.stat().st_size:
-        raise SystemExit(f"provider returned success but wrote nothing to {out}")
+    if completed_report(doc, provider) is None:
+        size = out.stat().st_size if out.exists() else 0
+        raise SystemExit(
+            f"provider returned success but wrote {size} bytes to {out} "
+            f"(floor is {MIN_REPORT_BYTES})"
+        )
     print(f"wrote {_repo_relative(out)} ({out.stat().st_size} bytes)")
     return 0
 

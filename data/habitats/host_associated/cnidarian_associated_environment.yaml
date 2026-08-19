@@ -1,0 +1,240 @@
+identifier: ENVO:01001179
+label: cnidarian-associated environment
+definition: An environmental system determined by a cnidarian or part of a cnidarian.
+definition_source: ENVO
+habitat_category: HOST_ASSOCIATED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Cnidaria
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: Cnidaria-Corals
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+parent_habitats:
+- ENVO:01001000
+- ENVO:01001002
+- habitatmech:GOLD.4d792ac724
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:cnidaria-corals
+  source_label: Cnidaria-Corals
+  mapping_predicate: skos:exactMatch
+  assertion_count: 75
+  assertion_unit: STRAIN
+- source: GOLD
+  source_id: gold.ecosystem:3383
+  source_label: Cnidaria
+  source_path: Host-associated > Cnidaria
+  mapping_predicate: skos:exactMatch
+  assertion_count: 95
+  assertion_unit: ORGANISM
+  notes: 4 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: GOLD
+  source_id: gold.ecosystem:3564
+  source_label: Cnidaria
+  source_path: Host-associated > Invertebrates > Cnidaria
+  mapping_predicate: skos:exactMatch
+  assertion_count: 102
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+characteristic_taxa:
+- taxon_id: NCBITaxon:1449351
+  source: BACDIVE
+  taxon_label: Roseivivax isoporae LMG 25204
+  association_count: 2
+  rank: 1
+  candidate_pool: 73
+- taxon_id: NCBITaxon:560080
+  source: BACDIVE
+  taxon_label: Shewanella corallii
+  association_count: 2
+  rank: 2
+  candidate_pool: 73
+- taxon_id: NCBITaxon:1027273
+  source: BACDIVE
+  taxon_label: Endozoicomonas montiporae
+  association_count: 1
+  rank: 3
+  candidate_pool: 73
+- taxon_id: NCBITaxon:1048357
+  source: BACDIVE
+  taxon_label: Nocardiopsis coralliicola
+  association_count: 1
+  rank: 4
+  candidate_pool: 73
+- taxon_id: NCBITaxon:1069963
+  source: BACDIVE
+  taxon_label: Janibacter alkaliphilus
+  association_count: 1
+  rank: 5
+  candidate_pool: 73
+- taxon_id: NCBITaxon:1074311
+  source: BACDIVE
+  taxon_label: Vibrio alfacsensis
+  association_count: 1
+  rank: 6
+  candidate_pool: 73
+- taxon_id: NCBITaxon:1120968
+  source: BACDIVE
+  taxon_label: Algoriphagus vanfongensis DSM 17529
+  association_count: 1
+  rank: 7
+  candidate_pool: 73
+- taxon_id: NCBITaxon:1120983
+  source: BACDIVE
+  taxon_label: Amorphus coralli DSM 19760
+  association_count: 1
+  rank: 8
+  candidate_pool: 73
+- taxon_id: NCBITaxon:1121027
+  source: BACDIVE
+  taxon_label: Aurantimonas coralicida DSM 14790
+  association_count: 1
+  rank: 9
+  candidate_pool: 73
+- taxon_id: NCBITaxon:1173995
+  source: BACDIVE
+  taxon_label: Parvularcula dongshanensis
+  association_count: 1
+  rank: 10
+  candidate_pool: 73
+- taxon_id: NCBITaxon:1216969
+  source: BACDIVE
+  taxon_label: Janibacter corallicola NBRC 107790
+  association_count: 1
+  rank: 11
+  candidate_pool: 73
+- taxon_id: NCBITaxon:1224163
+  source: BACDIVE
+  taxon_label: Corynebacterium maris DSM 45190
+  association_count: 1
+  rank: 12
+  candidate_pool: 73
+- taxon_id: NCBITaxon:1234143
+  source: BACDIVE
+  taxon_label: Endozoicomonas euniceicola
+  association_count: 1
+  rank: 13
+  candidate_pool: 73
+- taxon_id: NCBITaxon:1234144
+  source: BACDIVE
+  taxon_label: Endozoicomonas gorgoniicola
+  association_count: 1
+  rank: 14
+  candidate_pool: 73
+- taxon_id: NCBITaxon:1280004
+  source: BACDIVE
+  taxon_label: Vibrio owensii LMG 25430
+  association_count: 1
+  rank: 15
+  candidate_pool: 73
+- taxon_id: NCBITaxon:1342794
+  source: BACDIVE
+  taxon_label: Photobacterium sanctipauli
+  association_count: 1
+  rank: 16
+  candidate_pool: 73
+- taxon_id: NCBITaxon:1342818
+  source: BACDIVE
+  taxon_label: Vibrio madracius
+  association_count: 1
+  rank: 17
+  candidate_pool: 73
+- taxon_id: NCBITaxon:1348114
+  source: BACDIVE
+  taxon_label: Pseudoalteromonas piratica
+  association_count: 1
+  rank: 18
+  candidate_pool: 73
+- taxon_id: NCBITaxon:1385512
+  source: BACDIVE
+  taxon_label: Pontibacillus litoralis JSM 072002
+  association_count: 1
+  rank: 19
+  candidate_pool: 73
+- taxon_id: NCBITaxon:1401264
+  source: BACDIVE
+  taxon_label: Prauserella coralliicola
+  association_count: 1
+  rank: 20
+  candidate_pool: 73
+- taxon_id: NCBITaxon:141693
+  source: BACDIVE
+  taxon_label: Nocardiopsis kunsanensis
+  association_count: 1
+  rank: 21
+  candidate_pool: 73
+- taxon_id: NCBITaxon:1452538
+  source: BACDIVE
+  taxon_label: Microbacterium aureliae
+  association_count: 1
+  rank: 22
+  candidate_pool: 73
+- taxon_id: NCBITaxon:1453497
+  source: BACDIVE
+  taxon_label: Kosmotoga arenicorallina S304
+  association_count: 1
+  rank: 23
+  candidate_pool: 73
+- taxon_id: NCBITaxon:1479025
+  source: BACDIVE
+  taxon_label: Myceligenerans cantabricum
+  association_count: 1
+  rank: 24
+  candidate_pool: 73
+- taxon_id: NCBITaxon:1481923
+  source: BACDIVE
+  taxon_label: Vibrio astriarenae
+  association_count: 1
+  rank: 25
+  candidate_pool: 73
+curation_history:
+- timestamp: '2026-08-16T05:58:02Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD. Grounding:
+    EXACT.'
+- timestamp: '2026-08-17T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to ENVO:01001179 ''cnidarian-associated environment'' (EXACT).
+    Adversarial review of #120 (#123): #114 correctly reversed this from NOT_APPLICABLE
+    — a cnidarian host is a habitat — but overshot by making it a term-request candidate.
+    The term already exists: ENVO:01001179 ''cnidarian-associated environment'', ''an
+    environmental system determined by a cnidarian or part of a cnidarian'', present
+    in the vendored slice with that exact label. Requesting it would have been requesting
+    a duplicate. Grounded EXACT. Note that GROUND does not carry an xref the way NOT_APPLICABLE
+    and CONFIRM_UNGROUNDED do, so the taxon link (mesh:D003063 / mesh:D037421) is
+    not retained on the record; the upstream mapping remains in data/raw/. Found by
+    the deep research run in #120, which is the point of running it. (source concept
+    habitatmech:BACDIVE.ef2153283d)'
+- timestamp: '2026-08-17T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to ENVO:01001179 ''cnidarian-associated environment'' (EXACT).
+    Adversarial review of #120 (#123): #114 correctly reversed this from NOT_APPLICABLE
+    — a cnidarian host is a habitat — but overshot by making it a term-request candidate.
+    The term already exists: ENVO:01001179 ''cnidarian-associated environment'', ''an
+    environmental system determined by a cnidarian or part of a cnidarian'', present
+    in the vendored slice with that exact label. Requesting it would have been requesting
+    a duplicate. Grounded EXACT. Note that GROUND does not carry an xref the way NOT_APPLICABLE
+    and CONFIRM_UNGROUNDED do, so the taxon link (mesh:D003063 / mesh:D037421) is
+    not retained on the record; the upstream mapping remains in data/raw/. Found by
+    the deep research run in #120, which is the point of running it. (source concept
+    habitatmech:GOLD.00086e0958)'
+- timestamp: '2026-08-17T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to ENVO:01001179 ''cnidarian-associated environment'' (EXACT).
+    Adversarial review of #120 (#123): #114 correctly reversed this from NOT_APPLICABLE
+    — a cnidarian host is a habitat — but overshot by making it a term-request candidate.
+    The term already exists: ENVO:01001179 ''cnidarian-associated environment'', ''an
+    environmental system determined by a cnidarian or part of a cnidarian'', present
+    in the vendored slice with that exact label. Requesting it would have been requesting
+    a duplicate. Grounded EXACT. Note that GROUND does not carry an xref the way NOT_APPLICABLE
+    and CONFIRM_UNGROUNDED do, so the taxon link (mesh:D003063 / mesh:D037421) is
+    not retained on the record; the upstream mapping remains in data/raw/. Found by
+    the deep research run in #120, which is the point of running it. (source concept
+    habitatmech:GOLD.e3fede2aea)'
