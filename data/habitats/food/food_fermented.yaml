@@ -3,7 +3,7 @@ label: food (fermented)
 definition: Food material which has been fermented.
 definition_source: FOODON
 habitat_category: FOOD
-grounding_status: BROAD
+grounding_status: CLOSE
 mapping_status: REVIEWED
 synonyms:
 - synonym_text: Fermented
@@ -33,7 +33,28 @@ source_attestations:
   assertion_count: 645
   assertion_unit: ORGANISM
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: MADIN
+  source_id: bacdive.isolation_source:food_fermented
+  source_label: food_fermented
+  assertion_count: 173
+  assertion_unit: TAXON
 characteristic_taxa:
+- taxon_id: NCBITaxon:1004261
+  source: BACDIVE
+  taxon_label: Oceanobacillus indicireducens
+  association_count: 1
+  rank: 21
+  candidate_pool: 203
+  corroborated_by:
+  - MADIN
+- taxon_id: NCBITaxon:1007676
+  source: BACDIVE
+  taxon_label: Companilactobacillus ginsenosidimutans
+  association_count: 1
+  rank: 22
+  candidate_pool: 203
+  corroborated_by:
+  - MADIN
 - taxon_id: NCBITaxon:1580
   source: BACDIVE
   taxon_label: Levilactobacillus brevis
@@ -154,18 +175,6 @@ characteristic_taxa:
   association_count: 2
   rank: 20
   candidate_pool: 203
-- taxon_id: NCBITaxon:1004261
-  source: BACDIVE
-  taxon_label: Oceanobacillus indicireducens
-  association_count: 1
-  rank: 21
-  candidate_pool: 203
-- taxon_id: NCBITaxon:1007676
-  source: BACDIVE
-  taxon_label: Companilactobacillus ginsenosidimutans
-  association_count: 1
-  rank: 22
-  candidate_pool: 203
 - taxon_id: NCBITaxon:104097
   source: BACDIVE
   taxon_label: Acetobacter estunensis
@@ -184,6 +193,98 @@ characteristic_taxa:
   association_count: 1
   rank: 25
   candidate_pool: 203
+- taxon_id: NCBITaxon:104099
+  source: MADIN
+  taxon_label: acetobacter_mesoxydans
+  candidate_pool: 173
+- taxon_id: NCBITaxon:1045004
+  source: MADIN
+  taxon_label: Oenococcus kitaharae NRIC 0645, DSM 17330
+  candidate_pool: 173
+- taxon_id: NCBITaxon:1045854
+  source: MADIN
+  taxon_label: Weissella koreensis KACC 15510
+  candidate_pool: 173
+- taxon_id: NCBITaxon:104955
+  source: MADIN
+  taxon_label: Lactobacillus frumenti
+  candidate_pool: 173
+- taxon_id: NCBITaxon:1051653
+  source: MADIN
+  taxon_label: Lactobacillus casei A2-362
+  candidate_pool: 173
+- taxon_id: NCBITaxon:1051659
+  source: MADIN
+  taxon_label: Lactobacillus casei UCD174
+  candidate_pool: 173
+- taxon_id: NCBITaxon:1054041
+  source: MADIN
+  taxon_label: Lactobacillus yonginensis
+  candidate_pool: 173
+- taxon_id: NCBITaxon:1074467
+  source: MADIN
+  taxon_label: Lactobacillus heilongjiangensis
+  candidate_pool: 173
+- taxon_id: NCBITaxon:1076596
+  source: MADIN
+  taxon_label: Acetobacter persici
+  candidate_pool: 173
+- taxon_id: NCBITaxon:1089442
+  source: MADIN
+  taxon_label: Pediococcus damnosus 9-6b
+  candidate_pool: 173
+- taxon_id: NCBITaxon:1110509
+  source: MADIN
+  taxon_label: Methanosaeta harundinacea 6Ac
+  candidate_pool: 173
+- taxon_id: NCBITaxon:1122148
+  source: MADIN
+  taxon_label: Lactobacillus lindneri DSM 20690
+  candidate_pool: 173
+- taxon_id: NCBITaxon:1122149
+  source: MADIN
+  taxon_label: Lactobacillus malefermentans KCTC 3548
+  candidate_pool: 173
+- taxon_id: NCBITaxon:1122150
+  source: MADIN
+  taxon_label: Lactobacillus nagelii DSM 13675
+  candidate_pool: 173
+- taxon_id: NCBITaxon:1122219
+  source: MADIN
+  taxon_label: Megasphaera cerevisiae DSM 20462
+  candidate_pool: 173
+- taxon_id: NCBITaxon:1122618
+  source: MADIN
+  taxon_label: Oenococcus oeni DSM 20252
+  candidate_pool: 173
+- taxon_id: NCBITaxon:1123687
+  source: MADIN
+  taxon_label: Lactobacillus porcinae
+  candidate_pool: 173
+- taxon_id: NCBITaxon:114090
+  source: MADIN
+  taxon_label: pediococcus_inopinatus
+  candidate_pool: 173
+- taxon_id: NCBITaxon:115541
+  source: MADIN
+  taxon_label: Lactobacillus coryniformis subsp. coryniformis
+  candidate_pool: 173
+- taxon_id: NCBITaxon:1167631
+  source: MADIN
+  taxon_label: Oenococcus oeni AWRIB318
+  candidate_pool: 173
+- taxon_id: NCBITaxon:120045
+  source: MADIN
+  taxon_label: Zymomonas mobilis subsp. mobilis
+  candidate_pool: 173
+- taxon_id: NCBITaxon:1202668
+  source: MADIN
+  taxon_label: Lactobacillus oryzae
+  candidate_pool: 173
+- taxon_id: NCBITaxon:1206774
+  source: MADIN
+  taxon_label: Oenococcus oeni AWRIB568
+  candidate_pool: 173
 curation_history:
 - timestamp: '2026-08-12T00:00:00Z'
   curator: claude-opus-5
@@ -200,5 +301,20 @@ curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD. Grounding:
-    BROAD.'
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD, MADIN. Grounding:
+    CLOSE.'
+- timestamp: '2026-08-17T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to FOODON:00001258 ''food (fermented)'' (CLOSE). Definitions-from-research
+    pass (#110): the third case where the research found an existing term rather than
+    a gap, after Cnidaria (#123) and Fungi (#124). FOODON:00001258 ''food (fermented)''
+    — ''food material which has been fermented'' — is in the vendored slice, and the
+    corpus ALREADY grounds the equivalent BacDive ''Fermented'' bin to it. Leaving
+    this minted published two HabitatMech identifiers for one concept and split 173
+    Madin taxa from the 242 BacDive strains that belong on the same record. CLOSE
+    rather than EXACT because the bin misses both ways: it under-covers FoodOn, which
+    includes post-fermentation-killed products such as baked bread that are never
+    an isolation source, and over-covers it with malted barley and vinegar pickles.
+    ENVO is not an option here at all — it obsoleted its food branch and redirects
+    to FoodOn. (source concept habitatmech:BACDIVE.2b1959f1f0)'

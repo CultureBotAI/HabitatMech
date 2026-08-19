@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>food (fermented) — HabitatMech</title>
-<meta name="description" content="food (fermented) (FOODON:00001258): a microbial habitat harmonized from BACDIVE, GOLD.">
+<meta name="description" content="food (fermented) (FOODON:00001258): a microbial habitat harmonized from BACDIVE, GOLD, MADIN.">
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -22,7 +22,7 @@
 <p class="meta">
   <code class="curie">FOODON:00001258</code>
 <span class="sep">·</span><a href="http://purl.obolibrary.org/obo/FOODON_00001258">resolve</a>  <span class="sep">·</span><a href="../category/food.html">FOOD</a>
-  <span class="sep">·</span><span class="pill">BROAD</span>
+  <span class="sep">·</span><span class="pill">CLOSE</span>
   <span class="pill">REVIEWED</span>
 </p>
 
@@ -47,6 +47,12 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
     <td class="num">645</td>
     <td>ORGANISM</td>
   </tr>
+  <tr>
+    <td><span class="pill plain">MADIN</span></td>
+    <td>food_fermented</td>
+    <td class="num">173</td>
+    <td>TAXON</td>
+  </tr>
 </table>
 
 <h2>Broader habitats</h2>
@@ -65,6 +71,20 @@ second, independent source are listed first.</p>
 <table>
   <caption>Taxa reported from this habitat</caption>
   <thead><tr><th scope="col">Taxon</th><th scope="col">Source</th><th scope="col" class="num">Rank</th><th scope="col" class="num">Pool</th><th scope="col">Corroborated</th></tr></thead>
+  <tr>
+    <td><em>Oceanobacillus indicireducens</em> <code class="curie">NCBITaxon:1004261</code></td>
+    <td><span class="pill plain">BACDIVE</span></td>
+    <td class="num">21</td>
+    <td class="num">203</td>
+    <td><span class="pill">MADIN</span> </td>
+  </tr>
+  <tr>
+    <td><em>Companilactobacillus ginsenosidimutans</em> <code class="curie">NCBITaxon:1007676</code></td>
+    <td><span class="pill plain">BACDIVE</span></td>
+    <td class="num">22</td>
+    <td class="num">203</td>
+    <td><span class="pill">MADIN</span> </td>
+  </tr>
   <tr>
     <td><em>Levilactobacillus brevis</em> <code class="curie">NCBITaxon:1580</code></td>
     <td><span class="pill plain">BACDIVE</span></td>
@@ -206,20 +226,6 @@ second, independent source are listed first.</p>
     <td></td>
   </tr>
   <tr>
-    <td><em>Oceanobacillus indicireducens</em> <code class="curie">NCBITaxon:1004261</code></td>
-    <td><span class="pill plain">BACDIVE</span></td>
-    <td class="num">21</td>
-    <td class="num">203</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td><em>Companilactobacillus ginsenosidimutans</em> <code class="curie">NCBITaxon:1007676</code></td>
-    <td><span class="pill plain">BACDIVE</span></td>
-    <td class="num">22</td>
-    <td class="num">203</td>
-    <td></td>
-  </tr>
-  <tr>
     <td><em>Acetobacter estunensis</em> <code class="curie">NCBITaxon:104097</code></td>
     <td><span class="pill plain">BACDIVE</span></td>
     <td class="num">23</td>
@@ -241,7 +247,7 @@ second, independent source are listed first.</p>
     <td></td>
   </tr>
 </table>
-
+<p class="meta">Showing 25 of 48 kept associations.</p>
 
 <h2>Also called</h2>
 <ul class="plain">
@@ -260,6 +266,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">GROUND</span>
     <span class="meta">2026-08-12 · claude-opus-5</span>
     <p>Grounded to FOODON:00001258 &#39;food (fermented)&#39; (BROAD). Fermented beverages. The vendored FOODON slice has no fermented-beverage term, only the general fermented-food class, which is broader than the source concept. (source concept habitatmech:GOLD.b2c3ae1ed5)</p>
+  </li>
+  <li>
+    <span class="pill">GROUND</span>
+    <span class="meta">2026-08-17 · claude-opus-5</span>
+    <p>Grounded to FOODON:00001258 &#39;food (fermented)&#39; (CLOSE). Definitions-from-research pass (#110): the third case where the research found an existing term rather than a gap, after Cnidaria (#123) and Fungi (#124). FOODON:00001258 &#39;food (fermented)&#39; — &#39;food material which has been fermented&#39; — is in the vendored slice, and the corpus ALREADY grounds the equivalent BacDive &#39;Fermented&#39; bin to it. Leaving this minted published two HabitatMech identifiers for one concept and split 173 Madin taxa from the 242 BacDive strains that belong on the same record. CLOSE rather than EXACT because the bin misses both ways: it under-covers FoodOn, which includes post-fermentation-killed products such as baked bread that are never an isolation source, and over-covers it with malted barley and vinegar pickles. ENVO is not an option here at all — it obsoleted its food branch and redirects to FoodOn. (source concept habitatmech:BACDIVE.2b1959f1f0)</p>
   </li>
 </ol>
 
