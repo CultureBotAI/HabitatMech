@@ -2,10 +2,13 @@ identifier: ENVO:01001041
 label: fungi-associated environment
 definition: An environmental system determined by a fungal structure.
 definition_source: ENVO
-habitat_category: OTHER
+habitat_category: HOST_ASSOCIATED
 grounding_status: EXACT
 mapping_status: REVIEWED
 synonyms:
+- synonym_text: Fungi
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
 - synonym_text: fungus environment
   synonym_type: EXACT_SYNONYM
   source: ENVO
@@ -20,6 +23,14 @@ source_attestations:
   source_id: host_fungus
   source_label: host_fungus
   notes: Physicochemical parameter bands from kg-microbe's environment table.
+- source: GOLD
+  source_id: gold.ecosystem:3376
+  source_label: Fungi
+  source_path: Host-associated > Fungi
+  mapping_predicate: skos:exactMatch
+  assertion_count: 635
+  assertion_unit: ORGANISM
+  notes: 4 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 - source: MADIN
   source_id: ENVO:01001041
   source_label: fungi-associated environment
@@ -172,5 +183,16 @@ curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, MADIN.
-    Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD,
+    MADIN. Grounding: EXACT.'
+- timestamp: '2026-08-17T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to ENVO:01001041 ''fungi-associated environment'' (EXACT). Definitions-from-research
+    pass (#110): the research run recommended GROUND rather than a term request, and
+    it is right — the same over-correction #123 found for Cnidaria. #114 rightly undid
+    NOT_APPLICABLE, because a fungal host is a habitat, but moved this to CONFIRM_UNGROUNDED
+    when a third option existed all along: ENVO:01001041 ''fungi-associated environment''
+    is in the vendored slice with that exact label. Grounding merges GOLD''s 635 organism
+    assertions onto the record the environments table and Madin already attest, which
+    is the correct outcome rather than a side effect. (source concept habitatmech:GOLD.a8fc5001d1)'
