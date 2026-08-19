@@ -41,25 +41,21 @@ MANIFEST_COLUMNS = ["identifier", "label", "assertions", "status", "seconds", "b
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from research_habitat import (  # noqa: E402
     DEFAULT_PROVIDER,
+    completed_report,
     load_record,
-    output_path,
     resolve_provider,
     undefined_novel_terms,
 )
 
 
 def already_done(identifier: str, provider: str) -> Path | None:
-    """The report this record would resume from, if it exists and is non-empty.
-
-    Zero-length counts as not done: a truncated file is worse than a missing
-    one, because resume would skip it forever.
-    """
+    """Delegates to research_habitat.completed_report so the runner and the
+    script cannot disagree about what resume means (#122)."""
     try:
         _path, doc = load_record(identifier)
     except SystemExit:
         return None
-    out = output_path(doc, provider)
-    return out if out.exists() and out.stat().st_size else None
+    return completed_report(doc, provider)
 
 
 # Lines that are the wrapper failing, not the provider explaining why. Taking

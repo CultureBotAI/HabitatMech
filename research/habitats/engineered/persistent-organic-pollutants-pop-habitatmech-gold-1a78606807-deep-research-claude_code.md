@@ -373,3 +373,9 @@ It passes the tests this corpus applies: it denotes a material sampled from a ph
 24. https://doi.org/10.1186/s13326-016-0097-6
 25. https://www.ebi.ac.uk/ols4/
 26. https://doi.org/10.1128/mra.01126-21
+
+---
+
+> **Citation check (#121).** The following DOI(s) cited above resolve nowhere, at Crossref or doi.org, and should not be followed or repeated in a definition:
+>
+> - `10.3389/fmicb.2022.1112391`

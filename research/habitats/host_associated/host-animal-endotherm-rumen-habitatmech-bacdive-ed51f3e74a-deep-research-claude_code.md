@@ -290,3 +290,9 @@ habitatmech:BACDIVE.ed51f3e74a	GROUND	UBERON:0007365	rumen	CLOSE	<curator>	<date
 17. https://doi.org/10.1038/ismej.2011.131
 18. https://doi.org/10.1126/science.245.4923.1236
 19. http://purl.obolibrary.org/obo/BTO_0001194
+
+---
+
+> **Citation check (#121).** The following DOI(s) cited above resolve nowhere, at Crossref or doi.org, and should not be followed or repeated in a definition:
+>
+> - `10.1016/B978-1-4832-3308-6.X5001-4`
