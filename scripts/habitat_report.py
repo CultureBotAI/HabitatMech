@@ -615,6 +615,59 @@ def _same_as_candidates(records: list[tuple[Path, dict]]) -> list[tuple]:
     return sorted(out, reverse=True)
 
 
+def _triad_evidence(records: list[tuple[Path, dict]]) -> list[tuple]:
+    """Minted records whose GOLD path carries an ENVO triad, ranked by how much
+    INDEPENDENT evidence stands behind it.
+
+    GOLD's submitters annotate biosamples with a MIxS triad — env_broad_scale,
+    env_local_scale, env_medium. For a record this corpus minted because no
+    label matched, that is evidence of a completely different kind: what the
+    people who took the sample said its environment was, rather than what a
+    string looked like.
+
+    **Ranked by agreeing STUDIES, not samples, and that is the whole point.**
+    Of 140 paths where every sample agrees, 122 are one study repeating itself
+    — `Environmental > Air > Indoor Air > Dust` is unanimous across 116 samples
+    for `sports facility`, which is a fact about one study of a sports centre
+    and not about indoor dust. Ranking by sample count puts exactly that case
+    on top. Only 18 unanimous paths have two or more studies behind them.
+
+    Ranks; does not decide. A triad is three terms and none of them is
+    automatically the record's identity: env_medium is often the material,
+    env_broad_scale a biome, and which — if any — the concept IS remains a
+    curation judgement. Nothing here bypasses the label-verification gate.
+    """
+    triads = REPO_ROOT / "data" / "raw" / "gold_path_triads.tsv"
+    if not triads.exists():
+        return []
+    by_path: dict[str, dict[str, dict]] = defaultdict(dict)
+    with triads.open(newline="", encoding="utf-8") as fh:
+        for row in csv.DictReader(fh, delimiter="\t"):
+            by_path[row["canonical_path"]][row["slot"]] = row
+
+    out = []
+    for _, doc in records:
+        identifier = doc.get("identifier", "")
+        if not identifier.startswith("habitatmech:"):
+            continue
+        for attestation in doc.get("source_attestations") or []:
+            path = attestation.get("source_path") or ""
+            if attestation.get("source") != "GOLD" or path not in by_path:
+                continue
+            slots = by_path[path]
+            # A slot counts as corroborated only when two independent studies
+            # assert the same term for it.
+            corroborated = sum(
+                1 for s in ("broad", "local", "medium")
+                if s in slots and int(slots[s]["studies_agreeing"]) >= 2
+                and slots[s]["distinct_terms"] == "1"
+            )
+            studies = max(int(slots[s]["studies"]) for s in slots)
+            out.append((corroborated, studies, doc.get("label", ""), path, identifier, slots))
+            break
+    return sorted(out, key=lambda r: (-r[0], -r[1]))
+
+
 def _coverage_over_ontologies(records: list[tuple[Path, dict]]) -> tuple[Counter, Counter]:
     """Split the corpus by whether an ontology already names each concept.
 
@@ -975,6 +1028,27 @@ def main(argv: list[str] | None = None) -> int:
               f"{[(i.split('.')[0].replace('habitatmech:', ''), v) for i, _s, v in members]}")
     if not same_as:
         print("  none — no novel label is shared across sources")
+
+    triads = _triad_evidence(records)
+    if triads:
+        strong = [t for t in triads if t[0] >= 1]
+        print(f"\n=== {len(triads)} minted record(s) whose GOLD path carries an ENVO triad ===")
+        print("  (what the submitters said the environment was, which is a different kind of")
+        print("   evidence from a label match. Ranked by INDEPENDENT studies agreeing, not")
+        print("   samples: of 140 paths where every sample agrees, 122 are one study repeating")
+        print("   itself. Ranks; a triad is three terms and which is the identity is a")
+        print("   judgement.)")
+        print(f"  {len(strong)} have at least one slot corroborated by 2+ studies")
+        for corrob, studies, label, path, identifier, slots in triads[: args.ungrounded_top or None]:
+            if not corrob:
+                continue
+            print(f"  [{corrob}/3 corroborated, {studies} studies]  {label[:24]:24s} {identifier}")
+            print(f"       path: {path[:70]}")
+            for slot in ("broad", "local", "medium"):
+                row = slots.get(slot)
+                if row:
+                    print(f"       {slot:6s} {row['top_term']:16s} {row['top_label'][:28]:28s} "
+                          f"share={row['top_share']} studies={row['studies_agreeing']}")
 
     kinds, kind_assertions = _coverage_over_ontologies(records)
     total = sum(kinds.values())
