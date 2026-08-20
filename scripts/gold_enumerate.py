@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Walk GOLD proposal ids to reach biosamples and their ENVO triads.
+"""Fetch GOLD biosample ENVO triads, seeded from GOLD's own bulk export.
 
 GOLD's API refuses an unfiltered query — every endpoint demands one of
 studyGoldId, itsProposalId, organismGoldId, biosampleGoldId or apGoldId — and
@@ -7,10 +7,16 @@ the bulk Excel export at gold.jgi.doe.gov/download?mode=site_excel is broken
 server-side: it declares ~239 MB and closes the connection early, at a different
 point on each attempt (29 MB, 53 MB, 95 MB observed).
 
-That leaves enumeration. `itsProposalId` is an integer and appears dense enough
-to walk: 503125 answers, 1234 does not. The chain is
+Enumeration was tried and abandoned: only 0.8% of proposal ids answer, and GOLD
+returns 429 after roughly a dozen requests in four seconds, so a sweep would
+spend a throttled budget on 404s. `--probe` still measures that, because the
+number is the argument.
 
-    proposal -> studies -> biosamples -> ENVO triad + ecosystem path
+The route that works is `--studies`, seeded from data/raw/gold_studies.tsv:
+GOLD's export says which 4,587 studies have a biosample on a path this corpus
+holds, so every request hits something.
+
+    study -> biosamples -> ENVO triad + ecosystem path
 
 **Probe before you sweep.** GOLD has 63,802 studies and 244,653 biosamples
 behind someone else's service. A full walk is tens of thousands of requests, and
@@ -69,16 +75,56 @@ def normalise_curie(value: str | None) -> str:
     return (value or "").replace("_", ":", 1) if value else ""
 
 
+# Statuses that are an ANSWER and worth remembering. 404 belongs here: in a
+# sparse id space it is the common reply and re-asking is pure waste. 429 and
+# 5xx emphatically do not — caching a throttle would mark a study permanently
+# empty, and a sweep would quietly return less data every time it was retried.
+CACHEABLE = {200, 404}
+
+# Backoff on 429. GOLD documents no rate limit; a dozen requests in four seconds
+# was enough to trip one, so this waits rather than hammering through it.
+THROTTLE_BACKOFF = (5, 20, 60)
+
+
+def _fetch(url: str, headers: dict[str, str]) -> tuple[int, str]:
+    """_get, but a network hiccup does not end a 4,587-request sweep.
+
+    The first full run died 4,026 requests in on a single `TimeoutError` from an
+    SSL read. Everything already fetched was safe in the cache, but an
+    unretried transport error taking down the remaining 561 is a bug, not bad
+    luck: over thousands of requests a slow response is certain, not possible.
+
+    Returns 0 as the status when the transport never produced one, which the
+    caller treats as uncacheable — an unanswered request must not be remembered
+    as an answer.
+    """
+    for attempt in range(3):
+        try:
+            return _get(url, headers)
+        except Exception:
+            if attempt == 2:
+                return 0, ""
+            time.sleep(5 * (attempt + 1))
+    return 0, ""
+
+
 def cached_get(url: str, headers: dict[str, str], cache_key: str) -> tuple[int, str]:
-    """A disk-cached GET. 404s are cached too — in a sparse id space they are
-    the common answer, and re-probing a known gap is pure waste."""
+    """A disk-cached GET that only caches answers, never throttles."""
     CACHE.mkdir(parents=True, exist_ok=True)
     path = CACHE / f"{hashlib.sha1(cache_key.encode()).hexdigest()}.json"
     if path.exists():
         blob = json.loads(path.read_text(encoding="utf-8"))
         return blob["status"], blob["body"]
-    status, body = _get(url, headers)
-    path.write_text(json.dumps({"status": status, "body": body}), encoding="utf-8")
+
+    status, body = _fetch(url, headers)
+    for wait in THROTTLE_BACKOFF:
+        if status != 429:
+            break
+        time.sleep(wait)
+        status, body = _fetch(url, headers)
+
+    if status in CACHEABLE:
+        path.write_text(json.dumps({"status": status, "body": body}), encoding="utf-8")
     time.sleep(DELAY_SECONDS)
     return status, body
 
