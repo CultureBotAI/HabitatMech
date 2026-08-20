@@ -4,7 +4,7 @@ definition: An underground layer of water-bearing permeable rock or unconsolidat
   materials (gravel, sand, silt, or clay) from which groundwater can be usefully extracted
   using a water well.
 definition_source: ENVO
-habitat_category: OTHER
+habitat_category: AQUATIC
 grounding_status: EXACT
 mapping_status: SEEDED
 synonyms:
@@ -13,7 +13,15 @@ synonyms:
   source: PREGO
 parent_habitats:
 - ENVO:01001275
+- habitatmech:GOLD.7f8e268653
 source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5430
+  source_label: Aquifer
+  source_path: Environmental > Aquatic > Freshwater > Groundwater > Aquifer
+  mapping_predicate: skos:exactMatch
+  assertion_count: 5
+  assertion_unit: ORGANISM
 - source: PREGO
   source_id: ENVO:00012408
   source_label: aquifer
@@ -175,4 +183,17 @@ curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'
+- timestamp: '2026-08-20T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to ENVO:00012408 ''aquifer'' (EXACT). Triad-evidence review (#126):
+    GOLD''s submitters annotate each biosample with a MIxS ENVO triad, and this concept''s
+    path carries 4 INDEPENDENT studies all asserting local = ENVO:00012408 ''aquifer''.
+    That is evidence of a different kind from a label match — what the people who
+    took the samples said the environment was. Study count is what is quoted rather
+    than sample count because 122 of 140 unanimous paths are one study repeating itself;
+    this one is corroborated across 4. The term is claimed only by PREGO''s ''aquifer'',
+    so grounding merges GOLD''s aquifer with PREGO''s, which is the multi-source corroboration
+    this corpus is built to record. (source concept habitatmech:GOLD.9f7a6c66a7)'

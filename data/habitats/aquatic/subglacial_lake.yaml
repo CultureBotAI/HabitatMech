@@ -1,20 +1,64 @@
-identifier: habitatmech:GOLD.7a082e8e9f
-label: Subglacial lake
+identifier: ENVO:03000120
+label: subglacial lake
+definition: A lake which is situated beneath a glacier.
+definition_source: ENVO
 habitat_category: AQUATIC
-grounding_status: NARROW
-mapping_status: SEEDED
+grounding_status: EXACT
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: subglacial lakes
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
 parent_habitats:
-- ENVO:03000120
+- ENVO:00000198
+- ENVO:00002011
 - habitatmech:GOLD.21222434e2
 source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:3794
+  source_label: Subglacial lake
+  source_path: Environmental > Aquatic > Freshwater > Subglacial lake
+  mapping_predicate: skos:exactMatch
+  assertion_count: 3
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 - source: GOLD
   source_id: gold.ecosystem:7670
   source_label: Subglacial lake
   source_path: Environmental > Aquatic > Deep subsurface > Subglacial lake
-  mapping_predicate: skos:narrowMatch
+  mapping_predicate: skos:exactMatch
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-08-20T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to ENVO:03000120 ''subglacial lake'' (EXACT). Triad-evidence
+    review (#126): GOLD''s submitters annotate each biosample with a MIxS ENVO triad,
+    and this concept''s path carries 3 INDEPENDENT studies all asserting local = ENVO:03000120
+    ''subglacial lake''. That is evidence of a different kind from a label match —
+    what the people who took the samples said the environment was. Study count is
+    what is quoted rather than sample count because 122 of 140 unanimous paths are
+    one study repeating itself; this one is corroborated across 3. The Deep subsurface
+    half of the same tie; see the Freshwater path''s note. Grounding both is what
+    merges them into the one concept they describe. (source concept habitatmech:GOLD.7a082e8e9f)'
+- timestamp: '2026-08-20T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to ENVO:03000120 ''subglacial lake'' (EXACT). Triad-evidence
+    review (#126): GOLD''s submitters annotate each biosample with a MIxS ENVO triad,
+    and this concept''s path carries 3 INDEPENDENT studies all asserting local = ENVO:03000120
+    ''subglacial lake''. That is evidence of a different kind from a label match —
+    what the people who took the samples said the environment was. Study count is
+    what is quoted rather than sample count because 122 of 140 unanimous paths are
+    one study repeating itself; this one is corroborated across 3. This breaks a tie
+    the lexical rule leaves unbroken by design. Two GOLD paths end in ''Subglacial
+    lake'' at the SAME depth — under Freshwater and under Deep subsurface — and the
+    ambiguous-leaf rule leaves ties unclaimed because there is no principled lexical
+    winner, so ENVO:03000120 sat unclaimed. The triad supplies what the rule could
+    not: three studies agree the local scale is subglacial lake. Both paths are grounded,
+    which merges them, because a subglacial lake is one concept GOLD happens to file
+    twice. (source concept habitatmech:GOLD.c5a94d7484)'

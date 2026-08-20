@@ -1,0 +1,53 @@
+identifier: ENVO:00000232
+label: fen
+definition: A freshwater peat land with chemically basic (which roughly means alkaline)
+  ground water.
+definition_source: ENVO
+habitat_category: TERRESTRIAL
+grounding_status: EXACT
+mapping_status: SEEDED
+synonyms:
+- synonym_text: wetland
+  synonym_type: EXACT_SYNONYM
+  source: ENVO
+parent_habitats:
+- ENVO:00000044
+- ENVO:00005774
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5804
+  source_label: Fen
+  source_path: Environmental > Terrestrial > Soil > Peat > Fen
+  mapping_predicate: skos:exactMatch
+- source: PREGO
+  source_id: ENVO:00000232
+  source_label: fen
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:877455
+  source: PREGO
+  taxon_label: Methanobacterium lacus
+  score: 4.0
+  rank: 1
+  candidate_pool: 1
+curation_history:
+- timestamp: '2026-08-16T05:58:02Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
+    EXACT.'
+- timestamp: '2026-08-20T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to ENVO:00000232 ''fen'' (EXACT). Triad-evidence review (#126):
+    GOLD''s submitters annotate each biosample with a MIxS ENVO triad, and this concept''s
+    path carries 3 INDEPENDENT studies all asserting local = ENVO:00000232 ''fen''.
+    That is evidence of a different kind from a label match — what the people who
+    took the samples said the environment was. Study count is what is quoted rather
+    than sample count because 122 of 140 unanimous paths are one study repeating itself;
+    this one is corroborated across 3. The term is claimed only by PREGO''s ''fen''.
+    A fen under Soil > Peat is the same wetland PREGO names; grounding merges them.
+    (source concept habitatmech:GOLD.7aa9e7da9a)'
