@@ -2,7 +2,7 @@ identifier: ENVO:00001997
 label: acid mine drainage
 definition: A mine drainage with an acidic pH.
 definition_source: ENVO
-habitat_category: ENGINEERED
+habitat_category: AQUATIC
 grounding_status: EXACT
 mapping_status: REVIEWED
 synonyms:
@@ -21,7 +21,15 @@ synonyms:
 parent_habitats:
 - ENVO:00001996
 - ENVO:01000964
+- habitatmech:GOLD.7f8e268653
 source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:4164
+  source_label: Acid Mine Drainage
+  source_path: Environmental > Aquatic > Freshwater > Groundwater > Acid Mine Drainage
+  mapping_predicate: skos:exactMatch
+  assertion_count: 18
+  assertion_unit: ORGANISM
 - source: GOLD
   source_id: gold.ecosystem:6075
   source_label: Acid mine drainage
@@ -80,3 +88,19 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-08-20T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to ENVO:00001997 ''acid mine drainage'' (EXACT). Triad-evidence
+    review (#126): GOLD''s submitters annotate each biosample with a MIxS ENVO triad,
+    and this concept''s path carries 14 INDEPENDENT studies all asserting local =
+    ENVO:00001997 ''acid mine drainage''. That is evidence of a different kind from
+    a label match — what the people who took the samples said the environment was.
+    Study count is what is quoted rather than sample count because 122 of 140 unanimous
+    paths are one study repeating itself; this one is corroborated across 14. The
+    record was minted by the ambiguous-leaf rule because a shallower GOLD path, Engineered
+    > Wastewater > Industrial wastewater > Acid mine drainage, already claimed the
+    term. Both paths denote acid mine drainage; GOLD files the same concept under
+    two branches. Grounding merges them, which is right — unlike the Sediment cases,
+    this is a specific kind of place rather than a material that occurs in many settings.
+    (source concept habitatmech:GOLD.d727388954)'
