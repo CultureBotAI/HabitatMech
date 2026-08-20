@@ -11,6 +11,8 @@ from __future__ import annotations
 import re
 from collections import Counter
 
+import pytest
+
 # Every source that mints keys. PREGO and ENVIRONMENTS_TABLE were absent while
 # only GOLD and BacDive minted, so the pattern silently stopped covering them as
 # each new source became curatable — keep this in step with mint() callers.
@@ -422,3 +424,124 @@ def test_no_record_is_counted_as_covered_by_a_term_it_only_hangs_under(repo_root
     assert minted_under_envo, "no minted record hangs under an ENVO term — check the fixture"
     assert kinds["refines_envo"] == len(minted_under_envo)
     assert kinds["named_by_envo"] + kinds["named_by_other_obo"] < len(records)
+
+
+def test_triad_evidence_ranks_by_studies_not_samples(repo_root, records):
+    """The ranking's whole value is that it counts independent studies.
+
+    Of 140 GOLD paths where every biosample agrees on a triad, 122 are one study
+    repeating itself. `Environmental > Air > Indoor Air > Dust` is unanimous
+    across 116 samples for `sports facility` — a fact about one study of a
+    sports centre, not about indoor dust. A screen ranked by sample count puts
+    exactly that case first and calls it the strongest evidence in the corpus.
+
+    So this asserts the ordering is by corroborating studies, and that a
+    single-study path can never outrank a multi-study one however many samples
+    it has.
+    """
+    import csv
+    import sys
+
+    sys.path.insert(0, str(repo_root / "scripts"))
+    import habitat_report as report
+
+    ranked = report._triad_evidence(records)
+    if not ranked:
+        pytest.skip("no GOLD triad inventory present")
+
+    corroborated = [row[0] for row in ranked]
+    assert corroborated == sorted(corroborated, reverse=True), (
+        "ranking is not ordered by corroborated slots first"
+    )
+
+    # A slot only counts as corroborated when 2+ studies assert the same term.
+    triads = repo_root / "data" / "raw" / "gold_path_triads.tsv"
+    with triads.open(newline="", encoding="utf-8") as fh:
+        rows = list(csv.DictReader(fh, delimiter="\t"))
+    single_study_unanimous = [
+        r for r in rows
+        if r["distinct_terms"] == "1" and int(r["studies_agreeing"]) < 2
+    ]
+    assert single_study_unanimous, (
+        "no single-study unanimous slot in the inventory — the case this "
+        "ranking exists to demote is absent, so the test proves nothing"
+    )
+    top = [r for r in ranked if r[0] > 0]
+    assert top, "nothing is corroborated by 2+ studies; the screen would be empty"
+
+
+def test_triad_inventory_records_study_counts(repo_root):
+    """Without `studies_agreeing` the inventory cannot distinguish agreement
+    from repetition, and every consumer of it would have to re-derive that from
+    the 39 MB per-biosample file that is deliberately not committed."""
+    import csv
+
+    triads = repo_root / "data" / "raw" / "gold_path_triads.tsv"
+    if not triads.exists():
+        pytest.skip("no GOLD triad inventory present")
+    with triads.open(newline="", encoding="utf-8") as fh:
+        reader = csv.DictReader(fh, delimiter="\t")
+        assert "studies_agreeing" in (reader.fieldnames or [])
+        assert "studies" in (reader.fieldnames or [])
+        for row in reader:
+            assert int(row["studies_agreeing"]) <= int(row["studies"]), (
+                f"{row['canonical_path']}: more studies agree than exist"
+            )
+
+
+def test_triad_evidence_only_offers_groundable_terms(repo_root, records):
+    """A slot is only evidence if its term could ever become a grounding.
+
+    Two ways it cannot, both present in the inventory (#130): absent from the
+    vendored slice, which the seeder's label check would refuse — 41 slots,
+    including five prefixes this repo does not vendor and `ENVO:00002002
+    "obsolete food product"`, a deprecated term GOLD still annotates live
+    biosamples with — or an organism, like `NCBITaxon:662107 "phyllosphere
+    metagenome"` appearing as an env_local_scale.
+
+    Every one is filtered out today anyway, because thinly evidenced
+    annotations are also the malformed ones. This asserts it as a property
+    rather than the luck it was: the inventory must still CONTAIN such slots,
+    or the test proves nothing.
+    """
+    import collections
+    import csv
+    import sys
+
+    sys.path.insert(0, str(repo_root / "scripts"))
+    import habitat_report as report
+
+    triads = repo_root / "data" / "raw" / "gold_path_triads.tsv"
+    if not triads.exists():
+        pytest.skip("no GOLD triad inventory present")
+
+    slice_terms = report._slice_term_labels()
+    parents = collections.defaultdict(list)
+    with (repo_root / "data" / "raw" / "ontology_subclass_edges.tsv").open(
+        newline="", encoding="utf-8"
+    ) as fh:
+        for row in csv.DictReader(fh, delimiter="\t"):
+            parents[row["subject"]].append(row["object"])
+
+    with triads.open(newline="", encoding="utf-8") as fh:
+        rows = list(csv.DictReader(fh, delimiter="\t"))
+    ungroundable = [
+        r for r in rows
+        if r["top_term"] not in slice_terms
+        or report._is_organism(r["top_term"], parents)
+    ]
+    assert ungroundable, (
+        "the inventory contains no ungroundable slot, so this test cannot show "
+        "the filter works"
+    )
+
+    offered = {
+        row["top_term"]
+        for _c, _s, _l, _p, _i, slots in report._triad_evidence(records)
+        for row in slots.values()
+    }
+    leaked = [
+        t for t in offered
+        if t not in slice_terms or report._is_organism(t, parents)
+    ]
+    assert not leaked, f"ranked slots whose term cannot be grounded: {leaked[:5]}"
