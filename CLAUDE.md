@@ -158,6 +158,38 @@ parenting it publish the same over-claim, one as identity and one as an is-a
 (#99). `relation: xref` keeps the link upstream saw without this repo asserting
 one.
 
+**MIxS already says most of this, and citing it beats asserting it.** The rules
+below were derived here the expensive way and then found, verbatim, in ENVO's
+own guidance for the MIxS environmental triad
+(<https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS>).
+Where a rule has an external source, cite it — a standards body is a better
+authority than a decision someone in this repo made and wrote down.
+
+> `env_broad_scale` ... should describe an environmental system or an
+> ecosystem, **not a process, material, or single object (e.g. a tree) or a
+> group of objects (e.g. a stand of trees)**.
+
+That single sentence is #109 and #114 and half of #112. "Not a process" is why
+`Biotransformation` is NOT_APPLICABLE. "Not a single object (e.g. a tree)" is
+the whole-organism rule. "Not a group of objects" is why a taxonomic grouping
+like FOODON's *algae* can never be a habitat, which cost 14 records to learn.
+
+> `env_local_scale` entries should use terms from an ontology such as UBERON or
+> PO to describe the anatomical parts of the host.
+
+That is the parts-of-a-host rule, sanctioned by the standard rather than
+invented here.
+
+> `env_medium` should always refer to the materials that compose your sample.
+
+Which is why a triad's `env_medium` is usually the material and almost never
+the record's identity.
+
+One correction this document owes: `env_broad_scale` for a host-associated
+sample "should reflect the ecosystem the host is found in (e.g. an urban
+biome)". So GOLD annotating reptile faeces with *urban biome* is the standard
+being followed, not the artefact of captive animals it looks like.
+
 **A host's PARTS ground to the anatomy term; the WHOLE host organism does not.**
 This is the line that decides every organism-as-habitat case, and getting it
 wrong twice is what #114 and #112 cost. `gut`, `skin`, `lung` and `blood` are
