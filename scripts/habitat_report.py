@@ -615,6 +615,15 @@ def _same_as_candidates(records: list[tuple[Path, dict]]) -> list[tuple]:
     return sorted(out, reverse=True)
 
 
+def _slice_term_labels() -> dict[str, str]:
+    """term id -> label for the vendored slice, empty when it is absent."""
+    path = REPO_ROOT / "data" / "raw" / "ontology_terms.tsv"
+    if not path.exists():
+        return {}
+    with path.open(newline="", encoding="utf-8") as fh:
+        return {r["term_id"]: r["label"] for r in csv.DictReader(fh, delimiter="\t")}
+
+
 def _triad_evidence(records: list[tuple[Path, dict]]) -> list[tuple]:
     """Minted records whose GOLD path carries an ENVO triad, ranked by how much
     INDEPENDENT evidence stands behind it.
@@ -640,10 +649,38 @@ def _triad_evidence(records: list[tuple[Path, dict]]) -> list[tuple]:
     triads = REPO_ROOT / "data" / "raw" / "gold_path_triads.tsv"
     if not triads.exists():
         return []
+
+    # A slot is only evidence if its term could ever become a grounding. Two
+    # ways it cannot, both found in the inventory (#130):
+    #
+    #   * absent from the vendored slice — 41 slots, including five prefixes
+    #     this repo does not vendor at all (OBI, AISM, GSSO, MCO, MICRO) and
+    #     ENVO:00002002 "obsolete food product", a deprecated term GOLD is
+    #     still annotating live biosamples with. The seeder's label check would
+    #     refuse any of them, so ranking them wastes a curator's attention.
+    #   * an organism — NCBITaxon:662107 "phyllosphere metagenome" appears as an
+    #     env_local_scale. Per #114 a taxon is not a place, and a metagenome is
+    #     not even an organism.
+    #
+    # Every one of these is currently filtered out anyway, because thinly
+    # evidenced annotations are also the malformed ones. That is luck, and this
+    # makes it a property.
+    slice_terms = _slice_term_labels()
+    parents: dict[str, list[str]] = defaultdict(list)
+    edges = REPO_ROOT / "data" / "raw" / "ontology_subclass_edges.tsv"
+    if edges.exists():
+        with edges.open(newline="", encoding="utf-8") as fh:
+            for row in csv.DictReader(fh, delimiter="\t"):
+                parents[row["subject"]].append(row["object"])
+
+    def groundable(term: str) -> bool:
+        return bool(term) and term in slice_terms and not _is_organism(term, parents)
+
     by_path: dict[str, dict[str, dict]] = defaultdict(dict)
     with triads.open(newline="", encoding="utf-8") as fh:
         for row in csv.DictReader(fh, delimiter="\t"):
-            by_path[row["canonical_path"]][row["slot"]] = row
+            if groundable(row["top_term"]):
+                by_path[row["canonical_path"]][row["slot"]] = row
 
     out = []
     for _, doc in records:
@@ -1030,6 +1067,7 @@ def main(argv: list[str] | None = None) -> int:
         print("  none — no novel label is shared across sources")
 
     triads = _triad_evidence(records)
+    slice_labels = _slice_term_labels()
     if triads:
         strong = [t for t in triads if t[0] >= 1]
         print(f"\n=== {len(triads)} minted record(s) whose GOLD path carries an ENVO triad ===")
@@ -1047,7 +1085,12 @@ def main(argv: list[str] | None = None) -> int:
             for slot in ("broad", "local", "medium"):
                 row = slots.get(slot)
                 if row:
-                    print(f"       {slot:6s} {row['top_term']:16s} {row['top_label'][:28]:28s} "
+                    # The slice's label, not GOLD's cached one: four of GOLD's
+                    # are stale (agricultural feature -> agricultural
+                    # ecosystem), and a curator copying the wrong one into a
+                    # decision gets a hard seed failure (#131).
+                    label = slice_labels.get(row["top_term"], row["top_label"])
+                    print(f"       {slot:6s} {row['top_term']:16s} {label[:28]:28s} "
                           f"share={row['top_share']} studies={row['studies_agreeing']}")
 
     kinds, kind_assertions = _coverage_over_ontologies(records)

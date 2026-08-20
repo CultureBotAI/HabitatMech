@@ -487,3 +487,61 @@ def test_triad_inventory_records_study_counts(repo_root):
             assert int(row["studies_agreeing"]) <= int(row["studies"]), (
                 f"{row['canonical_path']}: more studies agree than exist"
             )
+
+
+def test_triad_evidence_only_offers_groundable_terms(repo_root, records):
+    """A slot is only evidence if its term could ever become a grounding.
+
+    Two ways it cannot, both present in the inventory (#130): absent from the
+    vendored slice, which the seeder's label check would refuse — 41 slots,
+    including five prefixes this repo does not vendor and `ENVO:00002002
+    "obsolete food product"`, a deprecated term GOLD still annotates live
+    biosamples with — or an organism, like `NCBITaxon:662107 "phyllosphere
+    metagenome"` appearing as an env_local_scale.
+
+    Every one is filtered out today anyway, because thinly evidenced
+    annotations are also the malformed ones. This asserts it as a property
+    rather than the luck it was: the inventory must still CONTAIN such slots,
+    or the test proves nothing.
+    """
+    import collections
+    import csv
+    import sys
+
+    sys.path.insert(0, str(repo_root / "scripts"))
+    import habitat_report as report
+
+    triads = repo_root / "data" / "raw" / "gold_path_triads.tsv"
+    if not triads.exists():
+        pytest.skip("no GOLD triad inventory present")
+
+    slice_terms = report._slice_term_labels()
+    parents = collections.defaultdict(list)
+    with (repo_root / "data" / "raw" / "ontology_subclass_edges.tsv").open(
+        newline="", encoding="utf-8"
+    ) as fh:
+        for row in csv.DictReader(fh, delimiter="\t"):
+            parents[row["subject"]].append(row["object"])
+
+    with triads.open(newline="", encoding="utf-8") as fh:
+        rows = list(csv.DictReader(fh, delimiter="\t"))
+    ungroundable = [
+        r for r in rows
+        if r["top_term"] not in slice_terms
+        or report._is_organism(r["top_term"], parents)
+    ]
+    assert ungroundable, (
+        "the inventory contains no ungroundable slot, so this test cannot show "
+        "the filter works"
+    )
+
+    offered = {
+        row["top_term"]
+        for _c, _s, _l, _p, _i, slots in report._triad_evidence(records)
+        for row in slots.values()
+    }
+    leaked = [
+        t for t in offered
+        if t not in slice_terms or report._is_organism(t, parents)
+    ]
+    assert not leaked, f"ranked slots whose term cannot be grounded: {leaked[:5]}"
