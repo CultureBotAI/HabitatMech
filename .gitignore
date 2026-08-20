@@ -36,3 +36,16 @@ local/
 
 # The batch runner's console log stays ignored: it is the tail a human watches,
 # and the manifest above is the durable record of the same run.
+
+# GOLD's bulk export. 223 MB, regenerated daily at
+# gold.jgi.doe.gov/download?mode=site_excel, and NOT reviewable — data/raw/ is
+# otherwise small inventories that verify-corpus reproduces byte-for-byte.
+# What IS committed is the derived inventory beside it, the same relationship
+# data/raw/ has to a kg-microbe checkout.
+goldData.xlsx
+
+# Triads fetched from the GOLD API, and the response cache behind them. Not
+# committed until a full sweep has actually run — a partial file in data/raw/
+# reads as the complete answer.
+data/raw/gold_biosample_triads.tsv
+build/gold_cache/

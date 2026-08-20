@@ -173,6 +173,51 @@ def probe(headers: dict[str, str], sample_size: int, low: int, high: int, seed: 
               "ask GOLD before running it.")
 
 
+def sweep_studies(headers: dict[str, str], limit: int | None) -> int:
+    """Fetch triads for the studies GOLD's own export says are worth asking about.
+
+    Enumeration was the wrong route — 0.8% of proposal ids answer, and GOLD
+    returns 429 after roughly a dozen requests in four seconds. Seeding from the
+    export removes both problems: every id exists, so nothing is wasted, and
+    4,587 studies is small enough to be polite about.
+
+    Resumable through the same on-disk cache as the probe, so an interrupted
+    sweep costs nothing to restart and a 429 is survivable rather than fatal.
+    """
+    seed = REPO_ROOT / "data" / "raw" / "gold_studies.tsv"
+    if not seed.exists():
+        raise SystemExit(f"{seed.relative_to(REPO_ROOT)} not found — run "
+                         "scripts/extract_gold_biosamples.py first")
+    with seed.open(newline="", encoding="utf-8") as fh:
+        studies = [r["study_gold_id"] for r in csv.DictReader(fh, delimiter="\t")]
+    if limit:
+        studies = studies[:limit]
+
+    rows, seen, throttled = [], set(), 0
+    for n, study in enumerate(studies, 1):
+        for sample in biosamples_for_study(study, headers):
+            key = sample.get("biosampleGoldId")
+            if key and key not in seen:
+                seen.add(key)
+                rows.append(row_of(sample, study))
+        if n % 25 == 0:
+            triads = sum(1 for r in rows if r["envo_broad_scale"])
+            print(f"    {n}/{len(studies)} studies, {len(rows)} biosamples, "
+                  f"{triads} with a triad", flush=True)
+
+    OUT.parent.mkdir(parents=True, exist_ok=True)
+    with OUT.open("w", newline="", encoding="utf-8") as fh:
+        writer = csv.DictWriter(fh, fieldnames=COLUMNS, delimiter="\t", lineterminator="\n")
+        writer.writeheader()
+        writer.writerows(sorted(rows, key=lambda r: r["biosample_gold_id"]))
+    triads = sum(1 for r in rows if r["envo_broad_scale"])
+    print(f"\nwrote {OUT.relative_to(REPO_ROOT)}: {len(rows)} biosamples, "
+          f"{triads} with a complete broad scale")
+    if throttled:
+        print(f"  {throttled} request(s) were throttled; re-run to fill the gaps")
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--probe", action="store_true",
@@ -183,12 +228,20 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--seed", type=int, default=20260820,
                         help="fixed, so a probe can be repeated and compared")
     parser.add_argument("--proposals", help="sweep this range instead of probing")
+    parser.add_argument("--studies", action="store_true",
+                        help="fetch triads for the studies in data/raw/gold_studies.tsv. "
+                             "This is the real route: seeded from GOLD's own export, so "
+                             "every request hits a study that exists.")
+    parser.add_argument("--limit", type=int, help="stop after N studies")
     args = parser.parse_args(argv or sys.argv[1:])
 
     headers = {"Authorization": f"Bearer {access_token()}"}
     span = args.proposals or args.range
     low, _, high = span.partition("-")
     low, high = int(low), int(high)
+
+    if args.studies:
+        return sweep_studies(headers, args.limit)
 
     if args.probe or not args.proposals:
         probe(headers, args.sample, low, high, args.seed)
