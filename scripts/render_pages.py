@@ -48,13 +48,6 @@ SITE_BASE = "https://culturebotai.github.io/HabitatMech/pages/"
 # 461 KB; the filter still searches the whole category via the JSON index.
 CATEGORY_PAGE_SIZE = 300
 
-# Where the site is served from, for absolute URLs in the sitemap.
-SITE_BASE = "https://culturebotai.github.io/HabitatMech/pages/"
-
-# Rows per category page. 300 keeps the biggest category near 90 KB instead of
-# 461 KB; the filter still searches the whole category via the JSON index.
-CATEGORY_PAGE_SIZE = 300
-
 CATEGORY_BLURB = {
     "TERRESTRIAL": "Soils, sediments, subsurface, rock and other land environments.",
     "AQUATIC": "Marine, freshwater and other water-column or aquatic-sediment environments.",
@@ -72,7 +65,7 @@ GROUNDING_MEANING = {
     "NARROW": "The identifier is narrower than the source concept.",
     "BROAD": "The identifier is broader — the best available term, losing specificity.",
     "UNGROUNDED": "No defensible ontology term; a minted identifier and a term-request candidate.",
-    "NOT_APPLICABLE": "Not a habitat at all — a host taxon, a disease process, a quality.",
+    "NOT_APPLICABLE": "Not a habitat at all — a disease, quality, process or procedure.",
 }
 
 OBO_PREFIXES = {"ENVO", "UBERON", "FOODON", "BTO", "PO", "PATO", "CHEBI", "GO", "NCIT", "NCBITaxon"}
@@ -331,7 +324,7 @@ def build(out_dir: Path) -> None:
     coverage_rows = []
     try:
         sys.path.insert(0, str(Path(__file__).resolve().parent))
-        from habitat_report import COVERAGE_KINDS, _coverage_over_ontologies
+        from habitatmech.report import COVERAGE_KINDS, _coverage_over_ontologies
 
         kinds, kind_assertions = _coverage_over_ontologies(records)
         coverage_rows = [

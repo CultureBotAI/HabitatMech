@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import re
 
-import render_pages
+from scripts import render_pages
 
 
 def test_site_is_in_step_with_the_corpus():
@@ -91,12 +91,10 @@ def test_a_retired_slug_never_shadows_a_live_record(repo_root):
     """Writing a stub at a filename a live record uses would replace a real
     habitat with a redirect away from itself."""
     import csv
-    import sys
 
     import yaml
 
-    sys.path.insert(0, str(repo_root / "scripts"))
-    from render_pages import slugify
+    from scripts.render_pages import slugify
 
     retired = repo_root / "data" / "habitats" / "RETIRED.tsv"
     if not retired.exists():
@@ -120,10 +118,8 @@ def test_dead_page_identifier_survives_a_label_with_parentheses(repo_root):
     own parentheses — `Mixotrophic (MNF)`, `Rock-dwelling (endoliths)` — and a
     non-greedy leading match captures those instead. That would silently drop
     the redirect, which is the 404 this exists to prevent (#60)."""
-    import sys
 
-    sys.path.insert(0, str(repo_root / "scripts"))
-    from build_redirects import _CURIE, _DESC_ID, _META_DESC
+    from scripts.build_redirects import _CURIE, _DESC_ID, _META_DESC
 
     def parse(desc: str) -> str:
         html = f'<meta name="description" content="{desc}">'
@@ -161,6 +157,62 @@ def test_split_stubs_assert_no_canonical(repo_root):
             if len(row["current_identifiers"].split("|")) > 1:
                 assert "canonical" not in html, f"{stub.name} claims a canonical for a split"
                 assert "http-equiv" not in html, f"{stub.name} auto-redirects a split"
+
+
+def test_single_target_stubs_have_live_canonical_urls(repo_root):
+    """A site base already ending in ``/pages/`` must not have ``pages/``
+    appended again. The timed redirect can still work while the canonical URL
+    sent to search engines points at a 404, so check both independently."""
+    import csv
+
+    import yaml
+
+    retired = repo_root / "data" / "habitats" / "RETIRED.tsv"
+    pages = repo_root / "pages" / "habitats"
+    if not retired.exists() or not pages.exists():
+        return
+    live_slugs = {}
+    for path in (repo_root / "data" / "habitats").rglob("*.yaml"):
+        doc = yaml.safe_load(path.read_text(encoding="utf-8"))
+        if isinstance(doc, dict) and "identifier" in doc:
+            live_slugs[doc["identifier"]] = render_pages.slugify(
+                f"{doc['label']}-{doc['identifier']}"
+            )
+    checked = 0
+    with retired.open(newline="", encoding="utf-8") as fh:
+        for row in csv.DictReader(fh, delimiter="\t"):
+            if len(row["current_identifiers"].split("|")) != 1:
+                continue
+            stub = pages / f"{row['retired_slug']}.html"
+            if not stub.exists():
+                continue
+            html = stub.read_text(encoding="utf-8")
+            match = re.search(r'<link rel="canonical" href="([^"]+)">', html)
+            assert match, f"{stub.name} has no canonical URL"
+            canonical = match.group(1)
+            identifier = row["current_identifiers"]
+            expected = f"{render_pages.SITE_BASE}habitats/{live_slugs[identifier]}.html"
+            assert canonical == expected, (
+                f"{stub.name} canonical does not match {identifier}: "
+                f"expected {expected}, got {canonical}"
+            )
+            assert "/pages/pages/" not in canonical, (
+                f"{stub.name} duplicates the site path in its canonical URL: {canonical}"
+            )
+            target = canonical.removeprefix(render_pages.SITE_BASE)
+            assert (repo_root / "pages" / target).exists(), (
+                f"{stub.name} canonical points at a missing generated page: {canonical}"
+            )
+            checked += 1
+    assert checked, "no single-target redirect stubs were checked"
+
+
+def test_not_applicable_guidance_does_not_reject_hosts(repo_root):
+    guidance = render_pages.GROUNDING_MEANING["NOT_APPLICABLE"]
+    assert "host taxon" not in guidance.lower()
+    assert "disease" in guidance.lower() and "quality" in guidance.lower()
+    homepage = (repo_root / "pages" / "index.html").read_text(encoding="utf-8")
+    assert "Not a habitat at all — a host taxon" not in homepage
 
 
 def test_every_stub_on_disk_has_a_row_in_the_map(repo_root):

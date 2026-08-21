@@ -32,13 +32,12 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "src"))
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
-from seed_from_sources import (  # noqa: E402
+from habitatmech.curate.decisions import load_decisions  # noqa: E402
+from habitatmech.seed import (  # noqa: E402
     DECISIONS_PATH,
     build_corpus,
     norm_label,
 )
-
-from habitatmech.curate.decisions import load_decisions  # noqa: E402
 
 
 def suggest(label: str, index: dict[str, str], limit: int = 4) -> list[tuple[str, str]]:

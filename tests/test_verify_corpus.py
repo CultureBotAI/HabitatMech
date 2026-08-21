@@ -10,7 +10,8 @@ test proving it actually fails on drift rather than passing vacuously.
 from __future__ import annotations
 
 import pytest
-import verify_corpus
+
+from scripts import verify_corpus
 
 
 @pytest.fixture(scope="module")

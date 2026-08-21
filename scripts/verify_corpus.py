@@ -36,14 +36,13 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "src"))
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
-from seed_from_sources import (  # noqa: E402
+from habitatmech.seed import (  # noqa: E402
     HABITATS_DIR,
     assign_paths,
     build_corpus,
     build_document,
     load_lockfile,
 )
-
 from habitatmech.validation.write_validated import emit_habitat_yaml  # noqa: E402
 
 

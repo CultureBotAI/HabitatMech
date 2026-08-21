@@ -170,11 +170,8 @@ def test_mesh_dump_is_found_by_glob_not_by_pinned_year(tmp_path, capsys):
     year would make the next refresh a silent no-op: the label check would stop
     running on MeSH targets and nothing would say so (#45)."""
     import gzip
-    import sys
-    from pathlib import Path
 
-    sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
-    import extract_source_inventory as extract
+    from habitatmech import extract
 
     raw = tmp_path / "data" / "raw"
     raw.mkdir(parents=True)
@@ -194,11 +191,8 @@ def test_a_missing_reference_source_warns_instead_of_degrading_silently(tmp_path
     unverifiable rather than failing the run. That is the right behaviour and
     the wrong thing to leave silent — it is indistinguishable from upstream not
     using the ontology at all (#45)."""
-    import sys
-    from pathlib import Path
 
-    sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
-    import extract_source_inventory as extract
+    from habitatmech import extract
 
     (tmp_path / "data" / "raw").mkdir(parents=True)
     assert extract._reference_labels(tmp_path, {"NCIT:C17649"}) == {}
@@ -216,11 +210,8 @@ def test_label_cohorts_separate_the_defect_class_the_seeder_cannot_see():
 
     It ranks, it does not decide — half the subset cohort is correct, because
     the subject is an enumeration and dropping an alternative is right."""
-    import sys
-    from pathlib import Path
 
-    sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
-    from habitat_report import label_cohort
+    from habitatmech.report import label_cohort
 
     assert label_cohort("abscess", "Abscess") == "identical"
     assert label_cohort("cooling tower", "Tower") == "subset"
@@ -260,11 +251,8 @@ def test_madin_bacdive_vocabulary_rows_are_addressable(raw_tsv):
     BacDive transform emits single tokens (`host`) — so the thing that actually
     has to hold is that every one of them can still be addressed by a curation
     decision (#40)."""
-    import sys
-    from pathlib import Path
 
-    sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
-    from seed_from_sources import _madin_key, mint
+    from habitatmech.seed import _madin_key, mint
 
     shared = [
         r["madin_id"] for r in raw_tsv("madin_habitats.tsv")
@@ -282,11 +270,8 @@ def test_environment_table_decision_survives_another_source_attesting_the_term()
     attest that term and then silently stopped — Madin self-grounding
     UBERON:0000468 deleted the record ruled NOT_APPLICABLE and replaced it with
     the EXACT one the curator had refused, with nothing failing (#56)."""
-    import sys
-    from pathlib import Path
 
-    sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
-    import seed_from_sources as seed
+    from habitatmech import seed
 
     corpus = seed.build_corpus()
     by_id = {c.identifier: c for c in corpus.concepts}
@@ -311,11 +296,8 @@ def test_narrowed_grounding_is_forgiven_when_the_path_already_said_it():
     Environmental > Aquatic > Marine > Sediment. Checking the path is what
     separates a real over-narrowing from the seeder correctly using the context
     it was handed, and it cut this cohort from 67 to 30 (#67)."""
-    import sys
-    from pathlib import Path
 
-    sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
-    from habitat_report import grounding_cohort
+    from habitatmech.report import grounding_cohort
 
     assert grounding_cohort("Sediment", "marine sediment") == "narrowed"
     assert grounding_cohort(
@@ -336,13 +318,11 @@ def test_the_organism_screen_still_detects_a_known_taxon():
     nothing today. So pin both directions against terms whose answer is known:
     NCIT:C77916 "Protozoa" reaches Organism, NCIT:C17649 "Other" does not (#46)."""
     import csv
-    import sys
     from collections import defaultdict
     from pathlib import Path
 
     root = Path(__file__).resolve().parent.parent
-    sys.path.insert(0, str(root / "scripts"))
-    from habitat_report import ORGANISM_ROOTS, _ancestors
+    from habitatmech.report import ORGANISM_ROOTS, _ancestors
 
     parents = defaultdict(list)
     with (root / "data" / "raw" / "ontology_subclass_edges.tsv").open(
@@ -389,12 +369,10 @@ def test_the_drift_guard_compares_by_role_not_by_staged_path():
     pinning it with --mappings. Keying on the staged path meant the two runs
     recorded different names, the lookup found nothing, and the guard passed
     silently — which is how it failed the first time (#72)."""
-    import sys
     from pathlib import Path
 
     root = Path(__file__).resolve().parent.parent
-    sys.path.insert(0, str(root / "scripts"))
-    from extract_source_inventory import MAPPINGS_ROLE, _manifest_inputs
+    from habitatmech.extract import MAPPINGS_ROLE, _manifest_inputs
 
     fake = root / "conf"  # any real directory; only the naming is under test
     staged = root / "conf" / "sources.yaml"
@@ -435,11 +413,8 @@ def test_the_drift_guard_reports_a_vanished_input_and_an_uncheckable_one(tmp_pat
 
     and an input recorded by a --no-hash run, which leaves nothing to compare
     against on every later run. That is the failure #44 already had once."""
-    import sys
-    from pathlib import Path
 
-    sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
-    from extract_source_inventory import _changed_inputs
+    from habitatmech.extract import _changed_inputs
 
     manifest = tmp_path / "MANIFEST.yaml"
     manifest.write_text(
@@ -472,10 +447,8 @@ def test_no_record_claims_a_taxonomic_grouping_is_a_habitat(repo_root, records):
     corpus is at zero now and this keeps it there — including through a re-seed,
     which is how it got there in the first place.
     """
-    import sys
 
-    sys.path.insert(0, str(repo_root / "scripts"))
-    import habitat_report as report
+    from habitatmech import report
 
     offenders = []
     for _path, doc in records:
@@ -494,12 +467,10 @@ def test_the_pinned_organism_terms_really_are_organisms(repo_root, raw_tsv):
     material under one root, so there is no structural signal to test against.
     Hand-pinned means it can be wrong, and a wrong entry here would suppress a
     legitimate habitat — so each is checked against its own definition."""
-    import sys
 
-    sys.path.insert(0, str(repo_root / "scripts"))
     from collections import defaultdict
 
-    import habitat_report as report
+    from habitatmech import report
 
     definitions = {r["term_id"]: (r.get("definition") or "") for r in raw_tsv("ontology_terms.tsv")}
     up = defaultdict(list)

@@ -249,10 +249,8 @@ def test_reviewed_records_are_backed_by_curation_decisions(records, repo_root):
     # by reconstructing the key from each attestation, which is the same thing
     # apply_decision() looks up. Checking only the minted case would leave the
     # 22 grounded REVIEWED records unverified, which is most of the value.
-    import sys
 
-    sys.path.insert(0, str(repo_root / "scripts"))
-    from seed_from_sources import mint
+    from habitatmech.seed import mint
 
     def keys_for(doc: dict) -> list[str]:
         out = []
@@ -376,10 +374,8 @@ def test_coverage_over_ontologies_partitions_the_corpus(repo_root, records):
     bucket. A double-counted record inflates the contribution; a dropped one
     understates it, and neither is visible in a percentage.
     """
-    import sys
 
-    sys.path.insert(0, str(repo_root / "scripts"))
-    from habitat_report import COVERAGE_KINDS, _coverage_over_ontologies
+    from habitatmech.report import COVERAGE_KINDS, _coverage_over_ontologies
 
     kinds, assertions = _coverage_over_ontologies(records)
     assert set(kinds) <= {key for key, _ in COVERAGE_KINDS}, (
@@ -409,10 +405,8 @@ def test_coverage_over_ontologies_partitions_the_corpus(repo_root, records):
 
 def test_no_record_is_counted_as_covered_by_a_term_it_only_hangs_under(repo_root, records):
     """The distinction the headline number rests on, asserted directly."""
-    import sys
 
-    sys.path.insert(0, str(repo_root / "scripts"))
-    from habitat_report import _coverage_over_ontologies
+    from habitatmech.report import _coverage_over_ontologies
 
     kinds, _ = _coverage_over_ontologies(records)
     minted_under_envo = [
@@ -440,10 +434,8 @@ def test_triad_evidence_ranks_by_studies_not_samples(repo_root, records):
     it has.
     """
     import csv
-    import sys
 
-    sys.path.insert(0, str(repo_root / "scripts"))
-    import habitat_report as report
+    from habitatmech import report
 
     ranked = report._triad_evidence(records)
     if not ranked:
@@ -506,10 +498,8 @@ def test_triad_evidence_only_offers_groundable_terms(repo_root, records):
     """
     import collections
     import csv
-    import sys
 
-    sys.path.insert(0, str(repo_root / "scripts"))
-    import habitat_report as report
+    from habitatmech import report
 
     triads = repo_root / "data" / "raw" / "gold_path_triads.tsv"
     if not triads.exists():
@@ -561,10 +551,8 @@ def test_no_record_claims_a_process_is_a_habitat(repo_root, records):
     """
     import collections
     import csv
-    import sys
 
-    sys.path.insert(0, str(repo_root / "scripts"))
-    import habitat_report as report
+    from habitatmech import report
 
     parents = collections.defaultdict(list)
     with (repo_root / "data" / "raw" / "ontology_subclass_edges.tsv").open(

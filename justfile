@@ -110,8 +110,21 @@ lint *args:
 lint-fix:
     uv run ruff check --fix .
 
-# Everything CI runs, in the order that fails cheapest-first
-qc: lint test validate-all verify-corpus render-check redirects-check term-requests-check report
+# The authoritative quality gate used both locally and in CI.
+qc:
+    uv run python scripts/run_qc.py
+
+# Refresh the generated current-corpus block in README.md.
+docs-stats:
+    uv run python scripts/check_docs.py --write
+
+# Fail if README.md's current-corpus block is out of step with the corpus.
+docs-check:
+    uv run python scripts/check_docs.py --check
+
+# Verify every committed raw TSV is covered by a manifest and matches it.
+provenance-check:
+    uv run python scripts/check_provenance.py
 
 # Fail if pages/ is out of step with the corpus
 render-check:

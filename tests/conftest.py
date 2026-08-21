@@ -7,15 +7,12 @@ corpus is a session-scoped fixture. Tests must treat it as read-only.
 from __future__ import annotations
 
 import csv
-import sys
 from pathlib import Path
 
 import pytest
 import yaml
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(REPO_ROOT / "src"))
-sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
 HABITATS_DIR = REPO_ROOT / "data" / "habitats"
 RAW_DIR = REPO_ROOT / "data" / "raw"
