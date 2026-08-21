@@ -65,7 +65,7 @@ GROUNDING_MEANING = {
     "NARROW": "The identifier is narrower than the source concept.",
     "BROAD": "The identifier is broader — the best available term, losing specificity.",
     "UNGROUNDED": "No defensible ontology term; a minted identifier and a term-request candidate.",
-    "NOT_APPLICABLE": "Not a habitat at all — a host taxon, a disease process, a quality.",
+    "NOT_APPLICABLE": "Not a habitat at all — a disease, quality, process or procedure.",
 }
 
 OBO_PREFIXES = {"ENVO", "UBERON", "FOODON", "BTO", "PO", "PATO", "CHEBI", "GO", "NCIT", "NCBITaxon"}

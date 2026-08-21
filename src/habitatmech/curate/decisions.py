@@ -45,7 +45,7 @@ DECISION_KINDS = {
     # Redirect this source concept onto an ontology term. The record merges with
     # any other concept resolving to the same term.
     "GROUND",
-    # Not a habitat at all (a host taxon, a disease process, a quality). Keeps
+    # Not a habitat at all (a disease, quality, process or procedure). Keeps
     # the minted identifier so the concept stays citable; the term that
     # describes it, if any, is kept as an xref.
     "NOT_APPLICABLE",

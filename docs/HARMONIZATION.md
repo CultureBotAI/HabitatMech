@@ -133,10 +133,11 @@ has no clean isolation-source ontology". Those stay `UNGROUNDED`. Re-grounding
 them here by lexical match would overwrite a human decision with a guess, and
 the guess would look identical to a real mapping in the output.
 
-13 point at ontologies that describe habitats rather than being them — PATO
-qualities, CHEBI chemicals, NCBITaxon organisms. Those become
-`NOT_APPLICABLE` with the target kept as an xref: the information survives, but
-the record does not claim to *be* a quality.
+Some point at terms that describe a habitat rather than being its identity —
+for example PATO qualities and CHEBI chemicals. When the source concept itself
+is not a habitat, it becomes `NOT_APPLICABLE` and keeps that term as an xref.
+A host organism is different: the source concept denotes where microbes live,
+so it remains a minted habitat while the NCBITaxon term stays an xref.
 
 ## Filenames are pinned, not recomputed
 

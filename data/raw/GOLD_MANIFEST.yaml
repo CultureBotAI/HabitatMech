@@ -1,9 +1,10 @@
 # Provenance for the GOLD bulk-export and API inventories.
 # Large source files remain untracked; their hashes identify the exact bytes.
 manifest_version: 1
-pipeline_commit: ba77f410b044d6289f721f8dc437d956db0013bf
+pipeline_commit: b898f14ec92ee327bd4cc3ca3e3d0a6418a3de90
 sources:
   - name: GOLD bulk Excel export
+    kind: bulk_export
     location: https://gold.jgi.doe.gov/download?mode=site_excel
     local_name: goldData.xlsx
     committed: false
@@ -11,6 +12,7 @@ sources:
     bytes: 222850238
     sha256: 6797471982570ed145f81aef966c1ff5398dc4d35287a01faefaf80ac5311fea
   - name: GOLD per-biosample API sweep
+    kind: api_sweep
     location: https://gold-ws.jgi.doe.gov/api/v1/biosamples
     local_name: gold_biosample_triads.tsv
     committed: false

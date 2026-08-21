@@ -33,6 +33,7 @@ CATEGORY_ORDER = [
     "CLINICAL",
 ]
 GROUNDING_ORDER = ["EXACT", "UNGROUNDED", "NARROW", "NOT_APPLICABLE", "CLOSE", "BROAD"]
+MAPPING_STATUSES = {"REVIEWED", "SEEDED"}
 
 
 def load_records(root: Path = HABITATS) -> list[dict]:
@@ -44,20 +45,33 @@ def load_records(root: Path = HABITATS) -> list[dict]:
     return records
 
 
+def ordered_counts(counts: Counter, preferred: list[str]) -> list[tuple[str, int]]:
+    """Keep the familiar order without hiding values added after this script."""
+    names = [name for name in preferred if counts[name]]
+    names.extend(sorted(set(counts) - set(preferred)))
+    return [(name, counts[name]) for name in names]
+
+
 def statistics_block(records: list[dict]) -> str:
     total = len(records)
     categories = Counter(r["habitat_category"] for r in records)
     groundings = Counter(r["grounding_status"] for r in records)
-    mappings = Counter(r["mapping_status"] for r in records)
+    mappings = Counter(r.get("mapping_status", "<MISSING>") for r in records)
     source_counts = [len({a["source"] for a in r.get("source_attestations", [])}) for r in records]
     multi_source = sum(count >= 2 for count in source_counts)
     four_source = sum(count >= 4 for count in source_counts)
     reviewed = mappings["REVIEWED"]
     seeded = mappings["SEEDED"]
+    unexpected_mappings = sorted(set(mappings) - MAPPING_STATUSES)
+    if unexpected_mappings or reviewed + seeded != total:
+        raise ValueError(
+            "mapping statuses do not partition the corpus into REVIEWED and SEEDED: "
+            f"unexpected={unexpected_mappings}, accounted_for={reviewed + seeded}, total={total}"
+        )
     reviewed_pct = (100 * reviewed / total) if total else 0
 
-    category_rows = [(name, categories[name]) for name in CATEGORY_ORDER if categories[name]]
-    grounding_rows = [(name, groundings[name]) for name in GROUNDING_ORDER if groundings[name]]
+    category_rows = ordered_counts(categories, CATEGORY_ORDER)
+    grounding_rows = ordered_counts(groundings, GROUNDING_ORDER)
     table_rows = []
     for category, grounding in zip_longest(category_rows, grounding_rows, fillvalue=("", "")):
         c_name, c_count = category

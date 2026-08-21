@@ -165,10 +165,19 @@ def test_single_target_stubs_have_live_canonical_urls(repo_root):
     sent to search engines points at a 404, so check both independently."""
     import csv
 
+    import yaml
+
     retired = repo_root / "data" / "habitats" / "RETIRED.tsv"
     pages = repo_root / "pages" / "habitats"
     if not retired.exists() or not pages.exists():
         return
+    live_slugs = {}
+    for path in (repo_root / "data" / "habitats").rglob("*.yaml"):
+        doc = yaml.safe_load(path.read_text(encoding="utf-8"))
+        if isinstance(doc, dict) and "identifier" in doc:
+            live_slugs[doc["identifier"]] = render_pages.slugify(
+                f"{doc['label']}-{doc['identifier']}"
+            )
     checked = 0
     with retired.open(newline="", encoding="utf-8") as fh:
         for row in csv.DictReader(fh, delimiter="\t"):
@@ -181,8 +190,11 @@ def test_single_target_stubs_have_live_canonical_urls(repo_root):
             match = re.search(r'<link rel="canonical" href="([^"]+)">', html)
             assert match, f"{stub.name} has no canonical URL"
             canonical = match.group(1)
-            assert canonical.startswith(f"{render_pages.SITE_BASE}habitats/"), (
-                f"{stub.name} has a canonical outside the generated habitat pages: {canonical}"
+            identifier = row["current_identifiers"]
+            expected = f"{render_pages.SITE_BASE}habitats/{live_slugs[identifier]}.html"
+            assert canonical == expected, (
+                f"{stub.name} canonical does not match {identifier}: "
+                f"expected {expected}, got {canonical}"
             )
             assert "/pages/pages/" not in canonical, (
                 f"{stub.name} duplicates the site path in its canonical URL: {canonical}"
@@ -193,6 +205,14 @@ def test_single_target_stubs_have_live_canonical_urls(repo_root):
             )
             checked += 1
     assert checked, "no single-target redirect stubs were checked"
+
+
+def test_not_applicable_guidance_does_not_reject_hosts(repo_root):
+    guidance = render_pages.GROUNDING_MEANING["NOT_APPLICABLE"]
+    assert "host taxon" not in guidance.lower()
+    assert "disease" in guidance.lower() and "quality" in guidance.lower()
+    homepage = (repo_root / "pages" / "index.html").read_text(encoding="utf-8")
+    assert "Not a habitat at all — a host taxon" not in homepage
 
 
 def test_every_stub_on_disk_has_a_row_in_the_map(repo_root):
