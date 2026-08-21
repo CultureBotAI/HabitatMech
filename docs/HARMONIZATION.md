@@ -1,26 +1,32 @@
-# How the three source vocabularies are harmonized
+# How the source vocabularies are harmonized
 
-This is the design record for `scripts/seed_from_sources.py`. It exists so that
+This is the design record for `src/habitatmech/seed.py`. It exists so that
 the decisions below are arguable rather than merely implemented — if one looks
 wrong, the place to push back is here.
+
+Numerical measurements in this design record describe the August 2026 source
+snapshots identified by `data/raw/MANIFEST.yaml` and
+`data/raw/GOLD_MANIFEST.yaml`; they are historical evidence, not live corpus
+statistics. Run `just report` for current corpus counts.
 
 ## The pipeline
 
 ```
 kg-microbe checkout
-   │  scripts/extract_source_inventory.py   (needs kg-microbe; run rarely)
+   │  habitatmech.extract                    (needs kg-microbe; run rarely)
    ▼
-data/raw/*.tsv  +  MANIFEST.yaml            (committed, reviewable, ~3 MB)
-   │  scripts/seed_from_sources.py          (needs nothing else)
+data/raw/*.tsv  +  provenance manifests     (committed and reviewable)
+   │  habitatmech.seed                       (needs nothing else)
    ▼
-data/habitats/<category>/<slug>.yaml        (3,299 HabitatRecords)
+data/habitats/<category>/<slug>.yaml        (generated HabitatRecords)
 ```
 
 The split matters: the multi-gigabyte KGX dumps are not vendored, but everything
 downstream of the inventories runs — and is testable — without kg-microbe
-present. `data/raw/MANIFEST.yaml` records the byte size, mtime, and sha256 of
-every input the inventories were built from, so their provenance is checkable
-after the fact.
+present. `data/raw/MANIFEST.yaml` records the kg-microbe inputs;
+`data/raw/GOLD_MANIFEST.yaml` records the later GOLD bulk-export and API inputs.
+Together they identify source and output bytes so provenance is checkable after
+the fact, while the large source dumps remain untracked.
 
 ## Why the inventories are shaped the way they are
 
@@ -55,8 +61,8 @@ against. Grounding quality is bounded by the label pool.
 ## Identity and merging
 
 Merge key is the resolved identifier. Source concepts resolving to the same
-identifier become one record with all their attestations; 3,443 source concepts
-become 3,299 records, 128 of them multi-source.
+identifier become one record with all their attestations. Run `just report` for
+the current record and multi-source counts.
 
 Concepts with no defensible ontology term get a **content-hashed minted
 identifier** — `habitatmech:GOLD.<10 hex of sha1(canonical_path)>`. Hashing
@@ -142,8 +148,8 @@ and, once minted separately, several records slug to it. The original scheme
 gave the bare slug to whichever same-slug concept sorted first by identifier,
 so an upstream refresh that added a lower-sorting concept silently renamed the
 incumbent: a delete + add in the diff for a record whose content identity never
-changed. 1,043 of the 3,299 files are collision-resolved, so this was not a
-corner case.
+changed. Many files require collision-resolved slugs, so this is not a corner
+case; `data/habitats/PATHS.tsv` is the live inventory.
 
 With the lockfile:
 
@@ -164,7 +170,7 @@ consequence of sort order. Because the file is hand-editable and its slugs
 become filenames, `load_lockfile()` rejects anything outside `[a-z0-9_]`; a
 slug containing a path separator would write outside the corpus.
 
-A record that changes category leaves its old file behind. `seed_from_sources.py`
+A record that changes category leaves its old file behind. `habitatmech.seed`
 reports such stale files on every run and deletes them with `--prune`, which is
 ignored on `--only` / `--limit` runs because a partial run's path set is not
 authoritative — it would otherwise propose deleting the entire corpus.

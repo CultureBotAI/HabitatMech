@@ -6,8 +6,8 @@ cannot be a hand-edit to a record — it would be silently reverted by the next
 re-seed. Curation therefore lives in ``curation/decisions.tsv``, which the
 seeder reads as an input. The benefits are the point rather than a side effect:
 
-* a curation pass is a small, reviewable diff in one file, not 3299 rewritten
-  YAMLs;
+* a curation pass is a small, reviewable diff in one file, not thousands of
+  rewritten YAMLs;
 * every decision carries its curator, date, and reason, so the *why* survives;
 * the corpus stays fully reproducible, so `verify_corpus` keeps working
   unchanged;

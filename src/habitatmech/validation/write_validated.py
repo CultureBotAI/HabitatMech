@@ -121,7 +121,7 @@ def write_validated_habitat(
     Re-running this helper over an existing record is byte-identical, which is
     what makes it safe for bulk rewrites: a script that touches one field
     produces a one-field diff rather than burying it in reflow churn.
-    ``tests/test_write_validated_round_trip.py`` enforces the property over the
+    ``tests/test_write_validated.py`` enforces the property over the
     whole corpus. Hand-editing a record into a shape ``safe_dump`` would not
     emit breaks that test — reformat through this helper rather than loosening
     the test.

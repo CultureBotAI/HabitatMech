@@ -44,37 +44,11 @@ jobs:
       - name: Install dependencies
         run: uv sync --extra dev
 
-      - name: Lint
-        run: uv run ruff check .
-
-      # Runs before validate-all: the tests cover the seeder's grounding rules
-      # and the corpus-wide invariants (duplicate identifiers, dangling minted
-      # parents, category/directory agreement) that per-record schema
-      # validation cannot see.
-      - name: Test
-        run: uv run pytest -q
-
-      - name: Validate every record against the schema (closed mode)
-        run: uv run python scripts/validate_strict.py --quiet
-
-      # Schema validation checks each record's shape, not its content. Without
-      # this, a hand-edited record passes every other check in this workflow.
-      - name: Verify the corpus reproduces from data/raw/
-        run: uv run python scripts/verify_corpus.py
-
-      # pages/ is committed and served from the branch root, so it can drift
-      # from the corpus the same way records could drift from data/raw/.
-      - name: Verify the site is in step with the corpus
-        run: uv run python scripts/render_pages.py --check
-
-      # A record page is named after its label and identifier, so curation
-      # moves URLs. RETIRED.tsv keeps the old addresses resolving; if it is
-      # stale, an improvement has silently 404'd a published page (#54).
-      - name: Check the retired-URL map is current
-        run: uv run python scripts/build_redirects.py --check
-
-      - name: Corpus report
-        run: uv run python scripts/habitat_report.py
+      # Keep one executable definition of QC. This includes lint, tests,
+      # closed-schema validation, corpus/site/redirect/term-request drift
+      # checks, documentation statistics and the corpus report.
+      - name: Run the authoritative quality gate
+        run: uv run python scripts/run_qc.py
 
       - name: Upload validation failures
         if: failure()

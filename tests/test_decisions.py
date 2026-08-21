@@ -149,10 +149,8 @@ def test_every_committed_decision_addresses_a_real_source_concept(repo_root, raw
     decision was written against — the minted key is a content hash, so a
     changed GOLD path yields a different key and the old decision goes stale.
     """
-    import sys
 
-    sys.path.insert(0, str(repo_root / "scripts"))
-    from seed_from_sources import _madin_key, mint
+    from habitatmech.seed import _madin_key, mint
 
     # Every source that mints a key. A source added without being listed here
     # makes its decisions look stale, which is the same drift MINTED_PATTERN
@@ -217,11 +215,9 @@ def test_no_class_swept_concept_has_a_lexical_candidate(repo_root):
     This makes the claim self-checking: re-vendoring an ontology, or improving
     the matcher, now fails the suite instead of silently invalidating 994 notes.
     """
-    import sys
 
-    sys.path.insert(0, str(repo_root / "scripts"))
-    from propose_decisions import build_index, classify
-    from seed_from_sources import build_corpus
+    from habitatmech.proposals import build_index, classify
+    from habitatmech.seed import build_corpus
 
     corpus = build_corpus()
     swept = {
@@ -250,12 +246,9 @@ def test_a_category_override_actually_moves_the_record(repo_root, records):
     so the override validated, looked live, and did nothing. A minted Madin or
     PREGO identifier gives `infer_category` nothing to read, so the override is
     the only way to fix those at all (#63)."""
-    import sys
-
-    sys.path.insert(0, str(repo_root / "scripts"))
-    from seed_from_sources import _madin_key, mint
 
     from habitatmech.curate.decisions import load_decisions
+    from habitatmech.seed import _madin_key, mint
 
     overrides = {
         d.identifier: d.category
@@ -296,10 +289,8 @@ def test_the_recorded_sample_is_the_one_the_sampler_draws(repo_root):
     (#71). Selection by identifier hash survives the corpus moving; this pins
     that the committed sample is still the one the script produces."""
     import csv
-    import sys
 
-    sys.path.insert(0, str(repo_root / "scripts"))
-    from sample_groundings import DEFAULT_SEED, population, select
+    from habitatmech.sampling import DEFAULT_SEED, population, select
 
     recorded = repo_root / "curation" / "samples" / f"exact-{DEFAULT_SEED}.tsv"
     if not recorded.exists():
@@ -329,10 +320,8 @@ def test_curation_notes_do_not_cite_evidence_that_does_not_exist(repo_root, raw_
     """
     import csv
     import re
-    import sys
 
-    sys.path.insert(0, str(repo_root / "scripts"))
-    from seed_from_sources import mint
+    from habitatmech.seed import mint
 
     paths = {
         mint("GOLD", r["canonical_path"]): r["canonical_path"]
@@ -409,10 +398,8 @@ def test_no_class_sweep_asserts_a_negative_the_slice_now_contradicts(repo_root, 
     since the staleness was CAUSED by vendoring NCIT, mesh and CHEBI. With the
     filtered index this found 0 of 20 known cases."""
     import csv
-    import sys
 
-    sys.path.insert(0, str(repo_root / "scripts"))
-    import habitat_report as report
+    from habitatmech import report
 
     with (repo_root / "curation" / "decisions.tsv").open(newline="", encoding="utf-8") as fh:
         swept = {
@@ -531,12 +518,9 @@ def test_every_decision_kind_has_a_curation_event_summary(repo_root):
     """A kind added without a summary used to fall through to REVIEW's wording,
     publishing "reviewed and endorsed the seeder's resolution" about a record
     where no such thing happened. It now refuses instead."""
-    import sys
-
-    sys.path.insert(0, str(repo_root / "scripts"))
-    from seed_from_sources import _decision_summary
 
     from habitatmech.curate.decisions import DECISION_KINDS
+    from habitatmech.seed import _decision_summary
 
     for kind in sorted(DECISION_KINDS):
         decision = Decision(
@@ -569,10 +553,8 @@ def test_no_swept_concept_is_named_by_its_own_path(repo_root, records):
     re-checks a sweep's negative.
     """
     import csv
-    import sys
 
-    sys.path.insert(0, str(repo_root / "scripts"))
-    import habitat_report as report
+    from habitatmech import report
 
     with (repo_root / "curation" / "decisions.tsv").open(newline="", encoding="utf-8") as fh:
         swept = {
@@ -629,10 +611,8 @@ def test_relation_without_an_object_is_rejected(tmp_path):
 
 def test_xref_relation_places_the_term_as_an_xref_not_a_parent(repo_root):
     """End to end through the seeder's own placement, not just the dataclass."""
-    import sys
 
-    sys.path.insert(0, str(repo_root / "scripts"))
-    from seed_from_sources import _placement
+    from habitatmech.seed import _placement
 
     def make(relation, object_id="ENVO:00000051"):
         return Decision(identifier="habitatmech:GOLD.abcdef0123",
@@ -651,10 +631,8 @@ def test_every_recorded_sample_is_fully_judged(repo_root):
     "We checked 40 and found none wrong" is unfalsifiable without the 40, and a
     blank or unrecognised verdict silently shrinks the denominator — which makes
     the published rate better than the evidence supports."""
-    import sys
 
-    sys.path.insert(0, str(repo_root / "scripts"))
-    from sample_groundings import recorded_samples, verdict_of
+    from habitatmech.sampling import recorded_samples, verdict_of
 
     samples = recorded_samples()
     assert samples, "no recorded samples — the sampling argument rests on nothing"
@@ -689,10 +667,8 @@ def test_not_applicable_is_never_used_on_an_organism_target(repo_root):
     """
     import collections
     import csv
-    import sys
 
-    sys.path.insert(0, str(repo_root / "scripts"))
-    import habitat_report as report
+    from habitatmech import report
 
     up = collections.defaultdict(list)
     with (repo_root / "data" / "raw" / "ontology_subclass_edges.tsv").open(

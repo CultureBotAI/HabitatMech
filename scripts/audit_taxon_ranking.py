@@ -44,8 +44,8 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "src"))
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
-from extract_source_inventory import _raise_csv_limit, default_kg_microbe_root  # noqa: E402
-from seed_from_sources import build_corpus  # noqa: E402
+from habitatmech.extract import _raise_csv_limit, default_kg_microbe_root  # noqa: E402
+from habitatmech.seed import build_corpus  # noqa: E402
 
 
 def signal_spread(edges: list[dict[str, str]]) -> None:

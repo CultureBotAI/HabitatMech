@@ -8,15 +8,13 @@ and unlike a record it cannot be quietly re-seeded afterwards.
 from __future__ import annotations
 
 import csv
-import sys
 
 import pytest
 
 
 @pytest.fixture(scope="module")
 def requests_module(repo_root):
-    sys.path.insert(0, str(repo_root / "scripts"))
-    import build_term_requests
+    from scripts import build_term_requests
 
     return build_term_requests
 
@@ -51,8 +49,7 @@ def test_no_requested_term_already_exists_in_the_ontologies(requests_module, rep
     Asking for a term that exists is the one mistake that makes an editor
     distrust the whole batch.
     """
-    sys.path.insert(0, str(repo_root / "scripts"))
-    from seed_from_sources import norm_label
+    from habitatmech.seed import norm_label
 
     with (repo_root / "data" / "raw" / "ontology_terms.tsv").open(
         newline="", encoding="utf-8"

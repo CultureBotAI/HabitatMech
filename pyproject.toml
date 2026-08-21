@@ -1,7 +1,7 @@
 [project]
 name = "habitatmech"
 version = "0.1.0"
-description = "Knowledge base of microbial habitats and environments, harmonized from GOLD, BacDive, and PREGO and grounded in ENVO/UBERON/FOODON"
+description = "Knowledge base of microbial habitats harmonized from GOLD, BacDive, PREGO, and Madin et al. and grounded in environmental and anatomy ontologies"
 authors = [
     {name = "HabitatMech Contributors"}
 ]
@@ -56,6 +56,13 @@ research = [
 Homepage = "https://github.com/CultureBotAI/HabitatMech"
 Repository = "https://github.com/CultureBotAI/HabitatMech"
 
+[project.scripts]
+habitatmech-seed = "habitatmech.seed:main"
+habitatmech-extract = "habitatmech.extract:main"
+habitatmech-report = "habitatmech.report:main"
+habitatmech-propose = "habitatmech.proposals:main"
+habitatmech-sample = "habitatmech.sampling:main"
+
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
@@ -65,7 +72,7 @@ packages = ["src/habitatmech"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-pythonpath = ["src"]
+pythonpath = ["src", "."]
 
 [tool.ruff]
 line-length = 110
