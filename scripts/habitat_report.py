@@ -82,6 +82,28 @@ ORGANISM_ROOTS = {
 # FOODON case sit unnoticed.
 ORGANISM_PREFIXES = ("NCBITaxon:",)
 
+# Roots of "this term is a PROCESS". MIxS rules a process out of the
+# environmental triad in the same sentence that rules out organisms and groups
+# of organisms, and CLAUDE.md now quotes it — so the corpus should be checked
+# for it the same way. Found four records claiming a habitat is-a
+# ENVO:06105023 "biofouling", which ENVO defines as "a fouling PROCESS during
+# which biological matter accumulates on a solid surface" (#127).
+PROCESS_ROOTS = {
+    "ENVO:02500000",  # environmental system process
+    "GO:0008150",     # biological_process
+    "ENVO:03000009",  # material accumulation process
+}
+
+
+def _is_process(term: str, parents: dict[str, list[str]]) -> bool:
+    """A term whose ancestry reaches a process root.
+
+    Ancestry only, never the label: FOODON:00002645 "food material by process"
+    is a MATERIAL classified by the process that made it, and a label test
+    flags it. Fermented and preserved food are habitats.
+    """
+    return bool(_ancestors(term, parents) & PROCESS_ROOTS)
+
 # FOODON taxa that no organism root reaches, because FOODON files the organism
 # under a "<X> material" parent: `algae` -> `algae material` -> `organism
 # material`. There is no structural signal separating the taxon from the
@@ -171,15 +193,20 @@ def _organism_identities(records: list[tuple[Path, dict]]) -> list[tuple]:
         # ontology's own edges. So REVIEWED exempts the identity and never the
         # parents.
         reviewed = doc.get("mapping_status") == "REVIEWED"
-        if (not identifier.startswith("habitatmech:") and not reviewed
-                and _is_organism(identifier, parents)):
-            out.append((assertions, identifier, doc.get("label", ""), "identity"))
+        if not identifier.startswith("habitatmech:") and not reviewed:
+            if _is_organism(identifier, parents):
+                out.append((assertions, identifier, doc.get("label", ""), "identity"))
+            elif _is_process(identifier, parents):
+                out.append((assertions, identifier, doc.get("label", ""), "process-id"))
         for parent in doc.get("parent_habitats") or []:
             if parent.startswith("habitatmech:"):
                 continue
             if _is_organism(parent, parents):
                 out.append((assertions, identifier, f"{doc.get('label', '')} -> {parent}",
                             "parent"))
+            elif _is_process(parent, parents):
+                out.append((assertions, identifier, f"{doc.get('label', '')} -> {parent}",
+                            "process"))
     return sorted(out, reverse=True)
 
 
@@ -1149,8 +1176,9 @@ def main(argv: list[str] | None = None) -> int:
                       "the rate above is over the rest")
 
     organism = _organism_identities(records)
-    print(f"\n=== {len(organism)} record(s) claiming an organism is a habitat ===")
-    print("  (a taxon is not a habitat. An exact label match cannot see this — ")
+    print(f"\n=== {len(organism)} record(s) claiming a non-habitat is a habitat ===")
+    print("  (an organism or a process, which MIxS rules out of the environmental")
+    print("   triad in one sentence. A label match cannot see this — ")
     print("   NCIT:C77916 really is labelled Protozoa — so it is asked of the")
     print("   ontology's own ancestry instead, vendored by #46.)")
     for assertions, identifier, label, where in organism[: args.ungrounded_top or None]:
