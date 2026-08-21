@@ -63,6 +63,15 @@ decide which slot, if any, is the habitat identity. For a host-associated
 sample, broad scale may correctly describe the ecosystem around the host rather
 than the host itself.
 
+`just report` screens every GOLD triad slot before offering it to a curator. A
+term is eligible only when it exists in the vendored ontology slice and is not
+an organism or other taxon-valued concept. Terms from unsupported prefixes
+remain out of scope unless other evidence justifies vendoring their ontology
+data. The compatibility section reports excluded terms and cached GOLD labels
+that disagree with the slice; ranked evidence always displays the authoritative
+slice label required by a `GROUND` decision. Report obsolete source annotations
+through the [GOLD feedback form](https://gold.jgi.doe.gov/help).
+
 ## Evidence and validation
 
 Every `GROUND` records both the target CURIE and expected label. Seeding fails

@@ -649,7 +649,64 @@ def _slice_term_labels() -> dict[str, str]:
         return {r["term_id"]: r["label"] for r in csv.DictReader(fh, delimiter="\t")}
 
 
-def _triad_evidence(records: list[tuple[Path, dict]]) -> list[tuple]:
+def _triad_inventory_review() -> dict[str, list[dict[str, str]]]:
+    """Classify every GOLD triad slot before it can enter curator ranking.
+
+    Rejected source annotations remain visible here rather than disappearing
+    behind the groundability filter. Label disagreements are also retained even
+    though the slice label is authoritative for any proposed decision.
+    """
+    triads = REPO_ROOT / "data" / "raw" / "gold_path_triads.tsv"
+    review: dict[str, list[dict[str, str]]] = {
+        "groundable": [],
+        "missing": [],
+        "organism": [],
+        "label_mismatch": [],
+    }
+    if not triads.exists():
+        return review
+
+    slice_terms = _slice_term_labels()
+    parents: dict[str, list[str]] = defaultdict(list)
+    edges = REPO_ROOT / "data" / "raw" / "ontology_subclass_edges.tsv"
+    if edges.exists():
+        with edges.open(newline="", encoding="utf-8") as fh:
+            for row in csv.DictReader(fh, delimiter="\t"):
+                parents[row["subject"]].append(row["object"])
+
+    with triads.open(newline="", encoding="utf-8") as fh:
+        for source_row in csv.DictReader(fh, delimiter="\t"):
+            row = dict(source_row)
+            term = row["top_term"]
+            if _is_organism(term, parents):
+                review["organism"].append(row)
+                continue
+            if term not in slice_terms:
+                review["missing"].append(row)
+                continue
+            row["slice_label"] = slice_terms[term]
+            review["groundable"].append(row)
+            if row["top_label"] != row["slice_label"]:
+                review["label_mismatch"].append(row)
+    return review
+
+
+def _distinct_triad_label_mismatches(
+    rows: list[dict[str, str]],
+) -> list[tuple[str, str, str]]:
+    """Return each distinct term/GOLD-label/slice-label disagreement once."""
+    return sorted(
+        {
+            (row["top_term"], row["top_label"], row["slice_label"])
+            for row in rows
+        }
+    )
+
+
+def _triad_evidence(
+    records: list[tuple[Path, dict]],
+    inventory_review: dict[str, list[dict[str, str]]] | None = None,
+) -> list[tuple]:
     """Minted records whose GOLD path carries an ENVO triad, ranked by how much
     INDEPENDENT evidence stands behind it.
 
@@ -671,18 +728,22 @@ def _triad_evidence(records: list[tuple[Path, dict]]) -> list[tuple]:
     env_broad_scale a biome, and which — if any — the concept IS remains a
     curation judgement. Nothing here bypasses the label-verification gate.
     """
-    triads = REPO_ROOT / "data" / "raw" / "gold_path_triads.tsv"
-    if not triads.exists():
+    if inventory_review is None:
+        inventory_review = _triad_inventory_review()
+    if not any(inventory_review.values()):
         return []
 
     # A slot is only evidence if its term could ever become a grounding. Two
-    # ways it cannot, both found in the inventory (#130):
+    # ways it cannot, both found in the inventory (#130). They overlap: the
+    # NCBITaxon row is also absent from the slice, but the compatibility review
+    # assigns it to the more informative organism/taxon bucket. That partitions
+    # the 41 rejected slots into 40 missing-only plus one taxon-valued slot.
     #
-    #   * absent from the vendored slice — 41 slots, including five prefixes
-    #     this repo does not vendor at all (OBI, AISM, GSSO, MCO, MICRO) and
-    #     ENVO:00002002 "obsolete food product", a deprecated term GOLD is
-    #     still annotating live biosamples with. The seeder's label check would
-    #     refuse any of them, so ranking them wastes a curator's attention.
+    #   * absent from the vendored slice — including five prefixes this repo
+    #     does not vendor at all (OBI, AISM, GSSO, MCO, MICRO) and
+    #     ENVO:00002002 "obsolete food product", a deprecated term GOLD still
+    #     annotates live biosamples with. The seeder's label check would refuse
+    #     any of them, so ranking them wastes a curator's attention.
     #   * an organism — NCBITaxon:662107 "phyllosphere metagenome" appears as an
     #     env_local_scale. Per #114 a taxon is not a place, and a metagenome is
     #     not even an organism.
@@ -690,22 +751,9 @@ def _triad_evidence(records: list[tuple[Path, dict]]) -> list[tuple]:
     # Every one of these is currently filtered out anyway, because thinly
     # evidenced annotations are also the malformed ones. That is luck, and this
     # makes it a property.
-    slice_terms = _slice_term_labels()
-    parents: dict[str, list[str]] = defaultdict(list)
-    edges = REPO_ROOT / "data" / "raw" / "ontology_subclass_edges.tsv"
-    if edges.exists():
-        with edges.open(newline="", encoding="utf-8") as fh:
-            for row in csv.DictReader(fh, delimiter="\t"):
-                parents[row["subject"]].append(row["object"])
-
-    def groundable(term: str) -> bool:
-        return bool(term) and term in slice_terms and not _is_organism(term, parents)
-
     by_path: dict[str, dict[str, dict]] = defaultdict(dict)
-    with triads.open(newline="", encoding="utf-8") as fh:
-        for row in csv.DictReader(fh, delimiter="\t"):
-            if groundable(row["top_term"]):
-                by_path[row["canonical_path"]][row["slot"]] = row
+    for row in inventory_review["groundable"]:
+        by_path[row["canonical_path"]][row["slot"]] = row
 
     out = []
     for _, doc in records:
@@ -1091,7 +1139,66 @@ def main(argv: list[str] | None = None) -> int:
     if not same_as:
         print("  none — no novel label is shared across sources")
 
-    triads = _triad_evidence(records)
+    triad_review = _triad_inventory_review()
+    missing_triads = triad_review["missing"]
+    organism_triads = triad_review["organism"]
+    label_mismatches = triad_review["label_mismatch"]
+    if missing_triads or organism_triads or label_mismatches:
+        print("\n=== GOLD triad inventory compatibility ===")
+        rejected_triads = [*missing_triads, *organism_triads]
+        if rejected_triads:
+            rejected_paths = {row["canonical_path"] for row in rejected_triads}
+            print(
+                f"  {len(rejected_triads)} rejected slot(s) across "
+                f"{len(rejected_paths)} path(s)"
+            )
+        if missing_triads:
+            missing_terms = {row["top_term"] for row in missing_triads}
+            missing_prefixes = Counter(
+                term.partition(":")[0] for term in missing_terms
+            )
+            print(
+                f"  {len(missing_triads)} slot(s), {len(missing_terms)} term(s) "
+                "are absent from the vendored slice and excluded"
+            )
+            print(
+                "  missing prefixes: "
+                + ", ".join(
+                    f"{prefix}={count}"
+                    for prefix, count in sorted(missing_prefixes.items())
+                )
+            )
+            obsolete = sorted(
+                {
+                    (row["top_term"], row["top_label"])
+                    for row in missing_triads
+                    if "obsolete" in row["top_label"].lower()
+                }
+            )
+            for term, label in obsolete:
+                print(f"  upstream obsolete annotation: {term} {label}")
+        if organism_triads:
+            organism_terms = {row["top_term"] for row in organism_triads}
+            print(
+                f"  {len(organism_triads)} slot(s), {len(organism_terms)} "
+                "organism-like/taxon-valued term(s) are invalid as habitat "
+                "identities and excluded"
+            )
+        if label_mismatches:
+            mismatch_terms = _distinct_triad_label_mismatches(label_mismatches)
+            mismatch_term_count = len({term for term, _gold, _slice in mismatch_terms})
+            print(
+                f"  {len(label_mismatches)} slot(s), {mismatch_term_count} term(s) "
+                "have cached GOLD labels that disagree with the vendored slice; "
+                "the slice label is authoritative"
+            )
+            for term, gold_label, slice_label in mismatch_terms:
+                print(
+                    f"  label mismatch: {term} GOLD={gold_label!r} "
+                    f"slice={slice_label!r}"
+                )
+
+    triads = _triad_evidence(records, triad_review)
     slice_labels = _slice_term_labels()
     if triads:
         strong = [t for t in triads if t[0] >= 1]
@@ -1114,7 +1221,9 @@ def main(argv: list[str] | None = None) -> int:
                     # are stale (agricultural feature -> agricultural
                     # ecosystem), and a curator copying the wrong one into a
                     # decision gets a hard seed failure (#131).
-                    label = slice_labels.get(row["top_term"], row["top_label"])
+                    label = row.get("slice_label") or slice_labels.get(
+                        row["top_term"], row["top_label"]
+                    )
                     print(f"       {slot:6s} {row['top_term']:16s} {label[:28]:28s} "
                           f"share={row['top_share']} studies={row['studies_agreeing']}")
 
