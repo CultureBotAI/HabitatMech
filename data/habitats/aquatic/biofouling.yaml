@@ -1,19 +1,39 @@
 identifier: habitatmech:GOLD.15bcd61a84
 label: Biofouling
 habitat_category: AQUATIC
-grounding_status: NARROW
-mapping_status: SEEDED
+grounding_status: UNGROUNDED
+mapping_status: REVIEWED
 parent_habitats:
-- ENVO:06105023
 - habitatmech:GOLD.22a80cbd14
+xrefs:
+- ENVO:06105023
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8363
   source_label: Biofouling
   source_path: Environmental > Aquatic > Deep subsurface > Groundwater > Biofouling
-  mapping_predicate: skos:narrowMatch
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-08-20T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader
+    term ENVO:06105023 ''biofouling'' attached as a parent. Process screen (#127):
+    carried ENVO:06105023 ''biofouling'' as a parent, which ENVO defines as ''a FOULING
+    PROCESS during which biological matter accumulates on a solid surface'' and files
+    under environmental system process. parent_habitats asserts the parent is a broader
+    HABITAT, so the corpus was claiming a habitat is-a process — the thing MIxS rules
+    out in the same sentence that rules out organisms and groups of organisms, and
+    the reason that sentence is now quoted in CLAUDE.md.
+
+
+    The concept is the fouling layer, not the fouling. It reached the term through
+    the ambiguous-leaf rule: the deep-subsurface groundwater path, and three of the
+    four Biofouling paths tie at the same depth so none claimed it. Kept as an xref
+    (#99), which records what upstream matched without asserting the record is a process.
+    Not grounded to ENVO:00002034 ''biofilm'' either: biofouling includes macrofouling
+    such as barnacles and tube worms, so biofilm is narrower than the concept rather
+    than broader. (source concept habitatmech:GOLD.15bcd61a84)'

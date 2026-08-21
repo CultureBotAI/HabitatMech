@@ -545,3 +545,40 @@ def test_triad_evidence_only_offers_groundable_terms(repo_root, records):
         if t not in slice_terms or report._is_organism(t, parents)
     ]
     assert not leaked, f"ranked slots whose term cannot be grounded: {leaked[:5]}"
+
+
+def test_no_record_claims_a_process_is_a_habitat(repo_root, records):
+    """MIxS rules a process out of the environmental triad in the same sentence
+    that rules out organisms and groups of organisms, and CLAUDE.md quotes it.
+
+    Four records carried `ENVO:06105023 biofouling` as a broader habitat — "a
+    fouling PROCESS during which biological matter accumulates on a solid
+    surface". The concept is the fouling layer, not the fouling (#127).
+
+    Ancestry, never the label: `FOODON:00002645 "food material by process"` is a
+    material classified by the process that made it, and a label test flags it.
+    Fermented and preserved food are habitats.
+    """
+    import collections
+    import csv
+    import sys
+
+    sys.path.insert(0, str(repo_root / "scripts"))
+    import habitat_report as report
+
+    parents = collections.defaultdict(list)
+    with (repo_root / "data" / "raw" / "ontology_subclass_edges.tsv").open(
+        newline="", encoding="utf-8"
+    ) as fh:
+        for row in csv.DictReader(fh, delimiter="\t"):
+            parents[row["subject"]].append(row["object"])
+
+    offenders = []
+    for _path, doc in records:
+        for term in [doc.get("identifier", ""), *(doc.get("parent_habitats") or [])]:
+            if term and not term.startswith("habitatmech:") and report._is_process(term, parents):
+                offenders.append((doc.get("identifier"), doc.get("label"), term))
+
+    assert not offenders, (
+        f"{len(offenders)} record(s) claim a process is a habitat: {offenders[:5]}"
+    )
