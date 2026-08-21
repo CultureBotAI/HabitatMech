@@ -481,15 +481,78 @@ def test_triad_inventory_records_study_counts(repo_root):
             )
 
 
+def test_triad_inventory_review_partitions_every_source_slot(repo_root):
+    import csv
+
+    from habitatmech import report
+
+    triads = repo_root / "data" / "raw" / "gold_path_triads.tsv"
+    with triads.open(newline="", encoding="utf-8") as fh:
+        source_rows = list(csv.DictReader(fh, delimiter="\t"))
+
+    review = report._triad_inventory_review()
+
+    def keys(rows):
+        return {(row["canonical_path"], row["slot"]) for row in rows}
+
+    source_keys = keys(source_rows)
+    partition = [keys(review[kind]) for kind in ("groundable", "missing", "organism")]
+    assert not partition[0] & partition[1]
+    assert not partition[0] & partition[2]
+    assert not partition[1] & partition[2]
+    assert set().union(*partition) == source_keys
+    assert sum(len(review[kind]) for kind in ("groundable", "missing", "organism")) == len(
+        source_rows
+    )
+
+
+def test_triad_inventory_review_surfaces_filtered_and_stale_source_data():
+    """Known source defects must remain visible after ranking rejects them."""
+    from habitatmech import report
+
+    review = report._triad_inventory_review()
+    assert review["missing"], "no out-of-slice annotation was reported"
+    assert review["organism"], "no organism-like/taxon-valued annotation was reported"
+    assert {
+        (row["top_term"], row["top_label"])
+        for row in review["organism"]
+    } == {("NCBITaxon:662107", "phyllosphere metagenome")}
+    rejected = [*review["missing"], *review["organism"]]
+    assert len(rejected) == 41
+    assert len({row["canonical_path"] for row in rejected}) == 38
+
+    distinct_mismatches = report._distinct_triad_label_mismatches(
+        review["label_mismatch"]
+    )
+    assert len(review["label_mismatch"]) == 11
+    assert len(distinct_mismatches) == 4
+    mismatches = {
+        term: (gold_label, slice_label)
+        for term, gold_label, slice_label in distinct_mismatches
+    }
+    assert mismatches == {
+        "ENVO:00000077": ("agricultural feature", "agricultural ecosystem"),
+        "ENVO:00000463": ("harbor", "harbour"),
+        "ENVO:00002164": ("fossil", "fossil material"),
+        "UBERON:0001913": ("milk (mammary secretion)", "milk"),
+    }
+
+    missing = {
+        (row["top_term"], row["top_label"])
+        for row in review["missing"]
+    }
+    assert ("ENVO:00002002", "obsolete food product") in missing
+
+
 def test_triad_evidence_only_offers_groundable_terms(repo_root, records):
     """A slot is only evidence if its term could ever become a grounding.
 
-    Two ways it cannot, both present in the inventory (#130): absent from the
-    vendored slice, which the seeder's label check would refuse — 41 slots,
-    including five prefixes this repo does not vendor and `ENVO:00002002
-    "obsolete food product"`, a deprecated term GOLD still annotates live
-    biosamples with — or an organism, like `NCBITaxon:662107 "phyllosphere
-    metagenome"` appearing as an env_local_scale.
+    Two overlapping ways it cannot, both present in the inventory (#130): 41
+    slots are absent from the vendored slice, which the seeder's label check
+    would refuse, including five prefixes this repo does not vendor and
+    `ENVO:00002002 "obsolete food product"`, a deprecated term GOLD still
+    annotates live biosamples with. One of those 41 is also taxon-valued:
+    `NCBITaxon:662107 "phyllosphere metagenome"` appears as an env_local_scale.
 
     Every one is filtered out today anyway, because thinly evidenced
     annotations are also the malformed ones. This asserts it as a property
