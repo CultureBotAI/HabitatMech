@@ -63,6 +63,7 @@ def load_curated_definitions(path: Path) -> dict[str, CuratedDefinition]:
             raise DefinitionError(f"{path}: missing columns {sorted(missing)}")
 
         definitions: dict[str, CuratedDefinition] = {}
+        labels: dict[str, tuple[str, int]] = {}
         for line_no, row in enumerate(reader, start=2):
             identifier = (row.get("identifier") or "").strip()
             if not identifier or identifier.startswith("#"):
@@ -105,6 +106,16 @@ def load_curated_definitions(path: Path) -> dict[str, CuratedDefinition]:
                 raise DefinitionError(
                     f"{path}:{line_no}: " + "; ".join(problems)
                 )
+            normalized_label = " ".join(definition.label.split()).casefold()
+            previous = labels.get(normalized_label)
+            if previous is not None:
+                previous_identifier, previous_line = previous
+                raise DefinitionError(
+                    f"{path}:{line_no}: requested_label {definition.label!r} is "
+                    f"already authored for {previous_identifier} on line "
+                    f"{previous_line}; merge duplicate concepts before defining them"
+                )
+            labels[normalized_label] = (identifier, line_no)
             definitions[identifier] = definition
     return definitions
 

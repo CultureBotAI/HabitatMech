@@ -76,3 +76,23 @@ def test_curated_definition_loader_rejects_duplicate_identifiers(tmp_path):
 
     with pytest.raises(DefinitionError, match="duplicate definition"):
         load_curated_definitions(path)
+
+
+def test_curated_definition_loader_rejects_duplicate_labels(tmp_path):
+    path = tmp_path / "definitions.tsv"
+    header = (
+        "identifier\trequested_label\tparent_class\tparent_label\tdefinition\t"
+        "exact_synonym\tcurator\tdate\tnotes\n"
+    )
+    first = (
+        "habitatmech:x\tshared environment\tENVO:1\tenvironment\t"
+        "An environment.\tX\ttest\t2026-08-21\tA considered definition.\n"
+    )
+    second = (
+        "habitatmech:y\t Shared   Environment \tENVO:2\thabitat\t"
+        "A habitat.\tY\ttest\t2026-08-21\tAnother considered definition.\n"
+    )
+    path.write_text(header + first + second, encoding="utf-8")
+
+    with pytest.raises(DefinitionError, match="merge duplicate concepts"):
+        load_curated_definitions(path)

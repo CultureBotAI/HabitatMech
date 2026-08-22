@@ -50,6 +50,8 @@ from pathlib import Path
 
 import yaml
 
+from habitatmech.curate.definitions import load_curated_definitions
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 HABITATS_DIR = REPO_ROOT / "data" / "habitats"
 REQUESTS_TSV = REPO_ROOT / "curation" / "term_requests.tsv"
@@ -112,7 +114,12 @@ def load_requests() -> list[dict]:
         missing = set(REQUEST_COLUMNS) - set(reader.fieldnames or [])
         if missing:
             raise RequestError(f"{REQUESTS_TSV}: missing columns {sorted(missing)}")
-        return [r for r in reader if (r.get("identifier") or "").strip()]
+        requests = [r for r in reader if (r.get("identifier") or "").strip()]
+    # The same table drives generated corpus definitions. In that model,
+    # duplicate labels are duplicate concepts to merge, not export rows to
+    # collapse while silently choosing one parent and definition.
+    load_curated_definitions(REQUESTS_TSV)
+    return requests
 
 
 def validate(requests: list[dict], corpus: dict[str, dict],

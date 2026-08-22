@@ -9,6 +9,9 @@ mapping_status: REVIEWED
 synonyms:
 - synonym_text: Porifera
   synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: Sponge
+  synonym_type: EXACT_SYNONYM
   source: HabitatMech curation
 parent_habitats:
 - ENVO:01001000
@@ -23,6 +26,13 @@ source_attestations:
   assertion_count: 90
   assertion_unit: ORGANISM
   notes: 4 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: GOLD
+  source_id: gold.ecosystem:4437
+  source_label: Sponge
+  source_path: Host-associated > Porifera > Sponge
+  assertion_count: 323
+  assertion_unit: ORGANISM
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
 - timestamp: '2026-08-16T00:00:00Z'
   curator: claude-opus-5
@@ -54,3 +64,15 @@ curation_history:
     proposed wording, genus and near-miss table are the evidence. Parented to the
     aquatic-invertebrate term rather than to animal-associated environment, which
     the report identified as the more specific existing genus.
+- timestamp: '2026-08-21T00:00:00Z'
+  curator: codex-gpt-5
+  action: SAME_AS
+  changes: 'Merged into habitatmech:GOLD.64acf9132c ''Porifera'': the same concept
+    under another source''s name. Adversarial review follow-up (#158): GOLD''s Host-associated
+    > Porifera > Sponge and Host-associated > Porifera name the same sponge host concept.
+    Keeping both produced two HabitatMech records with the same curated label but
+    conflicting parents and definitions, while the ROBOT export silently collapsed
+    them. Merge onto the Porifera identifier because its curated definition uses the
+    more specific existing parent ENVO:01001176 environment associated with an aquatic
+    invertebrate. Both GOLD attestations remain on the merged record. (source concept
+    habitatmech:GOLD.affd2445ea)'
