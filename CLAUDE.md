@@ -112,7 +112,11 @@ grounding route.
   habitat identity. Preserve relevant links as xrefs and use
   `NOT_APPLICABLE` only when the source concept itself is not a habitat.
 - `parent_habitats` means strictly broader. A related term that is not broader
-  belongs in an xref relation.
+  belongs in an xref relation. Four things contribute a parent — ontology
+  subclass parents, the GOLD parent-path link, the ambiguous-leaf rule, and the
+  genus of a curated definition in `curation/term_requests.tsv` — so
+  `decisions.tsv` is not the whole audit trail for a parent claim. The
+  strictly-broader rule binds all four.
 - A host organism is a microbial habitat, but its taxon or whole-organism term
   is not the habitat identity. Keep the source concept minted, use the organism
   term as an xref, and request an associated-environment term where appropriate.

@@ -114,17 +114,36 @@ def committed_redirect_slugs() -> set[str]:
     """Redirect stubs published by the branch's current committed site.
 
     Historical maps contain rows later removed because they were themselves
-    wrong. Only a stub that still exists in HEAD is active state that the next
-    generation must carry forward.
+    wrong. Only a redirect that is still live in HEAD is active state that the
+    next generation must carry forward.
+
+    Read from HEAD's copy of the map rather than by recognising a rendered stub.
+    Recognising one meant grepping the committed pages for the literal
+    "has moved — HabitatMech", which is a second copy of `redirect.html`'s title
+    block — and rewording that title dropped the carry-forward silently: 138 rows
+    became 137, losing the one URL #159 exists to save, with `just redirects`
+    writing the smaller file and `just render` then pruning the stub (#162).
+
+    The map is the same answer without the coupling. `render_pages` generates
+    one stub per row and its --check gate keeps the two in step, so HEAD's rows
+    *are* HEAD's stubs — verified equal at 138/138 when this replaced the grep.
+    HEAD's copy, not the working file, so the map still cannot be an input to
+    its own generation.
     """
-    found: set[str] = set()
-    for match in git(
-        "grep", "-l", "has moved — HabitatMech", "HEAD", "--", "pages/habitats"
-    ).splitlines():
-        path = match.removeprefix("HEAD:").strip()
-        if path.endswith(".html"):
-            found.add(Path(path).stem)
-    return found
+    blob = git("show", f"HEAD:{RETIRED_PATH.relative_to(REPO_ROOT)}")
+    if not blob:
+        # No committed map yet: a first run, or a fresh branch that has never
+        # retired a URL. Nothing to carry forward, which is not an error.
+        return set()
+    reader = csv.DictReader(io.StringIO(blob), delimiter="\t")
+    if "retired_slug" not in (reader.fieldnames or []):
+        raise SystemExit(
+            f"HEAD:{RETIRED_PATH.relative_to(REPO_ROOT)} has no retired_slug "
+            "column; refusing to rebuild the map from an unreadable predecessor"
+        )
+    return {
+        slug for row in reader if (slug := (row.get("retired_slug") or "").strip())
+    }
 
 
 def retired_record_details() -> tuple[dict[str, set[str]], dict[str, str]]:
