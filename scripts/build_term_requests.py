@@ -72,10 +72,11 @@ COLUMNS = [
     "creation date", "created by",
 ]
 
-REQUEST_COLUMNS = [
-    "identifier", "requested_label", "parent_class", "parent_label",
-    "definition", "exact_synonym", "curator", "date", "notes",
-]
+# The curator table's own columns are NOT listed here. They are
+# `habitatmech.curate.definitions.REQUIRED_COLUMNS`, which is what the seeder
+# reads and what `load_requests` below now parses with. A second copy in this
+# file would be a second answer to "what is a valid row" for one file that two
+# consumers depend on (#165).
 
 
 def page_slug(doc: dict) -> str:
@@ -107,19 +108,38 @@ def load_corpus() -> dict[str, dict]:
 
 
 def load_requests() -> list[dict]:
+    """The table, parsed once by the loader the seeder itself uses.
+
+    This file is no longer only an export: the same rows are applied to the
+    corpus as HabitatMech's own labels and definitions, so the seeder's loader
+    is the authority on what a valid row is. In particular it rejects a repeated
+    `requested_label` outright, because in the corpus model that is two records
+    claiming one concept rather than two export rows to collapse while silently
+    picking one parent and definition (#158).
+
+    That loader used to be called here purely for its exception, with its result
+    thrown away — validation by side effect, over a second independent parse of
+    the same file, and dead-looking code that a tidy-up would delete without
+    anything failing (#165). One parse now, and the rows below are built from
+    what it returned.
+    """
     if not REQUESTS_TSV.exists():
         return []
-    with REQUESTS_TSV.open(newline="", encoding="utf-8") as fh:
-        reader = csv.DictReader(fh, delimiter="\t")
-        missing = set(REQUEST_COLUMNS) - set(reader.fieldnames or [])
-        if missing:
-            raise RequestError(f"{REQUESTS_TSV}: missing columns {sorted(missing)}")
-        requests = [r for r in reader if (r.get("identifier") or "").strip()]
-    # The same table drives generated corpus definitions. In that model,
-    # duplicate labels are duplicate concepts to merge, not export rows to
-    # collapse while silently choosing one parent and definition.
-    load_curated_definitions(REQUESTS_TSV)
-    return requests
+    definitions = load_curated_definitions(REQUESTS_TSV)
+    return [
+        {
+            "identifier": definition.identifier,
+            "requested_label": definition.label,
+            "parent_class": definition.parent_class,
+            "parent_label": definition.parent_label,
+            "definition": definition.definition,
+            "exact_synonym": "|".join(definition.exact_synonyms),
+            "curator": definition.curator,
+            "date": definition.date,
+            "notes": definition.notes,
+        }
+        for definition in definitions.values()
+    ]
 
 
 def validate(requests: list[dict], corpus: dict[str, dict],
@@ -172,6 +192,13 @@ def build(requests: list[dict], corpus: dict[str, dict]) -> list[dict]:
     and BacDive's "Human" both ask for human-associated environment — and
     sending an editor the same term twice is a defect in the request, not a
     detail. Their evidence is pooled instead.
+
+    The pooling cannot currently fire: `load_curated_definitions` rejects a
+    repeated `requested_label` before the rows reach here, because the corpus
+    reads the same table and a shared label there means two records claiming one
+    concept (#158). It is kept rather than deleted because whether
+    path-distinguished leaves may share a term label is an open question (#161),
+    and this is the branch that would need to exist again if the answer is yes.
     """
     merged: dict[str, dict] = {}
     for row in sorted(requests, key=lambda r: r["requested_label"]):

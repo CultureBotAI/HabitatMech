@@ -138,11 +138,12 @@ def test_minted_parents_resolve_to_a_record(records):
 
 
 def test_parent_habitats_have_no_cycles(records):
-    """`parent_habitats` is assembled from three independent contributors —
-    ontology subclass parents, the GOLD parent-path link, and the ambiguous-leaf
-    rule's `extra_parents` — and none of them can see the others. A cycle would
-    hang any consumer that walks the hierarchy. There are none today; this keeps
-    it that way."""
+    """`parent_habitats` is assembled from four independent contributors —
+    ontology subclass parents, the GOLD parent-path link, the ambiguous-leaf
+    rule's `extra_parents`, and the genus of a curated definition in
+    `curation/term_requests.tsv` — and none of them can see the others. A cycle
+    would hang any consumer that walks the hierarchy. There are none today; this
+    keeps it that way."""
     parents = {doc["identifier"]: (doc.get("parent_habitats") or []) for _, doc in records}
 
     WHITE, GREY, BLACK = 0, 1, 2

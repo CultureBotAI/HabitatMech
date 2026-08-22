@@ -273,6 +273,49 @@ def test_consecutive_label_change_and_merge_preserve_both_urls(repo_root):
         assert (repo_root / "pages" / "habitats" / f"{slug}.html").exists()
 
 
+def test_carry_forward_does_not_read_the_rendered_stubs(repo_root, monkeypatch):
+    """Which redirects are live is read from the map, never from page wording.
+
+    It was read from page wording once: a `git grep` for the literal
+    "has moved — HabitatMech", which duplicates `redirect.html`'s title block.
+    Rewording that title made the grep match nothing, and the carry-forward then
+    dropped a published URL *silently* — 138 rows to 137, losing exactly the one
+    #159 exists to save, with `just redirects` writing the smaller file without
+    complaint (#162).
+
+    The sponge test above catches that, but only as a KeyError on two hardcoded
+    slugs. This pins the mechanism instead: no page content may reach the
+    decision, so no amount of template editing can shrink the map.
+    """
+    import csv
+    import sys
+
+    sys.path.insert(0, str(repo_root / "scripts"))
+    import build_redirects
+
+    real_git = build_redirects.git
+
+    def no_page_reads(*args: str, **kwargs) -> str:
+        assert "grep" not in args, (
+            "committed_redirect_slugs is reading rendered pages again; a "
+            "template reword would silently drop published redirects (#162)"
+        )
+        return real_git(*args, **kwargs)
+
+    monkeypatch.setattr(build_redirects, "git", no_page_reads)
+    live = build_redirects.committed_redirect_slugs()
+
+    retired = repo_root / "data" / "habitats" / "RETIRED.tsv"
+    with retired.open(newline="", encoding="utf-8") as fh:
+        mapped = {r["retired_slug"] for r in csv.DictReader(fh, delimiter="\t")}
+    assert live, "no committed redirects found — the carry-forward is inert"
+    # Append-only, not equality. The working map GAINS a row every time a
+    # curator retires a URL, and asserting equality failed on that ordinary loop
+    # while printing `live - mapped` — an empty set — as the explanation (#177).
+    lost = sorted(live - mapped)
+    assert not lost, f"published redirects dropped by a rebuild: {lost[:5]}"
+
+
 def test_category_pages_are_paginated_and_the_index_covers_the_whole_category(repo_root):
     """99% of a category page was its table body, and the biggest was 1641 rows
     in 461 KB — the likeliest first click from Browse. Paginating cuts that, but
