@@ -1,8 +1,17 @@
 identifier: habitatmech:BACDIVE.3d543e6b49
-label: host_animal_endotherm
+label: endothermic-animal-associated environment
+definition: An animal-associated environment which is determined by an animal that
+  maintains an elevated, metabolically generated core temperature.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: host_animal_endotherm
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+parent_habitats:
+- ENVO:01001002
 source_attestations:
 - source: MADIN
   source_id: bacdive.isolation_source:host_animal_endotherm
@@ -124,3 +133,12 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by MADIN. Grounding: UNGROUNDED.'
+- timestamp: '2026-08-17T00:00:00Z'
+  curator: claude-opus-5
+  action: DEFINED
+  changes: Defined as 'endothermic-animal-associated environment' under ENVO:01001002
+    'animal-associated environment'. Definition drafted from the record's deep-research
+    report under research/habitats/ and read against it. Madin splits its animal hosts
+    by thermoregulation, which is a real physicochemical distinction for the resident
+    community rather than a taxonomic one, so the differentia is endothermy and not
+    a clade.

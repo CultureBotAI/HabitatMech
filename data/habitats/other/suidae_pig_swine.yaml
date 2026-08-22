@@ -1,8 +1,16 @@
 identifier: habitatmech:BACDIVE.3a13ee8a57
-label: Suidae-Pig,Swine
+label: suid-associated environment
+definition: An animal-associated environment which is determined by a suid.
+definition_source: HabitatMech
 habitat_category: OTHER
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Suidae-Pig,Swine
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+parent_habitats:
+- ENVO:01001002
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:suidae-pig,swine
@@ -182,3 +190,14 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+- timestamp: '2026-08-17T00:00:00Z'
+  curator: claude-opus-5
+  action: DEFINED
+  changes: Defined as 'suid-associated environment' under ENVO:01001002 'animal-associated
+    environment'. Definition drafted from the record's deep-research report under
+    research/habitats/ and read against it; the report's proposed wording, genus and
+    near-miss table are the evidence. The report's proposed genus was 'mammal-associated
+    environment', which does not exist and is itself requested in this batch; parented
+    to animal-associated environment until it does. Its first-listed genus CURIE was
+    ENVO:00003042 piggery, which is the farm building rather than the host, and is
+    not what the definition says.

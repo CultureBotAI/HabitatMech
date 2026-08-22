@@ -1,8 +1,14 @@
 identifier: habitatmech:GOLD.2959225799
-label: 'Arthropoda: Crustaceans'
+label: crustacean-associated environment
+definition: An environmental system determined by a crustacean.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: 'Arthropoda: Crustaceans'
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:01001000
 - ENVO:01001002
@@ -23,6 +29,17 @@ curation_history:
     as host. ENVO:01001176 environment associated with an aquatic invertebrate is
     close but excludes terrestrial crustaceans, so it is not a safe identity either.
     ENVO term request. (source concept habitatmech:GOLD.2959225799)'
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: DEFINED
+  changes: 'Defined as ''crustacean-associated environment'' under ENVO:01001002 ''animal-associated
+    environment''. The habitat is the host clade, and it is the entire content of
+    the concept: GOLD and BacDive both organise host-associated isolates by host,
+    and every downstream anatomical path hangs off it. HabitatMech deliberately does
+    not ground these to animal-associated environment, because every clade would then
+    merge onto one record and the distinction the sources are making would be lost.
+    ENVO already has this shape at plant-, animal- and fungi-associated environment;
+    this asks for the same pattern one level down.'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

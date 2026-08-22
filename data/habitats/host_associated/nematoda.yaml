@@ -1,8 +1,14 @@
 identifier: habitatmech:GOLD.45a8229be1
-label: Nematoda
+label: nematode-associated environment
+definition: An environmental system determined by a nematode.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Nematoda
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:01001002
 - habitatmech:GOLD.4d792ac724
@@ -22,6 +28,15 @@ curation_history:
     term ENVO:01001002 ''animal-associated environment'' attached as a parent. Nematodes
     as host. Parented to animal-associated environment. ENVO term request. (source
     concept habitatmech:GOLD.45a8229be1)'
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: DEFINED
+  changes: 'Defined as ''nematode-associated environment'' under ENVO:01001002 ''animal-associated
+    environment''. The habitat is the host clade, and it is the entire content of
+    the concept: GOLD organises host-associated isolates by host and every anatomical
+    path hangs off it. Not grounded to the parent, because every clade would then
+    merge onto one record. Same pattern ENVO already has at plant-, animal- and fungi-associated
+    environment.'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

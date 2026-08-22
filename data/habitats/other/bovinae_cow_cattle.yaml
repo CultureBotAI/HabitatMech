@@ -1,8 +1,16 @@
 identifier: habitatmech:BACDIVE.a4a67c4a7f
-label: Bovinae-Cow,-Cattle
+label: bovine-associated environment
+definition: An animal-associated environment which is determined by a bovine.
+definition_source: HabitatMech
 habitat_category: OTHER
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Bovinae-Cow,-Cattle
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+parent_habitats:
+- ENVO:01001002
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:bovinae-cow,-cattle
@@ -182,3 +190,10 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+- timestamp: '2026-08-17T00:00:00Z'
+  curator: claude-opus-5
+  action: DEFINED
+  changes: Defined as 'bovine-associated environment' under ENVO:01001002 'animal-associated
+    environment'. Definition drafted from the record's deep-research report under
+    research/habitats/ and read against it; the report's proposed wording, genus and
+    near-miss table are the evidence. BacDive's cattle host category.

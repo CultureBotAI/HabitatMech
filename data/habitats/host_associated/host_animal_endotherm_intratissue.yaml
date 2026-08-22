@@ -1,8 +1,18 @@
 identifier: habitatmech:BACDIVE.319ac5f8f8
-label: host_animal_endotherm_intratissue
+label: internal tissue environment of an endothermic animal
+definition: An anatomical entity environment which is determined by an internal organ,
+  solid tissue or enclosed fluid compartment of an endothermic animal, lying beneath
+  its epithelial barriers.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: host_animal_endotherm_intratissue
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+parent_habitats:
+- ENVO:2100000
 source_attestations:
 - source: MADIN
   source_id: bacdive.isolation_source:host_animal_endotherm_intratissue
@@ -124,3 +134,12 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by MADIN. Grounding: UNGROUNDED.'
+- timestamp: '2026-08-17T00:00:00Z'
+  curator: claude-opus-5
+  action: DEFINED
+  changes: Defined as 'internal tissue environment of an endothermic animal' under
+    ENVO:2100000 'anatomical entity environment'. Definition drafted from the record's
+    deep-research report under research/habitats/ and read against it. Parented to
+    the anatomical-entity root. The report's first-listed genus CURIE was ENVO:08000002
+    'mouth environment', which is one specific site rather than the class its own
+    definition names.

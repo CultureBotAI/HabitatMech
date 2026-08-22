@@ -1,8 +1,18 @@
 identifier: habitatmech:BACDIVE.3974b3f169
-label: Oral-cavity-and-airways
+label: upper aerodigestive tract environment
+definition: An anatomical entity environment which is determined by the contiguous
+  air- and saliva-exposed lumen extending from the oral cavity to the lower airways
+  of a vertebrate.
+definition_source: HabitatMech
 habitat_category: OTHER
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Oral-cavity-and-airways
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+parent_habitats:
+- ENVO:2100000
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:oral-cavity-and-airways
@@ -174,3 +184,12 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+- timestamp: '2026-08-17T00:00:00Z'
+  curator: claude-opus-5
+  action: DEFINED
+  changes: Defined as 'upper aerodigestive tract environment' under ENVO:2100000 'anatomical
+    entity environment'. Definition drafted from the record's deep-research report
+    under research/habitats/ and read against it. BacDive's label names two sites
+    and the upstream mapping to UBERON:0001005 'respiratory airway' covered only the
+    airways half, dropping the oral cavity. The definition keeps the contiguous lumen
+    both halves belong to.
