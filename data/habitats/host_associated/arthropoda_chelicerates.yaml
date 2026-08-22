@@ -1,10 +1,18 @@
 identifier: habitatmech:GOLD.44a2cbbd60
-label: 'Arthropoda: Chelicerates'
+label: chelicerate-associated environment
+definition: An animal-associated environment which is determined by a chelicerate
+  or by a part of a chelicerate.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: 'Arthropoda: Chelicerates'
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:01001000
+- ENVO:01001002
 xrefs:
 - NCBITaxon:6656
 source_attestations:
@@ -36,3 +44,11 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-08-22T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: Defined as 'chelicerate-associated environment' under ENVO:01001002 'animal-associated
+    environment'. Definition curated from the committed deep-research report. Parented
+    to animal-associated environment rather than the broader organism-determined root;
+    the existing NCBITaxon:6656 reference is deliberately retained only as a broader
+    taxonomic xref because it denotes all arthropods, not this habitat.

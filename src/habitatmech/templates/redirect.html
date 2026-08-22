@@ -13,6 +13,18 @@
 {% block content %}
 <h1>{{ r.retired_label }} has moved</h1>
 {% if r.targets|length == 1 %}
+{% if r.resolved_by == 'label_changed' %}
+<p class="lede">
+  <code>{{ r.retired_identifier }}</code> is still a live record. Its curated
+  label changed to
+  <a href="../habitats/{{ r.targets[0].slug }}.html">{{ r.targets[0].label }}</a>,
+  so its public page name moved; this page is taking you there.
+</p>
+<div class="note">
+  <p>The identifier and source attestations are unchanged. This redirect keeps
+  links published under the earlier label working.</p>
+</div>
+{% else %}
 <p class="lede">
   <code>{{ r.retired_identifier }}</code> is no longer a record of its own. Its
   source concepts are now part of
@@ -20,13 +32,12 @@
   which is where this page is taking you.
 </p>
 <div class="note">
-  <p>{% if r.resolved_by == 'label_changed' %}The record still exists under the
-  same identifier — only its label changed, so the page name did too. Adopting
-  the grounding ontology's own label is what moved it.{% else %}Curation
+  <p>Curation
   re-grounded or merged this concept. The upstream assertions that were here
   were not discarded: they are attestations on the record above, alongside
-  whatever else attests it.{% endif %}</p>
+  whatever else attests it.</p>
 </div>
+{% endif %}
 <p><a href="../habitats/{{ r.targets[0].slug }}.html">Go there now</a></p>
 {% else %}
 <p class="lede">

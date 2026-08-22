@@ -1,10 +1,21 @@
 identifier: habitatmech:GOLD.34c28836da
-label: Ascidians
+label: ascidian-associated environment
+definition: An environment associated with an aquatic invertebrate which is determined
+  by an ascidian or by a part of an ascidian.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Ascidians
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: sea squirt-associated environment
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:01001002
+- ENVO:01001176
 - habitatmech:GOLD.78c645fff9
 source_attestations:
 - source: GOLD
@@ -27,3 +38,11 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-08-22T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: Defined as 'ascidian-associated environment' under ENVO:01001176 'environment
+    associated with an aquatic invertebrate'. Definition curated from the committed
+    deep-research report. The aquatic-invertebrate class is a tighter existing genus
+    than animal-associated environment; the GOLD Tunicates > Ascidians hierarchy preserves
+    the broader tunicate-associated HabitatMech parent.
