@@ -62,6 +62,57 @@ def test_pending_definition_worklist_excludes_authored_and_rejected(repo_root):
     assert pending == expected
 
 
+def test_host_definition_batch_preserves_habitat_and_xref_semantics(repo_root):
+    from habitatmech.seed import build_corpus, build_document
+
+    expected = {
+        "habitatmech:GOLD.44a2cbbd60": (
+            "chelicerate-associated environment",
+            "ENVO:01001002",
+            {"NCBITaxon:6656"},
+        ),
+        "habitatmech:GOLD.184cc9e802": (
+            "green-alga-associated environment",
+            "ENVO:01001000",
+            {"FOODON:03412502"},
+        ),
+        "habitatmech:GOLD.1cbfc76870": (
+            "insect larva-associated environment",
+            "ENVO:01001002",
+            {"UBERON:0002548"},
+        ),
+        "habitatmech:GOLD.34c28836da": (
+            "ascidian-associated environment",
+            "ENVO:01001176",
+            set(),
+        ),
+        "habitatmech:GOLD.e789c273d0": (
+            "red-alga-associated environment",
+            "ENVO:01001000",
+            {"FOODON:03411743"},
+        ),
+        "habitatmech:GOLD.5e1a5d695c": (
+            "lichen-associated environment",
+            "ENVO:01001041",
+            {"FOODON:03412345"},
+        ),
+    }
+
+    concepts = {concept.identifier: concept for concept in build_corpus().concepts}
+    definitions = load_curated_definitions(repo_root / "curation" / "term_requests.tsv")
+    for identifier, (label, parent, xrefs) in expected.items():
+        concept = concepts[identifier]
+        doc = build_document(concept)
+        authored = definitions[identifier]
+        assert concept.label == label
+        assert parent in concept.parents
+        assert xrefs <= set(doc.get("xrefs", []))
+        assert set(authored.exact_synonyms) <= {
+            synonym["synonym_text"] for synonym in doc.get("synonyms", [])
+        }
+        assert doc["definition_source"] == "HabitatMech"
+
+
 def test_curated_definition_loader_rejects_duplicate_identifiers(tmp_path):
     path = tmp_path / "definitions.tsv"
     header = (

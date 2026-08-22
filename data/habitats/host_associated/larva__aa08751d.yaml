@@ -1,9 +1,17 @@
 identifier: habitatmech:GOLD.1cbfc76870
-label: Larva
+label: insect larva-associated environment
+definition: An animal-associated environment which is determined by an insect in its
+  larval stage.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Larva
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:01001002
 - habitatmech:GOLD.dba2a83b95
 xrefs:
 - UBERON:0002548
@@ -32,3 +40,11 @@ curation_history:
     the identity cases had one level up. Kept as an xref (#99). Per the rule #114
     settled: the whole host organism gets its own identity and an <X>-associated environment
     term; parts of a host ground to the anatomy term. (source concept habitatmech:GOLD.1cbfc76870)'
+- timestamp: '2026-08-22T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: 'Defined as ''insect larva-associated environment'' under ENVO:01001002
+    ''animal-associated environment''. Definition curated from the committed deep-research
+    report. The GOLD path is specifically Arthropoda: Insects > Larva, so this is
+    narrower than a general larva-associated environment; UBERON:0002548 remains an
+    anatomy/life-stage xref rather than a habitat parent.'

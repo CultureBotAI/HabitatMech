@@ -1,9 +1,17 @@
 identifier: habitatmech:GOLD.184cc9e802
-label: Green algae
+label: green-alga-associated environment
+definition: An environmental system determined by an organism which is determined
+  by a green alga or by a part of a green alga.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Green algae
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:01001000
 - habitatmech:GOLD.02383c20a7
 xrefs:
 - FOODON:03412502
@@ -32,3 +40,11 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-08-22T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: Defined as 'green-alga-associated environment' under ENVO:01001000 'environmental
+    system determined by an organism'. Definition curated from the committed deep-research
+    report. Parented to the organism-determined root because algae are polyphyletic;
+    the GOLD hierarchy separately preserves alga-associated environment as the immediate
+    HabitatMech parent, and the FOODON taxon term remains an xref.
