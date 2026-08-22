@@ -73,7 +73,7 @@ def test_host_definition_batch_preserves_habitat_and_xref_semantics(repo_root):
         ),
         "habitatmech:GOLD.184cc9e802": (
             "green-alga-associated environment",
-            "ENVO:01001000",
+            "ENVO:01001001",
             {"FOODON:03412502"},
         ),
         "habitatmech:GOLD.1cbfc76870": (
