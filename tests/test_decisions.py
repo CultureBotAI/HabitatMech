@@ -819,6 +819,7 @@ def test_termite_paunch_is_not_merged_with_ruminant_rumen(records):
     )
 
     rumen = docs["UBERON:0007365"]
+    assert "BTO:0001194" not in docs, "duplicate rumen identity returned (#172)"
     assert all(
         synonym.get("synonym_text") != "Paunch/P3 segment"
         for synonym in rumen.get("synonyms", [])
@@ -827,3 +828,11 @@ def test_termite_paunch_is_not_merged_with_ruminant_rumen(records):
         attestation.get("source_id") != "gold.ecosystem:7159"
         for attestation in rumen.get("source_attestations", [])
     )
+    assert {
+        attestation.get("source") for attestation in rumen.get("source_attestations", [])
+    } >= {"MADIN", "PREGO"}
+    assert any(
+        attestation.get("source_id") == "BTO:0001194"
+        for attestation in rumen.get("source_attestations", [])
+    )
+    assert rumen.get("characteristic_taxa"), "PREGO rumen taxa were lost in the merge"

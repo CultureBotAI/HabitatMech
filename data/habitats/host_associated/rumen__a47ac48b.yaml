@@ -6,12 +6,21 @@ definition: The first compartment of the ruminant stomach. It lies on the left s
   into an upper and a lower sac, each of which has a blind sac at its posterior extremity.
 definition_source: UBERON
 habitat_category: HOST_ASSOCIATED
-grounding_status: CLOSE
+grounding_status: EXACT
 mapping_status: REVIEWED
 synonyms:
 - synonym_text: paunch
   synonym_type: EXACT_SYNONYM
   source: UBERON
+- synonym_text: paunch
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: paunches
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: rumens
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
 parent_habitats:
 - UBERON:0011954
 source_attestations:
@@ -20,7 +29,163 @@ source_attestations:
   source_label: host_animal_endotherm_rumen
   assertion_count: 132
   assertion_unit: TAXON
+- source: PREGO
+  source_id: BTO:0001194
+  source_label: rumen
+  assertion_count: 231
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
 characteristic_taxa:
+- taxon_id: NCBITaxon:102234
+  source: PREGO
+  taxon_label: Cyanobacterium
+  score: 4.0
+  rank: 1
+  candidate_pool: 231
+- taxon_id: NCBITaxon:1117
+  source: PREGO
+  taxon_label: Cyanobacteriota
+  score: 4.0
+  rank: 2
+  candidate_pool: 231
+- taxon_id: NCBITaxon:118747
+  source: PREGO
+  taxon_label: Bulleidia
+  score: 4.0
+  rank: 3
+  candidate_pool: 231
+- taxon_id: NCBITaxon:119852
+  source: PREGO
+  taxon_label: Oscillospira
+  score: 4.0
+  rank: 4
+  candidate_pool: 231
+- taxon_id: NCBITaxon:1263
+  source: PREGO
+  taxon_label: Ruminococcus
+  score: 4.0
+  rank: 5
+  candidate_pool: 231
+- taxon_id: NCBITaxon:1265
+  source: PREGO
+  taxon_label: Ruminococcus flavefaciens
+  score: 4.0
+  rank: 6
+  candidate_pool: 231
+- taxon_id: NCBITaxon:128827
+  source: PREGO
+  taxon_label: Erysipelotrichaceae
+  score: 4.0
+  rank: 7
+  candidate_pool: 231
+- taxon_id: NCBITaxon:1301
+  source: PREGO
+  taxon_label: Streptococcus
+  score: 4.0
+  rank: 8
+  candidate_pool: 231
+- taxon_id: NCBITaxon:1313211
+  source: PREGO
+  taxon_label: Lentisphaeria
+  score: 4.0
+  rank: 9
+  candidate_pool: 231
+- taxon_id: NCBITaxon:135621
+  source: PREGO
+  taxon_label: Pseudomonadaceae
+  score: 4.0
+  rank: 10
+  candidate_pool: 231
+- taxon_id: NCBITaxon:1357
+  source: PREGO
+  taxon_label: Lactococcus
+  score: 4.0
+  rank: 11
+  candidate_pool: 231
+- taxon_id: NCBITaxon:137
+  source: PREGO
+  taxon_label: Spirochaetaceae
+  score: 4.0
+  rank: 12
+  candidate_pool: 231
+- taxon_id: NCBITaxon:1380
+  source: PREGO
+  taxon_label: Atopobium
+  score: 4.0
+  rank: 13
+  candidate_pool: 231
+- taxon_id: NCBITaxon:1408194
+  source: PREGO
+  taxon_label: Endomicrobium
+  score: 4.0
+  rank: 14
+  candidate_pool: 231
+- taxon_id: NCBITaxon:1485
+  source: PREGO
+  taxon_label: Clostridium
+  score: 4.0
+  rank: 15
+  candidate_pool: 231
+- taxon_id: NCBITaxon:1526
+  source: PREGO
+  taxon_label: '[Clostridium] aminophilum'
+  score: 4.0
+  rank: 16
+  candidate_pool: 231
+- taxon_id: NCBITaxon:157
+  source: PREGO
+  taxon_label: Treponema
+  score: 4.0
+  rank: 17
+  candidate_pool: 231
+- taxon_id: NCBITaxon:1577788
+  source: PREGO
+  taxon_label: Methanomassiliicoccaceae
+  score: 4.0
+  rank: 18
+  candidate_pool: 231
+- taxon_id: NCBITaxon:1578
+  source: PREGO
+  taxon_label: Lactobacillus
+  score: 4.0
+  rank: 19
+  candidate_pool: 231
+- taxon_id: NCBITaxon:164984
+  source: PREGO
+  score: 4.0
+  rank: 20
+  candidate_pool: 231
+- taxon_id: NCBITaxon:165179
+  source: PREGO
+  taxon_label: Segatella copri
+  score: 4.0
+  rank: 21
+  candidate_pool: 231
+- taxon_id: NCBITaxon:171549
+  source: PREGO
+  taxon_label: Bacteroidales
+  score: 4.0
+  rank: 22
+  candidate_pool: 231
+- taxon_id: NCBITaxon:171550
+  source: PREGO
+  taxon_label: Rikenellaceae
+  score: 4.0
+  rank: 23
+  candidate_pool: 231
+- taxon_id: NCBITaxon:171552
+  source: PREGO
+  taxon_label: Prevotellaceae
+  score: 4.0
+  rank: 24
+  candidate_pool: 231
+- taxon_id: NCBITaxon:1716
+  source: PREGO
+  taxon_label: Corynebacterium
+  score: 4.0
+  rank: 25
+  candidate_pool: 231
 - taxon_id: NCBITaxon:1054217
   source: MADIN
   taxon_label: Thermoplasmatales archaeon BRNA1
@@ -125,7 +290,8 @@ curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by MADIN. Grounding: CLOSE.'
+  changes: 'Seeded from data/raw/ inventories; attested by MADIN, PREGO. Grounding:
+    EXACT.'
 - timestamp: '2026-08-21T00:00:00Z'
   curator: codex-gpt-5
   action: GROUND
@@ -135,3 +301,13 @@ curation_history:
     anatomical compartment. CLOSE records that bin-versus-compartment framing difference.
     Grounding merges 132 Madin taxon assertions into the existing reviewed rumen record
     while retaining the HOST_ASSOCIATED override. (source concept habitatmech:BACDIVE.ed51f3e74a)'
+- timestamp: '2026-08-21T00:00:00Z'
+  curator: codex-gpt-5
+  action: GROUND
+  changes: 'Grounded to UBERON:0007365 ''rumen'' (EXACT). Adversarial review follow-up
+    (#172): PREGO''s BTO:0001194 rumen and UBERON:0007365 both name the first ruminant
+    stomach compartment. The BTO definition adds its microbial fermentation function
+    but does not define a different habitat. Grounding PREGO to the already reviewed
+    UBERON anatomy identity consolidates 231 PREGO taxon assertions with the Madin
+    rumen evidence added for #110; the BTO source identifier remains explicit in the
+    attestation. (source concept habitatmech:PREGO.48fa2b54b5)'
