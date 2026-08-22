@@ -1,8 +1,14 @@
 identifier: habitatmech:GOLD.5e1a5d695c
-label: Lichen
+label: lichen-associated environment
+definition: A fungi-associated environment which is determined by a lichen thallus.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Lichen
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:01001041
 xrefs:
@@ -33,3 +39,11 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-08-22T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: Defined as 'lichen-associated environment' under ENVO:01001041 'fungi-associated
+    environment'. Definition curated from the committed deep-research report. GOLD
+    files the composite lichen thallus under Fungi and the fungal partner supplies
+    its nomenclatural identity, making fungi-associated environment the narrowest
+    defensible existing genus; the FOODON organism term remains an xref.

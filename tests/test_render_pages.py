@@ -217,6 +217,46 @@ def test_single_target_stubs_have_live_canonical_urls(repo_root):
     assert checked, "no single-target redirect stubs were checked"
 
 
+def test_label_change_stubs_do_not_claim_the_record_was_retired(repo_root):
+    """A label move keeps the identifier live, so its redirect must not use
+    the merge/reground copy that says the record no longer exists."""
+    import csv
+
+    retired = repo_root / "data" / "habitats" / "RETIRED.tsv"
+    pages = repo_root / "pages" / "habitats"
+    checked = 0
+    with retired.open(newline="", encoding="utf-8") as fh:
+        for row in csv.DictReader(fh, delimiter="\t"):
+            if row["resolved_by"] != "label_changed":
+                continue
+            stub = pages / f"{row['retired_slug']}.html"
+            html = stub.read_text(encoding="utf-8")
+            assert "is no longer a record of its own" not in html
+            assert "is still a live record" in html
+            assert row["retired_identifier"] in html
+            checked += 1
+    assert checked, "no label-change redirect stubs were checked"
+
+
+def test_merged_single_target_stubs_still_explain_identity_retirement(repo_root):
+    """Reason-aware label copy must not soften redirects for records whose
+    source concepts really were merged into a different identity."""
+    import csv
+
+    retired = repo_root / "data" / "habitats" / "RETIRED.tsv"
+    pages = repo_root / "pages" / "habitats"
+    with retired.open(newline="", encoding="utf-8") as fh:
+        rows = [
+            row for row in csv.DictReader(fh, delimiter="\t")
+            if row["resolved_by"] != "label_changed"
+            and len(row["current_identifiers"].split("|")) == 1
+        ]
+    assert rows, "no merged single-target redirect stubs were checked"
+    for row in rows:
+        html = (pages / f"{row['retired_slug']}.html").read_text(encoding="utf-8")
+        assert "is no longer a record of its own" in html
+
+
 def test_not_applicable_guidance_does_not_reject_hosts(repo_root):
     guidance = render_pages.GROUNDING_MEANING["NOT_APPLICABLE"]
     assert "host taxon" not in guidance.lower()
