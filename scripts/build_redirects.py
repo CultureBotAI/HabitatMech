@@ -33,6 +33,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import io
 import re
 import subprocess
 import sys
@@ -85,6 +86,44 @@ def ever_published_slugs() -> set[str]:
                         "--", "pages/habitats").splitlines():
             if path.endswith(".html"):
                 found.add(Path(path).stem)
+    return found
+
+
+def retired_map_history() -> dict[str, dict[str, str]]:
+    """Newest committed row for every slug ever recorded in RETIRED.tsv.
+
+    A redirect is itself published state. Once a label change records an old
+    URL, a later merge must carry that URL forward even though the deleted
+    record now contains only the newer label. Reading all committed map
+    versions makes the history append-only without making the working file an
+    input to its own generation.
+    """
+    found: dict[str, dict[str, str]] = {}
+    for commit in git("log", "--format=%H", "--", str(RETIRED_PATH.relative_to(REPO_ROOT))).splitlines():
+        blob = git("show", f"{commit}:{RETIRED_PATH.relative_to(REPO_ROOT)}")
+        if not blob:
+            continue
+        for row in csv.DictReader(io.StringIO(blob), delimiter="\t"):
+            slug = (row.get("retired_slug") or "").strip()
+            if slug:
+                found.setdefault(slug, row)
+    return found
+
+
+def committed_redirect_slugs() -> set[str]:
+    """Redirect stubs published by the branch's current committed site.
+
+    Historical maps contain rows later removed because they were themselves
+    wrong. Only a stub that still exists in HEAD is active state that the next
+    generation must carry forward.
+    """
+    found: set[str] = set()
+    for match in git(
+        "grep", "-l", "has moved — HabitatMech", "HEAD", "--", "pages/habitats"
+    ).splitlines():
+        path = match.removeprefix("HEAD:").strip()
+        if path.endswith(".html"):
+            found.add(Path(path).stem)
     return found
 
 
@@ -212,7 +251,51 @@ def build() -> list[dict[str, str]]:
             "current_identifiers": "|".join(landed),
             "resolved_by": "source_concepts_split" if len(landed) > 1 else "source_concepts_merged",
         })
-    return rows
+
+    # Carry forward every redirect previously published. Its former target may
+    # itself have been merged since the row was written, so resolve dead target
+    # identifiers through their stable upstream source ids to the live corpus.
+    current_by_slug = {row["retired_slug"]: row for row in rows}
+    active_historical = committed_redirect_slugs()
+    for slug, historical in sorted(retired_map_history().items()):
+        if slug not in active_historical:
+            continue
+        if slug in live_slugs or slug in current_by_slug:
+            continue
+        landed: set[str] = set()
+        unresolved: list[str] = []
+        for target in (historical.get("current_identifiers") or "").split("|"):
+            target = target.strip()
+            if not target:
+                continue
+            if target in by_id:
+                landed.add(target)
+                continue
+            inherited = {
+                by_source[source_id]
+                for source_id in retired_sources.get(target, ())
+                if source_id in by_source
+            }
+            if inherited:
+                landed.update(inherited)
+            else:
+                unresolved.append(target)
+        if unresolved or not landed:
+            raise SystemExit(
+                f"cannot carry forward retired slug {slug!r}: no live target for "
+                f"{', '.join(unresolved) or historical.get('current_identifiers', '')}"
+            )
+        current_by_slug[slug] = {
+            "retired_slug": slug,
+            "retired_identifier": historical.get("retired_identifier", ""),
+            "retired_label": historical.get("retired_label", ""),
+            "current_identifiers": "|".join(sorted(landed)),
+            "resolved_by": (
+                "source_concepts_split" if len(landed) > 1
+                else "source_concepts_merged"
+            ),
+        }
+    return list(current_by_slug.values())
 
 
 def write(rows: list[dict[str, str]], path: Path) -> None:

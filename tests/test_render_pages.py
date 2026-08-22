@@ -87,6 +87,16 @@ def test_every_retired_url_resolves_to_a_live_record(repo_root):
     assert not dangling, f"retired URLs pointing at records that do not exist: {dangling[:5]}"
 
 
+def test_every_retired_slug_has_one_unambiguous_row(repo_root):
+    """Duplicate map rows can disagree about the destination or page title."""
+    import csv
+
+    retired = repo_root / "data" / "habitats" / "RETIRED.tsv"
+    with retired.open(newline="", encoding="utf-8") as fh:
+        slugs = [row["retired_slug"] for row in csv.DictReader(fh, delimiter="\t")]
+    assert len(slugs) == len(set(slugs)), "RETIRED.tsv contains duplicate slugs"
+
+
 def test_a_retired_slug_never_shadows_a_live_record(repo_root):
     """Writing a stub at a filename a live record uses would replace a real
     habitat with a redirect away from itself."""
@@ -236,6 +246,31 @@ def test_every_stub_on_disk_has_a_row_in_the_map(repo_root):
     assert stubs, "no redirect stubs rendered"
     orphaned = sorted(stubs - mapped)
     assert not orphaned, f"stubs with no row in RETIRED.tsv: {orphaned[:5]}"
+
+
+def test_consecutive_label_change_and_merge_preserve_both_urls(repo_root):
+    """A label-change redirect remains public after its target is merged.
+
+    The sponge concept exercised this exact two-release chain during #158:
+    first its authored label moved the page, then duplicate-concept curation
+    retired the identifier. Dropping the first stub would turn a URL published
+    on main back into a 404.
+    """
+    import csv
+
+    retired = repo_root / "data" / "habitats" / "RETIRED.tsv"
+    with retired.open(newline="", encoding="utf-8") as fh:
+        rows = {
+            row["retired_slug"]: row
+            for row in csv.DictReader(fh, delimiter="\t")
+        }
+    expected_target = "habitatmech:GOLD.64acf9132c"
+    for slug in (
+        "sponge-habitatmech-gold-affd2445ea",
+        "sponge-associated-environment-habitatmech-gold-affd2445ea",
+    ):
+        assert rows[slug]["current_identifiers"] == expected_target
+        assert (repo_root / "pages" / "habitats" / f"{slug}.html").exists()
 
 
 def test_category_pages_are_paginated_and_the_index_covers_the_whole_category(repo_root):
