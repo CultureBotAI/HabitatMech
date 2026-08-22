@@ -2,9 +2,11 @@ identifier: habitatmech:GOLD.0ac09185d9
 label: Intracellular
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
 - habitatmech:GOLD.5719bbc634
+xrefs:
+- GO:0005622
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4326
@@ -13,15 +15,16 @@ source_attestations:
   assertion_count: 1
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.0ac09185d9)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-08-21T00:00:00Z'
+  curator: codex-gpt-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. GO:0005622 ''intracellular
+    anatomical structure'' kept as an xref. Non-habitat screen review (#108): the
+    full path Host-associated > Mollusca > Respiratory system > Gills > Intracellular
+    denotes the intracellular compartment of gill tissue, a real microbial habitat.
+    The GO term describes the spatial compartment but is not itself a microbial-habitat
+    identity, so it is retained only as an xref. (source concept habitatmech:GOLD.0ac09185d9)'

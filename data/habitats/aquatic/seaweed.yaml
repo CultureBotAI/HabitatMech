@@ -19,15 +19,15 @@ curation_history:
 - timestamp: '2026-08-16T00:00:00Z'
   curator: claude-opus-5
   action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader
-    term FOODON:03412266 ''seaweed'' attached as a parent. Non-habitat screen (#12):
-    grounded EXACT to FOODON:03412266 ''seaweed'', defined there as ''a macroscopic,
-    multicellular, marine algae (kingdom Protista)'' — the organism, not the habitat.
-    The concept under Environmental > Aquatic > Marine is the seaweed as a place microbes
-    live, its surface and the bed it forms. No term for that is in the vendored slice,
-    so the organism term is kept as an xref (#99) and this is a term-request candidate
-    distinct from the host-taxon family: it wants a macroalgal-bed style environment
-    term. (source concept habitatmech:GOLD.0e7a5162bb)'
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. FOODON:03412266
+    ''seaweed'' kept as an xref. Non-habitat screen (#12): grounded EXACT to FOODON:03412266
+    ''seaweed'', defined there as ''a macroscopic, multicellular, marine algae (kingdom
+    Protista)'' — the organism, not the habitat. The concept under Environmental >
+    Aquatic > Marine is the seaweed as a place microbes live, its surface and the
+    bed it forms. No term for that is in the vendored slice, so the organism term
+    is kept as an xref (#99) and this is a term-request candidate distinct from the
+    host-taxon family: it wants a macroalgal-bed style environment term. (source concept
+    habitatmech:GOLD.0e7a5162bb)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

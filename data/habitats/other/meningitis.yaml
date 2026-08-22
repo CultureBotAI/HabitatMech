@@ -1,8 +1,8 @@
 identifier: habitatmech:BACDIVE.693692f9f6
 label: Meningitis
 habitat_category: OTHER
-grounding_status: UNGROUNDED
-mapping_status: SEEDED
+grounding_status: NOT_APPLICABLE
+mapping_status: REVIEWED
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:meningitis
@@ -127,15 +127,15 @@ characteristic_taxa:
   rank: 19
   candidate_pool: 19
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:BACDIVE.693692f9f6)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: NOT_APPLICABLE.'
+- timestamp: '2026-08-21T00:00:00Z'
+  curator: codex-gpt-5
+  action: NOT_APPLICABLE
+  changes: 'Marked NOT_APPLICABLE: the source concept does not denote a habitat. Non-habitat
+    screen review (#108): Meningitis is a disease process, not the cerebrospinal fluid,
+    meninges, or other anatomical site a microbe inhabited. An external phenotype
+    term match corroborates that reading but is not in the committed ontology slice.
+    (source concept habitatmech:BACDIVE.693692f9f6)'

@@ -23,13 +23,12 @@ curation_history:
 - timestamp: '2026-08-17T00:00:00Z'
   curator: claude-opus-5
   action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader
-    term UBERON:0000922 ''embryo'' attached as a parent. Life-stage review (#112):
-    carried UBERON:0000922 ''embryo'' as a parent, reached by the ambiguous-leaf rule
-    rather than the path — several GOLD paths end in the same leaf, so the ones that
-    do not claim the term keep it as a parent. parent_habitats asserts the parent
-    is BROADER, and a larva or embryo is a whole organism rather than a broader kind
-    of place, so this is the same over-claim the identity cases had one level up.
-    Kept as an xref (#99). Per the rule #114 settled: the whole host organism gets
-    its own identity and an <X>-associated environment term; parts of a host ground
-    to the anatomy term. (source concept habitatmech:GOLD.32330da5da)'
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. UBERON:0000922
+    ''embryo'' kept as an xref. Life-stage review (#112): carried UBERON:0000922 ''embryo''
+    as a parent, reached by the ambiguous-leaf rule rather than the path — several
+    GOLD paths end in the same leaf, so the ones that do not claim the term keep it
+    as a parent. parent_habitats asserts the parent is BROADER, and a larva or embryo
+    is a whole organism rather than a broader kind of place, so this is the same over-claim
+    the identity cases had one level up. Kept as an xref (#99). Per the rule #114
+    settled: the whole host organism gets its own identity and an <X>-associated environment
+    term; parts of a host ground to the anatomy term. (source concept habitatmech:GOLD.32330da5da)'

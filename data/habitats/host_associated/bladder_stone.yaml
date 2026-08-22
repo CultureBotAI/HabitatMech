@@ -1,14 +1,18 @@
 identifier: NCIT:C26707
 label: Urinary Bladder Stone
-habitat_category: CLINICAL
+habitat_category: HOST_ASSOCIATED
 grounding_status: CLOSE
 mapping_status: REVIEWED
 synonyms:
+- synonym_text: Bladder stones
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
 - synonym_text: Bladder-stone
   synonym_type: EXACT_SYNONYM
   source: BacDive
 parent_habitats:
 - NCIT:C26905
+- habitatmech:GOLD.20fae79b01
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:bladder-stone
@@ -16,6 +20,14 @@ source_attestations:
   mapping_predicate: skos:closeMatch
   assertion_count: 7
   assertion_unit: STRAIN
+- source: GOLD
+  source_id: gold.ecosystem:6297
+  source_label: Bladder stones
+  source_path: 'Host-associated > Mammals: Human > Urinary system > Urinary bladder
+    > Bladder stones'
+  mapping_predicate: skos:closeMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
 characteristic_taxa:
 - taxon_id: NCBITaxon:1282
   source: BACDIVE
@@ -70,4 +82,13 @@ curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD. Grounding:
+    CLOSE.'
+- timestamp: '2026-08-21T00:00:00Z'
+  curator: codex-gpt-5
+  action: GROUND
+  changes: 'Grounded to NCIT:C26707 ''Urinary Bladder Stone'' (CLOSE). Non-habitat
+    screen review (#108): Bladder stones are physical calculi that microbes can inhabit.
+    NCIT''s Urinary Bladder Stone names the same concept with explicit urinary framing;
+    CLOSE matches the existing reviewed BacDive Bladder-stone record and merges their
+    evidence. (source concept habitatmech:GOLD.c245efd1e3)'

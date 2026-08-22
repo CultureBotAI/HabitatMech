@@ -542,6 +542,29 @@ def test_every_decision_kind_has_a_curation_event_summary(repo_root):
         _decision_summary(unknown)
 
 
+def test_confirm_ungrounded_summary_describes_the_recorded_relation():
+    """Published history must not call an xref a broader parent (#167)."""
+    from habitatmech.seed import _decision_summary
+
+    def summary(relation):
+        return _decision_summary(Decision(
+            identifier="habitatmech:GOLD.abcdef0123",
+            decision="CONFIRM_UNGROUNDED",
+            object_id="NCBITaxon:2864",
+            object_label="dinoflagellates",
+            grounding_status="",
+            curator="tester",
+            date="2026-08-12",
+            notes=GOOD_NOTE,
+            relation=relation,
+        ))
+
+    assert "kept as an xref" in summary("xref")
+    assert "attached as a parent" not in summary("xref")
+    assert "Nearest broader term" in summary("parent")
+    assert "attached as a parent" in summary("parent")
+
+
 def test_no_swept_concept_is_named_by_its_own_path(repo_root, records):
     """A class-level sweep asserts "no term matched by any search route". Every
     route reads the GOLD leaf alone, so the claim was false for a whole class of

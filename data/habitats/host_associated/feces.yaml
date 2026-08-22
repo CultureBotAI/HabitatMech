@@ -6,6 +6,9 @@ habitat_category: HOST_ASSOCIATED
 grounding_status: EXACT
 mapping_status: REVIEWED
 synonyms:
+- synonym_text: Cast
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
 - synonym_text: Fecal
   synonym_type: EXACT_SYNONYM
   source: GOLD
@@ -99,6 +102,7 @@ synonyms:
 parent_habitats:
 - ENVO:00002276
 - UBERON:0000174
+- UBERON:0001555
 - habitatmech:GOLD.5b0aa7456c
 - habitatmech:GOLD.6bda0871e2
 - habitatmech:GOLD.b091b80314
@@ -139,6 +143,13 @@ source_attestations:
   assertion_count: 2
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: GOLD
+  source_id: gold.ecosystem:8175
+  source_label: Cast
+  source_path: Host-associated > Annelida > Digestive system > Digestive tube > Cast
+  mapping_predicate: skos:closeMatch
+  assertion_count: 3
+  assertion_unit: ORGANISM
 characteristic_taxa:
 - taxon_id: NCBITaxon:562
   source: BACDIVE
@@ -331,3 +342,11 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD. Grounding:
     EXACT.'
+- timestamp: '2026-08-21T00:00:00Z'
+  curator: codex-gpt-5
+  action: GROUND
+  changes: 'Grounded to UBERON:0001988 ''feces'' (CLOSE). Non-habitat screen review
+    (#108): Host-associated > Annelida > Digestive system > Digestive tube > Cast
+    refers to an annelid cast, the fecal material produced from the digestive tube.
+    UBERON''s feces term names that physical habitat; CLOSE preserves the organism-specific
+    wording. The HGNC acronym collision is unrelated. (source concept habitatmech:GOLD.53337a753d)'

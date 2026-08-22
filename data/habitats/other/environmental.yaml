@@ -165,16 +165,15 @@ curation_history:
 - timestamp: '2026-08-16T00:00:00Z'
   curator: claude-opus-5
   action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader
-    term ENVO:01000951 ''natural environment'' attached as a parent. Term-request
-    re-check (#12), after ENVO:01001000 showed these claims were never machine-rechecked:
-    ''Environmental'' is the counterpart of BacDive''s Host and Engineered bins, so
-    ENVO:01000951 ''natural environment'' looks like the answer and is not. Its definition
-    requires ''minimal to no anthropisation'', and this bin holds BacDive''s Paddy-Ricefield,
-    Grove-Orchard and Herbaceous-plants-Grass,Crops, which are farmed. The term is
-    narrower than the concept, so it is neither an identity nor a parent; kept as
-    an xref (#99) to record the near-miss so the next curator does not re-derive it.
-    Still a term request. (source concept habitatmech:BACDIVE.0f1e92a02c)'
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ENVO:01000951
+    ''natural environment'' kept as an xref. Term-request re-check (#12), after ENVO:01001000
+    showed these claims were never machine-rechecked: ''Environmental'' is the counterpart
+    of BacDive''s Host and Engineered bins, so ENVO:01000951 ''natural environment''
+    looks like the answer and is not. Its definition requires ''minimal to no anthropisation'',
+    and this bin holds BacDive''s Paddy-Ricefield, Grove-Orchard and Herbaceous-plants-Grass,Crops,
+    which are farmed. The term is narrower than the concept, so it is neither an identity
+    nor a parent; kept as an xref (#99) to record the near-miss so the next curator
+    does not re-derive it. Still a term request. (source concept habitatmech:BACDIVE.0f1e92a02c)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

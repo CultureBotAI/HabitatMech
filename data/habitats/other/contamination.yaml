@@ -166,18 +166,18 @@ curation_history:
 - timestamp: '2026-08-16T00:00:00Z'
   curator: claude-opus-5
   action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader
-    term ENVO:00002204 ''anthropogenic contamination feature'' attached as a parent.
-    Risky-grounding review (#12): the seeder made ENVO:00002204 ''anthropogenic contamination
-    feature'' the identity of BacDive''s ''Contamination'' category — the highest-volume
-    risky grounding at 474 strains. The term asserts two things BacDive does not:
-    that the contamination is anthropogenic, and that the thing is a geographic feature
-    with elevated contaminants in its materials. BacDive''s category says only that
-    a strain was isolated as a contaminant, which is as often of a product, a culture
-    or a cleanroom as of a place. These are different concepts rather than a broader
-    and a narrower one, so the term is not a parent either — parent_habitats asserts
-    the parent is BROADER. Kept as an xref (#99), which records that upstream saw
-    a connection without this repo asserting one. (source concept habitatmech:BACDIVE.0c0740efd8)'
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ENVO:00002204
+    ''anthropogenic contamination feature'' kept as an xref. Risky-grounding review
+    (#12): the seeder made ENVO:00002204 ''anthropogenic contamination feature'' the
+    identity of BacDive''s ''Contamination'' category — the highest-volume risky grounding
+    at 474 strains. The term asserts two things BacDive does not: that the contamination
+    is anthropogenic, and that the thing is a geographic feature with elevated contaminants
+    in its materials. BacDive''s category says only that a strain was isolated as
+    a contaminant, which is as often of a product, a culture or a cleanroom as of
+    a place. These are different concepts rather than a broader and a narrower one,
+    so the term is not a parent either — parent_habitats asserts the parent is BROADER.
+    Kept as an xref (#99), which records that upstream saw a connection without this
+    repo asserting one. (source concept habitatmech:BACDIVE.0c0740efd8)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

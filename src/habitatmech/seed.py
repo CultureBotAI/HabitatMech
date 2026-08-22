@@ -550,10 +550,11 @@ def _decided(default: Resolution, minted: str, decision: Decision) -> Resolution
             reviewed=decision.counts_as_reviewed,
         )
     if decision.decision == "CONFIRM_UNGROUNDED":
-        # A nearest-broader term becomes a parent, never the identity: the
-        # curator has said explicitly that no term fits, and adopting a broader
-        # one would merge distinct concepts (every host clade onto
-        # "animal-associated environment", say) under a false equivalence.
+        # The related term is placement or context, never the identity: a
+        # nearest-broader term becomes a parent, while a non-is-a relationship
+        # stays an xref. Adopting either as identity would merge distinct
+        # concepts (every host clade onto "animal-associated environment",
+        # say) under a false equivalence.
         return Resolution(
             minted,
             "UNGROUNDED",
@@ -969,9 +970,9 @@ def ingest_prego(
         concept.reviewed_sources += 1 if res.reviewed else 0
         if res.decision is not None:
             concept.decisions_applied.append(res.decision)
-        # Both, not just xrefs: a CONFIRM_UNGROUNDED decision records its
-        # nearest-broader term as a parent, and dropping it here would silently
-        # lose the placement the curator recorded (#21).
+        # Preserve both relation modes: a CONFIRM_UNGROUNDED decision may
+        # record a nearest-broader parent or retain a related term as an xref.
+        # Dropping either here would silently lose the curator's placement.
         concept.parents.update(res.extra_parents)
         concept.xrefs.update(res.extra_xrefs)
         # The attestation and the taxa describe the PREGO *term*, so they keep
@@ -1428,10 +1429,13 @@ def _decision_summary(decision: Decision) -> str:
     elif decision.decision == "CONFIRM_UNGROUNDED":
         what = "Confirmed UNGROUNDED: no ontology term fits this concept."
         if decision.object_id:
-            what += (
-                f" Nearest broader term {decision.object_id} "
-                f"'{decision.object_label}' attached as a parent."
-            )
+            if decision.relation == "xref":
+                what += f" {decision.object_id} '{decision.object_label}' kept as an xref."
+            else:
+                what += (
+                    f" Nearest broader term {decision.object_id} "
+                    f"'{decision.object_label}' attached as a parent."
+                )
     elif decision.decision == "SAME_AS":
         what = (
             f"Merged into {decision.object_id} '{decision.object_label}': the same concept "
