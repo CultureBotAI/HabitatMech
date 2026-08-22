@@ -317,9 +317,9 @@ def validate_decisions(
                 f"(got {decision.grounding_status!r} on {decision.decision})"
             )
 
-        # CONFIRM_UNGROUNDED may name a nearest-broader term (attached as a
-        # parent, not adopted as the identity), so object_id is allowed here —
-        # but it is still label-verified below, like every other target.
+        # CONFIRM_UNGROUNDED may retain a related term without adopting it as
+        # the identity: normally a nearest-broader parent, or an xref when an
+        # is-a claim would be false. Its object is still label-verified below.
 
         if decision.decision == "SAME_AS":
             # The target is another SOURCE CONCEPT, not an ontology term, so the
