@@ -295,12 +295,12 @@ def test_carry_forward_does_not_read_the_rendered_stubs(repo_root, monkeypatch):
 
     real_git = build_redirects.git
 
-    def no_page_reads(*args: str) -> str:
+    def no_page_reads(*args: str, **kwargs) -> str:
         assert "grep" not in args, (
             "committed_redirect_slugs is reading rendered pages again; a "
             "template reword would silently drop published redirects (#162)"
         )
-        return real_git(*args)
+        return real_git(*args, **kwargs)
 
     monkeypatch.setattr(build_redirects, "git", no_page_reads)
     live = build_redirects.committed_redirect_slugs()
@@ -309,10 +309,11 @@ def test_carry_forward_does_not_read_the_rendered_stubs(repo_root, monkeypatch):
     with retired.open(newline="", encoding="utf-8") as fh:
         mapped = {r["retired_slug"] for r in csv.DictReader(fh, delimiter="\t")}
     assert live, "no committed redirects found — the carry-forward is inert"
-    assert live == mapped, (
-        "HEAD's map and the working map disagree; every published redirect must "
-        f"survive a rebuild. Missing: {sorted(live - mapped)[:5]}"
-    )
+    # Append-only, not equality. The working map GAINS a row every time a
+    # curator retires a URL, and asserting equality failed on that ordinary loop
+    # while printing `live - mapped` — an empty set — as the explanation (#177).
+    lost = sorted(live - mapped)
+    assert not lost, f"published redirects dropped by a rebuild: {lost[:5]}"
 
 
 def test_category_pages_are_paginated_and_the_index_covers_the_whole_category(repo_root):

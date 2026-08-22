@@ -61,12 +61,50 @@ _DESC_ID = re.compile(r"\(([^()]+)\):\s")
 _CURIE = re.compile(r"^[A-Za-z][A-Za-z0-9._-]*:[A-Za-z0-9._-]+$")
 
 
-def git(*args: str) -> str:
+def git(*args: str, allow_failure: bool = False) -> str:
+    """Run git, and fail loudly rather than returning nothing.
+
+    This used to return `""` on any non-zero exit, which every caller here reads
+    as "there is nothing at this path" — so a broken git call and a legitimately
+    absent file were the same answer. Simulating a failing `git show` while
+    leaving the rest working built **34 rows instead of 138**, silently: the two
+    blob reads feed 104 of the map's redirects, `just redirects` would have
+    written the short list, and `just render` would then have pruned 104
+    published record URLs into 404s (#176).
+
+    Absence is a real answer for exactly one question — "did this path exist at
+    this commit" — and `blob_at` asks it, with `allow_failure`. Everything else,
+    and every blob read, is an error.
+    """
     result = subprocess.run(
         ["git", "-C", str(REPO_ROOT), *args],
         capture_output=True, text=True, check=False,
     )
+    if result.returncode != 0 and not allow_failure:
+        raise SystemExit(
+            f"git {' '.join(args)} failed with exit {result.returncode}: "
+            f"{result.stderr.strip() or '(no stderr)'}"
+        )
     return result.stdout if result.returncode == 0 else ""
+
+
+def blob_at(commit: str, path: str) -> str | None:
+    """A file's content at `commit`, or None if it did not exist there.
+
+    Two legitimate absences, both of which used to be indistinguishable from a
+    broken git call: `git log -- path` lists the commit that *deleted* a path as
+    well as the ones that wrote it, and `<commit>^` does not resolve when
+    `<commit>` is the root.
+
+    `ls-tree` covers both — it exits 0 with no output for a path absent from a
+    real tree, and non-zero for a revision that does not resolve — so it is the
+    one probe allowed to fail quietly. The `show` that follows is not: by then
+    the blob is known to be there, so a failure is a failure (#176).
+    """
+    if not git("ls-tree", "--name-only", commit, "--", path,
+               allow_failure=True).strip():
+        return None
+    return git("show", f"{commit}:{path}")
 
 
 def ever_published_slugs() -> set[str]:
@@ -99,8 +137,9 @@ def retired_map_history() -> dict[str, dict[str, str]]:
     input to its own generation.
     """
     found: dict[str, dict[str, str]] = {}
-    for commit in git("log", "--format=%H", "--", str(RETIRED_PATH.relative_to(REPO_ROOT))).splitlines():
-        blob = git("show", f"{commit}:{RETIRED_PATH.relative_to(REPO_ROOT)}")
+    relative = str(RETIRED_PATH.relative_to(REPO_ROOT))
+    for commit in git("log", "--format=%H", "--", relative).splitlines():
+        blob = blob_at(commit, relative)
         if not blob:
             continue
         for row in csv.DictReader(io.StringIO(blob), delimiter="\t"):
@@ -130,10 +169,11 @@ def committed_redirect_slugs() -> set[str]:
     HEAD's copy, not the working file, so the map still cannot be an input to
     its own generation.
     """
-    blob = git("show", f"HEAD:{RETIRED_PATH.relative_to(REPO_ROOT)}")
-    if not blob:
+    blob = blob_at("HEAD", str(RETIRED_PATH.relative_to(REPO_ROOT)))
+    if blob is None:
         # No committed map yet: a first run, or a fresh branch that has never
-        # retired a URL. Nothing to carry forward, which is not an error.
+        # retired a URL. Nothing to carry forward, which is not an error — and
+        # `blob_at` distinguishes that from a `git show` that failed (#176).
         return set()
     reader = csv.DictReader(io.StringIO(blob), delimiter="\t")
     if "retired_slug" not in (reader.fieldnames or []):
@@ -168,7 +208,7 @@ def retired_record_details() -> tuple[dict[str, set[str]], dict[str, str]]:
         parts = line.split("\t")
         if len(parts) < 2 or not commit or not parts[1].endswith(".yaml"):
             continue
-        blob = git("show", f"{commit}^:{parts[1]}")
+        blob = blob_at(f"{commit}^", parts[1])
         if not blob:
             continue
         try:
