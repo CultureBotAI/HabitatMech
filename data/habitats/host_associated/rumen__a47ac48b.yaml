@@ -9,31 +9,305 @@ habitat_category: HOST_ASSOCIATED
 grounding_status: EXACT
 mapping_status: REVIEWED
 synonyms:
-- synonym_text: Paunch/P3 segment
-  synonym_type: EXACT_SYNONYM
-  source: GOLD
 - synonym_text: paunch
   synonym_type: EXACT_SYNONYM
   source: UBERON
+- synonym_text: paunch
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: paunches
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: rumens
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
 parent_habitats:
 - UBERON:0011954
-- habitatmech:GOLD.50722c7871
 source_attestations:
-- source: GOLD
-  source_id: gold.ecosystem:7159
-  source_label: Paunch/P3 segment
-  source_path: 'Host-associated > Arthropoda: Insects > Digestive system > Hindgut
-    > Paunch/P3 segment'
-  mapping_predicate: skos:exactMatch
+- source: MADIN
+  source_id: bacdive.isolation_source:host_animal_endotherm_rumen
+  source_label: host_animal_endotherm_rumen
+  assertion_count: 132
+  assertion_unit: TAXON
+- source: PREGO
+  source_id: BTO:0001194
+  source_label: rumen
+  assertion_count: 231
+  assertion_unit: TAXON
+  score: 4.0
+  evidence_channels: annotated_genomes_isolates|environmental_samples
+characteristic_taxa:
+- taxon_id: NCBITaxon:102234
+  source: PREGO
+  taxon_label: Cyanobacterium
+  score: 4.0
+  rank: 1
+  candidate_pool: 231
+- taxon_id: NCBITaxon:1117
+  source: PREGO
+  taxon_label: Cyanobacteriota
+  score: 4.0
+  rank: 2
+  candidate_pool: 231
+- taxon_id: NCBITaxon:118747
+  source: PREGO
+  taxon_label: Bulleidia
+  score: 4.0
+  rank: 3
+  candidate_pool: 231
+- taxon_id: NCBITaxon:119852
+  source: PREGO
+  taxon_label: Oscillospira
+  score: 4.0
+  rank: 4
+  candidate_pool: 231
+- taxon_id: NCBITaxon:1263
+  source: PREGO
+  taxon_label: Ruminococcus
+  score: 4.0
+  rank: 5
+  candidate_pool: 231
+- taxon_id: NCBITaxon:1265
+  source: PREGO
+  taxon_label: Ruminococcus flavefaciens
+  score: 4.0
+  rank: 6
+  candidate_pool: 231
+- taxon_id: NCBITaxon:128827
+  source: PREGO
+  taxon_label: Erysipelotrichaceae
+  score: 4.0
+  rank: 7
+  candidate_pool: 231
+- taxon_id: NCBITaxon:1301
+  source: PREGO
+  taxon_label: Streptococcus
+  score: 4.0
+  rank: 8
+  candidate_pool: 231
+- taxon_id: NCBITaxon:1313211
+  source: PREGO
+  taxon_label: Lentisphaeria
+  score: 4.0
+  rank: 9
+  candidate_pool: 231
+- taxon_id: NCBITaxon:135621
+  source: PREGO
+  taxon_label: Pseudomonadaceae
+  score: 4.0
+  rank: 10
+  candidate_pool: 231
+- taxon_id: NCBITaxon:1357
+  source: PREGO
+  taxon_label: Lactococcus
+  score: 4.0
+  rank: 11
+  candidate_pool: 231
+- taxon_id: NCBITaxon:137
+  source: PREGO
+  taxon_label: Spirochaetaceae
+  score: 4.0
+  rank: 12
+  candidate_pool: 231
+- taxon_id: NCBITaxon:1380
+  source: PREGO
+  taxon_label: Atopobium
+  score: 4.0
+  rank: 13
+  candidate_pool: 231
+- taxon_id: NCBITaxon:1408194
+  source: PREGO
+  taxon_label: Endomicrobium
+  score: 4.0
+  rank: 14
+  candidate_pool: 231
+- taxon_id: NCBITaxon:1485
+  source: PREGO
+  taxon_label: Clostridium
+  score: 4.0
+  rank: 15
+  candidate_pool: 231
+- taxon_id: NCBITaxon:1526
+  source: PREGO
+  taxon_label: '[Clostridium] aminophilum'
+  score: 4.0
+  rank: 16
+  candidate_pool: 231
+- taxon_id: NCBITaxon:157
+  source: PREGO
+  taxon_label: Treponema
+  score: 4.0
+  rank: 17
+  candidate_pool: 231
+- taxon_id: NCBITaxon:1577788
+  source: PREGO
+  taxon_label: Methanomassiliicoccaceae
+  score: 4.0
+  rank: 18
+  candidate_pool: 231
+- taxon_id: NCBITaxon:1578
+  source: PREGO
+  taxon_label: Lactobacillus
+  score: 4.0
+  rank: 19
+  candidate_pool: 231
+- taxon_id: NCBITaxon:164984
+  source: PREGO
+  score: 4.0
+  rank: 20
+  candidate_pool: 231
+- taxon_id: NCBITaxon:165179
+  source: PREGO
+  taxon_label: Segatella copri
+  score: 4.0
+  rank: 21
+  candidate_pool: 231
+- taxon_id: NCBITaxon:171549
+  source: PREGO
+  taxon_label: Bacteroidales
+  score: 4.0
+  rank: 22
+  candidate_pool: 231
+- taxon_id: NCBITaxon:171550
+  source: PREGO
+  taxon_label: Rikenellaceae
+  score: 4.0
+  rank: 23
+  candidate_pool: 231
+- taxon_id: NCBITaxon:171552
+  source: PREGO
+  taxon_label: Prevotellaceae
+  score: 4.0
+  rank: 24
+  candidate_pool: 231
+- taxon_id: NCBITaxon:1716
+  source: PREGO
+  taxon_label: Corynebacterium
+  score: 4.0
+  rank: 25
+  candidate_pool: 231
+- taxon_id: NCBITaxon:1054217
+  source: MADIN
+  taxon_label: Thermoplasmatales archaeon BRNA1
+  candidate_pool: 132
+- taxon_id: NCBITaxon:1064535
+  source: MADIN
+  taxon_label: Megasphaera elsdenii DSM 20460
+  candidate_pool: 132
+- taxon_id: NCBITaxon:1120918
+  source: MADIN
+  taxon_label: Acetitomaculum ruminis DSM 5522
+  candidate_pool: 132
+- taxon_id: NCBITaxon:1120997
+  source: MADIN
+  taxon_label: Anaerovibrio lipolyticus DSM 3074
+  candidate_pool: 132
+- taxon_id: NCBITaxon:1121131
+  source: MADIN
+  taxon_label: Butyrivibrio fibrisolvens DSM 3071
+  candidate_pool: 132
+- taxon_id: NCBITaxon:1121132
+  source: MADIN
+  taxon_label: Butyrivibrio hungatei DSM 14810
+  candidate_pool: 132
+- taxon_id: NCBITaxon:1121296
+  source: MADIN
+  taxon_label: Clostridium aminophilum F
+  candidate_pool: 132
+- taxon_id: NCBITaxon:1121303
+  source: MADIN
+  taxon_label: Clostridium cellobioparum DSM 1351
+  candidate_pool: 132
+- taxon_id: NCBITaxon:1122973
+  source: MADIN
+  taxon_label: Porphyromonas levii DSM 23370
+  candidate_pool: 132
+- taxon_id: NCBITaxon:1122978
+  source: MADIN
+  taxon_label: Prevotella albensis DSM 11370
+  candidate_pool: 132
+- taxon_id: NCBITaxon:1123012
+  source: MADIN
+  taxon_label: Pseudobutyrivibrio xylanivorans DSM 14809
+  candidate_pool: 132
+- taxon_id: NCBITaxon:1123243
+  source: MADIN
+  taxon_label: Schwartzia succinivorans DSM 10502
+  candidate_pool: 132
+- taxon_id: NCBITaxon:1123250
+  source: MADIN
+  taxon_label: Selenomonas bovis DSM 23594
+  candidate_pool: 132
+- taxon_id: NCBITaxon:1123323
+  source: MADIN
+  taxon_label: Succiniclasticum ruminis DSM 9236
+  candidate_pool: 132
+- taxon_id: NCBITaxon:1123324
+  source: MADIN
+  taxon_label: Succinivibrio dextrinosolvens DSM 3072
+  candidate_pool: 132
+- taxon_id: NCBITaxon:1124982
+  source: MADIN
+  taxon_label: Treponema sp. JC4
+  candidate_pool: 132
+- taxon_id: NCBITaxon:1134474
+  source: MADIN
+  taxon_label: Cellvibrio sp. BR
+  candidate_pool: 132
+- taxon_id: NCBITaxon:114197
+  source: MADIN
+  taxon_label: Selenomonas ruminantium lactilytica ATCC 19205
+  candidate_pool: 132
+- taxon_id: NCBITaxon:1165092
+  source: MADIN
+  taxon_label: Lachnospiraceae bacterium JC7
+  candidate_pool: 132
+- taxon_id: NCBITaxon:1201036
+  source: MADIN
+  taxon_label: Pseudochrobactrum sp. AO18b
+  candidate_pool: 132
+- taxon_id: NCBITaxon:1202533
+  source: MADIN
+  taxon_label: Bacillus nealsonii AAU1_buffalo
+  candidate_pool: 132
+- taxon_id: NCBITaxon:1224164
+  source: MADIN
+  taxon_label: Corynebacterium vitaeruminis DSM 20294
+  candidate_pool: 132
+- taxon_id: NCBITaxon:1263547
+  source: MADIN
+  taxon_label: Oscillibacter ruminantium
+  candidate_pool: 132
+- taxon_id: NCBITaxon:1265507
+  source: MADIN
+  taxon_label: Succinimonas amylolytica DSM 2873
+  candidate_pool: 132
+- taxon_id: NCBITaxon:1280706
+  source: MADIN
+  taxon_label: Selenomonas ruminantium ATCC 12561
+  candidate_pool: 132
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: GROUND
-  changes: 'Grounded to UBERON:0007365 ''rumen'' (EXACT). The paunch is the rumen;
-    P3 is the termite gut segment naming. Pulled out of the class-level sweep, whose
-    note wrongly claimed no term matched. Label: ''Paunch/P3 segment''. (source concept
-    habitatmech:GOLD.86aef52360)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by MADIN, PREGO. Grounding:
+    EXACT.'
+- timestamp: '2026-08-21T00:00:00Z'
+  curator: codex-gpt-5
+  action: GROUND
+  changes: 'Grounded to UBERON:0007365 ''rumen'' (CLOSE). Definitions-from-research
+    follow-up (#110): the committed report shows that Madin''s host_animal_endotherm_rumen
+    bin denotes the rumen and its sampled contents, and UBERON:0007365 names the ruminant
+    anatomical compartment. CLOSE records that bin-versus-compartment framing difference.
+    Grounding merges 132 Madin taxon assertions into the existing reviewed rumen record
+    while retaining the HOST_ASSOCIATED override. (source concept habitatmech:BACDIVE.ed51f3e74a)'
+- timestamp: '2026-08-21T00:00:00Z'
+  curator: codex-gpt-5
+  action: GROUND
+  changes: 'Grounded to UBERON:0007365 ''rumen'' (EXACT). Adversarial review follow-up
+    (#172): PREGO''s BTO:0001194 rumen and UBERON:0007365 both name the first ruminant
+    stomach compartment. The BTO definition adds its microbial fermentation function
+    but does not define a different habitat. Grounding PREGO to the already reviewed
+    UBERON anatomy identity consolidates 231 PREGO taxon assertions with the Madin
+    rumen evidence added for #110; the BTO source identifier remains explicit in the
+    attestation. (source concept habitatmech:PREGO.48fa2b54b5)'

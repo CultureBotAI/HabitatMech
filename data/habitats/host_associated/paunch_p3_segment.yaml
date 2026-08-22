@@ -1,0 +1,30 @@
+identifier: habitatmech:GOLD.86aef52360
+label: Paunch/P3 segment
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: REVIEWED
+parent_habitats:
+- UBERON:0001046
+- habitatmech:GOLD.50722c7871
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7159
+  source_label: Paunch/P3 segment
+  source_path: 'Host-associated > Arthropoda: Insects > Digestive system > Hindgut
+    > Paunch/P3 segment'
+  mapping_predicate: skos:narrowMatch
+curation_history:
+- timestamp: '2026-08-16T05:58:02Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-08-21T00:00:00Z'
+  curator: codex-gpt-5
+  action: GROUND_AS_PARENT
+  changes: 'UBERON:0001046 ''hindgut'' attached as a parent, not adopted as the identity
+    (NARROW). Correctness review (#170): GOLD places Paunch/P3 segment under Arthropoda:
+    Insects > Digestive system > Hindgut; P3 is the enlarged termite hindgut compartment,
+    not UBERON''s ruminant-stomach rumen. The vendored slice has no termite-specific
+    P3 term, so the source keeps its minted identity and the generic hindgut is attached
+    only as a broader parent. This removes the false exact synonym and preserves all
+    27 GOLD biosamples. (source concept habitatmech:GOLD.86aef52360)'
