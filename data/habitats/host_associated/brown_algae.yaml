@@ -1,9 +1,17 @@
 identifier: habitatmech:GOLD.3e4ecbed63
-label: Brown Algae
+label: brown-alga-associated environment
+definition: An environmental system determined by an organism which is determined
+  by a brown alga.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Brown Algae
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:01001000
 - habitatmech:GOLD.02383c20a7
 xrefs:
 - FOODON:03412395
@@ -32,3 +40,13 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-08-17T00:00:00Z'
+  curator: claude-opus-5
+  action: DEFINED
+  changes: 'Defined as ''brown-alga-associated environment'' under ENVO:01001000 ''environmental
+    system determined by an organism''. Definition drafted from the record''s deep-research
+    report under research/habitats/ and read against it. Parented to the organism
+    root rather than to alga-associated environment, which is requested in this same
+    batch and does not exist yet; editors should re-parent it if both are minted.
+    Not parented to plant-associated environment: brown algae are stramenopiles, not
+    green plants.'

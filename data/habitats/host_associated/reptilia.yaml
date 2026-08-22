@@ -1,10 +1,17 @@
 identifier: habitatmech:GOLD.1b11698aaa
-label: Reptilia
+label: reptile-associated environment
+definition: An environmental system determined by a reptile.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Reptilia
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:01001000
+- ENVO:01001002
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3380
@@ -23,6 +30,17 @@ curation_history:
     for it: this is a GOLD path and the mapping-table route did not apply, so the
     concept stays UNGROUNDED and the only trace of the mapping is upstream. Reported
     as kg-microbe#790. Path: Host-associated > Reptilia (source concept habitatmech:GOLD.1b11698aaa)'
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: DEFINED
+  changes: 'Defined as ''reptile-associated environment'' under ENVO:01001002 ''animal-associated
+    environment''. The habitat is the host clade, and it is the entire content of
+    the concept: GOLD organises host-associated isolates by host and every anatomical
+    path hangs off it. Not grounded to the parent, because every clade would then
+    merge onto one record. Same pattern ENVO already has at plant-, animal- and fungi-associated
+    environment. kg-microbe maps this to NCBITaxon:8504 Lepidosauria, which is over-narrow
+    — it excludes turtles and crocodilians that Reptilia covers — so the taxon route
+    does not solve it either.'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

@@ -1,8 +1,17 @@
 identifier: habitatmech:BACDIVE.bf10ea3ae4
-label: Geologic
+label: lithic environmental material
+definition: A solid environmental material which is a naturally occurring rock, mineral
+  or evaporite deposit, or an excavation or void within one.
+definition_source: HabitatMech
 habitat_category: OTHER
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Geologic
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+parent_habitats:
+- ENVO:01000814
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:geologic
@@ -172,3 +181,10 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+- timestamp: '2026-08-17T00:00:00Z'
+  curator: claude-opus-5
+  action: DEFINED
+  changes: Defined as 'lithic environmental material' under ENVO:01000814 'solid environmental
+    material'. Definition drafted from the record's deep-research report under research/habitats/
+    and read against it. BacDive's Geologic bin spans rock, sediment and subsurface
+    voids; the definition names what they have in common rather than picking one member.

@@ -83,6 +83,11 @@ from habitatmech.curate.decisions import (  # noqa: E402
     resolve_same_as,
     validate_decisions,
 )
+from habitatmech.curate.definitions import (  # noqa: E402
+    CuratedDefinition,
+    load_curated_definitions,
+    validate_curated_definitions,
+)
 from habitatmech.validation.write_validated import (  # noqa: E402
     ValidationFailedError,
     write_validated_habitat,
@@ -91,6 +96,7 @@ from habitatmech.validation.write_validated import (  # noqa: E402
 RAW_DIR = REPO_ROOT / "data" / "raw"
 HABITATS_DIR = REPO_ROOT / "data" / "habitats"
 DECISIONS_PATH = REPO_ROOT / "curation" / "decisions.tsv"
+CURATED_DEFINITIONS_PATH = REPO_ROOT / "curation" / "term_requests.tsv"
 
 GOLD_LEVELS = ["ecosystem", "ecosystem_category", "ecosystem_type", "ecosystem_subtype", "specific_ecosystem"]
 
@@ -341,6 +347,7 @@ class Concept:
     # in the history: they were made independently, sometimes by different
     # curators on different days (#94).
     decisions_applied: list[Decision] = field(default_factory=list)
+    definitions_applied: list[CuratedDefinition] = field(default_factory=list)
     _grounding_rank_seen: int = 0
 
     def add_synonym(self, text: str, syn_type: str, source: str) -> None:
@@ -391,6 +398,30 @@ class ConceptStore:
         if concept.category is None or (authoritative and not concept.category_is_authoritative):
             concept.category = category
             concept.category_is_authoritative = authoritative
+
+
+def apply_curated_definitions(
+    store: ConceptStore,
+    definitions: dict[str, CuratedDefinition],
+) -> None:
+    """Apply validated HabitatMech-native labels and definitions to concepts."""
+    validate_curated_definitions(
+        definitions,
+        store.concepts,
+        {term_id: term["label"] for term_id, term in store.ontology.terms.items()},
+        path=CURATED_DEFINITIONS_PATH,
+    )
+    for identifier, definition in definitions.items():
+        concept = store.concepts[identifier]
+        source_label = concept.label
+        concept.label = definition.label
+        concept.definition = definition.definition
+        concept.definition_source = "HabitatMech"
+        concept.parents.add(definition.parent_class)
+        concept.definitions_applied.append(definition)
+        concept.add_synonym(source_label, "EXACT_SYNONYM", "HabitatMech curation")
+        for synonym in definition.exact_synonyms:
+            concept.add_synonym(synonym, "EXACT_SYNONYM", "HabitatMech curation")
 
 
 # ---------------------------------------------------------------------------
@@ -1353,6 +1384,19 @@ def build_document(concept: Concept) -> dict[str, Any]:
             changes=_decision_summary(decision),
             timestamp=f"{decision.date}T00:00:00Z",
         )
+    for definition in sorted(
+        concept.definitions_applied, key=lambda d: (d.date, d.identifier)
+    ):
+        record_curation_event(
+            doc,
+            curator=definition.curator,
+            action="DEFINED",
+            changes=(
+                f"Defined as {definition.label!r} under {definition.parent_class} "
+                f"{definition.parent_label!r}. {definition.notes}"
+            ),
+            timestamp=f"{definition.date}T00:00:00Z",
+        )
     # Chronological, so the history reads as one. The seed event is stamped
     # from the extraction time, which is usually *later* than the decisions
     # applied on top of it — appending in construction order would show the
@@ -1723,6 +1767,10 @@ def build_corpus() -> Corpus:
     ingest_prego(store, prego_rows, prego_taxa, routes, decisions)
     ingest_madin(store, madin_rows, madin_taxa, routes, decisions, stats=stats)
     ingest_parameters(store, parameter_rows, stats, decisions)
+
+    definitions = load_curated_definitions(CURATED_DEFINITIONS_PATH)
+    apply_curated_definitions(store, definitions)
+    stats["curated_definitions_loaded"] = len(definitions)
 
     addressable = (
         {mint("GOLD", row["canonical_path"]) for row in gold_rows}

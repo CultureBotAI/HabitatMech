@@ -262,11 +262,26 @@ def main(argv: list[str] | None = None) -> int:
 
 
 def undefined_novel_terms() -> list[tuple[int, str, str]]:
-    """Records that need a definition: novel, examined, and not yet researched.
+    """Records that need a definition: novel, examined, and not yet authored.
 
     Ranked by upstream assertion volume, because that is what a definition buys
     — the number of observations it makes interpretable.
     """
+    from habitatmech.curate.definitions import load_curated_definitions
+
+    authored = set(
+        load_curated_definitions(REPO_ROOT / "curation" / "term_requests.tsv")
+    )
+    excluded_path = REPO_ROOT / "curation" / "term_requests_excluded.tsv"
+    excluded: set[str] = set()
+    if excluded_path.exists():
+        with excluded_path.open(newline="", encoding="utf-8") as fh:
+            excluded = {
+                row["identifier"]
+                for row in csv.DictReader(fh, delimiter="\t")
+                if (row.get("identifier") or "").strip()
+            }
+
     decisions: dict[str, dict] = {}
     path = REPO_ROOT / "curation" / "decisions.tsv"
     if path.exists():
@@ -280,6 +295,8 @@ def undefined_novel_terms() -> list[tuple[int, str, str]]:
         if doc.get("mapping_status") != "REVIEWED":
             continue
         identifier = doc["identifier"]
+        if identifier in authored or identifier in excluded:
+            continue
         if (decisions.get(identifier, {}).get("review_depth") or "ITEM").upper() != "ITEM":
             continue
         volume = sum(a.get("assertion_count") or 0 for a in doc.get("source_attestations") or [])

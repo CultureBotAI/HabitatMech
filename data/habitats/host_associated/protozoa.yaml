@@ -1,8 +1,15 @@
 identifier: habitatmech:GOLD.f3d8c3793f
-label: Protozoa
+label: protozoan-associated environment
+definition: An environmental system determined by an organism which is determined
+  by a protozoan.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Protozoa
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:01001000
 xrefs:
@@ -37,3 +44,11 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-08-17T00:00:00Z'
+  curator: claude-opus-5
+  action: DEFINED
+  changes: 'Defined as ''protozoan-associated environment'' under ENVO:01001000 ''environmental
+    system determined by an organism''. Definition drafted from the record''s deep-research
+    report under research/habitats/ and read against it; the report''s proposed wording,
+    genus and near-miss table are the evidence. Parented to the organism root rather
+    than the animal one: a protozoan is not an animal.'

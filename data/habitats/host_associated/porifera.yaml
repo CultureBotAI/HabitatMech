@@ -1,10 +1,18 @@
 identifier: habitatmech:GOLD.64acf9132c
-label: Porifera
+label: sponge-associated environment
+definition: An environment associated with an aquatic invertebrate which is determined
+  by a sponge.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Porifera
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:01001000
+- ENVO:01001176
 xrefs:
 - NCBITaxon:6040
 source_attestations:
@@ -37,3 +45,12 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-08-17T00:00:00Z'
+  curator: claude-opus-5
+  action: DEFINED
+  changes: Defined as 'sponge-associated environment' under ENVO:01001176 'environment
+    associated with an aquatic invertebrate'. Definition drafted from the record's
+    deep-research report under research/habitats/ and read against it; the report's
+    proposed wording, genus and near-miss table are the evidence. Parented to the
+    aquatic-invertebrate term rather than to animal-associated environment, which
+    the report identified as the more specific existing genus.

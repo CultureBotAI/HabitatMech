@@ -1,8 +1,16 @@
 identifier: habitatmech:BACDIVE.4d3086a839
-label: Caprinae-Sheep/Goat
+label: caprine-associated environment
+definition: An animal-associated environment which is determined by a sheep or a goat.
+definition_source: HabitatMech
 habitat_category: OTHER
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Caprinae-Sheep/Goat
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+parent_habitats:
+- ENVO:01001002
 xrefs:
 - FOODON:03411328
 source_attestations:
@@ -184,3 +192,11 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+- timestamp: '2026-08-17T00:00:00Z'
+  curator: claude-opus-5
+  action: DEFINED
+  changes: Defined as 'caprine-associated environment' under ENVO:01001002 'animal-associated
+    environment'. Definition drafted from the record's deep-research report under
+    research/habitats/ and read against it; the report's proposed wording, genus and
+    near-miss table are the evidence. BacDive's label names both hosts and the mapping
+    upstream dropped the sheep half, so the definition keeps both.

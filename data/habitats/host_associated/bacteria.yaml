@@ -1,9 +1,16 @@
 identifier: habitatmech:GOLD.029baaef9e
-label: Bacteria
+label: bacterium-associated environment
+definition: An environmental system determined by a bacterium.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Bacteria
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:01001000
 - habitatmech:GOLD.184623c963
 source_attestations:
 - source: GOLD
@@ -21,6 +28,18 @@ curation_history:
     > Microbial > Bacteria: bacteria acting as host for another microbe. No environment
     term exists for a microbial host; ENVO''s organism-associated terms cover plants
     and animals only. ENVO term request. (source concept habitatmech:GOLD.029baaef9e)'
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: DEFINED
+  changes: 'Defined as ''bacterium-associated environment'' under ENVO:01001000 ''environmental
+    system determined by an organism''. The habitat is the host clade, and it is the
+    entire content of the concept: GOLD organises host-associated isolates by host
+    and every anatomical path hangs off it. Not grounded to the parent, because every
+    clade would then merge onto one record. Same pattern ENVO already has at plant-,
+    animal- and fungi-associated environment. GOLD''s child of Microbial. Parented
+    to the organism root here because its natural parent, microbe-associated environment,
+    is requested in this same batch and does not exist yet — editors should re-parent
+    it if both are minted.'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
