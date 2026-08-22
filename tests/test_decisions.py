@@ -803,3 +803,27 @@ def test_a_merged_record_keeps_every_source_attestation(records):
         assert all((a.get("assertion_count") or 0) > 0 for a in attestations), (
             f"{doc['identifier']}: an attestation lost its count in the merge"
         )
+
+
+def test_termite_paunch_is_not_merged_with_ruminant_rumen(records):
+    """A shared English synonym must not erase incompatible anatomy (#170)."""
+    docs = {doc["identifier"]: doc for _path, doc in records}
+
+    termite = docs["habitatmech:GOLD.86aef52360"]
+    assert termite["label"] == "Paunch/P3 segment"
+    assert termite["grounding_status"] == "NARROW"
+    assert "UBERON:0001046" in termite.get("parent_habitats", [])
+    assert any(
+        attestation.get("source_id") == "gold.ecosystem:7159"
+        for attestation in termite.get("source_attestations", [])
+    )
+
+    rumen = docs["UBERON:0007365"]
+    assert all(
+        synonym.get("synonym_text") != "Paunch/P3 segment"
+        for synonym in rumen.get("synonyms", [])
+    )
+    assert all(
+        attestation.get("source_id") != "gold.ecosystem:7159"
+        for attestation in rumen.get("source_attestations", [])
+    )
