@@ -1,0 +1,94 @@
+identifier: NCIT:C26707
+label: Urinary Bladder Stone
+habitat_category: HOST_ASSOCIATED
+grounding_status: CLOSE
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Bladder stones
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
+- synonym_text: Bladder-stone
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
+parent_habitats:
+- NCIT:C26905
+- habitatmech:GOLD.20fae79b01
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:bladder-stone
+  source_label: Bladder-stone
+  mapping_predicate: skos:closeMatch
+  assertion_count: 7
+  assertion_unit: STRAIN
+- source: GOLD
+  source_id: gold.ecosystem:6297
+  source_label: Bladder stones
+  source_path: 'Host-associated > Mammals: Human > Urinary system > Urinary bladder
+    > Bladder stones'
+  mapping_predicate: skos:closeMatch
+  assertion_count: 1
+  assertion_unit: ORGANISM
+characteristic_taxa:
+- taxon_id: NCBITaxon:1282
+  source: BACDIVE
+  taxon_label: Staphylococcus epidermidis
+  association_count: 1
+  rank: 1
+  candidate_pool: 7
+- taxon_id: NCBITaxon:2702
+  source: BACDIVE
+  taxon_label: Gardnerella vaginalis
+  association_count: 1
+  rank: 2
+  candidate_pool: 7
+- taxon_id: NCBITaxon:43771
+  source: BACDIVE
+  taxon_label: Corynebacterium urealyticum
+  association_count: 1
+  rank: 3
+  candidate_pool: 7
+- taxon_id: NCBITaxon:504474
+  source: BACDIVE
+  taxon_label: Corynebacterium urealyticum DSM 7109
+  association_count: 1
+  rank: 4
+  candidate_pool: 7
+- taxon_id: NCBITaxon:508451
+  source: BACDIVE
+  taxon_label: Lactobacillus taiwanensis
+  association_count: 1
+  rank: 5
+  candidate_pool: 7
+- taxon_id: NCBITaxon:588
+  source: BACDIVE
+  taxon_label: Providencia stuartii
+  association_count: 1
+  rank: 6
+  candidate_pool: 7
+- taxon_id: NCBITaxon:827
+  source: BACDIVE
+  taxon_label: Campylobacter ureolyticus
+  association_count: 1
+  rank: 7
+  candidate_pool: 7
+curation_history:
+- timestamp: '2026-08-14T00:00:00Z'
+  curator: claude-opus-5
+  action: REVIEW
+  changes: 'Reviewed and endorsed the seeder''s own resolution. Narrowed-grounding
+    review (#67): ''urinary'' is added, but a bladder stone is urinary by definition
+    — the gallbladder equivalent is a gallstone and has its own term. Correct as seeded.
+    (source concept habitatmech:BACDIVE.343f1d3ee2)'
+- timestamp: '2026-08-16T05:58:02Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD. Grounding:
+    CLOSE.'
+- timestamp: '2026-08-21T00:00:00Z'
+  curator: codex-gpt-5
+  action: GROUND
+  changes: 'Grounded to NCIT:C26707 ''Urinary Bladder Stone'' (CLOSE). Non-habitat
+    screen review (#108): Bladder stones are physical calculi that microbes can inhabit.
+    NCIT''s Urinary Bladder Stone names the same concept with explicit urinary framing;
+    CLOSE matches the existing reviewed BacDive Bladder-stone record and merges their
+    evidence. (source concept habitatmech:GOLD.c245efd1e3)'

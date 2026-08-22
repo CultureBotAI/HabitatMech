@@ -1428,10 +1428,13 @@ def _decision_summary(decision: Decision) -> str:
     elif decision.decision == "CONFIRM_UNGROUNDED":
         what = "Confirmed UNGROUNDED: no ontology term fits this concept."
         if decision.object_id:
-            what += (
-                f" Nearest broader term {decision.object_id} "
-                f"'{decision.object_label}' attached as a parent."
-            )
+            if decision.relation == "xref":
+                what += f" {decision.object_id} '{decision.object_label}' kept as an xref."
+            else:
+                what += (
+                    f" Nearest broader term {decision.object_id} "
+                    f"'{decision.object_label}' attached as a parent."
+                )
     elif decision.decision == "SAME_AS":
         what = (
             f"Merged into {decision.object_id} '{decision.object_label}': the same concept "

@@ -26,20 +26,20 @@ curation_history:
 - timestamp: '2026-08-16T00:00:00Z'
   curator: claude-opus-5
   action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader
-    term FOODON:03411301 ''algae'' attached as a parent. Non-habitat screen (#12):
-    ''Host-associated > Algae'' was grounded EXACT to FOODON:03411301 ''algae'', which
-    FOODON defines as ''an informal term for a large, diverse group of photosynthetic
-    eukaryotic ORGANISMS''. An organism is not a habitat, and because the seeder derives
-    a GOLD child''s parent from its path node, that identity also became the parent_habitats
-    entry of 14 records under Host-associated > Algae — publishing ''is-a algae the
-    organism group'' as a broader-habitat claim 14 times over. The existing organism-identity
-    screen could not see it: it tests ancestry against NCIT and mesh roots, and FOODON
-    files both the organism and the material under one ''organism material'' root,
-    so there is no structural signal to test. The concept itself is real — algae as
-    host — and is the same family as the sponge, nematode and reptile requests, so
-    it becomes a term request with the FOODON term kept as an xref (#99) rather than
-    an identity. (source concept habitatmech:GOLD.02383c20a7)'
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. FOODON:03411301
+    ''algae'' kept as an xref. Non-habitat screen (#12): ''Host-associated > Algae''
+    was grounded EXACT to FOODON:03411301 ''algae'', which FOODON defines as ''an
+    informal term for a large, diverse group of photosynthetic eukaryotic ORGANISMS''.
+    An organism is not a habitat, and because the seeder derives a GOLD child''s parent
+    from its path node, that identity also became the parent_habitats entry of 14
+    records under Host-associated > Algae — publishing ''is-a algae the organism group''
+    as a broader-habitat claim 14 times over. The existing organism-identity screen
+    could not see it: it tests ancestry against NCIT and mesh roots, and FOODON files
+    both the organism and the material under one ''organism material'' root, so there
+    is no structural signal to test. The concept itself is real — algae as host —
+    and is the same family as the sponge, nematode and reptile requests, so it becomes
+    a term request with the FOODON term kept as an xref (#99) rather than an identity.
+    (source concept habitatmech:GOLD.02383c20a7)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

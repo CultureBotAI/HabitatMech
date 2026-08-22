@@ -166,18 +166,18 @@ curation_history:
 - timestamp: '2026-08-16T00:00:00Z'
   curator: claude-opus-5
   action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader
-    term NCIT:C15189 ''Biopsy Procedure'' attached as a parent. CLOSE-grounding review
-    (#12): the seeder made NCIT:C15189 ''Biopsy Procedure'' the identity of BacDive''s
-    ''Biopsy'' category, 95 strains. A procedure is not a habitat — it is the act
-    of taking the sample, not the place the organism lived, the same category error
-    as grounding a record to an organism or a quality. The habitat is whichever tissue
-    was biopsied, which BacDive does not say, so no term fits. The procedure term
-    is kept as an xref (#99) to record what upstream matched without this repo asserting
-    the record is a procedure. The record was CLINICAL while it carried the NCIT term
-    and would fall to OTHER without one, because the category is inferred from the
-    grounding; a biopsy is a clinical source whether or not a term fits, so the category
-    is pinned rather than lost with the grounding. (source concept habitatmech:BACDIVE.3d4fdc29fb)'
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. NCIT:C15189
+    ''Biopsy Procedure'' kept as an xref. CLOSE-grounding review (#12): the seeder
+    made NCIT:C15189 ''Biopsy Procedure'' the identity of BacDive''s ''Biopsy'' category,
+    95 strains. A procedure is not a habitat — it is the act of taking the sample,
+    not the place the organism lived, the same category error as grounding a record
+    to an organism or a quality. The habitat is whichever tissue was biopsied, which
+    BacDive does not say, so no term fits. The procedure term is kept as an xref (#99)
+    to record what upstream matched without this repo asserting the record is a procedure.
+    The record was CLINICAL while it carried the NCIT term and would fall to OTHER
+    without one, because the category is inferred from the grounding; a biopsy is
+    a clinical source whether or not a term fits, so the category is pinned rather
+    than lost with the grounding. (source concept habitatmech:BACDIVE.3d4fdc29fb)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

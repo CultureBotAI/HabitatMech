@@ -21,15 +21,14 @@ curation_history:
 - timestamp: '2026-08-17T00:00:00Z'
   curator: claude-opus-5
   action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader
-    term UBERON:0000922 ''embryo'' attached as a parent. Life-stage review (#112),
-    applying the rule #114 settled: the whole host ORGANISM gets its own identity
-    plus an <X>-associated environment term, while PARTS of a host ground to the anatomy
-    term as gut, skin and lung already do. A larva, pupa, prepupa or embryo is the
-    whole organism at a stage, not a part of one, so UBERON:0000922 ''embryo'' is
-    the organism rather than the place — the same shape as Mollusca, Porifera and
-    the host clades. Kept as an xref (#99); the concept keeps its own identity as
-    a term-request candidate.This is the line that makes both calls fall out of one
-    rule, rather than an exception for terms that happen to live in UBERON: a cocoon
-    is a STRUCTURE an insect builds and stays grounded, because it is not the organism.
-    (source concept habitatmech:GOLD.9f162205a6)'
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. UBERON:0000922
+    ''embryo'' kept as an xref. Life-stage review (#112), applying the rule #114 settled:
+    the whole host ORGANISM gets its own identity plus an <X>-associated environment
+    term, while PARTS of a host ground to the anatomy term as gut, skin and lung already
+    do. A larva, pupa, prepupa or embryo is the whole organism at a stage, not a part
+    of one, so UBERON:0000922 ''embryo'' is the organism rather than the place — the
+    same shape as Mollusca, Porifera and the host clades. Kept as an xref (#99); the
+    concept keeps its own identity as a term-request candidate.This is the line that
+    makes both calls fall out of one rule, rather than an exception for terms that
+    happen to live in UBERON: a cocoon is a STRUCTURE an insect builds and stays grounded,
+    because it is not the organism. (source concept habitatmech:GOLD.9f162205a6)'

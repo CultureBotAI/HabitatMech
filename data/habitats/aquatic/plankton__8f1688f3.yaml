@@ -16,15 +16,15 @@ curation_history:
 - timestamp: '2026-08-16T00:00:00Z'
   curator: claude-opus-5
   action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader
-    term mesh:D010933 ''Plankton'' attached as a parent. Host-taxon reversal (#114):
-    NOT_APPLICABLE on the reasoning that plankton is ''an assemblage of organisms
-    rather than a place''. Organisms can be habitats — plankton hosts epibiotic and
-    particle-attached microbial communities, which is a well-described habitat distinct
-    from the free-living water column. What is not a place is the TAXON TERM, so mesh:D010933
-    stays an xref (#99) and the concept keeps its own identity. NOT_APPLICABLE asserted
-    the concept is not a habitat, which is stronger than the evidence and stronger
-    than what was meant. (source concept habitatmech:GOLD.aeb3ec93d9)'
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. mesh:D010933
+    ''Plankton'' kept as an xref. Host-taxon reversal (#114): NOT_APPLICABLE on the
+    reasoning that plankton is ''an assemblage of organisms rather than a place''.
+    Organisms can be habitats — plankton hosts epibiotic and particle-attached microbial
+    communities, which is a well-described habitat distinct from the free-living water
+    column. What is not a place is the TAXON TERM, so mesh:D010933 stays an xref (#99)
+    and the concept keeps its own identity. NOT_APPLICABLE asserted the concept is
+    not a habitat, which is stronger than the evidence and stronger than what was
+    meant. (source concept habitatmech:GOLD.aeb3ec93d9)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

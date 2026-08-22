@@ -20,14 +20,14 @@ curation_history:
 - timestamp: '2026-08-20T00:00:00Z'
   curator: claude-opus-5
   action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader
-    term ENVO:06105023 ''biofouling'' attached as a parent. Process screen (#127):
-    carried ENVO:06105023 ''biofouling'' as a parent, which ENVO defines as ''a FOULING
-    PROCESS during which biological matter accumulates on a solid surface'' and files
-    under environmental system process. parent_habitats asserts the parent is a broader
-    HABITAT, so the corpus was claiming a habitat is-a process — the thing MIxS rules
-    out in the same sentence that rules out organisms and groups of organisms, and
-    the reason that sentence is now quoted in CLAUDE.md.
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ENVO:06105023
+    ''biofouling'' kept as an xref. Process screen (#127): carried ENVO:06105023 ''biofouling''
+    as a parent, which ENVO defines as ''a FOULING PROCESS during which biological
+    matter accumulates on a solid surface'' and files under environmental system process.
+    parent_habitats asserts the parent is a broader HABITAT, so the corpus was claiming
+    a habitat is-a process — the thing MIxS rules out in the same sentence that rules
+    out organisms and groups of organisms, and the reason that sentence is now quoted
+    in CLAUDE.md.
 
 
     The concept is the fouling layer, not the fouling. It reached the term through

@@ -19,15 +19,15 @@ curation_history:
 - timestamp: '2026-08-16T00:00:00Z'
   curator: claude-opus-5
   action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader
-    term FOODON:03411743 ''red algae'' attached as a parent. Non-habitat screen (#12):
-    grounded EXACT to FOODON:03411743 ''red algae'', which FOODON uses for the TAXON
-    — red algae is defined there as ''one of the oldest groups of eukaryotic algae,
-    and one of the largest phyla'' — not for a habitat. An organism group is not a
-    place, and the GOLD path says host-associated, so the concept is the environment
-    the alga provides. Same family as the sponge, nematode and reptile requests. The
-    FOODON term is kept as an xref (#99), which records what the label matched without
-    asserting the record is a phylum. (source concept habitatmech:GOLD.e789c273d0)'
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. FOODON:03411743
+    ''red algae'' kept as an xref. Non-habitat screen (#12): grounded EXACT to FOODON:03411743
+    ''red algae'', which FOODON uses for the TAXON — red algae is defined there as
+    ''one of the oldest groups of eukaryotic algae, and one of the largest phyla''
+    — not for a habitat. An organism group is not a place, and the GOLD path says
+    host-associated, so the concept is the environment the alga provides. Same family
+    as the sponge, nematode and reptile requests. The FOODON term is kept as an xref
+    (#99), which records what the label matched without asserting the record is a
+    phylum. (source concept habitatmech:GOLD.e789c273d0)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
