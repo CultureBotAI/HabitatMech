@@ -735,7 +735,7 @@ def test_same_as_merges_two_novel_concepts(tmp_path):
 def test_same_as_discards_the_sources_automatic_grounding(tmp_path):
     """The source identity is rejected, so its CLOSE status and predicate must
     not outrank or otherwise describe the minted survivor (#180)."""
-    from habitatmech.seed import Resolution, _decided
+    from habitatmech.seed import ConceptStore, OntologyIndex, Resolution, _decided
 
     decision = load_decisions(_write(tmp_path, _same_as()))[
         "habitatmech:GOLD.abcdef0123"
@@ -754,6 +754,27 @@ def test_same_as_discards_the_sources_automatic_grounding(tmp_path):
     assert resolved.identifier == "habitatmech:BACDIVE.0123456789"
     assert resolved.grounding_status == "UNGROUNDED"
     assert resolved.mapping_predicate is None
+    assert resolved.contributes_grounding is False
+
+    def merged_status(source_first):
+        store = ConceptStore(OntologyIndex([], []))
+        calls = [
+            (resolved.grounding_status, resolved.contributes_grounding),
+            ("NOT_APPLICABLE", True),
+        ]
+        if not source_first:
+            calls.reverse()
+        for status, contributes in calls:
+            store.get(
+                resolved.identifier,
+                "some other concept",
+                status,
+                contributes_grounding=contributes,
+            )
+        return store.concepts[resolved.identifier].grounding_status
+
+    assert merged_status(source_first=True) == "NOT_APPLICABLE"
+    assert merged_status(source_first=False) == "NOT_APPLICABLE"
 
 
 def test_same_as_onto_an_ontology_term_is_rejected(tmp_path):

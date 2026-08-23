@@ -371,11 +371,20 @@ class ConceptStore:
         self.ontology = ontology
         self.concepts: dict[str, Concept] = {}
 
-    def get(self, identifier: str, label: str, grounding_status: str) -> Concept:
+    def get(
+        self,
+        identifier: str,
+        label: str,
+        grounding_status: str,
+        *,
+        contributes_grounding: bool = True,
+    ) -> Concept:
         concept = self.concepts.get(identifier)
         if concept is None:
             concept = Concept(identifier=identifier, label=label, grounding_status=grounding_status)
-            concept._grounding_rank_seen = GROUNDING_RANK.get(grounding_status, 0)
+            concept._grounding_rank_seen = (
+                GROUNDING_RANK.get(grounding_status, 0) if contributes_grounding else -1
+            )
             # An ontology-grounded record takes its label, definition, and
             # parents from the ontology, so the record and the term agree.
             if identifier in self.ontology.terms:
@@ -387,7 +396,7 @@ class ConceptStore:
                     concept.add_synonym(syn, "EXACT_SYNONYM", identifier.split(":", 1)[0])
                 concept.parents.update(self.ontology.direct_parents(identifier))
             self.concepts[identifier] = concept
-        else:
+        elif contributes_grounding:
             rank = GROUNDING_RANK.get(grounding_status, 0)
             if rank > concept._grounding_rank_seen:
                 concept.grounding_status = grounding_status
@@ -433,6 +442,10 @@ class Resolution:
     identifier: str
     grounding_status: str
     mapping_predicate: str | None = None
+    # False when a source is being redirected with SAME_AS: its rejected
+    # automatic grounding must not participate in choosing the survivor's
+    # status, even when the target's status has the lowest ordinary rank.
+    contributes_grounding: bool = True
     # Terms to attach as parents rather than as the identifier — the ambiguous
     # GOLD-leaf case, where the matched term is broader than the concept.
     extra_parents: list[str] = field(default_factory=list)
@@ -537,10 +550,11 @@ def _decided(default: Resolution, minted: str, decision: Decision) -> Resolution
         # identity. Carrying that status into the target lets, for example, a
         # lexical CLOSE match outrank the target's curated UNGROUNDED status,
         # making a merge change meaning based on ingest order (#180). Start from
-        # a neutral minted status and let the target's own resolution upgrade it.
+        # a harmless placeholder and let the target's own resolution replace it.
         return Resolution(
             _SAME_AS_TARGETS.get(minted, decision.object_id),
             "UNGROUNDED",
+            contributes_grounding=False,
             route=f"curated_same_as_from_{default.route}",
             category=category_override,
             reviewed=decision.counts_as_reviewed,
@@ -800,7 +814,12 @@ def ingest_gold(
             decisions,
         )
         routes[res.route] += 1
-        concept = store.get(res.identifier, row["leaf_label"], res.grounding_status)
+        concept = store.get(
+            res.identifier,
+            row["leaf_label"],
+            res.grounding_status,
+            contributes_grounding=res.contributes_grounding,
+        )
         concept.source_concepts += 1
         concept.reviewed_sources += 1 if res.reviewed else 0
         if res.decision is not None:
@@ -881,7 +900,12 @@ def ingest_bacdive(
             decisions,
         )
         routes[res.route] += 1
-        concept = store.get(res.identifier, row["label"], res.grounding_status)
+        concept = store.get(
+            res.identifier,
+            row["label"],
+            res.grounding_status,
+            contributes_grounding=res.contributes_grounding,
+        )
         concept.source_concepts += 1
         concept.reviewed_sources += 1 if res.reviewed else 0
         if res.decision is not None:
@@ -970,7 +994,12 @@ def ingest_prego(
         )
         identifier = res.identifier
         routes[res.route] += 1
-        concept = store.get(identifier, identifier, res.grounding_status)
+        concept = store.get(
+            identifier,
+            identifier,
+            res.grounding_status,
+            contributes_grounding=res.contributes_grounding,
+        )
         concept.source_concepts += 1
         concept.reviewed_sources += 1 if res.reviewed else 0
         if res.decision is not None:
@@ -1108,7 +1137,12 @@ def ingest_madin(
         routes[res.route] += 1
 
         identifier = res.identifier
-        concept = store.get(identifier, identifier, res.grounding_status)
+        concept = store.get(
+            identifier,
+            identifier,
+            res.grounding_status,
+            contributes_grounding=res.contributes_grounding,
+        )
         concept.source_concepts += 1
         concept.reviewed_sources += 1 if res.reviewed else 0
         if res.decision is not None:
@@ -1231,6 +1265,7 @@ def ingest_parameters(
             concept = store.get(
                 identifier, store.ontology.label(identifier) or row["env_type"],
                 res.grounding_status,
+                contributes_grounding=res.contributes_grounding,
             )
             concept.source_concepts += 1
             concept.reviewed_sources += 1 if res.reviewed else 0
