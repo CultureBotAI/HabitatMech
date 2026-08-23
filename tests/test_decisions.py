@@ -732,6 +732,30 @@ def test_same_as_merges_two_novel_concepts(tmp_path):
     assert decisions["habitatmech:GOLD.abcdef0123"].object_id == "habitatmech:BACDIVE.0123456789"
 
 
+def test_same_as_discards_the_sources_automatic_grounding(tmp_path):
+    """The source identity is rejected, so its CLOSE status and predicate must
+    not outrank or otherwise describe the minted survivor (#180)."""
+    from habitatmech.seed import Resolution, _decided
+
+    decision = load_decisions(_write(tmp_path, _same_as()))[
+        "habitatmech:GOLD.abcdef0123"
+    ]
+    resolved = _decided(
+        Resolution(
+            "ENVO:01000951",
+            "CLOSE",
+            mapping_predicate="skos:closeMatch",
+            route="gold_leaf_synonym",
+        ),
+        "habitatmech:GOLD.abcdef0123",
+        decision,
+    )
+
+    assert resolved.identifier == "habitatmech:BACDIVE.0123456789"
+    assert resolved.grounding_status == "UNGROUNDED"
+    assert resolved.mapping_predicate is None
+
+
 def test_same_as_onto_an_ontology_term_is_rejected(tmp_path):
     """That is what GROUND is for, and accepting it here would give two
     different decisions the same effect by two different code paths."""
@@ -803,6 +827,29 @@ def test_a_merged_record_keeps_every_source_attestation(records):
         assert all((a.get("assertion_count") or 0) > 0 for a in attestations), (
             f"{doc['identifier']}: an attestation lost its count in the merge"
         )
+
+
+def test_environmental_provenance_bins_merge_without_losing_scope(records):
+    """GOLD and BacDive use one level-1 provenance concept; publishing two
+    records split 19,739 assertions and invited conflicting definitions (#179)."""
+    docs = {doc["identifier"]: doc for _path, doc in records}
+    survivor = docs["habitatmech:BACDIVE.0f1e92a02c"]
+
+    assert "habitatmech:GOLD.c3fa7fc4c2" not in docs
+    assert survivor["label"] == "free-living environment"
+    assert survivor["definition_source"] == "HabitatMech"
+    assert "ENVO:01000254" in survivor.get("parent_habitats", [])
+    assert "ENVO:01000951" in survivor.get("xrefs", [])
+    attestations = {
+        (attestation["source"], attestation["assertion_unit"]):
+        attestation["assertion_count"]
+        for attestation in survivor["source_attestations"]
+    }
+    assert attestations == {("BACDIVE", "STRAIN"): 18454, ("GOLD", "ORGANISM"): 1285}
+    assert survivor.get("characteristic_taxa"), "BacDive taxa were lost in the merge"
+    history = " ".join(event["changes"] for event in survivor["curation_history"])
+    assert "BacDive's Paddy" not in history
+    assert "Paddy-Ricefield" not in history
 
 
 def test_termite_paunch_is_not_merged_with_ruminant_rumen(records):

@@ -532,10 +532,15 @@ def _decided(default: Resolution, minted: str, decision: Decision) -> Resolution
         # The target is the chain's end, not this row's object_id, so a curator
         # can write A->B and B->C without the second decision depending on the
         # first having been written first.
+        #
+        # The source's automatic grounding is discarded along with its proposed
+        # identity. Carrying that status into the target lets, for example, a
+        # lexical CLOSE match outrank the target's curated UNGROUNDED status,
+        # making a merge change meaning based on ingest order (#180). Start from
+        # a neutral minted status and let the target's own resolution upgrade it.
         return Resolution(
             _SAME_AS_TARGETS.get(minted, decision.object_id),
-            default.grounding_status,
-            mapping_predicate=default.mapping_predicate,
+            "UNGROUNDED",
             route=f"curated_same_as_from_{default.route}",
             category=category_override,
             reviewed=decision.counts_as_reviewed,
