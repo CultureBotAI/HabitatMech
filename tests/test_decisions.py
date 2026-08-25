@@ -873,6 +873,28 @@ def test_environmental_provenance_bins_merge_without_losing_scope(records):
     assert "Paddy-Ricefield" not in history
 
 
+def test_madin_alga_merges_into_the_defined_gold_host_environment(records):
+    """Two source vocabularies name the same broad algal-host habitat; merging
+    must retain Madin's taxa and its incomparable TAXON count (#183)."""
+    docs = {doc["identifier"]: doc for _path, doc in records}
+    survivor = docs["habitatmech:GOLD.02383c20a7"]
+
+    assert "habitatmech:MADIN.5eeeec4db2" not in docs
+    assert survivor["label"] == "alga-associated environment"
+    assert survivor["habitat_category"] == "HOST_ASSOCIATED"
+    assert survivor["definition_source"] == "HabitatMech"
+    assert "ENVO:01001000" in survivor.get("parent_habitats", [])
+    attestations = {
+        (attestation["source"], attestation["assertion_unit"]):
+        attestation["assertion_count"]
+        for attestation in survivor["source_attestations"]
+    }
+    assert attestations == {("GOLD", "ORGANISM"): 394, ("MADIN", "TAXON"): 88}
+    assert any(
+        taxon["source"] == "MADIN" for taxon in survivor.get("characteristic_taxa", [])
+    ), "Madin taxa were lost in the merge"
+
+
 def test_termite_paunch_is_not_merged_with_ruminant_rumen(records):
     """A shared English synonym must not erase incompatible anatomy (#170)."""
     docs = {doc["identifier"]: doc for _path, doc in records}

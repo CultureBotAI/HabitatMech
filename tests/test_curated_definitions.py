@@ -96,6 +96,11 @@ def test_host_definition_batch_preserves_habitat_and_xref_semantics(repo_root):
             "ENVO:01001041",
             {"FOODON:03412345"},
         ),
+        "habitatmech:GOLD.1276bea544": (
+            "diatom-associated environment",
+            "ENVO:01001000",
+            {"NCBITaxon:2836"},
+        ),
     }
 
     concepts = {concept.identifier: concept for concept in build_corpus().concepts}
