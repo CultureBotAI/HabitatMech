@@ -1,9 +1,20 @@
 identifier: habitatmech:GOLD.1276bea544
-label: Diatoms
+label: diatom-associated environment
+definition: An environmental system determined by an organism which is determined
+  by a diatom or by a part of a diatom.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Diatoms
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: diatom host environment
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:01001000
 - habitatmech:GOLD.02383c20a7
 xrefs:
 - NCBITaxon:2836
@@ -28,3 +39,14 @@ curation_history:
     > Algae > Diatoms denotes diatoms acting as microbial hosts. The organism is the
     habitat; the taxon class is evidence about the host and remains an xref rather
     than the record identity. (source concept habitatmech:GOLD.1276bea544)'
+- timestamp: '2026-08-24T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: Defined as 'diatom-associated environment' under ENVO:01001000 'environmental
+    system determined by an organism'. Definition curated from the committed alga-associated
+    research report and cross-checked against its green- and brown-alga sibling reports.
+    Diatoms are the 218-assertion GOLD child of Algae; ENVO has no diatom- or general
+    alga-associated environment, plant-associated environment excludes Bacillariophyta,
+    and the Bacillariophyta taxon remains an xref rather than a habitat identity.
+    The GOLD hierarchy separately preserves alga-associated environment as the immediate
+    HabitatMech parent.
