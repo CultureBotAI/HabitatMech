@@ -873,6 +873,50 @@ def test_environmental_provenance_bins_merge_without_losing_scope(records):
     assert "Paddy-Ricefield" not in history
 
 
+def test_saline_or_alkaline_sources_merge_under_the_reviewed_genus(records):
+    """The source labels name an inland aquatic environment, not a bare
+    quality; the curated genus replaces GOLD's false biome inheritance (#185)."""
+    docs = {doc["identifier"]: doc for _path, doc in records}
+    survivor = docs["habitatmech:GOLD.ce244e62cd"]
+
+    assert "habitatmech:BACDIVE.9a0a53afc1" not in docs
+    assert survivor["label"] == "inland saline or alkaline aquatic environment"
+    assert survivor["habitat_category"] == "AQUATIC"
+    assert survivor["grounding_status"] == "UNGROUNDED"
+    assert survivor["mapping_status"] == "REVIEWED"
+    assert survivor["definition_source"] == "HabitatMech"
+    assert survivor.get("parent_habitats") == ["ENVO:01000317"]
+    assert "PATO:0001430" not in survivor.get("xrefs", [])
+
+    attestations = {
+        (attestation["source"], attestation["assertion_unit"]):
+        attestation["assertion_count"]
+        for attestation in survivor["source_attestations"]
+    }
+    assert attestations == {("BACDIVE", "STRAIN"): 37, ("GOLD", "ORGANISM"): 121}
+    bacdive = next(
+        attestation for attestation in survivor["source_attestations"]
+        if attestation["source"] == "BACDIVE"
+    )
+    assert "curated decision deliberately does not carry" in bacdive["notes"]
+    assert any(
+        taxon["source"] == "BACDIVE"
+        for taxon in survivor.get("characteristic_taxa", [])
+    ), "BacDive taxa were lost in the merge"
+    history = " ".join(event["changes"] for event in survivor["curation_history"])
+    assert "a quality, not a place" not in history
+    assert "a quality is a property" not in history
+
+
+def test_bacdive_attestations_never_claim_an_empty_xref_was_kept(records):
+    """A curation override must describe the automatic target, not interpolate
+    the final resolution's intentionally empty xref list (#186)."""
+    for _path, doc in records:
+        for attestation in doc.get("source_attestations", []):
+            if attestation.get("source") == "BACDIVE":
+                assert "ontology ()" not in attestation.get("notes", ""), doc["identifier"]
+
+
 def test_madin_alga_merges_into_the_defined_gold_host_environment(records):
     """Two source vocabularies name the same broad algal-host habitat; merging
     must retain Madin's taxa and its incomparable TAXON count (#183)."""

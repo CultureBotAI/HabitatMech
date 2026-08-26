@@ -137,6 +137,7 @@ def load_requests() -> list[dict]:
             "curator": definition.curator,
             "date": definition.date,
             "notes": definition.notes,
+            "parent_mode": definition.parent_mode,
         }
         for definition in definitions.values()
     ]
