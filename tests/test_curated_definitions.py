@@ -119,6 +119,13 @@ def test_host_definition_batch_preserves_habitat_and_xref_semantics(repo_root):
         }
         assert doc["definition_source"] == "HabitatMech"
 
+    # ADD is deliberately backward-compatible: the authored ontology genus
+    # supplements a true GOLD hierarchy edge rather than erasing it (#191).
+    assert concepts["habitatmech:GOLD.1276bea544"].parents >= {
+        "ENVO:01001000",
+        "habitatmech:GOLD.02383c20a7",
+    }
+
 
 def test_curated_definition_loader_rejects_duplicate_identifiers(tmp_path):
     path = tmp_path / "definitions.tsv"

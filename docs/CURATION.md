@@ -89,3 +89,23 @@ has an item-level decision. Partial review intentionally leaves it `SEEDED`.
 
 Every causal-graph edge requires cited evidence. Upstream habitat attestations
 do not vouch for mechanism claims.
+
+## Curated definitions and hierarchy
+
+Definitions for minted terms belong in `curation/term_requests.tsv`; generated
+records under `data/habitats/` are never edited directly. The optional
+`parent_mode` column controls how the authored ontology genus interacts with
+parents inferred from source hierarchy:
+
+- `ADD` is the default. It retains source-derived parents and adds the authored
+  ontology parent. Use it when both hierarchy claims are true, even when the
+  ontology parent is more general or more stable.
+- `REPLACE` removes every inherited parent before adding the authored ontology
+  parent. Use it only after an item-level review establishes that every
+  inherited parent is false for the concept, and record that evidence in the
+  definition notes. It is not a way to express preference for a tighter genus.
+
+For example, the diatom definition adds an organism-determined ENVO genus while
+retaining GOLD's true alga-associated parent. The inland saline-or-alkaline
+definition replaces GOLD's aquatic-biome edge because the source bin includes
+engineered settings and therefore is not a kind of biome.
