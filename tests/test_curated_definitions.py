@@ -24,6 +24,8 @@ def test_authored_definitions_are_applied_to_generated_concepts(repo_root):
         assert concept.definition == definition.definition
         assert concept.definition_source == "HabitatMech"
         assert definition.parent_class in concept.parents
+        if definition.parent_mode == "REPLACE":
+            assert concept.parents == {definition.parent_class}
 
     example = concepts["habitatmech:GOLD.cd0b0940e5"]
     doc = build_document(example)
@@ -151,4 +153,18 @@ def test_curated_definition_loader_rejects_duplicate_labels(tmp_path):
     path.write_text(header + first + second, encoding="utf-8")
 
     with pytest.raises(DefinitionError, match="merge duplicate concepts"):
+        load_curated_definitions(path)
+
+
+def test_curated_definition_loader_rejects_unknown_parent_mode(tmp_path):
+    path = tmp_path / "definitions.tsv"
+    path.write_text(
+        "identifier\trequested_label\tparent_class\tparent_label\tdefinition\t"
+        "exact_synonym\tcurator\tdate\tnotes\tparent_mode\n"
+        "habitatmech:x\tx environment\tENVO:1\tenvironment\t"
+        "An environment.\tX\ttest\t2026-08-21\tA considered definition.\tRESET\n",
+        encoding="utf-8",
+    )
+
+    with pytest.raises(DefinitionError, match="parent_mode 'RESET'"):
         load_curated_definitions(path)

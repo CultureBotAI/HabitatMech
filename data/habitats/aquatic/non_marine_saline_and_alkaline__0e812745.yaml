@@ -1,11 +1,38 @@
 identifier: habitatmech:GOLD.ce244e62cd
-label: Non-marine Saline and Alkaline
+label: inland saline or alkaline aquatic environment
+definition: An aquatic environment which is determined by an inland water body whose
+  water is substantially more saline than fresh water, substantially more alkaline
+  than circumneutral water, or both.
+definition_source: HabitatMech
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Non-marine Saline and Alkaline
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: Non-marine-Saline-and-Alkaline
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: continental saline waters
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: inland saline waters
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: saline inland waters
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- ENVO:00002030
+- ENVO:01000317
 source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:non-marine-saline-and-alkaline
+  source_label: Non-marine-Saline-and-Alkaline
+  assertion_count: 37
+  assertion_unit: STRAIN
+  notes: Upstream mapping targets a non-habitat ontology (PATO:0001430); the curated
+    decision deliberately does not carry that partial mapping onto the generated record.
 - source: GOLD
   source_id: gold.ecosystem:3482
   source_label: Non-marine Saline and Alkaline
@@ -13,15 +40,198 @@ source_attestations:
   assertion_count: 121
   assertion_unit: ORGANISM
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+characteristic_taxa:
+- taxon_id: NCBITaxon:83428
+  source: BACDIVE
+  taxon_label: uncultured Bacillus sp.
+  association_count: 5
+  rank: 1
+  candidate_pool: 28
+- taxon_id: NCBITaxon:2183934
+  source: BACDIVE
+  taxon_label: Marinospirillum sp.
+  association_count: 3
+  rank: 2
+  candidate_pool: 28
+- taxon_id: NCBITaxon:1872700
+  source: BACDIVE
+  taxon_label: Virgibacillus sp.
+  association_count: 2
+  rank: 3
+  candidate_pool: 28
+- taxon_id: NCBITaxon:1926584
+  source: BACDIVE
+  taxon_label: Nitrincola sp.
+  association_count: 2
+  rank: 4
+  candidate_pool: 28
+- taxon_id: NCBITaxon:617000
+  source: BACDIVE
+  taxon_label: Desulfonatronovibrio thiodismutans
+  association_count: 2
+  rank: 5
+  candidate_pool: 28
+- taxon_id: NCBITaxon:1008392
+  source: BACDIVE
+  taxon_label: Chitinispirillum alkaliphilum
+  association_count: 1
+  rank: 6
+  candidate_pool: 28
+- taxon_id: NCBITaxon:1227484
+  source: BACDIVE
+  taxon_label: Halorubrum saccharovorum DSM 1137
+  association_count: 1
+  rank: 7
+  candidate_pool: 28
+- taxon_id: NCBITaxon:1227493
+  source: BACDIVE
+  taxon_label: Natrialba hulunbeirensis JCM 10989
+  association_count: 1
+  rank: 8
+  candidate_pool: 28
+- taxon_id: NCBITaxon:1246445
+  source: BACDIVE
+  taxon_label: Nocardiopsis kunsanensis DSM 44524
+  association_count: 1
+  rank: 9
+  candidate_pool: 28
+- taxon_id: NCBITaxon:1454184
+  source: BACDIVE
+  taxon_label: Alkaliphilus namsaraevii
+  association_count: 1
+  rank: 10
+  candidate_pool: 28
+- taxon_id: NCBITaxon:1586233
+  source: BACDIVE
+  taxon_label: Halomicrobium urmianum
+  association_count: 1
+  rank: 11
+  candidate_pool: 28
+- taxon_id: NCBITaxon:1721088
+  source: BACDIVE
+  taxon_label: Maridesulfovibrio salinus
+  association_count: 1
+  rank: 12
+  candidate_pool: 28
+- taxon_id: NCBITaxon:1807133
+  source: BACDIVE
+  taxon_label: Natronospira proteinivora
+  association_count: 1
+  rank: 13
+  candidate_pool: 28
+- taxon_id: NCBITaxon:1812810
+  source: BACDIVE
+  taxon_label: Rhodohalobacter halophilus
+  association_count: 1
+  rank: 14
+  candidate_pool: 28
+- taxon_id: NCBITaxon:1871618
+  source: BACDIVE
+  taxon_label: Gracilibacillus sp.
+  association_count: 1
+  rank: 15
+  candidate_pool: 28
+- taxon_id: NCBITaxon:1874361
+  source: BACDIVE
+  taxon_label: Idiomarina sp.
+  association_count: 1
+  rank: 16
+  candidate_pool: 28
+- taxon_id: NCBITaxon:2024860
+  source: BACDIVE
+  taxon_label: Spongiibacter sp.
+  association_count: 1
+  rank: 17
+  candidate_pool: 28
+- taxon_id: NCBITaxon:263724
+  source: BACDIVE
+  taxon_label: Idiomarina ramblicola
+  association_count: 1
+  rank: 18
+  candidate_pool: 28
+- taxon_id: NCBITaxon:2746
+  source: BACDIVE
+  taxon_label: Halomonas elongata
+  association_count: 1
+  rank: 19
+  candidate_pool: 28
+- taxon_id: NCBITaxon:393481
+  source: BACDIVE
+  taxon_label: Roseinatronobacter monicus
+  association_count: 1
+  rank: 20
+  candidate_pool: 28
+- taxon_id: NCBITaxon:411959
+  source: BACDIVE
+  taxon_label: Virgibacillus chiguensis
+  association_count: 1
+  rank: 21
+  candidate_pool: 28
+- taxon_id: NCBITaxon:488938
+  source: BACDIVE
+  taxon_label: Desulfonatronospira delicata
+  association_count: 1
+  rank: 22
+  candidate_pool: 28
+- taxon_id: NCBITaxon:555779
+  source: BACDIVE
+  taxon_label: Desulfonatronospira thiodismutans ASO3-1
+  association_count: 1
+  rank: 23
+  candidate_pool: 28
+- taxon_id: NCBITaxon:589865
+  source: BACDIVE
+  taxon_label: Desulfurivibrio alkaliphilus AHT 2
+  association_count: 1
+  rank: 24
+  candidate_pool: 28
+- taxon_id: NCBITaxon:617001
+  source: BACDIVE
+  taxon_label: Desulfonatronum thioautotrophicum
+  association_count: 1
+  rank: 25
+  candidate_pool: 28
 curation_history:
-- timestamp: '2026-08-14T00:00:00Z'
-  curator: claude-opus-5
-  action: REVIEW
-  changes: 'Reviewed and endorsed the seeder''s own resolution. xref-only review (#43):
-    a quality is a property of a habitat rather than a habitat, the call already recorded
-    for Acidic, Humid and Arid. The xref also drops the saline half of the source.
-    (source concept habitatmech:GOLD.ce244e62cd)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD. Grounding:
+    UNGROUNDED.'
+- timestamp: '2026-08-25T00:00:00Z'
+  curator: codex-gpt-5
+  action: SAME_AS
+  changes: 'Merged into habitatmech:GOLD.ce244e62cd ''Non-marine Saline and Alkaline'':
+    the same concept under another source''s name. Duplicate correction (#110, #185):
+    BacDive''s “Non-marine-Saline-and-Alkaline” isolation-source bin and GOLD''s identically
+    scoped node denote the same broad inland aquatic habitat. The earlier “quality,
+    not a place” ruling was wrong for the source concept, so its 37 STRAIN assertions
+    and taxa merge into the defined GOLD survivor. BacDive''s automatic PATO:0001430
+    alkaline xref is deliberately not carried: it covers only one arm of this saline-or-alkaline
+    disjunction and would misleadingly drop the saline arm. (source concept habitatmech:BACDIVE.9a0a53afc1)'
+- timestamp: '2026-08-25T00:00:00Z'
+  curator: codex-gpt-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader
+    term ENVO:01000317 ''aquatic environment'' attached as a parent. Definition review
+    (#110, #185): GOLD''s node names the broad environment grouping its inland saline,
+    alkaline and combined descendants, not a bare water quality. The earlier “quality,
+    not a place” ruling confused the modifiers with the source concept and left a
+    genuine 121-organism habitat undefined. ENVO:01000317 is the defensible existing
+    genus. The inherited aquatic-biome edge is replaced by the curated definition
+    because this source bin also contains operated settings such as solar salterns
+    and fracking water. The node is disjunctive — saline OR alkaline OR both — and
+    descendants that leak outside the intended inland scope remain independently curated.
+    (source concept habitatmech:GOLD.ce244e62cd)'
+- timestamp: '2026-08-25T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: 'Defined as ''inland saline or alkaline aquatic environment'' under ENVO:01000317
+    ''aquatic environment''. Definition curated from the committed deep-research report
+    for this record (#110, #185). The “or both” wording preserves GOLD''s disjunctive
+    hierarchy instead of claiming every child is simultaneously saline and alkaline.
+    “Inland” is preferred to “non-marine” because marine-derived inland brines can
+    remain geographically inland, while “athalassohaline” is not an exact synonym
+    because it classifies water by ionic composition rather than location. Parent
+    replacement is intentional: GOLD''s inherited aquatic-biome edge is false for
+    the node''s operated-setting descendants, whereas ENVO''s aquatic-environment
+    genus covers both natural and engineered water-determined settings.'
