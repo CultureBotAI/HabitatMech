@@ -497,6 +497,49 @@ def test_a_retraction_must_say_who_and_why(monkeypatch, tmp_path):
     with pytest.raises(SystemExit, match="retracted twice"):
         build_redirects.load_retractions()
 
+    build_redirects = _miniature_world(
+        monkeypatch, tmp_path, "\tcurator\t2026-08-25\tSlug left blank.\n")
+    with pytest.raises(SystemExit, match="names no URL"):
+        build_redirects.load_retractions()
+
+
+def test_retracting_a_live_records_own_url_is_an_error(monkeypatch, tmp_path):
+    """`published` includes pages that still exist, so the never-published guard
+    lets this through — but `build` only ever emits slugs that are NOT live, so
+    no row can match one. A curator naming the new URL instead of the old one
+    would otherwise get a clean run and no retraction (#188)."""
+    import pytest
+
+    build_redirects = _miniature_world(
+        monkeypatch, tmp_path,
+        f"{LIVE_SLUG}\tcurator\t2026-08-25\tNamed the wrong end of the move.\n")
+    with pytest.raises(SystemExit, match="live record's own page"):
+        build_redirects.build()
+
+
+def test_a_retraction_row_is_permanent_for_a_regenerated_redirect(
+        monkeypatch, tmp_path):
+    """Retraction is NOT equally permanent for the two kinds of row, and this
+    pins the half that is not.
+
+    A carried-forward row stays withdrawn once committed: HEAD's map no longer
+    offers it. A derived row does not — it is rebuilt every run from the live
+    corpus and from every page the branch has ever held, so the tombstone is the
+    only thing suppressing it. Deleting a row that looks spent republishes a
+    redirect a curator withdrew because it was wrong (#189).
+    """
+    baseline = f"{ORPHAN_SLUG}\tcurator\t2026-08-25\tNot this test's subject.\n"
+    withdrawn = (baseline
+                 + f"{RELABELLED_SLUG}\tcurator\t2026-08-25\tWrong habitat.\n")
+
+    build_redirects = _miniature_world(monkeypatch, tmp_path, withdrawn)
+    assert RELABELLED_SLUG not in {r["retired_slug"] for r in build_redirects.build()}
+
+    build_redirects = _miniature_world(monkeypatch, tmp_path, baseline)
+    assert RELABELLED_SLUG in {r["retired_slug"] for r in build_redirects.build()}, (
+        "dropping the tombstone no longer republishes a derived redirect; if "
+        "that is now deliberate, docs/CURATION.md says otherwise (#189)")
+
 
 def test_the_committed_retraction_file_parses_and_nothing_it_names_is_published(
         repo_root):

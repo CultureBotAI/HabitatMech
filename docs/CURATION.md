@@ -96,6 +96,14 @@ The builder subtracts these slugs from the map and `just render` then prunes
 their stubs, so the sequence is the ordinary one: add the row, run `just
 redirects` and `just render`, commit both.
 
+A retraction row is permanent — do not tidy one away because it looks spent.
+The two kinds of row it can withdraw are not equally sticky. A carried-forward
+redirect stays withdrawn once the retraction is committed, because the builder
+reads the committed map and the row is no longer in it. A redirect derived from
+a label change is rebuilt on every run from the live corpus and from every page
+the branch has ever held, so the row in this file is the only thing suppressing
+it; delete the row and the next `just redirects` republishes it.
+
 Retract only a redirect that is *wrong* — one pointing at a habitat that never
 absorbed the retired concept. A redirect whose target has itself since merged
 is not wrong; the builder follows it onward through the stable upstream source

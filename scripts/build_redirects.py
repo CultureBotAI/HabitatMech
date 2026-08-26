@@ -197,8 +197,13 @@ def load_retractions() -> dict[str, dict[str, str]]:
         found: dict[str, dict[str, str]] = {}
         for line, row in enumerate(reader, start=2):
             slug = (row.get("retired_slug") or "").strip()
+            if not slug and not any((v or "").strip() for v in row.values()):
+                continue  # a blank separator line, not a retraction
             if not slug:
-                continue
+                raise SystemExit(
+                    f"{_shown(RETRACTED_PATH)} line {line}: a retraction with "
+                    "no retired_slug names no URL; it would be skipped silently"
+                )
             for column in ("curator", "date", "why_retracted"):
                 if not (row.get(column) or "").strip():
                     raise SystemExit(
@@ -335,6 +340,17 @@ def build() -> list[dict[str, str]]:
         raise SystemExit(
             f"{_shown(RETRACTED_PATH)} retracts slug(s) that "
             f"pages/habitats has never contained: {', '.join(unknown)}"
+        )
+    # A live record's own page passes the check above — `published` includes
+    # pages that still exist — but `build` only ever emits slugs that are NOT
+    # live, so no row can match one. That is a curator naming the new URL
+    # instead of the old one, presenting as a successful retraction (#188).
+    alive = sorted(slug for slug in retracted if slug in live_slugs)
+    if alive:
+        raise SystemExit(
+            f"{_shown(RETRACTED_PATH)} retracts slug(s) that are a live "
+            f"record's own page, so no redirect exists to withdraw: "
+            f"{', '.join(alive)}"
         )
     rows: list[dict[str, str]] = []
     # Derived from RECORD history, not page history. A retired page is replaced
