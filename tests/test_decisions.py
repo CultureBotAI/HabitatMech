@@ -932,6 +932,10 @@ def test_rodentia_other_is_a_residual_host_bucket_not_a_term_request(records):
     assert "NCIT:C17649" not in rodentia.get("xrefs", [])
     assert rodentia["source_attestations"][0]["assertion_count"] == 97
     assert rodentia.get("characteristic_taxa")
+    # The Muridae sibling must stay a SEPARATE record; this is not an
+    # endorsement of its own state. It is still NOT_APPLICABLE — "not a
+    # habitat" — over 325 strains, on the host-taxon reasoning #114 reversed,
+    # as are Canidae-Dog and Felidae-Cat. Tracked in #194.
     assert "habitatmech:BACDIVE.ab17ecb10f" in docs
 
     excluded = build_term_requests.excluded()
