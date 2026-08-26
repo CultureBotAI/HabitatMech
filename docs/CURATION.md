@@ -72,6 +72,37 @@ that disagree with the slice; ranked evidence always displays the authoritative
 slice label required by a `GROUND` decision. Report obsolete source annotations
 through the [GOLD feedback form](https://gold.jgi.doe.gov/help).
 
+## Retracting a published redirect
+
+`data/habitats/RETIRED.tsv` maps dead record URLs to live ones, and it is
+append-only by design: a redirect the site has already published is state
+someone may have linked to, so a later rebuild carries it forward rather than
+letting it lapse. The builder reads the committed map, not the working copy,
+which means deleting a row does not retract it — the row returns on the next
+`just redirects`, and `--check` calls the hand-edited file stale in the
+meantime.
+
+Withdrawing one is therefore a curation decision, recorded in
+`curation/redirects_retracted.tsv`:
+
+| Column | Meaning |
+|---|---|
+| `retired_slug` | The page name to stop publishing, exactly as it appears in `RETIRED.tsv`. |
+| `curator` | Who withdrew it. |
+| `date` | When. |
+| `why_retracted` | Why the redirect was wrong. |
+
+The builder subtracts these slugs from the map and `just render` then prunes
+their stubs, so the sequence is the ordinary one: add the row, run `just
+redirects` and `just render`, commit both.
+
+Retract only a redirect that is *wrong* — one pointing at a habitat that never
+absorbed the retired concept. A redirect whose target has itself since merged
+is not wrong; the builder follows it onward through the stable upstream source
+ids. Retracting returns the URL to a 404, which is the outcome the map exists
+to prevent, so the reason has to say what the redirect claimed and why that
+claim was false.
+
 ## Evidence and validation
 
 Every `GROUND` records both the target CURIE and expected label. Seeding fails

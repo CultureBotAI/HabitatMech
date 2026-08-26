@@ -8,6 +8,7 @@ footer turning any one-record curation change into a 3,192-file diff.
 from __future__ import annotations
 
 import re
+from pathlib import Path
 
 from scripts import render_pages
 
@@ -354,6 +355,170 @@ def test_carry_forward_does_not_read_the_rendered_stubs(repo_root, monkeypatch):
     # while printing `live - mapped` — an empty set — as the explanation (#177).
     lost = sorted(live - mapped)
     assert not lost, f"published redirects dropped by a rebuild: {lost[:5]}"
+
+
+LIVE_ID = "habitatmech:GOLD.aaaaaaaaaa"
+LIVE_SLUG = "live-habitat-habitatmech-gold-aaaaaaaaaa"
+RELABELLED_SLUG = "old-label-habitatmech-gold-aaaaaaaaaa"
+ORPHAN_SLUG = "gone-habitat-habitatmech-gold-bbbbbbbbbb"
+
+
+def _miniature_world(monkeypatch, tmp_path, retractions: str = ""):
+    """Stand `build()` up on a two-URL corpus instead of the real one.
+
+    A full build walks 3300 records and the whole page history and takes ~45
+    seconds, which is too slow to run once per retraction case — and the cases
+    are about control flow, not about the corpus. Every collaborator is
+    replaced; `load_retractions`, `slug_for` and `build` itself are the real
+    ones, which is the point.
+
+    The world holds exactly two dead URLs, one per code path that has to honour
+    a retraction: `RELABELLED_SLUG`, which the derivation loop regenerates from
+    the live record on every run, and `ORPHAN_SLUG`, a carried-forward row whose
+    target no longer exists anywhere — the case that makes `build` raise.
+    """
+    import sys
+
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+    import build_redirects
+
+    live = {
+        "identifier": LIVE_ID,
+        "label": "Live habitat",
+        "source_attestations": [{"source_id": "gold.ecosystem:1"}],
+    }
+    monkeypatch.setattr(
+        build_redirects, "load_corpus",
+        lambda: ({LIVE_ID: live}, {"gold.ecosystem:1": LIVE_ID}))
+    monkeypatch.setattr(build_redirects, "retired_record_details", lambda: ({}, {}))
+    monkeypatch.setattr(
+        build_redirects, "ever_published_slugs",
+        lambda: {LIVE_SLUG, RELABELLED_SLUG, ORPHAN_SLUG})
+    monkeypatch.setattr(build_redirects, "retired_map_history", lambda: {
+        ORPHAN_SLUG: {
+            "retired_slug": ORPHAN_SLUG,
+            "retired_identifier": "habitatmech:GOLD.bbbbbbbbbb",
+            "retired_label": "Gone habitat",
+            "current_identifiers": "habitatmech:GOLD.cccccccccc",
+            "resolved_by": "source_concepts_merged",
+        },
+    })
+    monkeypatch.setattr(
+        build_redirects, "committed_redirect_slugs", lambda: {ORPHAN_SLUG})
+
+    path = tmp_path / "redirects_retracted.tsv"
+    path.write_text(
+        "retired_slug\tcurator\tdate\twhy_retracted\n" + retractions,
+        encoding="utf-8")
+    monkeypatch.setattr(build_redirects, "RETRACTED_PATH", path)
+    return build_redirects
+
+
+def test_a_retraction_withdraws_a_redirect_the_rebuild_would_regenerate(
+        monkeypatch, tmp_path):
+    """The escape hatch #178 said did not exist.
+
+    Deleting a row from RETIRED.tsv never retracted anything: the builder reads
+    the COMMITTED map, so the row came back on the next `just redirects` and
+    `--check` called the edited file stale in between. Both halves are asserted
+    here from one world — the redirect is regenerated without a retraction row
+    and gone with one.
+    """
+    # The orphan is retracted in BOTH builds; it is the other test's subject and
+    # would otherwise raise here before the row under test is reached.
+    baseline = f"{ORPHAN_SLUG}\tcurator\t2026-08-25\tNot this test's subject.\n"
+
+    build_redirects = _miniature_world(monkeypatch, tmp_path, baseline)
+    before = {row["retired_slug"] for row in build_redirects.build()}
+    assert RELABELLED_SLUG in before, (
+        "fixture is inert: the derivation loop is not producing the row a "
+        "retraction is supposed to remove")
+
+    build_redirects = _miniature_world(
+        monkeypatch, tmp_path, baseline
+        + f"{RELABELLED_SLUG}\tcurator\t2026-08-25\tPointed at the wrong habitat.\n")
+    after = {row["retired_slug"] for row in build_redirects.build()}
+    assert RELABELLED_SLUG not in after
+    assert before - after == {RELABELLED_SLUG}, (
+        "a retraction removed more than the row it names")
+
+
+def test_a_retraction_can_withdraw_a_carried_forward_redirect_with_no_live_target(
+        monkeypatch, tmp_path):
+    """The carry-forward is checked BEFORE the target is resolved, deliberately.
+
+    A redirect whose targets have all died is exactly the one a curator needs to
+    withdraw, and that path raises rather than returning a row — so a retraction
+    applied afterwards would never be reached.
+    """
+    import pytest
+
+    build_redirects = _miniature_world(monkeypatch, tmp_path)
+    with pytest.raises(SystemExit, match="cannot carry forward"):
+        build_redirects.build()
+
+    build_redirects = _miniature_world(
+        monkeypatch, tmp_path,
+        f"{ORPHAN_SLUG}\tcurator\t2026-08-25\tThe concept was never absorbed.\n")
+    assert ORPHAN_SLUG not in {r["retired_slug"] for r in build_redirects.build()}
+
+
+def test_retracting_a_slug_that_was_never_published_is_an_error(monkeypatch, tmp_path):
+    """A tombstone is a claim that a URL exists; a typo silently retracts nothing.
+
+    Checked against every page the branch has ever held rather than against this
+    run's rows, because a retraction stops the slug being generated — a check
+    against the current rows would start failing the moment it took effect.
+    """
+    import pytest
+
+    build_redirects = _miniature_world(
+        monkeypatch, tmp_path,
+        "live-habitat-habitatmech-gold-typo\tcurator\t2026-08-25\tOops.\n")
+    with pytest.raises(SystemExit, match="never contained"):
+        build_redirects.build()
+
+
+def test_a_retraction_must_say_who_and_why(monkeypatch, tmp_path):
+    """Unpublishing a citable URL returns it to a 404. That needs an author and a
+    reason on the record, like every other decision in curation/."""
+    import pytest
+
+    for row in (f"{RELABELLED_SLUG}\t\t2026-08-25\tNo curator.\n",
+                f"{RELABELLED_SLUG}\tcurator\t2026-08-25\t\n"):
+        build_redirects = _miniature_world(monkeypatch, tmp_path, row)
+        with pytest.raises(SystemExit, match="needs a"):
+            build_redirects.load_retractions()
+
+    build_redirects = _miniature_world(
+        monkeypatch, tmp_path,
+        f"{RELABELLED_SLUG}\tcurator\t2026-08-25\tOnce.\n"
+        f"{RELABELLED_SLUG}\tcurator\t2026-08-25\tTwice.\n")
+    with pytest.raises(SystemExit, match="retracted twice"):
+        build_redirects.load_retractions()
+
+
+def test_the_committed_retraction_file_parses_and_nothing_it_names_is_published(
+        repo_root):
+    """The real curation/redirects_retracted.tsv, without the 45-second build.
+
+    Catches a malformed or half-applied tombstone: a row whose slug is still in
+    the published map means the retraction was written but never rebuilt.
+    """
+    import csv
+    import sys
+
+    sys.path.insert(0, str(repo_root / "scripts"))
+    import build_redirects
+
+    retracted = build_redirects.load_retractions()
+    retired = repo_root / "data" / "habitats" / "RETIRED.tsv"
+    with retired.open(newline="", encoding="utf-8") as fh:
+        mapped = {r["retired_slug"] for r in csv.DictReader(fh, delimiter="\t")}
+    still_live = sorted(set(retracted) & mapped)
+    assert not still_live, (
+        f"retracted but still published: {still_live}; run `just redirects` "
+        "and `just render`")
 
 
 def test_category_pages_are_paginated_and_the_index_covers_the_whole_category(repo_root):
