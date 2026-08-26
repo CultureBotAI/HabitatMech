@@ -1,8 +1,10 @@
 identifier: habitatmech:BACDIVE.745e245512
 label: Rodentia-Other
-habitat_category: OTHER
+habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+parent_habitats:
+- ENVO:01001002
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:rodentia-other
@@ -161,14 +163,23 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 80
 curation_history:
-- timestamp: '2026-08-14T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Cohort review:
-    the other half of the NCIT:C17649 ''Other'' merge. Same reasoning as the invertebrate
-    source it was collapsing with — a bucket term is not an identity. (source concept
-    habitatmech:BACDIVE.745e245512)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+- timestamp: '2026-08-25T00:00:00Z'
+  curator: codex-gpt-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader
+    term ENVO:01001002 ''animal-associated environment'' attached as a parent. Residual-host
+    review (#192): BacDive''s live vocabulary places `Rodentia (Other)` under `#Host`
+    as the sibling of `#Muridae (Mouse/Rat)`. It is a real animal-host environment,
+    not NCIT:C17649 `Other`; that contentless lexical target remains rejected. ENVO:01001002
+    is genuinely broader and the category is HOST_ASSOCIATED. The source bucket means
+    rodent hosts not assigned to the Muridae sibling, so it stays minted and separate:
+    merging would erase the family-rank boundary, while requesting an ontology class
+    defined by a mutable “everything else” exclusion would make its meaning change
+    whenever BacDive adds a sibling. Hamsters and voles remain in scope despite vernacular
+    mouse names; the attesting Actinobacillus capsulatus includes a reported rabbit-derived
+    type strain outside Rodentia, so source assignment is preserved as evidence rather
+    than treated as a taxonomic guarantee. (source concept habitatmech:BACDIVE.745e245512)'

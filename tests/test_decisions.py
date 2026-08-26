@@ -917,6 +917,33 @@ def test_bacdive_attestations_never_claim_an_empty_xref_was_kept(records):
                 assert "ontology ()" not in attestation.get("notes", ""), doc["identifier"]
 
 
+def test_rodentia_other_is_a_residual_host_bucket_not_a_term_request(records):
+    """The BacDive partition is a real host habitat but an unstable ontology
+    class; its Muridae sibling must remain a separate record (#192)."""
+    from scripts import build_term_requests
+
+    docs = {doc["identifier"]: doc for _path, doc in records}
+    rodentia = docs["habitatmech:BACDIVE.745e245512"]
+
+    assert rodentia["habitat_category"] == "HOST_ASSOCIATED"
+    assert rodentia["grounding_status"] == "UNGROUNDED"
+    assert rodentia["mapping_status"] == "REVIEWED"
+    assert rodentia.get("parent_habitats") == ["ENVO:01001002"]
+    assert "NCIT:C17649" not in rodentia.get("xrefs", [])
+    assert rodentia["source_attestations"][0]["assertion_count"] == 97
+    assert rodentia.get("characteristic_taxa")
+    assert "habitatmech:BACDIVE.ab17ecb10f" in docs
+
+    excluded = build_term_requests.excluded()
+    assert "habitatmech:BACDIVE.745e245512" in excluded
+    pending = {identifier for _count, _label, identifier in build_term_requests.unrequested(
+        build_term_requests.load_corpus(),
+        {row["identifier"] for row in build_term_requests.load_requests()},
+        {},
+    )}
+    assert "habitatmech:BACDIVE.745e245512" not in pending
+
+
 def test_madin_alga_merges_into_the_defined_gold_host_environment(records):
     """Two source vocabularies name the same broad algal-host habitat; merging
     must retain Madin's taxa and its incomparable TAXON count (#183)."""
