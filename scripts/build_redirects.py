@@ -52,6 +52,13 @@ RETIRED_PATH = HABITATS_DIR / "RETIRED.tsv"
 COLUMNS = ["retired_slug", "retired_identifier", "retired_label",
            "current_identifiers", "resolved_by"]
 
+# Retraction is a curation decision, so it lives with the other ones rather
+# than in the generated map it edits. Same shape as
+# curation/term_requests_excluded.tsv: the key, who decided, and why.
+RETRACTED_PATH = REPO_ROOT / "curation" / "redirects_retracted.tsv"
+RETRACTED_COLUMNS = ["retired_slug", "curator", "date", "why_retracted"]
+_OVERFLOW = "_extra_fields"
+
 # The page's meta description reads "{label} ({identifier}): a microbial
 # habitat ...". Anchoring on the "): " is what makes this unambiguous when the
 # label has parentheses of its own — 37 records do, and a leading [^"(]* would
@@ -149,12 +156,92 @@ def retired_map_history() -> dict[str, dict[str, str]]:
     return found
 
 
+def _shown(path: Path) -> str:
+    """A path for an error message, relative to the repo when it is inside it.
+
+    `relative_to` RAISES for a path that is not, so composing a message with it
+    is a way for the error path itself to die before it can say anything — which
+    is how three of the retraction tests first failed, on the diagnostic rather
+    than on the thing being diagnosed.
+    """
+    try:
+        return str(path.relative_to(REPO_ROOT))
+    except ValueError:
+        return str(path)
+
+
+def load_retractions() -> dict[str, dict[str, str]]:
+    """Redirects a curator has withdrawn, keyed by slug.
+
+    A redirect is published state, and the generator had no way to unpublish
+    one. Deleting a row from RETIRED.tsv does not retract it: the rebuild reads
+    HEAD, HEAD still has the row, and the row comes straight back — `--check`
+    then reports the hand-edited file as stale and regenerating restores it.
+    The only way through was to commit the deletion first, while `--check` was
+    failing, and regenerate afterwards: a two-step nobody would guess and
+    nothing documented (#178).
+
+    So retraction is stated where every other curation decision is, with a
+    curator and a reason, and subtracted from the map at the end of `build`.
+    Unpublishing a citable URL should leave a record of who did it and why.
+    """
+    if not RETRACTED_PATH.exists():
+        return {}
+    with RETRACTED_PATH.open(newline="", encoding="utf-8") as fh:
+        # restkey, so a row with more fields than the header is visible. A tab
+        # anywhere in why_retracted otherwise sent the tail of the reason to
+        # DictReader's unnamed overflow key and truncated the audit record
+        # silently — the URL unpublished, the stated justification a fragment
+        # (#195). A tab in prose is what a spreadsheet paste produces.
+        reader = csv.DictReader(fh, delimiter="\t", restkey=_OVERFLOW)
+        missing = set(RETRACTED_COLUMNS) - set(reader.fieldnames or [])
+        if missing:
+            raise SystemExit(
+                f"{_shown(RETRACTED_PATH)} is missing "
+                f"column(s): {', '.join(sorted(missing))}"
+            )
+        found: dict[str, dict[str, str]] = {}
+        for line, row in enumerate(reader, start=2):
+            # First, before anything reads row.values(): the overflow key holds
+            # a LIST, not a string, so every later check would have to guard
+            # against it.
+            if row.pop(_OVERFLOW, None):
+                raise SystemExit(
+                    f"{_shown(RETRACTED_PATH)} line {line}: more fields than "
+                    f"columns, so a value contains a tab and has been "
+                    f"truncated at it; check why_retracted"
+                )
+            slug = (row.get("retired_slug") or "").strip()
+            if not slug and not any((v or "").strip() for v in row.values()):
+                continue  # a blank separator line, not a retraction
+            if not slug:
+                raise SystemExit(
+                    f"{_shown(RETRACTED_PATH)} line {line}: a retraction with "
+                    "no retired_slug names no URL; it would be skipped silently"
+                )
+            for column in ("curator", "date", "why_retracted"):
+                if not (row.get(column) or "").strip():
+                    raise SystemExit(
+                        f"{_shown(RETRACTED_PATH)} line {line}: "
+                        f"retracting {slug!r} needs a {column}"
+                    )
+            if slug in found:
+                raise SystemExit(
+                    f"{_shown(RETRACTED_PATH)} line {line}: "
+                    f"{slug!r} is retracted twice"
+                )
+            found[slug] = row
+    return found
+
+
 def committed_redirect_slugs() -> set[str]:
     """Redirect stubs published by the branch's current committed site.
 
-    Historical maps contain rows later removed because they were themselves
-    wrong. Only a redirect that is still live in HEAD is active state that the
-    next generation must carry forward.
+    A redirect that is still live in HEAD is active state the next generation
+    must carry forward. Absence from HEAD is *not* a retraction the working
+    tree can express: HEAD is committed history, so deleting a row from the
+    working file changes nothing here and the row returns on the next rebuild.
+    Withdrawing a published redirect goes through `load_retractions` (#178).
 
     Read from HEAD's copy of the map rather than by recognising a rendered stub.
     Recognising one meant grepping the committed pages for the literal
@@ -257,6 +344,29 @@ def build() -> list[dict[str, str]]:
     retired_sources, retired_labels = retired_record_details()
     live_slugs = {slug_for(doc) for doc in by_id.values()}
     published = ever_published_slugs()
+    retracted = load_retractions()
+    # A slug that was never a real page cannot have been redirected, so it is a
+    # typo rather than a retraction. Checked against every page the branch has
+    # ever held, not against this run's rows: once a retraction takes effect the
+    # slug stops being generated, and a tombstone that failed the moment it
+    # started working would be worse than no tombstone at all.
+    unknown = sorted(slug for slug in retracted if slug not in published)
+    if unknown:
+        raise SystemExit(
+            f"{_shown(RETRACTED_PATH)} retracts slug(s) that "
+            f"pages/habitats has never contained: {', '.join(unknown)}"
+        )
+    # A live record's own page passes the check above — `published` includes
+    # pages that still exist — but `build` only ever emits slugs that are NOT
+    # live, so no row can match one. That is a curator naming the new URL
+    # instead of the old one, presenting as a successful retraction (#188).
+    alive = sorted(slug for slug in retracted if slug in live_slugs)
+    if alive:
+        raise SystemExit(
+            f"{_shown(RETRACTED_PATH)} retracts slug(s) that are a live "
+            f"record's own page, so no redirect exists to withdraw: "
+            f"{', '.join(alive)}"
+        )
     rows: list[dict[str, str]] = []
     # Derived from RECORD history, not page history. A retired page is replaced
     # in place by its own redirect stub, so git logs a modification rather than
@@ -314,10 +424,17 @@ def build() -> list[dict[str, str]]:
     # Carry forward every redirect previously published. Its former target may
     # itself have been merged since the row was written, so resolve dead target
     # identifiers through their stable upstream source ids to the live corpus.
-    current_by_slug = {row["retired_slug"]: row for row in rows}
+    current_by_slug = {
+        row["retired_slug"]: row for row in rows
+        if row["retired_slug"] not in retracted
+    }
     active_historical = committed_redirect_slugs()
     for slug, historical in sorted(retired_map_history().items()):
-        if slug not in active_historical:
+        if slug not in active_historical or slug in retracted:
+            # Retracted before the target resolution below, deliberately: a
+            # redirect whose targets have all died is exactly the kind a
+            # curator needs to withdraw, and that path raises rather than
+            # returns.
             continue
         if slug in live_slugs or slug in current_by_slug:
             continue

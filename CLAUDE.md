@@ -98,6 +98,11 @@ visible to the history-based redirect builder until committed. The sequence is:
 
 Do not prune on partial `--only` or `--limit` runs.
 
+**Retracting a published redirect needs a decision row, not a deletion.** The
+builder reads the committed map, so a row deleted from the working tree comes
+straight back. Record it in `curation/redirects_retracted.tsv` with a curator
+and a reason, then rebuild. See [docs/CURATION.md](docs/CURATION.md).
+
 ## Semantic invariants
 
 Read the module docstring in `src/habitatmech/seed.py` before changing a
