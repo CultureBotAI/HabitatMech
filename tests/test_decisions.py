@@ -948,6 +948,88 @@ def test_rodentia_other_is_a_residual_host_bucket_not_a_term_request(records):
     assert "habitatmech:BACDIVE.745e245512" not in pending
 
 
+HOST_TAXON_FAMILY = {
+    "habitatmech:BACDIVE.33fde10528": ("canid-associated environment", "NCBITaxon:9608", 344),
+    "habitatmech:BACDIVE.e6b73de092": ("felid-associated environment", "NCBITaxon:9681", 95),
+    "habitatmech:BACDIVE.ab17ecb10f": ("murid-associated environment", "NCBITaxon:10114", 325),
+}
+
+
+def test_dog_cat_and_mouse_rat_are_habitats_with_the_taxon_only_as_an_xref(records):
+    """The last members of #114's family, reached by #194.
+
+    All three said `NOT_APPLICABLE` — the schema's "the source concept is not a
+    habitat" — over 764 strains, on the host-taxon reasoning #114 reversed for
+    their bovine, caprine, equid, leporid and suid siblings. Dog and Cat had no
+    decision row at all; Mouse/Rat's `REVIEW` discussed only xref narrowness and
+    ratified the status as a side effect.
+
+    The xref assertion is the one that matters most: `_placement` builds a fresh
+    Resolution for `CONFIRM_UNGROUNDED` and does not carry `default.extra_xrefs`
+    forward, so the organism term survives only because the decision names it.
+    CLAUDE.md requires exactly that — the taxon stays an xref and never becomes
+    the identity.
+    """
+    docs = {doc["identifier"]: doc for _path, doc in records}
+
+    for identifier, (label, taxon, strains) in HOST_TAXON_FAMILY.items():
+        doc = docs[identifier]
+        assert doc["label"] == label
+        assert doc["grounding_status"] == "UNGROUNDED", (
+            f"{label} still claims it is not a habitat")
+        assert doc["mapping_status"] == "REVIEWED"
+        assert doc["habitat_category"] == "HOST_ASSOCIATED"
+        assert doc.get("parent_habitats") == ["ENVO:01001002"]
+        assert doc.get("xrefs") == [taxon], (
+            f"{label} lost the organism term; CONFIRM_UNGROUNDED drops the "
+            "automatic xref unless the decision names it")
+        assert taxon not in (doc.get("parent_habitats") or []), (
+            "a taxon is a class of organisms, not a broader habitat")
+        assert sum(a.get("assertion_count") or 0
+                   for a in doc["source_attestations"]) == strains
+        assert doc["definition_source"] == "HabitatMech"
+
+
+def test_no_record_calls_an_animal_host_a_non_habitat(records):
+    """The class-level form of #194, so the next one cannot land silently.
+
+    A record whose only ontology link is an NCBITaxon term and whose status is
+    NOT_APPLICABLE is the exact shape all four defects had: the seeder's
+    automatic non-habitat-target route fired and nothing curated it afterwards.
+    """
+    offenders = [
+        doc["label"] for _path, doc in records
+        if doc.get("grounding_status") == "NOT_APPLICABLE"
+        and any(x.startswith("NCBITaxon:") for x in (doc.get("xrefs") or []))
+    ]
+    assert not offenders, (
+        f"{len(offenders)} record(s) assert a taxon-linked concept is not a "
+        f"habitat: {offenders[:5]} (#114, #194)")
+
+
+def test_decomposing_algae_is_a_material_not_a_host(records):
+    """Judged apart from the three animal hosts, deliberately.
+
+    The algae are dead, so `HOST_ASSOCIATED` — "defined by a living host" — does
+    not apply and no <clade>-associated term is requested. `NOT_APPLICABLE` was
+    still wrong: decomposing algal material is a place microbes live. The
+    over-narrow `NCBITaxon:2836` claim #43 reported upstream is dropped rather
+    than carried onto the record (#194).
+    """
+    docs = {doc["identifier"]: doc for _path, doc in records}
+    doc = docs["habitatmech:BACDIVE.dded810572"]
+
+    assert doc["grounding_status"] == "NARROW"
+    assert doc.get("parent_habitats") == ["ENVO:01001189"]
+    assert doc["habitat_category"] != "HOST_ASSOCIATED"
+    assert "NCBITaxon:2836" not in (doc.get("xrefs") or [])
+    # Not detritus: its definition requires dead PARTICULATE matter, which a
+    # decomposing algal mass is not, so it is not safely broader.
+    assert "ENVO:01001103" not in (doc.get("parent_habitats") or [])
+    assert doc.get("definition_source") != "HabitatMech", (
+        "four strains did not warrant a new term request")
+
+
 def test_madin_alga_merges_into_the_defined_gold_host_environment(records):
     """Two source vocabularies name the same broad algal-host habitat; merging
     must retain Madin's taxa and its incomparable TAXON count (#183)."""
