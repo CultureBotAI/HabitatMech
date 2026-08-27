@@ -503,6 +503,31 @@ def test_a_retraction_must_say_who_and_why(monkeypatch, tmp_path):
         build_redirects.load_retractions()
 
 
+def test_a_tab_in_the_reason_fails_instead_of_truncating_it(monkeypatch, tmp_path):
+    """The file exists so an unpublished URL has a stated justification. A tab
+    anywhere in why_retracted sent the tail of the reason to DictReader's
+    unnamed overflow key and the retraction proceeded on a fragment — the three
+    required-column checks all pass, because what survives is non-empty (#195).
+
+    A tab in prose is what a spreadsheet paste produces, so this is a curator
+    typo, not an exotic input.
+    """
+    import pytest
+
+    build_redirects = _miniature_world(
+        monkeypatch, tmp_path,
+        f"{RELABELLED_SLUG}\tcurator\t2026-08-25\tReason with a\tstray tab.\n")
+    with pytest.raises(SystemExit, match="contains a tab"):
+        build_redirects.load_retractions()
+
+    # The overflow key holds a LIST, so it is rejected before anything iterates
+    # row.values() — otherwise the blank-line guard raises AttributeError on it.
+    build_redirects = _miniature_world(
+        monkeypatch, tmp_path, "\t\t\t\tstray tab on an otherwise blank row\n")
+    with pytest.raises(SystemExit, match="contains a tab"):
+        build_redirects.load_retractions()
+
+
 def test_retracting_a_live_records_own_url_is_an_error(monkeypatch, tmp_path):
     """`published` includes pages that still exist, so the never-published guard
     lets this through — but `build` only ever emits slugs that are NOT live, so

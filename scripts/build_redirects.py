@@ -57,6 +57,7 @@ COLUMNS = ["retired_slug", "retired_identifier", "retired_label",
 # curation/term_requests_excluded.tsv: the key, who decided, and why.
 RETRACTED_PATH = REPO_ROOT / "curation" / "redirects_retracted.tsv"
 RETRACTED_COLUMNS = ["retired_slug", "curator", "date", "why_retracted"]
+_OVERFLOW = "_extra_fields"
 
 # The page's meta description reads "{label} ({identifier}): a microbial
 # habitat ...". Anchoring on the "): " is what makes this unambiguous when the
@@ -187,7 +188,12 @@ def load_retractions() -> dict[str, dict[str, str]]:
     if not RETRACTED_PATH.exists():
         return {}
     with RETRACTED_PATH.open(newline="", encoding="utf-8") as fh:
-        reader = csv.DictReader(fh, delimiter="\t")
+        # restkey, so a row with more fields than the header is visible. A tab
+        # anywhere in why_retracted otherwise sent the tail of the reason to
+        # DictReader's unnamed overflow key and truncated the audit record
+        # silently — the URL unpublished, the stated justification a fragment
+        # (#195). A tab in prose is what a spreadsheet paste produces.
+        reader = csv.DictReader(fh, delimiter="\t", restkey=_OVERFLOW)
         missing = set(RETRACTED_COLUMNS) - set(reader.fieldnames or [])
         if missing:
             raise SystemExit(
@@ -196,6 +202,15 @@ def load_retractions() -> dict[str, dict[str, str]]:
             )
         found: dict[str, dict[str, str]] = {}
         for line, row in enumerate(reader, start=2):
+            # First, before anything reads row.values(): the overflow key holds
+            # a LIST, not a string, so every later check would have to guard
+            # against it.
+            if row.pop(_OVERFLOW, None):
+                raise SystemExit(
+                    f"{_shown(RETRACTED_PATH)} line {line}: more fields than "
+                    f"columns, so a value contains a tab and has been "
+                    f"truncated at it; check why_retracted"
+                )
             slug = (row.get("retired_slug") or "").strip()
             if not slug and not any((v or "").strip() for v in row.values()):
                 continue  # a blank separator line, not a retraction

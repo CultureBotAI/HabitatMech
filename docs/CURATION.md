@@ -1,8 +1,13 @@
 # Habitat curation rules
 
-This document is the canonical domain guide for decisions in
-`curation/decisions.tsv`. The seeder and tests enforce its machine-checkable
-parts; this text explains the judgments that cannot be reduced to a label match.
+This document is the canonical domain guide for the curation inputs the seeder
+reads: the decisions in `curation/decisions.tsv`, the authored definitions in
+`curation/term_requests.tsv`, and the withdrawals in
+`curation/redirects_retracted.tsv`. The seeder and tests enforce its
+machine-checkable parts; this text explains the judgments that cannot be reduced
+to a label match.
+
+The domain rules come first, then the sections specific to one input file.
 
 ## Decision model
 
@@ -72,6 +77,24 @@ that disagree with the slice; ranked evidence always displays the authoritative
 slice label required by a `GROUND` decision. Report obsolete source annotations
 through the [GOLD feedback form](https://gold.jgi.doe.gov/help).
 
+## Evidence and validation
+
+Every `GROUND` records both the target CURIE and expected label. Seeding fails
+unless that identifier exists in the vendored slice with the stated label. If a
+valid target is absent, vendor the ontology data rather than weakening the
+check.
+
+Decision notes are also validated where possible: a `Path:` must match the
+source concept, mentioned term identifiers must exist, and quoted labels must
+match the slice. Notes should explain why the relationship holds, not merely
+repeat the selected enum.
+
+A merged record becomes `REVIEWED` only when every contributing source concept
+has an item-level decision. Partial review intentionally leaves it `SEEDED`.
+
+Every causal-graph edge requires cited evidence. Upstream habitat attestations
+do not vouch for mechanism claims.
+
 ## Retracting a published redirect
 
 `data/habitats/RETIRED.tsv` maps dead record URLs to live ones, and it is
@@ -110,24 +133,6 @@ is not wrong; the builder follows it onward through the stable upstream source
 ids. Retracting returns the URL to a 404, which is the outcome the map exists
 to prevent, so the reason has to say what the redirect claimed and why that
 claim was false.
-
-## Evidence and validation
-
-Every `GROUND` records both the target CURIE and expected label. Seeding fails
-unless that identifier exists in the vendored slice with the stated label. If a
-valid target is absent, vendor the ontology data rather than weakening the
-check.
-
-Decision notes are also validated where possible: a `Path:` must match the
-source concept, mentioned term identifiers must exist, and quoted labels must
-match the slice. Notes should explain why the relationship holds, not merely
-repeat the selected enum.
-
-A merged record becomes `REVIEWED` only when every contributing source concept
-has an item-level decision. Partial review intentionally leaves it `SEEDED`.
-
-Every causal-graph edge requires cited evidence. Upstream habitat attestations
-do not vouch for mechanism claims.
 
 ## Curated definitions and hierarchy
 
