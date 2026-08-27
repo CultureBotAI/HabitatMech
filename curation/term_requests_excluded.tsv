@@ -1,4 +1,5 @@
 identifier	label	why_not_a_term_request
 habitatmech:BACDIVE.0c0740efd8	Contamination	Not a place. BacDive records that a strain was isolated as a contaminant — of a product, a culture or a cleanroom — which is a circumstance of sampling rather than an environment ENVO models. ENVO:00002204 is kept as an xref (#99).
 habitatmech:BACDIVE.e864a16f03	Invertebrates-Other	A residual bucket. 'Other' has no meaning of its own — it is defined by what the sibling categories already took — so there is no concept for an ontology to define.
+habitatmech:BACDIVE.745e245512	Rodentia-Other	A residual BacDive #Host bucket for rodent hosts not assigned to the sibling #Muridae (Mouse/Rat). The host environment is real and parented to animal-associated environment, but a negative “everything else” partition is not a stable ontology class: its extension changes whenever the source vocabulary adds another sibling (#192).
 habitatmech:GOLD.3b04872853	Rock core/Sediment	Two materials conflated in one GOLD node. Requesting a term for 'rock core or sediment' would ask ENVO to mint the conflation; the fix belongs upstream in GOLD. Parented to sediment.
