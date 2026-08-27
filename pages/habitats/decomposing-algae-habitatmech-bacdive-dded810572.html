@@ -22,7 +22,7 @@
 <p class="meta">
   <code class="curie">habitatmech:BACDIVE.dded810572</code>
   <span class="sep">·</span><a href="../category/other.html">OTHER</a>
-  <span class="sep">·</span><span class="pill warn">NOT_APPLICABLE</span>
+  <span class="sep">·</span><span class="pill">NARROW</span>
   <span class="pill">REVIEWED</span>
 </p>
 
@@ -37,12 +37,16 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
   <thead><tr><th scope="col">Source</th><th scope="col">Label / path</th><th scope="col" class="num">Assertions</th><th scope="col">Unit</th></tr></thead>
   <tr>
     <td><span class="pill plain">BACDIVE</span></td>
-    <td>Decomposing-algae<br><span class="meta">Upstream mapping targets a non-habitat ontology (NCBITaxon:2836); kept as an xref.</span></td>
+    <td>Decomposing-algae<br><span class="meta">Upstream mapping targets a non-habitat ontology (NCBITaxon:2836); the curated decision deliberately does not carry that partial mapping onto the generated record.</span></td>
     <td class="num">4</td>
     <td>STRAIN</td>
   </tr>
 </table>
 
+<h2>Broader habitats</h2>
+<ul class="plain">
+  <li><a href="http://purl.obolibrary.org/obo/ENVO_01001189">algal material</a>      <code class="curie">ENVO:01001189</code></li>
+</ul>
 
 
 <h2>Associated taxa</h2>
@@ -83,14 +87,6 @@ second, independent source are listed first.</p>
   </tr>
 </table>
 
-<h2>Related terms</h2>
-<p class="meta">Terms a source linked to this concept without this record
-claiming to be one of them, or to be narrower than one. A cross-reference, not
-a grounding.</p>
-<ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/NCBITaxon_2836">Bacillariophyta</a>
-<code class="curie">NCBITaxon:2836</code></li>
-</ul>
 
 
 <h2>Curation</h2>
@@ -98,9 +94,9 @@ a grounding.</p>
 from several source concepts can carry one decision per concept.</p>
 <ol class="events">
   <li>
-    <span class="pill">REVIEW</span>
-    <span class="meta">2026-08-14 · claude-opus-5</span>
-    <p>Reviewed and endorsed the seeder&#39;s own resolution. xref-only review (#43): the xref is OVER-NARROW — Bacillariophyta is the diatoms alone, and decomposing algae is not restricted to them. Kept as an xref only, and reported upstream. (source concept habitatmech:BACDIVE.dded810572)</p>
+    <span class="pill">GROUND_AS_PARENT</span>
+    <span class="meta">2026-08-26 · claude-opus-5</span>
+    <p>ENVO:01001189 &#39;algal material&#39; attached as a parent, not adopted as the identity (NARROW). Judged separately from the three animal hosts of #194, because this is not a host organism: the algae are dead, so it is an environmental material rather than a living host, and HOST_ASSOCIATED does not apply. NOT_APPLICABLE was still wrong - decomposing algal material is a place microbes live. ENVO:01001189 &#39;algal material&#39; is genuinely broader and needs no new term for four strains. Not ENVO:01001103 &#39;detritus&#39;, whose definition requires dead PARTICULATE matter and so is not safely broader than a decomposing algal mass. The 2026-08-14 REVIEW row (#43) found NCBITaxon:2836 &#39;Bacillariophyta&#39; over-narrow - decomposing algae is not restricted to diatoms - and that wrong claim is dropped rather than carried, with the upstream mapping still described in the attestation note. Category left unset: no realm evidence in the source. (source concept habitatmech:BACDIVE.dded810572)</p>
   </li>
 </ol>
 

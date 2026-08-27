@@ -1,8 +1,17 @@
 identifier: habitatmech:BACDIVE.33fde10528
-label: Canidae-Dog
-habitat_category: OTHER
-grounding_status: NOT_APPLICABLE
-mapping_status: SEEDED
+label: canid-associated environment
+definition: An animal-associated environment which is determined by a dog or other
+  canid.
+definition_source: HabitatMech
+habitat_category: HOST_ASSOCIATED
+grounding_status: UNGROUNDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Canidae-Dog
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+parent_habitats:
+- ENVO:01001002
 xrefs:
 - NCBITaxon:9608
 source_attestations:
@@ -168,4 +177,33 @@ curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: NOT_APPLICABLE.'
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+- timestamp: '2026-08-26T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. NCBITaxon:9608
+    ''Canidae'' kept as an xref. Host-taxon reversal (#114) reaching the last members
+    of its own family (#194): this was NOT_APPLICABLE, which asserts the source concept
+    is not a habitat. An organism acting as a host IS a habitat, and the corpus already
+    says so for bovine, caprine, equid, leporid and suid, all minted with ENVO:01001002
+    ''animal-associated environment'' as parent and the organism term as an xref.
+    Never curated on the question at all: the NOT_APPLICABLE was the seeder''s automatic
+    bacdive_non_habitat_target route firing on an NCBITaxon target, and #114''s sweep
+    did not reach this row. The taxon term is not the identity - a family is a class
+    of organisms, not a place - so it stays an xref (#99) and the concept keeps its
+    minted identity with a term request. Category HOST_ASSOCIATED: the host is living.
+    (source concept habitatmech:BACDIVE.33fde10528)'
+- timestamp: '2026-08-26T00:00:00Z'
+  curator: claude-opus-5
+  action: DEFINED
+  changes: 'Defined as ''canid-associated environment'' under ENVO:01001002 ''animal-associated
+    environment''. Definition follows the established <clade>-associated environment
+    family for BacDive host buckets, whose naming rule the corpus already fixes: a
+    -inae source label yields -ine (Bovinae-Cow,-Cattle -> bovine) and a -idae source
+    label yields -id (Equidae-Horse -> equid, Leporidae-Rabbit/Hare -> leporid, Suidae-Pig,Swine
+    -> suid). No deep-research run was commissioned: the genus, the wording pattern
+    and the near-miss reasoning are already settled by those five siblings and by
+    NCBITaxon, so a billed report would add nothing this slice turns on. Worded like
+    the equid sibling because the source label names one vernacular host inside a
+    wider family: NCBITaxon:9608 ''Canidae'' also covers foxes, wolves and jackals,
+    so the definition must not silently narrow to the dog.'
