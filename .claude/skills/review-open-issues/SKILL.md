@@ -149,6 +149,16 @@ For each issue or group representative:
 - Distinguish an observation from its action issue. Prefer closing a fully
   recorded observation as superseded when a separate open issue owns the only
   remaining work.
+- **A decision row is evidence only for the question its note discusses.** This
+  is where a triage pass goes to answer "was this examined?", and the answer is
+  narrower than it looks. `REVIEW` means the curator endorsed *the seeder's own
+  answer* — whatever it was, on whatever question they were actually asking —
+  and it carries `review_depth: ITEM`, so the record reads as curated. On the
+  current corpus, 350 of 356 `REVIEW` notes never mention habitat-hood at all.
+  `Muridae-Mouse/Rat` sat at `NOT_APPLICABLE` — "the source concept is not a
+  habitat" — over 325 strains behind a `REVIEW` whose note discussed only
+  whether its xref was over-narrow (#43, repaired by #194). Read the note before
+  crediting the row.
 - Verify a record by reading it, not by its filename or its label. Filenames are
   pinned in `PATHS.tsv` and deliberately do not track labels, so a mismatch is
   expected and is not by itself a defect.
@@ -170,6 +180,13 @@ Treat these as P0 when live or outward-facing:
 - `assertion_count` summed or compared across differing `assertion_unit`;
 - a generated artifact contradicting the corpus it claims to describe: stale
   README statistics, `pages/` out of step, an orphaned or missing stub;
+- a record whose provenance claim misdescribes its source — an attestation
+  note, `assertion_unit`, `source_label` or xref rationale asserting something
+  the upstream data does not say. Every consistency gate is structurally blind
+  to this: a wrong provenance claim reproduces as faithfully as a right one, so
+  `verify-corpus` and `render --check` pass while the record misleads. It needs
+  reading, not running. Five records published `targets a non-habitat ontology
+  (); kept as an xref` with curation having dropped the mapping (#186);
 - an outward-facing claim that presents unreviewed `SEEDED` output as curated,
   or a lexical match as an item-level judgment;
 - a defect that would make an imminent billed research batch or bulk re-seed
