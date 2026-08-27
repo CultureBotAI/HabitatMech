@@ -1,18 +1,19 @@
 identifier: habitatmech:BACDIVE.dded810572
 label: Decomposing-algae
 habitat_category: OTHER
-grounding_status: NOT_APPLICABLE
+grounding_status: NARROW
 mapping_status: REVIEWED
-xrefs:
-- NCBITaxon:2836
+parent_habitats:
+- ENVO:01001189
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:decomposing-algae
   source_label: Decomposing-algae
+  mapping_predicate: skos:narrowMatch
   assertion_count: 4
   assertion_unit: STRAIN
-  notes: Upstream mapping targets a non-habitat ontology (NCBITaxon:2836); kept as
-    an xref.
+  notes: Upstream mapping targets a non-habitat ontology (NCBITaxon:2836); the curated
+    decision deliberately does not carry that partial mapping onto the generated record.
 characteristic_taxa:
 - taxon_id: NCBITaxon:1895664
   source: BACDIVE
@@ -39,14 +40,22 @@ characteristic_taxa:
   rank: 4
   candidate_pool: 4
 curation_history:
-- timestamp: '2026-08-14T00:00:00Z'
-  curator: claude-opus-5
-  action: REVIEW
-  changes: 'Reviewed and endorsed the seeder''s own resolution. xref-only review (#43):
-    the xref is OVER-NARROW — Bacillariophyta is the diatoms alone, and decomposing
-    algae is not restricted to them. Kept as an xref only, and reported upstream.
-    (source concept habitatmech:BACDIVE.dded810572)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: NOT_APPLICABLE.'
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: NARROW.'
+- timestamp: '2026-08-26T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND_AS_PARENT
+  changes: 'ENVO:01001189 ''algal material'' attached as a parent, not adopted as
+    the identity (NARROW). Judged separately from the three animal hosts of #194,
+    because this is not a host organism: the algae are dead, so it is an environmental
+    material rather than a living host, and HOST_ASSOCIATED does not apply. NOT_APPLICABLE
+    was still wrong - decomposing algal material is a place microbes live. ENVO:01001189
+    ''algal material'' is genuinely broader and needs no new term for four strains.
+    Not ENVO:01001103 ''detritus'', whose definition requires dead PARTICULATE matter
+    and so is not safely broader than a decomposing algal mass. The 2026-08-14 REVIEW
+    row (#43) found NCBITaxon:2836 ''Bacillariophyta'' over-narrow - decomposing algae
+    is not restricted to diatoms - and that wrong claim is dropped rather than carried,
+    with the upstream mapping still described in the attestation note. Category left
+    unset: no realm evidence in the source. (source concept habitatmech:BACDIVE.dded810572)'

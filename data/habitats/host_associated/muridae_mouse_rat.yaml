@@ -1,8 +1,16 @@
 identifier: habitatmech:BACDIVE.ab17ecb10f
-label: Muridae-Mouse/Rat
-habitat_category: OTHER
-grounding_status: NOT_APPLICABLE
+label: murid-associated environment
+definition: An animal-associated environment which is determined by a mouse or a rat.
+definition_source: HabitatMech
+habitat_category: HOST_ASSOCIATED
+grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Muridae-Mouse/Rat
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+parent_habitats:
+- ENVO:01001002
 xrefs:
 - NCBITaxon:10114
 source_attestations:
@@ -165,14 +173,39 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 185
 curation_history:
-- timestamp: '2026-08-14T00:00:00Z'
-  curator: claude-opus-5
-  action: REVIEW
-  changes: 'Reviewed and endorsed the seeder''s own resolution. xref-only review (#43):
-    the xref is OVER-NARROW — the source says mouse or rat and the target is Rattus
-    alone, dropping the mouse. Kept because it can only ever be an xref, but reported
-    upstream; a record identity would have been refused. (source concept habitatmech:BACDIVE.ab17ecb10f)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: NOT_APPLICABLE.'
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+- timestamp: '2026-08-26T00:00:00Z'
+  curator: claude-opus-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. NCBITaxon:10114
+    ''Rattus'' kept as an xref. Host-taxon reversal (#114) reaching the last members
+    of its own family (#194): this was NOT_APPLICABLE, which asserts the source concept
+    is not a habitat. An organism acting as a host IS a habitat, and the corpus already
+    says so for bovine, caprine, equid, leporid and suid, all minted with ENVO:01001002
+    ''animal-associated environment'' as parent and the organism term as an xref.
+    Reviewed before, but not on this question: the 2026-08-14 REVIEW row (#43) asked
+    only whether the xref was over-narrow and endorsed the seeder''s NOT_APPLICABLE
+    as a side effect. That finding stands and is kept - NCBITaxon:10114 ''Rattus''
+    drops the mouse half of the source label - so the requested definition covers
+    mouse and rat while the xref records what upstream actually matched. The taxon
+    term is not the identity - a family is a class of organisms, not a place - so
+    it stays an xref (#99) and the concept keeps its minted identity with a term request.
+    Category HOST_ASSOCIATED: the host is living. (source concept habitatmech:BACDIVE.ab17ecb10f)'
+- timestamp: '2026-08-26T00:00:00Z'
+  curator: claude-opus-5
+  action: DEFINED
+  changes: 'Defined as ''murid-associated environment'' under ENVO:01001002 ''animal-associated
+    environment''. Definition follows the established <clade>-associated environment
+    family for BacDive host buckets, whose naming rule the corpus already fixes: a
+    -inae source label yields -ine (Bovinae-Cow,-Cattle -> bovine) and a -idae source
+    label yields -id (Equidae-Horse -> equid, Leporidae-Rabbit/Hare -> leporid, Suidae-Pig,Swine
+    -> suid). No deep-research run was commissioned: the genus, the wording pattern
+    and the near-miss reasoning are already settled by those five siblings and by
+    NCBITaxon, so a billed report would add nothing this slice turns on. Worded like
+    the leporid sibling because the source label names two vernacular hosts. Both
+    are Muridae. This is also where the standing #43 finding is repaired in substance:
+    the upstream xref NCBITaxon:10114 ''Rattus'' drops the mouse, and the definition
+    does not.'
