@@ -426,7 +426,10 @@ def apply_curated_definitions(
         concept.label = definition.label
         concept.definition = definition.definition
         concept.definition_source = "HabitatMech"
-        concept.parents.add(definition.parent_class)
+        if definition.parent_mode == "REPLACE":
+            concept.parents = {definition.parent_class}
+        else:
+            concept.parents.add(definition.parent_class)
         concept.definitions_applied.append(definition)
         concept.add_synonym(source_label, "EXACT_SYNONYM", "HabitatMech curation")
         for synonym in definition.exact_synonyms:
@@ -894,8 +897,11 @@ def ingest_bacdive(
     for taxon_row in taxa_rows or []:
         taxa_by_source[taxon_row["bacdive_id"]].append(taxon_row)
     for row in rows:
+        automatic = resolve_bacdive(
+            row, mapping, store.ontology, stats if stats is not None else Counter()
+        )
         res = apply_decision(
-            resolve_bacdive(row, mapping, store.ontology, stats if stats is not None else Counter()),
+            automatic,
             mint("BACDIVE", row["bacdive_id"]),
             decisions,
         )
@@ -929,22 +935,29 @@ def ingest_bacdive(
         if strains:
             attestation["assertion_count"] = strains
             attestation["assertion_unit"] = "STRAIN"
-        # Matched on the route's SUFFIX: apply_decision wraps it when a curator
-        # acts, so exact equality meant a reviewed record silently explained
-        # LESS than an unreviewed one — 81 records lost the note saying where
-        # their xref came from, or that upstream deliberately declined to ground
-        # them. Both notes describe the data, which curation does not change (#80).
-        if res.route.endswith("bacdive_declined_upstream"):
+        # Explain the automatic source mapping even when a curator overrides
+        # it, but describe the result accurately. SAME_AS intentionally drops
+        # the discarded source concept's automatic xrefs, so saying a partial
+        # quality mapping was "kept" on the survivor would be false (#186).
+        if automatic.route == "bacdive_declined_upstream":
             attestation["notes"] = (
                 "kg-microbe's isolation-source mapping table has a row for this "
                 "source with no ontology target; treated as ungrounded rather "
                 "than re-grounded by lexical match."
             )
-        elif res.route.endswith("bacdive_non_habitat_target"):
-            attestation["notes"] = (
-                "Upstream mapping targets a non-habitat ontology "
-                f"({', '.join(res.extra_xrefs)}); kept as an xref."
-            )
+        elif automatic.route == "bacdive_non_habitat_target":
+            targets = ", ".join(automatic.extra_xrefs)
+            if set(automatic.extra_xrefs) <= set(res.extra_xrefs):
+                attestation["notes"] = (
+                    f"Upstream mapping targets a non-habitat ontology ({targets}); "
+                    "kept as an xref."
+                )
+            else:
+                attestation["notes"] = (
+                    f"Upstream mapping targets a non-habitat ontology ({targets}); "
+                    "the curated decision deliberately does not carry that partial "
+                    "mapping onto the generated record."
+                )
         concept.attestations.append(attestation)
 
         # Taxa reached by the isolation-source -> strain -> taxon join. Counted

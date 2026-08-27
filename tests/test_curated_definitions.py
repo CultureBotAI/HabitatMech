@@ -24,6 +24,8 @@ def test_authored_definitions_are_applied_to_generated_concepts(repo_root):
         assert concept.definition == definition.definition
         assert concept.definition_source == "HabitatMech"
         assert definition.parent_class in concept.parents
+        if definition.parent_mode == "REPLACE":
+            assert concept.parents == {definition.parent_class}
 
     example = concepts["habitatmech:GOLD.cd0b0940e5"]
     doc = build_document(example)
@@ -117,6 +119,13 @@ def test_host_definition_batch_preserves_habitat_and_xref_semantics(repo_root):
         }
         assert doc["definition_source"] == "HabitatMech"
 
+    # ADD is deliberately backward-compatible: the authored ontology genus
+    # supplements a true GOLD hierarchy edge rather than erasing it (#191).
+    assert concepts["habitatmech:GOLD.1276bea544"].parents >= {
+        "ENVO:01001000",
+        "habitatmech:GOLD.02383c20a7",
+    }
+
 
 def test_curated_definition_loader_rejects_duplicate_identifiers(tmp_path):
     path = tmp_path / "definitions.tsv"
@@ -151,4 +160,18 @@ def test_curated_definition_loader_rejects_duplicate_labels(tmp_path):
     path.write_text(header + first + second, encoding="utf-8")
 
     with pytest.raises(DefinitionError, match="merge duplicate concepts"):
+        load_curated_definitions(path)
+
+
+def test_curated_definition_loader_rejects_unknown_parent_mode(tmp_path):
+    path = tmp_path / "definitions.tsv"
+    path.write_text(
+        "identifier\trequested_label\tparent_class\tparent_label\tdefinition\t"
+        "exact_synonym\tcurator\tdate\tnotes\tparent_mode\n"
+        "habitatmech:x\tx environment\tENVO:1\tenvironment\t"
+        "An environment.\tX\ttest\t2026-08-21\tA considered definition.\tRESET\n",
+        encoding="utf-8",
+    )
+
+    with pytest.raises(DefinitionError, match="parent_mode 'RESET'"):
         load_curated_definitions(path)

@@ -873,6 +873,81 @@ def test_environmental_provenance_bins_merge_without_losing_scope(records):
     assert "Paddy-Ricefield" not in history
 
 
+def test_saline_or_alkaline_sources_merge_under_the_reviewed_genus(records):
+    """The source labels name an inland aquatic environment, not a bare
+    quality; the curated genus replaces GOLD's false biome inheritance (#185)."""
+    docs = {doc["identifier"]: doc for _path, doc in records}
+    survivor = docs["habitatmech:GOLD.ce244e62cd"]
+
+    assert "habitatmech:BACDIVE.9a0a53afc1" not in docs
+    assert survivor["label"] == "inland saline or alkaline aquatic environment"
+    assert survivor["habitat_category"] == "AQUATIC"
+    assert survivor["grounding_status"] == "UNGROUNDED"
+    assert survivor["mapping_status"] == "REVIEWED"
+    assert survivor["definition_source"] == "HabitatMech"
+    assert survivor.get("parent_habitats") == ["ENVO:01000317"]
+    assert "PATO:0001430" not in survivor.get("xrefs", [])
+
+    attestations = {
+        (attestation["source"], attestation["assertion_unit"]):
+        attestation["assertion_count"]
+        for attestation in survivor["source_attestations"]
+    }
+    assert attestations == {("BACDIVE", "STRAIN"): 37, ("GOLD", "ORGANISM"): 121}
+    bacdive = next(
+        attestation for attestation in survivor["source_attestations"]
+        if attestation["source"] == "BACDIVE"
+    )
+    assert "curated decision deliberately does not carry" in bacdive["notes"]
+    assert any(
+        taxon["source"] == "BACDIVE"
+        for taxon in survivor.get("characteristic_taxa", [])
+    ), "BacDive taxa were lost in the merge"
+    history = " ".join(event["changes"] for event in survivor["curation_history"])
+    assert "a quality, not a place" not in history
+    assert "a quality is a property" not in history
+
+
+def test_bacdive_attestations_never_claim_an_empty_xref_was_kept(records):
+    """A curation override must describe the automatic target, not interpolate
+    the final resolution's intentionally empty xref list (#186)."""
+    for _path, doc in records:
+        for attestation in doc.get("source_attestations", []):
+            if attestation.get("source") == "BACDIVE":
+                assert "ontology ()" not in attestation.get("notes", ""), doc["identifier"]
+
+
+def test_rodentia_other_is_a_residual_host_bucket_not_a_term_request(records):
+    """The BacDive partition is a real host habitat but an unstable ontology
+    class; its Muridae sibling must remain a separate record (#192)."""
+    from scripts import build_term_requests
+
+    docs = {doc["identifier"]: doc for _path, doc in records}
+    rodentia = docs["habitatmech:BACDIVE.745e245512"]
+
+    assert rodentia["habitat_category"] == "HOST_ASSOCIATED"
+    assert rodentia["grounding_status"] == "UNGROUNDED"
+    assert rodentia["mapping_status"] == "REVIEWED"
+    assert rodentia.get("parent_habitats") == ["ENVO:01001002"]
+    assert "NCIT:C17649" not in rodentia.get("xrefs", [])
+    assert rodentia["source_attestations"][0]["assertion_count"] == 97
+    assert rodentia.get("characteristic_taxa")
+    # The Muridae sibling must stay a SEPARATE record; this is not an
+    # endorsement of its own state. It is still NOT_APPLICABLE — "not a
+    # habitat" — over 325 strains, on the host-taxon reasoning #114 reversed,
+    # as are Canidae-Dog and Felidae-Cat. Tracked in #194.
+    assert "habitatmech:BACDIVE.ab17ecb10f" in docs
+
+    excluded = build_term_requests.excluded()
+    assert "habitatmech:BACDIVE.745e245512" in excluded
+    pending = {identifier for _count, _label, identifier in build_term_requests.unrequested(
+        build_term_requests.load_corpus(),
+        {row["identifier"] for row in build_term_requests.load_requests()},
+        {},
+    )}
+    assert "habitatmech:BACDIVE.745e245512" not in pending
+
+
 def test_madin_alga_merges_into_the_defined_gold_host_environment(records):
     """Two source vocabularies name the same broad algal-host habitat; merging
     must retain Madin's taxa and its incomparable TAXON count (#183)."""

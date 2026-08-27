@@ -34,6 +34,9 @@ REQUIRED_COLUMNS = {
     "notes",
 }
 
+PARENT_MODES = {"ADD", "REPLACE"}
+DEFAULT_PARENT_MODE = "ADD"
+
 
 class DefinitionError(SystemExit):
     """A malformed or unverifiable curated definition."""
@@ -50,6 +53,10 @@ class CuratedDefinition:
     curator: str
     date: str
     notes: str
+    # ADD preserves source-derived hierarchy and supplies an ontology genus.
+    # REPLACE is an explicit curator ruling that the inherited parents are
+    # false for this concept, so only the authored genus should remain.
+    parent_mode: str = DEFAULT_PARENT_MODE
 
 
 def load_curated_definitions(path: Path) -> dict[str, CuratedDefinition]:
@@ -86,6 +93,8 @@ def load_curated_definitions(path: Path) -> dict[str, CuratedDefinition]:
                 curator=(row.get("curator") or "").strip(),
                 date=(row.get("date") or "").strip(),
                 notes=(row.get("notes") or "").strip(),
+                parent_mode=(row.get("parent_mode") or DEFAULT_PARENT_MODE).strip().upper()
+                or DEFAULT_PARENT_MODE,
             )
             problems = []
             if not definition.label:
@@ -102,6 +111,11 @@ def load_curated_definitions(path: Path) -> dict[str, CuratedDefinition]:
                 problems.append(f"date {definition.date!r} is not YYYY-MM-DD")
             if not definition.notes:
                 problems.append("notes are required")
+            if definition.parent_mode not in PARENT_MODES:
+                problems.append(
+                    f"parent_mode {definition.parent_mode!r} is not one of "
+                    f"{sorted(PARENT_MODES)}"
+                )
             if problems:
                 raise DefinitionError(
                     f"{path}:{line_no}: " + "; ".join(problems)
