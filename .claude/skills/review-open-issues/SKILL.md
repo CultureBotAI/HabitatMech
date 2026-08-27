@@ -175,6 +175,14 @@ Treat these as P0 when live or outward-facing:
 - a defect that would make an imminent billed research batch or bulk re-seed
   unusable while appearing to succeed.
 
+Each of these has a cheap read-only probe; run the probe rather than asserting
+the condition from an issue's prose. `just redirects-check` and
+`just render-check` confirm the published site and the redirect map are in step
+with the corpus, `just verify-corpus` proves the corpus reproduces from its
+inputs, and `just validate-all` checks every record against the closed schema.
+`just qc` runs all four, so a defect it would catch is either already fixed or
+names a gap in the gate — say which.
+
 For grounding and parent questions, prefer the routes in
 `src/habitatmech/seed.py` and the invariants in `CLAUDE.md` over an issue's
 prose. An empty upstream BacDive mapping is a curator's deliberate refusal and
@@ -325,10 +333,24 @@ proposed mutation first. Apply closures one issue at a time with cited evidence;
 never treat general approval as authorization for an unattended bulk-close.
 
 Do not run `just seed-apply`, `just extract-inventory`, `just redirects`,
-`just render`, or any billed research command as part of triage. A recommended
-command is a proposal, not permission to write the corpus, rewrite generated
-artifacts, or spend a research budget. Do not pass `--allow-drift` to
-investigate drift; investigating it is the work an issue should describe.
+`just render`, or `just research <ID>` as part of triage. A recommended command
+is a proposal, not permission to write the corpus, rewrite generated artifacts,
+or spend a research budget. Do not pass `--allow-drift` to investigate drift;
+investigating it is the work an issue should describe.
+
+Each has a free counterpart that answers the same question, and the standing
+rule is to exhaust those first — reach for these instead:
+
+| Instead of | Run |
+|---|---|
+| `just seed-apply` | `just seed` (dry-run report), `just seed-canary <ID>` |
+| `just redirects` | `just redirects-check` |
+| `just render` | `just render-check` |
+| `just research <ID>` | `just research-dry <ID>` — prints the provider command without calling it |
+| `just extract-inventory` | `just extract-inventory-dry` |
+
+A prohibition without its counterpart leaves a reviewer stalled or reaching for
+the mutating command, which is how the costly ones get run by accident.
 
 Do not merge a PR, delete a branch, or open a cross-repository issue without
 explicit authorization.
