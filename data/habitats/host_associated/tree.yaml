@@ -2,7 +2,7 @@ identifier: habitatmech:BACDIVE.3192a0f47e
 label: tree-associated environment
 definition: An environmental system determined by a tree.
 definition_source: HabitatMech
-habitat_category: OTHER
+habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
 synonyms:
@@ -177,7 +177,12 @@ curation_history:
     term ENVO:01001001 ''plant-associated environment'' attached as a parent. A tree
     as host. No tree-associated environment term exists; BTO:0005516 wood is the material,
     not the living host. Parented to plant-associated environment as the nearest broader
-    term. ENVO term request. (source concept habitatmech:BACDIVE.3192a0f47e)'
+    term. ENVO term request. Category set to HOST_ASSOCIATED (#205): the row already
+    parents this to ENVO:01001001 ''plant-associated environment'', which is the claim
+    that a living plant host defines the habitat, and 17 of the 18 records under that
+    parent are HOST_ASSOCIATED. Same cause as the five domestic-mammal hosts of #200
+    - the category column was left blank, so the seeder''s default stood. The reasoning
+    above is unchanged. (source concept habitatmech:BACDIVE.3192a0f47e)'
 - timestamp: '2026-08-16T00:00:00Z'
   curator: claude-opus-5
   action: DEFINED

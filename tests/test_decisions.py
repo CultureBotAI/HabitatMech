@@ -1010,28 +1010,70 @@ def test_no_record_calls_an_animal_host_a_non_habitat(records):
         f"habitat: {offenders[:5]} (#114, #194)")
 
 
-def test_animal_host_parentage_and_category_agree(records):
-    """Claiming ENVO:01001002 as parent IS the claim that a living animal host
-    defines the habitat, so the category cannot say otherwise.
+# ENVO's three host-associated environment terms. Naming one of these as a
+# parent IS the claim that a living host defines the habitat, so it settles the
+# category on its own — unlike an anatomical parent, which can be an umbrella
+# term (UBERON:0001062 anatomical entity) carrying no host claim at all.
+HOST_DEFINING_PARENTS = {
+    "ENVO:01001001": "plant-associated environment",
+    "ENVO:01001002": "animal-associated environment",
+    "ENVO:01001041": "fungi-associated environment",
+}
 
-    Five domestic-mammal records disagreed for 2,038 strains — bovine, suid,
-    caprine, equid and leporid — because #114 left the `category` column blank
-    and the seeder's default stood. No data was wrong; the site's own
+
+def test_host_parentage_and_category_agree(records):
+    """A host-defining parent and a non-host category cannot both be right.
+
+    Eight records disagreed across 2,920 strains — bovine, suid, caprine, equid
+    and leporid on the animal axis (#200), the tree on the plant axis and rumen
+    fluid on the anatomical one (#205). One cause throughout: the `category`
+    column was left blank in the decision row, so the seeder's default stood.
+
+    No data was wrong, which is why nothing caught it. The site's own
     host-associated filter silently omitted the cow, the pig, the goat, the
-    horse and the rabbit (#200).
+    horse, the rabbit and the tree.
 
-    Asserted over the parent rather than over a list of identifiers, so the next
+    Asserted over the PARENT rather than a list of identifiers, so the next
     record to join the family is covered without editing this test.
     """
     off = [
         (doc["label"], doc.get("habitat_category"))
         for _path, doc in records
-        if "ENVO:01001002" in (doc.get("parent_habitats") or [])
+        if set(doc.get("parent_habitats") or []) & set(HOST_DEFINING_PARENTS)
         and doc.get("habitat_category") != "HOST_ASSOCIATED"
     ]
     assert not off, (
-        f"{len(off)} record(s) claim an animal host as parent but are filed "
+        f"{len(off)} record(s) claim a living host as parent but are filed "
         f"elsewhere: {off[:5]}")
+
+
+def test_a_specific_uberon_parent_implies_a_host_habitat(records):
+    """Anatomical host parts ground normally as host habitats (CLAUDE.md), so a
+    record parented to a real body part belongs with the hosts.
+
+    UBERON only, deliberately. BTO is not an anatomy ontology: alongside gut,
+    tooth, viscus and integument it carries `BTO:0000316` culture medium, which
+    nine records use as a parent and which is correctly ENGINEERED. Asserting
+    over `BTO:` as if it meant anatomy fails on those nine — it did, when this
+    test was first written.
+
+    Two exceptions inside UBERON are real and stated rather than left implicit:
+    FOOD and CLINICAL are deliberately broken out of host-associated by the
+    schema, so `Raw milk` under UBERON:0001913 is correct; and the umbrella
+    terms assert nothing about a host, so `plant litter` and `pollen` under
+    UBERON:0001062 'anatomical entity' are correctly TERRESTRIAL.
+    """
+    umbrella = {"UBERON:0001062", "UBERON:0000061"}  # anatomical entity/structure
+    off = [
+        (doc["label"], doc.get("habitat_category"))
+        for _path, doc in records
+        if [x for x in (doc.get("parent_habitats") or [])
+            if x.startswith("UBERON:") and x not in umbrella]
+        and doc.get("habitat_category") not in {"HOST_ASSOCIATED", "FOOD", "CLINICAL"}
+    ]
+    assert not off, (
+        f"{len(off)} record(s) are parented to a specific body part but filed "
+        f"outside the host, food and clinical buckets: {off[:5]}")
 
 
 def test_decomposing_algae_is_a_material_not_a_host(records):
