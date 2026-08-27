@@ -1,6 +1,6 @@
 identifier: habitatmech:BACDIVE.25af5eede6
 label: Rumen-fluid
-habitat_category: OTHER
+habitat_category: HOST_ASSOCIATED
 grounding_status: NARROW
 mapping_status: REVIEWED
 parent_habitats:
@@ -71,9 +71,13 @@ curation_history:
 - timestamp: '2026-08-13T00:00:00Z'
   curator: claude-opus-5
   action: GROUND_AS_PARENT
-  changes: UBERON:0007365 'rumen' attached as a parent, not adopted as the identity
+  changes: 'UBERON:0007365 ''rumen'' attached as a parent, not adopted as the identity
     (NARROW). Rumen fluid, held in the rumen; ENVO:02000140 fluid environmental material
-    is too generic to be useful. (source concept habitatmech:BACDIVE.25af5eede6)
+    is too generic to be useful. Category set to HOST_ASSOCIATED (#205): rumen fluid
+    is held in the rumen, and CLAUDE.md states that anatomical host parts ground normally
+    as host habitats. 667 of the 672 records with a UBERON parent are HOST_ASSOCIATED,
+    and 8 of the 9 under UBERON:0007365 ''rumen'' itself. Same cause as #200 - a blank
+    category column. The reasoning above is unchanged. (source concept habitatmech:BACDIVE.25af5eede6)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
