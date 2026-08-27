@@ -3,7 +3,7 @@ label: equid-associated environment
 definition: An animal-associated environment which is determined by a horse or other
   equid.
 definition_source: HabitatMech
-habitat_category: OTHER
+habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
 synonyms:
@@ -187,7 +187,12 @@ curation_history:
     TAXON TERM — a phylum is a class of organisms, not a place — so the taxon stays
     an xref (#99) and the concept keeps its own identity as a term-request candidate.
     NOT_APPLICABLE said the concept is not a habitat, which is a stronger and false
-    claim. (source concept habitatmech:BACDIVE.09c3544e85)'
+    claim. Category set to HOST_ASSOCIATED (#200): the row already claims ENVO:01001002
+    ''animal-associated environment'' as the nearest broader term, which is the claim
+    that a living animal host defines the habitat, and every other record carrying
+    that parent is HOST_ASSOCIATED. The category column was left blank here, so the
+    seeder''s default stood and five domestic-mammal hosts stayed in OTHER while their
+    siblings did not. The reasoning above is unchanged. (source concept habitatmech:BACDIVE.09c3544e85)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

@@ -1010,6 +1010,30 @@ def test_no_record_calls_an_animal_host_a_non_habitat(records):
         f"habitat: {offenders[:5]} (#114, #194)")
 
 
+def test_animal_host_parentage_and_category_agree(records):
+    """Claiming ENVO:01001002 as parent IS the claim that a living animal host
+    defines the habitat, so the category cannot say otherwise.
+
+    Five domestic-mammal records disagreed for 2,038 strains — bovine, suid,
+    caprine, equid and leporid — because #114 left the `category` column blank
+    and the seeder's default stood. No data was wrong; the site's own
+    host-associated filter silently omitted the cow, the pig, the goat, the
+    horse and the rabbit (#200).
+
+    Asserted over the parent rather than over a list of identifiers, so the next
+    record to join the family is covered without editing this test.
+    """
+    off = [
+        (doc["label"], doc.get("habitat_category"))
+        for _path, doc in records
+        if "ENVO:01001002" in (doc.get("parent_habitats") or [])
+        and doc.get("habitat_category") != "HOST_ASSOCIATED"
+    ]
+    assert not off, (
+        f"{len(off)} record(s) claim an animal host as parent but are filed "
+        f"elsewhere: {off[:5]}")
+
+
 def test_decomposing_algae_is_a_material_not_a_host(records):
     """Judged apart from the three animal hosts, deliberately.
 
