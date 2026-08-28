@@ -691,3 +691,43 @@ def test_every_reported_slug_drift_is_real(records, path_lockfile):
         assert slug not in (base, f"{base}__{suffix}"), (
             f"{slug!r} IS reachable from {label!r}; not drift")
 
+
+def test_the_slug_drift_section_never_truncates_silently(records, capsys):
+    """A count followed by a short list reads as the whole count.
+
+    The section exists to make the #164 divergence visible; printing 46 in the
+    header and 20 rows underneath, stopping mid-alphabet with no note, hid 26 of
+    them and reproduced the very failure it was added to prevent (#207).
+    """
+    from habitatmech import report
+
+    drift = report._slug_label_drift(records)
+    if len(drift) < 2:
+        pytest.skip("fewer than two drifted records; nothing to truncate")
+
+    report.main(["--slug-drift-top", "1"])
+    section = capsys.readouterr().out.split(
+        "whose filename no longer matches their label")[1]
+    listed = [ln for ln in section.splitlines() if "<-" in ln]
+    assert len(listed) == 1, "the cap was not applied"
+    assert f"and {len(drift) - 1} more" in section, (
+        "the section truncated without saying how many it dropped")
+
+
+def test_the_slug_drift_cap_is_not_the_ungrounded_cap(records, capsys):
+    """`--ungrounded-top` is documented as a term-request yield control. Slug
+    drift is unrelated — half the drifted records are grounded — so raising one
+    must not silently move the other (#207)."""
+    from habitatmech import report
+
+    drift = report._slug_label_drift(records)
+    if len(drift) < 2:
+        pytest.skip("fewer than two drifted records")
+
+    report.main(["--ungrounded-top", "1"])
+    section = capsys.readouterr().out.split(
+        "whose filename no longer matches their label")[1]
+    listed = [ln for ln in section.splitlines() if "<-" in ln]
+    assert len(listed) == min(20, len(drift)), (
+        "--ungrounded-top is still governing the slug-drift list")
+

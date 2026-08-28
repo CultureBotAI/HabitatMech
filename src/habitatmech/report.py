@@ -936,6 +936,14 @@ def main(argv: list[str] | None = None) -> int:
         help="Show the N ungrounded records with the most upstream assertions "
         "(the highest-yield ENVO term requests).",
     )
+    parser.add_argument(
+        "--slug-drift-top",
+        type=int,
+        default=20,
+        help="Show the N records whose filename no longer matches their label "
+        "(0 for all). Separate from --ungrounded-top: drift is unrelated to "
+        "assertion yield and half the drifted records are grounded (#207).",
+    )
     args = parser.parse_args(argv)
 
     if not args.root.exists():
@@ -1350,8 +1358,15 @@ def main(argv: list[str] | None = None) -> int:
     by_cause = Counter(cause for _s, _l, cause in drift)
     for cause, count in by_cause.most_common():
         print(f"  {cause:26s} {count:6d}")
-    for slug, label, _cause in drift[: args.ungrounded_top or None]:
+    shown = drift[: args.slug_drift_top or None]
+    for slug, label, _cause in shown:
         print(f"  {slug[:38]:38s} <- {label[:40]}")
+    if len(shown) < len(drift):
+        # Never a bare truncated list under a full count: the section exists to
+        # make this number visible, and a list that stops without saying so
+        # reads as the whole of it (#207).
+        print(f"  ... and {len(drift) - len(shown)} more; "
+              f"--slug-drift-top 0 for all")
     if not drift:
         print("  none — every filename still matches its record's label")
 
