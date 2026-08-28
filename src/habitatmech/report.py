@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import re
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -22,10 +23,11 @@ from pathlib import Path
 import yaml
 
 from habitatmech.seed import HABITAT_PREFIXES as _IDENTITY_PREFIXES
-from habitatmech.seed import mint, norm_label
+from habitatmech.seed import mint, norm_label, slugify
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 HABITATS_DIR = REPO_ROOT / "data" / "habitats"
+PATHS_LOCKFILE = HABITATS_DIR / "PATHS.tsv"
 
 # The prefixes a habitat record's identifier may use. Imported rather than
 # copied: the flag it drives separates "a wrong id here becomes a record" from
@@ -331,6 +333,43 @@ def table(title: str, counts: Counter, total: int) -> None:
     for key, count in counts.most_common():
         share = f"{100 * count / total:5.1f}%" if total else "    -"
         print(f"  {str(key):26s} {count:6d}  {share}")
+
+
+def _slug_label_drift(records: list[tuple[Path, dict]]) -> list[tuple[str, str, str]]:
+    """Records whose filename was minted from a label they no longer carry.
+
+    Both halves are deliberate and they pull apart. `PATHS.tsv` pins a slug for
+    life so a re-label is a one-line reviewable diff rather than a delete+add
+    across the corpus, while the published page name embeds the *current* label
+    so the URL follows curation. After a curated definition or an adopted
+    ontology label, the file path is the last place the raw source string
+    survives — and anyone reading `data/habitats/` by eye, or citing a path in a
+    review, is reading the old name (#164).
+
+    Not a defect and not a URL risk: record paths are not published addresses,
+    and `just verify-corpus` passes because the lockfile and the corpus agree.
+    Printed so the count is visible rather than latent.
+
+    The `__<hash>` form is NOT drift. A new concept whose base slug is taken
+    gets `<base>__<8 hex of sha1(identifier)>`, so it must be reconstructed and
+    accepted here — comparing against `slugify(label)` alone reports 1053
+    records instead of the few dozen that have actually drifted.
+    """
+    if not PATHS_LOCKFILE.exists():
+        return []
+    with PATHS_LOCKFILE.open(newline="", encoding="utf-8") as fh:
+        pinned = {r["identifier"]: r["slug"] for r in csv.DictReader(fh, delimiter="\t")}
+    drift = []
+    for _path, doc in records:
+        identifier, label = doc.get("identifier"), doc.get("label")
+        slug = pinned.get(identifier)
+        if not slug or not label:
+            continue
+        base = slugify(label)
+        suffix = hashlib.sha1(identifier.encode()).hexdigest()[:8]
+        if slug not in (base, f"{base}__{suffix}"):
+            drift.append((slug, label, doc.get("definition_source") or "ontology label"))
+    return sorted(drift)
 
 
 def _unverifiable_mapping_targets() -> list[tuple[str, str, str, bool]]:
@@ -1301,6 +1340,20 @@ def main(argv: list[str] | None = None) -> int:
         for subject, target, claimed, identity in unverifiable:
             flag = "  <- can be a record identity" if identity else ""
             print(f"  {subject[:26]:26s} {target:18s} claims {claimed!r}{flag}")
+
+    drift = _slug_label_drift(records)
+    print(f"\n=== {len(drift)} record(s) whose filename no longer matches their label ===")
+    print("  (PATHS.tsv pins a slug for life so a re-label stays a one-line diff, while")
+    print("   the page URL embeds the CURRENT label — so the two naming schemes diverge")
+    print("   the moment a record is defined or adopts an ontology label. Not a URL risk:")
+    print("   record paths are not published addresses. Visible rather than latent (#164).)")
+    by_cause = Counter(cause for _s, _l, cause in drift)
+    for cause, count in by_cause.most_common():
+        print(f"  {cause:26s} {count:6d}")
+    for slug, label, _cause in drift[: args.ungrounded_top or None]:
+        print(f"  {slug[:38]:38s} <- {label[:40]}")
+    if not drift:
+        print("  none — every filename still matches its record's label")
 
     if args.out:
         args.out.parent.mkdir(parents=True, exist_ok=True)

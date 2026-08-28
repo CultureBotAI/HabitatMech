@@ -634,3 +634,60 @@ def test_no_record_claims_a_process_is_a_habitat(repo_root, records):
     assert not offenders, (
         f"{len(offenders)} record(s) claim a process is a habitat: {offenders[:5]}"
     )
+
+
+def test_slug_drift_does_not_count_the_collision_suffix(records, path_lockfile):
+    """The report's #164 count must not mistake disambiguation for drift.
+
+    A new concept whose base slug is already taken gets
+    `<base>__<8 hex of sha1(identifier)>`, which is deliberate and not a
+    re-label. Comparing the pinned slug against `slugify(label)` alone reports
+    **1053** records — every disambiguated slug in the corpus — instead of the
+    few dozen that have actually drifted. The suffix has to be reconstructed
+    and accepted.
+    """
+    import hashlib
+
+    from habitatmech.report import _slug_label_drift
+    from habitatmech.seed import slugify
+
+    reported = {slug for slug, _label, _cause in _slug_label_drift(records)}
+
+    naive = set()
+    suffixed = set()
+    for _path, doc in records:
+        slug = path_lockfile.get(doc.get("identifier"))
+        if not slug or not doc.get("label"):
+            continue
+        base = slugify(doc["label"])
+        if slug != base:
+            naive.add(slug)
+        if slug == f"{base}__{hashlib.sha1(doc['identifier'].encode()).hexdigest()[:8]}":
+            suffixed.add(slug)
+
+    assert suffixed, "no disambiguated slugs in the corpus; this test is inert"
+    assert not (reported & suffixed), (
+        f"{len(reported & suffixed)} disambiguation suffix(es) counted as drift: "
+        f"{sorted(reported & suffixed)[:3]}")
+    assert reported < naive, (
+        "the drift count is not narrower than the naive comparison, so the "
+        "suffix is not being excluded")
+
+
+def test_every_reported_slug_drift_is_real(records, path_lockfile):
+    """Each reported record must genuinely be unreachable from its own label,
+    by either naming rule — otherwise the #164 count overstates the divergence
+    it exists to make visible."""
+    import hashlib
+
+    from habitatmech.report import _slug_label_drift
+    from habitatmech.seed import slugify
+
+    by_slug = {path_lockfile.get(doc.get("identifier")): doc for _p, doc in records}
+    for slug, label, _cause in _slug_label_drift(records):
+        doc = by_slug[slug]
+        base = slugify(label)
+        suffix = hashlib.sha1(doc["identifier"].encode()).hexdigest()[:8]
+        assert slug not in (base, f"{base}__{suffix}"), (
+            f"{slug!r} IS reachable from {label!r}; not drift")
+
