@@ -1099,6 +1099,93 @@ def test_decomposing_algae_is_a_material_not_a_host(records):
         "four strains did not warrant a new term request")
 
 
+RESEARCHED_DEFINITIONS = {
+    "habitatmech:GOLD.40979f5751": ("indoor air", ["ENVO:00002005"], 72),
+    "habitatmech:GOLD.d263dfb09c": ("outdoor air", ["ENVO:00002005"], 42),
+    "habitatmech:GOLD.0e7a5162bb": ("macroalgal bed", ["ENVO:01001378"], 69),
+    "habitatmech:GOLD.398aeb6c37": ("indoor dust", ["ENVO:00002008"], 65),
+    "habitatmech:BACDIVE.15180e7ff9": ("aquatic mammal-associated environment",
+                                       ["ENVO:01001002"], 69),
+    "habitatmech:BACDIVE.38260eea00": ("aquatic macrophyte-associated environment",
+                                       ["ENVO:01001000"], 66),
+}
+
+
+def test_definitions_authored_from_committed_research(records):
+    """Nine definitions written from reports already in research/habitats/.
+
+    The six pinned here are the ones whose genus is fully determined by the
+    report; the three host-clade rows (oyster, bivalve, sea urchin) keep a GOLD
+    parent alongside the ENVO genus and are covered by the host-parentage tests.
+
+    Assertion counts are pinned because a definition must not change what the
+    record is attested by (#110).
+    """
+    docs = {doc["identifier"]: doc for _path, doc in records}
+    for identifier, (label, parents, count) in RESEARCHED_DEFINITIONS.items():
+        doc = docs[identifier]
+        assert doc["label"] == label
+        assert doc["definition_source"] == "HabitatMech"
+        assert doc.get("definition"), f"{label} has no definition text"
+        assert doc.get("parent_habitats") == parents, (
+            f"{label} parents are {doc.get('parent_habitats')}, expected {parents}")
+        assert sum(a.get("assertion_count") or 0
+                   for a in doc["source_attestations"]) == count
+
+
+def test_a_replaced_parent_leaves_no_trace_in_parent_habitats(records):
+    """REPLACE exists because the inherited parent is FALSE, not merely coarse.
+
+    A macroalgal bed is not a kind of marine water body — a bed underlies one —
+    and indoor dust is not a kind of indoor air, which is what GOLD's path link
+    asserted. Both inherited edges had to go, not sit alongside the true genus
+    (#110, mechanism from #185).
+    """
+    docs = {doc["identifier"]: doc for _path, doc in records}
+    assert "ENVO:00001999" not in (
+        docs["habitatmech:GOLD.0e7a5162bb"].get("parent_habitats") or [])
+    assert "habitatmech:GOLD.40979f5751" not in (
+        docs["habitatmech:GOLD.398aeb6c37"].get("parent_habitats") or [])
+
+
+def test_porifera_sponges_merged_into_the_defined_sponge_survivor(records):
+    """Three source concepts, three sources, one place.
+
+    The BacDive bucket and the two GOLD ones denote a sponge acting as host, and
+    the GOLD survivor already carried the authored definition. Writing a second
+    one would have tripped the duplicate-requested_label rule — correctly, since
+    this is a genuine duplicate rather than a path-distinguished leaf (#110,
+    #161).
+    """
+    docs = {doc["identifier"]: doc for _path, doc in records}
+    assert "habitatmech:BACDIVE.18f9382d8d" not in docs
+
+    survivor = docs["habitatmech:GOLD.64acf9132c"]
+    assert survivor["label"] == "sponge-associated environment"
+    units = {(a["source"], a["assertion_unit"], a["assertion_count"])
+             for a in survivor["source_attestations"]}
+    assert ("BACDIVE", "STRAIN", 86) in units, "the BacDive evidence was lost"
+    assert {u[1] for u in units} == {"STRAIN", "ORGANISM"}, (
+        "both assertion units must survive; they must never be summed")
+
+
+def test_sampling_artefacts_are_excluded_not_defined(records):
+    """Two of the twelve highest-volume researched records are not habitats.
+
+    Biopsy (95 strains) and Core-sample (60) are individuated by how the
+    specimen was obtained, not by any property of a place. Their own reports say
+    so. They stay minted with their xrefs and are recorded in the exclusion
+    ledger so they leave the term-request worklist without pretending to be
+    terms (#110).
+    """
+    from scripts import build_term_requests
+
+    excluded = build_term_requests.excluded()
+    for identifier in ("habitatmech:BACDIVE.3d4fdc29fb", "habitatmech:BACDIVE.3bf519722c"):
+        assert identifier in excluded, f"{identifier} is not in the exclusion ledger"
+        assert excluded[identifier].strip(), "an exclusion needs a stated reason"
+
+
 def test_madin_alga_merges_into_the_defined_gold_host_environment(records):
     """Two source vocabularies name the same broad algal-host habitat; merging
     must retain Madin's taxa and its incomparable TAXON count (#183)."""

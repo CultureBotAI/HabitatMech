@@ -1,8 +1,17 @@
 identifier: habitatmech:BACDIVE.38260eea00
-label: Aquatic-plant
+label: aquatic macrophyte-associated environment
+definition: An environmental system determined by an aquatic macrophyte, or by a part
+  of an aquatic macrophyte.
+definition_source: HabitatMech
 habitat_category: OTHER
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Aquatic-plant
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+parent_habitats:
+- ENVO:01001000
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:aquatic-plant
@@ -173,3 +182,14 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+- timestamp: '2026-08-28T00:00:00Z'
+  curator: claude-opus-5
+  action: DEFINED
+  changes: Defined as 'aquatic macrophyte-associated environment' under ENVO:01001000
+    'environmental system determined by an organism'. Definition authored from the
+    record's committed deep-research report under research/habitats/, read in full;
+    the report's proposed sentence, genus and near-miss table are the evidence. No
+    new research was commissioned. Genus is ENVO:01001000 rather than ENVO:01001001
+    'plant-associated environment' because aquatic macrophytes include macroalgae
+    and aquatic bryophytes, which are not plants; the report is explicit on this.
+    Labelled macrophyte rather than plant for the same reason.

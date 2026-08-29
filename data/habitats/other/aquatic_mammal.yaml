@@ -1,8 +1,17 @@
 identifier: habitatmech:BACDIVE.15180e7ff9
-label: Aquatic-mammal
+label: aquatic mammal-associated environment
+definition: An animal-associated environment which is determined by a mammal that
+  inhabits water, or by a part of such a mammal.
+definition_source: HabitatMech
 habitat_category: OTHER
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Aquatic-mammal
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+parent_habitats:
+- ENVO:01001002
 xrefs:
 - FOODON:03411134
 source_attestations:
@@ -183,3 +192,13 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+- timestamp: '2026-08-28T00:00:00Z'
+  curator: claude-opus-5
+  action: DEFINED
+  changes: Defined as 'aquatic mammal-associated environment' under ENVO:01001002
+    'animal-associated environment'. Definition authored from the record's committed
+    deep-research report under research/habitats/, read in full; the report's proposed
+    sentence, genus and near-miss table are the evidence. No new research was commissioned.
+    Covers cetaceans, sirenians, pinnipeds and aquatic carnivorans, which is what
+    the source bin holds. Same disposition already recorded for Fish, Birds, Mammals
+    and Sponges.

@@ -1,10 +1,24 @@
 identifier: habitatmech:GOLD.398aeb6c37
-label: Dust
+label: indoor dust
+definition: A dust which settles and accumulates on interior surfaces of a built structure,
+  and which is a heterogeneous mixture of particles shed by occupants, pets and furnishings,
+  tracked-in soil, and deposited outdoor-derived particulate matter.
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Dust
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: house dust
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: settled dust
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- habitatmech:GOLD.40979f5751
+- ENVO:00002008
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4619
@@ -24,3 +38,13 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-08-28T00:00:00Z'
+  curator: claude-opus-5
+  action: DEFINED
+  changes: Defined as 'indoor dust' under ENVO:00002008 'dust'. Definition authored
+    from the record's committed deep-research report under research/habitats/, read
+    in full; the report's proposed sentence, genus and near-miss table are the evidence.
+    No new research was commissioned. Introduces a setting-based differentia under
+    ENVO:00002008 'dust', where every existing child is differentiated by composition
+    or source material. REPLACE because the inherited parent was the GOLD path parent
+    habitatmech:GOLD.40979f5751 'Indoor Air', and dust is not a kind of air.

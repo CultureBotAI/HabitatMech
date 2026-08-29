@@ -1,9 +1,20 @@
 identifier: habitatmech:GOLD.b19422ad27
-label: Sea Urchin
+label: sea urchin-associated environment
+definition: An animal-associated environment which is determined by a sea urchin,
+  or by a part of a sea urchin.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Sea Urchin
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: echinoid-associated environment
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:01001002
 - habitatmech:GOLD.e1f435d44b
 xrefs:
 - FOODON:03412107
@@ -33,3 +44,14 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-08-28T00:00:00Z'
+  curator: claude-opus-5
+  action: DEFINED
+  changes: Defined as 'sea urchin-associated environment' under ENVO:01001002 'animal-associated
+    environment'. Definition authored from the record's committed deep-research report
+    under research/habitats/, read in full; the report's proposed sentence, genus
+    and near-miss table are the evidence. No new research was commissioned. Worded
+    like the existing ENVO:01001179 'cnidarian-associated environment', which is ENVO's
+    own precedent for a taxon-scoped associated-environment class. The report recommends
+    ENVO:01001002 rather than the tighter ENVO:01001176; the Echinodermata GOLD parent
+    is kept, so ADD.

@@ -1,5 +1,9 @@
 identifier: habitatmech:GOLD.40979f5751
-label: Indoor Air
+label: indoor air
+definition: Air which is contained within the interior space of a building or other
+  roofed construction, and which is thereby separated from the outdoor atmosphere
+  by that structure's envelope.
+definition_source: HabitatMech
 habitat_category: AIR
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
@@ -27,3 +31,13 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-08-28T00:00:00Z'
+  curator: claude-opus-5
+  action: DEFINED
+  changes: 'Defined as ''indoor air'' under ENVO:00002005 ''air''. Definition authored
+    from the record''s committed deep-research report under research/habitats/, read
+    in full; the report''s proposed sentence, genus and near-miss table are the evidence.
+    No new research was commissioned. ENVO has no indoor-air term and three open issues
+    ask for one (#858 2019, #980 2020, #1179 2021), one proposing the same containment
+    differentia. The report asks for the indoor and outdoor pair together, which this
+    and the outdoor-air row do. The genus is already the record''s parent, so ADD.'
