@@ -3,7 +3,7 @@ label: aquatic mammal-associated environment
 definition: An animal-associated environment which is determined by a mammal that
   inhabits water, or by a part of such a mammal.
 definition_source: HabitatMech
-habitat_category: OTHER
+habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
 synonyms:
@@ -187,7 +187,10 @@ curation_history:
     environment. What is not a habitat is the TAXON TERM — a phylum is a class of
     organisms, not a place — so the taxon stays an xref (#99) and the concept keeps
     its own identity as a term-request candidate. NOT_APPLICABLE said the concept
-    is not a habitat, which is a stronger and false claim. (source concept habitatmech:BACDIVE.15180e7ff9)'
+    is not a habitat, which is a stronger and false claim. Category set to HOST_ASSOCIATED
+    (#110): the curated definition parents this to ENVO:01001002 ''animal-associated
+    environment'', which is the claim that a living animal host defines the habitat,
+    so OTHER would contradict the record''s own parent. (source concept habitatmech:BACDIVE.15180e7ff9)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
