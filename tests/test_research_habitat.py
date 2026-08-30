@@ -10,7 +10,6 @@ sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
 from research_habitat import build_command, load_record, main, template_vars  # noqa: E402
 
-
 IDENTIFIER = "habitatmech:PREGO.c312b0d6fc"
 
 
