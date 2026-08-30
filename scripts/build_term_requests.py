@@ -46,6 +46,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import re
 from pathlib import Path
 
 import yaml
@@ -143,6 +144,38 @@ def load_requests() -> list[dict]:
     ]
 
 
+def _squashed(text: str) -> str:
+    """The comparable core of a label: case, spacing and punctuation removed."""
+    return re.sub(r"[^a-z0-9]", "", text.lower())
+
+
+def _synonym_problems(prefix: str, row: dict) -> list[str]:
+    """Refuse an exact synonym that is not a distinct name.
+
+    `exact_synonym` is proposed to the ontology as an EXACT synonym, which is a
+    claim that people actually call the thing by that name. A value that is the
+    requested label again with different case, spacing or punctuation makes no
+    such claim — it is usually a URL slug that reached the column by accident
+    (#213) — and a duplicate within the row is noise an editor has to read.
+    """
+    label = (row.get("requested_label") or "").strip()
+    problems, seen = [], {_squashed(label)}
+    for synonym in (row.get("exact_synonym") or "").split("|"):
+        synonym = synonym.strip()
+        if not synonym:
+            continue
+        squashed = _squashed(synonym)
+        if not squashed:
+            problems.append(f"{prefix}: exact synonym {synonym!r} has no letters or digits")
+        elif squashed in seen:
+            problems.append(
+                f"{prefix}: exact synonym {synonym!r} differs from "
+                f"{label!r} or an earlier synonym only by case or punctuation"
+            )
+        seen.add(squashed)
+    return problems
+
+
 def validate(requests: list[dict], corpus: dict[str, dict],
              labels: dict[str, str]) -> None:
     """Refuse to emit a request that misstates the ontology or the corpus.
@@ -180,6 +213,7 @@ def validate(requests: list[dict], corpus: dict[str, dict],
             problems.append(f"{prefix}: requested_label is required")
         if not (row.get("notes") or "").strip():
             problems.append(f"{prefix}: notes are required — an editor will ask why")
+        problems.extend(_synonym_problems(prefix, row))
     if problems:
         raise RequestError(
             "term requests are not submittable:\n  " + "\n  ".join(problems)

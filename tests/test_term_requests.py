@@ -102,3 +102,42 @@ def test_created_by_is_left_empty_rather_than_guessed(requests_module, repo_root
         f"created by is filled for {invented[:3]} — if a human set it, delete this "
         "test; if the generator did, it invented an attribution"
     )
+
+
+@pytest.mark.parametrize(
+    "synonym, why",
+    [
+        ("indoor-air", "a URL slug"),
+        ("Indoor Air", "the label with different case"),
+        ("indoor.air!", "the label with punctuation added"),
+        ("---", "no letters or digits at all"),
+    ],
+)
+def test_an_exact_synonym_must_be_a_distinct_name(requests_module, synonym, why):
+    """An EXACT synonym asserts that people call the thing by that name.
+
+    Both offenders this catches were committed and shipped through `just qc`
+    before anyone read them (#213): `indoor-air`, a URL slug that reached the
+    column by accident, and a label coined at authoring time to mirror the
+    request. The mechanical half is testable, so it is tested; a coined name
+    that reads like English still needs a human.
+    """
+    row = {
+        "identifier": "habitatmech:GOLD.0000000000",
+        "requested_label": "indoor air",
+        "exact_synonym": synonym,
+    }
+    problems = requests_module._synonym_problems("prefix", row)
+    assert problems, f"{synonym!r} ({why}) was accepted as an exact synonym"
+
+
+def test_a_genuine_alternative_name_is_still_accepted(requests_module):
+    """The guard must not swallow the column's actual purpose: `ambient air`
+    and `room air` are real alternative names and are why the column exists."""
+    row = {
+        "identifier": "habitatmech:GOLD.0000000000",
+        "requested_label": "outdoor air",
+        "exact_synonym": "ambient air|room air",
+    }
+    problems = requests_module._synonym_problems("prefix", row)
+    assert problems == [], problems

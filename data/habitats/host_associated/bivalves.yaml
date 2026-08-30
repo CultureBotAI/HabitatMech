@@ -10,9 +10,6 @@ synonyms:
 - synonym_text: Bivalves
   synonym_type: EXACT_SYNONYM
   source: HabitatMech curation
-- synonym_text: Bivalvia-associated environment
-  synonym_type: EXACT_SYNONYM
-  source: HabitatMech curation
 parent_habitats:
 - ENVO:01001002
 - ENVO:01001176
@@ -41,11 +38,14 @@ curation_history:
 - timestamp: '2026-08-28T00:00:00Z'
   curator: claude-opus-5
   action: DEFINED
-  changes: Defined as 'bivalve-associated environment' under ENVO:01001176 'environment
-    associated with an aquatic invertebrate'. Definition authored from the record's
-    committed deep-research report under research/habitats/, read in full; the report's
+  changes: 'Defined as ''bivalve-associated environment'' under ENVO:01001176 ''environment
+    associated with an aquatic invertebrate''. Definition authored from the record''s
+    committed deep-research report under research/habitats/, read in full; the report''s
     proposed sentence, genus and near-miss table are the evidence. No new research
-    was commissioned. FOODON:03412113 'bivalve' is a food-product class rather than
+    was commissioned. FOODON:03412113 ''bivalve'' is a food-product class rather than
     a host organism, so it is the wrong kind of term entirely and is not used. ADD
     keeps the GOLD parent and the already-present ENVO:01001002, of which the tighter
-    genus is a descendant.
+    genus is a descendant. Dropped the exact synonym ''Bivalvia-associated environment''
+    (#213): it was coined at authoring time to mirror the requested label, is attested
+    by no source and proposed by no report, and an exact synonym asserts that people
+    actually use the name.'
