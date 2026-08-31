@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Embryo — HabitatMech</title>
-<meta name="description" content="Embryo (habitatmech:GOLD.9f162205a6): a microbial habitat harmonized from GOLD.">
+<title>fish embryo-associated environment — HabitatMech</title>
+<meta name="description" content="fish embryo-associated environment (habitatmech:GOLD.9f162205a6): a microbial habitat harmonized from GOLD.">
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -18,7 +18,7 @@
     <a href="https://github.com/CultureBotAI/HabitatMech">Source</a>
   </nav>
 </header>
-<h1>Embryo</h1>
+<h1>fish embryo-associated environment</h1>
 <p class="meta">
   <code class="curie">habitatmech:GOLD.9f162205a6</code>
   <span class="sep">·</span><a href="../category/host-associated.html">HOST_ASSOCIATED</a>
@@ -26,7 +26,7 @@
   <span class="pill">REVIEWED</span>
 </p>
 
-
+<p>An animal-associated environment which is determined by a fertilised fish egg during development, comprising the chorion surface, the perivitelline space and the developing embryo within.  <span class="meta">— HabitatMech</span></p>
 
 <h2>Source attestations</h2>
 <p class="meta">Each upstream vocabulary's own account of this habitat. Assertion
@@ -45,6 +45,7 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 <h2>Broader habitats</h2>
 <ul class="plain">
+  <li><a href="../habitats/animal-associated-environment-envo-01001002.html">animal-associated environment</a>      <code class="curie">ENVO:01001002</code></li>
   <li><a href="../habitats/fish-associated-environment-habitatmech-gold-3d529a667e.html">fish-associated environment</a>      <code class="curie">habitatmech:GOLD.3d529a667e</code></li>
 </ul>
 
@@ -59,6 +60,9 @@ a grounding.</p>
 <code class="curie">UBERON:0000922</code></li>
 </ul>
 
+<h2>Also called</h2>
+<ul class="plain">
+<li>Embryo <span class="meta">— HabitatMech curation</span></li><li>fish egg-associated environment <span class="meta">— HabitatMech curation</span></li></ul>
 
 <h2>Curation</h2>
 <p class="meta">What a curator decided about this record, and why. A record built
@@ -68,6 +72,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">CONFIRM_UNGROUNDED</span>
     <span class="meta">2026-08-17 · claude-opus-5</span>
     <p>Confirmed UNGROUNDED: no ontology term fits this concept. UBERON:0000922 &#39;embryo&#39; kept as an xref. Life-stage review (#112), applying the rule #114 settled: the whole host ORGANISM gets its own identity plus an &lt;X&gt;-associated environment term, while PARTS of a host ground to the anatomy term as gut, skin and lung already do. A larva, pupa, prepupa or embryo is the whole organism at a stage, not a part of one, so UBERON:0000922 &#39;embryo&#39; is the organism rather than the place — the same shape as Mollusca, Porifera and the host clades. Kept as an xref (#99); the concept keeps its own identity as a term-request candidate.This is the line that makes both calls fall out of one rule, rather than an exception for terms that happen to live in UBERON: a cocoon is a STRUCTURE an insect builds and stays grounded, because it is not the organism. (source concept habitatmech:GOLD.9f162205a6)</p>
+  </li>
+  <li>
+    <span class="pill">DEFINED</span>
+    <span class="meta">2026-08-31 · claude-opus-5</span>
+    <p>Defined as &#39;fish embryo-associated environment&#39; under ENVO:01001002 &#39;animal-associated environment&#39;. Definition authored from the record&#39;s committed deep-research report under research/habitats/, read in full; the report&#39;s proposed sentence, genus and near-miss table are the evidence. No new research was commissioned. Sibling of the brown algal embryo row and distinguished from it by label rather than by a shared term (#161). The whole-egg reading is the report&#39;s recommendation and the one the sampling literature uses - studies homogenise or swab the whole egg, not a dissected embryo. Stated rather than implied, as the report asks: upstream assertion volume in this corpus is 0. GOLD carries three ecosystem ids for the path but no organism reaches it, so the justification rests on external literature, not on attestation. UBERON:0000922 is the organism at a stage and stays an xref, never the identity (#99, #112).</p>
   </li>
 </ol>
 

@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Embryo — HabitatMech</title>
-<meta name="description" content="Embryo (habitatmech:GOLD.32330da5da): a microbial habitat harmonized from GOLD.">
+<title>brown algal embryo — HabitatMech</title>
+<meta name="description" content="brown algal embryo (habitatmech:GOLD.32330da5da): a microbial habitat harmonized from GOLD.">
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -18,7 +18,7 @@
     <a href="https://github.com/CultureBotAI/HabitatMech">Source</a>
   </nav>
 </header>
-<h1>Embryo</h1>
+<h1>brown algal embryo</h1>
 <p class="meta">
   <code class="curie">habitatmech:GOLD.32330da5da</code>
   <span class="sep">·</span><a href="../category/host-associated.html">HOST_ASSOCIATED</a>
@@ -26,7 +26,7 @@
   <span class="pill">REVIEWED</span>
 </p>
 
-
+<p>An environmental system determined by an organism which is a brown alga between fertilisation and the differentiated juvenile thallus, attached to a hard marine substratum by self-secreted adhesive.  <span class="meta">— HabitatMech</span></p>
 
 <h2>Source attestations</h2>
 <p class="meta">Each upstream vocabulary's own account of this habitat. Assertion
@@ -45,6 +45,7 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 <h2>Broader habitats</h2>
 <ul class="plain">
+  <li><a href="../habitats/environmental-system-determined-by-an-organism-envo-01001000.html">environmental system determined by an organism</a>      <code class="curie">ENVO:01001000</code></li>
   <li><a href="../habitats/brown-alga-associated-environment-habitatmech-gold-3e4ecbed63.html">brown-alga-associated environment</a>      <code class="curie">habitatmech:GOLD.3e4ecbed63</code></li>
 </ul>
 
@@ -59,6 +60,9 @@ a grounding.</p>
 <code class="curie">UBERON:0000922</code></li>
 </ul>
 
+<h2>Also called</h2>
+<ul class="plain">
+<li>Embryo <span class="meta">— HabitatMech curation</span></li><li>Phaeophyceae embryo <span class="meta">— HabitatMech curation</span></li></ul>
 
 <h2>Curation</h2>
 <p class="meta">What a curator decided about this record, and why. A record built
@@ -68,6 +72,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">CONFIRM_UNGROUNDED</span>
     <span class="meta">2026-08-17 · claude-opus-5</span>
     <p>Confirmed UNGROUNDED: no ontology term fits this concept. UBERON:0000922 &#39;embryo&#39; kept as an xref. Life-stage review (#112): carried UBERON:0000922 &#39;embryo&#39; as a parent, reached by the ambiguous-leaf rule rather than the path — several GOLD paths end in the same leaf, so the ones that do not claim the term keep it as a parent. parent_habitats asserts the parent is BROADER, and a larva or embryo is a whole organism rather than a broader kind of place, so this is the same over-claim the identity cases had one level up. Kept as an xref (#99). Per the rule #114 settled: the whole host organism gets its own identity and an &lt;X&gt;-associated environment term; parts of a host ground to the anatomy term. (source concept habitatmech:GOLD.32330da5da)</p>
+  </li>
+  <li>
+    <span class="pill">DEFINED</span>
+    <span class="meta">2026-08-31 · claude-opus-5</span>
+    <p>Defined as &#39;brown algal embryo&#39; under ENVO:01001000 &#39;environmental system determined by an organism&#39;. Definition authored from the record&#39;s committed deep-research report under research/habitats/, read in full; the report&#39;s proposed sentence, genus and near-miss table are the evidence. No new research was commissioned. Labelled &#39;brown algal embryo&#39; and not &#39;embryo&#39; on the report&#39;s explicit instruction: the bare label must not be the definiendum, because in GOLD &#39;Embryo&#39; is a reusable life-stage slot - the same thing MIxS models as host_life_stage - and two sibling nodes carry it under Red algae and under Fish. This is the #161 case where two records share a source label and are NOT the same concept: the differentia is already in the path, so each gets its own label and no shared-term mechanism is needed. Genus is ENVO:01001000 rather than the plant or animal branch because a brown alga is a stramenopile, neither plant nor animal; the report notes ENVO has no algae-associated environment class at all, which is the real gap here.</p>
   </li>
 </ol>
 

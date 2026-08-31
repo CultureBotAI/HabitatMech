@@ -1,9 +1,21 @@
 identifier: habitatmech:GOLD.9f162205a6
-label: Embryo
+label: fish embryo-associated environment
+definition: An animal-associated environment which is determined by a fertilised fish
+  egg during development, comprising the chorion surface, the perivitelline space
+  and the developing embryo within.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Embryo
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: fish egg-associated environment
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:01001002
 - habitatmech:GOLD.3d529a667e
 xrefs:
 - UBERON:0000922
@@ -32,3 +44,18 @@ curation_history:
     makes both calls fall out of one rule, rather than an exception for terms that
     happen to live in UBERON: a cocoon is a STRUCTURE an insect builds and stays grounded,
     because it is not the organism. (source concept habitatmech:GOLD.9f162205a6)'
+- timestamp: '2026-08-31T00:00:00Z'
+  curator: claude-opus-5
+  action: DEFINED
+  changes: 'Defined as ''fish embryo-associated environment'' under ENVO:01001002
+    ''animal-associated environment''. Definition authored from the record''s committed
+    deep-research report under research/habitats/, read in full; the report''s proposed
+    sentence, genus and near-miss table are the evidence. No new research was commissioned.
+    Sibling of the brown algal embryo row and distinguished from it by label rather
+    than by a shared term (#161). The whole-egg reading is the report''s recommendation
+    and the one the sampling literature uses - studies homogenise or swab the whole
+    egg, not a dissected embryo. Stated rather than implied, as the report asks: upstream
+    assertion volume in this corpus is 0. GOLD carries three ecosystem ids for the
+    path but no organism reaches it, so the justification rests on external literature,
+    not on attestation. UBERON:0000922 is the organism at a stage and stays an xref,
+    never the identity (#99, #112).'

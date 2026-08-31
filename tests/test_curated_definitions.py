@@ -159,8 +159,17 @@ def test_curated_definition_loader_rejects_duplicate_labels(tmp_path):
     )
     path.write_text(header + first + second, encoding="utf-8")
 
-    with pytest.raises(DefinitionError, match="merge duplicate concepts"):
+    with pytest.raises(DefinitionError) as raised:
         load_curated_definitions(path)
+
+    # The message has to name BOTH exits. Its first wording said only "merge
+    # duplicate concepts before defining them", which is the wrong instruction
+    # for the majority of real collisions: human-skin Lesion and fish-skin
+    # Lesion share a source label and are different concepts, and merging them
+    # would destroy the host distinction (#161).
+    message = str(raised.value)
+    assert "SAME_AS" in message, message
+    assert "its own label" in message, message
 
 
 def test_curated_definition_loader_rejects_unknown_parent_mode(tmp_path):
