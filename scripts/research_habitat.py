@@ -43,6 +43,11 @@ import sys
 from pathlib import Path
 
 import yaml
+from deep_research_contract import (
+    ContractError,
+    render_prompt_template,
+    run_codex_research,
+)
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 HABITATS_DIR = REPO_ROOT / "data" / "habitats"
@@ -220,6 +225,9 @@ def main(argv: list[str] | None = None) -> int:
                              "check to run before any batch.")
     parser.add_argument("--force", action="store_true",
                         help="Re-run even though a report already exists. Costs a paid call.")
+    parser.add_argument("--timeout", type=int, default=1800)
+    parser.add_argument("--min-chars", type=int, default=1000)
+    parser.add_argument("--min-sources", type=int, default=3)
     args, passthrough = parser.parse_known_args(argv or sys.argv[1:])
 
     provider = resolve_provider(args.provider)
@@ -238,10 +246,40 @@ def main(argv: list[str] | None = None) -> int:
               f"below the {MIN_REPORT_BYTES}-byte floor", file=sys.stderr)
 
     variables = template_vars(doc)
+    print(f"Researching: {variables['habitat_label']} ({provider}) -> {_repo_relative(out)}")
+    if provider == "codex":
+        if passthrough:
+            print(
+                "Codex does not accept deep-research-client passthrough arguments",
+                file=sys.stderr,
+            )
+            return 2
+        try:
+            prompt = render_prompt_template(TEMPLATE, variables)
+            if args.dry_run:
+                print("codex --search --ask-for-approval never exec [schema validated]")
+                print(f"prompt: {len(prompt)} characters")
+                return 0
+            summary = run_codex_research(
+                prompt,
+                out,
+                repo_root=REPO_ROOT,
+                timeout=args.timeout,
+                min_chars=args.min_chars,
+                min_sources=args.min_sources,
+            )
+        except ContractError as exc:
+            print(f"Codex research rejected: {exc}", file=sys.stderr)
+            return 1
+        print(
+            f"wrote {_repo_relative(out)} "
+            f"({summary.characters} characters, {summary.sources} sources)"
+        )
+        return 0
+
     command = build_command(provider=provider, output_file=out, variables=variables,
                             passthrough=passthrough, client_command=args.client_command)
 
-    print(f"Researching: {variables['habitat_label']} ({provider}) -> {_repo_relative(out)}")
     if args.dry_run:
         print(shlex.join(command))
         return 0
