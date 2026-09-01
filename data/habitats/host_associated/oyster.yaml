@@ -1,9 +1,17 @@
 identifier: habitatmech:GOLD.fd2443a2c3
-label: Oyster
+label: oyster-associated environment
+definition: An environment associated with an aquatic invertebrate which is determined
+  by an oyster, or by a part of an oyster.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Oyster
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:01001176
 - habitatmech:GOLD.6acc0797e9
 xrefs:
 - FOODON:03411224
@@ -32,3 +40,13 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-08-28T00:00:00Z'
+  curator: claude-opus-5
+  action: DEFINED
+  changes: 'Defined as ''oyster-associated environment'' under ENVO:01001176 ''environment
+    associated with an aquatic invertebrate''. Definition authored from the record''s
+    committed deep-research report under research/habitats/, read in full; the report''s
+    proposed sentence, genus and near-miss table are the evidence. No new research
+    was commissioned. NCBITaxon:6563 and FOODON:03411224 stay xrefs: the concept is
+    the animal-as-place, not the taxon. The genus is one level tighter than animal-associated
+    environment and has no children in ENVO yet.'

@@ -47,16 +47,16 @@ parameters rather than flattening them into one unsupported claim.
 
 | Category | Records | | Grounding | Records |
 |---|---:|---|---|---:|
-| HOST_ASSOCIATED | 1,648 | | EXACT | 1,063 |
-| ENGINEERED | 485 | | UNGROUNDED | 962 |
-| AQUATIC | 468 | | NARROW | 983 |
+| HOST_ASSOCIATED | 1,651 | | EXACT | 1,063 |
+| ENGINEERED | 485 | | UNGROUNDED | 965 |
+| AQUATIC | 468 | | NARROW | 980 |
 | TERRESTRIAL | 353 | | NOT_APPLICABLE | 102 |
-| OTHER | 190 | | CLOSE | 92 |
+| OTHER | 187 | | CLOSE | 92 |
 | FOOD | 60 | | BROAD | 12 |
 | AIR | 7 | |  |  |
 | CLINICAL | 3 | |  |  |
 
-173 records are attested by at least two sources; 16 are attested by four or more.
+174 records are attested by at least two sources; 16 are attested by four or more.
 
 **685 records (21.3%) are `REVIEWED`;** the remaining 2,529 are `SEEDED`.
 <!-- END GENERATED CORPUS STATS -->

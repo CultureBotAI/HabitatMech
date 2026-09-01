@@ -1,10 +1,18 @@
 identifier: habitatmech:GOLD.59e8d1205d
-label: Bivalves
+label: bivalve-associated environment
+definition: An environment associated with an aquatic invertebrate which is determined
+  by a bivalve mollusc, or by a part of a bivalve mollusc.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Bivalves
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:01001002
+- ENVO:01001176
 - habitatmech:GOLD.6acc0797e9
 source_attestations:
 - source: GOLD
@@ -27,3 +35,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-08-28T00:00:00Z'
+  curator: claude-opus-5
+  action: DEFINED
+  changes: 'Defined as ''bivalve-associated environment'' under ENVO:01001176 ''environment
+    associated with an aquatic invertebrate''. Definition authored from the record''s
+    committed deep-research report under research/habitats/, read in full; the report''s
+    proposed sentence, genus and near-miss table are the evidence. No new research
+    was commissioned. FOODON:03412113 ''bivalve'' is a food-product class rather than
+    a host organism, so it is the wrong kind of term entirely and is not used. ADD
+    keeps the GOLD parent and the already-present ENVO:01001002, of which the tighter
+    genus is a descendant. Dropped the exact synonym ''Bivalvia-associated environment''
+    (#213): it was coined at authoring time to mirror the requested label, is attested
+    by no source and proposed by no report, and an exact synonym asserts that people
+    actually use the name.'

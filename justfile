@@ -147,6 +147,12 @@ research-dry IDENTIFIER:
 research IDENTIFIER *args:
     uv run python scripts/research_habitat.py --identifier {{IDENTIFIER}} {{args}}
 
+# Non-billing provider checks; see docs/DEEP_RESEARCH_PROVIDERS.md.
+deep-research-canary provider="all" *args="":
+    uv run python scripts/deep_research_contract.py {{provider}} \
+      --client-command "uvx --python 3.12 --prerelease=allow --from deep-research-client[cyberian] deep-research-client" \
+      {{args}}
+
 # Rebuild the ENVO batch term-request table from curation/term_requests.tsv
 term-requests:
     uv run python scripts/build_term_requests.py

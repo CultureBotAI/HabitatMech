@@ -10,6 +10,9 @@ synonyms:
 - synonym_text: Porifera
   synonym_type: EXACT_SYNONYM
   source: GOLD
+- synonym_text: Porifera-Sponges
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
 - synonym_text: Sponge
   synonym_type: EXACT_SYNONYM
   source: HabitatMech curation
@@ -19,6 +22,13 @@ parent_habitats:
 xrefs:
 - NCBITaxon:6040
 source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:porifera-sponges
+  source_label: Porifera-Sponges
+  assertion_count: 86
+  assertion_unit: STRAIN
+  notes: Upstream mapping targets a non-habitat ontology (NCBITaxon:6040); the curated
+    decision deliberately does not carry that partial mapping onto the generated record.
 - source: GOLD
   source_id: gold.ecosystem:3388
   source_label: Porifera
@@ -33,6 +43,157 @@ source_attestations:
   assertion_count: 323
   assertion_unit: ORGANISM
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+characteristic_taxa:
+- taxon_id: NCBITaxon:1869214
+  source: BACDIVE
+  taxon_label: Rheinheimera sp.
+  association_count: 2
+  rank: 1
+  candidate_pool: 83
+- taxon_id: NCBITaxon:1937692
+  source: BACDIVE
+  taxon_label: Lacinutrix sp.
+  association_count: 2
+  rank: 2
+  candidate_pool: 83
+- taxon_id: NCBITaxon:77608
+  source: BACDIVE
+  taxon_label: Pseudoalteromonas distincta
+  association_count: 2
+  rank: 3
+  candidate_pool: 83
+- taxon_id: NCBITaxon:1038014
+  source: BACDIVE
+  taxon_label: Aquimarina amphilecti
+  association_count: 1
+  rank: 4
+  candidate_pool: 83
+- taxon_id: NCBITaxon:1038856
+  source: BACDIVE
+  taxon_label: Planococcus plakortidis
+  association_count: 1
+  rank: 5
+  candidate_pool: 83
+- taxon_id: NCBITaxon:104268
+  source: BACDIVE
+  taxon_label: Tenacibaculum mesophilum
+  association_count: 1
+  rank: 6
+  candidate_pool: 83
+- taxon_id: NCBITaxon:1055104
+  source: BACDIVE
+  taxon_label: Cobetia amphilecti
+  association_count: 1
+  rank: 7
+  candidate_pool: 83
+- taxon_id: NCBITaxon:1087253
+  source: BACDIVE
+  taxon_label: Nocardioides marmoraquaticus
+  association_count: 1
+  rank: 8
+  candidate_pool: 83
+- taxon_id: NCBITaxon:1087277
+  source: BACDIVE
+  taxon_label: Williamsia spongiae
+  association_count: 1
+  rank: 9
+  candidate_pool: 83
+- taxon_id: NCBITaxon:1120955
+  source: BACDIVE
+  taxon_label: Afifella marina DSM 2698
+  association_count: 1
+  rank: 10
+  candidate_pool: 83
+- taxon_id: NCBITaxon:1122188
+  source: BACDIVE
+  taxon_label: Lysobacter spongiicola DSM 21749
+  association_count: 1
+  rank: 11
+  candidate_pool: 83
+- taxon_id: NCBITaxon:1123070
+  source: BACDIVE
+  taxon_label: Rubritalea marina DSM 17716
+  association_count: 1
+  rank: 12
+  candidate_pool: 83
+- taxon_id: NCBITaxon:1123071
+  source: BACDIVE
+  taxon_label: Rubritalea squalenifaciens DSM 18772
+  association_count: 1
+  rank: 13
+  candidate_pool: 83
+- taxon_id: NCBITaxon:1137799
+  source: BACDIVE
+  taxon_label: Endozoicomonas numazuensis
+  association_count: 1
+  rank: 14
+  candidate_pool: 83
+- taxon_id: NCBITaxon:1182408
+  source: BACDIVE
+  taxon_label: Luteivirga sdotyamensis
+  association_count: 1
+  rank: 15
+  candidate_pool: 83
+- taxon_id: NCBITaxon:1182444
+  source: BACDIVE
+  taxon_label: Fulvitalea axinellae
+  association_count: 1
+  rank: 16
+  candidate_pool: 83
+- taxon_id: NCBITaxon:1182451
+  source: BACDIVE
+  taxon_label: Aureivirga marina
+  association_count: 1
+  rank: 17
+  candidate_pool: 83
+- taxon_id: NCBITaxon:1206753
+  source: BACDIVE
+  taxon_label: Maribacter spongiicola
+  association_count: 1
+  rank: 18
+  candidate_pool: 83
+- taxon_id: NCBITaxon:1206816
+  source: BACDIVE
+  taxon_label: Maribacter vaceletii
+  association_count: 1
+  rank: 19
+  candidate_pool: 83
+- taxon_id: NCBITaxon:1287068
+  source: BACDIVE
+  taxon_label: Micromonospora andamanensis
+  association_count: 1
+  rank: 20
+  candidate_pool: 83
+- taxon_id: NCBITaxon:1522140
+  source: BACDIVE
+  taxon_label: Nocardia xestospongiae
+  association_count: 1
+  rank: 21
+  candidate_pool: 83
+- taxon_id: NCBITaxon:1612552
+  source: BACDIVE
+  taxon_label: Actinoalloteichus fjordicus
+  association_count: 1
+  rank: 22
+  candidate_pool: 83
+- taxon_id: NCBITaxon:1663241
+  source: BACDIVE
+  taxon_label: Geodermatophilus marinus
+  association_count: 1
+  rank: 23
+  candidate_pool: 83
+- taxon_id: NCBITaxon:1690221
+  source: BACDIVE
+  taxon_label: Streptomyces spongiicola
+  association_count: 1
+  rank: 24
+  candidate_pool: 83
+- taxon_id: NCBITaxon:1847949
+  source: BACDIVE
+  taxon_label: Saccharopolyspora spongiae
+  association_count: 1
+  rank: 25
+  candidate_pool: 83
 curation_history:
 - timestamp: '2026-08-16T00:00:00Z'
   curator: claude-opus-5
@@ -53,7 +214,8 @@ curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD. Grounding:
+    UNGROUNDED.'
 - timestamp: '2026-08-17T00:00:00Z'
   curator: claude-opus-5
   action: DEFINED
@@ -75,3 +237,17 @@ curation_history:
     more specific existing parent ENVO:01001176 environment associated with an aquatic
     invertebrate. Both GOLD attestations remain on the merged record. (source concept
     habitatmech:GOLD.affd2445ea)'
+- timestamp: '2026-08-28T00:00:00Z'
+  curator: claude-opus-5
+  action: SAME_AS
+  changes: 'Merged into habitatmech:GOLD.64acf9132c ''sponge-associated environment'':
+    the same concept under another source''s name. Novel-concept merge (#116) found
+    while authoring definitions from the committed research report (#110): BacDive''s
+    ''Porifera-Sponges'' and the GOLD survivor are the same habitat - a sponge acting
+    as host - and the GOLD record already carries the authored definition ''sponge-associated
+    environment'' over 413 assertions. The report reached the same conclusion independently,
+    recommending that one term request cover all three source concepts rather than
+    being filed three times. Writing a second definition here would have been rejected
+    by the duplicate-requested_label rule (#161), and correctly so: this is a genuine
+    duplicate, not a path-distinguished leaf. Do not sum the 86 BacDive strains with
+    the GOLD organism counts - different assertion_unit. (source concept habitatmech:BACDIVE.18f9382d8d)'

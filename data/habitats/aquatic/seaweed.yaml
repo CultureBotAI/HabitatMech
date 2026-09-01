@@ -1,10 +1,26 @@
 identifier: habitatmech:GOLD.0e7a5162bb
-label: Seaweed
+label: macroalgal bed
+definition: A marine bed which is covered by one or more species of attached macroalgae,
+  typically belonging to the Phaeophyceae, Rhodophyta or Ulvophyceae.
+definition_source: HabitatMech
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Seaweed
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: algal bed
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: seaweed bed
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: seaweed forest
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- ENVO:00001999
+- ENVO:01001378
 xrefs:
 - FOODON:03412266
 source_attestations:
@@ -32,3 +48,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-08-28T00:00:00Z'
+  curator: claude-opus-5
+  action: DEFINED
+  changes: 'Defined as ''macroalgal bed'' under ENVO:01001378 ''marine bed''. Definition
+    authored from the record''s committed deep-research report under research/habitats/,
+    read in full; the report''s proposed sentence, genus and near-miss table are the
+    evidence. No new research was commissioned. Labelled for the setting, not the
+    organism: the report is explicit that ''Seaweed'' names an organism, which FOODON:03412266
+    already does, while the concept here is a benthic place. Modelled on the sibling
+    ENVO:01000059 ''sea grass bed''. REPLACE because the inherited ENVO:00001999 ''marine
+    water body'' is not broader - a bed underlies a water body rather than being a
+    kind of one.'

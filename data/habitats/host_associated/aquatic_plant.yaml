@@ -1,8 +1,17 @@
 identifier: habitatmech:BACDIVE.38260eea00
-label: Aquatic-plant
-habitat_category: OTHER
+label: aquatic macrophyte-associated environment
+definition: An environmental system determined by an aquatic macrophyte, or by a part
+  of an aquatic macrophyte.
+definition_source: HabitatMech
+habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Aquatic-plant
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+parent_habitats:
+- ENVO:01001000
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:aquatic-plant
@@ -168,8 +177,22 @@ curation_history:
     review (#62): was FOODON:03401156 ''50122200 - aquatic plants prepared/processed
     (gs1 gpc)'', a UNSPSC commodity code for prepared food. An aquatic plant as an
     isolation source is a living host, not a prepared foodstuff, and no term in the
-    slice names it. (source concept habitatmech:BACDIVE.38260eea00)'
+    slice names it. Category set to HOST_ASSOCIATED (#110): the curated definition
+    parents this to ENVO:01001000 ''environmental system determined by an organism''
+    - a living macrophyte host - and 31 of the 33 records under that parent are HOST_ASSOCIATED.
+    (source concept habitatmech:BACDIVE.38260eea00)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+- timestamp: '2026-08-28T00:00:00Z'
+  curator: claude-opus-5
+  action: DEFINED
+  changes: Defined as 'aquatic macrophyte-associated environment' under ENVO:01001000
+    'environmental system determined by an organism'. Definition authored from the
+    record's committed deep-research report under research/habitats/, read in full;
+    the report's proposed sentence, genus and near-miss table are the evidence. No
+    new research was commissioned. Genus is ENVO:01001000 rather than ENVO:01001001
+    'plant-associated environment' because aquatic macrophytes include macroalgae
+    and aquatic bryophytes, which are not plants; the report is explicit on this.
+    Labelled macrophyte rather than plant for the same reason.

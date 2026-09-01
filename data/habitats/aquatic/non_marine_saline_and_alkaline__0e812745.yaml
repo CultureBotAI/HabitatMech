@@ -11,9 +11,6 @@ synonyms:
 - synonym_text: Non-marine Saline and Alkaline
   synonym_type: EXACT_SYNONYM
   source: HabitatMech curation
-- synonym_text: Non-marine-Saline-and-Alkaline
-  synonym_type: EXACT_SYNONYM
-  source: HabitatMech curation
 - synonym_text: continental saline waters
   synonym_type: EXACT_SYNONYM
   source: HabitatMech curation
@@ -234,4 +231,10 @@ curation_history:
     because it classifies water by ionic composition rather than location. Parent
     replacement is intentional: GOLD''s inherited aquatic-biome edge is false for
     the node''s operated-setting descendants, whereas ENVO''s aquatic-environment
-    genus covers both natural and engineered water-determined settings.'
+    genus covers both natural and engineered water-determined settings. Dropped the
+    exact synonym ''Non-marine-Saline-and-Alkaline'' (#213): it is BacDive''s label
+    for the concept GOLD spells ''Non-marine Saline and Alkaline'', and the two differ
+    only in punctuation. Both source labels survive on the record''s source_attestations,
+    where they identify which source said what; as a pair of EXACT synonyms they would
+    read to an ENVO editor as the same string written twice. Found by the guard added
+    for this issue, not by the review that filed it.'
