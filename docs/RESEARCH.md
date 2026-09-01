@@ -37,6 +37,12 @@ The default `claude_code` route needs no additional repository credential and
 runs read-only. Provider-specific credentials belong in the environment and
 must never be committed.
 
+Native Codex and OpenScientist are documented in
+`docs/DEEP_RESEARCH_PROVIDERS.md`. Use `--provider codex` for the native,
+schema-validated Codex lane and `--provider openscientist` for the isolated
+deep-research-client lane. Run `just deep-research-canary <provider>` before a
+real one-record canary.
+
 ## Troubleshooting history
 
 The original CBORG canary failed immediately because that route requested
