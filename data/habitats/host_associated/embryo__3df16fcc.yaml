@@ -1,9 +1,21 @@
 identifier: habitatmech:GOLD.32330da5da
-label: Embryo
+label: brown algal embryo
+definition: An environmental system determined by an organism which is a brown alga
+  between fertilisation and the differentiated juvenile thallus, attached to a hard
+  marine substratum by self-secreted adhesive.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Embryo
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: Phaeophyceae embryo
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:01001000
 - habitatmech:GOLD.3e4ecbed63
 xrefs:
 - UBERON:0000922
@@ -32,3 +44,19 @@ curation_history:
     the identity cases had one level up. Kept as an xref (#99). Per the rule #114
     settled: the whole host organism gets its own identity and an <X>-associated environment
     term; parts of a host ground to the anatomy term. (source concept habitatmech:GOLD.32330da5da)'
+- timestamp: '2026-08-31T00:00:00Z'
+  curator: claude-opus-5
+  action: DEFINED
+  changes: 'Defined as ''brown algal embryo'' under ENVO:01001000 ''environmental
+    system determined by an organism''. Definition authored from the record''s committed
+    deep-research report under research/habitats/, read in full; the report''s proposed
+    sentence, genus and near-miss table are the evidence. No new research was commissioned.
+    Labelled ''brown algal embryo'' and not ''embryo'' on the report''s explicit instruction:
+    the bare label must not be the definiendum, because in GOLD ''Embryo'' is a reusable
+    life-stage slot - the same thing MIxS models as host_life_stage - and two sibling
+    nodes carry it under Red algae and under Fish. This is the #161 case where two
+    records share a source label and are NOT the same concept: the differentia is
+    already in the path, so each gets its own label and no shared-term mechanism is
+    needed. Genus is ENVO:01001000 rather than the plant or animal branch because
+    a brown alga is a stramenopile, neither plant nor animal; the report notes ENVO
+    has no algae-associated environment class at all, which is the real gap here.'

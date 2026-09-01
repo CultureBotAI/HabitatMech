@@ -127,7 +127,12 @@ def load_curated_definitions(path: Path) -> dict[str, CuratedDefinition]:
                 raise DefinitionError(
                     f"{path}:{line_no}: requested_label {definition.label!r} is "
                     f"already authored for {previous_identifier} on line "
-                    f"{previous_line}; merge duplicate concepts before defining them"
+                    f"{previous_line}. A term is an identity claim, so two records "
+                    "may not both claim this one. Either they are the same concept "
+                    "-- merge them with a SAME_AS decision, which keeps every source "
+                    "path as a separate attestation -- or they are not, and each "
+                    "needs its own label; the source path usually supplies the "
+                    "differentia (see #161)."
                 )
             labels[normalized_label] = (identifier, line_no)
             definitions[identifier] = definition

@@ -22,7 +22,7 @@
 <p class="meta">
   <code class="curie">habitatmech:GOLD.23cd8889db</code>
   <span class="sep">·</span><a href="../category/aquatic.html">AQUATIC</a>
-  <span class="sep">·</span><span class="pill warn">UNGROUNDED</span>
+  <span class="sep">·</span><span class="pill">NARROW</span>
   <span class="pill">REVIEWED</span>
 </p>
 
@@ -45,19 +45,12 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 <h2>Broader habitats</h2>
 <ul class="plain">
+  <li><a href="http://purl.obolibrary.org/obo/ENVO_01000063">planktonic material</a>      <code class="curie">ENVO:01000063</code></li>
   <li><a href="../habitats/freshwater-river-envo-01000297.html">freshwater river</a>      <code class="curie">ENVO:01000297</code></li>
 </ul>
 
 
 
-<h2>Related terms</h2>
-<p class="meta">Terms a source linked to this concept without this record
-claiming to be one of them, or to be narrower than one. A cross-reference, not
-a grounding.</p>
-<ul class="plain">
-  <li><a href="None">Plankton</a>
-<code class="curie">mesh:D010933</code></li>
-</ul>
 
 
 <h2>Curation</h2>
@@ -65,9 +58,9 @@ a grounding.</p>
 from several source concepts can carry one decision per concept.</p>
 <ol class="events">
   <li>
-    <span class="pill">CONFIRM_UNGROUNDED</span>
-    <span class="meta">2026-08-16 · claude-opus-5</span>
-    <p>Confirmed UNGROUNDED: no ontology term fits this concept. mesh:D010933 &#39;Plankton&#39; kept as an xref. Host-taxon reversal (#114): NOT_APPLICABLE on the reasoning that plankton is &#39;an assemblage of organisms rather than a place&#39;. Organisms can be habitats — plankton hosts epibiotic and particle-attached microbial communities, which is a well-described habitat distinct from the free-living water column. What is not a place is the TAXON TERM, so mesh:D010933 stays an xref (#99) and the concept keeps its own identity. NOT_APPLICABLE asserted the concept is not a habitat, which is stronger than the evidence and stronger than what was meant. (source concept habitatmech:GOLD.23cd8889db)</p>
+    <span class="pill">GROUND_AS_PARENT</span>
+    <span class="meta">2026-08-31 · claude-opus-5</span>
+    <p>ENVO:01000063 &#39;planktonic material&#39; attached as a parent, not adopted as the identity (NARROW). Definition review (#110, #161): reversed from CONFIRM_UNGROUNDED. Its committed research report shows the recorded premise - &#39;no ontology term fits this concept&#39; - is not supported: ENVO:01000063 &#39;planktonic material&#39;, &#39;a portion of environmental material primarily composed of plankton&#39;, is in the vendored slice and is exactly what a net tow retains. The concept is a MATERIAL composed of organisms, not a place and not a taxon, so adopting it makes no taxonomic claim and does not repeat the taxon-as-place error #114 reversed. GROUND_AS_PARENT rather than GROUND because river plankton is genuinely narrower than generic planktonic material; the setting parent ENVO:01000297 &#39;freshwater river&#39; is kept and expresses the water body. Cost recorded rather than hidden: GROUND_AS_PARENT carries one object_id, so the mesh:D010933 xref that CONFIRM_UNGROUNDED held is not retained on the record and survives only in data/raw/ - the same trade-off recorded for the cnidarian decision. Reached by reading a report that had already been paid for, not by a new run. (source concept habitatmech:GOLD.23cd8889db)</p>
   </li>
 </ol>
 

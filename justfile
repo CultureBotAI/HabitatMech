@@ -160,3 +160,8 @@ term-requests:
 # Fail if the committed term-request table is out of step with the corpus
 term-requests-check:
     uv run python scripts/build_term_requests.py --check
+
+# Did a curation input lose rows? Compares identifiers against every revision
+# the result is supposed to contain (origin/main, HEAD, and MERGE_HEAD mid-merge)
+curation-floor *ARGS:
+    uv run python scripts/check_curation_floor.py {{ARGS}}
