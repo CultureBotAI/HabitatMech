@@ -36,6 +36,12 @@ COMMANDS = [
         "Closed-mode validation checks every record shape; quiet mode keeps the error summary visible.",
     ),
     (
+        "curation floor",
+        [sys.executable, "scripts/check_curation_floor.py"],
+        "Every other gate compares output against the curation inputs; "
+        "this one asks whether the inputs still contain what they did.",
+    ),
+    (
         "corpus reproduction",
         [sys.executable, "scripts/verify_corpus.py"],
         "Schema-valid hand edits are still invalid unless the corpus reproduces exactly from data/raw/.",

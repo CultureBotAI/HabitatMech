@@ -89,6 +89,18 @@ wrong corpus just as faithfully as a correct one.
 GOLD bulk export and API. Run `just provenance-check` after changing any raw
 inventory; large sources and credentials remain uncommitted.
 
+**Resolve a merge by class, never in bulk.** A merge into a curation branch
+conflicts in two kinds of file at once, and they take opposite treatments.
+Generated artifacts — `README.md`, `pages/`, `data/habitats/`, `RETIRED.tsv`,
+`curation/term_requests/` — take either side and are then *regenerated*; hand
+merging an output is meaningless. Curation inputs — `curation/decisions.tsv`,
+`term_requests.tsv`, `term_requests_excluded.tsv`, `redirects_retracted.tsv` —
+carry rows that exist nowhere else and must be resolved by hand, then staged
+immediately. Never run a blanket `git checkout --ours/--theirs` across a mixed
+conflict set: it reaches the inputs too, and an input that loses rows still
+reproduces a corpus that is internally consistent, in step with its site, and
+green under `just qc` (#219). `just curation-floor` is the check that catches it.
+
 **Retired URLs require a post-commit pass.** A deleted working-tree page is not
 visible to the history-based redirect builder until committed. The sequence is:
 
