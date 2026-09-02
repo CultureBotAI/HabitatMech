@@ -1,9 +1,20 @@
 identifier: habitatmech:GOLD.67b0fd9ee7
-label: Sea cucumber
+label: sea cucumber-associated environment
+definition: An animal-associated environment which is determined by a sea cucumber,
+  or by a part of a sea cucumber.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Sea cucumber
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: holothurian-associated environment
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:01001002
 - habitatmech:GOLD.e1f435d44b
 xrefs:
 - FOODON:02022154
@@ -33,3 +44,18 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-09-02T00:00:00Z'
+  curator: claude-opus-5
+  action: DEFINED
+  changes: 'Defined as ''sea cucumber-associated environment'' under ENVO:01001002
+    ''animal-associated environment''. Definition authored from the record''s committed
+    deep-research report under research/habitats/, read in full; no new research was
+    commissioned. Flagged in the sea urchin report months before its own was read,
+    and authored with the echinoderm rung above it rather than alone (#222). This
+    report recommends ENVO:01001002 directly, so no override is needed here. ENVO:01001187
+    ''holothurian digestive tract'' and ENVO:01001188 ''holothurian digestive tract
+    contents'' are in the slice and are deliberately NOT parents: both are organ-scoped
+    and therefore NARROWER than this whole-host concept, and parent_habitats means
+    strictly broader. The record''s 17 ORGANISM assertions carry no compartment breakdown
+    upstream, so there is nothing to attach them to. FOODON:02022154 ''sea cucumber''
+    stays an xref.'

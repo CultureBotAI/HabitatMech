@@ -1,9 +1,20 @@
 identifier: habitatmech:GOLD.e1f435d44b
-label: Echinodermata
+label: echinoderm-associated environment
+definition: An animal-associated environment which is determined by an echinoderm
+  or by a part of an echinoderm.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Echinodermata
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: Echinodermata-associated environment
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:01001002
 - habitatmech:GOLD.4d792ac724
 xrefs:
 - FOODON:03412115
@@ -36,3 +47,28 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-09-02T00:00:00Z'
+  curator: claude-opus-5
+  action: DEFINED
+  changes: 'Defined as ''echinoderm-associated environment'' under ENVO:01001002 ''animal-associated
+    environment''. Definition authored from the record''s committed deep-research
+    report under research/habitats/, read in full; no new research was commissioned.
+    Completes the invertebrate ladder (#222): invertebrate-, mollusc- and tunicate-associated
+    environment were already authored at this rung on ENVO:01001002, and the echinoderm
+    branch was the only one with neither a term nor an ontology parent - which is
+    how it stayed unnoticed, since a record with no ontology parent is invisible to
+    every ancestry-based screen. Worded exactly like the mollusc and tunicate siblings.
+    FOODON:03412115 ''echinoderm'' and NCBITaxon:7586 stay xrefs: the phylum is a
+    class of organisms, not a place (#99, #114). Genus is ENVO:01001002 and NOT the
+    ENVO:01001176 this report recommends (#210, #222). The report is the fourth on
+    this family to reach that recommendation and it makes the case against itself
+    more clearly than any of the others: its own near-miss table rejects ENVO:01001055
+    ''environment associated with an animal part or small animal'' because ''the source
+    concept is whole organisms across five classes spanning millimetre brittle stars
+    to metre-long holothurians'', and ENVO asserts ENVO:01001176 as a subclass of
+    exactly that term - so the recommended genus imports the restriction the same
+    paragraph refuses. The report also cites ENVO:01001179 ''cnidarian-associated
+    environment'' as precedent for phylum-level granularity and notes it is asserted
+    DIRECTLY under ENVO:01001002; that is the fact which decides against ENVO:01001176
+    rather than for it. Recorded rather than silently overridden, because a report
+    is evidence for a curator and not an input.'

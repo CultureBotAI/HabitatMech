@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sea cucumber — HabitatMech</title>
-<meta name="description" content="Sea cucumber (habitatmech:GOLD.67b0fd9ee7): a microbial habitat harmonized from GOLD.">
+<title>sea cucumber-associated environment — HabitatMech</title>
+<meta name="description" content="sea cucumber-associated environment (habitatmech:GOLD.67b0fd9ee7): a microbial habitat harmonized from GOLD.">
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -18,7 +18,7 @@
     <a href="https://github.com/CultureBotAI/HabitatMech">Source</a>
   </nav>
 </header>
-<h1>Sea cucumber</h1>
+<h1>sea cucumber-associated environment</h1>
 <p class="meta">
   <code class="curie">habitatmech:GOLD.67b0fd9ee7</code>
   <span class="sep">·</span><a href="../category/host-associated.html">HOST_ASSOCIATED</a>
@@ -26,7 +26,7 @@
   <span class="pill">REVIEWED</span>
 </p>
 
-
+<p>An animal-associated environment which is determined by a sea cucumber, or by a part of a sea cucumber.  <span class="meta">— HabitatMech</span></p>
 
 <h2>Source attestations</h2>
 <p class="meta">Each upstream vocabulary's own account of this habitat. Assertion
@@ -45,7 +45,8 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 <h2>Broader habitats</h2>
 <ul class="plain">
-  <li><a href="../habitats/echinodermata-habitatmech-gold-e1f435d44b.html">Echinodermata</a>      <code class="curie">habitatmech:GOLD.e1f435d44b</code></li>
+  <li><a href="../habitats/animal-associated-environment-envo-01001002.html">animal-associated environment</a>      <code class="curie">ENVO:01001002</code></li>
+  <li><a href="../habitats/echinoderm-associated-environment-habitatmech-gold-e1f435d44b.html">echinoderm-associated environment</a>      <code class="curie">habitatmech:GOLD.e1f435d44b</code></li>
 </ul>
 
 
@@ -59,6 +60,9 @@ a grounding.</p>
 <code class="curie">FOODON:02022154</code></li>
 </ul>
 
+<h2>Also called</h2>
+<ul class="plain">
+<li>Sea cucumber <span class="meta">— HabitatMech curation</span></li><li>holothurian-associated environment <span class="meta">— HabitatMech curation</span></li></ul>
 
 <h2>Curation</h2>
 <p class="meta">What a curator decided about this record, and why. A record built
@@ -68,6 +72,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">CONFIRM_UNGROUNDED</span>
     <span class="meta">2026-08-16 · claude-opus-5</span>
     <p>Confirmed UNGROUNDED: no ontology term fits this concept. FOODON:02022154 &#39;sea cucumber&#39; kept as an xref. Organism-identity screen (#109): grounded EXACT to FOODON:02022154 &#39;sea cucumber&#39;, which is an echinoderm — an organism, not a place. The screen that exists to catch exactly this reported 0 for months because it tested only NCIT and mesh ancestry and only the record&#39;s identity; widening it to UBERON:0000468 and to parent_habitats surfaced this family. The GOLD path says host-associated, so the concept is the environment the organism provides, which is the same family as the sponge, nematode and reptile term requests. The organism term is kept as an xref (#99) rather than an identity. (source concept habitatmech:GOLD.67b0fd9ee7)</p>
+  </li>
+  <li>
+    <span class="pill">DEFINED</span>
+    <span class="meta">2026-09-02 · claude-opus-5</span>
+    <p>Defined as &#39;sea cucumber-associated environment&#39; under ENVO:01001002 &#39;animal-associated environment&#39;. Definition authored from the record&#39;s committed deep-research report under research/habitats/, read in full; no new research was commissioned. Flagged in the sea urchin report months before its own was read, and authored with the echinoderm rung above it rather than alone (#222). This report recommends ENVO:01001002 directly, so no override is needed here. ENVO:01001187 &#39;holothurian digestive tract&#39; and ENVO:01001188 &#39;holothurian digestive tract contents&#39; are in the slice and are deliberately NOT parents: both are organ-scoped and therefore NARROWER than this whole-host concept, and parent_habitats means strictly broader. The record&#39;s 17 ORGANISM assertions carry no compartment breakdown upstream, so there is nothing to attach them to. FOODON:02022154 &#39;sea cucumber&#39; stays an xref.</p>
   </li>
 </ol>
 
