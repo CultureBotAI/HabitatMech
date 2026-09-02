@@ -10,9 +10,6 @@ synonyms:
 - synonym_text: Echinodermata
   synonym_type: EXACT_SYNONYM
   source: HabitatMech curation
-- synonym_text: Echinodermata-associated environment
-  synonym_type: EXACT_SYNONYM
-  source: HabitatMech curation
 parent_habitats:
 - ENVO:01001002
 - habitatmech:GOLD.4d792ac724
@@ -71,4 +68,9 @@ curation_history:
     environment'' as precedent for phylum-level granularity and notes it is asserted
     DIRECTLY under ENVO:01001002; that is the fact which decides against ENVO:01001176
     rather than for it. Recorded rather than silently overridden, because a report
-    is evidence for a curator and not an input.'
+    is evidence for a curator and not an input. Dropped the exact synonym ''Echinodermata-associated
+    environment'' before merge (#229): it was coined at authoring time to mirror the
+    requested label and is attested by no source and proposed by no report - the same
+    construction #213 removed for ''Bivalvia-associated environment''. It passes the
+    guard added there because it does not squash to the requested label, which is
+    why that guard is not sufficient on its own. The GOLD source label is kept.'
