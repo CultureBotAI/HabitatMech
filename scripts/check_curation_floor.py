@@ -15,6 +15,13 @@ this catches. Comparison is by identifier, not by line, so reordering, an edited
 note or a reworded decision are all invisible here -- only a disappearance is
 reported.
 
+That scope is narrower than "the inputs are intact", and the difference has
+already bitten (#221): an unstaged hand-edit reverted by `git checkout -- <file>`
+loses no identifier at all, so this reports clean while four curated rows are
+gone. What catches THAT is `verify-corpus`, and only once a seed has run against
+the edited inputs. This gate answers one question -- did a row disappear -- and
+says nothing about whether the rows still say what a curator wrote.
+
 The base to compare against is every revision that is supposed to be contained
 in the result, not just the trunk. The loss in #219 was of rows that existed on
 the BRANCH and never on `main`, so comparing against `origin/main` alone reports
@@ -129,7 +136,8 @@ def check(bases: list[str]) -> int:
         )
         return 1
 
-    print(f"curation floor: no identifier lost since {', '.join(live)}")
+    print(f"curation floor: no identifier lost since {', '.join(live)} "
+          "(identity only; an edited or reverted row is not checked here)")
     return 0
 
 
