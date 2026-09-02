@@ -83,9 +83,15 @@ def test_host_definition_batch_preserves_habitat_and_xref_semantics(repo_root):
             "ENVO:01001002",
             {"UBERON:0002548"},
         ),
+        # Genus moved to ENVO:01001002 with the rest of the aquatic-invertebrate
+        # host family (#210). ENVO:01001176 is true of an ascidian but is
+        # asserted under ENVO:01001055 "animal part or small animal", so it
+        # imports a size claim that is false of a whole adult sea squirt --
+        # and ENVO routes its own cnidarian-associated environment under
+        # ENVO:01001002 alone rather than through it.
         "habitatmech:GOLD.34c28836da": (
             "ascidian-associated environment",
-            "ENVO:01001176",
+            "ENVO:01001002",
             set(),
         ),
         "habitatmech:GOLD.e789c273d0": (

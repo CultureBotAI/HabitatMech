@@ -26,7 +26,7 @@
   <span class="pill">REVIEWED</span>
 </p>
 
-<p>An environment associated with an aquatic invertebrate which is determined by a sponge.  <span class="meta">— HabitatMech</span></p>
+<p>An animal-associated environment which is determined by a sponge.  <span class="meta">— HabitatMech</span></p>
 
 <h2>Source attestations</h2>
 <p class="meta">Each upstream vocabulary's own account of this habitat. Assertion
@@ -58,7 +58,7 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="../habitats/environmental-system-determined-by-an-organism-envo-01001000.html">environmental system determined by an organism</a>      <code class="curie">ENVO:01001000</code></li>
-  <li><a href="http://purl.obolibrary.org/obo/ENVO_01001176">environment associated with an aquatic invertebrate</a>      <code class="curie">ENVO:01001176</code></li>
+  <li><a href="../habitats/animal-associated-environment-envo-01001002.html">animal-associated environment</a>      <code class="curie">ENVO:01001002</code></li>
 </ul>
 
 
@@ -270,11 +270,6 @@ from several source concepts can carry one decision per concept.</p>
     <p>Confirmed UNGROUNDED: no ontology term fits this concept. NCBITaxon:6040 &#39;Porifera&#39; kept as an xref. Host-taxon reversal (#114): this was NOT_APPLICABLE on the reasoning that &#39;a host taxon is not a habitat&#39;. That reasoning is wrong, and the corpus already contradicted it — the same kind of concept was treated as a habitat for Sponge, Nematoda, Reptilia, Mammals, Birds and Fish, which keep their own identity and a term request for an &lt;X&gt;-associated environment. Host-associated &gt; Porifera was NOT_APPLICABLE while its own child Porifera &gt; Sponge was a term request.An organism acting as a host IS a habitat: it is where the microbe lives, and ENVO models exactly this at plant-associated, animal-associated and fungi-associated environment. What is not a habitat is the TAXON TERM — a phylum is a class of organisms, not a place — so the taxon stays an xref (#99) and the concept keeps its own identity as a term-request candidate. NOT_APPLICABLE said the concept is not a habitat, which is a stronger and false claim. (source concept habitatmech:GOLD.64acf9132c)</p>
   </li>
   <li>
-    <span class="pill">DEFINED</span>
-    <span class="meta">2026-08-17 · claude-opus-5</span>
-    <p>Defined as &#39;sponge-associated environment&#39; under ENVO:01001176 &#39;environment associated with an aquatic invertebrate&#39;. Definition drafted from the record&#39;s deep-research report under research/habitats/ and read against it; the report&#39;s proposed wording, genus and near-miss table are the evidence. Parented to the aquatic-invertebrate term rather than to animal-associated environment, which the report identified as the more specific existing genus.</p>
-  </li>
-  <li>
     <span class="pill">SAME_AS</span>
     <span class="meta">2026-08-21 · codex-gpt-5</span>
     <p>Merged into habitatmech:GOLD.64acf9132c &#39;Porifera&#39;: the same concept under another source&#39;s name. Adversarial review follow-up (#158): GOLD&#39;s Host-associated &gt; Porifera &gt; Sponge and Host-associated &gt; Porifera name the same sponge host concept. Keeping both produced two HabitatMech records with the same curated label but conflicting parents and definitions, while the ROBOT export silently collapsed them. Merge onto the Porifera identifier because its curated definition uses the more specific existing parent ENVO:01001176 environment associated with an aquatic invertebrate. Both GOLD attestations remain on the merged record. (source concept habitatmech:GOLD.affd2445ea)</p>
@@ -283,6 +278,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">SAME_AS</span>
     <span class="meta">2026-08-28 · claude-opus-5</span>
     <p>Merged into habitatmech:GOLD.64acf9132c &#39;sponge-associated environment&#39;: the same concept under another source&#39;s name. Novel-concept merge (#116) found while authoring definitions from the committed research report (#110): BacDive&#39;s &#39;Porifera-Sponges&#39; and the GOLD survivor are the same habitat - a sponge acting as host - and the GOLD record already carries the authored definition &#39;sponge-associated environment&#39; over 413 assertions. The report reached the same conclusion independently, recommending that one term request cover all three source concepts rather than being filed three times. Writing a second definition here would have been rejected by the duplicate-requested_label rule (#161), and correctly so: this is a genuine duplicate, not a path-distinguished leaf. Do not sum the 86 BacDive strains with the GOLD organism counts - different assertion_unit. (source concept habitatmech:BACDIVE.18f9382d8d)</p>
+  </li>
+  <li>
+    <span class="pill">DEFINED</span>
+    <span class="meta">2026-09-02 · claude-opus-5</span>
+    <p>Defined as &#39;sponge-associated environment&#39; under ENVO:01001002 &#39;animal-associated environment&#39;. Definition drafted from the record&#39;s deep-research report under research/habitats/ and read against it; the report&#39;s proposed wording, genus and near-miss table are the evidence. Parented to the aquatic-invertebrate term rather than to animal-associated environment, which the report identified as the more specific existing genus. Genus moved from ENVO:01001176 &#39;environment associated with an aquatic invertebrate&#39; to ENVO:01001002 (#210), with the whole aquatic-invertebrate host family rather than record by record - #210 was filed over three records and the genus is actually held by five, so fixing only the three would have rebuilt the same split it reports. Both terms are true of the concept, so this chooses between two true genera on what each drags in: ENVO asserts ENVO:01001176 under ENVO:01001002 AND ENVO:01001055 &#39;environment associated with an animal part or small animal&#39;, so the tighter genus makes every descendant inherit a size-and-partonomy restriction that is false of a whole adult sponge, ascidian, oyster, giant clam or sea urchin. ENVO&#39;s own modelling is the decisive evidence: ENVO:01001179 &#39;cnidarian-associated environment&#39; - the closest analogue, a taxon-scoped class over aquatic invertebrates - is asserted under ENVO:01001002 ALONE, and ENVO:01001176 has no children in the slice at all. Not carried as an xref: it is genuinely broader, so recording it would re-import the ancestry this declines.</p>
   </li>
 </ol>
 

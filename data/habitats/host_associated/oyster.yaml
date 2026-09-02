@@ -1,7 +1,7 @@
 identifier: habitatmech:GOLD.fd2443a2c3
 label: oyster-associated environment
-definition: An environment associated with an aquatic invertebrate which is determined
-  by an oyster, or by a part of an oyster.
+definition: An animal-associated environment which is determined by an oyster, or
+  by a part of an oyster.
 definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
@@ -11,7 +11,7 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: HabitatMech curation
 parent_habitats:
-- ENVO:01001176
+- ENVO:01001002
 - habitatmech:GOLD.6acc0797e9
 xrefs:
 - FOODON:03411224
@@ -40,13 +40,27 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
-- timestamp: '2026-08-28T00:00:00Z'
+- timestamp: '2026-09-02T00:00:00Z'
   curator: claude-opus-5
   action: DEFINED
-  changes: 'Defined as ''oyster-associated environment'' under ENVO:01001176 ''environment
-    associated with an aquatic invertebrate''. Definition authored from the record''s
-    committed deep-research report under research/habitats/, read in full; the report''s
-    proposed sentence, genus and near-miss table are the evidence. No new research
-    was commissioned. NCBITaxon:6563 and FOODON:03411224 stay xrefs: the concept is
-    the animal-as-place, not the taxon. The genus is one level tighter than animal-associated
-    environment and has no children in ENVO yet.'
+  changes: 'Defined as ''oyster-associated environment'' under ENVO:01001002 ''animal-associated
+    environment''. Definition authored from the record''s committed deep-research
+    report under research/habitats/, read in full; the report''s proposed sentence,
+    genus and near-miss table are the evidence. No new research was commissioned.
+    NCBITaxon:6563 and FOODON:03411224 stay xrefs: the concept is the animal-as-place,
+    not the taxon. The genus is one level tighter than animal-associated environment
+    and has no children in ENVO yet. Genus moved from ENVO:01001176 ''environment
+    associated with an aquatic invertebrate'' to ENVO:01001002 (#210), with the whole
+    aquatic-invertebrate host family rather than record by record - #210 was filed
+    over three records and the genus is actually held by five, so fixing only the
+    three would have rebuilt the same split it reports. Both terms are true of the
+    concept, so this chooses between two true genera on what each drags in: ENVO asserts
+    ENVO:01001176 under ENVO:01001002 AND ENVO:01001055 ''environment associated with
+    an animal part or small animal'', so the tighter genus makes every descendant
+    inherit a size-and-partonomy restriction that is false of a whole adult sponge,
+    ascidian, oyster, giant clam or sea urchin. ENVO''s own modelling is the decisive
+    evidence: ENVO:01001179 ''cnidarian-associated environment'' - the closest analogue,
+    a taxon-scoped class over aquatic invertebrates - is asserted under ENVO:01001002
+    ALONE, and ENVO:01001176 has no children in the slice at all. Not carried as an
+    xref: it is genuinely broader, so recording it would re-import the ancestry this
+    declines.'

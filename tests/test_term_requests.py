@@ -141,3 +141,59 @@ def test_a_genuine_alternative_name_is_still_accepted(requests_module):
     }
     problems = requests_module._synonym_problems("prefix", row)
     assert problems == [], problems
+
+
+def test_no_request_adopts_a_genus_that_drags_in_a_false_ancestor(requests_module):
+    """ENVO:01001176 is true of every aquatic-invertebrate host here and is
+    still the wrong genus, which is why this needs a test rather than a rule.
+
+    ENVO asserts it under two parents: ENVO:01001002 'animal-associated
+    environment' and ENVO:01001055 'environment associated with an animal part
+    or small animal'. Adopting it makes every descendant inherit a
+    size-and-partonomy restriction that is false of a whole adult sponge,
+    ascidian, oyster, giant clam or sea urchin -- so the record would publish a
+    claim its own curation note rejects.
+
+    ENVO's own modelling is the evidence: ENVO:01001179 'cnidarian-associated
+    environment', the closest analogue and a taxon-scoped class over aquatic
+    invertebrates, is asserted under ENVO:01001002 alone, and ENVO:01001176 has
+    no children in the vendored slice at all.
+
+    Two independently authored reports read that same fact in opposite
+    directions and the corpus ended up encoding both answers over five records
+    (#210). A rule stated only in a note does not survive the next report.
+    """
+    rows = requests_module.load_requests()
+    offenders = [
+        (row["identifier"], row["requested_label"])
+        for row in rows
+        if (row.get("parent_class") or "").strip() == "ENVO:01001176"
+    ]
+    assert not offenders, (
+        "ENVO:01001176 adopted as a genus; use ENVO:01001002 and record why "
+        f"in the note (#210): {offenders}"
+    )
+
+
+def test_the_aquatic_invertebrate_hosts_share_one_genus(requests_module):
+    """The defect in #210 was not a wrong genus, it was two answers.
+
+    Sea urchin refused ENVO:01001176 on an argument that applies just as well
+    to oyster, bivalve, sponge and ascidian, which adopted it. Whichever genus
+    is chosen, these five have to agree, and a sixth record joining the family
+    later must not quietly pick the other one.
+    """
+    family = {
+        "habitatmech:GOLD.fd2443a2c3",  # oyster
+        "habitatmech:GOLD.59e8d1205d",  # bivalve
+        "habitatmech:GOLD.64acf9132c",  # sponge
+        "habitatmech:GOLD.34c28836da",  # ascidian
+        "habitatmech:GOLD.b19422ad27",  # sea urchin
+    }
+    genera = {
+        row["identifier"]: (row.get("parent_class") or "").strip()
+        for row in requests_module.load_requests()
+        if row["identifier"] in family
+    }
+    assert set(genera) == family, f"family member lost its request: {family - set(genera)}"
+    assert len(set(genera.values())) == 1, f"aquatic-invertebrate hosts disagree: {genera}"
