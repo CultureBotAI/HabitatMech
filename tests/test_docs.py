@@ -5,8 +5,24 @@ from __future__ import annotations
 import re
 
 import pytest
+import yaml
 
 from scripts import check_docs
+
+
+def test_every_skill_is_loadable_and_routed_from_claude_md():
+    root = check_docs.REPO_ROOT
+    guidance = (root / "CLAUDE.md").read_text(encoding="utf-8")
+    skills = sorted((root / ".claude" / "skills").glob("*/SKILL.md"))
+
+    assert skills, "found no repository skills"
+    for path in skills:
+        text = path.read_text(encoding="utf-8")
+        assert text.startswith("---\n"), path
+        frontmatter = yaml.safe_load(text.split("---", 2)[1])
+        assert frontmatter.get("name") == path.parent.name, path
+        assert frontmatter.get("description", "").strip(), path
+        assert f".claude/skills/{path.parent.name}/SKILL.md" in guidance, path
 
 
 def test_readme_corpus_statistics_are_current():
