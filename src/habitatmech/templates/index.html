@@ -8,7 +8,7 @@
   source's own account of it.
 </p>
 
-<table>
+<table id="source-corroboration">
   <caption>The same habitat, named three ways</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">How it names marine sediment</th></tr></thead>
   <tr><td>JGI GOLD</td><td><code>Environmental &gt; Aquatic &gt; Marine &gt; Sediment</code></td></tr>
@@ -17,20 +17,20 @@
 </table>
 
 <div class="grid">
-  <div class="card"><div class="n">{{ stats.total }}</div><div class="k">habitat records</div></div>
-  <div class="card"><div class="n">{{ stats.grounded }}</div><div class="k">ontology-grounded</div></div>
-  <div class="card"><div class="n">{{ stats.multi_source }}</div><div class="k">corroborated by 2+ sources</div></div>
-  <div class="card"><div class="n">{{ stats.reviewed }}</div><div class="k">curator-reviewed</div></div>
+  <a class="card" href="browse.html"><div class="n">{{ stats.total }}</div><div class="k">habitat records</div></a>
+  <a class="card" href="index.html#grounding-status"><div class="n">{{ stats.grounded }}</div><div class="k">ontology-grounded</div></a>
+  <a class="card" href="index.html#source-corroboration"><div class="n">{{ stats.multi_source }}</div><div class="k">corroborated by 2+ sources</div></a>
+  <a class="card" href="index.html#review-status"><div class="n">{{ stats.reviewed }}</div><div class="k">curator-reviewed</div></a>
 </div>
 
-<h2>What HabitatMech adds</h2>
+<h2 id="novelty">What HabitatMech adds</h2>
 <p>HabitatMech is not a re-labelling of ENVO. Most of what it holds, ENVO has no
 term for — and a concept that merely hangs <em>under</em> an ENVO term counts as
 new, because the identifier is minted precisely when the matched term is broader
 than the concept.</p>
 <div class="grid">
-  <div class="card"><div class="n">{{ stats.new_over_envo }}</div><div class="k">concepts ENVO has no term for</div></div>
-  <div class="card"><div class="n">{{ stats.novel }}</div><div class="k">named by no vendored ontology</div></div>
+  <a class="card" href="index.html#novelty"><div class="n">{{ stats.new_over_envo }}</div><div class="k">concepts ENVO has no term for</div></a>
+  <a class="card" href="term-requests.html"><div class="n">{{ stats.novel }}</div><div class="k">named by no vendored ontology</div></a>
 </div>
 <table>
   <caption>Coverage against the ontologies HabitatMech grounds to</caption>
@@ -53,7 +53,7 @@ than the concept.</p>
   {% endfor %}
 </table>
 
-<h2>What the grounding status means</h2>
+<h2 id="grounding-status">What the grounding status means</h2>
 <p>
   Every record says how well its identifier fits the source concept, separately
   from whether a human has checked it. A record can be reviewed and still
@@ -70,7 +70,7 @@ than the concept.</p>
   {% endfor %}
 </table>
 
-<div class="note warn">
+<div class="note warn" id="review-status">
   <p><strong>This corpus is machine-generated.</strong> {{ stats.seeded }} of
   {{ stats.total }} records have had no human review. The harmonization rules are
   documented and tested, but a lexical match between a source label and an

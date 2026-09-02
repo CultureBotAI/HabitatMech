@@ -19,6 +19,24 @@ def test_site_is_in_step_with_the_corpus():
     assert render_pages.main(["--check"]) == 0, "pages/ is stale; run `just render`"
 
 
+def test_every_landing_stat_is_a_link_to_a_matching_view(repo_root):
+    landing = (repo_root / "src/habitatmech/templates/index.html").read_text(
+        encoding="utf-8"
+    )
+
+    assert '<div class="card"><div class="n">' not in landing
+    assert landing.count('<a class="card" href=') == 6
+    for target in (
+        "browse.html",
+        "index.html#grounding-status",
+        "index.html#source-corroboration",
+        "index.html#review-status",
+        "index.html#novelty",
+        "term-requests.html",
+    ):
+        assert f'href="{target}"' in landing
+
+
 def _footer(path) -> str:
     match = re.search(r"<footer.*?</footer>", path.read_text(encoding="utf-8"), re.S)
     assert match, f"no footer in {path}"
