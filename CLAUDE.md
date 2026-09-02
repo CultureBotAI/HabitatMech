@@ -15,6 +15,12 @@ Read these before changing domain behavior:
 - [docs/HARMONIZATION.md](docs/HARMONIZATION.md) — identity, merging and seeding design.
 - [docs/CURATION.md](docs/CURATION.md) — decision semantics and habitat rules.
 - [docs/RESEARCH.md](docs/RESEARCH.md) — model-assisted definition research.
+- [.claude/skills/curate-yaml-record/SKILL.md](.claude/skills/curate-yaml-record/SKILL.md)
+  — audit or improve one habitat through authoritative decisions, definitions,
+  and source inputs; generated habitat YAML remains read-only.
+- [.claude/skills/review-open-issues/SKILL.md](.claude/skills/review-open-issues/SKILL.md)
+  — perform a read-only, evidence-backed sweep of the complete open issue
+  queue when backlog triage or prioritization is requested.
 
 Sibling repositories use similar conventions: TraitMech, CultureMech,
 MediaIngredientMech and CommunityMech. The upstream pattern is
