@@ -32,9 +32,13 @@ def test_every_landing_stat_is_a_link_to_a_matching_view(repo_root):
         "index.html#source-corroboration",
         "index.html#review-status",
         "index.html#novelty",
-        "term-requests.html",
     ):
         assert f'href="{target}"' in landing
+    assert landing.count('href="index.html#novelty"') == 2
+    assert (
+        '<a class="card" href="term-requests.html"><div class="n">{{ stats.novel }}'
+        not in landing
+    )
 
 
 def _footer(path) -> str:
