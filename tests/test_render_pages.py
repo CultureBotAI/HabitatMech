@@ -24,8 +24,11 @@ def test_every_landing_stat_is_a_link_to_a_matching_view(repo_root):
         encoding="utf-8"
     )
 
-    assert '<div class="card"><div class="n">' not in landing
-    assert landing.count('<a class="card" href=') == 6
+    # `.stat` since the landing top adopted the hero shape the other Mechs use;
+    # the property is unchanged -- a stat that is not a link is a number the
+    # reader cannot act on.
+    assert '<div class="stat"><b>' not in landing
+    assert landing.count('<a class="stat" href=') == 6
     for target in (
         "browse.html",
         "index.html#grounding-status",
@@ -36,7 +39,7 @@ def test_every_landing_stat_is_a_link_to_a_matching_view(repo_root):
         assert f'href="{target}"' in landing
     assert landing.count('href="index.html#novelty"') == 2
     assert (
-        '<a class="card" href="term-requests.html"><div class="n">{{ stats.novel }}'
+        '<a class="stat" href="term-requests.html"><b>{{ stats.novel }}'
         not in landing
     )
 
