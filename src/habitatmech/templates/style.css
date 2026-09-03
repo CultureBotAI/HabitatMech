@@ -63,6 +63,41 @@ a { color: var(--accent); }
 
 .lede { color: var(--muted); font-size: 1.02rem; }
 
+/* Landing hero. The shape every other Mech's overview page uses -- h1, a
+   tagline, then a row of stat panels -- so the family reads as one site.
+   Expressed in this stylesheet's own tokens rather than copied as literals,
+   which is what makes the dark block below apply to it for free: the six
+   siblings each carry a page-local <style> block with hardcoded pastels, and
+   those do not follow a theme. */
+.hero {
+  background: linear-gradient(135deg, var(--accent-soft), var(--bg));
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 2.4rem 1.5rem 2rem;
+  margin: 0 0 1.5rem;
+}
+.hero h1 { margin: 0 0 .25em; font-size: 2.2rem; letter-spacing: -.02em; line-height: 1.15; }
+.hero .tagline { margin: 0; max-width: 62ch; color: var(--muted); font-size: 1.02rem; }
+
+/* Stat panels. `.stats` is the row; `.stat` is one panel. Used in the hero and
+   again under a section heading where a Mech has panels that only make sense
+   beside their explanation. */
+.stats { display: flex; flex-wrap: wrap; gap: .9rem; margin: 1.5rem 0 0; padding: 0; list-style: none; }
+.stat {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: .7rem 1.1rem;
+  min-width: 8.5rem;
+}
+.stat b { display: block; font-size: 1.5rem; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1.1; }
+.stat span { font-size: .74rem; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+a.stat { color: inherit; text-decoration: none; display: block; }
+a.stat:hover { border-color: var(--accent); text-decoration: none; }
+/* Carried over from the .card panels this replaced. A stat is a link, and a
+   keyboard user needs to see which one has focus; hover alone does not do it. */
+a.stat:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
 code, .curie {
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: .87em;
@@ -117,14 +152,6 @@ footer.site {
   margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line);
   color: var(--muted); font-size: .85rem;
 }
-
-.grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); margin: 1.2rem 0; }
-.card { border: 1px solid var(--line); border-radius: 6px; padding: .8rem .9rem; }
-a.card { display: block; color: inherit; text-decoration: none; }
-a.card:hover { background: var(--accent-soft); }
-a.card:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
-.card .n { font-size: 1.5rem; font-weight: 700; font-variant-numeric: tabular-nums; }
-.card .k { color: var(--muted); font-size: .84rem; }
 
 .searchbox {
   width: 100%; padding: .55rem .7rem; font-size: 1rem; margin: .6rem 0 1rem;

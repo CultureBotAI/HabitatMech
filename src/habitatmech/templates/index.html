@@ -1,12 +1,20 @@
 {% extends "base.html" %}
 {% block title %}HabitatMech — microbial habitats, harmonized{% endblock %}
 {% block content %}
-<h1>Microbial habitats, harmonized</h1>
-<p class="lede">
-  The same habitat has three different names depending on who is describing it.
-  HabitatMech resolves them onto one ontology-grounded record and keeps every
-  source's own account of it.
-</p>
+<div class="hero">
+  <h1>Microbial habitats, harmonized</h1>
+  <p class="tagline">
+    The same habitat has three different names depending on who is describing
+    it. HabitatMech resolves them onto one ontology-grounded record and keeps
+    every source's own account of it.
+  </p>
+  <div class="stats">
+    <a class="stat" href="browse.html"><b>{{ stats.total }}</b><span>habitat records</span></a>
+    <a class="stat" href="index.html#grounding-status"><b>{{ stats.grounded }}</b><span>ontology-grounded</span></a>
+    <a class="stat" href="index.html#source-corroboration"><b>{{ stats.multi_source }}</b><span>corroborated by 2+ sources</span></a>
+    <a class="stat" href="index.html#review-status"><b>{{ stats.reviewed }}</b><span>curator-reviewed</span></a>
+  </div>
+</div>
 
 <table id="source-corroboration">
   <caption>The same habitat, named three ways</caption>
@@ -16,21 +24,14 @@
   <tr><td>PREGO</td><td><code>ENVO:00002113</code></td></tr>
 </table>
 
-<div class="grid">
-  <a class="card" href="browse.html"><div class="n">{{ stats.total }}</div><div class="k">habitat records</div></a>
-  <a class="card" href="index.html#grounding-status"><div class="n">{{ stats.grounded }}</div><div class="k">ontology-grounded</div></a>
-  <a class="card" href="index.html#source-corroboration"><div class="n">{{ stats.multi_source }}</div><div class="k">corroborated by 2+ sources</div></a>
-  <a class="card" href="index.html#review-status"><div class="n">{{ stats.reviewed }}</div><div class="k">curator-reviewed</div></a>
-</div>
-
 <h2 id="novelty">What HabitatMech adds</h2>
 <p>HabitatMech is not a re-labelling of ENVO. Most of what it holds, ENVO has no
 term for — and a concept that merely hangs <em>under</em> an ENVO term counts as
 new, because the identifier is minted precisely when the matched term is broader
 than the concept.</p>
-<div class="grid">
-  <a class="card" href="index.html#novelty"><div class="n">{{ stats.new_over_envo }}</div><div class="k">concepts ENVO has no term for</div></a>
-  <a class="card" href="index.html#novelty"><div class="n">{{ stats.novel }}</div><div class="k">named by no vendored ontology</div></a>
+<div class="stats">
+  <a class="stat" href="index.html#novelty"><b>{{ stats.new_over_envo }}</b><span>concepts ENVO has no term for</span></a>
+  <a class="stat" href="index.html#novelty"><b>{{ stats.novel }}</b><span>named by no vendored ontology</span></a>
 </div>
 <table>
   <caption>Coverage against the ontologies HabitatMech grounds to</caption>
