@@ -180,8 +180,14 @@ def test_the_aquatic_invertebrate_hosts_share_one_genus(requests_module):
 
     Sea urchin refused ENVO:01001176 on an argument that applies just as well
     to oyster, bivalve, sponge and ascidian, which adopted it. Whichever genus
-    is chosen, these five have to agree, and a sixth record joining the family
-    later must not quietly pick the other one.
+    is chosen, these have to agree, and a record joining the family later must
+    not quietly pick the other one.
+
+    Two joined immediately (#222), and the echinoderm report is the fourth on
+    this family to recommend ENVO:01001176 -- rejecting ENVO:01001055 for
+    asserting "part-hood or small size" in the same near-miss table, without
+    noticing that the genus it recommends is a subclass of it. So "later" was
+    the next slice, and the guard is load-bearing rather than theoretical.
     """
     family = {
         "habitatmech:GOLD.fd2443a2c3",  # oyster
@@ -189,6 +195,8 @@ def test_the_aquatic_invertebrate_hosts_share_one_genus(requests_module):
         "habitatmech:GOLD.64acf9132c",  # sponge
         "habitatmech:GOLD.34c28836da",  # ascidian
         "habitatmech:GOLD.b19422ad27",  # sea urchin
+        "habitatmech:GOLD.e1f435d44b",  # echinoderm  (joined in #222)
+        "habitatmech:GOLD.67b0fd9ee7",  # sea cucumber (joined in #222)
     }
     genera = {
         row["identifier"]: (row.get("parent_class") or "").strip()
