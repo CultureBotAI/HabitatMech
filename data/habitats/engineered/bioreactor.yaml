@@ -309,6 +309,286 @@ characteristic_taxa:
   source: MADIN
   taxon_label: Nesterenkonia alba DSM 19423
   candidate_pool: 232
+causal_graphs:
+- graph_id: bioreactor_feed_dilution_biomass_selection
+  title: Bioreactor feed dilution biomass selection
+  description: Engineered bioreactor operation turns a containment vessel, liquid
+    feed, hydraulic exchange, biomass retention, and physicochemical setpoints into
+    a wet, nutrient-rich microbial habitat. The feed stream sets organic loading,
+    outflow creates dilution pressure on suspended cells, retention surfaces keep
+    attached biomass inside the vessel, and choices such as aeration, temperature,
+    ammonia, organic loading rate, and hydraulic retention time select the community
+    processes that transform influent into engineered products.
+  nodes:
+  - node_id: bioreactor
+    label: bioreactor
+    node_type: HABITAT
+    grounding: ENVO:00002123
+  - node_id: engineered_containment_vessel
+    label: engineered containment vessel
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: managed_operating_setpoints
+    label: managed operating setpoints
+    node_type: ENVIRONMENTAL_PARAMETER
+  - node_id: liquid_reactor_medium
+    label: liquid reactor medium
+    node_type: HABITAT
+  - node_id: influent_feed
+    label: influent feed
+    node_type: CHEMICAL
+  - node_id: organic_loading_rate
+    label: organic loading rate
+    node_type: ENVIRONMENTAL_PARAMETER
+  - node_id: hydraulic_retention_time
+    label: hydraulic retention time
+    node_type: ENVIRONMENTAL_PARAMETER
+  - node_id: dilution_pressure
+    label: dilution pressure
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: mixing_aeration_regime
+    label: mixing and aeration regime
+    node_type: ENVIRONMENTAL_PARAMETER
+  - node_id: biomass_retention_surface
+    label: biomass retention surface
+    node_type: HABITAT
+  - node_id: attached_biofilm
+    label: attached biofilm
+    node_type: HABITAT
+  - node_id: retained_microbiome
+    label: retained bioreactor microbiome
+    node_type: TAXON
+  - node_id: anaerobic_syntrophy
+    label: anaerobic syntrophy
+    node_type: COMMUNITY_PROCESS
+  - node_id: acetate_hydrogen_formate
+    label: acetate, hydrogen, and formate
+    node_type: CHEMICAL
+  - node_id: methanogenic_archaea
+    label: methanogenic archaea
+    node_type: TAXON
+  - node_id: methane
+    label: methane
+    node_type: CHEMICAL
+  edges:
+  - edge_id: bioreactor_determined_by_containment
+    subject: bioreactor
+    predicate: determined by
+    object: engineered_containment_vessel
+    description: The parent bioreactor habitat is defined by a contained, actively
+      managed reactor vessel that keeps microbial biomass and process medium inside
+      engineered boundaries.
+    evidence:
+    - reference: PMID:16207900
+      snippet: Continuous culture--making a comeback?
+      notes: Hoskisson and Hobbs reviewed controlled continuous-culture bioreactors
+        as vessels with managed inflow, outflow, and cultivation parameters.
+  - edge_id: containment_maintains_liquid_medium
+    subject: engineered_containment_vessel
+    predicate: maintains
+    object: liquid_reactor_medium
+    description: The vessel holds the water-rich process medium in which feed, suspended
+      biomass, products, and wastes are mixed.
+    evidence:
+    - reference: PMID:16207900
+      snippet: continuous cultivation
+      notes: The continuous-culture review describes liquid reactor cultures kept
+        at controlled volume by matched medium addition and removal.
+  - edge_id: containment_allows_operating_setpoints
+    subject: engineered_containment_vessel
+    predicate: enables
+    object: managed_operating_setpoints
+    description: Bioreactor construction gives operators levers such as flow, mixing,
+      gas transfer, pH, and temperature control.
+    evidence:
+    - reference: PMID:19041387
+      snippet: oxygen transfer in microbial processes
+      notes: Garcia-Ochoa and Gomez reviewed how stirred-tank geometry, agitation,
+        and gas flow control microbial oxygen transfer and mixing.
+  - edge_id: setpoints_control_influent_feed
+    subject: managed_operating_setpoints
+    predicate: controls
+    object: influent_feed
+    description: The selected feed composition and feed rate determine which carbon
+      and nutrient substrates enter the reactor.
+    evidence:
+    - reference: PMID:16207900
+      snippet: Continuous culture
+      notes: Continuous culture is operated by defined medium input and culture removal,
+        making the feed stream an engineered selective pressure.
+  - edge_id: influent_feed_sets_organic_loading
+    subject: influent_feed
+    predicate: determines
+    object: organic_loading_rate
+    description: Influent substrate concentration and flow rate together set the organic
+      loading rate experienced by the reactor microbiome.
+    evidence:
+    - reference: PMID:36610483
+      snippet: organic loading rate and hydraulic retention time
+      notes: Zhang and colleagues experimentally varied organic loading rate and hydraulic
+        retention time in thermophilic anaerobic co-digestion reactors.
+  - edge_id: setpoints_control_hydraulic_retention
+    subject: managed_operating_setpoints
+    predicate: controls
+    object: hydraulic_retention_time
+    description: Operators set the liquid flow relative to reactor volume, which fixes
+      how long soluble substrates remain in the vessel.
+    evidence:
+    - reference: PMID:36610483
+      snippet: hydraulic retention time
+      notes: The anaerobic co-digestion experiment treated HRT as an operational variable
+        coupled to organic loading.
+  - edge_id: hydraulic_retention_creates_dilution
+    subject: hydraulic_retention_time
+    predicate: determines
+    object: dilution_pressure
+    description: Shorter hydraulic retention increases the rate at which medium and
+      suspended cells leave the bioreactor.
+    evidence:
+    - reference: PMID:16207900
+      snippet: Continuous culture--making a comeback?
+      notes: Hoskisson and Hobbs reviewed chemostat operation, where dilution rate
+        links flow through the vessel to steady-state microbial growth.
+  - edge_id: dilution_selects_retained_microbiome
+    subject: dilution_pressure
+    predicate: selects for
+    object: retained_microbiome
+    description: Reactor outflow selects organisms and attachment modes able to persist
+      despite washout of non-retained suspended cells.
+    evidence:
+    - reference: PMID:16207900
+      snippet: continuous culture
+      notes: In continuous culture, dilution rate constrains the growth rate needed
+        for planktonic organisms to remain in the reactor.
+  - edge_id: setpoints_control_mixing_aeration
+    subject: managed_operating_setpoints
+    predicate: controls
+    object: mixing_aeration_regime
+    description: Agitation and gas flow set mixing intensity and oxygen transfer into
+      the liquid reactor medium.
+    evidence:
+    - reference: PMID:19041387
+      snippet: oxygen transfer rate
+      notes: The bioreactor scale-up review identifies stirring and gas-flow variables
+        as controls over microbial mass transfer and mixing.
+  - edge_id: mixing_aeration_shapes_microbiome
+    subject: mixing_aeration_regime
+    predicate: selects for
+    object: retained_microbiome
+    description: Aeration and mixing alter oxygen availability and substrate exposure,
+      making them physicochemical filters on reactor communities.
+    evidence:
+    - reference: PMID:19041387
+      snippet: Bioreactor scale-up and oxygen transfer
+      notes: Garcia-Ochoa and Gomez linked reactor agitation and oxygen transfer to
+        the microbial process environment.
+  - edge_id: containment_supports_retention_surfaces
+    subject: engineered_containment_vessel
+    predicate: supports
+    object: biomass_retention_surface
+    description: Biofilm-based reactor designs add fixed or carrier surfaces inside
+      the vessel to keep attached microbial biomass in contact with the flowing liquid.
+    evidence:
+    - reference: DOI:10.1186/s13068-024-02592-4
+      snippet: Biofilm application for anaerobic digestion
+      notes: Abera and colleagues reviewed fixed-film and carrier-based anaerobic
+        digesters in which biofilms retain microbial biomass.
+  - edge_id: surfaces_harbor_attached_biofilm
+    subject: biomass_retention_surface
+    predicate: harbors
+    object: attached_biofilm
+    description: Carrier surfaces and fixed-bed matrices give reactor microorganisms
+      places to attach as biofilms rather than leave with the bulk liquid.
+    evidence:
+    - reference: DOI:10.1186/s13068-024-02592-4
+      snippet: Biofilm application for anaerobic digestion
+      notes: Abera and colleagues systematically reviewed anaerobic-digestion biofilm
+        systems and their use to retain reactor biomass.
+  - edge_id: attached_biofilm_retains_microbiome
+    subject: attached_biofilm
+    predicate: retains
+    object: retained_microbiome
+    description: Biofilms increase biomass retention, protecting reactor communities
+      from hydraulic washout.
+    evidence:
+    - reference: DOI:10.1186/s13068-024-02592-4
+      snippet: biomass retention
+      notes: The biofilm review summarized fixed-film strategies that extend biomass
+        retention time in anaerobic digesters.
+  - edge_id: organic_loading_hydraulic_retention_select_microbiome
+    subject: organic_loading_rate
+    predicate: selects for
+    object: retained_microbiome
+    description: Organic loading rate and hydraulic residence jointly shape reactor
+      performance, community interactions, and functional traits.
+    evidence:
+    - reference: PMID:36610483
+      snippet: interspecies interactions and functional traits
+      notes: Zhang and colleagues found that HRT and OLR changed organics degradation,
+        syntrophic interactions, and functional profiles in anaerobic co-digestion.
+  - edge_id: operating_setpoints_select_microbiome
+    subject: managed_operating_setpoints
+    predicate: selects for
+    object: retained_microbiome
+    description: Shared operating conditions impose deterministic selection on replicate
+      engineered digester communities.
+    evidence:
+    - reference: DOI:10.1038/ismej.2014.50
+      snippet: Deterministic processes
+      notes: Vanwonterghem and colleagues observed synchronized population dynamics
+        across replicate anaerobic digesters run under the same conditions.
+    - reference: PMID:25819618
+      snippet: Ammonia and temperature
+      notes: De Vrieze and colleagues found ammonia and temperature separated clusters
+        of anaerobic-digestion microbiomes.
+  - edge_id: retained_microbiome_performs_syntrophy
+    subject: retained_microbiome
+    predicate: performs
+    object: anaerobic_syntrophy
+    description: In anaerobic digester variants, retained bacterial and archaeal populations
+      cooperate through syntrophic conversion of fermentation intermediates.
+    evidence:
+    - reference: PMID:24246480
+      snippet: anaerobic digester microbial communities
+      notes: Town and colleagues profiled anaerobic digester communities and linked
+        microbial populations with reactor performance.
+    - reference: PMID:21558697
+      snippet: methanogenic environments
+      notes: Hattori reviewed syntrophic acetate-oxidizing microbes that cooperate
+        with methanogens in anaerobic systems.
+  - edge_id: syntrophy_produces_acetate_hydrogen_formate
+    subject: anaerobic_syntrophy
+    predicate: produces
+    object: acetate_hydrogen_formate
+    description: Syntrophic food webs interconvert fermentation products into acetate,
+      hydrogen, and formate used by methanogens.
+    evidence:
+    - reference: PMID:21558697
+      snippet: syntrophic acetate-oxidizing microbes
+      notes: Hattori reviewed acetate oxidation as a syntrophic process coupled to
+        hydrogen- or formate-consuming methanogenesis.
+  - edge_id: methanogens_convert_intermediates_to_methane
+    subject: acetate_hydrogen_formate
+    predicate: fuels
+    object: methanogenic_archaea
+    description: Methanogenic archaea consume acetate or reduced one-carbon intermediates
+      to produce methane in anaerobic reactor communities.
+    evidence:
+    - reference: PMID:21558697
+      snippet: Syntrophic acetate-oxidizing microbes
+      notes: Syntrophic acetate oxidation depends on methanogens that keep hydrogen
+        or formate low enough to make acetate oxidation favorable.
+  - edge_id: methanogenic_archaea_produce_methane
+    subject: methanogenic_archaea
+    predicate: produces
+    object: methane
+    description: Methanogenic archaea are the terminal methane-producing guild in
+      anaerobic bioreactor food webs.
+    evidence:
+    - reference: PMID:24246480
+      snippet: reactor performance
+      notes: The anaerobic digester community study used methanogenic archaea as a
+        key guild when relating community composition to methane-producing reactor
+        function.
 curation_history:
 - timestamp: '2026-08-13T00:00:00Z'
   curator: claude-opus-5
@@ -333,3 +613,10 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD,
     MADIN, PREGO. Grounding: EXACT.'
+- timestamp: '2026-09-04T00:00:00Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a bioreactor feed dilution biomass selection graph backed by PMID:16207900,
+    PMID:19041387, PMID:36610483, DOI:10.1186/s13068-024-02592-4, DOI:10.1038/ismej.2014.50,
+    PMID:25819618, PMID:24246480, and PMID:21558697.
+  llm_assisted: true

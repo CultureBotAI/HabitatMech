@@ -366,6 +366,132 @@ characteristic_taxa:
   score: 4.0
   rank: 25
   candidate_pool: 8715
+causal_graphs:
+- graph_id: soil_pore_organic_matter_microhabitats
+  title: Soil pore organic-matter microhabitats
+  description: Soil pore geometry, dynamic water films, patchy organic resources,
+    and mineral occlusion create microscale habitats that constrain microbial dispersal
+    and organic-matter turnover.
+  nodes:
+  - node_id: soil
+    label: soil
+    node_type: HABITAT
+    grounding: ENVO:00001998
+  - node_id: soil_pore_network
+    label: soil pore network
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: dynamic_aqueous_phase
+    label: dynamic soil aqueous phase
+    node_type: ENVIRONMENTAL_PARAMETER
+  - node_id: microbial_dispersal_constraints
+    label: microbial dispersal constraints
+    node_type: STATE
+  - node_id: patchy_organic_resources
+    label: patchy organic resources
+    node_type: ENVIRONMENTAL_PARAMETER
+  - node_id: microscale_environmental_conditions
+    label: microscale environmental conditions
+    node_type: ENVIRONMENTAL_PARAMETER
+  - node_id: mineral_occlusion
+    label: mineral occlusion
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: organic_matter_access
+    label: organic-matter access
+    node_type: STATE
+  - node_id: extracellular_enzyme_activity
+    label: extracellular enzyme activity
+    node_type: MOLECULAR_FUNCTION
+  - node_id: soil_carbon_turnover
+    label: soil carbon turnover
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - edge_id: soil_contains_pore_network
+    subject: soil
+    predicate: has structure
+    object: soil_pore_network
+    description: Soil pore geometry creates microscale physical structure across the
+      soil habitat.
+    evidence:
+    - reference: PMID:28961933
+      snippet: soil pores to landscapes
+      notes: Tecon and Or treat soil pores as the fine spatial scale at which soil
+        physical processes shape microbial life.
+  - edge_id: soil_pores_structure_aqueous_phase
+    subject: soil_pore_network
+    predicate: organizes
+    object: dynamic_aqueous_phase
+    description: Soil pore geometry organizes the dynamic water phase that connects
+      or isolates microbial cells.
+    evidence:
+    - reference: PMID:28961933
+      snippet: highly dynamic soil aqueous phase
+      notes: Tecon and Or review how water organization in pores links soil physics
+        to microbial life.
+  - edge_id: aqueous_phase_limits_dispersal
+    subject: dynamic_aqueous_phase
+    predicate: constrains
+    object: microbial_dispersal_constraints
+    description: The spatial organization of pore water constrains how soil microbes
+      move and disperse.
+    evidence:
+    - reference: PMID:28961933
+      snippet: microbial dispersion ranges
+      notes: Tecon and Or identify the spatially organized, dynamic aqueous phase
+        as a determinant of microbial dispersal ranges in soil.
+  - edge_id: soil_contains_patchy_organic_resources
+    subject: soil
+    predicate: has condition
+    object: patchy_organic_resources
+    description: Soil contains heterogeneously distributed organic substrates.
+    evidence:
+    - reference: PMID:28961933
+      snippet: patchy distribution of organic resources
+      notes: Tecon and Or describe patchy organic-resource distribution as one of
+        the biophysical features that makes soil a microbial habitat.
+  - edge_id: patchy_resources_create_microscale_conditions
+    subject: patchy_organic_resources
+    predicate: creates
+    object: microscale_environmental_conditions
+    description: Patchy organic substrates and pore-water variation create local environmental
+      conditions for soil microbes.
+    evidence:
+    - reference: PMID:28961933
+      snippet: unique environmental conditions
+      notes: Tecon and Or connect resource patchiness and water-organization variation
+        to microscale environmental conditions in soil.
+  - edge_id: mineral_occlusion_limits_organic_access
+    subject: mineral_occlusion
+    predicate: reduces
+    object: organic_matter_access
+    description: Occlusion and sorption on mineral particles can limit microbial physical
+      access to organic substrates.
+    evidence:
+    - reference: PMID:23055998
+      snippet: physical access to occluded or sorbed substrates
+      notes: Schimel and Schaeffer describe physical access to protected substrates
+        as a rate-limiting control on mineral-soil carbon turnover.
+  - edge_id: enzyme_activity_controls_carbon_turnover
+    subject: extracellular_enzyme_activity
+    predicate: controls
+    object: soil_carbon_turnover
+    description: Extracellular enzymes are microbial controls on decomposition and
+      carbon turnover in soil.
+    evidence:
+    - reference: PMID:23055998
+      snippet: extracellular enzymes and extracellular polysaccharides
+      notes: Schimel and Schaeffer identify extracellular enzymes as key microbial
+        controls over soil structure, function, and carbon fate.
+  - edge_id: organic_access_modulates_carbon_turnover
+    subject: organic_matter_access
+    predicate: modulates
+    object: soil_carbon_turnover
+    description: Physical access to protected organic matter modulates microbial organic-matter
+      breakdown in mineral soil.
+    evidence:
+    - reference: PMID:23055998
+      snippet: rate-limiting process
+      notes: Schimel and Schaeffer argue that physical access, rather than only decomposer
+        identity, can limit mineral-soil organic-matter turnover.
 curation_history:
 - timestamp: '2026-08-13T00:00:00Z'
   curator: claude-opus-5
@@ -390,3 +516,9 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD,
     MADIN, PREGO. Grounding: EXACT.'
+- timestamp: '2026-09-04T00:00:00Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a soil pore and organic-matter microhabitat graph backed by PMID:28961933
+    and PMID:23055998.
+  llm_assisted: true

@@ -125,6 +125,31 @@ def load_decisions() -> dict[str, dict[str, str]]:
         return {r["identifier"]: r for r in csv.DictReader(fh, delimiter="\t")}
 
 
+def render_graphs(graphs: list[dict]) -> list[dict]:
+    out = []
+    for graph in graphs:
+        labels = {node["node_id"]: node["label"] for node in graph.get("nodes") or []}
+        out.append(
+            {
+                "graph_id": graph.get("graph_id", ""),
+                "title": graph.get("title") or graph.get("graph_id", ""),
+                "description": graph.get("description", ""),
+                "edges": [
+                    {
+                        "edge_id": edge.get("edge_id", ""),
+                        "subject": labels.get(edge.get("subject"), edge.get("subject", "")),
+                        "predicate": edge.get("predicate", ""),
+                        "object": labels.get(edge.get("object"), edge.get("object", "")),
+                        "description": edge.get("description", ""),
+                        "evidence": edge.get("evidence") or [],
+                    }
+                    for edge in graph.get("edges") or []
+                ],
+            }
+        )
+    return out
+
+
 def extracted_at() -> str:
     if MANIFEST_PATH.exists():
         for line in MANIFEST_PATH.read_text(encoding="utf-8").splitlines():
@@ -201,6 +226,7 @@ def build(out_dir: Path) -> None:
             "sources": sources,
             "attestations": attestations,
             "parameters": doc.get("environmental_parameters") or [],
+            "causal_graphs": render_graphs(doc.get("causal_graphs") or []),
             "synonyms": [
                 {"text": s["synonym_text"], "source": s.get("source", "")}
                 for s in (doc.get("synonyms") or [])

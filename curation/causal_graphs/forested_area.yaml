@@ -1,0 +1,274 @@
+identifier: ENVO:00000111
+causal_graphs:
+- graph_id: forested_area_tree_litter_deadwood_mosaic
+  title: Forested area tree litter deadwood mosaic
+  description: Dense tree cover builds forested microbial habitats by creating
+    leaf-canopy, fine-root, litter, and deadwood compartments. Canopy surfaces
+    host phyllosphere communities, roots transfer recent plant carbon to
+    mycorrhizal fungi and rhizosphere bacteria, and lignocellulose from
+    litterfall and deadwood selects decomposer fungi and bacteria that recycle
+    carbon, nitrogen, and phosphorus in forest soils.
+  nodes:
+  - node_id: forested_area
+    label: forested area
+    node_type: HABITAT
+    grounding: ENVO:00000111
+  - node_id: dense_tree_stand
+    label: dense tree stand
+    node_type: HABITAT
+  - node_id: tree_canopy
+    label: tree canopy
+    node_type: HABITAT
+  - node_id: leaf_phyllosphere
+    label: leaf phyllosphere
+    node_type: HABITAT
+  - node_id: fine_roots
+    label: fine roots
+    node_type: HABITAT
+  - node_id: root_exudates
+    label: root exudates
+    node_type: CHEMICAL
+  - node_id: ectomycorrhizal_fungi
+    label: ectomycorrhizal fungi
+    node_type: TAXON
+  - node_id: forest_litter
+    label: forest litter
+    node_type: HABITAT
+  - node_id: coarse_deadwood
+    label: coarse deadwood
+    node_type: HABITAT
+  - node_id: lignocellulose
+    label: lignocellulose
+    node_type: CHEMICAL
+  - node_id: wood_polymers
+    label: wood polymers
+    node_type: CHEMICAL
+  - node_id: saprotrophic_fungi
+    label: saprotrophic fungi
+    node_type: TAXON
+  - node_id: forest_soil_bacteria
+    label: forest soil bacteria
+    node_type: TAXON
+  - node_id: litter_decomposition
+    label: litter decomposition
+    node_type: COMMUNITY_PROCESS
+  - node_id: deadwood_decomposition
+    label: deadwood decomposition
+    node_type: COMMUNITY_PROCESS
+  - node_id: nutrient_mobilization
+    label: nitrogen and phosphorus mobilization
+    node_type: COMMUNITY_PROCESS
+  edges:
+  - edge_id: forested_area_determined_by_trees
+    subject: forested_area
+    predicate: determined by
+    object: dense_tree_stand
+    description: Forested areas are terrestrial habitats structured by a high
+      density of trees.
+    evidence:
+    - reference: PMID:27856492
+      snippet: Forest microbiome
+      notes: Baldrian reviewed forests as structured microbial habitats whose
+        compartments include canopies, roots, litter, wood, and soil.
+  - edge_id: dense_trees_form_canopy
+    subject: dense_tree_stand
+    predicate: forms
+    object: tree_canopy
+    description: Forest trees create an aerial canopy of leaf and bark surfaces.
+    evidence:
+    - reference: PMID:27856492
+      snippet: diversity, complexity and dynamics
+      notes: The forest-microbiome review treats the phyllosphere as one of the
+        major aboveground forest microbial habitats.
+  - edge_id: canopy_harbors_phyllosphere
+    subject: tree_canopy
+    predicate: harbors
+    object: leaf_phyllosphere
+    description: Leaves in the tree canopy expose surfaces colonized by
+      phyllosphere microbial communities.
+    evidence:
+    - reference: PMID:23154261
+      snippet: Microbial life in the phyllosphere
+      notes: Vorholt reviewed leaf surfaces as widespread microbial habitats
+        with characteristic phyllosphere communities.
+  - edge_id: dense_trees_extend_fine_roots
+    subject: dense_tree_stand
+    predicate: extends
+    object: fine_roots
+    description: Forest trees extend fine roots into soil where they interact
+      with rhizosphere bacteria and mycorrhizal fungi.
+    evidence:
+    - reference: PMID:27856492
+      snippet: Forest microbiome
+      notes: Baldrian reviewed roots and mycorrhizae as belowground forest
+        compartments with intense bacterial and fungal activity.
+  - edge_id: fine_roots_release_exudates
+    subject: fine_roots
+    predicate: releases
+    object: root_exudates
+    description: Fine roots release recently fixed carbon into rhizosphere soil,
+      making root zones hotspots for forest microbial activity.
+    evidence:
+    - reference: DOI:10.1139/cjb-2013-0225
+      snippet: root exudation and rhizosphere biology
+      notes: Badri and colleagues reviewed how plant root exudates supply
+        carbon and signals that shape root-associated microbial communities.
+  - edge_id: root_exudates_select_forest_bacteria
+    subject: root_exudates
+    predicate: selects for
+    object: forest_soil_bacteria
+    description: Carbon and signaling compounds from roots enrich bacteria able
+      to occupy forest rhizospheres.
+    evidence:
+    - reference: PMID:28404790
+      snippet: Forest Soil Bacteria
+      notes: Llado, Lopez-Mondejar, and Baldrian reviewed bacterial roles in
+        forest rhizospheres and their interactions with plant roots and
+        mycorrhizal fungi.
+  - edge_id: fine_roots_feed_ectomycorrhizal_fungi
+    subject: fine_roots
+    predicate: feeds
+    object: ectomycorrhizal_fungi
+    description: Forest tree roots transfer photosynthate belowground to
+      ectomycorrhizal fungi.
+    evidence:
+    - reference: PMID:23539604
+      snippet: Roots and associated fungi
+      notes: Clemmensen and colleagues showed that roots and associated fungi
+        drive long-term carbon sequestration in a boreal forest chronosequence.
+  - edge_id: ectomycorrhizae_mobilize_nutrients
+    subject: ectomycorrhizal_fungi
+    predicate: drives
+    object: nutrient_mobilization
+    description: Ectomycorrhizal fungi forage in organic soil horizons and
+      acquire nitrogen that supports tree nutrition.
+    evidence:
+    - reference: PMID:17244056
+      snippet: Spatial separation of litter decomposition
+      notes: Lindahl and colleagues found spatial partitioning between boreal
+        litter decomposers and mycorrhizal fungi involved in nitrogen uptake.
+  - edge_id: dense_trees_produce_forest_litter
+    subject: dense_tree_stand
+    predicate: produces
+    object: forest_litter
+    description: Forest trees shed leaves and fine plant tissues that accumulate
+      as litter on the forest floor.
+    evidence:
+    - reference: PMID:27856492
+      snippet: Forest microbiome
+      notes: Baldrian reviewed litter as a major forest compartment connecting
+        plant productivity to decomposer bacteria and fungi.
+  - edge_id: forest_litter_contains_lignocellulose
+    subject: forest_litter
+    predicate: contains
+    object: lignocellulose
+    description: Leaf and needle litter contain cellulose, hemicellulose, and
+      lignin polymers that shape decomposer succession.
+    evidence:
+    - reference: PMID:22402400
+      snippet: Cellulose utilization in forest litter and soil
+      notes: Stursova and colleagues tracked cellulose-responsive bacterial and
+        fungal decomposers in forest litter and soil.
+  - edge_id: lignocellulose_selects_saprotrophs
+    subject: lignocellulose
+    predicate: selects for
+    object: saprotrophic_fungi
+    description: Recalcitrant lignocellulose in forest litter favors fungi with
+      extracellular enzyme systems for polymer decay.
+    evidence:
+    - reference: PMID:22402400
+      snippet: forest litter and soil
+      notes: Cellulose addition in a forest system identified fungi and
+        bacteria that actively use plant structural polysaccharides.
+  - edge_id: saprotrophs_decompose_litter
+    subject: saprotrophic_fungi
+    predicate: performs
+    object: litter_decomposition
+    description: Saprotrophic fungi mineralize litter polymers and drive
+      turnover of fallen plant material on the forest floor.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuw040
+      snippet: Forest microbiome
+      notes: Baldrian reviewed saprotrophic fungal decomposition as a central
+        forest carbon-cycling process.
+  - edge_id: litter_decomposition_mobilizes_nutrients
+    subject: litter_decomposition
+    predicate: drives
+    object: nutrient_mobilization
+    description: Decomposition of litter releases mineral nutrients and
+      low-molecular-weight carbon that feed the forest soil food web.
+    evidence:
+    - reference: PMID:28404790
+      snippet: involvement in ecosystem processes
+      notes: The forest-soil bacteria review summarizes bacterial participation
+        in organic-matter turnover and nutrient cycling.
+  - edge_id: dense_trees_generate_deadwood
+    subject: dense_tree_stand
+    predicate: produces
+    object: coarse_deadwood
+    description: Branch and trunk mortality create coarse woody debris as a
+      long-lived habitat within forests.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuw040
+      snippet: diversity, complexity and dynamics
+      notes: The forest-microbiome review treats deadwood as a persistent
+        microbial substrate produced by trees.
+  - edge_id: deadwood_contains_wood_polymers
+    subject: coarse_deadwood
+    predicate: contains
+    object: wood_polymers
+    description: Deadwood presents lignin-rich and cellulose-rich polymers to
+      microbes colonizing coarse woody debris.
+    evidence:
+    - reference: PMID:33436515
+      snippet: wood-inhabiting fungi and bacteria
+      notes: Tlaskal and colleagues analyzed fungal and bacterial functions
+        associated with decomposition of deadwood polymers.
+  - edge_id: wood_polymers_select_decomposers
+    subject: wood_polymers
+    predicate: selects for
+    object: saprotrophic_fungi
+    description: Woody polymers favor fungi that initiate deadwood decay and
+      open the substrate to bacterial metabolisms.
+    evidence:
+    - reference: DOI:10.1128/mSystems.01078-20
+      snippet: Complementary Roles
+      notes: Tlaskal and colleagues found complementary fungal and bacterial
+        roles in deadwood decomposition.
+  - edge_id: saprotrophs_drive_deadwood_decomposition
+    subject: saprotrophic_fungi
+    predicate: performs
+    object: deadwood_decomposition
+    description: Wood-inhabiting fungi dominate the enzymatic decay of
+      recalcitrant deadwood carbon, while bacteria contribute complementary
+      functions.
+    evidence:
+    - reference: PMID:33436515
+      snippet: Deadwood Decomposition
+      notes: The mSystems deadwood study linked fungi to degradation of
+        recalcitrant wood fractions and bacteria to complementary functions.
+  - edge_id: forest_bacteria_contribute_to_decomposition
+    subject: forest_soil_bacteria
+    predicate: contributes to
+    object: litter_decomposition
+    description: Forest soil bacteria participate in decomposition by using
+      plant-derived polymers and fungal-derived products.
+    evidence:
+    - reference: PMID:28404790
+      snippet: Forest Soil Bacteria
+      notes: Llado and colleagues reviewed forest bacterial participation in
+        organic-matter decomposition and nutrient cycling.
+    - reference: PMID:22402400
+      snippet: Cellulose utilization
+      notes: Stursova and colleagues detected cellulose-utilizing bacterial
+        populations in forest litter and soil.
+curation_history:
+- timestamp: '2026-09-04T00:00:00Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a forested area tree litter deadwood mosaic graph backed by
+    PMID:27856492, PMID:23154261, DOI:10.1139/cjb-2013-0225,
+    PMID:28404790, PMID:23539604, PMID:17244056, PMID:22402400,
+    DOI:10.1093/femsre/fuw040, PMID:33436515, and
+    DOI:10.1128/mSystems.01078-20.
+  llm_assisted: true

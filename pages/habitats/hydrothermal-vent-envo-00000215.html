@@ -87,6 +87,141 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
   <tr><td>WATER_VARIABILITY</td><td>permanently wet</td><td class="meta">kg-microbe environments.csv (water_marine_hydrothermal)</td></tr>
 </table>
 
+<h2>Causal graphs</h2>
+<h3>Hydrothermal vent redox chemolithoautotrophy</h3>
+<p>Hydrothermal vents discharge geothermally heated, chemically reduced fluids into oxidized seawater, creating steep thermal and redox gradients where sulfur- and hydrogen-oxidizing chemolithoautotrophs fix inorganic carbon and form the base of vent microbial production.</p><table>
+  <caption>hydrothermal_vent_redox_chemolithoautotrophy edges</caption>
+  <thead><tr><th scope="col">Edge</th><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code>vent_discharge_is_geothermally_heated</code></td>
+    <td>hydrothermal vent</td>
+    <td>is heated by<br><span class="meta">Hydrothermal vents are fissures where crustal heat drives the discharge of hot fluids.</span></td>
+    <td>crustal heat</td>
+    <td>
+      <code class="curie">PMID:30867583</code><br><span class="meta">Dick reviewed deep-sea hydrothermal vents as geothermally driven habitats structured by physical and chemical disequilibrium.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>crustal_heat_drives_fluid_discharge</code></td>
+    <td>crustal heat</td>
+    <td>drives<br><span class="meta">Crustal heating produces high-temperature fluids that issue from vent orifices on the seafloor.</span></td>
+    <td>hydrothermal fluid</td>
+    <td>
+      <code class="curie">PMID:23720658</code><br><span class="meta">Dick and colleagues reviewed vent plumes created when seafloor vents inject hydrothermal fluids into the deep ocean.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>hydrothermal_fluid_supplies_hydrogen</code></td>
+    <td>hydrothermal fluid</td>
+    <td>supplies<br><span class="meta">Hydrothermal fluids provide molecular hydrogen for vent hydrogen-cycling microorganisms.</span></td>
+    <td>hydrogen</td>
+    <td>
+      <code class="curie">PMID:30532749</code><br><span class="meta">Adam and Perner reviewed deep-sea vents as reservoirs for hydrogen-oxidizing microorganisms.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>hydrothermal_fluid_supplies_sulfide</code></td>
+    <td>hydrothermal fluid</td>
+    <td>supplies<br><span class="meta">Hydrothermal fluids supply reduced sulfur species that can be oxidized by vent microorganisms.</span></td>
+    <td>hydrogen sulfide</td>
+    <td>
+      <code class="curie">PMID:18503548</code><br><span class="meta">Nakagawa and Takai reviewed reduced sulfur oxidation as a major energy metabolism among deep-sea vent chemoautotrophs.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>hydrothermal_fluid_meets_seawater</code></td>
+    <td>hydrothermal fluid</td>
+    <td>mixes with<br><span class="meta">Hot reduced fluids mix with cold oxidizing seawater at and above seafloor vent openings.</span></td>
+    <td>oxygenated seawater</td>
+    <td>
+      <code class="curie">PMID:23720658</code><br><span class="meta">Dick and colleagues reviewed the formation of hydrothermal plumes where reduced vent fluids mix into the deep ocean.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>mixing_creates_redox_gradient</code></td>
+    <td>vent-seawater mixing zone</td>
+    <td>creates<br><span class="meta">Vent-fluid and seawater mixing juxtaposes reduced electron donors with oxidants, creating steep redox gradients.</span></td>
+    <td>redox gradient</td>
+    <td>
+      <code class="curie">PMID:30867583</code><br><span class="meta">Dick reviewed vent microbes that exploit disequilibrium between reduced hydrothermal fluids and surrounding oxidized seawater.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>mixing_creates_temperature_gradient</code></td>
+    <td>vent-seawater mixing zone</td>
+    <td>creates<br><span class="meta">Hydrothermal fluid cooling during seawater entrainment creates steep temperature gradients across vent habitats.</span></td>
+    <td>temperature gradient</td>
+    <td>
+      <code class="curie">PMID:30867583</code><br><span class="meta">Dick reviewed local vent temperature and geochemical gradients as filters on deep-sea hydrothermal vent microbiomes.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>fluid_mixing_forms_reaction_zone</code></td>
+    <td>hydrothermal fluid</td>
+    <td>creates<br><span class="meta">Hydrothermal-fluid discharge creates a mixing zone in which vent reductants encounter seawater oxidants.</span></td>
+    <td>vent-seawater mixing zone</td>
+    <td>
+      <code class="curie">PMID:23720658</code><br><span class="meta">Dick and colleagues review hydrothermal plume formation and links between seafloor sources and water-column microbial habitats.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>sulfide_selects_sulfur_oxidizers</code></td>
+    <td>hydrogen sulfide</td>
+    <td>selects for<br><span class="meta">Sulfide-rich vent chemistry selects sulfur-oxidizing bacteria that harvest energy from reduced sulfur.</span></td>
+    <td>sulfur-oxidizing bacteria</td>
+    <td>
+      <code class="curie">PMID:28375213</code><br><span class="meta">Meier and colleagues studied sulfur-oxidizing bacteria distributed across geochemical gradients at hydrothermal vents.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>sulfur_oxidizers_perform_sulfur_oxidation</code></td>
+    <td>sulfur-oxidizing bacteria</td>
+    <td>performs<br><span class="meta">Vent sulfur-oxidizing bacteria oxidize reduced sulfur compounds as an energy-yielding metabolism.</span></td>
+    <td>sulfur oxidation</td>
+    <td>
+      <code class="curie">PMID:28375213</code><br><span class="meta">Meier and colleagues resolved niche partitioning among reduced sulfur oxidizers at deep-sea vents.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>hydrogen_selects_hydrogen_oxidizers</code></td>
+    <td>hydrogen</td>
+    <td>selects for<br><span class="meta">Molecular hydrogen in hydrothermal fluids selects microorganisms capable of hydrogen oxidation.</span></td>
+    <td>hydrogen-oxidizing microorganisms</td>
+    <td>
+      <code class="curie">PMID:30532749</code><br><span class="meta">Adam and Perner reviewed hydrogen-oxidizing microorganisms in deep-sea hydrothermal vent systems.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>hydrogen_oxidizers_perform_hydrogen_oxidation</code></td>
+    <td>hydrogen-oxidizing microorganisms</td>
+    <td>performs<br><span class="meta">Hydrogen-oxidizing vent microorganisms harvest energy by oxidizing geochemical hydrogen.</span></td>
+    <td>hydrogen oxidation</td>
+    <td>
+      <code class="curie">PMID:30532749</code><br><span class="meta">Adam and Perner reviewed microbial hydrogen oxidation and hydrogen cycling in vent ecosystems.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>sulfur_oxidation_fuels_carbon_fixation</code></td>
+    <td>sulfur oxidation</td>
+    <td>fuels<br><span class="meta">Sulfur oxidation supplies energy for inorganic carbon fixation by vent chemolithoautotrophs.</span></td>
+    <td>inorganic carbon fixation</td>
+    <td>
+      <code class="curie">PMID:18503548</code><br><span class="meta">Nakagawa and Takai reviewed sulfur oxidation and carbon fixation biochemistry in deep-sea vent chemoautotrophs.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>hydrogen_oxidation_fuels_carbon_fixation</code></td>
+    <td>hydrogen oxidation</td>
+    <td>fuels<br><span class="meta">Hydrogen oxidation supplies energy to vent microorganisms for chemolithoautotrophic carbon fixation.</span></td>
+    <td>inorganic carbon fixation</td>
+    <td>
+      <code class="curie">PMID:29891698</code><br><span class="meta">McNichol and colleagues measured subseafloor primary productivity supported by hydrothermal fluid and seawater mixing.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>carbon_fixation_drives_primary_production</code></td>
+    <td>inorganic carbon fixation</td>
+    <td>drives<br><span class="meta">Microbial fixation of inorganic carbon generates new biomass in aphotic hydrothermal vent habitats.</span></td>
+    <td>chemosynthetic primary production</td>
+    <td>
+      <code class="curie">PMID:30867583</code><br><span class="meta">Dick reviewed chemosynthetic bacteria and archaea as the productivity base of deep-sea hydrothermal vent ecosystems.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>primary_production_supports_vent_biofilms</code></td>
+    <td>chemosynthetic primary production</td>
+    <td>supports<br><span class="meta">Chemosynthetic primary production supports biofilms on mineral and biological surfaces bathed in vent fluids.</span></td>
+    <td>vent biofilms</td>
+    <td>
+      <code class="curie">PMID:18503548</code><br><span class="meta">Nakagawa and Takai reviewed chemoautotrophs in free-living, mat-forming, and symbiotic vent microbial assemblages.</span>    </td>
+  </tr>
+</table>
+
 <h2>Associated taxa</h2>
 <p class="meta">Taxa <em>reported from</em> this habitat, which is weaker than being
 characteristic of it. <code>rank</code> is out of <code>pool</code>: a high rank in a
@@ -290,6 +425,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">REVIEW</span>
     <span class="meta">2026-08-12 · claude-opus-5</span>
     <p>Reviewed and endorsed the seeder&#39;s own resolution. PREGO asserts ENVO:00000215 hydrothermal vent directly; the self-grounding is correct. Endorsed to complete the hydrothermal vent record. (source concept habitatmech:PREGO.90a1d4d39e)</p>
+  </li>
+  <li>
+    <span class="pill">ADD_CAUSAL_GRAPH</span>
+    <span class="meta">2026-09-04 · codex</span>
+    <p>Added a hydrothermal-vent redox chemolithoautotrophy graph backed by PMID:30867583, PMID:23720658, PMID:30532749, PMID:18503548, PMID:28375213, and PMID:29891698.</p>
   </li>
 </ol>
 

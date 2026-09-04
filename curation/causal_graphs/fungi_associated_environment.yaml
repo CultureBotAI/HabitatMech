@@ -1,0 +1,230 @@
+identifier: ENVO:01001041
+causal_graphs:
+- graph_id: fungi_associated_hyphae_mycosphere_dispersal
+  title: Fungi-associated hyphae mycosphere dispersal
+  description: Fungal structures create host-associated microsites by extending
+    hyphae through soil and organic matter, releasing fungal exudates, exposing
+    chitin-rich cell walls, and forming hydrated surfaces that bacteria can
+    colonize. These hyphal traits recruit mycosphere bacteria, provide fungal
+    highways for motile dispersers, support fungus-feeding chitinolytic bacteria,
+    and contain intracellular niches for endofungal symbionts.
+  nodes:
+  - node_id: fungi_associated_environment
+    label: fungi-associated environment
+    node_type: HABITAT
+    grounding: ENVO:01001041
+  - node_id: fungal_structure
+    label: fungal structure
+    node_type: HABITAT
+  - node_id: fungal_hyphae
+    label: fungal hyphae
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: hyphal_exudates
+    label: hyphal exudates
+    node_type: CHEMICAL
+  - node_id: hyphal_water_films
+    label: hyphal water films
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: chitin_cell_wall
+    label: chitin-rich cell wall
+    node_type: CHEMICAL
+  - node_id: fungal_cytoplasm
+    label: fungal cytoplasm
+    node_type: HABITAT
+  - node_id: mycosphere_bacteria
+    label: mycosphere bacteria
+    node_type: TAXON
+  - node_id: motile_bacteria
+    label: motile bacteria
+    node_type: TAXON
+  - node_id: flagellar_motility
+    label: flagellar motility
+    node_type: TRAIT
+  - node_id: bacterial_dispersal
+    label: bacterial dispersal
+    node_type: COMMUNITY_PROCESS
+  - node_id: chitinolytic_bacteria
+    label: chitinolytic bacteria
+    node_type: TAXON
+  - node_id: mycophagy
+    label: bacterial mycophagy
+    node_type: PATHWAY
+  - node_id: antifungal_metabolites
+    label: antifungal metabolites
+    node_type: CHEMICAL
+  - node_id: endofungal_bacteria
+    label: endofungal bacteria
+    node_type: TAXON
+  edges:
+  - edge_id: fungi_environment_determined_by_structure
+    subject: fungi_associated_environment
+    predicate: determined by
+    object: fungal_structure
+    description: Fungi-associated environments are host-associated systems whose
+      bacterial niches are determined by fungal tissues and mycelia.
+    evidence:
+    - reference: PMID:16102603
+      snippet: impact of fungi on soil bacterial niche development
+      notes: De Boer and colleagues reviewed how fungal activity creates
+        physical and chemical niches for bacteria.
+  - edge_id: fungal_structure_extends_hyphae
+    subject: fungal_structure
+    predicate: extends
+    object: fungal_hyphae
+    description: Filamentous fungi extend hyphae into surrounding substrates,
+      increasing the fungal surface available for colonization.
+    evidence:
+    - reference: PMID:16102603
+      snippet: fungal world
+      notes: The fungal-bacterial interaction review emphasizes fungal hyphae as
+        habitat-forming structures for bacteria.
+  - edge_id: fungal_hyphae_release_exudates
+    subject: fungal_hyphae
+    predicate: releases
+    object: hyphal_exudates
+    description: Growing hyphae release carbon-rich exudates into adjacent soil
+      or organic matter, enriching the mycosphere.
+    evidence:
+    - reference: PMID:16102603
+      snippet: bacterial niche development
+      notes: De Boer and colleagues reviewed fungal exudation and nutrient
+        translocation as drivers of nearby bacterial niches.
+  - edge_id: exudates_recruit_mycosphere_bacteria
+    subject: hyphal_exudates
+    predicate: selects for
+    object: mycosphere_bacteria
+    description: Exudates near fungal hyphae select bacterial populations able
+      to use fungal-derived carbon compounds.
+    evidence:
+    - reference: PMID:16102603
+      snippet: impact of fungi
+      notes: The review describes the mycosphere as a nutrient-enriched zone
+        where fungi shape bacterial abundance and composition.
+    - reference: PMID:19286795
+      snippet: migratory response
+      notes: Warmink and van Elsas found bacterial migration and enrichment in
+        soil microcosms containing Lyophyllum hyphae.
+  - edge_id: hyphae_generate_water_films
+    subject: fungal_hyphae
+    predicate: supports
+    object: hyphal_water_films
+    description: Hydrated films along fungal hyphae create a continuous surface
+      that bacteria can swim across in otherwise unsaturated substrates.
+    evidence:
+    - reference: PMID:16047804
+      snippet: Taking the fungal highway
+      notes: Kohlmeier and colleagues demonstrated mycelium-mediated bacterial
+        movement in a water-unsaturated model system.
+  - edge_id: water_films_select_motile_bacteria
+    subject: hyphal_water_films
+    predicate: selects for
+    object: motile_bacteria
+    description: Liquid films on hyphae favor bacteria with motility traits that
+      let them spread along fungal highways.
+    evidence:
+    - reference: PMID:23995942
+      snippet: flagellar motility in a fungal world
+      notes: Pion and colleagues used selection experiments to show that fungal
+        highways can favor gains of bacterial flagellar motility.
+  - edge_id: motile_bacteria_express_flagella
+    subject: motile_bacteria
+    predicate: expresses
+    object: flagellar_motility
+    description: Motile mycosphere bacteria use flagella to migrate along the
+      hydrated surface of fungal hyphae.
+    evidence:
+    - reference: PMID:23995942
+      snippet: flagellar motility
+      notes: The fungal-highway evolution experiment linked flagella to movement
+        on fungal mycelia.
+  - edge_id: flagellar_motility_drives_dispersal
+    subject: flagellar_motility
+    predicate: drives
+    object: bacterial_dispersal
+    description: Flagellar motility lets bacteria disperse along hyphae and
+      reach nutrient patches inaccessible through air-filled pores.
+    evidence:
+    - reference: PMID:16047804
+      snippet: mobilization
+      notes: Kohlmeier and colleagues showed that fungal hyphae mobilized
+        pollutant-degrading bacteria across an unsaturated matrix.
+  - edge_id: hyphae_expose_chitin_cell_wall
+    subject: fungal_hyphae
+    predicate: exposes
+    object: chitin_cell_wall
+    description: Fungal hyphae expose chitinous cell-wall polymers that can be
+      attacked by chitinolytic bacteria.
+    evidence:
+    - reference: PMID:15143036
+      snippet: chitinolytic soil bacterium
+      notes: De Boer and colleagues described Collimonas fungivorans as a
+        chitinolytic bacterium able to grow on living fungal hyphae.
+  - edge_id: chitin_cell_wall_selects_chitinolytic_bacteria
+    subject: chitin_cell_wall
+    predicate: selects for
+    object: chitinolytic_bacteria
+    description: Chitin-rich fungal walls favor bacteria capable of producing
+      chitinolytic enzymes during fungal feeding.
+    evidence:
+    - reference: PMID:15143036
+      snippet: Collimonas fungivorans
+      notes: The species description established Collimonas fungivorans as a
+        chitinolytic soil bacterium with fungus-feeding ability.
+  - edge_id: chitinolytic_bacteria_perform_mycophagy
+    subject: chitinolytic_bacteria
+    predicate: performs
+    object: mycophagy
+    description: Fungus-feeding bacteria can attack living hyphae and use fungal
+      biomass as a carbon and nutrient source.
+    evidence:
+    - reference: PMID:15143036
+      snippet: living fungal hyphae
+      notes: The Collimonas fungivorans type strain was characterized by growth
+        on living fungal hyphae.
+    - reference: DOI:10.1186/s12864-015-2289-3
+      snippet: fungus-feeding bacterial genus
+      notes: Song and colleagues compared Collimonas genomes to identify traits
+        associated with fungal feeding.
+  - edge_id: mycophagy_induces_antifungal_metabolites
+    subject: mycophagy
+    predicate: induces
+    object: antifungal_metabolites
+    description: Direct bacterial-fungal confrontation can induce Collimonas
+      gene expression for antifungal metabolites and use of fungal-derived
+      compounds.
+    evidence:
+    - reference: PMID:21614084
+      snippet: bacterial/fungal confrontation
+      notes: Mela and colleagues profiled Collimonas fungivorans and Aspergillus
+        niger during confrontation and found activation of genes for
+        fungal-derived compound use and antifungal production.
+  - edge_id: fungal_structure_contains_cytoplasm
+    subject: fungal_structure
+    predicate: contains
+    object: fungal_cytoplasm
+    description: Fungal hyphae provide intracellular cytoplasmic compartments
+      that some specialized bacteria can inhabit.
+    evidence:
+    - reference: PMID:17978222
+      snippet: bacterial endosymbionts
+      notes: Partida-Martinez and colleagues described Burkholderia endofungorum
+        and Burkholderia rhizoxinica as endosymbionts of Rhizopus microsporus.
+  - edge_id: fungal_cytoplasm_harbors_endofungal_bacteria
+    subject: fungal_cytoplasm
+    predicate: harbors
+    object: endofungal_bacteria
+    description: Some fungi harbor bacterial endosymbionts inside the fungal
+      cytoplasm rather than only on hyphal surfaces.
+    evidence:
+    - reference: PMID:17978222
+      snippet: endosymbiotic bacteria
+      notes: The Burkholderia endofungorum species description documented
+        bacteria living as Rhizopus microsporus endosymbionts.
+curation_history:
+- timestamp: '2026-09-04T00:00:00Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a fungi-associated hyphae mycosphere dispersal graph backed by
+    PMID:16102603, PMID:19286795, PMID:16047804, PMID:23995942, PMID:15143036,
+    DOI:10.1186/s12864-015-2289-3, PMID:21614084, and PMID:17978222.
+  llm_assisted: true

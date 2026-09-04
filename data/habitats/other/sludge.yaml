@@ -661,6 +661,166 @@ characteristic_taxa:
   association_count: 2
   rank: 25
   candidate_pool: 441
+causal_graphs:
+- graph_id: sludge_floc_oxygen_partitioning
+  title: Sludge floc oxygen partitioning
+  description: Sludge aggregates extracellular-polymeric substances, cells, and adsorbed
+    particles into flocs whose oxygen gradients partition nitrification and denitrification
+    into adjacent oxic and anoxic microsites.
+  nodes:
+  - node_id: sludge
+    label: sludge
+    node_type: HABITAT
+    grounding: ENVO:00002044
+  - node_id: activated_sludge_flocs
+    label: activated sludge flocs
+    node_type: STATE
+  - node_id: extracellular_polymeric_substances
+    label: extracellular polymeric substances
+    node_type: CHEMICAL
+  - node_id: heterogeneous_floc_matrix
+    label: heterogeneous floc matrix
+    node_type: STATE
+  - node_id: bulk_dissolved_oxygen
+    label: bulk dissolved oxygen
+    node_type: ENVIRONMENTAL_PARAMETER
+  - node_id: oxygen_gradients
+    label: oxygen gradients
+    node_type: ENVIRONMENTAL_PARAMETER
+  - node_id: oxic_floc_zones
+    label: oxic floc zones
+    node_type: ENVIRONMENTAL_PARAMETER
+  - node_id: anoxic_floc_zones
+    label: anoxic floc zones
+    node_type: ENVIRONMENTAL_PARAMETER
+  - node_id: nitrification
+    label: nitrification
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: denitrification
+    label: denitrification
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: simultaneous_nitrification_denitrification
+    label: simultaneous nitrification and denitrification
+    node_type: COMMUNITY_PROCESS
+  edges:
+  - edge_id: sludge_contains_flocs
+    subject: sludge
+    predicate: contains
+    object: activated_sludge_flocs
+    description: Wastewater sludge contains flocs made of microbial cells, EPS, and
+      adsorbed organic and inorganic material.
+    evidence:
+    - reference: PMID:12926675
+      snippet: flocculated mass of microorganisms
+      notes: Wilen and colleagues describe activated sludge flocs as aggregates of
+        microorganisms, EPS, and adsorbed material.
+  - edge_id: eps_structures_flocs
+    subject: extracellular_polymeric_substances
+    predicate: structures
+    object: activated_sludge_flocs
+    description: Extracellular polymeric substances help define the composition, charge,
+      hydrophobicity, and flocculation behavior of sludge flocs.
+    evidence:
+    - reference: PMID:12926675
+      snippet: very important for the floc properties
+      notes: Wilen and colleagues found that EPS quantity and quality were important
+        for activated-sludge floc properties.
+  - edge_id: flocs_create_heterogeneous_matrix
+    subject: activated_sludge_flocs
+    predicate: creates
+    object: heterogeneous_floc_matrix
+    description: Sludge flocs create heterogeneous suspended aggregate matrices.
+    evidence:
+    - reference: PMID:12926675
+      snippet: structure of the floc is very heterogeneous
+      notes: Wilen and colleagues report heterogeneity in floc structure, morphology,
+        and properties across activated sludges.
+  - edge_id: floc_matrix_generates_oxygen_gradients
+    subject: heterogeneous_floc_matrix
+    predicate: creates
+    object: oxygen_gradients
+    description: Oxygen consumption and diffusion limitation inside individual sludge
+      flocs generate steep oxygen gradients.
+    evidence:
+    - reference: PMID:12827702
+      snippet: O(2) concentration gradients in individual activated sludge flocs
+      notes: Satoh and colleagues used microelectrodes to measure oxygen gradients
+        inside individual activated-sludge flocs.
+  - edge_id: bulk_oxygen_controls_anoxic_interiors
+    subject: bulk_dissolved_oxygen
+    predicate: controls
+    object: oxygen_gradients
+    description: The bulk dissolved-oxygen concentration controls how deeply oxygen
+      penetrates into sludge flocs.
+    evidence:
+    - reference: PMID:12827702
+      snippet: penetration depth in the floc was found to be dependent
+      notes: Satoh and colleagues showed that oxygen penetration depth depended on
+        the bulk oxygen concentration.
+  - edge_id: oxygen_gradients_form_oxic_zones
+    subject: oxygen_gradients
+    predicate: creates
+    object: oxic_floc_zones
+    description: Oxygen gradients partition aerated sludge flocs into oxic zones where
+      oxygen is available.
+    evidence:
+    - reference: PMID:12827702
+      snippet: restricted to the oxic zones
+      notes: Satoh and colleagues localized nitrification activity to oxic zones within
+        activated-sludge flocs.
+  - edge_id: oxygen_gradients_form_anoxic_zones
+    subject: oxygen_gradients
+    predicate: creates
+    object: anoxic_floc_zones
+    description: Limited oxygen penetration leaves anoxic zones inside larger activated-sludge
+      flocs.
+    evidence:
+    - reference: PMID:12827702
+      snippet: anoxic zones were detected within flocs
+      notes: Satoh and colleagues detected anoxic zones inside larger flocs at low
+        bulk oxygen concentrations.
+  - edge_id: oxic_zones_enable_nitrification
+    subject: oxic_floc_zones
+    predicate: enables
+    object: nitrification
+    description: Oxic regions in sludge flocs support nitrification.
+    evidence:
+    - reference: PMID:12827702
+      snippet: Nitrification was restricted to the oxic zones
+      notes: Satoh and colleagues observed nitrification in the oxic parts of single
+        activated-sludge flocs.
+  - edge_id: anoxic_zones_enable_denitrification
+    subject: anoxic_floc_zones
+    predicate: enables
+    object: denitrification
+    description: Anoxic regions in sludge flocs support denitrification.
+    evidence:
+    - reference: PMID:12827702
+      snippet: denitrification occurred mainly in the anoxic zones
+      notes: Satoh and colleagues observed denitrification mainly in anoxic parts
+        of single activated-sludge flocs.
+  - edge_id: nitrification_contributes_to_snd
+    subject: nitrification
+    predicate: contributes to
+    object: simultaneous_nitrification_denitrification
+    description: Oxic-zone nitrification contributes to simultaneous nitrification
+      and denitrification in aerated sludge.
+    evidence:
+    - reference: PMID:12827702
+      snippet: Simultaneous nitrification and denitrification
+      notes: Satoh and colleagues investigated simultaneous nitrification and denitrification
+        in floccular municipal activated sludge.
+  - edge_id: denitrification_contributes_to_snd
+    subject: denitrification
+    predicate: contributes to
+    object: simultaneous_nitrification_denitrification
+    description: Anoxic-zone denitrification contributes to simultaneous nitrification
+      and denitrification in aerated sludge.
+    evidence:
+    - reference: PMID:12827702
+      snippet: SND was observed in the aerated activated sludge
+      notes: Satoh and colleagues observed simultaneous nitrification and denitrification
+        at intermediate dissolved-oxygen concentrations.
 curation_history:
 - timestamp: '2026-08-13T00:00:00Z'
   curator: claude-opus-5
@@ -694,3 +854,9 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, ENVIRONMENTS_TABLE,
     MADIN, PREGO. Grounding: EXACT.'
+- timestamp: '2026-09-04T00:00:00Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a sludge floc oxygen-partitioning graph backed by PMID:12926675 and
+    PMID:12827702.
+  llm_assisted: true

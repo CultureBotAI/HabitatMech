@@ -95,6 +95,141 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
   <tr><td>WATER_AVAILABILITY</td><td>high</td><td class="meta">kg-microbe environments.csv (biofilm)</td></tr>
 </table>
 
+<h2>Causal graphs</h2>
+<h3>Biofilm EPS gradient structuring</h3>
+<p>Biofilms arise when microbial cells adhere to a substratum, remain together as an aggregate, and secrete an extracellular polymeric matrix. The matrix anchors cells and public goods near a surface, retains extracellular enzymes, slows solute transport, and creates oxygen and nutrient gradients that differentiate the biofilm into physiologically distinct microzones.</p><table>
+  <caption>biofilm_eps_gradient_structuring edges</caption>
+  <thead><tr><th scope="col">Edge</th><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code>biofilm_determined_by_aggregate</code></td>
+    <td>biofilm</td>
+    <td>determined by<br><span class="meta">A biofilm is a surface-associated microbial aggregate whose cells remain together in a shared matrix.</span></td>
+    <td>surface-associated microbial aggregate</td>
+    <td>
+      <code class="curie">PMID:27510863</code><br><span class="meta">Flemming and colleagues reviewed bacterial biofilms as surface-associated communities embedded in self-produced matrix.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>aggregate_adheres_to_substratum</code></td>
+    <td>surface-associated microbial aggregate</td>
+    <td>adheres to<br><span class="meta">Biofilm organisms use surface adhesion to persist on a substratum rather than living only as planktonic cells.</span></td>
+    <td>substratum</td>
+    <td>
+      <code class="curie">PMID:27510863</code><br><span class="meta">The biofilm lifestyle review describes surface attachment as a central transition in the development of biofilm communities.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>aggregate_expresses_surface_adhesion</code></td>
+    <td>surface-associated microbial aggregate</td>
+    <td>expresses<br><span class="meta">Adhesive traits let cells attach to surfaces and seed multicellular growth.</span></td>
+    <td>surface adhesion</td>
+    <td>
+      <code class="curie">DOI:10.1038/nrmicro.2016.94</code><br><span class="meta">Flemming and colleagues reviewed adhesins and appendages that mediate attachment during biofilm development.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>surface_adhesion_enables_aggregation</code></td>
+    <td>surface adhesion</td>
+    <td>enables<br><span class="meta">Surface attachment keeps founder cells in place long enough for clonal growth and recruitment to build a microbial aggregate.</span></td>
+    <td>surface-associated microbial aggregate</td>
+    <td>
+      <code class="curie">DOI:10.1038/nrmicro.2016.94</code><br><span class="meta">The Nature Reviews Microbiology review covers attachment and aggregate development as linked stages of biofilm formation.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>aggregate_produces_matrix</code></td>
+    <td>surface-associated microbial aggregate</td>
+    <td>produces<br><span class="meta">Biofilm cells secrete extracellular polymeric substances that assemble into the surrounding biofilm matrix.</span></td>
+    <td>extracellular polymeric matrix</td>
+    <td>
+      <code class="curie">PMID:20676145</code><br><span class="meta">Flemming and Wingender reviewed the extracellular polymeric substances that form the self-produced matrix of biofilms.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>matrix_contains_edna</code></td>
+    <td>extracellular polymeric matrix</td>
+    <td>contains<br><span class="meta">Extracellular DNA is one structural constituent of the biofilm matrix.</span></td>
+    <td>extracellular DNA</td>
+    <td>
+      <code class="curie">DOI:10.1038/nrmicro2415</code><br><span class="meta">The biofilm-matrix review summarizes extracellular DNA among common matrix components.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>matrix_contains_polysaccharides</code></td>
+    <td>extracellular polymeric matrix</td>
+    <td>contains<br><span class="meta">Matrix polysaccharides provide hydrated polymers that surround and support embedded cells.</span></td>
+    <td>matrix polysaccharides</td>
+    <td>
+      <code class="curie">DOI:10.1038/nrmicro2415</code><br><span class="meta">Flemming and Wingender reviewed polysaccharides as major constituents of extracellular polymeric matrices.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>matrix_contains_proteins</code></td>
+    <td>extracellular polymeric matrix</td>
+    <td>contains<br><span class="meta">Proteinaceous adhesins and amyloid fibers contribute to matrix architecture and intercellular contacts.</span></td>
+    <td>matrix proteins</td>
+    <td>
+      <code class="curie">PMID:20676145</code><br><span class="meta">The matrix review describes protein components that contribute to biofilm matrix structure and function.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>matrix_anchors_aggregate</code></td>
+    <td>extracellular polymeric matrix</td>
+    <td>retains<br><span class="meta">The extracellular matrix embeds cells and keeps the community cohesive on the surface.</span></td>
+    <td>surface-associated microbial aggregate</td>
+    <td>
+      <code class="curie">PMID:20676145</code><br><span class="meta">Flemming and Wingender describe the matrix as the extracellular material surrounding and holding biofilm cells together.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>matrix_generates_cell_cohesion</code></td>
+    <td>extracellular polymeric matrix</td>
+    <td>produces<br><span class="meta">Shared matrix polymers create cohesion among neighboring biofilm cells.</span></td>
+    <td>cell-cell cohesion</td>
+    <td>
+      <code class="curie">DOI:10.1038/nrmicro2415</code><br><span class="meta">The biofilm-matrix review discusses matrix polymers as mediators of stable multicellular organization.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>matrix_retains_extracellular_enzymes</code></td>
+    <td>extracellular polymeric matrix</td>
+    <td>retains<br><span class="meta">Matrix material keeps secreted enzymes close to the cells that invested in producing them.</span></td>
+    <td>extracellular enzymes</td>
+    <td>
+      <code class="curie">PMID:20676145</code><br><span class="meta">Flemming and Wingender reviewed enzyme retention as one function of the extracellular biofilm matrix.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>retained_enzymes_drive_external_digestion</code></td>
+    <td>extracellular enzymes</td>
+    <td>drives<br><span class="meta">Matrix-retained enzymes support extracellular degradation of polymers and particles near the aggregate.</span></td>
+    <td>matrix-localized external digestion</td>
+    <td>
+      <code class="curie">PMID:20676145</code><br><span class="meta">The matrix review explains how localized extracellular enzymes let biofilms metabolize polymers outside the cell.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>matrix_limits_diffusion</code></td>
+    <td>extracellular polymeric matrix</td>
+    <td>produces<br><span class="meta">Cells and extracellular matrix slow transport of oxygen, electron acceptors, and nutrients through the biofilm depth.</span></td>
+    <td>diffusion limitation</td>
+    <td>
+      <code class="curie">PMID:35149841</code><br><span class="meta">Jo, Price-Whelan, and Dietrich reviewed gradient formation and physiological differentiation in biofilms.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>diffusion_limitation_forms_gradients</code></td>
+    <td>diffusion limitation</td>
+    <td>produces<br><span class="meta">Consumption and limited inward diffusion form steep chemical gradients across a spatially constrained biofilm.</span></td>
+    <td>oxygen and nutrient gradients</td>
+    <td>
+      <code class="curie">DOI:10.1038/s41579-022-00692-2</code><br><span class="meta">The gradient review describes biofilm resource gradients generated by local metabolism and spatial transport limits.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>gradients_drive_heterogeneity</code></td>
+    <td>oxygen and nutrient gradients</td>
+    <td>drives<br><span class="meta">Oxygen and nutrient gradients make nearby biofilm cells occupy different metabolic states.</span></td>
+    <td>physiological heterogeneity</td>
+    <td>
+      <code class="curie">PMID:35149841</code><br><span class="meta">Jo and colleagues reviewed how gradients in biofilms cause physiological differentiation among cells in the same assemblage.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>heterogeneity_selects_stress_tolerance</code></td>
+    <td>physiological heterogeneity</td>
+    <td>selects for<br><span class="meta">Slow-growing and resource-limited biofilm zones increase the prevalence of cells tolerant of chemical or physical stress.</span></td>
+    <td>stress-tolerant subpopulations</td>
+    <td>
+      <code class="curie">PMID:35149841</code><br><span class="meta">The heterogeneity review links gradient-driven physiological differentiation in biofilms to stress tolerance.</span>    </td>
+  </tr>
+</table>
+
 <h2>Associated taxa</h2>
 <p class="meta">Taxa <em>reported from</em> this habitat, which is weaker than being
 characteristic of it. <code>rank</code> is out of <code>pool</code>: a high rank in a
@@ -308,6 +443,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">REVIEW</span>
     <span class="meta">2026-08-13 · claude-opus-5</span>
     <p>Reviewed and endorsed the seeder&#39;s own resolution. Multi-source review pass: this record is attested by more than one independent vocabulary, and this source&#39;s label or path was read against the record&#39;s ontology term to check the merge is right. It agrees. Source concepts in the same pass whose labels did not agree were re-decided rather than endorsed; see the pass&#39;s other decisions of the same date. (source concept habitatmech:PREGO.94bda4d522)</p>
+  </li>
+  <li>
+    <span class="pill">ADD_CAUSAL_GRAPH</span>
+    <span class="meta">2026-09-04 · codex</span>
+    <p>Added a biofilm EPS gradient structuring graph backed by PMID:27510863, DOI:10.1038/nrmicro.2016.94, PMID:20676145, DOI:10.1038/nrmicro2415, PMID:35149841, and DOI:10.1038/s41579-022-00692-2.</p>
   </li>
 </ol>
 

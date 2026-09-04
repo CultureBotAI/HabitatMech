@@ -78,6 +78,178 @@ def test_record_pages_carry_no_corpus_wide_counts(repo_root):
         )
 
 
+def test_record_pages_render_curated_causal_graphs(repo_root):
+    expected = {
+        "hypersaline-water-envo-00002012.html": (
+            "Hypersaline osmoadaptation",
+            "salinity_reduces_water_activity",
+            "PMID:29529204",
+        ),
+        "compost-envo-00002170.html": (
+            "Aerobic thermophilic decomposition",
+            "oxygen_enables_solid_state_biodegradation",
+            "PMID:16454493",
+        ),
+        "waste-water-envo-00002001.html": (
+            "Wastewater organic-nitrogen biotreatment",
+            "denitrifiers_perform_denitrification",
+            "PMID:18811652",
+        ),
+        "building-envo-00000073.html": (
+            "Building surface human-air assembly",
+            "ventilation_introduces_outdoor_air",
+            "PMID:23621155",
+        ),
+        "bioreactor-envo-00002123.html": (
+            "Bioreactor feed dilution biomass selection",
+            "methanogenic_archaea_produce_methane",
+            "PMID:24246480",
+        ),
+        "biofilm-envo-00002034.html": (
+            "Biofilm EPS gradient structuring",
+            "gradients_drive_heterogeneity",
+            "PMID:35149841",
+        ),
+        "fresh-water-envo-00002011.html": (
+            "Freshwater hypoosmotic response",
+            "freshwater_has_low_osmotic_pressure",
+            "DOI:10.1085/jgp.201411296",
+        ),
+        "brackish-water-envo-00002019.html": (
+            "Brackish water salinity-transition osmoregulation",
+            "transport_enables_compatible_solutes",
+            "PMID:21663439",
+        ),
+        "aquatic-biome-envo-00002030.html": (
+            "Aquatic biome light-redox carbon cycling",
+            "redox_gradients_select_anaerobic_metabolism",
+            "PMID:18497287",
+        ),
+        "liquid-water-envo-00002006.html": (
+            "Liquid water planktonic solute foraging",
+            "gradients_select_chemotactic_motility",
+            "PMID:23204367",
+        ),
+        "intestine-environment-envo-2100002.html": (
+            "Intestinal anaerobic glycan fermentation",
+            "beta_oxidation_limits_luminal_oxygen",
+            "PMID:29902436",
+        ),
+        "root-nodule-envo-01000164.html": (
+            "Root nodule symbiotic nitrogen fixation",
+            "low_oxygen_enables_nitrogenase",
+            "PMID:31655741",
+        ),
+        "sludge-envo-00002044.html": (
+            "Sludge floc oxygen partitioning",
+            "floc_matrix_generates_oxygen_gradients",
+            "PMID:12827702",
+        ),
+        "plant-associated-environment-envo-01001001.html": (
+            "Plant root exudate microbiome assembly",
+            "plant_roots_release_exudates",
+            "PMID:32788714",
+        ),
+        "fungi-associated-environment-envo-01001041.html": (
+            "Fungi-associated hyphae mycosphere dispersal",
+            "flagellar_motility_drives_dispersal",
+            "PMID:16047804",
+        ),
+        "leaf-po-0025034.html": (
+            "Leaf phyllosphere water-nutrient stress",
+            "surface_water_controls_sugar_flux",
+            "PMID:14665692",
+        ),
+        "milk-uberon-0001913.html": (
+            "Milk carbohydrate lactic-acid assembly",
+            "oligosaccharide_catabolism_releases_organic_acids",
+            "PMID:19033196",
+        ),
+        "soil-envo-00001998.html": (
+            "Soil pore organic-matter microhabitats",
+            "soil_contains_pore_network",
+            "PMID:23055998",
+        ),
+        "forest-soil-envo-00002261.html": (
+            "Forest soil root-litter fungal cycling",
+            "saprotrophs_contribute_to_guild_competition",
+            "PMID:29880913",
+        ),
+        "forested-area-envo-00000111.html": (
+            "Forested area tree litter deadwood mosaic",
+            "forest_bacteria_contribute_to_decomposition",
+            "PMID:33436515",
+        ),
+        "plant-litter-envo-01000628.html": (
+            "Plant litter lignocellulose decomposition",
+            "decomposing_litter_selects_cellulolytic_bacteria",
+            "PMID:27543318",
+        ),
+        "terrestrial-biome-envo-00000446.html": (
+            "Terrestrial biome root-litter soil pulses",
+            "soil_pores_structure_water_films",
+            "DOI:10.1146/annurev-ecolsys-110617-062614",
+        ),
+        "peat-soil-envo-00005774.html": (
+            "Peat soil acidic methane cycling",
+            "methane_oxidation_feeds_sphagnum_photosynthesis",
+            "PMID:16121180",
+        ),
+        "agricultural-soil-envo-00002259.html": (
+            "Agricultural nitrogen nitrification loss",
+            "agriculture_controls_fertilizer_inputs",
+            "PMID:31543867",
+        ),
+        "sea-water-envo-00002149.html": (
+            "Seawater DOM oligotrophic uptake",
+            "seawater_contains_dom",
+            "PMID:34010286",
+        ),
+        "marine-water-body-envo-00001999.html": (
+            "Marine water body biological carbon pump",
+            "dark_ocean_hosts_remineralization",
+            "DOI:10.1038/ngeo1921",
+        ),
+        "hydrothermal-vent-envo-00000215.html": (
+            "Hydrothermal vent redox chemolithoautotrophy",
+            "hydrogen_oxidation_fuels_carbon_fixation",
+            "PMID:29891698",
+        ),
+        "hot-spring-envo-00000051.html": (
+            "Hot spring thermophile chemolithoautotrophy",
+            "hydrogen_fuels_hot_spring_primary_production",
+            "PMID:15671178",
+        ),
+        "deep-marine-sediment-envo-00002113.html": (
+            "Deep marine sediment sulfate-methane transition",
+            "aom_consumes_methane",
+            "PMID:11034209",
+        ),
+        "marine-sediment-envo-03000033.html": (
+            "Marine sediment sulfate sulfur cycling",
+            "sulfide_selects_sulfur_oxidizers",
+            "PMID:31105660",
+        ),
+        "sediment-envo-00002007.html": (
+            "Sediment porewater redox ladder",
+            "redox_zonation_orders_electron_acceptors",
+            "PMID:31388058",
+        ),
+        "grassland-soil-envo-00005750.html": (
+            "Grassland soil root drought carbon pulses",
+            "drought_followed_by_rewetting",
+            "PMID:35762785",
+        ),
+    }
+
+    for filename, needles in expected.items():
+        html = (repo_root / "pages" / "habitats" / filename).read_text(
+            encoding="utf-8"
+        )
+        for needle in needles:
+            assert needle in html
+
+
 def test_nojekyll_is_present(repo_root):
     """Without it, Pages runs Jekyll and silently drops paths beginning with an
     underscore — a 404 rather than an error anyone sees (#32)."""

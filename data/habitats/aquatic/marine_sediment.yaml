@@ -157,9 +157,220 @@ characteristic_taxa:
   source: MADIN
   taxon_label: Mucilaginibacter litoreus
   candidate_pool: 837
+causal_graphs:
+- graph_id: marine_sediment_sulfate_sulfur_cycling
+  title: Marine sediment sulfate sulfur cycling
+  description: Marine sediment receives settling organic particles and seawater sulfate;
+    oxygen depletion in porewater selects sulfate-reducing microorganisms that mineralize
+    organic carbon to sulfide, and the sulfide is either reoxidized by sulfur-cycling
+    microorganisms or trapped with reactive iron as reduced sulfur minerals.
+  nodes:
+  - node_id: marine_sediment
+    label: marine sediment
+    node_type: HABITAT
+    grounding: ENVO:03000033
+  - node_id: settling_marine_particles
+    label: settling marine particles
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: buried_organic_matter
+    label: buried organic matter
+    node_type: CHEMICAL
+  - node_id: oxygen_depletion
+    label: oxygen depletion
+    node_type: ENVIRONMENTAL_PARAMETER
+  - node_id: anoxic_porewater
+    label: anoxic porewater
+    node_type: STATE
+  - node_id: seawater_sulfate
+    label: seawater sulfate
+    node_type: CHEMICAL
+  - node_id: sulfate_reducing_microorganisms
+    label: sulfate-reducing microorganisms
+    node_type: TAXON
+  - node_id: microbial_sulfate_reduction
+    label: microbial sulfate reduction
+    node_type: PATHWAY
+  - node_id: carbon_mineralization
+    label: carbon mineralization
+    node_type: COMMUNITY_PROCESS
+  - node_id: hydrogen_sulfide
+    label: hydrogen sulfide
+    node_type: CHEMICAL
+  - node_id: sulfur_oxidizing_microorganisms
+    label: sulfur-oxidizing microorganisms
+    node_type: TAXON
+  - node_id: sulfide_oxidation
+    label: sulfide oxidation
+    node_type: PATHWAY
+  - node_id: reactive_iron_minerals
+    label: reactive iron minerals
+    node_type: CHEMICAL
+  - node_id: iron_sulfide_minerals
+    label: iron sulfide minerals
+    node_type: CHEMICAL
+  edges:
+  - edge_id: marine_sediment_receives_particles
+    subject: marine_sediment
+    predicate: receives
+    object: settling_marine_particles
+    description: Marine sediment forms from particles transported through the marine
+      water column and deposited on the seafloor.
+    evidence:
+    - reference: PMID:31388058
+      snippet: Subseafloor life and its biogeochemical impacts
+      notes: D'Hondt and colleagues review marine sediment as a habitat where deposited
+        particles bury biomass and support microbial activity.
+  - edge_id: particles_bury_marine_organic_matter
+    subject: settling_marine_particles
+    predicate: buries
+    object: buried_organic_matter
+    description: Settling marine particles bury organic matter into porewater habitats
+      on and below the seafloor.
+    evidence:
+    - reference: PMID:31388058
+      snippet: redox zonation in marine sediment
+      notes: D'Hondt and colleagues connect marine sediment burial, organic matter
+        supply, and depth-ordered microbial respiration.
+  - edge_id: buried_organic_matter_depletes_oxygen
+    subject: buried_organic_matter
+    predicate: contributes to
+    object: oxygen_depletion
+    description: Microbial remineralization of buried organic matter consumes oxygen
+      and drives porewater toward anoxia.
+    evidence:
+    - reference: PMID:31105660
+      snippet: The Biogeochemical Sulfur Cycle of Marine Sediments
+      notes: Jorgensen and colleagues review anoxic seabed organic matter mineralization
+        by sulfate-reducing microorganisms.
+  - edge_id: oxygen_depletion_creates_anoxic_porewater
+    subject: oxygen_depletion
+    predicate: creates
+    object: anoxic_porewater
+    description: Oxygen is depleted rapidly below the sediment-water interface, creating
+      anoxic marine porewater.
+    evidence:
+    - reference: PMID:31388058
+      snippet: standard model of redox zonation
+      notes: D'Hondt and colleagues review marine sediment redox zones ordered by
+        the availability of electron acceptors.
+  - edge_id: seawater_supplies_sulfate
+    subject: marine_sediment
+    predicate: receives
+    object: seawater_sulfate
+    description: Marine sediment porewaters receive sulfate from overlying seawater.
+    evidence:
+    - reference: PMID:31105660
+      snippet: sulfur cycle of marine sediments
+      notes: Jorgensen and colleagues review sulfate fluxes, microbial sulfate reduction,
+        and sulfide reoxidation in marine sediment porewaters.
+  - edge_id: sulfate_selects_sulfate_reducers
+    subject: seawater_sulfate
+    predicate: selects for
+    object: sulfate_reducing_microorganisms
+    description: The availability of seawater sulfate in anoxic porewater selects
+      microorganisms that respire sulfate.
+    evidence:
+    - reference: PMID:28419734
+      snippet: The life sulfuric
+      notes: Wasmund and colleagues reviewed the microbial ecology of sulfate-reducing
+        and sulfur-cycling microorganisms in marine sediments.
+  - edge_id: anoxic_porewater_enables_sulfate_reduction
+    subject: anoxic_porewater
+    predicate: enables
+    object: microbial_sulfate_reduction
+    description: Anoxic porewater allows sulfate reduction to proceed after oxygen
+      and other higher-energy electron acceptors are consumed.
+    evidence:
+    - reference: PMID:35308366
+      snippet: anoxic marine sediment
+      notes: Nagakura and colleagues summarize sulfate reduction as a major microbial
+        organic-matter-degradation process in anoxic marine sediment.
+  - edge_id: sulfate_reducers_perform_sulfate_reduction
+    subject: sulfate_reducing_microorganisms
+    predicate: performs
+    object: microbial_sulfate_reduction
+    description: Sulfate-reducing microorganisms couple organic substrate oxidation
+      to sulfate respiration.
+    evidence:
+    - reference: PMID:28419734
+      snippet: microbial ecology of sulfur cycling
+      notes: Wasmund and colleagues reviewed the organisms and pathways mediating
+        microbial sulfate reduction in marine sediment.
+  - edge_id: sulfate_reduction_mineralizes_carbon
+    subject: microbial_sulfate_reduction
+    predicate: drives
+    object: carbon_mineralization
+    description: Sulfate reduction mineralizes buried organic carbon in anoxic marine
+      sediment.
+    evidence:
+    - reference: PMID:31105660
+      snippet: sulfate reduction to sulfide
+      notes: Jorgensen and colleagues review sulfate reduction as a predominant terminal
+        pathway for organic-matter mineralization in the anoxic seabed.
+  - edge_id: sulfate_reduction_produces_sulfide
+    subject: microbial_sulfate_reduction
+    predicate: produces
+    object: hydrogen_sulfide
+    description: Microbial sulfate reduction reduces sulfate to hydrogen sulfide in
+      marine porewaters.
+    evidence:
+    - reference: PMID:28419734
+      snippet: marine sediment sulfur cycling
+      notes: Wasmund and colleagues reviewed sulfate reduction to sulfide and linked
+        sulfur transformations in marine sediments.
+  - edge_id: sulfide_selects_sulfur_oxidizers
+    subject: hydrogen_sulfide
+    predicate: selects for
+    object: sulfur_oxidizing_microorganisms
+    description: Sulfide produced by sulfate reduction selects microorganisms that
+      oxidize reduced sulfur near oxidant-bearing zones.
+    evidence:
+    - reference: PMID:31105660
+      snippet: sulfide oxidation
+      notes: Jorgensen and colleagues review how sulfide produced in marine sediment
+        is reoxidized through biological and geochemical reactions.
+  - edge_id: sulfur_oxidizers_perform_sulfide_oxidation
+    subject: sulfur_oxidizing_microorganisms
+    predicate: performs
+    object: sulfide_oxidation
+    description: Sulfur-oxidizing microorganisms return reduced sulfide toward oxidized
+      sulfur pools.
+    evidence:
+    - reference: PMID:28419734
+      snippet: microbial ecology of sulfur cycling in marine sediments
+      notes: Wasmund and colleagues reviewed sulfide-oxidizing microorganisms that
+        participate in marine sediment sulfur cycling.
+  - edge_id: reactive_iron_traps_sulfide
+    subject: reactive_iron_minerals
+    predicate: reacts with
+    object: hydrogen_sulfide
+    description: Reactive iron minerals intercept sulfide produced by sulfate reduction
+      in marine sediment.
+    evidence:
+    - reference: DOI:10.1016/j.epsl.2022.117841
+      snippet: Sediment mineralogy influences the rate
+      notes: Lin and colleagues showed that clay-linked iron mineralogy can influence
+        sulfate reduction rates in marine sediment.
+  - edge_id: sulfide_reaction_forms_iron_sulfides
+    subject: hydrogen_sulfide
+    predicate: produces
+    object: iron_sulfide_minerals
+    description: Sulfide reacts with reactive iron to form iron sulfide minerals,
+      trapping part of the reduced sulfur pool in sediment.
+    evidence:
+    - reference: PMID:31105660
+      snippet: The Biogeochemical Sulfur Cycle of Marine Sediments
+      notes: Jorgensen and colleagues review iron sulfide formation as an important
+        fate of reduced sulfur in marine sediments.
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD,
     MADIN. Grounding: EXACT.'
+- timestamp: '2026-09-04T00:00:00Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a marine-sediment sulfate sulfur-cycling graph backed by PMID:31388058,
+    PMID:31105660, PMID:28419734, PMID:35308366, and DOI:10.1016/j.epsl.2022.117841.
+  llm_assisted: true

@@ -85,6 +85,85 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
   <tr><td>WATER_VARIABILITY</td><td>occasionally dry</td><td class="meta">kg-microbe environments.csv (soil_agricultural)</td></tr>
 </table>
 
+<h2>Causal graphs</h2>
+<h3>Agricultural nitrogen nitrification loss</h3>
+<p>Agricultural nitrogen inputs regulate ammonium substrate supply, nitrifier populations, nitrate production, and nitrification-linked nitrogen losses from managed soil.</p><table>
+  <caption>agricultural_nitrogen_nitrification_loss edges</caption>
+  <thead><tr><th scope="col">Edge</th><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code>agriculture_controls_fertilizer_inputs</code></td>
+    <td>agricultural soil</td>
+    <td>has management input<br><span class="meta">Agricultural soil is managed through decisions about the amount, chemical form, and timing of nitrogen fertilizer inputs.</span></td>
+    <td>nitrogen fertilizer management</td>
+    <td>
+      <code class="curie">PMID:31543867</code><br><span class="meta">Norton and Ouyang identify fertilizer amount, form, and timing as land-manager controls on agricultural soil nitrification.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>fertilizer_controls_ammonium_availability</code></td>
+    <td>nitrogen fertilizer management</td>
+    <td>controls<br><span class="meta">Nitrogen fertilizer management changes how much ammonium substrate is available to nitrifiers.</span></td>
+    <td>ammonium availability</td>
+    <td>
+      <code class="curie">PMID:31543867</code><br><span class="meta">Norton and Ouyang present ammonium substrate management as one of the two main agricultural nitrification-control strategies.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>ammonium_supply_drives_nitrifier_growth</code></td>
+    <td>ammonium availability</td>
+    <td>selects for<br><span class="meta">Ammonium availability helps determine which active nitrifying microbes grow in agricultural soil.</span></td>
+    <td>nitrifier populations</td>
+    <td>
+      <code class="curie">PMID:31543867</code><br><span class="meta">Norton and Ouyang connect active nitrifier populations to the substrates that drive nitrifier metabolism and growth.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>nitrifiers_carry_out_nitrogen_transformations</code></td>
+    <td>nitrifier populations</td>
+    <td>carries out<br><span class="meta">Nitrifier populations are part of the microbial network that transforms bioavailable nitrogen species.</span></td>
+    <td>microbial nitrification</td>
+    <td>
+      <code class="curie">PMID:29398704</code><br><span class="meta">Kuypers, Marchant, and Kartal review nitrogen transformations as reactions carried out by networks of microorganisms.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>ammonium_is_nitrification_substrate</code></td>
+    <td>ammonium availability</td>
+    <td>fuels<br><span class="meta">Ammonium is the reduced nitrogen substrate oxidized during nitrification.</span></td>
+    <td>microbial nitrification</td>
+    <td>
+      <code class="curie">PMID:22936929</code><br><span class="meta">Shen and colleagues describe ammonia oxidation as the first, rate-limiting step of nitrification.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>nitrification_produces_nitrate</code></td>
+    <td>microbial nitrification</td>
+    <td>produces<br><span class="meta">Nitrification converts ammonium into nitrate that can accumulate in agricultural soil solution.</span></td>
+    <td>nitrate pool</td>
+    <td>
+      <code class="curie">PMID:31543867</code><br><span class="meta">Norton and Ouyang highlight rapid nitrate formation as a dominant process in most agricultural soils.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>nitrification_contributes_to_n_loss</code></td>
+    <td>microbial nitrification</td>
+    <td>contributes to<br><span class="meta">Nitrification can make fertilizer nitrogen unavailable to crop plants through nitrate leaching.</span></td>
+    <td>nitrogen loss</td>
+    <td>
+      <code class="curie">PMID:22936929</code><br><span class="meta">Shen and colleagues describe nitrification as a potential loss path that moves fertilizer nitrogen out of the plant-available pool.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>nitrification_generates_nitrous_oxide</code></td>
+    <td>microbial nitrification</td>
+    <td>generates<br><span class="meta">Nitrification contributes to agricultural soil greenhouse-gas loss through nitrous oxide formation.</span></td>
+    <td>nitrous oxide</td>
+    <td>
+      <code class="curie">PMID:22936929</code><br><span class="meta">Shen and colleagues connect agricultural nitrification to N2O production.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>inhibitors_slow_nitrification</code></td>
+    <td>nitrification inhibitors</td>
+    <td>inhibits<br><span class="meta">Nitrification inhibitors slow microbial ammonium-to-nitrate conversion.</span></td>
+    <td>microbial nitrification</td>
+    <td>
+      <code class="curie">PMID:22936929</code><br><span class="meta">Shen and colleagues describe nitrification inhibitors as tools for decreasing ammonia oxidation rates.</span>    </td>
+  </tr>
+</table>
+
 <h2>Associated taxa</h2>
 <p class="meta">Taxa <em>reported from</em> this habitat, which is weaker than being
 characteristic of it. <code>rank</code> is out of <code>pool</code>: a high rank in a
@@ -288,6 +367,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">REVIEW</span>
     <span class="meta">2026-08-13 · claude-opus-5</span>
     <p>Reviewed and endorsed the seeder&#39;s own resolution. Multi-source review pass: this record is attested by more than one independent vocabulary, and this source&#39;s label or path was read against the record&#39;s ontology term to check the merge is right. It agrees. Source concepts in the same pass whose labels did not agree were re-decided rather than endorsed; see the pass&#39;s other decisions of the same date. (source concept habitatmech:PREGO.d61ebbc0a8)</p>
+  </li>
+  <li>
+    <span class="pill">ADD_CAUSAL_GRAPH</span>
+    <span class="meta">2026-09-04 · codex</span>
+    <p>Added an agricultural nitrogen nitrification-loss graph backed by PMID:31543867, PMID:29398704, and PMID:22936929.</p>
   </li>
 </ol>
 

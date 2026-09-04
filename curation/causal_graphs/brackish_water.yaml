@@ -1,0 +1,274 @@
+identifier: ENVO:00002019
+causal_graphs:
+- graph_id: brackish_water_salinity_transition_osmoregulation
+  title: Brackish water salinity-transition osmoregulation
+  description: Brackish water forms where freshwater inflow and seawater
+    intrusion create intermediate salinity and tidal salinity variability. These
+    osmotic shifts filter freshwater and marine bacterioplankton, select
+    osmoregulatory transport and compatible-solute strategies, and allow
+    brackish-adapted estuarine populations to establish when growth outpaces
+    hydrologic flushing.
+  nodes:
+  - node_id: brackish_water
+    label: brackish water
+    node_type: HABITAT
+    grounding: ENVO:00002019
+  - node_id: freshwater_inflow
+    label: freshwater inflow
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: seawater_intrusion
+    label: seawater intrusion
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: tidal_mixing
+    label: tidal mixing
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: intermediate_salinity
+    label: intermediate salinity
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: salinity_variability
+    label: salinity variability
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: osmotic_stress
+    label: osmotic stress
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: osmoregulatory_transport
+    label: osmoregulatory transport
+    node_type: TRAIT
+  - node_id: compatible_solute_accumulation
+    label: compatible solute accumulation
+    node_type: PATHWAY
+  - node_id: salt_in_strategy
+    label: salt-in ion accumulation
+    node_type: PATHWAY
+  - node_id: freshwater_bacterioplankton
+    label: freshwater bacterioplankton
+    node_type: TAXON
+  - node_id: marine_bacterioplankton
+    label: marine bacterioplankton
+    node_type: TAXON
+  - node_id: estuarine_bacterioplankton
+    label: estuarine bacterioplankton
+    node_type: TAXON
+  - node_id: bacterial_growth
+    label: bacterial growth
+    node_type: COMMUNITY_PROCESS
+  - node_id: water_residence_time
+    label: water residence time
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: community_turnover
+    label: community turnover
+    node_type: COMMUNITY_PROCESS
+  edges:
+  - edge_id: brackish_water_receives_freshwater
+    subject: brackish_water
+    predicate: receives
+    object: freshwater_inflow
+    description: River and freshwater inputs provide the low-salinity endmember
+      of many brackish-water gradients.
+    evidence:
+    - reference: PMID:15006771
+      snippet: estuarine salinity gradient
+      notes: Crump and colleagues sampled bacterioplankton along an estuary
+        where freshwater and marine populations advected into brackish reaches.
+  - edge_id: brackish_water_receives_seawater
+    subject: brackish_water
+    predicate: receives
+    object: seawater_intrusion
+    description: Marine intrusion supplies salts to freshwater, producing the
+      high-salinity side of brackish transition zones.
+    evidence:
+    - reference: PMID:15006771
+      snippet: estuarine salinity gradient
+      notes: The Parker River and Plum Island Sound study related shifts in
+        bacterioplankton to salinity along a freshwater-to-marine estuary.
+  - edge_id: brackish_water_has_tidal_mixing
+    subject: brackish_water
+    predicate: has process
+    object: tidal_mixing
+    description: Brackish estuarine water is repeatedly mixed by tidal exchange
+      with more saline marine water.
+    evidence:
+    - reference: PMID:34544488
+      snippet: tidal cycles
+      notes: Tee and colleagues sampled a river-to-sea system where tidal
+        cycles periodically altered local salinity and nutrient conditions.
+  - edge_id: brackish_water_has_residence_time
+    subject: brackish_water
+    predicate: has characteristic
+    object: water_residence_time
+    description: Brackish reaches retain water for a finite residence time that
+      controls how long advected bacteria can grow before they are flushed.
+    evidence:
+    - reference: PMID:15006771
+      snippet: residence time
+      notes: Crump and colleagues related estuarine bacterioplankton patterns
+        to water residence time along the salinity gradient.
+  - edge_id: tidal_mixing_creates_salinity_variability
+    subject: tidal_mixing
+    predicate: creates
+    object: salinity_variability
+    description: Tidal exchange periodically changes the local mixture of
+      freshwater and seawater, making brackish-water salinity variable.
+    evidence:
+    - reference: PMID:34544488
+      snippet: tidal cycles create periodic fluctuations
+      notes: Tee and colleagues described river-to-sea transects where tidal
+        cycles expose planktonic and benthic communities to fluctuating salinity.
+  - edge_id: freshwater_seawater_mixing_sets_intermediate_salinity
+    subject: freshwater_inflow
+    predicate: mixes with
+    object: seawater_intrusion
+    description: Mixing between freshwater inflow and seawater intrusion sets a
+      salinity range between freshwater and fully marine water.
+    evidence:
+    - reference: PMID:22895159
+      snippet: Delaware Bay salinity gradient
+      notes: Campbell and Kirchman measured bacterial diversity, structure, and
+        potential growth rates across freshwater, brackish, and marine parts of
+        Delaware Bay.
+  - edge_id: brackish_water_has_intermediate_salinity
+    subject: brackish_water
+    predicate: has characteristic
+    object: intermediate_salinity
+    description: The defining physicochemical state of brackish water is
+      salinity that lies between freshwater and marine water.
+    evidence:
+    - reference: PMID:22895159
+      snippet: estuarine salinity gradient
+      notes: The Delaware Bay transect linked measured salinity to bacterial
+        community composition across the freshwater-to-marine transition.
+  - edge_id: intermediate_salinity_imposes_osmotic_stress
+    subject: intermediate_salinity
+    predicate: imposes
+    object: osmotic_stress
+    description: Brackish salinity changes the osmotic pressure that bacterial
+      cells must counter to retain water and turgor.
+    evidence:
+    - reference: PMID:21663439
+      snippet: Bacterial osmoregulation
+      notes: Wood reviewed the homeostatic responses bacteria use as external
+        osmolality changes.
+  - edge_id: salinity_variability_intensifies_osmotic_stress
+    subject: salinity_variability
+    predicate: intensifies
+    object: osmotic_stress
+    description: Fluctuating salinity repeatedly shifts external osmolality,
+      increasing the need for dynamic osmotic adjustment.
+    evidence:
+    - reference: PMID:34544488
+      snippet: gradients in osmoregulation
+      notes: Tee and colleagues connected river-to-sea salinity variation with
+        genomic signatures of osmoregulation in aquatic microbial communities.
+  - edge_id: osmotic_stress_selects_osmoregulatory_transport
+    subject: osmotic_stress
+    predicate: selects for
+    object: osmoregulatory_transport
+    description: Bacteria in brackish gradients need membrane transport systems
+      that import, export, or synthesize osmoprotective solutes as salinity
+      changes.
+    evidence:
+    - reference: PMID:21663439
+      snippet: cellular homeostasis
+      notes: The osmoregulation review describes uptake, release, and synthesis
+        systems that maintain bacterial cell water balance.
+    - reference: DOI:10.1186/s40168-024-01817-w
+      snippet: adaptation to the salinity gradient
+      notes: Wu and colleagues used estuarine metagenomes to identify salinity
+        adaptation strategies across a short-residence-time estuary.
+  - edge_id: transport_enables_compatible_solutes
+    subject: osmoregulatory_transport
+    predicate: enables
+    object: compatible_solute_accumulation
+    description: Compatible-solute import and synthesis let cells counter
+      osmotic stress while preserving cytoplasmic protein function.
+    evidence:
+    - reference: PMID:21663439
+      snippet: Bacterial osmoregulation
+      notes: Wood reviewed compatible-solute accumulation as a widespread
+        bacterial response to hyperosmotic stress.
+    - reference: DOI:10.1186/s40168-024-01817-w
+      snippet: compatible solutes
+      notes: Wu and colleagues reported salt-out adaptation based on compatible
+        solutes along the estuarine salinity gradient.
+  - edge_id: transport_enables_salt_in_strategy
+    subject: osmoregulatory_transport
+    predicate: enables
+    object: salt_in_strategy
+    description: Ion transport can support a salt-in strategy that balances
+      osmotic pressure by accumulating inorganic ions.
+    evidence:
+    - reference: DOI:10.1186/s40168-024-01817-w
+      snippet: salt-in strategy
+      notes: The estuarine metagenomic study contrasted inorganic-ion uptake
+        with compatible-solute-based salt-out responses.
+  - edge_id: osmotic_stress_filters_freshwater_bacteria
+    subject: osmotic_stress
+    predicate: filters
+    object: freshwater_bacterioplankton
+    description: Increasing salinity across the brackish transition filters
+      freshwater bacterioplankton whose growth or activity declines in saltier
+      water.
+    evidence:
+    - reference: PMID:22895159
+      snippet: freshwater taxa declined as salinity increased
+      notes: Campbell and Kirchman found that potential activity of freshwater
+        taxa declined along the Delaware Bay salinity gradient.
+  - edge_id: osmotic_stress_filters_marine_bacteria
+    subject: osmotic_stress
+    predicate: filters
+    object: marine_bacterioplankton
+    description: Freshened brackish reaches filter marine bacterioplankton that
+      are adapted to fully saline water.
+    evidence:
+    - reference: PMID:15006771
+      snippet: freshwater and marine populations
+      notes: Crump and colleagues showed that marine and freshwater populations
+        advected into estuarine waters and that distinct intermediate-salinity
+        communities formed seasonally.
+  - edge_id: salinity_gradient_drives_community_turnover
+    subject: intermediate_salinity
+    predicate: drives
+    object: community_turnover
+    description: The estuarine salinity gradient restructures bacterioplankton
+      composition across freshwater, brackish, and marine zones.
+    evidence:
+    - reference: PMID:15006771
+      snippet: shifts in bacterioplankton community composition
+      notes: Crump and colleagues related community-composition shifts to
+        salinity, bacterial doubling time, and residence time.
+    - reference: PMID:22895159
+      snippet: significantly varied along the transect
+      notes: Campbell and Kirchman observed diversity, evenness, structure, and
+        growth-potential changes along the Delaware Bay salinity gradient.
+  - edge_id: growth_and_residence_time_establish_estuarine_bacteria
+    subject: bacterial_growth
+    predicate: establishes
+    object: estuarine_bacterioplankton
+    description: Brackish-adapted estuarine populations can establish when local
+      bacterial growth is faster than hydrologic residence time and flushing.
+    evidence:
+    - reference: PMID:15006771
+      snippet: bacterial growth and residence time
+      notes: The Parker River and Plum Island Sound study found a unique
+        intermediate-salinity community when average doubling time was much
+        shorter than water residence time.
+  - edge_id: residence_time_modulates_estuarine_establishment
+    subject: water_residence_time
+    predicate: modulates
+    object: estuarine_bacterioplankton
+    description: Hydrologic residence time modulates whether growing estuarine
+      bacteria are retained or flushed through the brackish reach.
+    evidence:
+    - reference: PMID:15006771
+      snippet: residence time
+      notes: Crump and colleagues interpreted community formation as the
+        combined result of growth time relative to estuarine water residence
+        time.
+curation_history:
+- timestamp: '2026-09-04T00:00:00Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a brackish-water salinity-transition osmoregulation graph
+    backed by PMID:15006771, PMID:22895159, PMID:34544488, PMID:21663439, and
+    DOI:10.1186/s40168-024-01817-w.
+  llm_assisted: true

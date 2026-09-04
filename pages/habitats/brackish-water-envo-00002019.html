@@ -78,6 +78,149 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
   <tr><td>WATER_VARIABILITY</td><td>permanently wet</td><td class="meta">kg-microbe environments.csv (water_brackish)</td></tr>
 </table>
 
+<h2>Causal graphs</h2>
+<h3>Brackish water salinity-transition osmoregulation</h3>
+<p>Brackish water forms where freshwater inflow and seawater intrusion create intermediate salinity and tidal salinity variability. These osmotic shifts filter freshwater and marine bacterioplankton, select osmoregulatory transport and compatible-solute strategies, and allow brackish-adapted estuarine populations to establish when growth outpaces hydrologic flushing.</p><table>
+  <caption>brackish_water_salinity_transition_osmoregulation edges</caption>
+  <thead><tr><th scope="col">Edge</th><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code>brackish_water_receives_freshwater</code></td>
+    <td>brackish water</td>
+    <td>receives<br><span class="meta">River and freshwater inputs provide the low-salinity endmember of many brackish-water gradients.</span></td>
+    <td>freshwater inflow</td>
+    <td>
+      <code class="curie">PMID:15006771</code><br><span class="meta">Crump and colleagues sampled bacterioplankton along an estuary where freshwater and marine populations advected into brackish reaches.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>brackish_water_receives_seawater</code></td>
+    <td>brackish water</td>
+    <td>receives<br><span class="meta">Marine intrusion supplies salts to freshwater, producing the high-salinity side of brackish transition zones.</span></td>
+    <td>seawater intrusion</td>
+    <td>
+      <code class="curie">PMID:15006771</code><br><span class="meta">The Parker River and Plum Island Sound study related shifts in bacterioplankton to salinity along a freshwater-to-marine estuary.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>brackish_water_has_tidal_mixing</code></td>
+    <td>brackish water</td>
+    <td>has process<br><span class="meta">Brackish estuarine water is repeatedly mixed by tidal exchange with more saline marine water.</span></td>
+    <td>tidal mixing</td>
+    <td>
+      <code class="curie">PMID:34544488</code><br><span class="meta">Tee and colleagues sampled a river-to-sea system where tidal cycles periodically altered local salinity and nutrient conditions.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>brackish_water_has_residence_time</code></td>
+    <td>brackish water</td>
+    <td>has characteristic<br><span class="meta">Brackish reaches retain water for a finite residence time that controls how long advected bacteria can grow before they are flushed.</span></td>
+    <td>water residence time</td>
+    <td>
+      <code class="curie">PMID:15006771</code><br><span class="meta">Crump and colleagues related estuarine bacterioplankton patterns to water residence time along the salinity gradient.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>tidal_mixing_creates_salinity_variability</code></td>
+    <td>tidal mixing</td>
+    <td>creates<br><span class="meta">Tidal exchange periodically changes the local mixture of freshwater and seawater, making brackish-water salinity variable.</span></td>
+    <td>salinity variability</td>
+    <td>
+      <code class="curie">PMID:34544488</code><br><span class="meta">Tee and colleagues described river-to-sea transects where tidal cycles expose planktonic and benthic communities to fluctuating salinity.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>freshwater_seawater_mixing_sets_intermediate_salinity</code></td>
+    <td>freshwater inflow</td>
+    <td>mixes with<br><span class="meta">Mixing between freshwater inflow and seawater intrusion sets a salinity range between freshwater and fully marine water.</span></td>
+    <td>seawater intrusion</td>
+    <td>
+      <code class="curie">PMID:22895159</code><br><span class="meta">Campbell and Kirchman measured bacterial diversity, structure, and potential growth rates across freshwater, brackish, and marine parts of Delaware Bay.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>brackish_water_has_intermediate_salinity</code></td>
+    <td>brackish water</td>
+    <td>has characteristic<br><span class="meta">The defining physicochemical state of brackish water is salinity that lies between freshwater and marine water.</span></td>
+    <td>intermediate salinity</td>
+    <td>
+      <code class="curie">PMID:22895159</code><br><span class="meta">The Delaware Bay transect linked measured salinity to bacterial community composition across the freshwater-to-marine transition.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>intermediate_salinity_imposes_osmotic_stress</code></td>
+    <td>intermediate salinity</td>
+    <td>imposes<br><span class="meta">Brackish salinity changes the osmotic pressure that bacterial cells must counter to retain water and turgor.</span></td>
+    <td>osmotic stress</td>
+    <td>
+      <code class="curie">PMID:21663439</code><br><span class="meta">Wood reviewed the homeostatic responses bacteria use as external osmolality changes.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>salinity_variability_intensifies_osmotic_stress</code></td>
+    <td>salinity variability</td>
+    <td>intensifies<br><span class="meta">Fluctuating salinity repeatedly shifts external osmolality, increasing the need for dynamic osmotic adjustment.</span></td>
+    <td>osmotic stress</td>
+    <td>
+      <code class="curie">PMID:34544488</code><br><span class="meta">Tee and colleagues connected river-to-sea salinity variation with genomic signatures of osmoregulation in aquatic microbial communities.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>osmotic_stress_selects_osmoregulatory_transport</code></td>
+    <td>osmotic stress</td>
+    <td>selects for<br><span class="meta">Bacteria in brackish gradients need membrane transport systems that import, export, or synthesize osmoprotective solutes as salinity changes.</span></td>
+    <td>osmoregulatory transport</td>
+    <td>
+      <code class="curie">PMID:21663439</code><br><span class="meta">The osmoregulation review describes uptake, release, and synthesis systems that maintain bacterial cell water balance.</span>      <code class="curie">DOI:10.1186/s40168-024-01817-w</code><br><span class="meta">Wu and colleagues used estuarine metagenomes to identify salinity adaptation strategies across a short-residence-time estuary.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>transport_enables_compatible_solutes</code></td>
+    <td>osmoregulatory transport</td>
+    <td>enables<br><span class="meta">Compatible-solute import and synthesis let cells counter osmotic stress while preserving cytoplasmic protein function.</span></td>
+    <td>compatible solute accumulation</td>
+    <td>
+      <code class="curie">PMID:21663439</code><br><span class="meta">Wood reviewed compatible-solute accumulation as a widespread bacterial response to hyperosmotic stress.</span>      <code class="curie">DOI:10.1186/s40168-024-01817-w</code><br><span class="meta">Wu and colleagues reported salt-out adaptation based on compatible solutes along the estuarine salinity gradient.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>transport_enables_salt_in_strategy</code></td>
+    <td>osmoregulatory transport</td>
+    <td>enables<br><span class="meta">Ion transport can support a salt-in strategy that balances osmotic pressure by accumulating inorganic ions.</span></td>
+    <td>salt-in ion accumulation</td>
+    <td>
+      <code class="curie">DOI:10.1186/s40168-024-01817-w</code><br><span class="meta">The estuarine metagenomic study contrasted inorganic-ion uptake with compatible-solute-based salt-out responses.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>osmotic_stress_filters_freshwater_bacteria</code></td>
+    <td>osmotic stress</td>
+    <td>filters<br><span class="meta">Increasing salinity across the brackish transition filters freshwater bacterioplankton whose growth or activity declines in saltier water.</span></td>
+    <td>freshwater bacterioplankton</td>
+    <td>
+      <code class="curie">PMID:22895159</code><br><span class="meta">Campbell and Kirchman found that potential activity of freshwater taxa declined along the Delaware Bay salinity gradient.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>osmotic_stress_filters_marine_bacteria</code></td>
+    <td>osmotic stress</td>
+    <td>filters<br><span class="meta">Freshened brackish reaches filter marine bacterioplankton that are adapted to fully saline water.</span></td>
+    <td>marine bacterioplankton</td>
+    <td>
+      <code class="curie">PMID:15006771</code><br><span class="meta">Crump and colleagues showed that marine and freshwater populations advected into estuarine waters and that distinct intermediate-salinity communities formed seasonally.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>salinity_gradient_drives_community_turnover</code></td>
+    <td>intermediate salinity</td>
+    <td>drives<br><span class="meta">The estuarine salinity gradient restructures bacterioplankton composition across freshwater, brackish, and marine zones.</span></td>
+    <td>community turnover</td>
+    <td>
+      <code class="curie">PMID:15006771</code><br><span class="meta">Crump and colleagues related community-composition shifts to salinity, bacterial doubling time, and residence time.</span>      <code class="curie">PMID:22895159</code><br><span class="meta">Campbell and Kirchman observed diversity, evenness, structure, and growth-potential changes along the Delaware Bay salinity gradient.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>growth_and_residence_time_establish_estuarine_bacteria</code></td>
+    <td>bacterial growth</td>
+    <td>establishes<br><span class="meta">Brackish-adapted estuarine populations can establish when local bacterial growth is faster than hydrologic residence time and flushing.</span></td>
+    <td>estuarine bacterioplankton</td>
+    <td>
+      <code class="curie">PMID:15006771</code><br><span class="meta">The Parker River and Plum Island Sound study found a unique intermediate-salinity community when average doubling time was much shorter than water residence time.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>residence_time_modulates_estuarine_establishment</code></td>
+    <td>water residence time</td>
+    <td>modulates<br><span class="meta">Hydrologic residence time modulates whether growing estuarine bacteria are retained or flushed through the brackish reach.</span></td>
+    <td>estuarine bacterioplankton</td>
+    <td>
+      <code class="curie">PMID:15006771</code><br><span class="meta">Crump and colleagues interpreted community formation as the combined result of growth time relative to estuarine water residence time.</span>    </td>
+  </tr>
+</table>
+
 <h2>Associated taxa</h2>
 <p class="meta">Taxa <em>reported from</em> this habitat, which is weaker than being
 characteristic of it. <code>rank</code> is out of <code>pool</code>: a high rank in a
@@ -268,6 +411,16 @@ second, independent source are listed first.</p>
 <ul class="plain">
 <li>brackish waters <span class="meta">— PREGO</span></li></ul>
 
+<h2>Curation</h2>
+<p class="meta">What a curator decided about this record, and why. A record built
+from several source concepts can carry one decision per concept.</p>
+<ol class="events">
+  <li>
+    <span class="pill">ADD_CAUSAL_GRAPH</span>
+    <span class="meta">2026-09-04 · codex</span>
+    <p>Added a brackish-water salinity-transition osmoregulation graph backed by PMID:15006771, PMID:22895159, PMID:34544488, PMID:21663439, and DOI:10.1186/s40168-024-01817-w.</p>
+  </li>
+</ol>
 
 <h2>Provenance</h2>
 <p class="meta">

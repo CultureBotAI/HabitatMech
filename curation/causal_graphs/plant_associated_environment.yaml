@@ -1,0 +1,115 @@
+identifier: ENVO:01001001
+causal_graphs:
+- graph_id: plant_root_exudate_microbiome_assembly
+  title: Plant root exudate microbiome assembly
+  description: Root exudates, microbial substrate preferences, and plant immune
+    signaling filter soil microbes into plant-associated root microbiomes that
+    support plant-beneficial functions.
+  nodes:
+  - node_id: plant_associated_environment
+    label: plant-associated environment
+    node_type: HABITAT
+    grounding: ENVO:01001001
+  - node_id: root_exudates
+    label: root exudates
+    node_type: CHEMICAL
+  - node_id: microbial_substrate_preferences
+    label: microbial substrate preferences
+    node_type: TRAIT
+  - node_id: salicylic_acid_signaling
+    label: salicylic acid signaling
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: root_bacterial_colonization
+    label: root bacterial colonization
+    node_type: COMMUNITY_PROCESS
+  - node_id: rhizosphere_microbiome_assembly
+    label: rhizosphere microbiome assembly
+    node_type: COMMUNITY_PROCESS
+  - node_id: plant_beneficial_functions
+    label: plant-beneficial functions
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - edge_id: plant_roots_release_exudates
+    subject: plant_associated_environment
+    predicate: provides
+    object: root_exudates
+    description: Green plant roots release diverse exuded chemicals into
+      plant-associated root environments.
+    evidence:
+    - reference: DOI:10.1139/cjb-2013-0225
+      snippet: release a broad variety of chemical compounds
+      notes: Huang and colleagues summarize root exudates as plant-released
+        chemical mixtures at the plant-root and rhizosphere interface.
+  - edge_id: exudates_select_rhizosphere_microbes
+    subject: root_exudates
+    predicate: recruits
+    object: rhizosphere_microbiome_assembly
+    description: Root-exudate chemistry attracts and selects microorganisms in
+      the rhizosphere.
+    evidence:
+    - reference: DOI:10.1139/cjb-2013-0225
+      snippet: attract and select microorganisms in the rhizosphere
+      notes: Huang and colleagues review plant exudate compounds that mediate
+        both plant-microbe and plant-microbiome interactions.
+  - edge_id: substrate_traits_match_exudates
+    subject: microbial_substrate_preferences
+    predicate: responds to
+    object: root_exudates
+    description: Rhizosphere bacteria are filtered by the exuded substrates they
+      can consume.
+    evidence:
+    - reference: PMID:29556109
+      snippet: predicted and observed substrate preferences
+      notes: Zhalnina and colleagues compared rhizosphere bacterial growth
+        responses with genome-predicted and measured substrate preferences.
+  - edge_id: substrate_traits_drive_assembly
+    subject: microbial_substrate_preferences
+    predicate: drives
+    object: rhizosphere_microbiome_assembly
+    description: Microbial substrate-use traits help translate dynamic exudate
+      chemistry into rhizosphere community-assembly patterns.
+    evidence:
+    - reference: PMID:29556109
+      snippet: patterns in rhizosphere microbial community assembly
+      notes: Zhalnina and colleagues linked exudate chemistry and bacterial
+        substrate preferences to observed rhizosphere community assembly.
+  - edge_id: salicylic_acid_modulates_root_colonization
+    subject: salicylic_acid_signaling
+    predicate: modulates
+    object: root_bacterial_colonization
+    description: Plant immune signaling through salicylic acid modulates which
+      bacterial taxa colonize roots.
+    evidence:
+    - reference: PMID:26184915
+      snippet: colonization of the root microbiome
+      notes: Lebeis and colleagues measured Arabidopsis root communities and
+        found specific bacterial-taxon responses to salicylic acid signaling.
+  - edge_id: colonization_contributes_to_microbiome_assembly
+    subject: root_bacterial_colonization
+    predicate: contributes to
+    object: rhizosphere_microbiome_assembly
+    description: Host-filtered root colonization contributes to the assembled
+      plant-associated root microbiome.
+    evidence:
+    - reference: PMID:32788714
+      snippet: shape the assembly of plant-associated microbiomes
+      notes: Trivedi and colleagues review genetic, biochemical, physical, and
+        metabolic interactions as drivers of plant microbiome assembly.
+  - edge_id: assembly_modulates_plant_beneficial_functions
+    subject: rhizosphere_microbiome_assembly
+    predicate: modulates
+    object: plant_beneficial_functions
+    description: Assembled plant microbiomes modulate beneficial functions,
+      including nutrient acquisition and plant health.
+    evidence:
+    - reference: PMID:32788714
+      snippet: nutrient acquisition and plant health
+      notes: Trivedi and colleagues summarize how plant microbiome interactions
+        influence beneficial traits.
+curation_history:
+- timestamp: '2026-09-04T00:00:00Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a root-exudate microbiome-assembly graph backed by
+    DOI:10.1139/cjb-2013-0225, PMID:29556109, PMID:26184915, and PMID:32788714.
+  llm_assisted: true

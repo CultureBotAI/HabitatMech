@@ -313,9 +313,261 @@ characteristic_taxa:
   source: MADIN
   taxon_label: Sphingomonas sp. URHD0057
   candidate_pool: 35
+causal_graphs:
+- graph_id: grassland_soil_root_drought_carbon_pulses
+  title: Grassland soil root drought carbon pulses
+  description: Grassland soils are structured by dense herbaceous root systems, moderate
+    organic inputs, and recurrent shifts in water availability. Root exudates and
+    root litter feed rhizosphere bacteria, arbuscular mycorrhizal fungi couple roots
+    to nutrient cycling, and drought followed by rewetting redistributes soluble carbon
+    and shifts the bacteria and fungi responsible for decomposition, nitrogen cycling,
+    and extracellular enzyme production.
+  nodes:
+  - node_id: grassland_soil
+    label: grassland soil
+    node_type: HABITAT
+    grounding: ENVO:00005750
+  - node_id: grassland_plant_cover
+    label: grassland plant cover
+    node_type: HABITAT
+  - node_id: dense_fine_roots
+    label: dense fine roots
+    node_type: HABITAT
+  - node_id: root_exudates
+    label: root exudates
+    node_type: CHEMICAL
+  - node_id: root_litter
+    label: root litter
+    node_type: CHEMICAL
+  - node_id: rhizosphere_bacteria
+    label: rhizosphere bacteria
+    node_type: TAXON
+  - node_id: arbuscular_mycorrhizal_fungi
+    label: arbuscular mycorrhizal fungi
+    node_type: TAXON
+  - node_id: soil_organic_matter
+    label: soil organic matter
+    node_type: CHEMICAL
+  - node_id: extracellular_enzymes
+    label: extracellular enzymes
+    node_type: GENE_OR_PROTEIN
+  - node_id: polymer_decomposition
+    label: polymer decomposition
+    node_type: COMMUNITY_PROCESS
+  - node_id: nitrogen_cycling
+    label: nitrogen cycling
+    node_type: COMMUNITY_PROCESS
+  - node_id: intermittent_drought
+    label: intermittent drought
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: rewetting_pulse
+    label: rewetting pulse
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: soluble_carbon_pulse
+    label: soluble carbon pulse
+    node_type: CHEMICAL
+  - node_id: drought_resistant_microbes
+    label: drought-resistant microbes
+    node_type: TAXON
+  edges:
+  - edge_id: grassland_soil_determined_by_plant_cover
+    subject: grassland_soil
+    predicate: determined by
+    object: grassland_plant_cover
+    description: Grassland vegetation defines the soil context and supplies the belowground
+      plant inputs that feed grassland soil microorganisms.
+    evidence:
+    - reference: DOI:10.1007/s10705-009-9314-3
+      snippet: Does grassland vegetation drive soil microbial diversity?
+      notes: Millard and Singh reviewed links between grassland vegetation, root carbon
+        release, and soil microbial diversity.
+  - edge_id: plant_cover_extends_roots
+    subject: grassland_plant_cover
+    predicate: extends
+    object: dense_fine_roots
+    description: Herbaceous grassland plants form dense fine-root systems that create
+      a large rhizosphere interface in soil.
+    evidence:
+    - reference: DOI:10.1007/s10705-009-9314-3
+      snippet: grassland vegetation
+      notes: The grassland vegetation review discusses roots as the main route by
+        which plants affect nearby soil microbial activity.
+  - edge_id: fine_roots_release_exudates
+    subject: dense_fine_roots
+    predicate: releases
+    object: root_exudates
+    description: Living grassland roots release soluble carbon compounds into surrounding
+      soil.
+    evidence:
+    - reference: PMID:30464767
+      snippet: root exudates
+      notes: Karlowsky and colleagues traced recently assimilated carbon into water-extractable
+        organic carbon and microbial biomarkers in mountain grassland soils.
+  - edge_id: exudates_select_rhizosphere_bacteria
+    subject: root_exudates
+    predicate: selects for
+    object: rhizosphere_bacteria
+    description: Root-derived carbon favors bacteria that can exploit fresh rhizodeposits
+      near grassland roots.
+    evidence:
+    - reference: DOI:10.3389/fpls.2018.01593
+      snippet: Post-drought Recovery of Microbes
+      notes: The mountain-grassland pulse-labeling study linked root exudates to bacterial
+        and fungal microbial recovery after drought.
+  - edge_id: fine_roots_feed_am_fungi
+    subject: dense_fine_roots
+    predicate: feeds
+    object: arbuscular_mycorrhizal_fungi
+    description: Grassland roots support arbuscular mycorrhizal fungi that exchange
+      fungal-acquired nutrients for plant carbon.
+    evidence:
+    - reference: DOI:10.1111/1365-2745.13521
+      snippet: Symbiotic soil fungi
+      notes: Jia and colleagues used experimental grassland microcosms to test how
+        arbuscular mycorrhizal fungi affect drought and nitrogen responses.
+  - edge_id: am_fungi_support_nitrogen_cycling
+    subject: arbuscular_mycorrhizal_fungi
+    predicate: contributes to
+    object: nitrogen_cycling
+    description: Arbuscular mycorrhizal fungi couple the plant community to soil nitrogen
+      cycling and nitrogen-retention responses.
+    evidence:
+    - reference: DOI:10.1111/1365-2745.13521
+      snippet: drought and nitrogen deposition
+      notes: Jia and colleagues found that arbuscular mycorrhizal fungi influenced
+        nitrogen cycling and nitrogen losses in experimental grassland communities.
+  - edge_id: roots_contribute_litter
+    subject: dense_fine_roots
+    predicate: produces
+    object: root_litter
+    description: Turnover of fine grassland roots adds belowground litter to the soil
+      organic matter pool.
+    evidence:
+    - reference: DOI:10.1007/s10705-009-9314-3
+      snippet: grassland vegetation
+      notes: Millard and Singh reviewed root inputs as plant controls on microbial
+        activity and composition in grassland soils.
+  - edge_id: root_litter_feeds_organic_matter
+    subject: root_litter
+    predicate: produces
+    object: soil_organic_matter
+    description: Dead root material supplies organic polymers that are retained and
+      decomposed in grassland soil.
+    evidence:
+    - reference: DOI:10.1007/s10705-009-9314-3
+      snippet: soil microbial diversity
+      notes: The grassland review discusses plant inputs and litter quality as controls
+        on the belowground microbial community.
+  - edge_id: organic_matter_selects_enzyme_producers
+    subject: soil_organic_matter
+    predicate: selects for
+    object: extracellular_enzymes
+    description: Organic polymers select for microorganisms able to invest in extracellular
+      enzymes that hydrolyze plant residues.
+    evidence:
+    - reference: DOI:10.1016/j.soilbio.2013.03.034
+      snippet: Microbial enzymatic responses
+      notes: Alster and colleagues measured grassland soil enzyme activities as microbial
+        responses to drought and nitrogen addition.
+  - edge_id: extracellular_enzymes_drive_decomposition
+    subject: extracellular_enzymes
+    predicate: drives
+    object: polymer_decomposition
+    description: Extracellular enzymes depolymerize root and soil organic matter into
+      substrates that can be assimilated by soil microbes.
+    evidence:
+    - reference: DOI:10.1016/j.soilbio.2013.03.034
+      snippet: southern California grassland
+      notes: The grassland enzyme study profiled hydrolytic and oxidative extracellular
+        enzyme responses to changing water and nitrogen supply.
+  - edge_id: decomposition_releases_nitrogen
+    subject: polymer_decomposition
+    predicate: drives
+    object: nitrogen_cycling
+    description: Decomposition releases organic nitrogen into microbial and inorganic
+      nitrogen pools.
+    evidence:
+    - reference: PMID:35762785
+      snippet: changes in the soil nitrogen cycling
+      notes: Wang and colleagues linked drying-rewetting effects in soil communities
+        to changes with potential consequences for nitrogen cycling.
+  - edge_id: drought_reduces_soil_water
+    subject: grassland_soil
+    predicate: varies by
+    object: intermittent_drought
+    description: Grassland soils can experience water limitation that constrains microbial
+      activity and concentrates soluble root-derived compounds.
+    evidence:
+    - reference: PMID:30464767
+      snippet: Drought-Induced Accumulation
+      notes: The mountain-grassland study showed accumulation of root exudates during
+        drought.
+  - edge_id: drought_selects_resistant_microbes
+    subject: intermittent_drought
+    predicate: selects for
+    object: drought_resistant_microbes
+    description: Low water availability favors grassland soil microorganisms that
+      tolerate matric stress and substrate diffusion limits.
+    evidence:
+    - reference: PMID:35762785
+      snippet: Drying-Rewetting Cycle
+      notes: Wang and colleagues experimentally compared chronic precipitation reduction
+        with a drying-rewetting cycle and measured shifts in grassland soil bacteria
+        and fungi.
+  - edge_id: drought_accumulates_soluble_carbon
+    subject: intermittent_drought
+    predicate: produces
+    object: soluble_carbon_pulse
+    description: Drought allows root-derived soluble carbon to accumulate in soil
+      before rapid use after water returns.
+    evidence:
+    - reference: DOI:10.3389/fpls.2018.01593
+      snippet: root exudates supports post-drought recovery
+      notes: Karlowsky and colleagues found drought accumulation of root exudates
+        that supported microbial recovery after rewetting.
+  - edge_id: drought_followed_by_rewetting
+    subject: intermittent_drought
+    predicate: followed by
+    object: rewetting_pulse
+    description: Return of precipitation after grassland soil drought produces a rapid
+      rewetting pulse for the surviving microbial community.
+    evidence:
+    - reference: PMID:35762785
+      snippet: drying-rewetting cycle
+      notes: Wang and colleagues imposed drought followed by rewetting to measure
+        pulse responses of grassland soil microbial communities.
+  - edge_id: rewetting_releases_carbon_pulse
+    subject: rewetting_pulse
+    predicate: mobilizes
+    object: soluble_carbon_pulse
+    description: Rewetting reconnects soil water films and mobilizes accumulated soluble
+      substrates to surviving microbial cells.
+    evidence:
+    - reference: PMID:30464767
+      snippet: post-drought recovery
+      notes: Pulse-labeling in mountain grassland showed post-drought microbial recovery
+        supported by carbon accumulated during drought.
+  - edge_id: rewetting_shifts_nitrogen_cycling
+    subject: rewetting_pulse
+    predicate: alters
+    object: nitrogen_cycling
+    description: A drying-rewetting pulse changes the abundance and activity of microbial
+      nitrogen-cycling guilds in grassland soil.
+    evidence:
+    - reference: DOI:10.1128/msystems.00247-22
+      snippet: Drying-Rewetting Cycle
+      notes: Wang and colleagues found that a drying-rewetting cycle shifted grassland
+        soil microbial communities more strongly than reduced precipitation alone.
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, MADIN,
     PREGO. Grounding: EXACT.'
+- timestamp: '2026-09-04T00:00:00Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a grassland soil root drought carbon pulses graph backed by DOI:10.1007/s10705-009-9314-3,
+    PMID:30464767, DOI:10.3389/fpls.2018.01593, DOI:10.1111/1365-2745.13521, DOI:10.1016/j.soilbio.2013.03.034,
+    PMID:35762785, and DOI:10.1128/msystems.00247-22.
+  llm_assisted: true

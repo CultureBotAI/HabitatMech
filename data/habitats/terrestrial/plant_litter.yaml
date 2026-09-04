@@ -318,6 +318,224 @@ characteristic_taxa:
   source: MADIN
   taxon_label: acidicapsa_borealis
   candidate_pool: 19
+causal_graphs:
+- graph_id: plant_litter_lignocellulose_decomposition
+  title: Plant litter lignocellulose decomposition
+  description: Dead leaves, bark, needles, and twigs expose lignocellulose and soluble
+    plant metabolites to decomposer fungi and bacteria; fungal extracellular enzymes
+    depolymerize cellulose and lignin, bacterial taxa succeed on the changing substrate
+    pool, and the consortium mineralizes plant carbon and nutrients into soil organic
+    matter and dissolved organic matter.
+  nodes:
+  - node_id: plant_litter
+    label: plant litter
+    node_type: HABITAT
+    grounding: ENVO:01000628
+  - node_id: fallen_plant_tissues
+    label: fallen plant tissues
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: lignocellulose
+    label: lignocellulose
+    node_type: CHEMICAL
+  - node_id: soluble_litter_dom
+    label: soluble litter dissolved organic matter
+    node_type: CHEMICAL
+  - node_id: saprotrophic_fungi
+    label: saprotrophic fungi
+    node_type: TAXON
+  - node_id: fungal_extracellular_enzymes
+    label: fungal extracellular enzymes
+    node_type: TRAIT
+  - node_id: lignin_depolymerization
+    label: lignin depolymerization
+    node_type: PATHWAY
+  - node_id: cellulose_depolymerization
+    label: cellulose depolymerization
+    node_type: PATHWAY
+  - node_id: cellulolytic_bacteria
+    label: cellulolytic bacteria
+    node_type: TAXON
+  - node_id: fungal_mycelium_consumers
+    label: fungal-mycelium consumers
+    node_type: TAXON
+  - node_id: microbial_succession
+    label: microbial succession
+    node_type: STATE
+  - node_id: litter_carbon_mineralization
+    label: litter carbon mineralization
+    node_type: COMMUNITY_PROCESS
+  - node_id: nutrient_release
+    label: nutrient release
+    node_type: COMMUNITY_PROCESS
+  - node_id: soil_organic_matter_inputs
+    label: soil organic matter inputs
+    node_type: CHEMICAL
+  edges:
+  - edge_id: plant_litter_accumulates_fallen_tissues
+    subject: plant_litter
+    predicate: accumulates
+    object: fallen_plant_tissues
+    description: Plant litter accumulates dead fallen leaves, bark, needles, and twigs
+      on the soil surface.
+    evidence:
+    - reference: PMID:16917528
+      snippet: Role of phyllosphere fungi of forest trees
+      notes: Osono reviewed how fungi already present on living foliage seed decomposer
+        communities after leaves senesce into litter.
+  - edge_id: fallen_tissues_supply_lignocellulose
+    subject: fallen_plant_tissues
+    predicate: supplies
+    object: lignocellulose
+    description: Fallen plant tissues supply cellulose, hemicellulose, and lignin
+      polymers that dominate plant-litter decomposition.
+    evidence:
+    - reference: DOI:10.1007/s11284-007-0390-z
+      snippet: Ecology of ligninolytic fungi associated with leaf litter decomposition
+      notes: Osono reviewed fungal decomposition of lignin and cellulose during leaf
+        litter decay.
+  - edge_id: litter_leaches_soluble_dom
+    subject: plant_litter
+    predicate: releases
+    object: soluble_litter_dom
+    description: Fresh litter leaches soluble dissolved organic matter that fuels
+      early microbial growth in the litter layer.
+    evidence:
+    - reference: PMID:35523988
+      snippet: Microbial community functioning during plant litter decomposition
+      notes: Schroeter and colleagues tracked DOM molecular changes and community
+        function during early litter decomposition.
+  - edge_id: lignocellulose_selects_saprotrophic_fungi
+    subject: lignocellulose
+    predicate: selects for
+    object: saprotrophic_fungi
+    description: Recalcitrant plant polymers select fungi able to enzymatically depolymerize
+      lignocellulosic litter.
+    evidence:
+    - reference: PMID:23051693
+      snippet: decomposing leaf litter undergoes rapid successional changes
+      notes: Voriskova and Baldrian followed fungal succession during leaf litter
+        decomposition.
+  - edge_id: saprotrophic_fungi_secrete_enzymes
+    subject: saprotrophic_fungi
+    predicate: expresses
+    object: fungal_extracellular_enzymes
+    description: Saprotrophic fungi secrete extracellular hydrolytic and oxidative
+      enzymes into litter.
+    evidence:
+    - reference: PMID:22402400
+      snippet: Metaproteomics reveals major microbial players
+      notes: Schneider and colleagues used metaproteomics to identify fungal and bacterial
+        enzymes active during leaf litter decomposition.
+  - edge_id: fungal_enzymes_depolymerize_cellulose
+    subject: fungal_extracellular_enzymes
+    predicate: drives
+    object: cellulose_depolymerization
+    description: Hydrolytic fungal enzymes break cellulose and hemicellulose polymers
+      into smaller plant-derived molecules.
+    evidence:
+    - reference: PMID:17089664
+      snippet: differential extracellular enzyme activities
+      notes: Romani and colleagues compared bacterial and fungal extracellular enzyme
+        activities on decomposing litter.
+  - edge_id: fungal_enzymes_depolymerize_lignin
+    subject: fungal_extracellular_enzymes
+    predicate: drives
+    object: lignin_depolymerization
+    description: Oxidative fungal enzymes attack recalcitrant aromatic lignin in later
+      stages of leaf litter decay.
+    evidence:
+    - reference: DOI:10.1007/s11284-007-0390-z
+      snippet: ligninolytic fungi
+      notes: Osono reviewed ligninolytic fungi and lignin decomposition during leaf
+        litter decay.
+  - edge_id: depolymerization_releases_dom
+    subject: cellulose_depolymerization
+    predicate: contributes to
+    object: soluble_litter_dom
+    description: Enzymatic depolymerization converts structural plant polymers into
+      lower-molecular-weight dissolved organic substrates.
+    evidence:
+    - reference: PMID:35523988
+      snippet: dissolved organic matter
+      notes: Schroeter and colleagues linked DOM composition with functional adaptation
+        of decomposer communities to plant litter substrates.
+  - edge_id: soluble_dom_fuels_bacteria
+    subject: soluble_litter_dom
+    predicate: supports
+    object: cellulolytic_bacteria
+    description: Soluble plant-derived organic matter supports bacteria that grow
+      during litter decay.
+    evidence:
+    - reference: PMID:22402400
+      snippet: bacterial proteins increase
+      notes: Schneider and colleagues observed increasing bacterial proteins and taxon-specific
+        bacterial functions during litter decomposition.
+  - edge_id: decomposing_litter_selects_cellulolytic_bacteria
+    subject: plant_litter
+    predicate: selects for
+    object: cellulolytic_bacteria
+    description: Leaf litter selects bacterial decomposers with cellulolytic potential
+      as decay progresses.
+    evidence:
+    - reference: PMID:27543318
+      snippet: Bacterial succession on decomposing leaf litter
+      notes: Tlaskal and colleagues found a bacterial succession pattern that included
+        cellulolytic taxa on decomposing leaf litter.
+  - edge_id: fungal_biomass_feeds_mycelium_consumers
+    subject: saprotrophic_fungi
+    predicate: supports
+    object: fungal_mycelium_consumers
+    description: Expanding fungal mycelia create bacterial niches for organisms that
+      can consume fungal biomass.
+    evidence:
+    - reference: PMID:27543318
+      snippet: potential decomposers of fungal mycelia
+      notes: Tlaskal and colleagues identified bacterial taxa with potential to consume
+        fungal mycelia during leaf litter decomposition.
+  - edge_id: substrate_change_drives_succession
+    subject: soluble_litter_dom
+    predicate: shapes
+    object: microbial_succession
+    description: Changes in soluble DOM and polymer availability drive successional
+      shifts in litter decomposer communities.
+    evidence:
+    - reference: PMID:27357176
+      snippet: community dynamics of bacteria and fungi
+      notes: Purahong and colleagues characterized coupled bacterial and fungal community
+        dynamics through litter decomposition.
+  - edge_id: decomposer_succession_mineralizes_carbon
+    subject: microbial_succession
+    predicate: drives
+    object: litter_carbon_mineralization
+    description: Successional fungal and bacterial decomposers mineralize plant carbon
+      as litter decays.
+    evidence:
+    - reference: PMID:22402400
+      snippet: biogeochemical functions
+      notes: Schneider and colleagues linked decomposer taxa with protein-level biogeochemical
+        functions during litter decay.
+  - edge_id: mineralization_releases_nutrients
+    subject: litter_carbon_mineralization
+    predicate: releases
+    object: nutrient_release
+    description: Microbial decomposition releases plant-bound carbon and nutrients
+      from the litter layer.
+    evidence:
+    - reference: PMID:35523988
+      snippet: plant litter decomposition
+      notes: Schroeter and colleagues coupled DOM chemistry with microbial functions
+        during plant-litter decomposition.
+  - edge_id: decomposition_feeds_soil_organic_matter
+    subject: microbial_succession
+    predicate: contributes to
+    object: soil_organic_matter_inputs
+    description: Litter decomposer succession turns fallen plant tissues into dissolved
+      and particulate inputs to soil organic matter.
+    evidence:
+    - reference: PMID:27357176
+      snippet: Life in leaf litter
+      notes: Purahong and colleagues followed fungal and bacterial communities during
+        forest litter decomposition and its transition into the soil organic layer.
 curation_history:
 - timestamp: '2026-08-16T00:00:00Z'
   curator: claude-opus-5
@@ -362,3 +580,10 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, ENVIRONMENTS_TABLE,
     GOLD, MADIN. Grounding: EXACT.'
+- timestamp: '2026-09-04T00:00:00Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a plant-litter lignocellulose decomposition graph backed by PMID:16917528,
+    DOI:10.1007/s11284-007-0390-z, PMID:35523988, PMID:23051693, PMID:22402400, PMID:17089664,
+    PMID:27543318, and PMID:27357176.
+  llm_assisted: true

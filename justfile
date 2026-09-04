@@ -57,6 +57,18 @@ validate-all *args:
 validate-strict *args:
     uv run python scripts/validate_strict.py {{args}}
 
+# Validate a single causal-graph curation overlay with LinkML's CLI
+validate-causal file:
+    uv run linkml-validate -s {{schema}} --target-class HabitatCausalGraphCuration {{file}}
+
+# Validate every curated causal-graph overlay and its target HabitatRecord
+validate-causal-all *args:
+    uv run python scripts/validate_causal_graph_curations.py {{args}}
+
+# Rank records by missing, sparse, or weak causal-graph content
+rank-causal *args:
+    uv run python scripts/rank_causal_graphs.py {{args}}
+
 # The curation backlog, ranked by upstream assertion volume, with the minted
 # identifier each decision must key on and lexically-near candidate terms.
 # Suggestions are a starting point, never an answer — anything written into

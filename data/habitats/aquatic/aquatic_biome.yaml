@@ -367,6 +367,249 @@ characteristic_taxa:
   score: 4.0
   rank: 25
   candidate_pool: 8383
+causal_graphs:
+- graph_id: aquatic_biome_light_redox_carbon_cycling
+  title: Aquatic biome light-redox carbon cycling
+  description: Aquatic biomes are structured by water bodies that partition microbial
+    life into illuminated photic water, sinking particulate organic matter, dissolved
+    organic substrates, and redox gradients. Oxygenic phototrophs fix carbon in the
+    photic zone, heterotrophic bacteria hydrolyze and respire that organic matter,
+    and oxygen depletion enables anaerobic redox metabolisms that recycle nutrients.
+  nodes:
+  - node_id: aquatic_biome
+    label: aquatic biome
+    node_type: HABITAT
+    grounding: ENVO:00002030
+  - node_id: water_body
+    label: water body
+    node_type: HABITAT
+  - node_id: photic_zone
+    label: photic zone
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: photosynthetic_microbes
+    label: photosynthetic microbes
+    node_type: TAXON
+  - node_id: oxygenic_photosynthesis
+    label: oxygenic photosynthesis
+    node_type: PATHWAY
+  - node_id: dissolved_oxygen
+    label: dissolved oxygen
+    node_type: CHEMICAL
+  - node_id: particulate_organic_matter
+    label: particulate organic matter
+    node_type: CHEMICAL
+  - node_id: extracellular_hydrolysis
+    label: extracellular hydrolysis
+    node_type: PATHWAY
+  - node_id: dissolved_organic_matter
+    label: dissolved organic matter
+    node_type: CHEMICAL
+  - node_id: heterotrophic_bacteria
+    label: heterotrophic bacteria
+    node_type: TAXON
+  - node_id: aerobic_respiration
+    label: aerobic respiration
+    node_type: PATHWAY
+  - node_id: oxygen_depletion
+    label: oxygen depletion
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: water_column_stratification
+    label: water column stratification
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: redox_gradients
+    label: redox gradients
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: anaerobic_redox_metabolisms
+    label: anaerobic redox metabolisms
+    node_type: COMMUNITY_PROCESS
+  - node_id: nutrient_regeneration
+    label: nutrient regeneration
+    node_type: COMMUNITY_PROCESS
+  edges:
+  - edge_id: aquatic_biome_is_determined_by_water_body
+    subject: aquatic_biome
+    predicate: is determined by
+    object: water_body
+    description: The water body is the matrix that defines aquatic-biome habitats
+      and hosts their planktonic and benthic microbial processes.
+    evidence:
+    - reference: DOI:10.1002/lno.11382
+      snippet: aquatic microbial ecology and biogeochemistry
+      notes: Grossart and colleagues reviewed how metagenomics links freshwater and
+        marine water bodies to aquatic microbial diversity and function.
+  - edge_id: water_body_creates_photic_zone
+    subject: water_body
+    predicate: creates
+    object: photic_zone
+    description: Incoming light penetrates only the illuminated upper layer of aquatic
+      water bodies, defining a photic habitat for photosynthetic cells.
+    evidence:
+    - reference: PMID:16163345
+      snippet: Marine microorganisms and global nutrient cycles
+      notes: Arrigo reviewed controls on marine microbial production, including the
+        light and nutrients available to phototrophs.
+  - edge_id: photic_zone_supports_photosynthetic_microbes
+    subject: photic_zone
+    predicate: supports
+    object: photosynthetic_microbes
+    description: Photic water supports cyanobacteria and other photosynthetic microbes
+      that harvest light for aquatic primary production.
+    evidence:
+    - reference: PMID:16163345
+      snippet: rapid growth
+      notes: The review connects marine microorganism growth with the resource controls
+        that structure aquatic nutrient cycles.
+  - edge_id: photosynthetic_microbes_perform_oxygenic_photosynthesis
+    subject: photosynthetic_microbes
+    predicate: performs
+    object: oxygenic_photosynthesis
+    description: Aquatic cyanobacteria and algae perform oxygenic photosynthesis,
+      fixing inorganic carbon into organic biomass.
+    evidence:
+    - reference: PMID:18497287
+      snippet: microbial engines
+      notes: Falkowski, Fenchel, and DeLong reviewed the conserved microbial redox
+        machines that drive oxygenic photosynthesis and elemental cycles.
+  - edge_id: photosynthesis_releases_dissolved_oxygen
+    subject: oxygenic_photosynthesis
+    predicate: releases
+    object: dissolved_oxygen
+    description: Oxygenic photosynthesis releases oxygen into the surrounding aquatic
+      habitat.
+    evidence:
+    - reference: PMID:18497287
+      snippet: biogeochemical cycles
+      notes: The Science review places oxygenic photosynthesis among the microbially
+        catalyzed redox processes controlling oxygen and carbon.
+  - edge_id: photosynthesis_generates_particulate_organic_matter
+    subject: oxygenic_photosynthesis
+    predicate: generates
+    object: particulate_organic_matter
+    description: Photosynthetic biomass and detritus become particulate organic matter
+      that sinks or remains suspended in aquatic food webs.
+    evidence:
+    - reference: PMID:16163345
+      snippet: global nutrient cycles
+      notes: Arrigo reviewed the coupling between microbial primary production and
+        nutrient cycling in the ocean.
+  - edge_id: particulate_organic_matter_requires_hydrolysis
+    subject: particulate_organic_matter
+    predicate: requires
+    object: extracellular_hydrolysis
+    description: Large particulate polymers must be hydrolyzed extracellularly before
+      bacteria can assimilate much of their carbon.
+    evidence:
+    - reference: PMID:21329211
+      snippet: extracellular enzymes and the marine carbon cycle
+      notes: Arnosti reviewed extracellular hydrolysis as a gatekeeping step for microbial
+        access to complex aquatic organic matter.
+  - edge_id: extracellular_hydrolysis_releases_dom
+    subject: extracellular_hydrolysis
+    predicate: releases
+    object: dissolved_organic_matter
+    description: Extracellular enzymes convert particulate and high-molecular weight
+      organic matter into dissolved substrates.
+    evidence:
+    - reference: PMID:21329211
+      snippet: marine carbon cycle
+      notes: The review links extracellular enzyme activity to transformations between
+        aquatic particulate and dissolved organic pools.
+  - edge_id: dissolved_organic_matter_supports_heterotrophs
+    subject: dissolved_organic_matter
+    predicate: supports
+    object: heterotrophic_bacteria
+    description: Dissolved organic matter fuels heterotrophic bacterial growth and
+      production in aquatic microbial food webs.
+    evidence:
+    - reference: DOI:10.3354/meps010257
+      snippet: ecological role of water-column microbes
+      notes: Azam and colleagues framed bacterial uptake of dissolved organic matter
+        as a core pathway in aquatic microbial loops.
+  - edge_id: heterotrophs_perform_aerobic_respiration
+    subject: heterotrophic_bacteria
+    predicate: performs
+    object: aerobic_respiration
+    description: Aerobic heterotrophs respire organic carbon with dissolved oxygen
+      as the terminal electron acceptor.
+    evidence:
+    - reference: PMID:18497287
+      snippet: redox reactions
+      notes: The biogeochemical-cycle review describes organic-carbon oxidation and
+        oxygen reduction as a core microbial redox metabolism.
+  - edge_id: aerobic_respiration_depletes_oxygen
+    subject: aerobic_respiration
+    predicate: depletes
+    object: dissolved_oxygen
+    description: Heterotrophic respiration consumes dissolved oxygen around degrading
+      organic matter.
+    evidence:
+    - reference: PMID:18497287
+      snippet: nonequilibrium electron transfers
+      notes: Falkowski and colleagues reviewed respiratory electron transfer from
+        organic matter to oxidants such as oxygen.
+  - edge_id: oxygen_consumption_creates_depletion
+    subject: aerobic_respiration
+    predicate: contributes to
+    object: oxygen_depletion
+    description: Respiration can deplete oxygen faster than it is resupplied in deeper,
+      stratified, or organic-rich aquatic compartments.
+    evidence:
+    - reference: DOI:10.1038/srep00604
+      snippet: stratified chemical gradients
+      notes: Comeau and colleagues used a meromictic Arctic lake to show how stable
+        water-column stratification separates oxygenated and anoxic microbial habitats.
+  - edge_id: water_body_stratification_creates_redox_gradients
+    subject: water_column_stratification
+    predicate: creates
+    object: redox_gradients
+    description: Stratification can separate oxygenated surface water from oxygen-depleted
+      lower layers, creating redox gradients with depth.
+    evidence:
+    - reference: DOI:10.1038/srep00604
+      snippet: redox reactions down the water column
+      notes: The Lake A study treated meromictic stratification as a stable template
+        for vertically separated redox reactions.
+  - edge_id: water_body_supports_stratification
+    subject: water_body
+    predicate: supports
+    object: water_column_stratification
+    description: Density, temperature, and salinity gradients in water bodies can
+      stabilize water columns and maintain vertical chemical structure.
+    evidence:
+    - reference: DOI:10.1038/srep00604
+      snippet: density profiles
+      notes: Comeau and colleagues studied a perennially stratified lake with stable
+        density gradients and chemically distinct water layers.
+  - edge_id: redox_gradients_select_anaerobic_metabolism
+    subject: redox_gradients
+    predicate: selects for
+    object: anaerobic_redox_metabolisms
+    description: Oxygen-poor compartments select microbes that respire or transform
+      nitrate, sulfur, metals, methane, and other redox-active compounds without oxygen.
+    evidence:
+    - reference: PMID:18497287
+      snippet: major redox reactions
+      notes: The review summarizes microbial redox machinery underlying major anaerobic
+        elemental transformations.
+    - reference: DOI:10.1038/srep00604
+      snippet: saline anoxic bottom waters
+      notes: Comeau and colleagues observed vertically structured microbial communities
+        across oxic and anoxic lake waters.
+  - edge_id: anaerobic_redox_regenerates_nutrients
+    subject: anaerobic_redox_metabolisms
+    predicate: regenerates
+    object: nutrient_regeneration
+    description: Anaerobic microbial redox pathways recycle carbon, nitrogen, sulfur,
+      and other nutrients in oxygen-depleted aquatic compartments.
+    evidence:
+    - reference: PMID:16163345
+      snippet: nutrient cycles
+      notes: Arrigo reviewed how microbial metabolisms mediate coupled nutrient cycling
+        in aquatic systems.
+    - reference: PMID:18497287
+      snippet: biogeochemical cycles
+      notes: Falkowski and colleagues tied the major elemental cycles to conserved
+        microbial redox reactions.
 curation_history:
 - timestamp: '2026-08-13T00:00:00Z'
   curator: claude-opus-5
@@ -400,3 +643,9 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-09-04T00:00:00Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added an aquatic-biome light-redox carbon-cycling graph backed by DOI:10.1002/lno.11382,
+    PMID:16163345, PMID:18497287, PMID:21329211, DOI:10.3354/meps010257, and DOI:10.1038/srep00604.
+  llm_assisted: true

@@ -76,6 +76,45 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
   <tr><td>WATER_VARIABILITY</td><td>permanently wet</td><td class="meta">kg-microbe environments.csv (water_hypersaline)</td></tr>
 </table>
 
+<h2>Causal graphs</h2>
+<h3>Hypersaline osmoadaptation</h3>
+<p>High external salinity lowers water activity and selects for osmotic balancing strategies in halophilic microorganisms.</p><table>
+  <caption>hypersaline_osmoadaptation edges</caption>
+  <thead><tr><th scope="col">Edge</th><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code>salinity_reduces_water_activity</code></td>
+    <td>high salinity</td>
+    <td>lowers<br><span class="meta">High salt in hypersaline water makes low water activity the core osmotic constraint experienced by resident microbes.</span></td>
+    <td>low water activity</td>
+    <td>
+      <code class="curie">PMID:29529204</code><br><span class="meta">Gunde-Cimerman et al. review osmotic adaptation to hypersaline environments across Archaea, Bacteria, and Eukarya.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>low_water_activity_selects_salt_in</code></td>
+    <td>low water activity</td>
+    <td>selects for<br><span class="meta">One osmotic-balancing route is the salt-in strategy, in which halophiles accumulate intracellular potassium chloride.</span></td>
+    <td>potassium chloride accumulation</td>
+    <td>
+      <code class="curie">PMID:29529204</code><br><span class="meta">The review identifies salt accumulation as an osmoadaptation strategy used by many halophilic Archaea and some Bacteria.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>salt_in_requires_acidic_proteome</code></td>
+    <td>potassium chloride accumulation</td>
+    <td>requires<br><span class="meta">Cells using molar intracellular salt require proteins whose surfaces remain folded and active under those ionic conditions.</span></td>
+    <td>acidic proteome</td>
+    <td>
+      <code class="curie">PMID:18412960</code><br><span class="meta">Oren describes the protein-level adaptation associated with halophiles that balance osmotic pressure with intracellular KCl.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>low_water_activity_selects_compatible_solutes</code></td>
+    <td>low water activity</td>
+    <td>selects for<br><span class="meta">A second osmotic-balancing route is accumulation or synthesis of organic compatible solutes.</span></td>
+    <td>compatible solute accumulation</td>
+    <td>
+      <code class="curie">PMID:29529204</code><br><span class="meta">The review contrasts organic compatible-solute accumulation with the salt-in strategy.</span>    </td>
+  </tr>
+</table>
+
 <h2>Associated taxa</h2>
 <p class="meta">Taxa <em>reported from</em> this habitat, which is weaker than being
 characteristic of it. <code>rank</code> is out of <code>pool</code>: a high rank in a
@@ -266,6 +305,16 @@ second, independent source are listed first.</p>
 <ul class="plain">
 <li>hypersaline waters <span class="meta">— PREGO</span></li></ul>
 
+<h2>Curation</h2>
+<p class="meta">What a curator decided about this record, and why. A record built
+from several source concepts can carry one decision per concept.</p>
+<ol class="events">
+  <li>
+    <span class="pill">ADD_CAUSAL_GRAPH</span>
+    <span class="meta">2026-09-04 · codex</span>
+    <p>Added a hypersaline-water osmoadaptation graph backed by PMID:18412960 and PMID:29529204.</p>
+  </li>
+</ol>
 
 <h2>Provenance</h2>
 <p class="meta">

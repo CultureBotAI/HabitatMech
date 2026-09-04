@@ -90,6 +90,53 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
   <tr><td>WATER_VARIABILITY</td><td>occasionally dry</td><td class="meta">kg-microbe environments.csv (compost)</td></tr>
 </table>
 
+<h2>Causal graphs</h2>
+<h3>Aerobic thermophilic decomposition</h3>
+<p>Aerobic degradation of organic matter in compost releases heat, raising pile temperature and selecting thermophilic decomposers with polymer-degrading enzymes.</p><table>
+  <caption>compost_thermophilic_decomposition edges</caption>
+  <thead><tr><th scope="col">Edge</th><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code>oxygen_enables_solid_state_biodegradation</code></td>
+    <td>oxygenated pore space</td>
+    <td>enables<br><span class="meta">Oxygen availability in compost pore spaces constrains aerobic solid-state biodegradation kinetics.</span></td>
+    <td>aerobic solid-state biodegradation</td>
+    <td>
+      <code class="curie">PMID:16454493</code><br><span class="meta">Richard et al. quantified how oxygen concentration changes aerobic solid-state biodegradation kinetics under compost-relevant moisture, substrate, and temperature ranges.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>organic_waste_fuels_biodegradation</code></td>
+    <td>organic solid waste</td>
+    <td>fuels<br><span class="meta">Compost feedstocks supply organic solid waste substrates that are degraded by the active microbial community.</span></td>
+    <td>aerobic solid-state biodegradation</td>
+    <td>
+      <code class="curie">DOI:10.1186/s40538-023-00381-z</code><br><span class="meta">Finore et al. place thermophilic microorganisms in composting processes that treat organic solid waste.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>biodegradation_drives_thermogenic_phase</code></td>
+    <td>aerobic solid-state biodegradation</td>
+    <td>releases heat as<br><span class="meta">Microbial degradation of organic substrates produces heat that drives the compost into a high-temperature thermogenic phase.</span></td>
+    <td>thermogenic compost phase</td>
+    <td>
+      <code class="curie">DOI:10.1186/s40538-023-00381-z</code><br><span class="meta">Finore et al. summarize energy-balance models that treat substrate degradation as the source of composting heat.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>thermogenic_phase_enriches_thermophiles</code></td>
+    <td>thermogenic compost phase</td>
+    <td>selects for<br><span class="meta">Rising compost temperature shifts the community from mesophiles toward thermophilic bacteria.</span></td>
+    <td>thermophilic bacteria</td>
+    <td>
+      <code class="curie">DOI:10.1186/s40538-023-00381-z</code><br><span class="meta">Finore et al. review the rise of thermophilic populations as compost enters its thermogenic temperature phase.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>thermophiles_supply_lignocellulolytic_activity</code></td>
+    <td>thermophilic bacteria</td>
+    <td>expresses<br><span class="meta">Thermophilic compost bacteria secrete hydrolytic and oxidoreductase enzymes that attack cellulose, hemicellulose, and lignin in plant-rich waste.</span></td>
+    <td>lignocellulolytic enzyme activity</td>
+    <td>
+      <code class="curie">DOI:10.1186/s40538-023-00381-z</code><br><span class="meta">Finore et al. identify lignocellulolytic thermophiles as accelerators of plant-residue and green-waste composting.</span>    </td>
+  </tr>
+</table>
+
 <h2>Associated taxa</h2>
 <p class="meta">Taxa <em>reported from</em> this habitat, which is weaker than being
 characteristic of it. <code>rank</code> is out of <code>pool</code>: a high rank in a
@@ -303,6 +350,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">REVIEW</span>
     <span class="meta">2026-08-15 · claude-opus-5</span>
     <p>Reviewed and endorsed the seeder&#39;s own resolution. Co-attestor review (#12): this source names the ontology CURIE itself, so its grounding is definitional rather than a lexical guess — the record IS the term the source pointed at. Recorded so the record it co-attests can reach REVIEWED, which needs every source concept decided. (source concept habitatmech:MADIN.87d709b6aa)</p>
+  </li>
+  <li>
+    <span class="pill">ADD_CAUSAL_GRAPH</span>
+    <span class="meta">2026-09-04 · codex</span>
+    <p>Added a compost thermogenic-decomposition graph backed by PMID:16454493 and DOI:10.1186/s40538-023-00381-z.</p>
   </li>
 </ol>
 

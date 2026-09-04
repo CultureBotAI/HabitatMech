@@ -163,6 +163,304 @@ characteristic_taxa:
   source: MADIN
   taxon_label: ochrobactrum_cytisi
   candidate_pool: 40
+causal_graphs:
+- graph_id: root_nodule_symbiotic_nitrogen_fixation
+  title: Root nodule symbiotic nitrogen fixation
+  description: Plant root nodules are organ-level microbial habitats formed when roots
+    recruit compatible nitrogen-fixing bacteria. Rhizobial Nod-factor signaling induces
+    root-hair infection and nodule organogenesis, infection threads carry bacteria
+    into developing nodule cells, symbiosomes house differentiated bacteroids, and
+    the plant-controlled low-oxygen nodule cytoplasm allows nitrogenase to reduce
+    atmospheric N2 to ammonia. Actinorhizal nodules use Frankia rather than rhizobia
+    but converge on the same protected intracellular nitrogen-fixation habitat.
+  nodes:
+  - node_id: root_nodule
+    label: root nodule
+    node_type: HABITAT
+    grounding: ENVO:01000164
+  - node_id: host_plant_root
+    label: host plant root
+    node_type: HABITAT
+  - node_id: flavonoid_signals
+    label: flavonoid signals
+    node_type: CHEMICAL
+  - node_id: rhizobia
+    label: rhizobia
+    node_type: TAXON
+  - node_id: frankia
+    label: Frankia
+    node_type: TAXON
+  - node_id: nod_factors
+    label: Nod factors
+    node_type: CHEMICAL
+  - node_id: root_hair_infection
+    label: root hair infection
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: infection_thread
+    label: infection thread
+    node_type: HABITAT
+  - node_id: nodule_primordium
+    label: nodule primordium
+    node_type: HABITAT
+  - node_id: infected_nodule_cell
+    label: infected nodule cell
+    node_type: HABITAT
+  - node_id: symbiosome
+    label: symbiosome
+    node_type: HABITAT
+  - node_id: bacteroids
+    label: bacteroids
+    node_type: TAXON
+  - node_id: plant_dicarboxylates
+    label: plant dicarboxylates
+    node_type: CHEMICAL
+  - node_id: leghemoglobin
+    label: leghemoglobin
+    node_type: CHEMICAL
+  - node_id: low_oxygen_cytoplasm
+    label: low-oxygen nodule cytoplasm
+    node_type: STATE
+  - node_id: nitrogenase
+    label: nitrogenase
+    node_type: GENE_OR_PROTEIN
+  - node_id: biological_nitrogen_fixation
+    label: biological nitrogen fixation
+    node_type: PATHWAY
+  - node_id: ammonia
+    label: ammonia
+    node_type: CHEMICAL
+  edges:
+  - edge_id: root_nodule_determined_by_root
+    subject: root_nodule
+    predicate: determined by
+    object: host_plant_root
+    description: Root nodules are specialized root outgrowths on plants that maintain
+      symbiotic nitrogen-fixing bacteria.
+    evidence:
+    - reference: PMID:33526611
+      snippet: root nodule symbioses
+      notes: Ledermann, Schulte, and Poole reviewed nodules as root organs that house
+        diazotrophic bacterial symbionts.
+  - edge_id: root_releases_flavonoids
+    subject: host_plant_root
+    predicate: releases
+    object: flavonoid_signals
+    description: Host roots exude flavonoid signals that initiate compatible rhizobial
+      nodulation responses.
+    evidence:
+    - reference: PMID:15187185
+      snippet: Infection and invasion
+      notes: Gage reviewed flavonoid induction of rhizobial nod genes during legume
+        nodule initiation.
+  - edge_id: flavonoids_select_rhizobia
+    subject: flavonoid_signals
+    predicate: selects for
+    object: rhizobia
+    description: Flavonoid signaling favors rhizobia carrying compatible nod gene
+      regulation and host-specific signal production.
+    evidence:
+    - reference: PMID:15187185
+      snippet: symbiotic, nitrogen-fixing rhizobia
+      notes: The nodulation review describes flavonoid-regulated rhizobial Nod factor
+        synthesis as an early specificity step.
+  - edge_id: rhizobia_produce_nod_factors
+    subject: rhizobia
+    predicate: produces
+    object: nod_factors
+    description: Compatible rhizobia respond to host signals by producing lipochitooligosaccharide
+      Nod factors.
+    evidence:
+    - reference: DOI:10.1128/MMBR.68.2.280-300.2004
+      snippet: Nod factors
+      notes: Gage reviewed how rhizobial Nod factors trigger host root-hair and cortical
+        responses in temperate legumes.
+  - edge_id: nod_factors_induce_infection
+    subject: nod_factors
+    predicate: induces
+    object: root_hair_infection
+    description: Nod-factor perception redirects root-hair growth around rhizobia
+      and starts the infection process.
+    evidence:
+    - reference: PMID:15187185
+      snippet: root hair
+      notes: The MMBR review details root-hair curling and infection-thread initiation
+        during rhizobial invasion.
+  - edge_id: nod_factors_initiate_primordium
+    subject: nod_factors
+    predicate: induces
+    object: nodule_primordium
+    description: Nod-factor signaling coordinates infection with cortical cell divisions
+      that initiate the nodule primordium.
+    evidence:
+    - reference: PMID:15187185
+      snippet: nodulation of temperate legumes
+      notes: Gage reviewed the coupling of bacterial invasion to host developmental
+        events that form the root nodule.
+  - edge_id: root_hair_infection_forms_thread
+    subject: root_hair_infection
+    predicate: produces
+    object: infection_thread
+    description: Root-hair infection produces infection threads that conduct rhizobia
+      through the host root tissue.
+    evidence:
+    - reference: DOI:10.1128/MMBR.68.2.280-300.2004
+      snippet: infection threads
+      notes: The rhizobial infection review describes infection-thread growth from
+        curled root hairs into developing nodules.
+  - edge_id: infection_thread_delivers_rhizobia
+    subject: infection_thread
+    predicate: transports
+    object: rhizobia
+    description: Infection threads carry rhizobial cells toward developing nodule
+      primordia.
+    evidence:
+    - reference: PMID:15187185
+      snippet: infection and invasion
+      notes: Gage reviewed infection threads as plant-derived channels that advance
+        the invading rhizobial population through host tissue.
+  - edge_id: nodule_primordium_forms_infected_cells
+    subject: nodule_primordium
+    predicate: produces
+    object: infected_nodule_cell
+    description: Primordium development creates nodule cells that are invaded by bacterial
+      symbionts.
+    evidence:
+    - reference: PMID:33526611
+      snippet: nodule environment
+      notes: The nodule-environment review summarizes rhizobial release into plant
+        cells and subsequent adaptation to intracellular life.
+  - edge_id: infected_cell_contains_symbiosome
+    subject: infected_nodule_cell
+    predicate: contains
+    object: symbiosome
+    description: In legume nodules, plant-derived symbiosomes form intracellular compartments
+      around rhizobia.
+    evidence:
+    - reference: PMID:33526611
+      snippet: adapt to the nodule environment
+      notes: Ledermann and colleagues reviewed the intracellular symbiosome as the
+        compartment in which rhizobia differentiate.
+  - edge_id: symbiosome_harbors_bacteroids
+    subject: symbiosome
+    predicate: harbors
+    object: bacteroids
+    description: Symbiosomes contain differentiated bacteroids that specialize in
+      symbiotic nitrogen fixation.
+    evidence:
+    - reference: PMID:34330708
+      snippet: nitrogen fixation in rhizobium-legume symbioses
+      notes: Schulte and colleagues modeled and experimentally studied nitrogen fixation
+        by bacteroids inside legume symbiosomes.
+  - edge_id: infected_cell_supplies_dicarboxylates
+    subject: infected_nodule_cell
+    predicate: feeds
+    object: plant_dicarboxylates
+    description: Host nodule cells provide C4-dicarboxylate carbon sources that fuel
+      bacteroid energy metabolism.
+    evidence:
+    - reference: DOI:10.1126/sciadv.abh2433
+      snippet: dicarboxylates
+      notes: Schulte and colleagues showed that plant control of dicarboxylate supply
+        is central to rhizobial nitrogen-fixation metabolism.
+  - edge_id: dicarboxylates_fuel_bacteroids
+    subject: plant_dicarboxylates
+    predicate: fuels
+    object: bacteroids
+    description: Bacteroids oxidize host-supplied dicarboxylates to generate energy
+      and reductant for nitrogen fixation.
+    evidence:
+    - reference: PMID:34330708
+      snippet: Metabolic control
+      notes: The Sci Adv study identified dicarboxylate use as the dominant energy
+        and electron source for nitrogen-fixing bacteroids.
+  - edge_id: infected_cells_express_leghemoglobin
+    subject: infected_nodule_cell
+    predicate: produces
+    object: leghemoglobin
+    description: Infected legume nodule cells express leghemoglobin as part of the
+      plant oxygen-control system.
+    evidence:
+    - reference: PMID:31655741
+      snippet: Oxygen regulatory mechanisms
+      notes: Rutten and Poole reviewed the oxygen paradox of root nodules and mechanisms
+        that maintain respiration while protecting nitrogenase.
+  - edge_id: leghemoglobin_maintains_low_oxygen
+    subject: leghemoglobin
+    predicate: maintains
+    object: low_oxygen_cytoplasm
+    description: Leghemoglobin buffers free oxygen in infected cells, preserving a
+      low-oxygen state around bacteroids.
+    evidence:
+    - reference: DOI:10.1016/bs.ampbs.2019.08.001
+      snippet: Oxygen regulatory mechanisms
+      notes: The rhizobial oxygen-regulation review describes the low-oxygen nodule
+        environment that permits microaerobic respiration and nitrogenase activity.
+  - edge_id: low_oxygen_enables_nitrogenase
+    subject: low_oxygen_cytoplasm
+    predicate: enables
+    object: nitrogenase
+    description: The microoxic nodule state protects oxygen-sensitive nitrogenase
+      while permitting enough respiration for ATP production.
+    evidence:
+    - reference: PMID:31655741
+      snippet: nitrogen fixation in rhizobia
+      notes: Rutten and Poole reviewed why nodules tightly regulate oxygen around
+        bacteroids performing nitrogen fixation.
+  - edge_id: bacteroids_express_nitrogenase
+    subject: bacteroids
+    predicate: expresses
+    object: nitrogenase
+    description: Mature bacteroids express nitrogenase to reduce atmospheric dinitrogen
+      inside nodules.
+    evidence:
+    - reference: PMID:33526611
+      snippet: nodule environment
+      notes: The rhizobial adaptation review links bacteroid differentiation to the
+        nitrogen-fixing physiology required in nodules.
+  - edge_id: nitrogenase_drives_fixation
+    subject: nitrogenase
+    predicate: drives
+    object: biological_nitrogen_fixation
+    description: Nitrogenase catalyzes biological reduction of atmospheric N2 within
+      infected nodule cells.
+    evidence:
+    - reference: DOI:10.1126/sciadv.abh2433
+      snippet: Metabolic control of nitrogen fixation
+      notes: Schulte and colleagues studied rhizobial nitrogenase activity as the
+        terminal sink for carbon and reductant supplied by the host.
+  - edge_id: fixation_produces_ammonia
+    subject: biological_nitrogen_fixation
+    predicate: produces
+    object: ammonia
+    description: Symbiotic nitrogen fixation reduces N2 into ammonia that can be assimilated
+      into plant nitrogen metabolism.
+    evidence:
+    - reference: PMID:34330708
+      snippet: ammonia secretion by bacteroids
+      notes: The metabolic-control study found that legume hosts promote ammonia secretion
+        by bacteroids by coupling oxygen and dicarboxylate supply.
+  - edge_id: root_nodules_harbor_frankia
+    subject: root_nodule
+    predicate: harbors
+    object: frankia
+    description: Actinorhizal root nodules are intracellular habitats for nitrogen-fixing
+      Frankia actinobacteria.
+    evidence:
+    - reference: PMID:33863007
+      snippet: Actinorhizal symbioses
+      notes: Huss-Danell reviewed root nodule symbioses between actinorhizal plants
+        and the actinomycete genus Frankia.
+  - edge_id: frankia_expresses_nitrogenase
+    subject: frankia
+    predicate: expresses
+    object: nitrogenase
+    description: Frankia in actinorhizal nodules protects nitrogenase inside specialized
+      infected cells or vesicles.
+    evidence:
+    - reference: DOI:10.1046/j.1469-8137.1997.00755.x
+      snippet: nodules; oxygen
+      notes: The actinorhizal review describes Frankia vesicles and host adaptations
+        that balance oxygen tension near nitrogenase.
 curation_history:
 - timestamp: '2026-08-14T00:00:00Z'
   curator: claude-opus-5
@@ -189,3 +487,10 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD,
     MADIN. Grounding: EXACT.'
+- timestamp: '2026-09-04T00:00:00Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a root nodule symbiotic nitrogen fixation graph backed by PMID:33526611,
+    PMID:15187185, DOI:10.1128/MMBR.68.2.280-300.2004, PMID:34330708, DOI:10.1126/sciadv.abh2433,
+    PMID:31655741, DOI:10.1016/bs.ampbs.2019.08.001, PMID:33863007, and DOI:10.1046/j.1469-8137.1997.00755.x.
+  llm_assisted: true

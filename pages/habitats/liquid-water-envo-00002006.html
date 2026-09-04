@@ -70,6 +70,125 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
   <tr><td>WATER_VARIABILITY</td><td>permanently wet</td><td class="meta">kg-microbe environments.csv (water)</td></tr>
 </table>
 
+<h2>Causal graphs</h2>
+<h3>Liquid water planktonic solute foraging</h3>
+<p>Bulk liquid water supplies high water activity, suspends free-living cells and organic particles, dissolves lower-molecular-weight organic substrates, and allows diffusion to form microscale nutrient patches. Extracellular enzymes hydrolyze polymers into dissolved organic matter, and motile chemotactic bacteria exploit those gradients to convert dissolved carbon into bacterial biomass within aquatic microbial loops.</p><table>
+  <caption>liquid_water_planktonic_solute_foraging edges</caption>
+  <thead><tr><th scope="col">Edge</th><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code>liquid_water_provides_high_water_activity</code></td>
+    <td>liquid water</td>
+    <td>provides<br><span class="meta">Liquid water keeps water activity high relative to salt-saturated or desiccating habitats where low water activity limits microbial growth.</span></td>
+    <td>high water activity</td>
+    <td>
+      <code class="curie">PMID:15306380</code><br><span class="meta">Grant reviewed water-activity limits and the microbial physiology required when water availability falls in saline or dry habitats.</span>      <code class="curie">PMID:25500507</code><br><span class="meta">Stevenson and colleagues tested bacterial, archaeal, and fungal growth near the low-water-activity limit for active life.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>high_water_activity_permits_aquatic_growth</code></td>
+    <td>high water activity</td>
+    <td>permits<br><span class="meta">High water availability permits hydrated free-living bacterial cells to maintain active metabolism in aqueous habitats.</span></td>
+    <td>free-living bacteria</td>
+    <td>
+      <code class="curie">PMID:15306380</code><br><span class="meta">The review connects external water activity with cellular water stress, osmoadaptation, and whether microbes can grow.</span>      <code class="curie">PMID:21663439</code><br><span class="meta">Wood reviewed the homeostatic mechanisms bacteria use to maintain turgor and cytoplasmic hydration across external osmotic conditions.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>liquid_water_forms_bulk_aqueous_phase</code></td>
+    <td>liquid water</td>
+    <td>forms<br><span class="meta">Liquid-water habitats form a connected aqueous phase in which planktonic cells encounter dissolved and particulate substrates.</span></td>
+    <td>bulk aqueous phase</td>
+    <td>
+      <code class="curie">DOI:10.3354/meps010257</code><br><span class="meta">Azam and colleagues treated liquid seawater as the bulk medium connecting bacteria, dissolved organic matter, and grazers.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>liquid_water_suspends_free_living_cells</code></td>
+    <td>liquid water</td>
+    <td>suspends<br><span class="meta">Bulk liquid water supports dispersed, planktonic free-living bacterial cells.</span></td>
+    <td>free-living bacteria</td>
+    <td>
+      <code class="curie">DOI:10.3354/meps010257</code><br><span class="meta">Azam and colleagues synthesized bacterial biomass, production, and grazing in the marine water column.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>liquid_water_suspends_polymeric_particles</code></td>
+    <td>liquid water</td>
+    <td>suspends<br><span class="meta">Aquatic organic particles and high-molecular-weight compounds remain suspended in bulk water as substrates for extracellular enzymes.</span></td>
+    <td>polymeric organic matter</td>
+    <td>
+      <code class="curie">PMID:21329211</code><br><span class="meta">Arnosti reviewed how marine extracellular enzymes hydrolyze complex organic matter outside microbial cells.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>polymeric_matter_requires_hydrolysis</code></td>
+    <td>polymeric organic matter</td>
+    <td>requires<br><span class="meta">Polymeric aquatic organic matter must be hydrolyzed outside the cell before microbes can take up the resulting smaller substrates.</span></td>
+    <td>extracellular hydrolysis</td>
+    <td>
+      <code class="curie">PMID:21329211</code><br><span class="meta">Arnosti reviewed extracellular enzymatic hydrolysis as the step that makes macromolecular organic matter available to microbes.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>extracellular_hydrolysis_releases_dom</code></td>
+    <td>extracellular hydrolysis</td>
+    <td>releases<br><span class="meta">Extracellular hydrolysis converts polymeric particles into smaller dissolved organic molecules in surrounding liquid water.</span></td>
+    <td>dissolved organic matter</td>
+    <td>
+      <code class="curie">PMID:21329211</code><br><span class="meta">The review links extracellular enzyme activity to transformations of marine dissolved and particulate organic matter.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>bulk_water_allows_solute_diffusion</code></td>
+    <td>bulk aqueous phase</td>
+    <td>enables<br><span class="meta">Dissolved substrates diffuse through the aqueous phase around particles, lysed cells, and other localized organic-matter sources.</span></td>
+    <td>solute diffusion</td>
+    <td>
+      <code class="curie">PMID:23204367</code><br><span class="meta">Stocker and Seymour reviewed how aquatic nutrient sources generate dynamic dissolved plumes, patches, and gradients around bacteria.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>dom_forms_microscale_gradients</code></td>
+    <td>dissolved organic matter</td>
+    <td>forms<br><span class="meta">Dissolved organic substrates released from localized sources form transient microscale gradients in water.</span></td>
+    <td>microscale solute gradients</td>
+    <td>
+      <code class="curie">PMID:23118182</code><br><span class="meta">Stocker described the microscale chemical heterogeneity encountered by planktonic microbes.</span>      <code class="curie">PMID:23204367</code><br><span class="meta">Stocker and Seymour synthesized the physical and ecological origins of aquatic microscale nutrient heterogeneity.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>gradients_select_chemotactic_motility</code></td>
+    <td>microscale solute gradients</td>
+    <td>selects for<br><span class="meta">Transient nutrient gradients reward motile bacteria that can bias swimming toward dissolved substrates.</span></td>
+    <td>chemotactic motility</td>
+    <td>
+      <code class="curie">PMID:23204367</code><br><span class="meta">Stocker and Seymour reviewed chemotaxis as an adaptation to short-lived nutrient patches in aquatic habitats.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>chemotaxis_increases_dom_uptake</code></td>
+    <td>chemotactic motility</td>
+    <td>increases<br><span class="meta">Chemotactic motility helps bacteria remain in nutrient patches long enough to take up dissolved organic substrates.</span></td>
+    <td>heterotrophic dissolved-carbon uptake</td>
+    <td>
+      <code class="curie">PMID:23204367</code><br><span class="meta">The review connects high-performance chemotaxis with rapid responses to aquatic chemical gradients.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>dom_supports_heterotrophic_bacteria</code></td>
+    <td>dissolved organic matter</td>
+    <td>supports<br><span class="meta">Dissolved organic matter supports heterotrophic bacterial growth in liquid-water microbial communities.</span></td>
+    <td>free-living bacteria</td>
+    <td>
+      <code class="curie">DOI:10.3354/meps010257</code><br><span class="meta">Azam and colleagues framed dissolved organic matter uptake by water-column bacteria as a central aquatic carbon-flow process.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>uptake_generates_bacterial_biomass</code></td>
+    <td>heterotrophic dissolved-carbon uptake</td>
+    <td>increases<br><span class="meta">Heterotrophic uptake of dissolved carbon converts aquatic dissolved organic matter into bacterial biomass.</span></td>
+    <td>bacterial biomass</td>
+    <td>
+      <code class="curie">DOI:10.3354/meps010257</code><br><span class="meta">The microbial-loop synthesis linked uptake of dissolved carbon to bacterial biomass and productivity in the water column.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>bacterial_biomass_feeds_microbial_loop</code></td>
+    <td>bacterial biomass</td>
+    <td>contributes to<br><span class="meta">Bacterial biomass produced from dissolved organic matter enters a microbial loop through heterotrophic flagellates and microzooplankton.</span></td>
+    <td>microbial loop</td>
+    <td>
+      <code class="curie">DOI:10.3354/meps010257</code><br><span class="meta">Azam and colleagues introduced the water-column microbial-loop model linking bacteria, bacterivorous flagellates, and microzooplankton.</span>    </td>
+  </tr>
+</table>
+
 <h2>Associated taxa</h2>
 <p class="meta">Taxa <em>reported from</em> this habitat, which is weaker than being
 characteristic of it. <code>rank</code> is out of <code>pool</code>: a high rank in a
@@ -273,6 +392,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">REVIEW</span>
     <span class="meta">2026-08-15 · claude-opus-5</span>
     <p>Reviewed and endorsed the seeder&#39;s own resolution. Co-attestor review (#12): this source names the ontology CURIE itself, so its grounding is definitional rather than a lexical guess — the record IS the term the source pointed at. Recorded so the record it co-attests can reach REVIEWED, which needs every source concept decided. (source concept habitatmech:PREGO.9c5507e85a)</p>
+  </li>
+  <li>
+    <span class="pill">ADD_CAUSAL_GRAPH</span>
+    <span class="meta">2026-09-04 · codex</span>
+    <p>Added a liquid-water planktonic solute-foraging graph backed by PMID:15306380, PMID:25500507, PMID:21663439, PMID:21329211, PMID:23118182, PMID:23204367, and DOI:10.3354/meps010257.</p>
   </li>
 </ol>
 

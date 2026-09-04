@@ -62,6 +62,157 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 </ul>
 
 
+<h2>Causal graphs</h2>
+<h3>Forested area tree litter deadwood mosaic</h3>
+<p>Dense tree cover builds forested microbial habitats by creating leaf-canopy, fine-root, litter, and deadwood compartments. Canopy surfaces host phyllosphere communities, roots transfer recent plant carbon to mycorrhizal fungi and rhizosphere bacteria, and lignocellulose from litterfall and deadwood selects decomposer fungi and bacteria that recycle carbon, nitrogen, and phosphorus in forest soils.</p><table>
+  <caption>forested_area_tree_litter_deadwood_mosaic edges</caption>
+  <thead><tr><th scope="col">Edge</th><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code>forested_area_determined_by_trees</code></td>
+    <td>forested area</td>
+    <td>determined by<br><span class="meta">Forested areas are terrestrial habitats structured by a high density of trees.</span></td>
+    <td>dense tree stand</td>
+    <td>
+      <code class="curie">PMID:27856492</code><br><span class="meta">Baldrian reviewed forests as structured microbial habitats whose compartments include canopies, roots, litter, wood, and soil.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>dense_trees_form_canopy</code></td>
+    <td>dense tree stand</td>
+    <td>forms<br><span class="meta">Forest trees create an aerial canopy of leaf and bark surfaces.</span></td>
+    <td>tree canopy</td>
+    <td>
+      <code class="curie">PMID:27856492</code><br><span class="meta">The forest-microbiome review treats the phyllosphere as one of the major aboveground forest microbial habitats.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>canopy_harbors_phyllosphere</code></td>
+    <td>tree canopy</td>
+    <td>harbors<br><span class="meta">Leaves in the tree canopy expose surfaces colonized by phyllosphere microbial communities.</span></td>
+    <td>leaf phyllosphere</td>
+    <td>
+      <code class="curie">PMID:23154261</code><br><span class="meta">Vorholt reviewed leaf surfaces as widespread microbial habitats with characteristic phyllosphere communities.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>dense_trees_extend_fine_roots</code></td>
+    <td>dense tree stand</td>
+    <td>extends<br><span class="meta">Forest trees extend fine roots into soil where they interact with rhizosphere bacteria and mycorrhizal fungi.</span></td>
+    <td>fine roots</td>
+    <td>
+      <code class="curie">PMID:27856492</code><br><span class="meta">Baldrian reviewed roots and mycorrhizae as belowground forest compartments with intense bacterial and fungal activity.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>fine_roots_release_exudates</code></td>
+    <td>fine roots</td>
+    <td>releases<br><span class="meta">Fine roots release recently fixed carbon into rhizosphere soil, making root zones hotspots for forest microbial activity.</span></td>
+    <td>root exudates</td>
+    <td>
+      <code class="curie">DOI:10.1139/cjb-2013-0225</code><br><span class="meta">Badri and colleagues reviewed how plant root exudates supply carbon and signals that shape root-associated microbial communities.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>root_exudates_select_forest_bacteria</code></td>
+    <td>root exudates</td>
+    <td>selects for<br><span class="meta">Carbon and signaling compounds from roots enrich bacteria able to occupy forest rhizospheres.</span></td>
+    <td>forest soil bacteria</td>
+    <td>
+      <code class="curie">PMID:28404790</code><br><span class="meta">Llado, Lopez-Mondejar, and Baldrian reviewed bacterial roles in forest rhizospheres and their interactions with plant roots and mycorrhizal fungi.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>fine_roots_feed_ectomycorrhizal_fungi</code></td>
+    <td>fine roots</td>
+    <td>feeds<br><span class="meta">Forest tree roots transfer photosynthate belowground to ectomycorrhizal fungi.</span></td>
+    <td>ectomycorrhizal fungi</td>
+    <td>
+      <code class="curie">PMID:23539604</code><br><span class="meta">Clemmensen and colleagues showed that roots and associated fungi drive long-term carbon sequestration in a boreal forest chronosequence.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>ectomycorrhizae_mobilize_nutrients</code></td>
+    <td>ectomycorrhizal fungi</td>
+    <td>drives<br><span class="meta">Ectomycorrhizal fungi forage in organic soil horizons and acquire nitrogen that supports tree nutrition.</span></td>
+    <td>nitrogen and phosphorus mobilization</td>
+    <td>
+      <code class="curie">PMID:17244056</code><br><span class="meta">Lindahl and colleagues found spatial partitioning between boreal litter decomposers and mycorrhizal fungi involved in nitrogen uptake.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>dense_trees_produce_forest_litter</code></td>
+    <td>dense tree stand</td>
+    <td>produces<br><span class="meta">Forest trees shed leaves and fine plant tissues that accumulate as litter on the forest floor.</span></td>
+    <td>forest litter</td>
+    <td>
+      <code class="curie">PMID:27856492</code><br><span class="meta">Baldrian reviewed litter as a major forest compartment connecting plant productivity to decomposer bacteria and fungi.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>forest_litter_contains_lignocellulose</code></td>
+    <td>forest litter</td>
+    <td>contains<br><span class="meta">Leaf and needle litter contain cellulose, hemicellulose, and lignin polymers that shape decomposer succession.</span></td>
+    <td>lignocellulose</td>
+    <td>
+      <code class="curie">PMID:22402400</code><br><span class="meta">Stursova and colleagues tracked cellulose-responsive bacterial and fungal decomposers in forest litter and soil.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>lignocellulose_selects_saprotrophs</code></td>
+    <td>lignocellulose</td>
+    <td>selects for<br><span class="meta">Recalcitrant lignocellulose in forest litter favors fungi with extracellular enzyme systems for polymer decay.</span></td>
+    <td>saprotrophic fungi</td>
+    <td>
+      <code class="curie">PMID:22402400</code><br><span class="meta">Cellulose addition in a forest system identified fungi and bacteria that actively use plant structural polysaccharides.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>saprotrophs_decompose_litter</code></td>
+    <td>saprotrophic fungi</td>
+    <td>performs<br><span class="meta">Saprotrophic fungi mineralize litter polymers and drive turnover of fallen plant material on the forest floor.</span></td>
+    <td>litter decomposition</td>
+    <td>
+      <code class="curie">DOI:10.1093/femsre/fuw040</code><br><span class="meta">Baldrian reviewed saprotrophic fungal decomposition as a central forest carbon-cycling process.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>litter_decomposition_mobilizes_nutrients</code></td>
+    <td>litter decomposition</td>
+    <td>drives<br><span class="meta">Decomposition of litter releases mineral nutrients and low-molecular-weight carbon that feed the forest soil food web.</span></td>
+    <td>nitrogen and phosphorus mobilization</td>
+    <td>
+      <code class="curie">PMID:28404790</code><br><span class="meta">The forest-soil bacteria review summarizes bacterial participation in organic-matter turnover and nutrient cycling.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>dense_trees_generate_deadwood</code></td>
+    <td>dense tree stand</td>
+    <td>produces<br><span class="meta">Branch and trunk mortality create coarse woody debris as a long-lived habitat within forests.</span></td>
+    <td>coarse deadwood</td>
+    <td>
+      <code class="curie">DOI:10.1093/femsre/fuw040</code><br><span class="meta">The forest-microbiome review treats deadwood as a persistent microbial substrate produced by trees.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>deadwood_contains_wood_polymers</code></td>
+    <td>coarse deadwood</td>
+    <td>contains<br><span class="meta">Deadwood presents lignin-rich and cellulose-rich polymers to microbes colonizing coarse woody debris.</span></td>
+    <td>wood polymers</td>
+    <td>
+      <code class="curie">PMID:33436515</code><br><span class="meta">Tlaskal and colleagues analyzed fungal and bacterial functions associated with decomposition of deadwood polymers.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>wood_polymers_select_decomposers</code></td>
+    <td>wood polymers</td>
+    <td>selects for<br><span class="meta">Woody polymers favor fungi that initiate deadwood decay and open the substrate to bacterial metabolisms.</span></td>
+    <td>saprotrophic fungi</td>
+    <td>
+      <code class="curie">DOI:10.1128/mSystems.01078-20</code><br><span class="meta">Tlaskal and colleagues found complementary fungal and bacterial roles in deadwood decomposition.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>saprotrophs_drive_deadwood_decomposition</code></td>
+    <td>saprotrophic fungi</td>
+    <td>performs<br><span class="meta">Wood-inhabiting fungi dominate the enzymatic decay of recalcitrant deadwood carbon, while bacteria contribute complementary functions.</span></td>
+    <td>deadwood decomposition</td>
+    <td>
+      <code class="curie">PMID:33436515</code><br><span class="meta">The mSystems deadwood study linked fungi to degradation of recalcitrant wood fractions and bacteria to complementary functions.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>forest_bacteria_contribute_to_decomposition</code></td>
+    <td>forest soil bacteria</td>
+    <td>contributes to<br><span class="meta">Forest soil bacteria participate in decomposition by using plant-derived polymers and fungal-derived products.</span></td>
+    <td>litter decomposition</td>
+    <td>
+      <code class="curie">PMID:28404790</code><br><span class="meta">Llado and colleagues reviewed forest bacterial participation in organic-matter decomposition and nutrient cycling.</span>      <code class="curie">PMID:22402400</code><br><span class="meta">Stursova and colleagues detected cellulose-utilizing bacterial populations in forest litter and soil.</span>    </td>
+  </tr>
+</table>
+
 <h2>Associated taxa</h2>
 <p class="meta">Taxa <em>reported from</em> this habitat, which is weaker than being
 characteristic of it. <code>rank</code> is out of <code>pool</code>: a high rank in a
@@ -270,6 +421,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">REVIEW</span>
     <span class="meta">2026-08-13 · claude-opus-5</span>
     <p>Reviewed and endorsed the seeder&#39;s own resolution. Multi-source review pass: this record is attested by more than one independent vocabulary, and this source&#39;s label or path was read against the record&#39;s ontology term to check the merge is right. It agrees. Source concepts in the same pass whose labels did not agree were re-decided rather than endorsed; see the pass&#39;s other decisions of the same date. (source concept habitatmech:PREGO.fa1634154c)</p>
+  </li>
+  <li>
+    <span class="pill">ADD_CAUSAL_GRAPH</span>
+    <span class="meta">2026-09-04 · codex</span>
+    <p>Added a forested area tree litter deadwood mosaic graph backed by PMID:27856492, PMID:23154261, DOI:10.1139/cjb-2013-0225, PMID:28404790, PMID:23539604, PMID:17244056, PMID:22402400, DOI:10.1093/femsre/fuw040, PMID:33436515, and DOI:10.1128/mSystems.01078-20.</p>
   </li>
 </ol>
 

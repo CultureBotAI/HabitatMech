@@ -340,9 +340,180 @@ characteristic_taxa:
   score: 4.0
   rank: 25
   candidate_pool: 3153
+causal_graphs:
+- graph_id: sediment_porewater_redox_ladder
+  title: Sediment porewater redox ladder
+  description: Water-saturated sediment buries organic matter in diffusion- limited
+    porewater, creating a depth-ordered redox ladder in which microbes consume progressively
+    lower-energy terminal electron acceptors.
+  nodes:
+  - node_id: sediment
+    label: sediment
+    node_type: HABITAT
+    grounding: ENVO:00002007
+  - node_id: deposited_particles
+    label: deposited particles
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: buried_organic_matter
+    label: buried organic matter
+    node_type: CHEMICAL
+  - node_id: diffusion_limited_porewater
+    label: diffusion-limited porewater
+    node_type: ENVIRONMENTAL_PARAMETER
+  - node_id: oxygen_depletion
+    label: oxygen depletion
+    node_type: ENVIRONMENTAL_PARAMETER
+  - node_id: redox_zonation
+    label: redox zonation
+    node_type: STATE
+  - node_id: terminal_electron_acceptor_ladder
+    label: terminal electron acceptor ladder
+    node_type: STATE
+  - node_id: sulfate_reduction
+    label: sulfate reduction
+    node_type: PATHWAY
+  - node_id: methanogenesis
+    label: methanogenesis
+    node_type: PATHWAY
+  - node_id: methane
+    label: methane
+    node_type: CHEMICAL
+  - node_id: sulfate_reducing_microorganisms
+    label: sulfate-reducing microorganisms
+    node_type: TAXON
+  - node_id: methanogenic_archaea
+    label: methanogenic archaea
+    node_type: TAXON
+  edges:
+  - edge_id: sediment_accumulates_particles
+    subject: sediment
+    predicate: accumulates
+    object: deposited_particles
+    description: Flowing water deposits particles that accumulate as sediment beds.
+    evidence:
+    - reference: PMID:31388058
+      snippet: Subseafloor life and its biogeochemical impacts
+      notes: D'Hondt and colleagues review buried sediment particles as a habitat
+        for subseafloor microbial life.
+  - edge_id: particles_bury_organic_matter
+    subject: deposited_particles
+    predicate: buries
+    object: buried_organic_matter
+    description: Deposited sediment particles bury organic matter that later supplies
+      electrons for microbial respiration.
+    evidence:
+    - reference: PMID:15618510
+      snippet: Distributions of microbial activities
+      notes: D'Hondt and colleagues mapped how buried organic matter supports microbial
+        activity in deep subseafloor sediments.
+  - edge_id: particles_create_porewater
+    subject: deposited_particles
+    predicate: creates
+    object: diffusion_limited_porewater
+    description: Sediment particle beds trap porewater where solute transport is constrained
+      by diffusion and reaction.
+    evidence:
+    - reference: PMID:31388058
+      snippet: redox zonation in marine sediment
+      notes: D'Hondt and colleagues describe how sediment depth and porewater chemistry
+        structure electron-accepting processes.
+  - edge_id: buried_organic_matter_depletes_oxygen
+    subject: buried_organic_matter
+    predicate: contributes to
+    object: oxygen_depletion
+    description: Organic-matter remineralization consumes oxygen and pushes deeper
+      porewater into anoxic metabolism.
+    evidence:
+    - reference: PMID:35308366
+      snippet: anoxic marine sediment
+      notes: Nagakura and colleagues studied organic-matter mineralization by sulfate
+        reduction in anoxic subseafloor sediment.
+  - edge_id: oxygen_depletion_creates_redox_zonation
+    subject: oxygen_depletion
+    predicate: creates
+    object: redox_zonation
+    description: As oxygen is depleted, sediment communities shift to a depth-ordered
+      sequence of anaerobic respiration pathways.
+    evidence:
+    - reference: PMID:31388058
+      snippet: standard model of redox zonation
+      notes: D'Hondt and colleagues review the depth ordering of terminal electron-accepting
+        processes in marine sediment.
+  - edge_id: redox_zonation_orders_electron_acceptors
+    subject: redox_zonation
+    predicate: orders
+    object: terminal_electron_acceptor_ladder
+    description: Redox zonation sorts oxygen, nitrate, manganese, iron, sulfate, and
+      carbon dioxide reduction with increasing sediment depth.
+    evidence:
+    - reference: PMID:31388058
+      snippet: successive zones of reduction
+      notes: D'Hondt and colleagues describe the canonical sequence of electron-acceptor
+        reduction with depth in marine sediment.
+  - edge_id: electron_acceptors_select_sulfate_reducers
+    subject: terminal_electron_acceptor_ladder
+    predicate: selects for
+    object: sulfate_reducing_microorganisms
+    description: The sulfate-reduction zone selects microorganisms that use sulfate
+      as a terminal electron acceptor.
+    evidence:
+    - reference: PMID:35308366
+      snippet: quantitatively most important process
+      notes: Nagakura and colleagues summarize sulfate reduction as the major organic-matter-degradation
+        process in anoxic marine sediment.
+  - edge_id: sulfate_reducers_perform_sulfate_reduction
+    subject: sulfate_reducing_microorganisms
+    predicate: performs
+    object: sulfate_reduction
+    description: Sulfate-reducing microorganisms oxidize organic matter with sulfate
+      when higher-energy acceptors are depleted.
+    evidence:
+    - reference: PMID:35308366
+      snippet: degrade organic matter
+      notes: Nagakura and colleagues measured biological sulfate reduction in organic-rich
+        subseafloor sediment.
+  - edge_id: sulfate_depletion_selects_methanogens
+    subject: terminal_electron_acceptor_ladder
+    predicate: selects for
+    object: methanogenic_archaea
+    description: Once sulfate becomes depleted with depth, methanogenic archaea are
+      selected as carbon dioxide becomes the terminal electron acceptor.
+    evidence:
+    - reference: PMID:31388058
+      snippet: with increasing sediment depth
+      notes: D'Hondt and colleagues place carbon dioxide reduction at the deep end
+        of the standard sediment redox ladder.
+  - edge_id: methanogens_perform_methanogenesis
+    subject: methanogenic_archaea
+    predicate: performs
+    object: methanogenesis
+    description: Methanogenic archaea produce methane in the deepest, sulfate-depleted
+      sediment redox zone.
+    evidence:
+    - reference: PMID:15618510
+      snippet: microbial activities in deep subseafloor sediments
+      notes: D'Hondt and colleagues measured methanogenic activity in deep subseafloor
+        sediments.
+  - edge_id: methanogenesis_produces_methane
+    subject: methanogenesis
+    predicate: produces
+    object: methane
+    description: Methanogenesis produces methane below shallower nitrate, metal, and
+      sulfate reduction zones.
+    evidence:
+    - reference: PMID:31388058
+      snippet: CO2 with increasing sediment depth
+      notes: D'Hondt and colleagues review carbon dioxide reduction as the terminal
+        step of the marine sediment redox ladder.
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, MADIN,
     PREGO. Grounding: EXACT.'
+- timestamp: '2026-09-04T00:00:00Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a sediment porewater redox-ladder graph backed by PMID:31388058,
+    PMID:15618510, and PMID:35308366.
+  llm_assisted: true

@@ -350,6 +350,238 @@ characteristic_taxa:
   score: 4.0
   rank: 25
   candidate_pool: 623
+causal_graphs:
+- graph_id: waste_water_organic_nitrogen_biotreatment
+  title: Wastewater organic-nitrogen biotreatment
+  description: Anthropogenic wastewater supplies biodegradable organic matter and
+    ammonium that select for engineered microbial consortia in which oxic heterotrophic
+    oxidation, ammonia oxidation, nitrite oxidation, and anoxic denitrification jointly
+    remove carbon and nitrogen.
+  nodes:
+  - node_id: waste_water
+    label: waste water
+    node_type: HABITAT
+    grounding: ENVO:00002001
+  - node_id: anthropogenic_waste_load
+    label: anthropogenic waste load
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: biodegradable_organic_matter
+    label: biodegradable organic matter
+    node_type: CHEMICAL
+  - node_id: ammonium
+    label: ammonium
+    node_type: CHEMICAL
+  - node_id: biochemical_oxygen_demand
+    label: biochemical oxygen demand
+    node_type: ENVIRONMENTAL_PARAMETER
+  - node_id: dissolved_oxygen
+    label: dissolved oxygen
+    node_type: ENVIRONMENTAL_PARAMETER
+  - node_id: anoxic_zones
+    label: anoxic zones
+    node_type: STATE
+  - node_id: heterotrophic_bacteria
+    label: heterotrophic bacteria
+    node_type: TAXON
+  - node_id: ammonia_oxidizing_bacteria
+    label: ammonia-oxidizing bacteria
+    node_type: TAXON
+  - node_id: nitrite_oxidizing_bacteria
+    label: nitrite-oxidizing bacteria
+    node_type: TAXON
+  - node_id: denitrifying_bacteria
+    label: denitrifying bacteria
+    node_type: TAXON
+  - node_id: aerobic_organic_oxidation
+    label: aerobic organic oxidation
+    node_type: PATHWAY
+  - node_id: nitrification
+    label: nitrification
+    node_type: PATHWAY
+  - node_id: nitrate
+    label: nitrate
+    node_type: CHEMICAL
+  - node_id: denitrification
+    label: denitrification
+    node_type: PATHWAY
+  - node_id: nitrogen_removal
+    label: nitrogen removal
+    node_type: COMMUNITY_PROCESS
+  edges:
+  - edge_id: waste_water_receives_anthropogenic_load
+    subject: waste_water
+    predicate: receives
+    object: anthropogenic_waste_load
+    description: Wastewater receives anthropogenic organic and nutrient loads that
+      define it as engineered water affected by human activity.
+    evidence:
+    - reference: PMID:12180096
+      snippet: Bacterial community composition and function in sewage treatment systems
+      notes: Wagner and Loy reviewed sewage-treatment functional groups in human-impacted
+        wastewater streams.
+  - edge_id: anthropogenic_load_supplies_organic_matter
+    subject: anthropogenic_waste_load
+    predicate: supplies
+    object: biodegradable_organic_matter
+    description: Anthropogenic loading supplies biodegradable organic matter to wastewater.
+    evidence:
+    - reference: PMID:27453679
+      snippet: Nonoxidative removal of organics in the activated sludge process
+      notes: Modin and colleagues review wastewater organics as substrates removed
+        by activated-sludge oxidation, sorption, and storage.
+  - edge_id: anthropogenic_load_supplies_ammonium
+    subject: anthropogenic_waste_load
+    predicate: supplies
+    object: ammonium
+    description: Anthropogenic wastewater loading supplies ammonium nitrogen that
+      biological nitrogen-removal communities oxidize during treatment.
+    evidence:
+    - reference: PMID:15276744
+      snippet: ammonia-oxidizing bacterial communities in activated sludge
+      notes: Park and Noguera used activated-sludge reactors to evaluate how dissolved
+        oxygen shapes wastewater ammonia oxidizers.
+  - edge_id: organic_matter_creates_oxygen_demand
+    subject: biodegradable_organic_matter
+    predicate: creates
+    object: biochemical_oxygen_demand
+    description: Biodegradable organics in wastewater create an oxygen demand as microorganisms
+      oxidize them.
+    evidence:
+    - reference: PMID:27453679
+      snippet: aerobic oxidation of organic pollutants
+      notes: Modin and colleagues summarize conventional activated-sludge treatment
+        as aerobic oxidation of wastewater organic pollutants.
+  - edge_id: organic_matter_supports_heterotrophs
+    subject: biodegradable_organic_matter
+    predicate: supports
+    object: heterotrophic_bacteria
+    description: Organic substrates support heterotrophic bacteria that consume wastewater
+      carbon.
+    evidence:
+    - reference: PMID:12180096
+      snippet: composition and function in sewage treatment systems
+      notes: Wagner and Loy reviewed heterotrophic bacteria as functional members
+        of sewage-treatment systems.
+  - edge_id: heterotrophs_perform_organic_oxidation
+    subject: heterotrophic_bacteria
+    predicate: performs
+    object: aerobic_organic_oxidation
+    description: Aerated wastewater selects heterotrophs that oxidize organic carbon
+      to carbon dioxide and water.
+    evidence:
+    - reference: PMID:27453679
+      snippet: activated sludge process is commonly used
+      notes: Modin and colleagues review aerobic oxidation of organic pollutants by
+        activated sludge.
+  - edge_id: organic_oxidation_consumes_oxygen
+    subject: aerobic_organic_oxidation
+    predicate: consumes
+    object: dissolved_oxygen
+    description: Aerobic organic oxidation consumes dissolved oxygen while removing
+      biodegradable carbon from wastewater.
+    evidence:
+    - reference: PMID:27453679
+      snippet: aerobic oxidation of organic pollutants
+      notes: Modin and colleagues link organic removal to aerobic oxidation in activated-sludge
+        wastewater treatment.
+  - edge_id: oxygen_demand_creates_anoxic_zones
+    subject: biochemical_oxygen_demand
+    predicate: creates
+    object: anoxic_zones
+    description: Oxygen demand in organic-rich wastewater contributes to anoxic niches
+      that sustain nitrate respiration.
+    evidence:
+    - reference: PMID:12180096
+      snippet: Bacterial community composition and function
+      notes: Wagner and Loy reviewed oxic and anoxic functional guilds in sewage-treatment
+        systems.
+  - edge_id: dissolved_oxygen_enables_nitrification
+    subject: dissolved_oxygen
+    predicate: enables
+    object: nitrification
+    description: Dissolved oxygen enables nitrification by aerobic ammonia- and nitrite-oxidizing
+      bacteria.
+    evidence:
+    - reference: PMID:15276744
+      snippet: effect of dissolved oxygen on ammonia-oxidizing bacterial communities
+      notes: Park and Noguera experimentally varied dissolved oxygen to test its effect
+        on ammonia oxidizers in activated sludge.
+  - edge_id: ammonium_selects_ammonia_oxidizers
+    subject: ammonium
+    predicate: selects for
+    object: ammonia_oxidizing_bacteria
+    description: Ammonium in wastewater selects ammonia oxidizers that initiate nitrification.
+    evidence:
+    - reference: PMID:19515200
+      snippet: Ammonia-oxidizing communities in a highly aerated full-scale
+      notes: Wells and colleagues tracked ammonia-oxidizing populations in a highly
+        aerated full-scale activated-sludge bioreactor.
+  - edge_id: ammonia_oxidizers_perform_nitrification
+    subject: ammonia_oxidizing_bacteria
+    predicate: performs
+    object: nitrification
+    description: Ammonia-oxidizing bacteria oxidize ammonia as the first microbial
+      step in wastewater nitrification.
+    evidence:
+    - reference: PMID:15276744
+      snippet: ammonia-oxidizing bacterial communities in activated sludge
+      notes: Park and Noguera studied ammonia oxidizers enriched in activated sludge
+        under different oxygen regimes.
+  - edge_id: nitrite_oxidizers_complete_nitrification
+    subject: nitrite_oxidizing_bacteria
+    predicate: performs
+    object: nitrification
+    description: Nitrite-oxidizing bacteria complete nitrification by oxidizing nitrite
+      to nitrate.
+    evidence:
+    - reference: PMID:12180096
+      snippet: Bacterial community composition and function in sewage treatment systems
+      notes: Wagner and Loy reviewed ammonia and nitrite oxidizers in nitrifying sewage-treatment
+        communities.
+  - edge_id: nitrification_produces_nitrate
+    subject: nitrification
+    predicate: produces
+    object: nitrate
+    description: Nitrification converts reduced ammonium into oxidized nitrogen that
+      can feed denitrification.
+    evidence:
+    - reference: PMID:12180096
+      snippet: Bacterial community composition and function in sewage treatment systems
+      notes: Wagner and Loy reviewed nitrification and denitrification as coupled
+        microbial functions in wastewater treatment.
+  - edge_id: anoxic_zones_select_denitrifiers
+    subject: anoxic_zones
+    predicate: selects for
+    object: denitrifying_bacteria
+    description: Anoxic wastewater zones select heterotrophic denitrifiers that use
+      nitrate rather than oxygen as an electron acceptor.
+    evidence:
+    - reference: PMID:17391331
+      snippet: Ecophysiology of abundant denitrifying bacteria in activated sludge
+      notes: Thomsen and colleagues characterized abundant denitrifying bacterial
+        populations in activated sludge.
+  - edge_id: denitrifiers_perform_denitrification
+    subject: denitrifying_bacteria
+    predicate: performs
+    object: denitrification
+    description: Activated-sludge denitrifiers reduce oxidized nitrogen under anoxic
+      conditions.
+    evidence:
+    - reference: PMID:18811652
+      snippet: Substrate-dependent denitrification
+      notes: Morgan-Sagastume and colleagues measured substrate-dependent denitrification
+        by abundant probe-defined activated-sludge bacteria.
+  - edge_id: denitrification_removes_nitrogen
+    subject: denitrification
+    predicate: contributes to
+    object: nitrogen_removal
+    description: Denitrification removes wastewater nitrogen by reducing nitrate to
+      gaseous nitrogen products.
+    evidence:
+    - reference: PMID:18811652
+      snippet: denitrifying bacteria in activated sludge
+      notes: Morgan-Sagastume and colleagues assayed denitrifying activated sludge
+        populations that remove nitrate under anoxic conditions.
 curation_history:
 - timestamp: '2026-08-13T00:00:00Z'
   curator: claude-opus-5
@@ -374,3 +606,9 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD,
     MADIN, PREGO. Grounding: EXACT.'
+- timestamp: '2026-09-04T00:00:00Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a wastewater organic-nitrogen biotreatment graph backed by PMID:12180096,
+    PMID:27453679, PMID:15276744, PMID:19515200, PMID:17391331, and PMID:18811652.
+  llm_assisted: true

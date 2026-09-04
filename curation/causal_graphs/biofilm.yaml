@@ -1,0 +1,243 @@
+identifier: ENVO:00002034
+causal_graphs:
+- graph_id: biofilm_eps_gradient_structuring
+  title: Biofilm EPS gradient structuring
+  description: Biofilms arise when microbial cells adhere to a substratum,
+    remain together as an aggregate, and secrete an extracellular polymeric
+    matrix. The matrix anchors cells and public goods near a surface, retains
+    extracellular enzymes, slows solute transport, and creates oxygen and
+    nutrient gradients that differentiate the biofilm into physiologically
+    distinct microzones.
+  nodes:
+  - node_id: biofilm
+    label: biofilm
+    node_type: HABITAT
+    grounding: ENVO:00002034
+  - node_id: microbial_aggregate
+    label: surface-associated microbial aggregate
+    node_type: TAXON
+  - node_id: substratum
+    label: substratum
+    node_type: HABITAT
+  - node_id: surface_adhesion
+    label: surface adhesion
+    node_type: TRAIT
+  - node_id: extracellular_polymeric_matrix
+    label: extracellular polymeric matrix
+    node_type: CHEMICAL
+  - node_id: extracellular_dna
+    label: extracellular DNA
+    node_type: CHEMICAL
+  - node_id: matrix_polysaccharides
+    label: matrix polysaccharides
+    node_type: CHEMICAL
+  - node_id: matrix_proteins
+    label: matrix proteins
+    node_type: CHEMICAL
+  - node_id: cell_cell_cohesion
+    label: cell-cell cohesion
+    node_type: STATE
+  - node_id: extracellular_enzymes
+    label: extracellular enzymes
+    node_type: GENE_OR_PROTEIN
+  - node_id: external_digestive_system
+    label: matrix-localized external digestion
+    node_type: COMMUNITY_PROCESS
+  - node_id: diffusion_limitation
+    label: diffusion limitation
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: oxygen_nutrient_gradients
+    label: oxygen and nutrient gradients
+    node_type: ENVIRONMENTAL_PARAMETER
+  - node_id: physiological_heterogeneity
+    label: physiological heterogeneity
+    node_type: COMMUNITY_PROCESS
+  - node_id: stress_tolerant_subpopulations
+    label: stress-tolerant subpopulations
+    node_type: TAXON
+  edges:
+  - edge_id: biofilm_determined_by_aggregate
+    subject: biofilm
+    predicate: determined by
+    object: microbial_aggregate
+    description: A biofilm is a surface-associated microbial aggregate whose
+      cells remain together in a shared matrix.
+    evidence:
+    - reference: PMID:27510863
+      snippet: emergent form of bacterial life
+      notes: Flemming and colleagues reviewed bacterial biofilms as
+        surface-associated communities embedded in self-produced matrix.
+  - edge_id: aggregate_adheres_to_substratum
+    subject: microbial_aggregate
+    predicate: adheres to
+    object: substratum
+    description: Biofilm organisms use surface adhesion to persist on a
+      substratum rather than living only as planktonic cells.
+    evidence:
+    - reference: PMID:27510863
+      snippet: Biofilms
+      notes: The biofilm lifestyle review describes surface attachment as a
+        central transition in the development of biofilm communities.
+  - edge_id: aggregate_expresses_surface_adhesion
+    subject: microbial_aggregate
+    predicate: expresses
+    object: surface_adhesion
+    description: Adhesive traits let cells attach to surfaces and seed
+      multicellular growth.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2016.94
+      snippet: biofilm formation
+      notes: Flemming and colleagues reviewed adhesins and appendages that
+        mediate attachment during biofilm development.
+  - edge_id: surface_adhesion_enables_aggregation
+    subject: surface_adhesion
+    predicate: enables
+    object: microbial_aggregate
+    description: Surface attachment keeps founder cells in place long enough
+      for clonal growth and recruitment to build a microbial aggregate.
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2016.94
+      snippet: emergent form
+      notes: The Nature Reviews Microbiology review covers attachment and
+        aggregate development as linked stages of biofilm formation.
+  - edge_id: aggregate_produces_matrix
+    subject: microbial_aggregate
+    predicate: produces
+    object: extracellular_polymeric_matrix
+    description: Biofilm cells secrete extracellular polymeric substances that
+      assemble into the surrounding biofilm matrix.
+    evidence:
+    - reference: PMID:20676145
+      snippet: The biofilm matrix
+      notes: Flemming and Wingender reviewed the extracellular polymeric
+        substances that form the self-produced matrix of biofilms.
+  - edge_id: matrix_contains_edna
+    subject: extracellular_polymeric_matrix
+    predicate: contains
+    object: extracellular_dna
+    description: Extracellular DNA is one structural constituent of the biofilm
+      matrix.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2415
+      snippet: matrix
+      notes: The biofilm-matrix review summarizes extracellular DNA among
+        common matrix components.
+  - edge_id: matrix_contains_polysaccharides
+    subject: extracellular_polymeric_matrix
+    predicate: contains
+    object: matrix_polysaccharides
+    description: Matrix polysaccharides provide hydrated polymers that surround
+      and support embedded cells.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2415
+      snippet: Extracellular polymeric substances
+      notes: Flemming and Wingender reviewed polysaccharides as major
+        constituents of extracellular polymeric matrices.
+  - edge_id: matrix_contains_proteins
+    subject: extracellular_polymeric_matrix
+    predicate: contains
+    object: matrix_proteins
+    description: Proteinaceous adhesins and amyloid fibers contribute to matrix
+      architecture and intercellular contacts.
+    evidence:
+    - reference: PMID:20676145
+      snippet: biofilm matrix
+      notes: The matrix review describes protein components that contribute to
+        biofilm matrix structure and function.
+  - edge_id: matrix_anchors_aggregate
+    subject: extracellular_polymeric_matrix
+    predicate: retains
+    object: microbial_aggregate
+    description: The extracellular matrix embeds cells and keeps the community
+      cohesive on the surface.
+    evidence:
+    - reference: PMID:20676145
+      snippet: self-produced matrix
+      notes: Flemming and Wingender describe the matrix as the extracellular
+        material surrounding and holding biofilm cells together.
+  - edge_id: matrix_generates_cell_cohesion
+    subject: extracellular_polymeric_matrix
+    predicate: produces
+    object: cell_cell_cohesion
+    description: Shared matrix polymers create cohesion among neighboring
+      biofilm cells.
+    evidence:
+    - reference: DOI:10.1038/nrmicro2415
+      snippet: matrix acts
+      notes: The biofilm-matrix review discusses matrix polymers as mediators
+        of stable multicellular organization.
+  - edge_id: matrix_retains_extracellular_enzymes
+    subject: extracellular_polymeric_matrix
+    predicate: retains
+    object: extracellular_enzymes
+    description: Matrix material keeps secreted enzymes close to the cells that
+      invested in producing them.
+    evidence:
+    - reference: PMID:20676145
+      snippet: external digestive system
+      notes: Flemming and Wingender reviewed enzyme retention as one function
+        of the extracellular biofilm matrix.
+  - edge_id: retained_enzymes_drive_external_digestion
+    subject: extracellular_enzymes
+    predicate: drives
+    object: external_digestive_system
+    description: Matrix-retained enzymes support extracellular degradation of
+      polymers and particles near the aggregate.
+    evidence:
+    - reference: PMID:20676145
+      snippet: external digestive system
+      notes: The matrix review explains how localized extracellular enzymes let
+        biofilms metabolize polymers outside the cell.
+  - edge_id: matrix_limits_diffusion
+    subject: extracellular_polymeric_matrix
+    predicate: produces
+    object: diffusion_limitation
+    description: Cells and extracellular matrix slow transport of oxygen,
+      electron acceptors, and nutrients through the biofilm depth.
+    evidence:
+    - reference: PMID:35149841
+      snippet: Gradients and consequences
+      notes: Jo, Price-Whelan, and Dietrich reviewed gradient formation and
+        physiological differentiation in biofilms.
+  - edge_id: diffusion_limitation_forms_gradients
+    subject: diffusion_limitation
+    predicate: produces
+    object: oxygen_nutrient_gradients
+    description: Consumption and limited inward diffusion form steep chemical
+      gradients across a spatially constrained biofilm.
+    evidence:
+    - reference: DOI:10.1038/s41579-022-00692-2
+      snippet: heterogeneity in biofilms
+      notes: The gradient review describes biofilm resource gradients generated
+        by local metabolism and spatial transport limits.
+  - edge_id: gradients_drive_heterogeneity
+    subject: oxygen_nutrient_gradients
+    predicate: drives
+    object: physiological_heterogeneity
+    description: Oxygen and nutrient gradients make nearby biofilm cells occupy
+      different metabolic states.
+    evidence:
+    - reference: PMID:35149841
+      snippet: physiological differentiation
+      notes: Jo and colleagues reviewed how gradients in biofilms cause
+        physiological differentiation among cells in the same assemblage.
+  - edge_id: heterogeneity_selects_stress_tolerance
+    subject: physiological_heterogeneity
+    predicate: selects for
+    object: stress_tolerant_subpopulations
+    description: Slow-growing and resource-limited biofilm zones increase the
+      prevalence of cells tolerant of chemical or physical stress.
+    evidence:
+    - reference: PMID:35149841
+      snippet: increased resistance to stress
+      notes: The heterogeneity review links gradient-driven physiological
+        differentiation in biofilms to stress tolerance.
+curation_history:
+- timestamp: '2026-09-04T00:00:00Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a biofilm EPS gradient structuring graph backed by
+    PMID:27510863, DOI:10.1038/nrmicro.2016.94, PMID:20676145,
+    DOI:10.1038/nrmicro2415, PMID:35149841, and
+    DOI:10.1038/s41579-022-00692-2.
+  llm_assisted: true

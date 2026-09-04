@@ -368,9 +368,124 @@ characteristic_taxa:
   score: 4.0
   rank: 25
   candidate_pool: 1887
+causal_graphs:
+- graph_id: seawater_dom_oligotrophic_uptake
+  title: Seawater DOM oligotrophic uptake
+  description: Dissolved organic matter in seawater creates dilute carbon pools that
+    select for oligotrophic bacteria with streamlined genomes and efficient nutrient
+    transport systems.
+  nodes:
+  - node_id: sea_water
+    label: sea water
+    node_type: HABITAT
+    grounding: ENVO:00002149
+  - node_id: dissolved_organic_matter
+    label: dissolved organic matter
+    node_type: CHEMICAL
+  - node_id: low_organic_carbon_availability
+    label: low organic-carbon availability
+    node_type: ENVIRONMENTAL_PARAMETER
+  - node_id: oligotrophic_marine_bacteria
+    label: oligotrophic marine bacteria
+    node_type: TAXON
+  - node_id: nutrient_transport_systems
+    label: nutrient transport systems
+    node_type: GENE_OR_PROTEIN
+  - node_id: dilute_nutrient_uptake
+    label: dilute nutrient uptake
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: streamlined_genomes
+    label: streamlined genomes
+    node_type: STATE
+  - node_id: ocean_microbiome_dom_cycling
+    label: ocean microbiome DOM cycling
+    node_type: COMMUNITY_PROCESS
+  edges:
+  - edge_id: seawater_contains_dom
+    subject: sea_water
+    predicate: contains
+    object: dissolved_organic_matter
+    description: The seawater carbon pool contains dissolved organic matter used by
+      marine microbes.
+    evidence:
+    - reference: PMID:26951682
+      snippet: largest pools of reduced carbon on Earth
+      notes: Moran and colleagues describe ocean dissolved organic matter as a large
+        reduced-carbon reservoir.
+  - edge_id: dom_couples_to_ocean_microbiome
+    subject: dissolved_organic_matter
+    predicate: is cycled by
+    object: ocean_microbiome_dom_cycling
+    description: Ocean dissolved organic molecules are produced and consumed by members
+      of the marine microbiome.
+    evidence:
+    - reference: PMID:26951682
+      snippet: produce and consume them
+      notes: Moran and colleagues frame ocean DOM cycling as molecular relationships
+        between DOM compounds and the microbes that produce and consume them.
+  - edge_id: carbon_poverty_selects_oligotrophs
+    subject: low_organic_carbon_availability
+    predicate: selects for
+    object: oligotrophic_marine_bacteria
+    description: Low seawater carbon concentrations select for oligotrophic bacterial
+      growth strategies.
+    evidence:
+    - reference: PMID:19805210
+      snippet: low (oligotrophic) nutrient concentrations
+      notes: Lauro and colleagues compare marine bacteria adapted to low- and high-nutrient
+        trophic habitats.
+  - edge_id: nutrient_transporters_control_oligotrophy
+    subject: nutrient_transport_systems
+    predicate: controls
+    object: dilute_nutrient_uptake
+    description: Nutrient transporter architecture controls uptake of dilute substrates
+      by oligotrophic bacteria.
+    evidence:
+    - reference: PMID:34010286
+      snippet: trade-offs between nutrient transport systems
+      notes: Norris and colleagues model copiotroph-oligotroph differences as a consequence
+        of nutrient-transporter trade-offs.
+  - edge_id: abc_transporters_support_oligotrophs
+    subject: oligotrophic_marine_bacteria
+    predicate: uses
+    object: nutrient_transport_systems
+    description: Prototypical marine oligotrophs rely on ATP-binding cassette transporters
+      for nutrient uptake.
+    evidence:
+    - reference: PMID:34010286
+      snippet: rely on ATP-binding cassette (ABC) transporters
+      notes: Norris and colleagues contrast SAR11-like oligotrophs with copiotrophs
+        that encode phosphotransferase systems.
+  - edge_id: dilute_uptake_enables_dom_cycling
+    subject: dilute_nutrient_uptake
+    predicate: enables
+    object: ocean_microbiome_dom_cycling
+    description: Uptake of dilute organic substrates enables heterotrophic bacteria
+      to participate in ocean DOM cycling.
+    evidence:
+    - reference: PMID:34010286
+      snippet: optimal nutrient uptake and metabolic strategy
+      notes: Norris and colleagues connect nutrient-uptake strategy to marine heterotroph
+        metabolism.
+  - edge_id: oligotrophy_is_linked_to_genome_streamlining
+    subject: oligotrophic_marine_bacteria
+    predicate: has adaptation
+    object: streamlined_genomes
+    description: Highly abundant oligotrophic seawater bacteria show genome streamlining.
+    evidence:
+    - reference: PMID:16109880
+      snippet: Genome streamlining in a cosmopolitan oceanic bacterium
+      notes: Giovannoni and colleagues described genome streamlining in the cosmopolitan
+        seawater bacterium SAR11.
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, MADIN,
     PREGO. Grounding: EXACT.'
+- timestamp: '2026-09-04T00:00:00Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a seawater dissolved-organic-matter and oligotrophic-uptake graph
+    backed by PMID:26951682, PMID:19805210, PMID:34010286, and PMID:16109880.
+  llm_assisted: true

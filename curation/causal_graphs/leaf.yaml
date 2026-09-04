@@ -1,0 +1,182 @@
+identifier: PO:0025034
+causal_graphs:
+- graph_id: leaf_phyllosphere_water_nutrient_stress
+  title: Leaf phyllosphere water-nutrient stress
+  description: Leaf surfaces expose epiphytic bacteria to fluctuating water,
+    nutrient, and ultraviolet stresses while local water films and leached plant
+    sugars create microsites that support aggregate-forming phyllosphere taxa.
+  nodes:
+  - node_id: leaf
+    label: leaf
+    node_type: HABITAT
+    grounding: PO:0025034
+  - node_id: phyllosphere_surface
+    label: phyllosphere surface
+    node_type: HABITAT
+  - node_id: fluctuating_water_nutrients
+    label: fluctuating water and nutrients
+    node_type: ENVIRONMENTAL_PARAMETER
+  - node_id: cuticular_sugar_flux
+    label: cuticular sugar flux
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: nutrient_hotspots
+    label: nutrient hotspots
+    node_type: STATE
+  - node_id: epiphytic_bacterial_aggregates
+    label: epiphytic bacterial aggregates
+    node_type: COMMUNITY_PROCESS
+  - node_id: extracellular_polysaccharide
+    label: extracellular polysaccharide
+    node_type: CHEMICAL
+  - node_id: desiccation_stress
+    label: desiccation stress
+    node_type: ENVIRONMENTAL_PARAMETER
+  - node_id: solar_uva_exposure
+    label: solar UVA exposure
+    node_type: ENVIRONMENTAL_PARAMETER
+  - node_id: methylobacterium_species
+    label: Methylobacterium species
+    node_type: TAXON
+  - node_id: uva_absorbing_compounds
+    label: UVA-absorbing compounds
+    node_type: CHEMICAL
+  - node_id: sphingomonas_species
+    label: Sphingomonas species
+    node_type: TAXON
+  - node_id: carbohydrate_transport
+    label: carbohydrate transport
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: methanol_utilization
+    label: methanol utilization
+    node_type: TRAIT
+  edges:
+  - edge_id: leaf_provides_phyllosphere_surface
+    subject: leaf
+    predicate: provides
+    object: phyllosphere_surface
+    description: Leaf surfaces are phyllosphere habitats colonized by diverse
+      bacterial communities.
+    evidence:
+    - reference: PMID:23154261
+      snippet: plant factors are involved in shaping
+      notes: Vorholt reviewed cultivation-independent evidence that plant
+        factors shape phyllosphere communities.
+  - edge_id: phyllosphere_imposes_water_nutrient_fluctuation
+    subject: phyllosphere_surface
+    predicate: has condition
+    object: fluctuating_water_nutrients
+    description: The exposed leaf surface creates rapid physical and
+      nutritional fluctuations for bacterial colonists.
+    evidence:
+    - reference: PMID:12676659
+      snippet: large fluctuations in the physical and nutritional conditions
+      notes: Lindow and Brandl summarize fluctuation in physical and nutritional
+        conditions as characteristic of the phyllosphere.
+  - edge_id: surface_water_controls_sugar_flux
+    subject: fluctuating_water_nutrients
+    predicate: controls
+    object: cuticular_sugar_flux
+    description: Surface-water distribution controls diffusion of leaf-derived
+      sugars through the cuticle to epiphytic bacteria.
+    evidence:
+    - reference: PMID:24124501
+      snippet: waterscapes impacted the diffusion of nutrients
+      notes: van der Wal and colleagues modeled how surface-water layouts change
+        nutrient diffusion from the leaf interior to the surface.
+  - edge_id: sugar_flux_forms_nutrient_hotspots
+    subject: cuticular_sugar_flux
+    predicate: creates
+    object: nutrient_hotspots
+    description: Water films and droplets concentrate leaked leaf sugars into
+      spatially heterogeneous bacterial growth sites.
+    evidence:
+    - reference: PMID:24124501
+      snippet: Water droplets on a leaf surface are effective sinks
+      notes: van der Wal and colleagues linked water droplets, cuticle geometry,
+        and bacterial consumption to sugar availability on the leaf surface.
+  - edge_id: nutrient_hotspots_form_aggregates
+    subject: nutrient_hotspots
+    predicate: promotes
+    object: epiphytic_bacterial_aggregates
+    description: Conductive nutrient microsites on leaf surfaces promote local
+      bacterial reproduction and aggregate formation.
+    evidence:
+    - reference: PMID:14665692
+      snippet: Differential survival of solitary and aggregated bacterial cells
+      notes: Monier and Lindow experimentally connected survival differences
+        between solitary and aggregated cells with aggregate formation on leaf
+        surfaces.
+  - edge_id: aggregates_accumulate_eps
+    subject: epiphytic_bacterial_aggregates
+    predicate: produces
+    object: extracellular_polysaccharide
+    description: Epiphytic aggregates contain extracellular polysaccharide
+      matrix material.
+    evidence:
+    - reference: PMID:12676659
+      snippet: EPS slime within aggregates may shield the bacteria
+      notes: Lindow and Brandl describe extracellular polysaccharide as a major
+        part of the bacterial aggregate matrix in the phyllosphere.
+  - edge_id: eps_buffers_desiccation
+    subject: extracellular_polysaccharide
+    predicate: mitigates
+    object: desiccation_stress
+    description: Extracellular polysaccharide in aggregates buffers cells
+      against the matric and osmotic stress of drying leaf surfaces.
+    evidence:
+    - reference: PMID:12676659
+      snippet: shield the bacteria from desiccation stress
+      notes: Lindow and Brandl report that EPS-rich aggregates can shield
+        phyllosphere epiphytes from desiccation stress.
+  - edge_id: phyllosphere_exposes_cells_to_uva
+    subject: phyllosphere_surface
+    predicate: exposes microbes to
+    object: solar_uva_exposure
+    description: Phyllosphere microbes encounter harmful ultraviolet radiation
+      on exposed leaf surfaces.
+    evidence:
+    - reference: PMID:28068611
+      snippet: encounter harmful ultraviolet rays
+      notes: Yoshida and colleagues screened phyllosphere isolates for
+        ultraviolet-A absorbers.
+  - edge_id: methylobacterium_uses_uva_absorbers
+    subject: methylobacterium_species
+    predicate: has adaptation
+    object: uva_absorbing_compounds
+    description: Leaf-associated Methylobacterium strains can contain stable,
+      polar UVA-absorbing compounds.
+    evidence:
+    - reference: PMID:28068611
+      snippet: Methylobacterium species based on 16S ribosomal RNA
+      notes: Yoshida and colleagues found that the tested UVA-absorbing
+        phyllosphere isolates belonged to Methylobacterium.
+  - edge_id: methylobacterium_uses_methanol
+    subject: methylobacterium_species
+    predicate: has adaptation
+    object: methanol_utilization
+    description: Methylobacterium on leaves express proteins for using methanol
+      as a carbon and energy source.
+    evidence:
+    - reference: PMID:19805315
+      snippet: use methanol as a source of carbon and energy
+      notes: Delmotte and colleagues detected Methylobacterium proteins related
+        to methanol utilization in metaproteogenomic leaf samples.
+  - edge_id: sphingomonas_uses_carbohydrate_transport
+    subject: sphingomonas_species
+    predicate: has adaptation
+    object: carbohydrate_transport
+    description: Leaf-associated Sphingomonas express TonB-dependent receptors
+      consistent with broad carbohydrate transport.
+    evidence:
+    - reference: PMID:19805315
+      snippet: TonB-dependent receptors
+      notes: Delmotte and colleagues observed high expression of
+        TonB-dependent receptors for Sphingomonas in phyllosphere communities.
+curation_history:
+- timestamp: '2026-09-04T00:00:00Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a leaf phyllosphere water-nutrient-stress graph backed by
+    PMID:23154261, PMID:12676659, PMID:24124501, PMID:14665692, PMID:28068611,
+    and PMID:19805315.
+  llm_assisted: true
