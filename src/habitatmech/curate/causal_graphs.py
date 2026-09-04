@@ -89,6 +89,7 @@ def _validate_graph_integrity(path: Path, identifier: str, graphs: Iterable[dict
 
     for graph in graphs:
         graph_id = str(graph.get("graph_id") or "<missing>")
+        _require_nonempty(graph.get("graph_id"), path, "graph_id", problems)
         if graph_id in graph_ids:
             problems.append(f"{path}: duplicate graph_id {graph_id!r} for {identifier}")
         graph_ids.add(graph_id)
@@ -103,13 +104,30 @@ def _validate_graph_integrity(path: Path, identifier: str, graphs: Iterable[dict
         node_ids: set[str] = set()
         for node in nodes:
             node_id = str(node.get("node_id") or "<missing>")
+            _require_nonempty(node.get("node_id"), path, f"{graph_id}: node_id", problems)
+            _require_nonempty(
+                node.get("label"),
+                path,
+                f"{graph_id}: node {node_id!r} label",
+                problems,
+            )
             if node_id in node_ids:
                 problems.append(f"{path}: {graph_id}: duplicate node_id {node_id!r}")
             node_ids.add(node_id)
 
         edge_ids: set[str] = set()
+        referenced_node_ids: set[str] = set()
         for edge in edges:
             edge_id = str(edge.get("edge_id") or "<missing>")
+            _require_nonempty(
+                edge.get("edge_id"), path, f"{graph_id}: edge_id", problems
+            )
+            _require_nonempty(
+                edge.get("predicate"),
+                path,
+                f"{graph_id}: edge {edge_id!r} predicate",
+                problems,
+            )
             if edge_id in edge_ids:
                 problems.append(f"{path}: {graph_id}: duplicate edge_id {edge_id!r}")
             edge_ids.add(edge_id)
@@ -125,6 +143,8 @@ def _validate_graph_integrity(path: Path, identifier: str, graphs: Iterable[dict
                         f"{path}: {graph_id}: edge {edge_id!r} has undeclared "
                         f"{endpoint} {node_id!r}"
                     )
+                else:
+                    referenced_node_ids.add(str(node_id))
             for i, evidence in enumerate(evidence_items, start=1):
                 _require_nonempty(
                     evidence.get("reference"),
@@ -132,6 +152,11 @@ def _validate_graph_integrity(path: Path, identifier: str, graphs: Iterable[dict
                     f"{graph_id}: edge {edge_id!r} evidence {i} reference",
                     problems,
                 )
+
+        for node_id in sorted(node_ids - referenced_node_ids):
+            problems.append(
+                f"{path}: {graph_id}: node {node_id!r} is not referenced by any edge"
+            )
 
     if problems:
         raise CausalGraphCurationError(

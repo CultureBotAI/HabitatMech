@@ -84,6 +84,39 @@ def test_dangling_causal_graph_edge_is_rejected(tmp_path):
         load_causal_graph_curation_files([_write(tmp_path, doc)])
 
 
+def test_blank_causal_graph_predicate_is_rejected(tmp_path):
+    doc = _overlay()
+    doc["causal_graphs"][0]["graph_id"] = " "
+    doc["causal_graphs"][0]["nodes"][0]["node_id"] = " "
+    doc["causal_graphs"][0]["nodes"][1]["label"] = " "
+    doc["causal_graphs"][0]["edges"][0]["predicate"] = " "
+
+    with pytest.raises(CausalGraphCurationError) as excinfo:
+        load_causal_graph_curation_files([_write(tmp_path, doc)])
+    message = str(excinfo.value)
+    assert "graph_id is required" in message
+    assert "node_id is required" in message
+    assert "node 'compatible_solutes' label is required" in message
+    assert "predicate is required" in message
+
+
+def test_isolated_causal_graph_node_is_rejected(tmp_path):
+    doc = _overlay()
+    doc["causal_graphs"][0]["nodes"].append(
+        {
+            "node_id": "unused",
+            "label": "unused node",
+            "node_type": "CHEMICAL",
+        }
+    )
+
+    with pytest.raises(
+        CausalGraphCurationError,
+        match="node 'unused' is not referenced by any edge",
+    ):
+        load_causal_graph_curation_files([_write(tmp_path, doc)])
+
+
 def test_causal_graph_edges_must_have_evidence(tmp_path):
     doc = _overlay()
     doc["causal_graphs"][0]["edges"][0]["evidence"] = []
