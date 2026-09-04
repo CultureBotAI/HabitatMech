@@ -181,9 +181,285 @@ characteristic_taxa:
   source: MADIN
   taxon_label: bacillus_mycoides
   candidate_pool: 70
+causal_graphs:
+- graph_id: milk_carbohydrate_lactic_acid_assembly
+  title: Milk carbohydrate lactic-acid assembly
+  description: Mammary glands secrete milk as a nutrient-rich aqueous emulsion containing
+    lactose, oligosaccharides, fat globules, proteins, antimicrobial bioactives, and
+    low-abundance milk microbiota. Milk sugars select saccharolytic lactic-acid bacteria
+    and bifidobacteria, while fermentation converts carbohydrates into lactate and
+    acetate that can acidify the milk habitat and reshape downstream community structure.
+  nodes:
+  - node_id: milk
+    label: milk
+    node_type: HABITAT
+    grounding: UBERON:0001913
+  - node_id: mammary_gland
+    label: mammary gland
+    node_type: HABITAT
+    grounding: UBERON:0001911
+  - node_id: aqueous_emulsion
+    label: aqueous fat-protein emulsion
+    node_type: STATE
+  - node_id: lactose
+    label: lactose
+    node_type: CHEMICAL
+  - node_id: milk_oligosaccharides
+    label: milk oligosaccharides
+    node_type: CHEMICAL
+  - node_id: milk_fat_globules
+    label: milk fat globules
+    node_type: CHEMICAL
+  - node_id: milk_proteins
+    label: milk proteins
+    node_type: CHEMICAL
+  - node_id: antimicrobial_bioactives
+    label: antimicrobial bioactives
+    node_type: CHEMICAL
+  - node_id: milk_microbiota
+    label: milk microbiota
+    node_type: COMMUNITY_PROCESS
+  - node_id: lactic_acid_bacteria
+    label: lactic-acid bacteria
+    node_type: TAXON
+  - node_id: bifidobacteria
+    label: bifidobacteria
+    node_type: TAXON
+  - node_id: lactose_fermentation
+    label: lactose fermentation
+    node_type: PATHWAY
+  - node_id: oligosaccharide_catabolism
+    label: oligosaccharide catabolism
+    node_type: PATHWAY
+  - node_id: lactate_and_acetate
+    label: lactate and acetate
+    node_type: CHEMICAL
+  - node_id: acidification
+    label: acidification
+    node_type: ENVIRONMENTAL_FACTOR
+  edges:
+  - edge_id: mammary_gland_secretes_milk
+    subject: mammary_gland
+    predicate: secretes
+    object: milk
+    description: Mammary tissue secretes milk into a nutrient-rich host fluid that
+      carries endogenous and environmental microbes.
+    evidence:
+    - reference: PMID:21695057
+      snippet: human milk
+      notes: Hunt and colleagues characterized bacterial communities in milk produced
+        by healthy lactating women.
+  - edge_id: milk_forms_aqueous_emulsion
+    subject: milk
+    predicate: forms
+    object: aqueous_emulsion
+    description: Milk is an aqueous emulsion whose water phase carries soluble sugars
+      and proteins while dispersing fat globules.
+    evidence:
+    - reference: PMID:23808865
+      snippet: raw milk
+      notes: Quigley and colleagues reviewed raw milk as a nutrient-rich matrix whose
+        composition can support a complex microbiota.
+  - edge_id: milk_contains_lactose
+    subject: aqueous_emulsion
+    predicate: contains
+    object: lactose
+    description: Lactose is a major soluble carbohydrate in milk and a substrate for
+      dairy lactic-acid bacteria.
+    evidence:
+    - reference: PMID:21175746
+      snippet: lactic acid bacteria fermentation of human milk
+      notes: Schwab and Ganzle assayed lactic-acid bacterial fermentation of milk
+        sugars, including lactose and human milk oligosaccharide components.
+  - edge_id: milk_contains_oligosaccharides
+    subject: aqueous_emulsion
+    predicate: contains
+    object: milk_oligosaccharides
+    description: Human milk contains soluble oligosaccharides that can serve as selective
+      substrates for milk- and infant-associated saccharolytic bacteria.
+    evidence:
+    - reference: PMID:19033196
+      snippet: adaptations for milk utilization
+      notes: Sela and colleagues identified a Bifidobacterium infantis genome cluster
+        specialized for human milk oligosaccharide use.
+    - reference: PMID:21175746
+      snippet: human milk oligosaccharide components
+      notes: Schwab and Ganzle tested microbial fermentation of human milk oligosaccharide
+        components and related galactooligosaccharides.
+  - edge_id: milk_contains_fat_globules
+    subject: aqueous_emulsion
+    predicate: contains
+    object: milk_fat_globules
+    description: Dispersed milk fat globules create lipid-rich particles within the
+      aqueous milk matrix.
+    evidence:
+    - reference: PMID:23808865
+      snippet: complex microbiota of raw milk
+      notes: The raw-milk review summarized milk constituents and the microbial groups
+        that can enter and grow in raw milk.
+  - edge_id: milk_contains_proteins
+    subject: aqueous_emulsion
+    predicate: contains
+    object: milk_proteins
+    description: Casein and whey proteins provide organic nitrogen that proteolytic
+      milk microbes can hydrolyze during growth and fermentation.
+    evidence:
+    - reference: PMID:23808865
+      snippet: rich microbiota
+      notes: Quigley and colleagues reviewed milk as a nutrient-rich substrate for
+        lactic-acid and other dairy-associated microbes.
+  - edge_id: milk_contains_antimicrobial_bioactives
+    subject: milk
+    predicate: contains
+    object: antimicrobial_bioactives
+    description: Human milk carries lactoferrin, lysozyme, immunoglobulins, and other
+      bioactive factors that can restrict or modulate bacteria.
+    evidence:
+    - reference: PMID:33643310
+      snippet: human milk bioactives
+      notes: Carr and colleagues reviewed antimicrobial and immunomodulatory human
+        milk components including oligosaccharides, lactoferrin, lysozyme, and immunoglobulins.
+  - edge_id: milk_harbors_microbiota
+    subject: milk
+    predicate: harbors
+    object: milk_microbiota
+    description: Milk harbors low-biomass bacterial communities that include staphylococci,
+      streptococci, lactic-acid bacteria, bifidobacteria, and other taxa.
+    evidence:
+    - reference: PMID:21695057
+      snippet: diversity and temporal stability
+      notes: Hunt and colleagues used 16S rRNA sequencing to characterize human milk
+        bacterial communities over time.
+    - reference: PMID:23808865
+      snippet: complex microbiota
+      notes: Quigley and colleagues reviewed the bacteria, fungi, spoilage organisms,
+        and fermentation organisms detected in raw milk.
+  - edge_id: milk_microbiota_includes_lactic_acid_bacteria
+    subject: milk_microbiota
+    predicate: includes
+    object: lactic_acid_bacteria
+    description: Lactic-acid bacteria are repeatedly detected in human and raw ruminant
+      milk communities.
+    evidence:
+    - reference: PMID:14657823
+      snippet: source of lactic acid bacteria
+      notes: Martin and colleagues isolated lactic-acid bacteria from human milk and
+        interpreted breastfeeding as a source of these bacteria to infants.
+    - reference: PMID:23808865
+      snippet: raw milk
+      notes: The raw-milk review describes lactic-acid bacteria among the major milk-associated
+        functional groups.
+  - edge_id: milk_microbiota_includes_bifidobacteria
+    subject: milk_microbiota
+    predicate: includes
+    object: bifidobacteria
+    description: Bifidobacteria can occur in milk and carry adaptations for utilizing
+      milk-derived oligosaccharides.
+    evidence:
+    - reference: PMID:21695057
+      snippet: bacterial communities in human milk
+      notes: Hunt and colleagues detected diverse bacterial taxa across human milk
+        samples.
+    - reference: PMID:19033196
+      snippet: milk utilization
+      notes: Sela and colleagues linked Bifidobacterium infantis genome content to
+        use of human milk oligosaccharides.
+  - edge_id: lactose_supports_lactic_acid_bacteria
+    subject: lactose
+    predicate: supports
+    object: lactic_acid_bacteria
+    description: Milk lactose is a fermentable carbohydrate supporting lactic-acid
+      bacteria in milk.
+    evidence:
+    - reference: PMID:21175746
+      snippet: lactic acid bacteria fermentation
+      notes: Schwab and Ganzle measured milk-sugar fermentation by Lactobacillus,
+        Streptococcus, and Leuconostoc strains.
+  - edge_id: oligosaccharides_support_bifidobacteria
+    subject: milk_oligosaccharides
+    predicate: supports
+    object: bifidobacteria
+    description: Milk oligosaccharides select bifidobacterial lineages whose genomes
+      encode transport and catabolism systems for these glycans.
+    evidence:
+    - reference: PMID:19033196
+      snippet: Bifidobacterium longum subsp. infantis
+      notes: The PNAS genome study identified loci predicted to import and catabolize
+        human milk oligosaccharides.
+  - edge_id: lactic_acid_bacteria_ferment_lactose
+    subject: lactic_acid_bacteria
+    predicate: performs
+    object: lactose_fermentation
+    description: Lactic-acid bacteria ferment lactose and related milk sugars into
+      organic acids.
+    evidence:
+    - reference: PMID:21175746
+      snippet: fermentation of human milk
+      notes: Schwab and Ganzle directly assayed lactic-acid bacterial fermentation
+        of human milk sugar substrates.
+  - edge_id: bifidobacteria_catabolize_oligosaccharides
+    subject: bifidobacteria
+    predicate: performs
+    object: oligosaccharide_catabolism
+    description: Infant-associated bifidobacteria catabolize milk oligosaccharides
+      through glycosidase, transporter, and central metabolic pathways.
+    evidence:
+    - reference: PMID:19033196
+      snippet: adaptations for milk utilization
+      notes: Sela and colleagues identified oligosaccharide transporters and glycosidases
+        in Bifidobacterium infantis ATCC 15697.
+  - edge_id: sugar_catabolism_releases_organic_acids
+    subject: lactose_fermentation
+    predicate: releases
+    object: lactate_and_acetate
+    description: Fermentation of lactose and milk-derived sugars releases lactate,
+      acetate, and related short-chain organic acids.
+    evidence:
+    - reference: PMID:21175746
+      snippet: fermentation
+      notes: The FEMS Microbiology Letters study measured strain-specific production
+        of lactate and acetate from milk sugar substrates.
+  - edge_id: oligosaccharide_catabolism_releases_organic_acids
+    subject: oligosaccharide_catabolism
+    predicate: releases
+    object: lactate_and_acetate
+    description: Bifidobacterial catabolism of milk oligosaccharides releases acetate
+      and lactate as soluble fermentation products.
+    evidence:
+    - reference: PMID:19033196
+      snippet: milk utilization
+      notes: The Bifidobacterium infantis genome study connected human milk oligosaccharide
+        import and catabolism to fermentative metabolism.
+  - edge_id: organic_acids_drive_acidification
+    subject: lactate_and_acetate
+    predicate: drives
+    object: acidification
+    description: Organic-acid accumulation lowers milk pH during lactic fermentation.
+    evidence:
+    - reference: PMID:23808865
+      snippet: facilitating dairy fermentations
+      notes: Quigley and colleagues reviewed lactic-acid bacteria in milk fermentations
+        and their role in acidifying the substrate.
+  - edge_id: antimicrobial_bioactives_filter_milk_microbiota
+    subject: antimicrobial_bioactives
+    predicate: filters
+    object: milk_microbiota
+    description: Antimicrobial milk bioactives constrain which bacteria can persist
+      in the milk matrix and the infant gut after milk consumption.
+    evidence:
+    - reference: PMID:33643310
+      snippet: bioactive factors
+      notes: Carr and colleagues reviewed how milk bioactives can regulate gut and
+        microbiota function.
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD,
     MADIN. Grounding: EXACT.'
+- timestamp: '2026-09-04T00:00:00Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a milk carbohydrate lactic-acid assembly graph backed by PMID:21695057,
+    PMID:23808865, PMID:21175746, PMID:19033196, PMID:33643310, and PMID:14657823.
+  llm_assisted: true

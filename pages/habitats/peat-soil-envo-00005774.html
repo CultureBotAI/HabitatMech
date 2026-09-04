@@ -87,6 +87,133 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
   <tr><td>WATER_VARIABILITY</td><td>occasionally dry</td><td class="meta">kg-microbe environments.csv (soil_organic_peat)</td></tr>
 </table>
 
+<h2>Causal graphs</h2>
+<h3>Peat soil acidic methane cycling</h3>
+<p>Waterlogged acidic peat accumulates plant organic matter, creates vertically stratified anaerobic carbohydrate-degradation and methanogenesis zones, and supports acidophilic methanotrophs that oxidize a fraction of the methane before it escapes.</p><table>
+  <caption>peat_soil_acidic_methane_cycling edges</caption>
+  <thead><tr><th scope="col">Edge</th><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code>peat_soil_accumulates_sphagnum_organic_matter</code></td>
+    <td>peat soil</td>
+    <td>accumulates<br><span class="meta">Ombrotrophic peat soils accumulate Sphagnum-derived plant organic matter that fuels microbial carbon cycling.</span></td>
+    <td>Sphagnum peat organic matter</td>
+    <td>
+      <code class="curie">PMID:24682299</code><br><span class="meta">Lin and colleagues profiled organic-matter degradation potential in Sphagnum-dominated ombrotrophic peat.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>peat_soil_has_acidic_conditions</code></td>
+    <td>peat soil</td>
+    <td>has condition<br><span class="meta">Sphagnum peat bogs are acidic habitats that filter their microbial communities.</span></td>
+    <td>acidic conditions</td>
+    <td>
+      <code class="curie">PMID:11837310</code><br><span class="meta">Dedysh and colleagues isolated an acidophilic methanotroph from an acidic Sphagnum peat bog.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>peat_soil_has_waterlogged_peat</code></td>
+    <td>peat soil</td>
+    <td>has condition<br><span class="meta">Waterlogged organic soil is a defining physical state for methane-emitting peat layers.</span></td>
+    <td>waterlogged peat</td>
+    <td>
+      <code class="curie">PMID:12513979</code><br><span class="meta">Horn and colleagues studied methanogenesis in acidic peat from a methane-emitting bog.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>waterlogging_creates_anoxic_deep_peat</code></td>
+    <td>waterlogged peat</td>
+    <td>creates<br><span class="meta">Persistent water saturation restricts oxygen penetration and creates anoxic deeper peat.</span></td>
+    <td>anoxic deep peat</td>
+    <td>
+      <code class="curie">PMID:24682300</code><br><span class="meta">Lin and colleagues measured vertically stratified microbial communities and chemistry in a boreal peatland profile.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>peat_soil_has_vertical_stratification</code></td>
+    <td>peat soil</td>
+    <td>has structure<br><span class="meta">Peat soils contain vertical profiles with depth-stratified chemistry and microbial communities.</span></td>
+    <td>vertical peat stratification</td>
+    <td>
+      <code class="curie">PMID:24682300</code><br><span class="meta">Lin and colleagues linked peat depth to microbial community and functional stratification in a boreal peatland.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>anoxic_peat_selects_methanogens</code></td>
+    <td>anoxic deep peat</td>
+    <td>selects for<br><span class="meta">Anoxic acidic peat selects methanogens that can produce methane at moderately acidic pH.</span></td>
+    <td>acid-tolerant methanogens</td>
+    <td>
+      <code class="curie">PMID:12513979</code><br><span class="meta">Horn and colleagues demonstrated hydrogenotrophic methanogenesis by methanogens from acidic peat.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>peat_profile_stratifies_carbon_degradation</code></td>
+    <td>vertical peat stratification</td>
+    <td>partitions<br><span class="meta">Peat depth stratifies microbial carbohydrate-utilization genes and pathways.</span></td>
+    <td>carbohydrate degradation</td>
+    <td>
+      <code class="curie">PMID:24682300</code><br><span class="meta">Lin and colleagues linked vertical peatland community stratification to carbohydrate use and phosphorus limitation.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>organic_matter_feeds_carbohydrate_degradation</code></td>
+    <td>Sphagnum peat organic matter</td>
+    <td>feeds<br><span class="meta">Sphagnum-derived organic matter supplies carbohydrates that peat microbes degrade along the peat profile.</span></td>
+    <td>carbohydrate degradation</td>
+    <td>
+      <code class="curie">PMID:24682299</code><br><span class="meta">Lin and colleagues recovered genes for plant-polymer degradation from ombrotrophic peat metagenomes.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>carbohydrate_degradation_releases_methanogenesis_precursors</code></td>
+    <td>carbohydrate degradation</td>
+    <td>releases<br><span class="meta">Anaerobic carbohydrate degradation releases reduced substrates and carbon dioxide that methanogens can consume.</span></td>
+    <td>H2 and CO2 methanogenesis precursors</td>
+    <td>
+      <code class="curie">PMID:24682299</code><br><span class="meta">Lin and colleagues found increasing carbohydrate-metabolism potential with depth in Sphagnum peat.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>h2_co2_feed_hydrogenotrophic_methanogenesis</code></td>
+    <td>H2 and CO2 methanogenesis precursors</td>
+    <td>fuels<br><span class="meta">Hydrogen and carbon dioxide fuel hydrogenotrophic methanogenesis in acidic peat.</span></td>
+    <td>hydrogenotrophic methanogenesis</td>
+    <td>
+      <code class="curie">PMID:12513979</code><br><span class="meta">Horn and colleagues identified hydrogenotrophic methanogenesis as a process in methane-emitting acidic peat.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>methanogens_perform_hydrogenotrophic_methanogenesis</code></td>
+    <td>acid-tolerant methanogens</td>
+    <td>performs<br><span class="meta">Acid-tolerant methanogenic archaea reduce carbon dioxide with hydrogen in acidic peat.</span></td>
+    <td>hydrogenotrophic methanogenesis</td>
+    <td>
+      <code class="curie">PMID:12513979</code><br><span class="meta">Horn and colleagues enriched and characterized acid-tolerant methanogens from methane-emitting acidic peat.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>methanogenesis_produces_methane</code></td>
+    <td>hydrogenotrophic methanogenesis</td>
+    <td>produces<br><span class="meta">Hydrogenotrophic methanogenesis produces methane in anoxic peat layers.</span></td>
+    <td>methane</td>
+    <td>
+      <code class="curie">PMID:16872405</code><br><span class="meta">Cadillo-Quiroz and colleagues measured methanogenic activity and methanogen distributions in acidic peatlands.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>methane_supports_acidophilic_methanotrophs</code></td>
+    <td>methane</td>
+    <td>supports<br><span class="meta">Methane produced in peat supports acidophilic methanotrophic bacteria.</span></td>
+    <td>acidophilic methanotrophs</td>
+    <td>
+      <code class="curie">PMID:11837310</code><br><span class="meta">Dedysh and colleagues isolated the methanotroph Methylocapsa acidiphila from a Sphagnum peat bog.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>methanotrophs_perform_methane_oxidation</code></td>
+    <td>acidophilic methanotrophs</td>
+    <td>performs<br><span class="meta">Acidophilic peat methanotrophs oxidize methane as a carbon and energy source.</span></td>
+    <td>methane oxidation</td>
+    <td>
+      <code class="curie">PMID:11837310</code><br><span class="meta">Dedysh and colleagues reported growth of Methylocapsa acidiphila on methane and methanol.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>methane_oxidation_feeds_sphagnum_photosynthesis</code></td>
+    <td>methane oxidation</td>
+    <td>contributes to<br><span class="meta">Methanotrophic symbionts in peat bogs can convert methane into carbon that is reassimilated by Sphagnum.</span></td>
+    <td>Sphagnum carbon fixation</td>
+    <td>
+      <code class="curie">PMID:16121180</code><br><span class="meta">Raghoebarsing and colleagues demonstrated transfer of methane-derived carbon from methanotrophic symbionts to Sphagnum.</span>    </td>
+  </tr>
+</table>
+
 <h2>Associated taxa</h2>
 <p class="meta">Taxa <em>reported from</em> this habitat, which is weaker than being
 characteristic of it. <code>rank</code> is out of <code>pool</code>: a high rank in a
@@ -290,6 +417,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">REVIEW</span>
     <span class="meta">2026-08-13 · claude-opus-5</span>
     <p>Reviewed and endorsed the seeder&#39;s own resolution. Multi-source review pass: this record is attested by more than one independent vocabulary, and this source&#39;s label or path was read against the record&#39;s ontology term to check the merge is right. It agrees. Source concepts in the same pass whose labels did not agree were re-decided rather than endorsed; see the pass&#39;s other decisions of the same date. (source concept habitatmech:PREGO.feb4910f1c)</p>
+  </li>
+  <li>
+    <span class="pill">ADD_CAUSAL_GRAPH</span>
+    <span class="meta">2026-09-04 · codex</span>
+    <p>Added a peat-soil acidic methane-cycling graph backed by PMID:24682299, PMID:24682300, PMID:12513979, PMID:16872405, PMID:11837310, and PMID:16121180.</p>
   </li>
 </ol>
 

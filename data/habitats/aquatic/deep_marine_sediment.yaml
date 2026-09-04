@@ -305,9 +305,225 @@ characteristic_taxa:
   source: MADIN
   taxon_label: moritella_japonica
   candidate_pool: 19
+causal_graphs:
+- graph_id: deep_marine_sediment_sulfate_methane_transition
+  title: Deep marine sediment sulfate-methane transition
+  description: Buried marine organic matter in anoxic deep sediment fuels slow sulfate
+    reduction and methanogenesis, creating sulfate-methane transition zones where
+    ANME archaea and sulfate-reducing bacteria anaerobically oxidize methane.
+  nodes:
+  - node_id: deep_marine_sediment
+    label: deep marine sediment
+    node_type: HABITAT
+    grounding: ENVO:00002113
+  - node_id: buried_marine_organic_matter
+    label: buried marine organic matter
+    node_type: CHEMICAL
+  - node_id: anoxic_porewater
+    label: anoxic porewater
+    node_type: ENVIRONMENTAL_PARAMETER
+  - node_id: seawater_sulfate
+    label: seawater sulfate
+    node_type: CHEMICAL
+  - node_id: sulfate_reducing_microorganisms
+    label: sulfate-reducing microorganisms
+    node_type: TAXON
+  - node_id: sulfate_reduction
+    label: sulfate reduction
+    node_type: PATHWAY
+  - node_id: methanogenic_sediment
+    label: methanogenic sediment
+    node_type: ENVIRONMENTAL_PARAMETER
+  - node_id: methane
+    label: methane
+    node_type: CHEMICAL
+  - node_id: sulfate_methane_transition_zone
+    label: sulfate-methane transition zone
+    node_type: STATE
+  - node_id: anme_archaea
+    label: ANME archaea
+    node_type: TAXON
+  - node_id: sulfate_reducing_bacteria
+    label: sulfate-reducing bacteria
+    node_type: TAXON
+  - node_id: anaerobic_methane_oxidation
+    label: anaerobic methane oxidation
+    node_type: PATHWAY
+  edges:
+  - edge_id: deep_sediment_buries_marine_organic_matter
+    subject: deep_marine_sediment
+    predicate: accumulates
+    object: buried_marine_organic_matter
+    description: Deep marine sediments accumulate buried organic matter that supports
+      subseafloor microbial activity.
+    evidence:
+    - reference: PMID:15618510
+      snippet: Distributions of microbial activities
+      notes: D'Hondt and colleagues mapped microbial activity in deep subseafloor
+        sediments.
+  - edge_id: organic_burial_creates_anoxic_porewater
+    subject: buried_marine_organic_matter
+    predicate: contributes to
+    object: anoxic_porewater
+    description: Buried organic matter degradation consumes oxidants and leaves deep
+      marine porewaters anoxic.
+    evidence:
+    - reference: PMID:35308366
+      snippet: anoxic marine sediment
+      notes: Nagakura and colleagues studied microbial sulfate reduction in anoxic
+        deep subseafloor sediment.
+  - edge_id: seawater_supplies_sulfate
+    subject: deep_marine_sediment
+    predicate: receives
+    object: seawater_sulfate
+    description: Deep marine sediment porewaters receive sulfate from overlying seawater
+      and sulfate persists into the upper anoxic column.
+    evidence:
+    - reference: PMID:30194429
+      snippet: sulfate-methane transition of marine sediments
+      notes: Beulig and colleagues assayed sediments where seawater-derived sulfate
+        overlaps methane in sulfate-methane transition zones.
+  - edge_id: anoxic_sediment_selects_sulfate_reducers
+    subject: anoxic_porewater
+    predicate: selects for
+    object: sulfate_reducing_microorganisms
+    description: Anoxic marine sediment with sulfate selects microorganisms that conserve
+      energy by sulfate reduction.
+    evidence:
+    - reference: PMID:35308366
+      snippet: sulfate reduction is the quantitatively most important process
+      notes: Nagakura and colleagues summarize sulfate reduction as the major organic-matter-degradation
+        process in anoxic marine sediment.
+  - edge_id: sulfate_reducers_perform_sulfate_reduction
+    subject: sulfate_reducing_microorganisms
+    predicate: performs
+    object: sulfate_reduction
+    description: Sulfate-reducing microorganisms mineralize organic matter with sulfate
+      as the terminal electron acceptor.
+    evidence:
+    - reference: PMID:35308366
+      snippet: degrade organic matter
+      notes: Nagakura and colleagues measured biological sulfate reduction in deep
+        subseafloor sediment.
+  - edge_id: sulfate_reduction_consumes_organic_matter
+    subject: sulfate_reduction
+    predicate: consumes
+    object: buried_marine_organic_matter
+    description: Sulfate reduction degrades buried organic matter in the anoxic sediment
+      column.
+    evidence:
+    - reference: PMID:35308366
+      snippet: Deep Subseafloor Sediment of Guaymas Basin
+      notes: Nagakura and colleagues quantified sulfate reduction in organic-rich
+        deep subseafloor sediments from Guaymas Basin.
+  - edge_id: depleted_sulfate_permits_methanogenic_sediment
+    subject: sulfate_reduction
+    predicate: creates
+    object: methanogenic_sediment
+    description: Sulfate depletion at depth allows methanogenic sediment zones to
+      underlie sulfate-reducing marine sediment.
+    evidence:
+    - reference: PMID:15618510
+      snippet: deep subseafloor sediments
+      notes: D'Hondt and colleagues compared sulfate-reducing and methanogenic activity
+        distributions in deep marine sediments.
+  - edge_id: methanogenic_sediment_produces_methane
+    subject: methanogenic_sediment
+    predicate: produces
+    object: methane
+    description: Methanogenic deep sediment produces methane below the sulfate-reducing
+      zone.
+    evidence:
+    - reference: PMID:15618510
+      snippet: microbial activities in deep subseafloor sediments
+      notes: D'Hondt and colleagues quantified sediment-column methanogenesis in ocean
+        drilling cores.
+  - edge_id: methane_and_sulfate_form_smtz
+    subject: methane
+    predicate: overlaps with sulfate in
+    object: sulfate_methane_transition_zone
+    description: Methane diffusing upward from methanogenic sediment meets sulfate
+      diffusing downward in the sulfate-methane transition zone.
+    evidence:
+    - reference: PMID:30194429
+      snippet: sulfate-methane transition of marine sediments
+      notes: Beulig and colleagues resolved methane cycling at the marine sulfate-methane
+        transition.
+  - edge_id: sulfate_and_methane_form_smtz
+    subject: seawater_sulfate
+    predicate: overlaps with methane in
+    object: sulfate_methane_transition_zone
+    description: Downward sulfate supply overlaps upward methane supply at the sulfate-methane
+      transition.
+    evidence:
+    - reference: PMID:30194429
+      snippet: sulfate-methane transition
+      notes: Beulig and colleagues studied marine sediment horizons where sulfate
+        and methane coexist and are consumed by cryptic methane cycling.
+  - edge_id: smtz_hosts_anme
+    subject: sulfate_methane_transition_zone
+    predicate: hosts
+    object: anme_archaea
+    description: Marine sulfate-methane transition zones host anaerobic methanotrophic
+      archaea.
+    evidence:
+    - reference: PMID:30194429
+      snippet: ANME-1 archaea
+      notes: Beulig and colleagues linked cryptic methane cycling in the marine sulfate-methane
+        transition to ANME-1 archaea.
+  - edge_id: smtz_hosts_sulfate_reducers
+    subject: sulfate_methane_transition_zone
+    predicate: hosts
+    object: sulfate_reducing_bacteria
+    description: Marine sulfate-methane transition zones host sulfate-reducing bacterial
+      partners for anaerobic methane oxidation.
+    evidence:
+    - reference: PMID:11034209
+      snippet: sulfate-reducing bacteria
+      notes: Boetius and colleagues reported sulfate-reducing bacteria in a methane-oxidizing
+        marine microbial consortium.
+  - edge_id: anme_perform_anaerobic_methane_oxidation
+    subject: anme_archaea
+    predicate: performs
+    object: anaerobic_methane_oxidation
+    description: ANME archaea mediate anaerobic oxidation of methane in marine sulfate-methane
+      transition zones.
+    evidence:
+    - reference: PMID:30194429
+      snippet: mediated by ANME-1 archaea
+      notes: Beulig and colleagues identify ANME-1 archaea as likely mediators of
+        cryptic methane cycling in marine sulfate-methane transition zones.
+  - edge_id: sulfate_reducers_support_aom
+    subject: sulfate_reducing_bacteria
+    predicate: contributes to
+    object: anaerobic_methane_oxidation
+    description: Sulfate-reducing bacteria partner with methanotrophic archaea during
+      anaerobic methane oxidation.
+    evidence:
+    - reference: PMID:11034209
+      snippet: marine microbial consortium
+      notes: Boetius and colleagues described a consortium of methane-oxidizing archaea
+        and sulfate-reducing bacteria.
+  - edge_id: aom_consumes_methane
+    subject: anaerobic_methane_oxidation
+    predicate: consumes
+    object: methane
+    description: Anaerobic methane oxidation consumes much of the methane that diffuses
+      toward the overlying ocean.
+    evidence:
+    - reference: PMID:30194429
+      snippet: Methane in the seabed is mostly oxidized
+      notes: Beulig and colleagues summarize sulfate-coupled anaerobic oxidation as
+        the dominant methane sink before seabed methane reaches seawater.
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, MADIN,
     PREGO. Grounding: EXACT.'
+- timestamp: '2026-09-04T00:00:00Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a deep marine sediment sulfate-methane-transition graph backed by
+    PMID:15618510, PMID:35308366, PMID:30194429, and PMID:11034209.
+  llm_assisted: true

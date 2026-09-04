@@ -65,6 +65,7 @@ from __future__ import annotations
 
 import argparse
 import contextlib
+import copy
 import csv
 import hashlib
 import re
@@ -76,6 +77,12 @@ from typing import Any
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 
+from habitatmech.curate.causal_graphs import (  # noqa: E402
+    CURATED_CAUSAL_GRAPHS_DIR,
+    apply_causal_graph_curations,
+    load_causal_graph_curations,
+    validate_causal_graph_curations,
+)
 from habitatmech.curate.curation_event import record_curation_event  # noqa: E402
 from habitatmech.curate.decisions import (  # noqa: E402
     Decision,
@@ -348,6 +355,8 @@ class Concept:
     # curators on different days (#94).
     decisions_applied: list[Decision] = field(default_factory=list)
     definitions_applied: list[CuratedDefinition] = field(default_factory=list)
+    causal_graphs: list[dict[str, Any]] = field(default_factory=list)
+    causal_graph_events: list[dict[str, Any]] = field(default_factory=list)
     _grounding_rank_seen: int = 0
 
     def add_synonym(self, text: str, syn_type: str, source: str) -> None:
@@ -1408,6 +1417,8 @@ def build_document(concept: Concept) -> dict[str, Any]:
                 t["taxon_id"],
             ),
         )
+    if concept.causal_graphs:
+        doc["causal_graphs"] = copy.deepcopy(concept.causal_graphs)
 
     sources = sorted({a["source"] for a in concept.attestations})
     record_curation_event(
@@ -1450,6 +1461,10 @@ def build_document(concept: Concept) -> dict[str, Any]:
                 f"{definition.parent_label!r}. {definition.notes}"
             ),
             timestamp=f"{definition.date}T00:00:00Z",
+        )
+    if concept.causal_graph_events:
+        doc.setdefault("curation_history", []).extend(
+            copy.deepcopy(concept.causal_graph_events)
         )
     # Chronological, so the history reads as one. The seed event is stamped
     # from the extraction time, which is usually *later* than the decisions
@@ -1777,7 +1792,9 @@ class Corpus:
     source_counts: dict[str, int]
 
 
-def build_corpus() -> Corpus:
+def build_corpus(
+    causal_graphs_root: Path = CURATED_CAUSAL_GRAPHS_DIR,
+) -> Corpus:
     """Read data/raw/ and harmonize it into the full concept set."""
     ontology = OntologyIndex(read_tsv("ontology_terms.tsv"), read_tsv("ontology_subclass_edges.tsv"))
     mapping: dict[str, dict[str, str]] = {}
@@ -1828,6 +1845,17 @@ def build_corpus() -> Corpus:
     definitions = load_curated_definitions(CURATED_DEFINITIONS_PATH)
     apply_curated_definitions(store, definitions)
     stats["curated_definitions_loaded"] = len(definitions)
+
+    causal_graph_curations = load_causal_graph_curations(causal_graphs_root)
+    validate_causal_graph_curations(
+        causal_graph_curations,
+        store.concepts,
+        path=causal_graphs_root,
+    )
+    apply_causal_graph_curations(store.concepts, causal_graph_curations)
+    stats["curated_causal_graphs_loaded"] = sum(
+        len(curation.causal_graphs) for curation in causal_graph_curations.values()
+    )
 
     addressable = (
         {mint("GOLD", row["canonical_path"]) for row in gold_rows}

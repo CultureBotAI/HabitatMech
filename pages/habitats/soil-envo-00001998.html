@@ -80,6 +80,77 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
   <tr><td>TEMPERATURE_VARIABILITY</td><td>medium</td><td class="meta">kg-microbe environments.csv (soil)</td></tr>
 </table>
 
+<h2>Causal graphs</h2>
+<h3>Soil pore organic-matter microhabitats</h3>
+<p>Soil pore geometry, dynamic water films, patchy organic resources, and mineral occlusion create microscale habitats that constrain microbial dispersal and organic-matter turnover.</p><table>
+  <caption>soil_pore_organic_matter_microhabitats edges</caption>
+  <thead><tr><th scope="col">Edge</th><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code>soil_contains_pore_network</code></td>
+    <td>soil</td>
+    <td>has structure<br><span class="meta">Soil pore geometry creates microscale physical structure across the soil habitat.</span></td>
+    <td>soil pore network</td>
+    <td>
+      <code class="curie">PMID:28961933</code><br><span class="meta">Tecon and Or treat soil pores as the fine spatial scale at which soil physical processes shape microbial life.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>soil_pores_structure_aqueous_phase</code></td>
+    <td>soil pore network</td>
+    <td>organizes<br><span class="meta">Soil pore geometry organizes the dynamic water phase that connects or isolates microbial cells.</span></td>
+    <td>dynamic soil aqueous phase</td>
+    <td>
+      <code class="curie">PMID:28961933</code><br><span class="meta">Tecon and Or review how water organization in pores links soil physics to microbial life.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>aqueous_phase_limits_dispersal</code></td>
+    <td>dynamic soil aqueous phase</td>
+    <td>constrains<br><span class="meta">The spatial organization of pore water constrains how soil microbes move and disperse.</span></td>
+    <td>microbial dispersal constraints</td>
+    <td>
+      <code class="curie">PMID:28961933</code><br><span class="meta">Tecon and Or identify the spatially organized, dynamic aqueous phase as a determinant of microbial dispersal ranges in soil.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>soil_contains_patchy_organic_resources</code></td>
+    <td>soil</td>
+    <td>has condition<br><span class="meta">Soil contains heterogeneously distributed organic substrates.</span></td>
+    <td>patchy organic resources</td>
+    <td>
+      <code class="curie">PMID:28961933</code><br><span class="meta">Tecon and Or describe patchy organic-resource distribution as one of the biophysical features that makes soil a microbial habitat.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>patchy_resources_create_microscale_conditions</code></td>
+    <td>patchy organic resources</td>
+    <td>creates<br><span class="meta">Patchy organic substrates and pore-water variation create local environmental conditions for soil microbes.</span></td>
+    <td>microscale environmental conditions</td>
+    <td>
+      <code class="curie">PMID:28961933</code><br><span class="meta">Tecon and Or connect resource patchiness and water-organization variation to microscale environmental conditions in soil.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>mineral_occlusion_limits_organic_access</code></td>
+    <td>mineral occlusion</td>
+    <td>reduces<br><span class="meta">Occlusion and sorption on mineral particles can limit microbial physical access to organic substrates.</span></td>
+    <td>organic-matter access</td>
+    <td>
+      <code class="curie">PMID:23055998</code><br><span class="meta">Schimel and Schaeffer describe physical access to protected substrates as a rate-limiting control on mineral-soil carbon turnover.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>enzyme_activity_controls_carbon_turnover</code></td>
+    <td>extracellular enzyme activity</td>
+    <td>controls<br><span class="meta">Extracellular enzymes are microbial controls on decomposition and carbon turnover in soil.</span></td>
+    <td>soil carbon turnover</td>
+    <td>
+      <code class="curie">PMID:23055998</code><br><span class="meta">Schimel and Schaeffer identify extracellular enzymes as key microbial controls over soil structure, function, and carbon fate.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>organic_access_modulates_carbon_turnover</code></td>
+    <td>organic-matter access</td>
+    <td>modulates<br><span class="meta">Physical access to protected organic matter modulates microbial organic-matter breakdown in mineral soil.</span></td>
+    <td>soil carbon turnover</td>
+    <td>
+      <code class="curie">PMID:23055998</code><br><span class="meta">Schimel and Schaeffer argue that physical access, rather than only decomposer identity, can limit mineral-soil organic-matter turnover.</span>    </td>
+  </tr>
+</table>
+
 <h2>Associated taxa</h2>
 <p class="meta">Taxa <em>reported from</em> this habitat, which is weaker than being
 characteristic of it. <code>rank</code> is out of <code>pool</code>: a high rank in a
@@ -283,6 +354,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">REVIEW</span>
     <span class="meta">2026-08-13 · claude-opus-5</span>
     <p>Reviewed and endorsed the seeder&#39;s own resolution. Multi-source review pass: this record is attested by more than one independent vocabulary, and this source&#39;s label or path was read against the record&#39;s ontology term to check the merge is right. It agrees. Source concepts in the same pass whose labels did not agree were re-decided rather than endorsed; see the pass&#39;s other decisions of the same date. (source concept habitatmech:PREGO.492544997f)</p>
+  </li>
+  <li>
+    <span class="pill">ADD_CAUSAL_GRAPH</span>
+    <span class="meta">2026-09-04 · codex</span>
+    <p>Added a soil pore and organic-matter microhabitat graph backed by PMID:28961933 and PMID:23055998.</p>
   </li>
 </ol>
 

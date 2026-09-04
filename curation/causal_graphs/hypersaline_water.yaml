@@ -1,0 +1,78 @@
+identifier: ENVO:00002012
+causal_graphs:
+- graph_id: hypersaline_osmoadaptation
+  title: Hypersaline osmoadaptation
+  description: High external salinity lowers water activity and selects for osmotic
+    balancing strategies in halophilic microorganisms.
+  nodes:
+  - node_id: hypersaline_water
+    label: hypersaline water
+    node_type: HABITAT
+    grounding: ENVO:00002012
+  - node_id: high_salinity
+    label: high salinity
+    node_type: ENVIRONMENTAL_PARAMETER
+  - node_id: low_water_activity
+    label: low water activity
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: potassium_chloride_accumulation
+    label: potassium chloride accumulation
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: acidic_proteome
+    label: acidic proteome
+    node_type: QUALITY
+  - node_id: compatible_solute_accumulation
+    label: compatible solute accumulation
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - edge_id: salinity_reduces_water_activity
+    subject: high_salinity
+    predicate: lowers
+    object: low_water_activity
+    description: High salt in hypersaline water makes low water activity the core
+      osmotic constraint experienced by resident microbes.
+    evidence:
+    - reference: PMID:29529204
+      snippet: They all must cope with the low water activity of their environment
+      notes: Gunde-Cimerman et al. review osmotic adaptation to hypersaline
+        environments across Archaea, Bacteria, and Eukarya.
+  - edge_id: low_water_activity_selects_salt_in
+    subject: low_water_activity
+    predicate: selects for
+    object: potassium_chloride_accumulation
+    description: One osmotic-balancing route is the salt-in strategy, in which
+      halophiles accumulate intracellular potassium chloride.
+    evidence:
+    - reference: PMID:29529204
+      snippet: accumulate salts, mainly KCl
+      notes: The review identifies salt accumulation as an osmoadaptation
+        strategy used by many halophilic Archaea and some Bacteria.
+  - edge_id: salt_in_requires_acidic_proteome
+    subject: potassium_chloride_accumulation
+    predicate: requires
+    object: acidic_proteome
+    description: Cells using molar intracellular salt require proteins whose
+      surfaces remain folded and active under those ionic conditions.
+    evidence:
+    - reference: PMID:18412960
+      snippet: The proteome of such organisms is highly acidic
+      notes: Oren describes the protein-level adaptation associated with
+        halophiles that balance osmotic pressure with intracellular KCl.
+  - edge_id: low_water_activity_selects_compatible_solutes
+    subject: low_water_activity
+    predicate: selects for
+    object: compatible_solute_accumulation
+    description: A second osmotic-balancing route is accumulation or synthesis
+      of organic compatible solutes.
+    evidence:
+    - reference: PMID:29529204
+      snippet: synthesis or accumulation of organic osmotic, so-called compatible solutes
+      notes: The review contrasts organic compatible-solute accumulation with
+        the salt-in strategy.
+curation_history:
+- timestamp: '2026-09-04T00:00:00Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a hypersaline-water osmoadaptation graph backed by PMID:18412960
+    and PMID:29529204.
+  llm_assisted: true

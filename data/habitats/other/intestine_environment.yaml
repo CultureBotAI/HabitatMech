@@ -356,6 +356,106 @@ characteristic_taxa:
   score: 4.0
   rank: 25
   candidate_pool: 2406
+causal_graphs:
+- graph_id: intestinal_anaerobic_glycan_fermentation
+  title: Intestinal anaerobic glycan fermentation
+  description: Host epithelial oxygen consumption and intestinal glycan pools create
+    anaerobic nutrient gradients that favor fermentative gut microbiota and short-chain
+    fatty acid production.
+  nodes:
+  - node_id: intestine_environment
+    label: intestine environment
+    node_type: HABITAT
+    grounding: ENVO:2100002
+  - node_id: colonocyte_beta_oxidation
+    label: colonocyte beta-oxidation
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: low_luminal_oxygen
+    label: low luminal oxygen
+    node_type: ENVIRONMENTAL_PARAMETER
+  - node_id: obligate_anaerobe_dominance
+    label: obligate anaerobe dominance
+    node_type: COMMUNITY_PROCESS
+  - node_id: dietary_fiber
+    label: dietary fiber
+    node_type: CHEMICAL
+  - node_id: mucin_o_glycans
+    label: mucin O-glycans
+    node_type: CHEMICAL
+  - node_id: microbial_glycan_fermentation
+    label: microbial glycan fermentation
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: short_chain_fatty_acids
+    label: short-chain fatty acids
+    node_type: CHEMICAL
+  edges:
+  - edge_id: beta_oxidation_limits_luminal_oxygen
+    subject: colonocyte_beta_oxidation
+    predicate: reduces
+    object: low_luminal_oxygen
+    description: Colonic epithelial beta-oxidation limits oxygen availability in the
+      intestinal lumen.
+    evidence:
+    - reference: PMID:28798125
+      snippet: limits the luminal bioavailability of oxygen
+      notes: Byndloss and colleagues describe microbiota-activated PPAR-gamma signaling
+        as a driver of colonocyte beta-oxidation that restricts oxygen diffusing into
+        the lumen.
+  - edge_id: low_oxygen_favors_obligate_anaerobes
+    subject: low_luminal_oxygen
+    predicate: selects for
+    object: obligate_anaerobe_dominance
+    description: Low oxygen availability favors obligate anaerobic bacteria in the
+      intestinal microbial community.
+    evidence:
+    - reference: PMID:30498100
+      snippet: dominated by obligate anaerobic bacteria
+      notes: Litvak, Byndloss, and Baumler summarize the colonocyte oxygen sink as
+        a host-controlled switch that shapes obligate versus facultative anaerobes
+        in the colon.
+  - edge_id: intestinal_mucus_presents_o_glycans
+    subject: intestine_environment
+    predicate: provides
+    object: mucin_o_glycans
+    description: Intestinal mucus exposes O-glycans on MUC2 mucin to commensal gut
+      microbes.
+    evidence:
+    - reference: PMID:37442097
+      snippet: extensively decorated, especially with O-glycans
+      notes: Luis and Hansson describe O-glycosylated MUC2 as a major component of
+        intestinal mucus.
+  - edge_id: mucin_glycans_feed_gut_microbes
+    subject: mucin_o_glycans
+    predicate: fuels
+    object: microbial_glycan_fermentation
+    description: Gut microbiota use host mucin glycans as fermentable carbon sources.
+    evidence:
+    - reference: PMID:37442097
+      snippet: utilize the glycans on mucins
+      notes: Luis and Hansson review commensal-microbiota interactions with host mucins
+        and the proteins used to bind or cleave mucin glycans.
+  - edge_id: dietary_fiber_feeds_gut_microbes
+    subject: dietary_fiber
+    predicate: fuels
+    object: microbial_glycan_fermentation
+    description: Dietary fibers directly supply gut microbes with fermentable carbohydrate
+      substrates.
+    evidence:
+    - reference: PMID:29902436
+      snippet: interact directly with gut microbes
+      notes: Makki and colleagues review dietary fibers as food components that shape
+        digestive-tract microbial communities.
+  - edge_id: glycan_fermentation_produces_scfas
+    subject: microbial_glycan_fermentation
+    predicate: produces
+    object: short_chain_fatty_acids
+    description: Microbial fermentation of intestinal glycans produces short-chain
+      fatty acids.
+    evidence:
+    - reference: PMID:29902436
+      snippet: production of key metabolites such as short-chain fatty acids
+      notes: Makki and colleagues summarize short-chain fatty acids as major bacterial
+        metabolites produced from dietary-fiber fermentation.
 curation_history:
 - timestamp: '2026-08-15T00:00:00Z'
   curator: claude-opus-5
@@ -378,3 +478,9 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, MADIN,
     PREGO. Grounding: EXACT.'
+- timestamp: '2026-09-04T00:00:00Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a mammalian intestinal anaerobic glycan-fermentation graph backed
+    by PMID:28798125, PMID:30498100, PMID:37442097, and PMID:29902436.
+  llm_assisted: true

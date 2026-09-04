@@ -1,0 +1,210 @@
+identifier: ENVO:00000051
+causal_graphs:
+- graph_id: hot_spring_thermophile_chemolithoautotrophy
+  title: Hot spring thermophile chemolithoautotrophy
+  description: Geothermal water imposes high-temperature stress while supplying
+    reduced inorganic electron donors, selecting for thermophiles with
+    thermostable proteins and for chemolithoautotrophic primary producers.
+  nodes:
+  - node_id: hot_spring
+    label: hot spring
+    node_type: HABITAT
+    grounding: ENVO:00000051
+  - node_id: geothermal_heating
+    label: geothermal heating
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: high_water_temperature
+    label: high water temperature
+    node_type: ENVIRONMENTAL_PARAMETER
+  - node_id: thermophiles
+    label: thermophiles
+    node_type: TAXON
+  - node_id: thermostable_proteins
+    label: thermostable proteins
+    node_type: TRAIT
+  - node_id: geologic_hydrogen
+    label: geologic hydrogen
+    node_type: CHEMICAL
+  - node_id: reduced_sulfur_compounds
+    label: reduced sulfur compounds
+    node_type: CHEMICAL
+  - node_id: aquificales_thermophiles
+    label: Aquificales thermophiles
+    node_type: TAXON
+  - node_id: hydrogen_oxidation
+    label: hydrogen oxidation
+    node_type: PATHWAY
+  - node_id: sulfur_oxidation
+    label: sulfur oxidation
+    node_type: PATHWAY
+  - node_id: chemolithoautotrophic_primary_production
+    label: chemolithoautotrophic primary production
+    node_type: COMMUNITY_PROCESS
+  - node_id: inorganic_carbon_fixation
+    label: inorganic carbon fixation
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - edge_id: hot_spring_is_geothermally_heated
+    subject: hot_spring
+    predicate: is heated by
+    object: geothermal_heating
+    description: Hot springs are groundwater outflows heated by geothermal
+      energy.
+    evidence:
+    - reference: PMID:30038374
+      snippet: Microbial biogeography of 925 geothermal springs
+      notes: Power and colleagues surveyed geothermal springs as aquatic
+        microbial habitats heated by subsurface geologic processes.
+  - edge_id: geothermal_heating_creates_high_temperature
+    subject: geothermal_heating
+    predicate: creates
+    object: high_water_temperature
+    description: Geothermal heating creates high-temperature spring water that
+      filters the resident microbial community.
+    evidence:
+    - reference: PMID:15671178
+      snippet: high-temperature microbial ecosystems
+      notes: Spear and colleagues studied Yellowstone hot-spring communities at
+        temperatures above 70 degrees Celsius.
+  - edge_id: high_temperature_selects_thermophiles
+    subject: high_water_temperature
+    predicate: selects for
+    object: thermophiles
+    description: High-temperature water selects organisms capable of growing in
+      hot spring conditions.
+    evidence:
+    - reference: PMID:9758770
+      snippet: hyperthermophilic bacterium isolated from Yellowstone
+      notes: Huber and colleagues isolated the hyperthermophile Thermocrinis
+        ruber from Octopus Spring in Yellowstone National Park.
+  - edge_id: high_temperature_requires_thermostable_proteins
+    subject: high_water_temperature
+    predicate: selects for
+    object: thermostable_proteins
+    description: High temperature forces microbial macromolecules to remain
+      functional and folded near temperatures that denature mesophilic proteins.
+    evidence:
+    - reference: PMID:11256505
+      snippet: Thermophilic adaptation of proteins
+      notes: Sterner and Liebl review molecular features that make thermophile
+        proteins stable at high temperature.
+  - edge_id: hot_spring_contains_hydrogen
+    subject: hot_spring
+    predicate: supplies
+    object: geologic_hydrogen
+    description: Hot-spring fluids can contain geologically sourced hydrogen at
+      concentrations relevant to microbial energetics.
+    evidence:
+    - reference: PMID:31276280
+      snippet: geological source and biological fate of hydrogen
+      notes: Lindsay and colleagues connected geologic hydrogen sources to
+        hydrogen-using organisms in Yellowstone hot springs.
+  - edge_id: hydrogen_fuels_hot_spring_primary_production
+    subject: geologic_hydrogen
+    predicate: fuels
+    object: chemolithoautotrophic_primary_production
+    description: Hydrogen oxidation can fuel primary production in
+      high-temperature geothermal ecosystems.
+    evidence:
+    - reference: PMID:15671178
+      snippet: main source of energy for primary production
+      notes: Spear and colleagues concluded that hydrogen was the dominant
+        energy source for primary production in surveyed high-temperature
+        Yellowstone springs.
+  - edge_id: hot_spring_contains_reduced_sulfur
+    subject: hot_spring
+    predicate: supplies
+    object: reduced_sulfur_compounds
+    description: Hot-spring fluids can contain reduced sulfur compounds that
+      serve as electron donors for thermophilic microorganisms.
+    evidence:
+    - reference: PMID:15671178
+      snippet: high concentrations of sulfide
+      notes: Spear and colleagues modeled hot-spring bioenergetics even in
+        Yellowstone springs with high sulfide concentrations.
+  - edge_id: hydrogen_supports_aquificales
+    subject: geologic_hydrogen
+    predicate: supports
+    object: aquificales_thermophiles
+    description: Hydrogen supports hot-spring Aquificales populations capable of
+      oxidizing reduced inorganic substrates.
+    evidence:
+    - reference: PMID:19651724
+      snippet: hydrogen- and sulfur-oxidizing
+      notes: Caldwell and colleagues isolated a hydrogen- and sulfur-oxidizing
+        Aquificales thermophile from a terrestrial hot spring.
+  - edge_id: reduced_sulfur_supports_aquificales
+    subject: reduced_sulfur_compounds
+    predicate: supports
+    object: aquificales_thermophiles
+    description: Reduced sulfur compounds support hot-spring Aquificales capable
+      of sulfur oxidation.
+    evidence:
+    - reference: PMID:19651724
+      snippet: member of the Aquificales
+      notes: Caldwell and colleagues characterized Thermocrinis minervae as a
+        hydrogen- and sulfur-oxidizing Aquificales member from a Costa Rican
+        hot spring.
+  - edge_id: aquificales_perform_hydrogen_oxidation
+    subject: aquificales_thermophiles
+    predicate: performs
+    object: hydrogen_oxidation
+    description: Hot-spring Aquificales include thermophiles that oxidize
+      hydrogen for energy.
+    evidence:
+    - reference: PMID:19651724
+      snippet: Costa Rican terrestrial hot spring
+      notes: Caldwell and colleagues characterized a Thermocrinis species that
+        grew chemolithotrophically with hydrogen as an electron donor.
+  - edge_id: aquificales_perform_sulfur_oxidation
+    subject: aquificales_thermophiles
+    predicate: performs
+    object: sulfur_oxidation
+    description: Hot-spring Aquificales include thermophiles that oxidize
+      reduced sulfur compounds for energy.
+    evidence:
+    - reference: PMID:9758770
+      snippet: Pink-Filament-Forming Hyperthermophilic Bacterium
+      notes: Huber and colleagues characterized Thermocrinis ruber growth on
+        sulfur, thiosulfate, and hydrogen in Yellowstone hot-spring isolates.
+  - edge_id: sulfur_oxidation_drives_primary_production
+    subject: sulfur_oxidation
+    predicate: contributes to
+    object: chemolithoautotrophic_primary_production
+    description: Sulfur oxidation contributes energy to chemolithoautotrophic
+      carbon fixation in hot-spring Aquificales.
+    evidence:
+    - reference: PMID:19651724
+      snippet: sulfur-oxidizing
+      notes: Caldwell and colleagues isolated a sulfur-oxidizing Thermocrinis
+        species from a terrestrial hot spring.
+  - edge_id: hydrogen_oxidation_drives_primary_production
+    subject: hydrogen_oxidation
+    predicate: drives
+    object: chemolithoautotrophic_primary_production
+    description: Hydrogen oxidation provides energy for inorganic carbon
+      fixation in high-temperature hot-spring communities.
+    evidence:
+    - reference: PMID:15671178
+      snippet: oxidation of molecular hydrogen
+      notes: Spear and colleagues linked hydrogen-oxidizing organisms to
+        primary productivity in high-temperature Yellowstone springs.
+  - edge_id: primary_production_fixes_inorganic_carbon
+    subject: chemolithoautotrophic_primary_production
+    predicate: fixes
+    object: inorganic_carbon_fixation
+    description: Chemolithoautotrophic primary producers convert inorganic
+      carbon into biomass in low-organic hot-spring water.
+    evidence:
+    - reference: PMID:19651724
+      snippet: thermophilic member of the Aquificales
+      notes: Caldwell and colleagues isolated a hot-spring Aquificales member
+        capable of autotrophic growth on inorganic electron donors.
+curation_history:
+- timestamp: '2026-09-04T00:00:00Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a hot-spring thermophile chemolithoautotrophy graph backed by
+    PMID:30038374, PMID:15671178, PMID:9758770, PMID:31276280,
+    PMID:19651724, and PMID:11256505.
+  llm_assisted: true

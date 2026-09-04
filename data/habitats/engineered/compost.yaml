@@ -319,6 +319,92 @@ characteristic_taxa:
   score: 2.77144
   rank: 25
   candidate_pool: 1913
+causal_graphs:
+- graph_id: compost_thermophilic_decomposition
+  title: Aerobic thermophilic decomposition
+  description: Aerobic degradation of organic matter in compost releases heat, raising
+    pile temperature and selecting thermophilic decomposers with polymer-degrading
+    enzymes.
+  nodes:
+  - node_id: compost
+    label: compost
+    node_type: HABITAT
+    grounding: ENVO:00002170
+  - node_id: oxygenated_pore_space
+    label: oxygenated pore space
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: organic_solid_waste
+    label: organic solid waste
+    node_type: ENVIRONMENTAL_PARAMETER
+  - node_id: aerobic_solid_state_biodegradation
+    label: aerobic solid-state biodegradation
+    node_type: COMMUNITY_PROCESS
+  - node_id: thermogenic_phase
+    label: thermogenic compost phase
+    node_type: STATE
+  - node_id: thermophilic_bacteria
+    label: thermophilic bacteria
+    node_type: TAXON
+  - node_id: lignocellulolytic_enzyme_activity
+    label: lignocellulolytic enzyme activity
+    node_type: MOLECULAR_FUNCTION
+  edges:
+  - edge_id: oxygen_enables_solid_state_biodegradation
+    subject: oxygenated_pore_space
+    predicate: enables
+    object: aerobic_solid_state_biodegradation
+    description: Oxygen availability in compost pore spaces constrains aerobic solid-state
+      biodegradation kinetics.
+    evidence:
+    - reference: PMID:16454493
+      snippet: Oxygen is a critical control variable
+      notes: Richard et al. quantified how oxygen concentration changes aerobic solid-state
+        biodegradation kinetics under compost-relevant moisture, substrate, and temperature
+        ranges.
+  - edge_id: organic_waste_fuels_biodegradation
+    subject: organic_solid_waste
+    predicate: fuels
+    object: aerobic_solid_state_biodegradation
+    description: Compost feedstocks supply organic solid waste substrates that are
+      degraded by the active microbial community.
+    evidence:
+    - reference: DOI:10.1186/s40538-023-00381-z
+      snippet: treating organic solid waste
+      notes: Finore et al. place thermophilic microorganisms in composting processes
+        that treat organic solid waste.
+  - edge_id: biodegradation_drives_thermogenic_phase
+    subject: aerobic_solid_state_biodegradation
+    predicate: releases heat as
+    object: thermogenic_phase
+    description: Microbial degradation of organic substrates produces heat that drives
+      the compost into a high-temperature thermogenic phase.
+    evidence:
+    - reference: DOI:10.1186/s40538-023-00381-z
+      snippet: energy produced from degradation
+      notes: Finore et al. summarize energy-balance models that treat substrate degradation
+        as the source of composting heat.
+  - edge_id: thermogenic_phase_enriches_thermophiles
+    subject: thermogenic_phase
+    predicate: selects for
+    object: thermophilic_bacteria
+    description: Rising compost temperature shifts the community from mesophiles toward
+      thermophilic bacteria.
+    evidence:
+    - reference: DOI:10.1186/s40538-023-00381-z
+      snippet: population of thermophiles increases
+      notes: Finore et al. review the rise of thermophilic populations as compost
+        enters its thermogenic temperature phase.
+  - edge_id: thermophiles_supply_lignocellulolytic_activity
+    subject: thermophilic_bacteria
+    predicate: expresses
+    object: lignocellulolytic_enzyme_activity
+    description: Thermophilic compost bacteria secrete hydrolytic and oxidoreductase
+      enzymes that attack cellulose, hemicellulose, and lignin in plant-rich waste.
+    evidence:
+    - reference: DOI:10.1186/s40538-023-00381-z
+      snippet: lignocellulolytic thermophilic bacteria
+      notes: Finore et al. identify lignocellulolytic thermophiles as accelerators
+        of plant-residue and green-waste composting.
 curation_history:
 - timestamp: '2026-08-13T00:00:00Z'
   curator: claude-opus-5
@@ -354,3 +440,9 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD,
     MADIN, PREGO. Grounding: EXACT.'
+- timestamp: '2026-09-04T00:00:00Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a compost thermogenic-decomposition graph backed by PMID:16454493
+    and DOI:10.1186/s40538-023-00381-z.
+  llm_assisted: true

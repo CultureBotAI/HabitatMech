@@ -75,6 +75,69 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
   <tr><td>WATER_VARIABILITY</td><td>permanently wet</td><td class="meta">kg-microbe environments.csv (water_marine)</td></tr>
 </table>
 
+<h2>Causal graphs</h2>
+<h3>Seawater DOM oligotrophic uptake</h3>
+<p>Dissolved organic matter in seawater creates dilute carbon pools that select for oligotrophic bacteria with streamlined genomes and efficient nutrient transport systems.</p><table>
+  <caption>seawater_dom_oligotrophic_uptake edges</caption>
+  <thead><tr><th scope="col">Edge</th><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code>seawater_contains_dom</code></td>
+    <td>sea water</td>
+    <td>contains<br><span class="meta">The seawater carbon pool contains dissolved organic matter used by marine microbes.</span></td>
+    <td>dissolved organic matter</td>
+    <td>
+      <code class="curie">PMID:26951682</code><br><span class="meta">Moran and colleagues describe ocean dissolved organic matter as a large reduced-carbon reservoir.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>dom_couples_to_ocean_microbiome</code></td>
+    <td>dissolved organic matter</td>
+    <td>is cycled by<br><span class="meta">Ocean dissolved organic molecules are produced and consumed by members of the marine microbiome.</span></td>
+    <td>ocean microbiome DOM cycling</td>
+    <td>
+      <code class="curie">PMID:26951682</code><br><span class="meta">Moran and colleagues frame ocean DOM cycling as molecular relationships between DOM compounds and the microbes that produce and consume them.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>carbon_poverty_selects_oligotrophs</code></td>
+    <td>low organic-carbon availability</td>
+    <td>selects for<br><span class="meta">Low seawater carbon concentrations select for oligotrophic bacterial growth strategies.</span></td>
+    <td>oligotrophic marine bacteria</td>
+    <td>
+      <code class="curie">PMID:19805210</code><br><span class="meta">Lauro and colleagues compare marine bacteria adapted to low- and high-nutrient trophic habitats.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>nutrient_transporters_control_oligotrophy</code></td>
+    <td>nutrient transport systems</td>
+    <td>controls<br><span class="meta">Nutrient transporter architecture controls uptake of dilute substrates by oligotrophic bacteria.</span></td>
+    <td>dilute nutrient uptake</td>
+    <td>
+      <code class="curie">PMID:34010286</code><br><span class="meta">Norris and colleagues model copiotroph-oligotroph differences as a consequence of nutrient-transporter trade-offs.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>abc_transporters_support_oligotrophs</code></td>
+    <td>oligotrophic marine bacteria</td>
+    <td>uses<br><span class="meta">Prototypical marine oligotrophs rely on ATP-binding cassette transporters for nutrient uptake.</span></td>
+    <td>nutrient transport systems</td>
+    <td>
+      <code class="curie">PMID:34010286</code><br><span class="meta">Norris and colleagues contrast SAR11-like oligotrophs with copiotrophs that encode phosphotransferase systems.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>dilute_uptake_enables_dom_cycling</code></td>
+    <td>dilute nutrient uptake</td>
+    <td>enables<br><span class="meta">Uptake of dilute organic substrates enables heterotrophic bacteria to participate in ocean DOM cycling.</span></td>
+    <td>ocean microbiome DOM cycling</td>
+    <td>
+      <code class="curie">PMID:34010286</code><br><span class="meta">Norris and colleagues connect nutrient-uptake strategy to marine heterotroph metabolism.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>oligotrophy_is_linked_to_genome_streamlining</code></td>
+    <td>oligotrophic marine bacteria</td>
+    <td>has adaptation<br><span class="meta">Highly abundant oligotrophic seawater bacteria show genome streamlining.</span></td>
+    <td>streamlined genomes</td>
+    <td>
+      <code class="curie">PMID:16109880</code><br><span class="meta">Giovannoni and colleagues described genome streamlining in the cosmopolitan seawater bacterium SAR11.</span>    </td>
+  </tr>
+</table>
+
 <h2>Associated taxa</h2>
 <p class="meta">Taxa <em>reported from</em> this habitat, which is weaker than being
 characteristic of it. <code>rank</code> is out of <code>pool</code>: a high rank in a
@@ -265,6 +328,16 @@ second, independent source are listed first.</p>
 <ul class="plain">
 <li>ocean water <span class="meta">— ENVO</span></li><li>ocean water <span class="meta">— PREGO</span></li><li>ocean waters <span class="meta">— PREGO</span></li><li>sea waters <span class="meta">— PREGO</span></li><li>seawater <span class="meta">— ENVO</span></li></ul>
 
+<h2>Curation</h2>
+<p class="meta">What a curator decided about this record, and why. A record built
+from several source concepts can carry one decision per concept.</p>
+<ol class="events">
+  <li>
+    <span class="pill">ADD_CAUSAL_GRAPH</span>
+    <span class="meta">2026-09-04 · codex</span>
+    <p>Added a seawater dissolved-organic-matter and oligotrophic-uptake graph backed by PMID:26951682, PMID:19805210, PMID:34010286, and PMID:16109880.</p>
+  </li>
+</ol>
 
 <h2>Provenance</h2>
 <p class="meta">

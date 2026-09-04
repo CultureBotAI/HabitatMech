@@ -82,6 +82,125 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
   <tr><td>WATER_VARIABILITY</td><td>permanently wet</td><td class="meta">kg-microbe environments.csv (water_hotspring)</td></tr>
 </table>
 
+<h2>Causal graphs</h2>
+<h3>Hot spring thermophile chemolithoautotrophy</h3>
+<p>Geothermal water imposes high-temperature stress while supplying reduced inorganic electron donors, selecting for thermophiles with thermostable proteins and for chemolithoautotrophic primary producers.</p><table>
+  <caption>hot_spring_thermophile_chemolithoautotrophy edges</caption>
+  <thead><tr><th scope="col">Edge</th><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code>hot_spring_is_geothermally_heated</code></td>
+    <td>hot spring</td>
+    <td>is heated by<br><span class="meta">Hot springs are groundwater outflows heated by geothermal energy.</span></td>
+    <td>geothermal heating</td>
+    <td>
+      <code class="curie">PMID:30038374</code><br><span class="meta">Power and colleagues surveyed geothermal springs as aquatic microbial habitats heated by subsurface geologic processes.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>geothermal_heating_creates_high_temperature</code></td>
+    <td>geothermal heating</td>
+    <td>creates<br><span class="meta">Geothermal heating creates high-temperature spring water that filters the resident microbial community.</span></td>
+    <td>high water temperature</td>
+    <td>
+      <code class="curie">PMID:15671178</code><br><span class="meta">Spear and colleagues studied Yellowstone hot-spring communities at temperatures above 70 degrees Celsius.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>high_temperature_selects_thermophiles</code></td>
+    <td>high water temperature</td>
+    <td>selects for<br><span class="meta">High-temperature water selects organisms capable of growing in hot spring conditions.</span></td>
+    <td>thermophiles</td>
+    <td>
+      <code class="curie">PMID:9758770</code><br><span class="meta">Huber and colleagues isolated the hyperthermophile Thermocrinis ruber from Octopus Spring in Yellowstone National Park.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>high_temperature_requires_thermostable_proteins</code></td>
+    <td>high water temperature</td>
+    <td>selects for<br><span class="meta">High temperature forces microbial macromolecules to remain functional and folded near temperatures that denature mesophilic proteins.</span></td>
+    <td>thermostable proteins</td>
+    <td>
+      <code class="curie">PMID:11256505</code><br><span class="meta">Sterner and Liebl review molecular features that make thermophile proteins stable at high temperature.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>hot_spring_contains_hydrogen</code></td>
+    <td>hot spring</td>
+    <td>supplies<br><span class="meta">Hot-spring fluids can contain geologically sourced hydrogen at concentrations relevant to microbial energetics.</span></td>
+    <td>geologic hydrogen</td>
+    <td>
+      <code class="curie">PMID:31276280</code><br><span class="meta">Lindsay and colleagues connected geologic hydrogen sources to hydrogen-using organisms in Yellowstone hot springs.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>hydrogen_fuels_hot_spring_primary_production</code></td>
+    <td>geologic hydrogen</td>
+    <td>fuels<br><span class="meta">Hydrogen oxidation can fuel primary production in high-temperature geothermal ecosystems.</span></td>
+    <td>chemolithoautotrophic primary production</td>
+    <td>
+      <code class="curie">PMID:15671178</code><br><span class="meta">Spear and colleagues concluded that hydrogen was the dominant energy source for primary production in surveyed high-temperature Yellowstone springs.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>hot_spring_contains_reduced_sulfur</code></td>
+    <td>hot spring</td>
+    <td>supplies<br><span class="meta">Hot-spring fluids can contain reduced sulfur compounds that serve as electron donors for thermophilic microorganisms.</span></td>
+    <td>reduced sulfur compounds</td>
+    <td>
+      <code class="curie">PMID:15671178</code><br><span class="meta">Spear and colleagues modeled hot-spring bioenergetics even in Yellowstone springs with high sulfide concentrations.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>hydrogen_supports_aquificales</code></td>
+    <td>geologic hydrogen</td>
+    <td>supports<br><span class="meta">Hydrogen supports hot-spring Aquificales populations capable of oxidizing reduced inorganic substrates.</span></td>
+    <td>Aquificales thermophiles</td>
+    <td>
+      <code class="curie">PMID:19651724</code><br><span class="meta">Caldwell and colleagues isolated a hydrogen- and sulfur-oxidizing Aquificales thermophile from a terrestrial hot spring.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>reduced_sulfur_supports_aquificales</code></td>
+    <td>reduced sulfur compounds</td>
+    <td>supports<br><span class="meta">Reduced sulfur compounds support hot-spring Aquificales capable of sulfur oxidation.</span></td>
+    <td>Aquificales thermophiles</td>
+    <td>
+      <code class="curie">PMID:19651724</code><br><span class="meta">Caldwell and colleagues characterized Thermocrinis minervae as a hydrogen- and sulfur-oxidizing Aquificales member from a Costa Rican hot spring.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>aquificales_perform_hydrogen_oxidation</code></td>
+    <td>Aquificales thermophiles</td>
+    <td>performs<br><span class="meta">Hot-spring Aquificales include thermophiles that oxidize hydrogen for energy.</span></td>
+    <td>hydrogen oxidation</td>
+    <td>
+      <code class="curie">PMID:19651724</code><br><span class="meta">Caldwell and colleagues characterized a Thermocrinis species that grew chemolithotrophically with hydrogen as an electron donor.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>aquificales_perform_sulfur_oxidation</code></td>
+    <td>Aquificales thermophiles</td>
+    <td>performs<br><span class="meta">Hot-spring Aquificales include thermophiles that oxidize reduced sulfur compounds for energy.</span></td>
+    <td>sulfur oxidation</td>
+    <td>
+      <code class="curie">PMID:9758770</code><br><span class="meta">Huber and colleagues characterized Thermocrinis ruber growth on sulfur, thiosulfate, and hydrogen in Yellowstone hot-spring isolates.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>sulfur_oxidation_drives_primary_production</code></td>
+    <td>sulfur oxidation</td>
+    <td>contributes to<br><span class="meta">Sulfur oxidation contributes energy to chemolithoautotrophic carbon fixation in hot-spring Aquificales.</span></td>
+    <td>chemolithoautotrophic primary production</td>
+    <td>
+      <code class="curie">PMID:19651724</code><br><span class="meta">Caldwell and colleagues isolated a sulfur-oxidizing Thermocrinis species from a terrestrial hot spring.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>hydrogen_oxidation_drives_primary_production</code></td>
+    <td>hydrogen oxidation</td>
+    <td>drives<br><span class="meta">Hydrogen oxidation provides energy for inorganic carbon fixation in high-temperature hot-spring communities.</span></td>
+    <td>chemolithoautotrophic primary production</td>
+    <td>
+      <code class="curie">PMID:15671178</code><br><span class="meta">Spear and colleagues linked hydrogen-oxidizing organisms to primary productivity in high-temperature Yellowstone springs.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>primary_production_fixes_inorganic_carbon</code></td>
+    <td>chemolithoautotrophic primary production</td>
+    <td>fixes<br><span class="meta">Chemolithoautotrophic primary producers convert inorganic carbon into biomass in low-organic hot-spring water.</span></td>
+    <td>inorganic carbon fixation</td>
+    <td>
+      <code class="curie">PMID:19651724</code><br><span class="meta">Caldwell and colleagues isolated a hot-spring Aquificales member capable of autotrophic growth on inorganic electron donors.</span>    </td>
+  </tr>
+</table>
+
 <h2>Associated taxa</h2>
 <p class="meta">Taxa <em>reported from</em> this habitat, which is weaker than being
 characteristic of it. <code>rank</code> is out of <code>pool</code>: a high rank in a
@@ -290,6 +409,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">REVIEW</span>
     <span class="meta">2026-08-15 · claude-opus-5</span>
     <p>Reviewed and endorsed the seeder&#39;s own resolution. Co-attestor review (#12): this source names the ontology CURIE itself, so its grounding is definitional rather than a lexical guess — the record IS the term the source pointed at. Recorded so the record it co-attests can reach REVIEWED, which needs every source concept decided. (source concept habitatmech:PREGO.8ba649bff9)</p>
+  </li>
+  <li>
+    <span class="pill">ADD_CAUSAL_GRAPH</span>
+    <span class="meta">2026-09-04 · codex</span>
+    <p>Added a hot-spring thermophile chemolithoautotrophy graph backed by PMID:30038374, PMID:15671178, PMID:9758770, PMID:31276280, PMID:19651724, and PMID:11256505.</p>
   </li>
 </ol>
 

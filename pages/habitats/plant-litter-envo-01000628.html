@@ -90,6 +90,133 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
   <tr><td>WATER_VARIABILITY</td><td>occasionally wet</td><td class="meta">kg-microbe environments.csv (litter)</td></tr>
 </table>
 
+<h2>Causal graphs</h2>
+<h3>Plant litter lignocellulose decomposition</h3>
+<p>Dead leaves, bark, needles, and twigs expose lignocellulose and soluble plant metabolites to decomposer fungi and bacteria; fungal extracellular enzymes depolymerize cellulose and lignin, bacterial taxa succeed on the changing substrate pool, and the consortium mineralizes plant carbon and nutrients into soil organic matter and dissolved organic matter.</p><table>
+  <caption>plant_litter_lignocellulose_decomposition edges</caption>
+  <thead><tr><th scope="col">Edge</th><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code>plant_litter_accumulates_fallen_tissues</code></td>
+    <td>plant litter</td>
+    <td>accumulates<br><span class="meta">Plant litter accumulates dead fallen leaves, bark, needles, and twigs on the soil surface.</span></td>
+    <td>fallen plant tissues</td>
+    <td>
+      <code class="curie">PMID:16917528</code><br><span class="meta">Osono reviewed how fungi already present on living foliage seed decomposer communities after leaves senesce into litter.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>fallen_tissues_supply_lignocellulose</code></td>
+    <td>fallen plant tissues</td>
+    <td>supplies<br><span class="meta">Fallen plant tissues supply cellulose, hemicellulose, and lignin polymers that dominate plant-litter decomposition.</span></td>
+    <td>lignocellulose</td>
+    <td>
+      <code class="curie">DOI:10.1007/s11284-007-0390-z</code><br><span class="meta">Osono reviewed fungal decomposition of lignin and cellulose during leaf litter decay.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>litter_leaches_soluble_dom</code></td>
+    <td>plant litter</td>
+    <td>releases<br><span class="meta">Fresh litter leaches soluble dissolved organic matter that fuels early microbial growth in the litter layer.</span></td>
+    <td>soluble litter dissolved organic matter</td>
+    <td>
+      <code class="curie">PMID:35523988</code><br><span class="meta">Schroeter and colleagues tracked DOM molecular changes and community function during early litter decomposition.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>lignocellulose_selects_saprotrophic_fungi</code></td>
+    <td>lignocellulose</td>
+    <td>selects for<br><span class="meta">Recalcitrant plant polymers select fungi able to enzymatically depolymerize lignocellulosic litter.</span></td>
+    <td>saprotrophic fungi</td>
+    <td>
+      <code class="curie">PMID:23051693</code><br><span class="meta">Voriskova and Baldrian followed fungal succession during leaf litter decomposition.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>saprotrophic_fungi_secrete_enzymes</code></td>
+    <td>saprotrophic fungi</td>
+    <td>expresses<br><span class="meta">Saprotrophic fungi secrete extracellular hydrolytic and oxidative enzymes into litter.</span></td>
+    <td>fungal extracellular enzymes</td>
+    <td>
+      <code class="curie">PMID:22402400</code><br><span class="meta">Schneider and colleagues used metaproteomics to identify fungal and bacterial enzymes active during leaf litter decomposition.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>fungal_enzymes_depolymerize_cellulose</code></td>
+    <td>fungal extracellular enzymes</td>
+    <td>drives<br><span class="meta">Hydrolytic fungal enzymes break cellulose and hemicellulose polymers into smaller plant-derived molecules.</span></td>
+    <td>cellulose depolymerization</td>
+    <td>
+      <code class="curie">PMID:17089664</code><br><span class="meta">Romani and colleagues compared bacterial and fungal extracellular enzyme activities on decomposing litter.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>fungal_enzymes_depolymerize_lignin</code></td>
+    <td>fungal extracellular enzymes</td>
+    <td>drives<br><span class="meta">Oxidative fungal enzymes attack recalcitrant aromatic lignin in later stages of leaf litter decay.</span></td>
+    <td>lignin depolymerization</td>
+    <td>
+      <code class="curie">DOI:10.1007/s11284-007-0390-z</code><br><span class="meta">Osono reviewed ligninolytic fungi and lignin decomposition during leaf litter decay.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>depolymerization_releases_dom</code></td>
+    <td>cellulose depolymerization</td>
+    <td>contributes to<br><span class="meta">Enzymatic depolymerization converts structural plant polymers into lower-molecular-weight dissolved organic substrates.</span></td>
+    <td>soluble litter dissolved organic matter</td>
+    <td>
+      <code class="curie">PMID:35523988</code><br><span class="meta">Schroeter and colleagues linked DOM composition with functional adaptation of decomposer communities to plant litter substrates.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>soluble_dom_fuels_bacteria</code></td>
+    <td>soluble litter dissolved organic matter</td>
+    <td>supports<br><span class="meta">Soluble plant-derived organic matter supports bacteria that grow during litter decay.</span></td>
+    <td>cellulolytic bacteria</td>
+    <td>
+      <code class="curie">PMID:22402400</code><br><span class="meta">Schneider and colleagues observed increasing bacterial proteins and taxon-specific bacterial functions during litter decomposition.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>decomposing_litter_selects_cellulolytic_bacteria</code></td>
+    <td>plant litter</td>
+    <td>selects for<br><span class="meta">Leaf litter selects bacterial decomposers with cellulolytic potential as decay progresses.</span></td>
+    <td>cellulolytic bacteria</td>
+    <td>
+      <code class="curie">PMID:27543318</code><br><span class="meta">Tlaskal and colleagues found a bacterial succession pattern that included cellulolytic taxa on decomposing leaf litter.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>fungal_biomass_feeds_mycelium_consumers</code></td>
+    <td>saprotrophic fungi</td>
+    <td>supports<br><span class="meta">Expanding fungal mycelia create bacterial niches for organisms that can consume fungal biomass.</span></td>
+    <td>fungal-mycelium consumers</td>
+    <td>
+      <code class="curie">PMID:27543318</code><br><span class="meta">Tlaskal and colleagues identified bacterial taxa with potential to consume fungal mycelia during leaf litter decomposition.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>substrate_change_drives_succession</code></td>
+    <td>soluble litter dissolved organic matter</td>
+    <td>shapes<br><span class="meta">Changes in soluble DOM and polymer availability drive successional shifts in litter decomposer communities.</span></td>
+    <td>microbial succession</td>
+    <td>
+      <code class="curie">PMID:27357176</code><br><span class="meta">Purahong and colleagues characterized coupled bacterial and fungal community dynamics through litter decomposition.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>decomposer_succession_mineralizes_carbon</code></td>
+    <td>microbial succession</td>
+    <td>drives<br><span class="meta">Successional fungal and bacterial decomposers mineralize plant carbon as litter decays.</span></td>
+    <td>litter carbon mineralization</td>
+    <td>
+      <code class="curie">PMID:22402400</code><br><span class="meta">Schneider and colleagues linked decomposer taxa with protein-level biogeochemical functions during litter decay.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>mineralization_releases_nutrients</code></td>
+    <td>litter carbon mineralization</td>
+    <td>releases<br><span class="meta">Microbial decomposition releases plant-bound carbon and nutrients from the litter layer.</span></td>
+    <td>nutrient release</td>
+    <td>
+      <code class="curie">PMID:35523988</code><br><span class="meta">Schroeter and colleagues coupled DOM chemistry with microbial functions during plant-litter decomposition.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>decomposition_feeds_soil_organic_matter</code></td>
+    <td>microbial succession</td>
+    <td>contributes to<br><span class="meta">Litter decomposer succession turns fallen plant tissues into dissolved and particulate inputs to soil organic matter.</span></td>
+    <td>soil organic matter inputs</td>
+    <td>
+      <code class="curie">PMID:27357176</code><br><span class="meta">Purahong and colleagues followed fungal and bacterial communities during forest litter decomposition and its transition into the soil organic layer.</span>    </td>
+  </tr>
+</table>
+
 <h2>Associated taxa</h2>
 <p class="meta">Taxa <em>reported from</em> this habitat, which is weaker than being
 characteristic of it. <code>rank</code> is out of <code>pool</code>: a high rank in a
@@ -303,6 +430,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">REVIEW</span>
     <span class="meta">2026-08-16 · claude-opus-5</span>
     <p>Reviewed and endorsed the seeder&#39;s own resolution. Risky-grounding review (#12), co-attestor pass: this source concept feeds a record whose grounding was flagged and reviewed, and the record could not reach REVIEWED until every source feeding it was decided. This one is a self-grounding: the source vocabulary names the concept with the ontology term&#39;s own label, so there is nothing to adjudicate between the two — checked that the term is the one the label denotes, and that the record it merges into is the same concept rather than a homonym. (source concept habitatmech:MADIN.c7c13007c1)</p>
+  </li>
+  <li>
+    <span class="pill">ADD_CAUSAL_GRAPH</span>
+    <span class="meta">2026-09-04 · codex</span>
+    <p>Added a plant-litter lignocellulose decomposition graph backed by PMID:16917528, DOI:10.1007/s11284-007-0390-z, PMID:35523988, PMID:23051693, PMID:22402400, PMID:17089664, PMID:27543318, and PMID:27357176.</p>
   </li>
 </ol>
 

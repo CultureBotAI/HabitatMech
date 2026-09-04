@@ -380,6 +380,283 @@ characteristic_taxa:
   association_count: 28
   rank: 25
   candidate_pool: 5335
+causal_graphs:
+- graph_id: terrestrial_biome_root_litter_soil_pulses
+  title: Terrestrial biome root-litter soil pulses
+  description: Terrestrial biomes couple plant primary production to spatially heterogeneous
+    soils through root exudation, litter deposition, and episodic soil water films.
+    Roots and litter supply labile and polymeric organic matter, soil pores create
+    isolated microbial microsites, and drying-rewetting pulses impose water stress
+    while stimulating bacteria and fungi that mineralize plant carbon belowground.
+  nodes:
+  - node_id: terrestrial_biome
+    label: terrestrial biome
+    node_type: HABITAT
+    grounding: ENVO:00000446
+  - node_id: land_surface
+    label: land surface
+    node_type: HABITAT
+  - node_id: terrestrial_plants
+    label: terrestrial plants
+    node_type: TAXON
+  - node_id: root_exudates
+    label: root exudates
+    node_type: CHEMICAL
+  - node_id: plant_litter
+    label: plant litter
+    node_type: HABITAT
+    grounding: ENVO:01000628
+  - node_id: lignocellulose
+    label: lignocellulose
+    node_type: CHEMICAL
+  - node_id: soil_pores
+    label: soil pores
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: episodic_precipitation
+    label: episodic precipitation
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: soil_water_films
+    label: soil water films
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: drying_rewetting
+    label: drying-rewetting pulses
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: desiccation_stress
+    label: desiccation stress
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: rhizosphere_bacteria
+    label: rhizosphere bacteria
+    node_type: TAXON
+  - node_id: saprotrophic_fungi
+    label: saprotrophic fungi
+    node_type: TAXON
+  - node_id: extracellular_enzymes
+    label: extracellular enzymes
+    node_type: TRAIT
+  - node_id: soil_organic_matter
+    label: soil organic matter
+    node_type: CHEMICAL
+  - node_id: carbon_mineralization
+    label: carbon mineralization
+    node_type: COMMUNITY_PROCESS
+  edges:
+  - edge_id: terrestrial_biome_occupies_land_surface
+    subject: terrestrial_biome
+    predicate: occupies
+    object: land_surface
+    description: Terrestrial biomes are land-surface ecosystems in which plants, litter,
+      and mineral soil provide microbial habitats.
+    evidence:
+    - reference: PMID:25428498
+      snippet: belowground biodiversity and ecosystem functioning
+      notes: Bardgett and van der Putten reviewed how aboveground plant communities
+        and belowground soil biota are coupled in terrestrial ecosystems.
+  - edge_id: land_surface_supports_terrestrial_plants
+    subject: land_surface
+    predicate: supports
+    object: terrestrial_plants
+    description: Land surfaces support rooted plants that are the dominant source
+      of fresh carbon for many terrestrial microbial communities.
+    evidence:
+    - reference: PMID:25428498
+      snippet: belowground biodiversity
+      notes: The review synthesizes plant-soil feedbacks linking terrestrial vegetation,
+        roots, microbes, and ecosystem functioning.
+  - edge_id: terrestrial_plants_release_root_exudates
+    subject: terrestrial_plants
+    predicate: releases
+    object: root_exudates
+    description: Plant roots release low-molecular-weight exudates into soil, supplying
+      labile carbon to rhizosphere microbes.
+    evidence:
+    - reference: DOI:10.1139/cjb-2013-0225
+      snippet: plant roots
+      notes: Badri and Vivanco reviewed root-secreted metabolites as drivers of root-microbiome
+        communication and rhizosphere selection.
+  - edge_id: root_exudates_select_rhizosphere_bacteria
+    subject: root_exudates
+    predicate: selects for
+    object: rhizosphere_bacteria
+    description: Exuded sugars, amino acids, and organic acids enrich bacteria able
+      to colonize the rhizosphere.
+    evidence:
+    - reference: DOI:10.1139/cjb-2013-0225
+      snippet: rhizosphere
+      notes: The root-exudate review connects plant exudate chemistry to recruitment
+        and activity of rhizosphere microorganisms.
+    - reference: DOI:10.3389/fpls.2017.02223
+      snippet: root-associated bacterial communities
+      notes: Naylor and Coleman-Derr reviewed plant, soil, and abiotic controls on
+        root-associated bacterial community dynamics.
+  - edge_id: terrestrial_plants_generate_litter
+    subject: terrestrial_plants
+    predicate: generates
+    object: plant_litter
+    description: Senescent leaves, roots, and woody tissues become plant litter at
+      the soil surface and belowground.
+    evidence:
+    - reference: PMID:27856492
+      snippet: fungal communities in forest soils
+      notes: Baldrian reviewed forest soil fungal communities that use plant roots,
+        litter, and soil organic matter.
+  - edge_id: plant_litter_supplies_lignocellulose
+    subject: plant_litter
+    predicate: supplies
+    object: lignocellulose
+    description: Plant litter supplies cellulose, hemicellulose, and lignin that dominate
+      polymeric carbon inputs to terrestrial decomposers.
+    evidence:
+    - reference: DOI:10.1007/s11284-007-0390-z
+      snippet: ligninolytic fungi
+      notes: Osono reviewed fungal decomposition of lignin and cellulose during leaf
+        litter decay.
+  - edge_id: lignocellulose_selects_saprotrophic_fungi
+    subject: lignocellulose
+    predicate: selects for
+    object: saprotrophic_fungi
+    description: Recalcitrant plant polymers select fungi that produce oxidative and
+      hydrolytic extracellular enzymes.
+    evidence:
+    - reference: PMID:27856492
+      snippet: saprotrophic fungi
+      notes: The forest-soil review describes fungal guilds specialized for decomposing
+        plant litter and soil organic matter.
+  - edge_id: saprotrophic_fungi_express_extracellular_enzymes
+    subject: saprotrophic_fungi
+    predicate: expresses
+    object: extracellular_enzymes
+    description: Saprotrophic fungi secrete extracellular enzymes that depolymerize
+      plant litter into assimilable compounds.
+    evidence:
+    - reference: PMID:22402400
+      snippet: metaproteomics
+      notes: Schneider and colleagues detected fungal and bacterial extracellular
+        enzymes during leaf litter decomposition.
+  - edge_id: extracellular_enzymes_generate_soil_organic_matter
+    subject: extracellular_enzymes
+    predicate: contributes to
+    object: soil_organic_matter
+    description: Enzymatic decomposition transforms root and litter inputs into dissolved
+      and particulate soil organic matter.
+    evidence:
+    - reference: PMID:23055998
+      snippet: microbial control over carbon cycling in soil
+      notes: Schimel and Schaeffer reviewed microbial extracellular enzyme production,
+        carbon use, and soil organic-matter stabilization.
+  - edge_id: land_surface_contains_soil_pores
+    subject: land_surface
+    predicate: contains
+    object: soil_pores
+    description: Terrestrial land surfaces include mineral soil pore networks that
+      spatially partition microbes, air, and water.
+    evidence:
+    - reference: PMID:28824177
+      snippet: soil microbiome
+      notes: Fierer reviewed soil as a spatially structured microbial habitat with
+        strong heterogeneity in chemistry and organism distributions.
+  - edge_id: precipitation_creates_soil_water_films
+    subject: episodic_precipitation
+    predicate: creates
+    object: soil_water_films
+    description: Rain and wetting events create water films that reconnect pore-scale
+      substrates and cells in unsaturated terrestrial soil.
+    evidence:
+    - reference: DOI:10.1146/annurev-ecolsys-110617-062614
+      snippet: Life in Dry Soils
+      notes: Schimel reviewed how wetting and drying alter diffusion, substrate availability,
+        and microbial process rates in soil.
+  - edge_id: soil_pores_structure_water_films
+    subject: soil_pores
+    predicate: structures
+    object: soil_water_films
+    description: The pore network determines whether soil water remains connected
+      around microbial cells or fragments into isolated films.
+    evidence:
+    - reference: DOI:10.1146/annurev-ecolsys-110617-062614
+      snippet: Life in Dry Soils
+      notes: Schimel reviewed how soil drying changes aqueous connectivity and diffusion
+        through water films at microbial scales.
+  - edge_id: terrestrial_biome_experiences_precipitation
+    subject: terrestrial_biome
+    predicate: experiences
+    object: episodic_precipitation
+    description: Terrestrial soils alternate among wetting and drying states as precipitation,
+      evaporation, and plant water use vary through time.
+    evidence:
+    - reference: DOI:10.1146/annurev-ecolsys-110617-062614
+      snippet: drought
+      notes: The dry-soils review synthesized microbial responses to drought and rewetting
+        in terrestrial soils.
+  - edge_id: drying_rewetting_fragments_water_films
+    subject: drying_rewetting
+    predicate: fragments
+    object: soil_water_films
+    description: Drying disconnects water films across the pore network, while rewetting
+      reconnects substrates and dormant microbes.
+    evidence:
+    - reference: DOI:10.1146/annurev-ecolsys-110617-062614
+      snippet: water films
+      notes: Schimel reviewed the physical effects of soil drying on aqueous connectivity
+        and diffusion to microbial cells.
+  - edge_id: precipitation_drives_drying_rewetting
+    subject: episodic_precipitation
+    predicate: drives
+    object: drying_rewetting
+    description: Pulsed precipitation followed by drydown creates repeated wet-dry
+      cycles in unsaturated terrestrial habitats.
+    evidence:
+    - reference: DOI:10.3389/fpls.2017.02223
+      snippet: drought stress
+      notes: Naylor and Coleman-Derr reviewed how drought and subsequent soil water
+        changes reshape root-associated bacterial communities.
+  - edge_id: drying_rewetting_imposes_desiccation_stress
+    subject: drying_rewetting
+    predicate: imposes
+    object: desiccation_stress
+    description: Drying phases impose osmotic and matric stress that microbes must
+      tolerate before rewetting revives activity.
+    evidence:
+    - reference: DOI:10.1146/annurev-ecolsys-110617-062614
+      snippet: effects of drought
+      notes: Schimel reviewed drought-induced stress and survival strategies in soil
+        microbial communities.
+  - edge_id: desiccation_stress_filters_rhizosphere_bacteria
+    subject: desiccation_stress
+    predicate: filters
+    object: rhizosphere_bacteria
+    description: Drought and drying stress shift root-associated bacterial community
+      structure in terrestrial soils.
+    evidence:
+    - reference: PMID:28753209
+      snippet: grass root microbiome
+      notes: Naylor and colleagues found that drought and host selection changed bacterial
+        communities associated with grass roots and rhizospheres.
+  - edge_id: water_films_enable_carbon_mineralization
+    subject: soil_water_films
+    predicate: enables
+    object: carbon_mineralization
+    description: Water films enable diffusion of substrates and enzymes needed for
+      microbial mineralization of soil organic matter.
+    evidence:
+    - reference: PMID:23055998
+      snippet: carbon cycling in soil
+      notes: Schimel and Schaeffer reviewed how substrate availability and microbial
+        traits control soil carbon mineralization.
+  - edge_id: decomposers_mineralize_soil_organic_matter
+    subject: soil_organic_matter
+    predicate: fuels
+    object: carbon_mineralization
+    description: Soil organic matter produced from plant inputs fuels bacterial and
+      fungal respiration in terrestrial soils.
+    evidence:
+    - reference: PMID:25428498
+      snippet: ecosystem functioning
+      notes: Bardgett and van der Putten reviewed the role of soil biodiversity in
+        organic-matter decomposition and nutrient cycling.
+    - reference: PMID:24639507
+      snippet: ecosystem multifunctionality
+      notes: Wagg and colleagues experimentally showed that soil biodiversity and
+        community composition influence multiple soil functions.
 curation_history:
 - timestamp: '2026-08-13T00:00:00Z'
   curator: claude-opus-5
@@ -413,3 +690,11 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-09-04T00:00:00Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a terrestrial-biome root-litter soil-pulses graph backed by PMID:25428498,
+    DOI:10.1139/cjb-2013-0225, DOI:10.3389/fpls.2017.02223, PMID:27856492, DOI:10.1007/s11284-007-0390-z,
+    PMID:22402400, PMID:23055998, PMID:28824177, DOI:10.1146/annurev-ecolsys-110617-062614,
+    PMID:28753209, and PMID:24639507.
+  llm_assisted: true

@@ -514,6 +514,12 @@ classes:
   CausalEdge:
     description: An evidence-backed directed relationship in a habitat mechanism graph.
     attributes:
+      edge_id:
+        description: Stable local edge identifier within the CausalGraph.
+        identifier: true
+        required: true
+        range: string
+        pattern: "^[A-Za-z][A-Za-z0-9_-]*$"
       subject:
         description: Local node_id of the upstream node.
         required: true
@@ -556,6 +562,35 @@ classes:
         range: string
       llm_assisted:
         range: boolean
+
+  # --------------------------------------------------------------
+  # Curated mechanism overlays
+  # --------------------------------------------------------------
+
+  HabitatCausalGraphCuration:
+    description: >-
+      Curator-authored mechanism graphs for one generated HabitatRecord.
+      Instances live under curation/causal_graphs/ and are merged by the
+      seeder after source harmonization, so curated causal mechanisms survive
+      a full seed-apply run.
+    attributes:
+      identifier:
+        description: Stable CURIE of the HabitatRecord these graphs extend.
+        required: true
+        range: string
+        pattern: "^[A-Za-z][A-Za-z0-9._-]*:[A-Za-z0-9._-]+$"
+      causal_graphs:
+        description: Evidence-backed mechanism graphs to attach to the record.
+        required: true
+        multivalued: true
+        inlined_as_list: true
+        range: CausalGraph
+      curation_history:
+        description: Curator events describing the graph curation.
+        required: true
+        multivalued: true
+        inlined_as_list: true
+        range: CurationEvent
 
 # ================================================================
 # ENUMS

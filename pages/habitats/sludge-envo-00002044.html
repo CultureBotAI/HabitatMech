@@ -88,6 +88,101 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
   <tr><td>WATER_VARIABILITY</td><td>permanently wet</td><td class="meta">kg-microbe environments.csv (sludge)</td></tr>
 </table>
 
+<h2>Causal graphs</h2>
+<h3>Sludge floc oxygen partitioning</h3>
+<p>Sludge aggregates extracellular-polymeric substances, cells, and adsorbed particles into flocs whose oxygen gradients partition nitrification and denitrification into adjacent oxic and anoxic microsites.</p><table>
+  <caption>sludge_floc_oxygen_partitioning edges</caption>
+  <thead><tr><th scope="col">Edge</th><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code>sludge_contains_flocs</code></td>
+    <td>sludge</td>
+    <td>contains<br><span class="meta">Wastewater sludge contains flocs made of microbial cells, EPS, and adsorbed organic and inorganic material.</span></td>
+    <td>activated sludge flocs</td>
+    <td>
+      <code class="curie">PMID:12926675</code><br><span class="meta">Wilen and colleagues describe activated sludge flocs as aggregates of microorganisms, EPS, and adsorbed material.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>eps_structures_flocs</code></td>
+    <td>extracellular polymeric substances</td>
+    <td>structures<br><span class="meta">Extracellular polymeric substances help define the composition, charge, hydrophobicity, and flocculation behavior of sludge flocs.</span></td>
+    <td>activated sludge flocs</td>
+    <td>
+      <code class="curie">PMID:12926675</code><br><span class="meta">Wilen and colleagues found that EPS quantity and quality were important for activated-sludge floc properties.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>flocs_create_heterogeneous_matrix</code></td>
+    <td>activated sludge flocs</td>
+    <td>creates<br><span class="meta">Sludge flocs create heterogeneous suspended aggregate matrices.</span></td>
+    <td>heterogeneous floc matrix</td>
+    <td>
+      <code class="curie">PMID:12926675</code><br><span class="meta">Wilen and colleagues report heterogeneity in floc structure, morphology, and properties across activated sludges.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>floc_matrix_generates_oxygen_gradients</code></td>
+    <td>heterogeneous floc matrix</td>
+    <td>creates<br><span class="meta">Oxygen consumption and diffusion limitation inside individual sludge flocs generate steep oxygen gradients.</span></td>
+    <td>oxygen gradients</td>
+    <td>
+      <code class="curie">PMID:12827702</code><br><span class="meta">Satoh and colleagues used microelectrodes to measure oxygen gradients inside individual activated-sludge flocs.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>bulk_oxygen_controls_anoxic_interiors</code></td>
+    <td>bulk dissolved oxygen</td>
+    <td>controls<br><span class="meta">The bulk dissolved-oxygen concentration controls how deeply oxygen penetrates into sludge flocs.</span></td>
+    <td>oxygen gradients</td>
+    <td>
+      <code class="curie">PMID:12827702</code><br><span class="meta">Satoh and colleagues showed that oxygen penetration depth depended on the bulk oxygen concentration.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>oxygen_gradients_form_oxic_zones</code></td>
+    <td>oxygen gradients</td>
+    <td>creates<br><span class="meta">Oxygen gradients partition aerated sludge flocs into oxic zones where oxygen is available.</span></td>
+    <td>oxic floc zones</td>
+    <td>
+      <code class="curie">PMID:12827702</code><br><span class="meta">Satoh and colleagues localized nitrification activity to oxic zones within activated-sludge flocs.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>oxygen_gradients_form_anoxic_zones</code></td>
+    <td>oxygen gradients</td>
+    <td>creates<br><span class="meta">Limited oxygen penetration leaves anoxic zones inside larger activated-sludge flocs.</span></td>
+    <td>anoxic floc zones</td>
+    <td>
+      <code class="curie">PMID:12827702</code><br><span class="meta">Satoh and colleagues detected anoxic zones inside larger flocs at low bulk oxygen concentrations.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>oxic_zones_enable_nitrification</code></td>
+    <td>oxic floc zones</td>
+    <td>enables<br><span class="meta">Oxic regions in sludge flocs support nitrification.</span></td>
+    <td>nitrification</td>
+    <td>
+      <code class="curie">PMID:12827702</code><br><span class="meta">Satoh and colleagues observed nitrification in the oxic parts of single activated-sludge flocs.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>anoxic_zones_enable_denitrification</code></td>
+    <td>anoxic floc zones</td>
+    <td>enables<br><span class="meta">Anoxic regions in sludge flocs support denitrification.</span></td>
+    <td>denitrification</td>
+    <td>
+      <code class="curie">PMID:12827702</code><br><span class="meta">Satoh and colleagues observed denitrification mainly in anoxic parts of single activated-sludge flocs.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>nitrification_contributes_to_snd</code></td>
+    <td>nitrification</td>
+    <td>contributes to<br><span class="meta">Oxic-zone nitrification contributes to simultaneous nitrification and denitrification in aerated sludge.</span></td>
+    <td>simultaneous nitrification and denitrification</td>
+    <td>
+      <code class="curie">PMID:12827702</code><br><span class="meta">Satoh and colleagues investigated simultaneous nitrification and denitrification in floccular municipal activated sludge.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>denitrification_contributes_to_snd</code></td>
+    <td>denitrification</td>
+    <td>contributes to<br><span class="meta">Anoxic-zone denitrification contributes to simultaneous nitrification and denitrification in aerated sludge.</span></td>
+    <td>simultaneous nitrification and denitrification</td>
+    <td>
+      <code class="curie">PMID:12827702</code><br><span class="meta">Satoh and colleagues observed simultaneous nitrification and denitrification at intermediate dissolved-oxygen concentrations.</span>    </td>
+  </tr>
+</table>
+
 <h2>Associated taxa</h2>
 <p class="meta">Taxa <em>reported from</em> this habitat, which is weaker than being
 characteristic of it. <code>rank</code> is out of <code>pool</code>: a high rank in a
@@ -296,6 +391,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">REVIEW</span>
     <span class="meta">2026-08-13 · claude-opus-5</span>
     <p>Reviewed and endorsed the seeder&#39;s own resolution. Multi-source review pass: this record is attested by more than one independent vocabulary, and this source&#39;s label or path was read against the record&#39;s ontology term to check the merge is right. It agrees. Source concepts in the same pass whose labels did not agree were re-decided rather than endorsed; see the pass&#39;s other decisions of the same date. (source concept habitatmech:PREGO.14620241d0)</p>
+  </li>
+  <li>
+    <span class="pill">ADD_CAUSAL_GRAPH</span>
+    <span class="meta">2026-09-04 · codex</span>
+    <p>Added a sludge floc oxygen-partitioning graph backed by PMID:12926675 and PMID:12827702.</p>
   </li>
 </ol>
 

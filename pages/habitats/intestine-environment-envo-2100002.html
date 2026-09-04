@@ -77,6 +77,61 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
   <tr><td>WATER_VARIABILITY</td><td>permanently wet</td><td class="meta">kg-microbe environments.csv (host_animal_endotherm_intestinal)</td></tr>
 </table>
 
+<h2>Causal graphs</h2>
+<h3>Intestinal anaerobic glycan fermentation</h3>
+<p>Host epithelial oxygen consumption and intestinal glycan pools create anaerobic nutrient gradients that favor fermentative gut microbiota and short-chain fatty acid production.</p><table>
+  <caption>intestinal_anaerobic_glycan_fermentation edges</caption>
+  <thead><tr><th scope="col">Edge</th><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code>beta_oxidation_limits_luminal_oxygen</code></td>
+    <td>colonocyte beta-oxidation</td>
+    <td>reduces<br><span class="meta">Colonic epithelial beta-oxidation limits oxygen availability in the intestinal lumen.</span></td>
+    <td>low luminal oxygen</td>
+    <td>
+      <code class="curie">PMID:28798125</code><br><span class="meta">Byndloss and colleagues describe microbiota-activated PPAR-gamma signaling as a driver of colonocyte beta-oxidation that restricts oxygen diffusing into the lumen.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>low_oxygen_favors_obligate_anaerobes</code></td>
+    <td>low luminal oxygen</td>
+    <td>selects for<br><span class="meta">Low oxygen availability favors obligate anaerobic bacteria in the intestinal microbial community.</span></td>
+    <td>obligate anaerobe dominance</td>
+    <td>
+      <code class="curie">PMID:30498100</code><br><span class="meta">Litvak, Byndloss, and Baumler summarize the colonocyte oxygen sink as a host-controlled switch that shapes obligate versus facultative anaerobes in the colon.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>intestinal_mucus_presents_o_glycans</code></td>
+    <td>intestine environment</td>
+    <td>provides<br><span class="meta">Intestinal mucus exposes O-glycans on MUC2 mucin to commensal gut microbes.</span></td>
+    <td>mucin O-glycans</td>
+    <td>
+      <code class="curie">PMID:37442097</code><br><span class="meta">Luis and Hansson describe O-glycosylated MUC2 as a major component of intestinal mucus.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>mucin_glycans_feed_gut_microbes</code></td>
+    <td>mucin O-glycans</td>
+    <td>fuels<br><span class="meta">Gut microbiota use host mucin glycans as fermentable carbon sources.</span></td>
+    <td>microbial glycan fermentation</td>
+    <td>
+      <code class="curie">PMID:37442097</code><br><span class="meta">Luis and Hansson review commensal-microbiota interactions with host mucins and the proteins used to bind or cleave mucin glycans.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>dietary_fiber_feeds_gut_microbes</code></td>
+    <td>dietary fiber</td>
+    <td>fuels<br><span class="meta">Dietary fibers directly supply gut microbes with fermentable carbohydrate substrates.</span></td>
+    <td>microbial glycan fermentation</td>
+    <td>
+      <code class="curie">PMID:29902436</code><br><span class="meta">Makki and colleagues review dietary fibers as food components that shape digestive-tract microbial communities.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>glycan_fermentation_produces_scfas</code></td>
+    <td>microbial glycan fermentation</td>
+    <td>produces<br><span class="meta">Microbial fermentation of intestinal glycans produces short-chain fatty acids.</span></td>
+    <td>short-chain fatty acids</td>
+    <td>
+      <code class="curie">PMID:29902436</code><br><span class="meta">Makki and colleagues summarize short-chain fatty acids as major bacterial metabolites produced from dietary-fiber fermentation.</span>    </td>
+  </tr>
+</table>
+
 <h2>Associated taxa</h2>
 <p class="meta">Taxa <em>reported from</em> this habitat, which is weaker than being
 characteristic of it. <code>rank</code> is out of <code>pool</code>: a high rank in a
@@ -280,6 +335,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">REVIEW</span>
     <span class="meta">2026-08-15 · claude-opus-5</span>
     <p>Reviewed and endorsed the seeder&#39;s own resolution. Co-attestor review (#12): this source names the ontology CURIE itself, so its grounding is definitional rather than a lexical guess — the record IS the term the source pointed at. Recorded so the record it co-attests can reach REVIEWED, which needs every source concept decided. (source concept habitatmech:PREGO.5bfab021ea)</p>
+  </li>
+  <li>
+    <span class="pill">ADD_CAUSAL_GRAPH</span>
+    <span class="meta">2026-09-04 · codex</span>
+    <p>Added a mammalian intestinal anaerobic glycan-fermentation graph backed by PMID:28798125, PMID:30498100, PMID:37442097, and PMID:29902436.</p>
   </li>
 </ol>
 

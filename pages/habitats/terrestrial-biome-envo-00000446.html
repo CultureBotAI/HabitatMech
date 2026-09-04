@@ -63,6 +63,165 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 </ul>
 
 
+<h2>Causal graphs</h2>
+<h3>Terrestrial biome root-litter soil pulses</h3>
+<p>Terrestrial biomes couple plant primary production to spatially heterogeneous soils through root exudation, litter deposition, and episodic soil water films. Roots and litter supply labile and polymeric organic matter, soil pores create isolated microbial microsites, and drying-rewetting pulses impose water stress while stimulating bacteria and fungi that mineralize plant carbon belowground.</p><table>
+  <caption>terrestrial_biome_root_litter_soil_pulses edges</caption>
+  <thead><tr><th scope="col">Edge</th><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code>terrestrial_biome_occupies_land_surface</code></td>
+    <td>terrestrial biome</td>
+    <td>occupies<br><span class="meta">Terrestrial biomes are land-surface ecosystems in which plants, litter, and mineral soil provide microbial habitats.</span></td>
+    <td>land surface</td>
+    <td>
+      <code class="curie">PMID:25428498</code><br><span class="meta">Bardgett and van der Putten reviewed how aboveground plant communities and belowground soil biota are coupled in terrestrial ecosystems.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>land_surface_supports_terrestrial_plants</code></td>
+    <td>land surface</td>
+    <td>supports<br><span class="meta">Land surfaces support rooted plants that are the dominant source of fresh carbon for many terrestrial microbial communities.</span></td>
+    <td>terrestrial plants</td>
+    <td>
+      <code class="curie">PMID:25428498</code><br><span class="meta">The review synthesizes plant-soil feedbacks linking terrestrial vegetation, roots, microbes, and ecosystem functioning.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>terrestrial_plants_release_root_exudates</code></td>
+    <td>terrestrial plants</td>
+    <td>releases<br><span class="meta">Plant roots release low-molecular-weight exudates into soil, supplying labile carbon to rhizosphere microbes.</span></td>
+    <td>root exudates</td>
+    <td>
+      <code class="curie">DOI:10.1139/cjb-2013-0225</code><br><span class="meta">Badri and Vivanco reviewed root-secreted metabolites as drivers of root-microbiome communication and rhizosphere selection.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>root_exudates_select_rhizosphere_bacteria</code></td>
+    <td>root exudates</td>
+    <td>selects for<br><span class="meta">Exuded sugars, amino acids, and organic acids enrich bacteria able to colonize the rhizosphere.</span></td>
+    <td>rhizosphere bacteria</td>
+    <td>
+      <code class="curie">DOI:10.1139/cjb-2013-0225</code><br><span class="meta">The root-exudate review connects plant exudate chemistry to recruitment and activity of rhizosphere microorganisms.</span>      <code class="curie">DOI:10.3389/fpls.2017.02223</code><br><span class="meta">Naylor and Coleman-Derr reviewed plant, soil, and abiotic controls on root-associated bacterial community dynamics.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>terrestrial_plants_generate_litter</code></td>
+    <td>terrestrial plants</td>
+    <td>generates<br><span class="meta">Senescent leaves, roots, and woody tissues become plant litter at the soil surface and belowground.</span></td>
+    <td>plant litter</td>
+    <td>
+      <code class="curie">PMID:27856492</code><br><span class="meta">Baldrian reviewed forest soil fungal communities that use plant roots, litter, and soil organic matter.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>plant_litter_supplies_lignocellulose</code></td>
+    <td>plant litter</td>
+    <td>supplies<br><span class="meta">Plant litter supplies cellulose, hemicellulose, and lignin that dominate polymeric carbon inputs to terrestrial decomposers.</span></td>
+    <td>lignocellulose</td>
+    <td>
+      <code class="curie">DOI:10.1007/s11284-007-0390-z</code><br><span class="meta">Osono reviewed fungal decomposition of lignin and cellulose during leaf litter decay.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>lignocellulose_selects_saprotrophic_fungi</code></td>
+    <td>lignocellulose</td>
+    <td>selects for<br><span class="meta">Recalcitrant plant polymers select fungi that produce oxidative and hydrolytic extracellular enzymes.</span></td>
+    <td>saprotrophic fungi</td>
+    <td>
+      <code class="curie">PMID:27856492</code><br><span class="meta">The forest-soil review describes fungal guilds specialized for decomposing plant litter and soil organic matter.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>saprotrophic_fungi_express_extracellular_enzymes</code></td>
+    <td>saprotrophic fungi</td>
+    <td>expresses<br><span class="meta">Saprotrophic fungi secrete extracellular enzymes that depolymerize plant litter into assimilable compounds.</span></td>
+    <td>extracellular enzymes</td>
+    <td>
+      <code class="curie">PMID:22402400</code><br><span class="meta">Schneider and colleagues detected fungal and bacterial extracellular enzymes during leaf litter decomposition.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>extracellular_enzymes_generate_soil_organic_matter</code></td>
+    <td>extracellular enzymes</td>
+    <td>contributes to<br><span class="meta">Enzymatic decomposition transforms root and litter inputs into dissolved and particulate soil organic matter.</span></td>
+    <td>soil organic matter</td>
+    <td>
+      <code class="curie">PMID:23055998</code><br><span class="meta">Schimel and Schaeffer reviewed microbial extracellular enzyme production, carbon use, and soil organic-matter stabilization.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>land_surface_contains_soil_pores</code></td>
+    <td>land surface</td>
+    <td>contains<br><span class="meta">Terrestrial land surfaces include mineral soil pore networks that spatially partition microbes, air, and water.</span></td>
+    <td>soil pores</td>
+    <td>
+      <code class="curie">PMID:28824177</code><br><span class="meta">Fierer reviewed soil as a spatially structured microbial habitat with strong heterogeneity in chemistry and organism distributions.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>precipitation_creates_soil_water_films</code></td>
+    <td>episodic precipitation</td>
+    <td>creates<br><span class="meta">Rain and wetting events create water films that reconnect pore-scale substrates and cells in unsaturated terrestrial soil.</span></td>
+    <td>soil water films</td>
+    <td>
+      <code class="curie">DOI:10.1146/annurev-ecolsys-110617-062614</code><br><span class="meta">Schimel reviewed how wetting and drying alter diffusion, substrate availability, and microbial process rates in soil.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>soil_pores_structure_water_films</code></td>
+    <td>soil pores</td>
+    <td>structures<br><span class="meta">The pore network determines whether soil water remains connected around microbial cells or fragments into isolated films.</span></td>
+    <td>soil water films</td>
+    <td>
+      <code class="curie">DOI:10.1146/annurev-ecolsys-110617-062614</code><br><span class="meta">Schimel reviewed how soil drying changes aqueous connectivity and diffusion through water films at microbial scales.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>terrestrial_biome_experiences_precipitation</code></td>
+    <td>terrestrial biome</td>
+    <td>experiences<br><span class="meta">Terrestrial soils alternate among wetting and drying states as precipitation, evaporation, and plant water use vary through time.</span></td>
+    <td>episodic precipitation</td>
+    <td>
+      <code class="curie">DOI:10.1146/annurev-ecolsys-110617-062614</code><br><span class="meta">The dry-soils review synthesized microbial responses to drought and rewetting in terrestrial soils.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>drying_rewetting_fragments_water_films</code></td>
+    <td>drying-rewetting pulses</td>
+    <td>fragments<br><span class="meta">Drying disconnects water films across the pore network, while rewetting reconnects substrates and dormant microbes.</span></td>
+    <td>soil water films</td>
+    <td>
+      <code class="curie">DOI:10.1146/annurev-ecolsys-110617-062614</code><br><span class="meta">Schimel reviewed the physical effects of soil drying on aqueous connectivity and diffusion to microbial cells.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>precipitation_drives_drying_rewetting</code></td>
+    <td>episodic precipitation</td>
+    <td>drives<br><span class="meta">Pulsed precipitation followed by drydown creates repeated wet-dry cycles in unsaturated terrestrial habitats.</span></td>
+    <td>drying-rewetting pulses</td>
+    <td>
+      <code class="curie">DOI:10.3389/fpls.2017.02223</code><br><span class="meta">Naylor and Coleman-Derr reviewed how drought and subsequent soil water changes reshape root-associated bacterial communities.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>drying_rewetting_imposes_desiccation_stress</code></td>
+    <td>drying-rewetting pulses</td>
+    <td>imposes<br><span class="meta">Drying phases impose osmotic and matric stress that microbes must tolerate before rewetting revives activity.</span></td>
+    <td>desiccation stress</td>
+    <td>
+      <code class="curie">DOI:10.1146/annurev-ecolsys-110617-062614</code><br><span class="meta">Schimel reviewed drought-induced stress and survival strategies in soil microbial communities.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>desiccation_stress_filters_rhizosphere_bacteria</code></td>
+    <td>desiccation stress</td>
+    <td>filters<br><span class="meta">Drought and drying stress shift root-associated bacterial community structure in terrestrial soils.</span></td>
+    <td>rhizosphere bacteria</td>
+    <td>
+      <code class="curie">PMID:28753209</code><br><span class="meta">Naylor and colleagues found that drought and host selection changed bacterial communities associated with grass roots and rhizospheres.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>water_films_enable_carbon_mineralization</code></td>
+    <td>soil water films</td>
+    <td>enables<br><span class="meta">Water films enable diffusion of substrates and enzymes needed for microbial mineralization of soil organic matter.</span></td>
+    <td>carbon mineralization</td>
+    <td>
+      <code class="curie">PMID:23055998</code><br><span class="meta">Schimel and Schaeffer reviewed how substrate availability and microbial traits control soil carbon mineralization.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>decomposers_mineralize_soil_organic_matter</code></td>
+    <td>soil organic matter</td>
+    <td>fuels<br><span class="meta">Soil organic matter produced from plant inputs fuels bacterial and fungal respiration in terrestrial soils.</span></td>
+    <td>carbon mineralization</td>
+    <td>
+      <code class="curie">PMID:25428498</code><br><span class="meta">Bardgett and van der Putten reviewed the role of soil biodiversity in organic-matter decomposition and nutrient cycling.</span>      <code class="curie">PMID:24639507</code><br><span class="meta">Wagg and colleagues experimentally showed that soil biodiversity and community composition influence multiple soil functions.</span>    </td>
+  </tr>
+</table>
+
 <h2>Associated taxa</h2>
 <p class="meta">Taxa <em>reported from</em> this habitat, which is weaker than being
 characteristic of it. <code>rank</code> is out of <code>pool</code>: a high rank in a
@@ -271,6 +430,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">REVIEW</span>
     <span class="meta">2026-08-13 · claude-opus-5</span>
     <p>Reviewed and endorsed the seeder&#39;s own resolution. Multi-source review pass: this record is attested by more than one independent vocabulary, and this source&#39;s label or path was read against the record&#39;s ontology term to check the merge is right. It agrees. Source concepts in the same pass whose labels did not agree were re-decided rather than endorsed; see the pass&#39;s other decisions of the same date. (source concept habitatmech:PREGO.e1b38da068)</p>
+  </li>
+  <li>
+    <span class="pill">ADD_CAUSAL_GRAPH</span>
+    <span class="meta">2026-09-04 · codex</span>
+    <p>Added a terrestrial-biome root-litter soil-pulses graph backed by PMID:25428498, DOI:10.1139/cjb-2013-0225, DOI:10.3389/fpls.2017.02223, PMID:27856492, DOI:10.1007/s11284-007-0390-z, PMID:22402400, PMID:23055998, PMID:28824177, DOI:10.1146/annurev-ecolsys-110617-062614, PMID:28753209, and PMID:24639507.</p>
   </li>
 </ol>
 

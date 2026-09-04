@@ -84,6 +84,53 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
   <tr><td>WATER_VARIABILITY</td><td>permanently wet</td><td class="meta">kg-microbe environments.csv (water_fresh)</td></tr>
 </table>
 
+<h2>Causal graphs</h2>
+<h3>Freshwater hypoosmotic response</h3>
+<p>Low external osmolarity in fresh water drives water influx into bacterial cells, increasing turgor and triggering mechanosensitive solute-release channels.</p><table>
+  <caption>freshwater_hypoosmotic_response edges</caption>
+  <thead><tr><th scope="col">Edge</th><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code>freshwater_has_low_osmotic_pressure</code></td>
+    <td>fresh water</td>
+    <td>has condition<br><span class="meta">The low dissolved-solute concentration of fresh water corresponds to low external osmotic pressure.</span></td>
+    <td>low external osmotic pressure</td>
+    <td>
+      <code class="curie">DOI:10.1017/qrd.2022.3</code><br><span class="meta">Wennerstrom and Oliveberg compare rain, meltwater, fresh-water lakes, rivers, seawater, and saturated brines by external osmotic pressure.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>low_osmotic_pressure_drives_water_influx</code></td>
+    <td>low external osmotic pressure</td>
+    <td>drives<br><span class="meta">Bacteria entering fresh water from higher-osmolarity media take up water across the cell envelope.</span></td>
+    <td>water influx</td>
+    <td>
+      <code class="curie">DOI:10.1017/qrd.2022.3</code><br><span class="meta">Wennerstrom and Oliveberg identify water influx as the immediate hypoosmotic consequence for bacterial cells in fresh water.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>water_influx_raises_turgor</code></td>
+    <td>water influx</td>
+    <td>increases<br><span class="meta">Water influx stretches the bacterial envelope and raises turgor pressure.</span></td>
+    <td>high turgor pressure</td>
+    <td>
+      <code class="curie">DOI:10.1017/qrd.2022.3</code><br><span class="meta">Wennerstrom and Oliveberg describe wall stretching as the physical route by which fresh-water cells build compensating internal pressure.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>turgor_opens_mechanosensitive_channels</code></td>
+    <td>high turgor pressure</td>
+    <td>activates<br><span class="meta">Elevated membrane and wall tension opens mechanosensitive channels as a rapid emergency response.</span></td>
+    <td>mechanosensitive channels</td>
+    <td>
+      <code class="curie">DOI:10.1017/qrd.2022.3</code><br><span class="meta">The fresh-water osmotic down-shock section names mechanosensitive channel opening as the emergency response that prevents bursting.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>channels_release_cytoplasmic_solutes</code></td>
+    <td>mechanosensitive channels</td>
+    <td>releases<br><span class="meta">Open MscS- and MscL-family mechanosensitive channels release cytoplasmic solutes from osmotically down-shocked bacteria.</span></td>
+    <td>cytoplasmic solute release</td>
+    <td>
+      <code class="curie">DOI:10.1085/jgp.201411296</code><br><span class="meta">Wood summarizes bacterial MscS and MscL channels as release routes for cytoplasmic solutes after osmotic down-shock.</span>    </td>
+  </tr>
+</table>
+
 <h2>Associated taxa</h2>
 <p class="meta">Taxa <em>reported from</em> this habitat, which is weaker than being
 characteristic of it. <code>rank</code> is out of <code>pool</code>: a high rank in a
@@ -287,6 +334,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">REVIEW</span>
     <span class="meta">2026-08-13 · claude-opus-5</span>
     <p>Reviewed and endorsed the seeder&#39;s own resolution. Multi-source review pass: this record is attested by more than one independent vocabulary, and this source&#39;s label or path was read against the record&#39;s ontology term to check the merge is right. It agrees. Source concepts in the same pass whose labels did not agree were re-decided rather than endorsed; see the pass&#39;s other decisions of the same date. (source concept habitatmech:PREGO.a37b735c36)</p>
+  </li>
+  <li>
+    <span class="pill">ADD_CAUSAL_GRAPH</span>
+    <span class="meta">2026-09-04 · codex</span>
+    <p>Added a fresh-water hypoosmotic-response graph backed by DOI:10.1017/qrd.2022.3 and DOI:10.1085/jgp.201411296.</p>
   </li>
 </ol>
 

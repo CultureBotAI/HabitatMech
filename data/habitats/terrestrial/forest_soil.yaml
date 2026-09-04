@@ -315,9 +315,213 @@ characteristic_taxa:
   score: 4.0
   rank: 23
   candidate_pool: 2139
+causal_graphs:
+- graph_id: forest_soil_root_litter_fungal_cycling
+  title: Forest soil root-litter fungal cycling
+  description: Forest soils receive tree litter, deadwood, and root-derived carbon
+    inputs that partition decomposition and organic-nitrogen mining across saprotrophic
+    and ectomycorrhizal fungal guilds.
+  nodes:
+  - node_id: forest_soil
+    label: forest soil
+    node_type: HABITAT
+    grounding: ENVO:00002261
+  - node_id: tree_litter_deadwood
+    label: tree litter and deadwood
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: organic_forest_floor
+    label: organic forest floor
+    node_type: STATE
+  - node_id: saprotrophic_fungi
+    label: saprotrophic fungi
+    node_type: TAXON
+  - node_id: lignocellulolytic_enzymes
+    label: lignocellulolytic enzymes
+    node_type: MOLECULAR_FUNCTION
+  - node_id: litter_decomposition
+    label: litter decomposition
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: tree_roots
+    label: tree roots
+    node_type: HABITAT
+  - node_id: root_derived_carbon
+    label: root-derived carbon
+    node_type: CHEMICAL
+  - node_id: ectomycorrhizal_fungi
+    label: ectomycorrhizal fungi
+    node_type: TAXON
+  - node_id: organic_nitrogen_mining
+    label: organic nitrogen mining
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: saprotroph_ectomycorrhizal_competition
+    label: saprotroph-ectomycorrhizal competition
+    node_type: COMMUNITY_PROCESS
+  - node_id: forest_soil_carbon_cycling
+    label: forest soil carbon cycling
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - edge_id: forest_soil_receives_tree_litter
+    subject: forest_soil
+    predicate: receives
+    object: tree_litter_deadwood
+    description: Forest soils receive recalcitrant organic matter from tree litter
+      and deadwood.
+    evidence:
+    - reference: PMID:27856492
+      snippet: tree litter and deadwood
+      notes: Baldrian identifies tree litter and deadwood as important sources of
+        recalcitrant organic matter in forest ecosystems.
+  - edge_id: tree_litter_builds_forest_floor
+    subject: tree_litter_deadwood
+    predicate: creates
+    object: organic_forest_floor
+    description: Forest-tree litter drives organic-matter accumulation on the forest
+      soil surface.
+    evidence:
+    - reference: PMID:27856492
+      snippet: major source of organic matter accumulation
+      notes: Baldrian describes forest-tree litter as a major source of organic matter
+        on forest soil surfaces.
+  - edge_id: forest_floor_selects_saprotrophs
+    subject: organic_forest_floor
+    predicate: selects for
+    object: saprotrophic_fungi
+    description: Plant-cell-wall polymers in the forest floor select for saprotrophic
+      fungi able to decompose recalcitrant plant litter.
+    evidence:
+    - reference: PMID:27856492
+      snippet: supports mainly saprotrophic taxa
+      notes: Baldrian links litter biopolymer composition to saprotrophic taxa able
+        to decompose recalcitrant plant-derived polymers.
+  - edge_id: saprotrophs_use_lignocellulolytic_enzymes
+    subject: saprotrophic_fungi
+    predicate: uses
+    object: lignocellulolytic_enzymes
+    description: Active saprotrophic fungi express extracellular enzymes for decomposing
+      plant-cell-wall polymers in forest soils.
+    evidence:
+    - reference: PMID:21776033
+      snippet: highly stratified during decomposition
+      notes: Baldrian and colleagues connected active forest-soil microbial communities
+        to cellulose-decomposition strata.
+  - edge_id: enzymes_drive_litter_decomposition
+    subject: lignocellulolytic_enzymes
+    predicate: drives
+    object: litter_decomposition
+    description: Extracellular enzymatic activity drives breakdown of forest litter
+      polymers.
+    evidence:
+    - reference: PMID:21776033
+      snippet: forest soil are largely different and highly stratified
+      notes: Baldrian and colleagues profiled active decomposer communities and transcripts
+        across decomposing forest litter and soil.
+  - edge_id: forest_soil_contains_tree_roots
+    subject: forest_soil
+    predicate: contains
+    object: tree_roots
+    description: Forest soil contains tree roots and their associated symbiotic fungi.
+    evidence:
+    - reference: PMID:27856492
+      snippet: tree roots, their symbionts
+      notes: Baldrian frames tree roots and symbionts as a heavily studied habitat
+        within the forest-soil microbiome.
+  - edge_id: roots_supply_ectomycorrhizal_carbon
+    subject: tree_roots
+    predicate: supplies
+    object: root_derived_carbon
+    description: Tree roots move photosynthetically fixed carbon into forest soils
+      and support root-associated fungal mycelia.
+    evidence:
+    - reference: PMID:23539604
+      snippet: Roots and associated fungi drive long-term carbon sequestration
+      notes: Clemmensen and colleagues traced long-term boreal forest carbon sequestration
+        to roots and root-associated fungi.
+  - edge_id: root_carbon_supports_ectomycorrhizae
+    subject: root_derived_carbon
+    predicate: supports
+    object: ectomycorrhizal_fungi
+    description: Host-supplied carbon lets ectomycorrhizal fungi grow from tree roots
+      into soil organic horizons.
+    evidence:
+    - reference: PMID:23539604
+      snippet: Roots and associated fungi drive
+      notes: Clemmensen and colleagues found that root-associated fungal inputs dominate
+        long-term carbon accumulation in boreal forest soil.
+  - edge_id: ectomycorrhizae_mine_organic_nitrogen
+    subject: ectomycorrhizal_fungi
+    predicate: performs
+    object: organic_nitrogen_mining
+    description: Ectomycorrhizal fungi in forest soils mobilize organic nitrogen rather
+      than relying only on inorganic nitrogen pools.
+    evidence:
+    - reference: PMID:26365785
+      snippet: ectomycorrhizal and saprotrophic fungi play a central role
+      notes: Fernandez and Kennedy review mechanisms by which ectomycorrhizal fungi
+        can mine forest soil organic matter for nitrogen.
+  - edge_id: fungal_guilds_compete
+    subject: ectomycorrhizal_fungi
+    predicate: competes with
+    object: saprotrophic_fungi
+    description: Ectomycorrhizal and saprotrophic fungal guilds can compete for nitrogen
+      and space in forest soil organic horizons.
+    evidence:
+    - reference: PMID:26365785
+      snippet: Competition between these two fungal guilds
+      notes: Fernandez and Kennedy review the Gadgil effect as competition between
+        ectomycorrhizal and saprotrophic fungi in forest soils.
+  - edge_id: saprotrophs_contribute_to_guild_competition
+    subject: saprotrophic_fungi
+    predicate: contributes to
+    object: saprotroph_ectomycorrhizal_competition
+    description: Saprotrophic fungi are one side of the fungal-guild competition that
+      can alter forest-soil decomposition.
+    evidence:
+    - reference: PMID:26365785
+      snippet: saprotrophic fungi
+      notes: Fernandez and Kennedy review saprotrophic fungi as a central guild in
+        forest-soil organic-matter breakdown.
+  - edge_id: ectomycorrhizae_contribute_to_guild_competition
+    subject: ectomycorrhizal_fungi
+    predicate: contributes to
+    object: saprotroph_ectomycorrhizal_competition
+    description: Ectomycorrhizal fungi are the root-associated competitor guild in
+      Gadgil-effect suppression of saprotrophic decomposition.
+    evidence:
+    - reference: PMID:26365785
+      snippet: ectomycorrhizal
+      notes: Fernandez and Kennedy review the interaction of ectomycorrhizal and saprotrophic
+        fungi as a control on forest-soil decomposition.
+  - edge_id: guild_competition_modulates_decomposition
+    subject: saprotroph_ectomycorrhizal_competition
+    predicate: modulates
+    object: litter_decomposition
+    description: Competition between root-associated ectomycorrhizal fungi and free-living
+      saprotrophs can suppress early litter decomposition.
+    evidence:
+    - reference: PMID:29880913
+      snippet: exclusion of tree roots and associated ectomycorrhizal fungi
+      notes: Sterkenburg and colleagues found higher surface-litter decomposition
+        after excluding tree roots and ectomycorrhizal fungi.
+  - edge_id: guild_competition_modulates_carbon_cycling
+    subject: saprotroph_ectomycorrhizal_competition
+    predicate: modulates
+    object: forest_soil_carbon_cycling
+    description: Fungal guild interactions modulate the fate of organic carbon in
+      forest soils.
+    evidence:
+    - reference: PMID:26365785
+      snippet: Gadgil effect
+      notes: Fernandez and Kennedy review evidence that ectomycorrhizal and saprotrophic
+        fungal interactions influence forest-soil carbon cycling.
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, MADIN,
     PREGO. Grounding: EXACT.'
+- timestamp: '2026-09-04T00:00:00Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a forest-soil root-litter fungal-cycling graph backed by PMID:27856492,
+    PMID:21776033, PMID:23539604, PMID:26365785, and PMID:29880913.
+  llm_assisted: true

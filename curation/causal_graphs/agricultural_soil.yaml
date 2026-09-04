@@ -1,0 +1,143 @@
+identifier: ENVO:00002259
+causal_graphs:
+- graph_id: agricultural_nitrogen_nitrification_loss
+  title: Agricultural nitrogen nitrification loss
+  description: Agricultural nitrogen inputs regulate ammonium substrate supply,
+    nitrifier populations, nitrate production, and nitrification-linked nitrogen
+    losses from managed soil.
+  nodes:
+  - node_id: agricultural_soil
+    label: agricultural soil
+    node_type: HABITAT
+    grounding: ENVO:00002259
+  - node_id: nitrogen_fertilizer_management
+    label: nitrogen fertilizer management
+    node_type: EXPERIMENTAL_FACTOR
+  - node_id: ammonium_availability
+    label: ammonium availability
+    node_type: STATE
+  - node_id: nitrifier_populations
+    label: nitrifier populations
+    node_type: TAXON
+  - node_id: microbial_nitrification
+    label: microbial nitrification
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: nitrate_pool
+    label: nitrate pool
+    node_type: CHEMICAL
+  - node_id: nitrogen_loss
+    label: nitrogen loss
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: nitrous_oxide
+    label: nitrous oxide
+    node_type: CHEMICAL
+  - node_id: nitrification_inhibitors
+    label: nitrification inhibitors
+    node_type: CHEMICAL
+  edges:
+  - edge_id: agriculture_controls_fertilizer_inputs
+    subject: agricultural_soil
+    predicate: has management input
+    object: nitrogen_fertilizer_management
+    description: Agricultural soil is managed through decisions about the amount,
+      chemical form, and timing of nitrogen fertilizer inputs.
+    evidence:
+    - reference: PMID:31543867
+      snippet: amount, form and application timing of N fertilizers
+      notes: Norton and Ouyang identify fertilizer amount, form, and timing as
+        land-manager controls on agricultural soil nitrification.
+  - edge_id: fertilizer_controls_ammonium_availability
+    subject: nitrogen_fertilizer_management
+    predicate: controls
+    object: ammonium_availability
+    description: Nitrogen fertilizer management changes how much ammonium
+      substrate is available to nitrifiers.
+    evidence:
+    - reference: PMID:31543867
+      snippet: control ammonium substrate availability
+      notes: Norton and Ouyang present ammonium substrate management as one of
+        the two main agricultural nitrification-control strategies.
+  - edge_id: ammonium_supply_drives_nitrifier_growth
+    subject: ammonium_availability
+    predicate: selects for
+    object: nitrifier_populations
+    description: Ammonium availability helps determine which active nitrifying
+      microbes grow in agricultural soil.
+    evidence:
+    - reference: PMID:31543867
+      snippet: substrates driving their metabolism and growth
+      notes: Norton and Ouyang connect active nitrifier populations to the
+        substrates that drive nitrifier metabolism and growth.
+  - edge_id: nitrifiers_carry_out_nitrogen_transformations
+    subject: nitrifier_populations
+    predicate: carries out
+    object: microbial_nitrification
+    description: Nitrifier populations are part of the microbial network that
+      transforms bioavailable nitrogen species.
+    evidence:
+    - reference: PMID:29398704
+      snippet: diverse nitrogen-transforming reactions
+      notes: Kuypers, Marchant, and Kartal review nitrogen transformations as
+        reactions carried out by networks of microorganisms.
+  - edge_id: ammonium_is_nitrification_substrate
+    subject: ammonium_availability
+    predicate: fuels
+    object: microbial_nitrification
+    description: Ammonium is the reduced nitrogen substrate oxidized during
+      nitrification.
+    evidence:
+    - reference: PMID:22936929
+      snippet: Ammonia (NH(3)) oxidation
+      notes: Shen and colleagues describe ammonia oxidation as the first,
+        rate-limiting step of nitrification.
+  - edge_id: nitrification_produces_nitrate
+    subject: microbial_nitrification
+    predicate: produces
+    object: nitrate_pool
+    description: Nitrification converts ammonium into nitrate that can accumulate
+      in agricultural soil solution.
+    evidence:
+    - reference: PMID:31543867
+      snippet: ammonium is rapidly converted to nitrate by nitrification
+      notes: Norton and Ouyang highlight rapid nitrate formation as a dominant
+        process in most agricultural soils.
+  - edge_id: nitrification_contributes_to_n_loss
+    subject: microbial_nitrification
+    predicate: contributes to
+    object: nitrogen_loss
+    description: Nitrification can make fertilizer nitrogen unavailable to crop
+      plants through nitrate leaching.
+    evidence:
+    - reference: PMID:22936929
+      snippet: source of N loss
+      notes: Shen and colleagues describe nitrification as a potential loss path
+        that moves fertilizer nitrogen out of the plant-available pool.
+  - edge_id: nitrification_generates_nitrous_oxide
+    subject: microbial_nitrification
+    predicate: generates
+    object: nitrous_oxide
+    description: Nitrification contributes to agricultural soil greenhouse-gas
+      loss through nitrous oxide formation.
+    evidence:
+    - reference: PMID:22936929
+      snippet: generation of nitrous oxide
+      notes: Shen and colleagues connect agricultural nitrification to N2O
+        production.
+  - edge_id: inhibitors_slow_nitrification
+    subject: nitrification_inhibitors
+    predicate: inhibits
+    object: microbial_nitrification
+    description: Nitrification inhibitors slow microbial ammonium-to-nitrate
+      conversion.
+    evidence:
+    - reference: PMID:22936929
+      snippet: controlling ammonia oxidation rates
+      notes: Shen and colleagues describe nitrification inhibitors as tools for
+        decreasing ammonia oxidation rates.
+curation_history:
+- timestamp: '2026-09-04T00:00:00Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added an agricultural nitrogen nitrification-loss graph backed by
+    PMID:31543867, PMID:29398704, and PMID:22936929.
+  llm_assisted: true

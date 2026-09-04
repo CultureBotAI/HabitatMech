@@ -350,6 +350,228 @@ characteristic_taxa:
   association_count: 3
   rank: 25
   candidate_pool: 1805
+causal_graphs:
+- graph_id: marine_water_body_biological_carbon_pump
+  title: Marine water body biological carbon pump
+  description: Marine water bodies partition microbial activity between a sunlit euphotic
+    layer where phytoplankton and cyanobacteria fix carbon and a darker interior where
+    sinking particles are enzymatically hydrolyzed and remineralized. Particle-associated
+    and free-living heterotrophs convert that organic matter to dissolved inorganic
+    carbon and regenerated nutrients while consuming oxygen along the particle flux
+    path.
+  nodes:
+  - node_id: marine_water_body
+    label: marine water body
+    node_type: HABITAT
+    grounding: ENVO:00001999
+  - node_id: euphotic_zone
+    label: euphotic zone
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: marine_phytoplankton
+    label: marine phytoplankton
+    node_type: TAXON
+  - node_id: oxygenic_photosynthesis
+    label: oxygenic photosynthesis
+    node_type: PATHWAY
+  - node_id: particulate_organic_carbon
+    label: particulate organic carbon
+    node_type: CHEMICAL
+  - node_id: sinking_particles
+    label: sinking particles
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: particle_associated_bacteria
+    label: particle-associated bacteria
+    node_type: TAXON
+  - node_id: extracellular_enzymes
+    label: extracellular enzymes
+    node_type: TRAIT
+  - node_id: dissolved_organic_matter
+    label: dissolved organic matter
+    node_type: CHEMICAL
+  - node_id: free_living_heterotrophs
+    label: free-living heterotrophic bacteria
+    node_type: TAXON
+  - node_id: dark_ocean
+    label: dark ocean
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: microbial_remineralization
+    label: microbial remineralization
+    node_type: COMMUNITY_PROCESS
+  - node_id: oxygen_consumption
+    label: oxygen consumption
+    node_type: COMMUNITY_PROCESS
+  - node_id: dissolved_inorganic_carbon
+    label: dissolved inorganic carbon
+    node_type: CHEMICAL
+  - node_id: regenerated_nutrients
+    label: regenerated nutrients
+    node_type: CHEMICAL
+  edges:
+  - edge_id: marine_body_contains_euphotic_zone
+    subject: marine_water_body
+    predicate: contains
+    object: euphotic_zone
+    description: The illuminated upper layer of a marine water body forms a euphotic
+      zone where photosynthetic microbes can grow.
+    evidence:
+    - reference: PMID:16163345
+      snippet: Marine microorganisms and global nutrient cycles
+      notes: Arrigo reviewed light and nutrient controls on marine microbial primary
+        production.
+  - edge_id: euphotic_zone_supports_marine_phytoplankton
+    subject: euphotic_zone
+    predicate: supports
+    object: marine_phytoplankton
+    description: Light in the euphotic zone supports phytoplankton and cyanobacterial
+      primary producers.
+    evidence:
+    - reference: PMID:16163345
+      snippet: microbial production
+      notes: The review connects the ocean's euphotic zone with microbial primary
+        production and nutrient cycling.
+  - edge_id: phytoplankton_perform_oxygenic_photosynthesis
+    subject: marine_phytoplankton
+    predicate: performs
+    object: oxygenic_photosynthesis
+    description: Marine phytoplankton and cyanobacteria fix inorganic carbon into
+      organic biomass by oxygenic photosynthesis.
+    evidence:
+    - reference: PMID:18497287
+      snippet: microbial engines
+      notes: Falkowski, Fenchel, and DeLong reviewed the microbial redox machinery
+        that drives oxygenic photosynthesis.
+  - edge_id: photosynthesis_generates_particulate_carbon
+    subject: oxygenic_photosynthesis
+    predicate: generates
+    object: particulate_organic_carbon
+    description: Photosynthetic production generates phytoplankton biomass and detrital
+      particles that enter marine organic-carbon pools.
+    evidence:
+    - reference: DOI:10.1038/ngeo1921
+      snippet: biological pump
+      notes: Herndl and Reinthaler reviewed the transfer of photosynthetically fixed
+        particulate carbon into the ocean interior.
+  - edge_id: particulate_carbon_forms_sinking_particles
+    subject: particulate_organic_carbon
+    predicate: forms
+    object: sinking_particles
+    description: Aggregation, mortality, and grazing products package particulate
+      organic carbon into particles that sink out of the sunlit layer.
+    evidence:
+    - reference: DOI:10.1038/ngeo1921
+      snippet: dark end of the biological pump
+      notes: The review traces sinking organic particles from surface production into
+        deeper waters where microbes remineralize them.
+  - edge_id: sinking_particles_enter_dark_ocean
+    subject: sinking_particles
+    predicate: enters
+    object: dark_ocean
+    description: Exported marine particles carry organic carbon into deeper, darker
+      parts of the water body.
+    evidence:
+    - reference: DOI:10.1038/ngeo1921
+      snippet: dark ocean
+      notes: Herndl and Reinthaler synthesized microbial processing of sinking particulate
+        organic carbon below the euphotic zone.
+  - edge_id: sinking_particles_select_particle_bacteria
+    subject: sinking_particles
+    predicate: selects for
+    object: particle_associated_bacteria
+    description: Sinking organic particles create nutrient-rich microsites that select
+      attached bacteria specialized for particle degradation.
+    evidence:
+    - reference: PMID:23139690
+      snippet: microbial ecology of organic aggregates
+      notes: Simon and colleagues reviewed aquatic organic aggregates as microbial
+        hotspots and particle-associated bacterial habitats.
+  - edge_id: particle_bacteria_express_extracellular_enzymes
+    subject: particle_associated_bacteria
+    predicate: expresses
+    object: extracellular_enzymes
+    description: Particle-associated bacteria produce extracellular enzymes to hydrolyze
+      particulate marine polymers.
+    evidence:
+    - reference: PMID:21329211
+      snippet: extracellular enzymes and the marine carbon cycle
+      notes: Arnosti reviewed extracellular enzymes as the primary microbial mechanism
+        for accessing complex marine organic matter.
+  - edge_id: enzymes_release_dissolved_organic_matter
+    subject: extracellular_enzymes
+    predicate: releases
+    object: dissolved_organic_matter
+    description: Enzymatic hydrolysis of sinking particles releases dissolved organic
+      substrates to the surrounding seawater.
+    evidence:
+    - reference: PMID:21329211
+      snippet: marine carbon cycle
+      notes: The review links extracellular hydrolysis to the conversion of complex
+        particulate material into smaller dissolved substrates.
+  - edge_id: dissolved_organic_matter_supports_free_living_heterotrophs
+    subject: dissolved_organic_matter
+    predicate: supports
+    object: free_living_heterotrophs
+    description: Dissolved organic matter leaking from particles and plankton supports
+      free-living heterotrophic marine bacteria.
+    evidence:
+    - reference: DOI:10.3354/meps010257
+      snippet: water-column microbes
+      notes: Azam and colleagues established dissolved organic matter uptake by marine
+        bacteria as a core component of the microbial loop.
+  - edge_id: heterotrophs_drive_microbial_remineralization
+    subject: free_living_heterotrophs
+    predicate: drives
+    object: microbial_remineralization
+    description: Marine heterotrophic bacteria respire and remineralize dissolved
+      organic carbon in the dark ocean.
+    evidence:
+    - reference: DOI:10.1038/ngeo1921
+      snippet: microbial control
+      notes: Herndl and Reinthaler reviewed microbial remineralization of organic
+        matter exported into the dark ocean.
+  - edge_id: dark_ocean_hosts_remineralization
+    subject: dark_ocean
+    predicate: hosts
+    object: microbial_remineralization
+    description: Deeper dark waters host microbial remineralization of exported particles
+      and dissolved organic matter.
+    evidence:
+    - reference: DOI:10.1038/ngeo1921
+      snippet: dark end of the biological pump
+      notes: Herndl and Reinthaler focused on microbial processing of exported organic
+        matter in the dark ocean.
+  - edge_id: remineralization_consumes_oxygen
+    subject: microbial_remineralization
+    predicate: drives
+    object: oxygen_consumption
+    description: Aerobic remineralization of exported organic carbon consumes dissolved
+      oxygen in marine subsurface waters.
+    evidence:
+    - reference: DOI:10.1038/ngeo1921
+      snippet: remineralization
+      notes: The dark-biological-pump review links microbial respiration of exported
+        organic matter to deep-ocean carbon and oxygen cycling.
+  - edge_id: remineralization_releases_dic
+    subject: microbial_remineralization
+    predicate: releases
+    object: dissolved_inorganic_carbon
+    description: Respiratory remineralization oxidizes marine organic carbon back
+      to dissolved inorganic carbon.
+    evidence:
+    - reference: PMID:18497287
+      snippet: biogeochemical cycles
+      notes: The microbial-engines review connects microbial respiration to carbon
+        redox transformations.
+  - edge_id: remineralization_regenerates_nutrients
+    subject: microbial_remineralization
+    predicate: regenerates
+    object: regenerated_nutrients
+    description: Microbial remineralization returns nitrogen, phosphorus, and other
+      nutrients from organic matter to dissolved inorganic pools.
+    evidence:
+    - reference: PMID:16163345
+      snippet: global nutrient cycles
+      notes: Arrigo reviewed microbial contributions to marine carbon, nitrogen, and
+        phosphorus cycling.
 curation_history:
 - timestamp: '2026-08-13T00:00:00Z'
   curator: claude-opus-5
@@ -383,3 +605,9 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-09-04T00:00:00Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a marine-water-body biological carbon pump graph backed by PMID:16163345,
+    PMID:18497287, DOI:10.1038/ngeo1921, PMID:23139690, PMID:21329211, and DOI:10.3354/meps010257.
+  llm_assisted: true

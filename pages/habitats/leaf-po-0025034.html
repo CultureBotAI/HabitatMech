@@ -87,6 +87,101 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
   <tr><td>TEMPERATURE_VARIABILITY</td><td>high</td><td class="meta">kg-microbe environments.csv (host_plant_leaf-associated)</td></tr>
 </table>
 
+<h2>Causal graphs</h2>
+<h3>Leaf phyllosphere water-nutrient stress</h3>
+<p>Leaf surfaces expose epiphytic bacteria to fluctuating water, nutrient, and ultraviolet stresses while local water films and leached plant sugars create microsites that support aggregate-forming phyllosphere taxa.</p><table>
+  <caption>leaf_phyllosphere_water_nutrient_stress edges</caption>
+  <thead><tr><th scope="col">Edge</th><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code>leaf_provides_phyllosphere_surface</code></td>
+    <td>leaf</td>
+    <td>provides<br><span class="meta">Leaf surfaces are phyllosphere habitats colonized by diverse bacterial communities.</span></td>
+    <td>phyllosphere surface</td>
+    <td>
+      <code class="curie">PMID:23154261</code><br><span class="meta">Vorholt reviewed cultivation-independent evidence that plant factors shape phyllosphere communities.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>phyllosphere_imposes_water_nutrient_fluctuation</code></td>
+    <td>phyllosphere surface</td>
+    <td>has condition<br><span class="meta">The exposed leaf surface creates rapid physical and nutritional fluctuations for bacterial colonists.</span></td>
+    <td>fluctuating water and nutrients</td>
+    <td>
+      <code class="curie">PMID:12676659</code><br><span class="meta">Lindow and Brandl summarize fluctuation in physical and nutritional conditions as characteristic of the phyllosphere.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>surface_water_controls_sugar_flux</code></td>
+    <td>fluctuating water and nutrients</td>
+    <td>controls<br><span class="meta">Surface-water distribution controls diffusion of leaf-derived sugars through the cuticle to epiphytic bacteria.</span></td>
+    <td>cuticular sugar flux</td>
+    <td>
+      <code class="curie">PMID:24124501</code><br><span class="meta">van der Wal and colleagues modeled how surface-water layouts change nutrient diffusion from the leaf interior to the surface.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>sugar_flux_forms_nutrient_hotspots</code></td>
+    <td>cuticular sugar flux</td>
+    <td>creates<br><span class="meta">Water films and droplets concentrate leaked leaf sugars into spatially heterogeneous bacterial growth sites.</span></td>
+    <td>nutrient hotspots</td>
+    <td>
+      <code class="curie">PMID:24124501</code><br><span class="meta">van der Wal and colleagues linked water droplets, cuticle geometry, and bacterial consumption to sugar availability on the leaf surface.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>nutrient_hotspots_form_aggregates</code></td>
+    <td>nutrient hotspots</td>
+    <td>promotes<br><span class="meta">Conductive nutrient microsites on leaf surfaces promote local bacterial reproduction and aggregate formation.</span></td>
+    <td>epiphytic bacterial aggregates</td>
+    <td>
+      <code class="curie">PMID:14665692</code><br><span class="meta">Monier and Lindow experimentally connected survival differences between solitary and aggregated cells with aggregate formation on leaf surfaces.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>aggregates_accumulate_eps</code></td>
+    <td>epiphytic bacterial aggregates</td>
+    <td>produces<br><span class="meta">Epiphytic aggregates contain extracellular polysaccharide matrix material.</span></td>
+    <td>extracellular polysaccharide</td>
+    <td>
+      <code class="curie">PMID:12676659</code><br><span class="meta">Lindow and Brandl describe extracellular polysaccharide as a major part of the bacterial aggregate matrix in the phyllosphere.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>eps_buffers_desiccation</code></td>
+    <td>extracellular polysaccharide</td>
+    <td>mitigates<br><span class="meta">Extracellular polysaccharide in aggregates buffers cells against the matric and osmotic stress of drying leaf surfaces.</span></td>
+    <td>desiccation stress</td>
+    <td>
+      <code class="curie">PMID:12676659</code><br><span class="meta">Lindow and Brandl report that EPS-rich aggregates can shield phyllosphere epiphytes from desiccation stress.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>phyllosphere_exposes_cells_to_uva</code></td>
+    <td>phyllosphere surface</td>
+    <td>exposes microbes to<br><span class="meta">Phyllosphere microbes encounter harmful ultraviolet radiation on exposed leaf surfaces.</span></td>
+    <td>solar UVA exposure</td>
+    <td>
+      <code class="curie">PMID:28068611</code><br><span class="meta">Yoshida and colleagues screened phyllosphere isolates for ultraviolet-A absorbers.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>methylobacterium_uses_uva_absorbers</code></td>
+    <td>Methylobacterium species</td>
+    <td>has adaptation<br><span class="meta">Leaf-associated Methylobacterium strains can contain stable, polar UVA-absorbing compounds.</span></td>
+    <td>UVA-absorbing compounds</td>
+    <td>
+      <code class="curie">PMID:28068611</code><br><span class="meta">Yoshida and colleagues found that the tested UVA-absorbing phyllosphere isolates belonged to Methylobacterium.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>methylobacterium_uses_methanol</code></td>
+    <td>Methylobacterium species</td>
+    <td>has adaptation<br><span class="meta">Methylobacterium on leaves express proteins for using methanol as a carbon and energy source.</span></td>
+    <td>methanol utilization</td>
+    <td>
+      <code class="curie">PMID:19805315</code><br><span class="meta">Delmotte and colleagues detected Methylobacterium proteins related to methanol utilization in metaproteogenomic leaf samples.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>sphingomonas_uses_carbohydrate_transport</code></td>
+    <td>Sphingomonas species</td>
+    <td>has adaptation<br><span class="meta">Leaf-associated Sphingomonas express TonB-dependent receptors consistent with broad carbohydrate transport.</span></td>
+    <td>carbohydrate transport</td>
+    <td>
+      <code class="curie">PMID:19805315</code><br><span class="meta">Delmotte and colleagues observed high expression of TonB-dependent receptors for Sphingomonas in phyllosphere communities.</span>    </td>
+  </tr>
+</table>
+
 <h2>Associated taxa</h2>
 <p class="meta">Taxa <em>reported from</em> this habitat, which is weaker than being
 characteristic of it. <code>rank</code> is out of <code>pool</code>: a high rank in a
@@ -295,6 +390,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">GROUND</span>
     <span class="meta">2026-08-12 · claude-opus-5</span>
     <p>Grounded to PO:0025034 &#39;leaf&#39; (BROAD). Phylloplane/leaf. BTO:0000713 leaf is broader than the phyllosphere proper, which is the surface layer. Re-grounded from BTO:0000713 to PO:0025034 now that PO is vendored (#10). (source concept habitatmech:GOLD.8e9f10356e)</p>
+  </li>
+  <li>
+    <span class="pill">ADD_CAUSAL_GRAPH</span>
+    <span class="meta">2026-09-04 · codex</span>
+    <p>Added a leaf phyllosphere water-nutrient-stress graph backed by PMID:23154261, PMID:12676659, PMID:24124501, PMID:14665692, PMID:28068611, and PMID:19805315.</p>
   </li>
 </ol>
 

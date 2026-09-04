@@ -76,6 +76,125 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
   <tr><td>WATER_VARIABILITY</td><td>permanently wet</td><td class="meta">kg-microbe environments.csv (sediment_marine)</td></tr>
 </table>
 
+<h2>Causal graphs</h2>
+<h3>Marine sediment sulfate sulfur cycling</h3>
+<p>Marine sediment receives settling organic particles and seawater sulfate; oxygen depletion in porewater selects sulfate-reducing microorganisms that mineralize organic carbon to sulfide, and the sulfide is either reoxidized by sulfur-cycling microorganisms or trapped with reactive iron as reduced sulfur minerals.</p><table>
+  <caption>marine_sediment_sulfate_sulfur_cycling edges</caption>
+  <thead><tr><th scope="col">Edge</th><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code>marine_sediment_receives_particles</code></td>
+    <td>marine sediment</td>
+    <td>receives<br><span class="meta">Marine sediment forms from particles transported through the marine water column and deposited on the seafloor.</span></td>
+    <td>settling marine particles</td>
+    <td>
+      <code class="curie">PMID:31388058</code><br><span class="meta">D&#39;Hondt and colleagues review marine sediment as a habitat where deposited particles bury biomass and support microbial activity.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>particles_bury_marine_organic_matter</code></td>
+    <td>settling marine particles</td>
+    <td>buries<br><span class="meta">Settling marine particles bury organic matter into porewater habitats on and below the seafloor.</span></td>
+    <td>buried organic matter</td>
+    <td>
+      <code class="curie">PMID:31388058</code><br><span class="meta">D&#39;Hondt and colleagues connect marine sediment burial, organic matter supply, and depth-ordered microbial respiration.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>buried_organic_matter_depletes_oxygen</code></td>
+    <td>buried organic matter</td>
+    <td>contributes to<br><span class="meta">Microbial remineralization of buried organic matter consumes oxygen and drives porewater toward anoxia.</span></td>
+    <td>oxygen depletion</td>
+    <td>
+      <code class="curie">PMID:31105660</code><br><span class="meta">Jorgensen and colleagues review anoxic seabed organic matter mineralization by sulfate-reducing microorganisms.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>oxygen_depletion_creates_anoxic_porewater</code></td>
+    <td>oxygen depletion</td>
+    <td>creates<br><span class="meta">Oxygen is depleted rapidly below the sediment-water interface, creating anoxic marine porewater.</span></td>
+    <td>anoxic porewater</td>
+    <td>
+      <code class="curie">PMID:31388058</code><br><span class="meta">D&#39;Hondt and colleagues review marine sediment redox zones ordered by the availability of electron acceptors.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>seawater_supplies_sulfate</code></td>
+    <td>marine sediment</td>
+    <td>receives<br><span class="meta">Marine sediment porewaters receive sulfate from overlying seawater.</span></td>
+    <td>seawater sulfate</td>
+    <td>
+      <code class="curie">PMID:31105660</code><br><span class="meta">Jorgensen and colleagues review sulfate fluxes, microbial sulfate reduction, and sulfide reoxidation in marine sediment porewaters.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>sulfate_selects_sulfate_reducers</code></td>
+    <td>seawater sulfate</td>
+    <td>selects for<br><span class="meta">The availability of seawater sulfate in anoxic porewater selects microorganisms that respire sulfate.</span></td>
+    <td>sulfate-reducing microorganisms</td>
+    <td>
+      <code class="curie">PMID:28419734</code><br><span class="meta">Wasmund and colleagues reviewed the microbial ecology of sulfate-reducing and sulfur-cycling microorganisms in marine sediments.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>anoxic_porewater_enables_sulfate_reduction</code></td>
+    <td>anoxic porewater</td>
+    <td>enables<br><span class="meta">Anoxic porewater allows sulfate reduction to proceed after oxygen and other higher-energy electron acceptors are consumed.</span></td>
+    <td>microbial sulfate reduction</td>
+    <td>
+      <code class="curie">PMID:35308366</code><br><span class="meta">Nagakura and colleagues summarize sulfate reduction as a major microbial organic-matter-degradation process in anoxic marine sediment.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>sulfate_reducers_perform_sulfate_reduction</code></td>
+    <td>sulfate-reducing microorganisms</td>
+    <td>performs<br><span class="meta">Sulfate-reducing microorganisms couple organic substrate oxidation to sulfate respiration.</span></td>
+    <td>microbial sulfate reduction</td>
+    <td>
+      <code class="curie">PMID:28419734</code><br><span class="meta">Wasmund and colleagues reviewed the organisms and pathways mediating microbial sulfate reduction in marine sediment.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>sulfate_reduction_mineralizes_carbon</code></td>
+    <td>microbial sulfate reduction</td>
+    <td>drives<br><span class="meta">Sulfate reduction mineralizes buried organic carbon in anoxic marine sediment.</span></td>
+    <td>carbon mineralization</td>
+    <td>
+      <code class="curie">PMID:31105660</code><br><span class="meta">Jorgensen and colleagues review sulfate reduction as a predominant terminal pathway for organic-matter mineralization in the anoxic seabed.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>sulfate_reduction_produces_sulfide</code></td>
+    <td>microbial sulfate reduction</td>
+    <td>produces<br><span class="meta">Microbial sulfate reduction reduces sulfate to hydrogen sulfide in marine porewaters.</span></td>
+    <td>hydrogen sulfide</td>
+    <td>
+      <code class="curie">PMID:28419734</code><br><span class="meta">Wasmund and colleagues reviewed sulfate reduction to sulfide and linked sulfur transformations in marine sediments.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>sulfide_selects_sulfur_oxidizers</code></td>
+    <td>hydrogen sulfide</td>
+    <td>selects for<br><span class="meta">Sulfide produced by sulfate reduction selects microorganisms that oxidize reduced sulfur near oxidant-bearing zones.</span></td>
+    <td>sulfur-oxidizing microorganisms</td>
+    <td>
+      <code class="curie">PMID:31105660</code><br><span class="meta">Jorgensen and colleagues review how sulfide produced in marine sediment is reoxidized through biological and geochemical reactions.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>sulfur_oxidizers_perform_sulfide_oxidation</code></td>
+    <td>sulfur-oxidizing microorganisms</td>
+    <td>performs<br><span class="meta">Sulfur-oxidizing microorganisms return reduced sulfide toward oxidized sulfur pools.</span></td>
+    <td>sulfide oxidation</td>
+    <td>
+      <code class="curie">PMID:28419734</code><br><span class="meta">Wasmund and colleagues reviewed sulfide-oxidizing microorganisms that participate in marine sediment sulfur cycling.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>reactive_iron_traps_sulfide</code></td>
+    <td>reactive iron minerals</td>
+    <td>reacts with<br><span class="meta">Reactive iron minerals intercept sulfide produced by sulfate reduction in marine sediment.</span></td>
+    <td>hydrogen sulfide</td>
+    <td>
+      <code class="curie">DOI:10.1016/j.epsl.2022.117841</code><br><span class="meta">Lin and colleagues showed that clay-linked iron mineralogy can influence sulfate reduction rates in marine sediment.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>sulfide_reaction_forms_iron_sulfides</code></td>
+    <td>hydrogen sulfide</td>
+    <td>produces<br><span class="meta">Sulfide reacts with reactive iron to form iron sulfide minerals, trapping part of the reduced sulfur pool in sediment.</span></td>
+    <td>iron sulfide minerals</td>
+    <td>
+      <code class="curie">PMID:31105660</code><br><span class="meta">Jorgensen and colleagues review iron sulfide formation as an important fate of reduced sulfur in marine sediments.</span>    </td>
+  </tr>
+</table>
+
 <h2>Associated taxa</h2>
 <p class="meta">Taxa <em>reported from</em> this habitat, which is weaker than being
 characteristic of it. <code>rank</code> is out of <code>pool</code>: a high rank in a
@@ -266,6 +385,16 @@ second, independent source are listed first.</p>
 <ul class="plain">
 <li>Sediment <span class="meta">— GOLD</span></li><li>marine sediments <span class="meta">— ENVO</span></li></ul>
 
+<h2>Curation</h2>
+<p class="meta">What a curator decided about this record, and why. A record built
+from several source concepts can carry one decision per concept.</p>
+<ol class="events">
+  <li>
+    <span class="pill">ADD_CAUSAL_GRAPH</span>
+    <span class="meta">2026-09-04 · codex</span>
+    <p>Added a marine-sediment sulfate sulfur-cycling graph backed by PMID:31388058, PMID:31105660, PMID:28419734, PMID:35308366, and DOI:10.1016/j.epsl.2022.117841.</p>
+  </li>
+</ol>
 
 <h2>Provenance</h2>
 <p class="meta">

@@ -77,6 +77,181 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
   <tr><td>WATER_VARIABILITY</td><td>permanently wet</td><td class="meta">kg-microbe environments.csv (host_plant_rootnodule)</td></tr>
 </table>
 
+<h2>Causal graphs</h2>
+<h3>Root nodule symbiotic nitrogen fixation</h3>
+<p>Plant root nodules are organ-level microbial habitats formed when roots recruit compatible nitrogen-fixing bacteria. Rhizobial Nod-factor signaling induces root-hair infection and nodule organogenesis, infection threads carry bacteria into developing nodule cells, symbiosomes house differentiated bacteroids, and the plant-controlled low-oxygen nodule cytoplasm allows nitrogenase to reduce atmospheric N2 to ammonia. Actinorhizal nodules use Frankia rather than rhizobia but converge on the same protected intracellular nitrogen-fixation habitat.</p><table>
+  <caption>root_nodule_symbiotic_nitrogen_fixation edges</caption>
+  <thead><tr><th scope="col">Edge</th><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code>root_nodule_determined_by_root</code></td>
+    <td>root nodule</td>
+    <td>determined by<br><span class="meta">Root nodules are specialized root outgrowths on plants that maintain symbiotic nitrogen-fixing bacteria.</span></td>
+    <td>host plant root</td>
+    <td>
+      <code class="curie">PMID:33526611</code><br><span class="meta">Ledermann, Schulte, and Poole reviewed nodules as root organs that house diazotrophic bacterial symbionts.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>root_releases_flavonoids</code></td>
+    <td>host plant root</td>
+    <td>releases<br><span class="meta">Host roots exude flavonoid signals that initiate compatible rhizobial nodulation responses.</span></td>
+    <td>flavonoid signals</td>
+    <td>
+      <code class="curie">PMID:15187185</code><br><span class="meta">Gage reviewed flavonoid induction of rhizobial nod genes during legume nodule initiation.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>flavonoids_select_rhizobia</code></td>
+    <td>flavonoid signals</td>
+    <td>selects for<br><span class="meta">Flavonoid signaling favors rhizobia carrying compatible nod gene regulation and host-specific signal production.</span></td>
+    <td>rhizobia</td>
+    <td>
+      <code class="curie">PMID:15187185</code><br><span class="meta">The nodulation review describes flavonoid-regulated rhizobial Nod factor synthesis as an early specificity step.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>rhizobia_produce_nod_factors</code></td>
+    <td>rhizobia</td>
+    <td>produces<br><span class="meta">Compatible rhizobia respond to host signals by producing lipochitooligosaccharide Nod factors.</span></td>
+    <td>Nod factors</td>
+    <td>
+      <code class="curie">DOI:10.1128/MMBR.68.2.280-300.2004</code><br><span class="meta">Gage reviewed how rhizobial Nod factors trigger host root-hair and cortical responses in temperate legumes.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>nod_factors_induce_infection</code></td>
+    <td>Nod factors</td>
+    <td>induces<br><span class="meta">Nod-factor perception redirects root-hair growth around rhizobia and starts the infection process.</span></td>
+    <td>root hair infection</td>
+    <td>
+      <code class="curie">PMID:15187185</code><br><span class="meta">The MMBR review details root-hair curling and infection-thread initiation during rhizobial invasion.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>nod_factors_initiate_primordium</code></td>
+    <td>Nod factors</td>
+    <td>induces<br><span class="meta">Nod-factor signaling coordinates infection with cortical cell divisions that initiate the nodule primordium.</span></td>
+    <td>nodule primordium</td>
+    <td>
+      <code class="curie">PMID:15187185</code><br><span class="meta">Gage reviewed the coupling of bacterial invasion to host developmental events that form the root nodule.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>root_hair_infection_forms_thread</code></td>
+    <td>root hair infection</td>
+    <td>produces<br><span class="meta">Root-hair infection produces infection threads that conduct rhizobia through the host root tissue.</span></td>
+    <td>infection thread</td>
+    <td>
+      <code class="curie">DOI:10.1128/MMBR.68.2.280-300.2004</code><br><span class="meta">The rhizobial infection review describes infection-thread growth from curled root hairs into developing nodules.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>infection_thread_delivers_rhizobia</code></td>
+    <td>infection thread</td>
+    <td>transports<br><span class="meta">Infection threads carry rhizobial cells toward developing nodule primordia.</span></td>
+    <td>rhizobia</td>
+    <td>
+      <code class="curie">PMID:15187185</code><br><span class="meta">Gage reviewed infection threads as plant-derived channels that advance the invading rhizobial population through host tissue.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>nodule_primordium_forms_infected_cells</code></td>
+    <td>nodule primordium</td>
+    <td>produces<br><span class="meta">Primordium development creates nodule cells that are invaded by bacterial symbionts.</span></td>
+    <td>infected nodule cell</td>
+    <td>
+      <code class="curie">PMID:33526611</code><br><span class="meta">The nodule-environment review summarizes rhizobial release into plant cells and subsequent adaptation to intracellular life.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>infected_cell_contains_symbiosome</code></td>
+    <td>infected nodule cell</td>
+    <td>contains<br><span class="meta">In legume nodules, plant-derived symbiosomes form intracellular compartments around rhizobia.</span></td>
+    <td>symbiosome</td>
+    <td>
+      <code class="curie">PMID:33526611</code><br><span class="meta">Ledermann and colleagues reviewed the intracellular symbiosome as the compartment in which rhizobia differentiate.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>symbiosome_harbors_bacteroids</code></td>
+    <td>symbiosome</td>
+    <td>harbors<br><span class="meta">Symbiosomes contain differentiated bacteroids that specialize in symbiotic nitrogen fixation.</span></td>
+    <td>bacteroids</td>
+    <td>
+      <code class="curie">PMID:34330708</code><br><span class="meta">Schulte and colleagues modeled and experimentally studied nitrogen fixation by bacteroids inside legume symbiosomes.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>infected_cell_supplies_dicarboxylates</code></td>
+    <td>infected nodule cell</td>
+    <td>feeds<br><span class="meta">Host nodule cells provide C4-dicarboxylate carbon sources that fuel bacteroid energy metabolism.</span></td>
+    <td>plant dicarboxylates</td>
+    <td>
+      <code class="curie">DOI:10.1126/sciadv.abh2433</code><br><span class="meta">Schulte and colleagues showed that plant control of dicarboxylate supply is central to rhizobial nitrogen-fixation metabolism.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>dicarboxylates_fuel_bacteroids</code></td>
+    <td>plant dicarboxylates</td>
+    <td>fuels<br><span class="meta">Bacteroids oxidize host-supplied dicarboxylates to generate energy and reductant for nitrogen fixation.</span></td>
+    <td>bacteroids</td>
+    <td>
+      <code class="curie">PMID:34330708</code><br><span class="meta">The Sci Adv study identified dicarboxylate use as the dominant energy and electron source for nitrogen-fixing bacteroids.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>infected_cells_express_leghemoglobin</code></td>
+    <td>infected nodule cell</td>
+    <td>produces<br><span class="meta">Infected legume nodule cells express leghemoglobin as part of the plant oxygen-control system.</span></td>
+    <td>leghemoglobin</td>
+    <td>
+      <code class="curie">PMID:31655741</code><br><span class="meta">Rutten and Poole reviewed the oxygen paradox of root nodules and mechanisms that maintain respiration while protecting nitrogenase.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>leghemoglobin_maintains_low_oxygen</code></td>
+    <td>leghemoglobin</td>
+    <td>maintains<br><span class="meta">Leghemoglobin buffers free oxygen in infected cells, preserving a low-oxygen state around bacteroids.</span></td>
+    <td>low-oxygen nodule cytoplasm</td>
+    <td>
+      <code class="curie">DOI:10.1016/bs.ampbs.2019.08.001</code><br><span class="meta">The rhizobial oxygen-regulation review describes the low-oxygen nodule environment that permits microaerobic respiration and nitrogenase activity.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>low_oxygen_enables_nitrogenase</code></td>
+    <td>low-oxygen nodule cytoplasm</td>
+    <td>enables<br><span class="meta">The microoxic nodule state protects oxygen-sensitive nitrogenase while permitting enough respiration for ATP production.</span></td>
+    <td>nitrogenase</td>
+    <td>
+      <code class="curie">PMID:31655741</code><br><span class="meta">Rutten and Poole reviewed why nodules tightly regulate oxygen around bacteroids performing nitrogen fixation.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>bacteroids_express_nitrogenase</code></td>
+    <td>bacteroids</td>
+    <td>expresses<br><span class="meta">Mature bacteroids express nitrogenase to reduce atmospheric dinitrogen inside nodules.</span></td>
+    <td>nitrogenase</td>
+    <td>
+      <code class="curie">PMID:33526611</code><br><span class="meta">The rhizobial adaptation review links bacteroid differentiation to the nitrogen-fixing physiology required in nodules.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>nitrogenase_drives_fixation</code></td>
+    <td>nitrogenase</td>
+    <td>drives<br><span class="meta">Nitrogenase catalyzes biological reduction of atmospheric N2 within infected nodule cells.</span></td>
+    <td>biological nitrogen fixation</td>
+    <td>
+      <code class="curie">DOI:10.1126/sciadv.abh2433</code><br><span class="meta">Schulte and colleagues studied rhizobial nitrogenase activity as the terminal sink for carbon and reductant supplied by the host.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>fixation_produces_ammonia</code></td>
+    <td>biological nitrogen fixation</td>
+    <td>produces<br><span class="meta">Symbiotic nitrogen fixation reduces N2 into ammonia that can be assimilated into plant nitrogen metabolism.</span></td>
+    <td>ammonia</td>
+    <td>
+      <code class="curie">PMID:34330708</code><br><span class="meta">The metabolic-control study found that legume hosts promote ammonia secretion by bacteroids by coupling oxygen and dicarboxylate supply.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>root_nodules_harbor_frankia</code></td>
+    <td>root nodule</td>
+    <td>harbors<br><span class="meta">Actinorhizal root nodules are intracellular habitats for nitrogen-fixing Frankia actinobacteria.</span></td>
+    <td>Frankia</td>
+    <td>
+      <code class="curie">PMID:33863007</code><br><span class="meta">Huss-Danell reviewed root nodule symbioses between actinorhizal plants and the actinomycete genus Frankia.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>frankia_expresses_nitrogenase</code></td>
+    <td>Frankia</td>
+    <td>expresses<br><span class="meta">Frankia in actinorhizal nodules protects nitrogenase inside specialized infected cells or vesicles.</span></td>
+    <td>nitrogenase</td>
+    <td>
+      <code class="curie">DOI:10.1046/j.1469-8137.1997.00755.x</code><br><span class="meta">The actinorhizal review describes Frankia vesicles and host adaptations that balance oxygen tension near nitrogenase.</span>    </td>
+  </tr>
+</table>
+
 <h2>Associated taxa</h2>
 <p class="meta">Taxa <em>reported from</em> this habitat, which is weaker than being
 characteristic of it. <code>rank</code> is out of <code>pool</code>: a high rank in a
@@ -280,6 +455,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">REVIEW</span>
     <span class="meta">2026-08-16 · claude-opus-5</span>
     <p>Reviewed and endorsed the seeder&#39;s own resolution. Risky-grounding review (#12), co-attestor pass: this source concept feeds a record whose grounding was flagged and reviewed, and the record could not reach REVIEWED until every source feeding it was decided. This one is a self-grounding: the source vocabulary names the concept with the ontology term&#39;s own label, so there is nothing to adjudicate between the two — checked that the term is the one the label denotes, and that the record it merges into is the same concept rather than a homonym. (source concept habitatmech:MADIN.08ac66c193)</p>
+  </li>
+  <li>
+    <span class="pill">ADD_CAUSAL_GRAPH</span>
+    <span class="meta">2026-09-04 · codex</span>
+    <p>Added a root nodule symbiotic nitrogen fixation graph backed by PMID:33526611, PMID:15187185, DOI:10.1128/MMBR.68.2.280-300.2004, PMID:34330708, DOI:10.1126/sciadv.abh2433, PMID:31655741, DOI:10.1016/bs.ampbs.2019.08.001, PMID:33863007, and DOI:10.1046/j.1469-8137.1997.00755.x.</p>
   </li>
 </ol>
 

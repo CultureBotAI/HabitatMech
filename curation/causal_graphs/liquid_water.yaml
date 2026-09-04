@@ -1,0 +1,229 @@
+identifier: ENVO:00002006
+causal_graphs:
+- graph_id: liquid_water_planktonic_solute_foraging
+  title: Liquid water planktonic solute foraging
+  description: Bulk liquid water supplies high water activity, suspends
+    free-living cells and organic particles, dissolves lower-molecular-weight
+    organic substrates, and allows diffusion to form microscale nutrient
+    patches. Extracellular enzymes hydrolyze polymers into dissolved organic
+    matter, and motile chemotactic bacteria exploit those gradients to convert
+    dissolved carbon into bacterial biomass within aquatic microbial loops.
+  nodes:
+  - node_id: liquid_water
+    label: liquid water
+    node_type: HABITAT
+    grounding: ENVO:00002006
+  - node_id: high_water_activity
+    label: high water activity
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: bulk_aqueous_phase
+    label: bulk aqueous phase
+    node_type: STATE
+  - node_id: polymeric_organic_matter
+    label: polymeric organic matter
+    node_type: CHEMICAL
+  - node_id: extracellular_hydrolysis
+    label: extracellular hydrolysis
+    node_type: PATHWAY
+  - node_id: dissolved_organic_matter
+    label: dissolved organic matter
+    node_type: CHEMICAL
+  - node_id: solute_diffusion
+    label: solute diffusion
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: microscale_solute_gradients
+    label: microscale solute gradients
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: chemotactic_motility
+    label: chemotactic motility
+    node_type: TRAIT
+  - node_id: free_living_bacteria
+    label: free-living bacteria
+    node_type: TAXON
+  - node_id: heterotrophic_uptake
+    label: heterotrophic dissolved-carbon uptake
+    node_type: PATHWAY
+  - node_id: bacterial_biomass
+    label: bacterial biomass
+    node_type: STATE
+  - node_id: microbial_loop
+    label: microbial loop
+    node_type: COMMUNITY_PROCESS
+  edges:
+  - edge_id: liquid_water_provides_high_water_activity
+    subject: liquid_water
+    predicate: provides
+    object: high_water_activity
+    description: Liquid water keeps water activity high relative to
+      salt-saturated or desiccating habitats where low water activity limits
+      microbial growth.
+    evidence:
+    - reference: PMID:15306380
+      snippet: Life at low water activity
+      notes: Grant reviewed water-activity limits and the microbial physiology
+        required when water availability falls in saline or dry habitats.
+    - reference: PMID:25500507
+      snippet: common water-activity limit
+      notes: Stevenson and colleagues tested bacterial, archaeal, and fungal
+        growth near the low-water-activity limit for active life.
+  - edge_id: high_water_activity_permits_aquatic_growth
+    subject: high_water_activity
+    predicate: permits
+    object: free_living_bacteria
+    description: High water availability permits hydrated free-living bacterial
+      cells to maintain active metabolism in aqueous habitats.
+    evidence:
+    - reference: PMID:15306380
+      snippet: Life at low water activity
+      notes: The review connects external water activity with cellular water
+        stress, osmoadaptation, and whether microbes can grow.
+    - reference: PMID:21663439
+      snippet: Bacterial osmoregulation
+      notes: Wood reviewed the homeostatic mechanisms bacteria use to maintain
+        turgor and cytoplasmic hydration across external osmotic conditions.
+  - edge_id: liquid_water_forms_bulk_aqueous_phase
+    subject: liquid_water
+    predicate: forms
+    object: bulk_aqueous_phase
+    description: Liquid-water habitats form a connected aqueous phase in which
+      planktonic cells encounter dissolved and particulate substrates.
+    evidence:
+    - reference: DOI:10.3354/meps010257
+      snippet: water-column microbes
+      notes: Azam and colleagues treated liquid seawater as the bulk medium
+        connecting bacteria, dissolved organic matter, and grazers.
+  - edge_id: liquid_water_suspends_free_living_cells
+    subject: liquid_water
+    predicate: suspends
+    object: free_living_bacteria
+    description: Bulk liquid water supports dispersed, planktonic free-living
+      bacterial cells.
+    evidence:
+    - reference: DOI:10.3354/meps010257
+      snippet: ecological role of water-column microbes
+      notes: Azam and colleagues synthesized bacterial biomass, production, and
+        grazing in the marine water column.
+  - edge_id: liquid_water_suspends_polymeric_particles
+    subject: liquid_water
+    predicate: suspends
+    object: polymeric_organic_matter
+    description: Aquatic organic particles and high-molecular-weight compounds
+      remain suspended in bulk water as substrates for extracellular enzymes.
+    evidence:
+    - reference: PMID:21329211
+      snippet: extracellular enzymes and the marine carbon cycle
+      notes: Arnosti reviewed how marine extracellular enzymes hydrolyze
+        complex organic matter outside microbial cells.
+  - edge_id: polymeric_matter_requires_hydrolysis
+    subject: polymeric_organic_matter
+    predicate: requires
+    object: extracellular_hydrolysis
+    description: Polymeric aquatic organic matter must be hydrolyzed outside
+      the cell before microbes can take up the resulting smaller substrates.
+    evidence:
+    - reference: PMID:21329211
+      snippet: extracellular enzymes
+      notes: Arnosti reviewed extracellular enzymatic hydrolysis as the step
+        that makes macromolecular organic matter available to microbes.
+  - edge_id: extracellular_hydrolysis_releases_dom
+    subject: extracellular_hydrolysis
+    predicate: releases
+    object: dissolved_organic_matter
+    description: Extracellular hydrolysis converts polymeric particles into
+      smaller dissolved organic molecules in surrounding liquid water.
+    evidence:
+    - reference: PMID:21329211
+      snippet: marine carbon cycle
+      notes: The review links extracellular enzyme activity to transformations
+        of marine dissolved and particulate organic matter.
+  - edge_id: bulk_water_allows_solute_diffusion
+    subject: bulk_aqueous_phase
+    predicate: enables
+    object: solute_diffusion
+    description: Dissolved substrates diffuse through the aqueous phase around
+      particles, lysed cells, and other localized organic-matter sources.
+    evidence:
+    - reference: PMID:23204367
+      snippet: bacterial chemotaxis in the ocean
+      notes: Stocker and Seymour reviewed how aquatic nutrient sources generate
+        dynamic dissolved plumes, patches, and gradients around bacteria.
+  - edge_id: dom_forms_microscale_gradients
+    subject: dissolved_organic_matter
+    predicate: forms
+    object: microscale_solute_gradients
+    description: Dissolved organic substrates released from localized sources
+      form transient microscale gradients in water.
+    evidence:
+    - reference: PMID:23118182
+      snippet: Marine microbes see a sea of gradients
+      notes: Stocker described the microscale chemical heterogeneity encountered
+        by planktonic microbes.
+    - reference: PMID:23204367
+      snippet: highly heterogeneous down to the microscale
+      notes: Stocker and Seymour synthesized the physical and ecological origins
+        of aquatic microscale nutrient heterogeneity.
+  - edge_id: gradients_select_chemotactic_motility
+    subject: microscale_solute_gradients
+    predicate: selects for
+    object: chemotactic_motility
+    description: Transient nutrient gradients reward motile bacteria that can
+      bias swimming toward dissolved substrates.
+    evidence:
+    - reference: PMID:23204367
+      snippet: chemotaxis may provide a significant fitness advantage
+      notes: Stocker and Seymour reviewed chemotaxis as an adaptation to
+        short-lived nutrient patches in aquatic habitats.
+  - edge_id: chemotaxis_increases_dom_uptake
+    subject: chemotactic_motility
+    predicate: increases
+    object: heterotrophic_uptake
+    description: Chemotactic motility helps bacteria remain in nutrient patches
+      long enough to take up dissolved organic substrates.
+    evidence:
+    - reference: PMID:23204367
+      snippet: successfully use chemotaxis
+      notes: The review connects high-performance chemotaxis with rapid
+        responses to aquatic chemical gradients.
+  - edge_id: dom_supports_heterotrophic_bacteria
+    subject: dissolved_organic_matter
+    predicate: supports
+    object: free_living_bacteria
+    description: Dissolved organic matter supports heterotrophic bacterial
+      growth in liquid-water microbial communities.
+    evidence:
+    - reference: DOI:10.3354/meps010257
+      snippet: ecological role of water-column microbes
+      notes: Azam and colleagues framed dissolved organic matter uptake by
+        water-column bacteria as a central aquatic carbon-flow process.
+  - edge_id: uptake_generates_bacterial_biomass
+    subject: heterotrophic_uptake
+    predicate: increases
+    object: bacterial_biomass
+    description: Heterotrophic uptake of dissolved carbon converts aquatic
+      dissolved organic matter into bacterial biomass.
+    evidence:
+    - reference: DOI:10.3354/meps010257
+      snippet: bacterial biomass and productivity
+      notes: The microbial-loop synthesis linked uptake of dissolved carbon to
+        bacterial biomass and productivity in the water column.
+  - edge_id: bacterial_biomass_feeds_microbial_loop
+    subject: bacterial_biomass
+    predicate: contributes to
+    object: microbial_loop
+    description: Bacterial biomass produced from dissolved organic matter
+      enters a microbial loop through heterotrophic flagellates and
+      microzooplankton.
+    evidence:
+    - reference: DOI:10.3354/meps010257
+      snippet: microbial loop
+      notes: Azam and colleagues introduced the water-column microbial-loop
+        model linking bacteria, bacterivorous flagellates, and
+        microzooplankton.
+curation_history:
+- timestamp: '2026-09-04T00:00:00Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a liquid-water planktonic solute-foraging graph backed by
+    PMID:15306380, PMID:25500507, PMID:21663439, PMID:21329211, PMID:23118182,
+    PMID:23204367, and DOI:10.3354/meps010257.
+  llm_assisted: true

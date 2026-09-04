@@ -36,6 +36,11 @@ COMMANDS = [
         "Closed-mode validation checks every record shape; quiet mode keeps the error summary visible.",
     ),
     (
+        "causal graph curations",
+        [sys.executable, "scripts/validate_causal_graph_curations.py"],
+        "Curated mechanism overlays must be LinkML-valid and must target records the seeder emits.",
+    ),
+    (
         "curation floor",
         [sys.executable, "scripts/check_curation_floor.py"],
         "Every other gate compares output against the curation inputs; "

@@ -82,6 +82,173 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
   <tr><td>WATER_VARIABILITY</td><td>occasionally wet</td><td class="meta">kg-microbe environments.csv (built_environment_surfaces)</td></tr>
 </table>
 
+<h2>Causal graphs</h2>
+<h3>Building surface human-air assembly</h3>
+<p>Buildings create dry, low-resource indoor surfaces that are repeatedly inoculated by human occupants and by outdoor air entering through ventilation. Occupancy, ventilation strategy, room connectivity, surface material, and cleaning disturbances jointly filter deposited microbes and assemble spatially distinct indoor surface microbiomes.</p><table>
+  <caption>building_surface_human_air_assembly edges</caption>
+  <thead><tr><th scope="col">Edge</th><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code>building_contains_indoor_surfaces</code></td>
+    <td>building</td>
+    <td>contains<br><span class="meta">Buildings provide room-delimited indoor surfaces that collect dust, cells, and surface-associated microbial communities.</span></td>
+    <td>indoor surfaces</td>
+    <td>
+      <code class="curie">PMID:22278670</code><br><span class="meta">Kembel and colleagues surveyed bacterial assemblages from building surfaces across mechanically and naturally ventilated rooms.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>indoor_surfaces_have_low_water</code></td>
+    <td>indoor surfaces</td>
+    <td>has characteristic<br><span class="meta">Indoor exposed surfaces are often dry between short wetting events, imposing low water availability on deposited cells.</span></td>
+    <td>low water availability</td>
+    <td>
+      <code class="curie">PMID:26459172</code><br><span class="meta">Adams and colleagues synthesized indoor microbiome studies across air, dust, and surfaces where dry deposited biomass dominates sampling.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>indoor_surfaces_have_low_organic_matter</code></td>
+    <td>indoor surfaces</td>
+    <td>has characteristic<br><span class="meta">Building surfaces provide sparse organic resources except where dust, skin cells, or wet deposits accumulate.</span></td>
+    <td>low organic matter</td>
+    <td>
+      <code class="curie">PMID:25398865</code><br><span class="meta">Gibbons and colleagues followed restroom recolonization after cleaning, where growth was limited by the resource-poor surface setting.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>indoor_surfaces_include_surface_materials</code></td>
+    <td>indoor surfaces</td>
+    <td>includes<br><span class="meta">Indoor surfaces are composed of distinct materials that expose deposited cells to different physicochemical niches.</span></td>
+    <td>surface materials</td>
+    <td>
+      <code class="curie">PMID:26459172</code><br><span class="meta">Adams and colleagues compared microbiota across indoor sample and surface types in the built environment.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>low_water_imposes_desiccation_stress</code></td>
+    <td>low water availability</td>
+    <td>imposes<br><span class="meta">Low moisture on indoor surfaces stresses microbial cells deposited from humans, dust, and air.</span></td>
+    <td>desiccation stress</td>
+    <td>
+      <code class="curie">PMID:25398865</code><br><span class="meta">The restroom-surface study combined 16S profiles with viability assays to track which deposited human-associated taxa persisted.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>low_organic_matter_filters_surface_reservoir</code></td>
+    <td>low organic matter</td>
+    <td>filters<br><span class="meta">Sparse surface nutrients limit growth after deposition, helping determine which cells persist as a viable reservoir.</span></td>
+    <td>viable surface reservoir</td>
+    <td>
+      <code class="curie">PMID:25398865</code><br><span class="meta">Gibbons and colleagues tracked viable restroom-surface bacteria through a post-cleaning succession in a resource-limited built habitat.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>building_hosts_human_occupancy</code></td>
+    <td>building</td>
+    <td>hosts<br><span class="meta">Buildings concentrate human occupants that repeatedly shed microbes into indoor air, dust, and surfaces.</span></td>
+    <td>human occupancy</td>
+    <td>
+      <code class="curie">PMID:25170151</code><br><span class="meta">Lax and colleagues quantified microbial exchange between household occupants and their built environment.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>human_occupancy_deposits_human_bacteria</code></td>
+    <td>human occupancy</td>
+    <td>deposits<br><span class="meta">Occupants shed skin, oral, and other human-associated bacteria into occupied rooms and onto nearby building surfaces.</span></td>
+    <td>human-associated bacteria</td>
+    <td>
+      <code class="curie">PMID:25170151</code><br><span class="meta">Lax and colleagues longitudinally tracked exchange between occupants and household surfaces.</span>      <code class="curie">PMID:23717552</code><br><span class="meta">Dunn and colleagues showed that household bacterial communities reflect occupancy and occupant traits.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>human_bacteria_drive_occupant_deposition</code></td>
+    <td>human-associated bacteria</td>
+    <td>seeds<br><span class="meta">Human-associated taxa shed from occupants provide repeated inocula for surface recolonization.</span></td>
+    <td>occupant microbial deposition</td>
+    <td>
+      <code class="curie">PMID:25398865</code><br><span class="meta">Gibbons and colleagues showed rapid restroom-surface recolonization after cleaning by communities dominated by human-associated bacteria.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>occupant_deposition_seeds_surface_microbiome</code></td>
+    <td>occupant microbial deposition</td>
+    <td>seeds<br><span class="meta">Repeated microbial deposition by occupants is a major source of the bacteria detected on occupied building surfaces.</span></td>
+    <td>indoor surface microbiome</td>
+    <td>
+      <code class="curie">PMID:25170151</code><br><span class="meta">The household time series connected occupant microbiota with temporal changes on indoor surfaces.</span>      <code class="curie">PMID:26459172</code><br><span class="meta">The indoor-environment meta-analysis identified humans as an important bacterial source across built-environment sample types.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>building_controls_ventilation_strategy</code></td>
+    <td>building</td>
+    <td>controls<br><span class="meta">Building design and operation determine the balance of mechanical and natural ventilation that delivers airborne microbes.</span></td>
+    <td>ventilation strategy</td>
+    <td>
+      <code class="curie">PMID:23621155</code><br><span class="meta">Meadow and colleagues compared ventilation regimes in a hybrid building and linked them to indoor airborne bacterial dynamics.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>ventilation_introduces_outdoor_air</code></td>
+    <td>ventilation strategy</td>
+    <td>modulates<br><span class="meta">Ventilation modulates how outdoor bacterial bioaerosols enter and persist in indoor air before settling onto surfaces.</span></td>
+    <td>outdoor air inoculation</td>
+    <td>
+      <code class="curie">PMID:23621155</code><br><span class="meta">The indoor-air study showed that indoor airborne communities tracked outdoor-air community changes with ventilation-dependent lags.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>building_defines_room_connectivity</code></td>
+    <td>building</td>
+    <td>defines<br><span class="meta">Building layouts connect rooms through doors and circulation paths that constrain indoor microbial dispersal.</span></td>
+    <td>room connectivity</td>
+    <td>
+      <code class="curie">PMID:24489843</code><br><span class="meta">Kembel and colleagues related the spatial network of rooms and doors to bacterial biogeography in indoor dust.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>outdoor_air_seeds_surface_microbiome</code></td>
+    <td>outdoor air inoculation</td>
+    <td>seeds<br><span class="meta">Outdoor air supplies airborne bacteria that can deposit onto dust and surfaces inside buildings.</span></td>
+    <td>indoor surface microbiome</td>
+    <td>
+      <code class="curie">PMID:23621155</code><br><span class="meta">Meadow and colleagues identified outdoor air as a source shaping indoor airborne communities.</span>      <code class="curie">PMID:26459172</code><br><span class="meta">Adams and colleagues synthesized evidence that outdoor air and humans both contribute microbes to indoor samples.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>room_connectivity_controls_dispersal</code></td>
+    <td>room connectivity</td>
+    <td>controls<br><span class="meta">Door networks and spatial connectivity constrain microbial dispersal between rooms and help define indoor biogeography.</span></td>
+    <td>indoor surface microbiome</td>
+    <td>
+      <code class="curie">PMID:24489843</code><br><span class="meta">Kembel and colleagues related room connectivity, space type, occupancy, and ventilation to indoor dust bacterial communities.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>surface_materials_filter_deposited_cells</code></td>
+    <td>surface materials</td>
+    <td>filters<br><span class="meta">Differences among surface types and materials filter deposited bacteria into distinct indoor assemblages.</span></td>
+    <td>indoor surface microbiome</td>
+    <td>
+      <code class="curie">PMID:26459172</code><br><span class="meta">Adams and colleagues found that indoor microbiota varied with sample type and built-environment characteristics across studies.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>indoor_surfaces_undergo_cleaning_disturbance</code></td>
+    <td>indoor surfaces</td>
+    <td>undergoes<br><span class="meta">Occupied building surfaces are periodically cleaned, disturbing biomass and the viable surface reservoir.</span></td>
+    <td>cleaning disturbance</td>
+    <td>
+      <code class="curie">PMID:25398865</code><br><span class="meta">Gibbons and colleagues sterilized restroom surfaces and followed the resulting microbial recolonization.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>cleaning_disturbance_prunes_surface_reservoir</code></td>
+    <td>cleaning disturbance</td>
+    <td>prunes<br><span class="meta">Cleaning removes biomass and disturbs viability on building surfaces, after which surviving and newly deposited taxa recolonize.</span></td>
+    <td>viable surface reservoir</td>
+    <td>
+      <code class="curie">PMID:25398865</code><br><span class="meta">Gibbons and colleagues sampled public restroom surfaces before and after sterilization to track viable recolonization dynamics.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>desiccation_filters_surface_reservoir</code></td>
+    <td>desiccation stress</td>
+    <td>filters<br><span class="meta">Dry building surfaces filter the viable subset of organisms shed into the indoor environment.</span></td>
+    <td>viable surface reservoir</td>
+    <td>
+      <code class="curie">PMID:25398865</code><br><span class="meta">The restroom-surface viability assays showed that only part of the detected surface community remained viable after deposition.</span>    </td>
+  </tr>
+  <tr>
+    <td><code>viable_reservoir_reseeds_surface_microbiome</code></td>
+    <td>viable surface reservoir</td>
+    <td>reseeds<br><span class="meta">Viable cells persisting on surfaces provide a reservoir that contributes to post-disturbance recolonization.</span></td>
+    <td>indoor surface microbiome</td>
+    <td>
+      <code class="curie">PMID:25398865</code><br><span class="meta">The restroom recolonization time series linked persistence and renewed deposition to post-cleaning surface community assembly.</span>    </td>
+  </tr>
+</table>
+
 <h2>Associated taxa</h2>
 <p class="meta">Taxa <em>reported from</em> this habitat, which is weaker than being
 characteristic of it. <code>rank</code> is out of <code>pool</code>: a high rank in a
@@ -290,6 +457,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">REVIEW</span>
     <span class="meta">2026-08-16 · claude-opus-5</span>
     <p>Reviewed and endorsed the seeder&#39;s own resolution. Risky-grounding review (#12), co-attestor pass: this source concept feeds a record whose grounding was flagged and reviewed, and the record could not reach REVIEWED until every source feeding it was decided. This one is a self-grounding: the source vocabulary names the concept with the ontology term&#39;s own label, so there is nothing to adjudicate between the two — checked that the term is the one the label denotes, and that the record it merges into is the same concept rather than a homonym. (source concept habitatmech:MADIN.2b0f480418)</p>
+  </li>
+  <li>
+    <span class="pill">ADD_CAUSAL_GRAPH</span>
+    <span class="meta">2026-09-04 · codex</span>
+    <p>Added a building-surface human-air assembly graph backed by PMID:22278670, PMID:26459172, PMID:25398865, PMID:25170151, PMID:23717552, PMID:23621155, and PMID:24489843.</p>
   </li>
 </ol>
 

@@ -372,6 +372,86 @@ characteristic_taxa:
   score: 4.0
   rank: 25
   candidate_pool: 4936
+causal_graphs:
+- graph_id: freshwater_hypoosmotic_response
+  title: Freshwater hypoosmotic response
+  description: Low external osmolarity in fresh water drives water influx into bacterial
+    cells, increasing turgor and triggering mechanosensitive solute-release channels.
+  nodes:
+  - node_id: fresh_water
+    label: fresh water
+    node_type: HABITAT
+    grounding: ENVO:00002011
+  - node_id: low_external_osmotic_pressure
+    label: low external osmotic pressure
+    node_type: ENVIRONMENTAL_PARAMETER
+  - node_id: water_influx
+    label: water influx
+    node_type: STATE
+  - node_id: high_turgor_pressure
+    label: high turgor pressure
+    node_type: STATE
+  - node_id: mechanosensitive_channels
+    label: mechanosensitive channels
+    node_type: GENE_OR_PROTEIN
+  - node_id: cytoplasmic_solute_release
+    label: cytoplasmic solute release
+    node_type: BIOLOGICAL_PROCESS
+  edges:
+  - edge_id: freshwater_has_low_osmotic_pressure
+    subject: fresh_water
+    predicate: has condition
+    object: low_external_osmotic_pressure
+    description: The low dissolved-solute concentration of fresh water corresponds
+      to low external osmotic pressure.
+    evidence:
+    - reference: DOI:10.1017/qrd.2022.3
+      snippet: osmotic pressure is slightly higher but still very low
+      notes: Wennerstrom and Oliveberg compare rain, meltwater, fresh-water lakes,
+        rivers, seawater, and saturated brines by external osmotic pressure.
+  - edge_id: low_osmotic_pressure_drives_water_influx
+    subject: low_external_osmotic_pressure
+    predicate: drives
+    object: water_influx
+    description: Bacteria entering fresh water from higher-osmolarity media take up
+      water across the cell envelope.
+    evidence:
+    - reference: DOI:10.1017/qrd.2022.3
+      snippet: experience influx of water
+      notes: Wennerstrom and Oliveberg identify water influx as the immediate hypoosmotic
+        consequence for bacterial cells in fresh water.
+  - edge_id: water_influx_raises_turgor
+    subject: water_influx
+    predicate: increases
+    object: high_turgor_pressure
+    description: Water influx stretches the bacterial envelope and raises turgor pressure.
+    evidence:
+    - reference: DOI:10.1017/qrd.2022.3
+      snippet: stretch the cell wall
+      notes: Wennerstrom and Oliveberg describe wall stretching as the physical route
+        by which fresh-water cells build compensating internal pressure.
+  - edge_id: turgor_opens_mechanosensitive_channels
+    subject: high_turgor_pressure
+    predicate: activates
+    object: mechanosensitive_channels
+    description: Elevated membrane and wall tension opens mechanosensitive channels
+      as a rapid emergency response.
+    evidence:
+    - reference: DOI:10.1017/qrd.2022.3
+      snippet: opening of various types of mechano-sensitive channels
+      notes: The fresh-water osmotic down-shock section names mechanosensitive channel
+        opening as the emergency response that prevents bursting.
+  - edge_id: channels_release_cytoplasmic_solutes
+    subject: mechanosensitive_channels
+    predicate: releases
+    object: cytoplasmic_solute_release
+    description: Open MscS- and MscL-family mechanosensitive channels release cytoplasmic
+      solutes from osmotically down-shocked bacteria.
+    evidence:
+    - reference: DOI:10.1085/jgp.201411296
+      snippet: release solutes from the cytoplasm
+      notes: Wood summarizes bacterial MscS and MscL channels as release routes for
+        cytoplasmic solutes after osmotic down-shock.
 curation_history:
 - timestamp: '2026-08-13T00:00:00Z'
   curator: claude-opus-5
@@ -396,3 +476,9 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE, GOLD,
     MADIN, PREGO. Grounding: EXACT.'
+- timestamp: '2026-09-04T00:00:00Z'
+  curator: codex
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a fresh-water hypoosmotic-response graph backed by DOI:10.1017/qrd.2022.3
+    and DOI:10.1085/jgp.201411296.
+  llm_assisted: true
