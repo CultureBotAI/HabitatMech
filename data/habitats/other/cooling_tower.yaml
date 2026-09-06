@@ -1,8 +1,14 @@
 identifier: habitatmech:BACDIVE.71d5f01e03
-label: Cooling-tower
+label: cooling tower
+definition: A human construction which rejects waste heat from a recirculating water
+  loop by evaporating part of that water into an air stream drawn through the structure,
+  and which retains the remaining water in an open basin between passes.
+definition_source: HabitatMech
 habitat_category: OTHER
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+parent_habitats:
+- ENVO:00000070
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:cooling-tower
@@ -149,15 +155,27 @@ characteristic_taxa:
   rank: 23
   candidate_pool: 23
 curation_history:
-- timestamp: '2026-08-14T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Cohort review:
-    NCIT:C48957 ''Tower'' is a structure of any kind. The slice has cooling processes
-    and ENVO:03600002 ''cooling water'' but no cooling tower; the water is the medium,
-    not the site. A Legionella habitat worth an ENVO term request. (source concept
-    habitatmech:BACDIVE.71d5f01e03)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+- timestamp: '2026-09-06T00:00:00Z'
+  curator: codex-gpt-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Definition review:
+    the existing cohort review correctly rejected NCIT:C48957 ''Tower'' as merely
+    a structure of any kind and ENVO:03600002 ''cooling water'' as a medium rather
+    than a site. BacDive''s cooling-tower source denotes an open, recirculating, evaporative
+    heat-rejection construction that needs its own HabitatMech definition. (source
+    concept habitatmech:BACDIVE.71d5f01e03)'
+- timestamp: '2026-09-06T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: Defined as 'cooling tower' under ENVO:00000070 'human construction'. Definition
+    authored from the record's committed deep-research report under research/habitats/,
+    read in full, and rechecked against EPA WaterSense, DOE FEMP and CDC cooling-tower
+    guidance; no new paid research was commissioned. ENVO has cooling water and water-cooling
+    process terms but no site term for the open recirculating heat-rejection construction.
+    NCIT:C48957 'Tower' remains rejected as a generic tower label, not a broader cooling-tower
+    habitat. ADD keeps any source-inherited hierarchy and supplies ENVO:00000070 as
+    a true ontology genus.
