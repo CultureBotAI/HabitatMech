@@ -11,7 +11,7 @@ feeding it. It does not require every optional slot to be populated.
 - Source occurrence and association do not establish habitat identity,
   characteristic taxa, or mechanism by themselves.
 - Put claim-level evidence on causal edges and other curator-authored claims.
-- Preserve conflicts and describe negative searches as bounded “not found.”
+- Preserve conflicts and describe negative searches as bounded "not found."
 
 ## Field-by-field audit
 

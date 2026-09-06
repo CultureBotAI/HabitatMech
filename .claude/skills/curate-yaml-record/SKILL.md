@@ -1,6 +1,6 @@
 ---
 name: curate-yaml-record
-description: Review and curate one HabitatMech habitat record through its authoritative decision, definition, and source-input surfaces, checking habitat identity, grounding, hierarchy, attestations, parameters, taxa, evidence, completeness, and resolvable gaps. Use for a named record audit or improvement; do not hand-edit generated habitat YAML or treat this as permission to spend credits, contact anyone, or mutate GitHub.
+description: Review and curate one HabitatMech habitat record through its authoritative decision, definition, source-input, and causal-graph overlay surfaces, checking habitat identity, grounding, hierarchy, attestations, parameters, taxa, evidence, completeness, and resolvable gaps. Use for a named record audit or improvement; do not hand-edit generated habitat YAML or treat this as permission to spend credits, contact anyone, or mutate GitHub.
 allowed-tools: Bash, Read, Grep, Glob, WebSearch, WebFetch, Edit, Write
 metadata:
   category: curation
@@ -26,12 +26,16 @@ leads; only inspected sources can support a decision.
   input/rule needed to regenerate the named record.
 - Never hand-edit `data/habitats/` or generated `pages/`. Grounding decisions
   belong in `curation/decisions.tsv`; minted definitions and authored hierarchy
-  belong in `curation/term_requests.tsv`; source assertions belong in their
+  belong in `curation/term_requests.tsv`; causal mechanism overlays belong in
+  `curation/causal_graphs/*.yaml`; source assertions belong in their
   extractor/inventory.
 - Never launch paid research, contact anyone, or create/edit a GitHub item or
   outbound message without explicit authorization.
 - Preserve unrelated work and use a dedicated branch/worktree.
 - Never fill an optional field for coverage or infer false from absence.
+- Search exact identifiers, labels, slugs, source references, and candidate
+  terms with `rg --no-ignore --hidden` before treating a maintained row,
+  evidence source, or overlay as absent.
 
 ## Read before judging the record
 
@@ -42,8 +46,9 @@ Read the full generated target plus:
 - the relevant `HabitatRecord`, source-attestation, parameter, taxon, evidence,
   graph, discussion, and history classes in
   `src/habitatmech/schema/habitatmech.yaml`;
-- matching `curation/decisions.tsv`, `curation/term_requests.tsv`, path-lock,
-  and source-inventory rows;
+- matching `curation/decisions.tsv`, `curation/term_requests.tsv`,
+  `curation/causal_graphs/*.yaml`, `data/habitats/PATHS.tsv`, and
+  source-inventory rows;
 - [references/review-checklist.md](references/review-checklist.md).
 
 Rendered pages, generated YAML, and research prose are not independent sources.
@@ -82,10 +87,11 @@ decision.
 ### 3. Review every generated scientific claim
 
 Trace parents, source attestations, MIxS triad roles, environmental parameters,
-characteristic taxa, evidence, and any causal graph to their authoritative
-input. Verify relationship direction, source unit/count, score semantics,
-organism/context, and source version. Do not sum unlike assertion units or
-treat PREGO association as characteristic presence.
+characteristic taxa, evidence, and any causal graph to source inventories,
+curation TSVs, or `curation/causal_graphs/*.yaml` overlays. Verify
+relationship direction, source unit/count, score semantics, organism/context,
+and source version. Do not sum unlike assertion units or treat PREGO association
+as characteristic presence.
 
 A host organism may be a habitat context, but a whole-organism/taxon term is
 not the habitat identity. Anatomy can ground directly when it denotes the
@@ -115,6 +121,11 @@ ID/label, and reasoning. For a minted term definition, use
 the rules in `docs/CURATION.md`. Fix source-owned facts in the extractor or
 inventory that owns them.
 
+For causal mechanism changes, add or update the target overlay in
+`curation/causal_graphs/<slug>.yaml`. Use stable graph, node, and edge IDs;
+give every edge one or more inspected DOI/PMID/URL evidence items; keep
+`snippet` exact and `notes` interpretive.
+
 Use curator `claude` only when no identity was supplied; never attribute agent
 judgement to the user. The seeder derives `mapping_status` and curation history;
 never set either directly. A merged record becomes REVIEWED only when every
@@ -130,9 +141,18 @@ just seed-canary <IDENTIFIER>
 Inspect the generated file before `just seed-apply --force`. Do not prune on a
 partial run.
 
+Validate each edited causal graph overlay before relying on the generated
+record:
+
+```bash
+just validate-causal curation/causal_graphs/<slug>.yaml
+just validate-causal-all
+```
+
 ### 6. Verify and report
 
 ```bash
+just validate-causal-all
 just validate-strict <record-path>
 just verify-corpus
 just render
