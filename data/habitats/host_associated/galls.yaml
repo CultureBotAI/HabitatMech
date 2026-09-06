@@ -1,0 +1,32 @@
+identifier: habitatmech:GOLD.fa99e76de1
+label: Galls
+habitat_category: HOST_ASSOCIATED
+grounding_status: NARROW
+mapping_status: REVIEWED
+parent_habitats:
+- PO:0009005
+- PO:0025626
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:5785
+  source_label: Galls
+  source_path: Host-associated > Plants > Roots > Galls
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 4
+  assertion_unit: ORGANISM
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-16T05:58:02Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-09-06T00:00:00Z'
+  curator: codex-gpt-5
+  action: GROUND_AS_PARENT
+  changes: 'PO:0025626 ''plant gall'' attached as a parent, not adopted as the identity
+    (NARROW). GOLD''s Host-associated > Plants > Roots > Galls source is a root-scoped
+    subset of PO:0025626 ''plant gall'', not an exact claim on every plant gall. Kept
+    PO:0025626 as the broader plant-gall parent and left the GOLD path to attach PO:0009005
+    ''root'' so BacDive''s broader Gall isolation source can ground exactly to PO:0025626
+    without inheriting an over-narrow root parent. Path: Host-associated > Plants
+    > Roots > Galls (source concept habitatmech:GOLD.fa99e76de1)'
