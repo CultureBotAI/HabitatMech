@@ -10,10 +10,19 @@ synonyms:
 - synonym_text: Daqu
   synonym_type: EXACT_SYNONYM
   source: ENVO
+- synonym_text: Starter-culture
+  synonym_type: EXACT_SYNONYM
+  source: BacDive
 parent_habitats:
 - ENVO:00003074
 - FOODON:03530206
 source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:starter-culture
+  source_label: Starter-culture
+  mapping_predicate: skos:exactMatch
+  assertion_count: 19
+  assertion_unit: STRAIN
 - source: GOLD
   source_id: gold.ecosystem:5494
   source_label: Fermentation starter
@@ -22,8 +31,111 @@ source_attestations:
   assertion_count: 62
   assertion_unit: ORGANISM
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+characteristic_taxa:
+- taxon_id: NCBITaxon:86958
+  source: BACDIVE
+  taxon_label: Propionispira paucivorans
+  association_count: 3
+  rank: 1
+  candidate_pool: 15
+- taxon_id: NCBITaxon:33968
+  source: BACDIVE
+  taxon_label: Leuconostoc pseudomesenteroides
+  association_count: 2
+  rank: 2
+  candidate_pool: 15
+- taxon_id: NCBITaxon:86959
+  source: BACDIVE
+  taxon_label: Propionispira raffinosivorans
+  association_count: 2
+  rank: 3
+  candidate_pool: 15
+- taxon_id: NCBITaxon:1123511
+  source: BACDIVE
+  taxon_label: Propionispira raffinosivorans DSM 20765
+  association_count: 1
+  rank: 4
+  candidate_pool: 15
+- taxon_id: NCBITaxon:1255
+  source: BACDIVE
+  taxon_label: Pediococcus pentosaceus
+  association_count: 1
+  rank: 5
+  candidate_pool: 15
+- taxon_id: NCBITaxon:1348655
+  source: BACDIVE
+  taxon_label: Lactococcus cremoris subsp. cremoris NBRC 100676
+  association_count: 1
+  rank: 6
+  candidate_pool: 15
+- taxon_id: NCBITaxon:1358
+  source: BACDIVE
+  taxon_label: Lactococcus lactis
+  association_count: 1
+  rank: 7
+  candidate_pool: 15
+- taxon_id: NCBITaxon:1579
+  source: BACDIVE
+  taxon_label: Lactobacillus acidophilus
+  association_count: 1
+  rank: 8
+  candidate_pool: 15
+- taxon_id: NCBITaxon:1582
+  source: BACDIVE
+  taxon_label: Lacticaseibacillus casei
+  association_count: 1
+  rank: 9
+  candidate_pool: 15
+- taxon_id: NCBITaxon:1597
+  source: BACDIVE
+  taxon_label: Lacticaseibacillus paracasei
+  association_count: 1
+  rank: 10
+  candidate_pool: 15
+- taxon_id: NCBITaxon:1681
+  source: BACDIVE
+  taxon_label: Bifidobacterium bifidum
+  association_count: 1
+  rank: 11
+  candidate_pool: 15
+- taxon_id: NCBITaxon:47715
+  source: BACDIVE
+  taxon_label: Lacticaseibacillus rhamnosus
+  association_count: 1
+  rank: 12
+  candidate_pool: 15
+- taxon_id: NCBITaxon:576
+  source: BACDIVE
+  taxon_label: Klebsiella sp.
+  association_count: 1
+  rank: 13
+  candidate_pool: 15
+- taxon_id: NCBITaxon:586220
+  source: BACDIVE
+  taxon_label: Leuconostoc mesenteroides subsp. cremoris ATCC 19254
+  association_count: 1
+  rank: 14
+  candidate_pool: 15
+- taxon_id: NCBITaxon:86957
+  source: BACDIVE
+  taxon_label: Schleiferibacter lactififex
+  association_count: 1
+  rank: 15
+  candidate_pool: 15
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD. Grounding:
+    EXACT.'
+- timestamp: '2026-09-06T00:00:00Z'
+  curator: codex-gpt-5
+  action: GROUND
+  changes: 'Grounded to ENVO:03600040 ''fermentation starter'' (EXACT). BacDive''s
+    Starter-culture isolation-source category denotes microbial inocula for food and
+    alcoholic-drink fermentations; the committed starter-culture report verified BacDive
+    pitching-yeast strains and lactic-acid-bacteria starters, and ENVO:03600040 ''fermentation
+    starter'' is already in the slice for GOLD''s Engineered > Food production > Fermentation
+    starter source. FOODON:03544454 remains a false food-classification target, but
+    the newer ENVO term names the sampled starter material. Path: Starter-culture
+    (source concept habitatmech:BACDIVE.9eabedc3a1)'
