@@ -43,6 +43,9 @@ import sys
 from pathlib import Path
 
 import yaml
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
 from deep_research_contract import (
     ContractError,
     render_prompt_template,
