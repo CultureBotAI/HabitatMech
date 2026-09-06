@@ -1,8 +1,14 @@
 identifier: habitatmech:BACDIVE.3eec8fcfc4
-label: Waste-gas
-habitat_category: OTHER
+label: waste gas
+definition: A gaseous environmental material which is discharged from an anthropogenic
+  process to a stack or to abatement equipment, and which bears a load of volatile
+  organic, nitrogenous or reduced-sulfur pollutants.
+definition_source: HabitatMech
+habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+parent_habitats:
+- ENVO:01000797
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:waste-gas
@@ -113,14 +119,31 @@ characteristic_taxa:
   rank: 17
   candidate_pool: 17
 curation_history:
-- timestamp: '2026-08-14T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Grounding-cohort
-    review (#62): was ENVO:01001155 ''astrogeological gas'', which carries the bare
-    synonym ''gas'' and so matches any gas source at all. Waste gas from an industrial
-    process is a real habitat and the slice has no term for it. (source concept habitatmech:BACDIVE.3eec8fcfc4)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+- timestamp: '2026-09-06T00:00:00Z'
+  curator: codex-gpt-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Definition review:
+    ENVO:01001155 ''astrogeological gas'' remains a false lexical hit through its
+    bare synonym ''gas''. BacDive''s MISO path places #Waste gas under #Engineered
+    > #Waste; the source denotes confined anthropogenic gaseous effluent, and no vendored
+    ontology term names that habitat. ENVO:01000797 ''gaseous environmental material''
+    is the true genus for a term request; ENVO:00002267 ''industrial waste material''
+    stays a near-miss because agricultural and municipal waste gases need not be manufacturing
+    waste. (source concept habitatmech:BACDIVE.3eec8fcfc4)'
+- timestamp: '2026-09-06T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: 'Defined as ''waste gas'' under ENVO:01000797 ''gaseous environmental material''.
+    Definition authored from the record''s committed deep-research report under research/habitats/,
+    read in full; no new paid research was commissioned. The source is BacDive''s
+    Engineered > Waste > Waste gas MISO node. ENVO already places diesel exhaust and
+    gasoline exhaust under ENVO:01000797, so this term belongs in the gaseous-material
+    branch. ENVO:01001155 ''astrogeological gas'' remains rejected as a bare gas-synonym
+    lexical hit. ENVO:00002267 ''industrial waste material'' is only a near-miss:
+    it names gaseous wastes from manufacturing, but waste gas also covers agricultural,
+    composting and wastewater exhaust. The BacDive attestations are waste-gas biofilter
+    cohorts; the gas stream and biofilter bed must remain separate habitats.'
