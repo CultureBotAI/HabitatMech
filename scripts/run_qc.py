@@ -33,7 +33,7 @@ COMMANDS = [
     (
         "curation history",
         [sys.executable, "scripts/validate_history.py"],
-        "Session records under history/ must be complete and schema-valid; drafts with the scaffolder placeholder fail here.",
+        "Session records under history/ must be complete and schema-valid; placeholder drafts fail.",
     ),
     (
         "schema validation",
