@@ -1,9 +1,36 @@
 identifier: habitatmech:GOLD.3153798c1a
-label: Sourdough
+label: active sourdough starter
+definition: A fermentation starter which consists of cereal flour and water acidified
+  by the growth of lactic acid bacteria and yeasts, and which is maintained in a metabolically
+  active state by repeated backslopping until baking ends it.
+definition_source: HabitatMech
 habitat_category: FOOD
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Sauerteig
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: Sourdough
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: chef
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: levain
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: mother dough
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: sourdough culture
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: sourdough starter
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:03600040
 - FOODON:03530206
 source_attestations:
 - source: GOLD
@@ -14,17 +41,33 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-16T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Risky-grounding
-    review (#12): the seeder grounded ''Engineered > Food production > Sourdough''
-    to FOODON:03302481 ''sourdough bread''. Sourdough is the leaven — a flour-and-water
-    culture of lactic acid bacteria and yeast — and it is the habitat the microbes
-    live in; the bread is what it is later baked into, and baking ends the habitat.
-    The slice has no term for the starter itself, so this is a term-request candidate
-    rather than a grounding. (source concept habitatmech:GOLD.3153798c1a)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-09-06T00:00:00Z'
+  curator: codex-gpt-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader
+    term ENVO:03600040 ''fermentation starter'' attached as a parent. The committed
+    sourdough report kept this as a real habitat with no defensible identity term:
+    FOODON:03302481 ''sourdough bread'' is the baked product after the microbial habitat
+    has ended, and the unvendored FoodOn sourdough-starter classes are commodity or
+    facet-bundle terms that over-claim relative to GOLD''s Engineered > Food production
+    > Sourdough source. ENVO:03600040 ''fermentation starter'' is a true broader parent
+    because sourdough is a maintained flour-water starter used to acidify and leaven
+    bread dough. Path: Engineered > Food production > Sourdough (source concept habitatmech:GOLD.3153798c1a)'
+- timestamp: '2026-09-06T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: Defined as 'active sourdough starter' under ENVO:03600040 'fermentation
+    starter'. Definition authored from the record's committed deep-research report
+    under research/habitats/, read in full; no new paid research was commissioned.
+    Labelled 'active sourdough starter' to avoid colliding with FOODON:03302481 'sourdough
+    bread', which incorrectly claims 'sourdough' as a synonym of the baked product;
+    the requested term is the metabolically active habitat before baking. The report
+    recommends minting because the baked-bread term is a false identity and FoodOn's
+    unvendored sourdough-starter terms have commodity or facet-bundle semantics that
+    over-claim relative to GOLD's Sourdough source. ENVO:03600040 'fermentation starter'
+    is the tightest vendored genus and keeps Sourdough under GOLD's Fermentation starter
+    sibling.
