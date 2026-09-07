@@ -9,6 +9,9 @@ habitat_category: HOST_ASSOCIATED
 grounding_status: CLOSE
 mapping_status: REVIEWED
 synonyms:
+- synonym_text: Gingival crevice/sulcus
+  synonym_type: EXACT_SYNONYM
+  source: GOLD
 - synonym_text: Gingival sulcus
   synonym_type: EXACT_SYNONYM
   source: GOLD
@@ -24,6 +27,7 @@ synonyms:
 parent_habitats:
 - UBERON:0000093
 - habitatmech:GOLD.92d1e65695
+- habitatmech:GOLD.99880772e1
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5097
@@ -31,6 +35,14 @@ source_attestations:
   source_path: Host-associated > Mammals > Digestive system > Oral cavity > Gingival
     sulcus
   mapping_predicate: skos:closeMatch
+- source: GOLD
+  source_id: gold.ecosystem:5192
+  source_label: Gingival crevice/sulcus
+  source_path: 'Host-associated > Mammals: Human > Digestive system > Oral cavity
+    > Gingival crevice/sulcus'
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 15
+  assertion_unit: ORGANISM
 curation_history:
 - timestamp: '2026-08-16T00:00:00Z'
   curator: claude-opus-5
@@ -43,3 +55,14 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'
+- timestamp: '2026-09-06T00:00:00Z'
+  curator: codex-gpt-5
+  action: GROUND
+  changes: 'Grounded to UBERON:0008805 ''gingival groove'' (NARROW). The committed
+    gingival-crevice report found that UBERON:0008805 ''gingival groove'' is already
+    vendored with ''gingival sulcus'' as an exact synonym and already backs GOLD''s
+    generic Gingival sulcus source. The Human GOLD Gingival crevice/sulcus path names
+    the same anatomical potential space between tooth and surrounding gingiva, but
+    is scoped to human oral cavity, so skos:narrowMatch is the consistent predicate.
+    Path: Host-associated > Mammals: Human > Digestive system > Oral cavity > Gingival
+    crevice/sulcus (source concept habitatmech:GOLD.e97d0cb4b1)'

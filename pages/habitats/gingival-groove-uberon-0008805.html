@@ -41,12 +41,19 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
     <td class="num">—</td>
     <td></td>
   </tr>
+  <tr>
+    <td><span class="pill plain">GOLD</span></td>
+    <td>Host-associated &gt; Mammals: Human &gt; Digestive system &gt; Oral cavity &gt; Gingival crevice/sulcus</td>
+    <td class="num">15</td>
+    <td>ORGANISM</td>
+  </tr>
 </table>
 
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="http://purl.obolibrary.org/obo/UBERON_0000093">sulcus</a>      <code class="curie">UBERON:0000093</code></li>
   <li><a href="../habitats/oral-cavity-habitatmech-gold-92d1e65695.html">Oral cavity</a>      <code class="curie">habitatmech:GOLD.92d1e65695</code></li>
+  <li><a href="../habitats/oral-cavity-habitatmech-gold-99880772e1.html">Oral cavity</a>      <code class="curie">habitatmech:GOLD.99880772e1</code></li>
 </ul>
 
 
@@ -54,7 +61,7 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 <h2>Also called</h2>
 <ul class="plain">
-<li>Gingival sulcus <span class="meta">— GOLD</span></li><li>gingival sulcus <span class="meta">— UBERON</span></li><li>sulcus gingivalis <span class="meta">— UBERON</span></li><li>tooth-gingiva interface <span class="meta">— UBERON</span></li></ul>
+<li>Gingival crevice/sulcus <span class="meta">— GOLD</span></li><li>Gingival sulcus <span class="meta">— GOLD</span></li><li>gingival sulcus <span class="meta">— UBERON</span></li><li>sulcus gingivalis <span class="meta">— UBERON</span></li><li>tooth-gingiva interface <span class="meta">— UBERON</span></li></ul>
 
 <h2>Curation</h2>
 <p class="meta">What a curator decided about this record, and why. A record built
@@ -64,6 +71,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">REVIEW</span>
     <span class="meta">2026-08-16 · claude-opus-5</span>
     <p>Reviewed and endorsed the seeder&#39;s own resolution. CLOSE-grounding review (#12): read against the full source path and the term&#39;s own definition. The grounding is right and CLOSE is the honest status — the term is the concept with a difference of framing or specificity that EXACT would overstate. (source concept habitatmech:GOLD.2f044b8c11)</p>
+  </li>
+  <li>
+    <span class="pill">GROUND</span>
+    <span class="meta">2026-09-06 · codex-gpt-5</span>
+    <p>Grounded to UBERON:0008805 &#39;gingival groove&#39; (NARROW). The committed gingival-crevice report found that UBERON:0008805 &#39;gingival groove&#39; is already vendored with &#39;gingival sulcus&#39; as an exact synonym and already backs GOLD&#39;s generic Gingival sulcus source. The Human GOLD Gingival crevice/sulcus path names the same anatomical potential space between tooth and surrounding gingiva, but is scoped to human oral cavity, so skos:narrowMatch is the consistent predicate. Path: Host-associated &gt; Mammals: Human &gt; Digestive system &gt; Oral cavity &gt; Gingival crevice/sulcus (source concept habitatmech:GOLD.e97d0cb4b1)</p>
   </li>
 </ol>
 
