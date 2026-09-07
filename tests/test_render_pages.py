@@ -78,6 +78,19 @@ def test_record_pages_carry_no_corpus_wide_counts(repo_root):
         )
 
 
+def test_xrefs_without_resolvable_iris_render_as_plain_text(repo_root):
+    """Unknown xref CURIE prefixes have no external IRI, so they must not become
+    invalid ``href="None"`` links on generated record pages (#246)."""
+    pages = sorted((repo_root / "pages" / "habitats").glob("*.html"))
+    assert pages, "no record pages rendered"
+    offenders = [
+        str(path.relative_to(repo_root))
+        for path in pages
+        if 'href="None"' in path.read_text(encoding="utf-8")
+    ]
+    assert not offenders
+
+
 def test_record_pages_render_curated_causal_graphs(repo_root):
     expected = {
         "hypersaline-water-envo-00002012.html": (
