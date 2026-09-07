@@ -1,8 +1,10 @@
 identifier: habitatmech:BACDIVE.4b8650dee7
 label: Dust-Ash
-habitat_category: OTHER
+habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+parent_habitats:
+- ENVO:01000814
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:dust-ash
@@ -106,14 +108,20 @@ characteristic_taxa:
   rank: 16
   candidate_pool: 16
 curation_history:
-- timestamp: '2026-08-14T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Cohort review:
-    dust and ash are different materials and the slice has both (ENVO:00002008, ENVO:02000090).
-    Grounding to either half would assert an identity the source does not have. (source
-    concept habitatmech:BACDIVE.4b8650dee7)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+- timestamp: '2026-09-06T00:00:00Z'
+  curator: codex-gpt-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader
+    term ENVO:01000814 ''solid environmental material'' attached as a parent. Definition
+    review (#252, #253): the committed Dust-Ash report agrees that neither ENVO:00002008
+    ''dust'' nor ENVO:02000090 ''ash'' can be adopted as the identity because each
+    drops the other half of BacDive''s #Engineered > #Waste > #Dust (Ash) bucket.
+    ENVO:01000814 ''solid environmental material'' is the least common vendored parent
+    of the two halves and is attached as a broad placement until BacDive strain-level
+    isolation text can split the dust-like and ash-like strains upstream; category
+    pinned to ENGINEERED because MISO files the source under #Engineered > #Waste.
+    (source concept habitatmech:BACDIVE.4b8650dee7)'
