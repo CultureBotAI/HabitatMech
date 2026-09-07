@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: history/README.md
+  slug: curation-history
+session:
+  id: 2026-09-07T201547Z-claude-code-93adab
+  timestamp: '2026-09-07T20:15:47Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-fable-5-1
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/254
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - history
+  - justfile
+  - ci
+  summary: Adopt the append-only curation-history layer
+  details: 'Added history/README.md, the new-history scaffolder recipe (claw''s kg_microbe_history
+    via CLAW_SRC, gated on _require-claw so a missing claw fails loudly), validate-history
+    backed by scripts/validate_history.py, and a curation-history step in scripts/run_qc.py
+    so validity is blocking in CI while presence stays advisory. The schema was already vendored
+    byte-identically from claw at 69c3abb7 by #255. This is the first record and was scaffolded
+    by the recipe it documents.'

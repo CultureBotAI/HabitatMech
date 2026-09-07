@@ -31,6 +31,11 @@ COMMANDS = [
         "Tests cover grounding rules and corpus-wide invariants that per-record validation cannot see.",
     ),
     (
+        "curation history",
+        [sys.executable, "scripts/validate_history.py"],
+        "Session records under history/ must be complete and schema-valid; drafts with the scaffolder placeholder fail here.",
+    ),
+    (
         "schema validation",
         [sys.executable, "scripts/validate_strict.py", "--quiet"],
         "Closed-mode validation checks every record shape; quiet mode keeps the error summary visible.",

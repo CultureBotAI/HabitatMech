@@ -5,6 +5,19 @@ set positional-arguments := true
 schema := "src/habitatmech/schema/habitatmech.yaml"
 habitats := "data/habitats"
 
+# Shared tooling from a culturebotai-claw checkout. Only new-history reaches it;
+# validation uses the vendored schema and needs no claw at all.
+claw_src := env_var_or_default("CLAW_SRC", "../culturebotai-claw/src")
+
+_require-claw module:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    if [ ! -d "{{claw_src}}/{{module}}" ]; then
+      echo "error: shared module '{{module}}' not found under '{{claw_src}}'." >&2
+      echo "Set CLAW_SRC to the src/ directory of a culturebotai-claw checkout." >&2
+      exit 1
+    fi
+
 default:
     @just --list --unsorted
 
@@ -130,6 +143,22 @@ qc:
 # revision in scripts/.vendored_canon_ref (the same check CI runs).
 check-vendored-sync:
     bash scripts/check_vendored_sync.sh
+
+# Scaffold an append-only curation-history record (history/<kind>/<slug>/...).
+# See history/README.md. "$@" not {{args}}: see `set positional-arguments`.
+new-history *args: (_require-claw "kg_microbe_history")
+    #!/usr/bin/env bash
+    set -euo pipefail
+    PYTHONPATH="{{claw_src}}" uv run python -m kg_microbe_history new "$@"
+
+# Validate one history record, or a directory of them, against the vendored
+# schema. Works with no claw checkout, same as CI. The target is read as "$1"
+# inside the script rather than interpolated, so a hostile argument cannot
+# become shell.
+validate-history *args:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    uv run python scripts/validate_history.py "${1:-history}"
 
 # Refresh the generated current-corpus block in README.md.
 docs-stats:
