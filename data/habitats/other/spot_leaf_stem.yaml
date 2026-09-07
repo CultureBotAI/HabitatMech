@@ -1,8 +1,22 @@
 identifier: habitatmech:BACDIVE.31392c69b9
-label: Spot-Leaf,Stem
+label: leaf-or-stem spot lesion environment
+definition: An environment associated with a plant part or small plant which is determined
+  by a discrete necrotic or chlorotic spot lesion on a leaf or stem of a living plant,
+  and which is formed by a localized infection that does not spread systemically through
+  the host.
+definition_source: HabitatMech
 habitat_category: OTHER
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Spot (Leaf,Stem)
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: Spot-Leaf,Stem
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+parent_habitats:
+- ENVO:01001057
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:spot-leaf,stem
@@ -46,3 +60,18 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+- timestamp: '2026-09-06T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: Defined as 'leaf-or-stem spot lesion environment' under ENVO:01001057 'environment
+    associated with a plant part or small plant'. Definition authored from the record's
+    committed deep-research report under research/habitats/, read in full; no new
+    paid research was commissioned. The report confirms BacDive's Infection > Plant
+    infections > Spot (Leaf,Stem) source denotes a localized plant spot lesion rather
+    than the healthy leaf or stem organ. ENVO:01001057 'environment associated with
+    a plant part or small plant' is the tightest vendored genus while ENVO lacks a
+    shared plant-infection-site environment parent. PO:0009047 'stem' drops the leaf
+    disjunct and would collide with both Rot-Root,Stem and Stem-Branch; PO:0025034
+    'leaf' drops the stem disjunct; ENVO:01000170 'indeterminate root nodule infection
+    zone' is a symbiotic, root-specific near miss; disease, trait, and clinical necrotic-lesion
+    terms are the wrong entity type.
