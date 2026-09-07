@@ -554,6 +554,9 @@ classes:
       timestamp:
         range: datetime
         required: true
+        # Deterministic year guard, shared across the Mech repos: rejects the
+        # 2206-for-2026 class of typo without consulting the wall clock.
+        pattern: "^20[0-9]{2}-"
       curator:
         range: string
       action:

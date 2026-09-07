@@ -126,6 +126,11 @@ lint-fix:
 qc:
     uv run python scripts/run_qc.py
 
+# Verify every claw-governed vendored file matches the pinned canonical
+# revision in scripts/.vendored_canon_ref (the same check CI runs).
+check-vendored-sync:
+    bash scripts/check_vendored_sync.sh
+
 # Refresh the generated current-corpus block in README.md.
 docs-stats:
     uv run python scripts/check_docs.py --write
