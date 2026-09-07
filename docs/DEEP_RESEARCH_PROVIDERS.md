@@ -48,7 +48,8 @@ are curator inputs; they never update records automatically.
 ## Canonical pin
 
 `scripts/deep_research_contract.py` is vendored byte-for-byte from the
-canonical `CultureBotAI/culturebotai-claw` artifact. Fleet-governed Mechs pin
-it through `scripts/.vendored_canon_ref`; repositories outside that manifest
-use `scripts/.deep_research_contract_ref`. Do not let local copies evolve
-independently.
+canonical `CultureBotAI/culturebotai-claw` artifact. This repository is a
+fleet-governed consumer and pins it, together with the other vendored files,
+through `scripts/.vendored_canon_ref` (the older, separate
+`scripts/.deep_research_contract_ref` is retired). Do not let local copies
+evolve independently.

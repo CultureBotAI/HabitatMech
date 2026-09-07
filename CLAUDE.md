@@ -73,7 +73,7 @@ test to accommodate a new serializer shape.
 `just render`, and commit the regenerated pages. `pages/` is published and
 checked byte-for-byte.
 
-**Do not edit `src/habitatmech/schema/mech_shared.yaml` here.** It is vendored
+**Do not edit any claw-governed vendored file here** -- `src/habitatmech/schema/mech_shared.yaml`, `src/habitatmech/schema/history.yaml`, `scripts/check_vendored_sync.{py,sh}`, `scripts/validate_id_label_correspondence.py`, `scripts/chem_formula.py`, `scripts/deep_research_contract.py`, `prompts/backlog-loop-goal.md` and the five `tests/test_*` contract files. They are vendored byte-identically from culturebotai-claw at the commit pinned in `scripts/.vendored_canon_ref`; `just check-vendored-sync` (and CI) fails on any local edit. Fix upstream in claw, then re-sync and bump the pin. The older note below about `mech_shared.yaml` still applies: it is vendored
 byte-identically across the Mech repositories and sha-pinned by the schema tests.
 
 ## Safe corpus workflow

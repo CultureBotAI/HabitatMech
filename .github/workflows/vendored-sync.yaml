@@ -22,8 +22,7 @@ name: vendored-sync
 # by hand, which is precisely the drift this guard exists to prevent.
 # Running unconditionally removes the failure class instead of re-syncing two
 # lists. The job uses a thin Bash launcher plus Python's standard library, with
-# no uv/OAK, so there is nothing to save by filtering: the ~2min
-# label-correspondence job keeps its filter.
+# no uv/OAK, so there is nothing to save by filtering.
 
 on:
   pull_request:
