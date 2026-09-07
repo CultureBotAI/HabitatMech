@@ -254,6 +254,7 @@ HabitatMech/
 │   └── habitats/
 │       ├── PATHS.tsv                     # identifier -> slug, pins filenames
 │       └── <category>/<slug>.yaml        # generated HabitatRecords
+├── history/                              # append-only curation-session records
 ├── src/habitatmech/
 │   ├── seed.py                             # harmonization library + CLI
 │   ├── extract.py                          # inventory extraction library + CLI
@@ -262,6 +263,7 @@ HabitatMech/
 │   ├── sampling.py                         # reproducible curation sampling
 │   ├── schema/habitatmech.yaml           # LinkML schema
 │   ├── schema/mech_shared.yaml           # vendored, sha-pinned shared module
+│   ├── schema/history.yaml               # vendored schema for history/ records
 │   ├── validation/write_validated.py     # write-time closed-schema gate
 │   └── curate/curation_event.py          # append-only audit trail helper
 ├── scripts/

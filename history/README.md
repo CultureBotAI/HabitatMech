@@ -24,22 +24,27 @@ every parallel PR; this never does.
 
 ## Writing a record
 
-Do not hand-write the filename or the timestamp. Scaffold it with claw's tool:
+Do not hand-write the filename or the timestamp. Scaffold it with claw's tool.
+Habitat records are build products regenerated from `curation/decisions.tsv`, so
+the target of a curation session is the decision row, not the generated YAML:
 
 ```bash
-just new-history --kind record --slug fecal_environment \
-  --target-root data/habitats/other \
+just new-history --kind mapping --path curation/decisions.tsv --slug fecal_environment \
   --event EDIT --outcome changed \
   --sections grounding,parent_habitats \
-  --summary "Ground to ENVO:01001029 and add the ENVO parent" \
+  --summary "Ground fecal environment to ENVO:01001029 and add the ENVO parent" \
   --model claude-opus-5 --agent-tool claude-code \
   --issue https://github.com/CultureBotAI/HabitatMech/issues/<n> \
   --details "What was done, what evidence was used, how it was validated."
 ```
 
-Habitat records live under `data/habitats/<category>/<slug>.yaml`, so `--slug` is
-the record's filename stem and `--target-root data/habitats/<category>` resolves
-the target path.
+Use `--slug` for the habitat the row concerns so records about one habitat land
+in one directory. A term request targets `curation/term_requests.tsv` the same
+way; a causal-graph curation targets its file under `curation/causal_graphs/`;
+a schema change is `--kind schema --slug habitatmech --target-root
+src/habitatmech/schema`. `--kind record` with `--target-root
+data/habitats/<category>` exists for the rare direct edit that the schema, not
+the seeder, owns, and CLAUDE.md says why that is rare.
 
 `just new-history` needs a claw checkout: it runs `kg_microbe_history` from
 `CLAW_SRC`, which defaults to `../culturebotai-claw/src` and can point anywhere.

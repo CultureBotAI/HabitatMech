@@ -46,20 +46,27 @@ def structural_problem(path: Path) -> str | None:
     session = doc.get("session")
     if not isinstance(session, dict):
         return "session is missing or not a mapping"
-    if not session.get("actors"):
-        return "session.actors is empty"
+    actors = session.get("actors")
+    if not isinstance(actors, list) or not actors:
+        return "session.actors is missing, not a list, or empty"
     events = doc.get("events")
-    if not events:
-        return "events is empty"
+    if not isinstance(events, list) or not events:
+        return "events is missing, not a list, or empty"
     for i, event in enumerate(events):
         if not isinstance(event, dict):
             return f"events[{i}] is not a mapping"
-        details = str(event.get("details") or "").strip()
-        if not details:
-            return f"events[{i}].details is empty"
-        if details.startswith(PLACEHOLDER):
+        details = event.get("details")
+        if not isinstance(details, str) or not details.strip():
+            return f"events[{i}].details is missing or not a non-empty string"
+        if details.strip().startswith(PLACEHOLDER):
             return f"events[{i}].details still holds the scaffolder placeholder"
     return None
+
+
+def linkml_validate() -> str:
+    """The validator next to the running interpreter, so this works outside `uv run`."""
+    beside = Path(sys.executable).parent / "linkml-validate"
+    return str(beside) if beside.exists() else "linkml-validate"
 
 
 def main() -> int:
@@ -81,11 +88,16 @@ def main() -> int:
     if failures:
         return 1
 
-    result = subprocess.run(
-        ["linkml-validate", "--schema", str(SCHEMA), "--target-class", TARGET_CLASS,
-         *[str(p) for p in paths]],
-        cwd=REPO_ROOT, check=False,
-    )
+    try:
+        result = subprocess.run(
+            [linkml_validate(), "--schema", str(SCHEMA), "--target-class", TARGET_CLASS,
+             *[str(p) for p in paths]],
+            cwd=REPO_ROOT, check=False,
+        )
+    except FileNotFoundError:
+        print("validate-history: linkml-validate not found; run under `uv run` or "
+              "`just validate-history`", file=sys.stderr)
+        return 2
     if result.returncode:
         return result.returncode
     print(f"{len(paths)} history record(s) valid against {SCHEMA.relative_to(REPO_ROOT)}")

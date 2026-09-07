@@ -6,7 +6,8 @@ schema := "src/habitatmech/schema/habitatmech.yaml"
 habitats := "data/habitats"
 
 # Shared tooling from a culturebotai-claw checkout. Only new-history reaches it;
-# validation uses the vendored schema and needs no claw at all.
+# validation uses the vendored schema and needs no claw at all. Set CLAW_SRC to
+# override the sibling-checkout default.
 claw_src := env_var_or_default("CLAW_SRC", "../culturebotai-claw/src")
 
 _require-claw module:
@@ -151,14 +152,17 @@ new-history *args: (_require-claw "kg_microbe_history")
     set -euo pipefail
     PYTHONPATH="{{claw_src}}" uv run python -m kg_microbe_history new "$@"
 
-# Validate one history record, or a directory of them, against the vendored
-# schema. Works with no claw checkout, same as CI. The target is read as "$1"
-# inside the script rather than interpolated, so a hostile argument cannot
-# become shell.
+# Validate history records or directories of them against the vendored schema.
+# Works with no claw checkout, same as CI. Targets are read as "$@" inside the
+# script rather than interpolated, so a hostile argument cannot become shell;
+# with no argument the whole history/ tree is validated.
 validate-history *args:
     #!/usr/bin/env bash
     set -euo pipefail
-    uv run python scripts/validate_history.py "${1:-history}"
+    if [ "$#" -eq 0 ]; then set -- history; fi
+    for target in "$@"; do
+      uv run python scripts/validate_history.py "$target"
+    done
 
 # Refresh the generated current-corpus block in README.md.
 docs-stats:
