@@ -17,6 +17,7 @@ against the vendored `history.yaml` with target class HistoryRecord.
 
 from __future__ import annotations
 
+import importlib.util
 import subprocess
 import sys
 from pathlib import Path
@@ -63,10 +64,19 @@ def structural_problem(path: Path) -> str | None:
     return None
 
 
-def linkml_validate() -> str:
-    """The validator next to the running interpreter, so this works outside `uv run`."""
-    beside = Path(sys.executable).parent / "linkml-validate"
-    return str(beside) if beside.exists() else "linkml-validate"
+def validator_command() -> list[str] | None:
+    """The linkml validator, invoked through the interpreter that is running.
+
+    Not the `linkml-validate` console script: its shebang is the absolute path of
+    the interpreter that existed when the virtualenv was built, so moving the
+    checkout leaves a script that cannot start, and execve reports that as a bare
+    ENOENT rather than as the stale shebang it is. Calling the same entry point
+    with `sys.executable` cannot go stale that way, and it guarantees the
+    validator runs in the environment that just parsed these records.
+    """
+    if importlib.util.find_spec("linkml.validator") is None:
+        return None
+    return [sys.executable, "-c", "from linkml.validator.cli import cli; cli()"]
 
 
 def main() -> int:
@@ -88,16 +98,17 @@ def main() -> int:
     if failures:
         return 1
 
-    try:
-        result = subprocess.run(
-            [linkml_validate(), "--schema", str(SCHEMA), "--target-class", TARGET_CLASS,
-             *[str(p) for p in paths]],
-            cwd=REPO_ROOT, check=False,
-        )
-    except FileNotFoundError:
-        print("validate-history: linkml-validate not found; run under `uv run` or "
-              "`just validate-history`", file=sys.stderr)
+    command = validator_command()
+    if command is None:
+        print("validate-history: linkml is not installed in this environment; run "
+              "`just validate-history`, or `uv run python scripts/validate_history.py`",
+              file=sys.stderr)
         return 2
+    result = subprocess.run(
+        [*command, "--schema", str(SCHEMA), "--target-class", TARGET_CLASS,
+         *[str(p) for p in paths]],
+        cwd=REPO_ROOT, check=False,
+    )
     if result.returncode:
         return result.returncode
     print(f"{len(paths)} history record(s) valid against {SCHEMA.relative_to(REPO_ROOT)}")

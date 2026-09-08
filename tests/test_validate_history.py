@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import copy
 import importlib.util
+import sys
 from pathlib import Path
 
 import yaml
@@ -34,6 +35,13 @@ def _write(tmp_path: Path, doc: dict) -> Path:
 def _committed() -> dict:
     assert RECORDS, "the repository ships at least one history record"
     return yaml.safe_load(RECORDS[0].read_text(encoding="utf-8"))
+
+
+def test_the_validator_runs_in_the_current_interpreter():
+    """A console script's shebang goes stale when the checkout moves; this cannot."""
+    command = validate_history.validator_command()
+    assert command is not None, "linkml must be importable for the history gate"
+    assert command[0] == sys.executable
 
 
 def test_placeholder_matches_claws_prefix():
