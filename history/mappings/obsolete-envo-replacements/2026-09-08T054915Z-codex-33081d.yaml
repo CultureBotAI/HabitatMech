@@ -1,0 +1,37 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: obsolete-envo-replacements
+session:
+  id: 2026-09-08T054915Z-codex-33081d
+  timestamp: '2026-09-08T05:49:15Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/269
+  - https://github.com/CultureBotAI/HabitatMech/issues/268
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - history
+  summary: Record the BROAD correction for obsolete ENVO replacements
+  details: 'Adversarial review of PR #267 found that two ENVO replaced-by pointers did not
+    preserve exact scope: obsolete agricultural waste was restricted to wastewater from agriculture,
+    while ENVO:01000371 agricultural waste material also covers manure, slaughterhouse waste,
+    harvest waste, run-off, salt and silt; obsolete geothermal field was restricted to drillable
+    fields for hot brines or heat energy, while ENVO:01001851 geothermally active field covers
+    any field with geothermal processes. The follow-up correction changed those two PREGO
+    decisions from EXACT to BROAD and preserved the pre-existing CLOSE grounding on the merged
+    agricultural waste material record. This record also documents the provenance repair in
+    #269: the first obsolete-envo-replacements history entry described the initial four re-groundings,
+    but its detail line about agricultural waste material upgrading from CLOSE to EXACT became
+    false after #268 and was narrowed before merge. Verified with hidden exact searches over
+    durable inputs for the retired ENVO identifiers and with id-label correspondence, render,
+    redirect, history, and QC gates.'
