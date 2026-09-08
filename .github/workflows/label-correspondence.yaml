@@ -1,0 +1,66 @@
+name: label-correspondence
+
+# Blocking id<->label gate (vendored from claw): every (identifier, label) and
+# (grounding, label) pair under data/habitats/ must correspond to the ontology
+# through OAK. Kept out of the qc job because it needs a cached OAK ontology
+# download that qc would repeat once per Python version in its matrix, and
+# because the ontologies it resolves change under the corpus rather than with it.
+
+on:
+  pull_request:
+    paths: &trigger_paths
+      - "data/habitats/**"
+      - "scripts/validate_id_label_correspondence.py"
+      - "scripts/chem_formula.py"
+      - "conf/id_label_targets.yaml"
+      - ".github/workflows/label-correspondence.yaml"
+      - "pyproject.toml"
+      - "uv.lock"
+  push:
+    branches: [main]
+    paths: *trigger_paths
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: label-correspondence-${{ github.event_name == 'pull_request' && github.ref || github.run_id }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  label-correspondence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: extractions/setup-just@v2
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+      - name: Set up Python
+        run: uv python install 3.12
+      - name: Install dependencies
+        run: uv sync
+      # ENVO, UBERON, FOODON, BTO and PO as semantic-sql databases, about 1.4 GB
+      # together and dominated by UBERON. The key has no lockfile hash: these are
+      # ontology releases, not resolved dependencies, so the cache is refreshed
+      # by bumping the suffix when a newer release is wanted.
+      - name: Cache OAK ontologies
+        uses: actions/cache@v4
+        with:
+          path: ~/.data/oaklib
+          key: oaklib-${{ runner.os }}-v1
+      - name: Generate id<->label drift report
+        run: just report-label-drift
+      - name: Upload drift report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: label-drift-report-${{ github.run_id }}
+          path: reports/label_drift.tsv
+          if-no-files-found: warn
+      - name: Enforce id<->label correspondence
+        run: just validate-products
