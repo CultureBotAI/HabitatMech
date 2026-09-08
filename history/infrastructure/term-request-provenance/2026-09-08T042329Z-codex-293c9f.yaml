@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/build_term_requests.py
+  slug: term-request-provenance
+session:
+  id: 2026-09-08T042329Z-codex-293c9f
+  timestamp: '2026-09-08T04:23:29Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/259
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/265
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - term_requests
+  - robot_template
+  summary: Ignore zero-count merge paths in term-request editor notes
+  details: Fixed scripts/build_term_requests.py after the Dinoflagellates merge exposed that
+    the ROBOT editor note summed every source attestation but displayed only source_attestations[0],
+    which could be a zero-count merged-away path. The exporter now chooses positive-assertion
+    attestations for editor-note provenance when any exist, falls back to zero-count attestations
+    only for genuinely unasserted requests, counts selected source concepts separately from
+    de-duplicated display paths, and trims empty trailing TSV cells. Added focused tests for
+    those paths and verified them with tests/test_term_requests.py plus uv run --extra dev
+    python scripts/run_qc.py.
