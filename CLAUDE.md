@@ -36,11 +36,14 @@ just validate-all      # closed-schema validation of every record
 just verify-corpus     # prove data/habitats reproduces from its inputs
 just render            # regenerate the committed site under pages/
 just docs-stats        # refresh the generated README statistics block
+just new-history ...   # scaffold an append-only curation-history record (needs claw)
+just validate-history  # validate history/ against the vendored schema
 ```
 
 `just qc` is authoritative. It runs lint, documentation consistency, tests,
-closed-schema validation, corpus reproduction, generated-site, redirect and
-term-request checks, then the corpus report. CI invokes the same runner.
+curation-history validation, closed-schema validation, corpus reproduction,
+generated-site, redirect and term-request checks, then the corpus report. CI
+invokes the same runner.
 
 For an upstream refresh:
 
@@ -106,6 +109,16 @@ immediately. Never run a blanket `git checkout --ours/--theirs` across a mixed
 conflict set: it reaches the inputs too, and an input that loses rows still
 reproduces a corpus that is internally consistent, in step with its site, and
 green under `just qc` (#219). `just curation-floor` is the check that catches it.
+
+**Record the session in `history/`.** Every curation session that changes a
+decision row, a term request, a causal-graph curation or the schema gets an
+append-only record under `history/<kind>/<slug>/`, scaffolded with
+`just new-history` (see [history/README.md](history/README.md)) and validated
+with `just validate-history`. Say which model and tool did the work, what
+evidence it used and how it was checked; a record scaffolded without
+`--details` fails validation until the placeholder is replaced. Never edit a
+committed history record; write a new one that references it. Presence is
+advisory, validity is blocking in `just qc`.
 
 **Retired URLs require a post-commit pass.** A deleted working-tree page is not
 visible to the history-based redirect builder until committed. The sequence is:

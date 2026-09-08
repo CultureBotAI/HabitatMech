@@ -79,6 +79,11 @@ through the [GOLD feedback form](https://gold.jgi.doe.gov/help).
 
 ## Evidence and validation
 
+Every curation session that changes a decision row, a term request or a
+causal-graph curation also gets an append-only session record under
+`history/`, scaffolded with `just new-history` and validated by `just qc`.
+[history/README.md](../history/README.md) has the layout and the vocabulary.
+
 Every `GROUND` records both the target CURIE and expected label. Seeding fails
 unless that identifier exists in the vendored slice with the stated label. If a
 valid target is absent, vendor the ontology data rather than weakening the
