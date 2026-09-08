@@ -62,17 +62,15 @@ targets:
     # target rather than to this list if it is ever meant to be checked.
     exclude_keys: [source_attestations, characteristic_taxa, curation_history,
                    synonyms, causal_graphs, environmental_parameters, evidence]
-    # Known bad, not accepted: ENVO obsoleted these nine terms and the corpus
-    # still grounds to them, so the canonical label now begins "obsolete ".
-    # Re-grounding is curation with a slug, page and redirect cascade behind it,
-    # tracked in CultureBotAI/HabitatMech#262. Each entry is an exact (id, label)
-    # pair, so it stops applying the moment the record is re-grounded; delete the
-    # entry then and the gate enforces the new label.
+    # Known bad, not accepted: ENVO obsoleted these terms and the corpus still
+    # grounds to them, so the canonical label now begins "obsolete ". The four
+    # for which ENVO declares a replacement have been re-grounded and their
+    # entries removed. These five have no declared replacement, so each needs a
+    # curator to decide between a broader current term and no term at all;
+    # tracked in CultureBotAI/HabitatMech#262. Each entry is an exact
+    # (id, label) pair, so it stops applying the moment the record is
+    # re-grounded; delete the entry then and the gate enforces the new label.
     exceptions:
-      - { id: "ENVO:00002265", label: "agricultural waste", reason: "obsoleted upstream; replaced by ENVO:01000371 agricultural waste material (#262)" }
-      - { id: "ENVO:00002002", label: "food product", reason: "obsoleted upstream; replaced by FOODON:00001002 food product (#262)" }
-      - { id: "ENVO:00000373", label: "geothermal field", reason: "obsoleted upstream; replaced by ENVO:01001851 (#262)" }
-      - { id: "ENVO:00002041", label: "ground water", reason: "obsoleted upstream; replaced by ENVO:01001004 (#262)" }
       - { id: "ENVO:01000009", label: "biotic mesoscopic physical object", reason: "obsoleted upstream with no declared replacement (#262)" }
       - { id: "ENVO:00002297", label: "environmental feature", reason: "obsoleted upstream with no declared replacement (#262)" }
       - { id: "ENVO:01000105", label: "marine benthic feature", reason: "obsoleted upstream with no declared replacement (#262)" }

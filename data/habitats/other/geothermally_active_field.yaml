@@ -1,0 +1,47 @@
+identifier: ENVO:01001851
+label: geothermally active field
+definition: A field in which geothermal processes occur.
+definition_source: ENVO
+habitat_category: OTHER
+grounding_status: BROAD
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: geothermal field
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: geothermal fields
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+parent_habitats:
+- ENVO:01000352
+source_attestations:
+- source: PREGO
+  source_id: ENVO:00000373
+  source_label: ENVO:00000373
+  assertion_count: 1
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:2
+  source: PREGO
+  taxon_label: Bacteria
+  score: 3.0
+  rank: 1
+  candidate_pool: 1
+curation_history:
+- timestamp: '2026-08-16T05:58:02Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: BROAD.'
+- timestamp: '2026-09-07T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to ENVO:01001851 ''geothermally active field'' (BROAD). PREGO
+    grounded this concept to ENVO''s geothermal field, which ENVO has since obsoleted
+    and marked as replaced by this term. BROAD rather than EXACT: the obsolete term
+    was defined as an area where wells can be drilled to obtain elements in hot brines
+    or to tap heat energy, while the replacement is any field in which geothermal
+    processes occur, so only a drillable subset of it matches. The separate GOLD-sourced
+    geothermal field concept stays ungrounded and is not merged by this row. (source
+    concept habitatmech:PREGO.0aa17935ef)'
