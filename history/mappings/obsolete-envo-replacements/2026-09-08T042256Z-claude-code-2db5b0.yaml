@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: obsolete-envo-replacements
+session:
+  id: 2026-09-08T042256Z-claude-code-2db5b0
+  timestamp: '2026-09-08T04:22:56Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/262
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - decisions
+  - grounding
+  summary: Re-ground the four PREGO concepts whose ENVO terms were obsoleted with a declared
+    replacement
+  details: 'The id-label gate (#263) found nine records grounded to ENVO terms obsoleted upstream.
+    ENVO declares a replacement for four of them, so those four are re-grounded here with
+    GROUND rows keyed on their minted PREGO identifiers: agricultural waste to agricultural
+    waste material, food product to the FOODON term of the same label, geothermal field to
+    geothermally active field, and ground water to groundwater. Two of the replacements already
+    had records, so those concepts merged into them and PREGO''s attestations and taxa joined;
+    the agricultural waste material record''s grounding rose from CLOSE to EXACT because the
+    merged PREGO concept maps exactly where the GOLD path maps closely. The other two produced
+    new records and retired their old slugs. Evidence for each row is ENVO''s own replaced-by
+    assertion plus the replacement''s synonyms, which still carry the obsolete labels for
+    two of the four. The remaining five obsolete terms have no declared replacement and stay
+    as exceptions in conf/id_label_targets.yaml under #262. Verified: seed dry run showed
+    exactly four stale files, a forced canary on the merge case was inspected before the bulk
+    write, and just qc passes including corpus reproduction.'

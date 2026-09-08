@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>agricultural waste material — HabitatMech</title>
-<meta name="description" content="agricultural waste material (ENVO:01000371): a microbial habitat harmonized from GOLD.">
+<meta name="description" content="agricultural waste material (ENVO:01000371): a microbial habitat harmonized from GOLD, PREGO.">
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -22,7 +22,7 @@
 <p class="meta">
   <code class="curie">ENVO:01000371</code>
 <span class="sep">·</span><a href="http://purl.obolibrary.org/obo/ENVO_01000371">resolve</a>  <span class="sep">·</span><a href="../category/engineered.html">ENGINEERED</a>
-  <span class="sep">·</span><span class="pill">CLOSE</span>
+  <span class="sep">·</span><span class="pill">EXACT</span>
   <span class="pill">REVIEWED</span>
 </p>
 
@@ -41,6 +41,12 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
     <td class="num">2</td>
     <td>ORGANISM</td>
   </tr>
+  <tr>
+    <td><span class="pill plain">PREGO</span></td>
+    <td>ENVO:00002265</td>
+    <td class="num">5</td>
+    <td>TAXON</td>
+  </tr>
 </table>
 
 <h2>Broader habitats</h2>
@@ -50,11 +56,55 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 </ul>
 
 
+<h2>Associated taxa</h2>
+<p class="meta">Taxa <em>reported from</em> this habitat, which is weaker than being
+characteristic of it. <code>rank</code> is out of <code>pool</code>: a high rank in a
+pool of thousands of near-tied scores is a weak claim. Entries corroborated by a
+second, independent source are listed first.</p>
+<table>
+  <caption>Taxa reported from this habitat</caption>
+  <thead><tr><th scope="col">Taxon</th><th scope="col">Source</th><th scope="col" class="num">Rank</th><th scope="col" class="num">Pool</th><th scope="col">Corroborated</th></tr></thead>
+  <tr>
+    <td><em>Compostimonas suwonensis</em> <code class="curie">NCBITaxon:1048394</code></td>
+    <td><span class="pill plain">PREGO</span></td>
+    <td class="num">1</td>
+    <td class="num">5</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><em>Arenimonas composti TR7-09 = DSM 18010</em> <code class="curie">NCBITaxon:1121013</code></td>
+    <td><span class="pill plain">PREGO</span></td>
+    <td class="num">2</td>
+    <td class="num">5</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><em>Desulfallas thermosapovorans DSM 6562</em> <code class="curie">NCBITaxon:1121431</code></td>
+    <td><span class="pill plain">PREGO</span></td>
+    <td class="num">3</td>
+    <td class="num">5</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><em>Ruminiclostridium cellulolyticum H10</em> <code class="curie">NCBITaxon:394503</code></td>
+    <td><span class="pill plain">PREGO</span></td>
+    <td class="num">4</td>
+    <td class="num">5</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><em>Nocardioides sp. J52</em> <code class="curie">NCBITaxon:935865</code></td>
+    <td><span class="pill plain">PREGO</span></td>
+    <td class="num">5</td>
+    <td class="num">5</td>
+    <td></td>
+  </tr>
+</table>
 
 
 <h2>Also called</h2>
 <ul class="plain">
-<li>Agricultural waste <span class="meta">— GOLD</span></li><li>agricultural waste <span class="meta">— ENVO</span></li></ul>
+<li>Agricultural waste <span class="meta">— GOLD</span></li><li>agricultural waste <span class="meta">— ENVO</span></li><li>agricultural waste <span class="meta">— PREGO</span></li><li>agricultural wastes <span class="meta">— PREGO</span></li></ul>
 
 <h2>Curation</h2>
 <p class="meta">What a curator decided about this record, and why. A record built
@@ -64,6 +114,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">REVIEW</span>
     <span class="meta">2026-08-16 · claude-opus-5</span>
     <p>Reviewed and endorsed the seeder&#39;s own resolution. CLOSE-grounding review (#12): read against the full source path and the term&#39;s own definition. The grounding is right and CLOSE is the honest status — the term is the concept with a difference of framing or specificity that EXACT would overstate. (source concept habitatmech:GOLD.2021aa3231)</p>
+  </li>
+  <li>
+    <span class="pill">GROUND</span>
+    <span class="meta">2026-09-07 · claude-opus-5</span>
+    <p>Grounded to ENVO:01000371 &#39;agricultural waste material&#39; (EXACT). PREGO grounded this concept to ENVO&#39;s agricultural waste, which ENVO has since obsoleted and marked as replaced by this term. The replacement carries agricultural waste as a synonym, so the concept PREGO attested is unchanged and only the term naming it moved. Merges with the existing agricultural waste material record, where PREGO&#39;s taxon assertions belong. (source concept habitatmech:PREGO.ae82b5486e)</p>
   </li>
 </ol>
 
