@@ -6,7 +6,7 @@ definition: Agricultural waste is waste produced as a result of various agricult
   air or soils; and salt and silt drained from fields.
 definition_source: ENVO
 habitat_category: ENGINEERED
-grounding_status: EXACT
+grounding_status: CLOSE
 mapping_status: REVIEWED
 synonyms:
 - synonym_text: Agricultural waste
@@ -83,13 +83,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
-    EXACT.'
+    CLOSE.'
 - timestamp: '2026-09-07T00:00:00Z'
   curator: claude-opus-5
   action: GROUND
-  changes: Grounded to ENVO:01000371 'agricultural waste material' (EXACT). PREGO
-    grounded this concept to ENVO's agricultural waste, which ENVO has since obsoleted
-    and marked as replaced by this term. The replacement carries agricultural waste
-    as a synonym, so the concept PREGO attested is unchanged and only the term naming
-    it moved. Merges with the existing agricultural waste material record, where PREGO's
-    taxon assertions belong. (source concept habitatmech:PREGO.ae82b5486e)
+  changes: 'Grounded to ENVO:01000371 ''agricultural waste material'' (BROAD). PREGO
+    grounded this concept to ENVO''s agricultural waste, which ENVO has since obsoleted
+    and marked as replaced by this term. BROAD rather than EXACT: the obsolete term
+    was defined as wastewater produced in the course of agricultural activities, while
+    the replacement covers manure, slaughterhouse and harvest waste, run-off, salt
+    and silt as well. The label synonym shows they share a name, not a scope. Merges
+    with the existing agricultural waste material record, whose CLOSE grounding from
+    the GOLD path stands unchanged. (source concept habitatmech:PREGO.ae82b5486e)'

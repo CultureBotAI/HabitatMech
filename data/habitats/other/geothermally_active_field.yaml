@@ -3,7 +3,7 @@ label: geothermally active field
 definition: A field in which geothermal processes occur.
 definition_source: ENVO
 habitat_category: OTHER
-grounding_status: EXACT
+grounding_status: BROAD
 mapping_status: REVIEWED
 synonyms:
 - synonym_text: geothermal field
@@ -33,12 +33,15 @@ curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: BROAD.'
 - timestamp: '2026-09-07T00:00:00Z'
   curator: claude-opus-5
   action: GROUND
-  changes: Grounded to ENVO:01001851 'geothermally active field' (EXACT). PREGO grounded
-    this concept to ENVO's geothermal field, which ENVO has since obsoleted and marked
-    as replaced by this term; both definitions describe a field in which geothermal
-    processes occur. The separate GOLD-sourced geothermal field concept stays ungrounded
-    and is not merged by this row. (source concept habitatmech:PREGO.0aa17935ef)
+  changes: 'Grounded to ENVO:01001851 ''geothermally active field'' (BROAD). PREGO
+    grounded this concept to ENVO''s geothermal field, which ENVO has since obsoleted
+    and marked as replaced by this term. BROAD rather than EXACT: the obsolete term
+    was defined as an area where wells can be drilled to obtain elements in hot brines
+    or to tap heat energy, while the replacement is any field in which geothermal
+    processes occur, so only a drillable subset of it matches. The separate GOLD-sourced
+    geothermal field concept stays ungrounded and is not merged by this row. (source
+    concept habitatmech:PREGO.0aa17935ef)'
