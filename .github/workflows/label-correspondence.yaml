@@ -13,6 +13,8 @@ on:
       - "scripts/validate_id_label_correspondence.py"
       - "scripts/chem_formula.py"
       - "conf/id_label_targets.yaml"
+      # The recipes are part of the gate: editing one has to re-run it.
+      - "justfile"
       - ".github/workflows/label-correspondence.yaml"
       - "pyproject.toml"
       - "uv.lock"
@@ -28,6 +30,8 @@ concurrency:
   group: label-correspondence-${{ github.event_name == 'pull_request' && github.ref || github.run_id }}
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
+# Actions are tag-pinned, as in main.yaml; vendored-sync.yaml SHA-pins because
+# its payload is byte-governed by claw.
 jobs:
   label-correspondence:
     runs-on: ubuntu-latest
@@ -36,7 +40,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
-      - uses: extractions/setup-just@v2
+      - uses: extractions/setup-just@v4
       - uses: astral-sh/setup-uv@v5
         with:
           enable-cache: true

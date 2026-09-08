@@ -14,7 +14,8 @@
 # label names, which is exactly what this gate can falsify.
 #
 # `source_attestations` is deliberately NOT checked, and that is the one
-# judgement in this file worth stating plainly. An attestation records that a
+# judgement in this file worth stating plainly. It is out of scope because no
+# target names its keys, not because it is excluded below. An attestation records that a
 # source asserted a concept and what that source called it: GOLD's "Abyssal
 # plane", BacDive's isolation-source string, MADIN's own rendering of an ENVO
 # term. The label is provenance, quoted from the source, so it is not a claim
@@ -52,6 +53,13 @@ targets:
     policy: canonical_or_synonym
     pairs:
       - [identifier, label]
+    # What scopes this target is the pair itself: `identifier` occurs only at the
+    # document root, and the surfaces below carry different key names, so they
+    # are already out of reach. The exclusions prune the walk -- 12,659 taxon
+    # dicts alone -- and are insurance for the day a nested block grows an
+    # `identifier`. That cuts the other way too: a new (identifier, label) pair
+    # under one of these keys would be skipped in silence, so add the block to a
+    # target rather than to this list if it is ever meant to be checked.
     exclude_keys: [source_attestations, characteristic_taxa, curation_history,
                    synonyms, causal_graphs, environmental_parameters, evidence]
     # Known bad, not accepted: ENVO obsoleted these nine terms and the corpus

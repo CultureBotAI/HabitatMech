@@ -155,7 +155,6 @@ validate-products:
 # The same check written to reports/label_drift.tsv without failing (CI triage
 # artifact, so a red build still ships the list it was red about).
 report-label-drift:
-    mkdir -p reports
     uv run python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml --report reports/label_drift.tsv || true
 
 # Scaffold an append-only curation-history record (history/<kind>/<slug>/...).
