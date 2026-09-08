@@ -1,0 +1,89 @@
+# Targets for scripts/validate_id_label_correspondence.py (vendored from claw).
+#
+# Declares which HabitatMech surfaces carry ontology (id, label) pairs and how
+# strictly the label must correspond to the ontology's own label.
+#
+# A CURIE prefix is handled three ways:
+#   * in `adapters`          -> looked up against that OAK ontology.
+#   * in `ignored_prefixes`  -> legitimate non-OAK id; SKIPPED_NO_ADAPTER.
+#   * neither                -> UNKNOWN_PREFIX (ERROR), a typo or an unexpected
+#                              new prefix that must be triaged.
+#
+# Two surfaces are checked: the record's own identity, and the groundings on
+# causal-graph nodes. Both are curated claims that an id denotes the thing the
+# label names, which is exactly what this gate can falsify.
+#
+# `source_attestations` is deliberately NOT checked, and that is the one
+# judgement in this file worth stating plainly. It is out of scope because no
+# target names its keys, not because it is excluded below. An attestation records that a
+# source asserted a concept and what that source called it: GOLD's "Abyssal
+# plane", BacDive's isolation-source string, MADIN's own rendering of an ENVO
+# term. The label is provenance, quoted from the source, so it is not a claim
+# about the ontology and a difference from the canonical label is the data, not
+# drift. Checking it would either force the quotes to be rewritten or fill the
+# report with accepted residuals until nobody reads it.
+#
+# `characteristic_taxa` is not checked either: its 13,181 pairs are NCBITaxon,
+# whose sqlite is over a gigabyte, and the labels come from the same sources
+# that supplied the ids. Adopting it applies here; it needs the taxon labels to
+# be treated as curated rather than quoted first.
+
+adapters:
+  ENVO: sqlite:obo:envo
+  UBERON: sqlite:obo:uberon
+  FOODON: sqlite:obo:foodon
+  BTO: sqlite:obo:bto
+  PO: sqlite:obo:po
+
+ignored_prefixes:
+  - habitatmech   # minted content-hashed ids for concepts with no ontology term
+  - NCIT          # 3 records; the NCIt sqlite is very large for that surface
+  - mesh          # 4 records; same trade, and MeSH labels are the source's own
+
+# A label that matches an exact or related synonym is accepted: habitat curation
+# routinely prefers the name a field uses over the ontology's primary label.
+synonym_scope: exact_related
+
+targets:
+  # The record's own identity: a grounded habitat is an ontology term, and the
+  # label is what this corpus calls it.
+  - name: record_identity
+    kind: yaml
+    glob: "data/habitats/**/*.yaml"
+    policy: canonical_or_synonym
+    pairs:
+      - [identifier, label]
+    # What scopes this target is the pair itself: `identifier` occurs only at the
+    # document root, and the surfaces below carry different key names, so they
+    # are already out of reach. The exclusions prune the walk -- 12,659 taxon
+    # dicts alone -- and are insurance for the day a nested block grows an
+    # `identifier`. That cuts the other way too: a new (identifier, label) pair
+    # under one of these keys would be skipped in silence, so add the block to a
+    # target rather than to this list if it is ever meant to be checked.
+    exclude_keys: [source_attestations, characteristic_taxa, curation_history,
+                   synonyms, causal_graphs, environmental_parameters, evidence]
+    # Known bad, not accepted: ENVO obsoleted these nine terms and the corpus
+    # still grounds to them, so the canonical label now begins "obsolete ".
+    # Re-grounding is curation with a slug, page and redirect cascade behind it,
+    # tracked in CultureBotAI/HabitatMech#262. Each entry is an exact (id, label)
+    # pair, so it stops applying the moment the record is re-grounded; delete the
+    # entry then and the gate enforces the new label.
+    exceptions:
+      - { id: "ENVO:00002265", label: "agricultural waste", reason: "obsoleted upstream; replaced by ENVO:01000371 agricultural waste material (#262)" }
+      - { id: "ENVO:00002002", label: "food product", reason: "obsoleted upstream; replaced by FOODON:00001002 food product (#262)" }
+      - { id: "ENVO:00000373", label: "geothermal field", reason: "obsoleted upstream; replaced by ENVO:01001851 (#262)" }
+      - { id: "ENVO:00002041", label: "ground water", reason: "obsoleted upstream; replaced by ENVO:01001004 (#262)" }
+      - { id: "ENVO:01000009", label: "biotic mesoscopic physical object", reason: "obsoleted upstream with no declared replacement (#262)" }
+      - { id: "ENVO:00002297", label: "environmental feature", reason: "obsoleted upstream with no declared replacement (#262)" }
+      - { id: "ENVO:01000105", label: "marine benthic feature", reason: "obsoleted upstream with no declared replacement (#262)" }
+      - { id: "ENVO:00002004", label: "mesoscopic physical object", reason: "obsoleted upstream with no declared replacement (#262)" }
+      - { id: "ENVO:01000159", label: "organic feature", reason: "obsoleted upstream with no declared replacement (#262)" }
+
+  # Causal-graph nodes: (grounding, label) on the node the curator wrote.
+  - name: grounded_causal_nodes
+    kind: yaml
+    glob: "data/habitats/**/*.yaml"
+    policy: canonical_or_synonym
+    pairs:
+      - [grounding, label]
+    exclude_keys: [source_attestations, characteristic_taxa, curation_history, synonyms]

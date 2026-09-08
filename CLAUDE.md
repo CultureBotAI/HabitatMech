@@ -38,12 +38,22 @@ just render            # regenerate the committed site under pages/
 just docs-stats        # refresh the generated README statistics block
 just new-history ...   # scaffold an append-only curation-history record (needs claw)
 just validate-history  # validate history/ against the vendored schema
+just validate-products # id<->label correspondence against the ontologies (OAK)
+just report-label-drift # the same check as a report, without failing
 ```
 
-`just qc` is authoritative. It runs lint, documentation consistency, tests,
-curation-history validation, closed-schema validation, corpus reproduction,
-generated-site, redirect and term-request checks, then the corpus report. CI
-invokes the same runner.
+`just qc` is authoritative for everything that runs offline: lint, documentation
+consistency, tests, curation-history validation, closed-schema validation, corpus
+reproduction, generated-site, redirect and term-request checks, then the corpus
+report. CI invokes the same runner.
+
+The one gate outside it is id-label correspondence, which resolves ENVO, UBERON,
+FOODON, BTO and PO through OAK; qc would repeat that download once per Python
+version in its matrix, so it runs in its own blocking `label-correspondence`
+workflow instead. Run `just validate-products` before pushing a grounding
+change, and `just report-label-drift` to see the whole list without failing.
+What it checks, what it deliberately does not, and the residuals it accepts are
+stated in `conf/id_label_targets.yaml`.
 
 For an upstream refresh:
 

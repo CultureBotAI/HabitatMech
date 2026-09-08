@@ -36,6 +36,15 @@ dependencies = [
     "pyyaml>=6.0",
     "click>=8.1.0",
     "jinja2>=3.1.0",
+    # The vendored id-label correspondence gate resolves CURIEs through OAK.
+    # A runtime dependency, not a dev extra: `just validate-products` and the
+    # label-correspondence workflow both run it after a plain `uv sync`.
+    # >=0.7.3 rather than 0.7.2, which declares requires_python <3.14 while this
+    # project claims >=3.10 with no ceiling. Matches the other Mechs.
+    "oaklib>=0.7.3",
+    # oaklib imports eutils, which still imports pkg_resources; setuptools 82
+    # removed it, and uv does not install setuptools unless it is declared.
+    "setuptools<82",
 ]
 
 [project.optional-dependencies]
@@ -43,16 +52,6 @@ dev = [
     "pytest>=7.4",
     "pytest-cov>=4.1",
     "ruff>=0.4",
-    # The vendored id-label correspondence gate resolves CURIEs through OAK.
-    # A dev extra rather than a runtime dependency until the gate is wired
-    # (conf/id_label_targets.yaml and a recipe; #256): its contract tests run
-    # offline and CI installs the extra before pytest. >=0.7.3 rather than
-    # 0.7.2, which declares requires_python <3.14 while this project claims
-    # >=3.10 with no ceiling.
-    "oaklib>=0.7.3",
-    # oaklib imports eutils, which still imports pkg_resources; setuptools 82
-    # removed it, and uv does not install setuptools unless it is declared.
-    "setuptools<82",
 ]
 # Only scripts/research_habitat.py needs this, and only when actually calling a
 # provider. Seeding, validation, rendering and the whole test suite run without
