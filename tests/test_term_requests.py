@@ -104,6 +104,136 @@ def test_created_by_is_left_empty_rather_than_guessed(requests_module, repo_root
     )
 
 
+def test_editor_note_drops_zero_count_merge_paths(requests_module):
+    row = {
+        "identifier": "habitatmech:GOLD.94019ddb33",
+        "requested_label": "dinoflagellate-associated environment",
+        "parent_class": "ENVO:01001000",
+        "definition": "An environmental system determined by a dinoflagellate.",
+        "exact_synonym": "",
+        "notes": "Test note.",
+    }
+    corpus = {
+        row["identifier"]: {
+            "identifier": row["identifier"],
+            "label": row["requested_label"],
+            "source_attestations": [
+                {
+                    "source": "GOLD",
+                    "source_path": "Host-associated > Microbial > Dinoflagellates",
+                },
+                {
+                    "source": "GOLD",
+                    "source_path": "Host-associated > Protists > Dinoflagellates",
+                    "assertion_count": 16,
+                },
+                {
+                    "source": "GOLD",
+                    "source_path": "Host-associated > Algae > Dinoflagellates",
+                    "assertion_count": 3,
+                },
+            ],
+        }
+    }
+
+    built = requests_module.build([row], corpus)
+
+    assert len(built) == 1
+    note = built[0]["editors note"]
+    assert "19 upstream assertions across 2 source concept(s)" in note
+    assert "Host-associated > Protists > Dinoflagellates" in note
+    assert "Host-associated > Algae > Dinoflagellates" in note
+    assert "Host-associated > Microbial > Dinoflagellates" not in note
+
+
+def test_editor_note_keeps_zero_count_paths_when_no_assertions_exist(
+    requests_module,
+):
+    row = {
+        "identifier": "habitatmech:GOLD.9f162205a6",
+        "requested_label": "fish embryo-associated environment",
+        "parent_class": "ENVO:01001002",
+        "definition": "An animal-associated environment which is determined by a fish embryo.",
+        "exact_synonym": "",
+        "notes": "Test note.",
+    }
+    corpus = {
+        row["identifier"]: {
+            "identifier": row["identifier"],
+            "label": row["requested_label"],
+            "source_attestations": [
+                {
+                    "source": "GOLD",
+                    "source_path": "Host-associated > Fish > Embryo",
+                },
+            ],
+        }
+    }
+
+    built = requests_module.build([row], corpus)
+
+    assert len(built) == 1
+    note = built[0]["editors note"]
+    assert "0 upstream assertions across 1 source concept(s)" in note
+    assert "Host-associated > Fish > Embryo" in note
+
+
+def test_editor_note_counts_duplicate_display_paths_separately(
+    requests_module,
+):
+    row = {
+        "identifier": "habitatmech:BACDIVE.0f1e92a02c",
+        "requested_label": "free-living environment",
+        "parent_class": "ENVO:01000254",
+        "definition": "An environmental system which is sampled in place.",
+        "exact_synonym": "",
+        "notes": "Test note.",
+    }
+    corpus = {
+        row["identifier"]: {
+            "identifier": row["identifier"],
+            "label": row["requested_label"],
+            "source_attestations": [
+                {
+                    "source": "BACDIVE",
+                    "source_label": "Environmental",
+                    "assertion_count": 5,
+                },
+                {
+                    "source": "GOLD",
+                    "source_path": "Environmental",
+                    "assertion_count": 7,
+                },
+            ],
+        }
+    }
+
+    built = requests_module.build([row], corpus)
+
+    assert len(built) == 1
+    note = built[0]["editors note"]
+    assert "12 upstream assertions across 2 source concept(s)" in note
+    assert note.count("Environmental") == 1
+
+
+def test_formatter_preserves_leading_blank_cells_without_trailing_tabs(
+    requests_module,
+):
+    row = {
+        "Ontology ID": "",
+        "label": "test term",
+        "parent class": "ENVO:00000000",
+    }
+
+    line = requests_module._format_tsv_row(
+        row,
+        ["Ontology ID", "label", "parent class", "created by"],
+    )
+
+    assert line == "\ttest term\tENVO:00000000"
+    assert not line.endswith("\t")
+
+
 @pytest.mark.parametrize(
     "synonym, why",
     [

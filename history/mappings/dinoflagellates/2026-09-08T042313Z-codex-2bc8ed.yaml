@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: dinoflagellates
+session:
+  id: 2026-09-08T042313Z-codex-2bc8ed
+  timestamp: '2026-09-08T04:23:13Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/258
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/265
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - source_attestations
+  summary: Merge the zero-count Microbial Dinoflagellates source
+  details: 'Replaced the class-level habitatmech:GOLD.e9d0a5a093 CONFIRM_UNGROUNDED sweep
+    with an item-level SAME_AS decision into habitatmech:GOLD.94019ddb33. The review used
+    the existing #108 Protists-path Dinoflagellates decision, the #161/#218 Algae duplicate
+    merge rationale, the committed alga- and microbe-associated term requests, and exact ignored-file-inclusive
+    searches for existing Dinoflagellates decisions, slugs, and issues. Full regeneration
+    plus uv run --extra dev python scripts/run_qc.py verified the duplicate YAML collapsed
+    into the surviving record and Endosymbionts relinked to the survivor. This session record
+    addresses the missing-history finding filed in #266.'

@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: dinoflagellates
+session:
+  id: 2026-09-08T042321Z-codex-94a830
+  timestamp: '2026-09-08T04:23:21Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/266
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/265
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - term_request
+  - definition
+  - parent_habitats
+  summary: Request dinoflagellate-associated environment
+  details: 'Added a HabitatMech term request for habitatmech:GOLD.94019ddb33 as dinoflagellate-associated
+    environment under ENVO:01001000. The definition was curated from the existing item-level
+    #108 and #161 decisions and the committed alga- and microbe-associated environment rationales;
+    no new paid research was commissioned. Exact ignored-file-inclusive searches found no
+    existing dinoflagellate-, protist-, alga-, or microbe-associated ENVO request to reuse.
+    Full regeneration plus uv run --extra dev python scripts/run_qc.py verified the ROBOT
+    template, public term request page, record YAML, and renamed habitat page.'

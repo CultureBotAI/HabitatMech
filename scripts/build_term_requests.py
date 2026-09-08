@@ -220,6 +220,32 @@ def validate(requests: list[dict], corpus: dict[str, dict],
         )
 
 
+def _source_attestations_for_editor_note(doc: dict) -> list[dict]:
+    attestations = doc.get("source_attestations") or []
+    asserted = [
+        a for a in attestations
+        if (a.get("assertion_count") or 0) > 0
+    ]
+    return asserted or attestations
+
+
+def _source_paths_for_editor_note(attestations: list[dict]) -> list[str]:
+    paths = []
+    for attestation in attestations:
+        path = (
+            attestation.get("source_path")
+            or attestation.get("source_label")
+            or ""
+        ).strip()
+        if path and path not in paths:
+            paths.append(path)
+    return paths
+
+
+def _format_tsv_row(row: dict, columns: list[str]) -> str:
+    return "\t".join(row.get(c, "") for c in columns).rstrip("\t")
+
+
 def build(requests: list[dict], corpus: dict[str, dict]) -> list[dict]:
     """One row per REQUESTED TERM, not per record.
 
@@ -240,14 +266,17 @@ def build(requests: list[dict], corpus: dict[str, dict]) -> list[dict]:
         doc = corpus[row["identifier"]]
         assertions = sum(a.get("assertion_count") or 0
                          for a in doc.get("source_attestations") or [])
-        attestation = (doc.get("source_attestations") or [{}])[0]
+        note_attestations = _source_attestations_for_editor_note(doc)
         entry = merged.setdefault(row["requested_label"], {
             "row": row, "assertions": 0, "sources": set(),
-            "paths": [], "urls": [], "synonyms": set(),
+            "source_concepts": 0, "paths": [], "urls": [], "synonyms": set(),
         })
         entry["assertions"] += assertions
+        entry["source_concepts"] += len(note_attestations)
         entry["sources"].update(a["source"] for a in doc.get("source_attestations") or [])
-        entry["paths"].append(attestation.get("source_path") or attestation.get("source_label") or "")
+        for path in _source_paths_for_editor_note(note_attestations):
+            if path not in entry["paths"]:
+                entry["paths"].append(path)
         entry["urls"].append(f"{SITE_BASE}habitats/{page_slug(doc)}.html")
         if (row.get("exact_synonym") or "").strip():
             entry["synonyms"].update(s.strip() for s in row["exact_synonym"].split("|") if s.strip())
@@ -267,7 +296,7 @@ def build(requests: list[dict], corpus: dict[str, dict]) -> list[dict]:
             "editors note": (
                 f"Requested by HabitatMech. Attested by "
                 f"{', '.join(sorted(entry['sources']))} with {entry['assertions']} "
-                f"upstream assertions across {len(entry['paths'])} source concept(s): "
+                f"upstream assertions across {entry['source_concepts']} source concept(s): "
                 f"{'; '.join(p for p in entry['paths'] if p)}. {row['notes']}"
             ),
             "exact synonym": "|".join(sorted(entry["synonyms"])),
@@ -338,7 +367,7 @@ def main(argv: list[str] | None = None) -> int:
     rows = build(requests, corpus)
 
     table = "\n".join(
-        ["\t".join(COLUMNS)] + ["\t".join(r.get(c, "") for c in COLUMNS) for r in rows]
+        ["\t".join(COLUMNS)] + [_format_tsv_row(row, COLUMNS) for row in rows]
     ) + "\n"
     out_path = args.out / "envo_robot_template.tsv"
 
