@@ -1,10 +1,30 @@
 identifier: habitatmech:GOLD.1208484062
-label: Carbonate
+label: serpentinization-hosted carbonate hydrothermal vent chimney
+definition: A marine hydrothermal vent chimney which is built of brucite and calcium
+  and magnesium carbonates precipitated where low-temperature, hyperalkaline, hydrogen-
+  and methane-rich fluid produced by serpentinization of ultramafic rock mixes with
+  seawater.
+definition_source: HabitatMech
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Carbonate
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: carbonaceous chimney
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: carbonate chimney
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: carbonate edifice
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- habitatmech:GOLD.94b8786010
+- ENVO:01000129
+xrefs:
+- ENVO:01000053
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3969
@@ -18,12 +38,33 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
-- timestamp: '2026-08-21T00:00:00Z'
+- timestamp: '2026-09-08T00:00:00Z'
   curator: codex-gpt-5
   action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Non-habitat
-    screen review (#108): in Environmental > Aquatic > Non-marine Saline and Alkaline
-    > Alkaline > Carbonate, the leaf scopes an alkaline carbonate-rich aquatic environment;
-    it does not claim that the carbonate ion itself is the habitat. An external chemical
-    term is external evidence for the modifier and is not in the committed slice.
-    (source concept habitatmech:GOLD.1208484062)'
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ENVO:01000053
+    ''marine ultramafic hydrothermal vent biome'' kept as an xref. Definition research
+    for Carbonate traced the inspected GOLD organism rows to Prony Hydrothermal Field
+    carbonate chimneys, not to soda-lake water or to carbonate ion as a habitat. The
+    leaf denotes a serpentinization-hosted brucite/carbonate hydrothermal chimney;
+    ENVO:01000129 is the term-request genus, ENVO:01000053 is related ultramafic vent
+    context rather than an identity or parent, and alkaline-water and carbonate-chemistry
+    terms describe the venting fluid or its chemistry rather than the sampled chimney.
+    GOLD''s Non-marine Saline and Alkaline placement is a source classification artifact
+    here because the chimneys stand in shallow marine and intertidal settings. (source
+    concept habitatmech:GOLD.1208484062)'
+- timestamp: '2026-09-08T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: Defined as 'serpentinization-hosted carbonate hydrothermal vent chimney'
+    under ENVO:01000129 'marine hydrothermal vent chimney'. Definition authored from
+    a Carbonate evidence review. The review checked ten of the twelve current organism
+    assertions against the 2021 GOLD export and isolate descriptions, found only Prony
+    Hydrothermal Field carbonate-chimney isolates, and concluded that GOLD's bare
+    Carbonate leaf denotes a serpentinization-driven carbonate chimney rather than
+    carbonate-rich soda-lake water. ENVO:01000129 'marine hydrothermal vent chimney'
+    is the tightest vendored genus because existing alkaline-water, microbialite,
+    carbonate-rock and smoker terms describe the wrong material, process or vent type.
+    parent_mode=REPLACE intentionally drops the inherited Alkaline parent because
+    it is marked NOT_APPLICABLE and because this leaf is marine or intertidal despite
+    GOLD's Non-marine bucket. Two organism rows added after the local 2021 GOLD export
+    remain unchecked because live GOLD fetches returned 403.

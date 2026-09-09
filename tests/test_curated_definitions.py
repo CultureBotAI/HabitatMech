@@ -109,6 +109,16 @@ def test_host_definition_batch_preserves_habitat_and_xref_semantics(repo_root):
             "ENVO:01001000",
             {"NCBITaxon:2836"},
         ),
+        "habitatmech:GOLD.6a7bcba80d": (
+            "amoebozoan-associated environment",
+            "ENVO:01001000",
+            set(),
+        ),
+        "habitatmech:GOLD.769955119f": (
+            "platyhelminth-associated environment",
+            "ENVO:01001002",
+            set(),
+        ),
     }
 
     concepts = {concept.identifier: concept for concept in build_corpus().concepts}

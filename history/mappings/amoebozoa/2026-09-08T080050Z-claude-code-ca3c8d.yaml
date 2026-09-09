@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: amoebozoa
+session:
+  id: 2026-09-08T080050Z-claude-code-ca3c8d
+  timestamp: '2026-09-08T08:00:50Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - parent_habitats
+  - synonyms
+  summary: Define amoebozoan-associated environment
+  details: 'Authored curation/term_requests.tsv for habitatmech:GOLD.6a7bcba80d from the item-level
+    #108 decision after exact ignored-and-hidden searches for the identifier and requested
+    label. The row defines amoebozoan-associated environment under ENVO:01001000, keeps Amoebozoa
+    as the source exact synonym, and deliberately leaves the zero-count Host-associated >
+    Protists > Amoebozoa duplicate for a separate item-level review. Validated with the focused
+    curated-definition tests, seed dry run, two-record seed canary, term-request export regeneration,
+    and render regeneration.'
