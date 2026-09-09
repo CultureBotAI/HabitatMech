@@ -1,9 +1,18 @@
 identifier: habitatmech:GOLD.a3c5e2adba
-label: 'Beehive: Cerumen'
+label: stingless bee cerumen
+definition: An environmental material which stingless bees produce by kneading self-secreted
+  beeswax together with collected plant resins and use to build brood cells, involucrum,
+  storage pots, and internal nest linings.
+definition_source: HabitatMech
 habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: 'Beehive: Cerumen'
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:00010483
 - habitatmech:GOLD.076eb28273
 source_attestations:
 - source: GOLD
@@ -11,17 +20,28 @@ source_attestations:
   source_label: 'Beehive: Cerumen'
   source_path: 'Environmental > Terrestrial > Nest > Insects nest > Beehive: Cerumen'
 curation_history:
-- timestamp: '2026-08-16T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Sibling-path
-    review (#12): grounding ''Cerumen/Earwax'' made this stale, but UBERON:0002297
-    ''cerumen'' is defined as the secretion of apocrine sweat glands in the external
-    auditory canal. Beehive cerumen is the wax-and-propolis mixture stingless bees
-    build with; they share a word and nothing else. The slice has no term for it.
-    Path: Environmental > Terrestrial > Nest > Insects nest > Beehive: Cerumen (source
-    concept habitatmech:GOLD.a3c5e2adba)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-09-08T00:00:00Z'
+  curator: codex-gpt-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Definition research
+    for Beehive: Cerumen kept the record ungrounded: GOLD''s cerumen denotes the wax-and-propolis
+    construction material of stingless-bee nests, not UBERON:0002297 ''cerumen'' from
+    the external auditory canal, and the vendored slice has wax and resin ingredients
+    but no term for their Meliponini mixture. A material term is requested under ENVO:00010483
+    ''environmental material'' while the source-derived Beehive parent is retained
+    as nest context. (source concept habitatmech:GOLD.a3c5e2adba)'
+- timestamp: '2026-09-08T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: 'Defined as ''stingless bee cerumen'' under ENVO:00010483 ''environmental
+    material''. Definition authored from the committed deep-research report, read
+    in full. The report interprets GOLD''s Beehive: Cerumen leaf as Meliponini nest
+    material rather than the UBERON:0002297 earwax homonym; ENVO:00010483 ''environmental
+    material'' is used as the safe genus because ENVO:01000575 ''wax'' and ENVO:03510018
+    ''resin'' each capture only one component, while ENVO:01000155 ''organic material''
+    has a biomacromolecule constraint that is too narrow for the wax-resin mixture.
+    parent_mode=ADD preserves the source-derived Beehive parent as nest context.'

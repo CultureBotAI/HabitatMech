@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: beehive_cerumen
+session:
+  id: 2026-09-09T030501Z-claude-code-c9a3e4
+  timestamp: '2026-09-09T03:05:01Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  summary: Keep beehive cerumen ungrounded as Meliponini material
+  details: Updated curation/decisions.tsv for habitatmech:GOLD.a3c5e2adba from the
+    committed Beehive Cerumen deep-research report after exact ignored-and-hidden
+    searches for the identifier, requested label, slug, and target terms. The decision
+    keeps the GOLD source node ungrounded after confirming that UBERON:0002297 cerumen
+    is the earwax homonym and no vendored term names the stingless-bee wax-resin
+    nest material.

@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: grains_grain_products
+session:
+  id: 2026-09-09T030500Z-claude-code-1b8d5a
+  timestamp: '2026-09-09T03:05:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  summary: Ground grains and grain products to FoodOn
+  details: Updated curation/decisions.tsv for habitatmech:GOLD.c25f588dad from the
+    committed Grains/Grain products deep-research report after exact ignored-and-hidden
+    searches for the identifier, target FOODON term, requested label, and slugs. The
+    decision grounds the GOLD source node to FOODON:00001093 cereal grain food product
+    as CLOSE, correcting the stale note that only rejected ENVO:01003002 particle.

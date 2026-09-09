@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: beehive_cerumen
+session:
+  id: 2026-09-09T030502Z-claude-code-5df071
+  timestamp: '2026-09-09T03:05:02Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - parent_habitats
+  - synonyms
+  summary: Define stingless bee cerumen
+  details: Authored curation/term_requests.tsv for habitatmech:GOLD.a3c5e2adba from
+    the committed Beehive Cerumen deep-research report, defining the Meliponini wax-resin
+    material under ENVO:00010483 environmental material while preserving the source-derived
+    Beehive parent as nest context.
