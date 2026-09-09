@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: carbonate
+session:
+  id: 2026-09-09T020346Z-claude-code-a1137a
+  timestamp: '2026-09-09T02:03:46Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  - xrefs
+  summary: Correct Carbonate chimney grounding review
+  details: Updated curation/decisions.tsv for habitatmech:GOLD.1208484062 after a new deep-research
+    report traced the inspected GOLD organism rows to Prony Hydrothermal Field carbonate chimneys.
+    The decision keeps the record UNGROUNDED, records ENVO:01000053 as a related xref rather
+    than a parent, and replaces the stale soda-lake reading with a note that preserves the
+    source-classification caveat for GOLD's Non-marine Saline and Alkaline bucket. Validated
+    with the seed canary, focused curated-definition tests, one-record seed, term-request
+    export regeneration, page render regeneration, and redirect regeneration.

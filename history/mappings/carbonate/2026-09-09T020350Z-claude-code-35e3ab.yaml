@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: carbonate
+session:
+  id: 2026-09-09T020350Z-claude-code-35e3ab
+  timestamp: '2026-09-09T02:03:50Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - parent_habitats
+  - synonyms
+  summary: Define serpentinization-hosted carbonate chimney
+  details: Authored curation/term_requests.tsv for habitatmech:GOLD.1208484062 from the new
+    Carbonate deep-research report after exact ignored-and-hidden searches for the identifier,
+    requested label, slug, and synonyms. The row defines a serpentinization-hosted carbonate
+    hydrothermal vent chimney under ENVO:01000129, keeps the source Carbonate label and report-backed
+    carbonate-chimney synonyms, and uses parent_mode=REPLACE to drop the source-derived Alkaline
+    parent. Validated with the seed canary, focused curated-definition tests, one-record seed,
+    term-request export regeneration, page render regeneration, and redirect regeneration.
