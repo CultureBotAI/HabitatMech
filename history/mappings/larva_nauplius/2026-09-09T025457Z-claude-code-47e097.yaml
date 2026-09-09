@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: larva_nauplius
+session:
+  id: 2026-09-09T025457Z-claude-code-47e097
+  timestamp: '2026-09-09T02:54:57Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - parent_habitats
+  - synonyms
+  summary: Define nauplius-associated environment
+  details: Authored curation/term_requests.tsv for habitatmech:GOLD.62e447374d from
+    the committed Larva Nauplius deep-research report, defining a nauplius-associated
+    environment under ENVO:01001002 animal-associated environment while recording
+    the already requested crustacean-associated environment as the natural missing
+    intermediate.

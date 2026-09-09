@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: larva_nauplius
+session:
+  id: 2026-09-09T025456Z-claude-code-e6f2aa
+  timestamp: '2026-09-09T02:54:56Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - xrefs
+  summary: Keep nauplius ungrounded with organism-stage xref
+  details: Updated curation/decisions.tsv for habitatmech:GOLD.62e447374d from the
+    committed Larva Nauplius deep-research report after exact ignored-and-hidden
+    searches for the identifier, requested label, slug, and target terms. The decision
+    keeps the record UNGROUNDED and records BTO:0000915 nauplius as an xref because
+    the BTO term is a whole organism at a life stage rather than a habitat identity.
