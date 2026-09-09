@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: rock_core_sediment
+session:
+  id: 2026-09-09T024713Z-claude-code-1c3b07
+  timestamp: '2026-09-09T02:47:13Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - xrefs
+  summary: Keep aquifer Rock core/Sediment ungrounded with aquifer xref
+  details: Updated curation/decisions.tsv for habitatmech:GOLD.20fb5b0162 after the
+    committed Rock core/Sediment deep-research report showed that ENVO:00012408 aquifer
+    is a geologic body rather than the rock-or-sediment material that composes it.
+    The decision keeps the record UNGROUNDED and records aquifer as a related xref
+    for the part-of context. The durable edit followed exact ignored-and-hidden searches
+    for the identifier, requested label, slug, synonym, and target terms.

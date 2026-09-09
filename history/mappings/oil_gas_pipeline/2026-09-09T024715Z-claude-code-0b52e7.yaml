@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: oil_gas_pipeline
+session:
+  id: 2026-09-09T024715Z-claude-code-0b52e7
+  timestamp: '2026-09-09T02:47:15Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - xrefs
+  summary: Keep Oil/Gas pipeline ungrounded with oil-pipeline xref
+  details: Updated curation/decisions.tsv for habitatmech:GOLD.74bb711f82 after the
+    committed Oil/Gas pipeline deep-research report showed that ENVO:03600014 pipeline
+    network is a true genus and ENVO:03600012 oil pipeline network covers only the
+    oil side of the source disjunction. The decision keeps the record UNGROUNDED
+    and records ENVO:03600012 only as an xref. The durable edit followed exact ignored-and-hidden
+    searches for the identifier, requested label, slug, synonym, and target terms.
