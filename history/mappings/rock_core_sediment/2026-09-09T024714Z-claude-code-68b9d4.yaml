@@ -20,7 +20,7 @@ events:
   - synonyms
   summary: Define aquifer rock or sediment
   details: Authored curation/term_requests.tsv for habitatmech:GOLD.20fb5b0162 from
-    the committed Rock core/Sediment deep-research report, defining aquifer rock
-    or sediment under ENVO:00010483 environmental material with aquifer matrix as
-    an exact synonym and parent_mode=ADD to preserve the source-derived GOLD Aquifer
-    parent.
+    the Rock core/Sediment evidence review, defining aquifer rock or sediment under
+    ENVO:00010483 environmental material with aquifer matrix as an exact synonym
+    and parent_mode=REPLACE to drop the source-derived GOLD Aquifer context from
+    broader-habitat is-a parents.

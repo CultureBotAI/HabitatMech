@@ -13,7 +13,6 @@ synonyms:
   source: HabitatMech curation
 parent_habitats:
 - ENVO:00010483
-- habitatmech:GOLD.076eb28273
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7299
@@ -32,16 +31,18 @@ curation_history:
     construction material of stingless-bee nests, not UBERON:0002297 ''cerumen'' from
     the external auditory canal, and the vendored slice has wax and resin ingredients
     but no term for their Meliponini mixture. A material term is requested under ENVO:00010483
-    ''environmental material'' while the source-derived Beehive parent is retained
-    as nest context. (source concept habitatmech:GOLD.a3c5e2adba)'
+    ''environmental material''; parent_mode=REPLACE drops the source-derived Insects
+    nest parent because cerumen is a nest component, not a kind of nest. (source concept
+    habitatmech:GOLD.a3c5e2adba)'
 - timestamp: '2026-09-08T00:00:00Z'
   curator: codex-gpt-5
   action: DEFINED
   changes: 'Defined as ''stingless bee cerumen'' under ENVO:00010483 ''environmental
-    material''. Definition authored from the committed deep-research report, read
-    in full. The report interprets GOLD''s Beehive: Cerumen leaf as Meliponini nest
-    material rather than the UBERON:0002297 earwax homonym; ENVO:00010483 ''environmental
-    material'' is used as the safe genus because ENVO:01000575 ''wax'' and ENVO:03510018
-    ''resin'' each capture only one component, while ENVO:01000155 ''organic material''
-    has a biomacromolecule constraint that is too narrow for the wax-resin mixture.
-    parent_mode=ADD preserves the source-derived Beehive parent as nest context.'
+    material''. Definition authored from a local evidence review, read in full. The
+    review interprets GOLD''s Beehive: Cerumen leaf as Meliponini nest material rather
+    than the UBERON:0002297 earwax homonym; ENVO:00010483 ''environmental material''
+    is used as the safe genus because ENVO:01000575 ''wax'' and ENVO:03510018 ''resin''
+    each capture only one component, while ENVO:01000155 ''organic material'' has
+    a biomacromolecule constraint that is too narrow for the wax-resin mixture. parent_mode=REPLACE
+    drops the source-derived Insects nest parent because cerumen is a nest component,
+    not a kind of nest.'

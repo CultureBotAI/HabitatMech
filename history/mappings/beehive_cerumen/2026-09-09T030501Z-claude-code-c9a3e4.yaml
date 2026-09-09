@@ -18,8 +18,9 @@ events:
   - grounding
   summary: Keep beehive cerumen ungrounded as Meliponini material
   details: Updated curation/decisions.tsv for habitatmech:GOLD.a3c5e2adba from the
-    committed Beehive Cerumen deep-research report after exact ignored-and-hidden
-    searches for the identifier, requested label, slug, and target terms. The decision
-    keeps the GOLD source node ungrounded after confirming that UBERON:0002297 cerumen
-    is the earwax homonym and no vendored term names the stingless-bee wax-resin
-    nest material.
+    Beehive Cerumen evidence review after exact ignored-and-hidden searches for the
+    identifier, requested label, slug, and target terms. The decision keeps the GOLD
+    source node ungrounded after confirming that UBERON:0002297 cerumen is the earwax
+    homonym and no vendored term names the stingless-bee wax-resin nest material;
+    parent_mode=REPLACE drops the source-derived Insects nest parent because cerumen
+    is a nest component.

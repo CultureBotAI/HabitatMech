@@ -15,7 +15,6 @@ synonyms:
   source: HabitatMech curation
 parent_habitats:
 - ENVO:00010483
-- habitatmech:GOLD.193fc3b328
 xrefs:
 - ENVO:00012408
 source_attestations:
@@ -45,10 +44,11 @@ curation_history:
   curator: codex-gpt-5
   action: DEFINED
   changes: Defined as 'aquifer rock or sediment' under ENVO:00010483 'environmental
-    material'. Definition authored from the committed deep-research report, read in
-    full. The report interprets GOLD's Environmental > Terrestrial > Deep subsurface
-    > Aquifer > Rock core/Sediment leaf as in situ saturated aquifer material rather
-    than a recovered core sample. ENVO:00010483 'environmental material' is the tightest
+    material'. Definition authored from a local evidence review, read in full. The
+    review interprets GOLD's Environmental > Terrestrial > Deep subsurface > Aquifer
+    > Rock core/Sediment leaf as in situ saturated aquifer material rather than a
+    recovered core sample. ENVO:00010483 'environmental material' is the tightest
     existing genus that subsumes both rock and sediment, while ENVO:00012408 'aquifer'
-    is a related geologic body and not an is-a parent. parent_mode=ADD preserves the
-    genuine source-derived habitatmech:GOLD.193fc3b328 Aquifer parent.
+    is a related geologic body and not an is-a parent. parent_mode=REPLACE drops the
+    source-derived Aquifer parent because the material composes an aquifer rather
+    than being a kind of aquifer.
