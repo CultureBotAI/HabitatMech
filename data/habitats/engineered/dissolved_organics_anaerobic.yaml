@@ -1,10 +1,17 @@
 identifier: habitatmech:GOLD.bb0eb00ccb
-label: Dissolved organics (anaerobic)
+label: anaerobic wastewater treatment reactor
+definition: An anaerobic bioreactor which removes dissolved organic matter from a
+  wastewater stream under conditions lacking dissolved oxygen and oxidized nitrogen.
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Dissolved organics (anaerobic)
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- habitatmech:GOLD.a18a70ae30
+- ENVO:00002124
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3830
@@ -28,3 +35,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-09-08T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: 'Defined as ''anaerobic wastewater treatment reactor'' under ENVO:00002124
+    ''anaerobic bioreactor''. Definition authored from the committed deep-research
+    report; no new paid research was commissioned. The report re-reads GOLD''s Dissolved
+    organics (anaerobic) source path as an anaerobic secondary wastewater-treatment
+    unit rather than a free dissolved-organic analyte, and it identifies ENVO:00002124
+    ''anaerobic bioreactor'' as the tightest existing genus because ENVO lacks an
+    anaerobic wastewater treatment reactor class while narrower descendants such as
+    ENVO:00002213 ''anaerobic sludge blanket reactor'' over-specify reactor geometry.
+    parent_mode=REPLACE intentionally drops GOLD''s Nutrient removal parent: the source
+    bucket is a loose secondary-treatment grouping, but removing dissolved organic
+    carbon is carbon/BOD removal rather than nutrient removal.'

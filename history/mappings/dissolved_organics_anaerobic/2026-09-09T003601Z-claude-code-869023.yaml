@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: dissolved_organics_anaerobic
+session:
+  id: 2026-09-09T003601Z-claude-code-869023
+  timestamp: '2026-09-09T00:36:01Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - parent_habitats
+  - synonyms
+  summary: Define anaerobic wastewater treatment reactor
+  details: Authored curation/term_requests.tsv for habitatmech:GOLD.bb0eb00ccb from the committed
+    deep-research report after exact ignored-and-hidden searches for the identifier, requested
+    label and slug. The row defines anaerobic wastewater treatment reactor under ENVO:00002124,
+    keeps the GOLD source label as a curated exact synonym, and uses parent_mode=REPLACE to
+    drop the misleading source-derived Nutrient removal parent. Validated with the seed canary,
+    focused curated-definition tests, term-request export regeneration, page render regeneration,
+    and redirect regeneration.
