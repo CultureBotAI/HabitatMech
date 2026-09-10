@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: protists
+session:
+  id: 2026-09-10T050414Z-claude-code-e7959e
+  timestamp: '2026-09-10T05:04:14Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - parent_habitats
+  summary: Define protist-associated environment
+  details: Added a curated definition for the surviving habitatmech:GOLD.eee7408afd Protists
+    record as protist-associated environment under ENVO:01001000 environmental system determined
+    by an organism. The definition was authored from the committed BacDive Protist report
+    after reading it in full and checking existing protist-family curation, exact Protist/Protists
+    labels, the target label, NCIT:C77914 and ENVO:01001000, same-concept precedents, history,
+    generated pages, and the report DOI/PMID strings with ignored and hidden files included.
