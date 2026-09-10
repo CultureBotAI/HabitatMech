@@ -18,6 +18,8 @@ synonyms:
 parent_habitats:
 - UBERON:0003937
 - habitatmech:GOLD.fcc934bd13
+xrefs:
+- CEPH:0000001
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7869
@@ -26,18 +28,21 @@ source_attestations:
     gland (ANG)
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-16T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Variant-match
-    review (#12): the variant route reaches UBERON:0002788 ''anterior nuclear group'',
-    a region of the THALAMUS, for a mollusc reproductive gland — a match with nothing
-    behind it. UBERON has no nidamental gland term. Path: Host-associated > Mollusca
-    > Reproductive system > Accessory nidamental gland (source concept habitatmech:GOLD.453b1756ab)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-09-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. CEPH:0000001
+    ''accessory nidamental gland'' kept as an xref. Variant-match review (#12): the
+    variant route reaches UBERON:0002788 ''anterior nuclear group'', a region of the
+    THALAMUS, for a mollusc reproductive gland — a match with nothing behind it. UBERON
+    has no nidamental gland term; CEPH:0000001 ''accessory nidamental gland'' exactly
+    names the organ but is retained only as an inactive, unvendored anatomy xref (#290).
+    Path: Host-associated > Mollusca > Reproductive system > Accessory nidamental
+    gland (source concept habitatmech:GOLD.453b1756ab)'
 - timestamp: '2026-09-10T00:00:00Z'
   curator: codex-gpt-5
   action: DEFINED
