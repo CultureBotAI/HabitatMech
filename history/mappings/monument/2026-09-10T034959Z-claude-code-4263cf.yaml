@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: monument
+session:
+  id: 2026-09-10T034959Z-claude-code-4263cf
+  timestamp: '2026-09-10T03:49:59Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  summary: Correct Monument grounding context
+  details: Updated the habitatmech:GOLD.a8b8ee2424 decision after reading the committed Monument
+    report in full and running exact ignored-and-hidden searches for the identifier, constructed-monument
+    CURIE, natural-monument false positive, target parent, built-heritage labels, and report
+    DOI/PMID strings. The row retains CONFIRM_UNGROUNDED, keeps ENVO:00000359 natural monument
+    rejected, and records ENVO:02000132 constructed monument as an xref because its memorial-function
+    definition overlaps but does not subsume GOLD's broader built-heritage Monument source.
