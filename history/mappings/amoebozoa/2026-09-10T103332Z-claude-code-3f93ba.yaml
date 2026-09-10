@@ -1,0 +1,37 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: amoebozoa
+session:
+  id: 2026-09-10T103332Z-claude-code-3f93ba
+  timestamp: '2026-09-10T10:33:32Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - definition
+  summary: Merge duplicate Amoebozoa GOLD path
+  details: |-
+    Replaced the class-level CONFIRM_UNGROUNDED row for habitatmech:GOLD.1341e74d35
+    with an item-level SAME_AS decision into habitatmech:GOLD.6a7bcba80d, merging
+    GOLD's zero-count Host-associated > Protists > Amoebozoa source concept into
+    the already-defined amoebozoan-associated environment record.
+
+    The duplicate source path came from issue #286 and existing corpus evidence;
+    no new paid research was commissioned. The survivor carries 13 organism
+    assertions and the Pessonella child from Host-associated > Amoebozoa, while
+    the merged sibling has 3 GOLD ecosystem node ids, no organism, study or
+    biosample assertions, and no child paths. The existing term-request note was
+    updated so it no longer describes the Protists subpath as still unresolved.
+
+    Validation covered a seed dry-run, a canary regeneration of the survivor, a
+    full forced seed with pruning, strict instance validation of the survivor,
+    term-request regeneration, documentation statistic regeneration, and a full
+    static page render with stale page pruning.
