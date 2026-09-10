@@ -13,6 +13,7 @@ synonyms:
 parent_habitats:
 - ENVO:01001000
 - ENVO:01001002
+- habitatmech:GOLD.4d792ac724
 xrefs:
 - FOODON:03414466
 source_attestations:
@@ -23,6 +24,11 @@ source_attestations:
   assertion_count: 23
   assertion_unit: ORGANISM
   notes: 4 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: GOLD
+  source_id: gold.ecosystem:8463
+  source_label: Tunicates
+  source_path: Host-associated > Invertebrates > Tunicates
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
 - timestamp: '2026-08-16T00:00:00Z'
   curator: claude-opus-5
@@ -51,3 +57,17 @@ curation_history:
     environment'. Definition drafted from the record's deep-research report under
     research/habitats/ and read against it; the report's proposed wording, genus and
     near-miss table are the evidence.
+- timestamp: '2026-09-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: SAME_AS
+  changes: 'Merged into habitatmech:GOLD.78c645fff9 ''tunicate-associated environment'':
+    the same concept under another source''s name. Definition research for the zero-assertion
+    Host-associated > Invertebrates > Tunicates record read this GOLD path against
+    the populated Host-associated > Tunicates sibling. The two paths both denote Tunicata
+    acting as hosts; this one has 3 GOLD ecosystem node ids, 0 organisms, 0 studies
+    and 0 biosamples, with no child paths, while habitatmech:GOLD.78c645fff9 carries
+    the 23-organism path and its Ascidians child. Merged onto the already-defined
+    tunicate-associated environment record rather than publishing a second source-specific
+    copy. FOODON:03414466 ''tunicate'' survives as an xref on the target and remains
+    a taxon/food term rather than a habitat identity (#99, #114). Report read in full;
+    no new paid research was commissioned. (source concept habitatmech:GOLD.6afe6868a8)'
