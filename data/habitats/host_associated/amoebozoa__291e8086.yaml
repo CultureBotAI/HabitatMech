@@ -11,6 +11,7 @@ synonyms:
   source: HabitatMech curation
 parent_habitats:
 - ENVO:01001000
+- habitatmech:GOLD.eee7408afd
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5290
@@ -19,6 +20,11 @@ source_attestations:
   assertion_count: 13
   assertion_unit: ORGANISM
   notes: 4 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+- source: GOLD
+  source_id: gold.ecosystem:7721
+  source_label: Amoebozoa
+  source_path: Host-associated > Protists > Amoebozoa
+  notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
@@ -32,15 +38,29 @@ curation_history:
     acting as a microbial host. An external taxon term supports the host identity
     but is external to the committed ontology slice, so it is documented here rather
     than asserted unverifiably. (source concept habitatmech:GOLD.6a7bcba80d)'
-- timestamp: '2026-09-08T00:00:00Z'
+- timestamp: '2026-09-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: SAME_AS
+  changes: 'Merged into habitatmech:GOLD.6a7bcba80d ''amoebozoan-associated environment'':
+    the same concept under another source''s name. Zero-count duplicate review (#286):
+    GOLD''s Host-associated > Protists > Amoebozoa path has the same Amoebozoa host
+    category as Host-associated > Amoebozoa. The sibling habitatmech:GOLD.6a7bcba80d
+    is the defined survivor because it carries 13 organism assertions and its Pessonella
+    child, while this path has 3 GOLD ecosystem node ids, 0 organisms, 0 studies and
+    0 biosamples, with no child paths. Merge so the Protists subpath survives as a
+    separate attestation without publishing a second Amoebozoa identity. Reported
+    from existing curation and issue evidence; no new paid research was commissioned.
+    (source concept habitatmech:GOLD.1341e74d35)'
+- timestamp: '2026-09-10T00:00:00Z'
   curator: codex-gpt-5
   action: DEFINED
   changes: 'Defined as ''amoebozoan-associated environment'' under ENVO:01001000 ''environmental
     system determined by an organism''. Definition authored from the existing item-level
     #108 decision; no new paid research was commissioned. GOLD''s Host-associated
     > Amoebozoa source denotes amoebozoans acting as microbial hosts and carries 13
-    organism assertions. ENVO:01001000 is the tightest vendored ontology genus because
-    amoebozoans are eukaryotes outside the existing animal-, plant- and fungi-associated
-    environment branches. The zero-assertion sibling at Host-associated > Protists
-    > Amoebozoa remains SEEDED and still needs its own item-level decision before
-    it can be defined or merged.'
+    organism assertions, and the zero-assertion Host-associated > Protists > Amoebozoa
+    sibling was merged into the same habitat after #286 item-level review. ENVO:01001000
+    is the tightest vendored ontology genus because amoebozoans are eukaryotes outside
+    the existing animal-, plant- and fungi-associated environment branches; the source-inherited
+    protist-associated environment parent preserves the narrower GOLD host grouping
+    separately.'
