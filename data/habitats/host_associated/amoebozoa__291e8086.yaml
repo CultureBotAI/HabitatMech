@@ -38,19 +38,6 @@ curation_history:
     acting as a microbial host. An external taxon term supports the host identity
     but is external to the committed ontology slice, so it is documented here rather
     than asserted unverifiably. (source concept habitatmech:GOLD.6a7bcba80d)'
-- timestamp: '2026-09-08T00:00:00Z'
-  curator: codex-gpt-5
-  action: DEFINED
-  changes: 'Defined as ''amoebozoan-associated environment'' under ENVO:01001000 ''environmental
-    system determined by an organism''. Definition authored from the existing item-level
-    #108 decision; no new paid research was commissioned. GOLD''s Host-associated
-    > Amoebozoa source denotes amoebozoans acting as microbial hosts and carries 13
-    organism assertions, and the zero-assertion Host-associated > Protists > Amoebozoa
-    sibling was merged into the same habitat after #286 item-level review. ENVO:01001000
-    is the tightest vendored ontology genus because amoebozoans are eukaryotes outside
-    the existing animal-, plant- and fungi-associated environment branches; the source-inherited
-    protist-associated environment parent preserves the narrower GOLD host grouping
-    separately.'
 - timestamp: '2026-09-10T00:00:00Z'
   curator: codex-gpt-5
   action: SAME_AS
@@ -64,3 +51,16 @@ curation_history:
     separate attestation without publishing a second Amoebozoa identity. Reported
     from existing curation and issue evidence; no new paid research was commissioned.
     (source concept habitatmech:GOLD.1341e74d35)'
+- timestamp: '2026-09-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: 'Defined as ''amoebozoan-associated environment'' under ENVO:01001000 ''environmental
+    system determined by an organism''. Definition authored from the existing item-level
+    #108 decision; no new paid research was commissioned. GOLD''s Host-associated
+    > Amoebozoa source denotes amoebozoans acting as microbial hosts and carries 13
+    organism assertions, and the zero-assertion Host-associated > Protists > Amoebozoa
+    sibling was merged into the same habitat after #286 item-level review. ENVO:01001000
+    is the tightest vendored ontology genus because amoebozoans are eukaryotes outside
+    the existing animal-, plant- and fungi-associated environment branches; the source-inherited
+    protist-associated environment parent preserves the narrower GOLD host grouping
+    separately.'
