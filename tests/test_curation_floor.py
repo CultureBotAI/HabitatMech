@@ -85,6 +85,26 @@ def test_a_deleted_file_is_a_loss(repo):
     assert "missing from the working tree" in done.stderr, done.stderr
 
 
+def test_external_xrefs_are_protected_by_term_id(repo):
+    cwd, _ = repo
+    xrefs = cwd / "curation" / "external_xrefs.tsv"
+    xrefs.write_text(
+        "term_id\tterm_label\n"
+        "NCBITaxon:4762\tOomycota\n"
+        "NCBITaxon:6340\tAnnelida\n",
+        encoding="utf-8",
+    )
+    subprocess.run(["git", "add", "curation/external_xrefs.tsv"], cwd=cwd, check=True)
+    subprocess.run(["git", "commit", "-qm", "add external xrefs"], cwd=cwd, check=True)
+
+    xrefs.write_text("term_id\tterm_label\nNCBITaxon:4762\tOomycota\n", encoding="utf-8")
+    done = run(cwd, "--base", "HEAD")
+
+    assert done.returncode == 1, done.stdout
+    assert "curation/external_xrefs.tsv" in done.stderr, done.stderr
+    assert "NCBITaxon:6340" in done.stderr, done.stderr
+
+
 def test_allow_loss_reports_but_does_not_fail(repo):
     """A curator removing a row deliberately needs an exit that is not a wall."""
     cwd, tsv = repo
