@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: air_sacs
+session:
+  id: 2026-09-10T082602Z-claude-code-655e8a
+  timestamp: '2026-09-10T08:26:02Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - parent_habitats
+  - synonyms
+  summary: Define insect air sac
+  details: |-
+    Authored curation/term_requests.tsv for habitatmech:GOLD.3982893194 from the
+    committed Air sacs report under research/habitats/, read in full after exact
+    ignored-and-hidden searches for the identifier, label, requested label,
+    synonyms, homonymous avian and cetacean air sacs, the UBERON and BTO
+    candidate parents, and key source handles. The row defines GOLD's
+    Host-associated > Arthropoda: Insects > Respiratory system > Trachea > Air sacs
+    leaf as an insect air sac, uses UBERON:0003127 open tracheal system trachea as
+    the tightest vendored genus, and records why UBERON:0009060, UBERON:0013175,
+    swim bladders, honey sacs, and air sac primordia are not the same concept. No
+    causal graph was added because the report found tracheal-system microbiome
+    evidence, but not direct microbial-community evidence for insect air sacs.

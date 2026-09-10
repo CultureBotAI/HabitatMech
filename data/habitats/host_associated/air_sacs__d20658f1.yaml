@@ -1,9 +1,23 @@
 identifier: habitatmech:GOLD.3982893194
-label: Air sacs
+label: insect air sac
+definition: An open tracheal system trachea which is dilated, thin-walled, air-filled,
+  and readily compressible because its taenidia are reduced or absent.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Air sacs
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: insect tracheal air sac
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: tracheal air sac
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- UBERON:0003127
 - habitatmech:GOLD.2a2774b70a
 source_attestations:
 - source: GOLD
@@ -26,3 +40,19 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-09-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: 'Defined as ''insect air sac'' under UBERON:0003127 ''open tracheal system
+    trachea''. Definition authored from the record''s committed deep-research report
+    under research/habitats/, read in full; no new paid research was commissioned.
+    GOLD''s Host-associated > Arthropoda: Insects > Respiratory system > Trachea >
+    Air sacs leaf denotes insect tracheal air sacs, not avian lung air sacs under
+    UBERON:0009060, cetacean nasal air sacs under UBERON:0013175, swim bladders, honey
+    sacs, air sac primordia, or vertebrate tracheae. UBERON:0003127 ''open tracheal
+    system trachea'' is the tightest vendored genus because UBERON:6005043 ''insect
+    trachea'' over-asserts tubular morphology for irregular punctate sacs and BTO:0003870
+    ''insect tracheal system'' names the whole system rather than the sac. No causal
+    graph was added because the report found larval Drosophila tracheal-microbiome
+    evidence and metazoan air-sac parasite evidence, but no characterized microbial
+    community sampled from insect air sacs themselves.'
