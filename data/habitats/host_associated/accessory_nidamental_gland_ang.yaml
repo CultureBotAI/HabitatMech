@@ -1,9 +1,22 @@
 identifier: habitatmech:GOLD.453b1756ab
-label: Accessory nidamental gland (ANG)
+label: accessory nidamental gland
+definition: A reproductive gland which lies in the mantle cavity of a sexually mature
+  female decapodiform cephalopod and contains epithelium-lined tubules whose lumina
+  house a dense extracellular bacterial consortium that is environmentally acquired
+  and discharged into egg jelly.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Accessory nidamental gland (ANG)
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: accessory nidamental glands
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- UBERON:0003937
 - habitatmech:GOLD.fcc934bd13
 source_attestations:
 - source: GOLD
@@ -25,3 +38,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-09-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: Defined as 'accessory nidamental gland' under UBERON:0003937 'reproductive
+    gland'. Definition authored from the record's committed deep-research report under
+    research/habitats/, read in full; no new paid research was commissioned. The report
+    interprets GOLD's Host-associated > Mollusca > Reproductive system > Accessory
+    nidamental gland (ANG) leaf as the dissected cephalopod symbiotic reproductive
+    organ, not the main nidamental gland, egg jelly coat, light organ, or mantle cavity.
+    UBERON:0003937 'reproductive gland' is the tightest vendored genus; ENVO:01000162
+    'organ' is a true but coarser ENVO precedent for symbiont-housing organs, UBERON:0005398
+    'female reproductive gland' is tighter but unvendored, and CEPH:0000001 exactly
+    names the organ in an inactive, unvendored ontology. ADD preserves GOLD's source-derived
+    Mollusca reproductive-system parent while adding the anatomy genus.

@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: accessory_nidamental_gland_ang
+session:
+  id: 2026-09-10T065330Z-claude-code-d1b120
+  timestamp: '2026-09-10T06:53:30Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - parent_habitats
+  - synonyms
+  summary: Define accessory nidamental gland
+  details: Authored curation/term_requests.tsv for habitatmech:GOLD.453b1756ab from the committed
+    Accessory nidamental gland (ANG) report, read in full after exact ignored-and-hidden searches
+    for the identifier, source label, requested label, synonyms, and vendored UBERON genus.
+    The row defines GOLD's molluscan ANG leaf under UBERON:0003937 reproductive gland, uses
+    parent_mode=ADD to preserve the source-derived Mollusca reproductive-system parent, and
+    records why CEPH:0000001 is only an inactive, unvendored exact term.
