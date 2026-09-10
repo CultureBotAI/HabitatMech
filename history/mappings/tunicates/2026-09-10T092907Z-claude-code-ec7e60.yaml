@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: tunicates
+session:
+  id: 2026-09-10T092907Z-claude-code-ec7e60
+  timestamp: '2026-09-10T09:29:07Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  summary: Merge duplicate Tunicates GOLD path
+  details: |-
+    Replaced the independent CONFIRM_UNGROUNDED row for habitatmech:GOLD.6afe6868a8
+    with a SAME_AS decision into habitatmech:GOLD.78c645fff9 so GOLD's unpopulated
+    Host-associated > Invertebrates > Tunicates path resolves to the already-defined
+    tunicate-associated environment record.
+
+    The committed research report for habitatmech:GOLD.6afe6868a8 was read in full;
+    no new paid research was commissioned. The report found that both GOLD paths
+    denote Tunicata acting as hosts: the survivor has 23 organism assertions and
+    the Ascidians child, while the duplicate has 3 GOLD ecosystem node ids, no
+    organism, study or biosample assertions, and no children. The FOODON:03414466
+    taxon/food xref was already present on the target and survives the merge.
+
+    Validation started with a seed dry-run and a canary on the emitted survivor
+    habitatmech:GOLD.78c645fff9. The removed source identifier itself was not a valid
+    --only target after SAME_AS resolution, which was the expected consequence of
+    merging it away.
