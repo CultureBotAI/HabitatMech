@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: oomycetes
+session:
+  id: 2026-09-10T060546Z-claude-code-ae2c6e
+  timestamp: '2026-09-10T06:05:46Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - parent_habitats
+  summary: Define oomycete-associated environment
+  details: 'Added a curated definition for habitatmech:GOLD.a233293e47 as oomycete-associated
+    environment under ENVO:01001000 environmental system determined by an organism. The definition
+    was authored from the existing item-level #108 decision with no new paid research commissioned,
+    after checking exact identifiers, labels, the requested label, NCBITaxon:4762, ENVO:01001000,
+    sibling protist- and alga-family term requests, history, generated pages, and open issues.'

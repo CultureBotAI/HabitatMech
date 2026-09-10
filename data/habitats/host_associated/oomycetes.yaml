@@ -1,9 +1,17 @@
 identifier: habitatmech:GOLD.a233293e47
-label: Oomycetes
+label: oomycete-associated environment
+definition: An environmental system which is determined by an oomycete or by a part
+  of an oomycete.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Oomycetes
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:01001000
 - habitatmech:GOLD.eee7408afd
 source_attestations:
 - source: GOLD
@@ -25,3 +33,14 @@ curation_history:
     screen review (#108): Host-associated > Protists > Oomycetes denotes oomycetes
     acting as microbial hosts. An external taxon term corroborates the host identity
     but is external to the committed slice. (source concept habitatmech:GOLD.a233293e47)'
+- timestamp: '2026-09-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: 'Defined as ''oomycete-associated environment'' under ENVO:01001000 ''environmental
+    system determined by an organism''. Definition authored from the existing item-level
+    #108 decision; no new paid research was commissioned. GOLD''s Host-associated
+    > Protists > Oomycetes source denotes oomycetes acting as microbial hosts and
+    carries 2 organism assertions across 3 GOLD ecosystem node ids. ENVO:01001000
+    is the tightest vendored ontology genus because the ontology lacks oomycete- or
+    protist-associated environment classes; the source-inherited protist-associated
+    environment parent preserves the narrower GOLD host grouping separately.'
