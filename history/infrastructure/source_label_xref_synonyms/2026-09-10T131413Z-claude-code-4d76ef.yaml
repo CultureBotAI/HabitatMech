@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: src/habitatmech/seed.py
+  slug: source_label_xref_synonyms
+session:
+  id: 2026-09-10T131413Z-claude-code-4d76ef
+  timestamp: '2026-09-10T13:14:13Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: codex-gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - synonyms
+  - xrefs
+  summary: Suppress non-habitat source-label synonyms
+  details: Updated apply_curated_definitions so a pre-definition source label is not auto-added
+    as an exact synonym when an item-level decision retains that same label only with relation=xref.
+    This keeps chemical xrefs such as CHEBI:16183 from re-entering minted habitat records
+    as false exact synonyms while preserving normal authored exact synonyms.

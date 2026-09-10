@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: methane
+session:
+  id: 2026-09-10T131350Z-claude-code-7d9a98
+  timestamp: '2026-09-10T13:13:50Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: codex-gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - parent_habitats
+  - xrefs
+  summary: Define methane bioremediation material
+  details: Authored curation/term_requests.tsv for habitatmech:GOLD.d510166905 from an item-level
+    review of the GOLD Engineered > Bioremediation > Hydrocarbon > Methane source. The row
+    defines the remediated methane-exposed material under ENVO:00010483, retains CHEBI:16183
+    only as an external xref for the methane contaminant, and uses parent_mode=REPLACE to
+    drop the source-derived Hydrocarbon parent because it names a chemical class rather than
+    a habitat.

@@ -40,6 +40,12 @@ def test_authored_definitions_are_applied_to_generated_concepts(repo_root):
         "human host",
     }
 
+    methane = build_document(concepts["habitatmech:GOLD.d510166905"])
+    assert "CHEBI:16183" in methane["xrefs"]
+    assert "Methane" not in {
+        synonym["synonym_text"] for synonym in methane.get("synonyms", [])
+    }
+
 
 def test_pending_definition_worklist_excludes_authored_and_rejected(repo_root):
     from scripts import build_term_requests, research_habitat

@@ -1,10 +1,16 @@
 identifier: habitatmech:GOLD.d510166905
-label: Methane
+label: methane bioremediation material
+definition: An environmental material which is part of an engineered bioremediation
+  system, is exposed to methane-containing gas, and supports microbially mediated
+  methane oxidation.
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
 parent_habitats:
-- habitatmech:GOLD.e77998b825
+- ENVO:00010483
+xrefs:
+- CHEBI:16183
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4451
@@ -18,11 +24,30 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
-- timestamp: '2026-08-21T00:00:00Z'
+- timestamp: '2026-09-10T00:00:00Z'
   curator: codex-gpt-5
   action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Non-habitat
-    screen review (#108): Engineered > Bioremediation > Hydrocarbon > Methane denotes
-    a methane-impacted engineered environment undergoing remediation, not methane
-    alone as a place. An external chemical term supplies the contaminant identity
-    but is not in the committed slice. (source concept habitatmech:GOLD.d510166905)'
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. CHEBI:16183
+    ''methane'' kept as an xref. Definition research for Engineered > Bioremediation
+    > Hydrocarbon > Methane kept the record ungrounded: GOLD names the remediated
+    methane contaminant rather than a sampled chemical, and CHEBI:16183 exactly identifies
+    methane but is a chemical retained only as an unvendored xref. A material term
+    is requested under ENVO:00010483 ''environmental material''; parent_mode=REPLACE
+    drops the inherited Hydrocarbon parent because that source node is a chemical
+    class, not a microbial habitat. (source concept habitatmech:GOLD.d510166905)'
+- timestamp: '2026-09-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: Defined as 'methane bioremediation material' under ENVO:00010483 'environmental
+    material'. Definition authored from item-level review and methane biofiltration
+    literature; no paid research was commissioned. GOLD places the leaf under Engineered
+    > Bioremediation > Hydrocarbon and names the methane contaminant rather than a
+    sampled substance, so the record denotes the methane-exposed matrix in the remediation
+    system rather than methane itself. ENVO:00010483 'environmental material' is the
+    tightest vendored genus broad enough to cover biofilter packing, reactor liquid,
+    and sludge exposed to methane-containing gas; ENVO:00002152 'biofilter' and ENVO:00002123
+    'bioreactor' name engineered devices rather than matrices, and ENVO:00002124 'anaerobic
+    bioreactor' over-specifies anaerobic methane production rather than aerobic methane
+    oxidation. CHEBI:16183 is retained as an external xref for the contaminant identity,
+    and parent_mode=REPLACE drops the inherited Hydrocarbon parent because the parent
+    names a chemical class rather than a habitat.
