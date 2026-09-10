@@ -1,10 +1,18 @@
 identifier: habitatmech:GOLD.961229841c
-label: Subway
+label: subway environment
+definition: An anthropogenic environment which is bounded by the stations, running
+  tunnels, trains, and other enclosed structures of a predominantly subterranean urban
+  rapid transit system.
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Subway
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- ENVO:00000856
+- ENVO:01000313
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4395
@@ -24,3 +32,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-09-09T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: Defined as 'subway environment' under ENVO:01000313 'anthropogenic environment'.
+    Definition authored from the record's committed deep-research report under research/habitats/,
+    read in full; no new paid research was commissioned. GOLD places Subway under
+    Engineered > Built environment > City, and the report interprets the record as
+    the subway environment rather than ENVO:03501109 'subway train' or ENVO:03501116
+    'rapid transit system'. ENVO:01000313 'anthropogenic environment' is the tightest
+    vendored genus because ENVO lacks a public-transport or subway-environment branch.
+    parent_mode=REPLACE drops GOLD's inherited City parent because a subway environment
+    is located within a city but is not a kind of city. The raw GOLD path currently
+    has zero organism, genome, or biosample assertions, so the definition rests on
+    external subway microbiome literature rather than local assertion volume.

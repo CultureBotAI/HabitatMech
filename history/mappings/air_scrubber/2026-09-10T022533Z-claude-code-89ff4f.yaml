@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: air_scrubber
+session:
+  id: 2026-09-10T022533Z-claude-code-89ff4f
+  timestamp: '2026-09-10T02:25:33Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - parent_habitats
+  - synonyms
+  summary: Define air scrubber
+  details: Authored curation/term_requests.tsv for habitatmech:GOLD.ebf95a8a4a
+    from the committed Air scrubber report, read in full after exact ignored-and-hidden
+    searches for the identifier, source label, proposed synonyms, target ENVO genus,
+    and report DOI and PMID strings. The row defines GOLD's Air scrubber leaf under
+    ENVO:00003074 manufactured product and uses parent_mode=REPLACE to drop the
+    source-derived Indoor Air parent because an exhaust scrubber treats air but is
+    not itself a portion of indoor air.

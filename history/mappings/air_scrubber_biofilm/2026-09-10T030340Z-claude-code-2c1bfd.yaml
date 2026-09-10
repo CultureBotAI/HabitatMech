@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: air_scrubber_biofilm
+session:
+  id: 2026-09-10T030340Z-claude-code-2c1bfd
+  timestamp: '2026-09-10T03:03:40Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - parent_habitats
+  - synonyms
+  summary: Define air scrubber biofilm
+  details: Authored curation/term_requests.tsv for habitatmech:GOLD.7f436f8aff
+    from the committed Air scrubber Biofilm report, read in full after an adversarial
+    review found that defining Air scrubber as a manufactured product made this
+    child's inherited parent an explicit device/biomass is-a mismatch. Exact ignored-and-hidden
+    searches checked the identifier, proposed label, proposed synonym, target ENVO
+    genus, nearby device CURIEs, and report DOI and PMID strings. The row defines
+    the GOLD Biofilm leaf under ENVO:00002034 biofilm and uses parent_mode=REPLACE
+    to drop the source-derived Air scrubber parent.
