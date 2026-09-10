@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: protists
+session:
+  id: 2026-09-10T050406Z-claude-code-ab0ef2
+  timestamp: '2026-09-10T05:04:06Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  summary: Merge BacDive Protist into GOLD Protists
+  details: Promoted habitatmech:GOLD.eee7408afd from its class-level Protists sweep to an
+    item-level host-taxon decision, preserved NCIT:C77914 Protista as an xref, and merged
+    habitatmech:BACDIVE.a7f6b12719 into that GOLD survivor with SAME_AS after reading the
+    committed BacDive Protist report in full. Exact ignored-and-hidden searches covered both
+    source identifiers, the Protist/Protists labels and slugs, protist-associated environment,
+    NCIT:C77914, ENVO:01001000, Protozoa near misses, curation/history/page mentions, and
+    the report DOI/PMID strings before editing.
