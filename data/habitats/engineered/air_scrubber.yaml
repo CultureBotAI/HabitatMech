@@ -1,10 +1,24 @@
 identifier: habitatmech:GOLD.ebf95a8a4a
-label: Air scrubber
+label: air scrubber
+definition: A manufactured product which removes gaseous or particulate contaminants
+  from an air or waste-gas stream by bringing that stream into contact with a recirculating
+  scrubbing liquid over internal packing.
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: air washer
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: gas scrubber
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: wet scrubber
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- habitatmech:GOLD.40979f5751
+- ENVO:00003074
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5805
@@ -22,3 +36,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-09-09T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: Defined as 'air scrubber' under ENVO:00003074 'manufactured product'. Definition
+    authored from the record's committed deep-research report under research/habitats/,
+    read in full; no new paid research was commissioned. The report reads GOLD's Environmental
+    > Air > Indoor Air > Air scrubber leaf as an agricultural or industrial wet exhaust
+    scrubber whose wetted packing, biofilm, and recirculating liquid form microbial
+    habitats. ENVO lacks a scrubber or air-pollution-control-device class; ENVO:00003074
+    'manufactured product' is the tightest vendored genus, while ENVO:00002152 'biofilter'
+    and ENVO:00003968 'air filter' are near misses that over-claim biological degradation
+    or HVAC semantics. parent_mode=REPLACE drops GOLD's inherited Indoor Air parent
+    because the scrubber treats an air stream but is not itself a portion of indoor
+    air.

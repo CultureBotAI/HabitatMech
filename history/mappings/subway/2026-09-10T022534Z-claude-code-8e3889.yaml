@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: subway
+session:
+  id: 2026-09-10T022534Z-claude-code-8e3889
+  timestamp: '2026-09-10T02:25:34Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - parent_habitats
+  summary: Define subway environment
+  details: Authored curation/term_requests.tsv for habitatmech:GOLD.961229841c
+    from the committed Subway report, read in full after exact ignored-and-hidden
+    searches for the identifier, proposed label, target ENVO genus, near-miss rapid-transit
+    CURIE, and report DOI and PMID strings. The row defines GOLD's Subway leaf as
+    a subway environment under ENVO:01000313 anthropogenic environment and uses
+    parent_mode=REPLACE to drop the source-derived City parent because the environment
+    is located in a city but is not a kind of city.

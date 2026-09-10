@@ -1,10 +1,21 @@
 identifier: habitatmech:GOLD.7f436f8aff
-label: Biofilm
+label: air scrubber biofilm
+definition: A biofilm which grows on wetted packing, wall, or sump surfaces inside
+  an air scrubber and is sustained by pollutants transferred from the treated gas
+  stream into the scrubbing liquid.
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Biofilm
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: scrubber biofilm
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- habitatmech:GOLD.ebf95a8a4a
+- ENVO:00002034
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5806
@@ -21,3 +32,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-09-09T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: Defined as 'air scrubber biofilm' under ENVO:00002034 'biofilm'. Definition
+    authored from the record's committed deep-research report under research/habitats/,
+    read in full; no new paid research was commissioned. The report interprets GOLD's
+    Environmental > Air > Indoor Air > Air scrubber > Biofilm leaf as a biofilm on
+    wetted packing or fouled interior surfaces inside a wet air scrubber. ENVO:00002034
+    'biofilm' is the tightest vendored genus and is already the genus for other path-qualified
+    GOLD biofilm leaves. ENVO:00002152 'biofilter', ENVO:00002123 'bioreactor', and
+    ENVO:00003968 'air filter' name devices rather than the attached biomass. parent_mode=REPLACE
+    drops the inherited Air scrubber parent because the biofilm is inside the scrubber
+    but not a kind of scrubber.

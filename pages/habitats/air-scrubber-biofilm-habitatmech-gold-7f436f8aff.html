@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>air scrubber — HabitatMech</title>
-<meta name="description" content="air scrubber (habitatmech:GOLD.ebf95a8a4a): a microbial habitat harmonized from GOLD.">
+<title>air scrubber biofilm — HabitatMech</title>
+<meta name="description" content="air scrubber biofilm (habitatmech:GOLD.7f436f8aff): a microbial habitat harmonized from GOLD.">
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -18,15 +18,15 @@
     <a href="https://github.com/CultureBotAI/HabitatMech">Source</a>
   </nav>
 </header>
-<h1>air scrubber</h1>
+<h1>air scrubber biofilm</h1>
 <p class="meta">
-  <code class="curie">habitatmech:GOLD.ebf95a8a4a</code>
+  <code class="curie">habitatmech:GOLD.7f436f8aff</code>
   <span class="sep">·</span><a href="../category/engineered.html">ENGINEERED</a>
   <span class="sep">·</span><span class="pill warn">UNGROUNDED</span>
   <span class="pill">REVIEWED</span>
 </p>
 
-<p>A manufactured product which removes gaseous or particulate contaminants from an air or waste-gas stream by bringing that stream into contact with a recirculating scrubbing liquid over internal packing.  <span class="meta">— HabitatMech</span></p>
+<p>A biofilm which grows on wetted packing, wall, or sump surfaces inside an air scrubber and is sustained by pollutants transferred from the treated gas stream into the scrubbing liquid.  <span class="meta">— HabitatMech</span></p>
 
 <h2>Source attestations</h2>
 <p class="meta">Each upstream vocabulary's own account of this habitat. Assertion
@@ -37,7 +37,7 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
   <thead><tr><th scope="col">Source</th><th scope="col">Label / path</th><th scope="col" class="num">Assertions</th><th scope="col">Unit</th></tr></thead>
   <tr>
     <td><span class="pill plain">GOLD</span></td>
-    <td>Environmental &gt; Air &gt; Indoor Air &gt; Air scrubber</td>
+    <td>Environmental &gt; Air &gt; Indoor Air &gt; Air scrubber &gt; Biofilm</td>
     <td class="num">—</td>
     <td></td>
   </tr>
@@ -45,7 +45,7 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 <h2>Broader habitats</h2>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/ENVO_00003074">manufactured product</a>      <code class="curie">ENVO:00003074</code></li>
+  <li><a href="../habitats/biofilm-envo-00002034.html">biofilm</a>      <code class="curie">ENVO:00002034</code></li>
 </ul>
 
 
@@ -53,7 +53,7 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 <h2>Also called</h2>
 <ul class="plain">
-<li>air washer <span class="meta">— HabitatMech curation</span></li><li>gas scrubber <span class="meta">— HabitatMech curation</span></li><li>wet scrubber <span class="meta">— HabitatMech curation</span></li></ul>
+<li>Biofilm <span class="meta">— HabitatMech curation</span></li><li>scrubber biofilm <span class="meta">— HabitatMech curation</span></li></ul>
 
 <h2>Curation</h2>
 <p class="meta">What a curator decided about this record, and why. A record built
@@ -62,12 +62,12 @@ from several source concepts can carry one decision per concept.</p>
   <li>
     <span class="pill">CONFIRM_UNGROUNDED</span>
     <span class="meta">2026-08-13 · claude-opus-5</span>
-    <p>Confirmed UNGROUNDED: no ontology term fits this concept. An air scrubber is a piece of equipment. GOLD files it under Air because the sample is scrubber air, but the habitat named by this leaf is the device, which belongs with the other built and managed environments. (source concept habitatmech:GOLD.ebf95a8a4a)</p>
+    <p>Confirmed UNGROUNDED: no ontology term fits this concept. A biofilm growing inside an air scrubber. Whatever GOLD&#39;s branch, a biofilm is not air; it is a community on engineered equipment. (source concept habitatmech:GOLD.7f436f8aff)</p>
   </li>
   <li>
     <span class="pill">DEFINED</span>
     <span class="meta">2026-09-09 · codex-gpt-5</span>
-    <p>Defined as &#39;air scrubber&#39; under ENVO:00003074 &#39;manufactured product&#39;. Definition authored from the record&#39;s committed deep-research report under research/habitats/, read in full; no new paid research was commissioned. The report reads GOLD&#39;s Environmental &gt; Air &gt; Indoor Air &gt; Air scrubber leaf as an agricultural or industrial wet exhaust scrubber whose wetted packing, biofilm, and recirculating liquid form microbial habitats. ENVO lacks a scrubber or air-pollution-control-device class; ENVO:00003074 &#39;manufactured product&#39; is the tightest vendored genus, while ENVO:00002152 &#39;biofilter&#39; and ENVO:00003968 &#39;air filter&#39; are near misses that over-claim biological degradation or HVAC semantics. parent_mode=REPLACE drops GOLD&#39;s inherited Indoor Air parent because the scrubber treats an air stream but is not itself a portion of indoor air.</p>
+    <p>Defined as &#39;air scrubber biofilm&#39; under ENVO:00002034 &#39;biofilm&#39;. Definition authored from the record&#39;s committed deep-research report under research/habitats/, read in full; no new paid research was commissioned. The report interprets GOLD&#39;s Environmental &gt; Air &gt; Indoor Air &gt; Air scrubber &gt; Biofilm leaf as a biofilm on wetted packing or fouled interior surfaces inside a wet air scrubber. ENVO:00002034 &#39;biofilm&#39; is the tightest vendored genus and is already the genus for other path-qualified GOLD biofilm leaves. ENVO:00002152 &#39;biofilter&#39;, ENVO:00002123 &#39;bioreactor&#39;, and ENVO:00003968 &#39;air filter&#39; name devices rather than the attached biomass. parent_mode=REPLACE drops the inherited Air scrubber parent because the biofilm is inside the scrubber but not a kind of scrubber.</p>
   </li>
 </ol>
 
@@ -75,7 +75,7 @@ from several source concepts can carry one decision per concept.</p>
 <p class="meta">
   Generated by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/data/habitats/engineered/air_scrubber.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/data/habitats/engineered/biofilm__a5211c59.yaml">View the record</a>.
 </p>
 <footer class="site">
   <p>
