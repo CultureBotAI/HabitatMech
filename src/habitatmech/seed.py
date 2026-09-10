@@ -442,7 +442,13 @@ def apply_curated_definitions(
         else:
             concept.parents.add(definition.parent_class)
         concept.definitions_applied.append(definition)
-        concept.add_synonym(source_label, "EXACT_SYNONYM", "HabitatMech curation")
+        source_label_is_retained_xref = any(
+            decision.relation == "xref"
+            and norm_label(decision.object_label) == norm_label(source_label)
+            for decision in concept.decisions_applied
+        )
+        if not source_label_is_retained_xref:
+            concept.add_synonym(source_label, "EXACT_SYNONYM", "HabitatMech curation")
         for synonym in definition.exact_synonyms:
             concept.add_synonym(synonym, "EXACT_SYNONYM", "HabitatMech curation")
 
