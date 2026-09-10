@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: monument
+session:
+  id: 2026-09-10T035006Z-claude-code-d7c4c9
+  timestamp: '2026-09-10T03:50:06Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - parent_habitats
+  summary: Define built heritage structure
+  details: Authored curation/term_requests.tsv for habitatmech:GOLD.a8b8ee2424 from the committed
+    Monument report, read in full after exact ignored-and-hidden searches for the identifier,
+    proposed label, target ENVO genus, near-miss constructed/natural monument CURIEs, and
+    report DOI/PMID strings. The row defines GOLD's Monument source as a built heritage structure
+    under ENVO:00000070 human construction while leaving ENVO:02000132 constructed monument
+    as a non-is-a xref on the decision row.
