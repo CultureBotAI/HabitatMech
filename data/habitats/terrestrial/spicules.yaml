@@ -1,10 +1,24 @@
 identifier: habitatmech:GOLD.d1e1435f42
-label: Spicules
+label: cave spicule
+definition: A speleothem which consists of a macroscopic acicular mineral crystal,
+  most commonly aragonite, precipitated subaerially from an evaporating capillary
+  or seepage film on a cave surface or coralloid nodule.
+definition_source: HabitatMech
 habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Spicules
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: aragonite spicules
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: spicular aragonite
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- habitatmech:GOLD.46abb9a153
+- ENVO:00000327
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8472
@@ -24,3 +38,18 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-09-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: Defined as 'cave spicule' under ENVO:00000327 'speleothem'. Definition
+    authored from the record's committed deep-research report under research/habitats/,
+    read in full; no new paid research was commissioned. GOLD's Environmental > Terrestrial
+    > Deep subsurface > Cave > Spicules leaf is interpreted as a cave-mineral speleothem
+    morphotype, not an animal spicule, a sponge spicule microfossil, or a lava-cave
+    filament. ENVO:00000327 'speleothem' is the tightest vendored genus; ENVO lacks
+    coralloid, evaporative, frostwork, anthodite, and moonmilk intermediates. REPLACE
+    drops GOLD's inherited Cave parent because an aragonite spicule is a secondary
+    mineral deposit on a cave surface or coralloid nodule, not a kind of cave. UBERON:3010830
+    'spicule' and PORO:0000017 'spicule' are homonyms and are deliberately not retained
+    even as xrefs. Upstream assertion volume is 0, the originating GOLD study is unidentified,
+    and no report source directly sequenced objects called spicules.
