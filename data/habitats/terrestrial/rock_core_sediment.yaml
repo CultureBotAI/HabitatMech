@@ -1,10 +1,22 @@
 identifier: habitatmech:GOLD.20fb5b0162
-label: Rock core/Sediment
+label: aquifer rock or sediment
+definition: An environmental material which is a portion of saturated rock or unconsolidated
+  sediment that composes the solid matrix of an aquifer.
+definition_source: HabitatMech
 habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Rock core/Sediment
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: aquifer matrix
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- habitatmech:GOLD.193fc3b328
+- ENVO:00010483
+xrefs:
+- ENVO:00012408
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5984
@@ -13,14 +25,30 @@ source_attestations:
   assertion_count: 1
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. GOLD conflates
-    rock core and sediment in one node, so neither term is honest as the identity.
-    Pulled out of the class-level sweep, whose note wrongly claimed no term matched.
-    Label: ''Rock core/Sediment''. (source concept habitatmech:GOLD.20fb5b0162)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-09-08T00:00:00Z'
+  curator: codex-gpt-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ENVO:00012408
+    ''aquifer'' kept as an xref. Definition research for Rock core/Sediment retained
+    the GOLD Aquifer parent and confirmed that ENVO:00012408 ''aquifer'' is a geologic
+    body rather than the rock-or-sediment material that composes it. The GOLD leaf
+    denotes in situ saturated aquifer matrix rather than the recovered core cylinder,
+    so aquifer is retained only as an xref for its part-of context and ENVO:00002007
+    sediment is still rejected as a parent because it drops the rock half of the source
+    concept. (source concept habitatmech:GOLD.20fb5b0162)'
+- timestamp: '2026-09-08T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: Defined as 'aquifer rock or sediment' under ENVO:00010483 'environmental
+    material'. Definition authored from a local evidence review, read in full. The
+    review interprets GOLD's Environmental > Terrestrial > Deep subsurface > Aquifer
+    > Rock core/Sediment leaf as in situ saturated aquifer material rather than a
+    recovered core sample. ENVO:00010483 'environmental material' is the tightest
+    existing genus that subsumes both rock and sediment, while ENVO:00012408 'aquifer'
+    is a related geologic body and not an is-a parent. parent_mode=REPLACE drops the
+    source-derived Aquifer parent because the material composes an aquifer rather
+    than being a kind of aquifer.

@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: rock_core_sediment
+session:
+  id: 2026-09-09T024714Z-claude-code-68b9d4
+  timestamp: '2026-09-09T02:47:14Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - parent_habitats
+  - synonyms
+  summary: Define aquifer rock or sediment
+  details: Authored curation/term_requests.tsv for habitatmech:GOLD.20fb5b0162 from
+    the Rock core/Sediment evidence review, defining aquifer rock or sediment under
+    ENVO:00010483 environmental material with aquifer matrix as an exact synonym
+    and parent_mode=REPLACE to drop the source-derived GOLD Aquifer context from
+    broader-habitat is-a parents.

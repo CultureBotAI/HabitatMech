@@ -1,12 +1,20 @@
 identifier: habitatmech:GOLD.62e447374d
-label: 'Larva: Nauplius'
+label: nauplius-associated environment
+definition: An animal-associated environment which is determined by a crustacean in
+  its nauplius larval stage.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: 'Larva: Nauplius'
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:01001002
 - habitatmech:GOLD.2959225799
 xrefs:
-- UBERON:0002548
+- BTO:0000915
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7348
@@ -20,15 +28,24 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
-- timestamp: '2026-08-17T00:00:00Z'
-  curator: claude-opus-5
+- timestamp: '2026-09-08T00:00:00Z'
+  curator: codex-gpt-5
   action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. UBERON:0002548
-    ''larva'' kept as an xref. Life-stage review (#112): carried UBERON:0002548 ''larva''
-    as a parent, reached by the ambiguous-leaf rule rather than the path — several
-    GOLD paths end in the same leaf, so the ones that do not claim the term keep it
-    as a parent. parent_habitats asserts the parent is BROADER, and a larva or embryo
-    is a whole organism rather than a broader kind of place, so this is the same over-claim
-    the identity cases had one level up. Kept as an xref (#99). Per the rule #114
-    settled: the whole host organism gets its own identity and an <X>-associated environment
-    term; parts of a host ground to the anatomy term. (source concept habitatmech:GOLD.62e447374d)'
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. BTO:0000915
+    ''nauplius'' kept as an xref. Definition research for Larva: Nauplius corrected
+    the reason to stay UNGROUNDED: BTO:0000915 ''nauplius'' names the crustacean larva
+    exactly, but it is still a whole organism at a life stage rather than an environmental
+    system determined by that organism. The GOLD concept keeps a minted habitat identity
+    under the same #112/#114 whole-organism rule used for Larva, Pupa, Prepupa, and
+    Embryo; the BTO organism term is retained only as an xref. (source concept habitatmech:GOLD.62e447374d)'
+- timestamp: '2026-09-08T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: 'Defined as ''nauplius-associated environment'' under ENVO:01001002 ''animal-associated
+    environment''. Definition authored from a local evidence review, read in full.
+    The review confirmed the GOLD leaf as a real host-associated crustacean larval
+    environment and identified crustacean-associated environment as the natural genus.
+    That intermediate is already requested by habitatmech:GOLD.2959225799 but does
+    not exist in ENVO, so this row uses ENVO:01001002 ''animal-associated environment''
+    as the same direct ENVO genus used by the crustacean parent; ENVO:01001176 is
+    not used because #210 rejected it for whole-host invertebrate requests.'

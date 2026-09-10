@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: oil_gas_pipeline
+session:
+  id: 2026-09-09T024716Z-claude-code-a9452f
+  timestamp: '2026-09-09T02:47:16Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - parent_habitats
+  - synonyms
+  summary: Define oil or gas pipeline network
+  details: Authored curation/term_requests.tsv for habitatmech:GOLD.74bb711f82 from
+    the Oil/Gas pipeline evidence review, defining oil or gas pipeline network under
+    ENVO:03600014 pipeline network with oil and gas pipeline as an exact synonym.
