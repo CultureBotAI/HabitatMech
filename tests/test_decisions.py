@@ -16,17 +16,31 @@ from habitatmech.curate.decisions import (
     load_decisions,
     validate_decisions,
 )
+from habitatmech.curate.external_xrefs import ExternalXrefError, load_external_xrefs
 
 ONTOLOGY = {"UBERON:0001988": "feces", "ENVO:00000051": "hot spring"}
+EXTERNAL_XREFS = {"NCBITaxon:4762": "Oomycota"}
 
 HEADER = ("identifier\tdecision\tobject_id\tobject_label\tgrounding_status\tcurator\t"
           "date\tnotes\treview_depth\tcategory\trelation\n")
+EXTERNAL_HEADER = (
+    "term_id\tterm_label\tsource_ontology\tsource_status\tcurator\tdate\tnotes\n"
+)
 GOOD_NOTE = "Verified against the source path; this is the exact concept."
 
 
 def _write(tmp_path, *rows):
     path = tmp_path / "decisions.tsv"
     path.write_text(HEADER + "".join("\t".join(r) + "\n" for r in rows), encoding="utf-8")
+    return path
+
+
+def _write_external(tmp_path, *rows):
+    path = tmp_path / "external_xrefs.tsv"
+    path.write_text(
+        EXTERNAL_HEADER + "".join("\t".join(r) + "\n" for r in rows),
+        encoding="utf-8",
+    )
     return path
 
 
@@ -176,9 +190,16 @@ def test_every_committed_decision_verifies(repo_root, raw_tsv):
     what would catch a term that drifted out of the vendored slice after an
     upstream refresh."""
     labels = {t["term_id"]: t["label"] for t in raw_tsv("ontology_terms.tsv")}
+    external = load_external_xrefs(repo_root / "curation" / "external_xrefs.tsv")
     decisions = load_decisions(repo_root / "curation" / "decisions.tsv")
     assert decisions, "no curation decisions on file"
-    validate_decisions(decisions, labels)
+    validate_decisions(
+        decisions,
+        labels,
+        external_xref_labels={
+            term_id: xref.label for term_id, xref in external.items()
+        },
+    )
 
 
 def test_class_depth_does_not_promote_a_record_to_reviewed(tmp_path):
@@ -328,6 +349,8 @@ def test_curation_notes_do_not_cite_evidence_that_does_not_exist(repo_root, raw_
         for r in raw_tsv("gold_ecosystem_paths.tsv")
     }
     labels = {r["term_id"]: r["label"] for r in raw_tsv("ontology_terms.tsv")}
+    external = load_external_xrefs(repo_root / "curation" / "external_xrefs.tsv")
+    labels.update({xref.term_id: xref.label for xref in external.values()})
     curie = re.compile(r"\b((?:[A-Z][A-Za-z]{1,9}|mesh):(?:C\d+|D\d+|\d{4,}))\b")
 
     # A term can be real without being in the vendored slice: Madin names its
@@ -647,6 +670,68 @@ def test_xref_relation_places_the_term_as_an_xref_not_a_parent(repo_root):
     assert _placement(make("xref")) == {"extra_parents": [], "extra_xrefs": ["ENVO:00000051"]}
     assert _placement(make("parent")) == {"extra_parents": ["ENVO:00000051"], "extra_xrefs": []}
     assert _placement(make("xref", "")) == {"extra_parents": [], "extra_xrefs": []}
+
+
+def test_external_xrefs_can_be_retained_without_vendoring_their_ontology(tmp_path):
+    row = ("habitatmech:GOLD.abcdef0123", "CONFIRM_UNGROUNDED", "NCBITaxon:4762",
+           "Oomycota", "", "tester", "2026-08-12", GOOD_NOTE, "ITEM", "", "xref")
+    validate_decisions(
+        load_decisions(_write(tmp_path, row)),
+        ONTOLOGY,
+        external_xref_labels=EXTERNAL_XREFS,
+    )
+
+
+@pytest.mark.parametrize(
+    ("decision", "grounding_status", "relation"),
+    [
+        ("CONFIRM_UNGROUNDED", "", "parent"),
+        ("GROUND_AS_PARENT", "NARROW", "xref"),
+        ("GROUND", "EXACT", "parent"),
+    ],
+)
+def test_external_xrefs_are_never_identities_or_parents(
+    tmp_path, decision, grounding_status, relation
+):
+    row = ("habitatmech:GOLD.abcdef0123", decision, "NCBITaxon:4762",
+           "Oomycota", grounding_status, "tester", "2026-08-12", GOOD_NOTE,
+           "ITEM", "", relation)
+    with pytest.raises(DecisionError, match="external xref"):
+        validate_decisions(
+            load_decisions(_write(tmp_path, row)),
+            ONTOLOGY,
+            external_xref_labels=EXTERNAL_XREFS,
+        )
+
+
+def test_external_xref_labels_are_verified(tmp_path):
+    row = ("habitatmech:GOLD.abcdef0123", "CONFIRM_UNGROUNDED", "NCBITaxon:4762",
+           "Chromista", "", "tester", "2026-08-12", GOOD_NOTE, "ITEM", "", "xref")
+    with pytest.raises(DecisionError, match="is 'Oomycota', not 'Chromista'"):
+        validate_decisions(
+            load_decisions(_write(tmp_path, row)),
+            ONTOLOGY,
+            external_xref_labels=EXTERNAL_XREFS,
+        )
+
+
+def test_external_xref_labels_are_loaded_from_a_reviewable_file(tmp_path):
+    path = _write_external(
+        tmp_path,
+        ("NCBITaxon:4762", "Oomycota", "NCBITaxon", "active_unvendored",
+         "tester", "2026-08-12", GOOD_NOTE),
+    )
+    assert load_external_xrefs(path)["NCBITaxon:4762"].label == "Oomycota"
+
+    duplicate = _write_external(
+        tmp_path,
+        ("NCBITaxon:4762", "Oomycota", "NCBITaxon", "active_unvendored",
+         "tester", "2026-08-12", GOOD_NOTE),
+        ("NCBITaxon:4762", "Oomycota", "NCBITaxon", "active_unvendored",
+         "tester", "2026-08-12", GOOD_NOTE),
+    )
+    with pytest.raises(ExternalXrefError, match="duplicate xref"):
+        load_external_xrefs(duplicate)
 
 
 def test_every_recorded_sample_is_fully_judged(repo_root):

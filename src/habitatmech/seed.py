@@ -95,6 +95,7 @@ from habitatmech.curate.definitions import (  # noqa: E402
     load_curated_definitions,
     validate_curated_definitions,
 )
+from habitatmech.curate.external_xrefs import load_external_xrefs  # noqa: E402
 from habitatmech.validation.write_validated import (  # noqa: E402
     ValidationFailedError,
     write_validated_habitat,
@@ -104,6 +105,7 @@ RAW_DIR = REPO_ROOT / "data" / "raw"
 HABITATS_DIR = REPO_ROOT / "data" / "habitats"
 DECISIONS_PATH = REPO_ROOT / "curation" / "decisions.tsv"
 CURATED_DEFINITIONS_PATH = REPO_ROOT / "curation" / "term_requests.tsv"
+EXTERNAL_XREFS_PATH = REPO_ROOT / "curation" / "external_xrefs.tsv"
 
 GOLD_LEVELS = ["ecosystem", "ecosystem_category", "ecosystem_type", "ecosystem_subtype", "specific_ecosystem"]
 
@@ -1819,6 +1821,7 @@ def build_corpus(
     # single unverifiable target fails the whole seed rather than silently
     # grounding 3298 records correctly and one to a term that does not exist.
     decisions = load_decisions(DECISIONS_PATH)
+    external_xrefs = load_external_xrefs(EXTERNAL_XREFS_PATH)
     validate_decisions(
         decisions,
         {term_id: term["label"] for term_id, term in ontology.terms.items()},
@@ -1827,8 +1830,12 @@ def build_corpus(
             term_id for term_id, term in ontology.terms.items()
             if str(term.get("label_only", "")).upper() == "TRUE"
         },
+        external_xref_labels={
+            term_id: xref.label for term_id, xref in external_xrefs.items()
+        },
     )
     stats["curation_decisions_loaded"] = len(decisions)
+    stats["curation_external_xrefs_loaded"] = len(external_xrefs)
     # Resolved once, before any ingest runs, so every SAME_AS row sees the same
     # end-of-chain target regardless of which source is ingested first.
     _SAME_AS_TARGETS.clear()
