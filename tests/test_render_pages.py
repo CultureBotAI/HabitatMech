@@ -91,6 +91,10 @@ def test_xrefs_without_resolvable_iris_render_as_plain_text(repo_root):
     assert not offenders
 
 
+def test_ceph_xrefs_render_to_obo_purls():
+    assert render_pages.term_iri("CEPH:0000001") == "http://purl.obolibrary.org/obo/CEPH_0000001"
+
+
 def test_record_pages_render_curated_causal_graphs(repo_root):
     expected = {
         "hypersaline-water-envo-00002012.html": (
