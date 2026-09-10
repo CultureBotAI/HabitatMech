@@ -117,6 +117,7 @@ REQUIRED_COLUMNS = [
 # A decision without a reason is not reviewable — the next curator cannot tell
 # whether it was considered or guessed.
 MIN_NOTES_CHARS = 20
+EXTERNAL_XREF_DECISION_KINDS = {"CONFIRM_UNGROUNDED", "NOT_APPLICABLE"}
 
 
 class DecisionError(SystemExit):
@@ -224,6 +225,7 @@ def validate_decisions(
     *,
     path: Path | None = None,
     label_only: set[str] | None = None,
+    external_xref_labels: dict[str, str] | None = None,
 ) -> None:
     """Fail loudly on any decision that is malformed or cannot be verified.
 
@@ -238,6 +240,7 @@ def validate_decisions(
     """
     where = f"{path}: " if path else ""
     problems: list[str] = []
+    external_xref_labels = external_xref_labels or {}
 
     for identifier, decision in sorted(decisions.items()):
         prefix = f"{where}{identifier}"
@@ -342,6 +345,10 @@ def validate_decisions(
         # xref an NOT_APPLICABLE decision may carry.
         if decision.object_id:
             actual = ontology_label.get(decision.object_id)
+            is_external_xref = False
+            if actual is None and decision.object_id in external_xref_labels:
+                actual = external_xref_labels[decision.object_id]
+                is_external_xref = True
             if actual is None:
                 problems.append(
                     f"{prefix}: {decision.object_id} is not in the vendored ontology "
@@ -357,6 +364,15 @@ def validate_decisions(
                 problems.append(
                     f"{prefix}: {decision.object_id} is {actual!r}, "
                     f"not {decision.object_label!r} — wrong term, or wrong label"
+                )
+            elif is_external_xref and (
+                decision.decision not in EXTERNAL_XREF_DECISION_KINDS
+                or decision.relation != "xref"
+            ):
+                problems.append(
+                    f"{prefix}: {decision.object_id} is an external xref and can "
+                    "only be used on CONFIRM_UNGROUNDED or NOT_APPLICABLE with "
+                    "relation 'xref'"
                 )
             elif decision.is_grounding and decision.object_id in (label_only or set()):
                 problems.append(

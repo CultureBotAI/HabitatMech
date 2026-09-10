@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: oomycetes
+session:
+  id: 2026-09-10T114006Z-codex-gpt-5-686755
+  timestamp: '2026-09-10T11:40:06Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: GPT-5
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/288
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - xrefs
+  summary: Retain the Oomycota xref on Oomycetes
+  details: Added a curated external-xrefs table entry for NCBITaxon:4762 Oomycota and updated
+    habitatmech:GOLD.a233293e47 to retain it with relation=xref. The Oomycota taxon corroborates
+    the GOLD Host-associated > Protists > Oomycetes host label but remains an xref only, not
+    a habitat identity or parent.

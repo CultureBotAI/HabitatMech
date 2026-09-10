@@ -13,6 +13,8 @@ synonyms:
 parent_habitats:
 - ENVO:01001000
 - habitatmech:GOLD.eee7408afd
+xrefs:
+- NCBITaxon:4762
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4470
@@ -29,10 +31,11 @@ curation_history:
 - timestamp: '2026-08-21T00:00:00Z'
   curator: codex-gpt-5
   action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Non-habitat
-    screen review (#108): Host-associated > Protists > Oomycetes denotes oomycetes
-    acting as microbial hosts. An external taxon term corroborates the host identity
-    but is external to the committed slice. (source concept habitatmech:GOLD.a233293e47)'
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. NCBITaxon:4762
+    ''Oomycota'' kept as an xref. Non-habitat screen review (#108): Host-associated
+    > Protists > Oomycetes denotes oomycetes acting as microbial hosts. NCBITaxon:4762
+    ''Oomycota'' is retained as an exact taxon xref; the taxon class is evidence about
+    the host, not the habitat identity. (source concept habitatmech:GOLD.a233293e47)'
 - timestamp: '2026-09-10T00:00:00Z'
   curator: codex-gpt-5
   action: DEFINED
@@ -43,4 +46,5 @@ curation_history:
     carries 2 organism assertions across 3 GOLD ecosystem node ids. ENVO:01001000
     is the tightest vendored ontology genus because the ontology lacks oomycete- or
     protist-associated environment classes; the source-inherited protist-associated
-    environment parent preserves the narrower GOLD host grouping separately.'
+    environment parent preserves the narrower GOLD host grouping separately; NCBITaxon:4762
+    remains an xref rather than a habitat identity.'

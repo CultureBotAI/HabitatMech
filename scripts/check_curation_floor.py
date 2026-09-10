@@ -43,6 +43,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 # Each input, and the column holding the identity of a row.
 INPUTS = {
     "curation/decisions.tsv": "identifier",
+    "curation/external_xrefs.tsv": "term_id",
     "curation/term_requests.tsv": "identifier",
     "curation/term_requests_excluded.tsv": "identifier",
     "curation/redirects_retracted.tsv": "retired_slug",

@@ -26,6 +26,12 @@ A related term that is not broader can be retained with `relation: xref`.
 `parent_habitats` is an is-a claim and must never be used merely to avoid losing
 an upstream link.
 
+An exact xref from an ontology that is not present in
+`data/raw/ontology_terms.tsv` can be label-verified through
+`curation/external_xrefs.tsv`. Those allow-listed terms are only valid beside a
+`CONFIRM_UNGROUNDED` or `NOT_APPLICABLE` decision with `relation: xref`; they
+must never be used as a `GROUND` identity or a `GROUND_AS_PARENT` parent.
+
 Each decision has a `review_depth`. `ITEM` means the source path and candidate
 terms were examined. `CLASS` records membership in a mechanically defined
 screen and does not promote a record to `REVIEWED`. An equivalence grounding is
