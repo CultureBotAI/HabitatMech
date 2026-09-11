@@ -1,9 +1,17 @@
 identifier: habitatmech:GOLD.236abc4b8a
-label: Rubber
+label: marine rubber waste
+definition: A waste material which is composed primarily of rubber, has entered a
+  marine water body, and exposes a solid surface for microbial colonization.
+definition_source: HabitatMech
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Rubber
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:00002264
 - habitatmech:GOLD.cea7ead8dd
 source_attestations:
 - source: GOLD
@@ -25,3 +33,14 @@ curation_history:
     rubber waste as a colonisable substrate in a marine setting. It is a physical
     habitat, not a claim that CHEBI''s chemical class is a place; the external chemical
     term is not in the committed slice. (source concept habitatmech:GOLD.236abc4b8a)'
+- timestamp: '2026-09-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: 'Defined as ''marine rubber waste'' under ENVO:00002264 ''waste material''.
+    Definition authored from the existing item-level #108 decision; no new paid research
+    was commissioned. GOLD''s Environmental > Aquatic > Marine > Waste > Rubber source
+    denotes rubber waste as a colonizable substrate in a marine setting, not rubber
+    latex, a rubber plantation, rubber cement, or a pure chemical class. ENVO:00002264
+    ''waste material'' is the tightest vendored genus because the source is a discarded
+    material in a marine water body; ADD preserves the GOLD Marine > Waste parent
+    so the term request stays narrower than the broader waste-material class.'
