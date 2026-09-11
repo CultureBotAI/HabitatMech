@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: root_stem_rot
+session:
+  id: 2026-09-11T023935Z-claude-code-819882
+  timestamp: '2026-09-11T02:39:35Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: codex-gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - parent_habitats
+  - synonyms
+  summary: Define root-or-stem rot environment
+  details: Authored curation/term_requests.tsv for habitatmech:BACDIVE.04ddbbeabe from the
+    committed Rot-Root,Stem deep-research report. Defined root-or-stem rot environment under
+    ENVO:01001057, kept BacDive's Rot (Root,Stem) source label as an exact synonym, distinguished
+    the habitat from healthy PO root or stem organs, rhizosphere and rhizoplane compartments,
+    plant litter or necromass, and disease classes, then regenerated the record, term-request
+    template, redirect ledger, and rendered pages.

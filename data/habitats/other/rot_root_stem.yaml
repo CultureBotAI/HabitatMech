@@ -1,8 +1,21 @@
 identifier: habitatmech:BACDIVE.04ddbbeabe
-label: Rot-Root,Stem
+label: root-or-stem rot environment
+definition: An environment associated with a plant part or small plant which is determined
+  by macerated or necrotic tissue of a root or stem undergoing in situ decomposition
+  by an invading plant-pathogenic microorganism.
+definition_source: HabitatMech
 habitat_category: OTHER
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Rot (Root,Stem)
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: Rot-Root,Stem
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+parent_habitats:
+- ENVO:01001057
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:rot-root,stem
@@ -34,3 +47,18 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+- timestamp: '2026-09-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: 'Defined as ''root-or-stem rot environment'' under ENVO:01001057 ''environment
+    associated with a plant part or small plant''. Definition authored from the record''s
+    committed deep-research report under research/habitats/, read in full; no new
+    paid research was commissioned. The report confirms BacDive''s #Rot (Root,Stem)
+    source can denote the rotted root or stem tissue and distinguishes it from BacDive''s
+    separate body-site facet, PO:0009005 ''root'', PO:0009047 ''stem'', rhizosphere
+    and rhizoplane compartments, detached plant litter, necromass, and disease classes.
+    ENVO:01001057 ''environment associated with a plant part or small plant'' is the
+    tightest vendored environment genus and matches the sibling leaf-or-stem spot
+    lesion definition. The definition deliberately avoids pH or fungal and oomycete
+    specificity because the record''s two BacDive strain attestations are bacterial
+    soft rot and the report found no source for a general pH range.'
