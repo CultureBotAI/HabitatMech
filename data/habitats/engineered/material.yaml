@@ -1,9 +1,17 @@
 identifier: habitatmech:GOLD.7dd45e072b
-label: Material
+label: solid manufactured material
+definition: A manufactured product which consists of a fabricated solid characterized
+  primarily by its material composition rather than by an intended device function.
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Material
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:00003074
 - habitatmech:GOLD.74bb2a619a
 source_attestations:
 - source: GOLD
@@ -24,3 +32,21 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-09-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: Defined as 'solid manufactured material' under ENVO:00003074 'manufactured
+    product'. Definition authored from the record's committed deep-research report
+    under research/habitats/, read in full; no new paid research was commissioned.
+    GOLD's Engineered > Industrial production > Engineered product > Material source
+    is interpreted as a grouping node for solid fabricated materials, with Plastic,
+    Fabric, and Paper children but no direct sample assertions. ENVO:00003074 'manufactured
+    product' is the tightest vendored genus, while NCIT:C48187 'Material' is too generic,
+    ENVO:0010001 'anthropogenic environmental material' omits textile and paper product
+    siblings, ENVO:00010483 'environmental material' has the wrong mass-noun scope,
+    ENVO:06105101 'plastic' is narrower than the grouping, and FOODON:00003368 'food
+    contact material' overclaims food contact. The GOLD source label remains on the
+    HabitatMech record through source_attestations and the seeder's internal source-label
+    synonym; the ENVO request intentionally has no authored exact synonyms because
+    manufactured material, engineered material, and fabricated material would be related
+    rather than exact.
