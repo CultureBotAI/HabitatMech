@@ -7,8 +7,13 @@ name: label-correspondence
 # because the ontologies it resolves change under the corpus rather than with it.
 
 on:
+  # Required checks must report for every PR and merge-group commit.
   pull_request:
-    paths: &trigger_paths
+  merge_group:
+    types: [checks_requested]
+  push:
+    branches: [main]
+    paths:
       - "data/habitats/**"
       - "scripts/validate_id_label_correspondence.py"
       - "scripts/chem_formula.py"
@@ -18,9 +23,6 @@ on:
       - ".github/workflows/label-correspondence.yaml"
       - "pyproject.toml"
       - "uv.lock"
-  push:
-    branches: [main]
-    paths: *trigger_paths
   workflow_dispatch:
 
 permissions:
