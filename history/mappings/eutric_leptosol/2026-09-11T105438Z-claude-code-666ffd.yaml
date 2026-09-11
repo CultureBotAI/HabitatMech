@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: eutric_leptosol
+session:
+  id: 2026-09-11T105438Z-claude-code-666ffd
+  timestamp: '2026-09-11T10:54:38Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Define eutric leptosol
+  details: Authored curation/term_requests.tsv for habitatmech:GOLD.bfd28de801 from its committed
+    definition report after exact ignored-and-hidden searches for its identifier, GOLD path,
+    source label, requested label and slug, synonym candidates, DOI strings, and ENVO:00002241.
+    Defined eutric leptosol under ENVO:00002241 leptosol while preserving the GOLD Leptosol
+    parent; no new paid research was commissioned.

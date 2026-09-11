@@ -1,8 +1,15 @@
 identifier: habitatmech:GOLD.bfd28de801
-label: Eutric
+label: eutric leptosol
+definition: A leptosol which has an effective base saturation of 50% or more in mineral
+  material below 20 cm of the mineral soil surface.
+definition_source: HabitatMech
 habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Eutric
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:00002241
 source_attestations:
@@ -25,3 +32,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-09-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: Defined as 'eutric leptosol' under ENVO:00002241 'leptosol'. Definition
+    authored from the record's committed deep-research report under research/habitats/,
+    read in full; no new paid research was commissioned. GOLD's Environmental > Terrestrial
+    > Soil > Leptosol > Eutric source is interpreted as a eutric leptosol rather than
+    the bare WRB Eutric qualifier. ENVO:00002241 'leptosol' is the strictly broader
+    parent already inherited from GOLD's Leptosol path; grounding to that unqualified
+    parent would merge this path-qualified source with GOLD's broader Leptosol sibling.
+    The definition distinguishes eutric leptosol from eutrophic water bodies, calcaric,
+    rendzic, or lithic leptosols, calcisol, and other eutric reference soil groups.
+    No exact synonyms were authored because Eutric is context-dependent and base-rich
+    shallow soil phrases are descriptive rather than exact.
