@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: rubber
+session:
+  id: 2026-09-11T080939Z-codex-gpt-5-685cd5
+  timestamp: '2026-09-11T08:09:39Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - parent_habitats
+  summary: Define marine rubber waste
+  details: Authored curation/term_requests.tsv for habitatmech:GOLD.236abc4b8a after exact
+    ignored-and-hidden searches for the HabitatMech identifier, source label, old and new
+    generated slugs, requested label, inherited Marine > Waste parent, ENVO waste-material
+    genus, and rubber near misses. The row defines GOLD Environmental > Aquatic > Marine >
+    Waste > Rubber as marine rubber waste under ENVO:00002264 waste material and keeps the
+    source-derived Marine > Waste parent with parent_mode=ADD so the request remains tied
+    to discarded rubber in marine water bodies while excluding rubber latex, rubber plantations,
+    rubber cement, and pure chemical-class readings.
