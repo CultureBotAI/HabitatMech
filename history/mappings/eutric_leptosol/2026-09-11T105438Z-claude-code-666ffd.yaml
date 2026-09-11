@@ -9,6 +9,8 @@ session:
   actors:
   - type: ai_agent
     name: claude-code
+    model: GPT-5
+    agent_tool: codex
 events:
 - type: EDIT
   outcome: changed
