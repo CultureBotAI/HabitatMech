@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: surface__a1f5df1d
+session:
+  id: 2026-09-11T085515Z-codex-gpt-5-af84ef
+  timestamp: '2026-09-11T08:55:15Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - parent_habitats
+  summary: Define aerial plant surface environment
+  details: Authored curation/term_requests.tsv for habitatmech:GOLD.bed15b95b1 after exact
+    ignored-and-hidden searches for the HabitatMech identifier, requested label, generated
+    slug, source label and path, ENVO plant-associated genus, ENVO biofilm-on-plant-surface
+    near miss, and PO epidermis near misses. The row defines GOLD Host-associated > Plants
+    > Phyllosphere > Surface as an aerial plant surface environment under ENVO:01001001 plant-associated
+    environment, using the committed deep-research report's organ-unspecified exterior-surface
+    interpretation and preserving the source-derived Phyllosphere parent with parent_mode=ADD
+    while avoiding ENVO:01001032 biofilm and UBERON:0002416 animal-integument false groundings.

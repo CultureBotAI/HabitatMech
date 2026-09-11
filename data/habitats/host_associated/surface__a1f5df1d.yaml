@@ -1,9 +1,23 @@
 identifier: habitatmech:GOLD.bed15b95b1
-label: Surface
+label: aerial plant surface environment
+definition: A plant-associated environment which is determined by the exterior surface
+  of an above-ground structure of a living plant.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Surface
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: above-ground plant surface
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: plant surface
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:01001001
 - habitatmech:GOLD.7406232b7e
 source_attestations:
 - source: GOLD
@@ -27,3 +41,18 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-09-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: 'Defined as ''aerial plant surface environment'' under ENVO:01001001 ''plant-associated
+    environment''. Definition authored from the record''s committed deep-research
+    report under research/habitats/, read in full; no new paid research was commissioned.
+    GOLD''s Host-associated > Plants > Phyllosphere > Surface source is interpreted
+    as the organ-unspecified exterior face of above-ground plant structures because
+    GOLD already keeps leaf-specific Phylloplane/Leaf and Phylloplane/Leaf surface
+    sibling records. ENVO:01001001 ''plant-associated environment'' is the tightest
+    vendored genus broad enough to cover aerial plant surfaces without asserting a
+    biofilm; ENVO:01001032 ''environment determined by a biofilm on a plant surface''
+    is narrower, PO:0005679 and PO:0006016 name epidermal tissues rather than a surface
+    environment, and UBERON:0002416 is the retired animal-integument false match from
+    #62. ADD preserves the source-inherited Phyllosphere parent.'
