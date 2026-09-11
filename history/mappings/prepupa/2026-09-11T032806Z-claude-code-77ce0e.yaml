@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: prepupa
+session:
+  id: 2026-09-11T032806Z-claude-code-77ce0e
+  timestamp: '2026-09-11T03:28:06Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: codex-gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/276
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - parent_habitats
+  - synonyms
+  summary: Define insect prepupa-associated environment
+  details: 'Authored curation/term_requests.tsv for habitatmech:GOLD.ccdfcd10b9 from the committed
+    Prepupa deep-research report and revised curation/decisions.tsv for habitatmech:GOLD.71e7bb35e2
+    so the GOLD Nymph/Instar source keeps BTO:0000954 only as an xref. This settles issue
+    #276 by keeping the #112/#114 whole-host life-stage rule consistent before defining Prepupa.'
