@@ -1,0 +1,131 @@
+identifier: habitatmech:PREGO.c312b0d6fc
+label: tuberculous granuloma
+definition: An anatomical entity environment which is determined by a caseating granuloma
+  formed in host tissue in response to infection by members of the Mycobacterium tuberculosis
+  complex.
+definition_source: HabitatMech
+habitat_category: HOST_ASSOCIATED
+grounding_status: UNGROUNDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: tuberclar
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: tubercle
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: tubercles
+  synonym_type: RELATED_SYNONYM
+  source: PREGO
+- synonym_text: tuberculous lesion
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+parent_habitats:
+- ENVO:2100000
+source_attestations:
+- source: PREGO
+  source_id: BTO:0002173
+  source_label: tubercle
+  assertion_count: 11
+  assertion_unit: TAXON
+  score: 3.0
+  evidence_channels: annotated_genomes_isolates
+characteristic_taxa:
+- taxon_id: NCBITaxon:1205674
+  source: PREGO
+  taxon_label: Mycobacterium canetti CIPT 140070010
+  score: 3.0
+  rank: 1
+  candidate_pool: 11
+- taxon_id: NCBITaxon:1205675
+  source: PREGO
+  taxon_label: Mycobacterium canetti CIPT 140070008
+  score: 3.0
+  rank: 2
+  candidate_pool: 11
+- taxon_id: NCBITaxon:1205676
+  source: PREGO
+  taxon_label: Mycobacterium canetti CIPT 140060008
+  score: 3.0
+  rank: 3
+  candidate_pool: 11
+- taxon_id: NCBITaxon:1205677
+  source: PREGO
+  taxon_label: Mycobacterium canetti CIPT 140070017
+  score: 3.0
+  rank: 4
+  candidate_pool: 11
+- taxon_id: NCBITaxon:1246119
+  source: PREGO
+  taxon_label: Mycobacterium canetti CIPT 140070002
+  score: 3.0
+  rank: 5
+  candidate_pool: 11
+- taxon_id: NCBITaxon:1246120
+  source: PREGO
+  taxon_label: Mycobacterium canetti CIPT 140070005
+  score: 3.0
+  rank: 6
+  candidate_pool: 11
+- taxon_id: NCBITaxon:1246121
+  source: PREGO
+  taxon_label: Mycobacterium canetti CIPT 140070013
+  score: 3.0
+  rank: 7
+  candidate_pool: 11
+- taxon_id: NCBITaxon:1246634
+  source: PREGO
+  taxon_label: Mycobacterium canetti CIPT 140070007
+  score: 3.0
+  rank: 8
+  candidate_pool: 11
+- taxon_id: NCBITaxon:233413
+  source: PREGO
+  taxon_label: Mycobacterium tuberculosis variant bovis AF2122/97
+  score: 3.0
+  rank: 9
+  candidate_pool: 11
+- taxon_id: NCBITaxon:272631
+  source: PREGO
+  taxon_label: Mycobacterium leprae TN
+  score: 3.0
+  rank: 10
+  candidate_pool: 11
+- taxon_id: NCBITaxon:83332
+  source: PREGO
+  taxon_label: Mycobacterium tuberculosis H37Rv
+  score: 3.0
+  rank: 11
+  candidate_pool: 11
+curation_history:
+- timestamp: '2026-08-16T05:58:02Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: UNGROUNDED.'
+- timestamp: '2026-09-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Item-level tubercle
+    report read in full before definition authoring. The earlier disjoint decision
+    stands: BTO:0002173 is a Schistosoma body-part homonym, and the UBERON and PO
+    tubercle terms name generic normal anatomical protrusions and plant protuberances,
+    while PREGO''s source string points at a mycobacterial tubercle. No vendored ontology
+    term names the infectious granulomatous lesion itself, so the record remains UNGROUNDED.
+    Category set to HOST_ASSOCIATED because this habitat is formed within host tissue
+    rather than an external OTHER source. (source concept habitatmech:PREGO.c312b0d6fc)'
+- timestamp: '2026-09-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: Defined as 'tuberculous granuloma' under ENVO:2100000 'anatomical entity
+    environment'. Definition authored from the record's committed deep-research report
+    under research/habitats/, read in full; no new paid research was commissioned.
+    The report interprets PREGO's BTO:0002173 'tubercle' source as the tuberculosis
+    pathology sense because the PREGO synonyms include tubercle while the high-scoring
+    taxa are dominated by Mycobacterium tuberculosis complex genomes. The BTO, UBERON,
+    and PO tubercle terms are homonyms for schistosome bosses, normal anatomical protrusions,
+    and plant protrusions; ENVO lacks a tuberculous granuloma or infectious lesion
+    class, so ENVO:2100000 'anatomical entity environment' is the tightest vendored
+    genus for a pathological host-tissue structure. The definition is intentionally
+    restricted to Mycobacterium tuberculosis complex granulomas because the lone Mycobacterium
+    leprae PREGO taxon is likely lexical spillover from PREGO's co-mention method
+    rather than evidence for a leprosy lesion habitat.

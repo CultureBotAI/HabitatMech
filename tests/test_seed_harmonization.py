@@ -12,6 +12,7 @@ import pytest
 
 from habitatmech import seed
 from habitatmech.curate.decisions import Decision
+from habitatmech.curate.definitions import CuratedDefinition
 
 
 def test_minted_identifiers_are_deterministic():
@@ -364,6 +365,68 @@ def test_attestation_ordering_keeps_unknown_fields():
     )
     assert list(ordered) == ["source", "source_label", "some_future_field"]
     assert ordered["some_future_field"] == 1
+
+
+def test_prego_definition_does_not_upgrade_stemmed_source_label():
+    store = seed.ConceptStore(seed.OntologyIndex([
+        {
+            "term_id": "ENVO:01001002",
+            "ontology": "ENVO",
+            "label": "animal-associated environment",
+            "definition": "",
+            "synonyms": "",
+        }
+    ], []))
+    routes = seed.Counter()
+    prego_id = "BTO:0002173"
+    minted = seed.mint("PREGO", prego_id)
+    seed.ingest_prego(
+        store,
+        [{
+            "prego_id": prego_id,
+            "prego_synonyms": "tuberclar|tubercle|tubercles",
+            "taxon_count": "0",
+            "max_prego_score": "0",
+            "channels": "",
+        }],
+        [],
+        routes,
+        {
+            minted: Decision(
+                identifier=minted,
+                decision="CONFIRM_UNGROUNDED",
+                object_id="",
+                object_label="",
+                grounding_status="",
+                curator="tester",
+                date="2026-09-10",
+                notes="n" * 30,
+            )
+        },
+    )
+
+    definition = CuratedDefinition(
+        identifier=minted,
+        label="tubercle",
+        parent_class="ENVO:01001002",
+        parent_label="animal-associated environment",
+        definition="An animal-associated environment.",
+        exact_synonyms=("tuberculous granuloma",),
+        curator="tester",
+        date="2026-09-10",
+        notes="n" * 30,
+    )
+
+    seed.apply_curated_definitions(store, {minted: definition})
+    concept = store.concepts[minted]
+
+    assert concept.label == "tubercle"
+    assert concept.synonyms[("tuberclar", "RELATED_SYNONYM")] == "PREGO"
+    assert ("tubercle", "RELATED_SYNONYM") not in concept.synonyms
+    assert ("tuberclar", "EXACT_SYNONYM") not in concept.synonyms
+    assert concept.synonyms[("tuberculous granuloma", "EXACT_SYNONYM")] == (
+        "HabitatMech curation"
+    )
 
 
 def test_upstream_mapping_is_rejected_when_its_label_disagrees():

@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: src/habitatmech/seed.py
+  slug: prego_source_synonyms
+session:
+  id: 2026-09-10T140536Z-claude-code-d3a32b
+  timestamp: '2026-09-10T14:05:36Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: codex-gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - synonyms
+  summary: Retain PREGO stems as related synonyms
+  details: Updated apply_curated_definitions so PREGO-only records keep their pre-definition
+    fallback label as a PREGO RELATED_SYNONYM instead of upgrading it to a HabitatMech EXACT_SYNONYM.
+    The change also prunes source synonyms that become identical to the newly authored label,
+    preserving tuberclar as a source stem while preventing tubercle from appearing as its
+    own related synonym.

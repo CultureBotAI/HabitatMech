@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: tubercle
+session:
+  id: 2026-09-10T140533Z-claude-code-05d336
+  timestamp: '2026-09-10T14:05:33Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: codex-gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding_status
+  - habitat_category
+  - definition
+  - parent_habitats
+  - synonyms
+  summary: Define tuberculous granuloma
+  details: Authored curation/term_requests.tsv for habitatmech:PREGO.c312b0d6fc from the committed
+    tuberclar deep-research report and revised its curation/decisions.tsv row to keep the
+    PREGO tubercle source minted, reviewed, and HOST_ASSOCIATED. The row defines tuberculous
+    granuloma under ENVO:2100000, adds tuberculous lesion as an exact synonym, and leaves
+    the BTO, UBERON, and PO tubercle homonyms ungrounded.
