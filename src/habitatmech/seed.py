@@ -437,6 +437,10 @@ def apply_curated_definitions(
         concept.label = definition.label
         concept.definition = definition.definition
         concept.definition_source = "HabitatMech"
+        concept.synonyms = {
+            key: source for key, source in concept.synonyms.items()
+            if norm_label(key[0]) != norm_label(concept.label)
+        }
         if definition.parent_mode == "REPLACE":
             concept.parents = {definition.parent_class}
         else:
@@ -447,7 +451,11 @@ def apply_curated_definitions(
             and norm_label(decision.object_label) == norm_label(source_label)
             for decision in concept.decisions_applied
         )
-        if not source_label_is_retained_xref:
+        if {a.get("source") for a in concept.attestations} == {"PREGO"}:
+            # PREGO lexical variants include stems and plurals, so keep the
+            # fallback source label at PREGO's weaker synonym strength.
+            concept.add_synonym(source_label, "RELATED_SYNONYM", "PREGO")
+        elif not source_label_is_retained_xref:
             concept.add_synonym(source_label, "EXACT_SYNONYM", "HabitatMech curation")
         for synonym in definition.exact_synonyms:
             concept.add_synonym(synonym, "EXACT_SYNONYM", "HabitatMech curation")

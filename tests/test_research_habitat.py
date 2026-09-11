@@ -18,7 +18,7 @@ def test_record_lookup_and_template_context():
     assert path.name == "tuberclar.yaml"
     variables = template_vars(doc)
     assert variables["habitat_identifier"] == IDENTIFIER
-    assert variables["habitat_label"] == "tuberclar"
+    assert variables["habitat_label"] == "tuberculous granuloma"
     assert "PREGO" in variables["attestations"]
 
 
