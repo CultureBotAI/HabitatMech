@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: stone
+session:
+  id: 2026-09-11T050054Z-codex-gpt-5-36ee7b
+  timestamp: '2026-09-11T05:00:54Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - parent_habitats
+  summary: Define built heritage stone material
+  details: Authored curation/term_requests.tsv for habitatmech:GOLD.8c6192908f from the committed
+    Stone report, read in full after exact ignored-and-hidden searches for the identifier,
+    proposed label, target ENVO genus, near-miss rock, constructed-monument and masonry-unit
+    CURIEs, the NCIT calculus false friend, and report DOI strings. The row defines GOLD's
+    Engineered > Built environment > Monument > Stone source as built heritage stone material
+    under ENVO:0010001 anthropogenic environmental material while preserving the true source-derived
+    built heritage structure parent.
