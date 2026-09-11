@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: crustacean_larvae
+session:
+  id: 2026-09-11T101417Z-claude-code-212d5a
+  timestamp: '2026-09-11T10:14:17Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+events:
+- type: EDIT
+  outcome: changed
+  summary: Define crustacean larval environments
+  details: 'Authored curation/term_requests.tsv for habitatmech:GOLD.c4c779417d and habitatmech:GOLD.8b6557e4f2
+    from their committed definition reports after exact ignored-and-hidden searches for identifiers,
+    labels, source paths, requested labels and slugs, synonym candidates, and ENVO:01001002.
+    Defined crustacean larva-associated environment and zoea-associated environment under
+    ENVO:01001002 animal-associated environment while preserving GOLD''s crustacean parent;
+    no new paid research was commissioned; filed #320 and #321 for the sibling Post-larva
+    stage-grounding and Zoea Whole body merge-candidate follow-ups.'
