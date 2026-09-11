@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: gulf
+session:
+  id: 2026-09-11T063533Z-codex-gpt-5-cfe960
+  timestamp: '2026-09-11T06:35:33Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - parent_habitats
+  summary: Define gulf
+  details: 'Authored curation/term_requests.tsv for habitatmech:GOLD.3e97e1d9d2 after exact
+    ignored-and-hidden searches for the HabitatMech identifier, Gulf label, generated slug,
+    proposed ENVO genus and neighboring marine-feature terms. The row defines GOLD Environmental
+    > Aquatic > Marine > Gulf as a gulf under ENVO:00000032 bay while preserving ENVO:00001999
+    marine water body from the GOLD path, and keeps it distinct from seas, oceans, generic
+    inlets, coastal inlets, and the unrelated chemical label collision rejected in #108.'

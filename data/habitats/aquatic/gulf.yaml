@@ -1,9 +1,13 @@
 identifier: habitatmech:GOLD.3e97e1d9d2
-label: Gulf
+label: gulf
+definition: A bay which is a large, deeply indented marine water body partly enclosed
+  by land.
+definition_source: HabitatMech
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
 parent_habitats:
+- ENVO:00000032
 - ENVO:00001999
 source_attestations:
 - source: GOLD
@@ -25,3 +29,15 @@ curation_history:
     screen review (#108): Environmental > Aquatic > Marine > Gulf unambiguously denotes
     the marine water body setting. The external chemical term label collision is unrelated
     to this path and is not retained as an xref. (source concept habitatmech:GOLD.3e97e1d9d2)'
+- timestamp: '2026-09-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: 'Defined as ''gulf'' under ENVO:00000032 ''bay''. Definition authored from
+    existing item-level review and committed GOLD triad evidence; no new paid research
+    was commissioned. GOLD''s Environmental > Aquatic > Marine > Gulf source denotes
+    a marine gulf rather than the unrelated chemical term label collision rejected
+    in #108. ENVO:00000032 ''bay'' is the tightest vendored genus because a gulf is
+    a large marine bay; ENVO:00001999 ''marine water body'' is true but coarser and
+    retained through the GOLD parent path, while ENVO:00000016 ''sea'', ENVO:00000015
+    ''ocean'', ENVO:00000475 ''inlet'', and ENVO:00000137 ''coastal inlet'' either
+    are siblings, broader near misses, or lack the three-sided partial land enclosure.'
