@@ -1,9 +1,18 @@
 identifier: habitatmech:GOLD.da1f99888c
-label: Pupa
+label: insect pupa-associated environment
+definition: An animal-associated environment which is determined by a holometabolous
+  insect in its pupal stage, the non-feeding metamorphic stage between the last larval
+  instar and the adult.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Pupa
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:01001002
 - habitatmech:GOLD.dba2a83b95
 xrefs:
 - UBERON:0003143
@@ -32,3 +41,20 @@ curation_history:
     makes both calls fall out of one rule, rather than an exception for terms that
     happen to live in UBERON: a cocoon is a STRUCTURE an insect builds and stays grounded,
     because it is not the organism. (source concept habitatmech:GOLD.da1f99888c)'
+- timestamp: '2026-09-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: 'Defined as ''insect pupa-associated environment'' under ENVO:01001002
+    ''animal-associated environment''. Definition authored from the record''s committed
+    deep-research report under research/habitats/, read in full; no new paid research
+    was commissioned. GOLD''s Host-associated > Arthropoda: Insects > Pupa source
+    denotes a holometabolous insect acting as a whole-host microbial habitat under
+    #112/#114, not UBERON:0003143 or BTO:0001143 organism-at-stage identities, UBERON:0013198
+    cocoon, a puparium, a narrower chrysalis or tumbler subtype, pupation substrate,
+    an insect food product, or a life-cycle interval. ENVO:01001002 is the tightest
+    vendored genus until insect-associated environment is minted, and the source-inherited
+    HabitatMech parent preserves the narrower insect restriction; GOLD has no direct
+    or child assertions under Pupa, but the concept is structurally load-bearing for
+    Cocoon and Whole body children and the pupal microbiome literature documents the
+    non-feeding metamorphic host as a distinct habitat. Insect Meconium grounding
+    is tracked separately in #309.'
