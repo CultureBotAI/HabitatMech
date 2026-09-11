@@ -1,9 +1,17 @@
 identifier: habitatmech:GOLD.ccdfcd10b9
-label: Prepupa
+label: insect prepupa-associated environment
+definition: An animal-associated environment which is determined by an insect in its
+  non-feeding prepupal phase, after the end of larval feeding and before pupation.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Prepupa
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:01001002
 - habitatmech:GOLD.dba2a83b95
 xrefs:
 - UBERON:0003142
@@ -34,3 +42,20 @@ curation_history:
     is the line that makes both calls fall out of one rule, rather than an exception
     for terms that happen to live in UBERON: a cocoon is a STRUCTURE an insect builds
     and stays grounded, because it is not the organism. (source concept habitatmech:GOLD.ccdfcd10b9)'
+- timestamp: '2026-09-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: 'Defined as ''insect prepupa-associated environment'' under ENVO:01001002
+    ''animal-associated environment''. Definition authored from the record''s committed
+    deep-research report under research/habitats/, read in full; no new paid research
+    was commissioned. GOLD''s Host-associated > Arthropoda: Insects > Prepupa source
+    denotes an insect acting as a whole-host microbial habitat under #112/#114, not
+    UBERON:0003142 or BTO:0001110 organism-at-stage identities, BTO:0001459 white
+    prepupa, UBERON:0013198 cocoon, the pupal meconium, a larva/pupa/nymph sibling,
+    a time interval, rearing substrate, or insect food product. The wording uses the
+    report''s functional non-feeding, post-larval, pre-pupal reading to span dipteran,
+    black soldier fly, and hymenopteran prepupa usages while avoiding UBERON''s stricter
+    pupariation boundary. ENVO:01001002 is the tightest vendored genus until insect-associated
+    environment is minted, and the source-inherited HabitatMech parent preserves the
+    narrower insect restriction; GOLD has only two anonymous organism assertions;
+    the BTO:0000954 Nymph/Instar outlier was settled in #276.'
