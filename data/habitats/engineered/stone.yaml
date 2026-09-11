@@ -1,9 +1,18 @@
 identifier: habitatmech:GOLD.8c6192908f
-label: Stone
+label: built heritage stone material
+definition: An anthropogenic environmental material which is composed primarily of
+  rock and forms part of a built heritage structure, exposing an atmosphere-contacting
+  surface or near-surface pore space colonizable by subaerial microorganisms.
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Stone
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:0010001
 - habitatmech:GOLD.a8b8ee2424
 source_attestations:
 - source: GOLD
@@ -23,3 +32,20 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-09-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: Defined as 'built heritage stone material' under ENVO:0010001 'anthropogenic
+    environmental material'. Definition authored from the record's committed deep-research
+    report under research/habitats/, read in full; no new paid research was commissioned.
+    GOLD's Engineered > Built environment > Monument > Stone source denotes worked
+    stone fabric or substratum under built heritage, not NCIT:C35708 'Stone' calculi,
+    natural rock outcrops, rock tools or lithic artifacts, gypsum black crust, biofilm,
+    concrete, mortar, cave walls, or catacomb walls. ENVO:0010001 'anthropogenic environmental
+    material' is the tightest vendored genus for a human-emplaced material; ENVO:00001995
+    'rock' is natural rock generally, and natural rock branches already exist separately;
+    ENVO:02000132 'constructed monument' and ENVO:01000457 'masonry unit' name a partially
+    overlapping whole memorial construction and countable masonry blocks rather than
+    broader material classes. The source has zero direct assertions, but the exact
+    grounded Sandstone child and built-heritage stone microbiome literature support
+    retaining the grouping.
