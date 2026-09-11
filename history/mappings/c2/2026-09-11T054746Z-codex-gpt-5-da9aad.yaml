@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: c2
+session:
+  id: 2026-09-11T054746Z-codex-gpt-5-da9aad
+  timestamp: '2026-09-11T05:47:46Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - parent_habitats
+  summary: Define compartment 2 of camelid stomach
+  details: Authored curation/term_requests.tsv for habitatmech:GOLD.e89f860f72 from the committed
+    C2 report, read in full after exact ignored-and-hidden searches for the identifier, proposed
+    labels, target UBERON genus, the NCBITaxon host-clade xref, source label, and definitional
+    DOI strings. The row defines the GOLD C2 source as compartment 2 of camelid stomach under
+    UBERON:0009870 zone of stomach while preserving the source-derived Stomach parent and
+    avoiding vertebral bone 2, ruminant reticulum, omasum, C1/C3 siblings, complement C2,
+    and two-carbon-compound conflations.

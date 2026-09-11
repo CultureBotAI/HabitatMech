@@ -1,9 +1,18 @@
 identifier: habitatmech:GOLD.e89f860f72
-label: C2
+label: compartment 2 of camelid stomach
+definition: A zone of stomach which is the second and smallest compartment of the
+  camelid stomach, lies between compartments 1 and 3, and has a chambered, glandular-sacculated
+  wall.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: C2
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- UBERON:0009870
 - habitatmech:GOLD.d3869ad37f
 source_attestations:
 - source: GOLD
@@ -23,3 +32,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-09-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: Defined as 'compartment 2 of camelid stomach' under UBERON:0009870 'zone
+    of stomach'. Definition authored from the record's committed deep-research report
+    under research/habitats/, read in full; no new paid research was commissioned.
+    GOLD's Host-associated > Mammals > Digestive system > Stomach > C2 source denotes
+    compartment 2 of the camelid stomach rather than vertebral bone 2, the ruminant
+    reticulum, omasum, the C1 or C3 sibling compartments, complement component C2,
+    or two-carbon compounds. UBERON:0009870 'zone of stomach' is the tightest vendored
+    genus because UBERON lacks a generic stomach-compartment class and all candidate
+    ruminant stomach compartments assert the wrong Ruminantia clade. ADD preserves
+    GOLD's source-derived Stomach parent while adding the neutral stomach-division
+    genus.

@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: c1_glandular_saccules
+session:
+  id: 2026-09-11T054749Z-codex-gpt-5-10ef68
+  timestamp: '2026-09-11T05:47:49Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - parent_habitats
+  summary: Define compartment 1 of camelid stomach
+  details: Authored curation/term_requests.tsv for habitatmech:GOLD.003eca7f24 from the committed
+    C1/Glandular saccules report, read in full after exact ignored-and-hidden searches for
+    the identifier, proposed labels, target UBERON genus, the NCBITaxon host-clade xref, source
+    label, and definitional DOI strings. The row defines the GOLD C1/Glandular saccules source
+    as compartment 1 of camelid stomach under UBERON:0009870 zone of stomach while preserving
+    the source-derived Stomach parent and avoiding vertebral bone 1, ruminant rumen, saccule
+    homonyms, and digestive-material conflations.

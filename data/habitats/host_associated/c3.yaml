@@ -1,9 +1,18 @@
 identifier: habitatmech:GOLD.5f6ed7c41e
-label: C3
+label: compartment 3 of camelid stomach
+definition: A zone of stomach which is the third and terminal compartment of the camelid
+  stomach and comprises a tubiform proximal region followed by a short distal acid-secreting
+  region.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: C3
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- UBERON:0009870
 - habitatmech:GOLD.d3869ad37f
 source_attestations:
 - source: GOLD
@@ -23,3 +32,19 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-09-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: Defined as 'compartment 3 of camelid stomach' under UBERON:0009870 'zone
+    of stomach'. Definition authored from the record's committed deep-research report
+    under research/habitats/, read in full; no new paid research was commissioned.
+    GOLD's Host-associated > Mammals > Digestive system > Stomach > C3 source denotes
+    compartment 3 of the camelid stomach rather than central oculomotor nucleus, complement
+    component C3, C3 photosynthesis or C3 plants, the ruminant abomasum or omasum,
+    or a separate C4 compartment. The definition says short distal acid-secreting
+    region without assigning a fraction because the report found disagreement on the
+    exact proximal-distal split. UBERON:0009870 'zone of stomach' is the tightest
+    vendored genus because UBERON lacks a generic stomach-compartment class and all
+    candidate ruminant stomach compartments assert the wrong Ruminantia clade. ADD
+    preserves GOLD's source-derived Stomach parent while adding the neutral stomach-division
+    genus.

@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: c3
+session:
+  id: 2026-09-11T054749Z-codex-gpt-5-f1d7de
+  timestamp: '2026-09-11T05:47:49Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - parent_habitats
+  summary: Define compartment 3 of camelid stomach
+  details: Authored curation/term_requests.tsv for habitatmech:GOLD.5f6ed7c41e from the committed
+    C3 report, read in full after exact ignored-and-hidden searches for the identifier, proposed
+    labels, target UBERON genus, the NCBITaxon host-clade xref, source label, and definitional
+    DOI strings. The row defines the GOLD C3 source as compartment 3 of camelid stomach under
+    UBERON:0009870 zone of stomach while preserving the source-derived Stomach parent and
+    avoiding central oculomotor nucleus, complement C3, C3 plant/photosynthesis, ruminant
+    abomasum or omasum, and separate C4 conflations.
