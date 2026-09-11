@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: xylene
+session:
+  id: 2026-09-11T072055Z-codex-gpt-5-2c1b4d
+  timestamp: '2026-09-11T07:20:55Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - parent_habitats
+  summary: Define xylene bioremediation material
+  details: Authored curation/term_requests.tsv for habitatmech:GOLD.602ee034f7 after exact
+    ignored-and-hidden searches for the HabitatMech identifier, source label, generated slug,
+    requested label, xylene chemical xref, ENVO xylene contaminated soil near miss, parent
+    Hydrocarbon identifier, and proposed ENVO genus. The row defines GOLD Engineered > Bioremediation
+    > Hydrocarbon > Xylene as xylene bioremediation material under ENVO:00010483 environmental
+    material, uses parent_mode=REPLACE to drop the inherited Hydrocarbon chemical-class parent,
+    and keeps the concept broader than ENVO:00002146 xylene contaminated soil so non-soil
+    bioremediation matrices remain in scope.

@@ -1,10 +1,17 @@
 identifier: habitatmech:GOLD.602ee034f7
-label: Xylene
+label: xylene bioremediation material
+definition: An environmental material which contains or is exposed to xylene in an
+  engineered bioremediation system and supports microbially mediated xylene degradation.
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Xylene
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- habitatmech:GOLD.e77998b825
+- ENVO:00010483
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5086
@@ -26,3 +33,18 @@ curation_history:
     a xylene-contaminated engineered environment undergoing remediation, not pure
     xylene as the habitat. An external chemical term supplies the contaminant identity
     but is outside the committed slice. (source concept habitatmech:GOLD.602ee034f7)'
+- timestamp: '2026-09-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: 'Defined as ''xylene bioremediation material'' under ENVO:00010483 ''environmental
+    material''. Definition authored from the existing item-level #108 decision and
+    the committed persistent-organic-pollutant report''s review of contaminant-class-indexed
+    bioremediation habitats; no new paid research was commissioned. GOLD places Xylene
+    under Engineered > Bioremediation > Hydrocarbon, and #108 confirmed the source
+    denotes a xylene-contaminated engineered environment undergoing remediation rather
+    than pure xylene as a habitat. ENVO:00010483 ''environmental material'' is the
+    tightest vendored genus broad enough to span contaminated soil, sediment, water,
+    reactor liquids, and biofilter matrices; ENVO:00002146 ''xylene contaminated soil''
+    is xylene-specific but too narrow for non-soil remediation matrices. parent_mode=REPLACE
+    drops the inherited Hydrocarbon parent because habitatmech:GOLD.e77998b825 is
+    a chemical class marked NOT_APPLICABLE, not a microbial habitat.'
