@@ -1,9 +1,17 @@
 identifier: habitatmech:GOLD.8b6557e4f2
-label: 'Larva: Zoea'
+label: zoea-associated environment
+definition: An animal-associated environment which is determined by a decapod crustacean
+  larva in a free-swimming zoeal stage before post-larval metamorphosis.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: 'Larva: Zoea'
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:01001002
 - habitatmech:GOLD.2959225799
 xrefs:
 - UBERON:0002548
@@ -30,3 +38,17 @@ curation_history:
     the identity cases had one level up. Kept as an xref (#99). Per the rule #114
     settled: the whole host organism gets its own identity and an <X>-associated environment
     term; parts of a host ground to the anatomy term. (source concept habitatmech:GOLD.8b6557e4f2)'
+- timestamp: '2026-09-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: 'Defined as ''zoea-associated environment'' under ENVO:01001002 ''animal-associated
+    environment''. Definition authored from the record''s committed deep-research
+    report under research/habitats/, read in full; no new paid research was commissioned.
+    GOLD''s Host-associated > Arthropoda: Crustaceans > Larva: Zoea source denotes
+    the whole zoeal-stage decapod host as a microbial habitat, not the surrounding
+    hatchery water, a dissected gut, the broader unqualified Larva record, or UBERON:0014857
+    ''zoea stage'' as a time interval. ENVO:01001002 ''animal-associated environment''
+    is used as the same direct vendored genus as the sibling nauplius-associated environment
+    until crustacean- and larval-crustacean-associated environment classes exist.
+    The Larva: Zoea > Whole body child is a likely SAME_AS candidate for this record
+    and is tracked in #321.'
