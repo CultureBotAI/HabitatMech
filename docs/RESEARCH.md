@@ -28,9 +28,10 @@ sources.
 ## Client isolation
 
 The research client requires Python 3.12 or newer while HabitatMech supports an
-older project floor. The default launcher therefore uses an isolated `uvx`
-environment. Do not invoke it with `uv run --python 3.12`, which can recreate
-the project virtual environment. `--client-command` accepts the complete
+older project floor. The default launcher uses an isolated Python 3.13 `uvx`
+environment, matching the development and CI interpreter while keeping provider
+dependencies separate. Avoid switching the project environment with
+`uv run --python`; use the isolated launcher. `--client-command` accepts the complete
 launcher as one string.
 
 The default `claude_code` route needs no additional repository credential and

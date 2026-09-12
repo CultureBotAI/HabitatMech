@@ -212,7 +212,7 @@ research IDENTIFIER *args:
 # Non-billing provider checks; see docs/DEEP_RESEARCH_PROVIDERS.md.
 deep-research-canary provider="all" *args="":
     uv run python scripts/deep_research_contract.py {{provider}} \
-      --client-command "uvx --python 3.12 --prerelease=allow --from deep-research-client[cyberian] deep-research-client" \
+      --client-command "uvx --python 3.13 --prerelease=allow --from deep-research-client[cyberian] deep-research-client" \
       {{args}}
 
 # Rebuild the ENVO batch term-request table from curation/term_requests.tsv
