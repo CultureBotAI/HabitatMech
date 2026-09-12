@@ -82,7 +82,7 @@ DEFAULT_PROVIDER = "claude_code"
 # isolated environment; `uv run --python 3.12` would appear to work and would
 # delete and rebuild the project's own .venv on the way.
 DEFAULT_CLIENT_COMMAND = (
-    "uvx --python 3.12 --prerelease=allow "
+    "uvx --python 3.13 --prerelease=allow "
     "--from deep-research-client[cyberian] deep-research-client"
 )
 

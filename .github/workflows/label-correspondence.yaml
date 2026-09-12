@@ -3,8 +3,7 @@ name: label-correspondence
 # Blocking id<->label gate (vendored from claw): every (identifier, label) and
 # (grounding, label) pair under data/habitats/ must correspond to the ontology
 # through OAK. Kept out of the qc job because it needs a cached OAK ontology
-# download that qc would repeat once per Python version in its matrix, and
-# because the ontologies it resolves change under the corpus rather than with it.
+# download and the ontology releases change independently of the corpus.
 
 on:
   # Required checks must report for every PR and merge-group commit.
@@ -21,6 +20,7 @@ on:
       # The recipes are part of the gate: editing one has to re-run it.
       - "justfile"
       - ".github/workflows/label-correspondence.yaml"
+      - ".python-version"
       - "pyproject.toml"
       - "uv.lock"
   workflow_dispatch:
@@ -45,9 +45,8 @@ jobs:
       - uses: extractions/setup-just@v4
       - uses: astral-sh/setup-uv@v5
         with:
+          python-version: "3.13"
           enable-cache: true
-      - name: Set up Python
-        run: uv python install 3.12
       - name: Install dependencies
         run: uv sync
       # ENVO, UBERON, FOODON, BTO and PO as semantic-sql databases, about 1.4 GB
