@@ -287,6 +287,11 @@ HabitatMech/
   supplies all of the above in harmonized KGX form and contributes the curated
   isolation-source mapping table
 
+## Contributing
+
+See the [native merge queue guide](docs/MERGE_QUEUE.md) for PR checks,
+queue validation, and recovery when a queued change fails.
+
 ## License
 
 CC0-1.0. See [LICENSE](LICENSE).
