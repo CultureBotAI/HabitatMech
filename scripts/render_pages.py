@@ -30,6 +30,8 @@ from pathlib import Path
 import yaml
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
+from habitatmech.text_map_site import PreparedTextMap, prepare_text_map
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 HABITATS_DIR = REPO_ROOT / "data" / "habitats"
 TEMPLATES_DIR = REPO_ROOT / "src" / "habitatmech" / "templates"
@@ -159,6 +161,15 @@ def extracted_at() -> str:
 
 
 def build(out_dir: Path) -> None:
+    # Validate enablement, current checksums and fresh full inputs before
+    # an ordinary site build can remove or replace existing pages.
+    with prepare_text_map(REPO_ROOT) as text_map:
+        _build(out_dir, text_map)
+
+
+def _build(out_dir: Path, text_map: PreparedTextMap | None) -> None:
+    if text_map is not None:
+        text_map.stage(out_dir)
     records = load_records()
     if not records:
         raise SystemExit(f"no records under {HABITATS_DIR}; run `just seed-apply` first")
@@ -170,6 +181,8 @@ def build(out_dir: Path) -> None:
         trim_blocks=True,
         lstrip_blocks=True,
     )
+
+    env.globals["text_map_enabled"] = text_map is not None
 
     slug_of = {doc["identifier"]: slugify(f"{doc['label']}-{doc['identifier']}") for _, doc in records}
     label_of = {doc["identifier"]: doc["label"] for _, doc in records}
@@ -520,6 +533,8 @@ def build(out_dir: Path) -> None:
         out_dir / "robots.txt", out_dir / "404.html",
     }
     written |= retired_written
+    if text_map is not None:
+        written |= {out_dir / "text-map" / name for name in ("index.html", "points.json", "manifest.json")}
     written |= {out_dir / "habitats" / f"{slug}.html" for slug in slug_of.values()}
     written |= {out_dir / name for name in category_pages}
     written |= {out_dir / "category" / f"{c['slug']}.json" for c in categories}

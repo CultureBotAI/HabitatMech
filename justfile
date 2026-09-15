@@ -227,3 +227,8 @@ term-requests-check:
 # the result is supposed to contain (origin/main, HEAD, and MERGE_HEAD mid-merge)
 curation-floor *ARGS:
     uv run python scripts/check_curation_floor.py {{ARGS}}
+
+# Preview full semantic map inputs; --limit/--record select an explicit canary.
+# Add --output build/text-map/inputs.jsonl to atomically export the JSONL.
+text-map-inputs *args:
+    uv run python scripts/text_map_inputs.py "$@"
