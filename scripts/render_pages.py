@@ -30,6 +30,11 @@ from pathlib import Path
 import yaml
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
+if __package__:
+    from .mechanism_graph import graph_svg
+else:
+    from mechanism_graph import graph_svg
+
 from habitatmech.text_map_site import PreparedTextMap, prepare_text_map
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -133,6 +138,7 @@ def render_graphs(graphs: list[dict]) -> list[dict]:
         labels = {node["node_id"]: node["label"] for node in graph.get("nodes") or []}
         out.append(
             {
+                "source_graph": graph,
                 "graph_id": graph.get("graph_id", ""),
                 "title": graph.get("title") or graph.get("graph_id", ""),
                 "description": graph.get("description", ""),
@@ -181,6 +187,7 @@ def _build(out_dir: Path, text_map: PreparedTextMap | None) -> None:
         trim_blocks=True,
         lstrip_blocks=True,
     )
+    env.filters["graph_svg"] = graph_svg
 
     env.globals["text_map_enabled"] = text_map is not None
 

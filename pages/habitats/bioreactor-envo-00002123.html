@@ -83,7 +83,157 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 <h2>Causal graphs</h2>
 <h3>Bioreactor feed dilution biomass selection</h3>
-<p>Engineered bioreactor operation turns a containment vessel, liquid feed, hydraulic exchange, biomass retention, and physicochemical setpoints into a wet, nutrient-rich microbial habitat. The feed stream sets organic loading, outflow creates dilution pressure on suspended cells, retention surfaces keep attached biomass inside the vessel, and choices such as aeration, temperature, ammonia, organic loading rate, and hydraulic retention time select the community processes that transform influent into engineered products.</p><table>
+<p>Engineered bioreactor operation turns a containment vessel, liquid feed, hydraulic exchange, biomass retention, and physicochemical setpoints into a wet, nutrient-rich microbial habitat. The feed stream sets organic loading, outflow creates dilution pressure on suspended cells, retention surfaces keep attached biomass inside the vessel, and choices such as aeration, temperature, ammonia, organic loading rate, and hydraulic retention time select the community processes that transform influent into engineered products.</p><figure class="mechanism-diagram" style="margin:1rem 0">
+<figcaption>Directed graph · arrows run from subject to object. Focus or hover over a node or arrow for details; the evidence table follows.</figcaption>
+<input type="checkbox" id="graph-bb1f76c91739fd3e-scale"/><label for="graph-bb1f76c91739fd3e-scale"> Show at full size (scroll to explore)</label>
+<style>#graph-bb1f76c91739fd3e-scale:checked ~ div svg {width:3308px;height:1100px}</style>
+<div tabindex="0" role="region" aria-label="Scrollable mechanism graph" style="overflow:auto;max-height:75vh;border:1px solid #94a3b8;border-radius:8px;background:#f8fafc">
+<svg xmlns="http://www.w3.org/2000/svg" class="mechanism-svg" role="img" aria-labelledby="graph-bb1f76c91739fd3e-title graph-bb1f76c91739fd3e-desc" width="3308" height="1100" viewBox="0 0 3308 1100" style="display:block;max-width:none;font:13px system-ui,sans-serif;color:#172033">
+<title id="graph-bb1f76c91739fd3e-title">Bioreactor feed dilution biomass selection</title>
+<desc id="graph-bb1f76c91739fd3e-desc">16 nodes and 19 directed relationships. Labels and evidence are also available in the adjacent table.</desc>
+<defs><marker id="graph-bb1f76c91739fd3e-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#475569"/></marker></defs>
+<style>.mechanism-svg{width:100%;height:auto}.mechanism-svg .graph-node:focus rect,.mechanism-svg .graph-node:hover rect{stroke:#0369a1;stroke-width:3}.mechanism-svg .graph-edge:focus path,.mechanism-svg .graph-edge:hover path{stroke:#0369a1;stroke-width:3}</style>
+<g class="graph-edge" tabindex="0" role="group" aria-label="bioreactor — determined by → engineered containment vessel; Evidence: PMID:16207900" data-subject="bioreactor" data-object="engineered_containment_vessel">
+<title>bioreactor — determined by → engineered containment vessel; Evidence: PMID:16207900</title><path d="M296,108.0 C386.0,108.0 386.0,108.0 476,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-bb1f76c91739fd3e-arrow)"/>
+<text x="386.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">determined by</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="engineered containment vessel — maintains → liquid reactor medium; Evidence: PMID:16207900" data-subject="engineered_containment_vessel" data-object="liquid_reactor_medium">
+<title>engineered containment vessel — maintains → liquid reactor medium; Evidence: PMID:16207900</title><path d="M712,108.0 C802.0,108.0 802.0,274.0 892,274.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-bb1f76c91739fd3e-arrow)"/>
+<text x="802.0" y="181.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">maintains</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="engineered containment vessel — enables → managed operating setpoints; Evidence: PMID:19041387" data-subject="engineered_containment_vessel" data-object="managed_operating_setpoints">
+<title>engineered containment vessel — enables → managed operating setpoints; Evidence: PMID:19041387</title><path d="M712,108.0 C802.0,108.0 802.0,108.0 892,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-bb1f76c91739fd3e-arrow)"/>
+<text x="802.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">enables</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="managed operating setpoints — controls → influent feed; Evidence: PMID:16207900" data-subject="managed_operating_setpoints" data-object="influent_feed">
+<title>managed operating setpoints — controls → influent feed; Evidence: PMID:16207900</title><path d="M1128,108.0 C1218.0,108.0 1218.0,108.0 1308,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-bb1f76c91739fd3e-arrow)"/>
+<text x="1218.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">controls</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="influent feed — determines → organic loading rate; Evidence: PMID:36610483" data-subject="influent_feed" data-object="organic_loading_rate">
+<title>influent feed — determines → organic loading rate; Evidence: PMID:36610483</title><path d="M1544,108.0 C1634.0,108.0 1634.0,108.0 1724,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-bb1f76c91739fd3e-arrow)"/>
+<text x="1634.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">determines</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="managed operating setpoints — controls → hydraulic retention time; Evidence: PMID:36610483" data-subject="managed_operating_setpoints" data-object="hydraulic_retention_time">
+<title>managed operating setpoints — controls → hydraulic retention time; Evidence: PMID:36610483</title><path d="M1128,108.0 C1218.0,108.0 1218.0,274.0 1308,274.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-bb1f76c91739fd3e-arrow)"/>
+<text x="1218.0" y="181.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">controls</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="hydraulic retention time — determines → dilution pressure; Evidence: PMID:16207900" data-subject="hydraulic_retention_time" data-object="dilution_pressure">
+<title>hydraulic retention time — determines → dilution pressure; Evidence: PMID:16207900</title><path d="M1544,274.0 C1634.0,274.0 1634.0,274.0 1724,274.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-bb1f76c91739fd3e-arrow)"/>
+<text x="1634.0" y="264.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">determines</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="dilution pressure — selects for → retained bioreactor microbiome; Evidence: PMID:16207900" data-subject="dilution_pressure" data-object="retained_microbiome">
+<title>dilution pressure — selects for → retained bioreactor microbiome; Evidence: PMID:16207900</title><path d="M1842.0,312 C1842.0,920 1426.0,920 1426.0,810" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-bb1f76c91739fd3e-arrow)"/>
+<text x="1634.0" y="915" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">selects for</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="managed operating setpoints — controls → mixing and aeration regime; Evidence: PMID:19041387" data-subject="managed_operating_setpoints" data-object="mixing_aeration_regime">
+<title>managed operating setpoints — controls → mixing and aeration regime; Evidence: PMID:19041387</title><path d="M1128,108.0 C1218.0,108.0 1218.0,440.0 1308,440.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-bb1f76c91739fd3e-arrow)"/>
+<text x="1218.0" y="264.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">controls</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="mixing and aeration regime — selects for → retained bioreactor microbiome; Evidence: PMID:19041387" data-subject="mixing_aeration_regime" data-object="retained_microbiome">
+<title>mixing and aeration regime — selects for → retained bioreactor microbiome; Evidence: PMID:19041387</title><path d="M1544,440.0 C1609,440.0 1609,772.0 1544,772.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-bb1f76c91739fd3e-arrow)"/>
+<text x="1609" y="606.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">selects for</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="engineered containment vessel — supports → biomass retention surface; Evidence: DOI:10.1186/s13068-024-02592-4" data-subject="engineered_containment_vessel" data-object="biomass_retention_surface">
+<title>engineered containment vessel — supports → biomass retention surface; Evidence: DOI:10.1186/s13068-024-02592-4</title><path d="M712,108.0 C802.0,108.0 802.0,440.0 892,440.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-bb1f76c91739fd3e-arrow)"/>
+<text x="802.0" y="264.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">supports</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="biomass retention surface — harbors → attached biofilm; Evidence: DOI:10.1186/s13068-024-02592-4" data-subject="biomass_retention_surface" data-object="attached_biofilm">
+<title>biomass retention surface — harbors → attached biofilm; Evidence: DOI:10.1186/s13068-024-02592-4</title><path d="M1128,440.0 C1218.0,440.0 1218.0,606.0 1308,606.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-bb1f76c91739fd3e-arrow)"/>
+<text x="1218.0" y="513.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">harbors</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="attached biofilm — retains → retained bioreactor microbiome; Evidence: DOI:10.1186/s13068-024-02592-4" data-subject="attached_biofilm" data-object="retained_microbiome">
+<title>attached biofilm — retains → retained bioreactor microbiome; Evidence: DOI:10.1186/s13068-024-02592-4</title><path d="M1544,606.0 C1609,606.0 1609,772.0 1544,772.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-bb1f76c91739fd3e-arrow)"/>
+<text x="1609" y="689.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">retains</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="organic loading rate — selects for → retained bioreactor microbiome; Evidence: PMID:36610483" data-subject="organic_loading_rate" data-object="retained_microbiome">
+<title>organic loading rate — selects for → retained bioreactor microbiome; Evidence: PMID:36610483</title><path d="M1842.0,146 C1842.0,980 1426.0,980 1426.0,810" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-bb1f76c91739fd3e-arrow)"/>
+<text x="1634.0" y="975" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">selects for</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="managed operating setpoints — selects for → retained bioreactor microbiome; Evidence: DOI:10.1038/ismej.2014.50; PMID:25819618" data-subject="managed_operating_setpoints" data-object="retained_microbiome">
+<title>managed operating setpoints — selects for → retained bioreactor microbiome; Evidence: DOI:10.1038/ismej.2014.50; PMID:25819618</title><path d="M1128,108.0 C1218.0,108.0 1218.0,772.0 1308,772.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-bb1f76c91739fd3e-arrow)"/>
+<text x="1218.0" y="430.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">selects for</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="retained bioreactor microbiome — performs → anaerobic syntrophy; Evidence: PMID:24246480; PMID:21558697" data-subject="retained_microbiome" data-object="anaerobic_syntrophy">
+<title>retained bioreactor microbiome — performs → anaerobic syntrophy; Evidence: PMID:24246480; PMID:21558697</title><path d="M1544,772.0 C1634.0,772.0 1634.0,440.0 1724,440.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-bb1f76c91739fd3e-arrow)"/>
+<text x="1634.0" y="596.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">performs</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="anaerobic syntrophy — produces → acetate, hydrogen, and formate; Evidence: PMID:21558697" data-subject="anaerobic_syntrophy" data-object="acetate_hydrogen_formate">
+<title>anaerobic syntrophy — produces → acetate, hydrogen, and formate; Evidence: PMID:21558697</title><path d="M1960,440.0 C2050.0,440.0 2050.0,108.0 2140,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-bb1f76c91739fd3e-arrow)"/>
+<text x="2050.0" y="264.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">produces</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="acetate, hydrogen, and formate — fuels → methanogenic archaea; Evidence: PMID:21558697" data-subject="acetate_hydrogen_formate" data-object="methanogenic_archaea">
+<title>acetate, hydrogen, and formate — fuels → methanogenic archaea; Evidence: PMID:21558697</title><path d="M2376,108.0 C2466.0,108.0 2466.0,108.0 2556,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-bb1f76c91739fd3e-arrow)"/>
+<text x="2466.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">fuels</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="methanogenic archaea — produces → methane; Evidence: PMID:24246480" data-subject="methanogenic_archaea" data-object="methane">
+<title>methanogenic archaea — produces → methane; Evidence: PMID:24246480</title><path d="M2792,108.0 C2882.0,108.0 2882.0,108.0 2972,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-bb1f76c91739fd3e-arrow)"/>
+<text x="2882.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">produces</text></g>
+<g class="graph-node" tabindex="0" role="group" aria-label="bioreactor (HABITAT); bioreactor; ENVO:00002123" data-node-id="bioreactor"><title>bioreactor (HABITAT); bioreactor; ENVO:00002123</title>
+<rect x="60" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="89" fill="#075985" font-size="10">HABITAT</text>
+<text x="72" y="109" fill="#172033">bioreactor</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="engineered containment vessel (ENVIRONMENTAL_FACTOR); engineered_containment_vessel" data-node-id="engineered_containment_vessel"><title>engineered containment vessel (ENVIRONMENTAL_FACTOR); engineered_containment_vessel</title>
+<rect x="476" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="488" y="89" fill="#075985" font-size="10">ENVIRONMENTAL_FACTOR</text>
+<text x="488" y="109" fill="#172033">engineered containment vessel</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="managed operating setpoints (ENVIRONMENTAL_PARAMETER); managed_operating_setpoints" data-node-id="managed_operating_setpoints"><title>managed operating setpoints (ENVIRONMENTAL_PARAMETER); managed_operating_setpoints</title>
+<rect x="892" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="904" y="89" fill="#075985" font-size="10">ENVIRONMENTAL_PARAMETER</text>
+<text x="904" y="109" fill="#172033">managed operating setpoints</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="liquid reactor medium (HABITAT); liquid_reactor_medium" data-node-id="liquid_reactor_medium"><title>liquid reactor medium (HABITAT); liquid_reactor_medium</title>
+<rect x="892" y="236" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="904" y="255" fill="#075985" font-size="10">HABITAT</text>
+<text x="904" y="275" fill="#172033">liquid reactor medium</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="influent feed (CHEMICAL); influent_feed" data-node-id="influent_feed"><title>influent feed (CHEMICAL); influent_feed</title>
+<rect x="1308" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="1320" y="89" fill="#075985" font-size="10">CHEMICAL</text>
+<text x="1320" y="109" fill="#172033">influent feed</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="organic loading rate (ENVIRONMENTAL_PARAMETER); organic_loading_rate" data-node-id="organic_loading_rate"><title>organic loading rate (ENVIRONMENTAL_PARAMETER); organic_loading_rate</title>
+<rect x="1724" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="1736" y="89" fill="#075985" font-size="10">ENVIRONMENTAL_PARAMETER</text>
+<text x="1736" y="109" fill="#172033">organic loading rate</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="hydraulic retention time (ENVIRONMENTAL_PARAMETER); hydraulic_retention_time" data-node-id="hydraulic_retention_time"><title>hydraulic retention time (ENVIRONMENTAL_PARAMETER); hydraulic_retention_time</title>
+<rect x="1308" y="236" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="1320" y="255" fill="#075985" font-size="10">ENVIRONMENTAL_PARAMETER</text>
+<text x="1320" y="275" fill="#172033">hydraulic retention time</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="dilution pressure (ENVIRONMENTAL_FACTOR); dilution_pressure" data-node-id="dilution_pressure"><title>dilution pressure (ENVIRONMENTAL_FACTOR); dilution_pressure</title>
+<rect x="1724" y="236" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="1736" y="255" fill="#075985" font-size="10">ENVIRONMENTAL_FACTOR</text>
+<text x="1736" y="275" fill="#172033">dilution pressure</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="mixing and aeration regime (ENVIRONMENTAL_PARAMETER); mixing_aeration_regime" data-node-id="mixing_aeration_regime"><title>mixing and aeration regime (ENVIRONMENTAL_PARAMETER); mixing_aeration_regime</title>
+<rect x="1308" y="402" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="1320" y="421" fill="#075985" font-size="10">ENVIRONMENTAL_PARAMETER</text>
+<text x="1320" y="441" fill="#172033">mixing and aeration regime</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="biomass retention surface (HABITAT); biomass_retention_surface" data-node-id="biomass_retention_surface"><title>biomass retention surface (HABITAT); biomass_retention_surface</title>
+<rect x="892" y="402" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="904" y="421" fill="#075985" font-size="10">HABITAT</text>
+<text x="904" y="441" fill="#172033">biomass retention surface</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="attached biofilm (HABITAT); attached_biofilm" data-node-id="attached_biofilm"><title>attached biofilm (HABITAT); attached_biofilm</title>
+<rect x="1308" y="568" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="1320" y="587" fill="#075985" font-size="10">HABITAT</text>
+<text x="1320" y="607" fill="#172033">attached biofilm</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="retained bioreactor microbiome (TAXON); retained_microbiome" data-node-id="retained_microbiome"><title>retained bioreactor microbiome (TAXON); retained_microbiome</title>
+<rect x="1308" y="734" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="1320" y="753" fill="#075985" font-size="10">TAXON</text>
+<text x="1320" y="773" fill="#172033">retained bioreactor</text>
+<text x="1320" y="790" fill="#172033">microbiome</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="anaerobic syntrophy (COMMUNITY_PROCESS); anaerobic_syntrophy" data-node-id="anaerobic_syntrophy"><title>anaerobic syntrophy (COMMUNITY_PROCESS); anaerobic_syntrophy</title>
+<rect x="1724" y="402" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="1736" y="421" fill="#075985" font-size="10">COMMUNITY_PROCESS</text>
+<text x="1736" y="441" fill="#172033">anaerobic syntrophy</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="acetate, hydrogen, and formate (CHEMICAL); acetate_hydrogen_formate" data-node-id="acetate_hydrogen_formate"><title>acetate, hydrogen, and formate (CHEMICAL); acetate_hydrogen_formate</title>
+<rect x="2140" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="2152" y="89" fill="#075985" font-size="10">CHEMICAL</text>
+<text x="2152" y="109" fill="#172033">acetate, hydrogen, and</text>
+<text x="2152" y="126" fill="#172033">formate</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="methanogenic archaea (TAXON); methanogenic_archaea" data-node-id="methanogenic_archaea"><title>methanogenic archaea (TAXON); methanogenic_archaea</title>
+<rect x="2556" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="2568" y="89" fill="#075985" font-size="10">TAXON</text>
+<text x="2568" y="109" fill="#172033">methanogenic archaea</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="methane (CHEMICAL); methane" data-node-id="methane"><title>methane (CHEMICAL); methane</title>
+<rect x="2972" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="2984" y="89" fill="#075985" font-size="10">CHEMICAL</text>
+<text x="2984" y="109" fill="#172033">methane</text>
+</g>
+</svg></div></figure>
+<table>
   <caption>bioreactor_feed_dilution_biomass_selection edges</caption>
   <thead><tr><th scope="col">Edge</th><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
   <tr>

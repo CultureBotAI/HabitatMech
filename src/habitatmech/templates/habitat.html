@@ -62,6 +62,7 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 {% for g in r.causal_graphs %}
 <h3>{{ g.title }}</h3>
 {% if g.description %}<p>{{ g.description }}</p>{% endif %}
+{{ g.source_graph | graph_svg(loop.index) }}
 <table>
   <caption>{{ g.graph_id }} edges</caption>
   <thead><tr><th scope="col">Edge</th><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
