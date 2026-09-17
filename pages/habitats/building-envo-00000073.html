@@ -85,7 +85,153 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 <h2>Causal graphs</h2>
 <h3>Building surface human-air assembly</h3>
-<p>Buildings create dry, low-resource indoor surfaces that are repeatedly inoculated by human occupants and by outdoor air entering through ventilation. Occupancy, ventilation strategy, room connectivity, surface material, and cleaning disturbances jointly filter deposited microbes and assemble spatially distinct indoor surface microbiomes.</p><table>
+<p>Buildings create dry, low-resource indoor surfaces that are repeatedly inoculated by human occupants and by outdoor air entering through ventilation. Occupancy, ventilation strategy, room connectivity, surface material, and cleaning disturbances jointly filter deposited microbes and assemble spatially distinct indoor surface microbiomes.</p><figure class="mechanism-diagram" style="margin:1rem 0">
+<figcaption>Directed graph · arrows run from subject to object. Focus or hover over a node or arrow for details; the evidence table follows.</figcaption>
+<input type="checkbox" id="graph-2bad4609a7d33eca-scale"/><label for="graph-2bad4609a7d33eca-scale"> Show at full size (scroll to explore)</label>
+<style>#graph-2bad4609a7d33eca-scale:checked ~ div svg {width:1644px;height:1442px}</style>
+<div tabindex="0" role="region" aria-label="Scrollable mechanism graph" style="overflow:auto;max-height:75vh;border:1px solid #94a3b8;border-radius:8px;background:#f8fafc">
+<svg xmlns="http://www.w3.org/2000/svg" class="mechanism-svg" role="img" aria-labelledby="graph-2bad4609a7d33eca-title graph-2bad4609a7d33eca-desc" width="1644" height="1442" viewBox="0 0 1644 1442" style="display:block;max-width:none;font:13px system-ui,sans-serif;color:#172033">
+<title id="graph-2bad4609a7d33eca-title">Building surface human-air assembly</title>
+<desc id="graph-2bad4609a7d33eca-desc">15 nodes and 20 directed relationships. Labels and evidence are also available in the adjacent table.</desc>
+<defs><marker id="graph-2bad4609a7d33eca-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,4 L0,8 Z" fill="#475569"/></marker></defs>
+<style>.mechanism-svg{width:100%;height:auto}.mechanism-svg .graph-node:focus rect,.mechanism-svg .graph-node:hover rect{stroke:#0369a1;stroke-width:3}.mechanism-svg .graph-edge:focus path,.mechanism-svg .graph-edge:hover path{stroke:#0369a1;stroke-width:3}</style>
+<g class="graph-edge" tabindex="0" role="group" aria-label="building — contains → indoor surfaces; Evidence: PMID:22278670" data-subject="building" data-object="indoor_surfaces">
+<title>building — contains → indoor surfaces; Evidence: PMID:22278670</title><path d="M296,108.0 C386.0,108.0 386.0,108.0 476,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-2bad4609a7d33eca-arrow)"/>
+<text x="386.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">contains</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="indoor surfaces — has characteristic → low water availability; Evidence: PMID:26459172" data-subject="indoor_surfaces" data-object="low_water_availability">
+<title>indoor surfaces — has characteristic → low water availability; Evidence: PMID:26459172</title><path d="M712,108.0 C802.0,108.0 802.0,108.0 892,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-2bad4609a7d33eca-arrow)"/>
+<text x="802.0" y="98.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">has characteristic</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="indoor surfaces — has characteristic → low organic matter; Evidence: PMID:25398865" data-subject="indoor_surfaces" data-object="low_organic_matter">
+<title>indoor surfaces — has characteristic → low organic matter; Evidence: PMID:25398865</title><path d="M712,108.0 C802.0,108.0 802.0,274.0 892,274.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-2bad4609a7d33eca-arrow)"/>
+<text x="802.0" y="181.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">has characteristic</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="indoor surfaces — includes → surface materials; Evidence: PMID:26459172" data-subject="indoor_surfaces" data-object="surface_materials">
+<title>indoor surfaces — includes → surface materials; Evidence: PMID:26459172</title><path d="M712,108.0 C802.0,108.0 802.0,772.0 892,772.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-2bad4609a7d33eca-arrow)"/>
+<text x="802.0" y="430.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">includes</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="low water availability — imposes → desiccation stress; Evidence: PMID:25398865" data-subject="low_water_availability" data-object="desiccation_stress">
+<title>low water availability — imposes → desiccation stress; Evidence: PMID:25398865</title><path d="M1128,108.0 C1218.0,108.0 1218.0,274.0 1308,274.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-2bad4609a7d33eca-arrow)"/>
+<text x="1218.0" y="181.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">imposes</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="low organic matter — filters → viable surface reservoir; Evidence: PMID:25398865" data-subject="low_organic_matter" data-object="viable_surface_reservoir">
+<title>low organic matter — filters → viable surface reservoir; Evidence: PMID:25398865</title><path d="M1128,274.0 C1218.0,274.0 1218.0,440.0 1308,440.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-2bad4609a7d33eca-arrow)"/>
+<text x="1218.0" y="347.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">filters</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="building — hosts → human occupancy; Evidence: PMID:25170151" data-subject="building" data-object="human_occupancy">
+<title>building — hosts → human occupancy; Evidence: PMID:25170151</title><path d="M296,108.0 C386.0,108.0 386.0,274.0 476,274.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-2bad4609a7d33eca-arrow)"/>
+<text x="386.0" y="181.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">hosts</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="human occupancy — deposits → human-associated bacteria; Evidence: PMID:25170151; PMID:23717552" data-subject="human_occupancy" data-object="human_associated_bacteria">
+<title>human occupancy — deposits → human-associated bacteria; Evidence: PMID:25170151; PMID:23717552</title><path d="M712,274.0 C802.0,274.0 802.0,440.0 892,440.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-2bad4609a7d33eca-arrow)"/>
+<text x="802.0" y="347.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">deposits</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="human-associated bacteria — seeds → occupant microbial deposition; Evidence: PMID:25398865" data-subject="human_associated_bacteria" data-object="occupant_deposition">
+<title>human-associated bacteria — seeds → occupant microbial deposition; Evidence: PMID:25398865</title><path d="M1128,440.0 C1218.0,440.0 1218.0,108.0 1308,108.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-2bad4609a7d33eca-arrow)"/>
+<text x="1218.0" y="264.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">seeds</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="occupant microbial deposition — seeds → indoor surface microbiome; Evidence: PMID:25170151; PMID:26459172" data-subject="occupant_deposition" data-object="indoor_surface_microbiome">
+<title>occupant microbial deposition — seeds → indoor surface microbiome; Evidence: PMID:25170151; PMID:26459172</title><path d="M1426.0,146 C1426.0,1272 1010.0,1272 1010.0,1142" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-2bad4609a7d33eca-arrow)"/>
+<text x="1218.0" y="1267" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">seeds</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="building — controls → ventilation strategy; Evidence: PMID:23621155" data-subject="building" data-object="ventilation_strategy">
+<title>building — controls → ventilation strategy; Evidence: PMID:23621155</title><path d="M296,108.0 C386.0,108.0 386.0,440.0 476,440.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-2bad4609a7d33eca-arrow)"/>
+<text x="386.0" y="264.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">controls</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="ventilation strategy — modulates → outdoor air inoculation; Evidence: PMID:23621155" data-subject="ventilation_strategy" data-object="outdoor_air_inoculation">
+<title>ventilation strategy — modulates → outdoor air inoculation; Evidence: PMID:23621155</title><path d="M712,440.0 C802.0,440.0 802.0,606.0 892,606.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-2bad4609a7d33eca-arrow)"/>
+<text x="802.0" y="513.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">modulates</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="building — defines → room connectivity; Evidence: PMID:24489843" data-subject="building" data-object="room_connectivity">
+<title>building — defines → room connectivity; Evidence: PMID:24489843</title><path d="M296,108.0 C386.0,108.0 386.0,606.0 476,606.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-2bad4609a7d33eca-arrow)"/>
+<text x="386.0" y="347.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">defines</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="outdoor air inoculation — seeds → indoor surface microbiome; Evidence: PMID:23621155; PMID:26459172" data-subject="outdoor_air_inoculation" data-object="indoor_surface_microbiome">
+<title>outdoor air inoculation — seeds → indoor surface microbiome; Evidence: PMID:23621155; PMID:26459172</title><path d="M1128,606.0 C1193,606.0 1193,1104.0 1128,1104.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-2bad4609a7d33eca-arrow)"/>
+<text x="1193" y="855.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">seeds</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="room connectivity — controls → indoor surface microbiome; Evidence: PMID:24489843" data-subject="room_connectivity" data-object="indoor_surface_microbiome">
+<title>room connectivity — controls → indoor surface microbiome; Evidence: PMID:24489843</title><path d="M712,606.0 C802.0,606.0 802.0,1104.0 892,1104.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-2bad4609a7d33eca-arrow)"/>
+<text x="802.0" y="845.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">controls</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="surface materials — filters → indoor surface microbiome; Evidence: PMID:26459172" data-subject="surface_materials" data-object="indoor_surface_microbiome">
+<title>surface materials — filters → indoor surface microbiome; Evidence: PMID:26459172</title><path d="M1128,772.0 C1193,772.0 1193,1104.0 1128,1104.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-2bad4609a7d33eca-arrow)"/>
+<text x="1193" y="938.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">filters</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="indoor surfaces — undergoes → cleaning disturbance; Evidence: PMID:25398865" data-subject="indoor_surfaces" data-object="cleaning_disturbance">
+<title>indoor surfaces — undergoes → cleaning disturbance; Evidence: PMID:25398865</title><path d="M712,108.0 C802.0,108.0 802.0,938.0 892,938.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-2bad4609a7d33eca-arrow)"/>
+<text x="802.0" y="513.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">undergoes</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="cleaning disturbance — prunes → viable surface reservoir; Evidence: PMID:25398865" data-subject="cleaning_disturbance" data-object="viable_surface_reservoir">
+<title>cleaning disturbance — prunes → viable surface reservoir; Evidence: PMID:25398865</title><path d="M1128,938.0 C1218.0,938.0 1218.0,440.0 1308,440.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-2bad4609a7d33eca-arrow)"/>
+<text x="1218.0" y="679.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">prunes</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="desiccation stress — filters → viable surface reservoir; Evidence: PMID:25398865" data-subject="desiccation_stress" data-object="viable_surface_reservoir">
+<title>desiccation stress — filters → viable surface reservoir; Evidence: PMID:25398865</title><path d="M1544,274.0 C1609,274.0 1609,440.0 1544,440.0" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-2bad4609a7d33eca-arrow)"/>
+<text x="1609" y="357.0" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">filters</text></g>
+<g class="graph-edge" tabindex="0" role="group" aria-label="viable surface reservoir — reseeds → indoor surface microbiome; Evidence: PMID:25398865" data-subject="viable_surface_reservoir" data-object="indoor_surface_microbiome">
+<title>viable surface reservoir — reseeds → indoor surface microbiome; Evidence: PMID:25398865</title><path d="M1426.0,478 C1426.0,1372 1010.0,1372 1010.0,1142" fill="none" stroke="#475569" stroke-width="1.7" marker-end="url(#graph-2bad4609a7d33eca-arrow)"/>
+<text x="1218.0" y="1367" text-anchor="middle" fill="#334155" style="paint-order:stroke;stroke:#f8fafc;stroke-width:4;stroke-linejoin:round">reseeds</text></g>
+<g class="graph-node" tabindex="0" role="group" aria-label="building (HABITAT); building; ENVO:00000073" data-node-id="building"><title>building (HABITAT); building; ENVO:00000073</title>
+<rect x="60" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="72" y="89" fill="#075985" font-size="10">HABITAT</text>
+<text x="72" y="109" fill="#172033">building</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="indoor surfaces (ENVIRONMENTAL_FACTOR); indoor_surfaces" data-node-id="indoor_surfaces"><title>indoor surfaces (ENVIRONMENTAL_FACTOR); indoor_surfaces</title>
+<rect x="476" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="488" y="89" fill="#075985" font-size="10">ENVIRONMENTAL_FACTOR</text>
+<text x="488" y="109" fill="#172033">indoor surfaces</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="low water availability (ENVIRONMENTAL_FACTOR); low_water_availability" data-node-id="low_water_availability"><title>low water availability (ENVIRONMENTAL_FACTOR); low_water_availability</title>
+<rect x="892" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="904" y="89" fill="#075985" font-size="10">ENVIRONMENTAL_FACTOR</text>
+<text x="904" y="109" fill="#172033">low water availability</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="low organic matter (ENVIRONMENTAL_FACTOR); low_organic_matter" data-node-id="low_organic_matter"><title>low organic matter (ENVIRONMENTAL_FACTOR); low_organic_matter</title>
+<rect x="892" y="236" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="904" y="255" fill="#075985" font-size="10">ENVIRONMENTAL_FACTOR</text>
+<text x="904" y="275" fill="#172033">low organic matter</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="human occupancy (ENVIRONMENTAL_FACTOR); human_occupancy" data-node-id="human_occupancy"><title>human occupancy (ENVIRONMENTAL_FACTOR); human_occupancy</title>
+<rect x="476" y="236" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="488" y="255" fill="#075985" font-size="10">ENVIRONMENTAL_FACTOR</text>
+<text x="488" y="275" fill="#172033">human occupancy</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="human-associated bacteria (TAXON); human_associated_bacteria" data-node-id="human_associated_bacteria"><title>human-associated bacteria (TAXON); human_associated_bacteria</title>
+<rect x="892" y="402" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="904" y="421" fill="#075985" font-size="10">TAXON</text>
+<text x="904" y="441" fill="#172033">human-associated bacteria</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="occupant microbial deposition (COMMUNITY_PROCESS); occupant_deposition" data-node-id="occupant_deposition"><title>occupant microbial deposition (COMMUNITY_PROCESS); occupant_deposition</title>
+<rect x="1308" y="70" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="1320" y="89" fill="#075985" font-size="10">COMMUNITY_PROCESS</text>
+<text x="1320" y="109" fill="#172033">occupant microbial deposition</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="ventilation strategy (ENVIRONMENTAL_FACTOR); ventilation_strategy" data-node-id="ventilation_strategy"><title>ventilation strategy (ENVIRONMENTAL_FACTOR); ventilation_strategy</title>
+<rect x="476" y="402" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="488" y="421" fill="#075985" font-size="10">ENVIRONMENTAL_FACTOR</text>
+<text x="488" y="441" fill="#172033">ventilation strategy</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="outdoor air inoculation (COMMUNITY_PROCESS); outdoor_air_inoculation" data-node-id="outdoor_air_inoculation"><title>outdoor air inoculation (COMMUNITY_PROCESS); outdoor_air_inoculation</title>
+<rect x="892" y="568" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="904" y="587" fill="#075985" font-size="10">COMMUNITY_PROCESS</text>
+<text x="904" y="607" fill="#172033">outdoor air inoculation</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="room connectivity (ENVIRONMENTAL_FACTOR); room_connectivity" data-node-id="room_connectivity"><title>room connectivity (ENVIRONMENTAL_FACTOR); room_connectivity</title>
+<rect x="476" y="568" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="488" y="587" fill="#075985" font-size="10">ENVIRONMENTAL_FACTOR</text>
+<text x="488" y="607" fill="#172033">room connectivity</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="surface materials (ENVIRONMENTAL_FACTOR); surface_materials" data-node-id="surface_materials"><title>surface materials (ENVIRONMENTAL_FACTOR); surface_materials</title>
+<rect x="892" y="734" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="904" y="753" fill="#075985" font-size="10">ENVIRONMENTAL_FACTOR</text>
+<text x="904" y="773" fill="#172033">surface materials</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="cleaning disturbance (ENVIRONMENTAL_FACTOR); cleaning_disturbance" data-node-id="cleaning_disturbance"><title>cleaning disturbance (ENVIRONMENTAL_FACTOR); cleaning_disturbance</title>
+<rect x="892" y="900" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="904" y="919" fill="#075985" font-size="10">ENVIRONMENTAL_FACTOR</text>
+<text x="904" y="939" fill="#172033">cleaning disturbance</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="desiccation stress (ENVIRONMENTAL_FACTOR); desiccation_stress" data-node-id="desiccation_stress"><title>desiccation stress (ENVIRONMENTAL_FACTOR); desiccation_stress</title>
+<rect x="1308" y="236" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="1320" y="255" fill="#075985" font-size="10">ENVIRONMENTAL_FACTOR</text>
+<text x="1320" y="275" fill="#172033">desiccation stress</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="viable surface reservoir (STATE); viable_surface_reservoir" data-node-id="viable_surface_reservoir"><title>viable surface reservoir (STATE); viable_surface_reservoir</title>
+<rect x="1308" y="402" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="1320" y="421" fill="#075985" font-size="10">STATE</text>
+<text x="1320" y="441" fill="#172033">viable surface reservoir</text>
+</g>
+<g class="graph-node" tabindex="0" role="group" aria-label="indoor surface microbiome (COMMUNITY_PROCESS); indoor_surface_microbiome" data-node-id="indoor_surface_microbiome"><title>indoor surface microbiome (COMMUNITY_PROCESS); indoor_surface_microbiome</title>
+<rect x="892" y="1066" width="236" height="76" rx="8" fill="#e0f2fe" stroke="#0369a1"/>
+<text x="904" y="1085" fill="#075985" font-size="10">COMMUNITY_PROCESS</text>
+<text x="904" y="1105" fill="#172033">indoor surface microbiome</text>
+</g>
+</svg></div></figure>
+<table>
   <caption>building_surface_human_air_assembly edges</caption>
   <thead><tr><th scope="col">Edge</th><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
   <tr>
