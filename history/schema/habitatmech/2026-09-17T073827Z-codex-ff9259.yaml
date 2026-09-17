@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: schema
+  path: src/habitatmech/schema/habitatmech.yaml
+  slug: habitatmech
+session:
+  id: 2026-09-17T073827Z-codex-ff9259
+  timestamp: '2026-09-17T07:38:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-6
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - EvidenceItem
+  - EvidenceSourceEnum
+  summary: Add optional claim evidence assessment and study-source categories
+  details: Compared EcoMech at 5d3f55467f3caaa6e88eb7f33037e4a8103873a7 with all ten fleet
+    schemas. Added optional supports and evidence_source to primary claim evidence; preserved
+    shared quotation-location provenance and all existing requirements. Closed-schema tests
+    cover every enum value, legacy payloads, invalid inputs and shared references. No habitat
+    records or curation decisions changed.
