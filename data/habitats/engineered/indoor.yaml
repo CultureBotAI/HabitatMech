@@ -1,9 +1,18 @@
 identifier: habitatmech:GOLD.b4e93f5d66
-label: Indoor
+label: indoor artificial water channel system
+definition: A vivarium which consists of one or more artificial channels through which
+  water is pumped or recirculated over a colonisable substratum, and which is enclosed
+  within a building envelope.
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Indoor
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:00010622
 - habitatmech:GOLD.87bf5e5370
 source_attestations:
 - source: GOLD
@@ -23,3 +32,20 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-09-18T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: Defined as 'indoor artificial water channel system' under ENVO:00010622
+    'vivarium'. Definition authored from the record's committed deep-research report
+    under research/habitats/, read in full; no new paid research was commissioned.
+    GOLD's Engineered > Artificial ecosystem > Water channel system > Indoor source
+    is interpreted as an indoor experimental stream channel rather than indoor air,
+    an indoor built space, plumbing, or a real-world canal; its only sibling is Outdoor,
+    its only child is Biofilm, and GOLD routes canals to Engineered > Built environment
+    > Canal. ENVO:00010622 'vivarium' is the tightest vendored genus; ENVO:00000121
+    'artificial channel' and ENVO:00000079 'flume' overclaim civil-engineering landform
+    or canal semantics, while ENVO:01000620 'mesocosm' is defined as embedded within
+    a natural environment and would therefore exclude this indoor child. The requested
+    label expands GOLD's bare source label for ontology clarity, and no exact synonym
+    was authored because Indoor alone is ambiguous across GOLD and would collide with
+    indoor air or indoor built-space readings.

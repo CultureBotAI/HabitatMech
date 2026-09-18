@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: indoor_water_channel
+session:
+  id: 2026-09-18T193858Z-codex-gpt-5-61e95b
+  timestamp: '2026-09-18T19:38:58Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: codex-gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/352
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  summary: Split Water channel system decision history
+  details: 'Adversarial review of the indoor water-channel curation found that the 2026-09-18
+    term-request history record also described the item-level habitatmech:GOLD.87bf5e5370
+    Water channel system decision edit while targeting only curation/term_requests.tsv. Split
+    this append-only decision-targeted record out to document the promotion from a class-level
+    ungrounded sweep to an item-level CONFIRM_UNGROUNDED review: the GOLD Engineered > Artificial
+    ecosystem > Water channel system source denotes artificial stream-channel vivaria rather
+    than canals, plumbing, bioreactors, or lab-enrichment cultures, and no exact vendored
+    ontology identity was available.'

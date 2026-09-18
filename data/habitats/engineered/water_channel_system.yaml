@@ -1,9 +1,17 @@
 identifier: habitatmech:GOLD.87bf5e5370
-label: Water channel system
+label: artificial water channel system
+definition: A vivarium which consists of one or more artificial channels through which
+  water is pumped or recirculated over a colonisable substratum.
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Water channel system
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:00010622
 - habitatmech:GOLD.0acae9a1a4
 source_attestations:
 - source: GOLD
@@ -11,15 +19,36 @@ source_attestations:
   source_label: Water channel system
   source_path: Engineered > Artificial ecosystem > Water channel system
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.87bf5e5370)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-09-18T00:00:00Z'
+  curator: codex-gpt-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Item-level review
+    from the committed Indoor deep-research report: GOLD''s Engineered > Artificial
+    ecosystem > Water channel system source denotes artificial stream-channel vivaria,
+    not built-environment canals, plumbing, bioreactors, or lab-enrichment cultures;
+    its children are Indoor, Outdoor, and Indoor > Biofilm. No ENVO term names a laboratory
+    or outdoor recirculating water-channel system. ENVO:00010622 ''vivarium'' is broader,
+    ENVO:00000121 ''artificial channel'' and ENVO:00000079 ''flume'' overclaim civil-engineering
+    landform or canal semantics, and ENVO:01000620 ''mesocosm'' is defined as embedded
+    within a natural environment. Term request. (source concept habitatmech:GOLD.87bf5e5370)'
+- timestamp: '2026-09-18T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: Defined as 'artificial water channel system' under ENVO:00010622 'vivarium'.
+    Definition authored from the committed Indoor deep-research report under research/habitats/,
+    read in full; no new paid research was commissioned. GOLD's Engineered > Artificial
+    ecosystem > Water channel system source is interpreted as a deliberately constructed
+    experimental stream-channel facility rather than a civil-engineering canal or
+    flume, building plumbing, a bioreactor, or a lab-enrichment culture. ENVO:00010622
+    'vivarium' is the tightest vendored genus because water-channel systems are bounded
+    experimental enclosures with controlled conditions; ENVO:00000121 'artificial
+    channel' and ENVO:00000079 'flume' overclaim landform or canal semantics, and
+    ENVO:01000620 'mesocosm' is defined as embedded within a natural environment,
+    which would exclude the Indoor child. The requested label expands GOLD's bare
+    source label for ontology clarity, and no exact synonyms were authored because
+    the report did not verify Water channel system or short artificial-stream phrases
+    as exact names in use.
