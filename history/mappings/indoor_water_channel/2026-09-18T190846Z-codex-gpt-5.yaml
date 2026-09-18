@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: indoor_water_channel
+session:
+  id: 2026-09-18T190846Z-codex-gpt-5
+  timestamp: '2026-09-18T19:08:46Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - definition
+  - parent_habitats
+  summary: Define artificial water-channel habitats
+  details: >-
+    Promoted habitatmech:GOLD.87bf5e5370 from its class-level ungrounded sweep
+    to an item-level CONFIRM_UNGROUNDED decision, then authored
+    curation/term_requests.tsv definitions for the Water channel system parent
+    and its Indoor child after exact ignored-and-hidden searches for the
+    HabitatMech identifiers, proposed labels, source labels, generated slugs,
+    ENVO vivarium genus, and canal, flume, artificial-channel, and mesocosm
+    near misses. The committed Indoor deep-research report under
+    research/habitats/ was read in full and supports interpreting the GOLD
+    Engineered > Artificial ecosystem > Water channel system branch as
+    experimental stream-channel vivaria rather than indoor air, indoor built
+    space, civil-engineering waterways, plumbing, bioreactors, or
+    lab-enrichment cultures.
