@@ -1,9 +1,13 @@
 identifier: habitatmech:GOLD.a89688e0ba
-label: Bacteria
+label: endosymbiotic bacterium-associated environment
+definition: An environmental system determined by an organism in which the determining
+  organism is a bacterium living as an endosymbiont inside another organism.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
 parent_habitats:
+- ENVO:01001000
 - habitatmech:GOLD.895a2372e5
 xrefs:
 - NCBITaxon:2
@@ -36,3 +40,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-09-18T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: 'Defined as ''endosymbiotic bacterium-associated environment'' under ENVO:01001000
+    ''environmental system determined by an organism''. Definition authored from the
+    existing item-level #114 decision, GOLD''s Host-associated > Endosymbionts > Bacteria
+    source path, the committed Bacteria deep-research report under research/habitats/,
+    the GOLD OLS path at https://w3id.org/gold.path/4732, and MIxS-SA''s treatment
+    of symbionts as hosts (DOI:10.1038/s43705-022-00092-w). The requested label is
+    scoped to the Endosymbionts branch because GOLD also has a distinct Host-associated
+    > Microbial > Bacteria record already requested as bacterium-associated environment.
+    ENVO:01001000 is the tightest vendored genus until bacterium-associated and endosymbiont-associated
+    environment intermediates exist; NCBITaxon:2 remains an xref, not a habitat identity.
+    No exact synonym was authored because GOLD''s Bacteria label is broad and ambiguous.'
