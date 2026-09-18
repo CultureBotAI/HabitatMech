@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: molluscan_gill_intracellular
+session:
+  id: 2026-09-18T143044Z-codex-gpt-5-345acb
+  timestamp: '2026-09-18T14:30:44Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/345
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - definition
+  summary: Narrow molluscan gill intracellular environment to the animal-part genus
+  details: >-
+    Adversarial review of PR #344 found that ENVO:01001002 animal-associated
+    environment was too broad for habitatmech:GOLD.0ac09185d9 now that the GOLD
+    source leaf is defined as an intracellular compartment inside a molluscan
+    gill cell. Narrowed the requested parent to ENVO:01001055 environment
+    associated with an animal part or small animal because the determinant is an
+    animal part here, unlike the whole-invertebrate Host-associated concepts
+    that intentionally avoid importing this parent.
