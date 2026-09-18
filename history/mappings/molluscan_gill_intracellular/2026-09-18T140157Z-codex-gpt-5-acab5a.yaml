@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: molluscan_gill_intracellular
+session:
+  id: 2026-09-18T140157Z-codex-gpt-5-acab5a
+  timestamp: '2026-09-18T14:01:57Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - parent_habitats
+  summary: Define molluscan gill intracellular environment
+  details: >-
+    Authored curation/term_requests.tsv for habitatmech:GOLD.0ac09185d9 after
+    exact ignored-and-hidden searches for the HabitatMech identifier, source
+    label, generated slug, requested label variants, gill bacteriocyte wording,
+    GO cellular-component xref, ENVO animal-associated genus, and DOI/PMID
+    evidence strings. The row defines GOLD's Host-associated > Mollusca >
+    Respiratory system > Gills > Intracellular leaf as molluscan gill
+    intracellular environment under ENVO:01001002 animal-associated environment
+    and uses parent_mode=REPLACE to drop the inherited Gills parent because an
+    intracellular compartment inside a gill cell is not a kind of gill.
