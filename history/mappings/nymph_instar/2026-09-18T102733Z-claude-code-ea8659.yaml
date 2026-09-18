@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: nymph_instar
+session:
+  id: 2026-09-18T102733Z-claude-code-ea8659
+  timestamp: '2026-09-18T10:27:33Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: codex-gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - parent_habitats
+  - synonyms
+  summary: Define insect nymph-associated environment
+  details: Authored curation/term_requests.tsv for habitatmech:GOLD.71e7bb35e2 from its committed
+    Codex definition report after exact ignored-and-hidden searches for the identifier, source
+    label, requested labels, synonym candidates, and life-stage near misses. Defined insect
+    nymph-associated environment under ENVO:01001002 animal-associated environment while preserving
+    GOLDs insect parent and keeping BTO:0000954 only as an xref per the existing life-stage
+    host review.
