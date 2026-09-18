@@ -1,10 +1,19 @@
 identifier: habitatmech:GOLD.6c8238add0
-label: Extracellular
+label: molluscan gill extracellular environment
+definition: An environment associated with an animal part or small animal which is
+  determined by the extracellular compartment of gill tissue in a mollusc.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Extracellular
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- habitatmech:GOLD.5719bbc634
+- ENVO:01001055
+xrefs:
+- GO:0005615
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4325
@@ -20,8 +29,28 @@ curation_history:
 - timestamp: '2026-08-21T00:00:00Z'
   curator: codex-gpt-5
   action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Non-habitat
-    screen review (#108): Host-associated > Mollusca > Respiratory system > Gills
-    > Extracellular denotes the extracellular compartment of gill tissue, a real microbial
-    habitat. An external cellular-component term supports the spatial distinction
-    but is not in the committed slice. (source concept habitatmech:GOLD.6c8238add0)'
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. GO:0005615 ''extracellular
+    space'' kept as an xref. Non-habitat screen review (#108): Host-associated > Mollusca
+    > Respiratory system > Gills > Extracellular denotes the extracellular compartment
+    of gill tissue, a real microbial habitat. GO:0005615 ''extracellular space'' describes
+    the spatial compartment but is not itself a microbial-habitat identity, so it
+    is retained only as an xref. (source concept habitatmech:GOLD.6c8238add0)'
+- timestamp: '2026-09-18T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: 'Defined as ''molluscan gill extracellular environment'' under ENVO:01001055
+    ''environment associated with an animal part or small animal''. Definition authored
+    from the existing item-level #108 decision and the committed Mollusca and Bivalves
+    reports under research/habitats/; no new paid research was commissioned. GOLD''s
+    Host-associated > Mollusca > Respiratory system > Gills > Extracellular source
+    denotes the extracellular compartment of molluscan gill tissue, not GO:0005615
+    ''extracellular space'' as a habitat identity, the whole gill, the gill surface
+    without the extracellular qualifier, the intracellular compartment of a symbiont-bearing
+    gill cell, or annelid egg-capsule extracellular habitats. ENVO:01001055 ''environment
+    associated with an animal part or small animal'' is the tightest safe vendored
+    genus because ENVO lacks a general extracellular host environment or molluscan
+    gill extracellular environment class; unlike whole-host invertebrate term requests
+    that avoid importing an animal-part restriction, that restriction is true here
+    because the determinant is molluscan gill tissue. parent_mode=REPLACE drops the
+    source-inherited Gills parent because the extracellular environment is determined
+    by gill tissue but is not a kind of whole gill.'
