@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: bacteria_endosymbionts
+session:
+  id: 2026-09-18T181356Z-codex-gpt-5-350fix
+  timestamp: '2026-09-18T18:13:56Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  summary: Clarify endosymbiotic bacterium host-cell boundary
+  details: >-
+    Updated the habitatmech:GOLD.a89688e0ba term request for issue #350 after
+    Copilot review of #349 identified that the first definition preserved the
+    nested endosymbiont restriction but did not explicitly state that the
+    bacterial cell is acting as the host habitat. The revised definition
+    restores the committed deep-research report's boundary by requiring a
+    bacterial cell, its cytoplasm, its periplasm, or its outer cell surface to
+    be inhabited by other, taxonomically distinct microorganisms while the
+    bacterial cell is itself an endosymbiont inside another organism.
