@@ -1,7 +1,9 @@
 identifier: habitatmech:GOLD.a89688e0ba
 label: endosymbiotic bacterium-associated environment
-definition: An environmental system determined by an organism in which the determining
-  organism is a bacterium living as an endosymbiont inside another organism.
+definition: An environmental system determined by an organism which comprises the
+  cytoplasm, periplasm, or outer cell surface of a bacterial cell that is itself an
+  endosymbiont inside another organism, as inhabited by other, taxonomically distinct
+  microorganisms.
 definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
@@ -51,6 +53,9 @@ curation_history:
     of symbionts as hosts (DOI:10.1038/s43705-022-00092-w). The requested label is
     scoped to the Endosymbionts branch because GOLD also has a distinct Host-associated
     > Microbial > Bacteria record already requested as bacterium-associated environment.
-    ENVO:01001000 is the tightest vendored genus until bacterium-associated and endosymbiont-associated
-    environment intermediates exist; NCBITaxon:2 remains an xref, not a habitat identity.
-    No exact synonym was authored because GOLD''s Bacteria label is broad and ambiguous.'
+    Issue #350 clarified this as a bacterial host-cell habitat to avoid conflating
+    the term with ordinary animal-associated bacterial endosymbionts in which the
+    bacterium is the occupant rather than the host. ENVO:01001000 is the tightest
+    vendored genus until bacterium-associated and endosymbiont-associated environment
+    intermediates exist; NCBITaxon:2 remains an xref, not a habitat identity. No exact
+    synonym was authored because GOLD''s Bacteria label is broad and ambiguous.'
