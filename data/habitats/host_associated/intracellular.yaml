@@ -1,10 +1,17 @@
 identifier: habitatmech:GOLD.0ac09185d9
-label: Intracellular
+label: molluscan gill intracellular environment
+definition: An animal-associated environment which is determined by the intracellular
+  compartment of a symbiont-bearing gill cell in a mollusc.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Intracellular
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- habitatmech:GOLD.5719bbc634
+- ENVO:01001002
 xrefs:
 - GO:0005622
 source_attestations:
@@ -28,3 +35,20 @@ curation_history:
     denotes the intracellular compartment of gill tissue, a real microbial habitat.
     The GO term describes the spatial compartment but is not itself a microbial-habitat
     identity, so it is retained only as an xref. (source concept habitatmech:GOLD.0ac09185d9)'
+- timestamp: '2026-09-18T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: 'Defined as ''molluscan gill intracellular environment'' under ENVO:01001002
+    ''animal-associated environment''. Definition authored from the existing item-level
+    #108 decision and the committed Mollusca and Bivalves reports under research/habitats/,
+    read against Roeselers and Newton 2012 (PMID:22354364; DOI:10.1007/s00253-011-3819-9);
+    no new paid research was commissioned. GOLD''s Host-associated > Mollusca > Respiratory
+    system > Gills > Intracellular source denotes the intracellular compartment of
+    symbiont-bearing molluscan gill bacteriocytes, not GO:0005622 ''intracellular
+    anatomical structure'' as an identity, the whole gill, the extracellular gill-tissue
+    compartment, the gill surface, or intracellular annelid trophosome endosymbionts.
+    ENVO:01001002 ''animal-associated environment'' is the tightest safe vendored
+    genus because ENVO lacks a general intracellular host environment or symbiont-bearing
+    gill-cell environment class; parent_mode=REPLACE drops the source-inherited Gills
+    parent because the intracellular environment lies within gill cells but is not
+    a kind of gill.'
