@@ -1,9 +1,19 @@
 identifier: habitatmech:GOLD.be021eb56c
-label: Lesion
+label: fish skin lesion environment
+definition: A skin environment which is determined by a focal region of fish skin
+  whose mucus layer and epidermis have been breached or eroded by injury or disease,
+  exposing dermal, scale-pocket, or muscle tissue and exudate directly to the surrounding
+  water.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Lesion
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:2100003
 - habitatmech:GOLD.92e3c832eb
 source_attestations:
 - source: GOLD
@@ -24,3 +34,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-09-18T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: Defined as 'fish skin lesion environment' under ENVO:2100003 'skin environment'.
+    Definition authored from the record's committed deep-research report under research/habitats/,
+    read in full; no new paid research was commissioned. GOLD's Host-associated >
+    Fish > Integumentary system > Skin > Lesion leaf is interpreted as pathologically
+    altered fish skin spanning erosions and ulcers rather than intact skin, epidermal
+    mucus, gill lesions, or systemic organs of ulcerated fish. ENVO:2100003 'skin
+    environment' is the tightest vendored genus; the definition keeps ambient-water
+    exposure in the differentia so this term remains distinct from the human skin
+    lesion environment. No exact synonyms were authored because attested lesion-site
+    and cutaneous-lesion names are either host-generic or narrower syndrome names,
+    and host-scoped variants would be coined (#339).

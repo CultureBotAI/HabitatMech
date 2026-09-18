@@ -1,9 +1,18 @@
 identifier: habitatmech:GOLD.5caa9dd47f
-label: Lesion
+label: human skin lesion environment
+definition: A skin environment which is determined by a focal region of human skin
+  whose tissue structure has been locally altered by disease or injury, and which
+  is demarcated from adjacent unaffected skin of the same host.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Lesion
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:2100003
 - habitatmech:GOLD.4b37ab4b76
 source_attestations:
 - source: GOLD
@@ -26,3 +35,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-09-18T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: 'Defined as ''human skin lesion environment'' under ENVO:2100003 ''skin
+    environment''. Definition authored from the record''s committed deep-research
+    report under research/habitats/, read in full; no new paid research was commissioned.
+    GOLD''s Host-associated > Mammals: Human > Integumentary system > Skin > Lesion
+    leaf is interpreted as a human lesional skin site rather than a disease, neurological
+    lesion, plant lesion, or generic NCIT:C3824 lesion. ENVO:2100003 ''skin environment''
+    is the tightest vendored genus because ENVO lacks lesion-, wound-, and other pathological-skin-environment
+    children. The requested label is human-specific to avoid colliding with GOLD''s
+    distinct fish Skin > Lesion leaf, whose submerged skin lesions have a separate
+    water-exposed boundary. No exact synonyms were authored because attested skin-lesion
+    names are host-generic, and host-scoped variants would be coined (#339).'

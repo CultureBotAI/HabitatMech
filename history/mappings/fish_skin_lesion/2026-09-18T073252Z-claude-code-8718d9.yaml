@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: fish_skin_lesion
+session:
+  id: 2026-09-18T073252Z-claude-code-8718d9
+  timestamp: '2026-09-18T07:32:52Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: codex-gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - parent_habitats
+  summary: Define the fish skin lesion environment term request
+  details: Added a curation/term_requests.tsv definition for habitatmech:GOLD.be021eb56c,
+    interpreting GOLD's Fish > Integumentary system > Skin > Lesion leaf as a fish skin lesion
+    environment under ENVO:2100003 skin environment with direct ambient-water exposure in
+    its differentia. Evidence came from the committed fish Lesion deep-research report, GOLD
+    source-path structure, the vendored ENVO:2100003 row in data/raw/ontology_terms.tsv, and
+    ignored/hidden exact searches for the target identifier, label, synonyms, and cited DOI
+    strings. The row was parsed by habitatmech.curate.definitions.load_curated_definitions,
+    exercised by a dry seed, and canary-regenerated into data/habitats/host_associated/lesion__59aa3359.yaml.

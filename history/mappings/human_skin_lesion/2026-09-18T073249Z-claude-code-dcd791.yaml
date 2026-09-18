@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: human_skin_lesion
+session:
+  id: 2026-09-18T073249Z-claude-code-dcd791
+  timestamp: '2026-09-18T07:32:49Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: codex-gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - parent_habitats
+  summary: Define the human skin lesion environment term request
+  details: Added a curation/term_requests.tsv definition for habitatmech:GOLD.5caa9dd47f,
+    interpreting GOLD's Human > Integumentary system > Skin > Lesion leaf as a human lesional
+    skin environment under ENVO:2100003 skin environment. Evidence came from the committed
+    human Lesion deep-research report, GOLD source-path structure, the vendored ENVO:2100003
+    row in data/raw/ontology_terms.tsv, and ignored/hidden exact searches for the target identifier,
+    label, synonyms, and cited DOI strings. The row was parsed by habitatmech.curate.definitions.load_curated_definitions,
+    exercised by a dry seed, and canary-regenerated into data/habitats/host_associated/lesion.yaml.
