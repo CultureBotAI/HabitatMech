@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: bacteria_endosymbionts
+session:
+  id: 2026-09-18T172555Z-codex-gpt-5-14a042
+  timestamp: '2026-09-18T17:25:55Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - parent_habitats
+  summary: Define endosymbiotic bacterium-associated environment
+  details: Authored curation/term_requests.tsv for habitatmech:GOLD.a89688e0ba after exact
+    ignored-and-hidden searches for the HabitatMech identifier, GOLD source ids and path,
+    candidate requested labels, the distinct generic bacterium-associated environment request,
+    and supporting DOI/source strings. The row defines GOLD's Host-associated > Endosymbionts
+    > Bacteria leaf as an endosymbiotic bacterium-associated environment under ENVO:01001000
+    environmental system determined by an organism, keeps the inherited Endosymbionts parent
+    with parent_mode=ADD, scopes the label away from the existing Host-associated > Microbial
+    > Bacteria term request, and keeps NCBITaxon:2 only as an xref.
