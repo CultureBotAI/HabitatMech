@@ -12,7 +12,6 @@ synonyms:
   source: HabitatMech curation
 parent_habitats:
 - ENVO:02000035
-- habitatmech:GOLD.c9756cb050
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6829
@@ -47,5 +46,7 @@ curation_history:
     material rather than rhinorrhea as a phenotype, the nasal cavity itself, sputum
     or another lower-airway material, or the zero-assertion human-only sibling. ENVO:02000035
     ''oronasal secretion material'' is the tightest vendored genus because the source
-    material is nasal and ENVO lacks a nasal-specific secretion-material child; ADD
-    preserves the source-inherited Mammals > Respiratory system > Nasal cavity parent.'
+    material is nasal and ENVO lacks a nasal-specific secretion-material child; parent_mode=REPLACE
+    drops the source-inherited Mammals > Respiratory system > Nasal cavity parent
+    because the nasal cavity is the sampling context for a secreted material, not
+    a true broader material class (#343).'
