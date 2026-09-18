@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: molluscan_gill_extracellular
+session:
+  id: 2026-09-18T152555Z-codex-gpt-5-347fix
+  timestamp: '2026-09-18T15:25:55Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/347
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - xrefs
+  summary: Retain GO:0005615 as the extracellular spatial xref
+  details: >-
+    Adversarial review of PR #346 found that the original
+    molluscan_gill_extracellular history record documented both the
+    curation/term_requests.tsv definition row and the curation/decisions.tsv
+    GO:0005615 xref repair while targeting only the term-request input. Split
+    this decision-targeted record out to document that the existing
+    CONFIRM_UNGROUNDED decision now keeps GO:0005615 extracellular space as a
+    spatial xref for the GOLD extracellular gill leaf, not as the
+    microbial-habitat identity.

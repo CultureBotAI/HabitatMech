@@ -17,7 +17,6 @@ events:
   sections:
   - definition
   - parent_habitats
-  - xrefs
   summary: Define molluscan gill extracellular environment
   details: >-
     Authored curation/term_requests.tsv for habitatmech:GOLD.6c8238add0 after
@@ -26,8 +25,7 @@ events:
     variants, and sibling gill-intracellular evidence strings. The row defines
     GOLD's Host-associated > Mollusca > Respiratory system > Gills >
     Extracellular leaf as molluscan gill extracellular environment under
-    ENVO:01001055 environment associated with an animal part or small animal,
-    keeps GO:0005615 extracellular space as a spatial xref, and uses
-    parent_mode=REPLACE to drop the inherited Gills parent because an
+    ENVO:01001055 environment associated with an animal part or small animal
+    and uses parent_mode=REPLACE to drop the inherited Gills parent because an
     extracellular compartment determined by gill tissue is not a kind of whole
     gill.
