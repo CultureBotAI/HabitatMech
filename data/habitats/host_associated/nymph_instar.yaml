@@ -1,9 +1,17 @@
 identifier: habitatmech:GOLD.71e7bb35e2
-label: Nymph/Instar
+label: insect nymph-associated environment
+definition: An animal-associated environment which is determined by an immature insect
+  in a post-embryonic nymphal instar before the adult molt.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Nymph/Instar
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:01001002
 - habitatmech:GOLD.dba2a83b95
 xrefs:
 - BTO:0000954
@@ -30,3 +38,19 @@ curation_history:
     Prepupa, and Embryo under #112/#114. The GOLD Nymph/Instar source stays minted
     as a whole-host insect habitat and keeps BTO:0000954 only as an xref so all insect
     life-stage hosts follow one rule. (source concept habitatmech:GOLD.71e7bb35e2)'
+- timestamp: '2026-09-18T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: 'Defined as ''insect nymph-associated environment'' under ENVO:01001002
+    ''animal-associated environment''. Definition authored from the record''s committed
+    Codex research report under research/habitats/, read in full. GOLD''s Host-associated
+    > Arthropoda: Insects > Nymph/Instar source denotes an immature insect acting
+    as a whole-host microbial habitat under #112/#114, not BTO:0000954 ''nymph'' as
+    an organism-at-stage identity, UBERON:0000069 ''larval stage'' as a life-cycle
+    interval, UBERON:0002548 ''larva'', a larval instar, a pupa or prepupa sibling,
+    an egg or ootheca, dissected gut or fecal material, or surrounding rearing substrate.
+    The definition uses the report''s nymphal-instar reading so GOLD''s slash label
+    does not absorb larval instars from the separate Larva branch. ENVO:01001002 is
+    the tightest vendored genus until insect-associated environment is minted, and
+    the source-inherited HabitatMech parent preserves the narrower insect restriction;
+    BTO:0000954 stays only as an xref per the existing life-stage host review.'
