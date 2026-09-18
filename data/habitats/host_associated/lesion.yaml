@@ -11,12 +11,6 @@ synonyms:
 - synonym_text: Lesion
   synonym_type: EXACT_SYNONYM
   source: HabitatMech curation
-- synonym_text: human cutaneous lesion environment
-  synonym_type: EXACT_SYNONYM
-  source: HabitatMech curation
-- synonym_text: human lesional skin environment
-  synonym_type: EXACT_SYNONYM
-  source: HabitatMech curation
 parent_habitats:
 - ENVO:2100003
 - habitatmech:GOLD.4b37ab4b76
@@ -53,4 +47,5 @@ curation_history:
     is the tightest vendored genus because ENVO lacks lesion-, wound-, and other pathological-skin-environment
     children. The requested label is human-specific to avoid colliding with GOLD''s
     distinct fish Skin > Lesion leaf, whose submerged skin lesions have a separate
-    water-exposed boundary.'
+    water-exposed boundary. No exact synonyms were authored because attested skin-lesion
+    names are host-generic, and host-scoped variants would be coined (#339).'

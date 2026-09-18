@@ -12,12 +12,6 @@ synonyms:
 - synonym_text: Lesion
   synonym_type: EXACT_SYNONYM
   source: HabitatMech curation
-- synonym_text: fish cutaneous lesion environment
-  synonym_type: EXACT_SYNONYM
-  source: HabitatMech curation
-- synonym_text: fish lesion site
-  synonym_type: EXACT_SYNONYM
-  source: HabitatMech curation
 parent_habitats:
 - ENVO:2100003
 - habitatmech:GOLD.92e3c832eb
@@ -51,4 +45,6 @@ curation_history:
     mucus, gill lesions, or systemic organs of ulcerated fish. ENVO:2100003 'skin
     environment' is the tightest vendored genus; the definition keeps ambient-water
     exposure in the differentia so this term remains distinct from the human skin
-    lesion environment.
+    lesion environment. No exact synonyms were authored because attested lesion-site
+    and cutaneous-lesion names are either host-generic or narrower syndrome names,
+    and host-scoped variants would be coined (#339).

@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: human_skin_lesion
+session:
+  id: 2026-09-18T095116Z-claude-code-93b948
+  timestamp: '2026-09-18T09:51:16Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: codex-gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/339
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - synonyms
+  summary: Drop coined exact synonyms for the human skin lesion term request
+  details: 'Adversarial review in PR #338 found the authored human skin lesion exact_synonym
+    values were host-scoped coined variants of generic report names and would be exported
+    to ENVO. Removed those synonyms from curation/term_requests.tsv and regenerated the ENVO
+    template, generated habitat record, semantic text map, and pages.'
