@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: gaster_metasoma
+session:
+  id: 2026-09-18T201146Z-codex-gpt-5-edf1eb
+  timestamp: '2026-09-18T20:11:46Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: codex-gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - parent_habitats
+  summary: Define metasoma and gaster environments
+  details: Added curated term requests for metasoma environment and gaster environment under
+    ENVO:01001002 animal-associated environment. The definitions were authored from the committed
+    Gaster research report, keep the apocritan hymenopteran boundaries explicit, avoid treating
+    whole-gaster samples as digestive-tract-only samples, and use parent_mode=ADD so Gaster
+    remains below the Metasoma source concept.

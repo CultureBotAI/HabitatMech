@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/external_xrefs.tsv
+  slug: gaster_metasoma
+session:
+  id: 2026-09-18T201149Z-codex-gpt-5-7b2ebb
+  timestamp: '2026-09-18T20:11:49Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: codex-gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - xrefs
+  summary: Allow HAO gaster and metasoma xrefs
+  details: Added HAO:0000626 metasoma and HAO:0000369 gaster to the reviewable external-xref
+    allow-list so the Metasoma and Gaster decision rows can retain exact Hymenoptera Anatomy
+    Ontology matches as xrefs without using an unvendored anatomy class as a HabitatMech identity
+    or parent.

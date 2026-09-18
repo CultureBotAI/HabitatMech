@@ -1,25 +1,51 @@
 identifier: habitatmech:GOLD.623ff8e506
-label: Gaster
+label: gaster environment
+definition: An animal-associated environment which consists of the gaster of an apocritan
+  hymenopteran, the posterior part of the metasoma formed by all abdominal segments
+  behind the petiole or postpetiole, sampled as an intact body region rather than
+  as dissected organs.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
 parent_habitats:
+- ENVO:01001002
 - habitatmech:GOLD.93f0f7b66d
+xrefs:
+- HAO:0000369
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7252
   source_label: Gaster
   source_path: 'Host-associated > Arthropoda: Insects > Abdomen > Metasoma > Gaster'
 curation_history:
-- timestamp: '2026-08-14T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Disjoint-grounding
-    review (#62): was UBERON:0000945 ''stomach'', a vertebrate organ. The path is
-    Arthropoda: Insects > Abdomen > Metasoma > Gaster, and an insect gaster is a region
-    of the abdomen rather than a stomach. Path: Host-associated > Arthropoda: Insects
-    > Abdomen > Metasoma > Gaster (source concept habitatmech:GOLD.623ff8e506)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-09-18T00:00:00Z'
+  curator: codex-gpt-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. HAO:0000369
+    ''gaster'' kept as an xref. Disjoint-grounding review (#62) remains correct: GOLD''s
+    Host-associated > Arthropoda: Insects > Abdomen > Metasoma > Gaster path denotes
+    the gaster of an apocritan hymenopteran, not UBERON:0000945 ''stomach'' or BTO:0001307
+    ''stomach''. Definition research confirmed it is an intact body-region sampling
+    unit containing gut, glandular, reproductive, intracellular, and cuticular niches;
+    HAO:0000369 ''gaster'' is an exact unvendored anatomy match retained only as an
+    xref until HAO is vendored or ENVO gains a gaster environment class. (source concept
+    habitatmech:GOLD.623ff8e506)'
+- timestamp: '2026-09-18T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: 'Defined as ''gaster environment'' under ENVO:01001002 ''animal-associated
+    environment''. Definition authored from the record''s committed deep-research
+    report under research/habitats/, read in full; no new paid research was commissioned.
+    GOLD''s Host-associated > Arthropoda: Insects > Abdomen > Metasoma > Gaster source
+    denotes the whole gaster as a sampling unit and not UBERON:0000945 or BTO:0001307
+    ''stomach'' from the Latin false-friend label, the whole metasoma parent, a digestive-tract-only
+    compartment, a petiole or postpetiole, or a head or mesosoma structure. ENVO:01001002
+    ''animal-associated environment'' is the tightest vendored genus until insect-associated,
+    metasoma, and gaster environment intermediates exist; HAO:0000369 exactly names
+    the hymenopteran anatomy and stays only as an external xref because it is an unvendored
+    anatomy term rather than an environment identity.'

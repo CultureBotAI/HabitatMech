@@ -75,7 +75,20 @@ GROUNDING_MEANING = {
     "NOT_APPLICABLE": "Not a habitat at all — a disease, quality, process or procedure.",
 }
 
-OBO_PREFIXES = {"BTO", "CEPH", "CHEBI", "ENVO", "FOODON", "GO", "NCBITaxon", "NCIT", "PATO", "PO", "UBERON"}
+OBO_PREFIXES = {
+    "BTO",
+    "CEPH",
+    "CHEBI",
+    "ENVO",
+    "FOODON",
+    "GO",
+    "HAO",
+    "NCBITaxon",
+    "NCIT",
+    "PATO",
+    "PO",
+    "UBERON",
+}
 
 
 def slugify(text: str) -> str:

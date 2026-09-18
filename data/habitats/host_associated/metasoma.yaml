@@ -1,25 +1,49 @@
 identifier: habitatmech:GOLD.93f0f7b66d
-label: Metasoma
+label: metasoma environment
+definition: An animal-associated environment which consists of the metasoma of an
+  apocritan hymenopteran, the posterior tagma behind the propodeum that includes the
+  petiole and gaster, sampled as an intact body region rather than as dissected organs.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
+- ENVO:01001002
 - habitatmech:GOLD.c6b0b54290
+xrefs:
+- HAO:0000626
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7251
   source_label: Metasoma
   source_path: 'Host-associated > Arthropoda: Insects > Abdomen > Metasoma'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.93f0f7b66d)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-09-18T00:00:00Z'
+  curator: codex-gpt-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. HAO:0000626
+    ''metasoma'' kept as an xref. Gaster definition research also reviewed this parent
+    source: GOLD''s Host-associated > Arthropoda: Insects > Abdomen > Metasoma path
+    denotes an apocritan hymenopteran abdominal tagma and is a real body-region habitat,
+    not UBERON:0000916 ''abdomen'' or a chelicerate metasoma. No vendored ENVO, UBERON,
+    FOODON, BTO, or PO term names a metasoma environment; HAO:0000626 ''metasoma''
+    is an exact unvendored anatomy match retained only as an xref until HAO is vendored
+    or ENVO gains an environment class. (source concept habitatmech:GOLD.93f0f7b66d)'
+- timestamp: '2026-09-18T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: 'Defined as ''metasoma environment'' under ENVO:01001002 ''animal-associated
+    environment''. Definition authored from the Gaster record''s committed deep-research
+    report under research/habitats/, read in full; no new paid research was commissioned.
+    GOLD''s Host-associated > Arthropoda: Insects > Abdomen > Metasoma source is interpreted
+    as the metasoma of an apocritan hymenopteran rather than a generic insect abdomen,
+    UBERON:0000916 ''abdomen'' as a vertebrate body subdivision, or a scorpion/chelicerate
+    metasoma. ENVO:01001002 ''animal-associated environment'' is the tightest vendored
+    genus until insect-associated environment and insect body-region environment intermediates
+    exist; HAO:0000626 exactly names the hymenopteran anatomy and stays only as an
+    external xref because it is an unvendored anatomy term rather than an environment
+    identity.'
