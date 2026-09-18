@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: fungi
+session:
+  id: 2026-09-18T230312Z-codex-gpt-5-b24e4f
+  timestamp: '2026-09-18T23:03:12Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: codex-gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  summary: Parent Fungi endosymbiont leaf to fungi-associated environment
+  details: Replaced the habitatmech:GOLD.1ab59245f7 CONFIRM_UNGROUNDED decision with GROUND_AS_PARENT
+    to ENVO:01001041 after reading the committed Fungi deep-research report and the vendored
+    ENVO/FOODON terms. The GOLD Host-associated > Endosymbionts > Fungi leaf has three GOLD
+    node ids but zero organisms, studies, or biosamples; ENVO:01001041 fungi-associated environment
+    is a defensible broader habitat, while FOODON:03411261 fungus is a taxonomic food term
+    and should not be a parent or identity.
