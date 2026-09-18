@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: gaster_metasoma
+session:
+  id: 2026-09-18T201143Z-codex-gpt-5-300718
+  timestamp: '2026-09-18T20:11:43Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: codex-gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - xrefs
+  summary: Review Metasoma and Gaster grounding
+  details: Promoted habitatmech:GOLD.93f0f7b66d from the class-level ungrounded sweep to an
+    item-level CONFIRM_UNGROUNDED review and refreshed habitatmech:GOLD.623ff8e506 with the
+    Gaster report's coverage finding. GOLD's Metasoma and Gaster paths denote apocritan hymenopteran
+    body regions, not vertebrate stomach or abdomen classes, and HAO:0000626 and HAO:0000369
+    are exact anatomy matches retained only as unvendored xrefs.

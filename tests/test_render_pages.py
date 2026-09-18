@@ -93,6 +93,7 @@ def test_xrefs_without_resolvable_iris_render_as_plain_text(repo_root):
 
 def test_ceph_xrefs_render_to_obo_purls():
     assert render_pages.term_iri("CEPH:0000001") == "http://purl.obolibrary.org/obo/CEPH_0000001"
+    assert render_pages.term_iri("HAO:0000369") == "http://purl.obolibrary.org/obo/HAO_0000369"
 
 
 def test_record_pages_render_curated_causal_graphs(repo_root):

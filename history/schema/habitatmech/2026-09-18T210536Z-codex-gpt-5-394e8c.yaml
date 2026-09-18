@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: schema
+  path: src/habitatmech/schema/habitatmech.yaml
+  slug: habitatmech
+session:
+  id: 2026-09-18T210536Z-codex-gpt-5-394e8c
+  timestamp: '2026-09-18T21:05:36Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - prefixes
+  summary: Declare HAO prefix for habitat xrefs
+  details: Added the HAO OBO prefix to habitatmech.yaml after Gaster and Metasoma curation
+    introduced HAO xrefs, so generated HabitatRecord xrefs can expand through LinkML and corpus
+    schema-prefix checks pass.
