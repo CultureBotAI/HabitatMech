@@ -4,7 +4,7 @@
 
 `Nymph/Instar`, in GOLD's `Host-associated > Arthropoda: Insects > Nymph/Instar` path, denotes the nymph-stage insect host as the microbial habitat: the body of a hemimetabolous insect sampled before it becomes a reproductive adult. That body-level habitat can include the cuticle, gut, hemolymph, fat body, bacteriomes, reproductive primordia, and other host tissues if the sample is an undissected nymph or homogenate.
 
-The boundary follows the GOLD tree in [gold_ecosystem_paths.tsv](/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/data/raw/gold_ecosystem_paths.tsv): `Nymph/Instar > Gut`, `Nymph/Instar > Gut > Fecal`, and `Nymph/Instar > Whole body` are child/refinement concepts under this one, while `Larva`, `Prepupa`, `Pupa`, `Ootheca/Egg mass`, and the adult-unspecified `Whole body` are sibling concepts outside it. The definition should therefore not collapse the term to dissected gut, fecal material, egg masses, holometabolous larvae, pupae, prepupae, or the surrounding plant, soil, nest, water, or rearing substrate.
+The boundary follows the GOLD tree in [gold_ecosystem_paths.tsv](../../../data/raw/gold_ecosystem_paths.tsv): `Nymph/Instar > Gut`, `Nymph/Instar > Gut > Fecal`, and `Nymph/Instar > Whole body` are child/refinement concepts under this one, while `Larva`, `Prepupa`, `Pupa`, `Ootheca/Egg mass`, and the adult-unspecified `Whole body` are sibling concepts outside it. The definition should therefore not collapse the term to dissected gut, fecal material, egg masses, holometabolous larvae, pupae, prepupae, or the surrounding plant, soil, nest, water, or rearing substrate.
 
 The label is ambiguous. `Nymph` names an immature insect in incomplete metamorphosis, and BTO's `BTO:0000954` reflects that organism-at-stage reading, which is why HabitatMech keeps it only as an `xref`, not as the habitat identity. `Instar` is broader: UC IPM defines it as a larval or nymph stage between successive molts, so a bare instar could be a larval instar in a butterfly or fly, not just a nymphal instar. The source path is the deciding context: GOLD already has separate `Larva`, `Prepupa`, and `Pupa` siblings under `Arthropoda: Insects`, so `Nymph/Instar` should be read as the nymphal-instared host bucket rather than all insect instars. ([ebi.ac.uk](https://www.ebi.ac.uk/?utm_source=openai))
 
@@ -12,7 +12,7 @@ That reading is supported by microbiome studies that treat nymphs as real host h
 
 **Genus**
 
-The natural genus is `insect-associated environment`, already requested locally as `habitatmech:GOLD.dba2a83b95` and defined in [arthropoda_insects.yaml](/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/data/habitats/host_associated/arthropoda_insects.yaml) as an environmental system determined by an insect.
+The natural genus is `insect-associated environment`, already requested locally as `habitatmech:GOLD.dba2a83b95` and defined in [arthropoda_insects.yaml](../../../data/habitats/host_associated/arthropoda_insects.yaml) as an environmental system determined by an insect.
 
 The smallest existing external ontology genus is `ENVO:01001002` `animal-associated environment`, whose ENVO definition is an environmental system determined by an animal. `ENVO:01001000` `environmental system determined by an organism` is correct but one level broader. The vendored ENVO slice contains organism-associated precedents such as animal-, plant-, fungal-, and cnidarian-associated environments, but no insect- or arthropod-associated environment, so `ENVO:01001002` is the right `parent_class` until ENVO gains the insect-scoped intermediate. ([ebi.ac.uk](https://www.ebi.ac.uk/?utm_source=openai))
 
@@ -98,4 +98,3 @@ My inference is the hemimetabolous/nymphal restriction. GOLD gives only the slas
 ## Limitations
 
 - GOLD does not define the slash label. The nymphal-instar reading is an inference from its position under `Host-associated > Arthropoda: Insects` and from the presence of separate `Larva`, `Prepupa`, and `Pupa` siblings.
-- I did not add `habitatmech:GOLD.71e7bb35e2` to `curation/term_requests.tsv`; the output above is definition evidence for a curator to apply.
