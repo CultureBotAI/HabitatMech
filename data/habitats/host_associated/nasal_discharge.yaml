@@ -1,10 +1,17 @@
 identifier: habitatmech:GOLD.7aeb42082d
-label: Nasal discharge
+label: mammalian nasal discharge material
+definition: An oronasal secretion material which is composed primarily of mucus discharged
+  from a mammalian nasal cavity.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Nasal discharge
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- habitatmech:GOLD.c9756cb050
+- ENVO:02000035
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6829
@@ -26,3 +33,20 @@ curation_history:
     > Nasal discharge, so the concept is the physical secretion carrying microbes
     rather than the phenotype abstractly. An external phenotype term supports the
     clinical context but is not in the committed slice. (source concept habitatmech:GOLD.7aeb42082d)'
+- timestamp: '2026-09-18T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: 'Defined as ''mammalian nasal discharge material'' under ENVO:02000035
+    ''oronasal secretion material''. Definition authored from the existing item-level
+    #108 decision, GOLD''s source path, the vendored ENVO secretion hierarchy, and
+    Haro et al. 2020 (PMID:33214657; DOI:10.1038/s41598-020-77271-z); no deep-research
+    report was committed because the available provider lanes failed before producing
+    a validated source-backed artifact. GOLD''s Host-associated > Mammals > Respiratory
+    system > Nasal cavity > Nasal discharge source denotes mammalian nasal secretion
+    material rather than rhinorrhea as a phenotype, the nasal cavity itself, sputum
+    or another lower-airway material, or the zero-assertion human-only sibling. ENVO:02000035
+    ''oronasal secretion material'' is the tightest vendored genus because the source
+    material is nasal and ENVO lacks a nasal-specific secretion-material child; parent_mode=REPLACE
+    drops the source-inherited Mammals > Respiratory system > Nasal cavity parent
+    because the nasal cavity is the sampling context for a secreted material, not
+    a true broader material class (#343).'

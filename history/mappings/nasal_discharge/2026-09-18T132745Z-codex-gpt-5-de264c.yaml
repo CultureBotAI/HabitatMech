@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: nasal_discharge
+session:
+  id: 2026-09-18T132745Z-codex-gpt-5-de264c
+  timestamp: '2026-09-18T13:27:45Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/343
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Drop the false nasal-cavity parent from mammalian nasal discharge material
+  details: >-
+    Adversarial review of PR #342 found that parent_mode=ADD retained the GOLD
+    Nasal cavity parent on habitatmech:GOLD.7aeb42082d, making a secreted
+    material an is-a child of an anatomical cavity. Switched the curated
+    definition to parent_mode=REPLACE so the generated record keeps only
+    ENVO:02000035 oronasal secretion material as its broader material class.

@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: nasal_discharge
+session:
+  id: 2026-09-18T125622Z-codex-gpt-5-d74688
+  timestamp: '2026-09-18T12:56:22Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - parent_habitats
+  summary: Define mammalian nasal discharge material
+  details: Authored curation/term_requests.tsv for habitatmech:GOLD.7aeb42082d
+    after exact ignored-and-hidden searches for the HabitatMech identifier, source
+    label, generated slug, requested label, ENVO parent, nasal mucus phrase,
+    PMID:33214657, and DOI:10.1038/s41598-020-77271-z. The row defines GOLD
+    Host-associated > Mammals > Respiratory system > Nasal cavity > Nasal
+    discharge as mammalian nasal discharge material under ENVO:02000035
+    oronasal secretion material, retains the source-inherited nasal-cavity parent
+    with parent_mode=ADD, and distinguishes the physical nasal secretion from
+    rhinorrhea as a phenotype, the nasal cavity itself, sputum and other
+    lower-airway materials, and the zero-assertion human-only sibling.
