@@ -1,8 +1,24 @@
 identifier: habitatmech:GOLD.f037760cf2
-label: Buffer
+label: buffer solution
+definition: A chemical product which is a solution formulated to resist changes in
+  pH when small amounts of acid or base are introduced.
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
+synonyms:
+- synonym_text: Buffer
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: buffered solution
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: pH buffer
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: pH buffer solution
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:2000000
 source_attestations:
@@ -26,3 +42,18 @@ curation_history:
     Buffer denotes a manufactured buffer solution or product, a physical fluid material
     in which microbes can occur. An external chemical term identifies the chemical
     role but is not in the committed slice. (source concept habitatmech:GOLD.f037760cf2)'
+- timestamp: '2026-09-18T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: 'Defined as ''buffer solution'' under ENVO:2000000 ''chemical product''.
+    Definition authored from the existing item-level #108 decision, GOLD''s Engineered
+    > Industrial production > Chemical products > Buffer source path, the local ENVO
+    chemical-product hierarchy, CHEBI:35225 ''buffer'', Good et al. 1966 (DOI:10.1021/bi00866a011),
+    and Houlsby et al. 1988 (PMID:3280650). GOLD''s source denotes a manufactured
+    pH-buffering solution or product in which microbes can occur rather than a natural
+    buffered system, a blank-control role, pure lab-grade water or sheath fluid sibling,
+    ENVO:00000135 ''buffer zone'', a formulation-specific PBS/Tris/HEPES solution,
+    or CHEBI:35225 as a pH-resistance chemical role rather than a material habitat.
+    ENVO:2000000 ''chemical product'' is the tightest vendored genus and the existing
+    source-inherited parent, so parent_mode=ADD preserves the GOLD Chemical products
+    hierarchy.'

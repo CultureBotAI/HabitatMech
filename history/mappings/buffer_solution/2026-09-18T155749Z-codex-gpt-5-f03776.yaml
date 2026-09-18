@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: buffer_solution
+session:
+  id: 2026-09-18T155749Z-codex-gpt-5-f03776
+  timestamp: '2026-09-18T15:57:49Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: GPT-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - parent_habitats
+  summary: Define buffer solution
+  details: >-
+    Authored curation/term_requests.tsv for habitatmech:GOLD.f037760cf2 after
+    exact ignored-and-hidden searches for the HabitatMech identifier, both GOLD
+    source ids, the exact source path, the Buffer label, requested label
+    variants, slug variants, CHEBI:35225, DOI:10.1021/bi00866a011, and
+    PMID:3280650. The row defines GOLD's Engineered > Industrial production >
+    Chemical products > Buffer leaf as a pH-buffering manufactured solution
+    under ENVO:2000000 chemical product, rejects ENVO:00000135 buffer zone and
+    formulation-specific PBS, Tris, and HEPES buffers as exact identities, and
+    keeps parent_mode=ADD because the inherited Chemical products parent is
+    already true.
