@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests_excluded.tsv
+  slug: biofouling
+session:
+  id: 2026-09-19T001917Z-codex-gpt-5-9a9532
+  timestamp: '2026-09-19T00:19:17Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: codex-gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - term_requests
+  summary: Exclude unused Biofouling leaves from ENVO term requests
+  details: Added the four zero-assertion GOLD Biofouling parent leaves to curation/term_requests_excluded.tsv
+    after reading their reviewed CONFIRM_UNGROUNDED decisions, the raw GOLD Biofouling and
+    Microfouling/Biofilm rows, the vendored ENVO:06105023 biofouling process term, and the
+    existing ENVO:00002034 biofilm merge. ENVO:06105023 remains only an xref because it names
+    the fouling process rather than the fouling layer. The Marine, Freshwater, and Non-marine
+    Saline and Alkaline Biofouling leaves are unused grouping bins whose concrete Microfouling/Biofilm
+    children already ground to biofilm; the Deep subsurface > Groundwater Biofouling leaf
+    has no child and no observations. No new HabitatMech or ENVO term should be requested
+    for these four placeholders.
