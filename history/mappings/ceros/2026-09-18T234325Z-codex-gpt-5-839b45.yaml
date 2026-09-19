@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: ceros
+session:
+  id: 2026-09-18T234325Z-codex-gpt-5-839b45
+  timestamp: '2026-09-18T23:43:25Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: codex-gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - xrefs
+  summary: Retain Ceros as ungrounded and add horn only as an xref
+  details: Retained habitatmech:GOLD.98bf2e4e7d as CONFIRM_UNGROUNDED after reading the committed
+    Ceros deep-research report, checking the GOLD Mammals > Integumentary system sibling block,
+    and verifying UBERON:0006967 horn in the vendored ontology slice. Ceros has no attested
+    standalone anatomical usage; UBERON:0006967 horn is exact only if Ceros is a duplicate
+    of the GOLD Horn sibling, while asserting it as identity would over-claim a living bony
+    core if Ceros denotes rhinoceros horn. The horn term was therefore recorded only with
+    relation xref, leaving the source concept minted and off the novel-term definition worklist.
