@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests_excluded.tsv
+  slug: ceros
+session:
+  id: 2026-09-18T234808Z-codex-gpt-5-d063b4
+  timestamp: '2026-09-18T23:48:08Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: codex-gpt-5
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - term_requests
+  summary: Exclude ambiguous Ceros from ENVO term requests
+  details: Added habitatmech:GOLD.98bf2e4e7d to curation/term_requests_excluded.tsv after
+    the committed Ceros research report recommended no new definition and no term request.
+    The GOLD Ceros leaf has zero upstream assertions and no attested standalone anatomical
+    meaning; the remaining readings either duplicate the sibling Horn record or denote rhinoceros
+    horn, which UBERON:0006967 over-specifies by requiring a living bony core. The concept
+    remains CONFIRM_UNGROUNDED with UBERON:0006967 only as an xref.
