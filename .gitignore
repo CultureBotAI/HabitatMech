@@ -15,11 +15,13 @@ venv/
 htmlcov/
 
 # Generated reports — regenerate with `just report` / `just validate-all`
-reports/
+reports/*
 # ...except the research manifest, which is NOT regenerable. It records what
 # was actually paid for: which novel terms were researched, how long each took,
 # and which failed and why. Re-running would cost the whole batch again.
 !reports/habitat_research_manifest.tsv
+!reports/yaml_record_review/
+!reports/yaml_record_review/*.md
 
 # Generated from the LinkML schema by `just gen-schema`
 src/habitatmech/schema/habitatmech_dataclasses.py
