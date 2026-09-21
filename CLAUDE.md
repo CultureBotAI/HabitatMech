@@ -20,6 +20,9 @@ Read these before changing domain behavior:
   and source inputs; generated habitat YAML remains read-only.
 - [.claude/skills/review-yaml-record/SKILL.md](.claude/skills/review-yaml-record/SKILL.md)
   — audit one habitat record without editing it or mutating GitHub.
+- [.claude/skills/review-yaml-category/SKILL.md](.claude/skills/review-yaml-category/SKILL.md)
+  — audit a coherent habitat category or cohort without editing records,
+  including member selection and lump/split boundaries.
 - [.claude/skills/review-open-issues/SKILL.md](.claude/skills/review-open-issues/SKILL.md)
   — perform a read-only, evidence-backed sweep of the complete open issue
   queue when backlog triage or prioritization is requested.
