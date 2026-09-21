@@ -126,21 +126,24 @@ abyssopelagic-zone term, or remain minted.
    abyssopelagic/abyssal source artifact, or a real minted habitat with no exact
    ontology term.
 2. If the path is another assertion of the existing GOLD `Abyssopelagic`
-   identity, add either a direct `GROUND` row to the same ontology term or a
-   `SAME_AS` row to the reviewed minted source, whichever best records the
-   curator's identity claim while preserving both GOLD source attestations.
-3. Regenerate a single-record canary for `habitatmech:GOLD.3a1e1f8fd7`, inspect
-   `data/habitats/aquatic/abyssopelagic_abyssal_zone.yaml` or the record it
-   merges into, and confirm that the generated `grounding_status`,
-   `mapping_status`, label, parent, source attestation, and curation history all
-   follow from the maintained rows.
+   identity, add a `GROUND` row for `habitatmech:GOLD.3a1e1f8fd7` to
+   `ENVO:01000038`. Do not use `SAME_AS` for this already grounded sibling:
+   two GOLD sources with the same ontology identity merge because they both
+   resolve to `ENVO:01000038`.
+3. Regenerate a single-record canary for the resolved identifier that follows
+   from the item decision. If the source grounds to `ENVO:01000038`, inspect
+   `data/habitats/aquatic/oceanic_abyssopelagic_zone_biome.yaml`; if it remains
+   minted, inspect `data/habitats/aquatic/abyssopelagic_abyssal_zone.yaml`.
+   Confirm that the generated `grounding_status`, `mapping_status`, label,
+   parent, source attestation, and curation history all follow from the
+   maintained rows.
 
 ## Follow-up Checks
 
 - `just seed`
-- `just seed-canary habitatmech:GOLD.3a1e1f8fd7`
-- `just validate data/habitats/aquatic/abyssopelagic_abyssal_zone.yaml`
-- `just validate-strict data/habitats/aquatic/abyssopelagic_abyssal_zone.yaml --quiet`
+- `just seed-canary <resolved-identifier>`
+- `just validate <resolved-record-path>`
+- `just validate-strict <resolved-record-path> --quiet`
 - `just term-requests-check`
 - `just verify-corpus --max-diffs 1`
 
