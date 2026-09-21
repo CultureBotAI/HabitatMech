@@ -126,10 +126,11 @@ abyssopelagic-zone term, or remain minted.
    abyssopelagic/abyssal source artifact, or a real minted habitat with no exact
    ontology term.
 2. If the path is another assertion of the existing GOLD `Abyssopelagic`
-   identity, add a `GROUND` row for `habitatmech:GOLD.3a1e1f8fd7` to
-   `ENVO:01000038`. Do not use `SAME_AS` for this already grounded sibling:
-   two GOLD sources with the same ontology identity merge because they both
-   resolve to `ENVO:01000038`.
+   identity, replace the existing class-depth `CONFIRM_UNGROUNDED` row for
+   `habitatmech:GOLD.3a1e1f8fd7` with an item-depth `GROUND` decision to
+   `ENVO:01000038`. Do not use `SAME_AS` for this already grounded sibling: two
+   GOLD sources with the same ontology identity merge because they both resolve
+   to `ENVO:01000038`.
 3. Regenerate a single-record canary for the resolved identifier that follows
    from the item decision. If the source grounds to `ENVO:01000038`, inspect
    `data/habitats/aquatic/oceanic_abyssopelagic_zone_biome.yaml`; if it remains
