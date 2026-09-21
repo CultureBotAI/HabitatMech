@@ -76,7 +76,7 @@ No blocker or minor findings found.
 
 1. Replace the class-sweep decision in `curation/decisions.tsv` for `habitatmech:GOLD.19b5876c23` with an item-level decision that confirms GOLD `Environmental > Aquatic > Artesian spring` is a real spring habitat with no exact term in the current vendored ENVO slice.
 2. Add a curated definition and hierarchy row in `curation/term_requests.tsv` for `habitatmech:GOLD.19b5876c23`, with `parent_class` set to `ENVO:00000027`, `parent_label` set to `spring`, and `parent_mode=REPLACE` so regeneration drops the false inherited `ENVO:00002030` parent.
-3. Regenerate `data/habitats/aquatic/artesian_spring.yaml` with `just seed-canary habitatmech:GOLD.19b5876c23` and inspect the generated target before any wider seed run.
+3. Regenerate `data/habitats/aquatic/artesian_spring.yaml` with `just seed-canary habitatmech:GOLD.19b5876c23 --force` and inspect the generated target before any wider seed run.
 4. Re-check `data/habitats/aquatic/acidic.yaml` and `data/habitats/aquatic/sediment__4ec76487.yaml` after the earlier non-habitat hierarchy bug is fixed, because `Acidic` should become an environmental parameter on the artesian-sediment child instead of remaining a parent node.
 
 ## Follow-up Checks
@@ -84,7 +84,7 @@ No blocker or minor findings found.
 | Edit | Narrowest proving check |
 |---|---|
 | Promote the source path from class sweep to item review. | Re-read the new `curation/decisions.tsv` row and confirm it keys `habitatmech:GOLD.19b5876c23`, uses `review_depth=ITEM`, and cites the inspected GOLD path and spring near-miss terms. |
-| Suppress the false aquatic-biome parent edge. | Re-read the new `curation/term_requests.tsv` row, run `just seed-canary habitatmech:GOLD.19b5876c23`, and confirm `data/habitats/aquatic/artesian_spring.yaml` keeps the GOLD source attestation, drops `ENVO:00002030`, and gains `ENVO:00000027`. |
+| Suppress the false aquatic-biome parent edge. | Re-read the new `curation/term_requests.tsv` row, run `just seed-canary habitatmech:GOLD.19b5876c23 --force`, and confirm `data/habitats/aquatic/artesian_spring.yaml` keeps the GOLD source attestation, drops `ENVO:00002030`, and gains `ENVO:00000027`. |
 | Validate the regenerated record and corpus. | `just validate data/habitats/aquatic/artesian_spring.yaml`, `just validate-strict data/habitats/aquatic/artesian_spring.yaml --quiet`, `just validate-history`, `just term-requests-check`, and `just verify-corpus --max-diffs 1`. |
 | Prevent downstream non-habitat parent leakage. | After a seed run, inspect `data/habitats/aquatic/sediment__4ec76487.yaml` and confirm the GOLD `Acidic` qualifier no longer appears in `parent_habitats`. |
 
