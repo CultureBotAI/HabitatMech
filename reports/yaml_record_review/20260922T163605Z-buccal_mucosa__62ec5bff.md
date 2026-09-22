@@ -60,7 +60,7 @@ Every generated claim is traceable to a raw row or maintained transform:
 | Parent `habitatmech:GOLD.92d1e65695` | GOLD parent path from `data/raw/gold_ecosystem_paths.tsv:101` | Supported exactly |
 | Absence of a definition, synonym, xref, environmental parameter, characteristic taxon, causal graph, record-level evidence, discussion, and dataset | No maintained input row or overlay found for these slots | Supported by bounded exact searches |
 
-No GOLD biosample or study side-table rows exist on the exact `Host-associated > Mammals > Digestive system > Oral cavity > Buccal mucosa` path, so this record correctly has no `datasets` block. The 122-biosample and four-study side rows for `Host-associated > Mammals > Digestive system > Oral cavity` belong to the broader `Oral cavity` parent, not to this child leaf.
+No GOLD biosample or study side-table rows exist on the exact `Host-associated > Mammals > Digestive system > Oral cavity > Buccal mucosa` path, so this record correctly has no `datasets` block. The 122-biosample and five-study side rows for `Host-associated > Mammals > Digestive system > Oral cavity` belong to the broader `Oral cavity` parent, not to this child leaf.
 
 ## Completeness
 
