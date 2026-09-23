@@ -34,7 +34,7 @@ This is a generated record owned by upstream inputs, not by hand edits under
 | `just validate-strict data/habitats/engineered/air_conditioning_unit.yaml` | Passed; 1 file scanned, 0 files with errors, and 0 total error rows. |
 | `just validate-causal-all` | Passed; 32 causal-graph curation files with 32 graphs validated. |
 | Focused causal-graph validation | Not applicable; the record has no maintained overlay under `curation/causal_graphs/`. |
-| Reference validator | Not applicable; an ignored- and hidden-inclusive search of `justfile`, `scripts`, `.github`, and `.claude` found no dedicated reference validator in this repository. |
+| Reference validator | Not applicable; the record has no DOI, PMID, URL, causal-edge evidence, dataset, or discussion references to check. |
 | `just term-requests-check` | Passed; the term-request table is current with 109 terms. |
 | `just validate-history` | Passed; no issues found and 77 history records validated. |
 | `just verify-corpus --max-diffs 1` | Passed; 3,206 expected records, 3,206 on disk, 0 missing, 0 extra, and 0 differing. |
