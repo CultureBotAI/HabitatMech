@@ -70,7 +70,7 @@ The three emitted taxa without `taxon_label` are also faithful to the raw input.
 
 No curated term request, external xref, or definition row is expected because the BTO term already supplies the record identity, definition, and broader parent. No causal graph is expected because this is a generated seed record and the repository requires independent literature evidence before mechanism edges can be authored.
 
-Ignored/hidden-inclusive exact searches covered the target BTO id, PREGO curation key, record stem, record label, BTO parent, parallel UBERON adipose-tissue class, and emitted taxon ids, excluding generated `build`, `data/text_map`, and `pages` trees for broad content searches. They found the cited PREGO rows, BTO rows, UBERON lexical alternative, path lock, generated YAML, and expected mentions in earlier adipose-tissue review context, and no maintained row that should already have changed this target.
+Ignored/hidden-inclusive exact searches covered the target BTO id, PREGO curation key, record stem, record label, BTO parent, parallel UBERON adipose-tissue class, and the three emitted taxon ids that lacked labels, excluding generated `build`, `data/text_map`, and `pages` trees for broad content searches. They found the cited PREGO rows, BTO rows, UBERON lexical alternative, path lock, generated YAML, and expected mentions in earlier adipose-tissue review context, and no maintained row that should already have changed this target.
 
 ## Findings
 
@@ -109,4 +109,4 @@ For any future status-only review row, run:
 ## Additional Notes
 
 - `find reports/yaml_record_review -maxdepth 1 -type f -name '*-adipose_tissue.md' -print` found no pre-existing exact review report for this record before this file was written, and `find` included ignored files under the searched directory.
-- Exact ignored/hidden-inclusive content searches for `BTO:0001487`, `BTO:0000421`, `UBERON:0001013`, `habitatmech:PREGO.975eb060ef`, `adipose_tissue`, and `adipose tissue` found the cited PREGO, BTO, UBERON, path-lock, and generated-record rows, plus unrelated raw rows and prior reports noted above.
+- Exact ignored/hidden-inclusive content searches for `BTO:0001487`, `BTO:0000421`, `UBERON:0001013`, `habitatmech:PREGO.975eb060ef`, `adipose_tissue`, `adipose tissue`, `NCBITaxon:35493`, `NCBITaxon:541000`, and `NCBITaxon:55087` found the cited PREGO, BTO, UBERON, path-lock, and generated-record rows, plus unrelated raw rows and prior reports noted above.
