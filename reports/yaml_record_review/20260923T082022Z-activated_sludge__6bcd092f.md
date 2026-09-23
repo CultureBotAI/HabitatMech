@@ -33,6 +33,7 @@ generated `habitatmech:GOLD.25b680d9bc` identifier.
 | `just validate data/habitats/engineered/activated_sludge__6bcd092f.yaml` | Pass; `linkml-validate` reported `No issues found` |
 | `just validate-strict data/habitats/engineered/activated_sludge__6bcd092f.yaml` | Pass; 1 file scanned, 0 files with `ERROR`, 0 total `ERROR` rows |
 | `just validate-causal-all` | Pass; 32 causal-graph curation files with 32 graphs validated |
+| Reference validator | Not checked: this record has no DOI/PMID/URL `EvidenceItem` or target causal-edge evidence, and ignored/hidden-inclusive exact target searches found no target-specific `research/habitats/` report requiring `scripts/check_report_citations.py` |
 | `just term-requests-check` | Pass; term-request table is current with 109 terms |
 | `just validate-history` | Pass; 77 history records are valid against `src/habitatmech/schema/history.yaml` |
 | `just verify-corpus --max-diffs 1` | Pass; expected 3206 records, found 3206, with 0 missing, 0 extra, 0 differing |
@@ -55,9 +56,11 @@ consistent:
 - The generated `source_id: gold.ecosystem:8217`, `source_label`, and
   `source_path` match the raw GOLD row exactly.
 - `data/raw/ontology_terms.tsv:7191` gives `ENVO:00002046` the canonical label
-  `activated sludge`, and `data/raw/ontology_subclass_edges.tsv:5293` places it
-  under `ENVO:00002044` `sludge`, supporting the generic ontology parent
-  retained by the ambiguous-leaf rule.
+  `activated sludge`, `data/raw/ontology_terms.tsv:7189` gives
+  `ENVO:00002044` the canonical label `sludge`, and
+  `data/raw/ontology_subclass_edges.tsv:5293` places activated sludge under
+  sludge, supporting the generic ontology parent retained by the
+  ambiguous-leaf rule.
 
 `grounding_status: NARROW` is appropriate for a path-qualified GOLD leaf. GOLD
 has many `Activated sludge` leaves under engineered subpaths, while
