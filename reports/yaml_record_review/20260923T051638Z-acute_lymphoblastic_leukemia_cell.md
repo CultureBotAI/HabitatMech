@@ -33,6 +33,7 @@ This is the generated BTO-grounded PREGO record for `acute lymphoblastic leukemi
 | `just verify-corpus --max-diffs 1` | Pass; expected 3206 records, found 3206, with 0 missing, 0 extra, 0 differing |
 | `just worklist --limit 2000` | Pass; 0 ungrounded records are still undecided and 1810 decisions are on file |
 | `just report` | Pass; the report completed and kept the corpus at 3206 records with 0 risky groundings, 0 stale class sweeps, 0 swept path/leaf contradictions, and 0 records claiming a non-habitat is a habitat |
+| `git diff --check` | Pass; no whitespace errors |
 
 ## Identity and Grounding
 
