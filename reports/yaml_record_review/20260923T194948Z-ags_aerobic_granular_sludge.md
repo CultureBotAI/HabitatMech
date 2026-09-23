@@ -71,7 +71,7 @@ The record carries the generated source-owned content for this single GOLD path:
 
 The curation state is materially incomplete. The source path is a specific aerobic granular sludge leaf, the vendored ontology slice has no exact aerobic-granular-sludge term, exact ignored-file-inclusive searches found no item-level decision, term request, target-specific research report, or causal overlay, and the only maintained decision explicitly says source-concept habitat status was not assessed.
 
-Optional characteristic-taxon, environmental-parameter, DOI/PMID/URL evidence, dataset, discussion, and causal-graph slots are correctly absent; the GOLD inventory provides only source occurrence evidence for this path, not characteristic taxa, mechanism edges, or environmental parameter rows.
+Optional characteristic-taxon, environmental-parameter, DOI/PMID/URL evidence, dataset, discussion, and causal-graph slots are correctly absent; this zero-assertion GOLD row provides only source-path evidence, not source occurrence counts, characteristic taxa, mechanism edges, or environmental parameter rows.
 
 ## Findings
 
