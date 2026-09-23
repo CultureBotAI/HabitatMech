@@ -29,7 +29,7 @@ This is a generated record owned by upstream inputs, not by hand edits under
 |---|---|
 | `find reports/yaml_record_review -maxdepth 1 -type f -name '*-air_conditioning_unit.md' -print` | Passed; no prior exact report was present. |
 | `find curation/causal_graphs -maxdepth 1 -type f -name '*air_conditioning_unit*' -print` | Passed; no candidate causal overlay was present. |
-| `rg --no-ignore --hidden -n "ENVO:00002874\|air_conditioning_unit\|air conditioning unit" curation/causal_graphs` | Passed; no causal overlay references the identifier, slug, or label. Ignored and hidden files were included. |
+| `rg --no-ignore --hidden -n -e "ENVO:00002874" -e "air_conditioning_unit" -e "air conditioning unit" curation/causal_graphs` | Passed; no causal overlay references the identifier, slug, or label. Ignored and hidden files were included. |
 | `just validate data/habitats/engineered/air_conditioning_unit.yaml` | Passed; `linkml-validate` reported no issues. |
 | `just validate-strict data/habitats/engineered/air_conditioning_unit.yaml` | Passed; 1 file scanned, 0 files with errors, and 0 total error rows. |
 | `just validate-causal-all` | Passed; 32 causal-graph curation files with 32 graphs validated. |
