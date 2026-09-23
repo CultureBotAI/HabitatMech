@@ -73,7 +73,7 @@ Unsupported or over-scoped claims:
 
 The record carries the generated GOLD source-owned content for this source concept: the first GOLD ecosystem id, source label, source path, duplicate-node note, class-level sweep history, generated seeding history, and generated slug lock.
 
-The hierarchy is materially incomplete because the only generated parent is false. The current curation table can add broader terms or related xrefs through `object_id` and `relation`, but exact search found no existing maintained input that suppresses an unsound GOLD parent-path edge after `src/habitatmech/seed.py` links a child path to a parent path.
+The hierarchy is materially incomplete because the only generated parent is false. `curation/term_requests.tsv` can use `parent_mode=REPLACE` to replace inherited parents for a retained minted habitat after item-level review, but exact search found no existing item-level decision or authored definition for this record.
 
 Optional characteristic-taxon, environmental-parameter, discussion, dataset, and causal-graph slots are correctly absent; no maintained causal overlay, history entry, or item-level curated review row adds any of those fields.
 
@@ -83,19 +83,19 @@ Optional characteristic-taxon, environmental-parameter, discussion, dataset, and
 
   **Evidence**: GOLD places `Engineered > WWTP > Aerobic digester` below `Engineered > WWTP`, whose item decision grounds it to `ENVO:00002043`. The seeder copies that GOLD parent-path relationship into `parent_habitats`, but an aerobic digester is a unit in a wastewater treatment plant rather than a subclass of wastewater treatment plant. The curation docs require `parent_habitats` to be a real `is-a` broader-habitat edge.
 
-  **Maintained owner**: `src/habitatmech/seed.py` currently generates this edge with no curation-owned suppression table for false GOLD parent-path edges.
+  **Maintained owner**: `src/habitatmech/seed.py` currently generates this edge because this record has no `curation/term_requests.tsv` definition with `parent_mode=REPLACE` or other maintained row that replaces the inherited parent.
 
 ## Recommended Edits
 
-- Add a maintained way to suppress or retype unsound GOLD parent-path edges, then remove the generated edge from `habitatmech:GOLD.03fc563fae` to the resolved parent-path record `ENVO:00002043`.
-- Item-review `habitatmech:GOLD.03fc563fae` after the false parent is removable. If no vendored exact term exists and the concept is retained as a real engineered habitat, keep it minted with an item-level `CONFIRM_UNGROUNDED` row rather than promoting the class-level sweep to reviewed status.
+- Item-review `habitatmech:GOLD.03fc563fae`. If no vendored exact term exists and the concept is retained as a real engineered habitat, keep it minted with an item-level `CONFIRM_UNGROUNDED` row rather than promoting the class-level sweep to reviewed status.
+- Add a `curation/term_requests.tsv` definition with a true authored genus and `parent_mode=REPLACE`, then confirm the generated edge from `habitatmech:GOLD.03fc563fae` to the resolved parent-path record `ENVO:00002043` is removed.
 - Regenerate only the affected source concept and inspect [data/habitats/engineered/aerobic_digester.yaml](/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/data/habitats/engineered/aerobic_digester.yaml) to confirm `parent_habitats: ENVO:00002043` is gone and no false replacement parent was introduced.
 
 ## Follow-up Checks
 
 The narrow proof path for a future fix is:
 
-- add or update focused tests that prove an explicitly suppressed GOLD parent-path edge is not emitted by `src/habitatmech/seed.py`
+- add or update focused tests that prove the `parent_mode=REPLACE` definition removes the inherited WWTP parent from the aerobic-digester record
 - `just seed`
 - `just seed-canary habitatmech:GOLD.03fc563fae`
 - inspect [data/habitats/engineered/aerobic_digester.yaml](/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/data/habitats/engineered/aerobic_digester.yaml) and confirm `ENVO:00002043` is no longer in `parent_habitats`
@@ -107,7 +107,7 @@ The narrow proof path for a future fix is:
 - `just verify-corpus --max-diffs 1`
 - `just worklist --limit 2000`
 - `just report`
-- ignored-file-inclusive exact searches for `habitatmech:GOLD.03fc563fae`, `Engineered > WWTP > Aerobic digester`, and any curated suppression row
+- ignored-file-inclusive exact searches for `habitatmech:GOLD.03fc563fae`, `Engineered > WWTP > Aerobic digester`, and the authored definition row
 - `git diff --check`
 
 ## Additional Notes
