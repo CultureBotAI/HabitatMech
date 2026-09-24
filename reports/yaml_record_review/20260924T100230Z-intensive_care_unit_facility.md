@@ -33,7 +33,8 @@ The generated record resolves GOLD's `ICU` leaf to ENVO's `intensive care unit f
 | `just verify-corpus --max-diffs 1` | Pass: expected 3,206 records, found 3,206 on disk, and the corpus reproduces exactly from `data/raw/`. |
 | `just worklist --limit 2000` | Pass: reported 0 undecided ungrounded records and 1,810 decisions on file. |
 | `just report` | Pass: completed the corpus report for 3,206 records. |
-| `git diff --check` | Pass. |
+| `git diff --check` | Pass before this report was written. |
+| `git diff --cached --check` | Pass after staging the review report, covering the added Markdown. |
 | Reference validator | Not applicable: this record has no record-level `evidence`, `characteristic_taxa`, `causal_graphs`, `discussions`, or `datasets` with citation-bearing `EvidenceItem` references. |
 
 ## Identity and Grounding
