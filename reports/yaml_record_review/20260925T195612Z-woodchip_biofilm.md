@@ -35,21 +35,25 @@ Reviewed the complete generated record at `data/habitats/engineered/woodchip_bio
 | `just verify-corpus --max-diffs 1` | Passed; 3,206 expected records all exist on disk, with 0 missing, 0 extra, and 0 differing records. |
 | `just worklist --limit 0 --status all --out /tmp/habitatmech-woodchip-biofilm-worklist.tsv` | Passed; the worklist wrote 953 ungrounded rows to the requested `/tmp` TSV. |
 | `just report` | Passed; the corpus report completed for 3,206 records. |
+| `git diff --check` | Passed after this report was written. |
 
 ## Identity and Grounding
 
-The generated identifier, label, category, source attestation, and source-derived parent agree with the committed GOLD inventory. `data/raw/gold_ecosystem_paths.tsv` has the canonical path `Engineered > Bioreactor > Denitrification > Woodchip Bioreactor (WBR) > Woodchip biofilm` at depth 5, `gold_node_count` 1, no direct organism, study, biosample, or total assertions, and `gold_node_ids` `gold.ecosystem:5853`. `data/habitats/PATHS.tsv` maps `habitatmech:GOLD.f9d0b8af79` to the stable `woodchip_biofilm` slug.
+The generated identifier, label, category, source attestation, and source-path parent agree with the committed GOLD inventory. `data/raw/gold_ecosystem_paths.tsv` has the canonical path `Engineered > Bioreactor > Denitrification > Woodchip Bioreactor (WBR) > Woodchip biofilm` at depth 5, `gold_node_count` 1, no direct organism, study, biosample, or total assertions, and `gold_node_ids` `gold.ecosystem:5853`. `data/habitats/PATHS.tsv` maps `habitatmech:GOLD.f9d0b8af79` to the stable `woodchip_biofilm` slug.
 
 The current `UNGROUNDED` status is under-reviewed. The only maintained curation row for `habitatmech:GOLD.f9d0b8af79` is a class-level `CONFIRM_UNGROUNDED` decision whose note explicitly says the habitat identity was not assessed. Exact ignored-inclusive searches found no exact target-specific item decision, term request, history entry, research report, target-specific causal overlay, or prior exact review report. A bounded `woodchip`, `wood chip`, `wood-chip`, and exact `WBR` search in `data/raw/ontology_terms.tsv` found no woodchip-specific or WBR-specific ontology term.
 
-The vendored slice already has strict broader terms for two parts of this source path. `ENVO:00002034` `biofilm` exactly matches the GOLD MIxS `medium` slot for this path and is the most direct broader candidate for the source concept. `ENVO:00002123` `bioreactor` exactly matches the GOLD MIxS `local` slot, corroborating the engineered reactor context inherited from the parent `Woodchip Bioreactor (WBR)` source node.
+The vendored slice already has strict broader terms for two parts of this source path. `ENVO:00002034` `biofilm` exactly matches the GOLD MIxS `medium` slot for this path and is the correct genus for a future exact woodchip-biofilm term. `ENVO:00002123` `bioreactor` exactly matches the GOLD MIxS `local` slot, corroborating the engineered reactor context inherited from the parent `Woodchip Bioreactor (WBR)` source node.
+
+That inherited `habitatmech:GOLD.b076c78736` parent is not a true `is-a` parent for this child. A woodchip biofilm is an attached microbial aggregate inside a woodchip bioreactor, not a kind of the containing bioreactor system. A future exact term request therefore needs `parent_mode=REPLACE`, not `ADD`, so regeneration drops the false source-path parent and keeps `ENVO:00002034` `biofilm` as the genus.
 
 ## Evidence
 
 - Supported: the displayed source path and `gold.ecosystem:5853` source ID match `data/raw/gold_ecosystem_paths.tsv`.
 - Supported side-table context: the exact path appears in `data/raw/gold_studies.tsv` for study `Gs0154092` and in `data/raw/gold_path_biosamples.tsv` with 26 biosamples for `gold.ecosystem:5853`.
 - Supported side-table context: `data/raw/gold_path_triads.tsv` has a three-slot MIxS triad for this exact path: broad `ENVO:01000313` `anthropogenic environment`, local `ENVO:00002123` `bioreactor`, and medium `ENVO:00002034` `biofilm`, each with 1 sample, 1 study, 1 distinct term, and 1.00 top share.
-- Under-reviewed: the class-level `CONFIRM_UNGROUNDED` decision only confirms that no ontology term matched the isolated `Woodchip biofilm` label by the sweep's lexical routes. It does not decide whether the exact source concept should be `GROUND_AS_PARENT` to the existing generic `ENVO:00002034` `biofilm` term or should receive a new woodchip-biofilm term request under that parent.
+- Under-reviewed: the class-level `CONFIRM_UNGROUNDED` decision only confirms that no ontology term matched the isolated `Woodchip biofilm` label by the sweep's lexical routes. It does not decide whether the exact source concept should receive a new woodchip-biofilm term request under the existing generic `ENVO:00002034` `biofilm` term.
+- Unsupported: the generated `parent_habitats` edge to `habitatmech:GOLD.b076c78736` preserves the GOLD containment path as an `is-a` assertion. The parent is context for the attached biofilm, not a strict broader class.
 - No record-level citations, characteristic taxa, environmental parameters, authored definition, or causal edges are present, so there are no attached snippets or literature references to validate.
 
 ## Completeness
@@ -58,20 +62,20 @@ The committed source inventories are sufficient to explain the sparse generated 
 
 The empty optional slots are appropriate for a seeded GOLD record with no curated overlay. No maintained input currently provides a definition, characteristic taxa, environmental parameters, record-level cited evidence, causal edges, discussions, or datasets for the `Woodchip biofilm` source concept.
 
-The parent `Woodchip Bioreactor (WBR)` source concept was reviewed separately and found under-reviewed under a class-level `CONFIRM_UNGROUNDED` sweep. It must stay separate from this child review: the parent denotes a bioreactor system, while this target denotes a biofilm within that system.
+The parent `Woodchip Bioreactor (WBR)` source concept was reviewed separately and found under-reviewed under a class-level `CONFIRM_UNGROUNDED` sweep. It must stay separate from this child review: the parent denotes a bioreactor system, while this target denotes a biofilm within that system. Because the edge is contextual rather than taxonomic, a bare item-level grounding decision for this child would not be enough to repair hierarchy; the exact woodchip-biofilm term request also needs to replace inherited parents.
 
 ## Findings
 
 | Severity | Finding | Evidence | Maintained owner |
 |---|---|---|---|
-| Major | `woodchip_biofilm.yaml` is still `UNGROUNDED` under a class-level sweep even though GOLD's own MIxS triad and the vendored ontology support a strict broader `ENVO:00002034` `biofilm` parent. | The exact source path is `Engineered > Bioreactor > Denitrification > Woodchip Bioreactor (WBR) > Woodchip biofilm`; `data/raw/gold_path_triads.tsv` says its `env_medium` top term is `ENVO:00002034` `biofilm` with 1.00 share; and `data/raw/ontology_terms.tsv` contains generic `biofilm` but no exact woodchip/WBR term. The only `curation/decisions.tsv` row for `habitatmech:GOLD.f9d0b8af79` has `review_depth` `CLASS` and says the concept's habitat identity was not assessed. | `curation/decisions.tsv`; if retained as a novel habitat, also `curation/term_requests.tsv` |
+| Major | `woodchip_biofilm.yaml` currently publishes a false `is-a` edge to `habitatmech:GOLD.b076c78736` `Woodchip Bioreactor (WBR)`. | The exact source path places the biofilm inside `Engineered > Bioreactor > Denitrification > Woodchip Bioreactor (WBR)`, and the MIxS triad assigns `ENVO:00002123` `bioreactor` to `local` but assigns `ENVO:00002034` `biofilm` to the sampled `medium`. The child is an attached biomass within the reactor, not a kind of the reactor system. | `curation/term_requests.tsv` |
+| Major | `woodchip_biofilm.yaml` is still `UNGROUNDED` under a class-level sweep even though GOLD's own MIxS triad and the vendored ontology support `ENVO:00002034` `biofilm` as the genus for an exact term request. | The exact source path is `Engineered > Bioreactor > Denitrification > Woodchip Bioreactor (WBR) > Woodchip biofilm`; `data/raw/gold_path_triads.tsv` says its `env_medium` top term is `ENVO:00002034` `biofilm` with 1.00 share; and `data/raw/ontology_terms.tsv` contains generic `biofilm` but no exact woodchip/WBR term. The only `curation/decisions.tsv` row for `habitatmech:GOLD.f9d0b8af79` has `review_depth` `CLASS` and says the concept's habitat identity was not assessed. | `curation/decisions.tsv`; `curation/term_requests.tsv` |
 
 ## Recommended Edits
 
 1. Item-review `habitatmech:GOLD.f9d0b8af79` in `curation/decisions.tsv` against the exact `Engineered > Bioreactor > Denitrification > Woodchip Bioreactor (WBR) > Woodchip biofilm` source path, `ENVO:00002034` `biofilm`, and the exact GOLD biosample, study, and MIxS triad side-table rows.
-2. If no exact woodchip-biofilm ontology term is found, replace the class-level `CONFIRM_UNGROUNDED` row with an item-level `GROUND_AS_PARENT` row to `ENVO:00002034` `biofilm`.
-3. If a curator chooses to author an exact woodchip-biofilm term, add the definition in `curation/term_requests.tsv` under `ENVO:00002034` with `parent_mode=ADD`.
-4. Revisit the inherited `habitatmech:GOLD.b076c78736` `Woodchip Bioreactor (WBR)` parent after that parent has an item-level decision, so this child does not depend on an under-reviewed source-path node as its only parent.
+2. Replace the class-level decision with an item-level `CONFIRM_UNGROUNDED` row that records why the existing generic `ENVO:00002034` `biofilm` term is broader but no exact woodchip-biofilm term exists.
+3. Add a woodchip-biofilm definition in `curation/term_requests.tsv` under `ENVO:00002034` with `parent_mode=REPLACE`, and document that replacement is needed because the inherited `Woodchip Bioreactor (WBR)` parent is a containing engineered system rather than a broader biofilm class.
 
 ## Follow-up Checks
 
