@@ -97,14 +97,21 @@ identity plus `ENVO:00002124` as a parent would preserve the full GOLD meaning.
 
 ## Completeness
 
-No maintained definition, causal overlay, target-specific research report, or
-history entry exists for `ENVO:00002124`, `anaerobic_bioreactor`, the five
-contributing GOLD source concepts, or `habitatmech:PREGO.3f92a7cfe1`. Exact
-gitignore-independent searches covered `curation`, `history`, `research`,
-`reports/yaml_record_review`, `data/raw`, `data/habitats/PATHS.tsv`, and the
-relevant generated engineered records while excluding broad generated `build`,
-`data/text_map`, and `pages` outputs. Ignored files were included in those
-absence checks.
+No maintained target-specific definition, causal overlay, research report, or
+history entry repairs `anaerobic_bioreactor`, the five contributing GOLD source
+concepts, or `habitatmech:PREGO.3f92a7cfe1`. Exact gitignore-independent
+searches covered `curation`, `history`, `research`, `reports/yaml_record_review`,
+`data/raw`, `data/habitats/PATHS.tsv`, and the relevant generated engineered
+records while excluding broad generated `build`, `data/text_map`, and `pages`
+outputs. Ignored files were included in those absence checks.
+
+An exact hidden/ignored-inclusive search for `ENVO:00002124` under maintained
+areas does find non-target artifacts for `habitatmech:GOLD.bb0eb00ccb`
+`anaerobic wastewater treatment reactor`: a `curation/term_requests.tsv`
+definition, a `research/habitats/engineered` report, and a history entry. Those
+maintained rows use `ENVO:00002124` as a broader parent for a different
+GOLD-specific concept and do not alter the source concepts that generated
+`data/habitats/engineered/anaerobic_bioreactor.yaml`.
 
 `find reports/yaml_record_review -maxdepth 1 -type f -name
 '*-anaerobic_bioreactor.md' -print` included ignored files and found no
