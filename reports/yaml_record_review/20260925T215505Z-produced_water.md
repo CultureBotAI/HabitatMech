@@ -84,7 +84,7 @@ fluid hydrocarbons. `data/raw/gold_path_triads.tsv:909` uses that term as the
 context around the sampled medium. `data/raw/ontology_terms.tsv:7277` lists the
 potential exact medium term `ENVO:00002194` `oil field production water`, and
 `data/raw/ontology_subclass_edges.tsv:5389` places that candidate under
-`ENVO:00002006` `water`, not under the oil-reservoir landform branch.
+`ENVO:00002006` `liquid water`, not under the oil-reservoir landform branch.
 
 ## Evidence
 
