@@ -209,13 +209,18 @@ concept to `NOT_APPLICABLE` instead of requesting a novel ontology term.
 After the item-level decision:
 
 - Run `just seed`.
-- Run `just seed-canary habitatmech:GOLD.56790b4070`.
-- If a sibling `SAME_AS` decision is added, run a canary for the surviving
-  Pooled tissues identifier and confirm both GOLD source paths appear as
-  separate `source_attestations`.
+- For a non-merge decision, regenerate the target with
+  `just seed-apply --force --only habitatmech:GOLD.56790b4070`.
+- If a sibling `SAME_AS` decision is added, run
+  `just seed-apply --force --prune`, `just redirects`, and `just render`; then
+  confirm the surviving Pooled tissues record has both GOLD source paths as
+  separate `source_attestations` and the absorbed record URL appears in
+  `data/habitats/RETIRED.tsv`.
 - Inspect `data/habitats/host_associated/pooled_tissues.yaml` or the merged
   survivor to confirm it has the chosen item-level curation history and no
   duplicate same-label term request.
+- Run `just verify-corpus --max-diffs 1`; after a sibling `SAME_AS` merge, also
+  run `just redirects-check` and `just render-check`.
 - If a term request is added, run `just term-requests-check` and confirm the
   generated request table includes only one Pooled tissues request.
 - Run `just validate data/habitats/host_associated/pooled_tissues.yaml`, or the
