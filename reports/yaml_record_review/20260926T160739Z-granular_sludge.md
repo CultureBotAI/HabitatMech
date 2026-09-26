@@ -102,8 +102,8 @@ Exact ignored/hidden-inclusive searches covered `curation`, `data/raw`,
 the research manifest. They found the target-generated YAML, the path-lock row,
 the class-level decision row, the exact GOLD inventory row, and prior mentions
 in neighboring reviews. They found no target-specific term request, curated
-causal overlay, history record, research report, or prior top-level
-`*-granular_sludge.md` review report.
+causal overlay, history record, research report, or prior review of this exact
+UASB `data/habitats/engineered/granular_sludge.yaml` record.
 
 The target path has no generated child path in the committed GOLD side tables:
 an ignored/hidden-inclusive exact search for
