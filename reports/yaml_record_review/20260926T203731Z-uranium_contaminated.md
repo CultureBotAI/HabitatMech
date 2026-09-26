@@ -82,6 +82,13 @@ target `NOT_APPLICABLE`: a bare pesticide is a chemical, but `Uranium
 contaminated` composes with the surrounding soil-contamination path to denote a
 contaminated-soil subclass.
 
+For a future term request, the vendored slice also provides a more specific
+direct parent than `ENVO:00002116`: `ENVO:00003081` `metal contaminated soil`,
+defined as "Soil which has elevated concentrations of metals." and asserted as
+a subclass of `ENVO:00002116`. A uranium-contaminated-soil request should use
+that metal-contaminated-soil genus while the regenerated record keeps the
+broader contaminated-soil parent by inheritance from the source hierarchy.
+
 The lexical candidate in the worklist is a false hit. `ENVO:02000093`
 `uranium mine` is asserted under `ENVO:00000076` `mine`, whose vendored
 definition is "An excavation in the Earth for the purpose of extracting earth
@@ -96,6 +103,7 @@ feature is not the identity of the contaminated soil material.
 | The record denotes the GOLD path `Environmental > Terrestrial > Soil > Contaminated > Uranium contaminated`. | `data/raw/gold_ecosystem_paths.tsv:724` lists that canonical path, leaf label, one node and node id `gold.ecosystem:6003`; the generated YAML repeats the node and exact source path. | Supported exactly. |
 | The source attestation has three GOLD organism assertions. | `data/raw/gold_ecosystem_paths.tsv:724` reports `organism_count` 3 and `total_assertions` 3; the generated YAML records `assertion_count: 3` with `assertion_unit: ORGANISM`. | Supported exactly. |
 | `ENVO:00002116` `contaminated soil` is a valid broader parent. | The full GOLD path narrows the reviewed `Environmental > Terrestrial > Soil > Contaminated` parent and two independent GOLD triad studies assign `ENVO:00002116` in `env_medium` for samples on this exact path. | Supported as a broader term. |
+| `ENVO:00003081` `metal contaminated soil` is the preferred direct parent for a future uranium contaminated soil term request. | The vendored ontology defines it as soil with elevated concentrations of metals and asserts it as a subclass of `ENVO:00002116` `contaminated soil`. | Supported as a tighter parent than `ENVO:00002116`. |
 | `ENVO:02000093` `uranium mine` is not a valid identity. | The vendored ontology files `uranium mine` under `ENVO:00000076` `mine`; mines are extraction features, while the GOLD path denotes uranium-contaminated soil. | Supported as a rejection. |
 
 ## Completeness
@@ -133,14 +141,18 @@ No blockers or minor findings.
    `curation/decisions.tsv`. Replace the class-level row with an item-level
    `CONFIRM_UNGROUNDED` decision that explicitly rejects `ENVO:02000093`
    `uranium mine` as an extraction feature and confirms the source as a
-   uranium-contaminated-soil habitat narrower than `ENVO:00002116`
-   `contaminated soil`.
+   uranium-contaminated-soil habitat narrower than `ENVO:00003081`
+   `metal contaminated soil`, with `ENVO:00002116` `contaminated soil`
+   retained by inheritance.
 2. Add a `curation/term_requests.tsv` row for this identifier, with
-   `ENVO:00002116` `contaminated soil` as the parent, `Uranium contaminated`
-   as an exact synonym, and a definition equivalent to "A contaminated soil
-   which has elevated levels of uranium." The exact requested label should be
-   normalized to the ENVO style chosen by the curator, such as
-   `uranium contaminated soil` or `uranium-contaminated soil`.
+   `ENVO:00003081` `metal contaminated soil` as the parent and a definition
+   equivalent to "A contaminated soil which has elevated levels of uranium."
+   The exact requested label should be normalized to the ENVO style chosen by
+   the curator, such as `uranium contaminated soil` or
+   `uranium-contaminated soil`. Do not add the bare GOLD leaf `Uranium
+   contaminated` as an exact synonym; it is only soil-specific in the full
+   source path. If the term-request row carries an exact synonym, use the
+   fully qualified spelling not chosen as the requested label.
 3. Add an append-only history record for the curation session under `history/`.
 4. Regenerate this record from maintained inputs:
 
@@ -156,11 +168,11 @@ After the future curation edit:
 
 1. Re-read `data/habitats/terrestrial/uranium_contaminated.yaml` and confirm
    it has `grounding_status: UNGROUNDED`, `mapping_status: REVIEWED`, the
-   curated definition and synonym from the term-request row, and a generated
-   item-level `CONFIRM_UNGROUNDED` curation event for
+   curated definition and any fully qualified synonym from the term-request
+   row, and a generated item-level `CONFIRM_UNGROUNDED` curation event for
    `habitatmech:GOLD.d722422e31`.
-2. Confirm `parent_habitats` still contains `ENVO:00002116` and no
-   `ENVO:02000093`.
+2. Confirm `parent_habitats` still contains `ENVO:00002116`, adds
+   `ENVO:00003081`, and has no `ENVO:02000093`.
 3. Confirm `source_attestations[0]` still points at
    `Environmental > Terrestrial > Soil > Contaminated > Uranium contaminated`
    with three GOLD organism assertions.
