@@ -108,7 +108,7 @@ axis without an explicit curator statement.
 
 | ID | Severity | Finding | Maintained owner |
 |---|---|---|---|
-| HM-ENDOSYMBIONTS-001 | Major | `Host-associated > Endosymbionts` is still `SEEDED` and `UNGROUNDED` from a `CLASS`-depth `CONFIRM_UNGROUNDED` decision even though its Bacteria and Fungi children are item-reviewed and retain it as their source-derived parent. No item-level decision records whether the parent denotes an endosymbiont-associated host-cell habitat that needs a HabitatMech definition and ENVO term request, a non-habitat organism-role bin, or an ambiguous GOLD scaffold to keep minted with only a broad parent. | `curation/decisions.tsv`; if the parent is a novel habitat after item review, `curation/term_requests.tsv` |
+| HM-ENDOSYMBIONTS-001 | Major | `Host-associated > Endosymbionts` is still `SEEDED` and `UNGROUNDED` from a `CLASS`-depth `CONFIRM_UNGROUNDED` decision even though its Bacteria and Fungi children are item-reviewed and retain it as their source-derived parent. No item-level decision records whether the parent denotes an endosymbiont-associated host-cell habitat that needs a HabitatMech definition and ENVO term request, or an ambiguous GOLD role scaffold to keep minted with only a broad parent and an explicit `CONFIRM_UNGROUNDED` or `REVIEW` note. | `curation/decisions.tsv`; if the parent is a novel habitat after item review, `curation/term_requests.tsv` |
 
 ## Recommended Edits
 
@@ -118,8 +118,9 @@ axis without an explicit curator statement.
 2. Resolve the branch reading against the existing
    `Host-associated > Endosymbionts > Bacteria` and `> Fungi` item reviews:
    either define the parent as an endosymbiotic-organism-associated environment
-   broad enough for both children, or record why the parent should remain
-   minted without a definition or be marked `NOT_APPLICABLE`.
+   broad enough for both children, or keep the parent minted as `UNGROUNDED`
+   with an item-level `CONFIRM_UNGROUNDED` or `REVIEW` note that explains why
+   the branch remains an ambiguous GOLD role scaffold.
 3. If the host-cell reading holds, replace the class-level sweep row with an
    item-level decision and add a parent term request under `ENVO:01001000`
    `environmental system determined by an organism`.
