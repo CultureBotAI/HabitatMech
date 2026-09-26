@@ -38,6 +38,7 @@ GOLD `AGS (Aerobic granular sludge)` leaf reviewed in
 | `just validate-strict data/habitats/engineered/granular_sludge.yaml` | Pass: scanned 1 file with 0 files containing `ERROR` and 0 total `ERROR` rows. |
 | `just validate-causal curation/causal_graphs/granular_sludge.yaml` | Not applicable: exact ignored/hidden-inclusive searches found no target-specific causal-graph overlay. |
 | `just validate-causal-all` | Pass: validated 32 causal-graph curation files with 32 graphs. |
+| Reference validator | Not applicable: this generated GOLD-only record has no citation-bearing `evidence`, `characteristic_taxa`, `causal_graphs`, `discussions`, or `datasets` entries. |
 | `just term-requests-check` | Pass: the generated term-request table is current with 109 terms. |
 | `just validate-history` | Pass: 77 history records are valid against `src/habitatmech/schema/history.yaml`. |
 | `just verify-corpus --max-diffs 1` | Pass: expected and found 3,206 records, with 0 missing, 0 extra, and 0 differing files. |
