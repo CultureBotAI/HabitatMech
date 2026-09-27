@@ -76,10 +76,10 @@ An ignored-inclusive search over `data/raw`, `curation`, `history`, `research`,
 GOLD node ID, exact GOLD path, slug, and label found only the generated record,
 slug lockfile row, raw GOLD rows for the desert-springs parent and `Benthic`
 child, the class-level decision, and generated uses of the `Benthic` child
-after its separate item-level decision. Separate `find` searches of
-`reports/yaml_record_review`, `curation/causal_graphs`, and `research/habitats`
-found no exact desert-springs review report, causal overlay, or research
-report.
+after its separate item-level decision. Before this report was written,
+separate `find` searches of `reports/yaml_record_review`,
+`curation/causal_graphs`, and `research/habitats` found no prior exact
+desert-springs review report, causal overlay, or research report.
 
 The empty optional slots are otherwise unsurprising for a zero-assertion
 GOLD-only source concept. GOLD does not supply claim-level evidence snippets,
