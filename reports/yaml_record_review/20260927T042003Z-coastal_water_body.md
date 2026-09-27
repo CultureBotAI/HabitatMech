@@ -117,8 +117,9 @@ No required curation edits.
 
 If a curator wants this correct PREGO self-grounding to become `REVIEWED`, add
 an item-level `REVIEW` row for `habitatmech:PREGO.761608a2ee` to
-`curation/decisions.tsv`, then regenerate `ENVO:02000049`. That would be a
-status-promotion edit, not a correction to the current YAML.
+`curation/decisions.tsv` and an append-only session record under `history/`,
+then regenerate `ENVO:02000049`. That would be a status-promotion edit, not a
+correction to the current YAML.
 
 ## Follow-up Checks
 
@@ -130,13 +131,16 @@ For the optional review-promotion edit above, run:
 - `just seed-canary ENVO:02000049 --force`
 - `just validate data/habitats/aquatic/coastal_water_body.yaml`
 - `just validate-strict data/habitats/aquatic/coastal_water_body.yaml --quiet`
+- `just validate-history`
 - `just verify-corpus --max-diffs 1`
 - `just report`
 
 After regeneration, re-read `data/habitats/aquatic/coastal_water_body.yaml` and
 confirm that it remains `identifier: ENVO:02000049`, keeps
 `parent_habitats: [ENVO:00001999]`, keeps the 432-taxon PREGO source
-attestation, and changes only from `mapping_status: SEEDED` to `REVIEWED`.
+attestation, changes from `mapping_status: SEEDED` to `REVIEWED`, and adds one
+generated `REVIEW` event for `habitatmech:PREGO.761608a2ee` under
+`curation_history`.
 
 ## Additional Notes
 
