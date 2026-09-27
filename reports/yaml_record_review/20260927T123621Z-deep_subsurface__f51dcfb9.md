@@ -32,10 +32,12 @@ Ignored-inclusive exact searches over `data/raw`, `data/habitats`,
 and the exact `Environmental > Aquatic > Marine > Deep subsurface` source path
 found the expected GOLD raw row, `curation/decisions.tsv` class-level
 decision, `PATHS.tsv` pin, generated target, and generated child references
-from deeper GOLD paths. The same searches found no term-request row,
-causal-graph overlay, history entry, research report, exact-path GOLD
-biosample row, exact-path GOLD MIxS triad row, exact-path GOLD study row, or
-prior YAML review report for this source concept. Those
+from deeper GOLD paths. The only `reports/yaml_record_review` hit was the
+prior `20260927T120514Z-deep_subsurface__45e0aabf.md` report's sibling
+disambiguation note, not a review of this target record. The same searches
+found no term-request row, causal-graph overlay, history entry, research
+report, exact-path GOLD biosample row, exact-path GOLD MIxS triad row, or
+exact-path GOLD study row. Those
 `rg --no-ignore --hidden` checks included ignored and hidden files.
 
 Two other generated GOLD records have the same leaf label but are distinct
@@ -137,7 +139,7 @@ item-level review, the record should stay `SEEDED`.
 
 | ID | Severity | Finding | Evidence | Maintained owner |
 |---|---|---|---|---|
-| HM-DEEP-SUBSURFACE-F51DCFB9-001 | Major | `parent_habitats` asserts a false or at least unsupported is-a edge from GOLD `Environmental > Aquatic > Marine > Deep subsurface` to `ENVO:00001999` `marine water body`. | The raw GOLD row places this source under `Environmental > Aquatic > Marine`, and `data/habitats/PATHS.tsv` maps that parent source record to `ENVO:00001999`. The vendored ENVO row defines `marine water body` as a kind of lentic water body, while the target record denotes the GOLD marine deep-subsurface bin that has deeper Sediment, Hydrocarbon, and Rock source paths. | Perform item-level curation in `curation/decisions.tsv`, add a definition and true genus for `habitatmech:GOLD.3841c9c3af` in `curation/term_requests.tsv`, and use `parent_mode=REPLACE` so regeneration drops the inherited `ENVO:00001999` parent. |
+| HM-DEEP-SUBSURFACE-F51DCFB9-001 | Major | `parent_habitats` asserts a false or at least unsupported is-a edge from GOLD `Environmental > Aquatic > Marine > Deep subsurface` to `ENVO:00001999` `marine water body`. | The raw GOLD row places this source under `Environmental > Aquatic > Marine`, and that generated parent record is grounded to `ENVO:00001999`. The vendored ENVO row defines `marine water body` as a kind of lentic water body, while the target record denotes the GOLD marine deep-subsurface bin that has deeper Sediment, Hydrocarbon, and Rock source paths. | Perform item-level curation in `curation/decisions.tsv`, add a definition and true genus for `habitatmech:GOLD.3841c9c3af` in `curation/term_requests.tsv`, and use `parent_mode=REPLACE` so regeneration drops the inherited `ENVO:00001999` parent. |
 
 ## Recommended Edits
 
