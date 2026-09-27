@@ -48,7 +48,7 @@ myeloma`. `data/habitats/PATHS.tsv` maps `habitatmech:GOLD.456120aa2d` to the
 | `grounding_status: UNGROUNDED` reflects the class-level decision, not an item-level habitat judgment. | `curation/decisions.tsv` has a `CONFIRM_UNGROUNDED` row for `habitatmech:GOLD.456120aa2d`; its `review_depth` is `CLASS`, and the note explicitly says whether the concept is a habitat at all was not assessed. | Structurally supported, but wrong for a malignant-tumor disease label that has adjacent item-level `NOT_APPLICABLE` decisions. |
 | `mapping_status: SEEDED` follows from the maintained curation depth. | HabitatMech class-level decisions do not promote records to `REVIEWED`; no item-level row exists for this exact GOLD source concept. | Supported. |
 | The sole `parent_habitats` edge comes from GOLD's disease hierarchy. | `habitatmech:GOLD.e49a44bb6c` is the generated `Myeloma` source concept, itself seeded from `Host-associated > Mammals: Human > Malignant tumor > Myeloma` and still class-swept in `curation/decisions.tsv`. | Supported as GOLD hierarchy, but it is a cancer-type hierarchy rather than a strict hierarchy of microbial habitats. |
-| The exact-path MIxS triads point at lab cell culture. | `data/raw/gold_path_triads.tsv` records one study with all exact-path samples using broad `ENVO:01000313` `anthropogenic environment`, local `ENVO:01001406` `laboratory facility`, and medium `ENVO:02000008` `cell culture`. | Supported as submitter-supplied context; the triads make `cell culture` the sampled medium, not `Multiple myeloma` a habitat identity. |
+| The exact-path MIxS triads point at lab cell culture. | `data/raw/gold_path_triads.tsv` records one exact-path sample in one study using broad `ENVO:01000313` `anthropogenic environment`, local `ENVO:01001406` `laboratory facility`, and medium `ENVO:02000008` `cell culture`. | Supported as submitter-supplied context; the triads make `cell culture` the sampled medium, not `Multiple myeloma` a habitat identity. |
 
 ## Evidence
 
@@ -71,10 +71,10 @@ record carries only source-inventory and curation-history facts.
 This record is reproducible but should not remain a minted ungrounded habitat.
 The exact GOLD path places `Multiple myeloma` under `Malignant tumor > Myeloma`,
 the worklist's closest terms are BTO cell and cell-line classes, and the GOLD
-MIxS triad summary says the submitted local context was a laboratory facility
-and the sampled medium was cell culture. Together, those inputs identify a
-cancer or cell-line type used to organize cultured samples, not an associated
-environment that needs a HabitatMech term request.
+MIxS triad summary says one annotated exact-path sample used a laboratory
+facility as local context and cell culture as medium. Together, those inputs
+identify a cancer or cell-line type used to organize cultured samples, not an
+associated environment that needs a HabitatMech term request.
 
 Item-level curation has already made that distinction for adjacent GOLD cancer
 types: `Malignant tumor`, `Basal cell carcinoma`, `Colon cancer`, and
@@ -95,7 +95,7 @@ overlay, or research report.
 
 | Severity | Finding | Evidence | Maintained owner |
 |---|---|---|---|
-| Major | `Multiple myeloma` should be item-reviewed as `NOT_APPLICABLE`, not retained as an `UNGROUNDED` habitat. | GOLD itself places the exact node under `Malignant tumor > Myeloma`; the exact-path MIxS rows describe all samples as `laboratory facility` plus `cell culture`; the worklist's BTO hits are multiple-myeloma cell or cell-line classes; and adjacent malignant-tumor disease nodes are already pulled out of the class-level sweep as `NOT_APPLICABLE` item decisions. | `curation/decisions.tsv` |
+| Major | `Multiple myeloma` should be item-reviewed as `NOT_APPLICABLE`, not retained as an `UNGROUNDED` habitat. | GOLD itself places the exact node under `Malignant tumor > Myeloma`; the exact-path MIxS rows describe one sample/study as `laboratory facility` plus `cell culture`; the worklist's BTO hits are multiple-myeloma cell or cell-line classes; and adjacent malignant-tumor disease nodes are already pulled out of the class-level sweep as `NOT_APPLICABLE` item decisions. | `curation/decisions.tsv` |
 
 No blockers or minor findings were found.
 
@@ -131,8 +131,8 @@ No blockers or minor findings were found.
 - The absence checks in this review used `rg --no-ignore --hidden` and `find`,
   so ignored and hidden files were included.
 - `ENVO:02000008` `cell culture` is a medium-slot MIxS term for the exact GOLD
-  path's samples. It is not evidence that GOLD's `Multiple myeloma` label names
-  an exact cell-culture habitat.
+  path's one triad-annotated sample. It is not evidence that GOLD's `Multiple
+  myeloma` label names an exact cell-culture habitat.
 - `BTO:0002101` and `BTO:0000727` are useful near misses for item review
   because they confirm the biomedical sense of the GOLD leaf label, but a BTO
   cell type or cell-line class is not an environment identity.
