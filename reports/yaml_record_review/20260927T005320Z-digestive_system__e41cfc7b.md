@@ -91,9 +91,10 @@ those do not attach to this parent digestive-system record.
   target-specific history record, causal overlay, advisory sample row, prior
   exact YAML review, research-manifest row, term request, deep-research report,
   label-correspondence residual, or decision-row entry.
-- Ignored-independent `find` searches found no `*digestive*` review report under
-  `reports/yaml_record_review` and no `*digestive*` causal overlay under
-  `curation/causal_graphs`.
+- Before this report was written, an ignored-independent `find` search found no
+  prior `*digestive*` review report under `reports/yaml_record_review`. The
+  review-time `find` search over `curation/causal_graphs` found no `*digestive*`
+  causal overlay.
 
 The absence of optional causal graphs, characteristic taxa, and environmental
 parameters is not itself a defect for a sparse GOLD parent node. The material
