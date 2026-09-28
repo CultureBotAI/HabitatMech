@@ -134,14 +134,18 @@ Exact hidden/ignored-inclusive searches for `habitatmech:GOLD.49273d9a48`,
 - the exact `data/raw/gold_ecosystem_paths.tsv` row;
 - one exact `data/raw/gold_path_biosamples.tsv` row;
 - one exact `data/raw/gold_studies.tsv` row;
-- the three exact `data/raw/gold_path_triads.tsv` rows;
+- the three exact `data/raw/gold_path_triads.tsv` rows.
+
+Follow-up hidden/ignored-inclusive searches for the GOLD parent path and
+vendored ENVO candidate rows found:
+
 - the generated GOLD `Floodplain` source-path parent;
 - the relevant vendored ENVO rows for `flood plain`, `terrestrial biome`,
   `sediment`, and `alluvial sediment`.
 
-The same search found no target-specific item-level decision, term request,
-history record, causal overlay, habitat research report, or prior exact YAML
-review report for this exact target.
+The target-term search found no target-specific item-level decision, term
+request, history record, causal overlay, habitat research report, or prior
+exact YAML review report for this exact target.
 
 No characteristic taxa, environmental parameters, causal graphs, discussions,
 or datasets are expected on this single-source class-swept GOLD leaf.
