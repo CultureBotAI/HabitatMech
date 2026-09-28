@@ -87,12 +87,13 @@ causal overlay, append-only history record, habitat-research report, or prior
 YAML review for this Fermentation cellar target.
 
 Exact hidden/ignored-inclusive searches for `gold.ecosystem:5632`,
-`gold.ecosystem:8249`, `gold.ecosystem:8250`, and `Engineered > Food production
-> Fermentation cellar` covered `data/raw`, `data/habitats`, `curation`,
-`history`, `research`, `reports`, `docs`, `conf`, `src`, `tests`, `README.md`,
-`justfile`, and `Justfile`. They found only the raw target and Pit mud child
-rows, the generated target and generated child parent pointer, the generated
-path lock, and the class-level curation decision.
+`gold.ecosystem:8249`, and `gold.ecosystem:8250` covered `data/raw`,
+`data/habitats`, `curation`, `history`, `research`, `reports`, `docs`, `conf`,
+`src`, `tests`, `README.md`, `justfile`, and `Justfile`. Matching searches for
+`Engineered > Food production > Fermentation cellar` covered the same paths
+plus `.claude`. They found only the raw target and Pit mud child rows, the
+generated target and generated child parent pointer, the generated path lock,
+and the class-level curation decision.
 
 The vendored ontology snapshot also has no term whose label is `fermentation
 cellar`: a hidden/ignored-inclusive case-insensitive fixed-string search for
