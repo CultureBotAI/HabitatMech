@@ -136,9 +136,9 @@ They found:
   subclass edges.
 
 The same search found no target-specific decision row, term request, history
-record, causal overlay, habitat research report, exact YAML review report, raw
-GOLD biosample row, raw GOLD triad row, or raw GOLD study row for this exact
-Mammals target path.
+record, causal overlay, habitat research report, prior exact YAML review
+report, raw GOLD biosample row, raw GOLD triad row, or raw GOLD study row for
+this exact Mammals target path.
 
 No characteristic taxa, environmental parameters, causal graphs, discussions,
 or datasets are expected on this zero-assertion generated GOLD leaf.
