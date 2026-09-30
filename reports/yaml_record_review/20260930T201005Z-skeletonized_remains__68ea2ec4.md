@@ -127,16 +127,16 @@ Fish GOLD path has zero assertions, the three GOLD side tables have no rows
 for this path, and no maintained causal graph overlay supplies any graph to
 merge into the record.
 
-The current corpus exposes plausible broader dead-body and skeletal terms.
-Until an item-level curator compares those terms against the exact Fish
-source path, the record is incomplete as a reviewed `UNGROUNDED` minted
-concept.
+The current corpus exposes plausible broader dead-body terms plus related
+skeletal and bone terms. Until an item-level curator compares those terms
+against the exact Fish source path, the record is incomplete as a reviewed
+`UNGROUNDED` minted concept.
 
 ## Findings
 
 | Severity | Finding | Evidence | Maintained owner |
 |---|---|---|---|
-| Major | The Fish `Skeletonized remains` source concept is still backed only by a class-level `CONFIRM_UNGROUNDED` row, so the generated `UNGROUNDED` state has not been item-reviewed against plausible carcass, skeletal, or bone parents. | `curation/decisions.tsv` lists `habitatmech:GOLD.a843dbe12a` with `review_depth` `CLASS`; `data/raw/gold_ecosystem_paths.tsv` shows a real Fish source path with two upstream ecosystem node IDs; `data/raw/ontology_terms.tsv` vendors `ENVO:00002033` and `BTO:0001965` `carcass`, `BTO:0000140` `bone`, and skeletal-system terms that the lexical no-match row did not inspect for this path. | `curation/decisions.tsv`; if the record stays minted, `curation/term_requests.tsv`. |
+| Major | The Fish `Skeletonized remains` source concept is still backed only by a class-level `CONFIRM_UNGROUNDED` row, so the generated `UNGROUNDED` state has not been item-reviewed against plausible broader carcass terms or related skeletal and bone candidates. | `curation/decisions.tsv` lists `habitatmech:GOLD.a843dbe12a` with `review_depth` `CLASS`; `data/raw/gold_ecosystem_paths.tsv` shows a real Fish source path with two upstream ecosystem node IDs; `data/raw/ontology_terms.tsv` vendors `ENVO:00002033` and `BTO:0001965` `carcass`, `BTO:0000140` `bone`, and skeletal-system terms that the lexical no-match row did not inspect for this path. | `curation/decisions.tsv`; if the record stays minted, `curation/term_requests.tsv`. |
 
 No blocker or minor findings were found.
 
@@ -145,9 +145,9 @@ No blocker or minor findings were found.
 1. Item-review `habitatmech:GOLD.a843dbe12a` in
    `curation/decisions.tsv`. Compare the exact
    `Host-associated > Fish > Remains > Skeletonized remains` source concept
-   against existing carcass and skeletal or bone terms, decide whether any
-   term is a true parent, and replace the class-level row with an `ITEM`-depth
-   row.
+   against existing carcass terms and related skeletal or bone terms, decide
+   whether any candidate is a true parent or only contextual, and replace the
+   class-level row with an `ITEM`-depth row.
 2. If no existing term fits exactly or broadly enough, keep the GOLD record
    minted, add a `curation/term_requests.tsv` definition for the Fish
    `Skeletonized remains` concept, and use `ADD` parent mode unless item
