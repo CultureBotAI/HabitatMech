@@ -53,8 +53,8 @@ The generated source identity is exact. `data/raw/gold_ecosystem_paths.tsv:1983`
 has one canonical row for
 `Host-associated > Mammals > Auditory/Hearing system`, with leaf label
 `Auditory/Hearing system`, depth 3, one GOLD node, zero organism assertions,
-zero study assertions, zero biosample assertions, zero MIxS triads, zero GOLD
-triads, zero total assertions, and node ID `gold.ecosystem:6404`.
+zero study assertions, zero biosample assertions, zero total assertions, and
+node ID `gold.ecosystem:6404`.
 
 The label is not unique by itself. GOLD also has a distinct
 `Host-associated > Mammals: Human > Auditory/Hearing system` concept at
@@ -95,7 +95,7 @@ discussions, or datasets. There are no claim-level citations to audit.
 | Claim | Nearest maintained support | Review |
 |---|---|---|
 | The source attestation preserves GOLD node `6404`, the source label, and the full source path. | `data/raw/gold_ecosystem_paths.tsv:1983` | Supported exactly. |
-| No `assertion_count` should be emitted for this GOLD attestation. | The exact raw row reports all assertion counts as zero. An ignored/hidden-inclusive exact search for the full source path found no row in `data/raw/gold_path_biosamples.tsv`, `data/raw/gold_path_triads.tsv`, or `data/raw/gold_studies.tsv`. | Supported. |
+| No `assertion_count` should be emitted for this GOLD attestation. | The exact raw row reports `organism_count`, `study_count`, `biosample_count`, and `total_assertions` as zero. An ignored/hidden-inclusive exact search for the full source path found no row in `data/raw/gold_path_biosamples.tsv`, `data/raw/gold_path_triads.tsv`, or `data/raw/gold_studies.tsv`. | Supported. |
 | The only generated parent is `habitatmech:GOLD.e889967f4f`. | GOLD places the target directly under `Host-associated > Mammals`; `data/habitats/PATHS.tsv:3021` pins `habitatmech:GOLD.e889967f4f` to `mammals`, and the generated `mammals.yaml` record is defined as `mammal-associated environment`. | Supported. |
 | The rendered page mirrors the YAML. | `pages/habitats/auditory-hearing-system-habitatmech-gold-81aa9dc62f.html` | Supported; the page shows the same ID, label, `HOST_ASSOCIATED` category, `UNGROUNDED` grounding, `SEEDED` mapping, GOLD source path, missing assertion count, broader mammal-associated parent, and class-level curation event. |
 
