@@ -90,7 +90,7 @@ No blockers or minor findings were found.
 
 | Priority | Edit | Owner | Follow-up validator |
 |---:|---|---|---|
-| 1 | Item-review `habitatmech:GOLD.aed863b800` against `habitatmech:GOLD.4849010f40`. Add a `SAME_AS` row if `Environmental > Aquatic > Freshwater > Lake > Estuarine sediment` and `Environmental > Aquatic > Marine > Intertidal zone > Estuary: Sediment` are the same sediment habitat. | `curation/decisions.tsv` | `just seed`, `just seed-canary habitatmech:GOLD.aed863b800`, `just verify-corpus`. |
+| 1 | Item-review `habitatmech:GOLD.aed863b800` against `habitatmech:GOLD.4849010f40`. If `Environmental > Aquatic > Freshwater > Lake > Estuarine sediment` and `Environmental > Aquatic > Marine > Intertidal zone > Estuary: Sediment` are the same sediment habitat, replace the existing class-level row for `habitatmech:GOLD.aed863b800` with an item-level `SAME_AS` decision targeting `habitatmech:GOLD.4849010f40`. | `curation/decisions.tsv` | `just seed`, `just seed-canary habitatmech:GOLD.4849010f40`, `just verify-corpus`. |
 | 2 | If the record intentionally remains separate, replace the class-level sweep row with an item-level decision that hangs the concept under a real broader material such as `ENVO:00002007` `sediment`. | `curation/decisions.tsv` | `just seed`, `just seed-canary habitatmech:GOLD.aed863b800`, then inspect `data/habitats/aquatic/estuarine_sediment.yaml` for `mapping_status: REVIEWED` and a `sediment` parent. |
 | 3 | If the record intentionally remains separate, suppress only the inherited `Environmental > Aquatic > Freshwater > Lake` parent edge before reseeding. | New curation input plus `src/habitatmech/seed.py` | `just seed`, `just seed-canary habitatmech:GOLD.aed863b800`, then inspect the regenerated record to confirm `ENVO:00000021` is gone. |
 | 4 | Add append-only curation history for the future merge-boundary or hierarchy correction. | `history/` | `just validate-history`. |
@@ -100,9 +100,9 @@ No blockers or minor findings were found.
 After curation, run:
 
 - `just seed`
-- `just seed-canary habitatmech:GOLD.aed863b800`
-- `just validate data/habitats/aquatic/estuarine_sediment.yaml`
-- `just validate-strict data/habitats/aquatic/estuarine_sediment.yaml`
+- `just seed-canary habitatmech:GOLD.4849010f40`, if merging with `SAME_AS`; otherwise `just seed-canary habitatmech:GOLD.aed863b800`
+- `just validate data/habitats/aquatic/estuary_sediment.yaml`, if merging with `SAME_AS`; otherwise `just validate data/habitats/aquatic/estuarine_sediment.yaml`
+- `just validate-strict data/habitats/aquatic/estuary_sediment.yaml`, if merging with `SAME_AS`; otherwise `just validate-strict data/habitats/aquatic/estuarine_sediment.yaml`
 - `just validate-causal-all`
 - `just term-requests-check`
 - `just validate-history`
