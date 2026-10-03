@@ -8,17 +8,20 @@
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <div class="wrap">
 <header class="site">
   <a class="brand" href="../index.html">HabitatMech</a>
-  <nav>
+  <nav aria-label="Main navigation">
     <a href="../text-map/">Semantic text map</a>
     <a href="../index.html">Overview</a>
     <a href="../browse.html">Browse</a>
     <a href="../term-requests.html">ENVO term requests</a>
     <a href="https://github.com/CultureBotAI/HabitatMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main id="main-content" tabindex="-1">
 <h1>hotel</h1>
 <p class="meta">
   <code class="curie">ENVO:03501347</code>
@@ -35,6 +38,7 @@ from the seeder's rules, not from a curator.</p></div>
 <p class="meta">Each upstream vocabulary's own account of this habitat. Assertion
 counts are per-source units and are <strong>not</strong> comparable across sources —
 GOLD counts organisms, BacDive strains, PREGO taxa.</p>
+<div class="table-scroll" role="region" tabindex="0" aria-label="What each upstream vocabulary says about this habitat">
 <table>
   <caption>What each upstream vocabulary says about this habitat</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Label / path</th><th scope="col" class="num">Assertions</th><th scope="col">Unit</th></tr></thead>
@@ -45,6 +49,7 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
     <td></td>
   </tr>
 </table>
+</div>
 
 <h2>Broader habitats</h2>
 <ul class="plain">
@@ -62,6 +67,7 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
   inventories in <code>data/raw/</code>.
   <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/data/habitats/engineered/hotel.yaml">View the record</a>.
 </p>
+</main>
 <footer class="site">
   <p>
     Generated from

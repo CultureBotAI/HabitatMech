@@ -23,6 +23,7 @@ from the seeder's rules, not from a curator.</p></div>
 <p class="meta">Each upstream vocabulary's own account of this habitat. Assertion
 counts are per-source units and are <strong>not</strong> comparable across sources —
 GOLD counts organisms, BacDive strains, PREGO taxa.</p>
+<div class="table-scroll" role="region" tabindex="0" aria-label="What each upstream vocabulary says about this habitat">
 <table>
   <caption>What each upstream vocabulary says about this habitat</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Label / path</th><th scope="col" class="num">Assertions</th><th scope="col">Unit</th></tr></thead>
@@ -35,6 +36,7 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
   </tr>
   {% endfor %}
 </table>
+</div>
 
 {% if r.parents %}
 <h2>Broader habitats</h2>
@@ -48,6 +50,7 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 {% if r.parameters %}
 <h2>Environmental parameters</h2>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Physicochemical parameters">
 <table>
   <caption>Physicochemical parameters</caption>
   <thead><tr><th scope="col">Parameter</th><th scope="col">Value</th><th scope="col">Source</th></tr></thead>
@@ -55,6 +58,7 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
   <tr><td>{{ p.parameter }}</td><td>{{ p.qualitative_value }}</td><td class="meta">{{ p.source }}</td></tr>
   {% endfor %}
 </table>
+</div>
 {% endif %}
 {% if r.causal_graphs %}
 
@@ -63,6 +67,7 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h3>{{ g.title }}</h3>
 {% if g.description %}<p>{{ g.description }}</p>{% endif %}
 {{ g.source_graph | graph_svg(loop.index) }}
+<div class="table-scroll" role="region" tabindex="0" aria-label="{{ g.graph_id }} edges">
 <table>
   <caption>{{ g.graph_id }} edges</caption>
   <thead><tr><th scope="col">Edge</th><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
@@ -80,6 +85,7 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
   </tr>
   {% endfor %}
 </table>
+</div>
 {% endfor %}
 {% endif %}
 
@@ -89,6 +95,7 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 characteristic of it. <code>rank</code> is out of <code>pool</code>: a high rank in a
 pool of thousands of near-tied scores is a weak claim. Entries corroborated by a
 second, independent source are listed first.</p>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Taxa reported from this habitat">
 <table>
   <caption>Taxa reported from this habitat</caption>
   <thead><tr><th scope="col">Taxon</th><th scope="col">Source</th><th scope="col" class="num">Rank</th><th scope="col" class="num">Pool</th><th scope="col">Corroborated</th></tr></thead>
@@ -102,6 +109,7 @@ second, independent source are listed first.</p>
   </tr>
   {% endfor %}
 </table>
+</div>
 {% if r.taxa_truncated %}<p class="meta">Showing {{ r.taxa|length }} of {{ r.taxa_total }} kept associations.</p>{% endif %}
 {% endif %}
 

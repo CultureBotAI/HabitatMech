@@ -8,17 +8,20 @@
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <div class="wrap wide">
 <header class="site">
   <a class="brand" href="../index.html">HabitatMech</a>
-  <nav>
+  <nav aria-label="Main navigation">
     <a href="../text-map/">Semantic text map</a>
     <a href="../index.html">Overview</a>
     <a href="../browse.html">Browse</a>
     <a href="../term-requests.html">ENVO term requests</a>
     <a href="https://github.com/CultureBotAI/HabitatMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main id="main-content" tabindex="-1">
 <h1>HOST_ASSOCIATED</h1>
 <p class="lede">1649 habitat records. Habitats defined by a living host, including anatomical sites.</p>
 <p class="meta">The source path is shown because a record's label is only the last
@@ -27,6 +30,7 @@ barn. The category prefix is trimmed off it, and the identifier lives on each
 record's own page — the link already carries it.</p>
 <input class="searchbox" id="q" type="search" data-index="host-associated.json" data-total="1649" placeholder="Filter all 1649 records…" aria-label="Filter records">
 <p class="meta" id="count" aria-live="polite"></p>
+<div class="table-scroll" role="region" tabindex="0" aria-label="HOST_ASSOCIATED habitats">
 <table id="tbl">
   <caption>HOST_ASSOCIATED habitats</caption>
   <thead><tr><th scope="col">Habitat</th><th scope="col">Source path</th><th scope="col">Grounding</th><th scope="col" class="num">Assertions</th><th scope="col">Sources</th></tr></thead>
@@ -2133,6 +2137,7 @@ record's own page — the link already carries it.</p>
   </tr>
   </tbody>
 </table>
+</div>
 <nav class="pager" aria-label="Pages">
 <a href="host-associated.html">1</a> <a href="host-associated-2.html">2</a> <a href="host-associated-3.html">3</a> <span class="pill plain" aria-current="page">4</span> <a href="host-associated-5.html">5</a> <a href="host-associated-6.html">6</a> </nav>
 <p class="meta">Showing 300 of 1649. The filter searches all
@@ -2202,6 +2207,7 @@ record's own page — the link already carries it.</p>
   });
 })();
 </script>
+</main>
 <footer class="site">
   <p>
     Generated from

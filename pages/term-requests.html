@@ -8,17 +8,20 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <div class="wrap wide">
 <header class="site">
   <a class="brand" href="index.html">HabitatMech</a>
-  <nav>
+  <nav aria-label="Main navigation">
     <a href="text-map/">Semantic text map</a>
     <a href="index.html">Overview</a>
     <a href="browse.html">Browse</a>
     <a href="term-requests.html">ENVO term requests</a>
     <a href="https://github.com/CultureBotAI/HabitatMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main id="main-content" tabindex="-1">
 <h1>ENVO term requests</h1>
 <p class="lede">
   Habitats that real data is attached to, that a curator has examined, and that
@@ -30,6 +33,7 @@
   these are not the bulk-swept remainder. The largest is the single biggest
   ungrounded concept in the corpus.</p>
 </div>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Habitats with no fitting ontology term">
 <table>
   <caption>Habitats with no fitting ontology term</caption>
   <thead><tr><th scope="col">Habitat</th><th scope="col" class="num">Upstream assertions</th><th scope="col">Sources</th><th scope="col">Why no term fits</th></tr></thead>
@@ -772,9 +776,11 @@
     <td class="meta">Variant-match review (#12): the variant route reaches UBERON:3010830 &#39;spicule&#39;, which is animal anatomy. The path is Terrestrial &gt; Deep subsurface &gt; Cave, where a spicule is a mineral speleothem — a homonym across kingdo</td>
   </tr>
 </table>
+</div>
 <p class="meta">830 further ungrounded records were decided by a
 mechanical sweep rather than examined individually, and are not listed here —
 they are candidates for this list, not members of it.</p>
+</main>
 <footer class="site">
   <p>
     Generated from

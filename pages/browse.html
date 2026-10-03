@@ -8,19 +8,23 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <div class="wrap">
 <header class="site">
   <a class="brand" href="index.html">HabitatMech</a>
-  <nav>
+  <nav aria-label="Main navigation">
     <a href="text-map/">Semantic text map</a>
     <a href="index.html">Overview</a>
     <a href="browse.html">Browse</a>
     <a href="term-requests.html">ENVO term requests</a>
     <a href="https://github.com/CultureBotAI/HabitatMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main id="main-content" tabindex="-1">
 <h1>Browse</h1>
 <p class="lede">3206 habitat records across 8 categories.</p>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Habitat categories">
 <table>
   <caption>Habitat categories</caption>
   <thead><tr><th scope="col">Category</th><th scope="col" class="num">Records</th><th scope="col" class="num">Grounded</th><th scope="col">What it holds</th></tr></thead>
@@ -73,6 +77,8 @@
     <td class="meta">Clinical and diagnostic sample contexts.</td>
   </tr>
 </table>
+</div>
+</main>
 <footer class="site">
   <p>
     Generated from
