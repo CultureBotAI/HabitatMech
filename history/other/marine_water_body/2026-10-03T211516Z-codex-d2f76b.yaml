@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: other
+  path: history/other/marine_water_body/2026-10-03T211358Z-claude-code-9bd806.yaml
+  slug: marine_water_body
+session:
+  id: 2026-10-03T211516Z-codex-d2f76b
+  timestamp: '2026-10-03T21:15:16Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1304
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - session.actors
+  summary: Correct actor attribution for the carbon-pump repair session
+  details: This append-only correction supersedes only session.actors[0].name in session 2026-10-03T211358Z-claude-code-9bd806.
+    The correct actor name is codex, not the scaffold default claude-code. The original gpt-5
+    model and codex agent_tool values are unchanged and accurate. The preceding file is preserved
+    byte-for-byte; its scientific edits, source inspection and validation account are unchanged.
+    The governed CLI requires explicit --actor-name codex; --agent-tool alone does not set
+    the actor name. No work is attributed to the user.

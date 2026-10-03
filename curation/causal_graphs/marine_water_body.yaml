@@ -2,12 +2,11 @@ identifier: ENVO:00001999
 causal_graphs:
 - graph_id: marine_water_body_biological_carbon_pump
   title: Marine water body biological carbon pump
-  description: Marine water bodies partition microbial activity between a
-    sunlit euphotic layer where phytoplankton and cyanobacteria fix carbon and a
-    darker interior where sinking particles are enzymatically hydrolyzed and
-    remineralized. Particle-associated and free-living heterotrophs convert that
-    organic matter to dissolved inorganic carbon and regenerated nutrients while
-    consuming oxygen along the particle flux path.
+  description: An oceanic pathway with illuminated surface water and sufficient
+    depth for export below the euphotic zone, not a universal marine-waterbody
+    structure. Buoyant particles and dark carbon fixation also contribute;
+    this graph is not a complete carbon budget. Oxygen consumption is conditional
+    on aerobic remineralization.
   nodes:
   - node_id: marine_water_body
     label: marine water body
@@ -60,135 +59,118 @@ causal_graphs:
     subject: marine_water_body
     predicate: contains
     object: euphotic_zone
-    description: The illuminated upper layer of a marine water body forms a
-      euphotic zone where photosynthetic microbes can grow.
+    description: The illuminated surface ocean contains a euphotic zone.
     evidence:
-    - reference: PMID:16163345
-      snippet: Marine microorganisms and global nutrient cycles
-      notes: Arrigo reviewed light and nutrient controls on marine microbial
-        primary production.
+    - reference: DOI:10.1038/ngeo1921
+      notes: Fig. 1 caption; oceanic scope only.
   - edge_id: euphotic_zone_supports_marine_phytoplankton
     subject: euphotic_zone
     predicate: supports
     object: marine_phytoplankton
-    description: Light in the euphotic zone supports phytoplankton and
-      cyanobacterial primary producers.
+    description: Light supports marine phytoplankton production, subject also
+      to nutrient availability; light alone is not sufficient.
     evidence:
     - reference: PMID:16163345
-      snippet: microbial production
-      notes: The review connects the ocean's euphotic zone with microbial
-        primary production and nutrient cycling.
+      notes: Multiple resource co-limitation, pp. 350-351; light/iron experiments
+        and resource dependence, not an unconditional growth assertion.
   - edge_id: phytoplankton_perform_oxygenic_photosynthesis
     subject: marine_phytoplankton
     predicate: performs
     object: oxygenic_photosynthesis
-    description: Marine phytoplankton and cyanobacteria fix inorganic carbon
-      into organic biomass by oxygenic photosynthesis.
+    description: Photosynthetic marine phytoplankton use light to convert
+      carbon dioxide and water into organic carbon and oxygen.
     evidence:
-    - reference: PMID:18497287
-      snippet: microbial engines
-      notes: Falkowski, Fenchel, and DeLong reviewed the microbial redox
-        machinery that drives oxygenic photosynthesis.
+    - reference: https://www.fisheries.noaa.gov/west-coast/science-data/phytoplankton-northwest-us-shelf-ecosystem
+      snippet: This energy converts water and carbon dioxide into carbohydrates (sugars) and oxygen.
+      notes: NOAA Fisheries, What Is Primary Production?, first paragraph;
+        inspected 2026-10-03. General reaction, not regional abundance extrapolation.
   - edge_id: photosynthesis_generates_particulate_carbon
     subject: oxygenic_photosynthesis
     predicate: generates
     object: particulate_organic_carbon
-    description: Photosynthetic production generates phytoplankton biomass and
-      detrital particles that enter marine organic-carbon pools.
+    description: Photosynthetic carbon fixation produces phytoplankton biomass
+      contributing to particulate organic carbon.
     evidence:
-    - reference: DOI:10.1038/ngeo1921
-      snippet: biological pump
-      notes: Herndl and Reinthaler reviewed the transfer of photosynthetically
-        fixed particulate carbon into the ocean interior.
+    - reference: https://www.fisheries.noaa.gov/west-coast/science-data/phytoplankton-northwest-us-shelf-ecosystem
+      notes: What Is Primary Production?, first paragraph, biomass production;
+        inspected 2026-10-03.
   - edge_id: particulate_carbon_forms_sinking_particles
     subject: particulate_organic_carbon
     predicate: forms
     object: sinking_particles
-    description: Aggregation, mortality, and grazing products package
-      particulate organic carbon into particles that sink out of the sunlit
-      layer.
+    description: Aggregation, dead phytoplankton and faecal material contribute
+      to sinking particles; not all particulate carbon sinks.
     evidence:
     - reference: DOI:10.1038/ngeo1921
-      snippet: dark end of the biological pump
-      notes: The review traces sinking organic particles from surface production
-        into deeper waters where microbes remineralize them.
+      notes: Introduction, marine-snow discussion preceding Fig. 1.
   - edge_id: sinking_particles_enter_dark_ocean
     subject: sinking_particles
     predicate: enters
     object: dark_ocean
-    description: Exported marine particles carry organic carbon into deeper,
-      darker parts of the water body.
+    description: Sinking particles export surface organic carbon below the
+      oceanic euphotic zone.
     evidence:
     - reference: DOI:10.1038/ngeo1921
-      snippet: dark ocean
-      notes: Herndl and Reinthaler synthesized microbial processing of sinking
-        particulate organic carbon below the euphotic zone.
+      notes: Introduction and Fig. 1 caption.
   - edge_id: sinking_particles_select_particle_bacteria
     subject: sinking_particles
-    predicate: selects for
+    predicate: supports
     object: particle_associated_bacteria
-    description: Sinking organic particles create nutrient-rich microsites that
-      select attached bacteria specialized for particle degradation.
+    description: Sinking particles support concentrated particle-associated
+      microbial activity.
     evidence:
-    - reference: PMID:23139690
-      snippet: microbial ecology of organic aggregates
-      notes: Simon and colleagues reviewed aquatic organic aggregates as
-        microbial hotspots and particle-associated bacterial habitats.
+    - reference: DOI:10.1038/ngeo1921
+      snippet: Sinking particles serve as hotspots of microbial activity in the deep ocean
+      notes: Microbial activity in the dark, opening paragraph; association,
+        not experimental selection sufficiency. Legacy edge ID retained.
   - edge_id: particle_bacteria_express_extracellular_enzymes
     subject: particle_associated_bacteria
     predicate: expresses
     object: extracellular_enzymes
-    description: Particle-associated bacteria produce extracellular enzymes to
-      hydrolyze particulate marine polymers.
+    description: Particle-associated bacteria release extracellular enzymes
+      into their surroundings.
     evidence:
-    - reference: PMID:21329211
-      snippet: extracellular enzymes and the marine carbon cycle
-      notes: Arnosti reviewed extracellular enzymes as the primary microbial
-        mechanism for accessing complex marine organic matter.
+    - reference: DOI:10.1038/ngeo1921
+      notes: Microbial activity in the dark, extracellular-enzyme release paragraph.
   - edge_id: enzymes_release_dissolved_organic_matter
     subject: extracellular_enzymes
     predicate: releases
     object: dissolved_organic_matter
-    description: Enzymatic hydrolysis of sinking particles releases dissolved
-      organic substrates to the surrounding seawater.
+    description: Extracellular hydrolysis produces smaller organic substrates
+      available for cellular uptake; particle-to-water leakage is not quantified.
     evidence:
     - reference: PMID:21329211
-      snippet: marine carbon cycle
-      notes: The review links extracellular hydrolysis to the conversion of
-        complex particulate material into smaller dissolved substrates.
+      snippet: hydrolyzing substrates to sizes sufficiently small to be transported across cell membranes
+      notes: Abstract, first sentence; limited to hydrolysis and uptake-sized
+        products, not an assumed leakage flux from every particle.
   - edge_id: dissolved_organic_matter_supports_free_living_heterotrophs
     subject: dissolved_organic_matter
     predicate: supports
     object: free_living_heterotrophs
-    description: Dissolved organic matter leaking from particles and plankton
-      supports free-living heterotrophic marine bacteria.
+    description: Bioavailable dissolved organic substrates support free-living
+      heterotrophs; much deep dissolved carbon is refractory.
     evidence:
-    - reference: DOI:10.3354/meps010257
-      snippet: water-column microbes
-      notes: Azam and colleagues established dissolved organic matter uptake by
-        marine bacteria as a core component of the microbial loop.
+    - reference: DOI:10.1038/ngeo1921
+      notes: Microbial activity in the dark, free-living metabolism paragraph.
   - edge_id: heterotrophs_drive_microbial_remineralization
     subject: free_living_heterotrophs
     predicate: drives
     object: microbial_remineralization
-    description: Marine heterotrophic bacteria respire and remineralize
-      dissolved organic carbon in the dark ocean.
+    description: Heterotrophic marine microbes process organic matter through
+      microbial remineralization.
     evidence:
-    - reference: DOI:10.1038/ngeo1921
-      snippet: microbial control
-      notes: Herndl and Reinthaler reviewed microbial remineralization of
-        organic matter exported into the dark ocean.
+    - reference: PMID:21329211
+      notes: Abstract, first two sentences; general heterotrophic processing,
+        without claiming a measured free-living share of deep-ocean respiration.
   - edge_id: dark_ocean_hosts_remineralization
     subject: dark_ocean
     predicate: hosts
     object: microbial_remineralization
-    description: Deeper dark waters host microbial remineralization of exported
-      particles and dissolved organic matter.
+    description: Oceanic waters below the euphotic zone host microbial
+      remineralization.
     evidence:
     - reference: DOI:10.1038/ngeo1921
-      snippet: dark end of the biological pump
-      notes: Herndl and Reinthaler focused on microbial processing of exported
-        organic matter in the dark ocean.
+      notes: Introduction, first paragraph; Fig. 1 caption.
   - edge_id: remineralization_consumes_oxygen
     subject: microbial_remineralization
     predicate: drives
@@ -196,32 +178,29 @@ causal_graphs:
     description: Aerobic remineralization of exported organic carbon consumes
       dissolved oxygen in marine subsurface waters.
     evidence:
-    - reference: DOI:10.1038/ngeo1921
-      snippet: remineralization
-      notes: The dark-biological-pump review links microbial respiration of
-        exported organic matter to deep-ocean carbon and oxygen cycling.
+    - reference: PMID:16163345
+      snippet: a large fraction of the available O2 is consumed
+      notes: Fig. 2 caption, p. 351; organic-matter breakdown and oxygen use.
+        The edge applies to aerobic respiration, not anaerobic pathways.
   - edge_id: remineralization_releases_dic
     subject: microbial_remineralization
     predicate: releases
     object: dissolved_inorganic_carbon
-    description: Respiratory remineralization oxidizes marine organic carbon
-      back to dissolved inorganic carbon.
+    description: Respiratory remineralization returns organic carbon to
+      dissolved inorganic carbon.
     evidence:
-    - reference: PMID:18497287
-      snippet: biogeochemical cycles
-      notes: The microbial-engines review connects microbial respiration to
-        carbon redox transformations.
+    - reference: DOI:10.1038/ngeo1921
+      notes: Introduction, first paragraph and Fig. 1 caption.
   - edge_id: remineralization_regenerates_nutrients
     subject: microbial_remineralization
     predicate: regenerates
     object: regenerated_nutrients
-    description: Microbial remineralization returns nitrogen, phosphorus, and
-      other nutrients from organic matter to dissolved inorganic pools.
+    description: Remineralization returns organic nitrogen and phosphorus to
+      dissolved nutrient pools without imposing a universal nutrient ratio.
     evidence:
     - reference: PMID:16163345
-      snippet: global nutrient cycles
-      notes: Arrigo reviewed microbial contributions to marine carbon, nitrogen,
-        and phosphorus cycling.
+      notes: Non-Redfield behaviour of phytoplankton, p. 349, opening paragraph;
+        Fig. 2 caption, p. 351. Nutrient stoichiometry can vary.
 curation_history:
 - timestamp: '2026-09-04T00:00:00Z'
   curator: codex
@@ -229,4 +208,12 @@ curation_history:
   changes: Added a marine-water-body biological carbon pump graph backed by
     PMID:16163345, PMID:18497287, DOI:10.1038/ngeo1921, PMID:23139690,
     PMID:21329211, and DOI:10.3354/meps010257.
+  llm_assisted: true
+- timestamp: '2026-10-03T21:10:55Z'
+  curator: codex
+  action: UPDATE_CAUSAL_GRAPH
+  changes: Corrected unrelated citation and claim-level evidence under issue
+    1301, bounded the graph to an oceanic pathway, replaced unsupported selection
+    sufficiency with particle-associated activity, and retained aerobic scope.
+    Original graph/node/edge IDs and the earlier audit event are preserved.
   llm_assisted: true
