@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/causal_graphs/marine_water_body.yaml
+  slug: marine_water_body
+session:
+  id: 2026-10-03T211358Z-claude-code-9bd806
+  timestamp: '2026-10-03T21:13:58Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1301
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  summary: Repair marine-waterbody carbon-pump evidence and scope
+  details: Corrected the maintained 15-edge overlay after the timestamped read-only audit.
+    Inspected Herndl/Reinthaler DOI:10.1038/ngeo1921 introduction, Fig. 1 and Microbial activity
+    in the dark; Arrigo PMID:16163345 pp. 349-351 and Fig. 2; Arnosti PMID:21329211 abstract;
+    and NOAA Fisheries Northwest U.S. shelf phytoplankton page, What Is Primary Production.
+    Replaced the unrelated PMID and unverified citations with claim-level locators and four
+    short exact snippets, qualified oceanic and aerobic scope, and weakened selection sufficiency
+    to supported activity. Preserved stable graph/node/edge IDs and the prior 2026-09-04 event;
+    this is current corrective provenance, not a reconstruction of the old session. Overlay
+    validation, dry seed, forced target canary and 21 focused tests passed. Complete semantic-map
+    JSONL hashes before and after regeneration are identical; no embedding or map rebuild
+    is required. Full QC and publication checks remain required in PR1304. Hierarchy, source-grounding
+    and taxonomy findings are not corrected here.
