@@ -311,10 +311,11 @@ characteristic_taxa:
 causal_graphs:
 - graph_id: hydrothermal_vent_redox_chemolithoautotrophy
   title: Hydrothermal vent redox chemolithoautotrophy
-  description: Hydrothermal vents discharge geothermally heated, chemically reduced
-    fluids into oxidized seawater, creating steep thermal and redox gradients where
-    sulfur- and hydrogen-oxidizing chemolithoautotrophs fix inorganic carbon and form
-    the base of vent microbial production.
+  description: In the deep-sea marine setting represented here, heated, reduced vent
+    fluids mix with oxidized seawater. Local gradients can favor sulfur- and hydrogen-oxidation
+    capacities; in autotrophic organisms these metabolisms can support carbon fixation.
+    The graph does not universalize this marine scenario to every hydrothermal vent
+    or every hydrogen oxidizer.
   nodes:
   - node_id: hydrothermal_vent
     label: hydrothermal vent
@@ -332,7 +333,7 @@ causal_graphs:
     node_type: ENVIRONMENTAL_FACTOR
   - node_id: mixing_zone
     label: vent-seawater mixing zone
-    node_type: STATE
+    node_type: HABITAT
   - node_id: redox_gradient
     label: redox gradient
     node_type: ENVIRONMENTAL_PARAMETER
@@ -345,12 +346,12 @@ causal_graphs:
   - node_id: hydrogen_sulfide
     label: hydrogen sulfide
     node_type: CHEMICAL
-  - node_id: sulfur_oxidizing_bacteria
-    label: sulfur-oxidizing bacteria
-    node_type: TAXON
-  - node_id: hydrogen_oxidizing_microorganisms
-    label: hydrogen-oxidizing microorganisms
-    node_type: TAXON
+  - node_id: sulfur_oxidation_capacity
+    label: sulfur oxidation capacity
+    node_type: CAPACITY
+  - node_id: hydrogen_oxidation_capacity
+    label: hydrogen oxidation capacity
+    node_type: CAPACITY
   - node_id: sulfur_oxidation
     label: sulfur oxidation
     node_type: PATHWAY
@@ -363,9 +364,9 @@ causal_graphs:
   - node_id: chemosynthetic_primary_production
     label: chemosynthetic primary production
     node_type: COMMUNITY_PROCESS
-  - node_id: vent_biofilms
-    label: vent biofilms
-    node_type: STATE
+  - node_id: surface_associated_growth
+    label: surface-associated chemoautotroph growth
+    node_type: BIOLOGICAL_PROCESS
   edges:
   - edge_id: vent_discharge_is_geothermally_heated
     subject: hydrothermal_vent
@@ -375,31 +376,32 @@ causal_graphs:
       of hot fluids.
     evidence:
     - reference: PMID:30867583
-      snippet: The microbiomes of deep-sea hydrothermal vents
-      notes: Dick reviewed deep-sea hydrothermal vents as geothermally driven habitats
-        structured by physical and chemical disequilibrium.
+      snippet: hydrothermal geochemistry
+      notes: Dick 2019, Abstract, relates deep-sea vent microbiomes to geology and
+        geochemistry; this edge is scoped to the marine vent scenario.
   - edge_id: crustal_heat_drives_fluid_discharge
     subject: crustal_heat
-    predicate: drives
+    predicate: heats
     object: hydrothermal_fluid
-    description: Crustal heating produces high-temperature fluids that issue from
-      vent orifices on the seafloor.
+    description: Crustal heat heats circulating fluids that discharge through seafloor
+      vent orifices in the represented marine setting.
     evidence:
     - reference: PMID:23720658
-      snippet: hydrothermal vent plumes
-      notes: Dick and colleagues reviewed vent plumes created when seafloor vents
-        inject hydrothermal fluids into the deep ocean.
+      snippet: seafloor vents inject hydrothermal fluids
+      notes: Dick et al. 2013, Introduction, describes hot reduced fluids injected
+        into the deep ocean, not a claim that heat drives a material as though that
+        material were a discharge process.
   - edge_id: hydrothermal_fluid_supplies_hydrogen
     subject: hydrothermal_fluid
     predicate: supplies
     object: hydrogen
-    description: Hydrothermal fluids provide molecular hydrogen for vent hydrogen-cycling
-      microorganisms.
+    description: Hydrothermal fluids can supply molecular hydrogen, with concentrations
+      and microbial energy yields varying by geological setting.
     evidence:
     - reference: PMID:30532749
-      snippet: Microbially Mediated Hydrogen Cycling
-      notes: Adam and Perner reviewed deep-sea vents as reservoirs for hydrogen-oxidizing
-        microorganisms.
+      snippet: enriched in hydrogen
+      notes: Adam and Perner, Abstract, describes geological variation in hydrogen
+        enrichment rather than a uniform concentration at every vent.
   - edge_id: hydrothermal_fluid_supplies_sulfide
     subject: hydrothermal_fluid
     predicate: supplies
@@ -408,9 +410,9 @@ causal_graphs:
       by vent microorganisms.
     evidence:
     - reference: PMID:18503548
-      snippet: Deep-sea vent chemoautotrophs
-      notes: Nakagawa and Takai reviewed reduced sulfur oxidation as a major energy
-        metabolism among deep-sea vent chemoautotrophs.
+      snippet: reactions between seawater and rock
+      notes: Nakagawa and Takai, Introduction, identifies geological sources of reduced
+        donors including sulfide for deep-sea vent chemoautotrophs.
   - edge_id: hydrothermal_fluid_meets_seawater
     subject: hydrothermal_fluid
     predicate: mixes with
@@ -420,8 +422,8 @@ causal_graphs:
     evidence:
     - reference: PMID:23720658
       snippet: rapidly mix with cold, oxidizing seawater
-      notes: Dick and colleagues reviewed the formation of hydrothermal plumes where
-        reduced vent fluids mix into the deep ocean.
+      notes: Dick et al. 2013, Introduction, explicitly describes the mixing of hot
+        reduced fluid with cold oxidizing seawater.
   - edge_id: mixing_creates_redox_gradient
     subject: mixing_zone
     predicate: creates
@@ -431,8 +433,8 @@ causal_graphs:
     evidence:
     - reference: PMID:30867583
       snippet: chemical disequilibrium
-      notes: Dick reviewed vent microbes that exploit disequilibrium between reduced
-        hydrothermal fluids and surrounding oxidized seawater.
+      notes: Dick 2019, Abstract, describes the reducing-fluid/oxidizing- seawater
+        contrast that vent chemosynthesis exploits.
   - edge_id: mixing_creates_temperature_gradient
     subject: mixing_zone
     predicate: creates
@@ -441,9 +443,13 @@ causal_graphs:
       temperature gradients across vent habitats.
     evidence:
     - reference: PMID:30867583
-      snippet: distributed globally, shaped locally
-      notes: Dick reviewed local vent temperature and geochemical gradients as filters
-        on deep-sea hydrothermal vent microbiomes.
+      snippet: sharp contrasts in physical and chemical conditions
+      notes: Dick 2019, Abstract, describes habitat contrasts; Adam and Perner explicitly
+        describes thermal gradients during seawater entrainment.
+    - reference: PMID:30532749
+      snippet: forming thermal and chemical gradients
+      notes: Abstract, fluid ascent and entrainment paragraph; this is a local mixing
+        gradient, not a redefinition of the raw qualitative band.
   - edge_id: fluid_mixing_forms_reaction_zone
     subject: hydrothermal_fluid
     predicate: creates
@@ -452,75 +458,83 @@ causal_graphs:
       reductants encounter seawater oxidants.
     evidence:
     - reference: PMID:23720658
-      snippet: ecological and biogeographic linkages
-      notes: Dick and colleagues review hydrothermal plume formation and links between
-        seafloor sources and water-column microbial habitats.
+      snippet: forming hydrothermal plumes
+      notes: Dick et al. 2013, Introduction, places plume formation at the mixing
+        of discharged reduced fluids and ambient oxidizing seawater.
   - edge_id: sulfide_selects_sulfur_oxidizers
     subject: hydrogen_sulfide
-    predicate: selects for
-    object: sulfur_oxidizing_bacteria
-    description: Sulfide-rich vent chemistry selects sulfur-oxidizing bacteria that
-      harvest energy from reduced sulfur.
+    predicate: can favor
+    object: sulfur_oxidation_capacity
+    description: Sulfide availability together with oxidant supply can favor sulfur
+      oxidation capacity; it is not a sufficient cause by itself.
     evidence:
     - reference: PMID:28375213
-      snippet: Niche partitioning of diverse sulfur-oxidizing bacteria
-      notes: Meier and colleagues studied sulfur-oxidizing bacteria distributed across
-        geochemical gradients at hydrothermal vents.
+      snippet: oxygen and sulfide concentrations
+      notes: Meier et al., Abstract, proposes oxygen/sulfide variation as a driver
+        of observed Manus Basin niche differentiation; the association is not an isolated
+        sulfide-selection experiment.
   - edge_id: sulfur_oxidizers_perform_sulfur_oxidation
-    subject: sulfur_oxidizing_bacteria
-    predicate: performs
+    subject: sulfur_oxidation_capacity
+    predicate: enables
     object: sulfur_oxidation
-    description: Vent sulfur-oxidizing bacteria oxidize reduced sulfur compounds as
-      an energy-yielding metabolism.
+    description: Sulfur oxidation capacity enables organisms to use reduced sulfur
+      as an energy source when suitable conditions and acceptors exist.
     evidence:
     - reference: PMID:28375213
-      snippet: sulfur-oxidizing bacteria at hydrothermal vents
-      notes: Meier and colleagues resolved niche partitioning among reduced sulfur
-        oxidizers at deep-sea vents.
+      snippet: oxidation of reduced sulfur compounds
+      notes: Meier et al., Abstract, identifies sulfur oxidation as a driver of carbon
+        fixation in the studied marine vent context.
   - edge_id: hydrogen_selects_hydrogen_oxidizers
     subject: hydrogen
-    predicate: selects for
-    object: hydrogen_oxidizing_microorganisms
-    description: Molecular hydrogen in hydrothermal fluids selects microorganisms
-      capable of hydrogen oxidation.
+    predicate: can favor
+    object: hydrogen_oxidation_capacity
+    description: Available hydrogen can favor hydrogen oxidation capacity where compatible
+      electron acceptors and physiological conditions occur.
     evidence:
     - reference: PMID:30532749
       snippet: hydrogen-oxidizing microorganisms
-      notes: Adam and Perner reviewed hydrogen-oxidizing microorganisms in deep-sea
-        hydrothermal vent systems.
+      notes: Adam and Perner, Abstract and hydrogen-oxidizer review sections, describes
+        diverse organisms and conditions, not a single clade or proof that all hydrogen
+        oxidizers are autotrophs.
   - edge_id: hydrogen_oxidizers_perform_hydrogen_oxidation
-    subject: hydrogen_oxidizing_microorganisms
-    predicate: performs
+    subject: hydrogen_oxidation_capacity
+    predicate: enables
     object: hydrogen_oxidation
-    description: Hydrogen-oxidizing vent microorganisms harvest energy by oxidizing
-      geochemical hydrogen.
+    description: Hydrogen oxidation capacity enables hydrogen-based energy metabolism
+      under suitable conditions; it does not alone imply autotrophy.
     evidence:
     - reference: PMID:30532749
-      snippet: Hydrogen Cycling in Deep-Sea Hydrothermal Vents
-      notes: Adam and Perner reviewed microbial hydrogen oxidation and hydrogen cycling
-        in vent ecosystems.
+      snippet: Hydrogen oxidation
+      notes: Adam and Perner, Abstract, reviews the energy contribution; its full-text
+        hydrogen-oxidizer section also includes heterotrophic examples.
   - edge_id: sulfur_oxidation_fuels_carbon_fixation
     subject: sulfur_oxidation
-    predicate: fuels
+    predicate: can fuel
     object: inorganic_carbon_fixation
     description: Sulfur oxidation supplies energy for inorganic carbon fixation by
       vent chemolithoautotrophs.
     evidence:
     - reference: PMID:18503548
-      snippet: diversity, biochemistry and ecological significance
-      notes: Nakagawa and Takai reviewed sulfur oxidation and carbon fixation biochemistry
-        in deep-sea vent chemoautotrophs.
+      snippet: oxidation of reduced compounds
+      notes: Nakagawa and Takai, Abstract and Introduction, links reduced donor oxidation
+        to carbon assimilation in chemoautotrophs, not all sulfur-oxidizing organisms.
   - edge_id: hydrogen_oxidation_fuels_carbon_fixation
     subject: hydrogen_oxidation
-    predicate: fuels
+    predicate: can fuel
     object: inorganic_carbon_fixation
-    description: Hydrogen oxidation supplies energy to vent microorganisms for chemolithoautotrophic
-      carbon fixation.
+    description: Hydrogen oxidation can supply energy for carbon fixation in autotrophic
+      vent microorganisms when compatible acceptors are available.
     evidence:
     - reference: PMID:29891698
-      snippet: Primary productivity below the seafloor
-      notes: McNichol and colleagues measured subseafloor primary productivity supported
-        by hydrothermal fluid and seawater mixing.
+      snippet: combination of nitrate and hydrogen
+      notes: McNichol et al., Results and Discussion, p. 6757, reports increased isotope
+        incorporation with combined nitrate/hydrogen amendment at Crab Spa. Methods,
+        p. 6760, infers total donor electron equivalents rather than independently
+        measuring hydrogen-specific carbon fixation.
+    - reference: PMID:30532749
+      snippet: autotrophic CO2 fixation
+      notes: Abstract supports the capability in autotrophs; the review also includes
+        heterotrophic hydrogen oxidizers, which are not covered by it.
   - edge_id: carbon_fixation_drives_primary_production
     subject: inorganic_carbon_fixation
     predicate: drives
@@ -529,20 +543,22 @@ causal_graphs:
       hydrothermal vent habitats.
     evidence:
     - reference: PMID:30867583
-      snippet: foundation of vent ecosystems
-      notes: Dick reviewed chemosynthetic bacteria and archaea as the productivity
-        base of deep-sea hydrothermal vent ecosystems.
-  - edge_id: primary_production_supports_vent_biofilms
+      snippet: fix inorganic carbon into biomass
+      notes: Dick 2019, Abstract, describes carbon assimilation as the basis of deep-sea
+        vent chemosynthetic production.
+  - edge_id: primary_production_supports_surface_growth
     subject: chemosynthetic_primary_production
-    predicate: supports
-    object: vent_biofilms
-    description: Chemosynthetic primary production supports biofilms on mineral and
-      biological surfaces bathed in vent fluids.
+    predicate: can support
+    object: surface_associated_growth
+    description: Carbon-assimilating production can support growth of surface-associated
+      chemoautotrophs in diffuse marine vent settings.
     evidence:
-    - reference: PMID:18503548
-      snippet: ecological significance
-      notes: Nakagawa and Takai reviewed chemoautotrophs in free-living, mat-forming,
-        and symbiotic vent microbial assemblages.
+    - reference: PMID:28375213
+      snippet: mainly attached to surfaces exposed to diffuse venting
+      notes: Meier et al., Abstract, observes surface-associated Sulfurovum and identifies
+        chemoautotrophic sulfur oxidation. The growth link is a bounded physiological
+        interpretation, not a measured biofilm- formation response or a claim about
+        all mineral/animal surfaces.
 curation_history:
 - timestamp: '2026-08-12T00:00:00Z'
   curator: claude-opus-5
@@ -565,4 +581,11 @@ curation_history:
   action: ADD_CAUSAL_GRAPH
   changes: Added a hydrothermal-vent redox chemolithoautotrophy graph backed by PMID:30867583,
     PMID:23720658, PMID:30532749, PMID:18503548, PMID:28375213, and PMID:29891698.
+  llm_assisted: true
+- timestamp: '2026-10-03T12:28:55Z'
+  curator: codex
+  action: UPDATE_CAUSAL_GRAPH
+  changes: 'Corrected hydrothermal vent graph node and predicate semantics and bounded
+    cited evidence scope; addresses #1239. Identity, parents, parameters, taxa, and
+    mapping status unchanged.'
   llm_assisted: true

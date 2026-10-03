@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/causal_graphs/hot_spring.yaml
+  slug: hot_spring
+session:
+  id: 2026-10-03T123152Z-claude-code-b91f85
+  timestamp: '2026-10-03T12:31:52Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1238
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Correct hot-spring graph typing and evidence scope
+  details: 'Follow-up to reports/yaml_record_review/20261003T120633Z-hot_spring.md. Corrected
+    thermophilic-growth capacity and process-to-process carbon-fixation relation. Localized
+    inspected Power, Spear, Huber, Caldwell, Sterner and Lindsay evidence; retained culture
+    and thermodynamic-inference limits and removed unsupported low-organic-water wording.
+    Caldwell species description p. 342 supports autotrophy. Preserved previous event and
+    appended UPDATE_CAUSAL_GRAPH via record_curation_event. Eleven focused tests and overlay
+    validation passed; forced canary preserves every non-graph field and prior history. Full
+    semantic-input comparison, corpus, render and QC gates required before merge. Hierarchy
+    remains #1235; no source decisions changed.'
