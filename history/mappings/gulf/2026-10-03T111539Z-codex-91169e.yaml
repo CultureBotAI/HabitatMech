@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: gulf
+session:
+  id: 2026-10-03T111539Z-codex-91169e
+  timestamp: '2026-10-03T11:15:39Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1230
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - notes
+  summary: Cite primary geographic provenance for gulf
+  details: 'Supplement the Gulf definition notes with inspected USGS GNIS Bay guidance and
+    IHO S-32 gulf entry 2164 and bay entry 420. Preserve definition text, identity, ADD mode,
+    both parents, source counts, and reviewed status; distinguish qualitative interpretation
+    from numeric size or depth thresholds and from GOLD triad context. This supplements history/mappings/gulf/2026-09-11T063533Z-codex-gpt-5-cfe960.yaml
+    without editing it. Source URLs: https://www.usgs.gov/us-board-on-geographic-names/gnis-domestic-names-feature-classes
+    ; https://portal.iho.int/iho-ohi/S32/engView.php?page=109 ; https://portal.iho.int/iho-ohi/S32/engView.php?page=21
+    . Validation plan: dry seed, exact canary and semantic-field comparison, history/schema/strict
+    validation, term-request/site regeneration, corpus reproduction and full QC. The semantic
+    adapter excludes notes and curation history; verify the full 3206-record input hash is
+    unchanged before treating the map as current.'
