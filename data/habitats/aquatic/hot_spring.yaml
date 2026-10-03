@@ -377,9 +377,10 @@ characteristic_taxa:
 causal_graphs:
 - graph_id: hot_spring_thermophile_chemolithoautotrophy
   title: Hot spring thermophile chemolithoautotrophy
-  description: Geothermal water imposes high-temperature stress while supplying reduced
-    inorganic electron donors, selecting for thermophiles with thermostable proteins
-    and for chemolithoautotrophic primary producers.
+  description: In high-temperature hot springs, geothermal water can favor thermophilic
+    growth and protein thermal stability. Reduced inorganic electron donors can support
+    chemolithoautotrophy in capable organisms; the cited isolate and community studies
+    do not describe every hot spring.
   nodes:
   - node_id: hot_spring
     label: hot spring
@@ -391,11 +392,11 @@ causal_graphs:
   - node_id: high_water_temperature
     label: high water temperature
     node_type: ENVIRONMENTAL_PARAMETER
-  - node_id: thermophiles
-    label: thermophiles
-    node_type: TAXON
+  - node_id: thermophilic_growth
+    label: thermophilic growth capacity
+    node_type: CAPACITY
   - node_id: thermostable_proteins
-    label: thermostable proteins
+    label: protein thermal stability
     node_type: TRAIT
   - node_id: geologic_hydrogen
     label: geologic hydrogen
@@ -427,41 +428,44 @@ causal_graphs:
     evidence:
     - reference: PMID:30038374
       snippet: Microbial biogeography of 925 geothermal springs
-      notes: Power and colleagues surveyed geothermal springs as aquatic microbial
-        habitats heated by subsurface geologic processes.
+      notes: Power et al., Introduction, describes geothermal heating of groundwater.
+        The surveyed springs span broad temperatures; heating does not imply that
+        every spring is an extreme-temperature habitat.
   - edge_id: geothermal_heating_creates_high_temperature
     subject: geothermal_heating
     predicate: creates
     object: high_water_temperature
-    description: Geothermal heating creates high-temperature spring water that filters
-      the resident microbial community.
+    description: Geothermal heating can create high-temperature spring water; this
+      edge concerns the surveyed Yellowstone springs above 70 C.
     evidence:
     - reference: PMID:15671178
       snippet: high-temperature microbial ecosystems
-      notes: Spear and colleagues studied Yellowstone hot-spring communities at temperatures
-        above 70 degrees Celsius.
+      notes: Spear et al., Abstract, studied Yellowstone communities above 70 C using
+        community composition, chemistry, and thermodynamic models.
   - edge_id: high_temperature_selects_thermophiles
     subject: high_water_temperature
     predicate: selects for
-    object: thermophiles
-    description: High-temperature water selects organisms capable of growing in hot
-      spring conditions.
+    object: thermophilic_growth
+    description: High-temperature conditions can favor thermophilic growth; community
+      temperature effects depend on the sampled range and chemistry.
     evidence:
-    - reference: PMID:9758770
-      snippet: hyperthermophilic bacterium isolated from Yellowstone
-      notes: Huber and colleagues isolated the hyperthermophile Thermocrinis ruber
-        from Octopus Spring in Yellowstone National Park.
+    - reference: PMID:30038374
+      snippet: niche selection driving assembly
+      notes: Power et al., Abstract, reports local niche selection across 925 springs.
+        Temperature affected diversity above 70 C; below that, pH was the stronger
+        factor. This is community association/inference, not an experimental proof
+        of temperature-only selection.
   - edge_id: high_temperature_requires_thermostable_proteins
     subject: high_water_temperature
     predicate: selects for
     object: thermostable_proteins
-    description: High temperature forces microbial macromolecules to remain functional
-      and folded near temperatures that denature mesophilic proteins.
+    description: Growth at high temperature requires functional proteins, maintained
+      by intrinsic stability or extrinsic stabilization.
     evidence:
     - reference: PMID:11256505
-      snippet: Thermophilic adaptation of proteins
-      notes: Sterner and Liebl review molecular features that make thermophile proteins
-        stable at high temperature.
+      snippet: extrinsic factors
+      notes: Sterner and Liebl, Abstract, distinguishes intrinsic protein stability
+        from stabilization by chaperones and compatible solutes.
   - edge_id: hot_spring_contains_hydrogen
     subject: hot_spring
     predicate: supplies
@@ -470,9 +474,10 @@ causal_graphs:
       relevant to microbial energetics.
     evidence:
     - reference: PMID:31276280
-      snippet: geological source and biological fate of hydrogen
-      notes: Lindsay and colleagues connected geologic hydrogen sources to hydrogen-using
-        organisms in Yellowstone hot springs.
+      snippet: Variable vapour input
+      notes: Lindsay et al., Abstract, links variation in geological hydrogen supply
+        with hydrogen-use and carbon-fixation evidence in specified Yellowstone springs;
+        concentrations are not universal spring values.
   - edge_id: hydrogen_fuels_hot_spring_primary_production
     subject: geologic_hydrogen
     predicate: fuels
@@ -481,9 +486,10 @@ causal_graphs:
       geothermal ecosystems.
     evidence:
     - reference: PMID:15671178
-      snippet: main source of energy for primary production
-      notes: Spear and colleagues concluded that hydrogen was the dominant energy
-        source for primary production in surveyed high-temperature Yellowstone springs.
+      snippet: three lines of inference
+      notes: Spear et al., Abstract, infers hydrogen-supported production from community
+        composition, chemistry, and thermodynamics in Yellowstone springs above 70
+        C; it does not directly measure production flux.
   - edge_id: hot_spring_contains_reduced_sulfur
     subject: hot_spring
     predicate: supplies
@@ -493,19 +499,19 @@ causal_graphs:
     evidence:
     - reference: PMID:15671178
       snippet: high concentrations of sulfide
-      notes: Spear and colleagues modeled hot-spring bioenergetics even in Yellowstone
-        springs with high sulfide concentrations.
+      notes: Spear et al., Abstract, includes sulfide-rich Yellowstone springs in
+        its thermodynamic analysis; the donor need not dominate production.
   - edge_id: hydrogen_supports_aquificales
     subject: geologic_hydrogen
     predicate: supports
     object: aquificales_thermophiles
-    description: Hydrogen supports hot-spring Aquificales populations capable of oxidizing
-      reduced inorganic substrates.
+    description: Hydrogen can support capable hot-spring Aquificales, with Thermocrinis
+      minervae CR11 providing a cultured example.
     evidence:
     - reference: PMID:19651724
-      snippet: hydrogen- and sulfur-oxidizing
-      notes: Caldwell and colleagues isolated a hydrogen- and sulfur-oxidizing Aquificales
-        thermophile from a terrestrial hot spring.
+      snippet: The isolate grows chemolithotrophically
+      notes: Caldwell et al., Abstract and growth experiments, establishes hydrogen-supported
+        CR11 growth with oxygen, not activity of all Aquificales populations in situ.
   - edge_id: reduced_sulfur_supports_aquificales
     subject: reduced_sulfur_compounds
     predicate: supports
@@ -514,9 +520,9 @@ causal_graphs:
       sulfur oxidation.
     evidence:
     - reference: PMID:19651724
-      snippet: member of the Aquificales
-      notes: Caldwell and colleagues characterized Thermocrinis minervae as a hydrogen-
-        and sulfur-oxidizing Aquificales member from a Costa Rican hot spring.
+      snippet: The isolate grows chemolithotrophically
+      notes: Caldwell et al., Abstract and growth experiments, reports CR11 using
+        elemental sulfur or thiosulfate with oxygen in culture.
   - edge_id: aquificales_perform_hydrogen_oxidation
     subject: aquificales_thermophiles
     predicate: performs
@@ -525,9 +531,9 @@ causal_graphs:
       for energy.
     evidence:
     - reference: PMID:19651724
-      snippet: Costa Rican terrestrial hot spring
-      notes: Caldwell and colleagues characterized a Thermocrinis species that grew
-        chemolithotrophically with hydrogen as an electron donor.
+      snippet: The isolate grows chemolithotrophically
+      notes: Caldwell et al., Abstract, provides the bounded CR11 hydrogen-use example;
+        this capability is not asserted for every order member.
   - edge_id: aquificales_perform_sulfur_oxidation
     subject: aquificales_thermophiles
     predicate: performs
@@ -536,42 +542,45 @@ causal_graphs:
       sulfur compounds for energy.
     evidence:
     - reference: PMID:9758770
-      snippet: Pink-Filament-Forming Hyperthermophilic Bacterium
-      notes: Huber and colleagues characterized Thermocrinis ruber growth on sulfur,
-        thiosulfate, and hydrogen in Yellowstone hot-spring isolates.
+      snippet: hydrogen, thiosulfate, and elemental sulfur
+      notes: Huber et al., Abstract, reports chemolithoautotrophic growth of Thermocrinis
+        ruber OC 1/4 with these donors and oxygen in culture.
   - edge_id: sulfur_oxidation_drives_primary_production
     subject: sulfur_oxidation
     predicate: contributes to
     object: chemolithoautotrophic_primary_production
-    description: Sulfur oxidation contributes energy to chemolithoautotrophic carbon
-      fixation in hot-spring Aquificales.
+    description: Sulfur oxidation can contribute energy to carbon fixation in capable
+      hot-spring Aquificales, as demonstrated for cultured CR11.
     evidence:
     - reference: PMID:19651724
-      snippet: sulfur-oxidizing
-      notes: Caldwell and colleagues isolated a sulfur-oxidizing Thermocrinis species
-        from a terrestrial hot spring.
+      snippet: as electron donors
+      notes: Caldwell et al., species description on p. 342, reports CR11 chemolithoautotrophy
+        with reduced sulfur and CO2 as a carbon source.
   - edge_id: hydrogen_oxidation_drives_primary_production
     subject: hydrogen_oxidation
-    predicate: drives
+    predicate: can drive
     object: chemolithoautotrophic_primary_production
     description: Hydrogen oxidation provides energy for inorganic carbon fixation
       in high-temperature hot-spring communities.
     evidence:
     - reference: PMID:15671178
-      snippet: oxidation of molecular hydrogen
-      notes: Spear and colleagues linked hydrogen-oxidizing organisms to primary productivity
-        in high-temperature Yellowstone springs.
+      snippet: three lines of inference
+      notes: Spear et al., Abstract, supports an inferred hydrogen-based energy budget,
+        not a measured universal carbon-fixation rate.
   - edge_id: primary_production_fixes_inorganic_carbon
     subject: chemolithoautotrophic_primary_production
-    predicate: fixes
+    predicate: involves
     object: inorganic_carbon_fixation
-    description: Chemolithoautotrophic primary producers convert inorganic carbon
-      into biomass in low-organic hot-spring water.
+    description: Chemolithoautotrophic primary production involves inorganic carbon
+      fixation. CR11 demonstrates this capacity in culture, without establishing the
+      organic-carbon concentration of its source water.
     evidence:
     - reference: PMID:19651724
-      snippet: thermophilic member of the Aquificales
-      notes: Caldwell and colleagues isolated a hot-spring Aquificales member capable
-        of autotrophic growth on inorganic electron donors.
+      snippet: as carbon sources
+      notes: Caldwell et al., species description on p. 342, lists CO2 among CR11
+        carbon sources and explicitly reports chemolithoautotrophy. The same isolate
+        can also use organic carbon; isolate capability is not a measurement of community
+        production or source-water carbon.
 curation_history:
 - timestamp: '2026-08-12T00:00:00Z'
   curator: claude-opus-5
@@ -604,4 +613,11 @@ curation_history:
   action: ADD_CAUSAL_GRAPH
   changes: Added a hot-spring thermophile chemolithoautotrophy graph backed by PMID:30038374,
     PMID:15671178, PMID:9758770, PMID:31276280, PMID:19651724, and PMID:11256505.
+  llm_assisted: true
+- timestamp: '2026-10-03T12:28:55Z'
+  curator: codex
+  action: UPDATE_CAUSAL_GRAPH
+  changes: 'Corrected hot spring graph node and predicate semantics and bounded cited
+    evidence scope; addresses #1238. Identity, parents, parameters, taxa, and mapping
+    status unchanged.'
   llm_assisted: true

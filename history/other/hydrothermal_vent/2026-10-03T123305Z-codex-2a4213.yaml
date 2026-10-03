@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/causal_graphs/hydrothermal_vent.yaml
+  slug: hydrothermal_vent
+session:
+  id: 2026-10-03T123305Z-codex-2a4213
+  timestamp: '2026-10-03T12:33:05Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1239
+events:
+- type: GENERAL
+  outcome: changed
+  sections:
+  - session.actors
+  summary: Correct session actor attribution without rewriting history
+  details: 'Corrects session.actors[0].name in history/other/hydrothermal_vent/2026-10-03T123159Z-claude-code-e1b2de.yaml:
+    the scaffolder defaulted actor-name to claude-code although the actual actor was Codex.
+    The original model gpt-5 and agent_tool codex are correct. This append-only correction
+    changes no scientific claim or generated record. Full semantic-input preview after both
+    graph fixes matches the original SHA256 c6fc01db748d129f30a03aadef2dcbf107311bf21886710f44a42b41e171fa2e
+    for all 3206 records.'

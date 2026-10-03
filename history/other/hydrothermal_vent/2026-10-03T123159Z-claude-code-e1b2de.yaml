@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/causal_graphs/hydrothermal_vent.yaml
+  slug: hydrothermal_vent
+session:
+  id: 2026-10-03T123159Z-claude-code-e1b2de
+  timestamp: '2026-10-03T12:31:59Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1239
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Correct marine vent graph types and bound mechanism evidence
+  details: 'Follow-up to reports/yaml_record_review/20261003T122253Z-hydrothermal_vent.md.
+    Replaced guild-as-taxon endpoints with capacities, mixing-zone STATE with HABITAT, and
+    overbroad biofilm wording with bounded surface-associated growth. Marine scope and conditional
+    predicates preserve limits. Inspected PMID:23720658 and PMID:30532749 full text, PMID:18503548
+    publisher text, PMID:29891698 PDF Results/Methods, and other cited abstracts. McNichol
+    supports combined hydrogen/nitrate amendment, not universal hydrogen-specific flux. Preserved
+    original event and appended UPDATE_CAUSAL_GRAPH via record_curation_event. Eleven focused
+    tests and overlay validation passed; forced canary preserves every non-graph field and
+    prior history. Full semantic-input fingerprint, corpus, render and QC gates required before
+    merge. Hierarchy remains #1235; no identity or source decision changed.'
