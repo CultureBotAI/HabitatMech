@@ -8,17 +8,20 @@
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <div class="wrap">
 <header class="site">
   <a class="brand" href="../index.html">HabitatMech</a>
-  <nav>
+  <nav aria-label="Main navigation">
     <a href="../text-map/">Semantic text map</a>
     <a href="../index.html">Overview</a>
     <a href="../browse.html">Browse</a>
     <a href="../term-requests.html">ENVO term requests</a>
     <a href="https://github.com/CultureBotAI/HabitatMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
+<main id="main-content" tabindex="-1">
 <h1>paddy field soil</h1>
 <p class="meta">
   <code class="curie">ENVO:00005740</code>
@@ -33,6 +36,7 @@
 <p class="meta">Each upstream vocabulary's own account of this habitat. Assertion
 counts are per-source units and are <strong>not</strong> comparable across sources —
 GOLD counts organisms, BacDive strains, PREGO taxa.</p>
+<div class="table-scroll" role="region" tabindex="0" aria-label="What each upstream vocabulary says about this habitat">
 <table>
   <caption>What each upstream vocabulary says about this habitat</caption>
   <thead><tr><th scope="col">Source</th><th scope="col">Label / path</th><th scope="col" class="num">Assertions</th><th scope="col">Unit</th></tr></thead>
@@ -49,6 +53,7 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
     <td>TAXON</td>
   </tr>
 </table>
+</div>
 
 <h2>Broader habitats</h2>
 <ul class="plain">
@@ -63,6 +68,7 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 characteristic of it. <code>rank</code> is out of <code>pool</code>: a high rank in a
 pool of thousands of near-tied scores is a weak claim. Entries corroborated by a
 second, independent source are listed first.</p>
+<div class="table-scroll" role="region" tabindex="0" aria-label="Taxa reported from this habitat">
 <table>
   <caption>Taxa reported from this habitat</caption>
   <thead><tr><th scope="col">Taxon</th><th scope="col">Source</th><th scope="col" class="num">Rank</th><th scope="col" class="num">Pool</th><th scope="col">Corroborated</th></tr></thead>
@@ -242,6 +248,7 @@ second, independent source are listed first.</p>
     <td></td>
   </tr>
 </table>
+</div>
 
 
 <h2>Also called</h2>
@@ -270,6 +277,7 @@ from several source concepts can carry one decision per concept.</p>
   inventories in <code>data/raw/</code>.
   <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/data/habitats/terrestrial/paddy_field_soil.yaml">View the record</a>.
 </p>
+</main>
 <footer class="site">
   <p>
     Generated from

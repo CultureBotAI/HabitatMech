@@ -10,6 +10,7 @@ barn. The category prefix is trimmed off it, and the identifier lives on each
 record's own page — the link already carries it.</p>
 <input class="searchbox" id="q" type="search" data-index="{{ index_url }}" data-total="{{ total }}" placeholder="Filter all {{ total }} records…" aria-label="Filter records">
 <p class="meta" id="count" aria-live="polite"></p>
+<div class="table-scroll" role="region" tabindex="0" aria-label="{{ category }} habitats">
 <table id="tbl">
   <caption>{{ category }} habitats</caption>
   <thead><tr><th scope="col">Habitat</th><th scope="col">Source path</th><th scope="col">Grounding</th><th scope="col" class="num">Assertions</th><th scope="col">Sources</th></tr></thead>
@@ -25,6 +26,7 @@ record's own page — the link already carries it.</p>
   {% endfor %}
   </tbody>
 </table>
+</div>
 {% if pager %}
 <nav class="pager" aria-label="Pages">
   {% for pg in pager %}{% if pg.n == page %}<span class="pill plain" aria-current="page">{{ pg.n }}</span>{% else %}<a href="{{ pg.href }}">{{ pg.n }}</a>{% endif %} {% endfor %}
