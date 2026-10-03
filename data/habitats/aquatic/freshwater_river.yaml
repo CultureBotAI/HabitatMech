@@ -11,7 +11,6 @@ synonyms:
   source: GOLD
 parent_habitats:
 - ENVO:00000022
-- ENVO:00002011
 - ENVO:03605007
 source_attestations:
 - source: GOLD
@@ -27,3 +26,11 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-03T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00002011 for habitatmech:GOLD.b9a8cb85e1
+    (Environmental > Aquatic > Freshwater > River). Issue #1220: ENVO:01000297 freshwater
+    river is a river where fresh water flows, not a subclass of flowing water material.
+    Preserve the ENVO river and freshwater-stream parents and the GOLD source path
+    and organism assertions; exclude only the GOLD fresh-water-material parent contribution.'

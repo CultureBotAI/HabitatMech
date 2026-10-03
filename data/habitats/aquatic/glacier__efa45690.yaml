@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00000133
-- ENVO:01001511
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4063
@@ -19,3 +18,13 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-03T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:01001511 for habitatmech:GOLD.0c89489e1b
+    (Environmental > Aquatic > Freshwater > Ice > Glacier). Issue #1223: under the
+    current whole-glacier interpretation, ENVO:00000133 denotes a mass of compounded
+    environmental materials, while glacial ice is a constituent. GOLD Ice does not
+    establish a whole-glacier is-a freshwater-ice claim. Retain the ENVO glacier parent,
+    minted source identity, 179 ORGANISM assertions, and SEEDED status; do not reinterpret
+    triad medium as identity.'
