@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: glacier_meltwater
+session:
+  id: 2026-10-03T095306Z-codex-fd45bd
+  timestamp: '2026-10-03T09:53:06Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1223
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  summary: Ground glacier meltwater beneath meltwater and exclude its frozen precursor
+  details: Replaced the CLASS-level decision for habitatmech:GOLD.f3dc60ff11 with ITEM-level
+    GROUND_AS_PARENT to verified ENVO:01000722 meltwater. Its definition includes several
+    melted sources; retain glacier-specific minted identity and NARROW grounding. GOLD node
+    7784 and six-sample one-study medium annotation corroborate the liquid reading; lake/biome
+    slots remain context. Added ENVO:01001511 source exclusion in curation/gold_parent_exclusions.tsv.
+    Seeder derives REVIEWED status and skos:narrowMatch without inventing counts. Separate
+    Glacier > Meltwater is unchanged. Evidence is documented in review 20261003T093557Z. Dry
+    run and forced canary inspected. Twenty-nine focused exclusion/curation-floor tests and
+    four changed-record strict validations pass; all 3206 records reproduce exactly. Map/site
+    regeneration and full QC are required before merge; draft PR1218 remains blocked by issue1217.

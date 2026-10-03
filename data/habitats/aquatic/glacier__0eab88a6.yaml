@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00000133
-- ENVO:00002011
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7295
@@ -20,3 +19,11 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-03T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00002011 for habitatmech:GOLD.6faa98a0aa
+    (Environmental > Aquatic > Freshwater > Glacier). Issue #1223: the glacier-grounded
+    whole ice mass is not liquid fresh water. Preserve the broader ENVO glacier parent,
+    minted source identity, both source nodes, one ORGANISM assertion, and SEEDED
+    status; exclude only the immediate GOLD Freshwater contribution.'

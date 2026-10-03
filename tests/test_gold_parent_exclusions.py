@@ -117,7 +117,7 @@ def test_stale_or_unmatched_exclusion_stops_ingest(exclusion):
                          parent_exclusions={exclusion.identifier: exclusion})
 
 
-def test_real_corpus_changes_only_six_hierarchies_and_audit_events(tmp_path, monkeypatch):
+def test_real_corpus_changes_only_ten_hierarchies_and_audit_events(tmp_path, monkeypatch):
     after = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
     empty = tmp_path / "empty.tsv"
     write_table(empty, [])
@@ -130,6 +130,10 @@ def test_real_corpus_changes_only_six_hierarchies_and_audit_events(tmp_path, mon
         "ENVO:01001511": "ENVO:00002011",
         "ENVO:00000021": "ENVO:00002011",
         "ENVO:01000297": "ENVO:00002011",
+        "ENVO:00000488": "ENVO:01001511",
+        "habitatmech:GOLD.6faa98a0aa": "ENVO:00002011",
+        "habitatmech:GOLD.0c89489e1b": "ENVO:01001511",
+        "habitatmech:GOLD.f3dc60ff11": "ENVO:01001511",
     }
     assert after.keys() == before.keys()
     assert {key for key in before if before[key] != after[key]} == expected.keys()
@@ -144,3 +148,18 @@ def test_real_corpus_changes_only_six_hierarchies_and_audit_events(tmp_path, mon
     assert after["ENVO:01001511"]["parent_habitats"] == ["ENVO:01000277", "ENVO:02000140"]
     assert after["ENVO:00000021"]["parent_habitats"] == ["ENVO:00000020", "ENVO:01001320"]
     assert after["ENVO:01000297"]["parent_habitats"] == ["ENVO:00000022", "ENVO:03605007"]
+    assert after["ENVO:00000488"]["parent_habitats"] == ["ENVO:00000020"]
+    for identifier in ("habitatmech:GOLD.6faa98a0aa", "habitatmech:GOLD.0c89489e1b"):
+        assert after[identifier]["parent_habitats"] == ["ENVO:00000133"]
+        assert after[identifier]["grounding_status"] == "NARROW"
+        assert after[identifier]["mapping_status"] == "SEEDED"
+    meltwater = after["habitatmech:GOLD.f3dc60ff11"]
+    assert meltwater["parent_habitats"] == ["ENVO:01000722"]
+    assert meltwater["grounding_status"] == "NARROW"
+    assert meltwater["mapping_status"] == "REVIEWED"
+    assert meltwater["source_attestations"] == [{
+        "source": "GOLD", "source_id": "gold.ecosystem:7784",
+        "source_label": "Glacier meltwater",
+        "source_path": "Environmental > Aquatic > Freshwater > Ice > Glacier meltwater",
+        "mapping_predicate": "skos:narrowMatch",
+    }]
