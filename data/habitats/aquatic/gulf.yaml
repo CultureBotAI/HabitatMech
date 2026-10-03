@@ -29,7 +29,7 @@ curation_history:
     screen review (#108): Environmental > Aquatic > Marine > Gulf unambiguously denotes
     the marine water body setting. The external chemical term label collision is unrelated
     to this path and is not retained as an xref. (source concept habitatmech:GOLD.3e97e1d9d2)'
-- timestamp: '2026-09-10T00:00:00Z'
+- timestamp: '2026-10-03T00:00:00Z'
   curator: codex-gpt-5
   action: DEFINED
   changes: 'Defined as ''gulf'' under ENVO:00000032 ''bay''. Definition authored from
@@ -40,4 +40,13 @@ curation_history:
     a large marine bay; ENVO:00001999 ''marine water body'' is true but coarser and
     retained through the GOLD parent path, while ENVO:00000016 ''sea'', ENVO:00000015
     ''ocean'', ENVO:00000475 ''inlet'', and ENVO:00000137 ''coastal inlet'' either
-    are siblings, broader near misses, or lack the three-sided partial land enclosure.'
+    are siblings, broader near misses, or lack the three-sided partial land enclosure.
+    Geographic provenance supplemented on 2026-10-03 (#1230): USGS GNIS Bay includes
+    gulf usage and partial land enclosure (https://www.usgs.gov/us-board-on-geographic-names/gnis-domestic-names-feature-classes);
+    IHO S-32 entry 2164 describes a gulf as sea extending into land, generally larger
+    than a bay (https://portal.iho.int/iho-ohi/S32/engView.php?page=109), consistent
+    with bay entry 420 (https://portal.iho.int/iho-ohi/S32/engView.php?page=21). These
+    support qualitative coastal form and relative size, not numerical size, indentation-depth
+    or bathymetric thresholds. Deeply indented is retained as qualitative geographic
+    interpretation, not a measured cutoff or a claim derived from GOLD triads. Generic
+    naming usage does not make all named gulfs disjoint from named seas.'
