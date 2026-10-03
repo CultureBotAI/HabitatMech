@@ -8,7 +8,6 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: GOLD
 parent_habitats:
-- ENVO:00002011
 - ENVO:01000277
 - ENVO:02000140
 source_attestations:
@@ -25,3 +24,12 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-03T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00002011 for habitatmech:GOLD.c18afe6ef1
+    (Environmental > Aquatic > Freshwater > Ice). Issue #1220: ENVO:01001511 freshwater
+    ice is formed by freezing fresh water, not a subclass of liquid-water material.
+    Exclude only the GOLD context parent; preserve ENVO water-ice and fluid-environmental-material
+    parents, source identity, and organism assertions. The independent ENVO fluid
+    parent is not reinterpreted by this exclusion.'

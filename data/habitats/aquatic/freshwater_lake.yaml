@@ -17,7 +17,6 @@ synonyms:
   source: PREGO
 parent_habitats:
 - ENVO:00000020
-- ENVO:00002011
 - ENVO:01001320
 source_attestations:
 - source: GOLD
@@ -66,3 +65,12 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-10-03T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00002011 for habitatmech:GOLD.d14ddff103
+    (Environmental > Aquatic > Freshwater > Lake). Issue #1220: ENVO:00000021 freshwater
+    lake is a water body containing low-salinity water, not a subclass of its water
+    material. Preserve the ENVO lake and fresh-water-body parents, GOLD and PREGO
+    attestations, taxon association, and existing review status; exclude only the
+    GOLD fresh-water-material parent contribution.'

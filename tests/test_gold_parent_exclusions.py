@@ -117,7 +117,7 @@ def test_stale_or_unmatched_exclusion_stops_ingest(exclusion):
                          parent_exclusions={exclusion.identifier: exclusion})
 
 
-def test_real_corpus_changes_only_three_hierarchies_and_audit_events(tmp_path, monkeypatch):
+def test_real_corpus_changes_only_six_hierarchies_and_audit_events(tmp_path, monkeypatch):
     after = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
     empty = tmp_path / "empty.tsv"
     write_table(empty, [])
@@ -127,6 +127,9 @@ def test_real_corpus_changes_only_three_hierarchies_and_audit_events(tmp_path, m
         "habitatmech:GOLD.88e2b29307": "ENVO:00001999",
         "habitatmech:GOLD.3426da4c96": "habitatmech:GOLD.ce244e62cd",
         "ENVO:00002011": "ENVO:00002030",
+        "ENVO:01001511": "ENVO:00002011",
+        "ENVO:00000021": "ENVO:00002011",
+        "ENVO:01000297": "ENVO:00002011",
     }
     assert after.keys() == before.keys()
     assert {key for key in before if before[key] != after[key]} == expected.keys()
@@ -138,3 +141,6 @@ def test_real_corpus_changes_only_three_hierarchies_and_audit_events(tmp_path, m
             assert new.get(field) == old.get(field), (key, field)
     assert after["ENVO:00002011"]["parent_habitats"] == ["ENVO:00002006"]
     assert after["habitatmech:GOLD.3426da4c96"]["parent_habitats"] == ["ENVO:01001869"]
+    assert after["ENVO:01001511"]["parent_habitats"] == ["ENVO:01000277", "ENVO:02000140"]
+    assert after["ENVO:00000021"]["parent_habitats"] == ["ENVO:00000020", "ENVO:01001320"]
+    assert after["ENVO:01000297"]["parent_habitats"] == ["ENVO:00000022", "ENVO:03605007"]
