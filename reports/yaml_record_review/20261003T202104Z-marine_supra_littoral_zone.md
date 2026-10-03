@@ -28,7 +28,7 @@ generated history events. `data/habitats/PATHS.tsv:777` pins the current stem.
 
 ## Identity and Grounding
 
-`ontology_terms.tsv:7624` and current ENVO agree on the identity and
+`ontology_terms.tsv:7630` and current ENVO agree on the identity and
 definition: an elevated coastal area normally reached by spray or splash,
 with exceptional seawater penetration under storm/high-tide conditions.
 This is neither the intertidal zone nor an entire water body. AQUATIC is a

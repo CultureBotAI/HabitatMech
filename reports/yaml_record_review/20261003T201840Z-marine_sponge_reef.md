@@ -28,7 +28,7 @@ entries and one seeding event. `data/habitats/PATHS.tsv:789` pins its stem.
 
 ## Identity and Grounding
 
-`ontology_terms.tsv:7660` and freshly fetched current ENVO agree on identity
+`ontology_terms.tsv:7666` and freshly fetched current ENVO agree on identity
 and definition. `ontology_subclass_edges.tsv:5812` and current OWL assert
 `ENVO:01000143` marine reef as the named parent. A reef built by sponges is a
 seafloor structure, not a sponge host body or the entire associated biome.

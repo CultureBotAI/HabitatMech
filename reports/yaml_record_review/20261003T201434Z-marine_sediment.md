@@ -32,7 +32,7 @@ attestations, seven parameter bands, 25 observational taxa, and one graph with
 
 ## Identity and Grounding
 
-`ontology_terms.tsv:9583` and current ENVO support the label, definition and
+`ontology_terms.tsv:9589` and current ENVO support the label, definition and
 exact plural synonym. Marine sediment is deposited particulate material, not a
 whole water body. `ontology_subclass_edges.tsv:7974` and current OWL support
 the true parent `ENVO:00002007` sediment. The generated extra parent

@@ -29,7 +29,7 @@ marsh biome: AQUATIC, EXACT, REVIEWED, with BACDIVE and PREGO attestations,
 
 ## Identity and Grounding
 
-`data/raw/ontology_terms.tsv:7527` and current official ENVO agree on the
+`data/raw/ontology_terms.tsv:7533` and current official ENVO agree on the
 identifier, label and definition. The definition describes a marine intertidal
 biome with salt-tolerant herbaceous vegetation, not the plants, sediment or
 whole marine water body. Its one named parent, `ENVO:00000447` marine biome,
