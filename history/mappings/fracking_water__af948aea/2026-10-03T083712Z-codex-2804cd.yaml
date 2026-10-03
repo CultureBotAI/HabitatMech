@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: fracking_water__af948aea
+session:
+  id: 2026-10-03T083712Z-codex-2804cd
+  timestamp: '2026-10-03T08:37:12Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1215
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude saline aquatic context from fracking-water is-a parents
+  details: Reviewed GOLD saline/alkaline Fracking water against the authored inland saline
+    or alkaline aquatic environment and ENVO fracking liquid. Context alone does not establish
+    a material as a water-body-determined environment. Excluded only the immediate GOLD path
+    contribution; preserved the fracking-liquid parent and source path, without choosing input
+    versus returned-water semantics. Validated exclusion table and stale-reference guards;
+    forced canary succeeded and whole-corpus regression comparison limits changes to the three
+    intended hierarchies and audit events.

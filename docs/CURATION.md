@@ -164,3 +164,25 @@ For example, the diatom definition adds an organism-determined ENVO genus while
 retaining GOLD's true alga-associated parent. The inland saline-or-alkaline
 definition replaces GOLD's aquatic-biome edge because the source bin includes
 engineered settings and therefore is not a kind of biome.
+
+### Excluding a GOLD context parent
+
+`curation/gold_parent_exclusions.tsv` suppresses only the immediate GOLD
+source-path parent contribution for one minted source concept. Use it when
+the source hierarchy denotes context rather than a strictly broader habitat,
+including on ontology-grounded records; do not invent a term definition merely
+to remove an unsupported edge. It does not remove independently supported
+ontology, grounding-decision, other-source, or definition parents.
+
+Each row names the GOLD source `identifier`, exact `source_path`, expected
+resolved `parent_id`, `curator`, ISO `date`, and evidence-based `notes`.
+Regeneration fails on duplicate, malformed, unmatched, or stale exclusions,
+including when the immediate parent's resolution changes. Review the source
+and update the row deliberately after an upstream change. The table is required
+and protected by the curation-floor check against accidental row loss.
+
+Exclusions preserve source paths, attestations, grounding, and review status;
+they append a deterministic `SOURCE_PARENT_EXCLUDED` event to affected records.
+They do not assert a replacement relation or settle an unresolved definition.
+Run `just seed`, inspect `just seed-canary <IDENTIFIER> --force`, add session
+history targeting this table, then regenerate and run the normal QC gates.

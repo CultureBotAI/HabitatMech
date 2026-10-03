@@ -167,6 +167,10 @@ grounding route.
   genus of a curated definition in `curation/term_requests.tsv` — so
   `decisions.tsv` is not the whole audit trail for a parent claim. The
   strictly-broader rule binds all four.
+- Exclude reviewed GOLD context-only parent contributions in
+  `curation/gold_parent_exclusions.tsv`. The exact source path and expected
+  resolved parent are checked during seeding; independent ontology and curator
+  parents remain intact. Do not invent a definition just to suppress an edge.
 - A host organism is a microbial habitat, but its taxon or whole-organism term
   is not the habitat identity. Keep the source concept minted, use the organism
   term as an xref, and request an associated-environment term where appropriate.

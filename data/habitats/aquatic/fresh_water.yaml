@@ -21,7 +21,6 @@ synonyms:
   source: ENVO
 parent_habitats:
 - ENVO:00002006
-- ENVO:00002030
 source_attestations:
 - source: ENVIRONMENTS_TABLE
   source_id: water_fresh
@@ -482,3 +481,11 @@ curation_history:
   changes: Added a fresh-water hypoosmotic-response graph backed by DOI:10.1017/qrd.2022.3
     and DOI:10.1085/jgp.201411296.
   llm_assisted: true
+- timestamp: '2026-10-03T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00002030 for habitatmech:GOLD.ad12f0169a
+    (Environmental > Aquatic > Freshwater). Issue #1215: ENVO:00002011 fresh water
+    is liquid-water material, not an aquatic biome. GOLD Aquatic is source context
+    only. Preserve the ENVO liquid-water parent, source paths, independent attestations,
+    parameters, taxa, and causal evidence.'
