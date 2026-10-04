@@ -125,6 +125,13 @@ parent, ITEM-derived REVIEWED state, count omission and history remain sound.
 
 ## Follow-up Checks
 
+After a maintained-input correction, run `just seed`, then
+`just seed-canary habitatmech:GOLD.b76e4c6e4a --force`. Inspect the whole
+canary, source count omission, REVIEWED state and both events before
+`just seed-apply --force`. Do not prune partial runs. These are future
+curation commands, not actions taken by this read-only review.
+Run `just verify-corpus` and `just qc` after the required product refresh.
+
 Require ordinary/strict schema, labels, source/history checks, full corpus
 reproduction, mapping-consumer tests and full QC. Reinspect the entire
 generated target, REVIEWED state and both events after correction.
