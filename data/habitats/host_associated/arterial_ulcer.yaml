@@ -23,9 +23,10 @@ curation_history:
     the clinical-condition interpretation of GOLD node 7033 under Multisystem conditions:
     its separate Lesion site child (node 7034) distinguishes the physical site in
     this source hierarchy. This exclusion concerns the condition node, not a claim
-    that arterial-ulcer wounds cannot host microbes. PMID:10731891 reports ulcer-area
-    swabs including arterial leg ulcers, but does not identify either GOLD node; both
-    committed tree rows have zero assertions and no inspected specimen-level evidence
-    resolves a different interpretation. Preserve the separate source identities pending
-    the broader disease/site review in #220; do not infer disease-to-habitat equivalence
-    or import clinical-study taxa. (source concept habitatmech:GOLD.03b138e563)'
+    that arterial-ulcer wounds cannot host microbes. The study at https://pubmed.ncbi.nlm.nih.gov/10731891/
+    reports ulcer-area swabs including arterial leg ulcers, but does not identify
+    either GOLD node; both committed tree rows have zero assertions and no inspected
+    specimen-level evidence resolves a different interpretation. Preserve the separate
+    source identities pending the broader disease/site review in #220; do not infer
+    disease-to-habitat equivalence or import clinical-study taxa. (source concept
+    habitatmech:GOLD.03b138e563)'
