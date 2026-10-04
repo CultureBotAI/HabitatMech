@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: aquatic_plant
+session:
+  id: 2026-10-04T034451Z-claude-code-2a7f5e
+  timestamp: '2026-10-04T03:44:51Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: codex-gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1342
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - notes
+  - curator
+  - date
+  summary: Correct aquatic-macrophyte rationale without changing habitat scope
+  details: 'Corrects the rationale originally authored by claude-opus-5 on 2026-08-28 in the
+    term-request row for habitatmech:BACDIVE.38260eea00. Current NCBI taxonomy 3208 places
+    Bryophyta within Viridiplantae and Embryophyta; inspected BacDive strain 158685 specifies
+    seaweed without an algal lineage. Preserve definition, label, synonym and ENVO:01001000
+    genus, distinguish green algae from unspecified macroalgae, and explicitly leave digester/field-water
+    scope issue #1341 unresolved. No paid research. Seed dry run and guarded single-record
+    force canary passed; inspected generated YAML and proved all non-history fields and real-adapter
+    semantic text unchanged from HEAD. Regenerate page and term-request output and run full
+    QC before publication. No committed history file was edited; the seeder reconstructs its
+    current DEFINED event from the maintained row. Review-time findings remain in reports/yaml_record_review/20261004T034129Z-aquatic_plant.md.'
