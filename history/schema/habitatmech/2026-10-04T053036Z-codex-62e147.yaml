@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: schema
+  path: src/habitatmech/schema/habitatmech.yaml
+  slug: habitatmech
+session:
+  id: 2026-10-04T053036Z-codex-62e147
+  timestamp: '2026-10-04T05:30:36Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: codex-gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1351
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - HabitatRecord.xrefs
+  summary: Align xref schema documentation with non-identity context placement
+  details: Changed only the HabitatRecord.xrefs description in the repository-owned habitatmech.yaml
+    schema. The old equivalence-only text contradicted docs/CURATION.md, seed.apply_decision
+    CONFIRM_UNGROUNDED behavior, and existing xref-placement tests. The chelicerate-associated
+    environment record explicitly retains Arthropoda as broader taxonomic context and supplied
+    the concrete witness. The new description states that xrefs may be related non-identity
+    context and alone imply neither equivalence nor is-a; broader habitats and source mapping
+    predicates retain their existing fields. No slot type, constraint, vendored file, scientific
+    record or placement behavior changes. Review report 20261004T052936Z-arthropoda_chelicerates.md
+    records minor HM-CHELICERATE-001. Existing focused relation tests, schema/history validation
+    and final CI QC are required; batch local QC began before this prose edit.
