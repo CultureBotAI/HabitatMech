@@ -76,7 +76,9 @@ of the committed source nodes.
 `prego_habitats.tsv:673` records one taxon, one direct assertion and maximum
 score 3 in annotated_genomes_isolates, with the canonical label and plural.
 `prego_habitat_taxa.tsv:4208` agrees with the emitted taxon, label, score,
-rank 1 and candidate pool 1. Score is a PREGO evidence-channel score, not
+and rank 1. Candidate pool 1 is separately derived from taxon_count in
+`prego_habitats.tsv:673` by `seed.py:1101`; the pair table has no pool field.
+Score is a PREGO evidence-channel score, not
 abundance, prevalence or an experimentally measured lake preference.
 
 Current [NCBI taxonomy](https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=319225)

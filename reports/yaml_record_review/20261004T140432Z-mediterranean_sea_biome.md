@@ -67,7 +67,9 @@ label plus the three related lexical variants. Current ENVO lists no synonym
 for this term; the displayed variants are PREGO-owned, not ENVO synonyms.
 
 All 25 rows at `prego_habitat_taxa.tsv:7500-7524` match emitted IDs, labels,
-scores, ranks and pool size. The first 13 have score 4 and environmental_samples;
+scores and ranks. Each emitted candidate_pool is separately derived from
+taxon_count 1,625 in `prego_habitats.tsv:49` by `seed.py:1101`; the pair table
+has no pool field. The first 13 pairs have score 4 and environmental_samples;
 the remaining 12 have score 3 and annotated_genomes_isolates, with rank 23
 also carrying environmental_samples. None has independent corroboration.
 The record-level channel union must not be assigned to every pair.
