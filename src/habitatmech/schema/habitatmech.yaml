@@ -162,10 +162,11 @@ classes:
 
       xrefs:
         description: >-
-          oboInOwl:hasDbXref — equivalent terms in other ontologies. Use only
-          for true equivalences; record broader/narrower relations as
-          `parent_habitats` or as a `source_attestations` entry with the
-          appropriate `mapping_predicate` instead.
+          oboInOwl:hasDbXref - related terms in other ontologies, including
+          non-identity context such as host taxa. An xref alone asserts neither
+          equivalence nor is-a. Record strictly broader habitats in
+          `parent_habitats`, and explicit source-mapping semantics in
+          `source_attestations` with the appropriate `mapping_predicate`.
         multivalued: true
         range: string
         pattern: "^[A-Za-z][A-Za-z0-9._-]*:[A-Za-z0-9._-]+$"
