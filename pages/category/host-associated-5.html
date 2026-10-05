@@ -30,6 +30,8 @@ barn. The category prefix is trimmed off it, and the identifier lives on each
 record's own page — the link already carries it.</p>
 <input class="searchbox" id="q" type="search" data-index="host-associated.json" data-total="1649" placeholder="Filter all 1649 records…" aria-label="Filter records">
 <p class="meta" id="count" aria-live="polite"></p>
+<button type="button" id="show-more" hidden>Show more matches</button>
+<button type="button" id="clear-filter" hidden>Clear filter</button>
 <div class="table-scroll" role="region" tabindex="0" aria-label="HOST_ASSOCIATED habitats">
 <table id="tbl">
   <caption>HOST_ASSOCIATED habitats</caption>
@@ -2140,14 +2142,18 @@ record's own page — the link already carries it.</p>
 </div>
 <nav class="pager" aria-label="Pages">
 <a href="host-associated.html">1</a> <a href="host-associated-2.html">2</a> <a href="host-associated-3.html">3</a> <a href="host-associated-4.html">4</a> <span class="pill plain" aria-current="page">5</span> <a href="host-associated-6.html">6</a> </nav>
-<p class="meta">Showing 300 of 1649. The filter searches all
+<p class="meta" id="unfiltered-count">Showing 300 of 1649. The filter searches all
 1649, not just this page.</p>
 <script>
 (function () {
   var box = document.getElementById('q'), out = document.getElementById('count');
   var body = document.querySelector('#tbl tbody');
   var original = body.innerHTML;
-  var index = null, pending = null;
+  var index = null, pending = null, resultLimit = 300;
+  var more = document.getElementById('show-more');
+  var clear = document.getElementById('clear-filter');
+  var pager = document.querySelector('.pager');
+  var unfilteredCount = document.getElementById('unfiltered-count');
 
   function esc(t) {
     return String(t).replace(/[&<>"]/g, function (c) {
@@ -2169,16 +2175,21 @@ record's own page — the link already carries it.</p>
   }
   function apply() {
     pending = null;
-    var raw = box.value.toLowerCase();
-    if (!raw) { body.innerHTML = original; out.textContent = ''; return; }
+    var raw = box.value.trim().toLowerCase();
+    if (pager) pager.hidden = !!raw;
+    if (unfilteredCount) unfilteredCount.hidden = !!raw;
+    clear.hidden = !raw;
+    if (!raw) { body.innerHTML = original; out.textContent = ''; more.hidden = true; return; }
     var slugged = raw.replace(/[^a-z0-9]+/g, '-');
     var hits = index.filter(function (r) {
       var k = (r[0] + ' ' + r[2] + ' ' + r[1] + ' ' + r[5]).toLowerCase();
       return k.indexOf(raw) !== -1 || k.indexOf(slugged) !== -1;
     });
-    draw(hits.slice(0, 500));
-    out.textContent = hits.length + ' of ' + box.getAttribute('data-total') +
-      ' match' + (hits.length > 500 ? ' (first 500 shown)' : '');
+    draw(hits.slice(0, resultLimit));
+    var visible = Math.min(resultLimit, hits.length);
+    more.hidden = visible >= hits.length;
+    out.textContent = (visible ? 'Showing 1–' + visible : 'Showing 0') +
+      ' of ' + hits.length + ' matching records (' + box.getAttribute('data-total') + ' in category)';
   }
   // When the page already holds every record there is nothing to fetch, and
   // fetching would make filtering depend on a network round trip that can fail
@@ -2194,17 +2205,20 @@ record's own page — the link already carries it.</p>
   }
 
   box.addEventListener('input', function () {
+    resultLimit = 300;
     if (index === null) {
       // Fetched once, on the first keystroke — a reader who only browses never
       // pays for it.
       out.textContent = 'loading…';
-      fetch(box.getAttribute('data-index')).then(function (r) { return r.json(); })
+      fetch(box.getAttribute('data-index')).then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
         .then(function (data) { index = data; apply(); })
         .catch(function () { out.textContent = 'filter unavailable'; });
       return;
     }
     if (pending === null) { pending = requestAnimationFrame(apply); }
   });
+  more.addEventListener('click', function () { resultLimit += 300; apply(); });
+  clear.addEventListener('click', function () { box.value = ''; resultLimit = 300; apply(); box.focus(); });
 })();
 </script>
 </main>
@@ -2215,11 +2229,11 @@ record's own page — the link already carries it.</p>
     on 2026-08-16. Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party terms apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Grounding is by lexical match against ontology labels except where a curation
     decision says otherwise; treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a citable
-    claim. <a href="../index.html">Current review counts</a>.
+    claim. <a href="../index.html">Current workflow counts</a>.
   </p>
 </footer>
 </div>

@@ -26,10 +26,10 @@ class PreparedTextMap:
     inputs: Path
     expected_bundle: str
 
-    def stage(self, site: Path) -> None:
+    def stage(self, site: Path, *, directory: str = "text-map") -> None:
         self.pipeline.stage_map(
             self.source,
-            site / "text-map",
+            site / directory,
             input_path=self.inputs,
             expected_bundle=self.expected_bundle,
         )

@@ -59,7 +59,8 @@ def test_record_pages_carry_the_unreviewed_warning(repo_root):
     assert pages, "no record pages rendered"
     for path in pages[:50]:
         text = _footer(path)
-        assert "machine-generated and unreviewed" in text
+        assert "Workflow status does not establish human review" in text
+        assert "SEEDED as a starting point, not a citable claim" in text
         assert not re.search(r"(?<![\d]) of \d+ records", text), (
             f"{path.name}: footer has an unfilled count — stats were read before "
             "they were computed"
