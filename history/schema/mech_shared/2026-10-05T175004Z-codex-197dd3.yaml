@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: schema
+  path: src/habitatmech/schema/mech_shared.yaml
+  slug: mech_shared
+session:
+  id: 2026-10-05T175004Z-codex-197dd3
+  timestamp: '2026-10-05T17:50:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-6
+    agent_tool: codex
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - CrossCorpusLink
+  summary: Re-pin governed shared schema to the canonical cross-corpus link class
+  details: Copied the byte-identical shared schema from canonical claw commit 34fa72446c7c8cbcdf0ac084d604d4c8ea0e2c5d
+    and updated the vendored pin and local schema hash assertion. This additive shared class
+    does not add a record slot or change any habitat record. RepositorySettings and the standalone
+    artifact checker verify identity and all 18 governed artifacts against local immutable
+    canonical bytes. Focused schema tests passed (4 passed, 2 corpus-dependent skips in the
+    sparse review clone). Public provenance verification remains pending approved publication
+    of the canonical commit.
