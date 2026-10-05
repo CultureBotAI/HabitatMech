@@ -1,25 +1,39 @@
 identifier: habitatmech:GOLD.f3dc60ff11
 label: Glacier meltwater
 habitat_category: AQUATIC
-grounding_status: UNGROUNDED
-mapping_status: SEEDED
+grounding_status: NARROW
+mapping_status: REVIEWED
 parent_habitats:
-- ENVO:01001511
+- ENVO:01000722
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7784
   source_label: Glacier meltwater
   source_path: Environmental > Aquatic > Freshwater > Ice > Glacier meltwater
+  mapping_predicate: skos:narrowMatch
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.f3dc60ff11)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-03T00:00:00Z'
+  curator: codex-gpt-5
+  action: GROUND_AS_PARENT
+  changes: 'ENVO:01000722 ''meltwater'' attached as a parent, not adopted as the identity
+    (NARROW). Issue #1223: glacier-origin meltwater is narrower than ENVO:01000722
+    meltwater, whose verified definition includes liquid released by melting glacial
+    ice as well as other ice and snow. GOLD node 7784 and the six-sample, one-study
+    medium annotation corroborate this reading; broad lake-biome and local glacial-lake
+    slots remain context. Preserve the minted identity and distinct source counters,
+    and exclude the frozen-precursor GOLD parent separately. Do not merge the separate
+    Glacier > Meltwater source. Path: Environmental > Aquatic > Freshwater > Ice >
+    Glacier meltwater (source concept habitatmech:GOLD.f3dc60ff11)'
+- timestamp: '2026-10-03T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:01001511 for habitatmech:GOLD.f3dc60ff11
+    (Environmental > Aquatic > Freshwater > Ice > Glacier meltwater). Issue #1223:
+    glacier meltwater is liquid released by melting glacial ice, not a subclass of
+    its frozen precursor. Preserve the independently curated broader ENVO meltwater
+    parent and exact source path; the six-sample one-study medium annotation corroborates
+    meltwater without making it equivalent to all meltwater.'

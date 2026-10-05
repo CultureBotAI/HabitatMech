@@ -1,0 +1,165 @@
+"""Source-context exclusions must never erase independent hierarchy evidence."""
+
+from __future__ import annotations
+
+import csv
+from dataclasses import asdict, replace
+
+import pytest
+
+from habitatmech import seed
+from habitatmech.curate.gold_parent_exclusions import (
+    GoldParentExclusion,
+    GoldParentExclusionError,
+    load_gold_parent_exclusions,
+)
+
+PATH = "Environmental > Aquatic > Freshwater"
+EXCLUSION = GoldParentExclusion(
+    seed.mint("GOLD", PATH), PATH, "ENVO:00002030", "test", "2026-10-03",
+    "Source context is not a strictly broader material class.",
+)
+
+
+def write_table(path, rows):
+    with path.open("w", newline="", encoding="utf-8") as fh:
+        writer = csv.DictWriter(fh, fieldnames=list(asdict(EXCLUSION)), delimiter="\t")
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def test_loader_round_trip_and_required_file(tmp_path):
+    path = tmp_path / "exclusions.tsv"
+    with pytest.raises(FileNotFoundError):
+        load_gold_parent_exclusions(path)
+    write_table(path, [asdict(EXCLUSION)])
+    assert load_gold_parent_exclusions(path) == {EXCLUSION.identifier: EXCLUSION}
+
+
+@pytest.mark.parametrize("field,value", [
+    ("identifier", "ENVO:00002011"), ("parent_id", "not a curie"),
+    ("source_path", ""), ("curator", ""), ("notes", "too short"),
+    ("date", "20261003"), ("date", "2026-02-30"),
+])
+def test_loader_rejects_invalid_values(tmp_path, field, value):
+    row = asdict(EXCLUSION)
+    row[field] = value
+    path = tmp_path / "exclusions.tsv"
+    write_table(path, [row])
+    with pytest.raises(GoldParentExclusionError):
+        load_gold_parent_exclusions(path)
+
+
+@pytest.mark.parametrize("contents", [
+    "identifier\tnotes\n", "\t".join(asdict(EXCLUSION)) + "\n\t\n",
+    "\t".join(asdict(EXCLUSION)) + "\n" + "\t".join(asdict(EXCLUSION).values()) + "\textra\n",
+])
+def test_loader_rejects_malformed_shape(tmp_path, contents):
+    path = tmp_path / "exclusions.tsv"
+    path.write_text(contents, encoding="utf-8")
+    with pytest.raises(GoldParentExclusionError):
+        load_gold_parent_exclusions(path)
+
+
+def test_loader_rejects_duplicates(tmp_path):
+    path = tmp_path / "exclusions.tsv"
+    write_table(path, [asdict(EXCLUSION), asdict(EXCLUSION)])
+    with pytest.raises(GoldParentExclusionError, match="duplicate"):
+        load_gold_parent_exclusions(path)
+
+
+def gold_rows():
+    rows = []
+    for path in ["Environmental", "Environmental > Aquatic", PATH, PATH + " > Sediment"]:
+        levels = path.split(" > ")
+        row = {key: levels[i] if i < len(levels) else "" for i, key in enumerate(seed.GOLD_LEVELS)}
+        row.update(canonical_path=path, leaf_label=levels[-1], depth=str(len(levels)),
+                   gold_node_ids="gold.ecosystem:1", organism_count="2")
+        rows.append(row)
+    return rows
+
+
+def ontology(edges=()):
+    terms = [{"term_id": term, "ontology": "ENVO", "label": label, "synonyms": ""}
+             for term, label in [("ENVO:00002011", "Freshwater"),
+                                 ("ENVO:00002030", "Aquatic")]]
+    return seed.OntologyIndex(terms, list(edges))
+
+
+@pytest.mark.parametrize("independent_parent", [False, True])
+def test_only_source_contribution_is_excluded(independent_parent):
+    edges = ([{"subject": "ENVO:00002011", "predicate": "rdfs:subClassOf",
+               "object": EXCLUSION.parent_id}] if independent_parent else [])
+    store = seed.ConceptStore(ontology(edges))
+    resolved = seed.ingest_gold(store, gold_rows(), {}, seed.Counter(),
+                                parent_exclusions={EXCLUSION.identifier: EXCLUSION})
+    child = store.concepts[resolved[PATH]]
+    assert (EXCLUSION.parent_id in child.parents) is independent_parent
+    assert child.attestations[0]["source_path"] == PATH
+    assert child.attestations[0]["assertion_count"] == 2
+    assert child.identifier in store.concepts[resolved[PATH + " > Sediment"]].parents
+    doc = seed.build_document(child)
+    assert doc["mapping_status"] == "SEEDED"
+    assert doc["grounding_status"] == "EXACT"
+    assert doc["curation_history"][-1]["action"] == "SOURCE_PARENT_EXCLUDED"
+    assert doc == seed.build_document(child)
+
+
+@pytest.mark.parametrize("exclusion", [
+    replace(EXCLUSION, parent_id="ENVO:99999999"),
+    replace(EXCLUSION, source_path="Environmental > Other"),
+    replace(EXCLUSION, identifier="habitatmech:GOLD.0000000000"),
+    replace(EXCLUSION, identifier=seed.mint("GOLD", "Environmental"), source_path="Environmental"),
+])
+def test_stale_or_unmatched_exclusion_stops_ingest(exclusion):
+    with pytest.raises(GoldParentExclusionError, match="stale|unmatched"):
+        seed.ingest_gold(seed.ConceptStore(ontology()), gold_rows(), {}, seed.Counter(),
+                         parent_exclusions={exclusion.identifier: exclusion})
+
+
+def test_real_corpus_changes_only_ten_hierarchies_and_audit_events(tmp_path, monkeypatch):
+    after = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    empty = tmp_path / "empty.tsv"
+    write_table(empty, [])
+    monkeypatch.setattr(seed, "GOLD_PARENT_EXCLUSIONS_PATH", empty)
+    before = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    expected = {
+        "habitatmech:GOLD.88e2b29307": "ENVO:00001999",
+        "habitatmech:GOLD.3426da4c96": "habitatmech:GOLD.ce244e62cd",
+        "ENVO:00002011": "ENVO:00002030",
+        "ENVO:01001511": "ENVO:00002011",
+        "ENVO:00000021": "ENVO:00002011",
+        "ENVO:01000297": "ENVO:00002011",
+        "ENVO:00000488": "ENVO:01001511",
+        "habitatmech:GOLD.6faa98a0aa": "ENVO:00002011",
+        "habitatmech:GOLD.0c89489e1b": "ENVO:01001511",
+        "habitatmech:GOLD.f3dc60ff11": "ENVO:01001511",
+    }
+    assert after.keys() == before.keys()
+    assert {key for key in before if before[key] != after[key]} == expected.keys()
+    for key, removed in expected.items():
+        old, new = before[key], after[key]
+        assert set(new.get("parent_habitats", [])) == set(old["parent_habitats"]) - {removed}
+        assert new["curation_history"][:-1] == old["curation_history"]
+        for field in (old.keys() | new.keys()) - {"parent_habitats", "curation_history"}:
+            assert new.get(field) == old.get(field), (key, field)
+    assert after["ENVO:00002011"]["parent_habitats"] == ["ENVO:00002006"]
+    assert after["habitatmech:GOLD.3426da4c96"]["parent_habitats"] == ["ENVO:01001869"]
+    assert after["ENVO:01001511"]["parent_habitats"] == ["ENVO:01000277", "ENVO:02000140"]
+    assert after["ENVO:00000021"]["parent_habitats"] == ["ENVO:00000020", "ENVO:01001320"]
+    assert after["ENVO:01000297"]["parent_habitats"] == ["ENVO:00000022", "ENVO:03605007"]
+    assert after["ENVO:00000488"]["parent_habitats"] == ["ENVO:00000020"]
+    for identifier in ("habitatmech:GOLD.6faa98a0aa", "habitatmech:GOLD.0c89489e1b"):
+        assert after[identifier]["parent_habitats"] == ["ENVO:00000133"]
+        assert after[identifier]["grounding_status"] == "NARROW"
+        assert after[identifier]["mapping_status"] == "SEEDED"
+    meltwater = after["habitatmech:GOLD.f3dc60ff11"]
+    assert meltwater["parent_habitats"] == ["ENVO:01000722"]
+    assert meltwater["grounding_status"] == "NARROW"
+    assert meltwater["mapping_status"] == "REVIEWED"
+    assert meltwater["source_attestations"] == [{
+        "source": "GOLD", "source_id": "gold.ecosystem:7784",
+        "source_label": "Glacier meltwater",
+        "source_path": "Environmental > Aquatic > Freshwater > Ice > Glacier meltwater",
+        "mapping_predicate": "skos:narrowMatch",
+    }]

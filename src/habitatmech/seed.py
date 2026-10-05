@@ -96,6 +96,11 @@ from habitatmech.curate.definitions import (  # noqa: E402
     validate_curated_definitions,
 )
 from habitatmech.curate.external_xrefs import load_external_xrefs  # noqa: E402
+from habitatmech.curate.gold_parent_exclusions import (  # noqa: E402
+    GoldParentExclusion,
+    GoldParentExclusionError,
+    load_gold_parent_exclusions,
+)
 from habitatmech.validation.write_validated import (  # noqa: E402
     ValidationFailedError,
     write_validated_habitat,
@@ -106,6 +111,7 @@ HABITATS_DIR = REPO_ROOT / "data" / "habitats"
 DECISIONS_PATH = REPO_ROOT / "curation" / "decisions.tsv"
 CURATED_DEFINITIONS_PATH = REPO_ROOT / "curation" / "term_requests.tsv"
 EXTERNAL_XREFS_PATH = REPO_ROOT / "curation" / "external_xrefs.tsv"
+GOLD_PARENT_EXCLUSIONS_PATH = REPO_ROOT / "curation" / "gold_parent_exclusions.tsv"
 
 GOLD_LEVELS = ["ecosystem", "ecosystem_category", "ecosystem_type", "ecosystem_subtype", "specific_ecosystem"]
 
@@ -357,6 +363,7 @@ class Concept:
     # curators on different days (#94).
     decisions_applied: list[Decision] = field(default_factory=list)
     definitions_applied: list[CuratedDefinition] = field(default_factory=list)
+    gold_parent_exclusions_applied: list[GoldParentExclusion] = field(default_factory=list)
     causal_graphs: list[dict[str, Any]] = field(default_factory=list)
     causal_graph_events: list[dict[str, Any]] = field(default_factory=list)
     _grounding_rank_seen: int = 0
@@ -829,6 +836,7 @@ def ingest_gold(
     routes: Counter,
     decisions: dict[str, Decision] | None = None,
     stats: Counter | None = None,
+    parent_exclusions: dict[str, GoldParentExclusion] | None = None,
 ) -> dict[str, str]:
     claimants = leaf_claimants(rows)
     composed_claim = composed_claimants(rows)
@@ -895,7 +903,10 @@ def ingest_gold(
             attestation["assertion_unit"] = "ORGANISM"
         concept.attestations.append(attestation)
 
-    # Second pass: link each GOLD concept to the concept of its parent path.
+    # Exclude only the source-path contribution. Removing a parent from the
+    # accumulated set would also erase independent ontology/curator evidence.
+    parent_exclusions = parent_exclusions or {}
+    applied_exclusions = set()
     for row in rows:
         levels = [row[lvl] for lvl in GOLD_LEVELS if row[lvl]]
         if len(levels) < 2:
@@ -903,8 +914,22 @@ def ingest_gold(
         parent_path = " > ".join(levels[:-1])
         parent_id = path_to_identifier.get(parent_path)
         child_id = path_to_identifier[row["canonical_path"]]
+        source_id = mint("GOLD", row["canonical_path"])
+        exclusion = parent_exclusions.get(source_id)
+        if exclusion is not None:
+            if (exclusion.source_path != row["canonical_path"]
+                    or exclusion.parent_id != parent_id or parent_id == child_id):
+                raise GoldParentExclusionError(
+                    f"stale GOLD parent exclusion {source_id}: path or resolved parent changed"
+                )
+            store.concepts[child_id].gold_parent_exclusions_applied.append(exclusion)
+            applied_exclusions.add(source_id)
+            continue
         if parent_id and parent_id != child_id:
             store.concepts[child_id].parents.add(parent_id)
+    unmatched = set(parent_exclusions) - applied_exclusions
+    if unmatched:
+        raise GoldParentExclusionError(f"unmatched GOLD parent exclusions: {sorted(unmatched)}")
     return path_to_identifier
 
 
@@ -1478,6 +1503,19 @@ def build_document(concept: Concept) -> dict[str, Any]:
             ),
             timestamp=f"{definition.date}T00:00:00Z",
         )
+    for exclusion in sorted(
+        concept.gold_parent_exclusions_applied, key=lambda e: (e.date, e.identifier)
+    ):
+        record_curation_event(
+            doc,
+            curator=exclusion.curator,
+            action="SOURCE_PARENT_EXCLUDED",
+            changes=(
+                f"Excluded GOLD source-path parent contribution {exclusion.parent_id} "
+                f"for {exclusion.identifier} ({exclusion.source_path}). {exclusion.notes}"
+            ),
+            timestamp=f"{exclusion.date}T00:00:00Z",
+        )
     if concept.causal_graph_events:
         doc.setdefault("curation_history", []).extend(
             copy.deepcopy(concept.causal_graph_events)
@@ -1856,7 +1894,9 @@ def build_corpus(
     _SAME_AS_TARGETS.update(resolve_same_as(decisions))
     stats["curation_same_as_merges"] = len(_SAME_AS_TARGETS)
 
-    ingest_gold(store, gold_rows, mapping, routes, decisions, stats)
+    parent_exclusions = load_gold_parent_exclusions(GOLD_PARENT_EXCLUSIONS_PATH)
+    ingest_gold(store, gold_rows, mapping, routes, decisions, stats, parent_exclusions)
+    stats["curation_gold_parent_exclusions_loaded"] = len(parent_exclusions)
     ingest_bacdive(store, bacdive_rows, mapping, routes, decisions,
                    taxa_rows=read_tsv("bacdive_source_taxa.tsv"), stats=stats)
     ingest_prego(store, prego_rows, prego_taxa, routes, decisions)

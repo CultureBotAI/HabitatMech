@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: fresh_water
+session:
+  id: 2026-10-03T083717Z-codex-0513f8
+  timestamp: '2026-10-03T08:37:17Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1215
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Preserve fresh-water material identity without the GOLD biome parent
+  details: 'Checked committed and live ENVO definitions and parents: ENVO:00002011 is liquid
+    water, not aquatic biome ENVO:00002030. Excluded only the GOLD source-path contribution
+    keyed by habitatmech:GOLD.ad12f0169a. Retained liquid-water parent ENVO:00002006, all
+    four source attestations, source counts and units, nine parameters, 49 taxa, and the osmotic-response
+    graph. Dry-run seeding and forced canary succeeded. Regression comparison of entire corpora
+    confirms only three targeted hierarchies and deterministic audit events change, with all
+    other record fields unchanged.'

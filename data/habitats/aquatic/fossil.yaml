@@ -3,8 +3,6 @@ label: Fossil
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:00001999
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3766
@@ -23,3 +21,11 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-03T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00001999 for habitatmech:GOLD.88e2b29307
+    (Environmental > Aquatic > Marine > Fossil). Issue #1215: GOLD places Fossil in
+    marine context, but fossil/remains substrate is not a marine water body. Its Whale
+    fall child does not establish mineralized fossil material. Preserve the source
+    path without an is-a edge; leave identity and definition unresolved.'

@@ -8,7 +8,6 @@ grounding_status: EXACT
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00000020
-- ENVO:01001511
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4060
@@ -22,3 +21,12 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-03T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:01001511 for habitatmech:GOLD.a5e461ce2b
+    (Environmental > Aquatic > Freshwater > Ice > Glacial lake). Issue #1223: ENVO:00000488
+    glacial lake is a meltwater-dominated lake in a glacially eroded depression, not
+    frozen-water material. Preserve the independent ENVO lake parent, exact identity,
+    definition, and 17 ORGANISM assertions; GOLD Ice denotes source context rather
+    than is-a.'
