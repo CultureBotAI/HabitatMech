@@ -51,7 +51,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 <h2>Broader habitats</h2>
 <ul class="plain">
-  <li><a href="../habitats/saline-lake-envo-00000019.html">saline lake</a>      <code class="curie">ENVO:00000019</code></li>
   <li><a href="http://purl.obolibrary.org/obo/ENVO_01000293">ice mass</a>      <code class="curie">ENVO:01000293</code></li>
 </ul>
 
@@ -70,6 +69,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">REVIEW</span>
     <span class="meta">2026-08-16 · claude-opus-5</span>
     <p>Reviewed and endorsed the seeder&#39;s own resolution. Risky-grounding review (#12): the flag is lexical: the term&#39;s label spells out a qualifier that the GOLD path supplies positionally rather than in the leaf. The path pins the sense, and it is the term&#39;s. (source concept habitatmech:GOLD.d023ed65ca)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-06 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution ENVO:00000019 for habitatmech:GOLD.d023ed65ca (Environmental &gt; Aquatic &gt; Non-marine Saline and Alkaline &gt; Saline lake &gt; Ice core). ITEM hierarchy assessment (#1590): official ENVO a2455d1a77e46bb8a664d65a157166b539269042 defines ENVO:01001530 as a drilled ice mass, whereas ENVO:00000019 denotes a whole saline lake. Lake context is not a strictly broader class of the core material. Suppress only this GOLD source-parent contribution; preserve the independent ENVO:01000293 ice-mass parent, GOLD7982, full source path, zero-count omission, CLOSE/skos:closeMatch and existing ITEM review provenance. This correction does not establish the source&#39;s multi-year snow-accumulation history or settle its identity; typed broad synonyms remain tracked in #1249.</p>
   </li>
 </ol>
 

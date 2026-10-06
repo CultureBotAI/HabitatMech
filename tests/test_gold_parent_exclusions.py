@@ -411,6 +411,43 @@ def test_volcanic_exclusion_changes_only_context_parent_and_audit(monkeypatch):
     }
 
 
+def test_water_ice_core_exclusion_changes_only_context_parent_and_audit(monkeypatch):
+    source = "habitatmech:GOLD.d023ed65ca"
+    identifier = "ENVO:01001530"
+    after = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    exclusions = {
+        key: row for key, row in load_gold_parent_exclusions(
+            seed.GOLD_PARENT_EXCLUSIONS_PATH
+        ).items() if key != source
+    }
+    monkeypatch.setattr(seed, "load_gold_parent_exclusions", lambda path: exclusions)
+    before = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    assert before.keys() == after.keys()
+    assert {key for key in before if before[key] != after[key]} == {identifier}
+    old, new = before[identifier], after[identifier]
+    assert old["parent_habitats"] == ["ENVO:00000019", "ENVO:01000293"]
+    assert new["parent_habitats"] == ["ENVO:01000293"]
+    assert new["curation_history"][:-1] == old["curation_history"]
+    event = new["curation_history"][-1]
+    assert event["action"] == "SOURCE_PARENT_EXCLUDED"
+    assert event["timestamp"] == "2026-10-06T00:00:00Z"
+    assert event["curator"] == "codex-gpt-5"
+    for field in (old.keys() | new.keys()) - {"parent_habitats", "curation_history"}:
+        assert new.get(field) == old.get(field), field
+    assert new["grounding_status"] == "CLOSE"
+    assert new["mapping_status"] == "REVIEWED"
+    assert new["source_attestations"] == [{
+        "source": "GOLD",
+        "source_id": "gold.ecosystem:7982",
+        "source_label": "Ice core",
+        "source_path": (
+            "Environmental > Aquatic > Non-marine Saline and Alkaline > Saline lake > Ice core"
+        ),
+        "mapping_predicate": "skos:closeMatch",
+    }]
+    assert seed.mint("GOLD", new["source_attestations"][0]["source_path"]) == source
+
+
 def test_thalassic_and_thrombolite_curation_has_exact_scope(monkeypatch):
     thalassic = "habitatmech:GOLD.3fece6dbf7"
     quality = "ENVO:01001667"
