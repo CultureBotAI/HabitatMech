@@ -18,7 +18,6 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: ENVO
 parent_habitats:
-- ENVO:00000019
 - ENVO:01000293
 source_attestations:
 - source: GOLD
@@ -39,3 +38,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'
+- timestamp: '2026-10-06T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00000019 for habitatmech:GOLD.d023ed65ca
+    (Environmental > Aquatic > Non-marine Saline and Alkaline > Saline lake > Ice
+    core). ITEM hierarchy assessment (#1590): official ENVO a2455d1a77e46bb8a664d65a157166b539269042
+    defines ENVO:01001530 as a drilled ice mass, whereas ENVO:00000019 denotes a whole
+    saline lake. Lake context is not a strictly broader class of the core material.
+    Suppress only this GOLD source-parent contribution; preserve the independent ENVO:01000293
+    ice-mass parent, GOLD7982, full source path, zero-count omission, CLOSE/skos:closeMatch
+    and existing ITEM review provenance. This correction does not establish the source''s
+    multi-year snow-accumulation history or settle its identity; typed broad synonyms
+    remain tracked in #1249.'
