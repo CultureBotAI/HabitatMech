@@ -324,6 +324,55 @@ def test_subtidal_supratidal_swamp_curation_has_exact_scope(monkeypatch):
     assert len(after[swamp]["characteristic_taxa"]) == 26
 
 
+def test_intertidal_pool_and_bush_exclusions_have_exact_scope(monkeypatch):
+    zone = "habitatmech:GOLD.115edc36f8"
+    pool = "habitatmech:GOLD.d39a2ed099"
+    bush = "habitatmech:GOLD.b36274f0b9"
+    removed = {
+        zone: "ENVO:00001999", pool: "ENVO:00002011", bush: "ENVO:00000215",
+    }
+    after = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    exclusions = {
+        key: row for key, row in load_gold_parent_exclusions(
+            seed.GOLD_PARENT_EXCLUSIONS_PATH
+        ).items() if key not in removed
+    }
+    monkeypatch.setattr(seed, "load_gold_parent_exclusions", lambda path: exclusions)
+    before = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    assert before.keys() == after.keys()
+    assert {key for key in before if before[key] != after[key]} == set(removed)
+    for identifier, parent in removed.items():
+        old, new = before[identifier], after[identifier]
+        assert parent in old["parent_habitats"]
+        assert new.get("parent_habitats", []) == [
+            value for value in old["parent_habitats"] if value != parent
+        ]
+        assert new["curation_history"][:-1] == old["curation_history"]
+        assert new["curation_history"][-1]["action"] == "SOURCE_PARENT_EXCLUDED"
+        for field in (old.keys() | new.keys()) - {"parent_habitats", "curation_history"}:
+            assert new.get(field) == old.get(field), (identifier, field)
+        assert new["mapping_status"] == "SEEDED"
+    assert after[zone]["parent_habitats"] == ["ENVO:00000316"]
+    assert after[zone]["grounding_status"] == "NARROW"
+    assert after[zone]["source_attestations"][0]["assertion_count"] == 77
+    assert after[zone]["source_attestations"][0]["assertion_unit"] == "ORGANISM"
+    assert after[zone]["source_attestations"][0]["source_id"] == "gold.ecosystem:3770"
+    assert "2 GOLD ecosystem node ids" in after[zone]["source_attestations"][0]["notes"]
+    for identifier, node in ((pool, "gold.ecosystem:8268"), (bush, "gold.ecosystem:5751")):
+        assert after[identifier]["grounding_status"] == "UNGROUNDED"
+        attestation = after[identifier]["source_attestations"][0]
+        assert attestation["source_id"] == node
+        assert "assertion_count" not in attestation
+        assert "assertion_unit" not in attestation
+        assert "mapping_predicate" not in attestation
+    assert "2 GOLD ecosystem node ids" in after[pool]["source_attestations"][0]["notes"]
+    assert zone in after["ENVO:00000241"]["parent_habitats"]
+    assert "ENVO:00000192" in after["ENVO:00000241"]["parent_habitats"]
+    # This child is unchanged, not scientifically endorsed by the parent correction.
+    assert pool in after["habitatmech:GOLD.943a41f487"]["parent_habitats"]
+    assert after["habitatmech:GOLD.d29a0aa94b"] == before["habitatmech:GOLD.d29a0aa94b"]
+
+
 def test_thalassic_and_thrombolite_curation_has_exact_scope(monkeypatch):
     thalassic = "habitatmech:GOLD.3fece6dbf7"
     quality = "ENVO:01001667"

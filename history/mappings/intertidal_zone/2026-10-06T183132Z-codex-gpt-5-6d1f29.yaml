@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: intertidal_zone
+session:
+  id: 2026-10-06T183132Z-codex-gpt-5-6d1f29
+  timestamp: '2026-10-06T18:31:32Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1253
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1575
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude marine-water-body context from GOLD intertidal zone
+  details: 'Reviewed the complete source record and pinned official ENVO a2455d1a77e46bb8a664d65a157166b539269042
+    plus NOAA intertidal-zone account. GOLD.115edc36f8 denotes a shore zone, not the lentic
+    whole water body ENVO:00001999. Added only the exact-path guarded exclusion; retained
+    ENVO:00000316, source nodes 3770/4013, path, 77 ORGANISM assertions and NARROW/SEEDED
+    state. Dry seed and complete forced canary inspected. Added full-corpus before/after regression
+    limiting change to three reviewed parents and append-only events. Semantic-map/site regeneration
+    and full QC remain required before merge. Existing source-mapping endpoint issue #1398
+    and draft #1218 remain untouched.'

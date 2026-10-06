@@ -3,8 +3,6 @@ label: Transient pool
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:00002011
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8268
@@ -24,3 +22,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-06T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00002011 for habitatmech:GOLD.d39a2ed099
+    (Environmental > Aquatic > Freshwater > Transient pool). ITEM hierarchy assessment
+    (#1576): a transient water body or its periodically filled basin is not the fresh-water
+    material ENVO:00002011. Official ENVO a2455d1a77e46bb8a664d65a157166b539269042
+    and EPA seasonal-pool manual EPA/903/B-05/001 (https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1002R0O.TXT)
+    support the distinction. Exclude only the GOLD material-context contribution;
+    preserve nodes 8268/8269, collapse note, full path, minted identity, zero-count
+    omission and CLASS/SEEDED status. No water-body versus basin genus is guessed;
+    preserving the separate microbial-mat child does not endorse its unresolved context
+    edge.'

@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00000316
-- ENVO:00001999
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3770
@@ -20,3 +19,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-06T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00001999 for habitatmech:GOLD.115edc36f8
+    (Environmental > Aquatic > Marine > Intertidal zone). ITEM hierarchy assessment
+    (#1253): NOAA (https://oceanservice.noaa.gov/facts/intertidal-zone.html) describes
+    the tidal shore zone, while official ENVO a2455d1a77e46bb8a664d65a157166b539269042
+    defines ENVO:00001999 as a lentic marine water body. The zone is not a type of
+    that whole water body. Exclude only this GOLD context contribution; preserve the
+    independent ENVO:00000316 parent, nodes 3770/4013, path, 77 ORGANISM assertions
+    and NARROW/SEEDED status. Preserve the tidal-mudflat shore-zone edge. Source-mapping
+    endpoint semantics remain separately tracked in #1398.'
