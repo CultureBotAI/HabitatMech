@@ -3,8 +3,6 @@ label: Well sediment
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.22a80cbd14
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5959
@@ -25,3 +23,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-06T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.22a80cbd14
+    for habitatmech:GOLD.71a5958fdc (Environmental > Aquatic > Deep subsurface > Groundwater
+    > Well sediment). ITEM hierarchy assessment (#1596): well-associated sediment
+    is not a kind of the groundwater context in its source path. Official ENVO a2455d1a77e46bb8a664d65a157166b539269042
+    distinguishes deposited particulate material ENVO:00002007 from pore-space water
+    ENVO:01001004; the exact GOLD triad separately identifies aquifer, well and sediment
+    roles. Exclude only this source-context parent, preserving GOLD5959, its path,
+    one ORGANISM assertion, mint, category and CLASS/SEEDED identity provenance. No
+    replacement genus, definition, exact identity or per-sample property is asserted;
+    study-to-BioSample scope remains unrecovered.'
