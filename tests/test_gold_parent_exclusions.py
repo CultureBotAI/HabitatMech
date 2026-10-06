@@ -79,10 +79,11 @@ def gold_rows():
     return rows
 
 
-def ontology(edges=()):
+def ontology(edges=(), freshwater_synonyms=""):
     terms = [{"term_id": term, "ontology": "ENVO", "label": label, "synonyms": ""}
              for term, label in [("ENVO:00002011", "Freshwater"),
                                  ("ENVO:00002030", "Aquatic")]]
+    terms[0]["synonyms"] = freshwater_synonyms
     return seed.OntologyIndex(terms, list(edges))
 
 
@@ -103,6 +104,58 @@ def test_only_source_contribution_is_excluded(independent_parent):
     assert doc["grounding_status"] == "EXACT"
     assert doc["curation_history"][-1]["action"] == "SOURCE_PARENT_EXCLUDED"
     assert doc == seed.build_document(child)
+
+
+def test_independent_curator_parent_is_preserved():
+    decision = seed.Decision(
+        EXCLUSION.identifier, "GROUND_AS_PARENT", EXCLUSION.parent_id, "Aquatic",
+        "NARROW", "test", "2026-10-03", "Independent curator parent contribution.",
+    )
+    store = seed.ConceptStore(ontology())
+    resolved = seed.ingest_gold(
+        store, gold_rows(), {}, seed.Counter(),
+        decisions={decision.identifier: decision},
+        parent_exclusions={EXCLUSION.identifier: EXCLUSION},
+    )
+    child = store.concepts[resolved[PATH]]
+    assert child.parents == {EXCLUSION.parent_id}
+    assert child.gold_parent_exclusions_applied == [EXCLUSION]
+    assert seed.build_document(child)["mapping_status"] == "REVIEWED"
+
+
+@pytest.mark.parametrize("reverse_rows", [False, True])
+def test_independent_gold_source_parent_is_preserved(reverse_rows):
+    rows = gold_rows()
+    other_path = "Environmental > Aquatic > Springwater"
+    rows.append({
+        **rows[2], "canonical_path": other_path, "leaf_label": "Springwater",
+        "ecosystem_type": "Springwater", "gold_node_ids": "gold.ecosystem:2",
+    })
+    if reverse_rows:
+        rows.reverse()
+    store = seed.ConceptStore(ontology(freshwater_synonyms="Springwater"))
+    resolved = seed.ingest_gold(
+        store, rows, {}, seed.Counter(),
+        parent_exclusions={EXCLUSION.identifier: EXCLUSION},
+    )
+    assert resolved[PATH] == resolved[other_path]
+    child = store.concepts[resolved[PATH]]
+    assert child.parents == {EXCLUSION.parent_id}
+    assert {a["source_path"] for a in child.attestations} == {PATH, other_path}
+    assert child.gold_parent_exclusions_applied == [EXCLUSION]
+
+
+def test_identity_merge_makes_existing_exclusion_stale():
+    decision = seed.Decision(
+        EXCLUSION.identifier, "GROUND", EXCLUSION.parent_id, "Aquatic", "EXACT",
+        "test", "2026-10-03", "Synthetic identity change invalidates the old exclusion.",
+    )
+    with pytest.raises(GoldParentExclusionError, match="stale"):
+        seed.ingest_gold(
+            seed.ConceptStore(ontology()), gold_rows(), {}, seed.Counter(),
+            decisions={decision.identifier: decision},
+            parent_exclusions={EXCLUSION.identifier: EXCLUSION},
+        )
 
 
 @pytest.mark.parametrize("exclusion", [
