@@ -322,3 +322,77 @@ def test_subtidal_supratidal_swamp_curation_has_exact_scope(monkeypatch):
     assert after[supra]["source_attestations"][0]["mapping_predicate"] == "skos:narrowMatch"
     assert len(after[swamp]["source_attestations"]) == 3
     assert len(after[swamp]["characteristic_taxa"]) == 26
+
+
+def test_thalassic_and_thrombolite_curation_has_exact_scope(monkeypatch):
+    thalassic = "habitatmech:GOLD.3fece6dbf7"
+    quality = "ENVO:01001667"
+    marine = "habitatmech:GOLD.7937011195"
+    microbialite = "habitatmech:GOLD.e53e2c6e8e"
+    freshwater = "habitatmech:GOLD.b8b289be4a"
+    targets = {thalassic, marine, microbialite}
+    after = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    decisions = seed.load_decisions(seed.DECISIONS_PATH)
+    decision = decisions.pop(thalassic)
+    assert decision.review_depth == "ITEM"
+    assert decision.decision == "CONFIRM_UNGROUNDED"
+    assert decision.object_id == quality
+    assert decision.relation == "xref"
+    exclusions = {
+        key: row for key, row in load_gold_parent_exclusions(
+            seed.GOLD_PARENT_EXCLUSIONS_PATH
+        ).items() if key not in targets
+    }
+    monkeypatch.setattr(seed, "load_decisions", lambda path: decisions)
+    monkeypatch.setattr(seed, "load_gold_parent_exclusions", lambda path: exclusions)
+    before = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+
+    assert before.keys() - after.keys() == {quality}
+    assert after.keys() - before.keys() == {thalassic}
+    assert {key for key in before.keys() & after.keys()
+            if before[key] != after[key]} == {marine, microbialite}
+    assert after[freshwater] == before[freshwater]
+    assert after[freshwater]["parent_habitats"] == [microbialite]
+    assert before[microbialite]["parent_habitats"] == ["ENVO:00002011", "ENVO:03600064"]
+    assert after[microbialite]["parent_habitats"] == ["ENVO:03600064"]
+    assert before[marine]["parent_habitats"] == ["habitatmech:GOLD.115edc36f8"]
+    assert not after[marine].get("parent_habitats")
+    for identifier in (marine, microbialite):
+        old, new = before[identifier], after[identifier]
+        assert new["curation_history"][:-1] == old["curation_history"]
+        for field in (old.keys() | new.keys()) - {"parent_habitats", "curation_history"}:
+            assert new.get(field) == old.get(field), (identifier, field)
+        assert "assertion_count" not in new["source_attestations"][0]
+        assert "assertion_unit" not in new["source_attestations"][0]
+    assert after[marine]["mapping_status"] == "SEEDED"
+    assert after[microbialite]["mapping_status"] == "REVIEWED"
+    assert "2 GOLD ecosystem node ids" in after[microbialite]["source_attestations"][0]["notes"]
+
+    old, new = before[quality], after[thalassic]
+    assert old["grounding_status"] == "EXACT"
+    assert new["grounding_status"] == "UNGROUNDED"
+    assert new["mapping_status"] == "REVIEWED"
+    assert new["label"] == "Thalassic"
+    assert new["habitat_category"] == old["habitat_category"] == "AQUATIC"
+    assert new["xrefs"] == [quality]
+    for field in ("parent_habitats", "definition", "definition_source"):
+        assert field not in new
+    attestation = new["source_attestations"][0]
+    assert old["source_attestations"][0]["mapping_predicate"] == "skos:exactMatch"
+    assert "mapping_predicate" not in attestation
+    assert new["source_attestations"] == [
+        {key: value for key, value in old["source_attestations"][0].items()
+         if key != "mapping_predicate"}
+    ]
+    assert attestation["source_id"] == "gold.ecosystem:3976"
+    assert attestation["assertion_count"] == 1
+    assert attestation["assertion_unit"] == "ORGANISM"
+    assert seed.mint("GOLD", attestation["source_path"]) == thalassic
+    assert [e["action"] for e in new["curation_history"]] == [
+        "SEEDED_FROM_SOURCES", "CONFIRM_UNGROUNDED", "SOURCE_PARENT_EXCLUDED",
+    ]
+    # Seed events summarize the current reproducible build, not append-only history.
+    for field in ("timestamp", "curator", "action"):
+        assert new["curation_history"][0][field] == old["curation_history"][0][field]
+    for identifier in targets:
+        assert after[identifier]["curation_history"][-1]["action"] == "SOURCE_PARENT_EXCLUDED"

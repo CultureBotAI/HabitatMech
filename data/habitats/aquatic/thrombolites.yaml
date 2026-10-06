@@ -3,8 +3,6 @@ label: Thrombolites
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.115edc36f8
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7984
@@ -23,3 +21,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-06T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.115edc36f8
+    for habitatmech:GOLD.7937011195 (Environmental > Aquatic > Marine > Intertidal
+    zone > Thrombolites). ITEM hierarchy assessment (#1573): Louyakis et al. 2017
+    (DOI:10.1089/ast.2016.1563) describes clotted thrombolitic structures sampled
+    on a marine intertidal platform; the structure is not a kind of the foreshore/seabed
+    zone ENVO:00000316. Exclude only the GOLD location-context parent. Preserve GOLD7984,
+    path, minted identity, zero-count omission and CLASS/SEEDED provenance. Do not
+    force exact identity to microbialite or stromatolite mat, or promote the identity
+    decision without a separate item assessment.'

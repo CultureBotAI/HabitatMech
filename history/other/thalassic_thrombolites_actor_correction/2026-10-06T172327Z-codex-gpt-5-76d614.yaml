@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: other
+  path: history/mappings
+  slug: thalassic_thrombolites_actor_correction
+session:
+  id: 2026-10-06T172327Z-codex-gpt-5-76d614
+  timestamp: '2026-10-06T17:23:27Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+events:
+- type: GENERAL
+  outcome: changed
+  sections:
+  - provenance
+  summary: Correct the scaffolder-default actor name in three new session records
+  details: 'Attribution correction, not additional scientific curation: history/mappings/thalassic/2026-10-06T172112Z-claude-code-3c90c3.yaml,
+    history/mappings/thrombolites/2026-10-06T172127Z-claude-code-8f8722.yaml and history/mappings/microbialites_freshwater/2026-10-06T172212Z-claude-code-ebc430.yaml
+    were all authored by codex-gpt-5 using the codex tool, not Claude Code. Their model gpt-5
+    and agent_tool codex fields are correct; actor name claude-code came from an unoverridden
+    scaffolder default. This append-only correction preserves the original session IDs/timestamps
+    and evidence, explicitly superseding only their actor names. No user authorship is implied
+    and no scientific claim or validation outcome is changed. Use explicit --actor-name for
+    subsequent scaffolding. Applies to PR #1571 and fixes the provenance discrepancy found
+    before publication.'

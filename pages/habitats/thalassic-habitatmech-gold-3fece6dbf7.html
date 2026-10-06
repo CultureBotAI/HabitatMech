@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Thrombolites — HabitatMech</title>
-<meta name="description" content="Thrombolites (habitatmech:GOLD.7937011195): a microbial habitat harmonized from GOLD.">
+<title>Thalassic — HabitatMech</title>
+<meta name="description" content="Thalassic (habitatmech:GOLD.3fece6dbf7): a microbial habitat harmonized from GOLD.">
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -22,16 +22,15 @@
   </nav>
 </header>
 <main id="main-content" tabindex="-1">
-<h1>Thrombolites</h1>
+<h1>Thalassic</h1>
 <p class="meta">
-  <code class="curie">habitatmech:GOLD.7937011195</code>
+  <code class="curie">habitatmech:GOLD.3fece6dbf7</code>
   <span class="sep">·</span><a href="../category/aquatic.html">AQUATIC</a>
   <span class="sep">·</span><span class="pill warn">UNGROUNDED</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 
-<div class="note warn"><p>SEEDED workflow status. The source-seeding rules supplied this record; consult its curation history for later attributed changes. This status does not establish human review.</p></div>
 
 <h2>Source attestations</h2>
 <p class="meta">Each upstream vocabulary's own account of this habitat. Assertion
@@ -43,9 +42,9 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
   <thead><tr><th scope="col">Source</th><th scope="col">Label / path</th><th scope="col" class="num">Assertions</th><th scope="col">Unit</th></tr></thead>
   <tr>
     <td><span class="pill plain">GOLD</span></td>
-    <td>Environmental &gt; Aquatic &gt; Marine &gt; Intertidal zone &gt; Thrombolites</td>
-    <td class="num">—</td>
-    <td></td>
+    <td>Environmental &gt; Aquatic &gt; Non-marine Saline and Alkaline &gt; Saline &gt; Thalassic</td>
+    <td class="num">1</td>
+    <td>ORGANISM</td>
   </tr>
 </table>
 </div>
@@ -53,6 +52,13 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 
 
+<h2>Related terms</h2>
+<p class="meta">Terms a source linked to this concept without this record
+claiming to be one of them, or to be narrower than one. A cross-reference, not
+a grounding.</p>
+<ul class="plain">
+  <li><a href="http://purl.obolibrary.org/obo/ENVO_01001667">thalassic</a><code class="curie">ENVO:01001667</code></li>
+</ul>
 
 
 <h2>Curation</h2>
@@ -60,15 +66,14 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 from several source concepts can carry one decision per concept.</p>
 <ol class="events">
   <li>
-    <span class="pill plain">CONFIRM_UNGROUNDED</span>
-    <span class="meta">2026-08-12 · claude-opus-5 ·
-    class-level sweep, not an individual judgement</span>
-    <p>Confirmed UNGROUNDED: no ontology term fits this concept. Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the vendored slice matched this label by any search route. Whether the concept is a habitat at all was NOT assessed, so this is not yet a term-request candidate. (source concept habitatmech:GOLD.7937011195)</p>
+    <span class="pill">CONFIRM_UNGROUNDED</span>
+    <span class="meta">2026-10-06 · codex-gpt-5</span>
+    <p>Confirmed UNGROUNDED: no ontology term fits this concept. ENVO:01001667 &#39;thalassic&#39; kept as an xref. ITEM identity assessment (#1572): GOLD3976 classifies a thalassic saline sampling environment, not the physical quality ENVO:01001667. Official ENVO a2455d1a77e46bb8a664d65a157166b539269042 places that term beneath physical quality; retain it only as an xref. GOLD&#39;s classification documentation and the committed aquatic-biome/lagoon/saline-water triad support an environmental source, but one sample does not establish a universal lagoon, whole water body or water-material identity. Preserve the minted source habitat without inventing a definition or a replacement genus. The source-context saline-water-body contribution is separately excluded. Path: Environmental &gt; Aquatic &gt; Non-marine Saline and Alkaline &gt; Saline &gt; Thalassic (source concept habitatmech:GOLD.3fece6dbf7)</p>
   </li>
   <li>
     <span class="pill">SOURCE_PARENT_EXCLUDED</span>
     <span class="meta">2026-10-06 · codex-gpt-5</span>
-    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.115edc36f8 for habitatmech:GOLD.7937011195 (Environmental &gt; Aquatic &gt; Marine &gt; Intertidal zone &gt; Thrombolites). ITEM hierarchy assessment (#1573): Louyakis et al. 2017 (DOI:10.1089/ast.2016.1563) describes clotted thrombolitic structures sampled on a marine intertidal platform; the structure is not a kind of the foreshore/seabed zone ENVO:00000316. Exclude only the GOLD location-context parent. Preserve GOLD7984, path, minted identity, zero-count omission and CLASS/SEEDED provenance. Do not force exact identity to microbialite or stromatolite mat, or promote the identity decision without a separate item assessment.</p>
+    <p>Excluded GOLD source-path parent contribution ENVO:01001319 for habitatmech:GOLD.3fece6dbf7 (Environmental &gt; Aquatic &gt; Non-marine Saline and Alkaline &gt; Saline &gt; Thalassic). ITEM hierarchy assessment (#1572): the source classifies a thalassic saline environment without establishing that every member is a whole saline water body. Official ENVO a2455d1a77e46bb8a664d65a157166b539269042 defines ENVO:01001319 as that whole body. GOLD&#39;s one lagoon local-scale annotation is sample context, not universal identity. Exclude only this unsupported source-parent contribution; preserve GOLD3976, the full path and one ORGANISM assertion. The separate ITEM decision rejects the quality identity and retains its xref. No water-body or water-material genus is guessed.</p>
   </li>
 </ol>
 
@@ -76,7 +81,7 @@ from several source concepts can carry one decision per concept.</p>
 <p class="meta">
   Generated by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/data/habitats/aquatic/thrombolites.yaml">View the record</a>.
+  <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/data/habitats/aquatic/thalassic.yaml">View the record</a>.
 </p>
 </main>
 <footer class="site">

@@ -51,7 +51,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 <h2>Broader habitats</h2>
 <ul class="plain">
-  <li><a href="../habitats/fresh-water-envo-00002011.html">fresh water</a>      <code class="curie">ENVO:00002011</code></li>
   <li><a href="http://purl.obolibrary.org/obo/ENVO_03600064">microbialite</a>      <code class="curie">ENVO:03600064</code></li>
 </ul>
 
@@ -67,6 +66,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">GROUND_AS_PARENT</span>
     <span class="meta">2026-08-12 · claude-opus-5</span>
     <p>ENVO:03600064 &#39;microbialite&#39; attached as a parent, not adopted as the identity (NARROW). 5 GOLD paths share this leaf but differ in setting, not host, so each is a kind of microbialite rather than microbialite itself. Grounding them all to ENVO:03600064 would merge distinct environments; ENVO:03600064 is recorded as a parent instead. Path: Environmental &gt; Aquatic &gt; Freshwater &gt; Microbialites (source concept habitatmech:GOLD.e53e2c6e8e)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-06 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution ENVO:00002011 for habitatmech:GOLD.e53e2c6e8e (Environmental &gt; Aquatic &gt; Freshwater &gt; Microbialites). ITEM hierarchy assessment (freshwater case of #1406): ENVO:03600064 microbialite denotes sedimentary rock, not the low-solute liquid water ENVO:00002011 in its setting. White et al. 2016 (DOI:10.3389/fmicb.2015.01531) distinguishes sampled microbialites from surrounding water and sediment. Suppress only this source-context edge; preserve the supported microbialite reference, both GOLD nodes 3798 and 4191, collapse note, absent organism count and existing ITEM provenance. Retain the valid freshwater Thrombolites child edge. This does not reconcile the separately tracked mapping-endpoint semantics (#1398).</p>
   </li>
 </ol>
 
