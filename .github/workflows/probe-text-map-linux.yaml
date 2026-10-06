@@ -1,0 +1,53 @@
+---
+name: Temporary Linux text-map canary
+
+on:  # yamllint disable-line rule:truthy
+  push:
+    branches: [codex/probe-semantic-map-linux-20261006]
+    paths: [.github/workflows/probe-text-map-linux.yaml]
+
+permissions:
+  contents: read
+
+jobs:
+  canary:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      OMP_NUM_THREADS: "2"
+      MKL_NUM_THREADS: "2"
+      OPENBLAS_NUM_THREADS: "2"
+      NUMBA_NUM_THREADS: "2"
+      TOKENIZERS_PARALLELISM: "false"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.13"
+      - name: Install unchanged locked environments
+        run: |
+          uv sync --locked --extra dev
+          uv sync --locked --project conf/embedding-runtime
+      - name: Export bounded canary inputs
+        run: |
+          uv run --locked python scripts/text_map_inputs.py --limit 32 --output build/text-map/canary.jsonl
+          uv run --locked python scripts/embedding_pipeline.py inspect --input build/text-map/canary.jsonl
+      - name: Encode and verify repeat cache reuse
+        run: |
+          uv run --locked --project conf/embedding-runtime python scripts/embedding_pipeline.py embed --input build/text-map/canary.jsonl --cache build/text-map/canary.sqlite --profile-output build/text-map/canary-profile.json --device cpu --batch-size 8 > build/text-map/canary-first.json
+          uv run --locked --project conf/embedding-runtime python scripts/embedding_pipeline.py embed --input build/text-map/canary.jsonl --cache build/text-map/canary.sqlite --profile-output build/text-map/canary-profile.json --device cpu --batch-size 8 > build/text-map/canary-repeat.json
+          uv run --locked python -c 'import json; from pathlib import Path; first=json.loads(Path("build/text-map/canary-first.json").read_text()); repeat=json.loads(Path("build/text-map/canary-repeat.json").read_text()); assert first["encoded"] == first["count"] == 32 and first["reused"] == 0, first; assert repeat["encoded"] == 0 and repeat["reused"] == repeat["count"] == 32, repeat; print(first, repeat)'
+      - name: Project and verify canary bundle
+        run: |
+          uv run --locked --project conf/embedding-runtime python scripts/embedding_pipeline.py project --input build/text-map/canary.jsonl --cache build/text-map/canary.sqlite --profile build/text-map/canary-profile.json --output build/text-map/canary-map
+          uv run --locked python scripts/embedding_pipeline.py check --output build/text-map/canary-map --input build/text-map/canary.jsonl --cache build/text-map/canary.sqlite > build/text-map/canary-check.json
+      - name: Upload diagnostic receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: linux-text-map-canary-${{ github.sha }}
+          retention-days: 7
+          path: build/text-map/
+          if-no-files-found: warn
