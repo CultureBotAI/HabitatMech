@@ -172,11 +172,15 @@ def test_stale_or_unmatched_exclusion_stops_ingest(exclusion):
 
 def test_real_corpus_changes_only_subterranean_estuary_parent_and_audit(tmp_path, monkeypatch):
     after = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    identifier = "habitatmech:GOLD.58415258eb"
     empty = tmp_path / "empty.tsv"
-    write_table(empty, [])
+    write_table(empty, [
+        asdict(row) for key, row in load_gold_parent_exclusions(
+            seed.GOLD_PARENT_EXCLUSIONS_PATH
+        ).items() if key != identifier
+    ])
     monkeypatch.setattr(seed, "GOLD_PARENT_EXCLUSIONS_PATH", empty)
     before = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
-    identifier = "habitatmech:GOLD.58415258eb"
     assert after.keys() == before.keys()
     assert {key for key in before if before[key] != after[key]} == {identifier}
     old, new = before[identifier], after[identifier]
@@ -196,3 +200,62 @@ def test_real_corpus_changes_only_subterranean_estuary_parent_and_audit(tmp_path
             "Environmental > Aquatic > Marine > Intertidal zone > Subterranean estuary"
         ),
     }]
+
+
+def test_lake_and_subtidal_curation_has_exact_corpus_scope(monkeypatch):
+    freshwater = "habitatmech:GOLD.51eb0120ab"
+    deep = "habitatmech:GOLD.937bf682c4"
+    coastal = "habitatmech:GOLD.059724892c"
+    targets = {freshwater, deep, coastal}
+    after = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    decisions = seed.load_decisions(seed.DECISIONS_PATH)
+    for identifier in (freshwater, deep):
+        decisions[identifier] = replace(
+            decisions[identifier], object_id="", object_label="", category="",
+            relation="parent", curator="claude-opus-5", date="2026-08-12",
+            review_depth="CLASS", notes=(
+                "Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): "
+                "no term in the vendored slice matched this label by any search route. "
+                "Whether the concept is a habitat at all was NOT assessed, so this "
+                "is not yet a term-request candidate."
+            ),
+        )
+    exclusions = {
+        key: row for key, row in load_gold_parent_exclusions(
+            seed.GOLD_PARENT_EXCLUSIONS_PATH
+        ).items() if key not in targets
+    }
+    monkeypatch.setattr(seed, "load_decisions", lambda path: decisions)
+    monkeypatch.setattr(seed, "load_gold_parent_exclusions", lambda path: exclusions)
+    before = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    assert before.keys() == after.keys()
+    assert {key for key in before if before[key] != after[key]} == targets
+    assert after[freshwater]["parent_habitats"] == ["ENVO:00000058"]
+    assert after[deep]["parent_habitats"] == [
+        "ENVO:00000058", "habitatmech:GOLD.21222434e2",
+    ]
+    assert not after[coastal].get("parent_habitats")
+    assert after[coastal]["curation_history"][:-1] == before[coastal]["curation_history"]
+    for identifier in targets:
+        old, new = before[identifier], after[identifier]
+        allowed = {"parent_habitats", "mapping_status", "curation_history"}
+        for field in (old.keys() | new.keys()) - allowed:
+            assert new.get(field) == old.get(field), (identifier, field)
+        assert new["grounding_status"] == "UNGROUNDED"
+        assert new["mapping_status"] == ("SEEDED" if identifier == coastal else "REVIEWED")
+        assert len(new["source_attestations"]) == 1
+        attestation = new["source_attestations"][0]
+        assert "mapping_predicate" not in attestation
+        assert "assertion_count" not in attestation
+        assert "assertion_unit" not in attestation
+        old_seed = [e for e in old["curation_history"] if e["action"] == "SEEDED_FROM_SOURCES"]
+        new_seed = [e for e in new["curation_history"] if e["action"] == "SEEDED_FROM_SOURCES"]
+        assert new_seed == old_seed
+    for identifier in (freshwater, deep):
+        decision_events = [
+            event for event in after[identifier]["curation_history"]
+            if event["action"] == "CONFIRM_UNGROUNDED"
+        ]
+        assert len(decision_events) == 1
+        assert decision_events[0]["timestamp"] == "2026-10-06T00:00:00Z"
+        assert "[CLASS-level]" not in decision_events[0]["changes"]
