@@ -373,6 +373,44 @@ def test_intertidal_pool_and_bush_exclusions_have_exact_scope(monkeypatch):
     assert after["habitatmech:GOLD.d29a0aa94b"] == before["habitatmech:GOLD.d29a0aa94b"]
 
 
+def test_volcanic_exclusion_changes_only_context_parent_and_audit(monkeypatch):
+    identifier = "habitatmech:GOLD.72de01aaaa"
+    after = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    exclusions = {
+        key: row for key, row in load_gold_parent_exclusions(
+            seed.GOLD_PARENT_EXCLUSIONS_PATH
+        ).items() if key != identifier
+    }
+    monkeypatch.setattr(seed, "load_gold_parent_exclusions", lambda path: exclusions)
+    before = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    assert before.keys() == after.keys()
+    assert {key for key in before if before[key] != after[key]} == {identifier}
+    old, new = before[identifier], after[identifier]
+    assert old["parent_habitats"] == ["ENVO:00000094", "ENVO:00001999"]
+    assert new["parent_habitats"] == ["ENVO:00000094"]
+    assert new["curation_history"][:-1] == old["curation_history"]
+    event = new["curation_history"][-1]
+    assert event["action"] == "SOURCE_PARENT_EXCLUDED"
+    assert event["timestamp"] == "2026-10-06T00:00:00Z"
+    for field in (old.keys() | new.keys()) - {"parent_habitats", "curation_history"}:
+        assert new.get(field) == old.get(field), field
+    assert new["grounding_status"] == "NARROW"
+    assert new["mapping_status"] == "SEEDED"
+    assert len(new["source_attestations"]) == 1
+    attestation = new["source_attestations"][0]
+    assert attestation["source_id"] == "gold.ecosystem:3772"
+    assert attestation["source_path"] == "Environmental > Aquatic > Marine > Volcanic"
+    assert attestation["mapping_predicate"] == "skos:narrowMatch"
+    assert attestation["assertion_count"] == 107
+    assert attestation["assertion_unit"] == "ORGANISM"
+    assert "2 GOLD ecosystem node ids" in attestation["notes"]
+    row = next(row for row in seed.read_tsv(seed.RAW_DIR / "gold_ecosystem_paths.tsv")
+               if row["canonical_path"] == attestation["source_path"])
+    assert set(row["gold_node_ids"].split("|")) == {
+        "gold.ecosystem:3772", "gold.ecosystem:4022",
+    }
+
+
 def test_thalassic_and_thrombolite_curation_has_exact_scope(monkeypatch):
     thalassic = "habitatmech:GOLD.3fece6dbf7"
     quality = "ENVO:01001667"
