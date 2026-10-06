@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: supratidal_zone
+session:
+  id: 2026-10-06T155006Z-codex-gpt-5-86e7c7
+  timestamp: '2026-10-06T15:50:06Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1568
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1565
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: Exclude whole-littoral superclass from supratidal component
+  details: 'Preserved habitatmech:GOLD.2ef6207bd1, GOLD7910/path/count omission, independent
+    ENVO:01000124 candidate, existing NARROW/SEEDED state and old seed event. Excluded only
+    ENVO:01000125 context edge. ENVO uses part-of between the candidate and whole littoral
+    region. Exact-versus-narrow scope is not newly endorsed; #1398 endpoint/status contract
+    remains open. Session uses exec_command/apply_patch and the documented claw history scaffolder,
+    with current official typed ENVO a2455d1a77e46bb8a664d65a157166b539269042, exact committed
+    source rows and the individual report as evidence. Dry seed and forced canary passed and
+    were inspected. Full-corpus scope regression, labels, provenance, history, exact reproduction,
+    full QC and genuine map/site rebuild remain required before merge. No SSSOM/KGX readiness
+    claim.'

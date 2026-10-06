@@ -38,7 +38,6 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: ENVO
 parent_habitats:
-- ENVO:00000043
 - ENVO:01001209
 source_attestations:
 - source: BACDIVE
@@ -253,3 +252,15 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-10-06T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00000043 for habitatmech:GOLD.0f3918255c
+    (Environmental > Aquatic > Freshwater > Wetlands > Swamp). ITEM hierarchy assessment
+    (#1569): ENVO:00000043 wetland area overlaps a wetland ecosystem; it is not a
+    strict genus of ENVO:00000233 swamp ecosystem. Official ENVO a2455d1a77e46bb8a664d65a157166b539269042
+    supplies the independent true genus ENVO:01001209. Exclude only the GOLD area-context
+    edge, preserving all three source attestations, predicates, heterogeneous units,
+    26 associated taxa and existing review provenance. Synonym-scope inflation remains
+    #1249; no hydroperiod rewrite, exact-mapping upgrade or characteristic-taxon claim
+    follows.'

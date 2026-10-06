@@ -259,3 +259,66 @@ def test_lake_and_subtidal_curation_has_exact_corpus_scope(monkeypatch):
         assert len(decision_events) == 1
         assert decision_events[0]["timestamp"] == "2026-10-06T00:00:00Z"
         assert "[CLASS-level]" not in decision_events[0]["changes"]
+
+
+def test_subtidal_supratidal_swamp_curation_has_exact_scope(monkeypatch):
+    zone = "habitatmech:GOLD.313e2bf386"
+    sediment = "habitatmech:GOLD.785879d721"
+    supra = "habitatmech:GOLD.2ef6207bd1"
+    swamp_source = "habitatmech:GOLD.0f3918255c"
+    swamp = "ENVO:00000233"
+    targets = {zone, sediment, supra, swamp}
+    after = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    decisions = seed.load_decisions(seed.DECISIONS_PATH)
+    decisions[sediment] = replace(
+        decisions[sediment], object_id="", object_label="", category="",
+        relation="parent", curator="claude-opus-5", date="2026-08-12",
+        review_depth="CLASS", notes=(
+            "Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): "
+            "no term in the vendored slice matched this label by any search route. "
+            "Whether the concept is a habitat at all was NOT assessed, so this "
+            "is not yet a term-request candidate."
+        ),
+    )
+    exclusions = {
+        key: row for key, row in load_gold_parent_exclusions(
+            seed.GOLD_PARENT_EXCLUSIONS_PATH
+        ).items() if key not in {zone, sediment, supra, swamp_source}
+    }
+    monkeypatch.setattr(seed, "load_decisions", lambda path: decisions)
+    monkeypatch.setattr(seed, "load_gold_parent_exclusions", lambda path: exclusions)
+    before = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    assert before.keys() == after.keys()
+    assert {key for key in before if before[key] != after[key]} == targets
+    expected_parents = {
+        zone: [], sediment: ["ENVO:03000033"], supra: ["ENVO:01000124"],
+        swamp: ["ENVO:01001209"],
+    }
+    for identifier in targets:
+        old, new = before[identifier], after[identifier]
+        assert new.get("parent_habitats", []) == expected_parents[identifier]
+        allowed = {"parent_habitats", "curation_history"}
+        if identifier == sediment:
+            allowed.add("mapping_status")
+        for field in (old.keys() | new.keys()) - allowed:
+            assert new.get(field) == old.get(field), (identifier, field)
+        assert new["curation_history"][-1]["action"] == "SOURCE_PARENT_EXCLUDED"
+        if identifier != sediment:
+            assert new["curation_history"][:-1] == old["curation_history"]
+        assert [e for e in new["curation_history"] if e["action"] == "SEEDED_FROM_SOURCES"] == [
+            e for e in old["curation_history"] if e["action"] == "SEEDED_FROM_SOURCES"
+        ]
+    assert after[sediment]["grounding_status"] == "UNGROUNDED"
+    assert after[sediment]["mapping_status"] == "REVIEWED"
+    events = [e for e in after[sediment]["curation_history"]
+              if e["action"] == "CONFIRM_UNGROUNDED"]
+    assert len(events) == 1
+    event = events[0]
+    assert event["timestamp"] == "2026-10-06T00:00:00Z"
+    assert "[CLASS-level]" not in event["changes"]
+    for identifier in (zone, sediment, supra):
+        assert "assertion_count" not in after[identifier]["source_attestations"][0]
+    assert "mapping_predicate" not in after[sediment]["source_attestations"][0]
+    assert after[supra]["source_attestations"][0]["mapping_predicate"] == "skos:narrowMatch"
+    assert len(after[swamp]["source_attestations"]) == 3
+    assert len(after[swamp]["characteristic_taxa"]) == 26

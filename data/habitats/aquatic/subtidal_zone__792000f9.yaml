@@ -3,8 +3,6 @@ label: Subtidal zone
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:00001999
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4646
@@ -23,3 +21,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-06T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00001999 for habitatmech:GOLD.313e2bf386
+    (Environmental > Aquatic > Marine > Subtidal zone). ITEM hierarchy assessment
+    (#1566): NOAA Aquatic Setting A_TIDE_ZONE (https://www.fisheries.noaa.gov/inport/item/49263)
+    denotes a spatial inundation zone; ENVO:00001999 denotes a whole marine water
+    body. A spatial zone is not a type of its containing water body. Exclude only
+    this context contribution; retain GOLD4646, source path, mint, AQUATIC category,
+    zero-count omission and existing identity-review status. No rocky-reef identity
+    or authored definition is justified. Official ENVO a2455d1a77e46bb8a664d65a157166b539269042
+    and the individual review support this bounded correction.'
