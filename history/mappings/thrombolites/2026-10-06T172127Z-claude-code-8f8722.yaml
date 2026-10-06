@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: thrombolites
+session:
+  id: 2026-10-06T172127Z-claude-code-8f8722
+  timestamp: '2026-10-06T17:21:27Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1573
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  summary: Remove the marine thrombolite location-only parent
+  details: 'Exact-path/expected-parent exclusion for GOLD.7937011195 -> GOLD.115edc36f8. Louyakis
+    et al. 2017 DOI:10.1089/ast.2016.1563 and the Geological Survey of Western Australia distinguish
+    clotted microbialite structure from its tidal zone; current ENVO:00000316 denotes foreshore/seabed
+    between tide marks. Preserved GOLD7984, full path, zero-count omission, minted identity,
+    CLASS/SEEDED provenance and old events. No replacement identity or genus. Baseline review
+    20261006T170416Z-thrombolites.md unchanged. Dry seed, complete inspected forced canary
+    and 26 focused tests passed. Authentic full map/site regeneration and full QC required
+    before merge; terminal results in PR #1571.'

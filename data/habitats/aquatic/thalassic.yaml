@@ -1,24 +1,47 @@
-identifier: ENVO:01001667
-label: thalassic
-definition: A physical quality inhering in a bearer by virtue of the bearer being
-  derived from, part of, or otherwise dependent on the seas or oceans.
-definition_source: ENVO
+identifier: habitatmech:GOLD.3fece6dbf7
+label: Thalassic
 habitat_category: AQUATIC
-grounding_status: EXACT
-mapping_status: SEEDED
-parent_habitats:
-- ENVO:01001319
+grounding_status: UNGROUNDED
+mapping_status: REVIEWED
+xrefs:
+- ENVO:01001667
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3976
   source_label: Thalassic
   source_path: Environmental > Aquatic > Non-marine Saline and Alkaline > Saline >
     Thalassic
-  mapping_predicate: skos:exactMatch
   assertion_count: 1
   assertion_unit: ORGANISM
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-06T00:00:00Z'
+  curator: codex-gpt-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ENVO:01001667
+    ''thalassic'' kept as an xref. ITEM identity assessment (#1572): GOLD3976 classifies
+    a thalassic saline sampling environment, not the physical quality ENVO:01001667.
+    Official ENVO a2455d1a77e46bb8a664d65a157166b539269042 places that term beneath
+    physical quality; retain it only as an xref. GOLD''s classification documentation
+    and the committed aquatic-biome/lagoon/saline-water triad support an environmental
+    source, but one sample does not establish a universal lagoon, whole water body
+    or water-material identity. Preserve the minted source habitat without inventing
+    a definition or a replacement genus. The source-context saline-water-body contribution
+    is separately excluded. Path: Environmental > Aquatic > Non-marine Saline and
+    Alkaline > Saline > Thalassic (source concept habitatmech:GOLD.3fece6dbf7)'
+- timestamp: '2026-10-06T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:01001319 for habitatmech:GOLD.3fece6dbf7
+    (Environmental > Aquatic > Non-marine Saline and Alkaline > Saline > Thalassic).
+    ITEM hierarchy assessment (#1572): the source classifies a thalassic saline environment
+    without establishing that every member is a whole saline water body. Official
+    ENVO a2455d1a77e46bb8a664d65a157166b539269042 defines ENVO:01001319 as that whole
+    body. GOLD''s one lagoon local-scale annotation is sample context, not universal
+    identity. Exclude only this unsupported source-parent contribution; preserve GOLD3976,
+    the full path and one ORGANISM assertion. The separate ITEM decision rejects the
+    quality identity and retains its xref. No water-body or water-material genus is
+    guessed.'
