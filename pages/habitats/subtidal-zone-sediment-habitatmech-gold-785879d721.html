@@ -27,11 +27,10 @@
   <code class="curie">habitatmech:GOLD.785879d721</code>
   <span class="sep">·</span><a href="../category/aquatic.html">AQUATIC</a>
   <span class="sep">·</span><span class="pill warn">UNGROUNDED</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 
-<div class="note warn"><p>SEEDED workflow status. The source-seeding rules supplied this record; consult its curation history for later attributed changes. This status does not establish human review.</p></div>
 
 <h2>Source attestations</h2>
 <p class="meta">Each upstream vocabulary's own account of this habitat. Assertion
@@ -52,7 +51,7 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 <h2>Broader habitats</h2>
 <ul class="plain">
-  <li><a href="../habitats/coastal-sea-water-envo-00002150.html">coastal sea water</a>      <code class="curie">ENVO:00002150</code></li>
+  <li><a href="../habitats/marine-sediment-envo-03000033.html">marine sediment</a>      <code class="curie">ENVO:03000033</code></li>
 </ul>
 
 
@@ -64,10 +63,14 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 from several source concepts can carry one decision per concept.</p>
 <ol class="events">
   <li>
-    <span class="pill plain">CONFIRM_UNGROUNDED</span>
-    <span class="meta">2026-08-12 · claude-opus-5 ·
-    class-level sweep, not an individual judgement</span>
-    <p>Confirmed UNGROUNDED: no ontology term fits this concept. Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the vendored slice matched this label by any search route. Whether the concept is a habitat at all was NOT assessed, so this is not yet a term-request candidate. (source concept habitatmech:GOLD.785879d721)</p>
+    <span class="pill">CONFIRM_UNGROUNDED</span>
+    <span class="meta">2026-10-06 · codex-gpt-5</span>
+    <p>Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader term ENVO:03000033 &#39;marine sediment&#39; attached as a parent. ITEM assessment (#1567). Path: Environmental &gt; Aquatic &gt; Marine &gt; Neritic zone/Coastal water &gt; Subtidal zone sediment. This is a qualified marine sediment habitat, not coastal sea-water material. ENVO:03000033 (marine sediment) is a strictly broader genus verified against the current official ENVO ontology and committed slice; no exact term is established for this qualified source. Retain the minted identity and omitted organism count, with no source-mapping predicate. A guarded exclusion removes only the separate coastal-water context edge. No generic-sediment merge, universal grain size, depth, taxa or transferred biosample count is asserted. Supersedes the unassessed August 12 CLASS rationale, preserved in append-only session provenance. (source concept habitatmech:GOLD.785879d721)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-06 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution ENVO:00002150 for habitatmech:GOLD.785879d721 (Environmental &gt; Aquatic &gt; Marine &gt; Neritic zone/Coastal water &gt; Subtidal zone sediment). ITEM hierarchy assessment (#1567): this source denotes marine sediment, not the coastal sea-water material ENVO:00002150 in its path. Exclude only that context contribution; independently add ENVO:03000033 through the ITEM decision while preserving the qualified mint, GOLD7948, path and zero-organism-count omission. The 74 bulk biosamples are not organisms. Official ENVO a2455d1a77e46bb8a664d65a157166b539269042 distinguishes the material genera; no exact identity, depth, sediment composition or source-mapping predicate is inferred.</p>
   </li>
 </ol>
 
