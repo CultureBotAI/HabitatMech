@@ -33,7 +33,7 @@
     <a class="stat" href="browse.html"><b>3206</b><span>habitat records</span></a>
     <a class="stat" href="index.html#grounding-status"><b>2151</b><span>ontology-grounded</span></a>
     <a class="stat" href="index.html#source-corroboration"><b>176</b><span>corroborated by 2+ sources</span></a>
-    <a class="stat" href="index.html#review-status"><b>686</b><span>curator-reviewed</span></a>
+    <a class="stat" href="index.html#review-status"><b>686</b><span>REVIEWED status</span></a>
   </div>
 </div>
 
@@ -119,7 +119,7 @@ than the concept.</p>
 <h2 id="grounding-status">What the grounding status means</h2>
 <p>
   Every record says how well its identifier fits the source concept, separately
-  from whether a human has checked it. A record can be reviewed and still
+  from the recorded curation workflow status. A record can be reviewed and still
   honestly ungrounded — that combination is a well-formed request for a new
   ontology term, and there are
   <a href="term-requests.html">123 of them</a>.
@@ -145,9 +145,10 @@ than the concept.</p>
 
 <div class="note warn" id="review-status">
   <p><strong>This corpus is machine-generated.</strong> 2520 of
-  3206 records have had no human review. The harmonization rules are
+  3206 records have the SEEDED workflow status. The harmonization rules are
   documented and tested, but a lexical match between a source label and an
   ontology label is a plausible grounding, not a verified one.</p>
+  <p>REVIEWED records carry a recorded workflow decision, including agent-assisted curation. These counts do not establish human review. Consult the attributed curation events on each record for its provenance.</p>
 </div>
 </main>
 <footer class="site">
@@ -157,11 +158,11 @@ than the concept.</p>
     on 2026-08-16. Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party terms apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Grounding is by lexical match against ontology labels except where a curation
     decision says otherwise; treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a citable
-    claim. <a href="index.html">Current review counts</a>.
+    claim. <a href="index.html">Current workflow counts</a>.
   </p>
 </footer>
 </div>
