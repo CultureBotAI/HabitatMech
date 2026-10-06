@@ -44,6 +44,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 INPUTS = {
     "curation/decisions.tsv": "identifier",
     "curation/external_xrefs.tsv": "term_id",
+    "curation/gold_parent_exclusions.tsv": "identifier",
     "curation/term_requests.tsv": "identifier",
     "curation/term_requests_excluded.tsv": "identifier",
     "curation/redirects_retracted.tsv": "retired_slug",

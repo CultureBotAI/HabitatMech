@@ -1,5 +1,5 @@
 ---
-name: Temporary Linux text-map canary
+name: Temporary Linux text-map build
 
 on:  # yamllint disable-line rule:truthy
   push:
@@ -12,7 +12,7 @@ permissions:
 jobs:
   canary:
     runs-on: ubuntu-24.04
-    timeout-minutes: 30
+    timeout-minutes: 90
     env:
       OMP_NUM_THREADS: "2"
       MKL_NUM_THREADS: "2"
@@ -30,10 +30,11 @@ jobs:
         run: |
           uv sync --locked --extra dev
           uv sync --locked --project conf/embedding-runtime
-      - name: Export bounded canary inputs
+      - name: Export full and bounded canary inputs
         run: |
+          uv run --locked python scripts/text_map_inputs.py --output build/text-map/inputs.jsonl
           uv run --locked python scripts/text_map_inputs.py --limit 32 --output build/text-map/canary.jsonl
-          uv run --locked python scripts/embedding_pipeline.py inspect --input build/text-map/canary.jsonl
+          uv run --locked python scripts/embedding_pipeline.py inspect --input build/text-map/inputs.jsonl
       - name: Encode and verify repeat cache reuse
         run: |
           uv run --locked --project conf/embedding-runtime python scripts/embedding_pipeline.py embed --input build/text-map/canary.jsonl --cache build/text-map/canary.sqlite --profile-output build/text-map/canary-profile.json --device cpu --batch-size 8 > build/text-map/canary-first.json
@@ -43,11 +44,20 @@ jobs:
         run: |
           uv run --locked --project conf/embedding-runtime python scripts/embedding_pipeline.py project --input build/text-map/canary.jsonl --cache build/text-map/canary.sqlite --profile build/text-map/canary-profile.json --output build/text-map/canary-map
           uv run --locked python scripts/embedding_pipeline.py check --output build/text-map/canary-map --input build/text-map/canary.jsonl --cache build/text-map/canary.sqlite > build/text-map/canary-check.json
+      - name: Encode full corpus and project
+        run: |
+          cp build/text-map/canary.sqlite build/text-map/vectors.sqlite
+          uv run --locked --project conf/embedding-runtime python scripts/embedding_pipeline.py embed --input build/text-map/inputs.jsonl --cache build/text-map/vectors.sqlite --profile-output build/text-map/profile.json --device cpu --batch-size 8 > build/text-map/full-embed.json
+          uv run --locked python -c 'import json; from pathlib import Path; result=json.loads(Path("build/text-map/full-embed.json").read_text()); assert result["count"] == 3206 and result["reused"] == 32 and result["encoded"] == 3174, result; print(result)'
+          uv run --locked --project conf/embedding-runtime python scripts/embedding_pipeline.py project --input build/text-map/inputs.jsonl --cache build/text-map/vectors.sqlite --profile build/text-map/profile.json --output data/text_map --title "HabitatMech semantic text map"
+          uv run --locked python scripts/embedding_pipeline.py check --output data/text_map --input build/text-map/inputs.jsonl --cache build/text-map/vectors.sqlite > build/text-map/full-check.json
       - name: Upload diagnostic receipts
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: linux-text-map-canary-${{ github.sha }}
+          name: linux-text-map-build-${{ github.sha }}
           retention-days: 7
-          path: build/text-map/
+          path: |
+            data/text_map/
+            build/text-map/
           if-no-files-found: warn

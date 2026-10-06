@@ -114,6 +114,18 @@ def test_allow_loss_reports_but_does_not_fail(repo):
     assert "habitatmech:B" in done.stderr, done.stderr
 
 
+def test_gold_parent_exclusions_are_protected(repo):
+    cwd, _ = repo
+    path = cwd / "curation" / "gold_parent_exclusions.tsv"
+    path.write_text("identifier\nhabitatmech:GOLD.88e2b29307\n", encoding="utf-8")
+    subprocess.run(["git", "add", "curation/gold_parent_exclusions.tsv"], cwd=cwd, check=True)
+    subprocess.run(["git", "commit", "-qm", "add parent exclusion"], cwd=cwd, check=True)
+    path.write_text("identifier\n", encoding="utf-8")
+    done = run(cwd, "--base", "HEAD")
+    assert done.returncode == 1
+    assert "habitatmech:GOLD.88e2b29307" in done.stderr
+
+
 def test_an_unresolvable_base_is_reported_not_silently_clean(repo):
     """Absent evidence is unknown, not clean -- the stance the non-habitat
     screen already takes. A base that does not resolve must say so, because a

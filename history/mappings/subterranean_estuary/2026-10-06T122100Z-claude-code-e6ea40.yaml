@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: subterranean_estuary
+session:
+  id: 2026-10-06T122100Z-claude-code-e6ea40
+  timestamp: '2026-10-06T12:21:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: codex-gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1559
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: Exclude the unsupported intertidal source-context parent from Subterranean estuary
+  details: Applied an item-level hierarchy assessment through guarded source-parent exclusions,
+    adopting the reviewed loader and source-contribution integration from draft PR 1218 without
+    its scientific rows or generated records. Hong et al. 2019 (DOI:10.3389/fmicb.2018.03343;
+    PMID:30687299) and the inspected ENVO:00000316 definition support distinguishing the coastal
+    subsurface mixing environment from exposed intertidal surface. Excluded only GOLD.58415258eb
+    to GOLD.115edc36f8; retained GOLD8255, its exact path, identity, category, UNGROUNDED/SEEDED
+    status, zero-count omission and both existing events. No replacement identity, definition,
+    taxa or parameters were inferred. The separate parent correction in issue 1253 is not
+    implemented. Dry seed, the inspected forced canary, 29 focused regression/curation-floor
+    tests, lint, closed-schema target validation and full corpus reproduction passed. The
+    full-corpus regression proves that only this record changes and only its parent set and
+    appended audit event differ. A 32-record Linux embedding canary with unchanged locked
+    dependencies and model passed encoding, repeat-cache reuse, projection and local bundle/cache
+    verification. Full semantic-map/site regeneration and final QC are required before this
+    scientific correction can merge; neither runtime pins nor freshness checks were bypassed.
