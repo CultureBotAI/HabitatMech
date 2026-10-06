@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: subtidal_zone__792000f9
+session:
+  id: 2026-10-06T155005Z-codex-gpt-5-16648e
+  timestamp: '2026-10-06T15:50:05Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1566
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1565
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: Exclude generic subtidal zone waterbody context parent
+  details: 'Preserved habitatmech:GOLD.313e2bf386, node4646, path, zero-count omission, AQUATIC/UNGROUNDED/SEEDED
+    and prior events. Excluded only ENVO:00001999; no replacement identity or definition.
+    NOAA Aquatic Setting A_TIDE_ZONE supports a spatial class. Incoming sediment-child issue
+    #1497 remains separate. Session uses exec_command/apply_patch and the documented claw
+    history scaffolder, with current official typed ENVO a2455d1a77e46bb8a664d65a157166b539269042,
+    exact committed source rows and the individual report as evidence. Dry seed and forced
+    canary passed and were inspected. Full-corpus scope regression, labels, provenance, history,
+    exact reproduction, full QC and genuine map/site rebuild remain required before merge.
+    No SSSOM/KGX readiness claim.'

@@ -2,9 +2,9 @@ identifier: habitatmech:GOLD.785879d721
 label: Subtidal zone sediment
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
-- ENVO:00002150
+- ENVO:03000033
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7948
@@ -12,15 +12,34 @@ source_attestations:
   source_path: Environmental > Aquatic > Marine > Neritic zone/Coastal water > Subtidal
     zone sediment
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.785879d721)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-06T00:00:00Z'
+  curator: codex-gpt-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader
+    term ENVO:03000033 ''marine sediment'' attached as a parent. ITEM assessment (#1567).
+    Path: Environmental > Aquatic > Marine > Neritic zone/Coastal water > Subtidal
+    zone sediment. This is a qualified marine sediment habitat, not coastal sea-water
+    material. ENVO:03000033 (marine sediment) is a strictly broader genus verified
+    against the current official ENVO ontology and committed slice; no exact term
+    is established for this qualified source. Retain the minted identity and omitted
+    organism count, with no source-mapping predicate. A guarded exclusion removes
+    only the separate coastal-water context edge. No generic-sediment merge, universal
+    grain size, depth, taxa or transferred biosample count is asserted. Supersedes
+    the unassessed August 12 CLASS rationale, preserved in append-only session provenance.
+    (source concept habitatmech:GOLD.785879d721)'
+- timestamp: '2026-10-06T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00002150 for habitatmech:GOLD.785879d721
+    (Environmental > Aquatic > Marine > Neritic zone/Coastal water > Subtidal zone
+    sediment). ITEM hierarchy assessment (#1567): this source denotes marine sediment,
+    not the coastal sea-water material ENVO:00002150 in its path. Exclude only that
+    context contribution; independently add ENVO:03000033 through the ITEM decision
+    while preserving the qualified mint, GOLD7948, path and zero-organism-count omission.
+    The 74 bulk biosamples are not organisms. Official ENVO a2455d1a77e46bb8a664d65a157166b539269042
+    distinguishes the material genera; no exact identity, depth, sediment composition
+    or source-mapping predicate is inferred.'

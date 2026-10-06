@@ -1,0 +1,40 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: subtidal_zone_sediment
+session:
+  id: 2026-10-06T155005Z-codex-gpt-5-1d40a6
+  timestamp: '2026-10-06T15:50:05Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1567
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1565
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: Place qualified subtidal sediment under marine sediment
+  details: 'ITEM CONFIRM_UNGROUNDED now retains habitatmech:GOLD.785879d721 with ENVO:03000033
+    as parent and no source mapping predicate. curation/gold_parent_exclusions.tsv separately
+    suppresses ENVO:00002150. Preserved GOLD7948/path/zero organism count and original seed
+    event; 74 bulk biosamples are not transferred. Superseded decision: claude-opus-5, 2026-08-12,
+    CLASS CONFIRM_UNGROUNDED, no object/category, notes: Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep):
+    no term in the vendored slice matched this label by any search route. Whether the concept
+    is a habitat at all was NOT assessed, so this is not yet a term-request candidate. The
+    current ITEM decision assesses habitat identity and broader genus but does not establish
+    exact grounding. Generated decision history reflects the current row; this append-only
+    session preserves the superseded attribution and rationale. Session uses exec_command/apply_patch
+    and the documented claw history scaffolder, with current official typed ENVO a2455d1a77e46bb8a664d65a157166b539269042,
+    exact committed source rows and the individual report as evidence. Dry seed and forced
+    canary passed and were inspected. Full-corpus scope regression, labels, provenance, history,
+    exact reproduction, full QC and genuine map/site rebuild remain required before merge.
+    No SSSOM/KGX readiness claim.'
