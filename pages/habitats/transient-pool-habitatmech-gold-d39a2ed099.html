@@ -50,10 +50,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 </table>
 </div>
 
-<h2>Broader habitats</h2>
-<ul class="plain">
-  <li><a href="../habitats/fresh-water-envo-00002011.html">fresh water</a>      <code class="curie">ENVO:00002011</code></li>
-</ul>
 
 
 
@@ -68,6 +64,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="meta">2026-08-12 · claude-opus-5 ·
     class-level sweep, not an individual judgement</span>
     <p>Confirmed UNGROUNDED: no ontology term fits this concept. Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the vendored slice matched this label by any search route. Whether the concept is a habitat at all was NOT assessed, so this is not yet a term-request candidate. (source concept habitatmech:GOLD.d39a2ed099)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-06 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution ENVO:00002011 for habitatmech:GOLD.d39a2ed099 (Environmental &gt; Aquatic &gt; Freshwater &gt; Transient pool). ITEM hierarchy assessment (#1576): a transient water body or its periodically filled basin is not the fresh-water material ENVO:00002011. Official ENVO a2455d1a77e46bb8a664d65a157166b539269042 and EPA seasonal-pool manual EPA/903/B-05/001 (<a href="https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1002R0O.TXT" rel="noopener noreferrer" target="_blank">https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P1002R0O.TXT</a>) support the distinction. Exclude only the GOLD material-context contribution; preserve nodes 8268/8269, collapse note, full path, minted identity, zero-count omission and CLASS/SEEDED status. No water-body versus basin genus is guessed; preserving the separate microbial-mat child does not endorse its unresolved context edge.</p>
   </li>
 </ol>
 
