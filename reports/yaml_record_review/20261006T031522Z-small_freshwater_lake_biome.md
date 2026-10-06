@@ -83,7 +83,9 @@ correctly emits 203 with unit `TAXON`, not 203 samples or isolates.
 
 `prego_habitat_taxa.tsv:5263-5287` contains all 25 retained pairs. Each has
 score 4, `direct_flag` TRUE and only `environmental_samples`; retained ranks
-are 1-25 with candidate pool 203. The extractor sorts by descending score,
+are 1-25. The generated `candidate_pool` of 203 comes separately from
+`prego_habitats.tsv:149` (`taxon_count`) via `src/habitatmech/seed.py:1101`,
+not from the pair table. The extractor sorts by descending score,
 directness, then lexical taxon ID, and caps the list at 25. These displayed
 ties are not an abundance or ecological-dominance ranking. No retained
 association is marked `is_characteristic` or independently corroborated.
