@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00000094
-- ENVO:00001999
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3772
@@ -20,3 +19,18 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-06T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00001999 for habitatmech:GOLD.72de01aaaa
+    (Environmental > Aquatic > Marine > Volcanic). ITEM hierarchy assessment (#1587):
+    this qualified volcanic-feature context is not a kind of the whole lentic marine
+    water body ENVO:00001999. Official ENVO a2455d1a77e46bb8a664d65a157166b539269042
+    distinguishes that genus from volcanic feature ENVO:00000094; NOAA''s observed
+    volcanic pillow-mound account (https://oceanexplorer.noaa.gov/education/hydrothermal-vents-volcanoes/)
+    supports the feature versus surrounding-water distinction. Exclude only the immediate
+    Marine source-parent contribution. Preserve the independent volcanic-feature parent,
+    qualified mint, NARROW/SEEDED, skos:narrowMatch, nodes 3772/4022, 107 ORGANISM
+    assertions and full source path. This does not establish an exact volcano or sediment
+    identity, endorse every descendant, or resolve source-mapping endpoint semantics
+    (#1398).'
