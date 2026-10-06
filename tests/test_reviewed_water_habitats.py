@@ -79,3 +79,39 @@ def test_well_context_and_watercourse_note_corrections_have_exact_scope(monkeypa
                 ),
             }
     assert changes == 1
+
+
+def test_well_sediment_context_exclusion_has_exact_scope(monkeypatch):
+    identifier = "habitatmech:GOLD.71a5958fdc"
+    parent = "habitatmech:GOLD.22a80cbd14"
+    after = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    exclusions = seed.load_gold_parent_exclusions(seed.GOLD_PARENT_EXCLUSIONS_PATH)
+    exclusion = exclusions.pop(identifier)
+    assert exclusion.parent_id == parent
+    assert exclusion.source_path == (
+        "Environmental > Aquatic > Deep subsurface > Groundwater > Well sediment"
+    )
+    monkeypatch.setattr(seed, "load_gold_parent_exclusions", lambda path: exclusions)
+    before = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+
+    assert before.keys() == after.keys()
+    assert {key for key in before if before[key] != after[key]} == {identifier}
+    old, new = before[identifier], after[identifier]
+    assert old["parent_habitats"] == [parent]
+    assert "parent_habitats" not in new
+    assert new["curation_history"][:-1] == old["curation_history"]
+    event = new["curation_history"][-1]
+    assert event["action"] == "SOURCE_PARENT_EXCLUDED"
+    assert event["curator"] == "codex-gpt-5"
+    assert event["timestamp"] == "2026-10-06T00:00:00Z"
+    assert identifier in event["changes"] and parent in event["changes"]
+    for field in (old.keys() | new.keys()) - {"parent_habitats", "curation_history"}:
+        assert new.get(field) == old.get(field), field
+    assert new["grounding_status"] == "UNGROUNDED"
+    assert new["mapping_status"] == "SEEDED"
+    assert "[CLASS-level]" in new["curation_history"][0]["changes"]
+    assert new["source_attestations"] == [{
+        "source": "GOLD", "source_id": "gold.ecosystem:5959", "source_label": "Well sediment",
+        "source_path": exclusion.source_path,
+        "assertion_count": 1, "assertion_unit": "ORGANISM",
+    }]
