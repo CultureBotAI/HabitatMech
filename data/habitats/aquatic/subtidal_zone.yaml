@@ -3,8 +3,6 @@ label: Subtidal zone
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:00002150
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7947
@@ -24,3 +22,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-06T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00002150 for habitatmech:GOLD.059724892c
+    (Environmental > Aquatic > Marine > Neritic zone/Coastal water > Subtidal zone).
+    ITEM hierarchy assessment (#1564): NOAA Aquatic Setting A_TIDE_ZONE metadata (https://www.fisheries.noaa.gov/inport/item/49263)
+    describes a spatial inundation zone; current ENVO:00002150 denotes coastal sea-water
+    material. A zone is not a type of that material. Suppress only this context contribution;
+    preserve GOLD7947, source path, mint, category, zero-count omission and existing
+    identity-review status. Marine sub-littoral zone has unresolved scope qualifications;
+    a marine subtidal rocky reef is not a generic subtidal zone. No replacement identity
+    or definition is asserted.'

@@ -27,11 +27,10 @@
   <code class="curie">habitatmech:GOLD.937bf682c4</code>
   <span class="sep">·</span><a href="../category/aquatic.html">AQUATIC</a>
   <span class="sep">·</span><span class="pill warn">UNGROUNDED</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 
-<div class="note warn"><p>SEEDED workflow status. The source-seeding rules supplied this record; consult its curation history for later attributed changes. This status does not establish human review.</p></div>
 
 <h2>Source attestations</h2>
 <p class="meta">Each upstream vocabulary's own account of this habitat. Assertion
@@ -52,6 +51,7 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 <h2>Broader habitats</h2>
 <ul class="plain">
+  <li><a href="http://purl.obolibrary.org/obo/ENVO_00000058">underground lake</a>      <code class="curie">ENVO:00000058</code></li>
   <li><a href="../habitats/deep-subsurface-habitatmech-gold-21222434e2.html">Deep subsurface</a>      <code class="curie">habitatmech:GOLD.21222434e2</code></li>
 </ul>
 
@@ -64,10 +64,9 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 from several source concepts can carry one decision per concept.</p>
 <ol class="events">
   <li>
-    <span class="pill plain">CONFIRM_UNGROUNDED</span>
-    <span class="meta">2026-08-12 · claude-opus-5 ·
-    class-level sweep, not an individual judgement</span>
-    <p>Confirmed UNGROUNDED: no ontology term fits this concept. Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the vendored slice matched this label by any search route. Whether the concept is a habitat at all was NOT assessed, so this is not yet a term-request candidate. (source concept habitatmech:GOLD.937bf682c4)</p>
+    <span class="pill">CONFIRM_UNGROUNDED</span>
+    <span class="meta">2026-10-06 · codex-gpt-5</span>
+    <p>Confirmed UNGROUNDED: no ontology term fits this concept. Nearest broader term ENVO:00000058 &#39;underground lake&#39; attached as a parent. ITEM scope assessment (#1563): the deep-subsurface source denotes an underground lake, with an unresolved depth qualifier rather than proven exact coextension with ENVO:00000058. The source path and local-scale annotation support that broader genus. Retain the source identity and independent Deep subsurface parent; use explicit parent placement without introducing the implicit mapping endpoints in #1398. GOLD7667/7668 has 97 bulk biosamples versus 96 API samples from one study; Gs0111485 spans 25 paths, whose observations must not be transferred. Freshwater cohort annotations do not make the whole source class freshwater. No numeric depth cutoff or authored definition is asserted. Path: Environmental &gt; Aquatic &gt; Deep subsurface &gt; Subterranean lake (source concept habitatmech:GOLD.937bf682c4)</p>
   </li>
 </ol>
 

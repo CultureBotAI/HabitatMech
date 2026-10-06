@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: subterranean_subtidal_material_parents
+session:
+  id: 2026-10-06T141441Z-codex-gpt-5-d0d5e6
+  timestamp: '2026-10-06T14:14:41Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1564
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1561
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  summary: Exclude two reviewed water-material source-context parents
+  details: 'For #1562 exclude only GOLD.51eb0120ab to ENVO:00002011; independent underground-lake
+    decision parent remains. For #1564 exclude only GOLD.059724892c to ENVO:00002150; preserve
+    its unresolved identity and SEEDED status. Typed ENVO distinguishes material from lake,
+    and inspected NOAA Aquatic Setting A_TIDE_ZONE (https://www.fisheries.noaa.gov/inport/item/49263)
+    distinguishes spatial tidal zone from water material. Exact path and expected resolved-parent
+    guards remain enabled. No definition, taxa, source counts, runtime pins or unrelated draft
+    #1218 content changed. Generated exclusion events append deterministically; coastal prior
+    events remain intact. Dry seed passed and freshwater canary inspected. Full corpus scope
+    regressions, source preservation, genuine map/site regeneration, labels/history/strict/provenance
+    and full QC must pass before merge.'
