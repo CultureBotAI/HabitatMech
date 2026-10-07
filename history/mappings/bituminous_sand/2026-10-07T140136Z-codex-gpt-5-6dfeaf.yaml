@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: bituminous_sand
+session:
+  id: 2026-10-07T140136Z-codex-gpt-5-6dfeaf
+  timestamp: '2026-10-07T14:01:36Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1641
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1640
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude the GOLD mine context parent from bituminous sand
+  details: 'Added one guarded exclusion for habitatmech:GOLD.6a5b013cc9, exact path Engineered
+    > Built environment > Mine > Oil sands, resolved context parent ENVO:00000076. Inspected
+    official ENVO OWL at a2455d1a77e46bb8a664d65a157166b539269042: ENVO:03600013 is environmental
+    material and ENVO:00000076 is an excavation; retained ENVO:00010483. Alberta glossary
+    https://history.alberta.ca/energyheritage/sands/glossary.aspx independently distinguishes
+    the material from extraction settings. Dry seed and inspected target canary preserve CLOSE/REVIEWED,
+    both source nodes, count omissions, all synonyms and prior events. All 36 parent-exclusion
+    tests passed, including a whole-corpus differential regression allowing only this parent
+    removal and one audit event. Full QC and label validation are required before merge; their
+    later results belong in the PR receipt. Synonym scope and upstream synonym conflict, original
+    PREGO association, and Brown waste source definition remain separate open work. No raw
+    inventories or committed prior reviews/histories were rewritten.'

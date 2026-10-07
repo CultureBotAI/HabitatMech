@@ -21,7 +21,6 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: ENVO
 parent_habitats:
-- ENVO:00000076
 - ENVO:00010483
 source_attestations:
 - source: GOLD
@@ -42,3 +41,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00000076 for habitatmech:GOLD.6a5b013cc9
+    (Engineered > Built environment > Mine > Oil sands). ITEM hierarchy assessment
+    (#1641): ENVO:03600013 bituminous sand denotes a granular environmental material,
+    not a kind of the excavation ENVO:00000076 mine. Official ENVO a2455d1a77e46bb8a664d65a157166b539269042
+    explicitly treats the target as material and supplies ENVO:00010483 as its genus;
+    the Alberta glossary (https://history.alberta.ca/energyheritage/sands/glossary.aspx)
+    distinguishes oil sands from extraction settings. Exclude only the GOLD mining-context
+    contribution. Preserve the material genus, both source nodes 5840 and 5841, source
+    path and collapse note, absent zero count/unit, CLOSE/REVIEWED status and prior
+    audit. This does not resolve the separately tracked crude-bitumen synonym conflict
+    (#1642).'
