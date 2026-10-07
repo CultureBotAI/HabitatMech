@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: bench_surface
+session:
+  id: 2026-10-07T060450Z-claude-code-1c7bf9
+  timestamp: '2026-10-07T06:04:50Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: codex-gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/282
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1616
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: Exclude the bench-surface location parent without redefining the habitat
+  details: 'Correct only the Bench surface member of #282. The maintained subway environment
+    is a containing setting, not a surface genus; rechecked Gohli et al. DOI:10.1186/s40168-019-0772-9
+    surface-sampling methods. Preserve source gold.ecosystem:5464, full path, mint, count
+    omissions and UNGROUNDED/SEEDED status. No sibling curation, new definition or replacement
+    identity. Full-corpus regression proves no other scientific-field changes; focused suite
+    36 passed, dry seed and inspected canary passed. #282 remains open for the other five
+    surfaces.'

@@ -448,6 +448,46 @@ def test_water_ice_core_exclusion_changes_only_context_parent_and_audit(monkeypa
     assert seed.mint("GOLD", new["source_attestations"][0]["source_path"]) == source
 
 
+def test_bagasse_and_bench_exclusions_change_only_context_parents_and_audit(monkeypatch):
+    bagasse = "ENVO:00002872"
+    bench = "habitatmech:GOLD.4f9191d466"
+    sources = {"habitatmech:GOLD.feb21b0386", bench}
+    after = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    exclusions = {
+        key: row for key, row in load_gold_parent_exclusions(
+            seed.GOLD_PARENT_EXCLUSIONS_PATH
+        ).items() if key not in sources
+    }
+    monkeypatch.setattr(seed, "load_gold_parent_exclusions", lambda path: exclusions)
+    before = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    assert before.keys() == after.keys()
+    assert {key for key in before if before[key] != after[key]} == {bagasse, bench}
+    assert before[bagasse]["parent_habitats"] == ["ENVO:00002264", "mesh:D062611"]
+    assert after[bagasse]["parent_habitats"] == ["ENVO:00002264"]
+    assert before[bench]["parent_habitats"] == ["habitatmech:GOLD.961229841c"]
+    assert "parent_habitats" not in after[bench]
+    for identifier in (bagasse, bench):
+        old, new = before[identifier], after[identifier]
+        assert new["curation_history"][:-1] == old["curation_history"]
+        event = new["curation_history"][-1]
+        assert event["action"] == "SOURCE_PARENT_EXCLUDED"
+        assert event["timestamp"] == "2026-10-07T00:00:00Z"
+        assert event["curator"] == "codex-gpt-5"
+        for field in (old.keys() | new.keys()) - {"parent_habitats", "curation_history"}:
+            assert new.get(field) == old.get(field), (identifier, field)
+        assert new["mapping_status"] == "SEEDED"
+    attestation = after[bagasse]["source_attestations"][0]
+    assert attestation["source_path"] == "Engineered > Solid waste > Bagasse"
+    assert attestation["source_id"] == "gold.ecosystem:4925"
+    assert attestation["assertion_count"] == 23
+    assert attestation["assertion_unit"] == "ORGANISM"
+    assert "3 GOLD ecosystem node ids" in attestation["notes"]
+    assert after[bench]["source_attestations"] == [{
+        "source": "GOLD", "source_id": "gold.ecosystem:5464", "source_label": "Bench surface",
+        "source_path": "Engineered > Built environment > City > Subway > Bench surface",
+    }]
+
+
 def test_thalassic_and_thrombolite_curation_has_exact_scope(monkeypatch):
     thalassic = "habitatmech:GOLD.3fece6dbf7"
     quality = "ENVO:01001667"

@@ -3,8 +3,6 @@ label: Bench surface
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.961229841c
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5464
@@ -23,3 +21,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.961229841c
+    for habitatmech:GOLD.4f9191d466 (Engineered > Built environment > City > Subway
+    > Bench surface). ITEM hierarchy assessment (bench-only part of #282): Gohli et
+    al. DOI:10.1186/s40168-019-0772-9 samples bench surfaces within subway stations,
+    distinguishing the localized surface from its enclosing environment. The maintained
+    subway-environment definition covers the whole transit setting, not a surface
+    genus. Exclude only this location-context contribution; preserve GOLD5464, full
+    path, mint, count omissions, existing identity/status and previous events. No
+    replacement identity, material, definition or sibling-surface correction is inferred.'
