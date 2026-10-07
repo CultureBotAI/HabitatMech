@@ -26,8 +26,8 @@ curation_history:
     (Engineered > Bioreactor > Aerobic > Biofilm). ITEM hierarchy assessment (#1627):
     ENVO:00002034 biofilm is microbial material, not a kind of the enclosing aerobic
     bioreactor ENVO:00002126. Official ENVO a2455d1a77e46bb8a664d65a157166b539269042
-    distinguishes these classes; de Beer et al. 1994 (https://pubmed.ncbi.nlm.nih.gov/18615526/;
-    DOI:10.1002/bit.260431118) distinguishes biofilm clusters and surrounding liquid.
+    distinguishes these classes; de Beer et al. 1994 (https://pubmed.ncbi.nlm.nih.gov/18615526/)
+    (DOI:10.1002/bit.260431118) distinguishes biofilm clusters and surrounding liquid.
     Exclude only this GOLD context contribution; preserve the independent biofilm
     genus, qualified mint, source path, both nodes, one ORGANISM assertion, skos:narrowMatch
     and NARROW/SEEDED status. Do not infer uniform oxygenation, a source-to-experiment
