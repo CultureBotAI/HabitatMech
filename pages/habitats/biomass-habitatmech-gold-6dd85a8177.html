@@ -51,7 +51,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 <h2>Broader habitats</h2>
 <ul class="plain">
-  <li><a href="../habitats/anaerobic-bioreactor-envo-00002124.html">anaerobic bioreactor</a>      <code class="curie">ENVO:00002124</code></li>
   <li><a href="../habitats/organic-material-envo-01000155.html">organic material</a>      <code class="curie">ENVO:01000155</code></li>
 </ul>
 
@@ -67,6 +66,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">GROUND_AS_PARENT</span>
     <span class="meta">2026-08-13 · claude-opus-5</span>
     <p>ENVO:01000155 &#39;organic material&#39; attached as a parent, not adopted as the identity (NARROW). Bioreactor biomass is a kind of organic material, not the class itself; grounding it there merged it with PREGO&#39;s generic term. Path: Engineered &gt; Bioreactor &gt; Anaerobic &gt; Biomass (source concept habitatmech:GOLD.6dd85a8177)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-07 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution ENVO:00002124 for habitatmech:GOLD.6dd85a8177 (Engineered &gt; Bioreactor &gt; Anaerobic &gt; Biomass). ITEM hierarchy assessment (#1635): The existing ITEM GROUND_AS_PARENT decision identifies reactor biomass as organic material, not a kind of its anaerobic reactor. Official ENVO a2455d1a77e46bb8a664d65a157166b539269042 (<a href="https://raw.githubusercontent.com/EnvironmentOntology/envo/a2455d1a77e46bb8a664d65a157166b539269042/envo.owl" rel="noopener noreferrer" target="_blank">https://raw.githubusercontent.com/EnvironmentOntology/envo/a2455d1a77e46bb8a664d65a157166b539269042/envo.owl</a>) distinguishes ENVO:01000155 material and ENVO:00002124 device. Preserve that identity decision and REVIEWED status. Exclude only this GOLD context contribution; retain independent ENVO:01000155, qualified mint, all source IDs and paths, count/unit omissions or values, collapsed-node notes, skos:narrowMatch and existing NARROW/REVIEWED status. No new identity endorsement, experimental condition, taxon or causal claim is inferred.</p>
   </li>
 </ol>
 
