@@ -1,0 +1,39 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: coculture_coal
+session:
+  id: 2026-10-07T210214Z-codex-gpt-5-2e7b49
+  timestamp: '2026-10-07T21:02:14Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: codex-gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1659
+  - https://github.com/CultureBotAI/HabitatMech/issues/1660
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1658
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: Exclude three unsupported co-culture and coal source parents
+  details: Adversarial review traced the three complete reports, target and parent records,
+    source inventories and CLASS versus ITEM decisions. Fresh NLM D018920 inspection corroborated
+    the reports; BTO and ENVO checks are documented there. Added exact-path and expected-parent
+    exclusions for fungal GOLD.c7e1dbc6bb, bacterial GOLD.6a8d0ed24a and coal source GOLD.d30d9c1ae1.
+    Original GOLD payloads remain unavailable; no speculative co-culture identity or Biotransformation
+    definition is inferred. Preserve qualified co-culture mints, coal ENVO identity and sedimentary-rock
+    genus, nodes, count omissions, previous events and SEEDED status. Whole-corpus differential
+    regression failed before correction and passed afterward, proving only the three parent/audit
+    changes across 3207 identities, with all other records unchanged. Dry seed, inspected
+    fungal canary and full 3207-record regeneration passed. Map/site refresh, full QC and
+    final CI remain pending and will be recorded in the PR receipt. Deprecated BTO anchors
+    remain issue 1619 and Biotransformation source scope issue 1636. Re-scaffolded the uncommitted
+    draft with the explicit actor to avoid the tool default claude-code attribution.
