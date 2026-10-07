@@ -1,0 +1,37 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: chloroethene
+session:
+  id: 2026-10-07T200323Z-codex-gpt-5-7b3547
+  timestamp: '2026-10-07T20:03:23Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: codex-gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1657
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1656
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: Suppress unsupported chemical-indexed GOLD parent for Chloroethene
+  details: 'Separate adversarial review confirmed the unestablished strict habitat parent
+    identified in reports/yaml_record_review/20261007T192856Z-chloroethene.md. Added an exact-path
+    and expected-parent guarded exclusion for GOLD.9c0c555f09 to GOLD.063960efcc. Both bins
+    retain unresolved habitat scope under #1636; no NOT_APPLICABLE decision or speculative
+    habitat definition is inferred. Evidence includes complete source records/inventories
+    and inspected ChEBI/NIST chemical identity and EPA542-R-13-018 distinctions between contaminants,
+    media and systems. Whole-corpus differential regression failed before correction and passed
+    afterward, proving only target parent_habitats and one audit event change; all 3207 identities,
+    previous events, source units, two source nodes, parent record, City and child Bioreactor
+    remain unchanged. Dry seed passed and the guarded generated canary was read. Full QC and
+    genuine semantic-map/site regeneration are pending and will be recorded separately after
+    completion.'
