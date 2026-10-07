@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: biofilm__128c67cf
+session:
+  id: 2026-10-07T084218Z-codex-bed882
+  timestamp: '2026-10-07T08:42:18Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1627
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1626
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: Remove the aerobic-reactor context parent from qualified Biofilm
+  details: 'Exact source habitatmech:GOLD.6b1f16702e / Engineered > Bioreactor > Aerobic >
+    Biofilm excludes ENVO:00002126 only. Official ENVO a2455d1a77e46bb8a664d65a157166b539269042
+    and inspected PMID:18615526 distinguish biofilm microbial material from reactor context.
+    Preserve ENVO:00002034, source nodes 5472/5473, one ORGANISM assertion and NARROW/SEEDED.
+    No uniform oxygen profile or source-paper crosswalk is inferred. A failing-before/passing-after
+    full-corpus regression proves only the two reviewed biofilms'' parent and audit fields
+    change; all 33 exclusion tests and dry seed passed. Target canaries are inspected before
+    publication. Full corpus/history/OAK/QC, genuine map regeneration and required PR/queue
+    gates must complete; terminal receipts belong on PR #1626. Original reports remain pre-fix
+    assessments.'
