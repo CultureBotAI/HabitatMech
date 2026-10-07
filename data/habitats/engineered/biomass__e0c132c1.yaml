@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:01000155
-- habitatmech:GOLD.b0f6a1ef74
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8550
@@ -18,3 +17,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.b0f6a1ef74
+    for habitatmech:GOLD.555431c596 (Engineered > Bioreactor > Partial-Nitrification/Anammox
+    (PNA) > Aerobic zone > Biomass). ITEM hierarchy assessment (#1635): Organic biomass
+    material is not a kind of its aerobic-zone location. Speth et al. 2016 (https://pubmed.ncbi.nlm.nih.gov/27029554/)
+    (DOI:10.1038/ncomms11172) distinguishes reactor biomass and spatial niches; no
+    uniform oxygenation or source-to-experiment crosswalk is established. Exclude
+    only this GOLD context contribution; retain independent ENVO:01000155, qualified
+    mint, all source IDs and paths, count/unit omissions or values, collapsed-node
+    notes, skos:narrowMatch and existing NARROW/SEEDED status. No new identity endorsement,
+    experimental condition, taxon or causal claim is inferred.'

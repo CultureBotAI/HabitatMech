@@ -33,7 +33,7 @@ def test_curation_urls_are_escaped_clickable_and_preserve_punctuation():
     assert 'rel="noopener noreferrer"' in html
 
 
-def test_reviewed_biofilm_pages_have_exact_pubmed_links(repo_root):
+def test_reviewed_engineered_pages_have_exact_pubmed_links(repo_root):
     class Links(HTMLParser):
         def __init__(self):
             super().__init__()
@@ -43,11 +43,17 @@ def test_reviewed_biofilm_pages_have_exact_pubmed_links(repo_root):
             if tag == "a":
                 self.hrefs.extend(value for name, value in attrs if name == "href")
 
-    for identifier, pmid in [
-        ("6b1f16702e", "18615526"), ("b77f846671", "20714445"),
-        ("5eaebd18a7", "20714445"),
+    for label, identifier, pmid in [
+        ("biofilm", "6b1f16702e", "18615526"), ("biofilm", "b77f846671", "20714445"),
+        ("biofilm", "5eaebd18a7", "20714445"),
+        ("biofilm", "080ba885f8", "16936064"), ("biofilm", "6940086ae0", "25514396"),
+        ("biofilm", "6e59960397", "16936064"),
+        ("biomass", "262a789a98", "29564535"), ("biomass", "82a6b2e83f", "29564535"),
+        ("biomass", "555431c596", "27029554"),
+        ("bioreactor", "c4bf3d0c83", "15889396"), ("bioreactor", "15c94449af", "15246435"),
+        ("bioreactor", "cb827f4a50", "15246435"), ("bioreactor", "00fe86978b", "15246435"),
     ]:
-        page = repo_root / f"pages/habitats/biofilm-habitatmech-gold-{identifier}.html"
+        page = repo_root / f"pages/habitats/{label}-habitatmech-gold-{identifier}.html"
         parser = Links()
         parser.feed(page.read_text(encoding="utf-8"))
         assert [href for href in parser.hrefs if "pubmed.ncbi.nlm.nih.gov" in href] == [

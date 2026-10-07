@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002034
-- ENVO:03600077
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5845
@@ -18,3 +17,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:03600077 for habitatmech:GOLD.6940086ae0
+    (Engineered > Bioreactor > Photobioreactor (PBR) > Biofilm). ITEM hierarchy assessment
+    (#1635): Biofilm microbial material is not a kind of the enclosing photobioreactor
+    ENVO:03600077. Gao et al. 2015 (https://pubmed.ncbi.nlm.nih.gov/25514396/) (DOI:10.1016/j.biortech.2014.11.108)
+    distinguishes a carrier-equipped reactor from its attached algal biomass. Exclude
+    only this GOLD context contribution; retain independent ENVO:00002034, qualified
+    mint, all source IDs and paths, count/unit omissions or values, collapsed-node
+    notes, skos:narrowMatch and existing NARROW/SEEDED status. No new identity endorsement,
+    experimental condition, taxon or causal claim is inferred.'
