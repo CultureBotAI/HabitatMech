@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/causal_graphs/building.yaml
+  slug: building
+session:
+  id: 2026-10-07T160342Z-claude-code-68f235
+  timestamp: '2026-10-07T16:03:42Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1646
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  - curation_history
+  summary: Bound building graph claims to sampled compartments and supported processes
+  details: 'Corrected the maintained overlay after the individual review in reports/yaml_record_review/20261007T153509Z-building.md.
+    Inspected primary PubMed abstracts and own PMID/DOI identifiers for Lax 2014 (25170151;
+    10.1126/science.1254529) and Meadow 2014 (23621155; 10.1111/ina.12047), plus the Gibbons
+    2015 publisher full text (25398865; 10.1128/AEM.03117-14). Retained seven study-scoped
+    edges, corrected air-versus-surface attribution, removed unsupported material/nutrient/desiccation/reservoir
+    mechanisms, replaced mistyped populations with actual process nodes, and added exact short
+    snippets and section locators. Preserved the September generated event; this session does
+    not reconstruct missing historical model details. Added regression tests for compartment
+    separation, bounded predicates, node semantics, and overlay/generated equality. Validation
+    and publication receipts are recorded on PR #1645. Parameter, taxon-label, MeSH hierarchy,
+    and canal-provenance issues #1647-#1650 remain separate and unresolved.'
