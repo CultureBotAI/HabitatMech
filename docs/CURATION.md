@@ -30,8 +30,11 @@ A GOLD path can map exactly even when its bare leaf is broader than the
 resolved habitat. When that leaf is the canonical label of a different strict
 ontology ancestor, the seeder retains it as RELATED_SYNONYM, with a deterministic
 scope event, rather than asserting exact lexical equivalence. Source attestations
-remain verbatim. This guard does not establish the scope of other source labels
-or repair untyped ontology synonyms; those need separate review (#1459, #1249).
+remain verbatim. CLOSE-mapped GOLD and BacDive labels likewise receive
+RELATED_SYNONYM, not exact scope, with a deterministic source-scope event
+(#1459). Independently supplied ontology synonyms are preserved. These guards
+do not establish the scope of other source labels or repair untyped ontology
+synonyms; those still need separate review (#1249).
 
 An exact xref from an ontology that is not present in
 `data/raw/ontology_terms.tsv` can be label-verified through

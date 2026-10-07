@@ -25,10 +25,13 @@ def test_anode_and_aquaculture_exclusions_preserve_other_claims(monkeypatch):
     assert after[farm]["parent_habitats"] == ["ENVO:00000077"]
     for identifier in (anode, farm):
         old, new = before[identifier], after[identifier]
-        assert new["curation_history"][:-1] == old["curation_history"]
-        event = new["curation_history"][-1]
+        additions = [e for e in new["curation_history"] if e not in old["curation_history"]]
+        assert len(additions) == 1
+        event = additions[0]
+        assert [e for e in new["curation_history"] if e != event] == old["curation_history"]
         assert event["action"] == "SOURCE_PARENT_EXCLUDED"
         assert event["timestamp"] == "2026-10-07T00:00:00Z"
+        assert (farm_source if identifier == farm else anode) in event["changes"]
         for field in (old.keys() | new.keys()) - {"parent_habitats", "curation_history"}:
             assert new.get(field) == old.get(field), (identifier, field)
     assert after[anode]["mapping_status"] == "SEEDED"

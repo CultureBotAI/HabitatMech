@@ -13,7 +13,7 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: GOLD
 - synonym_text: Gingival sulcus
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: gingival sulcus
   synonym_type: EXACT_SYNONYM
@@ -66,3 +66,9 @@ curation_history:
     is scoped to human oral cavity, so skos:narrowMatch is the consistent predicate.
     Path: Host-associated > Mammals: Human > Digestive system > Oral cavity > Gingival
     crevice/sulcus (source concept habitatmech:GOLD.e97d0cb4b1)'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Gingival sulcus'' as RELATED_SYNONYM: a CLOSE source
+    mapping does not establish exact lexical equivalence. Independent ontology synonyms
+    and verbatim attestations are preserved (#1459).'

@@ -365,6 +365,7 @@ class Concept:
     definitions_applied: list[CuratedDefinition] = field(default_factory=list)
     gold_parent_exclusions_applied: list[GoldParentExclusion] = field(default_factory=list)
     gold_broader_synonyms: set[tuple[str, str]] = field(default_factory=set)
+    close_source_synonyms: set[tuple[str, str]] = field(default_factory=set)
     causal_graphs: list[dict[str, Any]] = field(default_factory=list)
     causal_graph_events: list[dict[str, Any]] = field(default_factory=list)
     _grounding_rank_seen: int = 0
@@ -884,6 +885,10 @@ def ingest_gold(
                 and res.identifier not in store.ontology.ancestors(leaf_id)):
             concept.add_synonym(row["leaf_label"], "RELATED_SYNONYM", "GOLD")
             concept.gold_broader_synonyms.add((row["leaf_label"], leaf_id))
+        elif res.grounding_status == "CLOSE":
+            concept.add_synonym(row["leaf_label"], "RELATED_SYNONYM", "GOLD")
+            if norm_label(row["leaf_label"]) != norm_label(concept.label):
+                concept.close_source_synonyms.add(("GOLD", row["leaf_label"]))
         else:
             concept.add_synonym(row["leaf_label"], "EXACT_SYNONYM", "GOLD")
         concept.parents.update(res.extra_parents)
@@ -980,7 +985,10 @@ def ingest_bacdive(
             store.set_category(concept, res.category, authoritative=True)
         elif concept.category is None:
             store.set_category(concept, infer_category(res.identifier, store.ontology), authoritative=False)
-        concept.add_synonym(row["label"], "EXACT_SYNONYM", "BacDive")
+        scope = "RELATED_SYNONYM" if res.grounding_status == "CLOSE" else "EXACT_SYNONYM"
+        concept.add_synonym(row["label"], scope, "BacDive")
+        if scope == "RELATED_SYNONYM" and norm_label(row["label"]) != norm_label(concept.label):
+            concept.close_source_synonyms.add(("BacDive", row["label"]))
         concept.parents.update(res.extra_parents)
         concept.xrefs.update(res.extra_xrefs)
 
@@ -1296,7 +1304,7 @@ def ingest_parameters(
         "salinity variability": "SALINITY_VARIABILITY",
         "pH": "PH",
     }
-    attested: set[str] = set()
+    attested: set[tuple[str, str]] = set()
     for row in rows:
         term_ids = [t for t in (row.get("term_ids") or "").split("|") if t]
         if len(term_ids) != 1:
@@ -1340,18 +1348,6 @@ def ingest_parameters(
                 res.grounding_status,
                 contributes_grounding=res.contributes_grounding,
             )
-            concept.source_concepts += 1
-            concept.reviewed_sources += 1 if res.reviewed else 0
-            if res.decision is not None:
-                concept.decisions_applied.append(res.decision)
-            concept.parents.update(res.extra_parents)
-            concept.xrefs.update(res.extra_xrefs)
-            if res.category:
-                store.set_category(concept, res.category, authoritative=True)
-            elif concept.category is None:
-                store.set_category(
-                    concept, infer_category(identifier, store.ontology), authoritative=False
-                )
             stats["concepts_created_from_parameter_table"] += 1
         parameter = parameter_names.get(row["parameter"])
         if parameter is None:
@@ -1365,8 +1361,23 @@ def ingest_parameters(
             }
         )
         stats["parameter_assertions_attached"] += 1
-        if identifier not in attested:
-            attested.add(identifier)
+        # Bands are observations of a source concept, not separate sources.
+        # Distinct env_type sources can resolve to the same habitat.
+        source_key = (identifier, mint("ENVIRONMENTS_TABLE", row["env_type"]))
+        if source_key not in attested:
+            attested.add(source_key)
+            concept.source_concepts += 1
+            concept.reviewed_sources += 1 if res.reviewed else 0
+            if res.decision is not None:
+                concept.decisions_applied.append(res.decision)
+            concept.parents.update(res.extra_parents)
+            concept.xrefs.update(res.extra_xrefs)
+            if res.category:
+                store.set_category(concept, res.category, authoritative=True)
+            elif concept.category is None:
+                store.set_category(
+                    concept, infer_category(identifier, store.ontology), authoritative=False
+                )
             concept.attestations.append(
                 {
                     "source": "ENVIRONMENTS_TABLE",
@@ -1535,6 +1546,18 @@ def build_document(concept: Concept) -> dict[str, Any]:
                 f"Retained GOLD label {text!r} as RELATED_SYNONYM, not exact: "
                 f"its canonical ontology identity {ancestor} is a strict ancestor "
                 f"of {concept.identifier}. Source attestation remains verbatim (#1459)."
+            ),
+            timestamp="2026-10-07T00:00:00Z",
+        )
+    for source, text in sorted(concept.close_source_synonyms):
+        record_curation_event(
+            doc,
+            curator=SEED_CURATOR,
+            action="SOURCE_SYNONYM_SCOPED",
+            changes=(
+                f"Retained {source} label {text!r} as RELATED_SYNONYM: "
+                "a CLOSE source mapping does not establish exact lexical equivalence. "
+                "Independent ontology synonyms and verbatim attestations are preserved (#1459)."
             ),
             timestamp="2026-10-07T00:00:00Z",
         )

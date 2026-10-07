@@ -37,8 +37,10 @@ def test_bituminous_sand_exclusion_changes_only_context_parent_and_audit(monkeyp
     old, new = before[identifier], after[identifier]
     assert old["parent_habitats"] == ["ENVO:00000076", "ENVO:00010483"]
     assert new["parent_habitats"] == ["ENVO:00010483"]
-    assert new["curation_history"][:-1] == old["curation_history"]
-    event = new["curation_history"][-1]
+    additions = [e for e in new["curation_history"] if e not in old["curation_history"]]
+    assert len(additions) == 1
+    event = additions[0]
+    assert [e for e in new["curation_history"] if e != event] == old["curation_history"]
     assert event["action"] == "SOURCE_PARENT_EXCLUDED"
     assert event["timestamp"] == "2026-10-07T00:00:00Z"
     assert event["curator"] == "codex-gpt-5"
@@ -344,9 +346,14 @@ def test_subtidal_supratidal_swamp_curation_has_exact_scope(monkeypatch):
             allowed.add("mapping_status")
         for field in (old.keys() | new.keys()) - allowed:
             assert new.get(field) == old.get(field), (identifier, field)
-        assert new["curation_history"][-1]["action"] == "SOURCE_PARENT_EXCLUDED"
+        exclusions = [e for e in new["curation_history"]
+                      if e["action"] == "SOURCE_PARENT_EXCLUDED"]
+        assert len(exclusions) == 1
+        exclusion = exclusions[0]
+        assert exclusion not in old["curation_history"]
+        assert (swamp_source if identifier == swamp else identifier) in exclusion["changes"]
         if identifier != sediment:
-            assert new["curation_history"][:-1] == old["curation_history"]
+            assert [e for e in new["curation_history"] if e != exclusion] == old["curation_history"]
         assert [e for e in new["curation_history"] if e["action"] == "SEEDED_FROM_SOURCES"] == [
             e for e in old["curation_history"] if e["action"] == "SEEDED_FROM_SOURCES"
         ]
@@ -469,11 +476,14 @@ def test_water_ice_core_exclusion_changes_only_context_parent_and_audit(monkeypa
     old, new = before[identifier], after[identifier]
     assert old["parent_habitats"] == ["ENVO:00000019", "ENVO:01000293"]
     assert new["parent_habitats"] == ["ENVO:01000293"]
-    assert new["curation_history"][:-1] == old["curation_history"]
-    event = new["curation_history"][-1]
+    additions = [e for e in new["curation_history"] if e not in old["curation_history"]]
+    assert len(additions) == 1
+    event = additions[0]
+    assert [e for e in new["curation_history"] if e != event] == old["curation_history"]
     assert event["action"] == "SOURCE_PARENT_EXCLUDED"
     assert event["timestamp"] == "2026-10-06T00:00:00Z"
     assert event["curator"] == "codex-gpt-5"
+    assert source in event["changes"]
     for field in (old.keys() | new.keys()) - {"parent_habitats", "curation_history"}:
         assert new.get(field) == old.get(field), field
     assert new["grounding_status"] == "CLOSE"

@@ -8,17 +8,16 @@ grounding_status: EXACT
 mapping_status: REVIEWED
 synonyms:
 - synonym_text: Composting
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: Oil palm
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: composts
   synonym_type: RELATED_SYNONYM
   source: PREGO
 parent_habitats:
 - ENVO:03501300
-- mesh:D062611
 source_attestations:
 - source: ENVIRONMENTS_TABLE
   source_id: compost
@@ -331,16 +330,16 @@ causal_graphs:
     node_type: ENVIRONMENTAL_FACTOR
   - node_id: organic_solid_waste
     label: organic solid waste
-    node_type: ENVIRONMENTAL_PARAMETER
+    node_type: HABITAT
   - node_id: aerobic_solid_state_biodegradation
     label: aerobic solid-state biodegradation
     node_type: COMMUNITY_PROCESS
-  - node_id: thermogenic_phase
-    label: thermogenic compost phase
-    node_type: STATE
-  - node_id: thermophilic_bacteria
-    label: thermophilic bacteria
-    node_type: TAXON
+  - node_id: compost_temperature
+    label: compost temperature
+    node_type: ENVIRONMENTAL_PARAMETER
+  - node_id: thermophilic_community_succession
+    label: succession toward thermophilic decomposers
+    node_type: COMMUNITY_PROCESS
   - node_id: lignocellulolytic_enzyme_activity
     label: lignocellulolytic enzyme activity
     node_type: MOLECULAR_FUNCTION
@@ -370,8 +369,8 @@ causal_graphs:
         that treat organic solid waste.
   - edge_id: biodegradation_drives_thermogenic_phase
     subject: aerobic_solid_state_biodegradation
-    predicate: releases heat as
-    object: thermogenic_phase
+    predicate: raises
+    object: compost_temperature
     description: Microbial degradation of organic substrates produces heat that drives
       the compost into a high-temperature thermogenic phase.
     evidence:
@@ -380,9 +379,9 @@ causal_graphs:
       notes: Finore et al. summarize energy-balance models that treat substrate degradation
         as the source of composting heat.
   - edge_id: thermogenic_phase_enriches_thermophiles
-    subject: thermogenic_phase
-    predicate: selects for
-    object: thermophilic_bacteria
+    subject: compost_temperature
+    predicate: drives
+    object: thermophilic_community_succession
     description: Rising compost temperature shifts the community from mesophiles toward
       thermophilic bacteria.
     evidence:
@@ -391,8 +390,8 @@ causal_graphs:
       notes: Finore et al. review the rise of thermophilic populations as compost
         enters its thermogenic temperature phase.
   - edge_id: thermophiles_supply_lignocellulolytic_activity
-    subject: thermophilic_bacteria
-    predicate: expresses
+    subject: thermophilic_community_succession
+    predicate: supports
     object: lignocellulolytic_enzyme_activity
     description: Thermophilic compost bacteria secrete hydrolytic and oxidoreductase
       enzymes that attack cellulose, hemicellulose, and lignin in plant-rich waste.
@@ -427,6 +426,12 @@ curation_history:
   curator: claude-opus-5
   action: REVIEW
   changes: 'Reviewed and endorsed the seeder''s own resolution. Co-attestor review
+    (#12): ''compost'' resolves to ENVO:00002170 ''compost''. Correct as seeded. (source
+    concept habitatmech:ENVIRONMENTS_TABLE.392f1cbccf)'
+- timestamp: '2026-08-15T00:00:00Z'
+  curator: claude-opus-5
+  action: REVIEW
+  changes: 'Reviewed and endorsed the seeder''s own resolution. Co-attestor review
     (#12): this source names the ontology CURIE itself, so its grounding is definitional
     rather than a lexical guess — the record IS the term the source pointed at. Recorded
     so the record it co-attests can reach REVIEWED, which needs every source concept
@@ -441,4 +446,35 @@ curation_history:
   action: ADD_CAUSAL_GRAPH
   changes: Added a compost thermogenic-decomposition graph backed by PMID:16454493
     and DOI:10.1186/s40538-023-00381-z.
+  llm_assisted: true
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution mesh:D062611 for habitatmech:GOLD.4741a9f8bb
+    (Engineered > Solid waste > Composting). ITEM hierarchy assessment (#1664): generic
+    ENVO:00002170 compost material is not universally discarded Solid Waste. EPA (https://www.epa.gov/sustainable-management-food/composting)
+    distinguishes organic waste inputs from stable soil-amendment product; NLM mesh:D062611
+    denotes discarded materials. Suppress only this GOLD context contribution, preserving
+    independent ENVO:03501300 manure, all source paths, heterogeneous counts and existing
+    identity decisions. This does not settle the process/material scope of qualified
+    GOLD Composting sources or assert a legal waste classification. Evidence: reports/yaml_record_review/20261007T222058Z-compost.md.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Composting'' as RELATED_SYNONYM: a CLOSE source
+    mapping does not establish exact lexical equivalence. Independent ontology synonyms
+    and verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Oil palm'' as RELATED_SYNONYM: a CLOSE source mapping
+    does not establish exact lexical equivalence. Independent ontology synonyms and
+    verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: codex-gpt-5
+  action: CORRECT_CAUSAL_GRAPH
+  changes: Corrected material, temperature and community-succession node semantics
+    without adding taxa or changing evidence. The graph concerns active thermophilic
+    composting, not universal mature-compost conditions; heat loss and excessive temperature
+    can limit decomposition (#1665).
   llm_assisted: true

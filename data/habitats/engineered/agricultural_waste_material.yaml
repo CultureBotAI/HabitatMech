@@ -10,7 +10,7 @@ grounding_status: CLOSE
 mapping_status: REVIEWED
 synonyms:
 - synonym_text: Agricultural waste
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: agricultural waste
   synonym_type: EXACT_SYNONYM
@@ -95,3 +95,9 @@ curation_history:
     and silt as well. The label synonym shows they share a name, not a scope. Merges
     with the existing agricultural waste material record, whose CLOSE grounding from
     the GOLD path stands unchanged. (source concept habitatmech:PREGO.ae82b5486e)'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Agricultural waste'' as RELATED_SYNONYM: a CLOSE
+    source mapping does not establish exact lexical equivalence. Independent ontology
+    synonyms and verbatim attestations are preserved (#1459).'

@@ -8,7 +8,7 @@ grounding_status: EXACT
 mapping_status: REVIEWED
 synonyms:
 - synonym_text: Aquaculture
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: BacDive
 - synonym_text: aquaculture
   synonym_type: EXACT_SYNONYM
@@ -218,3 +218,9 @@ curation_history:
     parent ENVO:00000077, source paths, units, all taxa and existing review status.
     The original GOLD facility-versus-effluent source scope remains unresolved in
     #1614; this exclusion does not establish exact source identity.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained BacDive label ''Aquaculture'' as RELATED_SYNONYM: a CLOSE source
+    mapping does not establish exact lexical equivalence. Independent ontology synonyms
+    and verbatim attestations are preserved (#1459).'

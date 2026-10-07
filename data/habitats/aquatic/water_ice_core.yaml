@@ -9,7 +9,7 @@ grounding_status: CLOSE
 mapping_status: REVIEWED
 synonyms:
 - synonym_text: Ice core
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: ice core
   synonym_type: EXACT_SYNONYM
@@ -51,3 +51,9 @@ curation_history:
     and existing ITEM review provenance. This correction does not establish the source''s
     multi-year snow-accumulation history or settle its identity; typed broad synonyms
     remain tracked in #1249.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Ice core'' as RELATED_SYNONYM: a CLOSE source mapping
+    does not establish exact lexical equivalence. Independent ontology synonyms and
+    verbatim attestations are preserved (#1459).'
