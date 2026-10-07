@@ -644,6 +644,107 @@ def test_biocathode_biofilm_exclusion_changes_only_context_parent_and_audit(monk
     }]
 
 
+def test_reviewed_engineered_context_exclusions_have_exact_corpus_scope(monkeypatch):
+    targets = {
+        "habitatmech:GOLD.080ba885f8": (
+            "Engineered > Bioreactor > Microbial fuel cells/MFC > Anode > Biofilm",
+            "habitatmech:GOLD.9b7ba22de1", "ENVO:00002034", "gold.ecosystem:7658",
+            1, False, "SEEDED",
+        ),
+        "habitatmech:GOLD.6940086ae0": (
+            "Engineered > Bioreactor > Photobioreactor (PBR) > Biofilm",
+            "ENVO:03600077", "ENVO:00002034", "gold.ecosystem:5845",
+            None, True, "SEEDED",
+        ),
+        "habitatmech:GOLD.6e59960397": (
+            "Engineered > Industrial production > Engineered product > Bioanode > Biofilm",
+            "habitatmech:GOLD.bfec1d2ae2", "ENVO:00002034", "gold.ecosystem:5648",
+            None, False, "SEEDED",
+        ),
+        "habitatmech:GOLD.262a789a98": (
+            "Engineered > Bioreactor > SSF (Solid state fermentation) > Aerobic > Biomass",
+            "ENVO:00002126", "ENVO:01000155", "gold.ecosystem:7775",
+            None, False, "SEEDED",
+        ),
+        "habitatmech:GOLD.82a6b2e83f": (
+            "Engineered > Bioreactor > SSF (Solid state fermentation) > Unclassified > Biomass",
+            "habitatmech:GOLD.3af6ca6cc3", "ENVO:01000155", "gold.ecosystem:7766",
+            9, False, "SEEDED",
+        ),
+        "habitatmech:GOLD.6dd85a8177": (
+            "Engineered > Bioreactor > Anaerobic > Biomass",
+            "ENVO:00002124", "ENVO:01000155", "gold.ecosystem:8164",
+            3, True, "REVIEWED",
+        ),
+        "habitatmech:GOLD.555431c596": (
+            "Engineered > Bioreactor > Partial-Nitrification/Anammox (PNA) > Aerobic zone > Biomass",
+            "habitatmech:GOLD.b0f6a1ef74", "ENVO:01000155", "gold.ecosystem:8550",
+            None, False, "SEEDED",
+        ),
+        "habitatmech:GOLD.c4bf3d0c83": (
+            "Engineered > Bioremediation > Terephthalate > Wastewater > Bioreactor",
+            "habitatmech:GOLD.9ab362de60", "ENVO:00002123", "gold.ecosystem:4302",
+            None, False, "SEEDED",
+        ),
+        "habitatmech:GOLD.15c94449af": (
+            "Engineered > Solid waste > Wood > Composting > Bioreactor",
+            "habitatmech:GOLD.861074d2dd", "ENVO:00002123", "gold.ecosystem:4856",
+            None, False, "SEEDED",
+        ),
+        "habitatmech:GOLD.cb827f4a50": (
+            "Engineered > Solid waste > Unknown material > Composting > Bioreactor",
+            "habitatmech:GOLD.52f7aa2371", "ENVO:00002123", "gold.ecosystem:4966",
+            1, False, "SEEDED",
+        ),
+        "habitatmech:GOLD.00fe86978b": (
+            "Engineered > Solid waste > Grass > Composting > Bioreactor",
+            "habitatmech:GOLD.143ceb8669", "ENVO:00002123", "gold.ecosystem:4873",
+            None, False, "SEEDED",
+        ),
+    }
+    after = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    exclusions = load_gold_parent_exclusions(seed.GOLD_PARENT_EXCLUSIONS_PATH)
+    for identifier, (source_path, parent, *_) in targets.items():
+        exclusion = exclusions.pop(identifier)
+        assert exclusion.source_path == source_path
+        assert exclusion.parent_id == parent
+        assert seed.mint("GOLD", source_path) == identifier
+    monkeypatch.setattr(seed, "load_gold_parent_exclusions", lambda path: exclusions)
+    before = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+
+    assert before.keys() == after.keys()
+    assert {key for key in before if before[key] != after[key]} == targets.keys()
+    for identifier, values in targets.items():
+        source_path, parent, genus, source_id, count, collapsed, status = values
+        old, new = before[identifier], after[identifier]
+        assert old["parent_habitats"] == sorted([genus, parent])
+        assert new["parent_habitats"] == [genus]
+        assert new["curation_history"][:-1] == old["curation_history"]
+        event = new["curation_history"][-1]
+        assert event["action"] == "SOURCE_PARENT_EXCLUDED"
+        assert event["timestamp"] == "2026-10-07T00:00:00Z"
+        assert event["curator"] == "codex-gpt-5"
+        assert parent in event["changes"]
+        assert source_path in event["changes"]
+        for field in (old.keys() | new.keys()) - {"parent_habitats", "curation_history"}:
+            assert new.get(field) == old.get(field), (identifier, field)
+        assert new["grounding_status"] == "NARROW"
+        assert new["mapping_status"] == status
+        expected = {
+            "source": "GOLD", "source_id": source_id,
+            "source_label": new["label"], "source_path": source_path,
+            "mapping_predicate": "skos:narrowMatch",
+        }
+        if count is not None:
+            expected.update(assertion_count=count, assertion_unit="ORGANISM")
+        if collapsed:
+            expected["notes"] = (
+                "2 GOLD ecosystem node ids share this path; first shown. "
+                "See data/raw/gold_ecosystem_paths.tsv."
+            )
+        assert new["source_attestations"] == [expected]
+
+
 def test_thalassic_and_thrombolite_curation_has_exact_scope(monkeypatch):
     thalassic = "habitatmech:GOLD.3fece6dbf7"
     quality = "ENVO:01001667"

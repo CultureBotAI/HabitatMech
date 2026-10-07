@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: engineered_context_parents_20261007
+session:
+  id: 2026-10-07T121300Z-codex-523b66
+  timestamp: '2026-10-07T12:13:00Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1639
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1634
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  summary: Separate URL punctuation from ten newly curated PubMed citations
+  details: Follow-up to history/mappings/engineered_context_parents_20261007/2026-10-07T121137Z-codex-8b5ffc.yaml,
+    preserved unchanged. Rendering the actual new notes exposed a semicolon included in the
+    PubMed href. Close parentheses immediately after each of the ten cited article URLs and
+    place the DOI in separate parentheses in the maintained exclusion table. Extend the existing
+    exact-href page regression from three to thirteen cases. No hierarchy decision, evidence
+    identity, mapping status, source assertion or semantic-map text changes. Full validated
+    regeneration has been launched; rendered-page regression and full publication gates remain
+    pending at this timestamp. This is citation-format repair, not new scientific evidence.

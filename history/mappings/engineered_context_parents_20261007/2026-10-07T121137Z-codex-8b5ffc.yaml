@@ -1,0 +1,40 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: engineered_context_parents_20261007
+session:
+  id: 2026-10-07T121137Z-codex-8b5ffc
+  timestamp: '2026-10-07T12:11:37Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1635
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1634
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: Exclude eleven individually reviewed engineered GOLD context parents
+  details: 'One session targets curation/gold_parent_exclusions.tsv: eleven exact source/path/resolved-parent
+    exclusions for the MFC-anode, photobioreactor and industrial-bioanode biofilms; four SSF/anaerobic/PNA
+    biomass records; and terephthalate wastewater plus wood/unknown-material/grass composting
+    reactors. Full record-specific scope, IDs, evidence and access limits are documented in
+    the 11 individual reports linked from issue #1635 and in each maintained row. Official
+    ENVO definitions and inspected primary abstracts distinguish material, containment device
+    and location; no source-to-experiment crosswalk is inferred. Preserve independent genera,
+    identities, all attestations/counts/units, collapsed-node notes, predicates and statuses.
+    The new full-corpus regression failed before the rows existed and all 35 exclusion tests
+    then passed, proving only the eleven parent lists and appended audit events change. Dry
+    seed and the inspected GOLD.080ba885f8 canary passed before full validated regeneration
+    (3207 written, zero failures). Semantic map/site regeneration, full QC and required remote
+    checks remain pending and are not claimed passed by this session record. Other reviewed
+    scope, alias/definition and graph findings remain open in #1636, #1637 and #1638. Prior
+    reports and histories are unchanged.'
