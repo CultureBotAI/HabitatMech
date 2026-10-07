@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: whale_fall
+session:
+  id: 2026-10-07T004936Z-codex-gpt-5-f49a67
+  timestamp: '2026-10-07T00:49:36Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1600
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1599
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude the unsupported GOLD Fossil parent from whale fall
+  details: Added one exact mint/path/resolved-parent exclusion for habitatmech:GOLD.6de51dbee8
+    to habitatmech:GOLD.88e2b29307. The individual review and current ENVO a2455d1a77e46bb8a664d65a157166b539269042
+    establish the independent ENVO:01000139 animal carcass fall genus. Treude et al. 2009
+    (DOI:10.3354/meps07972), inspected primary abstract and methods, concerns a modern carcass;
+    no reviewed source-bin superclass semantics justify the Fossil edge. Do not equate that
+    unresolved bin to fossil material. Preserve GOLD4000, path, exact predicate, count/unit
+    omission, EXACT/SEEDED and old event. Dry seed and forced target canary passed and the
+    complete generated record was inspected. All 33 focused tests passed, including full-corpus
+    before/after scope and source-parent guards. Full QC, map and publication receipts will
+    be on PR1599. No raw inventory, original report or prior history was edited.
