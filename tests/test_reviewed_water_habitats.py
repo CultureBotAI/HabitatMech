@@ -5,6 +5,70 @@ from dataclasses import replace
 from habitatmech import seed
 
 
+def test_whale_fall_parent_and_white_smoker_note_have_exact_scope(monkeypatch):
+    whale, smoker = "ENVO:01000140", "ENVO:01000257"
+    whale_source = "habitatmech:GOLD.6de51dbee8"
+    smoker_source = "habitatmech:GOLD.d28b62ff00"
+    parent = "habitatmech:GOLD.88e2b29307"
+    old_note = "Leaf label equals the ENVO label exactly and no other source concept claims it."
+    new_note = (
+        "The plural source label is curator-recognized as equivalent to the singular ENVO "
+        "label in this marine hydrothermal context; normalized labels are not equal and "
+        "the automatic route is gold_unmatched. No other source concept claims this leaf."
+    )
+    after = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    exclusions = seed.load_gold_parent_exclusions(seed.GOLD_PARENT_EXCLUSIONS_PATH)
+    row = exclusions.pop(whale_source)
+    assert row.parent_id == parent
+    assert row.source_path == "Environmental > Aquatic > Marine > Fossil > Whale fall"
+    decisions = seed.load_decisions(seed.DECISIONS_PATH)
+    decision = decisions[smoker_source]
+    assert new_note in decision.notes
+    assert seed.norm_label("White smokers") != seed.norm_label("white smoker")
+    decisions[smoker_source] = replace(decision, notes=decision.notes.replace(new_note, old_note))
+    monkeypatch.setattr(seed, "load_gold_parent_exclusions", lambda path: exclusions)
+    monkeypatch.setattr(seed, "load_decisions", lambda path: decisions)
+    before = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+
+    assert before.keys() == after.keys()
+    assert {key for key in before if before[key] != after[key]} == {whale, smoker}
+    old, new = before[whale], after[whale]
+    assert old["parent_habitats"] == ["ENVO:01000139", parent]
+    assert new["parent_habitats"] == ["ENVO:01000139"]
+    assert new["curation_history"][:-1] == old["curation_history"]
+    event = new["curation_history"][-1]
+    assert event["action"] == "SOURCE_PARENT_EXCLUDED"
+    assert event["curator"] == "codex-gpt-5"
+    assert event["timestamp"] == "2026-10-07T00:00:00Z"
+    assert whale_source in event["changes"] and parent in event["changes"]
+    for field in (old.keys() | new.keys()) - {"parent_habitats", "curation_history"}:
+        assert new.get(field) == old.get(field), field
+    assert new["grounding_status"] == "EXACT" and new["mapping_status"] == "SEEDED"
+    assert new["source_attestations"] == [{
+        "source": "GOLD", "source_id": "gold.ecosystem:4000", "source_label": "Whale fall",
+        "source_path": row.source_path, "mapping_predicate": "skos:exactMatch",
+    }]
+
+    old, new = before[smoker], after[smoker]
+    for field in (old.keys() | new.keys()) - {"curation_history"}:
+        assert new.get(field) == old.get(field), field
+    assert len(old["curation_history"]) == len(new["curation_history"]) == 2
+    assert new["curation_history"][0] == {
+        **old["curation_history"][0],
+        "changes": old["curation_history"][0]["changes"].replace(old_note, new_note),
+    }
+    assert new["curation_history"][0]["curator"] == "claude-opus-5"
+    assert new["curation_history"][0]["timestamp"] == "2026-08-12T00:00:00Z"
+    assert new["curation_history"][1] == old["curation_history"][1]
+    assert new["grounding_status"] == "EXACT" and new["mapping_status"] == "REVIEWED"
+    assert new["parent_habitats"] == ["ENVO:00000215", "ENVO:01000122"]
+    assert new["source_attestations"] == [{
+        "source": "GOLD", "source_id": "gold.ecosystem:8303", "source_label": "White smokers",
+        "source_path": "Environmental > Aquatic > Marine > Hydrothermal vents > White smokers",
+        "mapping_predicate": "skos:exactMatch",
+    }]
+
+
 def test_wetland_area_context_exclusions_have_exact_scope(monkeypatch):
     identifier = "ENVO:00000043"
     expected = {
