@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: data/text_map/current.json
+  slug: coculture_coal_map
+session:
+  id: 2026-10-07T210700Z-codex-gpt-5-1a1e4c
+  timestamp: '2026-10-07T21:07:00Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: codex-gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1659
+  - https://github.com/CultureBotAI/HabitatMech/issues/1660
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1658
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - semantic_map
+  - generated_site
+  summary: Regenerate semantic map after co-culture and coal hierarchy corrections
+  details: Linux run 37686589317 at commit 4cd6b9a205153f27219e95f04acab3adbd40cd47 passed
+    with unchanged locked runtime and verified prior vector cache. Full input comparison changed
+    only fungal Co-culture, bacterial Co-culture and coal, removing one unsupported broader-habitat
+    line each. Changed-record canary encoded three vectors, repeat reused three, and full
+    pass reused all 3207 vectors before genuine projection. Downloaded input bytes match fresh
+    local export SHA256 112eaa9a8812aa517c05e43c95bc85bbfa1b31e19ff28e50ba26bf5f52657048.
+    Local bundle/cache verification passed; selected bundle 16750ef258cb134aa8fde4f66bd3dd2ec440b93de73477ee2375212577b7767e.
+    Installed checked artifacts and removed temporary workflow. Rendering and full QC/final-head
+    CI are pending, with completion to be recorded in the PR receipt. No ontology inventories,
+    runtime pins, source checksums or identity decisions changed.
