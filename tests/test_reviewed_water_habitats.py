@@ -5,6 +5,38 @@ from dataclasses import replace
 from habitatmech import seed
 
 
+def test_wood_fall_context_exclusion_has_exact_scope(monkeypatch):
+    identifier = "ENVO:01000142"
+    source = "habitatmech:GOLD.615f1a92a4"
+    parent = "ENVO:01000024"
+    after = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    exclusions = seed.load_gold_parent_exclusions(seed.GOLD_PARENT_EXCLUSIONS_PATH)
+    row = exclusions.pop(source)
+    assert row.source_path == "Environmental > Aquatic > Marine > Benthic > Wood fall"
+    assert row.parent_id == parent
+    monkeypatch.setattr(seed, "load_gold_parent_exclusions", lambda path: exclusions)
+    before = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+
+    assert before.keys() == after.keys()
+    assert {key for key in before if before[key] != after[key]} == {identifier}
+    old, new = before[identifier], after[identifier]
+    assert old["parent_habitats"] == [parent, "ENVO:01000138"]
+    assert new["parent_habitats"] == ["ENVO:01000138"]
+    assert new["curation_history"][:-1] == old["curation_history"]
+    event = new["curation_history"][-1]
+    assert event["action"] == "SOURCE_PARENT_EXCLUDED"
+    assert event["curator"] == "codex-gpt-5"
+    assert event["timestamp"] == "2026-10-07T00:00:00Z"
+    assert source in event["changes"] and parent in event["changes"]
+    for field in (old.keys() | new.keys()) - {"parent_habitats", "curation_history"}:
+        assert new.get(field) == old.get(field), field
+    assert new["grounding_status"] == "EXACT" and new["mapping_status"] == "SEEDED"
+    assert new["source_attestations"] == [{
+        "source": "GOLD", "source_id": "gold.ecosystem:5712", "source_label": "Wood fall",
+        "source_path": row.source_path, "mapping_predicate": "skos:exactMatch",
+    }]
+
+
 def test_whale_fall_parent_and_white_smoker_note_have_exact_scope(monkeypatch):
     whale, smoker = "ENVO:01000140", "ENVO:01000257"
     whale_source = "habitatmech:GOLD.6de51dbee8"

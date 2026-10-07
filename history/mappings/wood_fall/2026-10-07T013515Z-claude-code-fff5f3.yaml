@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: wood_fall
+session:
+  id: 2026-10-07T013515Z-claude-code-fff5f3
+  timestamp: '2026-10-07T01:35:15Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: codex-gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1604
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude the GOLD benthic-context superclass from wood fall
+  details: 'Added one guarded exclusion for habitatmech:GOLD.615f1a92a4, exact path Environmental
+    > Aquatic > Marine > Benthic > Wood fall, expected parent ENVO:01000024. Current official
+    typed ENVO a2455d1a77e46bb8a664d65a157166b539269042 confirms wood fall as a woody accumulation
+    with named parent ENVO:01000138 plant matter fall; the surrounding marine benthic biome
+    is not its genus. Fresh primary full-text abstract and Methods from Kalenitchenko et al.
+    2018 (DOI:10.1038/s41598-017-17463-2; PMID:29343757) describe experimental wood deployments,
+    not universal measurements or a GOLD BioSample crosswalk. Retained the independent ontology
+    parent, identity, definition, GOLD5712/path/exact predicate, count/unit omission, EXACT/SEEDED
+    state and prior seed event. Dry seed and forced canary passed; the complete generated
+    record was inspected. All 34 focused tests passed, including a full-corpus before/after
+    regression with only ENVO:01000142 changed. Full local QC, real map regeneration, OAK
+    and final-head CI are required before merge; final receipts belong on PR #1603. The original
+    individual review is preserved unchanged.'
