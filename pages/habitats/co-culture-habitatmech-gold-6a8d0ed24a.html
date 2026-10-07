@@ -50,10 +50,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 </table>
 </div>
 
-<h2>Broader habitats</h2>
-<ul class="plain">
-  <li><a href="../habitats/bacteria-habitatmech-gold-5871068dfe.html">Bacteria</a>      <code class="curie">habitatmech:GOLD.5871068dfe</code></li>
-</ul>
 
 
 
@@ -68,6 +64,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="meta">2026-08-12 · claude-opus-5 ·
     class-level sweep, not an individual judgement</span>
     <p>Confirmed UNGROUNDED: no ontology term fits this concept. Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the vendored slice matched this label by any search route. Whether the concept is a habitat at all was NOT assessed, so this is not yet a term-request candidate. (source concept habitatmech:GOLD.6a8d0ed24a)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-07 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.5871068dfe for habitatmech:GOLD.6a8d0ed24a (Engineered &gt; Lab culture &gt; Culture media &gt; Bacteria &gt; Co-culture). ITEM hierarchy assessment (#1659): the parent is explicitly curated as bacterial nutrient medium, but this qualified co-culture source has no evidence establishing a medium-formulation identity. NLM D018920 distinguishes a mixed-cultivation technique; BTO:0003143 describes combined growth of cell types, not nutrient material. These candidate meanings do not prove the original GOLD scope. Suppress only the unsupported source-parent contribution; preserve mint, node 6000, full path, zero-count omissions, UNGROUNDED/SEEDED status and CLASS provenance. Do not infer NOT_APPLICABLE, generic coculture identity, organisms or a replacement genus. The parent and its separately tracked deprecated BTO anchor (#1619) remain unchanged. Evidence: reports/yaml_record_review/20261007T204355Z-co_culture__e1b72549.md.</p>
   </li>
 </ol>
 

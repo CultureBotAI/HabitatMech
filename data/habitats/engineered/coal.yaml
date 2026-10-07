@@ -8,7 +8,6 @@ grounding_status: EXACT
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002016
-- habitatmech:GOLD.7df92c13b7
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5393
@@ -21,3 +20,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.7df92c13b7
+    for habitatmech:GOLD.d30d9c1ae1 (Engineered > Biotransformation > Coal). ITEM
+    hierarchy assessment (#1660): ENVO:02000091 coal denotes sedimentary-rock material,
+    not a type of the undefined process-named GOLD Biotransformation source or a containing
+    conversion setting. Official ENVO supplies the independently supported ENVO:00002016
+    genus. Suppress only this source-context contribution; preserve the material identity
+    and definition, sedimentary-rock parent, three nodes 5393/5394/5395, full path,
+    exact predicate, zero-count omissions and SEEDED provenance. The unresolved parent
+    scope remains #1636; no NOT_APPLICABLE decision, speculative definition or sibling-derived
+    biology is asserted. Evidence: reports/yaml_record_review/20261007T204718Z-coal.md.'
