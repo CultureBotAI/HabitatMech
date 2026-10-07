@@ -21,6 +21,48 @@ EXCLUSION = GoldParentExclusion(
 )
 
 
+def test_bituminous_sand_exclusion_changes_only_context_parent_and_audit(monkeypatch):
+    source = "habitatmech:GOLD.6a5b013cc9"
+    identifier = "ENVO:03600013"
+    after = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    exclusions = {
+        key: row for key, row in load_gold_parent_exclusions(
+            seed.GOLD_PARENT_EXCLUSIONS_PATH
+        ).items() if key != source
+    }
+    monkeypatch.setattr(seed, "load_gold_parent_exclusions", lambda path: exclusions)
+    before = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    assert before.keys() == after.keys()
+    assert {key for key in before if before[key] != after[key]} == {identifier}
+    old, new = before[identifier], after[identifier]
+    assert old["parent_habitats"] == ["ENVO:00000076", "ENVO:00010483"]
+    assert new["parent_habitats"] == ["ENVO:00010483"]
+    assert new["curation_history"][:-1] == old["curation_history"]
+    event = new["curation_history"][-1]
+    assert event["action"] == "SOURCE_PARENT_EXCLUDED"
+    assert event["timestamp"] == "2026-10-07T00:00:00Z"
+    assert event["curator"] == "codex-gpt-5"
+    assert source in event["changes"]
+    for field in (old.keys() | new.keys()) - {"parent_habitats", "curation_history"}:
+        assert new.get(field) == old.get(field), field
+    assert new["grounding_status"] == "CLOSE"
+    assert new["mapping_status"] == "REVIEWED"
+    assert len(new["source_attestations"]) == 1
+    attestation = new["source_attestations"][0]
+    assert attestation["source_id"] == "gold.ecosystem:5840"
+    assert attestation["source_path"] == "Engineered > Built environment > Mine > Oil sands"
+    assert attestation["mapping_predicate"] == "skos:closeMatch"
+    assert "assertion_count" not in attestation
+    assert "assertion_unit" not in attestation
+    assert "2 GOLD ecosystem node ids" in attestation["notes"]
+    assert seed.mint("GOLD", attestation["source_path"]) == source
+    row = next(row for row in seed.read_tsv(seed.RAW_DIR / "gold_ecosystem_paths.tsv")
+               if row["canonical_path"] == attestation["source_path"])
+    assert set(row["gold_node_ids"].split("|")) == {
+        "gold.ecosystem:5840", "gold.ecosystem:5841",
+    }
+
+
 def write_table(path, rows):
     with path.open("w", newline="", encoding="utf-8") as fh:
         writer = csv.DictWriter(fh, fieldnames=list(asdict(EXCLUSION)), delimiter="\t")
