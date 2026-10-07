@@ -96,15 +96,18 @@ def test_canonical_ancestor_synonym_scope_has_bounded_corpus_impact(corpus):
         assert semantic_text(doc) == semantic_text(old_scope)
 
 
-@pytest.mark.parametrize("related", [False, True])
-def test_gold_synonym_guard_requires_strict_canonical_ancestry(related):
+@pytest.mark.parametrize("ancestry", ["unrelated", "strict", "cycle"])
+def test_gold_synonym_guard_requires_strict_canonical_ancestry(ancestry):
     terms = [
         {"term_id": "ENVO:00002044", "ontology": "ENVO", "label": "sludge", "synonyms": ""},
         {"term_id": "ENVO:00002129", "ontology": "ENVO", "label": "anaerobic sludge",
          "synonyms": "synthetic exact alias"},
     ]
     edges = ([{"subject": "ENVO:00002129", "predicate": "rdfs:subClassOf",
-               "object": "ENVO:00002044"}] if related else [])
+               "object": "ENVO:00002044"}] if ancestry != "unrelated" else [])
+    if ancestry == "cycle":
+        edges.append({"subject": "ENVO:00002044", "predicate": "rdfs:subClassOf",
+                      "object": "ENVO:00002129"})
     ontology = seed.OntologyIndex(terms, edges)
     path = "Engineered > Bioreactor > Anaerobic > Sludge"
     levels = path.split(" > ")
@@ -114,6 +117,7 @@ def test_gold_synonym_guard_requires_strict_canonical_ancestry(related):
     store = seed.ConceptStore(ontology)
     seed.ingest_gold(store, [row], {}, seed.Counter())
     concept = store.concepts["ENVO:00002129"]
+    related = ancestry == "strict"
     scope = "RELATED_SYNONYM" if related else "EXACT_SYNONYM"
     assert concept.synonyms[("Sludge", scope)] == "GOLD"
     assert concept.synonyms[("synthetic exact alias", "EXACT_SYNONYM")] == "ENVO"

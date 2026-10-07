@@ -880,7 +880,8 @@ def ingest_gold(
         # A composed path can match exactly while its bare leaf names a genus.
         # Keep that source spelling without asserting lexical equivalence.
         if (leaf_id and leaf_id != res.identifier
-                and leaf_id in store.ontology.ancestors(res.identifier)):
+                and leaf_id in store.ontology.ancestors(res.identifier)
+                and res.identifier not in store.ontology.ancestors(leaf_id)):
             concept.add_synonym(row["leaf_label"], "RELATED_SYNONYM", "GOLD")
             concept.gold_broader_synonyms.add((row["leaf_label"], leaf_id))
         else:

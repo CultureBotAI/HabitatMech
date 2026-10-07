@@ -58,7 +58,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="../habitats/anaerobic-sludge-envo-00002129.html">anaerobic sludge</a>      <code class="curie">ENVO:00002129</code></li>
-  <li><a href="../habitats/anaerobic-digester-habitatmech-gold-3f58fb59be.html">Anaerobic digester</a>      <code class="curie">habitatmech:GOLD.3f58fb59be</code></li>
 </ul>
 
 
@@ -267,6 +266,16 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">REVIEW</span>
     <span class="meta">2026-08-13 · claude-opus-5</span>
     <p>Reviewed and endorsed the seeder&#39;s own resolution. Multi-source review pass: this record is attested by more than one independent vocabulary, and this source&#39;s label or path was read against the record&#39;s ontology term to check the merge is right. It agrees. Source concepts in the same pass whose labels did not agree were re-decided rather than endorsed; see the pass&#39;s other decisions of the same date. (source concept habitatmech:PREGO.8091443436)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-07 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.3f58fb59be for habitatmech:GOLD.93b148cc23 (Engineered &gt; WWTP &gt; Anaerobic digester &gt; Sludge). ITEM hierarchy assessment (#1609): Sludge material is not a type of its digester container. Preserve the independent ENVO:00002129 material parent. EPA distinguishes the reactor and residual material: <a href="https://www.epa.gov/agstar/how-does-anaerobic-digestion-work" rel="noopener noreferrer" target="_blank">https://www.epa.gov/agstar/how-does-anaerobic-digestion-work</a> . Exclude only the immediate GOLD context contribution; preserve identity, source counts and existing review status.</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_SYNONYM_SCOPED</span>
+    <span class="meta">2026-10-07 · seed_from_sources</span>
+    <p>Retained GOLD label &#39;Sludge&#39; as RELATED_SYNONYM, not exact: its canonical ontology identity ENVO:00002044 is a strict ancestor of ENVO:00003965. Source attestation remains verbatim (#1459).</p>
   </li>
 </ol>
 
