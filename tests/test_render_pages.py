@@ -122,7 +122,7 @@ def test_record_pages_render_curated_causal_graphs(repo_root):
             "PMID:18811652",
         ),
         "building-envo-00000073.html": (
-            "Building surface human-air assembly",
+            "Study-scoped microbial dispersal and surface succession in buildings",
             "ventilation_introduces_outdoor_air",
             "PMID:23621155",
         ),
