@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: cathode
+session:
+  id: 2026-10-07T171506Z-codex-2b59ec
+  timestamp: '2026-10-07T17:15:06Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: codex-gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1653
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1652
+events:
+- type: REVIEW
+  outcome: no_change
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: Verify Cathode correction and link recovered GitHub publication
+  details: 'Follow-up to history/mappings/cathode/2026-10-07T165910Z-codex-530ca4.yaml, whose
+    no-issue statement described GitHub errors at that time and remains unchanged. GitHub
+    writes recovered; #1653 tracks the one major hierarchy finding and #1652 publishes the
+    fix and two individual reviews. No additional scientific input changed. Separate adversarial
+    self-review found no other substantive defect. Fresh focused tests: 37 passed; strict
+    target validation: zero errors; all 3207 records reproduce exactly; OAK: 1178 canonical,
+    1 synonym, 5 accepted exceptions, 2056 no-adapter skips; all 18 governed artifacts match.
+    Linux map run 37655888318 at 353f932277b3aadb60c359059965cc8ff9345772 succeeded with one
+    new canary vector, repeat reuse of one, and full reuse of 3207 after canary. Downloaded
+    full bundle and cache validate locally against current input SHA256 35014e871658db41a0b02a789a00931be91da76b22078fc095522cd5b0f7d3e8.
+    Local full QC, rendered freshness and final-head CI remain required before merge.'
