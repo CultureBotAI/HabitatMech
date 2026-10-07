@@ -562,6 +562,53 @@ def test_biochar_exclusion_changes_only_production_context_parent_and_audit(monk
     assert after[waste_biochar]["parent_habitats"] == ["ENVO:00002873", identifier]
 
 
+def test_engineered_biofilm_exclusions_change_only_context_parents_and_audit(monkeypatch):
+    targets = {
+        "habitatmech:GOLD.6b1f16702e": (
+            "Engineered > Bioreactor > Aerobic > Biofilm", "ENVO:00002126",
+        ),
+        "habitatmech:GOLD.b77f846671": (
+            "Engineered > Bioreactor > Microbial fuel cells/MFC > Cathode > Biofilm",
+            "habitatmech:GOLD.5d36b86f15",
+        ),
+    }
+    after = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    exclusions = load_gold_parent_exclusions(seed.GOLD_PARENT_EXCLUSIONS_PATH)
+    for identifier, (source_path, parent) in targets.items():
+        exclusion = exclusions.pop(identifier)
+        assert exclusion.source_path == source_path
+        assert exclusion.parent_id == parent
+        assert seed.mint("GOLD", source_path) == identifier
+    monkeypatch.setattr(seed, "load_gold_parent_exclusions", lambda path: exclusions)
+    before = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+
+    assert before.keys() == after.keys()
+    assert {key for key in before if before[key] != after[key]} == targets.keys()
+    for identifier, (source_path, parent) in targets.items():
+        old, new = before[identifier], after[identifier]
+        assert old["parent_habitats"] == ["ENVO:00002034", parent]
+        assert new["parent_habitats"] == ["ENVO:00002034"]
+        assert new["curation_history"][:-1] == old["curation_history"]
+        event = new["curation_history"][-1]
+        assert event["action"] == "SOURCE_PARENT_EXCLUDED"
+        assert event["timestamp"] == "2026-10-07T00:00:00Z"
+        assert event["curator"] == "codex-gpt-5"
+        for field in (old.keys() | new.keys()) - {"parent_habitats", "curation_history"}:
+            assert new.get(field) == old.get(field), (identifier, field)
+        assert new["grounding_status"] == "NARROW"
+        assert new["mapping_status"] == "SEEDED"
+        assert new["source_attestations"][0]["source_path"] == source_path
+        assert new["source_attestations"][0]["mapping_predicate"] == "skos:narrowMatch"
+    aerobic = after["habitatmech:GOLD.6b1f16702e"]["source_attestations"][0]
+    assert aerobic["source_id"] == "gold.ecosystem:5472"
+    assert aerobic["assertion_count"] == 1
+    assert aerobic["assertion_unit"] == "ORGANISM"
+    assert "2 GOLD ecosystem node ids" in aerobic["notes"]
+    cathode = after["habitatmech:GOLD.b77f846671"]["source_attestations"][0]
+    assert cathode["source_id"] == "gold.ecosystem:7659"
+    assert {"assertion_count", "assertion_unit", "notes"}.isdisjoint(cathode)
+
+
 def test_thalassic_and_thrombolite_curation_has_exact_scope(monkeypatch):
     thalassic = "habitatmech:GOLD.3fece6dbf7"
     quality = "ENVO:01001667"

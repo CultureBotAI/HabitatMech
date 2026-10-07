@@ -1,6 +1,7 @@
 """Regressions for the published-site audit #1504–#1511."""
 from __future__ import annotations
 
+from html.parser import HTMLParser
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
@@ -30,6 +31,25 @@ def test_curation_urls_are_escaped_clickable_and_preserve_punctuation():
     assert '&lt;script&gt;bad()&lt;/script&gt;' in html
     assert '</a>). plain text.' in html
     assert 'rel="noopener noreferrer"' in html
+
+
+def test_reviewed_biofilm_pages_have_exact_pubmed_links(repo_root):
+    class Links(HTMLParser):
+        def __init__(self):
+            super().__init__()
+            self.hrefs = []
+
+        def handle_starttag(self, tag, attrs):
+            if tag == "a":
+                self.hrefs.extend(value for name, value in attrs if name == "href")
+
+    for identifier, pmid in [("6b1f16702e", "18615526"), ("b77f846671", "20714445")]:
+        page = repo_root / f"pages/habitats/biofilm-habitatmech-gold-{identifier}.html"
+        parser = Links()
+        parser.feed(page.read_text(encoding="utf-8"))
+        assert [href for href in parser.hrefs if "pubmed.ncbi.nlm.nih.gov" in href] == [
+            f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/",
+        ]
 
 
 def test_term_request_keeps_full_long_and_short_rationales():
