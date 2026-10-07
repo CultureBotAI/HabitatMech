@@ -1,0 +1,80 @@
+identifier: habitatmech:BACDIVE.a862e7c17e
+label: Solid-animal-waste
+habitat_category: ENGINEERED
+grounding_status: NARROW
+mapping_status: REVIEWED
+parent_habitats:
+- ENVO:00002276
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:solid-animal-waste
+  source_label: Solid-animal-waste
+  mapping_predicate: skos:narrowMatch
+  assertion_count: 11
+  assertion_unit: STRAIN
+characteristic_taxa:
+- taxon_id: NCBITaxon:658457
+  source: BACDIVE
+  taxon_label: Ectopseudomonas composti
+  association_count: 3
+  rank: 1
+  candidate_pool: 8
+- taxon_id: NCBITaxon:1458
+  source: BACDIVE
+  taxon_label: Metabacillus fastidiosus
+  association_count: 2
+  rank: 2
+  candidate_pool: 8
+- taxon_id: NCBITaxon:1257027
+  source: BACDIVE
+  association_count: 1
+  rank: 3
+  candidate_pool: 8
+- taxon_id: NCBITaxon:1506
+  source: BACDIVE
+  taxon_label: Clostridium sp.
+  association_count: 1
+  rank: 4
+  candidate_pool: 8
+- taxon_id: NCBITaxon:1703
+  source: BACDIVE
+  taxon_label: Brevibacterium linens
+  association_count: 1
+  rank: 5
+  candidate_pool: 8
+- taxon_id: NCBITaxon:272161
+  source: BACDIVE
+  taxon_label: Arthrobacter stackebrandtii
+  association_count: 1
+  rank: 6
+  candidate_pool: 8
+- taxon_id: NCBITaxon:3381696
+  source: BACDIVE
+  taxon_label: Methanothermobacter sp. DSM 3267
+  association_count: 1
+  rank: 7
+  candidate_pool: 8
+- taxon_id: NCBITaxon:433296
+  source: BACDIVE
+  taxon_label: Aminipila butyrica
+  association_count: 1
+  rank: 8
+  candidate_pool: 8
+curation_history:
+- timestamp: '2026-08-16T05:58:02Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: NARROW.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: codex-gpt-5
+  action: GROUND_AS_PARENT
+  changes: 'ENVO:00002276 ''animal waste material'' attached as a parent, not adopted
+    as the identity (NARROW). ITEM qualifier review (#1613): Solid-animal-waste denotes
+    the solid-qualified source category, narrower than unqualified ENVO:00002276 animal
+    waste material. USDA ARS McGarvey et al. 2004 distinguishes solid and liquid animal-waste
+    fractions (https://www.ars.usda.gov/research/publications/publication/?seqNo115=163878);
+    this supports the scope boundary, not identification of these strains with that
+    experiment. Retain the BacDive mint, all 11 STRAIN observations and eight associated
+    taxa, and use the verified ENVO class only as a broader parent. Preserve GOLD
+    and PREGO on their generic record; no definition or characteristic-taxon claim
+    is inferred. (source concept habitatmech:BACDIVE.a862e7c17e)'
