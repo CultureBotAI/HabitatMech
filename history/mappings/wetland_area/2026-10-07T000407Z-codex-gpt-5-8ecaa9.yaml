@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: wetland_area
+session:
+  id: 2026-10-07T000407Z-codex-gpt-5-8ecaa9
+  timestamp: '2026-10-07T00:04:07Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1598
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1597
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude three GOLD source-context parents from wetland area
+  details: 'Added exact source-mint/path/resolved-parent guards for soil, marine water body
+    and fresh water contributions to ENVO:00000043. Current official typed ENVO a2455d1a77e46bb8a664d65a157166b539269042
+    and EPA https://www.epa.gov/wetlands/what-wetland distinguish vegetated areas from these
+    source contexts. Preserve the independent ENVO:01001305 parent, all four attestations,
+    counts and units, 25 taxa, EXACT/REVIEWED provenance and previous events. All 32 focused
+    tests passed, including the full-corpus before/after regression proving only this record
+    changes. Dry seed and forced canary passed; generated diff inspected. Full QC, OAK and
+    real semantic-map regeneration remain publication gates. Shared scope/provenance issue
+    #1249 and qualified-source equivalence remain unresolved. No raw inputs, decision rows
+    or existing histories were edited.'
