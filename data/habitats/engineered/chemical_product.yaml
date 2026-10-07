@@ -12,7 +12,6 @@ synonyms:
   source: GOLD
 parent_habitats:
 - ENVO:00003074
-- habitatmech:GOLD.a744ade0d8
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5579
@@ -33,3 +32,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.a744ade0d8
+    for habitatmech:GOLD.413b4cb862 (Engineered > Industrial production > Chemical
+    products). ITEM hierarchy assessment (#1655): chemical product ENVO:2000000 denotes
+    manufactured material, not a kind of its industrial-production activity or setting.
+    Official ENVO a2455d1a77e46bb8a664d65a157166b539269042 supplies the independent
+    ENVO:00003074 genus and distinguishes manufacturing through an output-of relation;
+    this does not identify the unresolved GOLD parent with that ontology process.
+    Exclude only this immediate GOLD context contribution. Preserve the ontology genus,
+    identity, definition, synonym, all three source nodes 5579/5787/5788, full path,
+    ten ORGANISM assertions, exact predicate and EXACT/REVIEWED provenance. No descendant
+    composition, sample role, taxon or mechanism is inferred. Individual review: reports/yaml_record_review/20261007T181850Z-chemical_product.md.'
