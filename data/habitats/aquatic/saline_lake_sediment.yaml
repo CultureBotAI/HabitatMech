@@ -7,7 +7,7 @@ grounding_status: EXACT
 mapping_status: REVIEWED
 synonyms:
 - synonym_text: Sediment
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: saline lake sediments
   synonym_type: RELATED_SYNONYM
@@ -215,3 +215,9 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Sediment'' as RELATED_SYNONYM, not exact: its canonical
+    ontology identity ENVO:00002007 is a strict ancestor of ENVO:00002209. Source
+    attestation remains verbatim (#1459).'

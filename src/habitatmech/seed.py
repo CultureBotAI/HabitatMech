@@ -364,6 +364,7 @@ class Concept:
     decisions_applied: list[Decision] = field(default_factory=list)
     definitions_applied: list[CuratedDefinition] = field(default_factory=list)
     gold_parent_exclusions_applied: list[GoldParentExclusion] = field(default_factory=list)
+    gold_broader_synonyms: set[tuple[str, str]] = field(default_factory=set)
     causal_graphs: list[dict[str, Any]] = field(default_factory=list)
     causal_graph_events: list[dict[str, Any]] = field(default_factory=list)
     _grounding_rank_seen: int = 0
@@ -875,7 +876,15 @@ def ingest_gold(
         if category:
             store.set_category(concept, res.category or category, authoritative=True)
 
-        concept.add_synonym(row["leaf_label"], "EXACT_SYNONYM", "GOLD")
+        leaf_id = store.ontology.by_label.get(norm_label(row["leaf_label"]))
+        # A composed path can match exactly while its bare leaf names a genus.
+        # Keep that source spelling without asserting lexical equivalence.
+        if (leaf_id and leaf_id != res.identifier
+                and leaf_id in store.ontology.ancestors(res.identifier)):
+            concept.add_synonym(row["leaf_label"], "RELATED_SYNONYM", "GOLD")
+            concept.gold_broader_synonyms.add((row["leaf_label"], leaf_id))
+        else:
+            concept.add_synonym(row["leaf_label"], "EXACT_SYNONYM", "GOLD")
         concept.parents.update(res.extra_parents)
         concept.xrefs.update(res.extra_xrefs)
 
@@ -1515,6 +1524,18 @@ def build_document(concept: Concept) -> dict[str, Any]:
                 f"for {exclusion.identifier} ({exclusion.source_path}). {exclusion.notes}"
             ),
             timestamp=f"{exclusion.date}T00:00:00Z",
+        )
+    for text, ancestor in sorted(concept.gold_broader_synonyms):
+        record_curation_event(
+            doc,
+            curator=SEED_CURATOR,
+            action="SOURCE_SYNONYM_SCOPED",
+            changes=(
+                f"Retained GOLD label {text!r} as RELATED_SYNONYM, not exact: "
+                f"its canonical ontology identity {ancestor} is a strict ancestor "
+                f"of {concept.identifier}. Source attestation remains verbatim (#1459)."
+            ),
+            timestamp="2026-10-07T00:00:00Z",
         )
     if concept.causal_graph_events:
         doc.setdefault("curation_history", []).extend(

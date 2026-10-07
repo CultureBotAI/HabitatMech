@@ -10,7 +10,7 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: ENVO
 - synonym_text: Lake
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: freshwater lakes
   synonym_type: RELATED_SYNONYM
@@ -66,3 +66,9 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Lake'' as RELATED_SYNONYM, not exact: its canonical
+    ontology identity ENVO:00000020 is a strict ancestor of ENVO:00000021. Source
+    attestation remains verbatim (#1459).'

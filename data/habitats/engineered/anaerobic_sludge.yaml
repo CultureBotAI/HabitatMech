@@ -5,14 +5,13 @@ grounding_status: EXACT
 mapping_status: REVIEWED
 synonyms:
 - synonym_text: Sludge
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: anaerobic sludges
   synonym_type: RELATED_SYNONYM
   source: PREGO
 parent_habitats:
 - ENVO:00002044
-- ENVO:00002124
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5481
@@ -60,3 +59,19 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00002124 for habitatmech:GOLD.f96483345a
+    (Engineered > Bioreactor > Anaerobic > Sludge). ITEM hierarchy assessment (#1609):
+    Anaerobic sludge is material, not a type of the anaerobic bioreactor containing
+    it. Preserve the independent ENVO:00002044 material parent. Official ENVO a2455d1a77e46bb8a664d65a157166b539269042
+    separates these classes; GOLD triads likewise distinguish local-scale reactor
+    from medium sludge. Exclude only the immediate GOLD context contribution; preserve
+    identity, source counts and existing review status.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Sludge'' as RELATED_SYNONYM, not exact: its canonical
+    ontology identity ENVO:00002044 is a strict ancestor of ENVO:00002129. Source
+    attestation remains verbatim (#1459).'

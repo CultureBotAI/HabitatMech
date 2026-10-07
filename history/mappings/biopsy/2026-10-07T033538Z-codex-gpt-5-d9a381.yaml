@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: biopsy
+session:
+  id: 2026-10-07T033538Z-codex-gpt-5-d9a381
+  timestamp: '2026-10-07T03:35:38Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: codex-gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1608
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1607
+events:
+- type: EDIT
+  outcome: changed
+  summary: Classify Biopsy as a non-habitat sampling-method aggregate
+  details: Change the ITEM decision from CONFIRM_UNGROUNDED to NOT_APPLICABLE. The aggregate
+    source label does not specify one anatomical habitat; NCI C15189 is the procedure and
+    BacDive 154980 separately supplies site detail. Preserve xref, clinical category, source
+    observations and review state. Supersedes the 2026-08-16 decision rationale, not the immutable
+    historical review. The new exact-scope regression checks preserved fields; dry seed passed.
+    Full QC and regenerated-site checks follow in PR1607.

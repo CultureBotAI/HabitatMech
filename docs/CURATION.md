@@ -26,6 +26,13 @@ A related term that is not broader can be retained with `relation: xref`.
 `parent_habitats` is an is-a claim and must never be used merely to avoid losing
 an upstream link.
 
+A GOLD path can map exactly even when its bare leaf is broader than the
+resolved habitat. When that leaf is the canonical label of a different strict
+ontology ancestor, the seeder retains it as RELATED_SYNONYM, with a deterministic
+scope event, rather than asserting exact lexical equivalence. Source attestations
+remain verbatim. This guard does not establish the scope of other source labels
+or repair untyped ontology synonyms; those need separate review (#1459, #1249).
+
 An exact xref from an ontology that is not present in
 `data/raw/ontology_terms.tsv` can be label-verified through
 `curation/external_xrefs.tsv`. Those allow-listed terms are only valid beside a
