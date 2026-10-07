@@ -58,7 +58,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="../habitats/agricultural-ecosystem-envo-00000077.html">agricultural ecosystem</a>      <code class="curie">ENVO:00000077</code></li>
-  <li><a href="../habitats/industrial-wastewater-envo-01000964.html">industrial wastewater</a>      <code class="curie">ENVO:01000964</code></li>
 </ul>
 
 
@@ -267,6 +266,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">REVIEW</span>
     <span class="meta">2026-08-13 · claude-opus-5</span>
     <p>Reviewed and endorsed the seeder&#39;s own resolution. Multi-source review pass: this record is attested by more than one independent vocabulary, and this source&#39;s label or path was read against the record&#39;s ontology term to check the merge is right. It agrees. Source concepts in the same pass whose labels did not agree were re-decided rather than endorsed; see the pass&#39;s other decisions of the same date. (source concept habitatmech:GOLD.add1edcd6d)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-07 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution ENVO:01000964 for habitatmech:GOLD.add1edcd6d (Engineered &gt; Wastewater &gt; Industrial wastewater &gt; Aquaculture farm). ITEM hierarchy assessment (#1612): ENVO:03600074 aquaculture farm is a cultivation ecosystem, not a subtype of the industrial wastewater material ENVO:01000964. Official ENVO a2455d1a77e46bb8a664d65a157166b539269042 distinguishes these classes. Exclude only the immediate GOLD context parent; retain the independent agricultural ecosystem parent ENVO:00000077, source paths, units, all taxa and existing review status. The original GOLD facility-versus-effluent source scope remains unresolved in #1614; this exclusion does not establish exact source identity.</p>
   </li>
 </ol>
 

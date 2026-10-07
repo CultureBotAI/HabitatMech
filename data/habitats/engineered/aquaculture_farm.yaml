@@ -18,7 +18,6 @@ synonyms:
   source: ENVO
 parent_habitats:
 - ENVO:00000077
-- ENVO:01000964
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:aquaculture
@@ -207,3 +206,15 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD. Grounding:
     EXACT.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:01000964 for habitatmech:GOLD.add1edcd6d
+    (Engineered > Wastewater > Industrial wastewater > Aquaculture farm). ITEM hierarchy
+    assessment (#1612): ENVO:03600074 aquaculture farm is a cultivation ecosystem,
+    not a subtype of the industrial wastewater material ENVO:01000964. Official ENVO
+    a2455d1a77e46bb8a664d65a157166b539269042 distinguishes these classes. Exclude
+    only the immediate GOLD context parent; retain the independent agricultural ecosystem
+    parent ENVO:00000077, source paths, units, all taxa and existing review status.
+    The original GOLD facility-versus-effluent source scope remains unresolved in
+    #1614; this exclusion does not establish exact source identity.'

@@ -97,6 +97,13 @@ def test_ceph_xrefs_render_to_obo_purls():
     assert render_pages.term_iri("HAO:0000369") == "http://purl.obolibrary.org/obo/HAO_0000369"
 
 
+def test_solid_animal_waste_evidence_link_has_exact_query(repo_root):
+    page = repo_root / "pages/habitats/solid-animal-waste-habitatmech-bacdive-a862e7c17e.html"
+    hrefs = re.findall(r'href="([^"]+)"', page.read_text(encoding="utf-8"))
+    source = "https://www.ars.usda.gov/research/publications/publication/?seqNo115=163878"
+    assert [href for href in hrefs if "ars.usda.gov" in href] == [source]
+
+
 def test_record_pages_render_curated_causal_graphs(repo_root):
     expected = {
         "hypersaline-water-envo-00002012.html": (
