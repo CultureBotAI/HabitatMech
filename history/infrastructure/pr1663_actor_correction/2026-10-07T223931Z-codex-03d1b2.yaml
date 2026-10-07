@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: history
+  slug: pr1663_actor_correction
+session:
+  id: 2026-10-07T223931Z-codex-03d1b2
+  timestamp: '2026-10-07T22:39:31Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1663
+events:
+- type: GENERAL
+  outcome: changed
+  summary: Correct scaffolded actor names for four PR 1663 session records
+  details: 'The following scaffold-generated actor.name values incorrectly inherited the CLI
+    default claude-code: history/mappings/compost/2026-10-07T223812Z-claude-code-98bcdf.yaml;
+    history/other/compost/2026-10-07T223814Z-claude-code-c5549d.yaml; history/infrastructure/close_source_synonyms/2026-10-07T223816Z-claude-code-0f602a.yaml;
+    history/infrastructure/environment_co_attestors/2026-10-07T223819Z-claude-code-db1d63.yaml.
+    The actual actor for all four was codex using model gpt-5 and agent_tool codex, as their
+    model/tool fields already state. This append-only correction supersedes only actor.name,
+    preserving timestamps, actions, sources, findings and validation bounds. No Claude agent
+    or external reviewer performed those changes.'

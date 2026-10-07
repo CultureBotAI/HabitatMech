@@ -7,7 +7,7 @@ grounding_status: EXACT
 mapping_status: REVIEWED
 synonyms:
 - synonym_text: Cast
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: Fecal
   synonym_type: EXACT_SYNONYM
@@ -350,3 +350,9 @@ curation_history:
     refers to an annelid cast, the fecal material produced from the digestive tube.
     UBERON''s feces term names that physical habitat; CLOSE preserves the organism-specific
     wording. The HGNC acronym collision is unrelated. (source concept habitatmech:GOLD.53337a753d)'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Cast'' as RELATED_SYNONYM: a CLOSE source mapping
+    does not establish exact lexical equivalence. Independent ontology synonyms and
+    verbatim attestations are preserved (#1459).'

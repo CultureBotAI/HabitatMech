@@ -8,7 +8,7 @@ grounding_status: EXACT
 mapping_status: SEEDED
 synonyms:
 - synonym_text: Freshwater
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: fresh waters
   synonym_type: RELATED_SYNONYM
@@ -482,3 +482,9 @@ curation_history:
   changes: Added a fresh-water hypoosmotic-response graph backed by DOI:10.1017/qrd.2022.3
     and DOI:10.1085/jgp.201411296.
   llm_assisted: true
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Freshwater'' as RELATED_SYNONYM: a CLOSE source
+    mapping does not establish exact lexical equivalence. Independent ontology synonyms
+    and verbatim attestations are preserved (#1459).'

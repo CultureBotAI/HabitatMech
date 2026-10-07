@@ -5,10 +5,10 @@ grounding_status: CLOSE
 mapping_status: REVIEWED
 synonyms:
 - synonym_text: Bladder stones
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: Bladder-stone
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: BacDive
 parent_habitats:
 - NCIT:C26905
@@ -92,3 +92,15 @@ curation_history:
     NCIT''s Urinary Bladder Stone names the same concept with explicit urinary framing;
     CLOSE matches the existing reviewed BacDive Bladder-stone record and merges their
     evidence. (source concept habitatmech:GOLD.c245efd1e3)'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained BacDive label ''Bladder-stone'' as RELATED_SYNONYM: a CLOSE source
+    mapping does not establish exact lexical equivalence. Independent ontology synonyms
+    and verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Bladder stones'' as RELATED_SYNONYM: a CLOSE source
+    mapping does not establish exact lexical equivalence. Independent ontology synonyms
+    and verbatim attestations are preserved (#1459).'

@@ -10,7 +10,7 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: BacDive
 - synonym_text: Nest
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: animal habitational
   synonym_type: RELATED_SYNONYM
@@ -260,3 +260,9 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Nest'' as RELATED_SYNONYM: a CLOSE source mapping
+    does not establish exact lexical equivalence. Independent ontology synonyms and
+    verbatim attestations are preserved (#1459).'

@@ -7,7 +7,7 @@ grounding_status: EXACT
 mapping_status: REVIEWED
 synonyms:
 - synonym_text: Forest
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: copse
   synonym_type: RELATED_SYNONYM
@@ -678,3 +678,15 @@ curation_history:
     PMID:23154261, DOI:10.1139/cjb-2013-0225, PMID:28404790, PMID:23539604, PMID:17244056,
     PMID:22402400, DOI:10.1093/femsre/fuw040, PMID:33436515, and DOI:10.1128/mSystems.01078-20.
   llm_assisted: true
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained BacDive label ''Forest'' as RELATED_SYNONYM: a CLOSE source mapping
+    does not establish exact lexical equivalence. Independent ontology synonyms and
+    verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Forest'' as RELATED_SYNONYM: a CLOSE source mapping
+    does not establish exact lexical equivalence. Independent ontology synonyms and
+    verbatim attestations are preserved (#1459).'

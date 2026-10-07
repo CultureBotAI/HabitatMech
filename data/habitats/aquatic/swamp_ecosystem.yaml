@@ -10,8 +10,11 @@ synonyms:
 - synonym_text: Swamp
   synonym_type: EXACT_SYNONYM
   source: ENVO
+- synonym_text: Swamp
+  synonym_type: RELATED_SYNONYM
+  source: GOLD
 - synonym_text: Wetland-Swamp
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: BacDive
 - synonym_text: cienaga
   synonym_type: EXACT_SYNONYM
@@ -264,3 +267,15 @@ curation_history:
     26 associated taxa and existing review provenance. Synonym-scope inflation remains
     #1249; no hydroperiod rewrite, exact-mapping upgrade or characteristic-taxon claim
     follows.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained BacDive label ''Wetland-Swamp'' as RELATED_SYNONYM: a CLOSE source
+    mapping does not establish exact lexical equivalence. Independent ontology synonyms
+    and verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Swamp'' as RELATED_SYNONYM: a CLOSE source mapping
+    does not establish exact lexical equivalence. Independent ontology synonyms and
+    verbatim attestations are preserved (#1459).'

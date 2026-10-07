@@ -9,7 +9,7 @@ grounding_status: CLOSE
 mapping_status: REVIEWED
 synonyms:
 - synonym_text: Cholesteatoma
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 parent_habitats:
 - habitatmech:GOLD.333c18201f
@@ -35,3 +35,9 @@ curation_history:
     and BTO defines cholesteatoma tissue as the expanding keratinised mass in the
     middle ear. That physical tissue is the habitat; CLOSE records the source''s lesion
     name versus BTO''s explicit tissue framing. (source concept habitatmech:GOLD.1c429bbeae)'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Cholesteatoma'' as RELATED_SYNONYM: a CLOSE source
+    mapping does not establish exact lexical equivalence. Independent ontology synonyms
+    and verbatim attestations are preserved (#1459).'

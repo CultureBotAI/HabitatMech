@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/causal_graphs/compost.yaml
+  slug: compost
+session:
+  id: 2026-10-07T223814Z-claude-code-c5549d
+  timestamp: '2026-10-07T22:38:14Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1665
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Correct compost material, temperature and succession node types
+  details: Updated the maintained overlay after inspecting PMID:16454493 primary abstract,
+    DOI:10.1186/s40538-023-00381-z review and schema semantics. Use HABITAT material, ENVIRONMENTAL_PARAMETER
+    temperature and COMMUNITY_PROCESS succession with compatible edge predicates. Preserve
+    exact snippets, citations, prior event and active thermophilic-stage bounds. Focused tests
+    passed and regenerated compost canary inspected. Final corpus/site/QC results are recorded
+    in PR 1663.

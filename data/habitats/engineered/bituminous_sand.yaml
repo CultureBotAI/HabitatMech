@@ -9,7 +9,7 @@ grounding_status: CLOSE
 mapping_status: REVIEWED
 synonyms:
 - synonym_text: Oil sands
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: crude bitumen
   synonym_type: EXACT_SYNONYM
@@ -55,3 +55,9 @@ curation_history:
     path and collapse note, absent zero count/unit, CLOSE/REVIEWED status and prior
     audit. This does not resolve the separately tracked crude-bitumen synonym conflict
     (#1642).'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Oil sands'' as RELATED_SYNONYM: a CLOSE source mapping
+    does not establish exact lexical equivalence. Independent ontology synonyms and
+    verbatim attestations are preserved (#1459).'

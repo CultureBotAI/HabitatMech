@@ -8,10 +8,10 @@ grounding_status: EXACT
 mapping_status: SEEDED
 synonyms:
 - synonym_text: Mud-Sludge
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: BacDive
 - synonym_text: Sewage-sludge
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: BacDive
 - synonym_text: sludges
   synonym_type: RELATED_SYNONYM
@@ -860,3 +860,15 @@ curation_history:
   changes: Added a sludge floc oxygen-partitioning graph backed by PMID:12926675 and
     PMID:12827702.
   llm_assisted: true
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained BacDive label ''Mud-Sludge'' as RELATED_SYNONYM: a CLOSE source
+    mapping does not establish exact lexical equivalence. Independent ontology synonyms
+    and verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained BacDive label ''Sewage-sludge'' as RELATED_SYNONYM: a CLOSE source
+    mapping does not establish exact lexical equivalence. Independent ontology synonyms
+    and verbatim attestations are preserved (#1459).'

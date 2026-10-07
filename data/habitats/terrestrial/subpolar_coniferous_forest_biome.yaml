@@ -8,10 +8,10 @@ grounding_status: EXACT
 mapping_status: REVIEWED
 synonyms:
 - synonym_text: Boreal forest
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: Boreal forest/Taiga
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: boreal forest
   synonym_type: EXACT_SYNONYM
@@ -242,3 +242,15 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Boreal forest'' as RELATED_SYNONYM: a CLOSE source
+    mapping does not establish exact lexical equivalence. Independent ontology synonyms
+    and verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Boreal forest/Taiga'' as RELATED_SYNONYM: a CLOSE
+    source mapping does not establish exact lexical equivalence. Independent ontology
+    synonyms and verbatim attestations are preserved (#1459).'
