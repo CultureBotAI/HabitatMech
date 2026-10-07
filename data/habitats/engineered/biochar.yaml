@@ -7,7 +7,6 @@ grounding_status: EXACT
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:01000560
-- habitatmech:GOLD.a744ade0d8
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4616
@@ -20,3 +19,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.a744ade0d8
+    for habitatmech:GOLD.442a77e51e (Engineered > Industrial production > Biochar).
+    ITEM hierarchy assessment (#1624): ENVO:2000007 is a charcoal material used as
+    a soil amendment, with independent genus ENVO:01000560. US Forest Service (https://research.fs.usda.gov/forestproducts/bioeconomy/biochar)
+    distinguishes the material from its production technologies and subsequent use;
+    Industrial production supplies context, not a broader material class. Exclude
+    only this GOLD contribution; preserve the charcoal genus, definition, exact predicate,
+    three source nodes, full path, zero-count omission and EXACT/SEEDED status. This
+    does not establish original study scope, promote an ITEM identity decision, or
+    change the separately minted organic-waste Biochar concept.'
