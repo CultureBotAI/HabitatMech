@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: benzene
+session:
+  id: 2026-10-07T064833Z-codex-ad3c5c
+  timestamp: '2026-10-07T06:48:33Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1622
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1621
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude the non-habitat Hydrocarbon parent from Benzene
+  details: Added one guarded GOLD parent exclusion for habitatmech:GOLD.d6979edc0e at Engineered
+    > Bioremediation > Hydrocarbon > Benzene, expecting parent habitatmech:GOLD.e77998b825.
+    The parent is maintained as ITEM NOT_APPLICABLE with CHEBI:24632 only as a chemical xref;
+    fresh primary ChEBI inspection confirms the chemical class. This removes the unsupported
+    broader-habitat assertion without settling the target source scope or inventing a matrix,
+    definition, replacement genus or ITEM identity decision. The original read-only report
+    is preserved. Dry seed passed; generated canary inspected; 31 exclusion tests passed,
+    including a new regression that failed before the row and proves all other corpus records
+    and all other target fields unchanged. Full publication QC and map/site refresh follow
+    in PR 1621; they are not claimed completed by this session receipt.

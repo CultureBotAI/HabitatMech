@@ -488,6 +488,41 @@ def test_bagasse_and_bench_exclusions_change_only_context_parents_and_audit(monk
     }]
 
 
+def test_benzene_exclusion_changes_only_chemical_context_parent_and_audit(monkeypatch):
+    identifier = "habitatmech:GOLD.d6979edc0e"
+    parent = "habitatmech:GOLD.e77998b825"
+    source_path = "Engineered > Bioremediation > Hydrocarbon > Benzene"
+    after = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    exclusions = load_gold_parent_exclusions(seed.GOLD_PARENT_EXCLUSIONS_PATH)
+    exclusion = exclusions.pop(identifier)
+    assert exclusion.source_path == source_path
+    assert exclusion.parent_id == parent
+    monkeypatch.setattr(seed, "load_gold_parent_exclusions", lambda path: exclusions)
+    before = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+
+    assert before.keys() == after.keys()
+    assert {key for key in before if before[key] != after[key]} == {identifier}
+    old, new = before[identifier], after[identifier]
+    assert old["parent_habitats"] == [parent]
+    assert "parent_habitats" not in new
+    assert new["curation_history"][:-1] == old["curation_history"]
+    event = new["curation_history"][-1]
+    assert event["action"] == "SOURCE_PARENT_EXCLUDED"
+    assert event["timestamp"] == "2026-10-07T00:00:00Z"
+    assert event["curator"] == "codex-gpt-5"
+    for field in (old.keys() | new.keys()) - {"parent_habitats", "curation_history"}:
+        assert new.get(field) == old.get(field), field
+    assert new["grounding_status"] == "UNGROUNDED"
+    assert new["mapping_status"] == "SEEDED"
+    assert new["source_attestations"] == [{
+        "source": "GOLD", "source_id": "gold.ecosystem:3863", "source_label": "Benzene",
+        "source_path": source_path,
+    }]
+    assert seed.mint("GOLD", source_path) == identifier
+    assert after[parent]["grounding_status"] == "NOT_APPLICABLE"
+    assert after[parent]["xrefs"] == ["CHEBI:24632"]
+
+
 def test_thalassic_and_thrombolite_curation_has_exact_scope(monkeypatch):
     thalassic = "habitatmech:GOLD.3fece6dbf7"
     quality = "ENVO:01001667"
