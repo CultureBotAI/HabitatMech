@@ -253,9 +253,6 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: PREGO
 parent_habitats:
-- ENVO:00001998
-- ENVO:00001999
-- ENVO:00002011
 - ENVO:01001305
 source_attestations:
 - source: GOLD
@@ -476,3 +473,39 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00001998 for habitatmech:GOLD.5f6044871d
+    (Environmental > Terrestrial > Soil > Wetlands). ITEM hierarchy assessment (#1598):
+    ENVO:00000043 is a vegetated geographic area, not a kind of soil material ENVO:00001998.
+    Official ENVO a2455d1a77e46bb8a664d65a157166b539269042 supplies the independent
+    ENVO:01001305 genus; EPA (https://www.epa.gov/wetlands/what-wetland) distinguishes
+    wetland areas from their soils and water. Exclude only this GOLD context contribution;
+    preserve both source nodes, 29 ORGANISM assertions, path, predicate, identity
+    and existing ITEM provenance. This does not settle qualified-source equivalence,
+    change the PREGO pool or resolve synonym scope (#1249).'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00001999 for habitatmech:GOLD.92ce88cda1
+    (Environmental > Aquatic > Marine > Wetlands). ITEM hierarchy assessment (#1598):
+    ENVO:00000043 is a vegetated geographic area, not a kind of the whole marine water
+    body ENVO:00001999. Official ENVO a2455d1a77e46bb8a664d65a157166b539269042 supplies
+    the independent ENVO:01001305 genus; EPA (https://www.epa.gov/wetlands/what-wetland)
+    distinguishes coastal wetland areas from surrounding water. Exclude only this
+    GOLD context contribution; preserve both source nodes, three ORGANISM assertions,
+    path, predicate, identity and existing ITEM provenance. This does not settle qualified-source
+    equivalence, change the PREGO pool or resolve synonym scope (#1249).'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00002011 for habitatmech:GOLD.a981586d10
+    (Environmental > Aquatic > Freshwater > Wetlands). ITEM hierarchy assessment (#1598):
+    ENVO:00000043 is a vegetated geographic area, not a kind of fresh-water material
+    ENVO:00002011. Official ENVO a2455d1a77e46bb8a664d65a157166b539269042 supplies
+    the independent ENVO:01001305 genus; EPA (https://www.epa.gov/wetlands/what-wetland)
+    distinguishes wetland areas from their water. Exclude only this GOLD context contribution;
+    preserve both source nodes, 61 ORGANISM assertions, path, predicate, identity
+    and existing ITEM provenance. This does not settle qualified-source equivalence,
+    change the PREGO pool or resolve synonym scope (#1249).'

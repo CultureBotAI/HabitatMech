@@ -5,6 +5,60 @@ from dataclasses import replace
 from habitatmech import seed
 
 
+def test_wetland_area_context_exclusions_have_exact_scope(monkeypatch):
+    identifier = "ENVO:00000043"
+    expected = {
+        "habitatmech:GOLD.5f6044871d": (
+            "Environmental > Terrestrial > Soil > Wetlands", "ENVO:00001998",
+        ),
+        "habitatmech:GOLD.92ce88cda1": (
+            "Environmental > Aquatic > Marine > Wetlands", "ENVO:00001999",
+        ),
+        "habitatmech:GOLD.a981586d10": (
+            "Environmental > Aquatic > Freshwater > Wetlands", "ENVO:00002011",
+        ),
+    }
+    after = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    exclusions = seed.load_gold_parent_exclusions(seed.GOLD_PARENT_EXCLUSIONS_PATH)
+    for source, (path, parent) in expected.items():
+        row = exclusions.pop(source)
+        assert (row.source_path, row.parent_id) == (path, parent)
+    monkeypatch.setattr(seed, "load_gold_parent_exclusions", lambda path: exclusions)
+    before = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+
+    assert before.keys() == after.keys()
+    assert {key for key in before if before[key] != after[key]} == {identifier}
+    old, new = before[identifier], after[identifier]
+    assert old["parent_habitats"] == [
+        "ENVO:00001998", "ENVO:00001999", "ENVO:00002011", "ENVO:01001305",
+    ]
+    assert new["parent_habitats"] == ["ENVO:01001305"]
+    assert new["curation_history"][:-3] == old["curation_history"]
+    for event, source in zip(new["curation_history"][-3:], sorted(expected), strict=True):
+        assert event["action"] == "SOURCE_PARENT_EXCLUDED"
+        assert event["curator"] == "codex-gpt-5"
+        assert event["timestamp"] == "2026-10-07T00:00:00Z"
+        assert source in event["changes"]
+        assert expected[source][1] in event["changes"]
+    for field in (old.keys() | new.keys()) - {"parent_habitats", "curation_history"}:
+        assert new.get(field) == old.get(field), field
+    assert new["grounding_status"] == "EXACT"
+    assert new["mapping_status"] == "REVIEWED"
+    assert len(new["characteristic_taxa"]) == 25
+    assert len(new["source_attestations"]) == 4
+    gold = [row for row in new["source_attestations"] if row["source"] == "GOLD"]
+    assert {(row["source_id"], row["assertion_count"]) for row in gold} == {
+        ("gold.ecosystem:3783", 3), ("gold.ecosystem:3795", 61),
+        ("gold.ecosystem:3815", 29),
+    }
+    assert all(row["assertion_unit"] == "ORGANISM" for row in gold)
+    assert all(row["mapping_predicate"] == "skos:exactMatch" for row in gold)
+    prego = next(row for row in new["source_attestations"] if row["source"] == "PREGO")
+    assert prego["assertion_count"] == 50 and prego["assertion_unit"] == "TAXON"
+    assert "mapping_predicate" not in prego
+    assert "ENVO:00000043" not in after["ENVO:00000233"]["parent_habitats"]
+
+
 def test_well_context_and_watercourse_note_corrections_have_exact_scope(monkeypatch):
     well = "ENVO:00000026"
     biofilm = "habitatmech:GOLD.1f74489d04"
