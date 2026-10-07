@@ -43,7 +43,10 @@ def test_reviewed_biofilm_pages_have_exact_pubmed_links(repo_root):
             if tag == "a":
                 self.hrefs.extend(value for name, value in attrs if name == "href")
 
-    for identifier, pmid in [("6b1f16702e", "18615526"), ("b77f846671", "20714445")]:
+    for identifier, pmid in [
+        ("6b1f16702e", "18615526"), ("b77f846671", "20714445"),
+        ("5eaebd18a7", "20714445"),
+    ]:
         page = repo_root / f"pages/habitats/biofilm-habitatmech-gold-{identifier}.html"
         parser = Links()
         parser.feed(page.read_text(encoding="utf-8"))
