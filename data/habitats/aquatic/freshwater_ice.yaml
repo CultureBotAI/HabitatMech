@@ -5,7 +5,7 @@ grounding_status: EXACT
 mapping_status: SEEDED
 synonyms:
 - synonym_text: Ice
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 parent_habitats:
 - ENVO:00002011
@@ -25,3 +25,9 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Ice'' as RELATED_SYNONYM, not exact: its canonical
+    ontology identity ENVO:01001125 is a strict ancestor of ENVO:01001511. Source
+    attestation remains verbatim (#1459).'

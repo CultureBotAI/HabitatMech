@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: anaerobic_digester
+session:
+  id: 2026-10-07T033540Z-codex-gpt-5-da7625
+  timestamp: '2026-10-07T03:35:40Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: codex-gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1609
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1607
+events:
+- type: EDIT
+  outcome: changed
+  summary: Exclude the reviewed anaerobic habitat source-context parent
+  details: 'Add only the guarded source-path parent exclusion for habitatmech:GOLD.3f58fb59be
+    against ENVO:00002043: reactor versus whole wastewater treatment facility. Evidence is
+    detailed in the completed individual review and exclusion row (official ENVO, EPA reactor
+    descriptions or PMID20646732). Preserve independent parents, source paths/counts/taxa,
+    identity and workflow status; no definition or replacement relation is invented. Exact-scope
+    regression and dry seed passed; the ENVO:00002129 canary was inspected. Full regeneration,
+    semantic map and QC follow in PR1607.'

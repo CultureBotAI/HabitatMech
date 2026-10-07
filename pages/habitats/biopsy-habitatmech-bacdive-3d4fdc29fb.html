@@ -26,7 +26,7 @@
 <p class="meta">
   <code class="curie">habitatmech:BACDIVE.3d4fdc29fb</code>
   <span class="sep">·</span><a href="../category/clinical.html">CLINICAL</a>
-  <span class="sep">·</span><span class="pill warn">UNGROUNDED</span>
+  <span class="sep">·</span><span class="pill warn">NOT_APPLICABLE</span>
   <span class="pill">REVIEWED</span>
 </p>
 
@@ -252,9 +252,9 @@ a grounding.</p>
 from several source concepts can carry one decision per concept.</p>
 <ol class="events">
   <li>
-    <span class="pill">CONFIRM_UNGROUNDED</span>
-    <span class="meta">2026-08-16 · claude-opus-5</span>
-    <p>Confirmed UNGROUNDED: no ontology term fits this concept. NCIT:C15189 &#39;Biopsy Procedure&#39; kept as an xref. CLOSE-grounding review (#12): the seeder made NCIT:C15189 &#39;Biopsy Procedure&#39; the identity of BacDive&#39;s &#39;Biopsy&#39; category, 95 strains. A procedure is not a habitat — it is the act of taking the sample, not the place the organism lived, the same category error as grounding a record to an organism or a quality. The habitat is whichever tissue was biopsied, which BacDive does not say, so no term fits. The procedure term is kept as an xref (#99) to record what upstream matched without this repo asserting the record is a procedure. The record was CLINICAL while it carried the NCIT term and would fall to OTHER without one, because the category is inferred from the grounding; a biopsy is a clinical source whether or not a term fits, so the category is pinned rather than lost with the grounding. (source concept habitatmech:BACDIVE.3d4fdc29fb)</p>
+    <span class="pill">NOT_APPLICABLE</span>
+    <span class="meta">2026-10-07 · codex-gpt-5</span>
+    <p>Marked NOT_APPLICABLE: the source concept does not denote a habitat. NCIT:C15189 kept as an xref. ITEM sampling-method review (#1608): the BacDive Biopsy aggregate groups specimens by collection procedure, not a single anatomical habitat. NCI C15189 identifies the procedure, while C18202 separately identifies a biopsy specimen. BacDive strain 154980 records a maxillary bone biopsy with site categories; the aggregate tag alone does not determine a shared site. Preserve the procedure xref, CLINICAL category, source observations and exclusion-ledger membership. This corrects the former CONFIRM_UNGROUNDED habitat claim without denying that individual specimens or anatomical sites can host microbes. Evidence: <a href="https://api-evsrest.nci.nih.gov/api/v1/concept/ncit/C15189?include=full" rel="noopener noreferrer" target="_blank">https://api-evsrest.nci.nih.gov/api/v1/concept/ncit/C15189?include=full</a> and <a href="https://bacdive.dsmz.de/strain/154980" rel="noopener noreferrer" target="_blank">https://bacdive.dsmz.de/strain/154980</a> . (source concept habitatmech:BACDIVE.3d4fdc29fb)</p>
   </li>
 </ol>
 

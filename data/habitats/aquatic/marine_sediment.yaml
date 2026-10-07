@@ -8,7 +8,7 @@ grounding_status: EXACT
 mapping_status: SEEDED
 synonyms:
 - synonym_text: Sediment
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: marine sediments
   synonym_type: EXACT_SYNONYM
@@ -374,3 +374,9 @@ curation_history:
   changes: Added a marine-sediment sulfate sulfur-cycling graph backed by PMID:31388058,
     PMID:31105660, PMID:28419734, PMID:35308366, and DOI:10.1016/j.epsl.2022.117841.
   llm_assisted: true
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Sediment'' as RELATED_SYNONYM, not exact: its canonical
+    ontology identity ENVO:00002007 is a strict ancestor of ENVO:03000033. Source
+    attestation remains verbatim (#1459).'

@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: src/habitatmech/seed.py
+  slug: gold_ancestor_synonym_scope
+session:
+  id: 2026-10-07T033949Z-codex-gpt-5-d5bf0b
+  timestamp: '2026-10-07T03:39:49Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: codex-gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1610
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1607
+events:
+- type: EDIT
+  outcome: changed
+  summary: Reject cyclic reachability as strict synonym ancestry
+  details: 'Adversarial issue #1610 adds the reverse-ancestry check to the new scope rule.
+    The synthetic two-node cycle failed before the fix while the strict and unrelated controls
+    passed. The fix requires one-way ancestry and preserves independent aliases; no current
+    corpus witness was established. This supplements the 2026-10-07T033548Z-codex-gpt-5-7722a0
+    session. Reproduction and final QC will verify unchanged generated science.'
