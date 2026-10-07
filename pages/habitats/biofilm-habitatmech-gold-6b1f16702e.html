@@ -53,13 +53,22 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="../habitats/biofilm-envo-00002034.html">biofilm</a>      <code class="curie">ENVO:00002034</code></li>
-  <li><a href="../habitats/aerobic-bioreactor-envo-00002126.html">aerobic bioreactor</a>      <code class="curie">ENVO:00002126</code></li>
 </ul>
 
 
 
 
 
+<h2>Curation</h2>
+<p class="meta">What a curator decided about this record, and why. A record built
+from several source concepts can carry one decision per concept.</p>
+<ol class="events">
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-07 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution ENVO:00002126 for habitatmech:GOLD.6b1f16702e (Engineered &gt; Bioreactor &gt; Aerobic &gt; Biofilm). ITEM hierarchy assessment (#1627): ENVO:00002034 biofilm is microbial material, not a kind of the enclosing aerobic bioreactor ENVO:00002126. Official ENVO a2455d1a77e46bb8a664d65a157166b539269042 distinguishes these classes; de Beer et al. 1994 (<a href="https://pubmed.ncbi.nlm.nih.gov/18615526/;" rel="noopener noreferrer" target="_blank">https://pubmed.ncbi.nlm.nih.gov/18615526/;</a> DOI:10.1002/bit.260431118) distinguishes biofilm clusters and surrounding liquid. Exclude only this GOLD context contribution; preserve the independent biofilm genus, qualified mint, source path, both nodes, one ORGANISM assertion, skos:narrowMatch and NARROW/SEEDED status. Do not infer uniform oxygenation, a source-to-experiment crosswalk or an ITEM identity endorsement.</p>
+  </li>
+</ol>
 
 <h2>Provenance</h2>
 <p class="meta">
