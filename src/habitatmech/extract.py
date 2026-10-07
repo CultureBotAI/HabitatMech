@@ -866,6 +866,12 @@ def _load_bto(kgm: Path) -> tuple[dict[str, dict[str, str]], list[tuple[str, str
         ):
             if subject in terms:
                 terms[subject]["definition"] = value or ""
+        for subject, value in conn.execute(
+            "SELECT subject, value FROM statements "
+            "WHERE predicate = 'owl:deprecated' AND subject LIKE 'BTO:%'"
+        ):
+            if subject in terms:
+                terms[subject]["deprecated"] = str(value).strip() if value is not None else ""
         edges = [
             (subject, "biolink:subclass_of", obj)
             for subject, obj in conn.execute(
