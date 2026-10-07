@@ -51,7 +51,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 <h2>Broader habitats</h2>
 <ul class="plain">
-  <li><a href="../habitats/mine-envo-00000076.html">mine</a>      <code class="curie">ENVO:00000076</code></li>
   <li><a href="../habitats/environmental-material-envo-00010483.html">environmental material</a>      <code class="curie">ENVO:00010483</code></li>
 </ul>
 
@@ -70,6 +69,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">REVIEW</span>
     <span class="meta">2026-08-16 · claude-opus-5</span>
     <p>Reviewed and endorsed the seeder&#39;s own resolution. CLOSE-grounding review (#12): read against the full source path and the term&#39;s own definition. The grounding is right and CLOSE is the honest status — the term is the concept with a difference of framing or specificity that EXACT would overstate. (source concept habitatmech:GOLD.6a5b013cc9)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-07 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution ENVO:00000076 for habitatmech:GOLD.6a5b013cc9 (Engineered &gt; Built environment &gt; Mine &gt; Oil sands). ITEM hierarchy assessment (#1641): ENVO:03600013 bituminous sand denotes a granular environmental material, not a kind of the excavation ENVO:00000076 mine. Official ENVO a2455d1a77e46bb8a664d65a157166b539269042 explicitly treats the target as material and supplies ENVO:00010483 as its genus; the Alberta glossary (<a href="https://history.alberta.ca/energyheritage/sands/glossary.aspx" rel="noopener noreferrer" target="_blank">https://history.alberta.ca/energyheritage/sands/glossary.aspx</a>) distinguishes oil sands from extraction settings. Exclude only the GOLD mining-context contribution. Preserve the material genus, both source nodes 5840 and 5841, source path and collapse note, absent zero count/unit, CLOSE/REVIEWED status and prior audit. This does not resolve the separately tracked crude-bitumen synonym conflict (#1642).</p>
   </li>
 </ol>
 
