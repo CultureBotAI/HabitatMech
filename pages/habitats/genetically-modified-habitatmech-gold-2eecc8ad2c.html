@@ -49,10 +49,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 </table>
 </div>
 
-<h2>Broader habitats</h2>
-<ul class="plain">
-  <li><a href="../habitats/laboratory-developed-habitatmech-gold-77c5518fff.html">Laboratory developed</a>      <code class="curie">habitatmech:GOLD.77c5518fff</code></li>
-</ul>
 
 
 
@@ -66,6 +62,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">NOT_APPLICABLE</span>
     <span class="meta">2026-08-12 · claude-opus-5</span>
     <p>Marked NOT_APPLICABLE: the source concept does not denote a habitat. Genetically modified qualifies the organism under study, not the place it lives. A property of the sample, not a habitat. (source concept habitatmech:GOLD.2eecc8ad2c)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-08 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.77c5518fff for habitatmech:GOLD.2eecc8ad2c (Engineered &gt; Laboratory developed &gt; Genetically modified). ITEM hierarchy assessment (#1738): the maintained ITEM NOT_APPLICABLE decision identifies an organism qualification, not a habitat. NHGRI (<a href="https://www.genome.gov/genetics-glossary/Genetically-Modified-Organism-GMO" rel="noopener noreferrer" target="_blank">https://www.genome.gov/genetics-glossary/Genetically-Modified-Organism-GMO</a>) supports the genome-versus-environment distinction. Laboratory-development provenance is not a strictly broader habitat. Exclude only this source-path contribution; preserve the mint, nodes 4386/4725/4726, full path, 1704 ORGANISM assertions and NOT_APPLICABLE/REVIEWED state. No general non-habitat filter, replacement identity or live-count refresh is asserted. Evidence: reports/yaml_record_review/20261008T164722Z-genetically_modified.md.</p>
   </li>
 </ol>
 
