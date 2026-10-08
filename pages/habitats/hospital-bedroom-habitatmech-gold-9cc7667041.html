@@ -50,10 +50,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 </table>
 </div>
 
-<h2>Broader habitats</h2>
-<ul class="plain">
-  <li><a href="../habitats/hospital-envo-00002173.html">hospital</a>      <code class="curie">ENVO:00002173</code></li>
-</ul>
 
 
 
@@ -68,6 +64,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="meta">2026-08-12 · claude-opus-5 ·
     class-level sweep, not an individual judgement</span>
     <p>Confirmed UNGROUNDED: no ontology term fits this concept. Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the vendored slice matched this label by any search route. Whether the concept is a habitat at all was NOT assessed, so this is not yet a term-request candidate. (source concept habitatmech:GOLD.9cc7667041)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-08 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution ENVO:00002173 for habitatmech:GOLD.9cc7667041 (Engineered &gt; Built environment &gt; Hospital &gt; Hospital bedroom). ITEM hierarchy assessment (#1746): a hospital bedroom is a room within a hospital, not a subtype of the hospital building. Typed ENVO room and patient-room axioms distinguish building part from building identity. Exclude only the GOLD containment contribution; retain the source mint, node 5489, full path, zero-count omission and CLASS/SEEDED provenance. Do not transfer Room surface child observations or infer exact patient-room grounding from a narrow synonym. Evidence: official ENVO a2455d1a77e46bb8a664d65a157166b539269042 and reports/yaml_record_review/20261008T183724Z-hospital_bedroom.md.</p>
   </li>
 </ol>
 
