@@ -9,7 +9,7 @@ grounding_status: UNGROUNDED
 mapping_status: REVIEWED
 synonyms:
 - synonym_text: Biofilm
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: HabitatMech curation
 - synonym_text: scrubber biofilm
   synonym_type: EXACT_SYNONYM
@@ -45,3 +45,9 @@ curation_history:
     ENVO:00003968 'air filter' name devices rather than the attached biomass. parent_mode=REPLACE
     drops the inherited Air scrubber parent because the biofilm is inside the scrubber
     but not a kind of scrubber.
+- timestamp: '2026-10-08T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained displaced source label ''Biofilm'' as RELATED_SYNONYM: it names
+    the authored strict genus ENVO:00002034, not the defined habitat. Source attestation
+    and independently authored exact aliases remain intact (#1717).'

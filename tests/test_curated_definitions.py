@@ -206,3 +206,48 @@ def test_curated_definition_loader_rejects_unknown_parent_mode(tmp_path):
 
     with pytest.raises(DefinitionError, match="parent_mode 'RESET'"):
         load_curated_definitions(path)
+
+
+@pytest.mark.parametrize("source_label", ["Dust", " dust "])
+def test_renamed_genus_label_is_related_not_exact(source_label):
+    from habitatmech import seed
+    from habitatmech.curate.definitions import CuratedDefinition
+
+    ontology = seed.OntologyIndex([
+        {"term_id": "ENVO:00002008", "label": "dust", "ontology": "ENVO"},
+    ], [])
+    store = seed.ConceptStore(ontology)
+    concept = store.get("habitatmech:test", source_label, "UNGROUNDED")
+    concept.attestations = [{"source": "GOLD", "source_label": source_label}]
+    definition = CuratedDefinition(
+        identifier=concept.identifier, label="indoor dust",
+        parent_class="ENVO:00002008", parent_label="dust",
+        definition="A dust in an indoor setting.", exact_synonyms=("indoor particulate dust",),
+        curator="test", date="2026-10-08", notes="Test scoped source-label retention.",
+    )
+    seed.apply_curated_definitions(store, {concept.identifier: definition})
+    assert (source_label, "EXACT_SYNONYM") not in concept.synonyms
+    assert concept.synonyms[(source_label, "RELATED_SYNONYM")] == "HabitatMech curation"
+    assert ("indoor particulate dust", "EXACT_SYNONYM") in concept.synonyms
+    doc = seed.build_document(concept)
+    assert doc["source_attestations"] == concept.attestations
+    event = next(e for e in doc["curation_history"] if e["action"] == "SOURCE_SYNONYM_SCOPED")
+    assert "ENVO:00002008" in event["changes"]
+
+
+def test_authored_exact_synonym_cannot_be_the_strict_genus():
+    from habitatmech import seed
+    from habitatmech.curate.definitions import CuratedDefinition
+
+    store = seed.ConceptStore(seed.OntologyIndex([
+        {"term_id": "ENVO:00002008", "label": "dust", "ontology": "ENVO"},
+    ], []))
+    concept = store.get("habitatmech:test", "Dust", "UNGROUNDED")
+    definition = CuratedDefinition(
+        identifier=concept.identifier, label="indoor dust",
+        parent_class="ENVO:00002008", parent_label="dust",
+        definition="A dust in an indoor setting.", exact_synonyms=(" DUST ",),
+        curator="test", date="2026-10-08", notes="An inconsistent exact synonym.",
+    )
+    with pytest.raises(DefinitionError, match="exact synonym.*strict genus"):
+        seed.apply_curated_definitions(store, {concept.identifier: definition})

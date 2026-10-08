@@ -366,6 +366,7 @@ class Concept:
     gold_parent_exclusions_applied: list[GoldParentExclusion] = field(default_factory=list)
     gold_broader_synonyms: set[tuple[str, str]] = field(default_factory=set)
     close_source_synonyms: set[tuple[str, str]] = field(default_factory=set)
+    definition_broader_synonyms: set[tuple[str, str]] = field(default_factory=set)
     causal_graphs: list[dict[str, Any]] = field(default_factory=list)
     causal_graph_events: list[dict[str, Any]] = field(default_factory=list)
     _grounding_rank_seen: int = 0
@@ -465,7 +466,12 @@ def apply_curated_definitions(
             # fallback source label at PREGO's weaker synonym strength.
             concept.add_synonym(source_label, "RELATED_SYNONYM", "PREGO")
         elif not source_label_is_retained_xref:
-            concept.add_synonym(source_label, "EXACT_SYNONYM", "HabitatMech curation")
+            if (norm_label(source_label) != norm_label(concept.label)
+                    and norm_label(source_label) == norm_label(definition.parent_label)):
+                concept.add_synonym(source_label, "RELATED_SYNONYM", "HabitatMech curation")
+                concept.definition_broader_synonyms.add((source_label, definition.parent_class))
+            else:
+                concept.add_synonym(source_label, "EXACT_SYNONYM", "HabitatMech curation")
         for synonym in definition.exact_synonyms:
             concept.add_synonym(synonym, "EXACT_SYNONYM", "HabitatMech curation")
 
@@ -1560,6 +1566,18 @@ def build_document(concept: Concept) -> dict[str, Any]:
                 "Independent ontology synonyms and verbatim attestations are preserved (#1459)."
             ),
             timestamp="2026-10-07T00:00:00Z",
+        )
+    for text, genus in sorted(concept.definition_broader_synonyms):
+        record_curation_event(
+            doc,
+            curator=SEED_CURATOR,
+            action="SOURCE_SYNONYM_SCOPED",
+            changes=(
+                f"Retained displaced source label {text!r} as RELATED_SYNONYM: "
+                f"it names the authored strict genus {genus}, not the defined habitat. "
+                "Source attestation and independently authored exact aliases remain intact (#1717)."
+            ),
+            timestamp="2026-10-08T00:00:00Z",
         )
     if concept.causal_graph_events:
         doc.setdefault("curation_history", []).extend(

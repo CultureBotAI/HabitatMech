@@ -171,6 +171,11 @@ def validate_curated_definitions(
                 f"{prefix}: parent_label says {row.parent_label!r} but "
                 f"{row.parent_class} is {actual_parent!r}"
             )
+        if any(
+            " ".join(synonym.split()).casefold() == " ".join(row.parent_label.split()).casefold()
+            for synonym in row.exact_synonyms
+        ):
+            problems.append(f"{prefix}: an exact synonym cannot name the authored strict genus")
     if problems:
         raise DefinitionError(
             "curated definitions cannot be applied:\n  " + "\n  ".join(problems)
