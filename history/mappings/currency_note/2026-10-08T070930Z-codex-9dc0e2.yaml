@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: currency_note
+session:
+  id: 2026-10-08T070930Z-codex-9dc0e2
+  timestamp: '2026-10-08T07:09:30Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1704
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1702
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - notes
+  summary: Clarify currency-note singular/plural grounding rationale
+  details: 'Corrected only the note for habitatmech:GOLD.54bc9674a9: plural Currency notes
+    is a curator-recognized semantic match to singular currency note in its paper-product
+    context, not literal normalized equality. Preserved original decision curator/date and
+    ITEM exact mapping. The append-only session attributes the rationale correction to Codex;
+    no committed review or session history is overwritten. The regression failed before correction
+    and passed after, executing default gold_unmatched resolution and comparing all corpus
+    documents: scientific fields, both independent parents, three source nodes, count omissions,
+    source synonym scopes and lifecycle remain unchanged. Shared exclusion/regression suite:
+    39 passed. Dry seed passed; final canary, site and publication gates will be recorded
+    in the PR receipt. Upstream definition typo remains issue #1705; obsolete culture-medium
+    migration remains #1619.'
