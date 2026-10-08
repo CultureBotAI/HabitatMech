@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: genetically_modified
+session:
+  id: 2026-10-08T171406Z-claude-code-5078b1
+  timestamp: '2026-10-08T17:14:06Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1738
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: Remove habitat subsumption from a non-habitat genetic qualifier
+  details: Added exact source/path/expected-parent exclusion for habitatmech:GOLD.2eecc8ad2c.
+    The maintained ITEM NOT_APPLICABLE decision and inspected NHGRI GMO glossary support organism
+    qualification, not habitat identity. Suppress only the Laboratory developed source-context
+    parent. Preserve mint, three source nodes, full path, 1704 ORGANISM assertions and NOT_APPLICABLE/REVIEWED
+    state. No generic seeder behavior or original review report changed. Dry seed and full-corpus
+    before/after regression passed; forced canary was read and retained all other fields.
+    Full QC will run after regeneration.
