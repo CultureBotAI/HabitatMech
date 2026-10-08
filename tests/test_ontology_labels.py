@@ -64,6 +64,8 @@ def test_source_bytes_are_checked_before_labels(label_source):
     "<rdfs:label>wrong label</rdfs:label>",
     "<rdfs:label>wheat pastry</rdfs:label><rdfs:label>different label</rdfs:label>",
     "<rdfs:label>wheat pastry</rdfs:label><owl:deprecated>true</owl:deprecated>",
+    "<rdfs:label>wheat pastry</rdfs:label><owl:deprecated> true </owl:deprecated>",
+    "<rdfs:label>wheat pastry</rdfs:label><owl:deprecated> 1 </owl:deprecated>",
 ])
 def test_missing_ambiguous_wrong_and_obsolete_terms_are_rejected(label_source, replacement):
     source, plan = label_source

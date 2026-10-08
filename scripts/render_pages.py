@@ -31,8 +31,10 @@ import yaml
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 if __package__:
+    from .build_term_requests import excluded as excluded_term_requests
     from .mechanism_graph import graph_svg
 else:
+    from build_term_requests import excluded as excluded_term_requests
     from mechanism_graph import graph_svg
 
 from habitatmech.text_map_site import PreparedTextMap, prepare_text_map
@@ -195,6 +197,7 @@ def _build(out_dir: Path, text_map: PreparedTextMap | None) -> None:
     if not records:
         raise SystemExit(f"no records under {HABITATS_DIR}; run `just seed-apply` first")
     decisions = load_decisions()
+    excluded_requests = excluded_term_requests()
 
     env = Environment(
         loader=FileSystemLoader(str(TEMPLATES_DIR)),
@@ -357,6 +360,9 @@ def _build(out_dir: Path, text_map: PreparedTextMap | None) -> None:
             decision = decisions.get(identifier, {})
             depth = (decision.get("review_depth") or "ITEM").upper()
             if doc.get("mapping_status") == "REVIEWED" and depth == "ITEM":
+                # Deliberately excluded item reviews are neither requests nor sweeps.
+                if identifier in excluded_requests:
+                    continue
                 term_requests.append(
                     {
                         "label": doc["label"],

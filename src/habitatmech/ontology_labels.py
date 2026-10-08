@@ -75,7 +75,7 @@ def source_labels(source: Path, plan: dict) -> dict[str, str]:
         if depth == 2:
             term = wanted.get(element.get(RDF + "about", ""))
             if term and element.tag in {OWL + "Class", RDF + "Description"}:
-                if any((e.text or "").lower() in {"true", "1"}
+                if any((e.text or "").strip().lower() in {"true", "1"}
                        for e in element.findall(OWL + "deprecated")):
                     raise ValueError(f"cannot refresh an obsolete term: {term}")
                 labels[term].update(
