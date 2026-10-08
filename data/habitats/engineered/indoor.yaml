@@ -7,10 +7,6 @@ definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
-synonyms:
-- synonym_text: Indoor
-  synonym_type: EXACT_SYNONYM
-  source: HabitatMech curation
 parent_habitats:
 - ENVO:00010622
 - habitatmech:GOLD.87bf5e5370
@@ -49,3 +45,16 @@ curation_history:
     label expands GOLD's bare source label for ontology clarity, and no exact synonym
     was authored because Indoor alone is ambiguous across GOLD and would collide with
     indoor air or indoor built-space readings.
+- timestamp: '2026-10-08T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Indoor'' when
+    defining habitatmech:GOLD.b4e93f5d66 as ''indoor artificial water channel system''.
+    Verbatim source attestations are preserved. Reviewed alias exclusion (#1755):
+    the existing authored definition deliberately leaves exact_synonym empty because
+    the bare GOLD adjective Indoor is ambiguous outside Engineered > Artificial ecosystem
+    > Water channel system > Indoor. Omit only automatic retention of that displaced
+    label, not the verbatim GOLD attestation. The qualified label, facility definition,
+    both valid parents, source nodes and ITEM/REVIEWED state remain unchanged. Evidence:
+    curation/term_requests.tsv and reports/yaml_record_review/20261008T204835Z-indoor.md;
+    this is not an ontology synonym-scope repair or an original-member crosswalk.'

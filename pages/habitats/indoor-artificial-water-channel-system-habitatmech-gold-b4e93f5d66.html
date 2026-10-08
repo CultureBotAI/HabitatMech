@@ -58,9 +58,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 
 
-<h2>Also called</h2>
-<ul class="plain">
-<li>Indoor <span class="meta">— HabitatMech curation</span></li></ul>
 
 <h2>Curation</h2>
 <p class="meta">What a curator decided about this record, and why. A record built
@@ -75,6 +72,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">DEFINED</span>
     <span class="meta">2026-09-18 · codex-gpt-5</span>
     <p>Defined as &#39;indoor artificial water channel system&#39; under ENVO:00010622 &#39;vivarium&#39;. Definition authored from the record&#39;s committed deep-research report under research/habitats/, read in full; no new paid research was commissioned. GOLD&#39;s Engineered &gt; Artificial ecosystem &gt; Water channel system &gt; Indoor source is interpreted as an indoor experimental stream channel rather than indoor air, an indoor built space, plumbing, or a real-world canal; its only sibling is Outdoor, its only child is Biofilm, and GOLD routes canals to Engineered &gt; Built environment &gt; Canal. ENVO:00010622 &#39;vivarium&#39; is the tightest vendored genus; ENVO:00000121 &#39;artificial channel&#39; and ENVO:00000079 &#39;flume&#39; overclaim civil-engineering landform or canal semantics, while ENVO:01000620 &#39;mesocosm&#39; is defined as embedded within a natural environment and would therefore exclude this indoor child. The requested label expands GOLD&#39;s bare source label for ontology clarity, and no exact synonym was authored because Indoor alone is ambiguous across GOLD and would collide with indoor air or indoor built-space readings.</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_SYNONYM_EXCLUDED</span>
+    <span class="meta">2026-10-08 · codex-gpt-5</span>
+    <p>Omitted automatic retention of displaced source label &#39;Indoor&#39; when defining habitatmech:GOLD.b4e93f5d66 as &#39;indoor artificial water channel system&#39;. Verbatim source attestations are preserved. Reviewed alias exclusion (#1755): the existing authored definition deliberately leaves exact_synonym empty because the bare GOLD adjective Indoor is ambiguous outside Engineered &gt; Artificial ecosystem &gt; Water channel system &gt; Indoor. Omit only automatic retention of that displaced label, not the verbatim GOLD attestation. The qualified label, facility definition, both valid parents, source nodes and ITEM/REVIEWED state remain unchanged. Evidence: curation/term_requests.tsv and reports/yaml_record_review/20261008T204835Z-indoor.md; this is not an ontology synonym-scope repair or an original-member crosswalk.</p>
   </li>
 </ol>
 

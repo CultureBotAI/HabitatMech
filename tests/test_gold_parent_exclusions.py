@@ -21,6 +21,35 @@ EXCLUSION = GoldParentExclusion(
 )
 
 
+def test_hydroponic_exclusion_changes_only_context_parent_and_audit(monkeypatch):
+    identifier = "habitatmech:GOLD.7e1e8d505b"
+    after = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    exclusions = load_gold_parent_exclusions(seed.GOLD_PARENT_EXCLUSIONS_PATH)
+    monkeypatch.setattr(seed, "load_gold_parent_exclusions", lambda path: {
+        key: row for key, row in exclusions.items() if key != identifier
+    })
+    before = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    assert before.keys() == after.keys()
+    assert {key for key in before if before[key] != after[key]} == {identifier}
+    old, new = before[identifier], after[identifier]
+    assert old["parent_habitats"] == ["habitatmech:GOLD.86cf49cefb"]
+    assert not new.get("parent_habitats")
+    assert new["curation_history"][:-1] == old["curation_history"]
+    assert new["curation_history"][-1]["action"] == "SOURCE_PARENT_EXCLUDED"
+    for field in (old.keys() | new.keys()) - {"parent_habitats", "curation_history"}:
+        assert new.get(field) == old.get(field), field
+    assert new["mapping_status"] == "SEEDED"
+    assert new["grounding_status"] == "UNGROUNDED"
+    attestation = new["source_attestations"][0]
+    assert attestation["source_id"] == "gold.ecosystem:5551"
+    assert attestation["source_path"] == exclusions[identifier].source_path
+    assert attestation["assertion_count"] == 1
+    assert attestation["assertion_unit"] == "ORGANISM"
+    row = next(row for row in seed.read_tsv("gold_ecosystem_paths.tsv")
+               if row["canonical_path"] == attestation["source_path"])
+    assert set(row["gold_node_ids"].split("|")) == {"gold.ecosystem:5551", "gold.ecosystem:6284"}
+
+
 def test_bituminous_sand_exclusion_changes_only_context_parent_and_audit(monkeypatch):
     source = "habitatmech:GOLD.6a5b013cc9"
     identifier = "ENVO:03600013"

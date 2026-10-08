@@ -90,6 +90,11 @@ from habitatmech.curate.decisions import (  # noqa: E402
     resolve_same_as,
     validate_decisions,
 )
+from habitatmech.curate.definition_source_label_exclusions import (  # noqa: E402
+    DefinitionSourceLabelExclusion,
+    load_definition_source_label_exclusions,
+    validate_definition_source_label_exclusions,
+)
 from habitatmech.curate.definitions import (  # noqa: E402
     CuratedDefinition,
     load_curated_definitions,
@@ -113,6 +118,9 @@ DECISIONS_PATH = REPO_ROOT / "curation" / "decisions.tsv"
 CURATED_DEFINITIONS_PATH = REPO_ROOT / "curation" / "term_requests.tsv"
 EXTERNAL_XREFS_PATH = REPO_ROOT / "curation" / "external_xrefs.tsv"
 GOLD_PARENT_EXCLUSIONS_PATH = REPO_ROOT / "curation" / "gold_parent_exclusions.tsv"
+DEFINITION_SOURCE_LABEL_EXCLUSIONS_PATH = (
+    REPO_ROOT / "curation" / "definition_source_label_exclusions.tsv"
+)
 
 GOLD_LEVELS = ["ecosystem", "ecosystem_category", "ecosystem_type", "ecosystem_subtype", "specific_ecosystem"]
 
@@ -363,6 +371,9 @@ class Concept:
     gold_broader_synonyms: set[tuple[str, str]] = field(default_factory=set)
     close_source_synonyms: set[tuple[str, str]] = field(default_factory=set)
     definition_broader_synonyms: set[tuple[str, str]] = field(default_factory=set)
+    definition_source_label_exclusions_applied: list[DefinitionSourceLabelExclusion] = field(
+        default_factory=list
+    )
     causal_graphs: list[dict[str, Any]] = field(default_factory=list)
     causal_graph_events: list[dict[str, Any]] = field(default_factory=list)
     _grounding_rank_seen: int = 0
@@ -429,6 +440,7 @@ class ConceptStore:
 def apply_curated_definitions(
     store: ConceptStore,
     definitions: dict[str, CuratedDefinition],
+    source_label_exclusions: dict[str, DefinitionSourceLabelExclusion] | None = None,
 ) -> None:
     """Apply validated HabitatMech-native labels and definitions to concepts."""
     validate_curated_definitions(
@@ -436,6 +448,10 @@ def apply_curated_definitions(
         store.concepts,
         {term_id: term["label"] for term_id, term in store.ontology.terms.items()},
         path=CURATED_DEFINITIONS_PATH,
+    )
+    source_label_exclusions = source_label_exclusions or {}
+    validate_definition_source_label_exclusions(
+        source_label_exclusions, definitions, store.concepts,
     )
     for identifier, definition in definitions.items():
         concept = store.concepts[identifier]
@@ -457,7 +473,9 @@ def apply_curated_definitions(
             and norm_label(decision.object_label) == norm_label(source_label)
             for decision in concept.decisions_applied
         )
-        if {a.get("source") for a in concept.attestations} == {"PREGO"}:
+        if exclusion := source_label_exclusions.get(identifier):
+            concept.definition_source_label_exclusions_applied.append(exclusion)
+        elif {a.get("source") for a in concept.attestations} == {"PREGO"}:
             # PREGO lexical variants include stems and plurals, so keep the
             # fallback source label at PREGO's weaker synonym strength.
             concept.add_synonym(source_label, "RELATED_SYNONYM", "PREGO")
@@ -1575,6 +1593,20 @@ def build_document(concept: Concept) -> dict[str, Any]:
             ),
             timestamp="2026-10-08T00:00:00Z",
         )
+    for exclusion in sorted(
+        concept.definition_source_label_exclusions_applied, key=lambda e: (e.date, e.identifier)
+    ):
+        record_curation_event(
+            doc,
+            curator=exclusion.curator,
+            action="SOURCE_SYNONYM_EXCLUDED",
+            changes=(
+                f"Omitted automatic retention of displaced source label {exclusion.source_label!r} "
+                f"when defining {exclusion.identifier} as {exclusion.requested_label!r}. "
+                f"Verbatim source attestations are preserved. {exclusion.notes}"
+            ),
+            timestamp=f"{exclusion.date}T00:00:00Z",
+        )
     if concept.causal_graph_events:
         doc.setdefault("curation_history", []).extend(
             copy.deepcopy(concept.causal_graph_events)
@@ -1963,8 +1995,12 @@ def build_corpus(
     ingest_parameters(store, parameter_rows, stats, decisions)
 
     definitions = load_curated_definitions(CURATED_DEFINITIONS_PATH)
-    apply_curated_definitions(store, definitions)
+    source_label_exclusions = load_definition_source_label_exclusions(
+        DEFINITION_SOURCE_LABEL_EXCLUSIONS_PATH
+    )
+    apply_curated_definitions(store, definitions, source_label_exclusions)
     stats["curated_definitions_loaded"] = len(definitions)
+    stats["curated_definition_source_label_exclusions_loaded"] = len(source_label_exclusions)
 
     causal_graph_curations = load_causal_graph_curations(causal_graphs_root)
     validate_causal_graph_curations(
