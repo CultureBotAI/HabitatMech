@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: digestate__e3669430
+session:
+  id: 2026-10-08T090549Z-claude-code-461294
+  timestamp: '2026-10-08T09:05:49Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1709
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: Exclude the vessel parent from anaerobic SSF digestate material
+  details: 'Added the exact GOLD.3b22aa41ac/full SSF path/ENVO:00002124 exclusion, not an
+    identity or definition decision. Read the complete target and source-parent owners; freshly
+    inspected EPA AgSTAR and official ENVO OWL with SHA256 a0b919065d33a9cf975b74cadd16c75f32f512d17f4f6d5999b74216701df54c.
+    Residual digestate material is not a subtype of the containing reactor. Preserved source
+    node 8153, full path, omitted organism count/unit, CLASS decision and UNGROUNDED/SEEDED
+    status. The original report 20261008T084643Z-digestate__e3669430.md remains unchanged
+    baseline evidence. Dry-seed and forced canary succeeded and the generated record was inspected.
+    Focused regression/exclusion suite: 38 passed, including exact full-corpus change scope
+    and full semantic-context comparisons. Map/site regeneration and full QC remain to be
+    completed before merge. No sample counts, taxa, definitions or identity claims were copied
+    from either digestate sibling or the reactor parent.'
