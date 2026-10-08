@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: hydrocarbon__e596377f
+session:
+  id: 2026-10-08T202103Z-codex-4e3c96
+  timestamp: '2026-10-08T20:21:03Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1752
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1751
+events:
+- type: AUDIT
+  outcome: changed
+  sections:
+  - session.actors
+  summary: Correct actor attribution for Hydrocarbon exclusion session
+  details: The prior append-only receipt history/mappings/hydrocarbon__e596377f/2026-10-08T201838Z-claude-code-916e99.yaml
+    inherited the scaffold default actor name claude-code because --actor-name was omitted.
+    The actual editing agent was Codex, model gpt-5, using codex. The prior receipt already
+    records that model/tool correctly. This new receipt corrects only actor-name attribution;
+    preserve the original immutable receipt and scientific decision. All curation and tests
+    in the preceding receipt were performed by Codex, not Claude Code.

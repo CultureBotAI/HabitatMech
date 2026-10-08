@@ -634,6 +634,52 @@ def test_benzene_exclusion_changes_only_chemical_context_parent_and_audit(monkey
     assert after[parent]["xrefs"] == ["CHEBI:24632"]
 
 
+def test_hydrocarbon_exclusion_changes_only_bioremediation_parent_and_audit(monkeypatch):
+    identifier = "habitatmech:GOLD.e77998b825"
+    parent = "habitatmech:GOLD.5f0e9e816a"
+    source_path = "Engineered > Bioremediation > Hydrocarbon"
+    after = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    exclusions = load_gold_parent_exclusions(seed.GOLD_PARENT_EXCLUSIONS_PATH)
+    exclusion = exclusions.pop(identifier)
+    assert exclusion.source_path == source_path
+    assert exclusion.parent_id == parent
+    assert seed.mint("GOLD", source_path) == identifier
+    monkeypatch.setattr(seed, "load_gold_parent_exclusions", lambda path: exclusions)
+    before = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+
+    assert before.keys() == after.keys()
+    assert {key for key in before if before[key] != after[key]} == {identifier}
+    old, new = before[identifier], after[identifier]
+    assert old["parent_habitats"] == [parent]
+    assert "parent_habitats" not in new
+    assert new["curation_history"][:-1] == old["curation_history"]
+    event = new["curation_history"][-1]
+    assert event["action"] == "SOURCE_PARENT_EXCLUDED"
+    assert event["timestamp"] == "2026-10-08T00:00:00Z"
+    assert event["curator"] == "codex-gpt-5"
+    assert identifier in event["changes"]
+    assert source_path in event["changes"]
+    assert parent in event["changes"]
+    for field in (old.keys() | new.keys()) - {"parent_habitats", "curation_history"}:
+        assert new.get(field) == old.get(field), field
+    assert new["grounding_status"] == "NOT_APPLICABLE"
+    assert new["mapping_status"] == "REVIEWED"
+    assert new["xrefs"] == ["CHEBI:24632"]
+    assert new["source_attestations"] == [{
+        "source": "GOLD", "source_id": "gold.ecosystem:3525",
+        "source_label": "Hydrocarbon", "source_path": source_path,
+        "assertion_count": 1, "assertion_unit": "ORGANISM",
+        "notes": ("3 GOLD ecosystem node ids share this path; first shown. "
+                  "See data/raw/gold_ecosystem_paths.tsv."),
+    }]
+    row = next(row for row in seed.read_tsv(seed.RAW_DIR / "gold_ecosystem_paths.tsv")
+               if row["canonical_path"] == source_path)
+    assert set(row["gold_node_ids"].split("|")) == {
+        "gold.ecosystem:3525", "gold.ecosystem:3864", "gold.ecosystem:4300",
+    }
+    assert "parent_habitats" not in after["habitatmech:GOLD.d6979edc0e"]
+
+
 def test_biochar_exclusion_changes_only_production_context_parent_and_audit(monkeypatch):
     identifier = "ENVO:2000007"
     source = "habitatmech:GOLD.442a77e51e"
