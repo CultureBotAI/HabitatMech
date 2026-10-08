@@ -27,9 +27,10 @@ curation_history:
 - timestamp: '2026-08-12T00:00:00Z'
   curator: claude-opus-5
   action: GROUND
-  changes: 'Grounded to ENVO:00003896 ''currency note'' (EXACT). Leaf label equals
-    the ENVO label exactly and no other source concept claims it. Path: Engineered
-    > Paper > Currency notes (source concept habitatmech:GOLD.54bc9674a9)'
+  changes: 'Grounded to ENVO:00003896 ''currency note'' (EXACT). The plural source
+    label is curator-recognized as equivalent to the singular ENVO label in this paper-note
+    context; normalized labels are not equal and the automatic route is gold_unmatched.
+    Path: Engineered > Paper > Currency notes (source concept habitatmech:GOLD.54bc9674a9)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

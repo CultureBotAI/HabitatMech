@@ -3,8 +3,6 @@ label: Crude oil sludge
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:03600078
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4867
@@ -23,3 +21,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-08T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:03600078 for habitatmech:GOLD.808ed1c989
+    (Engineered > Built environment > Oil refinery > Crude oil sludge). ITEM hierarchy
+    assessment (#1703): crude-oil sludge material is not a kind of the oil-refinery
+    industrial building ENVO:03600078. Official ENVO OWL (SHA256 a0b919065d33a9cf975b74cadd16c75f32f512d17f4f6d5999b74216701df54c)
+    and the exact GOLD path support location context, not subsumption. Exclude only
+    this source-parent contribution; preserve GOLD4867, the full path, source mint,
+    zero-count omissions and CLASS/SEEDED identity provenance. Do not substitute the
+    motor-oil-gel class ENVO:00002060 or merge the distinct petroleum-sludge child
+    and sibling. A supported material definition/genus remains separate curation.
+    Evidence: reports/yaml_record_review/20261008T063338Z-crude_oil_sludge.md.'

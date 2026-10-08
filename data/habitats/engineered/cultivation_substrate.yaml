@@ -3,8 +3,6 @@ label: Cultivation substrate
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.583dbbd71a
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7851
@@ -24,3 +22,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-08T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.583dbbd71a
+    for habitatmech:GOLD.083ab65161 (Engineered > Built environment > Mushroom farm
+    > Cultivation substrate). ITEM hierarchy assessment (#1703): cultivation-substrate
+    material used at a mushroom farm is not a kind of that entire farm setting. The
+    exact GOLD path, distinct Wheat straw child and current ENVO farm definition distinguish
+    material from the facility. Exclude only this source-parent contribution; preserve
+    GOLD7851/7852, collapse note, source mint, zero-count omissions and CLASS/SEEDED
+    identity provenance. Do not equate all substrate to wheat straw, spent mushroom
+    compost, obsolete culture medium or filtered culture fluid. A supported material
+    definition/genus remains separate curation. Evidence: reports/yaml_record_review/20261008T063726Z-cultivation_substrate.md.'
