@@ -235,18 +235,24 @@ def test_renamed_genus_label_is_related_not_exact(source_label):
     assert "ENVO:00002008" in event["changes"]
 
 
-def test_authored_exact_synonym_cannot_be_the_strict_genus():
+@pytest.mark.parametrize(("parent_label", "synonym"), [
+    ("dust", " DUST "),
+    ("fresh water", "Fresh-water"),
+    ("fresh water", "FRESH/WATER"),
+    ("fresh water", "fresh (water)"),
+])
+def test_authored_exact_synonym_cannot_be_the_strict_genus(parent_label, synonym):
     from habitatmech import seed
     from habitatmech.curate.definitions import CuratedDefinition
 
     store = seed.ConceptStore(seed.OntologyIndex([
-        {"term_id": "ENVO:00002008", "label": "dust", "ontology": "ENVO"},
+        {"term_id": "ENVO:test", "label": parent_label, "ontology": "ENVO"},
     ], []))
-    concept = store.get("habitatmech:test", "Dust", "UNGROUNDED")
+    concept = store.get("habitatmech:test", synonym, "UNGROUNDED")
     definition = CuratedDefinition(
-        identifier=concept.identifier, label="indoor dust",
-        parent_class="ENVO:00002008", parent_label="dust",
-        definition="A dust in an indoor setting.", exact_synonyms=(" DUST ",),
+        identifier=concept.identifier, label=f"indoor {parent_label}",
+        parent_class="ENVO:test", parent_label=parent_label,
+        definition=f"A {parent_label} in an indoor setting.", exact_synonyms=(synonym,),
         curator="test", date="2026-10-08", notes="An inconsistent exact synonym.",
     )
     with pytest.raises(DefinitionError, match="exact synonym.*strict genus"):

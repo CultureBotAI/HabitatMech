@@ -101,6 +101,7 @@ from habitatmech.curate.gold_parent_exclusions import (  # noqa: E402
     GoldParentExclusionError,
     load_gold_parent_exclusions,
 )
+from habitatmech.labels import norm_label  # noqa: E402
 from habitatmech.validation.write_validated import (  # noqa: E402
     ValidationFailedError,
     write_validated_habitat,
@@ -238,11 +239,6 @@ def verified_mapping_target(
         stats["mapping_targets_rejected_label_mismatch"] += 1
         return None
     return target
-
-
-def norm_label(text: str) -> str:
-    """Lexical-matching key: lowercase, runs of non-alphanumerics to one space."""
-    return re.sub(r"[^a-z0-9]+", " ", (text or "").lower()).strip()
 
 
 def slugify(text: str, maxlen: int = 72) -> str:

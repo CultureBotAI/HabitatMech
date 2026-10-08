@@ -173,9 +173,10 @@ parents inferred from source hierarchy:
 When a definition renames a source label that equals its canonical strict-genus
 label, the old label is retained as RELATED_SYNONYM with a deterministic
 `SOURCE_SYNONYM_SCOPED` event, not promoted to exact equivalence. An authored
-`exact_synonym` may not name that strict genus either. This bounded guard does
-not assess other broader names, ancestor synonyms or definition scope; those
-still require evidence-backed review. Verbatim source attestations and unrelated
+`exact_synonym` may not name that strict genus either. Both checks use the same
+lexical key, including punctuation, whitespace and case folding. This bounded
+guard does not assess other broader names, ancestor synonyms or definition scope;
+those still require evidence-backed review. Verbatim source attestations and unrelated
 authored exact aliases are preserved.
 
 For example, the diatom definition adds an organism-determined ENVO genus while

@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: src/habitatmech/curate/definitions.py
+  slug: curated_genus_synonyms
+session:
+  id: 2026-10-08T111542Z-codex-a4f1c9
+  timestamp: '2026-10-08T11:15:42Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1720
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1715
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - validation
+  - synonyms
+  summary: Unify genus-label normalization after adversarial regression
+  details: 'Follow-up to history/infrastructure/curated_genus_synonyms/2026-10-08T105835Z-codex-6aa32e.yaml.
+    In-memory probing of 9a16ff162 reproduced simultaneous EXACT_SYNONYM and RELATED_SYNONYM
+    for Fresh-water under genus fresh water: fallback folded punctuation but authored-exact
+    validation did not. Three new hyphen/slash/parenthesis cases failed before correction.
+    Move the unchanged existing norm_label implementation to habitatmech.labels, import it
+    in both checks, and retain seed.norm_label for callers. All 52 focused tests pass and
+    all 3207 generated records still reproduce exactly; no scientific or map artifact changes
+    are required. Final full QC and exact-head CI must be rerun before merge; the interrupted
+    superseded-candidate run is not claimed as a pass.'
