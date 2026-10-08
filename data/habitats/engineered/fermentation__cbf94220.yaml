@@ -3,8 +3,6 @@ label: Fermentation
 habitat_category: ENGINEERED
 grounding_status: NOT_APPLICABLE
 mapping_status: REVIEWED
-parent_habitats:
-- habitatmech:GOLD.68f7051d62
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6479
@@ -26,3 +24,18 @@ curation_history:
     the production process, not the fermenting feed material or vessel. An external
     process term corroborates that it is a process but is not in the committed slice.
     (source concept habitatmech:GOLD.79e523eace)'
+- timestamp: '2026-10-08T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.68f7051d62
+    for habitatmech:GOLD.79e523eace (Engineered > Animal feed production > Fermentation).
+    ITEM hierarchy assessment (#1726): the maintained ITEM NOT_APPLICABLE decision
+    interprets this exact source as a production process, so its production-environment
+    source-path parent is not a strictly broader habitat under that interpretation.
+    Exclude only this context contribution; preserve the mint, nodes 6479/6480/6481,
+    full path, three ORGANISM assertions, NOT_APPLICABLE/REVIEWED status and historical
+    decision. No generic process-only parent filter, replacement material/vessel identity
+    or definition is asserted. Original source members are still needed to reassess
+    process versus fermentation-environment scope; this does not endorse the separate
+    child edge. Evidence: reports/yaml_record_review/20261008T133441Z-fermentation__cbf94220.md
+    and curation/decisions.tsv.'

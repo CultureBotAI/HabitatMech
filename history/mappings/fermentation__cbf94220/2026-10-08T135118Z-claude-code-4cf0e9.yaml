@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: fermentation__cbf94220
+session:
+  id: 2026-10-08T135118Z-claude-code-4cf0e9
+  timestamp: '2026-10-08T13:51:18Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1726
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude habitat ancestry inconsistent with the retained fermentation process decision
+  details: Added an exact-path and expected-parent guarded exclusion for habitatmech:GOLD.79e523eace.
+    The maintained ITEM NOT_APPLICABLE assessment in decisions.tsv interprets this source
+    as a process; Animal feed production is not its strictly broader habitat under that interpretation.
+    The 20261008T133441Z review documents GOLD classification, process vocabulary and unrecovered
+    original source-member limits. Preserve the mint, all three nodes, path, three ORGANISM
+    assertions, NOT_APPLICABLE/REVIEWED state and old events. No global filter or replacement
+    identity was added, and the separate child edge remains unchanged. Whole-corpus regression
+    passed after failing on the original inputs; seed dry run and inspected canary passed.
+    Full QC, ontology labels and genuine map/site regeneration remain subsequent publication
+    gates.
