@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: hydrocarbon__e596377f
+session:
+  id: 2026-10-08T201838Z-claude-code-916e99
+  timestamp: '2026-10-08T20:18:38Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1752
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: Exclude Bioremediation context parent from ITEM-rejected Hydrocarbon chemical
+  details: 'Added the exact GOLD exclusion for habitatmech:GOLD.e77998b825, Engineered > Bioremediation
+    > Hydrocarbon, expecting habitatmech:GOLD.5f0e9e816a. The maintained ITEM chemical rejection
+    and fresh ChEBI CHEBI:24632 definition do not support a strict bioremediation-habitat
+    genus. The new full-corpus before/after regression passed, preserving the chemical xref,
+    NOT_APPLICABLE/REVIEWED status, all three source nodes, one ORGANISM assertion, prior
+    events and every other record. Existing Benzene opposite-endpoint and stale-guard tests
+    also passed: seven selected tests total. Dry seed passed and the generated target canary
+    was inspected before bulk generation. Full semantic map/site regeneration and full QC
+    are required before publishing; their final results will be recorded in PR #1751. Original
+    remediation-matrix interpretation remains unverified. No replacement definition or SSSOM/KGX
+    readiness claim is made. Baseline review: reports/yaml_record_review/20261008T200652Z-hydrocarbon__e596377f.md.'
