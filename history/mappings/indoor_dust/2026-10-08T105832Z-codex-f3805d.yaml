@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: indoor_dust
+session:
+  id: 2026-10-08T105832Z-codex-f3805d
+  timestamp: '2026-10-08T10:58:32Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1717
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1715
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - synonyms
+  - notes
+  summary: Remove broader exact aliases from indoor dust
+  details: 'Removed Dust and settled dust from the authored exact-synonym list for habitatmech:GOLD.398aeb6c37.
+    The seeder separately retains source Dust as related because it names the strict ENVO:00002008
+    genus. Current official ENVO and the inspected abstract for DOI:10.1098/rspb.2015.1139
+    support the scope distinction; see report 20261008T103512Z-dust.md. The old definition
+    text and REPLACE genus are unchanged, not newly approved; original-source sampling/composition
+    scope and the remaining house dust alias are tracked in #1718. Notes explicitly retain
+    original claude-opus-5 definition attribution. Preserve mint, two nodes, 65 ORGANISM assertions,
+    source path, status and URL. Focused tests, dry seed and inspected forced canary passed.
+    Full regenerated-product QC remains required.'

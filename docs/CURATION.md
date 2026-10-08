@@ -170,6 +170,15 @@ parents inferred from source hierarchy:
   inherited parent is false for the concept, and record that evidence in the
   definition notes. It is not a way to express preference for a tighter genus.
 
+When a definition renames a source label that equals its canonical strict-genus
+label, the old label is retained as RELATED_SYNONYM with a deterministic
+`SOURCE_SYNONYM_SCOPED` event, not promoted to exact equivalence. An authored
+`exact_synonym` may not name that strict genus either. Both checks use the same
+lexical key, including punctuation, whitespace and case folding. This bounded
+guard does not assess other broader names, ancestor synonyms or definition scope;
+those still require evidence-backed review. Verbatim source attestations and unrelated
+authored exact aliases are preserved.
+
 For example, the diatom definition adds an organism-determined ENVO genus while
 retaining GOLD's true alga-associated parent. The inland saline-or-alkaline
 definition replaces GOLD's aquatic-biome edge because the source bin includes

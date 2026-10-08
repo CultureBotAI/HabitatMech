@@ -59,7 +59,7 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 <h2>Also called</h2>
 <ul class="plain">
-<li>Dust <span class="meta">— HabitatMech curation</span></li><li>house dust <span class="meta">— HabitatMech curation</span></li><li>settled dust <span class="meta">— HabitatMech curation</span></li></ul>
+<li>Dust <span class="meta">— HabitatMech curation</span></li><li>house dust <span class="meta">— HabitatMech curation</span></li></ul>
 
 <h2>Curation</h2>
 <p class="meta">What a curator decided about this record, and why. A record built
@@ -72,8 +72,13 @@ from several source concepts can carry one decision per concept.</p>
   </li>
   <li>
     <span class="pill">DEFINED</span>
-    <span class="meta">2026-08-28 · claude-opus-5</span>
-    <p>Defined as &#39;indoor dust&#39; under ENVO:00002008 &#39;dust&#39;. Definition authored from the record&#39;s committed deep-research report under research/habitats/, read in full; the report&#39;s proposed sentence, genus and near-miss table are the evidence. No new research was commissioned. Introduces a setting-based differentia under ENVO:00002008 &#39;dust&#39;, where every existing child is differentiated by composition or source material. REPLACE because the inherited parent was the GOLD path parent habitatmech:GOLD.40979f5751 &#39;Indoor Air&#39;, and dust is not a kind of air.</p>
+    <span class="meta">2026-10-08 · codex-gpt-5</span>
+    <p>Defined as &#39;indoor dust&#39; under ENVO:00002008 &#39;dust&#39;. Synonym-only correction (#1717): generic Dust is the broader ENVO:00002008 genus; settled dust also occurs outdoors (DOI:10.1098/rspb.2015.1139, inspected abstract). Remove both authored exact aliases; the seeder retains source Dust at related scope. Definition text from claude-opus-5 (2026-08-28) remains unchanged, not newly validated: the committed research inferred a settled-surface protocol without recovering the GOLD study methods. Sampling/composition scope and the remaining house dust alias await original-source adjudication in #1718; do not merge the distinct House/Dust source (#215). Preserve REPLACE because dust is not a kind of the inherited Indoor Air parent habitatmech:GOLD.40979f5751. No paid research or new biological claims. Evidence: reports/yaml_record_review/20261008T103512Z-dust.md.</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_SYNONYM_SCOPED</span>
+    <span class="meta">2026-10-08 · seed_from_sources</span>
+    <p>Retained displaced source label &#39;Dust&#39; as RELATED_SYNONYM: it names the authored strict genus ENVO:00002008, not the defined habitat. Source attestation and independently authored exact aliases remain intact (#1717).</p>
   </li>
 </ol>
 
