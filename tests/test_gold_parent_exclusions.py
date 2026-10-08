@@ -72,6 +72,32 @@ def write_table(path, rows):
         writer.writerows(rows)
 
 
+def test_aquarium_sediment_exclusion_preserves_material_and_provenance(monkeypatch):
+    identifier = "habitatmech:GOLD.44534a15ca"
+    after = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    exclusions = load_gold_parent_exclusions(seed.GOLD_PARENT_EXCLUSIONS_PATH)
+    monkeypatch.setattr(
+        seed, "load_gold_parent_exclusions",
+        lambda path: {key: row for key, row in exclusions.items() if key != identifier},
+    )
+    before = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    assert before.keys() == after.keys()
+    assert {key for key in before if before[key] != after[key]} == {identifier}
+    old, new = before[identifier], after[identifier]
+    assert old["parent_habitats"] == ["ENVO:00002007", "ENVO:00002198"]
+    assert new["parent_habitats"] == ["ENVO:00002007"]
+    assert new["curation_history"][:-1] == old["curation_history"]
+    event = new["curation_history"][-1]
+    assert event["action"] == "SOURCE_PARENT_EXCLUDED"
+    assert event["curator"] == "codex-gpt-5"
+    assert "ENVO:00002198" in event["changes"]
+    for field in (old.keys() | new.keys()) - {"parent_habitats", "curation_history"}:
+        assert new.get(field) == old.get(field), field
+    assert new["source_attestations"][0]["source_id"] == "gold.ecosystem:8037"
+    assert new["source_attestations"][0]["source_path"] == exclusions[identifier].source_path
+    assert new["source_attestations"][0]["mapping_predicate"] == "skos:narrowMatch"
+
+
 def test_loader_round_trip_and_required_file(tmp_path):
     path = tmp_path / "exclusions.tsv"
     with pytest.raises(FileNotFoundError):

@@ -935,6 +935,43 @@ def test_a_merged_record_keeps_every_source_attestation(records):
         )
 
 
+def test_freshwater_aquarium_grounding_preserves_source_scope(records, raw_tsv):
+    docs = {doc["identifier"]: doc for _path, doc in records}
+    assert "habitatmech:GOLD.772964032b" not in docs
+    aquarium = docs["ENVO:00002198"]
+    assert aquarium["label"] == "fresh water aquarium"
+    assert aquarium["definition_source"] == "ENVO"
+    assert aquarium["habitat_category"] == "ENGINEERED"
+    assert aquarium["grounding_status"] == "EXACT"
+    assert aquarium["mapping_status"] == "REVIEWED"
+    assert aquarium["parent_habitats"] == ["ENVO:00002196", "ENVO:00010622"]
+    assert len(aquarium["source_attestations"]) == 1
+    attestation = aquarium["source_attestations"][0]
+    assert attestation["source"] == "GOLD"
+    assert attestation["source_id"] == "gold.ecosystem:8025"
+    assert attestation["source_label"] == "Freshwater aquarium"
+    assert attestation["source_path"] == (
+        "Engineered > Artificial ecosystem > Vivarium > Freshwater aquarium"
+    )
+    assert attestation["mapping_predicate"] == "skos:exactMatch"
+    assert attestation["assertion_count"] == 2
+    assert attestation["assertion_unit"] == "ORGANISM"
+    assert "2 GOLD ecosystem node ids" in attestation["notes"]
+    row = next(row for row in raw_tsv("gold_ecosystem_paths.tsv")
+               if row["canonical_path"] == attestation["source_path"])
+    assert set(row["gold_node_ids"].split("|")) == {
+        "gold.ecosystem:8025", "gold.ecosystem:8026",
+    }
+    assert any(event["action"] == "GROUND" and event["curator"] == "codex-gpt-5"
+               for event in aquarium["curation_history"])
+    sediment = docs["habitatmech:GOLD.44534a15ca"]
+    assert sediment["parent_habitats"] == ["ENVO:00002007"]
+    assert sediment["grounding_status"] == "NARROW"
+    assert sediment["mapping_status"] == "SEEDED"
+    assert sediment["source_attestations"][0]["assertion_count"] == 1
+    assert sediment["source_attestations"][0]["assertion_unit"] == "ORGANISM"
+
+
 def test_environmental_provenance_bins_merge_without_losing_scope(records):
     """GOLD and BacDive use one level-1 provenance concept; publishing two
     records split 19,739 assertions and invited conflicting definitions (#179)."""
