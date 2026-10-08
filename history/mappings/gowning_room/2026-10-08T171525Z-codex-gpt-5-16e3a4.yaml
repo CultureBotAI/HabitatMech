@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: gowning_room
+session:
+  id: 2026-10-08T171525Z-codex-gpt-5-16e3a4
+  timestamp: '2026-10-08T17:15:25Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1741
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1736
+events:
+- type: GENERAL
+  outcome: changed
+  sections:
+  - provenance
+  summary: Correct scaffolded actor name without rewriting session history
+  details: 'Correction to history/mappings/gowning_room/2026-10-08T171408Z-claude-code-c40e7a.yaml:
+    the scaffolder defaulted actors.name and the session filename component to claude-code
+    because actor-name was omitted. The actual actor was codex-gpt-5, using model gpt-5 and
+    agent_tool codex as already recorded. No Claude Code session performed this curation.
+    Preserve the original append-only record, its scientific account and timestamps; this
+    entry corrects attribution only. The full-corpus before/after regression passed and all
+    3207 records regenerated without failure. Full QC remains to be run.'
