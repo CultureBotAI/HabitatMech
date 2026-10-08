@@ -138,7 +138,23 @@ unverified within those local bounds, not disproved or globally absent.
 No blocker or major finding. Child-specific context exclusions for Chemical
 products and Biochar do not decide this category's identity or its own parent.
 
+The earlier [Engineered-root review](20260924T165434Z-engineered__900b76ad.md)
+returned needs curation with major root-level identity/hierarchy findings.
+That review concerns the root and its wider membership; this report does not
+supersede it or adjudicate every outgoing parent edge. Here, current primary
+GOLD guidance supports a plausible environment grouping, and no inspected
+evidence establishes a false identity or false parent for this exact target.
+The narrower finding is therefore minor: uncertainty and CLASS lifecycle alone
+do not prove a major defect. The root's broader follow-up remains unresolved;
+publication of this report is not an ITEM decision for either record.
+
 ## Recommended Edits
+
+The exact target/Engineered-parent question is tracked in
+[issue #1758](https://github.com/CultureBotAI/HabitatMech/issues/1758).
+[Issue #1724](https://github.com/CultureBotAI/HabitatMech/issues/1724) separately
+concerns the Engineered product child and its Industrial production parent;
+neither issue is resolved by publishing this report.
 
 Recover the original source-member descriptions before choosing a process,
 product, factory or associated-environment interpretation. Assess the exact
@@ -163,6 +179,10 @@ changes. Verify the independent contributions before altering a parent edge.
 Only this new report is authored; scientific inputs, generated records,
 historical reviews and mapping status are unchanged. The separate explicit
 publication request authorizes the subsequent PR/review/issue workflow.
+The publication adversarial pass identified the missing comparison with the
+older root verdict ([#1757](https://github.com/CultureBotAI/HabitatMech/issues/1757));
+the Findings section now preserves that distinction without rewriting the
+historical report or changing the scientific verdict.
 Failed GOLD project-page and explorer retrievals, search snippets and a
 minimal PubMed response were not used as organism or paper evidence. The
 current workbook is not the original organism cohort. This is one record
