@@ -50,10 +50,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 </table>
 </div>
 
-<h2>Broader habitats</h2>
-<ul class="plain">
-  <li><a href="../habitats/spacecraft-envo-01003000.html">spacecraft</a>      <code class="curie">ENVO:01003000</code></li>
-</ul>
 
 
 
@@ -68,6 +64,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="meta">2026-08-12 · claude-opus-5 ·
     class-level sweep, not an individual judgement</span>
     <p>Confirmed UNGROUNDED: no ontology term fits this concept. Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the vendored slice matched this label by any search route. Whether the concept is a habitat at all was NOT assessed, so this is not yet a term-request candidate. (source concept habitatmech:GOLD.24c703f190)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-08 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution ENVO:01003000 for habitatmech:GOLD.24c703f190 (Engineered &gt; Built environment &gt; Spacecraft Assembly Cleanrooms &gt; Spacecraft &gt; External surfaces). ITEM hierarchy assessment (#1722): a spacecraft surface is not a kind of the whole spaceflight vehicle ENVO:01003000. Official ENVO a2455d1a77e46bb8a664d65a157166b539269042 and NASA JPL sampling guidance (<a href="https://planetaryprotection.jpl.nasa.gov/mission-implementation" rel="noopener noreferrer" target="_blank">https://planetaryprotection.jpl.nasa.gov/mission-implementation</a>) distinguish exposed hardware surfaces from the vehicle. Exclude only this GOLD whole-object context contribution. Preserve GOLD8287, full assembly-cleanroom path, omitted counts, mint and CLASS/SEEDED lifecycle. No surface definition, material genus, mission, taxon, sterility or orbital exposure is inferred. Evidence: reports/yaml_record_review/20261008T122440Z-external_surfaces.md.</p>
   </li>
 </ol>
 

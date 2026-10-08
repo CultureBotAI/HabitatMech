@@ -3,8 +3,6 @@ label: Effluent
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:00002043
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7771
@@ -24,3 +22,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-08T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00002043 for habitatmech:GOLD.827b5dbbef
+    (Engineered > WWTP > Effluent). ITEM hierarchy assessment (#1722): treatment-plant
+    effluent is not a kind of wastewater treatment plant. The archived EPA STORET
+    glossary (https://archive.epa.gov/storet/archive_old/ldc/glossary.htm) distinguishes
+    outflow from the facility; official ENVO a2455d1a77e46bb8a664d65a157166b539269042
+    identifies ENVO:00002043 as that facility. Exclude only this GOLD context contribution.
+    Preserve nodes 7771/7854/7855, collapse note, full path, zero-organism-count omission,
+    mint and CLASS/SEEDED lifecycle. Separate biosample counts are not organism assertions;
+    treatment stage and a true material genus remain unresolved. Evidence: reports/yaml_record_review/20261008T121219Z-effluent__7ff89bae.md.'

@@ -3,8 +3,6 @@ label: External surfaces
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:01003000
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8287
@@ -24,3 +22,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-08T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:01003000 for habitatmech:GOLD.24c703f190
+    (Engineered > Built environment > Spacecraft Assembly Cleanrooms > Spacecraft
+    > External surfaces). ITEM hierarchy assessment (#1722): a spacecraft surface
+    is not a kind of the whole spaceflight vehicle ENVO:01003000. Official ENVO a2455d1a77e46bb8a664d65a157166b539269042
+    and NASA JPL sampling guidance (https://planetaryprotection.jpl.nasa.gov/mission-implementation)
+    distinguish exposed hardware surfaces from the vehicle. Exclude only this GOLD
+    whole-object context contribution. Preserve GOLD8287, full assembly-cleanroom
+    path, omitted counts, mint and CLASS/SEEDED lifecycle. No surface definition,
+    material genus, mission, taxon, sterility or orbital exposure is inferred. Evidence:
+    reports/yaml_record_review/20261008T122440Z-external_surfaces.md.'

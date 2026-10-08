@@ -902,3 +902,60 @@ def test_thalassic_and_thrombolite_curation_has_exact_scope(monkeypatch):
         assert new["curation_history"][0][field] == old["curation_history"][0][field]
     for identifier in targets:
         assert after[identifier]["curation_history"][-1]["action"] == "SOURCE_PARENT_EXCLUDED"
+
+
+def test_dust_effluent_and_surface_exclusions_preserve_every_other_claim(monkeypatch):
+    dust = "habitatmech:GOLD.b1230bf984"
+    targets = {
+        dust: ("ENVO:01000417", ["ENVO:00002008"], "gold.ecosystem:5533", 7),
+        "habitatmech:GOLD.1ece8c580a": (
+            "ENVO:00002124", [], "gold.ecosystem:8166", 1,
+        ),
+        "habitatmech:GOLD.827b5dbbef": (
+            "ENVO:00002043", [], "gold.ecosystem:7771", None,
+        ),
+        "habitatmech:GOLD.3dfa6559a3": (
+            "habitatmech:GOLD.d64c9575e7", [], "gold.ecosystem:8229", None,
+        ),
+        "habitatmech:GOLD.24c703f190": (
+            "ENVO:01003000", [], "gold.ecosystem:8287", None,
+        ),
+    }
+    after = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    exclusions = load_gold_parent_exclusions(seed.GOLD_PARENT_EXCLUSIONS_PATH)
+    monkeypatch.setattr(
+        seed, "load_gold_parent_exclusions",
+        lambda path: {key: row for key, row in exclusions.items() if key not in targets},
+    )
+    before = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+
+    assert before.keys() == after.keys()
+    assert {key for key in before if before[key] != after[key]} == targets.keys()
+    for identifier, (removed, retained, source_id, count) in targets.items():
+        old, new = before[identifier], after[identifier]
+        assert old["parent_habitats"] == sorted([removed, *retained])
+        assert new.get("parent_habitats", []) == retained
+        assert new["curation_history"][:-1] == old["curation_history"]
+        event = new["curation_history"][-1]
+        assert event["action"] == "SOURCE_PARENT_EXCLUDED"
+        assert event["timestamp"] == "2026-10-08T00:00:00Z"
+        assert event["curator"] == "codex-gpt-5"
+        assert removed in event["changes"]
+        assert identifier in event["changes"]
+        for field in (old.keys() | new.keys()) - {"parent_habitats", "curation_history"}:
+            assert new.get(field) == old.get(field), (identifier, field)
+        assert new["mapping_status"] == "SEEDED"
+        assert new["grounding_status"] == ("NARROW" if identifier == dust else "UNGROUNDED")
+        assert new["habitat_category"] == "ENGINEERED"
+        assert len(new["source_attestations"]) == 1
+        attestation = new["source_attestations"][0]
+        assert attestation["source_id"] == source_id
+        assert seed.mint("GOLD", attestation["source_path"]) == identifier
+        assert attestation["source_path"] == exclusions[identifier].source_path
+        assert exclusions[identifier].parent_id == removed
+        if count is None:
+            assert "assertion_count" not in attestation
+            assert "assertion_unit" not in attestation
+        else:
+            assert attestation["assertion_count"] == count
+            assert attestation["assertion_unit"] == "ORGANISM"

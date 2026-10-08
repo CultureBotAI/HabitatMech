@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: dust_effluent_external_surfaces
+session:
+  id: 2026-10-08T124106Z-claude-code-d6aa7d
+  timestamp: '2026-10-08T12:41:06Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1722
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: Remove five GOLD context-as-parent claims without changing habitat identities
+  details: 'Adversarial review of PR 1721 confirmed house dust is not a house, three effluents
+    are not their apparatus or facility, and spacecraft external surfaces are not whole spacecraft.
+    Added five exact source-path and resolved-parent exclusions, retaining the dust genus
+    and all identifiers, source attestations, units, count omissions, categories and SEEDED
+    status. Evidence: the five corresponding timestamped individual reports, pinned ENVO a2455d1a77e46bb8a664d65a157166b539269042,
+    archived EPA STORET glossary, FRTR settling-tank glossary and NASA JPL mission-implementation
+    sampling guidance. All 38 parent-exclusion tests passed, including complete-corpus before/after
+    equality outside the five parent removals and appended events. Dry run and inspected dust
+    canary passed. Remaining verification: regenerate, history/provenance/reproduction, semantic-map
+    refresh and full QC. Historical reports and events remain unchanged. No invented definitions
+    or replacement genera; taxonomy alias and engineered-product scope remain issues 1723
+    and 1724, and source-mapping endpoint semantics remain issue 1398.'

@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: dust_effluent_external_surfaces
+session:
+  id: 2026-10-08T124334Z-codex-gpt-5-e15e01
+  timestamp: '2026-10-08T12:43:34Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1722
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1721
+events:
+- type: GENERAL
+  outcome: no_change
+  sections:
+  - session
+  summary: Correct default actor name in preceding curation-session receipt
+  details: The immediately preceding history/mappings/dust_effluent_external_surfaces/2026-10-08T124106Z-claude-code-d6aa7d.yaml
+    was scaffolded without --actor-name and therefore inherited the CLI default claude-code.
+    The actual actor was Codex (GPT-5), as its model and agent_tool fields already state.
+    This append-only correction fixes attribution without rewriting the earlier receipt. Scientific
+    changes, evidence and validation statements in that receipt are unaffected.
