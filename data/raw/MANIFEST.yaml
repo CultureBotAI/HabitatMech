@@ -1,11 +1,9 @@
-# Provenance for the inventories in data/raw/.
-# Regenerate with: just extract-inventory
-# Emitted by scripts/extract_source_inventory.py — do not hand-edit.
+# Generated inventory provenance; label-only refresh identified below.
 extracted_at: '2026-08-16T05:58:02Z'
 kg_microbe_source: kg-microbe@7698351a54b48f2e917635fdf51cd0a6b323135d
 mappings_source: kg-microbe@bfd350e:mappings/isolation_source_to_ontology.tsv
 mappings_staged_at: build/pinned/isolation_source_to_ontology.tsv
-mappings_note: pinned separately, so kg_microbe_source describes every OTHER input. mappings_staged_at is a local path; the sha256 below identifies the bytes.
+mappings_note: pinned separately from kg_microbe_source. mappings_staged_at is a local path; the sha256 below identifies the bytes.
 gold_truncated_paths: 0
 inputs:
   - path: data/raw/gold/GOLD_nodes.tsv
@@ -71,3 +69,5 @@ outputs:
     rows: 8807
   - path: prego_habitats.tsv
     rows: 719
+ontology_label_refresh: ../ontology_label_refresh.json
+ontology_label_note: reviewed rdfs:label updates replayed after the kg-microbe slice; other ontology fields retain the kg-microbe snapshot.

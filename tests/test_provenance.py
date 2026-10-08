@@ -49,3 +49,11 @@ def test_legacy_output_row_contract_is_required():
     del kg["outputs"][0]["rows"]
     failures = check_provenance.manifest_contract_problems(kg, gold)
     assert any("missing rows" in failure for failure in failures)
+
+
+@pytest.mark.parametrize("field", ["ontology_label_refresh", "ontology_label_note"])
+def test_partial_label_refresh_provenance_cannot_be_dropped(field):
+    kg, gold = manifest_documents()
+    del kg[field]
+    assert any("ontology label" in failure for failure in
+               check_provenance.manifest_contract_problems(kg, gold))

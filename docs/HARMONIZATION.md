@@ -58,6 +58,30 @@ An earlier cut kept referenced-terms-only and grounded barely a third of GOLD:
 the terms GOLD's labels would have matched were never in the pool to match
 against. Grounding quality is bounded by the label pool.
 
+## Canonical-label refreshes
+
+The reviewed plan `conf/ontology_label_refresh.yaml` and generated receipt
+`data/ontology_label_refresh.json` supplement the original kg-microbe snapshot.
+They update only named `rdfs:label` values in `data/raw/ontology_terms.tsv`;
+definitions, synonyms, subclass edges and all other terms retain their original
+source version. This is not a full ontology refresh or a synonym-scope repair.
+The receipt pins the source URL to a Git commit and records its SHA256 and size.
+
+Download the exact URL in the plan, then run
+`uv run python scripts/refresh_ontology_labels.py --source <downloaded.owl>`.
+The command checks the source hash, active term IDs and unambiguous English
+labels before writing the inventory and receipt. Repeat with `--check` to prove
+source-to-output reproduction without writes. Normal extraction replays this
+same guarded refresh; an unexpected label or missing target fails closed.
+Offline provenance validation binds plan, receipt and resulting labels. It does
+not redownload the upstream ontology.
+
+A label change can expose a scope change. Review the current source axioms and
+each affected grounding before regeneration: generic GOLD Pastry must not become
+wheat-only merely because FOODON:03315272 now says wheat pastry (#1690).
+Every decision remains checked against the resulting inventory. Do not add
+label-check exceptions or edit generated records to hide a disagreement.
+
 ## Identity and merging
 
 Merge key is the resolved identifier. Source concepts resolving to the same
