@@ -3,7 +3,6 @@
 from habitatmech import seed
 from habitatmech.text_map_inputs import build_context, semantic_text
 
-
 DIGESTATES = {
     "habitatmech:GOLD.28f661cad5": (
         "Engineered > Bioreactor > Semi-continuous > Anaerobic > Digestate",
