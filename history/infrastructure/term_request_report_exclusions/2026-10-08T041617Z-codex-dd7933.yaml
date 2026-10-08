@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: src/habitatmech/report.py
+  slug: term_request_report_exclusions
+session:
+  id: 2026-10-08T041617Z-codex-dd7933
+  timestamp: '2026-10-08T04:16:17Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1696
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - term request counts
+  - regression tests
+  summary: Align CLI term-request reporting with curated exclusions
+  details: 'Final QC output reproduced the same exclusion leak in the CLI report: 127 individually
+    reviewed ungrounded records were incorrectly called requests while the corrected site
+    lists 113. Read the existing exclusion table using the report module existing structured
+    TSV pattern and omit excluded reviewed records only from the request bucket; retain them
+    in total counts and corpus rows, not the sweep or undecided bucket. Extended an existing
+    full-report regression to compare the request count with the shared exclusions without
+    adding another expensive report invocation. This complements the append-only site exclusion
+    repair and does not change corpus records, scientific decisions, generated pages or semantic
+    inputs. Final exact-head CI remains required.'
