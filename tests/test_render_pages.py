@@ -19,6 +19,55 @@ def test_site_is_in_step_with_the_corpus():
     assert render_pages.main(["--check"]) == 0, "pages/ is stale; run `just render`"
 
 
+def test_term_request_site_honors_shared_exclusions(monkeypatch, tmp_path):
+    from scripts import build_term_requests
+
+    records = []
+    decisions = {}
+    for key, status, depth in (
+        ("excluded", "REVIEWED", "ITEM"),
+        ("eligible", "REVIEWED", "ITEM"),
+        ("swept", "REVIEWED", "CLASS"),
+        ("seeded", "SEEDED", "ITEM"),
+    ):
+        identifier = f"habitatmech:TEST.{key}"
+        records.append((render_pages.REPO_ROOT / f"data/habitats/{key}.yaml", {
+            "identifier": identifier, "label": key,
+            "grounding_status": "UNGROUNDED", "mapping_status": status,
+        }))
+        decisions[identifier] = {"review_depth": depth}
+    exclusions = tmp_path / "excluded.tsv"
+    exclusions.write_text(
+        "identifier\tlabel\twhy_not_a_term_request\n"
+        "habitatmech:TEST.excluded\texcluded\tExisting ontology candidate.\n",
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(build_term_requests, "EXCLUDED_TSV", exclusions)
+    monkeypatch.setattr(render_pages, "load_records", lambda: records)
+    monkeypatch.setattr(render_pages, "load_decisions", lambda: decisions)
+    out = tmp_path / "site"
+    render_pages._build(out, None)
+    page = (out / "term-requests.html").read_text(encoding="utf-8")
+    links = re.findall(r'href="habitats/([^"]+)"', page)
+    assert links == ["eligible-habitatmech-test-eligible.html"]
+    assert "2 further ungrounded records" in page
+    assert (out / "habitats/excluded-habitatmech-test-excluded.html").is_file()
+    assert [row[2] for row in build_term_requests.unrequested(
+        {doc["identifier"]: doc for _, doc in records}, set(), decisions
+    )] == ["habitatmech:TEST.eligible"]
+
+
+def test_pastry_pending_candidates_are_not_a_new_term_request(repo_root):
+    from scripts import build_term_requests
+
+    identifier = "habitatmech:GOLD.d6e78c89e8"
+    reason = build_term_requests.excluded()[identifier]
+    assert "FOODON:00005804" in reason
+    assert "#1694" in reason
+    page = (repo_root / "pages/term-requests.html").read_text(encoding="utf-8")
+    assert "pastry-habitatmech-gold-d6e78c89e8.html" not in page
+
+
 def test_every_landing_stat_is_a_link_to_a_matching_view(repo_root):
     landing = (repo_root / "src/habitatmech/templates/index.html").read_text(
         encoding="utf-8"

@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: concrete_surface
+session:
+  id: 2026-10-08T034505Z-claude-code-abf648
+  timestamp: '2026-10-08T03:45:05Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/282
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude the concrete-surface subway-context superclass
+  details: Read the complete concrete and subway records and exact source inventory; the surface
+    is located in, not a subtype of, the whole authored subway environment. Added one exact-source-path
+    and expected-parent exclusion, retaining CLASS identity provenance and all source fields.
+    Differential full-corpus regression proves only this target parent and appended audit
+    event change; 37 exclusion tests passed. Dry seed and forced canary completed. Full QC
+    and semantic/site regeneration follow before publication. No replacement ontology identity
+    or concrete-specific source crosswalk is invented.

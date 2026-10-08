@@ -965,6 +965,12 @@ def main(argv: list[str] | None = None) -> int:
                 else:
                     item_decided.add(row["identifier"])
 
+    excluded_requests: set[str] = set()
+    excluded_path = REPO_ROOT / "curation" / "term_requests_excluded.tsv"
+    if excluded_path.exists():
+        with excluded_path.open(newline="", encoding="utf-8") as fh:
+            excluded_requests = {row["identifier"] for row in csv.DictReader(fh, delimiter="\t")}
+
     records = load_records(args.root)
     total = len(records)
     if not total:
@@ -1014,12 +1020,13 @@ def main(argv: list[str] | None = None) -> int:
 
         if doc.get("grounding_status") == "UNGROUNDED":
             if doc.get("mapping_status") == "REVIEWED":
-                bucket = term_requests
+                bucket = None if identifier in excluded_requests else term_requests
             elif identifier in class_swept_ids:
                 bucket = class_swept
             else:
                 bucket = undecided
-            bucket.append((assertions, doc.get("label", ""), identifier))
+            if bucket is not None:
+                bucket.append((assertions, doc.get("label", ""), identifier))
 
         rows.append(
             {

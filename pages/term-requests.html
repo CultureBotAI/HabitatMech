@@ -92,12 +92,6 @@
     <td class="meta">Fish as host. Parented to animal-associated environment; not grounded there because every host clade would merge onto one record. ENVO term request.</td>
   </tr>
   <tr>
-    <td><a href="habitats/rock-core-sediment-habitatmech-gold-3b04872853.html">Rock core/Sediment</a></td>
-    <td class="num">1245</td>
-    <td class="meta">GOLD</td>
-    <td class="meta">Deep subsurface rock core and sediment sampled together. GOLD conflates two materials in one node, so no single term is honest; parented to sediment as the nearer of the two.</td>
-  </tr>
-  <tr>
     <td><a href="habitats/ectothermic-animal-associated-environment-habitatmech-bacdive-e68bf42dcb.html">ectothermic-animal-associated environment</a></td>
     <td class="num">999</td>
     <td class="meta">MADIN</td>
@@ -134,12 +128,6 @@
     <td class="meta">Crustaceans as host. ENVO:01001176 environment associated with an aquatic invertebrate is close but excludes terrestrial crustaceans, so it is not a safe identity either. ENVO term request.</td>
   </tr>
   <tr>
-    <td><a href="habitats/invertebrates-other-habitatmech-bacdive-e864a16f03.html">Invertebrates-Other</a></td>
-    <td class="num">596</td>
-    <td class="meta">BACDIVE</td>
-    <td class="meta">Cohort review: NCIT:C17649 &#39;Other&#39; is a bucket with no meaning of its own, and it absorbs &#39;Rodentia-Other&#39; too — one record labelled &#39;Other&#39; holding rodents and invertebrates. The invertebrate-associated environment terms in the slice are all aquatic-qualified. Real habitat, no term.</td>
-  </tr>
-  <tr>
     <td><a href="habitats/myriapod-associated-environment-habitatmech-gold-2333d6225a.html">myriapod-associated environment</a></td>
     <td class="num">569</td>
     <td class="meta">GOLD</td>
@@ -162,12 +150,6 @@
     <td class="num">482</td>
     <td class="meta">GOLD, MADIN</td>
     <td class="meta">Non-habitat screen (#12): &#39;Host-associated &gt; Algae&#39; was grounded EXACT to FOODON:03411301 &#39;algae&#39;, which FOODON defines as &#39;an informal term for a large, diverse group of photosynthetic eukaryotic ORGANISMS&#39;. An organism is not a habitat, and because the seeder derives a GOLD child&#39;s parent from its path node, that identity also became the parent_habitats entry of 14 records under Host-associated &gt; Algae — publishing &#39;is-a algae the organism group&#39; as a broader-habitat claim 14 times over. The existing organism-identity screen could not see it: it tests ancestry against NCIT and mesh roots, and FOODON files both the organism and the material under one &#39;organism material&#39; root, so there is no structural signal to test. The concept itself is real — algae as host — and is the same family as the sponge, nematode and reptile requests, so it becomes a term request with the FOODON term kept as an xref (#99) rather than an identity.</td>
-  </tr>
-  <tr>
-    <td><a href="habitats/contamination-habitatmech-bacdive-0c0740efd8.html">Contamination</a></td>
-    <td class="num">474</td>
-    <td class="meta">BACDIVE</td>
-    <td class="meta">Risky-grounding review (#12): the seeder made ENVO:00002204 &#39;anthropogenic contamination feature&#39; the identity of BacDive&#39;s &#39;Contamination&#39; category — the highest-volume risky grounding at 474 strains. The term asserts two things BacDive does not: that the contamination is anthropogenic, and that the thing is a geographic feature with elevated contaminants in its materials. BacDive&#39;s category says only that a strain was isolated as a contaminant, which is as often of a product, a culture or a cleanroom as of a place. These are different concepts rather than a broader and a narrower one, so the term is not a parent either — parent_habitats asserts the parent is BROADER. Kept as an xref (#99), which records that upstream saw a connection without this repo asserting one.</td>
   </tr>
   <tr>
     <td><a href="habitats/microbe-associated-environment-habitatmech-gold-184623c963.html">microbe-associated environment</a></td>
@@ -266,12 +248,6 @@
     <td class="meta">Non-habitat screen (#12): grounded EXACT to FOODON:03412502 &#39;green algae&#39;, which FOODON uses for the TAXON — red algae is defined there as &#39;one of the oldest groups of eukaryotic algae, and one of the largest phyla&#39; — not for a habitat. An organism group is not a place, and the GOLD path says host-associated, so the concept is the environment the alga provides. Same family as the sponge, nematode and reptile requests. The FOODON term is kept as an xref (#99), which records what the label matched without asserting the record is a phylum.</td>
   </tr>
   <tr>
-    <td><a href="habitats/rodentia-other-habitatmech-bacdive-745e245512.html">Rodentia-Other</a></td>
-    <td class="num">97</td>
-    <td class="meta">BACDIVE</td>
-    <td class="meta">Residual-host review (#192): BacDive&#39;s live vocabulary places `Rodentia (Other)` under `#Host` as the sibling of `#Muridae (Mouse/Rat)`. It is a real animal-host environment, not NCIT:C17649 `Other`; that contentless lexical target remains rejected. ENVO:01001002 is genuinely broader and the category is HOST_ASSOCIATED. The source bucket means rodent hosts not assigned to the Muridae sibling, so it stays minted and separate: merging would erase the family-rank boundary, while requesting an ontology class defined by a mutable “everything else” exclusion would make its meaning change whenever BacDive adds a sibling. Hamsters and voles remain in scope despite vernacular mouse names; the attesting Actinobacillus capsulatus includes a reported rabbit-derived type strain outside Rodentia, so source assignment is preserved as evidence rather than treated as a taxonomic guarantee.</td>
-  </tr>
-  <tr>
     <td><a href="habitats/felid-associated-environment-habitatmech-bacdive-e6b73de092.html">felid-associated environment</a></td>
     <td class="num">95</td>
     <td class="meta">BACDIVE</td>
@@ -344,12 +320,6 @@
     <td class="meta">Organism-identity screen (#109): grounded EXACT to FOODON:03411224 &#39;oyster&#39;, which is a bivalve mollusc — an organism, not a place. The screen that exists to catch exactly this reported 0 for months because it tested only NCIT and mesh ancestry and only the record&#39;s identity; widening it to UBERON:0000468 and to parent_habitats surfaced this family. The GOLD path says host-associated, so the concept is the environment the organism provides, which is the same family as the sponge, nematode and reptile term requests. The organism term is kept as an xref (#99) rather than an identity.</td>
   </tr>
   <tr>
-    <td><a href="habitats/core-sample-habitatmech-bacdive-3bf519722c.html">Core-sample</a></td>
-    <td class="num">60</td>
-    <td class="meta">BACDIVE</td>
-    <td class="meta">Cohort review: the screen&#39;s known blind spot, caught by reading the corpus rather than the ranking. NCIT:C180316 &#34;Nucleotide Sequence Sample Name&#34; is a metadata field name, not a place; it shares the word &#34;sample&#34; with the subject, so it lands in the low-risk overlap bucket. A sediment or ice core is a real habitat and no term in the slice names it.</td>
-  </tr>
-  <tr>
     <td><a href="habitats/bivalve-associated-environment-habitatmech-gold-59e8d1205d.html">bivalve-associated environment</a></td>
     <td class="num">59</td>
     <td class="meta">GOLD</td>
@@ -386,12 +356,6 @@
     <td class="meta">Host-taxon reversal (#114): this was NOT_APPLICABLE on the reasoning that &#39;a host taxon is not a habitat&#39;. That reasoning is wrong, and the corpus already contradicted it — the same kind of concept was treated as a habitat for Sponge, Nematoda, Reptilia, Mammals, Birds and Fish, which keep their own identity and a term request for an &lt;X&gt;-associated environment. Host-associated &gt; Porifera was NOT_APPLICABLE while its own child Porifera &gt; Sponge was a term request.An organism acting as a host IS a habitat: it is where the microbe lives, and ENVO models exactly this at plant-associated, animal-associated and fungi-associated environment. What is not a habitat is the TAXON TERM — a phylum is a class of organisms, not a place — so the taxon stays an xref (#99) and the concept keeps its own identity as a term-request candidate. NOT_APPLICABLE said the concept is not a habitat, which is a stronger and false claim.</td>
   </tr>
   <tr>
-    <td><a href="habitats/root-tooth-habitatmech-bacdive-5bac6e6496.html">Root-Tooth</a></td>
-    <td class="num">28</td>
-    <td class="meta">BACDIVE</td>
-    <td class="meta">Cohort review: NCIT:C33446 &#39;Root&#39; is unqualified and reads as a plant root, not the root of a tooth. The slice has no tooth-root term. Real habitat, no term.</td>
-  </tr>
-  <tr>
     <td><a href="habitats/cooling-tower-habitatmech-bacdive-71d5f01e03.html">cooling tower</a></td>
     <td class="num">26</td>
     <td class="meta">BACDIVE</td>
@@ -414,12 +378,6 @@
     <td class="num">21</td>
     <td class="meta">GOLD</td>
     <td class="meta">Host-taxon reversal (#114): this was NOT_APPLICABLE on the reasoning that &#39;a host taxon is not a habitat&#39;. That reasoning is wrong, and the corpus already contradicted it — the same kind of concept was treated as a habitat for Sponge, Nematoda, Reptilia, Mammals, Birds and Fish, which keep their own identity and a term request for an &lt;X&gt;-associated environment. Host-associated &gt; Porifera was NOT_APPLICABLE while its own child Porifera &gt; Sponge was a term request.An organism acting as a host IS a habitat: it is where the microbe lives, and ENVO models exactly this at plant-associated, animal-associated and fungi-associated environment. What is not a habitat is the TAXON TERM — a phylum is a class of organisms, not a place — so the taxon stays an xref (#99) and the concept keeps its own identity as a term-request candidate. NOT_APPLICABLE said the concept is not a habitat, which is a stronger and false claim.</td>
-  </tr>
-  <tr>
-    <td><a href="habitats/dust-ash-habitatmech-bacdive-4b8650dee7.html">Dust-Ash</a></td>
-    <td class="num">20</td>
-    <td class="meta">BACDIVE</td>
-    <td class="meta">Definition review (#252, #253): the committed Dust-Ash report agrees that neither ENVO:00002008 &#39;dust&#39; nor ENVO:02000090 &#39;ash&#39; can be adopted as the identity because each drops the other half of BacDive&#39;s #Engineered &gt; #Waste &gt; #Dust (Ash) bucket. ENVO:01000814 &#39;solid environmental material&#39; is the least common vendored parent of the two halves and is attached as a broad placement until BacDive strain-level isolation text can split the dust-like and ash-like strains upstream; category pinned to ENGINEERED because MISO files the source under #Engineered &gt; #Waste.</td>
   </tr>
   <tr>
     <td><a href="habitats/waste-gas-habitatmech-bacdive-3eec8fcfc4.html">waste gas</a></td>
@@ -614,38 +572,6 @@
     <td class="meta">Definition research for Rock core/Sediment retained the GOLD Aquifer parent and confirmed that ENVO:00012408 &#39;aquifer&#39; is a geologic body rather than the rock-or-sediment material that composes it. The GOLD leaf denotes in situ saturated aquifer matrix rather than the recovered core cylinder, so aquifer is retained only as an xref for its part-of context and ENVO:00002007 sediment is still rejected as a parent because it drops the rock half of the source concept.</td>
   </tr>
   <tr>
-    <td><a href="habitats/biofouling-habitatmech-gold-15bcd61a84.html">Biofouling</a></td>
-    <td class="num">0</td>
-    <td class="meta">GOLD</td>
-    <td class="meta">Process screen (#127): carried ENVO:06105023 &#39;biofouling&#39; as a parent, which ENVO defines as &#39;a FOULING PROCESS during which biological matter accumulates on a solid surface&#39; and files under environmental system process. parent_habitats asserts the parent is a broader HABITAT, so the corpus was claiming a habitat is-a process — the thing MIxS rules out in the same sentence that rules out organisms and groups of organisms, and the reason that sentence is now quoted in CLAUDE.md.
-
-The concept is the fouling layer, not the fouling. It reached the term through the ambiguous-leaf rule: the deep-subsurface groundwater path, and three of the four Biofouling paths tie at the same depth so none claimed it. Kept as an xref (#99), which records what upstream matched without asserting the record is a process. Not grounded to ENVO:00002034 &#39;biofilm&#39; either: biofouling includes macrofouling such as barnacles and tube worms, so biofilm is narrower than the concept rather than broader.</td>
-  </tr>
-  <tr>
-    <td><a href="habitats/biofouling-habitatmech-gold-3ec896865d.html">Biofouling</a></td>
-    <td class="num">0</td>
-    <td class="meta">GOLD</td>
-    <td class="meta">Process screen (#127): carried ENVO:06105023 &#39;biofouling&#39; as a parent, which ENVO defines as &#39;a FOULING PROCESS during which biological matter accumulates on a solid surface&#39; and files under environmental system process. parent_habitats asserts the parent is a broader HABITAT, so the corpus was claiming a habitat is-a process — the thing MIxS rules out in the same sentence that rules out organisms and groups of organisms, and the reason that sentence is now quoted in CLAUDE.md.
-
-The concept is the fouling layer, not the fouling. It reached the term through the ambiguous-leaf rule: the freshwater path, and three of the four Biofouling paths tie at the same depth so none claimed it. Kept as an xref (#99), which records what upstream matched without asserting the record is a process. Not grounded to ENVO:00002034 &#39;biofilm&#39; either: biofouling includes macrofouling such as barnacles and tube worms, so biofilm is narrower than the concept rather than broader.</td>
-  </tr>
-  <tr>
-    <td><a href="habitats/biofouling-habitatmech-gold-ec116f9a37.html">Biofouling</a></td>
-    <td class="num">0</td>
-    <td class="meta">GOLD</td>
-    <td class="meta">Process screen (#127): carried ENVO:06105023 &#39;biofouling&#39; as a parent, which ENVO defines as &#39;a FOULING PROCESS during which biological matter accumulates on a solid surface&#39; and files under environmental system process. parent_habitats asserts the parent is a broader HABITAT, so the corpus was claiming a habitat is-a process — the thing MIxS rules out in the same sentence that rules out organisms and groups of organisms, and the reason that sentence is now quoted in CLAUDE.md.
-
-The concept is the fouling layer, not the fouling. It reached the term through the ambiguous-leaf rule: the non-marine saline and alkaline path, and three of the four Biofouling paths tie at the same depth so none claimed it. Kept as an xref (#99), which records what upstream matched without asserting the record is a process. Not grounded to ENVO:00002034 &#39;biofilm&#39; either: biofouling includes macrofouling such as barnacles and tube worms, so biofilm is narrower than the concept rather than broader.</td>
-  </tr>
-  <tr>
-    <td><a href="habitats/biofouling-habitatmech-gold-4bd2954af9.html">Biofouling</a></td>
-    <td class="num">0</td>
-    <td class="meta">GOLD</td>
-    <td class="meta">Process screen (#127): carried ENVO:06105023 &#39;biofouling&#39; as a parent, which ENVO defines as &#39;a FOULING PROCESS during which biological matter accumulates on a solid surface&#39; and files under environmental system process. parent_habitats asserts the parent is a broader HABITAT, so the corpus was claiming a habitat is-a process — the thing MIxS rules out in the same sentence that rules out organisms and groups of organisms, and the reason that sentence is now quoted in CLAUDE.md.
-
-The concept is the fouling layer, not the fouling. It reached the term through the ambiguous-leaf rule: the marine path, and three of the four Biofouling paths tie at the same depth so none claimed it. Kept as an xref (#99), which records what upstream matched without asserting the record is a process. Not grounded to ENVO:00002034 &#39;biofilm&#39; either: biofouling includes macrofouling such as barnacles and tube worms, so biofilm is narrower than the concept rather than broader.</td>
-  </tr>
-  <tr>
     <td><a href="habitats/subterranean-lake-habitatmech-gold-51eb0120ab.html">Subterranean lake</a></td>
     <td class="num">0</td>
     <td class="meta">GOLD</td>
@@ -734,18 +660,6 @@ The concept is the fouling layer, not the fouling. It reached the term through t
     <td class="num">0</td>
     <td class="meta">GOLD</td>
     <td class="meta">Disjoint-grounding review (#62): was UBERON:0002960 &#39;central oculomotor nucleus&#39;, a brainstem structure. Same as C2 — the path is Digestive system &gt; Stomach &gt; C3, a camelid stomach compartment. Path: Host-associated &gt; Mammals &gt; Digestive system &gt; Stomach &gt; C3</td>
-  </tr>
-  <tr>
-    <td><a href="habitats/ceros-habitatmech-gold-98bf2e4e7d.html">Ceros</a></td>
-    <td class="num">0</td>
-    <td class="meta">GOLD</td>
-    <td class="meta">Deep-research follow-up: retained CONFIRM_UNGROUNDED after resolving the false FOODON:03413986 &#39;cero&#39; variant; GOLD places Ceros beside Horn and Pronghorn under Mammals &gt; Integumentary system, but Ceros has no attested standalone anatomical usage. UBERON:0006967 &#39;horn&#39; fits if Ceros is a duplicate of the GOLD Horn sibling, while grounding to it would over-claim a living bony core if Ceros instead denotes rhinoceros horn, so the horn term is retained only as an xref. Path: Host-associated &gt; Mammals &gt; Integumentary system &gt; Ceros</td>
-  </tr>
-  <tr>
-    <td><a href="habitats/embryo-habitatmech-gold-b648ad12d6.html">Embryo</a></td>
-    <td class="num">0</td>
-    <td class="meta">GOLD</td>
-    <td class="meta">Life-stage review (#112): carried UBERON:0000922 &#39;embryo&#39; as a parent, reached by the ambiguous-leaf rule rather than the path — several GOLD paths end in the same leaf, so the ones that do not claim the term keep it as a parent. parent_habitats asserts the parent is BROADER, and a larva or embryo is a whole organism rather than a broader kind of place, so this is the same over-claim the identity cases had one level up. Kept as an xref (#99). Per the rule #114 settled: the whole host organism gets its own identity and an &lt;X&gt;-associated environment term; parts of a host ground to the anatomy term.</td>
   </tr>
   <tr>
     <td><a href="habitats/fish-embryo-associated-environment-habitatmech-gold-9f162205a6.html">fish embryo-associated environment</a></td>
