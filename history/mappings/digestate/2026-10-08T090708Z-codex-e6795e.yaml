@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: digestate
+session:
+  id: 2026-10-08T090708Z-codex-e6795e
+  timestamp: '2026-10-08T09:07:08Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1709
+events:
+- type: GENERAL
+  outcome: changed
+  sections:
+  - session.actors
+  summary: Correct scaffolded actor attribution for the digestate hierarchy session
+  details: 'Correction to history/mappings/digestate/2026-10-08T090547Z-claude-code-1815fb.yaml:
+    the history CLI defaulted actor name to claude-code because --actor-name was omitted.
+    The actual actor was Codex (gpt-5, agent tool codex), as explicitly recorded here; no
+    Claude session performed this change. The original file is retained under the append-only
+    contract. Its described changes, evidence and checks remain accurate; this correction
+    changes attribution only and makes no additional scientific edit.'

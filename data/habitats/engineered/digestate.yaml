@@ -3,8 +3,6 @@ label: Digestate
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:00002124
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7769
@@ -23,3 +21,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-08T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00002124 for habitatmech:GOLD.28f661cad5
+    (Engineered > Bioreactor > Semi-continuous > Anaerobic > Digestate). ITEM hierarchy
+    assessment (#1709): semi-continuous anaerobic digestate is residual material,
+    not a kind of its containing bioreactor. EPA AgSTAR (https://www.epa.gov/agstar/how-does-anaerobic-digestion-work)
+    distinguishes solid/liquid digestate from the reactor; official ENVO OWL (SHA256
+    a0b919065d33a9cf975b74cadd16c75f32f512d17f4f6d5999b74216701df54c) defines ENVO:00002124
+    under containment-unit genus ENVO:00002123. Exclude only this source-parent contribution.
+    Preserve GOLD7769, full path, source mint, absent organism count/unit and CLASS/SEEDED
+    provenance; separate 16-biosample and one-study context does not supply organism
+    counts. No replacement genus, definition, sibling merge or parent-derived taxa
+    are inferred. Evidence: reports/yaml_record_review/20261008T084341Z-digestate.md.'
