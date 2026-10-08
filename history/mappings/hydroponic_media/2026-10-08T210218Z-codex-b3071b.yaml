@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: hydroponic_media
+session:
+  id: 2026-10-08T210218Z-codex-b3071b
+  timestamp: '2026-10-08T21:02:18Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1754
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1753
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: Exclude Hydroponic media chamber-context parent without redefining the source
+  details: Applied one exact-path/expected-parent exclusion for GOLD.7e1e8d505b after the
+    individual review and fresh NASA/UMN source inspection distinguish hydroponic media from
+    the containing chamber. Preserves both source nodes, frozen one-ORGANISM count, UNGROUNDED/SEEDED
+    status and old events. Current public zero count and liquid-versus-substrate scope remain
+    unresolved, not rewritten. Dry seed and inspected strict-write canary passed; a full-corpus
+    before/after regression and stale-guard tests were added. Full QC and genuine map/site
+    regeneration will be checked before publication; no pending check is claimed complete.

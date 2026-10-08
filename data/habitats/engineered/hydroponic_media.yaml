@@ -3,8 +3,6 @@ label: Hydroponic media
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.86cf49cefb
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5551
@@ -27,3 +25,18 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-08T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.86cf49cefb
+    for habitatmech:GOLD.7e1e8d505b (Engineered > Artificial ecosystem > Plant growth
+    chamber > Hydroponic media). Reviewed hierarchy exclusion (#1754): hydroponic
+    growth media are materials rather than types of the containing plant growth chamber.
+    NASA (https://spinoff.nasa.gov/Spinoff2010/er_1.html) distinguishes nutrient solutions
+    from the chamber, and University of Minnesota Extension (https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/small-scale-hydroponics)
+    distinguishes solution and root-support substrates from containers. Exclude only
+    this GOLD context-parent contribution; preserve source nodes 5551/6284, historical
+    one ORGANISM assertion, mint, UNGROUNDED/SEEDED state and old events. Neither
+    liquid-versus-substrate scope nor the historical-one/current-zero counter discrepancy
+    is resolved. No replacement parent, definition or ITEM identity approval is inferred.
+    Evidence: reports/yaml_record_review/20261008T204426Z-hydroponic_media.md.'
