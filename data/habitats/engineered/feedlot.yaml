@@ -7,7 +7,6 @@ grounding_status: EXACT
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00000077
-- ENVO:01000964
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5515
@@ -20,3 +19,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-08T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:01000964 for habitatmech:GOLD.e33270ee3e
+    (Engineered > Wastewater > Industrial wastewater > Feedlot). ITEM hierarchy assessment
+    (#1726): official ENVO a2455d1a77e46bb8a664d65a157166b539269042 defines ENVO:01000627
+    as a livestock-fattening land plot, not industrial wastewater ENVO:01000964. EPA
+    (https://www.epa.gov/npdes/animal-feeding-operations-afos) distinguishes lots/facilities
+    from their wastewater. Exclude only this GOLD material-context contribution; retain
+    the independent agricultural-ecosystem parent ENVO:00000077, nodes 5515/5516,
+    full source path, zero-count omission and EXACT/SEEDED status. This does not endorse
+    plot versus associated-liquid source equivalence or promote identity review; original
+    sample scope remains unavailable. Evidence: reports/yaml_record_review/20261008T132904Z-feedlot.md.'

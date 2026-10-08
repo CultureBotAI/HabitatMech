@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: feedlot
+session:
+  id: 2026-10-08T135047Z-claude-code-be29b9
+  timestamp: '2026-10-08T13:50:47Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1726
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude the feedlot industrial-wastewater context parent
+  details: Added the exact-source guarded exclusion for habitatmech:GOLD.e33270ee3e after
+    adversarial review of 20261008T132904Z-feedlot.md. Fresh pinned ENVO a2455d1a77e46bb8a664d65a157166b539269042
+    and EPA AFO overview distinguish livestock-fattening land from wastewater. Preserve independent
+    ENVO:00000077, source nodes 5515/5516, full path, omitted zero counts, EXACT/SEEDED identity
+    and old events. The new whole-corpus regression failed before the exclusion and passed
+    after it, confirming only the two issue-1726 target parents and audit events change. Seed
+    dry run and inspected feedlot canary passed. Full QC, ontology labels and semantic-map/site
+    rebuild remain subsequent publication gates; original source equivalence is not newly
+    endorsed.
