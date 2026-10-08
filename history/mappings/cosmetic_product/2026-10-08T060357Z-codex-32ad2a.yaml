@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: cosmetic_product
+session:
+  id: 2026-10-08T060357Z-codex-32ad2a
+  timestamp: '2026-10-08T06:03:57Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1700
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - notes
+  summary: Clarify cosmetic-product singular/plural grounding rationale
+  details: 'Corrected only the rationale for habitatmech:GOLD.0792bc5bfe: source Cosmetic
+    products and canonical cosmetic product are curator-recognized semantic equivalents, not
+    equal normalized strings. Preserved the original decision curator/date, exact grounding
+    and ITEM status; this append-only session attributes the rationale correction to Codex.
+    Read the full baseline record, source row, maintained decision and primary ENVO OWL (SHA256
+    a0b919065d33a9cf975b74cadd16c75f32f512d17f4f6d5999b74216701df54c). The regression failed
+    before correction and passed after; it compares full before/after corpus documents, asserts
+    only this rationale changes, and executes the default gold_unmatched route with complete
+    indexes. Dry seed completed and the single-record canary was inspected. Publication gates
+    include full QC, label correspondence and generated site checks. The source definition
+    typo and shared typed-synonym defect remain separate open issues; no original review report
+    or raw inventory was altered.'
