@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002007
-- habitatmech:GOLD.772964032b
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8037
@@ -20,3 +19,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-08T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00002198 for habitatmech:GOLD.44534a15ca
+    (Engineered > Artificial ecosystem > Vivarium > Freshwater aquarium > Sediment).
+    ITEM hierarchy assessment (#1734): sediment material is not a kind of its freshwater
+    aquarium enclosure. Official ENVO a2455d1a77e46bb8a664d65a157166b539269042 defines
+    ENVO:00002198 as an aquarium with freshwater as its primary ecological medium;
+    the GOLD workbook separately classifies node 8037 as Sediment beneath that setting.
+    Exclude only the immediate GOLD context contribution, using the reviewed parent
+    resolution from #1733. Preserve the independent ENVO:00002007 sediment genus,
+    mint, full path, node 8037, one ORGANISM assertion, NARROW/SEEDED status and earlier
+    events. No identity endorsement, replacement definition or environmental parameter
+    is asserted. Source mapping endpoint semantics remain a separate issue (#1398).'
