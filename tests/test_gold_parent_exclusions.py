@@ -500,6 +500,39 @@ def test_water_ice_core_exclusion_changes_only_context_parent_and_audit(monkeypa
     assert seed.mint("GOLD", new["source_attestations"][0]["source_path"]) == source
 
 
+def test_concrete_surface_exclusion_changes_only_context_parent_and_audit(monkeypatch):
+    identifier = "habitatmech:GOLD.d4694eed69"
+    parent = "habitatmech:GOLD.961229841c"
+    source_path = "Engineered > Built environment > City > Subway > Concrete surface"
+    after = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    exclusions = load_gold_parent_exclusions(seed.GOLD_PARENT_EXCLUSIONS_PATH)
+    exclusion = exclusions.pop(identifier)
+    assert exclusion.source_path == source_path
+    assert exclusion.parent_id == parent
+    monkeypatch.setattr(seed, "load_gold_parent_exclusions", lambda path: exclusions)
+    before = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+
+    assert before.keys() == after.keys()
+    assert {key for key in before if before[key] != after[key]} == {identifier}
+    old, new = before[identifier], after[identifier]
+    assert old["parent_habitats"] == [parent]
+    assert "parent_habitats" not in new
+    assert new["curation_history"][:-1] == old["curation_history"]
+    event = new["curation_history"][-1]
+    assert event["action"] == "SOURCE_PARENT_EXCLUDED"
+    assert event["timestamp"] == "2026-10-08T00:00:00Z"
+    assert event["curator"] == "codex-gpt-5"
+    for field in (old.keys() | new.keys()) - {"parent_habitats", "curation_history"}:
+        assert new.get(field) == old.get(field), field
+    assert new["grounding_status"] == "UNGROUNDED"
+    assert new["mapping_status"] == "SEEDED"
+    assert new["source_attestations"] == [{
+        "source": "GOLD", "source_id": "gold.ecosystem:5465",
+        "source_label": "Concrete surface", "source_path": source_path,
+    }]
+    assert seed.mint("GOLD", source_path) == identifier
+
+
 def test_bagasse_and_bench_exclusions_change_only_context_parents_and_audit(monkeypatch):
     bagasse = "ENVO:00002872"
     bench = "habitatmech:GOLD.4f9191d466"

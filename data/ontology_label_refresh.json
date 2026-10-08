@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "generator": "scripts/refresh_ontology_labels.py",
+  "scope": "rdfs:label only; other ontology fields retain their original snapshot",
+  "source_url": "https://raw.githubusercontent.com/FoodOntology/foodon/cd73540243a84bcd511a500d9a497d12d7dc02f6/foodon.owl",
+  "source_sha256": "b897bf64c1b265c422db9ee01e1235c10c0b809e7f02326ef810a52068347edf",
+  "source_bytes": 40779019,
+  "reviewed_date": "2026-10-08",
+  "terms": {
+    "FOODON:00003202": {
+      "previous_label": "beverage",
+      "label": "beverage (liquid)"
+    },
+    "FOODON:03315272": {
+      "previous_label": "pastry",
+      "label": "wheat pastry"
+    }
+  }
+}

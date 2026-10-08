@@ -714,6 +714,35 @@ def test_the_slug_drift_section_never_truncates_silently(records, capsys):
         "the section truncated without saying how many it dropped")
 
 
+def test_term_request_report_excludes_curated_records(records, monkeypatch, capsys):
+    from habitatmech import report
+    from scripts.build_term_requests import excluded
+
+    class CountsComplete(Exception):
+        pass
+
+    def stop_before_unrelated_ontology_audits(_):
+        raise CountsComplete
+
+    monkeypatch.setattr(report, "load_records", lambda _: records)
+    monkeypatch.setattr(report, "_mapping_cohorts", stop_before_unrelated_ontology_audits)
+    with pytest.raises(CountsComplete):
+        report.main(["--ungrounded-top", "0"])
+    output = capsys.readouterr().out
+    section = output.split("=== ENVO term requests:")[1].split("=== class-level sweep:")[0]
+    excluded_ids = set(excluded())
+    expected = {
+        doc["identifier"] for _, doc in records
+        if doc.get("grounding_status") == "UNGROUNDED"
+        and doc.get("mapping_status") == "REVIEWED"
+        and doc["identifier"] not in excluded_ids
+    }
+    assert f"{len(expected)} examined individually" in section
+    assert set(re.findall(r"habitatmech:[A-Za-z0-9.]+", section)) == expected
+    assert "habitatmech:GOLD.d6e78c89e8" not in section
+    assert f"HabitatMech corpus: {len(records)} records" in output
+
+
 def test_the_slug_drift_cap_is_not_the_ungrounded_cap(records, capsys):
     """`--ungrounded-top` is documented as a term-request yield control. Slug
     drift is unrelated — half the drifted records are grounded — so raising one
@@ -725,9 +754,19 @@ def test_the_slug_drift_cap_is_not_the_ungrounded_cap(records, capsys):
         pytest.skip("fewer than two drifted records")
 
     report.main(["--ungrounded-top", "1"])
-    section = capsys.readouterr().out.split(
+    output = capsys.readouterr().out
+    from scripts.build_term_requests import excluded
+
+    excluded_ids = set(excluded())
+    expected_requests = sum(
+        doc.get("grounding_status") == "UNGROUNDED"
+        and doc.get("mapping_status") == "REVIEWED"
+        and doc["identifier"] not in excluded_ids
+        for _, doc in records
+    )
+    assert f"ENVO term requests: {expected_requests} examined individually" in output
+    section = output.split(
         "whose filename no longer matches their label")[1]
     listed = [ln for ln in section.splitlines() if "<-" in ln]
     assert len(listed) == min(20, len(drift)), (
         "--ungrounded-top is still governing the slug-drift list")
-
