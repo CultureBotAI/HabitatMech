@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: photobioreactor
+session:
+  id: 2026-10-09T225717Z-codex-gpt-5-8e649c
+  timestamp: '2026-10-09T22:57:17Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1831
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  summary: Correct a missing closing parenthesis in the photobioreactor path note
+  details: 'Corrected only the missing closing parenthesis after PBR in the notes for habitatmech:GOLD.96bbd55dce.
+    This is a typographic repair, not a new scientific decision: original GROUND target, exact
+    status, ITEM depth, date and curator are unchanged. Generated decision history follows
+    the corrected maintained note; this new session event attributes the repair to codex-gpt-5
+    without rewriting any committed immutable history or review. Baseline structured review
+    20261009T225120Z-photobioreactor F2 retains the original observation. Dedicated whole-corpus
+    regression reconstructs the typo and proves only one generated history string changes,
+    with all semantic text and scientific fields unchanged. Both new regressions passed (2
+    tests); final generated artifacts and publication checks run separately.'
