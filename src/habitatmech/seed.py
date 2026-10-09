@@ -131,6 +131,7 @@ HABITAT_PREFIXES = {"ENVO", "UBERON", "FOODON", "BTO", "PO", "PCO", "FAO", "NCIT
 # anatomy, then food, then the tissue vocabulary. A GOLD leaf "blood" should
 # reach UBERON before BTO, and "cheese" should reach FOODON.
 LEXICAL_PRIORITY = ["ENVO", "UBERON", "FOODON", "BTO"]
+RELATED_SOURCE_MAPPING_STATUSES = frozenset({"CLOSE", "BROAD"})
 
 # GOLD ecosystem (level 1) + ecosystem category (level 2) -> HabitatCategoryEnum.
 # GOLD's own top-two levels are the most reliable category signal available —
@@ -370,6 +371,7 @@ class Concept:
     gold_parent_exclusions_applied: list[GoldParentExclusion] = field(default_factory=list)
     gold_broader_synonyms: set[tuple[str, str]] = field(default_factory=set)
     close_source_synonyms: set[tuple[str, str]] = field(default_factory=set)
+    broad_source_synonyms: set[tuple[str, str]] = field(default_factory=set)
     definition_broader_synonyms: set[tuple[str, str]] = field(default_factory=set)
     definition_source_label_exclusions_applied: list[DefinitionSourceLabelExclusion] = field(
         default_factory=list
@@ -905,10 +907,12 @@ def ingest_gold(
                 and res.identifier not in store.ontology.ancestors(leaf_id)):
             concept.add_synonym(row["leaf_label"], "RELATED_SYNONYM", "GOLD")
             concept.gold_broader_synonyms.add((row["leaf_label"], leaf_id))
-        elif res.grounding_status == "CLOSE":
+        elif res.grounding_status in RELATED_SOURCE_MAPPING_STATUSES:
             concept.add_synonym(row["leaf_label"], "RELATED_SYNONYM", "GOLD")
             if norm_label(row["leaf_label"]) != norm_label(concept.label):
-                concept.close_source_synonyms.add(("GOLD", row["leaf_label"]))
+                scoped = (concept.close_source_synonyms if res.grounding_status == "CLOSE"
+                          else concept.broad_source_synonyms)
+                scoped.add(("GOLD", row["leaf_label"]))
         else:
             concept.add_synonym(row["leaf_label"], "EXACT_SYNONYM", "GOLD")
         concept.parents.update(res.extra_parents)
@@ -1005,10 +1009,13 @@ def ingest_bacdive(
             store.set_category(concept, res.category, authoritative=True)
         elif concept.category is None:
             store.set_category(concept, infer_category(res.identifier, store.ontology), authoritative=False)
-        scope = "RELATED_SYNONYM" if res.grounding_status == "CLOSE" else "EXACT_SYNONYM"
+        scope = ("RELATED_SYNONYM" if res.grounding_status in RELATED_SOURCE_MAPPING_STATUSES
+                 else "EXACT_SYNONYM")
         concept.add_synonym(row["label"], scope, "BacDive")
         if scope == "RELATED_SYNONYM" and norm_label(row["label"]) != norm_label(concept.label):
-            concept.close_source_synonyms.add(("BacDive", row["label"]))
+            scoped = (concept.close_source_synonyms if res.grounding_status == "CLOSE"
+                      else concept.broad_source_synonyms)
+            scoped.add(("BacDive", row["label"]))
         concept.parents.update(res.extra_parents)
         concept.xrefs.update(res.extra_xrefs)
 
@@ -1580,6 +1587,18 @@ def build_document(concept: Concept) -> dict[str, Any]:
                 "Independent ontology synonyms and verbatim attestations are preserved (#1459)."
             ),
             timestamp="2026-10-07T00:00:00Z",
+        )
+    for source, text in sorted(concept.broad_source_synonyms):
+        record_curation_event(
+            doc,
+            curator=SEED_CURATOR,
+            action="SOURCE_SYNONYM_SCOPED",
+            changes=(
+                f"Retained {source} label {text!r} as RELATED_SYNONYM: "
+                "a BROAD source mapping does not establish exact lexical equivalence. "
+                "Independent ontology synonyms and verbatim attestations are preserved (#1769)."
+            ),
+            timestamp="2026-10-09T00:00:00Z",
         )
     for text, genus in sorted(concept.definition_broader_synonyms):
         record_curation_event(

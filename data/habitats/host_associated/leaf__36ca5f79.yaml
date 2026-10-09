@@ -7,13 +7,13 @@ grounding_status: EXACT
 mapping_status: SEEDED
 synonyms:
 - synonym_text: Leaf-Phyllosphere
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: BacDive
 - synonym_text: Phylloplane/Leaf
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: Phylloplane/Leaf surface
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: hoja (Spanish, exact)
   synonym_type: EXACT_SYNONYM
@@ -532,3 +532,21 @@ curation_history:
   changes: Added a leaf phyllosphere water-nutrient-stress graph backed by PMID:23154261,
     PMID:12676659, PMID:24124501, PMID:14665692, PMID:28068611, and PMID:19805315.
   llm_assisted: true
+- timestamp: '2026-10-09T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained BacDive label ''Leaf-Phyllosphere'' as RELATED_SYNONYM: a BROAD
+    source mapping does not establish exact lexical equivalence. Independent ontology
+    synonyms and verbatim attestations are preserved (#1769).'
+- timestamp: '2026-10-09T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Phylloplane/Leaf'' as RELATED_SYNONYM: a BROAD source
+    mapping does not establish exact lexical equivalence. Independent ontology synonyms
+    and verbatim attestations are preserved (#1769).'
+- timestamp: '2026-10-09T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Phylloplane/Leaf surface'' as RELATED_SYNONYM: a
+    BROAD source mapping does not establish exact lexical equivalence. Independent
+    ontology synonyms and verbatim attestations are preserved (#1769).'

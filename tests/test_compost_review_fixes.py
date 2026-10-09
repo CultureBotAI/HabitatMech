@@ -37,7 +37,7 @@ def _gold_row(label="Source compost"):
 
 
 @pytest.mark.parametrize("source", ["GOLD", "BACDIVE"])
-@pytest.mark.parametrize("status", ["CLOSE", "EXACT"])
+@pytest.mark.parametrize("status", ["CLOSE", "BROAD", "EXACT"])
 @pytest.mark.parametrize("label", ["Source compost", "independent alias"])
 def test_source_synonym_scope_respects_its_own_mapping(source, status, label):
     store = seed.ConceptStore(_ontology())
@@ -53,28 +53,35 @@ def test_source_synonym_scope_respects_its_own_mapping(source, status, label):
                                     "source_slug": label}], {},
                            seed.Counter(), {key: decision})
     concept = store.concepts["ENVO:00002170"]
-    scope = "RELATED_SYNONYM" if status == "CLOSE" else "EXACT_SYNONYM"
+    scope = "RELATED_SYNONYM" if status in {"CLOSE", "BROAD"} else "EXACT_SYNONYM"
     assert (label, scope) in concept.synonyms
     assert concept.synonyms[("independent alias", "EXACT_SYNONYM")] == "ENVO"
-    if status == "CLOSE" and label != "independent alias":
+    if status in {"CLOSE", "BROAD"} and label != "independent alias":
         assert (label, "EXACT_SYNONYM") not in concept.synonyms
     assert concept.attestations[0]["source_label"] == label
     assert concept.attestations[0]["mapping_predicate"] == (
-        "skos:closeMatch" if status == "CLOSE" else "skos:exactMatch"
+        {"CLOSE": "skos:closeMatch", "BROAD": "skos:broadMatch", "EXACT": "skos:exactMatch"}[status]
     )
     assert concept.grounding_status == "EXACT"
     doc = seed.build_document(concept)
     events = [e for e in doc["curation_history"] if e["action"] == "SOURCE_SYNONYM_SCOPED"]
-    assert len(events) == (1 if status == "CLOSE" else 0)
+    assert len(events) == (1 if status in {"CLOSE", "BROAD"} else 0)
+    if events:
+        assert f"a {status} source mapping" in events[0]["changes"]
+        assert events[0]["timestamp"] == (
+            "2026-10-07T00:00:00Z" if status == "CLOSE" else "2026-10-09T00:00:00Z"
+        )
     assert seed.build_document(concept) == doc
 
 
-def test_shared_close_spelling_retains_both_source_attestations_and_audit():
+@pytest.mark.parametrize("status", ["CLOSE", "BROAD"])
+def test_shared_nonexact_spelling_retains_both_source_attestations_and_audit(status):
     store = seed.ConceptStore(_ontology())
     row = _gold_row()
     gold_key = seed.mint("GOLD", row["canonical_path"])
     bacdive_key = seed.mint("BACDIVE", "source:1")
-    decisions = {key: _decision(key) for key in (gold_key, bacdive_key)}
+    decisions = {key: replace(_decision(key), grounding_status=status)
+                 for key in (gold_key, bacdive_key)}
     seed.ingest_gold(store, [row], {}, seed.Counter(), decisions)
     seed.ingest_bacdive(store, [{"bacdive_id": "source:1", "label": row["leaf_label"],
                                 "source_slug": row["leaf_label"]}],
@@ -83,7 +90,9 @@ def test_shared_close_spelling_retains_both_source_attestations_and_audit():
     assert concept.synonyms[(row["leaf_label"], "RELATED_SYNONYM")] == "GOLD"
     assert (row["leaf_label"], "EXACT_SYNONYM") not in concept.synonyms
     assert {a["source"] for a in concept.attestations} == {"GOLD", "BACDIVE"}
-    assert concept.close_source_synonyms == {
+    scoped = (concept.close_source_synonyms if status == "CLOSE"
+              else concept.broad_source_synonyms)
+    assert scoped == {
         ("GOLD", row["leaf_label"]), ("BacDive", row["leaf_label"]),
     }
 
