@@ -1,0 +1,837 @@
+# Follow-up review: fermentation-pit Mud parent correction
+
+- Review: 20261009T171413Z-fermentation-pit-mud-followup
+- Repository: culturebotai/HabitatMech
+- Started UTC: 2026-10-09T16:52:21Z
+- Finished UTC: 2026-10-09T17:14:13Z
+- Reviewer: codex-gpt-5 (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The confirmed material-to-pit parent finding is resolved through an exact guarded exclusion, preserving the independent mud genus and every other source/status claim. The distinct source-mapping endpoint finding remains open under #1398; the record therefore still needs curation and is not certified SSSOM/KGX-ready.
+
+## Scope And Provenance
+
+Complete one-record reassessment of the scientific inputs at retained commit 9bef30688b497e772b6220c1e325f416e18efb7d, whose 50 captured input files remain byte-identical in the current product tree. Publication gates additionally verify generated products at f378e54b76042983109b6d150c8554ce43eb296c.
+
+Selection: Reassess the exact target and both findings from 20261009T164402Z-fermentation-pit-mud after the authorized #1805 correction.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: git_commit at Git base 9bef30688b497e772b6220c1e325f416e18efb7d.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| habitatmech:GOLD.cdf0825f85 | data/habitats/engineered/mud__d8cb1234.yaml | generated | Mud |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| LinkML target validation | passed | True | habitatmech:GOLD.cdf0825f85 | No issues found. |
+| Closed-schema target validation | passed | True | habitatmech:GOLD.cdf0825f85 | One file, zero errors. |
+| Guarded exclusion and isolation regressions | passed | True | habitatmech:GOLD.cdf0825f85 | 49 passed in 61.15 seconds. Full before/after corpus differs only at the intended parent and appended event. |
+| Exact full-corpus reproduction | passed | True | habitatmech:GOLD.cdf0825f85 | 3208 expected and present, zero missing/extra/differing records. |
+| Append-only session history | passed | True | habitatmech:GOLD.cdf0825f85 | 223 records valid; explicit codex-gpt-5/model gpt-5/tool codex attribution inspected. |
+| Configured identity-label correspondence | passed | True | habitatmech:GOLD.cdf0825f85 | 1178 canonical, 1 synonym, 5 exceptions, 2057 skipped without adapters. Not a relationship or mapping-endpoint check. |
+| Initial render rejected stale map | failed | False | habitatmech:GOLD.cdf0825f85 | Initial attempt failed with ContractError: map is stale relative to current adapter input. This real stale dependency was corrected by the Linux rebuild; see successful render and map checks. |
+| Full-input and vector-cache verification | passed | True | habitatmech:GOLD.cdf0825f85 | Validated real BGE/PaCMAP bundle a9114744d60b87a2df5987a0b65229af44e29bacb5b8276a2295b14df614d51e: 3208 displayed/eligible, none omitted; correct profile, input, vector and artifact digests. |
+| Site regeneration after real map refresh | passed | True | habitatmech:GOLD.cdf0825f85 | Rendered 3208 habitat pages, 252 redirects, 8 categories and 114 term requests successfully. |
+| Authoritative full local QC | passed | True | habitatmech:GOLD.cdf0825f85 | All HabitatMech quality gates passed. 648 tests passed, 3 skipped in 660.61 seconds; 223 histories, all 3208 record schemas/reproduction, 32 causal overlays, site, 252 redirects and 109 table terms pass. |
+| Complete product-commit CI | passed | False | habitatmech:GOLD.cdf0825f85 | At f378e54b76042983109b6d150c8554ce43eb296c, all native gates passed: 648 tests passed, 3 skipped in 437.64 seconds; product label and vendored-sync jobs also succeeded. |
+| Structured expression evidence | not_applicable | False | habitatmech:GOLD.cdf0825f85 | No gene, locus, regulator or expression claim is present in the reviewed habitat. |
+
+## Scientific And Domain Assessments
+
+### Qualified mud material and independent mud genus
+
+identity: supported. Targets: habitatmech:GOLD.cdf0825f85.
+
+The full source path and exact mint identify qualified mud, not generic Mud elsewhere. A broad mud-material genus is defensible; do not merge qualified paths by leaf label or assign a universal recipe.
+
+### Material versus container is-a
+
+grounding: supported. Targets: habitatmech:GOLD.cdf0825f85.
+
+The source-container contribution is gone; independent ENVO:01000001 remains. Exact before/after comparison demonstrates no unintended identity, provenance, status or other-record changes.
+
+### Explicit mapping endpoints
+
+representation: concern. Targets: habitatmech:GOLD.cdf0825f85.
+
+The retained source mint and generic-mud parent are different endpoints, while the field contract names source-to-record identity. The existing narrowMatch output must be preserved during a bounded hierarchy fix but cannot be scientifically endorsed as contract-correct.
+
+### Source units, generation and status boundaries
+
+provenance: supported. Targets: habitatmech:GOLD.cdf0825f85.
+
+GOLD path, mint, two collapsed ecosystem nodes, omitted zero-count/unit fields, NARROW/SEEDED and old history are preserved. Exclusion and explicit codex session history are additive, not an ITEM identity approval.
+
+### Remaining optional and class-wide biological claims
+
+completeness: not_applicable. Targets: habitatmech:GOLD.cdf0825f85.
+
+The current entire record still has no definition, synonym, xref, parameter, taxon, graph, evidence block, discussion or dataset claims. No fields were filled speculatively; iModulonDB is not applicable to this habitat-only identity/hierarchy reassessment.
+
+### Native checks and bounded generated-product integrity
+
+schema: supported. Targets: habitatmech:GOLD.cdf0825f85.
+
+Schema, history, reproduction, map/site and full QC pass. The initial stale-map render failure was corrected with actual inference/projection; no workflow or map UI implementation change remains.
+
+## Findings
+
+### F1: Mud material incorrectly inherits a fermentation-pit superclass
+
+major / resolved / confirmed; issue key: fermentation-pit-mud-material-to-pit-parent.
+
+The GOLD source path contributes ENVO:03600039 to parent_habitats, although that slot means strict is-a. Primary evidence distinguishes pit-lining mud from the containing constructed vessel. Remove only the guarded GOLD context contribution; generic mud remains an independent broader material.
+
+Disposition: The exact-source guarded row removes ENVO:03600039 only; inspected generated output, whole-corpus differential regression and native gates verify the intended correction. The independent mud genus and every other source/status claim survive.
+
+### F2: Mapping predicate uses an implicit ontology-parent endpoint
+
+major / open / confirmed; issue key: gold-cdf0825f85-mapping-endpoint-contract.
+
+The same source-to-record versus ontology-parent endpoint mismatch remains in the current record and unchanged resolver/schema. The hierarchy fix does not alter or certify NARROW/skos:narrowMatch. Retain the exact earlier F2 as an open successor under #1398.
+
+## Recommended Actions And Acceptance Checks
+
+### A2
+
+Resolve #1398 through an explicit shared endpoint contract and audit actual SSSOM/KGX consumers; do not globally swap predicates or merge qualified mints.
+
+- Test source, predicate, object and status semantics across retained-mint, exact and broader/narrower routes.
+- Audit exported triples against current kg-microbe modeling before claiming compatibility.
+- Preserve qualified identities and defensible mud parent; run focused contract tests and full QC.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/habitats/engineered/mud__d8cb1234.yaml; Entire generated HabitatRecord and parent records | supports | The current complete record has only ENVO:01000001 as parent. Identity, ENGINEERED category, NARROW/SEEDED, gold.ecosystem:5451, full path, two-node collapse note, skos:narrowMatch and omitted counts remain unchanged. One SOURCE_PARENT_EXCLUDED event is appended. |
+| inventory | data/raw/gold_ecosystem_paths.tsv; row 1261; source path and node IDs 5451/5452 | supports | The qualified mud path is retained as its own mint. All counters are zero, so no assertion count/unit is emitted. Full current workbook scans likewise found no exact-path Biosample or Organism row; this is not evidence of biological absence. |
+| pit-paper | https://journals.asm.org/doi/10.1128/AEM.03409-15; Introduction and Sampling; PMID:26896127 | supports | The study distinguishes the constructed vessel from mud covering its interior walls and separately samples that material. This supports material-versus-container distinction, not a universal recipe or taxonomic signature. |
+| ontology | https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms?obo_id=ENVO%3A03600039; Current ENVO:03600039 and ENVO:01000001 definitions; frozen ontology rows 10081/7520 | supports | Fermentation pit is a constructed pit for alcoholic-spirit fermentation; mud is water mixed with soil/silt/clay material. Mud may occur in a pit without being a pit. |
+| route | src/habitatmech/seed.py; resolve_gold gold_narrower_than_leaf_match; ingest_gold attestation construction; schema SourceAttestation.mapping_predicate | refutes | Executed resolver retains the path mint and contributes ENVO:01000001 as a parent while emitting NARROW/skos:narrowMatch. The schema says mapping_predicate compares the source concept with the generated record ID, which is the same retained source mint. The emitted comparison instead comes from the ontology-parent match. |
+| endpoint | https://github.com/CultureBotAI/HabitatMech/issues/1398; Shared mapping endpoint contract issue | context_only | The existing issue distinguishes source-to-record mapping from record-to-parent comparison. A predicate swap or suppression of the pit parent does not resolve that shared contract. |
+| parent-scope | https://github.com/CultureBotAI/HabitatMech/issues/1731; Fermentation-pit exact-identity scope issue | context_only | The parent record's universal alcoholic-spirits scope remains unresolved. The mud/container distinction does not require resolving that separate parent identity. |
+| prior | reviews/structured/20261009T164402Z-fermentation-pit-mud/review.yaml; F1 and F2, exact predecessor observation | context_only | F1 records the material/container error; F2 records the independent endpoint mismatch. Original review bytes remain unchanged. |
+| exclusion | curation/gold_parent_exclusions.tsv; habitatmech:GOLD.cdf0825f85 exact source path; expected parent ENVO:03600039 | supports | The guarded exclusion suppresses only the immediate GOLD context-parent contribution. Independent mud genus, all other record claims and scientific status are retained. The matching session history explicitly identifies codex-gpt-5/model gpt-5/tool codex. |
+| regression | tests/test_fermentation_pit_mud_parent.py; test_pit_mud_exclusion_preserves_other_records_and_claims; full before/after generated corpus | supports | The test rebuilds all records with and without only this exclusion and proves the changed identifier set is exactly the target. It permits one parent removal plus one appended event and checks every other field, retained mud parent, path/mint/nodes, count omissions and unchanged endpoint predicate. All 49 focused tests passed. |
+| map | https://github.com/CultureBotAI/HabitatMech/actions/runs/37962192963; Real pinned BGE/PaCMAP canary and full build; bundle a9114744d60b87a2df5987a0b65229af44e29bacb5b8276a2295b14df614d51e | supports | One changed record was encoded, repeat canary reused it, and full embedding reused all 3208 vectors. The local input/vector checker validated the complete bundle. Full input comparison found only removal of the pit-parent line; generated HTML/CSS/JS is unchanged outside point data. |
+| checks | https://github.com/CultureBotAI/HabitatMech/actions/runs/37962884425; Successful product-commit full QC, corroborated by terminal local QC | supports | Both full runners pass all gates with 648 tests passed and 3 skipped. These are deterministic correctness checks, not evidence of universal source scope. |
+
+## Limits And Additional Notes
+
+- No original GOLD member join was recovered; the primary paper supports the material/container distinction without identifying a frozen source sample.
+- Shared mapping endpoint #1398 and parent identity #1731 remain unresolved. No downstream SSSOM/KGX emitted-triple compatibility audit was performed.
+- This is same-agent self-review, not independent approval or corpus-wide scientific completion.
+- Label checks deliberately exclude parent relations and source attestations and skip unsupported adapters; their passing result is not scientific certification.
+- Full local/CI test suites each skip three tests. Deterministic gates do not resolve the retained scientific endpoint uncertainty.
+- The original immutable review is preserved; stable issue keys and exact previous_occurrences distinguish one resolved finding from one still-open finding.
+- Initial follow-up input capture preceded reassessment at 9bef30688b497e772b6220c1e325f416e18efb7d. Its exact annotated provenance tag is published and verified on origin for squash/branch-deletion safety.
+- The first site render failed on the genuinely stale semantic map. A real pinned Linux rebuild, full-input/vector validation and rerender corrected that dependency; no check or model inference was bypassed.
+- The first history scaffold command used the missing default sibling path. Rerunning with CLAW_SRC=../../culturebotai-claw/src succeeded; actor attribution was inspected explicitly. The temporary Linux workflow is removed before merge.
+- Saving as a working-tree review was refused after the product commit advanced HEAD. Rather than replacing the captured base or hashes, this observation explicitly reviews the retained Git commit; every captured input was verified against both that exact historical tree and the current tree. The later product commit only refreshes derived map/site files and removes the temporary workflow.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261009T171413Z-fermentation-pit-mud-followup
+kind: record
+repository: culturebotai/HabitatMech
+title: 'Follow-up review: fermentation-pit Mud parent correction'
+started_at: '2026-10-09T16:52:21Z'
+finished_at: '2026-10-09T17:14:13Z'
+reviewer:
+  identity: codex-gpt-5
+  kind: agent
+  model: gpt-5
+  independence: self_review
+  independence_basis: Same agent family has contributed repository curation and publication
+    work; this is a separate evidence-review pass, not independent approval.
+skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'The confirmed material-to-pit parent finding is resolved through an exact
+  guarded exclusion, preserving the independent mud genus and every other source/status
+  claim. The distinct source-mapping endpoint finding remains open under #1398; the
+  record therefore still needs curation and is not certified SSSOM/KGX-ready.'
+source:
+  git_revision: 9bef30688b497e772b6220c1e325f416e18efb7d
+  state: git_commit
+  inputs:
+  - path: .claude/skills/curate-yaml-record/SKILL.md
+    sha256: c279e6d24969c0c9f0cf4f486bfde70a118762b4af3b706f20eb152710a15dd9
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: conf/record_review.yaml
+    sha256: c2f5d0eb4c5744f5fe354c92184ddab144dc2688dba952b032b4f3d597bc08d6
+    role: context
+  - path: conf/text_map.yaml
+    sha256: b35f851c06a367b1bb121744c26bf82963d9e4885a7afb4cadbc59120f47ab75
+    role: context
+  - path: curation/decisions.tsv
+    sha256: 0602cca13e6495da256a6f1cfd5897462f73f9739a729447862017d93c148efd
+    role: context
+  - path: curation/definition_source_label_exclusions.tsv
+    sha256: cc4da2e7e5e8750e6c023683014aa37a909230280f231eec5be7c71795340312
+    role: context
+  - path: curation/external_xrefs.tsv
+    sha256: cf8394a6ab22e35efd9e252aef422018226280830bf816a39bf4f2256ff75ad5
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: 2b7f7bb6977a9d7a1b19856962bb63cf0a7f53ab435b3fb7100bffdfddfba3c5
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 9977e384b79128d6e89c85f28e35c77d29644d503dea6d53c12628599e33f7f3
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: b59b9e800a918135e3915145d4d8098bb48dcea36a312b3004c594a57d221ae9
+    role: context
+  - path: data/habitats/engineered/fermentation_pit.yaml
+    sha256: 12f0b89231dd87571fc3333cddbd687bb1f8d77216d41c17f8426711b1148988
+    role: context
+  - path: data/habitats/engineered/mud__d8cb1234.yaml
+    sha256: 648f5fbe5a2ed08fd224ce4f3b8c2372b44d28f7e93c3be7884d9311126760a0
+    role: target
+  - path: data/habitats/other/mud.yaml
+    sha256: d29b1626eb84265db3abf61ecde787ae91cdc3c8257996ba4ecddc1959596f61
+    role: context
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: 36df8306394c06c352b73e0bf7b47a2858784cedac7389a24d0b78f593ece646
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/TEXT_MAP.md
+    sha256: f2f6b2ee3261f1f0716772e590f51a5ecb119878a3f4fc9c295f0ae17adadd12
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: f7aa39ee762d94f1902d9f08f328cb897bc543e4e226057eb4770d24bfcc6eb5
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/mappings/fermentation-pit-mud/2026-10-09T164733Z-codex-gpt-5-44cad6.yaml
+    sha256: 6d9c6fe2244af5cc3b74b34c050b75a600fd857be1be8bd29a87650113657fdb
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reviews/structured/20261009T164402Z-fermentation-pit-mud/review.yaml
+    sha256: 908086f6b63f82059f84e8886893462014178845464b1d399cd1ef5f1506da8c
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/extract_gold_biosamples.py
+    sha256: b6a2773c86fe718e1ca0b1d7b32709f0eee491ac813655e310aa0817c0fec31b
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 52d2a22309a1f4a10728a663560bb4d918346c292221fd34139b99b4159d3fe5
+    role: context
+  - path: src/habitatmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 92adf631fa099120a497ff7001473e659347d23ac9b418f04cd341ddad5d2a89
+    role: context
+  - path: src/habitatmech/text_map_inputs.py
+    sha256: dd87f483d783dd7061c12917ae139b975e70a074df814133c5d08edf7de68561
+    role: context
+  - path: src/habitatmech/text_map_site.py
+    sha256: e55c2a07488e5f5e4b3a63e07ac1fb30d77d427fab87adf168d8bfcfa72e7fd3
+    role: context
+  - path: tests/test_fermentation_pit_mud_parent.py
+    sha256: de24ee1a9be08c82f84bcdfb6a41e6fe9f8c34e7247102cb63df7b019e206aee
+    role: context
+scope:
+  description: Complete one-record reassessment of the scientific inputs at retained
+    commit 9bef30688b497e772b6220c1e325f416e18efb7d, whose 50 captured input files
+    remain byte-identical in the current product tree. Publication gates additionally
+    verify generated products at f378e54b76042983109b6d150c8554ce43eb296c.
+  selection: 'Reassess the exact target and both findings from 20261009T164402Z-fermentation-pit-mud
+    after the authorized #1805 correction.'
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - habitatmech:GOLD.cdf0825f85
+  exclusions:
+  - target: Other 3207 corpus records
+    reason: Context records are not individually certified by this one-record review.
+targets:
+- target_id: habitatmech:GOLD.cdf0825f85
+  path: data/habitats/engineered/mud__d8cb1234.yaml
+  label: Mud
+  record_class: HabitatRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained source or curation owner relevant to identity and hierarchy
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained source or curation owner relevant to identity and hierarchy
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained source or curation owner relevant to identity and hierarchy
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/gold_ecosystem_paths.tsv
+    role: Maintained source or curation owner relevant to identity and hierarchy
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_terms.tsv
+    role: Maintained source or curation owner relevant to identity and hierarchy
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_subclass_edges.tsv
+    role: Maintained source or curation owner relevant to identity and hierarchy
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Deterministic source-to-record generator
+checks:
+- check_id: schema
+  name: LinkML target validation
+  command: env UV_CACHE_DIR=build/uv-cache just validate data/habitats/engineered/mud__d8cb1234.yaml
+  summary: No issues found.
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.cdf0825f85
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Closed-schema target validation
+  command: env UV_CACHE_DIR=build/uv-cache just validate-strict data/habitats/engineered/mud__d8cb1234.yaml
+  summary: One file, zero errors.
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.cdf0825f85
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: regression
+  name: Guarded exclusion and isolation regressions
+  command: env UV_CACHE_DIR=build/uv-cache uv run pytest -q tests/test_fermentation_pit_mud_parent.py
+    tests/test_gold_parent_exclusions.py
+  summary: 49 passed in 61.15 seconds. Full before/after corpus differs only at the
+    intended parent and appended event.
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.cdf0825f85
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: reproduction
+  name: Exact full-corpus reproduction
+  command: env UV_CACHE_DIR=build/uv-cache just verify-corpus
+  summary: 3208 expected and present, zero missing/extra/differing records.
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.cdf0825f85
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: history
+  name: Append-only session history
+  command: env UV_CACHE_DIR=build/uv-cache just validate-history
+  summary: 223 records valid; explicit codex-gpt-5/model gpt-5/tool codex attribution
+    inspected.
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.cdf0825f85
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: labels
+  name: Configured identity-label correspondence
+  command: env UV_CACHE_DIR=build/uv-cache just validate-products
+  summary: 1178 canonical, 1 synonym, 5 exceptions, 2057 skipped without adapters.
+    Not a relationship or mapping-endpoint check.
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.cdf0825f85
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: stale-render
+  name: Initial render rejected stale map
+  command: env UV_CACHE_DIR=build/uv-cache just render
+  summary: 'Initial attempt failed with ContractError: map is stale relative to current
+    adapter input. This real stale dependency was corrected by the Linux rebuild;
+    see successful render and map checks.'
+  required: false
+  status: failed
+  target_ids:
+  - habitatmech:GOLD.cdf0825f85
+  exit_code: 1
+  expected_exit_code: 0
+  scope_note: Superseded initial attempt, not the final publication state.
+- check_id: map
+  name: Full-input and vector-cache verification
+  command: env UV_CACHE_DIR=build/uv-cache uv run python scripts/embedding_pipeline.py
+    check --output data/text_map --input build/pr1803-inputs.jsonl --cache build/pr1803-map-download/build/text-map/vectors.sqlite
+  summary: 'Validated real BGE/PaCMAP bundle a9114744d60b87a2df5987a0b65229af44e29bacb5b8276a2295b14df614d51e:
+    3208 displayed/eligible, none omitted; correct profile, input, vector and artifact
+    digests.'
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.cdf0825f85
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: render
+  name: Site regeneration after real map refresh
+  command: env UV_CACHE_DIR=build/uv-cache just render
+  summary: Rendered 3208 habitat pages, 252 redirects, 8 categories and 114 term requests
+    successfully.
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.cdf0825f85
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: qc
+  name: Authoritative full local QC
+  command: env UV_CACHE_DIR=build/uv-cache just qc > build/pr1803-qc.log 2>&1
+  summary: All HabitatMech quality gates passed. 648 tests passed, 3 skipped in 660.61
+    seconds; 223 histories, all 3208 record schemas/reproduction, 32 causal overlays,
+    site, 252 redirects and 109 table terms pass.
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.cdf0825f85
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: ci
+  name: Complete product-commit CI
+  command: 'GitHub Actions 37962884425: uv run python scripts/run_qc.py'
+  summary: 'At f378e54b76042983109b6d150c8554ce43eb296c, all native gates passed:
+    648 tests passed, 3 skipped in 437.64 seconds; product label and vendored-sync
+    jobs also succeeded.'
+  required: false
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.cdf0825f85
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: imodulondb
+  name: Structured expression evidence
+  status: not_applicable
+  required: false
+  target_ids:
+  - habitatmech:GOLD.cdf0825f85
+  summary: No gene, locus, regulator or expression claim is present in the reviewed
+    habitat.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/habitats/engineered/mud__d8cb1234.yaml
+  locator: Entire generated HabitatRecord and parent records
+  accessed_at: '2026-10-09T16:44:02Z'
+  support: supports
+  summary: The current complete record has only ENVO:01000001 as parent. Identity,
+    ENGINEERED category, NARROW/SEEDED, gold.ecosystem:5451, full path, two-node collapse
+    note, skos:narrowMatch and omitted counts remain unchanged. One SOURCE_PARENT_EXCLUDED
+    event is appended.
+- evidence_id: inventory
+  kind: database
+  reference: data/raw/gold_ecosystem_paths.tsv
+  locator: row 1261; source path and node IDs 5451/5452
+  accessed_at: '2026-10-09T16:44:02Z'
+  support: supports
+  summary: The qualified mud path is retained as its own mint. All counters are zero,
+    so no assertion count/unit is emitted. Full current workbook scans likewise found
+    no exact-path Biosample or Organism row; this is not evidence of biological absence.
+- evidence_id: pit-paper
+  kind: primary_source
+  reference: https://journals.asm.org/doi/10.1128/AEM.03409-15
+  locator: Introduction and Sampling; PMID:26896127
+  accessed_at: '2026-10-09T16:44:02Z'
+  support: supports
+  summary: The study distinguishes the constructed vessel from mud covering its interior
+    walls and separately samples that material. This supports material-versus-container
+    distinction, not a universal recipe or taxonomic signature.
+- evidence_id: ontology
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms?obo_id=ENVO%3A03600039
+  locator: Current ENVO:03600039 and ENVO:01000001 definitions; frozen ontology rows
+    10081/7520
+  accessed_at: '2026-10-09T16:44:02Z'
+  support: supports
+  summary: Fermentation pit is a constructed pit for alcoholic-spirit fermentation;
+    mud is water mixed with soil/silt/clay material. Mud may occur in a pit without
+    being a pit.
+- evidence_id: route
+  kind: record_content
+  reference: src/habitatmech/seed.py
+  locator: resolve_gold gold_narrower_than_leaf_match; ingest_gold attestation construction;
+    schema SourceAttestation.mapping_predicate
+  accessed_at: '2026-10-09T16:44:02Z'
+  support: refutes
+  summary: Executed resolver retains the path mint and contributes ENVO:01000001 as
+    a parent while emitting NARROW/skos:narrowMatch. The schema says mapping_predicate
+    compares the source concept with the generated record ID, which is the same retained
+    source mint. The emitted comparison instead comes from the ontology-parent match.
+- evidence_id: endpoint
+  kind: prior_review
+  reference: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  locator: Shared mapping endpoint contract issue
+  accessed_at: '2026-10-09T16:44:02Z'
+  support: context_only
+  summary: The existing issue distinguishes source-to-record mapping from record-to-parent
+    comparison. A predicate swap or suppression of the pit parent does not resolve
+    that shared contract.
+- evidence_id: parent-scope
+  kind: prior_review
+  reference: https://github.com/CultureBotAI/HabitatMech/issues/1731
+  locator: Fermentation-pit exact-identity scope issue
+  accessed_at: '2026-10-09T16:44:02Z'
+  support: context_only
+  summary: The parent record's universal alcoholic-spirits scope remains unresolved.
+    The mud/container distinction does not require resolving that separate parent
+    identity.
+- evidence_id: prior
+  kind: prior_review
+  reference: reviews/structured/20261009T164402Z-fermentation-pit-mud/review.yaml
+  locator: F1 and F2, exact predecessor observation
+  support: context_only
+  summary: F1 records the material/container error; F2 records the independent endpoint
+    mismatch. Original review bytes remain unchanged.
+  accessed_at: '2026-10-09T17:14:13Z'
+- evidence_id: exclusion
+  kind: record_content
+  reference: curation/gold_parent_exclusions.tsv
+  locator: habitatmech:GOLD.cdf0825f85 exact source path; expected parent ENVO:03600039
+  support: supports
+  summary: The guarded exclusion suppresses only the immediate GOLD context-parent
+    contribution. Independent mud genus, all other record claims and scientific status
+    are retained. The matching session history explicitly identifies codex-gpt-5/model
+    gpt-5/tool codex.
+  accessed_at: '2026-10-09T17:14:13Z'
+- evidence_id: regression
+  kind: validation
+  reference: tests/test_fermentation_pit_mud_parent.py
+  locator: test_pit_mud_exclusion_preserves_other_records_and_claims; full before/after
+    generated corpus
+  support: supports
+  summary: The test rebuilds all records with and without only this exclusion and
+    proves the changed identifier set is exactly the target. It permits one parent
+    removal plus one appended event and checks every other field, retained mud parent,
+    path/mint/nodes, count omissions and unchanged endpoint predicate. All 49 focused
+    tests passed.
+  accessed_at: '2026-10-09T17:14:13Z'
+- evidence_id: map
+  kind: validation
+  reference: https://github.com/CultureBotAI/HabitatMech/actions/runs/37962192963
+  locator: Real pinned BGE/PaCMAP canary and full build; bundle a9114744d60b87a2df5987a0b65229af44e29bacb5b8276a2295b14df614d51e
+  support: supports
+  summary: One changed record was encoded, repeat canary reused it, and full embedding
+    reused all 3208 vectors. The local input/vector checker validated the complete
+    bundle. Full input comparison found only removal of the pit-parent line; generated
+    HTML/CSS/JS is unchanged outside point data.
+  accessed_at: '2026-10-09T17:14:13Z'
+  snapshot_sha256: 56e174273b3a9bbb18217461758e817e321d255b4890dba7472aa65c753aa79a
+- evidence_id: checks
+  kind: validation
+  reference: https://github.com/CultureBotAI/HabitatMech/actions/runs/37962884425
+  locator: Successful product-commit full QC, corroborated by terminal local QC
+  accessed_at: '2026-10-09T17:14:13Z'
+  support: supports
+  summary: Both full runners pass all gates with 648 tests passed and 3 skipped. These
+    are deterministic correctness checks, not evidence of universal source scope.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Qualified mud material and independent mud genus
+  outcome: supported
+  summary: The full source path and exact mint identify qualified mud, not generic
+    Mud elsewhere. A broad mud-material genus is defensible; do not merge qualified
+    paths by leaf label or assign a universal recipe.
+  target_ids:
+  - habitatmech:GOLD.cdf0825f85
+  evidence_ids:
+  - record
+  - inventory
+  - pit-paper
+  - ontology
+- assessment_id: hierarchy
+  area: grounding
+  topic: Material versus container is-a
+  outcome: supported
+  summary: The source-container contribution is gone; independent ENVO:01000001 remains.
+    Exact before/after comparison demonstrates no unintended identity, provenance,
+    status or other-record changes.
+  target_ids:
+  - habitatmech:GOLD.cdf0825f85
+  evidence_ids:
+  - record
+  - pit-paper
+  - ontology
+  - exclusion
+  - regression
+- assessment_id: mapping
+  area: representation
+  topic: Explicit mapping endpoints
+  outcome: concern
+  summary: The retained source mint and generic-mud parent are different endpoints,
+    while the field contract names source-to-record identity. The existing narrowMatch
+    output must be preserved during a bounded hierarchy fix but cannot be scientifically
+    endorsed as contract-correct.
+  target_ids:
+  - habitatmech:GOLD.cdf0825f85
+  evidence_ids:
+  - record
+  - route
+  - endpoint
+- assessment_id: provenance
+  area: provenance
+  topic: Source units, generation and status boundaries
+  outcome: supported
+  summary: GOLD path, mint, two collapsed ecosystem nodes, omitted zero-count/unit
+    fields, NARROW/SEEDED and old history are preserved. Exclusion and explicit codex
+    session history are additive, not an ITEM identity approval.
+  target_ids:
+  - habitatmech:GOLD.cdf0825f85
+  evidence_ids:
+  - record
+  - inventory
+  - exclusion
+  - regression
+- assessment_id: optional
+  area: completeness
+  topic: Remaining optional and class-wide biological claims
+  outcome: not_applicable
+  summary: The current entire record still has no definition, synonym, xref, parameter,
+    taxon, graph, evidence block, discussion or dataset claims. No fields were filled
+    speculatively; iModulonDB is not applicable to this habitat-only identity/hierarchy
+    reassessment.
+  target_ids:
+  - habitatmech:GOLD.cdf0825f85
+  evidence_ids:
+  - record
+  - regression
+- assessment_id: validation
+  area: schema
+  topic: Native checks and bounded generated-product integrity
+  outcome: supported
+  summary: Schema, history, reproduction, map/site and full QC pass. The initial stale-map
+    render failure was corrected with actual inference/projection; no workflow or
+    map UI implementation change remains.
+  target_ids:
+  - habitatmech:GOLD.cdf0825f85
+  evidence_ids:
+  - checks
+  - map
+  - regression
+findings:
+- finding_id: F1
+  issue_key: fermentation-pit-mud-material-to-pit-parent
+  category: grounding
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Mud material incorrectly inherits a fermentation-pit superclass
+  description: The GOLD source path contributes ENVO:03600039 to parent_habitats,
+    although that slot means strict is-a. Primary evidence distinguishes pit-lining
+    mud from the containing constructed vessel. Remove only the guarded GOLD context
+    contribution; generic mud remains an independent broader material.
+  target_ids:
+  - habitatmech:GOLD.cdf0825f85
+  field_paths:
+  - parent_habitats
+  evidence_ids:
+  - record
+  - pit-paper
+  - ontology
+  - exclusion
+  - regression
+  rule_id: CLAUDE.md semantic invariants; docs/CURATION.md habitat identity and strict
+    broader parents
+  native_severity: major
+  normalization_reason: Unsupported identity or is-a scope materially affects habitat
+    interpretation; local and shared major classifications agree.
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained owner of the bounded scientific correction
+  previous_occurrences:
+  - repository: culturebotai/HabitatMech
+    review_id: 20261009T164402Z-fermentation-pit-mud
+    finding_id: F1
+  disposition_reason: The exact-source guarded row removes ENVO:03600039 only; inspected
+    generated output, whole-corpus differential regression and native gates verify
+    the intended correction. The independent mud genus and every other source/status
+    claim survive.
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1805
+- finding_id: F2
+  issue_key: gold-cdf0825f85-mapping-endpoint-contract
+  category: representation
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Mapping predicate uses an implicit ontology-parent endpoint
+  description: 'The same source-to-record versus ontology-parent endpoint mismatch
+    remains in the current record and unchanged resolver/schema. The hierarchy fix
+    does not alter or certify NARROW/skos:narrowMatch. Retain the exact earlier F2
+    as an open successor under #1398.'
+  target_ids:
+  - habitatmech:GOLD.cdf0825f85
+  field_paths:
+  - source_attestations[0].mapping_predicate
+  - grounding_status
+  evidence_ids:
+  - record
+  - route
+  - endpoint
+  rule_id: SourceAttestation.mapping_predicate
+  native_severity: major
+  normalization_reason: The schema and executed mapping endpoints disagree, materially
+    affecting interpretation.
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Resolver and mapping producer
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/schema/habitatmech.yaml
+    role: Declared endpoint contract
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1398
+  previous_occurrences:
+  - repository: culturebotai/HabitatMech
+    review_id: 20261009T164402Z-fermentation-pit-mud
+    finding_id: F2
+actions:
+- action_id: A2
+  description: 'Resolve #1398 through an explicit shared endpoint contract and audit
+    actual SSSOM/KGX consumers; do not globally swap predicates or merge qualified
+    mints.'
+  finding_ids:
+  - F2
+  target_ids:
+  - habitatmech:GOLD.cdf0825f85
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Shared producer
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/schema/habitatmech.yaml
+    role: Shared field semantics
+  acceptance_checks:
+  - Test source, predicate, object and status semantics across retained-mint, exact
+    and broader/narrower routes.
+  - Audit exported triples against current kg-microbe modeling before claiming compatibility.
+  - Preserve qualified identities and defensible mud parent; run focused contract
+    tests and full QC.
+limitations:
+- No original GOLD member join was recovered; the primary paper supports the material/container
+  distinction without identifying a frozen source sample.
+- 'Shared mapping endpoint #1398 and parent identity #1731 remain unresolved. No downstream
+  SSSOM/KGX emitted-triple compatibility audit was performed.'
+- This is same-agent self-review, not independent approval or corpus-wide scientific
+  completion.
+- Label checks deliberately exclude parent relations and source attestations and skip
+  unsupported adapters; their passing result is not scientific certification.
+- Full local/CI test suites each skip three tests. Deterministic gates do not resolve
+  the retained scientific endpoint uncertainty.
+notes:
+- The original immutable review is preserved; stable issue keys and exact previous_occurrences
+  distinguish one resolved finding from one still-open finding.
+- Initial follow-up input capture preceded reassessment at 9bef30688b497e772b6220c1e325f416e18efb7d.
+  Its exact annotated provenance tag is published and verified on origin for squash/branch-deletion
+  safety.
+- The first site render failed on the genuinely stale semantic map. A real pinned
+  Linux rebuild, full-input/vector validation and rerender corrected that dependency;
+  no check or model inference was bypassed.
+- The first history scaffold command used the missing default sibling path. Rerunning
+  with CLAW_SRC=../../culturebotai-claw/src succeeded; actor attribution was inspected
+  explicitly. The temporary Linux workflow is removed before merge.
+- Saving as a working-tree review was refused after the product commit advanced HEAD.
+  Rather than replacing the captured base or hashes, this observation explicitly reviews
+  the retained Git commit; every captured input was verified against both that exact
+  historical tree and the current tree. The later product commit only refreshes derived
+  map/site files and removes the temporary workflow.
+tags:
+- record-review
+- engineered
+- source-scope
+related_reviews:
+- repository: culturebotai/HabitatMech
+  review_id: 20261009T164402Z-fermentation-pit-mud
+  relationship: Successor explicitly resolving F1 while retaining F2 open
+```
