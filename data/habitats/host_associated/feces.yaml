@@ -16,7 +16,7 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: BacDive
 - synonym_text: Guano
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: cow dung
   synonym_type: EXACT_SYNONYM
@@ -356,3 +356,9 @@ curation_history:
   changes: 'Retained GOLD label ''Cast'' as RELATED_SYNONYM: a CLOSE source mapping
     does not establish exact lexical equivalence. Independent ontology synonyms and
     verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-09T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Guano'' as RELATED_SYNONYM: a BROAD source mapping
+    does not establish exact lexical equivalence. Independent ontology synonyms and
+    verbatim attestations are preserved (#1769).'

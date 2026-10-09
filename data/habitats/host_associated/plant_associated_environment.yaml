@@ -7,7 +7,7 @@ grounding_status: EXACT
 mapping_status: SEEDED
 synonyms:
 - synonym_text: Herbaceous-plants-Grass,Crops
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: BacDive
 - synonym_text: Plants
   synonym_type: EXACT_SYNONYM
@@ -440,3 +440,9 @@ curation_history:
   changes: Added a root-exudate microbiome-assembly graph backed by DOI:10.1139/cjb-2013-0225,
     PMID:29556109, PMID:26184915, and PMID:32788714.
   llm_assisted: true
+- timestamp: '2026-10-09T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained BacDive label ''Herbaceous-plants-Grass,Crops'' as RELATED_SYNONYM:
+    a BROAD source mapping does not establish exact lexical equivalence. Independent
+    ontology synonyms and verbatim attestations are preserved (#1769).'
