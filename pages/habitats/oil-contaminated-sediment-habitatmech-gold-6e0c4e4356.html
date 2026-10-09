@@ -50,10 +50,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 </table>
 </div>
 
-<h2>Broader habitats</h2>
-<ul class="plain">
-  <li><a href="../habitats/oil-refinery-envo-03600078.html">oil refinery</a>      <code class="curie">ENVO:03600078</code></li>
-</ul>
 
 
 
@@ -68,6 +64,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="meta">2026-08-12 · claude-opus-5 ·
     class-level sweep, not an individual judgement</span>
     <p>Confirmed UNGROUNDED: no ontology term fits this concept. Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the vendored slice matched this label by any search route. Whether the concept is a habitat at all was NOT assessed, so this is not yet a term-request candidate. (source concept habitatmech:GOLD.6e0c4e4356)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-09 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution ENVO:03600078 for habitatmech:GOLD.6e0c4e4356 (Engineered &gt; Built environment &gt; Oil refinery &gt; Oil-contaminated sediment). Reviewed hierarchy exclusion (#1812): oil-contaminated sediment is material, not a subtype of the industrial building defined by active ENVO:03600078 (<a href="https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms?obo_id=ENVO:03600078" rel="noopener noreferrer" target="_blank">https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms?obo_id=ENVO:03600078</a>). Exclude only this exact GOLD source-context contribution; preserve the mint, nodes5765/5766, full path, 14 ORGANISM, UNGROUNDED/SEEDED and prior events. No replacement genus, source merge or ITEM identity endorsement is asserted. The later public GOLD membership includes sand and seawater examples and does not reconstruct the frozen 14 organisms; source-scope uncertainty is not resolved by this edge correction. Evidence: reviews/structured/20261009T185455Z-oil_contaminated_sediment/review.yaml F1.</p>
   </li>
 </ol>
 
