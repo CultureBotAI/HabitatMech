@@ -3,8 +3,6 @@ label: Mixed liquor
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:03600010
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8158
@@ -24,3 +22,18 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-09T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:03600010 for habitatmech:GOLD.904cce6b84
+    (Engineered > Bioreactor > MBR (Membrane bioreactor) > Mixed liquor). Reviewed
+    hierarchy exclusion (#1800): EPA defines mixed liquor as an activated-sludge/wastewater
+    mixture (https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=9100NX8X.txt, Section III
+    Definitions); the MBR fact sheet describes this material circulating through a
+    vessel (https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P100IL7G.TXT, Membrane Location).
+    Active ENVO:03600010 denotes the membrane-bearing apparatus, not its contents.
+    Exclude only this exact GOLD context-parent contribution. Preserve mint, nodes8158/8159,
+    full path, count/unit/predicate omissions, UNGROUNDED/CLASS/SEEDED and prior events.
+    Do not merge the WWTP sibling, equate generic activated sludge, invent a genus
+    or promote identity status. Evidence: reviews/structured/20261009T152149Z-mixed-liquor-mbr/review.yaml
+    F1; current GOLD Gs0153737 sample context.'
