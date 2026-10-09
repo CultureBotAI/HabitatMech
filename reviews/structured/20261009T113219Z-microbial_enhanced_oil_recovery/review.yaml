@@ -1,0 +1,688 @@
+schema_version: 1.0.0
+review_id: 20261009T113219Z-microbial_enhanced_oil_recovery
+kind: record
+repository: CultureBotAI/HabitatMech
+title: 'Microbial enhanced oil recovery: unresolved technique-versus-habitat source
+  scope'
+started_at: '2026-10-09T11:28:15Z'
+finished_at: '2026-10-09T11:32:19Z'
+reviewer:
+  identity: codex-gpt-5
+  kind: agent
+  model: gpt-5
+  independence: self_review
+  independence_basis: Same agent continuing individual corpus assessment; not independent
+    approval.
+skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The complete source record reproduces and preserves its three GOLD nodes,
+  older zero-count snapshot and CLASS/SEEDED state. Primary field-study methods distinguish
+  the MEOR intervention from sampled waters and mixed fluids. One provisional major
+  finding concerns the unresolved procedure-versus-habitat identity. A later one-biosample
+  source lead was identified but its original member metadata could not be recovered.
+  No automatic NOT_APPLICABLE decision, reservoir identity or new definition is justified.
+source:
+  git_revision: 4ad2058873bd936baa7cba619e5fed8233cf92bb
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: curation/decisions.tsv
+    sha256: 0602cca13e6495da256a6f1cfd5897462f73f9739a729447862017d93c148efd
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: 9d2324647d0a0ddeccc2f7836811872e112af208bb1b8f7decb332c00f17d12b
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 3efdac153ccd40f518458a9dc5360e09dd660c3a42fbd06bfc57f3b2f707ece7
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: b59b9e800a918135e3915145d4d8098bb48dcea36a312b3004c594a57d221ae9
+    role: context
+  - path: data/habitats/RETIRED.tsv
+    sha256: 41beffc45aabdf304de633c21200b375d7f01d1cb2e036d4a026961d545a35e5
+    role: context
+  - path: data/habitats/engineered/biotransformation.yaml
+    sha256: 29a10b179946d78e3602358ae15db297b66e8bafe198e3892cc47aa6e97dcf30
+    role: context
+  - path: data/habitats/engineered/microbial_enhanced_oil_recovery.yaml
+    sha256: 186b4eb6a7550b5cc7dfa962cdee8df5825eea62af04295bb5da7aa6926cb11c
+    role: target
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: 36df8306394c06c352b73e0bf7b47a2858784cedac7389a24d0b78f593ece646
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: f7aa39ee762d94f1902d9f08f328cb897bc543e4e226057eb4770d24bfcc6eb5
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reports/yaml_record_review/20261007T115519Z-biotransformation.md
+    sha256: 6b7680d3a9b0ba6d1ff30bd08455e034b7bdf2b7cc87c1962fb54da0922972f3
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 52d2a22309a1f4a10728a663560bb4d918346c292221fd34139b99b4159d3fe5
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 92adf631fa099120a497ff7001473e659347d23ac9b418f04cd341ddad5d2a89
+    role: context
+targets:
+- target_id: habitatmech:GOLD.7bfc46d5f7
+  path: data/habitats/engineered/microbial_enhanced_oil_recovery.yaml
+  label: Microbial enhanced oil recovery
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Source identity and CLASS/ITEM decision
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Evidence-backed habitat definition if source scope warrants one
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Exact source-context hierarchy contribution
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/gold_ecosystem_paths.tsv
+    role: Source classification and count snapshot
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Source resolution and generated representation
+scope:
+  description: Whole generated microbial_enhanced_oil_recovery.yaml and its sole GOLD
+    contribution. Biotransformation parent and historical parent review are context
+    only.
+  selection: PATHS.tsv:2202, habitatmech:GOLD.7bfc46d5f7, exact Engineered > Biotransformation
+    > Microbial enhanced oil recovery path.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - habitatmech:GOLD.7bfc46d5f7
+checks:
+- check_id: capture
+  name: Pre-assessment input capture
+  command: env UV_CACHE_DIR=build/uv-cache uv run python scripts/record_review.py
+    inspect --targets /private/tmp/habitatmech-meor-targets-20261009T112815Z.json
+    --input CLAUDE.md --input justfile --input docs/CURATION.md --input docs/HARMONIZATION.md
+    --input docs/RESEARCH.md --input docs/record-review-profile.md --input docs/record-reviews.md
+    --input .claude/skills/review-yaml-record/SKILL.md --input .claude/skills/curate-yaml-record/references/review-checklist.md
+    --input schema/record_review.yaml --input src/habitatmech/schema/habitatmech.yaml
+    --input src/habitatmech/seed.py --input curation/decisions.tsv --input curation/gold_parent_exclusions.tsv
+    --input curation/term_requests.tsv --input curation/term_requests_excluded.tsv
+    --input data/habitats/PATHS.tsv --input data/habitats/RETIRED.tsv --input data/raw/ontology_terms.tsv
+    --input data/raw/ontology_subclass_edges.tsv --input data/raw/isolation_source_groundings.tsv
+    --input data/raw/gold_ecosystem_paths.tsv --input data/raw/gold_path_biosamples.tsv
+    --input data/raw/gold_path_triads.tsv --input data/raw/gold_studies.tsv --input
+    data/raw/prego_habitats.tsv --input data/raw/prego_habitat_taxa.tsv --input data/raw/bacdive_isolation_sources.tsv
+    --input data/raw/bacdive_source_taxa.tsv --input data/raw/madin_habitats.tsv --input
+    data/raw/madin_habitat_taxa.tsv --input data/raw/environment_parameters.tsv --input
+    data/raw/MANIFEST.yaml --input data/raw/GOLD_MANIFEST.yaml --input data/habitats/engineered/biotransformation.yaml
+    --input reports/yaml_record_review/20261007T115519Z-biotransformation.md --input
+    conf/id_label_targets.yaml
+  summary: 38 local input hashes at 4ad205887; entire target read.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.7bfc46d5f7
+- check_id: schema
+  name: Target LinkML validation
+  command: env UV_CACHE_DIR=build/uv-cache just validate data/habitats/engineered/microbial_enhanced_oil_recovery.yaml
+  summary: No issues found.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.7bfc46d5f7
+- check_id: strict
+  name: Target closed-schema validation
+  command: env UV_CACHE_DIR=build/uv-cache just validate-strict data/habitats/engineered/microbial_enhanced_oil_recovery.yaml
+  summary: One file, zero errors.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.7bfc46d5f7
+- check_id: raw
+  name: All-fourteen-inventory source scan
+  command: "env UV_CACHE_DIR=build/uv-cache uv run python - <<'PY'\nfrom pathlib import\
+    \ Path\nimport csv,json\npath='Engineered > Biotransformation > Microbial enhanced\
+    \ oil recovery'\nwith Path('data/raw/gold_ecosystem_paths.tsv').open() as h:\n\
+    \    source=next(r for r in csv.DictReader(h,delimiter='\\t') if r['canonical_path']==path)\n\
+    needles={'habitatmech:GOLD.7bfc46d5f7',path,*source['gold_node_ids'].split('|')}\n\
+    for p in sorted(Path('data/raw').glob('*.tsv')):\n    hits=[]\n    with p.open()\
+    \ as h:\n        for n,row in enumerate(csv.DictReader(h,delimiter='\\t'),2):\n\
+    \            values=[v for x in row.values() for v in (x if isinstance(x,list)\
+    \ else [x]) if v]\n            if any(v in needles or needles.intersection(v.split('|'))\
+    \ for v in values):hits.append({'line':n,'row':row})\n    print(p.name,json.dumps(hits))\n\
+    PY"
+  summary: Exact path plus all three node IDs derived from the aggregate row. Older
+    counters are all zero; later inventory has one biosample and Gs0054992. No target
+    triad, taxa or parameter assertion found.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.7bfc46d5f7
+- check_id: route
+  name: Full source resolution and complete document reproduction
+  command: "env UV_CACHE_DIR=build/uv-cache uv run python - <<'PY'\nfrom habitatmech\
+    \ import seed as s\nfrom dataclasses import asdict\nfrom pathlib import Path\n\
+    import json,yaml\nrows=s.read_tsv('gold_ecosystem_paths.tsv')\nont=s.OntologyIndex(s.read_tsv('ontology_terms.tsv'),s.read_tsv('ontology_subclass_edges.tsv'))\n\
+    d=s.load_decisions(s.DECISIONS_PATH)\nmapping={}\nfor row in s.read_tsv('isolation_source_groundings.tsv'):\n\
+    \    for key in (s.norm_label(row['subject_label']),s.norm_label(row['subject_label_normalized'])):\n\
+    \        if key:mapping.setdefault(key,row)\nfor path in ['Engineered > Biotransformation\
+    \ > Microbial enhanced oil recovery','Engineered > Biotransformation']:\n    row=next(r\
+    \ for r in rows if r['canonical_path']==path)\n    ident=s.mint('GOLD',path)\n\
+    \    auto=s.resolve_gold(row,ont,mapping,s.leaf_claimants(rows),s.composed_claimants(rows))\n\
+    \    print(json.dumps({'path':path,'mint':ident,'automatic':asdict(auto),'final':asdict(s.apply_decision(auto,ident,d))}))\n\
+    c=next(c for c in s.build_corpus().concepts if c.identifier=='habitatmech:GOLD.7bfc46d5f7')\n\
+    assert s.build_document(c)==yaml.safe_load(Path('data/habitats/engineered/microbial_enhanced_oil_recovery.yaml').read_text())\n\
+    print('Whole document equal; sources',c.source_concepts,'reviewed',c.reviewed_sources)\n\
+    needles={s.norm_label(x) for x in ['Microbial enhanced oil recovery','Microbially\
+    \ enhanced oil recovery','MEOR']}\nfor ident,row in ont.terms.items():\n    if\
+    \ needles.intersection({s.norm_label(row['label']),*(s.norm_label(v) for v in\
+    \ row.get('synonyms','').split('|'))}):print('EXACT_CANDIDATE',ident,row)\nPY"
+  summary: Gold-unmatched mint retained by CLASS confirmation; one source, zero reviewed
+    sources. Whole generated document equals disk. Exact tested label/synonym scan
+    yields no candidate in the committed ontology slice.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.7bfc46d5f7
+- check_id: search
+  name: Ignored-inclusive maintained-input and prior-review search
+  command: rg --no-ignore --hidden -n 'GOLD\.7bfc46d5f7|Microbial enhanced oil recovery|microbial_enhanced_oil_recovery|gold.ecosystem:3535'
+    curation history research reports reviews data/habitats/PATHS.tsv
+  summary: Only CLASS decision735 and path lock2202 match. Secondary ignored-inclusive
+    MEOR/microbially-enhanced aliases yield an unrelated contextual research mention,
+    not a target review or authored definition.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.7bfc46d5f7
+- check_id: classification
+  name: Current classification and primary article identity
+  command: "env UV_CACHE_DIR=build/uv-cache uv run python - <<'PY'\nimport urllib.request,urllib.parse,io,json,hashlib\n\
+    from openpyxl import load_workbook\nu='https://gold.jgi.doe.gov/download?mode=ecosystempaths'\n\
+    b=urllib.request.urlopen(u,timeout=60).read();ws=load_workbook(io.BytesIO(b),read_only=True,data_only=True)['site\
+    \ data'];ws.reset_dimensions()\nprint('GOLD',len(b),hashlib.sha256(b).hexdigest())\n\
+    for n,row in enumerate(ws.iter_rows(values_only=True),1):\n    if 'Microbial enhanced\
+    \ oil recovery' in row:print('GOLD_ROW',n,row)\nu='https://www.ebi.ac.uk/europepmc/webservices/rest/search?'+urllib.parse.urlencode({'query':'DOI:10.1039/C7RA12245D','format':'json'})\n\
+    b=urllib.request.urlopen(u,timeout=60).read();print('PAPER',b.decode())\nPY"
+  summary: Current GOLD workbook row165 confirms terminal4313. Europe PMC resolves
+    DOI10.1039/c7ra12245d to PMID35538991/PMC9076845.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.7bfc46d5f7
+- check_id: primary
+  name: Inspected primary field-study text
+  command: "env UV_CACHE_DIR=build/uv-cache uv run python - <<'PY'\nimport urllib.request,hashlib,xml.etree.ElementTree\
+    \ as ET\nu='https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9076845/fullTextXML'\n\
+    b=urllib.request.urlopen(u,timeout=60).read();root=ET.fromstring(b)\nprint('FULLTEXT',len(b),hashlib.sha256(b).hexdigest())\n\
+    print('ARTICLE_IDS',[(e.attrib.get('pub-id-type'),e.text) for e in root.findall('.//article-id')])\n\
+    for e in root.findall('./front/article-meta/abstract'):\n    print('ABSTRACT','\
+    \ '.join(e.itertext()))\nfor sec in root.findall('./body/sec'):\n    title=' '.join(sec.find('title').itertext())\
+    \ if sec.find('title') is not None else ''\n    if any(word in title.lower() for\
+    \ word in ('introduction','materials','experimental','methods')):\n        print('SECTION',title,'\
+    \ '.join(sec.itertext())[:18000])\nfor u in ['https://gold.jgi.doe.gov/study?id=Gs0054992','https://gold.jgi.doe.gov/ecosystem/3535']:\n\
+    \    try:\n        with urllib.request.urlopen(u,timeout=30) as response:\n  \
+    \          b=response.read();print('GOLD_PAGE',u,response.status,len(b),hashlib.sha256(b).hexdigest(),b[:500])\n\
+    \    except Exception as exc:print('GOLD_PAGE_UNAVAILABLE',u,type(exc).__name__)\n\
+    PY"
+  summary: Read structured full-text article IDs, abstract, introduction and Materials
+    and methods. The intervention is distinguished from sample materials. Public GOLD
+    study/node reads failed; no crosswalk to this article is claimed.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.7bfc46d5f7
+- check_id: corpus
+  name: Full corpus reproduction
+  command: env UV_CACHE_DIR=build/uv-cache just verify-corpus
+  summary: 3208 expected and found; zero missing, extra or differing records.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.7bfc46d5f7
+- check_id: history
+  name: Native curation history
+  command: env UV_CACHE_DIR=build/uv-cache just validate-history
+  summary: 219 native histories valid.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.7bfc46d5f7
+- check_id: provenance
+  name: Raw inventory provenance
+  command: env UV_CACHE_DIR=build/uv-cache just provenance-check
+  summary: 14 committed inventories and two GOLD source snapshots current.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.7bfc46d5f7
+- check_id: references
+  name: Parent, status and reference regressions
+  command: env UV_CACHE_DIR=build/uv-cache uv run pytest -q tests/test_corpus_integrity.py
+    -k 'parent or reviewed_records or history or causal_edges_reference'
+  summary: 6 passed, 33 deselected. Deterministic integrity is not scientific proof.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.7bfc46d5f7
+- check_id: qc_receipt
+  name: Exact-baseline full QC receipt
+  command: gh run view 37922005631 --json status,conclusion,headSha,url
+  summary: Freshly queried SUCCESS at 4ad205887. The log read in the preceding publication
+    turn records 645 passed, 3 skipped and all native gates. No new local full-QC
+    run in this review.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.7bfc46d5f7
+- check_id: label_receipt
+  name: Exact-baseline ontology-label receipt
+  command: gh run view 37922005635 --json status,conclusion,headSha,url
+  summary: Freshly queried SUCCESS at 4ad205887. Configured ontology coverage and
+    accepted exceptions do not establish source meaning.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.7bfc46d5f7
+- check_id: unchanged
+  name: Scientific-input equivalence
+  command: git diff --exit-code 4ad2058873bd936baa7cba619e5fed8233cf92bb -- data curation
+    src scripts tests docs conf schema CLAUDE.md justfile
+  summary: Scientific inputs and generated records unchanged from the exact verified
+    base.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.7bfc46d5f7
+- check_id: original_source
+  name: Original source member reconstruction
+  status: unavailable
+  required: false
+  target_ids:
+  - habitatmech:GOLD.7bfc46d5f7
+  summary: Public Gs0054992 study and ecosystem3535 requests returned HTTP errors.
+    Exact study-ID web search returned no result. No exported GOLD token was available
+    in this review session; no authenticated query was issued for this target. Source
+    members and intended habitat scope remain unresolved.
+- check_id: molecular
+  name: Causal and expression adapters
+  status: not_applicable
+  required: false
+  target_ids:
+  - habitatmech:GOLD.7bfc46d5f7
+  summary: No target gene, protein, regulator, strain, expression dataset or causal
+    overlay is asserted. The field paper's amplicon results do not establish a target
+    expression-module key; iModulonDB is not applicable.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/habitats/engineered/microbial_enhanced_oil_recovery.yaml
+  locator: Entire YAML and both history events
+  support: supports
+  summary: ENGINEERED, UNGROUNDED/SEEDED, sole Biotransformation parent, three-node
+    GOLD attestation with zero-count omission; no authored definition, taxonomy or
+    mechanism.
+  accessed_at: '2026-10-09T11:32:19Z'
+- evidence_id: decision
+  kind: record_content
+  reference: curation/decisions.tsv
+  locator: Row735, exact source mint
+  support: partial
+  summary: CLASS CONFIRM_UNGROUNDED documents a lexical screen and expressly leaves
+    habitat identity unassessed; it is not an ITEM endorsement.
+  accessed_at: '2026-10-09T11:32:19Z'
+- evidence_id: source
+  kind: record_content
+  reference: data/raw/gold_ecosystem_paths.tsv
+  locator: Row1240; all-three-node exact scan; MANIFEST.yaml August16
+  support: supports
+  summary: Depth3 category collapses nodes3535/3875/4313 with all aggregate counters
+    zero. Zero-count omission is reproducible, not ecological absence.
+  accessed_at: '2026-10-09T11:32:19Z'
+- evidence_id: later_source
+  kind: record_content
+  reference: data/raw/gold_path_biosamples.tsv
+  locator: Row947; gold_studies.tsv row208; GOLD_MANIFEST.yaml August20
+  support: context_only
+  summary: One later biosample is assigned to path4313 and study Gs0054992 lists this
+    single path. That is a source lead, not an organism count, physical definition
+    or link to the inspected field trial.
+  accessed_at: '2026-10-09T11:32:19Z'
+- evidence_id: parent
+  kind: record_content
+  reference: data/habitats/engineered/biotransformation.yaml
+  locator: Whole parent YAML
+  support: context_only
+  summary: Parent is itself an undefined CLASS-swept category. Its 57 ORGANISM assertions
+    and other sources do not identify this child's samples or prove strict physical-habitat
+    subsumption.
+  accessed_at: '2026-10-09T11:32:19Z'
+- evidence_id: parent_history
+  kind: prior_review
+  reference: reports/yaml_record_review/20261007T115519Z-biotransformation.md
+  locator: Whole historical parent report
+  support: context_only
+  summary: The parent's prior process-versus-setting concern is background. It is
+    not an independently revalidated parent verdict, an inherited child defect or
+    a finding disposition.
+  accessed_at: '2026-10-09T11:32:19Z'
+- evidence_id: primary
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9076845/fullTextXML
+  locator: Su et al.2018, DOI10.1039/c7ra12245d, PMID35538991; abstract/introduction/Materials
+    and methods Sample collection
+  support: supports
+  summary: The experiment treats MEOR as an intervention and separately samples injection
+    water and produced oil/water fluids. It supports distinguishing technique, reservoir
+    and sample, not assigning this GOLD bin the identity, taxa, nutrients or outcome
+    of that trial.
+  accessed_at: '2026-10-09T11:32:19Z'
+  snapshot_sha256: 8d563cf002bebcf0f77d705768b301e58d1c4cd2df18d43748f149edbb00e7ac
+- evidence_id: gold
+  kind: database
+  reference: https://gold.jgi.doe.gov/download?mode=ecosystempaths
+  locator: Current site data workbook row165
+  support: supports
+  summary: Terminal4313 remains under Engineered/Biotransformation/Microbial enhanced
+    oil recovery/Unclassified/Unclassified. Classification alone does not resolve
+    procedure versus physical habitat.
+  accessed_at: '2026-10-09T11:32:19Z'
+  snapshot_sha256: 3933e5f0664915c1bbfa00212e17d013da360fb33dd52e509254050813135396
+- evidence_id: search
+  kind: search
+  reference: curation
+  locator: Exact ID/label/slug/node and MEOR/microbially-enhanced alias searches
+  support: context_only
+  summary: No target-owned ITEM decision, definition, causal overlay, native session
+    or earlier individual review was recovered in the named roots.
+  accessed_at: '2026-10-09T11:32:19Z'
+  search_scope: rg --no-ignore --hidden in curation,history,research,reports,reviews
+    and PATHS.tsv. Ignored-inclusive filenames also searched oil_recovery/oil-recovery/biotransformation.
+    Unrelated Microbial research mention was a search lead, not scientific evidence.
+    Exact quoted Gs0054992 web search returned no result; no global source-absence
+    claim.
+- evidence_id: unavailable
+  kind: database
+  reference: https://gold.jgi.doe.gov/study?id=Gs0054992
+  locator: Study and ecosystem3535 public reads
+  support: unknown
+  summary: HTTP access failed. Search-result abstracts and inaccessible publisher/OSTI
+    pages were not treated as inspected primary evidence; the exact paper's structured
+    open full text was inspected through Europe PMC.
+  accessed_at: '2026-10-09T11:32:19Z'
+- evidence_id: gates
+  kind: validation
+  reference: https://github.com/CultureBotAI/HabitatMech/actions/runs/37922005631
+  locator: Exact4ad205887 baseline and label run37922005635; fresh target/native gates
+  support: supports
+  summary: Deterministic checks pass on unchanged scientific inputs; they cannot decide
+    a procedure-versus-habitat identity.
+  accessed_at: '2026-10-09T11:32:19Z'
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Procedure versus associated physical setting
+  outcome: concern
+  summary: The literal source name denotes a recovery intervention in inspected primary
+    usage, while the record represents a habitat. A source-supported associated-setting
+    interpretation is possible but has not been established. Do not infer NOT_APPLICABLE
+    solely from the label.
+  evidence_ids:
+  - record
+  - decision
+  - primary
+  - later_source
+  target_ids:
+  - habitatmech:GOLD.7bfc46d5f7
+- assessment_id: grounding
+  area: grounding
+  topic: No forced near-match identity
+  outcome: supported
+  summary: Retaining the mint avoids falsely equating a procedure with petroleum,
+    a generic reservoir or a particular fluid. The bounded exact lexical scan does
+    not prove universal ontology absence.
+  evidence_ids:
+  - decision
+  - record
+  - search
+  target_ids:
+  - habitatmech:GOLD.7bfc46d5f7
+- assessment_id: parent
+  area: graph
+  topic: Strict Biotransformation parent semantics
+  outcome: unknown
+  summary: A traceable GOLD prefix is not sufficient to make a procedure or contextual
+    setting a strict habitat parent. Parent and child scope need a joint semantic
+    assessment, without inheriting the historical parent's finding as proof.
+  evidence_ids:
+  - parent
+  - parent_history
+  - gold
+  - primary
+  target_ids:
+  - habitatmech:GOLD.7bfc46d5f7
+- assessment_id: counts
+  area: quantity
+  topic: Distinct source snapshots
+  outcome: supported
+  summary: All older counters are zero and count/unit are omitted. The later one-biosample
+    inventory is not an organism assertion and does not change the historical aggregate.
+  evidence_ids:
+  - source
+  - later_source
+  - record
+  target_ids:
+  - habitatmech:GOLD.7bfc46d5f7
+- assessment_id: lifecycle
+  area: consistency
+  topic: CLASS versus ITEM status
+  outcome: supported
+  summary: One source with zero ITEM decisions correctly remains SEEDED. This review
+    neither promotes status nor treats CLASS membership alone as a defect.
+  evidence_ids:
+  - decision
+  - record
+  target_ids:
+  - habitatmech:GOLD.7bfc46d5f7
+- assessment_id: optional
+  area: completeness
+  topic: No imported trial-specific biology
+  outcome: supported
+  summary: No exact-target source rows support optional taxa, parameters or mechanisms.
+    The article's samples and intervention results must not populate this generic
+    GOLD record.
+  evidence_ids:
+  - source
+  - later_source
+  - primary
+  - record
+  target_ids:
+  - habitatmech:GOLD.7bfc46d5f7
+- assessment_id: reproduction
+  area: schema
+  topic: Reproducibility and ownership
+  outcome: supported
+  summary: Complete record equals seeded document. Future changes belong in maintained
+    decisions and, only with positive habitat evidence, a curated definition.
+  evidence_ids:
+  - gates
+  - decision
+  - record
+  target_ids:
+  - habitatmech:GOLD.7bfc46d5f7
+findings:
+- finding_id: process_habitat_scope
+  issue_key: microbial-enhanced-oil-recovery-process-habitat-scope
+  category: identity
+  severity: major
+  status: open
+  certainty: provisional
+  title: Process-named source lacks a resolved physical-habitat interpretation
+  description: Inspected experimental usage distinguishes the MEOR procedure from
+    sampled environments. The current source record has no positive ITEM identity
+    assessment and relies on a process-named parent category. The missing link is
+    which physical entity, if any, GOLD intends this bin to denote. This is a material
+    semantic uncertainty, not a claim that every process-named category is invalid,
+    proof of wrong mint, or a mandatory NOT_APPLICABLE outcome.
+  target_ids:
+  - habitatmech:GOLD.7bfc46d5f7
+  field_paths:
+  - label
+  - grounding_status
+  - parent_habitats
+  evidence_ids:
+  - record
+  - decision
+  - primary
+  - later_source
+  - gold
+  - parent
+  rule_id: docs/CURATION.md#decision-model
+  native_severity: major
+  normalization_reason: Potential procedure-versus-habitat mismatch affects the record's
+    central identity; provisional because original source intent is unresolved. Missing
+    optional definition or CLASS status alone is not the finding.
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Source identity and CLASS/ITEM decision
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Evidence-backed habitat definition if source scope warrants one
+actions:
+- action_id: resolve_identity
+  description: Recover source definitions and original members for nodes3535/3875/4313,
+    especially the Gs0054992 biosample. Decide at ITEM depth whether the source denotes
+    the procedure or a consistently bounded physical setting; reassess the Biotransformation
+    parent in the same decision.
+  finding_ids:
+  - process_habitat_scope
+  target_ids:
+  - habitatmech:GOLD.7bfc46d5f7
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Source identity and CLASS/ITEM decision
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Evidence-backed habitat definition if source scope warrants one
+  generator: 'Authorized normal curation: dry seed, target canary, append native history,
+    regenerate products.'
+  acceptance_checks:
+  - Document exact member accessions and source-scope evidence, or explicitly retain
+    unresolved scope if access remains unavailable.
+  - If the source is the procedure, use a justified NOT_APPLICABLE decision without
+    assigning a process identity to a habitat. If it denotes a physical setting, retain
+    the mint and define that evidence-backed habitat under a strictly broader genus.
+  - Preserve all three original GOLD nodes, full path, zero-count omission and separate
+    later biosample/study provenance; do not import generic field-trial taxa or conditions.
+  - Run target LinkML/strict validation, just verify-corpus, just validate-history,
+    normal generated-product gates, just qc, and any affected ontology-label validation.
+  - Retain this immutable observation and use exact lineage references in a successor
+    disposition.
+limitations:
+- One of3208 records reviewed here; the full-corpus goal remains incomplete.
+- Original source-member details remain unavailable. The one-biosample source lead
+  is not a crosswalk to the cited field trial.
+- The hierarchy concern is conditional on unresolved identity; no parent edge is declared
+  independently false or automatically removed.
+- The historical parent review supplies context only; parent findings are neither
+  closed nor reproduced as child findings.
+- Primary paper was read through structured Europe PMC full text after publisher access
+  failed. Only inspected sections support this assessment; no search snippet or inaccessible
+  source is scientific evidence.
+- Exact-baseline fullQC and ontology-label receipts are reused on unchanged scientific
+  inputs. No new global ontology refresh; three baseline native tests remain skipped.
+- No scientific data, native status/history or GitHub state changed; no publication
+  or SSSOM/KGX readiness assessment.

@@ -41,10 +41,44 @@ def test_authored_definitions_are_applied_to_generated_concepts(repo_root):
     }
 
     methane = build_document(concepts["habitatmech:GOLD.d510166905"])
-    assert "CHEBI:16183" in methane["xrefs"]
+    assert methane["xrefs"] == ["CHEBI:16183"]
+    assert methane["parent_habitats"] == ["ENVO:00010483"]
+    assert methane["grounding_status"] == "UNGROUNDED"
+    assert methane["mapping_status"] == "REVIEWED"
+    assert methane["source_attestations"] == [{
+        "source": "GOLD",
+        "source_id": "gold.ecosystem:4451",
+        "source_label": "Methane",
+        "source_path": "Engineered > Bioremediation > Hydrocarbon > Methane",
+        "assertion_count": 2,
+        "assertion_unit": "ORGANISM",
+        "notes": "2 GOLD ecosystem node ids share this path; first shown. "
+        "See data/raw/gold_ecosystem_paths.tsv.",
+    }]
+    definition_event = next(
+        event for event in methane["curation_history"] if event["action"] == "DEFINED"
+    )
+    assert authored[methane["identifier"]].notes in definition_event["changes"]
     assert "Methane" not in {
         synonym["synonym_text"] for synonym in methane.get("synonyms", [])
     }
+
+
+def test_methane_rationale_distinguishes_device_from_material(repo_root):
+    definition = load_curated_definitions(repo_root / "curation" / "term_requests.tsv")[
+        "habitatmech:GOLD.d510166905"
+    ]
+    assert definition.definition == (
+        "An environmental material which is part of an engineered bioremediation "
+        "system, is exposed to methane-containing gas, and supports microbially "
+        "mediated methane oxidation."
+    )
+    assert definition.parent_mode == "REPLACE"
+    assert "devices rather than matrices" in definition.notes
+    assert "nonoxygenated contents, not methane production" in definition.notes
+    assert "10.1007/s00253-020-10748-z" in definition.notes
+    assert "Original source-member matrix and gas-exposure scope remain unverified" in definition.notes
+    assert "over-specifies anaerobic methane production" not in definition.notes
 
 
 def test_pending_definition_worklist_excludes_authored_and_rejected(repo_root):
