@@ -7,7 +7,6 @@ grounding_status: EXACT
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002006
-- habitatmech:GOLD.f07ee97491
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5661
@@ -21,3 +20,18 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-09T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.f07ee97491
+    for habitatmech:GOLD.b099e463e2 (Engineered > Bioreactor > Sulphur Autotrophic
+    Denitrification > Interstitial water). Reviewed hierarchy exclusion (#1762): official
+    ENVO a2455d1a77e46bb8a664d65a157166b539269042 defines ENVO:03600009 as naturally
+    occurring liquid water in rock/sediment pores, with independent genus ENVO:00002006.
+    Generic pore-water material is not a subtype of its denitrification reactor/process
+    source context, whose current parent is ENVO:00002123 bioreactor. Exclude only
+    this GOLD context-parent contribution; preserve the liquid-water genus, identity,
+    definition, nodes 5661/5662, full path, zero-count omissions, EXACT/SEEDED state
+    and prior events. No ITEM identity approval or replacement definition is inferred.
+    Original sample scope and source-to-ontology equivalence remain unresolved in
+    #1764; an unjoined reactor paper is not sample identity evidence. Evidence: reports/yaml_record_review/20261009T010147Z-interstitial_water.md.'
