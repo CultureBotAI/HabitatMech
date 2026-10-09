@@ -58,9 +58,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 
 
-<h2>Also called</h2>
-<ul class="plain">
-<li>Persistent organic pollutants (POP) <span class="meta">— HabitatMech curation</span></li></ul>
 
 <h2>Curation</h2>
 <p class="meta">What a curator decided about this record, and why. A record built
@@ -75,6 +72,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">DEFINED</span>
     <span class="meta">2026-09-06 · codex-gpt-5</span>
     <p>Defined as &#39;persistent organic pollutant bioremediation material&#39; under ENVO:00010483 &#39;environmental material&#39;. Definition authored from the record&#39;s committed deep-research report under research/habitats/, read in full; no new paid research was commissioned. GOLD places the leaf under Engineered &gt; Bioremediation and names a contaminant class rather than a sampled substance, so the record denotes the contaminated matrix being remediated, not the persistent organic pollutants themselves. ENVO:00010483 &#39;environmental material&#39; is the tightest vendored genus broad enough to cover POP-contaminated soil, sediment, sludge and water; ENVO:00002116 &#39;contaminated soil&#39; and ENVO:03600001 &#39;chemically contaminated sediment&#39; remain narrower material-specific near misses, and ENVO:00002204 &#39;anthropogenic contamination feature&#39; is a geographic feature rather than a material. The definition uses criteria-based persistent organic pollutants instead of the current Stockholm Convention list because PAHs sit under this source path in GOLD and are covered by CLRTAP rather than Stockholm.</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_SYNONYM_EXCLUDED</span>
+    <span class="meta">2026-10-09 · codex-gpt-5</span>
+    <p>Omitted automatic retention of displaced source label &#39;Persistent organic pollutants (POP)&#39; when defining habitatmech:GOLD.1a78606807 as &#39;persistent organic pollutant bioremediation material&#39;. Verbatim source attestations are preserved. Reviewed alias exclusion (#1824; structured review 20261009T212636Z-persistent_organic_pollutants_pop F1): the GOLD label names the pollutants, not environmental material containing them. The authored term-request row leaves exact_synonym empty; suppress only automatic retention of the displaced label. Preserve the verbatim GOLD source_label/path, all three source nodes, nine ORGANISM assertions, authored definition, both parents and ITEM/REVIEWED state. Current CHEBI:77853 and ENVO:00010483 distinguish the contaminants from environmental material; the EPA POP reservoirs description makes the same distinction. This does not settle the separate definition and Bioremediation-parent scope question (#1825).</p>
   </li>
 </ol>
 
