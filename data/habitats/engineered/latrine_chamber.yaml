@@ -3,8 +3,6 @@ label: Latrine chamber
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- mesh:D062611
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4952
@@ -23,3 +21,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-09T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution mesh:D062611 for habitatmech:GOLD.23dcd93012
+    (Engineered > Solid waste > Latrine chamber). Reviewed hierarchy exclusion (#1776):
+    NLM mesh:D062611 (https://id.nlm.nih.gov/mesh/M0568791.json) denotes discarded
+    material, whereas WHO sanitation system fact sheet 2 distinguishes containment
+    chambers from their contents. The GOLD chamber label does not establish a strict
+    material genus; a metonymic contents interpretation remains unverified because
+    original node4952 context is unavailable. Exclude only this exact GOLD material-context
+    contribution. Preserve the mint, label, category, node/path, zero-count and predicate
+    omissions, CLASS/SEEDED state and previous events. Do not infer an ITEM identity
+    decision, definition, replacement parent or particular latrine technology. The
+    separate Composting child remains unchanged (#1689). Evidence: reviews/structured/20261009T050248Z-latrine_chamber/review.yaml.'
