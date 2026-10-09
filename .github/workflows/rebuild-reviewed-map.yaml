@@ -1,0 +1,69 @@
+---
+name: Temporary reviewed-record map rebuild
+
+on:  # yamllint disable-line rule:truthy
+  push:
+    branches: [codex/review-input-interior-records-20261009]
+    paths: [.github/workflows/rebuild-reviewed-map.yaml]
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      OMP_NUM_THREADS: "2"
+      MKL_NUM_THREADS: "2"
+      OPENBLAS_NUM_THREADS: "2"
+      NUMBA_NUM_THREADS: "2"
+      TOKENIZERS_PARALLELISM: "false"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.13"
+      - uses: actions/download-artifact@v4
+        with:
+          name: reviewed-record-map-6a9fdc1cf2276c8d0c15fad6d25ec1f55e34e782
+          run-id: 37864843048
+          github-token: ${{ github.token }}
+          path: build/prior-map
+      - name: Install unchanged locked environments
+        run: |
+          uv sync --locked --extra dev
+          uv sync --locked --project conf/embedding-runtime
+      - name: Verify prior cache and export current inputs
+        run: |
+          uv run --locked python scripts/embedding_pipeline.py check --output data/text_map --input build/prior-map/build/text-map/inputs.jsonl --cache build/prior-map/build/text-map/vectors.sqlite
+          uv run --locked python scripts/text_map_inputs.py --output build/text-map/inputs.jsonl
+          uv run --locked python scripts/text_map_inputs.py --limit 32 --output build/text-map/projection-canary.jsonl
+          uv run --locked python scripts/text_map_inputs.py --record data/habitats/engineered/interstitial_water.yaml --output build/text-map/canary.jsonl
+          cp build/prior-map/build/text-map/vectors.sqlite build/text-map/vectors.sqlite
+      - name: Encode changed-record canary and prove reuse
+        run: |
+          uv run --locked --project conf/embedding-runtime python scripts/embedding_pipeline.py embed --input build/text-map/canary.jsonl --cache build/text-map/vectors.sqlite --profile-output build/text-map/profile.json --device cpu --batch-size 8 > build/text-map/canary-first.json
+          uv run --locked --project conf/embedding-runtime python scripts/embedding_pipeline.py embed --input build/text-map/canary.jsonl --cache build/text-map/vectors.sqlite --profile-output build/text-map/profile.json --device cpu --batch-size 8 > build/text-map/canary-repeat.json
+          uv run --locked python -c 'import json; from pathlib import Path; first=json.loads(Path("build/text-map/canary-first.json").read_text()); repeat=json.loads(Path("build/text-map/canary-repeat.json").read_text()); assert first["count"] == first["encoded"] + first["reused"] == 1, first; assert repeat["count"] == repeat["reused"] == 1 and repeat["encoded"] == 0, repeat; print(first, repeat)'
+      - name: Project canary and complete full map
+        run: |
+          uv run --locked --project conf/embedding-runtime python scripts/embedding_pipeline.py project --input build/text-map/projection-canary.jsonl --cache build/text-map/vectors.sqlite --profile build/text-map/profile.json --output build/text-map/canary-map
+          uv run --locked python scripts/embedding_pipeline.py check --output build/text-map/canary-map --input build/text-map/projection-canary.jsonl --cache build/text-map/vectors.sqlite
+          uv run --locked --project conf/embedding-runtime python scripts/embedding_pipeline.py embed --input build/text-map/inputs.jsonl --cache build/text-map/vectors.sqlite --profile-output build/text-map/profile.json --device cpu --batch-size 8 > build/text-map/full-embed.json
+          uv run --locked python -c 'import json; from pathlib import Path; result=json.loads(Path("build/text-map/full-embed.json").read_text()); assert result["count"] == result["reused"] == 3208 and result["encoded"] == 0, result; print(result)'
+          uv run --locked --project conf/embedding-runtime python scripts/embedding_pipeline.py project --input build/text-map/inputs.jsonl --cache build/text-map/vectors.sqlite --profile build/text-map/profile.json --output data/text_map --title "HabitatMech semantic text map"
+          uv run --locked python scripts/embedding_pipeline.py check --output data/text_map --input build/text-map/inputs.jsonl --cache build/text-map/vectors.sqlite > build/text-map/full-check.json
+      - name: Upload checked products and cache
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reviewed-record-map-${{ github.sha }}
+          retention-days: 7
+          path: |
+            data/text_map/
+            build/text-map/
+          if-no-files-found: warn
