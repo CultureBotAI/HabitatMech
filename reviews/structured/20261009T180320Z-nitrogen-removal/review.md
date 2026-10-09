@@ -1,0 +1,856 @@
+# Record review: Nitrogen removal
+
+- Review: 20261009T180320Z-nitrogen-removal
+- Repository: culturebotai/HabitatMech
+- Started UTC: 2026-10-09T17:43:42Z
+- Finished UTC: 2026-10-09T18:03:20Z
+- Reviewer: codex-gpt-5 (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The source is associated with real treatment materials and environments, not proven to be a process-only non-habitat. Exact current members span a contactor surface and multiple tannery treatment stages. The record and its undefined Nutrient removal parent still lack a settled physical boundary, so the strict habitat hierarchy needs curation.
+
+## Scope And Provenance
+
+One complete generated habitat record and claim-relevant maintained inputs; the full 3208-record review goal remains incomplete.
+
+Selection: Next engineered filename lead without a dedicated legacy filename or structured target-path match, then uniquely resolved by exact path and ID. Ignored files were included. Historical filenames are selection aids, not proof of current scientific coverage.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9495f2185349237e21ac1a7a42b84d3d6b709225.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| habitatmech:GOLD.92b66873c0 | data/habitats/engineered/nitrogen_removal.yaml | generated | Nitrogen removal |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| validate | passed | True | habitatmech:GOLD.92b66873c0 | uv run linkml-validate -s src/habitatmech/schema/habitatmech.yaml --target-class HabitatRecord data/habitats/engineered/nitrogen_removal.yaml<br>No issues found |
+| validate-strict | passed | True | habitatmech:GOLD.92b66873c0 | uv run python scripts/validate_strict.py data/habitats/engineered/nitrogen_removal.yaml<br>Validating 1 files with 15 workers; schema=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/src/habitatmech/schema/habitatmech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      1<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                reports/instance_validation_failures.tsv |
+| Authoritative full QC | passed | True | habitatmech:GOLD.92b66873c0 | All native quality gates passed. Tests: 648 passed, 3 skipped in 810.83 seconds; 223 history records; 3208 closed-schema-valid and exactly reproduced records; 32 causal overlays; 252 redirects; 109 term-request table rows (114 rendered term requests). Generated site and documentation are current. Deterministic success is not scientific completeness. |
+| ID-label correspondence | passed | True | habitatmech:GOLD.92b66873c0 | 1178 OK_CANONICAL, 1 OK_SYNONYM, 5 OK_EXCEPTION, 2057 SKIPPED_NO_ADAPTER. All configured supported pairs correspond. |
+| Complete target reproduction and actual resolver execution | passed | False | habitatmech:GOLD.92b66873c0 | All five full build_document outputs equal their parsed target YAMLs; all full-path mints reproduce. Each has one source and zero ITEM-reviewed contributors. Actual default/applied routes and parent contributors were inspected. |
+| Existing immutable-bundle validation | passed | False | habitatmech:GOLD.92b66873c0 | Before saving this review, the shared helper validated all 37 retained bundles; coverage is declared scopes only. |
+| Original frozen GOLD member reconstruction | unavailable | False | habitatmech:GOLD.92b66873c0 | Expected original GOLD nodes/edges, frozen goldData.xlsx and triad-intermediate filenames were not found in the stated ignored-inclusive source bounds. Committed inventories passed provenance checks, but original member-level re-extraction was not performed. The later public export was read separately. |
+| Structured expression evidence | not_applicable | False | habitatmech:GOLD.92b66873c0 | No target gene, locus, regulator or expression assertion requires an adapter query. Contextual study expression results are outside the assessed habitat claims. |
+
+## Scientific And Domain Assessments
+
+### Exact source entity, label and habitat boundary
+
+identity: concern. Targets: habitatmech:GOLD.92b66873c0.
+
+GOLD and ENA establish physical wastewater-treatment sampling, including materials, a contactor surface and different operating stages. This refutes an automatic process-only NOT_APPLICABLE decision from the leaf label, but does not choose between treatment system, sampled material, biofilm or function-qualified source bin.
+
+### Strict is-a versus source classification context
+
+grounding: concern. Targets: habitatmech:GOLD.92b66873c0.
+
+The only parent is minted Nutrient removal, itself undefined and parented to water. Nitrogen removal is a subtype of nutrient removal as a treatment function, but that logical relationship alone cannot prove a habitat is-a edge. Compatible physical scopes for both source bins must be established; a true broader treatment-setting relation remains possible.
+
+### Attestations, counts, stable IDs and generated lifecycle
+
+provenance: supported. Targets: habitatmech:GOLD.92b66873c0.
+
+Source label/path, first historical node, collapse note where applicable, assertion unit and two-event history agree with maintained inputs. Only nonzero frozen organism counters are emitted; BioSamples and study memberships remain separate evidence. No item-level grounding or status promotion is implied by this scientific review.
+
+### Sample-specific support, version differences and claim placement
+
+scope: unknown. Targets: habitatmech:GOLD.92b66873c0.
+
+Inspected source instances and primary studies support only their stated contexts. The later public export is not a reconstruction of either frozen August source snapshot. Neither a matching count nor a shared study proves identical membership; no new taxa, parameters, expression claims or mechanisms were transferred.
+
+### Optional biology and maintained ownership
+
+completeness: supported. Targets: habitatmech:GOLD.92b66873c0.
+
+No mandatory biological claim is missing merely because optional fields are empty. Corrections belong to maintained decisions/definitions or guarded source-parent exclusions, not generated records. The source bin has not undergone ITEM identity curation; this report preserves that honest native state.
+
+### Causal evidence and expression adapters
+
+graph: not_applicable. Targets: habitatmech:GOLD.92b66873c0.
+
+The target has no causal graph, gene, locus, regulator or expression assertion. No target-specific iModulonDB query is applicable. Functional language in contextual study methods is not evaluated as a target mechanism or negative biological evidence.
+
+### Native structure, references, history and reproduction
+
+schema: supported. Targets: habitatmech:GOLD.92b66873c0.
+
+Required native gates and both focused schema checks passed. Corpus tests and history/reproduction cover structural references and status invariants; they do not prove source denotation, hierarchy truth or full-corpus scientific review.
+
+## Findings
+
+### F1: Treatment-function hierarchy lacks compatible physical habitat scope
+
+major / open / provisional; issue key: nitrogen-removal-physical-entity-parent-scope.
+
+The exact source members support several physical treatment contexts, while the target and Nutrient removal parent have no definition selecting material versus setting. A function-level subtype relationship cannot establish the published habitat subclass by itself. The unresolved genus is consequential; it is not a defect merely because optional text is empty or the record is SEEDED. A blanket process-only exclusion would also exceed the evidence.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Perform coordinated ITEM assessments of this exact source bin and its Nutrient removal parent, using the joined contactor/tannery evidence and recovering the missing frozen membership where possible. Define compatible physical scopes if supported. Exclude only the exact source parent contribution if it proves contextual; do not ground to a process, impose a single reactor technology or collapse the Anammox child.
+
+- The interpretation accommodates the documented contactor surface, influent, buffering, aeration and digestion samples without turning study methods into universal habitat traits.
+- The target and parent's definitions support the selected is-a edge, or a guarded exclusion pins habitatmech:GOLD.92b66873c0, its exact path and expected habitatmech:GOLD.a18a70ae30.
+- Retain nodes3828/4255, two ORGANISM assertions and separate seven-BioSample frozen evidence; no count replacement from the live six-member census.
+- Add focused path/parent/status regressions; preserve every unaffected source assertion and prior event. Authorized curation requires append-only session history, canary inspection, exact corpus reproduction, strict/history/label/site checks and full QC.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/habitats/engineered/nitrogen_removal.yaml; Entire target YAML; immediate parent records; listed child/context records | supports | Nitrogen removal; habitatmech:GOLD.92b66873c0; ENGINEERED / UNGROUNDED / SEEDED. One GOLD attestation, one immediate parent and two generated history events. No definition, synonym, xref, environmental parameter, named taxon, literature item, causal graph, discussion or dataset is asserted. These empty optional fields are not defects by themselves. |
+| inventory | data/raw/gold_ecosystem_paths.tsv; Exact target path; related row locators listed in summary | supports | gold_ecosystem_paths.tsv row791: nodes3828/4255, depth4 and two ORGANISM assertions. decisions.tsv row850 is CLASS CONFIRM_UNGROUNDED; PATHS.tsv row2374. gold_path_biosamples.tsv row697 has seven frozen BioSamples; gold_studies.tsv rows777/1434/1725 link Gs0114277/Gs0127430/Gs0132947. No exact complete-triad row was found. The Anammox child and its one organism are separate. |
+| route | src/habitatmech/seed.py; mint; resolve_gold; apply_decision; ingest_gold; build_document; executed complete build_corpus comparison | supports | The path-derived mint and full parsed target reproduce exactly. Actual default route is gold_unmatched and applied route curated_confirm_ungrounded_from_gold_unmatched. Each target has one source concept, zero ITEM-reviewed sources, no mapping predicate or resolver extra parents, no definition and no target GOLD-parent exclusion. Its sole parent comes from the separate GOLD prefix pass. Omission of a self-mapping predicate agrees with SourceAttestation.mapping_predicate; CLASS provenance correctly remains SEEDED. |
+| workbook | https://gold.jgi.doe.gov/download?mode=site_excel; Biosample rows6748 and21623-21627; SequencingProject rows62577 and127873-127877; Study rows20801 and28699 | partial | The later export has six exact-path BioSamples and no exact-path Organism rows. Gb0110062 identifies a rotating biological contactor surface at Guelph; Gp0110328 joins it to enrichment-culture study Gs0114277. Gb0147408-Gb0147412 join through Gp0193880-Gp0193884 to Gs0127430 and PRJEB6461, spanning influent, buffering, aeration and sludge digestion. Gs0132947 was not recovered from the scanned Study sheet. Do not replace frozen seven BioSamples or two ORGANISM assertions with this later census. |
+| classification | https://gold.jgi.doe.gov/download?mode=ecosystempaths; site data row461: node4255 and exact path; row460 separately represents the Anammox descendant. | supports | The freshly downloaded classification workbook corroborates the specified current source path or prefix and separation from its children. It does not independently reconstruct every historical collapsed node, frozen organism membership, count or is-a semantics. |
+| ontology | https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms?obo_id=ENVO%3A00002001; Current official ENVO metadata via OLS API, compared with vendored term rows | context_only | Current API checks verified active IDs/labels/definitions for farm ENVO:00000078, landfill ENVO:00000533, waste water ENVO:00002001, sewage ENVO:00002018, anthropogenic terrestrial biome ENVO:01000219 and waste treatment plant ENVO:00002272 (no definition returned). ENVO:06105300 denotes a wastewater treatment process, not a physical habitat identity. Adjacent or broader terms are not automatically exact groundings for the target. |
+| absence | Local corpus, inventories, maintained curation and review surfaces; Exact target ID/path/label/slug; structured raw and curation TSV matching; ignored-inclusive file traversal | context_only | All 14 raw TSV inventories and top-level curation TSVs were parsed using exact-field/pipe-member matching. ID/label/slug searches included ignored files under curation (43 text files), history (224), research (121), legacy record reports (1251), and structured reviews (74 YAML/Markdown files). Matches include neighboring records and prior context reports, not an earlier individual target review or target-owned definition/overlay. Expected original GOLD nodes/edges, frozen bulk-export and triad-intermediate filenames were not found in the bounded source-file search; the later temporary public workbook is explicitly different. |
+| ena | https://www.ebi.ac.uk/ena/browser/api/xml/PRJEB6461; Project title/description; exact SAMEA2579812 and SAMEA2579813 XML inspected separately | supports | The project describes full-scale tannery treatment stages including buffering, primary/secondary aeration and sludge digestion. The joined I and B samples identify influent and buffering, with waste water as material and bioreactor as feature. Physical samples span treatment stages; they are not the abstract removal process. |
+| epa-treatment | https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P100GE8B.TXT; EPA832-R-08-006, Chapter1.1; terminology only | context_only | The document distinguishes treatment processes, wastewater streams and treatment facilities, and discusses nitrogen/phosphorus removal duties. Functional inclusion is not by itself a physical habitat subclass assertion; no current regulatory or quantitative-performance claim is adopted. |
+| prior-context | reports/yaml_record_review/20261007T042034Z-anammox.md; Identity and hierarchy discussion; complete current Anammox child; aerobic sibling review | context_only | Prior reviews flagged process/setting ambiguity in neighboring records. They are leads, not evidence that this parent is a process, a reactor or a reviewed habitat. The Anammox child's ITEM decision does not propagate upward. |
+| checks | just qc; build/review-20261009m-qc.log; unchanged scientific tree at 9495f2185349237e21ac1a7a42b84d3d6b709225 | supports | All native quality gates passed. Tests: 648 passed, 3 skipped in 810.83 seconds; 223 history records; 3208 closed-schema-valid and exactly reproduced records; 32 causal overlays; 252 redirects; 109 term-request table rows (114 rendered term requests). Generated site and documentation are current. Deterministic success is not scientific completeness. |
+
+## Limits And Additional Notes
+
+- The two frozen ORGANISM members and seventh frozen BioSample were not reconstructed. The later six-sample/zero-organism census is a distinct snapshot.
+- Guelph's study text is brief and the retrieved 2020 contactor paper is contextual, not an exact accession-level link to Gs0114277; it is not relied on as proof of that study's membership.
+- No target gene, regulator, expression or causal-edge assertion is present. ENA's functional description is used only to identify treatment context, not to add pathway claims.
+- Frozen August inventories and the later public GOLD workbook are different snapshots. No current membership/count was imported into maintained inputs.
+- Some GOLD HTML pages and browser ontology/full-text endpoints were unavailable; exported source tables and official API/XML fallbacks supplied the explicitly described evidence, not an assumed complete historical reconstruction.
+- The three skipped tests and the label gate's existing exceptions/no-adapter skips remain limits. Tests, labels, hashes and reproduction do not establish scientific completeness.
+- No SSSOM/KGX emitted-triple audit or current kg-microbe model certification was performed.
+- No paid research, scientific curation, status/history promotion or GitHub mutation occurred. Prior reviews are leads and context, not primary scientific authority.
+- Initial native inspect preceded scientific assessment. Additional local context was captured with the same Git base only after every original input hash was checked unchanged; no stale hashes were silently refreshed.
+- One source/member census initially produced oversized diagnostic output. A complete bounded exact-target scan was run to recover readable rows; only inspected outputs support the findings. Both scans completed normally.
+- Manual work was confined to temporary drafts and this new immutable review bundle; generated habitats, source inventories, pages and previous reviews remain unchanged.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261009T180320Z-nitrogen-removal
+kind: record
+repository: culturebotai/HabitatMech
+title: 'Record review: Nitrogen removal'
+started_at: '2026-10-09T17:43:42Z'
+finished_at: '2026-10-09T18:03:20Z'
+reviewer:
+  identity: codex-gpt-5
+  kind: agent
+  model: gpt-5
+  independence: self_review
+  independence_basis: The same agent family has contributed repository curation and
+    publication work. This is a separate evidence-review pass, not independent approval.
+skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The source is associated with real treatment materials and environments,
+  not proven to be a process-only non-habitat. Exact current members span a contactor
+  surface and multiple tannery treatment stages. The record and its undefined Nutrient
+  removal parent still lack a settled physical boundary, so the strict habitat hierarchy
+  needs curation.
+source:
+  git_revision: 9495f2185349237e21ac1a7a42b84d3d6b709225
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: conf/record_review.yaml
+    sha256: c2f5d0eb4c5744f5fe354c92184ddab144dc2688dba952b032b4f3d597bc08d6
+    role: context
+  - path: conf/sources.yaml
+    sha256: a8e069f9278068b57fa234f43e03c8d893f857827b83fd10cfa92d6815aed642
+    role: context
+  - path: curation/decisions.tsv
+    sha256: 0602cca13e6495da256a6f1cfd5897462f73f9739a729447862017d93c148efd
+    role: context
+  - path: curation/definition_source_label_exclusions.tsv
+    sha256: cc4da2e7e5e8750e6c023683014aa37a909230280f231eec5be7c71795340312
+    role: context
+  - path: curation/external_xrefs.tsv
+    sha256: cf8394a6ab22e35efd9e252aef422018226280830bf816a39bf4f2256ff75ad5
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: 2b7f7bb6977a9d7a1b19856962bb63cf0a7f53ab435b3fb7100bffdfddfba3c5
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 9977e384b79128d6e89c85f28e35c77d29644d503dea6d53c12628599e33f7f3
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: b59b9e800a918135e3915145d4d8098bb48dcea36a312b3004c594a57d221ae9
+    role: context
+  - path: data/habitats/engineered/anammox.yaml
+    sha256: 41608d986e1dc21b2040f05940ab2c4a469643462c145a786d569b30113f5d10
+    role: context
+  - path: data/habitats/engineered/built_environment.yaml
+    sha256: df6de674d7d48a98b7d1d43a0a5c67a696550f00e1fb787ec71a3569acc47021
+    role: context
+  - path: data/habitats/engineered/cultivation_substrate.yaml
+    sha256: fc46329f0ac9c82e748fc850316e90cd551277c28b0c56313c23da9a65c7d0c4
+    role: context
+  - path: data/habitats/engineered/leachate__2f66e051.yaml
+    sha256: 41640aeec6d6479c32ad4dd855e36445904b17ef003123549d5e3dfde84b130e
+    role: context
+  - path: data/habitats/engineered/municipal_and_sewage.yaml
+    sha256: 08fd8e8ba551fca06bf6887b4c3dd12442cd19a6447971f619eee6a3a769bb05
+    role: context
+  - path: data/habitats/engineered/municipal_landfill.yaml
+    sha256: d09b552a447d578c19002615cf1f8dcfc58abf9e9422f53566ecae252c3095ad
+    role: context
+  - path: data/habitats/engineered/mushroom_farm.yaml
+    sha256: fdeb4cd0777bf9fb7500029eaafb4dbc100de796909549036d31c6b8942aa52b
+    role: context
+  - path: data/habitats/engineered/nitrogen_removal.yaml
+    sha256: 592d08490bef81939a131de80ad5f0a7cc14aa241c7f6a2d1e77b18fa1c03339
+    role: target
+  - path: data/habitats/engineered/nutrient_removal.yaml
+    sha256: b78f0cf2b3fb5f87a8062677b2d4612685b82aed949647e35ad0f935fc1c2f80
+    role: context
+  - path: data/habitats/engineered/raw_wastewater.yaml
+    sha256: 3a1395e27037fd2afa3421b2ccdabc7725f774a8e17f6fc713d33e72932b4a63
+    role: context
+  - path: data/habitats/engineered/waste_water.yaml
+    sha256: 774c88de3169fb8ae95ea05deb748f21e036a35d0b21734c81c228493ec96056
+    role: context
+  - path: data/habitats/engineered/wheat_straw.yaml
+    sha256: 544f1dd2eede813e7d1d1483500d3705fb604cdd187ce8bd53ab493cdba7a1e4
+    role: context
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: 36df8306394c06c352b73e0bf7b47a2858784cedac7389a24d0b78f593ece646
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: f7aa39ee762d94f1902d9f08f328cb897bc543e4e226057eb4770d24bfcc6eb5
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reports/yaml_record_review/20261007T042034Z-anammox.md
+    sha256: 4d8a45f5874df39bc3a51a6bb1bc06d950dc015b281acb3b894347f4d49c552d
+    role: context
+  - path: reports/yaml_record_review/20261008T063726Z-cultivation_substrate.md
+    sha256: 07d7852c305d200549dcd2ac9e35869c1b67f0b963c634954bf636e925240ca5
+    role: context
+  - path: reports/yaml_record_review/20261008T085203Z-dissolved_organics_aerobic.md
+    sha256: 4def9ac56d1fad6d0c057bb30ca7ec231a6c5c46a645ae0052ba9d145e69b534
+    role: context
+  - path: reports/yaml_record_review/20261009T001109Z-influent.md
+    sha256: 729b88102ec6202c484a83631375835dac577343b1331481e9887f27e1fd31ca
+    role: context
+  - path: reviews/structured/20261009T061718Z-leachate__2f66e051/review.yaml
+    sha256: 78d940722de2ec913209a1e245901aff786d2248f3131144b79970ab38d7115a
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/extract_gold_biosamples.py
+    sha256: b6a2773c86fe718e1ca0b1d7b32709f0eee491ac813655e310aa0817c0fec31b
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 52d2a22309a1f4a10728a663560bb4d918346c292221fd34139b99b4159d3fe5
+    role: context
+  - path: src/habitatmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 92adf631fa099120a497ff7001473e659347d23ac9b418f04cd341ddad5d2a89
+    role: context
+scope:
+  description: One complete generated habitat record and claim-relevant maintained
+    inputs; the full 3208-record review goal remains incomplete.
+  selection: Next engineered filename lead without a dedicated legacy filename or
+    structured target-path match, then uniquely resolved by exact path and ID. Ignored
+    files were included. Historical filenames are selection aids, not proof of current
+    scientific coverage.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - habitatmech:GOLD.92b66873c0
+  exclusions:
+  - target: Other 3207 corpus records
+    reason: Parents, children and prior reports were read as context; none is individually
+      certified by this one-record review.
+targets:
+- target_id: habitatmech:GOLD.92b66873c0
+  path: data/habitats/engineered/nitrogen_removal.yaml
+  label: Nitrogen removal
+  record_class: HabitatRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained source or curation input
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained source or curation input
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained source or curation input
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/gold_ecosystem_paths.tsv
+    role: Maintained source or curation input
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Source-to-record generator
+checks:
+- check_id: schema-0
+  name: validate
+  status: passed
+  required: true
+  summary: 'uv run linkml-validate -s src/habitatmech/schema/habitatmech.yaml --target-class
+    HabitatRecord data/habitats/engineered/nitrogen_removal.yaml
+
+    No issues found'
+  target_ids:
+  - habitatmech:GOLD.92b66873c0
+  command: env UV_CACHE_DIR=build/uv-cache just validate data/habitats/engineered/nitrogen_removal.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema-1
+  name: validate-strict
+  status: passed
+  required: true
+  summary: "uv run python scripts/validate_strict.py data/habitats/engineered/nitrogen_removal.yaml\n\
+    Validating 1 files with 15 workers; schema=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/src/habitatmech/schema/habitatmech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      1\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                reports/instance_validation_failures.tsv"
+  target_ids:
+  - habitatmech:GOLD.92b66873c0
+  command: env UV_CACHE_DIR=build/uv-cache just validate-strict data/habitats/engineered/nitrogen_removal.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: qc
+  name: Authoritative full QC
+  status: passed
+  required: true
+  summary: 'All native quality gates passed. Tests: 648 passed, 3 skipped in 810.83
+    seconds; 223 history records; 3208 closed-schema-valid and exactly reproduced
+    records; 32 causal overlays; 252 redirects; 109 term-request table rows (114 rendered
+    term requests). Generated site and documentation are current. Deterministic success
+    is not scientific completeness.'
+  target_ids:
+  - habitatmech:GOLD.92b66873c0
+  command: env UV_CACHE_DIR=build/uv-cache just qc
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - checks
+- check_id: labels
+  name: ID-label correspondence
+  status: passed
+  required: true
+  summary: 1178 OK_CANONICAL, 1 OK_SYNONYM, 5 OK_EXCEPTION, 2057 SKIPPED_NO_ADAPTER.
+    All configured supported pairs correspond.
+  target_ids:
+  - habitatmech:GOLD.92b66873c0
+  command: env UV_CACHE_DIR=build/uv-cache just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  scope_note: Configured record identities and grounded causal nodes only. Minted
+    and MeSH identities lack adapters; parent semantics, source attestations and characteristic
+    taxa are not independently certified.
+- check_id: target-reproduction
+  name: Complete target reproduction and actual resolver execution
+  status: passed
+  required: false
+  summary: All five full build_document outputs equal their parsed target YAMLs; all
+    full-path mints reproduce. Each has one source and zero ITEM-reviewed contributors.
+    Actual default/applied routes and parent contributors were inspected.
+  target_ids:
+  - habitatmech:GOLD.92b66873c0
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - route
+- check_id: prior-review-integrity
+  name: Existing immutable-bundle validation
+  status: passed
+  required: false
+  summary: Before saving this review, the shared helper validated all 37 retained
+    bundles; coverage is declared scopes only.
+  target_ids:
+  - habitatmech:GOLD.92b66873c0
+  command: env UV_CACHE_DIR=build/uv-cache uv run python scripts/record_review.py
+    check
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: original-source-reextraction
+  name: Original frozen GOLD member reconstruction
+  status: unavailable
+  required: false
+  summary: Expected original GOLD nodes/edges, frozen goldData.xlsx and triad-intermediate
+    filenames were not found in the stated ignored-inclusive source bounds. Committed
+    inventories passed provenance checks, but original member-level re-extraction
+    was not performed. The later public export was read separately.
+  target_ids:
+  - habitatmech:GOLD.92b66873c0
+  evidence_ids:
+  - absence
+  - inventory
+  - workbook
+- check_id: imodulondb
+  name: Structured expression evidence
+  status: not_applicable
+  required: false
+  summary: No target gene, locus, regulator or expression assertion requires an adapter
+    query. Contextual study expression results are outside the assessed habitat claims.
+  target_ids:
+  - habitatmech:GOLD.92b66873c0
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/habitats/engineered/nitrogen_removal.yaml
+  locator: Entire target YAML; immediate parent records; listed child/context records
+  accessed_at: '2026-10-09T17:57:38Z'
+  support: supports
+  summary: Nitrogen removal; habitatmech:GOLD.92b66873c0; ENGINEERED / UNGROUNDED
+    / SEEDED. One GOLD attestation, one immediate parent and two generated history
+    events. No definition, synonym, xref, environmental parameter, named taxon, literature
+    item, causal graph, discussion or dataset is asserted. These empty optional fields
+    are not defects by themselves.
+- evidence_id: inventory
+  kind: database
+  reference: data/raw/gold_ecosystem_paths.tsv
+  locator: Exact target path; related row locators listed in summary
+  accessed_at: '2026-10-09T17:57:38Z'
+  support: supports
+  summary: 'gold_ecosystem_paths.tsv row791: nodes3828/4255, depth4 and two ORGANISM
+    assertions. decisions.tsv row850 is CLASS CONFIRM_UNGROUNDED; PATHS.tsv row2374.
+    gold_path_biosamples.tsv row697 has seven frozen BioSamples; gold_studies.tsv
+    rows777/1434/1725 link Gs0114277/Gs0127430/Gs0132947. No exact complete-triad
+    row was found. The Anammox child and its one organism are separate.'
+- evidence_id: route
+  kind: record_content
+  reference: src/habitatmech/seed.py
+  locator: mint; resolve_gold; apply_decision; ingest_gold; build_document; executed
+    complete build_corpus comparison
+  accessed_at: '2026-10-09T17:57:38Z'
+  support: supports
+  summary: The path-derived mint and full parsed target reproduce exactly. Actual
+    default route is gold_unmatched and applied route curated_confirm_ungrounded_from_gold_unmatched.
+    Each target has one source concept, zero ITEM-reviewed sources, no mapping predicate
+    or resolver extra parents, no definition and no target GOLD-parent exclusion.
+    Its sole parent comes from the separate GOLD prefix pass. Omission of a self-mapping
+    predicate agrees with SourceAttestation.mapping_predicate; CLASS provenance correctly
+    remains SEEDED.
+- evidence_id: workbook
+  kind: database
+  reference: https://gold.jgi.doe.gov/download?mode=site_excel
+  locator: Biosample rows6748 and21623-21627; SequencingProject rows62577 and127873-127877;
+    Study rows20801 and28699
+  accessed_at: '2026-10-09T17:57:38Z'
+  support: partial
+  summary: The later export has six exact-path BioSamples and no exact-path Organism
+    rows. Gb0110062 identifies a rotating biological contactor surface at Guelph;
+    Gp0110328 joins it to enrichment-culture study Gs0114277. Gb0147408-Gb0147412
+    join through Gp0193880-Gp0193884 to Gs0127430 and PRJEB6461, spanning influent,
+    buffering, aeration and sludge digestion. Gs0132947 was not recovered from the
+    scanned Study sheet. Do not replace frozen seven BioSamples or two ORGANISM assertions
+    with this later census.
+  snapshot_sha256: 5f48b2f50fb2a9257754960a0f0e12dc6e8fa121e97c3e9f4497249e5fe6e439
+- evidence_id: classification
+  kind: database
+  reference: https://gold.jgi.doe.gov/download?mode=ecosystempaths
+  locator: 'site data row461: node4255 and exact path; row460 separately represents
+    the Anammox descendant.'
+  accessed_at: '2026-10-09T17:57:38Z'
+  support: supports
+  summary: The freshly downloaded classification workbook corroborates the specified
+    current source path or prefix and separation from its children. It does not independently
+    reconstruct every historical collapsed node, frozen organism membership, count
+    or is-a semantics.
+  snapshot_sha256: 3933e5f0664915c1bbfa00212e17d013da360fb33dd52e509254050813135396
+- evidence_id: ontology
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms?obo_id=ENVO%3A00002001
+  locator: Current official ENVO metadata via OLS API, compared with vendored term
+    rows
+  accessed_at: '2026-10-09T17:57:38Z'
+  support: context_only
+  summary: Current API checks verified active IDs/labels/definitions for farm ENVO:00000078,
+    landfill ENVO:00000533, waste water ENVO:00002001, sewage ENVO:00002018, anthropogenic
+    terrestrial biome ENVO:01000219 and waste treatment plant ENVO:00002272 (no definition
+    returned). ENVO:06105300 denotes a wastewater treatment process, not a physical
+    habitat identity. Adjacent or broader terms are not automatically exact groundings
+    for the target.
+- evidence_id: absence
+  kind: search
+  reference: Local corpus, inventories, maintained curation and review surfaces
+  locator: Exact target ID/path/label/slug; structured raw and curation TSV matching;
+    ignored-inclusive file traversal
+  accessed_at: '2026-10-09T17:57:38Z'
+  support: context_only
+  summary: All 14 raw TSV inventories and top-level curation TSVs were parsed using
+    exact-field/pipe-member matching. ID/label/slug searches included ignored files
+    under curation (43 text files), history (224), research (121), legacy record reports
+    (1251), and structured reviews (74 YAML/Markdown files). Matches include neighboring
+    records and prior context reports, not an earlier individual target review or
+    target-owned definition/overlay. Expected original GOLD nodes/edges, frozen bulk-export
+    and triad-intermediate filenames were not found in the bounded source-file search;
+    the later temporary public workbook is explicitly different.
+  search_scope: Path.rglob and rg --no-ignore --hidden included ignored files. Original-source
+    filename search covered build, data/raw and configured kg-microbe/data. Review
+    selection matched exact target paths across all structured YAMLs and legacy filename
+    suffixes; corpus ID resolution traversed all 3208 YAMLs. No internet-wide absence
+    is claimed.
+- evidence_id: ena
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/browser/api/xml/PRJEB6461
+  locator: Project title/description; exact SAMEA2579812 and SAMEA2579813 XML inspected
+    separately
+  support: supports
+  summary: The project describes full-scale tannery treatment stages including buffering,
+    primary/secondary aeration and sludge digestion. The joined I and B samples identify
+    influent and buffering, with waste water as material and bioreactor as feature.
+    Physical samples span treatment stages; they are not the abstract removal process.
+  accessed_at: '2026-10-09T17:57:38Z'
+- evidence_id: epa-treatment
+  kind: authority
+  reference: https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P100GE8B.TXT
+  locator: EPA832-R-08-006, Chapter1.1; terminology only
+  support: context_only
+  summary: The document distinguishes treatment processes, wastewater streams and
+    treatment facilities, and discusses nitrogen/phosphorus removal duties. Functional
+    inclusion is not by itself a physical habitat subclass assertion; no current regulatory
+    or quantitative-performance claim is adopted.
+  accessed_at: '2026-10-09T17:57:38Z'
+- evidence_id: prior-context
+  kind: prior_review
+  reference: reports/yaml_record_review/20261007T042034Z-anammox.md
+  locator: Identity and hierarchy discussion; complete current Anammox child; aerobic
+    sibling review
+  support: context_only
+  summary: Prior reviews flagged process/setting ambiguity in neighboring records.
+    They are leads, not evidence that this parent is a process, a reactor or a reviewed
+    habitat. The Anammox child's ITEM decision does not propagate upward.
+  accessed_at: '2026-10-09T17:57:38Z'
+- evidence_id: checks
+  kind: validation
+  reference: just qc
+  locator: build/review-20261009m-qc.log; unchanged scientific tree at 9495f2185349237e21ac1a7a42b84d3d6b709225
+  accessed_at: '2026-10-09T18:03:20Z'
+  support: supports
+  summary: 'All native quality gates passed. Tests: 648 passed, 3 skipped in 810.83
+    seconds; 223 history records; 3208 closed-schema-valid and exactly reproduced
+    records; 32 causal overlays; 252 redirects; 109 term-request table rows (114 rendered
+    term requests). Generated site and documentation are current. Deterministic success
+    is not scientific completeness.'
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact source entity, label and habitat boundary
+  outcome: concern
+  summary: GOLD and ENA establish physical wastewater-treatment sampling, including
+    materials, a contactor surface and different operating stages. This refutes an
+    automatic process-only NOT_APPLICABLE decision from the leaf label, but does not
+    choose between treatment system, sampled material, biofilm or function-qualified
+    source bin.
+  target_ids:
+  - habitatmech:GOLD.92b66873c0
+  evidence_ids:
+  - record
+  - inventory
+  - workbook
+  - classification
+  - ena
+  - epa-treatment
+  - prior-context
+- assessment_id: hierarchy
+  area: grounding
+  topic: Strict is-a versus source classification context
+  outcome: concern
+  summary: The only parent is minted Nutrient removal, itself undefined and parented
+    to water. Nitrogen removal is a subtype of nutrient removal as a treatment function,
+    but that logical relationship alone cannot prove a habitat is-a edge. Compatible
+    physical scopes for both source bins must be established; a true broader treatment-setting
+    relation remains possible.
+  target_ids:
+  - habitatmech:GOLD.92b66873c0
+  evidence_ids:
+  - record
+  - route
+  - ontology
+  - ena
+  - epa-treatment
+  - prior-context
+- assessment_id: provenance
+  area: provenance
+  topic: Attestations, counts, stable IDs and generated lifecycle
+  outcome: supported
+  summary: Source label/path, first historical node, collapse note where applicable,
+    assertion unit and two-event history agree with maintained inputs. Only nonzero
+    frozen organism counters are emitted; BioSamples and study memberships remain
+    separate evidence. No item-level grounding or status promotion is implied by this
+    scientific review.
+  target_ids:
+  - habitatmech:GOLD.92b66873c0
+  evidence_ids:
+  - record
+  - inventory
+  - route
+  - classification
+  dimensions:
+  - name: source-category
+    value: Engineered
+    definition: Top-level GOLD ecosystem used for the record's generated category.
+    evidence_ids:
+    - record
+    - inventory
+  - name: review-depth
+    value: CLASS; 0 ITEM-reviewed contributors of 1
+    definition: Native source-concept curation depth, independent of the verdict in
+      this review document.
+    evidence_ids:
+    - inventory
+    - route
+- assessment_id: evidence-scope
+  area: scope
+  topic: Sample-specific support, version differences and claim placement
+  outcome: unknown
+  summary: Inspected source instances and primary studies support only their stated
+    contexts. The later public export is not a reconstruction of either frozen August
+    source snapshot. Neither a matching count nor a shared study proves identical
+    membership; no new taxa, parameters, expression claims or mechanisms were transferred.
+  target_ids:
+  - habitatmech:GOLD.92b66873c0
+  evidence_ids:
+  - workbook
+  - inventory
+  - ena
+  - epa-treatment
+  - prior-context
+- assessment_id: completeness
+  area: completeness
+  topic: Optional biology and maintained ownership
+  outcome: supported
+  summary: No mandatory biological claim is missing merely because optional fields
+    are empty. Corrections belong to maintained decisions/definitions or guarded source-parent
+    exclusions, not generated records. The source bin has not undergone ITEM identity
+    curation; this report preserves that honest native state.
+  target_ids:
+  - habitatmech:GOLD.92b66873c0
+  evidence_ids:
+  - record
+  - inventory
+  - absence
+  - route
+- assessment_id: mechanisms
+  area: graph
+  topic: Causal evidence and expression adapters
+  outcome: not_applicable
+  summary: The target has no causal graph, gene, locus, regulator or expression assertion.
+    No target-specific iModulonDB query is applicable. Functional language in contextual
+    study methods is not evaluated as a target mechanism or negative biological evidence.
+  target_ids:
+  - habitatmech:GOLD.92b66873c0
+  evidence_ids:
+  - record
+- assessment_id: validation
+  area: schema
+  topic: Native structure, references, history and reproduction
+  outcome: supported
+  summary: Required native gates and both focused schema checks passed. Corpus tests
+    and history/reproduction cover structural references and status invariants; they
+    do not prove source denotation, hierarchy truth or full-corpus scientific review.
+  target_ids:
+  - habitatmech:GOLD.92b66873c0
+  evidence_ids:
+  - checks
+  - route
+findings:
+- finding_id: F1
+  issue_key: nitrogen-removal-physical-entity-parent-scope
+  category: scope
+  severity: major
+  status: open
+  certainty: provisional
+  title: Treatment-function hierarchy lacks compatible physical habitat scope
+  description: The exact source members support several physical treatment contexts,
+    while the target and Nutrient removal parent have no definition selecting material
+    versus setting. A function-level subtype relationship cannot establish the published
+    habitat subclass by itself. The unresolved genus is consequential; it is not a
+    defect merely because optional text is empty or the record is SEEDED. A blanket
+    process-only exclusion would also exceed the evidence.
+  target_ids:
+  - habitatmech:GOLD.92b66873c0
+  field_paths:
+  - label
+  - parent_habitats[0]
+  evidence_ids:
+  - record
+  - inventory
+  - route
+  - workbook
+  - ena
+  - epa-treatment
+  rule_id: CLAUDE.md semantic invariants; docs/CURATION.md habitat identity and strict
+    broader parents
+  native_severity: major
+  normalization_reason: The finding concerns consequential source identity or strict
+    hierarchy, not optional text or seed status. Local and shared major classifications
+    agree; uncertainty is retained in certainty and the proposed action.
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained owner of separately authorized scope/hierarchy curation
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained owner of separately authorized scope/hierarchy curation
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained owner of separately authorized scope/hierarchy curation
+actions:
+- action_id: A1
+  description: Perform coordinated ITEM assessments of this exact source bin and its
+    Nutrient removal parent, using the joined contactor/tannery evidence and recovering
+    the missing frozen membership where possible. Define compatible physical scopes
+    if supported. Exclude only the exact source parent contribution if it proves contextual;
+    do not ground to a process, impose a single reactor technology or collapse the
+    Anammox child.
+  finding_ids:
+  - F1
+  target_ids:
+  - habitatmech:GOLD.92b66873c0
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained owner of separately authorized scope/hierarchy curation
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained owner of separately authorized scope/hierarchy curation
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained owner of separately authorized scope/hierarchy curation
+  acceptance_checks:
+  - The interpretation accommodates the documented contactor surface, influent, buffering,
+    aeration and digestion samples without turning study methods into universal habitat
+    traits.
+  - The target and parent's definitions support the selected is-a edge, or a guarded
+    exclusion pins habitatmech:GOLD.92b66873c0, its exact path and expected habitatmech:GOLD.a18a70ae30.
+  - Retain nodes3828/4255, two ORGANISM assertions and separate seven-BioSample frozen
+    evidence; no count replacement from the live six-member census.
+  - Add focused path/parent/status regressions; preserve every unaffected source assertion
+    and prior event. Authorized curation requires append-only session history, canary
+    inspection, exact corpus reproduction, strict/history/label/site checks and full
+    QC.
+  generator: 'Separately authorized curation only: just seed; just seed-canary <identifier>
+    --force; just seed-apply --force; just render; post-commit redirects if identity/label
+    changes.'
+limitations:
+- The two frozen ORGANISM members and seventh frozen BioSample were not reconstructed.
+  The later six-sample/zero-organism census is a distinct snapshot.
+- Guelph's study text is brief and the retrieved 2020 contactor paper is contextual,
+  not an exact accession-level link to Gs0114277; it is not relied on as proof of
+  that study's membership.
+- No target gene, regulator, expression or causal-edge assertion is present. ENA's
+  functional description is used only to identify treatment context, not to add pathway
+  claims.
+- Frozen August inventories and the later public GOLD workbook are different snapshots.
+  No current membership/count was imported into maintained inputs.
+- Some GOLD HTML pages and browser ontology/full-text endpoints were unavailable;
+  exported source tables and official API/XML fallbacks supplied the explicitly described
+  evidence, not an assumed complete historical reconstruction.
+- The three skipped tests and the label gate's existing exceptions/no-adapter skips
+  remain limits. Tests, labels, hashes and reproduction do not establish scientific
+  completeness.
+- No SSSOM/KGX emitted-triple audit or current kg-microbe model certification was
+  performed.
+- No paid research, scientific curation, status/history promotion or GitHub mutation
+  occurred. Prior reviews are leads and context, not primary scientific authority.
+notes:
+- Initial native inspect preceded scientific assessment. Additional local context
+  was captured with the same Git base only after every original input hash was checked
+  unchanged; no stale hashes were silently refreshed.
+- One source/member census initially produced oversized diagnostic output. A complete
+  bounded exact-target scan was run to recover readable rows; only inspected outputs
+  support the findings. Both scans completed normally.
+- Manual work was confined to temporary drafts and this new immutable review bundle;
+  generated habitats, source inventories, pages and previous reviews remain unchanged.
+tags:
+- record-review
+- engineered
+- source-scope
+```
