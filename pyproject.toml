@@ -95,6 +95,8 @@ extend-exclude = [
     # claw-governed vendored files: byte-identical to canon, linted there, not
     # here. Reformatting one would break check_vendored_sync, which is the point
     # of vendoring them. Matches AntibioticMech and CellStructureMech.
+    "scripts/record_review.py",
+    "tests/test_record_review_contract.py",
     "scripts/check_vendored_sync.py",
     "scripts/validate_id_label_correspondence.py",
     "scripts/chem_formula.py",
