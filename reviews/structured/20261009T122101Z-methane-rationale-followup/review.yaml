@@ -1,0 +1,444 @@
+schema_version: 1.0.0
+review_id: 20261009T122101Z-methane-rationale-followup
+kind: record
+repository: CultureBotAI/HabitatMech
+title: 'Methane rationale follow-up: correct anaerobic reactor reasoning while preserving
+  habitat scope'
+started_at: '2026-10-09T12:14:43Z'
+finished_at: '2026-10-09T12:21:01Z'
+reviewer:
+  identity: codex-gpt-5
+  kind: agent
+  model: gpt-5
+  independence: self_review
+  independence_basis: Same agent implementing and reassessing the bounded correction;
+    not independent approval.
+skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: Resolved only the confirmed minor anaerobic-reactor rationale defect. The
+  maintained notes now separate material from device and distinguish anoxic contents
+  from methane production, with an inspected experimental counterexample. Definition,
+  identity, parent, xref, source counts and native status remain unchanged. Original
+  GOLD member scope and the authored gas-exposure restriction remain unverified.
+source:
+  git_revision: ddd0a5aa6d27ec10a69f4c05508d270837684327
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/SKILL.md
+    sha256: c279e6d24969c0c9f0cf4f486bfde70a118762b4af3b706f20eb152710a15dd9
+    role: context
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: curation/decisions.tsv
+    sha256: 0602cca13e6495da256a6f1cfd5897462f73f9739a729447862017d93c148efd
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 9977e384b79128d6e89c85f28e35c77d29644d503dea6d53c12628599e33f7f3
+    role: context
+  - path: curation/term_requests/envo_robot_template.tsv
+    sha256: b4d2fcdb3bd004eac9603057e6c24721617d9e04d91dc721521909e33d523c0d
+    role: context
+  - path: data/habitats/engineered/methane.yaml
+    sha256: 254f96e3c4be5c8cb2f87b2e434c7942253c87bc5019b8cc3b54a492632a0dc4
+    role: target
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: docs/CURATION.md
+    sha256: 36df8306394c06c352b73e0bf7b47a2858784cedac7389a24d0b78f593ece646
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: f7aa39ee762d94f1902d9f08f328cb897bc543e4e226057eb4770d24bfcc6eb5
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/README.md
+    sha256: 819361a711697f96ff9c1aa0b27e94302547970b3b54777d67ec1449db5e543a
+    role: context
+  - path: history/mappings/methane/2026-09-10T131350Z-claude-code-7d9a98.yaml
+    sha256: b648f20a297dfbaaccfa7e8237cb9de748d20fd67d313974e7b7099e76da134b
+    role: context
+  - path: history/mappings/methane/2026-10-09T121653Z-codex-gpt-5-f2c1bf.yaml
+    sha256: 52bdd5536b62202d3c8672e7d02eb75c973d0781c655cdb5db80eb873458aa9d
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: pages/habitats/methane-bioremediation-material-habitatmech-gold-d510166905.html
+    sha256: d1a74003b101733712235b9fa2cf8c21f5459a8d146f101a83affd083c44ee22
+    role: context
+  - path: reviews/structured/20261009T112815Z-methane/review.yaml
+    sha256: 21be6b27d1574fdca28eae2bb8e908ae9794a9c23c29dc2486e925957a6a0d28
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/habitatmech/curate/definitions.py
+    sha256: decd02eea029e884ab1a8bbb51dd870edb5544906b3ddd39598147b27ce572c9
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 52d2a22309a1f4a10728a663560bb4d918346c292221fd34139b99b4159d3fe5
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 92adf631fa099120a497ff7001473e659347d23ac9b418f04cd341ddad5d2a89
+    role: context
+  - path: tests/test_curated_definitions.py
+    sha256: 74ae85df586c967a542620fab544b62f6375320f6d03a0dcf8626a3f72588de2
+    role: context
+targets:
+- target_id: habitatmech:GOLD.d510166905
+  path: data/habitats/engineered/methane.yaml
+  label: methane bioremediation material
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained rationale and definition date
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Validated generated record and audit event
+scope:
+  description: Bounded rationale-finding disposition, including a whole current target
+    read and differential verification. Not a new whole-record literature review.
+  selection: Explicit successor to 20261009T112815Z-methane finding anaerobic_rationale.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - habitatmech:GOLD.d510166905
+  exclusions:
+  - target: Other 3207 habitat records, including MEOR and MFC
+    reason: No new scientific assessment or disposition; MEOR remains open in issue1794.
+  - target: Original GOLD member matrix and gas-exposure scope
+    reason: Not resolved by the generic experimental counterexample; retained as limitations.
+checks:
+- check_id: capture
+  name: Exact changed-input capture
+  command: env UV_CACHE_DIR=build/uv-cache uv run python scripts/record_review.py
+    inspect --targets /private/tmp/habitatmech-pr1792-followup-targets.json --input
+    CLAUDE.md --input justfile --input docs/CURATION.md --input docs/HARMONIZATION.md
+    --input docs/RESEARCH.md --input docs/record-review-profile.md --input docs/record-reviews.md
+    --input .claude/skills/review-yaml-record/SKILL.md --input .claude/skills/curate-yaml-record/SKILL.md
+    --input .claude/skills/curate-yaml-record/references/review-checklist.md --input
+    schema/record_review.yaml --input src/habitatmech/schema/habitatmech.yaml --input
+    curation/term_requests.tsv --input curation/decisions.tsv --input data/raw/ontology_terms.tsv
+    --input src/habitatmech/seed.py --input src/habitatmech/curate/definitions.py
+    --input tests/test_curated_definitions.py --input reviews/structured/20261009T112815Z-methane/review.yaml
+    --input history/README.md --input history/mappings/methane/2026-09-10T131350Z-claude-code-7d9a98.yaml
+    --input history/mappings/methane/2026-10-09T121653Z-codex-gpt-5-f2c1bf.yaml --input
+    curation/term_requests/envo_robot_template.tsv --input pages/habitats/methane-bioremediation-material-habitatmech-gold-d510166905.html
+  summary: Captured 25 input hashes and exact branch base before the disposition assessment.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.d510166905
+- check_id: schema
+  name: Target LinkML validation
+  command: env UV_CACHE_DIR=build/uv-cache just validate data/habitats/engineered/methane.yaml
+  summary: No issues found.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.d510166905
+- check_id: strict
+  name: Target closed-schema validation
+  command: env UV_CACHE_DIR=build/uv-cache just validate-strict data/habitats/engineered/methane.yaml
+  summary: One file scanned, zero errors.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.d510166905
+- check_id: regression
+  name: Definition and generated-document regressions
+  command: env UV_CACHE_DIR=build/uv-cache uv run pytest -q tests/test_curated_definitions.py
+  summary: 13 passed. New regression pins correction evidence and preserved definition;
+    expanded target assertions protect parent, chemical xref, counts, source path
+    and status.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.d510166905
+- check_id: preservation
+  name: Structured input and generated-field differential
+  command: "env UV_CACHE_DIR=build/uv-cache uv run python - <<'PY'\nimport csv,io,subprocess,yaml\n\
+    from pathlib import Path\nbase='e21db9430'\np='data/habitats/engineered/methane.yaml'\n\
+    old=yaml.safe_load(subprocess.check_output(['git','show',f'{base}:{p}'],text=True));new=yaml.safe_load(Path(p).read_text())\n\
+    o=old.pop('curation_history');n=new.pop('curation_history');assert old==new\n\
+    assert o[:2]==n[:2] and len(o)==len(n)==3\nassert o[2]['action']==n[2]['action']=='DEFINED'\
+    \ and o[2]['curator']==n[2]['curator']\np='curation/term_requests.tsv'\na=list(csv.DictReader(io.StringIO(subprocess.check_output(['git','show',f'{base}:{p}'],text=True)),delimiter='\\\
+    t'));b=list(csv.DictReader(Path(p).open(),delimiter='\\t'))\nassert len(a)==len(b)\n\
+    changed=[]\nfor before,after in zip(a,b):\n if before!=after:\n  changed.append(before['identifier']);diff={k\
+    \ for k in before if before[k]!=after[k]};assert diff=={'notes','date'}\nassert\
+    \ changed==['habitatmech:GOLD.d510166905']\nassert subprocess.check_output(['git','diff','--name-only',base,'--','data/habitats'],text=True).splitlines()==['data/habitats/engineered/methane.yaml']\n\
+    print('Only methane notes/date and generated DEFINED changes/date differ; all\
+    \ target scientific fields and all other habitat records unchanged.')\nPY"
+  summary: Only methane notes/date and generated DEFINED changes/date differ from
+    main e21db9430. All other target fields, earlier generated events and all other
+    habitat records are unchanged.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.d510166905
+- check_id: corpus
+  name: Whole-corpus reproduction
+  command: env UV_CACHE_DIR=build/uv-cache just verify-corpus
+  summary: 3208 expected and found; zero missing, extra or differing.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.d510166905
+- check_id: history
+  name: Native append-only history validation
+  command: env UV_CACHE_DIR=build/uv-cache just validate-history
+  summary: 220 valid records, including the new correctly attributed methane session.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.d510166905
+- check_id: render
+  name: Site regeneration
+  command: env UV_CACHE_DIR=build/uv-cache just render
+  summary: 3208 habitat pages,252 redirects,8 categories,114 term requests regenerated.
+    Inspected diff changes only the target rationale/date and citation link.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.d510166905
+- check_id: term_table
+  name: Term-request regeneration
+  command: env UV_CACHE_DIR=build/uv-cache just term-requests
+  summary: 109 term rows regenerated; only the methane comment changes.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.d510166905
+- check_id: unchanged
+  name: Unchanged raw, identity and schema surfaces
+  command: git diff --exit-code origin/main -- data/raw curation/decisions.tsv curation/external_xrefs.tsv
+    curation/gold_parent_exclusions.tsv src schema docs
+  summary: Exit0; no identity, ontology, source, hierarchy or generator changes.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.d510166905
+- check_id: source_members
+  name: Original GOLD sample reconstruction
+  status: not_applicable
+  required: false
+  target_ids:
+  - habitatmech:GOLD.d510166905
+  summary: Not required to resolve the bounded rationale defect; prior unverified
+    member and gas-phase scope remains explicitly unresolved. No new member-level
+    evidence claimed.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/habitats/engineered/methane.yaml
+  locator: Entire regenerated YAML
+  summary: Read all fields and generated events; scientific fields unchanged and corrected
+    notes appear only in the definition event.
+  support: supports
+  accessed_at: '2026-10-09T12:21:01Z'
+- evidence_id: notes
+  kind: record_content
+  reference: curation/term_requests.tsv
+  locator: Row83, exact source mint
+  summary: Only notes/date changed. Device-versus-material reasoning replaces the
+    methanogenesis-only assertion; original definition and source-scope limitation
+    are explicit.
+  support: supports
+  accessed_at: '2026-10-09T12:21:01Z'
+- evidence_id: ontology
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FENVO_00002124
+  locator: Live exact term and committed ontology_terms.tsv row7214
+  summary: Active anaerobic bioreactor definition constrains oxygenation, not the
+    direction of methane metabolism. Live JSON3495bytes SHA256 a305ded694c5b562cc846f2cda2b7ae6fa98b27c92f3dbaa9907a29999a97295.
+  support: supports
+  accessed_at: '2026-10-09T12:21:01Z'
+- evidence_id: primary
+  kind: primary_source
+  reference: https://link.springer.com/article/10.1007/s00253-020-10748-z
+  locator: Stultiens et al.2020, abstract; Establishment methods; Enrichment results
+    and Fig3
+  summary: Re-read the publisher text. Methane oxidation was measured under anoxic
+    reactor conditions. This refutes the production-only rationale, not a claim about
+    original GOLD members.
+  support: supports
+  accessed_at: '2026-10-09T12:21:01Z'
+- evidence_id: prior
+  kind: prior_review
+  reference: reviews/structured/20261009T112815Z-methane/review.yaml
+  locator: Finding anaerobic_rationale; stable issue key methane-anaerobic-reactor-rationale
+  summary: Original minor confirmed finding and scope limitations preserved without
+    rewriting the observation.
+  support: supports
+  accessed_at: '2026-10-09T12:21:01Z'
+- evidence_id: regression
+  kind: validation
+  reference: tests/test_curated_definitions.py
+  locator: Methane assertions and test_methane_rationale_distinguishes_device_from_material
+  summary: 13 passing tests; additional differential verification confirms no other
+    target scientific field or habitat record changed.
+  support: supports
+  accessed_at: '2026-10-09T12:21:01Z'
+- evidence_id: history
+  kind: record_content
+  reference: history/mappings/methane/2026-10-09T121653Z-codex-gpt-5-f2c1bf.yaml
+  locator: Entire new session record
+  summary: Correct codex-gpt-5/gpt-5/codex attribution; references old session and
+    review. Original session file remains unchanged.
+  support: supports
+  accessed_at: '2026-10-09T12:21:01Z'
+- evidence_id: products
+  kind: validation
+  reference: curation/term_requests/envo_robot_template.tsv
+  locator: Methane row and generated target HTML audit event
+  summary: Diff inspected after normal generation. Only rationale/comment/date are
+    changed; citation renders as a link.
+  support: supports
+  accessed_at: '2026-10-09T12:21:01Z'
+assessments:
+- assessment_id: rationale
+  area: evidence
+  topic: Oxygen condition does not imply methane production
+  outcome: supported
+  summary: The corrected rationale is supported by the exact ontology definition and
+    a primary experimental counterexample.
+  evidence_ids:
+  - notes
+  - ontology
+  - primary
+  target_ids:
+  - habitatmech:GOLD.d510166905
+- assessment_id: preservation
+  area: consistency
+  topic: Bounded correction and generated ownership
+  outcome: supported
+  summary: Maintained input changed; target was canaried and artifacts regenerated.
+    Identity, definition, genus, xref, source units/counts, native status and unrelated
+    records are preserved.
+  evidence_ids:
+  - record
+  - notes
+  - regression
+  - products
+  target_ids:
+  - habitatmech:GOLD.d510166905
+- assessment_id: scope
+  area: scope
+  topic: Original source scope remains unresolved
+  outcome: unknown
+  summary: The counterexample does not verify the original GOLD samples or prove the
+    retained gas-exposure restriction; no broadening, replacement identity or biological
+    enrichment follows.
+  evidence_ids:
+  - prior
+  - notes
+  - primary
+  target_ids:
+  - habitatmech:GOLD.d510166905
+- assessment_id: provenance
+  area: provenance
+  topic: Append-only correction and finding lineage
+  outcome: supported
+  summary: A new correctly attributed native session and this successor preserve the
+    initial finding and old session as immutable history.
+  evidence_ids:
+  - prior
+  - history
+  target_ids:
+  - habitatmech:GOLD.d510166905
+findings:
+- finding_id: anaerobic_rationale
+  issue_key: methane-anaerobic-reactor-rationale
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: Anaerobic bioreactor no longer equated with methane production
+  description: Current maintained and generated rationale distinguishes nonoxygenated
+    reactor contents from methane production, and cites observed anoxic methane oxidation.
+    The material-versus-device argument stands independently; no source-specific claim
+    was added.
+  target_ids:
+  - habitatmech:GOLD.d510166905
+  field_paths:
+  - curation_history[2].changes
+  evidence_ids:
+  - notes
+  - ontology
+  - primary
+  - record
+  - regression
+  - prior
+  rule_id: docs/CURATION.md#curated-definitions-and-hierarchy
+  native_severity: minor
+  normalization_reason: Bounded incorrect explanatory text, not a demonstrated identity
+    or hierarchy defect.
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained rationale and definition date
+  previous_occurrences:
+  - repository: CultureBotAI/HabitatMech
+    review_id: 20261009T112815Z-methane
+    finding_id: anaerobic_rationale
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1793
+  disposition_reason: Inspected authoritative notes, exact ontology definition, primary
+    experiment, generated artifacts and regression/preservation checks establish the
+    requested wording correction. This closes only the rationale finding; original
+    source-scope uncertainty remains.
+actions: []
+limitations:
+- One rationale finding on one record is reassessed, not the full corpus or a fresh
+  review of every unchanged claim.
+- Original GOLD member matrix and gas-exposure scope remain unverified. No parent
+  taxa, paper-specific organisms, parameters or mechanisms were imported.
+- Full local QC was still running when this bounded disposition was saved; no successful
+  full-QC result is claimed here. Publication still requires final native, PR and
+  merge-queue gates.
+- No new global ontology refresh, independent scientific approval, native status promotion,
+  or SSSOM/KGX readiness certification.
+- The working-tree input hashes attest reviewed bytes; the exact branch Git base is
+  separately retained by a non-release provenance tag for squash-merge survival.
+related_reviews:
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261009T112815Z-methane
+  relationship: Resolves only anaerobic_rationale using the exact stable issue key;
+    all source-scope limitations remain.
+links:
+- https://github.com/CultureBotAI/HabitatMech/pull/1792
+- https://github.com/CultureBotAI/HabitatMech/issues/1793
+notes:
+- The default CLAW_SRC path did not contain kg_microbe_history. A filename-independent
+  directory search found ../../culturebotai-claw/src; the documented scaffold was
+  rerun successfully with that explicit path. The broader search encountered permission-denied
+  directories and was stopped once the helper was found; no global absence claim is
+  made.
