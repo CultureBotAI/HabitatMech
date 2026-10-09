@@ -50,10 +50,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 </table>
 </div>
 
-<h2>Broader habitats</h2>
-<ul class="plain">
-  <li><a href="../habitats/membrane-bioreactor-envo-03600010.html">membrane bioreactor</a>      <code class="curie">ENVO:03600010</code></li>
-</ul>
 
 
 
@@ -68,6 +64,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="meta">2026-08-12 · claude-opus-5 ·
     class-level sweep, not an individual judgement</span>
     <p>Confirmed UNGROUNDED: no ontology term fits this concept. Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the vendored slice matched this label by any search route. Whether the concept is a habitat at all was NOT assessed, so this is not yet a term-request candidate. (source concept habitatmech:GOLD.904cce6b84)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-09 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution ENVO:03600010 for habitatmech:GOLD.904cce6b84 (Engineered &gt; Bioreactor &gt; MBR (Membrane bioreactor) &gt; Mixed liquor). Reviewed hierarchy exclusion (#1800): EPA defines mixed liquor as an activated-sludge/wastewater mixture (<a href="https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=9100NX8X.txt" rel="noopener noreferrer" target="_blank">https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=9100NX8X.txt</a>, Section III Definitions); the MBR fact sheet describes this material circulating through a vessel (<a href="https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P100IL7G.TXT" rel="noopener noreferrer" target="_blank">https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P100IL7G.TXT</a>, Membrane Location). Active ENVO:03600010 denotes the membrane-bearing apparatus, not its contents. Exclude only this exact GOLD context-parent contribution. Preserve mint, nodes8158/8159, full path, count/unit/predicate omissions, UNGROUNDED/CLASS/SEEDED and prior events. Do not merge the WWTP sibling, equate generic activated sludge, invent a genus or promote identity status. Evidence: reviews/structured/20261009T152149Z-mixed-liquor-mbr/review.yaml F1; current GOLD Gs0153737 sample context.</p>
   </li>
 </ol>
 

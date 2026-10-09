@@ -50,10 +50,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 </table>
 </div>
 
-<h2>Broader habitats</h2>
-<ul class="plain">
-  <li><a href="../habitats/wastewater-treatment-plant-envo-00002043.html">wastewater treatment plant</a>      <code class="curie">ENVO:00002043</code></li>
-</ul>
 
 
 
@@ -68,6 +64,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="meta">2026-08-12 · claude-opus-5 ·
     class-level sweep, not an individual judgement</span>
     <p>Confirmed UNGROUNDED: no ontology term fits this concept. Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the vendored slice matched this label by any search route. Whether the concept is a habitat at all was NOT assessed, so this is not yet a term-request candidate. (source concept habitatmech:GOLD.ef87a64b1a)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-09 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution ENVO:00002043 for habitatmech:GOLD.ef87a64b1a (Engineered &gt; WWTP &gt; Mixed liquor). Reviewed hierarchy exclusion (#1800): EPA distinguishes mixed-liquor material from its containing treatment equipment (<a href="https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=9100NX8X.txt" rel="noopener noreferrer" target="_blank">https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=9100NX8X.txt</a>, Section III Definitions). Active ENVO:00002043 denotes the whole wastewater treatment plant. Exact source samples SAMN31514381 and SAMN31452515 identify aerobic-reactor mixed liquor and SIP incubation/fractions, not types of plants. Exclude only this exact GOLD facility-context parent. Preserve mint, nodes5789/5790/5791, full path, count/unit/predicate omissions, UNGROUNDED/CLASS/SEEDED and prior events. Do not infer 101 independent replicates, universal oxygen conditions, sibling equivalence, a replacement genus or ITEM identity approval. Evidence: reviews/structured/20261009T152149Z-mixed-liquor-wwtp/review.yaml F1.</p>
   </li>
 </ol>
 
