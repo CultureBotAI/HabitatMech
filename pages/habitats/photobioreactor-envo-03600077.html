@@ -58,7 +58,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="../habitats/bioreactor-envo-00002123.html">bioreactor</a>      <code class="curie">ENVO:00002123</code></li>
-  <li><a href="../habitats/aquaculture-habitatmech-gold-0287e1b2a9.html">Aquaculture</a>      <code class="curie">habitatmech:GOLD.0287e1b2a9</code></li>
 </ul>
 
 
@@ -75,12 +74,17 @@ from several source concepts can carry one decision per concept.</p>
   <li>
     <span class="pill">GROUND</span>
     <span class="meta">2026-08-12 · claude-opus-5</span>
-    <p>Grounded to ENVO:03600077 &#39;photobioreactor&#39; (EXACT). Parenthetical is just the acronym. Path: Engineered &gt; Artificial ecosystem &gt; Aquaculture &gt; Photobioreactor (PBR (source concept habitatmech:GOLD.96bbd55dce)</p>
+    <p>Grounded to ENVO:03600077 &#39;photobioreactor&#39; (EXACT). Parenthetical is just the acronym. Path: Engineered &gt; Artificial ecosystem &gt; Aquaculture &gt; Photobioreactor (PBR) (source concept habitatmech:GOLD.96bbd55dce)</p>
   </li>
   <li>
     <span class="pill">GROUND</span>
     <span class="meta">2026-08-12 · claude-opus-5</span>
     <p>Grounded to ENVO:03600077 &#39;photobioreactor&#39; (EXACT). Parenthetical is just the acronym. Path: Engineered &gt; Bioreactor &gt; Photobioreactor (PBR) (source concept habitatmech:GOLD.e5b2473bf3)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-09 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.0287e1b2a9 for habitatmech:GOLD.96bbd55dce (Engineered &gt; Artificial ecosystem &gt; Aquaculture &gt; Photobioreactor (PBR)). Reviewed hierarchy exclusion (#1830; structured review 20261009T225120Z-photobioreactor F1): ENVO:03600077 denotes a light-driven cultivation device, not a kind of agricultural aquatic ecosystem. Official ENVO retains ENVO:00002123 bioreactor as its genus; PMID:31405172 (DOI:10.3390/microorganisms7080252), inspected methods, describes wastewater biofilms cultured in illuminated flow-lane devices outside the asserted aquaculture genus. Exclude only this GOLD aquaculture-context contribution to the merged generic record. Preserve both source paths, nodes 5844/8184/8185 and 7996/7997, the first path&#39;s one ORGANISM assertion and the second path&#39;s zero-count omission, exact mappings, acronym synonym and existing ITEM/REVIEWED status. No source-member equivalence, replacement identity, characteristic taxon or mechanism is inferred.</p>
   </li>
 </ol>
 
