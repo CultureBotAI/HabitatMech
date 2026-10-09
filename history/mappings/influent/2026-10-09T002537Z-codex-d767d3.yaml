@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: influent
+session:
+  id: 2026-10-09T002537Z-codex-d767d3
+  timestamp: '2026-10-09T00:25:37Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1760
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1759
+events:
+- type: GENERAL
+  outcome: no_change
+  sections:
+  - provenance
+  summary: Correct actor attribution for the Influent hierarchy session
+  details: 'Correction to history/mappings/influent/2026-10-09T002440Z-claude-code-f3e7df.yaml:
+    the history scaffold defaulted actor name to claude-code because --actor-name was omitted.
+    The actual actor was Codex (gpt-5, codex tool), consistent with that record''s model and
+    agent_tool fields. Preserve the earlier record append-only; this entry corrects attribution
+    only and makes no additional curation change. Its scientific evidence, exact source guard,
+    regression and canary observations remain as recorded.'
