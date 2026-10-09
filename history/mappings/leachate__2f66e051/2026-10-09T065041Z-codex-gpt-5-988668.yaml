@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: leachate__2f66e051
+session:
+  id: 2026-10-09T065041Z-codex-gpt-5-988668
+  timestamp: '2026-10-09T06:50:41Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: codex-gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1780
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1778
+events:
+- type: GENERAL
+  outcome: no_change
+  sections:
+  - provenance
+  summary: Correct actor attribution of the preceding Leachate curation session
+  details: Corrects only the actor name in history/mappings/leachate__2f66e051/2026-10-09T064920Z-claude-code-3f4ce0.yaml
+    (session 2026-10-09T064920Z-claude-code-3f4ce0). The actual actor was codex-gpt-5 using
+    Codex. The earlier helper invocation supplied --model codex-gpt-5 and --agent-tool codex
+    but omitted --actor-name, retaining the helper default claude-code. No Claude Code actor
+    participated in that session. Preserve the earlier history bytes; this append-only clarification
+    supersedes its actor-name attribution, not its scientific decision or timing. No second
+    curation change occurred. Future invocations in this session use explicit --actor-name.
+    The 43 focused exclusion tests now pass and only the target semantic text changes; full
+    QC, labels and regenerated map remain pending.
