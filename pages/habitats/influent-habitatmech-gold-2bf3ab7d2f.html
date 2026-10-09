@@ -50,10 +50,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 </table>
 </div>
 
-<h2>Broader habitats</h2>
-<ul class="plain">
-  <li><a href="../habitats/wastewater-treatment-plant-envo-00002043.html">wastewater treatment plant</a>      <code class="curie">ENVO:00002043</code></li>
-</ul>
 
 
 
@@ -68,6 +64,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="meta">2026-08-12 · claude-opus-5 ·
     class-level sweep, not an individual judgement</span>
     <p>Confirmed UNGROUNDED: no ontology term fits this concept. Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the vendored slice matched this label by any search route. Whether the concept is a habitat at all was NOT assessed, so this is not yet a term-request candidate. (source concept habitatmech:GOLD.2bf3ab7d2f)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-09 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution ENVO:00002043 for habitatmech:GOLD.2bf3ab7d2f (Engineered &gt; WWTP &gt; Influent). Reviewed hierarchy exclusion (#1760): EPA Primer for Wastewater Treatment (July 1980, terminology p.19; <a href="https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=200044GQ.TXT" rel="noopener noreferrer" target="_blank">https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=200044GQ.TXT</a>) identifies influent as liquid entering a receiving basin, reservoir, plant or unit, not the facility itself. Official ENVO a2455d1a77e46bb8a664d65a157166b539269042 identifies ENVO:00002043 as wastewater treatment plant. Exclude only this GOLD facility-context parent contribution; preserve the native mint, node 6077, full path, zero-count omissions, absent mapping predicate, UNGROUNDED/SEEDED state and prior events. No replacement definition, material genus, exact identity or ITEM identity approval is inferred. Evidence: reports/yaml_record_review/20261009T001109Z-influent.md.</p>
   </li>
 </ol>
 
