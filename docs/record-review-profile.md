@@ -91,3 +91,32 @@ running the canonical test, which rejects changes or deletions to previously
 saved bundles. Local `just review-check` defaults to HEAD; set
 `RECORD_REVIEW_BASE=<base-commit>` when checking a branch's committed changes.
 There is no automatic CI fallback to an already modified HEAD.
+
+## Preserve Review Bases Before Publication
+
+The merge queue squashes commits. A review captured on a topic-branch commit can
+lose its verifiable Git base in fresh clones after that branch is deleted, even
+though its immutable bundle passed PR checks. Before an authorized publication,
+retain every review base that is not an ancestor of the trusted PR base with an
+annotated, non-release tag named `record-review-base/<full-commit-SHA>`. Push the
+tag and verify its peeled commit on origin before merging or deleting branches.
+Never force-update or delete these tags while a retained review references them.
+
+```bash
+git tag -a record-review-base/<full-commit-SHA> <full-commit-SHA> -m "Retain immutable review provenance"
+git push origin refs/tags/record-review-base/<full-commit-SHA>
+git ls-remote --tags origin 'record-review-base/*'
+```
+
+Read-only review requests do not authorize publishing tags. Do this only during
+an explicitly authorized publication; do not rewrite a saved review to replace
+its base with a more convenient commit. This preserves provenance, not scientific
+approval. For clones that omit tags, run `git fetch origin --tags` before review
+validation or fleet ingestion. Full-history CI checkout fetches tags already.
+
+The repository-owned `tests/test_record_review_publication.py` gate requires an
+exact annotated tag for each off-base revision, using `RECORD_REVIEW_BASE` in CI
+and `origin/main` locally. Its isolated regression reproduces squash plus branch
+deletion, missing provenance in a fresh main-only clone, recovery after tag
+fetch, and rejection of a tag aimed at the wrong commit. Shared CLAW contract
+files and immutable review bundles remain unchanged.

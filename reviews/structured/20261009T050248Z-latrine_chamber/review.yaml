@@ -1,0 +1,675 @@
+schema_version: 1.0.0
+review_id: 20261009T050248Z-latrine_chamber
+kind: record
+repository: CultureBotAI/HabitatMech
+title: 'Latrine chamber: source scope and strict parent review'
+started_at: '2026-10-09T04:55:50Z'
+finished_at: '2026-10-09T05:02:48Z'
+reviewer:
+  identity: codex-gpt-5
+  kind: agent
+  model: gpt-5
+  independence: self_review
+  independence_basis: Continuation of this agent's corpus-review workflow, rechecked
+    at the current baseline; no separate independent reviewer was used. The target
+    and its scientific inputs were not edited.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+native_verdict: needs curation (0 blocker, 1 major, 0 minor)
+scientific_review: true
+summary: 'The exact GOLD source, mint, category, zero-count omissions, CLASS audit
+  and SEEDED status reproduce. One combined scope/hierarchy finding remains: a containment
+  chamber is not a kind of Solid Waste material, while a contents-associated interpretation
+  of the source is unverified. Do not force a particular latrine technology or ontology
+  identity.'
+source:
+  git_revision: 16377ced2f0de5e827fc5523dfbcd841fe71c9ae
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: curation/decisions.tsv
+    sha256: 0602cca13e6495da256a6f1cfd5897462f73f9739a729447862017d93c148efd
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: b62e84c783eba04d82618629189d2214d8dbb9ea7215ab0bc18974a943664911
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 3efdac153ccd40f518458a9dc5360e09dd660c3a42fbd06bfc57f3b2f707ece7
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: b59b9e800a918135e3915145d4d8098bb48dcea36a312b3004c594a57d221ae9
+    role: context
+  - path: data/habitats/RETIRED.tsv
+    sha256: 41beffc45aabdf304de633c21200b375d7f01d1cb2e036d4a026961d545a35e5
+    role: context
+  - path: data/habitats/engineered/composting__b5981ec2.yaml
+    sha256: a11b77232479543eb26eea88fcf39e004a66f323b713d0d02264dc3b8a441e09
+    role: context
+  - path: data/habitats/engineered/latrine_chamber.yaml
+    sha256: 2e8b9e6bd06827838a1238b8abcdd851e6f929b2a03a9f4ce3e1fd6be1e04c14
+    role: target
+  - path: data/habitats/engineered/solid_waste.yaml
+    sha256: 4cd78657634aca99d98863d643419c7deb56b8835d9f47d144d08247457736d4
+    role: context
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: 36df8306394c06c352b73e0bf7b47a2858784cedac7389a24d0b78f593ece646
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 733a281b3199b32ae3bc879b06377900473229f073c225072d2afb4405b97d8d
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reports/yaml_record_review/20261008T025128Z-composting__b5981ec2.md
+    sha256: fb630b7bee0627b203102c7e9d8c184fb8e9e8ae97e453166243ec15b79c466c
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 52d2a22309a1f4a10728a663560bb4d918346c292221fd34139b99b4159d3fe5
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 92adf631fa099120a497ff7001473e659347d23ac9b418f04cd341ddad5d2a89
+    role: context
+targets:
+- target_id: habitatmech:GOLD.23dcd93012
+  path: data/habitats/engineered/latrine_chamber.yaml
+  label: Latrine chamber
+  record_class: HabitatRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Source identity and CLASS review decision keyed by GOLD.23dcd93012.
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Guarded immediate GOLD context-parent suppression.
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Evidence-backed authored definition, if subsequently justified.
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/gold_ecosystem_paths.tsv
+    role: Source node, full path, tree counts and hierarchy.
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Generated record and audit derivation; never hand-edit target YAML.
+scope:
+  description: One complete generated HabitatRecord and every contributing source
+    concept; parent and child were read only as context.
+  selection: Next unreviewed engineered record after Landfill in the ongoing whole-corpus
+    sequence; exact path resolves the target.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - habitatmech:GOLD.23dcd93012
+  exclusions:
+  - target: habitatmech:GOLD.aab5671566
+    reason: Composting child is context, not a second completed record review.
+  - target: mesh:D062611
+    reason: Parent record is context, not a completed review of Solid Waste.
+checks:
+- check_id: initial_environment
+  name: Initial native commands and inspect attempt
+  status: failed
+  required: false
+  target_ids:
+  - habitatmech:GOLD.23dcd93012
+  exit_code: 1
+  summary: 'Initial inspect, just validate, just validate-strict, just verify-corpus,
+    just validate-history and just provenance-check attempts exited 1 before domain
+    validation: changed project metadata required hatchling from PyPI, unavailable
+    inside the sandbox. All six were rerun successfully after uv sync. This is a recovered
+    environment failure, not a scientific finding.'
+- check_id: environment_recovery
+  name: Restore declared development environment
+  status: passed
+  required: false
+  summary: Exit 0 with approved network access; rebuilt the local editable package,
+    not scientific inputs.
+  target_ids:
+  - habitatmech:GOLD.23dcd93012
+  command: env UV_CACHE_DIR=build/uv-cache uv sync --extra dev
+  exit_code: 0
+- check_id: inspection
+  name: Capture target and all inspected local input hashes
+  status: passed
+  required: true
+  summary: Captured 38 regular-file inputs and exact Git base 16377ced2f0de5e827fc5523dfbcd841fe71c9ae
+    before current assessment.
+  target_ids:
+  - habitatmech:GOLD.23dcd93012
+  command: env UV_CACHE_DIR=build/uv-cache uv run python scripts/record_review.py
+    inspect --targets /private/tmp/habitatmech-latrine-targets-20261009T045550Z.yaml
+    --input CLAUDE.md --input justfile --input docs/CURATION.md --input docs/HARMONIZATION.md
+    --input docs/RESEARCH.md --input docs/record-review-profile.md --input docs/record-reviews.md
+    --input .claude/skills/review-yaml-record/SKILL.md --input .claude/skills/curate-yaml-record/references/review-checklist.md
+    --input schema/record_review.yaml --input src/habitatmech/schema/habitatmech.yaml
+    --input src/habitatmech/seed.py --input curation/decisions.tsv --input curation/gold_parent_exclusions.tsv
+    --input curation/term_requests.tsv --input curation/term_requests_excluded.tsv
+    --input data/habitats/PATHS.tsv --input data/habitats/RETIRED.tsv --input data/raw/ontology_terms.tsv
+    --input data/raw/ontology_subclass_edges.tsv --input data/raw/isolation_source_groundings.tsv
+    --input data/raw/gold_ecosystem_paths.tsv --input data/raw/gold_path_biosamples.tsv
+    --input data/raw/gold_path_triads.tsv --input data/raw/gold_studies.tsv --input
+    data/raw/prego_habitats.tsv --input data/raw/prego_habitat_taxa.tsv --input data/raw/bacdive_isolation_sources.tsv
+    --input data/raw/bacdive_source_taxa.tsv --input data/raw/madin_habitats.tsv --input
+    data/raw/madin_habitat_taxa.tsv --input data/raw/environment_parameters.tsv --input
+    data/raw/MANIFEST.yaml --input data/raw/GOLD_MANIFEST.yaml --input data/habitats/engineered/solid_waste.yaml
+    --input data/habitats/engineered/composting__b5981ec2.yaml --input reports/yaml_record_review/20261008T025128Z-composting__b5981ec2.md
+  exit_code: 0
+- check_id: schema
+  name: Native LinkML target validation
+  status: passed
+  required: true
+  summary: No issues found.
+  target_ids:
+  - habitatmech:GOLD.23dcd93012
+  command: env UV_CACHE_DIR=build/uv-cache just validate data/habitats/engineered/latrine_chamber.yaml
+  exit_code: 0
+- check_id: strict
+  name: Native closed-schema target validation
+  status: passed
+  required: true
+  summary: One file scanned, zero error rows.
+  target_ids:
+  - habitatmech:GOLD.23dcd93012
+  command: env UV_CACHE_DIR=build/uv-cache just validate-strict data/habitats/engineered/latrine_chamber.yaml
+  exit_code: 0
+- check_id: corpus
+  name: Complete corpus reproduction
+  status: passed
+  required: true
+  summary: 3208 expected and present; zero missing, extra or differing records.
+  target_ids:
+  - habitatmech:GOLD.23dcd93012
+  command: env UV_CACHE_DIR=build/uv-cache just verify-corpus
+  exit_code: 0
+- check_id: history
+  name: All native append-only histories
+  status: passed
+  required: true
+  summary: 212 valid history records.
+  target_ids:
+  - habitatmech:GOLD.23dcd93012
+  command: env UV_CACHE_DIR=build/uv-cache just validate-history
+  exit_code: 0
+- check_id: provenance
+  name: Committed raw-data provenance
+  status: passed
+  required: true
+  summary: 14 inventories and two GOLD sources current.
+  target_ids:
+  - habitatmech:GOLD.23dcd93012
+  command: env UV_CACHE_DIR=build/uv-cache just provenance-check
+  exit_code: 0
+- check_id: resolution
+  name: Full-index route and document reproduction
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.23dcd93012
+  summary: 'Read-only inline Python built the full corpus and compared build_document
+    to the complete target: equality true, one source concept and zero ITEM-reviewed
+    sources. Full normalized mapping and leaf/composed claimant indexes reproduced
+    both target and parent routes.'
+  evidence_ids:
+  - routes
+  - record
+- check_id: raw_scan
+  name: All 14 raw inventories
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.23dcd93012
+  summary: Structured exact-field/pipe-member matching, with overflow-list flattening,
+    found the direct source row plus one child context row; no other direct target
+    matches.
+  evidence_ids:
+  - raw
+- check_id: baseline_ci
+  name: Inspect exact-baseline complete QC receipt
+  status: passed
+  required: true
+  summary: Exact baseline 16377ced2 passed 634 tests with three skips and all native
+    quality gates; four structured-contract tests also passed in the dedicated step.
+  target_ids:
+  - habitatmech:GOLD.23dcd93012
+  command: gh run view 37885356531 --log | rg '[0-9]+ passed|All HabitatMech|structured|record.review'
+  exit_code: 0
+  evidence_ids:
+  - ci
+  scope_note: CI receipt inspected; a fresh local full-QC execution was not run per
+    record.
+- check_id: labels
+  name: Exact-baseline label correspondence
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.23dcd93012
+  command: gh run list --event merge_group --limit 3 --json databaseId,workflowName,status,conclusion,headSha
+  exit_code: 0
+  summary: Run 37885356559 passed at the exact Git baseline; independent primary MeSH
+    descriptor/scope were additionally inspected for this parent.
+  evidence_ids:
+  - ci
+  - mesh_descriptor
+  - mesh_scope
+  scope_note: Configured OAK coverage is not an exhaustive scientific hierarchy check.
+- check_id: causal
+  name: Target causal graph validation
+  status: not_applicable
+  required: false
+  target_ids:
+  - habitatmech:GOLD.23dcd93012
+  summary: No graph or target-owned overlay was present; no mechanism claim was introduced.
+- check_id: imodulondb
+  name: Structured expression-module cross-check
+  status: not_applicable
+  required: false
+  target_ids:
+  - habitatmech:GOLD.23dcd93012
+  summary: No named gene, strain, regulator, pathway or expression dataset is asserted.
+    No expression evidence can establish habitat identity.
+- check_id: gold_node
+  name: Original GOLD node retrieval
+  status: unavailable
+  required: false
+  target_ids:
+  - habitatmech:GOLD.23dcd93012
+  summary: Direct node 4952 retrieval via the web tool failed. Current workbook branch
+    confirmation and committed provenance were assessed; original sample-level scope
+    remains a stated limitation.
+  evidence_ids:
+  - gold_access
+  - workbook
+- check_id: initial_bundle_check
+  name: Existing structured review inventory
+  status: passed
+  required: false
+  target_ids:
+  - habitatmech:GOLD.23dcd93012
+  command: env UV_CACHE_DIR=build/uv-cache uv run python scripts/record_review.py
+    check
+  exit_code: 0
+  summary: Zero structured reviews before this first bundle, explicitly reported as
+    no_structured_reviews rather than scientific coverage.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/habitats/engineered/latrine_chamber.yaml
+  locator: Entire file; PATHS.tsv:1556 and decisions.tsv:303
+  accessed_at: '2026-10-09T05:01:43Z'
+  support: supports
+  summary: Identifier GOLD.23dcd93012; label Latrine chamber; ENGINEERED/UNGROUNDED/SEEDED;
+    one mesh:D062611 parent, one GOLD4952 attestation, CLASS CONFIRM_UNGROUNDED and
+    seed events. All other scientific optional fields are absent.
+- evidence_id: routes
+  kind: record_content
+  reference: src/habitatmech/seed.py
+  locator: resolve_gold/apply_decision using complete build_corpus inputs
+  accessed_at: '2026-10-09T05:01:43Z'
+  support: supports
+  summary: Target gold_unmatched becomes curated_confirm_ungrounded_from_gold_unmatched,
+    reviewed=False with no predicate. The parent path Engineered > Solid waste mints
+    GOLD.4233e9003d and resolves by gold_mapping_table to mesh:D062611, EXACT, unreviewed;
+    no target parent exclusion or authored definition applies.
+- evidence_id: raw
+  kind: database
+  reference: data/raw/gold_ecosystem_paths.tsv
+  locator: Physical lines 1371 (target) and 1372 (child); exact-field/pipe-member
+    scan of every raw TSV
+  accessed_at: '2026-10-09T05:01:43Z'
+  support: supports
+  summary: Target depth three, node4952 only, and all tree counters zero. Count/unit
+    and multi-node-note omissions are correct. Child nodes4953/4954 matched only because
+    their ecosystem_type is Latrine chamber. The other 13 inventories have no direct
+    match to the target ID, full path or exact label. This does not transfer the child's
+    biosamples or study to the parent.
+- evidence_id: mesh_descriptor
+  kind: authority
+  reference: https://id.nlm.nih.gov/mesh/D062611.json
+  locator: Entire primary JSON descriptor
+  accessed_at: '2026-10-09T05:01:43Z'
+  support: supports
+  summary: Active Solid Waste descriptor, preferred concept M0568791 and broader descriptor
+    D014866; the target reference resolves.
+- evidence_id: mesh_scope
+  kind: authority
+  reference: https://id.nlm.nih.gov/mesh/M0568791.json
+  locator: Active concept scopeNote
+  accessed_at: '2026-10-09T05:01:43Z'
+  support: refutes
+  summary: Defines discarded solid, semi-solid or contained materials rather than
+    the chamber that contains them; supports the bounded material-versus-containment
+    distinction.
+- evidence_id: who
+  kind: primary_source
+  reference: https://cdn.who.int/media/docs/default-source/wash-documents/sanitation/sanitation-system-fact-sheets/fact-sheet-2---dry-toilet-or-urine-diverting-dry-toilet-with-onsite-treatment-in-alternating-pits-or-compost-chamber.pdf?sfvrsn=723fda07_4
+  locator: Fact sheet 2, pages 1 and 3; complete three-page text inspected
+  accessed_at: '2026-10-09T05:01:43Z'
+  support: refutes
+  summary: The sanitation-system description separates pit/compost chambers used for
+    containment from collected excreta and transformed material. This supports only
+    the containment/contents distinction, not a particular design or an exact join
+    to GOLD4952.
+- evidence_id: envo_candidates
+  kind: authority
+  reference: https://raw.githubusercontent.com/EnvironmentOntology/envo/a2455d1a77e46bb8a664d65a157166b539269042/envo.owl
+  locator: Complete class elements ENVO:01000519, ENVO:01000522 and ENVO:01000550
+    in hash-verified cached primary OWL
+  accessed_at: '2026-10-09T05:01:43Z'
+  support: context_only
+  summary: Latrine denotes a whole toilet fixture, latrine pit a cavity in the ground,
+    and composting toilet a specific managed fixture. None establishes identity of
+    the unspecified GOLD chamber category. Local ignored-inclusive latrine/toilet/cesspit/vault
+    search also found adjacent terms, not a justified target mapping.
+  snapshot_sha256: a0b919065d33a9cf975b74cadd16c75f32f512d17f4f6d5999b74216701df54c
+- evidence_id: workbook
+  kind: database
+  reference: https://gold.jgi.doe.gov/download?mode=ecosystempaths
+  locator: site data row 409; read_only dimensions reset
+  accessed_at: '2026-10-09T05:01:43Z'
+  support: supports
+  summary: Fresh 84174-byte workbook has node4954, Engineered > Solid waste > Latrine
+    chamber > Composting > Unclassified. This confirms the branch via its descendant
+    leaf, not a separately displayed node4952 or current target counts.
+  snapshot_sha256: 3933e5f0664915c1bbfa00212e17d013da360fb33dd52e509254050813135396
+- evidence_id: gold_access
+  kind: database
+  reference: https://gold.jgi.doe.gov/ecosystem/4952
+  locator: Direct web open
+  accessed_at: '2026-10-09T05:01:43Z'
+  support: unknown
+  summary: Retrieval failed. This is not evidence of absence or retirement.
+- evidence_id: bounded_search
+  kind: search
+  reference: curation/, history/, research/, conf/, reports/yaml_record_review/, PATHS.tsv
+    and RETIRED.tsv
+  locator: Target ID, label/stem, exact path and node4952
+  accessed_at: '2026-10-09T05:01:43Z'
+  support: context_only
+  summary: Found the CLASS decision, path lock and contextual child report, but no
+    target-owned ITEM decision, authored definition, exclusion, overlay, session history,
+    dedicated dossier or prior individual target report within these bounds.
+  search_scope: rg --no-ignore --hidden included ignored files in the named local
+    paths. Additional candidate search covered ontology_terms.tsv and term_requests.tsv
+    for latrine|toilet|cesspit|vault. All 14 raw TSVs were structurally scanned. No
+    global ontology/web absence is inferred.
+- evidence_id: child_context
+  kind: prior_review
+  reference: reports/yaml_record_review/20261008T025128Z-composting__b5981ec2.md
+  locator: Entire prior report and current entire child/parent YAML files; GitHub
+    issue1689 body
+  accessed_at: '2026-10-09T05:01:43Z'
+  support: context_only
+  summary: The Composting child has separate unresolved material/process/chamber scope
+    and endpoint findings. Its 16 BIOSAMPLEs and multi-path study are child-specific
+    historical review context, not new parent evidence. Fresh all-state title/body
+    search returned issue1689, which owns the child, not an implemented repair of
+    this parent. No GitHub state changed.
+- evidence_id: ci
+  kind: validation
+  reference: https://github.com/CultureBotAI/HabitatMech/actions/runs/37885356531
+  locator: Exact Git baseline 16377ced2; native QC and contract step logs
+  accessed_at: '2026-10-09T05:01:43Z'
+  support: supports
+  summary: 634 tests passed, three skipped, all HabitatMech gates passed; dedicated
+    structured-contract step four tests passed. Label run37885356559 and vendored
+    run37885356532 passed at the same baseline. Fresh local target/schema/corpus/history/provenance
+    checks separately passed after environment recovery.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact source identity and engineered category
+  outcome: supported
+  summary: The hash-derived source mint, label/path and engineering category agree
+    with the source row; no forced ontology identity is claimed.
+  target_ids:
+  - habitatmech:GOLD.23dcd93012
+  evidence_ids:
+  - record
+  - routes
+  - raw
+  - workbook
+  dimensions:
+  - name: source_category
+    value: ENGINEERED
+    definition: GOLD top-level ecosystem, not evidence of a particular sanitation
+      technology.
+    evidence_ids:
+    - record
+    - raw
+  - name: review_depth
+    value: CLASS
+    definition: Mechanical non-match screen, not ITEM habitat-identity review.
+    evidence_ids:
+    - record
+    - routes
+- assessment_id: hierarchy
+  area: grounding
+  topic: Strict material parent and source-scope uncertainty
+  outcome: concern
+  summary: mesh:D062611 resolves but is not a strictly broader genus of a chamber.
+    A metonymic contents/environment interpretation of the original GOLD category
+    has not been established; source hierarchy alone does not supply that evidence.
+  target_ids:
+  - habitatmech:GOLD.23dcd93012
+  evidence_ids:
+  - mesh_descriptor
+  - mesh_scope
+  - who
+  - raw
+  - gold_access
+- assessment_id: candidate_scope
+  area: scope
+  topic: Avoid over-specific replacement identities
+  outcome: unknown
+  summary: Adjacent fixture, pit and composting-toilet terms do not settle the target
+    category's meaning. Do not infer a specific device, compost product, host or NOT_APPLICABLE
+    disposition.
+  target_ids:
+  - habitatmech:GOLD.23dcd93012
+  evidence_ids:
+  - envo_candidates
+  - workbook
+  - child_context
+- assessment_id: attestation
+  area: quantity
+  topic: Source provenance, counts and audit derivation
+  outcome: supported
+  summary: Single-node display and absent count/unit/predicate agree with the retained
+    native source and zero tree counters. CLASS and seed events, UNGROUNDED and SEEDED
+    reproduce; neither optional omissions nor low review depth is an extra defect.
+  target_ids:
+  - habitatmech:GOLD.23dcd93012
+  evidence_ids:
+  - record
+  - raw
+  - routes
+- assessment_id: completeness
+  area: completeness
+  topic: Optional biology and contextual child evidence
+  outcome: supported
+  summary: No target taxon, parameter, evidence object, mechanism graph, discussion
+    or dataset claim is present. Leave those fields empty without source-specific
+    support; do not borrow the child's biosamples or sanitation performance assertions.
+  target_ids:
+  - habitatmech:GOLD.23dcd93012
+  evidence_ids:
+  - record
+  - raw
+  - bounded_search
+  - child_context
+findings:
+- finding_id: F1
+  issue_key: gold-23dcd93012-material-context-parent
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Unsupported Solid Waste genus before chamber-versus-contents scope is resolved
+  description: The generated strict parent edge asserts material subsumption for a
+    chamber-labeled source. WHO distinguishes containment from contents, and the primary
+    MeSH scope is discarded material. The source could be metonymic, but that alternative
+    is not verified; this is one combined scope/hierarchy evidence gap, not proof
+    that every possible interpretation makes the edge false.
+  target_ids:
+  - habitatmech:GOLD.23dcd93012
+  field_paths:
+  - parent_habitats[0]
+  - source_attestations[0].source_path
+  evidence_ids:
+  - raw
+  - mesh_scope
+  - who
+  - gold_access
+  rule_id: 'docs/CURATION.md: parent_habitats is strictly broader'
+  native_severity: major
+  normalization_reason: A positive strict-subsumption assertion lacks compatible source-scope
+    evidence; an empty optional definition or CLASS/SEEDED state alone is not counted.
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: 'Exact guard: GOLD.23dcd93012 / Engineered > Solid waste > Latrine chamber
+      / mesh:D062611.'
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Source-specific identity and scope review.
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Evidence-supported definition only if justified.
+actions:
+- action_id: A1
+  description: Review original source scope and suppress the unsupported immediate
+    GOLD material-context parent with the exact guard. Retain mint, node4952, full
+    path, zero-count/predicate omissions, old CLASS event and actual lifecycle state.
+    An alternative contents meaning must be evidenced before deliberate material subsumption;
+    no automatic pit or compost-toilet identity.
+  finding_ids:
+  - F1
+  target_ids:
+  - habitatmech:GOLD.23dcd93012
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Bounded source contribution only.
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Evidence-backed scope and identity decision.
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Optional supported definition; never invent a definition just to suppress
+      an edge.
+  generator: just seed; just seed-canary habitatmech:GOLD.23dcd93012; inspect written
+    canary before authorized full regeneration
+  acceptance_checks:
+  - Recover original category/sample meaning or document the unresolved limit; do
+    not promote to ITEM solely for publication.
+  - Full-corpus before/after regression must isolate the exact parent contribution
+    and appended audit while preserving other fields; inspect incoming Composting
+    child relation if identity changes.
+  - Append curation session history only during authorized future repair; run schema,
+    strict, labels, provenance, history, corpus/site and full QC.
+  - Compare complete semantic-map input hashes; rebuild real embeddings/projection
+    if removal of the Solid Waste parent label changes text.
+limitations:
+- Original GOLD node4952 page was inaccessible; no original sample-level crosswalk
+  or exact source meaning was reconstructed. Workbook leaf rows do not prove an absent
+  parent is retired.
+- No target-owned sample, triad or study entry was found in the 14 inventories; descendant
+  evidence is not inherited.
+- WHO is used only for containment/material semantics, not sanitation safety, microbial
+  community, numeric design or treatment-performance claims.
+- The pre-existing child issue1689 is contextual and its comments were not exhaustively
+  inspected. No prior structured occurrence exists; historical Markdown is not silently
+  migrated.
+- Local full QC was not rerun for this read-only record. Exact-baseline CI passed
+  within documented coverage; no SSSOM/KGX compatibility certification was performed.
+notes:
+- The initial pre-refresh investigation was superseded by this current-baseline reassessment;
+  no old partial prose report was saved.
+- Only this structured review bundle is new repository content. No scientific record/input,
+  generated page, native history, lifecycle status or GitHub item was changed.
+- An initial ENVO cache read using uv's default cache failed with permissions; it
+  succeeded with UV_CACHE_DIR=build/uv-cache. The cached OWL is a pinned primary snapshot,
+  not an assertion of the latest upstream release.
+- The GOLD workbook emitted a harmless default-style warning; dimensions were reset
+  before row inspection.
+links:
+- https://github.com/CultureBotAI/HabitatMech/issues/1689
+tags:
+- engineered
+- gold
+- hierarchy
+- read-only
