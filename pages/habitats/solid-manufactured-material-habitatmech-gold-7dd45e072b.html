@@ -58,9 +58,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 
 
-<h2>Also called</h2>
-<ul class="plain">
-<li>Material <span class="meta">— HabitatMech curation</span></li></ul>
 
 <h2>Curation</h2>
 <p class="meta">What a curator decided about this record, and why. A record built
@@ -75,6 +72,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">DEFINED</span>
     <span class="meta">2026-09-11 · codex-gpt-5</span>
     <p>Defined as &#39;solid manufactured material&#39; under ENVO:00003074 &#39;manufactured product&#39;. Definition authored from the record&#39;s committed deep-research report under research/habitats/, read in full; no new paid research was commissioned. GOLD&#39;s Engineered &gt; Industrial production &gt; Engineered product &gt; Material source is interpreted as a grouping node for solid fabricated materials, with Plastic, Fabric, and Paper children but no direct sample assertions. ENVO:00003074 &#39;manufactured product&#39; is the tightest vendored genus, while NCIT:C48187 &#39;Material&#39; is too generic, ENVO:0010001 &#39;anthropogenic environmental material&#39; omits textile and paper product siblings, ENVO:00010483 &#39;environmental material&#39; has the wrong mass-noun scope, ENVO:06105101 &#39;plastic&#39; is narrower than the grouping, and FOODON:00003368 &#39;food contact material&#39; overclaims food contact. The GOLD source label remains on the HabitatMech record through source_attestations and the seeder&#39;s internal source-label synonym; the ENVO request intentionally has no authored exact synonyms because manufactured material, engineered material, and fabricated material would be related rather than exact.</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_SYNONYM_EXCLUDED</span>
+    <span class="meta">2026-10-09 · codex-gpt-5</span>
+    <p>Omitted automatic retention of displaced source label &#39;Material&#39; when defining habitatmech:GOLD.7dd45e072b as &#39;solid manufactured material&#39;. Verbatim source attestations are preserved. Reviewed alias exclusion (#1782; structured review 20261009T074722Z-material F1): the bare GOLD label Material omits the solid, manufactured and composition-defined restrictions of the authored definition. The ITEM decision rejects generic Material identity and the term request has no authored exact synonym. Suppress only automatic retention of the displaced label; preserve verbatim GOLD source_label and full source_path, both parents, definition, zero-count omission and ITEM/REVIEWED state. The grouping remains a curator interpretation of GOLD&#39;s Plastic/Fabric/Paper branch, not a source-published formal definition. Historical DEFINED notes describe the earlier alias policy and are retained unchanged.</p>
   </li>
 </ol>
 

@@ -14,6 +14,7 @@ from habitatmech.curate.definition_source_label_exclusions import (
     load_definition_source_label_exclusions,
 )
 from habitatmech.curate.definitions import CuratedDefinition
+from habitatmech.text_map_inputs import semantic_text
 
 EXCLUSION = DefinitionSourceLabelExclusion(
     "habitatmech:test", "Indoor", "indoor channel", "test", "2026-10-08",
@@ -163,3 +164,45 @@ def test_indoor_exclusion_changes_only_fallback_alias_and_audit(monkeypatch):
     assert attestation["source_label"] == "Indoor"
     assert "assertion_count" not in attestation
     assert "assertion_unit" not in attestation
+
+
+def test_material_exclusion_preserves_definition_provenance_and_other_records(monkeypatch):
+    identifier = "habitatmech:GOLD.7dd45e072b"
+    path = "Engineered > Industrial production > Engineered product > Material"
+    after = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    exclusions = load_definition_source_label_exclusions(seed.DEFINITION_SOURCE_LABEL_EXCLUSIONS_PATH)
+    exclusion = exclusions.pop(identifier)
+    assert exclusion.source_label == "Material"
+    assert exclusion.requested_label == "solid manufactured material"
+    assert seed.mint("GOLD", path) == identifier
+    monkeypatch.setattr(seed, "load_definition_source_label_exclusions", lambda _: exclusions)
+    before = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    assert before.keys() == after.keys()
+    assert {key for key in before if before[key] != after[key]} == {identifier}
+    old, new = before[identifier], after[identifier]
+    assert old["synonyms"] == [{
+        "synonym_text": "Material", "synonym_type": "EXACT_SYNONYM", "source": "HabitatMech curation",
+    }]
+    assert not new.get("synonyms")
+    assert new["curation_history"][:-1] == old["curation_history"]
+    event = new["curation_history"][-1]
+    assert event["action"] == "SOURCE_SYNONYM_EXCLUDED"
+    assert event["timestamp"] == "2026-10-09T00:00:00Z"
+    assert event["curator"] == "codex-gpt-5"
+    assert exclusion.notes in event["changes"]
+    for field in (old.keys() | new.keys()) - {"synonyms", "curation_history"}:
+        assert new.get(field) == old.get(field), field
+    assert new["label"] == "solid manufactured material"
+    assert new["definition_source"] == "HabitatMech"
+    assert new["mapping_status"] == "REVIEWED"
+    assert new["grounding_status"] == "UNGROUNDED"
+    assert new["parent_habitats"] == ["ENVO:00003074", "habitatmech:GOLD.74bb2a619a"]
+    assert len(new["source_attestations"]) == 1
+    attestation = new["source_attestations"][0]
+    assert attestation["source"] == "GOLD"
+    assert attestation["source_id"] == "gold.ecosystem:8333"
+    assert attestation["source_label"] == "Material"
+    assert attestation["source_path"] == path
+    assert "2 GOLD ecosystem node ids" in attestation["notes"]
+    assert not {"assertion_count", "assertion_unit", "mapping_predicate"} & attestation.keys()
+    assert semantic_text(new) != semantic_text(old)
