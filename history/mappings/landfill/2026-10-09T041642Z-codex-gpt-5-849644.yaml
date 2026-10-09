@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: landfill
+session:
+  id: 2026-10-09T041642Z-codex-gpt-5-849644
+  timestamp: '2026-10-09T04:16:42Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1773
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1772
+events:
+- type: AUDIT
+  outcome: no_change
+  sections:
+  - provenance
+  summary: Clarify the Landfill curation session actor
+  details: 'Append-only correction to history/mappings/landfill/2026-10-09T041521Z-claude-code-0f6f77.yaml:
+    the generator defaulted actor name and session ID to claude-code because --actor-name
+    was omitted. The actual actor was codex-gpt-5 using Codex with model gpt-5, as the original
+    model/agent_tool fields already record. The original file remains unchanged. No additional
+    scientific edit. Focused Landfill and GOLD-parent-exclusion regressions passed 43 tests;
+    full before/after corpus and semantic-input comparisons isolate ENVO:00000533. The real
+    semantic map and complete QC remain required before merge.'
