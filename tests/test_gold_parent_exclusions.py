@@ -555,6 +555,85 @@ def test_water_ice_core_exclusion_changes_only_context_parent_and_audit(monkeypa
     assert seed.mint("GOLD", new["source_attestations"][0]["source_path"]) == source
 
 
+@pytest.mark.parametrize("source,identifier,source_path,parent,genus", [
+    (
+        "habitatmech:GOLD.2082ed6ba7", "habitatmech:GOLD.2082ed6ba7",
+        "Engineered > Built environment > City > Subway > Metal surface",
+        "habitatmech:GOLD.961229841c", None,
+    ),
+    (
+        "habitatmech:GOLD.76a710ae9c", "ENVO:01001069",
+        "Engineered > Bioremediation > Metal", "habitatmech:GOLD.5f0e9e816a",
+        "ENVO:00010483",
+    ),
+])
+def test_metal_exclusions_change_only_target_context_parent_and_audit(
+    monkeypatch, source, identifier, source_path, parent, genus,
+):
+    after = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    exclusions = load_gold_parent_exclusions(seed.GOLD_PARENT_EXCLUSIONS_PATH)
+    exclusion = exclusions.pop(source)
+    assert exclusion.source_path == source_path
+    assert exclusion.parent_id == parent
+    assert seed.mint("GOLD", source_path) == source
+    monkeypatch.setattr(seed, "load_gold_parent_exclusions", lambda path: exclusions)
+    before = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+
+    assert before.keys() == after.keys()
+    assert {key for key in before if before[key] != after[key]} == {identifier}
+    old, new = before[identifier], after[identifier]
+    assert old["parent_habitats"] == ([genus, parent] if genus else [parent])
+    if genus:
+        assert new["parent_habitats"] == [genus]
+    else:
+        assert "parent_habitats" not in new
+    assert new["curation_history"][:-1] == old["curation_history"]
+    event = new["curation_history"][-1]
+    assert event["action"] == "SOURCE_PARENT_EXCLUDED"
+    assert event["timestamp"] == "2026-10-09T00:00:00Z"
+    assert event["curator"] == "codex-gpt-5"
+    for value in (source, source_path, parent):
+        assert value in event["changes"]
+    for field in (old.keys() | new.keys()) - {"parent_habitats", "curation_history"}:
+        assert new.get(field) == old.get(field), field
+    if genus:
+        assert new["grounding_status"] == "CLOSE"
+        assert new["mapping_status"] == "REVIEWED"
+        assert new["synonyms"] == [
+            {"synonym_text": "Metal", "synonym_type": "RELATED_SYNONYM", "source": "GOLD"},
+            {"synonym_text": "metal", "synonym_type": "EXACT_SYNONYM", "source": "ENVO"},
+        ]
+        assert new["source_attestations"] == [{
+            "source": "GOLD", "source_id": "gold.ecosystem:3529", "source_label": "Metal",
+            "source_path": source_path, "mapping_predicate": "skos:closeMatch",
+            "assertion_count": 13, "assertion_unit": "ORGANISM",
+            "notes": ("3 GOLD ecosystem node ids share this path; first shown. "
+                      "See data/raw/gold_ecosystem_paths.tsv."),
+        }]
+    else:
+        assert new["grounding_status"] == "UNGROUNDED"
+        assert new["mapping_status"] == "SEEDED"
+        assert new["source_attestations"] == [{
+            "source": "GOLD", "source_id": "gold.ecosystem:5462",
+            "source_label": "Metal surface", "source_path": source_path,
+        }]
+
+
+@pytest.mark.parametrize("source", [
+    "habitatmech:GOLD.2082ed6ba7", "habitatmech:GOLD.76a710ae9c",
+])
+@pytest.mark.parametrize("field,value", [
+    ("source_path", "Engineered > Stale source path"),
+    ("parent_id", "ENVO:00002007"),
+])
+def test_metal_exclusions_reject_stale_source_guards(monkeypatch, source, field, value):
+    exclusions = load_gold_parent_exclusions(seed.GOLD_PARENT_EXCLUSIONS_PATH)
+    exclusions[source] = replace(exclusions[source], **{field: value})
+    monkeypatch.setattr(seed, "load_gold_parent_exclusions", lambda path: exclusions)
+    with pytest.raises(GoldParentExclusionError, match="stale"):
+        seed.build_corpus()
+
+
 def test_concrete_surface_exclusion_changes_only_context_parent_and_audit(monkeypatch):
     identifier = "habitatmech:GOLD.d4694eed69"
     parent = "habitatmech:GOLD.961229841c"

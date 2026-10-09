@@ -15,7 +15,6 @@ synonyms:
   source: ENVO
 parent_habitats:
 - ENVO:00010483
-- habitatmech:GOLD.5f0e9e816a
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3529
@@ -43,3 +42,17 @@ curation_history:
   changes: 'Retained GOLD label ''Metal'' as RELATED_SYNONYM: a CLOSE source mapping
     does not establish exact lexical equivalence. Independent ontology synonyms and
     verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-09T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.5f0e9e816a
+    for habitatmech:GOLD.76a710ae9c (Engineered > Bioremediation > Metal). Reviewed
+    hierarchy exclusion (#1788): ENVO:01001069 denotes metallic material with independent
+    ENVO:00010483 environmental-material genus. The GOLD Bioremediation prefix supplies
+    treatment/application context, not a superclass of generic metallic material.
+    Exclude only this exact source-parent contribution; preserve the independent ontology
+    parent, canonical identity/definition, nodes3529/3868/4306, 13 ORGANISM assertions,
+    CLOSE/REVIEWED state, source-scoped synonyms and previous events. Original source-member
+    composition and equivalence remain unresolved (#1789); no replacement mapping,
+    matrix definition, parent taxa or sibling change is inferred. Evidence: reviews/structured/20261009T095212Z-metallic_material/review.yaml,
+    F1; https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms?obo_id=ENVO%3A01001069.'
