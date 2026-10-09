@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/definition_source_label_exclusions.tsv
+  slug: material
+session:
+  id: 2026-10-09T082005Z-codex-gpt-5-f97e07
+  timestamp: '2026-10-09T08:20:05Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1785
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1781
+events:
+- type: GENERAL
+  outcome: changed
+  sections:
+  - provenance
+  summary: Correct the preceding Material session actor name to codex-gpt-5
+  details: 'Append-only correction of history/mappings/material/2026-10-09T081854Z-claude-code-d973ba.yaml:
+    its actor.name claude-code came from the scaffold default and is incorrect. The actual
+    actor was codex-gpt-5, an AI agent using the Codex tool with model gpt-5. The predecessor''s
+    model and agent_tool are already correct. Preserve the original immutable event and every
+    scientific claim. This observation corrects attribution only; it is not a second alias
+    change or additional validation result. Local history instructions now require an explicit
+    actor name when using a different tool.'

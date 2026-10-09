@@ -6,10 +6,6 @@ definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
-synonyms:
-- synonym_text: Material
-  synonym_type: EXACT_SYNONYM
-  source: HabitatMech curation
 parent_habitats:
 - ENVO:00003074
 - habitatmech:GOLD.74bb2a619a
@@ -50,3 +46,17 @@ curation_history:
     synonym; the ENVO request intentionally has no authored exact synonyms because
     manufactured material, engineered material, and fabricated material would be related
     rather than exact.
+- timestamp: '2026-10-09T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Material'' when
+    defining habitatmech:GOLD.7dd45e072b as ''solid manufactured material''. Verbatim
+    source attestations are preserved. Reviewed alias exclusion (#1782; structured
+    review 20261009T074722Z-material F1): the bare GOLD label Material omits the solid,
+    manufactured and composition-defined restrictions of the authored definition.
+    The ITEM decision rejects generic Material identity and the term request has no
+    authored exact synonym. Suppress only automatic retention of the displaced label;
+    preserve verbatim GOLD source_label and full source_path, both parents, definition,
+    zero-count omission and ITEM/REVIEWED state. The grouping remains a curator interpretation
+    of GOLD''s Plastic/Fabric/Paper branch, not a source-published formal definition.
+    Historical DEFINED notes describe the earlier alias policy and are retained unchanged.'
