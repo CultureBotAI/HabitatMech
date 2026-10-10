@@ -112,6 +112,7 @@ def test_system_decision_changes_only_applicability_and_history(documents, monke
     decision = decisions[SYSTEM]
     assert decision.decision == "CONFIRM_UNGROUNDED"
     assert decision.review_depth == "ITEM"
+    assert "https://pubmed.ncbi.nlm.nih.gov/29053751/" in decision.notes
     decisions[SYSTEM] = replace(decision, decision="NOT_APPLICABLE")
     monkeypatch.setattr(seed, "load_decisions", lambda _: decisions)
     before = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
