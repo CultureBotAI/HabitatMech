@@ -1,0 +1,995 @@
+# Scientific record review: Sediment [sediment__53bcb909]
+
+- Review: 20261010T200656Z-sediment__53bcb909
+- Repository: culturebotai/HabitatMech
+- Started UTC: 2026-10-10T19:51:48Z
+- Finished UTC: 2026-10-10T20:06:56Z
+- Reviewer: codex-gpt-5 (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The source qualifies a sediment material by its mollusc-pond location. A mollusc-culture pond is the setting, not a broader material class. Neither zero frozen assertions nor a zero later exact cohort proves microbial absence.
+
+## Scope And Provenance
+
+Full scientific assessment of one current generated HabitatRecord and its contributing source/parent claims.
+
+Selection: Exact identifier habitatmech:GOLD.89569f7bcc at data/habitats/engineered/sediment__53bcb909.yaml; Continue alphabetically after sediment__447537e4 through the remaining engineered sediment leaves and sediment_microcosm; each is reviewed individually.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 1eaedb0758748d2cc5c45d970db68fb65ceec01d.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| habitatmech:GOLD.89569f7bcc | data/habitats/engineered/sediment__53bcb909.yaml | generated | Sediment |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native validate | passed | True | habitatmech:GOLD.89569f7bcc | Started 2026-10-10T19:52:28.140100+00:00; finished 2026-10-10T19:52:30.116956+00:00. Target included explicitly. |
+| Native validate-strict | passed | True | habitatmech:GOLD.89569f7bcc | Started 2026-10-10T19:52:58.767445+00:00; finished 2026-10-10T19:53:04.337045+00:00. Target included explicitly. |
+| Native verify-corpus | passed | True | habitatmech:GOLD.89569f7bcc | Started 2026-10-10T19:53:04.337755+00:00; finished 2026-10-10T19:53:17.688016+00:00. Full-corpus gate; its success is not a scientific review of all records. |
+| Native validate-products | passed | True | habitatmech:GOLD.89569f7bcc | Started 2026-10-10T19:53:17.688921+00:00; finished 2026-10-10T19:53:57.066115+00:00. Full-corpus gate; its success is not a scientific review of all records. |
+| Native validate-history | passed | True | habitatmech:GOLD.89569f7bcc | Started 2026-10-10T19:53:57.066838+00:00; finished 2026-10-10T19:54:02.211009+00:00. Full-corpus gate; its success is not a scientific review of all records. |
+| Native validate-causal-all | passed | True | habitatmech:GOLD.89569f7bcc | Started 2026-10-10T19:54:02.211721+00:00; finished 2026-10-10T19:54:05.861662+00:00. Full-corpus gate; its success is not a scientific review of all records. |
+| Native term-requests-check | passed | True | habitatmech:GOLD.89569f7bcc | Started 2026-10-10T19:54:05.862377+00:00; finished 2026-10-10T19:54:19.621384+00:00. Full-corpus gate; its success is not a scientific review of all records. |
+| Frozen upstream member reconstruction | unavailable | False | habitatmech:GOLD.89569f7bcc | Configured kg-microbe GOLD_nodes.tsv and GOLD_edges.tsv paths returned not found. Ignored-inclusive filename search of this repo and /private/tmp found no match but encountered a permission-denied temporary entry. No global absence claim; manifest hashes and committed inventory remain available. |
+| Later exact-path workbook census | passed | False | habitatmech:GOLD.89569f7bcc | Both source hashes verified; complete classification and four-sheet scan with exact membership joins finished 2026-10-10T20:00:32.786232+00:00. Counts are not substituted for the frozen source snapshot. |
+| Current ontology authority lookup | passed | True | habitatmech:GOLD.89569f7bcc | Official OLS API returned active matching identifiers and definitions. Browser opens failed and the first sandboxed request had DNS failures; the approved network retry succeeded. All failed attempts remain in the local retrieval receipt. |
+| Claim-level references and causal overlay | not_applicable | False | habitatmech:GOLD.89569f7bcc | The complete target has no authored citations or causal edges. Generic sediment overlays and parent-record mechanisms are not inherited. Whole-overlay structural validation still passed. |
+| iModulonDB applicability | not_applicable | False | habitatmech:GOLD.89569f7bcc | No target gene, regulator, expression-module, trait or pathway claim. Later source study titles do not create such claims; they were used only for provenance context. |
+| Captured-input and native mint/route check | passed | True | habitatmech:GOLD.89569f7bcc | All 117 distinct captured inputs and the base commit are unchanged; exact source row, emitted count/unit, parent existence and native resolution agree. An initial scratch assertion omitted the GOLD mint namespace; the helper was corrected to call native mint, not to change repository data. |
+
+## Scientific And Domain Assessments
+
+### Exact source concept and biological entity type
+
+identity: supported. Targets: habitatmech:GOLD.89569f7bcc.
+
+The source qualifies a sediment material by its mollusc-pond location. A mollusc-culture pond is the setting, not a broader material class. Neither zero frozen assertions nor a zero later exact cohort proves microbial absence.
+
+### All contributing hierarchy routes and mapping endpoints
+
+grounding: concern. Targets: habitatmech:GOLD.89569f7bcc.
+
+The narrower sediment genus is supported, but the immediate GOLD parent habitatmech:GOLD.236eb735d7 is context-only. No definition genus or ITEM override supplies it independently. The narrowMatch endpoint defect is separate from hierarchy curation.
+
+### Frozen assertions, later memberships and source/quantity roles
+
+provenance: supported. Targets: habitatmech:GOLD.89569f7bcc.
+
+Exactly one GOLD concept and node are represented with a stable mint. Frozen positive ORGANISM assertions retain their unit; a missing zero count is not no-members evidence. The later census separately counts BioSamples, organism entries and sequencing projects. Shared study membership is not an independent ecological assertion for every member, and numeric agreement does not prove snapshot equivalence.
+
+### Definitions, MIxS, parameters, taxa, mechanisms and citation placement
+
+evidence: supported. Targets: habitatmech:GOLD.89569f7bcc.
+
+There are no target-authored definitions, environmental parameter bands, characteristic taxa, datasets, discussions or causal graphs to verify. This is acceptable optional sparsity, not a scientific claim of absence. Contextual triad terms and source organism physiology are not imported as habitat identity, characteristic presence or class-wide conditions.
+
+### Scientific status and generated ownership
+
+consistency: supported. Targets: habitatmech:GOLD.89569f7bcc.
+
+SEEDED accurately records the lack of an ITEM decision for this source concept. Microcosm CLASS history records a lexical screen, not a scientific approval. Validation and saving this observation neither promotes status nor authorizes edits to generated habitat files.
+
+### Review completeness and remaining uncertainty
+
+scope: unknown. Targets: habitatmech:GOLD.89569f7bcc.
+
+Every current target field was assessed; parent records were used only to assess the edge, not to claim their scientific review. Original frozen member-level reconstruction remains unavailable. The bounded source/ontology and claim-level review is not exhaustive ecological characterization or a corpus-wide scientific pass.
+
+## Findings
+
+### F1: Context Molluscs pond is incorrectly asserted as a sediment genus
+
+major / open / confirmed; issue key: gold-89569f7bcc-context-parent.
+
+The source qualifies a sediment material by its mollusc-pond location. A mollusc-culture pond is the setting, not a broader material class. Neither zero frozen assertions nor a zero later exact cohort proves microbial absence. The disputed parent is habitatmech:GOLD.236eb735d7; retain ENVO:00002007 and the exact source mint.
+
+### F2: Emitted mapping predicate uses endpoints different from its declared field
+
+major / open / confirmed; issue key: gold-89569f7bcc-mapping-endpoint-contract.
+
+The exact source path keeps its own minted identity, yet the source-to-record field emits skos:narrowMatch from the narrower-than-ontology-leaf route. The implicit comparison is to ENVO:00002007, not to the documented generated record target. Reconcile shared #1398 across schema, generator and consumers.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Add a guarded exclusion for habitatmech:GOLD.89569f7bcc, exact source_path Engineered &gt; Artificial ecosystem &gt; Aquaculture &gt; Molluscs pond &gt; Sediment, expected parent_id habitatmech:GOLD.236eb735d7. Do not invent a definition, change the parent habitat identity, merge generic sediment records or remove independent ontology parents.
+
+- Inspect a forced seed canary: only the reviewed GOLD context parent is removed and ENVO:00002007 remains.
+- Preserve identifier, slug, source node/path, positive ORGANISM count/unit or zero omission, and unrelated claims.
+- Append curation history, regenerate corpus/site, run verify-corpus, validate-products, review lineage checks and full QC.
+- Leave the separate mapping-contract finding open until its shared acceptance criteria are met.
+
+### A2
+
+Address existing #1398, distinguishing source-to-record identity and record-to-ontology-parent relations. No global predicate swap or invented exact merge.
+
+- Make subject, predicate and object explicit and consistent across the schema, emitting routes and consumers.
+- Regression-test retained minted, exact, broader and narrower routes without conflating context-qualified habitats.
+- Audit actual SSSOM/KGX triples against current kg-microbe modeling before any product-readiness claim.
+- Regenerate through maintained owners, append required history, verify exact reproduction and run full QC.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| R1 | data/habitats/engineered/sediment__53bcb909.yaml; Entire current YAML, every field and curation event | supports | The source qualifies a sediment material by its mollusc-pond location. A mollusc-culture pond is the setting, not a broader material class. Neither zero frozen assertions nor a zero later exact cohort proves microbial absence. |
+| S1 | data/raw/gold_ecosystem_paths.tsv; Engineered &gt; Artificial ecosystem &gt; Aquaculture &gt; Molluscs pond &gt; Sediment | supports | Frozen row: source node gold.ecosystem:8008; one source concept; ORGANISM assertions=0, study_count=0, biosample_count=0. The generated count/unit agrees exactly. Zero is omitted, not a claim of biological absence or zero later samples. The native mint function reproduces the identifier from GOLD plus the canonical path; PATHS retains the current slug. |
+| S2 | https://gold.jgi.doe.gov/download?mode=site_excel; Retained bulk SHA256 5f48b2f50fb2a9257754960a0f0e12dc6e8fa121e97c3e9f4497249e5fe6e439; complete Biosample, Organism, SequencingProject and Study scans completed 2026-10-10T20:00:32.786232+00:00 | supports | Fresh exact-path census: {"Biosample": 0, "Organism": 0, "SequencingProject": 0}; joined study IDs: none. Rows scanned including headers: Biosample 244951, Organism 532019, SequencingProject 636914, Study 63806. Collection-site values on matching BioSamples: no exact matching BioSample row. These later source records corroborate bounded identity or delimit available evidence; they do not reconstruct the original frozen counts, prove prevalence or establish class-wide mechanisms. |
+| S3 | https://gold.jgi.doe.gov/; Retained ecosystem-classification workbook SHA256 3933e5f0664915c1bbfa00212e17d013da360fb33dd52e509254050813135396; site data sheet, 2422 rows; matching row(s): 26 | supports | Exact path and numeric source node agree with the classification row. |
+| S4 | data/raw/gold_path_triads.tsv; data/raw/gold_path_biosamples.tsv; data/raw/gold_studies.tsv; Exact canonical_path match or exact member of the pipe-delimited study paths column | supports | Matched maintained side rows: {"gold_path_biosamples": [], "gold_path_triads": [], "gold_studies": []}. Triad medium/local/broad roles stay distinct. Per-slot one-study agreement is not independent replication or identity equivalence. A study containing this path may also contain other media; its whole contents are not assigned to this target. |
+| O1 | https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms?obo_id=ENVO%3A00002007; Active OLS ENVO term, canonical label and complete definition/comment; retained response SHA256 c30b4e377e51faf8d24e70cde71ea93f04d98ac8f711ed91560a1364a220d7ce | supports | ENVO:00002007 sediment: Deposited particulate material. |
+| P1 | data/habitats/terrestrial/sediment.yaml; Parent identity, definition if present, hierarchy, source path and curation status | context_only | ENVO:00002007 denotes sediment. Inspected to evaluate this target parent edge only; its other taxa, parameters and causal graph claims are outside this record review. |
+| P2 | data/habitats/engineered/molluscs_pond.yaml; Parent identity, definition if present, hierarchy, source path and curation status | context_only | habitatmech:GOLD.236eb735d7 denotes Molluscs pond. Inspected to evaluate this target parent edge only; its other taxa, parameters and causal graph claims are outside this record review. |
+| N1 | docs/CURATION.md; Strictly broader parents, MIxS roles, status gates and GOLD-context exclusion rules | supports | Every parent is an is-a claim. Guarded GOLD exclusions remove only the source-context contribution, preserving independent genera and source attestations. Optional enrichment is not mandatory; ITEM decisions, not a saved review, determine REVIEWED status. |
+| G1 | src/habitatmech/seed.py; src/habitatmech/schema/habitatmech.yaml; resolve_gold, ingest_gold, mint and SourceAttestation.mapping_predicate | supports | Fresh native lexical resolution: {"category": null, "contributes_grounding": true, "decision": null, "extra_parents": ["ENVO:00002007"], "extra_xrefs": [], "grounding_status": "NARROW", "identifier": "habitatmech:GOLD.89569f7bcc", "mapping_predicate": "skos:narrowMatch", "reviewed": false, "route": "gold_narrower_than_leaf_match"}. The 15 sediment targets have no maintained target decision or parent exclusion. The microcosm additionally has a CLASS CONFIRM_UNGROUNDED decision. The mapping field declares source-to-record endpoints and omission for the same concept, while the narrower-leaf route compares the retained mint to an ontology parent. |
+| L1 | curation/; history/; research/; reviews/; reports/; data/raw/; data/habitats/PATHS.tsv; Identifier, slug, label, source node and exact path; maintained tables and ignored-inclusive reference inventory | context_only | Target-matching curation rows: {}. No target-specific definition, causal overlay or ecological parameter/taxon claim is attached. Generic sediment overlays do not belong to this minted target. There is no earlier completed structured review for this identifier in the current review inventory; legacy prose remains distinct. |
+| H1 | reports/yaml_record_review/20260925T005214Z-sediment__53bcb909.md; Historical identity, findings and proposed actions, compared with current maintained owners | context_only | Older reports identify a context-parent concern, but their proposed term-request replacement or new override is not adopted automatically. The existing guarded gold_parent_exclusions.tsv is now the narrow maintained owner. |
+| V1 | justfile; Current native check receipts, 2026-10-10 | supports | All 16 target LinkML checks, joint 16-target strict check, corpus reproduction, label correspondence, history, causal-overlay and term-request gates passed. Reproduction: 3208/3208, no differences. Labels: 1178 canonical, 1 synonym, 5 exceptions, 2057 without adapters. History: 250 valid. Causal overlays: 32 valid. Term requests: 109 current. |
+| I1 | https://github.com/CultureBotAI/HabitatMech/issues/1398; Fresh issue body and OPEN state, compared with current emitting route and field contract | supports | The existing issue tracks the source-to-record versus record-to-ontology-parent endpoint mismatch. It remains unresolved. This is not a formal SKOS ban on self-links and is not repaired by swapping broadMatch with narrowMatch. |
+
+## Limits And Additional Notes
+
+- This is a self-review, not an independent adversarial publication review; only the single declared target is scientifically covered.
+- Original frozen GOLD node/edge files are unavailable at configured paths. Wider ignored-inclusive repo/tmp search was permission-limited; later workbook entries cannot reconstruct the original membership counts.
+- The label gate skips 2057 rows without adapters. Structural, reproduction and review-contract validation do not certify scientific correctness.
+- External Excel files are retained locally with verified hashes and row-level locators, not committed or treated as replacements for the frozen manifests.
+- No paid research, curation, history/status promotion, product regeneration, GitHub mutation or publication was performed. Full QC was not rerun for this read-only assessment; the listed native gates were run.
+- The 32 hashed contextual overlays were structurally checked but are not additional scientific-review targets. Their mechanisms and parent-record taxa are not transferred to this record.
+- SSSOM/KGX compatibility with current kg-microbe modeling is not certified. Shared #1398 remains open.
+- No direct member of this exact path was present in the later four-sheet census. Classification evidence supports the bounded concept interpretation; neither all-time member absence nor empirical prevalence is established.
+- Continue alphabetically after sediment__447537e4 through the remaining engineered sediment leaves and sediment_microcosm; each is reviewed individually.
+- Coverage baseline verified as 138 structured bundles and 102 of 3208 unique current records. This review adds one target, not all 16 or the full corpus.
+- No absence conclusion relies on an ignored-aware search alone. Earlier legacy review validators and counts were not copied as current check results.
+- The prepared native inspect captures preceded assessment. All captured bytes and Git base were rechecked without silently refreshing hashes.
+- Legacy recommendations for term-request parent replacement or a new override are superseded in this proposed action plan by the existing guarded context-exclusion owner. Historical reports remain unchanged; this does not formally dispose of another structured finding.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261010T200656Z-sediment__53bcb909
+kind: record
+repository: culturebotai/HabitatMech
+title: 'Scientific record review: Sediment [sediment__53bcb909]'
+started_at: '2026-10-10T19:51:48Z'
+finished_at: '2026-10-10T20:06:56Z'
+reviewer:
+  identity: codex-gpt-5
+  kind: agent
+  model: gpt-5
+  independence: self_review
+  independence_basis: Same continuing review agent; source and current-model checks
+    were performed, but no independent reviewer is claimed.
+skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The source qualifies a sediment material by its mollusc-pond location. A
+  mollusc-culture pond is the setting, not a broader material class. Neither zero
+  frozen assertions nor a zero later exact cohort proves microbial absence.
+source:
+  git_revision: 1eaedb0758748d2cc5c45d970db68fb65ceec01d
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: conf/sources.yaml
+    sha256: a8e069f9278068b57fa234f43e03c8d893f857827b83fd10cfa92d6815aed642
+    role: context
+  - path: curation/causal_graphs/agricultural_soil.yaml
+    sha256: 2f9c73b186d6b79df1d64098f929d8364a1768f732101edaf144dee7723c60f4
+    role: context
+  - path: curation/causal_graphs/aquatic_biome.yaml
+    sha256: 03ba09d10f9a9d8d32060fc0208b511ef0d59e731fd7c63ca6c02296e70da5f5
+    role: context
+  - path: curation/causal_graphs/biofilm.yaml
+    sha256: 37fae9d123c2edfb68376b6b4fe5441f72092d48d81dba6f60510087217c8680
+    role: context
+  - path: curation/causal_graphs/bioreactor.yaml
+    sha256: 14eb020a26287751c86d1d6eab5c91cf606e0e8ea076832fce82e0646fb85cdd
+    role: context
+  - path: curation/causal_graphs/brackish_water.yaml
+    sha256: b9d58082a53bef1143a3868918cfed7f6d74ba7e2330648069733d9ea2c76508
+    role: context
+  - path: curation/causal_graphs/building.yaml
+    sha256: 9e9360775fdda554b285d7ecfb9b1729bf389b8241376a410eca60bd672eb235
+    role: context
+  - path: curation/causal_graphs/compost.yaml
+    sha256: e0fd3ae54311115939f07ba1f3f158c5c44353bd0fab1dcdc1a9292ff0ad1de5
+    role: context
+  - path: curation/causal_graphs/deep_marine_sediment.yaml
+    sha256: eb6a68290a58ec157a4c9895e082cbba760c47b5fbe35523d3bb163af3091d0c
+    role: context
+  - path: curation/causal_graphs/forest_soil.yaml
+    sha256: faef7b6c26c25ba33110d362dc7e4351440bc08c1106f270e1e6f2decfb1e3f4
+    role: context
+  - path: curation/causal_graphs/forested_area.yaml
+    sha256: eb96b992e1ee8fef7df2550c765a30f0d446082ce16592b6c1da44a54b34e427
+    role: context
+  - path: curation/causal_graphs/fresh_water.yaml
+    sha256: e95ea96aa1912066d4c98cbff91e34528668d4c453d93dc4203c67e7769c691a
+    role: context
+  - path: curation/causal_graphs/fungi_associated_environment.yaml
+    sha256: 45736893315a37e327c25d401ff8794fee47b1056347e52f4980bc3a58e8e0d8
+    role: context
+  - path: curation/causal_graphs/grassland_soil.yaml
+    sha256: 81b2a9ea6255dfbd4b393102b9903dd3c9e8af12f7d3a9adc7c4649650542ae8
+    role: context
+  - path: curation/causal_graphs/hot_spring.yaml
+    sha256: ee0f6d7f7eff179b44e1e934c1c801524062a7e71f3199e16e9ef35e7bad81ed
+    role: context
+  - path: curation/causal_graphs/hydrothermal_vent.yaml
+    sha256: b5c101a93e724531cb7e50e8031203138230c09599855fe8a03bec945469efb0
+    role: context
+  - path: curation/causal_graphs/hypersaline_water.yaml
+    sha256: e974d5e9cc241ac9daf3542ba11156915cfb7786e683ad5ad212af5b35006158
+    role: context
+  - path: curation/causal_graphs/intestine_environment.yaml
+    sha256: 2ef766692eff55471a3322c0cd1cf82188decf37fd5ecd3535cb0ef612e2b725
+    role: context
+  - path: curation/causal_graphs/leaf.yaml
+    sha256: fadc8027b39884bc16cf98f774804a84fd1b1d805876310a47a095f6019435cc
+    role: context
+  - path: curation/causal_graphs/liquid_water.yaml
+    sha256: 12aac1021b9b51c6becc4ef8509bd63557b306e42c01d9b4443d69252ce29a81
+    role: context
+  - path: curation/causal_graphs/marine_sediment.yaml
+    sha256: 8b230eb079171ab8134b648caa29878dc5015fb36362559a6a8c67fb2b433741
+    role: context
+  - path: curation/causal_graphs/marine_water_body.yaml
+    sha256: b2f81102970e9541bf61978fabdd68b7db8f9459f1ef11b467fecfc2956f238b
+    role: context
+  - path: curation/causal_graphs/milk.yaml
+    sha256: 049daa5b499096c61cb625b7bb9ac0f02ea216c96d6b5f7b77126c8709b2378d
+    role: context
+  - path: curation/causal_graphs/peat_soil.yaml
+    sha256: 0f23fa02718b08e3607478ceaa2294320b320ae841a79e144e48ed3497db09e2
+    role: context
+  - path: curation/causal_graphs/plant_associated_environment.yaml
+    sha256: 300044040f76234e7ed3bf373137ba224e55f48e3f3d6d505086b3830877cfcb
+    role: context
+  - path: curation/causal_graphs/plant_litter.yaml
+    sha256: 25e10d6640992be2aa506490f763d8f9642fde125f599207dae7852b6a13b369
+    role: context
+  - path: curation/causal_graphs/root_nodule.yaml
+    sha256: b363e5d418df93d6e44c9d3f3256c8b0ede7c4518125359ffb880020fc00721c
+    role: context
+  - path: curation/causal_graphs/sea_water.yaml
+    sha256: 240ffc8ad2c0abf6f4cce41e01018679aca726816006c90ce329b8d1910d9cd7
+    role: context
+  - path: curation/causal_graphs/sediment.yaml
+    sha256: 62b97afba9466dc64f8b5b1b3fd5d92f8b4b6bf96fe1c761af579ff7deca0e47
+    role: context
+  - path: curation/causal_graphs/sludge.yaml
+    sha256: 55b9c9a27fd00c7b84a8780f2cedc83eeb31ebdda9a2e1029678d96a7fa4a06c
+    role: context
+  - path: curation/causal_graphs/soil.yaml
+    sha256: 2a2bf4b1099b3bc69015f9530cf6e926c05c33667132234b3c52f06aacc957c2
+    role: context
+  - path: curation/causal_graphs/terrestrial_biome.yaml
+    sha256: 239e6a2b711564ed12084cddd1295547d23858dd329c33c538251d5f53c88834
+    role: context
+  - path: curation/causal_graphs/waste_water.yaml
+    sha256: 299b5128af6cf5f7a61ce53304f1084e6eb045414b47cbcfd8832de095142aef
+    role: context
+  - path: curation/decisions.tsv
+    sha256: f7074c184c97b50d3d8b01c0c51cc813f7cf82a27cbda691fc58b3b854a59eba
+    role: context
+  - path: curation/definition_source_label_exclusions.tsv
+    sha256: 2d41fc93db4939122b3909f2a412b84b679703948b10d9f02e12021442f71407
+    role: context
+  - path: curation/external_xrefs.tsv
+    sha256: cf8394a6ab22e35efd9e252aef422018226280830bf816a39bf4f2256ff75ad5
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: 17725eb3ec58755d2c6b85fdf7175ea780347a1470da3bb8e482b5770c5e509a
+    role: context
+  - path: curation/redirects_retracted.tsv
+    sha256: 0f1e9af8881f5a5db19f87de06b3b3d1800cfac8101699b380388c0a1a1e9a19
+    role: context
+  - path: curation/samples/narrow-20260814.tsv
+    sha256: 4d91c76ad5e0a46442075c7b9f882637130bacdfaedb25fbe7922f169d35051c
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 9977e384b79128d6e89c85f28e35c77d29644d503dea6d53c12628599e33f7f3
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: b59b9e800a918135e3915145d4d8098bb48dcea36a312b3004c594a57d221ae9
+    role: context
+  - path: data/habitats/engineered/molluscs_pond.yaml
+    sha256: 1b48fd251586760f1162b3b61eff583c8def3c01316e08264a7611bf484acd6f
+    role: context
+  - path: data/habitats/engineered/sediment__53bcb909.yaml
+    sha256: 3155342a10f057b1d6d03ba4cf356b69a89e903786de6646887244af944b77ef
+    role: target
+  - path: data/habitats/terrestrial/sediment.yaml
+    sha256: 850abac7c5b4cd5f033bd07f904cc8a6b4534ce8b38e94f6b99b7a3ac0f73147
+    role: context
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: 36df8306394c06c352b73e0bf7b47a2858784cedac7389a24d0b78f593ece646
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: f7aa39ee762d94f1902d9f08f328cb897bc543e4e226057eb4770d24bfcc6eb5
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reports/yaml_record_review/20260925T005214Z-sediment__53bcb909.md
+    sha256: f684e339a6ed6635495fc99c22396b9862c60887aac1819ca1f558b49edc104b
+    role: context
+  - path: scripts/extract_gold_biosamples.py
+    sha256: b6a2773c86fe718e1ca0b1d7b32709f0eee491ac813655e310aa0817c0fec31b
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: 4bf5391d25ff48a2d81eb3821af6582de063fd0391440973d309dfd93016490c
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 52d2a22309a1f4a10728a663560bb4d918346c292221fd34139b99b4159d3fe5
+    role: context
+  - path: src/habitatmech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 92adf631fa099120a497ff7001473e659347d23ac9b418f04cd341ddad5d2a89
+    role: context
+targets:
+- target_id: habitatmech:GOLD.89569f7bcc
+  path: data/habitats/engineered/sediment__53bcb909.yaml
+  label: Sediment
+  kind: generated
+  owner_paths:
+  - repository: culturebotai/HabitatMech
+    path: curation/decisions.tsv
+    role: Item-level identity and broader-grounding decisions
+  - repository: culturebotai/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Guarded source-context parent corrections
+  - repository: culturebotai/HabitatMech
+    path: curation/term_requests.tsv
+    role: Authored habitat definition and genus
+  - repository: culturebotai/HabitatMech
+    path: data/raw/gold_ecosystem_paths.tsv
+    role: Frozen exact source paths, nodes and unit-specific counts
+  - repository: culturebotai/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained harmonization and generated record owner
+scope:
+  description: Full scientific assessment of one current generated HabitatRecord and
+    its contributing source/parent claims.
+  selection: Exact identifier habitatmech:GOLD.89569f7bcc at data/habitats/engineered/sediment__53bcb909.yaml;
+    Continue alphabetically after sediment__447537e4 through the remaining engineered
+    sediment leaves and sediment_microcosm; each is reviewed individually.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - habitatmech:GOLD.89569f7bcc
+checks:
+- check_id: C1
+  name: Native validate
+  command: just validate data/habitats/engineered/sediment__53bcb909.yaml
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.89569f7bcc
+  summary: Started 2026-10-10T19:52:28.140100+00:00; finished 2026-10-10T19:52:30.116956+00:00.
+    Target included explicitly.
+- check_id: C2
+  name: Native validate-strict
+  command: just validate-strict data/habitats/engineered/sediment__53bcb909.yaml data/habitats/engineered/sediment__591df749.yaml
+    data/habitats/engineered/sediment__5aa3b4f2.yaml data/habitats/engineered/sediment__64234dd6.yaml
+    data/habitats/engineered/sediment__6c6b3208.yaml data/habitats/engineered/sediment__736dcca3.yaml
+    data/habitats/engineered/sediment__79de4694.yaml data/habitats/engineered/sediment__8fdad19e.yaml
+    data/habitats/engineered/sediment__a0cc3ecc.yaml data/habitats/engineered/sediment__a3da4b75.yaml
+    data/habitats/engineered/sediment__bcc5249a.yaml data/habitats/engineered/sediment__cb692bfb.yaml
+    data/habitats/engineered/sediment__d971962d.yaml data/habitats/engineered/sediment__e76662f3.yaml
+    data/habitats/engineered/sediment__f02aa11f.yaml data/habitats/engineered/sediment_microcosm.yaml
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.89569f7bcc
+  summary: Started 2026-10-10T19:52:58.767445+00:00; finished 2026-10-10T19:53:04.337045+00:00.
+    Target included explicitly.
+- check_id: C3
+  name: Native verify-corpus
+  command: just verify-corpus
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.89569f7bcc
+  summary: Started 2026-10-10T19:53:04.337755+00:00; finished 2026-10-10T19:53:17.688016+00:00.
+    Full-corpus gate; its success is not a scientific review of all records.
+- check_id: C4
+  name: Native validate-products
+  command: just validate-products
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.89569f7bcc
+  summary: Started 2026-10-10T19:53:17.688921+00:00; finished 2026-10-10T19:53:57.066115+00:00.
+    Full-corpus gate; its success is not a scientific review of all records.
+- check_id: C5
+  name: Native validate-history
+  command: just validate-history
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.89569f7bcc
+  summary: Started 2026-10-10T19:53:57.066838+00:00; finished 2026-10-10T19:54:02.211009+00:00.
+    Full-corpus gate; its success is not a scientific review of all records.
+- check_id: C6
+  name: Native validate-causal-all
+  command: just validate-causal-all
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.89569f7bcc
+  summary: Started 2026-10-10T19:54:02.211721+00:00; finished 2026-10-10T19:54:05.861662+00:00.
+    Full-corpus gate; its success is not a scientific review of all records.
+- check_id: C7
+  name: Native term-requests-check
+  command: just term-requests-check
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.89569f7bcc
+  summary: Started 2026-10-10T19:54:05.862377+00:00; finished 2026-10-10T19:54:19.621384+00:00.
+    Full-corpus gate; its success is not a scientific review of all records.
+- check_id: C8
+  name: Frozen upstream member reconstruction
+  status: unavailable
+  required: false
+  target_ids:
+  - habitatmech:GOLD.89569f7bcc
+  summary: Configured kg-microbe GOLD_nodes.tsv and GOLD_edges.tsv paths returned
+    not found. Ignored-inclusive filename search of this repo and /private/tmp found
+    no match but encountered a permission-denied temporary entry. No global absence
+    claim; manifest hashes and committed inventory remain available.
+- check_id: C9
+  name: Later exact-path workbook census
+  command: .venv/bin/python /private/tmp/habitatmech-review-ac-workbook.py
+  status: passed
+  required: false
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.89569f7bcc
+  summary: Both source hashes verified; complete classification and four-sheet scan
+    with exact membership joins finished 2026-10-10T20:00:32.786232+00:00. Counts
+    are not substituted for the frozen source snapshot.
+- check_id: C10
+  name: Current ontology authority lookup
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.89569f7bcc
+  summary: Official OLS API returned active matching identifiers and definitions.
+    Browser opens failed and the first sandboxed request had DNS failures; the approved
+    network retry succeeded. All failed attempts remain in the local retrieval receipt.
+- check_id: C11
+  name: Claim-level references and causal overlay
+  status: not_applicable
+  required: false
+  target_ids:
+  - habitatmech:GOLD.89569f7bcc
+  summary: The complete target has no authored citations or causal edges. Generic
+    sediment overlays and parent-record mechanisms are not inherited. Whole-overlay
+    structural validation still passed.
+- check_id: C12
+  name: iModulonDB applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - habitatmech:GOLD.89569f7bcc
+  summary: No target gene, regulator, expression-module, trait or pathway claim. Later
+    source study titles do not create such claims; they were used only for provenance
+    context.
+- check_id: C13
+  name: Captured-input and native mint/route check
+  command: .venv/bin/python /private/tmp/habitatmech-review-ac-local.py
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.89569f7bcc
+  summary: All 117 distinct captured inputs and the base commit are unchanged; exact
+    source row, emitted count/unit, parent existence and native resolution agree.
+    An initial scratch assertion omitted the GOLD mint namespace; the helper was corrected
+    to call native mint, not to change repository data.
+evidence:
+- evidence_id: R1
+  kind: record_content
+  reference: data/habitats/engineered/sediment__53bcb909.yaml
+  locator: Entire current YAML, every field and curation event
+  summary: The source qualifies a sediment material by its mollusc-pond location.
+    A mollusc-culture pond is the setting, not a broader material class. Neither zero
+    frozen assertions nor a zero later exact cohort proves microbial absence.
+  support: supports
+  accessed_at: '2026-10-10T20:06:56.000000Z'
+- evidence_id: S1
+  kind: database
+  reference: data/raw/gold_ecosystem_paths.tsv
+  locator: Engineered > Artificial ecosystem > Aquaculture > Molluscs pond > Sediment
+  summary: 'Frozen row: source node gold.ecosystem:8008; one source concept; ORGANISM
+    assertions=0, study_count=0, biosample_count=0. The generated count/unit agrees
+    exactly. Zero is omitted, not a claim of biological absence or zero later samples.
+    The native mint function reproduces the identifier from GOLD plus the canonical
+    path; PATHS retains the current slug.'
+  support: supports
+  accessed_at: '2026-10-10T20:06:56.000000Z'
+- evidence_id: S2
+  kind: database
+  reference: https://gold.jgi.doe.gov/download?mode=site_excel
+  locator: Retained bulk SHA256 5f48b2f50fb2a9257754960a0f0e12dc6e8fa121e97c3e9f4497249e5fe6e439;
+    complete Biosample, Organism, SequencingProject and Study scans completed 2026-10-10T20:00:32.786232+00:00
+  summary: 'Fresh exact-path census: {"Biosample": 0, "Organism": 0, "SequencingProject":
+    0}; joined study IDs: none. Rows scanned including headers: Biosample 244951,
+    Organism 532019, SequencingProject 636914, Study 63806. Collection-site values
+    on matching BioSamples: no exact matching BioSample row. These later source records
+    corroborate bounded identity or delimit available evidence; they do not reconstruct
+    the original frozen counts, prove prevalence or establish class-wide mechanisms.'
+  support: supports
+  accessed_at: '2026-10-10T20:00:32.786232Z'
+- evidence_id: S3
+  kind: database
+  reference: https://gold.jgi.doe.gov/
+  locator: 'Retained ecosystem-classification workbook SHA256 3933e5f0664915c1bbfa00212e17d013da360fb33dd52e509254050813135396;
+    site data sheet, 2422 rows; matching row(s): 26'
+  summary: Exact path and numeric source node agree with the classification row.
+  support: supports
+  accessed_at: '2026-10-10T20:00:32.786232Z'
+- evidence_id: S4
+  kind: database
+  reference: data/raw/gold_path_triads.tsv; data/raw/gold_path_biosamples.tsv; data/raw/gold_studies.tsv
+  locator: Exact canonical_path match or exact member of the pipe-delimited study
+    paths column
+  summary: 'Matched maintained side rows: {"gold_path_biosamples": [], "gold_path_triads":
+    [], "gold_studies": []}. Triad medium/local/broad roles stay distinct. Per-slot
+    one-study agreement is not independent replication or identity equivalence. A
+    study containing this path may also contain other media; its whole contents are
+    not assigned to this target.'
+  support: supports
+  accessed_at: '2026-10-10T20:02:44.320740Z'
+- evidence_id: O1
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms?obo_id=ENVO%3A00002007
+  locator: Active OLS ENVO term, canonical label and complete definition/comment;
+    retained response SHA256 c30b4e377e51faf8d24e70cde71ea93f04d98ac8f711ed91560a1364a220d7ce
+  summary: 'ENVO:00002007 sediment: Deposited particulate material.'
+  support: supports
+  accessed_at: '2026-10-10T19:57:50.146575Z'
+- evidence_id: P1
+  kind: record_content
+  reference: data/habitats/terrestrial/sediment.yaml
+  locator: Parent identity, definition if present, hierarchy, source path and curation
+    status
+  summary: ENVO:00002007 denotes sediment. Inspected to evaluate this target parent
+    edge only; its other taxa, parameters and causal graph claims are outside this
+    record review.
+  support: context_only
+  accessed_at: '2026-10-10T20:06:56.000000Z'
+- evidence_id: P2
+  kind: record_content
+  reference: data/habitats/engineered/molluscs_pond.yaml
+  locator: Parent identity, definition if present, hierarchy, source path and curation
+    status
+  summary: habitatmech:GOLD.236eb735d7 denotes Molluscs pond. Inspected to evaluate
+    this target parent edge only; its other taxa, parameters and causal graph claims
+    are outside this record review.
+  support: context_only
+  accessed_at: '2026-10-10T20:06:56.000000Z'
+- evidence_id: N1
+  kind: authority
+  reference: docs/CURATION.md
+  locator: Strictly broader parents, MIxS roles, status gates and GOLD-context exclusion
+    rules
+  summary: Every parent is an is-a claim. Guarded GOLD exclusions remove only the
+    source-context contribution, preserving independent genera and source attestations.
+    Optional enrichment is not mandatory; ITEM decisions, not a saved review, determine
+    REVIEWED status.
+  support: supports
+  accessed_at: '2026-10-10T20:06:56.000000Z'
+- evidence_id: G1
+  kind: record_content
+  reference: src/habitatmech/seed.py; src/habitatmech/schema/habitatmech.yaml
+  locator: resolve_gold, ingest_gold, mint and SourceAttestation.mapping_predicate
+  summary: 'Fresh native lexical resolution: {"category": null, "contributes_grounding":
+    true, "decision": null, "extra_parents": ["ENVO:00002007"], "extra_xrefs": [],
+    "grounding_status": "NARROW", "identifier": "habitatmech:GOLD.89569f7bcc", "mapping_predicate":
+    "skos:narrowMatch", "reviewed": false, "route": "gold_narrower_than_leaf_match"}.
+    The 15 sediment targets have no maintained target decision or parent exclusion.
+    The microcosm additionally has a CLASS CONFIRM_UNGROUNDED decision. The mapping
+    field declares source-to-record endpoints and omission for the same concept, while
+    the narrower-leaf route compares the retained mint to an ontology parent.'
+  support: supports
+  accessed_at: '2026-10-10T20:02:44.320740Z'
+- evidence_id: L1
+  kind: search
+  reference: curation/; history/; research/; reviews/; reports/; data/raw/; data/habitats/PATHS.tsv
+  locator: Identifier, slug, label, source node and exact path; maintained tables
+    and ignored-inclusive reference inventory
+  summary: 'Target-matching curation rows: {}. No target-specific definition, causal
+    overlay or ecological parameter/taxon claim is attached. Generic sediment overlays
+    do not belong to this minted target. There is no earlier completed structured
+    review for this identifier in the current review inventory; legacy prose remains
+    distinct.'
+  support: context_only
+  accessed_at: '2026-10-10T20:02:44.320740Z'
+  search_scope: Repository root searched with rg --no-ignore --hidden, excluding .git
+    and .venv; maintained TSVs parsed exactly, including every current root curation
+    table and GOLD side table. Hidden and ignored legacy reports, research, history
+    and generated artifacts were included. Generic-label results were distinguished
+    from the exact identifier, slug, source node and full path.
+- evidence_id: H1
+  kind: prior_review
+  reference: reports/yaml_record_review/20260925T005214Z-sediment__53bcb909.md
+  locator: Historical identity, findings and proposed actions, compared with current
+    maintained owners
+  summary: Older reports identify a context-parent concern, but their proposed term-request
+    replacement or new override is not adopted automatically. The existing guarded
+    gold_parent_exclusions.tsv is now the narrow maintained owner.
+  support: context_only
+  accessed_at: '2026-10-10T20:06:56.000000Z'
+- evidence_id: V1
+  kind: validation
+  reference: justfile
+  locator: Current native check receipts, 2026-10-10
+  summary: 'All 16 target LinkML checks, joint 16-target strict check, corpus reproduction,
+    label correspondence, history, causal-overlay and term-request gates passed. Reproduction:
+    3208/3208, no differences. Labels: 1178 canonical, 1 synonym, 5 exceptions, 2057
+    without adapters. History: 250 valid. Causal overlays: 32 valid. Term requests:
+    109 current.'
+  support: supports
+  accessed_at: '2026-10-10T20:06:56.000000Z'
+- evidence_id: I1
+  kind: database
+  reference: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  locator: Fresh issue body and OPEN state, compared with current emitting route and
+    field contract
+  summary: The existing issue tracks the source-to-record versus record-to-ontology-parent
+    endpoint mismatch. It remains unresolved. This is not a formal SKOS ban on self-links
+    and is not repaired by swapping broadMatch with narrowMatch.
+  support: supports
+  accessed_at: '2026-10-10T20:06:56.000000Z'
+assessments:
+- assessment_id: D1
+  area: identity
+  topic: Exact source concept and biological entity type
+  outcome: supported
+  target_ids:
+  - habitatmech:GOLD.89569f7bcc
+  evidence_ids:
+  - R1
+  - S1
+  - S2
+  - S3
+  - O1
+  summary: The source qualifies a sediment material by its mollusc-pond location.
+    A mollusc-culture pond is the setting, not a broader material class. Neither zero
+    frozen assertions nor a zero later exact cohort proves microbial absence.
+- assessment_id: D2
+  area: grounding
+  topic: All contributing hierarchy routes and mapping endpoints
+  outcome: concern
+  target_ids:
+  - habitatmech:GOLD.89569f7bcc
+  evidence_ids:
+  - R1
+  - G1
+  - N1
+  - O1
+  summary: The narrower sediment genus is supported, but the immediate GOLD parent
+    habitatmech:GOLD.236eb735d7 is context-only. No definition genus or ITEM override
+    supplies it independently. The narrowMatch endpoint defect is separate from hierarchy
+    curation.
+- assessment_id: D3
+  area: provenance
+  topic: Frozen assertions, later memberships and source/quantity roles
+  outcome: supported
+  target_ids:
+  - habitatmech:GOLD.89569f7bcc
+  evidence_ids:
+  - S1
+  - S2
+  - S3
+  - S4
+  - G1
+  summary: Exactly one GOLD concept and node are represented with a stable mint. Frozen
+    positive ORGANISM assertions retain their unit; a missing zero count is not no-members
+    evidence. The later census separately counts BioSamples, organism entries and
+    sequencing projects. Shared study membership is not an independent ecological
+    assertion for every member, and numeric agreement does not prove snapshot equivalence.
+- assessment_id: D4
+  area: evidence
+  topic: Definitions, MIxS, parameters, taxa, mechanisms and citation placement
+  outcome: supported
+  target_ids:
+  - habitatmech:GOLD.89569f7bcc
+  evidence_ids:
+  - R1
+  - S4
+  - L1
+  - N1
+  summary: There are no target-authored definitions, environmental parameter bands,
+    characteristic taxa, datasets, discussions or causal graphs to verify. This is
+    acceptable optional sparsity, not a scientific claim of absence. Contextual triad
+    terms and source organism physiology are not imported as habitat identity, characteristic
+    presence or class-wide conditions.
+- assessment_id: D5
+  area: consistency
+  topic: Scientific status and generated ownership
+  outcome: supported
+  target_ids:
+  - habitatmech:GOLD.89569f7bcc
+  evidence_ids:
+  - R1
+  - G1
+  - N1
+  - V1
+  summary: SEEDED accurately records the lack of an ITEM decision for this source
+    concept. Microcosm CLASS history records a lexical screen, not a scientific approval.
+    Validation and saving this observation neither promotes status nor authorizes
+    edits to generated habitat files.
+- assessment_id: D6
+  area: scope
+  topic: Review completeness and remaining uncertainty
+  outcome: unknown
+  target_ids:
+  - habitatmech:GOLD.89569f7bcc
+  evidence_ids:
+  - R1
+  - S2
+  - L1
+  - V1
+  summary: Every current target field was assessed; parent records were used only
+    to assess the edge, not to claim their scientific review. Original frozen member-level
+    reconstruction remains unavailable. The bounded source/ontology and claim-level
+    review is not exhaustive ecological characterization or a corpus-wide scientific
+    pass.
+findings:
+- finding_id: F1
+  issue_key: gold-89569f7bcc-context-parent
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Context Molluscs pond is incorrectly asserted as a sediment genus
+  description: The source qualifies a sediment material by its mollusc-pond location.
+    A mollusc-culture pond is the setting, not a broader material class. Neither zero
+    frozen assertions nor a zero later exact cohort proves microbial absence. The
+    disputed parent is habitatmech:GOLD.236eb735d7; retain ENVO:00002007 and the exact
+    source mint.
+  target_ids:
+  - habitatmech:GOLD.89569f7bcc
+  field_paths:
+  - parent_habitats
+  owner_paths:
+  - repository: culturebotai/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Guarded exclusion of this immediate GOLD context-parent contribution
+  evidence_ids:
+  - R1
+  - S1
+  - S2
+  - S4
+  - O1
+  - G1
+  - N1
+  - P1
+  - P2
+  rule_id: HabitatMech:strictly-broader-parents
+  native_severity: major
+  normalization_reason: A context-only edge asserts the wrong material-versus-setting
+    hierarchy, not merely incomplete optional curation.
+- finding_id: F2
+  issue_key: gold-89569f7bcc-mapping-endpoint-contract
+  category: representation
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Emitted mapping predicate uses endpoints different from its declared field
+  description: 'The exact source path keeps its own minted identity, yet the source-to-record
+    field emits skos:narrowMatch from the narrower-than-ontology-leaf route. The implicit
+    comparison is to ENVO:00002007, not to the documented generated record target.
+    Reconcile shared #1398 across schema, generator and consumers.'
+  target_ids:
+  - habitatmech:GOLD.89569f7bcc
+  field_paths:
+  - source_attestations[0].mapping_predicate
+  owner_paths:
+  - repository: culturebotai/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Shared endpoint contract and emitting-route owner
+  - repository: culturebotai/HabitatMech
+    path: src/habitatmech/schema/habitatmech.yaml
+    role: Shared endpoint contract and emitting-route owner
+  evidence_ids:
+  - R1
+  - S1
+  - G1
+  - I1
+  rule_id: HabitatMech:source-attestation-mapping-endpoints
+  native_severity: major
+  normalization_reason: The shared generator emits a semantic relation with the wrong
+    declared endpoints.
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1398
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - habitatmech:GOLD.89569f7bcc
+  owner_paths:
+  - repository: culturebotai/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Guarded exclusion of this immediate GOLD context-parent contribution
+  description: Add a guarded exclusion for habitatmech:GOLD.89569f7bcc, exact source_path
+    Engineered > Artificial ecosystem > Aquaculture > Molluscs pond > Sediment, expected
+    parent_id habitatmech:GOLD.236eb735d7. Do not invent a definition, change the
+    parent habitat identity, merge generic sediment records or remove independent
+    ontology parents.
+  generator: src/habitatmech/seed.py
+  acceptance_checks:
+  - 'Inspect a forced seed canary: only the reviewed GOLD context parent is removed
+    and ENVO:00002007 remains.'
+  - Preserve identifier, slug, source node/path, positive ORGANISM count/unit or zero
+    omission, and unrelated claims.
+  - Append curation history, regenerate corpus/site, run verify-corpus, validate-products,
+    review lineage checks and full QC.
+  - Leave the separate mapping-contract finding open until its shared acceptance criteria
+    are met.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - habitatmech:GOLD.89569f7bcc
+  owner_paths:
+  - repository: culturebotai/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Shared endpoint contract and emitting-route owner
+  - repository: culturebotai/HabitatMech
+    path: src/habitatmech/schema/habitatmech.yaml
+    role: Shared endpoint contract and emitting-route owner
+  description: 'Address existing #1398, distinguishing source-to-record identity and
+    record-to-ontology-parent relations. No global predicate swap or invented exact
+    merge.'
+  generator: src/habitatmech/seed.py
+  acceptance_checks:
+  - Make subject, predicate and object explicit and consistent across the schema,
+    emitting routes and consumers.
+  - Regression-test retained minted, exact, broader and narrower routes without conflating
+    context-qualified habitats.
+  - Audit actual SSSOM/KGX triples against current kg-microbe modeling before any
+    product-readiness claim.
+  - Regenerate through maintained owners, append required history, verify exact reproduction
+    and run full QC.
+limitations:
+- This is a self-review, not an independent adversarial publication review; only the
+  single declared target is scientifically covered.
+- Original frozen GOLD node/edge files are unavailable at configured paths. Wider
+  ignored-inclusive repo/tmp search was permission-limited; later workbook entries
+  cannot reconstruct the original membership counts.
+- The label gate skips 2057 rows without adapters. Structural, reproduction and review-contract
+  validation do not certify scientific correctness.
+- External Excel files are retained locally with verified hashes and row-level locators,
+  not committed or treated as replacements for the frozen manifests.
+- No paid research, curation, history/status promotion, product regeneration, GitHub
+  mutation or publication was performed. Full QC was not rerun for this read-only
+  assessment; the listed native gates were run.
+- The 32 hashed contextual overlays were structurally checked but are not additional
+  scientific-review targets. Their mechanisms and parent-record taxa are not transferred
+  to this record.
+- 'SSSOM/KGX compatibility with current kg-microbe modeling is not certified. Shared
+  #1398 remains open.'
+- No direct member of this exact path was present in the later four-sheet census.
+  Classification evidence supports the bounded concept interpretation; neither all-time
+  member absence nor empirical prevalence is established.
+notes:
+- Continue alphabetically after sediment__447537e4 through the remaining engineered
+  sediment leaves and sediment_microcosm; each is reviewed individually.
+- Coverage baseline verified as 138 structured bundles and 102 of 3208 unique current
+  records. This review adds one target, not all 16 or the full corpus.
+- No absence conclusion relies on an ignored-aware search alone. Earlier legacy review
+  validators and counts were not copied as current check results.
+- The prepared native inspect captures preceded assessment. All captured bytes and
+  Git base were rechecked without silently refreshing hashes.
+- Legacy recommendations for term-request parent replacement or a new override are
+  superseded in this proposed action plan by the existing guarded context-exclusion
+  owner. Historical reports remain unchanged; this does not formally dispose of another
+  structured finding.
+tags:
+- scientific-review
+- record-review
+- engineered
+- gold
+- sediment
+```
