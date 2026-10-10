@@ -1,26 +1,34 @@
 identifier: habitatmech:GOLD.c483f43031
 label: Seawater aquarium
 habitat_category: ENGINEERED
-grounding_status: UNGROUNDED
-mapping_status: SEEDED
+grounding_status: NARROW
+mapping_status: REVIEWED
 parent_habitats:
+- ENVO:00002197
 - ENVO:00010622
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8027
   source_label: Seawater aquarium
   source_path: Engineered > Artificial ecosystem > Vivarium > Seawater aquarium
+  mapping_predicate: skos:narrowMatch
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.c483f43031)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: GROUND_AS_PARENT
+  changes: 'ENVO:00002197 ''saline water aquarium'' attached as a parent, not adopted
+    as the identity (NARROW). ITEM broader grounding (#1870; structured review 20261010T082307Z-seawater_aquarium
+    F1): the source denotes a seawater-maintained aquarium enclosure, not its water
+    medium. Active ENVO:00002197 covers aquaria whose primary ecological medium is
+    saline water; the vendored hierarchy places sea water beneath saline water and
+    this aquarium genus beneath aquarium/vivarium. Use only the broader relation because
+    saline water does not by itself require the marine qualification. Preserve the
+    mint, vivarium parent, nodes 8027/8028, complete path and zero-count omission.
+    No exact later member cohort or exact equivalence is claimed. Shared source-attestation
+    mapping endpoint issue #1398 remains unresolved. Path: Engineered > Artificial
+    ecosystem > Vivarium > Seawater aquarium (source concept habitatmech:GOLD.c483f43031)'

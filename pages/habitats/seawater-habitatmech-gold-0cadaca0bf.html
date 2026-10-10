@@ -52,7 +52,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="../habitats/sea-water-envo-00002149.html">sea water</a>      <code class="curie">ENVO:00002149</code></li>
-  <li><a href="../habitats/mesocosm-envo-01000620.html">mesocosm</a>      <code class="curie">ENVO:01000620</code></li>
 </ul>
 
 
@@ -67,6 +66,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">GROUND_AS_PARENT</span>
     <span class="meta">2026-08-13 · claude-opus-5</span>
     <p>ENVO:00002149 &#39;sea water&#39; attached as a parent, not adopted as the identity (NARROW). Mesocosm seawater is experimental, held in an artificial ecosystem; merging it with in-situ sea water conflates the two. Path: Engineered &gt; Artificial ecosystem &gt; Mesocosm &gt; Seawater (source concept habitatmech:GOLD.0cadaca0bf)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-10 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution ENVO:01000620 for habitatmech:GOLD.0cadaca0bf (Engineered &gt; Artificial ecosystem &gt; Mesocosm &gt; Seawater). Partial hierarchy correction (#1869; structured review 20261010T082307Z-seawater F1): exclude the immediate GOLD mesocosm context contribution. ENVO:01000620 denotes a vivarium embedded in a natural environment, not its water material; the exact linked PRJNA521532 study DOI:10.1038/s41396-020-00748-2 used laboratory chamber carboys. Later exact-path GOLD members include water and plastic/glass biofilm samples, so neither a water-only identity nor a replacement system genus is established for the entire bin. Preserve the source mint, nodes 6459/6460, full path, omitted zero count and existing sea-water decision without endorsing that remaining genus; #1869 stays open for material/system scope adjudication. The separate mapping endpoint defect remains #1398.</p>
   </li>
 </ol>
 

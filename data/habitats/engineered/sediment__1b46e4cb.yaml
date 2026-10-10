@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002007
-- habitatmech:GOLD.6a0644fced
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4690
@@ -19,3 +18,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.6a0644fced
+    for habitatmech:GOLD.87598cbdca (Engineered > Wastewater > Industrial wastewater
+    > Mine water > Sediment). Reviewed hierarchy exclusion (#1873; structured review
+    20261010T082307Z-sediment__1b46e4cb F1): deposited sediment is not a kind of overlying
+    mine water. The exact later GOLD JCM 16185 isolate and https://pubmed.ncbi.nlm.nih.gov/20358236/
+    identify sediment in a mining-effluent decantation pond, not water-material identity.
+    Exclude only the source-context contribution and retain ENVO:00002007. Preserve
+    mint, node 4690, path, four frozen ORGANISM assertions and NARROW/SEEDED state;
+    later Biosample/Organism totals do not replace this frozen unit. Shared mapping
+    endpoint issue #1398 remains open.'
