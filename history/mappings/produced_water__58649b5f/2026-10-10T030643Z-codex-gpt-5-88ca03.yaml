@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: produced_water__58649b5f
+session:
+  id: 2026-10-10T030643Z-codex-gpt-5-88ca03
+  timestamp: '2026-10-10T03:06:43Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1848
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude the oil-reservoir landform parent from produced-water material
+  details: Applied the exact identifier/path/expected-parent exclusion for habitatmech:GOLD.bfd6bfa0f1
+    after native review 20261010T024621Z-produced_water__58649b5f F1. Reinspected the full
+    target, frozen GOLD node 7639 and decision row, DSMZ DSM 22707 PEH A isolation record,
+    and current OLS ENVO:00002185 landform definition. Produced-water material is not a type
+    of the reservoir landform. Preserve the mint, source path, one ORGANISM assertion, all
+    other claims and prior events, and UNGROUNDED/CLASS/SEEDED state. No replacement grounding,
+    definition, genus, taxon or mechanism is asserted. Dry-run, validated canary, target LinkML
+    and strict checks, full-corpus preservation regression (1 passed) and exact 3208-record
+    reproduction passed. Full QC, regenerated map and site checks remain required before merge.
+    Used configured CLAW path and existing uv cache after default sibling path and sandboxed
+    cache access failed.
