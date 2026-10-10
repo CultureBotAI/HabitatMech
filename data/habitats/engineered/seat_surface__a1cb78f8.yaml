@@ -3,8 +3,6 @@ label: Seat surface
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:03600051
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5577
@@ -24,3 +22,14 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:03600051 for habitatmech:GOLD.2b85027dc1
+    (Engineered > Industrial production > Train car > Seat surface). Reviewed hierarchy
+    exclusion (#1867; structured review 20261010T063411Z-seat_surface__a1cb78f8 F1):
+    a train seating surface is not a kind of the rail vehicle ENVO:03600051. The source
+    path supplies location/containment context. The authors'' MBTA study page https://huttenhower.sph.harvard.edu/mbta2015/
+    distinguishes seat and seat-back swabs from whole trains; it is not an exact GOLD
+    cohort join. Preserve mint, nodes 5577/5578, path, zero-count omission and CLASS/SEEDED
+    state, separately from stadium seating.'

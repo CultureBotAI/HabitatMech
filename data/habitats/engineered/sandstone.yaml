@@ -14,7 +14,6 @@ synonyms:
   source: PREGO
 parent_habitats:
 - ENVO:01000271
-- habitatmech:GOLD.8c6192908f
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7127
@@ -156,3 +155,16 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.8c6192908f
+    for habitatmech:GOLD.08c61f0426 (Engineered > Built environment > Monument > Stone
+    > Sandstone). Reviewed hierarchy exclusion (#1864; structured review 20261010T063411Z-sandstone
+    F1): generic ENVO:00002055 sandstone includes natural material outside built heritage,
+    whereas the authored parent definition requires human-emplaced heritage stone.
+    Exclude only this GOLD use-context contribution; retain the independent ENVO:01000271
+    clastic-rock genus, exact material identity, both source attestations, GOLD ORGANISM/PREGO
+    TAXON units, association scores/taxa and REVIEWED state. PMID:20525813 supports
+    a particular sandstone-monument isolation, not a restriction of all sandstone
+    to that setting.'

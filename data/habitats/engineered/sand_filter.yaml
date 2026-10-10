@@ -3,8 +3,6 @@ label: Sand filter
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:01000965
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5595
@@ -24,3 +22,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:01000965 for habitatmech:GOLD.94b0ed7936
+    (Engineered > Built environment > Swimming pool > Sand filter). Reviewed hierarchy
+    exclusion (#1862; structured review 20261010T063411Z-sand_filter F1): a pool-associated
+    sand filter is not a kind of constructed swimming pool. ENVO:01000965 denotes
+    the water-holding construction; Angenent et al. (DOI:10.1073/pnas.0501235102)
+    distinguish the pool, pressurized filters and sampled filter sand/interstitial
+    water. Exclude only the exact GOLD context parent. Preserve mint, nodes 5595/5596,
+    source path, zero-count omission and CLASS/SEEDED state. Later backwash samples
+    do not establish an exact sand-material or water identity.'

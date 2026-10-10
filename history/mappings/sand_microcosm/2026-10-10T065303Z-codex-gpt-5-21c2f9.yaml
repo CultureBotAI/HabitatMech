@@ -1,0 +1,37 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: sand_microcosm
+session:
+  id: 2026-10-10T065303Z-codex-gpt-5-21c2f9
+  timestamp: '2026-10-10T06:53:03Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1863
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - mapping_status
+  summary: Correct item-level grounding for sand_microcosm
+  details: 'ITEM correction (#1863; structured review 20261010T063411Z-sand_microcosm F1).
+    Path: Engineered > Artificial ecosystem > Sand microcosm. ENVO:01000621 describes an artificially
+    established controlled ecosystem in a vivarium. Exact GOLD-classified BioSamples SAMN06343863
+    and SAMN14510915 distinguish sand microcosms from broad river context and sand/soil medium;
+    PMID:26076202 independently describes controlled sand experiments. Retain the source-specific
+    mint and true artificial-ecosystem parent; add microcosm only as a broader genus, not
+    exact identity, river biome or sand material. Preserve all source nodes and zero ORGANISM-count
+    omission; later BIOSAMPLE counts are not substitutes. The shared source-attestation endpoint
+    contract remains #1398. The entire target and canary diffs were inspected. Dry-run seeding
+    and the sand-filter and sand-microcosm canaries passed; two new focused regression tests
+    compare all 3208 records with the named changes disabled, proving exact scope. Generated
+    record history reflects current decisions; prior CLASS decisions remain in Git and the
+    immutable original reviews. Semantic-map/site regeneration, label correspondence and full
+    QC remain required publication gates.'

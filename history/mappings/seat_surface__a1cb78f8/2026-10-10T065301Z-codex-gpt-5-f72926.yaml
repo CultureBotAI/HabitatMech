@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: seat_surface__a1cb78f8
+session:
+  id: 2026-10-10T065301Z-codex-gpt-5-f72926
+  timestamp: '2026-10-10T06:53:01Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1867
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude source context from strict parentage of seat_surface__a1cb78f8
+  details: 'Reviewed hierarchy exclusion (#1867; structured review 20261010T063411Z-seat_surface__a1cb78f8
+    F1): a train seating surface is not a kind of the rail vehicle ENVO:03600051. The source
+    path supplies location/containment context. The authors'' MBTA study page https://huttenhower.sph.harvard.edu/mbta2015/
+    distinguishes seat and seat-back swabs from whole trains; it is not an exact GOLD cohort
+    join. Preserve mint, nodes 5577/5578, path, zero-count omission and CLASS/SEEDED state,
+    separately from stadium seating. The entire target and canary diffs were inspected. Dry-run
+    seeding and the sand-filter and sand-microcosm canaries passed; two new focused regression
+    tests compare all 3208 records with the named changes disabled, proving exact scope. Generated
+    record history reflects current decisions; prior CLASS decisions remain in Git and the
+    immutable original reviews. Semantic-map/site regeneration, label correspondence and full
+    QC remain required publication gates.'
