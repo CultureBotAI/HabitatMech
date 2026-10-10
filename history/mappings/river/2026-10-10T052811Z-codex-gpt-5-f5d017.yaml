@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: river
+session:
+  id: 2026-10-10T052811Z-codex-gpt-5-f5d017
+  timestamp: '2026-10-10T05:28:11Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1856
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude source context from strict parentage of river
+  details: 'Reviewed hierarchy exclusion (#1856; structured review 20261010T045310Z-river
+    F1): ENVO:00000022 is a watercourse, not the anthropogenically affected water material
+    ENVO:00002001 that it receives. Current OLS definitions and the existing ITEM decision
+    describing a wastewater-receiving river support this distinction. Exclude only the exact
+    GOLD material-context parent; retain independent stream genus ENVO:00000023, both source
+    attestations, GOLD CLOSE predicate, PREGO counts/scores/taxa, exact aggregate identity,
+    existing REVIEWED status and all prior events. This does not establish original source
+    membership or resolve ontology synonym scope tracked in #1249. Complete target and generated
+    diff inspected. Dry-run seeding and three forced canaries passed; 49 focused hierarchy
+    regression tests passed. The regression compares all 3208 records and their semantic text
+    and preserves every other claim. Map/site and full QC remain publication gates.'
