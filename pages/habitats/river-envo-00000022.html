@@ -58,7 +58,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="../habitats/stream-envo-00000023.html">stream</a>      <code class="curie">ENVO:00000023</code></li>
-  <li><a href="../habitats/waste-water-envo-00002001.html">waste water</a>      <code class="curie">ENVO:00002001</code></li>
 </ul>
 
 
@@ -267,6 +266,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">REVIEW</span>
     <span class="meta">2026-08-13 · claude-opus-5</span>
     <p>Reviewed and endorsed the seeder&#39;s own resolution. Multi-source review pass: this record is attested by more than one independent vocabulary, and this source&#39;s label or path was read against the record&#39;s ontology term to check the merge is right. It agrees. Source concepts in the same pass whose labels did not agree were re-decided rather than endorsed; see the pass&#39;s other decisions of the same date. (source concept habitatmech:PREGO.96a73add63)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-10 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution ENVO:00002001 for habitatmech:GOLD.33a923764f (Engineered &gt; Wastewater &gt; River). Reviewed hierarchy exclusion (#1856; structured review 20261010T045310Z-river F1): ENVO:00000022 is a watercourse, not the anthropogenically affected water material ENVO:00002001 that it receives. Current OLS definitions and the existing ITEM decision describing a wastewater-receiving river support this distinction. Exclude only the exact GOLD material-context parent; retain independent stream genus ENVO:00000023, both source attestations, GOLD CLOSE predicate, PREGO counts/scores/taxa, exact aggregate identity, existing REVIEWED status and all prior events. This does not establish original source membership or resolve ontology synonym scope tracked in #1249.</p>
   </li>
 </ol>
 

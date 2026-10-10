@@ -3,7 +3,6 @@
 from habitatmech import seed
 from habitatmech.text_map_inputs import build_context, semantic_text
 
-
 CASES = {
     "habitatmech:GOLD.33a923764f": (
         "ENVO:00000022", "ENVO:00002001", ["ENVO:00000023"], "EXACT", "REVIEWED",
