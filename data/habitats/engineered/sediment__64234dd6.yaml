@@ -4,7 +4,6 @@ habitat_category: ENGINEERED
 grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
-- ENVO:00001997
 - ENVO:00002007
 source_attestations:
 - source: GOLD
@@ -20,3 +19,18 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00001997 for habitatmech:GOLD.7e27a52150
+    (Engineered > Wastewater > Industrial wastewater > Acid mine drainage > Sediment).
+    Reviewed hierarchy exclusion (#1879; structured review 20261010T200656Z-sediment__64234dd6
+    F1): The sampled material is sediment associated with acid mine drainage. Active
+    ENVO defines drainage through mine-water outflow, not deposited solids. The exact-path
+    triad independently separates sediment medium from acid-drainage local context;
+    the one-study saline-sediment broad annotation does not make the whole habitat
+    saline or marine. The exact GOLD path supplies context, while official ENVO:00002007
+    supplies the independent sediment-material genus. Exclude only this source-parent
+    contribution; preserve the qualified mint, node/path, frozen ORGANISM counts or
+    zero omission, NARROW/SEEDED state and unrelated claims. No definition, taxon
+    or parameter is inferred. Shared mapping endpoint issue #1398 remains open.'

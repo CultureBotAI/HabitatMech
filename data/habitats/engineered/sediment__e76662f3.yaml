@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002007
-- habitatmech:GOLD.b1f94cf5f5
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8069
@@ -17,3 +16,18 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.b1f94cf5f5
+    for habitatmech:GOLD.dbd07e057b (Engineered > Wastewater > Industrial wastewater
+    > Settling tank > Sediment). Reviewed hierarchy exclusion (#1879; structured review
+    20261010T200656Z-sediment__e76662f3 F1): Sediment accumulated in a settling tank
+    is retained material, not the treatment vessel. Industrial wastewater explains
+    the source branch but is not an additional sediment genus. No sludge-equivalence
+    merge or wastewater treatment mechanism is established by the label alone. The
+    exact GOLD path supplies context, while official ENVO:00002007 supplies the independent
+    sediment-material genus. Exclude only this source-parent contribution; preserve
+    the qualified mint, node/path, frozen ORGANISM counts or zero omission, NARROW/SEEDED
+    state and unrelated claims. No definition, taxon or parameter is inferred. Shared
+    mapping endpoint issue #1398 remains open.'

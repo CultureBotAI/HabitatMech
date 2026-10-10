@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: sediment__6c6b3208
+session:
+  id: 2026-10-10T202508Z-codex-gpt-5-7567e1
+  timestamp: '2026-10-10T20:25:08Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1878
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude the reviewed sediment context parent
+  details: 'Publication follow-up to structured review 20261010T200656Z-sediment__6c6b3208
+    F1: The later source records town-canal mud or sludge as collection sites. These are sedimentary
+    material in a canal setting, not a kind of canal. The active ENVO canal comment refers
+    to contained water, not the channel; neither water nor channel is a sediment genus. Added
+    an exact-path exclusion for habitatmech:GOLD.39b18ceeda and resolved parent habitatmech:GOLD.96a29ab857.
+    The GOLD source path is context, not an is-a genus; official OLS sediment and setting
+    definitions were inspected. Preserve ENVO:00002007, identity, slug, source nodes/path,
+    frozen counts/units and NARROW/SEEDED status. Do not infer a definition or optional taxa/parameters.
+    Dry-run and forced canary are followed by full validated regeneration, exact-scope regressions,
+    corpus/label checks, map/site rebuild and authoritative QC before merge. Original reviews
+    remain immutable; linked follow-ups record disposition. The separate source-attestation
+    endpoint defect remains unresolved under #1398; this hierarchy correction is not SSSOM/KGX
+    compatibility certification.'
