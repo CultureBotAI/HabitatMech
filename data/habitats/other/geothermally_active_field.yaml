@@ -18,6 +18,7 @@ source_attestations:
 - source: PREGO
   source_id: ENVO:00000373
   source_label: ENVO:00000373
+  mapping_predicate: skos:broadMatch
   assertion_count: 1
   assertion_unit: TAXON
   score: 3.0
@@ -45,3 +46,8 @@ curation_history:
     processes occur, so only a drillable subset of it matches. The separate GOLD-sourced
     geothermal field concept stays ungrounded and is not merged by this row. (source
     concept habitatmech:PREGO.0aa17935ef)'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_ATTESTATION_CORRECTED
+  changes: Preserved curated PREGO source-to-record mapping ENVO:00000373 skos:broadMatch
+    ENVO:01001851; source counts and taxa are unchanged (#1888).

@@ -42,7 +42,7 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
   <thead><tr><th scope="col">Source</th><th scope="col">Label / path</th><th scope="col" class="num">Assertions</th><th scope="col">Unit</th></tr></thead>
   <tr>
     <td><span class="pill plain">BACDIVE</span></td>
-    <td>Waste<br><span class="meta">kg-microbe&#39;s isolation-source mapping table has a row for this source with no ontology target; treated as ungrounded rather than re-grounded by lexical match.</span></td>
+    <td>Waste<br><span class="meta">kg-microbe&#39;s isolation-source mapping table has no ontology target for this source; the automatic route leaves it ungrounded. The explicit curator decision GROUND_AS_PARENT overrides that route; this source is emitted on habitatmech:BACDIVE.36df85e4a4.</span></td>
     <td class="num">1140</td>
     <td>STRAIN</td>
   </tr>
@@ -252,6 +252,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">GROUND_AS_PARENT</span>
     <span class="meta">2026-08-16 · claude-opus-5</span>
     <p>ENVO:00002264 &#39;waste material&#39; attached as a parent, not adopted as the identity (BROAD). Term-request re-check (#12), after ENVO:01001000 showed these claims were never machine-rechecked: &#39;Waste&#39; spans solid, liquid and industrial waste. ENVO:00002264 &#39;waste material&#39; — &#39;a material which is not the desired output of a process&#39; — is broader than all three, so it is the parent that covers the bin without grounding it to any one member. (source concept habitatmech:BACDIVE.36df85e4a4)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_ATTESTATION_CORRECTED</span>
+    <span class="meta">2026-10-10 · seed_from_sources</span>
+    <p>Corrected bacdive.isolation_source:waste provenance wording to distinguish the declined automatic mapping from the final curator override (#1889).</p>
   </li>
 </ol>
 

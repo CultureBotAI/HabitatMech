@@ -3,8 +3,6 @@ label: Algae cultivation tank
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.827b5dbbef
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7772
@@ -24,3 +22,14 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.827b5dbbef
+    for habitatmech:GOLD.5d882de599 (Engineered > WWTP > Effluent > Algae cultivation
+    tank). Reviewed context exclusion (#1886; 20261010T225040Z-algae_cultivation_tank
+    F1): an algae cultivation tank is a vessel in an effluent setting, not effluent
+    material. Later exact-path study metadata describes algae growing in secondary-treated
+    wastewater but does not make the apparatus a wastewater subtype. Preserve source-qualified
+    identity, node/path, zero ORGANISM omission and CLASS/SEEDED status; no uniform
+    treatment performance is asserted.'

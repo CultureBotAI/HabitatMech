@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: algae_cultivation_tank
+session:
+  id: 2026-10-10T230632Z-codex-gpt-5-cc07d1
+  timestamp: '2026-10-10T23:06:32Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1886
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct scoped aerobic and algal review findings
+  details: Follow-up to 20261010T225040Z-algae_cultivation_tank. Exclude only the exact reviewed
+    GOLD context-parent contribution. Preserve all independently supported genera, source
+    identities, nodes, paths, frozen assertion counts and units, existing grounding and review
+    status. Dry run and inspected validated agricultural-waste canary precede bulk regeneration.
+    Focused regression tests, exact blast-radius comparison, corpus/label/history checks,
+    semantic-map/site regeneration and full native CI are required before publication. Original
+    review files are immutable; linked successor observations will report verified dispositions.
+    No SSSOM/KGX readiness certification is implied.

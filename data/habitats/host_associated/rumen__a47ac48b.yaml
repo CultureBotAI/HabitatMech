@@ -32,6 +32,7 @@ source_attestations:
 - source: PREGO
   source_id: BTO:0001194
   source_label: rumen
+  mapping_predicate: skos:exactMatch
   assertion_count: 231
   assertion_unit: TAXON
   score: 4.0
@@ -311,3 +312,8 @@ curation_history:
     UBERON anatomy identity consolidates 231 PREGO taxon assertions with the Madin
     rumen evidence added for #110; the BTO source identifier remains explicit in the
     attestation. (source concept habitatmech:PREGO.48fa2b54b5)'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_ATTESTATION_CORRECTED
+  changes: Preserved curated PREGO source-to-record mapping BTO:0001194 skos:exactMatch
+    UBERON:0007365; source counts and taxa are unchanged (#1888).

@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: air_scrubber
+session:
+  id: 2026-10-10T230634Z-codex-gpt-5-32e534
+  timestamp: '2026-10-10T23:06:34Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1887
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - synonyms
+  summary: Correct scoped aerobic and algal review findings
+  details: 'Follow-up to 20261010T225034Z-air_scrubber. Remove unsupported packed/recirculating/wet
+    restrictions and unverified exact aliases from the generic scrubbing-device definition.
+    EPA describes multiple scrubber designs; the earlier deep-research report inferred source
+    scope without direct member evidence. Preserve manufactured-product genus and REPLACE
+    suppression of Indoor Air. Biofilm child issue #1637 is not resolved. Dry run and inspected
+    validated agricultural-waste canary precede bulk regeneration. Focused regression tests,
+    exact blast-radius comparison, corpus/label/history checks, semantic-map/site regeneration
+    and full native CI are required before publication. Original review files are immutable;
+    linked successor observations will report verified dispositions. No SSSOM/KGX readiness
+    certification is implied.'
