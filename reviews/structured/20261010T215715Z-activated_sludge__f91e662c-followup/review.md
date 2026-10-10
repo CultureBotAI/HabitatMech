@@ -1,0 +1,781 @@
+# Scoped publication follow-up: activated_sludge__f91e662c
+
+- Review: 20261010T215715Z-activated_sludge__f91e662c-followup
+- Repository: culturebotai/HabitatMech
+- Started UTC: 2026-10-10T21:53:57Z
+- Finished UTC: 2026-10-10T21:57:15Z
+- Reviewer: codex-gpt-5 (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The guarded exclusion removes only the unsupported GOLD context parent ENVO:00002001. The qualified identity, source path/nodes, frozen counts/units and unrelated fields are unchanged. F1 is resolved within this bounded hierarchy correction. Existing ENVO:00002046 and NARROW/SEEDED state are retained, not newly certified for all heterogeneous members. F2 remains open under #1398; the source-to-record endpoint contract is still unreconciled.
+
+## Scope And Provenance
+
+Reassess this exact correction, its source preservation and unresolved limitations.
+
+Selection: One successor for one previously reviewed record; no additional unique-record coverage.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f5a7cd574f2cdd45dc950daf426cbdbce286116a.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| habitatmech:GOLD.0d353772af | data/habitats/engineered/activated_sludge__f91e662c.yaml | generated | Activated Sludge |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Post-fix strict record validation | passed | True | habitatmech:GOLD.0d353772af | All 17 affected records scanned; zero strict-schema errors. |
+| Scoped regression tests | passed | True | habitatmech:GOLD.0d353772af | 67 passed in 62.94s; exact corpus scope and preserved native/source fields. |
+| Exact corpus reproduction | passed | True | habitatmech:GOLD.0d353772af | 3208 expected/found, zero missing/extra/differing. |
+| Ontology label correspondence | passed | True | habitatmech:GOLD.0d353772af | 1178 canonical, one synonym and five exceptions; 2057 rows have no adapter. |
+| Profile-bound semantic map | passed | True | habitatmech:GOLD.0d353772af | Complete source-bound map/cache validation and identical local/downloaded full inputs. |
+
+## Scientific And Domain Assessments
+
+### Scoped habitat and hierarchy correction
+
+grounding: supported. Targets: habitatmech:GOLD.0d353772af.
+
+The guarded exclusion removes only the unsupported GOLD context parent ENVO:00002001. The qualified identity, source path/nodes, frozen counts/units and unrelated fields are unchanged. F1 is resolved within this bounded hierarchy correction. Existing ENVO:00002046 and NARROW/SEEDED state are retained, not newly certified for all heterogeneous members. F2 remains open under #1398; the source-to-record endpoint contract is still unreconciled.
+
+### Generated ownership and preserved source scope
+
+provenance: supported. Targets: habitatmech:GOLD.0d353772af.
+
+The complete corpus comparison preserves identifiers/slugs, source nodes/paths/counts/units and unrelated scientific fields. No hand-edited generated record or unsupported status promotion; correctly attributed session histories and generated products are validated.
+
+### Unresolved shared endpoint contract
+
+representation: concern. Targets: habitatmech:GOLD.0d353772af.
+
+F2 remains major and open; no whole-record or export-compatibility approval is implied.
+
+## Findings
+
+### F1: Source context is asserted as a strictly broader sludge habitat
+
+major / resolved / confirmed; issue key: gold-0d353772af-context-parent.
+
+The broad wastewater-qualified activated-sludge bin remains distinct from wastewater itself. Later samples range across treatment sludge, enrichments, granular-sludge reactors and sludge-associated isolates or viruses. The later 485 BioSamples differ from the committed side-table 484 and are not replacements for the frozen 789 ORGANISM assertions. Disputed parent: ENVO:00002001.
+
+Disposition: The guarded exclusion removes only the unsupported GOLD context parent ENVO:00002001. The qualified identity, source path/nodes, frozen counts/units and unrelated fields are unchanged. F1 is resolved within this bounded hierarchy correction. Existing ENVO:00002046 and NARROW/SEEDED state are retained, not newly certified for all heterogeneous members. F2 remains open under #1398; the source-to-record endpoint contract is still unreconciled.
+
+### F2: Source-to-record mapping field emits a record-to-ontology comparison
+
+major / open / confirmed; issue key: gold-0d353772af-mapping-endpoint-contract.
+
+The exact source concept retains its own minted identifier, yet emits skos:narrowMatch from gold_narrower_than_leaf_match, comparing with ENVO:00002046. The declared field instead compares that source with the generated record identifier. Reconcile existing #1398 without asserting that SKOS forbids self-links or merely swapping mapping direction.
+
+## Recommended Actions And Acceptance Checks
+
+### A2
+
+Implement the shared endpoint contract tracked in #1398, preserving source-qualified identities.
+
+- Make mapping subject, predicate and object explicit and consistent across schema, emitting routes and consumers.
+- Test minted, exact, broader and narrower routes; no global predicate swap or generic-sludge merge.
+- Audit actual SSSOM/KGX triples against current kg-microbe modeling before any product-readiness claim.
+- Regenerate via maintained inputs and inspect a forced canary; do not hand-edit generated YAML.
+- Preserve source identity, slug, exact source nodes/path, count/unit semantics and unrelated claims.
+- Append curation history; regenerate required products and run verify-corpus, validate-products, history/schema/site gates and full QC.
+- Save a linked follow-up retaining stable issue keys; structural success alone does not resolve scientific findings.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| R1 | data/habitats/engineered/activated_sludge__f91e662c.yaml; Complete regenerated record versus the saved pre-curation corpus | supports | The guarded exclusion removes only the unsupported GOLD context parent ENVO:00002001. The qualified identity, source path/nodes, frozen counts/units and unrelated fields are unchanged. F1 is resolved within this bounded hierarchy correction. Existing ENVO:00002046 and NARROW/SEEDED state are retained, not newly certified for all heterogeneous members. F2 remains open under #1398; the source-to-record endpoint contract is still unreconciled. |
+| M1 | curation/gold_parent_exclusions.tsv; curation/decisions.tsv; Exact source identifier/path rows and history/mappings/activated_sludge__f91e662c | supports | The exact-path exclusion pins the expected parent and appends one SOURCE_PARENT_EXCLUDED event. Only the A/O system ITEM applicability decision changes; no source assertion or unrelated record is rewritten. |
+| N1 | docs/CURATION.md; Strictly broader parents; physical habitat applicability; guarded exclusions; native review status | supports | A context/component or feed relation is not is-a. Parent suppression does not itself confer ITEM identity review. |
+| P1 | reviews/structured/20261010T213407Z-activated_sludge__f91e662c/review.yaml; Complete original individual assessment, source evidence, findings and limitations | context_only | The original evidence was reassessed against the regenerated target and maintained corrections. Its member/snapshot ambiguities remain; this is not a new source-wide census. Original summary: The broad wastewater-qualified activated-sludge bin remains distinct from wastewater itself. Later samples range across treatment sludge, enrichments, granular-sludge reactors and sludge-associated isolates or viruses. The later 485 BioSamples differ from the committed side-table 484 and are not replacements for the frozen 789 ORGANISM assertions. |
+| V1 | justfile; scripts/validate_strict.py; scripts/verify_corpus.py; Post-fix native gate commands on product commit f5a7cd574f2cdd45dc950daf426cbdbce286116a | supports | Strict validation of all 17 affected records, exact 3208-record reproduction, labels, all 283 history records and lint passed. Full QC is not claimed by this observation; it remains a publication gate. |
+| V2 | tests/test_ao_and_sludge_review_fixes.py; Exact full-corpus exclusion scope, isolated decision scope, frozen source assertions and existing guarded-exclusion tests | supports | 67 focused tests passed. Exactly 17 records change under these exclusions; only the A/O system changes under the applicability decision. A separate complete before/after comparison preserves all non-parent fields except that one grounding status and generated history. |
+| V3 | https://github.com/CultureBotAI/HabitatMech/actions/runs/38088921937; Locked Linux map build; repeated 17-record canary; full projection, profile/cache verification and local input comparison | supports | Real BGE embeddings and PaCMAP projection were rebuilt for the current corpus. The canary and full source-bound cache checks passed; the downloaded full input bytes match the local current export. |
+| G1 | src/habitatmech/seed.py; src/habitatmech/schema/habitatmech.yaml; resolve_gold narrower-than-leaf route; SourceAttestation.mapping_predicate; current target attestation | supports | The source retains its own minted identifier, yet the emitted narrowMatch compares it with the ontology parent. The declared field endpoint remains the generated record identifier. |
+| I1 | https://github.com/CultureBotAI/HabitatMech/issues/1398; Open issue and new PR #1883 witness comment | supports | This shared contract defect is still open. A hierarchy-only fix does not reconcile endpoints or certify SSSOM/KGX. |
+
+## Limits And Additional Notes
+
+- Adversarial self-review of the authored correction, not independent approval.
+- Full QC has not yet completed for the publication head at observation time. These scoped dispositions rely on the listed successful native gates and regressions; required PR and queue QC must pass before merge.
+- Original source/member and count-unit limitations below remain; no fresh bulk source census or frozen-member reconstruction was performed in this successor.
+- The retained activated-sludge genus is not new certification of all heterogeneous members. Parent removal does not resolve source-material conflicts or mismatched study joins.
+- The shared endpoint and typed-synonym defects #1398/#1249 remain open. No SSSOM/KGX readiness or full-corpus scientific certification.
+- Inherited scientific limitation: Original frozen GOLD nodes/edges are unavailable at the configured path; no global absence is claimed. Frozen inventory assertions and later workbook counts are not interchangeable.
+- Inherited scientific limitation: External workbook and ontology response files are retained locally with hashes, not committed. Current ontology source is checked against, not silently substituted for, the frozen inventory.
+- Inherited scientific limitation: The retained GOLD workbook is a later snapshot, not a fresh live membership export. Only selected names/sites and relevant study descriptions were read claim by claim; the complete census is not an independent scientific review of every linked project.
+- Inherited scientific limitation: Source scope conflicts and unresolved exact terminology do not justify guessing an ontology identity, universal environmental range, characteristic taxon or causal edge.
+- Inherited scientific limitation: SSSOM/KGX conformity with current kg-microbe modeling is not certified; shared #1398 and #1249 remain unresolved in their respective affected scopes.
+- Inherited scientific limitation: The broad wastewater-qualified activated-sludge bin remains distinct from wastewater itself. Later samples range across treatment sludge, enrichments, granular-sludge reactors and sludge-associated isolates or viruses. The later 485 BioSamples differ from the committed side-table 484 and are not replacements for the frozen 789 ORGANISM assertions.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261010T215715Z-activated_sludge__f91e662c-followup
+kind: record
+repository: culturebotai/HabitatMech
+title: 'Scoped publication follow-up: activated_sludge__f91e662c'
+started_at: '2026-10-10T21:53:57Z'
+finished_at: '2026-10-10T21:57:15Z'
+reviewer:
+  identity: codex-gpt-5
+  kind: agent
+  model: gpt-5
+  independence: self_review
+  independence_basis: Continuing review agent; independent reviewer approval is not
+    claimed.
+skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'The guarded exclusion removes only the unsupported GOLD context parent ENVO:00002001.
+  The qualified identity, source path/nodes, frozen counts/units and unrelated fields
+  are unchanged. F1 is resolved within this bounded hierarchy correction. Existing
+  ENVO:00002046 and NARROW/SEEDED state are retained, not newly certified for all
+  heterogeneous members. F2 remains open under #1398; the source-to-record endpoint
+  contract is still unreconciled.'
+source:
+  git_revision: f5a7cd574f2cdd45dc950daf426cbdbce286116a
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: conf/sources.yaml
+    sha256: a8e069f9278068b57fa234f43e03c8d893f857827b83fd10cfa92d6815aed642
+    role: context
+  - path: curation/causal_graphs/agricultural_soil.yaml
+    sha256: 2f9c73b186d6b79df1d64098f929d8364a1768f732101edaf144dee7723c60f4
+    role: context
+  - path: curation/causal_graphs/aquatic_biome.yaml
+    sha256: 03ba09d10f9a9d8d32060fc0208b511ef0d59e731fd7c63ca6c02296e70da5f5
+    role: context
+  - path: curation/causal_graphs/biofilm.yaml
+    sha256: 37fae9d123c2edfb68376b6b4fe5441f72092d48d81dba6f60510087217c8680
+    role: context
+  - path: curation/causal_graphs/bioreactor.yaml
+    sha256: 14eb020a26287751c86d1d6eab5c91cf606e0e8ea076832fce82e0646fb85cdd
+    role: context
+  - path: curation/causal_graphs/brackish_water.yaml
+    sha256: b9d58082a53bef1143a3868918cfed7f6d74ba7e2330648069733d9ea2c76508
+    role: context
+  - path: curation/causal_graphs/building.yaml
+    sha256: 9e9360775fdda554b285d7ecfb9b1729bf389b8241376a410eca60bd672eb235
+    role: context
+  - path: curation/causal_graphs/compost.yaml
+    sha256: e0fd3ae54311115939f07ba1f3f158c5c44353bd0fab1dcdc1a9292ff0ad1de5
+    role: context
+  - path: curation/causal_graphs/deep_marine_sediment.yaml
+    sha256: eb6a68290a58ec157a4c9895e082cbba760c47b5fbe35523d3bb163af3091d0c
+    role: context
+  - path: curation/causal_graphs/forest_soil.yaml
+    sha256: faef7b6c26c25ba33110d362dc7e4351440bc08c1106f270e1e6f2decfb1e3f4
+    role: context
+  - path: curation/causal_graphs/forested_area.yaml
+    sha256: eb96b992e1ee8fef7df2550c765a30f0d446082ce16592b6c1da44a54b34e427
+    role: context
+  - path: curation/causal_graphs/fresh_water.yaml
+    sha256: e95ea96aa1912066d4c98cbff91e34528668d4c453d93dc4203c67e7769c691a
+    role: context
+  - path: curation/causal_graphs/fungi_associated_environment.yaml
+    sha256: 45736893315a37e327c25d401ff8794fee47b1056347e52f4980bc3a58e8e0d8
+    role: context
+  - path: curation/causal_graphs/grassland_soil.yaml
+    sha256: 81b2a9ea6255dfbd4b393102b9903dd3c9e8af12f7d3a9adc7c4649650542ae8
+    role: context
+  - path: curation/causal_graphs/hot_spring.yaml
+    sha256: ee0f6d7f7eff179b44e1e934c1c801524062a7e71f3199e16e9ef35e7bad81ed
+    role: context
+  - path: curation/causal_graphs/hydrothermal_vent.yaml
+    sha256: b5c101a93e724531cb7e50e8031203138230c09599855fe8a03bec945469efb0
+    role: context
+  - path: curation/causal_graphs/hypersaline_water.yaml
+    sha256: e974d5e9cc241ac9daf3542ba11156915cfb7786e683ad5ad212af5b35006158
+    role: context
+  - path: curation/causal_graphs/intestine_environment.yaml
+    sha256: 2ef766692eff55471a3322c0cd1cf82188decf37fd5ecd3535cb0ef612e2b725
+    role: context
+  - path: curation/causal_graphs/leaf.yaml
+    sha256: fadc8027b39884bc16cf98f774804a84fd1b1d805876310a47a095f6019435cc
+    role: context
+  - path: curation/causal_graphs/liquid_water.yaml
+    sha256: 12aac1021b9b51c6becc4ef8509bd63557b306e42c01d9b4443d69252ce29a81
+    role: context
+  - path: curation/causal_graphs/marine_sediment.yaml
+    sha256: 8b230eb079171ab8134b648caa29878dc5015fb36362559a6a8c67fb2b433741
+    role: context
+  - path: curation/causal_graphs/marine_water_body.yaml
+    sha256: b2f81102970e9541bf61978fabdd68b7db8f9459f1ef11b467fecfc2956f238b
+    role: context
+  - path: curation/causal_graphs/milk.yaml
+    sha256: 049daa5b499096c61cb625b7bb9ac0f02ea216c96d6b5f7b77126c8709b2378d
+    role: context
+  - path: curation/causal_graphs/peat_soil.yaml
+    sha256: 0f23fa02718b08e3607478ceaa2294320b320ae841a79e144e48ed3497db09e2
+    role: context
+  - path: curation/causal_graphs/plant_associated_environment.yaml
+    sha256: 300044040f76234e7ed3bf373137ba224e55f48e3f3d6d505086b3830877cfcb
+    role: context
+  - path: curation/causal_graphs/plant_litter.yaml
+    sha256: 25e10d6640992be2aa506490f763d8f9642fde125f599207dae7852b6a13b369
+    role: context
+  - path: curation/causal_graphs/root_nodule.yaml
+    sha256: b363e5d418df93d6e44c9d3f3256c8b0ede7c4518125359ffb880020fc00721c
+    role: context
+  - path: curation/causal_graphs/sea_water.yaml
+    sha256: 240ffc8ad2c0abf6f4cce41e01018679aca726816006c90ce329b8d1910d9cd7
+    role: context
+  - path: curation/causal_graphs/sediment.yaml
+    sha256: 62b97afba9466dc64f8b5b1b3fd5d92f8b4b6bf96fe1c761af579ff7deca0e47
+    role: context
+  - path: curation/causal_graphs/sludge.yaml
+    sha256: 55b9c9a27fd00c7b84a8780f2cedc83eeb31ebdda9a2e1029678d96a7fa4a06c
+    role: context
+  - path: curation/causal_graphs/soil.yaml
+    sha256: 2a2bf4b1099b3bc69015f9530cf6e926c05c33667132234b3c52f06aacc957c2
+    role: context
+  - path: curation/causal_graphs/terrestrial_biome.yaml
+    sha256: 239e6a2b711564ed12084cddd1295547d23858dd329c33c538251d5f53c88834
+    role: context
+  - path: curation/causal_graphs/waste_water.yaml
+    sha256: 299b5128af6cf5f7a61ce53304f1084e6eb045414b47cbcfd8832de095142aef
+    role: context
+  - path: curation/decisions.tsv
+    sha256: 4cf40a49a1864a07f75436617c39f346c989f906e95829c655793ac6e8b4cc50
+    role: context
+  - path: curation/definition_source_label_exclusions.tsv
+    sha256: 2d41fc93db4939122b3909f2a412b84b679703948b10d9f02e12021442f71407
+    role: context
+  - path: curation/external_xrefs.tsv
+    sha256: cf8394a6ab22e35efd9e252aef422018226280830bf816a39bf4f2256ff75ad5
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: a5137cccbbd163b8f05390c69340b8ee827e5a50432d9efac57ec724c40e879a
+    role: context
+  - path: curation/redirects_retracted.tsv
+    sha256: 0f1e9af8881f5a5db19f87de06b3b3d1800cfac8101699b380388c0a1a1e9a19
+    role: context
+  - path: curation/samples/narrow-20260814.tsv
+    sha256: 4d91c76ad5e0a46442075c7b9f882637130bacdfaedb25fbe7922f169d35051c
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 9977e384b79128d6e89c85f28e35c77d29644d503dea6d53c12628599e33f7f3
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: b59b9e800a918135e3915145d4d8098bb48dcea36a312b3004c594a57d221ae9
+    role: context
+  - path: data/habitats/engineered/activated_sludge__f91e662c.yaml
+    sha256: d3f315b0dfa1654529262c5c0a3cf3b3b83c33a9895dd6559a3eed8ba65f3510
+    role: target
+  - path: data/habitats/engineered/waste_water.yaml
+    sha256: 774c88de3169fb8ae95ea05deb748f21e036a35d0b21734c81c228493ec96056
+    role: context
+  - path: data/habitats/other/activated_sludge.yaml
+    sha256: d9ee7ba3da05cd68dfd0bc7942d283c4997ba7ddae9e5313b39053fd199a1ad1
+    role: context
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: data/text_map/current.json
+    sha256: 7bb6b3e20631b6831eab713682ffb5d522a489caf0d8deb32596fb0134403a3e
+    role: context
+  - path: data/text_map/dadb384413b11a5e7b05021002a92b8dc7a95ae60dc7581b28331ec969ae153e/index.html
+    sha256: 3dbe7ee659e3f0e9ad33ccc58023d9559a34be350e51bfbec74b5e60d4a321b2
+    role: context
+  - path: data/text_map/dadb384413b11a5e7b05021002a92b8dc7a95ae60dc7581b28331ec969ae153e/manifest.json
+    sha256: 70d8e82944e49c525c5a5c9df11b278c2bbed31698df8bb45abfa9e5c5861714
+    role: context
+  - path: data/text_map/dadb384413b11a5e7b05021002a92b8dc7a95ae60dc7581b28331ec969ae153e/points.json
+    sha256: 06d08ed2f8cf014312d6ded1c387f501c4aa6512c5c182379e25c12b1335dc09
+    role: context
+  - path: docs/CURATION.md
+    sha256: 36df8306394c06c352b73e0bf7b47a2858784cedac7389a24d0b78f593ece646
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: f7aa39ee762d94f1902d9f08f328cb897bc543e4e226057eb4770d24bfcc6eb5
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/mappings/activated_sludge__f91e662c/2026-10-10T214438Z-codex-gpt-5-5fbacd.yaml
+    sha256: e5439df0e7e14c4afdb44d4b294ca042369090c2598e957b781981139e471bb1
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reports/yaml_record_review/20260923T120225Z-activated_sludge__f91e662c.md
+    sha256: fb715555e4d98d82a4366daec9a32b799d1d2491fc9e1eccacf0590f96c7d4b1
+    role: context
+  - path: reviews/structured/20261010T213407Z-activated_sludge__f91e662c/review.yaml
+    sha256: 26e84786e3527fa6b42d773c9b6c690bd433c1b32d12cef31eb56d837979382b
+    role: context
+  - path: scripts/extract_gold_biosamples.py
+    sha256: b6a2773c86fe718e1ca0b1d7b32709f0eee491ac813655e310aa0817c0fec31b
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: 4bf5391d25ff48a2d81eb3821af6582de063fd0391440973d309dfd93016490c
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 52d2a22309a1f4a10728a663560bb4d918346c292221fd34139b99b4159d3fe5
+    role: context
+  - path: src/habitatmech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 92adf631fa099120a497ff7001473e659347d23ac9b418f04cd341ddad5d2a89
+    role: context
+  - path: tests/test_ao_and_sludge_review_fixes.py
+    sha256: c87b13fb45997b11001cc7091ad55195bc38eaf22fdb379d2bc5a88f60a35280
+    role: context
+targets:
+- target_id: habitatmech:GOLD.0d353772af
+  path: data/habitats/engineered/activated_sludge__f91e662c.yaml
+  label: Activated Sludge
+  kind: generated
+  owner_paths:
+  - repository: culturebotai/HabitatMech
+    path: curation/decisions.tsv
+    role: Source-concept identity and broader grounding
+  - repository: culturebotai/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Guarded GOLD context-parent correction
+  - repository: culturebotai/HabitatMech
+    path: curation/term_requests.tsv
+    role: Authored habitat definition and genus
+  - repository: culturebotai/HabitatMech
+    path: data/raw/gold_ecosystem_paths.tsv
+    role: Frozen GOLD source concepts and unit-specific counts
+  - repository: culturebotai/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained generation and harmonization
+scope:
+  description: Reassess this exact correction, its source preservation and unresolved
+    limitations.
+  selection: One successor for one previously reviewed record; no additional unique-record
+    coverage.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - habitatmech:GOLD.0d353772af
+checks:
+- check_id: C1
+  name: Post-fix strict record validation
+  command: just validate-strict data/habitats/engineered/a_o_bioreactor.yaml data/habitats/engineered/a_o_treatment_system.yaml
+    data/habitats/engineered/activated_sludge__13f30253.yaml data/habitats/engineered/activated_sludge__55dc7bfe.yaml
+    data/habitats/engineered/activated_sludge__6bcd092f.yaml data/habitats/engineered/activated_sludge__a422e33f.yaml
+    data/habitats/engineered/activated_sludge__a6d16f1c.yaml data/habitats/engineered/activated_sludge__afe6b159.yaml
+    data/habitats/engineered/activated_sludge__b1c5161b.yaml data/habitats/engineered/activated_sludge__c40355de.yaml
+    data/habitats/engineered/activated_sludge__cd285164.yaml data/habitats/engineered/activated_sludge__e116af8f.yaml
+    data/habitats/engineered/activated_sludge__e45bf91b.yaml data/habitats/engineered/activated_sludge__ebcebab5.yaml
+    data/habitats/engineered/activated_sludge__ef706af1.yaml data/habitats/engineered/activated_sludge__f91e662c.yaml
+    data/habitats/engineered/activated_sludge__f920b67e.yaml
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.0d353772af
+  summary: All 17 affected records scanned; zero strict-schema errors.
+- check_id: C2
+  name: Scoped regression tests
+  command: uv run pytest -q tests/test_ao_and_sludge_review_fixes.py tests/test_gold_parent_exclusions.py
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.0d353772af
+  summary: 67 passed in 62.94s; exact corpus scope and preserved native/source fields.
+- check_id: C3
+  name: Exact corpus reproduction
+  command: just verify-corpus
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.0d353772af
+  summary: 3208 expected/found, zero missing/extra/differing.
+- check_id: C4
+  name: Ontology label correspondence
+  command: just validate-products
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.0d353772af
+  summary: 1178 canonical, one synonym and five exceptions; 2057 rows have no adapter.
+- check_id: C5
+  name: Profile-bound semantic map
+  command: .venv/bin/python scripts/embedding_pipeline.py check --output build/pr1883-map-download/data/text_map
+    --input build/text-map/pr1883-inputs.jsonl --cache build/pr1883-map-download/build/text-map/vectors.sqlite
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.0d353772af
+  summary: Complete source-bound map/cache validation and identical local/downloaded
+    full inputs.
+evidence:
+- evidence_id: R1
+  kind: record_content
+  reference: data/habitats/engineered/activated_sludge__f91e662c.yaml
+  locator: Complete regenerated record versus the saved pre-curation corpus
+  accessed_at: '2026-10-10T21:57:15Z'
+  summary: 'The guarded exclusion removes only the unsupported GOLD context parent
+    ENVO:00002001. The qualified identity, source path/nodes, frozen counts/units
+    and unrelated fields are unchanged. F1 is resolved within this bounded hierarchy
+    correction. Existing ENVO:00002046 and NARROW/SEEDED state are retained, not newly
+    certified for all heterogeneous members. F2 remains open under #1398; the source-to-record
+    endpoint contract is still unreconciled.'
+  support: supports
+- evidence_id: M1
+  kind: record_content
+  reference: curation/gold_parent_exclusions.tsv; curation/decisions.tsv
+  locator: Exact source identifier/path rows and history/mappings/activated_sludge__f91e662c
+  accessed_at: '2026-10-10T21:57:15Z'
+  summary: The exact-path exclusion pins the expected parent and appends one SOURCE_PARENT_EXCLUDED
+    event. Only the A/O system ITEM applicability decision changes; no source assertion
+    or unrelated record is rewritten.
+  support: supports
+- evidence_id: N1
+  kind: authority
+  reference: docs/CURATION.md
+  locator: Strictly broader parents; physical habitat applicability; guarded exclusions;
+    native review status
+  accessed_at: '2026-10-10T21:57:15Z'
+  summary: A context/component or feed relation is not is-a. Parent suppression does
+    not itself confer ITEM identity review.
+  support: supports
+- evidence_id: P1
+  kind: prior_review
+  reference: reviews/structured/20261010T213407Z-activated_sludge__f91e662c/review.yaml
+  locator: Complete original individual assessment, source evidence, findings and
+    limitations
+  accessed_at: '2026-10-10T21:57:15Z'
+  summary: 'The original evidence was reassessed against the regenerated target and
+    maintained corrections. Its member/snapshot ambiguities remain; this is not a
+    new source-wide census. Original summary: The broad wastewater-qualified activated-sludge
+    bin remains distinct from wastewater itself. Later samples range across treatment
+    sludge, enrichments, granular-sludge reactors and sludge-associated isolates or
+    viruses. The later 485 BioSamples differ from the committed side-table 484 and
+    are not replacements for the frozen 789 ORGANISM assertions.'
+  support: context_only
+- evidence_id: V1
+  kind: validation
+  reference: justfile; scripts/validate_strict.py; scripts/verify_corpus.py
+  locator: Post-fix native gate commands on product commit f5a7cd574f2cdd45dc950daf426cbdbce286116a
+  accessed_at: '2026-10-10T21:57:15Z'
+  summary: Strict validation of all 17 affected records, exact 3208-record reproduction,
+    labels, all 283 history records and lint passed. Full QC is not claimed by this
+    observation; it remains a publication gate.
+  support: supports
+- evidence_id: V2
+  kind: validation
+  reference: tests/test_ao_and_sludge_review_fixes.py
+  locator: Exact full-corpus exclusion scope, isolated decision scope, frozen source
+    assertions and existing guarded-exclusion tests
+  accessed_at: '2026-10-10T21:57:15Z'
+  summary: 67 focused tests passed. Exactly 17 records change under these exclusions;
+    only the A/O system changes under the applicability decision. A separate complete
+    before/after comparison preserves all non-parent fields except that one grounding
+    status and generated history.
+  support: supports
+- evidence_id: V3
+  kind: validation
+  reference: https://github.com/CultureBotAI/HabitatMech/actions/runs/38088921937
+  locator: Locked Linux map build; repeated 17-record canary; full projection, profile/cache
+    verification and local input comparison
+  accessed_at: '2026-10-10T21:57:15Z'
+  summary: Real BGE embeddings and PaCMAP projection were rebuilt for the current
+    corpus. The canary and full source-bound cache checks passed; the downloaded full
+    input bytes match the local current export.
+  support: supports
+- evidence_id: G1
+  kind: record_content
+  reference: src/habitatmech/seed.py; src/habitatmech/schema/habitatmech.yaml
+  locator: resolve_gold narrower-than-leaf route; SourceAttestation.mapping_predicate;
+    current target attestation
+  accessed_at: '2026-10-10T21:57:15Z'
+  summary: The source retains its own minted identifier, yet the emitted narrowMatch
+    compares it with the ontology parent. The declared field endpoint remains the
+    generated record identifier.
+  support: supports
+- evidence_id: I1
+  kind: database
+  reference: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  locator: 'Open issue and new PR #1883 witness comment'
+  accessed_at: '2026-10-10T21:57:15Z'
+  summary: This shared contract defect is still open. A hierarchy-only fix does not
+    reconcile endpoints or certify SSSOM/KGX.
+  support: supports
+assessments:
+- assessment_id: A1
+  area: grounding
+  topic: Scoped habitat and hierarchy correction
+  outcome: supported
+  target_ids:
+  - habitatmech:GOLD.0d353772af
+  evidence_ids:
+  - R1
+  - M1
+  - N1
+  - P1
+  summary: 'The guarded exclusion removes only the unsupported GOLD context parent
+    ENVO:00002001. The qualified identity, source path/nodes, frozen counts/units
+    and unrelated fields are unchanged. F1 is resolved within this bounded hierarchy
+    correction. Existing ENVO:00002046 and NARROW/SEEDED state are retained, not newly
+    certified for all heterogeneous members. F2 remains open under #1398; the source-to-record
+    endpoint contract is still unreconciled.'
+- assessment_id: A2
+  area: provenance
+  topic: Generated ownership and preserved source scope
+  outcome: supported
+  target_ids:
+  - habitatmech:GOLD.0d353772af
+  evidence_ids:
+  - R1
+  - M1
+  - V1
+  - V2
+  - V3
+  summary: The complete corpus comparison preserves identifiers/slugs, source nodes/paths/counts/units
+    and unrelated scientific fields. No hand-edited generated record or unsupported
+    status promotion; correctly attributed session histories and generated products
+    are validated.
+- assessment_id: A3
+  area: representation
+  topic: Unresolved shared endpoint contract
+  outcome: concern
+  target_ids:
+  - habitatmech:GOLD.0d353772af
+  evidence_ids:
+  - R1
+  - G1
+  - I1
+  - P1
+  summary: F2 remains major and open; no whole-record or export-compatibility approval
+    is implied.
+findings:
+- finding_id: F1
+  issue_key: gold-0d353772af-context-parent
+  category: grounding
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Source context is asserted as a strictly broader sludge habitat
+  description: 'The broad wastewater-qualified activated-sludge bin remains distinct
+    from wastewater itself. Later samples range across treatment sludge, enrichments,
+    granular-sludge reactors and sludge-associated isolates or viruses. The later
+    485 BioSamples differ from the committed side-table 484 and are not replacements
+    for the frozen 789 ORGANISM assertions. Disputed parent: ENVO:00002001.'
+  target_ids:
+  - habitatmech:GOLD.0d353772af
+  field_paths:
+  - parent_habitats
+  evidence_ids:
+  - R1
+  - M1
+  - N1
+  - P1
+  - V1
+  - V2
+  owner_paths:
+  - repository: culturebotai/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generating implementation for the proposed correction
+  rule_id: HabitatMech:strictly-broader-parents
+  native_severity: major
+  normalization_reason: An unsupported semantic assertion or systemic emitting-contract
+    mismatch, not optional sparsity or style.
+  previous_occurrences:
+  - repository: culturebotai/HabitatMech
+    review_id: 20261010T213407Z-activated_sludge__f91e662c
+    finding_id: F1
+  disposition_reason: 'The guarded exclusion removes only the unsupported GOLD context
+    parent ENVO:00002001. The qualified identity, source path/nodes, frozen counts/units
+    and unrelated fields are unchanged. F1 is resolved within this bounded hierarchy
+    correction. Existing ENVO:00002046 and NARROW/SEEDED state are retained, not newly
+    certified for all heterogeneous members. F2 remains open under #1398; the source-to-record
+    endpoint contract is still unreconciled.'
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1882
+- finding_id: F2
+  issue_key: gold-0d353772af-mapping-endpoint-contract
+  category: representation
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Source-to-record mapping field emits a record-to-ontology comparison
+  description: 'The exact source concept retains its own minted identifier, yet emits
+    skos:narrowMatch from gold_narrower_than_leaf_match, comparing with ENVO:00002046.
+    The declared field instead compares that source with the generated record identifier.
+    Reconcile existing #1398 without asserting that SKOS forbids self-links or merely
+    swapping mapping direction.'
+  target_ids:
+  - habitatmech:GOLD.0d353772af
+  field_paths:
+  - source_attestations[0].mapping_predicate
+  evidence_ids:
+  - R1
+  - G1
+  - I1
+  - P1
+  owner_paths:
+  - repository: culturebotai/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generating implementation for the proposed correction
+  - repository: culturebotai/HabitatMech
+    path: src/habitatmech/schema/habitatmech.yaml
+    role: Maintained input or generating implementation for the proposed correction
+  rule_id: HabitatMech:source-attestation-mapping-endpoints
+  native_severity: major
+  normalization_reason: An unsupported semantic assertion or systemic emitting-contract
+    mismatch, not optional sparsity or style.
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1398
+  previous_occurrences:
+  - repository: culturebotai/HabitatMech
+    review_id: 20261010T213407Z-activated_sludge__f91e662c
+    finding_id: F2
+actions:
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - habitatmech:GOLD.0d353772af
+  description: 'Implement the shared endpoint contract tracked in #1398, preserving
+    source-qualified identities.'
+  owner_paths:
+  - repository: culturebotai/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generating implementation for the proposed correction
+  - repository: culturebotai/HabitatMech
+    path: src/habitatmech/schema/habitatmech.yaml
+    role: Maintained input or generating implementation for the proposed correction
+  generator: src/habitatmech/seed.py
+  acceptance_checks:
+  - Make mapping subject, predicate and object explicit and consistent across schema,
+    emitting routes and consumers.
+  - Test minted, exact, broader and narrower routes; no global predicate swap or generic-sludge
+    merge.
+  - Audit actual SSSOM/KGX triples against current kg-microbe modeling before any
+    product-readiness claim.
+  - Regenerate via maintained inputs and inspect a forced canary; do not hand-edit
+    generated YAML.
+  - Preserve source identity, slug, exact source nodes/path, count/unit semantics
+    and unrelated claims.
+  - Append curation history; regenerate required products and run verify-corpus, validate-products,
+    history/schema/site gates and full QC.
+  - Save a linked follow-up retaining stable issue keys; structural success alone
+    does not resolve scientific findings.
+limitations:
+- Adversarial self-review of the authored correction, not independent approval.
+- Full QC has not yet completed for the publication head at observation time. These
+  scoped dispositions rely on the listed successful native gates and regressions;
+  required PR and queue QC must pass before merge.
+- Original source/member and count-unit limitations below remain; no fresh bulk source
+  census or frozen-member reconstruction was performed in this successor.
+- The retained activated-sludge genus is not new certification of all heterogeneous
+  members. Parent removal does not resolve source-material conflicts or mismatched
+  study joins.
+- 'The shared endpoint and typed-synonym defects #1398/#1249 remain open. No SSSOM/KGX
+  readiness or full-corpus scientific certification.'
+- 'Inherited scientific limitation: Original frozen GOLD nodes/edges are unavailable
+  at the configured path; no global absence is claimed. Frozen inventory assertions
+  and later workbook counts are not interchangeable.'
+- 'Inherited scientific limitation: External workbook and ontology response files
+  are retained locally with hashes, not committed. Current ontology source is checked
+  against, not silently substituted for, the frozen inventory.'
+- 'Inherited scientific limitation: The retained GOLD workbook is a later snapshot,
+  not a fresh live membership export. Only selected names/sites and relevant study
+  descriptions were read claim by claim; the complete census is not an independent
+  scientific review of every linked project.'
+- 'Inherited scientific limitation: Source scope conflicts and unresolved exact terminology
+  do not justify guessing an ontology identity, universal environmental range, characteristic
+  taxon or causal edge.'
+- 'Inherited scientific limitation: SSSOM/KGX conformity with current kg-microbe modeling
+  is not certified; shared #1398 and #1249 remain unresolved in their respective affected
+  scopes.'
+- 'Inherited scientific limitation: The broad wastewater-qualified activated-sludge
+  bin remains distinct from wastewater itself. Later samples range across treatment
+  sludge, enrichments, granular-sludge reactors and sludge-associated isolates or
+  viruses. The later 485 BioSamples differ from the committed side-table 484 and are
+  not replacements for the frozen 789 ORGANISM assertions.'
+related_reviews:
+- repository: culturebotai/HabitatMech
+  review_id: 20261010T213407Z-activated_sludge__f91e662c
+  relationship: Scoped successor preserving exact finding lineage and source limitations.
+```
