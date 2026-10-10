@@ -58,7 +58,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="../habitats/waste-material-envo-00002264.html">waste material</a>      <code class="curie">ENVO:00002264</code></li>
-  <li><a href="../habitats/solid-waste-mesh-d062611.html">Solid Waste</a>      <code class="curie">mesh:D062611</code></li>
 </ul>
 
 
@@ -132,6 +131,16 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">SOURCE_SYNONYM_SCOPED</span>
     <span class="meta">2026-10-07 · seed_from_sources</span>
     <p>Retained GOLD label &#39;Agricultural waste&#39; as RELATED_SYNONYM: a CLOSE source mapping does not establish exact lexical equivalence. Independent ontology synonyms and verbatim attestations are preserved (#1459).</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-10 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution mesh:D062611 for habitatmech:GOLD.2021aa3231 (Engineered &gt; Solid waste &gt; Agricultural waste). Reviewed context exclusion (#1886; 20261010T225021Z-agricultural_waste_material F1): ENVO:01000371 includes agricultural runoff and is not wholly solid waste. MeSH D062611 scope excludes dissolved materials in irrigation return flows and industrial discharges (<a href="https://id.nlm.nih.gov/mesh/M0568791" rel="noopener noreferrer" target="_blank">https://id.nlm.nih.gov/mesh/M0568791</a>). Exclude only this GOLD contribution; retain independent ENVO waste-material genus, both source attestations, taxa and count units. No synonym-scope repair is claimed.</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_ATTESTATION_CORRECTED</span>
+    <span class="meta">2026-10-10 · seed_from_sources</span>
+    <p>Preserved curated PREGO source-to-record mapping ENVO:00002265 skos:broadMatch ENVO:01000371; source counts and taxa are unchanged (#1888).</p>
   </li>
 </ol>
 

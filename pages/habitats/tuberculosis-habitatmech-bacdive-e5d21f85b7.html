@@ -42,7 +42,7 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
   <thead><tr><th scope="col">Source</th><th scope="col">Label / path</th><th scope="col" class="num">Assertions</th><th scope="col">Unit</th></tr></thead>
   <tr>
     <td><span class="pill plain">BACDIVE</span></td>
-    <td>Tuberculosis<br><span class="meta">kg-microbe&#39;s isolation-source mapping table has a row for this source with no ontology target; treated as ungrounded rather than re-grounded by lexical match.</span></td>
+    <td>Tuberculosis<br><span class="meta">kg-microbe&#39;s isolation-source mapping table has no ontology target for this source; the automatic route leaves it ungrounded. The explicit curator decision NOT_APPLICABLE overrides that route; this source is emitted on habitatmech:BACDIVE.e5d21f85b7.</span></td>
     <td class="num">7</td>
     <td>STRAIN</td>
   </tr>
@@ -122,6 +122,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">NOT_APPLICABLE</span>
     <span class="meta">2026-08-21 · codex-gpt-5</span>
     <p>Marked NOT_APPLICABLE: the source concept does not denote a habitat. Non-habitat screen review (#108): Tuberculosis names a disease, not the lung, granuloma, sputum, or other material from which an organism was isolated. An external disease term supports the call but is not present in the committed slice. (source concept habitatmech:BACDIVE.e5d21f85b7)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_ATTESTATION_CORRECTED</span>
+    <span class="meta">2026-10-10 · seed_from_sources</span>
+    <p>Corrected bacdive.isolation_source:tuberculosis provenance wording to distinguish the declined automatic mapping from the final curator override (#1889).</p>
   </li>
 </ol>
 
