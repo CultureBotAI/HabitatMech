@@ -1,26 +1,34 @@
 identifier: habitatmech:GOLD.14789d9032
 label: Sand microcosm
 habitat_category: ENGINEERED
-grounding_status: UNGROUNDED
-mapping_status: SEEDED
+grounding_status: NARROW
+mapping_status: REVIEWED
 parent_habitats:
+- ENVO:01000621
 - habitatmech:GOLD.0acae9a1a4
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5872
   source_label: Sand microcosm
   source_path: Engineered > Artificial ecosystem > Sand microcosm
+  mapping_predicate: skos:narrowMatch
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.14789d9032)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: GROUND_AS_PARENT
+  changes: 'ENVO:01000621 ''microcosm'' attached as a parent, not adopted as the identity
+    (NARROW). ITEM correction (#1863; structured review 20261010T063411Z-sand_microcosm
+    F1). Path: Engineered > Artificial ecosystem > Sand microcosm. ENVO:01000621 describes
+    an artificially established controlled ecosystem in a vivarium. Exact GOLD-classified
+    BioSamples SAMN06343863 and SAMN14510915 distinguish sand microcosms from broad
+    river context and sand/soil medium; PMID:26076202 independently describes controlled
+    sand experiments. Retain the source-specific mint and true artificial-ecosystem
+    parent; add microcosm only as a broader genus, not exact identity, river biome
+    or sand material. Preserve all source nodes and zero ORGANISM-count omission;
+    later BIOSAMPLE counts are not substitutes. The shared source-attestation endpoint
+    contract remains #1398. (source concept habitatmech:GOLD.14789d9032)'

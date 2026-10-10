@@ -1,8 +1,8 @@
 identifier: habitatmech:GOLD.68f3852be5
 label: Sanger
 habitat_category: ENGINEERED
-grounding_status: UNGROUNDED
-mapping_status: SEEDED
+grounding_status: NOT_APPLICABLE
+mapping_status: REVIEWED
 parent_habitats:
 - habitatmech:GOLD.9203c1c268
 source_attestations:
@@ -13,15 +13,20 @@ source_attestations:
     > Sanger
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.68f3852be5)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NOT_APPLICABLE.'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: NOT_APPLICABLE
+  changes: 'Marked NOT_APPLICABLE: the source concept does not denote a habitat. ITEM
+    correction (#1865; structured review 20261010T063411Z-sanger F1). Path: Engineered
+    > Modeled > Simulated communities (sequence read mixture) > Sanger. The exact
+    source bin denotes computational sequence-read mixtures, not a physical microbial
+    environment. GOLD-linked simLC/simMC/simHC benchmark projects cite PMID:17468765
+    (DOI:10.1038/nmeth1043), whose abstract constructs simulated datasets by combining
+    reads from 113 isolate genomes. Keep the citable mint, source nodes, complete
+    path and zero-count omission; do not invent a habitat definition, ground to a
+    physical microcosm or reclassify unreviewed sibling concepts. (source concept
+    habitatmech:GOLD.68f3852be5)'
