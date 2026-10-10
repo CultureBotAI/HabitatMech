@@ -50,10 +50,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 </table>
 </div>
 
-<h2>Broader habitats</h2>
-<ul class="plain">
-  <li><a href="../habitats/oil-reservoir-envo-00002185.html">oil reservoir</a>      <code class="curie">ENVO:00002185</code></li>
-</ul>
 
 
 
@@ -68,6 +64,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="meta">2026-08-12 · claude-opus-5 ·
     class-level sweep, not an individual judgement</span>
     <p>Confirmed UNGROUNDED: no ontology term fits this concept. Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the vendored slice matched this label by any search route. Whether the concept is a habitat at all was NOT assessed, so this is not yet a term-request candidate. (source concept habitatmech:GOLD.bfd6bfa0f1)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-10 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution ENVO:00002185 for habitatmech:GOLD.bfd6bfa0f1 (Engineered &gt; Wastewater &gt; Industrial wastewater &gt; Petroleum reservoir &gt; Produced water). Reviewed hierarchy exclusion (#1848; structured review 20261010T024621Z-produced_water__58649b5f F1): produced-water material is not a kind of its reservoir landform. DSMZ DSM 22707 (<a href="https://www.dsmz.de/collection/catalogue/details/culture/DSM-22707" rel="noopener noreferrer" target="_blank">https://www.dsmz.de/collection/catalogue/details/culture/DSM-22707</a>) identifies PEH A isolation from petroleum-reservoir produced water at Kuparuk, matching later GOLD organism Go0630962; current ENVO:00002185 denotes a subsurface hydrocarbon-bearing landform. Exclude only this exact GOLD source-context contribution. Preserve node 7639, full source path, minted identity, one ORGANISM assertion, UNGROUNDED and CLASS/SEEDED status and all prior events. No replacement identity, genus, definition, characteristic taxon, mechanism or sibling merge is asserted; the later isolate does not reconstruct the original frozen member roster.</p>
   </li>
 </ol>
 
