@@ -26,12 +26,11 @@
 <p class="meta">
   <code class="curie">habitatmech:GOLD.c483f43031</code>
   <span class="sep">·</span><a href="../category/engineered.html">ENGINEERED</a>
-  <span class="sep">·</span><span class="pill warn">UNGROUNDED</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="sep">·</span><span class="pill">NARROW</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 
-<div class="note warn"><p>SEEDED workflow status. The source-seeding rules supplied this record; consult its curation history for later attributed changes. This status does not establish human review.</p></div>
 
 <h2>Source attestations</h2>
 <p class="meta">Each upstream vocabulary's own account of this habitat. Assertion
@@ -52,6 +51,7 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 <h2>Broader habitats</h2>
 <ul class="plain">
+  <li><a href="http://purl.obolibrary.org/obo/ENVO_00002197">saline water aquarium</a>      <code class="curie">ENVO:00002197</code></li>
   <li><a href="../habitats/vivarium-envo-00010622.html">vivarium</a>      <code class="curie">ENVO:00010622</code></li>
 </ul>
 
@@ -64,10 +64,9 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 from several source concepts can carry one decision per concept.</p>
 <ol class="events">
   <li>
-    <span class="pill plain">CONFIRM_UNGROUNDED</span>
-    <span class="meta">2026-08-12 · claude-opus-5 ·
-    class-level sweep, not an individual judgement</span>
-    <p>Confirmed UNGROUNDED: no ontology term fits this concept. Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the vendored slice matched this label by any search route. Whether the concept is a habitat at all was NOT assessed, so this is not yet a term-request candidate. (source concept habitatmech:GOLD.c483f43031)</p>
+    <span class="pill">GROUND_AS_PARENT</span>
+    <span class="meta">2026-10-10 · codex-gpt-5</span>
+    <p>ENVO:00002197 &#39;saline water aquarium&#39; attached as a parent, not adopted as the identity (NARROW). ITEM broader grounding (#1870; structured review 20261010T082307Z-seawater_aquarium F1): the source denotes a seawater-maintained aquarium enclosure, not its water medium. Active ENVO:00002197 covers aquaria whose primary ecological medium is saline water; the vendored hierarchy places sea water beneath saline water and this aquarium genus beneath aquarium/vivarium. Use only the broader relation because saline water does not by itself require the marine qualification. Preserve the mint, vivarium parent, nodes 8027/8028, complete path and zero-count omission. No exact later member cohort or exact equivalence is claimed. Shared source-attestation mapping endpoint issue #1398 remains unresolved. Path: Engineered &gt; Artificial ecosystem &gt; Vivarium &gt; Seawater aquarium (source concept habitatmech:GOLD.c483f43031)</p>
   </li>
 </ol>
 

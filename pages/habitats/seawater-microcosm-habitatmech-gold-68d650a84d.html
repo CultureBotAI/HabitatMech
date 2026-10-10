@@ -26,12 +26,11 @@
 <p class="meta">
   <code class="curie">habitatmech:GOLD.68d650a84d</code>
   <span class="sep">·</span><a href="../category/engineered.html">ENGINEERED</a>
-  <span class="sep">·</span><span class="pill warn">UNGROUNDED</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="sep">·</span><span class="pill">NARROW</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 
-<div class="note warn"><p>SEEDED workflow status. The source-seeding rules supplied this record; consult its curation history for later attributed changes. This status does not establish human review.</p></div>
 
 <h2>Source attestations</h2>
 <p class="meta">Each upstream vocabulary's own account of this habitat. Assertion
@@ -52,6 +51,7 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 <h2>Broader habitats</h2>
 <ul class="plain">
+  <li><a href="../habitats/microcosm-envo-01000621.html">microcosm</a>      <code class="curie">ENVO:01000621</code></li>
   <li><a href="../habitats/artificial-ecosystem-habitatmech-gold-0acae9a1a4.html">Artificial ecosystem</a>      <code class="curie">habitatmech:GOLD.0acae9a1a4</code></li>
 </ul>
 
@@ -64,10 +64,9 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 from several source concepts can carry one decision per concept.</p>
 <ol class="events">
   <li>
-    <span class="pill plain">CONFIRM_UNGROUNDED</span>
-    <span class="meta">2026-08-12 · claude-opus-5 ·
-    class-level sweep, not an individual judgement</span>
-    <p>Confirmed UNGROUNDED: no ontology term fits this concept. Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the vendored slice matched this label by any search route. Whether the concept is a habitat at all was NOT assessed, so this is not yet a term-request candidate. (source concept habitatmech:GOLD.68d650a84d)</p>
+    <span class="pill">GROUND_AS_PARENT</span>
+    <span class="meta">2026-10-10 · codex-gpt-5</span>
+    <p>ENVO:01000621 &#39;microcosm&#39; attached as a parent, not adopted as the identity (NARROW). ITEM broader grounding (#1871; structured review 20261010T082307Z-seawater_microcosm F1): this seawater-specific experimental ecosystem is narrower than the controlled artificial ecosystem in a vivarium described by ENVO:01000621. Exact later GOLD study Gs0159252/PRJNA704368 and DOI:10.1128/aem.02151-21 establish controlled seawater flask microcosms; the study conditions are not universal habitat parameters. Preserve the minted identity, artificial-ecosystem context, nodes 7950/7951/7952 and zero-count omission; do not merge with generic microcosm or sea-water material. Shared source-attestation mapping endpoint issue #1398 remains unresolved. Path: Engineered &gt; Artificial ecosystem &gt; Seawater microcosm (source concept habitatmech:GOLD.68d650a84d)</p>
   </li>
 </ol>
 
