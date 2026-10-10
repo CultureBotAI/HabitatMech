@@ -50,10 +50,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 </table>
 </div>
 
-<h2>Broader habitats</h2>
-<ul class="plain">
-  <li><a href="../habitats/subway-environment-habitatmech-gold-961229841c.html">subway environment</a>      <code class="curie">habitatmech:GOLD.961229841c</code></li>
-</ul>
 
 
 
@@ -68,6 +64,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="meta">2026-08-12 · claude-opus-5 ·
     class-level sweep, not an individual judgement</span>
     <p>Confirmed UNGROUNDED: no ontology term fits this concept. Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the vendored slice matched this label by any search route. Whether the concept is a habitat at all was NOT assessed, so this is not yet a term-request candidate. (source concept habitatmech:GOLD.8ef066825a)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-10 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.961229841c for habitatmech:GOLD.8ef066825a (Engineered &gt; Built environment &gt; City &gt; Subway &gt; Plastic surface). Reviewed hierarchy exclusion (#1837; structured review 20261010T001207Z-plastic_surface F1): a sampled plastic contact surface is not a kind of its enclosing subway environment. PMID:27822528 (DOI:10.1128/mSystems.00018-16), inspected sampling methods, separately describes location, surface type and material; exact SAMN04435401 is a PVC grip swab and SAMN03270049 separates subway local context from plastic medium. Exclude only this exact GOLD location-context contribution. Preserve minted identity, node 5466, source path, zero-organism-count omission, UNGROUNDED and CLASS/SEEDED status and all prior events. Do not invent a replacement parent, definition, material equivalence, characteristic taxa or mechanism; the 37 supplemental BIOSAMPLE assertions are not organisms.</p>
   </li>
 </ol>
 

@@ -51,7 +51,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 <h2>Broader habitats</h2>
 <ul class="plain">
-  <li><a href="../habitats/building-envo-00000073.html">building</a>      <code class="curie">ENVO:00000073</code></li>
   <li><a href="http://purl.obolibrary.org/obo/ENVO_00003074">manufactured product</a>      <code class="curie">ENVO:00003074</code></li>
 </ul>
 
@@ -75,6 +74,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">SOURCE_SYNONYM_SCOPED</span>
     <span class="meta">2026-10-09 · seed_from_sources</span>
     <p>Retained GOLD label &#39;Sink&#39; as RELATED_SYNONYM: a BROAD source mapping does not establish exact lexical equivalence. Independent ontology synonyms and verbatim attestations are preserved (#1769).</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-10 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution ENVO:00000073 for habitatmech:GOLD.e4509f5b53 (Engineered &gt; Built environment &gt; Building &gt; Sink). Reviewed hierarchy exclusion (#1836; structured review 20261010T001207Z-plumbing_fixture F1): ENVO:01000989 denotes an exchangeable plumbing device, not a kind of the building ENVO:00000073 in which it may be installed. Current OLS direct-parent evidence retains ENVO:00003074 manufactured product; exact BioSample SAMN08109791 describes a sink swab in a food facility. Exclude only this exact GOLD building-context contribution. Preserve the independent manufactured-product genus, BROAD/skos:broadMatch, RELATED Sink synonym, nodes 8365/8366, one ORGANISM assertion, exact source path, ITEM/REVIEWED state and all prior events. Do not infer a narrower exact identity or rewrite historical source membership.</p>
   </li>
 </ol>
 
