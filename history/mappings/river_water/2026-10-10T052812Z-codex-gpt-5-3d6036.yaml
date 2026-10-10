@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: river_water
+session:
+  id: 2026-10-10T052812Z-codex-gpt-5-3d6036
+  timestamp: '2026-10-10T05:28:12Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1857
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude source context from strict parentage of river_water
+  details: 'Reviewed hierarchy exclusion (#1857; structured review 20261010T045310Z-river_water
+    F1): river-water material is not a kind of the experimentally controlled vivarium ENVO:01000620.
+    Current OLS definitions distinguish the water material and experimental system. Exclude
+    only this exact GOLD context contribution; retain independent stream-water genus ENVO:03605006,
+    nodes 6457/6458, full source path, exact predicate, zero-count omission, SEEDED status
+    and prior events. In-river versus removed-water source equivalence remains unresolved
+    in #1858; this parent correction does not endorse exact identity or invent a replacement
+    genus. Complete target and generated diff inspected. Dry-run seeding and three forced
+    canaries passed; 49 focused hierarchy regression tests passed. The regression compares
+    all 3208 records and their semantic text and preserves every other claim. Map/site and
+    full QC remain publication gates.'
