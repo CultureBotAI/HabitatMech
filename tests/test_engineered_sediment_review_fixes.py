@@ -4,7 +4,6 @@ import pytest
 
 from habitatmech import seed
 
-
 TARGETS = {
     "habitatmech:GOLD.89569f7bcc": (
         "habitatmech:GOLD.236eb735d7",
@@ -140,4 +139,3 @@ def test_sediment_source_scope_and_frozen_units_are_preserved(identifier, docume
     else:
         assert "assertion_count" not in attestation
         assert "assertion_unit" not in attestation
-
