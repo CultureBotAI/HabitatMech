@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: plastic_surface
+session:
+  id: 2026-10-10T001701Z-codex-gpt-5-d3eb65
+  timestamp: '2026-10-10T00:17:01Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1837
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude the enclosing subway from plastic-surface ancestry
+  details: Added exact source habitatmech:GOLD.8ef066825a and expected parent habitatmech:GOLD.961229841c
+    exclusion. PMID:27822528 methods and exact SAMN04435401/SAMN03270049 distinguish sampled
+    surface/material from transit location. Retained node 5466, path, zero-count omission,
+    minted identity, UNGROUNDED, CLASS/SEEDED and prior events. Whole-corpus regression passed
+    (1 test in 7.24s); forced canary wrote one validated record, inspected in full. Full QC
+    remains a pre-merge gate with actual outcome to be recorded in a successor review. No
+    replacement parent, definition or biological mechanism is invented; BIOSAMPLE and ORGANISM
+    counts remain distinct.
