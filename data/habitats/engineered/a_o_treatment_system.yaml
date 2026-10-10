@@ -1,24 +1,38 @@
 identifier: habitatmech:GOLD.7c91485eb8
 label: A/O treatment system
 habitat_category: ENGINEERED
-grounding_status: NOT_APPLICABLE
+grounding_status: UNGROUNDED
 mapping_status: REVIEWED
-parent_habitats:
-- ENVO:00002043
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8223
   source_label: A/O treatment system
   source_path: Engineered > WWTP > A/O treatment system
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: NOT_APPLICABLE
-  changes: 'Marked NOT_APPLICABLE: the source concept does not denote a habitat. ''A/O
-    treatment system'' names a disease, an intervention, a sampling artefact or a
-    no-value filler rather than a place. Pulled out of the class-level sweep and decided
-    individually. (source concept habitatmech:GOLD.7c91485eb8)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NOT_APPLICABLE.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM reassessment
+    (#1881): the GOLD system includes bioreactor and settling-tank/effluent branches,
+    supporting a physical engineered microbial habitat rather than a disease, procedure
+    or filler. PMID:29053751 methods documents microbial sampling in an A/O installation;
+    this is contextual support, not an exact GOLD member link. A/O has context-dependent
+    expansions, so retain the source label and minted identity without an exact ontology
+    match or imported operating conditions. The WWTP nesting is separately excluded
+    as context, not a strictly broader genus. Path: Engineered > WWTP > A/O treatment
+    system (source concept habitatmech:GOLD.7c91485eb8)'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00002043 for habitatmech:GOLD.7c91485eb8
+    (Engineered > WWTP > A/O treatment system). ITEM hierarchy assessment (#1881),
+    structured review 20261010T213324Z-a_o_treatment_system: GOLD source nesting supplies
+    context, not a proven is-a relation between the treatment installation and an
+    entire WWTP. PMID:29053751 methods separates the physical treatment installation
+    and sampled biomass; it does not identify the exact GOLD system. Exclude only
+    this source-parent contribution; preserve the mint and verbatim source attestation.
+    Do not infer an acronym expansion or exact ontology identity.'

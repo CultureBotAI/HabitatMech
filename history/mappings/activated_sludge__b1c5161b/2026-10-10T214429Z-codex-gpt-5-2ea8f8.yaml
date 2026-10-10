@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: activated_sludge__b1c5161b
+session:
+  id: 2026-10-10T214429Z-codex-gpt-5-2ea8f8
+  timestamp: '2026-10-10T21:44:29Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1882
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude reviewed GOLD context parent
+  details: 'Follow-up to 20261010T213347Z-activated_sludge__b1c5161b: Biological phosphorus
+    removal is a treatment process/context, not a broader sludge material. Later exact-path
+    samples describe sludge tanks and EBPR reactors. These do not establish that every organism
+    is a phosphorus accumulator or that a process can serve as the material genus. Excluded
+    only the immediate GOLD parent contribution habitatmech:GOLD.03345a3f86 for exact path
+    Engineered > Wastewater > Nutrient removal > Biological phosphorus removal > Activated
+    sludge. This is context, not a supported strictly broader genus. Preserve minted identity,
+    slug, original source nodes/path/counts/units and unrelated fields. Original reviews remain
+    immutable. Primary evidence and the frozen/later-snapshot distinctions are retained in
+    the original review. Source-member ambiguity is not resolved by removing a false parent.
+    Dry-run, forced canary, validated regeneration, exact-scope regressions, corpus/label
+    checks, semantic-map/site rebuild and full QC are required before merge. Shared mapping-endpoint
+    issue #1398 and ontology synonym-scope issue #1249 remain open; no SSSOM/KGX certification
+    is asserted.'
