@@ -1,0 +1,586 @@
+# Scientific record review: Plastic debries
+
+- Review: 20261010T001146Z-plastic_debries
+- Repository: culturebotai/HabitatMech
+- Started UTC: 2026-10-09T23:52:21Z
+- Finished UTC: 2026-10-10T00:11:46Z
+- Reviewer: codex-gpt-5 (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+The marine-qualified GOLD path denotes discarded plastic material with a defensible microbial-habitat interpretation. It remains distinct from the freshwater-qualified sibling. No exact ontology identity, characteristic taxa or degradation mechanism is asserted; the CLASS/SEEDED baseline alone is not a defect.
+
+## Scope And Provenance
+
+Complete scientific review of exactly one generated habitat record.
+
+Selection: One of the next six engineered records in the continuing 3208-record goal; exact path and identifier, not a representative sample.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base e261b100b8fae458b37a7fff9c8c15e64d2be87a.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| habitatmech:GOLD.293873d837 | data/habitats/engineered/plastic_debries.yaml | generated | Plastic debries |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Target schema | passed | True | habitatmech:GOLD.293873d837 | Exit 0: No issues found. |
+| Closed-schema cohort | passed | True | habitatmech:GOLD.293873d837 | Six files scanned, zero error files and rows. |
+| Exact-base authoritative CI QC | passed | True | habitatmech:GOLD.293873d837 | The completed exact-base CI job ran just qc successfully; 654 passed and 3 skipped, with all native offline gates passed. Working-tree input hashes remained unchanged; this was a fresh log verification, not a new local QC run. |
+| Ontology ID/label correspondence | passed | True | habitatmech:GOLD.293873d837 | 1178 canonical, 1 synonym, 5 exceptions, 2057 SKIPPED_NO_ADAPTER. Minted identity is not certified by this gate. |
+| Complete local source trace | passed | True | habitatmech:GOLD.293873d837 | Exit 0: six entire generated documents equal seed.build_document; all raw tables and maintained root TSVs parsed. |
+| Current exact-path census | passed | True | habitatmech:GOLD.293873d837 | Exit 0: complete four-sheet census and exact project/study joins, with source hashes checked. Temporary analysis is not a newly committed upstream snapshot. |
+| Expression-module and target causal applicability | not_applicable | False | habitatmech:GOLD.293873d837 | No gene, regulator, transcriptome or target causal overlay claim; iModulonDB is not applicable and its absence is not negative evidence. |
+| Original August member reconstruction | unavailable | False | habitatmech:GOLD.293873d837 | Frozen workbook not recovered in bounded ignored-inclusive search; later workbook does not reconstruct historical member identities. |
+| Native review infrastructure | passed | True | habitatmech:GOLD.293873d837 | 71 existing bundles valid; all 4 native contract tests passed in 55.46s before saving these observations. |
+
+## Scientific And Domain Assessments
+
+### Habitat identity, grounding and hierarchy
+
+identity: supported. Targets: habitatmech:GOLD.293873d837.
+
+Keep the marine-qualified minted identity and debris parent; the same unqualified source spelling on the freshwater sibling is not exact equivalence. Neither microplastic particle (ENVO:01000944; size-restricted) nor generic plastic (ENVO:06105101; broader material) is established as exact identity.
+
+### Frozen assertion units and current membership
+
+provenance: supported. Targets: habitatmech:GOLD.293873d837.
+
+Node 8353, one exact marine path, zero frozen organism assertions: omission of count and unit is correct. Parent habitatmech:GOLD.c9f6be7c10 is Marine debries. No authored definition or item-level decision was found in the bounded maintained-input search. Later source counts are different-snapshot observations and are never summed across units.
+
+### Optional biology, MIxS roles and curation status
+
+completeness: supported. Targets: habitatmech:GOLD.293873d837.
+
+Empty optional slots are not defects. No taxon, parameter or causal claim is borrowed from the wider source study. Source categories, ontology definitions where present, mapping predicates, history and decision depth were checked; CLASS/SEEDED alone does not warrant a major finding.
+
+### Deterministic checks and maintained input ownership
+
+schema: supported. Targets: habitatmech:GOLD.293873d837.
+
+Required baseline gates passed. Schema and reproduction do not establish scientific validity. Future fixes belong to maintained curation inputs and the validated seeder, never manually edited generated YAML/pages.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| E1 | data/habitats/engineered/plastic_debries.yaml; Entire YAML, including all history | supports | All fields read. Scientific optional slots contain no parameters, characteristic taxa, causal graphs, experimental evidence, discussions or datasets. Mapping status records decision depth, not independent scientific certification. |
+| E2 | data/raw/gold_ecosystem_paths.tsv; Exact path/node rows; all 14 raw and seven curation TSVs parsed | supports | Node 8353, one exact marine path, zero frozen organism assertions: omission of count and unit is correct. Parent habitatmech:GOLD.c9f6be7c10 is Marine debries. No authored definition or item-level decision was found in the bounded maintained-input search. |
+| E3 | https://gold.jgi.doe.gov/download?mode=site_excel; Complete exact-path Biosample/Organism scan and SequencingProject/Study joins | partial | The exact marine path has zero Biosample, Organism and SequencingProject members in the inspected October workbook. Classification node 8353 is retained. This is not absence of microbes on marine plastic. Reused October 9 snapshot, SHA verified during this review; not a fresh download. Complete sheet sizes including headers: 244951 Biosample, 532019 Organism, 636914 SequencingProject and 63806 Study rows. |
+| E4 | data/raw; curation; history; reviews; reports/yaml_record_review; research/habitats; build; /private/tmp; Identifiers, labels, slugs, exact paths and original source filenames | context_only | Ignored-inclusive searches and full TSV parses found no target-specific causal overlay or prior native review. The bounded original-workbook search under data/raw, build and /private/tmp did not recover the frozen August workbook; no machine-wide absence claim. |
+| E5 | https://gold.jgi.doe.gov/download?mode=ecosystempaths; Exact terminal classification rows, not descendants | supports | The dated October classification snapshot retains this exact path and final node. Reused local snapshot with SHA verification; not a fresh download. |
+| S1 | https://pubmed.ncbi.nlm.nih.gov/23745679/; PMID:23745679; DOI:10.1021/es401288x; abstract | supports | North Atlantic plastic debris carried microbial communities distinct from surrounding water. This supports the habitat interpretation, not GOLD membership, universal plastic degradation or pathogen presence. |
+| V1 | https://github.com/CultureBotAI/HabitatMech/actions/runs/38006201141; Successful full QC on e261b100b8fae458b37a7fff9c8c15e64d2be87a | supports | Freshly inspected completed run on the exact unchanged baseline: 654 tests passed, 3 skipped, native contract 4 passed; all 3208 strict records and corpus reproduction, history, site, redirects and term-request gates passed. This is CI execution, not a claim that a second local full QC ran. |
+| L1 | reports/yaml_record_review/20260928T163458Z-plastic_debries.md; Entire legacy review | context_only | Historical context only, not a native predecessor. CLASS/SEEDED is not itself a major defect; kitchen-sink review did not certify the upper hierarchy of plumbing fixture. |
+
+## Limits And Additional Notes
+
+- Only the primary abstract was inspected for biological plausibility; no original GOLD members exist in the later exact-path census to cross-link. NOAA marine-debris terminology includes the Great Lakes and must not be used to claim marine/freshwater sets are universally disjoint.
+- The original August source workbook is unavailable in the bounded search. Deterministic validation does not establish scientific truth. No curation or status promotion is performed by this observation.
+- All 56 captured repository inputs were re-inspected before saving; the original 53 hashes were unchanged. Access timestamps denote this review session's completed inspection, not source publication time.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261010T001146Z-plastic_debries
+kind: record
+repository: culturebotai/HabitatMech
+title: 'Scientific record review: Plastic debries'
+started_at: '2026-10-09T23:52:21Z'
+finished_at: '2026-10-10T00:11:46Z'
+reviewer:
+  identity: codex-gpt-5
+  kind: agent
+  model: gpt-5
+  independence: self_review
+  independence_basis: Same continuing agent inspected evidence and assessed this target;
+    no independent human or second-agent approval is claimed.
+skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: The marine-qualified GOLD path denotes discarded plastic material with a
+  defensible microbial-habitat interpretation. It remains distinct from the freshwater-qualified
+  sibling. No exact ontology identity, characteristic taxa or degradation mechanism
+  is asserted; the CLASS/SEEDED baseline alone is not a defect.
+source:
+  git_revision: e261b100b8fae458b37a7fff9c8c15e64d2be87a
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: conf/record_review.yaml
+    sha256: c2f5d0eb4c5744f5fe354c92184ddab144dc2688dba952b032b4f3d597bc08d6
+    role: context
+  - path: conf/sources.yaml
+    sha256: a8e069f9278068b57fa234f43e03c8d893f857827b83fd10cfa92d6815aed642
+    role: context
+  - path: curation/decisions.tsv
+    sha256: 200a0185b77586aaea6bffd2b1e837fb671eb26e8f7f4d2cb05db658f9036972
+    role: context
+  - path: curation/definition_source_label_exclusions.tsv
+    sha256: 2d41fc93db4939122b3909f2a412b84b679703948b10d9f02e12021442f71407
+    role: context
+  - path: curation/external_xrefs.tsv
+    sha256: cf8394a6ab22e35efd9e252aef422018226280830bf816a39bf4f2256ff75ad5
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: f687074d96f4b641950067846c579e9e7224e5df8bf81200529d5085ced49d04
+    role: context
+  - path: curation/redirects_retracted.tsv
+    sha256: 0f1e9af8881f5a5db19f87de06b3b3d1800cfac8101699b380388c0a1a1e9a19
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 9977e384b79128d6e89c85f28e35c77d29644d503dea6d53c12628599e33f7f3
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: b59b9e800a918135e3915145d4d8098bb48dcea36a312b3004c594a57d221ae9
+    role: context
+  - path: data/habitats/engineered/building.yaml
+    sha256: 6a2516effb4c4b6df511e90008ea856e4fe7da726b787bb4f4160a8e631916f2
+    role: context
+  - path: data/habitats/engineered/freshwater_debries.yaml
+    sha256: 8120bab78e994d6e9e6beb0378469cfbb0ebaf0d49462b35193c10b2d480997e
+    role: context
+  - path: data/habitats/engineered/marine_debries.yaml
+    sha256: 8be5db523d66e8bbd9484de776d525f5b100d5aa8deeb26b006892584be03feb
+    role: context
+  - path: data/habitats/engineered/persistent_organic_pollutants_pop.yaml
+    sha256: d7f671ba27ed615da55f9a85faaf4a54157a6d485a5775f7a77db928206cc429
+    role: context
+  - path: data/habitats/engineered/plastic_debries.yaml
+    sha256: 21d4f536ecd9e031efcf9fdc7c15e5f02e2671fb83c89f09bb628f811c35f5af
+    role: target
+  - path: data/habitats/engineered/plastic_debries__693ff27d.yaml
+    sha256: f015d11dee4e2baef8e6d01ea068e5fe93c20dffa29354766a065555afb7217f
+    role: context
+  - path: data/habitats/engineered/plastic_surface.yaml
+    sha256: 5402f983e6eb32ba779acd20a8967a94a2caa4a9cd0b694df4db196a0dba9b6e
+    role: context
+  - path: data/habitats/engineered/plastic_waste.yaml
+    sha256: 31da47220cc4dc88c402b531f4fdf4af887c9a038fab777d45b6e225c5d695fd
+    role: context
+  - path: data/habitats/engineered/plumbing_fixture.yaml
+    sha256: 26adff313378e3db2f0172c0e2c3904f9404234f89adb97053fe2c2f49c61c0d
+    role: context
+  - path: data/habitats/engineered/polycyclic_aromatic_hydrocarbons.yaml
+    sha256: 9dde314d4e8ff37da1cb3af9e1d033aeb1ce193b23982658e0a18eb58eabf264
+    role: context
+  - path: data/habitats/engineered/solid_waste.yaml
+    sha256: 4cd78657634aca99d98863d643419c7deb56b8835d9f47d144d08247457736d4
+    role: context
+  - path: data/habitats/engineered/subway.yaml
+    sha256: 7f918d820e1959b3e94d4634dc328ddb65adf8aaa500fc1293f846a65f25d133
+    role: context
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: 36df8306394c06c352b73e0bf7b47a2858784cedac7389a24d0b78f593ece646
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: f7aa39ee762d94f1902d9f08f328cb897bc543e4e226057eb4770d24bfcc6eb5
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reports/yaml_record_review/20260928T152205Z-plastic_debries__693ff27d.md
+    sha256: 5f72d76b7f23c2c187e02de32b0cb596fa794c8b39b8229d064362ac3c670345
+    role: context
+  - path: reports/yaml_record_review/20260928T163458Z-plastic_debries.md
+    sha256: 4cbf223a4fb5e8ed92a2850a11edda84c9542fe181dac2facc9becb8370e72e4
+    role: context
+  - path: reports/yaml_record_review/20261009T015330Z-kitchen_sink.md
+    sha256: c2b180ba5d66c8ee9d4e80ff1a077815fb55bcd07726e7c1524f809b94a8a9c9
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/extract_gold_biosamples.py
+    sha256: b6a2773c86fe718e1ca0b1d7b32709f0eee491ac813655e310aa0817c0fec31b
+    role: context
+  - path: src/habitatmech/extract.py
+    sha256: 4d9397bda649381a5daf81937369531c6dc8b4518d6c7047e6f3f14e605bf860
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 52d2a22309a1f4a10728a663560bb4d918346c292221fd34139b99b4159d3fe5
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 92adf631fa099120a497ff7001473e659347d23ac9b418f04cd341ddad5d2a89
+    role: context
+scope:
+  description: Complete scientific review of exactly one generated habitat record.
+  selection: One of the next six engineered records in the continuing 3208-record
+    goal; exact path and identifier, not a representative sample.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - habitatmech:GOLD.293873d837
+  exclusions:
+  - target: Other corpus records and all-record completion
+    reason: Context only; neither full-corpus scientific completion nor correctness
+      of sibling records is asserted.
+targets:
+- target_id: habitatmech:GOLD.293873d837
+  path: data/habitats/engineered/plastic_debries.yaml
+  label: Plastic debries
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: source-concept grounding and review depth
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/gold_ecosystem_paths.tsv
+    role: frozen GOLD paths, node IDs and assertion counts
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: guarded context-only source-parent exclusions
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: generated identity, parents, attestations and native status
+  - repository: CultureBotAI/HabitatMech
+    path: data/habitats/PATHS.tsv
+    role: stable generated slug ownership
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: authored definition, genus and alias ownership
+checks:
+- check_id: C1
+  name: Target schema
+  status: passed
+  required: true
+  summary: 'Exit 0: No issues found.'
+  target_ids:
+  - habitatmech:GOLD.293873d837
+  command: just validate data/habitats/engineered/plastic_debries.yaml
+  exit_code: 0
+- check_id: C2
+  name: Closed-schema cohort
+  status: passed
+  required: true
+  summary: Six files scanned, zero error files and rows.
+  target_ids:
+  - habitatmech:GOLD.293873d837
+  command: just validate-strict data/habitats/engineered/plastic_debries.yaml data/habitats/engineered/plastic_debries__693ff27d.yaml
+    data/habitats/engineered/plastic_surface.yaml data/habitats/engineered/plastic_waste.yaml
+    data/habitats/engineered/plumbing_fixture.yaml data/habitats/engineered/polycyclic_aromatic_hydrocarbons.yaml
+  exit_code: 0
+- check_id: C3
+  name: Exact-base authoritative CI QC
+  status: passed
+  required: true
+  summary: The completed exact-base CI job ran just qc successfully; 654 passed and
+    3 skipped, with all native offline gates passed. Working-tree input hashes remained
+    unchanged; this was a fresh log verification, not a new local QC run.
+  target_ids:
+  - habitatmech:GOLD.293873d837
+  command: gh run view 38006201141 --log | rg '[0-9]+ passed|All HabitatMech quality
+    gates|history records|files scanned|RETIRED.tsv|term-request table|differing'
+  exit_code: 0
+- check_id: C4
+  name: Ontology ID/label correspondence
+  status: passed
+  required: true
+  summary: 1178 canonical, 1 synonym, 5 exceptions, 2057 SKIPPED_NO_ADAPTER. Minted
+    identity is not certified by this gate.
+  target_ids:
+  - habitatmech:GOLD.293873d837
+  command: just validate-products
+  exit_code: 0
+- check_id: C5
+  name: Complete local source trace
+  status: passed
+  required: true
+  summary: 'Exit 0: six entire generated documents equal seed.build_document; all
+    raw tables and maintained root TSVs parsed.'
+  target_ids:
+  - habitatmech:GOLD.293873d837
+  command: uv run python /private/tmp/habitatmech-review-r-local.py
+  exit_code: 0
+- check_id: C6
+  name: Current exact-path census
+  status: passed
+  required: true
+  summary: 'Exit 0: complete four-sheet census and exact project/study joins, with
+    source hashes checked. Temporary analysis is not a newly committed upstream snapshot.'
+  target_ids:
+  - habitatmech:GOLD.293873d837
+  command: uv run python /private/tmp/habitatmech-review-r-workbook.py
+  exit_code: 0
+- check_id: C7
+  name: Expression-module and target causal applicability
+  status: not_applicable
+  required: false
+  summary: No gene, regulator, transcriptome or target causal overlay claim; iModulonDB
+    is not applicable and its absence is not negative evidence.
+  target_ids:
+  - habitatmech:GOLD.293873d837
+- check_id: C8
+  name: Original August member reconstruction
+  status: unavailable
+  required: false
+  summary: Frozen workbook not recovered in bounded ignored-inclusive search; later
+    workbook does not reconstruct historical member identities.
+  target_ids:
+  - habitatmech:GOLD.293873d837
+- check_id: C9
+  name: Native review infrastructure
+  status: passed
+  required: true
+  summary: 71 existing bundles valid; all 4 native contract tests passed in 55.46s
+    before saving these observations.
+  target_ids:
+  - habitatmech:GOLD.293873d837
+  command: just review-check
+  exit_code: 0
+evidence:
+- evidence_id: E1
+  kind: record_content
+  reference: data/habitats/engineered/plastic_debries.yaml
+  locator: Entire YAML, including all history
+  accessed_at: '2026-10-10T00:11:46Z'
+  support: supports
+  summary: All fields read. Scientific optional slots contain no parameters, characteristic
+    taxa, causal graphs, experimental evidence, discussions or datasets. Mapping status
+    records decision depth, not independent scientific certification.
+- evidence_id: E2
+  kind: database
+  reference: data/raw/gold_ecosystem_paths.tsv
+  locator: Exact path/node rows; all 14 raw and seven curation TSVs parsed
+  accessed_at: '2026-10-10T00:11:46Z'
+  support: supports
+  summary: 'Node 8353, one exact marine path, zero frozen organism assertions: omission
+    of count and unit is correct. Parent habitatmech:GOLD.c9f6be7c10 is Marine debries.
+    No authored definition or item-level decision was found in the bounded maintained-input
+    search.'
+- evidence_id: E3
+  kind: database
+  reference: https://gold.jgi.doe.gov/download?mode=site_excel
+  locator: Complete exact-path Biosample/Organism scan and SequencingProject/Study
+    joins
+  accessed_at: '2026-10-10T00:11:46Z'
+  support: partial
+  summary: 'The exact marine path has zero Biosample, Organism and SequencingProject
+    members in the inspected October workbook. Classification node 8353 is retained.
+    This is not absence of microbes on marine plastic. Reused October 9 snapshot,
+    SHA verified during this review; not a fresh download. Complete sheet sizes including
+    headers: 244951 Biosample, 532019 Organism, 636914 SequencingProject and 63806
+    Study rows.'
+  snapshot_sha256: 5f48b2f50fb2a9257754960a0f0e12dc6e8fa121e97c3e9f4497249e5fe6e439
+- evidence_id: E4
+  kind: search
+  reference: data/raw; curation; history; reviews; reports/yaml_record_review; research/habitats;
+    build; /private/tmp
+  locator: Identifiers, labels, slugs, exact paths and original source filenames
+  accessed_at: '2026-10-10T00:11:46Z'
+  support: context_only
+  summary: Ignored-inclusive searches and full TSV parses found no target-specific
+    causal overlay or prior native review. The bounded original-workbook search under
+    data/raw, build and /private/tmp did not recover the frozen August workbook; no
+    machine-wide absence claim.
+  search_scope: rg --no-ignore --hidden in the named repository trees; structured
+    parsing of complete TSVs; find data/raw build /private/tmp -maxdepth 2 -type f
+    for original GOLD workbook. Ignored files included.
+- evidence_id: E5
+  kind: database
+  reference: https://gold.jgi.doe.gov/download?mode=ecosystempaths
+  locator: Exact terminal classification rows, not descendants
+  accessed_at: '2026-10-10T00:11:46Z'
+  support: supports
+  summary: The dated October classification snapshot retains this exact path and final
+    node. Reused local snapshot with SHA verification; not a fresh download.
+  snapshot_sha256: 3933e5f0664915c1bbfa00212e17d013da360fb33dd52e509254050813135396
+- evidence_id: S1
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/23745679/
+  locator: PMID:23745679; DOI:10.1021/es401288x; abstract
+  accessed_at: '2026-10-10T00:11:46Z'
+  support: supports
+  summary: North Atlantic plastic debris carried microbial communities distinct from
+    surrounding water. This supports the habitat interpretation, not GOLD membership,
+    universal plastic degradation or pathogen presence.
+- evidence_id: V1
+  kind: validation
+  reference: https://github.com/CultureBotAI/HabitatMech/actions/runs/38006201141
+  locator: Successful full QC on e261b100b8fae458b37a7fff9c8c15e64d2be87a
+  accessed_at: '2026-10-10T00:11:46Z'
+  support: supports
+  summary: 'Freshly inspected completed run on the exact unchanged baseline: 654 tests
+    passed, 3 skipped, native contract 4 passed; all 3208 strict records and corpus
+    reproduction, history, site, redirects and term-request gates passed. This is
+    CI execution, not a claim that a second local full QC ran.'
+- evidence_id: L1
+  kind: prior_review
+  reference: reports/yaml_record_review/20260928T163458Z-plastic_debries.md
+  locator: Entire legacy review
+  accessed_at: '2026-10-10T00:11:46Z'
+  support: context_only
+  summary: Historical context only, not a native predecessor. CLASS/SEEDED is not
+    itself a major defect; kitchen-sink review did not certify the upper hierarchy
+    of plumbing fixture.
+assessments:
+- assessment_id: A1
+  area: identity
+  topic: Habitat identity, grounding and hierarchy
+  outcome: supported
+  summary: Keep the marine-qualified minted identity and debris parent; the same unqualified
+    source spelling on the freshwater sibling is not exact equivalence. Neither microplastic
+    particle (ENVO:01000944; size-restricted) nor generic plastic (ENVO:06105101;
+    broader material) is established as exact identity.
+  target_ids:
+  - habitatmech:GOLD.293873d837
+  evidence_ids:
+  - E1
+  - E2
+  - E3
+  - E4
+  - E5
+  - S1
+- assessment_id: A2
+  area: provenance
+  topic: Frozen assertion units and current membership
+  outcome: supported
+  summary: 'Node 8353, one exact marine path, zero frozen organism assertions: omission
+    of count and unit is correct. Parent habitatmech:GOLD.c9f6be7c10 is Marine debries.
+    No authored definition or item-level decision was found in the bounded maintained-input
+    search. Later source counts are different-snapshot observations and are never
+    summed across units.'
+  target_ids:
+  - habitatmech:GOLD.293873d837
+  evidence_ids:
+  - E1
+  - E2
+  - E3
+  - E5
+- assessment_id: A3
+  area: completeness
+  topic: Optional biology, MIxS roles and curation status
+  outcome: supported
+  summary: Empty optional slots are not defects. No taxon, parameter or causal claim
+    is borrowed from the wider source study. Source categories, ontology definitions
+    where present, mapping predicates, history and decision depth were checked; CLASS/SEEDED
+    alone does not warrant a major finding.
+  target_ids:
+  - habitatmech:GOLD.293873d837
+  evidence_ids:
+  - E1
+  - E2
+  - E4
+- assessment_id: A4
+  area: schema
+  topic: Deterministic checks and maintained input ownership
+  outcome: supported
+  summary: Required baseline gates passed. Schema and reproduction do not establish
+    scientific validity. Future fixes belong to maintained curation inputs and the
+    validated seeder, never manually edited generated YAML/pages.
+  target_ids:
+  - habitatmech:GOLD.293873d837
+  evidence_ids:
+  - E1
+  - E2
+  - V1
+findings: []
+actions: []
+limitations:
+- Only the primary abstract was inspected for biological plausibility; no original
+  GOLD members exist in the later exact-path census to cross-link. NOAA marine-debris
+  terminology includes the Great Lakes and must not be used to claim marine/freshwater
+  sets are universally disjoint.
+- The original August source workbook is unavailable in the bounded search. Deterministic
+  validation does not establish scientific truth. No curation or status promotion
+  is performed by this observation.
+notes:
+- All 56 captured repository inputs were re-inspected before saving; the original
+  53 hashes were unchanged. Access timestamps denote this review session's completed
+  inspection, not source publication time.
+tags:
+- habitatmech
+- engineered
+- scientific-record-review
+```

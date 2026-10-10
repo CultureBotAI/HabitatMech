@@ -11,7 +11,6 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: GOLD
 parent_habitats:
-- ENVO:00000073
 - ENVO:00003074
 source_attestations:
 - source: GOLD
@@ -41,3 +40,17 @@ curation_history:
   changes: 'Retained GOLD label ''Sink'' as RELATED_SYNONYM: a BROAD source mapping
     does not establish exact lexical equivalence. Independent ontology synonyms and
     verbatim attestations are preserved (#1769).'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00000073 for habitatmech:GOLD.e4509f5b53
+    (Engineered > Built environment > Building > Sink). Reviewed hierarchy exclusion
+    (#1836; structured review 20261010T001207Z-plumbing_fixture F1): ENVO:01000989
+    denotes an exchangeable plumbing device, not a kind of the building ENVO:00000073
+    in which it may be installed. Current OLS direct-parent evidence retains ENVO:00003074
+    manufactured product; exact BioSample SAMN08109791 describes a sink swab in a
+    food facility. Exclude only this exact GOLD building-context contribution. Preserve
+    the independent manufactured-product genus, BROAD/skos:broadMatch, RELATED Sink
+    synonym, nodes 8365/8366, one ORGANISM assertion, exact source path, ITEM/REVIEWED
+    state and all prior events. Do not infer a narrower exact identity or rewrite
+    historical source membership.'
