@@ -110,9 +110,20 @@ def test_medical_environment_split_preserves_source_evidence(corpus, monkeypatch
     assert all(key not in medical for key in ("parent_habitats", "xrefs", "definition", "synonyms"))
     old_attestation, = [a for a in old["source_attestations"] if a["source"] == "BACDIVE"]
     assert old_attestation["mapping_predicate"] == "skos:narrowMatch"
-    assert medical["source_attestations"] == [{
-        key: value for key, value in old_attestation.items() if key != "mapping_predicate"
-    }]
+    attestation, = medical["source_attestations"]
+    assert "mapping_predicate" not in attestation
+    assert {k: v for k, v in attestation.items() if k != "notes"} == {
+        k: v for k, v in old_attestation.items() if k not in {"mapping_predicate", "notes"}
+    }
+    assert old_attestation["notes"] == (
+        "kg-microbe's isolation-source mapping table has no ontology target for this "
+        "source; the automatic route leaves it ungrounded. The explicit curator decision "
+        f"GROUND overrides that route; this source is emitted on {HOSPITAL}."
+    )
+    assert attestation["notes"] == (
+        "kg-microbe's isolation-source mapping table has a row for this source with "
+        "no ontology target; treated as ungrounded rather than re-grounded by lexical match."
+    )
     assert medical["source_attestations"][0]["assertion_count"] == 438
     assert medical["source_attestations"][0]["assertion_unit"] == "STRAIN"
     assert medical["characteristic_taxa"] == [
