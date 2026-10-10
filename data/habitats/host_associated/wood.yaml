@@ -19,8 +19,9 @@ source_attestations:
   mapping_predicate: skos:closeMatch
   assertion_count: 425
   assertion_unit: STRAIN
-  notes: kg-microbe's isolation-source mapping table has a row for this source with
-    no ontology target; treated as ungrounded rather than re-grounded by lexical match.
+  notes: kg-microbe's isolation-source mapping table has no ontology target for this
+    source; the automatic route leaves it ungrounded. The explicit curator decision
+    GROUND overrides that route; this source is emitted on BTO:0005516.
 - source: PREGO
   source_id: BTO:0005516
   source_label: wood
@@ -342,3 +343,8 @@ curation_history:
   changes: 'Retained BacDive label ''Timber'' as RELATED_SYNONYM: a CLOSE source mapping
     does not establish exact lexical equivalence. Independent ontology synonyms and
     verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_ATTESTATION_CORRECTED
+  changes: Corrected bacdive.isolation_source:timber provenance wording to distinguish
+    the declined automatic mapping from the final curator override (#1889).

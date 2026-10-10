@@ -24,8 +24,9 @@ source_attestations:
   mapping_predicate: skos:exactMatch
   assertion_count: 25581
   assertion_unit: STRAIN
-  notes: kg-microbe's isolation-source mapping table has a row for this source with
-    no ontology target; treated as ungrounded rather than re-grounded by lexical match.
+  notes: kg-microbe's isolation-source mapping table has no ontology target for this
+    source; the automatic route leaves it ungrounded. The explicit curator decision
+    GROUND overrides that route; this source is emitted on ENVO:01001000.
 - source: GOLD
   source_id: gold.ecosystem:3373
   source_label: Host-associated
@@ -220,3 +221,8 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE, GOLD. Grounding:
     EXACT.'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_ATTESTATION_CORRECTED
+  changes: Corrected bacdive.isolation_source:host provenance wording to distinguish
+    the declined automatic mapping from the final curator override (#1889).

@@ -31,6 +31,7 @@ source_attestations:
 - source: PREGO
   source_id: ENVO:00002041
   source_label: ENVO:00002041
+  mapping_predicate: skos:exactMatch
   assertion_count: 2855
   assertion_unit: TAXON
   score: 4.0
@@ -327,3 +328,8 @@ curation_history:
     to ENVO's ground water, which ENVO has since obsoleted and marked as replaced
     by this term, which carries ground water as a synonym. Merges with the existing
     groundwater record, where PREGO's assertions belong. (source concept habitatmech:PREGO.3abe355d8e)
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_ATTESTATION_CORRECTED
+  changes: Preserved curated PREGO source-to-record mapping ENVO:00002041 skos:exactMatch
+    ENVO:01001004; source counts and taxa are unchanged (#1888).

@@ -24,8 +24,9 @@ source_attestations:
   source_label: Human
   assertion_count: 11697
   assertion_unit: STRAIN
-  notes: kg-microbe's isolation-source mapping table has a row for this source with
-    no ontology target; treated as ungrounded rather than re-grounded by lexical match.
+  notes: kg-microbe's isolation-source mapping table has no ontology target for this
+    source; the automatic route leaves it ungrounded. The explicit curator decision
+    SAME_AS overrides that route; this source is emitted on habitatmech:GOLD.cd0b0940e5.
 - source: GOLD
   source_id: gold.ecosystem:3381
   source_label: 'Mammals: Human'
@@ -224,3 +225,8 @@ curation_history:
     and the deeper path; the choice of which id survives is arbitrary between two
     minted ids and is recorded here rather than left to ordering. Both keep their
     attestations on the merged record, so no evidence is lost. (source concept habitatmech:BACDIVE.c9b246fcbb)'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_ATTESTATION_CORRECTED
+  changes: Corrected bacdive.isolation_source:human provenance wording to distinguish
+    the declined automatic mapping from the final curator override (#1889).

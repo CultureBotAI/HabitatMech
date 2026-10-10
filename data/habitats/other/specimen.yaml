@@ -9,8 +9,9 @@ source_attestations:
   source_label: Specimen
   assertion_count: 159
   assertion_unit: STRAIN
-  notes: kg-microbe's isolation-source mapping table has a row for this source with
-    no ontology target; treated as ungrounded rather than re-grounded by lexical match.
+  notes: kg-microbe's isolation-source mapping table has no ontology target for this
+    source; the automatic route leaves it ungrounded. The explicit curator decision
+    NOT_APPLICABLE overrides that route; this source is emitted on habitatmech:BACDIVE.db240195f6.
 characteristic_taxa:
 - taxon_id: NCBITaxon:562
   source: BACDIVE
@@ -174,3 +175,8 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: NOT_APPLICABLE.'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_ATTESTATION_CORRECTED
+  changes: Corrected bacdive.isolation_source:specimen provenance wording to distinguish
+    the declined automatic mapping from the final curator override (#1889).

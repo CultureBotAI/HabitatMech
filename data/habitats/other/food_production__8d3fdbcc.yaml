@@ -12,8 +12,9 @@ source_attestations:
   mapping_predicate: skos:broadMatch
   assertion_count: 1197
   assertion_unit: STRAIN
-  notes: kg-microbe's isolation-source mapping table has a row for this source with
-    no ontology target; treated as ungrounded rather than re-grounded by lexical match.
+  notes: kg-microbe's isolation-source mapping table has no ontology target for this
+    source; the automatic route leaves it ungrounded. The explicit curator decision
+    GROUND_AS_PARENT overrides that route; this source is emitted on habitatmech:BACDIVE.b415adf879.
 characteristic_taxa:
 - taxon_id: NCBITaxon:663
   source: BACDIVE
@@ -179,3 +180,8 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: BROAD.'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_ATTESTATION_CORRECTED
+  changes: Corrected bacdive.isolation_source:food-production provenance wording to
+    distinguish the declined automatic mapping from the final curator override (#1889).

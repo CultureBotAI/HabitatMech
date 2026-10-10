@@ -3,8 +3,6 @@ label: Aerobic zone
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.5f3cbd7563
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8546
@@ -25,3 +23,13 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.5f3cbd7563
+    for habitatmech:GOLD.b0f6a1ef74 (Engineered > Bioreactor > Partial-Nitrification/Anammox
+    (PNA) > Aerobic zone). Reviewed context exclusion (#1886; 20261010T225018Z-aerobic_zone
+    F1): the spatial aerobic zone is not a subtype of the whole PNA system. Speth
+    et al. 2016 (https://pubmed.ncbi.nlm.nih.gov/27029554/) distinguishes within-reactor
+    niches; it does not establish a GOLD accession crosswalk. Preserve qualified mint,
+    source provenance and existing status without inferring universal oxygen conditions.'

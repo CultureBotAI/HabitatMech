@@ -352,6 +352,7 @@ class Concept:
     parents: set[str] = field(default_factory=set)
     xrefs: set[str] = field(default_factory=set)
     attestations: list[dict[str, Any]] = field(default_factory=list)
+    attestation_corrections: set[str] = field(default_factory=set)
     parameters: list[dict[str, Any]] = field(default_factory=list)
     taxa: dict[str, dict[str, Any]] = field(default_factory=dict)
     # Best (most specific) grounding status seen, so a merge cannot silently
@@ -1040,6 +1041,20 @@ def ingest_bacdive(
                 "source with no ontology target; treated as ungrounded rather "
                 "than re-grounded by lexical match."
             )
+            if res.decision is not None and (
+                res.identifier != automatic.identifier
+                or res.grounding_status != automatic.grounding_status
+            ):
+                attestation["notes"] = (
+                    "kg-microbe's isolation-source mapping table has no ontology "
+                    "target for this source; the automatic route leaves it ungrounded. "
+                    f"The explicit curator decision {res.decision.decision} overrides "
+                    f"that route; this source is emitted on {res.identifier}."
+                )
+                concept.attestation_corrections.add(
+                    f"Corrected {row['bacdive_id']} provenance wording to distinguish "
+                    "the declined automatic mapping from the final curator override (#1889)."
+                )
         elif automatic.route == "bacdive_non_habitat_target":
             targets = ", ".join(automatic.extra_xrefs)
             if set(automatic.extra_xrefs) <= set(res.extra_xrefs):
@@ -1139,6 +1154,15 @@ def ingest_prego(
             "source_id": prego_id,
             "source_label": store.ontology.label(prego_id) or prego_id,
         }
+        # Only GROUND maps the source to this emitted identity. A parent
+        # placement has different endpoints and remains outside this fix (#1398).
+        if (res.decision is not None and res.decision.decision == "GROUND"
+                and res.mapping_predicate):
+            attestation["mapping_predicate"] = res.mapping_predicate
+            concept.attestation_corrections.add(
+                f"Preserved curated PREGO source-to-record mapping {prego_id} "
+                f"{res.mapping_predicate} {identifier}; source counts and taxa are unchanged (#1888)."
+            )
         taxon_count = int(row.get("taxon_count") or 0)
         if taxon_count:
             attestation["assertion_count"] = taxon_count
@@ -1629,6 +1653,14 @@ def build_document(concept: Concept) -> dict[str, Any]:
     if concept.causal_graph_events:
         doc.setdefault("curation_history", []).extend(
             copy.deepcopy(concept.causal_graph_events)
+        )
+    for correction in sorted(concept.attestation_corrections):
+        record_curation_event(
+            doc,
+            curator=SEED_CURATOR,
+            action="SOURCE_ATTESTATION_CORRECTED",
+            changes=correction,
+            timestamp="2026-10-10T00:00:00Z",
         )
     # Chronological, so the history reads as one. The seed event is stamped
     # from the extraction time, which is usually *later* than the decisions

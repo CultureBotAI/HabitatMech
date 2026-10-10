@@ -3,8 +3,6 @@ label: Aerobic digester
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:00002043
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5672
@@ -24,3 +22,11 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00002043 for habitatmech:GOLD.03fc563fae
+    (Engineered > WWTP > Aerobic digester). Reviewed context exclusion (#1886; 20261010T225012Z-aerobic_digester
+    F1): an aerobic digestion vessel is not a subtype of its containing wastewater
+    treatment plant. Preserve source identity, nodes, path, zero ORGANISM count omission
+    and CLASS/SEEDED status; no new genus or member-level certification is inferred.'

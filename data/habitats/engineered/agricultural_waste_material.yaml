@@ -23,7 +23,6 @@ synonyms:
   source: PREGO
 parent_habitats:
 - ENVO:00002264
-- mesh:D062611
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4908
@@ -36,6 +35,7 @@ source_attestations:
 - source: PREGO
   source_id: ENVO:00002265
   source_label: ENVO:00002265
+  mapping_predicate: skos:broadMatch
   assertion_count: 5
   assertion_unit: TAXON
   score: 4.0
@@ -101,3 +101,18 @@ curation_history:
   changes: 'Retained GOLD label ''Agricultural waste'' as RELATED_SYNONYM: a CLOSE
     source mapping does not establish exact lexical equivalence. Independent ontology
     synonyms and verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution mesh:D062611 for habitatmech:GOLD.2021aa3231
+    (Engineered > Solid waste > Agricultural waste). Reviewed context exclusion (#1886;
+    20261010T225021Z-agricultural_waste_material F1): ENVO:01000371 includes agricultural
+    runoff and is not wholly solid waste. MeSH D062611 scope excludes dissolved materials
+    in irrigation return flows and industrial discharges (https://id.nlm.nih.gov/mesh/M0568791).
+    Exclude only this GOLD contribution; retain independent ENVO waste-material genus,
+    both source attestations, taxa and count units. No synonym-scope repair is claimed.'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_ATTESTATION_CORRECTED
+  changes: Preserved curated PREGO source-to-record mapping ENVO:00002265 skos:broadMatch
+    ENVO:01000371; source counts and taxa are unchanged (#1888).
