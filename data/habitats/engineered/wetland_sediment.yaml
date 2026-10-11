@@ -3,8 +3,6 @@ label: Wetland sediment
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.fcfbc02d98
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5996
@@ -24,3 +22,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.fcfbc02d98
+    for habitatmech:GOLD.c22928551b (Engineered > Artificial ecosystem > Sediment
+    microcosm > Wetland sediment). ITEM hierarchy assessment (#1962; 20261011T200020Z-wetland_sediment
+    F1): Wetland sediment is sampled material in a sediment microcosm, not the containing
+    experimental ecosystem. The first three exact later BioSamples distinguish coastal
+    sediment and experimental treatments. Do not infer a particular replacement sediment
+    class, treatment or chemistry. Exclude only this guarded source-path contribution.
+    Preserve independent parents, identity, definitions, frozen source nodes/count
+    units or omissions, and native lifecycle. Later source examples do not reconstruct
+    original membership.'

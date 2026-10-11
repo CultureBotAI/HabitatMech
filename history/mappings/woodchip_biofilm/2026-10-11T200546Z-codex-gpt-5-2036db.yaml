@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: woodchip_biofilm
+session:
+  id: 2026-10-11T200546Z-codex-gpt-5-2036db
+  timestamp: '2026-10-11T20:05:46Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1962
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude reviewed GOLD context parent from woodchip_biofilm
+  details: 'ITEM hierarchy assessment (#1962; 20261011T200036Z-woodchip_biofilm F1): Woodchip-associated
+    biofilm is not the containing woodchip bioreactor. The first three exact later BioSamples
+    distinguish the biofilm from the reactor treating synthetic drainage. Biofilm community
+    and material remain distinct grounding candidates. Earlier #768 corrected review guidance,
+    not the generated hierarchy. Exclude only this guarded source-path contribution. Preserve
+    independent parents, identity, definitions, frozen source nodes/count units or omissions,
+    and native lifecycle. Later source examples do not reconstruct original membership. Authorized
+    by the user publication and remediation request. Baseline: 46 native gates passed; exact
+    main CI passed 776 tests with three skipped. Post-correction regression, canary, reproduction
+    and full-QC results are pending at event creation and will be retained in the PR and successor
+    review.'

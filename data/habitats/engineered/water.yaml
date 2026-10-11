@@ -4,7 +4,6 @@ habitat_category: ENGINEERED
 grounding_status: NARROW
 mapping_status: REVIEWED
 parent_habitats:
-- ENVO:00000014
 - ENVO:00002006
 source_attestations:
 - source: GOLD
@@ -26,3 +25,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00000014 for habitatmech:GOLD.0533686915
+    (Engineered > Built environment > Canal > Water). ITEM hierarchy assessment (#1962;
+    20261011T200007Z-water F1): Canal-qualified liquid water is material, not the
+    entire canal water body. The current ENVO canal definition/comment and three inspected
+    exact later GOLD organism descriptions preserve this distinction. Retain the independent
+    ENVO:00002006 liquid-water genus and four frozen ORGANISM assertions; endpoint
+    #1398 remains unresolved. Exclude only this guarded source-path contribution.
+    Preserve independent parents, identity, definitions, frozen source nodes/count
+    units or omissions, and native lifecycle. Later source examples do not reconstruct
+    original membership.'
