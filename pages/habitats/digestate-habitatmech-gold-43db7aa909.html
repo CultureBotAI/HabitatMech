@@ -50,10 +50,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 </table>
 </div>
 
-<h2>Broader habitats</h2>
-<ul class="plain">
-  <li><a href="../habitats/anaerobic-bioreactor-envo-00002124.html">anaerobic bioreactor</a>      <code class="curie">ENVO:00002124</code></li>
-</ul>
 
 
 
@@ -68,6 +64,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="meta">2026-08-12 · claude-opus-5 ·
     class-level sweep, not an individual judgement</span>
     <p>Confirmed UNGROUNDED: no ontology term fits this concept. Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the vendored slice matched this label by any search route. Whether the concept is a habitat at all was NOT assessed, so this is not yet a term-request candidate. (source concept habitatmech:GOLD.43db7aa909)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-11 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution ENVO:00002124 for habitatmech:GOLD.43db7aa909 (Engineered &gt; Bioreactor &gt; Anaerobic &gt; Digestate). Bounded context exclusion (#1921; 20261011T092205Z-digestate__6bea3d76 F1): digestate is residual material rather than its containing anaerobic bioreactor. EPA AgSTAR (<a href="https://www.epa.gov/agstar/how-does-anaerobic-digestion-work" rel="noopener noreferrer" target="_blank">https://www.epa.gov/agstar/how-does-anaerobic-digestion-work</a>) distinguishes the solid/liquid output from the vessel; current ENVO places ENVO:00002124 under containment-unit genus ENVO:00002123. Exclude only this immediate source-parent contribution; preserve the generic source mint, nodes 5582/5583, complete path, zero ORGANISM count omission and UNGROUNDED/SEEDED status. Later 411 BioSamples are separate context, not a replacement source count. No definition, replacement genus or merge with qualified digestate siblings is inferred.</p>
   </li>
 </ol>
 
