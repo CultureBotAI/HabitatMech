@@ -52,7 +52,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="../habitats/environmental-material-envo-00010483.html">environmental material</a>      <code class="curie">ENVO:00010483</code></li>
-  <li><a href="../habitats/manure-slurry-habitatmech-gold-18ee4196a9.html">Manure slurry</a>      <code class="curie">habitatmech:GOLD.18ee4196a9</code></li>
 </ul>
 
 
@@ -75,6 +74,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">SOURCE_SYNONYM_SCOPED</span>
     <span class="meta">2026-10-07 · seed_from_sources</span>
     <p>Retained GOLD label &#39;Liquid manure&#39; as RELATED_SYNONYM: a CLOSE source mapping does not establish exact lexical equivalence. Independent ontology synonyms and verbatim attestations are preserved (#1459).</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-11 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.18ee4196a9 for habitatmech:GOLD.21f78f18dd (Engineered &gt; Solid waste &gt; Animal waste &gt; Manure slurry &gt; Liquid manure). Bounded hierarchy correction (#1937; 20261011T135548Z-manure F1): adopted generic ENVO:03501300 includes plant and non-slurry fertilizer material and is not a subclass of the narrower animal manure slurry context. Three later liquid-dairy-manure samples do not narrow the adopted ENVO class. Remove only this GOLD contribution; retain independent ENVO:00010483, identity, node 8076, exact path, count omissions and CLOSE/REVIEWED status. Typed-synonym issue #1249 remains open.</p>
   </li>
 </ol>
 
