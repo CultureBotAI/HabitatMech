@@ -3,8 +3,6 @@ label: Hydrocarbon
 habitat_category: ENGINEERED
 grounding_status: NOT_APPLICABLE
 mapping_status: REVIEWED
-parent_habitats:
-- ENVO:00002116
 xrefs:
 - CHEBI:24632
 source_attestations:
@@ -25,3 +23,18 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NOT_APPLICABLE.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00002116 for habitatmech:GOLD.3c68e33a11
+    (Engineered > Artificial ecosystem > Soil microcosm > Contaminated soil > Hydrocarbon).
+    Bounded consistency exclusion (#1933; 20261011T120211Z-hydrocarbon F1): the retained
+    ITEM NOT_APPLICABLE decision interprets the source as a chemical, but the independent
+    GOLD path pass also makes it a kind of contaminated soil. ChEBI (https://www.ebi.ac.uk/chebi/CHEBI:24632)
+    denotes a carbon-and-hydrogen compound, while current ENVO:00002116 denotes soil
+    material. Exclude only this contradictory source-parent contribution; preserve
+    the mint, chemical xref, node 6045, full path, count omissions, NOT_APPLICABLE/REVIEWED
+    state and prior events. This does not validate the chemical-only interpretation:
+    the one-sample soil triad and two later exact oil-refinery-sediment BioSamples
+    require separate source-identity reassessment in #1934. No universal soil, sediment
+    or microcosm identity is inferred.'

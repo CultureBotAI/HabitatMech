@@ -49,10 +49,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 </table>
 </div>
 
-<h2>Broader habitats</h2>
-<ul class="plain">
-  <li><a href="../habitats/contaminated-soil-envo-00002116.html">contaminated soil</a>      <code class="curie">ENVO:00002116</code></li>
-</ul>
 
 
 
@@ -73,6 +69,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">NOT_APPLICABLE</span>
     <span class="meta">2026-08-14 · claude-opus-5</span>
     <p>Marked NOT_APPLICABLE: the source concept does not denote a habitat. CHEBI:24632 kept as an xref. Stale-sweep review (#12): the class sweep said no term matched; one does now. A chemical is not a habitat, so NOT_APPLICABLE with the link kept as an xref. (source concept habitatmech:GOLD.3c68e33a11)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-11 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution ENVO:00002116 for habitatmech:GOLD.3c68e33a11 (Engineered &gt; Artificial ecosystem &gt; Soil microcosm &gt; Contaminated soil &gt; Hydrocarbon). Bounded consistency exclusion (#1933; 20261011T120211Z-hydrocarbon F1): the retained ITEM NOT_APPLICABLE decision interprets the source as a chemical, but the independent GOLD path pass also makes it a kind of contaminated soil. ChEBI (<a href="https://www.ebi.ac.uk/chebi/CHEBI:24632" rel="noopener noreferrer" target="_blank">https://www.ebi.ac.uk/chebi/CHEBI:24632</a>) denotes a carbon-and-hydrogen compound, while current ENVO:00002116 denotes soil material. Exclude only this contradictory source-parent contribution; preserve the mint, chemical xref, node 6045, full path, count omissions, NOT_APPLICABLE/REVIEWED state and prior events. This does not validate the chemical-only interpretation: the one-sample soil triad and two later exact oil-refinery-sediment BioSamples require separate source-identity reassessment in #1934. No universal soil, sediment or microcosm identity is inferred.</p>
   </li>
 </ol>
 

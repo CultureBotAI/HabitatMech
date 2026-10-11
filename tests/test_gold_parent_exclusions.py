@@ -1342,6 +1342,65 @@ def test_digestate_water_and_filter_exclusions_change_only_context_and_audit(mon
             assert "mapping_predicate" not in attestation
 
 
+def test_sludge_and_hydrocarbon_exclusions_preserve_material_and_source_scope(monkeypatch):
+    targets = {
+        "habitatmech:GOLD.84c231bfef": (
+            "habitatmech:GOLD.0d77d00b06", ["ENVO:00002044"], "NARROW", "SEEDED",
+            "gold.ecosystem:8148",
+            "Engineered > Bioreactor > UASB (Upflow anaerobic sludge blanket) > Sludge",
+        ),
+        "habitatmech:GOLD.3c68e33a11": (
+            "ENVO:00002116", [], "NOT_APPLICABLE", "REVIEWED", "gold.ecosystem:6045",
+            "Engineered > Artificial ecosystem > Soil microcosm > Contaminated soil > Hydrocarbon",
+        ),
+    }
+    after = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    exclusions = load_gold_parent_exclusions(seed.GOLD_PARENT_EXCLUSIONS_PATH)
+    monkeypatch.setattr(
+        seed, "load_gold_parent_exclusions",
+        lambda path: {key: row for key, row in exclusions.items() if key not in targets},
+    )
+    before = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    assert before.keys() == after.keys()
+    assert {key for key in before if before[key] != after[key]} == targets.keys()
+    for identifier, (removed, retained, grounding, status, node, path) in targets.items():
+        old, new = before[identifier], after[identifier]
+        assert old["parent_habitats"] == sorted([removed, *retained])
+        assert new.get("parent_habitats", []) == retained
+        assert new["curation_history"][:-1] == old["curation_history"]
+        event = new["curation_history"][-1]
+        assert event["action"] == "SOURCE_PARENT_EXCLUDED"
+        assert event["timestamp"] == "2026-10-11T00:00:00Z"
+        assert event["curator"] == "codex-gpt-5"
+        assert identifier in event["changes"] and removed in event["changes"]
+        for field in (old.keys() | new.keys()) - {"parent_habitats", "curation_history"}:
+            assert new.get(field) == old.get(field), (identifier, field)
+        assert new["grounding_status"] == grounding
+        assert new["mapping_status"] == status
+        assert len(new["source_attestations"]) == 1
+        attestation = new["source_attestations"][0]
+        assert attestation["source_id"] == node
+        assert attestation["source_path"] == path
+        assert seed.mint("GOLD", path) == identifier
+        assert exclusions[identifier].source_path == path
+        assert exclusions[identifier].parent_id == removed
+        assert "assertion_count" not in attestation
+        assert "assertion_unit" not in attestation
+        if grounding == "NARROW":
+            assert attestation["mapping_predicate"] == "skos:narrowMatch"
+        else:
+            assert "mapping_predicate" not in attestation
+            assert new["xrefs"] == ["CHEBI:24632"]
+
+    # Repair the false ancestor at its owner without removing the valid material edge.
+    granular = "habitatmech:GOLD.c79068da29"
+    sludge = "habitatmech:GOLD.84c231bfef"
+    assert before[granular] == after[granular]
+    assert after[granular]["parent_habitats"] == [sludge]
+    assert "habitatmech:GOLD.0d77d00b06" in before[sludge]["parent_habitats"]
+    assert after[sludge]["parent_habitats"] == ["ENVO:00002044"]
+
+
 def test_floor_and_experimental_water_exclusions_change_only_context_and_audit(monkeypatch):
     targets = {
         "habitatmech:GOLD.29dae65d3c": (
