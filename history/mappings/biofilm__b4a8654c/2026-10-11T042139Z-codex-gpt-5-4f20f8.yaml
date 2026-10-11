@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: biofilm__b4a8654c
+session:
+  id: 2026-10-11T042139Z-codex-gpt-5-4f20f8
+  timestamp: '2026-10-11T04:21:39Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1902
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude only the immediate GOLD container-as-genus contribution
+  details: 'PR #1901 addresses 20261011T041059Z-biofilm__b4a8654c F1 for habitatmech:GOLD.6c12d05420.
+    The source path supplies location or component context, not strict subsumption. Preserve
+    the independently supported ENVO biofilm/biofilter genus, minted identity, source node/path,
+    counts and units, NARROW/SEEDED status and all unrelated fields. The original review identifies
+    the exact ontology and source evidence; later workbook evidence is not original frozen-member
+    reconstruction. The shared mapping-endpoint finding remains open in #1398. The two new
+    regression tests failed before correction. Dry seed and the pipeline-biofilm canary succeeded;
+    focused tests, full regeneration, native gates, locked map rebuild and CI are recorded
+    separately as they complete. No user authorship is inferred; no paid research was used.'

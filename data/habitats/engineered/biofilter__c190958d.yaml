@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002152
-- habitatmech:GOLD.2b5caaea9b
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8322
@@ -18,3 +17,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.2b5caaea9b
+    for habitatmech:GOLD.c023583133 (Engineered > Artificial ecosystem > Aquaculture
+    > Freshwater RAS > Biofilter). Bounded hierarchy correction (#1902; review 20261011T041120Z-biofilter__c190958d
+    F1): a biological filter is not a kind of the complete freshwater recirculating
+    aquaculture system. ENVO:00002152 is the retained filter genus; the RAS source
+    label and DOI:10.3389/fmicb.2017.00101 distinguish the treatment component from
+    its containing system. The paper is conceptual support, not a GOLD-member crosswalk.
+    Preserve qualified mint, node 8322, full path, zero-count omission and NARROW/SEEDED
+    status. No original membership certification or mapping-endpoint fix is claimed
+    (#1398).'
