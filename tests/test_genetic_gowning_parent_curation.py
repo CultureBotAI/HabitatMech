@@ -58,4 +58,34 @@ def test_genetic_and_gowning_exclusions_preserve_every_other_claim(monkeypatch):
 
     floor = after["habitatmech:GOLD.2b2e32d265"]
     assert floor == before[floor["identifier"]]
-    assert "habitatmech:GOLD.ec294980eb" in floor["parent_habitats"]
+    assert "parent_habitats" not in floor
+    floor_exclusion = exclusions[floor["identifier"]]
+    assert floor_exclusion.parent_id == "habitatmech:GOLD.ec294980eb"
+    assert floor_exclusion.source_path == (
+        "Engineered > Built environment > Spacecraft Assembly Cleanrooms > Gowning room > Floor"
+    )
+    assert floor["source_attestations"][0]["source_path"] == floor_exclusion.source_path
+
+    # The floor's own exclusion must not cascade into the room or other records.
+    monkeypatch.setattr(
+        seed, "load_gold_parent_exclusions",
+        lambda path: {
+            key: row for key, row in exclusions.items() if key != floor["identifier"]
+        },
+    )
+    without_floor_exclusion = {
+        c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts
+    }
+    assert without_floor_exclusion.keys() == after.keys()
+    assert {
+        key for key in after if without_floor_exclusion[key] != after[key]
+    } == {floor["identifier"]}
+    restored = without_floor_exclusion[floor["identifier"]]
+    assert restored["parent_habitats"] == [floor_exclusion.parent_id]
+    assert floor["curation_history"][:-1] == restored["curation_history"]
+    event = floor["curation_history"][-1]
+    assert event["action"] == "SOURCE_PARENT_EXCLUDED"
+    assert floor["identifier"] in event["changes"]
+    assert floor_exclusion.parent_id in event["changes"]
+    for field in (restored.keys() | floor.keys()) - {"parent_habitats", "curation_history"}:
+        assert restored.get(field) == floor.get(field), field
