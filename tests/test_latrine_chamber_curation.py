@@ -38,7 +38,8 @@ def test_latrine_exclusion_changes_only_context_parent_and_audit(monkeypatch):
     assert new["curation_history"][0]["action"] == "CONFIRM_UNGROUNDED"
     assert "[CLASS-level]" in new["curation_history"][0]["changes"]
     child = after["habitatmech:GOLD.aab5671566"]
-    assert child["parent_habitats"] == ["ENVO:00002170", identifier]
+    assert child == before["habitatmech:GOLD.aab5671566"]
+    assert child["parent_habitats"] == ["ENVO:00002170"]
     row = next(r for r in seed.read_tsv("gold_ecosystem_paths.tsv")
                if r["canonical_path"] == path)
     assert row["gold_node_ids"] == "gold.ecosystem:4952"
