@@ -824,7 +824,46 @@ def test_biochar_exclusion_changes_only_production_context_parent_and_audit(monk
     assert seed.mint("GOLD", source_path) == source
     waste_biochar = "habitatmech:GOLD.3b36f6b3d2"
     assert after[waste_biochar] == before[waste_biochar]
-    assert after[waste_biochar]["parent_habitats"] == ["ENVO:00002873", identifier]
+    assert after[waste_biochar]["parent_habitats"] == [identifier]
+
+
+def test_qualified_biochar_excludes_only_waste_context_and_appends_audit(monkeypatch):
+    identifier = "habitatmech:GOLD.3b36f6b3d2"
+    parent = "ENVO:00002873"
+    source_path = "Engineered > Solid waste > Organic waste > Biochar"
+    after = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    exclusions = load_gold_parent_exclusions(seed.GOLD_PARENT_EXCLUSIONS_PATH)
+    exclusion = exclusions.pop(identifier)
+    assert exclusion.source_path == source_path
+    assert exclusion.parent_id == parent
+    monkeypatch.setattr(seed, "load_gold_parent_exclusions", lambda path: exclusions)
+    before = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+
+    assert before.keys() == after.keys()
+    assert {key for key in before if before[key] != after[key]} == {identifier}
+    old, new = before[identifier], after[identifier]
+    assert old["parent_habitats"] == [parent, "ENVO:2000007"]
+    assert new["parent_habitats"] == ["ENVO:2000007"]
+    assert new["curation_history"][:-1] == old["curation_history"]
+    assert new["curation_history"][-1]["action"] == "SOURCE_PARENT_EXCLUDED"
+    assert new["curation_history"][-1]["timestamp"] == "2026-10-11T00:00:00Z"
+    assert new["curation_history"][-1]["curator"] == "codex-gpt-5"
+    for field in (old.keys() | new.keys()) - {"parent_habitats", "curation_history"}:
+        assert new.get(field) == old.get(field), field
+    assert new["grounding_status"] == "NARROW"
+    assert new["mapping_status"] == "SEEDED"
+    assert new["source_attestations"] == [{
+        "source": "GOLD", "source_id": "gold.ecosystem:8414", "source_label": "Biochar",
+        "source_path": source_path, "mapping_predicate": "skos:narrowMatch",
+        "notes": ("2 GOLD ecosystem node ids share this path; first shown. "
+                  "See data/raw/gold_ecosystem_paths.tsv."),
+    }]
+    assert seed.mint("GOLD", source_path) == identifier
+    row = next(row for row in seed.read_tsv(seed.RAW_DIR / "gold_ecosystem_paths.tsv")
+               if row["canonical_path"] == source_path)
+    assert set(row["gold_node_ids"].split("|")) == {
+        "gold.ecosystem:8414", "gold.ecosystem:8415",
+    }
 
 
 def test_engineered_biofilm_exclusions_change_only_context_parents_and_audit(monkeypatch):
