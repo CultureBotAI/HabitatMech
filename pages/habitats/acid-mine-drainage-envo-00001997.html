@@ -65,7 +65,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <ul class="plain">
   <li><a href="http://purl.obolibrary.org/obo/ENVO_00001996">mine drainage</a>      <code class="curie">ENVO:00001996</code></li>
   <li><a href="../habitats/industrial-wastewater-envo-01000964.html">industrial wastewater</a>      <code class="curie">ENVO:01000964</code></li>
-  <li><a href="../habitats/groundwater-habitatmech-gold-7f8e268653.html">Groundwater</a>      <code class="curie">habitatmech:GOLD.7f8e268653</code></li>
 </ul>
 
 
@@ -125,6 +124,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">GROUND</span>
     <span class="meta">2026-08-20 · claude-opus-5</span>
     <p>Grounded to ENVO:00001997 &#39;acid mine drainage&#39; (EXACT). Triad-evidence review (#126): GOLD&#39;s submitters annotate each biosample with a MIxS ENVO triad, and this concept&#39;s path carries 14 INDEPENDENT studies all asserting local = ENVO:00001997 &#39;acid mine drainage&#39;. That is evidence of a different kind from a label match — what the people who took the samples said the environment was. Study count is what is quoted rather than sample count because 122 of 140 unanimous paths are one study repeating itself; this one is corroborated across 14. The record was minted by the ambiguous-leaf rule because a shallower GOLD path, Engineered &gt; Wastewater &gt; Industrial wastewater &gt; Acid mine drainage, already claimed the term. Both paths denote acid mine drainage; GOLD files the same concept under two branches. Grounding merges them, which is right — unlike the Sediment cases, this is a specific kind of place rather than a material that occurs in many settings. (source concept habitatmech:GOLD.d727388954)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-11 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.7f8e268653 for habitatmech:GOLD.d727388954 (Environmental &gt; Aquatic &gt; Freshwater &gt; Groundwater &gt; Acid Mine Drainage). ITEM hierarchy assessment (<a href="https://github.com/CultureBotAI/HabitatMech/issues/1971;" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/1971;</a> 20261011T212749Z-acid_mine_drainage): The ENVO acidic mine-drainage identity is supported by two GOLD paths and PREGO, with separate18 and16 ORGANISM counts and three TAXON associations. The14-study local-scale consensus is evidence for place identity, not equivalence of every triad role. Generic acid mine drainage is not restricted to fresh groundwater; the merged parent imports one source context. ENVO types acid rock drainage as related, not exact. Exclude only this guarded GOLD source-parent contribution. Preserve independent parents, source identity/count units or omissions, ontology definition, and native lifecycle; later source examples do not reconstruct frozen membership. Shared synonym1249 and endpoint1398 issues remain separate.</p>
   </li>
 </ol>
 

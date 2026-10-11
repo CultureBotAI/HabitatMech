@@ -59,7 +59,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="http://purl.obolibrary.org/obo/ENVO_01001275">solid layer</a>      <code class="curie">ENVO:01001275</code></li>
-  <li><a href="../habitats/groundwater-habitatmech-gold-7f8e268653.html">Groundwater</a>      <code class="curie">habitatmech:GOLD.7f8e268653</code></li>
 </ul>
 
 
@@ -263,6 +262,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">GROUND</span>
     <span class="meta">2026-08-20 · claude-opus-5</span>
     <p>Grounded to ENVO:00012408 &#39;aquifer&#39; (EXACT). Triad-evidence review (#126): GOLD&#39;s submitters annotate each biosample with a MIxS ENVO triad, and this concept&#39;s path carries 4 INDEPENDENT studies all asserting local = ENVO:00012408 &#39;aquifer&#39;. That is evidence of a different kind from a label match — what the people who took the samples said the environment was. Study count is what is quoted rather than sample count because 122 of 140 unanimous paths are one study repeating itself; this one is corroborated across 4. The term is claimed only by PREGO&#39;s &#39;aquifer&#39;, so grounding merges GOLD&#39;s aquifer with PREGO&#39;s, which is the multi-source corroboration this corpus is built to record. (source concept habitatmech:GOLD.9f7a6c66a7)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-11 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.7f8e268653 for habitatmech:GOLD.9f7a6c66a7 (Environmental &gt; Aquatic &gt; Freshwater &gt; Groundwater &gt; Aquifer). ITEM hierarchy assessment (<a href="https://github.com/CultureBotAI/HabitatMech/issues/1971;" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/1971;</a> 20261011T212945Z-aquifer): The active ENVO aquifer is a permeable geological formation, not the groundwater it contains. The four-study local-scale consensus supports the aquifer-place interpretation but does not make groundwater material its genus. Preserve the geological-stratum parent, five ORGANISM assertions and395 PREGO TAXON associations. Exclude only this guarded GOLD source-parent contribution. Preserve independent parents, source identity/count units or omissions, ontology definition, and native lifecycle; later source examples do not reconstruct frozen membership. Shared synonym1249 and endpoint1398 issues remain separate.</p>
   </li>
 </ol>
 
