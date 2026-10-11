@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: industrial_waste_material
+session:
+  id: 2026-10-11T140435Z-codex-gpt-5-81dd77
+  timestamp: '2026-10-11T14:04:35Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1937
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: Exclude unsupported GOLD context parent from industrial_waste_material
+  details: 'Bounded hierarchy correction (#1937; 20261011T135442Z-industrial_waste_material
+    F1): adopted ENVO:00002267 includes liquid, solid and gaseous manufacturing wastes, whereas
+    MeSH Solid Waste excludes materials dissolved in industrial discharges (https://id.nlm.nih.gov/mesh/M0568791).
+    This is not a claim that all liquids are excluded from solid waste. Exclude only this
+    source-context contribution; retain ENVO:00002264, identity, all three source nodes, nine
+    ORGANISM assertions and CLOSE/REVIEWED status. Current GOLD members do not narrow the
+    adopted ontology class. Typed-synonym issue #1249 remains open. Exact five-target whole-corpus
+    differential regression passed; removing those five guards in a temporary input made that
+    regression fail as expected. Dry seed and forced industrial-waste canary completed and
+    the entire canary record was inspected before full forced regeneration. All other fields
+    and records are preserved by the regression. Post-correction labels, strict validation,
+    reproduction, history, full QC and map/site checks remain required before merge. This
+    session does not resolve original membership or shared synonym/mapping-endpoint findings.'

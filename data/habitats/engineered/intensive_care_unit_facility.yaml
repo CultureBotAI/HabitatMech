@@ -37,7 +37,6 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: ENVO
 parent_habitats:
-- ENVO:00002173
 - ENVO:03501137
 source_attestations:
 - source: GOLD
@@ -64,3 +63,14 @@ curation_history:
   changes: 'Retained GOLD label ''ICU'' as RELATED_SYNONYM: a CLOSE source mapping
     does not establish exact lexical equivalence. Independent ontology synonyms and
     verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00002173 for habitatmech:GOLD.570ad87007
+    (Engineered > Built environment > Hospital > ICU). Bounded hierarchy correction
+    (#1937; 20261011T135501Z-intensive_care_unit_facility F1): current ENVO:03501152
+    is a hospital-unit facility; the hospital-unit axiom relates it part_of a hospital,
+    not as a subclass of the whole hospital. Retain independent ENVO:03501137, all
+    genuine ICU aliases, both source nodes, exact path, count omissions and CLOSE/REVIEWED
+    status. Remove only the GOLD context contribution, without changing source identity
+    or asserting historical member coverage.'

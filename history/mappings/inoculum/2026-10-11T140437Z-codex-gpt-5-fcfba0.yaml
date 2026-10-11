@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: inoculum
+session:
+  id: 2026-10-11T140437Z-codex-gpt-5-fcfba0
+  timestamp: '2026-10-11T14:04:37Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1937
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: Exclude unsupported GOLD context parent from inoculum
+  details: 'Bounded hierarchy correction (#1937; 20261011T135452Z-inoculum F1): inoculating
+    material is not a kind of reactor apparatus. PMID:24907580 distinguishes stored microbial
+    inoculum from reactor startup; later exact-path GOLD BioSamples Gb0314380-Gb0314382 likewise
+    describe digester inoculum, without reconstructing original membership. Exclude only the
+    immediate reactor contribution; preserve qualified mint, both source nodes, count omissions
+    and UNGROUNDED/SEEDED status. No universal sludge genus or new definition is inferred.
+    Exact five-target whole-corpus differential regression passed; removing those five guards
+    in a temporary input made that regression fail as expected. Dry seed and forced industrial-waste
+    canary completed and the entire canary record was inspected before full forced regeneration.
+    All other fields and records are preserved by the regression. Post-correction labels,
+    strict validation, reproduction, history, full QC and map/site checks remain required
+    before merge. This session does not resolve original membership or shared synonym/mapping-endpoint
+    findings.'

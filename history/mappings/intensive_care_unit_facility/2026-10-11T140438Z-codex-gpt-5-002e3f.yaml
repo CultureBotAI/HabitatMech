@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: intensive_care_unit_facility
+session:
+  id: 2026-10-11T140438Z-codex-gpt-5-002e3f
+  timestamp: '2026-10-11T14:04:38Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1937
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: Exclude unsupported GOLD context parent from intensive_care_unit_facility
+  details: 'Bounded hierarchy correction (#1937; 20261011T135501Z-intensive_care_unit_facility
+    F1): current ENVO:03501152 is a hospital-unit facility; the hospital-unit axiom relates
+    it part_of a hospital, not as a subclass of the whole hospital. Retain independent ENVO:03501137,
+    all genuine ICU aliases, both source nodes, exact path, count omissions and CLOSE/REVIEWED
+    status. Remove only the GOLD context contribution, without changing source identity or
+    asserting historical member coverage. Exact five-target whole-corpus differential regression
+    passed; removing those five guards in a temporary input made that regression fail as expected.
+    Dry seed and forced industrial-waste canary completed and the entire canary record was
+    inspected before full forced regeneration. All other fields and records are preserved
+    by the regression. Post-correction labels, strict validation, reproduction, history, full
+    QC and map/site checks remain required before merge. This session does not resolve original
+    membership or shared synonym/mapping-endpoint findings.'

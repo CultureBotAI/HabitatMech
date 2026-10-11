@@ -52,7 +52,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="../habitats/waste-material-envo-00002264.html">waste material</a>      <code class="curie">ENVO:00002264</code></li>
-  <li><a href="../habitats/solid-waste-mesh-d062611.html">Solid Waste</a>      <code class="curie">mesh:D062611</code></li>
 </ul>
 
 
@@ -75,6 +74,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">SOURCE_SYNONYM_SCOPED</span>
     <span class="meta">2026-10-07 · seed_from_sources</span>
     <p>Retained GOLD label &#39;Industrial waste&#39; as RELATED_SYNONYM: a CLOSE source mapping does not establish exact lexical equivalence. Independent ontology synonyms and verbatim attestations are preserved (#1459).</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-11 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution mesh:D062611 for habitatmech:GOLD.8faa599672 (Engineered &gt; Solid waste &gt; Industrial waste). Bounded hierarchy correction (#1937; 20261011T135442Z-industrial_waste_material F1): adopted ENVO:00002267 includes liquid, solid and gaseous manufacturing wastes, whereas MeSH Solid Waste excludes materials dissolved in industrial discharges (<a href="https://id.nlm.nih.gov/mesh/M0568791" rel="noopener noreferrer" target="_blank">https://id.nlm.nih.gov/mesh/M0568791</a>). This is not a claim that all liquids are excluded from solid waste. Exclude only this source-context contribution; retain ENVO:00002264, identity, all three source nodes, nine ORGANISM assertions and CLOSE/REVIEWED status. Current GOLD members do not narrow the adopted ontology class. Typed-synonym issue #1249 remains open.</p>
   </li>
 </ol>
 
