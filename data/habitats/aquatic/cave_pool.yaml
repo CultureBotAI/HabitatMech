@@ -3,8 +3,6 @@ label: Cave pool
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.22a80cbd14
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5966
@@ -23,3 +21,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.22a80cbd14
+    for habitatmech:GOLD.afb49b0d4b (Environmental > Aquatic > Deep subsurface > Groundwater
+    > Cave pool). ITEM hierarchy assessment: https://github.com/CultureBotAI/HabitatMech/issues/1979
+    (20261011T225706Z-cave_pool). A cave pool denotes a water-body feature in the
+    groundwater setting, not the groundwater material. This exact source path has
+    no matched later direct membership, so a precise genus needs source adjudication
+    rather than invented measurements or a speculative exact match. Exclude only this
+    guarded GOLD source-parent contribution. Preserve independent parents, frozen
+    source identity/counts/units or omissions and native lifecycle. Later examples
+    do not reconstruct frozen membership; shared synonym and endpoint issues remain
+    separate.'

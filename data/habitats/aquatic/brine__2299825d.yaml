@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00003044
-- habitatmech:GOLD.713c7f352a
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5372
@@ -19,3 +18,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.713c7f352a
+    for habitatmech:GOLD.cc5b244380 (Environmental > Aquatic > Non-marine Saline and
+    Alkaline > Lake > Brine). ITEM hierarchy assessment: https://github.com/CultureBotAI/HabitatMech/issues/1979
+    (20261011T225639Z-brine__2299825d). The nonmarine lake-qualified brine is a water
+    material, not the lake containing it. The brine genus is retained; source chemistry
+    and later alkaline-lake/saltern descriptions do not justify replacing the frozen
+    100-organism source membership. Its retained mint also exposes the shared narrowMatch
+    endpoint mismatch. Exclude only this guarded GOLD source-parent contribution.
+    Preserve independent parents, frozen source identity/counts/units or omissions
+    and native lifecycle. Later examples do not reconstruct frozen membership; shared
+    synonym and endpoint issues remain separate.'

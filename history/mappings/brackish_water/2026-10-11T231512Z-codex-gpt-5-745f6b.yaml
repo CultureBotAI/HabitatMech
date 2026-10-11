@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/causal_graphs/brackish_water.yaml
+  slug: brackish_water
+session:
+  id: 2026-10-11T231512Z-codex-gpt-5-745f6b
+  timestamp: '2026-10-11T23:15:12Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1980
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Correct causal representation for brackish_water
+  details: 'Correct assemblage node types and, for brackish water, transport/biosynthesis
+    and doubling-time wording. Stable graph identifiers and citations are retained. Broader
+    evidence and scope findings remain open in #1981. Authorized by user publication/remediation
+    request. Baseline 46 native checks and exact main CI 800 passed/3 skipped succeeded. Post-fix
+    tests, canary, regeneration and full QC pending at event creation; outcomes will be retained
+    in PR and successor reviews.'

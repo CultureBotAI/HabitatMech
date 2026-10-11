@@ -15,7 +15,7 @@ causal_graphs:
     grounding: ENVO:00002034
   - node_id: microbial_aggregate
     label: surface-associated microbial aggregate
-    node_type: TAXON
+    node_type: COMMUNITY
   - node_id: substratum
     label: substratum
     node_type: HABITAT
@@ -54,7 +54,7 @@ causal_graphs:
     node_type: COMMUNITY_PROCESS
   - node_id: stress_tolerant_subpopulations
     label: stress-tolerant subpopulations
-    node_type: TAXON
+    node_type: COMMUNITY
   edges:
   - edge_id: biofilm_determined_by_aggregate
     subject: biofilm
@@ -240,4 +240,12 @@ curation_history:
     PMID:27510863, DOI:10.1038/nrmicro.2016.94, PMID:20676145,
     DOI:10.1038/nrmicro2415, PMID:35149841, and
     DOI:10.1038/s41579-022-00692-2.
+  llm_assisted: true
+- timestamp: '2026-10-11T23:12:06Z'
+  curator: codex-gpt-5
+  action: CORRECT_CAUSAL_GRAPH
+  changes: Retyped microbial_aggregate and stress_tolerant_subpopulations as
+    COMMUNITY because they denote assemblages rather than organismal clades.
+    Stable graph identifiers and evidence are unchanged. Surface-attachment,
+    detailed mechanism support and stress-selection scope remain unresolved.
   llm_assisted: true

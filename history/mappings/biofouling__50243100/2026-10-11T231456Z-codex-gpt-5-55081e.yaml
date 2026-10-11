@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: biofouling__50243100
+session:
+  id: 2026-10-11T231456Z-codex-gpt-5-55081e
+  timestamp: '2026-10-11T23:14:56Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1979
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude reviewed GOLD context parents from biofouling__50243100
+  details: 'ITEM hierarchy assessment: https://github.com/CultureBotAI/HabitatMech/issues/1979
+    (20261011T225559Z-biofouling__50243100). The inland saline-or-alkaline Biofouling decision
+    denotes a fouling layer, not an entire aquatic environment determined by an inland water
+    body. Preserve the independently justified process xref and the saline-or-alkaline distinction;
+    do not force an exact biofilm identity. Exclude only this guarded GOLD source-parent contribution.
+    Preserve independent parents, frozen source identity/counts/units or omissions and native
+    lifecycle. Later examples do not reconstruct frozen membership; shared synonym and endpoint
+    issues remain separate. Authorized by user publication/remediation request. Baseline 46
+    native checks and exact main CI 800 passed/3 skipped succeeded. Post-fix tests, canary,
+    regeneration and full QC pending at event creation; outcomes will be retained in PR and
+    successor reviews.'
