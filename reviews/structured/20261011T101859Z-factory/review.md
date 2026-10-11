@@ -1,0 +1,1057 @@
+# Scientific record review: factory
+
+- Review: 20261011T101859Z-factory
+- Repository: culturebotai/HabitatMech
+- Started UTC: 2026-10-11T10:08:30.567898Z
+- Finished UTC: 2026-10-11T10:18:59.297938Z
+- Reviewer: OpenAI Codex (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The active ENVO definition permits a multi-building industrial site, while its named parent requires an industrial building; the current OWL retains this scope conflict and a separate has-part restriction. BacDive category ancestry confirms the industrial sense of Plant-Factory. CLOSE mapping and RELATED source synonym are conservative. All 25 displayed taxon IDs resolve, including one historical alias with no display label.
+
+## Scope And Provenance
+
+Entire exact HabitatRecord, contributor provenance, direct-parent meaning and applicable biological evidence.
+
+Selection: Next 24 alphabetically ordered unreviewed ENGINEERED records, from engineered__900b76ad through fruit_processing; separate exact-target record reviews, not a sample or category verdict. Starting current coverage303/3208.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 435a217c6d378e013e2ee11f22147e5b09737183.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| ENVO:01000536 | data/habitats/engineered/factory.yaml | generated | factory |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native validate | passed | True | ENVO:01000536 | Actual exit0; start 2026-10-11T10:09:45.082439Z; finish 2026-10-11T10:09:47.710483Z. Full-corpus procedural checks are not additional scientific coverage. |
+| Native validate-strict | passed | True | ENVO:01000536 | Actual exit0; start 2026-10-11T10:10:43.887582Z; finish 2026-10-11T10:10:52.258696Z. Full-corpus procedural checks are not additional scientific coverage. |
+| Native verify-corpus | passed | True | ENVO:01000536 | Actual exit0; start 2026-10-11T10:10:52.259836Z; finish 2026-10-11T10:11:06.554044Z. Full-corpus procedural checks are not additional scientific coverage. |
+| Native validate-products | passed | True | ENVO:01000536 | Actual exit0; start 2026-10-11T10:11:06.554814Z; finish 2026-10-11T10:11:55.255958Z. Full-corpus procedural checks are not additional scientific coverage. |
+| Native validate-history | passed | True | ENVO:01000536 | Actual exit0; start 2026-10-11T10:11:55.256933Z; finish 2026-10-11T10:12:06.655006Z. Full-corpus procedural checks are not additional scientific coverage. |
+| Native validate-causal-all | passed | True | ENVO:01000536 | Actual exit0; start 2026-10-11T10:12:06.656051Z; finish 2026-10-11T10:12:15.551857Z. Full-corpus procedural checks are not additional scientific coverage. |
+| Native term-requests-check | passed | True | ENVO:01000536 | Actual exit0; start 2026-10-11T10:12:15.553494Z; finish 2026-10-11T10:12:44.715204Z. Full-corpus procedural checks are not additional scientific coverage. |
+| Complete target reproduction | passed | False | ENVO:01000536 | All24 selected native build_document results equal every current target field. |
+| Original source membership reconstruction | unavailable | False | ENVO:01000536 | Configured original input paths unavailable within ignored-inclusive bounds. Later official exports are separate evidence. |
+| Publication QC | skipped | False | ENVO:01000536 | Full QC is still running when authoring this observation. No future success is asserted; required focused/native gates above have completed. |
+
+## Scientific And Domain Assessments
+
+### Observational taxon identity and source units
+
+evidence: supported. Targets: ENVO:01000536.
+
+211 STRAIN assertions; 172-key source candidate pool, not 172 named species. The25 displayed keys sum to 64 associations and do not exhaust the211 strains. Bacteria is domain-level; placeholder species remain source observations. No is_characteristic flag is asserted.
+
+### Identity, grounding, genus and synonym scope
+
+identity: concern. Targets: ENVO:01000536.
+
+The active ENVO definition permits a multi-building industrial site, while its named parent requires an industrial building; the current OWL retains this scope conflict and a separate has-part restriction. BacDive category ancestry confirms the industrial sense of Plant-Factory. CLOSE mapping and RELATED source synonym are conservative. All 25 displayed taxon IDs resolve, including one historical alias with no display label.
+
+### Frozen source counts, roles and lifecycle
+
+provenance: supported. Targets: ENVO:01000536.
+
+Every emitted field reproduces from the maintained inputs. Frozen counts and nodes trace to exact inventory rows; zero-count omission is not evidence of biological absence. Actual source/reviewed-source counts and routes={"source_concepts": 1, "reviewed_sources": 1, "routes": []}. Later sample/organism counts remain separate. Native status is not promoted by this scientific review.
+
+### Evidence proportional to actual claims
+
+completeness: supported. Targets: ENVO:01000536.
+
+No target has causal-edge, gene/regulator or transcriptomic claims; iModulonDB is not applicable. No optional definition, parameter, mechanism, discussion or dataset is invented for coverage. Triad roles remain broad/local/medium context rather than automatic identity evidence.
+
+## Findings
+
+### F1: Factory site definition conflicts with industrial-building genus
+
+major / open / confirmed; issue key: envo-01000536-site-building-scope.
+
+The active ENVO definition permits a multi-building industrial site, while its named parent requires an industrial building; the current OWL retains this scope conflict and a separate has-part restriction. BacDive category ancestry confirms the industrial sense of Plant-Factory. CLOSE mapping and RELATED source synonym are conservative. All 25 displayed taxon IDs resolve, including one historical alias with no display label.
+
+### F2: Resolvable historical taxon alias lacks a display label
+
+minor / open / confirmed; issue key: envo-01000536-taxon-alias-label.
+
+NCBITaxon:1037355 is explicitly an AkaTaxId of879969 Macellibacteroides fermentans. The source association is resolvable, but its omitted display label is a bounded provenance gap.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Obtain upstream ENVO scope adjudication and replay governed extraction with manifest/receipt. GOLD parent exclusions cannot suppress independent ontology axioms. Do not invent a replacement genus or silently narrow the source.
+
+- Adjudicate the exact source with primary evidence; do not invent a replacement or infer ecological absence.
+- Preserve source counts/units and immutable review/history records; append native curation history for supported changes.
+- Add focused regression coverage, dry seed and inspect a canary, regenerate only affected products, and pass provenance, labels, strict validation, reproduction, history and full QC.
+
+### A2
+
+Resolve #1728 via pinned taxonomy inputs, preserving source provenance and recomputing complete ranks/pools if canonical aliases coalesce. Do not hand-patch the generated target.
+
+- Adjudicate the exact source with primary evidence; do not invent a replacement or infer ecological absence.
+- Preserve source counts/units and immutable review/history records; append native curation history for supported changes.
+- Add focused regression coverage, dry seed and inspect a canary, regenerate only affected products, and pass provenance, labels, strict validation, reproduction, history and full QC.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| R | data/habitats/engineered/factory.yaml; Entire generated YAML, including all history, synonym and taxon entries | supports | The active ENVO definition permits a multi-building industrial site, while its named parent requires an industrial building; the current OWL retains this scope conflict and a separate has-part restriction. BacDive category ancestry confirms the industrial sense of Plant-Factory. CLOSE mapping and RELATED source synonym are conservative. All 25 displayed taxon IDs resolve, including one historical alias with no display label. |
+| RULES | docs/CURATION.md; docs/HARMONIZATION.md; docs/record-review-profile.md; Native field-by-field checklist and maintained-input ownership | supports | Applied identity, strictly broader parent, ITEM status, observational taxon, source-unit, triad-role and causal-evidence rules. Optional absent fields do not require invented content. |
+| RAW | data/raw; curation/decisions.tsv; curation/gold_parent_exclusions.tsv; Exact source inventory, ontology and decision rows | supports | {"curation/decisions.tsv": [{"data": {"category": "", "curator": "claude-opus-5", "date": "2026-08-14", "decision": "REVIEW", "grounding_status": "", "identifier": "habitatmech:BACDIVE.b938cdfb88", "notes": "Cohort review: flagged by the screen as a dropped modifier, but the dropped word is a second word for the same thing rather than a lost qualifier \u2014 'plant' and 'factory' are both the industrial sense here, not vegetation, so ENVO:01000536 'factory' loses nothing. Read from the label alone: neither this repo nor kg-microbe carries a BacDive category path to check the reading against (#51).", "object_id": "", "object_label": "", "relation": "", "review_depth": "ITEM"}, "logical_row": 1534}], "data/raw/bacdive_isolation_sources.tsv": [{"data": {"bacdive_id": "bacdive.isolation_source:plant-factory", "label": "Plant-Factory", "source_slug": "plant-factory", "strain_count": "211", "taxon_count": "172"}, "logical_row": 54}], "data/raw/bacdive_source_taxa.tsv": [{"data": {"bacdive_id": "bacdive.isolation_source:plant-factory", "corroborated_by": "", "rank": "1", "strain_count": "6", "taxon_id": "NCBITaxon:28220", "taxon_label": "Allobrachymonas denitrificans"}, "logical_row": 2151}, {"data": {"bacdive_id": "bacdive.isolation_source:plant-factory", "corroborated_by": "", "rank": "2", "strain_count": "5", "taxon_id": "NCBITaxon:1396", "taxon_label": "Bacillus cereus"}, "logical_row": 2152}, {"data": {"bacdive_id": "bacdive.isolation_source:plant-factory", "corroborated_by": "", "rank": "3", "strain_count": "5", "taxon_id": "NCBITaxon:169760", "taxon_label": "Paenibacillus stellifer"}, "logical_row": 2153}, {"data": {"bacdive_id": "bacdive.isolation_source:plant-factory", "corroborated_by": "", "rank": "4", "strain_count": "4", "taxon_id": "NCBITaxon:2", "taxon_label": "Bacteria"}, "logical_row": 2154}, {"data": {"bacdive_id": "bacdive.isolation_source:plant-factory", "corroborated_by": "", "rank": "5", "strain_count": "4", "taxon_id": "NCBITaxon:554117", "taxon_label": "Paenibacillus phoenicis"}, "logical_row": 2155}, {"data": {"bacdive_id": "bacdive.isolation_source:plant-factory", "corroborated_by": "", "rank": "6", "strain_count": "3", "taxon_id": "NCBITaxon:1124835", "taxon_label": "Chryseobacterium carnipullorum"}, "logical_row": 2156}, {"data": {"bacdive_id": "bacdive.isolation_source:plant-factory", "corroborated_by": "", "rank": "7", "strain_count": "3", "taxon_id": "NCBITaxon:1484", "taxon_label": "Hydrogenibacillus schlegelii"}, "logical_row": 2157}, {"data": {"bacdive_id": "bacdive.isolation_source:plant-factory", "corroborated_by": "", "rank": "8", "strain_count": "3", "taxon_id": "NCBITaxon:269660", "taxon_label": "Methylobacterium brachiatum"}, "logical_row": 2158}, {"data": {"bacdive_id": "bacdive.isolation_source:plant-factory", "corroborated_by": "", "rank": "9", "strain_count": "3", "taxon_id": "NCBITaxon:58172", "taxon_label": "Paenibacillus sp."}, "logical_row": 2159}, {"data": {"bacdive_id": "bacdive.isolation_source:plant-factory", "corroborated_by": "", "rank": "10", "strain_count": "3", "taxon_id": "NCBITaxon:83428", "taxon_label": "uncultured Bacillus sp."}, "logical_row": 2160}, {"data": {"bacdive_id": "bacdive.isolation_source:plant-factory", "corroborated_by": "", "rank": "11", "strain_count": "2", "taxon_id": "NCBITaxon:115433", "taxon_label": "Amycolatopsis sacchari"}, "logical_row": 2161}, {"data": {"bacdive_id": "bacdive.isolation_source:plant-factory", "corroborated_by": "", "rank": "12", "strain_count": "2", "taxon_id": "NCBITaxon:223390", "taxon_label": "Ancylobacter polymorphus"}, "logical_row": 2162}, {"data": {"bacdive_id": "bacdive.isolation_source:plant-factory", "corroborated_by": "", "rank": "13", "strain_count": "2", "taxon_id": "NCBITaxon:280093", "taxon_label": "Flavobacterium granuli"}, "logical_row": 2163}, {"data": {"bacdive_id": "bacdive.isolation_source:plant-factory", "corroborated_by": "", "rank": "14", "strain_count": "2", "taxon_id": "NCBITaxon:294", "taxon_label": "Pseudomonas fluorescens"}, "logical_row": 2164}, {"data": {"bacdive_id": "bacdive.isolation_source:plant-factory", "corroborated_by": "", "rank": "15", "strain_count": "2", "taxon_id": "NCBITaxon:374424", "taxon_label": "Methylobacterium gregans"}, "logical_row": 2165}, {"data": {"bacdive_id": "bacdive.isolation_source:plant-factory", "corroborated_by": "", "rank": "16", "strain_count": "2", "taxon_id": "NCBITaxon:449973", "taxon_label": "Chelativorans multitrophicus"}, "logical_row": 2166}, {"data": {"bacdive_id": "bacdive.isolation_source:plant-factory", "corroborated_by": "", "rank": "17", "strain_count": "2", "taxon_id": "NCBITaxon:665131", "taxon_label": "Prosthecomicrobium sp. ATCC 27835"}, "logical_row": 2167}, {"data": {"bacdive_id": "bacdive.isolation_source:plant-factory", "corroborated_by": "", "rank": "18", "strain_count": "2", "taxon_id": "NCBITaxon:70856", "taxon_label": "Aeromonas popoffii"}, "logical_row": 2168}, {"data": {"bacdive_id": "bacdive.isolation_source:plant-factory", "corroborated_by": "", "rank": "19", "strain_count": "2", "taxon_id": "NCBITaxon:74969", "taxon_label": "Ferroplasma acidiphilum"}, "logical_row": 2169}, {"data": {"bacdive_id": "bacdive.isolation_source:plant-factory", "corroborated_by": "", "rank": "20", "strain_count": "2", "taxon_id": "NCBITaxon:863372", "taxon_label": "Herbaspirillum huttiense"}, "logical_row": 2170}, {"data": {"bacdive_id": "bacdive.isolation_source:plant-factory", "corroborated_by": "", "rank": "21", "strain_count": "1", "taxon_id": "NCBITaxon:100", "taxon_label": "Ancylobacter aquaticus"}, "logical_row": 2171}, {"data": {"bacdive_id": "bacdive.isolation_source:plant-factory", "corroborated_by": "", "rank": "22", "strain_count": "1", "taxon_id": "NCBITaxon:1006576", "taxon_label": "Defluviitoga tunisiensis"}, "logical_row": 2172}, {"data": {"bacdive_id": "bacdive.isolation_source:plant-factory", "corroborated_by": "", "rank": "23", "strain_count": "1", "taxon_id": "NCBITaxon:1037355", "taxon_label": ""}, "logical_row": 2173}, {"data": {"bacdive_id": "bacdive.isolation_source:plant-factory", "corroborated_by": "", "rank": "24", "strain_count": "1", "taxon_id": "NCBITaxon:1049", "taxon_label": "Allochromatium vinosum"}, "logical_row": 2174}, {"data": {"bacdive_id": "bacdive.isolation_source:plant-factory", "corroborated_by": "", "rank": "25", "strain_count": "1", "taxon_id": "NCBITaxon:105219", "taxon_label": "Ralstonia mannitolilytica"}, "logical_row": 2175}], "data/raw/ontology_subclass_edges.tsv": [{"data": {"object": "ENVO:00003861", "predicate": "rdfs:subClassOf", "subject": "ENVO:01000536"}, "logical_row": 6286}], "data/raw/ontology_terms.tsv": [{"data": {"definition": "A factory (previously manufactory) or manufacturing plant is an industrial site, usually consisting of buildings and machinery, or more commonly a complex having several buildings, where workers manufacture goods or operate machines processing one product into another.", "deprecated": "", "directly_referenced": "TRUE", "label": "factory", "label_only": "FALSE", "ontology": "ENVO", "synonyms": "manufactory&#124;manufacturing plant", "term_id": "ENVO:01000536"}, "logical_row": 8031}]}. Logical TSV row ordinals include the header; these are exact target/mint/path rows, not wholesale assessment of neighboring records. |
+| CODE | src/habitatmech/seed.py; Complete target reconstruction and actual resolve_gold/apply_decision results | supports | {"reviewed_sources": 1, "routes": [], "source_concepts": 1}. Native build_document reproduces the whole target. Mapping predicates retain the actual executed route. |
+| ONT | https://raw.githubusercontent.com/EnvironmentOntology/envo/master/envo.owl; Typed synonyms, labels, definitions, deprecation, named parents and restrictions | supports | {"ENVO:00003861": {"definition": ["An industrial building is a building within which goods are produced and, optionally, stored or within which services are rendered."], "deprecated": [], "label": ["industrial building"], "parents": ["http://purl.obolibrary.org/obo/ENVO_00000073"], "restrictions": [{"property": ["http://purl.obolibrary.org/obo/RO_0000056"], "some_values": ["http://purl.obolibrary.org/obo/ENVO_01001450"]}], "synonyms": {"Broad": [], "Exact": [], "Narrow": [], "Related": []}}, "ENVO:01000536": {"definition": ["A factory (previously manufactory) or manufacturing plant is an industrial site, usually consisting of buildings and machinery, or more commonly a complex having several buildings, where workers manufacture goods or operate machines processing one product into another."], "deprecated": [], "label": ["factory"], "parents": ["http://purl.obolibrary.org/obo/ENVO_00003861"], "restrictions": [{"property": ["http://purl.obolibrary.org/obo/BFO_0000051"], "some_values": ["http://purl.obolibrary.org/obo/ENVO_00003861"]}], "synonyms": {"Broad": [], "Exact": ["manufactory", "manufacturing plant"], "Narrow": [], "Related": []}}}. Current primary RDF confirms these exact terms; ontology meaning is not an independently proven GOLD crosswalk. |
+| PARENT | data/habitats; data/raw/ontology_subclass_edges.tsv; Direct-parent identity projection | supports | {}. Direct-parent identity and source context only, not additional full-record scientific coverage. |
+| SEARCH | curation; data/raw; data/habitats; history; research; reports; reviews; conf; Captured support-search ledger and exact maintained-row search | supports | Ignored/hidden-inclusive rg searched target IDs, labels, slugs, source IDs and paths. Root raw/curation TSVs were structurally scanned and causal-overlay identifiers checked. No prior structured review targeted this exact ID at capture. Original configured source search={"/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold": {"exit_code": 2, "stdout": "", "stderr": "rg: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold: IO error for operation on /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold: No such file or directory (os error 2)\n"}, "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive": {"exit_code": 2, "stdout": "", "stderr": "rg: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive: IO error for operation on /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive: No such file or directory (os error 2)\n"}, "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego": {"exit_code": 2, "stdout": "", "stderr": "rg: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego: IO error for operation on /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego: No such file or directory (os error 2)\n"}, "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/ontologies": {"exit_code": 2, "stdout": "", "stderr": "rg: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/ontologies: IO error for operation on /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/ontologies: No such file or directory (os error 2)\n"}}. Configured-path ENOENT is not global absence. |
+| BACDIVE | https://bacdive.dsmz.de/isolation-sources; Category tree labels and parent data attributes | supports | Current category browser places Plant(Factory), terminal48, beneath Industrial8 within Engineered1. Full ancestor context disambiguates reused numerical category IDs and excludes the botanical reading. |
+| TAXA | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=100%2C1006576%2C1037355%2C1049%2C105219%2C1124835%2C115433%2C1396%2C1484%2C169760%2C2%2C223390%2C269660%2C280093%2C28220%2C294%2C374424%2C449973%2C554117%2C58172%2C665131%2C70856%2C74969%2C83428%2C863372&amp;retmode=xml; NCBI TaxId, ScientificName, Rank and explicit AkaTaxIds | supports | [{"display": "Allobrachymonas denitrificans", "resolved": {"aliases": [], "label": "Allobrachymonas denitrificans", "rank": "species", "taxon_id": "28220"}, "source": "NCBITaxon:28220"}, {"display": "Bacillus cereus", "resolved": {"aliases": [], "label": "Bacillus cereus", "rank": "species", "taxon_id": "1396"}, "source": "NCBITaxon:1396"}, {"display": "Paenibacillus stellifer", "resolved": {"aliases": [], "label": "Paenibacillus stellifer", "rank": "species", "taxon_id": "169760"}, "source": "NCBITaxon:169760"}, {"display": "Bacteria", "resolved": {"aliases": [], "label": "Bacteria", "rank": "domain", "taxon_id": "2"}, "source": "NCBITaxon:2"}, {"display": "Paenibacillus phoenicis", "resolved": {"aliases": [], "label": "Paenibacillus phoenicis", "rank": "species", "taxon_id": "554117"}, "source": "NCBITaxon:554117"}, {"display": "Chryseobacterium carnipullorum", "resolved": {"aliases": [], "label": "Chryseobacterium carnipullorum", "rank": "species", "taxon_id": "1124835"}, "source": "NCBITaxon:1124835"}, {"display": "Hydrogenibacillus schlegelii", "resolved": {"aliases": [], "label": "Hydrogenibacillus schlegelii", "rank": "species", "taxon_id": "1484"}, "source": "NCBITaxon:1484"}, {"display": "Methylobacterium brachiatum", "resolved": {"aliases": [], "label": "Methylobacterium brachiatum", "rank": "species", "taxon_id": "269660"}, "source": "NCBITaxon:269660"}, {"display": "Paenibacillus sp.", "resolved": {"aliases": [], "label": "Paenibacillus sp.", "rank": "species", "taxon_id": "58172"}, "source": "NCBITaxon:58172"}, {"display": "uncultured Bacillus sp.", "resolved": {"aliases": [], "label": "uncultured Bacillus sp.", "rank": "species", "taxon_id": "83428"}, "source": "NCBITaxon:83428"}, {"display": "Amycolatopsis sacchari", "resolved": {"aliases": [], "label": "Amycolatopsis sacchari", "rank": "species", "taxon_id": "115433"}, "source": "NCBITaxon:115433"}, {"display": "Ancylobacter polymorphus", "resolved": {"aliases": [], "label": "Ancylobacter polymorphus", "rank": "species", "taxon_id": "223390"}, "source": "NCBITaxon:223390"}, {"display": "Flavobacterium granuli", "resolved": {"aliases": [], "label": "Flavobacterium granuli", "rank": "species", "taxon_id": "280093"}, "source": "NCBITaxon:280093"}, {"display": "Pseudomonas fluorescens", "resolved": {"aliases": [], "label": "Pseudomonas fluorescens", "rank": "species", "taxon_id": "294"}, "source": "NCBITaxon:294"}, {"display": "Methylobacterium gregans", "resolved": {"aliases": [], "label": "Methylobacterium gregans", "rank": "species", "taxon_id": "374424"}, "source": "NCBITaxon:374424"}, {"display": "Chelativorans multitrophicus", "resolved": {"aliases": [], "label": "Chelativorans multitrophicus", "rank": "species", "taxon_id": "449973"}, "source": "NCBITaxon:449973"}, {"display": "Prosthecomicrobium sp. ATCC 27835", "resolved": {"aliases": [], "label": "Prosthecomicrobium sp. ATCC 27835", "rank": "species", "taxon_id": "665131"}, "source": "NCBITaxon:665131"}, {"display": "Aeromonas popoffii", "resolved": {"aliases": [], "label": "Aeromonas popoffii", "rank": "species", "taxon_id": "70856"}, "source": "NCBITaxon:70856"}, {"display": "Ferroplasma acidiphilum", "resolved": {"aliases": [], "label": "Ferroplasma acidiphilum", "rank": "species", "taxon_id": "74969"}, "source": "NCBITaxon:74969"}, {"display": "Herbaspirillum huttiense", "resolved": {"aliases": [], "label": "Herbaspirillum huttiense", "rank": "species", "taxon_id": "863372"}, "source": "NCBITaxon:863372"}, {"display": "Ancylobacter aquaticus", "resolved": {"aliases": [], "label": "Ancylobacter aquaticus", "rank": "species", "taxon_id": "100"}, "source": "NCBITaxon:100"}, {"display": "Defluviitoga tunisiensis", "resolved": {"aliases": [], "label": "Defluviitoga tunisiensis", "rank": "species", "taxon_id": "1006576"}, "source": "NCBITaxon:1006576"}, {"display": null, "resolved": {"aliases": ["1037355"], "label": "Macellibacteroides fermentans", "rank": "species", "taxon_id": "879969"}, "source": "NCBITaxon:1037355"}, {"display": "Allochromatium vinosum", "resolved": {"aliases": [], "label": "Allochromatium vinosum", "rank": "species", "taxon_id": "1049"}, "source": "NCBITaxon:1049"}, {"display": "Ralstonia mannitolilytica", "resolved": {"aliases": [], "label": "Ralstonia mannitolilytica", "rank": "species", "taxon_id": "105219"}, "source": "NCBITaxon:105219"}]. All25 displayed keys resolve. Taxonomy resolution does not prove ecological prevalence or independent source membership. |
+| PRIMARY | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=TITLE%3A%22Paenibacillus+phoenicis%22&amp;format=json&amp;resultType=core&amp;pageSize=5; Inspected species-description abstract | context_only | PMID20584815 / DOI10.1099/ijs.0.021428-0 describes Paenibacillus phoenicis 3PO2SA from a Phoenix-assembly cleanroom and other strains from deep subsurface mine material. This is a bounded species/isolate example, not reconstruction of all factory strains. |
+
+## Limits And Additional Notes
+
+- Original assertion-level inputs were not recovered. Later GOLD counts do not replace frozen counts or prove original membership.
+- Only explicitly identified passages and member fields were scientifically inspected; the complete workbook census is not complete member-level verification.
+- Sparse source bins remain qualified source representations. No optional content or native REVIEWED status is created by a qualified pass.
+- No required focused/native gate was unavailable. Full publication QC is pending in this immutable observation.
+- This review does not certify SSSOM/KGX readiness, resolve shared #1398, or close prior GitHub findings.
+- The corpus-wide review goal remains incomplete.
+- Legacy reports inform search leads, not automatically converted verdicts. Publication and supported remediation are separately authorized by the current user request.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261011T101859Z-factory
+kind: record
+repository: culturebotai/HabitatMech
+title: 'Scientific record review: factory'
+started_at: '2026-10-11T10:08:30.567898Z'
+finished_at: '2026-10-11T10:18:59.297938Z'
+reviewer:
+  identity: OpenAI Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Continuing agent participated in prior reviews and curation;
+    adversarial self-review, not independent approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The active ENVO definition permits a multi-building industrial site, while
+  its named parent requires an industrial building; the current OWL retains this scope
+  conflict and a separate has-part restriction. BacDive category ancestry confirms
+  the industrial sense of Plant-Factory. CLOSE mapping and RELATED source synonym
+  are conservative. All 25 displayed taxon IDs resolve, including one historical alias
+  with no display label.
+source:
+  git_revision: 435a217c6d378e013e2ee11f22147e5b09737183
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: conf/record_review.yaml
+    sha256: c2f5d0eb4c5744f5fe354c92184ddab144dc2688dba952b032b4f3d597bc08d6
+    role: context
+  - path: conf/sources.yaml
+    sha256: a8e069f9278068b57fa234f43e03c8d893f857827b83fd10cfa92d6815aed642
+    role: context
+  - path: curation/causal_graphs/agricultural_soil.yaml
+    sha256: 2f9c73b186d6b79df1d64098f929d8364a1768f732101edaf144dee7723c60f4
+    role: context
+  - path: curation/causal_graphs/aquatic_biome.yaml
+    sha256: 03ba09d10f9a9d8d32060fc0208b511ef0d59e731fd7c63ca6c02296e70da5f5
+    role: context
+  - path: curation/causal_graphs/biofilm.yaml
+    sha256: 37fae9d123c2edfb68376b6b4fe5441f72092d48d81dba6f60510087217c8680
+    role: context
+  - path: curation/causal_graphs/bioreactor.yaml
+    sha256: 170d1134c3de38348844e45dbf6d87663dd4a0d1f33fd9e441a4352b6e277583
+    role: context
+  - path: curation/causal_graphs/brackish_water.yaml
+    sha256: b9d58082a53bef1143a3868918cfed7f6d74ba7e2330648069733d9ea2c76508
+    role: context
+  - path: curation/causal_graphs/building.yaml
+    sha256: 9e9360775fdda554b285d7ecfb9b1729bf389b8241376a410eca60bd672eb235
+    role: context
+  - path: curation/causal_graphs/compost.yaml
+    sha256: e0fd3ae54311115939f07ba1f3f158c5c44353bd0fab1dcdc1a9292ff0ad1de5
+    role: context
+  - path: curation/causal_graphs/deep_marine_sediment.yaml
+    sha256: eb6a68290a58ec157a4c9895e082cbba760c47b5fbe35523d3bb163af3091d0c
+    role: context
+  - path: curation/causal_graphs/forest_soil.yaml
+    sha256: faef7b6c26c25ba33110d362dc7e4351440bc08c1106f270e1e6f2decfb1e3f4
+    role: context
+  - path: curation/causal_graphs/forested_area.yaml
+    sha256: eb96b992e1ee8fef7df2550c765a30f0d446082ce16592b6c1da44a54b34e427
+    role: context
+  - path: curation/causal_graphs/fresh_water.yaml
+    sha256: e95ea96aa1912066d4c98cbff91e34528668d4c453d93dc4203c67e7769c691a
+    role: context
+  - path: curation/causal_graphs/fungi_associated_environment.yaml
+    sha256: 45736893315a37e327c25d401ff8794fee47b1056347e52f4980bc3a58e8e0d8
+    role: context
+  - path: curation/causal_graphs/grassland_soil.yaml
+    sha256: 81b2a9ea6255dfbd4b393102b9903dd3c9e8af12f7d3a9adc7c4649650542ae8
+    role: context
+  - path: curation/causal_graphs/hot_spring.yaml
+    sha256: ee0f6d7f7eff179b44e1e934c1c801524062a7e71f3199e16e9ef35e7bad81ed
+    role: context
+  - path: curation/causal_graphs/hydrothermal_vent.yaml
+    sha256: b5c101a93e724531cb7e50e8031203138230c09599855fe8a03bec945469efb0
+    role: context
+  - path: curation/causal_graphs/hypersaline_water.yaml
+    sha256: e974d5e9cc241ac9daf3542ba11156915cfb7786e683ad5ad212af5b35006158
+    role: context
+  - path: curation/causal_graphs/intestine_environment.yaml
+    sha256: 2ef766692eff55471a3322c0cd1cf82188decf37fd5ecd3535cb0ef612e2b725
+    role: context
+  - path: curation/causal_graphs/leaf.yaml
+    sha256: fadc8027b39884bc16cf98f774804a84fd1b1d805876310a47a095f6019435cc
+    role: context
+  - path: curation/causal_graphs/liquid_water.yaml
+    sha256: 12aac1021b9b51c6becc4ef8509bd63557b306e42c01d9b4443d69252ce29a81
+    role: context
+  - path: curation/causal_graphs/marine_sediment.yaml
+    sha256: 8b230eb079171ab8134b648caa29878dc5015fb36362559a6a8c67fb2b433741
+    role: context
+  - path: curation/causal_graphs/marine_water_body.yaml
+    sha256: b2f81102970e9541bf61978fabdd68b7db8f9459f1ef11b467fecfc2956f238b
+    role: context
+  - path: curation/causal_graphs/milk.yaml
+    sha256: 049daa5b499096c61cb625b7bb9ac0f02ea216c96d6b5f7b77126c8709b2378d
+    role: context
+  - path: curation/causal_graphs/peat_soil.yaml
+    sha256: 0f23fa02718b08e3607478ceaa2294320b320ae841a79e144e48ed3497db09e2
+    role: context
+  - path: curation/causal_graphs/plant_associated_environment.yaml
+    sha256: 300044040f76234e7ed3bf373137ba224e55f48e3f3d6d505086b3830877cfcb
+    role: context
+  - path: curation/causal_graphs/plant_litter.yaml
+    sha256: 25e10d6640992be2aa506490f763d8f9642fde125f599207dae7852b6a13b369
+    role: context
+  - path: curation/causal_graphs/root_nodule.yaml
+    sha256: b363e5d418df93d6e44c9d3f3256c8b0ede7c4518125359ffb880020fc00721c
+    role: context
+  - path: curation/causal_graphs/sea_water.yaml
+    sha256: 240ffc8ad2c0abf6f4cce41e01018679aca726816006c90ce329b8d1910d9cd7
+    role: context
+  - path: curation/causal_graphs/sediment.yaml
+    sha256: 62b97afba9466dc64f8b5b1b3fd5d92f8b4b6bf96fe1c761af579ff7deca0e47
+    role: context
+  - path: curation/causal_graphs/sludge.yaml
+    sha256: 55b9c9a27fd00c7b84a8780f2cedc83eeb31ebdda9a2e1029678d96a7fa4a06c
+    role: context
+  - path: curation/causal_graphs/soil.yaml
+    sha256: 2a2bf4b1099b3bc69015f9530cf6e926c05c33667132234b3c52f06aacc957c2
+    role: context
+  - path: curation/causal_graphs/terrestrial_biome.yaml
+    sha256: 239e6a2b711564ed12084cddd1295547d23858dd329c33c538251d5f53c88834
+    role: context
+  - path: curation/causal_graphs/waste_water.yaml
+    sha256: 299b5128af6cf5f7a61ce53304f1084e6eb045414b47cbcfd8832de095142aef
+    role: context
+  - path: curation/decisions.tsv
+    sha256: c2482c7441b08f593baa8bd59546ac68c6e5c7e4e1cb36c24c12a74592b9ff3c
+    role: context
+  - path: curation/definition_source_label_exclusions.tsv
+    sha256: 2d41fc93db4939122b3909f2a412b84b679703948b10d9f02e12021442f71407
+    role: context
+  - path: curation/external_xrefs.tsv
+    sha256: cf8394a6ab22e35efd9e252aef422018226280830bf816a39bf4f2256ff75ad5
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: 45e4ff459e76b9c8eee63dcd86c153ab139491a828e03d5f9652da4c6a930589
+    role: context
+  - path: curation/redirects_retracted.tsv
+    sha256: 0f1e9af8881f5a5db19f87de06b3b3d1800cfac8101699b380388c0a1a1e9a19
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 3f2ce04805defe5ff65dc20988cc72bc94d4636b3140eb1311017866bdc0ea0a
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: b59b9e800a918135e3915145d4d8098bb48dcea36a312b3004c594a57d221ae9
+    role: context
+  - path: data/habitats/engineered/factory.yaml
+    sha256: 9c6bf9efc823dde58cabca32526ee1bd851fd1a8551c2d253e3ee5607e543e0c
+    role: target
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: 36df8306394c06c352b73e0bf7b47a2858784cedac7389a24d0b78f593ece646
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: f7aa39ee762d94f1902d9f08f328cb897bc543e4e226057eb4770d24bfcc6eb5
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reports/yaml_record_review/20260930T181144Z-olfactory_system.md
+    sha256: 9aa3fc903558f6a66fbc3ec2624592f6a9fd578afb3c69032c2dfd2cfa4ec24c
+    role: context
+  - path: reports/yaml_record_review/20260930T184237Z-olfactory_pit.md
+    sha256: fb8fbc3136e0bb4cff60fe3f3dbdebe59a6da709b82cfcec59d2e12cd210556d
+    role: context
+  - path: reports/yaml_record_review/20261008T132407Z-factory.md
+    sha256: 26a2202e30a02da61097c98d62ae674fd7ab9da6f1d15c0aff3854e2d0b8f608
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/extract_gold_biosamples.py
+    sha256: b6a2773c86fe718e1ca0b1d7b32709f0eee491ac813655e310aa0817c0fec31b
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: 4bf5391d25ff48a2d81eb3821af6582de063fd0391440973d309dfd93016490c
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: src/habitatmech/extract.py
+    sha256: 4d9397bda649381a5daf81937369531c6dc8b4518d6c7047e6f3f14e605bf860
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 7e3cda3dadb9c7462498e5014bf38ef730068212f8f9cb131e3fce383c21d10e
+    role: context
+  - path: src/habitatmech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 4adf105e23d75c3563a516a0c160623d1065df7fcb2f31b7a0a0a8303d0401be
+    role: context
+scope:
+  description: Entire exact HabitatRecord, contributor provenance, direct-parent meaning
+    and applicable biological evidence.
+  selection: Next 24 alphabetically ordered unreviewed ENGINEERED records, from engineered__900b76ad
+    through fruit_processing; separate exact-target record reviews, not a sample or
+    category verdict. Starting current coverage303/3208.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - ENVO:01000536
+  exclusions:
+  - target: Other3207 current HabitatRecords
+    reason: Context is not additional full-record scientific review.
+targets:
+- target_id: ENVO:01000536
+  path: data/habitats/engineered/factory.yaml
+  label: factory
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: culturebotai/HabitatMech
+    path: curation/decisions.tsv
+    role: Exact source-concept grounding and identity decisions
+  - repository: culturebotai/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Guarded GOLD context-parent contributions
+  - repository: culturebotai/HabitatMech
+    path: curation/term_requests.tsv
+    role: Authored habitat definition and genus
+  - repository: culturebotai/HabitatMech
+    path: data/raw/ontology_terms.tsv
+    role: Pinned ontology identities, labels, definitions and parent axioms
+  - repository: culturebotai/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained harmonization and deterministic generation
+  - repository: culturebotai/HabitatMech
+    path: data/raw/bacdive_isolation_sources.tsv
+    role: BacDive isolation-source inventory
+checks:
+- check_id: C3
+  name: Native validate
+  status: passed
+  required: true
+  summary: Actual exit0; start 2026-10-11T10:09:45.082439Z; finish 2026-10-11T10:09:47.710483Z.
+    Full-corpus procedural checks are not additional scientific coverage.
+  target_ids:
+  - ENVO:01000536
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache just validate
+    data/habitats/engineered/factory.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C24
+  name: Native validate-strict
+  status: passed
+  required: true
+  summary: Actual exit0; start 2026-10-11T10:10:43.887582Z; finish 2026-10-11T10:10:52.258696Z.
+    Full-corpus procedural checks are not additional scientific coverage.
+  target_ids:
+  - ENVO:01000536
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache just validate-strict
+    data/habitats/engineered/engineered__900b76ad.yaml data/habitats/engineered/engineered_product__d2d22ac0.yaml
+    data/habitats/engineered/external_surfaces.yaml data/habitats/engineered/factory.yaml
+    data/habitats/engineered/feedlot.yaml data/habitats/engineered/feedstock.yaml
+    data/habitats/engineered/fermentation.yaml data/habitats/engineered/fermentation__cbf94220.yaml
+    data/habitats/engineered/fermentation_pit.yaml data/habitats/engineered/filter.yaml
+    data/habitats/engineered/fish_pen.yaml data/habitats/engineered/fish_pond.yaml
+    data/habitats/engineered/fish_tank.yaml data/habitats/engineered/floor.yaml data/habitats/engineered/floor__86528402.yaml
+    data/habitats/engineered/floor__bcd0ae16.yaml data/habitats/engineered/food_waste.yaml
+    data/habitats/engineered/fresh_manure.yaml data/habitats/engineered/fresh_water_aquarium.yaml
+    data/habitats/engineered/freshwater__0ce4d27d.yaml data/habitats/engineered/freshwater__fec74bd2.yaml
+    data/habitats/engineered/freshwater_debries.yaml data/habitats/engineered/freshwater_ras.yaml
+    data/habitats/engineered/fruit_processing.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C25
+  name: Native verify-corpus
+  status: passed
+  required: true
+  summary: Actual exit0; start 2026-10-11T10:10:52.259836Z; finish 2026-10-11T10:11:06.554044Z.
+    Full-corpus procedural checks are not additional scientific coverage.
+  target_ids:
+  - ENVO:01000536
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache just verify-corpus
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C26
+  name: Native validate-products
+  status: passed
+  required: true
+  summary: Actual exit0; start 2026-10-11T10:11:06.554814Z; finish 2026-10-11T10:11:55.255958Z.
+    Full-corpus procedural checks are not additional scientific coverage.
+  target_ids:
+  - ENVO:01000536
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C27
+  name: Native validate-history
+  status: passed
+  required: true
+  summary: Actual exit0; start 2026-10-11T10:11:55.256933Z; finish 2026-10-11T10:12:06.655006Z.
+    Full-corpus procedural checks are not additional scientific coverage.
+  target_ids:
+  - ENVO:01000536
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C28
+  name: Native validate-causal-all
+  status: passed
+  required: true
+  summary: Actual exit0; start 2026-10-11T10:12:06.656051Z; finish 2026-10-11T10:12:15.551857Z.
+    Full-corpus procedural checks are not additional scientific coverage.
+  target_ids:
+  - ENVO:01000536
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache just validate-causal-all
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C29
+  name: Native term-requests-check
+  status: passed
+  required: true
+  summary: Actual exit0; start 2026-10-11T10:12:15.553494Z; finish 2026-10-11T10:12:44.715204Z.
+    Full-corpus procedural checks are not additional scientific coverage.
+  target_ids:
+  - ENVO:01000536
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache just term-requests-check
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - R
+  - RULES
+- check_id: REPRO
+  name: Complete target reproduction
+  status: passed
+  required: false
+  summary: All24 selected native build_document results equal every current target
+    field.
+  target_ids:
+  - ENVO:01000536
+  command: .venv/bin/python /private/tmp/habitatmech-review-ap-local.py
+  exit_code: 0
+  evidence_ids:
+  - CODE
+- check_id: ORIGINAL
+  name: Original source membership reconstruction
+  status: unavailable
+  required: false
+  summary: Configured original input paths unavailable within ignored-inclusive bounds.
+    Later official exports are separate evidence.
+  target_ids:
+  - ENVO:01000536
+  evidence_ids:
+  - SEARCH
+- check_id: QC
+  name: Publication QC
+  status: skipped
+  required: false
+  summary: Full QC is still running when authoring this observation. No future success
+    is asserted; required focused/native gates above have completed.
+  target_ids:
+  - ENVO:01000536
+evidence:
+- evidence_id: R
+  kind: record_content
+  reference: data/habitats/engineered/factory.yaml
+  summary: The active ENVO definition permits a multi-building industrial site, while
+    its named parent requires an industrial building; the current OWL retains this
+    scope conflict and a separate has-part restriction. BacDive category ancestry
+    confirms the industrial sense of Plant-Factory. CLOSE mapping and RELATED source
+    synonym are conservative. All 25 displayed taxon IDs resolve, including one historical
+    alias with no display label.
+  locator: Entire generated YAML, including all history, synonym and taxon entries
+  accessed_at: '2026-10-11T10:18:59.297938Z'
+  support: supports
+- evidence_id: RULES
+  kind: record_content
+  reference: docs/CURATION.md; docs/HARMONIZATION.md; docs/record-review-profile.md
+  summary: Applied identity, strictly broader parent, ITEM status, observational taxon,
+    source-unit, triad-role and causal-evidence rules. Optional absent fields do not
+    require invented content.
+  locator: Native field-by-field checklist and maintained-input ownership
+  accessed_at: '2026-10-11T10:18:59.297938Z'
+  support: supports
+- evidence_id: RAW
+  kind: database
+  reference: data/raw; curation/decisions.tsv; curation/gold_parent_exclusions.tsv
+  summary: '{"curation/decisions.tsv": [{"data": {"category": "", "curator": "claude-opus-5",
+    "date": "2026-08-14", "decision": "REVIEW", "grounding_status": "", "identifier":
+    "habitatmech:BACDIVE.b938cdfb88", "notes": "Cohort review: flagged by the screen
+    as a dropped modifier, but the dropped word is a second word for the same thing
+    rather than a lost qualifier \u2014 ''plant'' and ''factory'' are both the industrial
+    sense here, not vegetation, so ENVO:01000536 ''factory'' loses nothing. Read from
+    the label alone: neither this repo nor kg-microbe carries a BacDive category path
+    to check the reading against (#51).", "object_id": "", "object_label": "", "relation":
+    "", "review_depth": "ITEM"}, "logical_row": 1534}], "data/raw/bacdive_isolation_sources.tsv":
+    [{"data": {"bacdive_id": "bacdive.isolation_source:plant-factory", "label": "Plant-Factory",
+    "source_slug": "plant-factory", "strain_count": "211", "taxon_count": "172"},
+    "logical_row": 54}], "data/raw/bacdive_source_taxa.tsv": [{"data": {"bacdive_id":
+    "bacdive.isolation_source:plant-factory", "corroborated_by": "", "rank": "1",
+    "strain_count": "6", "taxon_id": "NCBITaxon:28220", "taxon_label": "Allobrachymonas
+    denitrificans"}, "logical_row": 2151}, {"data": {"bacdive_id": "bacdive.isolation_source:plant-factory",
+    "corroborated_by": "", "rank": "2", "strain_count": "5", "taxon_id": "NCBITaxon:1396",
+    "taxon_label": "Bacillus cereus"}, "logical_row": 2152}, {"data": {"bacdive_id":
+    "bacdive.isolation_source:plant-factory", "corroborated_by": "", "rank": "3",
+    "strain_count": "5", "taxon_id": "NCBITaxon:169760", "taxon_label": "Paenibacillus
+    stellifer"}, "logical_row": 2153}, {"data": {"bacdive_id": "bacdive.isolation_source:plant-factory",
+    "corroborated_by": "", "rank": "4", "strain_count": "4", "taxon_id": "NCBITaxon:2",
+    "taxon_label": "Bacteria"}, "logical_row": 2154}, {"data": {"bacdive_id": "bacdive.isolation_source:plant-factory",
+    "corroborated_by": "", "rank": "5", "strain_count": "4", "taxon_id": "NCBITaxon:554117",
+    "taxon_label": "Paenibacillus phoenicis"}, "logical_row": 2155}, {"data": {"bacdive_id":
+    "bacdive.isolation_source:plant-factory", "corroborated_by": "", "rank": "6",
+    "strain_count": "3", "taxon_id": "NCBITaxon:1124835", "taxon_label": "Chryseobacterium
+    carnipullorum"}, "logical_row": 2156}, {"data": {"bacdive_id": "bacdive.isolation_source:plant-factory",
+    "corroborated_by": "", "rank": "7", "strain_count": "3", "taxon_id": "NCBITaxon:1484",
+    "taxon_label": "Hydrogenibacillus schlegelii"}, "logical_row": 2157}, {"data":
+    {"bacdive_id": "bacdive.isolation_source:plant-factory", "corroborated_by": "",
+    "rank": "8", "strain_count": "3", "taxon_id": "NCBITaxon:269660", "taxon_label":
+    "Methylobacterium brachiatum"}, "logical_row": 2158}, {"data": {"bacdive_id":
+    "bacdive.isolation_source:plant-factory", "corroborated_by": "", "rank": "9",
+    "strain_count": "3", "taxon_id": "NCBITaxon:58172", "taxon_label": "Paenibacillus
+    sp."}, "logical_row": 2159}, {"data": {"bacdive_id": "bacdive.isolation_source:plant-factory",
+    "corroborated_by": "", "rank": "10", "strain_count": "3", "taxon_id": "NCBITaxon:83428",
+    "taxon_label": "uncultured Bacillus sp."}, "logical_row": 2160}, {"data": {"bacdive_id":
+    "bacdive.isolation_source:plant-factory", "corroborated_by": "", "rank": "11",
+    "strain_count": "2", "taxon_id": "NCBITaxon:115433", "taxon_label": "Amycolatopsis
+    sacchari"}, "logical_row": 2161}, {"data": {"bacdive_id": "bacdive.isolation_source:plant-factory",
+    "corroborated_by": "", "rank": "12", "strain_count": "2", "taxon_id": "NCBITaxon:223390",
+    "taxon_label": "Ancylobacter polymorphus"}, "logical_row": 2162}, {"data": {"bacdive_id":
+    "bacdive.isolation_source:plant-factory", "corroborated_by": "", "rank": "13",
+    "strain_count": "2", "taxon_id": "NCBITaxon:280093", "taxon_label": "Flavobacterium
+    granuli"}, "logical_row": 2163}, {"data": {"bacdive_id": "bacdive.isolation_source:plant-factory",
+    "corroborated_by": "", "rank": "14", "strain_count": "2", "taxon_id": "NCBITaxon:294",
+    "taxon_label": "Pseudomonas fluorescens"}, "logical_row": 2164}, {"data": {"bacdive_id":
+    "bacdive.isolation_source:plant-factory", "corroborated_by": "", "rank": "15",
+    "strain_count": "2", "taxon_id": "NCBITaxon:374424", "taxon_label": "Methylobacterium
+    gregans"}, "logical_row": 2165}, {"data": {"bacdive_id": "bacdive.isolation_source:plant-factory",
+    "corroborated_by": "", "rank": "16", "strain_count": "2", "taxon_id": "NCBITaxon:449973",
+    "taxon_label": "Chelativorans multitrophicus"}, "logical_row": 2166}, {"data":
+    {"bacdive_id": "bacdive.isolation_source:plant-factory", "corroborated_by": "",
+    "rank": "17", "strain_count": "2", "taxon_id": "NCBITaxon:665131", "taxon_label":
+    "Prosthecomicrobium sp. ATCC 27835"}, "logical_row": 2167}, {"data": {"bacdive_id":
+    "bacdive.isolation_source:plant-factory", "corroborated_by": "", "rank": "18",
+    "strain_count": "2", "taxon_id": "NCBITaxon:70856", "taxon_label": "Aeromonas
+    popoffii"}, "logical_row": 2168}, {"data": {"bacdive_id": "bacdive.isolation_source:plant-factory",
+    "corroborated_by": "", "rank": "19", "strain_count": "2", "taxon_id": "NCBITaxon:74969",
+    "taxon_label": "Ferroplasma acidiphilum"}, "logical_row": 2169}, {"data": {"bacdive_id":
+    "bacdive.isolation_source:plant-factory", "corroborated_by": "", "rank": "20",
+    "strain_count": "2", "taxon_id": "NCBITaxon:863372", "taxon_label": "Herbaspirillum
+    huttiense"}, "logical_row": 2170}, {"data": {"bacdive_id": "bacdive.isolation_source:plant-factory",
+    "corroborated_by": "", "rank": "21", "strain_count": "1", "taxon_id": "NCBITaxon:100",
+    "taxon_label": "Ancylobacter aquaticus"}, "logical_row": 2171}, {"data": {"bacdive_id":
+    "bacdive.isolation_source:plant-factory", "corroborated_by": "", "rank": "22",
+    "strain_count": "1", "taxon_id": "NCBITaxon:1006576", "taxon_label": "Defluviitoga
+    tunisiensis"}, "logical_row": 2172}, {"data": {"bacdive_id": "bacdive.isolation_source:plant-factory",
+    "corroborated_by": "", "rank": "23", "strain_count": "1", "taxon_id": "NCBITaxon:1037355",
+    "taxon_label": ""}, "logical_row": 2173}, {"data": {"bacdive_id": "bacdive.isolation_source:plant-factory",
+    "corroborated_by": "", "rank": "24", "strain_count": "1", "taxon_id": "NCBITaxon:1049",
+    "taxon_label": "Allochromatium vinosum"}, "logical_row": 2174}, {"data": {"bacdive_id":
+    "bacdive.isolation_source:plant-factory", "corroborated_by": "", "rank": "25",
+    "strain_count": "1", "taxon_id": "NCBITaxon:105219", "taxon_label": "Ralstonia
+    mannitolilytica"}, "logical_row": 2175}], "data/raw/ontology_subclass_edges.tsv":
+    [{"data": {"object": "ENVO:00003861", "predicate": "rdfs:subClassOf", "subject":
+    "ENVO:01000536"}, "logical_row": 6286}], "data/raw/ontology_terms.tsv": [{"data":
+    {"definition": "A factory (previously manufactory) or manufacturing plant is an
+    industrial site, usually consisting of buildings and machinery, or more commonly
+    a complex having several buildings, where workers manufacture goods or operate
+    machines processing one product into another.", "deprecated": "", "directly_referenced":
+    "TRUE", "label": "factory", "label_only": "FALSE", "ontology": "ENVO", "synonyms":
+    "manufactory|manufacturing plant", "term_id": "ENVO:01000536"}, "logical_row":
+    8031}]}. Logical TSV row ordinals include the header; these are exact target/mint/path
+    rows, not wholesale assessment of neighboring records.'
+  locator: Exact source inventory, ontology and decision rows
+  accessed_at: '2026-10-11T10:18:59.297938Z'
+  support: supports
+- evidence_id: CODE
+  kind: record_content
+  reference: src/habitatmech/seed.py
+  summary: '{"reviewed_sources": 1, "routes": [], "source_concepts": 1}. Native build_document
+    reproduces the whole target. Mapping predicates retain the actual executed route.'
+  locator: Complete target reconstruction and actual resolve_gold/apply_decision results
+  accessed_at: '2026-10-11T10:18:59.297938Z'
+  support: supports
+- evidence_id: ONT
+  kind: authority
+  reference: https://raw.githubusercontent.com/EnvironmentOntology/envo/master/envo.owl
+  summary: '{"ENVO:00003861": {"definition": ["An industrial building is a building
+    within which goods are produced and, optionally, stored or within which services
+    are rendered."], "deprecated": [], "label": ["industrial building"], "parents":
+    ["http://purl.obolibrary.org/obo/ENVO_00000073"], "restrictions": [{"property":
+    ["http://purl.obolibrary.org/obo/RO_0000056"], "some_values": ["http://purl.obolibrary.org/obo/ENVO_01001450"]}],
+    "synonyms": {"Broad": [], "Exact": [], "Narrow": [], "Related": []}}, "ENVO:01000536":
+    {"definition": ["A factory (previously manufactory) or manufacturing plant is
+    an industrial site, usually consisting of buildings and machinery, or more commonly
+    a complex having several buildings, where workers manufacture goods or operate
+    machines processing one product into another."], "deprecated": [], "label": ["factory"],
+    "parents": ["http://purl.obolibrary.org/obo/ENVO_00003861"], "restrictions": [{"property":
+    ["http://purl.obolibrary.org/obo/BFO_0000051"], "some_values": ["http://purl.obolibrary.org/obo/ENVO_00003861"]}],
+    "synonyms": {"Broad": [], "Exact": ["manufactory", "manufacturing plant"], "Narrow":
+    [], "Related": []}}}. Current primary RDF confirms these exact terms; ontology
+    meaning is not an independently proven GOLD crosswalk.'
+  locator: Typed synonyms, labels, definitions, deprecation, named parents and restrictions
+  accessed_at: '2026-10-11T10:10:30.391898Z'
+  support: supports
+  snapshot_sha256: a0b919065d33a9cf975b74cadd16c75f32f512d17f4f6d5999b74216701df54c
+- evidence_id: PARENT
+  kind: record_content
+  reference: data/habitats; data/raw/ontology_subclass_edges.tsv
+  summary: '{}. Direct-parent identity and source context only, not additional full-record
+    scientific coverage.'
+  locator: Direct-parent identity projection
+  accessed_at: '2026-10-11T10:18:59.297938Z'
+  support: supports
+- evidence_id: SEARCH
+  kind: search
+  reference: curation; data/raw; data/habitats; history; research; reports; reviews;
+    conf
+  summary: 'Ignored/hidden-inclusive rg searched target IDs, labels, slugs, source
+    IDs and paths. Root raw/curation TSVs were structurally scanned and causal-overlay
+    identifiers checked. No prior structured review targeted this exact ID at capture.
+    Original configured source search={"/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold":
+    {"exit_code": 2, "stdout": "", "stderr": "rg: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold:
+    IO error for operation on /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold:
+    No such file or directory (os error 2)\n"}, "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive":
+    {"exit_code": 2, "stdout": "", "stderr": "rg: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive:
+    IO error for operation on /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive:
+    No such file or directory (os error 2)\n"}, "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego":
+    {"exit_code": 2, "stdout": "", "stderr": "rg: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego:
+    IO error for operation on /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego:
+    No such file or directory (os error 2)\n"}, "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/ontologies":
+    {"exit_code": 2, "stdout": "", "stderr": "rg: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/ontologies:
+    IO error for operation on /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/ontologies:
+    No such file or directory (os error 2)\n"}}. Configured-path ENOENT is not global
+    absence.'
+  locator: Captured support-search ledger and exact maintained-row search
+  accessed_at: '2026-10-11T10:18:59.297938Z'
+  support: supports
+  search_scope: 'Ignored/hidden-inclusive rg searched target IDs, labels, slugs, source
+    IDs and paths. Root raw/curation TSVs were structurally scanned and causal-overlay
+    identifiers checked. No prior structured review targeted this exact ID at capture.
+    Original configured source search={"/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold":
+    {"exit_code": 2, "stdout": "", "stderr": "rg: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold:
+    IO error for operation on /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold:
+    No such file or directory (os error 2)\n"}, "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive":
+    {"exit_code": 2, "stdout": "", "stderr": "rg: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive:
+    IO error for operation on /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive:
+    No such file or directory (os error 2)\n"}, "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego":
+    {"exit_code": 2, "stdout": "", "stderr": "rg: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego:
+    IO error for operation on /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego:
+    No such file or directory (os error 2)\n"}, "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/ontologies":
+    {"exit_code": 2, "stdout": "", "stderr": "rg: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/ontologies:
+    IO error for operation on /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/ontologies:
+    No such file or directory (os error 2)\n"}}. Configured-path ENOENT is not global
+    absence.'
+- evidence_id: BACDIVE
+  kind: database
+  reference: https://bacdive.dsmz.de/isolation-sources
+  summary: Current category browser places Plant(Factory), terminal48, beneath Industrial8
+    within Engineered1. Full ancestor context disambiguates reused numerical category
+    IDs and excludes the botanical reading.
+  locator: Category tree labels and parent data attributes
+  accessed_at: '2026-10-11T10:10:32.978096Z'
+  support: supports
+  snapshot_sha256: 60f9932f434230027051edf3e35a6e3af4d52d2812eda2e7088ea9228ffef9de
+- evidence_id: TAXA
+  kind: database
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=100%2C1006576%2C1037355%2C1049%2C105219%2C1124835%2C115433%2C1396%2C1484%2C169760%2C2%2C223390%2C269660%2C280093%2C28220%2C294%2C374424%2C449973%2C554117%2C58172%2C665131%2C70856%2C74969%2C83428%2C863372&retmode=xml
+  summary: '[{"display": "Allobrachymonas denitrificans", "resolved": {"aliases":
+    [], "label": "Allobrachymonas denitrificans", "rank": "species", "taxon_id": "28220"},
+    "source": "NCBITaxon:28220"}, {"display": "Bacillus cereus", "resolved": {"aliases":
+    [], "label": "Bacillus cereus", "rank": "species", "taxon_id": "1396"}, "source":
+    "NCBITaxon:1396"}, {"display": "Paenibacillus stellifer", "resolved": {"aliases":
+    [], "label": "Paenibacillus stellifer", "rank": "species", "taxon_id": "169760"},
+    "source": "NCBITaxon:169760"}, {"display": "Bacteria", "resolved": {"aliases":
+    [], "label": "Bacteria", "rank": "domain", "taxon_id": "2"}, "source": "NCBITaxon:2"},
+    {"display": "Paenibacillus phoenicis", "resolved": {"aliases": [], "label": "Paenibacillus
+    phoenicis", "rank": "species", "taxon_id": "554117"}, "source": "NCBITaxon:554117"},
+    {"display": "Chryseobacterium carnipullorum", "resolved": {"aliases": [], "label":
+    "Chryseobacterium carnipullorum", "rank": "species", "taxon_id": "1124835"}, "source":
+    "NCBITaxon:1124835"}, {"display": "Hydrogenibacillus schlegelii", "resolved":
+    {"aliases": [], "label": "Hydrogenibacillus schlegelii", "rank": "species", "taxon_id":
+    "1484"}, "source": "NCBITaxon:1484"}, {"display": "Methylobacterium brachiatum",
+    "resolved": {"aliases": [], "label": "Methylobacterium brachiatum", "rank": "species",
+    "taxon_id": "269660"}, "source": "NCBITaxon:269660"}, {"display": "Paenibacillus
+    sp.", "resolved": {"aliases": [], "label": "Paenibacillus sp.", "rank": "species",
+    "taxon_id": "58172"}, "source": "NCBITaxon:58172"}, {"display": "uncultured Bacillus
+    sp.", "resolved": {"aliases": [], "label": "uncultured Bacillus sp.", "rank":
+    "species", "taxon_id": "83428"}, "source": "NCBITaxon:83428"}, {"display": "Amycolatopsis
+    sacchari", "resolved": {"aliases": [], "label": "Amycolatopsis sacchari", "rank":
+    "species", "taxon_id": "115433"}, "source": "NCBITaxon:115433"}, {"display": "Ancylobacter
+    polymorphus", "resolved": {"aliases": [], "label": "Ancylobacter polymorphus",
+    "rank": "species", "taxon_id": "223390"}, "source": "NCBITaxon:223390"}, {"display":
+    "Flavobacterium granuli", "resolved": {"aliases": [], "label": "Flavobacterium
+    granuli", "rank": "species", "taxon_id": "280093"}, "source": "NCBITaxon:280093"},
+    {"display": "Pseudomonas fluorescens", "resolved": {"aliases": [], "label": "Pseudomonas
+    fluorescens", "rank": "species", "taxon_id": "294"}, "source": "NCBITaxon:294"},
+    {"display": "Methylobacterium gregans", "resolved": {"aliases": [], "label": "Methylobacterium
+    gregans", "rank": "species", "taxon_id": "374424"}, "source": "NCBITaxon:374424"},
+    {"display": "Chelativorans multitrophicus", "resolved": {"aliases": [], "label":
+    "Chelativorans multitrophicus", "rank": "species", "taxon_id": "449973"}, "source":
+    "NCBITaxon:449973"}, {"display": "Prosthecomicrobium sp. ATCC 27835", "resolved":
+    {"aliases": [], "label": "Prosthecomicrobium sp. ATCC 27835", "rank": "species",
+    "taxon_id": "665131"}, "source": "NCBITaxon:665131"}, {"display": "Aeromonas popoffii",
+    "resolved": {"aliases": [], "label": "Aeromonas popoffii", "rank": "species",
+    "taxon_id": "70856"}, "source": "NCBITaxon:70856"}, {"display": "Ferroplasma acidiphilum",
+    "resolved": {"aliases": [], "label": "Ferroplasma acidiphilum", "rank": "species",
+    "taxon_id": "74969"}, "source": "NCBITaxon:74969"}, {"display": "Herbaspirillum
+    huttiense", "resolved": {"aliases": [], "label": "Herbaspirillum huttiense", "rank":
+    "species", "taxon_id": "863372"}, "source": "NCBITaxon:863372"}, {"display": "Ancylobacter
+    aquaticus", "resolved": {"aliases": [], "label": "Ancylobacter aquaticus", "rank":
+    "species", "taxon_id": "100"}, "source": "NCBITaxon:100"}, {"display": "Defluviitoga
+    tunisiensis", "resolved": {"aliases": [], "label": "Defluviitoga tunisiensis",
+    "rank": "species", "taxon_id": "1006576"}, "source": "NCBITaxon:1006576"}, {"display":
+    null, "resolved": {"aliases": ["1037355"], "label": "Macellibacteroides fermentans",
+    "rank": "species", "taxon_id": "879969"}, "source": "NCBITaxon:1037355"}, {"display":
+    "Allochromatium vinosum", "resolved": {"aliases": [], "label": "Allochromatium
+    vinosum", "rank": "species", "taxon_id": "1049"}, "source": "NCBITaxon:1049"},
+    {"display": "Ralstonia mannitolilytica", "resolved": {"aliases": [], "label":
+    "Ralstonia mannitolilytica", "rank": "species", "taxon_id": "105219"}, "source":
+    "NCBITaxon:105219"}]. All25 displayed keys resolve. Taxonomy resolution does not
+    prove ecological prevalence or independent source membership.'
+  locator: NCBI TaxId, ScientificName, Rank and explicit AkaTaxIds
+  accessed_at: '2026-10-11T10:10:41.623910Z'
+  support: supports
+  snapshot_sha256: 0f8d66e9840719a218581ab5960bb4d5c38b113a83e0b1d94ba071338ae73edb
+- evidence_id: PRIMARY
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=TITLE%3A%22Paenibacillus+phoenicis%22&format=json&resultType=core&pageSize=5
+  summary: PMID20584815 / DOI10.1099/ijs.0.021428-0 describes Paenibacillus phoenicis
+    3PO2SA from a Phoenix-assembly cleanroom and other strains from deep subsurface
+    mine material. This is a bounded species/isolate example, not reconstruction of
+    all factory strains.
+  locator: Inspected species-description abstract
+  accessed_at: '2026-10-11T10:10:45.023853Z'
+  support: context_only
+  snapshot_sha256: 27de742a0bf29f789c1f612427a05e5f52cea0ccb2c8f717188bc034bb9dde69
+assessments:
+- assessment_id: TAXON
+  area: evidence
+  topic: Observational taxon identity and source units
+  outcome: supported
+  summary: 211 STRAIN assertions; 172-key source candidate pool, not 172 named species.
+    The25 displayed keys sum to 64 associations and do not exhaust the211 strains.
+    Bacteria is domain-level; placeholder species remain source observations. No is_characteristic
+    flag is asserted.
+  target_ids:
+  - ENVO:01000536
+  evidence_ids:
+  - R
+  - RAW
+  - TAXA
+  - PRIMARY
+- assessment_id: IDENTITY
+  area: identity
+  topic: Identity, grounding, genus and synonym scope
+  outcome: concern
+  summary: The active ENVO definition permits a multi-building industrial site, while
+    its named parent requires an industrial building; the current OWL retains this
+    scope conflict and a separate has-part restriction. BacDive category ancestry
+    confirms the industrial sense of Plant-Factory. CLOSE mapping and RELATED source
+    synonym are conservative. All 25 displayed taxon IDs resolve, including one historical
+    alias with no display label.
+  target_ids:
+  - ENVO:01000536
+  evidence_ids:
+  - R
+  - RAW
+  - CODE
+  - ONT
+  - PARENT
+- assessment_id: PROVENANCE
+  area: provenance
+  topic: Frozen source counts, roles and lifecycle
+  outcome: supported
+  summary: 'Every emitted field reproduces from the maintained inputs. Frozen counts
+    and nodes trace to exact inventory rows; zero-count omission is not evidence of
+    biological absence. Actual source/reviewed-source counts and routes={"source_concepts":
+    1, "reviewed_sources": 1, "routes": []}. Later sample/organism counts remain separate.
+    Native status is not promoted by this scientific review.'
+  target_ids:
+  - ENVO:01000536
+  evidence_ids:
+  - R
+  - RAW
+  - CODE
+- assessment_id: COMPLETENESS
+  area: completeness
+  topic: Evidence proportional to actual claims
+  outcome: supported
+  summary: No target has causal-edge, gene/regulator or transcriptomic claims; iModulonDB
+    is not applicable. No optional definition, parameter, mechanism, discussion or
+    dataset is invented for coverage. Triad roles remain broad/local/medium context
+    rather than automatic identity evidence.
+  target_ids:
+  - ENVO:01000536
+  evidence_ids:
+  - R
+  - RAW
+  - RULES
+  - SEARCH
+findings:
+- finding_id: F1
+  issue_key: envo-01000536-site-building-scope
+  category: scope
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Factory site definition conflicts with industrial-building genus
+  description: The active ENVO definition permits a multi-building industrial site,
+    while its named parent requires an industrial building; the current OWL retains
+    this scope conflict and a separate has-part restriction. BacDive category ancestry
+    confirms the industrial sense of Plant-Factory. CLOSE mapping and RELATED source
+    synonym are conservative. All 25 displayed taxon IDs resolve, including one historical
+    alias with no display label.
+  target_ids:
+  - ENVO:01000536
+  field_paths:
+  - definition
+  - parent_habitats
+  evidence_ids:
+  - R
+  - RAW
+  - ONT
+  rule_id: docs/CURATION.md; .claude/skills/curate-yaml-record/references/review-checklist.md
+  native_severity: major
+  normalization_reason: Material identity, hierarchy, grounding scope or application
+    contract requires maintained-input adjudication.
+  owner_paths:
+  - repository: culturebotai/HabitatMech
+    path: data/raw/ontology_subclass_edges.tsv
+    role: Governed upstream ENVO axiom extraction
+  - repository: culturebotai/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Governed ontology refresh
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1727
+- finding_id: F2
+  issue_key: envo-01000536-taxon-alias-label
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolvable historical taxon alias lacks a display label
+  description: NCBITaxon:1037355 is explicitly an AkaTaxId of879969 Macellibacteroides
+    fermentans. The source association is resolvable, but its omitted display label
+    is a bounded provenance gap.
+  target_ids:
+  - ENVO:01000536
+  field_paths:
+  - characteristic_taxa[22]
+  evidence_ids:
+  - R
+  - RAW
+  - TAXA
+  rule_id: docs/CURATION.md; .claude/skills/curate-yaml-record/references/review-checklist.md
+  native_severity: minor
+  normalization_reason: Bounded source-scope or display gap without demonstrated wrong
+    habitat identity.
+  owner_paths:
+  - repository: culturebotai/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Governed taxonomy alias/name refresh
+  - repository: culturebotai/HabitatMech
+    path: data/raw/bacdive_source_taxa.tsv
+    role: Regenerated source taxon inventory
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1728
+actions:
+- action_id: A1
+  description: Obtain upstream ENVO scope adjudication and replay governed extraction
+    with manifest/receipt. GOLD parent exclusions cannot suppress independent ontology
+    axioms. Do not invent a replacement genus or silently narrow the source.
+  finding_ids:
+  - F1
+  target_ids:
+  - ENVO:01000536
+  owner_paths:
+  - repository: culturebotai/HabitatMech
+    path: data/raw/ontology_subclass_edges.tsv
+    role: Governed upstream ENVO axiom extraction
+  - repository: culturebotai/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Governed ontology refresh
+  generator: src/habitatmech/seed.py
+  acceptance_checks:
+  - Adjudicate the exact source with primary evidence; do not invent a replacement
+    or infer ecological absence.
+  - Preserve source counts/units and immutable review/history records; append native
+    curation history for supported changes.
+  - Add focused regression coverage, dry seed and inspect a canary, regenerate only
+    affected products, and pass provenance, labels, strict validation, reproduction,
+    history and full QC.
+- action_id: A2
+  description: 'Resolve #1728 via pinned taxonomy inputs, preserving source provenance
+    and recomputing complete ranks/pools if canonical aliases coalesce. Do not hand-patch
+    the generated target.'
+  finding_ids:
+  - F2
+  target_ids:
+  - ENVO:01000536
+  owner_paths:
+  - repository: culturebotai/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Governed taxonomy alias/name refresh
+  - repository: culturebotai/HabitatMech
+    path: data/raw/bacdive_source_taxa.tsv
+    role: Regenerated source taxon inventory
+  generator: src/habitatmech/seed.py
+  acceptance_checks:
+  - Adjudicate the exact source with primary evidence; do not invent a replacement
+    or infer ecological absence.
+  - Preserve source counts/units and immutable review/history records; append native
+    curation history for supported changes.
+  - Add focused regression coverage, dry seed and inspect a canary, regenerate only
+    affected products, and pass provenance, labels, strict validation, reproduction,
+    history and full QC.
+limitations:
+- Original assertion-level inputs were not recovered. Later GOLD counts do not replace
+  frozen counts or prove original membership.
+- Only explicitly identified passages and member fields were scientifically inspected;
+  the complete workbook census is not complete member-level verification.
+- Sparse source bins remain qualified source representations. No optional content
+  or native REVIEWED status is created by a qualified pass.
+- No required focused/native gate was unavailable. Full publication QC is pending
+  in this immutable observation.
+- 'This review does not certify SSSOM/KGX readiness, resolve shared #1398, or close
+  prior GitHub findings.'
+notes:
+- The corpus-wide review goal remains incomplete.
+- Legacy reports inform search leads, not automatically converted verdicts. Publication
+  and supported remediation are separately authorized by the current user request.
+tags:
+- habitatmech
+- engineered
+- record-review
+- scientific-review
+```
