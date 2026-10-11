@@ -7,7 +7,6 @@ grounding_status: EXACT
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002006
-- ENVO:02000136
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5709
@@ -20,3 +19,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:02000136 for habitatmech:GOLD.01305045f6
+    (Engineered > Built environment > Nuclear test reactor > Cooling water). Bounded
+    context exclusion (#1916; 20261011T082507Z-cooling_water F1): ENVO:03600002 denotes
+    liquid water participating in cooling, not a research nuclear reactor. All four
+    later exact-path GOLD BioSamples Gb0150896-Gb0150899 describe secondary-system
+    cooling water; retained export SHA256 5f48b2f50fb2a9257754960a0f0e12dc6e8fa121e97c3e9f4497249e5fe6e439.
+    Remove only the containing-reactor contribution; preserve independent ENVO:00002006
+    genus, nodes 5709/5710, exact path, zero ORGANISM omissions and EXACT/SEEDED status.
+    Original qualifier scope and source-to-generic exact mapping remain unresolved
+    in F2 and #1917. No definition, identity merge or SSSOM/KGX readiness claim is
+    inferred.'
