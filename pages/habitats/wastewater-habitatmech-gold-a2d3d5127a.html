@@ -26,7 +26,7 @@
 <p class="meta">
   <code class="curie">habitatmech:GOLD.a2d3d5127a</code>
   <span class="sep">·</span><a href="../category/engineered.html">ENGINEERED</a>
-  <span class="sep">·</span><span class="pill">BROAD</span>
+  <span class="sep">·</span><span class="pill">NARROW</span>
   <span class="pill">REVIEWED</span>
 </p>
 
@@ -51,8 +51,7 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 <h2>Broader habitats</h2>
 <ul class="plain">
-  <li><a href="../habitats/drinking-water-treatment-plant-envo-03600004.html">drinking water treatment plant</a>      <code class="curie">ENVO:03600004</code></li>
-  <li><a href="../habitats/water-treatment-plant-habitatmech-gold-b6ea996423.html">Water treatment plant</a>      <code class="curie">habitatmech:GOLD.b6ea996423</code></li>
+  <li><a href="../habitats/waste-water-envo-00002001.html">waste water</a>      <code class="curie">ENVO:00002001</code></li>
 </ul>
 
 
@@ -65,8 +64,13 @@ from several source concepts can carry one decision per concept.</p>
 <ol class="events">
   <li>
     <span class="pill">GROUND_AS_PARENT</span>
-    <span class="meta">2026-08-13 · claude-opus-5</span>
-    <p>ENVO:03600004 &#39;drinking water treatment plant&#39; attached as a parent, not adopted as the identity (BROAD). A generic water treatment plant may treat wastewater rather than drinking water, so the drinking-water term is narrower than this node, not equal to it. Path: Engineered &gt; Built environment &gt; Water treatment plant &gt; Wastewater (source concept habitatmech:GOLD.a2d3d5127a)</p>
+    <span class="meta">2026-10-11 · codex-gpt-5</span>
+    <p>ENVO:00002001 &#39;waste water&#39; attached as a parent, not adopted as the identity (NARROW). Correct exact wastewater leaf, not its enclosing water-treatment plant (<a href="https://github.com/CultureBotAI/HabitatMech/issues/1949" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/1949</a>). ENVO:00002001 is the broader water-material class; ENVO:03600004 denotes drinking-water treatment infrastructure. Retain the path-qualified mint and 205 ORGANISM assertions, not an exact ontology merge. EPA <a href="https://www.epa.gov/sites/production/files/2015-09/documents/primer.pdf" rel="noopener noreferrer" target="_blank">https://www.epa.gov/sites/production/files/2015-09/documents/primer.pdf</a> printed pp11-12 distinguishes water, sludge and equipment; later exact GOLD examples describe wastewater settings but do not reconstruct frozen membership. Exclude the immediate facility contribution separately; mapping endpoint #1398 remains unresolved. Path: Engineered &gt; Built environment &gt; Water treatment plant &gt; Wastewater (source concept habitatmech:GOLD.a2d3d5127a)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-11 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.b6ea996423 for habitatmech:GOLD.a2d3d5127a (Engineered &gt; Built environment &gt; Water treatment plant &gt; Wastewater). Bounded material/context correction (<a href="https://github.com/CultureBotAI/HabitatMech/issues/1949;" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/1949;</a> 20261011T171311Z-wastewater__7fd6e093 F1): the source-qualified Wastewater material is not a kind of its enclosing treatment device, facility, operating context or feed stream. EPA primary sedimentation and suspended-growth descriptions distinguish material from treatment infrastructure (<a href="https://www.epa.gov/sites/production/files/2015-09/documents/primer.pdf" rel="noopener noreferrer" target="_blank">https://www.epa.gov/sites/production/files/2015-09/documents/primer.pdf</a>, printed pp11-12); current ENVO class axioms and exact source path support this exclusion. Retain independent material genus, mint, source node/path, frozen ORGANISM count or omission, and native status. Later sample examples do not reconstruct original membership; shared mapping-endpoint #1398 remains open.</p>
   </li>
 </ol>
 
