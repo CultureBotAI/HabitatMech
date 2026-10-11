@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: sieved
+session:
+  id: 2026-10-11T155848Z-codex-gpt-5-3280ed
+  timestamp: '2026-10-11T15:58:48Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1942
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: 'Exclude unsupported GOLD context parent: sieved'
+  details: 'Bounded hierarchy correction (https://github.com/CultureBotAI/HabitatMech/issues/1942;
+    20261011T155209Z-sieved F1). Committed GOLD study Gs0159294 crosswalks to the official
+    study description: lake water passed through a coarse sieve into LEAP pond mesocosms.
+    McGill describes separately situated tanks supplied from Lake Hertel (https://gault.mcgill.ca/en/news/detail/scientists-replicate-freshwater-ecosystems-to-detect-impacts-of-common-pesticides/).
+    This is ex-situ material, not water still part of a lake. Do not infer a replacement genus
+    or resolve generic lake-water scope #1771. Exclude only this immediate GOLD contribution;
+    preserve source identity, node/path provenance, counts/units, native status and independent
+    parents. Current source evidence is not reconstruction of every original member. Whole-corpus
+    differential regressions passed for the exact five hierarchy guards and two source-kind
+    decisions, including unaffected siblings and all retained scientific fields. Dry seed
+    and forced canaries were inspected before full regeneration. Post-correction native gates,
+    semantic-map/site freshness and final CI remain required before merge. Shared mapping
+    endpoints and synonym-scope issues are not resolved.'
