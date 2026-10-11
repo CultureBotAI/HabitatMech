@@ -3,8 +3,6 @@ label: Floor
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.013b99db03
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5487
@@ -26,3 +24,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.013b99db03
+    for habitatmech:GOLD.5cc4f65599 (Engineered > Built environment > Spacecraft Assembly
+    Cleanrooms > Floor). Bounded context exclusion (#1925; 20261011T102011Z-floor__bcd0ae16
+    F1): a cleanroom floor surface is not a kind of the containing cleanroom. Later
+    exact GOLD organisms Go0643689-Go0643691 explicitly name cleanroom-floor isolation;
+    NASA (https://planetaryprotection.jpl.nasa.gov/mission-implementation) treats
+    surfaces separately from controlled rooms. Exclude only this whole-room source
+    contribution; retain nodes 5487/5488, full path, 64 frozen ORGANISM assertions,
+    mint and UNGROUNDED/SEEDED status. The 65 later matched organisms do not replace
+    the frozen count or reconstruct original membership. No material or sterility
+    definition is inferred.'

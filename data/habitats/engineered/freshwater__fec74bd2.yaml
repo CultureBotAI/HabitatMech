@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002011
-- ENVO:01000620
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7931
@@ -18,3 +17,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:01000620 for habitatmech:GOLD.faf9f777e1
+    (Engineered > Artificial ecosystem > Mesocosm > Freshwater). Bounded context exclusion
+    (#1925; 20261011T102029Z-freshwater__fec74bd2 F1): under the retained freshwater-material
+    identity, water is not a kind of mesocosm vivarium. Current ENVO defines ENVO:01000620
+    as an experimental vivarium embedded in a natural environment; the independent
+    water genus ENVO:00002011 denotes material. Remove only this enclosure contribution;
+    retain water genus, mint, nodes 7931/7932, full path, zero-count omissions and
+    NARROW/SEEDED status. No exact later members were recovered within the inspected
+    workbook; no replacement definition or apparatus identity is inferred. F2/shared
+    mapping-endpoint issue #1398 remains open.'
