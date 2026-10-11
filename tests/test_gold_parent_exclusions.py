@@ -1180,6 +1180,58 @@ def test_dust_effluent_and_surface_exclusions_preserve_every_other_claim(monkeyp
             assert attestation["assertion_unit"] == "ORGANISM"
 
 
+def test_composting_context_exclusions_change_only_parent_and_audit(monkeypatch):
+    targets = {
+        "habitatmech:GOLD.aab5671566": (
+            "habitatmech:GOLD.23dcd93012",
+            "Engineered > Solid waste > Latrine chamber > Composting",
+            "gold.ecosystem:4953", None,
+        ),
+        "habitatmech:GOLD.cfe3ac7130": (
+            "FOODON:00003816",
+            "Engineered > Solid waste > Vegetable > Composting",
+            "gold.ecosystem:4933", 8,
+        ),
+    }
+    after = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    exclusions = load_gold_parent_exclusions(seed.GOLD_PARENT_EXCLUSIONS_PATH)
+    monkeypatch.setattr(
+        seed, "load_gold_parent_exclusions",
+        lambda path: {key: row for key, row in exclusions.items() if key not in targets},
+    )
+    before = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    assert before.keys() == after.keys()
+    assert {key for key in before if before[key] != after[key]} == targets.keys()
+    for identifier, (removed, path, source_id, count) in targets.items():
+        old, new = before[identifier], after[identifier]
+        assert old["parent_habitats"] == sorted([removed, "ENVO:00002170"])
+        assert new["parent_habitats"] == ["ENVO:00002170"]
+        assert new["curation_history"][:-1] == old["curation_history"]
+        event = new["curation_history"][-1]
+        assert event["action"] == "SOURCE_PARENT_EXCLUDED"
+        assert event["timestamp"] == "2026-10-11T00:00:00Z"
+        assert event["curator"] == "codex-gpt-5"
+        assert identifier in event["changes"] and removed in event["changes"]
+        for field in (old.keys() | new.keys()) - {"parent_habitats", "curation_history"}:
+            assert new.get(field) == old.get(field), (identifier, field)
+        assert new["grounding_status"] == "NARROW"
+        assert new["mapping_status"] == "SEEDED"
+        assert len(new["source_attestations"]) == 1
+        attestation = new["source_attestations"][0]
+        assert attestation["source_path"] == path
+        assert attestation["source_id"] == source_id
+        assert attestation["mapping_predicate"] == "skos:narrowMatch"
+        assert seed.mint("GOLD", path) == identifier
+        assert exclusions[identifier].source_path == path
+        assert exclusions[identifier].parent_id == removed
+        if count is None:
+            assert "assertion_count" not in attestation
+            assert "assertion_unit" not in attestation
+        else:
+            assert attestation["assertion_count"] == count
+            assert attestation["assertion_unit"] == "ORGANISM"
+
+
 def test_feedlot_and_fermentation_exclusions_change_only_parent_and_audit(monkeypatch):
     targets = {
         "ENVO:01000627": (

@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002170
-- FOODON:00003816
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4933
@@ -20,3 +19,18 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution FOODON:00003816 for habitatmech:GOLD.cfe3ac7130
+    (Engineered > Solid waste > Vegetable > Composting). Bounded context exclusion
+    (#1692; 20261011T071256Z-composting__f25ec0d0 F2): seven of eight later exact-path
+    GOLD organism collection sites explicitly describe mushroom compost or compost
+    for mushroom production; the eighth says compost. FOODON:00003816 vegetable denotes
+    an edible anatomical plant part, not cultivation substrate or a composting process.
+    Export SHA256 5f48b2f50fb2a9257754960a0f0e12dc6e8fa121e97c3e9f4497249e5fe6e439;
+    examples Go0011220, Go0028774, Go0043850. Exclude only the immediate vegetable
+    contribution. Preserve mint, nodes 4933/4934, full path, eight ORGANISM assertions
+    and NARROW/SEEDED status. Original category intent and ENVO:00002170 narrowing
+    remain unresolved in F1 and #1692; no mushroom-organism identity, replacement
+    definition or endpoint certification (#1398) is inferred.'
