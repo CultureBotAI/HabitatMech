@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:01000155
-- habitatmech:GOLD.9f519b94cc
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8551
@@ -18,3 +17,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.9f519b94cc
+    for habitatmech:GOLD.497ed1acca (Engineered > Bioreactor > Partial-Nitrification/Anammox
+    (PNA) > Anaerobic zone > Biomass). Bounded hierarchy correction (#1907; 20261011T051114Z-biomass__9d8a5aca
+    F2): biomass material is not a subtype of its containing anaerobic reactor zone.
+    Speth et al. PMID:27029554, introduction and sampling methods, distinguishes biomass
+    fractions from reactor niches without establishing an original GOLD accession
+    crosswalk. Retain ENVO:01000155 organic-material genus, qualified mint, node 8551,
+    exact path, zero-count omissions and NARROW/SEEDED status. Exclude only this immediate
+    GOLD contribution; original membership and shared mapping-endpoint issue #1398
+    remain unresolved.'
