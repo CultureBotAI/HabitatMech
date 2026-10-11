@@ -14,7 +14,6 @@ synonyms:
   source: GOLD
 parent_habitats:
 - ENVO:01000658
-- habitatmech:GOLD.d8d3393339
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8098
@@ -34,3 +33,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.d8d3393339
+    for habitatmech:GOLD.765d4bdada (Engineered > Wastewater > Urban wastewater >
+    Slums/Informal settlements). ITEM hierarchy assessment (#1955; 20261011T182912Z-slum
+    F1): The currently adopted ENVO slum denotes a settlement, not urban wastewater.
+    Exclude the wastewater context under that representation; the separate slash-label/source-identity
+    finding remains open. Exclude only this guarded source-path contribution. Preserve
+    other fields, frozen source nodes/count units or omissions, independent parents
+    and native lifecycle. Later source examples do not reconstruct original membership;
+    shared endpoint #1398 is unchanged.'

@@ -4,7 +4,6 @@ habitat_category: ENGINEERED
 grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
-- ENVO:01000964
 - ENVO:03600021
 source_attestations:
 - source: GOLD
@@ -18,3 +17,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:01000964 for habitatmech:GOLD.84053fba17
+    (Engineered > Wastewater > Industrial wastewater > Tailings pond). ITEM hierarchy
+    assessment (#1955; 20261011T183024Z-tailings_pond__a57fabd2 F1): The retained
+    source denotes a tailings-storage construction in an industrial-wastewater context,
+    not wastewater material. Preserve the independent ENVO:03600021 pond genus and
+    path-qualified mint. Exclude only this guarded source-path contribution. Preserve
+    other fields, frozen source nodes/count units or omissions, independent parents
+    and native lifecycle. Later source examples do not reconstruct original membership;
+    shared endpoint #1398 is unchanged.'
