@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: sludge__196c0829
+session:
+  id: 2026-10-11T120620Z-codex-gpt-5-a715ce
+  timestamp: '2026-10-11T12:06:20Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1933
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Remove containing UASB reactor ancestry from sludge material
+  details: 'Added one exact-source/expected-parent exclusion for GOLD.84c231bfef, preserving
+    generic sludge ENVO:00002044 and the granular-sludge child''s legitimate material edge.
+    Baseline review 20261011T120122Z-granular_sludge F1 cites all three later exact GOLD organism
+    descriptions and PMID42727115; these distinguish material from reactor and do not establish
+    thermophily or original membership. The focused whole-corpus differential test passed:
+    precisely Sludge and the separately corrected Hydrocarbon owner change, only parent lists
+    and appended audit events differ, and granular sludge remains unchanged. Native status,
+    count omissions and the separate mapping-endpoint issue remain intact. Canary, regeneration,
+    final gates and a linked successor review follow; no unrun result is claimed.'

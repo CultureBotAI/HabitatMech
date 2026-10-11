@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: hydrocarbon
+session:
+  id: 2026-10-11T120621Z-codex-gpt-5-5f8372
+  timestamp: '2026-10-11T12:06:21Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1933
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Remove soil parent contradictory to retained chemical-only interpretation
+  details: 'Added one guarded exclusion for GOLD.3c68e33a11 and ENVO:00002116. Baseline review
+    20261011T120211Z-hydrocarbon F1 contrasts the maintained NOT_APPLICABLE chemical reading
+    with the soil-material parent; current ChEBI24632 and ENVO meanings confirm that simultaneous
+    assertion is inconsistent. The one-sample soil triad and both later exact oil-refinery-sediment
+    BioSamples require separate source-intent reassessment in #1934; this change does not
+    validate the chemical reading. Focused whole-corpus regression passed and preserves all
+    source fields, chemical xref, native status and counts. Only the two named owner records
+    change in parent/audit fields. Final canary, regeneration, validation and immutable successor
+    remain to be completed.'
