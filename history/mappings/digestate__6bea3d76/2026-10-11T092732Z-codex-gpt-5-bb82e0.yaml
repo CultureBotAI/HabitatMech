@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: digestate__6bea3d76
+session:
+  id: 2026-10-11T092732Z-codex-gpt-5-bb82e0
+  timestamp: '2026-10-11T09:27:32Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1921
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude the anaerobic reactor from generic digestate strict parents
+  details: 'EPA AgSTAR and current ENVO distinguish residual digestate from its containing
+    reactor. Added one exact-source exclusion for habitatmech:GOLD.43db7aa909. Preserves mint,
+    nodes5582/5583, count omissions and UNGROUNDED/SEEDED status; no replacement genus or
+    sibling merge. Immutable baseline: 20261011T092205Z-digestate__6bea3d76/F1. Three-target
+    whole-corpus differential regression passed; dry seed and generic-digestate canary passed
+    and the entire canary was inspected. Publication still requires remaining regeneration,
+    label correspondence and full QC. Original member reconstruction and authored definition
+    remain outside this bounded correction.'

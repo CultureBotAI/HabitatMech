@@ -3,8 +3,6 @@ label: Drinking water filter
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:03600004
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5492
@@ -27,3 +25,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:03600004 for habitatmech:GOLD.697d4c6359
+    (Engineered > Built environment > Drinking water treatment plant > Drinking water
+    filter). Bounded context exclusion (#1921; 20261011T092227Z-drinking_water_filter
+    F1): a drinking-water filter or its sampled contents are not a kind of treatment-plant
+    building. Current ENVO and CDC (https://www.cdc.gov/drinking-water/about/how-water-treatment-works.html)
+    distinguish filters and water from the facility. Remove only the immediate facility-parent
+    contribution; preserve source mint/path, nodes 5492/5493, one ORGANISM assertion
+    and UNGROUNDED/SEEDED status. Later exact members span sand filters, reverse-osmosis
+    material and reject streams; do not infer a uniform replacement identity, genus,
+    definition or composition from those examples.'
