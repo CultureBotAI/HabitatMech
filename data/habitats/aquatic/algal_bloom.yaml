@@ -8,7 +8,6 @@ grounding_status: EXACT
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00000012
-- ENVO:00000021
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5349
@@ -22,3 +21,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00000021 for habitatmech:GOLD.b3f000fa4a
+    (Environmental > Aquatic > Freshwater > Lake > Algal bloom). ITEM hierarchy assessment
+    for https://github.com/CultureBotAI/HabitatMech/issues/1971 (review 20261011T212835Z-algal_bloom):
+    The ENVO bloom class describes accumulation of algae in an aquatic system and
+    retains the hydrographic-feature genus. A bloom in a lake is not the whole freshwater
+    lake, and the generic identity is not restricted to freshwater. Eight ORGANISM
+    associations remain source observations. Exclude only this guarded GOLD source-parent
+    contribution. Preserve independent parents, source identity/count units or omissions,
+    ontology definition, and native lifecycle; later source examples do not reconstruct
+    frozen membership. Shared synonym1249 and endpoint1398 issues remain separate.'

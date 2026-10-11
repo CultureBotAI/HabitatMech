@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: acidic_hypersaline_lake
+session:
+  id: 2026-10-11T213554Z-codex-gpt-5-6d75fa
+  timestamp: '2026-10-11T21:35:54Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1971
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude reviewed GOLD context parent from acidic_hypersaline_lake
+  details: 'ITEM hierarchy assessment (https://github.com/CultureBotAI/HabitatMech/issues/1971;
+    20261011T212812Z-acidic_hypersaline_lake): The exact acidic hypersaline lake source retains
+    one ORGANISM assertion, minted identity and no unsupported exact ontology mapping. Its
+    parent is explicitly curated as a pH quality, not a broader habitat. Removing that contribution
+    need not fabricate a pH cutoff, salinity value or generic lake identity. Exclude only
+    this guarded GOLD source-parent contribution. Preserve independent parents, source identity/count
+    units or omissions, ontology definition, and native lifecycle; later source examples do
+    not reconstruct frozen membership. Shared synonym1249 and endpoint1398 issues remain separate.
+    Authorized by user publication/remediation request. Baseline46 native checks and exact
+    main CI783 passed/3 skipped succeeded. Post-fix tests, canary, regeneration and full QC
+    pending at event creation; results will be retained in PR and linked successor reviews.'

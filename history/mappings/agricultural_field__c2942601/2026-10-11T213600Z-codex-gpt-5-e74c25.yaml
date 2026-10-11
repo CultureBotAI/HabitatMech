@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: agricultural_field__c2942601
+session:
+  id: 2026-10-11T213600Z-codex-gpt-5-e74c25
+  timestamp: '2026-10-11T21:36:00Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1971
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude reviewed GOLD context parent from agricultural_field__c2942601
+  details: 'ITEM hierarchy assessment (https://github.com/CultureBotAI/HabitatMech/issues/1971;
+    20261011T212827Z-agricultural_field__c2942601): The path-specific agricultural-field identity
+    is correctly kept minted rather than collapsing all leaf matches. Its field genus is supported,
+    but freshwater material is not a superclass of a field. The automatic NARROW predicate
+    also has the separate source-to-record endpoint mismatch tracked in1398. Exclude only
+    this guarded GOLD source-parent contribution. Preserve independent parents, source identity/count
+    units or omissions, ontology definition, and native lifecycle; later source examples do
+    not reconstruct frozen membership. Shared synonym1249 and endpoint1398 issues remain separate.
+    Authorized by user publication/remediation request. Baseline46 native checks and exact
+    main CI783 passed/3 skipped succeeded. Post-fix tests, canary, regeneration and full QC
+    pending at event creation; results will be retained in PR and linked successor reviews.'
