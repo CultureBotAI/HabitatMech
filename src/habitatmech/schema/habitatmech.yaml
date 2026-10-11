@@ -825,7 +825,7 @@ enums:
     description: >-
       Broad categories for nodes in habitat mechanism graphs. Deliberately a
       superset of TraitMech's enum — the shared values keep graphs comparable
-      across the two repos, and HABITAT / ENVIRONMENTAL_PARAMETER / TAXON are
+      across the two repos, and HABITAT / ENVIRONMENTAL_PARAMETER / TAXON / COMMUNITY are
       the habitat-side additions.
     permissible_values:
       HABITAT:
@@ -834,6 +834,11 @@ enums:
         description: A physicochemical axis of the habitat (salinity, pH, temperature).
       TAXON:
         description: An organism or clade.
+      COMMUNITY:
+        description: >-
+          An assemblage of interacting microbial populations in a shared setting,
+          potentially spanning multiple taxa. Not a single organism or clade, and
+          not the process performed by the assemblage.
       TRAIT:
         description: A microbial trait (a TraitMech or METPO term).
       PATHWAY:
