@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: composting__b5981ec2
+session:
+  id: 2026-10-11T071811Z-codex-gpt-5-0af127
+  timestamp: '2026-10-11T07:18:11Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1689
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude containing latrine chamber from composting source parents
+  details: Implements only F2 in reviews/structured/20261011T071250Z-composting__b5981ec2/review.yaml.
+    Later exact GOLD BioSamples Gb0164000-Gb0164015 describe composting feces communities
+    in a latrine chamber (export SHA256 5f48b2f50fb2a9257754960a0f0e12dc6e8fa121e97c3e9f4497249e5fe6e439).
+    Containing chamber is context, not a strict material genus. Exact mint/path/expected-parent
+    guard preserves ENVO:00002170, source nodes/count omissions, NARROW/SEEDED and prior audit.
+    New whole-corpus differential regression failed before the two exclusions and passes after
+    them, proving only target parent/audit fields change. Dry seed and forced exact canary
+    completed and target was inspected. Full publication gates follow separately. F1 original
+    source intent and issue1689 remain open; no status promotion or SSSOM/KGX certification.
