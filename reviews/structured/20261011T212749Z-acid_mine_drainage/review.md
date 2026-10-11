@@ -1,0 +1,1240 @@
+# Scientific record review: acid_mine_drainage
+
+- Review: 20261011T212749Z-acid_mine_drainage
+- Repository: CultureBotAI/HabitatMech
+- Started UTC: 2026-10-11T21:14:52.706700Z
+- Finished UTC: 2026-10-11T21:27:49.244973Z
+- Reviewer: OpenAI Codex (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The ENVO acidic mine-drainage identity is supported by two GOLD paths and PREGO, with separate18 and16 ORGANISM counts and three TAXON associations. The14-study local-scale consensus is evidence for place identity, not equivalence of every triad role. Generic acid mine drainage is not restricted to fresh groundwater; the merged parent imports one source context. ENVO types acid rock drainage as related, not exact.
+
+## Scope And Provenance
+
+Entire exact generated record and every contributing source, with bounded scientific and source-context assessment.
+
+Selection: Next forty unreviewed records in stable repository-relative path order: all seven AIR records plus thirty-three AQUATIC records. Individual full-record observations, not a category-wide pass. Starting distinct completed-observation coverage488/3208 is not current-input clean coverage.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f21144ef328783600b053e8ec9bcb7b16b866d58.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| ENVO:00001997 | data/habitats/aquatic/acid_mine_drainage.yaml | generated | acid mine drainage |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native check on captured scientific inputs | passed | True | ENVO:00001997 | Actual success from 2026-10-11T21:17:17.242685Z to 2026-10-11T21:17:20.636343Z. Native applicability retained. |
+| Native check on captured scientific inputs | passed | True | ENVO:00001997 | Actual success from 2026-10-11T21:18:37.998816Z to 2026-10-11T21:18:52.797329Z. Native applicability retained. |
+| Native check on captured scientific inputs | passed | True | ENVO:00001997 | Actual success from 2026-10-11T21:18:52.798654Z to 2026-10-11T21:19:13.373581Z. Native applicability retained. |
+| Native check on captured scientific inputs | passed | True | ENVO:00001997 | Actual success from 2026-10-11T21:19:13.374728Z to 2026-10-11T21:20:25.537883Z. Native applicability retained. |
+| Native check on captured scientific inputs | passed | True | ENVO:00001997 | Actual success from 2026-10-11T21:20:25.538899Z to 2026-10-11T21:20:35.475232Z. Native applicability retained. |
+| Native check on captured scientific inputs | passed | True | ENVO:00001997 | Actual success from 2026-10-11T21:20:35.476484Z to 2026-10-11T21:20:41.494943Z. Native applicability retained. |
+| Native check on captured scientific inputs | passed | True | ENVO:00001997 | Actual success from 2026-10-11T21:20:41.496068Z to 2026-10-11T21:21:03.930674Z. Native applicability retained. |
+| Native check on captured scientific inputs | passed | True | ENVO:00001997 | Actual success from 2026-10-11T21:17:58.517657Z to 2026-10-11T21:18:00.677113Z. All three required merge-group workflows passed at the exact captured base; authoritative QC passed 783 tests with 3 skipped. Newly saved review bundles require their own integrity check. Exact-base CI receipt; not a claim that new review files already passed CI. |
+| Complete reconstruction | passed | False | ENVO:00001997 | All40 complete documents matched; input hashes reverified. |
+| Original assertion membership | unavailable | False | ENVO:00001997 | Bounded ignored-inclusive upstream searches did not recover complete frozen membership. Later exports are context only. |
+| iModulonDB applicability | not_applicable | False | ENVO:00001997 | No expression-module claim; membership would not prove habitat association. |
+
+## Scientific And Domain Assessments
+
+### Identity and definition
+
+identity: supported. Targets: ENVO:00001997.
+
+The ENVO acidic mine-drainage identity is supported by two GOLD paths and PREGO, with separate18 and16 ORGANISM counts and three TAXON associations. The14-study local-scale consensus is evidence for place identity, not equivalence of every triad role. Generic acid mine drainage is not restricted to fresh groundwater; the merged parent imports one source context. ENVO types acid rock drainage as related, not exact.
+
+### Strict genera, source-context and mapping scope
+
+grounding: concern. Targets: ENVO:00001997.
+
+The ENVO acidic mine-drainage identity is supported by two GOLD paths and PREGO, with separate18 and16 ORGANISM counts and three TAXON associations. The14-study local-scale consensus is evidence for place identity, not equivalence of every triad role. Generic acid mine drainage is not restricted to fresh groundwater; the merged parent imports one source context. ENVO types acid rock drainage as related, not exact. Four parent-contribution routes were distinguished; optional missing definitions are not filled by inference.
+
+### Every contributing source and native lifecycle
+
+provenance: supported. Targets: ENVO:00001997.
+
+Full-document reproduction preserves 3 contributors and 3 ITEM-reviewed sources. Actual attestations=[{"source": "GOLD", "source_id": "gold.ecosystem:4164", "source_label": "Acid Mine Drainage", "source_path": "Environmental &gt; Aquatic &gt; Freshwater &gt; Groundwater &gt; Acid Mine Drainage", "mapping_predicate": "skos:exactMatch", "assertion_count": 18, "assertion_unit": "ORGANISM"}, {"source": "GOLD", "source_id": "gold.ecosystem:6075", "source_label": "Acid mine drainage", "source_path": "Engineered &gt; Wastewater &gt; Industrial wastewater &gt; Acid mine drainage", "mapping_predicate": "skos:exactMatch", "assertion_count": 16, "assertion_unit": "ORGANISM", "notes": "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv."}, {"source": "PREGO", "source_id": "ENVO:00001997", "source_label": "acid mine drainage", "assertion_count": 3, "assertion_unit": "TAXON", "score": 4.0, "evidence_channels": "annotated_genomes_isolates"}]. Counts with unlike units are not summed; omitted zero counts are not biological absence. Scientific review does not promote native status.
+
+### Association versus characteristic presence
+
+evidence: supported. Targets: ENVO:00001997.
+
+All retained associations were read and reproduce; all named taxon IDs resolve. Source-specific ranks, ties, candidate pools, scores and corroborations remain source evidence, not abundance, universal presence or cross-source confidence. No is_characteristic claim is asserted.
+
+### Parameters and optional evidence
+
+completeness: supported. Targets: ENVO:00001997.
+
+No universal numeric environmental values or organisms are inferred from path labels or later samples. Optional empty discussions/datasets are not defects merely for being empty. No graph is asserted for this exact target; ignored-inclusive overlay search and full-corpus causal checks were inspected. No gene/regulator/expression-module claim calls for iModulonDB.
+
+## Findings
+
+### F1: A source context or quality is emitted as a strict superclass
+
+major / open / confirmed; issue key: envo-00001997-context-parent.
+
+The ENVO acidic mine-drainage identity is supported by two GOLD paths and PREGO, with separate18 and16 ORGANISM counts and three TAXON associations. The14-study local-scale consensus is evidence for place identity, not equivalence of every triad role. Generic acid mine drainage is not restricted to fresh groundwater; the merged parent imports one source context. ENVO types acid rock drainage as related, not exact. Unsupported parent contribution: habitatmech:GOLD.7f8e268653.
+
+### F2: Related ontology synonyms are promoted to exact
+
+major / open / confirmed; issue key: envo-00001997-ontology-synonym-scope.
+
+The ENVO acidic mine-drainage identity is supported by two GOLD paths and PREGO, with separate18 and16 ORGANISM counts and three TAXON associations. The14-study local-scale consensus is evidence for place identity, not equivalence of every triad role. Generic acid mine drainage is not restricted to fresh groundwater; the merged parent imports one source context. ENVO types acid rock drainage as related, not exact.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Exclude only the exact GOLD contribution of habitatmech:GOLD.7f8e268653; retain independent genera, identities, assertions and native status. Do not invent a definition as a suppression workaround.
+
+- Use maintained input owners and exact source keys; preserve independent parents, source counts/units and native lifecycle. No manual generated edits.
+- Recheck source evidence, append native history, add exact-source regressions, inspect a seed canary and regenerate affected products.
+- Pass schema, strict, label, reproduction, review-integrity and full QC; save a linked successor observation for each disposition.
+
+### A2
+
+Resolve shared1249 through a governed typed-synonym contract. Preserve genuine exact synonyms and PREGO related names; test exact, related, multiscope and unknown cases without a blanket downgrade.
+
+- Use maintained input owners and exact source keys; preserve independent parents, source counts/units and native lifecycle. No manual generated edits.
+- Recheck source evidence, append native history, add exact-source regressions, inspect a seed canary and regenerate affected products.
+- Pass schema, strict, label, reproduction, review-integrity and full QC; save a linked successor observation for each disposition.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| R | data/habitats/aquatic/acid_mine_drainage.yaml; Entire captured YAML read, including sources, taxa, parameters, graphs and history | supports | The ENVO acidic mine-drainage identity is supported by two GOLD paths and PREGO, with separate18 and16 ORGANISM counts and three TAXON associations. The14-study local-scale consensus is evidence for place identity, not equivalence of every triad role. Generic acid mine drainage is not restricted to fresh groundwater; the merged parent imports one source context. ENVO types acid rock drainage as related, not exact. |
+| RULES | docs/CURATION.md; docs/HARMONIZATION.md; docs/RESEARCH.md; src/habitatmech/schema/habitatmech.yaml | supports | Applied strict-parent, exact identity, MIxS role, source count/score, ITEM lifecycle and claim-specific evidence contracts. |
+| RAW | data/raw; curation/decisions.tsv; curation/term_requests.tsv; curation/gold_parent_exclusions.tsv; Exact logical TSV rows; header is row1. Nearby-path matches excluded. | supports | {"curation/decisions.tsv": [{"data": {"category": "", "curator": "claude-opus-5", "date": "2026-08-13", "decision": "REVIEW", "grounding_status": "", "identifier": "habitatmech:GOLD.4d88cc502b", "notes": "Multi-source review pass: this record is attested by more than one independent vocabulary, and this source's label or path was read against the record's ontology term to check the merge is right. It agrees. Source concepts in the same pass whose labels did not agree were re-decided rather than endorsed; see the pass's other decisions of the same date.", "object_id": "", "object_label": "", "relation": "", "review_depth": "ITEM"}, "logical_row": 502}, {"data": {"category": "", "curator": "claude-opus-5", "date": "2026-08-13", "decision": "REVIEW", "grounding_status": "", "identifier": "habitatmech:PREGO.03c5325bcc", "notes": "Multi-source review pass: this record is attested by more than one independent vocabulary, and this source's label or path was read against the record's ontology term to check the merge is right. It agrees. Source concepts in the same pass whose labels did not agree were re-decided rather than endorsed; see the pass's other decisions of the same date.", "object_id": "", "object_label": "", "relation": "", "review_depth": "ITEM"}, "logical_row": 1401}, {"data": {"category": "", "curator": "claude-opus-5", "date": "2026-08-20", "decision": "GROUND", "grounding_status": "EXACT", "identifier": "habitatmech:GOLD.d727388954", "notes": "Triad-evidence review (#126): GOLD's submitters annotate each biosample with a MIxS ENVO triad, and this concept's path carries 14 INDEPENDENT studies all asserting local = ENVO:00001997 'acid mine drainage'. That is evidence of a different kind from a label match \u2014 what the people who took the samples said the environment was. Study count is what is quoted rather than sample count because 122 of 140 unanimous paths are one study repeating itself; this one is corroborated across 14. The record was minted by the ambiguous-leaf rule because a shallower GOLD path, Engineered &gt; Wastewater &gt; Industrial wastewater &gt; Acid mine drainage, already claimed the term. Both paths denote acid mine drainage; GOLD files the same concept under two branches. Grounding merges them, which is right \u2014 unlike the Sediment cases, this is a specific kind of place rather than a material that occurs in many settings.", "object_id": "ENVO:00001997", "object_label": "acid mine drainage", "relation": "", "review_depth": "ITEM"}, "logical_row": 1799}], "data/raw/gold_ecosystem_paths.tsv": [{"data": {"biosample_count": "0", "canonical_path": "Environmental &gt; Aquatic &gt; Freshwater &gt; Groundwater &gt; Acid Mine Drainage", "depth": "5", "ecosystem": "Environmental", "ecosystem_category": "Aquatic", "ecosystem_subtype": "Groundwater", "ecosystem_type": "Freshwater", "gold_node_count": "1", "gold_node_ids": "gold.ecosystem:4164", "leaf_label": "Acid Mine Drainage", "organism_count": "18", "specific_ecosystem": "Acid Mine Drainage", "study_count": "0", "total_assertions": "18"}, "logical_row": 431}, {"data": {"biosample_count": "0", "canonical_path": "Engineered &gt; Wastewater &gt; Industrial wastewater &gt; Acid mine drainage", "depth": "4", "ecosystem": "Engineered", "ecosystem_category": "Wastewater", "ecosystem_subtype": "Acid mine drainage", "ecosystem_type": "Industrial wastewater", "gold_node_count": "2", "gold_node_ids": "gold.ecosystem:6075&#124;gold.ecosystem:8141", "leaf_label": "Acid mine drainage", "organism_count": "16", "specific_ecosystem": "", "study_count": "0", "total_assertions": "16"}, "logical_row": 451}], "data/raw/gold_path_biosamples.tsv": [{"data": {"biosample_count": "60", "canonical_path": "Environmental &gt; Aquatic &gt; Freshwater &gt; Groundwater &gt; Acid Mine Drainage", "ecosystem_path_id": "4164"}, "logical_row": 325}], "data/raw/gold_path_triads.tsv": [{"data": {"canonical_path": "Engineered &gt; Wastewater &gt; Industrial wastewater &gt; Acid mine drainage", "distinct_terms": "1", "samples": "4", "slot": "broad", "studies": "1", "studies_agreeing": "1", "top_label": "aquatic biome", "top_share": "1.00", "top_term": "ENVO:00002030"}, "logical_row": 158}, {"data": {"canonical_path": "Engineered &gt; Wastewater &gt; Industrial wastewater &gt; Acid mine drainage", "distinct_terms": "1", "samples": "4", "slot": "local", "studies": "1", "studies_agreeing": "1", "top_label": "acid mine drainage", "top_share": "1.00", "top_term": "ENVO:00001997"}, "logical_row": 159}, {"data": {"canonical_path": "Engineered &gt; Wastewater &gt; Industrial wastewater &gt; Acid mine drainage", "distinct_terms": "1", "samples": "4", "slot": "medium", "studies": "1", "studies_agreeing": "1", "top_label": "acidic water", "top_share": "1.00", "top_term": "ENVO:01000358"}, "logical_row": 160}, {"data": {"canonical_path": "Environmental &gt; Aquatic &gt; Freshwater &gt; Groundwater &gt; Acid Mine Drainage", "distinct_terms": "1", "samples": "60", "slot": "broad", "studies": "14", "studies_agreeing": "14", "top_label": "aquatic biome", "top_share": "1.00", "top_term": "ENVO:00002030"}, "logical_row": 269}, {"data": {"canonical_path": "Environmental &gt; Aquatic &gt; Freshwater &gt; Groundwater &gt; Acid Mine Drainage", "distinct_terms": "1", "samples": "60", "slot": "local", "studies": "14", "studies_agreeing": "14", "top_label": "acid mine drainage", "top_share": "1.00", "top_term": "ENVO:00001997"}, "logical_row": 270}, {"data": {"canonical_path": "Environmental &gt; Aquatic &gt; Freshwater &gt; Groundwater &gt; Acid Mine Drainage", "distinct_terms": "3", "samples": "60", "slot": "medium", "studies": "14", "studies_agreeing": "12", "top_label": "acidic water", "top_share": "0.57", "top_term": "ENVO:01000358"}, "logical_row": 271}], "data/raw/ontology_subclass_edges.tsv": [{"data": {"object": "ENVO:00001996", "predicate": "rdfs:subClassOf", "subject": "ENVO:00001997"}, "logical_row": 5258}], "data/raw/ontology_terms.tsv": [{"data": {"definition": "A mine drainage with an acidic pH.", "deprecated": "", "directly_referenced": "TRUE", "label": "acid mine drainage", "label_only": "FALSE", "ontology": "ENVO", "synonyms": "acid rock drainage", "term_id": "ENVO:00001997"}, "logical_row": 7156}], "data/raw/prego_habitat_taxa.tsv": [{"data": {"channels": "annotated_genomes_isolates", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00001997", "prego_score": "4", "rank": "1", "taxon_id": "NCBITaxon:768535", "taxon_label": "Acidipila rosea"}, "logical_row": 5338}, {"data": {"channels": "annotated_genomes_isolates", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00001997", "prego_score": "3", "rank": "2", "taxon_id": "NCBITaxon:1121877", "taxon_label": "Ferrimicrobium acidiphilum DSM 19497"}, "logical_row": 5339}, {"data": {"channels": "annotated_genomes_isolates", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00001997", "prego_score": "3", "rank": "3", "taxon_id": "NCBITaxon:349163", "taxon_label": "Acidiphilium cryptum JF-5"}, "logical_row": 5340}], "data/raw/prego_habitats.tsv": [{"data": {"biolink_category": "biolink:OntologyClass", "channels": "annotated_genomes_isolates", "direct_assertion_count": "3", "max_prego_score": "4", "ontology": "ENVO", "prego_id": "ENVO:00001997", "prego_synonyms": "acid mine drainage&#124;acid mine drainages&#124;acid rock drainage&#124;acid rock drainages", "taxon_count": "3"}, "logical_row": 460}]} |
+| CODE | src/habitatmech/seed.py; Executed full-document reconstruction; all40 matched captured records | supports | {"reviewed_sources": 3, "routes": [{"actual": {"category": null, "contributes_grounding": true, "decision": {"category": "", "curator": "claude-opus-5", "date": "2026-08-20", "decision": "GROUND", "grounding_status": "EXACT", "identifier": "habitatmech:GOLD.d727388954", "notes": "Triad-evidence review (#126): GOLD's submitters annotate each biosample with a MIxS ENVO triad, and this concept's path carries 14 INDEPENDENT studies all asserting local = ENVO:00001997 'acid mine drainage'. That is evidence of a different kind from a label match \u2014 what the people who took the samples said the environment was. Study count is what is quoted rather than sample count because 122 of 140 unanimous paths are one study repeating itself; this one is corroborated across 14. The record was minted by the ambiguous-leaf rule because a shallower GOLD path, Engineered &gt; Wastewater &gt; Industrial wastewater &gt; Acid mine drainage, already claimed the term. Both paths denote acid mine drainage; GOLD files the same concept under two branches. Grounding merges them, which is right \u2014 unlike the Sediment cases, this is a specific kind of place rather than a material that occurs in many settings.", "object_id": "ENVO:00001997", "object_label": "acid mine drainage", "relation": "parent", "review_depth": "ITEM"}, "extra_parents": [], "extra_xrefs": [], "grounding_status": "EXACT", "identifier": "ENVO:00001997", "mapping_predicate": "skos:exactMatch", "reviewed": true, "route": "curated_ground_from_gold_narrower_than_leaf_match"}, "automatic": {"category": null, "contributes_grounding": true, "decision": null, "extra_parents": ["ENVO:00001997"], "extra_xrefs": [], "grounding_status": "NARROW", "identifier": "habitatmech:GOLD.d727388954", "mapping_predicate": "skos:narrowMatch", "reviewed": false, "route": "gold_narrower_than_leaf_match"}, "minted": "habitatmech:GOLD.d727388954", "source": "GOLD", "source_id": "gold.ecosystem:4164"}, {"actual": {"category": null, "contributes_grounding": true, "decision": {"category": "", "curator": "claude-opus-5", "date": "2026-08-13", "decision": "REVIEW", "grounding_status": "", "identifier": "habitatmech:GOLD.4d88cc502b", "notes": "Multi-source review pass: this record is attested by more than one independent vocabulary, and this source's label or path was read against the record's ontology term to check the merge is right. It agrees. Source concepts in the same pass whose labels did not agree were re-decided rather than endorsed; see the pass's other decisions of the same date.", "object_id": "", "object_label": "", "relation": "parent", "review_depth": "ITEM"}, "extra_parents": [], "extra_xrefs": [], "grounding_status": "EXACT", "identifier": "ENVO:00001997", "mapping_predicate": "skos:exactMatch", "reviewed": true, "route": "curated_review_of_gold_leaf_label"}, "automatic": {"category": null, "contributes_grounding": true, "decision": null, "extra_parents": [], "extra_xrefs": [], "grounding_status": "EXACT", "identifier": "ENVO:00001997", "mapping_predicate": "skos:exactMatch", "reviewed": false, "route": "gold_leaf_label"}, "minted": "habitatmech:GOLD.4d88cc502b", "source": "GOLD", "source_id": "gold.ecosystem:6075"}, {"actual": {"category": null, "contributes_grounding": true, "decision": {"category": "", "curator": "claude-opus-5", "date": "2026-08-13", "decision": "REVIEW", "grounding_status": "", "identifier": "habitatmech:PREGO.03c5325bcc", "notes": "Multi-source review pass: this record is attested by more than one independent vocabulary, and this source's label or path was read against the record's ontology term to check the merge is right. It agrees. Source concepts in the same pass whose labels did not agree were re-decided rather than endorsed; see the pass's other decisions of the same date.", "object_id": "", "object_label": "", "relation": "parent", "review_depth": "ITEM"}, "extra_parents": [], "extra_xrefs": [], "grounding_status": "EXACT", "identifier": "ENVO:00001997", "mapping_predicate": null, "reviewed": true, "route": "curated_review_of_prego_self_grounded"}, "automatic": {"category": null, "contributes_grounding": true, "decision": null, "extra_parents": [], "extra_xrefs": [], "grounding_status": "EXACT", "identifier": "ENVO:00001997", "mapping_predicate": null, "reviewed": false, "route": "prego_self_grounded"}, "minted": "habitatmech:PREGO.03c5325bcc", "source": "PREGO", "source_id": "ENVO:00001997"}], "source_concepts": 3} |
+| ONT | https://raw.githubusercontent.com/EnvironmentOntology/envo/master/envo.owl; Current named OWL identity, typed synonym scopes and direct axioms; no pinned-source refresh | supports | {"ENVO:00001996": {"definitions": ["The outflow of water from a mine."], "deprecated": [], "equivalents": [], "labels": ["mine drainage"], "parents": ["http://purl.obolibrary.org/obo/ENVO_00000029", {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/BFO_0000050"], "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_00000076"]}], "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": [], "hasNarrowSynonym": [], "hasRelatedSynonym": ["acid and metalliferous drainage", "acid rock drainage"]}}, "ENVO:00001997": {"definitions": ["A mine drainage with an acidic pH."], "deprecated": [], "equivalents": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Class"], "http://www.w3.org/2002/07/owl#intersectionOf": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first": ["http://purl.obolibrary.org/obo/ENVO_00001996"], "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0000086"], "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/PATO_0001429"]}], "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"]}]}]}], "labels": ["acid mine drainage"], "parents": ["http://purl.obolibrary.org/obo/ENVO_00001996", {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0000086"], "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/PATO_0001429"]}], "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": [], "hasNarrowSynonym": [], "hasRelatedSynonym": ["acid rock drainage"]}}, "ENVO:01000964": {"definitions": ["Wastewater which is produced by industrial activity and which contains chemical contaminants other than those associated with urine and fecal matter."], "deprecated": [], "equivalents": [], "labels": ["industrial wastewater"], "parents": ["http://purl.obolibrary.org/obo/ENVO_00002001"], "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": [], "hasNarrowSynonym": [], "hasRelatedSynonym": []}}} |
+| PARENT | data/habitats/aquatic/groundwater__25377149.yaml; data/habitats/aquatic/groundwater__585f08d9.yaml; data/habitats/aquatic/underground_water.yaml; data/habitats/aquatic/liquid_water.yaml; data/habitats/aquatic/fresh_water.yaml; data/habitats/aquatic/aquatic_biome.yaml; data/habitats/other/environmental.yaml; data/habitats/other/environmental_system.yaml; data/habitats/other/biome.yaml; data/habitats/engineered/industrial_wastewater.yaml; data/habitats/engineered/waste_water.yaml; data/habitats/engineered/engineered__900b76ad.yaml; data/habitats/other/waste_material.yaml; data/habitats/other/environmental_material.yaml; Ancestor identity/definition/status context, not full-record review coverage of ancestors | supports | {"ENVO:00000428": {"definition": "A biome is an ecosystem which is undergoing climactic ecological succession.", "grounding_status": "EXACT", "label": "biome", "parent_habitats": ["ENVO:01000813", "ENVO:01001110"]}, "ENVO:00002001": {"definition": "Water that has been adversely affected in quality by anthropogenic influence.", "grounding_status": "EXACT", "label": "waste water", "parent_habitats": ["ENVO:00002186", "ENVO:00002264", "habitatmech:GOLD.2acb39dd08"]}, "ENVO:00002006": {"definition": "An environmental material primarily composed of dihydrogen oxide in its liquid form.", "grounding_status": "EXACT", "label": "liquid water", "parent_habitats": ["ENVO:01000815"]}, "ENVO:00002011": {"definition": "Water which has a low concentration of dissolved solutes, particularly that of sodium chloride.", "grounding_status": "EXACT", "label": "fresh water", "parent_habitats": ["ENVO:00002006", "ENVO:00002030"]}, "ENVO:00002030": {"definition": "A biome which is determined by a water body and which has ecological climax communities adapted to life in or on water.", "grounding_status": "EXACT", "label": "aquatic biome", "parent_habitats": ["ENVO:00000428", "ENVO:01001787", "habitatmech:BACDIVE.0f1e92a02c"]}, "ENVO:00002264": {"definition": "A material which is not the desired output of a process and which is typically the input of a process which removes it from its producer (e.g. a disposal process).", "grounding_status": "EXACT", "label": "waste material", "parent_habitats": ["ENVO:00010483"]}, "ENVO:00005792": {"definition": "Water which has physicochemical properties determined by processes which occur beneath the planetary crust.", "grounding_status": "EXACT", "label": "underground water", "parent_habitats": ["ENVO:00002006"]}, "ENVO:00010483": {"definition": "A material entity which other material entities in an environmental system are primarily or partially composed of.", "grounding_status": "EXACT", "label": "environmental material", "parent_habitats": null}, "ENVO:01000254": {"definition": "A system which has the disposition to environ one or more material entities.", "grounding_status": "EXACT", "label": "environmental system", "parent_habitats": null}, "ENVO:01000964": {"definition": "Wastewater which is produced by industrial activity and which contains chemical contaminants other than those associated with urine and fecal matter.", "grounding_status": "EXACT", "label": "industrial wastewater", "parent_habitats": ["ENVO:00002001"]}, "ENVO:01001004": {"definition": "Underground water which is located in pore spaces found in rock or unconsolidated deposits such as soil, clay, or gravel.", "grounding_status": "EXACT", "label": "groundwater", "parent_habitats": ["ENVO:00005792"]}, "habitatmech:BACDIVE.0f1e92a02c": {"definition": "An environmental system which is a portion of the air, water, or land surface or subsurface of an astronomical body sampled in place, and which is neither bounded by a host organism nor constituted by a constructed or operated artefact.", "grounding_status": "UNGROUNDED", "label": "free-living environment", "parent_habitats": ["ENVO:01000254"]}, "habitatmech:GOLD.2acb39dd08": {"definition": null, "grounding_status": "UNGROUNDED", "label": "Engineered", "parent_habitats": null}, "habitatmech:GOLD.7f8e268653": {"definition": null, "grounding_status": "NARROW", "label": "Groundwater", "parent_habitats": ["ENVO:00002011", "ENVO:01001004"]}} |
+| BULK | https://gold.jgi.doe.gov/download?mode=site_excel; Five-position tuples; internal blank/Unclassified positions preserved; contact fields excluded | supports | Exact positional census counts={"Biosample": 69, "Organism": 27, "SequencingProject": 100}; first three sample/organism descriptions={"Biosample": [{"data": {"BIOSAMPLE GOLD ID": "Gb0050975", "BIOSAMPLE NAME": "Acid Mine Drainage (ARMAN) microbial communities from Richmond mine, Iron Mountain, CA, sample from UBA Biofilm", "BIOSAMPLE NCBI TAX NAME": "mine drainage metagenome", "BIOSAMPLE SAMPLE COLLECTION SITE": "Acid mine drainage"}, "row": 17}, {"data": {"BIOSAMPLE GOLD ID": "Gb0051083", "BIOSAMPLE NAME": "Acid mine drainage euryarchaeal communities from Richmond mine, California, USA - Sample 2", "BIOSAMPLE NCBI TAX NAME": "mine drainage metagenome", "BIOSAMPLE SAMPLE COLLECTION SITE": "Acid mine drainage"}, "row": 111}, {"data": {"BIOSAMPLE GOLD ID": "Gb0051084", "BIOSAMPLE NAME": "Acid mine drainage euryarchaeal communities from Richmond mine, California, USA - Sample 1", "BIOSAMPLE NCBI TAX NAME": "mine drainage metagenome", "BIOSAMPLE SAMPLE COLLECTION SITE": "Acid mine drainage"}, "row": 112}], "Organism": [{"data": {"ORGANISM GOLD ID": "Go0033619", "ORGANISM HABITAT": "Acid mine drainage", "ORGANISM ISOLATION HOST NAME": "", "ORGANISM NAME": "Acidomyces richmondensis BFW", "ORGANISM SAMPLE COLLECTION SITE": "Acid mine drainage"}, "row": 28585}, {"data": {"ORGANISM GOLD ID": "Go0044360", "ORGANISM HABITAT": "", "ORGANISM ISOLATION HOST NAME": "", "ORGANISM NAME": "Metallibacterium scheffleri DSM 24874", "ORGANISM SAMPLE COLLECTION SITE": "acid mine drainage biofilm"}, "row": 37202}, {"data": {"ORGANISM GOLD ID": "Go0097379", "ORGANISM HABITAT": "", "ORGANISM ISOLATION HOST NAME": "", "ORGANISM NAME": "Thermoplasmatales archaeon I-plasma", "ORGANISM SAMPLE COLLECTION SITE": "underground at the Ultraback A location (UBA site) in the Richmond Mine, Iron Mountain, CA"}, "row": 56293}]}. Later source context, not reconstructed frozen membership; other rows and study joins are indexed, not individually assessed. |
+| CLASS | https://gold.jgi.doe.gov/download?mode=ecosystempaths; Later official classification;35 of38 cohort paths matched | supports | [{"row": 429, "slug": "acid_mine_drainage", "path": "Engineered &gt; Wastewater &gt; Industrial wastewater &gt; Acid mine drainage", "values": ["8141", "Engineered", "Wastewater", "Industrial wastewater", "Acid mine drainage", "Unclassified"]}, {"row": 577, "slug": "acid_mine_drainage", "path": "Environmental &gt; Aquatic &gt; Freshwater &gt; Groundwater &gt; Acid Mine Drainage", "values": ["4164", "Environmental", "Aquatic", "Freshwater", "Groundwater", "Acid Mine Drainage"]}] |
+| TAX0 | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=100%2C1000566%2C1001240%2C1003%2C1005928%2C1007109%2C1007110%2C1007111%2C1007112%2C1007113%2C1007114%2C1007115%2C1007116%2C1007117%2C1007118%2C1007119%2C1007120%2C1007122%2C1007124%2C1009412%2C1009413%2C1009414%2C1009415%2C1009416%2C1009418%2C1061%2C1069448%2C1089547%2C1121003%2C1121028%2C1121087%2C1121877%2C1121915%2C1121920%2C1121953%2C1121957%2C1122130%2C1122209%2C1122214%2C1122215%2C1123060%2C1123231%2C1123239%2C1153%2C1162967%2C1162970%2C118062%2C1211807%2C1216008%2C121821%2C1246448%2C129961%2C1344948%2C1408424%2C143495%2C145262%2C1486246%2C159087%2C162176%2C167968%2C1712410%2C172044%2C1869227%2C1876%2C190721%2C1931%2C2%2C216595%2C217%2C2171%2C217139%2C254410%2C266264%2C266265%2C266940%2C269482%2C2719616%2C2735894%2C2735895%2C2735896%2C2735898%2C2735899%2C279826%2C279828%2C28214%2C28232%2C287%2C292807%2C293256%2C294%2C296591%2C303%2C306%2C314266%2C314275%2C317655%2C320502%2C322710%2C338969%2C33952%2C340100%2C343080%2C349163%2C365044%2C376%2C376219%2C379731%2C391735%2C392499%2C393762%2C39441%2C396595%2C398000%2C398578%2C399739%2C406100%2C409%2C413712%2C42252%2C426128%2C441209%2C442899%2C446%2C452662%2C477666%2C47917%2C490098%2C517424%2C52690%2C53249%2C540251%2C555088%2C555779%2C562%2C56698%2C573060%2C579922%2C582402%2C58621%2C59277%2C643562%2C643673%2C65553%2C667019%2C678%2C694430%2C702568%2C710696%2C760568%2C768535&amp;retmode=xml; NCBI EFetch TaxId, aliases, ScientificName and Rank | supports | The two response chunks jointly resolve all166 cohort IDs. This target=[{"current_id": "768535", "current_name": "Acidipila rosea", "frozen_label": "Acidipila rosea", "id": "768535", "rank": "species"}, {"current_id": "1121877", "current_name": "Ferrimicrobium acidiphilum DSM 19497", "frozen_label": "Ferrimicrobium acidiphilum DSM 19497", "id": "1121877", "rank": "strain"}, {"current_id": "349163", "current_name": "Acidiphilium cryptum JF-5", "frozen_label": "Acidiphilium cryptum JF-5", "id": "349163", "rank": "strain"}]. Naming differences in alkaline-water entries agree with retained aliases/strain identifiers. Resolution does not prove habitat occurrence. |
+| TAX1 | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=78178%2C82116%2C82985%2C83428%2C844%2C84567%2C849756%2C85643%2C86667%2C889378%2C927658%2C93718%2C94122%2C942938%2C957042%2C993416&amp;retmode=xml; NCBI EFetch TaxId, aliases, ScientificName and Rank | supports | The two response chunks jointly resolve all166 cohort IDs. This target=[{"current_id": "768535", "current_name": "Acidipila rosea", "frozen_label": "Acidipila rosea", "id": "768535", "rank": "species"}, {"current_id": "1121877", "current_name": "Ferrimicrobium acidiphilum DSM 19497", "frozen_label": "Ferrimicrobium acidiphilum DSM 19497", "id": "1121877", "rank": "strain"}, {"current_id": "349163", "current_name": "Acidiphilium cryptum JF-5", "frozen_label": "Acidiphilium cryptum JF-5", "id": "349163", "rank": "strain"}]. Naming differences in alkaline-water entries agree with retained aliases/strain identifiers. Resolution does not prove habitat occurrence. |
+| SEARCH | curation; history; research; reports; reviews; data/raw; data/habitats; conf; Exact bounded searches, not global absence claims | supports | Identifier, label, slug and source-path search included ignored/hidden files in these roots; coverage inventory used Path.rglob. No earlier structured target observation was found in that bounded corpus. Upstream search={"configured_root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe", "root_exists": true, "exact_paths": [{"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_nodes.tsv", "exists": false, "expected_sha256": "c13c21bdd04619c75ce16e63b05e51577b0cefec5b61765d383313f654ab3fae"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_edges.tsv", "exists": false, "expected_sha256": "54982c25de9d2c820eeebc1452aeac0b034595921d04d55b810bf1d2b1e127e0"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/nodes.tsv", "exists": false, "expected_sha256": "a2a2f9acae230636dd866347d173a32c9f025c04a377060087a4be65781628f3"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/edges.tsv", "exists": false, "expected_sha256": "ab6208bff4854db7c1a736d53d0aa04269a682ab15a1ce6f37c6d731000281d7"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/nodes.tsv", "exists": false, "expected_sha256": "020de3afc71495571ddb05000c83a58d009272f53735b5f7c9326c1293e0415c"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/edges.tsv", "exists": false, "expected_sha256": "8863ee3197a36915865fa4833df39d10c3f8f69b64bafbb746b9cd731308a0aa"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/nodes.tsv", "exists": false, "expected_sha256": "cc5941cd677831e8e207da018dca763cd009bb1f9310b21cb4d45892316e006d"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/edges.tsv", "exists": false, "expected_sha256": "fd333634eaaa3cfe57a35cdca2f4c5b8cf0662851c1df58914d3e999d62a650e"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/environments.csv", "exists": false, "expected_sha256": "99299fe635159712f95568783ad3b484230fb31781262f1f6f8bd84db4bc3048"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/mappings/isolation_source_to_ontology.tsv", "exists": false, "expected_sha256": "2dea3d1bb20c72a04b6f64a67e2bb2bdc4f3649b809c5935390239be2791ef1f"}], "traversal": [{"command": ["rg", "--files", "--no-ignore", "--hidden", "data"], "exit_code": 0, "matches": [], "stderr": ""}, {"command": ["rg", "--files", "--no-ignore", "--hidden", "build"], "exit_code": 0, "matches": [], "stderr": ""}, {"command": ["rg", "--files", "--no-ignore", "--hidden", "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data"], "exit_code": 0, "matches": [], "stderr": ""}]} |
+| ISSUES | https://github.com/CultureBotAI/HabitatMech/issues; GitHub CLI census; issue comments were not exhaustively crawled | supports | All-state939-issue title/body census inspected for target and shared-contract overlap. Related1249,1398,1226,1408,1437 and1614 remain independently scoped; old report corrections do not prove scientific repair. |
+
+## Limits And Additional Notes
+
+- A completed assessment is not a clean verdict or proof of every assertion.
+- Only first three exact BioSample/Organism descriptions per sheet were individually interpreted. Other matched rows and joins were indexed, not individually reviewed.
+- Original assertion-level membership was not reconstructed; no current ontology/taxonomy/source refresh was applied.
+- Same-agent review, not independent approval. No native status promotion.
+- SSSOM/KGX current kg-microbe conformance was not audited; shared1398 remains open.
+- Full-corpus review remains incomplete; ancestor/context reads do not add target coverage.
+- New immutable observation only; curation and publication are separate authorized steps.
+- No prior structured observation of this exact target found; earlier reports/issues remain leads rather than silently resolved findings.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261011T212749Z-acid_mine_drainage
+kind: record
+repository: CultureBotAI/HabitatMech
+title: 'Scientific record review: acid_mine_drainage'
+started_at: '2026-10-11T21:14:52.706700Z'
+finished_at: '2026-10-11T21:27:49.244973Z'
+reviewer:
+  identity: OpenAI Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Agent has participated in repository curation; this is not independent
+    approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The ENVO acidic mine-drainage identity is supported by two GOLD paths and
+  PREGO, with separate18 and16 ORGANISM counts and three TAXON associations. The14-study
+  local-scale consensus is evidence for place identity, not equivalence of every triad
+  role. Generic acid mine drainage is not restricted to fresh groundwater; the merged
+  parent imports one source context. ENVO types acid rock drainage as related, not
+  exact.
+source:
+  git_revision: f21144ef328783600b053e8ec9bcb7b16b866d58
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: conf/record_review.yaml
+    sha256: c2f5d0eb4c5744f5fe354c92184ddab144dc2688dba952b032b4f3d597bc08d6
+    role: context
+  - path: conf/sources.yaml
+    sha256: a8e069f9278068b57fa234f43e03c8d893f857827b83fd10cfa92d6815aed642
+    role: context
+  - path: curation/causal_graphs/aquatic_biome.yaml
+    sha256: 03ba09d10f9a9d8d32060fc0208b511ef0d59e731fd7c63ca6c02296e70da5f5
+    role: context
+  - path: curation/causal_graphs/fresh_water.yaml
+    sha256: e95ea96aa1912066d4c98cbff91e34528668d4c453d93dc4203c67e7769c691a
+    role: context
+  - path: curation/causal_graphs/liquid_water.yaml
+    sha256: 12aac1021b9b51c6becc4ef8509bd63557b306e42c01d9b4443d69252ce29a81
+    role: context
+  - path: curation/causal_graphs/waste_water.yaml
+    sha256: 299b5128af6cf5f7a61ce53304f1084e6eb045414b47cbcfd8832de095142aef
+    role: context
+  - path: curation/decisions.tsv
+    sha256: 7cbec6d310b1aac248defdbe657e68c0cc1e848981230d2279e63f474c6f4c96
+    role: context
+  - path: curation/definition_source_label_exclusions.tsv
+    sha256: 2d41fc93db4939122b3909f2a412b84b679703948b10d9f02e12021442f71407
+    role: context
+  - path: curation/external_xrefs.tsv
+    sha256: cf8394a6ab22e35efd9e252aef422018226280830bf816a39bf4f2256ff75ad5
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: 53522d2fbe1cfa6c6a350a46170de9b80b1fa138dfcf4e9ddb0b5851f29d1c88
+    role: context
+  - path: curation/redirects_retracted.tsv
+    sha256: 0f1e9af8881f5a5db19f87de06b3b3d1800cfac8101699b380388c0a1a1e9a19
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 3f2ce04805defe5ff65dc20988cc72bc94d4636b3140eb1311017866bdc0ea0a
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: b59b9e800a918135e3915145d4d8098bb48dcea36a312b3004c594a57d221ae9
+    role: context
+  - path: data/habitats/aquatic/acid_mine_drainage.yaml
+    sha256: c53c3be3daf3df6549f838cf1688a5188476e96ebeb17c4131628c776d726426
+    role: target
+  - path: data/habitats/aquatic/aquatic_biome.yaml
+    sha256: 27466c1abb6814aa790ecec6987d803850d0237c697c565e6fc21d1baaebfa27
+    role: context
+  - path: data/habitats/aquatic/fresh_water.yaml
+    sha256: fc60c1fc64ceea8fdf8d2d294dc96c855aa3793962f818e9cdd1b9b3cb87d1be
+    role: context
+  - path: data/habitats/aquatic/groundwater__25377149.yaml
+    sha256: 544ade94828e3661804e081b6349061463ec793deaed3776eda4eceb5afa08a8
+    role: context
+  - path: data/habitats/aquatic/groundwater__585f08d9.yaml
+    sha256: c312e4f180875d56e34afecdb41cde835eff185770b508626e81e00b9dabfcb8
+    role: context
+  - path: data/habitats/aquatic/liquid_water.yaml
+    sha256: 03eb8ba51e02bc4c8b65b67ae5d8bb740746f8eff51ed81326685fdc5067b081
+    role: context
+  - path: data/habitats/aquatic/underground_water.yaml
+    sha256: ffb74eebd8196044ed52d9866f6e778a87b4fce2bfac5194713d8551150ae3d7
+    role: context
+  - path: data/habitats/engineered/engineered__900b76ad.yaml
+    sha256: 85154c9542e8e033e17cf631b06a462612229f3bcfdc1cdca0fc6cf73b9b9364
+    role: context
+  - path: data/habitats/engineered/industrial_wastewater.yaml
+    sha256: 07698df721a169cd55c2d1ce80027df8c8a3140536ba99eee312272887ce8768
+    role: context
+  - path: data/habitats/engineered/waste_water.yaml
+    sha256: 774c88de3169fb8ae95ea05deb748f21e036a35d0b21734c81c228493ec96056
+    role: context
+  - path: data/habitats/other/biome.yaml
+    sha256: 43080ce9bd411ee97a20d97c17bd923405c040feaf9454d44ca22a2955ce1854
+    role: context
+  - path: data/habitats/other/environmental.yaml
+    sha256: b23a64a2d7594f05716dfc8f525d184fe8bb5d885dbb9e755ba8cc844f433659
+    role: context
+  - path: data/habitats/other/environmental_material.yaml
+    sha256: f3916c9c17060dbb92c026d8e340be9478c37409361279bbb639642cdae29fe7
+    role: context
+  - path: data/habitats/other/environmental_system.yaml
+    sha256: 2c227791ce7b92c16ae9b76ad8295be95efee73cb65ec7050d1de2b00c8eecbc
+    role: context
+  - path: data/habitats/other/waste_material.yaml
+    sha256: fe8e42f2fe582f7984c8a12d7015ba28a3c417267590b545980d27811a13b757
+    role: context
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: 36df8306394c06c352b73e0bf7b47a2858784cedac7389a24d0b78f593ece646
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: f7aa39ee762d94f1902d9f08f328cb897bc543e4e226057eb4770d24bfcc6eb5
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/mappings/sediment__64234dd6/2026-10-10T202507Z-codex-gpt-5-4870ff.yaml
+    sha256: 0cbd02ad416388fbacd35cc037b8fc74d7021d7a06cf55260622c1f940bff14f
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reports/yaml_record_review/20260921T083221Z-acid_mine_drainage.md
+    sha256: 8305c701e9e5a4446fb6be7fa60692a05bcb3d2582a545a34c40ab09308b4339
+    role: context
+  - path: reports/yaml_record_review/20261004T190905Z-mine_drainage.md
+    sha256: 32e7b1465f38157fa32f7212754eed9c52e310acdd768c938b7e5a0322345633
+    role: context
+  - path: research/habitats/other/geologic-habitatmech-bacdive-bf10ea3ae4-deep-research-claude_code.md
+    sha256: d463f9eb0efefba57d9dc1ced2b43ebc97feb80250678c9dadda912295b59b4a
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/extract_gold_biosamples.py
+    sha256: b6a2773c86fe718e1ca0b1d7b32709f0eee491ac813655e310aa0817c0fec31b
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: 4bf5391d25ff48a2d81eb3821af6582de063fd0391440973d309dfd93016490c
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: src/habitatmech/extract.py
+    sha256: 4d9397bda649381a5daf81937369531c6dc8b4518d6c7047e6f3f14e605bf860
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 7e3cda3dadb9c7462498e5014bf38ef730068212f8f9cb131e3fce383c21d10e
+    role: context
+  - path: src/habitatmech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+  - path: src/habitatmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 4adf105e23d75c3563a516a0c160623d1065df7fcb2f31b7a0a0a8303d0401be
+    role: context
+targets:
+- target_id: ENVO:00001997
+  path: data/habitats/aquatic/acid_mine_drainage.yaml
+  label: acid mine drainage
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Per-source grounding and native review-depth decisions
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Exact GOLD context-parent contribution decisions
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Curated definition, genus and lexical scope
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_terms.tsv
+    role: Pinned ontology identity, labels, synonyms and definitions
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_subclass_edges.tsv
+    role: Pinned ontology hierarchy
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Source harmonization and generated output
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/prego_habitats.tsv
+    role: Frozen PREGO habitat identity and count
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/prego_habitat_taxa.tsv
+    role: Frozen top-ranked taxon associations
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/gold_ecosystem_paths.tsv
+    role: Frozen source paths, nodes and ORGANISM counts
+scope:
+  description: Entire exact generated record and every contributing source, with bounded
+    scientific and source-context assessment.
+  selection: 'Next forty unreviewed records in stable repository-relative path order:
+    all seven AIR records plus thirty-three AQUATIC records. Individual full-record
+    observations, not a category-wide pass. Starting distinct completed-observation
+    coverage488/3208 is not current-input clean coverage.'
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - ENVO:00001997
+  exclusions:
+  - target: Other3207 current records
+    reason: Context reads do not count as their full-record review.
+checks:
+- check_id: C0
+  name: Native check on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00001997
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=f21144ef328783600b053e8ec9bcb7b16b866d58
+    just validate data/habitats/aquatic/acid_mine_drainage.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-11T21:17:17.242685Z to 2026-10-11T21:17:20.636343Z.
+    Native applicability retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C1
+  name: Native check on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00001997
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=f21144ef328783600b053e8ec9bcb7b16b866d58
+    just validate-strict data/habitats/air/air.yaml data/habitats/air/cattle_barn.yaml
+    data/habitats/air/composting_facility.yaml data/habitats/air/indoor_air.yaml data/habitats/air/outdoor_air.yaml
+    data/habitats/air/poultry_farm__064a62e0.yaml data/habitats/air/poultry_litter_bioaerosol.yaml
+    data/habitats/aquatic/abyssal_plane.yaml data/habitats/aquatic/abyssopelagic_abyssal_zone.yaml
+    data/habitats/aquatic/acid_lake.yaml data/habitats/aquatic/acid_mine_drainage.yaml
+    data/habitats/aquatic/acid_saline_drainage.yaml data/habitats/aquatic/acidic.yaml
+    data/habitats/aquatic/acidic__10d13a02.yaml data/habitats/aquatic/acidic__a1864fe6.yaml
+    data/habitats/aquatic/acidic__cd3d18a9.yaml data/habitats/aquatic/acidic_hypersaline_lake.yaml
+    data/habitats/aquatic/acidic_lake.yaml data/habitats/aquatic/acidic_spring.yaml
+    data/habitats/aquatic/adjacent_soil.yaml data/habitats/aquatic/agricultural_field__c2942601.yaml
+    data/habitats/aquatic/algal_bloom.yaml data/habitats/aquatic/alkaline.yaml data/habitats/aquatic/alkaline__009939a8.yaml
+    data/habitats/aquatic/alkaline__02df7139.yaml data/habitats/aquatic/alkaline__43fce277.yaml
+    data/habitats/aquatic/alkaline_salt_lake.yaml data/habitats/aquatic/alkaline_spring.yaml
+    data/habitats/aquatic/alkaline_water.yaml data/habitats/aquatic/anoxic_water.yaml
+    data/habitats/aquatic/anoxic_zone.yaml data/habitats/aquatic/aphotic_zone.yaml
+    data/habitats/aquatic/aquaculture__f784f173.yaml data/habitats/aquatic/aquatic_biome.yaml
+    data/habitats/aquatic/aquifer.yaml data/habitats/aquatic/aquifer__33e3996b.yaml
+    data/habitats/aquatic/aquifer__f620c815.yaml data/habitats/aquatic/archipelago.yaml
+    data/habitats/aquatic/artesian_spring.yaml data/habitats/aquatic/athalassic.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-11T21:18:37.998816Z to 2026-10-11T21:18:52.797329Z.
+    Native applicability retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C2
+  name: Native check on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00001997
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=f21144ef328783600b053e8ec9bcb7b16b866d58
+    just verify-corpus
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-11T21:18:52.798654Z to 2026-10-11T21:19:13.373581Z.
+    Native applicability retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C3
+  name: Native check on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00001997
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=f21144ef328783600b053e8ec9bcb7b16b866d58
+    just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-11T21:19:13.374728Z to 2026-10-11T21:20:25.537883Z.
+    Native applicability retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C4
+  name: Native check on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00001997
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=f21144ef328783600b053e8ec9bcb7b16b866d58
+    just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-11T21:20:25.538899Z to 2026-10-11T21:20:35.475232Z.
+    Native applicability retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C5
+  name: Native check on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00001997
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=f21144ef328783600b053e8ec9bcb7b16b866d58
+    just validate-causal-all
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-11T21:20:35.476484Z to 2026-10-11T21:20:41.494943Z.
+    Native applicability retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C6
+  name: Native check on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00001997
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=f21144ef328783600b053e8ec9bcb7b16b866d58
+    just term-requests-check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-11T21:20:41.496068Z to 2026-10-11T21:21:03.930674Z.
+    Native applicability retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C7
+  name: Native check on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00001997
+  command: gh run view 38174600184 --repo CultureBotAI/HabitatMech --log
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-11T21:17:58.517657Z to 2026-10-11T21:18:00.677113Z.
+    All three required merge-group workflows passed at the exact captured base; authoritative
+    QC passed 783 tests with 3 skipped. Newly saved review bundles require their own
+    integrity check. Exact-base CI receipt; not a claim that new review files already
+    passed CI.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: REPRO
+  name: Complete reconstruction
+  required: false
+  status: passed
+  target_ids:
+  - ENVO:00001997
+  command: .venv/bin/python /private/tmp/habitatmech-review-ax-evidence.py
+  exit_code: 0
+  summary: All40 complete documents matched; input hashes reverified.
+  evidence_ids:
+  - RAW
+  - CODE
+- check_id: ORIGINAL
+  name: Original assertion membership
+  required: false
+  status: unavailable
+  target_ids:
+  - ENVO:00001997
+  summary: Bounded ignored-inclusive upstream searches did not recover complete frozen
+    membership. Later exports are context only.
+  evidence_ids:
+  - SEARCH
+- check_id: IMODULON
+  name: iModulonDB applicability
+  required: false
+  status: not_applicable
+  target_ids:
+  - ENVO:00001997
+  summary: No expression-module claim; membership would not prove habitat association.
+  evidence_ids:
+  - R
+  - RULES
+evidence:
+- evidence_id: R
+  kind: record_content
+  reference: data/habitats/aquatic/acid_mine_drainage.yaml
+  summary: The ENVO acidic mine-drainage identity is supported by two GOLD paths and
+    PREGO, with separate18 and16 ORGANISM counts and three TAXON associations. The14-study
+    local-scale consensus is evidence for place identity, not equivalence of every
+    triad role. Generic acid mine drainage is not restricted to fresh groundwater;
+    the merged parent imports one source context. ENVO types acid rock drainage as
+    related, not exact.
+  accessed_at: '2026-10-11T21:27:49.244973Z'
+  support: supports
+  locator: Entire captured YAML read, including sources, taxa, parameters, graphs
+    and history
+- evidence_id: RULES
+  kind: record_content
+  reference: docs/CURATION.md; docs/HARMONIZATION.md; docs/RESEARCH.md; src/habitatmech/schema/habitatmech.yaml
+  summary: Applied strict-parent, exact identity, MIxS role, source count/score, ITEM
+    lifecycle and claim-specific evidence contracts.
+  accessed_at: '2026-10-11T21:27:49.244973Z'
+  support: supports
+- evidence_id: RAW
+  kind: database
+  reference: data/raw; curation/decisions.tsv; curation/term_requests.tsv; curation/gold_parent_exclusions.tsv
+  summary: '{"curation/decisions.tsv": [{"data": {"category": "", "curator": "claude-opus-5",
+    "date": "2026-08-13", "decision": "REVIEW", "grounding_status": "", "identifier":
+    "habitatmech:GOLD.4d88cc502b", "notes": "Multi-source review pass: this record
+    is attested by more than one independent vocabulary, and this source''s label
+    or path was read against the record''s ontology term to check the merge is right.
+    It agrees. Source concepts in the same pass whose labels did not agree were re-decided
+    rather than endorsed; see the pass''s other decisions of the same date.", "object_id":
+    "", "object_label": "", "relation": "", "review_depth": "ITEM"}, "logical_row":
+    502}, {"data": {"category": "", "curator": "claude-opus-5", "date": "2026-08-13",
+    "decision": "REVIEW", "grounding_status": "", "identifier": "habitatmech:PREGO.03c5325bcc",
+    "notes": "Multi-source review pass: this record is attested by more than one independent
+    vocabulary, and this source''s label or path was read against the record''s ontology
+    term to check the merge is right. It agrees. Source concepts in the same pass
+    whose labels did not agree were re-decided rather than endorsed; see the pass''s
+    other decisions of the same date.", "object_id": "", "object_label": "", "relation":
+    "", "review_depth": "ITEM"}, "logical_row": 1401}, {"data": {"category": "", "curator":
+    "claude-opus-5", "date": "2026-08-20", "decision": "GROUND", "grounding_status":
+    "EXACT", "identifier": "habitatmech:GOLD.d727388954", "notes": "Triad-evidence
+    review (#126): GOLD''s submitters annotate each biosample with a MIxS ENVO triad,
+    and this concept''s path carries 14 INDEPENDENT studies all asserting local =
+    ENVO:00001997 ''acid mine drainage''. That is evidence of a different kind from
+    a label match \u2014 what the people who took the samples said the environment
+    was. Study count is what is quoted rather than sample count because 122 of 140
+    unanimous paths are one study repeating itself; this one is corroborated across
+    14. The record was minted by the ambiguous-leaf rule because a shallower GOLD
+    path, Engineered > Wastewater > Industrial wastewater > Acid mine drainage, already
+    claimed the term. Both paths denote acid mine drainage; GOLD files the same concept
+    under two branches. Grounding merges them, which is right \u2014 unlike the Sediment
+    cases, this is a specific kind of place rather than a material that occurs in
+    many settings.", "object_id": "ENVO:00001997", "object_label": "acid mine drainage",
+    "relation": "", "review_depth": "ITEM"}, "logical_row": 1799}], "data/raw/gold_ecosystem_paths.tsv":
+    [{"data": {"biosample_count": "0", "canonical_path": "Environmental > Aquatic
+    > Freshwater > Groundwater > Acid Mine Drainage", "depth": "5", "ecosystem": "Environmental",
+    "ecosystem_category": "Aquatic", "ecosystem_subtype": "Groundwater", "ecosystem_type":
+    "Freshwater", "gold_node_count": "1", "gold_node_ids": "gold.ecosystem:4164",
+    "leaf_label": "Acid Mine Drainage", "organism_count": "18", "specific_ecosystem":
+    "Acid Mine Drainage", "study_count": "0", "total_assertions": "18"}, "logical_row":
+    431}, {"data": {"biosample_count": "0", "canonical_path": "Engineered > Wastewater
+    > Industrial wastewater > Acid mine drainage", "depth": "4", "ecosystem": "Engineered",
+    "ecosystem_category": "Wastewater", "ecosystem_subtype": "Acid mine drainage",
+    "ecosystem_type": "Industrial wastewater", "gold_node_count": "2", "gold_node_ids":
+    "gold.ecosystem:6075|gold.ecosystem:8141", "leaf_label": "Acid mine drainage",
+    "organism_count": "16", "specific_ecosystem": "", "study_count": "0", "total_assertions":
+    "16"}, "logical_row": 451}], "data/raw/gold_path_biosamples.tsv": [{"data": {"biosample_count":
+    "60", "canonical_path": "Environmental > Aquatic > Freshwater > Groundwater >
+    Acid Mine Drainage", "ecosystem_path_id": "4164"}, "logical_row": 325}], "data/raw/gold_path_triads.tsv":
+    [{"data": {"canonical_path": "Engineered > Wastewater > Industrial wastewater
+    > Acid mine drainage", "distinct_terms": "1", "samples": "4", "slot": "broad",
+    "studies": "1", "studies_agreeing": "1", "top_label": "aquatic biome", "top_share":
+    "1.00", "top_term": "ENVO:00002030"}, "logical_row": 158}, {"data": {"canonical_path":
+    "Engineered > Wastewater > Industrial wastewater > Acid mine drainage", "distinct_terms":
+    "1", "samples": "4", "slot": "local", "studies": "1", "studies_agreeing": "1",
+    "top_label": "acid mine drainage", "top_share": "1.00", "top_term": "ENVO:00001997"},
+    "logical_row": 159}, {"data": {"canonical_path": "Engineered > Wastewater > Industrial
+    wastewater > Acid mine drainage", "distinct_terms": "1", "samples": "4", "slot":
+    "medium", "studies": "1", "studies_agreeing": "1", "top_label": "acidic water",
+    "top_share": "1.00", "top_term": "ENVO:01000358"}, "logical_row": 160}, {"data":
+    {"canonical_path": "Environmental > Aquatic > Freshwater > Groundwater > Acid
+    Mine Drainage", "distinct_terms": "1", "samples": "60", "slot": "broad", "studies":
+    "14", "studies_agreeing": "14", "top_label": "aquatic biome", "top_share": "1.00",
+    "top_term": "ENVO:00002030"}, "logical_row": 269}, {"data": {"canonical_path":
+    "Environmental > Aquatic > Freshwater > Groundwater > Acid Mine Drainage", "distinct_terms":
+    "1", "samples": "60", "slot": "local", "studies": "14", "studies_agreeing": "14",
+    "top_label": "acid mine drainage", "top_share": "1.00", "top_term": "ENVO:00001997"},
+    "logical_row": 270}, {"data": {"canonical_path": "Environmental > Aquatic > Freshwater
+    > Groundwater > Acid Mine Drainage", "distinct_terms": "3", "samples": "60", "slot":
+    "medium", "studies": "14", "studies_agreeing": "12", "top_label": "acidic water",
+    "top_share": "0.57", "top_term": "ENVO:01000358"}, "logical_row": 271}], "data/raw/ontology_subclass_edges.tsv":
+    [{"data": {"object": "ENVO:00001996", "predicate": "rdfs:subClassOf", "subject":
+    "ENVO:00001997"}, "logical_row": 5258}], "data/raw/ontology_terms.tsv": [{"data":
+    {"definition": "A mine drainage with an acidic pH.", "deprecated": "", "directly_referenced":
+    "TRUE", "label": "acid mine drainage", "label_only": "FALSE", "ontology": "ENVO",
+    "synonyms": "acid rock drainage", "term_id": "ENVO:00001997"}, "logical_row":
+    7156}], "data/raw/prego_habitat_taxa.tsv": [{"data": {"channels": "annotated_genomes_isolates",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00001997", "prego_score":
+    "4", "rank": "1", "taxon_id": "NCBITaxon:768535", "taxon_label": "Acidipila rosea"},
+    "logical_row": 5338}, {"data": {"channels": "annotated_genomes_isolates", "corroborated_by":
+    "", "direct_flag": "TRUE", "prego_id": "ENVO:00001997", "prego_score": "3", "rank":
+    "2", "taxon_id": "NCBITaxon:1121877", "taxon_label": "Ferrimicrobium acidiphilum
+    DSM 19497"}, "logical_row": 5339}, {"data": {"channels": "annotated_genomes_isolates",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00001997", "prego_score":
+    "3", "rank": "3", "taxon_id": "NCBITaxon:349163", "taxon_label": "Acidiphilium
+    cryptum JF-5"}, "logical_row": 5340}], "data/raw/prego_habitats.tsv": [{"data":
+    {"biolink_category": "biolink:OntologyClass", "channels": "annotated_genomes_isolates",
+    "direct_assertion_count": "3", "max_prego_score": "4", "ontology": "ENVO", "prego_id":
+    "ENVO:00001997", "prego_synonyms": "acid mine drainage|acid mine drainages|acid
+    rock drainage|acid rock drainages", "taxon_count": "3"}, "logical_row": 460}]}'
+  accessed_at: '2026-10-11T21:27:49.244973Z'
+  support: supports
+  locator: Exact logical TSV rows; header is row1. Nearby-path matches excluded.
+- evidence_id: CODE
+  kind: record_content
+  reference: src/habitatmech/seed.py
+  summary: '{"reviewed_sources": 3, "routes": [{"actual": {"category": null, "contributes_grounding":
+    true, "decision": {"category": "", "curator": "claude-opus-5", "date": "2026-08-20",
+    "decision": "GROUND", "grounding_status": "EXACT", "identifier": "habitatmech:GOLD.d727388954",
+    "notes": "Triad-evidence review (#126): GOLD''s submitters annotate each biosample
+    with a MIxS ENVO triad, and this concept''s path carries 14 INDEPENDENT studies
+    all asserting local = ENVO:00001997 ''acid mine drainage''. That is evidence of
+    a different kind from a label match \u2014 what the people who took the samples
+    said the environment was. Study count is what is quoted rather than sample count
+    because 122 of 140 unanimous paths are one study repeating itself; this one is
+    corroborated across 14. The record was minted by the ambiguous-leaf rule because
+    a shallower GOLD path, Engineered > Wastewater > Industrial wastewater > Acid
+    mine drainage, already claimed the term. Both paths denote acid mine drainage;
+    GOLD files the same concept under two branches. Grounding merges them, which is
+    right \u2014 unlike the Sediment cases, this is a specific kind of place rather
+    than a material that occurs in many settings.", "object_id": "ENVO:00001997",
+    "object_label": "acid mine drainage", "relation": "parent", "review_depth": "ITEM"},
+    "extra_parents": [], "extra_xrefs": [], "grounding_status": "EXACT", "identifier":
+    "ENVO:00001997", "mapping_predicate": "skos:exactMatch", "reviewed": true, "route":
+    "curated_ground_from_gold_narrower_than_leaf_match"}, "automatic": {"category":
+    null, "contributes_grounding": true, "decision": null, "extra_parents": ["ENVO:00001997"],
+    "extra_xrefs": [], "grounding_status": "NARROW", "identifier": "habitatmech:GOLD.d727388954",
+    "mapping_predicate": "skos:narrowMatch", "reviewed": false, "route": "gold_narrower_than_leaf_match"},
+    "minted": "habitatmech:GOLD.d727388954", "source": "GOLD", "source_id": "gold.ecosystem:4164"},
+    {"actual": {"category": null, "contributes_grounding": true, "decision": {"category":
+    "", "curator": "claude-opus-5", "date": "2026-08-13", "decision": "REVIEW", "grounding_status":
+    "", "identifier": "habitatmech:GOLD.4d88cc502b", "notes": "Multi-source review
+    pass: this record is attested by more than one independent vocabulary, and this
+    source''s label or path was read against the record''s ontology term to check
+    the merge is right. It agrees. Source concepts in the same pass whose labels did
+    not agree were re-decided rather than endorsed; see the pass''s other decisions
+    of the same date.", "object_id": "", "object_label": "", "relation": "parent",
+    "review_depth": "ITEM"}, "extra_parents": [], "extra_xrefs": [], "grounding_status":
+    "EXACT", "identifier": "ENVO:00001997", "mapping_predicate": "skos:exactMatch",
+    "reviewed": true, "route": "curated_review_of_gold_leaf_label"}, "automatic":
+    {"category": null, "contributes_grounding": true, "decision": null, "extra_parents":
+    [], "extra_xrefs": [], "grounding_status": "EXACT", "identifier": "ENVO:00001997",
+    "mapping_predicate": "skos:exactMatch", "reviewed": false, "route": "gold_leaf_label"},
+    "minted": "habitatmech:GOLD.4d88cc502b", "source": "GOLD", "source_id": "gold.ecosystem:6075"},
+    {"actual": {"category": null, "contributes_grounding": true, "decision": {"category":
+    "", "curator": "claude-opus-5", "date": "2026-08-13", "decision": "REVIEW", "grounding_status":
+    "", "identifier": "habitatmech:PREGO.03c5325bcc", "notes": "Multi-source review
+    pass: this record is attested by more than one independent vocabulary, and this
+    source''s label or path was read against the record''s ontology term to check
+    the merge is right. It agrees. Source concepts in the same pass whose labels did
+    not agree were re-decided rather than endorsed; see the pass''s other decisions
+    of the same date.", "object_id": "", "object_label": "", "relation": "parent",
+    "review_depth": "ITEM"}, "extra_parents": [], "extra_xrefs": [], "grounding_status":
+    "EXACT", "identifier": "ENVO:00001997", "mapping_predicate": null, "reviewed":
+    true, "route": "curated_review_of_prego_self_grounded"}, "automatic": {"category":
+    null, "contributes_grounding": true, "decision": null, "extra_parents": [], "extra_xrefs":
+    [], "grounding_status": "EXACT", "identifier": "ENVO:00001997", "mapping_predicate":
+    null, "reviewed": false, "route": "prego_self_grounded"}, "minted": "habitatmech:PREGO.03c5325bcc",
+    "source": "PREGO", "source_id": "ENVO:00001997"}], "source_concepts": 3}'
+  accessed_at: '2026-10-11T21:27:49.244973Z'
+  support: supports
+  locator: Executed full-document reconstruction; all40 matched captured records
+- evidence_id: ONT
+  kind: authority
+  reference: https://raw.githubusercontent.com/EnvironmentOntology/envo/master/envo.owl
+  summary: '{"ENVO:00001996": {"definitions": ["The outflow of water from a mine."],
+    "deprecated": [], "equivalents": [], "labels": ["mine drainage"], "parents": ["http://purl.obolibrary.org/obo/ENVO_00000029",
+    {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"],
+    "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/BFO_0000050"],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_00000076"]}],
+    "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": [],
+    "hasNarrowSynonym": [], "hasRelatedSynonym": ["acid and metalliferous drainage",
+    "acid rock drainage"]}}, "ENVO:00001997": {"definitions": ["A mine drainage with
+    an acidic pH."], "deprecated": [], "equivalents": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+    ["http://www.w3.org/2002/07/owl#Class"], "http://www.w3.org/2002/07/owl#intersectionOf":
+    [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first": ["http://purl.obolibrary.org/obo/ENVO_00001996"],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first":
+    [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"],
+    "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0000086"],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/PATO_0001429"]}],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"]}]}]}],
+    "labels": ["acid mine drainage"], "parents": ["http://purl.obolibrary.org/obo/ENVO_00001996",
+    {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"],
+    "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0000086"],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/PATO_0001429"]}],
+    "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": [],
+    "hasNarrowSynonym": [], "hasRelatedSynonym": ["acid rock drainage"]}}, "ENVO:01000964":
+    {"definitions": ["Wastewater which is produced by industrial activity and which
+    contains chemical contaminants other than those associated with urine and fecal
+    matter."], "deprecated": [], "equivalents": [], "labels": ["industrial wastewater"],
+    "parents": ["http://purl.obolibrary.org/obo/ENVO_00002001"], "replacements": [],
+    "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": [], "hasNarrowSynonym":
+    [], "hasRelatedSynonym": []}}}'
+  accessed_at: '2026-10-11T13:21:47.927208Z'
+  support: supports
+  locator: Current named OWL identity, typed synonym scopes and direct axioms; no
+    pinned-source refresh
+  snapshot_sha256: a0b919065d33a9cf975b74cadd16c75f32f512d17f4f6d5999b74216701df54c
+- evidence_id: PARENT
+  kind: record_content
+  reference: data/habitats/aquatic/groundwater__25377149.yaml; data/habitats/aquatic/groundwater__585f08d9.yaml;
+    data/habitats/aquatic/underground_water.yaml; data/habitats/aquatic/liquid_water.yaml;
+    data/habitats/aquatic/fresh_water.yaml; data/habitats/aquatic/aquatic_biome.yaml;
+    data/habitats/other/environmental.yaml; data/habitats/other/environmental_system.yaml;
+    data/habitats/other/biome.yaml; data/habitats/engineered/industrial_wastewater.yaml;
+    data/habitats/engineered/waste_water.yaml; data/habitats/engineered/engineered__900b76ad.yaml;
+    data/habitats/other/waste_material.yaml; data/habitats/other/environmental_material.yaml
+  summary: '{"ENVO:00000428": {"definition": "A biome is an ecosystem which is undergoing
+    climactic ecological succession.", "grounding_status": "EXACT", "label": "biome",
+    "parent_habitats": ["ENVO:01000813", "ENVO:01001110"]}, "ENVO:00002001": {"definition":
+    "Water that has been adversely affected in quality by anthropogenic influence.",
+    "grounding_status": "EXACT", "label": "waste water", "parent_habitats": ["ENVO:00002186",
+    "ENVO:00002264", "habitatmech:GOLD.2acb39dd08"]}, "ENVO:00002006": {"definition":
+    "An environmental material primarily composed of dihydrogen oxide in its liquid
+    form.", "grounding_status": "EXACT", "label": "liquid water", "parent_habitats":
+    ["ENVO:01000815"]}, "ENVO:00002011": {"definition": "Water which has a low concentration
+    of dissolved solutes, particularly that of sodium chloride.", "grounding_status":
+    "EXACT", "label": "fresh water", "parent_habitats": ["ENVO:00002006", "ENVO:00002030"]},
+    "ENVO:00002030": {"definition": "A biome which is determined by a water body and
+    which has ecological climax communities adapted to life in or on water.", "grounding_status":
+    "EXACT", "label": "aquatic biome", "parent_habitats": ["ENVO:00000428", "ENVO:01001787",
+    "habitatmech:BACDIVE.0f1e92a02c"]}, "ENVO:00002264": {"definition": "A material
+    which is not the desired output of a process and which is typically the input
+    of a process which removes it from its producer (e.g. a disposal process).", "grounding_status":
+    "EXACT", "label": "waste material", "parent_habitats": ["ENVO:00010483"]}, "ENVO:00005792":
+    {"definition": "Water which has physicochemical properties determined by processes
+    which occur beneath the planetary crust.", "grounding_status": "EXACT", "label":
+    "underground water", "parent_habitats": ["ENVO:00002006"]}, "ENVO:00010483": {"definition":
+    "A material entity which other material entities in an environmental system are
+    primarily or partially composed of.", "grounding_status": "EXACT", "label": "environmental
+    material", "parent_habitats": null}, "ENVO:01000254": {"definition": "A system
+    which has the disposition to environ one or more material entities.", "grounding_status":
+    "EXACT", "label": "environmental system", "parent_habitats": null}, "ENVO:01000964":
+    {"definition": "Wastewater which is produced by industrial activity and which
+    contains chemical contaminants other than those associated with urine and fecal
+    matter.", "grounding_status": "EXACT", "label": "industrial wastewater", "parent_habitats":
+    ["ENVO:00002001"]}, "ENVO:01001004": {"definition": "Underground water which is
+    located in pore spaces found in rock or unconsolidated deposits such as soil,
+    clay, or gravel.", "grounding_status": "EXACT", "label": "groundwater", "parent_habitats":
+    ["ENVO:00005792"]}, "habitatmech:BACDIVE.0f1e92a02c": {"definition": "An environmental
+    system which is a portion of the air, water, or land surface or subsurface of
+    an astronomical body sampled in place, and which is neither bounded by a host
+    organism nor constituted by a constructed or operated artefact.", "grounding_status":
+    "UNGROUNDED", "label": "free-living environment", "parent_habitats": ["ENVO:01000254"]},
+    "habitatmech:GOLD.2acb39dd08": {"definition": null, "grounding_status": "UNGROUNDED",
+    "label": "Engineered", "parent_habitats": null}, "habitatmech:GOLD.7f8e268653":
+    {"definition": null, "grounding_status": "NARROW", "label": "Groundwater", "parent_habitats":
+    ["ENVO:00002011", "ENVO:01001004"]}}'
+  accessed_at: '2026-10-11T21:27:49.244973Z'
+  support: supports
+  locator: Ancestor identity/definition/status context, not full-record review coverage
+    of ancestors
+- evidence_id: BULK
+  kind: database
+  reference: https://gold.jgi.doe.gov/download?mode=site_excel
+  summary: 'Exact positional census counts={"Biosample": 69, "Organism": 27, "SequencingProject":
+    100}; first three sample/organism descriptions={"Biosample": [{"data": {"BIOSAMPLE
+    GOLD ID": "Gb0050975", "BIOSAMPLE NAME": "Acid Mine Drainage (ARMAN) microbial
+    communities from Richmond mine, Iron Mountain, CA, sample from UBA Biofilm", "BIOSAMPLE
+    NCBI TAX NAME": "mine drainage metagenome", "BIOSAMPLE SAMPLE COLLECTION SITE":
+    "Acid mine drainage"}, "row": 17}, {"data": {"BIOSAMPLE GOLD ID": "Gb0051083",
+    "BIOSAMPLE NAME": "Acid mine drainage euryarchaeal communities from Richmond mine,
+    California, USA - Sample 2", "BIOSAMPLE NCBI TAX NAME": "mine drainage metagenome",
+    "BIOSAMPLE SAMPLE COLLECTION SITE": "Acid mine drainage"}, "row": 111}, {"data":
+    {"BIOSAMPLE GOLD ID": "Gb0051084", "BIOSAMPLE NAME": "Acid mine drainage euryarchaeal
+    communities from Richmond mine, California, USA - Sample 1", "BIOSAMPLE NCBI TAX
+    NAME": "mine drainage metagenome", "BIOSAMPLE SAMPLE COLLECTION SITE": "Acid mine
+    drainage"}, "row": 112}], "Organism": [{"data": {"ORGANISM GOLD ID": "Go0033619",
+    "ORGANISM HABITAT": "Acid mine drainage", "ORGANISM ISOLATION HOST NAME": "",
+    "ORGANISM NAME": "Acidomyces richmondensis BFW", "ORGANISM SAMPLE COLLECTION SITE":
+    "Acid mine drainage"}, "row": 28585}, {"data": {"ORGANISM GOLD ID": "Go0044360",
+    "ORGANISM HABITAT": "", "ORGANISM ISOLATION HOST NAME": "", "ORGANISM NAME": "Metallibacterium
+    scheffleri DSM 24874", "ORGANISM SAMPLE COLLECTION SITE": "acid mine drainage
+    biofilm"}, "row": 37202}, {"data": {"ORGANISM GOLD ID": "Go0097379", "ORGANISM
+    HABITAT": "", "ORGANISM ISOLATION HOST NAME": "", "ORGANISM NAME": "Thermoplasmatales
+    archaeon I-plasma", "ORGANISM SAMPLE COLLECTION SITE": "underground at the Ultraback
+    A location (UBA site) in the Richmond Mine, Iron Mountain, CA"}, "row": 56293}]}.
+    Later source context, not reconstructed frozen membership; other rows and study
+    joins are indexed, not individually assessed.'
+  accessed_at: '2026-10-11T13:21:51.155056Z'
+  support: supports
+  locator: Five-position tuples; internal blank/Unclassified positions preserved;
+    contact fields excluded
+  snapshot_sha256: b222fa9df89ffbd1a30897a1e7302da363c57b463d9948ecc9bfcb9304b4a96f
+- evidence_id: CLASS
+  kind: database
+  reference: https://gold.jgi.doe.gov/download?mode=ecosystempaths
+  summary: '[{"row": 429, "slug": "acid_mine_drainage", "path": "Engineered > Wastewater
+    > Industrial wastewater > Acid mine drainage", "values": ["8141", "Engineered",
+    "Wastewater", "Industrial wastewater", "Acid mine drainage", "Unclassified"]},
+    {"row": 577, "slug": "acid_mine_drainage", "path": "Environmental > Aquatic >
+    Freshwater > Groundwater > Acid Mine Drainage", "values": ["4164", "Environmental",
+    "Aquatic", "Freshwater", "Groundwater", "Acid Mine Drainage"]}]'
+  accessed_at: '2026-10-11T13:21:50.982232Z'
+  support: supports
+  locator: Later official classification;35 of38 cohort paths matched
+  snapshot_sha256: 78ed6ce1c3799a2d6ef2d17e4a9eeee5da48eef78df0b71079c0f942555e5e7d
+- evidence_id: TAX0
+  kind: database
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=100%2C1000566%2C1001240%2C1003%2C1005928%2C1007109%2C1007110%2C1007111%2C1007112%2C1007113%2C1007114%2C1007115%2C1007116%2C1007117%2C1007118%2C1007119%2C1007120%2C1007122%2C1007124%2C1009412%2C1009413%2C1009414%2C1009415%2C1009416%2C1009418%2C1061%2C1069448%2C1089547%2C1121003%2C1121028%2C1121087%2C1121877%2C1121915%2C1121920%2C1121953%2C1121957%2C1122130%2C1122209%2C1122214%2C1122215%2C1123060%2C1123231%2C1123239%2C1153%2C1162967%2C1162970%2C118062%2C1211807%2C1216008%2C121821%2C1246448%2C129961%2C1344948%2C1408424%2C143495%2C145262%2C1486246%2C159087%2C162176%2C167968%2C1712410%2C172044%2C1869227%2C1876%2C190721%2C1931%2C2%2C216595%2C217%2C2171%2C217139%2C254410%2C266264%2C266265%2C266940%2C269482%2C2719616%2C2735894%2C2735895%2C2735896%2C2735898%2C2735899%2C279826%2C279828%2C28214%2C28232%2C287%2C292807%2C293256%2C294%2C296591%2C303%2C306%2C314266%2C314275%2C317655%2C320502%2C322710%2C338969%2C33952%2C340100%2C343080%2C349163%2C365044%2C376%2C376219%2C379731%2C391735%2C392499%2C393762%2C39441%2C396595%2C398000%2C398578%2C399739%2C406100%2C409%2C413712%2C42252%2C426128%2C441209%2C442899%2C446%2C452662%2C477666%2C47917%2C490098%2C517424%2C52690%2C53249%2C540251%2C555088%2C555779%2C562%2C56698%2C573060%2C579922%2C582402%2C58621%2C59277%2C643562%2C643673%2C65553%2C667019%2C678%2C694430%2C702568%2C710696%2C760568%2C768535&retmode=xml
+  summary: 'The two response chunks jointly resolve all166 cohort IDs. This target=[{"current_id":
+    "768535", "current_name": "Acidipila rosea", "frozen_label": "Acidipila rosea",
+    "id": "768535", "rank": "species"}, {"current_id": "1121877", "current_name":
+    "Ferrimicrobium acidiphilum DSM 19497", "frozen_label": "Ferrimicrobium acidiphilum
+    DSM 19497", "id": "1121877", "rank": "strain"}, {"current_id": "349163", "current_name":
+    "Acidiphilium cryptum JF-5", "frozen_label": "Acidiphilium cryptum JF-5", "id":
+    "349163", "rank": "strain"}]. Naming differences in alkaline-water entries agree
+    with retained aliases/strain identifiers. Resolution does not prove habitat occurrence.'
+  accessed_at: '2026-10-11T21:17:47.322929Z'
+  support: supports
+  locator: NCBI EFetch TaxId, aliases, ScientificName and Rank
+  snapshot_sha256: 013696d75216ec29c8571a3f0be491c769fa57f3fed67f4ca2138453c6235971
+- evidence_id: TAX1
+  kind: database
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=78178%2C82116%2C82985%2C83428%2C844%2C84567%2C849756%2C85643%2C86667%2C889378%2C927658%2C93718%2C94122%2C942938%2C957042%2C993416&retmode=xml
+  summary: 'The two response chunks jointly resolve all166 cohort IDs. This target=[{"current_id":
+    "768535", "current_name": "Acidipila rosea", "frozen_label": "Acidipila rosea",
+    "id": "768535", "rank": "species"}, {"current_id": "1121877", "current_name":
+    "Ferrimicrobium acidiphilum DSM 19497", "frozen_label": "Ferrimicrobium acidiphilum
+    DSM 19497", "id": "1121877", "rank": "strain"}, {"current_id": "349163", "current_name":
+    "Acidiphilium cryptum JF-5", "frozen_label": "Acidiphilium cryptum JF-5", "id":
+    "349163", "rank": "strain"}]. Naming differences in alkaline-water entries agree
+    with retained aliases/strain identifiers. Resolution does not prove habitat occurrence.'
+  accessed_at: '2026-10-11T21:17:48.949313Z'
+  support: supports
+  locator: NCBI EFetch TaxId, aliases, ScientificName and Rank
+  snapshot_sha256: bb67a0a16d265df43423b6598ab2904c7d06dce9b0e1e1d02f6c86e9104c01cb
+- evidence_id: SEARCH
+  kind: search
+  reference: curation; history; research; reports; reviews; data/raw; data/habitats;
+    conf
+  summary: 'Identifier, label, slug and source-path search included ignored/hidden
+    files in these roots; coverage inventory used Path.rglob. No earlier structured
+    target observation was found in that bounded corpus. Upstream search={"configured_root":
+    "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe", "root_exists":
+    true, "exact_paths": [{"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_nodes.tsv",
+    "exists": false, "expected_sha256": "c13c21bdd04619c75ce16e63b05e51577b0cefec5b61765d383313f654ab3fae"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_edges.tsv",
+    "exists": false, "expected_sha256": "54982c25de9d2c820eeebc1452aeac0b034595921d04d55b810bf1d2b1e127e0"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/nodes.tsv",
+    "exists": false, "expected_sha256": "a2a2f9acae230636dd866347d173a32c9f025c04a377060087a4be65781628f3"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/edges.tsv",
+    "exists": false, "expected_sha256": "ab6208bff4854db7c1a736d53d0aa04269a682ab15a1ce6f37c6d731000281d7"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/nodes.tsv",
+    "exists": false, "expected_sha256": "020de3afc71495571ddb05000c83a58d009272f53735b5f7c9326c1293e0415c"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/edges.tsv",
+    "exists": false, "expected_sha256": "8863ee3197a36915865fa4833df39d10c3f8f69b64bafbb746b9cd731308a0aa"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/nodes.tsv",
+    "exists": false, "expected_sha256": "cc5941cd677831e8e207da018dca763cd009bb1f9310b21cb4d45892316e006d"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/edges.tsv",
+    "exists": false, "expected_sha256": "fd333634eaaa3cfe57a35cdca2f4c5b8cf0662851c1df58914d3e999d62a650e"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/environments.csv",
+    "exists": false, "expected_sha256": "99299fe635159712f95568783ad3b484230fb31781262f1f6f8bd84db4bc3048"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/mappings/isolation_source_to_ontology.tsv",
+    "exists": false, "expected_sha256": "2dea3d1bb20c72a04b6f64a67e2bb2bdc4f3649b809c5935390239be2791ef1f"}],
+    "traversal": [{"command": ["rg", "--files", "--no-ignore", "--hidden", "data"],
+    "exit_code": 0, "matches": [], "stderr": ""}, {"command": ["rg", "--files", "--no-ignore",
+    "--hidden", "build"], "exit_code": 0, "matches": [], "stderr": ""}, {"command":
+    ["rg", "--files", "--no-ignore", "--hidden", "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data"],
+    "exit_code": 0, "matches": [], "stderr": ""}]}'
+  accessed_at: '2026-10-11T21:27:49.244973Z'
+  support: supports
+  locator: Exact bounded searches, not global absence claims
+  search_scope: 'Identifier, label, slug and source-path search included ignored/hidden
+    files in these roots; coverage inventory used Path.rglob. No earlier structured
+    target observation was found in that bounded corpus. Upstream search={"configured_root":
+    "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe", "root_exists":
+    true, "exact_paths": [{"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_nodes.tsv",
+    "exists": false, "expected_sha256": "c13c21bdd04619c75ce16e63b05e51577b0cefec5b61765d383313f654ab3fae"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_edges.tsv",
+    "exists": false, "expected_sha256": "54982c25de9d2c820eeebc1452aeac0b034595921d04d55b810bf1d2b1e127e0"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/nodes.tsv",
+    "exists": false, "expected_sha256": "a2a2f9acae230636dd866347d173a32c9f025c04a377060087a4be65781628f3"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/edges.tsv",
+    "exists": false, "expected_sha256": "ab6208bff4854db7c1a736d53d0aa04269a682ab15a1ce6f37c6d731000281d7"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/nodes.tsv",
+    "exists": false, "expected_sha256": "020de3afc71495571ddb05000c83a58d009272f53735b5f7c9326c1293e0415c"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/edges.tsv",
+    "exists": false, "expected_sha256": "8863ee3197a36915865fa4833df39d10c3f8f69b64bafbb746b9cd731308a0aa"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/nodes.tsv",
+    "exists": false, "expected_sha256": "cc5941cd677831e8e207da018dca763cd009bb1f9310b21cb4d45892316e006d"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/edges.tsv",
+    "exists": false, "expected_sha256": "fd333634eaaa3cfe57a35cdca2f4c5b8cf0662851c1df58914d3e999d62a650e"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/environments.csv",
+    "exists": false, "expected_sha256": "99299fe635159712f95568783ad3b484230fb31781262f1f6f8bd84db4bc3048"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/mappings/isolation_source_to_ontology.tsv",
+    "exists": false, "expected_sha256": "2dea3d1bb20c72a04b6f64a67e2bb2bdc4f3649b809c5935390239be2791ef1f"}],
+    "traversal": [{"command": ["rg", "--files", "--no-ignore", "--hidden", "data"],
+    "exit_code": 0, "matches": [], "stderr": ""}, {"command": ["rg", "--files", "--no-ignore",
+    "--hidden", "build"], "exit_code": 0, "matches": [], "stderr": ""}, {"command":
+    ["rg", "--files", "--no-ignore", "--hidden", "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data"],
+    "exit_code": 0, "matches": [], "stderr": ""}]}'
+- evidence_id: ISSUES
+  kind: database
+  reference: https://github.com/CultureBotAI/HabitatMech/issues
+  summary: All-state939-issue title/body census inspected for target and shared-contract
+    overlap. Related1249,1398,1226,1408,1437 and1614 remain independently scoped;
+    old report corrections do not prove scientific repair.
+  accessed_at: '2026-10-11T21:27:49.244973Z'
+  support: supports
+  locator: GitHub CLI census; issue comments were not exhaustively crawled
+assessments:
+- assessment_id: IDENTITY
+  area: identity
+  topic: Identity and definition
+  outcome: supported
+  summary: The ENVO acidic mine-drainage identity is supported by two GOLD paths and
+    PREGO, with separate18 and16 ORGANISM counts and three TAXON associations. The14-study
+    local-scale consensus is evidence for place identity, not equivalence of every
+    triad role. Generic acid mine drainage is not restricted to fresh groundwater;
+    the merged parent imports one source context. ENVO types acid rock drainage as
+    related, not exact.
+  target_ids:
+  - ENVO:00001997
+  evidence_ids:
+  - R
+  - RAW
+  - ONT
+  - PARENT
+- assessment_id: HIERARCHY
+  area: grounding
+  topic: Strict genera, source-context and mapping scope
+  outcome: concern
+  summary: The ENVO acidic mine-drainage identity is supported by two GOLD paths and
+    PREGO, with separate18 and16 ORGANISM counts and three TAXON associations. The14-study
+    local-scale consensus is evidence for place identity, not equivalence of every
+    triad role. Generic acid mine drainage is not restricted to fresh groundwater;
+    the merged parent imports one source context. ENVO types acid rock drainage as
+    related, not exact. Four parent-contribution routes were distinguished; optional
+    missing definitions are not filled by inference.
+  target_ids:
+  - ENVO:00001997
+  evidence_ids:
+  - R
+  - RAW
+  - CODE
+  - PARENT
+  - ONT
+- assessment_id: PROVENANCE
+  area: provenance
+  topic: Every contributing source and native lifecycle
+  outcome: supported
+  summary: 'Full-document reproduction preserves 3 contributors and 3 ITEM-reviewed
+    sources. Actual attestations=[{"source": "GOLD", "source_id": "gold.ecosystem:4164",
+    "source_label": "Acid Mine Drainage", "source_path": "Environmental > Aquatic
+    > Freshwater > Groundwater > Acid Mine Drainage", "mapping_predicate": "skos:exactMatch",
+    "assertion_count": 18, "assertion_unit": "ORGANISM"}, {"source": "GOLD", "source_id":
+    "gold.ecosystem:6075", "source_label": "Acid mine drainage", "source_path": "Engineered
+    > Wastewater > Industrial wastewater > Acid mine drainage", "mapping_predicate":
+    "skos:exactMatch", "assertion_count": 16, "assertion_unit": "ORGANISM", "notes":
+    "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv."},
+    {"source": "PREGO", "source_id": "ENVO:00001997", "source_label": "acid mine drainage",
+    "assertion_count": 3, "assertion_unit": "TAXON", "score": 4.0, "evidence_channels":
+    "annotated_genomes_isolates"}]. Counts with unlike units are not summed; omitted
+    zero counts are not biological absence. Scientific review does not promote native
+    status.'
+  target_ids:
+  - ENVO:00001997
+  evidence_ids:
+  - R
+  - RAW
+  - CODE
+  - RULES
+- assessment_id: TAXA
+  area: evidence
+  topic: Association versus characteristic presence
+  outcome: supported
+  summary: All retained associations were read and reproduce; all named taxon IDs
+    resolve. Source-specific ranks, ties, candidate pools, scores and corroborations
+    remain source evidence, not abundance, universal presence or cross-source confidence.
+    No is_characteristic claim is asserted.
+  target_ids:
+  - ENVO:00001997
+  evidence_ids:
+  - R
+  - RAW
+  - TAX0
+  - TAX1
+  - RULES
+- assessment_id: COMPLETENESS
+  area: completeness
+  topic: Parameters and optional evidence
+  outcome: supported
+  summary: No universal numeric environmental values or organisms are inferred from
+    path labels or later samples. Optional empty discussions/datasets are not defects
+    merely for being empty. No graph is asserted for this exact target; ignored-inclusive
+    overlay search and full-corpus causal checks were inspected. No gene/regulator/expression-module
+    claim calls for iModulonDB.
+  target_ids:
+  - ENVO:00001997
+  evidence_ids:
+  - R
+  - RAW
+  - RULES
+  - SEARCH
+findings:
+- finding_id: F1
+  issue_key: envo-00001997-context-parent
+  category: scope
+  severity: major
+  status: open
+  certainty: confirmed
+  title: A source context or quality is emitted as a strict superclass
+  description: 'The ENVO acidic mine-drainage identity is supported by two GOLD paths
+    and PREGO, with separate18 and16 ORGANISM counts and three TAXON associations.
+    The14-study local-scale consensus is evidence for place identity, not equivalence
+    of every triad role. Generic acid mine drainage is not restricted to fresh groundwater;
+    the merged parent imports one source context. ENVO types acid rock drainage as
+    related, not exact. Unsupported parent contribution: habitatmech:GOLD.7f8e268653.'
+  target_ids:
+  - ENVO:00001997
+  field_paths:
+  - parent_habitats
+  evidence_ids:
+  - R
+  - RAW
+  - CODE
+  - PARENT
+  - ONT
+  - BULK
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Exact source-path and expected-parent guard
+  rule_id: docs/CURATION.md; .claude/skills/curate-yaml-record/references/review-checklist.md
+  native_severity: major
+  normalization_reason: Material identity, strict relation, scope or endpoint inconsistency.
+- finding_id: F2
+  issue_key: envo-00001997-ontology-synonym-scope
+  category: scope
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Related ontology synonyms are promoted to exact
+  description: The ENVO acidic mine-drainage identity is supported by two GOLD paths
+    and PREGO, with separate18 and16 ORGANISM counts and three TAXON associations.
+    The14-study local-scale consensus is evidence for place identity, not equivalence
+    of every triad role. Generic acid mine drainage is not restricted to fresh groundwater;
+    the merged parent imports one source context. ENVO types acid rock drainage as
+    related, not exact.
+  target_ids:
+  - ENVO:00001997
+  field_paths:
+  - synonyms
+  evidence_ids:
+  - R
+  - RAW
+  - ONT
+  - CODE
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Typed ontology synonym ingestion
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_terms.tsv
+    role: Governed ontology snapshot
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Preserve asserted scope
+  rule_id: docs/CURATION.md; .claude/skills/curate-yaml-record/references/review-checklist.md
+  native_severity: major
+  normalization_reason: Material identity, strict relation, scope or endpoint inconsistency.
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1249
+actions:
+- action_id: A1
+  description: Exclude only the exact GOLD contribution of habitatmech:GOLD.7f8e268653;
+    retain independent genera, identities, assertions and native status. Do not invent
+    a definition as a suppression workaround.
+  finding_ids:
+  - F1
+  target_ids:
+  - ENVO:00001997
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Exact source-path and expected-parent guard
+  generator: src/habitatmech/seed.py
+  acceptance_checks:
+  - Use maintained input owners and exact source keys; preserve independent parents,
+    source counts/units and native lifecycle. No manual generated edits.
+  - Recheck source evidence, append native history, add exact-source regressions,
+    inspect a seed canary and regenerate affected products.
+  - Pass schema, strict, label, reproduction, review-integrity and full QC; save a
+    linked successor observation for each disposition.
+- action_id: A2
+  description: Resolve shared1249 through a governed typed-synonym contract. Preserve
+    genuine exact synonyms and PREGO related names; test exact, related, multiscope
+    and unknown cases without a blanket downgrade.
+  finding_ids:
+  - F2
+  target_ids:
+  - ENVO:00001997
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Typed ontology synonym ingestion
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_terms.tsv
+    role: Governed ontology snapshot
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Preserve asserted scope
+  generator: src/habitatmech/seed.py
+  acceptance_checks:
+  - Use maintained input owners and exact source keys; preserve independent parents,
+    source counts/units and native lifecycle. No manual generated edits.
+  - Recheck source evidence, append native history, add exact-source regressions,
+    inspect a seed canary and regenerate affected products.
+  - Pass schema, strict, label, reproduction, review-integrity and full QC; save a
+    linked successor observation for each disposition.
+limitations:
+- A completed assessment is not a clean verdict or proof of every assertion.
+- Only first three exact BioSample/Organism descriptions per sheet were individually
+  interpreted. Other matched rows and joins were indexed, not individually reviewed.
+- Original assertion-level membership was not reconstructed; no current ontology/taxonomy/source
+  refresh was applied.
+- Same-agent review, not independent approval. No native status promotion.
+- SSSOM/KGX current kg-microbe conformance was not audited; shared1398 remains open.
+- Full-corpus review remains incomplete; ancestor/context reads do not add target
+  coverage.
+notes:
+- New immutable observation only; curation and publication are separate authorized
+  steps.
+- No prior structured observation of this exact target found; earlier reports/issues
+  remain leads rather than silently resolved findings.
+tags:
+- habitatmech
+- aquatic
+- record-review
+- scientific-review
+```
