@@ -5,72 +5,117 @@ from jinja2 import Environment
 
 from habitatmech import seed
 
-
-CASES = {'ENVO:00000091': {'slug': 'beach',
-                   'retained': ['ENVO:01001884'],
-                   'sources': {'habitatmech:GOLD.f37e2809fc': 'habitatmech:GOLD.115edc36f8'}},
- 'habitatmech:GOLD.c08255b2d2': {'slug': 'benthic_zone',
-                                 'retained': [],
-                                 'sources': {'habitatmech:GOLD.c08255b2d2': 'ENVO:00001999'}},
- 'habitatmech:GOLD.e331fc84ae': {'slug': 'biofilm__599a99de',
-                                 'retained': ['ENVO:00002034'],
-                                 'sources': {'habitatmech:GOLD.e331fc84ae': 'ENVO:00000023'}},
- 'habitatmech:GOLD.5298ffd023': {'slug': 'biofilm__5f164a0f',
-                                 'retained': ['ENVO:00002034'],
-                                 'sources': {'habitatmech:GOLD.5298ffd023': 'habitatmech:GOLD.d61fa6c9ee'}},
- 'ENVO:00002034': {'slug': 'biofilm__cc6fe05a',
-                   'retained': ['ENVO:01000549'],
-                   'sources': {'habitatmech:GOLD.3911678ce4': 'habitatmech:GOLD.3ec896865d',
-                               'habitatmech:GOLD.00cc26ac8b': 'habitatmech:GOLD.4bd2954af9',
-                               'habitatmech:GOLD.f8048a6e2a': 'habitatmech:GOLD.ec116f9a37'}},
- 'habitatmech:GOLD.748b381af4': {'slug': 'biofilm__e72e4f05',
-                                 'retained': ['ENVO:00002034'],
-                                 'sources': {'habitatmech:GOLD.748b381af4': 'ENVO:00000021'}},
- 'habitatmech:GOLD.15bcd61a84': {'slug': 'biofouling',
-                                 'retained': [],
-                                 'sources': {'habitatmech:GOLD.15bcd61a84': 'habitatmech:GOLD.22a80cbd14'}},
- 'habitatmech:GOLD.3ec896865d': {'slug': 'biofouling__438bcaa2',
-                                 'retained': [],
-                                 'sources': {'habitatmech:GOLD.3ec896865d': 'ENVO:00002011'}},
- 'habitatmech:GOLD.ec116f9a37': {'slug': 'biofouling__50243100',
-                                 'retained': [],
-                                 'sources': {'habitatmech:GOLD.ec116f9a37': 'habitatmech:GOLD.ce244e62cd'}},
- 'habitatmech:GOLD.4bd2954af9': {'slug': 'biofouling__fa010eab',
-                                 'retained': [],
-                                 'sources': {'habitatmech:GOLD.4bd2954af9': 'ENVO:00001999'}},
- 'habitatmech:GOLD.96e16482f3': {'slug': 'bog_lake',
-                                 'retained': [],
-                                 'sources': {'habitatmech:GOLD.96e16482f3': 'ENVO:00002011'}},
- 'ENVO:00002226': {'slug': 'borehole',
-                   'retained': ['ENVO:00000070', 'ENVO:03000117'],
-                   'sources': {'habitatmech:GOLD.61d35511fd': 'habitatmech:GOLD.22a80cbd14'}},
- 'habitatmech:GOLD.cc5b244380': {'slug': 'brine__2299825d',
-                                 'retained': ['ENVO:00003044'],
-                                 'sources': {'habitatmech:GOLD.cc5b244380': 'habitatmech:GOLD.713c7f352a'}},
- 'habitatmech:GOLD.656eda3dea': {'slug': 'canal__c42831a4',
-                                 'retained': ['ENVO:00000014'],
-                                 'sources': {'habitatmech:GOLD.656eda3dea': 'ENVO:00002011'}},
- 'habitatmech:GOLD.d9fb6dd542': {'slug': 'cave_lake',
-                                 'retained': [],
-                                 'sources': {'habitatmech:GOLD.d9fb6dd542': 'habitatmech:GOLD.22a80cbd14'}},
- 'habitatmech:GOLD.aed29e2fc1': {'slug': 'cave_microbial_mat',
-                                 'retained': [],
-                                 'sources': {'habitatmech:GOLD.aed29e2fc1': 'habitatmech:GOLD.22a80cbd14'}},
- 'habitatmech:GOLD.afb49b0d4b': {'slug': 'cave_pool',
-                                 'retained': [],
-                                 'sources': {'habitatmech:GOLD.afb49b0d4b': 'habitatmech:GOLD.22a80cbd14'}},
- 'habitatmech:GOLD.62bafb5e20': {'slug': 'cave_pool_sediment',
-                                 'retained': [],
-                                 'sources': {'habitatmech:GOLD.62bafb5e20': 'habitatmech:GOLD.22a80cbd14'}},
- 'habitatmech:GOLD.c0b02b63b9': {'slug': 'cave_stream',
-                                 'retained': [],
-                                 'sources': {'habitatmech:GOLD.c0b02b63b9': 'habitatmech:GOLD.22a80cbd14'}},
- 'habitatmech:GOLD.5c3db359b7': {'slug': 'cave_stream_sediment',
-                                 'retained': [],
-                                 'sources': {'habitatmech:GOLD.5c3db359b7': 'habitatmech:GOLD.22a80cbd14'}},
- 'ENVO:00002270': {'slug': 'chemocline',
-                   'retained': ['ENVO:01000258'],
-                   'sources': {'habitatmech:GOLD.a1ead6c3f8': 'ENVO:00000199'}}}
+CASES = {
+    "ENVO:00000091": {
+        "slug": "beach",
+        "retained": ["ENVO:01001884"],
+        "sources": {"habitatmech:GOLD.f37e2809fc": "habitatmech:GOLD.115edc36f8"},
+    },
+    "habitatmech:GOLD.c08255b2d2": {
+        "slug": "benthic_zone",
+        "retained": [],
+        "sources": {"habitatmech:GOLD.c08255b2d2": "ENVO:00001999"},
+    },
+    "habitatmech:GOLD.e331fc84ae": {
+        "slug": "biofilm__599a99de",
+        "retained": ["ENVO:00002034"],
+        "sources": {"habitatmech:GOLD.e331fc84ae": "ENVO:00000023"},
+    },
+    "habitatmech:GOLD.5298ffd023": {
+        "slug": "biofilm__5f164a0f",
+        "retained": ["ENVO:00002034"],
+        "sources": {"habitatmech:GOLD.5298ffd023": "habitatmech:GOLD.d61fa6c9ee"},
+    },
+    "ENVO:00002034": {
+        "slug": "biofilm__cc6fe05a",
+        "retained": ["ENVO:01000549"],
+        "sources": {
+            "habitatmech:GOLD.3911678ce4": "habitatmech:GOLD.3ec896865d",
+            "habitatmech:GOLD.00cc26ac8b": "habitatmech:GOLD.4bd2954af9",
+            "habitatmech:GOLD.f8048a6e2a": "habitatmech:GOLD.ec116f9a37",
+        },
+    },
+    "habitatmech:GOLD.748b381af4": {
+        "slug": "biofilm__e72e4f05",
+        "retained": ["ENVO:00002034"],
+        "sources": {"habitatmech:GOLD.748b381af4": "ENVO:00000021"},
+    },
+    "habitatmech:GOLD.15bcd61a84": {
+        "slug": "biofouling",
+        "retained": [],
+        "sources": {"habitatmech:GOLD.15bcd61a84": "habitatmech:GOLD.22a80cbd14"},
+    },
+    "habitatmech:GOLD.3ec896865d": {
+        "slug": "biofouling__438bcaa2",
+        "retained": [],
+        "sources": {"habitatmech:GOLD.3ec896865d": "ENVO:00002011"},
+    },
+    "habitatmech:GOLD.ec116f9a37": {
+        "slug": "biofouling__50243100",
+        "retained": [],
+        "sources": {"habitatmech:GOLD.ec116f9a37": "habitatmech:GOLD.ce244e62cd"},
+    },
+    "habitatmech:GOLD.4bd2954af9": {
+        "slug": "biofouling__fa010eab",
+        "retained": [],
+        "sources": {"habitatmech:GOLD.4bd2954af9": "ENVO:00001999"},
+    },
+    "habitatmech:GOLD.96e16482f3": {
+        "slug": "bog_lake",
+        "retained": [],
+        "sources": {"habitatmech:GOLD.96e16482f3": "ENVO:00002011"},
+    },
+    "ENVO:00002226": {
+        "slug": "borehole",
+        "retained": ["ENVO:00000070", "ENVO:03000117"],
+        "sources": {"habitatmech:GOLD.61d35511fd": "habitatmech:GOLD.22a80cbd14"},
+    },
+    "habitatmech:GOLD.cc5b244380": {
+        "slug": "brine__2299825d",
+        "retained": ["ENVO:00003044"],
+        "sources": {"habitatmech:GOLD.cc5b244380": "habitatmech:GOLD.713c7f352a"},
+    },
+    "habitatmech:GOLD.656eda3dea": {
+        "slug": "canal__c42831a4",
+        "retained": ["ENVO:00000014"],
+        "sources": {"habitatmech:GOLD.656eda3dea": "ENVO:00002011"},
+    },
+    "habitatmech:GOLD.d9fb6dd542": {
+        "slug": "cave_lake",
+        "retained": [],
+        "sources": {"habitatmech:GOLD.d9fb6dd542": "habitatmech:GOLD.22a80cbd14"},
+    },
+    "habitatmech:GOLD.aed29e2fc1": {
+        "slug": "cave_microbial_mat",
+        "retained": [],
+        "sources": {"habitatmech:GOLD.aed29e2fc1": "habitatmech:GOLD.22a80cbd14"},
+    },
+    "habitatmech:GOLD.afb49b0d4b": {
+        "slug": "cave_pool",
+        "retained": [],
+        "sources": {"habitatmech:GOLD.afb49b0d4b": "habitatmech:GOLD.22a80cbd14"},
+    },
+    "habitatmech:GOLD.62bafb5e20": {
+        "slug": "cave_pool_sediment",
+        "retained": [],
+        "sources": {"habitatmech:GOLD.62bafb5e20": "habitatmech:GOLD.22a80cbd14"},
+    },
+    "habitatmech:GOLD.c0b02b63b9": {
+        "slug": "cave_stream",
+        "retained": [],
+        "sources": {"habitatmech:GOLD.c0b02b63b9": "habitatmech:GOLD.22a80cbd14"},
+    },
+    "habitatmech:GOLD.5c3db359b7": {
+        "slug": "cave_stream_sediment",
+        "retained": [],
+        "sources": {"habitatmech:GOLD.5c3db359b7": "habitatmech:GOLD.22a80cbd14"},
+    },
+    "ENVO:00002270": {
+        "slug": "chemocline",
+        "retained": ["ENVO:01000258"],
+        "sources": {"habitatmech:GOLD.a1ead6c3f8": "ENVO:00000199"},
+    },
+}
 
 
 @pytest.fixture(scope="module")
@@ -83,9 +128,11 @@ def test_twenty_three_exclusions_change_only_parents_and_history(documents, monk
     sources = {source for case in CASES.values() for source in case["sources"]}
     assert len(sources) == 23
     assert sources <= exclusions.keys()
-    monkeypatch.setattr(seed, "load_gold_parent_exclusions", lambda _: {
-        key: row for key, row in exclusions.items() if key not in sources
-    })
+    monkeypatch.setattr(
+        seed,
+        "load_gold_parent_exclusions",
+        lambda _: {key: row for key, row in exclusions.items() if key not in sources},
+    )
     before = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
     assert before.keys() == documents.keys()
     assert {key for key in before if before[key] != documents[key]} == CASES.keys()
@@ -138,7 +185,7 @@ def test_source_nodes_counts_and_independent_parents(identifier, documents):
 
 def test_context_links_render_without_punctuation_suffix():
     exclusions = seed.load_gold_parent_exclusions(seed.GOLD_PARENT_EXCLUSIONS_PATH)
-    template = Environment(autoescape=True).from_string('{{ changes|urlize }}')
+    template = Environment(autoescape=True).from_string("{{ changes|urlize }}")
     url = "https://github.com/CultureBotAI/HabitatMech/issues/1979"
     for case in CASES.values():
         for source in case["sources"]:
@@ -146,18 +193,23 @@ def test_context_links_render_without_punctuation_suffix():
 
 
 def test_valid_material_and_waterbody_parents_are_retained(documents):
-    assert documents["habitatmech:GOLD.fd7b992495"]["parent_habitats"] == [
-        "ENVO:00002150", "ENVO:00003044"
-    ]
+    assert documents["habitatmech:GOLD.fd7b992495"]["parent_habitats"] == ["ENVO:00002150", "ENVO:00003044"]
     assert documents["ENVO:00002226"]["parent_habitats"] == ["ENVO:00000070", "ENVO:03000117"]
     assert documents["ENVO:00000091"]["parent_habitats"] == ["ENVO:01001884"]
     assert documents["ENVO:00002270"]["parent_habitats"] == ["ENVO:01000258"]
 
 
-@pytest.mark.parametrize("identifier,names,edge_count", [
-    ("ENVO:00002034", {"microbial_aggregate", "stress_tolerant_subpopulations"}, 16),
-    ("ENVO:00002019", {"freshwater_bacterioplankton", "marine_bacterioplankton", "estuarine_bacterioplankton"}, 17),
-])
+@pytest.mark.parametrize(
+    "identifier,names,edge_count",
+    [
+        ("ENVO:00002034", {"microbial_aggregate", "stress_tolerant_subpopulations"}, 16),
+        (
+            "ENVO:00002019",
+            {"freshwater_bacterioplankton", "marine_bacterioplankton", "estuarine_bacterioplankton"},
+            17,
+        ),
+    ],
+)
 def test_graph_assemblages_are_communities(identifier, names, edge_count, documents):
     graph = documents[identifier]["causal_graphs"][0]
     nodes = {n["node_id"]: n for n in graph["nodes"]}

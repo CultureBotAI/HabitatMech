@@ -49,10 +49,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 </table>
 </div>
 
-<h2>Broader habitats</h2>
-<ul class="plain">
-  <li><a href="../habitats/inland-saline-or-alkaline-aquatic-environment-habitatmech-gold-ce244e62cd.html">inland saline or alkaline aquatic environment</a>      <code class="curie">habitatmech:GOLD.ce244e62cd</code></li>
-</ul>
 
 
 
@@ -75,6 +71,11 @@ from several source concepts can carry one decision per concept.</p>
     <p>Confirmed UNGROUNDED: no ontology term fits this concept. ENVO:06105023 &#39;biofouling&#39; kept as an xref. Process screen (#127): carried ENVO:06105023 &#39;biofouling&#39; as a parent, which ENVO defines as &#39;a FOULING PROCESS during which biological matter accumulates on a solid surface&#39; and files under environmental system process. parent_habitats asserts the parent is a broader HABITAT, so the corpus was claiming a habitat is-a process — the thing MIxS rules out in the same sentence that rules out organisms and groups of organisms, and the reason that sentence is now quoted in CLAUDE.md.
 
 The concept is the fouling layer, not the fouling. It reached the term through the ambiguous-leaf rule: the non-marine saline and alkaline path, and three of the four Biofouling paths tie at the same depth so none claimed it. Kept as an xref (#99), which records what upstream matched without asserting the record is a process. Not grounded to ENVO:00002034 &#39;biofilm&#39; either: biofouling includes macrofouling such as barnacles and tube worms, so biofilm is narrower than the concept rather than broader. (source concept habitatmech:GOLD.ec116f9a37)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-11 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.ce244e62cd for habitatmech:GOLD.ec116f9a37 (Environmental &gt; Aquatic &gt; Non-marine Saline and Alkaline &gt; Biofouling). ITEM hierarchy assessment: <a href="https://github.com/CultureBotAI/HabitatMech/issues/1979" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/1979</a> (20261011T225559Z-biofouling__50243100). The inland saline-or-alkaline Biofouling decision denotes a fouling layer, not an entire aquatic environment determined by an inland water body. Preserve the independently justified process xref and the saline-or-alkaline distinction; do not force an exact biofilm identity. Exclude only this guarded GOLD source-parent contribution. Preserve independent parents, frozen source identity/counts/units or omissions and native lifecycle. Later examples do not reconstruct frozen membership; shared synonym and endpoint issues remain separate.</p>
   </li>
 </ol>
 
