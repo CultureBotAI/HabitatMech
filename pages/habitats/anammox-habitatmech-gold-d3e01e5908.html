@@ -49,10 +49,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 </table>
 </div>
 
-<h2>Broader habitats</h2>
-<ul class="plain">
-  <li><a href="../habitats/nitrogen-removal-habitatmech-gold-92b66873c0.html">Nitrogen removal</a>      <code class="curie">habitatmech:GOLD.92b66873c0</code></li>
-</ul>
 
 
 
@@ -66,6 +62,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">NOT_APPLICABLE</span>
     <span class="meta">2026-08-21 · codex-gpt-5</span>
     <p>Marked NOT_APPLICABLE: the source concept does not denote a habitat. Non-habitat screen review (#108): Anammox is the anaerobic ammonium oxidation process used for wastewater nitrogen removal, not the wastewater or reactor habitat. An external process term corroborates the process reading but is outside the committed slice. (source concept habitatmech:GOLD.d3e01e5908)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-11 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.92b66873c0 for habitatmech:GOLD.d3e01e5908 (Engineered &gt; Wastewater &gt; Nutrient removal &gt; Nitrogen removal &gt; Anammox). Bounded hierarchy correction (#1894; 20261011T024030Z-anammox F1): the retained ITEM NOT_APPLICABLE process-only decision does not support a strictly broader habitat parent. PMID:7747947 distinguishes the process from its experimental medium and sludge; it does not establish the meaning of this GOLD node. Exclude only the immediate source-context contribution, preserving node 4256, exact path, one ORGANISM assertion, native statuses and decision history. GOLD surroundings guidance and later treatment-study metadata leave process-versus-setting scope unresolved in #1614; this correction neither validates the original exclusion decision nor invents a reactor identity.</p>
   </li>
 </ol>
 

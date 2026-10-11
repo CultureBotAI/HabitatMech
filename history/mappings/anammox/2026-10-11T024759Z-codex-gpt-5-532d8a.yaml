@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: anammox
+session:
+  id: 2026-10-11T024759Z-codex-gpt-5-532d8a
+  timestamp: '2026-10-11T02:47:59Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1894
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude the habitat parent incompatible with retained Anammox process-only status
+  details: 'Added one exact guarded GOLD parent exclusion for habitatmech:GOLD.d3e01e5908
+    after structured review 20261011T024030Z-anammox F1. PMID7747947 supports the process
+    sense but not the exact source-node interpretation; current GOLD guidance and retained
+    later study metadata leave #1614 unresolved. Preserve the NOT_APPLICABLE decision, REVIEWED
+    status, node 4256, path, one ORGANISM assertion and old history. The regression compares
+    the entire corpus with and without this row and requires only this target parent/history
+    to differ. Canary, exact reproduction, strict validation, history, generated map/site
+    and full QC are required before publication; this history records the edit, not a premature
+    gate-pass claim.'

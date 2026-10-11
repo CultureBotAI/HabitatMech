@@ -3,8 +3,6 @@ label: Anammox
 habitat_category: ENGINEERED
 grounding_status: NOT_APPLICABLE
 mapping_status: REVIEWED
-parent_habitats:
-- habitatmech:GOLD.92b66873c0
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4256
@@ -25,3 +23,17 @@ curation_history:
     for wastewater nitrogen removal, not the wastewater or reactor habitat. An external
     process term corroborates the process reading but is outside the committed slice.
     (source concept habitatmech:GOLD.d3e01e5908)'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.92b66873c0
+    for habitatmech:GOLD.d3e01e5908 (Engineered > Wastewater > Nutrient removal >
+    Nitrogen removal > Anammox). Bounded hierarchy correction (#1894; 20261011T024030Z-anammox
+    F1): the retained ITEM NOT_APPLICABLE process-only decision does not support a
+    strictly broader habitat parent. PMID:7747947 distinguishes the process from its
+    experimental medium and sludge; it does not establish the meaning of this GOLD
+    node. Exclude only the immediate source-context contribution, preserving node
+    4256, exact path, one ORGANISM assertion, native statuses and decision history.
+    GOLD surroundings guidance and later treatment-study metadata leave process-versus-setting
+    scope unresolved in #1614; this correction neither validates the original exclusion
+    decision nor invents a reactor identity.'
