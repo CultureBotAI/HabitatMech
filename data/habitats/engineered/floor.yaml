@@ -3,8 +3,6 @@ label: Floor
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:03501152
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5574
@@ -25,3 +23,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:03501152 for habitatmech:GOLD.29dae65d3c
+    (Engineered > Built environment > Hospital > ICU > Floor). Bounded context exclusion
+    (#1925; 20261011T102003Z-floor F1): a floor surface is not a kind of the containing
+    intensive-care-unit facility. ENVO:03501152 denotes a hospital unit facility;
+    PMID:23475210 (https://www.nature.com/articles/srep01413) distinguishes floor
+    surfaces from devices and workplaces within the ICU. Later exact GOLD BioSample
+    Gb0140120 explicitly names floors of the intensive care unit. Exclude only this
+    whole-facility source contribution; retain node 5574, full source path, one frozen
+    ORGANISM assertion, mint and UNGROUNDED/SEEDED status. No construction material,
+    universal microbial community or reconstructed original membership is inferred.'

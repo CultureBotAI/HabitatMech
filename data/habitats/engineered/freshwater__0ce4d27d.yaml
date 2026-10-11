@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002011
-- ENVO:01000621
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8263
@@ -18,3 +17,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:01000621 for habitatmech:GOLD.d482ddbf80
+    (Engineered > Artificial ecosystem > Microcosm > Freshwater). Bounded context
+    exclusion (#1925; 20261011T102025Z-freshwater__0ce4d27d F1): under the retained
+    freshwater-material identity, sampled water is not a kind of microcosm vivarium.
+    Current ENVO defines ENVO:01000621 as an experimental vivarium; later exact GOLD
+    BioSamples describe pond water incubated in microcosm media. Remove only this
+    enclosure contribution; retain independent water genus ENVO:00002011, mint, nodes
+    8263/8264, full source path, zero-count omissions and NARROW/SEEDED status. Later
+    94 BioSamples are not replacement ORGANISM assertions. Source scope remains qualified;
+    F2/shared mapping-endpoint issue #1398 remains open and no SSSOM/KGX readiness
+    is claimed.'
