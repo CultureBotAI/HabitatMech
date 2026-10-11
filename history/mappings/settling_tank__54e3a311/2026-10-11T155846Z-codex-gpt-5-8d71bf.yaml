@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: settling_tank__54e3a311
+session:
+  id: 2026-10-11T155846Z-codex-gpt-5-8d71bf
+  timestamp: '2026-10-11T15:58:46Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1942
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: 'Exclude unsupported GOLD context parent: settling_tank__54e3a311'
+  details: Bounded hierarchy correction (https://github.com/CultureBotAI/HabitatMech/issues/1942;
+    20261011T155137Z-settling_tank__54e3a311 F1). A settling unit within an A/O treatment
+    system is not a kind of the complete system. EPA832-R-04-001 page11 and https://pubmed.ncbi.nlm.nih.gov/29053751/
+    distinguish units and treatment-system context; no universal A/O expansion is asserted.
+    Exclude only this immediate GOLD contribution; preserve source identity, node/path provenance,
+    counts/units, native status and independent parents. Current source evidence is not reconstruction
+    of every original member. Whole-corpus differential regressions passed for the exact five
+    hierarchy guards and two source-kind decisions, including unaffected siblings and all
+    retained scientific fields. Dry seed and forced canaries were inspected before full regeneration.
+    Post-correction native gates, semantic-map/site freshness and final CI remain required
+    before merge. Shared mapping endpoints and synonym-scope issues are not resolved.

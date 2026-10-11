@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: settled_granule
+session:
+  id: 2026-10-11T155840Z-codex-gpt-5-f1fd24
+  timestamp: '2026-10-11T15:58:40Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1942
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: 'Exclude unsupported GOLD context parent: settled_granule'
+  details: Bounded hierarchy correction (https://github.com/CultureBotAI/HabitatMech/issues/1942;
+    20261011T155124Z-settled_granule F1). Settled granules are material, not reactor apparatus.
+    Exact later GOLD study Gs0151903 describes cultures inoculated with pulp-mill anaerobic
+    granules; no universal sludge genus is inferred. Exclude only this immediate GOLD contribution;
+    preserve source identity, node/path provenance, counts/units, native status and independent
+    parents. Current source evidence is not reconstruction of every original member. Whole-corpus
+    differential regressions passed for the exact five hierarchy guards and two source-kind
+    decisions, including unaffected siblings and all retained scientific fields. Dry seed
+    and forced canaries were inspected before full regeneration. Post-correction native gates,
+    semantic-map/site freshness and final CI remain required before merge. Shared mapping
+    endpoints and synonym-scope issues are not resolved.
