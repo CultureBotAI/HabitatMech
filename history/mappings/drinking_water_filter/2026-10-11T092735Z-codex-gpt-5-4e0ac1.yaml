@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: drinking_water_filter
+session:
+  id: 2026-10-11T092735Z-codex-gpt-5-4e0ac1
+  timestamp: '2026-10-11T09:27:35Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1921
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude the treatment-plant building from drinking-water-filter strict parents
+  details: 'Current ENVO and CDC distinguish a filter or sampled material from the plant building.
+    Exclude only the immediate ENVO:03600004 contribution for habitatmech:GOLD.697d4c6359
+    with exact path guard. Preserve mint, nodes5492/5493, one ORGANISM assertion and UNGROUNDED/SEEDED
+    status. Later members span filter media and reject streams; no replacement definition/genus/identity
+    is inferred. Immutable baseline: 20261011T092227Z-drinking_water_filter/F1. Whole-corpus
+    differential regression and dry seed passed; a digestate canary from this three-target
+    change was inspected. Remaining regeneration, label correspondence and full QC are publication
+    requirements.'

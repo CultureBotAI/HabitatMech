@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: drinking_water__0a661d20
+session:
+  id: 2026-10-11T092733Z-codex-gpt-5-700f24
+  timestamp: '2026-10-11T09:27:33Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1921
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude the treatment-plant building from drinking-water strict parents
+  details: 'Current ENVO and CDC distinguish water from the treatment-plant building. Exclude
+    only ENVO:03600004 on the exact GOLD path; preserve independent ENVO:00003064, mint, nodes5499/5500,68
+    ORGANISM assertions and NARROW/SEEDED status. Immutable baseline: 20261011T092224Z-drinking_water__0a661d20/F1.
+    F2/#1398 endpoint mismatch and heterogeneous member scope remain unresolved. The whole-corpus
+    differential regression and dry seed passed, and a digestate canary from this three-target
+    change was inspected. Publication requires regenerated products, label correspondence
+    and full QC; no SSSOM/KGX readiness claim.'

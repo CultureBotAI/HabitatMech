@@ -3,8 +3,6 @@ label: Digestate
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:00002124
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5582
@@ -24,3 +22,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00002124 for habitatmech:GOLD.43db7aa909
+    (Engineered > Bioreactor > Anaerobic > Digestate). Bounded context exclusion (#1921;
+    20261011T092205Z-digestate__6bea3d76 F1): digestate is residual material rather
+    than its containing anaerobic bioreactor. EPA AgSTAR (https://www.epa.gov/agstar/how-does-anaerobic-digestion-work)
+    distinguishes the solid/liquid output from the vessel; current ENVO places ENVO:00002124
+    under containment-unit genus ENVO:00002123. Exclude only this immediate source-parent
+    contribution; preserve the generic source mint, nodes 5582/5583, complete path,
+    zero ORGANISM count omission and UNGROUNDED/SEEDED status. Later 411 BioSamples
+    are separate context, not a replacement source count. No definition, replacement
+    genus or merge with qualified digestate siblings is inferred.'
