@@ -7,7 +7,6 @@ grounding_status: EXACT
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:01000604
-- habitatmech:GOLD.013b99db03
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8286
@@ -20,3 +19,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.013b99db03
+    for habitatmech:GOLD.f96ea35aa9 (Engineered > Built environment > Spacecraft Assembly
+    Cleanrooms > Spacecraft). ITEM hierarchy assessment (#1955; 20261011T182940Z-spacecraft
+    F1): A spacecraft is a vehicle, not the controlled assembly cleanroom. NASA How
+    to Build a Clean Spacecraft (2022-01-18) explicitly distinguishes hardware and
+    room: https://sma.nasa.gov/sma-disciplines/planetary-protection/explore/explore-item/how-to-build-a-clean-spacecraft
+    . Preserve the vehicle genus and remove inherited cleanroom misclassification
+    from space station without changing station fields. Exclude only this guarded
+    source-path contribution. Preserve other fields, frozen source nodes/count units
+    or omissions, independent parents and native lifecycle. Later source examples
+    do not reconstruct original membership; shared endpoint #1398 is unchanged.'
