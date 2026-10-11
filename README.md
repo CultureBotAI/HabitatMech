@@ -49,10 +49,10 @@ parameters rather than flattening them into one unsupported claim.
 |---|---:|---|---|---:|
 | HOST_ASSOCIATED | 1,649 | | EXACT | 1,059 |
 | ENGINEERED | 488 | | UNGROUNDED | 949 |
-| AQUATIC | 468 | | NARROW | 989 |
+| AQUATIC | 468 | | NARROW | 990 |
 | TERRESTRIAL | 353 | | NOT_APPLICABLE | 105 |
 | OTHER | 178 | | CLOSE | 93 |
-| FOOD | 61 | | BROAD | 13 |
+| FOOD | 61 | | BROAD | 12 |
 | AIR | 7 | |  |  |
 | CLINICAL | 4 | |  |  |
 

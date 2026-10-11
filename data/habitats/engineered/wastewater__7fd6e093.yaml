@@ -1,30 +1,49 @@
 identifier: habitatmech:GOLD.a2d3d5127a
 label: Wastewater
 habitat_category: ENGINEERED
-grounding_status: BROAD
+grounding_status: NARROW
 mapping_status: REVIEWED
 parent_habitats:
-- ENVO:03600004
-- habitatmech:GOLD.b6ea996423
+- ENVO:00002001
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5526
   source_label: Wastewater
   source_path: Engineered > Built environment > Water treatment plant > Wastewater
-  mapping_predicate: skos:broadMatch
+  mapping_predicate: skos:narrowMatch
   assertion_count: 205
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-13T00:00:00Z'
-  curator: claude-opus-5
-  action: GROUND_AS_PARENT
-  changes: 'ENVO:03600004 ''drinking water treatment plant'' attached as a parent,
-    not adopted as the identity (BROAD). A generic water treatment plant may treat
-    wastewater rather than drinking water, so the drinking-water term is narrower
-    than this node, not equal to it. Path: Engineered > Built environment > Water
-    treatment plant > Wastewater (source concept habitatmech:GOLD.a2d3d5127a)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: BROAD.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: GROUND_AS_PARENT
+  changes: 'ENVO:00002001 ''waste water'' attached as a parent, not adopted as the
+    identity (NARROW). Correct exact wastewater leaf, not its enclosing water-treatment
+    plant (https://github.com/CultureBotAI/HabitatMech/issues/1949). ENVO:00002001
+    is the broader water-material class; ENVO:03600004 denotes drinking-water treatment
+    infrastructure. Retain the path-qualified mint and 205 ORGANISM assertions, not
+    an exact ontology merge. EPA https://www.epa.gov/sites/production/files/2015-09/documents/primer.pdf
+    printed pp11-12 distinguishes water, sludge and equipment; later exact GOLD examples
+    describe wastewater settings but do not reconstruct frozen membership. Exclude
+    the immediate facility contribution separately; mapping endpoint #1398 remains
+    unresolved. Path: Engineered > Built environment > Water treatment plant > Wastewater
+    (source concept habitatmech:GOLD.a2d3d5127a)'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.b6ea996423
+    for habitatmech:GOLD.a2d3d5127a (Engineered > Built environment > Water treatment
+    plant > Wastewater). Bounded material/context correction (https://github.com/CultureBotAI/HabitatMech/issues/1949;
+    20261011T171311Z-wastewater__7fd6e093 F1): the source-qualified Wastewater material
+    is not a kind of its enclosing treatment device, facility, operating context or
+    feed stream. EPA primary sedimentation and suspended-growth descriptions distinguish
+    material from treatment infrastructure (https://www.epa.gov/sites/production/files/2015-09/documents/primer.pdf,
+    printed pp11-12); current ENVO class axioms and exact source path support this
+    exclusion. Retain independent material genus, mint, source node/path, frozen ORGANISM
+    count or omission, and native status. Later sample examples do not reconstruct
+    original membership; shared mapping-endpoint #1398 remains open.'

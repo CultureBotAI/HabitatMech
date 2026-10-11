@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002001
-- ENVO:00003043
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5521
@@ -20,3 +19,19 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00003043 for habitatmech:GOLD.353a834cfd
+    (Engineered > Sewage treatment plant > Wastewater). Bounded material/context correction
+    (https://github.com/CultureBotAI/HabitatMech/issues/1948; 20261011T171252Z-wastewater__05daf28f
+    F2): the source-qualified Wastewater material is not a kind of its enclosing treatment
+    device, facility, operating context or feed stream. EPA primary sedimentation
+    and suspended-growth descriptions distinguish material from treatment infrastructure
+    (https://www.epa.gov/sites/production/files/2015-09/documents/primer.pdf, printed
+    pp11-12); current ENVO class axioms and exact source path support this exclusion.
+    Retain independent material genus, mint, source node/path, frozen ORGANISM count
+    or omission, and native status. Later sample examples do not reconstruct original
+    membership; shared mapping-endpoint #1398 remains open. Later soil-isolated Go0126450
+    membership remains unresolved in https://github.com/CultureBotAI/HabitatMech/issues/1953;
+    no uniformly liquid member set is claimed.'

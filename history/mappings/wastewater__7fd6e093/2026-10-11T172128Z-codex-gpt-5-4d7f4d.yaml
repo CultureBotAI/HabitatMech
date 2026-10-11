@@ -1,0 +1,37 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: wastewater__7fd6e093
+session:
+  id: 2026-10-11T172128Z-codex-gpt-5-4d7f4d
+  timestamp: '2026-10-11T17:21:28Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1949
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding_status
+  - source_attestations
+  - parent_habitats
+  - curation_history
+  summary: 'Correct wastewater material genus: wastewater__7fd6e093'
+  details: 'Correct exact wastewater leaf, not its enclosing water-treatment plant (https://github.com/CultureBotAI/HabitatMech/issues/1949).
+    ENVO:00002001 is the broader water-material class; ENVO:03600004 denotes drinking-water
+    treatment infrastructure. Retain the path-qualified mint and 205 ORGANISM assertions,
+    not an exact ontology merge. EPA https://www.epa.gov/sites/production/files/2015-09/documents/primer.pdf
+    printed pp11-12 distinguishes water, sludge and equipment; later exact GOLD examples describe
+    wastewater settings but do not reconstruct frozen membership. Exclude the immediate facility
+    contribution separately; mapping endpoint #1398 remains unresolved. Path: Engineered >
+    Built environment > Water treatment plant > Wastewater Exact-scope differential regressions
+    passed, including all preserved source fields, valid material genera and the effluent
+    descendant. Dry seed and forced canaries were inspected before full regeneration. Post-correction
+    native gates, semantic-map/site freshness and final CI remain required before merge. Source
+    membership and mapping endpoints are not resolved by this change.'
