@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00000114
-- ENVO:00002011
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5741
@@ -20,3 +19,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00002011 for habitatmech:GOLD.a16a79bd0c
+    (Environmental > Aquatic > Freshwater > Agricultural field). ITEM hierarchy assessment
+    (https://github.com/CultureBotAI/HabitatMech/issues/1971; 20261011T212827Z-agricultural_field__c2942601):
+    The path-specific agricultural-field identity is correctly kept minted rather
+    than collapsing all leaf matches. Its field genus is supported, but freshwater
+    material is not a superclass of a field. The automatic NARROW predicate also has
+    the separate source-to-record endpoint mismatch tracked in1398. Exclude only this
+    guarded GOLD source-parent contribution. Preserve independent parents, source
+    identity/count units or omissions, ontology definition, and native lifecycle;
+    later source examples do not reconstruct frozen membership. Shared synonym1249
+    and endpoint1398 issues remain separate.'

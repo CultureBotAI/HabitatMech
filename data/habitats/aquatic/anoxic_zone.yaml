@@ -3,8 +3,6 @@ label: Anoxic zone
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:00000021
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5392
@@ -23,3 +21,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00000021 for habitatmech:GOLD.b75e4aa08f
+    (Environmental > Aquatic > Freshwater > Lake > Anoxic zone). ITEM hierarchy assessment
+    (https://github.com/CultureBotAI/HabitatMech/issues/1971; 20261011T212929Z-anoxic_zone):
+    Later exact-path lake-water samples at specified depths support an anoxic lake
+    compartment. A compartment is not the whole freshwater lake. Preserve the path-specific
+    identity and zero frozen organism count; excluding the lake container does not
+    authorize exact grounding to anoxic water material. Exclude only this guarded
+    GOLD source-parent contribution. Preserve independent parents, source identity/count
+    units or omissions, ontology definition, and native lifecycle; later source examples
+    do not reconstruct frozen membership. Shared synonym1249 and endpoint1398 issues
+    remain separate.'

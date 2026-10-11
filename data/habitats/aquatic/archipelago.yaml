@@ -19,7 +19,6 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: ENVO
 parent_habitats:
-- ENVO:00001999
 - ENVO:01001784
 source_attestations:
 - source: GOLD
@@ -32,3 +31,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00001999 for habitatmech:GOLD.8ec9c78331
+    (Environmental > Aquatic > Marine > Archipelago). ITEM hierarchy assessment (https://github.com/CultureBotAI/HabitatMech/issues/1971;
+    20261011T212957Z-archipelago): The active ENVO archipelago denotes an island group
+    and retains island-cluster ancestry, not a marine water body. The marine source
+    placement is contextual. ENVO retains ISLAND CLUSTER as exact but IslandArc, island
+    arc and island group as related, exposing the shared typed-synonym defect. Exclude
+    only this guarded GOLD source-parent contribution. Preserve independent parents,
+    source identity/count units or omissions, ontology definition, and native lifecycle;
+    later source examples do not reconstruct frozen membership. Shared synonym1249
+    and endpoint1398 issues remain separate.'

@@ -4,7 +4,6 @@ habitat_category: AQUATIC
 grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
-- ENVO:00001999
 - ENVO:00012408
 source_attestations:
 - source: GOLD
@@ -17,3 +16,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00001999 for habitatmech:GOLD.f8b744283b
+    (Environmental > Aquatic > Marine > Aquifer). ITEM hierarchy assessment (https://github.com/CultureBotAI/HabitatMech/issues/1971;
+    20261011T212949Z-aquifer__33e3996b): The marine-qualified aquifer retains minted
+    identity and the aquifer formation genus. A marine water body is not a superclass
+    of a geological aquifer. Preserve zero-count provenance and distinguish the shared1398
+    mapping-endpoint issue from this independently repairable parent. Exclude only
+    this guarded GOLD source-parent contribution. Preserve independent parents, source
+    identity/count units or omissions, ontology definition, and native lifecycle;
+    later source examples do not reconstruct frozen membership. Shared synonym1249
+    and endpoint1398 issues remain separate.'

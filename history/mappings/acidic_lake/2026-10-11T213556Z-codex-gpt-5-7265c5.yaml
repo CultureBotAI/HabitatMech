@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: acidic_lake
+session:
+  id: 2026-10-11T213556Z-codex-gpt-5-7265c5
+  timestamp: '2026-10-11T21:35:56Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1971
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude reviewed GOLD context parent from acidic_lake
+  details: 'ITEM hierarchy assessment (https://github.com/CultureBotAI/HabitatMech/issues/1971;
+    20261011T212815Z-acidic_lake): The exact acidic-lake source retains48 ORGANISM assertions
+    and no authored definition. A lake is not a subclass of the parent currently interpreted
+    as a pH quality. Preserve the path and identity while excluding that strict quality-parent
+    contribution; do not merge this generic bin with the distinct thermal acid-lake path.
+    Exclude only this guarded GOLD source-parent contribution. Preserve independent parents,
+    source identity/count units or omissions, ontology definition, and native lifecycle; later
+    source examples do not reconstruct frozen membership. Shared synonym1249 and endpoint1398
+    issues remain separate. Authorized by user publication/remediation request. Baseline46
+    native checks and exact main CI783 passed/3 skipped succeeded. Post-fix tests, canary,
+    regeneration and full QC pending at event creation; results will be retained in PR and
+    linked successor reviews.'

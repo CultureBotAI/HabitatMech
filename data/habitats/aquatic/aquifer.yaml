@@ -13,7 +13,6 @@ synonyms:
   source: PREGO
 parent_habitats:
 - ENVO:01001275
-- habitatmech:GOLD.7f8e268653
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5430
@@ -197,3 +196,17 @@ curation_history:
     this one is corroborated across 4. The term is claimed only by PREGO''s ''aquifer'',
     so grounding merges GOLD''s aquifer with PREGO''s, which is the multi-source corroboration
     this corpus is built to record. (source concept habitatmech:GOLD.9f7a6c66a7)'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.7f8e268653
+    for habitatmech:GOLD.9f7a6c66a7 (Environmental > Aquatic > Freshwater > Groundwater
+    > Aquifer). ITEM hierarchy assessment (https://github.com/CultureBotAI/HabitatMech/issues/1971;
+    20261011T212945Z-aquifer): The active ENVO aquifer is a permeable geological formation,
+    not the groundwater it contains. The four-study local-scale consensus supports
+    the aquifer-place interpretation but does not make groundwater material its genus.
+    Preserve the geological-stratum parent, five ORGANISM assertions and395 PREGO
+    TAXON associations. Exclude only this guarded GOLD source-parent contribution.
+    Preserve independent parents, source identity/count units or omissions, ontology
+    definition, and native lifecycle; later source examples do not reconstruct frozen
+    membership. Shared synonym1249 and endpoint1398 issues remain separate.'

@@ -11,7 +11,6 @@ synonyms:
   source: ENVO
 parent_habitats:
 - ENVO:00000027
-- habitatmech:GOLD.22a80cbd14
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7510
@@ -23,3 +22,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.22a80cbd14
+    for habitatmech:GOLD.4a2e9ede31 (Environmental > Aquatic > Deep subsurface > Groundwater
+    > Acidic spring). ITEM hierarchy assessment (https://github.com/CultureBotAI/HabitatMech/issues/1971;
+    20261011T212819Z-acidic_spring): The active ENVO acidic-spring definition denotes
+    a spring landform through which low-pH water flows. Its independent spring genus
+    is supported. Groundwater material is its source context, not a superclass of
+    the spring feature. Exclude only this guarded GOLD source-parent contribution.
+    Preserve independent parents, source identity/count units or omissions, ontology
+    definition, and native lifecycle; later source examples do not reconstruct frozen
+    membership. Shared synonym1249 and endpoint1398 issues remain separate.'

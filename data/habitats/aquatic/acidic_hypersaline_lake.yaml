@@ -3,8 +3,6 @@ label: Acidic hypersaline lake
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.90a084a03e
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7986
@@ -26,3 +24,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.90a084a03e
+    for habitatmech:GOLD.2a6cc2b868 (Environmental > Aquatic > Acidic > Acidic hypersaline
+    lake). ITEM hierarchy assessment (https://github.com/CultureBotAI/HabitatMech/issues/1971;
+    20261011T212812Z-acidic_hypersaline_lake): The exact acidic hypersaline lake source
+    retains one ORGANISM assertion, minted identity and no unsupported exact ontology
+    mapping. Its parent is explicitly curated as a pH quality, not a broader habitat.
+    Removing that contribution need not fabricate a pH cutoff, salinity value or generic
+    lake identity. Exclude only this guarded GOLD source-parent contribution. Preserve
+    independent parents, source identity/count units or omissions, ontology definition,
+    and native lifecycle; later source examples do not reconstruct frozen membership.
+    Shared synonym1249 and endpoint1398 issues remain separate.'
