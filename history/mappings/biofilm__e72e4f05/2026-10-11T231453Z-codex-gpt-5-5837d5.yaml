@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: biofilm__e72e4f05
+session:
+  id: 2026-10-11T231453Z-codex-gpt-5-5837d5
+  timestamp: '2026-10-11T23:14:53Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1979
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude reviewed GOLD context parents from biofilm__e72e4f05
+  details: 'ITEM hierarchy assessment: https://github.com/CultureBotAI/HabitatMech/issues/1979
+    (20261011T225546Z-biofilm__e72e4f05). The lake-qualified aggregate is a biofilm, not a
+    freshwater lake. Later examples include leaf-attached and floating biofilms, supporting
+    the distinction. Retain the biofilm genus and source mint; do not merge with the separately
+    reviewed Lake biofilm sibling merely because the labels resemble one another. The narrowMatch
+    endpoint concern remains. Exclude only this guarded GOLD source-parent contribution. Preserve
+    independent parents, frozen source identity/counts/units or omissions and native lifecycle.
+    Later examples do not reconstruct frozen membership; shared synonym and endpoint issues
+    remain separate. Authorized by user publication/remediation request. Baseline 46 native
+    checks and exact main CI 800 passed/3 skipped succeeded. Post-fix tests, canary, regeneration
+    and full QC pending at event creation; outcomes will be retained in PR and successor reviews.'

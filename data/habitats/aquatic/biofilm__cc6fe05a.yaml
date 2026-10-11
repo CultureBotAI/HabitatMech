@@ -15,9 +15,6 @@ synonyms:
   source: PREGO
 parent_habitats:
 - ENVO:01000549
-- habitatmech:GOLD.3ec896865d
-- habitatmech:GOLD.4bd2954af9
-- habitatmech:GOLD.ec116f9a37
 source_attestations:
 - source: ENVIRONMENTS_TABLE
   source_id: biofilm
@@ -340,7 +337,7 @@ causal_graphs:
     grounding: ENVO:00002034
   - node_id: microbial_aggregate
     label: surface-associated microbial aggregate
-    node_type: TAXON
+    node_type: COMMUNITY
   - node_id: substratum
     label: substratum
     node_type: HABITAT
@@ -379,7 +376,7 @@ causal_graphs:
     node_type: COMMUNITY_PROCESS
   - node_id: stress_tolerant_subpopulations
     label: stress-tolerant subpopulations
-    node_type: TAXON
+    node_type: COMMUNITY
   edges:
   - edge_id: biofilm_determined_by_aggregate
     subject: biofilm
@@ -598,4 +595,57 @@ curation_history:
   changes: Added a biofilm EPS gradient structuring graph backed by PMID:27510863,
     DOI:10.1038/nrmicro.2016.94, PMID:20676145, DOI:10.1038/nrmicro2415, PMID:35149841,
     and DOI:10.1038/s41579-022-00692-2.
+  llm_assisted: true
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.4bd2954af9
+    for habitatmech:GOLD.00cc26ac8b (Environmental > Aquatic > Marine > Biofouling
+    > Microfouling/Biofilm). ITEM hierarchy assessment: https://github.com/CultureBotAI/HabitatMech/issues/1979
+    (20261011T225542Z-biofilm__cc6fe05a). Generic ENVO biofilm is supported by the
+    ontology and its six source concepts. It is not universally freshwater, marine
+    and inland-saline biofouling at once. The 16-edge matrix graph has supported mechanisms
+    but overstates obligatory surface attachment and includes non-clade assemblages
+    typed TAXON. Six parameter bands and source-attributed taxa are not universal
+    measured habitat properties. Exclude only this guarded GOLD source-parent contribution.
+    Preserve independent parents, frozen source identity/counts/units or omissions
+    and native lifecycle. Later examples do not reconstruct frozen membership; shared
+    synonym and endpoint issues remain separate.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.3ec896865d
+    for habitatmech:GOLD.3911678ce4 (Environmental > Aquatic > Freshwater > Biofouling
+    > Microfouling/Biofilm). ITEM hierarchy assessment: https://github.com/CultureBotAI/HabitatMech/issues/1979
+    (20261011T225542Z-biofilm__cc6fe05a). Generic ENVO biofilm is supported by the
+    ontology and its six source concepts. It is not universally freshwater, marine
+    and inland-saline biofouling at once. The 16-edge matrix graph has supported mechanisms
+    but overstates obligatory surface attachment and includes non-clade assemblages
+    typed TAXON. Six parameter bands and source-attributed taxa are not universal
+    measured habitat properties. Exclude only this guarded GOLD source-parent contribution.
+    Preserve independent parents, frozen source identity/counts/units or omissions
+    and native lifecycle. Later examples do not reconstruct frozen membership; shared
+    synonym and endpoint issues remain separate.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.ec116f9a37
+    for habitatmech:GOLD.f8048a6e2a (Environmental > Aquatic > Non-marine Saline and
+    Alkaline > Biofouling > Microfouling/Biofilm). ITEM hierarchy assessment: https://github.com/CultureBotAI/HabitatMech/issues/1979
+    (20261011T225542Z-biofilm__cc6fe05a). Generic ENVO biofilm is supported by the
+    ontology and its six source concepts. It is not universally freshwater, marine
+    and inland-saline biofouling at once. The 16-edge matrix graph has supported mechanisms
+    but overstates obligatory surface attachment and includes non-clade assemblages
+    typed TAXON. Six parameter bands and source-attributed taxa are not universal
+    measured habitat properties. Exclude only this guarded GOLD source-parent contribution.
+    Preserve independent parents, frozen source identity/counts/units or omissions
+    and native lifecycle. Later examples do not reconstruct frozen membership; shared
+    synonym and endpoint issues remain separate.'
+- timestamp: '2026-10-11T23:12:06Z'
+  curator: codex-gpt-5
+  action: CORRECT_CAUSAL_GRAPH
+  changes: Retyped microbial_aggregate and stress_tolerant_subpopulations as COMMUNITY
+    because they denote assemblages rather than organismal clades. Stable graph identifiers
+    and evidence are unchanged. Surface-attachment, detailed mechanism support and
+    stress-selection scope remain unresolved.
   llm_assisted: true

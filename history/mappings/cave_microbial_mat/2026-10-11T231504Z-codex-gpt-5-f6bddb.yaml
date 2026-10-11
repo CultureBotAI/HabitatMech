@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: cave_microbial_mat
+session:
+  id: 2026-10-11T231504Z-codex-gpt-5-f6bddb
+  timestamp: '2026-10-11T23:15:04Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1979
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude reviewed GOLD context parents from cave_microbial_mat
+  details: 'ITEM hierarchy assessment: https://github.com/CultureBotAI/HabitatMech/issues/1979
+    (20261011T225702Z-cave_microbial_mat). Later cave-wall and floating-mat examples support
+    a microbial aggregation/material in a cave. Neither is groundwater itself. The source
+    path is context, not a strict genus; no exact mat mapping is inferred merely from the
+    label. Exclude only this guarded GOLD source-parent contribution. Preserve independent
+    parents, frozen source identity/counts/units or omissions and native lifecycle. Later
+    examples do not reconstruct frozen membership; shared synonym and endpoint issues remain
+    separate. Authorized by user publication/remediation request. Baseline 46 native checks
+    and exact main CI 800 passed/3 skipped succeeded. Post-fix tests, canary, regeneration
+    and full QC pending at event creation; outcomes will be retained in PR and successor reviews.'

@@ -3,8 +3,6 @@ label: Biofouling
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
-parent_habitats:
-- habitatmech:GOLD.22a80cbd14
 xrefs:
 - ENVO:06105023
 source_attestations:
@@ -37,3 +35,17 @@ curation_history:
     Not grounded to ENVO:00002034 ''biofilm'' either: biofouling includes macrofouling
     such as barnacles and tube worms, so biofilm is narrower than the concept rather
     than broader. (source concept habitatmech:GOLD.15bcd61a84)'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.22a80cbd14
+    for habitatmech:GOLD.15bcd61a84 (Environmental > Aquatic > Deep subsurface > Groundwater
+    > Biofouling). ITEM hierarchy assessment: https://github.com/CultureBotAI/HabitatMech/issues/1979
+    (20261011T225551Z-biofouling). The ITEM decision explicitly interprets the deep-groundwater
+    bin as a fouling layer, with the fouling process ENVO:06105023 retained only as
+    an xref. A layer is not groundwater. Zero frozen direct membership and the term-request
+    exclusion do not justify retaining a false strict parent or exact-mapping the
+    layer to biofilm. Exclude only this guarded GOLD source-parent contribution. Preserve
+    independent parents, frozen source identity/counts/units or omissions and native
+    lifecycle. Later examples do not reconstruct frozen membership; shared synonym
+    and endpoint issues remain separate.'

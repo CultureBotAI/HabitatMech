@@ -353,13 +353,13 @@ causal_graphs:
     node_type: PATHWAY
   - node_id: freshwater_bacterioplankton
     label: freshwater bacterioplankton
-    node_type: TAXON
+    node_type: COMMUNITY
   - node_id: marine_bacterioplankton
     label: marine bacterioplankton
-    node_type: TAXON
+    node_type: COMMUNITY
   - node_id: estuarine_bacterioplankton
     label: estuarine bacterioplankton
-    node_type: TAXON
+    node_type: COMMUNITY
   - node_id: bacterial_growth
     label: bacterial growth
     node_type: COMMUNITY_PROCESS
@@ -473,8 +473,9 @@ causal_graphs:
     subject: osmotic_stress
     predicate: selects for
     object: osmoregulatory_transport
-    description: Bacteria in brackish gradients need membrane transport systems that
-      import, export, or synthesize osmoprotective solutes as salinity changes.
+    description: Membrane transport systems import or export osmoprotective solutes
+      as salinity changes; compatible-solute biosynthesis is a distinct mechanism
+      of osmotic adjustment.
     evidence:
     - reference: PMID:21663439
       snippet: cellular homeostasis
@@ -488,8 +489,9 @@ causal_graphs:
     subject: osmoregulatory_transport
     predicate: enables
     object: compatible_solute_accumulation
-    description: Compatible-solute import and synthesis let cells counter osmotic
-      stress while preserving cytoplasmic protein function.
+    description: Compatible-solute import can contribute to intracellular solute accumulation
+      and osmotic adjustment while preserving cytoplasmic protein function; synthesis
+      is a separate route to accumulation.
     evidence:
     - reference: PMID:21663439
       snippet: Bacterial osmoregulation
@@ -552,8 +554,8 @@ causal_graphs:
     subject: bacterial_growth
     predicate: establishes
     object: estuarine_bacterioplankton
-    description: Brackish-adapted estuarine populations can establish when local bacterial
-      growth is faster than hydrologic residence time and flushing.
+    description: Distinct estuarine populations can establish when average bacterial
+      doubling time is much shorter than water residence time.
     evidence:
     - reference: PMID:15006771
       snippet: bacterial growth and residence time
@@ -582,4 +584,13 @@ curation_history:
   action: ADD_CAUSAL_GRAPH
   changes: Added a brackish-water salinity-transition osmoregulation graph backed
     by PMID:15006771, PMID:22895159, PMID:34544488, PMID:21663439, and DOI:10.1186/s40168-024-01817-w.
+  llm_assisted: true
+- timestamp: '2026-10-11T23:12:06Z'
+  curator: codex-gpt-5
+  action: CORRECT_CAUSAL_GRAPH
+  changes: Retyped three bacterioplankton assemblages as COMMUNITY, separated membrane
+    transport from compatible-solute biosynthesis, and compared doubling time with
+    residence time rather than a rate with a duration. Stable identifiers and citations
+    are unchanged. Generic estuarine scope, inferred osmotic filtering and selection
+    claims still require reassessment.
   llm_assisted: true

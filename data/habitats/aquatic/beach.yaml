@@ -69,7 +69,6 @@ synonyms:
   source: ENVO
 parent_habitats:
 - ENVO:01001884
-- habitatmech:GOLD.115edc36f8
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4017
@@ -251,3 +250,17 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.115edc36f8
+    for habitatmech:GOLD.f37e2809fc (Environmental > Aquatic > Marine > Intertidal
+    zone > Beach/Shore). ITEM hierarchy assessment: https://github.com/CultureBotAI/HabitatMech/issues/1979
+    (20261011T225523Z-beach). The generic ENVO shoreline landform merges a marine
+    Beach/Shore source and PREGO. Marine sample descriptions support the source context
+    but do not make every beach a marine intertidal zone. Retain the surface-landform
+    ontology parent, distinguish source context from genus, and preserve genuine exact
+    Beach while correcting related/narrow synonym scopes. Exclude only this guarded
+    GOLD source-parent contribution. Preserve independent parents, frozen source identity/counts/units
+    or omissions and native lifecycle. Later examples do not reconstruct frozen membership;
+    shared synonym and endpoint issues remain separate.'

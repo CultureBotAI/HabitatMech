@@ -1,0 +1,51 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: biofilm__cc6fe05a
+session:
+  id: 2026-10-11T231452Z-codex-gpt-5-b40ca7
+  timestamp: '2026-10-11T23:14:52Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1979
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude reviewed GOLD context parents from biofilm__cc6fe05a
+  details: 'ITEM hierarchy assessment: https://github.com/CultureBotAI/HabitatMech/issues/1979
+    (20261011T225542Z-biofilm__cc6fe05a). Generic ENVO biofilm is supported by the ontology
+    and its six source concepts. It is not universally freshwater, marine and inland-saline
+    biofouling at once. The 16-edge matrix graph has supported mechanisms but overstates obligatory
+    surface attachment and includes non-clade assemblages typed TAXON. Six parameter bands
+    and source-attributed taxa are not universal measured habitat properties. Exclude only
+    this guarded GOLD source-parent contribution. Preserve independent parents, frozen source
+    identity/counts/units or omissions and native lifecycle. Later examples do not reconstruct
+    frozen membership; shared synonym and endpoint issues remain separate. ITEM hierarchy
+    assessment: https://github.com/CultureBotAI/HabitatMech/issues/1979 (20261011T225542Z-biofilm__cc6fe05a).
+    Generic ENVO biofilm is supported by the ontology and its six source concepts. It is not
+    universally freshwater, marine and inland-saline biofouling at once. The 16-edge matrix
+    graph has supported mechanisms but overstates obligatory surface attachment and includes
+    non-clade assemblages typed TAXON. Six parameter bands and source-attributed taxa are
+    not universal measured habitat properties. Exclude only this guarded GOLD source-parent
+    contribution. Preserve independent parents, frozen source identity/counts/units or omissions
+    and native lifecycle. Later examples do not reconstruct frozen membership; shared synonym
+    and endpoint issues remain separate. ITEM hierarchy assessment: https://github.com/CultureBotAI/HabitatMech/issues/1979
+    (20261011T225542Z-biofilm__cc6fe05a). Generic ENVO biofilm is supported by the ontology
+    and its six source concepts. It is not universally freshwater, marine and inland-saline
+    biofouling at once. The 16-edge matrix graph has supported mechanisms but overstates obligatory
+    surface attachment and includes non-clade assemblages typed TAXON. Six parameter bands
+    and source-attributed taxa are not universal measured habitat properties. Exclude only
+    this guarded GOLD source-parent contribution. Preserve independent parents, frozen source
+    identity/counts/units or omissions and native lifecycle. Later examples do not reconstruct
+    frozen membership; shared synonym and endpoint issues remain separate. Authorized by user
+    publication/remediation request. Baseline 46 native checks and exact main CI 800 passed/3
+    skipped succeeded. Post-fix tests, canary, regeneration and full QC pending at event creation;
+    outcomes will be retained in PR and successor reviews.'
