@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: leachate__6407848f
+session:
+  id: 2026-10-11T140440Z-codex-gpt-5-7e1f41
+  timestamp: '2026-10-11T14:04:40Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1937
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: Exclude unsupported GOLD context parent from leachate__6407848f
+  details: 'Bounded hierarchy correction (#1937; 20261011T135545Z-leachate__6407848f F1):
+    ENVO:00002141 denotes liquid percolation material, not anaerobic-reactor apparatus. Three
+    later exact-path GOLD BioSamples describe leach-bed liquid in digester settings but do
+    not reconstruct original membership. Remove only this GOLD reactor contribution and retain
+    independent ENVO:00002141, qualified mint, both nodes, exact path, count omissions and
+    NARROW/SEEDED status. Mapping-endpoint issue #1398 remains open; no predicate swap is
+    implied. Exact five-target whole-corpus differential regression passed; removing those
+    five guards in a temporary input made that regression fail as expected. Dry seed and forced
+    industrial-waste canary completed and the entire canary record was inspected before full
+    forced regeneration. All other fields and records are preserved by the regression. Post-correction
+    labels, strict validation, reproduction, history, full QC and map/site checks remain required
+    before merge. This session does not resolve original membership or shared synonym/mapping-endpoint
+    findings.'

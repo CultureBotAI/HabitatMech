@@ -3,8 +3,6 @@ label: Inoculum
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:00002124
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7096
@@ -24,3 +22,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00002124 for habitatmech:GOLD.94e1475c5e
+    (Engineered > Bioreactor > Anaerobic > Inoculum). Bounded hierarchy correction
+    (#1937; 20261011T135452Z-inoculum F1): inoculating material is not a kind of reactor
+    apparatus. PMID:24907580 distinguishes stored microbial inoculum from reactor
+    startup; later exact-path GOLD BioSamples Gb0314380-Gb0314382 likewise describe
+    digester inoculum, without reconstructing original membership. Exclude only the
+    immediate reactor contribution; preserve qualified mint, both source nodes, count
+    omissions and UNGROUNDED/SEEDED status. No universal sludge genus or new definition
+    is inferred.'

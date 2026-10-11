@@ -1342,6 +1342,78 @@ def test_digestate_water_and_filter_exclusions_change_only_context_and_audit(mon
             assert "mapping_predicate" not in attestation
 
 
+def test_industrial_inoculum_icu_leachate_manure_context_exclusions_are_bounded(monkeypatch):
+    targets = {
+        "ENVO:00002267": (
+            "habitatmech:GOLD.8faa599672", "mesh:D062611", ["ENVO:00002264"],
+            "CLOSE", "REVIEWED", "gold.ecosystem:4937", 9,
+            "Engineered > Solid waste > Industrial waste",
+        ),
+        "habitatmech:GOLD.94e1475c5e": (
+            "habitatmech:GOLD.94e1475c5e", "ENVO:00002124", [],
+            "UNGROUNDED", "SEEDED", "gold.ecosystem:7096", None,
+            "Engineered > Bioreactor > Anaerobic > Inoculum",
+        ),
+        "ENVO:03501152": (
+            "habitatmech:GOLD.570ad87007", "ENVO:00002173", ["ENVO:03501137"],
+            "CLOSE", "REVIEWED", "gold.ecosystem:5573", None,
+            "Engineered > Built environment > Hospital > ICU",
+        ),
+        "habitatmech:GOLD.f6f3c87964": (
+            "habitatmech:GOLD.f6f3c87964", "ENVO:00002124", ["ENVO:00002141"],
+            "NARROW", "SEEDED", "gold.ecosystem:5668", None,
+            "Engineered > Bioreactor > Anaerobic > Leachate",
+        ),
+        "ENVO:03501300": (
+            "habitatmech:GOLD.21f78f18dd", "habitatmech:GOLD.18ee4196a9", ["ENVO:00010483"],
+            "CLOSE", "REVIEWED", "gold.ecosystem:8076", None,
+            "Engineered > Solid waste > Animal waste > Manure slurry > Liquid manure",
+        ),
+    }
+    after = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    exclusions = load_gold_parent_exclusions(seed.GOLD_PARENT_EXCLUSIONS_PATH)
+    source_ids = {row[0] for row in targets.values()}
+    monkeypatch.setattr(
+        seed, "load_gold_parent_exclusions",
+        lambda path: {key: row for key, row in exclusions.items() if key not in source_ids},
+    )
+    before = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    assert before.keys() == after.keys()
+    assert {key for key in before if before[key] != after[key]} == targets.keys()
+    for identifier, (source, removed, retained, grounding, status, node, count, path) in targets.items():
+        old, new = before[identifier], after[identifier]
+        assert old["parent_habitats"] == sorted([removed, *retained])
+        assert new.get("parent_habitats", []) == retained
+        assert new["curation_history"][:-1] == old["curation_history"]
+        event = new["curation_history"][-1]
+        assert event["action"] == "SOURCE_PARENT_EXCLUDED"
+        assert event["timestamp"] == "2026-10-11T00:00:00Z"
+        assert event["curator"] == "codex-gpt-5"
+        assert source in event["changes"] and removed in event["changes"]
+        for field in (old.keys() | new.keys()) - {"parent_habitats", "curation_history"}:
+            assert new.get(field) == old.get(field), (identifier, field)
+        assert new["grounding_status"] == grounding
+        assert new["mapping_status"] == status
+        assert len(new["source_attestations"]) == 1
+        attestation = new["source_attestations"][0]
+        assert attestation["source_id"] == node
+        assert attestation["source_path"] == path
+        assert seed.mint("GOLD", path) == source
+        assert exclusions[source].source_path == path
+        assert exclusions[source].parent_id == removed
+        if count is None:
+            assert "assertion_count" not in attestation
+            assert "assertion_unit" not in attestation
+        else:
+            assert attestation["assertion_count"] == count
+            assert attestation["assertion_unit"] == "ORGANISM"
+        if grounding == "UNGROUNDED":
+            assert "mapping_predicate" not in attestation
+        else:
+            predicate = "skos:narrowMatch" if grounding == "NARROW" else "skos:closeMatch"
+            assert attestation["mapping_predicate"] == predicate
+
+
 def test_sludge_and_hydrocarbon_exclusions_preserve_material_and_source_scope(monkeypatch):
     targets = {
         "habitatmech:GOLD.84c231bfef": (

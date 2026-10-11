@@ -4,7 +4,6 @@ habitat_category: ENGINEERED
 grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
-- ENVO:00002124
 - ENVO:00002141
 source_attestations:
 - source: GOLD
@@ -18,3 +17,14 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00002124 for habitatmech:GOLD.f6f3c87964
+    (Engineered > Bioreactor > Anaerobic > Leachate). Bounded hierarchy correction
+    (#1937; 20261011T135545Z-leachate__6407848f F1): ENVO:00002141 denotes liquid
+    percolation material, not anaerobic-reactor apparatus. Three later exact-path
+    GOLD BioSamples describe leach-bed liquid in digester settings but do not reconstruct
+    original membership. Remove only this GOLD reactor contribution and retain independent
+    ENVO:00002141, qualified mint, both nodes, exact path, count omissions and NARROW/SEEDED
+    status. Mapping-endpoint issue #1398 remains open; no predicate swap is implied.'
