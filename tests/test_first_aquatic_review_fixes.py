@@ -1,8 +1,22 @@
 """Guard the first aquatic cohort's context-versus-genus corrections."""
 
 import pytest
+from jinja2 import Environment
 
 from habitatmech import seed
+
+
+def test_exclusion_note_issue_links_have_exact_rendered_targets():
+    exclusions = seed.load_gold_parent_exclusions(seed.GOLD_PARENT_EXCLUSIONS_PATH)
+    template = Environment(autoescape=True).from_string(
+        '{{ changes|urlize(target="_blank", rel="noopener noreferrer") }}'
+    )
+    url = "https://github.com/CultureBotAI/HabitatMech/issues/1971"
+    for source in CASES:
+        rendered = template.render(changes=exclusions[source].notes)
+        assert f'href="{url}"' in rendered, source
+        assert f'href="{url};"' not in rendered, source
+
 
 # Source mint -> generated identity, excluded contribution, independent parents.
 CASES = {

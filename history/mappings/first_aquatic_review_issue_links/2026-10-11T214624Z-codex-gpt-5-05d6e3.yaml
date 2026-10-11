@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: first_aquatic_review_issue_links
+session:
+  id: 2026-10-11T214624Z-codex-gpt-5-05d6e3
+  timestamp: '2026-10-11T21:46:24Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1977
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - notes
+  summary: Correct issue links in thirteen aquatic exclusion notes
+  details: 'Correct only the issue URL punctuation in thirteen maintained GOLD parent-exclusion
+    notes. The preceding exclusion decisions and their immutable history are unchanged. The
+    same-agent adversarial review found Jinja urlize included a trailing semicolon in the
+    href. A regression exercises all thirteen notes through the same Jinja filter used by
+    habitat.html. Canary and dry seed passed before targeted regeneration. Final reproduction
+    and CI remain pending. Preceding history events: history/mappings/acid_mine_drainage/2026-10-11T213553Z-codex-gpt-5-faff82.yaml;
+    history/mappings/acidic_hypersaline_lake/2026-10-11T213554Z-codex-gpt-5-6d75fa.yaml; history/mappings/acidic_lake/2026-10-11T213556Z-codex-gpt-5-7265c5.yaml;
+    history/mappings/acidic_spring/2026-10-11T213557Z-codex-gpt-5-45ca57.yaml; history/mappings/adjacent_soil/2026-10-11T213558Z-codex-gpt-5-c1e330.yaml;
+    history/mappings/agricultural_field__c2942601/2026-10-11T213600Z-codex-gpt-5-e74c25.yaml;
+    history/mappings/algal_bloom/2026-10-11T213601Z-codex-gpt-5-fd96c9.yaml; history/mappings/alkaline_spring/2026-10-11T213603Z-codex-gpt-5-568072.yaml;
+    history/mappings/anoxic_zone/2026-10-11T213604Z-codex-gpt-5-ac1332.yaml; history/mappings/aquifer/2026-10-11T213605Z-codex-gpt-5-9efc8b.yaml;
+    history/mappings/aquifer__33e3996b/2026-10-11T213607Z-codex-gpt-5-b8ef3a.yaml; history/mappings/aquifer__f620c815/2026-10-11T213608Z-codex-gpt-5-ff4326.yaml;
+    history/mappings/archipelago/2026-10-11T213610Z-codex-gpt-5-19fa35.yaml'
