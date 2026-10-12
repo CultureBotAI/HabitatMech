@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002007
-- ENVO:01000617
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4175
@@ -19,3 +18,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:01000617 for habitatmech:GOLD.33b265d89f
+    (Environmental > Aquatic > Freshwater > Lentic > Sediment). Exact source-context
+    correction https://github.com/CultureBotAI/HabitatMech/issues/1479 (20261012T111114Z-sediment__0bbc27fb).
+    The freshwater lentic-qualified sediment mint is deposited material, not a lentic
+    waterbody. Lake Washington enrichment samples and lake mud isolates support sediment
+    scope, not a universal lake identity: the source also includes a sedimentation
+    pond. Retain generic sediment and exact source qualification; remove only the
+    whole-waterbody contribution. Suppress only this immediate GOLD contribution;
+    preserve identity, source paths/nodes/counts/units, omitted counts and independent
+    genera. Original occurrence membership remains unavailable. No source-scope, endpoint
+    or SSSOM/KGX certification is implied.'

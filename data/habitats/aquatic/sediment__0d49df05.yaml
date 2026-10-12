@@ -4,7 +4,6 @@ habitat_category: AQUATIC
 grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
-- ENVO:00000043
 - ENVO:00002007
 source_attestations:
 - source: GOLD
@@ -19,3 +18,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00000043 for habitatmech:GOLD.7db7617ea4
+    (Environmental > Aquatic > Marine > Wetlands > Sediment). Exact source-context
+    correction https://github.com/CultureBotAI/HabitatMech/issues/1480 (20261012T111114Z-sediment__0d49df05).
+    The marine-wetlands sediment mint is particulate material, not a wetland area.
+    Its generic sediment genus is supported. Later sample metadata include polluted
+    marine sediments and a misfilled collection-site field naming an extraction kit;
+    that field is not evidence of a new habitat. Source-classification imperfections
+    do not justify rewriting original membership. Suppress only this immediate GOLD
+    contribution; preserve identity, source paths/nodes/counts/units, omitted counts
+    and independent genera. Original occurrence membership remains unavailable. No
+    source-scope, endpoint or SSSOM/KGX certification is implied.

@@ -14,7 +14,6 @@ synonyms:
   source: ENVO
 parent_habitats:
 - ENVO:00000063
-- habitatmech:GOLD.ce244e62cd
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:saline
@@ -217,3 +216,19 @@ curation_history:
   changes: 'Retained GOLD label ''Saline'' as RELATED_SYNONYM: a CLOSE source mapping
     does not establish exact lexical equivalence. Independent ontology synonyms and
     verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution habitatmech:GOLD.ce244e62cd
+    for habitatmech:GOLD.a5eb3e9d4f (Environmental > Aquatic > Non-marine Saline and
+    Alkaline > Saline). Exact source-context correction https://github.com/CultureBotAI/HabitatMech/issues/1458
+    (20261012T111108Z-saline_water_body). The ENVO target is a saline waterbody, not
+    saline water material. Its waterbody genus and current RELATED source-label handling
+    are sound. Neither the ENVO class nor all inspected later source examples are
+    inland-only, so the inland-environment source parent is unsupported on this generic
+    target. BacDive STRAIN and GOLD ORGANISM totals remain separate. The broad Saline
+    source labels and mixed later liquid/lake examples warrant bounded merge caution,
+    not an automatic all-source remapping. Suppress only this immediate GOLD contribution;
+    preserve identity, source paths/nodes/counts/units, omitted counts and independent
+    genera. Original occurrence membership remains unavailable. No source-scope, endpoint
+    or SSSOM/KGX certification is implied.

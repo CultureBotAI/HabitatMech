@@ -4,8 +4,7 @@ habitat_category: AQUATIC
 grounding_status: NARROW
 mapping_status: REVIEWED
 parent_habitats:
-- ENVO:00002012
-- habitatmech:GOLD.277843111f
+- ENVO:00002010
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5807
@@ -14,14 +13,40 @@ source_attestations:
     ponds > Saline water
   mapping_predicate: skos:narrowMatch
 curation_history:
-- timestamp: '2026-08-13T00:00:00Z'
-  curator: claude-opus-5
-  action: GROUND_AS_PARENT
-  changes: 'ENVO:00002012 ''hypersaline water'' attached as a parent, not adopted
-    as the identity (NARROW). A salt crystallizer pond is a specific hypersaline evaporation
-    pond, narrower than saline water generally. Path: Environmental > Aquatic > Non-marine
-    Saline and Alkaline > Salt crystallizer p (source concept habitatmech:GOLD.f75e192814)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: GROUND_AS_PARENT
+  changes: 'ENVO:00002010 ''saline water'' attached as a parent, not adopted as the
+    identity (NARROW). Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/2026
+    (20261012T111107Z-saline_water__863799b0). This exact Saline water leaf denotes
+    liquid in a salt-crystallizer pond, not the whole pond. Use saline water as a
+    conservative broader genus. Hypersaline water is plausible in crystallizers but
+    an above-seawater threshold is not established for every original member; source
+    names and later examples do not independently prove it. Preserve the crystallizer
+    qualification in the source path and mint, without asserting a universal numerical
+    salinity or NaCl saturation. Retain the qualified mint under ENVO:00002010 saline
+    water, not an exact identity. No authored definition is added to this NARROW record.
+    Original member provenance remains unavailable and shared endpoint issue #1398
+    remains open. Source accounting and unrelated records must be preserved. (source
+    concept habitatmech:GOLD.f75e192814)'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution habitatmech:GOLD.277843111f
+    for habitatmech:GOLD.f75e192814 (Environmental > Aquatic > Non-marine Saline and
+    Alkaline > Salt crystallizer ponds > Saline water). Exact source-context correction
+    https://github.com/CultureBotAI/HabitatMech/issues/1457 (20261012T111107Z-saline_water__863799b0).
+    This mint denotes saline water within the salt-crystallizer-pond path, not the
+    whole pond. A hypersaline-water genus is plausible for that qualified setting,
+    but the copied ITEM rationale discusses a pond and truncates the path; review
+    it against the fluid leaf rather than treating the wording as evidence. The whole-pond
+    source parent is not a liquid superclass. Later San Diego saltern-water examples
+    support fluid scope; their names do not independently establish a universal salinity
+    threshold. Preserve omitted original organism count. Suppress only this immediate
+    GOLD contribution; preserve identity, source paths/nodes/counts/units, omitted
+    counts and independent genera. Original occurrence membership remains unavailable.
+    No source-scope, endpoint or SSSOM/KGX certification is implied.

@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: seagrass_bed_sediment
+session:
+  id: 2026-10-12T111847Z-codex-gpt-5-98666e
+  timestamp: '2026-10-12T11:18:47Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/pull/2023
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed saline or sediment habitat scope for seagrass_bed_sediment
+  details: 'Exact source-context correction https://github.com/CultureBotAI/HabitatMech/issues/1475
+    (20261012T111113Z-seagrass_bed_sediment). This source denotes sediment associated with
+    a seagrass bed, not the intertidal shore zone. Later exact-path examples explicitly describe
+    coastal marine sediment. Sediment is a sound broader candidate, while the source qualifier
+    should be retained; the generic marine-sediment definition carries depositional constraints
+    that are not established for every source member. Missing original organism count is preserved
+    and is not replaced by three later samples. Suppress only this immediate GOLD contribution;
+    preserve identity, source paths/nodes/counts/units, omitted counts and independent genera.
+    Original occurrence membership remains unavailable. No source-scope, endpoint or SSSOM/KGX
+    certification is implied. User authorized remediation and publication. Dry seed and 36
+    focused regressions passed; generated record/map/site and final gates remain pending at
+    event creation. Three CLASS decisions receive individually assessed ITEM genus rulings;
+    salt-crust and salt-pond scopes remain unpromoted. Existing reviews and historical session
+    events are preserved; endpoint #1398 remains open.'

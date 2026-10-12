@@ -4,7 +4,7 @@ habitat_category: AQUATIC
 grounding_status: NARROW
 mapping_status: REVIEWED
 parent_habitats:
-- ENVO:00002012
+- ENVO:03600092
 - habitatmech:GOLD.ce244e62cd
 source_attestations:
 - source: GOLD
@@ -17,14 +17,21 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-13T00:00:00Z'
-  curator: claude-opus-5
-  action: GROUND_AS_PARENT
-  changes: 'ENVO:00002012 ''hypersaline water'' attached as a parent, not adopted
-    as the identity (NARROW). A salt crystallizer pond is a specific hypersaline evaporation
-    pond, narrower than saline water generally. Path: Environmental > Aquatic > Non-marine
-    Saline and Alkaline > Salt crystallizer p (source concept habitatmech:GOLD.277843111f)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: GROUND_AS_PARENT
+  changes: 'ENVO:03600092 ''artificial pond'' attached as a parent, not adopted as
+    the identity (NARROW). Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/1461
+    (20261012T111109Z-salt_crystallizer_ponds). This operated crystallizer pond is
+    a constructed waterbody, not its hypersaline liquid contents. Current ENVO artificial
+    pond is a supported broader genus without the seawater-feedstock requirement of
+    ENVO:00000055 saline evaporation pond. Preserve the independent inland source
+    context; seawater feedstock is not proof that a pond is geographically marine.
+    Retain the qualified mint under ENVO:03600092 artificial pond, not an exact identity.
+    No authored definition is added to this NARROW record. Original member provenance
+    remains unavailable and shared endpoint issue #1398 remains open. Source accounting
+    and unrelated records must be preserved. (source concept habitatmech:GOLD.277843111f)'

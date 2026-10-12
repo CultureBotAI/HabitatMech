@@ -4,7 +4,6 @@ habitat_category: AQUATIC
 grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
-- ENVO:00002150
 - ENVO:00002200
 source_attestations:
 - source: GOLD
@@ -20,3 +19,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00002150 for habitatmech:GOLD.d8cd51c2a3
+    (Environmental > Aquatic > Marine > Neritic zone/Coastal water > Sea ice). Exact
+    source-context correction https://github.com/CultureBotAI/HabitatMech/issues/1473
+    (20261012T111112Z-sea_ice__a6c14b9a). The coastal Sea ice mint is a source-qualified
+    subclass of sea ice. Sea ice is a sound genus; coastal sea water is the source
+    context, not an ice-material superclass. The later ATCC 700752 description explicitly
+    names Antarctic sea ice. Preserve the single original ORGANISM assertion, source
+    mint, and independent mapping-endpoint finding. Suppress only this immediate GOLD
+    contribution; preserve identity, source paths/nodes/counts/units, omitted counts
+    and independent genera. Original occurrence membership remains unavailable. No
+    source-scope, endpoint or SSSOM/KGX certification is implied.

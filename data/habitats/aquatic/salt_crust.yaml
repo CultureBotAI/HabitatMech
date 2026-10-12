@@ -3,8 +3,6 @@ label: Salt crust
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:01001020
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8102
@@ -24,3 +22,21 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:01001020 for habitatmech:GOLD.ca1e46c594
+    (Environmental > Aquatic > Non-marine Saline and Alkaline > Hypersaline lake >
+    Salt crust). Exact source-context correction https://github.com/CultureBotAI/HabitatMech/issues/1460
+    (20261012T111108Z-salt_crust). The qualified hypersaline-lake salt crust is a
+    physical salt accumulation or sampled crust material, not a kind of whole hypersaline
+    lake. The current CLASS-only decision leaves that material-versus-feature scope
+    unresolved. Salt material and salt mass are distinct candidate genera; do not
+    infer biocrust, planetary crust, sodium-chloride exclusivity or exact equivalence.
+    The Lake Tyrrell primary abstract distinguishes a salt-crust sample from water
+    samples, but is not a crosswalk to this GOLD source. Suppress only this immediate
+    GOLD contribution; preserve identity, source paths/nodes/counts/units, omitted
+    counts and independent genera. Original occurrence membership remains unavailable.
+    No source-scope, endpoint or SSSOM/KGX certification is implied. Material/feature
+    or original soil/sediment scope remains unresolved: do not promote CLASS status
+    or invent a replacement genus.'

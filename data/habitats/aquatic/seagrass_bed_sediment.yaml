@@ -1,25 +1,52 @@
 identifier: habitatmech:GOLD.e63a1a61c3
 label: Seagrass bed sediment
 habitat_category: AQUATIC
-grounding_status: UNGROUNDED
-mapping_status: SEEDED
+grounding_status: NARROW
+mapping_status: REVIEWED
 parent_habitats:
-- habitatmech:GOLD.115edc36f8
+- ENVO:00002007
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7941
   source_label: Seagrass bed sediment
   source_path: Environmental > Aquatic > Marine > Intertidal zone > Seagrass bed sediment
+  mapping_predicate: skos:narrowMatch
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.e63a1a61c3)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: GROUND_AS_PARENT
+  changes: 'ENVO:00002007 ''sediment'' attached as a parent, not adopted as the identity
+    (NARROW). Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/1475
+    (20261012T111113Z-seagrass_bed_sediment). This source denotes sediment associated
+    with a seagrass bed, not the intertidal shore zone. Later exact-path examples
+    explicitly describe coastal marine sediment. Sediment is a sound broader candidate,
+    while the source qualifier should be retained; the generic marine-sediment definition
+    carries depositional constraints that are not established for every source member.
+    Missing original organism count is preserved and is not replaced by three later
+    samples. Retain the qualified mint under ENVO:00002007 sediment, not an exact
+    identity. The sediment genus follows the deposited material meaning and inspected
+    source descriptions. Marine-water-column deposition and currently saline porespace
+    are not universally established; do not impose those tighter genera. No authored
+    definition is added to this NARROW record. Original member provenance remains
+    unavailable and shared endpoint issue #1398 remains open. Source accounting and
+    unrelated records must be preserved. (source concept habitatmech:GOLD.e63a1a61c3)'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution habitatmech:GOLD.115edc36f8
+    for habitatmech:GOLD.e63a1a61c3 (Environmental > Aquatic > Marine > Intertidal
+    zone > Seagrass bed sediment). Exact source-context correction https://github.com/CultureBotAI/HabitatMech/issues/1475
+    (20261012T111113Z-seagrass_bed_sediment). This source denotes sediment associated
+    with a seagrass bed, not the intertidal shore zone. Later exact-path examples
+    explicitly describe coastal marine sediment. Sediment is a sound broader candidate,
+    while the source qualifier should be retained; the generic marine-sediment definition
+    carries depositional constraints that are not established for every source member.
+    Missing original organism count is preserved and is not replaced by three later
+    samples. Suppress only this immediate GOLD contribution; preserve identity, source
+    paths/nodes/counts/units, omitted counts and independent genera. Original occurrence
+    membership remains unavailable. No source-scope, endpoint or SSSOM/KGX certification
+    is implied.

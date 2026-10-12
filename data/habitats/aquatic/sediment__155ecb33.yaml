@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002007
-- habitatmech:GOLD.656eda3dea
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8475
@@ -17,3 +16,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution habitatmech:GOLD.656eda3dea
+    for habitatmech:GOLD.45eac4c01e (Environmental > Aquatic > Freshwater > Canal
+    > Sediment). Exact source-context correction https://github.com/CultureBotAI/HabitatMech/issues/2024
+    (20261012T111115Z-sediment__155ecb33). Canal-qualified sediment is particulate
+    material, not its enclosing canal context. Whether canal emphasizes the watercourse
+    or the contained water does not make it a sediment superclass. Retain generic
+    sediment and the qualified source mint. Suppress only this immediate GOLD contribution;
+    preserve identity, source paths/nodes/counts/units, omitted counts and independent
+    genera. Original occurrence membership remains unavailable. No source-scope, endpoint
+    or SSSOM/KGX certification is implied.

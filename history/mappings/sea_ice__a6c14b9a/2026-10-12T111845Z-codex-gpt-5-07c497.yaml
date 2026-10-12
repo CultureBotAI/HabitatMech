@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: sea_ice__a6c14b9a
+session:
+  id: 2026-10-12T111845Z-codex-gpt-5-07c497
+  timestamp: '2026-10-12T11:18:45Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/pull/2023
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed saline or sediment habitat scope for sea_ice__a6c14b9a
+  details: 'Exact source-context correction https://github.com/CultureBotAI/HabitatMech/issues/1473
+    (20261012T111112Z-sea_ice__a6c14b9a). The coastal Sea ice mint is a source-qualified subclass
+    of sea ice. Sea ice is a sound genus; coastal sea water is the source context, not an
+    ice-material superclass. The later ATCC 700752 description explicitly names Antarctic
+    sea ice. Preserve the single original ORGANISM assertion, source mint, and independent
+    mapping-endpoint finding. Suppress only this immediate GOLD contribution; preserve identity,
+    source paths/nodes/counts/units, omitted counts and independent genera. Original occurrence
+    membership remains unavailable. No source-scope, endpoint or SSSOM/KGX certification is
+    implied. User authorized remediation and publication. Dry seed and 36 focused regressions
+    passed; generated record/map/site and final gates remain pending at event creation. Three
+    CLASS decisions receive individually assessed ITEM genus rulings; salt-crust and salt-pond
+    scopes remain unpromoted. Existing reviews and historical session events are preserved;
+    endpoint #1398 remains open.'

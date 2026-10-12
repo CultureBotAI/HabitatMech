@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002007
-- habitatmech:GOLD.c085f6141a
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3997
@@ -19,3 +18,18 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution habitatmech:GOLD.c085f6141a
+    for habitatmech:GOLD.686adf1872 (Environmental > Aquatic > Thermal springs > Hot
+    (42-90C) > Sediment). Exact source-context correction https://github.com/CultureBotAI/HabitatMech/issues/1489
+    (20261012T111119Z-sediment__40797ec7). This thermal-spring sediment mint retains
+    the source temperature-band context Hot (42-90C), whose ITEM decision explicitly
+    classifies it as a qualifier rather than an independent habitat. The generic sediment
+    genus is sound; the qualifier is not a sediment superclass. Later Great Boiling
+    Spring sediment and enrichment samples are context, not a basis for transferring
+    a single temperature to the entire class. Suppress only this immediate GOLD contribution;
+    preserve identity, source paths/nodes/counts/units, omitted counts and independent
+    genera. Original occurrence membership remains unavailable. No source-scope, endpoint
+    or SSSOM/KGX certification is implied.

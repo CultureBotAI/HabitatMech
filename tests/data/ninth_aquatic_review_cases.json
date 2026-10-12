@@ -1,0 +1,814 @@
+{
+  "ENVO:00002209": {
+    "slug": "saline_lake_sediment",
+    "sources": [
+      {
+        "source": "habitatmech:GOLD.b233d8686d",
+        "removed": "ENVO:00000019"
+      }
+    ],
+    "removed": [
+      "ENVO:00000019"
+    ],
+    "retained": [
+      "ENVO:00000546"
+    ]
+  },
+  "ENVO:00000054": {
+    "slug": "saline_marsh",
+    "sources": [
+      {
+        "source": "habitatmech:GOLD.dbb1e00be3",
+        "removed": "habitatmech:GOLD.ce244e62cd"
+      }
+    ],
+    "removed": [
+      "habitatmech:GOLD.ce244e62cd"
+    ],
+    "retained": [
+      "ENVO:00000035"
+    ]
+  },
+  "habitatmech:GOLD.7dbe12a9d1": {
+    "slug": "saline_spring_sediment",
+    "sources": [
+      {
+        "source": "habitatmech:GOLD.7dbe12a9d1",
+        "removed": "habitatmech:GOLD.22a80cbd14"
+      }
+    ],
+    "removed": [
+      "habitatmech:GOLD.22a80cbd14"
+    ],
+    "retained": [
+      "ENVO:00002007"
+    ],
+    "decision": {
+      "old": {
+        "identifier": "habitatmech:GOLD.7dbe12a9d1",
+        "decision": "CONFIRM_UNGROUNDED",
+        "object_id": "",
+        "object_label": "",
+        "grounding_status": "",
+        "curator": "claude-opus-5",
+        "date": "2026-08-12",
+        "notes": "Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the vendored slice matched this label by any search route. Whether the concept is a habitat at all was NOT assessed, so this is not yet a term-request candidate.",
+        "review_depth": "CLASS",
+        "category": "",
+        "relation": ""
+      },
+      "new": {
+        "identifier": "habitatmech:GOLD.7dbe12a9d1",
+        "decision": "GROUND_AS_PARENT",
+        "object_id": "ENVO:00002007",
+        "object_label": "sediment",
+        "grounding_status": "NARROW",
+        "curator": "codex-gpt-5",
+        "date": "2026-10-12",
+        "notes": "Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/1454 (20261012T111107Z-saline_spring_sediment). The qualified deep-subsurface groundwater branch names saline spring sediment. This is particulate material, not a subtype of the enclosing groundwater material. The single later organism example is Zodletone_IIa from Zodletone Spring, not a new source of universal chemical measurements. Sediment is a defensible broad candidate; saline-permeated sediment requires additional porespace evidence. The CLASS-only ungrounded disposition is not an ITEM identity assessment. Retain the qualified mint under ENVO:00002007 sediment, not an exact identity. The sediment genus follows the deposited material meaning and inspected source descriptions. Marine-water-column deposition and currently saline porespace are not universally established; do not impose those tighter genera. No authored definition is added to this NARROW record. Original member provenance remains unavailable and shared endpoint issue #1398 remains open. Source accounting and unrelated records must be preserved.",
+        "review_depth": "ITEM",
+        "category": "",
+        "relation": "parent"
+      }
+    }
+  },
+  "habitatmech:GOLD.f75e192814": {
+    "slug": "saline_water__863799b0",
+    "sources": [
+      {
+        "source": "habitatmech:GOLD.f75e192814",
+        "removed": "habitatmech:GOLD.277843111f"
+      }
+    ],
+    "removed": [
+      "habitatmech:GOLD.277843111f"
+    ],
+    "retained": [
+      "ENVO:00002010"
+    ],
+    "decision": {
+      "old": {
+        "identifier": "habitatmech:GOLD.f75e192814",
+        "decision": "GROUND_AS_PARENT",
+        "object_id": "ENVO:00002012",
+        "object_label": "hypersaline water",
+        "grounding_status": "NARROW",
+        "curator": "claude-opus-5",
+        "date": "2026-08-13",
+        "notes": "A salt crystallizer pond is a specific hypersaline evaporation pond, narrower than saline water generally. Path: Environmental > Aquatic > Non-marine Saline and Alkaline > Salt crystallizer p",
+        "review_depth": "ITEM",
+        "category": "",
+        "relation": ""
+      },
+      "new": {
+        "identifier": "habitatmech:GOLD.f75e192814",
+        "decision": "GROUND_AS_PARENT",
+        "object_id": "ENVO:00002010",
+        "object_label": "saline water",
+        "grounding_status": "NARROW",
+        "curator": "codex-gpt-5",
+        "date": "2026-10-12",
+        "notes": "Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/2026 (20261012T111107Z-saline_water__863799b0). This exact Saline water leaf denotes liquid in a salt-crystallizer pond, not the whole pond. Use saline water as a conservative broader genus. Hypersaline water is plausible in crystallizers but an above-seawater threshold is not established for every original member; source names and later examples do not independently prove it. Preserve the crystallizer qualification in the source path and mint, without asserting a universal numerical salinity or NaCl saturation. Retain the qualified mint under ENVO:00002010 saline water, not an exact identity. No authored definition is added to this NARROW record. Original member provenance remains unavailable and shared endpoint issue #1398 remains open. Source accounting and unrelated records must be preserved.",
+        "review_depth": "ITEM",
+        "category": "",
+        "relation": "parent"
+      }
+    }
+  },
+  "ENVO:01001319": {
+    "slug": "saline_water_body",
+    "sources": [
+      {
+        "source": "habitatmech:GOLD.a5eb3e9d4f",
+        "removed": "habitatmech:GOLD.ce244e62cd"
+      }
+    ],
+    "removed": [
+      "habitatmech:GOLD.ce244e62cd"
+    ],
+    "retained": [
+      "ENVO:00000063"
+    ]
+  },
+  "habitatmech:GOLD.ca1e46c594": {
+    "slug": "salt_crust",
+    "sources": [
+      {
+        "source": "habitatmech:GOLD.ca1e46c594",
+        "removed": "ENVO:01001020"
+      }
+    ],
+    "removed": [
+      "ENVO:01001020"
+    ],
+    "retained": []
+  },
+  "habitatmech:GOLD.277843111f": {
+    "slug": "salt_crystallizer_ponds",
+    "sources": [],
+    "removed": [],
+    "retained": [
+      "ENVO:03600092",
+      "habitatmech:GOLD.ce244e62cd"
+    ],
+    "decision": {
+      "old": {
+        "identifier": "habitatmech:GOLD.277843111f",
+        "decision": "GROUND_AS_PARENT",
+        "object_id": "ENVO:00002012",
+        "object_label": "hypersaline water",
+        "grounding_status": "NARROW",
+        "curator": "claude-opus-5",
+        "date": "2026-08-13",
+        "notes": "A salt crystallizer pond is a specific hypersaline evaporation pond, narrower than saline water generally. Path: Environmental > Aquatic > Non-marine Saline and Alkaline > Salt crystallizer p",
+        "review_depth": "ITEM",
+        "category": "",
+        "relation": ""
+      },
+      "new": {
+        "identifier": "habitatmech:GOLD.277843111f",
+        "decision": "GROUND_AS_PARENT",
+        "object_id": "ENVO:03600092",
+        "object_label": "artificial pond",
+        "grounding_status": "NARROW",
+        "curator": "codex-gpt-5",
+        "date": "2026-10-12",
+        "notes": "Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/1461 (20261012T111109Z-salt_crystallizer_ponds). This operated crystallizer pond is a constructed waterbody, not its hypersaline liquid contents. Current ENVO artificial pond is a supported broader genus without the seawater-feedstock requirement of ENVO:00000055 saline evaporation pond. Preserve the independent inland source context; seawater feedstock is not proof that a pond is geographically marine. Retain the qualified mint under ENVO:03600092 artificial pond, not an exact identity. No authored definition is added to this NARROW record. Original member provenance remains unavailable and shared endpoint issue #1398 remains open. Source accounting and unrelated records must be preserved.",
+        "review_depth": "ITEM",
+        "category": "",
+        "relation": "parent"
+      }
+    }
+  },
+  "habitatmech:GOLD.1bb701a40c": {
+    "slug": "salt_flat_salt_pan_sediment",
+    "sources": [
+      {
+        "source": "habitatmech:GOLD.1bb701a40c",
+        "removed": "ENVO:01001043"
+      }
+    ],
+    "removed": [
+      "ENVO:01001043"
+    ],
+    "retained": [
+      "ENVO:00002007"
+    ],
+    "decision": {
+      "old": {
+        "identifier": "habitatmech:GOLD.1bb701a40c",
+        "decision": "GROUND_AS_PARENT",
+        "object_id": "ENVO:00000279",
+        "object_label": "saline pan",
+        "grounding_status": "NARROW",
+        "curator": "claude-opus-5",
+        "date": "2026-08-12",
+        "notes": "The sediment of a salt pan, not the pan itself. Pulled out of the class-level sweep, whose note wrongly claimed no term matched. Label: 'Salt flat/Salt pan sediment'.",
+        "review_depth": "ITEM",
+        "category": "",
+        "relation": ""
+      },
+      "new": {
+        "identifier": "habitatmech:GOLD.1bb701a40c",
+        "decision": "GROUND_AS_PARENT",
+        "object_id": "ENVO:00002007",
+        "object_label": "sediment",
+        "grounding_status": "NARROW",
+        "curator": "codex-gpt-5",
+        "date": "2026-10-12",
+        "notes": "Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/1463 (20261012T111109Z-salt_flat_salt_pan_sediment). The ITEM rationale explicitly calls this the sediment of a salt pan, not the pan itself, yet assigns saline-pan feature ENVO:00000279 as its genus. The independent hypersaline-water-environment parent is also context, not a particulate-material superclass. Later organisms are from salt-flat sediment or mud. Use sediment as a broad candidate; do not assume all pan deposits satisfy marine-water-column deposition or currently saline porespace restrictions. Retain the qualified mint under ENVO:00002007 sediment, not an exact identity. The sediment genus follows the deposited material meaning and inspected source descriptions. Marine-water-column deposition and currently saline porespace are not universally established; do not impose those tighter genera. No authored definition is added to this NARROW record. Original member provenance remains unavailable and shared endpoint issue #1398 remains open. Source accounting and unrelated records must be preserved.",
+        "review_depth": "ITEM",
+        "category": "",
+        "relation": "parent"
+      }
+    }
+  },
+  "habitatmech:GOLD.96f7d4c555": {
+    "slug": "salt_marsh_sediment",
+    "sources": [
+      {
+        "source": "habitatmech:GOLD.96f7d4c555",
+        "removed": "habitatmech:GOLD.115edc36f8"
+      }
+    ],
+    "removed": [
+      "habitatmech:GOLD.115edc36f8"
+    ],
+    "retained": [
+      "ENVO:00002007"
+    ],
+    "decision": {
+      "old": {
+        "identifier": "habitatmech:GOLD.96f7d4c555",
+        "decision": "CONFIRM_UNGROUNDED",
+        "object_id": "",
+        "object_label": "",
+        "grounding_status": "",
+        "curator": "claude-opus-5",
+        "date": "2026-08-12",
+        "notes": "Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the vendored slice matched this label by any search route. Whether the concept is a habitat at all was NOT assessed, so this is not yet a term-request candidate.",
+        "review_depth": "CLASS",
+        "category": "",
+        "relation": ""
+      },
+      "new": {
+        "identifier": "habitatmech:GOLD.96f7d4c555",
+        "decision": "GROUND_AS_PARENT",
+        "object_id": "ENVO:00002007",
+        "object_label": "sediment",
+        "grounding_status": "NARROW",
+        "curator": "codex-gpt-5",
+        "date": "2026-10-12",
+        "notes": "Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/1464 (20261012T111110Z-salt_marsh_sediment). The source denotes sediment of a marine salt marsh, not the intertidal shore region itself. Later Plum Island sediment samples and sulfide-containing marsh mud support a material interpretation without establishing all depositional or salinity constraints. Replace the sole source-region placement with a justified sediment genus through ITEM assessment; retain source qualification and count units rather than exact-merging on a short label. Retain the qualified mint under ENVO:00002007 sediment, not an exact identity. The sediment genus follows the deposited material meaning and inspected source descriptions. Marine-water-column deposition and currently saline porespace are not universally established; do not impose those tighter genera. No authored definition is added to this NARROW record. Original member provenance remains unavailable and shared endpoint issue #1398 remains open. Source accounting and unrelated records must be preserved.",
+        "review_depth": "ITEM",
+        "category": "",
+        "relation": "parent"
+      }
+    }
+  },
+  "habitatmech:GOLD.56c9d8587d": {
+    "slug": "salt_pond_sediment",
+    "sources": [
+      {
+        "source": "habitatmech:GOLD.56c9d8587d",
+        "removed": "habitatmech:GOLD.115edc36f8"
+      }
+    ],
+    "removed": [
+      "habitatmech:GOLD.115edc36f8"
+    ],
+    "retained": []
+  },
+  "ENVO:01001893": {
+    "slug": "salt_spring",
+    "sources": [
+      {
+        "source": "habitatmech:GOLD.e037666392",
+        "removed": "habitatmech:GOLD.22a80cbd14"
+      }
+    ],
+    "removed": [
+      "habitatmech:GOLD.22a80cbd14"
+    ],
+    "retained": [
+      "ENVO:00000125"
+    ]
+  },
+  "habitatmech:GOLD.9f9173804a": {
+    "slug": "sand__41bd3609",
+    "sources": [
+      {
+        "source": "habitatmech:GOLD.9f9173804a",
+        "removed": "ENVO:00002150"
+      }
+    ],
+    "removed": [
+      "ENVO:00002150"
+    ],
+    "retained": [
+      "ENVO:01000017"
+    ]
+  },
+  "ENVO:01000059": {
+    "slug": "sea_grass_bed",
+    "sources": [
+      {
+        "source": "habitatmech:GOLD.664fc4e207",
+        "removed": "habitatmech:GOLD.115edc36f8"
+      }
+    ],
+    "removed": [
+      "habitatmech:GOLD.115edc36f8"
+    ],
+    "retained": [
+      "ENVO:01001378"
+    ]
+  },
+  "ENVO:00002200": {
+    "slug": "sea_ice",
+    "sources": [
+      {
+        "source": "habitatmech:GOLD.fa2a2427e5",
+        "removed": "ENVO:00001999"
+      }
+    ],
+    "removed": [
+      "ENVO:00001999"
+    ],
+    "retained": [
+      "ENVO:01001557"
+    ]
+  },
+  "habitatmech:GOLD.d8cd51c2a3": {
+    "slug": "sea_ice__a6c14b9a",
+    "sources": [
+      {
+        "source": "habitatmech:GOLD.d8cd51c2a3",
+        "removed": "ENVO:00002150"
+      }
+    ],
+    "removed": [
+      "ENVO:00002150"
+    ],
+    "retained": [
+      "ENVO:00002200"
+    ]
+  },
+  "ENVO:00002149": {
+    "slug": "sea_water",
+    "sources": [],
+    "removed": [],
+    "retained": [
+      "ENVO:00002010"
+    ],
+    "graph": {
+      "identifier": "ENVO:00002149",
+      "causal_graphs": [
+        {
+          "graph_id": "seawater_dom_oligotrophic_uptake",
+          "title": "Seawater DOM oligotrophic uptake",
+          "description": "Dissolved organic matter in seawater creates dilute carbon pools that select for oligotrophic bacteria with streamlined genomes and efficient nutrient transport systems.",
+          "nodes": [
+            {
+              "node_id": "sea_water",
+              "label": "sea water",
+              "node_type": "HABITAT",
+              "grounding": "ENVO:00002149"
+            },
+            {
+              "node_id": "dissolved_organic_matter",
+              "label": "dissolved organic matter",
+              "node_type": "CHEMICAL"
+            },
+            {
+              "node_id": "low_organic_carbon_availability",
+              "label": "low organic-carbon availability",
+              "node_type": "ENVIRONMENTAL_PARAMETER"
+            },
+            {
+              "node_id": "oligotrophic_marine_bacteria",
+              "label": "oligotrophic marine bacteria",
+              "node_type": "TAXON"
+            },
+            {
+              "node_id": "nutrient_transport_systems",
+              "label": "nutrient transport systems",
+              "node_type": "GENE_OR_PROTEIN"
+            },
+            {
+              "node_id": "dilute_nutrient_uptake",
+              "label": "dilute nutrient uptake",
+              "node_type": "BIOLOGICAL_PROCESS"
+            },
+            {
+              "node_id": "streamlined_genomes",
+              "label": "streamlined genomes",
+              "node_type": "STATE"
+            },
+            {
+              "node_id": "ocean_microbiome_dom_cycling",
+              "label": "ocean microbiome DOM cycling",
+              "node_type": "COMMUNITY_PROCESS"
+            }
+          ],
+          "edges": [
+            {
+              "edge_id": "seawater_contains_dom",
+              "subject": "sea_water",
+              "predicate": "contains",
+              "object": "dissolved_organic_matter",
+              "description": "The seawater carbon pool contains dissolved organic matter used by marine microbes.",
+              "evidence": [
+                {
+                  "reference": "PMID:26951682",
+                  "snippet": "largest pools of reduced carbon on Earth",
+                  "notes": "Moran and colleagues describe ocean dissolved organic matter as a large reduced-carbon reservoir."
+                }
+              ]
+            },
+            {
+              "edge_id": "dom_couples_to_ocean_microbiome",
+              "subject": "dissolved_organic_matter",
+              "predicate": "is cycled by",
+              "object": "ocean_microbiome_dom_cycling",
+              "description": "Ocean dissolved organic molecules are produced and consumed by members of the marine microbiome.",
+              "evidence": [
+                {
+                  "reference": "PMID:26951682",
+                  "snippet": "produce and consume them",
+                  "notes": "Moran and colleagues frame ocean DOM cycling as molecular relationships between DOM compounds and the microbes that produce and consume them."
+                }
+              ]
+            },
+            {
+              "edge_id": "carbon_poverty_selects_oligotrophs",
+              "subject": "low_organic_carbon_availability",
+              "predicate": "selects for",
+              "object": "oligotrophic_marine_bacteria",
+              "description": "Low seawater carbon concentrations select for oligotrophic bacterial growth strategies.",
+              "evidence": [
+                {
+                  "reference": "PMID:19805210",
+                  "snippet": "low (oligotrophic) nutrient concentrations",
+                  "notes": "Lauro and colleagues compare marine bacteria adapted to low- and high-nutrient trophic habitats."
+                }
+              ]
+            },
+            {
+              "edge_id": "nutrient_transporters_control_oligotrophy",
+              "subject": "nutrient_transport_systems",
+              "predicate": "controls",
+              "object": "dilute_nutrient_uptake",
+              "description": "Nutrient transporter architecture controls uptake of dilute substrates by oligotrophic bacteria.",
+              "evidence": [
+                {
+                  "reference": "PMID:34010286",
+                  "snippet": "trade-offs between nutrient transport systems",
+                  "notes": "Norris and colleagues model copiotroph-oligotroph differences as a consequence of nutrient-transporter trade-offs."
+                }
+              ]
+            },
+            {
+              "edge_id": "abc_transporters_support_oligotrophs",
+              "subject": "oligotrophic_marine_bacteria",
+              "predicate": "uses",
+              "object": "nutrient_transport_systems",
+              "description": "Prototypical marine oligotrophs rely on ATP-binding cassette transporters for nutrient uptake.",
+              "evidence": [
+                {
+                  "reference": "PMID:34010286",
+                  "snippet": "rely on ATP-binding cassette (ABC) transporters",
+                  "notes": "Norris and colleagues contrast SAR11-like oligotrophs with copiotrophs that encode phosphotransferase systems."
+                }
+              ]
+            },
+            {
+              "edge_id": "dilute_uptake_enables_dom_cycling",
+              "subject": "dilute_nutrient_uptake",
+              "predicate": "enables",
+              "object": "ocean_microbiome_dom_cycling",
+              "description": "Uptake of dilute organic substrates enables heterotrophic bacteria to participate in ocean DOM cycling.",
+              "evidence": [
+                {
+                  "reference": "PMID:34010286",
+                  "snippet": "optimal nutrient uptake and metabolic strategy",
+                  "notes": "Norris and colleagues connect nutrient-uptake strategy to marine heterotroph metabolism."
+                }
+              ]
+            },
+            {
+              "edge_id": "oligotrophy_is_linked_to_genome_streamlining",
+              "subject": "oligotrophic_marine_bacteria",
+              "predicate": "has adaptation",
+              "object": "streamlined_genomes",
+              "description": "Highly abundant oligotrophic seawater bacteria show genome streamlining.",
+              "evidence": [
+                {
+                  "reference": "PMID:16109880",
+                  "snippet": "Genome streamlining in a cosmopolitan oceanic bacterium",
+                  "notes": "Giovannoni and colleagues described genome streamlining in the cosmopolitan seawater bacterium SAR11."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "curation_history": [
+        {
+          "timestamp": "2026-09-04T00:00:00Z",
+          "curator": "codex",
+          "action": "ADD_CAUSAL_GRAPH",
+          "changes": "Added a seawater dissolved-organic-matter and oligotrophic-uptake graph backed by PMID:26951682, PMID:19805210, PMID:34010286, and PMID:16109880.",
+          "llm_assisted": true
+        }
+      ]
+    }
+  },
+  "habitatmech:GOLD.e63a1a61c3": {
+    "slug": "seagrass_bed_sediment",
+    "sources": [
+      {
+        "source": "habitatmech:GOLD.e63a1a61c3",
+        "removed": "habitatmech:GOLD.115edc36f8"
+      }
+    ],
+    "removed": [
+      "habitatmech:GOLD.115edc36f8"
+    ],
+    "retained": [
+      "ENVO:00002007"
+    ],
+    "decision": {
+      "old": {
+        "identifier": "habitatmech:GOLD.e63a1a61c3",
+        "decision": "CONFIRM_UNGROUNDED",
+        "object_id": "",
+        "object_label": "",
+        "grounding_status": "",
+        "curator": "claude-opus-5",
+        "date": "2026-08-12",
+        "notes": "Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the vendored slice matched this label by any search route. Whether the concept is a habitat at all was NOT assessed, so this is not yet a term-request candidate.",
+        "review_depth": "CLASS",
+        "category": "",
+        "relation": ""
+      },
+      "new": {
+        "identifier": "habitatmech:GOLD.e63a1a61c3",
+        "decision": "GROUND_AS_PARENT",
+        "object_id": "ENVO:00002007",
+        "object_label": "sediment",
+        "grounding_status": "NARROW",
+        "curator": "codex-gpt-5",
+        "date": "2026-10-12",
+        "notes": "Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/1475 (20261012T111113Z-seagrass_bed_sediment). This source denotes sediment associated with a seagrass bed, not the intertidal shore zone. Later exact-path examples explicitly describe coastal marine sediment. Sediment is a sound broader candidate, while the source qualifier should be retained; the generic marine-sediment definition carries depositional constraints that are not established for every source member. Missing original organism count is preserved and is not replaced by three later samples. Retain the qualified mint under ENVO:00002007 sediment, not an exact identity. The sediment genus follows the deposited material meaning and inspected source descriptions. Marine-water-column deposition and currently saline porespace are not universally established; do not impose those tighter genera. No authored definition is added to this NARROW record. Original member provenance remains unavailable and shared endpoint issue #1398 remains open. Source accounting and unrelated records must be preserved.",
+        "review_depth": "ITEM",
+        "category": "",
+        "relation": "parent"
+      }
+    }
+  },
+  "habitatmech:GOLD.0e7a5162bb": {
+    "slug": "seaweed",
+    "sources": [],
+    "removed": [],
+    "retained": [
+      "ENVO:01001378"
+    ],
+    "definition": {
+      "old": {
+        "identifier": "habitatmech:GOLD.0e7a5162bb",
+        "requested_label": "macroalgal bed",
+        "parent_class": "ENVO:01001378",
+        "parent_label": "marine bed",
+        "definition": "A marine bed which is covered by one or more species of attached macroalgae, typically belonging to the Phaeophyceae, Rhodophyta or Ulvophyceae.",
+        "exact_synonym": "Seaweed|seaweed bed|algal bed|seaweed forest",
+        "curator": "claude-opus-5",
+        "date": "2026-08-28",
+        "notes": "Definition authored from the record's committed deep-research report under research/habitats/, read in full; the report's proposed sentence, genus and near-miss table are the evidence. No new research was commissioned. Labelled for the setting, not the organism: the report is explicit that 'Seaweed' names an organism, which FOODON:03412266 already does, while the concept here is a benthic place. Modelled on the sibling ENVO:01000059 'sea grass bed'. REPLACE because the inherited ENVO:00001999 'marine water body' is not broader - a bed underlies a water body rather than being a kind of one.",
+        "parent_mode": "REPLACE"
+      },
+      "new": {
+        "identifier": "habitatmech:GOLD.0e7a5162bb",
+        "requested_label": "macroalgal bed",
+        "parent_class": "ENVO:01001378",
+        "parent_label": "marine bed",
+        "definition": "A marine bed which is covered by one or more species of attached macroalgae, typically belonging to the Phaeophyceae, Rhodophyta or Ulvophyceae.",
+        "exact_synonym": "seaweed bed|algal bed|seaweed forest",
+        "curator": "codex-gpt-5",
+        "date": "2026-10-12",
+        "notes": "Definition authored from the record's committed deep-research report under research/habitats/, read in full; the report's proposed sentence, genus and near-miss table are the evidence. No new research was commissioned. Labelled for the setting, not the organism: the report is explicit that 'Seaweed' names an organism, which FOODON:03412266 already does, while the concept here is a benthic place. Modelled on the sibling ENVO:01000059 'sea grass bed'. REPLACE because the inherited ENVO:00001999 'marine water body' is not broader - a bed underlies a water body rather than being a kind of one. Bounded alias correction #1477, PR #2023: remove the organism-valued Seaweed exact synonym. Preserve the FOODON xref and verbatim source label; the explicit xref blocks fallback exact insertion. Other aliases and bed-only source equivalence remain under separate assessment (#1476); no automatic forest-to-bed genus change.",
+        "parent_mode": "REPLACE"
+      }
+    }
+  },
+  "habitatmech:GOLD.6bc70f0406": {
+    "slug": "sediment__064b5f4b",
+    "sources": [
+      {
+        "source": "habitatmech:GOLD.6bc70f0406",
+        "removed": "habitatmech:GOLD.135b9b67f7"
+      }
+    ],
+    "removed": [
+      "habitatmech:GOLD.135b9b67f7"
+    ],
+    "retained": [
+      "ENVO:00002007"
+    ]
+  },
+  "habitatmech:GOLD.33b265d89f": {
+    "slug": "sediment__0bbc27fb",
+    "sources": [
+      {
+        "source": "habitatmech:GOLD.33b265d89f",
+        "removed": "ENVO:01000617"
+      }
+    ],
+    "removed": [
+      "ENVO:01000617"
+    ],
+    "retained": [
+      "ENVO:00002007"
+    ]
+  },
+  "habitatmech:GOLD.7db7617ea4": {
+    "slug": "sediment__0d49df05",
+    "sources": [
+      {
+        "source": "habitatmech:GOLD.7db7617ea4",
+        "removed": "ENVO:00000043"
+      }
+    ],
+    "removed": [
+      "ENVO:00000043"
+    ],
+    "retained": [
+      "ENVO:00002007"
+    ]
+  },
+  "habitatmech:GOLD.2f9eb7ed2f": {
+    "slug": "sediment__0ef8e416",
+    "sources": [
+      {
+        "source": "habitatmech:GOLD.2f9eb7ed2f",
+        "removed": "ENVO:00000207"
+      }
+    ],
+    "removed": [
+      "ENVO:00000207"
+    ],
+    "retained": [
+      "ENVO:00002007"
+    ]
+  },
+  "habitatmech:GOLD.45eac4c01e": {
+    "slug": "sediment__155ecb33",
+    "sources": [
+      {
+        "source": "habitatmech:GOLD.45eac4c01e",
+        "removed": "habitatmech:GOLD.656eda3dea"
+      }
+    ],
+    "removed": [
+      "habitatmech:GOLD.656eda3dea"
+    ],
+    "retained": [
+      "ENVO:00002007"
+    ]
+  },
+  "habitatmech:GOLD.56919b89d6": {
+    "slug": "sediment__22a0bba7",
+    "sources": [
+      {
+        "source": "habitatmech:GOLD.56919b89d6",
+        "removed": "ENVO:01001043"
+      }
+    ],
+    "removed": [
+      "ENVO:01001043"
+    ],
+    "retained": [
+      "ENVO:00002007"
+    ]
+  },
+  "habitatmech:GOLD.da1b16a895": {
+    "slug": "sediment__24eaa500",
+    "sources": [
+      {
+        "source": "habitatmech:GOLD.da1b16a895",
+        "removed": "ENVO:01000125"
+      }
+    ],
+    "removed": [
+      "ENVO:01000125"
+    ],
+    "retained": [
+      "ENVO:00002007"
+    ]
+  },
+  "habitatmech:GOLD.805f5d2607": {
+    "slug": "sediment__2a63f0bb",
+    "sources": [
+      {
+        "source": "habitatmech:GOLD.805f5d2607",
+        "removed": "ENVO:00000039"
+      }
+    ],
+    "removed": [
+      "ENVO:00000039"
+    ],
+    "retained": [
+      "ENVO:00002007"
+    ]
+  },
+  "habitatmech:GOLD.548aa8c06a": {
+    "slug": "sediment__2b3ec834",
+    "sources": [
+      {
+        "source": "habitatmech:GOLD.548aa8c06a",
+        "removed": "habitatmech:GOLD.115edc36f8"
+      }
+    ],
+    "removed": [
+      "habitatmech:GOLD.115edc36f8"
+    ],
+    "retained": [
+      "ENVO:00002007"
+    ]
+  },
+  "habitatmech:GOLD.d458551b02": {
+    "slug": "sediment__2f8c22b7",
+    "sources": [
+      {
+        "source": "habitatmech:GOLD.d458551b02",
+        "removed": "habitatmech:GOLD.1d0c72d58b"
+      }
+    ],
+    "removed": [
+      "habitatmech:GOLD.1d0c72d58b"
+    ],
+    "retained": [
+      "ENVO:00002007"
+    ]
+  },
+  "habitatmech:GOLD.e7dced4681": {
+    "slug": "sediment__301877e9",
+    "sources": [
+      {
+        "source": "habitatmech:GOLD.e7dced4681",
+        "removed": "ENVO:00000215"
+      }
+    ],
+    "removed": [
+      "ENVO:00000215"
+    ],
+    "retained": [
+      "ENVO:00002007"
+    ]
+  },
+  "habitatmech:GOLD.b42fa61aa1": {
+    "slug": "sediment__347a23a3",
+    "sources": [
+      {
+        "source": "habitatmech:GOLD.b42fa61aa1",
+        "removed": "ENVO:01000263"
+      }
+    ],
+    "removed": [
+      "ENVO:01000263"
+    ],
+    "retained": [
+      "ENVO:00002007"
+    ]
+  },
+  "habitatmech:GOLD.6fbf5be0b3": {
+    "slug": "sediment__3f324bf4",
+    "sources": [
+      {
+        "source": "habitatmech:GOLD.6fbf5be0b3",
+        "removed": "habitatmech:GOLD.9dbf296a4a"
+      }
+    ],
+    "removed": [
+      "habitatmech:GOLD.9dbf296a4a"
+    ],
+    "retained": [
+      "ENVO:00002007"
+    ]
+  },
+  "habitatmech:GOLD.686adf1872": {
+    "slug": "sediment__40797ec7",
+    "sources": [
+      {
+        "source": "habitatmech:GOLD.686adf1872",
+        "removed": "habitatmech:GOLD.c085f6141a"
+      }
+    ],
+    "removed": [
+      "habitatmech:GOLD.c085f6141a"
+    ],
+    "retained": [
+      "ENVO:00002007"
+    ]
+  }
+}

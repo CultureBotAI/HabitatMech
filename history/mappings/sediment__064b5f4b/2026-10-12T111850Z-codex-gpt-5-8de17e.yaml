@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: sediment__064b5f4b
+session:
+  id: 2026-10-12T111850Z-codex-gpt-5-8de17e
+  timestamp: '2026-10-12T11:18:50Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/pull/2023
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed saline or sediment habitat scope for sediment__064b5f4b
+  details: 'Exact source-context correction https://github.com/CultureBotAI/HabitatMech/issues/2024
+    (20261012T111113Z-sediment__064b5f4b). The aquatic floodplain-qualified mint is sediment
+    material, not the floodplain region. The generic sediment genus is sound, and later East
+    River floodplain sediment samples support retaining that material scope. Exclude only
+    the source floodplain contribution. Existing #1166 correctly warns that a NARROW record
+    cannot receive an UNGROUNDED-only authored definition without a separately justified lifecycle
+    decision. Suppress only this immediate GOLD contribution; preserve identity, source paths/nodes/counts/units,
+    omitted counts and independent genera. Original occurrence membership remains unavailable.
+    No source-scope, endpoint or SSSOM/KGX certification is implied. User authorized remediation
+    and publication. Dry seed and 36 focused regressions passed; generated record/map/site
+    and final gates remain pending at event creation. Three CLASS decisions receive individually
+    assessed ITEM genus rulings; salt-crust and salt-pond scopes remain unpromoted. Existing
+    reviews and historical session events are preserved; endpoint #1398 remains open.'
