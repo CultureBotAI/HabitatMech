@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: estuary__bae88a25
+session:
+  id: 2026-10-12T022332Z-codex-gpt-5-da258d
+  timestamp: '2026-10-12T02:23:32Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1994
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed hierarchy or mechanism for estuary__bae88a25
+  details: 'Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1994
+    (20261012T015126Z-estuary__bae88a25 F1). The Intertidal zone > Estuary source remains
+    distinct from both generic estuary and the freshwater-lake variant. An estuary genus is
+    reasonable, but an estuary is not wholly an intertidal zone. Later exact members include
+    Columbia River water and estuarine mud; sample material does not change the source bin
+    into a sediment identity. Exclude only the immediate GOLD contribution named here. Preserve
+    source identity, node/path provenance, counts/units, native status and independent parents;
+    separate decision and graph changes are recorded in their own owners. User authorized
+    publication and remediation. Dry seed, sediment canary inspection and full seeding passed.
+    Post-fix regression, labels, map/site and full QC are pending at event creation; actual
+    outcomes will be recorded in PR #1993. No scientific status promotion is claimed.'

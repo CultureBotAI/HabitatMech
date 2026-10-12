@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: glacier_stream
+session:
+  id: 2026-10-12T022401Z-codex-gpt-5-76b034
+  timestamp: '2026-10-12T02:24:01Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1994
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed hierarchy or mechanism for glacier_stream
+  details: 'Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1994
+    (20261012T015240Z-glacier_stream F1). A glacier-associated stream is not a glacier ice
+    mass. The path-derived parent expresses association with its setting rather than strict
+    broader identity. The ungrounded CLASS decision remains a search result, not a completed
+    term request or a finding that the source is non-habitat. Exclude only the immediate GOLD
+    contribution named here. Preserve source identity, node/path provenance, counts/units,
+    native status and independent parents; separate decision and graph changes are recorded
+    in their own owners. User authorized publication and remediation. Dry seed, sediment canary
+    inspection and full seeding passed. Post-fix regression, labels, map/site and full QC
+    are pending at event creation; actual outcomes will be recorded in PR #1993. No scientific
+    status promotion is claimed.'

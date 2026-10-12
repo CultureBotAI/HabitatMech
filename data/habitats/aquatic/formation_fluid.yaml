@@ -8,7 +8,6 @@ grounding_status: EXACT
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:02000140
-- habitatmech:GOLD.f8b744283b
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5737
@@ -20,3 +19,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution habitatmech:GOLD.f8b744283b
+    for habitatmech:GOLD.5f736096fc (Environmental > Aquatic > Marine > Aquifer >
+    Formation fluid). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1994
+    (20261012T015154Z-formation_fluid F1). The natural geologic-formation fluid identity
+    agrees with ENVO and its fluid-material parent. The additional marine Aquifer
+    mint is the containing formation, not a fluid genus. Later IODP North Pond formation-fluid
+    samples support that distinction. The absence of a displayed direct organism count
+    is not a zero-occurrence claim. Exclude only the immediate GOLD contribution named
+    here. Preserve source identity, node/path provenance, counts/units, native status
+    and independent parents; separate decision and graph changes are recorded in their
+    own owners.

@@ -4,8 +4,7 @@ habitat_category: AQUATIC
 grounding_status: NARROW
 mapping_status: REVIEWED
 parent_habitats:
-- ENVO:00000045
-- habitatmech:GOLD.115edc36f8
+- ENVO:01000008
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7714
@@ -16,14 +15,35 @@ source_attestations:
   assertion_count: 12
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: GROUND_AS_PARENT
-  changes: 'ENVO:00000045 ''estuary'' attached as a parent, not adopted as the identity
-    (NARROW). An estuarine microbial mat sits in an estuary; the estuary is its setting.
-    Path: Environmental > Aquatic > Marine > Intertidal zone > Estuary: Microbia (source
-    concept habitatmech:GOLD.57a5257707)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: GROUND_AS_PARENT
+  changes: 'ENVO:01000008 ''microbial mat'' attached as a parent, not adopted as the
+    identity (NARROW). ITEM correction https://github.com/CultureBotAI/HabitatMech/issues/1994
+    (20261012T015129Z-estuary_microbial_mat F2). The GOLD source denotes a microbial
+    mat in an estuary, not the estuary itself. ENVO:01000008 ''microbial mat'' supplies
+    the broader mat genus, consistent with the exact-path Rhodovulum isolation descriptions
+    inspected in the review. Retain the source mint, 12 ORGANISM assertions and estuary
+    context in the verbatim source path; do not merge the qualified mat with every
+    microbial mat. The independent intertidal context contribution is separately excluded.
+    Mapping endpoints remain #1398. Path: Environmental > Aquatic > Marine > Intertidal
+    zone > Estuary: Microbial mat (source concept habitatmech:GOLD.57a5257707)'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.115edc36f8
+    for habitatmech:GOLD.57a5257707 (Environmental > Aquatic > Marine > Intertidal
+    zone > Estuary: Microbial mat). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1994
+    (20261012T015129Z-estuary_microbial_mat F1). The source denotes a microbial mat
+    associated with an estuary, not the estuary or its intertidal setting. The GROUND_AS_PARENT
+    decision itself acknowledges this setting relationship, yet contributes ENVO estuary
+    as a strict genus. The GOLD parent path independently contributes intertidal zone.
+    Later Rhodovulum records explicitly report estuary microbial mats; conflicting
+    BioSample titles are retained as source metadata, not definitive identities. Exclude
+    only the immediate GOLD contribution named here. Preserve source identity, node/path
+    provenance, counts/units, native status and independent parents; separate decision
+    and graph changes are recorded in their own owners.'

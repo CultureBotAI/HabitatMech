@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: fossil
+session:
+  id: 2026-10-12T022344Z-codex-gpt-5-cfe4ad
+  timestamp: '2026-10-12T02:23:44Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1994
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed hierarchy or mechanism for fossil
+  details: 'Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1994
+    (20261012T015156Z-fossil F1). The Marine > Fossil source remains an ungrounded mint after
+    a class-level sweep. Fossil material may host microbes; the label alone does not justify
+    NOT_APPLICABLE. It is nevertheless not a marine water body. No exact later members were
+    found, so a more precise source definition or replacement grounding remains unestablished.
+    Exclude only the immediate GOLD contribution named here. Preserve source identity, node/path
+    provenance, counts/units, native status and independent parents; separate decision and
+    graph changes are recorded in their own owners. User authorized publication and remediation.
+    Dry seed, sediment canary inspection and full seeding passed. Post-fix regression, labels,
+    map/site and full QC are pending at event creation; actual outcomes will be recorded in
+    PR #1993. No scientific status promotion is claimed.'

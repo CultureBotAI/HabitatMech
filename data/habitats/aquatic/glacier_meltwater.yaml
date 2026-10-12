@@ -3,8 +3,6 @@ label: Glacier meltwater
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:01001511
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7784
@@ -23,3 +21,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:01001511 for habitatmech:GOLD.f3dc60ff11
+    (Environmental > Aquatic > Freshwater > Ice > Glacier meltwater). Bounded hierarchy
+    correction https://github.com/CultureBotAI/HabitatMech/issues/1994 (20261012T015233Z-glacier_meltwater
+    F1). This ungrounded source names liquid water produced from glacial ice. Later
+    Lake Fryxell water-filter samples support a water setting, not a solid-ice superclass.
+    Do not infer that an empty displayed direct count means no BioSamples, or that
+    a class-level sweep has already established a novel-term definition. Exclude only
+    the immediate GOLD contribution named here. Preserve source identity, node/path
+    provenance, counts/units, native status and independent parents; separate decision
+    and graph changes are recorded in their own owners.

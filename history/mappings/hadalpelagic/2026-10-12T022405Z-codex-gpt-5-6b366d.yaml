@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: hadalpelagic
+session:
+  id: 2026-10-12T022405Z-codex-gpt-5-6b366d
+  timestamp: '2026-10-12T02:24:05Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1994
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed hierarchy or mechanism for hadalpelagic
+  details: 'Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1994
+    (20261012T015257Z-hadalpelagic F1). This source denotes a very deep marine water-column
+    region rather than the entire marine water body. Later Puerto Rico Trench samples explicitly
+    describe seawater at 6000 and 8263 m and a water-column isolate. Those examples do not
+    establish a universal depth threshold or equivalence with the mixed trench source. Exclude
+    only the immediate GOLD contribution named here. Preserve source identity, node/path provenance,
+    counts/units, native status and independent parents; separate decision and graph changes
+    are recorded in their own owners. User authorized publication and remediation. Dry seed,
+    sediment canary inspection and full seeding passed. Post-fix regression, labels, map/site
+    and full QC are pending at event creation; actual outcomes will be recorded in PR #1993.
+    No scientific status promotion is claimed.'

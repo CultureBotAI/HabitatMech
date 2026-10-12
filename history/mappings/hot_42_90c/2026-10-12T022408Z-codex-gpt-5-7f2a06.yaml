@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: hot_42_90c
+session:
+  id: 2026-10-12T022408Z-codex-gpt-5-7f2a06
+  timestamp: '2026-10-12T02:24:08Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1994
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed hierarchy or mechanism for hot_42_90c
+  details: 'Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1994
+    (20261012T015308Z-hot_42_90c F1). The maintained ITEM decision treats Hot (42-90C) as
+    a temperature qualifier, not a habitat identity. Preserve NOT_APPLICABLE and the 518 source
+    ORGANISM assertions as provenance. A temperature band is not a hot spring even though
+    later matched samples come from spring settings; the parent edge contradicts the explicit
+    non-habitat interpretation. Exclude only the immediate GOLD contribution named here. Preserve
+    source identity, node/path provenance, counts/units, native status and independent parents;
+    separate decision and graph changes are recorded in their own owners. User authorized
+    publication and remediation. Dry seed, sediment canary inspection and full seeding passed.
+    Post-fix regression, labels, map/site and full QC are pending at event creation; actual
+    outcomes will be recorded in PR #1993. No scientific status promotion is claimed.'

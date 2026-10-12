@@ -3,8 +3,6 @@ label: Hadalpelagic
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:00001999
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5343
@@ -26,3 +24,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00001999 for habitatmech:GOLD.4100d83c91
+    (Environmental > Aquatic > Marine > Hadalpelagic). Bounded hierarchy correction
+    https://github.com/CultureBotAI/HabitatMech/issues/1994 (20261012T015257Z-hadalpelagic
+    F1). This source denotes a very deep marine water-column region rather than the
+    entire marine water body. Later Puerto Rico Trench samples explicitly describe
+    seawater at 6000 and 8263 m and a water-column isolate. Those examples do not
+    establish a universal depth threshold or equivalence with the mixed trench source.
+    Exclude only the immediate GOLD contribution named here. Preserve source identity,
+    node/path provenance, counts/units, native status and independent parents; separate
+    decision and graph changes are recorded in their own owners.

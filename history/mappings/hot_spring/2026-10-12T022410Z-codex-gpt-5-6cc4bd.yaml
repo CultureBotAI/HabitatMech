@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: hot_spring
+session:
+  id: 2026-10-12T022410Z-codex-gpt-5-6cc4bd
+  timestamp: '2026-10-12T02:24:10Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1994
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed hierarchy or mechanism for hot_spring
+  details: 'Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1994
+    (20261012T015311Z-hot_spring F1). The hot-spring groundwater-egress feature agrees with
+    ENVO and its spring genus, but is not an aquatic biome. Official spring is a broad synonym,
+    not exact. All fourteen graph edges were checked against their bounded descriptions and
+    cited studies; the 2026-10-03 qualifications distinguish isolate capability, community
+    inference and variable geochemistry. Primary-text access limits are retained. Exclude
+    only the immediate GOLD contribution named here. Preserve source identity, node/path provenance,
+    counts/units, native status and independent parents; separate decision and graph changes
+    are recorded in their own owners. User authorized publication and remediation. Dry seed,
+    sediment canary inspection and full seeding passed. Post-fix regression, labels, map/site
+    and full QC are pending at event creation; actual outcomes will be recorded in PR #1993.
+    No scientific status promotion is claimed.'
