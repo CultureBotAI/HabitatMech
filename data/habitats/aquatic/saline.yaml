@@ -2,9 +2,9 @@ identifier: habitatmech:GOLD.b46d816f26
 label: Saline
 habitat_category: AQUATIC
 grounding_status: NARROW
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
-- ENVO:01001319
+- ENVO:00002010
 - habitatmech:GOLD.22a80cbd14
 source_attestations:
 - source: GOLD
@@ -19,3 +19,19 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: GROUND_AS_PARENT
+  changes: 'ENVO:00002010 ''saline water'' attached as a parent, not adopted as the
+    identity (NARROW). Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/1445
+    (20261012T091849Z-saline). The deep-subsurface groundwater-qualified Saline source
+    describes saline water material, not a complete saline waterbody. The wrong body
+    genus comes from the generic mapping-table fallback, not the GOLD immediate-parent
+    pass. Use the existing saline-water material candidate and preserve the valid
+    qualified Groundwater parent. Later alkaline-groundwater isolate descriptions
+    do not authorize equating alkalinity and salinity. Retain the qualified source
+    mint under the verified broader genus ENVO:00002010 saline water; do not exact-merge.
+    Current official ENVO definitions and later exact-path GOLD examples were inspected,
+    without claiming recovery of original membership. Separate guarded source exclusions
+    remove unsupported setting parents. Shared mapping-endpoint issue #1398 remains
+    open. (source concept habitatmech:GOLD.b46d816f26)'

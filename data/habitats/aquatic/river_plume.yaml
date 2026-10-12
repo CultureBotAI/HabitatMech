@@ -7,7 +7,6 @@ habitat_category: AQUATIC
 grounding_status: EXACT
 mapping_status: SEEDED
 parent_habitats:
-- ENVO:00001999
 - ENVO:01000071
 source_attestations:
 - source: GOLD
@@ -21,3 +20,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00001999 for habitatmech:GOLD.cbc4b32551
+    (Environmental > Aquatic > Marine > River plume). Bounded hierarchy correction
+    https://github.com/CultureBotAI/HabitatMech/issues/1437 (20261012T091847Z-river_plume).
+    The active ENVO identity denotes an oceanic front mixing river discharge and seawater.
+    Retain the front genus; the additional whole marine-waterbody parent comes only
+    from GOLD Marine context and does not follow as a strict superclass. Count omission
+    does not demonstrate that the source was never used. Exclude only this exact GOLD
+    context contribution. Preserve qualified identity, source nodes/path/counts/units
+    and independently justified parents. Original occurrence membership remains unrecovered.
+    Shared mapping endpoints and typed ontology synonyms are separate open work, not
+    SSSOM/KGX certification.

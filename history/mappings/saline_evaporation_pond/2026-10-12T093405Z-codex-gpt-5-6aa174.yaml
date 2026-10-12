@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: saline_evaporation_pond
+session:
+  id: 2026-10-12T093405Z-codex-gpt-5-6aa174
+  timestamp: '2026-10-12T09:34:05Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/pull/2015
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed aquatic habitat scope for saline_evaporation_pond
+  details: 'Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1446
+    (20261012T091849Z-saline_evaporation_pond). The merged ENVO class denotes a shallow artificial
+    seawater-evaporation pond. Pond is a valid genus; a single GOLD intertidal setting is
+    not a class-wide intertidal-zone superclass. Preserve the GOLD CLOSE and PREGO self-identity
+    distinction, separate count units and eight source associations. Several imported ontology
+    aliases are non-exact in typed ENVO; the related salt pondses variant remains lexically
+    unverified. Exclude only this exact GOLD context contribution. Preserve qualified identity,
+    source nodes/path/counts/units and independently justified parents. Original occurrence
+    membership remains unrecovered. Shared mapping endpoints and typed ontology synonyms are
+    separate open work, not SSSOM/KGX certification. User authorized remediation/publication.
+    Dry seeding and 35 focused regressions passed; generated records, real map/site refresh
+    and final gates remain pending at event creation. Nine previously unreviewed decisions
+    become ITEM through individual evidence assessment; no other status promotion. Shared
+    endpoint issue #1398 remains open.'

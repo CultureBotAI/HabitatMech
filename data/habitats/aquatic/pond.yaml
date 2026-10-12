@@ -43,7 +43,6 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: PREGO
 parent_habitats:
-- ENVO:00002011
 - ENVO:01000617
 source_attestations:
 - source: GOLD
@@ -235,3 +234,17 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00002011 for habitatmech:GOLD.e4db877caa
+    (Environmental > Aquatic > Freshwater > Pond). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1427
+    (20261012T091844Z-pond). The merged class denotes a pond waterbody, with a valid
+    lentic-waterbody genus. Fresh water describes contents, not a genus of generic
+    pond; saline evaporation pond is a concrete ontology child showing the class is
+    not freshwater-only. Several ENVO aliases are typed non-exact, and one frozen
+    PREGO taxon ID now resolves through an NCBI merge. Source counts and observational
+    taxa remain distinct. Exclude only this exact GOLD context contribution. Preserve
+    qualified identity, source nodes/path/counts/units and independently justified
+    parents. Original occurrence membership remains unrecovered. Shared mapping endpoints
+    and typed ontology synonyms are separate open work, not SSSOM/KGX certification.

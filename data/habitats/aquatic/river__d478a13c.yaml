@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00000022
-- habitatmech:GOLD.90a084a03e
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8508
@@ -18,3 +17,18 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution habitatmech:GOLD.90a084a03e
+    for habitatmech:GOLD.1d0c72d58b (Environmental > Aquatic > Acidic > River). Bounded
+    hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1437 (20261012T091846Z-river__d478a13c).
+    The acidic river source remains minted under the genuine river genus. Its Acidic
+    parent is a quality-like source grouping lacking an explicit associated-environment
+    definition, so a strict genus is unsupported. Retain acidity as scoped context
+    without redefining every river, inventing a pH threshold or dropping the valid
+    river superclass. Narrow-mapping endpoints remain separate work. Exclude only
+    this exact GOLD context contribution. Preserve qualified identity, source nodes/path/counts/units
+    and independently justified parents. Original occurrence membership remains unrecovered.
+    Shared mapping endpoints and typed ontology synonyms are separate open work, not
+    SSSOM/KGX certification.

@@ -4,7 +4,6 @@ habitat_category: AQUATIC
 grounding_status: NARROW
 mapping_status: REVIEWED
 parent_habitats:
-- ENVO:00000207
 - ENVO:01000063
 source_attestations:
 - source: GOLD
@@ -19,21 +18,34 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
-- timestamp: '2026-08-31T00:00:00Z'
-  curator: claude-opus-5
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
   action: GROUND_AS_PARENT
   changes: 'ENVO:01000063 ''planktonic material'' attached as a parent, not adopted
-    as the identity (NARROW). Definition review (#110, #161): reversed from CONFIRM_UNGROUNDED.
-    Its committed research report shows the recorded premise - ''no ontology term
-    fits this concept'' - is not supported: ENVO:01000063 ''planktonic material'',
-    ''a portion of environmental material primarily composed of plankton'', is in
-    the vendored slice and is exactly what a net tow retains. The concept is a MATERIAL
-    composed of organisms, not a place and not a taxon, so adopting it makes no taxonomic
-    claim and does not repeat the taxon-as-place error #114 reversed. GROUND_AS_PARENT
-    rather than GROUND because marine oceanic plankton is genuinely narrower than
-    generic planktonic material; the setting parent ENVO:00000207 ''oceanic zone''
-    is kept and expresses the water body. Cost recorded rather than hidden: GROUND_AS_PARENT
-    carries one object_id, so the mesh:D010933 xref that CONFIRM_UNGROUNDED held is
-    not retained on the record and survives only in data/raw/ - the same trade-off
-    recorded for the cnidarian decision. Reached by reading a report that had already
-    been paid for, not by a new run. (source concept habitatmech:GOLD.3fb6b22200)'
+    as the identity (NARROW). Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/1425
+    (20261012T091843Z-plankton__1201d35e). The oceanic plankton source is maintained
+    as a qualified planktonic material. Oceanic zone is a marine layer/water mass
+    and does not follow as its genus from location. Later plankton-associated isolates
+    and fractionated plankton samples support biological material, not exact generic
+    plankton identity or universal sampling gear. Retain source-specific scope and
+    14 ORGANISM assertions. Retain the qualified source mint under the verified broader
+    genus ENVO:01000063 planktonic material; do not exact-merge. Current official
+    ENVO definitions and later exact-path GOLD examples were inspected, without claiming
+    recovery of original membership. Separate guarded source exclusions remove unsupported
+    setting parents. Shared mapping-endpoint issue #1398 remains open. (source concept
+    habitatmech:GOLD.3fb6b22200)'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00000207 for habitatmech:GOLD.3fb6b22200
+    (Environmental > Aquatic > Marine > Oceanic > Plankton). Bounded hierarchy correction
+    https://github.com/CultureBotAI/HabitatMech/issues/1425 (20261012T091843Z-plankton__1201d35e).
+    The oceanic plankton source is maintained as a qualified planktonic material.
+    Oceanic zone is a marine layer/water mass and does not follow as its genus from
+    location. Later plankton-associated isolates and fractionated plankton samples
+    support biological material, not exact generic plankton identity or universal
+    sampling gear. Retain source-specific scope and 14 ORGANISM assertions. Exclude
+    only this exact GOLD context contribution. Preserve qualified identity, source
+    nodes/path/counts/units and independently justified parents. Original occurrence
+    membership remains unrecovered. Shared mapping endpoints and typed ontology synonyms
+    are separate open work, not SSSOM/KGX certification.

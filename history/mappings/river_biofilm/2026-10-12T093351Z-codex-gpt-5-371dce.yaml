@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: river_biofilm
+session:
+  id: 2026-10-12T093351Z-codex-gpt-5-371dce
+  timestamp: '2026-10-12T09:33:51Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/pull/2015
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - grounding_status
+  - mapping_status
+  summary: Correct reviewed aquatic habitat scope for river_biofilm
+  details: 'Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/1437
+    (20261012T091847Z-river_biofilm). River biofilm denotes microbial material at a river
+    site, not a subtype of the freshwater-river waterbody. Later Lunz biofilm samples and
+    an epilithic isolate support that distinction. An existing biofilm-material genus deserves
+    ITEM assessment in place of the CLASS-only disposition; no automatic periphyton identity
+    or universal substrate is justified. Retain the qualified source mint under the verified
+    broader genus ENVO:01000156 biofilm material; do not exact-merge. Current official ENVO
+    definitions and later exact-path GOLD examples were inspected, without claiming recovery
+    of original membership. Separate guarded source exclusions remove unsupported setting
+    parents. Shared mapping-endpoint issue #1398 remains open. User authorized remediation/publication.
+    Dry seeding and 35 focused regressions passed; generated records, real map/site refresh
+    and final gates remain pending at event creation. Nine previously unreviewed decisions
+    become ITEM through individual evidence assessment; no other status promotion. Shared
+    endpoint issue #1398 remains open.'

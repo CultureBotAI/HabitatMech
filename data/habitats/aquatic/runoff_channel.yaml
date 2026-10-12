@@ -3,8 +3,6 @@ label: Runoff channel
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:00000051
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6350
@@ -24,3 +22,18 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00000051 for habitatmech:GOLD.09350714a0
+    (Environmental > Aquatic > Thermal springs > Runoff channel). Bounded hierarchy
+    correction https://github.com/CultureBotAI/HabitatMech/issues/1441 (20261012T091848Z-runoff_channel).
+    The thermal-spring runoff channel is downstream channel structure/context, not
+    necessarily the groundwater outlet defined as a hot spring. Later Yellowstone
+    channel biofilm samples support the distinction but do not choose between a stream
+    channel, other channel or sampled material. Suppress the unsupported spring genus
+    without preselecting an inadequately supported channel subclass. Exclude only
+    this exact GOLD context contribution. Preserve qualified identity, source nodes/path/counts/units
+    and independently justified parents. Original occurrence membership remains unrecovered.
+    Shared mapping endpoints and typed ontology synonyms are separate open work, not
+    SSSOM/KGX certification.

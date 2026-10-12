@@ -51,7 +51,6 @@ synonyms:
   source: PREGO
 parent_habitats:
 - ENVO:00000033
-- habitatmech:GOLD.115edc36f8
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7709
@@ -146,3 +145,19 @@ curation_history:
   changes: 'Retained GOLD label ''Salt pond'' as RELATED_SYNONYM: a CLOSE source mapping
     does not establish exact lexical equivalence. Independent ontology synonyms and
     verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution habitatmech:GOLD.115edc36f8
+    for habitatmech:GOLD.dc339d2180 (Environmental > Aquatic > Marine > Intertidal
+    zone > Salt pond). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1446
+    (20261012T091849Z-saline_evaporation_pond). The merged ENVO class denotes a shallow
+    artificial seawater-evaporation pond. Pond is a valid genus; a single GOLD intertidal
+    setting is not a class-wide intertidal-zone superclass. Preserve the GOLD CLOSE
+    and PREGO self-identity distinction, separate count units and eight source associations.
+    Several imported ontology aliases are non-exact in typed ENVO; the related salt
+    pondses variant remains lexically unverified. Exclude only this exact GOLD context
+    contribution. Preserve qualified identity, source nodes/path/counts/units and
+    independently justified parents. Original occurrence membership remains unrecovered.
+    Shared mapping endpoints and typed ontology synonyms are separate open work, not
+    SSSOM/KGX certification.

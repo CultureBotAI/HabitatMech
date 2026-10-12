@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: rock__d4e1e84c
+session:
+  id: 2026-10-12T093355Z-codex-gpt-5-d3b3d3
+  timestamp: '2026-10-12T09:33:55Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/pull/2015
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed aquatic habitat scope for rock__d4e1e84c
+  details: 'Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1441
+    (20261012T091847Z-rock__d4e1e84c). Marine deep-subsurface rock retains a true rock genus.
+    The undefined Deep subsurface location grouping does not establish another strict material
+    genus. Later serpentinite/harzburgite and basalt descriptions support solid crust context,
+    not a claim that all such rocks share mineralogy or fluid conditions. Do not globally
+    delete valid within-material source parents. Exclude only this exact GOLD context contribution.
+    Preserve qualified identity, source nodes/path/counts/units and independently justified
+    parents. Original occurrence membership remains unrecovered. Shared mapping endpoints
+    and typed ontology synonyms are separate open work, not SSSOM/KGX certification. User
+    authorized remediation/publication. Dry seeding and 35 focused regressions passed; generated
+    records, real map/site refresh and final gates remain pending at event creation. Nine
+    previously unreviewed decisions become ITEM through individual evidence assessment; no
+    other status promotion. Shared endpoint issue #1398 remains open.'
