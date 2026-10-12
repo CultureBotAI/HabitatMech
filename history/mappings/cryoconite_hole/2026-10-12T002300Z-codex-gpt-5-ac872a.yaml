@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: cryoconite_hole
+session:
+  id: 2026-10-12T002300Z-codex-gpt-5-ac872a
+  timestamp: '2026-10-12T00:23:00Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1987
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude reviewed GOLD context parents from cryoconite_hole
+  details: 'ITEM hierarchy assessment: https://github.com/CultureBotAI/HabitatMech/issues/1987
+    (20261012T001703Z-cryoconite_hole). The cryoconite melt-hole feature is not the whole
+    glacier containing it. The ontology thaw-hole superclass definition restricts it to a
+    channel through floating ice, which needs reconciliation with cryoconite holes on grounded
+    glacier surfaces. Exclude only this guarded GOLD source-parent contribution. Preserve
+    independent parents, frozen source identity/counts/units or omissions and native lifecycle.
+    Later examples do not reconstruct frozen membership; shared synonym and endpoint issues
+    remain separate. Authorized by user publication/remediation request. Baseline 47 native
+    checks and exact main CI 827 passed/3 skipped succeeded. Post-fix tests, canary, regeneration
+    and full QC pending at event creation; outcomes will be retained in PR and successor reviews.'

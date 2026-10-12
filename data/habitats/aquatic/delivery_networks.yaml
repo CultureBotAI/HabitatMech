@@ -3,8 +3,6 @@ label: Delivery networks
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.99a88ecb51
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4058
@@ -25,3 +23,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.99a88ecb51
+    for habitatmech:GOLD.835443324e (Environmental > Aquatic > Freshwater > Drinking
+    water > Delivery networks). ITEM hierarchy assessment: https://github.com/CultureBotAI/HabitatMech/issues/1987
+    (20261012T001721Z-delivery_networks). Drinking-water delivery networks are infrastructure
+    supporting water and biofilm habitats, not water material. Later exact-path examples
+    are explicitly drinking-water biofilm samples, strengthening the need to distinguish
+    network from its contents. Exclude only this guarded GOLD source-parent contribution.
+    Preserve independent parents, frozen source identity/counts/units or omissions
+    and native lifecycle. Later examples do not reconstruct frozen membership; shared
+    synonym and endpoint issues remain separate.'

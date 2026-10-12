@@ -14,7 +14,6 @@ synonyms:
   source: ENVO
 parent_habitats:
 - ENVO:00000037
-- ENVO:00002011
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7922
@@ -27,3 +26,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00002011 for habitatmech:GOLD.a4179e8fdc
+    (Environmental > Aquatic > Freshwater > Drainage ditch). ITEM hierarchy assessment:
+    https://github.com/CultureBotAI/HabitatMech/issues/1987 (20261012T001737Z-drainage_ditch).
+    A drainage ditch is a human-made channel collecting water, not a kind of freshwater.
+    Retain the ditch superclass and remove only the GOLD freshwater-material contribution.
+    Exclude only this guarded GOLD source-parent contribution. Preserve independent
+    parents, frozen source identity/counts/units or omissions and native lifecycle.
+    Later examples do not reconstruct frozen membership; shared synonym and endpoint
+    issues remain separate.'

@@ -321,31 +321,35 @@ causal_graphs:
     node_type: CHEMICAL
   - node_id: anoxic_porewater
     label: anoxic porewater
-    node_type: ENVIRONMENTAL_PARAMETER
+    node_type: HABITAT
   - node_id: seawater_sulfate
     label: seawater sulfate
     node_type: CHEMICAL
   - node_id: sulfate_reducing_microorganisms
     label: sulfate-reducing microorganisms
-    node_type: TAXON
+    node_type: COMMUNITY
+    description: Interacting sulfate-reducing populations in the shared anoxic sediment
+      setting of this graph, not a single organism or clade.
   - node_id: sulfate_reduction
     label: sulfate reduction
     node_type: PATHWAY
   - node_id: methanogenic_sediment
     label: methanogenic sediment
-    node_type: ENVIRONMENTAL_PARAMETER
+    node_type: HABITAT
   - node_id: methane
     label: methane
     node_type: CHEMICAL
   - node_id: sulfate_methane_transition_zone
     label: sulfate-methane transition zone
-    node_type: STATE
+    node_type: HABITAT
   - node_id: anme_archaea
     label: ANME archaea
     node_type: TAXON
   - node_id: sulfate_reducing_bacteria
     label: sulfate-reducing bacteria
-    node_type: TAXON
+    node_type: COMMUNITY
+    description: Sulfate-reducing bacterial populations interacting with methanotrophic
+      partners in the shared sediment setting represented here.
   - node_id: anaerobic_methane_oxidation
     label: anaerobic methane oxidation
     node_type: PATHWAY
@@ -526,4 +530,12 @@ curation_history:
   action: ADD_CAUSAL_GRAPH
   changes: Added a deep marine sediment sulfate-methane-transition graph backed by
     PMID:15618510, PMID:35308366, PMID:30194429, and PMID:11034209.
+  llm_assisted: true
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: CURATE
+  changes: Corrected three environmental-context nodes to HABITAT and two shared-setting
+    sulfate-reducer assemblages to COMMUNITY for issue 1988. Stable node and edge
+    identifiers, citations and ANME typing are preserved. Causal scope and evidence
+    questions remain open in issue 1989.
   llm_assisted: true

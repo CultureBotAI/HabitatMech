@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: epilimnion__460c092c
+session:
+  id: 2026-10-12T002317Z-codex-gpt-5-23aa05
+  timestamp: '2026-10-12T00:23:17Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1987
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude reviewed GOLD context parents from epilimnion__460c092c
+  details: 'ITEM hierarchy assessment: https://github.com/CultureBotAI/HabitatMech/issues/1987
+    (20261012T001802Z-epilimnion__460c092c). The saline-source epilimnion is a lake layer,
+    not the whole saline water body. Retain the independently contributed epilimnion genus.
+    Later surface/halocline descriptions cannot establish thermal-layer identity for every
+    original member; narrowMatch endpoint ambiguity remains. Exclude only this guarded GOLD
+    source-parent contribution. Preserve independent parents, frozen source identity/counts/units
+    or omissions and native lifecycle. Later examples do not reconstruct frozen membership;
+    shared synonym and endpoint issues remain separate. Authorized by user publication/remediation
+    request. Baseline 47 native checks and exact main CI 827 passed/3 skipped succeeded. Post-fix
+    tests, canary, regeneration and full QC pending at event creation; outcomes will be retained
+    in PR and successor reviews.'

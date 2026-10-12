@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: epilimnion__7dae03ad
+session:
+  id: 2026-10-12T002319Z-codex-gpt-5-f47e0b
+  timestamp: '2026-10-12T00:23:19Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1987
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude reviewed GOLD context parents from epilimnion__7dae03ad
+  details: 'ITEM hierarchy assessment: https://github.com/CultureBotAI/HabitatMech/issues/1987
+    (20261012T001806Z-epilimnion__7dae03ad). The lentic-source epilimnion is a layer, not
+    the whole lentic water body. The independent epilimnion genus is plausible; later reservoir/lake
+    descriptions do not prove precise stratification for each original isolate. Preserve its
+    mint and flag the mapping endpoint contract. Exclude only this guarded GOLD source-parent
+    contribution. Preserve independent parents, frozen source identity/counts/units or omissions
+    and native lifecycle. Later examples do not reconstruct frozen membership; shared synonym
+    and endpoint issues remain separate. Authorized by user publication/remediation request.
+    Baseline 47 native checks and exact main CI 827 passed/3 skipped succeeded. Post-fix tests,
+    canary, regeneration and full QC pending at event creation; outcomes will be retained
+    in PR and successor reviews.'
