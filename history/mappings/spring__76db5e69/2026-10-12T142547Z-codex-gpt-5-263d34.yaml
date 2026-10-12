@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: spring__76db5e69
+session:
+  id: 2026-10-12T142547Z-codex-gpt-5-263d34
+  timestamp: '2026-10-12T14:25:47Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1467
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude groundwater material from spring ancestry
+  details: 'Correct only the exact source-context edge documented by immutable review 20261012T142055Z-spring__76db5e69.
+    Current ENVO spring-landform and groundwater-material definitions support retaining ENVO:00000027
+    and excluding groundwater as a strict superclass. Preserve source mint, node, path, ORGANISM
+    count/unit, NARROW and SEEDED. Counterfactual whole-corpus regression passed for both
+    springs and all unrelated records. The previous issue closure addressed salt_spring only.
+    Original occurrence membership and shared endpoint #1398 limitations remain; guarded canary,
+    regeneration, map/site and QC follow.'
