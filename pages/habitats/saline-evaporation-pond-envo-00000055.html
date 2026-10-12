@@ -58,7 +58,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="../habitats/pond-envo-00000033.html">pond</a>      <code class="curie">ENVO:00000033</code></li>
-  <li><a href="../habitats/intertidal-zone-habitatmech-gold-115edc36f8.html">Intertidal zone</a>      <code class="curie">habitatmech:GOLD.115edc36f8</code></li>
 </ul>
 
 
@@ -153,6 +152,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">SOURCE_SYNONYM_SCOPED</span>
     <span class="meta">2026-10-07 · seed_from_sources</span>
     <p>Retained GOLD label &#39;Salt pond&#39; as RELATED_SYNONYM: a CLOSE source mapping does not establish exact lexical equivalence. Independent ontology synonyms and verbatim attestations are preserved (#1459).</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-12 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.115edc36f8 for habitatmech:GOLD.dc339d2180 (Environmental &gt; Aquatic &gt; Marine &gt; Intertidal zone &gt; Salt pond). Bounded hierarchy correction <a href="https://github.com/CultureBotAI/HabitatMech/issues/1446" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/1446</a> (20261012T091849Z-saline_evaporation_pond). The merged ENVO class denotes a shallow artificial seawater-evaporation pond. Pond is a valid genus; a single GOLD intertidal setting is not a class-wide intertidal-zone superclass. Preserve the GOLD CLOSE and PREGO self-identity distinction, separate count units and eight source associations. Several imported ontology aliases are non-exact in typed ENVO; the related salt pondses variant remains lexically unverified. Exclude only this exact GOLD context contribution. Preserve qualified identity, source nodes/path/counts/units and independently justified parents. Original occurrence membership remains unrecovered. Shared mapping endpoints and typed ontology synonyms are separate open work, not SSSOM/KGX certification.</p>
   </li>
 </ol>
 
