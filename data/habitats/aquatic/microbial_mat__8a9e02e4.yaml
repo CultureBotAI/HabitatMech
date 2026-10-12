@@ -4,7 +4,6 @@ habitat_category: AQUATIC
 grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
-- ENVO:00000043
 - ENVO:01000008
 source_attestations:
 - source: GOLD
@@ -17,3 +16,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00000043 for habitatmech:GOLD.e066163fc8
+    (Environmental > Aquatic > Freshwater > Wetlands > Microbial mat). Bounded hierarchy
+    correction https://github.com/CultureBotAI/HabitatMech/issues/1397 (20261012T054257Z-microbial_mat__8a9e02e4
+    F1). The freshwater-wetland microbial mat is distinct from the vegetated wetland
+    area in which it occurs. Preserve its source mint and microbial-mat genus, remove
+    only area-as-genus, and retain the exact five-position path. Later BioSamples
+    provide context, not reconstructed original membership or proof of no original
+    observations. Exclude only the immediate GOLD contribution named here. Preserve
+    source identity, node/path provenance, counts/units, native status and independent
+    parents. Unresolved source identity, genus, synonym and mapping-endpoint findings
+    remain separate.

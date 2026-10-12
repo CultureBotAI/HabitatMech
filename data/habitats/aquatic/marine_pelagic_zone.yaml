@@ -19,7 +19,6 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: PREGO
 parent_habitats:
-- ENVO:00001999
 - ENVO:01000295
 source_attestations:
 - source: GOLD
@@ -211,3 +210,16 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00001999 for habitatmech:GOLD.e089065baa
+    (Environmental > Aquatic > Marine > Pelagic zone). Bounded hierarchy correction
+    https://github.com/CultureBotAI/HabitatMech/issues/1288 (20261012T054254Z-marine_pelagic_zone
+    F1). The open-ocean region is a marine layer, not an entire water body. Preserve
+    4877 GOLD ORGANISM assertions from two nodes and the PREGO 29 TAXON pool with
+    25 displayed associations. The ontology part-of relation is not a strict superclass
+    relation; both ITEM source decisions remain traceable. Exclude only the immediate
+    GOLD contribution named here. Preserve source identity, node/path provenance,
+    counts/units, native status and independent parents. Unresolved source identity,
+    genus, synonym and mapping-endpoint findings remain separate.

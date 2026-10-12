@@ -1,0 +1,70 @@
+---
+name: Temporary reviewed-record map rebuild
+
+on:  # yamllint disable-line rule:truthy
+  push:
+    branches: [codex/record-reviews-20261012d]
+    paths: [.github/workflows/rebuild-reviewed-map.yaml]
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      OMP_NUM_THREADS: "2"
+      MKL_NUM_THREADS: "2"
+      OPENBLAS_NUM_THREADS: "2"
+      NUMBA_NUM_THREADS: "2"
+      TOKENIZERS_PARALLELISM: "false"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.13"
+      - uses: actions/download-artifact@v4
+        with:
+          name: reviewed-record-map-4fccc0ccfd0c3e4dc290b3c54f2760568cee893b
+          run-id: 38202159797
+          github-token: ${{ github.token }}
+          path: build/prior-map
+      - name: Install unchanged locked environments
+        run: |
+          uv sync --locked --extra dev
+          uv sync --locked --project conf/embedding-runtime
+      - name: Verify prior cache and export current inputs
+        run: |
+          uv run --locked python scripts/embedding_pipeline.py check --output data/text_map --input build/prior-map/build/text-map/inputs.jsonl --cache build/prior-map/build/text-map/vectors.sqlite
+          uv run --locked python scripts/text_map_inputs.py --output build/text-map/inputs.jsonl
+          uv run --locked python scripts/text_map_inputs.py --limit 32 --output build/text-map/projection-canary.jsonl
+          uv run --locked python scripts/text_map_inputs.py --record data/habitats/aquatic/marine_aphotic_zone.yaml --record data/habitats/aquatic/marine_basin_floor.yaml --record data/habitats/aquatic/marine_bathypelagic_zone.yaml --record data/habitats/aquatic/marine_benthic_biome.yaml --record data/habitats/aquatic/marine_lake.yaml --record data/habitats/aquatic/marine_littoral_zone.yaml --record data/habitats/aquatic/marine_mesopelagic_zone.yaml --record data/habitats/aquatic/marine_mud.yaml --record data/habitats/aquatic/marine_pelagic_zone.yaml --record data/habitats/aquatic/marine_photic_zone.yaml --record data/habitats/aquatic/marine_sediment.yaml --record data/habitats/aquatic/marine_supra_littoral_zone.yaml --record data/habitats/aquatic/marine_water_body.yaml --record data/habitats/aquatic/marsh.yaml --record data/habitats/aquatic/melt_pond.yaml --record data/habitats/aquatic/meltwater.yaml --record data/habitats/aquatic/meromictic_lake.yaml --record data/habitats/aquatic/metalimnion.yaml --record data/habitats/aquatic/microbial_mat__2020a793.yaml --record data/habitats/aquatic/microbial_mat__23532df8.yaml --record data/habitats/aquatic/microbial_mat__5129baa2.yaml --record data/habitats/aquatic/microbial_mat__54ad7767.yaml --record data/habitats/aquatic/microbial_mat__8a9e02e4.yaml --record data/habitats/aquatic/microbial_mat__b6425172.yaml --record data/habitats/aquatic/microbial_mat__eb27cff0.yaml --record data/habitats/aquatic/microbial_mat__fc2dbb7f.yaml --record data/habitats/aquatic/microbial_mats.yaml --record data/habitats/aquatic/microbial_mats__200e1828.yaml --output build/text-map/canary.jsonl
+          cp build/prior-map/build/text-map/vectors.sqlite build/text-map/vectors.sqlite
+      - name: Encode changed-record canary and prove reuse
+        run: |
+          uv run --locked --project conf/embedding-runtime python scripts/embedding_pipeline.py embed --input build/text-map/canary.jsonl --cache build/text-map/vectors.sqlite --profile-output build/text-map/profile.json --device cpu --batch-size 8 > build/text-map/canary-first.json
+          uv run --locked --project conf/embedding-runtime python scripts/embedding_pipeline.py embed --input build/text-map/canary.jsonl --cache build/text-map/vectors.sqlite --profile-output build/text-map/profile.json --device cpu --batch-size 8 > build/text-map/canary-repeat.json
+          uv run --locked python -c 'import json; from pathlib import Path; first=json.loads(Path("build/text-map/canary-first.json").read_text()); repeat=json.loads(Path("build/text-map/canary-repeat.json").read_text()); assert first["count"] == first["encoded"] + first["reused"] == 28, first; assert repeat["count"] == repeat["reused"] == 28 and repeat["encoded"] == 0, repeat; print(first, repeat)'
+      - name: Project canary and complete full map
+        run: |
+          uv run --locked --project conf/embedding-runtime python scripts/embedding_pipeline.py project --input build/text-map/projection-canary.jsonl --cache build/text-map/vectors.sqlite --profile build/text-map/profile.json --output build/text-map/canary-map
+          uv run --locked python scripts/embedding_pipeline.py check --output build/text-map/canary-map --input build/text-map/projection-canary.jsonl --cache build/text-map/vectors.sqlite
+          uv run --locked --project conf/embedding-runtime python scripts/embedding_pipeline.py embed --input build/text-map/inputs.jsonl --cache build/text-map/vectors.sqlite --profile-output build/text-map/profile.json --device cpu --batch-size 8 > build/text-map/full-embed.json
+          uv run --locked python -c 'import json; from pathlib import Path; result=json.loads(Path("build/text-map/full-embed.json").read_text()); assert result["count"] == result["reused"] == 3208 and result["encoded"] == 0, result; print(result)'
+          uv run --locked --project conf/embedding-runtime python scripts/embedding_pipeline.py project --input build/text-map/inputs.jsonl --cache build/text-map/vectors.sqlite --profile build/text-map/profile.json --output data/text_map --title "HabitatMech semantic text map"
+          uv run --locked python scripts/embedding_pipeline.py check --output data/text_map --input build/text-map/inputs.jsonl --cache build/text-map/vectors.sqlite > build/text-map/full-check.json
+      - name: Upload checked products and cache
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reviewed-record-map-${{ github.sha }}
+          retention-days: 7
+          path: |
+            data/text_map/
+            build/text-map/
+          if-no-files-found: warn
+

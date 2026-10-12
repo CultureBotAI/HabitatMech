@@ -8,7 +8,6 @@ grounding_status: EXACT
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002006
-- habitatmech:GOLD.6faa98a0aa
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7297
@@ -22,3 +21,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution habitatmech:GOLD.6faa98a0aa
+    for habitatmech:GOLD.963dbebfe9 (Environmental > Aquatic > Freshwater > Glacier
+    > Meltwater). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1223
+    (20261012T054256Z-meltwater F1). Meltwater is liquid water released from snow
+    or ice. The source path specifies a glacier, but glacier is not a superclass of
+    the resulting liquid material. Keep liquid-water ancestry and the one ORGANISM
+    assertion; source-specific glacial context does not establish that all meltwater
+    is glacial or justify deleting broader cryospheric meaning. Exclude only the immediate
+    GOLD contribution named here. Preserve source identity, node/path provenance,
+    counts/units, native status and independent parents. Unresolved source identity,
+    genus, synonym and mapping-endpoint findings remain separate.

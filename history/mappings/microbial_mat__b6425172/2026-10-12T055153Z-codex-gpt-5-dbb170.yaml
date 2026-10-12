@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: microbial_mat__b6425172
+session:
+  id: 2026-10-12T055153Z-codex-gpt-5-dbb170
+  timestamp: '2026-10-12T05:51:53Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1397
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct bounded aquatic hierarchy or marine mechanism for microbial_mat__b6425172
+  details: Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1397
+    (20261012T054257Z-microbial_mat__b6425172 F1). The coastal-lagoon mat is a microbial sheet
+    in a lagoon, not the entire lagoon. Minted identity and microbial-mat genus are defensible;
+    containing-lagoon ancestry and implicit NARROW endpoints are separate representation defects.
+    No direct organism count is supplied; habitat existence is not negated. Exclude only the
+    immediate GOLD contribution named here. Preserve source identity, node/path provenance,
+    counts/units, native status and independent parents. Unresolved source identity, genus,
+    synonym and mapping-endpoint findings remain separate. User authorized remediation and
+    publication. Dry seeding and all-overlay validation passed; final generated corpus, regressions,
+    map/site and full QC are pending at event creation. Actual completion results belong in
+    PR 2003 and successor observations. No scientific status promotion; unresolved findings
+    remain open.

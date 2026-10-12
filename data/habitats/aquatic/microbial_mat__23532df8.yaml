@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:01000008
-- ENVO:03600041
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7936
@@ -17,3 +16,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:03600041 for habitatmech:GOLD.675b6b6cab
+    (Environmental > Aquatic > Marine > Marine lake > Microbial mat). Bounded hierarchy
+    correction https://github.com/CultureBotAI/HabitatMech/issues/1397 (20261012T054257Z-microbial_mat__23532df8
+    F1). The marine-lake source denotes a setting-specific microbial mat, not the
+    lake itself. Preserve its mint and generic microbial-mat parent while removing
+    only the lake-context superclass. No direct count is supplied. Mapping endpoint
+    ambiguity is separate from this true identity distinction. Exclude only the immediate
+    GOLD contribution named here. Preserve source identity, node/path provenance,
+    counts/units, native status and independent parents. Unresolved source identity,
+    genus, synonym and mapping-endpoint findings remain separate.

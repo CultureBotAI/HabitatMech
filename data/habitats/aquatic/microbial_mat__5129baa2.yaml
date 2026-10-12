@@ -4,7 +4,6 @@ habitat_category: AQUATIC
 grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
-- ENVO:00000023
 - ENVO:01000008
 source_attestations:
 - source: GOLD
@@ -19,3 +18,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00000023 for habitatmech:GOLD.292d5d6ada
+    (Environmental > Aquatic > Freshwater > Creek > Microbial mat). Bounded hierarchy
+    correction https://github.com/CultureBotAI/HabitatMech/issues/1397 (20261012T054257Z-microbial_mat__5129baa2
+    F1). The freshwater-creek microbial mat retains a separate mint and generic microbial-mat
+    genus. A stream is its setting, not a superclass of a multilayer microbial sheet.
+    Preserve the one ORGANISM assertion and source path; reconcile NARROW comparison
+    endpoints without collapsing it into all mats. Exclude only the immediate GOLD
+    contribution named here. Preserve source identity, node/path provenance, counts/units,
+    native status and independent parents. Unresolved source identity, genus, synonym
+    and mapping-endpoint findings remain separate.

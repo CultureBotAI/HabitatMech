@@ -21,7 +21,6 @@ synonyms:
   source: PREGO
 parent_habitats:
 - ENVO:00000210
-- ENVO:00001999
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5332
@@ -84,3 +83,17 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00001999 for habitatmech:GOLD.76bc4edc73
+    (Environmental > Aquatic > Marine > Mesopelagic). Bounded hierarchy correction
+    https://github.com/CultureBotAI/HabitatMech/issues/1285 (20261012T054253Z-marine_mesopelagic_zone
+    F1). The ENVO vertical/thermal definition and aphotic parent support the mesopelagic
+    identity under the pinned convention. Whole marine water body is a contextual
+    GOLD contribution, not a genus. Keep 34 ORGANISM assertions, four PREGO TAXON
+    associations and the two-node note separate. NOAA uses a light-defined twilight
+    convention; these are not silently interchangeable quantitative boundaries. Exclude
+    only the immediate GOLD contribution named here. Preserve source identity, node/path
+    provenance, counts/units, native status and independent parents. Unresolved source
+    identity, genus, synonym and mapping-endpoint findings remain separate.

@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:01000008
-- habitatmech:GOLD.22656a226b
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7146
@@ -17,3 +16,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution habitatmech:GOLD.22656a226b
+    for habitatmech:GOLD.f962316223 (Environmental > Aquatic > Freshwater > Floodplain
+    > Microbial mat). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1397
+    (20261012T054258Z-microbial_mat__eb27cff0 F1). The floodplain microbial mat is
+    a setting-specific mat rather than a landform. Retain its mint and microbial-mat
+    genus. Floodplain context is not strict ancestry, and the emitted NARROW predicate
+    lacks the declared comparison endpoint. No full original membership was recovered.
+    Exclude only the immediate GOLD contribution named here. Preserve source identity,
+    node/path provenance, counts/units, native status and independent parents. Unresolved
+    source identity, genus, synonym and mapping-endpoint findings remain separate.

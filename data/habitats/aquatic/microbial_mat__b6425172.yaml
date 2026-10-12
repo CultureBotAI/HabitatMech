@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:01000008
-- habitatmech:GOLD.c9a99e0db8
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7945
@@ -17,3 +16,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution habitatmech:GOLD.c9a99e0db8
+    for habitatmech:GOLD.cdfbc8d8b6 (Environmental > Aquatic > Marine > Coastal lagoon
+    > Microbial mat). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1397
+    (20261012T054257Z-microbial_mat__b6425172 F1). The coastal-lagoon mat is a microbial
+    sheet in a lagoon, not the entire lagoon. Minted identity and microbial-mat genus
+    are defensible; containing-lagoon ancestry and implicit NARROW endpoints are separate
+    representation defects. No direct organism count is supplied; habitat existence
+    is not negated. Exclude only the immediate GOLD contribution named here. Preserve
+    source identity, node/path provenance, counts/units, native status and independent
+    parents. Unresolved source identity, genus, synonym and mapping-endpoint findings
+    remain separate.

@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:01000008
-- habitatmech:GOLD.41f771c2b4
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7979
@@ -17,3 +16,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution habitatmech:GOLD.41f771c2b4
+    for habitatmech:GOLD.f128d45ecf (Environmental > Aquatic > Acidic > Acidic lake
+    > Microbial mat). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1397
+    (20261012T054258Z-microbial_mat__fc2dbb7f F1). The acidic-lake microbial mat retains
+    its source-specific identity and general microbial-mat genus. Acidic lake is a
+    containing setting, not a superclass. Neither an exact pH value nor ecological
+    absence can be derived from the path and omitted count; reconcile NARROW endpoints
+    separately. Exclude only the immediate GOLD contribution named here. Preserve
+    source identity, node/path provenance, counts/units, native status and independent
+    parents. Unresolved source identity, genus, synonym and mapping-endpoint findings
+    remain separate.

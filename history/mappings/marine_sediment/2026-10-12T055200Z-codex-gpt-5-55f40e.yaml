@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/causal_graphs/marine_sediment.yaml
+  slug: marine_sediment
+session:
+  id: 2026-10-12T055200Z-codex-gpt-5-55f40e
+  timestamp: '2026-10-12T05:52:00Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1294
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Correct bounded aquatic hierarchy or marine mechanism for marine_sediment
+  details: Bound sulfur cycling to organic-bearing marine sediment with sulfate and anoxic
+    porewater. Preserve oxic deep-seabed exceptions and overlapping redox processes; distinguish
+    carbon oxidation to inorganic carbon from sulfate reduction to sulfide. Replace topic-only
+    or non-verbatim snippets with precise locators and paraphrased notes from inspected D'Hondt,
+    Jorgensen and Wasmund full texts. Remove Lin mineral-rate evidence from the iron trapping
+    reaction, retaining the original audit event. Represent anoxic porewater as HABITAT and
+    interacting sulfate-reducing/sulfur-oxidizing populations in this setting as COMMUNITY.
+    Preserve all graph/node/edge IDs. Also resolves the sediment witness in issue 2004. User
+    authorized remediation and publication. Dry seeding and all-overlay validation passed;
+    final generated corpus, regressions, map/site and full QC are pending at event creation.
+    Actual completion results belong in PR 2003 and successor observations. No scientific
+    status promotion; unresolved findings remain open.
