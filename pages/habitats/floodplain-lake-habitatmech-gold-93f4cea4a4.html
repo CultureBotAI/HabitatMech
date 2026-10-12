@@ -50,10 +50,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 </table>
 </div>
 
-<h2>Broader habitats</h2>
-<ul class="plain">
-  <li><a href="../habitats/fresh-water-envo-00002011.html">fresh water</a>      <code class="curie">ENVO:00002011</code></li>
-</ul>
 
 
 
@@ -68,6 +64,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="meta">2026-08-12 · claude-opus-5 ·
     class-level sweep, not an individual judgement</span>
     <p>Confirmed UNGROUNDED: no ontology term fits this concept. Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the vendored slice matched this label by any search route. Whether the concept is a habitat at all was NOT assessed, so this is not yet a term-request candidate. (source concept habitatmech:GOLD.93f4cea4a4)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-12 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution ENVO:00002011 for habitatmech:GOLD.93f4cea4a4 (Environmental &gt; Aquatic &gt; Freshwater &gt; Floodplain lake). Bounded hierarchy correction <a href="https://github.com/CultureBotAI/HabitatMech/issues/1994" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/1994</a> (20261012T015151Z-floodplain_lake F1). This class-level ungrounded GOLD source names a lake in a floodplain. Later exact BioSamples explicitly describe Amazon floodplain-lake water. The lake as a bounded body is not the liquid water material, so Freshwater supplies context rather than a valid strict superclass. Optional missing definition is not by itself a defect. Exclude only the immediate GOLD contribution named here. Preserve source identity, node/path provenance, counts/units, native status and independent parents; separate decision and graph changes are recorded in their own owners.</p>
   </li>
 </ol>
 
