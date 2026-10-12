@@ -52,7 +52,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 <h2>Broader habitats</h2>
 <ul class="plain">
-  <li><a href="../habitats/marine-water-body-envo-00001999.html">marine water body</a>      <code class="curie">ENVO:00001999</code></li>
   <li><a href="http://purl.obolibrary.org/obo/ENVO_01001547">land ice mass</a>      <code class="curie">ENVO:01001547</code></li>
   <li><a href="http://purl.obolibrary.org/obo/UBERON_0000061">anatomical structure</a>      <code class="curie">UBERON:0000061</code></li>
 </ul>
@@ -61,6 +60,16 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 
 
+<h2>Curation</h2>
+<p class="meta">What a curator decided about this record, and why. A record built
+from several source concepts can carry one decision per concept.</p>
+<ol class="events">
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-12 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution ENVO:00001999 for habitatmech:GOLD.83ce4e95f2 (Environmental &gt; Aquatic &gt; Marine &gt; Ice shelf). Bounded hierarchy correction <a href="https://github.com/CultureBotAI/HabitatMech/issues/1247" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/1247</a> (20261012T035125Z-ice_shelf F1). The ice-shelf identity resolves to ENVO:00000380. Its marine-water-body parent is GOLD context; its anatomical-structure parent is an actual current upstream OWL axiom, not an extractor invention. NSIDC recognizes sea-ice/snowfall and composite shelves, so universal land-origin wording also needs upstream scope review. Exclude only the immediate GOLD contribution named here. Preserve source identity, node/path provenance, counts/units, native status and independent parents; separate decision and graph changes are recorded in their own owners.</p>
+  </li>
+</ol>
 
 <h2>Provenance</h2>
 <p class="meta">
