@@ -1,0 +1,754 @@
+# Bounded correction follow-up: groundwater
+
+- Review: 20261012T025325Z-groundwater-followup
+- Repository: CultureBotAI/HabitatMech
+- Started UTC: 2026-10-12T02:50:39.050445Z
+- Finished UTC: 2026-10-12T02:53:25.188438Z
+- Reviewer: OpenAI Codex (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Excluded only the immediate GOLD context-parent contribution habitatmech:GOLD.21222434e2 for habitatmech:GOLD.22a80cbd14. Current strict parents: ENVO:01001004. Full-document differential assessment preserves identifiers, labels, source counts/units or omissions, native status, parameters and taxa. Cross-corpus regression confines changes to 25 records. This bounded follow-up does not resolve original membership, shared endpoint contracts, typed synonyms or unrelated upstream ontology axioms. Publication-base reinspection after the verified map/site commit: every captured scientific input path, role and SHA256 is identical to the earlier corrective-assessment capture. The complete target and corrected strict parents were re-read; neither source hashes nor scientific judgments were silently substituted.
+
+## Scope And Provenance
+
+Full exact target reassessed for bounded hierarchy/mechanism corrections with unchanged claims compared to predecessor evidence.
+
+Selection: Successor observation; no new distinct-record coverage.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 1b326c1f514006ba65d61406f917356f542831a4.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| habitatmech:GOLD.22a80cbd14 | data/habitats/aquatic/groundwater.yaml | generated | Groundwater |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Post-correction native gate | passed | True | habitatmech:GOLD.22a80cbd14 | Actual successful result; started 2026-10-12T02:25:24.077716+00:00; finished 2026-10-12T02:25:33.332123+00:00.  Full-corpus validation is not expanded scientific coverage. |
+| Post-correction native gate | passed | True | habitatmech:GOLD.22a80cbd14 | Actual successful result; started 2026-10-12T02:25:33.332790+00:00; finished 2026-10-12T02:25:56.361992+00:00.  Full-corpus validation is not expanded scientific coverage. |
+| Post-correction native gate | passed | True | habitatmech:GOLD.22a80cbd14 | Actual successful result; started 2026-10-12T02:25:56.362844+00:00; finished 2026-10-12T02:26:56.420771+00:00.  Full-corpus validation is not expanded scientific coverage. |
+| Post-correction native gate | passed | True | habitatmech:GOLD.22a80cbd14 | Actual successful result; started 2026-10-12T02:26:56.421730+00:00; finished 2026-10-12T02:27:04.089249+00:00.  Full-corpus validation is not expanded scientific coverage. |
+| Post-correction native gate | passed | True | habitatmech:GOLD.22a80cbd14 | Actual successful result; started 2026-10-12T02:27:04.090272+00:00; finished 2026-10-12T02:27:08.740961+00:00.  Full-corpus validation is not expanded scientific coverage. |
+| Post-correction native gate | passed | True | habitatmech:GOLD.22a80cbd14 | Actual successful result; started 2026-10-12T02:27:08.741589+00:00; finished 2026-10-12T02:27:25.639901+00:00.  Full-corpus validation is not expanded scientific coverage. |
+| Post-correction native gate | passed | True | habitatmech:GOLD.22a80cbd14 | Actual successful result; started 2026-10-12T02:27:25.640508+00:00; finished 2026-10-12T02:27:26.247327+00:00.  Full-corpus validation is not expanded scientific coverage. |
+| Post-correction native gate | passed | True | habitatmech:GOLD.22a80cbd14 | Actual successful result; started 2026-10-12T02:27:26.247958+00:00; finished 2026-10-12T02:27:26.496701+00:00.  Full-corpus validation is not expanded scientific coverage. |
+| Post-correction native gate | passed | True | habitatmech:GOLD.22a80cbd14 | Actual successful result; started 2026-10-12T02:27:26.497610+00:00; finished 2026-10-12T02:27:26.569213+00:00.  Full-corpus validation is not expanded scientific coverage. |
+| Post-correction native gate | passed | True | habitatmech:GOLD.22a80cbd14 | Actual successful result; started 2026-10-12T02:25:05.374984+00:00; finished 2026-10-12T02:25:08.452135+00:00.  Full-corpus validation is not expanded scientific coverage. |
+| Post-correction native gate | passed | True | habitatmech:GOLD.22a80cbd14 | Actual successful result; started 2026-10-12T02:33:49.365566+00:00; finished 2026-10-12T02:48:27.824611+00:00. Authoritative full QC passed 886 tests with 3 skipped on exact head 1b326c1f514006ba65d61406f917356f542831a4; all required workflows succeeded. https://github.com/CultureBotAI/HabitatMech/actions/runs/38196271583 Full-corpus validation is not expanded scientific coverage. |
+
+## Scientific And Domain Assessments
+
+### Corrected hierarchy or process typing and unchanged claims
+
+scope: concern. Targets: habitatmech:GOLD.22a80cbd14.
+
+Excluded only the immediate GOLD context-parent contribution habitatmech:GOLD.21222434e2 for habitatmech:GOLD.22a80cbd14. Current strict parents: ENVO:01001004. Full-document differential assessment preserves identifiers, labels, source counts/units or omissions, native status, parameters and taxa. Cross-corpus regression confines changes to 25 records. This bounded follow-up does not resolve original membership, shared endpoint contracts, typed synonyms or unrelated upstream ontology axioms. Publication-base reinspection after the verified map/site commit: every captured scientific input path, role and SHA256 is identical to the earlier corrective-assessment capture. The complete target and corrected strict parents were re-read; neither source hashes nor scientific judgments were silently substituted.
+
+## Findings
+
+### F1: A source setting or material is emitted as a strict superclass
+
+major / resolved / confirmed; issue key: habitatmech-gold.22a80cbd14-context-parent.
+
+The Deep subsurface &gt; Groundwater variant is a water material constrained by depth/location. Groundwater is a supported genus; the deep-subsurface region mint is context, not a water superclass. Later Rifle and Horonobe samples support the water-versus-region distinction without equating all sampling depths. Unsupported GOLD contributions: habitatmech:GOLD.21222434e2.
+
+Disposition: Excluded only the immediate GOLD context-parent contribution habitatmech:GOLD.21222434e2 for habitatmech:GOLD.22a80cbd14. Current strict parents: ENVO:01001004. Full-document differential assessment preserves identifiers, labels, source counts/units or omissions, native status, parameters and taxa. Cross-corpus regression confines changes to 25 records. This bounded follow-up does not resolve original membership, shared endpoint contracts, typed synonyms or unrelated upstream ontology axioms. Publication-base reinspection after the verified map/site commit: every captured scientific input path, role and SHA256 is identical to the earlier corrective-assessment capture. The complete target and corrected strict parents were re-read; neither source hashes nor scientific judgments were silently substituted.
+
+### F2: Narrow comparison uses an undeclared ontology endpoint
+
+major / open / confirmed; issue key: habitatmech-gold.22a80cbd14-mapping-endpoint.
+
+The resolver retains the path mint, adds a broader ontology class and emits narrowMatch; the attestation contract instead describes comparison to the generated record. The Deep subsurface &gt; Groundwater variant is a water material constrained by depth/location. Groundwater is a supported genus; the deep-subsurface region mint is context, not a water superclass. Later Rifle and Horonobe samples support the water-versus-region distinction without equating all sampling depths.
+
+## Recommended Actions And Acceptance Checks
+
+### A2
+
+Resolve shared1398 with explicit subject/predicate/object contracts, resolver and consumer regressions, and downstream SSSOM/KGX audit. Preserve separate identities; reversing a predicate cannot supply its missing endpoint.
+
+- Change only maintained inputs after source-level assessment; preserve independent true parents, identities, source counts/units and lifecycle.
+- Append required history, add focused regressions, inspect a seed canary and regenerate affected products without hand-editing records or pages.
+- Pass schema, strict, product-label, corpus reproduction, causal/history, review-integrity and full QC; save a linked successor for every finding disposition.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| PRIOR | reviews/structured/20261012T015245Z-groundwater/review.yaml | supports | Inspected predecessor full-record assessment, primary sources and bounded source-access limitations, retained for unchanged claims. |
+| CURRENT | data/habitats/aquatic/groundwater.yaml; curation/gold_parent_exclusions.tsv; curation/decisions.tsv; tests/test_fourth_aquatic_review_fixes.py | supports | Excluded only the immediate GOLD context-parent contribution habitatmech:GOLD.21222434e2 for habitatmech:GOLD.22a80cbd14. Current strict parents: ENVO:01001004. Full-document differential assessment preserves identifiers, labels, source counts/units or omissions, native status, parameters and taxa. Cross-corpus regression confines changes to 25 records. This bounded follow-up does not resolve original membership, shared endpoint contracts, typed synonyms or unrelated upstream ontology axioms. Publication-base reinspection after the verified map/site commit: every captured scientific input path, role and SHA256 is identical to the earlier corrective-assessment capture. The complete target and corrected strict parents were re-read; neither source hashes nor scientific judgments were silently substituted. |
+
+## Limits And Additional Notes
+
+- The predecessor primary-source access and original-membership limits remain; later GOLD examples do not replace frozen source counts.
+- Optional replacement definitions or more specific genera were not invented. Context-parent removal is not proof of an exact habitat identity.
+- Label correspondence retains 2057 SKIPPED_NO_ADAPTER targets and accepted exceptions; this is not SSSOM/KGX conformance certification.
+- Full QC covers the captured scientific inputs before these new successor files; final review-integrity and PR checks still apply.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261012T025325Z-groundwater-followup
+kind: record
+repository: CultureBotAI/HabitatMech
+title: 'Bounded correction follow-up: groundwater'
+started_at: '2026-10-12T02:50:39.050445Z'
+finished_at: '2026-10-12T02:53:25.188438Z'
+reviewer:
+  identity: OpenAI Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent authored curation and adversarial reassessment; not
+    independent approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'Excluded only the immediate GOLD context-parent contribution habitatmech:GOLD.21222434e2
+  for habitatmech:GOLD.22a80cbd14. Current strict parents: ENVO:01001004. Full-document
+  differential assessment preserves identifiers, labels, source counts/units or omissions,
+  native status, parameters and taxa. Cross-corpus regression confines changes to
+  25 records. This bounded follow-up does not resolve original membership, shared
+  endpoint contracts, typed synonyms or unrelated upstream ontology axioms. Publication-base
+  reinspection after the verified map/site commit: every captured scientific input
+  path, role and SHA256 is identical to the earlier corrective-assessment capture.
+  The complete target and corrected strict parents were re-read; neither source hashes
+  nor scientific judgments were silently substituted.'
+source:
+  git_revision: 1b326c1f514006ba65d61406f917356f542831a4
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: conf/record_review.yaml
+    sha256: c2f5d0eb4c5744f5fe354c92184ddab144dc2688dba952b032b4f3d597bc08d6
+    role: context
+  - path: conf/sources.yaml
+    sha256: a8e069f9278068b57fa234f43e03c8d893f857827b83fd10cfa92d6815aed642
+    role: context
+  - path: curation/causal_graphs/liquid_water.yaml
+    sha256: 12aac1021b9b51c6becc4ef8509bd63557b306e42c01d9b4443d69252ce29a81
+    role: context
+  - path: curation/decisions.tsv
+    sha256: 2fd5aec7ac1710ede2405849e78dd0423c253d72b43676230f72b9905bae99dd
+    role: context
+  - path: curation/definition_source_label_exclusions.tsv
+    sha256: 2d41fc93db4939122b3909f2a412b84b679703948b10d9f02e12021442f71407
+    role: context
+  - path: curation/external_xrefs.tsv
+    sha256: cf8394a6ab22e35efd9e252aef422018226280830bf816a39bf4f2256ff75ad5
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: 6be3d043f1730c9098ade51833e311b5b5a14cfddbb83ef3af0e9713f4a52198
+    role: context
+  - path: curation/redirects_retracted.tsv
+    sha256: 0f1e9af8881f5a5db19f87de06b3b3d1800cfac8101699b380388c0a1a1e9a19
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 3f2ce04805defe5ff65dc20988cc72bc94d4636b3140eb1311017866bdc0ea0a
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: b59b9e800a918135e3915145d4d8098bb48dcea36a312b3004c594a57d221ae9
+    role: context
+  - path: data/habitats/aquatic/deep_subsurface__45e0aabf.yaml
+    sha256: 83df42364069e6c1fd73c5720c79f0ad14b2147273a9c7e3f3c499c23ad503ea
+    role: context
+  - path: data/habitats/aquatic/groundwater.yaml
+    sha256: 81e5b115829219d9f4a2960ecc5f639e580515c48cc44ab13aa778a88fe87ec7
+    role: target
+  - path: data/habitats/aquatic/groundwater__585f08d9.yaml
+    sha256: c312e4f180875d56e34afecdb41cde835eff185770b508626e81e00b9dabfcb8
+    role: context
+  - path: data/habitats/aquatic/liquid_water.yaml
+    sha256: 03eb8ba51e02bc4c8b65b67ae5d8bb740746f8eff51ed81326685fdc5067b081
+    role: context
+  - path: data/habitats/aquatic/underground_water.yaml
+    sha256: ffb74eebd8196044ed52d9866f6e778a87b4fce2bfac5194713d8551150ae3d7
+    role: context
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: 36df8306394c06c352b73e0bf7b47a2858784cedac7389a24d0b78f593ece646
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: f7aa39ee762d94f1902d9f08f328cb897bc543e4e226057eb4770d24bfcc6eb5
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/mappings/groundwater/2026-10-12T022403Z-codex-gpt-5-dcde2f.yaml
+    sha256: 22d6e42b75c44bbcb6a99409e4846cfd913dcea35cfe543691613566a38c190c
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reports/pr_review/20261006T232242Z-well-sediment-publication.md
+    sha256: 13be9c949b44a48b255959f20b8409f6396abd5760df8bee2cc150a35c852200
+    role: context
+  - path: reports/yaml_record_review/20260921T084928Z-acid_saline_drainage.md
+    sha256: 95c96003859fb15e1e93b96d6397079c75f7d6ef370bcbac49ba3ba978754c5c
+    role: context
+  - path: reports/yaml_record_review/20260921T110512Z-acidic_spring.md
+    sha256: 609357c9a1f08006f77d06ef9596c8bfbbc2887b84ea5034716c72fddff37b51
+    role: context
+  - path: reports/yaml_record_review/20260921T140912Z-alkaline_spring.md
+    sha256: 0409af6c27856f9b54c433218443fb81b8c6a13006767c4837a785ff6772f6c4
+    role: context
+  - path: reports/yaml_record_review/20260921T214700Z-biofouling.md
+    sha256: 49dfc9799aba0de9eb0f01f36a97211265f6a9c555cc16835522e42d5da96253
+    role: context
+  - path: reports/yaml_record_review/20260923T132141Z-borehole.md
+    sha256: 6fae27427fdd19b66a6a49c8e295847d813cac9e7b691ab55fbf189044c8cc6e
+    role: context
+  - path: reports/yaml_record_review/20260923T234830Z-cave_lake.md
+    sha256: 13f8e02e43f51d10fbddeb9a4104440acd31dec4ee3fe50523f563c4918b8366
+    role: context
+  - path: reports/yaml_record_review/20260924T000841Z-cave_microbial_mat.md
+    sha256: 7adddecc4cc5c0c2b1e664b18f02e5fd9e2fd12a8dd0ff40ceb3eaddeba2d45b
+    role: context
+  - path: reports/yaml_record_review/20260924T003355Z-cave_pool.md
+    sha256: 085c62331719db8b8f918cd3ea7bdc44bc9369f56ee78a33758f91aedd9793f6
+    role: context
+  - path: reports/yaml_record_review/20260924T005441Z-cave_pool_sediment.md
+    sha256: f2b3d86415858af182d8108f918596b3fd62ca0dd05144d591fe53aa00e5ad8d
+    role: context
+  - path: reports/yaml_record_review/20260924T011619Z-cave_stream.md
+    sha256: 10d64f499447ee69cf016a624987f807b8e50c42474e278e7b5be52978c11acf
+    role: context
+  - path: reports/yaml_record_review/20260924T013444Z-cave_stream_sediment.md
+    sha256: ad7ead76e7e1a1f7924d9ab82576b61738490504e537713a7a349fc38553696c
+    role: context
+  - path: reports/yaml_record_review/20260924T082609Z-coalbed_methane_well_water.md
+    sha256: 8811f35d255833bb75dfba231adb647ae84fdcbf8683fe5ba57fefcb91651a23
+    role: context
+  - path: reports/yaml_record_review/20260926T173701Z-mine_water__20810f85.md
+    sha256: 27d5a4bd2403e9d7780d97a382d93441af29afa94d6e27d7c2566aafd648e9b6
+    role: context
+  - path: reports/yaml_record_review/20260927T055117Z-contaminated__0663aab0.md
+    sha256: 5fa6955a76f6c4f96eab8afc8cc695d96872b2eda5d621383ea72db703f6a5bc
+    role: context
+  - path: reports/yaml_record_review/20261001T222257Z-driven_well.md
+    sha256: d6fc68cea6e5c410451cf2ef6f849a5f9cee1b66817418d4980588c6d605eb98
+    role: context
+  - path: reports/yaml_record_review/20261001T230750Z-dug_well.md
+    sha256: 3b878a883445859117bee1a2c16c14f653064fa09907769e695797e04abddc01
+    role: context
+  - path: reports/yaml_record_review/20261003T082405Z-freshwater.md
+    sha256: 0c2eb5c532d1c25a4c0f53b76d316e7a1f4617d79b715510493b5480088f42b9
+    role: context
+  - path: reports/yaml_record_review/20261003T085226Z-freshwater.md
+    sha256: 8a9ef5b144a67204a886e552234c38476c96f4e5992564c4802a1690e5f6d531
+    role: context
+  - path: reports/yaml_record_review/20261003T101836Z-groundwater.md
+    sha256: 21a7125314a391ef454e1b1142dfa91f44fa1d65a295818406ab5563d06bec23
+    role: context
+  - path: reports/yaml_record_review/20261005T000953Z-porewater.md
+    sha256: 94e6b34de3c42e656ee57675f21f6a4da946a8a41d7ad5523eaa4ec934c94cb9
+    role: context
+  - path: reports/yaml_record_review/20261005T030852Z-saline.md
+    sha256: 6c062ed839b23a995ebbd51054971b5ec841fe3f0797c4ea687925cc4295e91d
+    role: context
+  - path: reports/yaml_record_review/20261005T045816Z-saline_spring_sediment.md
+    sha256: 2c2dd813f61f97dc28207a84dc0e83012d2d9692d0b0587d2c59ed6fa294df0f
+    role: context
+  - path: reports/yaml_record_review/20261005T071621Z-salt_spring.md
+    sha256: b9b0f495348e29caee6c712a3e026b30b259b1c560bed52a3f955d6b8a00f681
+    role: context
+  - path: reports/yaml_record_review/20261006T080933Z-spring__6fd75c62.md
+    sha256: c1010eeb135f469210de1ba7864fa11eb116bf2acd180f1caf7fd1d196bb956b
+    role: context
+  - path: reports/yaml_record_review/20261006T084924Z-spring_sediment.md
+    sha256: f9d21466bd65bdf1f86fd5cae416687485a0ba3463b5b2f34226f7c7b6efbf74
+    role: context
+  - path: reports/yaml_record_review/20261006T222245Z-well.md
+    sha256: a547270e7e9048da9ca7cceab486aa8aa6d30021d2bb35a8a962da396f6d44ce
+    role: context
+  - path: reports/yaml_record_review/20261006T222629Z-well_biofilm.md
+    sha256: 514a583c71e5d92e7298cc08e03523b61ff4b8e6c36f83486fd9a25615c34cdf
+    role: context
+  - path: reports/yaml_record_review/20261006T230909Z-well_sediment.md
+    sha256: cd57c904ae945dd8a8f42565af2046bf0a6e0289aae2efadaa471d64709b2ee5
+    role: context
+  - path: reviews/structured/20261012T015245Z-groundwater/review.yaml
+    sha256: 1412d38482a13f593795a870ee5387c4eae236e7cf7dbb3c342d54205c7b68d7
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/extract_gold_biosamples.py
+    sha256: b6a2773c86fe718e1ca0b1d7b32709f0eee491ac813655e310aa0817c0fec31b
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: 4bf5391d25ff48a2d81eb3821af6582de063fd0391440973d309dfd93016490c
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: src/habitatmech/extract.py
+    sha256: 4d9397bda649381a5daf81937369531c6dc8b4518d6c7047e6f3f14e605bf860
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 7e3cda3dadb9c7462498e5014bf38ef730068212f8f9cb131e3fce383c21d10e
+    role: context
+  - path: src/habitatmech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+  - path: src/habitatmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 4adf105e23d75c3563a516a0c160623d1065df7fcb2f31b7a0a0a8303d0401be
+    role: context
+  - path: tests/test_fourth_aquatic_review_fixes.py
+    sha256: 34d2a310653888c06aa7a1e8f39fb1ee3bed811628b1ae8693d067caeb7e67b6
+    role: context
+targets:
+- target_id: habitatmech:GOLD.22a80cbd14
+  path: data/habitats/aquatic/groundwater.yaml
+  label: Groundwater
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Source-specific identity and lifecycle decisions
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Authored definitions and genus
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Guarded source context-parent exclusions
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_terms.tsv
+    role: Pinned ontology labels, definitions and synonyms
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_subclass_edges.tsv
+    role: Pinned ontology hierarchy
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Harmonization and generated record construction
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/gold_ecosystem_paths.tsv
+    role: Frozen GOLD source inventory
+scope:
+  description: Full exact target reassessed for bounded hierarchy/mechanism corrections
+    with unchanged claims compared to predecessor evidence.
+  selection: Successor observation; no new distinct-record coverage.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - habitatmech:GOLD.22a80cbd14
+checks:
+- check_id: C0
+  name: Post-correction native gate
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.22a80cbd14
+  command: just validate-strict data/habitats/aquatic/estuary__5f780975.yaml data/habitats/aquatic/estuary__bae88a25.yaml
+    data/habitats/aquatic/estuary_microbial_mat.yaml data/habitats/aquatic/estuary_sediment.yaml
+    data/habitats/aquatic/floodplain__7ad4b08f.yaml data/habitats/aquatic/floodplain__98d09203.yaml
+    data/habitats/aquatic/floodplain_lake.yaml data/habitats/aquatic/formation_fluid.yaml
+    data/habitats/aquatic/fossil.yaml data/habitats/aquatic/fracking_water__af948aea.yaml
+    data/habitats/aquatic/fresh_water.yaml data/habitats/aquatic/freshwater_ice.yaml
+    data/habitats/aquatic/freshwater_lake.yaml data/habitats/aquatic/freshwater_river.yaml
+    data/habitats/aquatic/glacial_lake.yaml data/habitats/aquatic/glacier__0eab88a6.yaml
+    data/habitats/aquatic/glacier__efa45690.yaml data/habitats/aquatic/glacier_meltwater.yaml
+    data/habitats/aquatic/glacier_stream.yaml data/habitats/aquatic/groundwater.yaml
+    data/habitats/aquatic/hadalpelagic.yaml data/habitats/aquatic/harbor__5962cec6.yaml
+    data/habitats/aquatic/hot_42_90c.yaml data/habitats/aquatic/hot_spring.yaml data/habitats/aquatic/hydrocarbon__a75cc82e.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - CURRENT
+  summary: Actual successful result; started 2026-10-12T02:25:24.077716+00:00; finished
+    2026-10-12T02:25:33.332123+00:00.  Full-corpus validation is not expanded scientific
+    coverage.
+- check_id: C1
+  name: Post-correction native gate
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.22a80cbd14
+  command: just verify-corpus
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - CURRENT
+  summary: Actual successful result; started 2026-10-12T02:25:33.332790+00:00; finished
+    2026-10-12T02:25:56.361992+00:00.  Full-corpus validation is not expanded scientific
+    coverage.
+- check_id: C2
+  name: Post-correction native gate
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.22a80cbd14
+  command: just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - CURRENT
+  summary: Actual successful result; started 2026-10-12T02:25:56.362844+00:00; finished
+    2026-10-12T02:26:56.420771+00:00.  Full-corpus validation is not expanded scientific
+    coverage.
+- check_id: C3
+  name: Post-correction native gate
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.22a80cbd14
+  command: just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - CURRENT
+  summary: Actual successful result; started 2026-10-12T02:26:56.421730+00:00; finished
+    2026-10-12T02:27:04.089249+00:00.  Full-corpus validation is not expanded scientific
+    coverage.
+- check_id: C4
+  name: Post-correction native gate
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.22a80cbd14
+  command: just validate-causal-all
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - CURRENT
+  summary: Actual successful result; started 2026-10-12T02:27:04.090272+00:00; finished
+    2026-10-12T02:27:08.740961+00:00.  Full-corpus validation is not expanded scientific
+    coverage.
+- check_id: C5
+  name: Post-correction native gate
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.22a80cbd14
+  command: just term-requests-check
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - CURRENT
+  summary: Actual successful result; started 2026-10-12T02:27:08.741589+00:00; finished
+    2026-10-12T02:27:25.639901+00:00.  Full-corpus validation is not expanded scientific
+    coverage.
+- check_id: C6
+  name: Post-correction native gate
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.22a80cbd14
+  command: just provenance-check
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - CURRENT
+  summary: Actual successful result; started 2026-10-12T02:27:25.640508+00:00; finished
+    2026-10-12T02:27:26.247327+00:00.  Full-corpus validation is not expanded scientific
+    coverage.
+- check_id: C7
+  name: Post-correction native gate
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.22a80cbd14
+  command: uv run ruff check .
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - CURRENT
+  summary: Actual successful result; started 2026-10-12T02:27:26.247958+00:00; finished
+    2026-10-12T02:27:26.496701+00:00.  Full-corpus validation is not expanded scientific
+    coverage.
+- check_id: C8
+  name: Post-correction native gate
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.22a80cbd14
+  command: git diff --check
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - CURRENT
+  summary: Actual successful result; started 2026-10-12T02:27:26.497610+00:00; finished
+    2026-10-12T02:27:26.569213+00:00.  Full-corpus validation is not expanded scientific
+    coverage.
+- check_id: C9
+  name: Post-correction native gate
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.22a80cbd14
+  command: just validate data/habitats/aquatic/groundwater.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - CURRENT
+  summary: Actual successful result; started 2026-10-12T02:25:05.374984+00:00; finished
+    2026-10-12T02:25:08.452135+00:00.  Full-corpus validation is not expanded scientific
+    coverage.
+- check_id: C10
+  name: Post-correction native gate
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.22a80cbd14
+  command: gh pr checks codex/record-reviews-20261012b --watch --interval 30
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - CURRENT
+  summary: Actual successful result; started 2026-10-12T02:33:49.365566+00:00; finished
+    2026-10-12T02:48:27.824611+00:00. Authoritative full QC passed 886 tests with
+    3 skipped on exact head 1b326c1f514006ba65d61406f917356f542831a4; all required
+    workflows succeeded. https://github.com/CultureBotAI/HabitatMech/actions/runs/38196271583
+    Full-corpus validation is not expanded scientific coverage.
+evidence:
+- evidence_id: PRIOR
+  kind: prior_review
+  reference: reviews/structured/20261012T015245Z-groundwater/review.yaml
+  accessed_at: '2026-10-12T02:50:39.050445Z'
+  support: supports
+  summary: Inspected predecessor full-record assessment, primary sources and bounded
+    source-access limitations, retained for unchanged claims.
+- evidence_id: CURRENT
+  kind: record_content
+  reference: data/habitats/aquatic/groundwater.yaml; curation/gold_parent_exclusions.tsv;
+    curation/decisions.tsv; tests/test_fourth_aquatic_review_fixes.py
+  accessed_at: '2026-10-12T02:53:25.187483Z'
+  support: supports
+  summary: 'Excluded only the immediate GOLD context-parent contribution habitatmech:GOLD.21222434e2
+    for habitatmech:GOLD.22a80cbd14. Current strict parents: ENVO:01001004. Full-document
+    differential assessment preserves identifiers, labels, source counts/units or
+    omissions, native status, parameters and taxa. Cross-corpus regression confines
+    changes to 25 records. This bounded follow-up does not resolve original membership,
+    shared endpoint contracts, typed synonyms or unrelated upstream ontology axioms.
+    Publication-base reinspection after the verified map/site commit: every captured
+    scientific input path, role and SHA256 is identical to the earlier corrective-assessment
+    capture. The complete target and corrected strict parents were re-read; neither
+    source hashes nor scientific judgments were silently substituted.'
+assessments:
+- assessment_id: CORRECTION
+  area: scope
+  topic: Corrected hierarchy or process typing and unchanged claims
+  outcome: concern
+  target_ids:
+  - habitatmech:GOLD.22a80cbd14
+  evidence_ids:
+  - PRIOR
+  - CURRENT
+  summary: 'Excluded only the immediate GOLD context-parent contribution habitatmech:GOLD.21222434e2
+    for habitatmech:GOLD.22a80cbd14. Current strict parents: ENVO:01001004. Full-document
+    differential assessment preserves identifiers, labels, source counts/units or
+    omissions, native status, parameters and taxa. Cross-corpus regression confines
+    changes to 25 records. This bounded follow-up does not resolve original membership,
+    shared endpoint contracts, typed synonyms or unrelated upstream ontology axioms.
+    Publication-base reinspection after the verified map/site commit: every captured
+    scientific input path, role and SHA256 is identical to the earlier corrective-assessment
+    capture. The complete target and corrected strict parents were re-read; neither
+    source hashes nor scientific judgments were silently substituted.'
+findings:
+- finding_id: F1
+  issue_key: habitatmech-gold.22a80cbd14-context-parent
+  category: scope
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: A source setting or material is emitted as a strict superclass
+  description: 'The Deep subsurface > Groundwater variant is a water material constrained
+    by depth/location. Groundwater is a supported genus; the deep-subsurface region
+    mint is context, not a water superclass. Later Rifle and Horonobe samples support
+    the water-versus-region distinction without equating all sampling depths. Unsupported
+    GOLD contributions: habitatmech:GOLD.21222434e2.'
+  target_ids:
+  - habitatmech:GOLD.22a80cbd14
+  field_paths:
+  - parent_habitats
+  evidence_ids:
+  - PRIOR
+  - CURRENT
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Exact source-path and expected-parent guards
+  rule_id: docs/CURATION.md; .claude/skills/curate-yaml-record/references/review-checklist.md
+  native_severity: major
+  normalization_reason: Material hierarchy, identity, scope or comparison-contract
+    concern.
+  previous_occurrences:
+  - repository: CultureBotAI/HabitatMech
+    review_id: 20261012T015245Z-groundwater
+    finding_id: F1
+  disposition_reason: 'Excluded only the immediate GOLD context-parent contribution
+    habitatmech:GOLD.21222434e2 for habitatmech:GOLD.22a80cbd14. Current strict parents:
+    ENVO:01001004. Full-document differential assessment preserves identifiers, labels,
+    source counts/units or omissions, native status, parameters and taxa. Cross-corpus
+    regression confines changes to 25 records. This bounded follow-up does not resolve
+    original membership, shared endpoint contracts, typed synonyms or unrelated upstream
+    ontology axioms. Publication-base reinspection after the verified map/site commit:
+    every captured scientific input path, role and SHA256 is identical to the earlier
+    corrective-assessment capture. The complete target and corrected strict parents
+    were re-read; neither source hashes nor scientific judgments were silently substituted.'
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1994
+- finding_id: F2
+  issue_key: habitatmech-gold.22a80cbd14-mapping-endpoint
+  category: scope
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Narrow comparison uses an undeclared ontology endpoint
+  description: The resolver retains the path mint, adds a broader ontology class and
+    emits narrowMatch; the attestation contract instead describes comparison to the
+    generated record. The Deep subsurface > Groundwater variant is a water material
+    constrained by depth/location. Groundwater is a supported genus; the deep-subsurface
+    region mint is context, not a water superclass. Later Rifle and Horonobe samples
+    support the water-versus-region distinction without equating all sampling depths.
+  target_ids:
+  - habitatmech:GOLD.22a80cbd14
+  field_paths:
+  - source_attestations
+  - grounding_status
+  evidence_ids:
+  - PRIOR
+  - CURRENT
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Explicit mapping endpoints
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/schema/habitatmech.yaml
+    role: Attestation comparison contract
+  rule_id: docs/CURATION.md; .claude/skills/curate-yaml-record/references/review-checklist.md
+  native_severity: major
+  normalization_reason: Material hierarchy, identity, scope or comparison-contract
+    concern.
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1398
+  previous_occurrences:
+  - repository: CultureBotAI/HabitatMech
+    review_id: 20261012T015245Z-groundwater
+    finding_id: F2
+actions:
+- action_id: A2
+  description: Resolve shared1398 with explicit subject/predicate/object contracts,
+    resolver and consumer regressions, and downstream SSSOM/KGX audit. Preserve separate
+    identities; reversing a predicate cannot supply its missing endpoint.
+  finding_ids:
+  - F2
+  target_ids:
+  - habitatmech:GOLD.22a80cbd14
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Explicit mapping endpoints
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/schema/habitatmech.yaml
+    role: Attestation comparison contract
+  generator: src/habitatmech/seed.py
+  acceptance_checks:
+  - Change only maintained inputs after source-level assessment; preserve independent
+    true parents, identities, source counts/units and lifecycle.
+  - Append required history, add focused regressions, inspect a seed canary and regenerate
+    affected products without hand-editing records or pages.
+  - Pass schema, strict, product-label, corpus reproduction, causal/history, review-integrity
+    and full QC; save a linked successor for every finding disposition.
+limitations:
+- The predecessor primary-source access and original-membership limits remain; later
+  GOLD examples do not replace frozen source counts.
+- Optional replacement definitions or more specific genera were not invented. Context-parent
+  removal is not proof of an exact habitat identity.
+- Label correspondence retains 2057 SKIPPED_NO_ADAPTER targets and accepted exceptions;
+  this is not SSSOM/KGX conformance certification.
+- Full QC covers the captured scientific inputs before these new successor files;
+  final review-integrity and PR checks still apply.
+related_reviews:
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261012T015245Z-groundwater
+  relationship: Resolves only named corrected findings and carries every other finding
+    forward
+tags:
+- habitatmech
+- record-review
+- followup
+```
