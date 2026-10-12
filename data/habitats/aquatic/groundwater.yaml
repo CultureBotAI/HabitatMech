@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:01001004
-- habitatmech:GOLD.21222434e2
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5953
@@ -20,3 +19,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution habitatmech:GOLD.21222434e2
+    for habitatmech:GOLD.22a80cbd14 (Environmental > Aquatic > Deep subsurface > Groundwater).
+    Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1994
+    (20261012T015245Z-groundwater F1). The Deep subsurface > Groundwater variant is
+    a water material constrained by depth/location. Groundwater is a supported genus;
+    the deep-subsurface region mint is context, not a water superclass. Later Rifle
+    and Horonobe samples support the water-versus-region distinction without equating
+    all sampling depths. Exclude only the immediate GOLD contribution named here.
+    Preserve source identity, node/path provenance, counts/units, native status and
+    independent parents; separate decision and graph changes are recorded in their
+    own owners.

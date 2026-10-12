@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00000045
-- habitatmech:GOLD.115edc36f8
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4015
@@ -19,3 +18,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution habitatmech:GOLD.115edc36f8
+    for habitatmech:GOLD.bd318592b2 (Environmental > Aquatic > Marine > Intertidal
+    zone > Estuary). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1994
+    (20261012T015126Z-estuary__bae88a25 F1). The Intertidal zone > Estuary source
+    remains distinct from both generic estuary and the freshwater-lake variant. An
+    estuary genus is reasonable, but an estuary is not wholly an intertidal zone.
+    Later exact members include Columbia River water and estuarine mud; sample material
+    does not change the source bin into a sediment identity. Exclude only the immediate
+    GOLD contribution named here. Preserve source identity, node/path provenance,
+    counts/units, native status and independent parents; separate decision and graph
+    changes are recorded in their own owners.

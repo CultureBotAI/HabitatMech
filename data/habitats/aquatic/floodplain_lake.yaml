@@ -3,8 +3,6 @@ label: Floodplain lake
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:00002011
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6980
@@ -24,3 +22,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00002011 for habitatmech:GOLD.93f4cea4a4
+    (Environmental > Aquatic > Freshwater > Floodplain lake). Bounded hierarchy correction
+    https://github.com/CultureBotAI/HabitatMech/issues/1994 (20261012T015151Z-floodplain_lake
+    F1). This class-level ungrounded GOLD source names a lake in a floodplain. Later
+    exact BioSamples explicitly describe Amazon floodplain-lake water. The lake as
+    a bounded body is not the liquid water material, so Freshwater supplies context
+    rather than a valid strict superclass. Optional missing definition is not by itself
+    a defect. Exclude only the immediate GOLD contribution named here. Preserve source
+    identity, node/path provenance, counts/units, native status and independent parents;
+    separate decision and graph changes are recorded in their own owners.

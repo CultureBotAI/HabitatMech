@@ -8,7 +8,6 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: GOLD
 parent_habitats:
-- ENVO:00002011
 - ENVO:01000277
 - ENVO:02000140
 source_attestations:
@@ -31,3 +30,17 @@ curation_history:
   changes: 'Retained GOLD label ''Ice'' as RELATED_SYNONYM, not exact: its canonical
     ontology identity ENVO:01001125 is a strict ancestor of ENVO:01001511. Source
     attestation remains verbatim (#1459).'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00002011 for habitatmech:GOLD.c18afe6ef1
+    (Environmental > Aquatic > Freshwater > Ice). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1994
+    (20261012T015209Z-freshwater_ice F1). Freshwater ice is a solid environmental
+    material; its water-ice genus is supported and the official ontology models derivation/composition
+    using a restriction, not a fresh-liquid-water superclass. The GOLD Freshwater
+    parent confuses phases. An additional fluid-environmental-material axiom is inherited
+    from official ENVO and warrants upstream scope review rather than suppression
+    through a GOLD-only guard. Exclude only the immediate GOLD contribution named
+    here. Preserve source identity, node/path provenance, counts/units, native status
+    and independent parents; separate decision and graph changes are recorded in their
+    own owners.

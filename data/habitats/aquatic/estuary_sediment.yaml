@@ -4,8 +4,7 @@ habitat_category: AQUATIC
 grounding_status: NARROW
 mapping_status: REVIEWED
 parent_habitats:
-- ENVO:00000045
-- habitatmech:GOLD.115edc36f8
+- ENVO:00002007
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7872
@@ -15,14 +14,34 @@ source_attestations:
   assertion_count: 36
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: GROUND_AS_PARENT
-  changes: 'ENVO:00000045 ''estuary'' attached as a parent, not adopted as the identity
-    (NARROW). Estuarine sediment is a kind of thing found in an estuary, not the estuary.
-    Path: Environmental > Aquatic > Marine > Intertidal zone > Estuary: Sediment (source
-    concept habitatmech:GOLD.4849010f40)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: GROUND_AS_PARENT
+  changes: 'ENVO:00002007 ''sediment'' attached as a parent, not adopted as the identity
+    (NARROW). ITEM correction https://github.com/CultureBotAI/HabitatMech/issues/1994
+    (20261012T015131Z-estuary_sediment F2). The GOLD source denotes sediment in an
+    estuary, not the estuary itself. ENVO:00002007 ''sediment'' supplies the broader
+    deposited-material genus. Retain the source mint, 36 ORGANISM assertions and estuary
+    context in the verbatim source path; do not assert exact equivalence to a more
+    specific estuarine-sediment term from a lexical near-match. The independent intertidal
+    context contribution is separately excluded. Mapping endpoints remain #1398. Path:
+    Environmental > Aquatic > Marine > Intertidal zone > Estuary: Sediment (source
+    concept habitatmech:GOLD.4849010f40)'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.115edc36f8
+    for habitatmech:GOLD.4849010f40 (Environmental > Aquatic > Marine > Intertidal
+    zone > Estuary: Sediment). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1994
+    (20261012T015131Z-estuary_sediment F1). Estuary sediment is material, not an estuary
+    or an intertidal zone. The explicit GROUND_AS_PARENT row supplies the estuary
+    genus while the GOLD path supplies intertidal context, so correcting only the
+    latter is insufficient. Later Columbia River sediment and Ilyobacter records support
+    the material interpretation without proving equivalence of every frozen source
+    assertion. Exclude only the immediate GOLD contribution named here. Preserve source
+    identity, node/path provenance, counts/units, native status and independent parents;
+    separate decision and graph changes are recorded in their own owners.'

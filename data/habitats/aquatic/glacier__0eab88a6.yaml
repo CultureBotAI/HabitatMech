@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00000133
-- ENVO:00002011
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7295
@@ -20,3 +19,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00002011 for habitatmech:GOLD.6faa98a0aa
+    (Environmental > Aquatic > Freshwater > Glacier). Bounded hierarchy correction
+    https://github.com/CultureBotAI/HabitatMech/issues/1994 (20261012T015224Z-glacier__0eab88a6
+    F1). The Freshwater > Glacier source denotes a qualified moving ice mass and keeps
+    ENVO glacier as a genus. It is not liquid fresh water. The later glacier isolate
+    supports a glacier setting without identifying a universally characteristic organism
+    or proving exact equivalence with the separate Ice > Glacier source. Exclude only
+    the immediate GOLD contribution named here. Preserve source identity, node/path
+    provenance, counts/units, native status and independent parents; separate decision
+    and graph changes are recorded in their own owners.

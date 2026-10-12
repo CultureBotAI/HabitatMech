@@ -58,7 +58,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="../habitats/lake-envo-00000020.html">lake</a>      <code class="curie">ENVO:00000020</code></li>
-  <li><a href="../habitats/fresh-water-envo-00002011.html">fresh water</a>      <code class="curie">ENVO:00002011</code></li>
   <li><a href="http://purl.obolibrary.org/obo/ENVO_01001320">fresh water body</a>      <code class="curie">ENVO:01001320</code></li>
 </ul>
 
@@ -105,6 +104,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">SOURCE_SYNONYM_SCOPED</span>
     <span class="meta">2026-10-07 · seed_from_sources</span>
     <p>Retained GOLD label &#39;Lake&#39; as RELATED_SYNONYM, not exact: its canonical ontology identity ENVO:00000020 is a strict ancestor of ENVO:00000021. Source attestation remains verbatim (#1459).</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-12 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution ENVO:00002011 for habitatmech:GOLD.d14ddff103 (Environmental &gt; Aquatic &gt; Freshwater &gt; Lake). Bounded hierarchy correction <a href="https://github.com/CultureBotAI/HabitatMech/issues/1994" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/1994</a> (20261012T015212Z-freshwater_lake F1). The lake and freshwater-water-body genera agree with a lake containing low-salt water. Liquid fresh water is its material, not a superclass of the lake. Later exact members include Lake Magadi and bloom-material samples, illustrating source membership noise without invalidating the canonical ENVO lake identity or licensing bulk relabeling. Exclude only the immediate GOLD contribution named here. Preserve source identity, node/path provenance, counts/units, native status and independent parents; separate decision and graph changes are recorded in their own owners.</p>
   </li>
 </ol>
 

@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: estuary_microbial_mat
+session:
+  id: 2026-10-12T022414Z-codex-gpt-5-fc1f79
+  timestamp: '2026-10-12T02:24:14Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1994
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - grounding
+  summary: Correct reviewed hierarchy or mechanism for estuary_microbial_mat
+  details: 'ITEM correction https://github.com/CultureBotAI/HabitatMech/issues/1994 (20261012T015129Z-estuary_microbial_mat
+    F2). The GOLD source denotes a microbial mat in an estuary, not the estuary itself. ENVO:01000008
+    ''microbial mat'' supplies the broader mat genus, consistent with the exact-path Rhodovulum
+    isolation descriptions inspected in the review. Retain the source mint, 12 ORGANISM assertions
+    and estuary context in the verbatim source path; do not merge the qualified mat with every
+    microbial mat. The independent intertidal context contribution is separately excluded.
+    Mapping endpoints remain #1398. Path: Environmental > Aquatic > Marine > Intertidal zone
+    > Estuary: Microbial mat User authorized publication and remediation. Dry seed, sediment
+    canary inspection and full seeding passed. Post-fix regression, labels, map/site and full
+    QC are pending at event creation; actual outcomes will be recorded in PR #1993. No scientific
+    status promotion is claimed.'

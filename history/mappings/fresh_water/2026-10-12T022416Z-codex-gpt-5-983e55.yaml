@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/causal_graphs/fresh_water.yaml
+  slug: fresh_water
+session:
+  id: 2026-10-12T022416Z-codex-gpt-5-983e55
+  timestamp: '2026-10-12T02:24:16Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1995
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Correct reviewed hierarchy or mechanism for fresh_water
+  details: 'Correct water_influx STATE to BIOLOGICAL_PROCESS, keep turgor STATE, bound graph
+    to downshock from higher-osmolarity medium and distinguish direct lipid-bilayer channel
+    gating from cell-wall strain. Inspected Wood DOI:10.1085/jgp.201411296 osmosensing section
+    and Wennerstrom/Oliveberg DOI:10.1017/qrd.2022.3 downshock discussion. All six node and
+    five edge IDs and original edge evidence remain. The generated source-history projection
+    for the two replaced decisions is regenerated, not append-only; prior inputs remain in
+    Git and immutable review bundles. User authorized publication and remediation. Dry seed,
+    sediment canary inspection and full seeding passed. Post-fix regression, labels, map/site
+    and full QC are pending at event creation; actual outcomes will be recorded in PR #1993.
+    No scientific status promotion is claimed.'
