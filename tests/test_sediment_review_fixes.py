@@ -4,7 +4,6 @@ from dataclasses import replace
 
 from habitatmech import seed
 
-
 SODA = "habitatmech:GOLD.faaf9502b6"
 WETLAND = "habitatmech:GOLD.98d936714f"
 
