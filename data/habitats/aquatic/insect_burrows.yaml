@@ -3,8 +3,6 @@ label: Insect burrows
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.e4e91038b5
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8392
@@ -23,3 +21,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution habitatmech:GOLD.e4e91038b5
+    for habitatmech:GOLD.40bfbe291f (Environmental > Aquatic > Freshwater > Sediment
+    > Insect burrows). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1250
+    (20261012T035125Z-insect_burrows F1). GOLD.40bfbe291f retains a freshwater-sediment-qualified
+    insect-burrow source. Burrow space or construction is not sediment material. Later
+    beaver-pond sediment sample descriptions leave the exact burrow-versus-associated-material
+    intent uncertain; do not automatically substitute an annelid-specific burrow ontology
+    class. Exclude only the immediate GOLD contribution named here. Preserve source
+    identity, node/path provenance, counts/units, native status and independent parents;
+    separate decision and graph changes are recorded in their own owners.

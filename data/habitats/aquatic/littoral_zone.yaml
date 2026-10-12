@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:01000407
-- ENVO:01000617
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4178
@@ -19,3 +18,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:01000617 for habitatmech:GOLD.00de24c347
+    (Environmental > Aquatic > Freshwater > Lentic > Littoral zone). Bounded hierarchy
+    correction https://github.com/CultureBotAI/HabitatMech/issues/1260 (20261012T035127Z-littoral_zone
+    F1). GOLD.00de24c347 preserves the freshwater-lentic shore-zone identity and five
+    ORGANISM assertions. Generic littoral zone is a supported broader class; the whole
+    lentic water body is not. Later Lake Waban and littoral-sediment examples do not
+    establish equivalence to the Lake-path sibling. Exclude only the immediate GOLD
+    contribution named here. Preserve source identity, node/path provenance, counts/units,
+    native status and independent parents; separate decision and graph changes are
+    recorded in their own owners.

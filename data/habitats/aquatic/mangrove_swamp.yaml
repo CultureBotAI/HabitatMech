@@ -39,7 +39,6 @@ synonyms:
   source: ENVO
 parent_habitats:
 - ENVO:00000230
-- habitatmech:GOLD.115edc36f8
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4018
@@ -86,3 +85,17 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution habitatmech:GOLD.115edc36f8
+    for habitatmech:GOLD.79cfdb171a (Environmental > Aquatic > Marine > Intertidal
+    zone > Mangrove swamp). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1270
+    (20261012T035128Z-mangrove_swamp F1). ENVO:00000057 denotes a coastal swamp ecosystem
+    with a supported swamp genus. NOAA describes mangal zones rarely flooded by tides,
+    contradicting a universal strict-intertidal superclass from one GOLD contributor.
+    Preserve PREGO and three ORGANISM assertions separately; mangal is a genuine exact
+    ontology name, unlike broader woodland. Exclude only the immediate GOLD contribution
+    named here. Preserve source identity, node/path provenance, counts/units, native
+    status and independent parents; separate decision and graph changes are recorded
+    in their own owners.

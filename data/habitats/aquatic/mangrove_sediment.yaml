@@ -3,8 +3,6 @@ label: Mangrove sediment
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.115edc36f8
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5364
@@ -25,3 +23,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution habitatmech:GOLD.115edc36f8
+    for habitatmech:GOLD.376c23f892 (Environmental > Aquatic > Marine > Intertidal
+    zone > Mangrove sediment). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1269
+    (20261012T035128Z-mangrove_sediment F1). GOLD.376c23f892 denotes sediment from
+    the mangrove setting, not an intertidal geographic zone. Preserve 114 ORGANISM
+    assertions separately from later source members. Sediment descriptions and soil-word
+    overlap do not authorize merging mangrove soil, area, swamp and sediment. Exclude
+    only the immediate GOLD contribution named here. Preserve source identity, node/path
+    provenance, counts/units, native status and independent parents; separate decision
+    and graph changes are recorded in their own owners.

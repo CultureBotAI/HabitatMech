@@ -3,8 +3,6 @@ label: Lake biofilm
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:00000021
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7787
@@ -23,3 +21,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00000021 for habitatmech:GOLD.d3da9a2ed0
+    (Environmental > Aquatic > Freshwater > Lake > Lake biofilm). Bounded hierarchy
+    correction https://github.com/CultureBotAI/HabitatMech/issues/1259 (20261012T035126Z-lake_biofilm
+    F1). GOLD.d3da9a2ed0 denotes a lake-associated biofilm, not the whole freshwater
+    lake. Later Lake Erie buoy-surface samples support attached-community context
+    without establishing a universal natural substrate or an exact ontology match.
+    Do not replace omitted organism counts with biosample counts. Exclude only the
+    immediate GOLD contribution named here. Preserve source identity, node/path provenance,
+    counts/units, native status and independent parents; separate decision and graph
+    changes are recorded in their own owners.

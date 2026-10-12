@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: lotic_water_body
+session:
+  id: 2026-10-12T040027Z-codex-gpt-5-868aef
+  timestamp: '2026-10-12T04:00:27Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1268
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed hierarchy or mechanism for lotic_water_body
+  details: 'Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1268
+    (20261012T035127Z-lotic_water_body F1). The freshwater-qualified GOLD Lotic source is
+    ITEM-exact-grounded to generic flowing-water-body ENVO:01000618. Fresh water is material,
+    not the genus of a whole water body. Preserve the water-body parent and generic children
+    independently if source identity is later narrowed; do not redirect all lotic ontology
+    consumers to the source mint. Exclude only the immediate GOLD contribution named here.
+    Preserve source identity, node/path provenance, counts/units, native status and independent
+    parents; separate decision and graph changes are recorded in their own owners. User authorized
+    remediation and publication. Dry seed and two canaries passed; full regeneration, post-fix
+    checks, map/site and full QC remain pending at event creation. Actual results will be
+    reported in PR #1999. No scientific status promotion.'

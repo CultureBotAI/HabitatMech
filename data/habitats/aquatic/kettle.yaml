@@ -21,7 +21,6 @@ synonyms:
   source: ENVO
 parent_habitats:
 - ENVO:00000309
-- ENVO:00002011
 - ENVO:01001884
 source_attestations:
 - source: GOLD
@@ -48,3 +47,16 @@ curation_history:
   changes: 'Retained GOLD label ''Kettle hole'' as RELATED_SYNONYM: a CLOSE source
     mapping does not establish exact lexical equivalence. Independent ontology synonyms
     and verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00002011 for habitatmech:GOLD.3486e75e52
+    (Environmental > Aquatic > Freshwater > Kettle hole). Bounded hierarchy correction
+    https://github.com/CultureBotAI/HabitatMech/issues/1255 (20261012T035126Z-kettle
+    F1). The CLOSE-mapped kettle hole denotes a glacial-outwash depression, with supported
+    fluvioglacial and concave-landform parents. Fresh water may fill it but is not
+    a landform genus. Later kettle-hole water samples do not turn every kettle into
+    a lake; official basin is a broad synonym, not exact. Exclude only the immediate
+    GOLD contribution named here. Preserve source identity, node/path provenance,
+    counts/units, native status and independent parents; separate decision and graph
+    changes are recorded in their own owners.

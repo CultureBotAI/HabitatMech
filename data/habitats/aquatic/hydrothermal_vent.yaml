@@ -24,7 +24,6 @@ synonyms:
   source: PREGO
 parent_habitats:
 - ENVO:00000027
-- ENVO:00001999
 source_attestations:
 - source: ENVIRONMENTS_TABLE
   source_id: water_marine_hydrothermal
@@ -589,3 +588,16 @@ curation_history:
     cited evidence scope; addresses #1239. Identity, parents, parameters, taxa, and
     mapping status unchanged.'
   llm_assisted: true
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00001999 for habitatmech:GOLD.77ae835059
+    (Environmental > Aquatic > Marine > Hydrothermal vents). Bounded hierarchy correction
+    https://github.com/CultureBotAI/HabitatMech/issues/1235 (20261012T035123Z-hydrothermal_vent
+    F1). ENVO:00000215 denotes a geothermal fissure and retains the true spring genus,
+    not a whole marine water body. Four source contributors preserve different counts
+    and qualitative bands. The corrected 16-edge overlay is expressly a conditional
+    deep-sea marine model; hydrogen oxidation does not universally imply autotrophy.
+    Exclude only the immediate GOLD contribution named here. Preserve source identity,
+    node/path provenance, counts/units, native status and independent parents; separate
+    decision and graph changes are recorded in their own owners.

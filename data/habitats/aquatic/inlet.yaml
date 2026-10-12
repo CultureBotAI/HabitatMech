@@ -50,7 +50,6 @@ synonyms:
   source: ENVO
 parent_habitats:
 - ENVO:00000012
-- ENVO:00001999
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4573
@@ -242,3 +241,15 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00001999 for habitatmech:GOLD.c590c36168
+    (Environmental > Aquatic > Marine > Inlet). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1248
+    (20261012T035125Z-inlet F1). ENVO:00000475 includes openings of either seas or
+    lakes and legitimately parents lake inlet. GOLD Marine > Inlet is narrower than
+    this generic class; marine context cannot become its universal superclass. All
+    25 displayed PREGO IDs resolve; 27 is the source candidate pool, not the number
+    displayed. Exclude only the immediate GOLD contribution named here. Preserve source
+    identity, node/path provenance, counts/units, native status and independent parents;
+    separate decision and graph changes are recorded in their own owners.

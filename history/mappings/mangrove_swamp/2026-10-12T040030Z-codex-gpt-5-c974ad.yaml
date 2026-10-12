@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: mangrove_swamp
+session:
+  id: 2026-10-12T040030Z-codex-gpt-5-c974ad
+  timestamp: '2026-10-12T04:00:30Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1270
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed hierarchy or mechanism for mangrove_swamp
+  details: 'Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1270
+    (20261012T035128Z-mangrove_swamp F1). ENVO:00000057 denotes a coastal swamp ecosystem
+    with a supported swamp genus. NOAA describes mangal zones rarely flooded by tides, contradicting
+    a universal strict-intertidal superclass from one GOLD contributor. Preserve PREGO and
+    three ORGANISM assertions separately; mangal is a genuine exact ontology name, unlike
+    broader woodland. Exclude only the immediate GOLD contribution named here. Preserve source
+    identity, node/path provenance, counts/units, native status and independent parents; separate
+    decision and graph changes are recorded in their own owners. User authorized remediation
+    and publication. Dry seed and two canaries passed; full regeneration, post-fix checks,
+    map/site and full QC remain pending at event creation. Actual results will be reported
+    in PR #1999. No scientific status promotion.'

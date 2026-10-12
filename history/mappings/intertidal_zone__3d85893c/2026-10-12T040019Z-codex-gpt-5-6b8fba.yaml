@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: intertidal_zone__3d85893c
+session:
+  id: 2026-10-12T040019Z-codex-gpt-5-6b8fba
+  timestamp: '2026-10-12T04:00:19Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1254
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed hierarchy or mechanism for intertidal_zone__3d85893c
+  details: 'Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1254
+    (20261012T035125Z-intertidal_zone__3d85893c F1). GOLD.54055df52f denotes the intertidal
+    component within a wider marine littoral setting. Official marine-littoral OWL uses a
+    has-part relation to intertidal zone; that containment is not a strict superclass relation.
+    Preserve the true intertidal genus and separate source provenance. Exclude only the immediate
+    GOLD contribution named here. Preserve source identity, node/path provenance, counts/units,
+    native status and independent parents; separate decision and graph changes are recorded
+    in their own owners. User authorized remediation and publication. Dry seed and two canaries
+    passed; full regeneration, post-fix checks, map/site and full QC remain pending at event
+    creation. Actual results will be reported in PR #1999. No scientific status promotion.'

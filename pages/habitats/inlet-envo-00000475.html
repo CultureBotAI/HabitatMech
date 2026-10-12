@@ -58,7 +58,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="../habitats/hydrographic-feature-envo-00000012.html">hydrographic feature</a>      <code class="curie">ENVO:00000012</code></li>
-  <li><a href="../habitats/marine-water-body-envo-00001999.html">marine water body</a>      <code class="curie">ENVO:00001999</code></li>
 </ul>
 
 
@@ -267,6 +266,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">REVIEW</span>
     <span class="meta">2026-08-13 · claude-opus-5</span>
     <p>Reviewed and endorsed the seeder&#39;s own resolution. Multi-source review pass: this record is attested by more than one independent vocabulary, and this source&#39;s label or path was read against the record&#39;s ontology term to check the merge is right. It agrees. Source concepts in the same pass whose labels did not agree were re-decided rather than endorsed; see the pass&#39;s other decisions of the same date. (source concept habitatmech:PREGO.13f0e58873)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-12 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution ENVO:00001999 for habitatmech:GOLD.c590c36168 (Environmental &gt; Aquatic &gt; Marine &gt; Inlet). Bounded hierarchy correction <a href="https://github.com/CultureBotAI/HabitatMech/issues/1248" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/1248</a> (20261012T035125Z-inlet F1). ENVO:00000475 includes openings of either seas or lakes and legitimately parents lake inlet. GOLD Marine &gt; Inlet is narrower than this generic class; marine context cannot become its universal superclass. All 25 displayed PREGO IDs resolve; 27 is the source candidate pool, not the number displayed. Exclude only the immediate GOLD contribution named here. Preserve source identity, node/path provenance, counts/units, native status and independent parents; separate decision and graph changes are recorded in their own owners.</p>
   </li>
 </ol>
 

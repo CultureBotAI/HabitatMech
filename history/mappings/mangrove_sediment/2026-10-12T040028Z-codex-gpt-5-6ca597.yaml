@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: mangrove_sediment
+session:
+  id: 2026-10-12T040028Z-codex-gpt-5-6ca597
+  timestamp: '2026-10-12T04:00:28Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1269
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed hierarchy or mechanism for mangrove_sediment
+  details: 'Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1269
+    (20261012T035128Z-mangrove_sediment F1). GOLD.376c23f892 denotes sediment from the mangrove
+    setting, not an intertidal geographic zone. Preserve 114 ORGANISM assertions separately
+    from later source members. Sediment descriptions and soil-word overlap do not authorize
+    merging mangrove soil, area, swamp and sediment. Exclude only the immediate GOLD contribution
+    named here. Preserve source identity, node/path provenance, counts/units, native status
+    and independent parents; separate decision and graph changes are recorded in their own
+    owners. User authorized remediation and publication. Dry seed and two canaries passed;
+    full regeneration, post-fix checks, map/site and full QC remain pending at event creation.
+    Actual results will be reported in PR #1999. No scientific status promotion.'

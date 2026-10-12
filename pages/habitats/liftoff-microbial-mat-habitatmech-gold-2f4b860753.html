@@ -50,10 +50,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 </table>
 </div>
 
-<h2>Broader habitats</h2>
-<ul class="plain">
-  <li><a href="../habitats/freshwater-ice-envo-01001511.html">freshwater ice</a>      <code class="curie">ENVO:01001511</code></li>
-</ul>
 
 
 
@@ -68,6 +64,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="meta">2026-08-12 · claude-opus-5 ·
     class-level sweep, not an individual judgement</span>
     <p>Confirmed UNGROUNDED: no ontology term fits this concept. Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the vendored slice matched this label by any search route. Whether the concept is a habitat at all was NOT assessed, so this is not yet a term-request candidate. (source concept habitatmech:GOLD.2f4b860753)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-12 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution ENVO:01001511 for habitatmech:GOLD.2f4b860753 (Environmental &gt; Aquatic &gt; Freshwater &gt; Ice &gt; Liftoff microbial mat). Bounded hierarchy correction <a href="https://github.com/CultureBotAI/HabitatMech/issues/1223" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/1223</a> (20261012T035127Z-liftoff_microbial_mat F1). GOLD.2f4b860753 denotes a liftoff microbial mat associated with freshwater ice, not ice material itself. Later Lake Fryxell ice-surface mat samples support the distinction. Keep the source identity and omitted direct-count semantics while excluding only the false ice genus. Exclude only the immediate GOLD contribution named here. Preserve source identity, node/path provenance, counts/units, native status and independent parents; separate decision and graph changes are recorded in their own owners.</p>
   </li>
 </ol>
 

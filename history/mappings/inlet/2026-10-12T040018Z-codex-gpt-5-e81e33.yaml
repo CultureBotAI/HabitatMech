@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: inlet
+session:
+  id: 2026-10-12T040018Z-codex-gpt-5-e81e33
+  timestamp: '2026-10-12T04:00:18Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1248
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed hierarchy or mechanism for inlet
+  details: 'Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1248
+    (20261012T035125Z-inlet F1). ENVO:00000475 includes openings of either seas or lakes and
+    legitimately parents lake inlet. GOLD Marine > Inlet is narrower than this generic class;
+    marine context cannot become its universal superclass. All 25 displayed PREGO IDs resolve;
+    27 is the source candidate pool, not the number displayed. Exclude only the immediate
+    GOLD contribution named here. Preserve source identity, node/path provenance, counts/units,
+    native status and independent parents; separate decision and graph changes are recorded
+    in their own owners. User authorized remediation and publication. Dry seed and two canaries
+    passed; full regeneration, post-fix checks, map/site and full QC remain pending at event
+    creation. Actual results will be reported in PR #1999. No scientific status promotion.'

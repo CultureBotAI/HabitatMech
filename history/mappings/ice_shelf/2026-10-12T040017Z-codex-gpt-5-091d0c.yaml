@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: ice_shelf
+session:
+  id: 2026-10-12T040017Z-codex-gpt-5-091d0c
+  timestamp: '2026-10-12T04:00:17Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1247
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed hierarchy or mechanism for ice_shelf
+  details: 'Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1247
+    (20261012T035125Z-ice_shelf F1). The ice-shelf identity resolves to ENVO:00000380. Its
+    marine-water-body parent is GOLD context; its anatomical-structure parent is an actual
+    current upstream OWL axiom, not an extractor invention. NSIDC recognizes sea-ice/snowfall
+    and composite shelves, so universal land-origin wording also needs upstream scope review.
+    Exclude only the immediate GOLD contribution named here. Preserve source identity, node/path
+    provenance, counts/units, native status and independent parents; separate decision and
+    graph changes are recorded in their own owners. User authorized remediation and publication.
+    Dry seed and two canaries passed; full regeneration, post-fix checks, map/site and full
+    QC remain pending at event creation. Actual results will be reported in PR #1999. No scientific
+    status promotion.'

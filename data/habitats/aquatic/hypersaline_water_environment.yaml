@@ -12,7 +12,6 @@ synonyms:
   source: GOLD
 parent_habitats:
 - ENVO:01000307
-- habitatmech:GOLD.ce244e62cd
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3754
@@ -40,3 +39,17 @@ curation_history:
   changes: 'Retained GOLD label ''Hypersaline'' as RELATED_SYNONYM: a CLOSE source
     mapping does not establish exact lexical equivalence. Independent ontology synonyms
     and verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution habitatmech:GOLD.ce244e62cd
+    for habitatmech:GOLD.4398c0543d (Environmental > Aquatic > Non-marine Saline and
+    Alkaline > Hypersaline). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1245
+    (20261012T035124Z-hypersaline_water_environment F1). The ITEM CLOSE-mapped Hypersaline
+    bin resolves to the generic ENVO:01001043 environmental system. The source inland
+    qualifier cannot constrain every instance of that ontology class; NOAA also describes
+    hypersaline coastal estuaries. Keep the correct aqueous-environment genus and
+    the already RELATED source synonym. Exclude only the immediate GOLD contribution
+    named here. Preserve source identity, node/path provenance, counts/units, native
+    status and independent parents; separate decision and graph changes are recorded
+    in their own owners.
