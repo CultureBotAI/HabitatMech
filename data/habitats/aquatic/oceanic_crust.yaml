@@ -7,7 +7,6 @@ habitat_category: AQUATIC
 grounding_status: EXACT
 mapping_status: SEEDED
 parent_habitats:
-- ENVO:00000207
 - ENVO:01000639
 source_attestations:
 - source: GOLD
@@ -22,3 +21,18 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00000207 for habitatmech:GOLD.1cc5210121
+    (Environmental > Aquatic > Marine > Oceanic > Oceanic crust). Bounded hierarchy
+    correction https://github.com/CultureBotAI/HabitatMech/issues/1418 (20261012T091839Z-oceanic_crust).
+    Oceanic crust is a planetary structural layer, not the overlying oceanic water
+    mass. The exact lexical identity is defensible; retain planetary structural layer
+    and the separate ontology part-of restriction to planetary crust. Later basalt
+    and aquifer-fluid descriptions are context, not permission to redefine crust as
+    water or to transfer their properties universally. Exclude only this exact GOLD
+    context contribution. Preserve qualified identity, source nodes/path/counts/units
+    and independently justified parents. Original occurrence membership remains unrecovered.
+    Shared mapping endpoints and typed ontology synonyms are separate open work, not
+    SSSOM/KGX certification.

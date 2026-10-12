@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: pond
+session:
+  id: 2026-10-12T093333Z-codex-gpt-5-9392fe
+  timestamp: '2026-10-12T09:33:33Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/pull/2015
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed aquatic habitat scope for pond
+  details: 'Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1427
+    (20261012T091844Z-pond). The merged class denotes a pond waterbody, with a valid lentic-waterbody
+    genus. Fresh water describes contents, not a genus of generic pond; saline evaporation
+    pond is a concrete ontology child showing the class is not freshwater-only. Several ENVO
+    aliases are typed non-exact, and one frozen PREGO taxon ID now resolves through an NCBI
+    merge. Source counts and observational taxa remain distinct. Exclude only this exact GOLD
+    context contribution. Preserve qualified identity, source nodes/path/counts/units and
+    independently justified parents. Original occurrence membership remains unrecovered. Shared
+    mapping endpoints and typed ontology synonyms are separate open work, not SSSOM/KGX certification.
+    User authorized remediation/publication. Dry seeding and 35 focused regressions passed;
+    generated records, real map/site refresh and final gates remain pending at event creation.
+    Nine previously unreviewed decisions become ITEM through individual evidence assessment;
+    no other status promotion. Shared endpoint issue #1398 remains open.'

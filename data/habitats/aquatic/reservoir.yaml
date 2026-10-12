@@ -27,7 +27,6 @@ synonyms:
   source: PREGO
 parent_habitats:
 - ENVO:00000377
-- ENVO:00002011
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:container-reservoir
@@ -252,3 +251,19 @@ curation_history:
   changes: 'Retained BacDive label ''Container-Reservoir'' as RELATED_SYNONYM: a CLOSE
     source mapping does not establish exact lexical equivalence. Independent ontology
     synonyms and verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00002011 for habitatmech:GOLD.0f1a7236ef
+    (Environmental > Aquatic > Freshwater > Reservoir). Bounded hierarchy correction
+    https://github.com/CultureBotAI/HabitatMech/issues/1432 (20261012T091846Z-reservoir).
+    The canonical term is an artificial water-storage lake. GOLD water-reservoir context
+    is compatible, but fresh-water material is not its genus. BacDive Container-Reservoir
+    includes aeration-tank foam and must not be treated as equivalent to an artificial
+    lake. PREGO ISDg and DSM 17291 have forest-soil and oil-well source descriptions;
+    the original tagging trail is unrecovered. Preserve 75 STRAIN, 34 ORGANISM and
+    2 TAXON assertions as separate measures. Exclude only this exact GOLD context
+    contribution. Preserve qualified identity, source nodes/path/counts/units and
+    independently justified parents. Original occurrence membership remains unrecovered.
+    Shared mapping endpoints and typed ontology synonyms are separate open work, not
+    SSSOM/KGX certification.

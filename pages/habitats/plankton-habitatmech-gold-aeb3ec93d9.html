@@ -52,7 +52,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="http://purl.obolibrary.org/obo/ENVO_01000063">planktonic material</a>      <code class="curie">ENVO:01000063</code></li>
-  <li><a href="../habitats/river-plume-envo-03600070.html">river plume</a>      <code class="curie">ENVO:03600070</code></li>
 </ul>
 
 
@@ -65,8 +64,13 @@ from several source concepts can carry one decision per concept.</p>
 <ol class="events">
   <li>
     <span class="pill">GROUND_AS_PARENT</span>
-    <span class="meta">2026-08-31 · claude-opus-5</span>
-    <p>ENVO:01000063 &#39;planktonic material&#39; attached as a parent, not adopted as the identity (NARROW). Definition review (#110, #161): reversed from CONFIRM_UNGROUNDED. Its committed research report shows the recorded premise - &#39;no ontology term fits this concept&#39; - is not supported: ENVO:01000063 &#39;planktonic material&#39;, &#39;a portion of environmental material primarily composed of plankton&#39;, is in the vendored slice and is exactly what a net tow retains. The concept is a MATERIAL composed of organisms, not a place and not a taxon, so adopting it makes no taxonomic claim and does not repeat the taxon-as-place error #114 reversed. GROUND_AS_PARENT rather than GROUND because river-plume plankton is genuinely narrower than generic planktonic material; the setting parent ENVO:03600070 &#39;river plume&#39; is kept and expresses the water body. Cost recorded rather than hidden: GROUND_AS_PARENT carries one object_id, so the mesh:D010933 xref that CONFIRM_UNGROUNDED held is not retained on the record and survives only in data/raw/ - the same trade-off recorded for the cnidarian decision. Reached by reading a report that had already been paid for, not by a new run. (source concept habitatmech:GOLD.aeb3ec93d9)</p>
+    <span class="meta">2026-10-12 · codex-gpt-5</span>
+    <p>ENVO:01000063 &#39;planktonic material&#39; attached as a parent, not adopted as the identity (NARROW). Exact-source ITEM assessment <a href="https://github.com/CultureBotAI/HabitatMech/issues/1425" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/1425</a> (20261012T091844Z-plankton__8f1688f3). The river-plume plankton source is qualified planktonic material, not the river-discharge mixing front itself. Retain the material genus and omit only the false plume contribution. Twenty-two later Amazon-plume biosamples do not replace the omitted original organism count or validate the old never-used inference. Preserve this distinct source rather than merging same-label plankton records. Retain the qualified source mint under the verified broader genus ENVO:01000063 planktonic material; do not exact-merge. Current official ENVO definitions and later exact-path GOLD examples were inspected, without claiming recovery of original membership. Separate guarded source exclusions remove unsupported setting parents. Shared mapping-endpoint issue #1398 remains open. (source concept habitatmech:GOLD.aeb3ec93d9)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-12 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution ENVO:03600070 for habitatmech:GOLD.aeb3ec93d9 (Environmental &gt; Aquatic &gt; Marine &gt; River plume &gt; Plankton). Bounded hierarchy correction <a href="https://github.com/CultureBotAI/HabitatMech/issues/1425" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/1425</a> (20261012T091844Z-plankton__8f1688f3). The river-plume plankton source is qualified planktonic material, not the river-discharge mixing front itself. Retain the material genus and omit only the false plume contribution. Twenty-two later Amazon-plume biosamples do not replace the omitted original organism count or validate the old never-used inference. Preserve this distinct source rather than merging same-label plankton records. Exclude only this exact GOLD context contribution. Preserve qualified identity, source nodes/path/counts/units and independently justified parents. Original occurrence membership remains unrecovered. Shared mapping endpoints and typed ontology synonyms are separate open work, not SSSOM/KGX certification.</p>
   </li>
 </ol>
 

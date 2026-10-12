@@ -51,8 +51,7 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 <h2>Broader habitats</h2>
 <ul class="plain">
-  <li><a href="../habitats/oceanic-zone-envo-00000207.html">oceanic zone</a>      <code class="curie">ENVO:00000207</code></li>
-  <li><a href="../habitats/sea-water-envo-00002149.html">sea water</a>      <code class="curie">ENVO:00002149</code></li>
+  <li><a href="../habitats/sediment-envo-00002007.html">sediment</a>      <code class="curie">ENVO:00002007</code></li>
 </ul>
 
 
@@ -65,8 +64,13 @@ from several source concepts can carry one decision per concept.</p>
 <ol class="events">
   <li>
     <span class="pill">GROUND_AS_PARENT</span>
-    <span class="meta">2026-08-13 · claude-opus-5</span>
-    <p>ENVO:00002149 &#39;sea water&#39; attached as a parent, not adopted as the identity (NARROW). Oil-contaminated open ocean water, not oil contaminated soil. ENVO has the soil term only. Path: Environmental &gt; Aquatic &gt; Marine &gt; Oceanic &gt; Oil-contaminated sediment (source concept habitatmech:GOLD.e6839bcc8f)</p>
+    <span class="meta">2026-10-12 · codex-gpt-5</span>
+    <p>ENVO:00002007 &#39;sediment&#39; attached as a parent, not adopted as the identity (NARROW). Exact-source ITEM assessment <a href="https://github.com/CultureBotAI/HabitatMech/issues/1420" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/1420</a> (20261012T091841Z-oil_contaminated_sediment__3c338598). The source explicitly names oil-contaminated sediment, but its ITEM decision calls it open-ocean water and gives it a seawater genus. Both that genus and the independent oceanic-water-mass parent are unsupported. Later benthal mud, oilfield sediment and beach-sand examples confirm a material boundary without making every example offshore. Compare sediment, marine sediment and petroleum-enriched sediment without exact-merging the qualified source. Retain the qualified source mint under the verified broader genus ENVO:00002007 sediment; do not exact-merge. Current official ENVO definitions and later exact-path GOLD examples were inspected, without claiming recovery of original membership. Separate guarded source exclusions remove unsupported setting parents. Shared mapping-endpoint issue #1398 remains open. Marine sediment requires marine-water-column transport and seafloor deposition; petroleum enriched sediment assumes petroleum enrichment. The generic sediment genus avoids asserting those unverified universal constraints for this source. (source concept habitatmech:GOLD.e6839bcc8f)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-12 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution ENVO:00000207 for habitatmech:GOLD.e6839bcc8f (Environmental &gt; Aquatic &gt; Marine &gt; Oceanic &gt; Oil-contaminated sediment). Bounded hierarchy correction <a href="https://github.com/CultureBotAI/HabitatMech/issues/1421" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/1421</a> (20261012T091841Z-oil_contaminated_sediment__3c338598). The source explicitly names oil-contaminated sediment, but its ITEM decision calls it open-ocean water and gives it a seawater genus. Both that genus and the independent oceanic-water-mass parent are unsupported. Later benthal mud, oilfield sediment and beach-sand examples confirm a material boundary without making every example offshore. Compare sediment, marine sediment and petroleum-enriched sediment without exact-merging the qualified source. Exclude only this exact GOLD context contribution. Preserve qualified identity, source nodes/path/counts/units and independently justified parents. Original occurrence membership remains unrecovered. Shared mapping endpoints and typed ontology synonyms are separate open work, not SSSOM/KGX certification.</p>
   </li>
 </ol>
 

@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: REVIEWED
 parent_habitats:
 - ENVO:00002149
-- habitatmech:GOLD.115edc36f8
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4020
@@ -24,3 +23,19 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution habitatmech:GOLD.115edc36f8
+    for habitatmech:GOLD.a83d030599 (Environmental > Aquatic > Marine > Intertidal
+    zone > Oil-contaminated). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1421
+    (20261012T091840Z-oil_contaminated). The ITEM decision explicitly interprets this
+    exact intertidal source as oil-contaminated seawater material. Under that maintained
+    interpretation seawater is a plausible genus but the intertidal zone is its setting.
+    The single later Deepwater Horizon dispersant sample does not recover original
+    membership or prove a universal material composition. Count omission must remain
+    distinct from an observed absence. Exclude only this exact GOLD context contribution.
+    Preserve qualified identity, source nodes/path/counts/units and independently
+    justified parents. Original occurrence membership remains unrecovered. Shared
+    mapping endpoints and typed ontology synonyms are separate open work, not SSSOM/KGX
+    certification.

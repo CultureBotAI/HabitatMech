@@ -4,8 +4,7 @@ habitat_category: AQUATIC
 grounding_status: NARROW
 mapping_status: REVIEWED
 parent_habitats:
-- ENVO:00002149
-- habitatmech:GOLD.115edc36f8
+- ENVO:00002007
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7144
@@ -16,14 +15,40 @@ source_attestations:
   assertion_count: 1
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-13T00:00:00Z'
-  curator: claude-opus-5
-  action: GROUND_AS_PARENT
-  changes: 'ENVO:00002149 ''sea water'' attached as a parent, not adopted as the identity
-    (NARROW). Oil-contaminated intertidal water, not oil contaminated soil. Path:
-    Environmental > Aquatic > Marine > Intertidal zone > Oil-contaminated sediment
-    (source concept habitatmech:GOLD.7c79bcbca8)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: GROUND_AS_PARENT
+  changes: 'ENVO:00002007 ''sediment'' attached as a parent, not adopted as the identity
+    (NARROW). Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/1420
+    (20261012T091841Z-oil_contaminated_sediment__b1bb8113). The intertidal sediment
+    source is misdescribed as water by its ITEM decision. Seawater is not the solid
+    sediment genus, and intertidal zone is independently location context. The later
+    organism description explicitly says oil-contaminated tidal-flat sediment. Correct
+    both maintained contributions while retaining the minted identity and one ORGANISM
+    assertion. Retain the qualified source mint under the verified broader genus ENVO:00002007
+    sediment; do not exact-merge. Current official ENVO definitions and later exact-path
+    GOLD examples were inspected, without claiming recovery of original membership.
+    Separate guarded source exclusions remove unsupported setting parents. Shared
+    mapping-endpoint issue #1398 remains open. Marine sediment requires marine-water-column
+    transport and seafloor deposition; petroleum enriched sediment assumes petroleum
+    enrichment. The generic sediment genus avoids asserting those unverified universal
+    constraints for this source. (source concept habitatmech:GOLD.7c79bcbca8)'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution habitatmech:GOLD.115edc36f8
+    for habitatmech:GOLD.7c79bcbca8 (Environmental > Aquatic > Marine > Intertidal
+    zone > Oil-contaminated sediment). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1421
+    (20261012T091841Z-oil_contaminated_sediment__b1bb8113). The intertidal sediment
+    source is misdescribed as water by its ITEM decision. Seawater is not the solid
+    sediment genus, and intertidal zone is independently location context. The later
+    organism description explicitly says oil-contaminated tidal-flat sediment. Correct
+    both maintained contributions while retaining the minted identity and one ORGANISM
+    assertion. Exclude only this exact GOLD context contribution. Preserve qualified
+    identity, source nodes/path/counts/units and independently justified parents.
+    Original occurrence membership remains unrecovered. Shared mapping endpoints and
+    typed ontology synonyms are separate open work, not SSSOM/KGX certification.

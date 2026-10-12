@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00001995
-- habitatmech:GOLD.3841c9c3af
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5370
@@ -19,3 +18,18 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution habitatmech:GOLD.3841c9c3af
+    for habitatmech:GOLD.d76e4389b2 (Environmental > Aquatic > Marine > Deep subsurface
+    > Rock). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1441
+    (20261012T091847Z-rock__d4e1e84c). Marine deep-subsurface rock retains a true
+    rock genus. The undefined Deep subsurface location grouping does not establish
+    another strict material genus. Later serpentinite/harzburgite and basalt descriptions
+    support solid crust context, not a claim that all such rocks share mineralogy
+    or fluid conditions. Do not globally delete valid within-material source parents.
+    Exclude only this exact GOLD context contribution. Preserve qualified identity,
+    source nodes/path/counts/units and independently justified parents. Original occurrence
+    membership remains unrecovered. Shared mapping endpoints and typed ontology synonyms
+    are separate open work, not SSSOM/KGX certification.

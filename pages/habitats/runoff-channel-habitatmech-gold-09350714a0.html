@@ -50,10 +50,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 </table>
 </div>
 
-<h2>Broader habitats</h2>
-<ul class="plain">
-  <li><a href="../habitats/hot-spring-envo-00000051.html">hot spring</a>      <code class="curie">ENVO:00000051</code></li>
-</ul>
 
 
 
@@ -68,6 +64,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="meta">2026-08-12 · claude-opus-5 ·
     class-level sweep, not an individual judgement</span>
     <p>Confirmed UNGROUNDED: no ontology term fits this concept. Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the vendored slice matched this label by any search route. Whether the concept is a habitat at all was NOT assessed, so this is not yet a term-request candidate. (source concept habitatmech:GOLD.09350714a0)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-12 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution ENVO:00000051 for habitatmech:GOLD.09350714a0 (Environmental &gt; Aquatic &gt; Thermal springs &gt; Runoff channel). Bounded hierarchy correction <a href="https://github.com/CultureBotAI/HabitatMech/issues/1441" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/1441</a> (20261012T091848Z-runoff_channel). The thermal-spring runoff channel is downstream channel structure/context, not necessarily the groundwater outlet defined as a hot spring. Later Yellowstone channel biofilm samples support the distinction but do not choose between a stream channel, other channel or sampled material. Suppress the unsupported spring genus without preselecting an inadequately supported channel subclass. Exclude only this exact GOLD context contribution. Preserve qualified identity, source nodes/path/counts/units and independently justified parents. Original occurrence membership remains unrecovered. Shared mapping endpoints and typed ontology synonyms are separate open work, not SSSOM/KGX certification.</p>
   </li>
 </ol>
 

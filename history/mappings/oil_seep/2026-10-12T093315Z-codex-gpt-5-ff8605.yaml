@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: oil_seep
+session:
+  id: 2026-10-12T093315Z-codex-gpt-5-ff8605
+  timestamp: '2026-10-12T09:33:15Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/pull/2015
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed aquatic habitat scope for oil_seep
+  details: 'Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1423
+    (20261012T091842Z-oil_seep). The ontology-grounded seep concerns naturally released hydrocarbons,
+    including subsea seeps; it is not itself a marine waterbody. Its liquid-astronomical-body-part
+    ontology genus is retained. Later Coal Oil Point samples support a seep context, while
+    production/injection-water organism descriptions show that exact original GOLD membership
+    and broad source equivalence remain unproven. Exclude only this exact GOLD context contribution.
+    Preserve qualified identity, source nodes/path/counts/units and independently justified
+    parents. Original occurrence membership remains unrecovered. Shared mapping endpoints
+    and typed ontology synonyms are separate open work, not SSSOM/KGX certification. User
+    authorized remediation/publication. Dry seeding and 35 focused regressions passed; generated
+    records, real map/site refresh and final gates remain pending at event creation. Nine
+    previously unreviewed decisions become ITEM through individual evidence assessment; no
+    other status promotion. Shared endpoint issue #1398 remains open.'

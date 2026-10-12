@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: oil_contaminated
+session:
+  id: 2026-10-12T093306Z-codex-gpt-5-13b866
+  timestamp: '2026-10-12T09:33:06Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/pull/2015
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed aquatic habitat scope for oil_contaminated
+  details: 'Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1421
+    (20261012T091840Z-oil_contaminated). The ITEM decision explicitly interprets this exact
+    intertidal source as oil-contaminated seawater material. Under that maintained interpretation
+    seawater is a plausible genus but the intertidal zone is its setting. The single later
+    Deepwater Horizon dispersant sample does not recover original membership or prove a universal
+    material composition. Count omission must remain distinct from an observed absence. Exclude
+    only this exact GOLD context contribution. Preserve qualified identity, source nodes/path/counts/units
+    and independently justified parents. Original occurrence membership remains unrecovered.
+    Shared mapping endpoints and typed ontology synonyms are separate open work, not SSSOM/KGX
+    certification. User authorized remediation/publication. Dry seeding and 35 focused regressions
+    passed; generated records, real map/site refresh and final gates remain pending at event
+    creation. Nine previously unreviewed decisions become ITEM through individual evidence
+    assessment; no other status promotion. Shared endpoint issue #1398 remains open.'

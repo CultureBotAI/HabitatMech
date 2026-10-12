@@ -1,0 +1,838 @@
+{
+  "ENVO:00000025": {
+    "removed": [
+      "ENVO:00002011"
+    ],
+    "retained": [
+      "ENVO:00000377"
+    ],
+    "slug": "reservoir",
+    "sources": [
+      {
+        "removed": "ENVO:00002011",
+        "source": "habitatmech:GOLD.0f1a7236ef"
+      }
+    ]
+  },
+  "ENVO:00000033": {
+    "removed": [
+      "ENVO:00002011"
+    ],
+    "retained": [
+      "ENVO:01000617"
+    ],
+    "slug": "pond",
+    "sources": [
+      {
+        "removed": "ENVO:00002011",
+        "source": "habitatmech:GOLD.e4db877caa"
+      }
+    ]
+  },
+  "ENVO:00000055": {
+    "removed": [
+      "habitatmech:GOLD.115edc36f8"
+    ],
+    "retained": [
+      "ENVO:00000033"
+    ],
+    "slug": "saline_evaporation_pond",
+    "sources": [
+      {
+        "removed": "habitatmech:GOLD.115edc36f8",
+        "source": "habitatmech:GOLD.dc339d2180"
+      }
+    ]
+  },
+  "ENVO:00000207": {
+    "removed": [
+      "ENVO:00001999"
+    ],
+    "retained": [
+      "ENVO:01000295"
+    ],
+    "slug": "oceanic_zone",
+    "sources": [
+      {
+        "removed": "ENVO:00001999",
+        "source": "habitatmech:GOLD.fc3b904cb2"
+      }
+    ]
+  },
+  "ENVO:00002063": {
+    "removed": [
+      "ENVO:00001999"
+    ],
+    "retained": [
+      "ENVO:01001477"
+    ],
+    "slug": "oil_seep",
+    "sources": [
+      {
+        "removed": "ENVO:00001999",
+        "source": "habitatmech:GOLD.8b73c4518f"
+      }
+    ]
+  },
+  "ENVO:01000038": {
+    "removed": [
+      "ENVO:00001999"
+    ],
+    "retained": [
+      "ENVO:01000033"
+    ],
+    "slug": "oceanic_abyssopelagic_zone_biome",
+    "sources": [
+      {
+        "removed": "ENVO:00001999",
+        "source": "habitatmech:GOLD.1edff6a744"
+      }
+    ]
+  },
+  "ENVO:01000749": {
+    "removed": [
+      "ENVO:00000207"
+    ],
+    "retained": [
+      "ENVO:01000639"
+    ],
+    "slug": "oceanic_crust",
+    "sources": [
+      {
+        "removed": "ENVO:00000207",
+        "source": "habitatmech:GOLD.1cc5210121"
+      }
+    ]
+  },
+  "ENVO:03600070": {
+    "removed": [
+      "ENVO:00001999"
+    ],
+    "retained": [
+      "ENVO:01000071"
+    ],
+    "slug": "river_plume",
+    "sources": [
+      {
+        "removed": "ENVO:00001999",
+        "source": "habitatmech:GOLD.cbc4b32551"
+      }
+    ]
+  },
+  "ENVO:03605000": {
+    "removed": [
+      "ENVO:01000297"
+    ],
+    "retained": [
+      "ENVO:01000156"
+    ],
+    "slug": "periphytic_biofilm",
+    "sources": [
+      {
+        "removed": "ENVO:01000297",
+        "source": "habitatmech:GOLD.9b43111989"
+      }
+    ]
+  },
+  "ENVO:06105211": {
+    "removed": [
+      "habitatmech:GOLD.452a98786f"
+    ],
+    "retained": [
+      "ENVO:00002006"
+    ],
+    "slug": "runoff",
+    "sources": [
+      {
+        "removed": "habitatmech:GOLD.452a98786f",
+        "source": "habitatmech:GOLD.56bd7c491e"
+      }
+    ]
+  },
+  "habitatmech:GOLD.09350714a0": {
+    "removed": [
+      "ENVO:00000051"
+    ],
+    "retained": [],
+    "slug": "runoff_channel",
+    "sources": [
+      {
+        "removed": "ENVO:00000051",
+        "source": "habitatmech:GOLD.09350714a0"
+      }
+    ]
+  },
+  "habitatmech:GOLD.1c0744c357": {
+    "decision": {
+      "new": {
+        "category": "",
+        "curator": "codex-gpt-5",
+        "date": "2026-10-12",
+        "decision": "GROUND_AS_PARENT",
+        "grounding_status": "NARROW",
+        "identifier": "habitatmech:GOLD.1c0744c357",
+        "notes": "Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/1428 (20261012T091845Z-porewater). This deep-subsurface groundwater-qualified porewater is material, with a defensible direct qualified Groundwater parent. Existing interstitial water is a broader liquid-water genus; the CLASS decision has not assessed it. IODP distinguishes extracted pore fluid from residual sediment, but those methods are not this GOLD source membership or a basis for importing depth, salinity or chemistry. Retain the qualified source mint under the verified broader genus ENVO:03600009 interstitial water; do not exact-merge. Current official ENVO definitions and later exact-path GOLD examples were inspected, without claiming recovery of original membership. Separate guarded source exclusions remove unsupported setting parents. Shared mapping-endpoint issue #1398 remains open.",
+        "object_id": "ENVO:03600009",
+        "object_label": "interstitial water",
+        "relation": "parent",
+        "review_depth": "ITEM"
+      },
+      "old": {
+        "category": "",
+        "curator": "claude-opus-5",
+        "date": "2026-08-12",
+        "decision": "CONFIRM_UNGROUNDED",
+        "grounding_status": "",
+        "identifier": "habitatmech:GOLD.1c0744c357",
+        "notes": "Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the vendored slice matched this label by any search route. Whether the concept is a habitat at all was NOT assessed, so this is not yet a term-request candidate.",
+        "object_id": "",
+        "object_label": "",
+        "relation": "",
+        "review_depth": "CLASS"
+      }
+    },
+    "removed": [],
+    "retained": [
+      "ENVO:03600009",
+      "habitatmech:GOLD.22a80cbd14"
+    ],
+    "slug": "porewater",
+    "sources": []
+  },
+  "habitatmech:GOLD.1d0c72d58b": {
+    "removed": [
+      "habitatmech:GOLD.90a084a03e"
+    ],
+    "retained": [
+      "ENVO:00000022"
+    ],
+    "slug": "river__d478a13c",
+    "sources": [
+      {
+        "removed": "habitatmech:GOLD.90a084a03e",
+        "source": "habitatmech:GOLD.1d0c72d58b"
+      }
+    ]
+  },
+  "habitatmech:GOLD.23cd8889db": {
+    "decision": {
+      "new": {
+        "category": "",
+        "curator": "codex-gpt-5",
+        "date": "2026-10-12",
+        "decision": "GROUND_AS_PARENT",
+        "grounding_status": "NARROW",
+        "identifier": "habitatmech:GOLD.23cd8889db",
+        "notes": "Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/1425 (20261012T091843Z-plankton). The maintained ITEM decision explicitly interprets the river source as planktonic material. That genus is defensible; freshwater river is a sampling setting, not a material superclass. Later surface-water examples do not prove every sample was a net tow or establish universal pore-size and taxonomic composition. Correct the decision rationale that currently endorses the setting as genus. Retain the qualified source mint under the verified broader genus ENVO:01000063 planktonic material; do not exact-merge. Current official ENVO definitions and later exact-path GOLD examples were inspected, without claiming recovery of original membership. Separate guarded source exclusions remove unsupported setting parents. Shared mapping-endpoint issue #1398 remains open.",
+        "object_id": "ENVO:01000063",
+        "object_label": "planktonic material",
+        "relation": "parent",
+        "review_depth": "ITEM"
+      },
+      "old": {
+        "category": "",
+        "curator": "claude-opus-5",
+        "date": "2026-08-31",
+        "decision": "GROUND_AS_PARENT",
+        "grounding_status": "NARROW",
+        "identifier": "habitatmech:GOLD.23cd8889db",
+        "notes": "Definition review (#110, #161): reversed from CONFIRM_UNGROUNDED. Its committed research report shows the recorded premise - 'no ontology term fits this concept' - is not supported: ENVO:01000063 'planktonic material', 'a portion of environmental material primarily composed of plankton', is in the vendored slice and is exactly what a net tow retains. The concept is a MATERIAL composed of organisms, not a place and not a taxon, so adopting it makes no taxonomic claim and does not repeat the taxon-as-place error #114 reversed. GROUND_AS_PARENT rather than GROUND because river plankton is genuinely narrower than generic planktonic material; the setting parent ENVO:01000297 'freshwater river' is kept and expresses the water body. Cost recorded rather than hidden: GROUND_AS_PARENT carries one object_id, so the mesh:D010933 xref that CONFIRM_UNGROUNDED held is not retained on the record and survives only in data/raw/ - the same trade-off recorded for the cnidarian decision. Reached by reading a report that had already been paid for, not by a new run.",
+        "object_id": "ENVO:01000063",
+        "object_label": "planktonic material",
+        "relation": "",
+        "review_depth": "ITEM"
+      }
+    },
+    "removed": [
+      "ENVO:01000297"
+    ],
+    "retained": [
+      "ENVO:01000063"
+    ],
+    "slug": "plankton",
+    "sources": [
+      {
+        "removed": "ENVO:01000297",
+        "source": "habitatmech:GOLD.23cd8889db"
+      }
+    ]
+  },
+  "habitatmech:GOLD.3fb6b22200": {
+    "decision": {
+      "new": {
+        "category": "",
+        "curator": "codex-gpt-5",
+        "date": "2026-10-12",
+        "decision": "GROUND_AS_PARENT",
+        "grounding_status": "NARROW",
+        "identifier": "habitatmech:GOLD.3fb6b22200",
+        "notes": "Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/1425 (20261012T091843Z-plankton__1201d35e). The oceanic plankton source is maintained as a qualified planktonic material. Oceanic zone is a marine layer/water mass and does not follow as its genus from location. Later plankton-associated isolates and fractionated plankton samples support biological material, not exact generic plankton identity or universal sampling gear. Retain source-specific scope and 14 ORGANISM assertions. Retain the qualified source mint under the verified broader genus ENVO:01000063 planktonic material; do not exact-merge. Current official ENVO definitions and later exact-path GOLD examples were inspected, without claiming recovery of original membership. Separate guarded source exclusions remove unsupported setting parents. Shared mapping-endpoint issue #1398 remains open.",
+        "object_id": "ENVO:01000063",
+        "object_label": "planktonic material",
+        "relation": "parent",
+        "review_depth": "ITEM"
+      },
+      "old": {
+        "category": "",
+        "curator": "claude-opus-5",
+        "date": "2026-08-31",
+        "decision": "GROUND_AS_PARENT",
+        "grounding_status": "NARROW",
+        "identifier": "habitatmech:GOLD.3fb6b22200",
+        "notes": "Definition review (#110, #161): reversed from CONFIRM_UNGROUNDED. Its committed research report shows the recorded premise - 'no ontology term fits this concept' - is not supported: ENVO:01000063 'planktonic material', 'a portion of environmental material primarily composed of plankton', is in the vendored slice and is exactly what a net tow retains. The concept is a MATERIAL composed of organisms, not a place and not a taxon, so adopting it makes no taxonomic claim and does not repeat the taxon-as-place error #114 reversed. GROUND_AS_PARENT rather than GROUND because marine oceanic plankton is genuinely narrower than generic planktonic material; the setting parent ENVO:00000207 'oceanic zone' is kept and expresses the water body. Cost recorded rather than hidden: GROUND_AS_PARENT carries one object_id, so the mesh:D010933 xref that CONFIRM_UNGROUNDED held is not retained on the record and survives only in data/raw/ - the same trade-off recorded for the cnidarian decision. Reached by reading a report that had already been paid for, not by a new run.",
+        "object_id": "ENVO:01000063",
+        "object_label": "planktonic material",
+        "relation": "",
+        "review_depth": "ITEM"
+      }
+    },
+    "removed": [
+      "ENVO:00000207"
+    ],
+    "retained": [
+      "ENVO:01000063"
+    ],
+    "slug": "plankton__1201d35e",
+    "sources": [
+      {
+        "removed": "ENVO:00000207",
+        "source": "habitatmech:GOLD.3fb6b22200"
+      }
+    ]
+  },
+  "habitatmech:GOLD.46309b7794": {
+    "decision": {
+      "new": {
+        "category": "",
+        "curator": "codex-gpt-5",
+        "date": "2026-10-12",
+        "decision": "GROUND_AS_PARENT",
+        "grounding_status": "NARROW",
+        "identifier": "habitatmech:GOLD.46309b7794",
+        "notes": "Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/2016 (20261012T091843Z-phytoplankton_bloom). The coastal marine source denotes a bloom feature, not a portion of coastal seawater. ENVO models algal bloom as a feature and has the broader marine algal bloom candidate. Replace the CLASS-only placement with an ITEM-assessed qualified bloom genus and exclude the water-material context; do not import universal cell-density thresholds from an ontology example. Retain the qualified source mint under the verified broader genus ENVO:01000057 marine algal bloom; do not exact-merge. Current official ENVO definitions and later exact-path GOLD examples were inspected, without claiming recovery of original membership. Separate guarded source exclusions remove unsupported setting parents. Shared mapping-endpoint issue #1398 remains open.",
+        "object_id": "ENVO:01000057",
+        "object_label": "marine algal bloom",
+        "relation": "parent",
+        "review_depth": "ITEM"
+      },
+      "old": {
+        "category": "",
+        "curator": "claude-opus-5",
+        "date": "2026-08-12",
+        "decision": "CONFIRM_UNGROUNDED",
+        "grounding_status": "",
+        "identifier": "habitatmech:GOLD.46309b7794",
+        "notes": "Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the vendored slice matched this label by any search route. Whether the concept is a habitat at all was NOT assessed, so this is not yet a term-request candidate.",
+        "object_id": "",
+        "object_label": "",
+        "relation": "",
+        "review_depth": "CLASS"
+      }
+    },
+    "removed": [
+      "ENVO:00002150"
+    ],
+    "retained": [
+      "ENVO:01000057"
+    ],
+    "slug": "phytoplankton_bloom",
+    "sources": [
+      {
+        "removed": "ENVO:00002150",
+        "source": "habitatmech:GOLD.46309b7794"
+      }
+    ]
+  },
+  "habitatmech:GOLD.5b56a06a4c": {
+    "decision": {
+      "new": {
+        "category": "",
+        "curator": "codex-gpt-5",
+        "date": "2026-10-12",
+        "decision": "GROUND_AS_PARENT",
+        "grounding_status": "NARROW",
+        "identifier": "habitatmech:GOLD.5b56a06a4c",
+        "notes": "Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/1409 (20261012T091843Z-pit_lake). The GOLD Pit lake source denotes a waterbody in an excavation, not an aquatic biome with a demonstrated ecological climax community. Lake is an existing broader genus. An ITEM assessment should supply that genus without assuming every mined void is a purpose-built lake or reservoir. Preserve the three collapsed node IDs and one ORGANISM count. Retain the qualified source mint under the verified broader genus ENVO:00000020 lake; do not exact-merge. Current official ENVO definitions and later exact-path GOLD examples were inspected, without claiming recovery of original membership. Separate guarded source exclusions remove unsupported setting parents. Shared mapping-endpoint issue #1398 remains open.",
+        "object_id": "ENVO:00000020",
+        "object_label": "lake",
+        "relation": "parent",
+        "review_depth": "ITEM"
+      },
+      "old": {
+        "category": "",
+        "curator": "claude-opus-5",
+        "date": "2026-08-12",
+        "decision": "CONFIRM_UNGROUNDED",
+        "grounding_status": "",
+        "identifier": "habitatmech:GOLD.5b56a06a4c",
+        "notes": "Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the vendored slice matched this label by any search route. Whether the concept is a habitat at all was NOT assessed, so this is not yet a term-request candidate.",
+        "object_id": "",
+        "object_label": "",
+        "relation": "",
+        "review_depth": "CLASS"
+      }
+    },
+    "removed": [
+      "ENVO:00002030"
+    ],
+    "retained": [
+      "ENVO:00000020"
+    ],
+    "slug": "pit_lake",
+    "sources": [
+      {
+        "removed": "ENVO:00002030",
+        "source": "habitatmech:GOLD.5b56a06a4c"
+      }
+    ]
+  },
+  "habitatmech:GOLD.77996bd8e6": {
+    "decision": {
+      "new": {
+        "category": "",
+        "curator": "codex-gpt-5",
+        "date": "2026-10-12",
+        "decision": "GROUND_AS_PARENT",
+        "grounding_status": "NARROW",
+        "identifier": "habitatmech:GOLD.77996bd8e6",
+        "notes": "Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/1421 (20261012T091841Z-oil_contaminated_sediment__6a7b1764). The neritic/coastal sediment source is honestly CLASS-swept and ungrounded, but its sole coastal-seawater parent is not a sediment genus. The later exact-path organism is described as isolated from creosote-contaminated marine sediment. Use an ITEM assessment of a sediment genus and retain the coastal/oil qualification rather than substituting water identity. Retain the qualified source mint under the verified broader genus ENVO:00002007 sediment; do not exact-merge. Current official ENVO definitions and later exact-path GOLD examples were inspected, without claiming recovery of original membership. Separate guarded source exclusions remove unsupported setting parents. Shared mapping-endpoint issue #1398 remains open. Marine sediment requires marine-water-column transport and seafloor deposition; petroleum enriched sediment assumes petroleum enrichment. The generic sediment genus avoids asserting those unverified universal constraints for this source.",
+        "object_id": "ENVO:00002007",
+        "object_label": "sediment",
+        "relation": "parent",
+        "review_depth": "ITEM"
+      },
+      "old": {
+        "category": "",
+        "curator": "claude-opus-5",
+        "date": "2026-08-12",
+        "decision": "CONFIRM_UNGROUNDED",
+        "grounding_status": "",
+        "identifier": "habitatmech:GOLD.77996bd8e6",
+        "notes": "Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the vendored slice matched this label by any search route. Whether the concept is a habitat at all was NOT assessed, so this is not yet a term-request candidate.",
+        "object_id": "",
+        "object_label": "",
+        "relation": "",
+        "review_depth": "CLASS"
+      }
+    },
+    "removed": [
+      "ENVO:00002150"
+    ],
+    "retained": [
+      "ENVO:00002007"
+    ],
+    "slug": "oil_contaminated_sediment__6a7b1764",
+    "sources": [
+      {
+        "removed": "ENVO:00002150",
+        "source": "habitatmech:GOLD.77996bd8e6"
+      }
+    ]
+  },
+  "habitatmech:GOLD.7c79bcbca8": {
+    "decision": {
+      "new": {
+        "category": "",
+        "curator": "codex-gpt-5",
+        "date": "2026-10-12",
+        "decision": "GROUND_AS_PARENT",
+        "grounding_status": "NARROW",
+        "identifier": "habitatmech:GOLD.7c79bcbca8",
+        "notes": "Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/1420 (20261012T091841Z-oil_contaminated_sediment__b1bb8113). The intertidal sediment source is misdescribed as water by its ITEM decision. Seawater is not the solid sediment genus, and intertidal zone is independently location context. The later organism description explicitly says oil-contaminated tidal-flat sediment. Correct both maintained contributions while retaining the minted identity and one ORGANISM assertion. Retain the qualified source mint under the verified broader genus ENVO:00002007 sediment; do not exact-merge. Current official ENVO definitions and later exact-path GOLD examples were inspected, without claiming recovery of original membership. Separate guarded source exclusions remove unsupported setting parents. Shared mapping-endpoint issue #1398 remains open. Marine sediment requires marine-water-column transport and seafloor deposition; petroleum enriched sediment assumes petroleum enrichment. The generic sediment genus avoids asserting those unverified universal constraints for this source.",
+        "object_id": "ENVO:00002007",
+        "object_label": "sediment",
+        "relation": "parent",
+        "review_depth": "ITEM"
+      },
+      "old": {
+        "category": "",
+        "curator": "claude-opus-5",
+        "date": "2026-08-13",
+        "decision": "GROUND_AS_PARENT",
+        "grounding_status": "NARROW",
+        "identifier": "habitatmech:GOLD.7c79bcbca8",
+        "notes": "Oil-contaminated intertidal water, not oil contaminated soil. Path: Environmental > Aquatic > Marine > Intertidal zone > Oil-contaminated sediment",
+        "object_id": "ENVO:00002149",
+        "object_label": "sea water",
+        "relation": "",
+        "review_depth": "ITEM"
+      }
+    },
+    "removed": [
+      "habitatmech:GOLD.115edc36f8"
+    ],
+    "retained": [
+      "ENVO:00002007"
+    ],
+    "slug": "oil_contaminated_sediment__b1bb8113",
+    "sources": [
+      {
+        "removed": "habitatmech:GOLD.115edc36f8",
+        "source": "habitatmech:GOLD.7c79bcbca8"
+      }
+    ]
+  },
+  "habitatmech:GOLD.9272fc9901": {
+    "removed": [
+      "ENVO:00002185"
+    ],
+    "retained": [],
+    "slug": "produced_water_flow_back",
+    "sources": [
+      {
+        "removed": "ENVO:00002185",
+        "source": "habitatmech:GOLD.9272fc9901"
+      }
+    ]
+  },
+  "habitatmech:GOLD.943921b1b0": {
+    "removed": [
+      "ENVO:00000207"
+    ],
+    "retained": [
+      "ENVO:00001995"
+    ],
+    "slug": "rock__98ab4fe4",
+    "sources": [
+      {
+        "removed": "ENVO:00000207",
+        "source": "habitatmech:GOLD.943921b1b0"
+      }
+    ]
+  },
+  "habitatmech:GOLD.a83d030599": {
+    "removed": [
+      "habitatmech:GOLD.115edc36f8"
+    ],
+    "retained": [
+      "ENVO:00002149"
+    ],
+    "slug": "oil_contaminated",
+    "sources": [
+      {
+        "removed": "habitatmech:GOLD.115edc36f8",
+        "source": "habitatmech:GOLD.a83d030599"
+      }
+    ]
+  },
+  "habitatmech:GOLD.aeb3ec93d9": {
+    "decision": {
+      "new": {
+        "category": "",
+        "curator": "codex-gpt-5",
+        "date": "2026-10-12",
+        "decision": "GROUND_AS_PARENT",
+        "grounding_status": "NARROW",
+        "identifier": "habitatmech:GOLD.aeb3ec93d9",
+        "notes": "Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/1425 (20261012T091844Z-plankton__8f1688f3). The river-plume plankton source is qualified planktonic material, not the river-discharge mixing front itself. Retain the material genus and omit only the false plume contribution. Twenty-two later Amazon-plume biosamples do not replace the omitted original organism count or validate the old never-used inference. Preserve this distinct source rather than merging same-label plankton records. Retain the qualified source mint under the verified broader genus ENVO:01000063 planktonic material; do not exact-merge. Current official ENVO definitions and later exact-path GOLD examples were inspected, without claiming recovery of original membership. Separate guarded source exclusions remove unsupported setting parents. Shared mapping-endpoint issue #1398 remains open.",
+        "object_id": "ENVO:01000063",
+        "object_label": "planktonic material",
+        "relation": "parent",
+        "review_depth": "ITEM"
+      },
+      "old": {
+        "category": "",
+        "curator": "claude-opus-5",
+        "date": "2026-08-31",
+        "decision": "GROUND_AS_PARENT",
+        "grounding_status": "NARROW",
+        "identifier": "habitatmech:GOLD.aeb3ec93d9",
+        "notes": "Definition review (#110, #161): reversed from CONFIRM_UNGROUNDED. Its committed research report shows the recorded premise - 'no ontology term fits this concept' - is not supported: ENVO:01000063 'planktonic material', 'a portion of environmental material primarily composed of plankton', is in the vendored slice and is exactly what a net tow retains. The concept is a MATERIAL composed of organisms, not a place and not a taxon, so adopting it makes no taxonomic claim and does not repeat the taxon-as-place error #114 reversed. GROUND_AS_PARENT rather than GROUND because river-plume plankton is genuinely narrower than generic planktonic material; the setting parent ENVO:03600070 'river plume' is kept and expresses the water body. Cost recorded rather than hidden: GROUND_AS_PARENT carries one object_id, so the mesh:D010933 xref that CONFIRM_UNGROUNDED held is not retained on the record and survives only in data/raw/ - the same trade-off recorded for the cnidarian decision. Reached by reading a report that had already been paid for, not by a new run.",
+        "object_id": "ENVO:01000063",
+        "object_label": "planktonic material",
+        "relation": "",
+        "review_depth": "ITEM"
+      }
+    },
+    "removed": [
+      "ENVO:03600070"
+    ],
+    "retained": [
+      "ENVO:01000063"
+    ],
+    "slug": "plankton__8f1688f3",
+    "sources": [
+      {
+        "removed": "ENVO:03600070",
+        "source": "habitatmech:GOLD.aeb3ec93d9"
+      }
+    ]
+  },
+  "habitatmech:GOLD.b3725fa211": {
+    "decision": {
+      "new": {
+        "category": "",
+        "curator": "codex-gpt-5",
+        "date": "2026-10-12",
+        "decision": "GROUND_AS_PARENT",
+        "grounding_status": "NARROW",
+        "identifier": "habitatmech:GOLD.b3725fa211",
+        "notes": "Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/1444 (20261012T091849Z-sabkha_sediment). Sabkha sediment is a qualified sediment material, not a subtype of the marine supralittoral zone. Replace the false zone placement with an ITEM-assessed sediment genus. Marine sediment has a water-column/seafloor restriction that cannot be assumed for all supratidal deposits. Preserve omitted counts and do not borrow the neighboring Sabkha strain association. Retain the qualified source mint under the verified broader genus ENVO:00002007 sediment; do not exact-merge. Current official ENVO definitions and later exact-path GOLD examples were inspected, without claiming recovery of original membership. Separate guarded source exclusions remove unsupported setting parents. Shared mapping-endpoint issue #1398 remains open.",
+        "object_id": "ENVO:00002007",
+        "object_label": "sediment",
+        "relation": "parent",
+        "review_depth": "ITEM"
+      },
+      "old": {
+        "category": "",
+        "curator": "claude-opus-5",
+        "date": "2026-08-12",
+        "decision": "CONFIRM_UNGROUNDED",
+        "grounding_status": "",
+        "identifier": "habitatmech:GOLD.b3725fa211",
+        "notes": "Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the vendored slice matched this label by any search route. Whether the concept is a habitat at all was NOT assessed, so this is not yet a term-request candidate.",
+        "object_id": "",
+        "object_label": "",
+        "relation": "",
+        "review_depth": "CLASS"
+      }
+    },
+    "removed": [
+      "ENVO:01000124"
+    ],
+    "retained": [
+      "ENVO:00002007"
+    ],
+    "slug": "sabkha_sediment",
+    "sources": [
+      {
+        "removed": "ENVO:01000124",
+        "source": "habitatmech:GOLD.b3725fa211"
+      }
+    ]
+  },
+  "habitatmech:GOLD.b46d816f26": {
+    "decision": {
+      "new": {
+        "category": "",
+        "curator": "codex-gpt-5",
+        "date": "2026-10-12",
+        "decision": "GROUND_AS_PARENT",
+        "grounding_status": "NARROW",
+        "identifier": "habitatmech:GOLD.b46d816f26",
+        "notes": "Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/1445 (20261012T091849Z-saline). The deep-subsurface groundwater-qualified Saline source describes saline water material, not a complete saline waterbody. The wrong body genus comes from the generic mapping-table fallback, not the GOLD immediate-parent pass. Use the existing saline-water material candidate and preserve the valid qualified Groundwater parent. Later alkaline-groundwater isolate descriptions do not authorize equating alkalinity and salinity. Retain the qualified source mint under the verified broader genus ENVO:00002010 saline water; do not exact-merge. Current official ENVO definitions and later exact-path GOLD examples were inspected, without claiming recovery of original membership. Separate guarded source exclusions remove unsupported setting parents. Shared mapping-endpoint issue #1398 remains open.",
+        "object_id": "ENVO:00002010",
+        "object_label": "saline water",
+        "relation": "parent",
+        "review_depth": "ITEM"
+      },
+      "old": null
+    },
+    "removed": [],
+    "retained": [
+      "ENVO:00002010",
+      "habitatmech:GOLD.22a80cbd14"
+    ],
+    "slug": "saline",
+    "sources": []
+  },
+  "habitatmech:GOLD.d250342fe1": {
+    "decision": {
+      "new": {
+        "category": "",
+        "curator": "codex-gpt-5",
+        "date": "2026-10-12",
+        "decision": "GROUND_AS_PARENT",
+        "grounding_status": "NARROW",
+        "identifier": "habitatmech:GOLD.d250342fe1",
+        "notes": "Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/2016 (20261012T091845Z-puddle). The freshwater Puddle source describes a small standing waterbody; its contents do not make it a subtype of fresh-water material. Active ENVO puddle of water is a broader candidate requiring ITEM assessment. Later ditch-enrichment and puddle-water descriptions do not prove exact equivalence of every source member; retain freshwater specificity until supported otherwise. Retain the qualified source mint under the verified broader genus ENVO:01000871 puddle of water; do not exact-merge. Current official ENVO definitions and later exact-path GOLD examples were inspected, without claiming recovery of original membership. Separate guarded source exclusions remove unsupported setting parents. Shared mapping-endpoint issue #1398 remains open.",
+        "object_id": "ENVO:01000871",
+        "object_label": "puddle of water",
+        "relation": "parent",
+        "review_depth": "ITEM"
+      },
+      "old": {
+        "category": "",
+        "curator": "claude-opus-5",
+        "date": "2026-08-12",
+        "decision": "CONFIRM_UNGROUNDED",
+        "grounding_status": "",
+        "identifier": "habitatmech:GOLD.d250342fe1",
+        "notes": "Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the vendored slice matched this label by any search route. Whether the concept is a habitat at all was NOT assessed, so this is not yet a term-request candidate.",
+        "object_id": "",
+        "object_label": "",
+        "relation": "",
+        "review_depth": "CLASS"
+      }
+    },
+    "removed": [
+      "ENVO:00002011"
+    ],
+    "retained": [
+      "ENVO:01000871"
+    ],
+    "slug": "puddle",
+    "sources": [
+      {
+        "removed": "ENVO:00002011",
+        "source": "habitatmech:GOLD.d250342fe1"
+      }
+    ]
+  },
+  "habitatmech:GOLD.d640d7cf58": {
+    "removed": [
+      "ENVO:00000207"
+    ],
+    "retained": [
+      "ENVO:00002149"
+    ],
+    "slug": "oil_contaminated__eec9b4c2",
+    "sources": [
+      {
+        "removed": "ENVO:00000207",
+        "source": "habitatmech:GOLD.d640d7cf58"
+      }
+    ]
+  },
+  "habitatmech:GOLD.d76e4389b2": {
+    "removed": [
+      "habitatmech:GOLD.3841c9c3af"
+    ],
+    "retained": [
+      "ENVO:00001995"
+    ],
+    "slug": "rock__d4e1e84c",
+    "sources": [
+      {
+        "removed": "habitatmech:GOLD.3841c9c3af",
+        "source": "habitatmech:GOLD.d76e4389b2"
+      }
+    ]
+  },
+  "habitatmech:GOLD.da6a051c8b": {
+    "decision": {
+      "new": {
+        "category": "",
+        "curator": "codex-gpt-5",
+        "date": "2026-10-12",
+        "decision": "GROUND_AS_PARENT",
+        "grounding_status": "NARROW",
+        "identifier": "habitatmech:GOLD.da6a051c8b",
+        "notes": "Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/1437 (20261012T091847Z-river_biofilm). River biofilm denotes microbial material at a river site, not a subtype of the freshwater-river waterbody. Later Lunz biofilm samples and an epilithic isolate support that distinction. An existing biofilm-material genus deserves ITEM assessment in place of the CLASS-only disposition; no automatic periphyton identity or universal substrate is justified. Retain the qualified source mint under the verified broader genus ENVO:01000156 biofilm material; do not exact-merge. Current official ENVO definitions and later exact-path GOLD examples were inspected, without claiming recovery of original membership. Separate guarded source exclusions remove unsupported setting parents. Shared mapping-endpoint issue #1398 remains open.",
+        "object_id": "ENVO:01000156",
+        "object_label": "biofilm material",
+        "relation": "parent",
+        "review_depth": "ITEM"
+      },
+      "old": {
+        "category": "",
+        "curator": "claude-opus-5",
+        "date": "2026-08-12",
+        "decision": "CONFIRM_UNGROUNDED",
+        "grounding_status": "",
+        "identifier": "habitatmech:GOLD.da6a051c8b",
+        "notes": "Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the vendored slice matched this label by any search route. Whether the concept is a habitat at all was NOT assessed, so this is not yet a term-request candidate.",
+        "object_id": "",
+        "object_label": "",
+        "relation": "",
+        "review_depth": "CLASS"
+      }
+    },
+    "removed": [
+      "ENVO:01000297"
+    ],
+    "retained": [
+      "ENVO:01000156"
+    ],
+    "slug": "river_biofilm",
+    "sources": [
+      {
+        "removed": "ENVO:01000297",
+        "source": "habitatmech:GOLD.da6a051c8b"
+      }
+    ]
+  },
+  "habitatmech:GOLD.dfb551a1fb": {
+    "removed": [
+      "ENVO:00002150"
+    ],
+    "retained": [],
+    "slug": "reef_zone",
+    "sources": [
+      {
+        "removed": "ENVO:00002150",
+        "source": "habitatmech:GOLD.dfb551a1fb"
+      }
+    ]
+  },
+  "habitatmech:GOLD.e13608a63a": {
+    "decision": {
+      "new": {
+        "category": "",
+        "curator": "codex-gpt-5",
+        "date": "2026-10-12",
+        "decision": "GROUND_AS_PARENT",
+        "grounding_status": "NARROW",
+        "identifier": "habitatmech:GOLD.e13608a63a",
+        "notes": "Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/1409 (20261012T091841Z-oil_sands_pit_lake). Oil-sands pit lake is a specialized pit-lake setting, with a defensible direct Pit lake grouping but no assessed ontology genus. The existing lake class is broader; purposeful artificial-lake construction or storage-reservoir purpose cannot be assumed from mining origin. Later Base Mine Lake water and tailings examples are distinct sampled media within that setting, not a definition of every pit lake. Retain the qualified source mint under the verified broader genus ENVO:00000020 lake; do not exact-merge. Current official ENVO definitions and later exact-path GOLD examples were inspected, without claiming recovery of original membership. Separate guarded source exclusions remove unsupported setting parents. Shared mapping-endpoint issue #1398 remains open.",
+        "object_id": "ENVO:00000020",
+        "object_label": "lake",
+        "relation": "parent",
+        "review_depth": "ITEM"
+      },
+      "old": {
+        "category": "",
+        "curator": "claude-opus-5",
+        "date": "2026-08-12",
+        "decision": "CONFIRM_UNGROUNDED",
+        "grounding_status": "",
+        "identifier": "habitatmech:GOLD.e13608a63a",
+        "notes": "Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the vendored slice matched this label by any search route. Whether the concept is a habitat at all was NOT assessed, so this is not yet a term-request candidate.",
+        "object_id": "",
+        "object_label": "",
+        "relation": "",
+        "review_depth": "CLASS"
+      }
+    },
+    "removed": [],
+    "retained": [
+      "ENVO:00000020",
+      "habitatmech:GOLD.5b56a06a4c"
+    ],
+    "slug": "oil_sands_pit_lake",
+    "sources": []
+  },
+  "habitatmech:GOLD.e6839bcc8f": {
+    "decision": {
+      "new": {
+        "category": "",
+        "curator": "codex-gpt-5",
+        "date": "2026-10-12",
+        "decision": "GROUND_AS_PARENT",
+        "grounding_status": "NARROW",
+        "identifier": "habitatmech:GOLD.e6839bcc8f",
+        "notes": "Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/1420 (20261012T091841Z-oil_contaminated_sediment__3c338598). The source explicitly names oil-contaminated sediment, but its ITEM decision calls it open-ocean water and gives it a seawater genus. Both that genus and the independent oceanic-water-mass parent are unsupported. Later benthal mud, oilfield sediment and beach-sand examples confirm a material boundary without making every example offshore. Compare sediment, marine sediment and petroleum-enriched sediment without exact-merging the qualified source. Retain the qualified source mint under the verified broader genus ENVO:00002007 sediment; do not exact-merge. Current official ENVO definitions and later exact-path GOLD examples were inspected, without claiming recovery of original membership. Separate guarded source exclusions remove unsupported setting parents. Shared mapping-endpoint issue #1398 remains open. Marine sediment requires marine-water-column transport and seafloor deposition; petroleum enriched sediment assumes petroleum enrichment. The generic sediment genus avoids asserting those unverified universal constraints for this source.",
+        "object_id": "ENVO:00002007",
+        "object_label": "sediment",
+        "relation": "parent",
+        "review_depth": "ITEM"
+      },
+      "old": {
+        "category": "",
+        "curator": "claude-opus-5",
+        "date": "2026-08-13",
+        "decision": "GROUND_AS_PARENT",
+        "grounding_status": "NARROW",
+        "identifier": "habitatmech:GOLD.e6839bcc8f",
+        "notes": "Oil-contaminated open ocean water, not oil contaminated soil. ENVO has the soil term only. Path: Environmental > Aquatic > Marine > Oceanic > Oil-contaminated sediment",
+        "object_id": "ENVO:00002149",
+        "object_label": "sea water",
+        "relation": "",
+        "review_depth": "ITEM"
+      }
+    },
+    "removed": [
+      "ENVO:00000207"
+    ],
+    "retained": [
+      "ENVO:00002007"
+    ],
+    "slug": "oil_contaminated_sediment__3c338598",
+    "sources": [
+      {
+        "removed": "ENVO:00000207",
+        "source": "habitatmech:GOLD.e6839bcc8f"
+      }
+    ]
+  }
+}
