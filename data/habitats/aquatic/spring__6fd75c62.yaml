@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00000027
-- habitatmech:GOLD.22a80cbd14
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5961
@@ -19,3 +18,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.22a80cbd14
+    for habitatmech:GOLD.88f05b0e77 (Environmental > Aquatic > Deep subsurface > Groundwater
+    > Spring). ITEM hierarchy assessment for #1467 and review 20261012T142055Z-spring__6fd75c62:
+    a spring is a groundwater-emergence landform, not groundwater material. Exclude
+    only this exact GOLD context contribution and retain independent ENVO:00000027
+    spring genus, source mint, node 5961, five ORGANISM assertions, NARROW and SEEDED
+    status. Later spring-water samples do not change the landform identity. Original
+    occurrence membership remains unavailable; this correction does not resolve the
+    separate mapping-endpoint contract #1398.'

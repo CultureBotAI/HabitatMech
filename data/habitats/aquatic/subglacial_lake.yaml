@@ -42,18 +42,6 @@ curation_history:
     ''subglacial lake''. That is evidence of a different kind from a label match —
     what the people who took the samples said the environment was. Study count is
     what is quoted rather than sample count because 122 of 140 unanimous paths are
-    one study repeating itself; this one is corroborated across 3. The Deep subsurface
-    half of the same tie; see the Freshwater path''s note. Grounding both is what
-    merges them into the one concept they describe. (source concept habitatmech:GOLD.7a082e8e9f)'
-- timestamp: '2026-08-20T00:00:00Z'
-  curator: claude-opus-5
-  action: GROUND
-  changes: 'Grounded to ENVO:03000120 ''subglacial lake'' (EXACT). Triad-evidence
-    review (#126): GOLD''s submitters annotate each biosample with a MIxS ENVO triad,
-    and this concept''s path carries 3 INDEPENDENT studies all asserting local = ENVO:03000120
-    ''subglacial lake''. That is evidence of a different kind from a label match —
-    what the people who took the samples said the environment was. Study count is
-    what is quoted rather than sample count because 122 of 140 unanimous paths are
     one study repeating itself; this one is corroborated across 3. This breaks a tie
     the lexical rule leaves unbroken by design. Two GOLD paths end in ''Subglacial
     lake'' at the SAME depth — under Freshwater and under Deep subsurface — and the
@@ -62,3 +50,20 @@ curation_history:
     not: three studies agree the local scale is subglacial lake. Both paths are grounded,
     which merges them, because a subglacial lake is one concept GOLD happens to file
     twice. (source concept habitatmech:GOLD.c5a94d7484)'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: GROUND
+  changes: 'Grounded to ENVO:03000120 ''subglacial lake'' (EXACT). ITEM evidence correction
+    (#1557; review 20261012T142057Z-subglacial_lake): the exact Deep subsurface >
+    Subglacial lake path has 3 API samples from 1 study, Gs0112339, with unanimous
+    local ENVO:03000120 subglacial lake. Its two study-path memberships are not independent
+    studies. Retain exact grounding because the path-specific local annotation, source
+    habitat label, current GOLD classification and ENVO lake-beneath-glacier definition
+    agree; this is one-study support, not three-study corroboration. The separate
+    Freshwater source has 7 API samples from 3 studies (Gs0114735, Gs0128895, Gs0154581);
+    those counts are not transferred to this path. Frozen gold_path_triads.tsv, gold_studies.tsv
+    and gold_path_biosamples.tsv provide the denominators; original full occurrence
+    inputs remain unavailable. Preserve both source identities, paths, organism-count
+    omissions and current merged habitat. The superseded 2026-08-20 rationale remains
+    in Git and the immutable predecessor review; separate context-parent and mapping-product
+    concerns are not resolved here. (source concept habitatmech:GOLD.7a082e8e9f)'
