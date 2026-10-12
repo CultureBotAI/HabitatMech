@@ -52,7 +52,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="../habitats/microbial-mat-envo-01000008.html">microbial mat</a>      <code class="curie">ENVO:01000008</code></li>
-  <li><a href="../habitats/hypersaline-soda-lake-habitatmech-gold-3098ee8fe8.html">Hypersaline soda lake</a>      <code class="curie">habitatmech:GOLD.3098ee8fe8</code></li>
 </ul>
 
 
@@ -67,6 +66,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">GROUND_AS_PARENT</span>
     <span class="meta">2026-08-12 · claude-opus-5</span>
     <p>ENVO:01000008 &#39;microbial mat&#39; attached as a parent, not adopted as the identity (NARROW). 20 GOLD paths share this leaf but differ in setting, not host, so each is a kind of microbial mat rather than microbial mat itself. Grounding them all to ENVO:01000008 would merge distinct environments; ENVO:01000008 is recorded as a parent instead. Path: Environmental &gt; Aquatic &gt; Non-marine Saline and Alkaline &gt; Hypersaline soda lake (source concept habitatmech:GOLD.2c1e36b661)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-12 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.3098ee8fe8 for habitatmech:GOLD.2c1e36b661 (Environmental &gt; Aquatic &gt; Non-marine Saline and Alkaline &gt; Hypersaline soda lake &gt; Microbial mats). Bounded hierarchy correction <a href="https://github.com/CultureBotAI/HabitatMech/issues/1397" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/1397</a> (20261012T073313Z-microbial_mats__cfca43d0). Hypersaline-soda-lake mat: later isolates explicitly come from microbial mats. Preserve two ORGANISM assertions and mat identity, excluding the whole-lake context genus. Suppress only this exact GOLD context contribution. Preserve source path/nodes/counts/units and independent justified parents. Source-identity questions and mapping-endpoint semantics remain separate; this does not certify SSSOM/KGX.</p>
   </li>
 </ol>
 

@@ -49,10 +49,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 </table>
 </div>
 
-<h2>Broader habitats</h2>
-<ul class="plain">
-  <li><a href="../habitats/inland-saline-or-alkaline-aquatic-environment-habitatmech-gold-ce244e62cd.html">inland saline or alkaline aquatic environment</a>      <code class="curie">habitatmech:GOLD.ce244e62cd</code></li>
-</ul>
 
 
 
@@ -66,6 +62,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">NOT_APPLICABLE</span>
     <span class="meta">2026-08-12 · claude-opus-5</span>
     <p>Marked NOT_APPLICABLE: the source concept does not denote a habitat. A temperature band qualifying the parent node, not a habitat. Belongs in environmental_parameters. Path: Environmental &gt; Aquatic &gt; Non-marine Saline and Alkaline &gt; Near-boilin (source concept habitatmech:GOLD.12b8a9a4c4)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-12 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.ce244e62cd for habitatmech:GOLD.12b8a9a4c4 (Environmental &gt; Aquatic &gt; Non-marine Saline and Alkaline &gt; Near-boiling (&gt;90C)). Bounded hierarchy correction <a href="https://github.com/CultureBotAI/HabitatMech/issues/2009" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2009</a> (20261012T073353Z-near_boiling_90c). Inland near-boiling source: the maintained ITEM decision interprets it as a temperature qualifier, yet it has strict habitat ancestry. Preserve the stated greater-than-90C classification without inventing measurements; resolve quality versus qualified habitat independently. Suppress only this exact GOLD context contribution. Preserve source path/nodes/counts/units and independent justified parents. Source-identity questions and mapping-endpoint semantics remain separate; this does not certify SSSOM/KGX.</p>
   </li>
 </ol>
 
