@@ -58,7 +58,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="../habitats/marsh-envo-00000035.html">marsh</a>      <code class="curie">ENVO:00000035</code></li>
-  <li><a href="../habitats/inland-saline-or-alkaline-aquatic-environment-habitatmech-gold-ce244e62cd.html">inland saline or alkaline aquatic environment</a>      <code class="curie">habitatmech:GOLD.ce244e62cd</code></li>
 </ul>
 
 
@@ -272,6 +271,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">SOURCE_SYNONYM_SCOPED</span>
     <span class="meta">2026-10-07 · seed_from_sources</span>
     <p>Retained GOLD label &#39;Salt marsh&#39; as RELATED_SYNONYM: a CLOSE source mapping does not establish exact lexical equivalence. Independent ontology synonyms and verbatim attestations are preserved (#1459).</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-12 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.ce244e62cd for habitatmech:GOLD.dbb1e00be3 (Environmental &gt; Aquatic &gt; Non-marine Saline and Alkaline &gt; Salt marsh). Exact source-context correction <a href="https://github.com/CultureBotAI/HabitatMech/issues/1451" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/1451</a> (20261012T111106Z-saline_marsh). The generic saline marsh includes coastal as well as inland settings. Its marsh genus is sound, but the inland-only GOLD environment cannot constrain the generic class. The later GOLD exact-path examples themselves include Sapelo Island marsh mud. Salt marsh remains a genuine ENVO exact alias; tidal marsh, wetland and salting have different typed scopes. Miyazaki F is an identifiable strain with a documented paddy-field origin that must be reconciled with the retained PREGO association. Suppress only this immediate GOLD contribution; preserve identity, source paths/nodes/counts/units, omitted counts and independent genera. Original occurrence membership remains unavailable. No source-scope, endpoint or SSSOM/KGX certification is implied.</p>
   </li>
 </ol>
 
