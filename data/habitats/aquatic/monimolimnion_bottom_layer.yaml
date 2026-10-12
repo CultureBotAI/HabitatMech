@@ -1,26 +1,45 @@
 identifier: habitatmech:GOLD.e070d4c2be
 label: Monimolimnion/Bottom layer
 habitat_category: AQUATIC
-grounding_status: UNGROUNDED
-mapping_status: SEEDED
+grounding_status: NARROW
+mapping_status: REVIEWED
 parent_habitats:
-- ENVO:00000199
+- ENVO:01000283
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8541
   source_label: Monimolimnion/Bottom layer
   source_path: Environmental > Aquatic > Freshwater > Meromictic lake > Monimolimnion/Bottom
     layer
+  mapping_predicate: skos:narrowMatch
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.e070d4c2be)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: GROUND_AS_PARENT
+  changes: 'ENVO:01000283 ''lake layer'' attached as a parent, not adopted as the
+    identity (NARROW). Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/1410
+    (20261012T073348Z-monimolimnion_bottom_layer). Monimolimnion: the persistently
+    unmixed deep layer is part of, not a kind of, a meromictic lake. Lake layer is
+    a supported genus; thermal hypolimnion is not automatically exact. Preserve distinct
+    source identity and absent organism counts. Use the verified broader genus ENVO:01000283
+    lake layer; retain the source mint rather than exact-merge. Official ENVO labels
+    and typed synonyms were inspected. Separate guarded exclusions remove false context
+    ancestry. Mapping-endpoint issue #1398 remains open; this decision is not export
+    certification. (source concept habitatmech:GOLD.e070d4c2be)'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00000199 for habitatmech:GOLD.e070d4c2be
+    (Environmental > Aquatic > Freshwater > Meromictic lake > Monimolimnion/Bottom
+    layer). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1245
+    (20261012T073348Z-monimolimnion_bottom_layer). Monimolimnion: the persistently
+    unmixed deep layer is part of, not a kind of, a meromictic lake. Lake layer is
+    a supported genus; thermal hypolimnion is not automatically exact. Preserve distinct
+    source identity and absent organism counts. Suppress only this exact GOLD context
+    contribution. Preserve source path/nodes/counts/units and independent justified
+    parents. Source-identity questions and mapping-endpoint semantics remain separate;
+    this does not certify SSSOM/KGX.'

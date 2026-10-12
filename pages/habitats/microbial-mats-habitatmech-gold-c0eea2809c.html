@@ -52,7 +52,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="../habitats/microbial-mat-envo-01000008.html">microbial mat</a>      <code class="curie">ENVO:01000008</code></li>
-  <li><a href="../habitats/puddle-habitatmech-gold-d250342fe1.html">Puddle</a>      <code class="curie">habitatmech:GOLD.d250342fe1</code></li>
 </ul>
 
 
@@ -67,6 +66,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">GROUND_AS_PARENT</span>
     <span class="meta">2026-08-12 · claude-opus-5</span>
     <p>ENVO:01000008 &#39;microbial mat&#39; attached as a parent, not adopted as the identity (NARROW). 20 GOLD paths share this leaf but differ in setting, not host, so each is a kind of microbial mat rather than microbial mat itself. Grounding them all to ENVO:01000008 would merge distinct environments; ENVO:01000008 is recorded as a parent instead. Path: Environmental &gt; Aquatic &gt; Freshwater &gt; Puddle &gt; Microbial mats (source concept habitatmech:GOLD.c0eea2809c)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-12 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.d250342fe1 for habitatmech:GOLD.c0eea2809c (Environmental &gt; Aquatic &gt; Freshwater &gt; Puddle &gt; Microbial mats). Bounded hierarchy correction <a href="https://github.com/CultureBotAI/HabitatMech/issues/1397" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/1397</a> (20261012T073311Z-microbial_mats__c3f0268a). Puddle mat: a later cyanobacterial mat beside a house supports a mat in a puddle, not identity as the puddle. Suppress only this exact GOLD context contribution. Preserve source path/nodes/counts/units and independent justified parents. Source-identity questions and mapping-endpoint semantics remain separate; this does not certify SSSOM/KGX.</p>
   </li>
 </ol>
 

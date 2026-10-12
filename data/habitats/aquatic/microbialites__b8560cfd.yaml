@@ -4,7 +4,6 @@ habitat_category: AQUATIC
 grounding_status: NARROW
 mapping_status: REVIEWED
 parent_habitats:
-- ENVO:01001020
 - ENVO:03600064
 source_attestations:
 - source: GOLD
@@ -27,3 +26,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:01001020 for habitatmech:GOLD.f46eba7b40
+    (Environmental > Aquatic > Non-marine Saline and Alkaline > Hypersaline lake >
+    Microbialites). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1406
+    (20261012T073328Z-microbialites__b8560cfd). Hypersaline-lake microbialite: carbonate
+    rock is not its whole lake. Preserve its source mint, microbialite reference,
+    and omitted organism count. Suppress only this exact GOLD context contribution.
+    Preserve source path/nodes/counts/units and independent justified parents. Source-identity
+    questions and mapping-endpoint semantics remain separate; this does not certify
+    SSSOM/KGX.'

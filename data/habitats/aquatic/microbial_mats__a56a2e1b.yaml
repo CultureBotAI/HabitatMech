@@ -4,8 +4,7 @@ habitat_category: AQUATIC
 grounding_status: NARROW
 mapping_status: REVIEWED
 parent_habitats:
-- ENVO:00000019
-- habitatmech:GOLD.b11bdfbd7c
+- ENVO:01000008
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7890
@@ -16,15 +15,33 @@ source_attestations:
   assertion_count: 7
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-13T00:00:00Z'
-  curator: claude-opus-5
-  action: GROUND_AS_PARENT
-  changes: 'ENVO:00000019 ''saline lake'' attached as a parent, not adopted as the
-    identity (NARROW). A soda lake is a specific alkaline saline lake; merging it
-    into saline lake loses the distinction and ENVO has no soda-lake term. Path: Environmental
-    > Aquatic > Non-marine Saline and Alkaline > Soda lake > Microbi (source concept
-    habitatmech:GOLD.2a0de7e155)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: GROUND_AS_PARENT
+  changes: 'ENVO:01000008 ''microbial mat'' attached as a parent, not adopted as the
+    identity (NARROW). Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/1403
+    (20261012T073303Z-microbial_mats__a56a2e1b). Soda-lake mat: the ITEM rationale
+    addresses the containing lake instead of the mat. Later Rhodobaca and Roseinatronobacter
+    samples explicitly name bacterial mats; replace the saline-lake genus with microbial
+    mat and independently remove the lake-context edge. Use the verified broader genus
+    ENVO:01000008 microbial mat; retain the source mint rather than exact-merge. Official
+    ENVO labels and typed synonyms were inspected. Separate guarded exclusions remove
+    false context ancestry. Mapping-endpoint issue #1398 remains open; this decision
+    is not export certification. (source concept habitatmech:GOLD.2a0de7e155)'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.b11bdfbd7c
+    for habitatmech:GOLD.2a0de7e155 (Environmental > Aquatic > Non-marine Saline and
+    Alkaline > Soda lake > Microbial mats). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1397
+    (20261012T073303Z-microbial_mats__a56a2e1b). Soda-lake mat: the ITEM rationale
+    addresses the containing lake instead of the mat. Later Rhodobaca and Roseinatronobacter
+    samples explicitly name bacterial mats; replace the saline-lake genus with microbial
+    mat and independently remove the lake-context edge. Suppress only this exact GOLD
+    context contribution. Preserve source path/nodes/counts/units and independent
+    justified parents. Source-identity questions and mapping-endpoint semantics remain
+    separate; this does not certify SSSOM/KGX.'

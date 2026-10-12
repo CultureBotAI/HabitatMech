@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: near_boiling_90c
+session:
+  id: 2026-10-12T073923Z-codex-gpt-5-1172c8
+  timestamp: '2026-10-12T07:39:23Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/pull/2008
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed aquatic habitat scope for near_boiling_90c
+  details: 'Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/2009
+    (20261012T073353Z-near_boiling_90c). Inland near-boiling source: the maintained ITEM decision
+    interprets it as a temperature qualifier, yet it has strict habitat ancestry. Preserve
+    the stated greater-than-90C classification without inventing measurements; resolve quality
+    versus qualified habitat independently. Suppress only this exact GOLD context contribution.
+    Preserve source path/nodes/counts/units and independent justified parents. Source-identity
+    questions and mapping-endpoint semantics remain separate; this does not certify SSSOM/KGX.
+    User authorized remediation/publication. Dry seeding and 35 focused regressions passed;
+    generated records, real map/site refresh and final gates remain pending at event creation.
+    Four CLASS decisions become ITEM through individual evidence assessment; no other status
+    promotion. Shared endpoint issue #1398 remains open.'

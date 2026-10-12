@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: mine_pit_pond
+session:
+  id: 2026-10-12T073934Z-codex-gpt-5-977f41
+  timestamp: '2026-10-12T07:39:34Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/pull/2008
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed aquatic habitat scope for mine_pit_pond
+  details: 'Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1409
+    (20261012T073340Z-mine_pit_pond). Mine pit pond: later asbestos-mine pond-water samples
+    support a real pond. The CLASS-only decision omits a pond genus; the existing Alkaline
+    parent is a non-habitat qualifier, not pond identity. Suppress only this exact GOLD context
+    contribution. Preserve source path/nodes/counts/units and independent justified parents.
+    Source-identity questions and mapping-endpoint semantics remain separate; this does not
+    certify SSSOM/KGX. User authorized remediation/publication. Dry seeding and 35 focused
+    regressions passed; generated records, real map/site refresh and final gates remain pending
+    at event creation. Four CLASS decisions become ITEM through individual evidence assessment;
+    no other status promotion. Shared endpoint issue #1398 remains open.'

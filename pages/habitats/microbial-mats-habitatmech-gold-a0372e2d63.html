@@ -51,7 +51,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 <h2>Broader habitats</h2>
 <ul class="plain">
-  <li><a href="../habitats/hot-spring-envo-00000051.html">hot spring</a>      <code class="curie">ENVO:00000051</code></li>
   <li><a href="../habitats/microbial-mat-envo-01000008.html">microbial mat</a>      <code class="curie">ENVO:01000008</code></li>
 </ul>
 
@@ -67,6 +66,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">GROUND_AS_PARENT</span>
     <span class="meta">2026-08-12 · claude-opus-5</span>
     <p>ENVO:01000008 &#39;microbial mat&#39; attached as a parent, not adopted as the identity (NARROW). 20 GOLD paths share this leaf but differ in setting, not host, so each is a kind of microbial mat rather than microbial mat itself. Grounding them all to ENVO:01000008 would merge distinct environments; ENVO:01000008 is recorded as a parent instead. Path: Environmental &gt; Aquatic &gt; Thermal springs &gt; Microbial mats (source concept habitatmech:GOLD.a0372e2d63)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-12 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution ENVO:00000051 for habitatmech:GOLD.a0372e2d63 (Environmental &gt; Aquatic &gt; Thermal springs &gt; Microbial mats). Bounded hierarchy correction <a href="https://github.com/CultureBotAI/HabitatMech/issues/1397" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/1397</a> (20261012T073238Z-microbial_mats__522cc2c0). Direct thermal-spring mat: later samples explicitly describe hot-spring microbial mats; retain both collapsed source nodes and two ORGANISM assertions, not whole-spring ancestry. Suppress only this exact GOLD context contribution. Preserve source path/nodes/counts/units and independent justified parents. Source-identity questions and mapping-endpoint semantics remain separate; this does not certify SSSOM/KGX.</p>
   </li>
 </ol>
 
