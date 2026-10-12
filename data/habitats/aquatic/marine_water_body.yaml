@@ -19,7 +19,6 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: ENVO
 parent_habitats:
-- ENVO:00002030
 - ENVO:01000617
 source_attestations:
 - source: BACDIVE
@@ -357,6 +356,8 @@ causal_graphs:
     for export below the euphotic zone, not a universal marine-waterbody structure.
     Buoyant particles and dark carbon fixation also contribute; this graph is not
     a complete carbon budget. Oxygen consumption is conditional on aerobic remineralization.
+    Community nodes represent interacting functional assemblages within this modeled
+    water column, not taxonomic clades.
   nodes:
   - node_id: marine_water_body
     label: marine water body
@@ -364,10 +365,10 @@ causal_graphs:
     grounding: ENVO:00001999
   - node_id: euphotic_zone
     label: euphotic zone
-    node_type: ENVIRONMENTAL_FACTOR
+    node_type: HABITAT
   - node_id: marine_phytoplankton
-    label: marine phytoplankton
-    node_type: TAXON
+    label: marine phytoplankton assemblage in the modeled water column
+    node_type: COMMUNITY
   - node_id: oxygenic_photosynthesis
     label: oxygenic photosynthesis
     node_type: PATHWAY
@@ -378,20 +379,20 @@ causal_graphs:
     label: sinking particles
     node_type: ENVIRONMENTAL_FACTOR
   - node_id: particle_associated_bacteria
-    label: particle-associated bacteria
-    node_type: TAXON
+    label: interacting particle-associated bacterial populations
+    node_type: COMMUNITY
   - node_id: extracellular_enzymes
     label: extracellular enzymes
-    node_type: TRAIT
+    node_type: GENE_OR_PROTEIN
   - node_id: dissolved_organic_matter
     label: dissolved organic matter
     node_type: CHEMICAL
   - node_id: free_living_heterotrophs
-    label: free-living heterotrophic bacteria
-    node_type: TAXON
+    label: interacting free-living heterotrophic bacterial populations
+    node_type: COMMUNITY
   - node_id: dark_ocean
     label: dark ocean
-    node_type: ENVIRONMENTAL_FACTOR
+    node_type: HABITAT
   - node_id: microbial_remineralization
     label: microbial remineralization
     node_type: COMMUNITY_PROCESS
@@ -612,3 +613,26 @@ curation_history:
   changes: 'Retained GOLD label ''Marine'' as RELATED_SYNONYM: a CLOSE source mapping
     does not establish exact lexical equivalence. Independent ontology synonyms and
     verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00002030 for habitatmech:GOLD.5856c699e4
+    (Environmental > Aquatic > Marine). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1300
+    (20261012T054256Z-marine_water_body F1). The physical lentic marine water body
+    is not an aquatic biome. Preserve BacDive 2040 STRAIN, GOLD 6420 ORGANISM and
+    PREGO 171 TAXON assertions, their CLOSE source mappings and 50 selected associations.
+    The revised 15-edge carbon-pump graph is explicitly conditional and its earlier
+    unrelated citation is no longer active. Current node types still confuse ecological
+    assemblages, habitats and enzyme products with taxa, exposures and a trait. Exclude
+    only the immediate GOLD contribution named here. Preserve source identity, node/path
+    provenance, counts/units, native status and independent parents. Unresolved source
+    identity, genus, synonym and mapping-endpoint findings remain separate.
+- timestamp: '2026-10-12T05:48:36Z'
+  curator: codex-gpt-5
+  action: UPDATE_CAUSAL_GRAPH
+  changes: Represented euphotic and dark-ocean contexts as habitats, explicitly bounded
+    interacting functional assemblages as communities, and extracellular enzymes as
+    gene products in PR 2003. Preserved every graph, node and edge ID, edge description
+    and evidence item; this does not reopen the resolved citation corrections in issue
+    1301.
+  llm_assisted: true

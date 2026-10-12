@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: meromictic_lake
+session:
+  id: 2026-10-12T055143Z-codex-gpt-5-ba236e
+  timestamp: '2026-10-12T05:51:43Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1220
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct bounded aquatic hierarchy or marine mechanism for meromictic_lake
+  details: Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1220
+    (20261012T054256Z-meromictic_lake F1). The defining property is persistent non-mixing
+    of water layers in a lake, not a universal low-salinity composition. Fresh water is a
+    sampled material, not a whole-lake genus. Preserve lake ancestry, the two GOLD nodes,
+    and the single PREGO association; omitted GOLD direct count is not ecological absence.
+    Exclude only the immediate GOLD contribution named here. Preserve source identity, node/path
+    provenance, counts/units, native status and independent parents. Unresolved source identity,
+    genus, synonym and mapping-endpoint findings remain separate. User authorized remediation
+    and publication. Dry seeding and all-overlay validation passed; final generated corpus,
+    regressions, map/site and full QC are pending at event creation. Actual completion results
+    belong in PR 2003 and successor observations. No scientific status promotion; unresolved
+    findings remain open.

@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: marine_sediment
+session:
+  id: 2026-10-12T055135Z-codex-gpt-5-7274b6
+  timestamp: '2026-10-12T05:51:35Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1293
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct bounded aquatic hierarchy or marine mechanism for marine_sediment
+  details: Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1293
+    (20261012T054255Z-marine_sediment F1). Marine sediment is deposited particulate material,
+    not a whole marine water body. Preserve sediment ancestry, 1035 GOLD ORGANISM assertions,
+    the 837-member Madin taxon pool, 25 displayed associations and seven source-attributed
+    qualitative parameter bands. The 14-edge sulfur graph needs conditional redox scope, claim-specific
+    evidence, correct carbon/sulfur wording and truthful node types; taxonomic aliases also
+    need versioned maintenance. Exclude only the immediate GOLD contribution named here. Preserve
+    source identity, node/path provenance, counts/units, native status and independent parents.
+    Unresolved source identity, genus, synonym and mapping-endpoint findings remain separate.
+    User authorized remediation and publication. Dry seeding and all-overlay validation passed;
+    final generated corpus, regressions, map/site and full QC are pending at event creation.
+    Actual completion results belong in PR 2003 and successor observations. No scientific
+    status promotion; unresolved findings remain open.

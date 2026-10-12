@@ -44,7 +44,6 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: ENVO
 parent_habitats:
-- ENVO:00000043
 - ENVO:01001209
 source_attestations:
 - source: GOLD
@@ -149,3 +148,18 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, MADIN, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00000043 for habitatmech:GOLD.8298c8eeda
+    (Environmental > Aquatic > Freshwater > Wetlands > Marsh). Bounded hierarchy correction
+    https://github.com/CultureBotAI/HabitatMech/issues/1302 (20261012T054256Z-marsh
+    F1). Generic marsh is a herbaceous wetland ecosystem, not the overlapping wetland
+    area. The GOLD Freshwater/Wetlands/Marsh source is narrower than generic marsh;
+    freshwater marsh ENVO:00000053 already exists. Preserve generic MADIN/PREGO evidence
+    and the 4 ORGANISM, 9 TAXON and 4 TAXON units without transferring all observations
+    to freshwater marsh. Ontology synonym scope and malformed PREGO variants require
+    separate attention. Exclude only the immediate GOLD contribution named here. Preserve
+    source identity, node/path provenance, counts/units, native status and independent
+    parents. Unresolved source identity, genus, synonym and mapping-endpoint findings
+    remain separate.

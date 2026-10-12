@@ -51,7 +51,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 <h2>Broader habitats</h2>
 <ul class="plain">
-  <li><a href="../habitats/marine-water-body-envo-00001999.html">marine water body</a>      <code class="curie">ENVO:00001999</code></li>
   <li><a href="http://purl.obolibrary.org/obo/ENVO_01001201">marine environmental zone</a>      <code class="curie">ENVO:01001201</code></li>
 </ul>
 
@@ -75,6 +74,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">SOURCE_SYNONYM_SCOPED</span>
     <span class="meta">2026-10-07 · seed_from_sources</span>
     <p>Retained GOLD label &#39;Supratidal zone&#39; as RELATED_SYNONYM: a CLOSE source mapping does not establish exact lexical equivalence. Independent ontology synonyms and verbatim attestations are preserved (#1459).</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-12 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution ENVO:00001999 for habitatmech:GOLD.600724f138 (Environmental &gt; Aquatic &gt; Marine &gt; Supratidal zone). Bounded hierarchy correction <a href="https://github.com/CultureBotAI/HabitatMech/issues/1297" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/1297</a> (20261012T054255Z-marine_supra_littoral_zone F1). The source Supratidal zone is explicitly CLOSE to the marine splash/spray zone above ordinary inundation, not a whole marine water body. Preserve environmental-zone ancestry and ITEM provenance. Ontology related and broad synonyms are promoted to EXACT independently of the correctly retained CLOSE source relation. Exclude only the immediate GOLD contribution named here. Preserve source identity, node/path provenance, counts/units, native status and independent parents. Unresolved source identity, genus, synonym and mapping-endpoint findings remain separate.</p>
   </li>
 </ol>
 

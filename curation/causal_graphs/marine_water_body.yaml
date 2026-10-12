@@ -6,7 +6,8 @@ causal_graphs:
     depth for export below the euphotic zone, not a universal marine-waterbody
     structure. Buoyant particles and dark carbon fixation also contribute;
     this graph is not a complete carbon budget. Oxygen consumption is conditional
-    on aerobic remineralization.
+    on aerobic remineralization. Community nodes represent interacting functional
+    assemblages within this modeled water column, not taxonomic clades.
   nodes:
   - node_id: marine_water_body
     label: marine water body
@@ -14,10 +15,10 @@ causal_graphs:
     grounding: ENVO:00001999
   - node_id: euphotic_zone
     label: euphotic zone
-    node_type: ENVIRONMENTAL_FACTOR
+    node_type: HABITAT
   - node_id: marine_phytoplankton
-    label: marine phytoplankton
-    node_type: TAXON
+    label: marine phytoplankton assemblage in the modeled water column
+    node_type: COMMUNITY
   - node_id: oxygenic_photosynthesis
     label: oxygenic photosynthesis
     node_type: PATHWAY
@@ -28,20 +29,20 @@ causal_graphs:
     label: sinking particles
     node_type: ENVIRONMENTAL_FACTOR
   - node_id: particle_associated_bacteria
-    label: particle-associated bacteria
-    node_type: TAXON
+    label: interacting particle-associated bacterial populations
+    node_type: COMMUNITY
   - node_id: extracellular_enzymes
     label: extracellular enzymes
-    node_type: TRAIT
+    node_type: GENE_OR_PROTEIN
   - node_id: dissolved_organic_matter
     label: dissolved organic matter
     node_type: CHEMICAL
   - node_id: free_living_heterotrophs
-    label: free-living heterotrophic bacteria
-    node_type: TAXON
+    label: interacting free-living heterotrophic bacterial populations
+    node_type: COMMUNITY
   - node_id: dark_ocean
     label: dark ocean
-    node_type: ENVIRONMENTAL_FACTOR
+    node_type: HABITAT
   - node_id: microbial_remineralization
     label: microbial remineralization
     node_type: COMMUNITY_PROCESS
@@ -216,4 +217,13 @@ curation_history:
     1301, bounded the graph to an oceanic pathway, replaced unsupported selection
     sufficiency with particle-associated activity, and retained aerobic scope.
     Original graph/node/edge IDs and the earlier audit event are preserved.
+  llm_assisted: true
+- timestamp: '2026-10-12T05:48:36Z'
+  curator: codex-gpt-5
+  action: UPDATE_CAUSAL_GRAPH
+  changes: Represented euphotic and dark-ocean contexts as habitats, explicitly
+    bounded interacting functional assemblages as communities, and extracellular
+    enzymes as gene products in PR 2003. Preserved every graph, node and edge ID,
+    edge description and evidence item; this does not reopen the resolved
+    citation corrections in issue 1301.
   llm_assisted: true

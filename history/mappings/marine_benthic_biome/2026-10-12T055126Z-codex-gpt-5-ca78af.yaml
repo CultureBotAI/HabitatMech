@@ -1,0 +1,44 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: marine_benthic_biome
+session:
+  id: 2026-10-12T055126Z-codex-gpt-5-ca78af
+  timestamp: '2026-10-12T05:51:26Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1280
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct bounded aquatic hierarchy or marine mechanism for marine_benthic_biome
+  details: Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1280
+    (20261012T054252Z-marine_benthic_biome F1). The seafloor biome correctly retains marine
+    biome ancestry, but GROUND/CLOSE merges GOLD Freshwater/Desert springs/Benthic into this
+    marine identity. That is a wrong-source merge, not harmless lexical similarity. Additional
+    marine Oceanic and whole-waterbody parents confuse water-column context with the benthic
+    biome. Four ITEM decisions reproduce REVIEWED, which does not establish scientific correctness;
+    preserve the 2067-member PREGO candidate pool. Exclude only the immediate GOLD contribution
+    named here. Preserve source identity, node/path provenance, counts/units, native status
+    and independent parents. Unresolved source identity, genus, synonym and mapping-endpoint
+    findings remain separate. Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1280
+    (20261012T054252Z-marine_benthic_biome F1). The seafloor biome correctly retains marine
+    biome ancestry, but GROUND/CLOSE merges GOLD Freshwater/Desert springs/Benthic into this
+    marine identity. That is a wrong-source merge, not harmless lexical similarity. Additional
+    marine Oceanic and whole-waterbody parents confuse water-column context with the benthic
+    biome. Four ITEM decisions reproduce REVIEWED, which does not establish scientific correctness;
+    preserve the 2067-member PREGO candidate pool. Exclude only the immediate GOLD contribution
+    named here. Preserve source identity, node/path provenance, counts/units, native status
+    and independent parents. Unresolved source identity, genus, synonym and mapping-endpoint
+    findings remain separate. User authorized remediation and publication. Dry seeding and
+    all-overlay validation passed; final generated corpus, regressions, map/site and full
+    QC are pending at event creation. Actual completion results belong in PR 2003 and successor
+    observations. No scientific status promotion; unresolved findings remain open.

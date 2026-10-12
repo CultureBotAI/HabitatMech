@@ -11,7 +11,6 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: GOLD
 parent_habitats:
-- ENVO:00000021
 - ENVO:00002269
 - ENVO:01000813
 source_attestations:
@@ -32,3 +31,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00000021 for habitatmech:GOLD.7defa41cfd
+    (Environmental > Aquatic > Freshwater > Lake > Metalimnion/Thermocline). Bounded
+    hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1245 (20261012T054257Z-metalimnion
+    F1). This is a thermocline within a lake, not a whole freshwater lake. Preserve
+    thermocline and astronomical-body-part ontology parents and the ITEM slash-label
+    rationale. The source freshwater-lake context should not become is-a; do not equate
+    generic thermoclines in all settings with this lake-specific layer. Exclude only
+    the immediate GOLD contribution named here. Preserve source identity, node/path
+    provenance, counts/units, native status and independent parents. Unresolved source
+    identity, genus, synonym and mapping-endpoint findings remain separate.

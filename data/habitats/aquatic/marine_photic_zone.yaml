@@ -35,7 +35,6 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: PREGO
 parent_habitats:
-- ENVO:00000207
 - ENVO:01000295
 source_attestations:
 - source: GOLD
@@ -223,3 +222,17 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00000207 for habitatmech:GOLD.7d154f5642
+    (Environmental > Aquatic > Marine > Oceanic > Photic zone). Bounded hierarchy
+    correction https://github.com/CultureBotAI/HabitatMech/issues/1289 (20261012T054254Z-marine_photic_zone
+    F1). The photosynthesis-supporting marine layer is not universally restricted
+    to off-shelf oceanic waters. NOAA coastal euphotic-depth guidance independently
+    supports coastal light-defined zones. Preserve marine-layer ancestry, 25 GOLD
+    ORGANISM assertions and the 1607-member PREGO pool; reassess qualified Oceanic
+    source exactness without imposing a universal 200-m measurement. Exclude only
+    the immediate GOLD contribution named here. Preserve source identity, node/path
+    provenance, counts/units, native status and independent parents. Unresolved source
+    identity, genus, synonym and mapping-endpoint findings remain separate.

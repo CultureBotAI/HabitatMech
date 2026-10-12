@@ -11,7 +11,6 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: GOLD
 parent_habitats:
-- ENVO:00001999
 - ENVO:01000407
 source_attestations:
 - source: GOLD
@@ -33,3 +32,17 @@ curation_history:
   changes: 'Retained GOLD label ''Littoral zone'' as RELATED_SYNONYM, not exact: its
     canonical ontology identity ENVO:01000407 is a strict ancestor of ENVO:01000125.
     Source attestation remains verbatim (#1459).'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00001999 for habitatmech:GOLD.2a3e25f443
+    (Environmental > Aquatic > Marine > Littoral zone). Bounded hierarchy correction
+    https://github.com/CultureBotAI/HabitatMech/issues/1283 (20261012T054253Z-marine_littoral_zone
+    F1). The source and ENVO denote the coastal zone extending approximately from
+    spray level to the continental shelf edge. That zone is not a whole marine water
+    body. Retain littoral-zone ancestry and the three ORGANISM assertions across two
+    source nodes. The inherited coninental spelling is an upstream typo, not a serializer
+    defect. Exclude only the immediate GOLD contribution named here. Preserve source
+    identity, node/path provenance, counts/units, native status and independent parents.
+    Unresolved source identity, genus, synonym and mapping-endpoint findings remain
+    separate.

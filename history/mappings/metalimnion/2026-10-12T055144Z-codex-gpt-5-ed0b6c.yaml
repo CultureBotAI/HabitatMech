@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: metalimnion
+session:
+  id: 2026-10-12T055144Z-codex-gpt-5-ed0b6c
+  timestamp: '2026-10-12T05:51:44Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1245
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct bounded aquatic hierarchy or marine mechanism for metalimnion
+  details: Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1245
+    (20261012T054257Z-metalimnion F1). This is a thermocline within a lake, not a whole freshwater
+    lake. Preserve thermocline and astronomical-body-part ontology parents and the ITEM slash-label
+    rationale. The source freshwater-lake context should not become is-a; do not equate generic
+    thermoclines in all settings with this lake-specific layer. Exclude only the immediate
+    GOLD contribution named here. Preserve source identity, node/path provenance, counts/units,
+    native status and independent parents. Unresolved source identity, genus, synonym and
+    mapping-endpoint findings remain separate. User authorized remediation and publication.
+    Dry seeding and all-overlay validation passed; final generated corpus, regressions, map/site
+    and full QC are pending at event creation. Actual completion results belong in PR 2003
+    and successor observations. No scientific status promotion; unresolved findings remain
+    open.
