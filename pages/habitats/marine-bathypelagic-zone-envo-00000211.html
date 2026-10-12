@@ -52,7 +52,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="../habitats/marine-aphotic-zone-envo-00000210.html">marine aphotic zone</a>      <code class="curie">ENVO:00000210</code></li>
-  <li><a href="../habitats/marine-water-body-envo-00001999.html">marine water body</a>      <code class="curie">ENVO:00001999</code></li>
 </ul>
 
 
@@ -70,6 +69,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">GROUND</span>
     <span class="meta">2026-08-12 · claude-opus-5</span>
     <p>Grounded to ENVO:00000211 &#39;marine bathypelagic zone&#39; (EXACT). GOLD&#39;s Marine &gt; Bathypelagic is exactly this ENVO zone. Path: Environmental &gt; Aquatic &gt; Marine &gt; Bathypelagic (source concept habitatmech:GOLD.e02911103f)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-12 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution ENVO:00001999 for habitatmech:GOLD.e02911103f (Environmental &gt; Aquatic &gt; Marine &gt; Bathypelagic). Bounded hierarchy correction <a href="https://github.com/CultureBotAI/HabitatMech/issues/1275" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/1275</a> (20261012T054252Z-marine_bathypelagic_zone F1). The GOLD Bathypelagic path maps to the ENVO thermal/vertical-zone concept with aphotic ancestry. The extra whole marine-waterbody parent is not a genus. Preserve the two-node provenance and 68 ORGANISM assertions. The copied definition begins The one of an ocean, an upstream typo; a wording repair must not silently replace its thermal convention. Exclude only the immediate GOLD contribution named here. Preserve source identity, node/path provenance, counts/units, native status and independent parents. Unresolved source identity, genus, synonym and mapping-endpoint findings remain separate.</p>
   </li>
 </ol>
 

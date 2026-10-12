@@ -52,7 +52,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="../habitats/microbial-mat-envo-01000008.html">microbial mat</a>      <code class="curie">ENVO:01000008</code></li>
-  <li><a href="../habitats/freshwater-river-envo-01000297.html">freshwater river</a>      <code class="curie">ENVO:01000297</code></li>
 </ul>
 
 
@@ -67,6 +66,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">GROUND_AS_PARENT</span>
     <span class="meta">2026-08-12 · claude-opus-5</span>
     <p>ENVO:01000008 &#39;microbial mat&#39; attached as a parent, not adopted as the identity (NARROW). 20 GOLD paths share this leaf but differ in setting, not host, so each is a kind of microbial mat rather than microbial mat itself. Grounding them all to ENVO:01000008 would merge distinct environments; ENVO:01000008 is recorded as a parent instead. Path: Environmental &gt; Aquatic &gt; Freshwater &gt; River &gt; Microbial mats (source concept habitatmech:GOLD.ff22e48912)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-12 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution ENVO:01000297 for habitatmech:GOLD.ff22e48912 (Environmental &gt; Aquatic &gt; Freshwater &gt; River &gt; Microbial mats). Bounded hierarchy correction <a href="https://github.com/CultureBotAI/HabitatMech/issues/1397" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/1397</a> (20261012T054258Z-microbial_mats__200e1828 F1). The river microbial mats source has an ITEM GROUND_AS_PARENT decision and one ORGANISM assertion. Keep its separate mint and microbial-mat genus; freshwater river is the setting, not an is-a superclass. Do not collapse it into other mats or treat the one organism as the later BioSample census. Exclude only the immediate GOLD contribution named here. Preserve source identity, node/path provenance, counts/units, native status and independent parents. Unresolved source identity, genus, synonym and mapping-endpoint findings remain separate.</p>
   </li>
 </ol>
 

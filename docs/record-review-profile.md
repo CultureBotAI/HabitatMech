@@ -32,6 +32,14 @@ success. New observations are immutable; link both saved files in the final
 response. Missing dependencies or required checks are an explicit blocked output
 step or partial assessment, not permission to save unvalidated prose.
 
+Before saving, check authored prose strings for trailing whitespace, especially
+when appending optional text. Trim the draft prose, not source quotations or
+captured bytes. Native schema validation does not imply whitespace cleanliness.
+Inspect the derived Markdown before committing and run a diff check against the
+trusted branch base, not only the unstaged diff. Once saved, review bundles are
+immutable: report any formatting defect explicitly rather than rewriting either
+file or claiming a clean branch-wide diff check.
+
 ## Native questions and generated ownership
 
 Review generated `data/habitats/` records together with every contributing

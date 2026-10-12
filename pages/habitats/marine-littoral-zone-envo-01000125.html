@@ -52,7 +52,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 <h2>Broader habitats</h2>
 <ul class="plain">
-  <li><a href="../habitats/marine-water-body-envo-00001999.html">marine water body</a>      <code class="curie">ENVO:00001999</code></li>
   <li><a href="http://purl.obolibrary.org/obo/ENVO_01000407">littoral zone</a>      <code class="curie">ENVO:01000407</code></li>
 </ul>
 
@@ -71,6 +70,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">SOURCE_SYNONYM_SCOPED</span>
     <span class="meta">2026-10-07 · seed_from_sources</span>
     <p>Retained GOLD label &#39;Littoral zone&#39; as RELATED_SYNONYM, not exact: its canonical ontology identity ENVO:01000407 is a strict ancestor of ENVO:01000125. Source attestation remains verbatim (#1459).</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-12 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution ENVO:00001999 for habitatmech:GOLD.2a3e25f443 (Environmental &gt; Aquatic &gt; Marine &gt; Littoral zone). Bounded hierarchy correction <a href="https://github.com/CultureBotAI/HabitatMech/issues/1283" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/1283</a> (20261012T054253Z-marine_littoral_zone F1). The source and ENVO denote the coastal zone extending approximately from spray level to the continental shelf edge. That zone is not a whole marine water body. Retain littoral-zone ancestry and the three ORGANISM assertions across two source nodes. The inherited coninental spelling is an upstream typo, not a serializer defect. Exclude only the immediate GOLD contribution named here. Preserve source identity, node/path provenance, counts/units, native status and independent parents. Unresolved source identity, genus, synonym and mapping-endpoint findings remain separate.</p>
   </li>
 </ol>
 

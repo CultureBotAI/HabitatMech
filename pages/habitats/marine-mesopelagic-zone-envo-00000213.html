@@ -58,7 +58,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="../habitats/marine-aphotic-zone-envo-00000210.html">marine aphotic zone</a>      <code class="curie">ENVO:00000210</code></li>
-  <li><a href="../habitats/marine-water-body-envo-00001999.html">marine water body</a>      <code class="curie">ENVO:00001999</code></li>
 </ul>
 
 
@@ -120,6 +119,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">REVIEW</span>
     <span class="meta">2026-08-13 · claude-opus-5</span>
     <p>Reviewed and endorsed the seeder&#39;s own resolution. Multi-source review pass: this record is attested by more than one independent vocabulary, and this source&#39;s label or path was read against the record&#39;s ontology term to check the merge is right. It agrees. Source concepts in the same pass whose labels did not agree were re-decided rather than endorsed; see the pass&#39;s other decisions of the same date. (source concept habitatmech:PREGO.33f83f4f4c)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-12 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution ENVO:00001999 for habitatmech:GOLD.76bc4edc73 (Environmental &gt; Aquatic &gt; Marine &gt; Mesopelagic). Bounded hierarchy correction <a href="https://github.com/CultureBotAI/HabitatMech/issues/1285" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/1285</a> (20261012T054253Z-marine_mesopelagic_zone F1). The ENVO vertical/thermal definition and aphotic parent support the mesopelagic identity under the pinned convention. Whole marine water body is a contextual GOLD contribution, not a genus. Keep 34 ORGANISM assertions, four PREGO TAXON associations and the two-node note separate. NOAA uses a light-defined twilight convention; these are not silently interchangeable quantitative boundaries. Exclude only the immediate GOLD contribution named here. Preserve source identity, node/path provenance, counts/units, native status and independent parents. Unresolved source identity, genus, synonym and mapping-endpoint findings remain separate.</p>
   </li>
 </ol>
 
