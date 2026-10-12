@@ -472,8 +472,8 @@ def test_intertidal_pool_and_bush_exclusions_have_exact_scope(monkeypatch):
     assert "2 GOLD ecosystem node ids" in after[pool]["source_attestations"][0]["notes"]
     assert zone in after["ENVO:00000241"]["parent_habitats"]
     assert "ENVO:00000192" in after["ENVO:00000241"]["parent_habitats"]
-    # This child is unchanged, not scientifically endorsed by the parent correction.
-    assert pool in after["habitatmech:GOLD.943a41f487"]["parent_habitats"]
+    # Parent exclusions do not alter children; their own curation remains independent.
+    assert after["habitatmech:GOLD.943a41f487"] == before["habitatmech:GOLD.943a41f487"]
     assert after["habitatmech:GOLD.d29a0aa94b"] == before["habitatmech:GOLD.d29a0aa94b"]
 
 
