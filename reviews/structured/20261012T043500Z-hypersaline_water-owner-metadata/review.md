@@ -1,0 +1,492 @@
+# hypersaline_water review owner metadata correction
+
+- Review: 20261012T043500Z-hypersaline_water-owner-metadata
+- Repository: CultureBotAI/HabitatMech
+- Started UTC: 2026-10-12T04:34:04.866311Z
+- Finished UTC: 2026-10-12T04:35:00.327992Z
+- Reviewer: OpenAI Codex (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: false
+
+## Summary
+
+Metadata-only correction of the maintained owner for the still-open taxonomy finding on hypersaline_water. The exact frozen rows are in data/raw/prego_habitat_taxa.tsv, not data/raw/prego_habitats.tsv. The record-level owner list already named the correct taxa inventory, but the finding/action owner was inaccurate. This successor corrects that pointer without changing any source row, habitat, taxonomy judgment, scientific status or earlier review. F1 remains confirmed and open under #1244; literature and taxonomic identity were not reassessed. Every other finding retains its previous disposition and is outside this metadata-only scope.
+
+## Scope And Provenance
+
+Only the finding/action owner pointer for F1; not a new scientific review.
+
+Selection: Final adversarial source-row trace; no added scientific coverage.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 33ce86185c74f8ef8ec3292e25c0d6c26257bd3f.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| ENVO:00002012 | data/habitats/aquatic/hypersaline_water.yaml | generated | hypersaline water |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Exact source row and ignored-inclusive owner search | passed | True | ENVO:00002012 | data/raw/prego_habitat_taxa.tsv:5380:ENVO:00001999	15	NCBITaxon:158080		4	TRUE	environmental_samples	<br>data/raw/prego_habitat_taxa.tsv:5620:ENVO:00002012	9	NCBITaxon:230105		1.04132	TRUE	environmental_samples	<br>data/raw/prego_habitat_taxa.tsv:5622:ENVO:00002012	11	NCBITaxon:158080		1.03761	TRUE	environmental_samples	<br>data/raw/prego_habitat_taxa.tsv:5625:ENVO:00002012	14	NCBITaxon:48547		1.01893	TRUE	environmental_samples	<br>data/raw/prego_habitat_taxa.tsv:5983:ENVO:00002113	22	NCBITaxon:158080		4	TRUE	environmental_samples	<br>data/raw/prego_habitat_taxa.tsv:7445:ENVO:01000029	16	NCBITaxon:158080		4	TRUE	environmental_samples	<br>data/raw/prego_habitat_taxa.tsv:7762:ENVO:01000143	16	NCBITaxon:158080		4	TRUE	environmental_samples |
+| Required exact-base workflows and full QC | passed | True | ENVO:00002012 | Authoritative full QC passed 913 tests with 3 skipped on exact head 33ce86185c74f8ef8ec3292e25c0d6c26257bd3f; all required workflows succeeded. https://github.com/CultureBotAI/HabitatMech/actions/runs/38203455796 |
+
+## Scientific And Domain Assessments
+
+### Correct finding/action source owner
+
+provenance: supported. Targets: ENVO:00002012.
+
+Metadata-only correction of the maintained owner for the still-open taxonomy finding on hypersaline_water. The exact frozen rows are in data/raw/prego_habitat_taxa.tsv, not data/raw/prego_habitats.tsv. The record-level owner list already named the correct taxa inventory, but the finding/action owner was inaccurate. This successor corrects that pointer without changing any source row, habitat, taxonomy judgment, scientific status or earlier review. F1 remains confirmed and open under #1244; literature and taxonomic identity were not reassessed. Every other finding retains its previous disposition and is outside this metadata-only scope.
+
+## Findings
+
+### F1: Merged taxon IDs and broad-rank associations need versioned maintenance
+
+minor / open / confirmed; issue key: envo-00002012-taxonomy-alias-maintenance.
+
+NCBI resolves frozen230105 to40223 and158080 to141390. ID48547 resolves to Ophiura at genus rank. Historical spellings resolve as aliases; no unsupported microbial replacement or occurrence deletion is justified.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Verify source occurrences and update taxonomy through a versioned source process, preserving ranks, original IDs, scores and corroborations. Inspect the broad non-microbial association rather than guessing a replacement.
+
+- Change only maintained inputs after source-level assessment; preserve independent true parents, identities, source counts/units and lifecycle.
+- Append required history, add focused regressions, inspect a seed canary and regenerate affected products without hand-editing records or pages.
+- Pass schema, strict, product-label, corpus reproduction, causal/history, review-integrity and full QC; save a linked successor for every finding disposition.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| PRIOR | reviews/structured/20261012T035123Z-hypersaline_water/review.yaml | context_only | Inspected immediate predecessor finding and action owner, with unchanged open taxonomy judgment. Other findings are not superseded by this metadata-only observation. |
+| ROW | data/raw/prego_habitat_taxa.tsv; data/raw/prego_habitat_taxa.tsv:5620:ENVO:00002012	9	NCBITaxon:230105		1.04132	TRUE	environmental_samples	; data/raw/prego_habitat_taxa.tsv:5622:ENVO:00002012	11	NCBITaxon:158080		1.03761	TRUE	environmental_samples	; data/raw/prego_habitat_taxa.tsv:5625:ENVO:00002012	14	NCBITaxon:48547		1.01893	TRUE	environmental_samples	 | supports | Exact frozen rows inspected with TSV parsing; the related habitat inventory and extractor search were also checked, including ignored files. This proves storage ownership, not biological identity. |
+
+## Limits And Additional Notes
+
+- Deterministic provenance-only review; no new literature assessment or scientific-record coverage.
+- The original taxonomy finding remains open. This owner correction does not establish a new biological identity or authorize source occurrence changes.
+- Final review-integrity and PR checks must cover this new bundle before merge. Earlier bundles remain immutable.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261012T043500Z-hypersaline_water-owner-metadata
+kind: record
+repository: CultureBotAI/HabitatMech
+title: hypersaline_water review owner metadata correction
+started_at: '2026-10-12T04:34:04.866311Z'
+finished_at: '2026-10-12T04:35:00.327992Z'
+reviewer:
+  identity: OpenAI Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Agent has participated in repository curation; this is not independent
+    approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: false
+summary: 'Metadata-only correction of the maintained owner for the still-open taxonomy
+  finding on hypersaline_water. The exact frozen rows are in data/raw/prego_habitat_taxa.tsv,
+  not data/raw/prego_habitats.tsv. The record-level owner list already named the correct
+  taxa inventory, but the finding/action owner was inaccurate. This successor corrects
+  that pointer without changing any source row, habitat, taxonomy judgment, scientific
+  status or earlier review. F1 remains confirmed and open under #1244; literature
+  and taxonomic identity were not reassessed. Every other finding retains its previous
+  disposition and is outside this metadata-only scope.'
+source:
+  git_revision: 33ce86185c74f8ef8ec3292e25c0d6c26257bd3f
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: conf/record_review.yaml
+    sha256: c2f5d0eb4c5744f5fe354c92184ddab144dc2688dba952b032b4f3d597bc08d6
+    role: context
+  - path: conf/sources.yaml
+    sha256: a8e069f9278068b57fa234f43e03c8d893f857827b83fd10cfa92d6815aed642
+    role: context
+  - path: curation/causal_graphs/hypersaline_water.yaml
+    sha256: e974d5e9cc241ac9daf3542ba11156915cfb7786e683ad5ad212af5b35006158
+    role: context
+  - path: curation/causal_graphs/liquid_water.yaml
+    sha256: 1e6033c72342a74125774b6fc3f7c2438a32046efed57a6e05f90a93fe39c33d
+    role: context
+  - path: curation/decisions.tsv
+    sha256: 2fd5aec7ac1710ede2405849e78dd0423c253d72b43676230f72b9905bae99dd
+    role: context
+  - path: curation/definition_source_label_exclusions.tsv
+    sha256: 2d41fc93db4939122b3909f2a412b84b679703948b10d9f02e12021442f71407
+    role: context
+  - path: curation/external_xrefs.tsv
+    sha256: cf8394a6ab22e35efd9e252aef422018226280830bf816a39bf4f2256ff75ad5
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: 1934ff1b8a27ba93174a6b656dc489506c47c3aae8204db89b7516ae2cc0886f
+    role: context
+  - path: curation/redirects_retracted.tsv
+    sha256: 0f1e9af8881f5a5db19f87de06b3b3d1800cfac8101699b380388c0a1a1e9a19
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 3f2ce04805defe5ff65dc20988cc72bc94d4636b3140eb1311017866bdc0ea0a
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: b59b9e800a918135e3915145d4d8098bb48dcea36a312b3004c594a57d221ae9
+    role: context
+  - path: data/habitats/aquatic/hypersaline_water.yaml
+    sha256: 9973fdce7cea4fc02772925133283341062dbe1b273389d6d1db80e6c4391a5d
+    role: target
+  - path: data/habitats/aquatic/liquid_water.yaml
+    sha256: b91ec338644558b9184fbbb52ace39758ffacaf10f76eb8c52bd854a389c9fd2
+    role: context
+  - path: data/habitats/aquatic/saline_water.yaml
+    sha256: 0114f8f1def88f8f8ce2b675bdd8b96e44ca92248424969288ebaa803fa8c248
+    role: context
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: 36df8306394c06c352b73e0bf7b47a2858784cedac7389a24d0b78f593ece646
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: f7aa39ee762d94f1902d9f08f328cb897bc543e4e226057eb4770d24bfcc6eb5
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/other/hypersaline_water/2026-10-03T134744Z-codex-2682ea.yaml
+    sha256: 38dfc7ec07892e4aeb8a218c9f7667ee8ab4831767610f4714a5dad5560836c3
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reports/yaml_record_review/20260921T102035Z-acidic_hypersaline_lake.md
+    sha256: a4ae902971e85175a1f9f1e3751d49c071458fb8fa319e015b2cc65a1f8e1786
+    role: context
+  - path: reports/yaml_record_review/20260923T144527Z-brine.md
+    sha256: e196cffcb274d8b1efe9876865171a07bc3d4a1249f5969ec7063fa9b5c1dd1b
+    role: context
+  - path: reports/yaml_record_review/20261003T133723Z-hypersaline_water.md
+    sha256: 008b0bf204914f7906b6a6e7d2de99cc3ed8eb7b279c9ad8c1b4d4c075dbefc8
+    role: context
+  - path: reports/yaml_record_review/20261003T133956Z-hypersaline_water_environment.md
+    sha256: 30bb818f9cdc80c5e95c286a901346eb63e8c2b73ed1a03f4c4bca2312b07670
+    role: context
+  - path: reports/yaml_record_review/20261004T174652Z-microbial_mats__a2a31086.md
+    sha256: ccb822101ead8ee9192ebe4bed10cf520c269030c4a411b5bd671997c342f61b
+    role: context
+  - path: reports/yaml_record_review/20261005T053542Z-saline_water__863799b0.md
+    sha256: 9457ffbc9fd790ee36794e86d2800777886501c8b28ac6a54fe9a933691c6a41
+    role: context
+  - path: reports/yaml_record_review/20261005T055049Z-salt_crystallizer_ponds.md
+    sha256: a91b34740b0e1cf205b8fc125b6ac7c40a4ab9f23c9d9eed9549827e5189ef10
+    role: context
+  - path: reports/yaml_record_review/20261005T081815Z-sea_ice_brine.md
+    sha256: bd07be17c0f35764777a70e51c875c667db2503fb140e31501c08ba7fd818fbc
+    role: context
+  - path: reviews/structured/20261012T035123Z-hypersaline_water/review.yaml
+    sha256: 6c82d83b69e139ca9c78fd6746e430ac513c97f0e23461ed6334cb5a9e0e170e
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/extract_gold_biosamples.py
+    sha256: b6a2773c86fe718e1ca0b1d7b32709f0eee491ac813655e310aa0817c0fec31b
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: 4bf5391d25ff48a2d81eb3821af6582de063fd0391440973d309dfd93016490c
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: src/habitatmech/extract.py
+    sha256: 4d9397bda649381a5daf81937369531c6dc8b4518d6c7047e6f3f14e605bf860
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 7e3cda3dadb9c7462498e5014bf38ef730068212f8f9cb131e3fce383c21d10e
+    role: context
+  - path: src/habitatmech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+  - path: src/habitatmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 4adf105e23d75c3563a516a0c160623d1065df7fcb2f31b7a0a0a8303d0401be
+    role: context
+targets:
+- target_id: ENVO:00002012
+  path: data/habitats/aquatic/hypersaline_water.yaml
+  label: hypersaline water
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Source-specific identity and lifecycle decisions
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Authored definitions and genus
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Guarded source context-parent exclusions
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_terms.tsv
+    role: Pinned ontology labels, definitions and synonyms
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_subclass_edges.tsv
+    role: Pinned ontology hierarchy
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Harmonization and generated record construction
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/environment_parameters.tsv
+    role: Frozen ENVIRONMENTS_TABLE source inventory
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/madin_habitats.tsv
+    role: Frozen MADIN source inventory
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/madin_habitat_taxa.tsv
+    role: Frozen MADIN source inventory
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/prego_habitats.tsv
+    role: Frozen PREGO source inventory
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/prego_habitat_taxa.tsv
+    role: Frozen PREGO source inventory
+  - repository: CultureBotAI/HabitatMech
+    path: curation/causal_graphs/hypersaline_water.yaml
+    role: Curated mechanism nodes, edges and evidence
+scope:
+  description: Only the finding/action owner pointer for F1; not a new scientific
+    review.
+  selection: Final adversarial source-row trace; no added scientific coverage.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - ENVO:00002012
+checks:
+- check_id: ROW
+  name: Exact source row and ignored-inclusive owner search
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00002012
+  command: rg --no-ignore --hidden -n NCBITaxon:(230105|158080|48547) data/raw/prego_habitats.tsv
+    data/raw/prego_habitat_taxa.tsv src/habitatmech/extract.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - ROW
+  summary: "data/raw/prego_habitat_taxa.tsv:5380:ENVO:00001999\t15\tNCBITaxon:158080\t\
+    \t4\tTRUE\tenvironmental_samples\t\ndata/raw/prego_habitat_taxa.tsv:5620:ENVO:00002012\t\
+    9\tNCBITaxon:230105\t\t1.04132\tTRUE\tenvironmental_samples\t\ndata/raw/prego_habitat_taxa.tsv:5622:ENVO:00002012\t\
+    11\tNCBITaxon:158080\t\t1.03761\tTRUE\tenvironmental_samples\t\ndata/raw/prego_habitat_taxa.tsv:5625:ENVO:00002012\t\
+    14\tNCBITaxon:48547\t\t1.01893\tTRUE\tenvironmental_samples\t\ndata/raw/prego_habitat_taxa.tsv:5983:ENVO:00002113\t\
+    22\tNCBITaxon:158080\t\t4\tTRUE\tenvironmental_samples\t\ndata/raw/prego_habitat_taxa.tsv:7445:ENVO:01000029\t\
+    16\tNCBITaxon:158080\t\t4\tTRUE\tenvironmental_samples\t\ndata/raw/prego_habitat_taxa.tsv:7762:ENVO:01000143\t\
+    16\tNCBITaxon:158080\t\t4\tTRUE\tenvironmental_samples"
+- check_id: CI
+  name: Required exact-base workflows and full QC
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00002012
+  command: gh pr checks codex/record-reviews-20261012c --watch --interval 30
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - PRIOR
+  summary: Authoritative full QC passed 913 tests with 3 skipped on exact head 33ce86185c74f8ef8ec3292e25c0d6c26257bd3f;
+    all required workflows succeeded. https://github.com/CultureBotAI/HabitatMech/actions/runs/38203455796
+evidence:
+- evidence_id: PRIOR
+  kind: prior_review
+  reference: reviews/structured/20261012T035123Z-hypersaline_water/review.yaml
+  accessed_at: '2026-10-12T04:34:04.866311Z'
+  support: context_only
+  summary: Inspected immediate predecessor finding and action owner, with unchanged
+    open taxonomy judgment. Other findings are not superseded by this metadata-only
+    observation.
+- evidence_id: ROW
+  kind: record_content
+  reference: data/raw/prego_habitat_taxa.tsv
+  locator: "data/raw/prego_habitat_taxa.tsv:5620:ENVO:00002012\t9\tNCBITaxon:230105\t\
+    \t1.04132\tTRUE\tenvironmental_samples\t; data/raw/prego_habitat_taxa.tsv:5622:ENVO:00002012\t\
+    11\tNCBITaxon:158080\t\t1.03761\tTRUE\tenvironmental_samples\t; data/raw/prego_habitat_taxa.tsv:5625:ENVO:00002012\t\
+    14\tNCBITaxon:48547\t\t1.01893\tTRUE\tenvironmental_samples\t"
+  accessed_at: '2026-10-12T04:35:00.327992Z'
+  support: supports
+  summary: Exact frozen rows inspected with TSV parsing; the related habitat inventory
+    and extractor search were also checked, including ignored files. This proves storage
+    ownership, not biological identity.
+assessments:
+- assessment_id: OWNER
+  area: provenance
+  topic: Correct finding/action source owner
+  outcome: supported
+  target_ids:
+  - ENVO:00002012
+  evidence_ids:
+  - PRIOR
+  - ROW
+  summary: 'Metadata-only correction of the maintained owner for the still-open taxonomy
+    finding on hypersaline_water. The exact frozen rows are in data/raw/prego_habitat_taxa.tsv,
+    not data/raw/prego_habitats.tsv. The record-level owner list already named the
+    correct taxa inventory, but the finding/action owner was inaccurate. This successor
+    corrects that pointer without changing any source row, habitat, taxonomy judgment,
+    scientific status or earlier review. F1 remains confirmed and open under #1244;
+    literature and taxonomic identity were not reassessed. Every other finding retains
+    its previous disposition and is outside this metadata-only scope.'
+findings:
+- finding_id: F1
+  issue_key: envo-00002012-taxonomy-alias-maintenance
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Merged taxon IDs and broad-rank associations need versioned maintenance
+  description: NCBI resolves frozen230105 to40223 and158080 to141390. ID48547 resolves
+    to Ophiura at genus rank. Historical spellings resolve as aliases; no unsupported
+    microbial replacement or occurrence deletion is justified.
+  target_ids:
+  - ENVO:00002012
+  field_paths:
+  - characteristic_taxa
+  evidence_ids:
+  - PRIOR
+  - ROW
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/prego_habitat_taxa.tsv
+    role: Exact frozen taxon-name, identifier or association rows for ENVO:00002012
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Taxon normalization with original-ID provenance
+  rule_id: docs/CURATION.md; .claude/skills/curate-yaml-record/references/review-checklist.md
+  native_severity: minor
+  normalization_reason: Bounded lexical or explanatory wording defect; core identity
+    or mechanism remains supported.
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1244
+  previous_occurrences:
+  - repository: CultureBotAI/HabitatMech
+    review_id: 20261012T035123Z-hypersaline_water
+    finding_id: F1
+actions:
+- action_id: A1
+  description: Verify source occurrences and update taxonomy through a versioned source
+    process, preserving ranks, original IDs, scores and corroborations. Inspect the
+    broad non-microbial association rather than guessing a replacement.
+  finding_ids:
+  - F1
+  target_ids:
+  - ENVO:00002012
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/prego_habitat_taxa.tsv
+    role: Exact frozen taxon-name, identifier or association rows for ENVO:00002012
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Taxon normalization with original-ID provenance
+  generator: src/habitatmech/seed.py
+  acceptance_checks:
+  - Change only maintained inputs after source-level assessment; preserve independent
+    true parents, identities, source counts/units and lifecycle.
+  - Append required history, add focused regressions, inspect a seed canary and regenerate
+    affected products without hand-editing records or pages.
+  - Pass schema, strict, product-label, corpus reproduction, causal/history, review-integrity
+    and full QC; save a linked successor for every finding disposition.
+limitations:
+- Deterministic provenance-only review; no new literature assessment or scientific-record
+  coverage.
+- The original taxonomy finding remains open. This owner correction does not establish
+  a new biological identity or authorize source occurrence changes.
+- Final review-integrity and PR checks must cover this new bundle before merge. Earlier
+  bundles remain immutable.
+related_reviews:
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261012T035123Z-hypersaline_water
+  relationship: Corrects only F1 owner metadata; all other finding dispositions remain
+    in force
+tags:
+- habitatmech
+- review-metadata
+- provenance-only
+```
