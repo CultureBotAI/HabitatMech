@@ -1,0 +1,1382 @@
+# Scientific record review: marine_biome
+
+- Review: 20261012T054252Z-marine_biome
+- Repository: CultureBotAI/HabitatMech
+- Started UTC: 2026-10-12T05:18:12.368314Z
+- Finished UTC: 2026-10-12T05:42:52.605990Z
+- Reviewer: OpenAI Codex (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The aquatic and water-based biome parents agree with the marine-waterbody-determined biome identity. The 3082 TAXON aggregate and selected 25 associations are distinct quantities. ENVO marine realm is a related synonym, not the emitted exact synonym. Morphological PREGO variants remain related and do not add habitat identities.
+
+## Scope And Provenance
+
+Entire exact generated record, all contributors and individual asserted causal edges, with bounded source-context assessment.
+
+Selection: Next forty records without a completed individual scientific review in stable repository-relative path order: marine anoxic zone through microbial_mats__200e1828. Full individual observations, not a category-wide pass. Prior coverage counts distinct observations, not a clean current-input corpus. Starting distinct-review coverage 688/3208 is not clean current-input coverage.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base ed9e0d0f382e4502a64f4de10102c4512bddca38.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| ENVO:00000447 | data/habitats/aquatic/marine_biome.yaml | generated | marine biome |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native gate on captured inputs | passed | True | ENVO:00000447 | Actual success 2026-10-12T05:21:00.474793Z to 2026-10-12T05:21:07.442430Z. Native command scope retained. |
+| Native gate on captured inputs | passed | True | ENVO:00000447 | Actual success 2026-10-12T05:23:16.222412Z to 2026-10-12T05:23:26.347203Z. Native command scope retained. |
+| Native gate on captured inputs | passed | True | ENVO:00000447 | Actual success 2026-10-12T05:23:26.348469Z to 2026-10-12T05:23:51.098950Z. Native command scope retained. |
+| Native gate on captured inputs | passed | True | ENVO:00000447 | Actual success 2026-10-12T05:23:51.100146Z to 2026-10-12T05:25:01.530644Z. Native command scope retained. |
+| Native gate on captured inputs | passed | True | ENVO:00000447 | Actual success 2026-10-12T05:25:01.532072Z to 2026-10-12T05:25:11.808379Z. Native command scope retained. |
+| Native gate on captured inputs | passed | True | ENVO:00000447 | Actual success 2026-10-12T05:25:11.809657Z to 2026-10-12T05:25:19.058687Z. Native command scope retained. |
+| Native gate on captured inputs | passed | True | ENVO:00000447 | Actual success 2026-10-12T05:25:19.059693Z to 2026-10-12T05:25:46.351294Z. Native command scope retained. |
+| Native gate on captured inputs | passed | True | ENVO:00000447 | Actual success 2026-10-12T05:25:46.352569Z to 2026-10-12T05:25:47.389752Z. Native command scope retained. |
+| Exact-base CI authoritative QC | passed | True | ENVO:00000447 | Actual success 2026-10-12T05:21:53.294030Z to 2026-10-12T05:21:55.368917Z. All three required merge-group workflows passed at the exact captured base; authoritative QC passed 913 tests with 3 skipped. Newly saved review bundles require their own integrity check. These newly saved review bundles were not part of that earlier exact-base CI run. |
+| Complete target reconstruction | passed | False | ENVO:00000447 | All 40 complete documents matched; captured hashes rechecked before authoring. |
+| Original assertion membership | unavailable | False | ENVO:00000447 | Bounded ignored-inclusive searches did not recover complete original assertion inputs; later exports are contextual evidence only. |
+| Expression-adapter applicability | not_applicable | False | ENVO:00000447 | The successful 28-dataset inventory was read for graph scope. No matching claim-specific organism/strain/gene or expression-module assertion requires a search or summarize call. Absence is not negative ecological evidence. |
+
+## Scientific And Domain Assessments
+
+### Exact identity, definition and source intent
+
+identity: supported. Targets: ENVO:00000447.
+
+The aquatic and water-based biome parents agree with the marine-waterbody-determined biome identity. The 3082 TAXON aggregate and selected 25 associations are distinct quantities. ENVO marine realm is a related synonym, not the emitted exact synonym. Morphological PREGO variants remain related and do not add habitat identities.
+
+### Parent contributors and mapping endpoints
+
+grounding: concern. Targets: ENVO:00000447.
+
+The aquatic and water-based biome parents agree with the marine-waterbody-determined biome identity. The 3082 TAXON aggregate and selected 25 associations are distinct quantities. ENVO marine realm is a related synonym, not the emitted exact synonym. Morphological PREGO variants remain related and do not add habitat identities. Ontology, GOLD path, ambiguous-leaf and authored-genus routes were distinguished.
+
+### Source units and native lifecycle
+
+provenance: supported. Targets: ENVO:00000447.
+
+Complete reconstruction preserves 1 contributing concepts and 0 ITEM-reviewed contributors. Attestations=[{"source": "PREGO", "source_id": "ENVO:00000447", "source_label": "marine biome", "assertion_count": 3082, "assertion_unit": "TAXON", "score": 4.0, "evidence_channels": "annotated_genomes_isolates&#124;environmental_samples"}]. Counts with different units are not summed. Reproduction validates derivation, not the scientific truth of the mapping.
+
+### Taxonomy and association scope
+
+evidence: supported. Targets: ENVO:00000447.
+
+All emitted identifiers resolve, including historical aliases. Source rows, ranks, scores and corroboration reproduce; these are selected associations, not proven characteristic taxa. Original occurrence evidence was not fully recovered, so no claim of exhaustive ecological validation is made. 
+
+### Optional slots and bounded evidence
+
+completeness: supported. Targets: ENVO:00000447.
+
+Optional empty fields alone are not defects. No causal graph is asserted in the exact captured record; ignored-inclusive support search and the full causal gate were checked. No record-level gene/regulator or transcriptomics claim warrants a component query.
+
+## Findings
+
+### F1: Non-exact ontology synonyms are promoted to exact
+
+major / open / confirmed; issue key: envo-00000447-ontology-synonym-scope.
+
+marine realm is related. The generated ENVO contribution is EXACT; PREGO related contributions are a separate source.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Resolve shared issue #1249 with typed-synonym ingestion and consumer regressions; do not globally downgrade genuine exact synonyms.
+
+- Change only maintained owners after source-level assessment; retain independent true parents, source identity/count/unit provenance and lifecycle unless a separately justified change requires otherwise.
+- Append required current history, add focused regressions, inspect a seed canary and regenerate affected products without hand-editing records or pages.
+- Pass schema, strict, label, provenance, corpus reproduction, causal/history and full QC gates; save a linked successor for any finding disposition.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| R | data/habitats/aquatic/marine_biome.yaml; Entire captured YAML read, including all taxa, parameters, graphs and generated history | supports | The aquatic and water-based biome parents agree with the marine-waterbody-determined biome identity. The 3082 TAXON aggregate and selected 25 associations are distinct quantities. ENVO marine realm is a related synonym, not the emitted exact synonym. Morphological PREGO variants remain related and do not add habitat identities. |
+| RULES | docs/CURATION.md; docs/HARMONIZATION.md; docs/RESEARCH.md; src/habitatmech/schema/habitatmech.yaml | supports | Applied exact identity, strict-genus, MIxS roles, source-unit/score and ITEM lifecycle contracts; graph node types retain their biological definitions. |
+| RAW | data/raw; curation/decisions.tsv; curation/term_requests.tsv; curation/gold_parent_exclusions.tsv; Exact logical TSV rows, header=row1; filtered by current source IDs and exact paths, not legacy issue line numbers | supports | {"data/raw/ontology_subclass_edges.tsv": [{"data": {"object": "ENVO:00002030", "predicate": "rdfs:subClassOf", "subject": "ENVO:00000447"}, "logical_row": 5104}, {"data": {"object": "ENVO:01001788", "predicate": "rdfs:subClassOf", "subject": "ENVO:00000447"}, "logical_row": 5105}], "data/raw/ontology_terms.tsv": [{"data": {"definition": "An aquatic biome which is determined by a marine water body.", "deprecated": "", "directly_referenced": "TRUE", "label": "marine biome", "label_only": "FALSE", "ontology": "ENVO", "synonyms": "marine realm", "term_id": "ENVO:00000447"}, "logical_row": 7025}], "data/raw/prego_habitat_taxa.tsv": [{"data": {"channels": "annotated_genomes_isolates", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score": "4", "rank": "1", "taxon_id": "NCBITaxon:1000566", "taxon_label": "Halosaccharopolyspora lacisalsi"}, "logical_row": 4858}, {"data": {"channels": "annotated_genomes_isolates", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score": "4", "rank": "2", "taxon_id": "NCBITaxon:1005928", "taxon_label": "Roseovarius lutimaris"}, "logical_row": 4859}, {"data": {"channels": "annotated_genomes_isolates", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score": "4", "rank": "3", "taxon_id": "NCBITaxon:1007109", "taxon_label": "alpha proteobacterium SCGC AAA076-C03"}, "logical_row": 4860}, {"data": {"channels": "annotated_genomes_isolates", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score": "4", "rank": "4", "taxon_id": "NCBITaxon:1007110", "taxon_label": "alpha proteobacterium SCGC AAA076-E06"}, "logical_row": 4861}, {"data": {"channels": "annotated_genomes_isolates", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score": "4", "rank": "5", "taxon_id": "NCBITaxon:1007111", "taxon_label": "alpha proteobacterium SCGC AAA158-B04"}, "logical_row": 4862}, {"data": {"channels": "annotated_genomes_isolates", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score": "4", "rank": "6", "taxon_id": "NCBITaxon:1007112", "taxon_label": "alpha proteobacterium SCGC AAA158-M15"}, "logical_row": 4863}, {"data": {"channels": "annotated_genomes_isolates", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score": "4", "rank": "7", "taxon_id": "NCBITaxon:1007113", "taxon_label": "alpha proteobacterium SCGC AAA160-J14"}, "logical_row": 4864}, {"data": {"channels": "annotated_genomes_isolates", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score": "4", "rank": "8", "taxon_id": "NCBITaxon:1007114", "taxon_label": "gamma proteobacterium SCGC AAA076-D02"}, "logical_row": 4865}, {"data": {"channels": "annotated_genomes_isolates", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score": "4", "rank": "9", "taxon_id": "NCBITaxon:1007115", "taxon_label": "gamma proteobacterium SCGC AAA076-D13"}, "logical_row": 4866}, {"data": {"channels": "annotated_genomes_isolates", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score": "4", "rank": "10", "taxon_id": "NCBITaxon:1007116", "taxon_label": "gamma proteobacterium SCGC AAA076-E13"}, "logical_row": 4867}, {"data": {"channels": "annotated_genomes_isolates", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score": "4", "rank": "11", "taxon_id": "NCBITaxon:1007117", "taxon_label": "gamma proteobacterium SCGC AAA076-F14"}, "logical_row": 4868}, {"data": {"channels": "annotated_genomes_isolates", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score": "4", "rank": "12", "taxon_id": "NCBITaxon:1007118", "taxon_label": "gamma proteobacterium SCGC AAA076-P09"}, "logical_row": 4869}, {"data": {"channels": "annotated_genomes_isolates", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score": "4", "rank": "13", "taxon_id": "NCBITaxon:1007119", "taxon_label": "gamma proteobacterium SCGC AAA076-P13"}, "logical_row": 4870}, {"data": {"channels": "annotated_genomes_isolates", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score": "4", "rank": "14", "taxon_id": "NCBITaxon:1007120", "taxon_label": "gamma proteobacterium SCGC AAA160-D02"}, "logical_row": 4871}, {"data": {"channels": "annotated_genomes_isolates", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score": "4", "rank": "15", "taxon_id": "NCBITaxon:1007122", "taxon_label": "Fidelibacterota bacterium SCGC AAA160-C11"}, "logical_row": 4872}, {"data": {"channels": "annotated_genomes_isolates", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score": "4", "rank": "16", "taxon_id": "NCBITaxon:1007124", "taxon_label": "Fidelibacterota bacterium SCGC AAA076-M08"}, "logical_row": 4873}, {"data": {"channels": "annotated_genomes_isolates", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score": "4", "rank": "17", "taxon_id": "NCBITaxon:1009412", "taxon_label": "Flavobacterium sp. SCGC AAA160-P02"}, "logical_row": 4874}, {"data": {"channels": "annotated_genomes_isolates", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score": "4", "rank": "18", "taxon_id": "NCBITaxon:1009413", "taxon_label": "Verrucomicrobia bacterium SCGC AAA164-A08"}, "logical_row": 4875}, {"data": {"channels": "annotated_genomes_isolates", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score": "4", "rank": "19", "taxon_id": "NCBITaxon:1009414", "taxon_label": "Verrucomicrobia bacterium SCGC AAA164-B23"}, "logical_row": 4876}, {"data": {"channels": "annotated_genomes_isolates", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score": "4", "rank": "20", "taxon_id": "NCBITaxon:1009415", "taxon_label": "Verrucomicrobia bacterium SCGC AAA164-E04"}, "logical_row": 4877}, {"data": {"channels": "annotated_genomes_isolates", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score": "4", "rank": "21", "taxon_id": "NCBITaxon:1009416", "taxon_label": "Verrucomicrobia bacterium SCGC AAA164-I21"}, "logical_row": 4878}, {"data": {"channels": "annotated_genomes_isolates", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score": "4", "rank": "22", "taxon_id": "NCBITaxon:1009418", "taxon_label": "Verrucomicrobia bacterium SCGC AAA164-M04"}, "logical_row": 4879}, {"data": {"channels": "annotated_genomes_isolates", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score": "4", "rank": "23", "taxon_id": "NCBITaxon:1009419", "taxon_label": "Verrucomicrobia bacterium SCGC AAA164-N20"}, "logical_row": 4880}, {"data": {"channels": "annotated_genomes_isolates", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score": "4", "rank": "24", "taxon_id": "NCBITaxon:1009420", "taxon_label": "Verrucomicrobia bacterium SCGC AAA164-O14"}, "logical_row": 4881}, {"data": {"channels": "annotated_genomes_isolates", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score": "4", "rank": "25", "taxon_id": "NCBITaxon:1009421", "taxon_label": "Verrucomicrobia bacterium SCGC AAA164-P11"}, "logical_row": 4882}], "data/raw/prego_habitats.tsv": [{"data": {"biolink_category": "biolink:OntologyClass", "channels": "annotated_genomes_isolates&#124;environmental_samples", "direct_assertion_count": "3616", "max_prego_score": "4", "ontology": "ENVO", "prego_id": "ENVO:00000447", "prego_synonyms": "marine&#124;marine biome&#124;marine realm&#124;marine realmic&#124;marine realms&#124;marines&#124;marinous", "taxon_count": "3082"}, "logical_row": 13}]} |
+| CODE | src/habitatmech/seed.py; Executed complete-document reconstruction; all 40 matched; routes distinguish source mints and generated identity | supports | {"reviewed_sources": 0, "routes": [{"actual": {"category": null, "contributes_grounding": true, "decision": null, "extra_parents": [], "extra_xrefs": [], "grounding_status": "EXACT", "identifier": "ENVO:00000447", "mapping_predicate": null, "reviewed": false, "route": "prego_self_grounded"}, "automatic": {"category": null, "contributes_grounding": true, "decision": null, "extra_parents": [], "extra_xrefs": [], "grounding_status": "EXACT", "identifier": "ENVO:00000447", "mapping_predicate": null, "reviewed": false, "route": "prego_self_grounded"}, "minted": "habitatmech:PREGO.2cc508e051", "source": "PREGO", "source_id": "ENVO:00000447"}], "source_concepts": 1} |
+| ONT | https://raw.githubusercontent.com/EnvironmentOntology/envo/master/envo.owl; Official OWL retrieved 12-Oct; labels, definitions, typed synonyms, named parents and restrictions; no snapshot refresh | supports | {"ENVO:00000428": {"definitions": ["A biome is an ecosystem which is undergoing climactic ecological succession."], "deprecated": [], "equivalents": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Class"], "http://www.w3.org/2002/07/owl#intersectionOf": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first": ["http://purl.obolibrary.org/obo/ENVO_01001110"], "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0000056"], "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_01001827"]}], "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"]}]}]}], "labels": ["biome"], "parents": ["http://purl.obolibrary.org/obo/ENVO_01000813", "http://purl.obolibrary.org/obo/ENVO_01001110", {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/BFO_0000050"], "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_01000817"]}, {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/BFO_0000050"], "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/PCO_0000002"]}, {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0000056"], "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_01001827"]}, {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0002507"], "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/PCO_0000002"]}], "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": ["major habitat type"], "hasNarrowSynonym": [], "hasRelatedSynonym": ["EcosytemType"]}}, "ENVO:00000447": {"definitions": ["An aquatic biome which is determined by a marine water body."], "deprecated": [], "equivalents": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Class"], "http://www.w3.org/2002/07/owl#intersectionOf": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first": ["http://purl.obolibrary.org/obo/ENVO_00002030"], "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0002507"], "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_00001999"]}], "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"]}]}]}], "labels": ["marine biome"], "parents": ["http://purl.obolibrary.org/obo/ENVO_00002030", "http://purl.obolibrary.org/obo/ENVO_01001788"], "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": [], "hasNarrowSynonym": [], "hasRelatedSynonym": ["marine realm"]}}, "ENVO:00002030": {"definitions": ["A biome which is determined by a water body and which has ecological climax communities adapted to life in or on water."], "deprecated": [], "equivalents": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Class"], "http://www.w3.org/2002/07/owl#intersectionOf": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first": ["http://purl.obolibrary.org/obo/ENVO_00000428"], "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0002507"], "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_00000063"]}], "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"]}]}]}], "labels": ["aquatic biome"], "parents": ["http://purl.obolibrary.org/obo/ENVO_00000428", "http://purl.obolibrary.org/obo/ENVO_01001787"], "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": [], "hasNarrowSynonym": [], "hasRelatedSynonym": []}}, "ENVO:01000254": {"definitions": ["A system which has the disposition to environ one or more material entities."], "deprecated": [], "equivalents": [], "labels": ["environmental system"], "parents": ["http://purl.obolibrary.org/obo/RO_0002577"], "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": ["environment"], "hasNarrowSynonym": [], "hasRelatedSynonym": []}}, "ENVO:01001788": {"definitions": [], "deprecated": [], "equivalents": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Class"], "http://www.w3.org/2002/07/owl#intersectionOf": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first": ["http://purl.obolibrary.org/obo/ENVO_01001787"], "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0002507"], "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_00001999"]}], "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"]}]}]}], "labels": ["marine ecosystem"], "parents": ["http://purl.obolibrary.org/obo/ENVO_01000320", "http://purl.obolibrary.org/obo/ENVO_01001787"], "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": [], "hasNarrowSynonym": [], "hasRelatedSynonym": []}}} |
+| PARENT | data/habitats/aquatic/aquatic_biome.yaml; data/habitats/other/environmental.yaml; data/habitats/other/environmental_system.yaml; data/habitats/other/biome.yaml; Ancestor context adds no full-record coverage | supports | {"ENVO:00000428": {"definition": "A biome is an ecosystem which is undergoing climactic ecological succession.", "grounding_status": "EXACT", "label": "biome", "parent_habitats": ["ENVO:01000813", "ENVO:01001110"]}, "ENVO:00002030": {"definition": "A biome which is determined by a water body and which has ecological climax communities adapted to life in or on water.", "grounding_status": "EXACT", "label": "aquatic biome", "parent_habitats": ["ENVO:00000428", "ENVO:01001787", "habitatmech:BACDIVE.0f1e92a02c"]}, "ENVO:01000254": {"definition": "A system which has the disposition to environ one or more material entities.", "grounding_status": "EXACT", "label": "environmental system", "parent_habitats": null}, "habitatmech:BACDIVE.0f1e92a02c": {"definition": "An environmental system which is a portion of the air, water, or land surface or subsurface of an astronomical body sampled in place, and which is neither bounded by a host organism nor constituted by a constructed or operated artefact.", "grounding_status": "UNGROUNDED", "label": "free-living environment", "parent_habitats": ["ENVO:01000254"]}} |
+| TAX0 | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=1000566%2C1003110%2C1005925%2C1005926%2C1005928%2C1006%2C1007105%2C1007109%2C1007110%2C1007111%2C1007112%2C1007113%2C1007114%2C1007115%2C1007116%2C1007117%2C1007118%2C1007119%2C1007120%2C1007122%2C1007124%2C1009412%2C1009413%2C1009414%2C1009415%2C1009416%2C1009418%2C1009419%2C1009420%2C1009421%2C1017277%2C102%2C1026%2C1027373%2C1027374%2C1028566%2C1028742%2C1028743%2C1028745%2C1028746%2C1028749%2C1028752%2C1031273%2C1031541%2C103810%2C1038845%2C1038928%2C1038929%2C1042%2C104268%2C104270%2C1042877%2C1044%2C104421%2C1045558%2C1048%2C1048221%2C1057%2C106299%2C1074%2C107401%2C1080%2C1089550%2C109263%2C1094980%2C110163%2C1104565%2C1104566%2C110662%2C110663%2C111770%2C1121404%2C1121937%2C1121948%2C1122607%2C1123059%2C1123242%2C1123275%2C114404%2C1150474%2C119394%2C119542%2C1208324%2C1211807%2C121224%2C1217908%2C1219067%2C1242148%2C1246444%2C1246460%2C1265%2C126741%2C1267768%2C1267769%2C1276246%2C1282%2C129958%2C132144%2C133924%2C134561%2C1358%2C13616%2C13686%2C1371%2C1387275%2C139239%2C1394%2C1411902%2C143223%2C143224%2C147%2C1486246%2C150120%2C1543721%2C156%2C156128%2C156133%2C1570%2C158080%2C158192%2C158500%2C1609977%2C161528%2C163248%2C163503%2C168275%2C168759%2C1703256%2C1716143%2C172371%2C173%2C173365%2C173737%2C173764%2C174%2C174302%2C174315%2C1774373%2C179326%2C180542%2C1808508%2C1808945%2C1817405%2C1836499%2C184592%2C184914%2C1855%2C186022%2C1869227%2C1871328&amp;retmode=xml; NCBI TaxId, ScientificName, Rank, AkaTaxIds and OtherNames | supports | The three chunks jointly resolve all 346 requested cohort IDs. Target results=[{"current_id": "1000566", "current_name": "Halosaccharopolyspora lacisalsi", "frozen_label": "Halosaccharopolyspora lacisalsi", "id": "1000566", "rank": "species"}, {"current_id": "1005928", "current_name": "Roseovarius lutimaris", "frozen_label": "Roseovarius lutimaris", "id": "1005928", "rank": "species"}, {"current_id": "1007109", "current_name": "alpha proteobacterium SCGC AAA076-C03", "frozen_label": "alpha proteobacterium SCGC AAA076-C03", "id": "1007109", "rank": "species"}, {"current_id": "1007110", "current_name": "alpha proteobacterium SCGC AAA076-E06", "frozen_label": "alpha proteobacterium SCGC AAA076-E06", "id": "1007110", "rank": "species"}, {"current_id": "1007111", "current_name": "alpha proteobacterium SCGC AAA158-B04", "frozen_label": "alpha proteobacterium SCGC AAA158-B04", "id": "1007111", "rank": "species"}, {"current_id": "1007112", "current_name": "alpha proteobacterium SCGC AAA158-M15", "frozen_label": "alpha proteobacterium SCGC AAA158-M15", "id": "1007112", "rank": "species"}, {"current_id": "1007113", "current_name": "alpha proteobacterium SCGC AAA160-J14", "frozen_label": "alpha proteobacterium SCGC AAA160-J14", "id": "1007113", "rank": "species"}, {"current_id": "1007114", "current_name": "gamma proteobacterium SCGC AAA076-D02", "frozen_label": "gamma proteobacterium SCGC AAA076-D02", "id": "1007114", "rank": "species"}, {"current_id": "1007115", "current_name": "gamma proteobacterium SCGC AAA076-D13", "frozen_label": "gamma proteobacterium SCGC AAA076-D13", "id": "1007115", "rank": "species"}, {"current_id": "1007116", "current_name": "gamma proteobacterium SCGC AAA076-E13", "frozen_label": "gamma proteobacterium SCGC AAA076-E13", "id": "1007116", "rank": "species"}, {"current_id": "1007117", "current_name": "gamma proteobacterium SCGC AAA076-F14", "frozen_label": "gamma proteobacterium SCGC AAA076-F14", "id": "1007117", "rank": "species"}, {"current_id": "1007118", "current_name": "gamma proteobacterium SCGC AAA076-P09", "frozen_label": "gamma proteobacterium SCGC AAA076-P09", "id": "1007118", "rank": "species"}, {"current_id": "1007119", "current_name": "gamma proteobacterium SCGC AAA076-P13", "frozen_label": "gamma proteobacterium SCGC AAA076-P13", "id": "1007119", "rank": "species"}, {"current_id": "1007120", "current_name": "gamma proteobacterium SCGC AAA160-D02", "frozen_label": "gamma proteobacterium SCGC AAA160-D02", "id": "1007120", "rank": "species"}, {"current_id": "1007122", "current_name": "Fidelibacterota bacterium SCGC AAA160-C11", "frozen_label": "Fidelibacterota bacterium SCGC AAA160-C11", "id": "1007122", "rank": "species"}, {"current_id": "1007124", "current_name": "Fidelibacterota bacterium SCGC AAA076-M08", "frozen_label": "Fidelibacterota bacterium SCGC AAA076-M08", "id": "1007124", "rank": "species"}, {"current_id": "1009412", "current_name": "Flavobacterium sp. SCGC AAA160-P02", "frozen_label": "Flavobacterium sp. SCGC AAA160-P02", "id": "1009412", "rank": "species"}, {"current_id": "1009413", "current_name": "Verrucomicrobia bacterium SCGC AAA164-A08", "frozen_label": "Verrucomicrobia bacterium SCGC AAA164-A08", "id": "1009413", "rank": "species"}, {"current_id": "1009414", "current_name": "Verrucomicrobia bacterium SCGC AAA164-B23", "frozen_label": "Verrucomicrobia bacterium SCGC AAA164-B23", "id": "1009414", "rank": "species"}, {"current_id": "1009415", "current_name": "Verrucomicrobia bacterium SCGC AAA164-E04", "frozen_label": "Verrucomicrobia bacterium SCGC AAA164-E04", "id": "1009415", "rank": "species"}, {"current_id": "1009416", "current_name": "Verrucomicrobia bacterium SCGC AAA164-I21", "frozen_label": "Verrucomicrobia bacterium SCGC AAA164-I21", "id": "1009416", "rank": "species"}, {"current_id": "1009418", "current_name": "Verrucomicrobia bacterium SCGC AAA164-M04", "frozen_label": "Verrucomicrobia bacterium SCGC AAA164-M04", "id": "1009418", "rank": "species"}, {"current_id": "1009419", "current_name": "Verrucomicrobia bacterium SCGC AAA164-N20", "frozen_label": "Verrucomicrobia bacterium SCGC AAA164-N20", "id": "1009419", "rank": "species"}, {"current_id": "1009420", "current_name": "Verrucomicrobia bacterium SCGC AAA164-O14", "frozen_label": "Verrucomicrobia bacterium SCGC AAA164-O14", "id": "1009420", "rank": "species"}, {"current_id": "1009421", "current_name": "Verrucomicrobia bacterium SCGC AAA164-P11", "frozen_label": "Verrucomicrobia bacterium SCGC AAA164-P11", "id": "1009421", "rank": "species"}]. Alias/name resolution does not establish habitat occurrence. |
+| TAX1 | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=1872627%2C1876%2C188906%2C188908%2C1903071%2C190308%2C191302%2C1926630%2C1931%2C195064%2C1961642%2C197222%2C198804%2C2%2C200617%2C2022602%2C2024855%2C203122%2C203907%2C205920%2C2099376%2C212050%2C214688%2C214988%2C216432%2C216773%2C2183988%2C2213%2C223788%2C224915%2C225345%2C225937%2C226126%2C2264%2C234267%2C240016%2C2423%2C243090%2C247026%2C257363%2C264%2C264462%2C264951%2C265606%2C266940%2C2738566%2C28108%2C28122%2C28181%2C28223%2C28251%2C28258%2C28262%2C29158%2C29159%2C2926447%2C29292%2C293614%2C29805%2C302409%2C3055%2C3068%2C31330%2C313595%2C313603%2C313606%2C314230%2C314275%2C316279%2C319225%2C320388%2C332415%2C337701%2C339861%2C340047%2C34085%2C344747%2C357244%2C35743%2C35845%2C358766%2C361576%2C36870%2C36987%2C372461%2C378806%2C379066%2C39152%2C391625%2C39947%2C402880%2C40464%2C406538%2C406540%2C411477%2C411485%2C419481%2C425006%2C428125%2C435805%2C43928%2C442956%2C443152%2C445336%2C44751%2C45351%2C457427%2C463619%2C46539%2C466153%2C46687%2C46704%2C46745%2C472759%2C483407%2C483417%2C48499%2C48729%2C491952%2C49447%2C498761%2C502025%2C504472%2C50741%2C515618%2C51671%2C518766%2C523849%2C530564%2C53249%2C537937%2C53953%2C55518%2C555512%2C55567%2C562%2C563043%2C56780%2C56811%2C57043%2C575540%2C583355%2C585501%2C595452%2C595453%2C59919%2C59920%2C6047%2C60480%2C6087&amp;retmode=xml; NCBI TaxId, ScientificName, Rank, AkaTaxIds and OtherNames | supports | The three chunks jointly resolve all 346 requested cohort IDs. Target results=[{"current_id": "1000566", "current_name": "Halosaccharopolyspora lacisalsi", "frozen_label": "Halosaccharopolyspora lacisalsi", "id": "1000566", "rank": "species"}, {"current_id": "1005928", "current_name": "Roseovarius lutimaris", "frozen_label": "Roseovarius lutimaris", "id": "1005928", "rank": "species"}, {"current_id": "1007109", "current_name": "alpha proteobacterium SCGC AAA076-C03", "frozen_label": "alpha proteobacterium SCGC AAA076-C03", "id": "1007109", "rank": "species"}, {"current_id": "1007110", "current_name": "alpha proteobacterium SCGC AAA076-E06", "frozen_label": "alpha proteobacterium SCGC AAA076-E06", "id": "1007110", "rank": "species"}, {"current_id": "1007111", "current_name": "alpha proteobacterium SCGC AAA158-B04", "frozen_label": "alpha proteobacterium SCGC AAA158-B04", "id": "1007111", "rank": "species"}, {"current_id": "1007112", "current_name": "alpha proteobacterium SCGC AAA158-M15", "frozen_label": "alpha proteobacterium SCGC AAA158-M15", "id": "1007112", "rank": "species"}, {"current_id": "1007113", "current_name": "alpha proteobacterium SCGC AAA160-J14", "frozen_label": "alpha proteobacterium SCGC AAA160-J14", "id": "1007113", "rank": "species"}, {"current_id": "1007114", "current_name": "gamma proteobacterium SCGC AAA076-D02", "frozen_label": "gamma proteobacterium SCGC AAA076-D02", "id": "1007114", "rank": "species"}, {"current_id": "1007115", "current_name": "gamma proteobacterium SCGC AAA076-D13", "frozen_label": "gamma proteobacterium SCGC AAA076-D13", "id": "1007115", "rank": "species"}, {"current_id": "1007116", "current_name": "gamma proteobacterium SCGC AAA076-E13", "frozen_label": "gamma proteobacterium SCGC AAA076-E13", "id": "1007116", "rank": "species"}, {"current_id": "1007117", "current_name": "gamma proteobacterium SCGC AAA076-F14", "frozen_label": "gamma proteobacterium SCGC AAA076-F14", "id": "1007117", "rank": "species"}, {"current_id": "1007118", "current_name": "gamma proteobacterium SCGC AAA076-P09", "frozen_label": "gamma proteobacterium SCGC AAA076-P09", "id": "1007118", "rank": "species"}, {"current_id": "1007119", "current_name": "gamma proteobacterium SCGC AAA076-P13", "frozen_label": "gamma proteobacterium SCGC AAA076-P13", "id": "1007119", "rank": "species"}, {"current_id": "1007120", "current_name": "gamma proteobacterium SCGC AAA160-D02", "frozen_label": "gamma proteobacterium SCGC AAA160-D02", "id": "1007120", "rank": "species"}, {"current_id": "1007122", "current_name": "Fidelibacterota bacterium SCGC AAA160-C11", "frozen_label": "Fidelibacterota bacterium SCGC AAA160-C11", "id": "1007122", "rank": "species"}, {"current_id": "1007124", "current_name": "Fidelibacterota bacterium SCGC AAA076-M08", "frozen_label": "Fidelibacterota bacterium SCGC AAA076-M08", "id": "1007124", "rank": "species"}, {"current_id": "1009412", "current_name": "Flavobacterium sp. SCGC AAA160-P02", "frozen_label": "Flavobacterium sp. SCGC AAA160-P02", "id": "1009412", "rank": "species"}, {"current_id": "1009413", "current_name": "Verrucomicrobia bacterium SCGC AAA164-A08", "frozen_label": "Verrucomicrobia bacterium SCGC AAA164-A08", "id": "1009413", "rank": "species"}, {"current_id": "1009414", "current_name": "Verrucomicrobia bacterium SCGC AAA164-B23", "frozen_label": "Verrucomicrobia bacterium SCGC AAA164-B23", "id": "1009414", "rank": "species"}, {"current_id": "1009415", "current_name": "Verrucomicrobia bacterium SCGC AAA164-E04", "frozen_label": "Verrucomicrobia bacterium SCGC AAA164-E04", "id": "1009415", "rank": "species"}, {"current_id": "1009416", "current_name": "Verrucomicrobia bacterium SCGC AAA164-I21", "frozen_label": "Verrucomicrobia bacterium SCGC AAA164-I21", "id": "1009416", "rank": "species"}, {"current_id": "1009418", "current_name": "Verrucomicrobia bacterium SCGC AAA164-M04", "frozen_label": "Verrucomicrobia bacterium SCGC AAA164-M04", "id": "1009418", "rank": "species"}, {"current_id": "1009419", "current_name": "Verrucomicrobia bacterium SCGC AAA164-N20", "frozen_label": "Verrucomicrobia bacterium SCGC AAA164-N20", "id": "1009419", "rank": "species"}, {"current_id": "1009420", "current_name": "Verrucomicrobia bacterium SCGC AAA164-O14", "frozen_label": "Verrucomicrobia bacterium SCGC AAA164-O14", "id": "1009420", "rank": "species"}, {"current_id": "1009421", "current_name": "Verrucomicrobia bacterium SCGC AAA164-P11", "frozen_label": "Verrucomicrobia bacterium SCGC AAA164-P11", "id": "1009421", "rank": "species"}]. Alias/name resolution does not establish habitat occurrence. |
+| TAX2 | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=610380%2C6182%2C6238%2C6334%2C639602%2C641112%2C6613%2C6669%2C688066%2C69293%2C6945%2C69773%2C7029%2C703612%2C7070%2C7159%2C7209%2C7425%2C74546%2C74547%2C748449%2C756272%2C758583%2C75883%2C760154%2C765912%2C7668%2C76775%2C7719%2C777%2C7955%2C80836%2C8090%2C83428%2C86104%2C880%2C880447%2C885%2C89184%2C9031%2C91360%2C9258%2C939306%2C939316%2C939324%2C939346&amp;retmode=xml; NCBI TaxId, ScientificName, Rank, AkaTaxIds and OtherNames | supports | The three chunks jointly resolve all 346 requested cohort IDs. Target results=[{"current_id": "1000566", "current_name": "Halosaccharopolyspora lacisalsi", "frozen_label": "Halosaccharopolyspora lacisalsi", "id": "1000566", "rank": "species"}, {"current_id": "1005928", "current_name": "Roseovarius lutimaris", "frozen_label": "Roseovarius lutimaris", "id": "1005928", "rank": "species"}, {"current_id": "1007109", "current_name": "alpha proteobacterium SCGC AAA076-C03", "frozen_label": "alpha proteobacterium SCGC AAA076-C03", "id": "1007109", "rank": "species"}, {"current_id": "1007110", "current_name": "alpha proteobacterium SCGC AAA076-E06", "frozen_label": "alpha proteobacterium SCGC AAA076-E06", "id": "1007110", "rank": "species"}, {"current_id": "1007111", "current_name": "alpha proteobacterium SCGC AAA158-B04", "frozen_label": "alpha proteobacterium SCGC AAA158-B04", "id": "1007111", "rank": "species"}, {"current_id": "1007112", "current_name": "alpha proteobacterium SCGC AAA158-M15", "frozen_label": "alpha proteobacterium SCGC AAA158-M15", "id": "1007112", "rank": "species"}, {"current_id": "1007113", "current_name": "alpha proteobacterium SCGC AAA160-J14", "frozen_label": "alpha proteobacterium SCGC AAA160-J14", "id": "1007113", "rank": "species"}, {"current_id": "1007114", "current_name": "gamma proteobacterium SCGC AAA076-D02", "frozen_label": "gamma proteobacterium SCGC AAA076-D02", "id": "1007114", "rank": "species"}, {"current_id": "1007115", "current_name": "gamma proteobacterium SCGC AAA076-D13", "frozen_label": "gamma proteobacterium SCGC AAA076-D13", "id": "1007115", "rank": "species"}, {"current_id": "1007116", "current_name": "gamma proteobacterium SCGC AAA076-E13", "frozen_label": "gamma proteobacterium SCGC AAA076-E13", "id": "1007116", "rank": "species"}, {"current_id": "1007117", "current_name": "gamma proteobacterium SCGC AAA076-F14", "frozen_label": "gamma proteobacterium SCGC AAA076-F14", "id": "1007117", "rank": "species"}, {"current_id": "1007118", "current_name": "gamma proteobacterium SCGC AAA076-P09", "frozen_label": "gamma proteobacterium SCGC AAA076-P09", "id": "1007118", "rank": "species"}, {"current_id": "1007119", "current_name": "gamma proteobacterium SCGC AAA076-P13", "frozen_label": "gamma proteobacterium SCGC AAA076-P13", "id": "1007119", "rank": "species"}, {"current_id": "1007120", "current_name": "gamma proteobacterium SCGC AAA160-D02", "frozen_label": "gamma proteobacterium SCGC AAA160-D02", "id": "1007120", "rank": "species"}, {"current_id": "1007122", "current_name": "Fidelibacterota bacterium SCGC AAA160-C11", "frozen_label": "Fidelibacterota bacterium SCGC AAA160-C11", "id": "1007122", "rank": "species"}, {"current_id": "1007124", "current_name": "Fidelibacterota bacterium SCGC AAA076-M08", "frozen_label": "Fidelibacterota bacterium SCGC AAA076-M08", "id": "1007124", "rank": "species"}, {"current_id": "1009412", "current_name": "Flavobacterium sp. SCGC AAA160-P02", "frozen_label": "Flavobacterium sp. SCGC AAA160-P02", "id": "1009412", "rank": "species"}, {"current_id": "1009413", "current_name": "Verrucomicrobia bacterium SCGC AAA164-A08", "frozen_label": "Verrucomicrobia bacterium SCGC AAA164-A08", "id": "1009413", "rank": "species"}, {"current_id": "1009414", "current_name": "Verrucomicrobia bacterium SCGC AAA164-B23", "frozen_label": "Verrucomicrobia bacterium SCGC AAA164-B23", "id": "1009414", "rank": "species"}, {"current_id": "1009415", "current_name": "Verrucomicrobia bacterium SCGC AAA164-E04", "frozen_label": "Verrucomicrobia bacterium SCGC AAA164-E04", "id": "1009415", "rank": "species"}, {"current_id": "1009416", "current_name": "Verrucomicrobia bacterium SCGC AAA164-I21", "frozen_label": "Verrucomicrobia bacterium SCGC AAA164-I21", "id": "1009416", "rank": "species"}, {"current_id": "1009418", "current_name": "Verrucomicrobia bacterium SCGC AAA164-M04", "frozen_label": "Verrucomicrobia bacterium SCGC AAA164-M04", "id": "1009418", "rank": "species"}, {"current_id": "1009419", "current_name": "Verrucomicrobia bacterium SCGC AAA164-N20", "frozen_label": "Verrucomicrobia bacterium SCGC AAA164-N20", "id": "1009419", "rank": "species"}, {"current_id": "1009420", "current_name": "Verrucomicrobia bacterium SCGC AAA164-O14", "frozen_label": "Verrucomicrobia bacterium SCGC AAA164-O14", "id": "1009420", "rank": "species"}, {"current_id": "1009421", "current_name": "Verrucomicrobia bacterium SCGC AAA164-P11", "frozen_label": "Verrucomicrobia bacterium SCGC AAA164-P11", "id": "1009421", "rank": "species"}]. Alias/name resolution does not establish habitat occurrence. |
+| SEARCH | curation; history; research; reports; reviews; data/raw; data/habitats; conf; Search boundaries are explicit; no global absence claim | supports | Identifier, label, slug and exact-path searches included hidden/ignored files in these roots. No earlier structured target observation was found. Legacy reports exist and are not silently retired. Bounded original-source search={"configured_root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe", "root_exists": true, "exact_paths": [{"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_nodes.tsv", "exists": false, "expected_sha256": "c13c21bdd04619c75ce16e63b05e51577b0cefec5b61765d383313f654ab3fae"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_edges.tsv", "exists": false, "expected_sha256": "54982c25de9d2c820eeebc1452aeac0b034595921d04d55b810bf1d2b1e127e0"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/nodes.tsv", "exists": false, "expected_sha256": "a2a2f9acae230636dd866347d173a32c9f025c04a377060087a4be65781628f3"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/edges.tsv", "exists": false, "expected_sha256": "ab6208bff4854db7c1a736d53d0aa04269a682ab15a1ce6f37c6d731000281d7"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/nodes.tsv", "exists": false, "expected_sha256": "020de3afc71495571ddb05000c83a58d009272f53735b5f7c9326c1293e0415c"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/edges.tsv", "exists": false, "expected_sha256": "8863ee3197a36915865fa4833df39d10c3f8f69b64bafbb746b9cd731308a0aa"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/nodes.tsv", "exists": false, "expected_sha256": "cc5941cd677831e8e207da018dca763cd009bb1f9310b21cb4d45892316e006d"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/edges.tsv", "exists": false, "expected_sha256": "fd333634eaaa3cfe57a35cdca2f4c5b8cf0662851c1df58914d3e999d62a650e"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/environments.csv", "exists": false, "expected_sha256": "99299fe635159712f95568783ad3b484230fb31781262f1f6f8bd84db4bc3048"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/mappings/isolation_source_to_ontology.tsv", "exists": false, "expected_sha256": "2dea3d1bb20c72a04b6f64a67e2bb2bdc4f3649b809c5935390239be2791ef1f"}], "traversal": [{"command": ["rg", "--files", "--no-ignore", "--hidden", "data"], "exit_code": 0, "matches": [], "stderr": ""}, {"command": ["rg", "--files", "--no-ignore", "--hidden", "build"], "exit_code": 0, "matches": [], "stderr": ""}, {"command": ["rg", "--files", "--no-ignore", "--hidden", "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data"], "exit_code": 0, "matches": [], "stderr": ""}]} |
+| ISSUES | https://github.com/CultureBotAI/HabitatMech/issues; GitHub CLI inventory retrieved 12-Oct | supports | Read-only all-state 967-issue title/body inventory and relevant bodies inspected. Issues are historical leads, not primary support; current owner rows and scientific evidence were checked independently. Comments were not exhaustively crawled. Closed issue #1301 is reflected in the current graph and is not reopened by preserving old history. |
+
+## Limits And Additional Notes
+
+- Completed assessment is not a clean-record verdict or proof of every original source occurrence.
+- Only the first three exact-path BioSample and Organism descriptions per target/sheet were individually interpreted; remaining members and study joins were indexed, not scientifically reviewed.
+- Later GOLD export/classification does not reconstruct original August membership. No ontology, taxonomy or source snapshot was refreshed.
+- Same-agent review, not independent approval. Native status and curation/history inputs are unchanged.
+- SSSOM/KGX conformance to current kg-microbe modeling was not audited; shared endpoint issue #1398 remains open.
+- Whole-corpus scientific review remains incomplete. Ancestor/context reads add no record coverage. Product-label checking retains 2057 no-adapter skips and five accepted exceptions.
+- Review-only observation: no curation, status promotion, GitHub mutation or paid research.
+- No earlier structured target observation found; legacy reports are historical and are not automatically superseded.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261012T054252Z-marine_biome
+kind: record
+repository: CultureBotAI/HabitatMech
+title: 'Scientific record review: marine_biome'
+started_at: '2026-10-12T05:18:12.368314Z'
+finished_at: '2026-10-12T05:42:52.605990Z'
+reviewer:
+  identity: OpenAI Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Agent has participated in repository curation; this is not independent
+    approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The aquatic and water-based biome parents agree with the marine-waterbody-determined
+  biome identity. The 3082 TAXON aggregate and selected 25 associations are distinct
+  quantities. ENVO marine realm is a related synonym, not the emitted exact synonym.
+  Morphological PREGO variants remain related and do not add habitat identities.
+source:
+  git_revision: ed9e0d0f382e4502a64f4de10102c4512bddca38
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: conf/record_review.yaml
+    sha256: c2f5d0eb4c5744f5fe354c92184ddab144dc2688dba952b032b4f3d597bc08d6
+    role: context
+  - path: conf/sources.yaml
+    sha256: a8e069f9278068b57fa234f43e03c8d893f857827b83fd10cfa92d6815aed642
+    role: context
+  - path: curation/causal_graphs/aquatic_biome.yaml
+    sha256: 03ba09d10f9a9d8d32060fc0208b511ef0d59e731fd7c63ca6c02296e70da5f5
+    role: context
+  - path: curation/decisions.tsv
+    sha256: 2fd5aec7ac1710ede2405849e78dd0423c253d72b43676230f72b9905bae99dd
+    role: context
+  - path: curation/definition_source_label_exclusions.tsv
+    sha256: 2d41fc93db4939122b3909f2a412b84b679703948b10d9f02e12021442f71407
+    role: context
+  - path: curation/external_xrefs.tsv
+    sha256: cf8394a6ab22e35efd9e252aef422018226280830bf816a39bf4f2256ff75ad5
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: 1934ff1b8a27ba93174a6b656dc489506c47c3aae8204db89b7516ae2cc0886f
+    role: context
+  - path: curation/redirects_retracted.tsv
+    sha256: 0f1e9af8881f5a5db19f87de06b3b3d1800cfac8101699b380388c0a1a1e9a19
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 3f2ce04805defe5ff65dc20988cc72bc94d4636b3140eb1311017866bdc0ea0a
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: b59b9e800a918135e3915145d4d8098bb48dcea36a312b3004c594a57d221ae9
+    role: context
+  - path: data/habitats/aquatic/aquatic_biome.yaml
+    sha256: 27466c1abb6814aa790ecec6987d803850d0237c697c565e6fc21d1baaebfa27
+    role: context
+  - path: data/habitats/aquatic/marine_biome.yaml
+    sha256: 53bcd89bd088e0adb2d02c61b07c0c538f3d83ef5476c87a6727e03bcab06ce8
+    role: target
+  - path: data/habitats/other/biome.yaml
+    sha256: 43080ce9bd411ee97a20d97c17bd923405c040feaf9454d44ca22a2955ce1854
+    role: context
+  - path: data/habitats/other/environmental.yaml
+    sha256: b23a64a2d7594f05716dfc8f525d184fe8bb5d885dbb9e755ba8cc844f433659
+    role: context
+  - path: data/habitats/other/environmental_system.yaml
+    sha256: 2c227791ce7b92c16ae9b76ad8295be95efee73cb65ec7050d1de2b00c8eecbc
+    role: context
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: 36df8306394c06c352b73e0bf7b47a2858784cedac7389a24d0b78f593ece646
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: f7aa39ee762d94f1902d9f08f328cb897bc543e4e226057eb4770d24bfcc6eb5
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reports/yaml_record_review/20260921T074231Z-abyssopelagic_abyssal_zone.md
+    sha256: 5404bed1d15a303d5a12777238d929bbdb33238c75dfd49dd5ae148aeb94acf9
+    role: context
+  - path: reports/yaml_record_review/20260927T200434Z-phytoplankton_bloom.md
+    sha256: 6587ce7fec9af5207e7b47df03ac160219f10cb0a8629e6be277b6fdb2fc8645
+    role: context
+  - path: reports/yaml_record_review/20260928T155715Z-marine_debries.md
+    sha256: e53a8d1b9100924541b9d5373087ddb4e5dbe2fbad90b986ccb928dfa7e9734c
+    role: context
+  - path: reports/yaml_record_review/20261002T025158Z-estuarine_biome.md
+    sha256: fe6064e80d77aa66261fc02c56d58d48991cddb1e3d5eb002906aca712f0284a
+    role: context
+  - path: reports/yaml_record_review/20261002T074751Z-fjord.md
+    sha256: e1a7c3184ac3d502b27e96da28380c8df732a443127797a8d4349faa43162aff
+    role: context
+  - path: reports/yaml_record_review/20261002T100918Z-formation_fluid.md
+    sha256: 0b9abbdb8cdeda6dc2ab8821a5c5047384a0a27f76cdde6634892244aaf6bbe2
+    role: context
+  - path: reports/yaml_record_review/20261003T105031Z-gulf.md
+    sha256: dabc2844c37e5859277baea55d30a244958e50edca1b2155d2845d5ba386c4bc
+    role: context
+  - path: reports/yaml_record_review/20261003T105513Z-harbor.md
+    sha256: c375bbc66f1680372f1c7008dc03d5e92c1e2e7dd43f3fe6a077a705747223ac
+    role: context
+  - path: reports/yaml_record_review/20261003T120907Z-hydrocarbon__a75cc82e.md
+    sha256: 8a1494e427fba5d60356f5eb56d52b616c8c2d4dad15a3500264734bc78d5a64
+    role: context
+  - path: reports/yaml_record_review/20261003T140149Z-hypoxic_zone.md
+    sha256: e90ef6ffc8d0860ca2dc63e0fb934934380ae670c0b9c4f885f8b60213aa959f
+    role: context
+  - path: reports/yaml_record_review/20261003T143846Z-inlet.md
+    sha256: d4a245a43dae88035594855de3011332a80cd4c3dafd9b5cf76c705c4bf081ea
+    role: context
+  - path: reports/yaml_record_review/20261003T151340Z-intertidal_zone__2f295854.md
+    sha256: 8deb917e036da4baa06b6c53e9cd5f62a3ed2840653cc9f71999700e0061697a
+    role: context
+  - path: reports/yaml_record_review/20261003T175904Z-marginal_sea_biome.md
+    sha256: 395b8ff48e1a87c06ab2f3916a456e8534b0fe4c6aac582e29d3f5638b319d86
+    role: context
+  - path: reports/yaml_record_review/20261003T180344Z-marine_aphotic_zone.md
+    sha256: 919abcf4ef78bf8ace054076cdd7be260daef5ede25e8a5199b1d91c47371940
+    role: context
+  - path: reports/yaml_record_review/20261003T183900Z-marine_benthic_biome.md
+    sha256: 322888a864fcf4ebda315f7b4f482b350955686518f8b17c5b1bd95bc798529d
+    role: context
+  - path: reports/yaml_record_review/20261003T190233Z-marine_biome.md
+    sha256: b53162ea62ea9e934b5030fa392d300349cef5522320290ab28c2fbb7bc76242
+    role: context
+  - path: reports/yaml_record_review/20261003T190816Z-marine_lake.md
+    sha256: 5b2c24401d3e534c3b85cbc016896750eb8cc311f05029f06ad9f81c5326374a
+    role: context
+  - path: reports/yaml_record_review/20261003T200811Z-marine_salt_marsh_biome.md
+    sha256: 4a8edcb0d5bf9f7b3f8b03bd6590daf66c35cf8470d2c6f9a039054ccd858d1a
+    role: context
+  - path: reports/yaml_record_review/20261004T004156Z-amoebozoa__291e8086.md
+    sha256: bdf2dd5b74838c394d6b9ac87e5dafc9fe3fb92eb735d4b9f01a63a6a9ba8127
+    role: context
+  - path: reports/yaml_record_review/20261004T140432Z-mediterranean_sea_biome.md
+    sha256: 8b3f13793ce8524de4ce24f8f55057879e41b0fb0b3acba3abe54b616279f893
+    role: context
+  - path: reports/yaml_record_review/20261004T165258Z-microbial_mats__59ad9a00.md
+    sha256: ac5219499eff94a55168b9017b91d2efa3c6087795dd87053c841626385663e9
+    role: context
+  - path: reports/yaml_record_review/20261004T170307Z-microbial_mats__7a576572.md
+    sha256: 24380b64a6f2c7c00e61f2f811799b7319285bac6c03f3d43cb4b13ab5740f4f
+    role: context
+  - path: reports/yaml_record_review/20261004T183719Z-microbialites__2dd0659e.md
+    sha256: b35f23a13be596950c956ceefe7e18f52f52ddac8e89d9c91857f7e4f4280e4a
+    role: context
+  - path: reports/yaml_record_review/20261004T194729Z-mud_volcano__980e0b1f.md
+    sha256: 1e32d50eeb6654cc5710c5609c194ff3c950ff3ca4a1fd6db92d26b7e4436e39
+    role: context
+  - path: reports/yaml_record_review/20261004T204557Z-ocean_biome.md
+    sha256: 1671308e933227cbe7b60fdb3bf5d5314e48239e70e9c20437279dc41f18a3c4
+    role: context
+  - path: reports/yaml_record_review/20261004T211318Z-ocean_trench.md
+    sha256: 05e67714a13fbe3823f3ac6d61fbcf16ef69164150de37c89ffebf42876062ba
+    role: context
+  - path: reports/yaml_record_review/20261004T212113Z-oceanic_crust.md
+    sha256: 8301bed93ea2cb221e89e26de6a03ba14a768d168ad287668dbd78f180715778
+    role: context
+  - path: reports/yaml_record_review/20261004T213438Z-oceanic_zone.md
+    sha256: b2fc13da6c9521db8bde443cbc508ea0b4c072c270aa04a5afef4066e30c2e32
+    role: context
+  - path: reports/yaml_record_review/20261004T220108Z-oil_contaminated.md
+    sha256: a09a270810ba529be8aefc626d1a68ab660acc4e68e1368b864b61e588b404b3
+    role: context
+  - path: reports/yaml_record_review/20261004T220433Z-oil_contaminated__eec9b4c2.md
+    sha256: ad473ca1ee5befc5094c0b8adad52f146f7f19762ac2d948ceb77f63640a4124
+    role: context
+  - path: reports/yaml_record_review/20261004T221058Z-oil_contaminated_sediment__6a7b1764.md
+    sha256: 1d75607b82d33477d6421f9d148b645356c63cded96b846310927b7e7f86ffd2
+    role: context
+  - path: reports/yaml_record_review/20261004T232455Z-plankton__8f1688f3.md
+    sha256: 759720aedacddc8d094ae78b7bfed4e7e550142709fd9946ae3f4a0c3e6a7c74
+    role: context
+  - path: reports/yaml_record_review/20261005T012957Z-rock__98ab4fe4.md
+    sha256: 58adb55d9dcd72c983f1f13db7f0271c010a9321bf007497ab26d1e7db1f682c
+    role: context
+  - path: reports/yaml_record_review/20261005T021737Z-rock__d4e1e84c.md
+    sha256: f21b89b015091b01a0aefc168fadd064835a3bf03841a995c51cf77459428f7e
+    role: context
+  - path: reports/yaml_record_review/20261005T072944Z-sea.md
+    sha256: fb8cda2994b98bdaf390488f4a322fcdc447c64b0793574a6b11872793262cc9
+    role: context
+  - path: reports/yaml_record_review/20261005T081127Z-sea_ice.md
+    sha256: bf1763d4557cdbf621fa03372f0c4b3f544b097d72390e585f617083bceb78b1
+    role: context
+  - path: reports/yaml_record_review/20261005T090236Z-seaweed.md
+    sha256: f5f126cbbdc1bd108779d71930da632e14586c69f7b7fcf0bb4ddc828cc04fb9
+    role: context
+  - path: reports/yaml_record_review/20261005T094404Z-sediment__0d49df05.md
+    sha256: 6ef4e06d22e0b2f47200af197da07b14611893c3d838955c9cbbbe3793ad19f0
+    role: context
+  - path: reports/yaml_record_review/20261005T102756Z-sediment__11488300.md
+    sha256: dc90148490b7d987335adfd7528aeca8d520cfcb55b196d20a5620c8ee174682
+    role: context
+  - path: reports/yaml_record_review/20261005T111306Z-sediment__2a63f0bb.md
+    sha256: cf2cbbb8deb2d553142a4c33bec289760df9bba3f37900f69ecc7106d237460f
+    role: context
+  - path: reports/yaml_record_review/20261005T111751Z-sediment__2b3ec834.md
+    sha256: e6ca42f5ff00b317c307e491da24aa1d9114ed72e5f33e9b1a27ee4190773471
+    role: context
+  - path: reports/yaml_record_review/20261005T120103Z-sediment__347a23a3.md
+    sha256: bb25e912efb70b77f719eb0bc1436f81219a771b3735e9788b0bbff5885d4ec7
+    role: context
+  - path: reports/yaml_record_review/20261005T121510Z-sediment__3f324bf4.md
+    sha256: 0adc86f9392b482537ccf9ba1296cc60ab02bdb2e82bf362094e130b258e33c1
+    role: context
+  - path: reports/yaml_record_review/20261005T151749Z-sediment__69d4893f.md
+    sha256: 2c2e186fe5b68412281b1b2f5da224d52d0696c6105c214c6e92c8d139a4439c
+    role: context
+  - path: reports/yaml_record_review/20261005T160547Z-sediment__745f8d63.md
+    sha256: d54892bccfa0067e25db4935356ba442bf89a7b094c499d148790f6e62261f46
+    role: context
+  - path: reports/yaml_record_review/20261005T165619Z-sediment__8cbae4cd.md
+    sha256: 92c5f925a4b94a90dee5e72cad901284ae8664d6fa51e2bcabd77f5ff90558b5
+    role: context
+  - path: reports/yaml_record_review/20261005T174924Z-sediment__978ea781.md
+    sha256: 15354ff2c17226c1495c2590585e389170b386175952fec2f334034130196c1e
+    role: context
+  - path: reports/yaml_record_review/20261005T175903Z-sediment__a24ea793.md
+    sha256: 1dba7e9463e1125bf4cc2fdafde1bdc7245d48462d224e7b0322b39d2cb1b465
+    role: context
+  - path: reports/yaml_record_review/20261005T184701Z-sediment__a8039b03.md
+    sha256: 18a768150425920c3866d6e835a1578db9f426ea9c53317fc22c69b0784dee7e
+    role: context
+  - path: reports/yaml_record_review/20261005T192420Z-sediment__b9940958.md
+    sha256: cca02be9f3c681fb382d2e7324edbd7527d11f10decd479c0a5cfaa24f6c1c9f
+    role: context
+  - path: reports/yaml_record_review/20261005T214517Z-sediment__e3709872.md
+    sha256: 99e665047ca684e4aa538398afa1499f49973c8635a6db7f35508a7e1af2102f
+    role: context
+  - path: reports/yaml_record_review/20261005T222657Z-sediment__e63c4954.md
+    sha256: 33b512efb9d34438b8923e675c14ef8669d93cd10798c5bb6cd03db6d367e3d1
+    role: context
+  - path: reports/yaml_record_review/20261005T231034Z-sediment__e8fdcd7d.md
+    sha256: c1759e496a673e8570f4161c65c5ce9d32f2d2d6e3a5eb5a3010a30ebf678dd3
+    role: context
+  - path: reports/yaml_record_review/20261005T232008Z-sediment__ea0eadab.md
+    sha256: 4efabd0659686d5985b09b1f68108144bf0fc19089feb35d5529f243ed3d5c1e
+    role: context
+  - path: reports/yaml_record_review/20261006T005847Z-shipwreck.md
+    sha256: c241ce621d4ae1fe601d8e0fafb633eabfa81d0c7bd9db07f4e71863bf3b39fd
+    role: context
+  - path: reports/yaml_record_review/20261006T101729Z-strait.md
+    sha256: 6e5c4d5a8100a6d35ebf4ddf822150bb4f6a143049ba879eee8156c8fa63e6a4
+    role: context
+  - path: reports/yaml_record_review/20261006T235209Z-wetland_area.md
+    sha256: ef4f2e2a8bbc04f80e4e2fd1bf5cc9b107f06c65f9527ea58da5a1fde61b9ef7
+    role: context
+  - path: reports/yaml_record_review/20261007T003210Z-whale_fall.md
+    sha256: 7ce0947da8ab3e706d3d601702a14c9d7fac2689eed68b1ce212d324393e8373
+    role: context
+  - path: research/habitats/aquatic/seaweed-habitatmech-gold-0e7a5162bb-deep-research-claude_code.md
+    sha256: 30ea8adaa34fc4b27f349ece7ed868408a66683052aa12205976a982c09968ad
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/extract_gold_biosamples.py
+    sha256: b6a2773c86fe718e1ca0b1d7b32709f0eee491ac813655e310aa0817c0fec31b
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: 4bf5391d25ff48a2d81eb3821af6582de063fd0391440973d309dfd93016490c
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: src/habitatmech/extract.py
+    sha256: 4d9397bda649381a5daf81937369531c6dc8b4518d6c7047e6f3f14e605bf860
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 7e3cda3dadb9c7462498e5014bf38ef730068212f8f9cb131e3fce383c21d10e
+    role: context
+  - path: src/habitatmech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+  - path: src/habitatmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 4adf105e23d75c3563a516a0c160623d1065df7fcb2f31b7a0a0a8303d0401be
+    role: context
+targets:
+- target_id: ENVO:00000447
+  path: data/habitats/aquatic/marine_biome.yaml
+  label: marine biome
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Source-specific identity and lifecycle decisions
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Authored definitions and genus
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Guarded source context-parent exclusions
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_terms.tsv
+    role: Pinned ontology labels, definitions and synonyms
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_subclass_edges.tsv
+    role: Pinned ontology hierarchy
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Harmonization and generated record construction
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/prego_habitats.tsv
+    role: Frozen PREGO source inventory
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/prego_habitat_taxa.tsv
+    role: Frozen PREGO source inventory
+scope:
+  description: Entire exact generated record, all contributors and individual asserted
+    causal edges, with bounded source-context assessment.
+  selection: 'Next forty records without a completed individual scientific review
+    in stable repository-relative path order: marine anoxic zone through microbial_mats__200e1828.
+    Full individual observations, not a category-wide pass. Prior coverage counts
+    distinct observations, not a clean current-input corpus. Starting distinct-review
+    coverage 688/3208 is not clean current-input coverage.'
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - ENVO:00000447
+  exclusions:
+  - target: Other 3207 current records
+    reason: Context reads are not their full scientific review.
+checks:
+- check_id: C0
+  name: Native gate on captured inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00000447
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=ed9e0d0f382e4502a64f4de10102c4512bddca38
+    just validate data/habitats/aquatic/marine_biome.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success 2026-10-12T05:21:00.474793Z to 2026-10-12T05:21:07.442430Z.
+    Native command scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C1
+  name: Native gate on captured inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00000447
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=ed9e0d0f382e4502a64f4de10102c4512bddca38
+    just validate-strict data/habitats/aquatic/marine_anoxic_zone.yaml data/habitats/aquatic/marine_aphotic_zone.yaml
+    data/habitats/aquatic/marine_basin_floor.yaml data/habitats/aquatic/marine_bathyal_zone_biome.yaml
+    data/habitats/aquatic/marine_bathypelagic_zone.yaml data/habitats/aquatic/marine_benthic_biome.yaml
+    data/habitats/aquatic/marine_biome.yaml data/habitats/aquatic/marine_cold_seep_biome.yaml
+    data/habitats/aquatic/marine_coral_reef_biome.yaml data/habitats/aquatic/marine_lake.yaml
+    data/habitats/aquatic/marine_littoral_zone.yaml data/habitats/aquatic/marine_mesopelagic_zone.yaml
+    data/habitats/aquatic/marine_mud.yaml data/habitats/aquatic/marine_oligotrophic_desert.yaml
+    data/habitats/aquatic/marine_pelagic_zone.yaml data/habitats/aquatic/marine_photic_zone.yaml
+    data/habitats/aquatic/marine_reef.yaml data/habitats/aquatic/marine_reef_biome.yaml
+    data/habitats/aquatic/marine_salt_marsh_biome.yaml data/habitats/aquatic/marine_sediment.yaml
+    data/habitats/aquatic/marine_sponge_reef.yaml data/habitats/aquatic/marine_supra_littoral_zone.yaml
+    data/habitats/aquatic/marine_water_body.yaml data/habitats/aquatic/marsh.yaml
+    data/habitats/aquatic/mediterranean_sea_biome.yaml data/habitats/aquatic/melt_pond.yaml
+    data/habitats/aquatic/meltwater.yaml data/habitats/aquatic/meromictic_lake.yaml
+    data/habitats/aquatic/mesopelagic_twilight_zone.yaml data/habitats/aquatic/metalimnion.yaml
+    data/habitats/aquatic/microbial_mat__2020a793.yaml data/habitats/aquatic/microbial_mat__23532df8.yaml
+    data/habitats/aquatic/microbial_mat__5129baa2.yaml data/habitats/aquatic/microbial_mat__54ad7767.yaml
+    data/habitats/aquatic/microbial_mat__8a9e02e4.yaml data/habitats/aquatic/microbial_mat__b6425172.yaml
+    data/habitats/aquatic/microbial_mat__eb27cff0.yaml data/habitats/aquatic/microbial_mat__fc2dbb7f.yaml
+    data/habitats/aquatic/microbial_mats.yaml data/habitats/aquatic/microbial_mats__200e1828.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success 2026-10-12T05:23:16.222412Z to 2026-10-12T05:23:26.347203Z.
+    Native command scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C2
+  name: Native gate on captured inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00000447
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=ed9e0d0f382e4502a64f4de10102c4512bddca38
+    just verify-corpus
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success 2026-10-12T05:23:26.348469Z to 2026-10-12T05:23:51.098950Z.
+    Native command scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C3
+  name: Native gate on captured inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00000447
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=ed9e0d0f382e4502a64f4de10102c4512bddca38
+    just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success 2026-10-12T05:23:51.100146Z to 2026-10-12T05:25:01.530644Z.
+    Native command scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C4
+  name: Native gate on captured inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00000447
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=ed9e0d0f382e4502a64f4de10102c4512bddca38
+    just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success 2026-10-12T05:25:01.532072Z to 2026-10-12T05:25:11.808379Z.
+    Native command scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C5
+  name: Native gate on captured inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00000447
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=ed9e0d0f382e4502a64f4de10102c4512bddca38
+    just validate-causal-all
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success 2026-10-12T05:25:11.809657Z to 2026-10-12T05:25:19.058687Z.
+    Native command scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C6
+  name: Native gate on captured inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00000447
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=ed9e0d0f382e4502a64f4de10102c4512bddca38
+    just term-requests-check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success 2026-10-12T05:25:19.059693Z to 2026-10-12T05:25:46.351294Z.
+    Native command scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C7
+  name: Native gate on captured inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00000447
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=ed9e0d0f382e4502a64f4de10102c4512bddca38
+    just provenance-check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success 2026-10-12T05:25:46.352569Z to 2026-10-12T05:25:47.389752Z.
+    Native command scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C8
+  name: Exact-base CI authoritative QC
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00000447
+  command: gh run view 38205892664 --repo CultureBotAI/HabitatMech --log
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success 2026-10-12T05:21:53.294030Z to 2026-10-12T05:21:55.368917Z.
+    All three required merge-group workflows passed at the exact captured base; authoritative
+    QC passed 913 tests with 3 skipped. Newly saved review bundles require their own
+    integrity check. These newly saved review bundles were not part of that earlier
+    exact-base CI run.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: REPRO
+  name: Complete target reconstruction
+  required: false
+  status: passed
+  target_ids:
+  - ENVO:00000447
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache uv run python
+    /private/tmp/habitatmech-review-bc-evidence.py
+  exit_code: 0
+  summary: All 40 complete documents matched; captured hashes rechecked before authoring.
+  evidence_ids:
+  - RAW
+  - CODE
+- check_id: ORIGINAL
+  name: Original assertion membership
+  required: false
+  status: unavailable
+  target_ids:
+  - ENVO:00000447
+  summary: Bounded ignored-inclusive searches did not recover complete original assertion
+    inputs; later exports are contextual evidence only.
+  evidence_ids:
+  - SEARCH
+- check_id: IMODULON
+  name: Expression-adapter applicability
+  required: false
+  status: not_applicable
+  target_ids:
+  - ENVO:00000447
+  summary: The successful 28-dataset inventory was read for graph scope. No matching
+    claim-specific organism/strain/gene or expression-module assertion requires a
+    search or summarize call. Absence is not negative ecological evidence.
+  evidence_ids:
+  - R
+  - RULES
+evidence:
+- evidence_id: R
+  kind: record_content
+  reference: data/habitats/aquatic/marine_biome.yaml
+  summary: The aquatic and water-based biome parents agree with the marine-waterbody-determined
+    biome identity. The 3082 TAXON aggregate and selected 25 associations are distinct
+    quantities. ENVO marine realm is a related synonym, not the emitted exact synonym.
+    Morphological PREGO variants remain related and do not add habitat identities.
+  accessed_at: '2026-10-12T05:40:16.804347Z'
+  support: supports
+  locator: Entire captured YAML read, including all taxa, parameters, graphs and generated
+    history
+- evidence_id: RULES
+  kind: record_content
+  reference: docs/CURATION.md; docs/HARMONIZATION.md; docs/RESEARCH.md; src/habitatmech/schema/habitatmech.yaml
+  summary: Applied exact identity, strict-genus, MIxS roles, source-unit/score and
+    ITEM lifecycle contracts; graph node types retain their biological definitions.
+  accessed_at: '2026-10-12T05:40:16.804347Z'
+  support: supports
+- evidence_id: RAW
+  kind: database
+  reference: data/raw; curation/decisions.tsv; curation/term_requests.tsv; curation/gold_parent_exclusions.tsv
+  summary: '{"data/raw/ontology_subclass_edges.tsv": [{"data": {"object": "ENVO:00002030",
+    "predicate": "rdfs:subClassOf", "subject": "ENVO:00000447"}, "logical_row": 5104},
+    {"data": {"object": "ENVO:01001788", "predicate": "rdfs:subClassOf", "subject":
+    "ENVO:00000447"}, "logical_row": 5105}], "data/raw/ontology_terms.tsv": [{"data":
+    {"definition": "An aquatic biome which is determined by a marine water body.",
+    "deprecated": "", "directly_referenced": "TRUE", "label": "marine biome", "label_only":
+    "FALSE", "ontology": "ENVO", "synonyms": "marine realm", "term_id": "ENVO:00000447"},
+    "logical_row": 7025}], "data/raw/prego_habitat_taxa.tsv": [{"data": {"channels":
+    "annotated_genomes_isolates", "corroborated_by": "", "direct_flag": "TRUE", "prego_id":
+    "ENVO:00000447", "prego_score": "4", "rank": "1", "taxon_id": "NCBITaxon:1000566",
+    "taxon_label": "Halosaccharopolyspora lacisalsi"}, "logical_row": 4858}, {"data":
+    {"channels": "annotated_genomes_isolates", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:00000447", "prego_score": "4", "rank": "2", "taxon_id":
+    "NCBITaxon:1005928", "taxon_label": "Roseovarius lutimaris"}, "logical_row": 4859},
+    {"data": {"channels": "annotated_genomes_isolates", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:00000447", "prego_score": "4", "rank": "3", "taxon_id":
+    "NCBITaxon:1007109", "taxon_label": "alpha proteobacterium SCGC AAA076-C03"},
+    "logical_row": 4860}, {"data": {"channels": "annotated_genomes_isolates", "corroborated_by":
+    "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score": "4", "rank":
+    "4", "taxon_id": "NCBITaxon:1007110", "taxon_label": "alpha proteobacterium SCGC
+    AAA076-E06"}, "logical_row": 4861}, {"data": {"channels": "annotated_genomes_isolates",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score":
+    "4", "rank": "5", "taxon_id": "NCBITaxon:1007111", "taxon_label": "alpha proteobacterium
+    SCGC AAA158-B04"}, "logical_row": 4862}, {"data": {"channels": "annotated_genomes_isolates",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score":
+    "4", "rank": "6", "taxon_id": "NCBITaxon:1007112", "taxon_label": "alpha proteobacterium
+    SCGC AAA158-M15"}, "logical_row": 4863}, {"data": {"channels": "annotated_genomes_isolates",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score":
+    "4", "rank": "7", "taxon_id": "NCBITaxon:1007113", "taxon_label": "alpha proteobacterium
+    SCGC AAA160-J14"}, "logical_row": 4864}, {"data": {"channels": "annotated_genomes_isolates",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score":
+    "4", "rank": "8", "taxon_id": "NCBITaxon:1007114", "taxon_label": "gamma proteobacterium
+    SCGC AAA076-D02"}, "logical_row": 4865}, {"data": {"channels": "annotated_genomes_isolates",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score":
+    "4", "rank": "9", "taxon_id": "NCBITaxon:1007115", "taxon_label": "gamma proteobacterium
+    SCGC AAA076-D13"}, "logical_row": 4866}, {"data": {"channels": "annotated_genomes_isolates",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score":
+    "4", "rank": "10", "taxon_id": "NCBITaxon:1007116", "taxon_label": "gamma proteobacterium
+    SCGC AAA076-E13"}, "logical_row": 4867}, {"data": {"channels": "annotated_genomes_isolates",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score":
+    "4", "rank": "11", "taxon_id": "NCBITaxon:1007117", "taxon_label": "gamma proteobacterium
+    SCGC AAA076-F14"}, "logical_row": 4868}, {"data": {"channels": "annotated_genomes_isolates",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score":
+    "4", "rank": "12", "taxon_id": "NCBITaxon:1007118", "taxon_label": "gamma proteobacterium
+    SCGC AAA076-P09"}, "logical_row": 4869}, {"data": {"channels": "annotated_genomes_isolates",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score":
+    "4", "rank": "13", "taxon_id": "NCBITaxon:1007119", "taxon_label": "gamma proteobacterium
+    SCGC AAA076-P13"}, "logical_row": 4870}, {"data": {"channels": "annotated_genomes_isolates",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score":
+    "4", "rank": "14", "taxon_id": "NCBITaxon:1007120", "taxon_label": "gamma proteobacterium
+    SCGC AAA160-D02"}, "logical_row": 4871}, {"data": {"channels": "annotated_genomes_isolates",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score":
+    "4", "rank": "15", "taxon_id": "NCBITaxon:1007122", "taxon_label": "Fidelibacterota
+    bacterium SCGC AAA160-C11"}, "logical_row": 4872}, {"data": {"channels": "annotated_genomes_isolates",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score":
+    "4", "rank": "16", "taxon_id": "NCBITaxon:1007124", "taxon_label": "Fidelibacterota
+    bacterium SCGC AAA076-M08"}, "logical_row": 4873}, {"data": {"channels": "annotated_genomes_isolates",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score":
+    "4", "rank": "17", "taxon_id": "NCBITaxon:1009412", "taxon_label": "Flavobacterium
+    sp. SCGC AAA160-P02"}, "logical_row": 4874}, {"data": {"channels": "annotated_genomes_isolates",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score":
+    "4", "rank": "18", "taxon_id": "NCBITaxon:1009413", "taxon_label": "Verrucomicrobia
+    bacterium SCGC AAA164-A08"}, "logical_row": 4875}, {"data": {"channels": "annotated_genomes_isolates",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score":
+    "4", "rank": "19", "taxon_id": "NCBITaxon:1009414", "taxon_label": "Verrucomicrobia
+    bacterium SCGC AAA164-B23"}, "logical_row": 4876}, {"data": {"channels": "annotated_genomes_isolates",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score":
+    "4", "rank": "20", "taxon_id": "NCBITaxon:1009415", "taxon_label": "Verrucomicrobia
+    bacterium SCGC AAA164-E04"}, "logical_row": 4877}, {"data": {"channels": "annotated_genomes_isolates",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score":
+    "4", "rank": "21", "taxon_id": "NCBITaxon:1009416", "taxon_label": "Verrucomicrobia
+    bacterium SCGC AAA164-I21"}, "logical_row": 4878}, {"data": {"channels": "annotated_genomes_isolates",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score":
+    "4", "rank": "22", "taxon_id": "NCBITaxon:1009418", "taxon_label": "Verrucomicrobia
+    bacterium SCGC AAA164-M04"}, "logical_row": 4879}, {"data": {"channels": "annotated_genomes_isolates",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score":
+    "4", "rank": "23", "taxon_id": "NCBITaxon:1009419", "taxon_label": "Verrucomicrobia
+    bacterium SCGC AAA164-N20"}, "logical_row": 4880}, {"data": {"channels": "annotated_genomes_isolates",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score":
+    "4", "rank": "24", "taxon_id": "NCBITaxon:1009420", "taxon_label": "Verrucomicrobia
+    bacterium SCGC AAA164-O14"}, "logical_row": 4881}, {"data": {"channels": "annotated_genomes_isolates",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000447", "prego_score":
+    "4", "rank": "25", "taxon_id": "NCBITaxon:1009421", "taxon_label": "Verrucomicrobia
+    bacterium SCGC AAA164-P11"}, "logical_row": 4882}], "data/raw/prego_habitats.tsv":
+    [{"data": {"biolink_category": "biolink:OntologyClass", "channels": "annotated_genomes_isolates|environmental_samples",
+    "direct_assertion_count": "3616", "max_prego_score": "4", "ontology": "ENVO",
+    "prego_id": "ENVO:00000447", "prego_synonyms": "marine|marine biome|marine realm|marine
+    realmic|marine realms|marines|marinous", "taxon_count": "3082"}, "logical_row":
+    13}]}'
+  accessed_at: '2026-10-12T05:40:16.804347Z'
+  support: supports
+  locator: Exact logical TSV rows, header=row1; filtered by current source IDs and
+    exact paths, not legacy issue line numbers
+- evidence_id: CODE
+  kind: record_content
+  reference: src/habitatmech/seed.py
+  summary: '{"reviewed_sources": 0, "routes": [{"actual": {"category": null, "contributes_grounding":
+    true, "decision": null, "extra_parents": [], "extra_xrefs": [], "grounding_status":
+    "EXACT", "identifier": "ENVO:00000447", "mapping_predicate": null, "reviewed":
+    false, "route": "prego_self_grounded"}, "automatic": {"category": null, "contributes_grounding":
+    true, "decision": null, "extra_parents": [], "extra_xrefs": [], "grounding_status":
+    "EXACT", "identifier": "ENVO:00000447", "mapping_predicate": null, "reviewed":
+    false, "route": "prego_self_grounded"}, "minted": "habitatmech:PREGO.2cc508e051",
+    "source": "PREGO", "source_id": "ENVO:00000447"}], "source_concepts": 1}'
+  accessed_at: '2026-10-12T05:40:16.804347Z'
+  support: supports
+  locator: Executed complete-document reconstruction; all 40 matched; routes distinguish
+    source mints and generated identity
+- evidence_id: ONT
+  kind: authority
+  reference: https://raw.githubusercontent.com/EnvironmentOntology/envo/master/envo.owl
+  summary: '{"ENVO:00000428": {"definitions": ["A biome is an ecosystem which is undergoing
+    climactic ecological succession."], "deprecated": [], "equivalents": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+    ["http://www.w3.org/2002/07/owl#Class"], "http://www.w3.org/2002/07/owl#intersectionOf":
+    [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first": ["http://purl.obolibrary.org/obo/ENVO_01001110"],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first":
+    [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"],
+    "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0000056"],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_01001827"]}],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"]}]}]}],
+    "labels": ["biome"], "parents": ["http://purl.obolibrary.org/obo/ENVO_01000813",
+    "http://purl.obolibrary.org/obo/ENVO_01001110", {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+    ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty":
+    ["http://purl.obolibrary.org/obo/BFO_0000050"], "http://www.w3.org/2002/07/owl#someValuesFrom":
+    ["http://purl.obolibrary.org/obo/ENVO_01000817"]}, {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+    ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty":
+    ["http://purl.obolibrary.org/obo/BFO_0000050"], "http://www.w3.org/2002/07/owl#someValuesFrom":
+    ["http://purl.obolibrary.org/obo/PCO_0000002"]}, {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+    ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty":
+    ["http://purl.obolibrary.org/obo/RO_0000056"], "http://www.w3.org/2002/07/owl#someValuesFrom":
+    ["http://purl.obolibrary.org/obo/ENVO_01001827"]}, {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+    ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty":
+    ["http://purl.obolibrary.org/obo/RO_0002507"], "http://www.w3.org/2002/07/owl#someValuesFrom":
+    ["http://purl.obolibrary.org/obo/PCO_0000002"]}], "replacements": [], "synonyms":
+    {"hasBroadSynonym": [], "hasExactSynonym": ["major habitat type"], "hasNarrowSynonym":
+    [], "hasRelatedSynonym": ["EcosytemType"]}}, "ENVO:00000447": {"definitions":
+    ["An aquatic biome which is determined by a marine water body."], "deprecated":
+    [], "equivalents": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Class"],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first":
+    ["http://purl.obolibrary.org/obo/ENVO_00002030"], "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest":
+    [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+    ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty":
+    ["http://purl.obolibrary.org/obo/RO_0002507"], "http://www.w3.org/2002/07/owl#someValuesFrom":
+    ["http://purl.obolibrary.org/obo/ENVO_00001999"]}], "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest":
+    ["http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"]}]}]}], "labels": ["marine biome"],
+    "parents": ["http://purl.obolibrary.org/obo/ENVO_00002030", "http://purl.obolibrary.org/obo/ENVO_01001788"],
+    "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": [],
+    "hasNarrowSynonym": [], "hasRelatedSynonym": ["marine realm"]}}, "ENVO:00002030":
+    {"definitions": ["A biome which is determined by a water body and which has ecological
+    climax communities adapted to life in or on water."], "deprecated": [], "equivalents":
+    [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Class"],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first":
+    ["http://purl.obolibrary.org/obo/ENVO_00000428"], "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest":
+    [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+    ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty":
+    ["http://purl.obolibrary.org/obo/RO_0002507"], "http://www.w3.org/2002/07/owl#someValuesFrom":
+    ["http://purl.obolibrary.org/obo/ENVO_00000063"]}], "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest":
+    ["http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"]}]}]}], "labels": ["aquatic
+    biome"], "parents": ["http://purl.obolibrary.org/obo/ENVO_00000428", "http://purl.obolibrary.org/obo/ENVO_01001787"],
+    "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": [],
+    "hasNarrowSynonym": [], "hasRelatedSynonym": []}}, "ENVO:01000254": {"definitions":
+    ["A system which has the disposition to environ one or more material entities."],
+    "deprecated": [], "equivalents": [], "labels": ["environmental system"], "parents":
+    ["http://purl.obolibrary.org/obo/RO_0002577"], "replacements": [], "synonyms":
+    {"hasBroadSynonym": [], "hasExactSynonym": ["environment"], "hasNarrowSynonym":
+    [], "hasRelatedSynonym": []}}, "ENVO:01001788": {"definitions": [], "deprecated":
+    [], "equivalents": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Class"],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first":
+    ["http://purl.obolibrary.org/obo/ENVO_01001787"], "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest":
+    [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+    ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty":
+    ["http://purl.obolibrary.org/obo/RO_0002507"], "http://www.w3.org/2002/07/owl#someValuesFrom":
+    ["http://purl.obolibrary.org/obo/ENVO_00001999"]}], "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest":
+    ["http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"]}]}]}], "labels": ["marine ecosystem"],
+    "parents": ["http://purl.obolibrary.org/obo/ENVO_01000320", "http://purl.obolibrary.org/obo/ENVO_01001787"],
+    "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": [],
+    "hasNarrowSynonym": [], "hasRelatedSynonym": []}}}'
+  accessed_at: '2026-10-12T05:20:26.560054Z'
+  support: supports
+  locator: Official OWL retrieved 12-Oct; labels, definitions, typed synonyms, named
+    parents and restrictions; no snapshot refresh
+  snapshot_sha256: a0b919065d33a9cf975b74cadd16c75f32f512d17f4f6d5999b74216701df54c
+- evidence_id: PARENT
+  kind: record_content
+  reference: data/habitats/aquatic/aquatic_biome.yaml; data/habitats/other/environmental.yaml;
+    data/habitats/other/environmental_system.yaml; data/habitats/other/biome.yaml
+  summary: '{"ENVO:00000428": {"definition": "A biome is an ecosystem which is undergoing
+    climactic ecological succession.", "grounding_status": "EXACT", "label": "biome",
+    "parent_habitats": ["ENVO:01000813", "ENVO:01001110"]}, "ENVO:00002030": {"definition":
+    "A biome which is determined by a water body and which has ecological climax communities
+    adapted to life in or on water.", "grounding_status": "EXACT", "label": "aquatic
+    biome", "parent_habitats": ["ENVO:00000428", "ENVO:01001787", "habitatmech:BACDIVE.0f1e92a02c"]},
+    "ENVO:01000254": {"definition": "A system which has the disposition to environ
+    one or more material entities.", "grounding_status": "EXACT", "label": "environmental
+    system", "parent_habitats": null}, "habitatmech:BACDIVE.0f1e92a02c": {"definition":
+    "An environmental system which is a portion of the air, water, or land surface
+    or subsurface of an astronomical body sampled in place, and which is neither bounded
+    by a host organism nor constituted by a constructed or operated artefact.", "grounding_status":
+    "UNGROUNDED", "label": "free-living environment", "parent_habitats": ["ENVO:01000254"]}}'
+  accessed_at: '2026-10-12T05:40:16.804347Z'
+  support: supports
+  locator: Ancestor context adds no full-record coverage
+- evidence_id: TAX0
+  kind: database
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=1000566%2C1003110%2C1005925%2C1005926%2C1005928%2C1006%2C1007105%2C1007109%2C1007110%2C1007111%2C1007112%2C1007113%2C1007114%2C1007115%2C1007116%2C1007117%2C1007118%2C1007119%2C1007120%2C1007122%2C1007124%2C1009412%2C1009413%2C1009414%2C1009415%2C1009416%2C1009418%2C1009419%2C1009420%2C1009421%2C1017277%2C102%2C1026%2C1027373%2C1027374%2C1028566%2C1028742%2C1028743%2C1028745%2C1028746%2C1028749%2C1028752%2C1031273%2C1031541%2C103810%2C1038845%2C1038928%2C1038929%2C1042%2C104268%2C104270%2C1042877%2C1044%2C104421%2C1045558%2C1048%2C1048221%2C1057%2C106299%2C1074%2C107401%2C1080%2C1089550%2C109263%2C1094980%2C110163%2C1104565%2C1104566%2C110662%2C110663%2C111770%2C1121404%2C1121937%2C1121948%2C1122607%2C1123059%2C1123242%2C1123275%2C114404%2C1150474%2C119394%2C119542%2C1208324%2C1211807%2C121224%2C1217908%2C1219067%2C1242148%2C1246444%2C1246460%2C1265%2C126741%2C1267768%2C1267769%2C1276246%2C1282%2C129958%2C132144%2C133924%2C134561%2C1358%2C13616%2C13686%2C1371%2C1387275%2C139239%2C1394%2C1411902%2C143223%2C143224%2C147%2C1486246%2C150120%2C1543721%2C156%2C156128%2C156133%2C1570%2C158080%2C158192%2C158500%2C1609977%2C161528%2C163248%2C163503%2C168275%2C168759%2C1703256%2C1716143%2C172371%2C173%2C173365%2C173737%2C173764%2C174%2C174302%2C174315%2C1774373%2C179326%2C180542%2C1808508%2C1808945%2C1817405%2C1836499%2C184592%2C184914%2C1855%2C186022%2C1869227%2C1871328&retmode=xml
+  summary: 'The three chunks jointly resolve all 346 requested cohort IDs. Target
+    results=[{"current_id": "1000566", "current_name": "Halosaccharopolyspora lacisalsi",
+    "frozen_label": "Halosaccharopolyspora lacisalsi", "id": "1000566", "rank": "species"},
+    {"current_id": "1005928", "current_name": "Roseovarius lutimaris", "frozen_label":
+    "Roseovarius lutimaris", "id": "1005928", "rank": "species"}, {"current_id": "1007109",
+    "current_name": "alpha proteobacterium SCGC AAA076-C03", "frozen_label": "alpha
+    proteobacterium SCGC AAA076-C03", "id": "1007109", "rank": "species"}, {"current_id":
+    "1007110", "current_name": "alpha proteobacterium SCGC AAA076-E06", "frozen_label":
+    "alpha proteobacterium SCGC AAA076-E06", "id": "1007110", "rank": "species"},
+    {"current_id": "1007111", "current_name": "alpha proteobacterium SCGC AAA158-B04",
+    "frozen_label": "alpha proteobacterium SCGC AAA158-B04", "id": "1007111", "rank":
+    "species"}, {"current_id": "1007112", "current_name": "alpha proteobacterium SCGC
+    AAA158-M15", "frozen_label": "alpha proteobacterium SCGC AAA158-M15", "id": "1007112",
+    "rank": "species"}, {"current_id": "1007113", "current_name": "alpha proteobacterium
+    SCGC AAA160-J14", "frozen_label": "alpha proteobacterium SCGC AAA160-J14", "id":
+    "1007113", "rank": "species"}, {"current_id": "1007114", "current_name": "gamma
+    proteobacterium SCGC AAA076-D02", "frozen_label": "gamma proteobacterium SCGC
+    AAA076-D02", "id": "1007114", "rank": "species"}, {"current_id": "1007115", "current_name":
+    "gamma proteobacterium SCGC AAA076-D13", "frozen_label": "gamma proteobacterium
+    SCGC AAA076-D13", "id": "1007115", "rank": "species"}, {"current_id": "1007116",
+    "current_name": "gamma proteobacterium SCGC AAA076-E13", "frozen_label": "gamma
+    proteobacterium SCGC AAA076-E13", "id": "1007116", "rank": "species"}, {"current_id":
+    "1007117", "current_name": "gamma proteobacterium SCGC AAA076-F14", "frozen_label":
+    "gamma proteobacterium SCGC AAA076-F14", "id": "1007117", "rank": "species"},
+    {"current_id": "1007118", "current_name": "gamma proteobacterium SCGC AAA076-P09",
+    "frozen_label": "gamma proteobacterium SCGC AAA076-P09", "id": "1007118", "rank":
+    "species"}, {"current_id": "1007119", "current_name": "gamma proteobacterium SCGC
+    AAA076-P13", "frozen_label": "gamma proteobacterium SCGC AAA076-P13", "id": "1007119",
+    "rank": "species"}, {"current_id": "1007120", "current_name": "gamma proteobacterium
+    SCGC AAA160-D02", "frozen_label": "gamma proteobacterium SCGC AAA160-D02", "id":
+    "1007120", "rank": "species"}, {"current_id": "1007122", "current_name": "Fidelibacterota
+    bacterium SCGC AAA160-C11", "frozen_label": "Fidelibacterota bacterium SCGC AAA160-C11",
+    "id": "1007122", "rank": "species"}, {"current_id": "1007124", "current_name":
+    "Fidelibacterota bacterium SCGC AAA076-M08", "frozen_label": "Fidelibacterota
+    bacterium SCGC AAA076-M08", "id": "1007124", "rank": "species"}, {"current_id":
+    "1009412", "current_name": "Flavobacterium sp. SCGC AAA160-P02", "frozen_label":
+    "Flavobacterium sp. SCGC AAA160-P02", "id": "1009412", "rank": "species"}, {"current_id":
+    "1009413", "current_name": "Verrucomicrobia bacterium SCGC AAA164-A08", "frozen_label":
+    "Verrucomicrobia bacterium SCGC AAA164-A08", "id": "1009413", "rank": "species"},
+    {"current_id": "1009414", "current_name": "Verrucomicrobia bacterium SCGC AAA164-B23",
+    "frozen_label": "Verrucomicrobia bacterium SCGC AAA164-B23", "id": "1009414",
+    "rank": "species"}, {"current_id": "1009415", "current_name": "Verrucomicrobia
+    bacterium SCGC AAA164-E04", "frozen_label": "Verrucomicrobia bacterium SCGC AAA164-E04",
+    "id": "1009415", "rank": "species"}, {"current_id": "1009416", "current_name":
+    "Verrucomicrobia bacterium SCGC AAA164-I21", "frozen_label": "Verrucomicrobia
+    bacterium SCGC AAA164-I21", "id": "1009416", "rank": "species"}, {"current_id":
+    "1009418", "current_name": "Verrucomicrobia bacterium SCGC AAA164-M04", "frozen_label":
+    "Verrucomicrobia bacterium SCGC AAA164-M04", "id": "1009418", "rank": "species"},
+    {"current_id": "1009419", "current_name": "Verrucomicrobia bacterium SCGC AAA164-N20",
+    "frozen_label": "Verrucomicrobia bacterium SCGC AAA164-N20", "id": "1009419",
+    "rank": "species"}, {"current_id": "1009420", "current_name": "Verrucomicrobia
+    bacterium SCGC AAA164-O14", "frozen_label": "Verrucomicrobia bacterium SCGC AAA164-O14",
+    "id": "1009420", "rank": "species"}, {"current_id": "1009421", "current_name":
+    "Verrucomicrobia bacterium SCGC AAA164-P11", "frozen_label": "Verrucomicrobia
+    bacterium SCGC AAA164-P11", "id": "1009421", "rank": "species"}]. Alias/name resolution
+    does not establish habitat occurrence.'
+  accessed_at: '2026-10-12T05:21:31.882540Z'
+  support: supports
+  locator: NCBI TaxId, ScientificName, Rank, AkaTaxIds and OtherNames
+  snapshot_sha256: 47eba2c6c7ff47d6263796c3afdcff6e39319e77b443b6200d469773ef5ff403
+- evidence_id: TAX1
+  kind: database
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=1872627%2C1876%2C188906%2C188908%2C1903071%2C190308%2C191302%2C1926630%2C1931%2C195064%2C1961642%2C197222%2C198804%2C2%2C200617%2C2022602%2C2024855%2C203122%2C203907%2C205920%2C2099376%2C212050%2C214688%2C214988%2C216432%2C216773%2C2183988%2C2213%2C223788%2C224915%2C225345%2C225937%2C226126%2C2264%2C234267%2C240016%2C2423%2C243090%2C247026%2C257363%2C264%2C264462%2C264951%2C265606%2C266940%2C2738566%2C28108%2C28122%2C28181%2C28223%2C28251%2C28258%2C28262%2C29158%2C29159%2C2926447%2C29292%2C293614%2C29805%2C302409%2C3055%2C3068%2C31330%2C313595%2C313603%2C313606%2C314230%2C314275%2C316279%2C319225%2C320388%2C332415%2C337701%2C339861%2C340047%2C34085%2C344747%2C357244%2C35743%2C35845%2C358766%2C361576%2C36870%2C36987%2C372461%2C378806%2C379066%2C39152%2C391625%2C39947%2C402880%2C40464%2C406538%2C406540%2C411477%2C411485%2C419481%2C425006%2C428125%2C435805%2C43928%2C442956%2C443152%2C445336%2C44751%2C45351%2C457427%2C463619%2C46539%2C466153%2C46687%2C46704%2C46745%2C472759%2C483407%2C483417%2C48499%2C48729%2C491952%2C49447%2C498761%2C502025%2C504472%2C50741%2C515618%2C51671%2C518766%2C523849%2C530564%2C53249%2C537937%2C53953%2C55518%2C555512%2C55567%2C562%2C563043%2C56780%2C56811%2C57043%2C575540%2C583355%2C585501%2C595452%2C595453%2C59919%2C59920%2C6047%2C60480%2C6087&retmode=xml
+  summary: 'The three chunks jointly resolve all 346 requested cohort IDs. Target
+    results=[{"current_id": "1000566", "current_name": "Halosaccharopolyspora lacisalsi",
+    "frozen_label": "Halosaccharopolyspora lacisalsi", "id": "1000566", "rank": "species"},
+    {"current_id": "1005928", "current_name": "Roseovarius lutimaris", "frozen_label":
+    "Roseovarius lutimaris", "id": "1005928", "rank": "species"}, {"current_id": "1007109",
+    "current_name": "alpha proteobacterium SCGC AAA076-C03", "frozen_label": "alpha
+    proteobacterium SCGC AAA076-C03", "id": "1007109", "rank": "species"}, {"current_id":
+    "1007110", "current_name": "alpha proteobacterium SCGC AAA076-E06", "frozen_label":
+    "alpha proteobacterium SCGC AAA076-E06", "id": "1007110", "rank": "species"},
+    {"current_id": "1007111", "current_name": "alpha proteobacterium SCGC AAA158-B04",
+    "frozen_label": "alpha proteobacterium SCGC AAA158-B04", "id": "1007111", "rank":
+    "species"}, {"current_id": "1007112", "current_name": "alpha proteobacterium SCGC
+    AAA158-M15", "frozen_label": "alpha proteobacterium SCGC AAA158-M15", "id": "1007112",
+    "rank": "species"}, {"current_id": "1007113", "current_name": "alpha proteobacterium
+    SCGC AAA160-J14", "frozen_label": "alpha proteobacterium SCGC AAA160-J14", "id":
+    "1007113", "rank": "species"}, {"current_id": "1007114", "current_name": "gamma
+    proteobacterium SCGC AAA076-D02", "frozen_label": "gamma proteobacterium SCGC
+    AAA076-D02", "id": "1007114", "rank": "species"}, {"current_id": "1007115", "current_name":
+    "gamma proteobacterium SCGC AAA076-D13", "frozen_label": "gamma proteobacterium
+    SCGC AAA076-D13", "id": "1007115", "rank": "species"}, {"current_id": "1007116",
+    "current_name": "gamma proteobacterium SCGC AAA076-E13", "frozen_label": "gamma
+    proteobacterium SCGC AAA076-E13", "id": "1007116", "rank": "species"}, {"current_id":
+    "1007117", "current_name": "gamma proteobacterium SCGC AAA076-F14", "frozen_label":
+    "gamma proteobacterium SCGC AAA076-F14", "id": "1007117", "rank": "species"},
+    {"current_id": "1007118", "current_name": "gamma proteobacterium SCGC AAA076-P09",
+    "frozen_label": "gamma proteobacterium SCGC AAA076-P09", "id": "1007118", "rank":
+    "species"}, {"current_id": "1007119", "current_name": "gamma proteobacterium SCGC
+    AAA076-P13", "frozen_label": "gamma proteobacterium SCGC AAA076-P13", "id": "1007119",
+    "rank": "species"}, {"current_id": "1007120", "current_name": "gamma proteobacterium
+    SCGC AAA160-D02", "frozen_label": "gamma proteobacterium SCGC AAA160-D02", "id":
+    "1007120", "rank": "species"}, {"current_id": "1007122", "current_name": "Fidelibacterota
+    bacterium SCGC AAA160-C11", "frozen_label": "Fidelibacterota bacterium SCGC AAA160-C11",
+    "id": "1007122", "rank": "species"}, {"current_id": "1007124", "current_name":
+    "Fidelibacterota bacterium SCGC AAA076-M08", "frozen_label": "Fidelibacterota
+    bacterium SCGC AAA076-M08", "id": "1007124", "rank": "species"}, {"current_id":
+    "1009412", "current_name": "Flavobacterium sp. SCGC AAA160-P02", "frozen_label":
+    "Flavobacterium sp. SCGC AAA160-P02", "id": "1009412", "rank": "species"}, {"current_id":
+    "1009413", "current_name": "Verrucomicrobia bacterium SCGC AAA164-A08", "frozen_label":
+    "Verrucomicrobia bacterium SCGC AAA164-A08", "id": "1009413", "rank": "species"},
+    {"current_id": "1009414", "current_name": "Verrucomicrobia bacterium SCGC AAA164-B23",
+    "frozen_label": "Verrucomicrobia bacterium SCGC AAA164-B23", "id": "1009414",
+    "rank": "species"}, {"current_id": "1009415", "current_name": "Verrucomicrobia
+    bacterium SCGC AAA164-E04", "frozen_label": "Verrucomicrobia bacterium SCGC AAA164-E04",
+    "id": "1009415", "rank": "species"}, {"current_id": "1009416", "current_name":
+    "Verrucomicrobia bacterium SCGC AAA164-I21", "frozen_label": "Verrucomicrobia
+    bacterium SCGC AAA164-I21", "id": "1009416", "rank": "species"}, {"current_id":
+    "1009418", "current_name": "Verrucomicrobia bacterium SCGC AAA164-M04", "frozen_label":
+    "Verrucomicrobia bacterium SCGC AAA164-M04", "id": "1009418", "rank": "species"},
+    {"current_id": "1009419", "current_name": "Verrucomicrobia bacterium SCGC AAA164-N20",
+    "frozen_label": "Verrucomicrobia bacterium SCGC AAA164-N20", "id": "1009419",
+    "rank": "species"}, {"current_id": "1009420", "current_name": "Verrucomicrobia
+    bacterium SCGC AAA164-O14", "frozen_label": "Verrucomicrobia bacterium SCGC AAA164-O14",
+    "id": "1009420", "rank": "species"}, {"current_id": "1009421", "current_name":
+    "Verrucomicrobia bacterium SCGC AAA164-P11", "frozen_label": "Verrucomicrobia
+    bacterium SCGC AAA164-P11", "id": "1009421", "rank": "species"}]. Alias/name resolution
+    does not establish habitat occurrence.'
+  accessed_at: '2026-10-12T05:21:33.762356Z'
+  support: supports
+  locator: NCBI TaxId, ScientificName, Rank, AkaTaxIds and OtherNames
+  snapshot_sha256: 211e97ebc927aae4966a064aa1db888cc9672558b906b2333d2088bb0c5b87fb
+- evidence_id: TAX2
+  kind: database
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=610380%2C6182%2C6238%2C6334%2C639602%2C641112%2C6613%2C6669%2C688066%2C69293%2C6945%2C69773%2C7029%2C703612%2C7070%2C7159%2C7209%2C7425%2C74546%2C74547%2C748449%2C756272%2C758583%2C75883%2C760154%2C765912%2C7668%2C76775%2C7719%2C777%2C7955%2C80836%2C8090%2C83428%2C86104%2C880%2C880447%2C885%2C89184%2C9031%2C91360%2C9258%2C939306%2C939316%2C939324%2C939346&retmode=xml
+  summary: 'The three chunks jointly resolve all 346 requested cohort IDs. Target
+    results=[{"current_id": "1000566", "current_name": "Halosaccharopolyspora lacisalsi",
+    "frozen_label": "Halosaccharopolyspora lacisalsi", "id": "1000566", "rank": "species"},
+    {"current_id": "1005928", "current_name": "Roseovarius lutimaris", "frozen_label":
+    "Roseovarius lutimaris", "id": "1005928", "rank": "species"}, {"current_id": "1007109",
+    "current_name": "alpha proteobacterium SCGC AAA076-C03", "frozen_label": "alpha
+    proteobacterium SCGC AAA076-C03", "id": "1007109", "rank": "species"}, {"current_id":
+    "1007110", "current_name": "alpha proteobacterium SCGC AAA076-E06", "frozen_label":
+    "alpha proteobacterium SCGC AAA076-E06", "id": "1007110", "rank": "species"},
+    {"current_id": "1007111", "current_name": "alpha proteobacterium SCGC AAA158-B04",
+    "frozen_label": "alpha proteobacterium SCGC AAA158-B04", "id": "1007111", "rank":
+    "species"}, {"current_id": "1007112", "current_name": "alpha proteobacterium SCGC
+    AAA158-M15", "frozen_label": "alpha proteobacterium SCGC AAA158-M15", "id": "1007112",
+    "rank": "species"}, {"current_id": "1007113", "current_name": "alpha proteobacterium
+    SCGC AAA160-J14", "frozen_label": "alpha proteobacterium SCGC AAA160-J14", "id":
+    "1007113", "rank": "species"}, {"current_id": "1007114", "current_name": "gamma
+    proteobacterium SCGC AAA076-D02", "frozen_label": "gamma proteobacterium SCGC
+    AAA076-D02", "id": "1007114", "rank": "species"}, {"current_id": "1007115", "current_name":
+    "gamma proteobacterium SCGC AAA076-D13", "frozen_label": "gamma proteobacterium
+    SCGC AAA076-D13", "id": "1007115", "rank": "species"}, {"current_id": "1007116",
+    "current_name": "gamma proteobacterium SCGC AAA076-E13", "frozen_label": "gamma
+    proteobacterium SCGC AAA076-E13", "id": "1007116", "rank": "species"}, {"current_id":
+    "1007117", "current_name": "gamma proteobacterium SCGC AAA076-F14", "frozen_label":
+    "gamma proteobacterium SCGC AAA076-F14", "id": "1007117", "rank": "species"},
+    {"current_id": "1007118", "current_name": "gamma proteobacterium SCGC AAA076-P09",
+    "frozen_label": "gamma proteobacterium SCGC AAA076-P09", "id": "1007118", "rank":
+    "species"}, {"current_id": "1007119", "current_name": "gamma proteobacterium SCGC
+    AAA076-P13", "frozen_label": "gamma proteobacterium SCGC AAA076-P13", "id": "1007119",
+    "rank": "species"}, {"current_id": "1007120", "current_name": "gamma proteobacterium
+    SCGC AAA160-D02", "frozen_label": "gamma proteobacterium SCGC AAA160-D02", "id":
+    "1007120", "rank": "species"}, {"current_id": "1007122", "current_name": "Fidelibacterota
+    bacterium SCGC AAA160-C11", "frozen_label": "Fidelibacterota bacterium SCGC AAA160-C11",
+    "id": "1007122", "rank": "species"}, {"current_id": "1007124", "current_name":
+    "Fidelibacterota bacterium SCGC AAA076-M08", "frozen_label": "Fidelibacterota
+    bacterium SCGC AAA076-M08", "id": "1007124", "rank": "species"}, {"current_id":
+    "1009412", "current_name": "Flavobacterium sp. SCGC AAA160-P02", "frozen_label":
+    "Flavobacterium sp. SCGC AAA160-P02", "id": "1009412", "rank": "species"}, {"current_id":
+    "1009413", "current_name": "Verrucomicrobia bacterium SCGC AAA164-A08", "frozen_label":
+    "Verrucomicrobia bacterium SCGC AAA164-A08", "id": "1009413", "rank": "species"},
+    {"current_id": "1009414", "current_name": "Verrucomicrobia bacterium SCGC AAA164-B23",
+    "frozen_label": "Verrucomicrobia bacterium SCGC AAA164-B23", "id": "1009414",
+    "rank": "species"}, {"current_id": "1009415", "current_name": "Verrucomicrobia
+    bacterium SCGC AAA164-E04", "frozen_label": "Verrucomicrobia bacterium SCGC AAA164-E04",
+    "id": "1009415", "rank": "species"}, {"current_id": "1009416", "current_name":
+    "Verrucomicrobia bacterium SCGC AAA164-I21", "frozen_label": "Verrucomicrobia
+    bacterium SCGC AAA164-I21", "id": "1009416", "rank": "species"}, {"current_id":
+    "1009418", "current_name": "Verrucomicrobia bacterium SCGC AAA164-M04", "frozen_label":
+    "Verrucomicrobia bacterium SCGC AAA164-M04", "id": "1009418", "rank": "species"},
+    {"current_id": "1009419", "current_name": "Verrucomicrobia bacterium SCGC AAA164-N20",
+    "frozen_label": "Verrucomicrobia bacterium SCGC AAA164-N20", "id": "1009419",
+    "rank": "species"}, {"current_id": "1009420", "current_name": "Verrucomicrobia
+    bacterium SCGC AAA164-O14", "frozen_label": "Verrucomicrobia bacterium SCGC AAA164-O14",
+    "id": "1009420", "rank": "species"}, {"current_id": "1009421", "current_name":
+    "Verrucomicrobia bacterium SCGC AAA164-P11", "frozen_label": "Verrucomicrobia
+    bacterium SCGC AAA164-P11", "id": "1009421", "rank": "species"}]. Alias/name resolution
+    does not establish habitat occurrence.'
+  accessed_at: '2026-10-12T05:21:35.121229Z'
+  support: supports
+  locator: NCBI TaxId, ScientificName, Rank, AkaTaxIds and OtherNames
+  snapshot_sha256: 7dccc4bfc1eff3c32cab8b06f150ad44aa14c05a522cd0b648b04709382f5821
+- evidence_id: SEARCH
+  kind: search
+  reference: curation; history; research; reports; reviews; data/raw; data/habitats;
+    conf
+  summary: 'Identifier, label, slug and exact-path searches included hidden/ignored
+    files in these roots. No earlier structured target observation was found. Legacy
+    reports exist and are not silently retired. Bounded original-source search={"configured_root":
+    "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe", "root_exists":
+    true, "exact_paths": [{"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_nodes.tsv",
+    "exists": false, "expected_sha256": "c13c21bdd04619c75ce16e63b05e51577b0cefec5b61765d383313f654ab3fae"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_edges.tsv",
+    "exists": false, "expected_sha256": "54982c25de9d2c820eeebc1452aeac0b034595921d04d55b810bf1d2b1e127e0"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/nodes.tsv",
+    "exists": false, "expected_sha256": "a2a2f9acae230636dd866347d173a32c9f025c04a377060087a4be65781628f3"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/edges.tsv",
+    "exists": false, "expected_sha256": "ab6208bff4854db7c1a736d53d0aa04269a682ab15a1ce6f37c6d731000281d7"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/nodes.tsv",
+    "exists": false, "expected_sha256": "020de3afc71495571ddb05000c83a58d009272f53735b5f7c9326c1293e0415c"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/edges.tsv",
+    "exists": false, "expected_sha256": "8863ee3197a36915865fa4833df39d10c3f8f69b64bafbb746b9cd731308a0aa"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/nodes.tsv",
+    "exists": false, "expected_sha256": "cc5941cd677831e8e207da018dca763cd009bb1f9310b21cb4d45892316e006d"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/edges.tsv",
+    "exists": false, "expected_sha256": "fd333634eaaa3cfe57a35cdca2f4c5b8cf0662851c1df58914d3e999d62a650e"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/environments.csv",
+    "exists": false, "expected_sha256": "99299fe635159712f95568783ad3b484230fb31781262f1f6f8bd84db4bc3048"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/mappings/isolation_source_to_ontology.tsv",
+    "exists": false, "expected_sha256": "2dea3d1bb20c72a04b6f64a67e2bb2bdc4f3649b809c5935390239be2791ef1f"}],
+    "traversal": [{"command": ["rg", "--files", "--no-ignore", "--hidden", "data"],
+    "exit_code": 0, "matches": [], "stderr": ""}, {"command": ["rg", "--files", "--no-ignore",
+    "--hidden", "build"], "exit_code": 0, "matches": [], "stderr": ""}, {"command":
+    ["rg", "--files", "--no-ignore", "--hidden", "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data"],
+    "exit_code": 0, "matches": [], "stderr": ""}]}'
+  accessed_at: '2026-10-12T05:40:16.804347Z'
+  support: supports
+  locator: Search boundaries are explicit; no global absence claim
+  search_scope: 'Identifier, label, slug and exact-path searches included hidden/ignored
+    files in these roots. No earlier structured target observation was found. Legacy
+    reports exist and are not silently retired. Bounded original-source search={"configured_root":
+    "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe", "root_exists":
+    true, "exact_paths": [{"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_nodes.tsv",
+    "exists": false, "expected_sha256": "c13c21bdd04619c75ce16e63b05e51577b0cefec5b61765d383313f654ab3fae"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_edges.tsv",
+    "exists": false, "expected_sha256": "54982c25de9d2c820eeebc1452aeac0b034595921d04d55b810bf1d2b1e127e0"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/nodes.tsv",
+    "exists": false, "expected_sha256": "a2a2f9acae230636dd866347d173a32c9f025c04a377060087a4be65781628f3"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/edges.tsv",
+    "exists": false, "expected_sha256": "ab6208bff4854db7c1a736d53d0aa04269a682ab15a1ce6f37c6d731000281d7"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/nodes.tsv",
+    "exists": false, "expected_sha256": "020de3afc71495571ddb05000c83a58d009272f53735b5f7c9326c1293e0415c"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/edges.tsv",
+    "exists": false, "expected_sha256": "8863ee3197a36915865fa4833df39d10c3f8f69b64bafbb746b9cd731308a0aa"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/nodes.tsv",
+    "exists": false, "expected_sha256": "cc5941cd677831e8e207da018dca763cd009bb1f9310b21cb4d45892316e006d"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/edges.tsv",
+    "exists": false, "expected_sha256": "fd333634eaaa3cfe57a35cdca2f4c5b8cf0662851c1df58914d3e999d62a650e"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/environments.csv",
+    "exists": false, "expected_sha256": "99299fe635159712f95568783ad3b484230fb31781262f1f6f8bd84db4bc3048"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/mappings/isolation_source_to_ontology.tsv",
+    "exists": false, "expected_sha256": "2dea3d1bb20c72a04b6f64a67e2bb2bdc4f3649b809c5935390239be2791ef1f"}],
+    "traversal": [{"command": ["rg", "--files", "--no-ignore", "--hidden", "data"],
+    "exit_code": 0, "matches": [], "stderr": ""}, {"command": ["rg", "--files", "--no-ignore",
+    "--hidden", "build"], "exit_code": 0, "matches": [], "stderr": ""}, {"command":
+    ["rg", "--files", "--no-ignore", "--hidden", "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data"],
+    "exit_code": 0, "matches": [], "stderr": ""}]}'
+- evidence_id: ISSUES
+  kind: database
+  reference: https://github.com/CultureBotAI/HabitatMech/issues
+  summary: 'Read-only all-state 967-issue title/body inventory and relevant bodies
+    inspected. Issues are historical leads, not primary support; current owner rows
+    and scientific evidence were checked independently. Comments were not exhaustively
+    crawled. Closed issue #1301 is reflected in the current graph and is not reopened
+    by preserving old history.'
+  accessed_at: '2026-10-12T05:40:16.804347Z'
+  support: supports
+  locator: GitHub CLI inventory retrieved 12-Oct
+assessments:
+- assessment_id: IDENTITY
+  area: identity
+  topic: Exact identity, definition and source intent
+  outcome: supported
+  summary: The aquatic and water-based biome parents agree with the marine-waterbody-determined
+    biome identity. The 3082 TAXON aggregate and selected 25 associations are distinct
+    quantities. ENVO marine realm is a related synonym, not the emitted exact synonym.
+    Morphological PREGO variants remain related and do not add habitat identities.
+  target_ids:
+  - ENVO:00000447
+  evidence_ids:
+  - R
+  - RAW
+  - ONT
+  - PARENT
+- assessment_id: HIERARCHY
+  area: grounding
+  topic: Parent contributors and mapping endpoints
+  outcome: concern
+  summary: The aquatic and water-based biome parents agree with the marine-waterbody-determined
+    biome identity. The 3082 TAXON aggregate and selected 25 associations are distinct
+    quantities. ENVO marine realm is a related synonym, not the emitted exact synonym.
+    Morphological PREGO variants remain related and do not add habitat identities.
+    Ontology, GOLD path, ambiguous-leaf and authored-genus routes were distinguished.
+  target_ids:
+  - ENVO:00000447
+  evidence_ids:
+  - R
+  - RAW
+  - CODE
+  - ONT
+  - PARENT
+- assessment_id: PROVENANCE
+  area: provenance
+  topic: Source units and native lifecycle
+  outcome: supported
+  summary: 'Complete reconstruction preserves 1 contributing concepts and 0 ITEM-reviewed
+    contributors. Attestations=[{"source": "PREGO", "source_id": "ENVO:00000447",
+    "source_label": "marine biome", "assertion_count": 3082, "assertion_unit": "TAXON",
+    "score": 4.0, "evidence_channels": "annotated_genomes_isolates|environmental_samples"}].
+    Counts with different units are not summed. Reproduction validates derivation,
+    not the scientific truth of the mapping.'
+  target_ids:
+  - ENVO:00000447
+  evidence_ids:
+  - R
+  - RAW
+  - CODE
+  - RULES
+- assessment_id: TAXA
+  area: evidence
+  topic: Taxonomy and association scope
+  outcome: supported
+  summary: 'All emitted identifiers resolve, including historical aliases. Source
+    rows, ranks, scores and corroboration reproduce; these are selected associations,
+    not proven characteristic taxa. Original occurrence evidence was not fully recovered,
+    so no claim of exhaustive ecological validation is made. '
+  target_ids:
+  - ENVO:00000447
+  evidence_ids:
+  - R
+  - RAW
+  - TAX0
+  - TAX1
+  - TAX2
+  - RULES
+- assessment_id: COMPLETENESS
+  area: completeness
+  topic: Optional slots and bounded evidence
+  outcome: supported
+  summary: Optional empty fields alone are not defects. No causal graph is asserted
+    in the exact captured record; ignored-inclusive support search and the full causal
+    gate were checked. No record-level gene/regulator or transcriptomics claim warrants
+    a component query.
+  target_ids:
+  - ENVO:00000447
+  evidence_ids:
+  - R
+  - RULES
+  - SEARCH
+findings:
+- finding_id: F1
+  issue_key: envo-00000447-ontology-synonym-scope
+  category: scope
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Non-exact ontology synonyms are promoted to exact
+  description: marine realm is related. The generated ENVO contribution is EXACT;
+    PREGO related contributions are a separate source.
+  target_ids:
+  - ENVO:00000447
+  field_paths:
+  - synonyms
+  evidence_ids:
+  - R
+  - RAW
+  - ONT
+  - CODE
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Typed ontology synonym ingestion
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_terms.tsv
+    role: Governed ontology source
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Preservation of source scope
+  rule_id: docs/CURATION.md; .claude/skills/curate-yaml-record/references/review-checklist.md
+  native_severity: major
+  normalization_reason: Material identity, strict-hierarchy, evidence or representation
+    defect.
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1249
+actions:
+- action_id: A1
+  description: 'Resolve shared issue #1249 with typed-synonym ingestion and consumer
+    regressions; do not globally downgrade genuine exact synonyms.'
+  finding_ids:
+  - F1
+  target_ids:
+  - ENVO:00000447
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Typed ontology synonym ingestion
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_terms.tsv
+    role: Governed ontology source
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Preservation of source scope
+  generator: src/habitatmech/seed.py
+  acceptance_checks:
+  - Change only maintained owners after source-level assessment; retain independent
+    true parents, source identity/count/unit provenance and lifecycle unless a separately
+    justified change requires otherwise.
+  - Append required current history, add focused regressions, inspect a seed canary
+    and regenerate affected products without hand-editing records or pages.
+  - Pass schema, strict, label, provenance, corpus reproduction, causal/history and
+    full QC gates; save a linked successor for any finding disposition.
+limitations:
+- Completed assessment is not a clean-record verdict or proof of every original source
+  occurrence.
+- Only the first three exact-path BioSample and Organism descriptions per target/sheet
+  were individually interpreted; remaining members and study joins were indexed, not
+  scientifically reviewed.
+- Later GOLD export/classification does not reconstruct original August membership.
+  No ontology, taxonomy or source snapshot was refreshed.
+- Same-agent review, not independent approval. Native status and curation/history
+  inputs are unchanged.
+- 'SSSOM/KGX conformance to current kg-microbe modeling was not audited; shared endpoint
+  issue #1398 remains open.'
+- Whole-corpus scientific review remains incomplete. Ancestor/context reads add no
+  record coverage. Product-label checking retains 2057 no-adapter skips and five accepted
+  exceptions.
+notes:
+- 'Review-only observation: no curation, status promotion, GitHub mutation or paid
+  research.'
+- No earlier structured target observation found; legacy reports are historical and
+  are not automatically superseded.
+tags:
+- habitatmech
+- aquatic
+- record-review
+- scientific-review
+```
