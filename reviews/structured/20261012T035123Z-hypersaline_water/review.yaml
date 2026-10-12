@@ -1,0 +1,1206 @@
+schema_version: 1.0.0
+review_id: 20261012T035123Z-hypersaline_water
+kind: record
+repository: CultureBotAI/HabitatMech
+title: 'Scientific record review: hypersaline_water'
+started_at: '2026-10-12T03:33:01.120287Z'
+finished_at: '2026-10-12T03:51:23.985160Z'
+reviewer:
+  identity: OpenAI Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Agent has participated in repository curation; this is not independent
+    approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: ENVO:00002012 denotes hypersaline water material, with the supported saline-water
+  genus. The four-edge salt-adaptation model correctly distinguishes KCl accumulation
+  from compatible solutes and already excludes a universal acidic-proteome inference.
+  PREGO and Madin associations remain observational; merged taxon IDs need versioned
+  source maintenance, not invented occurrence corrections.
+source:
+  git_revision: 0cdeb733c38557948747ac46dbf98651279f8bd1
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: conf/record_review.yaml
+    sha256: c2f5d0eb4c5744f5fe354c92184ddab144dc2688dba952b032b4f3d597bc08d6
+    role: context
+  - path: conf/sources.yaml
+    sha256: a8e069f9278068b57fa234f43e03c8d893f857827b83fd10cfa92d6815aed642
+    role: context
+  - path: curation/causal_graphs/hypersaline_water.yaml
+    sha256: e974d5e9cc241ac9daf3542ba11156915cfb7786e683ad5ad212af5b35006158
+    role: context
+  - path: curation/causal_graphs/liquid_water.yaml
+    sha256: 12aac1021b9b51c6becc4ef8509bd63557b306e42c01d9b4443d69252ce29a81
+    role: context
+  - path: curation/decisions.tsv
+    sha256: 2fd5aec7ac1710ede2405849e78dd0423c253d72b43676230f72b9905bae99dd
+    role: context
+  - path: curation/definition_source_label_exclusions.tsv
+    sha256: 2d41fc93db4939122b3909f2a412b84b679703948b10d9f02e12021442f71407
+    role: context
+  - path: curation/external_xrefs.tsv
+    sha256: cf8394a6ab22e35efd9e252aef422018226280830bf816a39bf4f2256ff75ad5
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: 6be3d043f1730c9098ade51833e311b5b5a14cfddbb83ef3af0e9713f4a52198
+    role: context
+  - path: curation/redirects_retracted.tsv
+    sha256: 0f1e9af8881f5a5db19f87de06b3b3d1800cfac8101699b380388c0a1a1e9a19
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 3f2ce04805defe5ff65dc20988cc72bc94d4636b3140eb1311017866bdc0ea0a
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: b59b9e800a918135e3915145d4d8098bb48dcea36a312b3004c594a57d221ae9
+    role: context
+  - path: data/habitats/aquatic/hypersaline_water.yaml
+    sha256: 9973fdce7cea4fc02772925133283341062dbe1b273389d6d1db80e6c4391a5d
+    role: target
+  - path: data/habitats/aquatic/liquid_water.yaml
+    sha256: 03eb8ba51e02bc4c8b65b67ae5d8bb740746f8eff51ed81326685fdc5067b081
+    role: context
+  - path: data/habitats/aquatic/saline_water.yaml
+    sha256: 0114f8f1def88f8f8ce2b675bdd8b96e44ca92248424969288ebaa803fa8c248
+    role: context
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: 36df8306394c06c352b73e0bf7b47a2858784cedac7389a24d0b78f593ece646
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: f7aa39ee762d94f1902d9f08f328cb897bc543e4e226057eb4770d24bfcc6eb5
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/other/hypersaline_water/2026-10-03T134744Z-codex-2682ea.yaml
+    sha256: 38dfc7ec07892e4aeb8a218c9f7667ee8ab4831767610f4714a5dad5560836c3
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reports/yaml_record_review/20260921T102035Z-acidic_hypersaline_lake.md
+    sha256: a4ae902971e85175a1f9f1e3751d49c071458fb8fa319e015b2cc65a1f8e1786
+    role: context
+  - path: reports/yaml_record_review/20260923T144527Z-brine.md
+    sha256: e196cffcb274d8b1efe9876865171a07bc3d4a1249f5969ec7063fa9b5c1dd1b
+    role: context
+  - path: reports/yaml_record_review/20261003T133723Z-hypersaline_water.md
+    sha256: 008b0bf204914f7906b6a6e7d2de99cc3ed8eb7b279c9ad8c1b4d4c075dbefc8
+    role: context
+  - path: reports/yaml_record_review/20261003T133956Z-hypersaline_water_environment.md
+    sha256: 30bb818f9cdc80c5e95c286a901346eb63e8c2b73ed1a03f4c4bca2312b07670
+    role: context
+  - path: reports/yaml_record_review/20261004T174652Z-microbial_mats__a2a31086.md
+    sha256: ccb822101ead8ee9192ebe4bed10cf520c269030c4a411b5bd671997c342f61b
+    role: context
+  - path: reports/yaml_record_review/20261005T053542Z-saline_water__863799b0.md
+    sha256: 9457ffbc9fd790ee36794e86d2800777886501c8b28ac6a54fe9a933691c6a41
+    role: context
+  - path: reports/yaml_record_review/20261005T055049Z-salt_crystallizer_ponds.md
+    sha256: a91b34740b0e1cf205b8fc125b6ac7c40a4ab9f23c9d9eed9549827e5189ef10
+    role: context
+  - path: reports/yaml_record_review/20261005T081815Z-sea_ice_brine.md
+    sha256: bd07be17c0f35764777a70e51c875c667db2503fb140e31501c08ba7fd818fbc
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/extract_gold_biosamples.py
+    sha256: b6a2773c86fe718e1ca0b1d7b32709f0eee491ac813655e310aa0817c0fec31b
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: 4bf5391d25ff48a2d81eb3821af6582de063fd0391440973d309dfd93016490c
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: src/habitatmech/extract.py
+    sha256: 4d9397bda649381a5daf81937369531c6dc8b4518d6c7047e6f3f14e605bf860
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 7e3cda3dadb9c7462498e5014bf38ef730068212f8f9cb131e3fce383c21d10e
+    role: context
+  - path: src/habitatmech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+  - path: src/habitatmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 4adf105e23d75c3563a516a0c160623d1065df7fcb2f31b7a0a0a8303d0401be
+    role: context
+targets:
+- target_id: ENVO:00002012
+  path: data/habitats/aquatic/hypersaline_water.yaml
+  label: hypersaline water
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Source-specific identity and lifecycle decisions
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Authored definitions and genus
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Guarded source context-parent exclusions
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_terms.tsv
+    role: Pinned ontology labels, definitions and synonyms
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_subclass_edges.tsv
+    role: Pinned ontology hierarchy
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Harmonization and generated record construction
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/environment_parameters.tsv
+    role: Frozen ENVIRONMENTS_TABLE source inventory
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/madin_habitats.tsv
+    role: Frozen MADIN source inventory
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/madin_habitat_taxa.tsv
+    role: Frozen MADIN source inventory
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/prego_habitats.tsv
+    role: Frozen PREGO source inventory
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/prego_habitat_taxa.tsv
+    role: Frozen PREGO source inventory
+  - repository: CultureBotAI/HabitatMech
+    path: curation/causal_graphs/hypersaline_water.yaml
+    role: Curated mechanism nodes, edges and evidence
+scope:
+  description: Entire exact generated record, all contributors and individual asserted
+    mechanism edges, with bounded source-context assessment.
+  selection: 'Next forty records without a completed individual scientific review
+    in stable repository-relative path order: hydrothermal plume through marginal
+    sea biome. Full individual observations, not a category-wide pass. Starting observation
+    coverage648/3208 is not clean current-input coverage.'
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - ENVO:00002012
+  exclusions:
+  - target: Other3207 current records
+    reason: Context reads are not their full scientific review.
+checks:
+- check_id: C0
+  name: Native gate on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00002012
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=0cdeb733c38557948747ac46dbf98651279f8bd1
+    just validate data/habitats/aquatic/hypersaline_water.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-12T03:35:09.958674Z to 2026-10-12T03:35:13.403077Z.
+    Native scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C1
+  name: Native gate on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00002012
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=0cdeb733c38557948747ac46dbf98651279f8bd1
+    just validate-strict data/habitats/aquatic/hydrothermal_plume.yaml data/habitats/aquatic/hydrothermal_vent.yaml
+    data/habitats/aquatic/hypersaline_lake.yaml data/habitats/aquatic/hypersaline_soda_lake.yaml
+    data/habitats/aquatic/hypersaline_spring.yaml data/habitats/aquatic/hypersaline_water.yaml
+    data/habitats/aquatic/hypersaline_water_environment.yaml data/habitats/aquatic/hypolimnion.yaml
+    data/habitats/aquatic/hypolimnion__78bbb31f.yaml data/habitats/aquatic/hypolimnion__d888743c.yaml
+    data/habitats/aquatic/hypoxic_zone.yaml data/habitats/aquatic/ice.yaml data/habitats/aquatic/ice_accretions.yaml
+    data/habitats/aquatic/ice_shelf.yaml data/habitats/aquatic/inlet.yaml data/habitats/aquatic/insect_burrows.yaml
+    data/habitats/aquatic/intertidal_zone.yaml data/habitats/aquatic/intertidal_zone__2f295854.yaml
+    data/habitats/aquatic/intertidal_zone__3d85893c.yaml data/habitats/aquatic/kettle.yaml
+    data/habitats/aquatic/lake.yaml data/habitats/aquatic/lake__335782f4.yaml data/habitats/aquatic/lake_biofilm.yaml
+    data/habitats/aquatic/lake_inlet.yaml data/habitats/aquatic/large_freshwater_lake_biome.yaml
+    data/habitats/aquatic/large_river_biome.yaml data/habitats/aquatic/leachate.yaml
+    data/habitats/aquatic/lentic_water_body.yaml data/habitats/aquatic/liftoff_microbial_mat.yaml
+    data/habitats/aquatic/limnetic_zone.yaml data/habitats/aquatic/liquid_water.yaml
+    data/habitats/aquatic/littoral_zone.yaml data/habitats/aquatic/littoral_zone__9f547c9b.yaml
+    data/habitats/aquatic/lotic_water_body.yaml data/habitats/aquatic/low_tide_zone.yaml
+    data/habitats/aquatic/mangrove_area.yaml data/habitats/aquatic/mangrove_sediment.yaml
+    data/habitats/aquatic/mangrove_soil.yaml data/habitats/aquatic/mangrove_swamp.yaml
+    data/habitats/aquatic/marginal_sea_biome.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-12T03:37:03.419277Z to 2026-10-12T03:37:12.395795Z.
+    Native scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C2
+  name: Native gate on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00002012
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=0cdeb733c38557948747ac46dbf98651279f8bd1
+    just verify-corpus
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-12T03:37:12.396779Z to 2026-10-12T03:37:31.652184Z.
+    Native scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C3
+  name: Native gate on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00002012
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=0cdeb733c38557948747ac46dbf98651279f8bd1
+    just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-12T03:37:31.653951Z to 2026-10-12T03:38:23.419150Z.
+    Native scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C4
+  name: Native gate on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00002012
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=0cdeb733c38557948747ac46dbf98651279f8bd1
+    just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-12T03:38:23.420244Z to 2026-10-12T03:38:32.031101Z.
+    Native scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C5
+  name: Native gate on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00002012
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=0cdeb733c38557948747ac46dbf98651279f8bd1
+    just validate-causal-all
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-12T03:38:32.032463Z to 2026-10-12T03:38:37.476375Z.
+    Native scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C6
+  name: Native gate on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00002012
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=0cdeb733c38557948747ac46dbf98651279f8bd1
+    just term-requests-check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-12T03:38:37.477529Z to 2026-10-12T03:39:03.951019Z.
+    Native scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C7
+  name: Native gate on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00002012
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=0cdeb733c38557948747ac46dbf98651279f8bd1
+    just provenance-check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-12T03:39:03.953076Z to 2026-10-12T03:39:05.157446Z.
+    Native scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C8
+  name: Native gate on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00002012
+  command: gh run view 38198936724 --repo CultureBotAI/HabitatMech --log
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-12T03:36:13.751706Z to 2026-10-12T03:36:15.983252Z.
+    All three required merge-group workflows passed at the exact captured base; authoritative
+    QC passed 886 tests with 3 skipped. Newly saved review bundles require their own
+    integrity check. Exact-base CI receipt; these new review bundles were not part
+    of that CI run.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: REPRO
+  name: Complete target reconstruction
+  required: false
+  status: passed
+  target_ids:
+  - ENVO:00002012
+  command: .venv/bin/python /private/tmp/habitatmech-review-bb-evidence.py
+  exit_code: 0
+  summary: All40 complete documents matched; captured input hashes verified again
+    before authoring.
+  evidence_ids:
+  - RAW
+  - CODE
+- check_id: ORIGINAL
+  name: Original assertion membership
+  required: false
+  status: unavailable
+  target_ids:
+  - ENVO:00002012
+  summary: Bounded ignored-inclusive searches did not recover the complete original
+    assertion inputs. Later exports supply context only.
+  evidence_ids:
+  - SEARCH
+- check_id: IMODULON
+  name: Structured expression applicability
+  required: false
+  status: not_applicable
+  target_ids:
+  - ENVO:00002012
+  summary: Successful dataset inventory was inspected for graphs; no matching claim-specific
+    strain/gene or expression-module assertion is present. Generic pathway/stress
+    vocabulary alone cannot certify natural habitat occurrence or causation. No component
+    hit was asserted, so no summarize call applies.
+  evidence_ids:
+  - IMODULONDB-DATASETS
+evidence:
+- evidence_id: R
+  kind: record_content
+  reference: data/habitats/aquatic/hypersaline_water.yaml
+  summary: ENVO:00002012 denotes hypersaline water material, with the supported saline-water
+    genus. The four-edge salt-adaptation model correctly distinguishes KCl accumulation
+    from compatible solutes and already excludes a universal acidic-proteome inference.
+    PREGO and Madin associations remain observational; merged taxon IDs need versioned
+    source maintenance, not invented occurrence corrections.
+  accessed_at: '2026-10-12T03:48:26.912564Z'
+  support: supports
+  locator: Entire captured YAML read, including provenance, parameters, taxa, graphs
+    and generated history
+- evidence_id: RULES
+  kind: record_content
+  reference: docs/CURATION.md; docs/HARMONIZATION.md; docs/RESEARCH.md; src/habitatmech/schema/habitatmech.yaml
+  summary: Applied exact identity, strict-parent, MIxS-role, source unit/score and
+    ITEM lifecycle contracts. STATE is a cellular value, not the process establishing
+    it. Evidence is assessed at edge scope.
+  accessed_at: '2026-10-12T03:48:26.912564Z'
+  support: supports
+- evidence_id: RAW
+  kind: database
+  reference: data/raw; curation/decisions.tsv; curation/term_requests.tsv; curation/gold_parent_exclusions.tsv
+  summary: '{"data/raw/environment_parameters.tsv": [{"data": {"cobo_simon_habitat":
+    "NA", "env_type": "water_hypersaline", "main_group": "Aquatic", "parameter": "Gradients",
+    "term_ids": "ENVO:00002012", "term_labels": "hypersaline water", "value": "low"},
+    "logical_row": 270}, {"data": {"cobo_simon_habitat": "NA", "env_type": "water_hypersaline",
+    "main_group": "Aquatic", "parameter": "Organic", "term_ids": "ENVO:00002012",
+    "term_labels": "hypersaline water", "value": "low"}, "logical_row": 271}, {"data":
+    {"cobo_simon_habitat": "NA", "env_type": "water_hypersaline", "main_group": "Aquatic",
+    "parameter": "Salinity", "term_ids": "ENVO:00002012", "term_labels": "hypersaline
+    water", "value": "high"}, "logical_row": 272}, {"data": {"cobo_simon_habitat":
+    "NA", "env_type": "water_hypersaline", "main_group": "Aquatic", "parameter": "Structural",
+    "term_ids": "ENVO:00002012", "term_labels": "hypersaline water", "value": "low"},
+    "logical_row": 273}, {"data": {"cobo_simon_habitat": "NA", "env_type": "water_hypersaline",
+    "main_group": "Aquatic", "parameter": "Water", "term_ids": "ENVO:00002012", "term_labels":
+    "hypersaline water", "value": "low"}, "logical_row": 274}, {"data": {"cobo_simon_habitat":
+    "NA", "env_type": "water_hypersaline", "main_group": "Aquatic", "parameter": "salinity
+    variability", "term_ids": "ENVO:00002012", "term_labels": "hypersaline water",
+    "value": "small"}, "logical_row": 275}, {"data": {"cobo_simon_habitat": "NA",
+    "env_type": "water_hypersaline", "main_group": "Aquatic", "parameter": "temp variability",
+    "term_ids": "ENVO:00002012", "term_labels": "hypersaline water", "value": "medium"},
+    "logical_row": 276}, {"data": {"cobo_simon_habitat": "NA", "env_type": "water_hypersaline",
+    "main_group": "Aquatic", "parameter": "water variability", "term_ids": "ENVO:00002012",
+    "term_labels": "hypersaline water", "value": "permanently wet"}, "logical_row":
+    277}], "data/raw/madin_habitat_taxa.tsv": [{"data": {"corroborated_by": "PREGO",
+    "madin_id": "ENVO:00002012", "taxon_id": "NCBITaxon:31910", "taxon_label": "halomonas_variabilis"},
+    "logical_row": 336}, {"data": {"corroborated_by": "", "madin_id": "ENVO:00002012",
+    "taxon_id": "NCBITaxon:1027249", "taxon_label": "gracilibacillus_kekensis"}, "logical_row":
+    337}, {"data": {"corroborated_by": "", "madin_id": "ENVO:00002012", "taxon_id":
+    "NCBITaxon:1033802", "taxon_label": "Salinisphaera shabanensis E1L3A"}, "logical_row":
+    338}, {"data": {"corroborated_by": "", "madin_id": "ENVO:00002012", "taxon_id":
+    "NCBITaxon:1033806", "taxon_label": "Halorhabdus tiamatea SARL4B"}, "logical_row":
+    339}, {"data": {"corroborated_by": "", "madin_id": "ENVO:00002012", "taxon_id":
+    "NCBITaxon:1033810", "taxon_label": "Haloplasma contractile SSD-17B"}, "logical_row":
+    340}, {"data": {"corroborated_by": "", "madin_id": "ENVO:00002012", "taxon_id":
+    "NCBITaxon:1034944", "taxon_label": "legionella_tunisiensis"}, "logical_row":
+    341}, {"data": {"corroborated_by": "", "madin_id": "ENVO:00002012", "taxon_id":
+    "NCBITaxon:1036674", "taxon_label": "Idiomarina sp. A28L"}, "logical_row": 342},
+    {"data": {"corroborated_by": "", "madin_id": "ENVO:00002012", "taxon_id": "NCBITaxon:1048380",
+    "taxon_label": "Fusibacter sp. 3D3"}, "logical_row": 343}, {"data": {"corroborated_by":
+    "", "madin_id": "ENVO:00002012", "taxon_id": "NCBITaxon:1048396", "taxon_label":
+    "Halopenitus persicus"}, "logical_row": 344}, {"data": {"corroborated_by": "",
+    "madin_id": "ENVO:00002012", "taxon_id": "NCBITaxon:1069073", "taxon_label": "amycolatopsis_halophila"},
+    "logical_row": 345}, {"data": {"corroborated_by": "", "madin_id": "ENVO:00002012",
+    "taxon_id": "NCBITaxon:1071078", "taxon_label": "Bacillus sp. NSP9.1"}, "logical_row":
+    346}, {"data": {"corroborated_by": "", "madin_id": "ENVO:00002012", "taxon_id":
+    "NCBITaxon:1071079", "taxon_label": "Bacillus sp. SB47"}, "logical_row": 347},
+    {"data": {"corroborated_by": "", "madin_id": "ENVO:00002012", "taxon_id": "NCBITaxon:1076695",
+    "taxon_label": "Halanaerobium sehlinense"}, "logical_row": 348}, {"data": {"corroborated_by":
+    "", "madin_id": "ENVO:00002012", "taxon_id": "NCBITaxon:107820", "taxon_label":
+    "thialkalivibrio_nitratis"}, "logical_row": 349}, {"data": {"corroborated_by":
+    "", "madin_id": "ENVO:00002012", "taxon_id": "NCBITaxon:108003", "taxon_label":
+    "thialkalivibrio_denitrificans"}, "logical_row": 350}, {"data": {"corroborated_by":
+    "", "madin_id": "ENVO:00002012", "taxon_id": "NCBITaxon:1082479", "taxon_label":
+    "limimonas_halophila"}, "logical_row": 351}, {"data": {"corroborated_by": "",
+    "madin_id": "ENVO:00002012", "taxon_id": "NCBITaxon:1114856", "taxon_label": "Natronorubrum
+    tibetense DSM 13204"}, "logical_row": 352}, {"data": {"corroborated_by": "", "madin_id":
+    "ENVO:00002012", "taxon_id": "NCBITaxon:1118153", "taxon_label": "Halomonas sp.
+    GFAJ-1"}, "logical_row": 353}, {"data": {"corroborated_by": "", "madin_id": "ENVO:00002012",
+    "taxon_id": "NCBITaxon:1120956", "taxon_label": "Afifella pfennigii DSM 17143"},
+    "logical_row": 354}, {"data": {"corroborated_by": "", "madin_id": "ENVO:00002012",
+    "taxon_id": "NCBITaxon:1120961", "taxon_label": "Ahrensia kielensis DSM 5890"},
+    "logical_row": 355}, {"data": {"corroborated_by": "", "madin_id": "ENVO:00002012",
+    "taxon_id": "NCBITaxon:1120998", "taxon_label": "Anaerovorax odorimutans DSM 5092"},
+    "logical_row": 356}, {"data": {"corroborated_by": "", "madin_id": "ENVO:00002012",
+    "taxon_id": "NCBITaxon:1121087", "taxon_label": "Bacillus chagannorensis DSM 18086"},
+    "logical_row": 357}, {"data": {"corroborated_by": "", "madin_id": "ENVO:00002012",
+    "taxon_id": "NCBITaxon:1121317", "taxon_label": "Clostridium halophilum DSM 5387"},
+    "logical_row": 358}, {"data": {"corroborated_by": "", "madin_id": "ENVO:00002012",
+    "taxon_id": "NCBITaxon:1121459", "taxon_label": "Desulfovibrio oxyclinae DSM 11498"},
+    "logical_row": 359}, {"data": {"corroborated_by": "", "madin_id": "ENVO:00002012",
+    "taxon_id": "NCBITaxon:1121463", "taxon_label": "Desulfovibrio senezii DSM 8436"},
+    "logical_row": 360}], "data/raw/madin_habitats.tsv": [{"data": {"label": "hypersaline
+    water", "madin_id": "ENVO:00002012", "taxon_count": "416", "vocabulary": "ENVO"},
+    "logical_row": 17}], "data/raw/ontology_subclass_edges.tsv": [{"data": {"object":
+    "ENVO:00002010", "predicate": "rdfs:subClassOf", "subject": "ENVO:00002012"},
+    "logical_row": 5273}], "data/raw/ontology_terms.tsv": [{"data": {"definition":
+    "Water which contains a highly increased concentration of dissolved salts, surpassing
+    the average salinity of seawater.", "deprecated": "", "directly_referenced": "TRUE",
+    "label": "hypersaline water", "label_only": "FALSE", "ontology": "ENVO", "synonyms":
+    "", "term_id": "ENVO:00002012"}, "logical_row": 7168}], "data/raw/prego_habitat_taxa.tsv":
+    [{"data": {"channels": "annotated_genomes_isolates", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:00002012", "prego_score": "3", "rank": "1", "taxon_id":
+    "NCBITaxon:926690", "taxon_label": "Haloplanus natans DSM 17983"}, "logical_row":
+    5612}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:00002012", "prego_score": "1.31662", "rank": "2", "taxon_id":
+    "NCBITaxon:172371", "taxon_label": "Alloalcanivorax venustensis"}, "logical_row":
+    5613}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:00002012", "prego_score": "1.24174", "rank": "3", "taxon_id":
+    "NCBITaxon:285271", "taxon_label": "uncultured Methylophaga sp."}, "logical_row":
+    5614}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:00002012", "prego_score": "1.13534", "rank": "4", "taxon_id":
+    "NCBITaxon:1334019", "taxon_label": "Alcanivorax sp. EPR7"}, "logical_row": 5615},
+    {"data": {"channels": "environmental_samples", "corroborated_by": "MADIN", "direct_flag":
+    "TRUE", "prego_id": "ENVO:00002012", "prego_score": "1.11467", "rank": "5", "taxon_id":
+    "NCBITaxon:31910", "taxon_label": "Halovibrio variabilis"}, "logical_row": 5616},
+    {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:00002012", "prego_score": "1.09383", "rank": "6", "taxon_id":
+    "NCBITaxon:115553", "taxon_label": "Vreelandella sulfidaeris"}, "logical_row":
+    5617}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:00002012", "prego_score": "1.08388", "rank": "7", "taxon_id":
+    "NCBITaxon:550984", "taxon_label": "Halomonas sp. HAL1"}, "logical_row": 5618},
+    {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:00002012", "prego_score": "1.07684", "rank": "8", "taxon_id":
+    "NCBITaxon:47885", "taxon_label": "Pseudomonas oryzihabitans"}, "logical_row":
+    5619}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:00002012", "prego_score": "1.04132", "rank": "9", "taxon_id":
+    "NCBITaxon:230105", "taxon_label": ""}, "logical_row": 5620}, {"data": {"channels":
+    "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id":
+    "ENVO:00002012", "prego_score": "1.03978", "rank": "10", "taxon_id": "NCBITaxon:285091",
+    "taxon_label": "Alloalcanivorax dieselolei"}, "logical_row": 5621}, {"data": {"channels":
+    "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id":
+    "ENVO:00002012", "prego_score": "1.03761", "rank": "11", "taxon_id": "NCBITaxon:158080",
+    "taxon_label": ""}, "logical_row": 5622}, {"data": {"channels": "environmental_samples",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00002012", "prego_score":
+    "1.02755", "rank": "12", "taxon_id": "NCBITaxon:1188994", "taxon_label": "Chromohalobacter
+    sp. HS-2"}, "logical_row": 5623}, {"data": {"channels": "environmental_samples",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00002012", "prego_score":
+    "1.02538", "rank": "13", "taxon_id": "NCBITaxon:645472", "taxon_label": "Halomonas
+    sp. HTNK1"}, "logical_row": 5624}, {"data": {"channels": "environmental_samples",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00002012", "prego_score":
+    "1.01893", "rank": "14", "taxon_id": "NCBITaxon:48547", "taxon_label": ""}, "logical_row":
+    5625}], "data/raw/prego_habitats.tsv": [{"data": {"biolink_category": "biolink:OntologyClass",
+    "channels": "annotated_genomes_isolates|environmental_samples", "direct_assertion_count":
+    "14", "max_prego_score": "3", "ontology": "ENVO", "prego_id": "ENVO:00002012",
+    "prego_synonyms": "hypersaline water|hypersaline waters", "taxon_count": "14"},
+    "logical_row": 315}]}'
+  accessed_at: '2026-10-12T03:48:26.912564Z'
+  support: supports
+  locator: Exact logical TSV rows; header is row1; unrelated neighbor matches excluded
+- evidence_id: CODE
+  kind: record_content
+  reference: src/habitatmech/seed.py
+  summary: '{"reviewed_sources": 0, "routes": [{"actual": {"category": null, "contributes_grounding":
+    true, "decision": null, "extra_parents": [], "extra_xrefs": [], "grounding_status":
+    "EXACT", "identifier": "ENVO:00002012", "mapping_predicate": null, "reviewed":
+    false, "route": "environments_table_self_grounded"}, "automatic": {"category":
+    null, "contributes_grounding": true, "decision": null, "extra_parents": [], "extra_xrefs":
+    [], "grounding_status": "EXACT", "identifier": "ENVO:00002012", "mapping_predicate":
+    null, "reviewed": false, "route": "environments_table_self_grounded"}, "minted":
+    "habitatmech:ENVIRONMENTS_TABLE.ad612431da", "source": "ENVIRONMENTS_TABLE", "source_id":
+    "water_hypersaline"}, {"actual": {"category": null, "contributes_grounding": true,
+    "decision": null, "extra_parents": [], "extra_xrefs": [], "grounding_status":
+    "EXACT", "identifier": "ENVO:00002012", "mapping_predicate": null, "reviewed":
+    false, "route": "madin_self_grounded"}, "automatic": {"category": null, "contributes_grounding":
+    true, "decision": null, "extra_parents": [], "extra_xrefs": [], "grounding_status":
+    "EXACT", "identifier": "ENVO:00002012", "mapping_predicate": null, "reviewed":
+    false, "route": "madin_self_grounded"}, "minted": "habitatmech:MADIN.c1fd482c68",
+    "source": "MADIN", "source_id": "ENVO:00002012"}, {"actual": {"category": null,
+    "contributes_grounding": true, "decision": null, "extra_parents": [], "extra_xrefs":
+    [], "grounding_status": "EXACT", "identifier": "ENVO:00002012", "mapping_predicate":
+    null, "reviewed": false, "route": "prego_self_grounded"}, "automatic": {"category":
+    null, "contributes_grounding": true, "decision": null, "extra_parents": [], "extra_xrefs":
+    [], "grounding_status": "EXACT", "identifier": "ENVO:00002012", "mapping_predicate":
+    null, "reviewed": false, "route": "prego_self_grounded"}, "minted": "habitatmech:PREGO.8ebf6af96a",
+    "source": "PREGO", "source_id": "ENVO:00002012"}], "source_concepts": 3}'
+  accessed_at: '2026-10-12T03:48:26.912564Z'
+  support: supports
+  locator: Executed complete-document reconstruction; all40 matched captured records
+- evidence_id: ONT
+  kind: authority
+  reference: https://raw.githubusercontent.com/EnvironmentOntology/envo/master/envo.owl
+  summary: '{"ENVO:00002006": {"definitions": ["An environmental material primarily
+    composed of dihydrogen oxide in its liquid form."], "deprecated": [], "equivalents":
+    [], "labels": ["liquid water"], "parents": ["http://purl.obolibrary.org/obo/ENVO_01000815",
+    {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"],
+    "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0002473"],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/CHEBI_15377"]}],
+    "replacements": [], "synonyms": {"hasBroadSynonym": ["water"], "hasExactSynonym":
+    [], "hasNarrowSynonym": [], "hasRelatedSynonym": []}}, "ENVO:00002010": {"definitions":
+    ["Water which contains a significant concentration of dissolved salts."], "deprecated":
+    [], "equivalents": [], "labels": ["saline water"], "parents": ["http://purl.obolibrary.org/obo/ENVO_00002006",
+    {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"],
+    "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/ENVO_02000200"],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/CHEBI_26710"]},
+    {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"],
+    "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0000086"],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/PATO_0001657"]}],
+    "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": ["salt
+    water"], "hasNarrowSynonym": [], "hasRelatedSynonym": []}}, "ENVO:00002012": {"definitions":
+    ["Water which contains a highly increased concentration of dissolved salts, surpassing
+    the average salinity of seawater."], "deprecated": [], "equivalents": [], "labels":
+    ["hypersaline water"], "parents": ["http://purl.obolibrary.org/obo/ENVO_00002010"],
+    "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": [],
+    "hasNarrowSynonym": [], "hasRelatedSynonym": []}}}'
+  accessed_at: '2026-10-11T13:21:47.927208Z'
+  support: supports
+  locator: Official OWL fetched11-Oct; identity, deprecated/replacement metadata,
+    typed synonyms and direct axioms; no snapshot refresh
+  snapshot_sha256: a0b919065d33a9cf975b74cadd16c75f32f512d17f4f6d5999b74216701df54c
+- evidence_id: PARENT
+  kind: record_content
+  reference: data/habitats/aquatic/saline_water.yaml; data/habitats/aquatic/liquid_water.yaml
+  summary: '{"ENVO:00002006": {"definition": "An environmental material primarily
+    composed of dihydrogen oxide in its liquid form.", "grounding_status": "EXACT",
+    "label": "liquid water", "parent_habitats": ["ENVO:01000815"]}, "ENVO:00002010":
+    {"definition": "Water which contains a significant concentration of dissolved
+    salts.", "grounding_status": "EXACT", "label": "saline water", "parent_habitats":
+    ["ENVO:00002006"]}}'
+  accessed_at: '2026-10-12T03:48:26.912564Z'
+  support: supports
+  locator: Ancestor context is not full-record review coverage of ancestors
+- evidence_id: TAX0
+  kind: database
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=100038%2C1007122%2C1007124%2C1009420%2C1009695%2C1026%2C1027249%2C103%2C1033802%2C1033806%2C1033810%2C1034944%2C1036674%2C103810%2C1040984%2C1041152%2C104176%2C104245%2C1045010%2C1048%2C1048380%2C1048396%2C1058%2C106111%2C1063%2C106370%2C106592%2C1069%2C1069073%2C1069081%2C1069083%2C1071078%2C1071079%2C1074%2C107400%2C107401%2C1076695%2C107820%2C108003%2C1082479%2C1085%2C1087%2C108901%2C108943%2C109263%2C1096246%2C109635%2C110101%2C1101193%2C110933%2C1114856%2C111805%2C1118153%2C1120797%2C1120956%2C1120961%2C1120963%2C1120965%2C1120983%2C1120998%2C1121007%2C1121014%2C1121087%2C1121264%2C1121266%2C1121301%2C1121317%2C1121324%2C1121390%2C1121392%2C1121403%2C1121416%2C1121451%2C1121459%2C1121463%2C1121911%2C1121912%2C1121931%2C1121938%2C1121940%2C1122135%2C1122137%2C1122176%2C1122195%2C1122197%2C1122226%2C112235%2C112248%2C1122599%2C1123000%2C1123053%2C1123251%2C1123270%2C1123325%2C1123349%2C1123350%2C1123371%2C1123380%2C1123503%2C1123509%2C1123515%2C1123517%2C1125975%2C1131812%2C114497%2C114628%2C114707%2C114712%2C114715%2C115553%2C117681%2C1188994%2C120749%2C1214577%2C121845%2C1218948%2C1265%2C126740%2C1270%2C127458%2C127520%2C1278307%2C128%2C1280%2C129817%2C130049%2C13035%2C1303716%2C1334019%2C1341154%2C1358%2C13684%2C137510%2C1380347%2C139239%2C1397696%2C1402%2C1408%2C1408433%2C1409%2C1424653%2C1436140%2C1442586%2C147%2C1478%2C1495045%2C149712%2C150%2C1505%2C152&retmode=xml
+  summary: 'The two chunks resolve all252 requested cohort IDs. This target=[{"current_id":
+    "31910", "current_name": "Halovibrio variabilis", "frozen_label": "Halovibrio
+    variabilis", "id": "31910", "rank": "species"}, {"current_id": "926690", "current_name":
+    "Haloplanus natans DSM 17983", "frozen_label": "Haloplanus natans DSM 17983",
+    "id": "926690", "rank": "strain"}, {"current_id": "172371", "current_name": "Alloalcanivorax
+    venustensis", "frozen_label": "Alloalcanivorax venustensis", "id": "172371", "rank":
+    "species"}, {"current_id": "285271", "current_name": "uncultured Methylophaga
+    sp.", "frozen_label": "uncultured Methylophaga sp.", "id": "285271", "rank": "species"},
+    {"current_id": "1334019", "current_name": "Alcanivorax sp. EPR7", "frozen_label":
+    "Alcanivorax sp. EPR7", "id": "1334019", "rank": "species"}, {"current_id": "115553",
+    "current_name": "Vreelandella sulfidaeris", "frozen_label": "Vreelandella sulfidaeris",
+    "id": "115553", "rank": "species"}, {"current_id": "550984", "current_name": "Halomonas
+    sp. HAL1", "frozen_label": "Halomonas sp. HAL1", "id": "550984", "rank": "species"},
+    {"current_id": "47885", "current_name": "Pseudomonas oryzihabitans", "frozen_label":
+    "Pseudomonas oryzihabitans", "id": "47885", "rank": "species"}, {"current_id":
+    "40223", "current_name": "Methylophaga thalassica", "frozen_label": null, "id":
+    "230105", "rank": "species"}, {"current_id": "285091", "current_name": "Alloalcanivorax
+    dieselolei", "frozen_label": "Alloalcanivorax dieselolei", "id": "285091", "rank":
+    "species"}, {"current_id": "141390", "current_name": "Chromohalobacter israelensis",
+    "frozen_label": null, "id": "158080", "rank": "species"}, {"current_id": "1188994",
+    "current_name": "Chromohalobacter sp. HS-2", "frozen_label": "Chromohalobacter
+    sp. HS-2", "id": "1188994", "rank": "species"}, {"current_id": "645472", "current_name":
+    "Halomonas sp. HTNK1", "frozen_label": "Halomonas sp. HTNK1", "id": "645472",
+    "rank": "species"}, {"current_id": "48547", "current_name": "Ophiura", "frozen_label":
+    null, "id": "48547", "rank": "genus"}, {"current_id": "1027249", "current_name":
+    "Gracilibacillus kekensis", "frozen_label": "gracilibacillus_kekensis", "id":
+    "1027249", "rank": "species"}, {"current_id": "1033802", "current_name": "Salinisphaera
+    shabanensis E1L3A", "frozen_label": "Salinisphaera shabanensis E1L3A", "id": "1033802",
+    "rank": "strain"}, {"current_id": "1033806", "current_name": "Halorhabdus tiamatea
+    SARL4B", "frozen_label": "Halorhabdus tiamatea SARL4B", "id": "1033806", "rank":
+    "strain"}, {"current_id": "1033810", "current_name": "Haloplasma contractile SSD-17B",
+    "frozen_label": "Haloplasma contractile SSD-17B", "id": "1033810", "rank": "strain"},
+    {"current_id": "1034944", "current_name": "Legionella tunisiensis", "frozen_label":
+    "legionella_tunisiensis", "id": "1034944", "rank": "species"}, {"current_id":
+    "1036674", "current_name": "Idiomarina sp. A28L", "frozen_label": "Idiomarina
+    sp. A28L", "id": "1036674", "rank": "species"}, {"current_id": "1048380", "current_name":
+    "Fusibacter sp. 3D3", "frozen_label": "Fusibacter sp. 3D3", "id": "1048380", "rank":
+    "species"}, {"current_id": "1048396", "current_name": "Halopenitus persicus",
+    "frozen_label": "Halopenitus persicus", "id": "1048396", "rank": "species"}, {"current_id":
+    "1069073", "current_name": "Haloechinothrix halophila", "frozen_label": "amycolatopsis_halophila",
+    "id": "1069073", "rank": "species"}, {"current_id": "1071078", "current_name":
+    "Bacillus sp. NSP9.1", "frozen_label": "Bacillus sp. NSP9.1", "id": "1071078",
+    "rank": "species"}, {"current_id": "1071079", "current_name": "Bacillus sp. SB47",
+    "frozen_label": "Bacillus sp. SB47", "id": "1071079", "rank": "species"}, {"current_id":
+    "1076695", "current_name": "Halanaerobium sehlinense", "frozen_label": "Halanaerobium
+    sehlinense", "id": "1076695", "rank": "species"}, {"current_id": "107820", "current_name":
+    "Thioalkalivibrio nitratis", "frozen_label": "thialkalivibrio_nitratis", "id":
+    "107820", "rank": "species"}, {"current_id": "108003", "current_name": "Thioalkalivibrio
+    denitrificans", "frozen_label": "thialkalivibrio_denitrificans", "id": "108003",
+    "rank": "species"}, {"current_id": "1082479", "current_name": "Limimonas halophila",
+    "frozen_label": "limimonas_halophila", "id": "1082479", "rank": "species"}, {"current_id":
+    "1114856", "current_name": "Natronorubrum tibetense GA33", "frozen_label": "Natronorubrum
+    tibetense DSM 13204", "id": "1114856", "rank": "strain"}, {"current_id": "1118153",
+    "current_name": "Halomonas sp. GFAJ-1", "frozen_label": "Halomonas sp. GFAJ-1",
+    "id": "1118153", "rank": "species"}, {"current_id": "1120956", "current_name":
+    "Afifella pfennigii DSM 17143", "frozen_label": "Afifella pfennigii DSM 17143",
+    "id": "1120956", "rank": "strain"}, {"current_id": "1120961", "current_name":
+    "Ahrensia kielensis DSM 5890", "frozen_label": "Ahrensia kielensis DSM 5890",
+    "id": "1120961", "rank": "strain"}, {"current_id": "1120998", "current_name":
+    "Anaerovorax odorimutans DSM 5092", "frozen_label": "Anaerovorax odorimutans DSM
+    5092", "id": "1120998", "rank": "strain"}, {"current_id": "1121087", "current_name":
+    "Alkalicoccus chagannorensis DSM 18086", "frozen_label": "Bacillus chagannorensis
+    DSM 18086", "id": "1121087", "rank": "strain"}, {"current_id": "1121317", "current_name":
+    "Maledivibacter halophilus DSM 5387", "frozen_label": "Clostridium halophilum
+    DSM 5387", "id": "1121317", "rank": "strain"}, {"current_id": "1121459", "current_name":
+    "Desulfovibrio oxyclinae DSM 11498", "frozen_label": "Desulfovibrio oxyclinae
+    DSM 11498", "id": "1121459", "rank": "strain"}, {"current_id": "1121463", "current_name":
+    "Desulfobaculum senezii DSM 8436", "frozen_label": "Desulfovibrio senezii DSM
+    8436", "id": "1121463", "rank": "strain"}]. Frozen labels may be historical aliases;
+    resolution does not establish occurrence.'
+  accessed_at: '2026-10-12T03:35:53.303178Z'
+  support: supports
+  locator: NCBI TaxId, ScientificName, Rank, AkaTaxIds and OtherNames
+  snapshot_sha256: 303bd04b2066e24f3cee950081b5f4287c36659b223347ff9c3a5088e7dac099
+- evidence_id: TAX1
+  kind: database
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=1525%2C153026%2C153500%2C1537%2C1537524%2C153911%2C154510%2C1549639%2C155715%2C156%2C158080%2C158751%2C159087%2C161156%2C1639%2C163908%2C166318%2C1684%2C168471%2C172045%2C172371%2C173%2C1732%2C1734049%2C173764%2C1768%2C185294%2C198703%2C202747%2C203122%2C204773%2C205922%2C206665%2C210512%2C213224%2C223786%2C226505%2C230105%2C232721%2C240166%2C240167%2C240169%2C244366%2C259564%2C2663692%2C267990%2C279714%2C2850%2C285091%2C285258%2C285271%2C286698%2C287%2C292%2C292415%2C293%2C300%2C304%2C3055%2C312153%2C313606%2C314229%2C316%2C31910%2C332175%2C358%2C365044%2C371731%2C375286%2C375451%2C398578%2C39947%2C40214%2C405436%2C42256%2C431041%2C441157%2C452638%2C47885%2C48547%2C521674%2C535289%2C548%2C550984%2C562%2C563045%2C572546%2C573060%2C573064%2C59919%2C610380%2C643561%2C645472%2C655438%2C666681%2C679926%2C693972%2C710696%2C74152%2C746360%2C926690%2C935948&retmode=xml
+  summary: 'The two chunks resolve all252 requested cohort IDs. This target=[{"current_id":
+    "31910", "current_name": "Halovibrio variabilis", "frozen_label": "Halovibrio
+    variabilis", "id": "31910", "rank": "species"}, {"current_id": "926690", "current_name":
+    "Haloplanus natans DSM 17983", "frozen_label": "Haloplanus natans DSM 17983",
+    "id": "926690", "rank": "strain"}, {"current_id": "172371", "current_name": "Alloalcanivorax
+    venustensis", "frozen_label": "Alloalcanivorax venustensis", "id": "172371", "rank":
+    "species"}, {"current_id": "285271", "current_name": "uncultured Methylophaga
+    sp.", "frozen_label": "uncultured Methylophaga sp.", "id": "285271", "rank": "species"},
+    {"current_id": "1334019", "current_name": "Alcanivorax sp. EPR7", "frozen_label":
+    "Alcanivorax sp. EPR7", "id": "1334019", "rank": "species"}, {"current_id": "115553",
+    "current_name": "Vreelandella sulfidaeris", "frozen_label": "Vreelandella sulfidaeris",
+    "id": "115553", "rank": "species"}, {"current_id": "550984", "current_name": "Halomonas
+    sp. HAL1", "frozen_label": "Halomonas sp. HAL1", "id": "550984", "rank": "species"},
+    {"current_id": "47885", "current_name": "Pseudomonas oryzihabitans", "frozen_label":
+    "Pseudomonas oryzihabitans", "id": "47885", "rank": "species"}, {"current_id":
+    "40223", "current_name": "Methylophaga thalassica", "frozen_label": null, "id":
+    "230105", "rank": "species"}, {"current_id": "285091", "current_name": "Alloalcanivorax
+    dieselolei", "frozen_label": "Alloalcanivorax dieselolei", "id": "285091", "rank":
+    "species"}, {"current_id": "141390", "current_name": "Chromohalobacter israelensis",
+    "frozen_label": null, "id": "158080", "rank": "species"}, {"current_id": "1188994",
+    "current_name": "Chromohalobacter sp. HS-2", "frozen_label": "Chromohalobacter
+    sp. HS-2", "id": "1188994", "rank": "species"}, {"current_id": "645472", "current_name":
+    "Halomonas sp. HTNK1", "frozen_label": "Halomonas sp. HTNK1", "id": "645472",
+    "rank": "species"}, {"current_id": "48547", "current_name": "Ophiura", "frozen_label":
+    null, "id": "48547", "rank": "genus"}, {"current_id": "1027249", "current_name":
+    "Gracilibacillus kekensis", "frozen_label": "gracilibacillus_kekensis", "id":
+    "1027249", "rank": "species"}, {"current_id": "1033802", "current_name": "Salinisphaera
+    shabanensis E1L3A", "frozen_label": "Salinisphaera shabanensis E1L3A", "id": "1033802",
+    "rank": "strain"}, {"current_id": "1033806", "current_name": "Halorhabdus tiamatea
+    SARL4B", "frozen_label": "Halorhabdus tiamatea SARL4B", "id": "1033806", "rank":
+    "strain"}, {"current_id": "1033810", "current_name": "Haloplasma contractile SSD-17B",
+    "frozen_label": "Haloplasma contractile SSD-17B", "id": "1033810", "rank": "strain"},
+    {"current_id": "1034944", "current_name": "Legionella tunisiensis", "frozen_label":
+    "legionella_tunisiensis", "id": "1034944", "rank": "species"}, {"current_id":
+    "1036674", "current_name": "Idiomarina sp. A28L", "frozen_label": "Idiomarina
+    sp. A28L", "id": "1036674", "rank": "species"}, {"current_id": "1048380", "current_name":
+    "Fusibacter sp. 3D3", "frozen_label": "Fusibacter sp. 3D3", "id": "1048380", "rank":
+    "species"}, {"current_id": "1048396", "current_name": "Halopenitus persicus",
+    "frozen_label": "Halopenitus persicus", "id": "1048396", "rank": "species"}, {"current_id":
+    "1069073", "current_name": "Haloechinothrix halophila", "frozen_label": "amycolatopsis_halophila",
+    "id": "1069073", "rank": "species"}, {"current_id": "1071078", "current_name":
+    "Bacillus sp. NSP9.1", "frozen_label": "Bacillus sp. NSP9.1", "id": "1071078",
+    "rank": "species"}, {"current_id": "1071079", "current_name": "Bacillus sp. SB47",
+    "frozen_label": "Bacillus sp. SB47", "id": "1071079", "rank": "species"}, {"current_id":
+    "1076695", "current_name": "Halanaerobium sehlinense", "frozen_label": "Halanaerobium
+    sehlinense", "id": "1076695", "rank": "species"}, {"current_id": "107820", "current_name":
+    "Thioalkalivibrio nitratis", "frozen_label": "thialkalivibrio_nitratis", "id":
+    "107820", "rank": "species"}, {"current_id": "108003", "current_name": "Thioalkalivibrio
+    denitrificans", "frozen_label": "thialkalivibrio_denitrificans", "id": "108003",
+    "rank": "species"}, {"current_id": "1082479", "current_name": "Limimonas halophila",
+    "frozen_label": "limimonas_halophila", "id": "1082479", "rank": "species"}, {"current_id":
+    "1114856", "current_name": "Natronorubrum tibetense GA33", "frozen_label": "Natronorubrum
+    tibetense DSM 13204", "id": "1114856", "rank": "strain"}, {"current_id": "1118153",
+    "current_name": "Halomonas sp. GFAJ-1", "frozen_label": "Halomonas sp. GFAJ-1",
+    "id": "1118153", "rank": "species"}, {"current_id": "1120956", "current_name":
+    "Afifella pfennigii DSM 17143", "frozen_label": "Afifella pfennigii DSM 17143",
+    "id": "1120956", "rank": "strain"}, {"current_id": "1120961", "current_name":
+    "Ahrensia kielensis DSM 5890", "frozen_label": "Ahrensia kielensis DSM 5890",
+    "id": "1120961", "rank": "strain"}, {"current_id": "1120998", "current_name":
+    "Anaerovorax odorimutans DSM 5092", "frozen_label": "Anaerovorax odorimutans DSM
+    5092", "id": "1120998", "rank": "strain"}, {"current_id": "1121087", "current_name":
+    "Alkalicoccus chagannorensis DSM 18086", "frozen_label": "Bacillus chagannorensis
+    DSM 18086", "id": "1121087", "rank": "strain"}, {"current_id": "1121317", "current_name":
+    "Maledivibacter halophilus DSM 5387", "frozen_label": "Clostridium halophilum
+    DSM 5387", "id": "1121317", "rank": "strain"}, {"current_id": "1121459", "current_name":
+    "Desulfovibrio oxyclinae DSM 11498", "frozen_label": "Desulfovibrio oxyclinae
+    DSM 11498", "id": "1121459", "rank": "strain"}, {"current_id": "1121463", "current_name":
+    "Desulfobaculum senezii DSM 8436", "frozen_label": "Desulfovibrio senezii DSM
+    8436", "id": "1121463", "rank": "strain"}]. Frozen labels may be historical aliases;
+    resolution does not establish occurrence.'
+  accessed_at: '2026-10-12T03:35:55.008639Z'
+  support: supports
+  locator: NCBI TaxId, ScientificName, Rank, AkaTaxIds and OtherNames
+  snapshot_sha256: 32f9be6ba0a3c4293275bbcad64427709376c99cf52c494909dbc6f97598d6c5
+- evidence_id: SEARCH
+  kind: search
+  reference: curation; history; research; reports; reviews; data/raw; data/habitats;
+    conf
+  summary: 'Identifier, label, slug and exact source-path searches included ignored/hidden
+    files in these roots; coverage used Path.rglob. No earlier structured observation
+    of this target found. Legacy reports were indexed, not uniformly rereviewed. Original
+    membership search={"configured_root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe",
+    "root_exists": true, "exact_paths": [{"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_nodes.tsv",
+    "exists": false, "expected_sha256": "c13c21bdd04619c75ce16e63b05e51577b0cefec5b61765d383313f654ab3fae"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_edges.tsv",
+    "exists": false, "expected_sha256": "54982c25de9d2c820eeebc1452aeac0b034595921d04d55b810bf1d2b1e127e0"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/nodes.tsv",
+    "exists": false, "expected_sha256": "a2a2f9acae230636dd866347d173a32c9f025c04a377060087a4be65781628f3"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/edges.tsv",
+    "exists": false, "expected_sha256": "ab6208bff4854db7c1a736d53d0aa04269a682ab15a1ce6f37c6d731000281d7"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/nodes.tsv",
+    "exists": false, "expected_sha256": "020de3afc71495571ddb05000c83a58d009272f53735b5f7c9326c1293e0415c"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/edges.tsv",
+    "exists": false, "expected_sha256": "8863ee3197a36915865fa4833df39d10c3f8f69b64bafbb746b9cd731308a0aa"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/nodes.tsv",
+    "exists": false, "expected_sha256": "cc5941cd677831e8e207da018dca763cd009bb1f9310b21cb4d45892316e006d"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/edges.tsv",
+    "exists": false, "expected_sha256": "fd333634eaaa3cfe57a35cdca2f4c5b8cf0662851c1df58914d3e999d62a650e"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/environments.csv",
+    "exists": false, "expected_sha256": "99299fe635159712f95568783ad3b484230fb31781262f1f6f8bd84db4bc3048"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/mappings/isolation_source_to_ontology.tsv",
+    "exists": false, "expected_sha256": "2dea3d1bb20c72a04b6f64a67e2bb2bdc4f3649b809c5935390239be2791ef1f"}],
+    "traversal": [{"command": ["rg", "--files", "--no-ignore", "--hidden", "data"],
+    "exit_code": 0, "matches": [], "stderr": ""}, {"command": ["rg", "--files", "--no-ignore",
+    "--hidden", "build"], "exit_code": 0, "matches": [], "stderr": ""}, {"command":
+    ["rg", "--files", "--no-ignore", "--hidden", "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data"],
+    "exit_code": 0, "matches": [], "stderr": ""}]}'
+  accessed_at: '2026-10-12T03:48:26.912564Z'
+  support: supports
+  locator: Bounded ignored-inclusive searches; no global absence claim
+  search_scope: 'Identifier, label, slug and exact source-path searches included ignored/hidden
+    files in these roots; coverage used Path.rglob. No earlier structured observation
+    of this target found. Legacy reports were indexed, not uniformly rereviewed. Original
+    membership search={"configured_root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe",
+    "root_exists": true, "exact_paths": [{"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_nodes.tsv",
+    "exists": false, "expected_sha256": "c13c21bdd04619c75ce16e63b05e51577b0cefec5b61765d383313f654ab3fae"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_edges.tsv",
+    "exists": false, "expected_sha256": "54982c25de9d2c820eeebc1452aeac0b034595921d04d55b810bf1d2b1e127e0"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/nodes.tsv",
+    "exists": false, "expected_sha256": "a2a2f9acae230636dd866347d173a32c9f025c04a377060087a4be65781628f3"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/edges.tsv",
+    "exists": false, "expected_sha256": "ab6208bff4854db7c1a736d53d0aa04269a682ab15a1ce6f37c6d731000281d7"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/nodes.tsv",
+    "exists": false, "expected_sha256": "020de3afc71495571ddb05000c83a58d009272f53735b5f7c9326c1293e0415c"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/edges.tsv",
+    "exists": false, "expected_sha256": "8863ee3197a36915865fa4833df39d10c3f8f69b64bafbb746b9cd731308a0aa"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/nodes.tsv",
+    "exists": false, "expected_sha256": "cc5941cd677831e8e207da018dca763cd009bb1f9310b21cb4d45892316e006d"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/edges.tsv",
+    "exists": false, "expected_sha256": "fd333634eaaa3cfe57a35cdca2f4c5b8cf0662851c1df58914d3e999d62a650e"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/environments.csv",
+    "exists": false, "expected_sha256": "99299fe635159712f95568783ad3b484230fb31781262f1f6f8bd84db4bc3048"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/mappings/isolation_source_to_ontology.tsv",
+    "exists": false, "expected_sha256": "2dea3d1bb20c72a04b6f64a67e2bb2bdc4f3649b809c5935390239be2791ef1f"}],
+    "traversal": [{"command": ["rg", "--files", "--no-ignore", "--hidden", "data"],
+    "exit_code": 0, "matches": [], "stderr": ""}, {"command": ["rg", "--files", "--no-ignore",
+    "--hidden", "build"], "exit_code": 0, "matches": [], "stderr": ""}, {"command":
+    ["rg", "--files", "--no-ignore", "--hidden", "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data"],
+    "exit_code": 0, "matches": [], "stderr": ""}]}'
+- evidence_id: ISSUES
+  kind: database
+  reference: https://github.com/CultureBotAI/HabitatMech/issues
+  summary: Read-only all-state964-issue title/body census checked for overlaps, including
+    shared1249 and1398 and prior vent1239 and hypersaline1243 corrections. Prior issue
+    closure is not primary scientific evidence. Comments were not exhaustively crawled.
+  accessed_at: '2026-10-12T03:48:26.912564Z'
+  support: supports
+  locator: GitHub CLI census and relevant issue bodies
+- evidence_id: GRAPH
+  kind: record_content
+  reference: curation/causal_graphs/hypersaline_water.yaml
+  summary: Entire overlay and generated graph read; node types and all edge descriptions,
+    snippets and evidence notes assessed individually.
+  accessed_at: '2026-10-12T03:48:26.912564Z'
+  support: supports
+  locator: Full overlay including history
+- evidence_id: PMID-18412960
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A18412960+AND+SRC%3AMED&format=json&resultType=core
+  summary: 'Bibliographic identity and complete abstract inspected: Microbial life
+    at high salt concentrations: phylogenetic and metabolic diversity.; DOI:10.1186/1746-1448-4-2.
+    Support bounded separately for each edge.'
+  accessed_at: '2026-10-12T03:35:58.534573Z'
+  support: supports
+  locator: Europe PMC core record and abstract
+  snapshot_sha256: b30713b4d33f9a90cbdeae80277761aad6791d6a9f4bf49e85a6fa67a94c086e
+- evidence_id: PMID-22527048
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A22527048+AND+SRC%3AMED&format=json&resultType=core
+  summary: 'Bibliographic identity and complete abstract inspected: The amino acid
+    composition of proteins from anaerobic halophilic bacteria of the order Halanaerobiales.;
+    DOI:10.1007/s00792-012-0455-y. Support bounded separately for each edge.'
+  accessed_at: '2026-10-12T03:36:02.726176Z'
+  support: supports
+  locator: Europe PMC core record and abstract
+  snapshot_sha256: df57df38943f78298c693d2b9798879533bfc010798e969d29bb72b9662e7bac
+- evidence_id: PMID-29529204
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A29529204+AND+SRC%3AMED&format=json&resultType=core
+  summary: 'Bibliographic identity and complete abstract inspected: Strategies of
+    adaptation of microorganisms of the three domains of life to high salt concentrations.;
+    DOI:10.1093/femsre/fuy009. Support bounded separately for each edge.'
+  accessed_at: '2026-10-12T03:36:09.536843Z'
+  support: supports
+  locator: Europe PMC core record and abstract
+  snapshot_sha256: d8c8de5c8afee5282fc3084e4a859d6f2d2f27948aba532a1aa1575af438581c
+- evidence_id: IMODULONDB-DATASETS
+  kind: database
+  reference: iModulonDB via kg-microbe-sources
+  summary: '{"command": ["../../culturebotai-claw/.venv/bin/kg-microbe-sources", "imodulondb",
+    "datasets"], "started_at": "2026-10-12T03:42:52.609156+00:00", "finished_at":
+    "2026-10-12T03:42:53.460732+00:00", "exit_code": 0, "path": "/private/tmp/habitatmech-review-bb-imodulondb-datasets-retry.source",
+    "sha256": "1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549",
+    "stderr": ""}'
+  accessed_at: '2026-10-12T03:48:26.912564Z'
+  support: supports
+  locator: Actual successful dataset inventory; earlier sandbox network failure retained
+    in scratch receipts. No matching claim-specific strain/gene assertion warrants
+    a component query.
+assessments:
+- assessment_id: EDGE-salinity_reduces_water_activity
+  area: evidence
+  topic: salinity_reduces_water_activity
+  outcome: supported
+  summary: Gunde-Cimerman2018 abstract links concentrated salts with low environmental
+    water activity; no common numeric threshold is asserted.
+  target_ids:
+  - ENVO:00002012
+  evidence_ids:
+  - GRAPH
+  - RULES
+  - ONT
+  - PMID-18412960
+  - PMID-22527048
+  - PMID-29529204
+- assessment_id: EDGE-low_water_activity_selects_salt_in
+  area: evidence
+  topic: low_water_activity_selects_salt_in
+  outcome: supported
+  summary: The cited review distinguishes KCl accumulation by many halophilic Archaea
+    and some Bacteria from other osmotic strategies; the branch is conditional.
+  target_ids:
+  - ENVO:00002012
+  evidence_ids:
+  - GRAPH
+  - RULES
+  - ONT
+  - PMID-18412960
+  - PMID-22527048
+  - PMID-29529204
+- assessment_id: EDGE-salt_in_requires_salt_adapted_machinery
+  area: evidence
+  topic: salt_in_requires_salt_adapted_machinery
+  outcome: supported
+  summary: Oren2008 supports adaptation of intracellular machinery to high salt; Oren2012
+    genome comparison of three Halanaerobiales refutes universal acidic proteomes.
+    The current trait label and notes explicitly preserve that counterexample.
+  target_ids:
+  - ENVO:00002012
+  evidence_ids:
+  - GRAPH
+  - RULES
+  - ONT
+  - PMID-18412960
+  - PMID-22527048
+  - PMID-29529204
+- assessment_id: EDGE-low_water_activity_selects_compatible_solutes
+  area: evidence
+  topic: low_water_activity_selects_compatible_solutes
+  outcome: supported
+  summary: Gunde-Cimerman2018 describes compatible-solute synthesis/accumulation as
+    the more widespread alternative; it is not asserted for every taxon.
+  target_ids:
+  - ENVO:00002012
+  evidence_ids:
+  - GRAPH
+  - RULES
+  - ONT
+  - PMID-18412960
+  - PMID-22527048
+  - PMID-29529204
+- assessment_id: IDENTITY
+  area: identity
+  topic: Exact identity, definition and source intent
+  outcome: supported
+  summary: ENVO:00002012 denotes hypersaline water material, with the supported saline-water
+    genus. The four-edge salt-adaptation model correctly distinguishes KCl accumulation
+    from compatible solutes and already excludes a universal acidic-proteome inference.
+    PREGO and Madin associations remain observational; merged taxon IDs need versioned
+    source maintenance, not invented occurrence corrections.
+  target_ids:
+  - ENVO:00002012
+  evidence_ids:
+  - R
+  - RAW
+  - ONT
+  - PARENT
+- assessment_id: HIERARCHY
+  area: grounding
+  topic: All parent contributions and mapping scope
+  outcome: supported
+  summary: ENVO:00002012 denotes hypersaline water material, with the supported saline-water
+    genus. The four-edge salt-adaptation model correctly distinguishes KCl accumulation
+    from compatible solutes and already excludes a universal acidic-proteome inference.
+    PREGO and Madin associations remain observational; merged taxon IDs need versioned
+    source maintenance, not invented occurrence corrections. Ontology, GOLD path,
+    ambiguous-leaf and authored-genus contributions were distinguished.
+  target_ids:
+  - ENVO:00002012
+  evidence_ids:
+  - R
+  - RAW
+  - CODE
+  - ONT
+  - PARENT
+- assessment_id: PROVENANCE
+  area: provenance
+  topic: Source units, decision ownership and native lifecycle
+  outcome: supported
+  summary: 'Complete reconstruction preserves 3 source concepts and 0 ITEM-reviewed
+    contributors. Attestations=[{"source": "ENVIRONMENTS_TABLE", "source_id": "water_hypersaline",
+    "source_label": "water_hypersaline", "notes": "Physicochemical parameter bands
+    from kg-microbe''s environment table."}, {"source": "MADIN", "source_id": "ENVO:00002012",
+    "source_label": "hypersaline water", "assertion_count": 416, "assertion_unit":
+    "TAXON"}, {"source": "PREGO", "source_id": "ENVO:00002012", "source_label": "hypersaline
+    water", "assertion_count": 14, "assertion_unit": "TAXON", "score": 3.0, "evidence_channels":
+    "annotated_genomes_isolates|environmental_samples"}]. Unlike units are not summed;
+    omitted direct counts do not imply ecological absence. This review does not change
+    native status.'
+  target_ids:
+  - ENVO:00002012
+  evidence_ids:
+  - R
+  - RAW
+  - CODE
+  - RULES
+- assessment_id: TAXA
+  area: evidence
+  topic: Association versus characteristic presence
+  outcome: concern
+  summary: All emitted taxon IDs resolve, including merged identifiers. Historical
+    spellings were checked; unresolved row-specific name scope is recorded separately.
+    Full reconstruction preserves source pools, ranks, scores and corroborations;
+    displayed taxa are selected associations, not exhaustive occurrence evidence.
+    No is_characteristic assertion is present. A source score is not a probability
+    or habitat abundance.
+  target_ids:
+  - ENVO:00002012
+  evidence_ids:
+  - R
+  - RAW
+  - TAX0
+  - TAX1
+  - RULES
+- assessment_id: PARAMETERS
+  area: evidence
+  topic: Qualitative source bands and triad roles
+  outcome: supported
+  summary: All 8 single-term environment-table descriptors reproduce. These bands
+    are source-attributed context, not universal measured pressure, pH, salinity or
+    temperature. Multi-term rows are not attached to a single component; MIxS context
+    is not silently upgraded to identity.
+  target_ids:
+  - ENVO:00002012
+  evidence_ids:
+  - R
+  - RAW
+  - CODE
+  - RULES
+- assessment_id: COMPLETENESS
+  area: completeness
+  topic: Optional slots and evidence boundaries
+  outcome: supported
+  summary: Missing optional definitions or datasets alone do not establish defects.
+    Every asserted graph edge has an individual assessment. Structured adapter results
+    are recorded separately and are not causal experimental evidence.
+  target_ids:
+  - ENVO:00002012
+  evidence_ids:
+  - R
+  - RAW
+  - RULES
+  - SEARCH
+findings:
+- finding_id: F1
+  issue_key: envo-00002012-taxonomy-alias-maintenance
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Merged taxon IDs and broad-rank associations need versioned maintenance
+  description: NCBI resolves frozen230105 to40223 and158080 to141390. ID48547 resolves
+    to Ophiura at genus rank. Historical spellings resolve as aliases; no unsupported
+    microbial replacement or occurrence deletion is justified.
+  target_ids:
+  - ENVO:00002012
+  field_paths:
+  - characteristic_taxa
+  evidence_ids:
+  - R
+  - RAW
+  - TAX0
+  - TAX1
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/prego_habitats.tsv
+    role: Versioned source taxonomy
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Taxon normalization with original-ID provenance
+  rule_id: docs/CURATION.md; .claude/skills/curate-yaml-record/references/review-checklist.md
+  native_severity: minor
+  normalization_reason: Bounded lexical or explanatory wording defect; core identity
+    or mechanism remains supported.
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1244
+actions:
+- action_id: A1
+  description: Verify source occurrences and update taxonomy through a versioned source
+    process, preserving ranks, original IDs, scores and corroborations. Inspect the
+    broad non-microbial association rather than guessing a replacement.
+  finding_ids:
+  - F1
+  target_ids:
+  - ENVO:00002012
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/prego_habitats.tsv
+    role: Versioned source taxonomy
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Taxon normalization with original-ID provenance
+  generator: src/habitatmech/seed.py
+  acceptance_checks:
+  - Change only maintained inputs after source-level assessment; preserve independent
+    true parents, identities, source counts/units and lifecycle.
+  - Append required history, add focused regressions, inspect a seed canary and regenerate
+    affected products without hand-editing records or pages.
+  - Pass schema, strict, product-label, corpus reproduction, causal/history, review-integrity
+    and full QC; save a linked successor for every finding disposition.
+limitations:
+- Completed scientific assessment is not a clean-corpus verdict or proof of every
+  original occurrence.
+- Only first3 exact BioSample/Organism descriptions per sheet were individually interpreted;
+  all other matches and study joins were indexed, not individually assessed.
+- The later GOLD export/classification are not reconstructed August membership; original
+  assertion inputs were not fully recovered. No ontology, taxonomy or source snapshot
+  was refreshed.
+- Same-agent review, not independent approval. Native status and curation/history
+  inputs are unchanged.
+- SSSOM/KGX conformance with current kg-microbe modeling was not audited; shared mapping-endpoint
+  issue1398 remains unresolved.
+- Whole-corpus review remains incomplete; ancestor context and indexing add no record
+  coverage. Product-label checks retain documented no-adapter skips and accepted exceptions;
+  they do not certify scientific identity.
+- Full text was inspected only for the explicitly named full-text evidence items;
+  remaining cited studies were assessed from complete abstracts. Abstract support
+  is not direct verification of unstated experimental details. The Azam publisher
+  PDF returned401; liquid-water trophic claims use its author-upload abstract and
+  independently inspected Stocker synthesis.
+notes:
+- Initial immutable observation precedes separately authorized publication and curation;
+  this observation itself changes no source record or native status.
+- No earlier structured target observation found; legacy reports remain historical
+  and are not silently retired.
+tags:
+- habitatmech
+- aquatic
+- record-review
+- scientific-review
