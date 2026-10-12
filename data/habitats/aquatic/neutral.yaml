@@ -3,8 +3,6 @@ label: Neutral
 habitat_category: AQUATIC
 grounding_status: NOT_APPLICABLE
 mapping_status: REVIEWED
-parent_habitats:
-- habitatmech:GOLD.c085f6141a
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3998
@@ -24,3 +22,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NOT_APPLICABLE.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.c085f6141a
+    for habitatmech:GOLD.511058ef1e (Environmental > Aquatic > Thermal springs > Hot
+    (42-90C) > Neutral). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1413
+    (20261012T073401Z-neutral). Neutral in hot springs: the maintained child is a
+    pH qualifier and parent a temperature qualifier. One is not a subtype of the other.
+    Preserve eighteen ORGANISM assertions and qualitative neutral scope without fabricating
+    a pH measurement. Suppress only this exact GOLD context contribution. Preserve
+    source path/nodes/counts/units and independent justified parents. Source-identity
+    questions and mapping-endpoint semantics remain separate; this does not certify
+    SSSOM/KGX.'

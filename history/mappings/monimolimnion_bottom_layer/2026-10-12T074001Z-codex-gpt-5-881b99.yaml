@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: monimolimnion_bottom_layer
+session:
+  id: 2026-10-12T074001Z-codex-gpt-5-881b99
+  timestamp: '2026-10-12T07:40:01Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/pull/2008
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - grounding_status
+  - mapping_status
+  summary: Correct reviewed aquatic habitat scope for monimolimnion_bottom_layer
+  details: 'Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/1410
+    (20261012T073348Z-monimolimnion_bottom_layer). Monimolimnion: the persistently unmixed
+    deep layer is part of, not a kind of, a meromictic lake. Lake layer is a supported genus;
+    thermal hypolimnion is not automatically exact. Preserve distinct source identity and
+    absent organism counts. Use the verified broader genus ENVO:01000283 lake layer; retain
+    the source mint rather than exact-merge. Official ENVO labels and typed synonyms were
+    inspected. Separate guarded exclusions remove false context ancestry. Mapping-endpoint
+    issue #1398 remains open; this decision is not export certification. User authorized remediation/publication.
+    Dry seeding and 35 focused regressions passed; generated records, real map/site refresh
+    and final gates remain pending at event creation. Four CLASS decisions become ITEM through
+    individual evidence assessment; no other status promotion. Shared endpoint issue #1398
+    remains open.'

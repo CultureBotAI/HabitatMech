@@ -4,7 +4,6 @@ habitat_category: AQUATIC
 grounding_status: NARROW
 mapping_status: REVIEWED
 parent_habitats:
-- ENVO:00000207
 - ENVO:01000008
 source_attestations:
 - source: GOLD
@@ -28,3 +27,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00000207 for habitatmech:GOLD.ae0db57f4a
+    (Environmental > Aquatic > Marine > Oceanic > Microbial mats). Bounded hierarchy
+    correction https://github.com/CultureBotAI/HabitatMech/issues/1397 (20261012T073251Z-microbial_mats__7a576572).
+    Oceanic-setting mat: later samples include worm-associated mats and Limfjord cyanobacterial
+    mats. The mat is not a water mass; off-shelf scope is not established for every
+    source occurrence. Suppress only this exact GOLD context contribution. Preserve
+    source path/nodes/counts/units and independent justified parents. Source-identity
+    questions and mapping-endpoint semantics remain separate; this does not certify
+    SSSOM/KGX.'

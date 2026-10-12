@@ -4,8 +4,7 @@ habitat_category: AQUATIC
 grounding_status: NARROW
 mapping_status: REVIEWED
 parent_habitats:
-- ENVO:00002012
-- habitatmech:GOLD.277843111f
+- ENVO:01000008
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3982
@@ -16,14 +15,33 @@ source_attestations:
   assertion_count: 1
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-13T00:00:00Z'
-  curator: claude-opus-5
-  action: GROUND_AS_PARENT
-  changes: 'ENVO:00002012 ''hypersaline water'' attached as a parent, not adopted
-    as the identity (NARROW). A salt crystallizer pond is a specific hypersaline evaporation
-    pond, narrower than saline water generally. Path: Environmental > Aquatic > Non-marine
-    Saline and Alkaline > Salt crystallizer p (source concept habitatmech:GOLD.a00c47c576)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: GROUND_AS_PARENT
+  changes: 'ENVO:01000008 ''microbial mat'' attached as a parent, not adopted as the
+    identity (NARROW). Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/1403
+    (20261012T073301Z-microbial_mats__a2a31086). Crystallizer-pond mat: the ITEM decision
+    incorrectly uses a pond rationale and hypersaline-water genus. Later Guerrero
+    Negro mat-depth samples support ENVO microbial mat, not liquid water or a whole
+    pond. Use the verified broader genus ENVO:01000008 microbial mat; retain the source
+    mint rather than exact-merge. Official ENVO labels and typed synonyms were inspected.
+    Separate guarded exclusions remove false context ancestry. Mapping-endpoint issue
+    #1398 remains open; this decision is not export certification. (source concept
+    habitatmech:GOLD.a00c47c576)'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.277843111f
+    for habitatmech:GOLD.a00c47c576 (Environmental > Aquatic > Non-marine Saline and
+    Alkaline > Salt crystallizer ponds > Microbial mats). Bounded hierarchy correction
+    https://github.com/CultureBotAI/HabitatMech/issues/1397 (20261012T073301Z-microbial_mats__a2a31086).
+    Crystallizer-pond mat: the ITEM decision incorrectly uses a pond rationale and
+    hypersaline-water genus. Later Guerrero Negro mat-depth samples support ENVO microbial
+    mat, not liquid water or a whole pond. Suppress only this exact GOLD context contribution.
+    Preserve source path/nodes/counts/units and independent justified parents. Source-identity
+    questions and mapping-endpoint semantics remain separate; this does not certify
+    SSSOM/KGX.'

@@ -1,0 +1,69 @@
+---
+name: Temporary reviewed-record map rebuild
+
+on:  # yamllint disable-line rule:truthy
+  push:
+    branches: [codex/record-reviews-20261012e]
+    paths: [.github/workflows/rebuild-reviewed-map.yaml]
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      OMP_NUM_THREADS: "2"
+      MKL_NUM_THREADS: "2"
+      OPENBLAS_NUM_THREADS: "2"
+      NUMBA_NUM_THREADS: "2"
+      TOKENIZERS_PARALLELISM: "false"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.13"
+      - uses: actions/download-artifact@v4
+        with:
+          name: reviewed-record-map-5292399b96173efe32f0e661634d8362bc1cb8a1
+          run-id: 38209970013
+          github-token: ${{ github.token }}
+          path: build/prior-map
+      - name: Install unchanged locked environments
+        run: |
+          uv sync --locked --extra dev
+          uv sync --locked --project conf/embedding-runtime
+      - name: Verify prior cache and export current inputs
+        run: |
+          uv run --locked python scripts/embedding_pipeline.py check --output data/text_map --input build/prior-map/build/text-map/inputs.jsonl --cache build/prior-map/build/text-map/vectors.sqlite
+          uv run --locked python scripts/text_map_inputs.py --output build/text-map/inputs.jsonl
+          uv run --locked python scripts/text_map_inputs.py --limit 32 --output build/text-map/projection-canary.jsonl
+          uv run --locked python scripts/text_map_inputs.py --record data/habitats/aquatic/microbial_mats__aaf3c430.yaml --record data/habitats/aquatic/microbial_mats__2265bbbd.yaml --record data/habitats/aquatic/microbial_mats__a2a31086.yaml --record data/habitats/aquatic/microbial_mats__cfca43d0.yaml --record data/habitats/aquatic/microbial_mats__884c9c12.yaml --record data/habitats/aquatic/microbial_mats__7a576572.yaml --record data/habitats/aquatic/microbial_mats__54849ba0.yaml --record data/habitats/aquatic/microbialites.yaml --record data/habitats/aquatic/non_marine_saline_and_alkaline__0e812745.yaml --record data/habitats/aquatic/microbial_mats__59ad9a00.yaml --record data/habitats/aquatic/microbial_mats__66f27e00.yaml --record data/habitats/aquatic/near_boiling_90c.yaml --record data/habitats/aquatic/near_boiling_90c__f7b76591.yaml --record data/habitats/aquatic/microbial_mats__aba42aab.yaml --record data/habitats/aquatic/ocean_trench.yaml --record data/habitats/aquatic/microbial_mats__74823fe8.yaml --record data/habitats/aquatic/microbial_mats__8cd68d16.yaml --record data/habitats/aquatic/microbialites__b8560cfd.yaml --record data/habitats/aquatic/mine_pit_pond.yaml --record data/habitats/aquatic/microbial_mats__a56a2e1b.yaml --record data/habitats/aquatic/mud_volcano__980e0b1f.yaml --record data/habitats/aquatic/neutral.yaml --record data/habitats/aquatic/neutral__819b9d53.yaml --record data/habitats/aquatic/mine_pit_lake.yaml --record data/habitats/aquatic/microbial_mats__d16dafc1.yaml --record data/habitats/aquatic/microbialites__2dd0659e.yaml --record data/habitats/aquatic/monimolimnion_bottom_layer.yaml --record data/habitats/aquatic/microbial_mats__522cc2c0.yaml --record data/habitats/aquatic/microbial_mats__42c901d2.yaml --record data/habitats/aquatic/microbial_mats__c3f0268a.yaml --record data/habitats/aquatic/mixolimnion_top_layer.yaml --output build/text-map/canary.jsonl
+          cp build/prior-map/build/text-map/vectors.sqlite build/text-map/vectors.sqlite
+      - name: Encode changed-record canary and prove reuse
+        run: |
+          uv run --locked --project conf/embedding-runtime python scripts/embedding_pipeline.py embed --input build/text-map/canary.jsonl --cache build/text-map/vectors.sqlite --profile-output build/text-map/profile.json --device cpu --batch-size 8 > build/text-map/canary-first.json
+          uv run --locked --project conf/embedding-runtime python scripts/embedding_pipeline.py embed --input build/text-map/canary.jsonl --cache build/text-map/vectors.sqlite --profile-output build/text-map/profile.json --device cpu --batch-size 8 > build/text-map/canary-repeat.json
+          uv run --locked python -c 'import json; from pathlib import Path; first=json.loads(Path("build/text-map/canary-first.json").read_text()); repeat=json.loads(Path("build/text-map/canary-repeat.json").read_text()); assert first["count"] == first["encoded"] + first["reused"] == 31, first; assert repeat["count"] == repeat["reused"] == 31 and repeat["encoded"] == 0, repeat; print(first, repeat)'
+      - name: Project canary and complete full map
+        run: |
+          uv run --locked --project conf/embedding-runtime python scripts/embedding_pipeline.py project --input build/text-map/projection-canary.jsonl --cache build/text-map/vectors.sqlite --profile build/text-map/profile.json --output build/text-map/canary-map
+          uv run --locked python scripts/embedding_pipeline.py check --output build/text-map/canary-map --input build/text-map/projection-canary.jsonl --cache build/text-map/vectors.sqlite
+          uv run --locked --project conf/embedding-runtime python scripts/embedding_pipeline.py embed --input build/text-map/inputs.jsonl --cache build/text-map/vectors.sqlite --profile-output build/text-map/profile.json --device cpu --batch-size 8 > build/text-map/full-embed.json
+          uv run --locked python -c 'import json; from pathlib import Path; result=json.loads(Path("build/text-map/full-embed.json").read_text()); assert result["count"] == result["reused"] == 3208 and result["encoded"] == 0, result; print(result)'
+          uv run --locked --project conf/embedding-runtime python scripts/embedding_pipeline.py project --input build/text-map/inputs.jsonl --cache build/text-map/vectors.sqlite --profile build/text-map/profile.json --output data/text_map --title "HabitatMech semantic text map"
+          uv run --locked python scripts/embedding_pipeline.py check --output data/text_map --input build/text-map/inputs.jsonl --cache build/text-map/vectors.sqlite > build/text-map/full-check.json
+      - name: Upload checked products and cache
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reviewed-record-map-${{ github.sha }}
+          retention-days: 7
+          path: |
+            data/text_map/
+            build/text-map/
+          if-no-files-found: warn

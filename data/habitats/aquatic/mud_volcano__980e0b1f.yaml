@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00000402
-- ENVO:00001999
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4544
@@ -20,3 +19,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00001999 for habitatmech:GOLD.9dbf296a4a
+    (Environmental > Aquatic > Marine > Mud volcano). Bounded hierarchy correction
+    https://github.com/CultureBotAI/HabitatMech/issues/1412 (20261012T073351Z-mud_volcano__980e0b1f).
+    Marine mud volcano: the geological feature is a kind of mud volcano, not a marine
+    water body. Later submarine-volcano samples support the bounded setting without
+    changing frozen organism counts. Suppress only this exact GOLD context contribution.
+    Preserve source path/nodes/counts/units and independent justified parents. Source-identity
+    questions and mapping-endpoint semantics remain separate; this does not certify
+    SSSOM/KGX.'

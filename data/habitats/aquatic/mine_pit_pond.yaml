@@ -1,26 +1,43 @@
 identifier: habitatmech:GOLD.0946b92f8f
 label: Mine pit pond
 habitat_category: AQUATIC
-grounding_status: UNGROUNDED
-mapping_status: SEEDED
+grounding_status: NARROW
+mapping_status: REVIEWED
 parent_habitats:
-- habitatmech:GOLD.94b8786010
+- ENVO:00000033
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5720
   source_label: Mine pit pond
   source_path: Environmental > Aquatic > Non-marine Saline and Alkaline > Alkaline
     > Mine pit pond
+  mapping_predicate: skos:narrowMatch
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.0946b92f8f)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: GROUND_AS_PARENT
+  changes: 'ENVO:00000033 ''pond'' attached as a parent, not adopted as the identity
+    (NARROW). Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/1409
+    (20261012T073340Z-mine_pit_pond). Mine pit pond: later asbestos-mine pond-water
+    samples support a real pond. The CLASS-only decision omits a pond genus; the existing
+    Alkaline parent is a non-habitat qualifier, not pond identity. Use the verified
+    broader genus ENVO:00000033 pond; retain the source mint rather than exact-merge.
+    Official ENVO labels and typed synonyms were inspected. Separate guarded exclusions
+    remove false context ancestry. Mapping-endpoint issue #1398 remains open; this
+    decision is not export certification. (source concept habitatmech:GOLD.0946b92f8f)'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.94b8786010
+    for habitatmech:GOLD.0946b92f8f (Environmental > Aquatic > Non-marine Saline and
+    Alkaline > Alkaline > Mine pit pond). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1409
+    (20261012T073340Z-mine_pit_pond). Mine pit pond: later asbestos-mine pond-water
+    samples support a real pond. The CLASS-only decision omits a pond genus; the existing
+    Alkaline parent is a non-habitat qualifier, not pond identity. Suppress only this
+    exact GOLD context contribution. Preserve source path/nodes/counts/units and independent
+    justified parents. Source-identity questions and mapping-endpoint semantics remain
+    separate; this does not certify SSSOM/KGX.'
