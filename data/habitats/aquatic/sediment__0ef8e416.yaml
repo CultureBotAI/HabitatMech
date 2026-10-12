@@ -4,7 +4,6 @@ habitat_category: AQUATIC
 grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
-- ENVO:00000207
 - ENVO:00002007
 source_attestations:
 - source: GOLD
@@ -19,3 +18,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00000207 for habitatmech:GOLD.2f9eb7ed2f
+    (Environmental > Aquatic > Marine > Oceanic > Sediment). Exact source-context
+    correction https://github.com/CultureBotAI/HabitatMech/issues/1483 (20261012T111114Z-sediment__0ef8e416).
+    The oceanic-qualified sediment mint is particulate sediment, not the overlying
+    oceanic water mass beyond the shelf. Retain generic sediment and source identity;
+    later Landsort, Black Sea and Nankai examples do not prove that every original
+    sample meets a strict offshore-zone definition. The extra water-mass parent is
+    unsupported independently of the mapping-endpoint ambiguity. Suppress only this
+    immediate GOLD contribution; preserve identity, source paths/nodes/counts/units,
+    omitted counts and independent genera. Original occurrence membership remains
+    unavailable. No source-scope, endpoint or SSSOM/KGX certification is implied.

@@ -1,27 +1,53 @@
 identifier: habitatmech:GOLD.96f7d4c555
 label: Salt marsh sediment
 habitat_category: AQUATIC
-grounding_status: UNGROUNDED
-mapping_status: SEEDED
+grounding_status: NARROW
+mapping_status: REVIEWED
 parent_habitats:
-- habitatmech:GOLD.115edc36f8
+- ENVO:00002007
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5590
   source_label: Salt marsh sediment
   source_path: Environmental > Aquatic > Marine > Intertidal zone > Salt marsh sediment
+  mapping_predicate: skos:narrowMatch
   assertion_count: 9
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.96f7d4c555)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: GROUND_AS_PARENT
+  changes: 'ENVO:00002007 ''sediment'' attached as a parent, not adopted as the identity
+    (NARROW). Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/1464
+    (20261012T111110Z-salt_marsh_sediment). The source denotes sediment of a marine
+    salt marsh, not the intertidal shore region itself. Later Plum Island sediment
+    samples and sulfide-containing marsh mud support a material interpretation without
+    establishing all depositional or salinity constraints. Replace the sole source-region
+    placement with a justified sediment genus through ITEM assessment; retain source
+    qualification and count units rather than exact-merging on a short label. Retain
+    the qualified mint under ENVO:00002007 sediment, not an exact identity. The sediment
+    genus follows the deposited material meaning and inspected source descriptions.
+    Marine-water-column deposition and currently saline porespace are not universally
+    established; do not impose those tighter genera. No authored definition is added
+    to this NARROW record. Original member provenance remains unavailable and shared
+    endpoint issue #1398 remains open. Source accounting and unrelated records must
+    be preserved. (source concept habitatmech:GOLD.96f7d4c555)'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution habitatmech:GOLD.115edc36f8
+    for habitatmech:GOLD.96f7d4c555 (Environmental > Aquatic > Marine > Intertidal
+    zone > Salt marsh sediment). Exact source-context correction https://github.com/CultureBotAI/HabitatMech/issues/1464
+    (20261012T111110Z-salt_marsh_sediment). The source denotes sediment of a marine
+    salt marsh, not the intertidal shore region itself. Later Plum Island sediment
+    samples and sulfide-containing marsh mud support a material interpretation without
+    establishing all depositional or salinity constraints. Replace the sole source-region
+    placement with a justified sediment genus through ITEM assessment; retain source
+    qualification and count units rather than exact-merging on a short label. Suppress
+    only this immediate GOLD contribution; preserve identity, source paths/nodes/counts/units,
+    omitted counts and independent genera. Original occurrence membership remains
+    unavailable. No source-scope, endpoint or SSSOM/KGX certification is implied.

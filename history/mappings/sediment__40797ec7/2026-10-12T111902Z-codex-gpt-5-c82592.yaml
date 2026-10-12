@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: sediment__40797ec7
+session:
+  id: 2026-10-12T111902Z-codex-gpt-5-c82592
+  timestamp: '2026-10-12T11:19:02Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/pull/2023
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed saline or sediment habitat scope for sediment__40797ec7
+  details: 'Exact source-context correction https://github.com/CultureBotAI/HabitatMech/issues/1489
+    (20261012T111119Z-sediment__40797ec7). This thermal-spring sediment mint retains the source
+    temperature-band context Hot (42-90C), whose ITEM decision explicitly classifies it as
+    a qualifier rather than an independent habitat. The generic sediment genus is sound; the
+    qualifier is not a sediment superclass. Later Great Boiling Spring sediment and enrichment
+    samples are context, not a basis for transferring a single temperature to the entire class.
+    Suppress only this immediate GOLD contribution; preserve identity, source paths/nodes/counts/units,
+    omitted counts and independent genera. Original occurrence membership remains unavailable.
+    No source-scope, endpoint or SSSOM/KGX certification is implied. User authorized remediation
+    and publication. Dry seed and 36 focused regressions passed; generated record/map/site
+    and final gates remain pending at event creation. Three CLASS decisions receive individually
+    assessed ITEM genus rulings; salt-crust and salt-pond scopes remain unpromoted. Existing
+    reviews and historical session events are preserved; endpoint #1398 remains open.'

@@ -1,0 +1,39 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: saline_water__863799b0
+session:
+  id: 2026-10-12T111833Z-codex-gpt-5-bbabc2
+  timestamp: '2026-10-12T11:18:33Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/pull/2023
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - grounding_status
+  - mapping_status
+  summary: Correct reviewed saline or sediment habitat scope for saline_water__863799b0
+  details: 'Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/2026
+    (20261012T111107Z-saline_water__863799b0). This exact Saline water leaf denotes liquid
+    in a salt-crystallizer pond, not the whole pond. Use saline water as a conservative broader
+    genus. Hypersaline water is plausible in crystallizers but an above-seawater threshold
+    is not established for every original member; source names and later examples do not independently
+    prove it. Preserve the crystallizer qualification in the source path and mint, without
+    asserting a universal numerical salinity or NaCl saturation. Retain the qualified mint
+    under ENVO:00002010 saline water, not an exact identity. No authored definition is added
+    to this NARROW record. Original member provenance remains unavailable and shared endpoint
+    issue #1398 remains open. Source accounting and unrelated records must be preserved. User
+    authorized remediation and publication. Dry seed and 36 focused regressions passed; generated
+    record/map/site and final gates remain pending at event creation. Three CLASS decisions
+    receive individually assessed ITEM genus rulings; salt-crust and salt-pond scopes remain
+    unpromoted. Existing reviews and historical session events are preserved; endpoint #1398
+    remains open.'

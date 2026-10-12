@@ -4,7 +4,6 @@ habitat_category: AQUATIC
 grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
-- ENVO:00000215
 - ENVO:00002007
 source_attestations:
 - source: GOLD
@@ -19,3 +18,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00000215 for habitatmech:GOLD.e7dced4681
+    (Environmental > Aquatic > Marine > Hydrothermal vents > Sediment). Exact source-context
+    correction https://github.com/CultureBotAI/HabitatMech/issues/1485 (20261012T111117Z-sediment__301877e9).
+    Hydrothermal-vent sediment is particulate material, not the emitting fissure itself.
+    The generic sediment genus is supported by later Guaymas and PACMANUS sediment
+    descriptions. The source does not assert one universal temperature, redox state
+    or depth; preserve that qualification without importing examples as class-wide
+    measurements. Suppress only this immediate GOLD contribution; preserve identity,
+    source paths/nodes/counts/units, omitted counts and independent genera. Original
+    occurrence membership remains unavailable. No source-scope, endpoint or SSSOM/KGX
+    certification is implied.

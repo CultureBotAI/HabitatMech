@@ -58,7 +58,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="http://purl.obolibrary.org/obo/ENVO_01001378">marine bed</a>      <code class="curie">ENVO:01001378</code></li>
-  <li><a href="../habitats/intertidal-zone-habitatmech-gold-115edc36f8.html">Intertidal zone</a>      <code class="curie">habitatmech:GOLD.115edc36f8</code></li>
 </ul>
 
 
@@ -272,6 +271,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">SOURCE_SYNONYM_SCOPED</span>
     <span class="meta">2026-10-07 · seed_from_sources</span>
     <p>Retained GOLD label &#39;Seagrass bed&#39; as RELATED_SYNONYM: a CLOSE source mapping does not establish exact lexical equivalence. Independent ontology synonyms and verbatim attestations are preserved (#1459).</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-12 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.115edc36f8 for habitatmech:GOLD.664fc4e207 (Environmental &gt; Aquatic &gt; Marine &gt; Intertidal zone &gt; Seagrass bed). Exact source-context correction <a href="https://github.com/CultureBotAI/HabitatMech/issues/1470" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/1470</a> (20261012T111111Z-sea_grass_bed). The ENVO seagrass-covered marine-bed identity and marine-bed genus are supported. Generic seagrass beds are not restricted to intertidal areas; NOAA explicitly describes shallow subtidal beds. The GOLD intertidal contribution therefore overconstrains the merged generic class. Current NCBI resolves all retained source taxa, including many nonmicrobial taxa with omitted labels; those associations must remain observational and cannot be rejected on names alone. Suppress only this immediate GOLD contribution; preserve identity, source paths/nodes/counts/units, omitted counts and independent genera. Original occurrence membership remains unavailable. No source-scope, endpoint or SSSOM/KGX certification is implied.</p>
   </li>
 </ol>
 

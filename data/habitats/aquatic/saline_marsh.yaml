@@ -53,7 +53,6 @@ synonyms:
   source: ENVO
 parent_habitats:
 - ENVO:00000035
-- habitatmech:GOLD.ce244e62cd
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7711
@@ -251,3 +250,19 @@ curation_history:
   changes: 'Retained GOLD label ''Salt marsh'' as RELATED_SYNONYM: a CLOSE source
     mapping does not establish exact lexical equivalence. Independent ontology synonyms
     and verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution habitatmech:GOLD.ce244e62cd
+    for habitatmech:GOLD.dbb1e00be3 (Environmental > Aquatic > Non-marine Saline and
+    Alkaline > Salt marsh). Exact source-context correction https://github.com/CultureBotAI/HabitatMech/issues/1451
+    (20261012T111106Z-saline_marsh). The generic saline marsh includes coastal as
+    well as inland settings. Its marsh genus is sound, but the inland-only GOLD environment
+    cannot constrain the generic class. The later GOLD exact-path examples themselves
+    include Sapelo Island marsh mud. Salt marsh remains a genuine ENVO exact alias;
+    tidal marsh, wetland and salting have different typed scopes. Miyazaki F is an
+    identifiable strain with a documented paddy-field origin that must be reconciled
+    with the retained PREGO association. Suppress only this immediate GOLD contribution;
+    preserve identity, source paths/nodes/counts/units, omitted counts and independent
+    genera. Original occurrence membership remains unavailable. No source-scope, endpoint
+    or SSSOM/KGX certification is implied.

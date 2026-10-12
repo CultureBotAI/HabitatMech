@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002007
-- habitatmech:GOLD.1d0c72d58b
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8510
@@ -19,3 +18,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution habitatmech:GOLD.1d0c72d58b
+    for habitatmech:GOLD.d458551b02 (Environmental > Aquatic > Acidic > River > Sediment).
+    Exact source-context correction https://github.com/CultureBotAI/HabitatMech/issues/1485
+    (20261012T111117Z-sediment__2f8c22b7). Acidic-river-qualified sediment is material,
+    not a river watercourse. The minted River parent explicitly retains the river
+    genus and thus is not a sediment superclass. Preserve generic sediment, the acidic
+    source path and the original two ORGANISM assertions; the later single TR1 row
+    does not replace the original count or establish a numerical pH. Suppress only
+    this immediate GOLD contribution; preserve identity, source paths/nodes/counts/units,
+    omitted counts and independent genera. Original occurrence membership remains
+    unavailable. No source-scope, endpoint or SSSOM/KGX certification is implied.
