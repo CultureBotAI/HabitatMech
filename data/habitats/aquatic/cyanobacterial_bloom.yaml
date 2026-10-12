@@ -8,7 +8,6 @@ grounding_status: EXACT
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00000012
-- ENVO:00000021
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5356
@@ -22,3 +21,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00000021 for habitatmech:GOLD.95bd6f3756
+    (Environmental > Aquatic > Freshwater > Lake > Cyanobacterial bloom). ITEM hierarchy
+    assessment: https://github.com/CultureBotAI/HabitatMech/issues/1987 (20261012T001708Z-cyanobacterial_bloom).
+    The current ontology models a cyanobacterial bloom as a hydrographic feature.
+    Do not automatically reject it as only a process. Its hydrographic-feature genus
+    is retained; a whole freshwater lake is not its superclass. Exclude only this
+    guarded GOLD source-parent contribution. Preserve independent parents, frozen
+    source identity/counts/units or omissions and native lifecycle. Later examples
+    do not reconstruct frozen membership; shared synonym and endpoint issues remain
+    separate.'

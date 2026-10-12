@@ -24,7 +24,6 @@ synonyms:
   source: ENVO
 parent_habitats:
 - ENVO:01000143
-- habitatmech:GOLD.115edc36f8
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4014
@@ -212,3 +211,18 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.115edc36f8
+    for habitatmech:GOLD.172000a05a (Environmental > Aquatic > Marine > Intertidal
+    zone > Coral reef). ITEM hierarchy assessment: https://github.com/CultureBotAI/HabitatMech/issues/1987
+    (20261012T001649Z-coral_reef). The reef identity is supported and the ontology
+    reef genus is retained. The generic ENVO record is not necessarily intertidal
+    merely because one GOLD path is. Official barrier reef, fringing reef and reef
+    synonyms are RELATED, not exact. The inherited shallow-water definition has narrower
+    scope than broad usage including deep reefs; source scope needs care. Exclude
+    only this guarded GOLD source-parent contribution. Preserve independent parents,
+    frozen source identity/counts/units or omissions and native lifecycle. Later examples
+    do not reconstruct frozen membership; shared synonym and endpoint issues remain
+    separate.'

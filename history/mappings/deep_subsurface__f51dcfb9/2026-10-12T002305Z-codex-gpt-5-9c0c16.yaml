@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: deep_subsurface__f51dcfb9
+session:
+  id: 2026-10-12T002305Z-codex-gpt-5-9c0c16
+  timestamp: '2026-10-12T00:23:05Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1987
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude reviewed GOLD context parents from deep_subsurface__f51dcfb9
+  details: 'ITEM hierarchy assessment: https://github.com/CultureBotAI/HabitatMech/issues/1987
+    (20261012T001715Z-deep_subsurface__f51dcfb9). The Marine deep-subsurface bin is a subsurface
+    context, not an entire marine water body. Later samples include subseafloor sediment and
+    deep seawater, so exact habitat identity remains unresolved and should not be imposed
+    from the label alone. Exclude only this guarded GOLD source-parent contribution. Preserve
+    independent parents, frozen source identity/counts/units or omissions and native lifecycle.
+    Later examples do not reconstruct frozen membership; shared synonym and endpoint issues
+    remain separate. Authorized by user publication/remediation request. Baseline 47 native
+    checks and exact main CI 827 passed/3 skipped succeeded. Post-fix tests, canary, regeneration
+    and full QC pending at event creation; outcomes will be retained in PR and successor reviews.'

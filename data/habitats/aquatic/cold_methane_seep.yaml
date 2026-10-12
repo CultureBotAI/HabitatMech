@@ -3,8 +3,6 @@ label: Cold methane seep
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.22656a226b
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8382
@@ -23,3 +21,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.22656a226b
+    for habitatmech:GOLD.dc31418f43 (Environmental > Aquatic > Freshwater > Floodplain
+    > Cold methane seep). ITEM hierarchy assessment: https://github.com/CultureBotAI/HabitatMech/issues/1987
+    (20261012T001630Z-cold_methane_seep). The source path is Freshwater > Floodplain
+    > Cold methane seep. Preserve that context and do not force a marine cold-seep
+    identity. A seep is not a floodplain; no later exact BioSample/Organism matches
+    establish its missing detailed definition. Exclude only this guarded GOLD source-parent
+    contribution. Preserve independent parents, frozen source identity/counts/units
+    or omissions and native lifecycle. Later examples do not reconstruct frozen membership;
+    shared synonym and endpoint issues remain separate.'

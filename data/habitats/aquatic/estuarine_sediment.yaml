@@ -3,8 +3,6 @@ label: Estuarine sediment
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:00000021
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7881
@@ -25,3 +23,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00000021 for habitatmech:GOLD.aed863b800
+    (Environmental > Aquatic > Freshwater > Lake > Estuarine sediment). ITEM hierarchy
+    assessment: https://github.com/CultureBotAI/HabitatMech/issues/1987 (20261012T001819Z-estuarine_sediment).
+    The source denotes sediment, not the freshwater lake containing it. Its freshwater/lake
+    path cautions against automatically assuming marine salinity from estuarine alone;
+    later wetland descriptions support sediment but do not resolve every source classification.
+    Exclude only this guarded GOLD source-parent contribution. Preserve independent
+    parents, frozen source identity/counts/units or omissions and native lifecycle.
+    Later examples do not reconstruct frozen membership; shared synonym and endpoint
+    issues remain separate.'

@@ -21,7 +21,6 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: ENVO
 parent_habitats:
-- ENVO:00001999
 - ENVO:01000262
 source_attestations:
 - source: GOLD
@@ -43,3 +42,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00001999 for habitatmech:GOLD.95dbf8d7ac
+    (Environmental > Aquatic > Marine > Cold seeps). ITEM hierarchy assessment: https://github.com/CultureBotAI/HabitatMech/issues/1987
+    (20261012T001635Z-cold_seep). The ENVO marine cold-seep feature and GOLD Marine
+    cold-seep bin are compatible. The feature is a seep, not an entire marine water
+    body. Ontology merge-editor markers remain in the inherited definition. Exclude
+    only this guarded GOLD source-parent contribution. Preserve independent parents,
+    frozen source identity/counts/units or omissions and native lifecycle. Later examples
+    do not reconstruct frozen membership; shared synonym and endpoint issues remain
+    separate.'

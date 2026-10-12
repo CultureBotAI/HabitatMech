@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: epilimnion
+session:
+  id: 2026-10-12T002315Z-codex-gpt-5-2b774e
+  timestamp: '2026-10-12T00:23:15Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1987
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude reviewed GOLD context parents from epilimnion
+  details: 'ITEM hierarchy assessment: https://github.com/CultureBotAI/HabitatMech/issues/1987
+    (20261012T001758Z-epilimnion). The ENVO thermal lake layer is not an entire freshwater
+    lake. The GOLD Epilimnion/Euphotic zone exact grounding and exact alias conflate thermal
+    and light-defined layers; inspected primary lake research shows their depths respond differently.
+    Later epilimnion samples support some members, not coextensiveness of the entire slash
+    bin. Exclude only this guarded GOLD source-parent contribution. Preserve independent parents,
+    frozen source identity/counts/units or omissions and native lifecycle. Later examples
+    do not reconstruct frozen membership; shared synonym and endpoint issues remain separate.
+    Authorized by user publication/remediation request. Baseline 47 native checks and exact
+    main CI 827 passed/3 skipped succeeded. Post-fix tests, canary, regeneration and full
+    QC pending at event creation; outcomes will be retained in PR and successor reviews.'

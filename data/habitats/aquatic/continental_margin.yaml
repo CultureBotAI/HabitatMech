@@ -8,7 +8,6 @@ habitat_category: AQUATIC
 grounding_status: EXACT
 mapping_status: SEEDED
 parent_habitats:
-- ENVO:00001999
 - ENVO:00002000
 source_attestations:
 - source: GOLD
@@ -21,3 +20,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00001999 for habitatmech:GOLD.a8e7b22a71
+    (Environmental > Aquatic > Marine > Continental margin). ITEM hierarchy assessment:
+    https://github.com/CultureBotAI/HabitatMech/issues/1987 (20261012T001646Z-continental_margin).
+    ENVO identifies the submerged continental-margin slope. Slope is a defensible
+    genus; the surrounding marine water body is not. No original members are inferred
+    from the absence of later exact workbook matches. Exclude only this guarded GOLD
+    source-parent contribution. Preserve independent parents, frozen source identity/counts/units
+    or omissions and native lifecycle. Later examples do not reconstruct frozen membership;
+    shared synonym and endpoint issues remain separate.'
