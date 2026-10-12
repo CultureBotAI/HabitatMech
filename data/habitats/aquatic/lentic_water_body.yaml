@@ -12,7 +12,6 @@ synonyms:
   source: GOLD
 parent_habitats:
 - ENVO:00000063
-- ENVO:00002011
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3791
@@ -32,3 +31,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00002011 for habitatmech:GOLD.312657c243
+    (Environmental > Aquatic > Freshwater > Lentic). Bounded hierarchy correction
+    https://github.com/CultureBotAI/HabitatMech/issues/1260 (20261012T035127Z-lentic_water_body
+    F1). The freshwater-qualified GOLD Lentic source is ITEM-exact-grounded to the
+    salinity-unrestricted ENVO:01000617 class. Preserve whole-body low-flow semantics
+    separately from freshwater composition; fresh-water material is not a water-body
+    genus. Later sample counts do not replace the frozen 388 ORGANISM assertions.
+    Exclude only the immediate GOLD contribution named here. Preserve source identity,
+    node/path provenance, counts/units, native status and independent parents; separate
+    decision and graph changes are recorded in their own owners.

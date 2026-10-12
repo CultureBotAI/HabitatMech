@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/causal_graphs/liquid_water.yaml
+  slug: liquid_water
+session:
+  id: 2026-10-12T040031Z-codex-gpt-5-423b30
+  timestamp: '2026-10-12T04:00:31Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1263
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Correct reviewed hierarchy or mechanism for liquid_water
+  details: 'Bound the graph to connected marine water columns with focal heterotrophs and
+    compatible water activity, not all liquid water. Distinguish suspended/sinking particles,
+    conditional chemotactic benefits, and assimilation/respiration. Represent habitat, community,
+    and biomass production without physical STATE nodes. Preserve graph/node/edge IDs and
+    original references; add inspected Stocker/Seymour full-text support. Azam full text remains
+    inaccessible; only its author-upload abstract was read. User authorized remediation and
+    publication. Dry seed and two canaries passed; full regeneration, post-fix checks, map/site
+    and full QC remain pending at event creation. Actual results will be reported in PR #1999.
+    No scientific status promotion.'

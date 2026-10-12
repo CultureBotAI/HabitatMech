@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: hypoxic_zone
+session:
+  id: 2026-10-12T040015Z-codex-gpt-5-11cf0f
+  timestamp: '2026-10-12T04:00:15Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1245
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed hierarchy or mechanism for hypoxic_zone
+  details: 'Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1245
+    (20261012T035124Z-hypoxic_zone F1). GOLD.fa45416ff4 denotes an oxygen-depleted marine
+    region, not an entire marine water body. Later samples span multiple depths in the Manzanillo
+    oxygen-minimum-zone study. They do not justify inventing a universal oxygen threshold
+    or borrowing the marine-parent organism count. Exclude only the immediate GOLD contribution
+    named here. Preserve source identity, node/path provenance, counts/units, native status
+    and independent parents; separate decision and graph changes are recorded in their own
+    owners. User authorized remediation and publication. Dry seed and two canaries passed;
+    full regeneration, post-fix checks, map/site and full QC remain pending at event creation.
+    Actual results will be reported in PR #1999. No scientific status promotion.'

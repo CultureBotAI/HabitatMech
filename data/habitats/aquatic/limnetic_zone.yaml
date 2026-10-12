@@ -3,8 +3,6 @@ label: Limnetic zone
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:01000617
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4176
@@ -25,3 +23,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:01000617 for habitatmech:GOLD.1c8b5d3fe5
+    (Environmental > Aquatic > Freshwater > Lentic > Limnetic zone). Bounded hierarchy
+    correction https://github.com/CultureBotAI/HabitatMech/issues/1260 (20261012T035127Z-limnetic_zone
+    F1). GOLD.1c8b5d3fe5 denotes the freshwater-lentic water-column zone, not an entire
+    lentic water body. Later pond samples and the lake-water-column organism are context
+    for the one frozen ORGANISM assertion; they do not authorize an exact photic-zone
+    identity. Exclude only the immediate GOLD contribution named here. Preserve source
+    identity, node/path provenance, counts/units, native status and independent parents;
+    separate decision and graph changes are recorded in their own owners.

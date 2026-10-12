@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: lentic_water_body
+session:
+  id: 2026-10-12T040023Z-codex-gpt-5-4e0fc2
+  timestamp: '2026-10-12T04:00:23Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1260
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed hierarchy or mechanism for lentic_water_body
+  details: 'Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1260
+    (20261012T035127Z-lentic_water_body F1). The freshwater-qualified GOLD Lentic source is
+    ITEM-exact-grounded to the salinity-unrestricted ENVO:01000617 class. Preserve whole-body
+    low-flow semantics separately from freshwater composition; fresh-water material is not
+    a water-body genus. Later sample counts do not replace the frozen 388 ORGANISM assertions.
+    Exclude only the immediate GOLD contribution named here. Preserve source identity, node/path
+    provenance, counts/units, native status and independent parents; separate decision and
+    graph changes are recorded in their own owners. User authorized remediation and publication.
+    Dry seed and two canaries passed; full regeneration, post-fix checks, map/site and full
+    QC remain pending at event creation. Actual results will be reported in PR #1999. No scientific
+    status promotion.'

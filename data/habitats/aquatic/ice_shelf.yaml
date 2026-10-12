@@ -9,7 +9,6 @@ habitat_category: AQUATIC
 grounding_status: EXACT
 mapping_status: SEEDED
 parent_habitats:
-- ENVO:00001999
 - ENVO:01001547
 - UBERON:0000061
 source_attestations:
@@ -24,3 +23,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00001999 for habitatmech:GOLD.83ce4e95f2
+    (Environmental > Aquatic > Marine > Ice shelf). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1247
+    (20261012T035125Z-ice_shelf F1). The ice-shelf identity resolves to ENVO:00000380.
+    Its marine-water-body parent is GOLD context; its anatomical-structure parent
+    is an actual current upstream OWL axiom, not an extractor invention. NSIDC recognizes
+    sea-ice/snowfall and composite shelves, so universal land-origin wording also
+    needs upstream scope review. Exclude only the immediate GOLD contribution named
+    here. Preserve source identity, node/path provenance, counts/units, native status
+    and independent parents; separate decision and graph changes are recorded in their
+    own owners.

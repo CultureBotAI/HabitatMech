@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002130
-- ENVO:01000617
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4173
@@ -19,3 +18,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:01000617 for habitatmech:GOLD.7daa92d793
+    (Environmental > Aquatic > Freshwater > Lentic > Hypolimnion). Bounded hierarchy
+    correction https://github.com/CultureBotAI/HabitatMech/issues/1245 (20261012T035124Z-hypolimnion__78bbb31f
+    F1). GOLD.7daa92d793 retains a freshwater-lentic-qualified hypolimnion identity
+    and 25 ORGANISM assertions. Its hypolimnion genus is supported; the enclosing
+    lentic water body is not a genus of its water layer. The one later Lake Erie sample
+    is context, not the original count denominator. Exclude only the immediate GOLD
+    contribution named here. Preserve source identity, node/path provenance, counts/units,
+    native status and independent parents; separate decision and graph changes are
+    recorded in their own owners.

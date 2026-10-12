@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: limnetic_zone
+session:
+  id: 2026-10-12T040024Z-codex-gpt-5-c86819
+  timestamp: '2026-10-12T04:00:24Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1260
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed hierarchy or mechanism for limnetic_zone
+  details: 'Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1260
+    (20261012T035127Z-limnetic_zone F1). GOLD.1c8b5d3fe5 denotes the freshwater-lentic water-column
+    zone, not an entire lentic water body. Later pond samples and the lake-water-column organism
+    are context for the one frozen ORGANISM assertion; they do not authorize an exact photic-zone
+    identity. Exclude only the immediate GOLD contribution named here. Preserve source identity,
+    node/path provenance, counts/units, native status and independent parents; separate decision
+    and graph changes are recorded in their own owners. User authorized remediation and publication.
+    Dry seed and two canaries passed; full regeneration, post-fix checks, map/site and full
+    QC remain pending at event creation. Actual results will be reported in PR #1999. No scientific
+    status promotion.'
