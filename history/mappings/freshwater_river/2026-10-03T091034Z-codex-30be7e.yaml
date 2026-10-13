@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: freshwater_river
+session:
+  id: 2026-10-03T091034Z-codex-30be7e
+  timestamp: '2026-10-03T09:10:34Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1220
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1218
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: Exclude the water-material GOLD context parent from freshwater river
+  details: 'Read the complete record and exact GOLD path; verified current ENVO:01000297 definition
+    and direct parents through the OLS API. A freshwater river is a channel-associated water
+    body, not a subtype of liquid water material ENVO:00002011. Added one source-only exclusion
+    retaining ENVO:00000022 and ENVO:03605007. Forced canary and strict validation passed.
+    All 29 focused exclusion and curation-floor tests passed; the corpus reproduces all 3,206
+    records exactly. Full-corpus regression proves only six intended parent sets and audit
+    events differ from the no-exclusion baseline. Source path, 521 ORGANISM assertions, grounding
+    and SEEDED status remain unchanged. Publication remains blocked by the stale semantic
+    map in issue #1217; no map freshness checks were bypassed.'

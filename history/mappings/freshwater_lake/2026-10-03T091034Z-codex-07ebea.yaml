@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: freshwater_lake
+session:
+  id: 2026-10-03T091034Z-codex-07ebea
+  timestamp: '2026-10-03T09:10:34Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1220
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1218
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: Exclude the water-material GOLD context parent from freshwater lake
+  details: 'Read the complete record, exact GOLD path and PREGO attestation; verified current
+    ENVO:00000021 definition and direct parents through the OLS API. A freshwater lake is
+    a water body, not a subtype of its liquid contents ENVO:00002011. Added one source-only
+    exclusion retaining ENVO:00000020 and ENVO:01001320. Forced canary and strict validation
+    passed. All 29 focused exclusion and curation-floor tests passed; the corpus reproduces
+    all 3,206 records exactly. Full-corpus regression proves only six intended parent sets
+    and audit events differ from the no-exclusion baseline, with both source attestations,
+    taxon association, identity and existing REVIEWED status preserved. Publication remains
+    blocked by the stale semantic map in issue #1217; no map freshness checks were bypassed.'

@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: fossil
+session:
+  id: 2026-10-03T083707Z-codex-070bea
+  timestamp: '2026-10-03T08:37:07Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1215
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude the GOLD marine-context parent from Fossil
+  details: Reviewed GOLD path Environmental > Aquatic > Marine > Fossil and its Whale fall
+    child against the ENVO marine water body and fossil material definitions. Excluded only
+    the source-path is-a contribution; retained source provenance and unresolved identity
+    without inventing a fossil definition. Implemented validated source-keyed exclusions with
+    stale-parent guards and deterministic curation events. Dry-run seeding and forced canary
+    succeeded; regression tests verify only three intended hierarchies/events change and all
+    source facts remain unchanged.
