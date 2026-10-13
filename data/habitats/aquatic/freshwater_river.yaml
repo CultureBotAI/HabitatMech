@@ -7,7 +7,7 @@ grounding_status: EXACT
 mapping_status: SEEDED
 synonyms:
 - synonym_text: River
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 parent_habitats:
 - ENVO:00000022
@@ -26,11 +26,21 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
-- timestamp: '2026-10-03T00:00:00Z'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''River'' as RELATED_SYNONYM, not exact: its canonical
+    ontology identity ENVO:00000022 is a strict ancestor of ENVO:01000297. Source
+    attestation remains verbatim (#1459).'
+- timestamp: '2026-10-12T00:00:00Z'
   curator: codex-gpt-5
   action: SOURCE_PARENT_EXCLUDED
-  changes: 'Excluded GOLD source-path parent contribution ENVO:00002011 for habitatmech:GOLD.b9a8cb85e1
-    (Environmental > Aquatic > Freshwater > River). Issue #1220: ENVO:01000297 freshwater
-    river is a river where fresh water flows, not a subclass of flowing water material.
-    Preserve the ENVO river and freshwater-stream parents and the GOLD source path
-    and organism assertions; exclude only the GOLD fresh-water-material parent contribution.'
+  changes: Excluded GOLD source-path parent contribution ENVO:00002011 for habitatmech:GOLD.b9a8cb85e1
+    (Environmental > Aquatic > Freshwater > River). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1994
+    (20261012T015217Z-freshwater_river F1). The official freshwater-river definition
+    denotes a river carrying fresh water. River and freshwater-stream genera are compatible;
+    the liquid fresh-water source-path contribution is not. Later river samples and
+    named isolates are source context, not universal river inhabitants or quantitative
+    salinity evidence. Exclude only the immediate GOLD contribution named here. Preserve
+    source identity, node/path provenance, counts/units, native status and independent
+    parents; separate decision and graph changes are recorded in their own owners.

@@ -1,0 +1,130 @@
+# HabitatMech review profile
+
+New record reviews follow [the shared contract](record-reviews.md), with
+authoritative YAML and derived Markdown under
+`reviews/structured/<YYYYMMDDTHHMMSSZ>-<slug>/`. Historical ad hoc reports remain
+historical evidence and need no migration. `conf/record_review.yaml` lists the
+active routes and local rubrics.
+
+## Routes and output
+
+- `.claude/skills/review-yaml-record/SKILL.md`: one resolved record.
+- `.claude/skills/review-yaml-category/SKILL.md`: a coherent category with
+  explicit lump/split/retain/defer decisions; sampled coverage keeps its method,
+  denominator, inspected members and limitations. Explicit batches use `kind: batch`.
+- `.claude/skills/curate-yaml-record/SKILL.md`: the audit-only route uses the
+  same output contract and retains the native scientific checklist.
+
+Run from the repository root using its own Python environment (LinkML,
+linkml-runtime, jsonschema and PyYAML; pytest in the dev extra):
+
+```bash
+uv run python scripts/record_review.py inspect --targets /tmp/review-targets.yaml
+just review-validate /tmp/completed-review.yaml
+just review-save /tmp/completed-review.yaml
+just review-check
+```
+
+Use session-unique temporary inputs and add `--input <path>` to inspect for each
+additional rubric/schema/source/overlay used. Retain the captured Git revision
+and hashes. Checks record actual commands and exit codes, never invented
+success. New observations are immutable; link both saved files in the final
+response. Missing dependencies or required checks are an explicit blocked output
+step or partial assessment, not permission to save unvalidated prose.
+
+Before saving, check authored prose strings for trailing whitespace, especially
+when appending optional text. Trim the draft prose, not source quotations or
+captured bytes. Native schema validation does not imply whitespace cleanliness.
+Inspect the derived Markdown before committing and run a diff check against the
+trusted branch base, not only the unstaged diff. Once saved, review bundles are
+immutable: report any formatting defect explicitly rather than rewriting either
+file or claiming a clean branch-wide diff check.
+
+## Native questions and generated ownership
+
+Review generated `data/habitats/` records together with every contributing
+source concept. The native rubric is `docs/CURATION.md`,
+`docs/HARMONIZATION.md`, `docs/RESEARCH.md`, and the local checklist: habitat
+identity, exact grounding versus broader parents, merged-source equivalence,
+host versus anatomy, MIxS triad roles, source attestations and their units,
+environmental parameters, taxon association versus characteristic presence,
+and causal-edge support. Preserve source unit/count and score definitions.
+
+Set target kind to `generated`. Maintained owners include the exact rows in
+`curation/decisions.tsv`, `curation/term_requests.tsv`,
+`curation/gold_parent_exclusions.tsv`, and source inventories/transformations.
+Mechanism changes belong to `curation/causal_graphs/<slug>.yaml` overlays.
+Hash every inspected overlay and source/decision input using `inspect --input`;
+record exact row locators in evidence. Findings/actions name these owners and
+the necessary seeder, never a patch to generated YAML or `pages/`.
+
+The seeder derives mapping status and history. A merged record becomes REVIEWED
+only when every contributing source concept has an ITEM-level decision. Shared
+review validation neither creates those decisions nor changes this gate.
+
+## Native checks
+
+```bash
+just validate <record-path>
+just validate-strict <record-path>
+just validate-causal curation/causal_graphs/<slug>.yaml
+just validate-causal-all
+just verify-corpus
+just validate-products
+just qc
+```
+
+Use the causal checks when overlays are in scope and report their exact scope.
+`just sample` and worklists select or diagnose inputs; `research/habitats/`
+contains research leads for a curator. None is a completed scientific review.
+Complete the assessment and save it with the shared helper; deterministic-only
+inspection declares `scientific_review: false`. Paid research is separate.
+
+## Validation and ownership of the contract
+
+`schema/record_review.yaml`, `scripts/record_review.py`,
+`docs/record-reviews.md`, and `tests/test_record_review_contract.py` are copied
+byte-identically from CLAW. Canonical marked skill regions are rendered with
+the native sections preserved. Edit the shared contract upstream and re-adopt;
+the local profile, rubrics and scientific status gates remain repository-owned.
+`just review-check` validates retained bundles and runs the profile/roundtrip
+contract tests. The existing PR and merge-group quality workflow also runs the
+contract test alongside its unchanged native checks. Zero structured reviews
+means missing coverage, not a scientific pass. The new path is Git-visible
+without opening ignored legacy report directories.
+
+CI fetches full history and sets `RECORD_REVIEW_BASE` from the trusted PR base,
+merge-group base, or push-before SHA. It requires that commit to exist before
+running the canonical test, which rejects changes or deletions to previously
+saved bundles. Local `just review-check` defaults to HEAD; set
+`RECORD_REVIEW_BASE=<base-commit>` when checking a branch's committed changes.
+There is no automatic CI fallback to an already modified HEAD.
+
+## Preserve Review Bases Before Publication
+
+The merge queue squashes commits. A review captured on a topic-branch commit can
+lose its verifiable Git base in fresh clones after that branch is deleted, even
+though its immutable bundle passed PR checks. Before an authorized publication,
+retain every review base that is not an ancestor of the trusted PR base with an
+annotated, non-release tag named `record-review-base/<full-commit-SHA>`. Push the
+tag and verify its peeled commit on origin before merging or deleting branches.
+Never force-update or delete these tags while a retained review references them.
+
+```bash
+git tag -a record-review-base/<full-commit-SHA> <full-commit-SHA> -m "Retain immutable review provenance"
+git push origin refs/tags/record-review-base/<full-commit-SHA>
+git ls-remote --tags origin 'record-review-base/*'
+```
+
+Read-only review requests do not authorize publishing tags. Do this only during
+an explicitly authorized publication; do not rewrite a saved review to replace
+its base with a more convenient commit. This preserves provenance, not scientific
+approval. For clones that omit tags, run `git fetch origin --tags` before review
+validation or fleet ingestion. Full-history CI checkout fetches tags already.
+
+The repository-owned `tests/test_record_review_publication.py` gate requires an
+exact annotated tag for each off-base revision, using `RECORD_REVIEW_BASE` in CI
+and `origin/main` locally. Its isolated regression reproduces squash plus branch
+deletion, missing provenance in a fresh main-only clone, recovery after tag
+fetch, and rejection of a tag aimed at the wrong commit. Shared CLAW contract
+files and immutable review bundles remain unchanged.

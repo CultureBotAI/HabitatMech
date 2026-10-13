@@ -3,8 +3,6 @@ label: Plastic surface
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.961229841c
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5466
@@ -23,3 +21,18 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.961229841c
+    for habitatmech:GOLD.8ef066825a (Engineered > Built environment > City > Subway
+    > Plastic surface). Reviewed hierarchy exclusion (#1837; structured review 20261010T001207Z-plastic_surface
+    F1): a sampled plastic contact surface is not a kind of its enclosing subway environment.
+    PMID:27822528 (DOI:10.1128/mSystems.00018-16), inspected sampling methods, separately
+    describes location, surface type and material; exact SAMN04435401 is a PVC grip
+    swab and SAMN03270049 separates subway local context from plastic medium. Exclude
+    only this exact GOLD location-context contribution. Preserve minted identity,
+    node 5466, source path, zero-organism-count omission, UNGROUNDED and CLASS/SEEDED
+    status and all prior events. Do not invent a replacement parent, definition, material
+    equivalence, characteristic taxa or mechanism; the 37 supplemental BIOSAMPLE assertions
+    are not organisms.'

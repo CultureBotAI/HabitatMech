@@ -3,8 +3,6 @@ label: Co-culture
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.55a9660503
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7777
@@ -23,3 +21,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.55a9660503
+    for habitatmech:GOLD.c7e1dbc6bb (Engineered > Lab culture > Culture media > Fungi
+    > Co-culture). ITEM hierarchy assessment (#1659): the parent is explicitly curated
+    as fungal nutrient medium, but this qualified co-culture source has no evidence
+    establishing a medium-formulation identity. NLM D018920 distinguishes a mixed-cultivation
+    technique; BTO:0003143 describes combined growth of cell types, not nutrient material.
+    These candidate meanings do not prove the original GOLD scope. Suppress only the
+    unsupported source-parent contribution; preserve mint, node 7777, full path, zero-count
+    omissions, UNGROUNDED/SEEDED status and CLASS provenance. Do not infer NOT_APPLICABLE,
+    generic coculture identity, organisms or a replacement genus. The parent and its
+    separately tracked deprecated BTO anchor (#1619) remain unchanged. Evidence: reports/yaml_record_review/20261007T204208Z-co_culture__b3c11dc6.md.'

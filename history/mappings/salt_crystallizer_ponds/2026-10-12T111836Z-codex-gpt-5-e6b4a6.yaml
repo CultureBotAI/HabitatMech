@@ -1,0 +1,37 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: salt_crystallizer_ponds
+session:
+  id: 2026-10-12T111836Z-codex-gpt-5-e6b4a6
+  timestamp: '2026-10-12T11:18:36Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/pull/2023
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - grounding_status
+  - mapping_status
+  summary: Correct reviewed saline or sediment habitat scope for salt_crystallizer_ponds
+  details: 'Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/1461
+    (20261012T111109Z-salt_crystallizer_ponds). This operated crystallizer pond is a constructed
+    waterbody, not its hypersaline liquid contents. Current ENVO artificial pond is a supported
+    broader genus without the seawater-feedstock requirement of ENVO:00000055 saline evaporation
+    pond. Preserve the independent inland source context; seawater feedstock is not proof
+    that a pond is geographically marine. Retain the qualified mint under ENVO:03600092 artificial
+    pond, not an exact identity. No authored definition is added to this NARROW record. Original
+    member provenance remains unavailable and shared endpoint issue #1398 remains open. Source
+    accounting and unrelated records must be preserved. User authorized remediation and publication.
+    Dry seed and 36 focused regressions passed; generated record/map/site and final gates
+    remain pending at event creation. Three CLASS decisions receive individually assessed
+    ITEM genus rulings; salt-crust and salt-pond scopes remain unpromoted. Existing reviews
+    and historical session events are preserved; endpoint #1398 remains open.'

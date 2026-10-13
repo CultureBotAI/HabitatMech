@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: sediment__bbedc720
+session:
+  id: 2026-10-12T125531Z-codex-gpt-5-ebf987
+  timestamp: '2026-10-12T12:55:31Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1480
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude wetland-area context from freshwater sediment
+  details: 'Exact GOLD source path Environmental > Aquatic > Freshwater > Wetlands > Sediment:
+    exclude expected ENVO:00000043 wetland-area parent while retaining independent ENVO:00002007
+    sediment. Current ENVO material versus area definitions and immutable review 20261012T125038Z-sediment__bbedc720
+    support the distinction. Preserve source mint GOLD.98d936714f, node 4183, 20 ORGANISM,
+    category, NARROW and SEEDED. Two full-corpus counterfactual regressions and dry seed passed;
+    canary, labels, regenerated map/site and QC follow. Issue #1480 was reopened because freshwater
+    witnesses survived its marine-only closure; the separate soil witness remains unresolved.
+    Shared endpoint #1398 remains open.'

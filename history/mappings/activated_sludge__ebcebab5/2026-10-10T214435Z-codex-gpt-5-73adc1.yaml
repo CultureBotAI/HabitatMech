@@ -1,0 +1,37 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: activated_sludge__ebcebab5
+session:
+  id: 2026-10-10T214435Z-codex-gpt-5-73adc1
+  timestamp: '2026-10-10T21:44:35Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1882
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude reviewed GOLD context parent
+  details: 'Follow-up to 20261010T213402Z-activated_sludge__ebcebab5: The terephthalate-qualified
+    source bin is not wastewater itself. Its later source description concerns an anaerobic
+    methanogenic reactor, while the committed medium triad says raw primary sludge and the
+    GOLD leaf says activated sludge. These scopes conflict; do not automatically switch or
+    certify the activated-sludge genus, infer exact equivalence, or import the one reactor
+    temperature as a class-wide parameter. Excluded only the immediate GOLD parent contribution
+    habitatmech:GOLD.9ab362de60 for exact path Engineered > Bioremediation > Terephthalate
+    > Wastewater > Activated sludge. This is context, not a supported strictly broader genus.
+    Preserve minted identity, slug, original source nodes/path/counts/units and unrelated
+    fields. Original reviews remain immutable. Primary evidence and the frozen/later-snapshot
+    distinctions are retained in the original review. Source-member ambiguity is not resolved
+    by removing a false parent. Dry-run, forced canary, validated regeneration, exact-scope
+    regressions, corpus/label checks, semantic-map/site rebuild and full QC are required before
+    merge. Shared mapping-endpoint issue #1398 and ontology synonym-scope issue #1249 remain
+    open; no SSSOM/KGX certification is asserted.'

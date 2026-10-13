@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: meltwater
+session:
+  id: 2026-10-12T055141Z-codex-gpt-5-7dc7df
+  timestamp: '2026-10-12T05:51:41Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1223
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct bounded aquatic hierarchy or marine mechanism for meltwater
+  details: Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1223
+    (20261012T054256Z-meltwater F1). Meltwater is liquid water released from snow or ice.
+    The source path specifies a glacier, but glacier is not a superclass of the resulting
+    liquid material. Keep liquid-water ancestry and the one ORGANISM assertion; source-specific
+    glacial context does not establish that all meltwater is glacial or justify deleting broader
+    cryospheric meaning. Exclude only the immediate GOLD contribution named here. Preserve
+    source identity, node/path provenance, counts/units, native status and independent parents.
+    Unresolved source identity, genus, synonym and mapping-endpoint findings remain separate.
+    User authorized remediation and publication. Dry seeding and all-overlay validation passed;
+    final generated corpus, regressions, map/site and full QC are pending at event creation.
+    Actual completion results belong in PR 2003 and successor observations. No scientific
+    status promotion; unresolved findings remain open.

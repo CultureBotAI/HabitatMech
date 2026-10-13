@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: data/text_map/current.json
+  slug: crude_substrate_map
+session:
+  id: 2026-10-08T071604Z-codex-860dfa
+  timestamp: '2026-10-08T07:16:04Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1703
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1702
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - semantic_map
+  - generated_site
+  summary: Refresh semantic map after two material-parent exclusions
+  details: Linux map run 37741856792 at a08a4cc355394d42f59ded8242baa764ebe3bec2 passed with
+    unchanged locked runtime and verified prior cache from run 37724930043. Full-context comparison
+    changes only crude-oil sludge and cultivation substrate, removing one false broader-habitat
+    line each. The changed-record canary encoded two vectors; repeat reused both. Full pass
+    reused all 3207 vectors before genuine PaCMAP projection. Downloaded input bytes match
+    the fresh local export SHA256 3e1d4e44a02010328a888e51df2e95000a0901e095a77aee77c5bb264a212078.
+    Local bundle/cache verification passed; 3207 unique finite points and complete coverage
+    were independently checked. Installed selected bundle e7ed20fc790f54255214d32b705c3532b811513269988cfe74b4aa836b3c9dd8,
+    preserving prior immutable generations, and removed the temporary workflow. Local label
+    correspondence passed using the workspace OAK cache after the default external cache was
+    unavailable under sandbox permissions. Rendering and full final-head QC remain publication
+    gates, with results recorded in the PR receipt. No model pins, scientific identities,
+    raw inventories or source checksums changed.

@@ -1,0 +1,1327 @@
+# Scientific record review: black_smoker
+
+- Review: 20261011T225607Z-black_smoker
+- Repository: CultureBotAI/HabitatMech
+- Started UTC: 2026-10-11T22:35:27.260407Z
+- Finished UTC: 2026-10-11T22:56:07.176655Z
+- Reviewer: OpenAI Codex (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The sulfide-precipitating submarine hydrothermal vent identity is supported by ENVO and source labels; genuine active chimney synonymy must remain. Related sea/oceanic vent names are not exact, and the frozen definition contains three supeRHEAted capitalization corruptions absent from current ENVO. Later GOLD sample examples include oil-spill plume entries, a source-quality warning rather than proof that the 27 frozen organism assertions are wrong.
+
+## Scope And Provenance
+
+Entire exact generated record and all contributors, with bounded claim-level scientific and source-context assessment.
+
+Selection: Next forty unreviewed records in stable repository-relative path order: next forty AQUATIC records, atoll lagoon through coalbed methane well water. Individual full-record observations, not a category-wide pass. Starting observation coverage528/3208 is not clean current-input coverage.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 6509db458133758a41d1f39c6d41982476c3ed0d.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| ENVO:00000218 | data/habitats/aquatic/black_smoker.yaml | generated | black smoker |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native gate on captured scientific inputs | passed | True | ENVO:00000218 | Actual success from 2026-10-11T22:37:44.528392Z to 2026-10-11T22:37:48.000943Z. Native scope retained. |
+| Native gate on captured scientific inputs | passed | True | ENVO:00000218 | Actual success from 2026-10-11T22:38:48.678016Z to 2026-10-11T22:38:56.293670Z. Native scope retained. Selected scope:40 files,0 files with ERROR,0 ERROR rows. |
+| Native gate on captured scientific inputs | passed | True | ENVO:00000218 | Actual success from 2026-10-11T22:38:56.294771Z to 2026-10-11T22:39:13.326878Z. Native scope retained. |
+| Native gate on captured scientific inputs | passed | True | ENVO:00000218 | Actual success from 2026-10-11T22:39:13.327786Z to 2026-10-11T22:40:07.035407Z. Native scope retained. Recorded corpus-wide outcomes:1178 canonical,1 synonym,5 accepted exceptions,2057 SKIPPED_NO_ADAPTER. This gate does not validate minted identities or habitat occurrence. |
+| Native gate on captured scientific inputs | passed | True | ENVO:00000218 | Actual success from 2026-10-11T22:40:07.036210Z to 2026-10-11T22:40:16.618000Z. Native scope retained. |
+| Native gate on captured scientific inputs | passed | True | ENVO:00000218 | Actual success from 2026-10-11T22:40:16.619117Z to 2026-10-11T22:40:22.318447Z. Native scope retained. |
+| Native gate on captured scientific inputs | passed | True | ENVO:00000218 | Actual success from 2026-10-11T22:40:22.319312Z to 2026-10-11T22:40:47.199821Z. Native scope retained. |
+| Native gate on captured scientific inputs | passed | True | ENVO:00000218 | Actual success from 2026-10-11T22:38:04.444453Z to 2026-10-11T22:38:06.504418Z. All three required merge-group workflows passed at the exact captured base; authoritative QC passed 800 tests with 3 skipped. Newly saved review bundles require their own integrity check. Exact-base CI receipt; no claim that these new review files passed remote CI. |
+| Complete target reconstruction | passed | False | ENVO:00000218 | All40 complete documents matched; input hashes reverified before authoring. |
+| Original assertion membership | unavailable | False | ENVO:00000218 | Bounded ignored-inclusive searches did not reconstruct all original assertions. Later source exports are contextual evidence only. |
+| iModulonDB applicability | not_applicable | False | ENVO:00000218 | No resolvable strain/dataset-specific expression claim in this record; expression modules would not prove habitat occurrence. |
+
+## Scientific And Domain Assessments
+
+### Identity, definition and source interpretation
+
+identity: supported. Targets: ENVO:00000218.
+
+The sulfide-precipitating submarine hydrothermal vent identity is supported by ENVO and source labels; genuine active chimney synonymy must remain. Related sea/oceanic vent names are not exact, and the frozen definition contains three supeRHEAted capitalization corruptions absent from current ENVO. Later GOLD sample examples include oil-spill plume entries, a source-quality warning rather than proof that the 27 frozen organism assertions are wrong.
+
+### All parent-contribution routes and mapping scope
+
+grounding: supported. Targets: ENVO:00000218.
+
+The sulfide-precipitating submarine hydrothermal vent identity is supported by ENVO and source labels; genuine active chimney synonymy must remain. Related sea/oceanic vent names are not exact, and the frozen definition contains three supeRHEAted capitalization corruptions absent from current ENVO. Later GOLD sample examples include oil-spill plume entries, a source-quality warning rather than proof that the 27 frozen organism assertions are wrong. Ontology, source-path, ambiguous-leaf and authored-definition contributions were distinguished.
+
+### Every source, count unit and native status
+
+provenance: supported. Targets: ENVO:00000218.
+
+Complete reconstruction preserves 2 source concepts and 2 ITEM-reviewed contributors. Actual attestations=[{"source": "GOLD", "source_id": "gold.ecosystem:4031", "source_label": "Black smokers", "source_path": "Environmental &gt; Aquatic &gt; Marine &gt; Hydrothermal vents &gt; Black smokers", "mapping_predicate": "skos:exactMatch", "assertion_count": 27, "assertion_unit": "ORGANISM"}, {"source": "PREGO", "source_id": "ENVO:00000218", "source_label": "black smoker", "assertion_count": 12, "assertion_unit": "TAXON", "score": 4.0, "evidence_channels": "annotated_genomes_isolates&#124;environmental_samples"}]. Unlike units are not summed. Omitted zero direct counts do not mean ecological absence; this review does not promote native status.
+
+### Source-reported association versus characteristic presence
+
+evidence: supported. Targets: ENVO:00000218.
+
+All emitted taxon identifiers resolve; normalized spellings and old aliases explain supplied-label differences. Full reconstruction retains ranks, scores, pools and corroborations. No is_characteristic assertion is present; neither resolution nor a source score proves occurrence, abundance or ecological universality.
+
+### Optional fields and biological evidence boundaries
+
+completeness: supported. Targets: ENVO:00000218.
+
+Optional missing definitions, datasets or discussions are not defects solely because they are empty. No causal graph is asserted by this exact record; ignored-inclusive overlay search and the corpus-wide causal gate were checked. No named gene, locus, regulator, strain-specific transcriptome or expression-module claim in this record calls for an iModulonDB query; generic enzymes/osmoregulation and habitat associations do not specify an applicable organism/dataset.
+
+## Findings
+
+### F1: Related or broader/narrower ontology names are promoted to exact
+
+major / open / confirmed; issue key: envo-00000218-ontology-synonym-scope.
+
+The sulfide-precipitating submarine hydrothermal vent identity is supported by ENVO and source labels; genuine active chimney synonymy must remain. Related sea/oceanic vent names are not exact, and the frozen definition contains three supeRHEAted capitalization corruptions absent from current ENVO. Later GOLD sample examples include oil-spill plume entries, a source-quality warning rather than proof that the 27 frozen organism assertions are wrong.
+
+### F2: Pinned definition contains corrupted capitalization
+
+minor / open / confirmed; issue key: envo-00000218-definition-capitalization.
+
+Three occurrences of supeRHEAted are present in the raw ontology definition and generated text; current official ENVO uses superheated. Identity and mechanism are not thereby disproved.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Resolve shared1249 with governed typed-synonym ingestion. Retain genuine exact names and PREGO related names; test multiscope and unknown cases rather than globally downgrading every synonym.
+
+- Change only maintained inputs with exact source/edge keys; preserve independent parents, identities, source counts/units and native lifecycle.
+- Inspect claim-level sources; append required curation history, add focused regressions, inspect a seed canary and regenerate affected products.
+- Pass schema, strict, product-label, corpus reproduction, causal/history, review-integrity and full QC; save a linked successor for each finding disposition.
+- Compare actual semantic-map inputs and perform genuine regeneration when changed; do not substitute a checksum-only refresh.
+
+### A2
+
+Trace the capitalization artifact through the source transform and correct it through governed snapshot handling with provenance and exact reproduction, not a manual generated edit.
+
+- Change only maintained inputs with exact source/edge keys; preserve independent parents, identities, source counts/units and native lifecycle.
+- Inspect claim-level sources; append required curation history, add focused regressions, inspect a seed canary and regenerate affected products.
+- Pass schema, strict, product-label, corpus reproduction, causal/history, review-integrity and full QC; save a linked successor for each finding disposition.
+- Compare actual semantic-map inputs and perform genuine regeneration when changed; do not substitute a checksum-only refresh.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| R | data/habitats/aquatic/black_smoker.yaml; Entire captured YAML read, including provenance, parameters, taxa, graphs and history | supports | The sulfide-precipitating submarine hydrothermal vent identity is supported by ENVO and source labels; genuine active chimney synonymy must remain. Related sea/oceanic vent names are not exact, and the frozen definition contains three supeRHEAted capitalization corruptions absent from current ENVO. Later GOLD sample examples include oil-spill plume entries, a source-quality warning rather than proof that the 27 frozen organism assertions are wrong. |
+| RULES | docs/CURATION.md; docs/HARMONIZATION.md; docs/RESEARCH.md; src/habitatmech/schema/habitatmech.yaml | supports | Applied exact identity, strict-parent, MIxS-role, source unit/score, ITEM lifecycle and claim-specific evidence contracts. TAXON is an organism/clade; COMMUNITY is an interacting assemblage, not a process. |
+| RAW | data/raw; curation/decisions.tsv; curation/term_requests.tsv; curation/gold_parent_exclusions.tsv; Exact logical TSV rows; header is row1. Neighboring source/parent matches excluded. | supports | {"curation/decisions.tsv": [{"data": {"category": "", "curator": "claude-opus-5", "date": "2026-08-12", "decision": "GROUND", "grounding_status": "EXACT", "identifier": "habitatmech:GOLD.a9f4ef57f4", "notes": "Leaf label equals the ENVO label exactly and no other source concept claims it. Path: Environmental &gt; Aquatic &gt; Marine &gt; Hydrothermal vents &gt; Black smokers", "object_id": "ENVO:00000218", "object_label": "black smoker", "relation": "", "review_depth": "ITEM"}, "logical_row": 969}, {"data": {"category": "", "curator": "claude-opus-5", "date": "2026-08-13", "decision": "REVIEW", "grounding_status": "", "identifier": "habitatmech:PREGO.ab4c7e091e", "notes": "Multi-source review pass: this record is attested by more than one independent vocabulary, and this source's label or path was read against the record's ontology term to check the merge is right. It agrees. Source concepts in the same pass whose labels did not agree were re-decided rather than endorsed; see the pass's other decisions of the same date.", "object_id": "", "object_label": "", "relation": "", "review_depth": "ITEM"}, "logical_row": 1495}], "data/raw/gold_ecosystem_paths.tsv": [{"data": {"biosample_count": "0", "canonical_path": "Environmental &gt; Aquatic &gt; Marine &gt; Hydrothermal vents &gt; Black smokers", "depth": "5", "ecosystem": "Environmental", "ecosystem_category": "Aquatic", "ecosystem_subtype": "Hydrothermal vents", "ecosystem_type": "Marine", "gold_node_count": "1", "gold_node_ids": "gold.ecosystem:4031", "leaf_label": "Black smokers", "organism_count": "27", "specific_ecosystem": "Black smokers", "study_count": "0", "total_assertions": "27"}, "logical_row": 367}], "data/raw/gold_path_biosamples.tsv": [{"data": {"biosample_count": "25", "canonical_path": "Environmental &gt; Aquatic &gt; Marine &gt; Hydrothermal vents &gt; Black smokers", "ecosystem_path_id": "4031"}, "logical_row": 468}], "data/raw/gold_path_triads.tsv": [{"data": {"canonical_path": "Environmental &gt; Aquatic &gt; Marine &gt; Hydrothermal vents &gt; Black smokers", "distinct_terms": "1", "samples": "21", "slot": "broad", "studies": "14", "studies_agreeing": "14", "top_label": "marine black smoker biome", "top_share": "1.00", "top_term": "ENVO:01000051"}, "logical_row": 500}, {"data": {"canonical_path": "Environmental &gt; Aquatic &gt; Marine &gt; Hydrothermal vents &gt; Black smokers", "distinct_terms": "1", "samples": "21", "slot": "local", "studies": "14", "studies_agreeing": "14", "top_label": "black smoker", "top_share": "1.00", "top_term": "ENVO:00000218"}, "logical_row": 501}, {"data": {"canonical_path": "Environmental &gt; Aquatic &gt; Marine &gt; Hydrothermal vents &gt; Black smokers", "distinct_terms": "1", "samples": "21", "slot": "medium", "studies": "14", "studies_agreeing": "14", "top_label": "sea water", "top_share": "1.00", "top_term": "ENVO:00002149"}, "logical_row": 502}], "data/raw/ontology_subclass_edges.tsv": [{"data": {"object": "ENVO:01000122", "predicate": "rdfs:subClassOf", "subject": "ENVO:00000218"}, "logical_row": 4851}], "data/raw/ontology_terms.tsv": [{"data": {"definition": "A hydrothermal vent found on the ocean floor. The vents are formed in fields hundreds of meters wide when supeRHEAted water from below the Earth's crust comes through the ocean floor. The supeRHEAted water is rich in dissolved minerals from the crust, most notably sulfides, which crystallize to create a chimney-like structure around each vent. When the supeRHEAted water in the vent comes in contact with the cold ocean water, many minerals are precipitated, creating the distinctive black color. The metal sulfides that are deposited can become massive sulfide ore deposits in time.", "deprecated": "", "directly_referenced": "TRUE", "label": "black smoker", "label_only": "FALSE", "ontology": "ENVO", "synonyms": "active chimney&#124;oceanic vent&#124;sea vent", "term_id": "ENVO:00000218"}, "logical_row": 6802}], "data/raw/prego_habitat_taxa.tsv": [{"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000218", "prego_score": "4", "rank": "1", "taxon_id": "NCBITaxon:202747", "taxon_label": "Sulfurimonas autotrophica"}, "logical_row": 4346}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000218", "prego_score": "4", "rank": "2", "taxon_id": "NCBITaxon:267990", "taxon_label": "Lebetimonas acidiphila"}, "logical_row": 4347}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000218", "prego_score": "4", "rank": "3", "taxon_id": "NCBITaxon:36987", "taxon_label": ""}, "logical_row": 4348}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000218", "prego_score": "4", "rank": "4", "taxon_id": "NCBITaxon:411485", "taxon_label": "Faecalibacterium prausnitzii M21/2"}, "logical_row": 4349}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000218", "prego_score": "4", "rank": "5", "taxon_id": "NCBITaxon:449306", "taxon_label": "Desulfobulbus sp. DSM 2033"}, "logical_row": 4350}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000218", "prego_score": "4", "rank": "6", "taxon_id": "NCBITaxon:498761", "taxon_label": "Heliomicrobium modesticaldum Ice1"}, "logical_row": 4351}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000218", "prego_score": "4", "rank": "7", "taxon_id": "NCBITaxon:52560", "taxon_label": "Desulfomicrobium apsheronum"}, "logical_row": 4352}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000218", "prego_score": "4", "rank": "8", "taxon_id": "NCBITaxon:537937", "taxon_label": "Bifidobacterium longum subsp. infantis CCUG 52486"}, "logical_row": 4353}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000218", "prego_score": "4", "rank": "9", "taxon_id": "NCBITaxon:56780", "taxon_label": "Syntrophus aciditrophicus SB"}, "logical_row": 4354}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000218", "prego_score": "4", "rank": "10", "taxon_id": "NCBITaxon:6376", "taxon_label": ""}, "logical_row": 4355}, {"data": {"channels": "annotated_genomes_isolates", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000218", "prego_score": "3", "rank": "11", "taxon_id": "NCBITaxon:647171", "taxon_label": "Methanotorris formicicus Mc-S-70"}, "logical_row": 4356}, {"data": {"channels": "annotated_genomes_isolates", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000218", "prego_score": "3", "rank": "12", "taxon_id": "NCBITaxon:693661", "taxon_label": "Archaeoglobus veneficus SNP6"}, "logical_row": 4357}], "data/raw/prego_habitats.tsv": [{"data": {"biolink_category": "biolink:OntologyClass", "channels": "annotated_genomes_isolates&#124;environmental_samples", "direct_assertion_count": "12", "max_prego_score": "4", "ontology": "ENVO", "prego_id": "ENVO:00000218", "prego_synonyms": "active chimney&#124;active chimneys&#124;black smoker&#124;black smokers&#124;oceanic vent&#124;oceanic vents&#124;sea vent&#124;sea vents", "taxon_count": "12"}, "logical_row": 328}]} |
+| CODE | src/habitatmech/seed.py; Executed complete-document reconstruction; all40 matched captured records | supports | {"reviewed_sources": 2, "routes": [{"actual": {"category": null, "contributes_grounding": true, "decision": {"category": "", "curator": "claude-opus-5", "date": "2026-08-12", "decision": "GROUND", "grounding_status": "EXACT", "identifier": "habitatmech:GOLD.a9f4ef57f4", "notes": "Leaf label equals the ENVO label exactly and no other source concept claims it. Path: Environmental &gt; Aquatic &gt; Marine &gt; Hydrothermal vents &gt; Black smokers", "object_id": "ENVO:00000218", "object_label": "black smoker", "relation": "parent", "review_depth": "ITEM"}, "extra_parents": [], "extra_xrefs": [], "grounding_status": "EXACT", "identifier": "ENVO:00000218", "mapping_predicate": "skos:exactMatch", "reviewed": true, "route": "curated_ground_from_gold_unmatched"}, "automatic": {"category": null, "contributes_grounding": true, "decision": null, "extra_parents": [], "extra_xrefs": [], "grounding_status": "UNGROUNDED", "identifier": "habitatmech:GOLD.a9f4ef57f4", "mapping_predicate": null, "reviewed": false, "route": "gold_unmatched"}, "minted": "habitatmech:GOLD.a9f4ef57f4", "source": "GOLD", "source_id": "gold.ecosystem:4031"}, {"actual": {"category": null, "contributes_grounding": true, "decision": {"category": "", "curator": "claude-opus-5", "date": "2026-08-13", "decision": "REVIEW", "grounding_status": "", "identifier": "habitatmech:PREGO.ab4c7e091e", "notes": "Multi-source review pass: this record is attested by more than one independent vocabulary, and this source's label or path was read against the record's ontology term to check the merge is right. It agrees. Source concepts in the same pass whose labels did not agree were re-decided rather than endorsed; see the pass's other decisions of the same date.", "object_id": "", "object_label": "", "relation": "parent", "review_depth": "ITEM"}, "extra_parents": [], "extra_xrefs": [], "grounding_status": "EXACT", "identifier": "ENVO:00000218", "mapping_predicate": null, "reviewed": true, "route": "curated_review_of_prego_self_grounded"}, "automatic": {"category": null, "contributes_grounding": true, "decision": null, "extra_parents": [], "extra_xrefs": [], "grounding_status": "EXACT", "identifier": "ENVO:00000218", "mapping_predicate": null, "reviewed": false, "route": "prego_self_grounded"}, "minted": "habitatmech:PREGO.ab4c7e091e", "source": "PREGO", "source_id": "ENVO:00000218"}], "source_concepts": 2} |
+| ONT | https://raw.githubusercontent.com/EnvironmentOntology/envo/master/envo.owl; Same-day official OWL: named identities, typed synonyms and direct axioms; no snapshot refresh | supports | {"ENVO:00000027": {"definitions": ["A surface landform which provides an egress for groundwater or steam to flow out of the ground."], "deprecated": [], "equivalents": [], "labels": ["spring"], "parents": ["http://purl.obolibrary.org/obo/ENVO_01001884", {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/BFO_0000050"], "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_01001311"]}], "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": [], "hasNarrowSynonym": [], "hasRelatedSynonym": ["seep"]}}, "ENVO:00000063": {"definitions": ["An accumulation of water of varying size."], "deprecated": [], "equivalents": [], "labels": ["water body"], "parents": ["http://purl.obolibrary.org/obo/ENVO_01000685", {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/BFO_0000050"], "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_01000819"]}, {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0002354"], "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_01001220"]}, {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0002473"], "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/CHEBI_15377"]}], "replacements": [], "synonyms": {"hasBroadSynonym": ["hydrographic feature"], "hasExactSynonym": ["aquatic feature", "bodies of water", "body of water", "waterbody"], "hasNarrowSynonym": [], "hasRelatedSynonym": []}}, "ENVO:00000215": {"definitions": ["A fissure in the Earths's surface from which geothermally heated water issues."], "deprecated": [], "equivalents": [], "labels": ["hydrothermal vent"], "parents": ["http://purl.obolibrary.org/obo/ENVO_00000027"], "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": ["HydrothermalVents"], "hasNarrowSynonym": [], "hasRelatedSynonym": []}}, "ENVO:00000218": {"definitions": ["A hydrothermal vent found on the ocean floor. The vents are formed in fields hundreds of meters wide when superheated water from below the Earth's crust comes through the ocean floor. The superheated water is rich in dissolved minerals from the crust, most notably sulfides, which crystallize to create a chimney-like structure around each vent. When the superheated water in the vent comes in contact with the cold ocean water, many minerals are precipitated, creating the distinctive black color. The metal sulfides that are deposited can become massive sulfide ore deposits in time."], "deprecated": [], "equivalents": [], "labels": ["black smoker"], "parents": ["http://purl.obolibrary.org/obo/ENVO_01000122"], "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": ["active chimney"], "hasNarrowSynonym": [], "hasRelatedSynonym": ["oceanic vent", "sea vent"]}}, "ENVO:00000428": {"definitions": ["A biome is an ecosystem which is undergoing climactic ecological succession."], "deprecated": [], "equivalents": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Class"], "http://www.w3.org/2002/07/owl#intersectionOf": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first": ["http://purl.obolibrary.org/obo/ENVO_01001110"], "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0000056"], "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_01001827"]}], "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"]}]}]}], "labels": ["biome"], "parents": ["http://purl.obolibrary.org/obo/ENVO_01000813", "http://purl.obolibrary.org/obo/ENVO_01001110", {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/BFO_0000050"], "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_01000817"]}, {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/BFO_0000050"], "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/PCO_0000002"]}, {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0000056"], "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_01001827"]}, {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0002507"], "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/PCO_0000002"]}], "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": ["major habitat type"], "hasNarrowSynonym": [], "hasRelatedSynonym": ["EcosytemType"]}}, "ENVO:00001999": {"definitions": ["A lentic water body which is composed primarily of marine water."], "deprecated": [], "equivalents": [], "labels": ["marine water body"], "parents": ["http://purl.obolibrary.org/obo/ENVO_01000617"], "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": ["body of marine water", "marine waterbody"], "hasNarrowSynonym": [], "hasRelatedSynonym": []}}, "ENVO:00002006": {"definitions": ["An environmental material primarily composed of dihydrogen oxide in its liquid form."], "deprecated": [], "equivalents": [], "labels": ["liquid water"], "parents": ["http://purl.obolibrary.org/obo/ENVO_01000815", {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0002473"], "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/CHEBI_15377"]}], "replacements": [], "synonyms": {"hasBroadSynonym": ["water"], "hasExactSynonym": [], "hasNarrowSynonym": [], "hasRelatedSynonym": []}}, "ENVO:00002011": {"definitions": ["Water which has a low concentration of dissolved solutes, particularly that of sodium chloride."], "deprecated": [], "equivalents": [], "labels": ["fresh water"], "parents": ["http://purl.obolibrary.org/obo/ENVO_00002006"], "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": ["freshwater"], "hasNarrowSynonym": [], "hasRelatedSynonym": ["sweet water"]}}, "ENVO:00002030": {"definitions": ["A biome which is determined by a water body and which has ecological climax communities adapted to life in or on water."], "deprecated": [], "equivalents": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Class"], "http://www.w3.org/2002/07/owl#intersectionOf": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first": ["http://purl.obolibrary.org/obo/ENVO_00000428"], "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0002507"], "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_00000063"]}], "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"]}]}]}], "labels": ["aquatic biome"], "parents": ["http://purl.obolibrary.org/obo/ENVO_00000428", "http://purl.obolibrary.org/obo/ENVO_01001787"], "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": [], "hasNarrowSynonym": [], "hasRelatedSynonym": []}}, "ENVO:01000122": {"definitions": ["A marine hydrothermal vent is a marine benthic feature where heat generated due to tectonic activity, either at divergent plate boundaries or convergent ocean plates where back-arc spreading occurs, is released or 'vented' to the surface. The resultant high temperature water jets are laden with dissolved metals and minerals."], "deprecated": [], "equivalents": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Class"], "http://www.w3.org/2002/07/owl#intersectionOf": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first": ["http://purl.obolibrary.org/obo/ENVO_00000215"], "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0001025"], "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_00000447"]}], "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"]}]}]}], "labels": ["marine hydrothermal vent"], "parents": ["http://purl.obolibrary.org/obo/ENVO_00000215", {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0001025"], "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_00000447"]}], "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": [], "hasNarrowSynonym": [], "hasRelatedSynonym": []}}, "ENVO:01000254": {"definitions": ["A system which has the disposition to environ one or more material entities."], "deprecated": [], "equivalents": [], "labels": ["environmental system"], "parents": ["http://purl.obolibrary.org/obo/RO_0002577"], "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": ["environment"], "hasNarrowSynonym": [], "hasRelatedSynonym": []}}, "ENVO:01000617": {"definitions": ["A lentic water body is a water body in which the accumulated water, in its totality, has very little to no directed flow."], "deprecated": [], "equivalents": [], "labels": ["lentic water body"], "parents": ["http://purl.obolibrary.org/obo/ENVO_00000063"], "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": [], "hasNarrowSynonym": [], "hasRelatedSynonym": []}}} |
+| PARENT | data/habitats/aquatic/hydrothermal_vent.yaml; data/habitats/aquatic/marine_water_body.yaml; data/habitats/aquatic/lentic_water_body.yaml; data/habitats/aquatic/fresh_water.yaml; data/habitats/aquatic/aquatic_biome.yaml; data/habitats/other/environmental.yaml; data/habitats/other/environmental_system.yaml; data/habitats/other/biome.yaml; data/habitats/aquatic/liquid_water.yaml; data/habitats/aquatic/water_body.yaml; data/habitats/terrestrial/spring.yaml; Ancestor context is not full-record review coverage of ancestors | supports | {"ENVO:00000027": {"definition": "A surface landform which provides an egress for groundwater or steam to flow out of the ground.", "grounding_status": "EXACT", "label": "spring", "parent_habitats": ["ENVO:01001884"]}, "ENVO:00000063": {"definition": "An accumulation of water of varying size.", "grounding_status": "EXACT", "label": "water body", "parent_habitats": ["ENVO:01000685"]}, "ENVO:00000215": {"definition": "A fissure in the Earths's surface from which geothermally heated water issues.", "grounding_status": "EXACT", "label": "hydrothermal vent", "parent_habitats": ["ENVO:00000027", "ENVO:00001999"]}, "ENVO:00000428": {"definition": "A biome is an ecosystem which is undergoing climactic ecological succession.", "grounding_status": "EXACT", "label": "biome", "parent_habitats": ["ENVO:01000813", "ENVO:01001110"]}, "ENVO:00001999": {"definition": "A lentic water body which is composed primarily of marine water.", "grounding_status": "EXACT", "label": "marine water body", "parent_habitats": ["ENVO:00002030", "ENVO:01000617"]}, "ENVO:00002006": {"definition": "An environmental material primarily composed of dihydrogen oxide in its liquid form.", "grounding_status": "EXACT", "label": "liquid water", "parent_habitats": ["ENVO:01000815"]}, "ENVO:00002011": {"definition": "Water which has a low concentration of dissolved solutes, particularly that of sodium chloride.", "grounding_status": "EXACT", "label": "fresh water", "parent_habitats": ["ENVO:00002006", "ENVO:00002030"]}, "ENVO:00002030": {"definition": "A biome which is determined by a water body and which has ecological climax communities adapted to life in or on water.", "grounding_status": "EXACT", "label": "aquatic biome", "parent_habitats": ["ENVO:00000428", "ENVO:01001787", "habitatmech:BACDIVE.0f1e92a02c"]}, "ENVO:01000254": {"definition": "A system which has the disposition to environ one or more material entities.", "grounding_status": "EXACT", "label": "environmental system", "parent_habitats": null}, "ENVO:01000617": {"definition": "A lentic water body is a water body in which the accumulated water, in its totality, has very little to no directed flow.", "grounding_status": "EXACT", "label": "lentic water body", "parent_habitats": ["ENVO:00000063", "ENVO:00002011"]}, "habitatmech:BACDIVE.0f1e92a02c": {"definition": "An environmental system which is a portion of the air, water, or land surface or subsurface of an astronomical body sampled in place, and which is neither bounded by a host organism nor constituted by a constructed or operated artefact.", "grounding_status": "UNGROUNDED", "label": "free-living environment", "parent_habitats": ["ENVO:01000254"]}} |
+| BULK | https://gold.jgi.doe.gov/download?mode=site_excel; Five ecosystem positions preserved; contacts excluded. All12 carbonate organism descriptions, otherwise first3 per sheet. | supports | Exact positional census counts={"Biosample": 25, "Organism": 27, "SequencingProject": 33}; individually inspected descriptions={"Biosample": [{"data": {"BIOSAMPLE GOLD ID": "Gb0052343", "BIOSAMPLE NAME": "Marine microbial communities from Deepwater Horizon subsurface plume in Gulf of Mexico  - 16-4 Below Plume", "BIOSAMPLE NCBI TAX NAME": "hydrocarbon metagenome", "BIOSAMPLE SAMPLE COLLECTION SITE": "Extraction of Environmental RNA"}, "row": 1060}, {"data": {"BIOSAMPLE GOLD ID": "Gb0052346", "BIOSAMPLE NAME": "Marine microbial communities from Deepwater Horizon subsurface plume in Gulf of Mexico  - 16-5 In Plume", "BIOSAMPLE NCBI TAX NAME": "hydrocarbon metagenome", "BIOSAMPLE SAMPLE COLLECTION SITE": "extraction of environmental RNA"}, "row": 1063}, {"data": {"BIOSAMPLE GOLD ID": "Gb0052347", "BIOSAMPLE NAME": "Marine microbial communities from Deepwater Horizon subsurface plume in Gulf of Mexico  - 52-1 Below Plume", "BIOSAMPLE NCBI TAX NAME": "hydrocarbon metagenome", "BIOSAMPLE SAMPLE COLLECTION SITE": "extraction of environmental RNA"}, "row": 1064}], "Organism": [{"data": {"ORGANISM GOLD ID": "Go0112861", "ORGANISM NAME": "Thermosipho affectus ikt275mar", "ORGANISM SAMPLE COLLECTION SITE": "Atlantic Ocean Rainbow hydrothermal vents"}, "row": 62931}, {"data": {"ORGANISM GOLD ID": "Go0357229", "ORGANISM NAME": "Geogemma barossii 121"}, "row": 266525}, {"data": {"ORGANISM GOLD ID": "Go0357285", "ORGANISM HABITAT": "Hydrothermal sediment", "ORGANISM NAME": "Pyrodictium delaneyi hulk", "ORGANISM SAMPLE COLLECTION SITE": "Juan de Fuca Ridge: Hulk sulfide mound"}, "row": 266543}]}. Later source context, not reconstructed frozen membership; remaining rows and study joins are indexed, not individually assessed. |
+| CLASS | https://gold.jgi.doe.gov/download?mode=ecosystempaths; Later official classification; all33 cohort source paths matched | supports | [{"row": 705, "slug": "black_smoker", "path": "Environmental &gt; Aquatic &gt; Marine &gt; Hydrothermal vents &gt; Black smokers", "values": ["4031", "Environmental", "Aquatic", "Marine", "Hydrothermal vents", "Black smokers"]}] |
+| TAX0 | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=1017%2C1018%2C1019%2C1029756%2C1035916%2C1040984%2C104268%2C1046954%2C1046955%2C1046956%2C1046957%2C1046958%2C1046959%2C1046960%2C1046961%2C1046962%2C1046963%2C1046964%2C1046965%2C1046966%2C1046967%2C1046970%2C1046971%2C1046972%2C1046973%2C1046974%2C1046975%2C1046978%2C1046991%2C1047002%2C1047006%2C1047014%2C1048%2C1049%2C1073250%2C1084519%2C1085%2C1087448%2C109328%2C1100%2C110539%2C110639%2C1111735%2C1120961%2C1120966%2C1120998%2C1121014%2C1121403%2C1121410%2C1121416%2C1121878%2C1121879%2C1121938%2C1122176%2C1122197%2C1123027%2C1123503%2C1123517%2C1124597%2C1132696%2C1134435%2C1156985%2C1165090%2C1175486%2C118166%2C1188229%2C1194079%2C1245526%2C1257026%2C1257027%2C1264%2C1265%2C1270%2C1282%2C129578%2C129958%2C1318%2C1397696%2C1408433%2C1409%2C1423814%2C1485%2C150172%2C1512%2C152268%2C1526%2C1527%2C154046%2C1550%2C157687%2C158847%2C1596%2C1623%2C163908%2C165179%2C165813%2C1727163%2C195907%2C195913%2C202747%2C205844%2C209897%2C216903%2C226504%2C226505%2C226506%2C23%2C231438%2C231440%2C231447%2C245187%2C245188%2C247022%2C249351%2C249352%2C252230%2C252231%2C252597%2C255984%2C259390%2C266940%2C267375%2C267990%2C28122%2C285109%2C285258%2C287844%2C288019%2C288022%2C293826%2C293890%2C29494%2C29535%2C295419%2C306540%2C306541%2C317936%2C321267%2C325473%2C326442%2C329406%2C332168%2C34085%2C343403%2C364197%2C36987%2C393131%2C395491%2C411467%2C411477&amp;retmode=xml; NCBI TaxId, ScientificName, Rank and OtherNames | supports | The two chunks jointly resolve all188 requested cohort IDs. This target=[{"current_id": "202747", "current_name": "Sulfurimonas autotrophica", "frozen_label": "Sulfurimonas autotrophica", "id": "202747", "rank": "species"}, {"current_id": "267990", "current_name": "Lebetimonas acidiphila", "frozen_label": "Lebetimonas acidiphila", "id": "267990", "rank": "species"}, {"current_id": "36987", "current_name": "Coptotermes formosanus", "frozen_label": null, "id": "36987", "rank": "species"}, {"current_id": "411485", "current_name": "Faecalibacterium prausnitzii M21/2", "frozen_label": "Faecalibacterium prausnitzii M21/2", "id": "411485", "rank": "strain"}, {"current_id": "449306", "current_name": "Desulfobulbus sp. DSM 2033", "frozen_label": "Desulfobulbus sp. DSM 2033", "id": "449306", "rank": "species"}, {"current_id": "498761", "current_name": "Heliomicrobium modesticaldum Ice1", "frozen_label": "Heliomicrobium modesticaldum Ice1", "id": "498761", "rank": "strain"}, {"current_id": "52560", "current_name": "Desulfomicrobium apsheronum", "frozen_label": "Desulfomicrobium apsheronum", "id": "52560", "rank": "species"}, {"current_id": "537937", "current_name": "Bifidobacterium longum subsp. infantis CCUG 52486", "frozen_label": "Bifidobacterium longum subsp. infantis CCUG 52486", "id": "537937", "rank": "strain"}, {"current_id": "56780", "current_name": "Syntrophus aciditrophicus SB", "frozen_label": "Syntrophus aciditrophicus SB", "id": "56780", "rank": "strain"}, {"current_id": "6376", "current_name": "Alvinella pompejana", "frozen_label": null, "id": "6376", "rank": "species"}, {"current_id": "647171", "current_name": "Methanotorris formicicus Mc-S-70", "frozen_label": "Methanotorris formicicus Mc-S-70", "id": "647171", "rank": "strain"}, {"current_id": "693661", "current_name": "Archaeoglobus veneficus SNP6", "frozen_label": "Archaeoglobus veneficus SNP6", "id": "693661", "rank": "strain"}]. All noncanonical supplied names match normalized spelling or retained aliases. Resolution does not establish occurrence. |
+| TAX1 | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=411485%2C411901%2C418643%2C428125%2C435590%2C445336%2C449306%2C457391%2C457424%2C457427%2C477974%2C498761%2C502025%2C523845%2C52560%2C53245%2C537937%2C54121%2C551275%2C551789%2C55518%2C556258%2C562%2C56780%2C568099%2C616997%2C6376%2C643867%2C647171%2C657014%2C668820%2C693661%2C69670%2C710685%2C717231%2C889378%2C94122%2C999547&amp;retmode=xml; NCBI TaxId, ScientificName, Rank and OtherNames | supports | The two chunks jointly resolve all188 requested cohort IDs. This target=[{"current_id": "202747", "current_name": "Sulfurimonas autotrophica", "frozen_label": "Sulfurimonas autotrophica", "id": "202747", "rank": "species"}, {"current_id": "267990", "current_name": "Lebetimonas acidiphila", "frozen_label": "Lebetimonas acidiphila", "id": "267990", "rank": "species"}, {"current_id": "36987", "current_name": "Coptotermes formosanus", "frozen_label": null, "id": "36987", "rank": "species"}, {"current_id": "411485", "current_name": "Faecalibacterium prausnitzii M21/2", "frozen_label": "Faecalibacterium prausnitzii M21/2", "id": "411485", "rank": "strain"}, {"current_id": "449306", "current_name": "Desulfobulbus sp. DSM 2033", "frozen_label": "Desulfobulbus sp. DSM 2033", "id": "449306", "rank": "species"}, {"current_id": "498761", "current_name": "Heliomicrobium modesticaldum Ice1", "frozen_label": "Heliomicrobium modesticaldum Ice1", "id": "498761", "rank": "strain"}, {"current_id": "52560", "current_name": "Desulfomicrobium apsheronum", "frozen_label": "Desulfomicrobium apsheronum", "id": "52560", "rank": "species"}, {"current_id": "537937", "current_name": "Bifidobacterium longum subsp. infantis CCUG 52486", "frozen_label": "Bifidobacterium longum subsp. infantis CCUG 52486", "id": "537937", "rank": "strain"}, {"current_id": "56780", "current_name": "Syntrophus aciditrophicus SB", "frozen_label": "Syntrophus aciditrophicus SB", "id": "56780", "rank": "strain"}, {"current_id": "6376", "current_name": "Alvinella pompejana", "frozen_label": null, "id": "6376", "rank": "species"}, {"current_id": "647171", "current_name": "Methanotorris formicicus Mc-S-70", "frozen_label": "Methanotorris formicicus Mc-S-70", "id": "647171", "rank": "strain"}, {"current_id": "693661", "current_name": "Archaeoglobus veneficus SNP6", "frozen_label": "Archaeoglobus veneficus SNP6", "id": "693661", "rank": "strain"}]. All noncanonical supplied names match normalized spelling or retained aliases. Resolution does not establish occurrence. |
+| SEARCH | curation; history; research; reports; reviews; data/raw; data/habitats; conf; Bounded searches, not global absence claims | supports | Identifier, label, slug and exact source-path searches included ignored/hidden files in these roots; coverage used Path.rglob. No earlier structured observation of this target found. Legacy reports were indexed; only specifically cited historical reports were read in full. Upstream search={"configured_root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe", "root_exists": true, "exact_paths": [{"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_nodes.tsv", "exists": false, "expected_sha256": "c13c21bdd04619c75ce16e63b05e51577b0cefec5b61765d383313f654ab3fae"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_edges.tsv", "exists": false, "expected_sha256": "54982c25de9d2c820eeebc1452aeac0b034595921d04d55b810bf1d2b1e127e0"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/nodes.tsv", "exists": false, "expected_sha256": "a2a2f9acae230636dd866347d173a32c9f025c04a377060087a4be65781628f3"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/edges.tsv", "exists": false, "expected_sha256": "ab6208bff4854db7c1a736d53d0aa04269a682ab15a1ce6f37c6d731000281d7"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/nodes.tsv", "exists": false, "expected_sha256": "020de3afc71495571ddb05000c83a58d009272f53735b5f7c9326c1293e0415c"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/edges.tsv", "exists": false, "expected_sha256": "8863ee3197a36915865fa4833df39d10c3f8f69b64bafbb746b9cd731308a0aa"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/nodes.tsv", "exists": false, "expected_sha256": "cc5941cd677831e8e207da018dca763cd009bb1f9310b21cb4d45892316e006d"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/edges.tsv", "exists": false, "expected_sha256": "fd333634eaaa3cfe57a35cdca2f4c5b8cf0662851c1df58914d3e999d62a650e"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/environments.csv", "exists": false, "expected_sha256": "99299fe635159712f95568783ad3b484230fb31781262f1f6f8bd84db4bc3048"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/mappings/isolation_source_to_ontology.tsv", "exists": false, "expected_sha256": "2dea3d1bb20c72a04b6f64a67e2bb2bdc4f3649b809c5935390239be2791ef1f"}], "traversal": [{"command": ["rg", "--files", "--no-ignore", "--hidden", "data"], "exit_code": 0, "matches": [], "stderr": ""}, {"command": ["rg", "--files", "--no-ignore", "--hidden", "build"], "exit_code": 0, "matches": [], "stderr": ""}, {"command": ["rg", "--files", "--no-ignore", "--hidden", "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data"], "exit_code": 0, "matches": [], "stderr": ""}]} |
+| ISSUES | https://github.com/CultureBotAI/HabitatMech/issues; GitHub CLI census and selected full issue bodies | supports | All-state946-issue title/body census inspected for overlap. Shared1249 and1398 apply where cited.1259 concerns a separate Lake biofilm source,1423 different records, and1638 the bioreactor graph; none is treated as this target repaired. Comments were not exhaustively crawled. |
+
+## Limits And Additional Notes
+
+- Completed assessment is not a clean scientific verdict or proof of every original assertion.
+- Only first3 exact BioSample/Organism descriptions per sheet were individually interpreted, except all12 carbonate organism descriptions. Other matches and study joins were indexed, not individually assessed.
+- Original frozen membership was not fully reconstructed; no ontology, taxonomy or source snapshot was refreshed.
+- Same-agent review, not independent approval. No habitat data, native status, history or GitHub mutation.
+- SSSOM/KGX conformance with current kg-microbe modeling was not audited; shared1398 remains open.
+- Whole-corpus review remains incomplete; ancestor reads and source indexing add no target coverage.
+- New immutable observation only; curation and publication are separate work.
+- No prior structured target observation found; historical reports are preserved and are not silently retired.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261011T225607Z-black_smoker
+kind: record
+repository: CultureBotAI/HabitatMech
+title: 'Scientific record review: black_smoker'
+started_at: '2026-10-11T22:35:27.260407Z'
+finished_at: '2026-10-11T22:56:07.176655Z'
+reviewer:
+  identity: OpenAI Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Agent has participated in repository curation; not independent
+    approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The sulfide-precipitating submarine hydrothermal vent identity is supported
+  by ENVO and source labels; genuine active chimney synonymy must remain. Related
+  sea/oceanic vent names are not exact, and the frozen definition contains three supeRHEAted
+  capitalization corruptions absent from current ENVO. Later GOLD sample examples
+  include oil-spill plume entries, a source-quality warning rather than proof that
+  the 27 frozen organism assertions are wrong.
+source:
+  git_revision: 6509db458133758a41d1f39c6d41982476c3ed0d
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: conf/record_review.yaml
+    sha256: c2f5d0eb4c5744f5fe354c92184ddab144dc2688dba952b032b4f3d597bc08d6
+    role: context
+  - path: conf/sources.yaml
+    sha256: a8e069f9278068b57fa234f43e03c8d893f857827b83fd10cfa92d6815aed642
+    role: context
+  - path: curation/causal_graphs/aquatic_biome.yaml
+    sha256: 03ba09d10f9a9d8d32060fc0208b511ef0d59e731fd7c63ca6c02296e70da5f5
+    role: context
+  - path: curation/causal_graphs/fresh_water.yaml
+    sha256: e95ea96aa1912066d4c98cbff91e34528668d4c453d93dc4203c67e7769c691a
+    role: context
+  - path: curation/causal_graphs/hydrothermal_vent.yaml
+    sha256: b5c101a93e724531cb7e50e8031203138230c09599855fe8a03bec945469efb0
+    role: context
+  - path: curation/causal_graphs/liquid_water.yaml
+    sha256: 12aac1021b9b51c6becc4ef8509bd63557b306e42c01d9b4443d69252ce29a81
+    role: context
+  - path: curation/causal_graphs/marine_water_body.yaml
+    sha256: b2f81102970e9541bf61978fabdd68b7db8f9459f1ef11b467fecfc2956f238b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: 7cbec6d310b1aac248defdbe657e68c0cc1e848981230d2279e63f474c6f4c96
+    role: context
+  - path: curation/definition_source_label_exclusions.tsv
+    sha256: 2d41fc93db4939122b3909f2a412b84b679703948b10d9f02e12021442f71407
+    role: context
+  - path: curation/external_xrefs.tsv
+    sha256: cf8394a6ab22e35efd9e252aef422018226280830bf816a39bf4f2256ff75ad5
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: 8a06bc9f5f256f4672fe553c6b754a99ddd46fd245f65553af17567123fdbd4b
+    role: context
+  - path: curation/redirects_retracted.tsv
+    sha256: 0f1e9af8881f5a5db19f87de06b3b3d1800cfac8101699b380388c0a1a1e9a19
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 3f2ce04805defe5ff65dc20988cc72bc94d4636b3140eb1311017866bdc0ea0a
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: b59b9e800a918135e3915145d4d8098bb48dcea36a312b3004c594a57d221ae9
+    role: context
+  - path: data/habitats/aquatic/aquatic_biome.yaml
+    sha256: 27466c1abb6814aa790ecec6987d803850d0237c697c565e6fc21d1baaebfa27
+    role: context
+  - path: data/habitats/aquatic/black_smoker.yaml
+    sha256: 8b9c1edf66daae1b0fb3a8cf57248f6513ca47c2de4f386001bb2ea5832d2ca7
+    role: target
+  - path: data/habitats/aquatic/fresh_water.yaml
+    sha256: fc60c1fc64ceea8fdf8d2d294dc96c855aa3793962f818e9cdd1b9b3cb87d1be
+    role: context
+  - path: data/habitats/aquatic/hydrothermal_vent.yaml
+    sha256: e881a99e9ba8e9fd6a529f4da464c7eb87e787ec4033ebe63317057cf909cfcc
+    role: context
+  - path: data/habitats/aquatic/lentic_water_body.yaml
+    sha256: 6dcf68870e3d9201ffbad690f4d3a042656cf310bc87d00ffc8cd173744596dd
+    role: context
+  - path: data/habitats/aquatic/liquid_water.yaml
+    sha256: 03eb8ba51e02bc4c8b65b67ae5d8bb740746f8eff51ed81326685fdc5067b081
+    role: context
+  - path: data/habitats/aquatic/marine_water_body.yaml
+    sha256: 2f4bbc8c5e548c015eed7c3ff7e59df17ba70da940f7877f0d4097deebea8046
+    role: context
+  - path: data/habitats/aquatic/water_body.yaml
+    sha256: 589b017dac949a9705a816afad5094c2ee9ac1655feb1c771358a07472848239
+    role: context
+  - path: data/habitats/other/biome.yaml
+    sha256: 43080ce9bd411ee97a20d97c17bd923405c040feaf9454d44ca22a2955ce1854
+    role: context
+  - path: data/habitats/other/environmental.yaml
+    sha256: b23a64a2d7594f05716dfc8f525d184fe8bb5d885dbb9e755ba8cc844f433659
+    role: context
+  - path: data/habitats/other/environmental_system.yaml
+    sha256: 2c227791ce7b92c16ae9b76ad8295be95efee73cb65ec7050d1de2b00c8eecbc
+    role: context
+  - path: data/habitats/terrestrial/spring.yaml
+    sha256: 043473b7f899b5951000f9b173cf709f86f0632018fc3f60a1329d04e3795d6f
+    role: context
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: 36df8306394c06c352b73e0bf7b47a2858784cedac7389a24d0b78f593ece646
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: f7aa39ee762d94f1902d9f08f328cb897bc543e4e226057eb4770d24bfcc6eb5
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reports/yaml_record_review/20260921T230342Z-black_smoker.md
+    sha256: 7ee1e798965fe13534d5dde49455cef76dfa8373ed57a806be9119dc173a644d
+    role: context
+  - path: reports/yaml_record_review/20261007T003619Z-white_smoker.md
+    sha256: 7f818b371800d3cb0675b5a3cf2a19d9d2d3f5fe76f810e06c98b9c3d07ee331
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/extract_gold_biosamples.py
+    sha256: b6a2773c86fe718e1ca0b1d7b32709f0eee491ac813655e310aa0817c0fec31b
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: 4bf5391d25ff48a2d81eb3821af6582de063fd0391440973d309dfd93016490c
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: src/habitatmech/extract.py
+    sha256: 4d9397bda649381a5daf81937369531c6dc8b4518d6c7047e6f3f14e605bf860
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 7e3cda3dadb9c7462498e5014bf38ef730068212f8f9cb131e3fce383c21d10e
+    role: context
+  - path: src/habitatmech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+  - path: src/habitatmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 4adf105e23d75c3563a516a0c160623d1065df7fcb2f31b7a0a0a8303d0401be
+    role: context
+targets:
+- target_id: ENVO:00000218
+  path: data/habitats/aquatic/black_smoker.yaml
+  label: black smoker
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Per-source grounding and native review-depth decisions
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Exact GOLD context-parent contribution decisions
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Curated definition, genus and lexical scope
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_terms.tsv
+    role: Pinned ontology identity, labels, synonyms and definitions
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_subclass_edges.tsv
+    role: Pinned ontology hierarchy
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Source harmonization and generated output
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/gold_ecosystem_paths.tsv
+    role: Frozen source paths, nodes and ORGANISM counts
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/prego_habitats.tsv
+    role: Frozen PREGO habitat identity and count
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/prego_habitat_taxa.tsv
+    role: Frozen top-ranked taxon associations
+scope:
+  description: Entire exact generated record and all contributors, with bounded claim-level
+    scientific and source-context assessment.
+  selection: 'Next forty unreviewed records in stable repository-relative path order:
+    next forty AQUATIC records, atoll lagoon through coalbed methane well water. Individual
+    full-record observations, not a category-wide pass. Starting observation coverage528/3208
+    is not clean current-input coverage.'
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - ENVO:00000218
+  exclusions:
+  - target: Other3207 current records
+    reason: Context reads are not their full scientific review.
+checks:
+- check_id: C0
+  name: Native gate on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00000218
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=6509db458133758a41d1f39c6d41982476c3ed0d
+    just validate data/habitats/aquatic/black_smoker.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-11T22:37:44.528392Z to 2026-10-11T22:37:48.000943Z.
+    Native scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C1
+  name: Native gate on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00000218
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=6509db458133758a41d1f39c6d41982476c3ed0d
+    just validate-strict data/habitats/aquatic/atoll_lagoon.yaml data/habitats/aquatic/bar.yaml
+    data/habitats/aquatic/bathypelagic_bathyal_zone.yaml data/habitats/aquatic/bay.yaml
+    data/habitats/aquatic/bayou.yaml data/habitats/aquatic/beach.yaml data/habitats/aquatic/benthic_zone.yaml
+    data/habitats/aquatic/biofilm__599a99de.yaml data/habitats/aquatic/biofilm__5f164a0f.yaml
+    data/habitats/aquatic/biofilm__cc6fe05a.yaml data/habitats/aquatic/biofilm__e72e4f05.yaml
+    data/habitats/aquatic/biofouling.yaml data/habitats/aquatic/biofouling__438bcaa2.yaml
+    data/habitats/aquatic/biofouling__50243100.yaml data/habitats/aquatic/biofouling__fa010eab.yaml
+    data/habitats/aquatic/black_smoker.yaml data/habitats/aquatic/bog.yaml data/habitats/aquatic/bog_lake.yaml
+    data/habitats/aquatic/borax_leachate.yaml data/habitats/aquatic/borehole.yaml
+    data/habitats/aquatic/brackish_estuary.yaml data/habitats/aquatic/brackish_water.yaml
+    data/habitats/aquatic/brackish_water_body.yaml data/habitats/aquatic/brine.yaml
+    data/habitats/aquatic/brine__2299825d.yaml data/habitats/aquatic/brine__791bb429.yaml
+    data/habitats/aquatic/brine_pool.yaml data/habitats/aquatic/canal__c42831a4.yaml
+    data/habitats/aquatic/carbonate.yaml data/habitats/aquatic/cave_lake.yaml data/habitats/aquatic/cave_microbial_mat.yaml
+    data/habitats/aquatic/cave_pool.yaml data/habitats/aquatic/cave_pool_sediment.yaml
+    data/habitats/aquatic/cave_stream.yaml data/habitats/aquatic/cave_stream_sediment.yaml
+    data/habitats/aquatic/cave_water__c4d82240.yaml data/habitats/aquatic/chemocline.yaml
+    data/habitats/aquatic/chloraminated.yaml data/habitats/aquatic/chlorinated.yaml
+    data/habitats/aquatic/coalbed_methane_well_water.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-11T22:38:48.678016Z to 2026-10-11T22:38:56.293670Z.
+    Native scope retained. Selected scope:40 files,0 files with ERROR,0 ERROR rows.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C2
+  name: Native gate on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00000218
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=6509db458133758a41d1f39c6d41982476c3ed0d
+    just verify-corpus
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-11T22:38:56.294771Z to 2026-10-11T22:39:13.326878Z.
+    Native scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C3
+  name: Native gate on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00000218
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=6509db458133758a41d1f39c6d41982476c3ed0d
+    just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-11T22:39:13.327786Z to 2026-10-11T22:40:07.035407Z.
+    Native scope retained. Recorded corpus-wide outcomes:1178 canonical,1 synonym,5
+    accepted exceptions,2057 SKIPPED_NO_ADAPTER. This gate does not validate minted
+    identities or habitat occurrence.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C4
+  name: Native gate on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00000218
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=6509db458133758a41d1f39c6d41982476c3ed0d
+    just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-11T22:40:07.036210Z to 2026-10-11T22:40:16.618000Z.
+    Native scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C5
+  name: Native gate on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00000218
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=6509db458133758a41d1f39c6d41982476c3ed0d
+    just validate-causal-all
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-11T22:40:16.619117Z to 2026-10-11T22:40:22.318447Z.
+    Native scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C6
+  name: Native gate on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00000218
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=6509db458133758a41d1f39c6d41982476c3ed0d
+    just term-requests-check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-11T22:40:22.319312Z to 2026-10-11T22:40:47.199821Z.
+    Native scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C7
+  name: Native gate on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00000218
+  command: gh run view 38179820486 --repo CultureBotAI/HabitatMech --log
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-11T22:38:04.444453Z to 2026-10-11T22:38:06.504418Z.
+    All three required merge-group workflows passed at the exact captured base; authoritative
+    QC passed 800 tests with 3 skipped. Newly saved review bundles require their own
+    integrity check. Exact-base CI receipt; no claim that these new review files passed
+    remote CI.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: REPRO
+  name: Complete target reconstruction
+  required: false
+  status: passed
+  target_ids:
+  - ENVO:00000218
+  command: .venv/bin/python /private/tmp/habitatmech-review-ay-evidence.py
+  exit_code: 0
+  summary: All40 complete documents matched; input hashes reverified before authoring.
+  evidence_ids:
+  - RAW
+  - CODE
+- check_id: ORIGINAL
+  name: Original assertion membership
+  required: false
+  status: unavailable
+  target_ids:
+  - ENVO:00000218
+  summary: Bounded ignored-inclusive searches did not reconstruct all original assertions.
+    Later source exports are contextual evidence only.
+  evidence_ids:
+  - SEARCH
+- check_id: IMODULON
+  name: iModulonDB applicability
+  required: false
+  status: not_applicable
+  target_ids:
+  - ENVO:00000218
+  summary: No resolvable strain/dataset-specific expression claim in this record;
+    expression modules would not prove habitat occurrence.
+  evidence_ids:
+  - R
+  - RULES
+evidence:
+- evidence_id: R
+  kind: record_content
+  reference: data/habitats/aquatic/black_smoker.yaml
+  summary: The sulfide-precipitating submarine hydrothermal vent identity is supported
+    by ENVO and source labels; genuine active chimney synonymy must remain. Related
+    sea/oceanic vent names are not exact, and the frozen definition contains three
+    supeRHEAted capitalization corruptions absent from current ENVO. Later GOLD sample
+    examples include oil-spill plume entries, a source-quality warning rather than
+    proof that the 27 frozen organism assertions are wrong.
+  accessed_at: '2026-10-11T22:52:19.531883Z'
+  support: supports
+  locator: Entire captured YAML read, including provenance, parameters, taxa, graphs
+    and history
+- evidence_id: RULES
+  kind: record_content
+  reference: docs/CURATION.md; docs/HARMONIZATION.md; docs/RESEARCH.md; src/habitatmech/schema/habitatmech.yaml
+  summary: Applied exact identity, strict-parent, MIxS-role, source unit/score, ITEM
+    lifecycle and claim-specific evidence contracts. TAXON is an organism/clade; COMMUNITY
+    is an interacting assemblage, not a process.
+  accessed_at: '2026-10-11T22:52:19.531883Z'
+  support: supports
+- evidence_id: RAW
+  kind: database
+  reference: data/raw; curation/decisions.tsv; curation/term_requests.tsv; curation/gold_parent_exclusions.tsv
+  summary: '{"curation/decisions.tsv": [{"data": {"category": "", "curator": "claude-opus-5",
+    "date": "2026-08-12", "decision": "GROUND", "grounding_status": "EXACT", "identifier":
+    "habitatmech:GOLD.a9f4ef57f4", "notes": "Leaf label equals the ENVO label exactly
+    and no other source concept claims it. Path: Environmental > Aquatic > Marine
+    > Hydrothermal vents > Black smokers", "object_id": "ENVO:00000218", "object_label":
+    "black smoker", "relation": "", "review_depth": "ITEM"}, "logical_row": 969},
+    {"data": {"category": "", "curator": "claude-opus-5", "date": "2026-08-13", "decision":
+    "REVIEW", "grounding_status": "", "identifier": "habitatmech:PREGO.ab4c7e091e",
+    "notes": "Multi-source review pass: this record is attested by more than one independent
+    vocabulary, and this source''s label or path was read against the record''s ontology
+    term to check the merge is right. It agrees. Source concepts in the same pass
+    whose labels did not agree were re-decided rather than endorsed; see the pass''s
+    other decisions of the same date.", "object_id": "", "object_label": "", "relation":
+    "", "review_depth": "ITEM"}, "logical_row": 1495}], "data/raw/gold_ecosystem_paths.tsv":
+    [{"data": {"biosample_count": "0", "canonical_path": "Environmental > Aquatic
+    > Marine > Hydrothermal vents > Black smokers", "depth": "5", "ecosystem": "Environmental",
+    "ecosystem_category": "Aquatic", "ecosystem_subtype": "Hydrothermal vents", "ecosystem_type":
+    "Marine", "gold_node_count": "1", "gold_node_ids": "gold.ecosystem:4031", "leaf_label":
+    "Black smokers", "organism_count": "27", "specific_ecosystem": "Black smokers",
+    "study_count": "0", "total_assertions": "27"}, "logical_row": 367}], "data/raw/gold_path_biosamples.tsv":
+    [{"data": {"biosample_count": "25", "canonical_path": "Environmental > Aquatic
+    > Marine > Hydrothermal vents > Black smokers", "ecosystem_path_id": "4031"},
+    "logical_row": 468}], "data/raw/gold_path_triads.tsv": [{"data": {"canonical_path":
+    "Environmental > Aquatic > Marine > Hydrothermal vents > Black smokers", "distinct_terms":
+    "1", "samples": "21", "slot": "broad", "studies": "14", "studies_agreeing": "14",
+    "top_label": "marine black smoker biome", "top_share": "1.00", "top_term": "ENVO:01000051"},
+    "logical_row": 500}, {"data": {"canonical_path": "Environmental > Aquatic > Marine
+    > Hydrothermal vents > Black smokers", "distinct_terms": "1", "samples": "21",
+    "slot": "local", "studies": "14", "studies_agreeing": "14", "top_label": "black
+    smoker", "top_share": "1.00", "top_term": "ENVO:00000218"}, "logical_row": 501},
+    {"data": {"canonical_path": "Environmental > Aquatic > Marine > Hydrothermal vents
+    > Black smokers", "distinct_terms": "1", "samples": "21", "slot": "medium", "studies":
+    "14", "studies_agreeing": "14", "top_label": "sea water", "top_share": "1.00",
+    "top_term": "ENVO:00002149"}, "logical_row": 502}], "data/raw/ontology_subclass_edges.tsv":
+    [{"data": {"object": "ENVO:01000122", "predicate": "rdfs:subClassOf", "subject":
+    "ENVO:00000218"}, "logical_row": 4851}], "data/raw/ontology_terms.tsv": [{"data":
+    {"definition": "A hydrothermal vent found on the ocean floor. The vents are formed
+    in fields hundreds of meters wide when supeRHEAted water from below the Earth''s
+    crust comes through the ocean floor. The supeRHEAted water is rich in dissolved
+    minerals from the crust, most notably sulfides, which crystallize to create a
+    chimney-like structure around each vent. When the supeRHEAted water in the vent
+    comes in contact with the cold ocean water, many minerals are precipitated, creating
+    the distinctive black color. The metal sulfides that are deposited can become
+    massive sulfide ore deposits in time.", "deprecated": "", "directly_referenced":
+    "TRUE", "label": "black smoker", "label_only": "FALSE", "ontology": "ENVO", "synonyms":
+    "active chimney|oceanic vent|sea vent", "term_id": "ENVO:00000218"}, "logical_row":
+    6802}], "data/raw/prego_habitat_taxa.tsv": [{"data": {"channels": "environmental_samples",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000218", "prego_score":
+    "4", "rank": "1", "taxon_id": "NCBITaxon:202747", "taxon_label": "Sulfurimonas
+    autotrophica"}, "logical_row": 4346}, {"data": {"channels": "environmental_samples",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000218", "prego_score":
+    "4", "rank": "2", "taxon_id": "NCBITaxon:267990", "taxon_label": "Lebetimonas
+    acidiphila"}, "logical_row": 4347}, {"data": {"channels": "environmental_samples",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000218", "prego_score":
+    "4", "rank": "3", "taxon_id": "NCBITaxon:36987", "taxon_label": ""}, "logical_row":
+    4348}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:00000218", "prego_score": "4", "rank": "4", "taxon_id":
+    "NCBITaxon:411485", "taxon_label": "Faecalibacterium prausnitzii M21/2"}, "logical_row":
+    4349}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:00000218", "prego_score": "4", "rank": "5", "taxon_id":
+    "NCBITaxon:449306", "taxon_label": "Desulfobulbus sp. DSM 2033"}, "logical_row":
+    4350}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:00000218", "prego_score": "4", "rank": "6", "taxon_id":
+    "NCBITaxon:498761", "taxon_label": "Heliomicrobium modesticaldum Ice1"}, "logical_row":
+    4351}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:00000218", "prego_score": "4", "rank": "7", "taxon_id":
+    "NCBITaxon:52560", "taxon_label": "Desulfomicrobium apsheronum"}, "logical_row":
+    4352}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:00000218", "prego_score": "4", "rank": "8", "taxon_id":
+    "NCBITaxon:537937", "taxon_label": "Bifidobacterium longum subsp. infantis CCUG
+    52486"}, "logical_row": 4353}, {"data": {"channels": "environmental_samples",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00000218", "prego_score":
+    "4", "rank": "9", "taxon_id": "NCBITaxon:56780", "taxon_label": "Syntrophus aciditrophicus
+    SB"}, "logical_row": 4354}, {"data": {"channels": "environmental_samples", "corroborated_by":
+    "", "direct_flag": "TRUE", "prego_id": "ENVO:00000218", "prego_score": "4", "rank":
+    "10", "taxon_id": "NCBITaxon:6376", "taxon_label": ""}, "logical_row": 4355},
+    {"data": {"channels": "annotated_genomes_isolates", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:00000218", "prego_score": "3", "rank": "11", "taxon_id":
+    "NCBITaxon:647171", "taxon_label": "Methanotorris formicicus Mc-S-70"}, "logical_row":
+    4356}, {"data": {"channels": "annotated_genomes_isolates", "corroborated_by":
+    "", "direct_flag": "TRUE", "prego_id": "ENVO:00000218", "prego_score": "3", "rank":
+    "12", "taxon_id": "NCBITaxon:693661", "taxon_label": "Archaeoglobus veneficus
+    SNP6"}, "logical_row": 4357}], "data/raw/prego_habitats.tsv": [{"data": {"biolink_category":
+    "biolink:OntologyClass", "channels": "annotated_genomes_isolates|environmental_samples",
+    "direct_assertion_count": "12", "max_prego_score": "4", "ontology": "ENVO", "prego_id":
+    "ENVO:00000218", "prego_synonyms": "active chimney|active chimneys|black smoker|black
+    smokers|oceanic vent|oceanic vents|sea vent|sea vents", "taxon_count": "12"},
+    "logical_row": 328}]}'
+  accessed_at: '2026-10-11T22:56:07.176655Z'
+  support: supports
+  locator: Exact logical TSV rows; header is row1. Neighboring source/parent matches
+    excluded.
+- evidence_id: CODE
+  kind: record_content
+  reference: src/habitatmech/seed.py
+  summary: '{"reviewed_sources": 2, "routes": [{"actual": {"category": null, "contributes_grounding":
+    true, "decision": {"category": "", "curator": "claude-opus-5", "date": "2026-08-12",
+    "decision": "GROUND", "grounding_status": "EXACT", "identifier": "habitatmech:GOLD.a9f4ef57f4",
+    "notes": "Leaf label equals the ENVO label exactly and no other source concept
+    claims it. Path: Environmental > Aquatic > Marine > Hydrothermal vents > Black
+    smokers", "object_id": "ENVO:00000218", "object_label": "black smoker", "relation":
+    "parent", "review_depth": "ITEM"}, "extra_parents": [], "extra_xrefs": [], "grounding_status":
+    "EXACT", "identifier": "ENVO:00000218", "mapping_predicate": "skos:exactMatch",
+    "reviewed": true, "route": "curated_ground_from_gold_unmatched"}, "automatic":
+    {"category": null, "contributes_grounding": true, "decision": null, "extra_parents":
+    [], "extra_xrefs": [], "grounding_status": "UNGROUNDED", "identifier": "habitatmech:GOLD.a9f4ef57f4",
+    "mapping_predicate": null, "reviewed": false, "route": "gold_unmatched"}, "minted":
+    "habitatmech:GOLD.a9f4ef57f4", "source": "GOLD", "source_id": "gold.ecosystem:4031"},
+    {"actual": {"category": null, "contributes_grounding": true, "decision": {"category":
+    "", "curator": "claude-opus-5", "date": "2026-08-13", "decision": "REVIEW", "grounding_status":
+    "", "identifier": "habitatmech:PREGO.ab4c7e091e", "notes": "Multi-source review
+    pass: this record is attested by more than one independent vocabulary, and this
+    source''s label or path was read against the record''s ontology term to check
+    the merge is right. It agrees. Source concepts in the same pass whose labels did
+    not agree were re-decided rather than endorsed; see the pass''s other decisions
+    of the same date.", "object_id": "", "object_label": "", "relation": "parent",
+    "review_depth": "ITEM"}, "extra_parents": [], "extra_xrefs": [], "grounding_status":
+    "EXACT", "identifier": "ENVO:00000218", "mapping_predicate": null, "reviewed":
+    true, "route": "curated_review_of_prego_self_grounded"}, "automatic": {"category":
+    null, "contributes_grounding": true, "decision": null, "extra_parents": [], "extra_xrefs":
+    [], "grounding_status": "EXACT", "identifier": "ENVO:00000218", "mapping_predicate":
+    null, "reviewed": false, "route": "prego_self_grounded"}, "minted": "habitatmech:PREGO.ab4c7e091e",
+    "source": "PREGO", "source_id": "ENVO:00000218"}], "source_concepts": 2}'
+  accessed_at: '2026-10-11T22:52:19.531883Z'
+  support: supports
+  locator: Executed complete-document reconstruction; all40 matched captured records
+- evidence_id: ONT
+  kind: authority
+  reference: https://raw.githubusercontent.com/EnvironmentOntology/envo/master/envo.owl
+  summary: '{"ENVO:00000027": {"definitions": ["A surface landform which provides
+    an egress for groundwater or steam to flow out of the ground."], "deprecated":
+    [], "equivalents": [], "labels": ["spring"], "parents": ["http://purl.obolibrary.org/obo/ENVO_01001884",
+    {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"],
+    "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/BFO_0000050"],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_01001311"]}],
+    "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": [],
+    "hasNarrowSynonym": [], "hasRelatedSynonym": ["seep"]}}, "ENVO:00000063": {"definitions":
+    ["An accumulation of water of varying size."], "deprecated": [], "equivalents":
+    [], "labels": ["water body"], "parents": ["http://purl.obolibrary.org/obo/ENVO_01000685",
+    {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"],
+    "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/BFO_0000050"],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_01000819"]},
+    {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"],
+    "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0002354"],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_01001220"]},
+    {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"],
+    "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0002473"],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/CHEBI_15377"]}],
+    "replacements": [], "synonyms": {"hasBroadSynonym": ["hydrographic feature"],
+    "hasExactSynonym": ["aquatic feature", "bodies of water", "body of water", "waterbody"],
+    "hasNarrowSynonym": [], "hasRelatedSynonym": []}}, "ENVO:00000215": {"definitions":
+    ["A fissure in the Earths''s surface from which geothermally heated water issues."],
+    "deprecated": [], "equivalents": [], "labels": ["hydrothermal vent"], "parents":
+    ["http://purl.obolibrary.org/obo/ENVO_00000027"], "replacements": [], "synonyms":
+    {"hasBroadSynonym": [], "hasExactSynonym": ["HydrothermalVents"], "hasNarrowSynonym":
+    [], "hasRelatedSynonym": []}}, "ENVO:00000218": {"definitions": ["A hydrothermal
+    vent found on the ocean floor. The vents are formed in fields hundreds of meters
+    wide when superheated water from below the Earth''s crust comes through the ocean
+    floor. The superheated water is rich in dissolved minerals from the crust, most
+    notably sulfides, which crystallize to create a chimney-like structure around
+    each vent. When the superheated water in the vent comes in contact with the cold
+    ocean water, many minerals are precipitated, creating the distinctive black color.
+    The metal sulfides that are deposited can become massive sulfide ore deposits
+    in time."], "deprecated": [], "equivalents": [], "labels": ["black smoker"], "parents":
+    ["http://purl.obolibrary.org/obo/ENVO_01000122"], "replacements": [], "synonyms":
+    {"hasBroadSynonym": [], "hasExactSynonym": ["active chimney"], "hasNarrowSynonym":
+    [], "hasRelatedSynonym": ["oceanic vent", "sea vent"]}}, "ENVO:00000428": {"definitions":
+    ["A biome is an ecosystem which is undergoing climactic ecological succession."],
+    "deprecated": [], "equivalents": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+    ["http://www.w3.org/2002/07/owl#Class"], "http://www.w3.org/2002/07/owl#intersectionOf":
+    [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first": ["http://purl.obolibrary.org/obo/ENVO_01001110"],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first":
+    [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"],
+    "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0000056"],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_01001827"]}],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"]}]}]}],
+    "labels": ["biome"], "parents": ["http://purl.obolibrary.org/obo/ENVO_01000813",
+    "http://purl.obolibrary.org/obo/ENVO_01001110", {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+    ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty":
+    ["http://purl.obolibrary.org/obo/BFO_0000050"], "http://www.w3.org/2002/07/owl#someValuesFrom":
+    ["http://purl.obolibrary.org/obo/ENVO_01000817"]}, {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+    ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty":
+    ["http://purl.obolibrary.org/obo/BFO_0000050"], "http://www.w3.org/2002/07/owl#someValuesFrom":
+    ["http://purl.obolibrary.org/obo/PCO_0000002"]}, {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+    ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty":
+    ["http://purl.obolibrary.org/obo/RO_0000056"], "http://www.w3.org/2002/07/owl#someValuesFrom":
+    ["http://purl.obolibrary.org/obo/ENVO_01001827"]}, {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+    ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty":
+    ["http://purl.obolibrary.org/obo/RO_0002507"], "http://www.w3.org/2002/07/owl#someValuesFrom":
+    ["http://purl.obolibrary.org/obo/PCO_0000002"]}], "replacements": [], "synonyms":
+    {"hasBroadSynonym": [], "hasExactSynonym": ["major habitat type"], "hasNarrowSynonym":
+    [], "hasRelatedSynonym": ["EcosytemType"]}}, "ENVO:00001999": {"definitions":
+    ["A lentic water body which is composed primarily of marine water."], "deprecated":
+    [], "equivalents": [], "labels": ["marine water body"], "parents": ["http://purl.obolibrary.org/obo/ENVO_01000617"],
+    "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": ["body
+    of marine water", "marine waterbody"], "hasNarrowSynonym": [], "hasRelatedSynonym":
+    []}}, "ENVO:00002006": {"definitions": ["An environmental material primarily composed
+    of dihydrogen oxide in its liquid form."], "deprecated": [], "equivalents": [],
+    "labels": ["liquid water"], "parents": ["http://purl.obolibrary.org/obo/ENVO_01000815",
+    {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"],
+    "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0002473"],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/CHEBI_15377"]}],
+    "replacements": [], "synonyms": {"hasBroadSynonym": ["water"], "hasExactSynonym":
+    [], "hasNarrowSynonym": [], "hasRelatedSynonym": []}}, "ENVO:00002011": {"definitions":
+    ["Water which has a low concentration of dissolved solutes, particularly that
+    of sodium chloride."], "deprecated": [], "equivalents": [], "labels": ["fresh
+    water"], "parents": ["http://purl.obolibrary.org/obo/ENVO_00002006"], "replacements":
+    [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": ["freshwater"], "hasNarrowSynonym":
+    [], "hasRelatedSynonym": ["sweet water"]}}, "ENVO:00002030": {"definitions": ["A
+    biome which is determined by a water body and which has ecological climax communities
+    adapted to life in or on water."], "deprecated": [], "equivalents": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+    ["http://www.w3.org/2002/07/owl#Class"], "http://www.w3.org/2002/07/owl#intersectionOf":
+    [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first": ["http://purl.obolibrary.org/obo/ENVO_00000428"],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first":
+    [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"],
+    "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0002507"],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_00000063"]}],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"]}]}]}],
+    "labels": ["aquatic biome"], "parents": ["http://purl.obolibrary.org/obo/ENVO_00000428",
+    "http://purl.obolibrary.org/obo/ENVO_01001787"], "replacements": [], "synonyms":
+    {"hasBroadSynonym": [], "hasExactSynonym": [], "hasNarrowSynonym": [], "hasRelatedSynonym":
+    []}}, "ENVO:01000122": {"definitions": ["A marine hydrothermal vent is a marine
+    benthic feature where heat generated due to tectonic activity, either at divergent
+    plate boundaries or convergent ocean plates where back-arc spreading occurs, is
+    released or ''vented'' to the surface. The resultant high temperature water jets
+    are laden with dissolved metals and minerals."], "deprecated": [], "equivalents":
+    [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Class"],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first":
+    ["http://purl.obolibrary.org/obo/ENVO_00000215"], "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest":
+    [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+    ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty":
+    ["http://purl.obolibrary.org/obo/RO_0001025"], "http://www.w3.org/2002/07/owl#someValuesFrom":
+    ["http://purl.obolibrary.org/obo/ENVO_00000447"]}], "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest":
+    ["http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"]}]}]}], "labels": ["marine hydrothermal
+    vent"], "parents": ["http://purl.obolibrary.org/obo/ENVO_00000215", {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+    ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty":
+    ["http://purl.obolibrary.org/obo/RO_0001025"], "http://www.w3.org/2002/07/owl#someValuesFrom":
+    ["http://purl.obolibrary.org/obo/ENVO_00000447"]}], "replacements": [], "synonyms":
+    {"hasBroadSynonym": [], "hasExactSynonym": [], "hasNarrowSynonym": [], "hasRelatedSynonym":
+    []}}, "ENVO:01000254": {"definitions": ["A system which has the disposition to
+    environ one or more material entities."], "deprecated": [], "equivalents": [],
+    "labels": ["environmental system"], "parents": ["http://purl.obolibrary.org/obo/RO_0002577"],
+    "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": ["environment"],
+    "hasNarrowSynonym": [], "hasRelatedSynonym": []}}, "ENVO:01000617": {"definitions":
+    ["A lentic water body is a water body in which the accumulated water, in its totality,
+    has very little to no directed flow."], "deprecated": [], "equivalents": [], "labels":
+    ["lentic water body"], "parents": ["http://purl.obolibrary.org/obo/ENVO_00000063"],
+    "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": [],
+    "hasNarrowSynonym": [], "hasRelatedSynonym": []}}}'
+  accessed_at: '2026-10-11T13:21:47.927208Z'
+  support: supports
+  locator: 'Same-day official OWL: named identities, typed synonyms and direct axioms;
+    no snapshot refresh'
+  snapshot_sha256: a0b919065d33a9cf975b74cadd16c75f32f512d17f4f6d5999b74216701df54c
+- evidence_id: PARENT
+  kind: record_content
+  reference: data/habitats/aquatic/hydrothermal_vent.yaml; data/habitats/aquatic/marine_water_body.yaml;
+    data/habitats/aquatic/lentic_water_body.yaml; data/habitats/aquatic/fresh_water.yaml;
+    data/habitats/aquatic/aquatic_biome.yaml; data/habitats/other/environmental.yaml;
+    data/habitats/other/environmental_system.yaml; data/habitats/other/biome.yaml;
+    data/habitats/aquatic/liquid_water.yaml; data/habitats/aquatic/water_body.yaml;
+    data/habitats/terrestrial/spring.yaml
+  summary: '{"ENVO:00000027": {"definition": "A surface landform which provides an
+    egress for groundwater or steam to flow out of the ground.", "grounding_status":
+    "EXACT", "label": "spring", "parent_habitats": ["ENVO:01001884"]}, "ENVO:00000063":
+    {"definition": "An accumulation of water of varying size.", "grounding_status":
+    "EXACT", "label": "water body", "parent_habitats": ["ENVO:01000685"]}, "ENVO:00000215":
+    {"definition": "A fissure in the Earths''s surface from which geothermally heated
+    water issues.", "grounding_status": "EXACT", "label": "hydrothermal vent", "parent_habitats":
+    ["ENVO:00000027", "ENVO:00001999"]}, "ENVO:00000428": {"definition": "A biome
+    is an ecosystem which is undergoing climactic ecological succession.", "grounding_status":
+    "EXACT", "label": "biome", "parent_habitats": ["ENVO:01000813", "ENVO:01001110"]},
+    "ENVO:00001999": {"definition": "A lentic water body which is composed primarily
+    of marine water.", "grounding_status": "EXACT", "label": "marine water body",
+    "parent_habitats": ["ENVO:00002030", "ENVO:01000617"]}, "ENVO:00002006": {"definition":
+    "An environmental material primarily composed of dihydrogen oxide in its liquid
+    form.", "grounding_status": "EXACT", "label": "liquid water", "parent_habitats":
+    ["ENVO:01000815"]}, "ENVO:00002011": {"definition": "Water which has a low concentration
+    of dissolved solutes, particularly that of sodium chloride.", "grounding_status":
+    "EXACT", "label": "fresh water", "parent_habitats": ["ENVO:00002006", "ENVO:00002030"]},
+    "ENVO:00002030": {"definition": "A biome which is determined by a water body and
+    which has ecological climax communities adapted to life in or on water.", "grounding_status":
+    "EXACT", "label": "aquatic biome", "parent_habitats": ["ENVO:00000428", "ENVO:01001787",
+    "habitatmech:BACDIVE.0f1e92a02c"]}, "ENVO:01000254": {"definition": "A system
+    which has the disposition to environ one or more material entities.", "grounding_status":
+    "EXACT", "label": "environmental system", "parent_habitats": null}, "ENVO:01000617":
+    {"definition": "A lentic water body is a water body in which the accumulated water,
+    in its totality, has very little to no directed flow.", "grounding_status": "EXACT",
+    "label": "lentic water body", "parent_habitats": ["ENVO:00000063", "ENVO:00002011"]},
+    "habitatmech:BACDIVE.0f1e92a02c": {"definition": "An environmental system which
+    is a portion of the air, water, or land surface or subsurface of an astronomical
+    body sampled in place, and which is neither bounded by a host organism nor constituted
+    by a constructed or operated artefact.", "grounding_status": "UNGROUNDED", "label":
+    "free-living environment", "parent_habitats": ["ENVO:01000254"]}}'
+  accessed_at: '2026-10-11T22:52:19.531883Z'
+  support: supports
+  locator: Ancestor context is not full-record review coverage of ancestors
+- evidence_id: BULK
+  kind: database
+  reference: https://gold.jgi.doe.gov/download?mode=site_excel
+  summary: 'Exact positional census counts={"Biosample": 25, "Organism": 27, "SequencingProject":
+    33}; individually inspected descriptions={"Biosample": [{"data": {"BIOSAMPLE GOLD
+    ID": "Gb0052343", "BIOSAMPLE NAME": "Marine microbial communities from Deepwater
+    Horizon subsurface plume in Gulf of Mexico  - 16-4 Below Plume", "BIOSAMPLE NCBI
+    TAX NAME": "hydrocarbon metagenome", "BIOSAMPLE SAMPLE COLLECTION SITE": "Extraction
+    of Environmental RNA"}, "row": 1060}, {"data": {"BIOSAMPLE GOLD ID": "Gb0052346",
+    "BIOSAMPLE NAME": "Marine microbial communities from Deepwater Horizon subsurface
+    plume in Gulf of Mexico  - 16-5 In Plume", "BIOSAMPLE NCBI TAX NAME": "hydrocarbon
+    metagenome", "BIOSAMPLE SAMPLE COLLECTION SITE": "extraction of environmental
+    RNA"}, "row": 1063}, {"data": {"BIOSAMPLE GOLD ID": "Gb0052347", "BIOSAMPLE NAME":
+    "Marine microbial communities from Deepwater Horizon subsurface plume in Gulf
+    of Mexico  - 52-1 Below Plume", "BIOSAMPLE NCBI TAX NAME": "hydrocarbon metagenome",
+    "BIOSAMPLE SAMPLE COLLECTION SITE": "extraction of environmental RNA"}, "row":
+    1064}], "Organism": [{"data": {"ORGANISM GOLD ID": "Go0112861", "ORGANISM NAME":
+    "Thermosipho affectus ikt275mar", "ORGANISM SAMPLE COLLECTION SITE": "Atlantic
+    Ocean Rainbow hydrothermal vents"}, "row": 62931}, {"data": {"ORGANISM GOLD ID":
+    "Go0357229", "ORGANISM NAME": "Geogemma barossii 121"}, "row": 266525}, {"data":
+    {"ORGANISM GOLD ID": "Go0357285", "ORGANISM HABITAT": "Hydrothermal sediment",
+    "ORGANISM NAME": "Pyrodictium delaneyi hulk", "ORGANISM SAMPLE COLLECTION SITE":
+    "Juan de Fuca Ridge: Hulk sulfide mound"}, "row": 266543}]}. Later source context,
+    not reconstructed frozen membership; remaining rows and study joins are indexed,
+    not individually assessed.'
+  accessed_at: '2026-10-11T13:21:51.155056Z'
+  support: supports
+  locator: Five ecosystem positions preserved; contacts excluded. All12 carbonate
+    organism descriptions, otherwise first3 per sheet.
+  snapshot_sha256: b222fa9df89ffbd1a30897a1e7302da363c57b463d9948ecc9bfcb9304b4a96f
+- evidence_id: CLASS
+  kind: database
+  reference: https://gold.jgi.doe.gov/download?mode=ecosystempaths
+  summary: '[{"row": 705, "slug": "black_smoker", "path": "Environmental > Aquatic
+    > Marine > Hydrothermal vents > Black smokers", "values": ["4031", "Environmental",
+    "Aquatic", "Marine", "Hydrothermal vents", "Black smokers"]}]'
+  accessed_at: '2026-10-11T13:21:50.982232Z'
+  support: supports
+  locator: Later official classification; all33 cohort source paths matched
+  snapshot_sha256: 78ed6ce1c3799a2d6ef2d17e4a9eeee5da48eef78df0b71079c0f942555e5e7d
+- evidence_id: TAX0
+  kind: database
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=1017%2C1018%2C1019%2C1029756%2C1035916%2C1040984%2C104268%2C1046954%2C1046955%2C1046956%2C1046957%2C1046958%2C1046959%2C1046960%2C1046961%2C1046962%2C1046963%2C1046964%2C1046965%2C1046966%2C1046967%2C1046970%2C1046971%2C1046972%2C1046973%2C1046974%2C1046975%2C1046978%2C1046991%2C1047002%2C1047006%2C1047014%2C1048%2C1049%2C1073250%2C1084519%2C1085%2C1087448%2C109328%2C1100%2C110539%2C110639%2C1111735%2C1120961%2C1120966%2C1120998%2C1121014%2C1121403%2C1121410%2C1121416%2C1121878%2C1121879%2C1121938%2C1122176%2C1122197%2C1123027%2C1123503%2C1123517%2C1124597%2C1132696%2C1134435%2C1156985%2C1165090%2C1175486%2C118166%2C1188229%2C1194079%2C1245526%2C1257026%2C1257027%2C1264%2C1265%2C1270%2C1282%2C129578%2C129958%2C1318%2C1397696%2C1408433%2C1409%2C1423814%2C1485%2C150172%2C1512%2C152268%2C1526%2C1527%2C154046%2C1550%2C157687%2C158847%2C1596%2C1623%2C163908%2C165179%2C165813%2C1727163%2C195907%2C195913%2C202747%2C205844%2C209897%2C216903%2C226504%2C226505%2C226506%2C23%2C231438%2C231440%2C231447%2C245187%2C245188%2C247022%2C249351%2C249352%2C252230%2C252231%2C252597%2C255984%2C259390%2C266940%2C267375%2C267990%2C28122%2C285109%2C285258%2C287844%2C288019%2C288022%2C293826%2C293890%2C29494%2C29535%2C295419%2C306540%2C306541%2C317936%2C321267%2C325473%2C326442%2C329406%2C332168%2C34085%2C343403%2C364197%2C36987%2C393131%2C395491%2C411467%2C411477&retmode=xml
+  summary: 'The two chunks jointly resolve all188 requested cohort IDs. This target=[{"current_id":
+    "202747", "current_name": "Sulfurimonas autotrophica", "frozen_label": "Sulfurimonas
+    autotrophica", "id": "202747", "rank": "species"}, {"current_id": "267990", "current_name":
+    "Lebetimonas acidiphila", "frozen_label": "Lebetimonas acidiphila", "id": "267990",
+    "rank": "species"}, {"current_id": "36987", "current_name": "Coptotermes formosanus",
+    "frozen_label": null, "id": "36987", "rank": "species"}, {"current_id": "411485",
+    "current_name": "Faecalibacterium prausnitzii M21/2", "frozen_label": "Faecalibacterium
+    prausnitzii M21/2", "id": "411485", "rank": "strain"}, {"current_id": "449306",
+    "current_name": "Desulfobulbus sp. DSM 2033", "frozen_label": "Desulfobulbus sp.
+    DSM 2033", "id": "449306", "rank": "species"}, {"current_id": "498761", "current_name":
+    "Heliomicrobium modesticaldum Ice1", "frozen_label": "Heliomicrobium modesticaldum
+    Ice1", "id": "498761", "rank": "strain"}, {"current_id": "52560", "current_name":
+    "Desulfomicrobium apsheronum", "frozen_label": "Desulfomicrobium apsheronum",
+    "id": "52560", "rank": "species"}, {"current_id": "537937", "current_name": "Bifidobacterium
+    longum subsp. infantis CCUG 52486", "frozen_label": "Bifidobacterium longum subsp.
+    infantis CCUG 52486", "id": "537937", "rank": "strain"}, {"current_id": "56780",
+    "current_name": "Syntrophus aciditrophicus SB", "frozen_label": "Syntrophus aciditrophicus
+    SB", "id": "56780", "rank": "strain"}, {"current_id": "6376", "current_name":
+    "Alvinella pompejana", "frozen_label": null, "id": "6376", "rank": "species"},
+    {"current_id": "647171", "current_name": "Methanotorris formicicus Mc-S-70", "frozen_label":
+    "Methanotorris formicicus Mc-S-70", "id": "647171", "rank": "strain"}, {"current_id":
+    "693661", "current_name": "Archaeoglobus veneficus SNP6", "frozen_label": "Archaeoglobus
+    veneficus SNP6", "id": "693661", "rank": "strain"}]. All noncanonical supplied
+    names match normalized spelling or retained aliases. Resolution does not establish
+    occurrence.'
+  accessed_at: '2026-10-11T22:37:49.789865Z'
+  support: supports
+  locator: NCBI TaxId, ScientificName, Rank and OtherNames
+  snapshot_sha256: 0e343fd7441e46d2192a08a830ce60811f8d2d55fd5762bd925ed00e6e485bf3
+- evidence_id: TAX1
+  kind: database
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=411485%2C411901%2C418643%2C428125%2C435590%2C445336%2C449306%2C457391%2C457424%2C457427%2C477974%2C498761%2C502025%2C523845%2C52560%2C53245%2C537937%2C54121%2C551275%2C551789%2C55518%2C556258%2C562%2C56780%2C568099%2C616997%2C6376%2C643867%2C647171%2C657014%2C668820%2C693661%2C69670%2C710685%2C717231%2C889378%2C94122%2C999547&retmode=xml
+  summary: 'The two chunks jointly resolve all188 requested cohort IDs. This target=[{"current_id":
+    "202747", "current_name": "Sulfurimonas autotrophica", "frozen_label": "Sulfurimonas
+    autotrophica", "id": "202747", "rank": "species"}, {"current_id": "267990", "current_name":
+    "Lebetimonas acidiphila", "frozen_label": "Lebetimonas acidiphila", "id": "267990",
+    "rank": "species"}, {"current_id": "36987", "current_name": "Coptotermes formosanus",
+    "frozen_label": null, "id": "36987", "rank": "species"}, {"current_id": "411485",
+    "current_name": "Faecalibacterium prausnitzii M21/2", "frozen_label": "Faecalibacterium
+    prausnitzii M21/2", "id": "411485", "rank": "strain"}, {"current_id": "449306",
+    "current_name": "Desulfobulbus sp. DSM 2033", "frozen_label": "Desulfobulbus sp.
+    DSM 2033", "id": "449306", "rank": "species"}, {"current_id": "498761", "current_name":
+    "Heliomicrobium modesticaldum Ice1", "frozen_label": "Heliomicrobium modesticaldum
+    Ice1", "id": "498761", "rank": "strain"}, {"current_id": "52560", "current_name":
+    "Desulfomicrobium apsheronum", "frozen_label": "Desulfomicrobium apsheronum",
+    "id": "52560", "rank": "species"}, {"current_id": "537937", "current_name": "Bifidobacterium
+    longum subsp. infantis CCUG 52486", "frozen_label": "Bifidobacterium longum subsp.
+    infantis CCUG 52486", "id": "537937", "rank": "strain"}, {"current_id": "56780",
+    "current_name": "Syntrophus aciditrophicus SB", "frozen_label": "Syntrophus aciditrophicus
+    SB", "id": "56780", "rank": "strain"}, {"current_id": "6376", "current_name":
+    "Alvinella pompejana", "frozen_label": null, "id": "6376", "rank": "species"},
+    {"current_id": "647171", "current_name": "Methanotorris formicicus Mc-S-70", "frozen_label":
+    "Methanotorris formicicus Mc-S-70", "id": "647171", "rank": "strain"}, {"current_id":
+    "693661", "current_name": "Archaeoglobus veneficus SNP6", "frozen_label": "Archaeoglobus
+    veneficus SNP6", "id": "693661", "rank": "strain"}]. All noncanonical supplied
+    names match normalized spelling or retained aliases. Resolution does not establish
+    occurrence.'
+  accessed_at: '2026-10-11T22:37:51.736612Z'
+  support: supports
+  locator: NCBI TaxId, ScientificName, Rank and OtherNames
+  snapshot_sha256: 4a2373fb2f829df8e02096f659a1031455b733542e6181aff3dc4a7746255349
+- evidence_id: SEARCH
+  kind: search
+  reference: curation; history; research; reports; reviews; data/raw; data/habitats;
+    conf
+  summary: 'Identifier, label, slug and exact source-path searches included ignored/hidden
+    files in these roots; coverage used Path.rglob. No earlier structured observation
+    of this target found. Legacy reports were indexed; only specifically cited historical
+    reports were read in full. Upstream search={"configured_root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe",
+    "root_exists": true, "exact_paths": [{"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_nodes.tsv",
+    "exists": false, "expected_sha256": "c13c21bdd04619c75ce16e63b05e51577b0cefec5b61765d383313f654ab3fae"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_edges.tsv",
+    "exists": false, "expected_sha256": "54982c25de9d2c820eeebc1452aeac0b034595921d04d55b810bf1d2b1e127e0"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/nodes.tsv",
+    "exists": false, "expected_sha256": "a2a2f9acae230636dd866347d173a32c9f025c04a377060087a4be65781628f3"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/edges.tsv",
+    "exists": false, "expected_sha256": "ab6208bff4854db7c1a736d53d0aa04269a682ab15a1ce6f37c6d731000281d7"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/nodes.tsv",
+    "exists": false, "expected_sha256": "020de3afc71495571ddb05000c83a58d009272f53735b5f7c9326c1293e0415c"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/edges.tsv",
+    "exists": false, "expected_sha256": "8863ee3197a36915865fa4833df39d10c3f8f69b64bafbb746b9cd731308a0aa"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/nodes.tsv",
+    "exists": false, "expected_sha256": "cc5941cd677831e8e207da018dca763cd009bb1f9310b21cb4d45892316e006d"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/edges.tsv",
+    "exists": false, "expected_sha256": "fd333634eaaa3cfe57a35cdca2f4c5b8cf0662851c1df58914d3e999d62a650e"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/environments.csv",
+    "exists": false, "expected_sha256": "99299fe635159712f95568783ad3b484230fb31781262f1f6f8bd84db4bc3048"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/mappings/isolation_source_to_ontology.tsv",
+    "exists": false, "expected_sha256": "2dea3d1bb20c72a04b6f64a67e2bb2bdc4f3649b809c5935390239be2791ef1f"}],
+    "traversal": [{"command": ["rg", "--files", "--no-ignore", "--hidden", "data"],
+    "exit_code": 0, "matches": [], "stderr": ""}, {"command": ["rg", "--files", "--no-ignore",
+    "--hidden", "build"], "exit_code": 0, "matches": [], "stderr": ""}, {"command":
+    ["rg", "--files", "--no-ignore", "--hidden", "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data"],
+    "exit_code": 0, "matches": [], "stderr": ""}]}'
+  accessed_at: '2026-10-11T22:52:19.531883Z'
+  support: supports
+  locator: Bounded searches, not global absence claims
+  search_scope: 'Identifier, label, slug and exact source-path searches included ignored/hidden
+    files in these roots; coverage used Path.rglob. No earlier structured observation
+    of this target found. Legacy reports were indexed; only specifically cited historical
+    reports were read in full. Upstream search={"configured_root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe",
+    "root_exists": true, "exact_paths": [{"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_nodes.tsv",
+    "exists": false, "expected_sha256": "c13c21bdd04619c75ce16e63b05e51577b0cefec5b61765d383313f654ab3fae"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_edges.tsv",
+    "exists": false, "expected_sha256": "54982c25de9d2c820eeebc1452aeac0b034595921d04d55b810bf1d2b1e127e0"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/nodes.tsv",
+    "exists": false, "expected_sha256": "a2a2f9acae230636dd866347d173a32c9f025c04a377060087a4be65781628f3"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/edges.tsv",
+    "exists": false, "expected_sha256": "ab6208bff4854db7c1a736d53d0aa04269a682ab15a1ce6f37c6d731000281d7"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/nodes.tsv",
+    "exists": false, "expected_sha256": "020de3afc71495571ddb05000c83a58d009272f53735b5f7c9326c1293e0415c"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/edges.tsv",
+    "exists": false, "expected_sha256": "8863ee3197a36915865fa4833df39d10c3f8f69b64bafbb746b9cd731308a0aa"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/nodes.tsv",
+    "exists": false, "expected_sha256": "cc5941cd677831e8e207da018dca763cd009bb1f9310b21cb4d45892316e006d"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/edges.tsv",
+    "exists": false, "expected_sha256": "fd333634eaaa3cfe57a35cdca2f4c5b8cf0662851c1df58914d3e999d62a650e"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/environments.csv",
+    "exists": false, "expected_sha256": "99299fe635159712f95568783ad3b484230fb31781262f1f6f8bd84db4bc3048"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/mappings/isolation_source_to_ontology.tsv",
+    "exists": false, "expected_sha256": "2dea3d1bb20c72a04b6f64a67e2bb2bdc4f3649b809c5935390239be2791ef1f"}],
+    "traversal": [{"command": ["rg", "--files", "--no-ignore", "--hidden", "data"],
+    "exit_code": 0, "matches": [], "stderr": ""}, {"command": ["rg", "--files", "--no-ignore",
+    "--hidden", "build"], "exit_code": 0, "matches": [], "stderr": ""}, {"command":
+    ["rg", "--files", "--no-ignore", "--hidden", "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data"],
+    "exit_code": 0, "matches": [], "stderr": ""}]}'
+- evidence_id: ISSUES
+  kind: database
+  reference: https://github.com/CultureBotAI/HabitatMech/issues
+  summary: All-state946-issue title/body census inspected for overlap. Shared1249
+    and1398 apply where cited.1259 concerns a separate Lake biofilm source,1423 different
+    records, and1638 the bioreactor graph; none is treated as this target repaired.
+    Comments were not exhaustively crawled.
+  accessed_at: '2026-10-11T22:52:19.531883Z'
+  support: supports
+  locator: GitHub CLI census and selected full issue bodies
+assessments:
+- assessment_id: IDENTITY
+  area: identity
+  topic: Identity, definition and source interpretation
+  outcome: supported
+  summary: The sulfide-precipitating submarine hydrothermal vent identity is supported
+    by ENVO and source labels; genuine active chimney synonymy must remain. Related
+    sea/oceanic vent names are not exact, and the frozen definition contains three
+    supeRHEAted capitalization corruptions absent from current ENVO. Later GOLD sample
+    examples include oil-spill plume entries, a source-quality warning rather than
+    proof that the 27 frozen organism assertions are wrong.
+  target_ids:
+  - ENVO:00000218
+  evidence_ids:
+  - R
+  - RAW
+  - ONT
+  - PARENT
+- assessment_id: HIERARCHY
+  area: grounding
+  topic: All parent-contribution routes and mapping scope
+  outcome: supported
+  summary: The sulfide-precipitating submarine hydrothermal vent identity is supported
+    by ENVO and source labels; genuine active chimney synonymy must remain. Related
+    sea/oceanic vent names are not exact, and the frozen definition contains three
+    supeRHEAted capitalization corruptions absent from current ENVO. Later GOLD sample
+    examples include oil-spill plume entries, a source-quality warning rather than
+    proof that the 27 frozen organism assertions are wrong. Ontology, source-path,
+    ambiguous-leaf and authored-definition contributions were distinguished.
+  target_ids:
+  - ENVO:00000218
+  evidence_ids:
+  - R
+  - RAW
+  - CODE
+  - ONT
+  - PARENT
+- assessment_id: PROVENANCE
+  area: provenance
+  topic: Every source, count unit and native status
+  outcome: supported
+  summary: 'Complete reconstruction preserves 2 source concepts and 2 ITEM-reviewed
+    contributors. Actual attestations=[{"source": "GOLD", "source_id": "gold.ecosystem:4031",
+    "source_label": "Black smokers", "source_path": "Environmental > Aquatic > Marine
+    > Hydrothermal vents > Black smokers", "mapping_predicate": "skos:exactMatch",
+    "assertion_count": 27, "assertion_unit": "ORGANISM"}, {"source": "PREGO", "source_id":
+    "ENVO:00000218", "source_label": "black smoker", "assertion_count": 12, "assertion_unit":
+    "TAXON", "score": 4.0, "evidence_channels": "annotated_genomes_isolates|environmental_samples"}].
+    Unlike units are not summed. Omitted zero direct counts do not mean ecological
+    absence; this review does not promote native status.'
+  target_ids:
+  - ENVO:00000218
+  evidence_ids:
+  - R
+  - RAW
+  - CODE
+  - RULES
+- assessment_id: TAXA
+  area: evidence
+  topic: Source-reported association versus characteristic presence
+  outcome: supported
+  summary: All emitted taxon identifiers resolve; normalized spellings and old aliases
+    explain supplied-label differences. Full reconstruction retains ranks, scores,
+    pools and corroborations. No is_characteristic assertion is present; neither resolution
+    nor a source score proves occurrence, abundance or ecological universality.
+  target_ids:
+  - ENVO:00000218
+  evidence_ids:
+  - R
+  - RAW
+  - TAX0
+  - TAX1
+  - RULES
+- assessment_id: COMPLETENESS
+  area: completeness
+  topic: Optional fields and biological evidence boundaries
+  outcome: supported
+  summary: Optional missing definitions, datasets or discussions are not defects solely
+    because they are empty. No causal graph is asserted by this exact record; ignored-inclusive
+    overlay search and the corpus-wide causal gate were checked. No named gene, locus,
+    regulator, strain-specific transcriptome or expression-module claim in this record
+    calls for an iModulonDB query; generic enzymes/osmoregulation and habitat associations
+    do not specify an applicable organism/dataset.
+  target_ids:
+  - ENVO:00000218
+  evidence_ids:
+  - R
+  - RAW
+  - RULES
+  - SEARCH
+findings:
+- finding_id: F1
+  issue_key: envo-00000218-ontology-synonym-scope
+  category: scope
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Related or broader/narrower ontology names are promoted to exact
+  description: The sulfide-precipitating submarine hydrothermal vent identity is supported
+    by ENVO and source labels; genuine active chimney synonymy must remain. Related
+    sea/oceanic vent names are not exact, and the frozen definition contains three
+    supeRHEAted capitalization corruptions absent from current ENVO. Later GOLD sample
+    examples include oil-spill plume entries, a source-quality warning rather than
+    proof that the 27 frozen organism assertions are wrong.
+  target_ids:
+  - ENVO:00000218
+  field_paths:
+  - synonyms
+  evidence_ids:
+  - R
+  - RAW
+  - ONT
+  - CODE
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Typed ontology synonym ingestion
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_terms.tsv
+    role: Governed source snapshot
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Preserve declared scopes
+  rule_id: docs/CURATION.md; .claude/skills/curate-yaml-record/references/review-checklist.md
+  native_severity: major
+  normalization_reason: Material hierarchy, scope, entity typing or comparison-contract
+    defect.
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1249
+- finding_id: F2
+  issue_key: envo-00000218-definition-capitalization
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Pinned definition contains corrupted capitalization
+  description: Three occurrences of supeRHEAted are present in the raw ontology definition
+    and generated text; current official ENVO uses superheated. Identity and mechanism
+    are not thereby disproved.
+  target_ids:
+  - ENVO:00000218
+  field_paths:
+  - definition
+  evidence_ids:
+  - R
+  - RAW
+  - ONT
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_terms.tsv
+    role: Governed definition source
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Source transformation audit
+  rule_id: docs/CURATION.md; .claude/skills/curate-yaml-record/references/review-checklist.md
+  native_severity: minor
+  normalization_reason: Bounded wording or provenance limitation; identity is not
+    disproved.
+actions:
+- action_id: A1
+  description: Resolve shared1249 with governed typed-synonym ingestion. Retain genuine
+    exact names and PREGO related names; test multiscope and unknown cases rather
+    than globally downgrading every synonym.
+  finding_ids:
+  - F1
+  target_ids:
+  - ENVO:00000218
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Typed ontology synonym ingestion
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_terms.tsv
+    role: Governed source snapshot
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Preserve declared scopes
+  generator: src/habitatmech/seed.py
+  acceptance_checks:
+  - Change only maintained inputs with exact source/edge keys; preserve independent
+    parents, identities, source counts/units and native lifecycle.
+  - Inspect claim-level sources; append required curation history, add focused regressions,
+    inspect a seed canary and regenerate affected products.
+  - Pass schema, strict, product-label, corpus reproduction, causal/history, review-integrity
+    and full QC; save a linked successor for each finding disposition.
+  - Compare actual semantic-map inputs and perform genuine regeneration when changed;
+    do not substitute a checksum-only refresh.
+- action_id: A2
+  description: Trace the capitalization artifact through the source transform and
+    correct it through governed snapshot handling with provenance and exact reproduction,
+    not a manual generated edit.
+  finding_ids:
+  - F2
+  target_ids:
+  - ENVO:00000218
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_terms.tsv
+    role: Governed definition source
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Source transformation audit
+  generator: src/habitatmech/seed.py
+  acceptance_checks:
+  - Change only maintained inputs with exact source/edge keys; preserve independent
+    parents, identities, source counts/units and native lifecycle.
+  - Inspect claim-level sources; append required curation history, add focused regressions,
+    inspect a seed canary and regenerate affected products.
+  - Pass schema, strict, product-label, corpus reproduction, causal/history, review-integrity
+    and full QC; save a linked successor for each finding disposition.
+  - Compare actual semantic-map inputs and perform genuine regeneration when changed;
+    do not substitute a checksum-only refresh.
+limitations:
+- Completed assessment is not a clean scientific verdict or proof of every original
+  assertion.
+- Only first3 exact BioSample/Organism descriptions per sheet were individually interpreted,
+  except all12 carbonate organism descriptions. Other matches and study joins were
+  indexed, not individually assessed.
+- Original frozen membership was not fully reconstructed; no ontology, taxonomy or
+  source snapshot was refreshed.
+- Same-agent review, not independent approval. No habitat data, native status, history
+  or GitHub mutation.
+- SSSOM/KGX conformance with current kg-microbe modeling was not audited; shared1398
+  remains open.
+- Whole-corpus review remains incomplete; ancestor reads and source indexing add no
+  target coverage.
+notes:
+- New immutable observation only; curation and publication are separate work.
+- No prior structured target observation found; historical reports are preserved and
+  are not silently retired.
+tags:
+- habitatmech
+- aquatic
+- record-review
+- scientific-review
+```

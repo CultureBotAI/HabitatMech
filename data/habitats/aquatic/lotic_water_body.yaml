@@ -12,7 +12,6 @@ synonyms:
   source: GOLD
 parent_habitats:
 - ENVO:00000063
-- ENVO:00002011
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4342
@@ -33,3 +32,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00002011 for habitatmech:GOLD.283c698731
+    (Environmental > Aquatic > Freshwater > Lotic). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1268
+    (20261012T035127Z-lotic_water_body F1). The freshwater-qualified GOLD Lotic source
+    is ITEM-exact-grounded to generic flowing-water-body ENVO:01000618. Fresh water
+    is material, not the genus of a whole water body. Preserve the water-body parent
+    and generic children independently if source identity is later narrowed; do not
+    redirect all lotic ontology consumers to the source mint. Exclude only the immediate
+    GOLD contribution named here. Preserve source identity, node/path provenance,
+    counts/units, native status and independent parents; separate decision and graph
+    changes are recorded in their own owners.

@@ -12,7 +12,6 @@ grounding_status: EXACT
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:01000139
-- habitatmech:GOLD.88e2b29307
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4000
@@ -24,3 +23,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.88e2b29307
+    for habitatmech:GOLD.6de51dbee8 (Environmental > Aquatic > Marine > Fossil > Whale
+    fall). ITEM hierarchy assessment (#1600): the general whale-fall class includes
+    modern carcasses, and the legacy GOLD Fossil bin supplies no reviewed broader-than
+    semantics. Treude et al. 2009 (DOI:10.3354/meps07972) studied a modern carcass
+    deployment; official ENVO a2455d1a77e46bb8a664d65a157166b539269042 independently
+    supplies ENVO:01000139 animal carcass fall. Exclude only this source-parent contribution,
+    preserving that ontology genus, GOLD4000, the full path, exact predicate, count/unit
+    omission and EXACT/SEEDED state. Do not identify the unresolved Fossil bin with
+    fossil material or infer source-bin equivalence from bulk sample annotations.'

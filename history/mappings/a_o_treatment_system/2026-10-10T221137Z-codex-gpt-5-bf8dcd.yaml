@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: a_o_treatment_system
+session:
+  id: 2026-10-10T221137Z-codex-gpt-5-bf8dcd
+  timestamp: '2026-10-10T22:11:37Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1884
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - provenance
+  summary: Use the primary publication URL in the A/O decision note
+  details: Final-head CI run 38089688086 showed the ontology-reference note validator treating
+    PMID:29053751 as an ontology term. Replace that citation spelling with https://pubmed.ncbi.nlm.nih.gov/29053751/
+    in the maintained decision note, preserving the same publication and scientific rationale.
+    Do not weaken the validator or change ontology inventories, identity, hierarchy, source
+    assertions or statuses. Regenerate the single record and page, run decision-note and scoped
+    regression tests, and prove full semantic-map inputs unchanged before rerunning full QC.
+    All saved reviews and prior session histories remain immutable; their observation-time
+    provenance remains available through the retained f5a7cd574f2cdd45dc950daf426cbdbce286116a
+    tag.

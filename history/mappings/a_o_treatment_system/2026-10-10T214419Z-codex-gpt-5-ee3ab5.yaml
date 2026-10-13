@@ -1,0 +1,37 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: a_o_treatment_system
+session:
+  id: 2026-10-10T214419Z-codex-gpt-5-ee3ab5
+  timestamp: '2026-10-10T21:44:19Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1881
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude reviewed GOLD context parent
+  details: 'Follow-up to 20261010T213324Z-a_o_treatment_system: The GOLD branch includes an
+    A/O bioreactor and a settling-tank branch, supporting a physical treatment-system interpretation.
+    The ITEM non-habitat decision supplies only a generic disease/intervention/filler rationale,
+    not evidence for this concept. Reassess that decision and separately remove the unsupported
+    inference that an A/O treatment system is itself a whole wastewater treatment plant. The
+    abbreviation does not establish one unique oxygen regime. Excluded only the immediate
+    GOLD parent contribution ENVO:00002043 for exact path Engineered > WWTP > A/O treatment
+    system. This is context, not a supported strictly broader genus. Preserve minted identity,
+    slug, original source nodes/path/counts/units and unrelated fields. Original reviews remain
+    immutable. Primary evidence and the frozen/later-snapshot distinctions are retained in
+    the original review. Source-member ambiguity is not resolved by removing a false parent.
+    Dry-run, forced canary, validated regeneration, exact-scope regressions, corpus/label
+    checks, semantic-map/site rebuild and full QC are required before merge. Shared mapping-endpoint
+    issue #1398 and ontology synonym-scope issue #1249 remain open; no SSSOM/KGX certification
+    is asserted.'

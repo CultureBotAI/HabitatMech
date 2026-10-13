@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002005
-- habitatmech:GOLD.013b99db03
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5307
@@ -20,3 +19,13 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.013b99db03
+    for habitatmech:GOLD.94928acca0 (Engineered > Built environment > Spacecraft Assembly
+    Cleanrooms > Air). Reviewed context exclusion (#1886; 20261010T225029Z-air__9d87e9f3
+    F1): sampled air material is not a kind of the cleanroom structure. Retain independent
+    ENVO:00002005 genus, source node/path, five ORGANISM assertions and NARROW/SEEDED
+    status. The later MIR-station collection-site conflict remains member-level uncertainty;
+    mapping-endpoint issue #1398 remains open.'

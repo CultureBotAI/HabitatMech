@@ -9,7 +9,6 @@ grounding_status: EXACT
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:0010003
-- habitatmech:GOLD.e292616707
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7111
@@ -24,3 +23,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-08T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.e292616707
+    for habitatmech:GOLD.162c34f9a7 (Engineered > Solid waste > Brown waste > Hay).
+    ITEM hierarchy assessment (#1745): generic ENVO:00002869 hay is preserved fodder,
+    not universally discarded Brown waste. The exact GOLD path supplies waste-classification
+    context but not a broader class of all hay. ENVO and FAO (https://www.fao.org/4/x7660e/x7660e06.htm)
+    support the fodder distinction. Suppress only this GOLD contribution; retain independent
+    ENVO:0010003, identity, definition, source nodes 7111/7112, three ORGANISM assertions
+    and SEEDED status. A discarded-hay identity split requires original source-member
+    evidence and is not asserted. Evidence: reports/yaml_record_review/20261008T182739Z-hay.md.'

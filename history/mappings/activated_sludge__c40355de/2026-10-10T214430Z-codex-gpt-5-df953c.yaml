@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: activated_sludge__c40355de
+session:
+  id: 2026-10-10T214430Z-codex-gpt-5-df953c
+  timestamp: '2026-10-10T21:44:30Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1882
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude reviewed GOLD context parent
+  details: 'Follow-up to 20261010T213350Z-activated_sludge__c40355de: The SBR-EBPR operational
+    context is not a broader sludge material. All 59 later exact-path samples describe sludge
+    from a laboratory sequencing-batch reactor, and the triad separates sludge medium from
+    bioreactor local scale. Their joined study instead describes freshwater lakes, a source-metadata
+    conflict that must not be used to reinterpret the sludge as lake material. Excluded only
+    the immediate GOLD parent contribution habitatmech:GOLD.c07aaa941d for exact path Engineered
+    > Bioreactor > SBR-EBPR > Anaerobic-Aerobic > Activated sludge. This is context, not a
+    supported strictly broader genus. Preserve minted identity, slug, original source nodes/path/counts/units
+    and unrelated fields. Original reviews remain immutable. Primary evidence and the frozen/later-snapshot
+    distinctions are retained in the original review. Source-member ambiguity is not resolved
+    by removing a false parent. Dry-run, forced canary, validated regeneration, exact-scope
+    regressions, corpus/label checks, semantic-map/site rebuild and full QC are required before
+    merge. Shared mapping-endpoint issue #1398 and ontology synonym-scope issue #1249 remain
+    open; no SSSOM/KGX certification is asserted.'

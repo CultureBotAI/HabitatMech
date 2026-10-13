@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002007
-- habitatmech:GOLD.be4a7c95b6
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8006
@@ -18,3 +17,18 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.be4a7c95b6
+    for habitatmech:GOLD.70845c6a72 (Engineered > Artificial ecosystem > Aquaculture
+    > Crustaceans pond > Sediment). Reviewed hierarchy exclusion (#1877; structured
+    review 20261010T200656Z-sediment__79de4694 F1): The exact source triad distinguishes
+    sediment medium, pond local scale and aquaculture-farm broad scale. Later BioSample
+    collection sites say shrimp-pond sediment. These mutually scoped annotations support
+    retaining the sediment genus, not making sediment a subtype of the pond. The exact
+    GOLD path supplies context, while official ENVO:00002007 supplies the independent
+    sediment-material genus. Exclude only this source-parent contribution; preserve
+    the qualified mint, node/path, frozen ORGANISM counts or zero omission, NARROW/SEEDED
+    state and unrelated claims. No definition, taxon or parameter is inferred. Shared
+    mapping endpoint issue #1398 remains open.'

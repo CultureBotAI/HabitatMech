@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: freshwater_aquarium_sediment
+session:
+  id: 2026-10-08T150154Z-codex-gpt-5-b04038
+  timestamp: '2026-10-08T15:01:54Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1734
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1730
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude the aquarium context from sediment subclass parents
+  details: 'Adversarial review of #1733 found that simply rebinding sediment GOLD.44534a15ca
+    to the new aquarium ID would preserve a false is-a edge. The inspected GOLD workbook distinguishes
+    node8037 Sediment from its aquarium setting; ENVO:00002198 defines an enclosure, not sampled
+    material. Add one guarded source-path exclusion against the reviewed parent ENVO:00002198,
+    retaining independent ENVO:00002007, one ORGANISM assertion, source path, minted identity
+    and NARROW/SEEDED status. Add full-corpus before/after regression isolating the parent
+    removal and audit event. This is not a complete standalone sediment review and does not
+    fix the separate source-mapping endpoint issue #1398. Dry seed passed; focused regression,
+    exact reproduction, provenance, map/site freshness, history validation and full QC are
+    required before merge; final results are recorded in the PR receipt.'

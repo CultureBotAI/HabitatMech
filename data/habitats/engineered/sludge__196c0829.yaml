@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002044
-- habitatmech:GOLD.0d77d00b06
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8148
@@ -19,3 +18,19 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.0d77d00b06
+    for habitatmech:GOLD.84c231bfef (Engineered > Bioreactor > UASB (Upflow anaerobic
+    sludge blanket) > Sludge). Bounded context exclusion (#1933; 20261011T120122Z-granular_sludge
+    F1): sludge material is not a subtype of its containing UASB reactor. The Sludge
+    source currently inherits both generic sludge ENVO:00002044 and the reactor source,
+    passing false reactor ancestry to Granular sludge. All three inspected later exact
+    granular-sludge organisms describe sludge, including material in UASB reactors;
+    PMID:42727115 (https://pubmed.ncbi.nlm.nih.gov/42727115/) independently distinguishes
+    anaerobic granular sludge from its containing reactor. Remove only this source-parent
+    contribution; retain ENVO:00002044, the legitimate granular-sludge-to-Sludge edge,
+    all mints, source paths/nodes, count omissions and NARROW/SEEDED status. No thermophily,
+    replacement definition, original-member reconstruction or resolution of shared
+    mapping-endpoint issue #1398 is inferred.'

@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002044
-- ENVO:00002126
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8430
@@ -17,3 +16,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00002126 for habitatmech:GOLD.203ab14b02
+    (Engineered > Bioreactor > DHS reactor > Aerobic > Sludge). Bounded material/context
+    correction (https://github.com/CultureBotAI/HabitatMech/issues/1948; 20261011T171234Z-sludge__df43c436
+    F1): the source-qualified Sludge material is not a kind of its enclosing treatment
+    device, facility, operating context or feed stream. EPA primary sedimentation
+    and suspended-growth descriptions distinguish material from treatment infrastructure
+    (https://www.epa.gov/sites/production/files/2015-09/documents/primer.pdf, printed
+    pp11-12); current ENVO class axioms and exact source path support this exclusion.
+    Retain independent material genus, mint, source node/path, frozen ORGANISM count
+    or omission, and native status. Later sample examples do not reconstruct original
+    membership; shared mapping-endpoint #1398 remains open.'

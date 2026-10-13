@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: biochar__4f716948
+session:
+  id: 2026-10-11T032946Z-codex-gpt-5-2a734f
+  timestamp: '2026-10-11T03:29:46Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1899
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude unsupported waste context from source-qualified biochar hierarchy
+  details: 'Follow-up to 20261011T032623Z-biochar__4f716948 F2 in PR #1900. Added one guarded
+    immediate GOLD-parent exclusion expecting ENVO:00002873. Retain ENVO:2000007 and all other
+    source, identity and status fields. Eight later exact-path GOLD BioSamples and joined
+    studies describe char surfaces, mineral-coated particles and soil amendment use; US Forest
+    Service distinguishes residual feedstock from useful char. Retained export SHA256 5f48b2f50fb2a9257754960a0f0e12dc6e8fa121e97c3e9f4497249e5fe6e439
+    is contextual evidence, not original frozen-node reconstruction. New regression failed
+    before the row, then all 49 parent-exclusion tests passed. Dry seed, inspected exact canary
+    and full generation passed. Full QC, label validation and semantic-map/site rebuild are
+    required separately before publication. Original review remains immutable; mapping issue
+    #1398 and original-node interpretation limits remain open. No identity merge, definition
+    or status promotion.'

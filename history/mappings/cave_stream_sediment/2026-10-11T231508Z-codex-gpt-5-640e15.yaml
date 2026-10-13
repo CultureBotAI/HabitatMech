@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: cave_stream_sediment
+session:
+  id: 2026-10-11T231508Z-codex-gpt-5-640e15
+  timestamp: '2026-10-11T23:15:08Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1979
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude reviewed GOLD context parents from cave_stream_sediment
+  details: 'ITEM hierarchy assessment: https://github.com/CultureBotAI/HabitatMech/issues/1979
+    (20261011T225719Z-cave_stream_sediment). The source denotes stream sediment in a cave;
+    later Frasassi sulfidic-stream sediment samples support that interpretation. Groundwater
+    is context rather than sediment genus. No universal sulfur concentration or organism assemblage
+    is inferred. Exclude only this guarded GOLD source-parent contribution. Preserve independent
+    parents, frozen source identity/counts/units or omissions and native lifecycle. Later
+    examples do not reconstruct frozen membership; shared synonym and endpoint issues remain
+    separate. Authorized by user publication/remediation request. Baseline 46 native checks
+    and exact main CI 800 passed/3 skipped succeeded. Post-fix tests, canary, regeneration
+    and full QC pending at event creation; outcomes will be retained in PR and successor reviews.'

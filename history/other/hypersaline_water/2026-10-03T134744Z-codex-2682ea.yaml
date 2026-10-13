@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/causal_graphs/hypersaline_water.yaml
+  slug: hypersaline_water
+session:
+  id: 2026-10-03T134744Z-codex-2682ea
+  timestamp: '2026-10-03T13:47:44Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1243
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1242
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  summary: Bound salt-in machinery requirement and correct low-water-activity edge polarity
+  details: 'Inspected current ENVO and NCBI responses, the full generated target and overlay,
+    and Europe PMC abstracts for PMID:29529204, PMID:18412960, and primary counterevidence
+    PMID:22527048. Replaced the universal acidic-proteome dependency with a TRAIT for intracellular
+    machinery compatible with high salt; preserved scoped Halanaerobiales counterevidence
+    and corrected the first predicate to promote the already-low water-activity condition.
+    Both new regression tests failed on the original overlay and passed after correction;
+    all 13 focused tests and overlay schema validation pass. The full seed dry run retains
+    3206 records. Baseline semantic-map input hash is c6fc01db748d129f30a03aadef2dcbf107311bf21886710f44a42b41e171fa2e.
+    Record/page regeneration, post-change map comparison and full QC are pending follow-through
+    on PR #1242. Source taxonomy and hierarchy findings remain separately tracked in #1244-#1246;
+    no source decisions, taxonomy assertions, or identity fields were changed.'

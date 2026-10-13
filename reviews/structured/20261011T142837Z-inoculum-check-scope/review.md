@@ -1,0 +1,674 @@
+# Validated check-scope correction: inoculum
+
+- Review: 20261011T142837Z-inoculum-check-scope
+- Repository: culturebotai/HabitatMech
+- Started UTC: 2026-10-11T14:28:29.392014Z
+- Finished UTC: 2026-10-11T14:28:37.935359Z
+- Reviewer: OpenAI Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Corrects check-target metadata in 20261011T142443Z-inoculum-followup without changing any scientific disposition. Removed only the immediate GOLD source-parent contribution ENVO:00002124; retained independent parents []. All identity, definition, synonym, attestation, count/unit and native-status fields are unchanged, with exactly one appended exclusion event. This resolves the demonstrated hierarchy finding, not broader source identity or shared export/synonym semantics.
+
+## Scope And Provenance
+
+Whole exact record reassessed for a changed hierarchy contribution; unchanged scientific evidence retained via predecessor.
+
+Selection: Successor to an already reviewed target, not additional corpus coverage.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base be16f994e6b10a83d65b0623bd62be96bbe49cbc.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| habitatmech:GOLD.94e1475c5e | data/habitats/engineered/inoculum.yaml | generated | Inoculum |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Post-correction native check | passed | True | habitatmech:GOLD.94e1475c5e | Actual exit0; start 2026-10-11T14:04:45.854400+00:00; finish 2026-10-11T14:04:49.072770+00:00. Whole-corpus gates do not increase scientific coverage. |
+| Post-correction native check | passed | True | habitatmech:GOLD.94e1475c5e | Actual exit0; start 2026-10-11T14:04:57.403383+00:00; finish 2026-10-11T14:05:02.643199+00:00. Whole-corpus gates do not increase scientific coverage. |
+| Post-correction native check | passed | True | habitatmech:GOLD.94e1475c5e | Actual exit0; start 2026-10-11T14:05:02.643830+00:00; finish 2026-10-11T14:05:20.661564+00:00. Whole-corpus gates do not increase scientific coverage. |
+| Post-correction native check | passed | True | habitatmech:GOLD.94e1475c5e | Actual exit0; start 2026-10-11T14:05:20.662439+00:00; finish 2026-10-11T14:06:07.610767+00:00. Whole-corpus gates do not increase scientific coverage. |
+| Post-correction native check | passed | True | habitatmech:GOLD.94e1475c5e | Actual exit0; start 2026-10-11T14:06:07.611401+00:00; finish 2026-10-11T14:06:13.683749+00:00. Whole-corpus gates do not increase scientific coverage. |
+| Post-correction native check | passed | True | habitatmech:GOLD.94e1475c5e | Actual exit0; start 2026-10-11T14:06:13.684324+00:00; finish 2026-10-11T14:06:17.440597+00:00. Whole-corpus gates do not increase scientific coverage. |
+| Post-correction native check | passed | True | habitatmech:GOLD.94e1475c5e | Actual exit0; start 2026-10-11T14:06:17.441187+00:00; finish 2026-10-11T14:06:32.978762+00:00. Whole-corpus gates do not increase scientific coverage. |
+| Post-correction native check | passed | True | habitatmech:GOLD.94e1475c5e | Actual exit0; start 2026-10-11T14:06:32.979340+00:00; finish 2026-10-11T14:08:00.882718+00:00. Whole-corpus gates do not increase scientific coverage. |
+| Authoritative CI QC on unchanged scientific inputs | passed | True | habitatmech:GOLD.94e1475c5e | Actual exit0; start 2026-10-11T14:11:09.490866+00:00; finish 2026-10-11T14:24:20.694788+00:00. Whole-corpus gates do not increase scientific coverage. Verified CI https://github.com/CultureBotAI/HabitatMech/actions/runs/38146124277 at 243d9efa1f884bb2efcc1f61a430999b72b0219c. The only subsequent committed changes are the five predecessor review pairs, not scientific inputs. These new observations are validated separately through the native save path; final PR CI must pass before merge. |
+
+## Scientific And Domain Assessments
+
+### Strict source-parent contribution
+
+scope: supported. Targets: habitatmech:GOLD.94e1475c5e.
+
+Removed only the immediate GOLD source-parent contribution ENVO:00002124; retained independent parents []. All identity, definition, synonym, attestation, count/unit and native-status fields are unchanged, with exactly one appended exclusion event. This resolves the demonstrated hierarchy finding, not broader source identity or shared export/synonym semantics.
+
+### Retained identity, evidence and limitations
+
+identity: supported. Targets: habitatmech:GOLD.94e1475c5e.
+
+Source identity and native lifecycle remain unchanged; no broader equivalence or publication-readiness certification follows. Unresolved predecessor findings are explicitly carried forward.
+
+### Exact validation target attribution
+
+scope: supported. Targets: habitatmech:GOLD.94e1475c5e.
+
+Only the ordinary validation of this target is attributed to this target; strict/cohort-wide checks also cover it. No scientific disposition or coverage changes.
+
+## Findings
+
+### F1: Source context becomes a false superclass
+
+major / resolved / confirmed; issue key: habitatmech-gold.94e1475c5e-context-parent.
+
+Inoculating material is not a reactor apparatus. Exact later sample descriptions corroborate this distinction; keep original source provenance and do not assign a universal material genus.
+
+Disposition: Removed only the immediate GOLD source-parent contribution ENVO:00002124; retained independent parents []. All identity, definition, synonym, attestation, count/unit and native-status fields are unchanged, with exactly one appended exclusion event. This resolves the demonstrated hierarchy finding, not broader source identity or shared export/synonym semantics.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| PRIOR | reviews/structured/20261011T135452Z-inoculum/review.yaml; Whole predecessor, including primary evidence and unresolved findings | supports | The full baseline scientific assessment is retained; only the demonstrated hierarchy finding changes disposition. |
+| CURRENT | data/habitats/engineered/inoculum.yaml; curation/gold_parent_exclusions.tsv; tests/test_gold_parent_exclusions.py; Entire target, exact guarded exclusion and five-target whole-corpus differential test | supports | Removed only the immediate GOLD source-parent contribution ENVO:00002124; retained independent parents []. All identity, definition, synonym, attestation, count/unit and native-status fields are unchanged, with exactly one appended exclusion event. This resolves the demonstrated hierarchy finding, not broader source identity or shared export/synonym semantics. Toggling only the five new guards changes exactly those five records; all other fields and records remain equal. |
+| CHECK_SCOPE | reviews/structured/20261011T142443Z-inoculum-followup/review.yaml; checks C0-C4 compared with literal command target paths | supports | Four ordinary validation commands target other cohort members and are omitted here. The applicable ordinary validation and eight strict/cohort/CI checks are preserved verbatim apart from clearer CI scope. Scientific inputs are byte-identical to the successful QC base. Issue https://github.com/CultureBotAI/HabitatMech/issues/1940 is resolved by this successor, not by rewriting the predecessor. |
+
+## Limits And Additional Notes
+
+- Original assertion-level membership remains unreconstructed; later observations are separate evidence.
+- Same-agent curation and review, not independent approval.
+- Only the exact hierarchy defect is resolved. Shared #1249 and #1398 remain open; no SSSOM/KGX readiness certification.
+- The preceding follow-up contains mis-scoped other-record ordinary checks. Its actual commands and exits remain historical evidence; this immutable successor supplies the corrected applicable-check list (#1940).
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261011T142837Z-inoculum-check-scope
+kind: record
+repository: culturebotai/HabitatMech
+title: 'Validated check-scope correction: inoculum'
+started_at: '2026-10-11T14:28:29.392014Z'
+finished_at: '2026-10-11T14:28:37.935359Z'
+reviewer:
+  identity: OpenAI Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Continuing agent participated in prior reviews and curation.
+    This is same-agent scientific/adversarial review, not independent approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: Corrects check-target metadata in 20261011T142443Z-inoculum-followup without
+  changing any scientific disposition. Removed only the immediate GOLD source-parent
+  contribution ENVO:00002124; retained independent parents []. All identity, definition,
+  synonym, attestation, count/unit and native-status fields are unchanged, with exactly
+  one appended exclusion event. This resolves the demonstrated hierarchy finding,
+  not broader source identity or shared export/synonym semantics.
+source:
+  git_revision: be16f994e6b10a83d65b0623bd62be96bbe49cbc
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: conf/record_review.yaml
+    sha256: c2f5d0eb4c5744f5fe354c92184ddab144dc2688dba952b032b4f3d597bc08d6
+    role: context
+  - path: conf/sources.yaml
+    sha256: a8e069f9278068b57fa234f43e03c8d893f857827b83fd10cfa92d6815aed642
+    role: context
+  - path: curation/causal_graphs/agricultural_soil.yaml
+    sha256: 2f9c73b186d6b79df1d64098f929d8364a1768f732101edaf144dee7723c60f4
+    role: context
+  - path: curation/causal_graphs/aquatic_biome.yaml
+    sha256: 03ba09d10f9a9d8d32060fc0208b511ef0d59e731fd7c63ca6c02296e70da5f5
+    role: context
+  - path: curation/causal_graphs/biofilm.yaml
+    sha256: 37fae9d123c2edfb68376b6b4fe5441f72092d48d81dba6f60510087217c8680
+    role: context
+  - path: curation/causal_graphs/bioreactor.yaml
+    sha256: 170d1134c3de38348844e45dbf6d87663dd4a0d1f33fd9e441a4352b6e277583
+    role: context
+  - path: curation/causal_graphs/brackish_water.yaml
+    sha256: b9d58082a53bef1143a3868918cfed7f6d74ba7e2330648069733d9ea2c76508
+    role: context
+  - path: curation/causal_graphs/building.yaml
+    sha256: 9e9360775fdda554b285d7ecfb9b1729bf389b8241376a410eca60bd672eb235
+    role: context
+  - path: curation/causal_graphs/compost.yaml
+    sha256: e0fd3ae54311115939f07ba1f3f158c5c44353bd0fab1dcdc1a9292ff0ad1de5
+    role: context
+  - path: curation/causal_graphs/deep_marine_sediment.yaml
+    sha256: eb6a68290a58ec157a4c9895e082cbba760c47b5fbe35523d3bb163af3091d0c
+    role: context
+  - path: curation/causal_graphs/forest_soil.yaml
+    sha256: faef7b6c26c25ba33110d362dc7e4351440bc08c1106f270e1e6f2decfb1e3f4
+    role: context
+  - path: curation/causal_graphs/forested_area.yaml
+    sha256: eb96b992e1ee8fef7df2550c765a30f0d446082ce16592b6c1da44a54b34e427
+    role: context
+  - path: curation/causal_graphs/fresh_water.yaml
+    sha256: e95ea96aa1912066d4c98cbff91e34528668d4c453d93dc4203c67e7769c691a
+    role: context
+  - path: curation/causal_graphs/fungi_associated_environment.yaml
+    sha256: 45736893315a37e327c25d401ff8794fee47b1056347e52f4980bc3a58e8e0d8
+    role: context
+  - path: curation/causal_graphs/grassland_soil.yaml
+    sha256: 81b2a9ea6255dfbd4b393102b9903dd3c9e8af12f7d3a9adc7c4649650542ae8
+    role: context
+  - path: curation/causal_graphs/hot_spring.yaml
+    sha256: ee0f6d7f7eff179b44e1e934c1c801524062a7e71f3199e16e9ef35e7bad81ed
+    role: context
+  - path: curation/causal_graphs/hydrothermal_vent.yaml
+    sha256: b5c101a93e724531cb7e50e8031203138230c09599855fe8a03bec945469efb0
+    role: context
+  - path: curation/causal_graphs/hypersaline_water.yaml
+    sha256: e974d5e9cc241ac9daf3542ba11156915cfb7786e683ad5ad212af5b35006158
+    role: context
+  - path: curation/causal_graphs/intestine_environment.yaml
+    sha256: 2ef766692eff55471a3322c0cd1cf82188decf37fd5ecd3535cb0ef612e2b725
+    role: context
+  - path: curation/causal_graphs/leaf.yaml
+    sha256: fadc8027b39884bc16cf98f774804a84fd1b1d805876310a47a095f6019435cc
+    role: context
+  - path: curation/causal_graphs/liquid_water.yaml
+    sha256: 12aac1021b9b51c6becc4ef8509bd63557b306e42c01d9b4443d69252ce29a81
+    role: context
+  - path: curation/causal_graphs/marine_sediment.yaml
+    sha256: 8b230eb079171ab8134b648caa29878dc5015fb36362559a6a8c67fb2b433741
+    role: context
+  - path: curation/causal_graphs/marine_water_body.yaml
+    sha256: b2f81102970e9541bf61978fabdd68b7db8f9459f1ef11b467fecfc2956f238b
+    role: context
+  - path: curation/causal_graphs/milk.yaml
+    sha256: 049daa5b499096c61cb625b7bb9ac0f02ea216c96d6b5f7b77126c8709b2378d
+    role: context
+  - path: curation/causal_graphs/peat_soil.yaml
+    sha256: 0f23fa02718b08e3607478ceaa2294320b320ae841a79e144e48ed3497db09e2
+    role: context
+  - path: curation/causal_graphs/plant_associated_environment.yaml
+    sha256: 300044040f76234e7ed3bf373137ba224e55f48e3f3d6d505086b3830877cfcb
+    role: context
+  - path: curation/causal_graphs/plant_litter.yaml
+    sha256: 25e10d6640992be2aa506490f763d8f9642fde125f599207dae7852b6a13b369
+    role: context
+  - path: curation/causal_graphs/root_nodule.yaml
+    sha256: b363e5d418df93d6e44c9d3f3256c8b0ede7c4518125359ffb880020fc00721c
+    role: context
+  - path: curation/causal_graphs/sea_water.yaml
+    sha256: 240ffc8ad2c0abf6f4cce41e01018679aca726816006c90ce329b8d1910d9cd7
+    role: context
+  - path: curation/causal_graphs/sediment.yaml
+    sha256: 62b97afba9466dc64f8b5b1b3fd5d92f8b4b6bf96fe1c761af579ff7deca0e47
+    role: context
+  - path: curation/causal_graphs/sludge.yaml
+    sha256: 55b9c9a27fd00c7b84a8780f2cedc83eeb31ebdda9a2e1029678d96a7fa4a06c
+    role: context
+  - path: curation/causal_graphs/soil.yaml
+    sha256: 2a2bf4b1099b3bc69015f9530cf6e926c05c33667132234b3c52f06aacc957c2
+    role: context
+  - path: curation/causal_graphs/terrestrial_biome.yaml
+    sha256: 239e6a2b711564ed12084cddd1295547d23858dd329c33c538251d5f53c88834
+    role: context
+  - path: curation/causal_graphs/waste_water.yaml
+    sha256: 299b5128af6cf5f7a61ce53304f1084e6eb045414b47cbcfd8832de095142aef
+    role: context
+  - path: curation/decisions.tsv
+    sha256: c2482c7441b08f593baa8bd59546ac68c6e5c7e4e1cb36c24c12a74592b9ff3c
+    role: context
+  - path: curation/definition_source_label_exclusions.tsv
+    sha256: 2d41fc93db4939122b3909f2a412b84b679703948b10d9f02e12021442f71407
+    role: context
+  - path: curation/external_xrefs.tsv
+    sha256: cf8394a6ab22e35efd9e252aef422018226280830bf816a39bf4f2256ff75ad5
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: f59966010f1a7ca89ffd52a1a20919ef5d9d6bb29c681802ae93d821f2e8d095
+    role: context
+  - path: curation/redirects_retracted.tsv
+    sha256: 0f1e9af8881f5a5db19f87de06b3b3d1800cfac8101699b380388c0a1a1e9a19
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 3f2ce04805defe5ff65dc20988cc72bc94d4636b3140eb1311017866bdc0ea0a
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: b59b9e800a918135e3915145d4d8098bb48dcea36a312b3004c594a57d221ae9
+    role: context
+  - path: data/habitats/engineered/anaerobic_bioreactor.yaml
+    sha256: 7f19d345280589761e6d81807fbc2f00a96032befd90c8cecb17a0c8b835f837
+    role: context
+  - path: data/habitats/engineered/inoculum.yaml
+    sha256: 44e6d3a5494a37d5b6d919d9d634d4160e46aa957ebbfb353e7265698ba7849f
+    role: target
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: 36df8306394c06c352b73e0bf7b47a2858784cedac7389a24d0b78f593ece646
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: f7aa39ee762d94f1902d9f08f328cb897bc543e4e226057eb4770d24bfcc6eb5
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/mappings/inoculum/2026-10-11T140437Z-codex-gpt-5-fcfba0.yaml
+    sha256: 296a92e74cf63d987769496dc9fdba91761d28f6e93c6997121b95b5feb92d1b
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reports/yaml_record_review/20260925T151010Z-inoculum.md
+    sha256: 355fd93da8df29b3349baa004a2c27211ae84cbab6ac2a7effcb8e9b4546cca3
+    role: context
+  - path: reviews/structured/20261011T135452Z-inoculum/review.yaml
+    sha256: e458a46ad4c7625aac6420585c9e11d763356e7903e02308a457476fcf2378a9
+    role: context
+  - path: reviews/structured/20261011T142443Z-inoculum-followup/review.yaml
+    sha256: 624bc8a6824d5da140312b61d3cbbb9e7ef75bbd7928e18e9984a19d10d213c5
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/extract_gold_biosamples.py
+    sha256: b6a2773c86fe718e1ca0b1d7b32709f0eee491ac813655e310aa0817c0fec31b
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: 4bf5391d25ff48a2d81eb3821af6582de063fd0391440973d309dfd93016490c
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: src/habitatmech/extract.py
+    sha256: 4d9397bda649381a5daf81937369531c6dc8b4518d6c7047e6f3f14e605bf860
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 7e3cda3dadb9c7462498e5014bf38ef730068212f8f9cb131e3fce383c21d10e
+    role: context
+  - path: src/habitatmech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 4adf105e23d75c3563a516a0c160623d1065df7fcb2f31b7a0a0a8303d0401be
+    role: context
+  - path: tests/test_gold_parent_exclusions.py
+    sha256: b71a3211a558371288bfcba8a60dc3a999b39a0ca944d805ed7cbb6800e11a38
+    role: context
+scope:
+  description: Whole exact record reassessed for a changed hierarchy contribution;
+    unchanged scientific evidence retained via predecessor.
+  selection: Successor to an already reviewed target, not additional corpus coverage.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - habitatmech:GOLD.94e1475c5e
+targets:
+- target_id: habitatmech:GOLD.94e1475c5e
+  path: data/habitats/engineered/inoculum.yaml
+  label: Inoculum
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Exact source-concept identity and grounding decisions
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Guarded immediate GOLD source-parent contributions
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Authored definition and genus
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_terms.tsv
+    role: Pinned ontology identity, label, definition and synonym inventory
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_subclass_edges.tsv
+    role: Pinned ontology subclass inventory
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained harmonization and deterministic generation
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/gold_ecosystem_paths.tsv
+    role: Frozen GOLD paths, nodes and ORGANISM counts
+checks:
+- check_id: C1
+  name: Post-correction native check
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.94e1475c5e
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache just validate
+    data/habitats/engineered/inoculum.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - CURRENT
+  summary: Actual exit0; start 2026-10-11T14:04:45.854400+00:00; finish 2026-10-11T14:04:49.072770+00:00.
+    Whole-corpus gates do not increase scientific coverage.
+- check_id: C5
+  name: Post-correction native check
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.94e1475c5e
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache just validate-strict
+    data/habitats/engineered/industrial_waste_material.yaml data/habitats/engineered/inoculum.yaml
+    data/habitats/engineered/intensive_care_unit_facility.yaml data/habitats/engineered/leachate__6407848f.yaml
+    data/habitats/engineered/manure.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - CURRENT
+  summary: Actual exit0; start 2026-10-11T14:04:57.403383+00:00; finish 2026-10-11T14:05:02.643199+00:00.
+    Whole-corpus gates do not increase scientific coverage.
+- check_id: C6
+  name: Post-correction native check
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.94e1475c5e
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache just verify-corpus
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - CURRENT
+  summary: Actual exit0; start 2026-10-11T14:05:02.643830+00:00; finish 2026-10-11T14:05:20.661564+00:00.
+    Whole-corpus gates do not increase scientific coverage.
+- check_id: C7
+  name: Post-correction native check
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.94e1475c5e
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - CURRENT
+  summary: Actual exit0; start 2026-10-11T14:05:20.662439+00:00; finish 2026-10-11T14:06:07.610767+00:00.
+    Whole-corpus gates do not increase scientific coverage.
+- check_id: C8
+  name: Post-correction native check
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.94e1475c5e
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - CURRENT
+  summary: Actual exit0; start 2026-10-11T14:06:07.611401+00:00; finish 2026-10-11T14:06:13.683749+00:00.
+    Whole-corpus gates do not increase scientific coverage.
+- check_id: C9
+  name: Post-correction native check
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.94e1475c5e
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache just validate-causal-all
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - CURRENT
+  summary: Actual exit0; start 2026-10-11T14:06:13.684324+00:00; finish 2026-10-11T14:06:17.440597+00:00.
+    Whole-corpus gates do not increase scientific coverage.
+- check_id: C10
+  name: Post-correction native check
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.94e1475c5e
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache just term-requests-check
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - CURRENT
+  summary: Actual exit0; start 2026-10-11T14:06:17.441187+00:00; finish 2026-10-11T14:06:32.978762+00:00.
+    Whole-corpus gates do not increase scientific coverage.
+- check_id: C11
+  name: Post-correction native check
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.94e1475c5e
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache .venv/bin/python
+    -m pytest tests/test_gold_parent_exclusions.py -q
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - CURRENT
+  summary: Actual exit0; start 2026-10-11T14:06:32.979340+00:00; finish 2026-10-11T14:08:00.882718+00:00.
+    Whole-corpus gates do not increase scientific coverage.
+- check_id: C12
+  name: Authoritative CI QC on unchanged scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.94e1475c5e
+  command: gh run watch 38146124277 --exit-status --interval 20
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - CURRENT
+  summary: Actual exit0; start 2026-10-11T14:11:09.490866+00:00; finish 2026-10-11T14:24:20.694788+00:00.
+    Whole-corpus gates do not increase scientific coverage. Verified CI https://github.com/CultureBotAI/HabitatMech/actions/runs/38146124277
+    at 243d9efa1f884bb2efcc1f61a430999b72b0219c. The only subsequent committed changes
+    are the five predecessor review pairs, not scientific inputs. These new observations
+    are validated separately through the native save path; final PR CI must pass before
+    merge.
+evidence:
+- evidence_id: PRIOR
+  kind: prior_review
+  reference: reviews/structured/20261011T135452Z-inoculum/review.yaml
+  locator: Whole predecessor, including primary evidence and unresolved findings
+  accessed_at: '2026-10-11T14:10:40.970609Z'
+  support: supports
+  summary: The full baseline scientific assessment is retained; only the demonstrated
+    hierarchy finding changes disposition.
+- evidence_id: CURRENT
+  kind: record_content
+  reference: data/habitats/engineered/inoculum.yaml; curation/gold_parent_exclusions.tsv;
+    tests/test_gold_parent_exclusions.py
+  locator: Entire target, exact guarded exclusion and five-target whole-corpus differential
+    test
+  accessed_at: '2026-10-11T14:24:43.923825Z'
+  support: supports
+  summary: Removed only the immediate GOLD source-parent contribution ENVO:00002124;
+    retained independent parents []. All identity, definition, synonym, attestation,
+    count/unit and native-status fields are unchanged, with exactly one appended exclusion
+    event. This resolves the demonstrated hierarchy finding, not broader source identity
+    or shared export/synonym semantics. Toggling only the five new guards changes
+    exactly those five records; all other fields and records remain equal.
+- evidence_id: CHECK_SCOPE
+  kind: prior_review
+  reference: reviews/structured/20261011T142443Z-inoculum-followup/review.yaml
+  locator: checks C0-C4 compared with literal command target paths
+  accessed_at: '2026-10-11T14:28:37.935359Z'
+  support: supports
+  summary: Four ordinary validation commands target other cohort members and are omitted
+    here. The applicable ordinary validation and eight strict/cohort/CI checks are
+    preserved verbatim apart from clearer CI scope. Scientific inputs are byte-identical
+    to the successful QC base. Issue https://github.com/CultureBotAI/HabitatMech/issues/1940
+    is resolved by this successor, not by rewriting the predecessor.
+assessments:
+- assessment_id: CORRECTION
+  area: scope
+  topic: Strict source-parent contribution
+  outcome: supported
+  target_ids:
+  - habitatmech:GOLD.94e1475c5e
+  evidence_ids:
+  - PRIOR
+  - CURRENT
+  summary: Removed only the immediate GOLD source-parent contribution ENVO:00002124;
+    retained independent parents []. All identity, definition, synonym, attestation,
+    count/unit and native-status fields are unchanged, with exactly one appended exclusion
+    event. This resolves the demonstrated hierarchy finding, not broader source identity
+    or shared export/synonym semantics.
+- assessment_id: RETAINED
+  area: identity
+  topic: Retained identity, evidence and limitations
+  outcome: supported
+  target_ids:
+  - habitatmech:GOLD.94e1475c5e
+  evidence_ids:
+  - PRIOR
+  - CURRENT
+  summary: Source identity and native lifecycle remain unchanged; no broader equivalence
+    or publication-readiness certification follows. Unresolved predecessor findings
+    are explicitly carried forward.
+- assessment_id: CHECK_SCOPE
+  area: scope
+  topic: Exact validation target attribution
+  outcome: supported
+  target_ids:
+  - habitatmech:GOLD.94e1475c5e
+  evidence_ids:
+  - CHECK_SCOPE
+  - CURRENT
+  summary: Only the ordinary validation of this target is attributed to this target;
+    strict/cohort-wide checks also cover it. No scientific disposition or coverage
+    changes.
+findings:
+- finding_id: F1
+  issue_key: habitatmech-gold.94e1475c5e-context-parent
+  category: scope
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Source context becomes a false superclass
+  description: Inoculating material is not a reactor apparatus. Exact later sample
+    descriptions corroborate this distinction; keep original source provenance and
+    do not assign a universal material genus.
+  target_ids:
+  - habitatmech:GOLD.94e1475c5e
+  field_paths:
+  - parent_habitats
+  evidence_ids:
+  - PRIOR
+  - CURRENT
+  rule_id: docs/CURATION.md; .claude/skills/curate-yaml-record/references/review-checklist.md
+  native_severity: major
+  normalization_reason: Material grounding, hierarchy, source-kind or application-contract
+    uncertainty affects the scientific claim.
+  owner_paths:
+  - repository: culturebotai/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Exact source-path and expected-parent guard
+  previous_occurrences:
+  - repository: culturebotai/HabitatMech
+    review_id: 20261011T135452Z-inoculum
+    finding_id: F1
+  - repository: culturebotai/HabitatMech
+    review_id: 20261011T142443Z-inoculum-followup
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1937
+  disposition_reason: Removed only the immediate GOLD source-parent contribution ENVO:00002124;
+    retained independent parents []. All identity, definition, synonym, attestation,
+    count/unit and native-status fields are unchanged, with exactly one appended exclusion
+    event. This resolves the demonstrated hierarchy finding, not broader source identity
+    or shared export/synonym semantics.
+actions: []
+limitations:
+- Original assertion-level membership remains unreconstructed; later observations
+  are separate evidence.
+- Same-agent curation and review, not independent approval.
+- 'Only the exact hierarchy defect is resolved. Shared #1249 and #1398 remain open;
+  no SSSOM/KGX readiness certification.'
+- The preceding follow-up contains mis-scoped other-record ordinary checks. Its actual
+  commands and exits remain historical evidence; this immutable successor supplies
+  the corrected applicable-check list (#1940).
+related_reviews:
+- repository: culturebotai/HabitatMech
+  review_id: 20261011T135452Z-inoculum
+  relationship: Resolves context-parent finding only; retains every other finding
+- repository: culturebotai/HabitatMech
+  review_id: 20261011T142443Z-inoculum-followup
+  relationship: Corrects check-target scope only; all scientific dispositions retained
+tags:
+- habitatmech
+- engineered
+- record-review
+- followup
+- check-scope-correction
+```

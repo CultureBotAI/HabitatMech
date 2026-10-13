@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: medical_environment
+session:
+  id: 2026-10-08T185937Z-claude-code-2693a1
+  timestamp: '2026-10-08T18:59:37Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1744
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - identity
+  - source_attestations
+  - characteristic_taxa
+  summary: Separate BacDive Medical-environment from the narrower hospital identity
+  details: 'Corrected the former GROUND/NARROW decision for habitatmech:BACDIVE.5e52ea1bba
+    to ITEM CONFIRM_UNGROUNDED with CLINICAL category, no asserted replacement parent or xref.
+    The previous row acknowledged non-equivalence but merged the source into ENVO:00002173.
+    Full review: reports/yaml_record_review/20261008T183330Z-hospital.md. Rechecked public
+    BacDive 153714 and pinned ENVO a2455d1a77e46bb8a664d65a157166b539269042, including the
+    facility-bounded healthcare environment candidate ENVO:03501331. Original frozen source-member
+    joins remain unverified. Both new before/after regressions passed: all 438 STRAIN assertions
+    and 25 displayed associations with pool 269 remain on the source mint; hospital retains
+    551 GOLD ORGANISM assertions, six PREGO TAXON assertions and both valid parents; unrelated
+    concepts are unchanged. Dry seed and inspected Medical-environment canary passed. Full
+    QC, label validation, site/statistics refresh and post-commit redirects are required before
+    merge. Old committed session histories are unchanged; generated events are reconstructed
+    from current inputs.'

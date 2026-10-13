@@ -3,8 +3,6 @@ label: Settled granule
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:00002124
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5607
@@ -24,3 +22,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00002124 for habitatmech:GOLD.821fc6dd72
+    (Engineered > Bioreactor > Anaerobic > Settled granule). Bounded hierarchy correction
+    (https://github.com/CultureBotAI/HabitatMech/issues/1942; 20261011T155124Z-settled_granule
+    F1). Settled granules are material, not reactor apparatus. Exact later GOLD study
+    Gs0151903 describes cultures inoculated with pulp-mill anaerobic granules; no
+    universal sludge genus is inferred. Exclude only this immediate GOLD contribution;
+    preserve source identity, node/path provenance, counts/units, native status and
+    independent parents. Current source evidence is not reconstruction of every original
+    member.

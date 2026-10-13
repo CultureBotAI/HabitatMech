@@ -8,7 +8,6 @@ grounding_status: EXACT
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00000002
-- habitatmech:GOLD.22a80cbd14
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8262
@@ -22,3 +21,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-06T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.22a80cbd14
+    for habitatmech:GOLD.0d87c411c3 (Environmental > Aquatic > Deep subsurface > Groundwater
+    > Well). ITEM hierarchy assessment (#1592): official ENVO a2455d1a77e46bb8a664d65a157166b539269042
+    distinguishes the constructed hole ENVO:00000026 from underground water ENVO:01001004.
+    USGS (https://www.usgs.gov/water-science-school/science/aquifers-and-groundwater)
+    describes wells drilled into water-bearing rock, not kinds of groundwater. Exclude
+    only this GOLD context parent; preserve independent ENVO:00000002, GOLD8262, full
+    source path, one ORGANISM assertion and EXACT/SEEDED provenance. This does not
+    endorse general-well versus qualified-source equivalence or promote identity review.'

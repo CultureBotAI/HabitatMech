@@ -3,8 +3,6 @@ label: Cyanobacterial aggregates
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:00000021
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8088
@@ -25,3 +23,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00000021 for habitatmech:GOLD.9b43a12f0c
+    (Environmental > Aquatic > Freshwater > Lake > Cyanobacterial aggregates). ITEM
+    hierarchy assessment: https://github.com/CultureBotAI/HabitatMech/issues/1987
+    (20261012T001705Z-cyanobacterial_aggregates). Cyanobacterial aggregates are microbial
+    assemblages/material within a freshwater lake, not entire lakes. Later lake-aggregate
+    samples support habitat context, while one organism row says feces; source membership
+    is not uniformly proven. Exclude only this guarded GOLD source-parent contribution.
+    Preserve independent parents, frozen source identity/counts/units or omissions
+    and native lifecycle. Later examples do not reconstruct frozen membership; shared
+    synonym and endpoint issues remain separate.'

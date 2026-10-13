@@ -3,8 +3,6 @@ label: Cathode
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.cdf0160423
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7656
@@ -24,3 +22,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.cdf0160423
+    for habitatmech:GOLD.5d36b86f15 (Engineered > Bioreactor > Microbial fuel cells/MFC
+    > Cathode). ITEM hierarchy assessment: a cathode electrode or cathodic compartment
+    is a component of the whole microbial fuel-cell system, not a subtype of it. Bond
+    and Lovley 2003 (https://journals.asm.org/doi/10.1128/AEM.69.3.1548-1555.2003),
+    Electrodes and electrode chambers, distinguishes assembly, electrodes and chambers.
+    Exclude only this immediate GOLD parent contribution; preserve the qualified mint,
+    both source nodes 7656 and 7657, full path, collapse note, zero-count omissions
+    and UNGROUNDED/SEEDED status. No replacement genus, cathode taxon or source-to-study
+    crosswalk is inferred; the paper''s growth evidence is anode-side. Individual
+    review: reports/yaml_record_review/20261007T164238Z-cathode.md.'

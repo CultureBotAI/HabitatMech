@@ -3,8 +3,6 @@ label: Acidic lake
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.90a084a03e
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7976
@@ -26,3 +24,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.90a084a03e
+    for habitatmech:GOLD.41f771c2b4 (Environmental > Aquatic > Acidic > Acidic lake).
+    ITEM hierarchy assessment for https://github.com/CultureBotAI/HabitatMech/issues/1971
+    (review 20261011T212815Z-acidic_lake): The exact acidic-lake source retains48
+    ORGANISM assertions and no authored definition. A lake is not a subclass of the
+    parent currently interpreted as a pH quality. Preserve the path and identity while
+    excluding that strict quality-parent contribution; do not merge this generic bin
+    with the distinct thermal acid-lake path. Exclude only this guarded GOLD source-parent
+    contribution. Preserve independent parents, source identity/count units or omissions,
+    ontology definition, and native lifecycle; later source examples do not reconstruct
+    frozen membership. Shared synonym1249 and endpoint1398 issues remain separate.'

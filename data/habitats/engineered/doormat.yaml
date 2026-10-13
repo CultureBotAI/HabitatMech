@@ -3,8 +3,6 @@ label: Doormat
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:01000417
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4846
@@ -24,3 +22,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-08T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:01000417 for habitatmech:GOLD.a50c61f322
+    (Engineered > Built environment > House > Doormat). ITEM hierarchy assessment
+    (#1716): ENVO:01000417 house denotes a dwelling building, not a mat, its microbial
+    surface or deposited debris. Official ENVO a2455d1a77e46bb8a664d65a157166b539269042
+    and the exact GOLD path establish a location context rather than strict subsumption.
+    Exclude only this GOLD source-parent contribution. Preserve nodes 4846/4847, verbatim
+    path, mint, zero-count omission and CLASS/SEEDED lifecycle. No definition, replacement
+    parent or surface-versus-debris interpretation is asserted. Evidence: reports/yaml_record_review/20261008T101747Z-doormat.md;
+    the paper DOI:10.3389/fmicb.2018.00084 illustrates mat/debris sampling but is
+    not a verified join to either GOLD study.'

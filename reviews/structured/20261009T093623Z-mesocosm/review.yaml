@@ -1,0 +1,865 @@
+schema_version: 1.0.0
+review_id: 20261009T093623Z-mesocosm
+kind: record
+repository: CultureBotAI/HabitatMech
+title: 'Mesocosm: coherent experimental-system record with unresolved source siting'
+started_at: '2026-10-09T09:28:12Z'
+finished_at: '2026-10-09T09:36:23Z'
+reviewer:
+  identity: codex-gpt-5
+  kind: agent
+  model: gpt-5
+  independence: self_review
+  independence_basis: Same agent continuing the corpus review; fresh input capture
+    and evidence assessment, not independent approval.
+skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: 'Reviewed the complete Mesocosm record and its sole GOLD source contribution.
+  Experimental-system identity, canonical definition, vivarium superclass, count provenance
+  and SEEDED lifecycle are coherent. One provisional minor provenance finding remains:
+  original GOLD study siting is unavailable, while ENVO requires a natural-environment
+  setting and published mesocosm usage includes indoor systems. Exact source equivalence
+  is not independently certified; no wrong grounding is demonstrated and no scientific
+  inputs were changed.'
+source:
+  git_revision: 966ccfe5a59b8d741f942f5d6924b4949d897430
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: curation/decisions.tsv
+    sha256: 0602cca13e6495da256a6f1cfd5897462f73f9739a729447862017d93c148efd
+    role: context
+  - path: curation/definition_source_label_exclusions.tsv
+    sha256: cc4da2e7e5e8750e6c023683014aa37a909230280f231eec5be7c71795340312
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: c741b54ba1c39872afaf090422d274a123e308f15eba480639c702eddab60a3d
+    role: context
+  - path: curation/samples/exact-20260814.tsv
+    sha256: 6cdf2e6384baa02653ed2b297977a55b2e7079b176597d5943f2c0d31835d1cd
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 3efdac153ccd40f518458a9dc5360e09dd660c3a42fbd06bfc57f3b2f707ece7
+    role: context
+  - path: curation/term_requests/envo_robot_template.tsv
+    sha256: 6968010617eb36a4e326b04f629fe7b4242efd47a5656f4d8ffec3242b1e9b9f
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: b59b9e800a918135e3915145d4d8098bb48dcea36a312b3004c594a57d221ae9
+    role: context
+  - path: data/habitats/RETIRED.tsv
+    sha256: 41beffc45aabdf304de633c21200b375d7f01d1cb2e036d4a026961d545a35e5
+    role: context
+  - path: data/habitats/engineered/artificial_ecosystem.yaml
+    sha256: 721350810f5b9c5c33a03ce8133bdfee22605458fef414c87390469695964317
+    role: context
+  - path: data/habitats/engineered/mesocosm.yaml
+    sha256: e1011359d5f5291a401b1ad1b7e0dd33928453543481b1104474d7c69160a9e8
+    role: target
+  - path: data/habitats/engineered/vivarium.yaml
+    sha256: 63fa05fa5847d65c4684ff5571dc382391a48305f2f7b31790e4a773c70f35c9
+    role: context
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: 36df8306394c06c352b73e0bf7b47a2858784cedac7389a24d0b78f593ece646
+    role: context
+  - path: docs/EVIDENCE_ASSESSMENT.md
+    sha256: 8a71142172815c118fe6f81819edc6bf5b374f407f4ab20bd5262b9df047e06b
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: f7aa39ee762d94f1902d9f08f328cb897bc543e4e226057eb4770d24bfcc6eb5
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/mappings/indoor_water_channel/2026-09-18T190846Z-codex-gpt-5.yaml
+    sha256: 88b64ae7674a5b1433ca68770497fd8f18bdf3a020a13921d9591363b6dd14be
+    role: context
+  - path: history/mappings/lake_water/2026-10-09T032209Z-codex-37c45d.yaml
+    sha256: fccf442ce4b833c48df4bd4589632d4ac09613d65a016b5167867173abe1d383
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reports/yaml_record_review/20260924T171335Z-artificial_ecosystem.md
+    sha256: 102b326d3cf895db5e66f0d3d943c78170e8f45ab62dfb3a0785d926f0f6f570
+    role: context
+  - path: reports/yaml_record_review/20260925T023438Z-freshwater__fec74bd2.md
+    sha256: 5d78fe5795267c974f549053558de114231a18f490059a05770ced88c1e004d3
+    role: context
+  - path: reports/yaml_record_review/20260925T025215Z-sieved.md
+    sha256: 1f88cd8433ce25918a55c0331234d40fd545971496c95ee56837661ba3062f28
+    role: context
+  - path: reports/yaml_record_review/20260925T031422Z-river_water.md
+    sha256: 9fbe59b7cff94b75d0d5d17f99a3be10cffa42731a243ed1d791411142d1bb82
+    role: context
+  - path: reports/yaml_record_review/20260925T033707Z-seawater.md
+    sha256: b6cc1915d8b1d3c4e748ce3343bffd8f3e93a62d11cdb2d5c2844fcf6e01f2df
+    role: context
+  - path: reports/yaml_record_review/20260925T035719Z-soil__cbcc9126.md
+    sha256: 5876b336819d5351789a13f7de7aead0029db245eb1fc1f784d8200e9adaa62b
+    role: context
+  - path: reports/yaml_record_review/20260925T130734Z-water_channel_system.md
+    sha256: e592ba25d7559cb7a39139e3442494ebd78c41808a2cfc4f3b5adf10d157bd67
+    role: context
+  - path: reports/yaml_record_review/20260925T134756Z-outdoor.md
+    sha256: b2dbfb9e105e06559c4642e86963f51c552d89a5c2e032fe8abed5fae090d366
+    role: context
+  - path: reports/yaml_record_review/20260927T052345Z-cold_seep.md
+    sha256: 0df47f7d6f888d495d5f0982ae6f50975ec08de28718ba8179779d8170b47790
+    role: context
+  - path: reports/yaml_record_review/20261005T082809Z-sea_water.md
+    sha256: 74869f97a57bb93684ba4f2b6a013349b2529d59b4ee83422dd61984a41d7519
+    role: context
+  - path: reports/yaml_record_review/20261005T214517Z-sediment__e3709872.md
+    sha256: 99e665047ca684e4aa538398afa1499f49973c8635a6db7f35508a7e1af2102f
+    role: context
+  - path: reports/yaml_record_review/20261008T204835Z-indoor.md
+    sha256: d243658a2e6b221518a53296e43296ae57d641a28100cbb1f7be6ddc09471f03
+    role: context
+  - path: reports/yaml_record_review/20261009T030345Z-lake_water.md
+    sha256: 27d3442609d8bbcb16926c81312ef4b1091044508228d8ac75a96c2fecd20d3a
+    role: context
+  - path: research/habitats/engineered/indoor-habitatmech-gold-b4e93f5d66-deep-research-claude_code.md
+    sha256: 148cfef8e17c0654519e2b40a6eaf37f39dc483f32baaa302521407a6fdc2cbc
+    role: context
+  - path: research/habitats/engineered/persistent-organic-pollutants-pop-habitatmech-gold-1a78606807-deep-research-claude_code.md
+    sha256: 185cc6db571b09978fe7614c8eca0c52cae70498c32ee0c6bbab1aef27ab8bbd
+    role: context
+  - path: research/habitats/host_associated/annelida-habitatmech-gold-6e10201167-deep-research-claude_code.md
+    sha256: 94e6b80c7c03fa791ed49b0b706e748ac8148e1d1a57464707f6f1656aafa851
+    role: context
+  - path: research/habitats/other/cnidaria-corals-habitatmech-bacdive-ef2153283d-deep-research-claude_code.md
+    sha256: 4cd660a18459bceac960a51c2aa7ad38b1edde3303f73daf82b3c2c3bc85a700
+    role: context
+  - path: research/habitats/other/dust-ash-habitatmech-bacdive-4b8650dee7-deep-research-claude_code.md
+    sha256: 1b0a948ae67cdfb8916471afbe22d6427653974d36d64fdaf59dfc2789d78349
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 52d2a22309a1f4a10728a663560bb4d918346c292221fd34139b99b4159d3fe5
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 92adf631fa099120a497ff7001473e659347d23ac9b418f04cd341ddad5d2a89
+    role: context
+  - path: tests/test_evidence_assessment.py
+    sha256: 4bfb7773e95cf09d8666f96ad32e24db101ff8a92ef251389a1f36b215ab8b86
+    role: context
+  - path: tests/test_laboratory_review_fixes.py
+    sha256: af9b2ae1b45d4f268ca657595a9627fc7a0328007fc0cca71a662019e42cba3d
+    role: context
+targets:
+- target_id: ENVO:01000620
+  path: data/habitats/engineered/mesocosm.yaml
+  label: mesocosm
+  record_class: HabitatRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Exact source concept habitatmech:GOLD.bd612c44cf; any later item-level grounding
+      decision.
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/gold_ecosystem_paths.tsv
+    role: Source classification, counts and historical node collapse.
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_terms.tsv
+    role: ENVO identity, canonical definition and label.
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_subclass_edges.tsv
+    role: Ontology superclass contribution.
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Guarded removal of a source-only context parent if evidence warrants.
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Any evidence-backed source-specific definition and genus.
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Resolution, document construction, aggregation, status and history.
+scope:
+  description: Whole generated mesocosm.yaml and every contributing source concept.
+    Complete parent YAMLs inform this target's edges only; adjacent reports and research
+    hits are context, not reopened whole-record reviews.
+  selection: ENVO:01000620 at PATHS.tsv:852; source habitatmech:GOLD.bd612c44cf and
+    exact Engineered > Artificial ecosystem > Mesocosm path.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - ENVO:01000620
+  exclusions:
+  - target: Vivarium, Artificial ecosystem, Mesocosm descendants and other triad-bearing
+      records
+    reason: No independent record-level verdict or closure of their findings; no descendant
+      counts, metadata or mechanisms transferred.
+checks:
+- check_id: capture
+  name: Current target and input capture
+  status: passed
+  required: true
+  summary: 64 input hashes captured at 966ccfe5a59b8d741f942f5d6924b4949d897430 before
+    assessment. Search-hit files are contextual captures, not claims of full scientific
+    reassessment.
+  target_ids:
+  - ENVO:01000620
+  command: env UV_CACHE_DIR=build/uv-cache uv run python scripts/record_review.py
+    inspect --targets /private/tmp/habitatmech-mesocosm-targets-20261009T092812Z.json
+    --input CLAUDE.md --input justfile --input docs/CURATION.md --input docs/HARMONIZATION.md
+    --input docs/RESEARCH.md --input docs/record-review-profile.md --input docs/record-reviews.md
+    --input .claude/skills/review-yaml-record/SKILL.md --input .claude/skills/curate-yaml-record/references/review-checklist.md
+    --input schema/record_review.yaml --input src/habitatmech/schema/habitatmech.yaml
+    --input src/habitatmech/seed.py --input curation/decisions.tsv --input curation/gold_parent_exclusions.tsv
+    --input curation/term_requests.tsv --input curation/term_requests_excluded.tsv
+    --input data/habitats/PATHS.tsv --input data/habitats/RETIRED.tsv --input data/raw/ontology_terms.tsv
+    --input data/raw/ontology_subclass_edges.tsv --input data/raw/isolation_source_groundings.tsv
+    --input data/raw/gold_ecosystem_paths.tsv --input data/raw/gold_path_biosamples.tsv
+    --input data/raw/gold_path_triads.tsv --input data/raw/gold_studies.tsv --input
+    data/raw/prego_habitats.tsv --input data/raw/prego_habitat_taxa.tsv --input data/raw/bacdive_isolation_sources.tsv
+    --input data/raw/bacdive_source_taxa.tsv --input data/raw/madin_habitats.tsv --input
+    data/raw/madin_habitat_taxa.tsv --input data/raw/environment_parameters.tsv --input
+    data/raw/MANIFEST.yaml --input data/raw/GOLD_MANIFEST.yaml --input curation/samples/exact-20260814.tsv
+    --input docs/EVIDENCE_ASSESSMENT.md --input research/habitats/engineered/indoor-habitatmech-gold-b4e93f5d66-deep-research-claude_code.md
+    --input tests/test_laboratory_review_fixes.py --input research/habitats/engineered/persistent-organic-pollutants-pop-habitatmech-gold-1a78606807-deep-research-claude_code.md
+    --input tests/test_evidence_assessment.py --input research/habitats/other/dust-ash-habitatmech-bacdive-4b8650dee7-deep-research-claude_code.md
+    --input research/habitats/host_associated/annelida-habitatmech-gold-6e10201167-deep-research-claude_code.md
+    --input curation/term_requests/envo_robot_template.tsv --input research/habitats/other/cnidaria-corals-habitatmech-bacdive-ef2153283d-deep-research-claude_code.md
+    --input history/mappings/indoor_water_channel/2026-09-18T190846Z-codex-gpt-5.yaml
+    --input reports/yaml_record_review/20261008T204835Z-indoor.md --input history/mappings/lake_water/2026-10-09T032209Z-codex-37c45d.yaml
+    --input reports/yaml_record_review/20260925T033707Z-seawater.md --input reports/yaml_record_review/20261005T082809Z-sea_water.md
+    --input reports/yaml_record_review/20260925T025215Z-sieved.md --input reports/yaml_record_review/20260924T171335Z-artificial_ecosystem.md
+    --input reports/yaml_record_review/20260925T134756Z-outdoor.md --input reports/yaml_record_review/20260925T130734Z-water_channel_system.md
+    --input reports/yaml_record_review/20261005T214517Z-sediment__e3709872.md --input
+    reports/yaml_record_review/20261009T030345Z-lake_water.md --input reports/yaml_record_review/20260925T031422Z-river_water.md
+    --input reports/yaml_record_review/20260925T023438Z-freshwater__fec74bd2.md --input
+    reports/yaml_record_review/20260925T035719Z-soil__cbcc9126.md --input reports/yaml_record_review/20260927T052345Z-cold_seep.md
+    --input conf/id_label_targets.yaml --input curation/definition_source_label_exclusions.tsv
+    --input data/habitats/engineered/artificial_ecosystem.yaml --input data/habitats/engineered/vivarium.yaml
+  exit_code: 0
+- check_id: schema
+  name: Target LinkML validation
+  status: passed
+  required: true
+  summary: No issues found.
+  target_ids:
+  - ENVO:01000620
+  command: env UV_CACHE_DIR=build/uv-cache just validate data/habitats/engineered/mesocosm.yaml
+  exit_code: 0
+- check_id: strict
+  name: Target closed-schema validation
+  status: passed
+  required: true
+  summary: One file; zero errors.
+  target_ids:
+  - ENVO:01000620
+  command: env UV_CACHE_DIR=build/uv-cache just validate-strict data/habitats/engineered/mesocosm.yaml
+  exit_code: 0
+- check_id: route
+  name: Full resolution and document reproduction
+  status: passed
+  required: true
+  summary: Unique gold_leaf_label route, no target decision, EXACT/skos:exactMatch;
+    one source and zero reviewed contributors. Whole generated document equals disk.
+    Parent path has a CLASS-level CONFIRM_UNGROUNDED decision.
+  target_ids:
+  - ENVO:01000620
+  command: "env UV_CACHE_DIR=build/uv-cache uv run python - <<'PY'\nfrom habitatmech\
+    \ import seed as s\nfrom dataclasses import asdict\nfrom pathlib import Path\n\
+    import json,yaml\nrows=s.read_tsv('gold_ecosystem_paths.tsv'); ont=s.OntologyIndex(s.read_tsv('ontology_terms.tsv'),s.read_tsv('ontology_subclass_edges.tsv'));\
+    \ d=s.load_decisions(s.DECISIONS_PATH)\nmapping={}\nfor r in s.read_tsv('isolation_source_groundings.tsv'):\n\
+    \    for key in (s.norm_label(r['subject_label']),s.norm_label(r['subject_label_normalized'])):\n\
+    \        if key: mapping.setdefault(key,r)\nfor path in ['Engineered > Artificial\
+    \ ecosystem > Mesocosm','Engineered > Artificial ecosystem']:\n    r=next(r for\
+    \ r in rows if r['canonical_path']==path); ident=s.mint('GOLD',path)\n    auto=s.resolve_gold(r,ont,mapping,s.leaf_claimants(rows),s.composed_claimants(rows))\n\
+    \    print(json.dumps({'path':path,'mint':ident,'automatic':asdict(auto),'final':asdict(s.apply_decision(auto,ident,d))}))\n\
+    c=next(c for c in s.build_corpus().concepts if c.identifier=='ENVO:01000620')\n\
+    assert s.build_document(c)==yaml.safe_load(Path('data/habitats/engineered/mesocosm.yaml').read_text())\n\
+    print('Whole document equal; sources',c.source_concepts,'reviewed',c.reviewed_sources)\n\
+    for i in ['ENVO:01000620','ENVO:00010622']:\n    print('ONTOLOGY',i,json.dumps(ont.terms[i]),'parents',sorted(ont.direct_parents(i)))\n\
+    print('EXACT LABEL',ont.by_label.get('mesocosm'))\nfor r in rows:\n    if r['canonical_path'].startswith('Engineered\
+    \ > Artificial ecosystem > Mesocosm > '):print('DESCENDANT',json.dumps(r))\nPY"
+  exit_code: 0
+- check_id: raw
+  name: Exact-field and pipe-member scan of fourteen inventories
+  status: passed
+  required: true
+  summary: 'Direct target: two ORGANISM assertions; separately 60 biosamples at node7289
+    and study Gs0156735. Three local-scale triad hits use the target CURIE on different
+    source paths and are not target measurements.'
+  target_ids:
+  - ENVO:01000620
+  command: "env UV_CACHE_DIR=build/uv-cache uv run python - <<'PY'\nimport csv,json\n\
+    from pathlib import Path\nneedles={'ENVO:01000620','habitatmech:GOLD.bd612c44cf','Engineered\
+    \ > Artificial ecosystem > Mesocosm','gold.ecosystem:6456','gold.ecosystem:7288','gold.ecosystem:7289'}\n\
+    for path in sorted(Path('data/raw').glob('*.tsv')):\n    hits=[]\n    with path.open()\
+    \ as handle:\n        for line,row in enumerate(csv.DictReader(handle,delimiter='\\\
+    t'),2):\n            values=[v for x in row.values() for v in (x if isinstance(x,list)\
+    \ else [x]) if v]\n            if any(v in needles or needles.intersection(v.split('|'))\
+    \ for v in values):\n                hits.append({'line':line,'row':row})\n  \
+    \  print(path.name,json.dumps(hits))\nPY"
+  exit_code: 0
+- check_id: search
+  name: Ignored-inclusive maintained-input and prior-review search
+  status: passed
+  required: true
+  summary: No exact target ITEM decision, definition, overlay, native session history
+    or prior target-owned review found in named roots. Adjacent report hits remain
+    context. Broad prose search output was truncated and is not used as proof of absence;
+    complete filename inventory and exact mint/study searches were used.
+  target_ids:
+  - ENVO:01000620
+  command: rg --no-ignore --hidden -n 'Gs0156735|bd612c44cf|mesocosm-siting' reviews
+    reports/yaml_record_review curation history research conf
+  exit_code: 0
+- check_id: external_attempt
+  name: Initial external-check import
+  status: failed
+  required: false
+  summary: 'No external source was read by this attempt: BeautifulSoup is not installed.
+    Retried with the standard-library HTML parser; no dependency installation.'
+  target_ids:
+  - ENVO:01000620
+  command: "env UV_CACHE_DIR=build/uv-cache uv run python - <<'PY'\nimport urllib.request,json,hashlib,io\n\
+    from openpyxl import load_workbook\nfrom bs4 import BeautifulSoup\nu='https://gold.jgi.doe.gov/download?mode=ecosystempaths';\
+    \ b=urllib.request.urlopen(u,timeout=45).read(); w=load_workbook(io.BytesIO(b),read_only=True,data_only=True);\
+    \ sheet=w['site data'];sheet.reset_dimensions()\nprint('WORKBOOK',len(b),hashlib.sha256(b).hexdigest())\n\
+    for n,row in enumerate(sheet.iter_rows(values_only=True),1):\n    if 'Mesocosm'\
+    \ in row:print(n,row)\nfor ident in ['ENVO:01000620','ENVO:00010622']:\n    u='https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms?obo_id='+ident.replace(':','%3A');b=urllib.request.urlopen(u,timeout=45).read();j=json.loads(b)\n\
+    \    print('OLS',ident,len(b),hashlib.sha256(b).hexdigest())\n    for t in j.get('_embedded',{}).get('terms',[]):\n\
+    \        print(json.dumps({k:t.get(k) for k in ['obo_id','label','description','is_obsolete']}))\n\
+    \        if ident=='ENVO:01000620':\n            u=t['_links']['parents']['href'].replace('http://','https://',1);b=urllib.request.urlopen(u,timeout=45).read();j=json.loads(b)\n\
+    \            print('PARENTS',u,hashlib.sha256(b).hexdigest(),[(x['obo_id'],x['label'])\
+    \ for x in j['_embedded']['terms']])\nu='https://gold.jgi.doe.gov/study?id=Gs0156735'\n\
+    try:\n    b=urllib.request.urlopen(u,timeout=45).read();soup=BeautifulSoup(b,'html.parser')\n\
+    \    print('STUDY',u,len(b),hashlib.sha256(b).hexdigest(),soup.get_text(' ',strip=True))\n\
+    except Exception as e:print('STUDY UNAVAILABLE',type(e).__name__,str(e))\nPY"
+  exit_code: 1
+- check_id: external
+  name: Current structured primary sources
+  status: passed
+  required: false
+  summary: GOLD classification workbook and OLS target, parent and superclass metadata
+    retrieved. Study HTTP403 was caught and remains separately unavailable; this successful
+    process exit is not a successful study retrieval.
+  target_ids:
+  - ENVO:01000620
+  command: "env UV_CACHE_DIR=build/uv-cache uv run python - <<'PY'\nimport urllib.request,json,hashlib,io\n\
+    from openpyxl import load_workbook\nfrom html.parser import HTMLParser\nclass\
+    \ TextParser(HTMLParser):\n    def __init__(self): super().__init__(); self.parts=[]\n\
+    \    def handle_data(self,data):\n        if data.strip(): self.parts.append(data.strip())\n\
+    u='https://gold.jgi.doe.gov/download?mode=ecosystempaths'; b=urllib.request.urlopen(u,timeout=45).read();\
+    \ w=load_workbook(io.BytesIO(b),read_only=True,data_only=True); sheet=w['site\
+    \ data'];sheet.reset_dimensions()\nprint('WORKBOOK',len(b),hashlib.sha256(b).hexdigest())\n\
+    for n,row in enumerate(sheet.iter_rows(values_only=True),1):\n    if 'Mesocosm'\
+    \ in row:print(n,row)\nfor ident in ['ENVO:01000620','ENVO:00010622']:\n    u='https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms?obo_id='+ident.replace(':','%3A');b=urllib.request.urlopen(u,timeout=45).read();j=json.loads(b)\n\
+    \    print('OLS',ident,len(b),hashlib.sha256(b).hexdigest())\n    for t in j.get('_embedded',{}).get('terms',[]):\n\
+    \        print(json.dumps({k:t.get(k) for k in ['obo_id','label','description','is_obsolete']}))\n\
+    \        if ident=='ENVO:01000620':\n            u=t['_links']['parents']['href'].replace('http://','https://',1);b=urllib.request.urlopen(u,timeout=45).read();j=json.loads(b)\n\
+    \            print('PARENTS',u,hashlib.sha256(b).hexdigest(),[(x['obo_id'],x['label'])\
+    \ for x in j['_embedded']['terms']])\nu='https://gold.jgi.doe.gov/study?id=Gs0156735'\n\
+    try:\n    b=urllib.request.urlopen(u,timeout=45).read();soup=TextParser();soup.feed(b.decode('utf-8',errors='replace'))\n\
+    \    print('STUDY',u,len(b),hashlib.sha256(b).hexdigest(),' '.join(soup.parts))\n\
+    except Exception as e:print('STUDY UNAVAILABLE',type(e).__name__,str(e))\nPY"
+  exit_code: 0
+- check_id: corpus
+  name: Full corpus reproduction
+  status: passed
+  required: true
+  summary: 3208 expected and found; zero missing, extra or differing records.
+  target_ids:
+  - ENVO:01000620
+  command: env UV_CACHE_DIR=build/uv-cache just verify-corpus
+  exit_code: 0
+- check_id: history
+  name: Native curation history
+  status: passed
+  required: true
+  summary: 217 histories valid.
+  target_ids:
+  - ENVO:01000620
+  command: env UV_CACHE_DIR=build/uv-cache just validate-history
+  exit_code: 0
+- check_id: provenance
+  name: Raw inventory provenance
+  status: passed
+  required: true
+  summary: 14 committed inventories and two GOLD sources current.
+  target_ids:
+  - ENVO:01000620
+  command: env UV_CACHE_DIR=build/uv-cache just provenance-check
+  exit_code: 0
+- check_id: integrity
+  name: Parent, status and reference regressions
+  status: passed
+  required: true
+  summary: 6 passed, 33 deselected; deterministic integrity is not scientific proof.
+  target_ids:
+  - ENVO:01000620
+  command: env UV_CACHE_DIR=build/uv-cache uv run pytest -q tests/test_corpus_integrity.py
+    -k 'parent or reviewed_records or history or causal_edges_reference'
+  exit_code: 0
+- check_id: ci_qc
+  name: Exact-baseline full quality-gate receipt
+  status: passed
+  required: true
+  summary: 'Freshly queried successful run at captured 966ccfe5a: 639 passed, 3 skipped,
+    four dedicated contract tests, 217 histories, 3208 records and all native gates.
+    No fresh local full-QC run claimed.'
+  target_ids:
+  - ENVO:01000620
+  command: gh run view 37910149298 --log | rg 'passed|skipped|history record|files
+    scanned|corpus reproduces|All HabitatMech quality gates'
+  exit_code: 0
+- check_id: ci_labels
+  name: Exact-baseline ontology label receipt
+  status: passed
+  required: true
+  summary: Completed SUCCESS at captured revision; configured ontology coverage and
+    exceptions are not proof of source semantics.
+  target_ids:
+  - ENVO:01000620
+  command: gh run view 37910149233 --json status,conclusion,headSha,url
+  exit_code: 0
+- check_id: unchanged
+  name: Scientific-input equivalence
+  status: passed
+  required: true
+  summary: No differences from the checked base; only new review artifacts are written.
+  target_ids:
+  - ENVO:01000620
+  command: git diff --exit-code 966ccfe5a59b8d741f942f5d6924b4949d897430 -- data curation
+    src scripts tests docs conf schema CLAUDE.md justfile
+  exit_code: 0
+- check_id: source_detail
+  name: Original GOLD node and study setting
+  status: unavailable
+  required: false
+  summary: Browser could not retrieve node6456 or study Gs0156735. Public direct HTTP
+    retry returned403. Original natural versus indoor setting and membership were
+    not recovered.
+  target_ids:
+  - ENVO:01000620
+- check_id: molecular
+  name: Causal and expression adapters
+  status: not_applicable
+  required: false
+  summary: No molecular, transcriptomic or causal assertion in the target; no target
+    overlay recovered by ignored-inclusive search. iModulonDB is not applicable.
+  target_ids:
+  - ENVO:01000620
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/habitats/engineered/mesocosm.yaml
+  locator: Whole YAML, sole attestation and seed event
+  accessed_at: '2026-10-09T09:34:19Z'
+  support: supports
+  summary: ENGINEERED, EXACT, SEEDED; no source-specific operating parameters, taxa,
+    mechanism or evidence claim. Two distinct parent entries.
+- evidence_id: source
+  kind: database
+  reference: data/raw/gold_ecosystem_paths.tsv
+  locator: Row769; exact source path and nodes6456|7288|7289
+  accessed_at: '2026-10-09T09:34:19Z'
+  support: supports
+  summary: Depth3 source bin has two ORGANISM assertions, zero study/biosample counters
+    in this older aggregate and three collapsed node IDs. The record faithfully uses
+    the first ID and node-count note.
+- evidence_id: side_tables
+  kind: database
+  reference: data/raw/gold_path_biosamples.tsv
+  locator: Row324; gold_studies.tsv:4095; gold_path_triads.tsv:12,459,1029; fourteen-table
+    scan
+  accessed_at: '2026-10-09T09:34:19Z'
+  support: supports
+  summary: Exact path has 60 biosamples at7289 and one study Gs0156735 in separately
+    manifested later inventories. Do not replace two ORGANISM assertions with60 or
+    sum units. Triad uses of ENVO:01000620 concern Sieved lake water, Cold seeps and
+    Greenhouse paths, not direct target observations.
+- evidence_id: resolution
+  kind: record_content
+  reference: src/habitatmech/seed.py
+  locator: resolve_gold:755-845; ingestion:880-990; build_document:1457 onward; actual
+    full-index harness
+  accessed_at: '2026-10-09T09:34:19Z'
+  support: supports
+  summary: One unique leaf label grounds automatically to ENVO:01000620; zero ITEM-reviewed
+    sources correctly yield SEEDED. Sample exact-20260814.tsv row29 says ok but is
+    not an ITEM decision or proof of original study conditions.
+- evidence_id: ontology
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms?obo_id=ENVO%3A01000620
+  locator: Active term, canonical description; local ontology_terms.tsv:8115
+  accessed_at: '2026-10-09T09:34:19Z'
+  support: supports
+  summary: Current and frozen definitions agree on an experimentally controlled vivarium
+    embedded in a natural environment. Response2979bytes, SHA25679f33ecb1e35313420eff05be3bb098aaf15ded31f02d51c7d6bbfa60df61f9f.
+- evidence_id: vivarium
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_01000620/parents
+  locator: Sole direct parent; local edge6375; complete vivarium.yaml; active parent
+    term query
+  accessed_at: '2026-10-09T09:34:19Z'
+  support: supports
+  summary: ENVO:00010622 vivarium is the supported enclosure superclass. Parents SHA256f5969559b0c7df93afa29108652dd8371600c877736f986dc4631bdc69514fa9;
+    parent-term response4302bytes, SHA256587642d896f46eb2f147cf09f667ee8451aaad5662643f3216af2ebaafd49904.
+- evidence_id: gold
+  kind: database
+  reference: https://gold.jgi.doe.gov/download?mode=ecosystempaths
+  locator: Workbook site data rows34-40; read-only parsing with reset_dimensions
+  accessed_at: '2026-10-09T09:34:19Z'
+  support: supports
+  summary: Current classification retains Mesocosm under Artificial ecosystem, including
+    unclassified terminal node7289 and six narrower classifications. It does not establish
+    historical6456/7288 identities, source counts or natural versus indoor siting.
+    84174bytes, SHA2563933e5f0664915c1bbfa00212e17d013da360fb33dd52e509254050813135396.
+- evidence_id: usage
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/15768734/
+  locator: Inspected abstract and identifiers, lines171-236; DOI10.1065/espr2004.08.217
+  accessed_at: '2026-10-09T09:34:19Z'
+  support: context_only
+  summary: Mohr et al. describe a modular mesocosm facility with both indoor and outdoor
+    experimental systems. This verifies broader terminology usage, not membership
+    in the target GOLD bin. The abstract alone is used; no experimental dimensions
+    or effects are adopted.
+- evidence_id: parent_context
+  kind: prior_review
+  reference: reports/yaml_record_review/20260924T171335Z-artificial_ecosystem.md
+  locator: Whole historical report plus complete current artificial_ecosystem.yaml
+  accessed_at: '2026-10-09T09:34:19Z'
+  support: context_only
+  summary: Historical concerns about the unreviewed generic parent remain open in
+    their own scope. A controlled experimental-system reading makes this particular
+    source-parent plausible, but no definition establishes the extent of the parent.
+    CLASS status and missing optional fields alone are not proof of a false child
+    edge.
+- evidence_id: scope
+  kind: search
+  reference: curation
+  locator: Complete ignored-inclusive filename inventory and exact mint/study/key
+    search
+  accessed_at: '2026-10-09T09:34:19Z'
+  support: context_only
+  summary: Target-specific source siting evidence and an ITEM decision were not recovered.
+    Broad neighboring-report/research snippets are leads only; their findings and
+    biology are not inherited.
+  search_scope: rg --no-ignore --hidden searches for ENVO:01000620, GOLD.bd612c44cf,
+    mesocosm, Gs0156735 and the finding key across curation, history, research, conf,
+    tests, docs, reviews, reports/yaml_record_review and PATHS/RETIRED. Complete -l
+    inventory used for context capture; broad -n output was truncated, so no unseen
+    passage is asserted. Includes ignored and hidden files.
+- evidence_id: unavailable
+  kind: database
+  reference: https://gold.jgi.doe.gov/study?id=Gs0156735
+  locator: Browser retrieval and public direct HTTP403; node6456 browser retrieval
+    also failed
+  accessed_at: '2026-10-09T09:34:19Z'
+  support: unknown
+  summary: Original source setting and member metadata remain unavailable. An access
+    failure does not invalidate the study or imply missing organisms.
+- evidence_id: gates
+  kind: validation
+  reference: https://github.com/CultureBotAI/HabitatMech/actions/runs/37910149298
+  locator: Captured base966ccfe5a; label run37910149233; fresh local target/corpus/history
+    checks
+  accessed_at: '2026-10-09T09:34:19Z'
+  support: supports
+  summary: Required deterministic gates pass on unchanged scientific inputs; these
+    do not settle the siting question.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Experimental system rather than its contained material
+  outcome: supported
+  summary: The generic Mesocosm source bin, current classification and canonical record
+    describe an experimental enclosure/system. Water and soil descendants are not
+    the identity of this parent record.
+  target_ids:
+  - ENVO:01000620
+  evidence_ids:
+  - record
+  - source
+  - gold
+  - ontology
+  - usage
+- assessment_id: grounding
+  area: grounding
+  topic: Natural-environment restriction versus source extent
+  outcome: unknown
+  summary: The automatic exact-name route is reproducible, but the original source
+    study's setting is not recovered. Published indoor usage prevents treating the
+    name alone as proof of the ENVO siting restriction. No actual indoor GOLD member
+    is established, so a wrong grounding is not declared.
+  target_ids:
+  - ENVO:01000620
+  evidence_ids:
+  - resolution
+  - ontology
+  - usage
+  - side_tables
+  - unavailable
+- assessment_id: hierarchy
+  area: graph
+  topic: Vivarium superclass
+  outcome: supported
+  summary: The definition's genus, local subclass edge and current parent API agree
+    on vivarium as strictly broader.
+  target_ids:
+  - ENVO:01000620
+  evidence_ids:
+  - ontology
+  - vivarium
+- assessment_id: source_parent
+  area: graph
+  topic: Artificial ecosystem source-parent interpretation
+  outcome: unknown
+  summary: The source path coherently groups controlled experimental systems, but
+    the generic parent has no maintained definition. This review does not certify
+    its whole extent or dismiss the historical parent review; no target-specific false
+    is-a is demonstrated.
+  target_ids:
+  - ENVO:01000620
+  evidence_ids:
+  - gold
+  - parent_context
+  - record
+- assessment_id: quantity
+  area: quantity
+  topic: Separate assertion units and snapshots
+  outcome: supported
+  summary: The generated two-ORGANISM count and three-node note match the frozen source.
+    Later biosample and study inventories provide independent provenance and are not
+    missing organism counts.
+  target_ids:
+  - ENVO:01000620
+  evidence_ids:
+  - source
+  - side_tables
+  metrics:
+  - name: Frozen direct organism assertions
+    value: 2
+    unit: ORGANISM
+    definition: Exact target path organism_count in gold_ecosystem_paths.tsv, not
+      sample count.
+  - name: Later direct biosamples
+    value: 60
+    unit: BIOSAMPLE
+    definition: Exact target path biosample_count in gold_path_biosamples.tsv, not
+      added to organisms.
+- assessment_id: status
+  area: consistency
+  topic: Native seeded lifecycle
+  outcome: supported
+  summary: One source with zero ITEM decisions yields SEEDED and a single reproducible
+    seed event. Earlier sample checking is not silently promoted to REVIEWED.
+  target_ids:
+  - ENVO:01000620
+  evidence_ids:
+  - resolution
+  - record
+- assessment_id: completeness
+  area: completeness
+  topic: Optional biology and source-role boundaries
+  outcome: supported
+  summary: No exact-target taxon or environmental-parameter evidence is supplied by
+    the raw scan. Off-path local-scale triads do not license attaching their samples,
+    taxa or mechanisms. Optional absent fields are not mandatory defects.
+  target_ids:
+  - ENVO:01000620
+  evidence_ids:
+  - side_tables
+  - record
+  - scope
+- assessment_id: validation
+  area: schema
+  topic: Reproduction and ownership
+  outcome: supported
+  summary: Target and native deterministic gates pass. Future source-specific decisions
+    belong in maintained inputs, followed by validated generation, not a hand edit
+    of the record.
+  target_ids:
+  - ENVO:01000620
+  evidence_ids:
+  - gates
+  - resolution
+findings:
+- finding_id: F1
+  issue_key: gold-bd612c44cf-mesocosm-siting-evidence
+  category: provenance
+  severity: minor
+  status: open
+  certainty: provisional
+  title: Original GOLD setting is not recovered for the location-limited ENVO match
+  description: The record's ENVO definition requires natural-environment embedding,
+    while inspected primary literature also uses mesocosm for indoor facilities. The
+    exact GOLD path supplies60biosamples and study Gs0156735, but its original setting
+    is inaccessible. This is a bounded source-provenance gap affecting confidence
+    in exact equivalence, not evidence that GOLD actually contains indoor systems
+    or that the identifier must change.
+  target_ids:
+  - ENVO:01000620
+  field_paths:
+  - grounding_status
+  - definition
+  - source_attestations[0].mapping_predicate
+  evidence_ids:
+  - ontology
+  - usage
+  - source
+  - side_tables
+  - unavailable
+  rule_id: Native checklist Grounding, source scope and evidence standard
+  native_severity: minor
+  normalization_reason: No incompatible target member or false parent is demonstrated;
+    the generic experimental-system identity remains coherent. Severity reflects unresolved
+    provenance, not mere SEEDED status or absent optional fields.
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Exact source concept habitatmech:GOLD.bd612c44cf; any later item-level grounding
+      decision.
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/gold_ecosystem_paths.tsv
+    role: Source classification, counts and historical node collapse.
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Any evidence-backed source-specific definition and genus.
+actions:
+- action_id: A1
+  description: Recover primary metadata or methods for Gs0156735 and the exact Mesocosm
+    source bin, establish natural-embedded versus indoor scope, then perform separately
+    authorized item-level curation only if evidence warrants. Do not infer an identity
+    replacement or remove a parent from unavailable details alone.
+  finding_ids:
+  - F1
+  target_ids:
+  - ENVO:01000620
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Exact source concept habitatmech:GOLD.bd612c44cf; any later item-level grounding
+      decision.
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/gold_ecosystem_paths.tsv
+    role: Source classification, counts and historical node collapse.
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_terms.tsv
+    role: ENVO identity, canonical definition and label.
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_subclass_edges.tsv
+    role: Ontology superclass contribution.
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Guarded removal of a source-only context parent if evidence warrants.
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Any evidence-backed source-specific definition and genus.
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Resolution, document construction, aggregation, status and history.
+  acceptance_checks:
+  - Resolve study identity and its exact source-path membership with inspected primary
+    metadata; document setting at the source-concept level rather than transferring
+    a different mesocosm experiment.
+  - If natural-embedded source extent is verified, retain exact identity and document
+    evidence in an ITEM decision. If a broader or incompatible extent is demonstrated,
+    choose an evidence-backed source identity and relation; do not automatically substitute
+    vivarium or invent a new term.
+  - Preserve unlike count units, historical node provenance and independently supported
+    parent contributions. Review source-parent meaning separately; do not inherit
+    or close adjacent findings.
+  - Any authorized curation must use maintained inputs and pass canary inspection,
+    schema/strict, corpus, provenance, history, labels and full QC with applicable
+    generated-page checks.
+  - Resolve this finding only in a new linked immutable review; do not rewrite this
+    observation.
+limitations:
+- One of3208records reviewed here; full-corpus completion remains unproven.
+- Historical nodes6456/7288 and original study setting/membership are not independently
+  recovered. Node7289 remains in the current workbook.
+- Current external class metadata and sampled literature do not certify all GOLD instances.
+  The source-parent extent remains provisional; historical parent/child findings are
+  neither transferred nor closed.
+- Only the Mohr abstract and identifiers were inspected. Other research-report citations
+  and broad search hits were not independently verified and support no scientific
+  claim here.
+- Exact-baseline full-QC and label receipts were reused with unchanged-input verification;
+  no fresh local fullQC/global ontology refresh. Three native tests are skipped.
+- No curation, status/history promotion, GitHub mutation, publication or SSSOM/KGX
+  readiness assessment.
+tags:
+- habitat
+- engineered
+- mesocosm
+- GOLD

@@ -9,7 +9,7 @@ grounding_status: CLOSE
 mapping_status: REVIEWED
 synonyms:
 - synonym_text: Supratidal zone
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: marine supralittoral zone
   synonym_type: EXACT_SYNONYM
@@ -27,7 +27,6 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: ENVO
 parent_habitats:
-- ENVO:00001999
 - ENVO:01001201
 source_attestations:
 - source: GOLD
@@ -48,3 +47,22 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Supratidal zone'' as RELATED_SYNONYM: a CLOSE source
+    mapping does not establish exact lexical equivalence. Independent ontology synonyms
+    and verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00001999 for habitatmech:GOLD.600724f138
+    (Environmental > Aquatic > Marine > Supratidal zone). Bounded hierarchy correction
+    https://github.com/CultureBotAI/HabitatMech/issues/1297 (20261012T054255Z-marine_supra_littoral_zone
+    F1). The source Supratidal zone is explicitly CLOSE to the marine splash/spray
+    zone above ordinary inundation, not a whole marine water body. Preserve environmental-zone
+    ancestry and ITEM provenance. Ontology related and broad synonyms are promoted
+    to EXACT independently of the correctly retained CLOSE source relation. Exclude
+    only the immediate GOLD contribution named here. Preserve source identity, node/path
+    provenance, counts/units, native status and independent parents. Unresolved source
+    identity, genus, synonym and mapping-endpoint findings remain separate.

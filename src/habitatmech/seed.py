@@ -90,6 +90,11 @@ from habitatmech.curate.decisions import (  # noqa: E402
     resolve_same_as,
     validate_decisions,
 )
+from habitatmech.curate.definition_source_label_exclusions import (  # noqa: E402
+    DefinitionSourceLabelExclusion,
+    load_definition_source_label_exclusions,
+    validate_definition_source_label_exclusions,
+)
 from habitatmech.curate.definitions import (  # noqa: E402
     CuratedDefinition,
     load_curated_definitions,
@@ -101,6 +106,7 @@ from habitatmech.curate.gold_parent_exclusions import (  # noqa: E402
     GoldParentExclusionError,
     load_gold_parent_exclusions,
 )
+from habitatmech.labels import norm_label  # noqa: E402
 from habitatmech.validation.write_validated import (  # noqa: E402
     ValidationFailedError,
     write_validated_habitat,
@@ -112,6 +118,9 @@ DECISIONS_PATH = REPO_ROOT / "curation" / "decisions.tsv"
 CURATED_DEFINITIONS_PATH = REPO_ROOT / "curation" / "term_requests.tsv"
 EXTERNAL_XREFS_PATH = REPO_ROOT / "curation" / "external_xrefs.tsv"
 GOLD_PARENT_EXCLUSIONS_PATH = REPO_ROOT / "curation" / "gold_parent_exclusions.tsv"
+DEFINITION_SOURCE_LABEL_EXCLUSIONS_PATH = (
+    REPO_ROOT / "curation" / "definition_source_label_exclusions.tsv"
+)
 
 GOLD_LEVELS = ["ecosystem", "ecosystem_category", "ecosystem_type", "ecosystem_subtype", "specific_ecosystem"]
 
@@ -122,6 +131,7 @@ HABITAT_PREFIXES = {"ENVO", "UBERON", "FOODON", "BTO", "PO", "PCO", "FAO", "NCIT
 # anatomy, then food, then the tissue vocabulary. A GOLD leaf "blood" should
 # reach UBERON before BTO, and "cheese" should reach FOODON.
 LEXICAL_PRIORITY = ["ENVO", "UBERON", "FOODON", "BTO"]
+RELATED_SOURCE_MAPPING_STATUSES = frozenset({"CLOSE", "BROAD"})
 
 # GOLD ecosystem (level 1) + ecosystem category (level 2) -> HabitatCategoryEnum.
 # GOLD's own top-two levels are the most reliable category signal available —
@@ -240,11 +250,6 @@ def verified_mapping_target(
     return target
 
 
-def norm_label(text: str) -> str:
-    """Lexical-matching key: lowercase, runs of non-alphanumerics to one space."""
-    return re.sub(r"[^a-z0-9]+", " ", (text or "").lower()).strip()
-
-
 def slugify(text: str, maxlen: int = 72) -> str:
     slug = re.sub(r"[^a-z0-9]+", "_", (text or "").lower()).strip("_")
     return (slug[:maxlen].rstrip("_")) or "unnamed"
@@ -347,6 +352,7 @@ class Concept:
     parents: set[str] = field(default_factory=set)
     xrefs: set[str] = field(default_factory=set)
     attestations: list[dict[str, Any]] = field(default_factory=list)
+    attestation_corrections: set[str] = field(default_factory=set)
     parameters: list[dict[str, Any]] = field(default_factory=list)
     taxa: dict[str, dict[str, Any]] = field(default_factory=dict)
     # Best (most specific) grounding status seen, so a merge cannot silently
@@ -364,6 +370,13 @@ class Concept:
     decisions_applied: list[Decision] = field(default_factory=list)
     definitions_applied: list[CuratedDefinition] = field(default_factory=list)
     gold_parent_exclusions_applied: list[GoldParentExclusion] = field(default_factory=list)
+    gold_broader_synonyms: set[tuple[str, str]] = field(default_factory=set)
+    close_source_synonyms: set[tuple[str, str]] = field(default_factory=set)
+    broad_source_synonyms: set[tuple[str, str]] = field(default_factory=set)
+    definition_broader_synonyms: set[tuple[str, str]] = field(default_factory=set)
+    definition_source_label_exclusions_applied: list[DefinitionSourceLabelExclusion] = field(
+        default_factory=list
+    )
     causal_graphs: list[dict[str, Any]] = field(default_factory=list)
     causal_graph_events: list[dict[str, Any]] = field(default_factory=list)
     _grounding_rank_seen: int = 0
@@ -430,6 +443,7 @@ class ConceptStore:
 def apply_curated_definitions(
     store: ConceptStore,
     definitions: dict[str, CuratedDefinition],
+    source_label_exclusions: dict[str, DefinitionSourceLabelExclusion] | None = None,
 ) -> None:
     """Apply validated HabitatMech-native labels and definitions to concepts."""
     validate_curated_definitions(
@@ -437,6 +451,10 @@ def apply_curated_definitions(
         store.concepts,
         {term_id: term["label"] for term_id, term in store.ontology.terms.items()},
         path=CURATED_DEFINITIONS_PATH,
+    )
+    source_label_exclusions = source_label_exclusions or {}
+    validate_definition_source_label_exclusions(
+        source_label_exclusions, definitions, store.concepts,
     )
     for identifier, definition in definitions.items():
         concept = store.concepts[identifier]
@@ -458,12 +476,19 @@ def apply_curated_definitions(
             and norm_label(decision.object_label) == norm_label(source_label)
             for decision in concept.decisions_applied
         )
-        if {a.get("source") for a in concept.attestations} == {"PREGO"}:
+        if exclusion := source_label_exclusions.get(identifier):
+            concept.definition_source_label_exclusions_applied.append(exclusion)
+        elif {a.get("source") for a in concept.attestations} == {"PREGO"}:
             # PREGO lexical variants include stems and plurals, so keep the
             # fallback source label at PREGO's weaker synonym strength.
             concept.add_synonym(source_label, "RELATED_SYNONYM", "PREGO")
         elif not source_label_is_retained_xref:
-            concept.add_synonym(source_label, "EXACT_SYNONYM", "HabitatMech curation")
+            if (norm_label(source_label) != norm_label(concept.label)
+                    and norm_label(source_label) == norm_label(definition.parent_label)):
+                concept.add_synonym(source_label, "RELATED_SYNONYM", "HabitatMech curation")
+                concept.definition_broader_synonyms.add((source_label, definition.parent_class))
+            else:
+                concept.add_synonym(source_label, "EXACT_SYNONYM", "HabitatMech curation")
         for synonym in definition.exact_synonyms:
             concept.add_synonym(synonym, "EXACT_SYNONYM", "HabitatMech curation")
 
@@ -875,7 +900,22 @@ def ingest_gold(
         if category:
             store.set_category(concept, res.category or category, authoritative=True)
 
-        concept.add_synonym(row["leaf_label"], "EXACT_SYNONYM", "GOLD")
+        leaf_id = store.ontology.by_label.get(norm_label(row["leaf_label"]))
+        # A composed path can match exactly while its bare leaf names a genus.
+        # Keep that source spelling without asserting lexical equivalence.
+        if (leaf_id and leaf_id != res.identifier
+                and leaf_id in store.ontology.ancestors(res.identifier)
+                and res.identifier not in store.ontology.ancestors(leaf_id)):
+            concept.add_synonym(row["leaf_label"], "RELATED_SYNONYM", "GOLD")
+            concept.gold_broader_synonyms.add((row["leaf_label"], leaf_id))
+        elif res.grounding_status in RELATED_SOURCE_MAPPING_STATUSES:
+            concept.add_synonym(row["leaf_label"], "RELATED_SYNONYM", "GOLD")
+            if norm_label(row["leaf_label"]) != norm_label(concept.label):
+                scoped = (concept.close_source_synonyms if res.grounding_status == "CLOSE"
+                          else concept.broad_source_synonyms)
+                scoped.add(("GOLD", row["leaf_label"]))
+        else:
+            concept.add_synonym(row["leaf_label"], "EXACT_SYNONYM", "GOLD")
         concept.parents.update(res.extra_parents)
         concept.xrefs.update(res.extra_xrefs)
 
@@ -970,7 +1010,13 @@ def ingest_bacdive(
             store.set_category(concept, res.category, authoritative=True)
         elif concept.category is None:
             store.set_category(concept, infer_category(res.identifier, store.ontology), authoritative=False)
-        concept.add_synonym(row["label"], "EXACT_SYNONYM", "BacDive")
+        scope = ("RELATED_SYNONYM" if res.grounding_status in RELATED_SOURCE_MAPPING_STATUSES
+                 else "EXACT_SYNONYM")
+        concept.add_synonym(row["label"], scope, "BacDive")
+        if scope == "RELATED_SYNONYM" and norm_label(row["label"]) != norm_label(concept.label):
+            scoped = (concept.close_source_synonyms if res.grounding_status == "CLOSE"
+                      else concept.broad_source_synonyms)
+            scoped.add(("BacDive", row["label"]))
         concept.parents.update(res.extra_parents)
         concept.xrefs.update(res.extra_xrefs)
 
@@ -995,6 +1041,20 @@ def ingest_bacdive(
                 "source with no ontology target; treated as ungrounded rather "
                 "than re-grounded by lexical match."
             )
+            if res.decision is not None and (
+                res.identifier != automatic.identifier
+                or res.grounding_status != automatic.grounding_status
+            ):
+                attestation["notes"] = (
+                    "kg-microbe's isolation-source mapping table has no ontology "
+                    "target for this source; the automatic route leaves it ungrounded. "
+                    f"The explicit curator decision {res.decision.decision} overrides "
+                    f"that route; this source is emitted on {res.identifier}."
+                )
+                concept.attestation_corrections.add(
+                    f"Corrected {row['bacdive_id']} provenance wording to distinguish "
+                    "the declined automatic mapping from the final curator override (#1889)."
+                )
         elif automatic.route == "bacdive_non_habitat_target":
             targets = ", ".join(automatic.extra_xrefs)
             if set(automatic.extra_xrefs) <= set(res.extra_xrefs):
@@ -1094,6 +1154,15 @@ def ingest_prego(
             "source_id": prego_id,
             "source_label": store.ontology.label(prego_id) or prego_id,
         }
+        # Only GROUND maps the source to this emitted identity. A parent
+        # placement has different endpoints and remains outside this fix (#1398).
+        if (res.decision is not None and res.decision.decision == "GROUND"
+                and res.mapping_predicate):
+            attestation["mapping_predicate"] = res.mapping_predicate
+            concept.attestation_corrections.add(
+                f"Preserved curated PREGO source-to-record mapping {prego_id} "
+                f"{res.mapping_predicate} {identifier}; source counts and taxa are unchanged (#1888)."
+            )
         taxon_count = int(row.get("taxon_count") or 0)
         if taxon_count:
             attestation["assertion_count"] = taxon_count
@@ -1286,7 +1355,7 @@ def ingest_parameters(
         "salinity variability": "SALINITY_VARIABILITY",
         "pH": "PH",
     }
-    attested: set[str] = set()
+    attested: set[tuple[str, str]] = set()
     for row in rows:
         term_ids = [t for t in (row.get("term_ids") or "").split("|") if t]
         if len(term_ids) != 1:
@@ -1330,18 +1399,6 @@ def ingest_parameters(
                 res.grounding_status,
                 contributes_grounding=res.contributes_grounding,
             )
-            concept.source_concepts += 1
-            concept.reviewed_sources += 1 if res.reviewed else 0
-            if res.decision is not None:
-                concept.decisions_applied.append(res.decision)
-            concept.parents.update(res.extra_parents)
-            concept.xrefs.update(res.extra_xrefs)
-            if res.category:
-                store.set_category(concept, res.category, authoritative=True)
-            elif concept.category is None:
-                store.set_category(
-                    concept, infer_category(identifier, store.ontology), authoritative=False
-                )
             stats["concepts_created_from_parameter_table"] += 1
         parameter = parameter_names.get(row["parameter"])
         if parameter is None:
@@ -1355,8 +1412,23 @@ def ingest_parameters(
             }
         )
         stats["parameter_assertions_attached"] += 1
-        if identifier not in attested:
-            attested.add(identifier)
+        # Bands are observations of a source concept, not separate sources.
+        # Distinct env_type sources can resolve to the same habitat.
+        source_key = (identifier, mint("ENVIRONMENTS_TABLE", row["env_type"]))
+        if source_key not in attested:
+            attested.add(source_key)
+            concept.source_concepts += 1
+            concept.reviewed_sources += 1 if res.reviewed else 0
+            if res.decision is not None:
+                concept.decisions_applied.append(res.decision)
+            concept.parents.update(res.extra_parents)
+            concept.xrefs.update(res.extra_xrefs)
+            if res.category:
+                store.set_category(concept, res.category, authoritative=True)
+            elif concept.category is None:
+                store.set_category(
+                    concept, infer_category(identifier, store.ontology), authoritative=False
+                )
             concept.attestations.append(
                 {
                     "source": "ENVIRONMENTS_TABLE",
@@ -1516,9 +1588,79 @@ def build_document(concept: Concept) -> dict[str, Any]:
             ),
             timestamp=f"{exclusion.date}T00:00:00Z",
         )
+    for text, ancestor in sorted(concept.gold_broader_synonyms):
+        record_curation_event(
+            doc,
+            curator=SEED_CURATOR,
+            action="SOURCE_SYNONYM_SCOPED",
+            changes=(
+                f"Retained GOLD label {text!r} as RELATED_SYNONYM, not exact: "
+                f"its canonical ontology identity {ancestor} is a strict ancestor "
+                f"of {concept.identifier}. Source attestation remains verbatim (#1459)."
+            ),
+            timestamp="2026-10-07T00:00:00Z",
+        )
+    for source, text in sorted(concept.close_source_synonyms):
+        record_curation_event(
+            doc,
+            curator=SEED_CURATOR,
+            action="SOURCE_SYNONYM_SCOPED",
+            changes=(
+                f"Retained {source} label {text!r} as RELATED_SYNONYM: "
+                "a CLOSE source mapping does not establish exact lexical equivalence. "
+                "Independent ontology synonyms and verbatim attestations are preserved (#1459)."
+            ),
+            timestamp="2026-10-07T00:00:00Z",
+        )
+    for source, text in sorted(concept.broad_source_synonyms):
+        record_curation_event(
+            doc,
+            curator=SEED_CURATOR,
+            action="SOURCE_SYNONYM_SCOPED",
+            changes=(
+                f"Retained {source} label {text!r} as RELATED_SYNONYM: "
+                "a BROAD source mapping does not establish exact lexical equivalence. "
+                "Independent ontology synonyms and verbatim attestations are preserved (#1769)."
+            ),
+            timestamp="2026-10-09T00:00:00Z",
+        )
+    for text, genus in sorted(concept.definition_broader_synonyms):
+        record_curation_event(
+            doc,
+            curator=SEED_CURATOR,
+            action="SOURCE_SYNONYM_SCOPED",
+            changes=(
+                f"Retained displaced source label {text!r} as RELATED_SYNONYM: "
+                f"it names the authored strict genus {genus}, not the defined habitat. "
+                "Source attestation and independently authored exact aliases remain intact (#1717)."
+            ),
+            timestamp="2026-10-08T00:00:00Z",
+        )
+    for exclusion in sorted(
+        concept.definition_source_label_exclusions_applied, key=lambda e: (e.date, e.identifier)
+    ):
+        record_curation_event(
+            doc,
+            curator=exclusion.curator,
+            action="SOURCE_SYNONYM_EXCLUDED",
+            changes=(
+                f"Omitted automatic retention of displaced source label {exclusion.source_label!r} "
+                f"when defining {exclusion.identifier} as {exclusion.requested_label!r}. "
+                f"Verbatim source attestations are preserved. {exclusion.notes}"
+            ),
+            timestamp=f"{exclusion.date}T00:00:00Z",
+        )
     if concept.causal_graph_events:
         doc.setdefault("curation_history", []).extend(
             copy.deepcopy(concept.causal_graph_events)
+        )
+    for correction in sorted(concept.attestation_corrections):
+        record_curation_event(
+            doc,
+            curator=SEED_CURATOR,
+            action="SOURCE_ATTESTATION_CORRECTED",
+            changes=correction,
+            timestamp="2026-10-10T00:00:00Z",
         )
     # Chronological, so the history reads as one. The seed event is stamped
     # from the extraction time, which is usually *later* than the decisions
@@ -1904,8 +2046,12 @@ def build_corpus(
     ingest_parameters(store, parameter_rows, stats, decisions)
 
     definitions = load_curated_definitions(CURATED_DEFINITIONS_PATH)
-    apply_curated_definitions(store, definitions)
+    source_label_exclusions = load_definition_source_label_exclusions(
+        DEFINITION_SOURCE_LABEL_EXCLUSIONS_PATH
+    )
+    apply_curated_definitions(store, definitions, source_label_exclusions)
     stats["curated_definitions_loaded"] = len(definitions)
+    stats["curated_definition_source_label_exclusions_loaded"] = len(source_label_exclusions)
 
     causal_graph_curations = load_causal_graph_curations(causal_graphs_root)
     validate_causal_graph_curations(

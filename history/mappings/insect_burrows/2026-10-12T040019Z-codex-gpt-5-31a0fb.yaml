@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: insect_burrows
+session:
+  id: 2026-10-12T040019Z-codex-gpt-5-31a0fb
+  timestamp: '2026-10-12T04:00:19Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1250
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed hierarchy or mechanism for insect_burrows
+  details: 'Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1250
+    (20261012T035125Z-insect_burrows F1). GOLD.40bfbe291f retains a freshwater-sediment-qualified
+    insect-burrow source. Burrow space or construction is not sediment material. Later beaver-pond
+    sediment sample descriptions leave the exact burrow-versus-associated-material intent
+    uncertain; do not automatically substitute an annelid-specific burrow ontology class.
+    Exclude only the immediate GOLD contribution named here. Preserve source identity, node/path
+    provenance, counts/units, native status and independent parents; separate decision and
+    graph changes are recorded in their own owners. User authorized remediation and publication.
+    Dry seed and two canaries passed; full regeneration, post-fix checks, map/site and full
+    QC remain pending at event creation. Actual results will be reported in PR #1999. No scientific
+    status promotion.'

@@ -26,6 +26,17 @@ A related term that is not broader can be retained with `relation: xref`.
 `parent_habitats` is an is-a claim and must never be used merely to avoid losing
 an upstream link.
 
+A GOLD path can map exactly even when its bare leaf is broader than the
+resolved habitat. When that leaf is the canonical label of a different strict
+ontology ancestor, the seeder retains it as RELATED_SYNONYM, with a deterministic
+scope event, rather than asserting exact lexical equivalence. Source attestations
+remain verbatim. CLOSE- and BROAD-mapped GOLD and BacDive labels likewise receive
+RELATED_SYNONYM, not exact scope, with a deterministic source-scope event
+(#1459, #1769). Mapping direction alone does not establish a lexical broad or
+narrow synonym relation. Independently supplied ontology synonyms are preserved. These guards
+do not establish the scope of other source labels or repair untyped ontology
+synonyms; those still need separate review (#1249).
+
 An exact xref from an ontology that is not present in
 `data/raw/ontology_terms.tsv` can be label-verified through
 `curation/external_xrefs.tsv`. Those allow-listed terms are only valid beside a
@@ -159,6 +170,29 @@ parents inferred from source hierarchy:
   parent. Use it only after an item-level review establishes that every
   inherited parent is false for the concept, and record that evidence in the
   definition notes. It is not a way to express preference for a tighter genus.
+
+When a definition renames a source label that equals its canonical strict-genus
+label, the old label is retained as RELATED_SYNONYM with a deterministic
+`SOURCE_SYNONYM_SCOPED` event, not promoted to exact equivalence. An authored
+`exact_synonym` may not name that strict genus either. Both checks use the same
+lexical key, including punctuation, whitespace and case folding. This bounded
+guard does not assess other broader names, ancestor synonyms or definition scope;
+those still require evidence-backed review. Verbatim source attestations and unrelated
+authored exact aliases are preserved.
+
+`curation/definition_source_label_exclusions.tsv` provides an explicit opt-out
+from automatically retaining a renamed native term's old label as a synonym.
+Use it for a reviewed ambiguous label, not to change the definition or source
+attestation. Each required row pins the native identifier, exact pre-definition
+`source_label`, exact `requested_label`, curator, ISO date and evidence-based
+notes. Missing files, malformed or duplicate rows, unmatched definitions, stale
+labels and contradictions with authored exact aliases stop regeneration. The
+curation-floor check protects rows against accidental loss. Other source and
+ontology synonyms are not removed; this is not a general synonym-scope repair.
+The record receives a deterministic `SOURCE_SYNONYM_EXCLUDED` event, while its
+old definition event and verbatim attestations remain intact. Append session
+history targeting this table, inspect a canary and run the normal corpus/site
+gates after editing it. Do not infer an opt-out from free-text definition notes.
 
 For example, the diatom definition adds an organism-determined ENVO genus while
 retaining GOLD's true alga-associated parent. The inland saline-or-alkaline

@@ -5,7 +5,7 @@ grounding_status: CLOSE
 mapping_status: REVIEWED
 synonyms:
 - synonym_text: Grains/Grain products
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 parent_habitats:
 - FOODON:00001173
@@ -33,3 +33,9 @@ curation_history:
     synonym; CLOSE is used because the GOLD label bundles raw grain with derived products
     while FOODON:00001093 is food-product scoped and has no textual definition. (source
     concept habitatmech:GOLD.c25f588dad)
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Grains/Grain products'' as RELATED_SYNONYM: a CLOSE
+    source mapping does not establish exact lexical equivalence. Independent ontology
+    synonyms and verbatim attestations are preserved (#1459).'

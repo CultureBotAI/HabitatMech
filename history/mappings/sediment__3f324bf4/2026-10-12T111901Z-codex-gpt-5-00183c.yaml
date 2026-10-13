@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: sediment__3f324bf4
+session:
+  id: 2026-10-12T111901Z-codex-gpt-5-00183c
+  timestamp: '2026-10-12T11:19:01Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/pull/2023
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed saline or sediment habitat scope for sediment__3f324bf4
+  details: 'Exact source-context correction https://github.com/CultureBotAI/HabitatMech/issues/1487
+    (20261012T111119Z-sediment__3f324bf4). Marine mud-volcano sediment is material, not the
+    whole volcano. The qualified parent retains a mud-volcano feature genus, so the mismatch
+    is explicit. Later Gulf of Cadiz and Haakon Mosby samples and the S4BF isolate support
+    the sediment-versus-feature distinction without establishing one universal fluid chemistry
+    or depth. Suppress only this immediate GOLD contribution; preserve identity, source paths/nodes/counts/units,
+    omitted counts and independent genera. Original occurrence membership remains unavailable.
+    No source-scope, endpoint or SSSOM/KGX certification is implied. User authorized remediation
+    and publication. Dry seed and 36 focused regressions passed; generated record/map/site
+    and final gates remain pending at event creation. Three CLASS decisions receive individually
+    assessed ITEM genus rulings; salt-crust and salt-pond scopes remain unpromoted. Existing
+    reviews and historical session events are preserved; endpoint #1398 remains open.'

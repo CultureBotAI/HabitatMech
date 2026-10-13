@@ -3,8 +3,6 @@ label: Effluent
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.d64c9575e7
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8229
@@ -23,3 +21,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-08T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.d64c9575e7
+    for habitatmech:GOLD.3dfa6559a3 (Engineered > WWTP > A/O treatment system > Settling
+    tank > Effluent). ITEM hierarchy assessment (#1722): effluent outflow is not a
+    kind of its holding tank. The archived EPA STORET glossary (https://archive.epa.gov/storet/archive_old/ldc/glossary.htm)
+    and FRTR settling-tank glossary (https://www.frtr.gov/glossary/sterms.cfm) establish
+    the output-versus-apparatus distinction. Exclude only this immediate GOLD context
+    contribution, guarded by the current minted tank parent. Preserve GOLD8229, full
+    path, omitted counts, mint and CLASS/SEEDED lifecycle. No replacement material
+    genus, A/O expansion, treatment property or organism claim is inferred. Evidence:
+    reports/yaml_record_review/20261008T121436Z-effluent__b6295023.md.'

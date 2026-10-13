@@ -1,0 +1,11 @@
+version: 1
+repository: CultureBotAI/HabitatMech
+skills:
+  - .claude/skills/review-yaml-record/SKILL.md
+  - .claude/skills/review-yaml-category/SKILL.md
+  - .claude/skills/curate-yaml-record/SKILL.md
+rubrics:
+  - .claude/skills/curate-yaml-record/references/review-checklist.md
+  - docs/CURATION.md
+  - docs/HARMONIZATION.md
+  - docs/RESEARCH.md

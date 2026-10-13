@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: sediment__e51105ff
+session:
+  id: 2026-10-12T125529Z-codex-gpt-5-e92eb4
+  timestamp: '2026-10-12T12:55:29Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1524
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude Soda lake context parent from sediment material
+  details: 'Exact GOLD source path Environmental > Aquatic > Non-marine Saline and Alkaline
+    > Soda lake > Sediment: exclude expected parent GOLD.b11bdfbd7c, independently of the
+    corrected ITEM material genus. Current ENVO material versus lake definitions and immutable
+    review 20261012T125039Z-sediment__e51105ff support the distinction. Preserve source mint,
+    node 7889, 91 ORGANISM, category and statuses. Two full-corpus counterfactual regressions
+    and dry seed passed; canary, labels, regenerated map/site and QC follow. Shared endpoint
+    #1398 remains unresolved.'

@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: sediment__26a3aecb
+session:
+  id: 2026-10-10T083028Z-codex-gpt-5-580246
+  timestamp: '2026-10-10T08:30:28Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1874
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  summary: Apply scoped reviewed parent correction for sediment__26a3aecb
+  details: 'Reviewed hierarchy exclusion (#1874; structured review 20261010T082307Z-sediment__26a3aecb
+    F1): farm-associated sediment is not a kind of the whole marine fish farm. Exact later
+    GOLD study Gs0168224/PRJNA1028263 and BioSample SAMN37817752 distinguish the farm setting
+    from sampled sea sediment; a generic soil-metagenome taxon label is not habitat identity.
+    Exclude only the guarded GOLD context parent, retaining ENVO:00002007, mint, node 8040,
+    full path, zero-count omission and NARROW/SEEDED state. Do not import later cohort counts
+    or study conditions; shared mapping endpoint issue #1398 remains open. Dry-run seeding
+    passed, and seawater and aquarium canary YAML diffs were inspected. Four exclusion rows
+    and two ITEM decisions are covered by focused full-corpus before/after regressions. Full
+    QC, label validation, generated-site/map checks and immutable follow-up reviews remain
+    required before merge. Generated current-decision history is not append-only; prior CLASS
+    decisions are retained in Git and immutable reviews. No SSSOM/KGX readiness claim is made;
+    #1398 remains open, and #1869 remains open after partial correction.'

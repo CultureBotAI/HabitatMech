@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: wood_fall
+session:
+  id: 2026-10-07T013552Z-codex-gpt-5-bc9b07
+  timestamp: '2026-10-07T01:35:52Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: codex-gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1604
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1603
+events:
+- type: AUDIT
+  outcome: no_change
+  sections:
+  - provenance
+  summary: Correct the default actor name in the preceding wood-fall session
+  details: 'Attribution correction to history/mappings/wood_fall/2026-10-07T013515Z-claude-code-fff5f3.yaml:
+    that session and its scientific correction were performed by Codex (actor codex-gpt-5,
+    model codex-gpt-5, tool codex), not claude-code. The actor name came from the scaffolder
+    default because --actor-name was omitted; the model and tool fields were already correct.
+    This append-only audit supersedes only the earlier actor-name attribution; the earlier
+    scientific account and validation results remain valid. No second scientific edit occurred,
+    no action is attributed to the user, and the earlier record is preserved unchanged. Both
+    histories must pass schema validation.'

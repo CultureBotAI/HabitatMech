@@ -1,0 +1,819 @@
+# Paper: source, identity and hierarchy review
+
+- Review: 20261009T201157Z-paper
+- Repository: CultureBotAI/HabitatMech
+- Started UTC: 2026-10-09T19:45:46Z
+- Finished UTC: 2026-10-09T20:11:57Z
+- Reviewer: codex-gpt-5 (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The qualified GOLD Paper mint and two material parents are reproducible. The emitted NARROW/skos:narrowMatch uses an ontology parent as an implicit comparison endpoint, contradicting the declared source-to-record contract already tracked in #1398. Exact source extent relative to a sheet of paper remains limited by missing members.
+
+## Scope And Provenance
+
+Entire generated record and every contributing source concept.
+
+Selection: Exact path and identifier selected as one of the next six engineered review leads, not a claim of full corpus completion.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 24829e1d73449a2bd2815b1140099926f8b16ea0.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| habitatmech:GOLD.2241010097 | data/habitats/engineered/paper.yaml | generated | Paper |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Schema | passed | True | habitatmech:GOLD.2241010097 | No issues found. |
+| Closed schema | passed | True | habitatmech:GOLD.2241010097 | One file,zero errors. |
+| Full native QC | passed | True | habitatmech:GOLD.2241010097 | 649 passed,3 skipped; all native quality gates passed at captured baseline. |
+| Ontology labels | passed | True | habitatmech:GOLD.2241010097 | 1178 canonical,1 synonym,5 exceptions,2057 no-adapter skips; labels do not certify semantics. |
+| Existing structured reviews | passed | True | habitatmech:GOLD.2241010097 | 49 existing bundles valid before saving this batch. |
+| Input stability and full-document reproduction | passed | True | habitatmech:GOLD.2241010097 | Original55 hashes unchanged before expanded61-input native capture; full in-memory build_document equality confirmed for this target. |
+| Target causal and expression-module checks | not_applicable | False | habitatmech:GOLD.2241010097 | No target causal overlay or gene/expression claim. Full QC still validates all32 repository causal overlays. |
+| Original upstream re-extraction and per-association evidence | unavailable | False | habitatmech:GOLD.2241010097 | Original GOLD node/edge and August workbook not recovered in bounded ignored-inclusive searches; original PREGO evidence unavailable. Frozen inventory is reproducible, but membership-level ecological support remains limited. |
+
+## Scientific And Domain Assessments
+
+### Physical habitat and source identity
+
+identity: supported. Targets: habitatmech:GOLD.2241010097.
+
+The path denotes an engineered paper material/product, not an academic article. The minted identity preserves the qualified source separately from Engineered &gt; Paper. ENVO's exact paper synonym makes sheet-of-paper a plausible material parent; source depth alone does not establish a biological subtype or prove equivalence.
+
+### Exact identity, source mapping and broader scope
+
+grounding: concern. Targets: habitatmech:GOLD.2241010097.
+
+ENVO03501256 is active and defines thin processed-cellulose sheet material, with exact paper and paper sheet synonyms; ENVO00003895 is its broader paper-product parent. Do not ground the qualified source to an ontology identity merely because the shallow claimant has done so. The NARROW/attestation predicate issue is an application-endpoint defect, not evidence that SKOS universally forbids self-links.
+
+### All parent contribution routes
+
+graph: unknown. Targets: habitatmech:GOLD.2241010097.
+
+Material's authored solid manufactured material scope is compatible with the physical Paper reading. The sheet parent is lexically plausible, but no original sample confirms that the source excludes pulp, non-sheet paper products or other paper-related material. This uncertainty is retained as a limitation, not an unproved automatic parent deletion.
+
+### Frozen counts, source versions and MIxS roles
+
+quantity: supported. Targets: habitatmech:GOLD.2241010097.
+
+gold_ecosystem_paths data row1324: depth5 Paper under Engineered product &gt; Material; node8337; all counts zero. Row1344 is the separate shallow Engineered &gt; Paper source, node4387, not this target. PATHS row1538. No target decision/definition/parent exclusion; ontology paper identity ENVO03501256 has exact paper/paper sheet synonyms. The Material parent has maintained definition row94; its alias correction is not a target synonym. Current member counts are not substituted for frozen counts or summed across units. No contextual triad is adopted as target identity.
+
+### Native status, history and reproduction
+
+provenance: supported. Targets: habitatmech:GOLD.2241010097.
+
+Actual resolve_gold returns gold_narrower_than_leaf_match: retained mint GOLD.2241010097, NARROW/skos:narrowMatch, extra parent ENVO:03501256. No decision changes it. One source, zero reviewed sources. The immediate Material path contributes minted GOLD.7dd45e072b. The shallow Paper source claims the ontology via its synonym route. Both source identity and the implicit broader ontology endpoint were inspected separately. Whole-document reproduction passed. Saving this observation does not endorse prior scientific decisions or promote status.
+
+### Optional parameters, literature, graphs and datasets
+
+completeness: supported. Targets: habitatmech:GOLD.2241010097.
+
+The whole target and contributing inventories were inspected. Empty optional slots are not negative biological evidence. No parameter, causal edge, definition or characteristic-organism claim is inferred from external study examples or unrelated parent/child records.
+
+### Structured expression-module applicability
+
+evidence: not_applicable. Targets: habitatmech:GOLD.2241010097.
+
+No gene, regulator, protein or transcriptomic claim triggers iModulonDB. Not invoking that adapter is not evidence against habitat eligibility.
+
+### Native checks and scientific limits
+
+schema: supported. Targets: habitatmech:GOLD.2241010097.
+
+Required native checks passed. Mechanical validity does not adjudicate identity, parent scope or ecological support. Original upstream re-extraction is unavailable and label skips are explicit.
+
+## Findings
+
+### F1: NARROW/narrowMatch compares the retained source identity with an implicit ontology parent
+
+major / open / confirmed; issue key: gold-2241010097-mapping-endpoint-contract.
+
+The exact path mints GOLD.2241010097, which remains the record identifier. resolve_gold emits NARROW/skos:narrowMatch because ENVO03501256 is its putative broader ontology term, and ingest_gold copies that predicate into SourceAttestation. That field declares source concept -&gt; record identifier, with omission when identity is retained; GroundingStatusEnum also compares the record identifier with its sources. The ontology parent is not the declared endpoint. This is #1398's application-contract defect, not a claim that formal SKOS disallows self-links or that a specific uninspected export is wrong.
+
+## Recommended Actions And Acceptance Checks
+
+### ACT1
+
+Resolve the shared endpoint contract in #1398, distinguishing source-to-record identity from record-to-ontology-parent mappings with explicit endpoints. Preserve the qualified mint and independently justified parents; do not fix this by a global broad/narrow predicate swap.
+
+- Regression must check subject, predicate, object and status for this exact path and exact/broader/narrower control routes.
+- Audit actual downstream consumers and emitted SSSOM/KGX endpoints before claiming product compatibility.
+- Run focused schema/strict validation, corpus reproduction, native history and full QC; run label validation for grounding changes.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| E1 | data/habitats/engineered/paper.yaml; Entire generated file; immediate parents read as context | supports | ENGINEERED / NARROW / SEEDED; one GOLD node8337, parents ENVO:03501256 and habitatmech:GOLD.7dd45e072b; one seed event. No definition, synonyms, xrefs, counts, taxa, parameters, causal graphs, literature evidence, discussions or datasets. |
+| E2 | data/raw/gold_ecosystem_paths.tsv; Exact source keys; all row numbers are 1-based data rows excluding comments/header | supports | gold_ecosystem_paths data row1324: depth5 Paper under Engineered product &gt; Material; node8337; all counts zero. Row1344 is the separate shallow Engineered &gt; Paper source, node4387, not this target. PATHS row1538. No target decision/definition/parent exclusion; ontology paper identity ENVO03501256 has exact paper/paper sheet synonyms. The Material parent has maintained definition row94; its alias correction is not a target synonym. |
+| E3 | src/habitatmech/seed.py; resolve_gold, apply_decision, ingest_gold, ontology and GOLD parent contribution, build_document | supports | Actual resolve_gold returns gold_narrower_than_leaf_match: retained mint GOLD.2241010097, NARROW/skos:narrowMatch, extra parent ENVO:03501256. No decision changes it. One source, zero reviewed sources. The immediate Material path contributes minted GOLD.7dd45e072b. The shallow Paper source claims the ontology via its synonym route. Both source identity and the implicit broader ontology endpoint were inspected separately. |
+| E4 | https://gold.jgi.doe.gov/download?mode=site_excel; Complete Biosample, Organism, SequencingProject and Study sheets | partial | No exact-path BioSample or Organism member in the complete later workbook. Classification row322 retains node8337 and the complete Material &gt; Paper path. No sample-based proof of a distinct sheet subtype or chemical composition was recovered. Complete census: 244951/532019/636914/63806 rows including headers. This Oct9 snapshot is later than frozen provenance. |
+| E5 | https://gold.jgi.doe.gov/download?mode=ecosystempaths; site data, 2422 rows after reset_dimensions; terminal row stated in E4 | context_only | The exact terminal classification persists; prefix descendants were separately distinguished and never counted as exact target members. |
+| E6 | curation/; history/; research/; reports/; reviews/; data/raw/; Ignored-inclusive identifier/label/slug/mint traversal and exact structured keys | context_only | Scanned 43 curation,225 history,121 research,1274 report and98 structured-review files. Parsed all14 raw TSVs,7 top-level maintained curation tables and PATHS. No earlier native bundle targets this exact path. No target causal overlay, term request or parameter contribution was found. Original upstream membership and original PREGO association documents were not recovered. |
+| E7 | build/review-20261009o-resumed-qc.log; Fresh baseline full QC, focused schema/strict, label check and native review check | supports | QC exited0:649 passed,3 skipped;224 history records,3208 strict-valid and exactly reproduced habitats,32 causal overlays,curation floor,site,252 redirects and term-request gates pass. Each target separately passed schema and strict checks. Fresh labels:1178 canonical,1 synonym,5 exceptions,2057 no-adapter skips. Existing49 bundles valid. |
+| E8 | CLAUDE.md; Semantic invariants; docs/CURATION.md; HabitatRecord, SourceAttestation, GroundingStatusEnum and CharacteristicTaxon schema | supports | Parents must be strictly broader. Source mapping endpoints are source concept -&gt; record ID. Counts require their units; PREGO score/rank is not abundance or characteristic status. REVIEWED requires ITEM decisions for all merged sources. A review bundle does not itself promote status. |
+| S1 | https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms?obo_id=ENVO:03501256; Active terms and their official parent endpoints: ENVO:03501256, ENVO:00003895 | supports | ENVO03501256 is active and defines thin processed-cellulose sheet material, with exact paper and paper sheet synonyms; ENVO00003895 is its broader paper-product parent. Do not ground the qualified source to an ontology identity merely because the shallow claimant has done so. The NARROW/attestation predicate issue is an application-endpoint defect, not evidence that SKOS universally forbids self-links. Material's authored solid manufactured material scope is compatible with the physical Paper reading. The sheet parent is lexically plausible, but no original sample confirms that the source excludes pulp, non-sheet paper products or other paper-related material. This uncertainty is retained as a limitation, not an unproved automatic parent deletion. |
+| S2 | https://www.w3.org/TR/skos-reference/#mapping; Section10 mapping properties, particularly10.6.4-10.6.8 | supports | The mapping reference distinguishes hierarchical and equivalence links and permits hierarchical cycles/self-links; it does not repair an application's undocumented implicit endpoint. This finding is not a formal SKOS inconsistency. |
+| S3 | https://github.com/CultureBotAI/HabitatMech/issues/1398; Issue body and OPEN state inspected | context_only | Existing issue describes the same retained-mint versus implicit-ontology-parent endpoint mismatch. Paper is a fresh reproduced witness. Neither the issue nor this review certifies downstream SSSOM/KGX triples. |
+| S4 | reports/yaml_record_review/20260924T104251Z-sheet_of_paper.md; Identity and Grounding; Additional Notes | context_only | Historical review of the other Paper source calls this retained mint a narrower child. That describes the deterministic anti-conflation route; it did not audit the attestation endpoint contract and is not independent evidence of subtype scope. |
+
+## Limits And Additional Notes
+
+- Original GOLD node/edge and frozen August membership were not recovered in bounded searches. The later public workbook is not a replacement for frozen provenance.
+- All source and ontology searches are bounded. Missing examples or optional values do not establish biological absence or justify invented identities.
+- QC skips3 tests; label validation skips2057 no-adapter terms. These deterministic checks do not establish scientific correctness.
+- Read-only observation saved before separately authorized corrections/publication. Actions are proposed work, not completed fixes.
+- No paid research, source refresh, scientific status promotion or automatic resolution of historical findings.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261009T201157Z-paper
+kind: record
+repository: CultureBotAI/HabitatMech
+title: 'Paper: source, identity and hierarchy review'
+started_at: '2026-10-09T19:45:46Z'
+finished_at: '2026-10-09T20:11:57Z'
+reviewer:
+  identity: codex-gpt-5
+  kind: agent
+  model: gpt-5
+  independence: self_review
+  independence_basis: Same agent continuing scientific review and separately authorized
+    publication; no independent scientific approval claimed.
+skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'The qualified GOLD Paper mint and two material parents are reproducible.
+  The emitted NARROW/skos:narrowMatch uses an ontology parent as an implicit comparison
+  endpoint, contradicting the declared source-to-record contract already tracked in
+  #1398. Exact source extent relative to a sheet of paper remains limited by missing
+  members.'
+source:
+  git_revision: 24829e1d73449a2bd2815b1140099926f8b16ea0
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: conf/record_review.yaml
+    sha256: c2f5d0eb4c5744f5fe354c92184ddab144dc2688dba952b032b4f3d597bc08d6
+    role: context
+  - path: conf/sources.yaml
+    sha256: a8e069f9278068b57fa234f43e03c8d893f857827b83fd10cfa92d6815aed642
+    role: context
+  - path: curation/decisions.tsv
+    sha256: 0602cca13e6495da256a6f1cfd5897462f73f9739a729447862017d93c148efd
+    role: context
+  - path: curation/definition_source_label_exclusions.tsv
+    sha256: cc4da2e7e5e8750e6c023683014aa37a909230280f231eec5be7c71795340312
+    role: context
+  - path: curation/external_xrefs.tsv
+    sha256: cf8394a6ab22e35efd9e252aef422018226280830bf816a39bf4f2256ff75ad5
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: 34c70a2b13b5051130d0fc15952aeea74aafc49c3ad88a96ce67f6da41a52d12
+    role: context
+  - path: curation/redirects_retracted.tsv
+    sha256: 0f1e9af8881f5a5db19f87de06b3b3d1800cfac8101699b380388c0a1a1e9a19
+    role: context
+  - path: curation/samples/class_swept_unscreened-20260814.tsv
+    sha256: 27fce2849781b21f8fdb434aaaffac0f55e51bef84f1c1ea7d7feecd11d8471e
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 9977e384b79128d6e89c85f28e35c77d29644d503dea6d53c12628599e33f7f3
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: b59b9e800a918135e3915145d4d8098bb48dcea36a312b3004c594a57d221ae9
+    role: context
+  - path: data/habitats/engineered/bioreactor.yaml
+    sha256: c0a5f4d06130d949810c29b15f5874b4e9673b23dc188161d699412c2bea0c02
+    role: context
+  - path: data/habitats/engineered/chemical_product.yaml
+    sha256: d5039d8e0f3f8c77680371d162d7934f5ada70d63130e5a1b4bcab154bb77b1f
+    role: context
+  - path: data/habitats/engineered/city.yaml
+    sha256: 3a52eece16e4be7b9a7d1d19a57cfaac92dcb6e97c7a0bd3ef08dddad0814c7a
+    role: context
+  - path: data/habitats/engineered/industrial_wastewater.yaml
+    sha256: 07698df721a169cd55c2d1ce80027df8c8a3140536ba99eee312272887ce8768
+    role: context
+  - path: data/habitats/engineered/material.yaml
+    sha256: 01b2767b0983a3ed85de20b759119f14102b6c1333dad051466e7b94667ffa02
+    role: context
+  - path: data/habitats/engineered/organic_dairy_farm.yaml
+    sha256: c8c647d25e2d4731f1ee7bd714952d1ca00a15ccca48b0710a2f26ce955feb0c
+    role: context
+  - path: data/habitats/engineered/organic_waste_material.yaml
+    sha256: 8f0f59b82c69cc6ba5fab56d4bf40c3cf33ac8eb9ab58dd32a4b8b93875cc9c6
+    role: context
+  - path: data/habitats/engineered/paper.yaml
+    sha256: 183ff1a853f7783cb29f0404c05ac67ca018cd93a8ad34cf9e1c101223bc8793
+    role: target
+  - path: data/habitats/engineered/park.yaml
+    sha256: e3cc6bf0d136339d98fc205220b5acb12c57544e17cdd8d18b60a5b762c6163d
+    role: context
+  - path: data/habitats/engineered/partial_nitrification_anammox_pna.yaml
+    sha256: bca83d5e1f1c72ea951ec088eaf23ada93822960252f70c081b2a14b8515c957
+    role: context
+  - path: data/habitats/engineered/pcr_blank_control.yaml
+    sha256: 46f5385ddb5c38656a87918cb6a5076d1a9e1abb32a9fb739e8b71988ca3578b
+    role: context
+  - path: data/habitats/engineered/sheet_of_paper.yaml
+    sha256: 6499a0ee1a610df73a6a8b8eb32193ea88e2b45b40850c6b5cbdc627054fad6b
+    role: context
+  - path: data/habitats/engineered/solid_waste.yaml
+    sha256: 4cd78657634aca99d98863d643419c7deb56b8835d9f47d144d08247457736d4
+    role: context
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: 36df8306394c06c352b73e0bf7b47a2858784cedac7389a24d0b78f593ece646
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: f7aa39ee762d94f1902d9f08f328cb897bc543e4e226057eb4770d24bfcc6eb5
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/mappings/anaerobic_zone/2026-10-07T033547Z-codex-gpt-5-d36e47.yaml
+    sha256: f7027c603782fbc30e9e55bdf57d8649607b1ac94275c72fd49df2c8ad17998d
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reports/yaml_record_review/20260923T183929Z-aerobic_zone.md
+    sha256: 15372ba808c0ef233930195600d9fecff599f58b8379918f765f489554754ed9
+    role: context
+  - path: reports/yaml_record_review/20260924T104251Z-sheet_of_paper.md
+    sha256: cc4f1ac519d0e5d7d73e3f38ef6cc034385b7e565e506f2909d81cf538118edb
+    role: context
+  - path: reports/yaml_record_review/20261007T032222Z-anaerobic_zone.md
+    sha256: 0d18ff1020121cf559347efe6f1fe8a54e6ff0b134a23cafafb60e04ab7b5e3a
+    role: context
+  - path: reports/yaml_record_review/20261007T082502Z-biochar__4f716948.md
+    sha256: 996004cbce7c05357e71efb67b9618b6e113c95808203a7a63ae0fc4027051e5
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/extract_gold_biosamples.py
+    sha256: b6a2773c86fe718e1ca0b1d7b32709f0eee491ac813655e310aa0817c0fec31b
+    role: context
+  - path: src/habitatmech/extract.py
+    sha256: 4d9397bda649381a5daf81937369531c6dc8b4518d6c7047e6f3f14e605bf860
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 52d2a22309a1f4a10728a663560bb4d918346c292221fd34139b99b4159d3fe5
+    role: context
+  - path: src/habitatmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 92adf631fa099120a497ff7001473e659347d23ac9b418f04cd341ddad5d2a89
+    role: context
+scope:
+  description: Entire generated record and every contributing source concept.
+  selection: Exact path and identifier selected as one of the next six engineered
+    review leads, not a claim of full corpus completion.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - habitatmech:GOLD.2241010097
+  exclusions:
+  - target: All other HabitatMech records
+    reason: Parents, children, same-label concepts and source examples inform this
+      target only.
+targets:
+- target_id: habitatmech:GOLD.2241010097
+  path: data/habitats/engineered/paper.yaml
+  label: Paper
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input, source transform or generator owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input, source transform or generator owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input, source transform or generator owner
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/gold_ecosystem_paths.tsv
+    role: Maintained input, source transform or generator owner
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/prego_habitats.tsv
+    role: Maintained input, source transform or generator owner
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/prego_habitat_taxa.tsv
+    role: Maintained input, source transform or generator owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input, source transform or generator owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Maintained input, source transform or generator owner
+checks:
+- check_id: C1
+  name: Schema
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.2241010097
+  command: env UV_CACHE_DIR=build/uv-cache just validate data/habitats/engineered/paper.yaml
+  exit_code: 0
+  summary: No issues found.
+- check_id: C2
+  name: Closed schema
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.2241010097
+  command: env UV_CACHE_DIR=build/uv-cache just validate-strict data/habitats/engineered/paper.yaml
+  exit_code: 0
+  summary: One file,zero errors.
+- check_id: C3
+  name: Full native QC
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.2241010097
+  command: env UV_CACHE_DIR=build/uv-cache just qc > build/review-20261009o-resumed-qc.log
+    2>&1
+  exit_code: 0
+  summary: 649 passed,3 skipped; all native quality gates passed at captured baseline.
+- check_id: C4
+  name: Ontology labels
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.2241010097
+  command: env UV_CACHE_DIR=build/uv-cache just validate-products
+  exit_code: 0
+  summary: 1178 canonical,1 synonym,5 exceptions,2057 no-adapter skips; labels do
+    not certify semantics.
+- check_id: C5
+  name: Existing structured reviews
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.2241010097
+  command: env UV_CACHE_DIR=build/uv-cache uv run python scripts/record_review.py
+    check
+  exit_code: 0
+  summary: 49 existing bundles valid before saving this batch.
+- check_id: C6
+  name: Input stability and full-document reproduction
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.2241010097
+  exit_code: 0
+  summary: Original55 hashes unchanged before expanded61-input native capture; full
+    in-memory build_document equality confirmed for this target.
+- check_id: C7
+  name: Target causal and expression-module checks
+  status: not_applicable
+  required: false
+  target_ids:
+  - habitatmech:GOLD.2241010097
+  summary: No target causal overlay or gene/expression claim. Full QC still validates
+    all32 repository causal overlays.
+- check_id: C8
+  name: Original upstream re-extraction and per-association evidence
+  status: unavailable
+  required: false
+  target_ids:
+  - habitatmech:GOLD.2241010097
+  summary: Original GOLD node/edge and August workbook not recovered in bounded ignored-inclusive
+    searches; original PREGO evidence unavailable. Frozen inventory is reproducible,
+    but membership-level ecological support remains limited.
+evidence:
+- evidence_id: E1
+  kind: record_content
+  reference: data/habitats/engineered/paper.yaml
+  locator: Entire generated file; immediate parents read as context
+  accessed_at: '2026-10-09T20:11:57Z'
+  support: supports
+  summary: ENGINEERED / NARROW / SEEDED; one GOLD node8337, parents ENVO:03501256
+    and habitatmech:GOLD.7dd45e072b; one seed event. No definition, synonyms, xrefs,
+    counts, taxa, parameters, causal graphs, literature evidence, discussions or datasets.
+- evidence_id: E2
+  kind: record_content
+  reference: data/raw/gold_ecosystem_paths.tsv
+  locator: Exact source keys; all row numbers are 1-based data rows excluding comments/header
+  accessed_at: '2026-10-09T20:11:57Z'
+  support: supports
+  summary: 'gold_ecosystem_paths data row1324: depth5 Paper under Engineered product
+    > Material; node8337; all counts zero. Row1344 is the separate shallow Engineered
+    > Paper source, node4387, not this target. PATHS row1538. No target decision/definition/parent
+    exclusion; ontology paper identity ENVO03501256 has exact paper/paper sheet synonyms.
+    The Material parent has maintained definition row94; its alias correction is not
+    a target synonym.'
+- evidence_id: E3
+  kind: record_content
+  reference: src/habitatmech/seed.py
+  locator: resolve_gold, apply_decision, ingest_gold, ontology and GOLD parent contribution,
+    build_document
+  accessed_at: '2026-10-09T20:11:57Z'
+  support: supports
+  summary: 'Actual resolve_gold returns gold_narrower_than_leaf_match: retained mint
+    GOLD.2241010097, NARROW/skos:narrowMatch, extra parent ENVO:03501256. No decision
+    changes it. One source, zero reviewed sources. The immediate Material path contributes
+    minted GOLD.7dd45e072b. The shallow Paper source claims the ontology via its synonym
+    route. Both source identity and the implicit broader ontology endpoint were inspected
+    separately.'
+- evidence_id: E4
+  kind: database
+  reference: https://gold.jgi.doe.gov/download?mode=site_excel
+  locator: Complete Biosample, Organism, SequencingProject and Study sheets
+  accessed_at: '2026-10-09T20:11:57Z'
+  support: partial
+  summary: 'No exact-path BioSample or Organism member in the complete later workbook.
+    Classification row322 retains node8337 and the complete Material > Paper path.
+    No sample-based proof of a distinct sheet subtype or chemical composition was
+    recovered. Complete census: 244951/532019/636914/63806 rows including headers.
+    This Oct9 snapshot is later than frozen provenance.'
+  snapshot_sha256: 5f48b2f50fb2a9257754960a0f0e12dc6e8fa121e97c3e9f4497249e5fe6e439
+- evidence_id: E5
+  kind: database
+  reference: https://gold.jgi.doe.gov/download?mode=ecosystempaths
+  locator: site data, 2422 rows after reset_dimensions; terminal row stated in E4
+  accessed_at: '2026-10-09T20:11:57Z'
+  support: context_only
+  summary: The exact terminal classification persists; prefix descendants were separately
+    distinguished and never counted as exact target members.
+  snapshot_sha256: 3933e5f0664915c1bbfa00212e17d013da360fb33dd52e509254050813135396
+- evidence_id: E6
+  kind: search
+  reference: curation/; history/; research/; reports/; reviews/; data/raw/
+  locator: Ignored-inclusive identifier/label/slug/mint traversal and exact structured
+    keys
+  accessed_at: '2026-10-09T20:11:57Z'
+  support: context_only
+  summary: Scanned 43 curation,225 history,121 research,1274 report and98 structured-review
+    files. Parsed all14 raw TSVs,7 top-level maintained curation tables and PATHS.
+    No earlier native bundle targets this exact path. No target causal overlay, term
+    request or parameter contribution was found. Original upstream membership and
+    original PREGO association documents were not recovered.
+  search_scope: 'No gitignore filtering: Path.rglob and rg --no-ignore --hidden. Expected
+    GOLD_nodes.tsv, GOLD_edges.tsv and goldData.xlsx also searched under build, data/raw
+    and configured kg-microbe/data. Configured transformed/prego is missing. These
+    are bounded local-source misses, not global absence claims.'
+- evidence_id: E7
+  kind: validation
+  reference: build/review-20261009o-resumed-qc.log
+  locator: Fresh baseline full QC, focused schema/strict, label check and native review
+    check
+  accessed_at: '2026-10-09T20:11:57Z'
+  support: supports
+  summary: QC exited0:649 passed,3 skipped;224 history records,3208 strict-valid and
+    exactly reproduced habitats,32 causal overlays,curation floor,site,252 redirects
+    and term-request gates pass. Each target separately passed schema and strict checks.
+    Fresh labels:1178 canonical,1 synonym,5 exceptions,2057 no-adapter skips. Existing49
+    bundles valid.
+- evidence_id: E8
+  kind: record_content
+  reference: CLAUDE.md
+  locator: Semantic invariants; docs/CURATION.md; HabitatRecord, SourceAttestation,
+    GroundingStatusEnum and CharacteristicTaxon schema
+  accessed_at: '2026-10-09T20:11:57Z'
+  support: supports
+  summary: Parents must be strictly broader. Source mapping endpoints are source concept
+    -> record ID. Counts require their units; PREGO score/rank is not abundance or
+    characteristic status. REVIEWED requires ITEM decisions for all merged sources.
+    A review bundle does not itself promote status.
+- evidence_id: S1
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms?obo_id=ENVO:03501256
+  locator: 'Active terms and their official parent endpoints: ENVO:03501256, ENVO:00003895'
+  accessed_at: '2026-10-09T20:11:57Z'
+  support: supports
+  summary: ENVO03501256 is active and defines thin processed-cellulose sheet material,
+    with exact paper and paper sheet synonyms; ENVO00003895 is its broader paper-product
+    parent. Do not ground the qualified source to an ontology identity merely because
+    the shallow claimant has done so. The NARROW/attestation predicate issue is an
+    application-endpoint defect, not evidence that SKOS universally forbids self-links.
+    Material's authored solid manufactured material scope is compatible with the physical
+    Paper reading. The sheet parent is lexically plausible, but no original sample
+    confirms that the source excludes pulp, non-sheet paper products or other paper-related
+    material. This uncertainty is retained as a limitation, not an unproved automatic
+    parent deletion.
+- evidence_id: S2
+  kind: authority
+  reference: https://www.w3.org/TR/skos-reference/#mapping
+  locator: Section10 mapping properties, particularly10.6.4-10.6.8
+  accessed_at: '2026-10-09T20:11:57Z'
+  support: supports
+  summary: The mapping reference distinguishes hierarchical and equivalence links
+    and permits hierarchical cycles/self-links; it does not repair an application's
+    undocumented implicit endpoint. This finding is not a formal SKOS inconsistency.
+- evidence_id: S3
+  kind: prior_review
+  reference: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  locator: Issue body and OPEN state inspected
+  accessed_at: '2026-10-09T20:11:57Z'
+  support: context_only
+  summary: Existing issue describes the same retained-mint versus implicit-ontology-parent
+    endpoint mismatch. Paper is a fresh reproduced witness. Neither the issue nor
+    this review certifies downstream SSSOM/KGX triples.
+- evidence_id: S4
+  kind: prior_review
+  reference: reports/yaml_record_review/20260924T104251Z-sheet_of_paper.md
+  locator: Identity and Grounding; Additional Notes
+  accessed_at: '2026-10-09T20:11:57Z'
+  support: context_only
+  summary: Historical review of the other Paper source calls this retained mint a
+    narrower child. That describes the deterministic anti-conflation route; it did
+    not audit the attestation endpoint contract and is not independent evidence of
+    subtype scope.
+assessments:
+- assessment_id: A1
+  area: identity
+  topic: Physical habitat and source identity
+  outcome: supported
+  summary: The path denotes an engineered paper material/product, not an academic
+    article. The minted identity preserves the qualified source separately from Engineered
+    > Paper. ENVO's exact paper synonym makes sheet-of-paper a plausible material
+    parent; source depth alone does not establish a biological subtype or prove equivalence.
+  target_ids:
+  - habitatmech:GOLD.2241010097
+  evidence_ids:
+  - E1
+  - E2
+  - E4
+  - S1
+  - S2
+- assessment_id: A2
+  area: grounding
+  topic: Exact identity, source mapping and broader scope
+  outcome: concern
+  summary: ENVO03501256 is active and defines thin processed-cellulose sheet material,
+    with exact paper and paper sheet synonyms; ENVO00003895 is its broader paper-product
+    parent. Do not ground the qualified source to an ontology identity merely because
+    the shallow claimant has done so. The NARROW/attestation predicate issue is an
+    application-endpoint defect, not evidence that SKOS universally forbids self-links.
+  target_ids:
+  - habitatmech:GOLD.2241010097
+  evidence_ids:
+  - E1
+  - E2
+  - E3
+  - E8
+  - S1
+- assessment_id: A3
+  area: graph
+  topic: All parent contribution routes
+  outcome: unknown
+  summary: Material's authored solid manufactured material scope is compatible with
+    the physical Paper reading. The sheet parent is lexically plausible, but no original
+    sample confirms that the source excludes pulp, non-sheet paper products or other
+    paper-related material. This uncertainty is retained as a limitation, not an unproved
+    automatic parent deletion.
+  target_ids:
+  - habitatmech:GOLD.2241010097
+  evidence_ids:
+  - E1
+  - E2
+  - E3
+  - S1
+- assessment_id: A4
+  area: quantity
+  topic: Frozen counts, source versions and MIxS roles
+  outcome: supported
+  summary: 'gold_ecosystem_paths data row1324: depth5 Paper under Engineered product
+    > Material; node8337; all counts zero. Row1344 is the separate shallow Engineered
+    > Paper source, node4387, not this target. PATHS row1538. No target decision/definition/parent
+    exclusion; ontology paper identity ENVO03501256 has exact paper/paper sheet synonyms.
+    The Material parent has maintained definition row94; its alias correction is not
+    a target synonym. Current member counts are not substituted for frozen counts
+    or summed across units. No contextual triad is adopted as target identity.'
+  target_ids:
+  - habitatmech:GOLD.2241010097
+  evidence_ids:
+  - E1
+  - E2
+  - E4
+  - E5
+  - E8
+- assessment_id: A5
+  area: provenance
+  topic: Native status, history and reproduction
+  outcome: supported
+  summary: 'Actual resolve_gold returns gold_narrower_than_leaf_match: retained mint
+    GOLD.2241010097, NARROW/skos:narrowMatch, extra parent ENVO:03501256. No decision
+    changes it. One source, zero reviewed sources. The immediate Material path contributes
+    minted GOLD.7dd45e072b. The shallow Paper source claims the ontology via its synonym
+    route. Both source identity and the implicit broader ontology endpoint were inspected
+    separately. Whole-document reproduction passed. Saving this observation does not
+    endorse prior scientific decisions or promote status.'
+  target_ids:
+  - habitatmech:GOLD.2241010097
+  evidence_ids:
+  - E1
+  - E2
+  - E3
+  - E7
+- assessment_id: A6
+  area: completeness
+  topic: Optional parameters, literature, graphs and datasets
+  outcome: supported
+  summary: The whole target and contributing inventories were inspected. Empty optional
+    slots are not negative biological evidence. No parameter, causal edge, definition
+    or characteristic-organism claim is inferred from external study examples or unrelated
+    parent/child records.
+  target_ids:
+  - habitatmech:GOLD.2241010097
+  evidence_ids:
+  - E1
+  - E2
+  - E6
+  - E8
+- assessment_id: A7
+  area: evidence
+  topic: Structured expression-module applicability
+  outcome: not_applicable
+  summary: No gene, regulator, protein or transcriptomic claim triggers iModulonDB.
+    Not invoking that adapter is not evidence against habitat eligibility.
+  target_ids:
+  - habitatmech:GOLD.2241010097
+  evidence_ids:
+  - E1
+- assessment_id: A8
+  area: schema
+  topic: Native checks and scientific limits
+  outcome: supported
+  summary: Required native checks passed. Mechanical validity does not adjudicate
+    identity, parent scope or ecological support. Original upstream re-extraction
+    is unavailable and label skips are explicit.
+  target_ids:
+  - habitatmech:GOLD.2241010097
+  evidence_ids:
+  - E7
+findings:
+- finding_id: F1
+  issue_key: gold-2241010097-mapping-endpoint-contract
+  category: representation
+  severity: major
+  status: open
+  certainty: confirmed
+  title: NARROW/narrowMatch compares the retained source identity with an implicit
+    ontology parent
+  description: 'The exact path mints GOLD.2241010097, which remains the record identifier.
+    resolve_gold emits NARROW/skos:narrowMatch because ENVO03501256 is its putative
+    broader ontology term, and ingest_gold copies that predicate into SourceAttestation.
+    That field declares source concept -> record identifier, with omission when identity
+    is retained; GroundingStatusEnum also compares the record identifier with its
+    sources. The ontology parent is not the declared endpoint. This is #1398''s application-contract
+    defect, not a claim that formal SKOS disallows self-links or that a specific uninspected
+    export is wrong.'
+  target_ids:
+  - habitatmech:GOLD.2241010097
+  field_paths:
+  - grounding_status
+  - source_attestations[0].mapping_predicate
+  evidence_ids:
+  - E1
+  - E2
+  - E3
+  - E8
+  - S2
+  - S3
+  rule_id: HabitatMech native identity, strictly-broader parent, evidence-scope and
+    provenance rules
+  native_severity: major
+  normalization_reason: Material identity, hierarchy or source-representation concern.
+    Provisional findings retain uncertainty and do not authorize guessed corrections.
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator for proposed correction
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/schema/habitatmech.yaml
+    role: Maintained input or generator for proposed correction
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1398
+actions:
+- action_id: ACT1
+  description: 'Resolve the shared endpoint contract in #1398, distinguishing source-to-record
+    identity from record-to-ontology-parent mappings with explicit endpoints. Preserve
+    the qualified mint and independently justified parents; do not fix this by a global
+    broad/narrow predicate swap.'
+  finding_ids:
+  - F1
+  target_ids:
+  - habitatmech:GOLD.2241010097
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator for proposed correction
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/schema/habitatmech.yaml
+    role: Maintained input or generator for proposed correction
+  acceptance_checks:
+  - Regression must check subject, predicate, object and status for this exact path
+    and exact/broader/narrower control routes.
+  - Audit actual downstream consumers and emitted SSSOM/KGX endpoints before claiming
+    product compatibility.
+  - Run focused schema/strict validation, corpus reproduction, native history and
+    full QC; run label validation for grounding changes.
+  generator: Native maintained-input curation -> just seed -> just seed-canary habitatmech:GOLD.2241010097
+    -> just seed-apply --force -> just render; no hand-edited generated records.
+limitations:
+- Original GOLD node/edge and frozen August membership were not recovered in bounded
+  searches. The later public workbook is not a replacement for frozen provenance.
+- All source and ontology searches are bounded. Missing examples or optional values
+  do not establish biological absence or justify invented identities.
+- QC skips3 tests; label validation skips2057 no-adapter terms. These deterministic
+  checks do not establish scientific correctness.
+notes:
+- Read-only observation saved before separately authorized corrections/publication.
+  Actions are proposed work, not completed fixes.
+- No paid research, source refresh, scientific status promotion or automatic resolution
+  of historical findings.
+tags:
+- habitat
+- engineered
+- gold
+- record-review
+```

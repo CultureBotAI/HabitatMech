@@ -8,7 +8,7 @@ grounding_status: BROAD
 mapping_status: REVIEWED
 synonyms:
 - synonym_text: International Space Station
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: orbital space station
   synonym_type: EXACT_SYNONYM
@@ -39,3 +39,9 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: BROAD.'
+- timestamp: '2026-10-09T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''International Space Station'' as RELATED_SYNONYM:
+    a BROAD source mapping does not establish exact lexical equivalence. Independent
+    ontology synonyms and verbatim attestations are preserved (#1769).'

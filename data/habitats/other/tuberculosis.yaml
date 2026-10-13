@@ -9,8 +9,9 @@ source_attestations:
   source_label: Tuberculosis
   assertion_count: 7
   assertion_unit: STRAIN
-  notes: kg-microbe's isolation-source mapping table has a row for this source with
-    no ontology target; treated as ungrounded rather than re-grounded by lexical match.
+  notes: kg-microbe's isolation-source mapping table has no ontology target for this
+    source; the automatic route leaves it ungrounded. The explicit curator decision
+    NOT_APPLICABLE overrides that route; this source is emitted on habitatmech:BACDIVE.e5d21f85b7.
 characteristic_taxa:
 - taxon_id: NCBITaxon:1121389
   source: BACDIVE
@@ -66,3 +67,8 @@ curation_history:
     screen review (#108): Tuberculosis names a disease, not the lung, granuloma, sputum,
     or other material from which an organism was isolated. An external disease term
     supports the call but is not present in the committed slice. (source concept habitatmech:BACDIVE.e5d21f85b7)'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_ATTESTATION_CORRECTED
+  changes: Corrected bacdive.isolation_source:tuberculosis provenance wording to distinguish
+    the declined automatic mapping from the final curator override (#1889).

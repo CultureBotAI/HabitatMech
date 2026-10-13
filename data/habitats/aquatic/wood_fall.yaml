@@ -7,7 +7,6 @@ habitat_category: AQUATIC
 grounding_status: EXACT
 mapping_status: SEEDED
 parent_habitats:
-- ENVO:01000024
 - ENVO:01000138
 source_attestations:
 - source: GOLD
@@ -20,3 +19,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:01000024 for habitatmech:GOLD.615f1a92a4
+    (Environmental > Aquatic > Marine > Benthic > Wood fall). ITEM hierarchy assessment
+    (#1604): a woody accumulation on the seafloor is not a kind of the whole marine
+    benthic biome ENVO:01000024. Official ENVO a2455d1a77e46bb8a664d65a157166b539269042
+    supplies ENVO:01000138 plant matter fall as the independent genus. Kalenitchenko
+    et al. 2018 (DOI:10.1038/s41598-017-17463-2) studies deployed wood-fall analogues
+    in a benthic setting, not biome identity. Exclude only this GOLD context contribution;
+    preserve the ontology genus, GOLD5712, full path, exact predicate, count/unit
+    omission and EXACT/SEEDED state. Do not re-adjudicate Benthic''s own CLOSE mapping,
+    infer a literature-to-BioSample crosswalk or promote experimental measurements
+    to universal habitat parameters.'

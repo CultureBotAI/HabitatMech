@@ -1,0 +1,1750 @@
+schema_version: 1.0.0
+review_id: 20261012T001710Z-deep_marine_sediment
+kind: record
+repository: CultureBotAI/HabitatMech
+title: 'Scientific record review: deep_marine_sediment'
+started_at: '2026-10-12T00:07:03.582446Z'
+finished_at: '2026-10-12T00:17:10.594592Z'
+reviewer:
+  identity: OpenAI Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Agent has participated in repository curation; not independent
+    approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The sediment material identity and source-attributed qualitative bands are
+  reproducible. Deep ocean basin floor is not synonymous with arbitrary subseafloor
+  burial depth. The conditional sulfate/methane mechanism needs environmental entity
+  types and narrower evidence claims, not universal anoxia or direct selection inferred
+  from potential-rate incubations.
+source:
+  git_revision: d7a5da91ce01311a87d99fa4120d306d21ac93a3
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: conf/record_review.yaml
+    sha256: c2f5d0eb4c5744f5fe354c92184ddab144dc2688dba952b032b4f3d597bc08d6
+    role: context
+  - path: conf/sources.yaml
+    sha256: a8e069f9278068b57fa234f43e03c8d893f857827b83fd10cfa92d6815aed642
+    role: context
+  - path: curation/causal_graphs/aquatic_biome.yaml
+    sha256: 03ba09d10f9a9d8d32060fc0208b511ef0d59e731fd7c63ca6c02296e70da5f5
+    role: context
+  - path: curation/causal_graphs/deep_marine_sediment.yaml
+    sha256: eb6a68290a58ec157a4c9895e082cbba760c47b5fbe35523d3bb163af3091d0c
+    role: context
+  - path: curation/causal_graphs/fresh_water.yaml
+    sha256: e95ea96aa1912066d4c98cbff91e34528668d4c453d93dc4203c67e7769c691a
+    role: context
+  - path: curation/causal_graphs/liquid_water.yaml
+    sha256: 12aac1021b9b51c6becc4ef8509bd63557b306e42c01d9b4443d69252ce29a81
+    role: context
+  - path: curation/causal_graphs/marine_sediment.yaml
+    sha256: 8b230eb079171ab8134b648caa29878dc5015fb36362559a6a8c67fb2b433741
+    role: context
+  - path: curation/causal_graphs/marine_water_body.yaml
+    sha256: b2f81102970e9541bf61978fabdd68b7db8f9459f1ef11b467fecfc2956f238b
+    role: context
+  - path: curation/causal_graphs/sediment.yaml
+    sha256: 62b97afba9466dc64f8b5b1b3fd5d92f8b4b6bf96fe1c761af579ff7deca0e47
+    role: context
+  - path: curation/decisions.tsv
+    sha256: 7cbec6d310b1aac248defdbe657e68c0cc1e848981230d2279e63f474c6f4c96
+    role: context
+  - path: curation/definition_source_label_exclusions.tsv
+    sha256: 2d41fc93db4939122b3909f2a412b84b679703948b10d9f02e12021442f71407
+    role: context
+  - path: curation/external_xrefs.tsv
+    sha256: cf8394a6ab22e35efd9e252aef422018226280830bf816a39bf4f2256ff75ad5
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: 89671725df3555b8057c163bbd822d702cdedd9cbd2c2fd3fed619bb041f7adf
+    role: context
+  - path: curation/redirects_retracted.tsv
+    sha256: 0f1e9af8881f5a5db19f87de06b3b3d1800cfac8101699b380388c0a1a1e9a19
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 3f2ce04805defe5ff65dc20988cc72bc94d4636b3140eb1311017866bdc0ea0a
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: b59b9e800a918135e3915145d4d8098bb48dcea36a312b3004c594a57d221ae9
+    role: context
+  - path: data/habitats/aquatic/aquatic_biome.yaml
+    sha256: 27466c1abb6814aa790ecec6987d803850d0237c697c565e6fc21d1baaebfa27
+    role: context
+  - path: data/habitats/aquatic/deep_marine_sediment.yaml
+    sha256: 4d387e41cb401870877b0b9d5161d6008f3f58aa5283b98e2bf86b2315f5ecd7
+    role: target
+  - path: data/habitats/aquatic/fresh_water.yaml
+    sha256: fc60c1fc64ceea8fdf8d2d294dc96c855aa3793962f818e9cdd1b9b3cb87d1be
+    role: context
+  - path: data/habitats/aquatic/lentic_water_body.yaml
+    sha256: 6dcf68870e3d9201ffbad690f4d3a042656cf310bc87d00ffc8cd173744596dd
+    role: context
+  - path: data/habitats/aquatic/liquid_water.yaml
+    sha256: 03eb8ba51e02bc4c8b65b67ae5d8bb740746f8eff51ed81326685fdc5067b081
+    role: context
+  - path: data/habitats/aquatic/marine_sediment.yaml
+    sha256: 3ec90a8a523183bb7807e01ab1aa7d2ab5d6d2e72b0b49dbb09e447d22bd50a4
+    role: context
+  - path: data/habitats/aquatic/marine_water_body.yaml
+    sha256: 2f4bbc8c5e548c015eed7c3ff7e59df17ba70da940f7877f0d4097deebea8046
+    role: context
+  - path: data/habitats/aquatic/water_body.yaml
+    sha256: 589b017dac949a9705a816afad5094c2ee9ac1655feb1c771358a07472848239
+    role: context
+  - path: data/habitats/other/biome.yaml
+    sha256: 43080ce9bd411ee97a20d97c17bd923405c040feaf9454d44ca22a2955ce1854
+    role: context
+  - path: data/habitats/other/environmental.yaml
+    sha256: b23a64a2d7594f05716dfc8f525d184fe8bb5d885dbb9e755ba8cc844f433659
+    role: context
+  - path: data/habitats/other/environmental_system.yaml
+    sha256: 2c227791ce7b92c16ae9b76ad8295be95efee73cb65ec7050d1de2b00c8eecbc
+    role: context
+  - path: data/habitats/terrestrial/sediment.yaml
+    sha256: 850abac7c5b4cd5f033bd07f904cc8a6b4534ce8b38e94f6b99b7a3ac0f73147
+    role: context
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: 36df8306394c06c352b73e0bf7b47a2858784cedac7389a24d0b78f593ece646
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: f7aa39ee762d94f1902d9f08f328cb897bc543e4e226057eb4770d24bfcc6eb5
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reports/yaml_record_review/20260927T113801Z-deep_marine_sediment.md
+    sha256: 20d56ca4e54205031b580fc35da2feeb5f8d037c92d79ea15fd90940d83ae2f2
+    role: context
+  - path: reports/yaml_record_review/20261002T031939Z-estuarine_sediment.md
+    sha256: 841e3e589ce8d20aa5039906c0ff61dc483e5f6b0a5e0d04e6c6c11fca759d5c
+    role: context
+  - path: reports/yaml_record_review/20261003T172452Z-mangrove_sediment.md
+    sha256: e292a7643c4b448b3632987e0a0a553141369409c03485458fd88a9d4c240f81
+    role: context
+  - path: reports/yaml_record_review/20261005T102204Z-sediment__0ef8e416.md
+    sha256: 269ebd5e18fd050947e5c61ce89a2174a5806a86145556ba61720ce2f6be5520
+    role: context
+  - path: reports/yaml_record_review/20261005T102756Z-sediment__11488300.md
+    sha256: dc90148490b7d987335adfd7528aeca8d520cfcb55b196d20a5620c8ee174682
+    role: context
+  - path: reports/yaml_record_review/20261005T111306Z-sediment__2a63f0bb.md
+    sha256: cf2cbbb8deb2d553142a4c33bec289760df9bba3f37900f69ecc7106d237460f
+    role: context
+  - path: reports/yaml_record_review/20261005T112645Z-sediment__301877e9.md
+    sha256: 4f4e08398dd8adee45aaf0170a34880752d19049cd42c74aed86c54f33563ad7
+    role: context
+  - path: reports/yaml_record_review/20261005T222657Z-sediment__e63c4954.md
+    sha256: 33b512efb9d34438b8923e675c14ef8669d93cd10798c5bb6cd03db6d367e3d1
+    role: context
+  - path: reports/yaml_record_review/20261005T231034Z-sediment__e8fdcd7d.md
+    sha256: c1759e496a673e8570f4161c65c5ce9d32f2d2d6e3a5eb5a3010a30ebf678dd3
+    role: context
+  - path: research/2026-08-16-envo-foodon-term-process.md
+    sha256: db76cdbf291144b93493ba80062bbaea4471b8c972f5591d46cbbb4d1b8c4b13
+    role: context
+  - path: research/habitats/other/core-sample-habitatmech-bacdive-3bf519722c-deep-research-claude_code.md
+    sha256: 818ad0e118be0bd31e5e59e385c1ed2ce30a498936d04fb9793d1584953b7630
+    role: context
+  - path: research/habitats/terrestrial/rock-core-sediment-habitatmech-gold-20fb5b0162-deep-research-claude_code.md
+    sha256: 6025462e350f2ee3ad4df5a86685f854a5d7bbec4b1fa79eea2ee24d5f56716d
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/extract_gold_biosamples.py
+    sha256: b6a2773c86fe718e1ca0b1d7b32709f0eee491ac813655e310aa0817c0fec31b
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: 4bf5391d25ff48a2d81eb3821af6582de063fd0391440973d309dfd93016490c
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: src/habitatmech/extract.py
+    sha256: 4d9397bda649381a5daf81937369531c6dc8b4518d6c7047e6f3f14e605bf860
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 7e3cda3dadb9c7462498e5014bf38ef730068212f8f9cb131e3fce383c21d10e
+    role: context
+  - path: src/habitatmech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+  - path: src/habitatmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 4adf105e23d75c3563a516a0c160623d1065df7fcb2f31b7a0a0a8303d0401be
+    role: context
+targets:
+- target_id: ENVO:00002113
+  path: data/habitats/aquatic/deep_marine_sediment.yaml
+  label: deep marine sediment
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Source-specific identity and lifecycle decisions
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Authored definitions and genus
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Guarded source context-parent exclusions
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_terms.tsv
+    role: Pinned ontology labels, definitions and synonyms
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_subclass_edges.tsv
+    role: Pinned ontology hierarchy
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Harmonization and generated record construction
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/environment_parameters.tsv
+    role: Frozen ENVIRONMENTS_TABLE source inventory
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/madin_habitats.tsv
+    role: Frozen MADIN source inventory
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/madin_habitat_taxa.tsv
+    role: Frozen MADIN source inventory
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/prego_habitats.tsv
+    role: Frozen PREGO source inventory
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/prego_habitat_taxa.tsv
+    role: Frozen PREGO source inventory
+  - repository: CultureBotAI/HabitatMech
+    path: curation/causal_graphs/deep_marine_sediment.yaml
+    role: Curated mechanism nodes, edges and evidence
+scope:
+  description: Entire exact generated record and all contributors, with bounded claim-level
+    scientific and source-context assessment.
+  selection: 'Next forty records without a completed individual scientific review
+    in stable repository-relative path order: coalbed water through estuary. Full
+    individual observations, not a category-wide pass. Starting observation coverage568/3208
+    is not clean current-input coverage.'
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - ENVO:00002113
+  exclusions:
+  - target: Other3207 current records
+    reason: Context reads are not their full scientific review.
+checks:
+- check_id: C0
+  name: Native gate on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00002113
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=d7a5da91ce01311a87d99fa4120d306d21ac93a3
+    just validate data/habitats/aquatic/deep_marine_sediment.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-12T00:08:59.947636Z to 2026-10-12T00:09:02.676284Z.
+    Native scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C1
+  name: Native gate on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00002113
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=d7a5da91ce01311a87d99fa4120d306d21ac93a3
+    just validate-strict data/habitats/aquatic/coalbed_water__7b06811d.yaml data/habitats/aquatic/coastal_lagoon.yaml
+    data/habitats/aquatic/coastal_sea_water.yaml data/habitats/aquatic/coastal_water_body.yaml
+    data/habitats/aquatic/cold_methane_seep.yaml data/habitats/aquatic/cold_seep.yaml
+    data/habitats/aquatic/contaminated__0663aab0.yaml data/habitats/aquatic/contaminated__5ce0d64b.yaml
+    data/habitats/aquatic/continental_margin.yaml data/habitats/aquatic/coral_reef.yaml
+    data/habitats/aquatic/cove.yaml data/habitats/aquatic/crustal_fluid.yaml data/habitats/aquatic/cryoconite__08651766.yaml
+    data/habitats/aquatic/cryoconite__af2a9806.yaml data/habitats/aquatic/cryoconite_hole.yaml
+    data/habitats/aquatic/cyanobacterial_aggregates.yaml data/habitats/aquatic/cyanobacterial_bloom.yaml
+    data/habitats/aquatic/deep_marine_sediment.yaml data/habitats/aquatic/deep_subsurface__45e0aabf.yaml
+    data/habitats/aquatic/deep_subsurface__f51dcfb9.yaml data/habitats/aquatic/deepwater_brine_lake.yaml
+    data/habitats/aquatic/delivery_networks.yaml data/habitats/aquatic/demersal_zone.yaml
+    data/habitats/aquatic/desert_springs.yaml data/habitats/aquatic/diffuse_flow.yaml
+    data/habitats/aquatic/ditch_water.yaml data/habitats/aquatic/drainage_ditch.yaml
+    data/habitats/aquatic/drainage_pipe_biofilm.yaml data/habitats/aquatic/drinking_water.yaml
+    data/habitats/aquatic/drinking_water__6d6ef579.yaml data/habitats/aquatic/driven_well.yaml
+    data/habitats/aquatic/dug_well.yaml data/habitats/aquatic/epilimnion.yaml data/habitats/aquatic/epilimnion__460c092c.yaml
+    data/habitats/aquatic/epilimnion__7dae03ad.yaml data/habitats/aquatic/epipelagic.yaml
+    data/habitats/aquatic/epipelagic_euphotic_zone.yaml data/habitats/aquatic/estuarine_biome.yaml
+    data/habitats/aquatic/estuarine_sediment.yaml data/habitats/aquatic/estuary.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-12T00:09:56.233205Z to 2026-10-12T00:10:03.684679Z.
+    Native scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C2
+  name: Native gate on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00002113
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=d7a5da91ce01311a87d99fa4120d306d21ac93a3
+    just verify-corpus
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-12T00:10:03.685505Z to 2026-10-12T00:10:23.942494Z.
+    Native scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C3
+  name: Native gate on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00002113
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=d7a5da91ce01311a87d99fa4120d306d21ac93a3
+    just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-12T00:10:23.943446Z to 2026-10-12T00:11:12.117466Z.
+    Native scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C4
+  name: Native gate on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00002113
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=d7a5da91ce01311a87d99fa4120d306d21ac93a3
+    just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-12T00:11:12.118296Z to 2026-10-12T00:11:20.150315Z.
+    Native scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C5
+  name: Native gate on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00002113
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=d7a5da91ce01311a87d99fa4120d306d21ac93a3
+    just validate-causal-all
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-12T00:11:20.151509Z to 2026-10-12T00:11:24.184946Z.
+    Native scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C6
+  name: Native gate on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00002113
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=d7a5da91ce01311a87d99fa4120d306d21ac93a3
+    just term-requests-check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-12T00:11:24.186131Z to 2026-10-12T00:11:40.252238Z.
+    Native scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C7
+  name: Native gate on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00002113
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=d7a5da91ce01311a87d99fa4120d306d21ac93a3
+    just provenance-check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-12T00:11:40.253077Z to 2026-10-12T00:11:40.828540Z.
+    Native scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C8
+  name: Native gate on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00002113
+  command: gh run view 38185697616 --repo CultureBotAI/HabitatMech --log
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-12T00:08:46.244416Z to 2026-10-12T00:08:48.264332Z.
+    All three required merge-group workflows passed at the exact captured base; authoritative
+    QC passed 827 tests with 3 skipped. Newly saved review bundles require their own
+    integrity check. Exact-base CI receipt; no claim that these new review files passed
+    remote CI.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: REPRO
+  name: Complete target reconstruction
+  required: false
+  status: passed
+  target_ids:
+  - ENVO:00002113
+  command: .venv/bin/python /private/tmp/habitatmech-review-az-evidence.py
+  exit_code: 0
+  summary: All40 complete documents matched; input hashes reverified before authoring.
+  evidence_ids:
+  - RAW
+  - CODE
+- check_id: ORIGINAL
+  name: Original assertion membership
+  required: false
+  status: unavailable
+  target_ids:
+  - ENVO:00002113
+  summary: Bounded ignored-inclusive searches did not reconstruct all original assertions.
+    Later source exports are contextual evidence only.
+  evidence_ids:
+  - SEARCH
+- check_id: IMODULON
+  name: iModulonDB applicability
+  required: false
+  status: not_applicable
+  target_ids:
+  - ENVO:00002113
+  summary: No resolvable strain/dataset-specific expression claim in this record;
+    expression modules would not prove habitat occurrence.
+  evidence_ids:
+  - R
+  - RULES
+evidence:
+- evidence_id: R
+  kind: record_content
+  reference: data/habitats/aquatic/deep_marine_sediment.yaml
+  summary: The sediment material identity and source-attributed qualitative bands
+    are reproducible. Deep ocean basin floor is not synonymous with arbitrary subseafloor
+    burial depth. The conditional sulfate/methane mechanism needs environmental entity
+    types and narrower evidence claims, not universal anoxia or direct selection inferred
+    from potential-rate incubations.
+  accessed_at: '2026-10-12T00:17:10.594592Z'
+  support: supports
+  locator: Entire captured YAML read, including provenance, parameters, taxa, graphs
+    and history
+- evidence_id: RULES
+  kind: record_content
+  reference: docs/CURATION.md; docs/HARMONIZATION.md; docs/RESEARCH.md; src/habitatmech/schema/habitatmech.yaml
+  summary: Applied exact identity, strict-parent, MIxS-role, source unit/score, ITEM
+    lifecycle and claim-specific evidence contracts. TAXON is an organism/clade; COMMUNITY
+    is an interacting assemblage, not a process.
+  accessed_at: '2026-10-12T00:17:10.594592Z'
+  support: supports
+- evidence_id: RAW
+  kind: database
+  reference: data/raw; curation/decisions.tsv; curation/term_requests.tsv; curation/gold_parent_exclusions.tsv
+  summary: '{"data/raw/environment_parameters.tsv": [{"data": {"cobo_simon_habitat":
+    "marine", "env_type": "sediment_marine_deep", "main_group": "Aquatic", "parameter":
+    "Gradients", "term_ids": "ENVO:00002113", "term_labels": "deep marine sediment",
+    "value": "high"}, "logical_row": 117}, {"data": {"cobo_simon_habitat": "marine",
+    "env_type": "sediment_marine_deep", "main_group": "Aquatic", "parameter": "Pressure",
+    "term_ids": "ENVO:00002113", "term_labels": "deep marine sediment", "value": "high"},
+    "logical_row": 118}, {"data": {"cobo_simon_habitat": "marine", "env_type": "sediment_marine_deep",
+    "main_group": "Aquatic", "parameter": "Salinity", "term_ids": "ENVO:00002113",
+    "term_labels": "deep marine sediment", "value": "high"}, "logical_row": 119},
+    {"data": {"cobo_simon_habitat": "marine", "env_type": "sediment_marine_deep",
+    "main_group": "Aquatic", "parameter": "Structural", "term_ids": "ENVO:00002113",
+    "term_labels": "deep marine sediment", "value": "medium"}, "logical_row": 120},
+    {"data": {"cobo_simon_habitat": "marine", "env_type": "sediment_marine_deep",
+    "main_group": "Aquatic", "parameter": "Temperature", "term_ids": "ENVO:00002113",
+    "term_labels": "deep marine sediment", "value": "low"}, "logical_row": 121}, {"data":
+    {"cobo_simon_habitat": "marine", "env_type": "sediment_marine_deep", "main_group":
+    "Aquatic", "parameter": "Water", "term_ids": "ENVO:00002113", "term_labels": "deep
+    marine sediment", "value": "high"}, "logical_row": 122}, {"data": {"cobo_simon_habitat":
+    "marine", "env_type": "sediment_marine_deep", "main_group": "Aquatic", "parameter":
+    "pH", "term_ids": "ENVO:00002113", "term_labels": "deep marine sediment", "value":
+    "high"}, "logical_row": 123}, {"data": {"cobo_simon_habitat": "marine", "env_type":
+    "sediment_marine_deep", "main_group": "Aquatic", "parameter": "salinity variability",
+    "term_ids": "ENVO:00002113", "term_labels": "deep marine sediment", "value": "small"},
+    "logical_row": 124}, {"data": {"cobo_simon_habitat": "marine", "env_type": "sediment_marine_deep",
+    "main_group": "Aquatic", "parameter": "temp variability", "term_ids": "ENVO:00002113",
+    "term_labels": "deep marine sediment", "value": "low"}, "logical_row": 125}, {"data":
+    {"cobo_simon_habitat": "marine", "env_type": "sediment_marine_deep", "main_group":
+    "Aquatic", "parameter": "water variability", "term_ids": "ENVO:00002113", "term_labels":
+    "deep marine sediment", "value": "permanently wet"}, "logical_row": 126}], "data/raw/madin_habitat_taxa.tsv":
+    [{"data": {"corroborated_by": "PREGO", "madin_id": "ENVO:00002113", "taxon_id":
+    "NCBITaxon:234831", "taxon_label": "Pseudoalteromonas sp. SM9913"}, "logical_row":
+    436}, {"data": {"corroborated_by": "PREGO", "madin_id": "ENVO:00002113", "taxon_id":
+    "NCBITaxon:252514", "taxon_label": "microbulbifer_thermotolerans"}, "logical_row":
+    437}, {"data": {"corroborated_by": "PREGO", "madin_id": "ENVO:00002113", "taxon_id":
+    "NCBITaxon:555079", "taxon_label": "Thermosediminibacter oceani DSM 16646"}, "logical_row":
+    438}, {"data": {"corroborated_by": "", "madin_id": "ENVO:00002113", "taxon_id":
+    "NCBITaxon:1208324", "taxon_label": "celeribacter_indicus"}, "logical_row": 439},
+    {"data": {"corroborated_by": "", "madin_id": "ENVO:00002113", "taxon_id": "NCBITaxon:1267766",
+    "taxon_label": "Altererythrobacter atlanticus"}, "logical_row": 440}, {"data":
+    {"corroborated_by": "", "madin_id": "ENVO:00002113", "taxon_id": "NCBITaxon:1648404",
+    "taxon_label": "Erythrobacter atlanticus"}, "logical_row": 441}, {"data": {"corroborated_by":
+    "", "madin_id": "ENVO:00002113", "taxon_id": "NCBITaxon:1798213", "taxon_label":
+    "Pseudovibrio sp. Tun.PSC04-5.I4"}, "logical_row": 442}, {"data": {"corroborated_by":
+    "", "madin_id": "ENVO:00002113", "taxon_id": "NCBITaxon:195522", "taxon_label":
+    "Thermococcus nautili"}, "logical_row": 443}, {"data": {"corroborated_by": "",
+    "madin_id": "ENVO:00002113", "taxon_id": "NCBITaxon:211669", "taxon_label": "psychromonas_hadalis"},
+    "logical_row": 444}, {"data": {"corroborated_by": "", "madin_id": "ENVO:00002113",
+    "taxon_id": "NCBITaxon:260552", "taxon_label": "microbulbifer_agarilyticus"},
+    "logical_row": 445}, {"data": {"corroborated_by": "", "madin_id": "ENVO:00002113",
+    "taxon_id": "NCBITaxon:263358", "taxon_label": "Verrucosispora maris AB-18-032"},
+    "logical_row": 446}, {"data": {"corroborated_by": "", "madin_id": "ENVO:00002113",
+    "taxon_id": "NCBITaxon:358099", "taxon_label": "brevibacterium_oceani"}, "logical_row":
+    447}, {"data": {"corroborated_by": "", "madin_id": "ENVO:00002113", "taxon_id":
+    "NCBITaxon:358100", "taxon_label": "microbacterium_indicum"}, "logical_row": 448},
+    {"data": {"corroborated_by": "", "madin_id": "ENVO:00002113", "taxon_id": "NCBITaxon:385025",
+    "taxon_label": "Cycloclasticus sp. P1"}, "logical_row": 449}, {"data": {"corroborated_by":
+    "", "madin_id": "ENVO:00002113", "taxon_id": "NCBITaxon:388746", "taxon_label":
+    "puniceicoccus_vermicola"}, "logical_row": 450}, {"data": {"corroborated_by":
+    "", "madin_id": "ENVO:00002113", "taxon_id": "NCBITaxon:490759", "taxon_label":
+    "Marinobacter sp. BSs20148"}, "logical_row": 451}, {"data": {"corroborated_by":
+    "", "madin_id": "ENVO:00002113", "taxon_id": "NCBITaxon:74109", "taxon_label":
+    "photobacterium_profundum"}, "logical_row": 452}, {"data": {"corroborated_by":
+    "", "madin_id": "ENVO:00002113", "taxon_id": "NCBITaxon:748449", "taxon_label":
+    "Halobacteroides halobius DSM 5150"}, "logical_row": 453}, {"data": {"corroborated_by":
+    "", "madin_id": "ENVO:00002113", "taxon_id": "NCBITaxon:89067", "taxon_label":
+    "moritella_japonica"}, "logical_row": 454}], "data/raw/madin_habitats.tsv": [{"data":
+    {"label": "deep marine sediment", "madin_id": "ENVO:00002113", "taxon_count":
+    "19", "vocabulary": "ENVO"}, "logical_row": 55}], "data/raw/ontology_subclass_edges.tsv":
+    [{"data": {"object": "ENVO:03000033", "predicate": "rdfs:subClassOf", "subject":
+    "ENVO:00002113"}, "logical_row": 5311}], "data/raw/ontology_terms.tsv": [{"data":
+    {"definition": "Sediment that accumulates in the flat or very gently sloping areas
+    of the deep ocean basin floor. The three main types of deep marine sediment, also
+    known as pelagic sediment, are siliceous oozes, calcareous oozes, and red clays.",
+    "deprecated": "", "directly_referenced": "TRUE", "label": "deep marine sediment",
+    "label_only": "FALSE", "ontology": "ENVO", "synonyms": "deep marine sediments|pelagic
+    sediment {alternative name}", "term_id": "ENVO:00002113"}, "logical_row": 7203}],
+    "data/raw/prego_habitat_taxa.tsv": [{"data": {"channels": "environmental_samples",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00002113", "prego_score":
+    "4", "rank": "1", "taxon_id": "NCBITaxon:1026", "taxon_label": "Marinoscillum
+    furvescens"}, "logical_row": 5962}, {"data": {"channels": "environmental_samples",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00002113", "prego_score":
+    "4", "rank": "2", "taxon_id": "NCBITaxon:1061", "taxon_label": "Rhodobacter capsulatus"},
+    "logical_row": 5963}, {"data": {"channels": "environmental_samples", "corroborated_by":
+    "", "direct_flag": "TRUE", "prego_id": "ENVO:00002113", "prego_score": "4", "rank":
+    "3", "taxon_id": "NCBITaxon:107401", "taxon_label": "Tenacibaculum maritimum"},
+    "logical_row": 5964}, {"data": {"channels": "environmental_samples", "corroborated_by":
+    "", "direct_flag": "TRUE", "prego_id": "ENVO:00002113", "prego_score": "4", "rank":
+    "4", "taxon_id": "NCBITaxon:1082", "taxon_label": "Magnetospirillum fulvum"},
+    "logical_row": 5965}, {"data": {"channels": "environmental_samples", "corroborated_by":
+    "", "direct_flag": "TRUE", "prego_id": "ENVO:00002113", "prego_score": "4", "rank":
+    "5", "taxon_id": "NCBITaxon:1085", "taxon_label": "Rhodospirillum rubrum"}, "logical_row":
+    5966}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:00002113", "prego_score": "4", "rank": "6", "taxon_id":
+    "NCBITaxon:1086", "taxon_label": "Rhodothalassium salexigens"}, "logical_row":
+    5967}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:00002113", "prego_score": "4", "rank": "7", "taxon_id":
+    "NCBITaxon:1087", "taxon_label": "Rhodovibrio salinarum"}, "logical_row": 5968},
+    {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:00002113", "prego_score": "4", "rank": "8", "taxon_id":
+    "NCBITaxon:111770", "taxon_label": "Thiothrix fructosivorans"}, "logical_row":
+    5969}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:00002113", "prego_score": "4", "rank": "9", "taxon_id":
+    "NCBITaxon:112009", "taxon_label": "Ignatzschineria larvae"}, "logical_row": 5970},
+    {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:00002113", "prego_score": "4", "rank": "10", "taxon_id":
+    "NCBITaxon:112248", "taxon_label": "Seinonella peptonophila"}, "logical_row":
+    5971}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:00002113", "prego_score": "4", "rank": "11", "taxon_id":
+    "NCBITaxon:119864", "taxon_label": "Marinomonas mediterranea"}, "logical_row":
+    5972}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:00002113", "prego_score": "4", "rank": "12", "taxon_id":
+    "NCBITaxon:1229", "taxon_label": "Nitrosococcus oceani"}, "logical_row": 5973},
+    {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:00002113", "prego_score": "4", "rank": "13", "taxon_id":
+    "NCBITaxon:1238", "taxon_label": "Piscirickettsia salmonis"}, "logical_row": 5974},
+    {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:00002113", "prego_score": "4", "rank": "14", "taxon_id":
+    "NCBITaxon:1265", "taxon_label": "Ruminococcus flavefaciens"}, "logical_row":
+    5975}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:00002113", "prego_score": "4", "rank": "15", "taxon_id":
+    "NCBITaxon:133193", "taxon_label": "Alkalilimnicola"}, "logical_row": 5976}, {"data":
+    {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE",
+    "prego_id": "ENVO:00002113", "prego_score": "4", "rank": "16", "taxon_id": "NCBITaxon:1409",
+    "taxon_label": "Bacillus sp. (in: firmicutes)"}, "logical_row": 5977}, {"data":
+    {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE",
+    "prego_id": "ENVO:00002113", "prego_score": "4", "rank": "17", "taxon_id": "NCBITaxon:1485",
+    "taxon_label": "Clostridium"}, "logical_row": 5978}, {"data": {"channels": "environmental_samples",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00002113", "prego_score":
+    "4", "rank": "18", "taxon_id": "NCBITaxon:1505", "taxon_label": "Paraclostridium
+    sordellii"}, "logical_row": 5979}, {"data": {"channels": "environmental_samples",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00002113", "prego_score":
+    "4", "rank": "19", "taxon_id": "NCBITaxon:152268", "taxon_label": "Metabacillus
+    litoralis"}, "logical_row": 5980}, {"data": {"channels": "environmental_samples",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00002113", "prego_score":
+    "4", "rank": "20", "taxon_id": "NCBITaxon:153026", "taxon_label": "Desulforegula
+    conservatrix"}, "logical_row": 5981}, {"data": {"channels": "environmental_samples",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:00002113", "prego_score":
+    "4", "rank": "21", "taxon_id": "NCBITaxon:1537", "taxon_label": "Romboutsia lituseburensis"},
+    "logical_row": 5982}, {"data": {"channels": "environmental_samples", "corroborated_by":
+    "", "direct_flag": "TRUE", "prego_id": "ENVO:00002113", "prego_score": "4", "rank":
+    "22", "taxon_id": "NCBITaxon:158080", "taxon_label": ""}, "logical_row": 5983},
+    {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:00002113", "prego_score": "4", "rank": "23", "taxon_id":
+    "NCBITaxon:158192", "taxon_label": "Desulfuromonas michiganensis"}, "logical_row":
+    5984}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:00002113", "prego_score": "4", "rank": "24", "taxon_id":
+    "NCBITaxon:162028", "taxon_label": "Haliangium tepidum"}, "logical_row": 5985},
+    {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:00002113", "prego_score": "4", "rank": "25", "taxon_id":
+    "NCBITaxon:173", "taxon_label": "Leptospira interrogans"}, "logical_row": 5986}],
+    "data/raw/prego_habitats.tsv": [{"data": {"biolink_category": "biolink:OntologyClass",
+    "channels": "annotated_genomes_isolates|environmental_samples", "direct_assertion_count":
+    "2155", "max_prego_score": "4", "ontology": "ENVO", "prego_id": "ENVO:00002113",
+    "prego_synonyms": "marine sediment|marine sediments|pelagic sediment {alternative
+    name}", "taxon_count": "2065"}, "logical_row": 36}]}'
+  accessed_at: '2026-10-12T00:17:10.594592Z'
+  support: supports
+  locator: Exact logical TSV rows; header is row1. Neighboring source/parent matches
+    excluded.
+- evidence_id: CODE
+  kind: record_content
+  reference: src/habitatmech/seed.py
+  summary: '{"reviewed_sources": 0, "routes": [{"actual": {"category": null, "contributes_grounding":
+    true, "decision": null, "extra_parents": [], "extra_xrefs": [], "grounding_status":
+    "EXACT", "identifier": "ENVO:00002113", "mapping_predicate": null, "reviewed":
+    false, "route": "environments_table_self_grounded"}, "automatic": {"category":
+    null, "contributes_grounding": true, "decision": null, "extra_parents": [], "extra_xrefs":
+    [], "grounding_status": "EXACT", "identifier": "ENVO:00002113", "mapping_predicate":
+    null, "reviewed": false, "route": "environments_table_self_grounded"}, "minted":
+    "habitatmech:ENVIRONMENTS_TABLE.dbd62c80d0", "source": "ENVIRONMENTS_TABLE", "source_id":
+    "sediment_marine_deep"}, {"actual": {"category": null, "contributes_grounding":
+    true, "decision": null, "extra_parents": [], "extra_xrefs": [], "grounding_status":
+    "EXACT", "identifier": "ENVO:00002113", "mapping_predicate": null, "reviewed":
+    false, "route": "madin_self_grounded"}, "automatic": {"category": null, "contributes_grounding":
+    true, "decision": null, "extra_parents": [], "extra_xrefs": [], "grounding_status":
+    "EXACT", "identifier": "ENVO:00002113", "mapping_predicate": null, "reviewed":
+    false, "route": "madin_self_grounded"}, "minted": "habitatmech:MADIN.5001c198b6",
+    "source": "MADIN", "source_id": "ENVO:00002113"}, {"actual": {"category": null,
+    "contributes_grounding": true, "decision": null, "extra_parents": [], "extra_xrefs":
+    [], "grounding_status": "EXACT", "identifier": "ENVO:00002113", "mapping_predicate":
+    null, "reviewed": false, "route": "prego_self_grounded"}, "automatic": {"category":
+    null, "contributes_grounding": true, "decision": null, "extra_parents": [], "extra_xrefs":
+    [], "grounding_status": "EXACT", "identifier": "ENVO:00002113", "mapping_predicate":
+    null, "reviewed": false, "route": "prego_self_grounded"}, "minted": "habitatmech:PREGO.f1db205755",
+    "source": "PREGO", "source_id": "ENVO:00002113"}], "source_concepts": 3}'
+  accessed_at: '2026-10-12T00:17:10.594592Z'
+  support: supports
+  locator: Executed complete-document reconstruction; all40 matched captured records
+- evidence_id: ONT
+  kind: authority
+  reference: https://raw.githubusercontent.com/EnvironmentOntology/envo/master/envo.owl
+  summary: '{"ENVO:00000063": {"definitions": ["An accumulation of water of varying
+    size."], "deprecated": [], "equivalents": [], "labels": ["water body"], "parents":
+    ["http://purl.obolibrary.org/obo/ENVO_01000685", {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+    ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty":
+    ["http://purl.obolibrary.org/obo/BFO_0000050"], "http://www.w3.org/2002/07/owl#someValuesFrom":
+    ["http://purl.obolibrary.org/obo/ENVO_01000819"]}, {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+    ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty":
+    ["http://purl.obolibrary.org/obo/RO_0002354"], "http://www.w3.org/2002/07/owl#someValuesFrom":
+    ["http://purl.obolibrary.org/obo/ENVO_01001220"]}, {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+    ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty":
+    ["http://purl.obolibrary.org/obo/RO_0002473"], "http://www.w3.org/2002/07/owl#someValuesFrom":
+    ["http://purl.obolibrary.org/obo/CHEBI_15377"]}], "replacements": [], "synonyms":
+    {"hasBroadSynonym": ["hydrographic feature"], "hasExactSynonym": ["aquatic feature",
+    "bodies of water", "body of water", "waterbody"], "hasNarrowSynonym": [], "hasRelatedSynonym":
+    []}}, "ENVO:00000428": {"definitions": ["A biome is an ecosystem which is undergoing
+    climactic ecological succession."], "deprecated": [], "equivalents": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+    ["http://www.w3.org/2002/07/owl#Class"], "http://www.w3.org/2002/07/owl#intersectionOf":
+    [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first": ["http://purl.obolibrary.org/obo/ENVO_01001110"],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first":
+    [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"],
+    "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0000056"],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_01001827"]}],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"]}]}]}],
+    "labels": ["biome"], "parents": ["http://purl.obolibrary.org/obo/ENVO_01000813",
+    "http://purl.obolibrary.org/obo/ENVO_01001110", {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+    ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty":
+    ["http://purl.obolibrary.org/obo/BFO_0000050"], "http://www.w3.org/2002/07/owl#someValuesFrom":
+    ["http://purl.obolibrary.org/obo/ENVO_01000817"]}, {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+    ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty":
+    ["http://purl.obolibrary.org/obo/BFO_0000050"], "http://www.w3.org/2002/07/owl#someValuesFrom":
+    ["http://purl.obolibrary.org/obo/PCO_0000002"]}, {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+    ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty":
+    ["http://purl.obolibrary.org/obo/RO_0000056"], "http://www.w3.org/2002/07/owl#someValuesFrom":
+    ["http://purl.obolibrary.org/obo/ENVO_01001827"]}, {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+    ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty":
+    ["http://purl.obolibrary.org/obo/RO_0002507"], "http://www.w3.org/2002/07/owl#someValuesFrom":
+    ["http://purl.obolibrary.org/obo/PCO_0000002"]}], "replacements": [], "synonyms":
+    {"hasBroadSynonym": [], "hasExactSynonym": ["major habitat type"], "hasNarrowSynonym":
+    [], "hasRelatedSynonym": ["EcosytemType"]}}, "ENVO:00001999": {"definitions":
+    ["A lentic water body which is composed primarily of marine water."], "deprecated":
+    [], "equivalents": [], "labels": ["marine water body"], "parents": ["http://purl.obolibrary.org/obo/ENVO_01000617"],
+    "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": ["body
+    of marine water", "marine waterbody"], "hasNarrowSynonym": [], "hasRelatedSynonym":
+    []}}, "ENVO:00002006": {"definitions": ["An environmental material primarily composed
+    of dihydrogen oxide in its liquid form."], "deprecated": [], "equivalents": [],
+    "labels": ["liquid water"], "parents": ["http://purl.obolibrary.org/obo/ENVO_01000815",
+    {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"],
+    "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0002473"],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/CHEBI_15377"]}],
+    "replacements": [], "synonyms": {"hasBroadSynonym": ["water"], "hasExactSynonym":
+    [], "hasNarrowSynonym": [], "hasRelatedSynonym": []}}, "ENVO:00002007": {"definitions":
+    ["Particulate environmental material which is formed as a result of the transport
+    and deposition of particles by flowing liquid."], "deprecated": [], "equivalents":
+    [], "labels": ["sediment"], "parents": ["http://purl.obolibrary.org/obo/ENVO_01000060",
+    {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"],
+    "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0000086"],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/PATO_0000984"]}],
+    "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": [],
+    "hasNarrowSynonym": [], "hasRelatedSynonym": []}}, "ENVO:00002011": {"definitions":
+    ["Water which has a low concentration of dissolved solutes, particularly that
+    of sodium chloride."], "deprecated": [], "equivalents": [], "labels": ["fresh
+    water"], "parents": ["http://purl.obolibrary.org/obo/ENVO_00002006"], "replacements":
+    [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": ["freshwater"], "hasNarrowSynonym":
+    [], "hasRelatedSynonym": ["sweet water"]}}, "ENVO:00002030": {"definitions": ["A
+    biome which is determined by a water body and which has ecological climax communities
+    adapted to life in or on water."], "deprecated": [], "equivalents": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+    ["http://www.w3.org/2002/07/owl#Class"], "http://www.w3.org/2002/07/owl#intersectionOf":
+    [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first": ["http://purl.obolibrary.org/obo/ENVO_00000428"],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first":
+    [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"],
+    "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0002507"],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_00000063"]}],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"]}]}]}],
+    "labels": ["aquatic biome"], "parents": ["http://purl.obolibrary.org/obo/ENVO_00000428",
+    "http://purl.obolibrary.org/obo/ENVO_01001787"], "replacements": [], "synonyms":
+    {"hasBroadSynonym": [], "hasExactSynonym": [], "hasNarrowSynonym": [], "hasRelatedSynonym":
+    []}}, "ENVO:00002113": {"definitions": ["Sediment that accumulates in the flat
+    or very gently sloping areas of the deep ocean basin floor. The three main types
+    of deep marine sediment, also known as pelagic sediment, are siliceous oozes,
+    calcareous oozes, and red clays."], "deprecated": [], "equivalents": [], "labels":
+    ["deep marine sediment"], "parents": ["http://purl.obolibrary.org/obo/ENVO_03000033"],
+    "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": ["deep
+    marine sediments"], "hasNarrowSynonym": [], "hasRelatedSynonym": ["pelagic sediment
+    {alternative name}"]}}, "ENVO:01000254": {"definitions": ["A system which has
+    the disposition to environ one or more material entities."], "deprecated": [],
+    "equivalents": [], "labels": ["environmental system"], "parents": ["http://purl.obolibrary.org/obo/RO_0002577"],
+    "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": ["environment"],
+    "hasNarrowSynonym": [], "hasRelatedSynonym": []}}, "ENVO:01000617": {"definitions":
+    ["A lentic water body is a water body in which the accumulated water, in its totality,
+    has very little to no directed flow."], "deprecated": [], "equivalents": [], "labels":
+    ["lentic water body"], "parents": ["http://purl.obolibrary.org/obo/ENVO_00000063"],
+    "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": [],
+    "hasNarrowSynonym": [], "hasRelatedSynonym": []}}, "ENVO:03000033": {"definitions":
+    ["Sediment which has been transported through the marine water column, settling
+    on the seafloor."], "deprecated": [], "equivalents": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+    ["http://www.w3.org/2002/07/owl#Class"], "http://www.w3.org/2002/07/owl#unionOf":
+    [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+    ["http://www.w3.org/2002/07/owl#Class"], "http://www.w3.org/2002/07/owl#intersectionOf":
+    [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first": ["http://purl.obolibrary.org/obo/ENVO_00002007"],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first":
+    [{"nested": true}], "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"]}]}]}],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first":
+    [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Class"],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first":
+    ["http://purl.obolibrary.org/obo/ENVO_00002007"], "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest":
+    [{"nested": true}]}]}], "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"]}]}]}],
+    "labels": ["marine sediment"], "parents": ["http://purl.obolibrary.org/obo/ENVO_00002007",
+    {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"],
+    "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0002220"],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_00001999"]},
+    {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"],
+    "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0002353"],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_03000036"]}],
+    "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": ["marine
+    sediments"], "hasNarrowSynonym": [], "hasRelatedSynonym": []}}}'
+  accessed_at: '2026-10-11T13:21:47.927208Z'
+  support: supports
+  locator: 'Same-day official OWL: named identities, typed synonyms and direct axioms;
+    no snapshot refresh'
+  snapshot_sha256: a0b919065d33a9cf975b74cadd16c75f32f512d17f4f6d5999b74216701df54c
+- evidence_id: PARENT
+  kind: record_content
+  reference: data/habitats/aquatic/marine_sediment.yaml; data/habitats/terrestrial/sediment.yaml;
+    data/habitats/aquatic/marine_water_body.yaml; data/habitats/aquatic/lentic_water_body.yaml;
+    data/habitats/aquatic/fresh_water.yaml; data/habitats/aquatic/aquatic_biome.yaml;
+    data/habitats/other/environmental.yaml; data/habitats/other/environmental_system.yaml;
+    data/habitats/other/biome.yaml; data/habitats/aquatic/liquid_water.yaml; data/habitats/aquatic/water_body.yaml
+  summary: '{"ENVO:00000063": {"definition": "An accumulation of water of varying
+    size.", "grounding_status": "EXACT", "label": "water body", "parent_habitats":
+    ["ENVO:01000685"]}, "ENVO:00000428": {"definition": "A biome is an ecosystem which
+    is undergoing climactic ecological succession.", "grounding_status": "EXACT",
+    "label": "biome", "parent_habitats": ["ENVO:01000813", "ENVO:01001110"]}, "ENVO:00001999":
+    {"definition": "A lentic water body which is composed primarily of marine water.",
+    "grounding_status": "EXACT", "label": "marine water body", "parent_habitats":
+    ["ENVO:00002030", "ENVO:01000617"]}, "ENVO:00002006": {"definition": "An environmental
+    material primarily composed of dihydrogen oxide in its liquid form.", "grounding_status":
+    "EXACT", "label": "liquid water", "parent_habitats": ["ENVO:01000815"]}, "ENVO:00002007":
+    {"definition": "Particulate environmental material which is formed as a result
+    of the transport and deposition of particles by flowing liquid.", "grounding_status":
+    "EXACT", "label": "sediment", "parent_habitats": ["ENVO:01000060"]}, "ENVO:00002011":
+    {"definition": "Water which has a low concentration of dissolved solutes, particularly
+    that of sodium chloride.", "grounding_status": "EXACT", "label": "fresh water",
+    "parent_habitats": ["ENVO:00002006", "ENVO:00002030"]}, "ENVO:00002030": {"definition":
+    "A biome which is determined by a water body and which has ecological climax communities
+    adapted to life in or on water.", "grounding_status": "EXACT", "label": "aquatic
+    biome", "parent_habitats": ["ENVO:00000428", "ENVO:01001787", "habitatmech:BACDIVE.0f1e92a02c"]},
+    "ENVO:01000254": {"definition": "A system which has the disposition to environ
+    one or more material entities.", "grounding_status": "EXACT", "label": "environmental
+    system", "parent_habitats": null}, "ENVO:01000617": {"definition": "A lentic water
+    body is a water body in which the accumulated water, in its totality, has very
+    little to no directed flow.", "grounding_status": "EXACT", "label": "lentic water
+    body", "parent_habitats": ["ENVO:00000063", "ENVO:00002011"]}, "ENVO:03000033":
+    {"definition": "Sediment which has been transported through the marine water column,
+    settling on the seafloor.", "grounding_status": "EXACT", "label": "marine sediment",
+    "parent_habitats": ["ENVO:00001999", "ENVO:00002007"]}, "habitatmech:BACDIVE.0f1e92a02c":
+    {"definition": "An environmental system which is a portion of the air, water,
+    or land surface or subsurface of an astronomical body sampled in place, and which
+    is neither bounded by a host organism nor constituted by a constructed or operated
+    artefact.", "grounding_status": "UNGROUNDED", "label": "free-living environment",
+    "parent_habitats": ["ENVO:01000254"]}}'
+  accessed_at: '2026-10-12T00:17:10.594592Z'
+  support: supports
+  locator: Ancestor context is not full-record review coverage of ancestors
+- evidence_id: TAX0
+  kind: database
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=1026%2C1042646%2C104421%2C1048%2C1061%2C107401%2C1082%2C1085%2C1086%2C1087%2C1111728%2C1111735%2C111770%2C112009%2C1120920%2C1121392%2C1121403%2C1121416%2C1122161%2C112248%2C1123000%2C1123006%2C1123391%2C1123503%2C1123517%2C114847%2C119864%2C1208324%2C121224%2C1229%2C1238%2C1265%2C1267766%2C1314%2C133193%2C1336240%2C13686%2C1409%2C1423144%2C1485%2C1505%2C1514140%2C152268%2C153026%2C1537%2C156889%2C158080%2C158192%2C162028%2C1648404%2C1685124%2C1685125%2C1685126%2C1685127%2C1685133%2C1685135%2C1703351%2C1703352%2C173%2C1798213%2C191564%2C195522%2C1955637%2C1955672%2C1955673%2C1955674%2C1955675%2C203124%2C204428%2C2094236%2C211460%2C211669%2C214988%2C216816%2C225849%2C234831%2C238%2C252514%2C260552%2C263358%2C266940%2C2738689%2C28108%2C28254%2C2850%2C292414%2C294936%2C298386%2C3055%2C309807%2C313595%2C313603%2C313606%2C314262%2C314267%2C314291%2C3144%2C314608%2C326298%2C326442%2C349106%2C351016%2C353152%2C358099%2C358100%2C35869%2C367928%2C36987%2C370106%2C379508%2C383629%2C385025%2C388746%2C391587%2C391625%2C393595%2C398579%2C39946%2C39947%2C40518%2C406327%2C413949%2C41880%2C439497%2C441375%2C445336%2C451754%2C457416%2C46245%2C46745%2C475299%2C479639%2C48499%2C490759%2C499174%2C504472%2C508771%2C523791%2C526947%2C555079%2C556484%2C559297%2C563036%2C572477%2C575599%2C58029%2C583355%2C588581%2C598553%2C600809&retmode=xml
+  summary: 'The two chunks jointly resolve all179 requested cohort IDs. This target=[{"current_id":
+    "234831", "current_name": "Pseudoalteromonas sp. SM9913", "frozen_label": "Pseudoalteromonas
+    sp. SM9913", "id": "234831", "rank": "species"}, {"current_id": "252514", "current_name":
+    "Microbulbifer thermotolerans", "frozen_label": "microbulbifer_thermotolerans",
+    "id": "252514", "rank": "species"}, {"current_id": "555079", "current_name": "Thermosediminibacter
+    oceani DSM 16646", "frozen_label": "Thermosediminibacter oceani DSM 16646", "id":
+    "555079", "rank": "strain"}, {"current_id": "1026", "current_name": "Marinoscillum
+    furvescens", "frozen_label": "Marinoscillum furvescens", "id": "1026", "rank":
+    "species"}, {"current_id": "1061", "current_name": "Rhodobacter capsulatus", "frozen_label":
+    "Rhodobacter capsulatus", "id": "1061", "rank": "species"}, {"current_id": "107401",
+    "current_name": "Tenacibaculum maritimum", "frozen_label": "Tenacibaculum maritimum",
+    "id": "107401", "rank": "species"}, {"current_id": "1082", "current_name": "Magnetospirillum
+    fulvum", "frozen_label": "Magnetospirillum fulvum", "id": "1082", "rank": "species"},
+    {"current_id": "1085", "current_name": "Rhodospirillum rubrum", "frozen_label":
+    "Rhodospirillum rubrum", "id": "1085", "rank": "species"}, {"current_id": "1086",
+    "current_name": "Rhodothalassium salexigens", "frozen_label": "Rhodothalassium
+    salexigens", "id": "1086", "rank": "species"}, {"current_id": "1087", "current_name":
+    "Rhodovibrio salinarum", "frozen_label": "Rhodovibrio salinarum", "id": "1087",
+    "rank": "species"}, {"current_id": "111770", "current_name": "Thiothrix fructosivorans",
+    "frozen_label": "Thiothrix fructosivorans", "id": "111770", "rank": "species"},
+    {"current_id": "112009", "current_name": "Ignatzschineria larvae", "frozen_label":
+    "Ignatzschineria larvae", "id": "112009", "rank": "species"}, {"current_id": "112248",
+    "current_name": "Seinonella peptonophila", "frozen_label": "Seinonella peptonophila",
+    "id": "112248", "rank": "species"}, {"current_id": "119864", "current_name": "Marinomonas
+    mediterranea", "frozen_label": "Marinomonas mediterranea", "id": "119864", "rank":
+    "species"}, {"current_id": "1229", "current_name": "Nitrosococcus oceani", "frozen_label":
+    "Nitrosococcus oceani", "id": "1229", "rank": "species"}, {"current_id": "1238",
+    "current_name": "Piscirickettsia salmonis", "frozen_label": "Piscirickettsia salmonis",
+    "id": "1238", "rank": "species"}, {"current_id": "1265", "current_name": "Ruminococcus
+    flavefaciens", "frozen_label": "Ruminococcus flavefaciens", "id": "1265", "rank":
+    "species"}, {"current_id": "133193", "current_name": "Alkalilimnicola", "frozen_label":
+    "Alkalilimnicola", "id": "133193", "rank": "genus"}, {"current_id": "1409", "current_name":
+    "Bacillus sp. (in: firmicutes)", "frozen_label": "Bacillus sp. (in: firmicutes)",
+    "id": "1409", "rank": "species"}, {"current_id": "1485", "current_name": "Clostridium",
+    "frozen_label": "Clostridium", "id": "1485", "rank": "genus"}, {"current_id":
+    "1505", "current_name": "Paraclostridium sordellii", "frozen_label": "Paraclostridium
+    sordellii", "id": "1505", "rank": "species"}, {"current_id": "152268", "current_name":
+    "Metabacillus litoralis", "frozen_label": "Metabacillus litoralis", "id": "152268",
+    "rank": "species"}, {"current_id": "153026", "current_name": "Desulforegula conservatrix",
+    "frozen_label": "Desulforegula conservatrix", "id": "153026", "rank": "species"},
+    {"current_id": "1537", "current_name": "Romboutsia lituseburensis", "frozen_label":
+    "Romboutsia lituseburensis", "id": "1537", "rank": "species"}, {"current_id":
+    "141390", "current_name": "Chromohalobacter israelensis", "frozen_label": null,
+    "id": "158080", "rank": "species"}, {"current_id": "158192", "current_name": "Desulfuromonas
+    michiganensis", "frozen_label": "Desulfuromonas michiganensis", "id": "158192",
+    "rank": "species"}, {"current_id": "162028", "current_name": "Haliangium tepidum",
+    "frozen_label": "Haliangium tepidum", "id": "162028", "rank": "species"}, {"current_id":
+    "173", "current_name": "Leptospira interrogans", "frozen_label": "Leptospira interrogans",
+    "id": "173", "rank": "species"}, {"current_id": "1208324", "current_name": "Celeribacter
+    indicus", "frozen_label": "celeribacter_indicus", "id": "1208324", "rank": "species"},
+    {"current_id": "1267766", "current_name": "Croceibacterium atlanticum", "frozen_label":
+    "Altererythrobacter atlanticus", "id": "1267766", "rank": "species"}, {"current_id":
+    "1648404", "current_name": "Aurantiacibacter atlanticus", "frozen_label": "Erythrobacter
+    atlanticus", "id": "1648404", "rank": "species"}, {"current_id": "1798213", "current_name":
+    "Pseudovibrio sp. Tun.PSC04-5.I4", "frozen_label": "Pseudovibrio sp. Tun.PSC04-5.I4",
+    "id": "1798213", "rank": "species"}, {"current_id": "195522", "current_name":
+    "Thermococcus nautili", "frozen_label": "Thermococcus nautili", "id": "195522",
+    "rank": "species"}, {"current_id": "211669", "current_name": "Psychromonas hadalis",
+    "frozen_label": "psychromonas_hadalis", "id": "211669", "rank": "species"}, {"current_id":
+    "260552", "current_name": "Microbulbifer agarilyticus", "frozen_label": "microbulbifer_agarilyticus",
+    "id": "260552", "rank": "species"}, {"current_id": "263358", "current_name": "Micromonospora
+    maris AB-18-032", "frozen_label": "Verrucosispora maris AB-18-032", "id": "263358",
+    "rank": "strain"}, {"current_id": "358099", "current_name": "Brevibacterium oceani",
+    "frozen_label": "brevibacterium_oceani", "id": "358099", "rank": "species"}, {"current_id":
+    "358100", "current_name": "Microbacterium indicum", "frozen_label": "microbacterium_indicum",
+    "id": "358100", "rank": "species"}, {"current_id": "385025", "current_name": "Cycloclasticus
+    sp. P1", "frozen_label": "Cycloclasticus sp. P1", "id": "385025", "rank": "species"},
+    {"current_id": "388746", "current_name": "Puniceicoccus vermicola", "frozen_label":
+    "puniceicoccus_vermicola", "id": "388746", "rank": "species"}, {"current_id":
+    "490759", "current_name": "Marinobacter sp. BSs20148", "frozen_label": "Marinobacter
+    sp. BSs20148", "id": "490759", "rank": "species"}, {"current_id": "74109", "current_name":
+    "Photobacterium profundum", "frozen_label": "photobacterium_profundum", "id":
+    "74109", "rank": "species"}, {"current_id": "748449", "current_name": "Halobacteroides
+    halobius DSM 5150", "frozen_label": "Halobacteroides halobius DSM 5150", "id":
+    "748449", "rank": "strain"}, {"current_id": "89067", "current_name": "Moritella
+    japonica", "frozen_label": "moritella_japonica", "id": "89067", "rank": "species"}].
+    All noncanonical supplied names match normalized spelling or retained aliases.
+    Resolution does not establish occurrence.'
+  accessed_at: '2026-10-12T00:08:39.264271Z'
+  support: supports
+  locator: NCBI TaxId, ScientificName, Rank and OtherNames
+  snapshot_sha256: 852b0a536c5193bdac7a3af8b11710489f550ae1435ce9b3b85e84d81544eb00
+- evidence_id: TAX1
+  kind: database
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=6238%2C6334%2C642492%2C643867%2C645463%2C656912%2C675813%2C675817%2C69293%2C702459%2C70586%2C70993%2C710685%2C710992%2C7222%2C722911%2C7230%2C7244%2C7245%2C74109%2C74426%2C748449%2C761659%2C777%2C853%2C883062%2C887899%2C89067%2C991789&retmode=xml
+  summary: 'The two chunks jointly resolve all179 requested cohort IDs. This target=[{"current_id":
+    "234831", "current_name": "Pseudoalteromonas sp. SM9913", "frozen_label": "Pseudoalteromonas
+    sp. SM9913", "id": "234831", "rank": "species"}, {"current_id": "252514", "current_name":
+    "Microbulbifer thermotolerans", "frozen_label": "microbulbifer_thermotolerans",
+    "id": "252514", "rank": "species"}, {"current_id": "555079", "current_name": "Thermosediminibacter
+    oceani DSM 16646", "frozen_label": "Thermosediminibacter oceani DSM 16646", "id":
+    "555079", "rank": "strain"}, {"current_id": "1026", "current_name": "Marinoscillum
+    furvescens", "frozen_label": "Marinoscillum furvescens", "id": "1026", "rank":
+    "species"}, {"current_id": "1061", "current_name": "Rhodobacter capsulatus", "frozen_label":
+    "Rhodobacter capsulatus", "id": "1061", "rank": "species"}, {"current_id": "107401",
+    "current_name": "Tenacibaculum maritimum", "frozen_label": "Tenacibaculum maritimum",
+    "id": "107401", "rank": "species"}, {"current_id": "1082", "current_name": "Magnetospirillum
+    fulvum", "frozen_label": "Magnetospirillum fulvum", "id": "1082", "rank": "species"},
+    {"current_id": "1085", "current_name": "Rhodospirillum rubrum", "frozen_label":
+    "Rhodospirillum rubrum", "id": "1085", "rank": "species"}, {"current_id": "1086",
+    "current_name": "Rhodothalassium salexigens", "frozen_label": "Rhodothalassium
+    salexigens", "id": "1086", "rank": "species"}, {"current_id": "1087", "current_name":
+    "Rhodovibrio salinarum", "frozen_label": "Rhodovibrio salinarum", "id": "1087",
+    "rank": "species"}, {"current_id": "111770", "current_name": "Thiothrix fructosivorans",
+    "frozen_label": "Thiothrix fructosivorans", "id": "111770", "rank": "species"},
+    {"current_id": "112009", "current_name": "Ignatzschineria larvae", "frozen_label":
+    "Ignatzschineria larvae", "id": "112009", "rank": "species"}, {"current_id": "112248",
+    "current_name": "Seinonella peptonophila", "frozen_label": "Seinonella peptonophila",
+    "id": "112248", "rank": "species"}, {"current_id": "119864", "current_name": "Marinomonas
+    mediterranea", "frozen_label": "Marinomonas mediterranea", "id": "119864", "rank":
+    "species"}, {"current_id": "1229", "current_name": "Nitrosococcus oceani", "frozen_label":
+    "Nitrosococcus oceani", "id": "1229", "rank": "species"}, {"current_id": "1238",
+    "current_name": "Piscirickettsia salmonis", "frozen_label": "Piscirickettsia salmonis",
+    "id": "1238", "rank": "species"}, {"current_id": "1265", "current_name": "Ruminococcus
+    flavefaciens", "frozen_label": "Ruminococcus flavefaciens", "id": "1265", "rank":
+    "species"}, {"current_id": "133193", "current_name": "Alkalilimnicola", "frozen_label":
+    "Alkalilimnicola", "id": "133193", "rank": "genus"}, {"current_id": "1409", "current_name":
+    "Bacillus sp. (in: firmicutes)", "frozen_label": "Bacillus sp. (in: firmicutes)",
+    "id": "1409", "rank": "species"}, {"current_id": "1485", "current_name": "Clostridium",
+    "frozen_label": "Clostridium", "id": "1485", "rank": "genus"}, {"current_id":
+    "1505", "current_name": "Paraclostridium sordellii", "frozen_label": "Paraclostridium
+    sordellii", "id": "1505", "rank": "species"}, {"current_id": "152268", "current_name":
+    "Metabacillus litoralis", "frozen_label": "Metabacillus litoralis", "id": "152268",
+    "rank": "species"}, {"current_id": "153026", "current_name": "Desulforegula conservatrix",
+    "frozen_label": "Desulforegula conservatrix", "id": "153026", "rank": "species"},
+    {"current_id": "1537", "current_name": "Romboutsia lituseburensis", "frozen_label":
+    "Romboutsia lituseburensis", "id": "1537", "rank": "species"}, {"current_id":
+    "141390", "current_name": "Chromohalobacter israelensis", "frozen_label": null,
+    "id": "158080", "rank": "species"}, {"current_id": "158192", "current_name": "Desulfuromonas
+    michiganensis", "frozen_label": "Desulfuromonas michiganensis", "id": "158192",
+    "rank": "species"}, {"current_id": "162028", "current_name": "Haliangium tepidum",
+    "frozen_label": "Haliangium tepidum", "id": "162028", "rank": "species"}, {"current_id":
+    "173", "current_name": "Leptospira interrogans", "frozen_label": "Leptospira interrogans",
+    "id": "173", "rank": "species"}, {"current_id": "1208324", "current_name": "Celeribacter
+    indicus", "frozen_label": "celeribacter_indicus", "id": "1208324", "rank": "species"},
+    {"current_id": "1267766", "current_name": "Croceibacterium atlanticum", "frozen_label":
+    "Altererythrobacter atlanticus", "id": "1267766", "rank": "species"}, {"current_id":
+    "1648404", "current_name": "Aurantiacibacter atlanticus", "frozen_label": "Erythrobacter
+    atlanticus", "id": "1648404", "rank": "species"}, {"current_id": "1798213", "current_name":
+    "Pseudovibrio sp. Tun.PSC04-5.I4", "frozen_label": "Pseudovibrio sp. Tun.PSC04-5.I4",
+    "id": "1798213", "rank": "species"}, {"current_id": "195522", "current_name":
+    "Thermococcus nautili", "frozen_label": "Thermococcus nautili", "id": "195522",
+    "rank": "species"}, {"current_id": "211669", "current_name": "Psychromonas hadalis",
+    "frozen_label": "psychromonas_hadalis", "id": "211669", "rank": "species"}, {"current_id":
+    "260552", "current_name": "Microbulbifer agarilyticus", "frozen_label": "microbulbifer_agarilyticus",
+    "id": "260552", "rank": "species"}, {"current_id": "263358", "current_name": "Micromonospora
+    maris AB-18-032", "frozen_label": "Verrucosispora maris AB-18-032", "id": "263358",
+    "rank": "strain"}, {"current_id": "358099", "current_name": "Brevibacterium oceani",
+    "frozen_label": "brevibacterium_oceani", "id": "358099", "rank": "species"}, {"current_id":
+    "358100", "current_name": "Microbacterium indicum", "frozen_label": "microbacterium_indicum",
+    "id": "358100", "rank": "species"}, {"current_id": "385025", "current_name": "Cycloclasticus
+    sp. P1", "frozen_label": "Cycloclasticus sp. P1", "id": "385025", "rank": "species"},
+    {"current_id": "388746", "current_name": "Puniceicoccus vermicola", "frozen_label":
+    "puniceicoccus_vermicola", "id": "388746", "rank": "species"}, {"current_id":
+    "490759", "current_name": "Marinobacter sp. BSs20148", "frozen_label": "Marinobacter
+    sp. BSs20148", "id": "490759", "rank": "species"}, {"current_id": "74109", "current_name":
+    "Photobacterium profundum", "frozen_label": "photobacterium_profundum", "id":
+    "74109", "rank": "species"}, {"current_id": "748449", "current_name": "Halobacteroides
+    halobius DSM 5150", "frozen_label": "Halobacteroides halobius DSM 5150", "id":
+    "748449", "rank": "strain"}, {"current_id": "89067", "current_name": "Moritella
+    japonica", "frozen_label": "moritella_japonica", "id": "89067", "rank": "species"}].
+    All noncanonical supplied names match normalized spelling or retained aliases.
+    Resolution does not establish occurrence.'
+  accessed_at: '2026-10-12T00:08:41.029098Z'
+  support: supports
+  locator: NCBI TaxId, ScientificName, Rank and OtherNames
+  snapshot_sha256: c11ae3c7e8b993f26c9a6acfa12b2f12c29caa17d763c14e13a23a3e3b13f4ec
+- evidence_id: SEARCH
+  kind: search
+  reference: curation; history; research; reports; reviews; data/raw; data/habitats;
+    conf
+  summary: 'Identifier, label, slug and exact source-path searches included ignored/hidden
+    files in these roots; coverage used Path.rglob. No earlier structured observation
+    of this target found. Legacy reports were indexed; only specifically cited historical
+    reports were read in full. Upstream search={"configured_root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe",
+    "root_exists": true, "exact_paths": [{"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_nodes.tsv",
+    "exists": false, "expected_sha256": "c13c21bdd04619c75ce16e63b05e51577b0cefec5b61765d383313f654ab3fae"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_edges.tsv",
+    "exists": false, "expected_sha256": "54982c25de9d2c820eeebc1452aeac0b034595921d04d55b810bf1d2b1e127e0"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/nodes.tsv",
+    "exists": false, "expected_sha256": "a2a2f9acae230636dd866347d173a32c9f025c04a377060087a4be65781628f3"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/edges.tsv",
+    "exists": false, "expected_sha256": "ab6208bff4854db7c1a736d53d0aa04269a682ab15a1ce6f37c6d731000281d7"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/nodes.tsv",
+    "exists": false, "expected_sha256": "020de3afc71495571ddb05000c83a58d009272f53735b5f7c9326c1293e0415c"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/edges.tsv",
+    "exists": false, "expected_sha256": "8863ee3197a36915865fa4833df39d10c3f8f69b64bafbb746b9cd731308a0aa"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/nodes.tsv",
+    "exists": false, "expected_sha256": "cc5941cd677831e8e207da018dca763cd009bb1f9310b21cb4d45892316e006d"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/edges.tsv",
+    "exists": false, "expected_sha256": "fd333634eaaa3cfe57a35cdca2f4c5b8cf0662851c1df58914d3e999d62a650e"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/environments.csv",
+    "exists": false, "expected_sha256": "99299fe635159712f95568783ad3b484230fb31781262f1f6f8bd84db4bc3048"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/mappings/isolation_source_to_ontology.tsv",
+    "exists": false, "expected_sha256": "2dea3d1bb20c72a04b6f64a67e2bb2bdc4f3649b809c5935390239be2791ef1f"}],
+    "traversal": [{"command": ["rg", "--files", "--no-ignore", "--hidden", "data"],
+    "exit_code": 0, "matches": [], "stderr": ""}, {"command": ["rg", "--files", "--no-ignore",
+    "--hidden", "build"], "exit_code": 0, "matches": [], "stderr": ""}, {"command":
+    ["rg", "--files", "--no-ignore", "--hidden", "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data"],
+    "exit_code": 0, "matches": [], "stderr": ""}]}'
+  accessed_at: '2026-10-12T00:17:10.594592Z'
+  support: supports
+  locator: Bounded searches, not global absence claims
+  search_scope: 'Identifier, label, slug and exact source-path searches included ignored/hidden
+    files in these roots; coverage used Path.rglob. No earlier structured observation
+    of this target found. Legacy reports were indexed; only specifically cited historical
+    reports were read in full. Upstream search={"configured_root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe",
+    "root_exists": true, "exact_paths": [{"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_nodes.tsv",
+    "exists": false, "expected_sha256": "c13c21bdd04619c75ce16e63b05e51577b0cefec5b61765d383313f654ab3fae"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_edges.tsv",
+    "exists": false, "expected_sha256": "54982c25de9d2c820eeebc1452aeac0b034595921d04d55b810bf1d2b1e127e0"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/nodes.tsv",
+    "exists": false, "expected_sha256": "a2a2f9acae230636dd866347d173a32c9f025c04a377060087a4be65781628f3"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/edges.tsv",
+    "exists": false, "expected_sha256": "ab6208bff4854db7c1a736d53d0aa04269a682ab15a1ce6f37c6d731000281d7"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/nodes.tsv",
+    "exists": false, "expected_sha256": "020de3afc71495571ddb05000c83a58d009272f53735b5f7c9326c1293e0415c"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/edges.tsv",
+    "exists": false, "expected_sha256": "8863ee3197a36915865fa4833df39d10c3f8f69b64bafbb746b9cd731308a0aa"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/nodes.tsv",
+    "exists": false, "expected_sha256": "cc5941cd677831e8e207da018dca763cd009bb1f9310b21cb4d45892316e006d"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/edges.tsv",
+    "exists": false, "expected_sha256": "fd333634eaaa3cfe57a35cdca2f4c5b8cf0662851c1df58914d3e999d62a650e"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/environments.csv",
+    "exists": false, "expected_sha256": "99299fe635159712f95568783ad3b484230fb31781262f1f6f8bd84db4bc3048"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/mappings/isolation_source_to_ontology.tsv",
+    "exists": false, "expected_sha256": "2dea3d1bb20c72a04b6f64a67e2bb2bdc4f3649b809c5935390239be2791ef1f"}],
+    "traversal": [{"command": ["rg", "--files", "--no-ignore", "--hidden", "data"],
+    "exit_code": 0, "matches": [], "stderr": ""}, {"command": ["rg", "--files", "--no-ignore",
+    "--hidden", "build"], "exit_code": 0, "matches": [], "stderr": ""}, {"command":
+    ["rg", "--files", "--no-ignore", "--hidden", "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data"],
+    "exit_code": 0, "matches": [], "stderr": ""}]}'
+- evidence_id: ISSUES
+  kind: database
+  reference: https://github.com/CultureBotAI/HabitatMech/issues
+  summary: All-state953-issue title/body census inspected for overlap. Shared1249
+    and1398 apply where cited. Historical target-review follow-up issues are not evidence
+    that current scientific scope findings were repaired. Comments were not exhaustively
+    crawled.
+  accessed_at: '2026-10-12T00:17:10.594592Z'
+  support: supports
+  locator: GitHub CLI census and selected full issue bodies
+- evidence_id: GRAPH
+  kind: record_content
+  reference: curation/causal_graphs/deep_marine_sediment.yaml
+  summary: 'Entire overlay read: twelve nodes and fifteen evidence-bearing edges;
+    generated graph reproduced.'
+  accessed_at: '2026-10-12T00:17:10.594592Z'
+  support: supports
+  locator: Full overlay including history
+- evidence_id: PMID-15618510
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A15618510+AND+SRC%3AMED&format=json&resultType=core
+  summary: 'Bibliographic identity and complete abstract inspected: Distributions
+    of microbial activities in deep subseafloor sediments.; DOI:10.1126/science.1101155.
+    Evidence scope is assessed separately for each edge.'
+  accessed_at: '2026-10-12T00:08:43.078124Z'
+  support: supports
+  locator: Europe PMC core metadata and abstract
+  snapshot_sha256: 401254fc87334dc015d6c925f531a478dc3f5aa3b773bb5d7054be4266914463
+- evidence_id: PMID-35308366
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A35308366+AND+SRC%3AMED&format=json&resultType=core
+  summary: 'Bibliographic identity and complete abstract inspected: Biological Sulfate
+    Reduction in Deep Subseafloor Sediment of Guaymas Basin.; DOI:10.3389/fmicb.2022.845250.
+    Evidence scope is assessed separately for each edge.'
+  accessed_at: '2026-10-12T00:08:45.192873Z'
+  support: supports
+  locator: Europe PMC core metadata and abstract
+  snapshot_sha256: bba018065eab9863bccd950a8f33277fb5185721e5963657bcaa70ceebeb4c15
+- evidence_id: PMID-30194429
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A30194429+AND+SRC%3AMED&format=json&resultType=core
+  summary: 'Bibliographic identity and complete abstract inspected: Cryptic CH<sub>4</sub>
+    cycling in the sulfate-methane transition of marine sediments apparently mediated
+    by ANME-1 archaea.; DOI:10.1038/s41396-018-0273-z. Evidence scope is assessed
+    separately for each edge.'
+  accessed_at: '2026-10-12T00:08:44.128359Z'
+  support: supports
+  locator: Europe PMC core metadata and abstract
+  snapshot_sha256: 2f3e0c55a77725c52a494d7854cc29ec4f430e330397d563a73e82c800f8e11f
+- evidence_id: PMID-11034209
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11034209+AND+SRC%3AMED&format=json&resultType=core
+  summary: 'Bibliographic identity and complete abstract inspected: A marine microbial
+    consortium apparently mediating anaerobic oxidation of methane.; DOI:10.1038/35036572.
+    Evidence scope is assessed separately for each edge.'
+  accessed_at: '2026-10-12T00:08:42.028915Z'
+  support: supports
+  locator: Europe PMC core metadata and abstract
+  snapshot_sha256: d3c48176800e744284408780f73d0f7bff328ad04b303cd92e3cc4331d5f2a9b
+- evidence_id: NAGAKURA
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8927301/fullTextXML
+  summary: Full article body read. Guaymas incubations measure potential sulfate reduction
+    in amended slurries under selected pressure/temperature conditions, not unaltered
+    in-situ rates. Introduction supports conditional zonation; authors acknowledge
+    missing community analysis.
+  accessed_at: '2026-10-12T00:10:19.207750Z'
+  support: supports
+  locator: Introduction, Methods, Results and Discussion; 67 body paragraphs; DOI10.3389/fmicb.2022.845250
+  snapshot_sha256: 8c455e1eeeed0fc30eaea5c2664604daf04b1ee9b7b21e422a1db610acc6b042
+assessments:
+- assessment_id: EDGE-deep_sediment_buries_marine_organic_matter
+  area: evidence
+  topic: deep_sediment_buries_marine_organic_matter
+  outcome: supported
+  summary: D Hondt abstract supports buried organic matter and subseafloor activity
+    context, not every deep-ocean floor setting or uniform activity.
+  target_ids:
+  - ENVO:00002113
+  evidence_ids:
+  - GRAPH
+  - RULES
+  - ONT
+  - PMID-15618510
+  - PMID-35308366
+  - PMID-30194429
+  - PMID-11034209
+  - NAGAKURA
+- assessment_id: EDGE-organic_burial_creates_anoxic_porewater
+  area: evidence
+  topic: organic_burial_creates_anoxic_porewater
+  outcome: concern
+  summary: Nagakura introduction supports oxidant consumption conditionally. D Hondt
+    reports oxygen/nitrate supply from basaltic aquifers; burial does not universally
+    leave all deep porewaters anoxic.
+  target_ids:
+  - ENVO:00002113
+  evidence_ids:
+  - GRAPH
+  - RULES
+  - ONT
+  - PMID-15618510
+  - PMID-35308366
+  - PMID-30194429
+  - PMID-11034209
+  - NAGAKURA
+- assessment_id: EDGE-seawater_supplies_sulfate
+  area: evidence
+  topic: seawater_supplies_sulfate
+  outcome: supported
+  summary: Nagakura introduction explicitly describes downward sulfate diffusion;
+    Beulig abstract concerns a marine sulfate-methane transition. Retain supply as
+    conditional, not universal persistence depth.
+  target_ids:
+  - ENVO:00002113
+  evidence_ids:
+  - GRAPH
+  - RULES
+  - ONT
+  - PMID-15618510
+  - PMID-35308366
+  - PMID-30194429
+  - PMID-11034209
+  - NAGAKURA
+- assessment_id: EDGE-anoxic_sediment_selects_sulfate_reducers
+  area: evidence
+  topic: anoxic_sediment_selects_sulfate_reducers
+  outcome: concern
+  summary: Nagakura measured potential sulfate-reduction rates in amended slurries
+    and notes missing community analysis. Selection of a community by anoxia is not
+    directly demonstrated.
+  target_ids:
+  - ENVO:00002113
+  evidence_ids:
+  - GRAPH
+  - RULES
+  - ONT
+  - PMID-15618510
+  - PMID-35308366
+  - PMID-30194429
+  - PMID-11034209
+  - NAGAKURA
+- assessment_id: EDGE-sulfate_reducers_perform_sulfate_reduction
+  area: evidence
+  topic: sulfate_reducers_perform_sulfate_reduction
+  outcome: supported
+  summary: Nagakura introduction and rate measurements support sulfate reducers carrying
+    out sulfate reduction. Potential incubation rates are not unaltered in-situ rates.
+  target_ids:
+  - ENVO:00002113
+  evidence_ids:
+  - GRAPH
+  - RULES
+  - ONT
+  - PMID-15618510
+  - PMID-35308366
+  - PMID-30194429
+  - PMID-11034209
+  - NAGAKURA
+- assessment_id: EDGE-sulfate_reduction_consumes_organic_matter
+  area: evidence
+  topic: sulfate_reduction_consumes_organic_matter
+  outcome: supported
+  summary: Nagakura describes organoclastic sulfate reduction, while also distinguishing
+    methane as an electron donor. Organic-matter degradation is a supported branch,
+    not the only sulfate-reduction mechanism.
+  target_ids:
+  - ENVO:00002113
+  evidence_ids:
+  - GRAPH
+  - RULES
+  - ONT
+  - PMID-15618510
+  - PMID-35308366
+  - PMID-30194429
+  - PMID-11034209
+  - NAGAKURA
+- assessment_id: EDGE-depleted_sulfate_permits_methanogenic_sediment
+  area: evidence
+  topic: depleted_sulfate_permits_methanogenic_sediment
+  outcome: concern
+  summary: Sulfate depletion can permit a methanogenic zone; creates overstates necessity
+    and causality. D Hondt abstract emphasizes departures from the standard zonation
+    model.
+  target_ids:
+  - ENVO:00002113
+  evidence_ids:
+  - GRAPH
+  - RULES
+  - ONT
+  - PMID-15618510
+  - PMID-35308366
+  - PMID-30194429
+  - PMID-11034209
+  - NAGAKURA
+- assessment_id: EDGE-methanogenic_sediment_produces_methane
+  area: evidence
+  topic: methanogenic_sediment_produces_methane
+  outcome: unknown
+  summary: D Hondt abstract covers activity distributions but does not establish the
+    detailed claim that this study quantified sediment-column methanogenesis. Full
+    Science text was inaccessible. Environmental sediment is not a physicochemical-axis
+    node.
+  target_ids:
+  - ENVO:00002113
+  evidence_ids:
+  - GRAPH
+  - RULES
+  - ONT
+  - PMID-15618510
+  - PMID-35308366
+  - PMID-30194429
+  - PMID-11034209
+  - NAGAKURA
+- assessment_id: EDGE-methane_and_sulfate_form_smtz
+  area: evidence
+  topic: methane_and_sulfate_form_smtz
+  outcome: supported
+  summary: Beulig abstract supports methane/sulfate overlap in a marine SMT; Nagakura
+    introduction explicitly describes opposing diffusion. This does not establish
+    every site has identical gradients.
+  target_ids:
+  - ENVO:00002113
+  evidence_ids:
+  - GRAPH
+  - RULES
+  - ONT
+  - PMID-15618510
+  - PMID-35308366
+  - PMID-30194429
+  - PMID-11034209
+  - NAGAKURA
+- assessment_id: EDGE-sulfate_and_methane_form_smtz
+  area: evidence
+  topic: sulfate_and_methane_form_smtz
+  outcome: supported
+  summary: Same bounded sulfate/methane overlap; two edges encode complementary participants
+    rather than two independent observations.
+  target_ids:
+  - ENVO:00002113
+  evidence_ids:
+  - GRAPH
+  - RULES
+  - ONT
+  - PMID-15618510
+  - PMID-35308366
+  - PMID-30194429
+  - PMID-11034209
+  - NAGAKURA
+- assessment_id: EDGE-smtz_hosts_anme
+  area: evidence
+  topic: smtz_hosts_anme
+  outcome: supported
+  summary: Beulig abstract reports ANME-1-associated cryptic cycling, supporting presence
+    in studied SMT settings. A generic all-SMT clade claim is broader.
+  target_ids:
+  - ENVO:00002113
+  evidence_ids:
+  - GRAPH
+  - RULES
+  - ONT
+  - PMID-15618510
+  - PMID-35308366
+  - PMID-30194429
+  - PMID-11034209
+  - NAGAKURA
+- assessment_id: EDGE-smtz_hosts_sulfate_reducers
+  area: evidence
+  topic: smtz_hosts_sulfate_reducers
+  outcome: unknown
+  summary: Boetius abstract reports sulfate-reducing bacterial partners in gas-hydrate-rich
+    marine sediments, not an explicit universal SMT distribution. Full publisher body
+    is paywalled.
+  target_ids:
+  - ENVO:00002113
+  evidence_ids:
+  - GRAPH
+  - RULES
+  - ONT
+  - PMID-15618510
+  - PMID-35308366
+  - PMID-30194429
+  - PMID-11034209
+  - NAGAKURA
+- assessment_id: EDGE-anme_perform_anaerobic_methane_oxidation
+  area: evidence
+  topic: anme_perform_anaerobic_methane_oxidation
+  outcome: concern
+  summary: Beulig uses inferential wording for ANME-1 mediation based on rates, isotopes
+    and metagenomics. The edge should retain that evidence tier and not imply direct
+    experimental proof for all ANME.
+  target_ids:
+  - ENVO:00002113
+  evidence_ids:
+  - GRAPH
+  - RULES
+  - ONT
+  - PMID-15618510
+  - PMID-35308366
+  - PMID-30194429
+  - PMID-11034209
+  - NAGAKURA
+- assessment_id: EDGE-sulfate_reducers_support_aom
+  area: evidence
+  topic: sulfate_reducers_support_aom
+  outcome: supported
+  summary: Boetius microscopy identifies structured archaeal/bacterial consortia with
+    apparently associated AOM; contribution is plausible at that evidence tier, not
+    experimentally isolated causality.
+  target_ids:
+  - ENVO:00002113
+  evidence_ids:
+  - GRAPH
+  - RULES
+  - ONT
+  - PMID-15618510
+  - PMID-35308366
+  - PMID-30194429
+  - PMID-11034209
+  - NAGAKURA
+- assessment_id: EDGE-aom_consumes_methane
+  area: evidence
+  topic: aom_consumes_methane
+  outcome: supported
+  summary: Beulig abstract supports sulfate-coupled AOM as a major seabed methane
+    sink. This is contextual synthesis, not a measured fraction for every deep marine
+    habitat.
+  target_ids:
+  - ENVO:00002113
+  evidence_ids:
+  - GRAPH
+  - RULES
+  - ONT
+  - PMID-15618510
+  - PMID-35308366
+  - PMID-30194429
+  - PMID-11034209
+  - NAGAKURA
+- assessment_id: IDENTITY
+  area: identity
+  topic: Identity, definition and source interpretation
+  outcome: supported
+  summary: The sediment material identity and source-attributed qualitative bands
+    are reproducible. Deep ocean basin floor is not synonymous with arbitrary subseafloor
+    burial depth. The conditional sulfate/methane mechanism needs environmental entity
+    types and narrower evidence claims, not universal anoxia or direct selection inferred
+    from potential-rate incubations.
+  target_ids:
+  - ENVO:00002113
+  evidence_ids:
+  - R
+  - RAW
+  - ONT
+  - PARENT
+- assessment_id: HIERARCHY
+  area: grounding
+  topic: All parent-contribution routes and mapping scope
+  outcome: supported
+  summary: The sediment material identity and source-attributed qualitative bands
+    are reproducible. Deep ocean basin floor is not synonymous with arbitrary subseafloor
+    burial depth. The conditional sulfate/methane mechanism needs environmental entity
+    types and narrower evidence claims, not universal anoxia or direct selection inferred
+    from potential-rate incubations. Ontology, source-path, ambiguous-leaf and authored-definition
+    contributions were distinguished.
+  target_ids:
+  - ENVO:00002113
+  evidence_ids:
+  - R
+  - RAW
+  - CODE
+  - ONT
+  - PARENT
+- assessment_id: PROVENANCE
+  area: provenance
+  topic: Every source, count unit and native status
+  outcome: supported
+  summary: 'Complete reconstruction preserves 3 source concepts and 0 ITEM-reviewed
+    contributors. Actual attestations=[{"source": "ENVIRONMENTS_TABLE", "source_id":
+    "sediment_marine_deep", "source_label": "sediment_marine_deep", "notes": "Physicochemical
+    parameter bands from kg-microbe''s environment table."}, {"source": "MADIN", "source_id":
+    "ENVO:00002113", "source_label": "deep marine sediment", "assertion_count": 19,
+    "assertion_unit": "TAXON"}, {"source": "PREGO", "source_id": "ENVO:00002113",
+    "source_label": "deep marine sediment", "assertion_count": 2065, "assertion_unit":
+    "TAXON", "score": 4.0, "evidence_channels": "annotated_genomes_isolates|environmental_samples"}].
+    Unlike units are not summed. Omitted zero direct counts do not mean ecological
+    absence; this review does not promote native status.'
+  target_ids:
+  - ENVO:00002113
+  evidence_ids:
+  - R
+  - RAW
+  - CODE
+  - RULES
+- assessment_id: TAXA
+  area: evidence
+  topic: Source-reported association versus characteristic presence
+  outcome: supported
+  summary: All emitted taxon identifiers resolve; normalized spellings and old aliases
+    explain supplied-label differences. Full reconstruction retains ranks, scores,
+    pools and corroborations. No is_characteristic assertion is present; neither resolution
+    nor a source score proves occurrence, abundance or ecological universality.
+  target_ids:
+  - ENVO:00002113
+  evidence_ids:
+  - R
+  - RAW
+  - TAX0
+  - TAX1
+  - RULES
+- assessment_id: PARAMETERS
+  area: evidence
+  topic: Qualitative source bands and triad roles
+  outcome: supported
+  summary: All 10 entries reproduce the exact single-term environment-table source.
+    These qualitative descriptors are source-attributed, not measured universal thresholds.
+    Multi-term environments are not attached for a single component. No MIxS broad/local/medium
+    entry is silently promoted to identity.
+  target_ids:
+  - ENVO:00002113
+  evidence_ids:
+  - R
+  - RAW
+  - CODE
+  - RULES
+- assessment_id: COMPLETENESS
+  area: completeness
+  topic: Optional fields and biological evidence boundaries
+  outcome: supported
+  summary: Optional missing definitions, datasets or discussions are not defects solely
+    because they are empty. Every asserted graph edge is individually assessed above.
+    No named gene, locus, regulator, strain-specific transcriptome or expression-module
+    claim in this record calls for an iModulonDB query; generic enzymes/osmoregulation
+    and habitat associations do not specify an applicable organism/dataset.
+  target_ids:
+  - ENVO:00002113
+  evidence_ids:
+  - R
+  - RAW
+  - RULES
+  - SEARCH
+findings:
+- finding_id: F1
+  issue_key: envo-00002113-ontology-synonym-scope
+  category: scope
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Related or broader/narrower ontology names are promoted to exact
+  description: The sediment material identity and source-attributed qualitative bands
+    are reproducible. Deep ocean basin floor is not synonymous with arbitrary subseafloor
+    burial depth. The conditional sulfate/methane mechanism needs environmental entity
+    types and narrower evidence claims, not universal anoxia or direct selection inferred
+    from potential-rate incubations.
+  target_ids:
+  - ENVO:00002113
+  field_paths:
+  - synonyms
+  evidence_ids:
+  - R
+  - RAW
+  - ONT
+  - CODE
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Typed ontology synonym ingestion
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_terms.tsv
+    role: Governed source snapshot
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Preserve declared scopes
+  rule_id: docs/CURATION.md; .claude/skills/curate-yaml-record/references/review-checklist.md
+  native_severity: major
+  normalization_reason: Material hierarchy, scope, entity typing or comparison-contract
+    defect.
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1249
+- finding_id: F2
+  issue_key: envo-00002113-environment-community-node-types
+  category: scope
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Environmental contexts and mixed microbial groups use incompatible node types
+  description: anoxic_porewater and methanogenic_sediment are environmental contexts,
+    not physicochemical axes; sulfate_methane_transition_zone is not a cellular STATE.
+    sulfate_reducing_microorganisms and sulfate_reducing_bacteria denote functional
+    groups spanning taxa, not single clades. Bound their shared-setting assemblage
+    scope before using COMMUNITY.
+  target_ids:
+  - ENVO:00002113
+  field_paths:
+  - causal_graphs[0].nodes
+  evidence_ids:
+  - GRAPH
+  - RULES
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/causal_graphs/deep_marine_sediment.yaml
+    role: Exact node type and scope
+  rule_id: docs/CURATION.md; .claude/skills/curate-yaml-record/references/review-checklist.md
+  native_severity: major
+  normalization_reason: Material hierarchy, scope, entity typing or comparison-contract
+    defect.
+- finding_id: F3
+  issue_key: envo-00002113-causal-scope-support
+  category: scope
+  severity: major
+  status: open
+  certainty: provisional
+  title: Mechanism wording exceeds the demonstrated causal scope
+  description: The sediment material identity and source-attributed qualitative bands
+    are reproducible. Deep ocean basin floor is not synonymous with arbitrary subseafloor
+    burial depth. The conditional sulfate/methane mechanism needs environmental entity
+    types and narrower evidence claims, not universal anoxia or direct selection inferred
+    from potential-rate incubations. Individual edge assessments distinguish support,
+    concerns and inaccessible detail. Title fragments cannot establish specific rate
+    or selection claims.
+  target_ids:
+  - ENVO:00002113
+  field_paths:
+  - causal_graphs[0].description
+  - causal_graphs[0].edges
+  evidence_ids:
+  - GRAPH
+  - RULES
+  - ONT
+  - PMID-15618510
+  - PMID-35308366
+  - PMID-30194429
+  - PMID-11034209
+  - NAGAKURA
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/causal_graphs/deep_marine_sediment.yaml
+    role: Conditional mechanism scope and narrow evidence
+  rule_id: docs/CURATION.md; .claude/skills/curate-yaml-record/references/review-checklist.md
+  native_severity: major
+  normalization_reason: Material hierarchy, scope, entity typing or comparison-contract
+    defect.
+actions:
+- action_id: A1
+  description: Resolve shared1249 with governed typed-synonym ingestion. Retain genuine
+    exact names and PREGO related names; test multiscope and unknown cases rather
+    than globally downgrading every synonym.
+  finding_ids:
+  - F1
+  target_ids:
+  - ENVO:00002113
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Typed ontology synonym ingestion
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_terms.tsv
+    role: Governed source snapshot
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Preserve declared scopes
+  generator: src/habitatmech/seed.py
+  acceptance_checks:
+  - Change only maintained inputs with exact source/edge keys; preserve independent
+    parents, identities, source counts/units and native lifecycle.
+  - Inspect claim-level sources; append required curation history, add focused regressions,
+    inspect a seed canary and regenerate affected products.
+  - Pass schema, strict, product-label, corpus reproduction, causal/history, review-integrity
+    and full QC; save a linked successor for each finding disposition.
+- action_id: A2
+  description: Use HABITAT for the three environmental contexts and explicitly bounded
+    COMMUNITY nodes for the two interacting sulfate-reducer assemblages. Do not change
+    ANME taxonomic scope without further evidence. Preserve IDs and evidence, add
+    focused tests and history, then regenerate.
+  finding_ids:
+  - F2
+  target_ids:
+  - ENVO:00002113
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/causal_graphs/deep_marine_sediment.yaml
+    role: Exact node type and scope
+  generator: src/habitatmech/seed.py
+  acceptance_checks:
+  - Change only maintained inputs with exact source/edge keys; preserve independent
+    parents, identities, source counts/units and native lifecycle.
+  - Inspect claim-level sources; append required curation history, add focused regressions,
+    inspect a seed canary and regenerate affected products.
+  - Pass schema, strict, product-label, corpus reproduction, causal/history, review-integrity
+    and full QC; save a linked successor for each finding disposition.
+- action_id: A3
+  description: Qualify environmental and experimental scope, use evidence locators
+    and preserve inferential wording. Retrieve outstanding primary passages before
+    endorsing detailed D Hondt quantification or general SMT-partner claims; do not
+    treat a resolving PMID as validation.
+  finding_ids:
+  - F3
+  target_ids:
+  - ENVO:00002113
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/causal_graphs/deep_marine_sediment.yaml
+    role: Conditional mechanism scope and narrow evidence
+  generator: src/habitatmech/seed.py
+  acceptance_checks:
+  - Change only maintained inputs with exact source/edge keys; preserve independent
+    parents, identities, source counts/units and native lifecycle.
+  - Inspect claim-level sources; append required curation history, add focused regressions,
+    inspect a seed canary and regenerate affected products.
+  - Pass schema, strict, product-label, corpus reproduction, causal/history, review-integrity
+    and full QC; save a linked successor for each finding disposition.
+limitations:
+- Completed assessment is not a clean scientific verdict or proof of every original
+  assertion.
+- Only first3 exact BioSample/Organism descriptions per sheet were individually interpreted,
+  Other matches and study joins were indexed, not individually assessed.
+- Original frozen membership was not fully reconstructed; no ontology, taxonomy or
+  source snapshot was refreshed.
+- Same-agent review, not independent approval. This observation precedes separately
+  authorized curation and publication; it does not promote native status.
+- SSSOM/KGX conformance with current kg-microbe modeling was not audited; shared1398
+  remains open.
+- Whole-corpus review remains incomplete; ancestor reads and source indexing add no
+  target coverage.
+- Nagakura full body was accessible. D Hondt Science full text returned403; Boetius
+  publisher body is paywalled; Beulig full XML returned500 and PMC requested browser
+  verification. Those three papers were assessed from complete abstracts, not unseen
+  full text. Unverified detailed claims remain open.
+notes:
+- New immutable observation only; curation and publication are separate work.
+- No prior structured target observation found; historical reports are preserved and
+  are not silently retired.
+tags:
+- habitatmech
+- aquatic
+- record-review
+- scientific-review

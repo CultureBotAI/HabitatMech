@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: biofouling
+session:
+  id: 2026-10-11T231454Z-codex-gpt-5-1f4202
+  timestamp: '2026-10-11T23:14:54Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1979
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude reviewed GOLD context parents from biofouling
+  details: 'ITEM hierarchy assessment: https://github.com/CultureBotAI/HabitatMech/issues/1979
+    (20261011T225551Z-biofouling). The ITEM decision explicitly interprets the deep-groundwater
+    bin as a fouling layer, with the fouling process ENVO:06105023 retained only as an xref.
+    A layer is not groundwater. Zero frozen direct membership and the term-request exclusion
+    do not justify retaining a false strict parent or exact-mapping the layer to biofilm.
+    Exclude only this guarded GOLD source-parent contribution. Preserve independent parents,
+    frozen source identity/counts/units or omissions and native lifecycle. Later examples
+    do not reconstruct frozen membership; shared synonym and endpoint issues remain separate.
+    Authorized by user publication/remediation request. Baseline 46 native checks and exact
+    main CI 800 passed/3 skipped succeeded. Post-fix tests, canary, regeneration and full
+    QC pending at event creation; outcomes will be retained in PR and successor reviews.'

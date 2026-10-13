@@ -4,7 +4,6 @@ habitat_category: ENGINEERED
 grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
-- ENVO:00000036
 - ENVO:00002007
 source_attestations:
 - source: GOLD
@@ -17,3 +16,18 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00000036 for habitatmech:GOLD.b72faf3adf
+    (Engineered > Built environment > Canal > Irrigation canal > Sediment). Reviewed
+    hierarchy exclusion (#1878; structured review 20261010T200656Z-sediment__a0cc3ecc
+    F1): The committed triad distinguishes sediment medium from irrigation-canal local
+    scale. Later collection sites include irrigation canals and an aqueduct, still
+    supporting material in a managed watercourse rather than a subtype of the watercourse.
+    An anthropogenic-biome broad annotation is context, not material identity. The
+    exact GOLD path supplies context, while official ENVO:00002007 supplies the independent
+    sediment-material genus. Exclude only this source-parent contribution; preserve
+    the qualified mint, node/path, frozen ORGANISM counts or zero omission, NARROW/SEEDED
+    state and unrelated claims. No definition, taxon or parameter is inferred. Shared
+    mapping endpoint issue #1398 remains open.'

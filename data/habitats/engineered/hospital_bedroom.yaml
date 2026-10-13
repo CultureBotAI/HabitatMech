@@ -3,8 +3,6 @@ label: Hospital bedroom
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:00002173
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5489
@@ -23,3 +21,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-08T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00002173 for habitatmech:GOLD.9cc7667041
+    (Engineered > Built environment > Hospital > Hospital bedroom). ITEM hierarchy
+    assessment (#1746): a hospital bedroom is a room within a hospital, not a subtype
+    of the hospital building. Typed ENVO room and patient-room axioms distinguish
+    building part from building identity. Exclude only the GOLD containment contribution;
+    retain the source mint, node 5489, full path, zero-count omission and CLASS/SEEDED
+    provenance. Do not transfer Room surface child observations or infer exact patient-room
+    grounding from a narrow synonym. Evidence: official ENVO a2455d1a77e46bb8a664d65a157166b539269042
+    and reports/yaml_record_review/20261008T183724Z-hospital_bedroom.md.'

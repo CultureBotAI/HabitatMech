@@ -3,8 +3,6 @@ label: Anaerobic zone
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.5f3cbd7563
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8548
@@ -25,3 +23,14 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.5f3cbd7563
+    for habitatmech:GOLD.9f519b94cc (Engineered > Bioreactor > Partial-Nitrification/Anammox
+    (PNA) > Anaerobic zone). ITEM hierarchy assessment (#1609): The anaerobic region
+    is not a type of the containing PNA system. PMID:20646732 (DOI:10.1016/j.watres.2010.05.041)
+    experimentally distinguishes reaction zones from the reactor; this does not identify
+    GOLD nodes with that experiment or settle compartment versus microzone geometry.
+    Exclude only the immediate GOLD context contribution; preserve identity, source
+    counts and existing review status.'

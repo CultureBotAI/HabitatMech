@@ -3,8 +3,6 @@ label: Tubeworm bush
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:00000215
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5751
@@ -23,3 +21,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-06T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00000215 for habitatmech:GOLD.b36274f0b9
+    (Environmental > Aquatic > Marine > Hydrothermal vents > Tubeworm bush). ITEM
+    hierarchy assessment (#1577): Lelievre et al. 2018 (DOI:10.5194/bg-15-2629-2018)
+    distinguishes biogenic tubeworm aggregations from their hydrothermal setting;
+    official ENVO a2455d1a77e46bb8a664d65a157166b539269042 defines ENVO:00000215 as
+    a fissure. The bush is not a type of fissure. Exclude only the GOLD location-context
+    edge; preserve node 5751, full path, minted identity, zero-organism-count omission
+    and CLASS/SEEDED status. Do not substitute a host, organ, water material or vent
+    biome identity, or infer universal taxa or chemistry.'

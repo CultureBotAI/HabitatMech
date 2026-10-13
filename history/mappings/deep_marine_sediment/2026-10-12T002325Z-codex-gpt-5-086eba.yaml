@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/causal_graphs/deep_marine_sediment.yaml
+  slug: deep_marine_sediment
+session:
+  id: 2026-10-12T002325Z-codex-gpt-5-086eba
+  timestamp: '2026-10-12T00:23:25Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1988
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Correct causal representation for deep_marine_sediment
+  details: Correct three environmental contexts to HABITAT and two shared-setting sulfate-reducer
+    assemblages to COMMUNITY, with explicit scope descriptions. Stable graph identifiers,
+    edges, citations and ANME typing are retained. Broader causal-scope findings remain open
+    in the separately tracked graph-evidence issue. Authorized by user publication/remediation
+    request. Baseline 47 native checks and exact main CI 827 passed/3 skipped succeeded. Post-fix
+    tests, canary, regeneration and full QC pending at event creation; outcomes will be retained
+    in PR and successor reviews.

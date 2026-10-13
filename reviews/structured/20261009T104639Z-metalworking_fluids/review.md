@@ -1,0 +1,743 @@
+# Metalworking fluids: coherent chemical-product habitat with unverified source formulations
+
+- Review: 20261009T104639Z-metalworking_fluids
+- Repository: CultureBotAI/HabitatMech
+- Started UTC: 2026-10-09T10:41:45Z
+- Finished UTC: 2026-10-09T10:46:39Z
+- Reviewer: codex-gpt-5 (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Reviewed the complete Metalworking fluids source record. Its minted identity, chemical-product parent, zero-organism count omission, two-node provenance and CLASS/SEEDED lifecycle are coherent. No supported finding is established. Original GOLD formulations and use-state are unavailable; broad technical evidence is not treated as a sample crosswalk or license to import taxa, health claims or fluid recipes.
+
+## Scope And Provenance
+
+Whole generated metalworking_fluids.yaml and its sole GOLD source contribution. Chemical product parent and its historical report supply target hierarchy context, not a reopened parent review.
+
+Selection: PATHS.tsv:1560, habitatmech:GOLD.245b61d15e, exact Engineered &gt; Industrial production &gt; Chemical products &gt; Metalworking fluids path.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base c797721ee782bea509b420c88b68d57758207eef.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| habitatmech:GOLD.245b61d15e | data/habitats/engineered/metalworking_fluids.yaml | generated | Metalworking fluids |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Current target and context capture | passed | True | habitatmech:GOLD.245b61d15e | 38 input hashes captured at c797721ee before assessment; entire target read. |
+| Target LinkML validation | passed | True | habitatmech:GOLD.245b61d15e | No issues found. |
+| Target closed-schema validation | passed | True | habitatmech:GOLD.245b61d15e | One file,zero errors. |
+| Fourteen-inventory exact-field scan | passed | True | habitatmech:GOLD.245b61d15e | Only exact aggregate GOLD path found:two nodes and zero counters. No target biosample,study,triad,taxon or parameter row in these committed tables; no ecological absence inferred. |
+| Complete source resolution and document reproduction | passed | True | habitatmech:GOLD.245b61d15e | CLASS confirmation retains gold_unmatched minted UNGROUNDED identity; one source,zero reviewed. Whole generated document equals disk. No exact tested label/alias candidate in the complete committed ontology slice. |
+| Ignored-inclusive maintained-input and prior-review search | passed | True | habitatmech:GOLD.245b61d15e | Target hits are CLASS decision307 and path lock1560. Alias search finds only an unrelated Material research lead; no target-owned definition,overlay,exclusion,history or earlier individual review in the named roots. |
+| Current structured source classification and parent metadata | passed | True | habitatmech:GOLD.245b61d15e | GOLD workbook row310 confirms terminal node8345 and exact path. Current active ENVO chemical-product definition agrees. Bounded ENVO metalworking-fluids query returns zero results, not global ontology absence. |
+| Full corpus reproduction | passed | True | habitatmech:GOLD.245b61d15e | 3208 expected and found; zero missing, extra or differing records. |
+| Native curation history | passed | True | habitatmech:GOLD.245b61d15e | 219 native histories valid. |
+| Raw inventory provenance | passed | True | habitatmech:GOLD.245b61d15e | 14 committed inventories and two GOLD sources current. |
+| Parent, status and reference regressions | passed | True | habitatmech:GOLD.245b61d15e | 6 passed,33 deselected; deterministic integrity is not scientific proof. |
+| Exact-baseline full quality-gate receipt | passed | True | habitatmech:GOLD.245b61d15e | Freshly queried SUCCESS at c797721ee. Completed log inspected in the publication session:645 passed,3 skipped,four dedicated contract tests,219 histories,3208 records and all native gates. No new local full-QC run claimed. |
+| Exact-baseline ontology-label receipt | passed | True | habitatmech:GOLD.245b61d15e | Freshly queried SUCCESS at c797721ee; configured ontology coverage and accepted exceptions are not proof of source semantics. No new global ontology refresh claimed. |
+| Scientific-input equivalence | passed | True | habitatmech:GOLD.245b61d15e | No scientific input or generated-product changes from the verified base; only review artifacts are written. |
+| Original GOLD node and formulation detail | unavailable | False | habitatmech:GOLD.245b61d15e | Browser retrieval of ecosystem8344 failed. Original member formulations,water content,used-versus-unused state and microbial sampling details were not recovered. |
+| Causal and expression adapters | not_applicable | False | habitatmech:GOLD.245b61d15e | No gene,regulator,transcriptomic or causal assertion in the target; no target overlay found in ignored-inclusive roots. iModulonDB is not applicable. |
+
+## Scientific And Domain Assessments
+
+### Formulated machining-fluid habitat rather than metal or machining activity
+
+identity: supported. Targets: habitatmech:GOLD.245b61d15e.
+
+Source path and technical terminology identify fluids used in metalworking,not metallic material or the manufacturing activity. Keeping the minted source identity avoids a near-match grounding.
+
+### Chemical-product genus
+
+graph: supported. Targets: habitatmech:GOLD.245b61d15e.
+
+The parent is a material/product class matching formulated fluids. Unlike an enclosing machine or production process,it is genuinely broader at the retained class level. No evidence warrants suppressing this edge.
+
+### Retained ungrounded identity and bounded candidate search
+
+grounding: supported. Targets: habitatmech:GOLD.245b61d15e.
+
+No exact tested candidate was found in the committed slice or bounded current ENVO query. No oil,water,chemical role or generic coolant is adopted as exact identity.
+
+### Original formulations and use-state
+
+scope: unknown. Targets: habitatmech:GOLD.245b61d15e.
+
+Current classification and generic technical sources do not establish individual GOLD formulations,water fraction,use-state or organisms. The record makes none of those specific claims; their absence is not a required-field defect.
+
+### Zero-count omission and two source nodes
+
+quantity: supported. Targets: habitatmech:GOLD.245b61d15e.
+
+The aggregate counts are zero and two historical nodes collapse into this path. The first-node display and note reproduce; parent counts and generic microbial-growth observations are not imported.
+
+### CLASS versus ITEM review
+
+consistency: supported. Targets: habitatmech:GOLD.245b61d15e.
+
+One source with zero ITEM decisions yields SEEDED and preserves its CLASS confirmation plus seed event. This review does not promote native status.
+
+### Optional chemistry and microbiology remain unsupported
+
+completeness: supported. Targets: habitatmech:GOLD.245b61d15e.
+
+No direct-target source rows justify adding taxa,parameters,mechanisms or an asserted water-only composition. NIOSH water-based-subset evidence is not generalized to every formulation.
+
+### Maintained-input ownership and full reproduction
+
+schema: supported. Targets: habitatmech:GOLD.245b61d15e.
+
+Complete target reproduction and native gates pass. Any future evidence-based definition belongs in maintained inputs and requires normal authorized curation,generation and validation.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/habitats/engineered/metalworking_fluids.yaml; Whole YAML,sole attestation and two events | supports | ENGINEERED,UNGROUNDED,SEEDED; no definition or identity mapping is claimed. Sole parent ENVO:2000000; source8344 and two-node note. |
+| source | data/raw/gold_ecosystem_paths.tsv; Exact row1312; nodes8344&#124;8345; fourteen-table scan | supports | Depth4 Metalworking fluids bin has zero organism/study/biosample/total counters. Omitting count/unit and mapping predicate is appropriate. No direct rows in later enrichment inventories were found. |
+| decision | curation/decisions.tsv; Target row307; actual full-index source and parent resolution | supports | CLASS CONFIRM_UNGROUNDED explains SEEDED without asserting ITEM habitat validation. Parent GOLD.413b4cb862 separately grounds to ENVO:2000000 through its own ITEM decision; parent review status is not inherited. |
+| ontology | https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms?obo_id=ENVO%3A2000000; Active current term; complete chemical_product.yaml | supports | Chemical product denotes an engineered manufactured mixture. This is a defensible broader product class for formulated metalworking fluids, not their production activity. Response3753bytes,SHA25605e1e36899c9f1398c9c8de7ebcc6244e7310dd56a5754d6b25255293c574f26. |
+| niosh | https://archive.cdc.gov/www_cdc_gov/niosh/topics/metalworking/default.html; Archived technical introduction,lines14-15; last reviewed2013-08-16 | supports | NIOSH distinguishes oil-based and water-based formulations and notes microbial growth in the water-based subset. This supports product/habitat plausibility and heterogeneous composition, not a target organism,uniform recipe or inference that every fluid is water-based. |
+| niosh_bulletin | https://www.cdc.gov/niosh/bulletin/2008/metal-working-fluids.html; Metal Working Fluids section,line38; bulletin2008-10-06 | context_only | Separately confirms machining-fluid use and several formulation types. Exposure limits,medical effects and controls elsewhere on the page are outside this review and are not adopted. |
+| gold | https://gold.jgi.doe.gov/download?mode=ecosystempaths; Current site data workbook row310 | supports | Terminal8345 is classified under Engineered/Industrial production/Chemical products/Metalworking fluids/Unclassified. Workbook84174bytes,SHA2563933e5f0664915c1bbfa00212e17d013da360fb33dd52e509254050813135396. It does not recover historical8344 detail or specimen composition. |
+| parent_history | reports/yaml_record_review/20261007T181850Z-chemical_product.md; Whole historical report,read with current complete parent YAML | context_only | The older parent report concerned its own Industrial production edge,subsequently excluded in the current parent. That defect does not transfer to this material-product child; no parent finding is reopened or closed. |
+| search | curation; Exact ID/label/slug/node and alias queries in local roots | context_only | No target-owned authored definition,exclusion,overlay,session history or prior individual review recovered. The bounded current OLS query and committed exact lexical scan found no tested match; no global ontology-absence claim. |
+| unavailable | https://gold.jgi.doe.gov/ecosystem/8344; Fresh browser retrieval failure | unknown | Original node/member detail unavailable. Access failure does not invalidate the source identifier or prove missing organisms. |
+| gates | https://github.com/CultureBotAI/HabitatMech/actions/runs/37917938475; Exact c797721ee baseline; label run37917938526; fresh local target/native checks | supports | Native deterministic gates pass on unchanged scientific inputs; this is not formulation-level scientific verification. |
+
+## Limits And Additional Notes
+
+- One of3208records reviewed here; full-corpus completion remains unproven.
+- Historical8344 member details and source formulations are not independently recovered; current8345 workbook classification is not a specimen crosswalk.
+- NIOSH sources are used only for terminology,product heterogeneity and bounded microbial-habitat plausibility. No medical,exposure-limit,regulatory,health-risk or treatment advice is asserted.
+- The historical parent report is context,not an additional completed parent review; unrelated research leads and search snippets are not evidence.
+- Exact-baseline fullQC and label receipts are reused with unchanged-input verification. No fresh local fullQC or global ontology refresh; three native tests remain skipped.
+- No scientific input change,native status/history mutation,GitHub mutation,publication or SSSOM/KGX readiness assessment.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261009T104639Z-metalworking_fluids
+kind: record
+repository: CultureBotAI/HabitatMech
+title: 'Metalworking fluids: coherent chemical-product habitat with unverified source
+  formulations'
+started_at: '2026-10-09T10:41:45Z'
+finished_at: '2026-10-09T10:46:39Z'
+reviewer:
+  identity: codex-gpt-5
+  kind: agent
+  model: gpt-5
+  independence: self_review
+  independence_basis: Same agent continuing record-by-record corpus assessment; fresh
+    target/input capture, not independent approval.
+skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: Reviewed the complete Metalworking fluids source record. Its minted identity,
+  chemical-product parent, zero-organism count omission, two-node provenance and CLASS/SEEDED
+  lifecycle are coherent. No supported finding is established. Original GOLD formulations
+  and use-state are unavailable; broad technical evidence is not treated as a sample
+  crosswalk or license to import taxa, health claims or fluid recipes.
+source:
+  git_revision: c797721ee782bea509b420c88b68d57758207eef
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: curation/decisions.tsv
+    sha256: 0602cca13e6495da256a6f1cfd5897462f73f9739a729447862017d93c148efd
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: 9d2324647d0a0ddeccc2f7836811872e112af208bb1b8f7decb332c00f17d12b
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 3efdac153ccd40f518458a9dc5360e09dd660c3a42fbd06bfc57f3b2f707ece7
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: b59b9e800a918135e3915145d4d8098bb48dcea36a312b3004c594a57d221ae9
+    role: context
+  - path: data/habitats/RETIRED.tsv
+    sha256: 41beffc45aabdf304de633c21200b375d7f01d1cb2e036d4a026961d545a35e5
+    role: context
+  - path: data/habitats/engineered/chemical_product.yaml
+    sha256: d5039d8e0f3f8c77680371d162d7934f5ada70d63130e5a1b4bcab154bb77b1f
+    role: context
+  - path: data/habitats/engineered/metalworking_fluids.yaml
+    sha256: eb6b5b8f61f5d82b951c0db3ecfa5e5127d4e5374a59493910873a440c5cddf2
+    role: target
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: 36df8306394c06c352b73e0bf7b47a2858784cedac7389a24d0b78f593ece646
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: f7aa39ee762d94f1902d9f08f328cb897bc543e4e226057eb4770d24bfcc6eb5
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reports/yaml_record_review/20261007T181850Z-chemical_product.md
+    sha256: 18a6d8105b0724809616aa59dd79c26926afda16635965307609e35e151429b4
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 52d2a22309a1f4a10728a663560bb4d918346c292221fd34139b99b4159d3fe5
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 92adf631fa099120a497ff7001473e659347d23ac9b418f04cd341ddad5d2a89
+    role: context
+targets:
+- target_id: habitatmech:GOLD.245b61d15e
+  path: data/habitats/engineered/metalworking_fluids.yaml
+  label: Metalworking fluids
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Source concept identity and review-depth decision
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Future evidence-backed definition, if warranted
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Guarded source-context hierarchy ownership
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/gold_ecosystem_paths.tsv
+    role: Frozen source path, node and count provenance
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Validated generated representation
+scope:
+  description: Whole generated metalworking_fluids.yaml and its sole GOLD source contribution.
+    Chemical product parent and its historical report supply target hierarchy context,
+    not a reopened parent review.
+  selection: PATHS.tsv:1560, habitatmech:GOLD.245b61d15e, exact Engineered > Industrial
+    production > Chemical products > Metalworking fluids path.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - habitatmech:GOLD.245b61d15e
+checks:
+- check_id: capture
+  name: Current target and context capture
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.245b61d15e
+  command: env UV_CACHE_DIR=build/uv-cache uv run python scripts/record_review.py
+    inspect --targets /private/tmp/habitatmech-metalworking-fluids-targets-20261009T104145Z.json
+    --input CLAUDE.md --input justfile --input docs/CURATION.md --input docs/HARMONIZATION.md
+    --input docs/RESEARCH.md --input docs/record-review-profile.md --input docs/record-reviews.md
+    --input .claude/skills/review-yaml-record/SKILL.md --input .claude/skills/curate-yaml-record/references/review-checklist.md
+    --input schema/record_review.yaml --input src/habitatmech/schema/habitatmech.yaml
+    --input src/habitatmech/seed.py --input curation/decisions.tsv --input curation/gold_parent_exclusions.tsv
+    --input curation/term_requests.tsv --input curation/term_requests_excluded.tsv
+    --input data/habitats/PATHS.tsv --input data/habitats/RETIRED.tsv --input data/raw/ontology_terms.tsv
+    --input data/raw/ontology_subclass_edges.tsv --input data/raw/isolation_source_groundings.tsv
+    --input data/raw/gold_ecosystem_paths.tsv --input data/raw/gold_path_biosamples.tsv
+    --input data/raw/gold_path_triads.tsv --input data/raw/gold_studies.tsv --input
+    data/raw/prego_habitats.tsv --input data/raw/prego_habitat_taxa.tsv --input data/raw/bacdive_isolation_sources.tsv
+    --input data/raw/bacdive_source_taxa.tsv --input data/raw/madin_habitats.tsv --input
+    data/raw/madin_habitat_taxa.tsv --input data/raw/environment_parameters.tsv --input
+    data/raw/MANIFEST.yaml --input data/raw/GOLD_MANIFEST.yaml --input data/habitats/engineered/chemical_product.yaml
+    --input reports/yaml_record_review/20261007T181850Z-chemical_product.md --input
+    conf/id_label_targets.yaml
+  exit_code: 0
+  summary: 38 input hashes captured at c797721ee before assessment; entire target
+    read.
+- check_id: schema
+  name: Target LinkML validation
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.245b61d15e
+  command: env UV_CACHE_DIR=build/uv-cache just validate data/habitats/engineered/metalworking_fluids.yaml
+  exit_code: 0
+  summary: No issues found.
+- check_id: strict
+  name: Target closed-schema validation
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.245b61d15e
+  command: env UV_CACHE_DIR=build/uv-cache just validate-strict data/habitats/engineered/metalworking_fluids.yaml
+  exit_code: 0
+  summary: One file,zero errors.
+- check_id: raw
+  name: Fourteen-inventory exact-field scan
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.245b61d15e
+  command: "env UV_CACHE_DIR=build/uv-cache uv run python - <<'PY'\nfrom pathlib import\
+    \ Path\nimport csv,json\nneedles={'habitatmech:GOLD.245b61d15e','Engineered >\
+    \ Industrial production > Chemical products > Metalworking fluids','gold.ecosystem:8344','gold.ecosystem:8345'}\n\
+    for path in sorted(Path('data/raw').glob('*.tsv')):\n    hits=[]\n    with path.open()\
+    \ as h:\n        for n,row in enumerate(csv.DictReader(h,delimiter='\\t'),2):\n\
+    \            values=[v for x in row.values() for v in (x if isinstance(x,list)\
+    \ else [x]) if v]\n            if any(v in needles or needles.intersection(v.split('|'))\
+    \ for v in values):hits.append({'line':n,'row':row})\n    print(path.name,json.dumps(hits))\n\
+    PY"
+  exit_code: 0
+  summary: Only exact aggregate GOLD path found:two nodes and zero counters. No target
+    biosample,study,triad,taxon or parameter row in these committed tables; no ecological
+    absence inferred.
+- check_id: route
+  name: Complete source resolution and document reproduction
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.245b61d15e
+  command: "env UV_CACHE_DIR=build/uv-cache uv run python - <<'PY'\nfrom habitatmech\
+    \ import seed as s\nfrom dataclasses import asdict\nfrom pathlib import Path\n\
+    import json,yaml\nrows=s.read_tsv('gold_ecosystem_paths.tsv'); ont=s.OntologyIndex(s.read_tsv('ontology_terms.tsv'),s.read_tsv('ontology_subclass_edges.tsv'));d=s.load_decisions(s.DECISIONS_PATH);mapping={}\n\
+    for row in s.read_tsv('isolation_source_groundings.tsv'):\n    for key in (s.norm_label(row['subject_label']),s.norm_label(row['subject_label_normalized'])):\n\
+    \        if key:mapping.setdefault(key,row)\nfor path in ['Engineered > Industrial\
+    \ production > Chemical products > Metalworking fluids','Engineered > Industrial\
+    \ production > Chemical products']:\n    row=next(r for r in rows if r['canonical_path']==path);\
+    \ ident=s.mint('GOLD',path)\n    auto=s.resolve_gold(row,ont,mapping,s.leaf_claimants(rows),s.composed_claimants(rows))\n\
+    \    print(json.dumps({'path':path,'mint':ident,'automatic':asdict(auto),'final':asdict(s.apply_decision(auto,ident,d))}))\n\
+    c=next(c for c in s.build_corpus().concepts if c.identifier=='habitatmech:GOLD.245b61d15e')\n\
+    assert s.build_document(c)==yaml.safe_load(Path('data/habitats/engineered/metalworking_fluids.yaml').read_text())\n\
+    print('Whole document equal; sources',c.source_concepts,'reviewed',c.reviewed_sources)\n\
+    needles={s.norm_label(x) for x in ('metalworking fluids','metal working fluids','cutting\
+    \ fluid','machining fluid')}\nhits=[]\nfor ident,row in ont.terms.items():\n \
+    \   if needles.intersection({s.norm_label(row['label']), *(s.norm_label(x) for\
+    \ x in row.get('synonyms','').split('|'))}):hits.append((ident,row))\nprint('Complete\
+    \ committed ontology exact label/synonym scan',json.dumps(hits))\nPY"
+  exit_code: 0
+  summary: CLASS confirmation retains gold_unmatched minted UNGROUNDED identity; one
+    source,zero reviewed. Whole generated document equals disk. No exact tested label/alias
+    candidate in the complete committed ontology slice.
+- check_id: search
+  name: Ignored-inclusive maintained-input and prior-review search
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.245b61d15e
+  command: rg --no-ignore --hidden -n 'GOLD\.245b61d15e|Metalworking fluids|metalworking_fluids|gold.ecosystem:834[45]'
+    curation history research reports reviews data/habitats/PATHS.tsv
+  exit_code: 0
+  summary: Target hits are CLASS decision307 and path lock1560. Alias search finds
+    only an unrelated Material research lead; no target-owned definition,overlay,exclusion,history
+    or earlier individual review in the named roots.
+- check_id: external
+  name: Current structured source classification and parent metadata
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.245b61d15e
+  command: "env UV_CACHE_DIR=build/uv-cache uv run python - <<'PY'\nimport urllib.request,urllib.parse,io,hashlib,json\n\
+    from openpyxl import load_workbook\nu='https://gold.jgi.doe.gov/download?mode=ecosystempaths'\n\
+    b=urllib.request.urlopen(u,timeout=60).read()\ns=load_workbook(io.BytesIO(b),read_only=True,data_only=True)['site\
+    \ data'];s.reset_dimensions()\nprint('GOLD',len(b),hashlib.sha256(b).hexdigest())\n\
+    for n,row in enumerate(s.iter_rows(values_only=True),1):\n    if 'Metalworking\
+    \ fluids' in row:print('GOLD_ROW',n,row)\nu='https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms?obo_id=ENVO%3A2000000'\n\
+    b=urllib.request.urlopen(u,timeout=60).read();d=json.loads(b)\nprint('PARENT',len(b),hashlib.sha256(b).hexdigest(),json.dumps(d))\n\
+    q=urllib.parse.urlencode({'q':'metalworking fluids','ontology':'envo','rows':20})\n\
+    u='https://www.ebi.ac.uk/ols4/api/search?'+q\nb=urllib.request.urlopen(u,timeout=60).read();d=json.loads(b)\n\
+    print('CANDIDATES',len(b),hashlib.sha256(b).hexdigest(),json.dumps(d['response']))\n\
+    PY"
+  exit_code: 0
+  summary: GOLD workbook row310 confirms terminal node8345 and exact path. Current
+    active ENVO chemical-product definition agrees. Bounded ENVO metalworking-fluids
+    query returns zero results, not global ontology absence.
+- check_id: corpus
+  name: Full corpus reproduction
+  status: passed
+  required: true
+  command: env UV_CACHE_DIR=build/uv-cache just verify-corpus
+  exit_code: 0
+  summary: 3208 expected and found; zero missing, extra or differing records.
+  target_ids:
+  - habitatmech:GOLD.245b61d15e
+- check_id: history
+  name: Native curation history
+  status: passed
+  required: true
+  command: env UV_CACHE_DIR=build/uv-cache just validate-history
+  exit_code: 0
+  summary: 219 native histories valid.
+  target_ids:
+  - habitatmech:GOLD.245b61d15e
+- check_id: provenance
+  name: Raw inventory provenance
+  status: passed
+  required: true
+  command: env UV_CACHE_DIR=build/uv-cache just provenance-check
+  exit_code: 0
+  summary: 14 committed inventories and two GOLD sources current.
+  target_ids:
+  - habitatmech:GOLD.245b61d15e
+- check_id: references
+  name: Parent, status and reference regressions
+  status: passed
+  required: true
+  command: env UV_CACHE_DIR=build/uv-cache uv run pytest -q tests/test_corpus_integrity.py
+    -k 'parent or reviewed_records or history or causal_edges_reference'
+  exit_code: 0
+  summary: 6 passed,33 deselected; deterministic integrity is not scientific proof.
+  target_ids:
+  - habitatmech:GOLD.245b61d15e
+- check_id: qc_receipt
+  name: Exact-baseline full quality-gate receipt
+  status: passed
+  required: true
+  command: gh run view 37917938475 --json status,conclusion,headSha,url
+  exit_code: 0
+  summary: Freshly queried SUCCESS at c797721ee. Completed log inspected in the publication
+    session:645 passed,3 skipped,four dedicated contract tests,219 histories,3208
+    records and all native gates. No new local full-QC run claimed.
+  target_ids:
+  - habitatmech:GOLD.245b61d15e
+- check_id: label_receipt
+  name: Exact-baseline ontology-label receipt
+  status: passed
+  required: true
+  command: gh run view 37917938526 --json status,conclusion,headSha,url
+  exit_code: 0
+  summary: Freshly queried SUCCESS at c797721ee; configured ontology coverage and
+    accepted exceptions are not proof of source semantics. No new global ontology
+    refresh claimed.
+  target_ids:
+  - habitatmech:GOLD.245b61d15e
+- check_id: unchanged
+  name: Scientific-input equivalence
+  status: passed
+  required: true
+  command: git diff --exit-code c797721ee782bea509b420c88b68d57758207eef -- data curation
+    src scripts tests docs conf schema CLAUDE.md justfile
+  exit_code: 0
+  summary: No scientific input or generated-product changes from the verified base;
+    only review artifacts are written.
+  target_ids:
+  - habitatmech:GOLD.245b61d15e
+- check_id: original_source
+  name: Original GOLD node and formulation detail
+  status: unavailable
+  required: false
+  target_ids:
+  - habitatmech:GOLD.245b61d15e
+  summary: Browser retrieval of ecosystem8344 failed. Original member formulations,water
+    content,used-versus-unused state and microbial sampling details were not recovered.
+- check_id: molecular
+  name: Causal and expression adapters
+  status: not_applicable
+  required: false
+  target_ids:
+  - habitatmech:GOLD.245b61d15e
+  summary: No gene,regulator,transcriptomic or causal assertion in the target; no
+    target overlay found in ignored-inclusive roots. iModulonDB is not applicable.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/habitats/engineered/metalworking_fluids.yaml
+  locator: Whole YAML,sole attestation and two events
+  accessed_at: '2026-10-09T10:46:39Z'
+  support: supports
+  summary: ENGINEERED,UNGROUNDED,SEEDED; no definition or identity mapping is claimed.
+    Sole parent ENVO:2000000; source8344 and two-node note.
+- evidence_id: source
+  kind: record_content
+  reference: data/raw/gold_ecosystem_paths.tsv
+  locator: Exact row1312; nodes8344|8345; fourteen-table scan
+  accessed_at: '2026-10-09T10:46:39Z'
+  support: supports
+  summary: Depth4 Metalworking fluids bin has zero organism/study/biosample/total
+    counters. Omitting count/unit and mapping predicate is appropriate. No direct
+    rows in later enrichment inventories were found.
+- evidence_id: decision
+  kind: record_content
+  reference: curation/decisions.tsv
+  locator: Target row307; actual full-index source and parent resolution
+  accessed_at: '2026-10-09T10:46:39Z'
+  support: supports
+  summary: CLASS CONFIRM_UNGROUNDED explains SEEDED without asserting ITEM habitat
+    validation. Parent GOLD.413b4cb862 separately grounds to ENVO:2000000 through
+    its own ITEM decision; parent review status is not inherited.
+- evidence_id: ontology
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms?obo_id=ENVO%3A2000000
+  locator: Active current term; complete chemical_product.yaml
+  accessed_at: '2026-10-09T10:46:39Z'
+  support: supports
+  summary: Chemical product denotes an engineered manufactured mixture. This is a
+    defensible broader product class for formulated metalworking fluids, not their
+    production activity. Response3753bytes,SHA25605e1e36899c9f1398c9c8de7ebcc6244e7310dd56a5754d6b25255293c574f26.
+- evidence_id: niosh
+  kind: authority
+  reference: https://archive.cdc.gov/www_cdc_gov/niosh/topics/metalworking/default.html
+  locator: Archived technical introduction,lines14-15; last reviewed2013-08-16
+  accessed_at: '2026-10-09T10:46:39Z'
+  support: supports
+  summary: NIOSH distinguishes oil-based and water-based formulations and notes microbial
+    growth in the water-based subset. This supports product/habitat plausibility and
+    heterogeneous composition, not a target organism,uniform recipe or inference that
+    every fluid is water-based.
+- evidence_id: niosh_bulletin
+  kind: authority
+  reference: https://www.cdc.gov/niosh/bulletin/2008/metal-working-fluids.html
+  locator: Metal Working Fluids section,line38; bulletin2008-10-06
+  accessed_at: '2026-10-09T10:46:39Z'
+  support: context_only
+  summary: Separately confirms machining-fluid use and several formulation types.
+    Exposure limits,medical effects and controls elsewhere on the page are outside
+    this review and are not adopted.
+- evidence_id: gold
+  kind: database
+  reference: https://gold.jgi.doe.gov/download?mode=ecosystempaths
+  locator: Current site data workbook row310
+  accessed_at: '2026-10-09T10:46:39Z'
+  support: supports
+  summary: Terminal8345 is classified under Engineered/Industrial production/Chemical
+    products/Metalworking fluids/Unclassified. Workbook84174bytes,SHA2563933e5f0664915c1bbfa00212e17d013da360fb33dd52e509254050813135396.
+    It does not recover historical8344 detail or specimen composition.
+- evidence_id: parent_history
+  kind: prior_review
+  reference: reports/yaml_record_review/20261007T181850Z-chemical_product.md
+  locator: Whole historical report,read with current complete parent YAML
+  accessed_at: '2026-10-09T10:46:39Z'
+  support: context_only
+  summary: The older parent report concerned its own Industrial production edge,subsequently
+    excluded in the current parent. That defect does not transfer to this material-product
+    child; no parent finding is reopened or closed.
+- evidence_id: search
+  kind: search
+  reference: curation
+  locator: Exact ID/label/slug/node and alias queries in local roots
+  accessed_at: '2026-10-09T10:46:39Z'
+  support: context_only
+  summary: No target-owned authored definition,exclusion,overlay,session history or
+    prior individual review recovered. The bounded current OLS query and committed
+    exact lexical scan found no tested match; no global ontology-absence claim.
+  search_scope: rg --no-ignore --hidden covered curation,history,research,reports,reviews
+    and PATHS.tsv; secondary alias filename search covered metal[- ]?working,cutting
+    fluid,machining fluid. Current OLS query q=metalworking fluids,ontology=envo,rows=20
+    returned numFound0. The Material research filename is an uninspected contextual
+    lead,not scientific evidence.
+- evidence_id: unavailable
+  kind: database
+  reference: https://gold.jgi.doe.gov/ecosystem/8344
+  locator: Fresh browser retrieval failure
+  accessed_at: '2026-10-09T10:46:39Z'
+  support: unknown
+  summary: Original node/member detail unavailable. Access failure does not invalidate
+    the source identifier or prove missing organisms.
+- evidence_id: gates
+  kind: validation
+  reference: https://github.com/CultureBotAI/HabitatMech/actions/runs/37917938475
+  locator: Exact c797721ee baseline; label run37917938526; fresh local target/native
+    checks
+  accessed_at: '2026-10-09T10:46:39Z'
+  support: supports
+  summary: Native deterministic gates pass on unchanged scientific inputs; this is
+    not formulation-level scientific verification.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Formulated machining-fluid habitat rather than metal or machining activity
+  outcome: supported
+  summary: Source path and technical terminology identify fluids used in metalworking,not
+    metallic material or the manufacturing activity. Keeping the minted source identity
+    avoids a near-match grounding.
+  target_ids:
+  - habitatmech:GOLD.245b61d15e
+  evidence_ids:
+  - record
+  - source
+  - niosh
+  - decision
+- assessment_id: parent
+  area: graph
+  topic: Chemical-product genus
+  outcome: supported
+  summary: The parent is a material/product class matching formulated fluids. Unlike
+    an enclosing machine or production process,it is genuinely broader at the retained
+    class level. No evidence warrants suppressing this edge.
+  target_ids:
+  - habitatmech:GOLD.245b61d15e
+  evidence_ids:
+  - ontology
+  - niosh
+  - record
+- assessment_id: grounding
+  area: grounding
+  topic: Retained ungrounded identity and bounded candidate search
+  outcome: supported
+  summary: No exact tested candidate was found in the committed slice or bounded current
+    ENVO query. No oil,water,chemical role or generic coolant is adopted as exact
+    identity.
+  target_ids:
+  - habitatmech:GOLD.245b61d15e
+  evidence_ids:
+  - decision
+  - search
+- assessment_id: scope
+  area: scope
+  topic: Original formulations and use-state
+  outcome: unknown
+  summary: Current classification and generic technical sources do not establish individual
+    GOLD formulations,water fraction,use-state or organisms. The record makes none
+    of those specific claims; their absence is not a required-field defect.
+  target_ids:
+  - habitatmech:GOLD.245b61d15e
+  evidence_ids:
+  - gold
+  - unavailable
+  - niosh
+- assessment_id: counts
+  area: quantity
+  topic: Zero-count omission and two source nodes
+  outcome: supported
+  summary: The aggregate counts are zero and two historical nodes collapse into this
+    path. The first-node display and note reproduce; parent counts and generic microbial-growth
+    observations are not imported.
+  target_ids:
+  - habitatmech:GOLD.245b61d15e
+  evidence_ids:
+  - record
+  - source
+- assessment_id: lifecycle
+  area: consistency
+  topic: CLASS versus ITEM review
+  outcome: supported
+  summary: One source with zero ITEM decisions yields SEEDED and preserves its CLASS
+    confirmation plus seed event. This review does not promote native status.
+  target_ids:
+  - habitatmech:GOLD.245b61d15e
+  evidence_ids:
+  - decision
+  - record
+- assessment_id: completeness
+  area: completeness
+  topic: Optional chemistry and microbiology remain unsupported
+  outcome: supported
+  summary: No direct-target source rows justify adding taxa,parameters,mechanisms
+    or an asserted water-only composition. NIOSH water-based-subset evidence is not
+    generalized to every formulation.
+  target_ids:
+  - habitatmech:GOLD.245b61d15e
+  evidence_ids:
+  - source
+  - niosh
+- assessment_id: reproduction
+  area: schema
+  topic: Maintained-input ownership and full reproduction
+  outcome: supported
+  summary: Complete target reproduction and native gates pass. Any future evidence-based
+    definition belongs in maintained inputs and requires normal authorized curation,generation
+    and validation.
+  target_ids:
+  - habitatmech:GOLD.245b61d15e
+  evidence_ids:
+  - record
+  - decision
+  - gates
+findings: []
+actions: []
+limitations:
+- One of3208records reviewed here; full-corpus completion remains unproven.
+- Historical8344 member details and source formulations are not independently recovered;
+  current8345 workbook classification is not a specimen crosswalk.
+- NIOSH sources are used only for terminology,product heterogeneity and bounded microbial-habitat
+  plausibility. No medical,exposure-limit,regulatory,health-risk or treatment advice
+  is asserted.
+- The historical parent report is context,not an additional completed parent review;
+  unrelated research leads and search snippets are not evidence.
+- Exact-baseline fullQC and label receipts are reused with unchanged-input verification.
+  No fresh local fullQC or global ontology refresh; three native tests remain skipped.
+- No scientific input change,native status/history mutation,GitHub mutation,publication
+  or SSSOM/KGX readiness assessment.
+```

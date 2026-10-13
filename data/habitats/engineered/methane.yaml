@@ -35,19 +35,19 @@ curation_history:
     is requested under ENVO:00010483 ''environmental material''; parent_mode=REPLACE
     drops the inherited Hydrocarbon parent because that source node is a chemical
     class, not a microbial habitat. (source concept habitatmech:GOLD.d510166905)'
-- timestamp: '2026-09-10T00:00:00Z'
+- timestamp: '2026-10-09T00:00:00Z'
   curator: codex-gpt-5
   action: DEFINED
   changes: Defined as 'methane bioremediation material' under ENVO:00010483 'environmental
-    material'. Definition authored from item-level review and methane biofiltration
-    literature; no paid research was commissioned. GOLD places the leaf under Engineered
-    > Bioremediation > Hydrocarbon and names the methane contaminant rather than a
-    sampled substance, so the record denotes the methane-exposed matrix in the remediation
-    system rather than methane itself. ENVO:00010483 'environmental material' is the
-    tightest vendored genus broad enough to cover biofilter packing, reactor liquid,
-    and sludge exposed to methane-containing gas; ENVO:00002152 'biofilter' and ENVO:00002123
-    'bioreactor' name engineered devices rather than matrices, and ENVO:00002124 'anaerobic
-    bioreactor' over-specifies anaerobic methane production rather than aerobic methane
-    oxidation. CHEBI:16183 is retained as an external xref for the contaminant identity,
-    and parent_mode=REPLACE drops the inherited Hydrocarbon parent because the parent
-    names a chemical class rather than a habitat.
+    material'. Rationale correction (#1793) preserves the definition authored on 2026-09-10.
+    Under the retained material interpretation, ENVO:00010483 'environmental material'
+    covers the methane-exposed matrix; ENVO:00002152 'biofilter', ENVO:00002123 'bioreactor',
+    and ENVO:00002124 'anaerobic bioreactor' denote devices rather than matrices.
+    ENVO:00002124 specifies nonoxygenated contents, not methane production. Stultiens
+    et al. 2020 (https://doi.org/10.1007/s00253-020-10748-z), establishment methods
+    and enrichment results, demonstrates methane oxidation in an anoxic reactor. That
+    experiment is a counterexample to the former rationale, not a crosswalk to GOLD's
+    original members. Original source-member matrix and gas-exposure scope remain
+    unverified; the definition is preserved pending source reconstruction. CHEBI:16183
+    remains a chemical-only xref, and parent_mode=REPLACE continues to exclude the
+    inherited Hydrocarbon chemical class rather than asserting it is a broader habitat.

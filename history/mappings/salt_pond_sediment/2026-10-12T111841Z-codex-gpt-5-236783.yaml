@@ -1,0 +1,37 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: salt_pond_sediment
+session:
+  id: 2026-10-12T111841Z-codex-gpt-5-236783
+  timestamp: '2026-10-12T11:18:41Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/pull/2023
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed saline or sediment habitat scope for salt_pond_sediment
+  details: 'Exact source-context correction https://github.com/CultureBotAI/HabitatMech/issues/1465
+    (20261012T111110Z-salt_pond_sediment). The source-qualified salt-pond sediment is particulate
+    material, not the marine intertidal zone. Later Eden Landing pond sediment and restoration
+    soil examples support a material boundary but show why original accession scope matters.
+    Sediment is a broad candidate; do not require every pond to be permanently tidal, marine-deposited
+    or currently salt-saturated. The original omitted count is not a claim of no samples.
+    Suppress only this immediate GOLD contribution; preserve identity, source paths/nodes/counts/units,
+    omitted counts and independent genera. Original occurrence membership remains unavailable.
+    No source-scope, endpoint or SSSOM/KGX certification is implied. Material/feature or original
+    soil/sediment scope remains unresolved: do not promote CLASS status or invent a replacement
+    genus. User authorized remediation and publication. Dry seed and 36 focused regressions
+    passed; generated record/map/site and final gates remain pending at event creation. Three
+    CLASS decisions receive individually assessed ITEM genus rulings; salt-crust and salt-pond
+    scopes remain unpromoted. Existing reviews and historical session events are preserved;
+    endpoint #1398 remains open.'

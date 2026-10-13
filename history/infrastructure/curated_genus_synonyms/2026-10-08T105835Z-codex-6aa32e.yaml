@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: src/habitatmech/seed.py
+  slug: curated_genus_synonyms
+session:
+  id: 2026-10-08T105835Z-codex-6aa32e
+  timestamp: '2026-10-08T10:58:35Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1717
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1715
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - synonyms
+  - validation
+  - curation_history
+  summary: Keep displaced strict-genus labels at related synonym scope
+  details: 'Add a bounded canonical-genus guard to apply_curated_definitions and a deterministic
+    SOURCE_SYNONYM_SCOPED event. Reject authored exact synonyms that name the strict genus
+    during definition validation. The current consumers are indoor dust and air scrubber biofilm
+    habitatmech:GOLD.7f436f8aff; the latter automatic Biofilm alias is the first finding of
+    #1637, whose separate definition-scope finding remains unresolved. Preserve PREGO weaker
+    scope, retained-xref behavior, genuine exact aliases, source attestations and lifecycle.
+    Three new focused cases failed before implementation and passed afterwards; 49 focused
+    tests passed overall, including full-corpus exclusion differential and two-consumer guard
+    coverage. Each changed record was canaried and inspected. Full generated map/site/QC still
+    required before merge.'

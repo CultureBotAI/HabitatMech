@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: canal__c42831a4
+session:
+  id: 2026-10-11T231501Z-codex-gpt-5-6dcd0b
+  timestamp: '2026-10-11T23:15:01Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1979
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude reviewed GOLD context parents from canal__c42831a4
+  details: 'ITEM hierarchy assessment: https://github.com/CultureBotAI/HabitatMech/issues/1979
+    (20261011T225650Z-canal__c42831a4). The freshwater-qualified canal is an artificial watercourse,
+    appropriately narrower than canal, but not fresh-water material. Omitted zero direct membership
+    is not evidence of biological absence. Keep the distinct source identity and address narrowMatch
+    endpoints independently of the context-parent correction. Exclude only this guarded GOLD
+    source-parent contribution. Preserve independent parents, frozen source identity/counts/units
+    or omissions and native lifecycle. Later examples do not reconstruct frozen membership;
+    shared synonym and endpoint issues remain separate. Authorized by user publication/remediation
+    request. Baseline 46 native checks and exact main CI 800 passed/3 skipped succeeded. Post-fix
+    tests, canary, regeneration and full QC pending at event creation; outcomes will be retained
+    in PR and successor reviews.'

@@ -4,7 +4,6 @@ habitat_category: ENGINEERED
 grounding_status: NARROW
 mapping_status: REVIEWED
 parent_habitats:
-- ENVO:00002124
 - ENVO:01000155
 source_attestations:
 - source: GOLD
@@ -27,3 +26,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00002124 for habitatmech:GOLD.6dd85a8177
+    (Engineered > Bioreactor > Anaerobic > Biomass). ITEM hierarchy assessment (#1635):
+    The existing ITEM GROUND_AS_PARENT decision identifies reactor biomass as organic
+    material, not a kind of its anaerobic reactor. Official ENVO a2455d1a77e46bb8a664d65a157166b539269042
+    (https://raw.githubusercontent.com/EnvironmentOntology/envo/a2455d1a77e46bb8a664d65a157166b539269042/envo.owl)
+    distinguishes ENVO:01000155 material and ENVO:00002124 device. Preserve that identity
+    decision and REVIEWED status. Exclude only this GOLD context contribution; retain
+    independent ENVO:01000155, qualified mint, all source IDs and paths, count/unit
+    omissions or values, collapsed-node notes, skos:narrowMatch and existing NARROW/REVIEWED
+    status. No new identity endorsement, experimental condition, taxon or causal claim
+    is inferred.'

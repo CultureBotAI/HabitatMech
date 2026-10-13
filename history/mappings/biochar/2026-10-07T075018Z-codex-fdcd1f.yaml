@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: biochar
+session:
+  id: 2026-10-07T075018Z-codex-fdcd1f
+  timestamp: '2026-10-07T07:50:18Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1624
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1623
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude the production context from the biochar material hierarchy
+  details: Added one guarded GOLD parent exclusion for source habitatmech:GOLD.442a77e51e
+    at Engineered > Industrial production > Biochar, expecting habitatmech:GOLD.a744ade0d8.
+    The ENVO material identity and independent charcoal genus are retained; the inspected
+    US Forest Service biochar page distinguishes product from production technology and use.
+    Preserve the original review as pre-fix evidence. No identity promotion, replacement definition,
+    source-scope reassessment or change to waste-qualified Biochar is made. The regression
+    failed before adding the row; all 32 parent-exclusion tests then passed, proving every
+    other record and target field unchanged except this parent and appended audit event. Dry
+    seed and inspected canary passed; all 3207 records reproduce; full semantic input comparison
+    changes only ENVO:2000007. OAK passed with 1178 canonical, one synonym, five exceptions
+    and 2056 no-adapter skips. Full publication QC and map/site regeneration are still pending
+    at this session receipt.

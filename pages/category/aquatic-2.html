@@ -30,11 +30,20 @@ barn. The category prefix is trimmed off it, and the identifier lives on each
 record's own page — the link already carries it.</p>
 <input class="searchbox" id="q" type="search" data-index="aquatic.json" data-total="468" placeholder="Filter all 468 records…" aria-label="Filter records">
 <p class="meta" id="count" aria-live="polite"></p>
+<button type="button" id="show-more" hidden>Show more matches</button>
+<button type="button" id="clear-filter" hidden>Clear filter</button>
 <div class="table-scroll" role="region" tabindex="0" aria-label="AQUATIC habitats">
 <table id="tbl">
   <caption>AQUATIC habitats</caption>
   <thead><tr><th scope="col">Habitat</th><th scope="col">Source path</th><th scope="col">Grounding</th><th scope="col" class="num">Assertions</th><th scope="col">Sources</th></tr></thead>
   <tbody>
+  <tr>
+    <td><a href="../habitats/ditch-water-envo-00002158.html">ditch water</a></td>
+    <td class="meta">ditch water</td>
+    <td><span class="pill">EXACT</span></td>
+    <td class="num">1</td>
+    <td class="meta">PREGO</td>
+  </tr>
   <tr>
     <td><a href="../habitats/freshwater-lake-biome-envo-01000252.html">freshwater lake biome</a></td>
     <td class="meta">freshwater lake biome</td>
@@ -97,13 +106,6 @@ record's own page — the link already carries it.</p>
     <td><span class="pill">EXACT</span></td>
     <td class="num">1</td>
     <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/thalassic-envo-01001667.html">thalassic</a></td>
-    <td class="meta">Environmental &gt; Aquatic &gt; Non-marine Saline and Alkaline &gt; Saline &gt; Thalassic</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">1</td>
-    <td class="meta">GOLD</td>
   </tr>
   <tr>
     <td><a href="../habitats/well-envo-00000026.html">well</a></td>
@@ -633,28 +635,28 @@ record's own page — the link already carries it.</p>
   <tr>
     <td><a href="../habitats/mine-pit-lake-habitatmech-gold-5d5cab5f31.html">Mine pit lake</a></td>
     <td class="meta">Environmental &gt; Aquatic &gt; Pit lake &gt; Mine pit lake</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
+    <td><span class="pill">NARROW</span></td>
     <td class="num">0</td>
     <td class="meta">GOLD</td>
   </tr>
   <tr>
     <td><a href="../habitats/mine-pit-pond-habitatmech-gold-0946b92f8f.html">Mine pit pond</a></td>
     <td class="meta">Environmental &gt; Aquatic &gt; Non-marine Saline and Alkaline &gt; Alkaline &gt; Mine pit pond</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
+    <td><span class="pill">NARROW</span></td>
     <td class="num">0</td>
     <td class="meta">GOLD</td>
   </tr>
   <tr>
     <td><a href="../habitats/mixolimnion-top-layer-habitatmech-gold-58a0fb1252.html">Mixolimnion/Top layer</a></td>
     <td class="meta">Environmental &gt; Aquatic &gt; Freshwater &gt; Meromictic lake &gt; Mixolimnion/Top layer</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
+    <td><span class="pill">NARROW</span></td>
     <td class="num">0</td>
     <td class="meta">GOLD</td>
   </tr>
   <tr>
     <td><a href="../habitats/monimolimnion-bottom-layer-habitatmech-gold-e070d4c2be.html">Monimolimnion/Bottom layer</a></td>
     <td class="meta">Environmental &gt; Aquatic &gt; Freshwater &gt; Meromictic lake &gt; Monimolimnion/Bottom layer</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
+    <td><span class="pill">NARROW</span></td>
     <td class="num">0</td>
     <td class="meta">GOLD</td>
   </tr>
@@ -668,7 +670,7 @@ record's own page — the link already carries it.</p>
   <tr>
     <td><a href="../habitats/oil-sands-pit-lake-habitatmech-gold-e13608a63a.html">Oil sands pit lake</a></td>
     <td class="meta">Environmental &gt; Aquatic &gt; Pit lake &gt; Oil sands pit lake</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
+    <td><span class="pill">NARROW</span></td>
     <td class="num">0</td>
     <td class="meta">GOLD</td>
   </tr>
@@ -689,7 +691,7 @@ record's own page — the link already carries it.</p>
   <tr>
     <td><a href="../habitats/porewater-habitatmech-gold-1c0744c357.html">Porewater</a></td>
     <td class="meta">Environmental &gt; Aquatic &gt; Deep subsurface &gt; Groundwater &gt; Porewater</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
+    <td><span class="pill">NARROW</span></td>
     <td class="num">0</td>
     <td class="meta">GOLD</td>
   </tr>
@@ -724,7 +726,7 @@ record's own page — the link already carries it.</p>
   <tr>
     <td><a href="../habitats/sabkha-sediment-habitatmech-gold-b3725fa211.html">Sabkha sediment</a></td>
     <td class="meta">Environmental &gt; Aquatic &gt; Marine &gt; Supratidal zone &gt; Sabkha sediment</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
+    <td><span class="pill">NARROW</span></td>
     <td class="num">0</td>
     <td class="meta">GOLD</td>
   </tr>
@@ -759,7 +761,7 @@ record's own page — the link already carries it.</p>
   <tr>
     <td><a href="../habitats/seagrass-bed-sediment-habitatmech-gold-e63a1a61c3.html">Seagrass bed sediment</a></td>
     <td class="meta">Environmental &gt; Aquatic &gt; Marine &gt; Intertidal zone &gt; Seagrass bed sediment</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
+    <td><span class="pill">NARROW</span></td>
     <td class="num">0</td>
     <td class="meta">GOLD</td>
   </tr>
@@ -1216,14 +1218,18 @@ record's own page — the link already carries it.</p>
 </div>
 <nav class="pager" aria-label="Pages">
 <a href="aquatic.html">1</a> <span class="pill plain" aria-current="page">2</span> </nav>
-<p class="meta">Showing 168 of 468. The filter searches all
+<p class="meta" id="unfiltered-count">Showing 168 of 468. The filter searches all
 468, not just this page.</p>
 <script>
 (function () {
   var box = document.getElementById('q'), out = document.getElementById('count');
   var body = document.querySelector('#tbl tbody');
   var original = body.innerHTML;
-  var index = null, pending = null;
+  var index = null, pending = null, resultLimit = 300;
+  var more = document.getElementById('show-more');
+  var clear = document.getElementById('clear-filter');
+  var pager = document.querySelector('.pager');
+  var unfilteredCount = document.getElementById('unfiltered-count');
 
   function esc(t) {
     return String(t).replace(/[&<>"]/g, function (c) {
@@ -1245,16 +1251,21 @@ record's own page — the link already carries it.</p>
   }
   function apply() {
     pending = null;
-    var raw = box.value.toLowerCase();
-    if (!raw) { body.innerHTML = original; out.textContent = ''; return; }
+    var raw = box.value.trim().toLowerCase();
+    if (pager) pager.hidden = !!raw;
+    if (unfilteredCount) unfilteredCount.hidden = !!raw;
+    clear.hidden = !raw;
+    if (!raw) { body.innerHTML = original; out.textContent = ''; more.hidden = true; return; }
     var slugged = raw.replace(/[^a-z0-9]+/g, '-');
     var hits = index.filter(function (r) {
       var k = (r[0] + ' ' + r[2] + ' ' + r[1] + ' ' + r[5]).toLowerCase();
       return k.indexOf(raw) !== -1 || k.indexOf(slugged) !== -1;
     });
-    draw(hits.slice(0, 500));
-    out.textContent = hits.length + ' of ' + box.getAttribute('data-total') +
-      ' match' + (hits.length > 500 ? ' (first 500 shown)' : '');
+    draw(hits.slice(0, resultLimit));
+    var visible = Math.min(resultLimit, hits.length);
+    more.hidden = visible >= hits.length;
+    out.textContent = (visible ? 'Showing 1–' + visible : 'Showing 0') +
+      ' of ' + hits.length + ' matching records (' + box.getAttribute('data-total') + ' in category)';
   }
   // When the page already holds every record there is nothing to fetch, and
   // fetching would make filtering depend on a network round trip that can fail
@@ -1270,17 +1281,20 @@ record's own page — the link already carries it.</p>
   }
 
   box.addEventListener('input', function () {
+    resultLimit = 300;
     if (index === null) {
       // Fetched once, on the first keystroke — a reader who only browses never
       // pays for it.
       out.textContent = 'loading…';
-      fetch(box.getAttribute('data-index')).then(function (r) { return r.json(); })
+      fetch(box.getAttribute('data-index')).then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
         .then(function (data) { index = data; apply(); })
         .catch(function () { out.textContent = 'filter unavailable'; });
       return;
     }
     if (pending === null) { pending = requestAnimationFrame(apply); }
   });
+  more.addEventListener('click', function () { resultLimit += 300; apply(); });
+  clear.addEventListener('click', function () { box.value = ''; resultLimit = 300; apply(); box.focus(); });
 })();
 </script>
 </main>
@@ -1291,11 +1305,11 @@ record's own page — the link already carries it.</p>
     on 2026-08-16. Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party terms apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Grounding is by lexical match against ontology labels except where a curation
     decision says otherwise; treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a citable
-    claim. <a href="../index.html">Current review counts</a>.
+    claim. <a href="../index.html">Current workflow counts</a>.
   </p>
 </footer>
 </div>

@@ -3,8 +3,6 @@ label: Effluent
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:00002124
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8166
@@ -26,3 +24,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-08T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00002124 for habitatmech:GOLD.1ece8c580a
+    (Engineered > Bioreactor > Anaerobic > Effluent). ITEM hierarchy assessment (#1722):
+    effluent denotes outflow, not a kind of its anaerobic bioreactor. The archived
+    EPA STORET glossary (https://archive.epa.gov/storet/archive_old/ldc/glossary.htm)
+    distinguishes output from apparatus; official ENVO a2455d1a77e46bb8a664d65a157166b539269042
+    places ENVO:00002124 under containment-unit genus ENVO:00002123. Exclude only
+    this source-context parent. Preserve nodes 8166/8167, full path, one ORGANISM
+    assertion, mint and CLASS/SEEDED identity provenance. No definition, replacement
+    genus, anaerobic sample property or sibling merge is inferred. Evidence: reports/yaml_record_review/20261008T121001Z-effluent.md.'

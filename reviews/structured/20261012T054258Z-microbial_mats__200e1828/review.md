@@ -1,0 +1,1093 @@
+# Scientific record review: microbial_mats__200e1828
+
+- Review: 20261012T054258Z-microbial_mats__200e1828
+- Repository: CultureBotAI/HabitatMech
+- Started UTC: 2026-10-12T05:20:25.074888Z
+- Finished UTC: 2026-10-12T05:42:58.494270Z
+- Reviewer: OpenAI Codex (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The river microbial mats source has an ITEM GROUND_AS_PARENT decision and one ORGANISM assertion. Keep its separate mint and microbial-mat genus; freshwater river is the setting, not an is-a superclass. Do not collapse it into other mats or treat the one organism as the later BioSample census.
+
+## Scope And Provenance
+
+Entire exact generated record, all contributors and individual asserted causal edges, with bounded source-context assessment.
+
+Selection: Next forty records without a completed individual scientific review in stable repository-relative path order: marine anoxic zone through microbial_mats__200e1828. Full individual observations, not a category-wide pass. Prior coverage counts distinct observations, not a clean current-input corpus. Starting distinct-review coverage 688/3208 is not clean current-input coverage.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base ed9e0d0f382e4502a64f4de10102c4512bddca38.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| habitatmech:GOLD.ff22e48912 | data/habitats/aquatic/microbial_mats__200e1828.yaml | generated | Microbial mats |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native gate on captured inputs | passed | True | habitatmech:GOLD.ff22e48912 | Actual success 2026-10-12T05:23:12.961069Z to 2026-10-12T05:23:16.221118Z. Native command scope retained. |
+| Native gate on captured inputs | passed | True | habitatmech:GOLD.ff22e48912 | Actual success 2026-10-12T05:23:16.222412Z to 2026-10-12T05:23:26.347203Z. Native command scope retained. |
+| Native gate on captured inputs | passed | True | habitatmech:GOLD.ff22e48912 | Actual success 2026-10-12T05:23:26.348469Z to 2026-10-12T05:23:51.098950Z. Native command scope retained. |
+| Native gate on captured inputs | passed | True | habitatmech:GOLD.ff22e48912 | Actual success 2026-10-12T05:23:51.100146Z to 2026-10-12T05:25:01.530644Z. Native command scope retained. |
+| Native gate on captured inputs | passed | True | habitatmech:GOLD.ff22e48912 | Actual success 2026-10-12T05:25:01.532072Z to 2026-10-12T05:25:11.808379Z. Native command scope retained. |
+| Native gate on captured inputs | passed | True | habitatmech:GOLD.ff22e48912 | Actual success 2026-10-12T05:25:11.809657Z to 2026-10-12T05:25:19.058687Z. Native command scope retained. |
+| Native gate on captured inputs | passed | True | habitatmech:GOLD.ff22e48912 | Actual success 2026-10-12T05:25:19.059693Z to 2026-10-12T05:25:46.351294Z. Native command scope retained. |
+| Native gate on captured inputs | passed | True | habitatmech:GOLD.ff22e48912 | Actual success 2026-10-12T05:25:46.352569Z to 2026-10-12T05:25:47.389752Z. Native command scope retained. |
+| Exact-base CI authoritative QC | passed | True | habitatmech:GOLD.ff22e48912 | Actual success 2026-10-12T05:21:53.294030Z to 2026-10-12T05:21:55.368917Z. All three required merge-group workflows passed at the exact captured base; authoritative QC passed 913 tests with 3 skipped. Newly saved review bundles require their own integrity check. These newly saved review bundles were not part of that earlier exact-base CI run. |
+| Complete target reconstruction | passed | False | habitatmech:GOLD.ff22e48912 | All 40 complete documents matched; captured hashes rechecked before authoring. |
+| Original assertion membership | unavailable | False | habitatmech:GOLD.ff22e48912 | Bounded ignored-inclusive searches did not recover complete original assertion inputs; later exports are contextual evidence only. |
+| Expression-adapter applicability | not_applicable | False | habitatmech:GOLD.ff22e48912 | The successful 28-dataset inventory was read for graph scope. No matching claim-specific organism/strain/gene or expression-module assertion requires a search or summarize call. Absence is not negative ecological evidence. |
+
+## Scientific And Domain Assessments
+
+### Exact identity, definition and source intent
+
+identity: supported. Targets: habitatmech:GOLD.ff22e48912.
+
+The river microbial mats source has an ITEM GROUND_AS_PARENT decision and one ORGANISM assertion. Keep its separate mint and microbial-mat genus; freshwater river is the setting, not an is-a superclass. Do not collapse it into other mats or treat the one organism as the later BioSample census.
+
+### Parent contributors and mapping endpoints
+
+grounding: concern. Targets: habitatmech:GOLD.ff22e48912.
+
+The river microbial mats source has an ITEM GROUND_AS_PARENT decision and one ORGANISM assertion. Keep its separate mint and microbial-mat genus; freshwater river is the setting, not an is-a superclass. Do not collapse it into other mats or treat the one organism as the later BioSample census. Ontology, GOLD path, ambiguous-leaf and authored-genus routes were distinguished.
+
+### Source units and native lifecycle
+
+provenance: supported. Targets: habitatmech:GOLD.ff22e48912.
+
+Complete reconstruction preserves 1 contributing concepts and 1 ITEM-reviewed contributors. Attestations=[{"source": "GOLD", "source_id": "gold.ecosystem:5347", "source_label": "Microbial mats", "source_path": "Environmental &gt; Aquatic &gt; Freshwater &gt; River &gt; Microbial mats", "mapping_predicate": "skos:narrowMatch", "assertion_count": 1, "assertion_unit": "ORGANISM"}]. Counts with different units are not summed. Reproduction validates derivation, not the scientific truth of the mapping.
+
+### Optional slots and bounded evidence
+
+completeness: supported. Targets: habitatmech:GOLD.ff22e48912.
+
+Optional empty fields alone are not defects. No causal graph is asserted in the exact captured record; ignored-inclusive support search and the full causal gate were checked. No record-level gene/regulator or transcriptomics claim warrants a component query.
+
+## Findings
+
+### F1: Source context is emitted as a strict superclass
+
+major / open / confirmed; issue key: habitatmech-gold.ff22e48912-context-parent.
+
+The river microbial mats source has an ITEM GROUND_AS_PARENT decision and one ORGANISM assertion. Keep its separate mint and microbial-mat genus; freshwater river is the setting, not an is-a superclass. Do not collapse it into other mats or treat the one organism as the later BioSample census. Unsupported GOLD contributions: ENVO:01000297.
+
+### F2: Narrow mapping uses an undeclared ontology comparison endpoint
+
+major / open / confirmed; issue key: habitatmech-gold.ff22e48912-mapping-endpoint.
+
+A source-specific mint is retained and the generic ontology class is a parent. narrowMatch compares to that parent, but SourceAttestation describes comparison to the generated record. This is an endpoint contract ambiguity, not proof of formal SKOS self-inconsistency.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Exclude only the specified GOLD contributions, retaining independent ontology/curator genera and source provenance. Where source specificity is unresolved, assess the source decision separately instead of treating an exclusion as proof of exact equivalence.
+
+- Change only maintained owners after source-level assessment; retain independent true parents, source identity/count/unit provenance and lifecycle unless a separately justified change requires otherwise.
+- Append required current history, add focused regressions, inspect a seed canary and regenerate affected products without hand-editing records or pages.
+- Pass schema, strict, label, provenance, corpus reproduction, causal/history and full QC gates; save a linked successor for any finding disposition.
+
+### A2
+
+Resolve shared issue #1398 with explicit subject/predicate/object semantics and SSSOM/KGX consumer tests; retain source-specific identities. Reversing the predicate alone cannot supply a missing endpoint.
+
+- Change only maintained owners after source-level assessment; retain independent true parents, source identity/count/unit provenance and lifecycle unless a separately justified change requires otherwise.
+- Append required current history, add focused regressions, inspect a seed canary and regenerate affected products without hand-editing records or pages.
+- Pass schema, strict, label, provenance, corpus reproduction, causal/history and full QC gates; save a linked successor for any finding disposition.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| R | data/habitats/aquatic/microbial_mats__200e1828.yaml; Entire captured YAML read, including all taxa, parameters, graphs and generated history | supports | The river microbial mats source has an ITEM GROUND_AS_PARENT decision and one ORGANISM assertion. Keep its separate mint and microbial-mat genus; freshwater river is the setting, not an is-a superclass. Do not collapse it into other mats or treat the one organism as the later BioSample census. |
+| RULES | docs/CURATION.md; docs/HARMONIZATION.md; docs/RESEARCH.md; src/habitatmech/schema/habitatmech.yaml | supports | Applied exact identity, strict-genus, MIxS roles, source-unit/score and ITEM lifecycle contracts; graph node types retain their biological definitions. |
+| RAW | data/raw; curation/decisions.tsv; curation/term_requests.tsv; curation/gold_parent_exclusions.tsv; Exact logical TSV rows, header=row1; filtered by current source IDs and exact paths, not legacy issue line numbers | supports | {"curation/decisions.tsv": [{"data": {"category": "", "curator": "claude-opus-5", "date": "2026-08-12", "decision": "GROUND_AS_PARENT", "grounding_status": "NARROW", "identifier": "habitatmech:GOLD.ff22e48912", "notes": "20 GOLD paths share this leaf but differ in setting, not host, so each is a kind of microbial mat rather than microbial mat itself. Grounding them all to ENVO:01000008 would merge distinct environments; ENVO:01000008 is recorded as a parent instead. Path: Environmental &gt; Aquatic &gt; Freshwater &gt; River &gt; Microbial mats", "object_id": "ENVO:01000008", "object_label": "microbial mat", "relation": "", "review_depth": "ITEM"}, "logical_row": 1394}], "data/raw/gold_ecosystem_paths.tsv": [{"data": {"biosample_count": "0", "canonical_path": "Environmental &gt; Aquatic &gt; Freshwater &gt; River &gt; Microbial mats", "depth": "5", "ecosystem": "Environmental", "ecosystem_category": "Aquatic", "ecosystem_subtype": "River", "ecosystem_type": "Freshwater", "gold_node_count": "1", "gold_node_ids": "gold.ecosystem:5347", "leaf_label": "Microbial mats", "organism_count": "1", "specific_ecosystem": "Microbial mats", "study_count": "0", "total_assertions": "1"}, "logical_row": 938}], "data/raw/gold_path_biosamples.tsv": [{"data": {"biosample_count": "203", "canonical_path": "Environmental &gt; Aquatic &gt; Freshwater &gt; River &gt; Microbial mats", "ecosystem_path_id": "5347"}, "logical_row": 145}], "data/raw/gold_path_triads.tsv": [{"data": {"canonical_path": "Environmental &gt; Aquatic &gt; Freshwater &gt; River &gt; Microbial mats", "distinct_terms": "1", "samples": "16", "slot": "broad", "studies": "1", "studies_agreeing": "1", "top_label": "freshwater river biome", "top_share": "1.00", "top_term": "ENVO:01000253"}, "logical_row": 383}, {"data": {"canonical_path": "Environmental &gt; Aquatic &gt; Freshwater &gt; River &gt; Microbial mats", "distinct_terms": "1", "samples": "16", "slot": "local", "studies": "1", "studies_agreeing": "1", "top_label": "river", "top_share": "1.00", "top_term": "ENVO:00000022"}, "logical_row": 384}, {"data": {"canonical_path": "Environmental &gt; Aquatic &gt; Freshwater &gt; River &gt; Microbial mats", "distinct_terms": "1", "samples": "16", "slot": "medium", "studies": "1", "studies_agreeing": "1", "top_label": "microbial mat material", "top_share": "1.00", "top_term": "ENVO:01000157"}, "logical_row": 385}]} |
+| CODE | src/habitatmech/seed.py; Executed complete-document reconstruction; all 40 matched; routes distinguish source mints and generated identity | supports | {"reviewed_sources": 1, "routes": [{"actual": {"category": null, "contributes_grounding": true, "decision": {"category": "", "curator": "claude-opus-5", "date": "2026-08-12", "decision": "GROUND_AS_PARENT", "grounding_status": "NARROW", "identifier": "habitatmech:GOLD.ff22e48912", "notes": "20 GOLD paths share this leaf but differ in setting, not host, so each is a kind of microbial mat rather than microbial mat itself. Grounding them all to ENVO:01000008 would merge distinct environments; ENVO:01000008 is recorded as a parent instead. Path: Environmental &gt; Aquatic &gt; Freshwater &gt; River &gt; Microbial mats", "object_id": "ENVO:01000008", "object_label": "microbial mat", "relation": "parent", "review_depth": "ITEM"}, "extra_parents": ["ENVO:01000008"], "extra_xrefs": [], "grounding_status": "NARROW", "identifier": "habitatmech:GOLD.ff22e48912", "mapping_predicate": "skos:narrowMatch", "reviewed": true, "route": "curated_ground_as_parent_from_gold_unmatched"}, "automatic": {"category": null, "contributes_grounding": true, "decision": null, "extra_parents": [], "extra_xrefs": [], "grounding_status": "UNGROUNDED", "identifier": "habitatmech:GOLD.ff22e48912", "mapping_predicate": null, "reviewed": false, "route": "gold_unmatched"}, "minted": "habitatmech:GOLD.ff22e48912", "source": "GOLD", "source_id": "gold.ecosystem:5347"}], "source_concepts": 1} |
+| ONT | https://raw.githubusercontent.com/EnvironmentOntology/envo/master/envo.owl; Official OWL retrieved 12-Oct; labels, definitions, typed synonyms, named parents and restrictions; no snapshot refresh | supports | {"ENVO:00000022": {"definitions": ["A stream which, through permanent or seasonal flow processes, moves from elevated land towards lower elevations through a definite channel and empties either into a sea, lake, or another river or ends on land as bed seepage and evapotranspiration exceed water supply."], "deprecated": [], "equivalents": [], "labels": ["river"], "parents": ["http://purl.obolibrary.org/obo/ENVO_00000023", {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0002150"], "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_01000652"]}, {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0002220"], "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_00000143"]}], "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": ["rio"], "hasNarrowSynonym": ["braided river"], "hasRelatedSynonym": []}}, "ENVO:00000023": {"definitions": ["A watercourse which is linear and flows across the solid portion of a planetary surface."], "deprecated": [], "equivalents": [], "labels": ["stream"], "parents": ["http://purl.obolibrary.org/obo/ENVO_00000029", {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0000086"], "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/PATO_0001199"]}, {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0002150"], "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_01000650"]}], "replacements": [], "synonyms": {"hasBroadSynonym": ["watercourse"], "hasExactSynonym": ["streams"], "hasNarrowSynonym": ["braided stream", "fork (hydrographic", "lode", "millstream", "stream bend", "streamlet"], "hasRelatedSynonym": ["Creek", "beck", "brook", "burn (hydrographic)", "creek", "rivulet"]}}, "ENVO:00000029": {"definitions": ["A flowing body of water."], "deprecated": [], "equivalents": [], "labels": ["watercourse"], "parents": ["http://purl.obolibrary.org/obo/ENVO_01000618", {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0002150"], "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_00000395"]}], "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": [], "hasNarrowSynonym": ["culvert", "dredged channel", "fork", "gulch", "gully", "gut", "gutter", "kill", "lode", "narrows", "overflow channel", "passage", "pup", "race", "ravine", "reach", "rill", "rivulet", "run", "runnel", "seachannel", "seaway", "spillway", "stream", "tideway", "wash", "water gap"], "hasRelatedSynonym": ["awawa", "barranca", "beck", "branch", "brook", "course", "draw", "moat", "narrows", "narrows (hydrographic)"]}}, "ENVO:00000063": {"definitions": ["An accumulation of water of varying size."], "deprecated": [], "equivalents": [], "labels": ["water body"], "parents": ["http://purl.obolibrary.org/obo/ENVO_01000685", {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/BFO_0000050"], "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_01000819"]}, {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0002354"], "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_01001220"]}, {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0002473"], "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/CHEBI_15377"]}], "replacements": [], "synonyms": {"hasBroadSynonym": ["hydrographic feature"], "hasExactSynonym": ["aquatic feature", "bodies of water", "body of water", "waterbody"], "hasNarrowSynonym": [], "hasRelatedSynonym": []}}, "ENVO:00002006": {"definitions": ["An environmental material primarily composed of dihydrogen oxide in its liquid form."], "deprecated": [], "equivalents": [], "labels": ["liquid water"], "parents": ["http://purl.obolibrary.org/obo/ENVO_01000815", {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0002473"], "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/CHEBI_15377"]}], "replacements": [], "synonyms": {"hasBroadSynonym": ["water"], "hasExactSynonym": [], "hasNarrowSynonym": [], "hasRelatedSynonym": []}}, "ENVO:00002011": {"definitions": ["Water which has a low concentration of dissolved solutes, particularly that of sodium chloride."], "deprecated": [], "equivalents": [], "labels": ["fresh water"], "parents": ["http://purl.obolibrary.org/obo/ENVO_00002006"], "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": ["freshwater"], "hasNarrowSynonym": [], "hasRelatedSynonym": ["sweet water"]}}, "ENVO:01000008": {"definitions": ["A multi-layered sheet of micro-organisms, mainly bacteria and archaea. Microbial mats grow at interfaces between different types of material, mostly on submerged or moist surfaces but a few survive in deserts."], "deprecated": [], "equivalents": [], "labels": ["microbial mat"], "parents": ["http://purl.obolibrary.org/obo/ENVO_01000549"], "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": [], "hasNarrowSynonym": [], "hasRelatedSynonym": []}}, "ENVO:01000297": {"definitions": ["A river where fresh water flows."], "deprecated": [], "equivalents": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Class"], "http://www.w3.org/2002/07/owl#intersectionOf": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first": ["http://purl.obolibrary.org/obo/ENVO_00000022"], "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/BFO_0000051"], "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_00002011"]}], "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"]}]}]}], "labels": ["freshwater river"], "parents": ["http://purl.obolibrary.org/obo/ENVO_00000022", "http://purl.obolibrary.org/obo/ENVO_03605007"], "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": [], "hasNarrowSynonym": [], "hasRelatedSynonym": []}}, "ENVO:01000618": {"definitions": ["A lotic water body is a water body in which the accumulated water, in its totality, is flowing."], "deprecated": [], "equivalents": [], "labels": ["lotic water body"], "parents": ["http://purl.obolibrary.org/obo/ENVO_00000063"], "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": [], "hasNarrowSynonym": [], "hasRelatedSynonym": []}}} |
+| PARENT | data/habitats/aquatic/freshwater_river.yaml; data/habitats/engineered/river.yaml; data/habitats/aquatic/stream.yaml; data/habitats/aquatic/fresh_water.yaml; data/habitats/aquatic/liquid_water.yaml; data/habitats/aquatic/watercourse.yaml; data/habitats/aquatic/lotic_water_body.yaml; data/habitats/aquatic/water_body.yaml; data/habitats/other/microbial_mat.yaml; Ancestor context adds no full-record coverage | supports | {"ENVO:00000022": {"definition": "A stream which, through permanent or seasonal flow processes, moves from elevated land towards lower elevations through a definite channel and empties either into a sea, lake, or another river or ends on land as bed seepage and evapotranspiration exceed water supply.", "grounding_status": "EXACT", "label": "river", "parent_habitats": ["ENVO:00000023"]}, "ENVO:00000023": {"definition": "A watercourse which is linear and flows across the solid portion of a planetary surface.", "grounding_status": "EXACT", "label": "stream", "parent_habitats": ["ENVO:00000029", "ENVO:00002011"]}, "ENVO:00000029": {"definition": "A flowing body of water.", "grounding_status": "EXACT", "label": "watercourse", "parent_habitats": ["ENVO:01000618"]}, "ENVO:00000063": {"definition": "An accumulation of water of varying size.", "grounding_status": "EXACT", "label": "water body", "parent_habitats": ["ENVO:01000685"]}, "ENVO:00002006": {"definition": "An environmental material primarily composed of dihydrogen oxide in its liquid form.", "grounding_status": "EXACT", "label": "liquid water", "parent_habitats": ["ENVO:01000815"]}, "ENVO:00002011": {"definition": "Water which has a low concentration of dissolved solutes, particularly that of sodium chloride.", "grounding_status": "EXACT", "label": "fresh water", "parent_habitats": ["ENVO:00002006"]}, "ENVO:01000008": {"definition": "A multi-layered sheet of micro-organisms, mainly bacteria and archaea. Microbial mats grow at interfaces between different types of material, mostly on submerged or moist surfaces but a few survive in deserts.", "grounding_status": "EXACT", "label": "microbial mat", "parent_habitats": ["ENVO:01000549"]}, "ENVO:01000297": {"definition": "A river where fresh water flows.", "grounding_status": "EXACT", "label": "freshwater river", "parent_habitats": ["ENVO:00000022", "ENVO:03605007"]}, "ENVO:01000618": {"definition": "A lotic water body is a water body in which the accumulated water, in its totality, is flowing.", "grounding_status": "EXACT", "label": "lotic water body", "parent_habitats": ["ENVO:00000063"]}} |
+| BULK | https://gold.jgi.doe.gov/download?mode=site_excel; Five-position ecosystem paths preserved; contacts excluded; first 3 BioSample and Organism descriptions per target | supports | Exact positional census counts={"Biosample": 131, "Organism": 1, "SequencingProject": 131}; individually inspected descriptions={"Biosample": [{"data": {"BIOSAMPLE GOLD ID": "Gb0155566", "BIOSAMPLE NAME": "Sorted cell/s from the Broadkill River microbial mat, Lewes, Delaware, United States - FB_161122", "BIOSAMPLE NCBI TAX NAME": "microbial mat metagenome", "BIOSAMPLE SAMPLE COLLECTION SITE": "river freshwater"}, "row": 28123}, {"data": {"BIOSAMPLE GOLD ID": "Gb0155573", "BIOSAMPLE NAME": "Microbial mat bacterial communities from the Broadkill River, Lewes, Delaware, United States - BB_1_MG", "BIOSAMPLE NCBI TAX NAME": "microbial mat metagenome", "BIOSAMPLE SAMPLE COLLECTION SITE": "river freshwater"}, "row": 28128}, {"data": {"BIOSAMPLE GOLD ID": "Gb0155574", "BIOSAMPLE NAME": "Microbial mat bacterial communities from the Broadkill River, Lewes, Delaware, United States - BB_2_MG", "BIOSAMPLE NCBI TAX NAME": "microbial mat metagenome", "BIOSAMPLE SAMPLE COLLECTION SITE": "river freshwater"}, "row": 28129}], "Organism": [{"data": {"ORGANISM GOLD ID": "Go0629943", "ORGANISM NAME": "Thiorhodococcus mannitoliphagus VKM B-2393", "ORGANISM SAMPLE COLLECTION SITE": "microbial mat communities of an estuary of the Nilma river"}, "row": 460520}]}. These later examples may include mixed sample/host/enrichment contexts; they do not reconstruct original assertion membership. Remaining members and study joins were indexed, not individually assessed. |
+| CLASS | https://gold.jgi.doe.gov/download?mode=ecosystempaths; Later official classification; 29 of 31 cohort paths matched; missing tuples do not establish nonexistence | supports | [{"row": 636, "slug": "microbial_mats__200e1828", "path": "Environmental &gt; Aquatic &gt; Freshwater &gt; River &gt; Microbial mats", "values": ["5347", "Environmental", "Aquatic", "Freshwater", "River", "Microbial mats"]}] |
+| SEARCH | curation; history; research; reports; reviews; data/raw; data/habitats; conf; Search boundaries are explicit; no global absence claim | supports | Identifier, label, slug and exact-path searches included hidden/ignored files in these roots. No earlier structured target observation was found. Legacy reports exist and are not silently retired. Bounded original-source search={"configured_root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe", "root_exists": true, "exact_paths": [{"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_nodes.tsv", "exists": false, "expected_sha256": "c13c21bdd04619c75ce16e63b05e51577b0cefec5b61765d383313f654ab3fae"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_edges.tsv", "exists": false, "expected_sha256": "54982c25de9d2c820eeebc1452aeac0b034595921d04d55b810bf1d2b1e127e0"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/nodes.tsv", "exists": false, "expected_sha256": "a2a2f9acae230636dd866347d173a32c9f025c04a377060087a4be65781628f3"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/edges.tsv", "exists": false, "expected_sha256": "ab6208bff4854db7c1a736d53d0aa04269a682ab15a1ce6f37c6d731000281d7"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/nodes.tsv", "exists": false, "expected_sha256": "020de3afc71495571ddb05000c83a58d009272f53735b5f7c9326c1293e0415c"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/edges.tsv", "exists": false, "expected_sha256": "8863ee3197a36915865fa4833df39d10c3f8f69b64bafbb746b9cd731308a0aa"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/nodes.tsv", "exists": false, "expected_sha256": "cc5941cd677831e8e207da018dca763cd009bb1f9310b21cb4d45892316e006d"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/edges.tsv", "exists": false, "expected_sha256": "fd333634eaaa3cfe57a35cdca2f4c5b8cf0662851c1df58914d3e999d62a650e"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/environments.csv", "exists": false, "expected_sha256": "99299fe635159712f95568783ad3b484230fb31781262f1f6f8bd84db4bc3048"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/mappings/isolation_source_to_ontology.tsv", "exists": false, "expected_sha256": "2dea3d1bb20c72a04b6f64a67e2bb2bdc4f3649b809c5935390239be2791ef1f"}], "traversal": [{"command": ["rg", "--files", "--no-ignore", "--hidden", "data"], "exit_code": 0, "matches": [], "stderr": ""}, {"command": ["rg", "--files", "--no-ignore", "--hidden", "build"], "exit_code": 0, "matches": [], "stderr": ""}, {"command": ["rg", "--files", "--no-ignore", "--hidden", "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data"], "exit_code": 0, "matches": [], "stderr": ""}]} |
+| ISSUES | https://github.com/CultureBotAI/HabitatMech/issues; GitHub CLI inventory retrieved 12-Oct | supports | Read-only all-state 967-issue title/body inventory and relevant bodies inspected. Issues are historical leads, not primary support; current owner rows and scientific evidence were checked independently. Comments were not exhaustively crawled. Closed issue #1301 is reflected in the current graph and is not reopened by preserving old history. |
+
+## Limits And Additional Notes
+
+- Completed assessment is not a clean-record verdict or proof of every original source occurrence.
+- Only the first three exact-path BioSample and Organism descriptions per target/sheet were individually interpreted; remaining members and study joins were indexed, not scientifically reviewed.
+- Later GOLD export/classification does not reconstruct original August membership. No ontology, taxonomy or source snapshot was refreshed.
+- Same-agent review, not independent approval. Native status and curation/history inputs are unchanged.
+- SSSOM/KGX conformance to current kg-microbe modeling was not audited; shared endpoint issue #1398 remains open.
+- Whole-corpus scientific review remains incomplete. Ancestor/context reads add no record coverage. Product-label checking retains 2057 no-adapter skips and five accepted exceptions.
+- Review-only observation: no curation, status promotion, GitHub mutation or paid research.
+- No earlier structured target observation found; legacy reports are historical and are not automatically superseded.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261012T054258Z-microbial_mats__200e1828
+kind: record
+repository: CultureBotAI/HabitatMech
+title: 'Scientific record review: microbial_mats__200e1828'
+started_at: '2026-10-12T05:20:25.074888Z'
+finished_at: '2026-10-12T05:42:58.494270Z'
+reviewer:
+  identity: OpenAI Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Agent has participated in repository curation; this is not independent
+    approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The river microbial mats source has an ITEM GROUND_AS_PARENT decision and
+  one ORGANISM assertion. Keep its separate mint and microbial-mat genus; freshwater
+  river is the setting, not an is-a superclass. Do not collapse it into other mats
+  or treat the one organism as the later BioSample census.
+source:
+  git_revision: ed9e0d0f382e4502a64f4de10102c4512bddca38
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: conf/record_review.yaml
+    sha256: c2f5d0eb4c5744f5fe354c92184ddab144dc2688dba952b032b4f3d597bc08d6
+    role: context
+  - path: conf/sources.yaml
+    sha256: a8e069f9278068b57fa234f43e03c8d893f857827b83fd10cfa92d6815aed642
+    role: context
+  - path: curation/causal_graphs/fresh_water.yaml
+    sha256: 25e76fb54dd972041827ce7fb2367cf26a91cc275bca3709c3836e61945a7fb7
+    role: context
+  - path: curation/causal_graphs/liquid_water.yaml
+    sha256: 1e6033c72342a74125774b6fc3f7c2438a32046efed57a6e05f90a93fe39c33d
+    role: context
+  - path: curation/decisions.tsv
+    sha256: 2fd5aec7ac1710ede2405849e78dd0423c253d72b43676230f72b9905bae99dd
+    role: context
+  - path: curation/definition_source_label_exclusions.tsv
+    sha256: 2d41fc93db4939122b3909f2a412b84b679703948b10d9f02e12021442f71407
+    role: context
+  - path: curation/external_xrefs.tsv
+    sha256: cf8394a6ab22e35efd9e252aef422018226280830bf816a39bf4f2256ff75ad5
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: 1934ff1b8a27ba93174a6b656dc489506c47c3aae8204db89b7516ae2cc0886f
+    role: context
+  - path: curation/redirects_retracted.tsv
+    sha256: 0f1e9af8881f5a5db19f87de06b3b3d1800cfac8101699b380388c0a1a1e9a19
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 3f2ce04805defe5ff65dc20988cc72bc94d4636b3140eb1311017866bdc0ea0a
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: b59b9e800a918135e3915145d4d8098bb48dcea36a312b3004c594a57d221ae9
+    role: context
+  - path: data/habitats/aquatic/fresh_water.yaml
+    sha256: 99bd93c6173c2ccf7b59645a131ae41c88c45246b45265034a8275053b3745b7
+    role: context
+  - path: data/habitats/aquatic/freshwater_river.yaml
+    sha256: 1b09f1b0ffe0612884ecc330861ac706f05a82efc9e2f3ef82ff5e297a5a0519
+    role: context
+  - path: data/habitats/aquatic/liquid_water.yaml
+    sha256: b91ec338644558b9184fbbb52ace39758ffacaf10f76eb8c52bd854a389c9fd2
+    role: context
+  - path: data/habitats/aquatic/lotic_water_body.yaml
+    sha256: ca9d231a53aeb3160576157a826bfea04cd0843faefcb610a3b8b305562d8db4
+    role: context
+  - path: data/habitats/aquatic/microbial_mats__200e1828.yaml
+    sha256: 78651636c18cec53cac37a38aa0d20f6f6d8e36313a00171717a6f0fe5f58b1f
+    role: target
+  - path: data/habitats/aquatic/stream.yaml
+    sha256: cef44d9573f0969784d2794c2b4d5424a496b7e972427cd5f999827412cbb097
+    role: context
+  - path: data/habitats/aquatic/water_body.yaml
+    sha256: 589b017dac949a9705a816afad5094c2ee9ac1655feb1c771358a07472848239
+    role: context
+  - path: data/habitats/aquatic/watercourse.yaml
+    sha256: 842e375ecdecf70ed4749efd2f3bda791ac6616e58d0e16aa708b57cfde9608d
+    role: context
+  - path: data/habitats/engineered/river.yaml
+    sha256: bdb5de8744c9084d7774a713d7daca3a89c14d112f8c6459acbce80efc6cb219
+    role: context
+  - path: data/habitats/other/microbial_mat.yaml
+    sha256: f5402ce35ec19b05b96dd2b9cf4fa7fd4955056387aa88b4316f2e2050459708
+    role: context
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: 36df8306394c06c352b73e0bf7b47a2858784cedac7389a24d0b78f593ece646
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: f7aa39ee762d94f1902d9f08f328cb897bc543e4e226057eb4770d24bfcc6eb5
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reports/yaml_record_review/20261004T161140Z-microbial_mats__200e1828.md
+    sha256: 61fdcaf5bebb777d083c32067a46daebb6155480c22ad6235bff3b789f260c93
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/extract_gold_biosamples.py
+    sha256: b6a2773c86fe718e1ca0b1d7b32709f0eee491ac813655e310aa0817c0fec31b
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: 4bf5391d25ff48a2d81eb3821af6582de063fd0391440973d309dfd93016490c
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: src/habitatmech/extract.py
+    sha256: 4d9397bda649381a5daf81937369531c6dc8b4518d6c7047e6f3f14e605bf860
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 7e3cda3dadb9c7462498e5014bf38ef730068212f8f9cb131e3fce383c21d10e
+    role: context
+  - path: src/habitatmech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+  - path: src/habitatmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 4adf105e23d75c3563a516a0c160623d1065df7fcb2f31b7a0a0a8303d0401be
+    role: context
+targets:
+- target_id: habitatmech:GOLD.ff22e48912
+  path: data/habitats/aquatic/microbial_mats__200e1828.yaml
+  label: Microbial mats
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Source-specific identity and lifecycle decisions
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Authored definitions and genus
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Guarded source context-parent exclusions
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_terms.tsv
+    role: Pinned ontology labels, definitions and synonyms
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_subclass_edges.tsv
+    role: Pinned ontology hierarchy
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Harmonization and generated record construction
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/gold_ecosystem_paths.tsv
+    role: Frozen GOLD source inventory
+scope:
+  description: Entire exact generated record, all contributors and individual asserted
+    causal edges, with bounded source-context assessment.
+  selection: 'Next forty records without a completed individual scientific review
+    in stable repository-relative path order: marine anoxic zone through microbial_mats__200e1828.
+    Full individual observations, not a category-wide pass. Prior coverage counts
+    distinct observations, not a clean current-input corpus. Starting distinct-review
+    coverage 688/3208 is not clean current-input coverage.'
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - habitatmech:GOLD.ff22e48912
+  exclusions:
+  - target: Other 3207 current records
+    reason: Context reads are not their full scientific review.
+checks:
+- check_id: C0
+  name: Native gate on captured inputs
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.ff22e48912
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=ed9e0d0f382e4502a64f4de10102c4512bddca38
+    just validate data/habitats/aquatic/microbial_mats__200e1828.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success 2026-10-12T05:23:12.961069Z to 2026-10-12T05:23:16.221118Z.
+    Native command scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C1
+  name: Native gate on captured inputs
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.ff22e48912
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=ed9e0d0f382e4502a64f4de10102c4512bddca38
+    just validate-strict data/habitats/aquatic/marine_anoxic_zone.yaml data/habitats/aquatic/marine_aphotic_zone.yaml
+    data/habitats/aquatic/marine_basin_floor.yaml data/habitats/aquatic/marine_bathyal_zone_biome.yaml
+    data/habitats/aquatic/marine_bathypelagic_zone.yaml data/habitats/aquatic/marine_benthic_biome.yaml
+    data/habitats/aquatic/marine_biome.yaml data/habitats/aquatic/marine_cold_seep_biome.yaml
+    data/habitats/aquatic/marine_coral_reef_biome.yaml data/habitats/aquatic/marine_lake.yaml
+    data/habitats/aquatic/marine_littoral_zone.yaml data/habitats/aquatic/marine_mesopelagic_zone.yaml
+    data/habitats/aquatic/marine_mud.yaml data/habitats/aquatic/marine_oligotrophic_desert.yaml
+    data/habitats/aquatic/marine_pelagic_zone.yaml data/habitats/aquatic/marine_photic_zone.yaml
+    data/habitats/aquatic/marine_reef.yaml data/habitats/aquatic/marine_reef_biome.yaml
+    data/habitats/aquatic/marine_salt_marsh_biome.yaml data/habitats/aquatic/marine_sediment.yaml
+    data/habitats/aquatic/marine_sponge_reef.yaml data/habitats/aquatic/marine_supra_littoral_zone.yaml
+    data/habitats/aquatic/marine_water_body.yaml data/habitats/aquatic/marsh.yaml
+    data/habitats/aquatic/mediterranean_sea_biome.yaml data/habitats/aquatic/melt_pond.yaml
+    data/habitats/aquatic/meltwater.yaml data/habitats/aquatic/meromictic_lake.yaml
+    data/habitats/aquatic/mesopelagic_twilight_zone.yaml data/habitats/aquatic/metalimnion.yaml
+    data/habitats/aquatic/microbial_mat__2020a793.yaml data/habitats/aquatic/microbial_mat__23532df8.yaml
+    data/habitats/aquatic/microbial_mat__5129baa2.yaml data/habitats/aquatic/microbial_mat__54ad7767.yaml
+    data/habitats/aquatic/microbial_mat__8a9e02e4.yaml data/habitats/aquatic/microbial_mat__b6425172.yaml
+    data/habitats/aquatic/microbial_mat__eb27cff0.yaml data/habitats/aquatic/microbial_mat__fc2dbb7f.yaml
+    data/habitats/aquatic/microbial_mats.yaml data/habitats/aquatic/microbial_mats__200e1828.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success 2026-10-12T05:23:16.222412Z to 2026-10-12T05:23:26.347203Z.
+    Native command scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C2
+  name: Native gate on captured inputs
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.ff22e48912
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=ed9e0d0f382e4502a64f4de10102c4512bddca38
+    just verify-corpus
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success 2026-10-12T05:23:26.348469Z to 2026-10-12T05:23:51.098950Z.
+    Native command scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C3
+  name: Native gate on captured inputs
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.ff22e48912
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=ed9e0d0f382e4502a64f4de10102c4512bddca38
+    just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success 2026-10-12T05:23:51.100146Z to 2026-10-12T05:25:01.530644Z.
+    Native command scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C4
+  name: Native gate on captured inputs
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.ff22e48912
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=ed9e0d0f382e4502a64f4de10102c4512bddca38
+    just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success 2026-10-12T05:25:01.532072Z to 2026-10-12T05:25:11.808379Z.
+    Native command scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C5
+  name: Native gate on captured inputs
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.ff22e48912
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=ed9e0d0f382e4502a64f4de10102c4512bddca38
+    just validate-causal-all
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success 2026-10-12T05:25:11.809657Z to 2026-10-12T05:25:19.058687Z.
+    Native command scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C6
+  name: Native gate on captured inputs
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.ff22e48912
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=ed9e0d0f382e4502a64f4de10102c4512bddca38
+    just term-requests-check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success 2026-10-12T05:25:19.059693Z to 2026-10-12T05:25:46.351294Z.
+    Native command scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C7
+  name: Native gate on captured inputs
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.ff22e48912
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=ed9e0d0f382e4502a64f4de10102c4512bddca38
+    just provenance-check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success 2026-10-12T05:25:46.352569Z to 2026-10-12T05:25:47.389752Z.
+    Native command scope retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C8
+  name: Exact-base CI authoritative QC
+  required: true
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.ff22e48912
+  command: gh run view 38205892664 --repo CultureBotAI/HabitatMech --log
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success 2026-10-12T05:21:53.294030Z to 2026-10-12T05:21:55.368917Z.
+    All three required merge-group workflows passed at the exact captured base; authoritative
+    QC passed 913 tests with 3 skipped. Newly saved review bundles require their own
+    integrity check. These newly saved review bundles were not part of that earlier
+    exact-base CI run.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: REPRO
+  name: Complete target reconstruction
+  required: false
+  status: passed
+  target_ids:
+  - habitatmech:GOLD.ff22e48912
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache uv run python
+    /private/tmp/habitatmech-review-bc-evidence.py
+  exit_code: 0
+  summary: All 40 complete documents matched; captured hashes rechecked before authoring.
+  evidence_ids:
+  - RAW
+  - CODE
+- check_id: ORIGINAL
+  name: Original assertion membership
+  required: false
+  status: unavailable
+  target_ids:
+  - habitatmech:GOLD.ff22e48912
+  summary: Bounded ignored-inclusive searches did not recover complete original assertion
+    inputs; later exports are contextual evidence only.
+  evidence_ids:
+  - SEARCH
+- check_id: IMODULON
+  name: Expression-adapter applicability
+  required: false
+  status: not_applicable
+  target_ids:
+  - habitatmech:GOLD.ff22e48912
+  summary: The successful 28-dataset inventory was read for graph scope. No matching
+    claim-specific organism/strain/gene or expression-module assertion requires a
+    search or summarize call. Absence is not negative ecological evidence.
+  evidence_ids:
+  - R
+  - RULES
+evidence:
+- evidence_id: R
+  kind: record_content
+  reference: data/habitats/aquatic/microbial_mats__200e1828.yaml
+  summary: The river microbial mats source has an ITEM GROUND_AS_PARENT decision and
+    one ORGANISM assertion. Keep its separate mint and microbial-mat genus; freshwater
+    river is the setting, not an is-a superclass. Do not collapse it into other mats
+    or treat the one organism as the later BioSample census.
+  accessed_at: '2026-10-12T05:41:42.147184Z'
+  support: supports
+  locator: Entire captured YAML read, including all taxa, parameters, graphs and generated
+    history
+- evidence_id: RULES
+  kind: record_content
+  reference: docs/CURATION.md; docs/HARMONIZATION.md; docs/RESEARCH.md; src/habitatmech/schema/habitatmech.yaml
+  summary: Applied exact identity, strict-genus, MIxS roles, source-unit/score and
+    ITEM lifecycle contracts; graph node types retain their biological definitions.
+  accessed_at: '2026-10-12T05:41:42.147184Z'
+  support: supports
+- evidence_id: RAW
+  kind: database
+  reference: data/raw; curation/decisions.tsv; curation/term_requests.tsv; curation/gold_parent_exclusions.tsv
+  summary: '{"curation/decisions.tsv": [{"data": {"category": "", "curator": "claude-opus-5",
+    "date": "2026-08-12", "decision": "GROUND_AS_PARENT", "grounding_status": "NARROW",
+    "identifier": "habitatmech:GOLD.ff22e48912", "notes": "20 GOLD paths share this
+    leaf but differ in setting, not host, so each is a kind of microbial mat rather
+    than microbial mat itself. Grounding them all to ENVO:01000008 would merge distinct
+    environments; ENVO:01000008 is recorded as a parent instead. Path: Environmental
+    > Aquatic > Freshwater > River > Microbial mats", "object_id": "ENVO:01000008",
+    "object_label": "microbial mat", "relation": "", "review_depth": "ITEM"}, "logical_row":
+    1394}], "data/raw/gold_ecosystem_paths.tsv": [{"data": {"biosample_count": "0",
+    "canonical_path": "Environmental > Aquatic > Freshwater > River > Microbial mats",
+    "depth": "5", "ecosystem": "Environmental", "ecosystem_category": "Aquatic", "ecosystem_subtype":
+    "River", "ecosystem_type": "Freshwater", "gold_node_count": "1", "gold_node_ids":
+    "gold.ecosystem:5347", "leaf_label": "Microbial mats", "organism_count": "1",
+    "specific_ecosystem": "Microbial mats", "study_count": "0", "total_assertions":
+    "1"}, "logical_row": 938}], "data/raw/gold_path_biosamples.tsv": [{"data": {"biosample_count":
+    "203", "canonical_path": "Environmental > Aquatic > Freshwater > River > Microbial
+    mats", "ecosystem_path_id": "5347"}, "logical_row": 145}], "data/raw/gold_path_triads.tsv":
+    [{"data": {"canonical_path": "Environmental > Aquatic > Freshwater > River > Microbial
+    mats", "distinct_terms": "1", "samples": "16", "slot": "broad", "studies": "1",
+    "studies_agreeing": "1", "top_label": "freshwater river biome", "top_share": "1.00",
+    "top_term": "ENVO:01000253"}, "logical_row": 383}, {"data": {"canonical_path":
+    "Environmental > Aquatic > Freshwater > River > Microbial mats", "distinct_terms":
+    "1", "samples": "16", "slot": "local", "studies": "1", "studies_agreeing": "1",
+    "top_label": "river", "top_share": "1.00", "top_term": "ENVO:00000022"}, "logical_row":
+    384}, {"data": {"canonical_path": "Environmental > Aquatic > Freshwater > River
+    > Microbial mats", "distinct_terms": "1", "samples": "16", "slot": "medium", "studies":
+    "1", "studies_agreeing": "1", "top_label": "microbial mat material", "top_share":
+    "1.00", "top_term": "ENVO:01000157"}, "logical_row": 385}]}'
+  accessed_at: '2026-10-12T05:41:42.147184Z'
+  support: supports
+  locator: Exact logical TSV rows, header=row1; filtered by current source IDs and
+    exact paths, not legacy issue line numbers
+- evidence_id: CODE
+  kind: record_content
+  reference: src/habitatmech/seed.py
+  summary: '{"reviewed_sources": 1, "routes": [{"actual": {"category": null, "contributes_grounding":
+    true, "decision": {"category": "", "curator": "claude-opus-5", "date": "2026-08-12",
+    "decision": "GROUND_AS_PARENT", "grounding_status": "NARROW", "identifier": "habitatmech:GOLD.ff22e48912",
+    "notes": "20 GOLD paths share this leaf but differ in setting, not host, so each
+    is a kind of microbial mat rather than microbial mat itself. Grounding them all
+    to ENVO:01000008 would merge distinct environments; ENVO:01000008 is recorded
+    as a parent instead. Path: Environmental > Aquatic > Freshwater > River > Microbial
+    mats", "object_id": "ENVO:01000008", "object_label": "microbial mat", "relation":
+    "parent", "review_depth": "ITEM"}, "extra_parents": ["ENVO:01000008"], "extra_xrefs":
+    [], "grounding_status": "NARROW", "identifier": "habitatmech:GOLD.ff22e48912",
+    "mapping_predicate": "skos:narrowMatch", "reviewed": true, "route": "curated_ground_as_parent_from_gold_unmatched"},
+    "automatic": {"category": null, "contributes_grounding": true, "decision": null,
+    "extra_parents": [], "extra_xrefs": [], "grounding_status": "UNGROUNDED", "identifier":
+    "habitatmech:GOLD.ff22e48912", "mapping_predicate": null, "reviewed": false, "route":
+    "gold_unmatched"}, "minted": "habitatmech:GOLD.ff22e48912", "source": "GOLD",
+    "source_id": "gold.ecosystem:5347"}], "source_concepts": 1}'
+  accessed_at: '2026-10-12T05:41:42.147184Z'
+  support: supports
+  locator: Executed complete-document reconstruction; all 40 matched; routes distinguish
+    source mints and generated identity
+- evidence_id: ONT
+  kind: authority
+  reference: https://raw.githubusercontent.com/EnvironmentOntology/envo/master/envo.owl
+  summary: '{"ENVO:00000022": {"definitions": ["A stream which, through permanent
+    or seasonal flow processes, moves from elevated land towards lower elevations
+    through a definite channel and empties either into a sea, lake, or another river
+    or ends on land as bed seepage and evapotranspiration exceed water supply."],
+    "deprecated": [], "equivalents": [], "labels": ["river"], "parents": ["http://purl.obolibrary.org/obo/ENVO_00000023",
+    {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"],
+    "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0002150"],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_01000652"]},
+    {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"],
+    "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0002220"],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_00000143"]}],
+    "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": ["rio"],
+    "hasNarrowSynonym": ["braided river"], "hasRelatedSynonym": []}}, "ENVO:00000023":
+    {"definitions": ["A watercourse which is linear and flows across the solid portion
+    of a planetary surface."], "deprecated": [], "equivalents": [], "labels": ["stream"],
+    "parents": ["http://purl.obolibrary.org/obo/ENVO_00000029", {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+    ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty":
+    ["http://purl.obolibrary.org/obo/RO_0000086"], "http://www.w3.org/2002/07/owl#someValuesFrom":
+    ["http://purl.obolibrary.org/obo/PATO_0001199"]}, {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+    ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty":
+    ["http://purl.obolibrary.org/obo/RO_0002150"], "http://www.w3.org/2002/07/owl#someValuesFrom":
+    ["http://purl.obolibrary.org/obo/ENVO_01000650"]}], "replacements": [], "synonyms":
+    {"hasBroadSynonym": ["watercourse"], "hasExactSynonym": ["streams"], "hasNarrowSynonym":
+    ["braided stream", "fork (hydrographic", "lode", "millstream", "stream bend",
+    "streamlet"], "hasRelatedSynonym": ["Creek", "beck", "brook", "burn (hydrographic)",
+    "creek", "rivulet"]}}, "ENVO:00000029": {"definitions": ["A flowing body of water."],
+    "deprecated": [], "equivalents": [], "labels": ["watercourse"], "parents": ["http://purl.obolibrary.org/obo/ENVO_01000618",
+    {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"],
+    "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0002150"],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_00000395"]}],
+    "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": [],
+    "hasNarrowSynonym": ["culvert", "dredged channel", "fork", "gulch", "gully", "gut",
+    "gutter", "kill", "lode", "narrows", "overflow channel", "passage", "pup", "race",
+    "ravine", "reach", "rill", "rivulet", "run", "runnel", "seachannel", "seaway",
+    "spillway", "stream", "tideway", "wash", "water gap"], "hasRelatedSynonym": ["awawa",
+    "barranca", "beck", "branch", "brook", "course", "draw", "moat", "narrows", "narrows
+    (hydrographic)"]}}, "ENVO:00000063": {"definitions": ["An accumulation of water
+    of varying size."], "deprecated": [], "equivalents": [], "labels": ["water body"],
+    "parents": ["http://purl.obolibrary.org/obo/ENVO_01000685", {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+    ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty":
+    ["http://purl.obolibrary.org/obo/BFO_0000050"], "http://www.w3.org/2002/07/owl#someValuesFrom":
+    ["http://purl.obolibrary.org/obo/ENVO_01000819"]}, {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+    ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty":
+    ["http://purl.obolibrary.org/obo/RO_0002354"], "http://www.w3.org/2002/07/owl#someValuesFrom":
+    ["http://purl.obolibrary.org/obo/ENVO_01001220"]}, {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+    ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty":
+    ["http://purl.obolibrary.org/obo/RO_0002473"], "http://www.w3.org/2002/07/owl#someValuesFrom":
+    ["http://purl.obolibrary.org/obo/CHEBI_15377"]}], "replacements": [], "synonyms":
+    {"hasBroadSynonym": ["hydrographic feature"], "hasExactSynonym": ["aquatic feature",
+    "bodies of water", "body of water", "waterbody"], "hasNarrowSynonym": [], "hasRelatedSynonym":
+    []}}, "ENVO:00002006": {"definitions": ["An environmental material primarily composed
+    of dihydrogen oxide in its liquid form."], "deprecated": [], "equivalents": [],
+    "labels": ["liquid water"], "parents": ["http://purl.obolibrary.org/obo/ENVO_01000815",
+    {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"],
+    "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0002473"],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/CHEBI_15377"]}],
+    "replacements": [], "synonyms": {"hasBroadSynonym": ["water"], "hasExactSynonym":
+    [], "hasNarrowSynonym": [], "hasRelatedSynonym": []}}, "ENVO:00002011": {"definitions":
+    ["Water which has a low concentration of dissolved solutes, particularly that
+    of sodium chloride."], "deprecated": [], "equivalents": [], "labels": ["fresh
+    water"], "parents": ["http://purl.obolibrary.org/obo/ENVO_00002006"], "replacements":
+    [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": ["freshwater"], "hasNarrowSynonym":
+    [], "hasRelatedSynonym": ["sweet water"]}}, "ENVO:01000008": {"definitions": ["A
+    multi-layered sheet of micro-organisms, mainly bacteria and archaea. Microbial
+    mats grow at interfaces between different types of material, mostly on submerged
+    or moist surfaces but a few survive in deserts."], "deprecated": [], "equivalents":
+    [], "labels": ["microbial mat"], "parents": ["http://purl.obolibrary.org/obo/ENVO_01000549"],
+    "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": [],
+    "hasNarrowSynonym": [], "hasRelatedSynonym": []}}, "ENVO:01000297": {"definitions":
+    ["A river where fresh water flows."], "deprecated": [], "equivalents": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+    ["http://www.w3.org/2002/07/owl#Class"], "http://www.w3.org/2002/07/owl#intersectionOf":
+    [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first": ["http://purl.obolibrary.org/obo/ENVO_00000022"],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first":
+    [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"],
+    "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/BFO_0000051"],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/ENVO_00002011"]}],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"]}]}]}],
+    "labels": ["freshwater river"], "parents": ["http://purl.obolibrary.org/obo/ENVO_00000022",
+    "http://purl.obolibrary.org/obo/ENVO_03605007"], "replacements": [], "synonyms":
+    {"hasBroadSynonym": [], "hasExactSynonym": [], "hasNarrowSynonym": [], "hasRelatedSynonym":
+    []}}, "ENVO:01000618": {"definitions": ["A lotic water body is a water body in
+    which the accumulated water, in its totality, is flowing."], "deprecated": [],
+    "equivalents": [], "labels": ["lotic water body"], "parents": ["http://purl.obolibrary.org/obo/ENVO_00000063"],
+    "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": [],
+    "hasNarrowSynonym": [], "hasRelatedSynonym": []}}}'
+  accessed_at: '2026-10-12T05:20:26.560054Z'
+  support: supports
+  locator: Official OWL retrieved 12-Oct; labels, definitions, typed synonyms, named
+    parents and restrictions; no snapshot refresh
+  snapshot_sha256: a0b919065d33a9cf975b74cadd16c75f32f512d17f4f6d5999b74216701df54c
+- evidence_id: PARENT
+  kind: record_content
+  reference: data/habitats/aquatic/freshwater_river.yaml; data/habitats/engineered/river.yaml;
+    data/habitats/aquatic/stream.yaml; data/habitats/aquatic/fresh_water.yaml; data/habitats/aquatic/liquid_water.yaml;
+    data/habitats/aquatic/watercourse.yaml; data/habitats/aquatic/lotic_water_body.yaml;
+    data/habitats/aquatic/water_body.yaml; data/habitats/other/microbial_mat.yaml
+  summary: '{"ENVO:00000022": {"definition": "A stream which, through permanent or
+    seasonal flow processes, moves from elevated land towards lower elevations through
+    a definite channel and empties either into a sea, lake, or another river or ends
+    on land as bed seepage and evapotranspiration exceed water supply.", "grounding_status":
+    "EXACT", "label": "river", "parent_habitats": ["ENVO:00000023"]}, "ENVO:00000023":
+    {"definition": "A watercourse which is linear and flows across the solid portion
+    of a planetary surface.", "grounding_status": "EXACT", "label": "stream", "parent_habitats":
+    ["ENVO:00000029", "ENVO:00002011"]}, "ENVO:00000029": {"definition": "A flowing
+    body of water.", "grounding_status": "EXACT", "label": "watercourse", "parent_habitats":
+    ["ENVO:01000618"]}, "ENVO:00000063": {"definition": "An accumulation of water
+    of varying size.", "grounding_status": "EXACT", "label": "water body", "parent_habitats":
+    ["ENVO:01000685"]}, "ENVO:00002006": {"definition": "An environmental material
+    primarily composed of dihydrogen oxide in its liquid form.", "grounding_status":
+    "EXACT", "label": "liquid water", "parent_habitats": ["ENVO:01000815"]}, "ENVO:00002011":
+    {"definition": "Water which has a low concentration of dissolved solutes, particularly
+    that of sodium chloride.", "grounding_status": "EXACT", "label": "fresh water",
+    "parent_habitats": ["ENVO:00002006"]}, "ENVO:01000008": {"definition": "A multi-layered
+    sheet of micro-organisms, mainly bacteria and archaea. Microbial mats grow at
+    interfaces between different types of material, mostly on submerged or moist surfaces
+    but a few survive in deserts.", "grounding_status": "EXACT", "label": "microbial
+    mat", "parent_habitats": ["ENVO:01000549"]}, "ENVO:01000297": {"definition": "A
+    river where fresh water flows.", "grounding_status": "EXACT", "label": "freshwater
+    river", "parent_habitats": ["ENVO:00000022", "ENVO:03605007"]}, "ENVO:01000618":
+    {"definition": "A lotic water body is a water body in which the accumulated water,
+    in its totality, is flowing.", "grounding_status": "EXACT", "label": "lotic water
+    body", "parent_habitats": ["ENVO:00000063"]}}'
+  accessed_at: '2026-10-12T05:41:42.147184Z'
+  support: supports
+  locator: Ancestor context adds no full-record coverage
+- evidence_id: BULK
+  kind: database
+  reference: https://gold.jgi.doe.gov/download?mode=site_excel
+  summary: 'Exact positional census counts={"Biosample": 131, "Organism": 1, "SequencingProject":
+    131}; individually inspected descriptions={"Biosample": [{"data": {"BIOSAMPLE
+    GOLD ID": "Gb0155566", "BIOSAMPLE NAME": "Sorted cell/s from the Broadkill River
+    microbial mat, Lewes, Delaware, United States - FB_161122", "BIOSAMPLE NCBI TAX
+    NAME": "microbial mat metagenome", "BIOSAMPLE SAMPLE COLLECTION SITE": "river
+    freshwater"}, "row": 28123}, {"data": {"BIOSAMPLE GOLD ID": "Gb0155573", "BIOSAMPLE
+    NAME": "Microbial mat bacterial communities from the Broadkill River, Lewes, Delaware,
+    United States - BB_1_MG", "BIOSAMPLE NCBI TAX NAME": "microbial mat metagenome",
+    "BIOSAMPLE SAMPLE COLLECTION SITE": "river freshwater"}, "row": 28128}, {"data":
+    {"BIOSAMPLE GOLD ID": "Gb0155574", "BIOSAMPLE NAME": "Microbial mat bacterial
+    communities from the Broadkill River, Lewes, Delaware, United States - BB_2_MG",
+    "BIOSAMPLE NCBI TAX NAME": "microbial mat metagenome", "BIOSAMPLE SAMPLE COLLECTION
+    SITE": "river freshwater"}, "row": 28129}], "Organism": [{"data": {"ORGANISM GOLD
+    ID": "Go0629943", "ORGANISM NAME": "Thiorhodococcus mannitoliphagus VKM B-2393",
+    "ORGANISM SAMPLE COLLECTION SITE": "microbial mat communities of an estuary of
+    the Nilma river"}, "row": 460520}]}. These later examples may include mixed sample/host/enrichment
+    contexts; they do not reconstruct original assertion membership. Remaining members
+    and study joins were indexed, not individually assessed.'
+  accessed_at: '2026-10-11T13:21:51.155056Z'
+  support: supports
+  locator: Five-position ecosystem paths preserved; contacts excluded; first 3 BioSample
+    and Organism descriptions per target
+  snapshot_sha256: b222fa9df89ffbd1a30897a1e7302da363c57b463d9948ecc9bfcb9304b4a96f
+- evidence_id: CLASS
+  kind: database
+  reference: https://gold.jgi.doe.gov/download?mode=ecosystempaths
+  summary: '[{"row": 636, "slug": "microbial_mats__200e1828", "path": "Environmental
+    > Aquatic > Freshwater > River > Microbial mats", "values": ["5347", "Environmental",
+    "Aquatic", "Freshwater", "River", "Microbial mats"]}]'
+  accessed_at: '2026-10-12T05:20:29.451803Z'
+  support: supports
+  locator: Later official classification; 29 of 31 cohort paths matched; missing tuples
+    do not establish nonexistence
+  snapshot_sha256: 78ed6ce1c3799a2d6ef2d17e4a9eeee5da48eef78df0b71079c0f942555e5e7d
+- evidence_id: SEARCH
+  kind: search
+  reference: curation; history; research; reports; reviews; data/raw; data/habitats;
+    conf
+  summary: 'Identifier, label, slug and exact-path searches included hidden/ignored
+    files in these roots. No earlier structured target observation was found. Legacy
+    reports exist and are not silently retired. Bounded original-source search={"configured_root":
+    "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe", "root_exists":
+    true, "exact_paths": [{"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_nodes.tsv",
+    "exists": false, "expected_sha256": "c13c21bdd04619c75ce16e63b05e51577b0cefec5b61765d383313f654ab3fae"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_edges.tsv",
+    "exists": false, "expected_sha256": "54982c25de9d2c820eeebc1452aeac0b034595921d04d55b810bf1d2b1e127e0"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/nodes.tsv",
+    "exists": false, "expected_sha256": "a2a2f9acae230636dd866347d173a32c9f025c04a377060087a4be65781628f3"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/edges.tsv",
+    "exists": false, "expected_sha256": "ab6208bff4854db7c1a736d53d0aa04269a682ab15a1ce6f37c6d731000281d7"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/nodes.tsv",
+    "exists": false, "expected_sha256": "020de3afc71495571ddb05000c83a58d009272f53735b5f7c9326c1293e0415c"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/edges.tsv",
+    "exists": false, "expected_sha256": "8863ee3197a36915865fa4833df39d10c3f8f69b64bafbb746b9cd731308a0aa"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/nodes.tsv",
+    "exists": false, "expected_sha256": "cc5941cd677831e8e207da018dca763cd009bb1f9310b21cb4d45892316e006d"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/edges.tsv",
+    "exists": false, "expected_sha256": "fd333634eaaa3cfe57a35cdca2f4c5b8cf0662851c1df58914d3e999d62a650e"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/environments.csv",
+    "exists": false, "expected_sha256": "99299fe635159712f95568783ad3b484230fb31781262f1f6f8bd84db4bc3048"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/mappings/isolation_source_to_ontology.tsv",
+    "exists": false, "expected_sha256": "2dea3d1bb20c72a04b6f64a67e2bb2bdc4f3649b809c5935390239be2791ef1f"}],
+    "traversal": [{"command": ["rg", "--files", "--no-ignore", "--hidden", "data"],
+    "exit_code": 0, "matches": [], "stderr": ""}, {"command": ["rg", "--files", "--no-ignore",
+    "--hidden", "build"], "exit_code": 0, "matches": [], "stderr": ""}, {"command":
+    ["rg", "--files", "--no-ignore", "--hidden", "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data"],
+    "exit_code": 0, "matches": [], "stderr": ""}]}'
+  accessed_at: '2026-10-12T05:41:42.147184Z'
+  support: supports
+  locator: Search boundaries are explicit; no global absence claim
+  search_scope: 'Identifier, label, slug and exact-path searches included hidden/ignored
+    files in these roots. No earlier structured target observation was found. Legacy
+    reports exist and are not silently retired. Bounded original-source search={"configured_root":
+    "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe", "root_exists":
+    true, "exact_paths": [{"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_nodes.tsv",
+    "exists": false, "expected_sha256": "c13c21bdd04619c75ce16e63b05e51577b0cefec5b61765d383313f654ab3fae"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_edges.tsv",
+    "exists": false, "expected_sha256": "54982c25de9d2c820eeebc1452aeac0b034595921d04d55b810bf1d2b1e127e0"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/nodes.tsv",
+    "exists": false, "expected_sha256": "a2a2f9acae230636dd866347d173a32c9f025c04a377060087a4be65781628f3"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/edges.tsv",
+    "exists": false, "expected_sha256": "ab6208bff4854db7c1a736d53d0aa04269a682ab15a1ce6f37c6d731000281d7"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/nodes.tsv",
+    "exists": false, "expected_sha256": "020de3afc71495571ddb05000c83a58d009272f53735b5f7c9326c1293e0415c"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/edges.tsv",
+    "exists": false, "expected_sha256": "8863ee3197a36915865fa4833df39d10c3f8f69b64bafbb746b9cd731308a0aa"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/nodes.tsv",
+    "exists": false, "expected_sha256": "cc5941cd677831e8e207da018dca763cd009bb1f9310b21cb4d45892316e006d"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/edges.tsv",
+    "exists": false, "expected_sha256": "fd333634eaaa3cfe57a35cdca2f4c5b8cf0662851c1df58914d3e999d62a650e"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/environments.csv",
+    "exists": false, "expected_sha256": "99299fe635159712f95568783ad3b484230fb31781262f1f6f8bd84db4bc3048"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/mappings/isolation_source_to_ontology.tsv",
+    "exists": false, "expected_sha256": "2dea3d1bb20c72a04b6f64a67e2bb2bdc4f3649b809c5935390239be2791ef1f"}],
+    "traversal": [{"command": ["rg", "--files", "--no-ignore", "--hidden", "data"],
+    "exit_code": 0, "matches": [], "stderr": ""}, {"command": ["rg", "--files", "--no-ignore",
+    "--hidden", "build"], "exit_code": 0, "matches": [], "stderr": ""}, {"command":
+    ["rg", "--files", "--no-ignore", "--hidden", "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data"],
+    "exit_code": 0, "matches": [], "stderr": ""}]}'
+- evidence_id: ISSUES
+  kind: database
+  reference: https://github.com/CultureBotAI/HabitatMech/issues
+  summary: 'Read-only all-state 967-issue title/body inventory and relevant bodies
+    inspected. Issues are historical leads, not primary support; current owner rows
+    and scientific evidence were checked independently. Comments were not exhaustively
+    crawled. Closed issue #1301 is reflected in the current graph and is not reopened
+    by preserving old history.'
+  accessed_at: '2026-10-12T05:41:42.147184Z'
+  support: supports
+  locator: GitHub CLI inventory retrieved 12-Oct
+assessments:
+- assessment_id: IDENTITY
+  area: identity
+  topic: Exact identity, definition and source intent
+  outcome: supported
+  summary: The river microbial mats source has an ITEM GROUND_AS_PARENT decision and
+    one ORGANISM assertion. Keep its separate mint and microbial-mat genus; freshwater
+    river is the setting, not an is-a superclass. Do not collapse it into other mats
+    or treat the one organism as the later BioSample census.
+  target_ids:
+  - habitatmech:GOLD.ff22e48912
+  evidence_ids:
+  - R
+  - RAW
+  - ONT
+  - PARENT
+- assessment_id: HIERARCHY
+  area: grounding
+  topic: Parent contributors and mapping endpoints
+  outcome: concern
+  summary: The river microbial mats source has an ITEM GROUND_AS_PARENT decision and
+    one ORGANISM assertion. Keep its separate mint and microbial-mat genus; freshwater
+    river is the setting, not an is-a superclass. Do not collapse it into other mats
+    or treat the one organism as the later BioSample census. Ontology, GOLD path,
+    ambiguous-leaf and authored-genus routes were distinguished.
+  target_ids:
+  - habitatmech:GOLD.ff22e48912
+  evidence_ids:
+  - R
+  - RAW
+  - CODE
+  - ONT
+  - PARENT
+- assessment_id: PROVENANCE
+  area: provenance
+  topic: Source units and native lifecycle
+  outcome: supported
+  summary: 'Complete reconstruction preserves 1 contributing concepts and 1 ITEM-reviewed
+    contributors. Attestations=[{"source": "GOLD", "source_id": "gold.ecosystem:5347",
+    "source_label": "Microbial mats", "source_path": "Environmental > Aquatic > Freshwater
+    > River > Microbial mats", "mapping_predicate": "skos:narrowMatch", "assertion_count":
+    1, "assertion_unit": "ORGANISM"}]. Counts with different units are not summed.
+    Reproduction validates derivation, not the scientific truth of the mapping.'
+  target_ids:
+  - habitatmech:GOLD.ff22e48912
+  evidence_ids:
+  - R
+  - RAW
+  - CODE
+  - RULES
+- assessment_id: COMPLETENESS
+  area: completeness
+  topic: Optional slots and bounded evidence
+  outcome: supported
+  summary: Optional empty fields alone are not defects. No causal graph is asserted
+    in the exact captured record; ignored-inclusive support search and the full causal
+    gate were checked. No record-level gene/regulator or transcriptomics claim warrants
+    a component query.
+  target_ids:
+  - habitatmech:GOLD.ff22e48912
+  evidence_ids:
+  - R
+  - RULES
+  - SEARCH
+findings:
+- finding_id: F1
+  issue_key: habitatmech-gold.ff22e48912-context-parent
+  category: scope
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Source context is emitted as a strict superclass
+  description: 'The river microbial mats source has an ITEM GROUND_AS_PARENT decision
+    and one ORGANISM assertion. Keep its separate mint and microbial-mat genus; freshwater
+    river is the setting, not an is-a superclass. Do not collapse it into other mats
+    or treat the one organism as the later BioSample census. Unsupported GOLD contributions:
+    ENVO:01000297.'
+  target_ids:
+  - habitatmech:GOLD.ff22e48912
+  field_paths:
+  - parent_habitats
+  evidence_ids:
+  - R
+  - RAW
+  - CODE
+  - ONT
+  - PARENT
+  - BULK
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Exact source-path and expected-parent guards
+  rule_id: docs/CURATION.md; .claude/skills/curate-yaml-record/references/review-checklist.md
+  native_severity: major
+  normalization_reason: Material identity, strict-hierarchy, evidence or representation
+    defect.
+- finding_id: F2
+  issue_key: habitatmech-gold.ff22e48912-mapping-endpoint
+  category: scope
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Narrow mapping uses an undeclared ontology comparison endpoint
+  description: A source-specific mint is retained and the generic ontology class is
+    a parent. narrowMatch compares to that parent, but SourceAttestation describes
+    comparison to the generated record. This is an endpoint contract ambiguity, not
+    proof of formal SKOS self-inconsistency.
+  target_ids:
+  - habitatmech:GOLD.ff22e48912
+  field_paths:
+  - source_attestations
+  - grounding_status
+  evidence_ids:
+  - R
+  - RAW
+  - CODE
+  - RULES
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Resolver endpoints
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/schema/habitatmech.yaml
+    role: Attestation comparison contract
+  rule_id: docs/CURATION.md; .claude/skills/curate-yaml-record/references/review-checklist.md
+  native_severity: major
+  normalization_reason: Material identity, strict-hierarchy, evidence or representation
+    defect.
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1398
+actions:
+- action_id: A1
+  description: Exclude only the specified GOLD contributions, retaining independent
+    ontology/curator genera and source provenance. Where source specificity is unresolved,
+    assess the source decision separately instead of treating an exclusion as proof
+    of exact equivalence.
+  finding_ids:
+  - F1
+  target_ids:
+  - habitatmech:GOLD.ff22e48912
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Exact source-path and expected-parent guards
+  generator: src/habitatmech/seed.py
+  acceptance_checks:
+  - Change only maintained owners after source-level assessment; retain independent
+    true parents, source identity/count/unit provenance and lifecycle unless a separately
+    justified change requires otherwise.
+  - Append required current history, add focused regressions, inspect a seed canary
+    and regenerate affected products without hand-editing records or pages.
+  - Pass schema, strict, label, provenance, corpus reproduction, causal/history and
+    full QC gates; save a linked successor for any finding disposition.
+- action_id: A2
+  description: 'Resolve shared issue #1398 with explicit subject/predicate/object
+    semantics and SSSOM/KGX consumer tests; retain source-specific identities. Reversing
+    the predicate alone cannot supply a missing endpoint.'
+  finding_ids:
+  - F2
+  target_ids:
+  - habitatmech:GOLD.ff22e48912
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Resolver endpoints
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/schema/habitatmech.yaml
+    role: Attestation comparison contract
+  generator: src/habitatmech/seed.py
+  acceptance_checks:
+  - Change only maintained owners after source-level assessment; retain independent
+    true parents, source identity/count/unit provenance and lifecycle unless a separately
+    justified change requires otherwise.
+  - Append required current history, add focused regressions, inspect a seed canary
+    and regenerate affected products without hand-editing records or pages.
+  - Pass schema, strict, label, provenance, corpus reproduction, causal/history and
+    full QC gates; save a linked successor for any finding disposition.
+limitations:
+- Completed assessment is not a clean-record verdict or proof of every original source
+  occurrence.
+- Only the first three exact-path BioSample and Organism descriptions per target/sheet
+  were individually interpreted; remaining members and study joins were indexed, not
+  scientifically reviewed.
+- Later GOLD export/classification does not reconstruct original August membership.
+  No ontology, taxonomy or source snapshot was refreshed.
+- Same-agent review, not independent approval. Native status and curation/history
+  inputs are unchanged.
+- 'SSSOM/KGX conformance to current kg-microbe modeling was not audited; shared endpoint
+  issue #1398 remains open.'
+- Whole-corpus scientific review remains incomplete. Ancestor/context reads add no
+  record coverage. Product-label checking retains 2057 no-adapter skips and five accepted
+  exceptions.
+notes:
+- 'Review-only observation: no curation, status promotion, GitHub mutation or paid
+  research.'
+- No earlier structured target observation found; legacy reports are historical and
+  are not automatically superseded.
+tags:
+- habitatmech
+- aquatic
+- record-review
+- scientific-review
+```

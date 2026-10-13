@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: acid_mine_drainage
+session:
+  id: 2026-10-11T213553Z-codex-gpt-5-faff82
+  timestamp: '2026-10-11T21:35:53Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1971
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude reviewed GOLD context parent from acid_mine_drainage
+  details: 'ITEM hierarchy assessment (https://github.com/CultureBotAI/HabitatMech/issues/1971;
+    20261011T212749Z-acid_mine_drainage): The ENVO acidic mine-drainage identity is supported
+    by two GOLD paths and PREGO, with separate18 and16 ORGANISM counts and three TAXON associations.
+    The14-study local-scale consensus is evidence for place identity, not equivalence of every
+    triad role. Generic acid mine drainage is not restricted to fresh groundwater; the merged
+    parent imports one source context. ENVO types acid rock drainage as related, not exact.
+    Exclude only this guarded GOLD source-parent contribution. Preserve independent parents,
+    source identity/count units or omissions, ontology definition, and native lifecycle; later
+    source examples do not reconstruct frozen membership. Shared synonym1249 and endpoint1398
+    issues remain separate. Authorized by user publication/remediation request. Baseline46
+    native checks and exact main CI783 passed/3 skipped succeeded. Post-fix tests, canary,
+    regeneration and full QC pending at event creation; results will be retained in PR and
+    linked successor reviews.'

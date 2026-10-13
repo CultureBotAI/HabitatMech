@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: chemical_product
+session:
+  id: 2026-10-07T184722Z-codex-gpt-5-be85c2
+  timestamp: '2026-10-07T18:47:22Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1655
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1654
+events:
+- type: REVIEW
+  outcome: no_change
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: Verify chemical product correction and regenerated semantic map
+  details: 'Follow-up to history/mappings/chemical_product/2026-10-07T184027Z-codex-gpt-5-45009f.yaml;
+    the scientific correction is unchanged. The fresh OAK check passed with 1178 canonical
+    labels, one synonym, five accepted exceptions and 2056 no-adapter skips. All 18 governed
+    artifacts match the pinned claw revision. Linux map run 37668645841 at 9bbe1620736ceb356243c9256174a296125ff6e3
+    passed: one changed-record canary vector encoded, repeat reused one, then full run reused
+    all 3207. Local semantic-input comparison proved only ENVO:2000000 changed, removing the
+    Industrial production parent text. Downloaded bundle 9d1a0f1c17e54bb66ea94190400510729bc2259618ae13e6dde6b32821ab7236
+    and cache passed the maintained verifier against current full input SHA256 22aaa4371b536b6e738b537ba089c8d746f2cd4ef9cfc2ef205b6894fa5dc28b.
+    All 3207 map points are covered and the target point has the current semantic hash. Render
+    completed for 3207 habitat pages, 249 redirect stubs, eight categories and 126 term requests.
+    The temporary rebuild workflow is removed before publication. No further scientific edits.
+    Final stable-tree full QC and required head/queue CI remain to be checked; their completion
+    will be recorded on the PR.'

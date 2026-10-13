@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: influent
+session:
+  id: 2026-10-09T002440Z-claude-code-f3e7df
+  timestamp: '2026-10-09T00:24:40Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1760
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: Exclude the receiving-plant context parent from Influent
+  details: 'Add an exact-mint/path/expected-parent guard for GOLD.2bf3ab7d2f, Engineered >
+    WWTP > Influent, ENVO:00002043. EPA Primer for Wastewater Treatment (July 1980, terminology
+    p.19, https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=200044GQ.TXT) describes incoming liquid,
+    while official ENVO a2455d1a77e46bb8a664d65a157166b539269042 identifies the receiving
+    facility. Baseline report: reports/yaml_record_review/20261009T001109Z-influent.md. Preserve
+    source node 6077, path, absent count/unit/predicate, native identity and UNGROUNDED/SEEDED
+    lifecycle. No definition or substitute parent is asserted. The targeted full-corpus differential
+    regression passed, dry seeding succeeded, and canary inspection confirmed only target
+    parent/audit changes. Semantic-map input changed, requiring a real rebuild before rendering.
+    Final corpus/site/history/provenance and QC results are recorded in PR #1759. The separate
+    industrial-waste synonym defect remains #1249; no raw inventory or provenance checksum
+    is patched.'

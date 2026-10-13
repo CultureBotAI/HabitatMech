@@ -14,6 +14,8 @@ import datetime
 from dataclasses import dataclass
 from pathlib import Path
 
+from habitatmech.labels import norm_label
+
 __all__ = [
     "CuratedDefinition",
     "DefinitionError",
@@ -171,6 +173,11 @@ def validate_curated_definitions(
                 f"{prefix}: parent_label says {row.parent_label!r} but "
                 f"{row.parent_class} is {actual_parent!r}"
             )
+        if any(
+            norm_label(synonym) == norm_label(row.parent_label)
+            for synonym in row.exact_synonyms
+        ):
+            problems.append(f"{prefix}: an exact synonym cannot name the authored strict genus")
     if problems:
         raise DefinitionError(
             "curated definitions cannot be applied:\n  " + "\n  ".join(problems)

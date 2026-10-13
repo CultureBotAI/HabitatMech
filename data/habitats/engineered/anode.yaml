@@ -3,8 +3,6 @@ label: Anode
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.cdf0160423
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7654
@@ -24,3 +22,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.cdf0160423
+    for habitatmech:GOLD.9b7ba22de1 (Engineered > Bioreactor > Microbial fuel cells/MFC
+    > Anode). ITEM hierarchy assessment (#1612): The anode is an electrode component,
+    not a kind of the whole microbial fuel cell. Bond and Lovley 2003 (PMID:12620842;
+    DOI:10.1128/AEM.69.3.1548-1555.2003) distinguishes the electrode, attached cells,
+    medium and fuel-cell system. Exclude only this immediate GOLD context parent;
+    preserve the qualified mint, both source nodes, count/unit omissions and UNGROUNDED/SEEDED
+    state. Do not inherit the biofilm descendant''s observations or infer electrode
+    material or a new definition.'

@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: digestate
+session:
+  id: 2026-10-08T090547Z-claude-code-1815fb
+  timestamp: '2026-10-08T09:05:47Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1709
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: Exclude the vessel parent from semi-continuous digestate material
+  details: 'Added the exact GOLD.28f661cad5/path/ENVO:00002124 exclusion, not an identity
+    or definition decision. Read the complete target and source-parent owners; freshly inspected
+    EPA AgSTAR and official ENVO OWL with SHA256 a0b919065d33a9cf975b74cadd16c75f32f512d17f4f6d5999b74216701df54c.
+    These distinguish residual material from its containing reactor. Preserved source node
+    7769, full path, omitted organism count/unit, CLASS decision and UNGROUNDED/SEEDED status.
+    The original report 20261008T084341Z-digestate.md remains unchanged baseline evidence.
+    Dry-seed and forced canary succeeded and the resulting record was inspected. Focused regression/exclusion
+    suite: 38 passed, including whole-corpus and complete semantic-context comparisons. Map/site
+    regeneration and full QC will be checked before merge; they are not claimed completed
+    by this history entry. Original GOLD study/sample descriptions remain unavailable; no
+    sibling equivalence, replacement genus or biological transfer is asserted.'

@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: white_smoker
+session:
+  id: 2026-10-07T004938Z-codex-gpt-5-1b23b5
+  timestamp: '2026-10-07T00:49:38Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1601
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1599
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - notes
+  summary: Correct the white-smoker decision rationale without changing its grounding
+  details: 'Changed only the note for habitatmech:GOLD.d28b62ff00: White smokers is curator-recognized
+    as plural-equivalent to white smoker, not equal under seed.norm_label; the automatic route
+    is gold_unmatched. Historical decision actor claude-opus-5, date 2026-08-12, ITEM, target
+    ENVO:01000257 and exact predicate are retained. This new session attributes the note repair
+    to codex-gpt-5 rather than rewriting old session history. The generated GROUND event deterministically
+    renders the corrected note under the original decision metadata. Both valid parents, GOLD8303,
+    path, zero-count omission, synonym and EXACT/REVIEWED are preserved. Dry seed, inspected
+    forced canary and all 33 focused tests passed. The upstream definition defect remains
+    open in HabitatMech #1602 and EnvironmentOntology/envo#1674; no local override, upstream
+    acceptance or source refresh is claimed. Full QC/map/site receipts will be on PR1599.'

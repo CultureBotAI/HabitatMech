@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00000255
-- ENVO:00002030
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5411
@@ -17,3 +16,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00002030 for habitatmech:GOLD.135b9b67f7
+    (Environmental > Aquatic > Floodplain). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1994
+    (20261012T015148Z-floodplain__98d09203 F1). The Aquatic > Floodplain variant is
+    not silently merged with the freshwater path. Floodplain is a defensible genus.
+    The aquatic-biome parent does not follow merely from a periodically flooded geographic
+    area; the biome definition additionally specifies an ecological community determined
+    by a water body. Exclude only the immediate GOLD contribution named here. Preserve
+    source identity, node/path provenance, counts/units, native status and independent
+    parents; separate decision and graph changes are recorded in their own owners.

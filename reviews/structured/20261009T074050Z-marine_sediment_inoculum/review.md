@@ -1,0 +1,929 @@
+# Marine sediment inoculum: retained source identity with an unsubstantiated culture parent
+
+- Review: 20261009T074050Z-marine_sediment_inoculum
+- Repository: CultureBotAI/HabitatMech
+- Started UTC: 2026-10-09T07:30:53Z
+- Finished UTC: 2026-10-09T07:40:50Z
+- Reviewer: codex-gpt-5 (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+One exact record reviewed. Identity, five ORGANISM assertions, two-node note, absent mapping predicate and CLASS/SEEDED lifecycle reproduce. One provisional major finding concerns the immediate GOLD parent: classification under Continuous culture does not alone establish strict subsumption of inoculum material. Original sample methods are unavailable; no exact grounding, NOT_APPLICABLE decision, definition or replacement parent is established.
+
+## Scope And Provenance
+
+Entire generated target and all of its source contributions, with parent and candidate terms inspected only for context.
+
+Selection: Exact path data/habitats/engineered/marine_sediment_inoculum.yaml and identifier habitatmech:GOLD.c1fcc72703; PATHS.tsv:2715.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 8e8bf83be102658866ef4fe9c9781a198d3edbc8.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| habitatmech:GOLD.c1fcc72703 | data/habitats/engineered/marine_sediment_inoculum.yaml | generated | Marine sediment inoculum |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Capture exact current target and reviewed inputs | passed | True | habitatmech:GOLD.c1fcc72703 | Inspection succeeded at 8e8bf83be102658866ef4fe9c9781a198d3edbc8 with 38 input hashes. Reinspection after interruption confirms unchanged scientific inputs. |
+| Target LinkML validation | passed | True | habitatmech:GOLD.c1fcc72703 | No issues found; started during the preceding investigation and polled to exit 0 before assessment. |
+| Target strict validation | passed | True | habitatmech:GOLD.c1fcc72703 | One record scanned, zero errors. |
+| Full corpus reproduction | passed | True | habitatmech:GOLD.c1fcc72703 | 3208 expected and found; zero missing, extra or differing records. |
+| Native history validation | passed | True | habitatmech:GOLD.c1fcc72703 | 215 history records valid. |
+| Raw source provenance | passed | True | habitatmech:GOLD.c1fcc72703 | 14 committed inventories and two GOLD sources current. |
+| Actual resolution and whole-document reproduction | passed | True | habitatmech:GOLD.c1fcc72703 | Complete normalized subject_label/subject_label_normalized mapping, ontology and claimant indexes. gold_unmatched then CLASS curated_confirm_ungrounded_from_gold_unmatched; no predicate or extra parent; whole document equal; one source, zero reviewed. Earlier diagnostic used subject_id instead of subject_label_normalized; this corrected rerun agrees and is the authoritative route check. |
+| Parent, lifecycle and reference regressions | passed | True | habitatmech:GOLD.c1fcc72703 | 6 passed, 33 deselected. Structural/reference checks do not establish scientific subsumption. |
+| Exact-baseline authoritative QC receipt | passed | True | habitatmech:GOLD.c1fcc72703 | Completed success at exact current base. Inspected log reports 638 passed, three skipped, four dedicated shared-contract tests, 215 valid history records and all native gates passed. |
+| Exact-baseline label-correspondence receipt | passed | True | habitatmech:GOLD.c1fcc72703 | Completed success at exact current base; inspected enforcement log reports all id-label pairs correspond. Configured adapter/exception coverage is not a semantic parent or universal ontology-currency proof. |
+| Baseline input equivalence | passed | True | habitatmech:GOLD.c1fcc72703 | No scientific, code, schema or configured-check changes from the passing CI base; new review bundles are checked separately. |
+| Fourteen-inventory exact-field scan | passed | True | habitatmech:GOLD.c1fcc72703 | Target path/node matches occur only in GOLD paths, biosample counts and twelve study associations. No exact parameter, triad or taxon row in these bounds. |
+| Public GOLD workbook and ontology metadata | passed | False | habitatmech:GOLD.c1fcc72703 | Workbook and two OLS responses fetched and structurally parsed. Non-fatal workbook style warning; reset_dimensions was required. Current node4853 and both candidate identifiers verified. |
+| Original GOLD source details | unavailable | False | habitatmech:GOLD.c1fcc72703 | Ecosystem3849 was inaccessible to the browser. Gs0111348 returned a GOLD application error page. Three quoted OR queries covering all twelve accessions returned no indexed results. This is retrieval failure, not invalidity or proof of absent source data. |
+| Causal and structured-expression checks | not_applicable | False | habitatmech:GOLD.c1fcc72703 | No target causal overlay, citations, gene, regulator, pathway or transcriptomics assertion in the inspected target and ignored-inclusive local scope. iModulonDB is not applicable, not negative evidence. |
+| Additional full-text lead | unavailable | False | habitatmech:GOLD.c1fcc72703 | Nature DOI 10.1038/s41529-024-00542-x redirected to an inaccessible cookie endpoint on the fresh methods-page attempt. No methods claim from that article is used; PMID28926916 title, DOI and full abstract were inspected successfully. |
+
+## Scientific And Domain Assessments
+
+### Source-scoped engineered inoculum identity
+
+identity: supported. Targets: habitatmech:GOLD.c1fcc72703.
+
+Full path, stable mint and exact source attestation identify a sediment-derived inoculum category in an engineered culture context, not a generic marine biome or a specified culture recipe.
+
+### Preserve conservative ungrounded identity
+
+grounding: supported. Targets: habitatmech:GOLD.c1fcc72703.
+
+No exact replacement is established. Generic marine sediment and chemostat culture are related candidates with narrower or different conditions, not identities demonstrated by the source.
+
+### Inoculum material versus continuous-culture parent
+
+graph: concern. Targets: habitatmech:GOLD.c1fcc72703.
+
+The immediate source classification is real, but no inspected source proves that the inoculum itself is a kind of Continuous culture. The label naturally denotes starting material, whereas culture may denote maintained material or a procedure. GOLD's metonymic use remains possible. Treat the is-a edge as unsubstantiated pending item-level scope review.
+
+### Keep organism, biosample and study measures separate
+
+quantity: supported. Targets: habitatmech:GOLD.c1fcc72703.
+
+Five ORGANISM assertions and the two-node note reproduce exactly. Thirty-three BIOSAMPLE observations and twelve study associations are independent snapshot measures, not additional organisms or count corrections.
+
+### Predicate, status and history
+
+consistency: supported. Targets: habitatmech:GOLD.c1fcc72703.
+
+No mapping predicate is correct for the retained source mint. CLASS plus zero reviewed sources correctly remains SEEDED; the sample-screen note does not justify promotion. No narrowMatch endpoint claim exists in this target.
+
+### No invented biological enrichment
+
+completeness: supported. Targets: habitatmech:GOLD.c1fcc72703.
+
+Absence of optional definition, taxa, parameters, mechanism, citations or expression information is not itself a defect. No exact matching rows in the raw scan justify importing another study's microbes, salinity, methanogenesis or recipe.
+
+### Original sample membership and methods
+
+scope: unknown. Targets: habitatmech:GOLD.c1fcc72703.
+
+Current classification and committed provenance support the source bin; original study metadata and historical node3849 are not independently confirmed. This limits the parent judgment and any proposed definition.
+
+### Representation and maintained ownership
+
+schema: supported. Targets: habitatmech:GOLD.c1fcc72703.
+
+Target validation, complete reproduction, history, provenance and scoped integrity checks pass. All curation changes remain proposed and must occur upstream of generated YAML.
+
+## Findings
+
+### F1: Continuous-culture classification is not established as a strictly broader inoculum habitat
+
+major / open / provisional; issue key: gold-c1fcc72703-source-context-parent.
+
+The generated GOLD.deb06c4e48 parent encodes strict is-a, but available evidence only classifies a marine-sediment inoculum within continuous-culture context. Starting material can be activated before continuous operation; no item-specific source text or maintained definition establishes a culture-material interpretation here. This is an unsupported hierarchy assertion, not proof that every source interpretation is false and not a recommendation to mark the habitat NOT_APPLICABLE.
+
+## Recommended Actions And Acceptance Checks
+
+### ACT1
+
+Recover original study/sample methods and make an ITEM-level distinction between inoculum material, a continuously maintained sediment-derived culture and cultivation process. If the parent is contextual, add a narrowly guarded source-parent exclusion for GOLD.c1fcc72703, its exact path and expected GOLD.deb06c4e48. If sources establish strict subsumption, document that interpretation instead. No replacement definition or ontology parent is pre-approved.
+
+- Source evidence directly resolves the inoculum-versus-maintained-culture scope; preserve conflicts and do not substitute analogous literature for exact sample methods.
+- Keep minted identity, full source path,3849&#124;4853 provenance,5ORGANISM, separate33BIOSAMPLE and twelve study associations; do not force generic marine sediment or chemostat identity.
+- Regress immediate parent contribution, predicate omission, complete output and CLASS/ITEM lifecycle. Exclude only a proven context edge, not independent supported parents.
+- Separately authorized curation requires append-only native history, dry seed, inspected canary, strict/corpus/provenance/history/labels/fullQC and relevant generated-site/map checks. Save a new linked review disposition; do not edit this bundle.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| E1 | data/habitats/engineered/marine_sediment_inoculum.yaml; Whole YAML, including two generated history entries | supports | ENGINEERED, UNGROUNDED and SEEDED, one GOLD attestation and one parent. No definition, synonyms, xrefs, parameters, taxa, causal graph, citations or datasets are asserted. Stable mint and PATHS.tsv:2715 agree. |
+| E2 | data/raw/gold_ecosystem_paths.tsv; Path row627; gold_path_biosamples.tsv:412; gold_studies.tsv:552,608,665,670,682,740,838,1118,1345,1480,1688,2529 | supports | Two collapsed nodes 3849&#124;4853, depth4, organism_count5, total_assertions5; tree study/biosample counters zero. Separate biosample inventory reports33 at4853. Twelve study IDs: Gs0105897, Gs0111348, Gs0111435, Gs0111441, Gs0111455, Gs0113739, Gs0114559, Gs0118556, Gs0121487, Gs0128819, Gs0132908, Gs0144624. Gs0111348/Gs0114559 also have Anaerobic &gt; Biogas; Gs0113739 also has Bioreactor. Those associations do not make methanogenesis universal. All14rawTSVs inspected by exact fields and pipe members. |
+| E3 | src/habitatmech/seed.py; resolve_gold/apply_decision; ingest_gold parent-path pass at947-970; complete build_document equality | supports | Default and applied routes retain the mint without mapping predicate or extra parent. The separate immediate-path pass contributes GOLD.deb06c4e48. One source concept, zero ITEM-reviewed sources reproduce every target field. |
+| E4 | docs/CURATION.md; Decision model, CLASS/ITEM gate and GOLD context-parent exclusions; schema parent_habitats and SourceAttestation | supports | Parent means strictly broader. Source classification and use context are not sufficient. Mapping predicate omission is correct when record identity remains the source concept. Future fixes belong to maintained inputs and validated generation. |
+| E5 | curation/decisions.tsv; Row1086; sample screen row29; ignored-inclusive search across curation/history/research/conf/tests/docs/reviews/reports/yaml_record_review and PATHS/RETIRED | context_only | CLASS CONFIRM_UNGROUNDED is not an ITEM habitat assessment. The sample screen says the target is a habitat but supplies no source-specific definition or proof of the parent. No target-owned definition, parent exclusion, causal overlay, native history or prior individual review was found in these stated local bounds. |
+| E6 | https://gold.jgi.doe.gov/download?mode=ecosystempaths; site data rows89-90; parsed read-only in memory | supports | Current workbook explicitly places4853 under Engineered &gt; Bioreactor &gt; Continuous culture &gt; Marine sediment inoculum with a trailing Unclassified filler;4283 is the immediate Continuous culture category. This verifies classification, not strict is-a, historical node3849, sample identities or historical counts. |
+| E7 | https://pubmed.ncbi.nlm.nih.gov/28926916/; Title, identifiers and complete abstract; DOI10.1016/j.biortech.2017.09.009 | context_only | Miura et al.2017 describe activation of marine sediment inoculum in repeated substrate-fed batch cultivation before continuous methane production. This demonstrates that inoculum and continuous operation can be different stages; it does not prove the scope, microbes or conditions of GOLD's twelve studies. No full-text claim is made. |
+| E8 | https://www.ebi.ac.uk/ols4/api/ontologies/bto/terms?obo_id=BTO%3A0001982; Exact BTO:0001982 label, description and active status | context_only | Chemostat culture describes a steady-state bacterial culture with continuous division in a controlled apparatus. It is not an exact identity for every sediment-derived inoculum. No inoculum label candidate appeared in the complete committed ontology-label scan. |
+| E9 | https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms?obo_id=ENVO%3A03000033; Exact ENVO:03000033 label, description and active status; local deep/shallow candidates also inspected | context_only | Marine sediment concerns material transported through marine water and deposited on the seafloor. An enrichment or inoculum prepared from sediment need not remain that sediment material or share its exact identity. Neither generic sediment nor deep/shallow variants is an established replacement grounding. |
+| E10 | reports/yaml_record_review/20261008T054102Z-continuous_culture.md; Entire historical report and current continuous_culture.yaml | context_only | Parent report flags its own containment-unit parent and explicitly excludes the inoculum child. Its counts and older validator receipts are not evidence for this target. The child finding is assessed afresh, not inherited; no parent finding is closed. |
+| E11 | https://gold.jgi.doe.gov/study?id=Gs0111348; Browser application error; ecosystem3849 inaccessible; all12exactaccession queries | unknown | Original source methods could not be recovered. GOLD may use inoculum metonymically for a continuously maintained sediment-derived culture; that interpretation would need source evidence before endorsing a strict parent. |
+| E12 | https://github.com/CultureBotAI/HabitatMech/actions/runs/37898291530; Exact base8e8bf83; label run37898291495; fresh local checks C1-C7,C10 | supports | All available required structural/provenance checks pass. Unchanged baseline permits reuse of full-QC and label receipts with explicit scope. Deterministic success does not settle culture/material semantics. |
+
+## Limits And Additional Notes
+
+- One target reviewed; full 3208-record coverage remains unproven.
+- Original GOLD organism/sample metadata and historical node3849 were not independently retrieved. Parent finding remains provisional.
+- PMID28926916 was inspected at abstract level only; it is contextual science, not linked GOLD provenance. Nature methods were inaccessible and unused.
+- Exact-baseline CI fullQC and label receipts reused; no fresh local fullQC or global ontology currency audit. Three native CI tests were skipped.
+- Ignored-inclusive absence statements are limited to named local scopes, not all external databases.
+- No habitat inputs, generated records/pages, native status/history or GitHub objects changed; only the review bundle is authorized.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261009T074050Z-marine_sediment_inoculum
+kind: record
+repository: CultureBotAI/HabitatMech
+title: 'Marine sediment inoculum: retained source identity with an unsubstantiated
+  culture parent'
+started_at: '2026-10-09T07:30:53Z'
+finished_at: '2026-10-09T07:40:50Z'
+reviewer:
+  identity: codex-gpt-5
+  kind: agent
+  model: gpt-5
+  independence: self_review
+  independence_basis: Same agent continuing the repository review workflow; fresh
+    inspection of current inputs, not an independent second reviewer.
+skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'One exact record reviewed. Identity, five ORGANISM assertions, two-node
+  note, absent mapping predicate and CLASS/SEEDED lifecycle reproduce. One provisional
+  major finding concerns the immediate GOLD parent: classification under Continuous
+  culture does not alone establish strict subsumption of inoculum material. Original
+  sample methods are unavailable; no exact grounding, NOT_APPLICABLE decision, definition
+  or replacement parent is established.'
+source:
+  git_revision: 8e8bf83be102658866ef4fe9c9781a198d3edbc8
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: curation/decisions.tsv
+    sha256: 0602cca13e6495da256a6f1cfd5897462f73f9739a729447862017d93c148efd
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: c741b54ba1c39872afaf090422d274a123e308f15eba480639c702eddab60a3d
+    role: context
+  - path: curation/samples/class_swept_unscreened-20260814.tsv
+    sha256: 27fce2849781b21f8fdb434aaaffac0f55e51bef84f1c1ea7d7feecd11d8471e
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 3efdac153ccd40f518458a9dc5360e09dd660c3a42fbd06bfc57f3b2f707ece7
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: b59b9e800a918135e3915145d4d8098bb48dcea36a312b3004c594a57d221ae9
+    role: context
+  - path: data/habitats/RETIRED.tsv
+    sha256: 41beffc45aabdf304de633c21200b375d7f01d1cb2e036d4a026961d545a35e5
+    role: context
+  - path: data/habitats/engineered/continuous_culture.yaml
+    sha256: 22eeec374548a86fe4753faa2fad75d45b35d29d9232ca18960d7ba865b6cbe6
+    role: context
+  - path: data/habitats/engineered/marine_sediment_inoculum.yaml
+    sha256: 4ce9053ff584dea124ee46ebb46cfe6770e779ef5578f6bcb02ccb013006b9cc
+    role: target
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: 36df8306394c06c352b73e0bf7b47a2858784cedac7389a24d0b78f593ece646
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: f7aa39ee762d94f1902d9f08f328cb897bc543e4e226057eb4770d24bfcc6eb5
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reports/yaml_record_review/20261008T054102Z-continuous_culture.md
+    sha256: 4c404d06c1c58271bccbd1790ec2570c8ac75a517f0a8eac2ef9f7741d22ac9a
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 52d2a22309a1f4a10728a663560bb4d918346c292221fd34139b99b4159d3fe5
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 92adf631fa099120a497ff7001473e659347d23ac9b418f04cd341ddad5d2a89
+    role: context
+targets:
+- target_id: habitatmech:GOLD.c1fcc72703
+  path: data/habitats/engineered/marine_sediment_inoculum.yaml
+  label: Marine sediment inoculum
+  record_class: HabitatRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/gold_ecosystem_paths.tsv
+    role: Exact source path, node membership and organism counts.
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Source-keyed identity and review-depth decisions.
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Guarded source-parent exclusion, if justified.
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Evidence-backed definition and genus, if subsequently justified.
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Validated generation and source-parent derivation.
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/schema/habitatmech.yaml
+    role: Native record and attestation semantics.
+scope:
+  description: Entire generated target and all of its source contributions, with parent
+    and candidate terms inspected only for context.
+  selection: Exact path data/habitats/engineered/marine_sediment_inoculum.yaml and
+    identifier habitatmech:GOLD.c1fcc72703; PATHS.tsv:2715.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - habitatmech:GOLD.c1fcc72703
+  exclusions:
+  - target: Other 3207 current habitat records
+    reason: No whole-record review credit from contextual reads; full-corpus objective
+      remains incomplete.
+  - target: Continuous culture parent and its prior finding
+    reason: Read for hierarchy context, not independently reassessed or closed.
+  - target: PMID:28926916 experiment
+    reason: Illustrates inoculum versus operation-stage scope; not proven to be any
+      of the twelve GOLD studies.
+checks:
+- check_id: C0
+  name: Capture exact current target and reviewed inputs
+  status: passed
+  required: true
+  command: env UV_CACHE_DIR=build/uv-cache uv run python scripts/record_review.py
+    inspect --targets '/private/tmp/habitatmech-inoculum-targets-20261009T073053Z.yaml'
+    --input 'CLAUDE.md' --input 'justfile' --input 'docs/CURATION.md' --input 'docs/HARMONIZATION.md'
+    --input 'docs/RESEARCH.md' --input 'docs/record-review-profile.md' --input 'docs/record-reviews.md'
+    --input '.claude/skills/review-yaml-record/SKILL.md' --input '.claude/skills/curate-yaml-record/references/review-checklist.md'
+    --input 'schema/record_review.yaml' --input 'src/habitatmech/schema/habitatmech.yaml'
+    --input 'src/habitatmech/seed.py' --input 'curation/decisions.tsv' --input 'curation/gold_parent_exclusions.tsv'
+    --input 'curation/term_requests.tsv' --input 'curation/term_requests_excluded.tsv'
+    --input 'data/habitats/PATHS.tsv' --input 'data/habitats/RETIRED.tsv' --input
+    'data/raw/ontology_terms.tsv' --input 'data/raw/ontology_subclass_edges.tsv' --input
+    'data/raw/isolation_source_groundings.tsv' --input 'data/raw/gold_ecosystem_paths.tsv'
+    --input 'data/raw/gold_path_biosamples.tsv' --input 'data/raw/gold_path_triads.tsv'
+    --input 'data/raw/gold_studies.tsv' --input 'data/raw/prego_habitats.tsv' --input
+    'data/raw/prego_habitat_taxa.tsv' --input 'data/raw/bacdive_isolation_sources.tsv'
+    --input 'data/raw/bacdive_source_taxa.tsv' --input 'data/raw/madin_habitats.tsv'
+    --input 'data/raw/madin_habitat_taxa.tsv' --input 'data/raw/environment_parameters.tsv'
+    --input 'data/raw/MANIFEST.yaml' --input 'data/raw/GOLD_MANIFEST.yaml' --input
+    'data/habitats/engineered/continuous_culture.yaml' --input 'reports/yaml_record_review/20261008T054102Z-continuous_culture.md'
+    --input 'curation/samples/class_swept_unscreened-20260814.tsv'
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.c1fcc72703
+  summary: Inspection succeeded at 8e8bf83be102658866ef4fe9c9781a198d3edbc8 with 38
+    input hashes. Reinspection after interruption confirms unchanged scientific inputs.
+- check_id: C1
+  name: Target LinkML validation
+  status: passed
+  required: true
+  command: env UV_CACHE_DIR=build/uv-cache just validate data/habitats/engineered/marine_sediment_inoculum.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.c1fcc72703
+  summary: No issues found; started during the preceding investigation and polled
+    to exit 0 before assessment.
+- check_id: C2
+  name: Target strict validation
+  status: passed
+  required: true
+  command: env UV_CACHE_DIR=build/uv-cache just validate-strict data/habitats/engineered/marine_sediment_inoculum.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.c1fcc72703
+  summary: One record scanned, zero errors.
+- check_id: C3
+  name: Full corpus reproduction
+  status: passed
+  required: true
+  command: env UV_CACHE_DIR=build/uv-cache just verify-corpus
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.c1fcc72703
+  summary: 3208 expected and found; zero missing, extra or differing records.
+- check_id: C4
+  name: Native history validation
+  status: passed
+  required: true
+  command: env UV_CACHE_DIR=build/uv-cache just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.c1fcc72703
+  summary: 215 history records valid.
+- check_id: C5
+  name: Raw source provenance
+  status: passed
+  required: true
+  command: env UV_CACHE_DIR=build/uv-cache just provenance-check
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.c1fcc72703
+  summary: 14 committed inventories and two GOLD sources current.
+- check_id: C6
+  name: Actual resolution and whole-document reproduction
+  status: passed
+  required: true
+  command: "env UV_CACHE_DIR=build/uv-cache uv run python - <<'PY'\nfrom dataclasses\
+    \ import asdict\nfrom pathlib import Path\nimport json,yaml\nfrom habitatmech\
+    \ import seed\nrows=seed.read_tsv(\"gold_ecosystem_paths.tsv\")\nontology=seed.OntologyIndex(seed.read_tsv(\"\
+    ontology_terms.tsv\"),seed.read_tsv(\"ontology_subclass_edges.tsv\"))\nmapping={}\n\
+    for row in seed.read_tsv(\"isolation_source_groundings.tsv\"):\n    for key in\
+    \ (\"subject_label\",\"subject_label_normalized\"):\n        if row.get(key):\n\
+    \            mapping.setdefault(seed.norm_label(row[key]),row)\ndecisions=seed.load_decisions(seed.DECISIONS_PATH)\n\
+    for path in (\"Engineered > Bioreactor > Continuous culture > Marine sediment\
+    \ inoculum\",\"Engineered > Bioreactor > Continuous culture\"):\n    row=next(r\
+    \ for r in rows if r[\"canonical_path\"]==path)\n    minted=seed.mint(\"GOLD\"\
+    ,path)\n    automatic=seed.resolve_gold(row,ontology,mapping,seed.leaf_claimants(rows),seed.composed_claimants(rows))\n\
+    \    actual=seed.apply_decision(automatic,minted,decisions)\n    print(json.dumps({\"\
+    path\":path,\"mint\":minted,\"automatic\":asdict(automatic),\"actual\":asdict(actual)},sort_keys=True))\n\
+    concept=next(c for c in seed.build_corpus().concepts if c.identifier==\"habitatmech:GOLD.c1fcc72703\"\
+    )\nassert seed.build_document(concept)==yaml.safe_load(Path(\"data/habitats/engineered/marine_sediment_inoculum.yaml\"\
+    ).read_text())\nprint(\"Complete document equal; source concepts\",concept.source_concepts,\"\
+    reviewed\",concept.reviewed_sources)\nfor row in seed.read_tsv(\"ontology_terms.tsv\"\
+    ):\n    if any(word in (row[\"label\"] or \"\").casefold() for word in (\"inoculum\"\
+    ,\"chemostat\",\"marine sediment\")):\n        print(\"candidate\",json.dumps(row))\n\
+    PY"
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.c1fcc72703
+  summary: Complete normalized subject_label/subject_label_normalized mapping, ontology
+    and claimant indexes. gold_unmatched then CLASS curated_confirm_ungrounded_from_gold_unmatched;
+    no predicate or extra parent; whole document equal; one source, zero reviewed.
+    Earlier diagnostic used subject_id instead of subject_label_normalized; this corrected
+    rerun agrees and is the authoritative route check.
+- check_id: C7
+  name: Parent, lifecycle and reference regressions
+  status: passed
+  required: true
+  command: env UV_CACHE_DIR=build/uv-cache uv run pytest -q tests/test_corpus_integrity.py
+    -k 'parent or reviewed_records or history or causal_edges_reference'
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.c1fcc72703
+  summary: 6 passed, 33 deselected. Structural/reference checks do not establish scientific
+    subsumption.
+- check_id: C8
+  name: Exact-baseline authoritative QC receipt
+  status: passed
+  required: true
+  command: gh run view 37898291530 --json status,conclusion,headSha,url,jobs
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.c1fcc72703
+  summary: Completed success at exact current base. Inspected log reports 638 passed,
+    three skipped, four dedicated shared-contract tests, 215 valid history records
+    and all native gates passed.
+- check_id: C9
+  name: Exact-baseline label-correspondence receipt
+  status: passed
+  required: true
+  command: gh run view 37898291495 --json status,conclusion,headSha,url,jobs
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.c1fcc72703
+  summary: Completed success at exact current base; inspected enforcement log reports
+    all id-label pairs correspond. Configured adapter/exception coverage is not a
+    semantic parent or universal ontology-currency proof.
+- check_id: C10
+  name: Baseline input equivalence
+  status: passed
+  required: true
+  command: git diff --exit-code 8e8bf83be102658866ef4fe9c9781a198d3edbc8 -- data curation
+    src scripts tests docs conf CLAUDE.md justfile schema .github
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.c1fcc72703
+  summary: No scientific, code, schema or configured-check changes from the passing
+    CI base; new review bundles are checked separately.
+- check_id: C11
+  name: Fourteen-inventory exact-field scan
+  status: passed
+  required: true
+  command: "env UV_CACHE_DIR=build/uv-cache uv run python - <<'PY'\nimport csv, json\n\
+    from pathlib import Path\nimport yaml\np=Path(\"data/habitats/engineered/marine_sediment_inoculum.yaml\"\
+    )\nrecord=yaml.safe_load(p.read_text())\npath=record[\"source_attestations\"][0][\"\
+    source_path\"]\nwith Path(\"data/raw/gold_ecosystem_paths.tsv\").open() as f:\n\
+    \    exact=next(r for r in csv.DictReader(f,delimiter=\"\\t\") if r[\"canonical_path\"\
+    ]==path)\nneedles={record[\"identifier\"],path,*exact[\"gold_node_ids\"].split(\"\
+    |\")}\ndef values(row):\n    for value in row.values():\n        for part in value\
+    \ if isinstance(value,list) else [value]:\n            if isinstance(part,str):\n\
+    \                yield from part.split(\"|\")\nfiles=sorted(Path(\"data/raw\"\
+    ).glob(\"*.tsv\"))\nprint(\"Inventories scanned:\",len(files))\nfor file in files:\n\
+    \    matches=[]\n    with file.open() as f:\n        for line,row in enumerate(csv.DictReader(f,delimiter=\"\
+    \\t\"),2):\n            if needles.intersection(values(row)):\n              \
+    \  matches.append({\"line\":line,\"row\":row})\n    print(file.name, json.dumps(matches))\n\
+    PY"
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.c1fcc72703
+  summary: Target path/node matches occur only in GOLD paths, biosample counts and
+    twelve study associations. No exact parameter, triad or taxon row in these bounds.
+- check_id: C12
+  name: Public GOLD workbook and ontology metadata
+  status: passed
+  required: false
+  command: "env UV_CACHE_DIR=build/uv-cache uv run python - <<'PY'\nimport urllib.request,hashlib,json,io\n\
+    from openpyxl import load_workbook\nu='https://gold.jgi.doe.gov/download?mode=ecosystempaths'\n\
+    b=urllib.request.urlopen(u,timeout=45).read()\nw=load_workbook(io.BytesIO(b),read_only=True,data_only=True);s=w['site\
+    \ data'];s.reset_dimensions()\nprint('WORKBOOK',len(b),hashlib.sha256(b).hexdigest())\n\
+    for n,r in enumerate(s.iter_rows(values_only=True),1):\n if n==1 or 'Marine sediment\
+    \ inoculum' in r or (len(r)>1 and 'Continuous culture' in r and 'Marine sediment\
+    \ inoculum' not in r):print(n,r)\nfor ont,curie in [('bto','BTO:0001982'),('envo','ENVO:03000033')]:\n\
+    \ u='https://www.ebi.ac.uk/ols4/api/ontologies/'+ont+'/terms?obo_id='+curie.replace(':','%3A')\n\
+    \ b=urllib.request.urlopen(u,timeout=45).read();j=json.loads(b)\n print('ONTOLOGY',u,len(b),hashlib.sha256(b).hexdigest())\n\
+    \ for t in j.get('_embedded',{}).get('terms',[]):print(json.dumps({k:t.get(k)\
+    \ for k in ['obo_id','label','description','is_obsolete','is_defining_ontology','annotation']}))\n\
+    PY"
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.c1fcc72703
+  summary: Workbook and two OLS responses fetched and structurally parsed. Non-fatal
+    workbook style warning; reset_dimensions was required. Current node4853 and both
+    candidate identifiers verified.
+- check_id: C13
+  name: Original GOLD source details
+  status: unavailable
+  required: false
+  target_ids:
+  - habitatmech:GOLD.c1fcc72703
+  summary: Ecosystem3849 was inaccessible to the browser. Gs0111348 returned a GOLD
+    application error page. Three quoted OR queries covering all twelve accessions
+    returned no indexed results. This is retrieval failure, not invalidity or proof
+    of absent source data.
+- check_id: C14
+  name: Causal and structured-expression checks
+  status: not_applicable
+  required: false
+  target_ids:
+  - habitatmech:GOLD.c1fcc72703
+  summary: No target causal overlay, citations, gene, regulator, pathway or transcriptomics
+    assertion in the inspected target and ignored-inclusive local scope. iModulonDB
+    is not applicable, not negative evidence.
+- check_id: C15
+  name: Additional full-text lead
+  status: unavailable
+  required: false
+  target_ids:
+  - habitatmech:GOLD.c1fcc72703
+  summary: Nature DOI 10.1038/s41529-024-00542-x redirected to an inaccessible cookie
+    endpoint on the fresh methods-page attempt. No methods claim from that article
+    is used; PMID28926916 title, DOI and full abstract were inspected successfully.
+evidence:
+- evidence_id: E1
+  kind: record_content
+  reference: data/habitats/engineered/marine_sediment_inoculum.yaml
+  locator: Whole YAML, including two generated history entries
+  accessed_at: '2026-10-09T07:40:50Z'
+  support: supports
+  summary: ENGINEERED, UNGROUNDED and SEEDED, one GOLD attestation and one parent.
+    No definition, synonyms, xrefs, parameters, taxa, causal graph, citations or datasets
+    are asserted. Stable mint and PATHS.tsv:2715 agree.
+- evidence_id: E2
+  kind: database
+  reference: data/raw/gold_ecosystem_paths.tsv
+  locator: Path row627; gold_path_biosamples.tsv:412; gold_studies.tsv:552,608,665,670,682,740,838,1118,1345,1480,1688,2529
+  accessed_at: '2026-10-09T07:40:50Z'
+  support: supports
+  summary: 'Two collapsed nodes 3849|4853, depth4, organism_count5, total_assertions5;
+    tree study/biosample counters zero. Separate biosample inventory reports33 at4853.
+    Twelve study IDs: Gs0105897, Gs0111348, Gs0111435, Gs0111441, Gs0111455, Gs0113739,
+    Gs0114559, Gs0118556, Gs0121487, Gs0128819, Gs0132908, Gs0144624. Gs0111348/Gs0114559
+    also have Anaerobic > Biogas; Gs0113739 also has Bioreactor. Those associations
+    do not make methanogenesis universal. All14rawTSVs inspected by exact fields and
+    pipe members.'
+- evidence_id: E3
+  kind: validation
+  reference: src/habitatmech/seed.py
+  locator: resolve_gold/apply_decision; ingest_gold parent-path pass at947-970; complete
+    build_document equality
+  accessed_at: '2026-10-09T07:40:50Z'
+  support: supports
+  summary: Default and applied routes retain the mint without mapping predicate or
+    extra parent. The separate immediate-path pass contributes GOLD.deb06c4e48. One
+    source concept, zero ITEM-reviewed sources reproduce every target field.
+- evidence_id: E4
+  kind: authority
+  reference: docs/CURATION.md
+  locator: Decision model, CLASS/ITEM gate and GOLD context-parent exclusions; schema
+    parent_habitats and SourceAttestation
+  accessed_at: '2026-10-09T07:40:50Z'
+  support: supports
+  summary: Parent means strictly broader. Source classification and use context are
+    not sufficient. Mapping predicate omission is correct when record identity remains
+    the source concept. Future fixes belong to maintained inputs and validated generation.
+- evidence_id: E5
+  kind: search
+  reference: curation/decisions.tsv
+  locator: Row1086; sample screen row29; ignored-inclusive search across curation/history/research/conf/tests/docs/reviews/reports/yaml_record_review
+    and PATHS/RETIRED
+  accessed_at: '2026-10-09T07:40:50Z'
+  support: context_only
+  summary: CLASS CONFIRM_UNGROUNDED is not an ITEM habitat assessment. The sample
+    screen says the target is a habitat but supplies no source-specific definition
+    or proof of the parent. No target-owned definition, parent exclusion, causal overlay,
+    native history or prior individual review was found in these stated local bounds.
+  search_scope: rg --no-ignore --hidden -n -i for exact mint, slug, case-insensitive
+    label and source nodes3849/4853. Ignored and hidden files included within named
+    directories; raw inventory evidence was separately parsed. No claim of exhaustive
+    external-source absence.
+- evidence_id: E6
+  kind: database
+  reference: https://gold.jgi.doe.gov/download?mode=ecosystempaths
+  locator: site data rows89-90; parsed read-only in memory
+  accessed_at: '2026-10-09T07:40:50Z'
+  support: supports
+  summary: Current workbook explicitly places4853 under Engineered > Bioreactor >
+    Continuous culture > Marine sediment inoculum with a trailing Unclassified filler;4283
+    is the immediate Continuous culture category. This verifies classification, not
+    strict is-a, historical node3849, sample identities or historical counts.
+  snapshot_sha256: 3933e5f0664915c1bbfa00212e17d013da360fb33dd52e509254050813135396
+- evidence_id: E7
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/28926916/
+  locator: Title, identifiers and complete abstract; DOI10.1016/j.biortech.2017.09.009
+  accessed_at: '2026-10-09T07:40:50Z'
+  support: context_only
+  summary: Miura et al.2017 describe activation of marine sediment inoculum in repeated
+    substrate-fed batch cultivation before continuous methane production. This demonstrates
+    that inoculum and continuous operation can be different stages; it does not prove
+    the scope, microbes or conditions of GOLD's twelve studies. No full-text claim
+    is made.
+- evidence_id: E8
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/bto/terms?obo_id=BTO%3A0001982
+  locator: Exact BTO:0001982 label, description and active status
+  accessed_at: '2026-10-09T07:40:50Z'
+  support: context_only
+  summary: Chemostat culture describes a steady-state bacterial culture with continuous
+    division in a controlled apparatus. It is not an exact identity for every sediment-derived
+    inoculum. No inoculum label candidate appeared in the complete committed ontology-label
+    scan.
+  snapshot_sha256: f29c92a35f2e5b522921a4ec681fdeca356470a4f5e2630135d3db89fbbf82a7
+- evidence_id: E9
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms?obo_id=ENVO%3A03000033
+  locator: Exact ENVO:03000033 label, description and active status; local deep/shallow
+    candidates also inspected
+  accessed_at: '2026-10-09T07:40:50Z'
+  support: context_only
+  summary: Marine sediment concerns material transported through marine water and
+    deposited on the seafloor. An enrichment or inoculum prepared from sediment need
+    not remain that sediment material or share its exact identity. Neither generic
+    sediment nor deep/shallow variants is an established replacement grounding.
+  snapshot_sha256: b5c510669d87f07b1e0cad4d74a9a366b9f10711ce862e88fa6506e588fe0b71
+- evidence_id: E10
+  kind: prior_review
+  reference: reports/yaml_record_review/20261008T054102Z-continuous_culture.md
+  locator: Entire historical report and current continuous_culture.yaml
+  accessed_at: '2026-10-09T07:40:50Z'
+  support: context_only
+  summary: Parent report flags its own containment-unit parent and explicitly excludes
+    the inoculum child. Its counts and older validator receipts are not evidence for
+    this target. The child finding is assessed afresh, not inherited; no parent finding
+    is closed.
+- evidence_id: E11
+  kind: search
+  reference: https://gold.jgi.doe.gov/study?id=Gs0111348
+  locator: Browser application error; ecosystem3849 inaccessible; all12exactaccession
+    queries
+  accessed_at: '2026-10-09T07:40:50Z'
+  support: unknown
+  summary: Original source methods could not be recovered. GOLD may use inoculum metonymically
+    for a continuously maintained sediment-derived culture; that interpretation would
+    need source evidence before endorsing a strict parent.
+  search_scope: Public URL attempts plus three quoted OR queries containing all twelve
+    IDs listed in E2. No credentials, paid research or contacts.
+- evidence_id: E12
+  kind: validation
+  reference: https://github.com/CultureBotAI/HabitatMech/actions/runs/37898291530
+  locator: Exact base8e8bf83; label run37898291495; fresh local checks C1-C7,C10
+  accessed_at: '2026-10-09T07:40:50Z'
+  support: supports
+  summary: All available required structural/provenance checks pass. Unchanged baseline
+    permits reuse of full-QC and label receipts with explicit scope. Deterministic
+    success does not settle culture/material semantics.
+assessments:
+- assessment_id: A1
+  area: identity
+  topic: Source-scoped engineered inoculum identity
+  outcome: supported
+  summary: Full path, stable mint and exact source attestation identify a sediment-derived
+    inoculum category in an engineered culture context, not a generic marine biome
+    or a specified culture recipe.
+  target_ids:
+  - habitatmech:GOLD.c1fcc72703
+  evidence_ids:
+  - E1
+  - E2
+  - E3
+  - E6
+  - E7
+- assessment_id: A2
+  area: grounding
+  topic: Preserve conservative ungrounded identity
+  outcome: supported
+  summary: No exact replacement is established. Generic marine sediment and chemostat
+    culture are related candidates with narrower or different conditions, not identities
+    demonstrated by the source.
+  target_ids:
+  - habitatmech:GOLD.c1fcc72703
+  evidence_ids:
+  - E3
+  - E8
+  - E9
+- assessment_id: A3
+  area: graph
+  topic: Inoculum material versus continuous-culture parent
+  outcome: concern
+  summary: The immediate source classification is real, but no inspected source proves
+    that the inoculum itself is a kind of Continuous culture. The label naturally
+    denotes starting material, whereas culture may denote maintained material or a
+    procedure. GOLD's metonymic use remains possible. Treat the is-a edge as unsubstantiated
+    pending item-level scope review.
+  target_ids:
+  - habitatmech:GOLD.c1fcc72703
+  evidence_ids:
+  - E1
+  - E3
+  - E4
+  - E5
+  - E6
+  - E7
+  - E10
+  - E11
+- assessment_id: A4
+  area: quantity
+  topic: Keep organism, biosample and study measures separate
+  outcome: supported
+  summary: Five ORGANISM assertions and the two-node note reproduce exactly. Thirty-three
+    BIOSAMPLE observations and twelve study associations are independent snapshot
+    measures, not additional organisms or count corrections.
+  target_ids:
+  - habitatmech:GOLD.c1fcc72703
+  evidence_ids:
+  - E1
+  - E2
+  - E3
+  - E6
+- assessment_id: A5
+  area: consistency
+  topic: Predicate, status and history
+  outcome: supported
+  summary: No mapping predicate is correct for the retained source mint. CLASS plus
+    zero reviewed sources correctly remains SEEDED; the sample-screen note does not
+    justify promotion. No narrowMatch endpoint claim exists in this target.
+  target_ids:
+  - habitatmech:GOLD.c1fcc72703
+  evidence_ids:
+  - E1
+  - E3
+  - E4
+  - E5
+- assessment_id: A6
+  area: completeness
+  topic: No invented biological enrichment
+  outcome: supported
+  summary: Absence of optional definition, taxa, parameters, mechanism, citations
+    or expression information is not itself a defect. No exact matching rows in the
+    raw scan justify importing another study's microbes, salinity, methanogenesis
+    or recipe.
+  target_ids:
+  - habitatmech:GOLD.c1fcc72703
+  evidence_ids:
+  - E1
+  - E2
+  - E5
+  - E7
+- assessment_id: A7
+  area: scope
+  topic: Original sample membership and methods
+  outcome: unknown
+  summary: Current classification and committed provenance support the source bin;
+    original study metadata and historical node3849 are not independently confirmed.
+    This limits the parent judgment and any proposed definition.
+  target_ids:
+  - habitatmech:GOLD.c1fcc72703
+  evidence_ids:
+  - E2
+  - E6
+  - E11
+- assessment_id: A8
+  area: schema
+  topic: Representation and maintained ownership
+  outcome: supported
+  summary: Target validation, complete reproduction, history, provenance and scoped
+    integrity checks pass. All curation changes remain proposed and must occur upstream
+    of generated YAML.
+  target_ids:
+  - habitatmech:GOLD.c1fcc72703
+  evidence_ids:
+  - E3
+  - E4
+  - E12
+findings:
+- finding_id: F1
+  issue_key: gold-c1fcc72703-source-context-parent
+  category: graph
+  severity: major
+  status: open
+  certainty: provisional
+  title: Continuous-culture classification is not established as a strictly broader
+    inoculum habitat
+  description: The generated GOLD.deb06c4e48 parent encodes strict is-a, but available
+    evidence only classifies a marine-sediment inoculum within continuous-culture
+    context. Starting material can be activated before continuous operation; no item-specific
+    source text or maintained definition establishes a culture-material interpretation
+    here. This is an unsupported hierarchy assertion, not proof that every source
+    interpretation is false and not a recommendation to mark the habitat NOT_APPLICABLE.
+  target_ids:
+  - habitatmech:GOLD.c1fcc72703
+  field_paths:
+  - parent_habitats[0]
+  evidence_ids:
+  - E1
+  - E3
+  - E4
+  - E5
+  - E6
+  - E7
+  - E11
+  rule_id: 'docs/CURATION.md: parent_habitats is strictly broader; review checklist
+    Hierarchy'
+  native_severity: major
+  normalization_reason: Potential false subsumption materially affects hierarchy semantics;
+    missing original methods makes certainty provisional, not a blocker for the stable
+    source identity.
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Source-keyed identity and review-depth decisions.
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Guarded source-parent exclusion, if justified.
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Evidence-backed definition and genus, if subsequently justified.
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Validated generation and source-parent derivation.
+actions:
+- action_id: ACT1
+  description: Recover original study/sample methods and make an ITEM-level distinction
+    between inoculum material, a continuously maintained sediment-derived culture
+    and cultivation process. If the parent is contextual, add a narrowly guarded source-parent
+    exclusion for GOLD.c1fcc72703, its exact path and expected GOLD.deb06c4e48. If
+    sources establish strict subsumption, document that interpretation instead. No
+    replacement definition or ontology parent is pre-approved.
+  finding_ids:
+  - F1
+  target_ids:
+  - habitatmech:GOLD.c1fcc72703
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Source-keyed identity and review-depth decisions.
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Guarded source-parent exclusion, if justified.
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Evidence-backed definition and genus, if subsequently justified.
+  generator: src/habitatmech/seed.py via dry seed, inspected canary and validated
+    regeneration
+  acceptance_checks:
+  - Source evidence directly resolves the inoculum-versus-maintained-culture scope;
+    preserve conflicts and do not substitute analogous literature for exact sample
+    methods.
+  - Keep minted identity, full source path,3849|4853 provenance,5ORGANISM, separate33BIOSAMPLE
+    and twelve study associations; do not force generic marine sediment or chemostat
+    identity.
+  - Regress immediate parent contribution, predicate omission, complete output and
+    CLASS/ITEM lifecycle. Exclude only a proven context edge, not independent supported
+    parents.
+  - Separately authorized curation requires append-only native history, dry seed,
+    inspected canary, strict/corpus/provenance/history/labels/fullQC and relevant
+    generated-site/map checks. Save a new linked review disposition; do not edit this
+    bundle.
+limitations:
+- One target reviewed; full 3208-record coverage remains unproven.
+- Original GOLD organism/sample metadata and historical node3849 were not independently
+  retrieved. Parent finding remains provisional.
+- PMID28926916 was inspected at abstract level only; it is contextual science, not
+  linked GOLD provenance. Nature methods were inaccessible and unused.
+- Exact-baseline CI fullQC and label receipts reused; no fresh local fullQC or global
+  ontology currency audit. Three native CI tests were skipped.
+- Ignored-inclusive absence statements are limited to named local scopes, not all
+  external databases.
+- No habitat inputs, generated records/pages, native status/history or GitHub objects
+  changed; only the review bundle is authorized.
+tags:
+- habitat
+- GOLD
+- inoculum
+- hierarchy
+```

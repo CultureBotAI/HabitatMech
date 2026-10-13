@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00000316
-- ENVO:01000125
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7911
@@ -17,3 +16,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:01000125 for habitatmech:GOLD.54055df52f
+    (Environmental > Aquatic > Marine > Littoral zone > Intertidal zone). Bounded
+    hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1254 (20261012T035125Z-intertidal_zone__3d85893c
+    F1). GOLD.54055df52f denotes the intertidal component within a wider marine littoral
+    setting. Official marine-littoral OWL uses a has-part relation to intertidal zone;
+    that containment is not a strict superclass relation. Preserve the true intertidal
+    genus and separate source provenance. Exclude only the immediate GOLD contribution
+    named here. Preserve source identity, node/path provenance, counts/units, native
+    status and independent parents; separate decision and graph changes are recorded
+    in their own owners.

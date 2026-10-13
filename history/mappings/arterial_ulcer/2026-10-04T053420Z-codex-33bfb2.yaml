@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: arterial_ulcer
+session:
+  id: 2026-10-04T053420Z-codex-33bfb2
+  timestamp: '2026-10-04T05:34:20Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: codex-gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/220
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1352
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - rationale
+  summary: Use a PubMed URL in arterial-ulcer decision notes
+  details: Follow-up to history/mappings/arterial_ulcer/2026-10-04T052515Z-codex-e72478.yaml.
+    Full local QC and a focused reproduction showed that test_curation_notes_do_not_cite_evidence_that_does_not_exist
+    treats PMID:10731891 as an ontology CURIE and requires it in the ontology slice. Replaced
+    that note spelling with the same verified citation URL https://pubmed.ncbi.nlm.nih.gov/10731891/;
+    no evidence was removed and the ontology guard remains unchanged. Scientific fields and
+    interpretation remain unchanged. Regenerate via dry-run and guarded canary, then render;
+    rerun the focused note check, strict/history validation and final-head CI QC. The earlier
+    committed session record is preserved unchanged.

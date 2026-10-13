@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: cultivation_substrate
+session:
+  id: 2026-10-08T070929Z-codex-7514de
+  timestamp: '2026-10-08T07:09:29Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1703
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1702
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude mushroom-farm context from cultivation-substrate parentage
+  details: 'Added one guarded exact-path exclusion for habitatmech:GOLD.083ab65161 and habitatmech:GOLD.583dbbd71a.
+    The complete baseline record, source hierarchy, distinct Wheat straw child and primary
+    ENVO farm definition distinguish material from its farm setting. Preserved both source
+    nodes GOLD7851/7852, collapse note, source mint, zero-count omissions, original events
+    and CLASS/SEEDED identity provenance. A failing-before/passing-after regression compares
+    every corpus document and full-context semantic text: only the two intended material parent
+    edges and audit additions differ; no child or sibling changed. Shared exclusion/regression
+    suite: 39 passed. Dry seed and the crude-oil-sludge canary passed before wider regeneration.
+    Map refresh and final publication gates will be recorded in the PR receipt. No compost,
+    liquid-medium or wheat-straw identity was substituted, and no definition or optional biology
+    was invented.'

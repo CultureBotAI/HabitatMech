@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: biofilm__a5211c59
+session:
+  id: 2026-10-11T042138Z-codex-gpt-5-74bf24
+  timestamp: '2026-10-11T04:21:38Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1637
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition
+  - parent_habitats
+  summary: Replace unsupported feeding/design restrictions with an inside-scrubber biofilm
+    definition
+  details: 'PR #1901 addresses 20261011T041056Z-biofilm__a5211c59 F1 for habitatmech:GOLD.7f436f8aff.
+    Adopt a location-only definition. The exact path and later Gb0289395/Gs0153952 support
+    a scrubber-slat location; PMID:31106964 describes particular biotrickling filters and
+    cannot establish pollutant-fed growth for every scrubber biofilm. Preserve the biofilm
+    genus, REPLACE rationale, minted identity, original ITEM decision, RELATED generic alias,
+    source attestation and count omissions. The earlier definition event remains in immutable
+    Git/review history; the generated DEFINED event reflects the current maintained definition.
+    The two new regression tests failed before correction. Dry seed and the pipeline-biofilm
+    canary succeeded; focused tests, full regeneration, native gates, locked map rebuild and
+    CI are recorded separately as they complete. No user authorship is inferred; no paid research
+    was used.'

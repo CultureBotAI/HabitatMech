@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: marine_basin_floor
+session:
+  id: 2026-10-12T055124Z-codex-gpt-5-a721d3
+  timestamp: '2026-10-12T05:51:24Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1274
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct bounded aquatic hierarchy or marine mechanism for marine_basin_floor
+  details: Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1274
+    (20261012T054251Z-marine_basin_floor F1). The exact GOLD Marine basin floor path retains
+    a source mint and CLASS-only ungrounded decision. A basin floor is a substrate surface,
+    not a whole marine water body. Marine bed ENVO:01001378 is a broader candidate, not established
+    exact identity. No direct organism count is supplied; that does not mean no habitat instances
+    exist. Exclude only the immediate GOLD contribution named here. Preserve source identity,
+    node/path provenance, counts/units, native status and independent parents. Unresolved
+    source identity, genus, synonym and mapping-endpoint findings remain separate. User authorized
+    remediation and publication. Dry seeding and all-overlay validation passed; final generated
+    corpus, regressions, map/site and full QC are pending at event creation. Actual completion
+    results belong in PR 2003 and successor observations. No scientific status promotion;
+    unresolved findings remain open.

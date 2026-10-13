@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: well_sediment
+session:
+  id: 2026-10-06T231922Z-codex-gpt-5-e151ff
+  timestamp: '2026-10-06T23:19:22Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1596
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1595
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude the groundwater-context parent of well sediment
+  details: Added one exact source-mint/path/expected-parent exclusion after the individual
+    record review and separate adversarial pass. Fresh official ENVO revision a2455d1a77e46bb8a664d65a157166b539269042
+    and the GOLD aquifer/well/sediment triad distinguish sediment from its groundwater setting.
+    Preserve habitatmech:GOLD.71a5958fdc, GOLD5959, one ORGANISM assertion, path, category,
+    omitted mapping predicate, CLASS decision and SEEDED state. No replacement genus, definition
+    or sample-level claim is inferred; original study-to-BioSample scope remains unrecovered.
+    All 31 focused regression/source-parent tests pass, including full-corpus before/after
+    equality outside this parent and its appended event. Dry seed passed. Forced canary, real
+    semantic-map refresh, history/schema validation, full QC and CI remain required before
+    merge; results are recorded in the PR audit and receipts.

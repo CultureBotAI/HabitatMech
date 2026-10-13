@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: pond_scum
+session:
+  id: 2026-10-10T014705Z-codex-gpt-5-f6e88e
+  timestamp: '2026-10-10T01:47:05Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1840
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude the raceway-pond context parent from pond scum
+  details: Applied the exact identifier/path/expected-parent exclusion for habitatmech:GOLD.6e0470a1d8
+    after native review 20261010T011542Z-pond_scum F1. Reinspected target and parent, frozen
+    GOLD node 8140, AMNH Pondlife episode 1 sampling transcript and current OLS ENVO:03600047
+    constructed-pond definition. Scum material is not a kind of its enclosing pond. No replacement
+    identity, genus, definition, taxon, mechanism or ITEM/status promotion. Dry-run, validated
+    canary, target schema, strict validation and 3208-record corpus reproduction passed. Whole-corpus
+    before/after regression passed, preserving every unrelated claim and record. Full generated-product
+    and QC checks remain required before merge. Used the standard scaffold from ../../culturebotai-claw/src
+    after the default sibling path and sandboxed uv cache access failed.

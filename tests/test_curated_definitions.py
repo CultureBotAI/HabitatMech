@@ -41,10 +41,44 @@ def test_authored_definitions_are_applied_to_generated_concepts(repo_root):
     }
 
     methane = build_document(concepts["habitatmech:GOLD.d510166905"])
-    assert "CHEBI:16183" in methane["xrefs"]
+    assert methane["xrefs"] == ["CHEBI:16183"]
+    assert methane["parent_habitats"] == ["ENVO:00010483"]
+    assert methane["grounding_status"] == "UNGROUNDED"
+    assert methane["mapping_status"] == "REVIEWED"
+    assert methane["source_attestations"] == [{
+        "source": "GOLD",
+        "source_id": "gold.ecosystem:4451",
+        "source_label": "Methane",
+        "source_path": "Engineered > Bioremediation > Hydrocarbon > Methane",
+        "assertion_count": 2,
+        "assertion_unit": "ORGANISM",
+        "notes": "2 GOLD ecosystem node ids share this path; first shown. "
+        "See data/raw/gold_ecosystem_paths.tsv.",
+    }]
+    definition_event = next(
+        event for event in methane["curation_history"] if event["action"] == "DEFINED"
+    )
+    assert authored[methane["identifier"]].notes in definition_event["changes"]
     assert "Methane" not in {
         synonym["synonym_text"] for synonym in methane.get("synonyms", [])
     }
+
+
+def test_methane_rationale_distinguishes_device_from_material(repo_root):
+    definition = load_curated_definitions(repo_root / "curation" / "term_requests.tsv")[
+        "habitatmech:GOLD.d510166905"
+    ]
+    assert definition.definition == (
+        "An environmental material which is part of an engineered bioremediation "
+        "system, is exposed to methane-containing gas, and supports microbially "
+        "mediated methane oxidation."
+    )
+    assert definition.parent_mode == "REPLACE"
+    assert "devices rather than matrices" in definition.notes
+    assert "nonoxygenated contents, not methane production" in definition.notes
+    assert "10.1007/s00253-020-10748-z" in definition.notes
+    assert "Original source-member matrix and gas-exposure scope remain unverified" in definition.notes
+    assert "over-specifies anaerobic methane production" not in definition.notes
 
 
 def test_pending_definition_worklist_excludes_authored_and_rejected(repo_root):
@@ -206,3 +240,54 @@ def test_curated_definition_loader_rejects_unknown_parent_mode(tmp_path):
 
     with pytest.raises(DefinitionError, match="parent_mode 'RESET'"):
         load_curated_definitions(path)
+
+
+@pytest.mark.parametrize("source_label", ["Dust", " dust "])
+def test_renamed_genus_label_is_related_not_exact(source_label):
+    from habitatmech import seed
+    from habitatmech.curate.definitions import CuratedDefinition
+
+    ontology = seed.OntologyIndex([
+        {"term_id": "ENVO:00002008", "label": "dust", "ontology": "ENVO"},
+    ], [])
+    store = seed.ConceptStore(ontology)
+    concept = store.get("habitatmech:test", source_label, "UNGROUNDED")
+    concept.attestations = [{"source": "GOLD", "source_label": source_label}]
+    definition = CuratedDefinition(
+        identifier=concept.identifier, label="indoor dust",
+        parent_class="ENVO:00002008", parent_label="dust",
+        definition="A dust in an indoor setting.", exact_synonyms=("indoor particulate dust",),
+        curator="test", date="2026-10-08", notes="Test scoped source-label retention.",
+    )
+    seed.apply_curated_definitions(store, {concept.identifier: definition})
+    assert (source_label, "EXACT_SYNONYM") not in concept.synonyms
+    assert concept.synonyms[(source_label, "RELATED_SYNONYM")] == "HabitatMech curation"
+    assert ("indoor particulate dust", "EXACT_SYNONYM") in concept.synonyms
+    doc = seed.build_document(concept)
+    assert doc["source_attestations"] == concept.attestations
+    event = next(e for e in doc["curation_history"] if e["action"] == "SOURCE_SYNONYM_SCOPED")
+    assert "ENVO:00002008" in event["changes"]
+
+
+@pytest.mark.parametrize(("parent_label", "synonym"), [
+    ("dust", " DUST "),
+    ("fresh water", "Fresh-water"),
+    ("fresh water", "FRESH/WATER"),
+    ("fresh water", "fresh (water)"),
+])
+def test_authored_exact_synonym_cannot_be_the_strict_genus(parent_label, synonym):
+    from habitatmech import seed
+    from habitatmech.curate.definitions import CuratedDefinition
+
+    store = seed.ConceptStore(seed.OntologyIndex([
+        {"term_id": "ENVO:test", "label": parent_label, "ontology": "ENVO"},
+    ], []))
+    concept = store.get("habitatmech:test", synonym, "UNGROUNDED")
+    definition = CuratedDefinition(
+        identifier=concept.identifier, label=f"indoor {parent_label}",
+        parent_class="ENVO:test", parent_label=parent_label,
+        definition=f"A {parent_label} in an indoor setting.", exact_synonyms=(synonym,),
+        curator="test", date="2026-10-08", notes="An inconsistent exact synonym.",
+    )
+    with pytest.raises(DefinitionError, match="exact synonym.*strict genus"):
+        seed.apply_curated_definitions(store, {concept.identifier: definition})

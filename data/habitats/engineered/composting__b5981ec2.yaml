@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002170
-- habitatmech:GOLD.23dcd93012
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4953
@@ -18,3 +17,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.23dcd93012
+    for habitatmech:GOLD.aab5671566 (Engineered > Solid waste > Latrine chamber >
+    Composting). Bounded context exclusion (#1689; 20261011T071250Z-composting__b5981ec2
+    F2): all 16 later exact-path GOLD BioSample names/sites describe composting feces
+    communities sampled in a latrine chamber, not a material subtype of the containing
+    chamber. Export SHA256 5f48b2f50fb2a9257754960a0f0e12dc6e8fa121e97c3e9f4497249e5fe6e439,
+    Gb0164000-Gb0164015. Remove only the immediate chamber contribution; preserve
+    the mint, nodes 4953/4954, full path, zero ORGANISM omissions and NARROW/SEEDED
+    status. Original source intent and the independent ENVO:00002170 narrowing remain
+    unresolved in F1 and #1689; no replacement definition, blanket NOT_APPLICABLE
+    or mapping-endpoint certification (#1398) is asserted.'

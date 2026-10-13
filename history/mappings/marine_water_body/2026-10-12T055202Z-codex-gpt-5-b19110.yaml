@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/causal_graphs/marine_water_body.yaml
+  slug: marine_water_body
+session:
+  id: 2026-10-12T055202Z-codex-gpt-5-b19110
+  timestamp: '2026-10-12T05:52:02Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2004
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Correct bounded aquatic hierarchy or marine mechanism for marine_water_body
+  details: Represent euphotic and dark-ocean contexts as HABITAT, extracellular enzymes as
+    GENE_OR_PROTEIN, and explicitly scoped interacting functional assemblages as COMMUNITY.
+    Preserve all graph/node/edge IDs and all existing edge descriptions/evidence. Earlier
+    issue 1301 citation fixes stay intact. Current assessment inspected Herndl full text,
+    Arrigo author PDF and NOAA source; Arnosti support is limited to its abstract. User authorized
+    remediation and publication. Dry seeding and all-overlay validation passed; final generated
+    corpus, regressions, map/site and full QC are pending at event creation. Actual completion
+    results belong in PR 2003 and successor observations. No scientific status promotion;
+    unresolved findings remain open.

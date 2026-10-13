@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: glacier_meltwater
+session:
+  id: 2026-10-13T020352Z-codex-gpt-5-cb66a0
+  timestamp: '2026-10-13T02:03:52Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1223
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  summary: Reassess glacier meltwater as a narrower meltwater habitat
+  details: Resumed PR1218 against main 679a57e04. All ten historical source-context exclusions
+    already exist on main with newer rationales; retained all 444 rows and newer generator/tests.
+    Rechecked the entire glacier_meltwater record, frozen source path and triad/study rows,
+    and live official OLS ENVO:01000722 label/definition. The glacier-specific liquid material
+    is narrower than generic meltwater; six API samples from the single study Gs0118069 provide
+    medium corroboration, not exact identity or independent multi-study support. Retain minted
+    source and omitted direct assertion counts, separate Glacier > Meltwater record, and existing
+    frozen-precursor exclusion. Native ITEM decision derives NARROW/REVIEWED; no blanket status
+    promotion. The active decision rationale is reassessed on 2026-10-12; ten original October3
+    session histories remain immutable. Focused counterfactual regression, guarded canary,
+    generated map/site and full QC are required before merge. SSSOM/KGX endpoint issue1398
+    remains unresolved.

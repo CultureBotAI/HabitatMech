@@ -4,7 +4,6 @@ habitat_category: AQUATIC
 grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
-- ENVO:00000021
 - ENVO:01000407
 source_attestations:
 - source: GOLD
@@ -19,3 +18,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00000021 for habitatmech:GOLD.5b730a58b7
+    (Environmental > Aquatic > Freshwater > Lake > Littoral zone). Bounded hierarchy
+    correction https://github.com/CultureBotAI/HabitatMech/issues/1265 (20261012T035127Z-littoral_zone__9f547c9b
+    F1). GOLD.5b730a58b7 preserves the freshwater-lake-qualified shore zone and one
+    ORGANISM assertion. Retain generic littoral zone but not whole freshwater lake
+    as a genus. No later exact-path membership was found; that is a bounded census
+    result, not evidence of ecological absence. Exclude only the immediate GOLD contribution
+    named here. Preserve source identity, node/path provenance, counts/units, native
+    status and independent parents; separate decision and graph changes are recorded
+    in their own owners.

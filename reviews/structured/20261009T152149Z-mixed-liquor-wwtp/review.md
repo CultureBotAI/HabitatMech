@@ -1,0 +1,792 @@
+# Mixed liquor (WWTP): source, identity and hierarchy review
+
+- Review: 20261009T152149Z-mixed-liquor-wwtp
+- Repository: CultureBotAI/HabitatMech
+- Started UTC: 2026-10-09T15:02:39Z
+- Finished UTC: 2026-10-09T15:21:49Z
+- Reviewer: codex-gpt-5 (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The sampled mixed-liquor material and source provenance are supported. One confirmed major finding is the material-to-whole-facility parent ENVO:00002043. The current study combines anaerobic-digester framing with aerobic-reactor material/SIP fractions; do not infer universal oxygen conditions, independent replicates or identity with the MBR sibling.
+
+## Scope And Provenance
+
+Full field-by-field scientific review of exactly one generated record; related records and source samples are context only.
+
+Selection: Exact ID, path and source-path disambiguation in the continuing 3208-record corpus review. This is one complete record, not a corpus-wide pass.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 14d99404e9da3170d3d099aedc2855d4e8c4081e.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| habitatmech:GOLD.ef87a64b1a | data/habitats/engineered/mixed_liquor__ef7a87e7.yaml | generated | Mixed liquor (WWTP) |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Schema | passed | True | habitatmech:GOLD.ef87a64b1a | No issues found. |
+| Closed schema | passed | True | habitatmech:GOLD.ef87a64b1a | Four exact targets, zero errors. |
+| Corpus reproduction | passed | True | habitatmech:GOLD.ef87a64b1a | 3208 expected and present; zero missing, extra or differing. |
+| History | passed | True | habitatmech:GOLD.ef87a64b1a | 220 history records valid. |
+| Source provenance | passed | True | habitatmech:GOLD.ef87a64b1a | 14 committed inventories and two GOLD sources current. |
+| Focused integrity | passed | True | habitatmech:GOLD.ef87a64b1a | Six passed, 33 deselected. |
+| Exact-base QC receipt | passed | True | habitatmech:GOLD.ef87a64b1a | Completed success at captured base; reused receipt, not a new full run. |
+| Exact-base ontology-label receipt | passed | True | habitatmech:GOLD.ef87a64b1a | Completed success at captured base; reused receipt, no new OAK run. |
+| Capture recheck | passed | True | habitatmech:GOLD.ef87a64b1a | Fresh SHA-256 comparison rechecked all 40 captured local inputs; none changed. HEAD remains the inspected base. |
+| Causal overlay and iModulonDB applicability | not_applicable | False | habitatmech:GOLD.ef87a64b1a | No overlay, causal edge or structured gene/dataset claim in this target. |
+
+## Scientific And Domain Assessments
+
+### Qualified source identity
+
+identity: supported. Targets: habitatmech:GOLD.ef87a64b1a.
+
+The exact path and mint distinguish WWTP mixed liquor from the MBR same-label record. All 101 current GOLD sample rows identify aerobic-reactor mixed liquor, including SIP fractions, rather than the whole wastewater plant. Two independently fetched submissions confirm collection material and experimental processing, not whole-class conditions.
+
+### Mint, decision route and exact-identity restraint
+
+grounding: supported. Targets: habitatmech:GOLD.ef87a64b1a.
+
+UNGROUNDED preserves the source-qualified mint and supplies no self-mapping predicate. Actual automatic and curated routes reproduce the full record. A broad or related candidate must not silently replace this identity; a CLASS lexical sweep is not an individual scientific sign-off.
+
+### Strictly broader parent contribution
+
+graph: concern. Targets: habitatmech:GOLD.ef87a64b1a.
+
+The immediate GOLD path contributes the whole wastewater treatment plant ENVO:00002043, whose parent record is ITEM-grounded. A mixture sampled from a reactor inside a plant is not a subtype of that facility. EPA's material definition and exact sample text establish this distinction without changing the plant's own grounding.
+
+### Source counters and units
+
+quantity: supported. Targets: habitatmech:GOLD.ef87a64b1a.
+
+The frozen KGX-derived zero counters correctly omit count/unit; 3 node(s) support the collapse note. The separate 101 current BIOSAMPLE observations are not organisms, taxa, independent replicates or a live replacement for the frozen attestation.
+
+### Lifecycle and generated ownership
+
+provenance: supported. Targets: habitatmech:GOLD.ef87a64b1a.
+
+Both native events agree with the CLASS decision and seed. No ITEM identity review, authored definition or source merge is invented. Inputs and native generator own any correction; saving this review does not promote SEEDED.
+
+### Definition, taxa, parameters, evidence, graphs and datasets
+
+completeness: supported. Targets: habitatmech:GOLD.ef87a64b1a.
+
+The sparse target makes no unsupported optional biological claims. Exact-key scans found no target-specific triad, taxon or environmental-parameter row. No defined ingredient mixture, causal mechanism or characteristic organism is warranted by source counts or parent/descendant data. Missing optional fields are limitations, not automatic defects.
+
+### Structured expression-module cross-check
+
+evidence: not_applicable. Targets: habitatmech:GOLD.ef87a64b1a.
+
+No target gene, regulator, protein, named organism/dataset or transcriptomic assertion requires an iModulonDB adapter. Absence from that resource is not negative evidence.
+
+### Native validation versus scientific validity
+
+schema: supported. Targets: habitatmech:GOLD.ef87a64b1a.
+
+Fresh schema, strict, corpus, history and focused reference/lifecycle checks pass. Base QC and label CI receipts are reused with unchanged captured inputs. Deterministic validity does not settle the scientific hierarchy finding.
+
+## Findings
+
+### F1: Mixed-liquor material is not a type of its containing equipment or facility
+
+major / open / confirmed; issue key: mixed-liquor-wwtp-material-to-facility-parent.
+
+The immediate GOLD path contributes the whole wastewater treatment plant ENVO:00002043, whose parent record is ITEM-grounded. A mixture sampled from a reactor inside a plant is not a subtype of that facility. EPA's material definition and exact sample text establish this distinction without changing the plant's own grounding.
+
+## Recommended Actions And Acceptance Checks
+
+### A-F1
+
+Add the exact source-path and expected-parent guarded exclusion. Preserve all other scientific fields, source paths/count omissions and native status; append session history and regenerate records/pages. Do not create an unsupported replacement genus or merge same-label sources.
+
+- Exact source path and expected resolved parent remain guarded.
+- A before/after whole-corpus comparison changes only the authorized relationship and deterministic audit event; original source claims and status survive.
+- just verify-corpus; just validate-strict &lt;target&gt;; just validate-history; just qc; fresh PR/queue checks.
+- Save a new evidence-backed disposition retaining this finding's issue_key and exact previous_occurrences; do not rewrite this observation.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| E1 | data/habitats/engineered/mixed_liquor__ef7a87e7.yaml; Complete file; PATHS entry; immediate parent complete file | supports | ENGINEERED / UNGROUNDED / SEEDED; sole parent ENVO:00002043; one GOLD attestation; no definition, synonyms, xrefs, parameters, taxa, evidence, graph, discussion or dataset claims. Both existing history events inspected. The exact path and mint distinguish WWTP mixed liquor from the MBR same-label record. All 101 current GOLD sample rows identify aerobic-reactor mixed liquor, including SIP fractions, rather than the whole wastewater plant. Two independently fetched submissions confirm collection material and experimental processing, not whole-class conditions. |
+| E2 | data/raw/gold_ecosystem_paths.tsv; Logical data row 1392; exact path Engineered &gt; WWTP &gt; Mixed liquor | supports | First node 5789, 3 collapsed node(s): 5789/5790/5791. All frozen organism/study/biosample/total counters zero. Count and unit omission is correct, not proof of no microbes. The displayed collapse note agrees with the full node set. |
+| E3 | curation/decisions.tsv; Physical line 1324; habitatmech:GOLD.ef87a64b1a | supports | CONFIRM_UNGROUNDED, CLASS, claude-opus-5, 2026-08-12. Actual automatic route gold_unmatched becomes curated_confirm_ungrounded_from_gold_unmatched. Fresh build_corpus/build_document equals every target field: one source, zero ITEM-reviewed sources. SEEDED is accurate; this review is not an ITEM decision. |
+| E4 | data/raw/; All 14 committed TSV inventories, exact canonical path, target ID and every collapsed node key | supports | Separate gold_path_biosamples logical row 231 records 101 BIOSAMPLEs. Gs0150043 (also Engineered &gt; Bioreactor &gt; Anaerobic). No exact-path triad row or target taxa/parameters from the other inventories. This structured all-field scan excludes descendant-path borrowing. |
+| E5 | https://gold.jgi.doe.gov/download?mode=site_excel; Oct 9 public workbook; Biosample/Organism/Sequencing Project/Study sheets, exact path and joins | supports | 101 exact-path biosamples join to 101 projects in Gs0150043, with zero matching organism rows. All biosample sites say aerobic reactor mixed liquor; names include six initial acetate-SIP preparations and 95 fraction records. The study description instead frames anaerobic-digestion/methanogenic communities: preserve that metadata granularity conflict. Crosswalks include Gb0314673/Gp0615619/SAMN31514381 and Gb0314681/Gp0615627/SAMN31452515. Six initial rows and fraction Gb0314689 lack NCBI BioSample accessions in this workbook. Scanned 244951 Biosample rows including header, 532019 Organism rows including header and 636914 Project rows including header. All 108 exact-match biosamples across the four separately reviewed targets join to projects; only this target informs its verdict. |
+| E6 | https://gold.jgi.doe.gov/ecosystem_classification; Five-level classification introduction and level descriptions | context_only | GOLD organizes the surroundings/features of collected samples and periodically revises paths. The classification does not establish that each adjacency is a strict is-a relation. |
+| E7 | curation/; research/; reports/yaml_record_review/; reviews/; history/; Identifier, label, slug, exact source-path searches | context_only | Ignored-inclusive searches recover the CLASS decisions and historical context mentions, but no earlier individual report, ITEM identity decision, authored definition or causal overlay for this target in those roots. |
+| E8 | https://github.com/CultureBotAI/HabitatMech/actions/runs/37947649422; Base 14d99404e9da3170d3d099aedc2855d4e8c4081e | supports | Fresh gh run view confirms completed success on the exact review base. This reuses the completed base full-QC receipt, not a new full-QC invocation for this target. Fresh local checks verify 3208/3208 exact records, 220 valid histories, strict schema and six focused integrity tests. |
+| E9 | https://github.com/CultureBotAI/HabitatMech/actions/runs/37947649601; Base 14d99404e9da3170d3d099aedc2855d4e8c4081e | supports | Fresh gh run view confirms completed label-correspondence success on this exact base. No grounding or label changed during this observation; no claim of running OAK anew. |
+| E10 | CLAUDE.md; Semantic invariants; docs/CURATION.md, Excluding a GOLD context parent | supports | Every parent contribution must be strictly broader. Exact-path guarded exclusions remove only a GOLD context contribution; they preserve grounding/status and append an exclusion event. Generated records/pages must never be hand-edited. |
+| E11 | https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=9100NX8X.txt; Activated Sludge Process, Section III, Definitions and Process Description | supports | EPA treats mixed liquor as activated sludge mixed with wastewater in the aeration tank; it then flows to a clarifier. This is a material, distinct from equipment or the containing plant. General terminology is not evidence for every sample's oxygen regime. |
+| E12 | https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P100IL7G.TXT; Membrane Location, text describing immersed and separate-vessel configurations | supports | EPA describes mixed liquor circulated from a biological reactor through a separate membrane vessel. This independently separates contained/circulating material from apparatus. |
+| E13 | https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FENVO_00002043; Exact class label, description and obsolete flag | supports | ENVO:00002043 is active and denotes wastewater treatment plant (no definition in this OLS response). Separate active ENVO:00002123 denotes a biomaterial-containment unit. ENVO:00002046 activated sludge and ENVO:00002044 sludge are related material candidates, not established exact identities for this qualified mixed-liquor source. |
+| E14 | https://www.ncbi.nlm.nih.gov/biosample/SAMN31514381; NCBI efetch XML for SAMN31514381 and SAMN31452515 | partial | Two selected examples from the 101-member crosswalk explicitly identify aerobic-reactor mixed liquor and anaerobic acetate supply followed by oxic incubation. One is unlabeled control, one C13-amended. These confirm material/procedure distinction, not 101 independent environmental replicates or universal oxygen conditions. |
+
+## Limits And Additional Notes
+
+- The current GOLD workbook is 238974789 bytes and differs from the frozen August GOLD_MANIFEST source (222850238 bytes, SHA-256 6797471982570ed145f81aef966c1ff5398dc4d35287a01faefaf80ac5311fea). Matching totals do not prove identical historical membership; no source inventory was refreshed.
+- Optional fields are unfilled and scientific status stays SEEDED. This observation is not a term proposal, species-level ecological claim, mechanism review or corpus-wide sign-off.
+- Current ontology candidate inspection and local ignored-inclusive term searches are bounded, not an exhaustive proof that no fitting ontology term exists.
+- Network attempts initially failed in the restricted shell; official OLS and NCBI structured requests succeeded after network approval. Browser access to NCBI pages was unavailable; fetched XML is the inspected evidence.
+- Two selected NCBI samples were inspected, not all 101 submissions. GOLD lists SIP preparations/fractions, not 101 independent sites; study-level anaerobic framing must not override sample-level material and incubation metadata.
+- Read-only observation saved before any separately authorized issue fix. Proposed actions are not recorded as executed.
+- No paid research, external contact, source refresh or native identity/status promotion.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261009T152149Z-mixed-liquor-wwtp
+kind: record
+repository: CultureBotAI/HabitatMech
+title: 'Mixed liquor (WWTP): source, identity and hierarchy review'
+started_at: '2026-10-09T15:02:39Z'
+finished_at: '2026-10-09T15:21:49Z'
+reviewer:
+  identity: codex-gpt-5
+  kind: agent
+  model: gpt-5
+  independence: self_review
+  independence_basis: Same agent continuing the corpus review and authorized publication;
+    not independent scientific approval.
+skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The sampled mixed-liquor material and source provenance are supported. One
+  confirmed major finding is the material-to-whole-facility parent ENVO:00002043.
+  The current study combines anaerobic-digester framing with aerobic-reactor material/SIP
+  fractions; do not infer universal oxygen conditions, independent replicates or identity
+  with the MBR sibling.
+source:
+  git_revision: 14d99404e9da3170d3d099aedc2855d4e8c4081e
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/record_review.yaml
+    sha256: c2f5d0eb4c5744f5fe354c92184ddab144dc2688dba952b032b4f3d597bc08d6
+    role: context
+  - path: conf/sources.yaml
+    sha256: a8e069f9278068b57fa234f43e03c8d893f857827b83fd10cfa92d6815aed642
+    role: context
+  - path: curation/decisions.tsv
+    sha256: 0602cca13e6495da256a6f1cfd5897462f73f9739a729447862017d93c148efd
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: 9d2324647d0a0ddeccc2f7836811872e112af208bb1b8f7decb332c00f17d12b
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 9977e384b79128d6e89c85f28e35c77d29644d503dea6d53c12628599e33f7f3
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: b59b9e800a918135e3915145d4d8098bb48dcea36a312b3004c594a57d221ae9
+    role: context
+  - path: data/habitats/RETIRED.tsv
+    sha256: 41beffc45aabdf304de633c21200b375d7f01d1cb2e036d4a026961d545a35e5
+    role: context
+  - path: data/habitats/engineered/mixed_liquor__ef7a87e7.yaml
+    sha256: a7fb0e45c6567f13cbb5fc87883a153c364f16a84a0e3a760af898dd7246941a
+    role: target
+  - path: data/habitats/engineered/wastewater_treatment_plant.yaml
+    sha256: 8ef83f2efb4df7d4d325588a0ab4349c7dea93e6292f98425e7099c37ebf8f94
+    role: context
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: 36df8306394c06c352b73e0bf7b47a2858784cedac7389a24d0b78f593ece646
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: f7aa39ee762d94f1902d9f08f328cb897bc543e4e226057eb4770d24bfcc6eb5
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/extract_gold_biosamples.py
+    sha256: b6a2773c86fe718e1ca0b1d7b32709f0eee491ac813655e310aa0817c0fec31b
+    role: context
+  - path: src/habitatmech/extract.py
+    sha256: 4d9397bda649381a5daf81937369531c6dc8b4518d6c7047e6f3f14e605bf860
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 52d2a22309a1f4a10728a663560bb4d918346c292221fd34139b99b4159d3fe5
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 92adf631fa099120a497ff7001473e659347d23ac9b418f04cd341ddad5d2a89
+    role: context
+scope:
+  description: Full field-by-field scientific review of exactly one generated record;
+    related records and source samples are context only.
+  selection: Exact ID, path and source-path disambiguation in the continuing 3208-record
+    corpus review. This is one complete record, not a corpus-wide pass.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - habitatmech:GOLD.ef87a64b1a
+  exclusions:
+  - target: All other HabitatMech records
+    reason: Parents and historical descendant reviews were read for context, not counted
+      as additional target reviews.
+targets:
+- target_id: habitatmech:GOLD.ef87a64b1a
+  path: data/habitats/engineered/mixed_liquor__ef7a87e7.yaml
+  label: Mixed liquor (WWTP)
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Source-specific ITEM grounding/scope decision
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Guarded source-context parent exclusion
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Supported novel definition and genus
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/gold_ecosystem_paths.tsv
+    role: Frozen path/node/count inventory
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Generated record, hierarchy and lifecycle
+checks:
+- check_id: C1
+  name: Schema
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.ef87a64b1a
+  command: env UV_CACHE_DIR=build/uv-cache just validate data/habitats/engineered/mixed_liquor__ef7a87e7.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: No issues found.
+- check_id: C2
+  name: Closed schema
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.ef87a64b1a
+  command: env UV_CACHE_DIR=build/uv-cache just validate-strict data/habitats/engineered/mixed_alcohol_bioreactor.yaml
+    data/habitats/engineered/mixed_feedstock.yaml data/habitats/engineered/mixed_liquor.yaml
+    data/habitats/engineered/mixed_liquor__ef7a87e7.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Four exact targets, zero errors.
+- check_id: C3
+  name: Corpus reproduction
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.ef87a64b1a
+  command: env UV_CACHE_DIR=build/uv-cache just verify-corpus
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 3208 expected and present; zero missing, extra or differing.
+- check_id: C4
+  name: History
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.ef87a64b1a
+  command: env UV_CACHE_DIR=build/uv-cache just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 220 history records valid.
+- check_id: C5
+  name: Source provenance
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.ef87a64b1a
+  command: env UV_CACHE_DIR=build/uv-cache just provenance-check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 14 committed inventories and two GOLD sources current.
+- check_id: C6
+  name: Focused integrity
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.ef87a64b1a
+  command: env UV_CACHE_DIR=build/uv-cache uv run pytest -q tests/test_corpus_integrity.py
+    -k 'parent or reviewed_records or history or causal_edges_reference'
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Six passed, 33 deselected.
+- check_id: C7
+  name: Exact-base QC receipt
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.ef87a64b1a
+  command: gh run view 37947649422 --json status,conclusion,headSha,url
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Completed success at captured base; reused receipt, not a new full run.
+- check_id: C8
+  name: Exact-base ontology-label receipt
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.ef87a64b1a
+  command: gh run view 37947649601 --json status,conclusion,headSha,url
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Completed success at captured base; reused receipt, no new OAK run.
+- check_id: C9
+  name: Capture recheck
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.ef87a64b1a
+  exit_code: 0
+  summary: Fresh SHA-256 comparison rechecked all 40 captured local inputs; none changed.
+    HEAD remains the inspected base.
+- check_id: C10
+  name: Causal overlay and iModulonDB applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - habitatmech:GOLD.ef87a64b1a
+  summary: No overlay, causal edge or structured gene/dataset claim in this target.
+evidence:
+- evidence_id: E1
+  kind: record_content
+  reference: data/habitats/engineered/mixed_liquor__ef7a87e7.yaml
+  locator: Complete file; PATHS entry; immediate parent complete file
+  accessed_at: '2026-10-09T15:21:49Z'
+  support: supports
+  summary: ENGINEERED / UNGROUNDED / SEEDED; sole parent ENVO:00002043; one GOLD attestation;
+    no definition, synonyms, xrefs, parameters, taxa, evidence, graph, discussion
+    or dataset claims. Both existing history events inspected. The exact path and
+    mint distinguish WWTP mixed liquor from the MBR same-label record. All 101 current
+    GOLD sample rows identify aerobic-reactor mixed liquor, including SIP fractions,
+    rather than the whole wastewater plant. Two independently fetched submissions
+    confirm collection material and experimental processing, not whole-class conditions.
+- evidence_id: E2
+  kind: record_content
+  reference: data/raw/gold_ecosystem_paths.tsv
+  locator: Logical data row 1392; exact path Engineered > WWTP > Mixed liquor
+  accessed_at: '2026-10-09T15:21:49Z'
+  support: supports
+  summary: 'First node 5789, 3 collapsed node(s): 5789/5790/5791. All frozen organism/study/biosample/total
+    counters zero. Count and unit omission is correct, not proof of no microbes. The
+    displayed collapse note agrees with the full node set.'
+- evidence_id: E3
+  kind: record_content
+  reference: curation/decisions.tsv
+  locator: Physical line 1324; habitatmech:GOLD.ef87a64b1a
+  accessed_at: '2026-10-09T15:21:49Z'
+  support: supports
+  summary: 'CONFIRM_UNGROUNDED, CLASS, claude-opus-5, 2026-08-12. Actual automatic
+    route gold_unmatched becomes curated_confirm_ungrounded_from_gold_unmatched. Fresh
+    build_corpus/build_document equals every target field: one source, zero ITEM-reviewed
+    sources. SEEDED is accurate; this review is not an ITEM decision.'
+- evidence_id: E4
+  kind: record_content
+  reference: data/raw/
+  locator: All 14 committed TSV inventories, exact canonical path, target ID and every
+    collapsed node key
+  accessed_at: '2026-10-09T15:21:49Z'
+  support: supports
+  summary: Separate gold_path_biosamples logical row 231 records 101 BIOSAMPLEs. Gs0150043
+    (also Engineered > Bioreactor > Anaerobic). No exact-path triad row or target
+    taxa/parameters from the other inventories. This structured all-field scan excludes
+    descendant-path borrowing.
+  search_scope: All 14 physical TSV files parsed with csv.DictReader; exact field
+    or pipe-member matching, including overflow values. No ignored-file filter.
+- evidence_id: E5
+  kind: database
+  reference: https://gold.jgi.doe.gov/download?mode=site_excel
+  locator: Oct 9 public workbook; Biosample/Organism/Sequencing Project/Study sheets,
+    exact path and joins
+  accessed_at: '2026-10-09T15:21:49Z'
+  support: supports
+  summary: '101 exact-path biosamples join to 101 projects in Gs0150043, with zero
+    matching organism rows. All biosample sites say aerobic reactor mixed liquor;
+    names include six initial acetate-SIP preparations and 95 fraction records. The
+    study description instead frames anaerobic-digestion/methanogenic communities:
+    preserve that metadata granularity conflict. Crosswalks include Gb0314673/Gp0615619/SAMN31514381
+    and Gb0314681/Gp0615627/SAMN31452515. Six initial rows and fraction Gb0314689
+    lack NCBI BioSample accessions in this workbook. Scanned 244951 Biosample rows
+    including header, 532019 Organism rows including header and 636914 Project rows
+    including header. All 108 exact-match biosamples across the four separately reviewed
+    targets join to projects; only this target informs its verdict.'
+  snapshot_sha256: 5f48b2f50fb2a9257754960a0f0e12dc6e8fa121e97c3e9f4497249e5fe6e439
+- evidence_id: E6
+  kind: authority
+  reference: https://gold.jgi.doe.gov/ecosystem_classification
+  locator: Five-level classification introduction and level descriptions
+  accessed_at: '2026-10-09T15:21:49Z'
+  support: context_only
+  summary: GOLD organizes the surroundings/features of collected samples and periodically
+    revises paths. The classification does not establish that each adjacency is a
+    strict is-a relation.
+- evidence_id: E7
+  kind: search
+  reference: curation/; research/; reports/yaml_record_review/; reviews/; history/
+  locator: Identifier, label, slug, exact source-path searches
+  accessed_at: '2026-10-09T15:21:49Z'
+  support: context_only
+  summary: Ignored-inclusive searches recover the CLASS decisions and historical context
+    mentions, but no earlier individual report, ITEM identity decision, authored definition
+    or causal overlay for this target in those roots.
+  search_scope: rg --no-ignore --hidden; all four exact IDs, slugs and labels and
+    the target source paths, plus structured inventory scan. Bounded repository roots,
+    not global absence.
+- evidence_id: E8
+  kind: validation
+  reference: https://github.com/CultureBotAI/HabitatMech/actions/runs/37947649422
+  locator: Base 14d99404e9da3170d3d099aedc2855d4e8c4081e
+  accessed_at: '2026-10-09T15:21:49Z'
+  support: supports
+  summary: Fresh gh run view confirms completed success on the exact review base.
+    This reuses the completed base full-QC receipt, not a new full-QC invocation for
+    this target. Fresh local checks verify 3208/3208 exact records, 220 valid histories,
+    strict schema and six focused integrity tests.
+- evidence_id: E9
+  kind: validation
+  reference: https://github.com/CultureBotAI/HabitatMech/actions/runs/37947649601
+  locator: Base 14d99404e9da3170d3d099aedc2855d4e8c4081e
+  accessed_at: '2026-10-09T15:21:49Z'
+  support: supports
+  summary: Fresh gh run view confirms completed label-correspondence success on this
+    exact base. No grounding or label changed during this observation; no claim of
+    running OAK anew.
+- evidence_id: E10
+  kind: record_content
+  reference: CLAUDE.md
+  locator: Semantic invariants; docs/CURATION.md, Excluding a GOLD context parent
+  accessed_at: '2026-10-09T15:21:49Z'
+  support: supports
+  summary: Every parent contribution must be strictly broader. Exact-path guarded
+    exclusions remove only a GOLD context contribution; they preserve grounding/status
+    and append an exclusion event. Generated records/pages must never be hand-edited.
+- evidence_id: E11
+  kind: authority
+  reference: https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=9100NX8X.txt
+  locator: Activated Sludge Process, Section III, Definitions and Process Description
+  accessed_at: '2026-10-09T15:21:49Z'
+  support: supports
+  summary: EPA treats mixed liquor as activated sludge mixed with wastewater in the
+    aeration tank; it then flows to a clarifier. This is a material, distinct from
+    equipment or the containing plant. General terminology is not evidence for every
+    sample's oxygen regime.
+- evidence_id: E12
+  kind: authority
+  reference: https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P100IL7G.TXT
+  locator: Membrane Location, text describing immersed and separate-vessel configurations
+  accessed_at: '2026-10-09T15:21:49Z'
+  support: supports
+  summary: EPA describes mixed liquor circulated from a biological reactor through
+    a separate membrane vessel. This independently separates contained/circulating
+    material from apparatus.
+- evidence_id: E13
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FENVO_00002043
+  locator: Exact class label, description and obsolete flag
+  accessed_at: '2026-10-09T15:21:49Z'
+  support: supports
+  summary: ENVO:00002043 is active and denotes wastewater treatment plant (no definition
+    in this OLS response). Separate active ENVO:00002123 denotes a biomaterial-containment
+    unit. ENVO:00002046 activated sludge and ENVO:00002044 sludge are related material
+    candidates, not established exact identities for this qualified mixed-liquor source.
+- evidence_id: E14
+  kind: database
+  reference: https://www.ncbi.nlm.nih.gov/biosample/SAMN31514381
+  locator: NCBI efetch XML for SAMN31514381 and SAMN31452515
+  accessed_at: '2026-10-09T15:21:49Z'
+  support: partial
+  summary: Two selected examples from the 101-member crosswalk explicitly identify
+    aerobic-reactor mixed liquor and anaerobic acetate supply followed by oxic incubation.
+    One is unlabeled control, one C13-amended. These confirm material/procedure distinction,
+    not 101 independent environmental replicates or universal oxygen conditions.
+assessments:
+- assessment_id: A1
+  area: identity
+  topic: Qualified source identity
+  outcome: supported
+  summary: The exact path and mint distinguish WWTP mixed liquor from the MBR same-label
+    record. All 101 current GOLD sample rows identify aerobic-reactor mixed liquor,
+    including SIP fractions, rather than the whole wastewater plant. Two independently
+    fetched submissions confirm collection material and experimental processing, not
+    whole-class conditions.
+  target_ids:
+  - habitatmech:GOLD.ef87a64b1a
+  evidence_ids:
+  - E1
+  - E2
+  - E5
+- assessment_id: A2
+  area: grounding
+  topic: Mint, decision route and exact-identity restraint
+  outcome: supported
+  summary: UNGROUNDED preserves the source-qualified mint and supplies no self-mapping
+    predicate. Actual automatic and curated routes reproduce the full record. A broad
+    or related candidate must not silently replace this identity; a CLASS lexical
+    sweep is not an individual scientific sign-off.
+  target_ids:
+  - habitatmech:GOLD.ef87a64b1a
+  evidence_ids:
+  - E1
+  - E3
+- assessment_id: A3
+  area: graph
+  topic: Strictly broader parent contribution
+  outcome: concern
+  summary: The immediate GOLD path contributes the whole wastewater treatment plant
+    ENVO:00002043, whose parent record is ITEM-grounded. A mixture sampled from a
+    reactor inside a plant is not a subtype of that facility. EPA's material definition
+    and exact sample text establish this distinction without changing the plant's
+    own grounding.
+  target_ids:
+  - habitatmech:GOLD.ef87a64b1a
+  evidence_ids:
+  - E1
+  - E3
+  - E6
+  - E10
+  - E11
+  - E12
+  - E13
+- assessment_id: A4
+  area: quantity
+  topic: Source counters and units
+  outcome: supported
+  summary: The frozen KGX-derived zero counters correctly omit count/unit; 3 node(s)
+    support the collapse note. The separate 101 current BIOSAMPLE observations are
+    not organisms, taxa, independent replicates or a live replacement for the frozen
+    attestation.
+  target_ids:
+  - habitatmech:GOLD.ef87a64b1a
+  evidence_ids:
+  - E2
+  - E4
+  - E5
+- assessment_id: A5
+  area: provenance
+  topic: Lifecycle and generated ownership
+  outcome: supported
+  summary: Both native events agree with the CLASS decision and seed. No ITEM identity
+    review, authored definition or source merge is invented. Inputs and native generator
+    own any correction; saving this review does not promote SEEDED.
+  target_ids:
+  - habitatmech:GOLD.ef87a64b1a
+  evidence_ids:
+  - E1
+  - E3
+  - E7
+  - E10
+- assessment_id: A6
+  area: completeness
+  topic: Definition, taxa, parameters, evidence, graphs and datasets
+  outcome: supported
+  summary: The sparse target makes no unsupported optional biological claims. Exact-key
+    scans found no target-specific triad, taxon or environmental-parameter row. No
+    defined ingredient mixture, causal mechanism or characteristic organism is warranted
+    by source counts or parent/descendant data. Missing optional fields are limitations,
+    not automatic defects.
+  target_ids:
+  - habitatmech:GOLD.ef87a64b1a
+  evidence_ids:
+  - E1
+  - E4
+  - E7
+- assessment_id: A7
+  area: evidence
+  topic: Structured expression-module cross-check
+  outcome: not_applicable
+  summary: No target gene, regulator, protein, named organism/dataset or transcriptomic
+    assertion requires an iModulonDB adapter. Absence from that resource is not negative
+    evidence.
+  target_ids:
+  - habitatmech:GOLD.ef87a64b1a
+  evidence_ids:
+  - E1
+- assessment_id: A8
+  area: schema
+  topic: Native validation versus scientific validity
+  outcome: supported
+  summary: Fresh schema, strict, corpus, history and focused reference/lifecycle checks
+    pass. Base QC and label CI receipts are reused with unchanged captured inputs.
+    Deterministic validity does not settle the scientific hierarchy finding.
+  target_ids:
+  - habitatmech:GOLD.ef87a64b1a
+  evidence_ids:
+  - E8
+  - E9
+findings:
+- finding_id: F1
+  issue_key: mixed-liquor-wwtp-material-to-facility-parent
+  category: graph
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Mixed-liquor material is not a type of its containing equipment or facility
+  description: The immediate GOLD path contributes the whole wastewater treatment
+    plant ENVO:00002043, whose parent record is ITEM-grounded. A mixture sampled from
+    a reactor inside a plant is not a subtype of that facility. EPA's material definition
+    and exact sample text establish this distinction without changing the plant's
+    own grounding.
+  target_ids:
+  - habitatmech:GOLD.ef87a64b1a
+  field_paths:
+  - parent_habitats
+  evidence_ids:
+  - E1
+  - E5
+  - E6
+  - E10
+  - E11
+  - E12
+  rule_id: CLAUDE.md/semantic-invariants/strictly-broader
+  native_severity: major
+  normalization_reason: Materially unsupported habitat subsumption affects downstream
+    graph interpretation; YAML identity and critical references remain valid, so this
+    is not a blocker.
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Source-specific ITEM grounding/scope decision
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Guarded source-context parent exclusion
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Supported novel definition and genus
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1800
+actions:
+- action_id: A-F1
+  description: Add the exact source-path and expected-parent guarded exclusion. Preserve
+    all other scientific fields, source paths/count omissions and native status; append
+    session history and regenerate records/pages. Do not create an unsupported replacement
+    genus or merge same-label sources.
+  finding_ids:
+  - F1
+  target_ids:
+  - habitatmech:GOLD.ef87a64b1a
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Source-specific ITEM grounding/scope decision
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Guarded source-context parent exclusion
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Supported novel definition and genus
+  generator: just seed; just seed-canary <identifier> --force; just render
+  acceptance_checks:
+  - Exact source path and expected resolved parent remain guarded.
+  - A before/after whole-corpus comparison changes only the authorized relationship
+    and deterministic audit event; original source claims and status survive.
+  - just verify-corpus; just validate-strict <target>; just validate-history; just
+    qc; fresh PR/queue checks.
+  - Save a new evidence-backed disposition retaining this finding's issue_key and
+    exact previous_occurrences; do not rewrite this observation.
+limitations:
+- The current GOLD workbook is 238974789 bytes and differs from the frozen August
+  GOLD_MANIFEST source (222850238 bytes, SHA-256 6797471982570ed145f81aef966c1ff5398dc4d35287a01faefaf80ac5311fea).
+  Matching totals do not prove identical historical membership; no source inventory
+  was refreshed.
+- Optional fields are unfilled and scientific status stays SEEDED. This observation
+  is not a term proposal, species-level ecological claim, mechanism review or corpus-wide
+  sign-off.
+- Current ontology candidate inspection and local ignored-inclusive term searches
+  are bounded, not an exhaustive proof that no fitting ontology term exists.
+- Network attempts initially failed in the restricted shell; official OLS and NCBI
+  structured requests succeeded after network approval. Browser access to NCBI pages
+  was unavailable; fetched XML is the inspected evidence.
+- Two selected NCBI samples were inspected, not all 101 submissions. GOLD lists SIP
+  preparations/fractions, not 101 independent sites; study-level anaerobic framing
+  must not override sample-level material and incubation metadata.
+notes:
+- Read-only observation saved before any separately authorized issue fix. Proposed
+  actions are not recorded as executed.
+- No paid research, external contact, source refresh or native identity/status promotion.
+tags:
+- habitat
+- engineered
+- gold
+- record-review
+```

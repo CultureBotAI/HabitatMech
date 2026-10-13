@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: hospital_bedroom
+session:
+  id: 2026-10-08T190032Z-codex-759742
+  timestamp: '2026-10-08T19:00:32Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1746
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude GOLD building-containment parent from Hospital bedroom
+  details: Added the exact habitatmech:GOLD.9cc7667041 source-path exclusion for ENVO:00002173.
+    A room is a building part, not a kind of hospital building; rechecked typed pinned ENVO
+    room and patient-room axioms. Preserve mint, GOLD5489, exact source path, zero-count omission
+    and CLASS/SEEDED status without claiming a more specific patient-room identity. reports/yaml_record_review/20261008T183724Z-hospital_bedroom.md
+    documents evidence and limits. Full before/after regression passed, including unchanged
+    unrelated records and child observations; dry seed passed. Canary inspection and full
+    generated-artifact/QC gates are required before merge.

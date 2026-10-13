@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: hypersaline_water_environment
+session:
+  id: 2026-10-12T040011Z-codex-gpt-5-dd90b6
+  timestamp: '2026-10-12T04:00:11Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1245
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed hierarchy or mechanism for hypersaline_water_environment
+  details: 'Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1245
+    (20261012T035124Z-hypersaline_water_environment F1). The ITEM CLOSE-mapped Hypersaline
+    bin resolves to the generic ENVO:01001043 environmental system. The source inland qualifier
+    cannot constrain every instance of that ontology class; NOAA also describes hypersaline
+    coastal estuaries. Keep the correct aqueous-environment genus and the already RELATED
+    source synonym. Exclude only the immediate GOLD contribution named here. Preserve source
+    identity, node/path provenance, counts/units, native status and independent parents; separate
+    decision and graph changes are recorded in their own owners. User authorized remediation
+    and publication. Dry seed and two canaries passed; full regeneration, post-fix checks,
+    map/site and full QC remain pending at event creation. Actual results will be reported
+    in PR #1999. No scientific status promotion.'

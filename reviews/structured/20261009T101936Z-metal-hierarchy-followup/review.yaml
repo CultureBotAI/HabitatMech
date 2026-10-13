@@ -1,0 +1,797 @@
+schema_version: 1.0.0
+review_id: 20261009T101936Z-metal-hierarchy-followup
+kind: batch
+repository: CultureBotAI/HabitatMech
+title: 'Metal habitat follow-up: resolve two context-as-superclass findings'
+started_at: '2026-10-09T10:09:32Z'
+finished_at: '2026-10-09T10:19:36Z'
+reviewer:
+  identity: codex-gpt-5
+  kind: agent
+  model: gpt-5
+  independence: self_review
+  independence_basis: Same agent implementing the explicitly authorized PR fixes,
+    followed by a separate adversarial reassessment. Not independent approval.
+skill: docs/record-reviews.md and docs/record-review-profile.md; explicit two-target
+  hierarchy follow-up using the native record checklist
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: The exact GOLD context-parent exclusions resolve the two confirmed hierarchy
+  findings for Metal surface and metallic material. Full-corpus differential regressions
+  preserve all other fields and records, including the independent environmental-material
+  genus, source counts, scoped synonyms and native review status. Original source
+  composition and exact source-to-ontology equivalence remain unresolved; no whole-corpus
+  scientific pass or SSSOM/KGX readiness claim follows.
+source:
+  git_revision: 5d90ee17acba789c0e6d3eba60f156925599d597
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/embedding-runtime/README.md
+    sha256: 4b833edb2ffb81cb01c5bcac4c7940bb798976543a2059a914c8dfa4ed0202a6
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: curation/decisions.tsv
+    sha256: 0602cca13e6495da256a6f1cfd5897462f73f9739a729447862017d93c148efd
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: 9d2324647d0a0ddeccc2f7836811872e112af208bb1b8f7decb332c00f17d12b
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 3efdac153ccd40f518458a9dc5360e09dd660c3a42fbd06bfc57f3b2f707ece7
+    role: context
+  - path: data/habitats/engineered/bioremediation__2261f921.yaml
+    sha256: 27f30d5edd1aff037b5cc0c1391cc78f27bb5619266e3570a612940b59cd63bd
+    role: context
+  - path: data/habitats/engineered/metal_surface.yaml
+    sha256: 30ecbf356e198b8b1aadb79ad9d1c7de15e465acbbd3bf0fe82dce31869a8da2
+    role: target
+  - path: data/habitats/engineered/metallic_material.yaml
+    sha256: 021d462dce669ffd4fbf418f5613e46b1dff65b980bfb5e1e3ebb1aaba1ad780
+    role: target
+  - path: data/habitats/engineered/subway.yaml
+    sha256: 7f918d820e1959b3e94d4634dc328ddb65adf8aaa500fc1293f846a65f25d133
+    role: context
+  - path: data/habitats/other/environmental_material.yaml
+    sha256: f3916c9c17060dbb92c026d8e340be9478c37409361279bbb639642cdae29fe7
+    role: context
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/text_map/bfe59b019b78f628034b5f5e6000150b6a5d403aeae3ee2cc0f752482396b17d/manifest.json
+    sha256: f9725041c8bde45012045c6a2d74b864acef18b8d56eef8f36d096280d432b11
+    role: context
+  - path: data/text_map/current.json
+    sha256: 79e22735fff8236d4f1f7de33ddad7657d71a0db4c3db19d8a397e077841261d
+    role: context
+  - path: docs/CURATION.md
+    sha256: 36df8306394c06c352b73e0bf7b47a2858784cedac7389a24d0b78f593ece646
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/TEXT_MAP.md
+    sha256: f2f6b2ee3261f1f0716772e590f51a5ecb119878a3f4fc9c295f0ae17adadd12
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: f7aa39ee762d94f1902d9f08f328cb897bc543e4e226057eb4770d24bfcc6eb5
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/README.md
+    sha256: 819361a711697f96ff9c1aa0b27e94302547970b3b54777d67ec1449db5e543a
+    role: context
+  - path: history/mappings/metal_surface/2026-10-09T100216Z-codex-gpt-5-3d2d4a.yaml
+    sha256: 68d6f6dbc2fc96628aa18466b3f8ea12c39eaa78f53fcbfd115bcb8531e9b1fe
+    role: context
+  - path: history/mappings/metallic_material/2026-10-09T100218Z-codex-gpt-5-3f2a4c.yaml
+    sha256: d40a8cce6d69c5aa8487194a6d67bc63cc098fb38500ed12809f58feefff0681
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reviews/structured/20261009T094348Z-metal_surface/review.md
+    sha256: a2b982b1658e34fa7978e7afa3d5196c16cfac2c38b94a32240f2193d27a2727
+    role: context
+  - path: reviews/structured/20261009T094348Z-metal_surface/review.yaml
+    sha256: bacc75ead4aeb25cda74b54fa17ca1956f3d8acec4b4e5f70a36dfe701a4f462
+    role: context
+  - path: reviews/structured/20261009T095212Z-metallic_material/review.md
+    sha256: 4ca726599da16fef2465d57c1bbfb458753049ff6da4c4d1d5b3c4681e70f483
+    role: context
+  - path: reviews/structured/20261009T095212Z-metallic_material/review.yaml
+    sha256: 0ef64e1f9239b3abe84bd7faba0d8324bc1e60d1cd42fb56aa295ba6efd4b5ad
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/habitatmech/curate/gold_parent_exclusions.py
+    sha256: 044d8277509a9b1f6e4f2d7ea1fb82319b41e09ffef7788738a0f4ed0d0b63af
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 52d2a22309a1f4a10728a663560bb4d918346c292221fd34139b99b4159d3fe5
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 92adf631fa099120a497ff7001473e659347d23ac9b418f04cd341ddad5d2a89
+    role: context
+  - path: tests/test_gold_parent_exclusions.py
+    sha256: 4dfe0150201a3ecb0bedb332e67d17099efae5fe8e54a223706002104729e1f1
+    role: context
+targets:
+- target_id: habitatmech:GOLD.2082ed6ba7
+  path: data/habitats/engineered/metal_surface.yaml
+  label: Metal surface
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Exact source/path/resolved-parent contribution exclusion
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Preserved identity and review-depth decisions
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Validated generated records and audit events
+- target_id: ENVO:01001069
+  path: data/habitats/engineered/metallic_material.yaml
+  label: metallic material
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Exact source/path/resolved-parent contribution exclusion
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Preserved identity and review-depth decisions
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Validated generated records and audit events
+scope:
+  description: Bounded follow-up of the two predecessor F1 hierarchy findings, with
+    complete current target YAML reads and verification of preservation, ownership
+    and generated products. Not a fresh whole-record literature review.
+  selection: Explicit Metal surface GOLD.2082ed6ba7 and metallic material ENVO:01001069;
+    each predecessor affected only its corresponding target.
+  coverage: full
+  population_size: 2
+  reviewed_target_ids:
+  - habitatmech:GOLD.2082ed6ba7
+  - ENVO:01001069
+  exclusions:
+  - target: Mesocosm and all other corpus records
+    reason: No reassessment or disposition of their scientific findings; Mesocosm
+      source siting remains open in issue1789.
+  - target: Other subway surfaces and generic Bioremediation
+    reason: Only contextual parent evidence; their definitions, findings and source
+      scope are not resolved.
+checks:
+- check_id: capture
+  name: Exact follow-up input capture
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.2082ed6ba7
+  - ENVO:01001069
+  command: env UV_CACHE_DIR=build/uv-cache uv run python scripts/record_review.py
+    inspect --targets /private/tmp/habitatmech-pr1787-metal-followup-targets.json
+    --input CLAUDE.md --input justfile --input docs/CURATION.md --input docs/HARMONIZATION.md
+    --input docs/RESEARCH.md --input docs/record-review-profile.md --input docs/record-reviews.md
+    --input docs/TEXT_MAP.md --input conf/embedding-runtime/README.md --input .claude/skills/review-yaml-record/SKILL.md
+    --input .claude/skills/curate-yaml-record/references/review-checklist.md --input
+    schema/record_review.yaml --input src/habitatmech/schema/habitatmech.yaml --input
+    curation/gold_parent_exclusions.tsv --input curation/decisions.tsv --input curation/term_requests.tsv
+    --input data/raw/gold_ecosystem_paths.tsv --input data/raw/ontology_terms.tsv
+    --input data/raw/ontology_subclass_edges.tsv --input data/raw/MANIFEST.yaml --input
+    data/raw/GOLD_MANIFEST.yaml --input data/habitats/engineered/subway.yaml --input
+    data/habitats/engineered/bioremediation__2261f921.yaml --input data/habitats/other/environmental_material.yaml
+    --input src/habitatmech/seed.py --input src/habitatmech/curate/gold_parent_exclusions.py
+    --input tests/test_gold_parent_exclusions.py --input history/README.md --input
+    history/mappings/metal_surface/2026-10-09T100216Z-codex-gpt-5-3d2d4a.yaml --input
+    history/mappings/metallic_material/2026-10-09T100218Z-codex-gpt-5-3f2a4c.yaml
+    --input reviews/structured/20261009T094348Z-metal_surface/review.yaml --input
+    reviews/structured/20261009T094348Z-metal_surface/review.md --input reviews/structured/20261009T095212Z-metallic_material/review.yaml
+    --input reviews/structured/20261009T095212Z-metallic_material/review.md --input
+    conf/id_label_targets.yaml --input data/text_map/current.json --input data/text_map/bfe59b019b78f628034b5f5e6000150b6a5d403aeae3ee2cc0f752482396b17d/manifest.json
+  exit_code: 0
+  summary: 39 input hashes captured at the exact product commit 5d90ee17acba789c0e6d3eba60f156925599d597;
+    current target files were read in full. Capture is working-tree provenance.
+- check_id: schema_surface
+  name: Metal surface LinkML validation
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.2082ed6ba7
+  command: env UV_CACHE_DIR=build/uv-cache just validate data/habitats/engineered/metal_surface.yaml
+  exit_code: 0
+  summary: No issues found.
+- check_id: schema_material
+  name: Metallic material LinkML validation
+  status: passed
+  required: true
+  target_ids:
+  - ENVO:01001069
+  command: env UV_CACHE_DIR=build/uv-cache just validate data/habitats/engineered/metallic_material.yaml
+  exit_code: 0
+  summary: No issues found.
+- check_id: strict
+  name: Closed-schema target validation
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.2082ed6ba7
+  - ENVO:01001069
+  command: env UV_CACHE_DIR=build/uv-cache just validate-strict data/habitats/engineered/metal_surface.yaml
+    data/habitats/engineered/metallic_material.yaml
+  exit_code: 0
+  summary: Two files, zero errors.
+- check_id: focused
+  name: Metal-specific differential and stale-guard regressions
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.2082ed6ba7
+  - ENVO:01001069
+  command: env UV_CACHE_DIR=build/uv-cache uv run pytest -q tests/test_gold_parent_exclusions.py
+    -k metal
+  exit_code: 0
+  summary: 6 passed, 42 deselected. Each exclusion independently changes only its
+    target parent contribution and one audit event across the full 3208-record corpus.
+- check_id: exclusions
+  name: Complete source-parent exclusion regression module
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.2082ed6ba7
+  - ENVO:01001069
+  command: env UV_CACHE_DIR=build/uv-cache uv run pytest -q tests/test_gold_parent_exclusions.py
+  exit_code: 0
+  summary: 48 passed in 55.36 seconds.
+- check_id: corpus
+  name: Whole-corpus reproduction
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.2082ed6ba7
+  - ENVO:01001069
+  command: env UV_CACHE_DIR=build/uv-cache just verify-corpus
+  exit_code: 0
+  summary: 3208 expected and present, zero missing, extra or differing records.
+- check_id: history
+  name: Native curation-session history
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.2082ed6ba7
+  - ENVO:01001069
+  command: env UV_CACHE_DIR=build/uv-cache just validate-history
+  exit_code: 0
+  summary: 219 valid records. Both new actors explicitly identify codex-gpt-5 / gpt-5
+    / codex.
+- check_id: provenance
+  name: Raw inventory manifests
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.2082ed6ba7
+  - ENVO:01001069
+  command: env UV_CACHE_DIR=build/uv-cache just provenance-check
+  exit_code: 0
+  summary: 14 committed inventories and two GOLD sources current.
+- check_id: labels
+  name: Configured identifier-label correspondence
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.2082ed6ba7
+  - ENVO:01001069
+  command: env UV_CACHE_DIR=build/uv-cache just validate-products
+  exit_code: 0
+  summary: 1178 canonical, one synonym, five accepted exceptions, 2057 skipped without
+    adapters. Configured coverage is not universal ontology identity proof.
+- check_id: map
+  name: Installed full map and vector-cache verification
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.2082ed6ba7
+  - ENVO:01001069
+  command: env UV_CACHE_DIR=build/uv-cache uv run python scripts/embedding_pipeline.py
+    check --output data/text_map --input build/pr1787-inputs.jsonl --cache build/pr1787-map-download/build/text-map/vectors.sqlite
+  exit_code: 0
+  summary: Real Linux BGE/PaCMAP build37915329819 encoded two changed inputs, reused
+    both on repeat, and reused all 3208 on the full pass. All3208 displayed with zero
+    omissions; bundle and vectors match local full input bytes.
+- check_id: site
+  name: Generated site reproduction
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.2082ed6ba7
+  - ENVO:01001069
+  command: env UV_CACHE_DIR=build/uv-cache just render-check
+  exit_code: 0
+  summary: 3208 habitat pages,252 redirects,eight categories and114 term requests
+    are current.
+- check_id: prior
+  name: Original saved reviews preserved
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.2082ed6ba7
+  - ENVO:01001069
+  command: git diff --exit-code 5bdc850308c83925a02b529c9508708d3a183da9 -- reviews/structured
+  exit_code: 0
+  summary: All original bundles remain byte-identical. Separate historical hash audit
+    verified all156 original captured inputs; the two working-tree context files were
+    checked against their preserved initial publication commit.
+- check_id: contract
+  name: Review contract before successor persistence
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.2082ed6ba7
+  - ENVO:01001069
+  command: env UV_CACHE_DIR=build/uv-cache just review-check
+  exit_code: 0
+  summary: 16 retained bundles valid and four contract tests pass. This successor
+    must separately validate before saving.
+- check_id: publication
+  name: Review-base retention regression
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.2082ed6ba7
+  - ENVO:01001069
+  command: env UV_CACHE_DIR=build/uv-cache uv run pytest -q tests/test_record_review_publication.py
+  exit_code: 0
+  summary: Two tests pass; the exact product base is retained by an annotated record-review-base
+    tag whose peeled remote commit was verified.
+- check_id: early_render
+  name: Pre-refresh render preflight
+  status: failed
+  required: false
+  target_ids:
+  - habitatmech:GOLD.2082ed6ba7
+  - ENVO:01001069
+  command: env UV_CACHE_DIR=build/uv-cache just render
+  exit_code: 1
+  summary: Correctly rejected the stale map after parent changes, before writing pages.
+    Resolved by real locked rebuild, installed-bundle verification, render and render-check.
+- check_id: early_map
+  name: Premature artifact check
+  status: failed
+  required: false
+  target_ids:
+  - habitatmech:GOLD.2082ed6ba7
+  - ENVO:01001069
+  command: env UV_CACHE_DIR=build/uv-cache uv run python scripts/embedding_pipeline.py
+    check --output build/pr1787-map-download/data/text_map --input build/pr1787-inputs.jsonl
+    --cache build/pr1787-map-download/build/text-map/vectors.sqlite
+  exit_code: 1
+  summary: Attempted while artifact download was still running. After download exited
+    successfully, the exact check passed, as did installed-bundle verification.
+- check_id: early_capture
+  name: Initial follow-up capture
+  status: failed
+  required: false
+  target_ids:
+  - habitatmech:GOLD.2082ed6ba7
+  - ENVO:01001069
+  command: env UV_CACHE_DIR=build/uv-cache uv run python scripts/record_review.py
+    inspect --targets /private/tmp/habitatmech-pr1787-metal-followup-targets.json
+    --input CLAUDE.md --input justfile --input docs/CURATION.md --input docs/HARMONIZATION.md
+    --input docs/RESEARCH.md --input docs/record-review-profile.md --input docs/record-reviews.md
+    --input docs/TEXT_MAP.md --input conf/embedding-runtime/README.md --input .claude/skills/review-yaml-record/SKILL.md
+    --input .claude/skills/curate-yaml-record/references/review-checklist.md --input
+    schema/record_review.yaml --input src/habitatmech/schema/habitatmech.yaml --input
+    curation/gold_parent_exclusions.tsv --input curation/decisions.tsv --input curation/term_requests.tsv
+    --input data/raw/gold_ecosystem_paths.tsv --input data/raw/ontology_terms.tsv
+    --input data/raw/ontology_subclass.tsv --input data/raw/MANIFEST.yaml --input
+    data/raw/GOLD_MANIFEST.yaml --input data/habitats/engineered/subway.yaml --input
+    data/habitats/engineered/bioremediation__2261f921.yaml --input data/habitats/other/environmental_material.yaml
+    --input src/habitatmech/seed.py --input src/habitatmech/curate/gold_parent_exclusions.py
+    --input tests/test_gold_parent_exclusions.py --input history/README.md --input
+    history/mappings/metal_surface/2026-10-09T100216Z-codex-gpt-5-3d2d4a.yaml --input
+    history/mappings/metallic_material/2026-10-09T100218Z-codex-gpt-5-3f2a4c.yaml
+    --input reviews/structured/20261009T094348Z-metal_surface/review.yaml --input
+    reviews/structured/20261009T094348Z-metal_surface/review.md --input reviews/structured/20261009T095212Z-metallic_material/review.yaml
+    --input reviews/structured/20261009T095212Z-metallic_material/review.md --input
+    conf/id_label_targets.yaml --input data/text_map/current.json --input data/text_map/bfe59b019b78f628034b5f5e6000150b6a5d403aeae3ee2cc0f752482396b17d/manifest.json
+  exit_code: 1
+  summary: Incorrect ontology_subclass.tsv filename; no capture or saved review produced.
+    Corrected to the existing ontology_subclass_edges.tsv and captured all39 inputs
+    successfully before final assessment.
+- check_id: local_qc
+  name: Interrupted duplicate local QC
+  status: failed
+  required: false
+  target_ids:
+  - habitatmech:GOLD.2082ed6ba7
+  - ENVO:01001069
+  command: env UV_CACHE_DIR=build/uv-cache just qc
+  exit_code: 130
+  summary: Intentionally interrupted after lint, documentation and provenance passed
+    and tests were in progress, while stale map regeneration was needed. Not a full-QC
+    success; the exact product-head CI gate supplies the final full check.
+- check_id: source_members
+  name: Original source-member recovery
+  status: unavailable
+  required: false
+  target_ids:
+  - habitatmech:GOLD.2082ed6ba7
+  - ENVO:01001069
+  summary: Predecessors document inaccessible GOLD study/node details. No new sample
+    crosswalk or material-composition recovery in this follow-up; issue1789 remains
+    open. Prior access failures are not new retrievals or ecological absence evidence.
+- check_id: molecular
+  name: Causal and expression adapters
+  status: not_applicable
+  required: false
+  target_ids:
+  - habitatmech:GOLD.2082ed6ba7
+  - ENVO:01001069
+  summary: No molecular, gene, transcriptomic or causal claims are introduced. iModulonDB
+    is not applicable to this hierarchy-only correction.
+- check_id: qc
+  name: Exact product-head full quality gate
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.2082ed6ba7
+  - ENVO:01001069
+  command: gh run watch 37915806558 --exit-status --interval 15
+  exit_code: 0
+  summary: 'SUCCESS at captured 5d90ee17acba789c0e6d3eba60f156925599d597. Inspected
+    completed log: 645 passed,3 skipped; four dedicated review-contract tests;219
+    valid histories;3208 strict-validated/reproduced records;all native gates including
+    site,curation floor,redirects and term requests pass.'
+- check_id: ci_labels
+  name: Exact product-head label CI
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.2082ed6ba7
+  - ENVO:01001069
+  command: gh run view 37915806529 --json status,conclusion,headSha,url
+  exit_code: 0
+  summary: Completed SUCCESS at exact captured product revision; same configured label-coverage
+    limits apply.
+evidence:
+- evidence_id: surface_record
+  kind: record_content
+  reference: data/habitats/engineered/metal_surface.yaml
+  locator: Complete current YAML
+  accessed_at: '2026-10-09T10:12:38Z'
+  support: supports
+  summary: No parent_habitats field remains; node5462, full path, count/unit/predicate
+    omissions and UNGROUNDED/SEEDED are unchanged. One explicit exclusion audit appended.
+- evidence_id: material_record
+  kind: record_content
+  reference: data/habitats/engineered/metallic_material.yaml
+  locator: Complete current YAML
+  accessed_at: '2026-10-09T10:12:38Z'
+  support: supports
+  summary: ENVO:00010483 remains the sole parent. Definition,13 ORGANISM,three-node
+    note,CLOSE/REVIEWED and distinct GOLD-related/ENVO-exact synonyms are unchanged.
+- evidence_id: exclusions
+  kind: record_content
+  reference: curation/gold_parent_exclusions.tsv
+  locator: Exact rows2 and3; helper and seeder contribution checks
+  accessed_at: '2026-10-09T10:12:38Z'
+  support: supports
+  summary: Only the two exact source/path/resolved-parent triples are suppressed.
+    Independent parents are not removed. No seeder behavior was altered.
+- evidence_id: subway
+  kind: record_content
+  reference: data/habitats/engineered/subway.yaml
+  locator: Complete maintained parent definition and record
+  accessed_at: '2026-10-09T10:12:38Z'
+  support: supports
+  summary: The parent denotes an environment bounded by transit structures. A localized
+    surface within it is not a subtype of that enclosing environment; no replacement
+    surface genus is inferred.
+- evidence_id: surface_primary
+  kind: primary_source
+  reference: https://link.springer.com/article/10.1186/s40168-019-0772-9
+  locator: Methods, Surface sampling
+  accessed_at: '2026-10-09T10:12:38Z'
+  support: context_only
+  summary: Primary methods distinguish localized kiosk, railing and bench surfaces
+    from their station setting. This supports the location distinction, not metal
+    composition or a crosswalk to Gs0118444. No biological or quantitative results
+    transferred.
+- evidence_id: ontology
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms?obo_id=ENVO%3A01001069
+  locator: Fresh active term and direct-parent API reads; local subclass row6877
+  accessed_at: '2026-10-09T10:12:46Z'
+  support: supports
+  summary: Canonical class is metallic material and sole ontology superclass is ENVO:00010483
+    environmental material. Bioremediation is source application context, not a material
+    genus.
+- evidence_id: source
+  kind: record_content
+  reference: data/raw/gold_ecosystem_paths.tsv
+  locator: Exact rows484 and1256
+  accessed_at: '2026-10-09T10:12:38Z'
+  support: supports
+  summary: Metal has13organism assertions and nodes3529/3868/4306; Metal surface has
+    node5462 and zero aggregate counters. The source paths remain intact; unlike units
+    are not combined.
+- evidence_id: regression
+  kind: validation
+  reference: tests/test_gold_parent_exclusions.py
+  locator: New parameterized isolation and stale-guard tests; full48-test run
+  accessed_at: '2026-10-09T10:12:38Z'
+  support: supports
+  summary: For each exclusion independently, full before/after corpus comparison changes
+    only that target parent and one appended event. All other fields, previous events
+    and records remain equal. Both stale paths and stale parents fail closed.
+- evidence_id: history
+  kind: record_content
+  reference: history/mappings/metal_surface/2026-10-09T100216Z-codex-gpt-5-3d2d4a.yaml
+  locator: Also history/mappings/metallic_material/2026-10-09T100218Z-codex-gpt-5-3f2a4c.yaml
+  accessed_at: '2026-10-09T10:12:38Z'
+  support: supports
+  summary: Append-only native history identifies exact input owner, evidence limits,
+    issue/PR and correct agent actor. Events honestly state later full gates were
+    pending at creation.
+- evidence_id: prior_surface
+  kind: prior_review
+  reference: reviews/structured/20261009T094348Z-metal_surface/review.yaml
+  locator: F1, gold-2082ed6ba7-subway-context-parent
+  accessed_at: '2026-10-09T10:12:38Z'
+  support: supports
+  summary: Original confirmed major finding retained unchanged; this observation resolves
+    only that hierarchy claim, not other surfaces in issue282.
+- evidence_id: prior_material
+  kind: prior_review
+  reference: reviews/structured/20261009T095212Z-metallic_material/review.yaml
+  locator: F1, gold-76a710ae9c-bioremediation-context-parent
+  accessed_at: '2026-10-09T10:12:38Z'
+  support: supports
+  summary: Original confirmed major finding retained unchanged. Its original-member
+    equivalence uncertainty remains; preserving the historic review decision is not
+    a new identity endorsement.
+- evidence_id: map
+  kind: validation
+  reference: https://github.com/CultureBotAI/HabitatMech/actions/runs/37915329819
+  locator: Full locked build and local bundle/vector check; manifest bfe59b019b78f628034b5f5e6000150b6a5d403aeae3ee2cc0f752482396b17d
+  accessed_at: '2026-10-09T10:12:38Z'
+  support: supports
+  summary: Actual BGE embeddings and PaCMAP regenerate derived coordinates from the
+    changed parent labels; full input SHA256 1a86587e4fda6dd8230ade0dfcb520f744e28aad057735394bf4700908e7f408.
+    Generated map is not independent scientific evidence.
+- evidence_id: ci
+  kind: validation
+  reference: https://github.com/CultureBotAI/HabitatMech/actions/runs/37915806558
+  locator: Completed exact-product-head quality log; matching label run37915806529
+  accessed_at: '2026-10-09T10:19:36Z'
+  support: supports
+  summary: All native gates pass with645tests passed and3skipped;219valid histories
+    and3208reproducible records. Deterministic success does not certify original specimen
+    identity.
+assessments:
+- assessment_id: surface_parent
+  area: graph
+  topic: Remove transit-location context without inventing a surface genus
+  outcome: supported
+  summary: The false source-parent contribution is absent. The target stays a source-specific,
+    ungrounded surface record; no replacement identity, material composition or status
+    promotion is inferred.
+  target_ids:
+  - habitatmech:GOLD.2082ed6ba7
+  evidence_ids:
+  - surface_record
+  - subway
+  - surface_primary
+  - exclusions
+  - regression
+- assessment_id: material_parent
+  area: graph
+  topic: Retain the material superclass and remove application context
+  outcome: supported
+  summary: Metallic material retains its independently supported environmental-material
+    superclass and no longer claims Bioremediation as a genus. This resolves the predecessor
+    under the currently retained identity.
+  target_ids:
+  - ENVO:01001069
+  evidence_ids:
+  - material_record
+  - ontology
+  - exclusions
+  - regression
+- assessment_id: source_scope
+  area: grounding
+  topic: Original specimen scope remains unverified
+  outcome: unknown
+  summary: The existing source mapping and native review status are preserved, not
+    independently re-endorsed. Original Metal members could require later scope curation;
+    Metal surface material details and study crosswalk also remain unavailable.
+  target_ids:
+  - habitatmech:GOLD.2082ed6ba7
+  - ENVO:01001069
+  evidence_ids:
+  - prior_surface
+  - prior_material
+  - source
+- assessment_id: preservation
+  area: consistency
+  topic: Counts, synonym scopes and lifecycle remain source-specific
+  outcome: supported
+  summary: The two reviewed changes affect only parent lists and appended exclusion
+    events. Thirteen ORGANISM assertions, Metal surface count omission, independent
+    ENVO exact synonym and related GOLD synonym, and native statuses remain intact.
+  target_ids:
+  - habitatmech:GOLD.2082ed6ba7
+  - ENVO:01001069
+  evidence_ids:
+  - surface_record
+  - material_record
+  - source
+  - regression
+- assessment_id: ownership
+  area: ownership
+  topic: Maintained guards generate reproducible outputs
+  outcome: supported
+  summary: Exact guarded TSV inputs, native history, corpus and generated products
+    reproduce. No generated YAML or rendered page was manually patched. No new mechanism,
+    taxa or parameter claims are introduced.
+  target_ids:
+  - habitatmech:GOLD.2082ed6ba7
+  - ENVO:01001069
+  evidence_ids:
+  - exclusions
+  - regression
+  - history
+  - map
+  - ci
+findings:
+- finding_id: F1
+  issue_key: gold-2082ed6ba7-subway-context-parent
+  category: graph
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Subway location no longer asserted as Metal surface superclass
+  description: The exact source-context contribution is removed; the target retains
+    its minted identity, provenance and native status without a fabricated replacement
+    genus.
+  target_ids:
+  - habitatmech:GOLD.2082ed6ba7
+  field_paths:
+  - parent_habitats
+  evidence_ids:
+  - surface_record
+  - exclusions
+  - subway
+  - surface_primary
+  - regression
+  - prior_surface
+  rule_id: 'CLAUDE.md semantic invariant: parent_habitats means strictly broader for
+    every contributing route'
+  native_severity: major
+  normalization_reason: Confirmed false hierarchy edge affects scientific graph meaning,
+    not style or missing optional fields. Target identity itself remains the intended
+    source bin.
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Guarded source-only context-parent exclusion if warranted.
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Generated mapping, source hierarchy, lifecycle and parent exclusion application.
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/282
+  previous_occurrences:
+  - repository: CultureBotAI/HabitatMech
+    review_id: 20261009T094348Z-metal_surface
+    finding_id: F1
+  disposition_reason: Exact guarded correction and full-corpus differential regression
+    verify removal of only this false parent contribution and addition of its audit
+    event. Original source equivalence remains unresolved; other findings and broader
+    issues are not closed.
+- finding_id: F2
+  issue_key: gold-76a710ae9c-bioremediation-context-parent
+  category: graph
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Bioremediation no longer asserted as metallic-material superclass
+  description: The source application-context contribution is removed; independently
+    supported ENVO:00010483 and all non-hierarchy fields remain intact.
+  target_ids:
+  - ENVO:01001069
+  field_paths:
+  - parent_habitats
+  evidence_ids:
+  - material_record
+  - exclusions
+  - ontology
+  - regression
+  - prior_material
+  rule_id: 'CLAUDE.md: parent_habitats means strictly broader for ontology, source-path
+    and curator contributions'
+  native_severity: major
+  normalization_reason: Material-versus-remediation scope violation changes scientific
+    graph meaning. It is not a finding merely because the parent is CLASS-reviewed
+    or optional definition/evidence is absent.
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Guarded source-only context-parent removal if supported.
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Source resolution, hierarchy, scoped synonym and lifecycle generation.
+  previous_occurrences:
+  - repository: CultureBotAI/HabitatMech
+    review_id: 20261009T095212Z-metallic_material
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1788
+  disposition_reason: Exact guarded correction and full-corpus differential regression
+    verify removal of only this false parent contribution and addition of its audit
+    event. Original source equivalence remains unresolved; other findings and broader
+    issues are not closed.
+actions: []
+limitations:
+- Explicit two-target hierarchy follow-up, not all 3208-record scientific completion
+  or a fresh whole-record literature review. Earlier unchanged assessments remain
+  historical evidence.
+- Original GOLD member scope and composition remain unresolved. Issue1789 tracks evidence
+  recovery; no source-identity replacement follows merely from inaccessible pages.
+- Only the Metal surface portion of issue282 is addressed; Wooden, Plastic and Stone
+  surfaces and broader definition work remain open.
+- Configured ontology-label checking skips2057identifiers without adapters. Successful
+  native gates and semantic-map verification do not establish SSSOM/KGX conformity
+  to current kg-microbe modeling.
+- Scientific review is a same-agent reassessment, not independent approval. Native
+  statuses are unchanged by this review.
+- The published follow-up base is retained by an annotated non-release tag so squash
+  merge and branch deletion cannot erase its provenance.
+- Three tests are skipped by native configuration. No new full local QC success is
+  claimed; full success is the inspected exact-product-head CI receipt.
+related_reviews:
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261009T094348Z-metal_surface
+  relationship: Resolves only F1 with exact stable issue key; original observation
+    remains immutable.
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261009T095212Z-metallic_material
+  relationship: Resolves only F1; original source-identity uncertainty remains unresolved.
+notes:
+- Fresh native checks were executed during this publication session on the unchanged
+  fixed scientific inputs; exact product-head CI checks the committed combination.
+  Local full QC was interrupted and is not represented as a successful run.
+- The intermediate pre-map CI run37915335518 was cancelled by the newer product commit,
+  not recorded as a pass or as an observed stale-product test failure.
+- Initial local provenance-tag creation was sandbox-denied; the permitted retry created
+  the annotated tag and remote peeled SHA5d90ee17acba789c0e6d3eba60f156925599d597
+  was subsequently verified. No shared rules or permissions were changed.

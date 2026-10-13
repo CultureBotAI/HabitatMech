@@ -12,7 +12,6 @@ synonyms:
   source: ENVO
 parent_habitats:
 - ENVO:00002264
-- mesh:D062611
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4925
@@ -27,3 +26,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution mesh:D062611 for habitatmech:GOLD.feb21b0386
+    (Engineered > Solid waste > Bagasse). ITEM hierarchy assessment (#1617): generic
+    ENVO:00002872 bagasse includes retained sugarcane residue used as fuel or manufacturing
+    feedstock (FAO, https://www.fao.org/4/s8850e/S8850E03.htm). MeSH Solid Waste scope
+    (https://id.nlm.nih.gov/mesh/M0568791.json) concerns discarded materials; GOLD
+    placement is not a universal genus of this generic ENVO identity. Exclude only
+    the GOLD context contribution, retaining independent ENVO:00002264, the definition,
+    exact synonym, source path, three source nodes, 23 ORGANISM assertions and existing
+    review status. No narrower discarded-bagasse identity or sample conditions are
+    inferred.'

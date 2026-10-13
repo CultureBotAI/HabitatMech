@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002007
-- habitatmech:GOLD.f9af2e0686
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8010
@@ -17,3 +16,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.f9af2e0686
+    for habitatmech:GOLD.a4fe9adfc7 (Engineered > Artificial ecosystem > Aquaculture
+    > Molluscs tank > Sediment). Reviewed hierarchy exclusion (#1872; structured review
+    20261010T082307Z-sediment__0f723c05 F1): sediment material is not a kind of its
+    mollusc culture tank. The exact GOLD path supplies enclosure context; ENVO:00002007
+    supplies the independent deposited-material genus. Exclude only this guarded GOLD
+    contribution. Preserve the qualified mint, node 8010, full path, zero-count omission
+    and NARROW/SEEDED state. No exact source-member cohort, characteristic taxa, replacement
+    definition or system identity is asserted; shared mapping endpoint issue #1398
+    remains open.'

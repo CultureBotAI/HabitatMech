@@ -9,8 +9,9 @@ source_attestations:
   source_label: Contaminant
   assertion_count: 61
   assertion_unit: STRAIN
-  notes: kg-microbe's isolation-source mapping table has a row for this source with
-    no ontology target; treated as ungrounded rather than re-grounded by lexical match.
+  notes: kg-microbe's isolation-source mapping table has no ontology target for this
+    source; the automatic route leaves it ungrounded. The explicit curator decision
+    NOT_APPLICABLE overrides that route; this source is emitted on habitatmech:BACDIVE.4d06ff4bb5.
 characteristic_taxa:
 - taxon_id: NCBITaxon:1393
   source: BACDIVE
@@ -176,3 +177,8 @@ curation_history:
     The external screen matched an external chemical term, but CHEBI is not in the
     committed slice, so the evidence is recorded here rather than asserted as an unverifiable
     xref. (source concept habitatmech:BACDIVE.4d06ff4bb5)'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_ATTESTATION_CORRECTED
+  changes: Corrected bacdive.isolation_source:contaminant provenance wording to distinguish
+    the declined automatic mapping from the final curator override (#1889).

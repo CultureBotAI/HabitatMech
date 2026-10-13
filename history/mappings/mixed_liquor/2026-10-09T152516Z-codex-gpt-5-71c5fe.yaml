@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: mixed_liquor
+session:
+  id: 2026-10-09T152516Z-codex-gpt-5-71c5fe
+  timestamp: '2026-10-09T15:25:16Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1800
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude the membrane bioreactor context parent of mixed liquor material
+  details: 'Added the exact GOLD.904cce6b84 source-path exclusion for ENVO:03600010. EPA Section
+    III Definitions and the MBR Membrane Location text distinguish mixed-liquor material from
+    its containing apparatus; current ENVO and GOLD source metadata corroborate the distinction.
+    Original immutable review: reviews/structured/20261009T152149Z-mixed-liquor-mbr/review.yaml
+    F1. Preserve identity, nodes, full path, zero-count omissions, grounding and CLASS/SEEDED
+    status. No replacement genus or definition. Dry-run seed and focused regression verification
+    initiated; final corpus/schema/render/full-QC checks are required before merge and will
+    be reported in the PR, not asserted as already passed here.'

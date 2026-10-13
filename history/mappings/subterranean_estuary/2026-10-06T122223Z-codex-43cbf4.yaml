@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: subterranean_estuary
+session:
+  id: 2026-10-06T122223Z-codex-43cbf4
+  timestamp: '2026-10-06T12:22:23Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: codex-gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1559
+events:
+- type: AUDIT
+  outcome: changed
+  sections:
+  - provenance
+  summary: Correct the session actor attribution to Codex
+  details: The history scaffold history/mappings/subterranean_estuary/2026-10-06T122100Z-claude-code-e6ea40.yaml
+    inherited the shared tool default actor name claude-code because --actor-name was omitted.
+    The actual actor for that curation session was Codex, using model codex-gpt-5 and agent_tool
+    codex, as its other metadata states. This append-only correction supersedes only that
+    actor-name attribution; the recorded scientific changes, evidence and validation results
+    are unchanged. The earlier history record was not edited or deleted. Future history commands
+    in this session pass --actor-name codex explicitly.

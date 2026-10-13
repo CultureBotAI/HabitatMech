@@ -4,7 +4,6 @@ habitat_category: AQUATIC
 grounding_status: NARROW
 mapping_status: REVIEWED
 parent_habitats:
-- ENVO:00002011
 - ENVO:03600064
 source_attestations:
 - source: GOLD
@@ -27,3 +26,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-06T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00002011 for habitatmech:GOLD.e53e2c6e8e
+    (Environmental > Aquatic > Freshwater > Microbialites). ITEM hierarchy assessment
+    (freshwater case of #1406): ENVO:03600064 microbialite denotes sedimentary rock,
+    not the low-solute liquid water ENVO:00002011 in its setting. White et al. 2016
+    (DOI:10.3389/fmicb.2015.01531) distinguishes sampled microbialites from surrounding
+    water and sediment. Suppress only this source-context edge; preserve the supported
+    microbialite reference, both GOLD nodes 3798 and 4191, collapse note, absent organism
+    count and existing ITEM provenance. Retain the valid freshwater Thrombolites child
+    edge. This does not reconcile the separately tracked mapping-endpoint semantics
+    (#1398).'

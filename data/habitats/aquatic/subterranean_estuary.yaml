@@ -3,8 +3,6 @@ label: Subterranean estuary
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.115edc36f8
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8255
@@ -23,3 +21,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-06T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.115edc36f8
+    for habitatmech:GOLD.58415258eb (Environmental > Aquatic > Marine > Intertidal
+    zone > Subterranean estuary). Item-level hierarchy assessment for #1559: Hong
+    et al. 2019 (DOI:10.3389/fmicb.2018.03343; PMID:30687299) describes a subterranean
+    estuary at the coastal groundwater-saline-porewater interface. Subsurface mixing
+    is not a type of the exposed foreshore/seabed between tide marks denoted by the
+    intertidal parent and ENVO:00000316. Exclude only this source-context contribution;
+    retain GOLD8255, its path, zero-count omission, existing identity/status and old
+    events. No replacement identity, definition, taxa or parameters are inferred.
+    This does not fix the parent''s separate marine-waterbody edge (#1253).'

@@ -114,11 +114,14 @@ def test_allow_loss_reports_but_does_not_fail(repo):
     assert "habitatmech:B" in done.stderr, done.stderr
 
 
-def test_gold_parent_exclusions_are_protected(repo):
+@pytest.mark.parametrize("table", [
+    "gold_parent_exclusions.tsv", "definition_source_label_exclusions.tsv",
+])
+def test_exclusions_are_protected(repo, table):
     cwd, _ = repo
-    path = cwd / "curation" / "gold_parent_exclusions.tsv"
+    path = cwd / "curation" / table
     path.write_text("identifier\nhabitatmech:GOLD.88e2b29307\n", encoding="utf-8")
-    subprocess.run(["git", "add", "curation/gold_parent_exclusions.tsv"], cwd=cwd, check=True)
+    subprocess.run(["git", "add", f"curation/{table}"], cwd=cwd, check=True)
     subprocess.run(["git", "commit", "-qm", "add parent exclusion"], cwd=cwd, check=True)
     path.write_text("identifier\n", encoding="utf-8")
     done = run(cwd, "--base", "HEAD")

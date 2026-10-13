@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: aquaculture_farm
+session:
+  id: 2026-10-07T045340Z-codex-c5ba22
+  timestamp: '2026-10-07T04:53:40Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: codex-gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1612
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1611
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  - source_attestations
+  summary: Exclude wastewater material as a parent of the farm ecosystem
+  details: 'Added exact GOLD path/expected ENVO:01000964 exclusion. Fresh primary ENVO a2455d1a77e46bb8a664d65a157166b539269042
+    confirms ENVO:03600074 cultivation ecosystem and independent parent ENVO:00000077, versus
+    industrial wastewater material. Preserve both source attestations and predicates, 109
+    STRAIN count, all 25 taxa and REVIEWED state. Original GOLD facility/effluent scope remains
+    #1614; synonym issues #1249/#1459 remain open. Focused full-corpus scope/preservation
+    regression passed within 69-test suite. Final regenerated semantic map/site and full QC
+    follow.'

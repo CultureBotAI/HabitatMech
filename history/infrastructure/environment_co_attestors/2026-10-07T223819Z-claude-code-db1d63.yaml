@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: src/habitatmech/seed.py
+  slug: environment_co_attestors
+session:
+  id: 2026-10-07T223819Z-claude-code-db1d63
+  timestamp: '2026-10-07T22:38:19Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1264
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - source_attestations
+  - mapping_status
+  - curation_history
+  summary: Register environment source reviews once on existing and new concepts
+  details: Move source counts and decision registration outside new-concept-only handling.
+    Deduplicate by resolved habitat and source mint, not habitat alone; retain separate env_type
+    attestations and apply decision metadata once per source. Focused tests cover existing/new
+    concepts, ITEM/CLASS/unreviewed, repeated bands and two sources merging. Compost now counts
+    five reviewed sources and emits its existing environment review; water audit is also tested.
+    Pre-write corpus diff shows no current mapping-status changes. Preserve committed prior
+    session history. Final QC results are in PR 1663.

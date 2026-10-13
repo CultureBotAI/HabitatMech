@@ -1,0 +1,1039 @@
+# Scientific record review: anoxic_water
+
+- Review: 20261011T212925Z-anoxic_water
+- Repository: CultureBotAI/HabitatMech
+- Started UTC: 2026-10-11T21:15:52.308851Z
+- Finished UTC: 2026-10-11T21:29:25.749816Z
+- Reviewer: OpenAI Codex (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The active ENVO oxygen-lacking water identity and liquid-water genus are supported. All24 PREGO environmental-sample associations reproduce with source-specific scores, not characteristic-presence claims. Anaerobic water is exact in ENVO, but reducing water is only related and must not be globally equated with absence of dissolved oxygen.
+
+## Scope And Provenance
+
+Entire exact generated record and every contributing source, with bounded scientific and source-context assessment.
+
+Selection: Next forty unreviewed records in stable repository-relative path order: all seven AIR records plus thirty-three AQUATIC records. Individual full-record observations, not a category-wide pass. Starting distinct completed-observation coverage488/3208 is not current-input clean coverage.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f21144ef328783600b053e8ec9bcb7b16b866d58.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| ENVO:01000173 | data/habitats/aquatic/anoxic_water.yaml | generated | anoxic water |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native check on captured scientific inputs | passed | True | ENVO:01000173 | Actual success from 2026-10-11T21:18:07.303246Z to 2026-10-11T21:18:10.036738Z. Native applicability retained. |
+| Native check on captured scientific inputs | passed | True | ENVO:01000173 | Actual success from 2026-10-11T21:18:37.998816Z to 2026-10-11T21:18:52.797329Z. Native applicability retained. |
+| Native check on captured scientific inputs | passed | True | ENVO:01000173 | Actual success from 2026-10-11T21:18:52.798654Z to 2026-10-11T21:19:13.373581Z. Native applicability retained. |
+| Native check on captured scientific inputs | passed | True | ENVO:01000173 | Actual success from 2026-10-11T21:19:13.374728Z to 2026-10-11T21:20:25.537883Z. Native applicability retained. |
+| Native check on captured scientific inputs | passed | True | ENVO:01000173 | Actual success from 2026-10-11T21:20:25.538899Z to 2026-10-11T21:20:35.475232Z. Native applicability retained. |
+| Native check on captured scientific inputs | passed | True | ENVO:01000173 | Actual success from 2026-10-11T21:20:35.476484Z to 2026-10-11T21:20:41.494943Z. Native applicability retained. |
+| Native check on captured scientific inputs | passed | True | ENVO:01000173 | Actual success from 2026-10-11T21:20:41.496068Z to 2026-10-11T21:21:03.930674Z. Native applicability retained. |
+| Native check on captured scientific inputs | passed | True | ENVO:01000173 | Actual success from 2026-10-11T21:17:58.517657Z to 2026-10-11T21:18:00.677113Z. All three required merge-group workflows passed at the exact captured base; authoritative QC passed 783 tests with 3 skipped. Newly saved review bundles require their own integrity check. Exact-base CI receipt; not a claim that new review files already passed CI. |
+| Complete reconstruction | passed | False | ENVO:01000173 | All40 complete documents matched; input hashes reverified. |
+| Original assertion membership | unavailable | False | ENVO:01000173 | Bounded ignored-inclusive upstream searches did not recover complete frozen membership. Later exports are context only. |
+| iModulonDB applicability | not_applicable | False | ENVO:01000173 | No expression-module claim; membership would not prove habitat association. |
+
+## Scientific And Domain Assessments
+
+### Identity and definition
+
+identity: supported. Targets: ENVO:01000173.
+
+The active ENVO oxygen-lacking water identity and liquid-water genus are supported. All24 PREGO environmental-sample associations reproduce with source-specific scores, not characteristic-presence claims. Anaerobic water is exact in ENVO, but reducing water is only related and must not be globally equated with absence of dissolved oxygen.
+
+### Strict genera, source-context and mapping scope
+
+grounding: concern. Targets: ENVO:01000173.
+
+The active ENVO oxygen-lacking water identity and liquid-water genus are supported. All24 PREGO environmental-sample associations reproduce with source-specific scores, not characteristic-presence claims. Anaerobic water is exact in ENVO, but reducing water is only related and must not be globally equated with absence of dissolved oxygen. Four parent-contribution routes were distinguished; optional missing definitions are not filled by inference.
+
+### Every contributing source and native lifecycle
+
+provenance: supported. Targets: ENVO:01000173.
+
+Full-document reproduction preserves 1 contributors and 0 ITEM-reviewed sources. Actual attestations=[{"source": "PREGO", "source_id": "ENVO:01000173", "source_label": "anoxic water", "assertion_count": 24, "assertion_unit": "TAXON", "score": 1.52414, "evidence_channels": "environmental_samples"}]. Counts with unlike units are not summed; omitted zero counts are not biological absence. Scientific review does not promote native status.
+
+### Association versus characteristic presence
+
+evidence: supported. Targets: ENVO:01000173.
+
+All retained associations were read and reproduce; all named taxon IDs resolve. Source-specific ranks, ties, candidate pools, scores and corroborations remain source evidence, not abundance, universal presence or cross-source confidence. No is_characteristic claim is asserted.
+
+### Parameters and optional evidence
+
+completeness: supported. Targets: ENVO:01000173.
+
+No universal numeric environmental values or organisms are inferred from path labels or later samples. Optional empty discussions/datasets are not defects merely for being empty. No graph is asserted for this exact target; ignored-inclusive overlay search and full-corpus causal checks were inspected. No gene/regulator/expression-module claim calls for iModulonDB.
+
+## Findings
+
+### F1: Related ontology synonyms are promoted to exact
+
+major / open / confirmed; issue key: envo-01000173-ontology-synonym-scope.
+
+The active ENVO oxygen-lacking water identity and liquid-water genus are supported. All24 PREGO environmental-sample associations reproduce with source-specific scores, not characteristic-presence claims. Anaerobic water is exact in ENVO, but reducing water is only related and must not be globally equated with absence of dissolved oxygen.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Resolve shared1249 through a governed typed-synonym contract. Preserve genuine exact synonyms and PREGO related names; test exact, related, multiscope and unknown cases without a blanket downgrade.
+
+- Use maintained input owners and exact source keys; preserve independent parents, source counts/units and native lifecycle. No manual generated edits.
+- Recheck source evidence, append native history, add exact-source regressions, inspect a seed canary and regenerate affected products.
+- Pass schema, strict, label, reproduction, review-integrity and full QC; save a linked successor observation for each disposition.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| R | data/habitats/aquatic/anoxic_water.yaml; Entire captured YAML read, including sources, taxa, parameters, graphs and history | supports | The active ENVO oxygen-lacking water identity and liquid-water genus are supported. All24 PREGO environmental-sample associations reproduce with source-specific scores, not characteristic-presence claims. Anaerobic water is exact in ENVO, but reducing water is only related and must not be globally equated with absence of dissolved oxygen. |
+| RULES | docs/CURATION.md; docs/HARMONIZATION.md; docs/RESEARCH.md; src/habitatmech/schema/habitatmech.yaml | supports | Applied strict-parent, exact identity, MIxS role, source count/score, ITEM lifecycle and claim-specific evidence contracts. |
+| RAW | data/raw; curation/decisions.tsv; curation/term_requests.tsv; curation/gold_parent_exclusions.tsv; Exact logical TSV rows; header is row1. Nearby-path matches excluded. | supports | {"data/raw/ontology_subclass_edges.tsv": [{"data": {"object": "ENVO:00002006", "predicate": "rdfs:subClassOf", "subject": "ENVO:01000173"}, "logical_row": 5824}], "data/raw/ontology_terms.tsv": [{"data": {"definition": "Water which lacks dissolved oxygen.", "deprecated": "", "directly_referenced": "TRUE", "label": "anoxic water", "label_only": "FALSE", "ontology": "ENVO", "synonyms": "anaerobic water&#124;reducing water", "term_id": "ENVO:01000173"}, "logical_row": 7672}], "data/raw/prego_habitat_taxa.tsv": [{"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.52414", "rank": "1", "taxon_id": "NCBITaxon:58621", "taxon_label": "Desulfovibrio intestinalis"}, "logical_row": 7876}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.47393", "rank": "2", "taxon_id": "NCBITaxon:217139", "taxon_label": "uncultured Acetobacterium sp."}, "logical_row": 7877}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.40288", "rank": "3", "taxon_id": "NCBITaxon:167968", "taxon_label": "uncultured Desulfovibrio sp."}, "logical_row": 7878}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.39195", "rank": "4", "taxon_id": "NCBITaxon:118062", "taxon_label": "Methanobacterium congolense"}, "logical_row": 7879}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.35813", "rank": "5", "taxon_id": "NCBITaxon:52690", "taxon_label": "Acetobacterium carbinolicum"}, "logical_row": 7880}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.31539", "rank": "6", "taxon_id": "NCBITaxon:477666", "taxon_label": "Bacteroides graminisolvens"}, "logical_row": 7881}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.29016", "rank": "7", "taxon_id": "NCBITaxon:93718", "taxon_label": "Acetobacterium psammolithicum"}, "logical_row": 7882}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.20942", "rank": "8", "taxon_id": "NCBITaxon:78178", "taxon_label": ""}, "logical_row": 7883}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.20507", "rank": "9", "taxon_id": "NCBITaxon:844", "taxon_label": "Wolinella succinogenes"}, "logical_row": 7884}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.19947", "rank": "10", "taxon_id": "NCBITaxon:56698", "taxon_label": "Sulfurospirillum arsenophilum"}, "logical_row": 7885}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.18151", "rank": "11", "taxon_id": "NCBITaxon:65553", "taxon_label": "Sulfurospirillum deleyianum"}, "logical_row": 7886}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.14789", "rank": "12", "taxon_id": "NCBITaxon:162176", "taxon_label": "Azospira sp. KJ"}, "logical_row": 7887}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.12414", "rank": "13", "taxon_id": "NCBITaxon:42252", "taxon_label": "Nitratidesulfovibrio termitidis"}, "logical_row": 7888}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.12258", "rank": "14", "taxon_id": "NCBITaxon:1061", "taxon_label": "Rhodobacter capsulatus"}, "logical_row": 7889}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.0956", "rank": "15", "taxon_id": "NCBITaxon:82116", "taxon_label": "Acetobacterium malicum subsp. dehalogenans"}, "logical_row": 7890}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.08606", "rank": "16", "taxon_id": "NCBITaxon:33952", "taxon_label": "Acetobacterium woodii"}, "logical_row": 7891}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.06564", "rank": "17", "taxon_id": "NCBITaxon:59277", "taxon_label": "Methanobacterium subterraneum"}, "logical_row": 7892}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.03936", "rank": "18", "taxon_id": "NCBITaxon:398000", "taxon_label": "Campylobacter jejuni subsp. jejuni CG8486"}, "logical_row": 7893}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.03669", "rank": "19", "taxon_id": "NCBITaxon:2171", "taxon_label": "Methanobacterium palustre"}, "logical_row": 7894}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.02824", "rank": "20", "taxon_id": "NCBITaxon:39441", "taxon_label": "Methanobrevibacter arboriphilus"}, "logical_row": 7895}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.01983", "rank": "21", "taxon_id": "NCBITaxon:28232", "taxon_label": "Geobacter metallireducens"}, "logical_row": 7896}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.01819", "rank": "22", "taxon_id": "NCBITaxon:145262", "taxon_label": "Methanothermobacter thermautotrophicus"}, "logical_row": 7897}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.01736", "rank": "23", "taxon_id": "NCBITaxon:217", "taxon_label": "Helicobacter mustelae"}, "logical_row": 7898}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.0019", "rank": "24", "taxon_id": "NCBITaxon:490098", "taxon_label": "Methanobacterium flexile"}, "logical_row": 7899}], "data/raw/prego_habitats.tsv": [{"data": {"biolink_category": "biolink:OntologyClass", "channels": "environmental_samples", "direct_assertion_count": "24", "max_prego_score": "1.52414", "ontology": "ENVO", "prego_id": "ENVO:01000173", "prego_synonyms": "anoxic water&#124;anoxic waters", "taxon_count": "24"}, "logical_row": 280}]} |
+| CODE | src/habitatmech/seed.py; Executed full-document reconstruction; all40 matched captured records | supports | {"reviewed_sources": 0, "routes": [{"actual": {"category": null, "contributes_grounding": true, "decision": null, "extra_parents": [], "extra_xrefs": [], "grounding_status": "EXACT", "identifier": "ENVO:01000173", "mapping_predicate": null, "reviewed": false, "route": "prego_self_grounded"}, "automatic": {"category": null, "contributes_grounding": true, "decision": null, "extra_parents": [], "extra_xrefs": [], "grounding_status": "EXACT", "identifier": "ENVO:01000173", "mapping_predicate": null, "reviewed": false, "route": "prego_self_grounded"}, "minted": "habitatmech:PREGO.a03ff2e2c0", "source": "PREGO", "source_id": "ENVO:01000173"}], "source_concepts": 1} |
+| ONT | https://raw.githubusercontent.com/EnvironmentOntology/envo/master/envo.owl; Current named OWL identity, typed synonym scopes and direct axioms; no pinned-source refresh | supports | {"ENVO:00002006": {"definitions": ["An environmental material primarily composed of dihydrogen oxide in its liquid form."], "deprecated": [], "equivalents": [], "labels": ["liquid water"], "parents": ["http://purl.obolibrary.org/obo/ENVO_01000815", {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0002473"], "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/CHEBI_15377"]}], "replacements": [], "synonyms": {"hasBroadSynonym": ["water"], "hasExactSynonym": [], "hasNarrowSynonym": [], "hasRelatedSynonym": []}}, "ENVO:01000173": {"definitions": ["Water which lacks dissolved oxygen."], "deprecated": [], "equivalents": [], "labels": ["anoxic water"], "parents": ["http://purl.obolibrary.org/obo/ENVO_00002006", {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Class"], "http://www.w3.org/2002/07/owl#complementOf": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/BFO_0000051"], "http://www.w3.org/2002/07/owl#someValuesFrom": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Class"], "http://www.w3.org/2002/07/owl#intersectionOf": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first": ["http://purl.obolibrary.org/obo/CHEBI_15379"], "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{"nested": true}], "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"]}]}]}]}]}], "replacements": [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": ["anaerobic water"], "hasNarrowSynonym": [], "hasRelatedSynonym": ["reducing water"]}}} |
+| PARENT | data/habitats/aquatic/liquid_water.yaml; Ancestor identity/definition/status context, not full-record review coverage of ancestors | supports | {"ENVO:00002006": {"definition": "An environmental material primarily composed of dihydrogen oxide in its liquid form.", "grounding_status": "EXACT", "label": "liquid water", "parent_habitats": ["ENVO:01000815"]}} |
+| TAX0 | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=100%2C1000566%2C1001240%2C1003%2C1005928%2C1007109%2C1007110%2C1007111%2C1007112%2C1007113%2C1007114%2C1007115%2C1007116%2C1007117%2C1007118%2C1007119%2C1007120%2C1007122%2C1007124%2C1009412%2C1009413%2C1009414%2C1009415%2C1009416%2C1009418%2C1061%2C1069448%2C1089547%2C1121003%2C1121028%2C1121087%2C1121877%2C1121915%2C1121920%2C1121953%2C1121957%2C1122130%2C1122209%2C1122214%2C1122215%2C1123060%2C1123231%2C1123239%2C1153%2C1162967%2C1162970%2C118062%2C1211807%2C1216008%2C121821%2C1246448%2C129961%2C1344948%2C1408424%2C143495%2C145262%2C1486246%2C159087%2C162176%2C167968%2C1712410%2C172044%2C1869227%2C1876%2C190721%2C1931%2C2%2C216595%2C217%2C2171%2C217139%2C254410%2C266264%2C266265%2C266940%2C269482%2C2719616%2C2735894%2C2735895%2C2735896%2C2735898%2C2735899%2C279826%2C279828%2C28214%2C28232%2C287%2C292807%2C293256%2C294%2C296591%2C303%2C306%2C314266%2C314275%2C317655%2C320502%2C322710%2C338969%2C33952%2C340100%2C343080%2C349163%2C365044%2C376%2C376219%2C379731%2C391735%2C392499%2C393762%2C39441%2C396595%2C398000%2C398578%2C399739%2C406100%2C409%2C413712%2C42252%2C426128%2C441209%2C442899%2C446%2C452662%2C477666%2C47917%2C490098%2C517424%2C52690%2C53249%2C540251%2C555088%2C555779%2C562%2C56698%2C573060%2C579922%2C582402%2C58621%2C59277%2C643562%2C643673%2C65553%2C667019%2C678%2C694430%2C702568%2C710696%2C760568%2C768535&amp;retmode=xml; NCBI EFetch TaxId, aliases, ScientificName and Rank | supports | The two response chunks jointly resolve all166 cohort IDs. This target=[{"current_id": "58621", "current_name": "Desulfovibrio intestinalis", "frozen_label": "Desulfovibrio intestinalis", "id": "58621", "rank": "species"}, {"current_id": "217139", "current_name": "uncultured Acetobacterium sp.", "frozen_label": "uncultured Acetobacterium sp.", "id": "217139", "rank": "species"}, {"current_id": "167968", "current_name": "uncultured Desulfovibrio sp.", "frozen_label": "uncultured Desulfovibrio sp.", "id": "167968", "rank": "species"}, {"current_id": "118062", "current_name": "Methanobacterium congolense", "frozen_label": "Methanobacterium congolense", "id": "118062", "rank": "species"}, {"current_id": "52690", "current_name": "Acetobacterium carbinolicum", "frozen_label": "Acetobacterium carbinolicum", "id": "52690", "rank": "species"}, {"current_id": "477666", "current_name": "Bacteroides graminisolvens", "frozen_label": "Bacteroides graminisolvens", "id": "477666", "rank": "species"}, {"current_id": "93718", "current_name": "Acetobacterium psammolithicum", "frozen_label": "Acetobacterium psammolithicum", "id": "93718", "rank": "species"}, {"current_id": "78178", "current_name": "Coleochaete nitellarum", "frozen_label": null, "id": "78178", "rank": "species"}, {"current_id": "844", "current_name": "Wolinella succinogenes", "frozen_label": "Wolinella succinogenes", "id": "844", "rank": "species"}, {"current_id": "56698", "current_name": "Sulfurospirillum arsenophilum", "frozen_label": "Sulfurospirillum arsenophilum", "id": "56698", "rank": "species"}, {"current_id": "65553", "current_name": "Sulfurospirillum deleyianum", "frozen_label": "Sulfurospirillum deleyianum", "id": "65553", "rank": "species"}, {"current_id": "162176", "current_name": "Azospira sp. KJ", "frozen_label": "Azospira sp. KJ", "id": "162176", "rank": "species"}, {"current_id": "42252", "current_name": "Nitratidesulfovibrio termitidis", "frozen_label": "Nitratidesulfovibrio termitidis", "id": "42252", "rank": "species"}, {"current_id": "1061", "current_name": "Rhodobacter capsulatus", "frozen_label": "Rhodobacter capsulatus", "id": "1061", "rank": "species"}, {"current_id": "82116", "current_name": "Acetobacterium malicum subsp. dehalogenans", "frozen_label": "Acetobacterium malicum subsp. dehalogenans", "id": "82116", "rank": "subspecies"}, {"current_id": "33952", "current_name": "Acetobacterium woodii", "frozen_label": "Acetobacterium woodii", "id": "33952", "rank": "species"}, {"current_id": "59277", "current_name": "Methanobacterium subterraneum", "frozen_label": "Methanobacterium subterraneum", "id": "59277", "rank": "species"}, {"current_id": "398000", "current_name": "Campylobacter jejuni subsp. jejuni CG8486", "frozen_label": "Campylobacter jejuni subsp. jejuni CG8486", "id": "398000", "rank": "strain"}, {"current_id": "2171", "current_name": "Methanobacterium palustre", "frozen_label": "Methanobacterium palustre", "id": "2171", "rank": "species"}, {"current_id": "39441", "current_name": "Methanobrevibacter arboriphilus", "frozen_label": "Methanobrevibacter arboriphilus", "id": "39441", "rank": "species"}, {"current_id": "28232", "current_name": "Geobacter metallireducens", "frozen_label": "Geobacter metallireducens", "id": "28232", "rank": "species"}, {"current_id": "145262", "current_name": "Methanothermobacter thermautotrophicus", "frozen_label": "Methanothermobacter thermautotrophicus", "id": "145262", "rank": "species"}, {"current_id": "217", "current_name": "Helicobacter mustelae", "frozen_label": "Helicobacter mustelae", "id": "217", "rank": "species"}, {"current_id": "490098", "current_name": "Methanobacterium flexile", "frozen_label": "Methanobacterium flexile", "id": "490098", "rank": "species"}]. Naming differences in alkaline-water entries agree with retained aliases/strain identifiers. Resolution does not prove habitat occurrence. |
+| TAX1 | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=78178%2C82116%2C82985%2C83428%2C844%2C84567%2C849756%2C85643%2C86667%2C889378%2C927658%2C93718%2C94122%2C942938%2C957042%2C993416&amp;retmode=xml; NCBI EFetch TaxId, aliases, ScientificName and Rank | supports | The two response chunks jointly resolve all166 cohort IDs. This target=[{"current_id": "58621", "current_name": "Desulfovibrio intestinalis", "frozen_label": "Desulfovibrio intestinalis", "id": "58621", "rank": "species"}, {"current_id": "217139", "current_name": "uncultured Acetobacterium sp.", "frozen_label": "uncultured Acetobacterium sp.", "id": "217139", "rank": "species"}, {"current_id": "167968", "current_name": "uncultured Desulfovibrio sp.", "frozen_label": "uncultured Desulfovibrio sp.", "id": "167968", "rank": "species"}, {"current_id": "118062", "current_name": "Methanobacterium congolense", "frozen_label": "Methanobacterium congolense", "id": "118062", "rank": "species"}, {"current_id": "52690", "current_name": "Acetobacterium carbinolicum", "frozen_label": "Acetobacterium carbinolicum", "id": "52690", "rank": "species"}, {"current_id": "477666", "current_name": "Bacteroides graminisolvens", "frozen_label": "Bacteroides graminisolvens", "id": "477666", "rank": "species"}, {"current_id": "93718", "current_name": "Acetobacterium psammolithicum", "frozen_label": "Acetobacterium psammolithicum", "id": "93718", "rank": "species"}, {"current_id": "78178", "current_name": "Coleochaete nitellarum", "frozen_label": null, "id": "78178", "rank": "species"}, {"current_id": "844", "current_name": "Wolinella succinogenes", "frozen_label": "Wolinella succinogenes", "id": "844", "rank": "species"}, {"current_id": "56698", "current_name": "Sulfurospirillum arsenophilum", "frozen_label": "Sulfurospirillum arsenophilum", "id": "56698", "rank": "species"}, {"current_id": "65553", "current_name": "Sulfurospirillum deleyianum", "frozen_label": "Sulfurospirillum deleyianum", "id": "65553", "rank": "species"}, {"current_id": "162176", "current_name": "Azospira sp. KJ", "frozen_label": "Azospira sp. KJ", "id": "162176", "rank": "species"}, {"current_id": "42252", "current_name": "Nitratidesulfovibrio termitidis", "frozen_label": "Nitratidesulfovibrio termitidis", "id": "42252", "rank": "species"}, {"current_id": "1061", "current_name": "Rhodobacter capsulatus", "frozen_label": "Rhodobacter capsulatus", "id": "1061", "rank": "species"}, {"current_id": "82116", "current_name": "Acetobacterium malicum subsp. dehalogenans", "frozen_label": "Acetobacterium malicum subsp. dehalogenans", "id": "82116", "rank": "subspecies"}, {"current_id": "33952", "current_name": "Acetobacterium woodii", "frozen_label": "Acetobacterium woodii", "id": "33952", "rank": "species"}, {"current_id": "59277", "current_name": "Methanobacterium subterraneum", "frozen_label": "Methanobacterium subterraneum", "id": "59277", "rank": "species"}, {"current_id": "398000", "current_name": "Campylobacter jejuni subsp. jejuni CG8486", "frozen_label": "Campylobacter jejuni subsp. jejuni CG8486", "id": "398000", "rank": "strain"}, {"current_id": "2171", "current_name": "Methanobacterium palustre", "frozen_label": "Methanobacterium palustre", "id": "2171", "rank": "species"}, {"current_id": "39441", "current_name": "Methanobrevibacter arboriphilus", "frozen_label": "Methanobrevibacter arboriphilus", "id": "39441", "rank": "species"}, {"current_id": "28232", "current_name": "Geobacter metallireducens", "frozen_label": "Geobacter metallireducens", "id": "28232", "rank": "species"}, {"current_id": "145262", "current_name": "Methanothermobacter thermautotrophicus", "frozen_label": "Methanothermobacter thermautotrophicus", "id": "145262", "rank": "species"}, {"current_id": "217", "current_name": "Helicobacter mustelae", "frozen_label": "Helicobacter mustelae", "id": "217", "rank": "species"}, {"current_id": "490098", "current_name": "Methanobacterium flexile", "frozen_label": "Methanobacterium flexile", "id": "490098", "rank": "species"}]. Naming differences in alkaline-water entries agree with retained aliases/strain identifiers. Resolution does not prove habitat occurrence. |
+| SEARCH | curation; history; research; reports; reviews; data/raw; data/habitats; conf; Exact bounded searches, not global absence claims | supports | Identifier, label, slug and source-path search included ignored/hidden files in these roots; coverage inventory used Path.rglob. No earlier structured target observation was found in that bounded corpus. Upstream search={"configured_root": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe", "root_exists": true, "exact_paths": [{"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_nodes.tsv", "exists": false, "expected_sha256": "c13c21bdd04619c75ce16e63b05e51577b0cefec5b61765d383313f654ab3fae"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_edges.tsv", "exists": false, "expected_sha256": "54982c25de9d2c820eeebc1452aeac0b034595921d04d55b810bf1d2b1e127e0"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/nodes.tsv", "exists": false, "expected_sha256": "a2a2f9acae230636dd866347d173a32c9f025c04a377060087a4be65781628f3"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/edges.tsv", "exists": false, "expected_sha256": "ab6208bff4854db7c1a736d53d0aa04269a682ab15a1ce6f37c6d731000281d7"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/nodes.tsv", "exists": false, "expected_sha256": "020de3afc71495571ddb05000c83a58d009272f53735b5f7c9326c1293e0415c"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/edges.tsv", "exists": false, "expected_sha256": "8863ee3197a36915865fa4833df39d10c3f8f69b64bafbb746b9cd731308a0aa"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/nodes.tsv", "exists": false, "expected_sha256": "cc5941cd677831e8e207da018dca763cd009bb1f9310b21cb4d45892316e006d"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/edges.tsv", "exists": false, "expected_sha256": "fd333634eaaa3cfe57a35cdca2f4c5b8cf0662851c1df58914d3e999d62a650e"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/environments.csv", "exists": false, "expected_sha256": "99299fe635159712f95568783ad3b484230fb31781262f1f6f8bd84db4bc3048"}, {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/mappings/isolation_source_to_ontology.tsv", "exists": false, "expected_sha256": "2dea3d1bb20c72a04b6f64a67e2bb2bdc4f3649b809c5935390239be2791ef1f"}], "traversal": [{"command": ["rg", "--files", "--no-ignore", "--hidden", "data"], "exit_code": 0, "matches": [], "stderr": ""}, {"command": ["rg", "--files", "--no-ignore", "--hidden", "build"], "exit_code": 0, "matches": [], "stderr": ""}, {"command": ["rg", "--files", "--no-ignore", "--hidden", "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data"], "exit_code": 0, "matches": [], "stderr": ""}]} |
+| ISSUES | https://github.com/CultureBotAI/HabitatMech/issues; GitHub CLI census; issue comments were not exhaustively crawled | supports | All-state939-issue title/body census inspected for target and shared-contract overlap. Related1249,1398,1226,1408,1437 and1614 remain independently scoped; old report corrections do not prove scientific repair. |
+
+## Limits And Additional Notes
+
+- A completed assessment is not a clean verdict or proof of every assertion.
+- Only first three exact BioSample/Organism descriptions per sheet were individually interpreted. Other matched rows and joins were indexed, not individually reviewed.
+- Original assertion-level membership was not reconstructed; no current ontology/taxonomy/source refresh was applied.
+- Same-agent review, not independent approval. No native status promotion.
+- SSSOM/KGX current kg-microbe conformance was not audited; shared1398 remains open.
+- Full-corpus review remains incomplete; ancestor/context reads do not add target coverage.
+- New immutable observation only; curation and publication are separate authorized steps.
+- No prior structured observation of this exact target found; earlier reports/issues remain leads rather than silently resolved findings.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261011T212925Z-anoxic_water
+kind: record
+repository: CultureBotAI/HabitatMech
+title: 'Scientific record review: anoxic_water'
+started_at: '2026-10-11T21:15:52.308851Z'
+finished_at: '2026-10-11T21:29:25.749816Z'
+reviewer:
+  identity: OpenAI Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Agent has participated in repository curation; this is not independent
+    approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The active ENVO oxygen-lacking water identity and liquid-water genus are
+  supported. All24 PREGO environmental-sample associations reproduce with source-specific
+  scores, not characteristic-presence claims. Anaerobic water is exact in ENVO, but
+  reducing water is only related and must not be globally equated with absence of
+  dissolved oxygen.
+source:
+  git_revision: f21144ef328783600b053e8ec9bcb7b16b866d58
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: conf/record_review.yaml
+    sha256: c2f5d0eb4c5744f5fe354c92184ddab144dc2688dba952b032b4f3d597bc08d6
+    role: context
+  - path: conf/sources.yaml
+    sha256: a8e069f9278068b57fa234f43e03c8d893f857827b83fd10cfa92d6815aed642
+    role: context
+  - path: curation/causal_graphs/liquid_water.yaml
+    sha256: 12aac1021b9b51c6becc4ef8509bd63557b306e42c01d9b4443d69252ce29a81
+    role: context
+  - path: curation/decisions.tsv
+    sha256: 7cbec6d310b1aac248defdbe657e68c0cc1e848981230d2279e63f474c6f4c96
+    role: context
+  - path: curation/definition_source_label_exclusions.tsv
+    sha256: 2d41fc93db4939122b3909f2a412b84b679703948b10d9f02e12021442f71407
+    role: context
+  - path: curation/external_xrefs.tsv
+    sha256: cf8394a6ab22e35efd9e252aef422018226280830bf816a39bf4f2256ff75ad5
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: 53522d2fbe1cfa6c6a350a46170de9b80b1fa138dfcf4e9ddb0b5851f29d1c88
+    role: context
+  - path: curation/redirects_retracted.tsv
+    sha256: 0f1e9af8881f5a5db19f87de06b3b3d1800cfac8101699b380388c0a1a1e9a19
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 3f2ce04805defe5ff65dc20988cc72bc94d4636b3140eb1311017866bdc0ea0a
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: b59b9e800a918135e3915145d4d8098bb48dcea36a312b3004c594a57d221ae9
+    role: context
+  - path: data/habitats/aquatic/anoxic_water.yaml
+    sha256: 7b92f6852273b42d5cb886a677de50199b828ea24fad654cb0c5f626712f4753
+    role: target
+  - path: data/habitats/aquatic/liquid_water.yaml
+    sha256: 03eb8ba51e02bc4c8b65b67ae5d8bb740746f8eff51ed81326685fdc5067b081
+    role: context
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: 36df8306394c06c352b73e0bf7b47a2858784cedac7389a24d0b78f593ece646
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: f7aa39ee762d94f1902d9f08f328cb897bc543e4e226057eb4770d24bfcc6eb5
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reports/yaml_record_review/20260921T144542Z-anoxic_water.md
+    sha256: b484d42ca4304c2c03d61437429360c2c249d339394b2d223000db3c28c4f3e0
+    role: context
+  - path: reports/yaml_record_review/20260921T150416Z-anoxic_zone.md
+    sha256: a71af5114702184a64b5dd89b58826f017e6ae89f5816f9071c92183366e0a06
+    role: context
+  - path: research/habitats/engineered/dissolved-organics-anaerobic-habitatmech-gold-bb0eb00ccb-deep-research-claude_code.md
+    sha256: 8d01ee8d97912ffeaa49d2091766972b09c91b18e181a9c9f1d866572e5fe7c6
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/extract_gold_biosamples.py
+    sha256: b6a2773c86fe718e1ca0b1d7b32709f0eee491ac813655e310aa0817c0fec31b
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: 4bf5391d25ff48a2d81eb3821af6582de063fd0391440973d309dfd93016490c
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: src/habitatmech/extract.py
+    sha256: 4d9397bda649381a5daf81937369531c6dc8b4518d6c7047e6f3f14e605bf860
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 7e3cda3dadb9c7462498e5014bf38ef730068212f8f9cb131e3fce383c21d10e
+    role: context
+  - path: src/habitatmech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+  - path: src/habitatmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 4adf105e23d75c3563a516a0c160623d1065df7fcb2f31b7a0a0a8303d0401be
+    role: context
+targets:
+- target_id: ENVO:01000173
+  path: data/habitats/aquatic/anoxic_water.yaml
+  label: anoxic water
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Per-source grounding and native review-depth decisions
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Exact GOLD context-parent contribution decisions
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Curated definition, genus and lexical scope
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_terms.tsv
+    role: Pinned ontology identity, labels, synonyms and definitions
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_subclass_edges.tsv
+    role: Pinned ontology hierarchy
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Source harmonization and generated output
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/prego_habitats.tsv
+    role: Frozen PREGO habitat identity and count
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/prego_habitat_taxa.tsv
+    role: Frozen top-ranked taxon associations
+scope:
+  description: Entire exact generated record and every contributing source, with bounded
+    scientific and source-context assessment.
+  selection: 'Next forty unreviewed records in stable repository-relative path order:
+    all seven AIR records plus thirty-three AQUATIC records. Individual full-record
+    observations, not a category-wide pass. Starting distinct completed-observation
+    coverage488/3208 is not current-input clean coverage.'
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - ENVO:01000173
+  exclusions:
+  - target: Other3207 current records
+    reason: Context reads do not count as their full-record review.
+checks:
+- check_id: C0
+  name: Native check on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:01000173
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=f21144ef328783600b053e8ec9bcb7b16b866d58
+    just validate data/habitats/aquatic/anoxic_water.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-11T21:18:07.303246Z to 2026-10-11T21:18:10.036738Z.
+    Native applicability retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C1
+  name: Native check on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:01000173
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=f21144ef328783600b053e8ec9bcb7b16b866d58
+    just validate-strict data/habitats/air/air.yaml data/habitats/air/cattle_barn.yaml
+    data/habitats/air/composting_facility.yaml data/habitats/air/indoor_air.yaml data/habitats/air/outdoor_air.yaml
+    data/habitats/air/poultry_farm__064a62e0.yaml data/habitats/air/poultry_litter_bioaerosol.yaml
+    data/habitats/aquatic/abyssal_plane.yaml data/habitats/aquatic/abyssopelagic_abyssal_zone.yaml
+    data/habitats/aquatic/acid_lake.yaml data/habitats/aquatic/acid_mine_drainage.yaml
+    data/habitats/aquatic/acid_saline_drainage.yaml data/habitats/aquatic/acidic.yaml
+    data/habitats/aquatic/acidic__10d13a02.yaml data/habitats/aquatic/acidic__a1864fe6.yaml
+    data/habitats/aquatic/acidic__cd3d18a9.yaml data/habitats/aquatic/acidic_hypersaline_lake.yaml
+    data/habitats/aquatic/acidic_lake.yaml data/habitats/aquatic/acidic_spring.yaml
+    data/habitats/aquatic/adjacent_soil.yaml data/habitats/aquatic/agricultural_field__c2942601.yaml
+    data/habitats/aquatic/algal_bloom.yaml data/habitats/aquatic/alkaline.yaml data/habitats/aquatic/alkaline__009939a8.yaml
+    data/habitats/aquatic/alkaline__02df7139.yaml data/habitats/aquatic/alkaline__43fce277.yaml
+    data/habitats/aquatic/alkaline_salt_lake.yaml data/habitats/aquatic/alkaline_spring.yaml
+    data/habitats/aquatic/alkaline_water.yaml data/habitats/aquatic/anoxic_water.yaml
+    data/habitats/aquatic/anoxic_zone.yaml data/habitats/aquatic/aphotic_zone.yaml
+    data/habitats/aquatic/aquaculture__f784f173.yaml data/habitats/aquatic/aquatic_biome.yaml
+    data/habitats/aquatic/aquifer.yaml data/habitats/aquatic/aquifer__33e3996b.yaml
+    data/habitats/aquatic/aquifer__f620c815.yaml data/habitats/aquatic/archipelago.yaml
+    data/habitats/aquatic/artesian_spring.yaml data/habitats/aquatic/athalassic.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-11T21:18:37.998816Z to 2026-10-11T21:18:52.797329Z.
+    Native applicability retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C2
+  name: Native check on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:01000173
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=f21144ef328783600b053e8ec9bcb7b16b866d58
+    just verify-corpus
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-11T21:18:52.798654Z to 2026-10-11T21:19:13.373581Z.
+    Native applicability retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C3
+  name: Native check on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:01000173
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=f21144ef328783600b053e8ec9bcb7b16b866d58
+    just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-11T21:19:13.374728Z to 2026-10-11T21:20:25.537883Z.
+    Native applicability retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C4
+  name: Native check on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:01000173
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=f21144ef328783600b053e8ec9bcb7b16b866d58
+    just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-11T21:20:25.538899Z to 2026-10-11T21:20:35.475232Z.
+    Native applicability retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C5
+  name: Native check on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:01000173
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=f21144ef328783600b053e8ec9bcb7b16b866d58
+    just validate-causal-all
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-11T21:20:35.476484Z to 2026-10-11T21:20:41.494943Z.
+    Native applicability retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C6
+  name: Native check on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:01000173
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-review-ap-uv-cache RECORD_REVIEW_BASE=f21144ef328783600b053e8ec9bcb7b16b866d58
+    just term-requests-check
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-11T21:20:41.496068Z to 2026-10-11T21:21:03.930674Z.
+    Native applicability retained.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: C7
+  name: Native check on captured scientific inputs
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:01000173
+  command: gh run view 38174600184 --repo CultureBotAI/HabitatMech --log
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual success from 2026-10-11T21:17:58.517657Z to 2026-10-11T21:18:00.677113Z.
+    All three required merge-group workflows passed at the exact captured base; authoritative
+    QC passed 783 tests with 3 skipped. Newly saved review bundles require their own
+    integrity check. Exact-base CI receipt; not a claim that new review files already
+    passed CI.
+  evidence_ids:
+  - R
+  - RULES
+- check_id: REPRO
+  name: Complete reconstruction
+  required: false
+  status: passed
+  target_ids:
+  - ENVO:01000173
+  command: .venv/bin/python /private/tmp/habitatmech-review-ax-evidence.py
+  exit_code: 0
+  summary: All40 complete documents matched; input hashes reverified.
+  evidence_ids:
+  - RAW
+  - CODE
+- check_id: ORIGINAL
+  name: Original assertion membership
+  required: false
+  status: unavailable
+  target_ids:
+  - ENVO:01000173
+  summary: Bounded ignored-inclusive upstream searches did not recover complete frozen
+    membership. Later exports are context only.
+  evidence_ids:
+  - SEARCH
+- check_id: IMODULON
+  name: iModulonDB applicability
+  required: false
+  status: not_applicable
+  target_ids:
+  - ENVO:01000173
+  summary: No expression-module claim; membership would not prove habitat association.
+  evidence_ids:
+  - R
+  - RULES
+evidence:
+- evidence_id: R
+  kind: record_content
+  reference: data/habitats/aquatic/anoxic_water.yaml
+  summary: The active ENVO oxygen-lacking water identity and liquid-water genus are
+    supported. All24 PREGO environmental-sample associations reproduce with source-specific
+    scores, not characteristic-presence claims. Anaerobic water is exact in ENVO,
+    but reducing water is only related and must not be globally equated with absence
+    of dissolved oxygen.
+  accessed_at: '2026-10-11T21:29:25.749816Z'
+  support: supports
+  locator: Entire captured YAML read, including sources, taxa, parameters, graphs
+    and history
+- evidence_id: RULES
+  kind: record_content
+  reference: docs/CURATION.md; docs/HARMONIZATION.md; docs/RESEARCH.md; src/habitatmech/schema/habitatmech.yaml
+  summary: Applied strict-parent, exact identity, MIxS role, source count/score, ITEM
+    lifecycle and claim-specific evidence contracts.
+  accessed_at: '2026-10-11T21:29:25.749816Z'
+  support: supports
+- evidence_id: RAW
+  kind: database
+  reference: data/raw; curation/decisions.tsv; curation/term_requests.tsv; curation/gold_parent_exclusions.tsv
+  summary: '{"data/raw/ontology_subclass_edges.tsv": [{"data": {"object": "ENVO:00002006",
+    "predicate": "rdfs:subClassOf", "subject": "ENVO:01000173"}, "logical_row": 5824}],
+    "data/raw/ontology_terms.tsv": [{"data": {"definition": "Water which lacks dissolved
+    oxygen.", "deprecated": "", "directly_referenced": "TRUE", "label": "anoxic water",
+    "label_only": "FALSE", "ontology": "ENVO", "synonyms": "anaerobic water|reducing
+    water", "term_id": "ENVO:01000173"}, "logical_row": 7672}], "data/raw/prego_habitat_taxa.tsv":
+    [{"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.52414", "rank": "1", "taxon_id":
+    "NCBITaxon:58621", "taxon_label": "Desulfovibrio intestinalis"}, "logical_row":
+    7876}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.47393", "rank": "2", "taxon_id":
+    "NCBITaxon:217139", "taxon_label": "uncultured Acetobacterium sp."}, "logical_row":
+    7877}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.40288", "rank": "3", "taxon_id":
+    "NCBITaxon:167968", "taxon_label": "uncultured Desulfovibrio sp."}, "logical_row":
+    7878}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.39195", "rank": "4", "taxon_id":
+    "NCBITaxon:118062", "taxon_label": "Methanobacterium congolense"}, "logical_row":
+    7879}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.35813", "rank": "5", "taxon_id":
+    "NCBITaxon:52690", "taxon_label": "Acetobacterium carbinolicum"}, "logical_row":
+    7880}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.31539", "rank": "6", "taxon_id":
+    "NCBITaxon:477666", "taxon_label": "Bacteroides graminisolvens"}, "logical_row":
+    7881}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.29016", "rank": "7", "taxon_id":
+    "NCBITaxon:93718", "taxon_label": "Acetobacterium psammolithicum"}, "logical_row":
+    7882}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.20942", "rank": "8", "taxon_id":
+    "NCBITaxon:78178", "taxon_label": ""}, "logical_row": 7883}, {"data": {"channels":
+    "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id":
+    "ENVO:01000173", "prego_score": "1.20507", "rank": "9", "taxon_id": "NCBITaxon:844",
+    "taxon_label": "Wolinella succinogenes"}, "logical_row": 7884}, {"data": {"channels":
+    "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE", "prego_id":
+    "ENVO:01000173", "prego_score": "1.19947", "rank": "10", "taxon_id": "NCBITaxon:56698",
+    "taxon_label": "Sulfurospirillum arsenophilum"}, "logical_row": 7885}, {"data":
+    {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE",
+    "prego_id": "ENVO:01000173", "prego_score": "1.18151", "rank": "11", "taxon_id":
+    "NCBITaxon:65553", "taxon_label": "Sulfurospirillum deleyianum"}, "logical_row":
+    7886}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.14789", "rank": "12", "taxon_id":
+    "NCBITaxon:162176", "taxon_label": "Azospira sp. KJ"}, "logical_row": 7887}, {"data":
+    {"channels": "environmental_samples", "corroborated_by": "", "direct_flag": "TRUE",
+    "prego_id": "ENVO:01000173", "prego_score": "1.12414", "rank": "13", "taxon_id":
+    "NCBITaxon:42252", "taxon_label": "Nitratidesulfovibrio termitidis"}, "logical_row":
+    7888}, {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.12258", "rank": "14", "taxon_id":
+    "NCBITaxon:1061", "taxon_label": "Rhodobacter capsulatus"}, "logical_row": 7889},
+    {"data": {"channels": "environmental_samples", "corroborated_by": "", "direct_flag":
+    "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.0956", "rank": "15", "taxon_id":
+    "NCBITaxon:82116", "taxon_label": "Acetobacterium malicum subsp. dehalogenans"},
+    "logical_row": 7890}, {"data": {"channels": "environmental_samples", "corroborated_by":
+    "", "direct_flag": "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.08606",
+    "rank": "16", "taxon_id": "NCBITaxon:33952", "taxon_label": "Acetobacterium woodii"},
+    "logical_row": 7891}, {"data": {"channels": "environmental_samples", "corroborated_by":
+    "", "direct_flag": "TRUE", "prego_id": "ENVO:01000173", "prego_score": "1.06564",
+    "rank": "17", "taxon_id": "NCBITaxon:59277", "taxon_label": "Methanobacterium
+    subterraneum"}, "logical_row": 7892}, {"data": {"channels": "environmental_samples",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:01000173", "prego_score":
+    "1.03936", "rank": "18", "taxon_id": "NCBITaxon:398000", "taxon_label": "Campylobacter
+    jejuni subsp. jejuni CG8486"}, "logical_row": 7893}, {"data": {"channels": "environmental_samples",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:01000173", "prego_score":
+    "1.03669", "rank": "19", "taxon_id": "NCBITaxon:2171", "taxon_label": "Methanobacterium
+    palustre"}, "logical_row": 7894}, {"data": {"channels": "environmental_samples",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:01000173", "prego_score":
+    "1.02824", "rank": "20", "taxon_id": "NCBITaxon:39441", "taxon_label": "Methanobrevibacter
+    arboriphilus"}, "logical_row": 7895}, {"data": {"channels": "environmental_samples",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:01000173", "prego_score":
+    "1.01983", "rank": "21", "taxon_id": "NCBITaxon:28232", "taxon_label": "Geobacter
+    metallireducens"}, "logical_row": 7896}, {"data": {"channels": "environmental_samples",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:01000173", "prego_score":
+    "1.01819", "rank": "22", "taxon_id": "NCBITaxon:145262", "taxon_label": "Methanothermobacter
+    thermautotrophicus"}, "logical_row": 7897}, {"data": {"channels": "environmental_samples",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:01000173", "prego_score":
+    "1.01736", "rank": "23", "taxon_id": "NCBITaxon:217", "taxon_label": "Helicobacter
+    mustelae"}, "logical_row": 7898}, {"data": {"channels": "environmental_samples",
+    "corroborated_by": "", "direct_flag": "TRUE", "prego_id": "ENVO:01000173", "prego_score":
+    "1.0019", "rank": "24", "taxon_id": "NCBITaxon:490098", "taxon_label": "Methanobacterium
+    flexile"}, "logical_row": 7899}], "data/raw/prego_habitats.tsv": [{"data": {"biolink_category":
+    "biolink:OntologyClass", "channels": "environmental_samples", "direct_assertion_count":
+    "24", "max_prego_score": "1.52414", "ontology": "ENVO", "prego_id": "ENVO:01000173",
+    "prego_synonyms": "anoxic water|anoxic waters", "taxon_count": "24"}, "logical_row":
+    280}]}'
+  accessed_at: '2026-10-11T21:29:25.749816Z'
+  support: supports
+  locator: Exact logical TSV rows; header is row1. Nearby-path matches excluded.
+- evidence_id: CODE
+  kind: record_content
+  reference: src/habitatmech/seed.py
+  summary: '{"reviewed_sources": 0, "routes": [{"actual": {"category": null, "contributes_grounding":
+    true, "decision": null, "extra_parents": [], "extra_xrefs": [], "grounding_status":
+    "EXACT", "identifier": "ENVO:01000173", "mapping_predicate": null, "reviewed":
+    false, "route": "prego_self_grounded"}, "automatic": {"category": null, "contributes_grounding":
+    true, "decision": null, "extra_parents": [], "extra_xrefs": [], "grounding_status":
+    "EXACT", "identifier": "ENVO:01000173", "mapping_predicate": null, "reviewed":
+    false, "route": "prego_self_grounded"}, "minted": "habitatmech:PREGO.a03ff2e2c0",
+    "source": "PREGO", "source_id": "ENVO:01000173"}], "source_concepts": 1}'
+  accessed_at: '2026-10-11T21:29:25.749816Z'
+  support: supports
+  locator: Executed full-document reconstruction; all40 matched captured records
+- evidence_id: ONT
+  kind: authority
+  reference: https://raw.githubusercontent.com/EnvironmentOntology/envo/master/envo.owl
+  summary: '{"ENVO:00002006": {"definitions": ["An environmental material primarily
+    composed of dihydrogen oxide in its liquid form."], "deprecated": [], "equivalents":
+    [], "labels": ["liquid water"], "parents": ["http://purl.obolibrary.org/obo/ENVO_01000815",
+    {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Restriction"],
+    "http://www.w3.org/2002/07/owl#onProperty": ["http://purl.obolibrary.org/obo/RO_0002473"],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": ["http://purl.obolibrary.org/obo/CHEBI_15377"]}],
+    "replacements": [], "synonyms": {"hasBroadSynonym": ["water"], "hasExactSynonym":
+    [], "hasNarrowSynonym": [], "hasRelatedSynonym": []}}, "ENVO:01000173": {"definitions":
+    ["Water which lacks dissolved oxygen."], "deprecated": [], "equivalents": [],
+    "labels": ["anoxic water"], "parents": ["http://purl.obolibrary.org/obo/ENVO_00002006",
+    {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Class"],
+    "http://www.w3.org/2002/07/owl#complementOf": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+    ["http://www.w3.org/2002/07/owl#Restriction"], "http://www.w3.org/2002/07/owl#onProperty":
+    ["http://purl.obolibrary.org/obo/BFO_0000051"], "http://www.w3.org/2002/07/owl#someValuesFrom":
+    [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#type": ["http://www.w3.org/2002/07/owl#Class"],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first":
+    ["http://purl.obolibrary.org/obo/CHEBI_15379"], "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest":
+    [{"http://www.w3.org/1999/02/22-rdf-syntax-ns#first": [{"nested": true}], "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest":
+    ["http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"]}]}]}]}]}], "replacements":
+    [], "synonyms": {"hasBroadSynonym": [], "hasExactSynonym": ["anaerobic water"],
+    "hasNarrowSynonym": [], "hasRelatedSynonym": ["reducing water"]}}}'
+  accessed_at: '2026-10-11T13:21:47.927208Z'
+  support: supports
+  locator: Current named OWL identity, typed synonym scopes and direct axioms; no
+    pinned-source refresh
+  snapshot_sha256: a0b919065d33a9cf975b74cadd16c75f32f512d17f4f6d5999b74216701df54c
+- evidence_id: PARENT
+  kind: record_content
+  reference: data/habitats/aquatic/liquid_water.yaml
+  summary: '{"ENVO:00002006": {"definition": "An environmental material primarily
+    composed of dihydrogen oxide in its liquid form.", "grounding_status": "EXACT",
+    "label": "liquid water", "parent_habitats": ["ENVO:01000815"]}}'
+  accessed_at: '2026-10-11T21:29:25.749816Z'
+  support: supports
+  locator: Ancestor identity/definition/status context, not full-record review coverage
+    of ancestors
+- evidence_id: TAX0
+  kind: database
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=100%2C1000566%2C1001240%2C1003%2C1005928%2C1007109%2C1007110%2C1007111%2C1007112%2C1007113%2C1007114%2C1007115%2C1007116%2C1007117%2C1007118%2C1007119%2C1007120%2C1007122%2C1007124%2C1009412%2C1009413%2C1009414%2C1009415%2C1009416%2C1009418%2C1061%2C1069448%2C1089547%2C1121003%2C1121028%2C1121087%2C1121877%2C1121915%2C1121920%2C1121953%2C1121957%2C1122130%2C1122209%2C1122214%2C1122215%2C1123060%2C1123231%2C1123239%2C1153%2C1162967%2C1162970%2C118062%2C1211807%2C1216008%2C121821%2C1246448%2C129961%2C1344948%2C1408424%2C143495%2C145262%2C1486246%2C159087%2C162176%2C167968%2C1712410%2C172044%2C1869227%2C1876%2C190721%2C1931%2C2%2C216595%2C217%2C2171%2C217139%2C254410%2C266264%2C266265%2C266940%2C269482%2C2719616%2C2735894%2C2735895%2C2735896%2C2735898%2C2735899%2C279826%2C279828%2C28214%2C28232%2C287%2C292807%2C293256%2C294%2C296591%2C303%2C306%2C314266%2C314275%2C317655%2C320502%2C322710%2C338969%2C33952%2C340100%2C343080%2C349163%2C365044%2C376%2C376219%2C379731%2C391735%2C392499%2C393762%2C39441%2C396595%2C398000%2C398578%2C399739%2C406100%2C409%2C413712%2C42252%2C426128%2C441209%2C442899%2C446%2C452662%2C477666%2C47917%2C490098%2C517424%2C52690%2C53249%2C540251%2C555088%2C555779%2C562%2C56698%2C573060%2C579922%2C582402%2C58621%2C59277%2C643562%2C643673%2C65553%2C667019%2C678%2C694430%2C702568%2C710696%2C760568%2C768535&retmode=xml
+  summary: 'The two response chunks jointly resolve all166 cohort IDs. This target=[{"current_id":
+    "58621", "current_name": "Desulfovibrio intestinalis", "frozen_label": "Desulfovibrio
+    intestinalis", "id": "58621", "rank": "species"}, {"current_id": "217139", "current_name":
+    "uncultured Acetobacterium sp.", "frozen_label": "uncultured Acetobacterium sp.",
+    "id": "217139", "rank": "species"}, {"current_id": "167968", "current_name": "uncultured
+    Desulfovibrio sp.", "frozen_label": "uncultured Desulfovibrio sp.", "id": "167968",
+    "rank": "species"}, {"current_id": "118062", "current_name": "Methanobacterium
+    congolense", "frozen_label": "Methanobacterium congolense", "id": "118062", "rank":
+    "species"}, {"current_id": "52690", "current_name": "Acetobacterium carbinolicum",
+    "frozen_label": "Acetobacterium carbinolicum", "id": "52690", "rank": "species"},
+    {"current_id": "477666", "current_name": "Bacteroides graminisolvens", "frozen_label":
+    "Bacteroides graminisolvens", "id": "477666", "rank": "species"}, {"current_id":
+    "93718", "current_name": "Acetobacterium psammolithicum", "frozen_label": "Acetobacterium
+    psammolithicum", "id": "93718", "rank": "species"}, {"current_id": "78178", "current_name":
+    "Coleochaete nitellarum", "frozen_label": null, "id": "78178", "rank": "species"},
+    {"current_id": "844", "current_name": "Wolinella succinogenes", "frozen_label":
+    "Wolinella succinogenes", "id": "844", "rank": "species"}, {"current_id": "56698",
+    "current_name": "Sulfurospirillum arsenophilum", "frozen_label": "Sulfurospirillum
+    arsenophilum", "id": "56698", "rank": "species"}, {"current_id": "65553", "current_name":
+    "Sulfurospirillum deleyianum", "frozen_label": "Sulfurospirillum deleyianum",
+    "id": "65553", "rank": "species"}, {"current_id": "162176", "current_name": "Azospira
+    sp. KJ", "frozen_label": "Azospira sp. KJ", "id": "162176", "rank": "species"},
+    {"current_id": "42252", "current_name": "Nitratidesulfovibrio termitidis", "frozen_label":
+    "Nitratidesulfovibrio termitidis", "id": "42252", "rank": "species"}, {"current_id":
+    "1061", "current_name": "Rhodobacter capsulatus", "frozen_label": "Rhodobacter
+    capsulatus", "id": "1061", "rank": "species"}, {"current_id": "82116", "current_name":
+    "Acetobacterium malicum subsp. dehalogenans", "frozen_label": "Acetobacterium
+    malicum subsp. dehalogenans", "id": "82116", "rank": "subspecies"}, {"current_id":
+    "33952", "current_name": "Acetobacterium woodii", "frozen_label": "Acetobacterium
+    woodii", "id": "33952", "rank": "species"}, {"current_id": "59277", "current_name":
+    "Methanobacterium subterraneum", "frozen_label": "Methanobacterium subterraneum",
+    "id": "59277", "rank": "species"}, {"current_id": "398000", "current_name": "Campylobacter
+    jejuni subsp. jejuni CG8486", "frozen_label": "Campylobacter jejuni subsp. jejuni
+    CG8486", "id": "398000", "rank": "strain"}, {"current_id": "2171", "current_name":
+    "Methanobacterium palustre", "frozen_label": "Methanobacterium palustre", "id":
+    "2171", "rank": "species"}, {"current_id": "39441", "current_name": "Methanobrevibacter
+    arboriphilus", "frozen_label": "Methanobrevibacter arboriphilus", "id": "39441",
+    "rank": "species"}, {"current_id": "28232", "current_name": "Geobacter metallireducens",
+    "frozen_label": "Geobacter metallireducens", "id": "28232", "rank": "species"},
+    {"current_id": "145262", "current_name": "Methanothermobacter thermautotrophicus",
+    "frozen_label": "Methanothermobacter thermautotrophicus", "id": "145262", "rank":
+    "species"}, {"current_id": "217", "current_name": "Helicobacter mustelae", "frozen_label":
+    "Helicobacter mustelae", "id": "217", "rank": "species"}, {"current_id": "490098",
+    "current_name": "Methanobacterium flexile", "frozen_label": "Methanobacterium
+    flexile", "id": "490098", "rank": "species"}]. Naming differences in alkaline-water
+    entries agree with retained aliases/strain identifiers. Resolution does not prove
+    habitat occurrence.'
+  accessed_at: '2026-10-11T21:17:47.322929Z'
+  support: supports
+  locator: NCBI EFetch TaxId, aliases, ScientificName and Rank
+  snapshot_sha256: 013696d75216ec29c8571a3f0be491c769fa57f3fed67f4ca2138453c6235971
+- evidence_id: TAX1
+  kind: database
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=78178%2C82116%2C82985%2C83428%2C844%2C84567%2C849756%2C85643%2C86667%2C889378%2C927658%2C93718%2C94122%2C942938%2C957042%2C993416&retmode=xml
+  summary: 'The two response chunks jointly resolve all166 cohort IDs. This target=[{"current_id":
+    "58621", "current_name": "Desulfovibrio intestinalis", "frozen_label": "Desulfovibrio
+    intestinalis", "id": "58621", "rank": "species"}, {"current_id": "217139", "current_name":
+    "uncultured Acetobacterium sp.", "frozen_label": "uncultured Acetobacterium sp.",
+    "id": "217139", "rank": "species"}, {"current_id": "167968", "current_name": "uncultured
+    Desulfovibrio sp.", "frozen_label": "uncultured Desulfovibrio sp.", "id": "167968",
+    "rank": "species"}, {"current_id": "118062", "current_name": "Methanobacterium
+    congolense", "frozen_label": "Methanobacterium congolense", "id": "118062", "rank":
+    "species"}, {"current_id": "52690", "current_name": "Acetobacterium carbinolicum",
+    "frozen_label": "Acetobacterium carbinolicum", "id": "52690", "rank": "species"},
+    {"current_id": "477666", "current_name": "Bacteroides graminisolvens", "frozen_label":
+    "Bacteroides graminisolvens", "id": "477666", "rank": "species"}, {"current_id":
+    "93718", "current_name": "Acetobacterium psammolithicum", "frozen_label": "Acetobacterium
+    psammolithicum", "id": "93718", "rank": "species"}, {"current_id": "78178", "current_name":
+    "Coleochaete nitellarum", "frozen_label": null, "id": "78178", "rank": "species"},
+    {"current_id": "844", "current_name": "Wolinella succinogenes", "frozen_label":
+    "Wolinella succinogenes", "id": "844", "rank": "species"}, {"current_id": "56698",
+    "current_name": "Sulfurospirillum arsenophilum", "frozen_label": "Sulfurospirillum
+    arsenophilum", "id": "56698", "rank": "species"}, {"current_id": "65553", "current_name":
+    "Sulfurospirillum deleyianum", "frozen_label": "Sulfurospirillum deleyianum",
+    "id": "65553", "rank": "species"}, {"current_id": "162176", "current_name": "Azospira
+    sp. KJ", "frozen_label": "Azospira sp. KJ", "id": "162176", "rank": "species"},
+    {"current_id": "42252", "current_name": "Nitratidesulfovibrio termitidis", "frozen_label":
+    "Nitratidesulfovibrio termitidis", "id": "42252", "rank": "species"}, {"current_id":
+    "1061", "current_name": "Rhodobacter capsulatus", "frozen_label": "Rhodobacter
+    capsulatus", "id": "1061", "rank": "species"}, {"current_id": "82116", "current_name":
+    "Acetobacterium malicum subsp. dehalogenans", "frozen_label": "Acetobacterium
+    malicum subsp. dehalogenans", "id": "82116", "rank": "subspecies"}, {"current_id":
+    "33952", "current_name": "Acetobacterium woodii", "frozen_label": "Acetobacterium
+    woodii", "id": "33952", "rank": "species"}, {"current_id": "59277", "current_name":
+    "Methanobacterium subterraneum", "frozen_label": "Methanobacterium subterraneum",
+    "id": "59277", "rank": "species"}, {"current_id": "398000", "current_name": "Campylobacter
+    jejuni subsp. jejuni CG8486", "frozen_label": "Campylobacter jejuni subsp. jejuni
+    CG8486", "id": "398000", "rank": "strain"}, {"current_id": "2171", "current_name":
+    "Methanobacterium palustre", "frozen_label": "Methanobacterium palustre", "id":
+    "2171", "rank": "species"}, {"current_id": "39441", "current_name": "Methanobrevibacter
+    arboriphilus", "frozen_label": "Methanobrevibacter arboriphilus", "id": "39441",
+    "rank": "species"}, {"current_id": "28232", "current_name": "Geobacter metallireducens",
+    "frozen_label": "Geobacter metallireducens", "id": "28232", "rank": "species"},
+    {"current_id": "145262", "current_name": "Methanothermobacter thermautotrophicus",
+    "frozen_label": "Methanothermobacter thermautotrophicus", "id": "145262", "rank":
+    "species"}, {"current_id": "217", "current_name": "Helicobacter mustelae", "frozen_label":
+    "Helicobacter mustelae", "id": "217", "rank": "species"}, {"current_id": "490098",
+    "current_name": "Methanobacterium flexile", "frozen_label": "Methanobacterium
+    flexile", "id": "490098", "rank": "species"}]. Naming differences in alkaline-water
+    entries agree with retained aliases/strain identifiers. Resolution does not prove
+    habitat occurrence.'
+  accessed_at: '2026-10-11T21:17:48.949313Z'
+  support: supports
+  locator: NCBI EFetch TaxId, aliases, ScientificName and Rank
+  snapshot_sha256: bb67a0a16d265df43423b6598ab2904c7d06dce9b0e1e1d02f6c86e9104c01cb
+- evidence_id: SEARCH
+  kind: search
+  reference: curation; history; research; reports; reviews; data/raw; data/habitats;
+    conf
+  summary: 'Identifier, label, slug and source-path search included ignored/hidden
+    files in these roots; coverage inventory used Path.rglob. No earlier structured
+    target observation was found in that bounded corpus. Upstream search={"configured_root":
+    "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe", "root_exists":
+    true, "exact_paths": [{"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_nodes.tsv",
+    "exists": false, "expected_sha256": "c13c21bdd04619c75ce16e63b05e51577b0cefec5b61765d383313f654ab3fae"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_edges.tsv",
+    "exists": false, "expected_sha256": "54982c25de9d2c820eeebc1452aeac0b034595921d04d55b810bf1d2b1e127e0"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/nodes.tsv",
+    "exists": false, "expected_sha256": "a2a2f9acae230636dd866347d173a32c9f025c04a377060087a4be65781628f3"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/edges.tsv",
+    "exists": false, "expected_sha256": "ab6208bff4854db7c1a736d53d0aa04269a682ab15a1ce6f37c6d731000281d7"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/nodes.tsv",
+    "exists": false, "expected_sha256": "020de3afc71495571ddb05000c83a58d009272f53735b5f7c9326c1293e0415c"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/edges.tsv",
+    "exists": false, "expected_sha256": "8863ee3197a36915865fa4833df39d10c3f8f69b64bafbb746b9cd731308a0aa"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/nodes.tsv",
+    "exists": false, "expected_sha256": "cc5941cd677831e8e207da018dca763cd009bb1f9310b21cb4d45892316e006d"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/edges.tsv",
+    "exists": false, "expected_sha256": "fd333634eaaa3cfe57a35cdca2f4c5b8cf0662851c1df58914d3e999d62a650e"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/environments.csv",
+    "exists": false, "expected_sha256": "99299fe635159712f95568783ad3b484230fb31781262f1f6f8bd84db4bc3048"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/mappings/isolation_source_to_ontology.tsv",
+    "exists": false, "expected_sha256": "2dea3d1bb20c72a04b6f64a67e2bb2bdc4f3649b809c5935390239be2791ef1f"}],
+    "traversal": [{"command": ["rg", "--files", "--no-ignore", "--hidden", "data"],
+    "exit_code": 0, "matches": [], "stderr": ""}, {"command": ["rg", "--files", "--no-ignore",
+    "--hidden", "build"], "exit_code": 0, "matches": [], "stderr": ""}, {"command":
+    ["rg", "--files", "--no-ignore", "--hidden", "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data"],
+    "exit_code": 0, "matches": [], "stderr": ""}]}'
+  accessed_at: '2026-10-11T21:29:25.749816Z'
+  support: supports
+  locator: Exact bounded searches, not global absence claims
+  search_scope: 'Identifier, label, slug and source-path search included ignored/hidden
+    files in these roots; coverage inventory used Path.rglob. No earlier structured
+    target observation was found in that bounded corpus. Upstream search={"configured_root":
+    "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe", "root_exists":
+    true, "exact_paths": [{"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_nodes.tsv",
+    "exists": false, "expected_sha256": "c13c21bdd04619c75ce16e63b05e51577b0cefec5b61765d383313f654ab3fae"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/gold/GOLD_edges.tsv",
+    "exists": false, "expected_sha256": "54982c25de9d2c820eeebc1452aeac0b034595921d04d55b810bf1d2b1e127e0"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/nodes.tsv",
+    "exists": false, "expected_sha256": "a2a2f9acae230636dd866347d173a32c9f025c04a377060087a4be65781628f3"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/bacdive/edges.tsv",
+    "exists": false, "expected_sha256": "ab6208bff4854db7c1a736d53d0aa04269a682ab15a1ce6f37c6d731000281d7"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/nodes.tsv",
+    "exists": false, "expected_sha256": "020de3afc71495571ddb05000c83a58d009272f53735b5f7c9326c1293e0415c"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/prego/edges.tsv",
+    "exists": false, "expected_sha256": "8863ee3197a36915865fa4833df39d10c3f8f69b64bafbb746b9cd731308a0aa"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/nodes.tsv",
+    "exists": false, "expected_sha256": "cc5941cd677831e8e207da018dca763cd009bb1f9310b21cb4d45892316e006d"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/transformed/madin_etal/edges.tsv",
+    "exists": false, "expected_sha256": "fd333634eaaa3cfe57a35cdca2f4c5b8cf0662851c1df58914d3e999d62a650e"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data/raw/environments.csv",
+    "exists": false, "expected_sha256": "99299fe635159712f95568783ad3b484230fb31781262f1f6f8bd84db4bc3048"},
+    {"path": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/mappings/isolation_source_to_ontology.tsv",
+    "exists": false, "expected_sha256": "2dea3d1bb20c72a04b6f64a67e2bb2bdc4f3649b809c5935390239be2791ef1f"}],
+    "traversal": [{"command": ["rg", "--files", "--no-ignore", "--hidden", "data"],
+    "exit_code": 0, "matches": [], "stderr": ""}, {"command": ["rg", "--files", "--no-ignore",
+    "--hidden", "build"], "exit_code": 0, "matches": [], "stderr": ""}, {"command":
+    ["rg", "--files", "--no-ignore", "--hidden", "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data"],
+    "exit_code": 0, "matches": [], "stderr": ""}]}'
+- evidence_id: ISSUES
+  kind: database
+  reference: https://github.com/CultureBotAI/HabitatMech/issues
+  summary: All-state939-issue title/body census inspected for target and shared-contract
+    overlap. Related1249,1398,1226,1408,1437 and1614 remain independently scoped;
+    old report corrections do not prove scientific repair.
+  accessed_at: '2026-10-11T21:29:25.749816Z'
+  support: supports
+  locator: GitHub CLI census; issue comments were not exhaustively crawled
+assessments:
+- assessment_id: IDENTITY
+  area: identity
+  topic: Identity and definition
+  outcome: supported
+  summary: The active ENVO oxygen-lacking water identity and liquid-water genus are
+    supported. All24 PREGO environmental-sample associations reproduce with source-specific
+    scores, not characteristic-presence claims. Anaerobic water is exact in ENVO,
+    but reducing water is only related and must not be globally equated with absence
+    of dissolved oxygen.
+  target_ids:
+  - ENVO:01000173
+  evidence_ids:
+  - R
+  - RAW
+  - ONT
+  - PARENT
+- assessment_id: HIERARCHY
+  area: grounding
+  topic: Strict genera, source-context and mapping scope
+  outcome: concern
+  summary: The active ENVO oxygen-lacking water identity and liquid-water genus are
+    supported. All24 PREGO environmental-sample associations reproduce with source-specific
+    scores, not characteristic-presence claims. Anaerobic water is exact in ENVO,
+    but reducing water is only related and must not be globally equated with absence
+    of dissolved oxygen. Four parent-contribution routes were distinguished; optional
+    missing definitions are not filled by inference.
+  target_ids:
+  - ENVO:01000173
+  evidence_ids:
+  - R
+  - RAW
+  - CODE
+  - PARENT
+  - ONT
+- assessment_id: PROVENANCE
+  area: provenance
+  topic: Every contributing source and native lifecycle
+  outcome: supported
+  summary: 'Full-document reproduction preserves 1 contributors and 0 ITEM-reviewed
+    sources. Actual attestations=[{"source": "PREGO", "source_id": "ENVO:01000173",
+    "source_label": "anoxic water", "assertion_count": 24, "assertion_unit": "TAXON",
+    "score": 1.52414, "evidence_channels": "environmental_samples"}]. Counts with
+    unlike units are not summed; omitted zero counts are not biological absence. Scientific
+    review does not promote native status.'
+  target_ids:
+  - ENVO:01000173
+  evidence_ids:
+  - R
+  - RAW
+  - CODE
+  - RULES
+- assessment_id: TAXA
+  area: evidence
+  topic: Association versus characteristic presence
+  outcome: supported
+  summary: All retained associations were read and reproduce; all named taxon IDs
+    resolve. Source-specific ranks, ties, candidate pools, scores and corroborations
+    remain source evidence, not abundance, universal presence or cross-source confidence.
+    No is_characteristic claim is asserted.
+  target_ids:
+  - ENVO:01000173
+  evidence_ids:
+  - R
+  - RAW
+  - TAX0
+  - TAX1
+  - RULES
+- assessment_id: COMPLETENESS
+  area: completeness
+  topic: Parameters and optional evidence
+  outcome: supported
+  summary: No universal numeric environmental values or organisms are inferred from
+    path labels or later samples. Optional empty discussions/datasets are not defects
+    merely for being empty. No graph is asserted for this exact target; ignored-inclusive
+    overlay search and full-corpus causal checks were inspected. No gene/regulator/expression-module
+    claim calls for iModulonDB.
+  target_ids:
+  - ENVO:01000173
+  evidence_ids:
+  - R
+  - RAW
+  - RULES
+  - SEARCH
+findings:
+- finding_id: F1
+  issue_key: envo-01000173-ontology-synonym-scope
+  category: scope
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Related ontology synonyms are promoted to exact
+  description: The active ENVO oxygen-lacking water identity and liquid-water genus
+    are supported. All24 PREGO environmental-sample associations reproduce with source-specific
+    scores, not characteristic-presence claims. Anaerobic water is exact in ENVO,
+    but reducing water is only related and must not be globally equated with absence
+    of dissolved oxygen.
+  target_ids:
+  - ENVO:01000173
+  field_paths:
+  - synonyms
+  evidence_ids:
+  - R
+  - RAW
+  - ONT
+  - CODE
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Typed ontology synonym ingestion
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_terms.tsv
+    role: Governed ontology snapshot
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Preserve asserted scope
+  rule_id: docs/CURATION.md; .claude/skills/curate-yaml-record/references/review-checklist.md
+  native_severity: major
+  normalization_reason: Material identity, strict relation, scope or endpoint inconsistency.
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1249
+actions:
+- action_id: A1
+  description: Resolve shared1249 through a governed typed-synonym contract. Preserve
+    genuine exact synonyms and PREGO related names; test exact, related, multiscope
+    and unknown cases without a blanket downgrade.
+  finding_ids:
+  - F1
+  target_ids:
+  - ENVO:01000173
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Typed ontology synonym ingestion
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_terms.tsv
+    role: Governed ontology snapshot
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Preserve asserted scope
+  generator: src/habitatmech/seed.py
+  acceptance_checks:
+  - Use maintained input owners and exact source keys; preserve independent parents,
+    source counts/units and native lifecycle. No manual generated edits.
+  - Recheck source evidence, append native history, add exact-source regressions,
+    inspect a seed canary and regenerate affected products.
+  - Pass schema, strict, label, reproduction, review-integrity and full QC; save a
+    linked successor observation for each disposition.
+limitations:
+- A completed assessment is not a clean verdict or proof of every assertion.
+- Only first three exact BioSample/Organism descriptions per sheet were individually
+  interpreted. Other matched rows and joins were indexed, not individually reviewed.
+- Original assertion-level membership was not reconstructed; no current ontology/taxonomy/source
+  refresh was applied.
+- Same-agent review, not independent approval. No native status promotion.
+- SSSOM/KGX current kg-microbe conformance was not audited; shared1398 remains open.
+- Full-corpus review remains incomplete; ancestor/context reads do not add target
+  coverage.
+notes:
+- New immutable observation only; curation and publication are separate authorized
+  steps.
+- No prior structured observation of this exact target found; earlier reports/issues
+  remain leads rather than silently resolved findings.
+tags:
+- habitatmech
+- aquatic
+- record-review
+- scientific-review
+```

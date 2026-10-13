@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: doormat
+session:
+  id: 2026-10-08T105830Z-codex-57ed80
+  timestamp: '2026-10-08T10:58:30Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1716
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1715
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude the context-only house parent from Doormat
+  details: 'Added the exact GOLD mint/path/expected-parent exclusion for habitatmech:GOLD.a50c61f322.
+    Verified current official ENVO a2455d1a77e46bb8a664d65a157166b539269042: ENVO:01000417
+    denotes a dwelling building, not the mat/surface/debris context. Evidence is the individual
+    Doormat report 20261008T101747Z and primary ENVO. Preserve source nodes 4846/4847, path,
+    omitted zero count/unit and CLASS/SEEDED lifecycle; no new material definition. Focused
+    corpus differential test passes, dry seed and forced target canary passed and the emitted
+    YAML was inspected. Full map/site/QC remain publication gates, not yet claimed complete.'

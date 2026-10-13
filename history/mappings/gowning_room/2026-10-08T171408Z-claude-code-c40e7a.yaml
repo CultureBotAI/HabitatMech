@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: gowning_room
+session:
+  id: 2026-10-08T171408Z-claude-code-c40e7a
+  timestamp: '2026-10-08T17:14:08Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1739
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: Exclude gowning-room cleanroom facility context from habitat genus
+  details: Added exact source/path/expected-parent exclusion for habitatmech:GOLD.ec294980eb.
+    Inspected NASA Cleanroom Gowning page distinguishes the changing room from the assembly
+    cleanroom; even a broader facility-complex interpretation would make the room a component,
+    not a subtype of the whole. Preserve node 5485, path, zero-count omission, mint and UNGROUNDED/CLASS/SEEDED
+    state. Leave the Floor child and its evidence unchanged; do not infer a replacement genus
+    or promote MIxS context. Identity and facility boundaries remain issue 1740. Dry seed
+    and full-corpus before/after regression passed, including unchanged descendant. Inspected
+    the genetically-modified canary before full regeneration. Full QC will run after regeneration.

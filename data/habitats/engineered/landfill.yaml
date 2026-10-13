@@ -40,7 +40,6 @@ synonyms:
 parent_habitats:
 - ENVO:00000309
 - ENVO:01001884
-- mesh:D062611
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3513
@@ -112,3 +111,15 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-10-09T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution mesh:D062611 for habitatmech:GOLD.baf1d9bbc6
+    (Engineered > Solid waste > Landfill). ITEM hierarchy assessment (#1773): primary
+    ENVO a2455d1a77e46bb8a664d65a157166b539269042 defines ENVO:00000533 as a containing
+    landform, while NLM mesh:D062611 (https://id.nlm.nih.gov/mesh/M0568791.json) denotes
+    discarded materials, not the site containing them. Exclude only this exact GOLD
+    material-context parent; preserve independent ENVO:00000309 and ENVO:01001884
+    genera, identity, definition, EXACT/REVIEWED state, three GOLD nodes, 30 ORGANISM
+    versus 5 TAXON assertions, five observational associations and prior events. Synonym
+    scope remains separately tracked in #1249. Evidence: reports/yaml_record_review/20261009T040101Z-landfill.md.'

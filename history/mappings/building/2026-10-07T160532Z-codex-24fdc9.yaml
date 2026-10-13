@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/causal_graphs/building.yaml
+  slug: building
+session:
+  id: 2026-10-07T160532Z-codex-24fdc9
+  timestamp: '2026-10-07T16:05:32Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1646
+events:
+- type: AUDIT
+  outcome: no_change
+  sections:
+  - session.actors
+  - causal_graphs
+  summary: Correct the scaffolder actor default for the building graph session
+  details: 'The preceding history/mappings/building/2026-10-07T160342Z-claude-code-68f235.yaml
+    was created by Codex, not Claude Code. Its actor name inherited the scaffolder default
+    because --actor-name was omitted; the explicit model gpt-5 and agent_tool codex fields
+    were supplied by this session. This append-only correction preserves that record and corrects
+    attribution without reconstructing the missing September session. The overlay changes
+    described there were made by Codex. Focused graph regression tests now pass 13/13, all
+    3207 records reproduce exactly, and rendering regenerated the building page while full
+    semantic-map validation accepted the unchanged map input identity. Full QC and final publication
+    receipts follow on PR #1645. No additional scientific changes are made by this audit.'

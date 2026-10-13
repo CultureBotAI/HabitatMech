@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: sludge__25c88b98
+session:
+  id: 2026-10-11T172053Z-codex-gpt-5-5566cd
+  timestamp: '2026-10-11T17:20:53Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1948
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: 'Exclude unsupported GOLD context parent: sludge__25c88b98'
+  details: 'Bounded material/context correction (https://github.com/CultureBotAI/HabitatMech/issues/1948;
+    20261011T171205Z-sludge__25c88b98 F1): the source-qualified Sludge material is not a kind
+    of its enclosing treatment device, facility, operating context or feed stream. EPA primary
+    sedimentation and suspended-growth descriptions distinguish material from treatment infrastructure
+    (https://www.epa.gov/sites/production/files/2015-09/documents/primer.pdf, printed pp11-12);
+    current ENVO class axioms and exact source path support this exclusion. Retain independent
+    material genus, mint, source node/path, frozen ORGANISM count or omission, and native
+    status. Later sample examples do not reconstruct original membership; shared mapping-endpoint
+    #1398 remains open. Exact-scope differential regressions passed, including all preserved
+    source fields, valid material genera and the effluent descendant. Dry seed and forced
+    canaries were inspected before full regeneration. Post-correction native gates, semantic-map/site
+    freshness and final CI remain required before merge. Source membership and mapping endpoints
+    are not resolved by this change.'

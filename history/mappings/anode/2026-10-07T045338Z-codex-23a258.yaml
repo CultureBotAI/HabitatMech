@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: anode
+session:
+  id: 2026-10-07T045338Z-codex-23a258
+  timestamp: '2026-10-07T04:53:38Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: codex-gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1612
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1611
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  - source_attestations
+  summary: Exclude the Anode component-to-system GOLD parent
+  details: 'Added only the exact Anode GOLD path and expected whole-MFC parent exclusion.
+    Primary PMID12620842 distinguishes electrode, medium and whole fuel-cell system. Preserve
+    UNGROUNDED/SEEDED, both source nodes, source path and omitted zero count/unit; no replacement
+    definition or inherited biofilm taxa. Full-corpus regression compares against the table
+    without this row and the aquaculture row; all non-parent/non-event fields are unchanged.
+    Focused suite: 69 passed. Dry seed and inspected split canary passed; final corpus/site/OAK/QC
+    checks follow before merge.'

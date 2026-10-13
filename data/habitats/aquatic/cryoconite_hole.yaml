@@ -13,7 +13,6 @@ synonyms:
   source: ENVO
 parent_habitats:
 - ENVO:03000048
-- habitatmech:GOLD.6faa98a0aa
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7968
@@ -25,3 +24,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.6faa98a0aa
+    for habitatmech:GOLD.be661308d8 (Environmental > Aquatic > Freshwater > Glacier
+    > Cryoconite hole). ITEM hierarchy assessment: https://github.com/CultureBotAI/HabitatMech/issues/1987
+    (20261012T001703Z-cryoconite_hole). The cryoconite melt-hole feature is not the
+    whole glacier containing it. The ontology thaw-hole superclass definition restricts
+    it to a channel through floating ice, which needs reconciliation with cryoconite
+    holes on grounded glacier surfaces. Exclude only this guarded GOLD source-parent
+    contribution. Preserve independent parents, frozen source identity/counts/units
+    or omissions and native lifecycle. Later examples do not reconstruct frozen membership;
+    shared synonym and endpoint issues remain separate.'

@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: compost
+session:
+  id: 2026-10-07T223812Z-claude-code-98bcdf
+  timestamp: '2026-10-07T22:38:12Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1664
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude compost waste-input context from strict hierarchy
+  details: Added the exact GOLD.4741a9f8bb source-path and mesh:D062611 parent guard after
+    inspecting EPA definitions, NLM descriptor and the complete compost review. Preserve ENVO:03501300
+    and provenance; no identity split or legal classification inferred. Full-corpus differential
+    regression verifies only this parent contribution and audit change. Final QC and map verification
+    results are recorded in PR 1663; this entry does not claim pending checks passed.

@@ -8,7 +8,7 @@ grounding_status: CLOSE
 mapping_status: REVIEWED
 synonyms:
 - synonym_text: Septum
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: cardiac septa
   synonym_type: EXACT_SYNONYM
@@ -47,3 +47,9 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Septum'' as RELATED_SYNONYM, not exact: its canonical
+    ontology identity UBERON:0003037 is a strict ancestor of UBERON:0002099. Source
+    attestation remains verbatim (#1459).'

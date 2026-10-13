@@ -8,7 +8,7 @@ grounding_status: EXACT
 mapping_status: SEEDED
 synonyms:
 - synonym_text: Freshwater
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: fresh waters
   synonym_type: RELATED_SYNONYM
@@ -374,8 +374,9 @@ characteristic_taxa:
 causal_graphs:
 - graph_id: freshwater_hypoosmotic_response
   title: Freshwater hypoosmotic response
-  description: Low external osmolarity in fresh water drives water influx into bacterial
-    cells, increasing turgor and triggering mechanosensitive solute-release channels.
+  description: During osmotic downshock into fresh water from a higher-osmolarity
+    medium, bacterial water influx can raise turgor and membrane tension, triggering
+    mechanosensitive solute-release channels.
   nodes:
   - node_id: fresh_water
     label: fresh water
@@ -386,7 +387,7 @@ causal_graphs:
     node_type: ENVIRONMENTAL_PARAMETER
   - node_id: water_influx
     label: water influx
-    node_type: STATE
+    node_type: BIOLOGICAL_PROCESS
   - node_id: high_turgor_pressure
     label: high turgor pressure
     node_type: STATE
@@ -433,13 +434,18 @@ causal_graphs:
     subject: high_turgor_pressure
     predicate: activates
     object: mechanosensitive_channels
-    description: Elevated membrane and wall tension opens mechanosensitive channels
-      as a rapid emergency response.
+    description: During osmotic downshock, increased cytoplasmic membrane tension
+      associated with rising turgor opens mechanosensitive channels as a rapid emergency
+      response; lipid-bilayer forces provide the direct gating stimulus.
     evidence:
     - reference: DOI:10.1017/qrd.2022.3
       snippet: opening of various types of mechano-sensitive channels
       notes: The fresh-water osmotic down-shock section names mechanosensitive channel
         opening as the emergency response that prevents bursting.
+    - reference: DOI:10.1085/jgp.201411296
+      snippet: forces exerted by the lipid bilayer
+      notes: Wood's osmosensing section distinguishes direct lipid-bilayer gating
+        from the accompanying changes in turgor and cell-wall strain.
   - edge_id: channels_release_cytoplasmic_solutes
     subject: mechanosensitive_channels
     predicate: releases
@@ -481,11 +487,31 @@ curation_history:
   changes: Added a fresh-water hypoosmotic-response graph backed by DOI:10.1017/qrd.2022.3
     and DOI:10.1085/jgp.201411296.
   llm_assisted: true
-- timestamp: '2026-10-03T00:00:00Z'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Freshwater'' as RELATED_SYNONYM: a CLOSE source
+    mapping does not establish exact lexical equivalence. Independent ontology synonyms
+    and verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-12T00:00:00Z'
   curator: codex-gpt-5
   action: SOURCE_PARENT_EXCLUDED
-  changes: 'Excluded GOLD source-path parent contribution ENVO:00002030 for habitatmech:GOLD.ad12f0169a
-    (Environmental > Aquatic > Freshwater). Issue #1215: ENVO:00002011 fresh water
-    is liquid-water material, not an aquatic biome. GOLD Aquatic is source context
-    only. Preserve the ENVO liquid-water parent, source paths, independent attestations,
-    parameters, taxa, and causal evidence.'
+  changes: Excluded GOLD source-path parent contribution ENVO:00002030 for habitatmech:GOLD.ad12f0169a
+    (Environmental > Aquatic > Freshwater). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1994
+    (20261012T015201Z-fresh_water F1). The ENVO identity is low-solute liquid water,
+    not an aquatic biome. GOLD Freshwater is retained as close rather than exact,
+    but its identity merge needs source-level reassessment because later exact members
+    include a sediment-surface ecosystem sample as well as water samples. Sweet water
+    is an official related synonym, not exact. The downshock graph is conditionally
+    supported, with a process/state mismatch and an imprecise wall-tension gating
+    phrase. Exclude only the immediate GOLD contribution named here. Preserve source
+    identity, node/path provenance, counts/units, native status and independent parents;
+    separate decision and graph changes are recorded in their own owners.
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: CORRECT_CAUSAL_GRAPH
+  changes: 'Correct water influx from a cellular state to a biological process; qualify
+    the graph as osmotic downshock and distinguish lipid-bilayer channel gating from
+    wall strain. Stable node and edge IDs are retained. Evidence: DOI:10.1017/qrd.2022.3
+    and DOI:10.1085/jgp.201411296; issue #1995.'
+  llm_assisted: true

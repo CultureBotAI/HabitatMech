@@ -352,12 +352,13 @@ characteristic_taxa:
 causal_graphs:
 - graph_id: liquid_water_planktonic_solute_foraging
   title: Liquid water planktonic solute foraging
-  description: Bulk liquid water supplies high water activity, suspends free-living
-    cells and organic particles, dissolves lower-molecular-weight organic substrates,
-    and allows diffusion to form microscale nutrient patches. Extracellular enzymes
-    hydrolyze polymers into dissolved organic matter, and motile chemotactic bacteria
-    exploit those gradients to convert dissolved carbon into bacterial biomass within
-    aquatic microbial loops.
+  description: Conditional model of a connected marine water column containing planktonic
+    heterotrophic bacteria and localized organic substrates. Water activity must be
+    compatible with the focal organisms; liquid phase alone does not imply high water
+    activity, growth, or this planktonic setting. Particles may be suspended or sinking.
+    Extracellular hydrolysis and diffusion can create nutrient gradients, and chemotaxis
+    can improve access where its benefits exceed its costs. A fraction of assimilated
+    carbon supports biomass production, which can supply grazers in a microbial loop.
   nodes:
   - node_id: liquid_water
     label: liquid water
@@ -367,8 +368,8 @@ causal_graphs:
     label: high water activity
     node_type: ENVIRONMENTAL_FACTOR
   - node_id: bulk_aqueous_phase
-    label: bulk aqueous phase
-    node_type: STATE
+    label: connected marine water-column habitat
+    node_type: HABITAT
   - node_id: polymeric_organic_matter
     label: polymeric organic matter
     node_type: CHEMICAL
@@ -388,24 +389,27 @@ causal_graphs:
     label: chemotactic motility
     node_type: TRAIT
   - node_id: free_living_bacteria
-    label: free-living bacteria
-    node_type: TAXON
+    label: planktonic heterotrophic bacterial community
+    node_type: COMMUNITY
   - node_id: heterotrophic_uptake
     label: heterotrophic dissolved-carbon uptake
     node_type: PATHWAY
   - node_id: bacterial_biomass
-    label: bacterial biomass
-    node_type: STATE
+    label: bacterial biomass production
+    node_type: BIOLOGICAL_PROCESS
   - node_id: microbial_loop
     label: microbial loop
     node_type: COMMUNITY_PROCESS
   edges:
   - edge_id: liquid_water_provides_high_water_activity
     subject: liquid_water
-    predicate: provides
+    predicate: can provide
     object: high_water_activity
-    description: Liquid water keeps water activity high relative to salt-saturated
-      or desiccating habitats where low water activity limits microbial growth.
+    description: Within the sufficiently dilute conditions of this marine water-column
+      model, the aqueous medium can provide water activity compatible with the focal
+      bacteria. Water activity depends on solute composition and other conditions,
+      not on liquid phase alone; liquid hypersaline media can instead have low water
+      activity.
     evidence:
     - reference: PMID:15306380
       snippet: Life at low water activity
@@ -413,14 +417,18 @@ causal_graphs:
         when water availability falls in saline or dry habitats.
     - reference: PMID:25500507
       snippet: common water-activity limit
-      notes: Stevenson and colleagues tested bacterial, archaeal, and fungal growth
-        near the low-water-activity limit for active life.
+      notes: Stevenson and colleagues, Materials and methods, describe growth assays
+        in liquid salt-supplemented media at low water activities. These experiments
+        limit the edge's scope rather than proving that every liquid-water habitat
+        has high water activity.
   - edge_id: high_water_activity_permits_aquatic_growth
     subject: high_water_activity
-    predicate: permits
-    object: free_living_bacteria
-    description: High water availability permits hydrated free-living bacterial cells
-      to maintain active metabolism in aqueous habitats.
+    predicate: can permit
+    object: bacterial_biomass
+    description: Water activity compatible with the focal bacteria can permit hydrated
+      cells to maintain metabolism and produce biomass when other nutritional and
+      physiological requirements are met. High water activity alone is not sufficient
+      for growth and is not required by all bacteria.
     evidence:
     - reference: PMID:15306380
       snippet: Life at low water activity
@@ -434,41 +442,59 @@ causal_graphs:
     subject: liquid_water
     predicate: forms
     object: bulk_aqueous_phase
-    description: Liquid-water habitats form a connected aqueous phase in which planktonic
-      cells encounter dissolved and particulate substrates.
+    description: In this model, liquid water forms the medium of a connected marine
+      water-column habitat where planktonic cells encounter substrates. Isolated droplets
+      and other liquid-water microhabitats are outside this graph's scope; connectivity
+      is not inferred from material identity.
     evidence:
     - reference: DOI:10.3354/meps010257
       snippet: water-column microbes
       notes: Azam and colleagues treated liquid seawater as the bulk medium connecting
         bacteria, dissolved organic matter, and grazers.
+    - reference: PMID:23204367
+      notes: Introduction and Marine microenvironments describe the marine water column
+        and its localized substrates. This is the inspected full-text support for
+        the bounded setting, not all liquid water.
   - edge_id: liquid_water_suspends_free_living_cells
     subject: liquid_water
     predicate: suspends
     object: free_living_bacteria
-    description: Bulk liquid water supports dispersed, planktonic free-living bacterial
-      cells.
+    description: The modeled marine water column can contain dispersed planktonic
+      heterotrophic bacterial populations. Their presence is a community-level setting,
+      not a single taxon or a consequence guaranteed by the liquid phase.
     evidence:
     - reference: DOI:10.3354/meps010257
       snippet: ecological role of water-column microbes
       notes: Azam and colleagues synthesized bacterial biomass, production, and grazing
         in the marine water column.
+    - reference: PMID:23204367
+      notes: Introduction distinguishes diverse marine bacterial populations and their
+        water-column roles. The ecological assemblage is represented as COMMUNITY;
+        no species-wide habitat assertion is added.
   - edge_id: liquid_water_suspends_polymeric_particles
     subject: liquid_water
-    predicate: suspends
+    predicate: can contain
     object: polymeric_organic_matter
-    description: Aquatic organic particles and high-molecular-weight compounds remain
-      suspended in bulk water as substrates for extracellular enzymes.
+    description: The modeled water column can contain suspended or sinking organic
+      particles and high-molecular-weight substrates accessible to extracellular enzymes.
+      Neither persistent suspension nor substrate presence follows from liquid-water
+      identity alone.
     evidence:
     - reference: PMID:21329211
       snippet: extracellular enzymes and the marine carbon cycle
       notes: Arnosti reviewed how marine extracellular enzymes hydrolyze complex organic
         matter outside microbial cells.
+    - reference: PMID:23204367
+      snippet: suspended and sinking particles
+      notes: Particles as Resource Islands distinguishes particle suspension, sinking,
+        attached hydrolysis and release of dissolved substrates.
   - edge_id: polymeric_matter_requires_hydrolysis
     subject: polymeric_organic_matter
     predicate: requires
     object: extracellular_hydrolysis
-    description: Polymeric aquatic organic matter must be hydrolyzed outside the cell
-      before microbes can take up the resulting smaller substrates.
+    description: Macromolecular substrates too large for direct uptake require extracellular
+      hydrolysis into transportable products in this modeled route. This is not a
+      requirement for every dissolved organic compound.
     evidence:
     - reference: PMID:21329211
       snippet: extracellular enzymes
@@ -478,8 +504,9 @@ causal_graphs:
     subject: extracellular_hydrolysis
     predicate: releases
     object: dissolved_organic_matter
-    description: Extracellular hydrolysis converts polymeric particles into smaller
-      dissolved organic molecules in surrounding liquid water.
+    description: Extracellular hydrolysis can release smaller dissolved organic molecules
+      from polymeric substrates into surrounding water. This is one source of dissolved
+      organic matter, not its sole origin.
     evidence:
     - reference: PMID:21329211
       snippet: marine carbon cycle
@@ -513,10 +540,11 @@ causal_graphs:
         aquatic microscale nutrient heterogeneity.
   - edge_id: gradients_select_chemotactic_motility
     subject: microscale_solute_gradients
-    predicate: selects for
+    predicate: can favor
     object: chemotactic_motility
-    description: Transient nutrient gradients reward motile bacteria that can bias
-      swimming toward dissolved substrates.
+    description: Transient nutrient gradients can favor chemotactic bacteria where
+      access to substrates outweighs swimming and sensing costs. The model does not
+      imply that all marine bacteria are motile.
     evidence:
     - reference: PMID:23204367
       snippet: chemotaxis may provide a significant fitness advantage
@@ -524,10 +552,11 @@ causal_graphs:
         nutrient patches in aquatic habitats.
   - edge_id: chemotaxis_increases_dom_uptake
     subject: chemotactic_motility
-    predicate: increases
+    predicate: can increase
     object: heterotrophic_uptake
-    description: Chemotactic motility helps bacteria remain in nutrient patches long
-      enough to take up dissolved organic substrates.
+    description: Chemotactic motility can improve substrate exposure and uptake in
+      suitable nutrient patches; the benefit depends on transport, patch lifetime,
+      physiology and the costs of motility.
     evidence:
     - reference: PMID:23204367
       snippet: successfully use chemotaxis
@@ -537,36 +566,61 @@ causal_graphs:
     subject: dissolved_organic_matter
     predicate: supports
     object: free_living_bacteria
-    description: Dissolved organic matter supports heterotrophic bacterial growth
-      in liquid-water microbial communities.
+    description: Bioavailable dissolved organic substrates can support the modeled
+      planktonic heterotrophic bacterial community when other growth requirements
+      are met. This does not make all free-living bacteria heterotrophs or all dissolved
+      organic matter readily usable.
     evidence:
     - reference: DOI:10.3354/meps010257
       snippet: ecological role of water-column microbes
       notes: Azam and colleagues framed dissolved organic matter uptake by water-column
         bacteria as a central aquatic carbon-flow process.
+    - reference: PMID:23204367
+      notes: Introduction identifies marine bacterial transfer of dissolved organic
+        matter toward higher trophic levels; particle sections bound access to usable
+        substrates and localized conditions.
   - edge_id: uptake_generates_bacterial_biomass
     subject: heterotrophic_uptake
-    predicate: increases
+    predicate: supports
     object: bacterial_biomass
-    description: Heterotrophic uptake of dissolved carbon converts aquatic dissolved
-      organic matter into bacterial biomass.
+    description: Assimilation of part of the taken-up dissolved carbon can support
+      bacterial biomass production. Uptake is not identical to biomass production;
+      respiration and other carbon fates remain possible.
     evidence:
     - reference: DOI:10.3354/meps010257
       snippet: bacterial biomass and productivity
       notes: The microbial-loop synthesis linked uptake of dissolved carbon to bacterial
         biomass and productivity in the water column.
+    - reference: PMID:23204367
+      notes: Abstract distinguishes biomass incorporation from respiration. The endpoint
+        represents biomass production as a biological process, not a community biomass
+        stock mislabeled as a cellular state.
   - edge_id: bacterial_biomass_feeds_microbial_loop
     subject: bacterial_biomass
     predicate: contributes to
     object: microbial_loop
-    description: Bacterial biomass produced from dissolved organic matter enters a
-      microbial loop through heterotrophic flagellates and microzooplankton.
+    description: Bacterial biomass production can supply prey carbon to heterotrophic
+      flagellates and microzooplankton in the modeled marine microbial loop. This
+      conditional trophic route does not prescribe the fate of all produced biomass.
     evidence:
     - reference: DOI:10.3354/meps010257
       snippet: microbial loop
       notes: Azam and colleagues introduced the water-column microbial-loop model
         linking bacteria, bacterivorous flagellates, and microzooplankton.
+    - reference: PMID:23204367
+      notes: Introduction supports bacterial transfer of dissolved organic matter
+        toward higher trophic levels. Azam's inspected author-upload abstract supports
+        the named grazing sequence; its publisher full text remained inaccessible,
+        so no more detailed Azam-specific claim is made.
 curation_history:
+- timestamp: '2026-08-15T00:00:00Z'
+  curator: claude-opus-5
+  action: REVIEW
+  changes: 'Reviewed and endorsed the seeder''s own resolution. Co-attestor review
+    (#12): ''water'' resolves to ENVO:00002006 ''liquid water''. The term adds ''liquid'',
+    which the key does not say, but every parameter band on the row is a property
+    of liquid water and the table has separate rows for ice. Correct as seeded. (source
+    concept habitatmech:ENVIRONMENTS_TABLE.97e0db4016)'
 - timestamp: '2026-08-15T00:00:00Z'
   curator: claude-opus-5
   action: REVIEW
@@ -594,4 +648,15 @@ curation_history:
   changes: Added a liquid-water planktonic solute-foraging graph backed by PMID:15306380,
     PMID:25500507, PMID:21663439, PMID:21329211, PMID:23118182, PMID:23204367, and
     DOI:10.3354/meps010257.
+  llm_assisted: true
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: REVISE_CAUSAL_GRAPH
+  changes: Bounded the graph to a conditional marine water-column model under issue
+    1263. Distinguished liquid phase from water activity and suspended from sinking
+    particles; represented connected habitat, bacterial community and biomass-production
+    process without physical STATE nodes; retargeted the growth edge to biomass production
+    and separated uptake from carbon incorporation. Preserved graph, node and edge
+    IDs and existing citations; added claim-level support from inspected Stocker and
+    Seymour full text.
   llm_assisted: true

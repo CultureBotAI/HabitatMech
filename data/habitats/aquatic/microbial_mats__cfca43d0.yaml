@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: REVIEWED
 parent_habitats:
 - ENVO:01000008
-- habitatmech:GOLD.3098ee8fe8
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7886
@@ -29,3 +28,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.3098ee8fe8
+    for habitatmech:GOLD.2c1e36b661 (Environmental > Aquatic > Non-marine Saline and
+    Alkaline > Hypersaline soda lake > Microbial mats). Bounded hierarchy correction
+    https://github.com/CultureBotAI/HabitatMech/issues/1397 (20261012T073313Z-microbial_mats__cfca43d0).
+    Hypersaline-soda-lake mat: later isolates explicitly come from microbial mats.
+    Preserve two ORGANISM assertions and mat identity, excluding the whole-lake context
+    genus. Suppress only this exact GOLD context contribution. Preserve source path/nodes/counts/units
+    and independent justified parents. Source-identity questions and mapping-endpoint
+    semantics remain separate; this does not certify SSSOM/KGX.'

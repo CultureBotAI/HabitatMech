@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: photobioreactor
+session:
+  id: 2026-10-09T225712Z-codex-gpt-5-290a94
+  timestamp: '2026-10-09T22:57:12Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1830
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: Remove aquaculture context from generic photobioreactor hierarchy
+  details: Added an exact source-mint/path/resolved-parent exclusion for habitatmech:GOLD.96bbd55dce
+    and habitatmech:GOLD.0287e1b2a9. Official ENVO:03600077 defines the light-driven device
+    with ENVO:00002123 as genus; PMID:31405172 and DOI:10.3390/microorganisms7080252 distinguish
+    wastewater biofilm cultivation from an agricultural aquatic ecosystem. Baseline structured
+    review 20261009T225120Z-photobioreactor F1 records this evidence. Whole-corpus and semantic-text
+    regression passed, proving only this target changes and retaining both source paths, all
+    five nodes, one ORGANISM assertion, zero-count omission, acronym synonym, exact mappings
+    and ITEM/REVIEWED status. Dry-run passed. Canary, generated site and final PR gates are
+    checked separately; no new identity or status promotion is inferred.

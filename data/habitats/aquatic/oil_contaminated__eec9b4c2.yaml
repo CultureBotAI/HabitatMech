@@ -4,7 +4,6 @@ habitat_category: AQUATIC
 grounding_status: NARROW
 mapping_status: REVIEWED
 parent_habitats:
-- ENVO:00000207
 - ENVO:00002149
 source_attestations:
 - source: GOLD
@@ -26,3 +25,18 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00000207 for habitatmech:GOLD.d640d7cf58
+    (Environmental > Aquatic > Marine > Oceanic > Oil-contaminated). Bounded hierarchy
+    correction https://github.com/CultureBotAI/HabitatMech/issues/1421 (20261012T091840Z-oil_contaminated__eec9b4c2).
+    This offshore oil-contaminated source retains a minted identity and reviewed seawater-material
+    genus. Offshore location alone does not establish that sampled material is an
+    entire organized oceanic water mass. Later oil-field, water and sediment descriptions
+    leave source breadth uncertain; keep the material interpretation explicit rather
+    than claiming formal disjointness of water and water masses. Exclude only this
+    exact GOLD context contribution. Preserve qualified identity, source nodes/path/counts/units
+    and independently justified parents. Original occurrence membership remains unrecovered.
+    Shared mapping endpoints and typed ontology synonyms are separate open work, not
+    SSSOM/KGX certification.

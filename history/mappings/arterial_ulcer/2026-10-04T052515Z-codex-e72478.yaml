@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: arterial_ulcer
+session:
+  id: 2026-10-04T052515Z-codex-e72478
+  timestamp: '2026-10-04T05:25:15Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: codex-gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/220
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - rationale
+  - provenance
+  summary: Clarify arterial-ulcer condition versus lesion-site rationale without reclassification
+  details: 'Replaced the generic exclusion note for habitatmech:GOLD.03b138e563 with the node-specific
+    clinical-condition interpretation: GOLD node 7033 is under Multisystem conditions and
+    has separate Lesion site child 7034. Both tree rows have zero assertions; structured side-table
+    searches did not identify specimens. The inspected primary abstract PMID:10731891, DOI:10.1024/0301-1526.29.1.62
+    documents ulcer-area sampling including arterial ulcers but does not resolve either GOLD
+    node. Retained NOT_APPLICABLE, ITEM, identifier, parent and source fields; did not reclassify
+    wounds as non-habitats or import clinical observations. Review report 20261004T052302Z-arterial_ulcer.md
+    records minor finding HM-ARTERIAL-ULCER-001; broader issue #220 remains open. Source row
+    and full target/parent/child read; focused schema and strict checks and batch OAK passed
+    before editing. Actual semantic adapter excludes decision history; guarded seed/canary,
+    corpus and history validation, rendered-site checks and full QC are required after this
+    edit. No committed session history was modified.'

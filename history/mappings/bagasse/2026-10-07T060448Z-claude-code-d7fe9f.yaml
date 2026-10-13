@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: bagasse
+session:
+  id: 2026-10-07T060448Z-claude-code-d7fe9f
+  timestamp: '2026-10-07T06:04:48Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: codex-gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1617
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1616
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: Exclude the discarded-waste context parent of generic bagasse
+  details: 'Added one guarded GOLD source/path/expected-parent exclusion. Rechecked NLM M0568791
+    scope and FAO sugarcane byproducts chapter: generic bagasse can be retained material,
+    so source Solid waste is not its universal MeSH genus. Preserve ENVO:00002264, definition,
+    exact synonym, all source observations and SEEDED status. Full-corpus before/after test
+    proves only bagasse and the independently reviewed bench surface change, limited to parent
+    and audit fields. Focused suite 36 passed; dry seed and inspected target canary passed.
+    Final full QC and generated-site checks follow.'

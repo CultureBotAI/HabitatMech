@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: src/habitatmech/seed.py
+  slug: close_source_synonyms
+session:
+  id: 2026-10-07T223816Z-claude-code-0f602a
+  timestamp: '2026-10-07T22:38:16Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1459
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - synonyms
+  - curation_history
+  summary: Retain CLOSE source aliases without asserting exact synonymy
+  details: 'GOLD and BacDive ingestion now use RELATED_SYNONYM for CLOSE mappings, based on
+    each source resolution rather than aggregate grounding. Independent ontology synonyms
+    and original attestations remain intact. Append deterministic scope events. Focused tests
+    cover both routes, CLOSE versus EXACT, independent exact aliases and shared spellings.
+    Complete pre-write corpus comparison: synonym changes in 133 records; identities, attestations,
+    taxa and parameter values unchanged. Remaining untyped ontology scope is separate issue
+    1249. Final QC and product regeneration results are in PR 1663.'

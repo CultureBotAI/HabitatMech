@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: petroleum_sludge__d8d5571a
+session:
+  id: 2026-10-09T213433Z-codex-gpt-5-cc4b55
+  timestamp: '2026-10-09T21:34:33Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1828
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: Remove refinery-building context parent from petroleum sludge
+  details: Added the exact mint/path/parent exclusion for habitatmech:GOLD.c98a35c438 and
+    ENVO:03600078. Official ENVO describes a building; GOLD Gb0148806 and primary DOI:10.3389/fmicb.2016.01407
+    and DOI:10.1128/MRA.00218-19 describe sludge material; baseline structured review 20261009T212636Z-petroleum_sludge__d8d5571a
+    F1 records the distinction. Whole-corpus regression passed (2 tests in tests/test_pop_petroleum_review_fixes.py),
+    proving other records unchanged, including the nested sibling. Frozen count/unit, nodes/path,
+    mint and CLASS/SEEDED status are preserved. Lint, dry-run and full validated seed passed;
+    forced canary was inspected after the non-forced attempt skipped the existing file. History
+    tool required ../../culturebotai-claw/src and uv cache permission. No definition, genus,
+    identity or status promotion inferred. Full publication gates run separately.

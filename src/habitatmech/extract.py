@@ -53,6 +53,13 @@ from collections.abc import Iterator
 from pathlib import Path
 from typing import Any
 
+from habitatmech.ontology_labels import (
+    PLAN_PATH,
+    RECEIPT_PATH,
+    apply_label_refresh,
+    load_receipt,
+)
+
 REPO_ROOT = Path(__file__).resolve().parents[2]
 RAW_DIR = REPO_ROOT / "data" / "raw"
 CONF_PATH = REPO_ROOT / "conf" / "sources.yaml"
@@ -866,6 +873,12 @@ def _load_bto(kgm: Path) -> tuple[dict[str, dict[str, str]], list[tuple[str, str
         ):
             if subject in terms:
                 terms[subject]["definition"] = value or ""
+        for subject, value in conn.execute(
+            "SELECT subject, value FROM statements "
+            "WHERE predicate = 'owl:deprecated' AND subject LIKE 'BTO:%'"
+        ):
+            if subject in terms:
+                terms[subject]["deprecated"] = str(value).strip() if value is not None else ""
         edges = [
             (subject, "biolink:subclass_of", obj)
             for subject, obj in conn.execute(
@@ -1241,6 +1254,10 @@ def _manifest_inputs(kgm: Path, mappings: Path | None) -> list[tuple[str, Path]]
     table = mappings or (kgm / "mappings" / "isolation_source_to_ontology.tsv")
     if table.exists():
         found.append((MAPPINGS_ROLE, table))
+    found.extend([
+        ("habitatmech/conf/ontology_label_refresh.yaml", PLAN_PATH),
+        ("habitatmech/data/ontology_label_refresh.json", RECEIPT_PATH),
+    ])
     return found
 
 
@@ -1265,9 +1282,12 @@ def build_manifest(
         # file's entire job (#72).
         *([f"mappings_source: {mappings_source or 'unrecorded — pass --mappings-from'}",
            f"mappings_staged_at: {mappings_override}",
-           "mappings_note: pinned separately, so kg_microbe_source describes every OTHER "
-           "input. mappings_staged_at is a local path; the sha256 below identifies the bytes."]
+           "mappings_note: pinned separately from kg_microbe_source. "
+           "mappings_staged_at is a local path; the sha256 below identifies the bytes."]
           if mappings_override else []),
+        "ontology_label_refresh: ../ontology_label_refresh.json",
+        "ontology_label_note: reviewed rdfs:label updates replayed after the kg-microbe "
+        "slice; other ontology fields retain the kg-microbe snapshot.",
         # A non-zero count means GOLD's parent chain contained a cycle and some
         # canonical paths are truncated — see the extractor's WARNING output.
         f"gold_truncated_paths: {gold_truncated_paths}",
@@ -1547,6 +1567,7 @@ def main(argv: list[str] | None = None) -> int:
 
     print("extracting ontology term slice ...")
     term_rows, edge_rows = extract_ontology_terms(kgm, referenced, source_labels)
+    term_rows = apply_label_refresh(term_rows, load_receipt())
     print(
         f"  {len(term_rows)} terms ({len(referenced)} directly referenced), "
         f"{len(edge_rows)} subclass edges"

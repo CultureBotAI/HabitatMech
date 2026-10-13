@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: sand_microcosm
+session:
+  id: 2026-10-10T070915Z-codex-gpt-5-023ed6
+  timestamp: '2026-10-10T07:09:15Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1868
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  summary: Use the verified PubMed URL in the sand microcosm decision note
+  details: 'Correction to history/mappings/sand_microcosm/2026-10-10T065303Z-codex-gpt-5-21c2f9.yaml:
+    CI 38032874915 rejected PMID:26076202 as an unvendored ontology CURIE. Replace that citation
+    spelling only with https://pubmed.ncbi.nlm.nih.gov/26076202/. Scientific decision and
+    source claims are unchanged. The targeted decision-note test and both scoped regression
+    tests passed (3 tests). Validated canary regeneration passed; final semantic-input comparison,
+    site reproduction and full QC remain publication gates. Existing history and reviews remain
+    immutable.'

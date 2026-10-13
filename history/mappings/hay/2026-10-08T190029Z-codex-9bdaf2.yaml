@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: hay
+session:
+  id: 2026-10-08T190029Z-codex-9bdaf2
+  timestamp: '2026-10-08T19:00:29Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1745
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude the GOLD Brown waste context parent from generic hay
+  details: Added the exact source-path exclusion for habitatmech:GOLD.162c34f9a7 and expected
+    parent habitatmech:GOLD.e292616707. ENVO hay denotes preserved fodder, corroborated by
+    the FAO haymaking chapter; not all hay is discarded waste. Retain independent ENVO:0010003,
+    identity, definition, three ORGANISM assertions and SEEDED status. Evidence and bounded
+    source-member limitations are in reports/yaml_record_review/20261008T182739Z-hay.md. A
+    full before/after regression passed and proves only the parent and deterministic exclusion
+    event change; dry seed passed. Source-scope splitting remains conditional on original
+    member evidence. Canary inspection and full generated-artifact/QC gates are required before
+    merge.

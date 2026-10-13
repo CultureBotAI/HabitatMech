@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: lake_water
+session:
+  id: 2026-10-09T032209Z-codex-37c45d
+  timestamp: '2026-10-09T03:22:09Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1768
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1767
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude Mesocosm context from lake-water material hierarchy
+  details: Added the exact GOLD.a32131f499 path/ENVO:01000620 exclusion. Complete pinned primary
+    ENVO a2455d1a77e46bb8a664d65a157166b539269042 class elements establish water material
+    with independent liquid-water and astronomical-body-part parents, not a kind of experimental
+    vivarium. Preserve identity, definition, two source nodes, one ORGANISM assertion and
+    EXACT/SEEDED status. Full-corpus regression proves only the target parent and appended
+    audit event change for this exclusion. Dry seed, inspected two-record canary and full
+    seed passed; 26 focused tests passed. Full semantic-input comparison changes only ENVO:04000007;
+    a genuine map/site rebuild and complete QC are pending and will be recorded on PR 1767.
+    Original source equivalence remains issue 1771. No generated record was hand-edited.

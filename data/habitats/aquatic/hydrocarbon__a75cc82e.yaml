@@ -3,8 +3,6 @@ label: Hydrocarbon
 habitat_category: AQUATIC
 grounding_status: NOT_APPLICABLE
 mapping_status: REVIEWED
-parent_habitats:
-- habitatmech:GOLD.3841c9c3af
 xrefs:
 - CHEBI:24632
 source_attestations:
@@ -26,3 +24,18 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NOT_APPLICABLE.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution habitatmech:GOLD.3841c9c3af
+    for habitatmech:GOLD.db79f0142d (Environmental > Aquatic > Marine > Deep subsurface
+    > Hydrocarbon). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1994
+    (20261012T015314Z-hydrocarbon__a75cc82e F1). CHEBI hydrocarbon is a chemical class
+    and the chemical xref is valid, but the source is a Marine > Deep subsurface >
+    Hydrocarbon environmental bin. Later exact BioSamples describe a Halfdan Field
+    hydrocarbon community, so the source-level NOT_APPLICABLE decision requires evidence
+    beyond a lexical chemical match. Neither a chemical nor its sampled material is
+    the deep-subsurface region itself. Exclude only the immediate GOLD contribution
+    named here. Preserve source identity, node/path provenance, counts/units, native
+    status and independent parents; separate decision and graph changes are recorded
+    in their own owners.

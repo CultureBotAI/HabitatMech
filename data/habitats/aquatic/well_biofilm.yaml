@@ -3,8 +3,6 @@ label: Well biofilm
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.22a80cbd14
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5960
@@ -23,3 +21,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-06T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.22a80cbd14
+    for habitatmech:GOLD.1f74489d04 (Environmental > Aquatic > Deep subsurface > Groundwater
+    > Well biofilm). ITEM hierarchy assessment (#1592): official ENVO a2455d1a77e46bb8a664d65a157166b539269042
+    distinguishes biofilm ENVO:00002034, a microbial aggregation with an adhesive
+    matrix, from groundwater ENVO:01001004. A well-associated biofilm is not a kind
+    of the surrounding water. Exclude only this GOLD context parent; preserve the
+    qualified mint, GOLD5960, full path, absent count/unit/predicate and UNGROUNDED/CLASS/SEEDED
+    provenance. A supported biofilm genus and definition need separate item-level
+    curation; do not infer casing, fracture, depth or experimental scope.'

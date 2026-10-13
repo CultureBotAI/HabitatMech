@@ -4,8 +4,7 @@ habitat_category: AQUATIC
 grounding_status: NARROW
 mapping_status: REVIEWED
 parent_habitats:
-- ENVO:00000279
-- ENVO:01001043
+- ENVO:00002007
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7962
@@ -16,14 +15,41 @@ source_attestations:
   assertion_count: 4
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: GROUND_AS_PARENT
-  changes: 'ENVO:00000279 ''saline pan'' attached as a parent, not adopted as the
-    identity (NARROW). The sediment of a salt pan, not the pan itself. Pulled out
-    of the class-level sweep, whose note wrongly claimed no term matched. Label: ''Salt
-    flat/Salt pan sediment''. (source concept habitatmech:GOLD.1bb701a40c)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: GROUND_AS_PARENT
+  changes: 'ENVO:00002007 ''sediment'' attached as a parent, not adopted as the identity
+    (NARROW). Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/1463
+    (20261012T111109Z-salt_flat_salt_pan_sediment). The ITEM rationale explicitly
+    calls this the sediment of a salt pan, not the pan itself, yet assigns saline-pan
+    feature ENVO:00000279 as its genus. The independent hypersaline-water-environment
+    parent is also context, not a particulate-material superclass. Later organisms
+    are from salt-flat sediment or mud. Use sediment as a broad candidate; do not
+    assume all pan deposits satisfy marine-water-column deposition or currently saline
+    porespace restrictions. Retain the qualified mint under ENVO:00002007 sediment,
+    not an exact identity. The sediment genus follows the deposited material meaning
+    and inspected source descriptions. Marine-water-column deposition and currently
+    saline porespace are not universally established; do not impose those tighter
+    genera. No authored definition is added to this NARROW record. Original member
+    provenance remains unavailable and shared endpoint issue #1398 remains open. Source
+    accounting and unrelated records must be preserved. (source concept habitatmech:GOLD.1bb701a40c)'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:01001043 for habitatmech:GOLD.1bb701a40c
+    (Environmental > Aquatic > Non-marine Saline and Alkaline > Hypersaline > Salt
+    flat/Salt pan sediment). Exact source-context correction https://github.com/CultureBotAI/HabitatMech/issues/1463
+    (20261012T111109Z-salt_flat_salt_pan_sediment). The ITEM rationale explicitly
+    calls this the sediment of a salt pan, not the pan itself, yet assigns saline-pan
+    feature ENVO:00000279 as its genus. The independent hypersaline-water-environment
+    parent is also context, not a particulate-material superclass. Later organisms
+    are from salt-flat sediment or mud. Use sediment as a broad candidate; do not
+    assume all pan deposits satisfy marine-water-column deposition or currently saline
+    porespace restrictions. Suppress only this immediate GOLD contribution; preserve
+    identity, source paths/nodes/counts/units, omitted counts and independent genera.
+    Original occurrence membership remains unavailable. No source-scope, endpoint
+    or SSSOM/KGX certification is implied.

@@ -3,8 +3,6 @@ label: Near-boiling (>90C)
 habitat_category: AQUATIC
 grounding_status: NOT_APPLICABLE
 mapping_status: REVIEWED
-parent_habitats:
-- ENVO:00000051
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3763
@@ -25,3 +23,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NOT_APPLICABLE.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00000051 for habitatmech:GOLD.8b53067bc5
+    (Environmental > Aquatic > Thermal springs > Near-boiling (>90C)). Bounded hierarchy
+    correction https://github.com/CultureBotAI/HabitatMech/issues/2009 (20261012T073356Z-near_boiling_90c__f7b76591).
+    Thermal near-boiling source: the maintained decision calls it a temperature band,
+    not an entire hot spring. Later Great Boiling Springs water samples do not make
+    that quality a spring genus or establish all original sample temperatures. Suppress
+    only this exact GOLD context contribution. Preserve source path/nodes/counts/units
+    and independent justified parents. Source-identity questions and mapping-endpoint
+    semantics remain separate; this does not certify SSSOM/KGX.'

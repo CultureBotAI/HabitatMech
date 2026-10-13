@@ -8,14 +8,13 @@ grounding_status: CLOSE
 mapping_status: REVIEWED
 synonyms:
 - synonym_text: Saline spring
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: saline spring
   synonym_type: EXACT_SYNONYM
   source: ENVO
 parent_habitats:
 - ENVO:00000125
-- habitatmech:GOLD.22a80cbd14
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7983
@@ -34,3 +33,24 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Saline spring'' as RELATED_SYNONYM: a CLOSE source
+    mapping does not establish exact lexical equivalence. Independent ontology synonyms
+    and verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution habitatmech:GOLD.22a80cbd14
+    for habitatmech:GOLD.e037666392 (Environmental > Aquatic > Deep subsurface > Groundwater
+    > Saline spring). Exact source-context correction https://github.com/CultureBotAI/HabitatMech/issues/1467
+    (20261012T111110Z-salt_spring). Salt spring is a groundwater-emergence feature
+    with elevated dissolved-salt concentrations; the mineral-spring genus and close-mapped
+    source label are supported. The additional minted deep-subsurface Groundwater
+    parent denotes liquid material, not a spring superclass. Retain the spring identity
+    and true mineral-spring genus while reviewing only that source-context contribution.
+    No later exact-path examples were found in the inspected export. Suppress only
+    this immediate GOLD contribution; preserve identity, source paths/nodes/counts/units,
+    omitted counts and independent genera. Original occurrence membership remains
+    unavailable. No source-scope, endpoint or SSSOM/KGX certification is implied.

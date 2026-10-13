@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: sandstone
+session:
+  id: 2026-10-10T065256Z-codex-gpt-5-a42820
+  timestamp: '2026-10-10T06:52:56Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1864
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude source context from strict parentage of sandstone
+  details: 'Reviewed hierarchy exclusion (#1864; structured review 20261010T063411Z-sandstone
+    F1): generic ENVO:00002055 sandstone includes natural material outside built heritage,
+    whereas the authored parent definition requires human-emplaced heritage stone. Exclude
+    only this GOLD use-context contribution; retain the independent ENVO:01000271 clastic-rock
+    genus, exact material identity, both source attestations, GOLD ORGANISM/PREGO TAXON units,
+    association scores/taxa and REVIEWED state. PMID:20525813 supports a particular sandstone-monument
+    isolation, not a restriction of all sandstone to that setting. The entire target and canary
+    diffs were inspected. Dry-run seeding and the sand-filter and sand-microcosm canaries
+    passed; two new focused regression tests compare all 3208 records with the named changes
+    disabled, proving exact scope. Generated record history reflects current decisions; prior
+    CLASS decisions remain in Git and the immutable original reviews. Semantic-map/site regeneration,
+    label correspondence and full QC remain required publication gates.'

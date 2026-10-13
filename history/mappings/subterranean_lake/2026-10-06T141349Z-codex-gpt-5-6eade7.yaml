@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: subterranean_lake
+session:
+  id: 2026-10-06T141349Z-codex-gpt-5-6eade7
+  timestamp: '2026-10-06T14:13:49Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1562
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1561
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  summary: Attach explicit underground-lake genus while retaining freshwater source identity
+  details: 'ITEM-reviewed exact GOLD4561/4562 path, raw local-scale annotation and typed ENVO
+    commit a2455d1a77e46bb8a664d65a157166b539269042. CONFIRM_UNGROUNDED with relation=parent
+    uses existing supported placement rather than GROUND_AS_PARENT, so no implicit source
+    mapping predicate is introduced (#1398). Exact identity remains unresolved; no authored
+    definition is needed. Two samples/one study are not organism counts. Dry seed and the
+    guarded freshwater canary were inspected; remaining full QC and genuine map build are
+    required before merge. Supersedes the generated 2026-08-12T00:00:00Z claude-opus-5 CONFIRM_UNGROUNDED
+    CLASS event with rationale: Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep):
+    no term in the vendored slice matched this label by any search route. Whether the concept
+    is a habitat at all was NOT assessed, so this is not yet a term-request candidate. The
+    original event remains in git baseline ed9350d70 and the report; this append-only session
+    records the supersession. Generator history represents current decisions rather than accumulating
+    old decision rows. The 2026-08-16 seed event is unchanged.'

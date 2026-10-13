@@ -7,10 +7,9 @@ grounding_status: EXACT
 mapping_status: SEEDED
 synonyms:
 - synonym_text: Mud
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 parent_habitats:
-- ENVO:00001999
 - ENVO:01000001
 - ENVO:01000813
 source_attestations:
@@ -27,3 +26,21 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Mud'' as RELATED_SYNONYM, not exact: its canonical
+    ontology identity ENVO:01000001 is a strict ancestor of ENVO:00005795. Source
+    attestation remains verbatim (#1459).'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00001999 for habitatmech:GOLD.7429158f71
+    (Environmental > Aquatic > Marine > Mud). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1287
+    (20261012T054253Z-marine_mud F1). Mud within a marine ecosystem is an environmental
+    material, not an entire marine water body. Preserve the independent mud and astronomical-body-part
+    ontology parents, the two GOLD nodes and 54 ORGANISM assertions. Source-path marine
+    context and the OWL part-of restriction do not establish subclass-of water body.
+    Exclude only the immediate GOLD contribution named here. Preserve source identity,
+    node/path provenance, counts/units, native status and independent parents. Unresolved
+    source identity, genus, synonym and mapping-endpoint findings remain separate.

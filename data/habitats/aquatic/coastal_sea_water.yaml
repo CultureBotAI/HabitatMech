@@ -7,10 +7,10 @@ grounding_status: EXACT
 mapping_status: REVIEWED
 synonyms:
 - synonym_text: Coastal
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: Neritic zone/Coastal water
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: coastal ocean water
   synonym_type: EXACT_SYNONYM
@@ -31,9 +31,7 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: PREGO
 parent_habitats:
-- ENVO:00001999
 - ENVO:00002149
-- ENVO:01000125
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3780
@@ -241,3 +239,58 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Coastal'' as RELATED_SYNONYM: a CLOSE source mapping
+    does not establish exact lexical equivalence. Independent ontology synonyms and
+    verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Neritic zone/Coastal water'' as RELATED_SYNONYM:
+    a CLOSE source mapping does not establish exact lexical equivalence. Independent
+    ontology synonyms and verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00001999 for habitatmech:GOLD.1a3d0aff0c
+    (Environmental > Aquatic > Marine > Coastal). ITEM hierarchy assessment: https://github.com/CultureBotAI/HabitatMech/issues/1987
+    (20261012T001621Z-coastal_sea_water). ENVO denotes sea-water material near a coast.
+    GOLD Coastal and Coastal zone are place-based bins, including sediment examples
+    in the later export, not coextensive water-material classes. CLOSE does not establish
+    identity. The marine-water-body and littoral-zone parents are context, while sea
+    water is a defensible genus. Official coastal water is a broad synonym, not exact.
+    Exclude only this guarded GOLD source-parent contribution. Preserve independent
+    parents, frozen source identity/counts/units or omissions and native lifecycle.
+    Later examples do not reconstruct frozen membership; shared synonym and endpoint
+    issues remain separate.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00001999 for habitatmech:GOLD.89754b31f3
+    (Environmental > Aquatic > Marine > Neritic zone/Coastal water). ITEM hierarchy
+    assessment: https://github.com/CultureBotAI/HabitatMech/issues/1987 (20261012T001621Z-coastal_sea_water).
+    ENVO denotes sea-water material near a coast. GOLD Coastal and Coastal zone are
+    place-based bins, including sediment examples in the later export, not coextensive
+    water-material classes. CLOSE does not establish identity. The marine-water-body
+    and littoral-zone parents are context, while sea water is a defensible genus.
+    Official coastal water is a broad synonym, not exact. Exclude only this guarded
+    GOLD source-parent contribution. Preserve independent parents, frozen source identity/counts/units
+    or omissions and native lifecycle. Later examples do not reconstruct frozen membership;
+    shared synonym and endpoint issues remain separate.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:01000125 for habitatmech:GOLD.ad324e6267
+    (Environmental > Aquatic > Marine > Littoral zone > Neritic zone/Coastal water).
+    ITEM hierarchy assessment: https://github.com/CultureBotAI/HabitatMech/issues/1987
+    (20261012T001621Z-coastal_sea_water). ENVO denotes sea-water material near a coast.
+    GOLD Coastal and Coastal zone are place-based bins, including sediment examples
+    in the later export, not coextensive water-material classes. CLOSE does not establish
+    identity. The marine-water-body and littoral-zone parents are context, while sea
+    water is a defensible genus. Official coastal water is a broad synonym, not exact.
+    Exclude only this guarded GOLD source-parent contribution. Preserve independent
+    parents, frozen source identity/counts/units or omissions and native lifecycle.
+    Later examples do not reconstruct frozen membership; shared synonym and endpoint
+    issues remain separate.'

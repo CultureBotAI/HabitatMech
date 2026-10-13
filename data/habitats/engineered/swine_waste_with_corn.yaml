@@ -3,8 +3,6 @@ label: Swine waste with corn
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.79e523eace
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6482
@@ -27,3 +25,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.79e523eace
+    for habitatmech:GOLD.288559828e (Engineered > Animal feed production > Fermentation
+    > Swine waste with corn). ITEM hierarchy assessment (#1955; 20261011T183016Z-swine_waste_with_corn
+    F1): The waste/corn mixture is not its fermentation process. The parent ITEM NOT_APPLICABLE
+    decision explicitly interprets that source as a process; later GOLD isolate descriptions
+    and BacDive6411 support swine waste-corn fermentation context. Preserve all five
+    frozen ORGANISM assertions; do not infer mixture composition or NOT_APPLICABLE
+    for the material. Exclude only this guarded source-path contribution. Preserve
+    other fields, frozen source nodes/count units or omissions, independent parents
+    and native lifecycle. Later source examples do not reconstruct original membership;
+    shared endpoint #1398 is unchanged.'

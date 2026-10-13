@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: schema
+  path: src/habitatmech/schema/habitatmech.yaml
+  slug: habitatmech
+session:
+  id: 2026-10-07T074517Z-codex-5dcd37
+  timestamp: '2026-10-07T07:45:17Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-6
+    agent_tool: codex
+links:
+  urls:
+  - https://github.com/CultureBotAI/culturebotai-claw/commit/7c516fd6d694915a1c2c5829c201251c4d04ac69
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - shared_schema
+  - vendored_governance
+  summary: Synchronize shared schema to published CLAW 7c516fd6
+  details: Applied the supported canonical synchronizer from reviewed CLAW main commit 7c516fd6d694915a1c2c5829c201251c4d04ac69
+    after public provenance verification and a two-file dry run. Updated the local byte-identity
+    schema assertion to the canonical digest. This prerequisite adds the shared CrossCorpusLink
+    definition; domain slots and records are outside this change. Validation uses schema tests
+    and fresh GitHub CI against this separate prerequisite branch.

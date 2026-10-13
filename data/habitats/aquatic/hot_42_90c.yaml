@@ -3,8 +3,6 @@ label: Hot (42-90C)
 habitat_category: AQUATIC
 grounding_status: NOT_APPLICABLE
 mapping_status: REVIEWED
-parent_habitats:
-- ENVO:00000051
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3764
@@ -25,3 +23,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NOT_APPLICABLE.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00000051 for habitatmech:GOLD.c085f6141a
+    (Environmental > Aquatic > Thermal springs > Hot (42-90C)). Bounded hierarchy
+    correction https://github.com/CultureBotAI/HabitatMech/issues/1994 (20261012T015308Z-hot_42_90c
+    F1). The maintained ITEM decision treats Hot (42-90C) as a temperature qualifier,
+    not a habitat identity. Preserve NOT_APPLICABLE and the 518 source ORGANISM assertions
+    as provenance. A temperature band is not a hot spring even though later matched
+    samples come from spring settings; the parent edge contradicts the explicit non-habitat
+    interpretation. Exclude only the immediate GOLD contribution named here. Preserve
+    source identity, node/path provenance, counts/units, native status and independent
+    parents; separate decision and graph changes are recorded in their own owners.

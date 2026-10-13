@@ -3,8 +3,6 @@ label: Produced water/Flow back
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:00002185
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7795
@@ -26,3 +24,19 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00002185 for habitatmech:GOLD.9272fc9901
+    (Environmental > Aquatic > Deep subsurface > Shale gas/oil reservoir > Produced
+    water/Flow back). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/2017
+    (20261012T091845Z-produced_water_flow_back). The source names fluids associated
+    with shale oil/gas extraction, not the reservoir landform containing them. USGS
+    distinguishes returned injected flowback from formation brine in production water.
+    Later time-series aqueous samples and formation/injection-water isolates support
+    material context but do not establish a single precise composition or complete
+    original membership. Assess the disjunction before any narrower exact mapping.
+    Exclude only this exact GOLD context contribution. Preserve qualified identity,
+    source nodes/path/counts/units and independently justified parents. Original occurrence
+    membership remains unrecovered. Shared mapping endpoints and typed ontology synonyms
+    are separate open work, not SSSOM/KGX certification.

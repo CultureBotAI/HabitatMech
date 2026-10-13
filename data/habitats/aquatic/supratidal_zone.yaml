@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:01000124
-- ENVO:01000125
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7910
@@ -17,3 +16,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-06T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:01000125 for habitatmech:GOLD.2ef6207bd1
+    (Environmental > Aquatic > Marine > Littoral zone > Supratidal zone). ITEM hierarchy
+    assessment (#1568): the component supratidal zone is not a kind of the whole marine
+    littoral region ENVO:01000125. Official ENVO a2455d1a77e46bb8a664d65a157166b539269042
+    relates ENVO:01000124 to that region by BFO:0000050 part-of, not named subsumption.
+    Suppress only this source-context contribution. Preserve GOLD7910, path, mint,
+    zero-count omission, existing status and independent ENVO:01000124 candidate placement
+    pending separate scope assessment. The retained-source endpoint mismatch remains
+    #1398; this exclusion does not fix it.'

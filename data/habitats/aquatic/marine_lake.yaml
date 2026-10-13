@@ -8,7 +8,6 @@ grounding_status: EXACT
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00000020
-- ENVO:00001999
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5341
@@ -21,3 +20,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00001999 for habitatmech:GOLD.e746c98e4b
+    (Environmental > Aquatic > Marine > Marine lake). Bounded hierarchy correction
+    https://github.com/CultureBotAI/HabitatMech/issues/1282 (20261012T054253Z-marine_lake
+    F1). A marine lake is defined by connection to the sea through tunnels or cracks.
+    The true lake parent is retained, but connection does not entail a whole water
+    body composed primarily of marine water. Becking and colleagues explicitly include
+    brackish marine lakes. Preserve the collapsed two-node GOLD path and keep MIxS
+    lagoon/brackish-water annotations in their separate roles. Exclude only the immediate
+    GOLD contribution named here. Preserve source identity, node/path provenance,
+    counts/units, native status and independent parents. Unresolved source identity,
+    genus, synonym and mapping-endpoint findings remain separate.

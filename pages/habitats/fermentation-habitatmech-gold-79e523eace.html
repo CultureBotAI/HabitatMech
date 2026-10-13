@@ -49,10 +49,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 </table>
 </div>
 
-<h2>Broader habitats</h2>
-<ul class="plain">
-  <li><a href="../habitats/animal-feed-production-habitatmech-gold-68f7051d62.html">Animal feed production</a>      <code class="curie">habitatmech:GOLD.68f7051d62</code></li>
-</ul>
 
 
 
@@ -66,6 +62,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">NOT_APPLICABLE</span>
     <span class="meta">2026-08-21 · codex-gpt-5</span>
     <p>Marked NOT_APPLICABLE: the source concept does not denote a habitat. Non-habitat screen review (#108): Engineered &gt; Animal feed production &gt; Fermentation names the production process, not the fermenting feed material or vessel. An external process term corroborates that it is a process but is not in the committed slice. (source concept habitatmech:GOLD.79e523eace)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-08 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.68f7051d62 for habitatmech:GOLD.79e523eace (Engineered &gt; Animal feed production &gt; Fermentation). ITEM hierarchy assessment (#1726): the maintained ITEM NOT_APPLICABLE decision interprets this exact source as a production process, so its production-environment source-path parent is not a strictly broader habitat under that interpretation. Exclude only this context contribution; preserve the mint, nodes 6479/6480/6481, full path, three ORGANISM assertions, NOT_APPLICABLE/REVIEWED status and historical decision. No generic process-only parent filter, replacement material/vessel identity or definition is asserted. Original source members are still needed to reassess process versus fermentation-environment scope; this does not endorse the separate child edge. Evidence: reports/yaml_record_review/20261008T133441Z-fermentation__cbf94220.md and curation/decisions.tsv.</p>
   </li>
 </ol>
 
@@ -83,11 +84,11 @@ from several source concepts can carry one decision per concept.</p>
     on 2026-08-16. Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party terms apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Grounding is by lexical match against ontology labels except where a curation
     decision says otherwise; treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a citable
-    claim. <a href="../index.html">Current review counts</a>.
+    claim. <a href="../index.html">Current workflow counts</a>.
   </p>
 </footer>
 </div>

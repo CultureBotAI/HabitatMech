@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002034
-- habitatmech:GOLD.a06aa6619e
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5682
@@ -18,3 +17,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.a06aa6619e
+    for habitatmech:GOLD.5eaebd18a7 (Engineered > Industrial production > Engineered
+    product > Biocathode > Biofilm). ITEM hierarchy assessment (#1631): biofilm microbial
+    material is not a kind of its biocathode substrate. ENVO:00002034 independently
+    supplies the biofilm genus; Nevin et al. 2010 (https://pubmed.ncbi.nlm.nih.gov/20714445/)
+    (DOI:10.1128/mBio.00103-10) distinguishes microbial biofilms from the cathode
+    surfaces on which they grow. Exclude only this GOLD context contribution; preserve
+    the qualified mint, GOLD5682, full industrial-product path, count/unit omissions,
+    skos:narrowMatch and NARROW/SEEDED status. Do not transfer the experiment''s organism,
+    electrode material or reaction, infer a GOLD study-to-publication crosswalk or
+    ITEM identity endorsement, or merge the separate MFC/Cathode biofilm.'

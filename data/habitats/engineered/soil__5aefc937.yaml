@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00001998
-- habitatmech:GOLD.86cf49cefb
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7692
@@ -18,3 +17,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.86cf49cefb
+    for habitatmech:GOLD.e9844fc187 (Engineered > Artificial ecosystem > Plant growth
+    chamber > Soil). ITEM hierarchy assessment (#1955; 20261011T182920Z-soil__5aefc937
+    F1): Soil sampled from a plant growth chamber is not the chamber. Later exact
+    GOLD descriptions distinguish soil/root material from its growth apparatus. Preserve
+    the independent soil genus. Exclude only this guarded source-path contribution.
+    Preserve other fields, frozen source nodes/count units or omissions, independent
+    parents and native lifecycle. Later source examples do not reconstruct original
+    membership; shared endpoint #1398 is unchanged.'

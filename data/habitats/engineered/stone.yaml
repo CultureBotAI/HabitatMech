@@ -13,7 +13,6 @@ synonyms:
   source: HabitatMech curation
 parent_habitats:
 - ENVO:0010001
-- habitatmech:GOLD.a8b8ee2424
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7126
@@ -49,3 +48,15 @@ curation_history:
     broader material classes. The source has zero direct assertions, but the exact
     grounded Sandstone child and built-heritage stone microbiome literature support
     retaining the grouping.
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.a8b8ee2424
+    for habitatmech:GOLD.8c6192908f (Engineered > Built environment > Monument > Stone).
+    ITEM hierarchy assessment (#1955; 20261011T182954Z-stone F1): The authored built
+    heritage stone material definition says forms part of a structure, not is a structure.
+    PMID:27658256 distinguishes sampled heritage stone fabric from the monument. Preserve
+    ENVO:0010001, the material definition and ITEM status. Exclude only this guarded
+    source-path contribution. Preserve other fields, frozen source nodes/count units
+    or omissions, independent parents and native lifecycle. Later source examples
+    do not reconstruct original membership; shared endpoint #1398 is unchanged.'

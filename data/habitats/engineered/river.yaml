@@ -38,7 +38,6 @@ synonyms:
   source: PREGO
 parent_habitats:
 - ENVO:00000023
-- ENVO:00002001
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5545
@@ -219,3 +218,16 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00002001 for habitatmech:GOLD.33a923764f
+    (Engineered > Wastewater > River). Reviewed hierarchy exclusion (#1856; structured
+    review 20261010T045310Z-river F1): ENVO:00000022 is a watercourse, not the anthropogenically
+    affected water material ENVO:00002001 that it receives. Current OLS definitions
+    and the existing ITEM decision describing a wastewater-receiving river support
+    this distinction. Exclude only the exact GOLD material-context parent; retain
+    independent stream genus ENVO:00000023, both source attestations, GOLD CLOSE predicate,
+    PREGO counts/scores/taxa, exact aggregate identity, existing REVIEWED status and
+    all prior events. This does not establish original source membership or resolve
+    ontology synonym scope tracked in #1249.'

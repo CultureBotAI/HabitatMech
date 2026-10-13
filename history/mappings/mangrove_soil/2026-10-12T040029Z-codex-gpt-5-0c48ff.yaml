@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: mangrove_soil
+session:
+  id: 2026-10-12T040029Z-codex-gpt-5-0c48ff
+  timestamp: '2026-10-12T04:00:29Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1269
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed hierarchy or mechanism for mangrove_soil
+  details: 'Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1269
+    (20261012T035128Z-mangrove_soil F1). GOLD.abc3a7c55b retains the mangrove-soil source
+    and 50 ORGANISM assertions. Mangrove-biome soil ENVO:02000138 is a supported broader material;
+    the intertidal region is context, not a material genus. Preserve the independently justified
+    soil parent. Exclude only the immediate GOLD contribution named here. Preserve source
+    identity, node/path provenance, counts/units, native status and independent parents; separate
+    decision and graph changes are recorded in their own owners. User authorized remediation
+    and publication. Dry seed and two canaries passed; full regeneration, post-fix checks,
+    map/site and full QC remain pending at event creation. Actual results will be reported
+    in PR #1999. No scientific status promotion.'

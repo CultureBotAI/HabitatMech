@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: cathode
+session:
+  id: 2026-10-07T165910Z-codex-530ca4
+  timestamp: '2026-10-07T16:59:10Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: codex-gpt-5
+    agent_tool: codex
+links:
+  urls:
+  - https://journals.asm.org/doi/10.1128/AEM.69.3.1548-1555.2003
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - source_attestations
+  - curation_history
+  summary: Exclude the Cathode component-to-system GOLD parent
+  details: 'Added only the guarded exclusion for habitatmech:GOLD.5d36b86f15 at Engineered
+    > Bioreactor > Microbial fuel cells/MFC > Cathode and resolved whole-system parent habitatmech:GOLD.cdf0160423.
+    Bond and Lovley 2003 methods distinguish assembly, electrodes and chambers; no cathode
+    taxon or GOLD-to-publication crosswalk is inferred. Preserve both source nodes, path,
+    collapse note, zero-count omissions, UNGROUNDED/SEEDED and all old events. Adversarial
+    assessment is recorded in reports/yaml_record_review/20261007T164238Z-cathode.md. The
+    whole-corpus differential regression confirms only this target and only parent/audit fields
+    change. Focused suite: 37 passed. Dry seed and inspected target canary passed. Full QC
+    and semantic-map/site refresh remain pending. GitHub issue/PR creation attempts returned
+    server errors; no issue number is asserted.'

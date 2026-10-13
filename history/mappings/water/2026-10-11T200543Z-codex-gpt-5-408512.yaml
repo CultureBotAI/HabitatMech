@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: water
+session:
+  id: 2026-10-11T200543Z-codex-gpt-5-408512
+  timestamp: '2026-10-11T20:05:43Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1962
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude reviewed GOLD context parent from water
+  details: 'ITEM hierarchy assessment (#1962; 20261011T200007Z-water F1): Canal-qualified
+    liquid water is material, not the entire canal water body. The current ENVO canal definition/comment
+    and three inspected exact later GOLD organism descriptions preserve this distinction.
+    Retain the independent ENVO:00002006 liquid-water genus and four frozen ORGANISM assertions;
+    endpoint #1398 remains unresolved. Exclude only this guarded source-path contribution.
+    Preserve independent parents, identity, definitions, frozen source nodes/count units or
+    omissions, and native lifecycle. Later source examples do not reconstruct original membership.
+    Authorized by the user publication and remediation request. Baseline: 46 native gates
+    passed; exact main CI passed 776 tests with three skipped. Post-correction regression,
+    canary, reproduction and full-QC results are pending at event creation and will be retained
+    in the PR and successor review.'

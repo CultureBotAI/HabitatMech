@@ -17,7 +17,6 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: PREGO
 parent_habitats:
-- ENVO:00000021
 - ENVO:01000283
 source_attestations:
 - source: GOLD
@@ -69,3 +68,17 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00000021 for habitatmech:GOLD.2d82ee602e
+    (Environmental > Aquatic > Freshwater > Lake > Hypolimnion/Profundal zone). Bounded
+    hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1245 (20261012T035124Z-hypolimnion
+    F1). ENVO:00002130 is the dense water layer below the thermocline, not a whole
+    freshwater lake. The GOLD slash-bin combines hypolimnion with profundal zone;
+    USGS distinguishes thermal layering from light-defined deep zones and sediments.
+    Later samples consistently identify hypolimnion but do not prove universal slash-bin
+    equivalence. PREGO remains an independent contributor. Exclude only the immediate
+    GOLD contribution named here. Preserve source identity, node/path provenance,
+    counts/units, native status and independent parents; separate decision and graph
+    changes are recorded in their own owners.

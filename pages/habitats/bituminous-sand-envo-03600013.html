@@ -51,7 +51,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 <h2>Broader habitats</h2>
 <ul class="plain">
-  <li><a href="../habitats/mine-envo-00000076.html">mine</a>      <code class="curie">ENVO:00000076</code></li>
   <li><a href="../habitats/environmental-material-envo-00010483.html">environmental material</a>      <code class="curie">ENVO:00010483</code></li>
 </ul>
 
@@ -71,6 +70,16 @@ from several source concepts can carry one decision per concept.</p>
     <span class="meta">2026-08-16 · claude-opus-5</span>
     <p>Reviewed and endorsed the seeder&#39;s own resolution. CLOSE-grounding review (#12): read against the full source path and the term&#39;s own definition. The grounding is right and CLOSE is the honest status — the term is the concept with a difference of framing or specificity that EXACT would overstate. (source concept habitatmech:GOLD.6a5b013cc9)</p>
   </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-07 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution ENVO:00000076 for habitatmech:GOLD.6a5b013cc9 (Engineered &gt; Built environment &gt; Mine &gt; Oil sands). ITEM hierarchy assessment (#1641): ENVO:03600013 bituminous sand denotes a granular environmental material, not a kind of the excavation ENVO:00000076 mine. Official ENVO a2455d1a77e46bb8a664d65a157166b539269042 explicitly treats the target as material and supplies ENVO:00010483 as its genus; the Alberta glossary (<a href="https://history.alberta.ca/energyheritage/sands/glossary.aspx" rel="noopener noreferrer" target="_blank">https://history.alberta.ca/energyheritage/sands/glossary.aspx</a>) distinguishes oil sands from extraction settings. Exclude only the GOLD mining-context contribution. Preserve the material genus, both source nodes 5840 and 5841, source path and collapse note, absent zero count/unit, CLOSE/REVIEWED status and prior audit. This does not resolve the separately tracked crude-bitumen synonym conflict (#1642).</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_SYNONYM_SCOPED</span>
+    <span class="meta">2026-10-07 · seed_from_sources</span>
+    <p>Retained GOLD label &#39;Oil sands&#39; as RELATED_SYNONYM: a CLOSE source mapping does not establish exact lexical equivalence. Independent ontology synonyms and verbatim attestations are preserved (#1459).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -87,11 +96,11 @@ from several source concepts can carry one decision per concept.</p>
     on 2026-08-16. Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party terms apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Grounding is by lexical match against ontology labels except where a curation
     decision says otherwise; treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a citable
-    claim. <a href="../index.html">Current review counts</a>.
+    claim. <a href="../index.html">Current workflow counts</a>.
   </p>
 </footer>
 </div>

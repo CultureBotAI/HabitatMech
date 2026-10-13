@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: biofilm__3aa782aa
+session:
+  id: 2026-10-07T093958Z-codex-cdf7c9
+  timestamp: '2026-10-07T09:39:58Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1632
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1630
+events:
+- type: AUDIT
+  outcome: changed
+  sections:
+  - provenance
+  summary: Correct the actor attribution for the biocathode hierarchy session
+  details: 'Append-only correction to history/mappings/biofilm__3aa782aa/2026-10-07T093837Z-claude-code-0726bf.yaml:
+    its actor name claude-code came from the scaffolder default and is incorrect. The session
+    actor was Codex, consistent with its existing agent_tool codex and model gpt-5 fields.
+    The original record is retained unchanged. This correction makes no second scientific
+    edit. All 34 gold-parent exclusion tests passed, the target canary was inspected, all
+    3207 records reproduced exactly, full semantic input comparison changed only habitatmech:GOLD.5eaebd18a7,
+    and OAK label correspondence passed. Final map/site and complete QC checks remain required
+    before merge.'

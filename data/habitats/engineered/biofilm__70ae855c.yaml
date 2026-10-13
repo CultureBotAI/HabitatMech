@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002034
-- habitatmech:GOLD.9b7ba22de1
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7658
@@ -19,3 +18,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.9b7ba22de1
+    for habitatmech:GOLD.080ba885f8 (Engineered > Bioreactor > Microbial fuel cells/MFC
+    > Anode > Biofilm). ITEM hierarchy assessment (#1635): Biofilm microbial material
+    is not a kind of its anode substrate. Reguera et al. 2006 (https://pubmed.ncbi.nlm.nih.gov/16936064/)
+    (DOI:10.1128/AEM.01444-06) distinguishes the attached biofilm from the MFC anode.
+    Exclude only this GOLD context contribution; retain independent ENVO:00002034,
+    qualified mint, all source IDs and paths, count/unit omissions or values, collapsed-node
+    notes, skos:narrowMatch and existing NARROW/SEEDED status. No new identity endorsement,
+    experimental condition, taxon or causal claim is inferred.'

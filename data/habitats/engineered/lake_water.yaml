@@ -7,7 +7,6 @@ grounding_status: EXACT
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002006
-- ENVO:01000620
 - ENVO:01000813
 source_attestations:
 - source: GOLD
@@ -23,3 +22,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-09T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:01000620 for habitatmech:GOLD.a32131f499
+    (Engineered > Artificial ecosystem > Mesocosm > Lake water). ITEM hierarchy assessment
+    (#1768): primary ENVO a2455d1a77e46bb8a664d65a157166b539269042 defines ENVO:04000007
+    as water that is part of a lake, whereas ENVO:01000620 is an experimentally controlled
+    vivarium embedded in a natural environment. Water material is not a kind of the
+    enclosure supplying its context. Exclude only this exact GOLD source-parent contribution;
+    preserve independent ENVO:00002006 and ENVO:01000813 parents, identity, definition,
+    two source nodes, one ORGANISM assertion and SEEDED status. In-lake versus removed-water
+    source equivalence remains unresolved (#1771); no replacement definition or identity
+    decision follows.'

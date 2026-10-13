@@ -9,7 +9,6 @@ grounding_status: EXACT
 mapping_status: REVIEWED
 parent_habitats:
 - ENVO:00000002
-- ENVO:00000856
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4397
@@ -96,3 +95,17 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-10-09T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00000856 for habitatmech:GOLD.fc89e5f170
+    (Engineered > Built environment > City > Park). Reviewed hierarchy exclusion (#1818):
+    active ENVO:00000562 denotes a bounded recreation/conservation area, while ENVO:00000856
+    denotes an incorporated populated place. A park located in a city is not a type
+    of city. Exclude only this exact GOLD location-context contribution; preserve
+    the independent ENVO:00000002 genus, both source attestations, eight PREGO associations,
+    frozen counts/units/scores, EXACT/REVIEWED state and previous events. This does
+    not endorse urban-source equivalence with generic park (#1819) or normalize the
+    merged taxonomy identifier (#1820). Evidence: reviews/structured/20261009T201157Z-park/review.yaml
+    F1; https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms?obo_id=ENVO:00000562
+    and ENVO:00000856.'

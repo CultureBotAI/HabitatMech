@@ -3,8 +3,6 @@ label: Anaerobic digestor
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:00002001
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3510
@@ -26,3 +24,12 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00002001 for habitatmech:GOLD.ed87e682a9
+    (Engineered > Wastewater > Anaerobic digestor). ITEM hierarchy assessment (#1609):
+    The digestor is a reactor, not a type of the waste-water material it treats. EPA
+    distinguishes the microbial containment unit from its contents: https://www.epa.gov/agstar/how-does-anaerobic-digestion-work
+    . Exclude only the immediate GOLD context contribution; preserve identity, source
+    counts and existing review status.'

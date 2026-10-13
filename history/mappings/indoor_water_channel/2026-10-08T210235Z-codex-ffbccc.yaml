@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/definition_source_label_exclusions.tsv
+  slug: indoor_water_channel
+session:
+  id: 2026-10-08T210235Z-codex-ffbccc
+  timestamp: '2026-10-08T21:02:35Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1755
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1753
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - synonyms
+  - curation_history
+  summary: Honor the reviewed exclusion of the ambiguous Indoor fallback synonym
+  details: Added a required, curation-floor-protected structured table and fail-closed loader
+    for native definition rename opt-outs. The one reviewed row pins GOLD.b4e93f5d66, Indoor
+    and indoor artificial water channel system with separate provenance; no free-text note
+    parsing or global scope downgrade. Seeder suppresses only displaced-label retention and
+    emits SOURCE_SYNONYM_EXCLUDED without rewriting the earlier definition event or verbatim
+    source attestation. The author already explicitly rejected the ambiguous exact alias.
+    Both parents, definition, source nodes, count omission and REVIEWED state stay intact.
+    Added malformed/stale/contradictory-policy tests, genuine-exact and PREGO controls and
+    a whole-corpus before/after regression; existing retained-xref and genus tests remain.
+    Dry seed and inspected target canary passed. Full QC and map/site regeneration are pending
+    at scaffolding time; no CI pass or original-member crosswalk is claimed.

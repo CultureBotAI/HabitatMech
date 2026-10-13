@@ -8,7 +8,7 @@ grounding_status: EXACT
 mapping_status: SEEDED
 synonyms:
 - synonym_text: Peat
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: peat
   synonym_type: EXACT_SYNONYM
@@ -579,3 +579,9 @@ curation_history:
   changes: Added a peat-soil acidic methane-cycling graph backed by PMID:24682299,
     PMID:24682300, PMID:12513979, PMID:16872405, PMID:11837310, and PMID:16121180.
   llm_assisted: true
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Peat'' as RELATED_SYNONYM: a CLOSE source mapping
+    does not establish exact lexical equivalence. Independent ontology synonyms and
+    verbatim attestations are preserved (#1459).'

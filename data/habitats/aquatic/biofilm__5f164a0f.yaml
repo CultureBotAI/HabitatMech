@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002034
-- habitatmech:GOLD.d61fa6c9ee
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5446
@@ -17,3 +16,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.d61fa6c9ee
+    for habitatmech:GOLD.5298ffd023 (Environmental > Aquatic > Freshwater > Aquifer
+    > Biofilm). ITEM hierarchy assessment: https://github.com/CultureBotAI/HabitatMech/issues/1979
+    (20261011T225538Z-biofilm__5f164a0f). The aquifer-qualified biofilm retains the
+    generic biofilm genus but is not an aquifer. This exact path has no later matched
+    sample or organism in the inspected export, so original occurrence is not inferred.
+    Its source mint versus ontology-parent comparison must be distinguished from the
+    attestation endpoint contract. Exclude only this guarded GOLD source-parent contribution.
+    Preserve independent parents, frozen source identity/counts/units or omissions
+    and native lifecycle. Later examples do not reconstruct frozen membership; shared
+    synonym and endpoint issues remain separate.'

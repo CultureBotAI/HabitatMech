@@ -1,0 +1,50 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: coastal_sea_water
+session:
+  id: 2026-10-12T002247Z-codex-gpt-5-55d2bf
+  timestamp: '2026-10-12T00:22:47Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1987
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude reviewed GOLD context parents from coastal_sea_water
+  details: 'ITEM hierarchy assessment: https://github.com/CultureBotAI/HabitatMech/issues/1987
+    (20261012T001621Z-coastal_sea_water). ENVO denotes sea-water material near a coast. GOLD
+    Coastal and Coastal zone are place-based bins, including sediment examples in the later
+    export, not coextensive water-material classes. CLOSE does not establish identity. The
+    marine-water-body and littoral-zone parents are context, while sea water is a defensible
+    genus. Official coastal water is a broad synonym, not exact. Exclude only this guarded
+    GOLD source-parent contribution. Preserve independent parents, frozen source identity/counts/units
+    or omissions and native lifecycle. Later examples do not reconstruct frozen membership;
+    shared synonym and endpoint issues remain separate. ITEM hierarchy assessment: https://github.com/CultureBotAI/HabitatMech/issues/1987
+    (20261012T001621Z-coastal_sea_water). ENVO denotes sea-water material near a coast. GOLD
+    Coastal and Coastal zone are place-based bins, including sediment examples in the later
+    export, not coextensive water-material classes. CLOSE does not establish identity. The
+    marine-water-body and littoral-zone parents are context, while sea water is a defensible
+    genus. Official coastal water is a broad synonym, not exact. Exclude only this guarded
+    GOLD source-parent contribution. Preserve independent parents, frozen source identity/counts/units
+    or omissions and native lifecycle. Later examples do not reconstruct frozen membership;
+    shared synonym and endpoint issues remain separate. ITEM hierarchy assessment: https://github.com/CultureBotAI/HabitatMech/issues/1987
+    (20261012T001621Z-coastal_sea_water). ENVO denotes sea-water material near a coast. GOLD
+    Coastal and Coastal zone are place-based bins, including sediment examples in the later
+    export, not coextensive water-material classes. CLOSE does not establish identity. The
+    marine-water-body and littoral-zone parents are context, while sea water is a defensible
+    genus. Official coastal water is a broad synonym, not exact. Exclude only this guarded
+    GOLD source-parent contribution. Preserve independent parents, frozen source identity/counts/units
+    or omissions and native lifecycle. Later examples do not reconstruct frozen membership;
+    shared synonym and endpoint issues remain separate. Authorized by user publication/remediation
+    request. Baseline 47 native checks and exact main CI 827 passed/3 skipped succeeded. Post-fix
+    tests, canary, regeneration and full QC pending at event creation; outcomes will be retained
+    in PR and successor reviews.'

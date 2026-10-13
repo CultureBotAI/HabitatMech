@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: sanger
+session:
+  id: 2026-10-10T065305Z-codex-gpt-5-a4d7a5
+  timestamp: '2026-10-10T06:53:05Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1865
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - mapping_status
+  summary: Correct item-level grounding for sanger
+  details: 'ITEM correction (#1865; structured review 20261010T063411Z-sanger F1). Path: Engineered
+    > Modeled > Simulated communities (sequence read mixture) > Sanger. The exact source bin
+    denotes computational sequence-read mixtures, not a physical microbial environment. GOLD-linked
+    simLC/simMC/simHC benchmark projects cite PMID:17468765 (DOI:10.1038/nmeth1043), whose
+    abstract constructs simulated datasets by combining reads from 113 isolate genomes. Keep
+    the citable mint, source nodes, complete path and zero-count omission; do not invent a
+    habitat definition, ground to a physical microcosm or reclassify unreviewed sibling concepts.
+    The entire target and canary diffs were inspected. Dry-run seeding and the sand-filter
+    and sand-microcosm canaries passed; two new focused regression tests compare all 3208
+    records with the named changes disabled, proving exact scope. Generated record history
+    reflects current decisions; prior CLASS decisions remain in Git and the immutable original
+    reviews. Semantic-map/site regeneration, label correspondence and full QC remain required
+    publication gates.'

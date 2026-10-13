@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: swamp_ecosystem
+session:
+  id: 2026-10-06T155006Z-codex-gpt-5-15e0f2
+  timestamp: '2026-10-06T15:50:06Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1569
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1565
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: Exclude wetland-area context parent from swamp ecosystem
+  details: 'Excluded only GOLD.0f3918255c/path/ENVO:00000043. Preserved ENVO:00000233 identity,
+    independent ENVO:01001209 genus, all three source attestations/predicates, 26 taxa/ranks/pools
+    and prior REVIEWED provenance. An overlapping area is not an ecosystem genus. Existing
+    synonym-scope defect #1249 and source hydroperiod questions remain unresolved; no blanket
+    synonym or definition rewrite. Session uses exec_command/apply_patch and the documented
+    claw history scaffolder, with current official typed ENVO a2455d1a77e46bb8a664d65a157166b539269042,
+    exact committed source rows and the individual report as evidence. Dry seed and forced
+    canary passed and were inspected. Full-corpus scope regression, labels, provenance, history,
+    exact reproduction, full QC and genuine map/site rebuild remain required before merge.
+    No SSSOM/KGX readiness claim.'

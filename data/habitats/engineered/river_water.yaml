@@ -4,7 +4,6 @@ habitat_category: ENGINEERED
 grounding_status: EXACT
 mapping_status: SEEDED
 parent_habitats:
-- ENVO:01000620
 - ENVO:03605006
 source_attestations:
 - source: GOLD
@@ -18,3 +17,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:01000620 for habitatmech:GOLD.5a98f4a82a
+    (Engineered > Artificial ecosystem > Mesocosm > River water). Reviewed hierarchy
+    exclusion (#1857; structured review 20261010T045310Z-river_water F1): river-water
+    material is not a kind of the experimentally controlled vivarium ENVO:01000620.
+    Current OLS definitions distinguish the water material and experimental system.
+    Exclude only this exact GOLD context contribution; retain independent stream-water
+    genus ENVO:03605006, nodes 6457/6458, full source path, exact predicate, zero-count
+    omission, SEEDED status and prior events. In-river versus removed-water source
+    equivalence remains unresolved in #1858; this parent correction does not endorse
+    exact identity or invent a replacement genus.'

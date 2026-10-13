@@ -3,8 +3,6 @@ label: Woodchip biofilm
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.b076c78736
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5853
@@ -24,3 +22,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.b076c78736
+    for habitatmech:GOLD.f9d0b8af79 (Engineered > Bioreactor > Denitrification > Woodchip
+    Bioreactor (WBR) > Woodchip biofilm). ITEM hierarchy assessment (#1962; 20261011T200036Z-woodchip_biofilm
+    F1): Woodchip-associated biofilm is not the containing woodchip bioreactor. The
+    first three exact later BioSamples distinguish the biofilm from the reactor treating
+    synthetic drainage. Biofilm community and material remain distinct grounding candidates.
+    Earlier #768 corrected review guidance, not the generated hierarchy. Exclude only
+    this guarded source-path contribution. Preserve independent parents, identity,
+    definitions, frozen source nodes/count units or omissions, and native lifecycle.
+    Later source examples do not reconstruct original membership.'

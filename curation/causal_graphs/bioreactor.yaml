@@ -2,14 +2,16 @@ identifier: ENVO:00002123
 causal_graphs:
 - graph_id: bioreactor_feed_dilution_biomass_selection
   title: Bioreactor feed dilution biomass selection
-  description: Engineered bioreactor operation turns a containment vessel,
-    liquid feed, hydraulic exchange, biomass retention, and physicochemical
-    setpoints into a wet, nutrient-rich microbial habitat. The feed stream sets
-    organic loading, outflow creates dilution pressure on suspended cells,
-    retention surfaces keep attached biomass inside the vessel, and choices such
-    as aeration, temperature, ammonia, organic loading rate, and hydraulic
-    retention time select the community processes that transform influent into
-    engineered products.
+  description: Conditional examples of liquid continuous-culture, aerobic,
+    biofilm-retaining, and anaerobic-digester operation within the broader
+    bioreactor class. These branches are not requirements for every bioreactor
+    and need not coexist in one vessel. Flow and dilution apply to liquid
+    continuous operation; carrier retention applies to biofilm designs;
+    syntrophy and methanogenesis apply to anaerobic digester communities.
+    Source-attributed environmental parameter bands are not universal operating
+    conditions. Detailed flow and community-selection evidence still requires
+    claim-level follow-up under issue 1638; conditional scope is not certification
+    of every mechanism edge.
   nodes:
   - node_id: bioreactor
     label: bioreactor
@@ -47,7 +49,7 @@ causal_graphs:
     node_type: HABITAT
   - node_id: retained_microbiome
     label: retained bioreactor microbiome
-    node_type: TAXON
+    node_type: COMMUNITY
   - node_id: anaerobic_syntrophy
     label: anaerobic syntrophy
     node_type: COMMUNITY_PROCESS
@@ -65,20 +67,18 @@ causal_graphs:
     subject: bioreactor
     predicate: determined by
     object: engineered_containment_vessel
-    description: The parent bioreactor habitat is defined by a contained,
-      actively managed reactor vessel that keeps microbial biomass and process
-      medium inside engineered boundaries.
+    description: The broad bioreactor class is a containment unit capable of
+      hosting organisms and maintaining conditions conducive to their metabolic
+      activities; it does not require liquid medium or continuous flow.
     evidence:
-    - reference: PMID:16207900
-      snippet: Continuous culture--making a comeback?
-      notes: Hoskisson and Hobbs reviewed controlled continuous-culture
-        bioreactors as vessels with managed inflow, outflow, and cultivation
-        parameters.
+    - reference: https://purl.obolibrary.org/obo/ENVO_00002123
+      notes: ENVO definition, inspected through OLS on 2026-10-11. This is the
+        class boundary, not experimental evidence for a particular operating mode.
   - edge_id: containment_maintains_liquid_medium
     subject: engineered_containment_vessel
     predicate: maintains
     object: liquid_reactor_medium
-    description: The vessel holds the water-rich process medium in which feed,
+    description: In liquid-culture designs, the vessel holds process medium in which feed,
       suspended biomass, products, and wastes are mixed.
     evidence:
     - reference: PMID:16207900
@@ -89,8 +89,9 @@ causal_graphs:
     subject: engineered_containment_vessel
     predicate: enables
     object: managed_operating_setpoints
-    description: Bioreactor construction gives operators levers such as flow,
-      mixing, gas transfer, pH, and temperature control.
+    description: In controlled liquid-culture designs, vessel construction
+      provides operating controls; the cited mass-transfer review addresses
+      agitation and gas transfer rather than every possible setpoint.
     evidence:
     - reference: PMID:19041387
       snippet: oxygen transfer in microbial processes
@@ -100,7 +101,7 @@ causal_graphs:
     subject: managed_operating_setpoints
     predicate: controls
     object: influent_feed
-    description: The selected feed composition and feed rate determine which
+    description: In fed liquid cultures, the selected feed composition and feed rate determine which
       carbon and nutrient substrates enter the reactor.
     evidence:
     - reference: PMID:16207900
@@ -111,8 +112,8 @@ causal_graphs:
     subject: influent_feed
     predicate: determines
     object: organic_loading_rate
-    description: Influent substrate concentration and flow rate together set the
-      organic loading rate experienced by the reactor microbiome.
+    description: In flow-fed anaerobic co-digestion, influent substrate
+      concentration and flow relative to reactor volume set organic loading.
     evidence:
     - reference: PMID:36610483
       snippet: organic loading rate and hydraulic retention time
@@ -123,8 +124,9 @@ causal_graphs:
     subject: managed_operating_setpoints
     predicate: controls
     object: hydraulic_retention_time
-    description: Operators set the liquid flow relative to reactor volume, which
-      fixes how long soluble substrates remain in the vessel.
+    description: In the flow-fed co-digestion experiment, hydraulic retention
+      time is an operating variable. Volume divided by flow describes mean
+      hydraulic residence, not a fixed residence time for every reacting solute.
     evidence:
     - reference: PMID:36610483
       snippet: hydraulic retention time
@@ -134,8 +136,9 @@ causal_graphs:
     subject: hydraulic_retention_time
     predicate: determines
     object: dilution_pressure
-    description: Shorter hydraulic retention increases the rate at which medium
-      and suspended cells leave the bioreactor.
+    description: For a fixed-volume flowing liquid culture without independent
+      cell retention, shorter hydraulic retention implies faster turnover of
+      medium and suspended cells. This does not apply to batch or retained biomass.
     evidence:
     - reference: PMID:16207900
       snippet: Continuous culture--making a comeback?
@@ -145,8 +148,9 @@ causal_graphs:
     subject: dilution_pressure
     predicate: selects for
     object: retained_microbiome
-    description: Reactor outflow selects organisms and attachment modes able to
-      persist despite washout of non-retained suspended cells.
+    description: In continuous liquid culture, dilution imposes a persistence
+      constraint on non-retained suspended populations. Selection of attachment
+      modes is not established by the cited continuous-culture abstract.
     evidence:
     - reference: PMID:16207900
       snippet: continuous culture
@@ -156,7 +160,7 @@ causal_graphs:
     subject: managed_operating_setpoints
     predicate: controls
     object: mixing_aeration_regime
-    description: Agitation and gas flow set mixing intensity and oxygen transfer
+    description: In aerated liquid reactors, agitation and gas flow set mixing intensity and oxygen transfer
       into the liquid reactor medium.
     evidence:
     - reference: PMID:19041387
@@ -167,8 +171,9 @@ causal_graphs:
     subject: mixing_aeration_regime
     predicate: selects for
     object: retained_microbiome
-    description: Aeration and mixing alter oxygen availability and substrate
-      exposure, making them physicochemical filters on reactor communities.
+    description: In aerated liquid communities, altered oxygen availability is
+      a proposed selective filter. This community-selection extension is an
+      inference from mass transfer, not a demonstrated result of the cited review.
     evidence:
     - reference: PMID:19041387
       snippet: Bioreactor scale-up and oxygen transfer
@@ -202,8 +207,8 @@ causal_graphs:
     subject: attached_biofilm
     predicate: retains
     object: retained_microbiome
-    description: Biofilms increase biomass retention, protecting reactor
-      communities from hydraulic washout.
+    description: In biofilm-based anaerobic designs, attachment can increase
+      biomass retention; detachment and washout can still occur.
     evidence:
     - reference: DOI:10.1186/s13068-024-02592-4
       snippet: biomass retention
@@ -213,8 +218,9 @@ causal_graphs:
     subject: organic_loading_rate
     predicate: selects for
     object: retained_microbiome
-    description: Organic loading rate and hydraulic residence jointly shape
-      reactor performance, community interactions, and functional traits.
+    description: In the cited thermophilic food-waste and sewage-sludge
+      co-digestion experiment, organic loading and hydraulic residence affected
+      performance, community interactions, and functional traits.
     evidence:
     - reference: PMID:36610483
       snippet: interspecies interactions and functional traits
@@ -225,8 +231,9 @@ causal_graphs:
     subject: managed_operating_setpoints
     predicate: selects for
     object: retained_microbiome
-    description: Shared operating conditions impose deterministic selection on
-      replicate engineered digester communities.
+    description: The cited replicate anaerobic-digester experiment supports
+      deterministic selection under shared operating conditions. The separate
+      cross-installation survey reports associations, not the same experimental test.
     evidence:
     - reference: DOI:10.1038/ismej.2014.50
       snippet: Deterministic processes
@@ -268,13 +275,18 @@ causal_graphs:
     subject: acetate_hydrogen_formate
     predicate: fuels
     object: methanogenic_archaea
-    description: Methanogenic archaea consume acetate or reduced one-carbon
-      intermediates to produce methane in anaerobic reactor communities.
+    description: In anaerobic digester food webs, aceticlastic methanogens use
+      acetate, whereas hydrogenotrophic methanogens use hydrogen as an electron
+      donor to reduce carbon dioxide. Formate can also support methanogenesis.
+      Hydrogen is not a carbon substrate; these are alternative guild activities,
+      not capabilities attributed to every associated taxon.
     evidence:
     - reference: PMID:21558697
-      snippet: Syntrophic acetate-oxidizing microbes
-      notes: Syntrophic acetate oxidation depends on methanogens that keep
-        hydrogen or formate low enough to make acetate oxidation favorable.
+      notes: Hattori 2008, Introduction (p118), Table 1 (p119), and the
+        formate-utilizing partner discussion (p120), inspected 2026-10-11.
+        Distinguishes acetate cleavage from hydrogen-dependent CO2 reduction
+        and formate-linked cooperation; acetate oxidation is one part of a
+        broader food web, not the direction of every intermediate-producing edge.
   - edge_id: methanogenic_archaea_produce_methane
     subject: methanogenic_archaea
     predicate: produces
@@ -295,4 +307,12 @@ curation_history:
     PMID:16207900, PMID:19041387, PMID:36610483,
     DOI:10.1186/s13068-024-02592-4, DOI:10.1038/ismej.2014.50,
     PMID:25819618, PMID:24246480, and PMID:21558697.
+  llm_assisted: true
+- timestamp: '2026-10-11T05:16:25Z'
+  curator: codex-gpt-5
+  action: CURATE_CAUSAL_GRAPH
+  changes: Scoped operating-mode examples, represented retained microbiome as
+    COMMUNITY, and distinguished hydrogen electron donation from carbon substrates
+    (#1638). Detailed claim-level evidence follow-up remains open; no source
+    attestation, taxon association, native status or habitat identity was changed.
   llm_assisted: true

@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002034
-- habitatmech:GOLD.b4e93f5d66
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8494
@@ -18,3 +17,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.b4e93f5d66
+    for habitatmech:GOLD.905d58ea72 (Engineered > Artificial ecosystem > Water channel
+    system > Indoor > Biofilm). Bounded hierarchy correction (#1902; review 20261011T041045Z-biofilm__5327749c
+    F1): biofilm material is not an indoor artificial water-channel system. The maintained
+    parent definition denotes channels and enclosure; retained later exact-path BioSamples
+    and study Gs0168233 describe biofilms grown in that context. Preserve the independent
+    ENVO:00002034 genus, qualified mint, node 8494, full path, zero-count omission
+    and NARROW/SEEDED status. No reactor, substrate, chemical or mechanism identity
+    is inferred. Original frozen membership remains unavailable; mapping-endpoint
+    issue #1398 remains open.'

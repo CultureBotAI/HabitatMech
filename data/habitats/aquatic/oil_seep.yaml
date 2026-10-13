@@ -11,7 +11,6 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: GOLD
 parent_habitats:
-- ENVO:00001999
 - ENVO:01001477
 source_attestations:
 - source: GOLD
@@ -33,3 +32,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00001999 for habitatmech:GOLD.8b73c4518f
+    (Environmental > Aquatic > Marine > Oil seeps). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1423
+    (20261012T091842Z-oil_seep). The ontology-grounded seep concerns naturally released
+    hydrocarbons, including subsea seeps; it is not itself a marine waterbody. Its
+    liquid-astronomical-body-part ontology genus is retained. Later Coal Oil Point
+    samples support a seep context, while production/injection-water organism descriptions
+    show that exact original GOLD membership and broad source equivalence remain unproven.
+    Exclude only this exact GOLD context contribution. Preserve qualified identity,
+    source nodes/path/counts/units and independently justified parents. Original occurrence
+    membership remains unrecovered. Shared mapping endpoints and typed ontology synonyms
+    are separate open work, not SSSOM/KGX certification.

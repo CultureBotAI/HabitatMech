@@ -1,26 +1,36 @@
 identifier: habitatmech:GOLD.e13608a63a
 label: Oil sands pit lake
 habitat_category: AQUATIC
-grounding_status: UNGROUNDED
-mapping_status: SEEDED
+grounding_status: NARROW
+mapping_status: REVIEWED
 parent_habitats:
+- ENVO:00000020
 - habitatmech:GOLD.5b56a06a4c
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7958
   source_label: Oil sands pit lake
   source_path: Environmental > Aquatic > Pit lake > Oil sands pit lake
+  mapping_predicate: skos:narrowMatch
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.e13608a63a)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: GROUND_AS_PARENT
+  changes: 'ENVO:00000020 ''lake'' attached as a parent, not adopted as the identity
+    (NARROW). Exact-source ITEM assessment https://github.com/CultureBotAI/HabitatMech/issues/1409
+    (20261012T091841Z-oil_sands_pit_lake). Oil-sands pit lake is a specialized pit-lake
+    setting, with a defensible direct Pit lake grouping but no assessed ontology genus.
+    The existing lake class is broader; purposeful artificial-lake construction or
+    storage-reservoir purpose cannot be assumed from mining origin. Later Base Mine
+    Lake water and tailings examples are distinct sampled media within that setting,
+    not a definition of every pit lake. Retain the qualified source mint under the
+    verified broader genus ENVO:00000020 lake; do not exact-merge. Current official
+    ENVO definitions and later exact-path GOLD examples were inspected, without claiming
+    recovery of original membership. Separate guarded source exclusions remove unsupported
+    setting parents. Shared mapping-endpoint issue #1398 remains open. (source concept
+    habitatmech:GOLD.e13608a63a)'

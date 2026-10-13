@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002046
-- habitatmech:GOLD.353a834cfd
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5592
@@ -18,3 +17,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.353a834cfd
+    for habitatmech:GOLD.43c33f3ecc (Engineered > Sewage treatment plant > Wastewater
+    > Activated sludge). ITEM hierarchy assessment (#1882), structured review 20261010T213341Z-activated_sludge__a6d16f1c
+    F1: the qualified sludge material is not a kind of its reactor, treatment process,
+    plant or wastewater context. Exact GOLD path, current ENVO:00002046 genus, source
+    nodes/counts/units and NARROW/SEEDED state are preserved. EPA 625/8-87/012 sections
+    1-2 and the inspected ENVO material/device definitions distinguish these entities.
+    This exclusion does not certify heterogeneous source members or settle the shared
+    mapping-endpoint defect #1398.'

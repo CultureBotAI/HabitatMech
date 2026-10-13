@@ -3,8 +3,6 @@ label: Produced water
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:00002185
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7639
@@ -26,3 +24,18 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00002185 for habitatmech:GOLD.bfd6bfa0f1
+    (Engineered > Wastewater > Industrial wastewater > Petroleum reservoir > Produced
+    water). Reviewed hierarchy exclusion (#1848; structured review 20261010T024621Z-produced_water__58649b5f
+    F1): produced-water material is not a kind of its reservoir landform. DSMZ DSM
+    22707 (https://www.dsmz.de/collection/catalogue/details/culture/DSM-22707) identifies
+    PEH A isolation from petroleum-reservoir produced water at Kuparuk, matching later
+    GOLD organism Go0630962; current ENVO:00002185 denotes a subsurface hydrocarbon-bearing
+    landform. Exclude only this exact GOLD source-context contribution. Preserve node
+    7639, full source path, minted identity, one ORGANISM assertion, UNGROUNDED and
+    CLASS/SEEDED status and all prior events. No replacement identity, genus, definition,
+    characteristic taxon, mechanism or sibling merge is asserted; the later isolate
+    does not reconstruct the original frozen member roster.'

@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: a_o_bioreactor
+session:
+  id: 2026-10-10T214418Z-codex-gpt-5-7fd7d8
+  timestamp: '2026-10-10T21:44:18Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1881
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude reviewed GOLD context parent
+  details: 'Follow-up to 20261010T213321Z-a_o_bioreactor: The exact GOLD concept is an engineered
+    A/O bioreactor, not its sludge contents. Retaining the qualified mint and UNGROUNDED/SEEDED
+    state is conservative. Its sole parent is currently declared NOT_APPLICABLE, and source
+    nesting alone does not establish reactor-to-system is-a. A reactor component and its overall
+    treatment system must be distinguished before retaining that edge. Excluded only the immediate
+    GOLD parent contribution habitatmech:GOLD.7c91485eb8 for exact path Engineered > WWTP
+    > A/O treatment system > A/O bioreactor. This is context, not a supported strictly broader
+    genus. Preserve minted identity, slug, original source nodes/path/counts/units and unrelated
+    fields. Original reviews remain immutable. Primary evidence and the frozen/later-snapshot
+    distinctions are retained in the original review. Source-member ambiguity is not resolved
+    by removing a false parent. Dry-run, forced canary, validated regeneration, exact-scope
+    regressions, corpus/label checks, semantic-map/site rebuild and full QC are required before
+    merge. Shared mapping-endpoint issue #1398 and ontology synonym-scope issue #1249 remain
+    open; no SSSOM/KGX certification is asserted.'

@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: data/text_map/current.json
+  slug: chloroethene_map
+session:
+  id: 2026-10-07T201120Z-codex-gpt-5-20c001
+  timestamp: '2026-10-07T20:11:20Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: codex-gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1657
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1656
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - semantic_map
+  - generated_site
+  summary: Regenerate the semantic map after Chloroethene hierarchy correction
+  details: Linux run 37679210189 at head 8be70543bd527111a3c10ded709764816b517f1c used the
+    unchanged locked embedding runtime and verified prior cache. Full 3207-record input comparison
+    changed only Chloroethene by removing the unsupported broader-habitat line. The changed-record
+    canary encoded one vector, its repeat reused one, and the full pass reused all 3207 vectors
+    before genuine projection. Downloaded artifact inputs exactly match fresh local inputs
+    with SHA256 34b7063f85c6cc9057699d660720407945c66e415418d591234cdb6c74fad2a2. Local embedding_pipeline
+    check passed against the complete vector cache; current bundle is 5d8572b07c2a1ad6e7c70ef812fb5be088f36960a9e156e59ded72c54b50511b.
+    Installed checked generated artifacts, rendered the site and removed the temporary rebuild
+    workflow. No runtime pins, scientific identity decisions, taxonomy inventories or raw
+    checksums changed. Fresh full QC and final-head CI are pending and their completion will
+    be recorded in the PR receipt.

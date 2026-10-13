@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/causal_graphs/bioreactor.yaml
+  slug: bioreactor
+session:
+  id: 2026-10-11T051838Z-codex-gpt-5-1bcdaa
+  timestamp: '2026-10-11T05:18:38Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1638
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Bound reactor mode scope and correct community and hydrogen semantics
+  details: Addresses F1-F3 of 20261011T051118Z-bioreactor. ENVO definition supports broad
+    containment scope; mode branches are conditional, retained microbiome becomes COMMUNITY,
+    and Hattori PMID:21558697 pp118-120/Table1 distinguishes hydrogen electron donation from
+    carbon substrates. Preserved graph IDs and topology, source observations, taxa, counts
+    and native status. F4 claim-level evidence remains open, with inference/access limits
+    explicit. Dry seed and inspected canary passed; schema, graph, renderer, reproduction
+    and full QC gates are required before merge.

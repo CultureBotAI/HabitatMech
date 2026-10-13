@@ -11,7 +11,6 @@ synonyms:
   source: PREGO
 parent_habitats:
 - ENVO:00000020
-- ENVO:00002011
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8537
@@ -57,3 +56,16 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00002011 for habitatmech:GOLD.4f1a9febbf
+    (Environmental > Aquatic > Freshwater > Meromictic lake). Bounded hierarchy correction
+    https://github.com/CultureBotAI/HabitatMech/issues/1220 (20261012T054256Z-meromictic_lake
+    F1). The defining property is persistent non-mixing of water layers in a lake,
+    not a universal low-salinity composition. Fresh water is a sampled material, not
+    a whole-lake genus. Preserve lake ancestry, the two GOLD nodes, and the single
+    PREGO association; omitted GOLD direct count is not ecological absence. Exclude
+    only the immediate GOLD contribution named here. Preserve source identity, node/path
+    provenance, counts/units, native status and independent parents. Unresolved source
+    identity, genus, synonym and mapping-endpoint findings remain separate.

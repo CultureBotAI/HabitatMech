@@ -1,0 +1,185 @@
+identifier: habitatmech:BACDIVE.5e52ea1bba
+label: Medical-environment
+habitat_category: CLINICAL
+grounding_status: UNGROUNDED
+mapping_status: REVIEWED
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:medical-environment
+  source_label: Medical-environment
+  assertion_count: 438
+  assertion_unit: STRAIN
+  notes: kg-microbe's isolation-source mapping table has a row for this source with
+    no ontology target; treated as ungrounded rather than re-grounded by lexical match.
+characteristic_taxa:
+- taxon_id: NCBITaxon:562
+  source: BACDIVE
+  taxon_label: Escherichia coli
+  association_count: 22
+  rank: 1
+  candidate_pool: 269
+- taxon_id: NCBITaxon:287
+  source: BACDIVE
+  taxon_label: Pseudomonas aeruginosa
+  association_count: 9
+  rank: 2
+  candidate_pool: 269
+- taxon_id: NCBITaxon:47715
+  source: BACDIVE
+  taxon_label: Lacticaseibacillus rhamnosus
+  association_count: 9
+  rank: 3
+  candidate_pool: 269
+- taxon_id: NCBITaxon:1280
+  source: BACDIVE
+  taxon_label: Staphylococcus aureus
+  association_count: 8
+  rank: 4
+  candidate_pool: 269
+- taxon_id: NCBITaxon:1313
+  source: BACDIVE
+  taxon_label: Streptococcus pneumoniae
+  association_count: 7
+  rank: 5
+  candidate_pool: 269
+- taxon_id: NCBITaxon:446
+  source: BACDIVE
+  taxon_label: Legionella pneumophila
+  association_count: 7
+  rank: 6
+  candidate_pool: 269
+- taxon_id: NCBITaxon:47885
+  source: BACDIVE
+  taxon_label: Pseudomonas oryzihabitans
+  association_count: 7
+  rank: 7
+  candidate_pool: 269
+- taxon_id: NCBITaxon:1352
+  source: BACDIVE
+  taxon_label: Enterococcus faecium
+  association_count: 6
+  rank: 8
+  candidate_pool: 269
+- taxon_id: NCBITaxon:573
+  source: BACDIVE
+  taxon_label: Klebsiella pneumoniae
+  association_count: 6
+  rank: 9
+  candidate_pool: 269
+- taxon_id: NCBITaxon:144185
+  source: BACDIVE
+  taxon_label: Leifsonia aquatica
+  association_count: 5
+  rank: 10
+  candidate_pool: 269
+- taxon_id: NCBITaxon:43767
+  source: BACDIVE
+  taxon_label: Prescottella equi
+  association_count: 5
+  rank: 11
+  candidate_pool: 269
+- taxon_id: NCBITaxon:529
+  source: BACDIVE
+  taxon_label: Brucella anthropi
+  association_count: 5
+  rank: 12
+  candidate_pool: 269
+- taxon_id: NCBITaxon:756689
+  source: BACDIVE
+  taxon_label: Nocardia amikacinitolerans
+  association_count: 5
+  rank: 13
+  candidate_pool: 269
+- taxon_id: NCBITaxon:759851
+  source: BACDIVE
+  taxon_label: Sporosarcina newyorkensis
+  association_count: 5
+  rank: 14
+  candidate_pool: 269
+- taxon_id: NCBITaxon:210
+  source: BACDIVE
+  taxon_label: Helicobacter pylori
+  association_count: 4
+  rank: 15
+  candidate_pool: 269
+- taxon_id: NCBITaxon:37637
+  source: BACDIVE
+  taxon_label: Corynebacterium pseudodiphtheriticum
+  association_count: 4
+  rank: 16
+  candidate_pool: 269
+- taxon_id: NCBITaxon:60552
+  source: BACDIVE
+  taxon_label: Burkholderia vietnamiensis
+  association_count: 4
+  rank: 17
+  candidate_pool: 269
+- taxon_id: NCBITaxon:817
+  source: BACDIVE
+  taxon_label: Bacteroides fragilis
+  association_count: 4
+  rank: 18
+  candidate_pool: 269
+- taxon_id: NCBITaxon:85698
+  source: BACDIVE
+  taxon_label: Achromobacter xylosoxidans
+  association_count: 4
+  rank: 19
+  candidate_pool: 269
+- taxon_id: NCBITaxon:13689
+  source: BACDIVE
+  taxon_label: Sphingomonas paucimobilis
+  association_count: 3
+  rank: 20
+  candidate_pool: 269
+- taxon_id: NCBITaxon:1443941
+  source: BACDIVE
+  taxon_label: Acinetobacter gandensis
+  association_count: 3
+  rank: 21
+  candidate_pool: 269
+- taxon_id: NCBITaxon:1496
+  source: BACDIVE
+  taxon_label: Clostridioides difficile
+  association_count: 3
+  rank: 22
+  candidate_pool: 269
+- taxon_id: NCBITaxon:151416
+  source: BACDIVE
+  taxon_label: Allobosea vestrisii
+  association_count: 3
+  rank: 23
+  candidate_pool: 269
+- taxon_id: NCBITaxon:151454
+  source: BACDIVE
+  taxon_label: Allobosea eneae
+  association_count: 3
+  rank: 24
+  candidate_pool: 269
+- taxon_id: NCBITaxon:37329
+  source: BACDIVE
+  taxon_label: Nocardia farcinica
+  association_count: 3
+  rank: 25
+  candidate_pool: 269
+curation_history:
+- timestamp: '2026-08-16T05:58:02Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-08T00:00:00Z'
+  curator: codex-gpt-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM identity
+    correction (#1744): Medical-environment denotes a clinical isolation context,
+    not the narrower hospital building identity. The former GROUND/NARROW row admitted
+    non-equivalence yet merged 438 strain assertions and 25 displayed associations
+    into hospital. Restore the source mint and preserve those observations. BacDive
+    153714 categorizes a patient-derived lavage isolate under Medical environment
+    / Medical practice; this supports clinical context, not frozen cohort membership
+    or a universal facility boundary. ENVO:00002173 ''hospital'' and ENVO:03501134
+    ''healthcare facility'' are constructions; ENVO:03501331 ''healthcare environment''
+    requires a facility-bounded environment, which this source tag does not establish.
+    No exact replacement, broader parent or xref is asserted. Evidence: https://bacdive.dsmz.de/strain/153714
+    and reports/yaml_record_review/20261008T183330Z-hospital.md. The original source-member
+    join remains unverified. (source concept habitatmech:BACDIVE.5e52ea1bba)'

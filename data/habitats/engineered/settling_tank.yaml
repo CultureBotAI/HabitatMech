@@ -3,8 +3,6 @@ label: Settling tank
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:01000964
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8068
@@ -24,3 +22,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:01000964 for habitatmech:GOLD.b1f94cf5f5
+    (Engineered > Wastewater > Industrial wastewater > Settling tank). Bounded hierarchy
+    correction (https://github.com/CultureBotAI/HabitatMech/issues/1942; 20261011T155131Z-settling_tank
+    F1). A sedimentation tank is a treatment unit, not industrial wastewater material.
+    EPA832-R-04-001, printed page11 (https://www.epa.gov/sites/production/files/2015-09/documents/primer.pdf),
+    distinguishes tank, wastewater and settled solids. Exclude only this immediate
+    GOLD contribution; preserve source identity, node/path provenance, counts/units,
+    native status and independent parents. Current source evidence is not reconstruction
+    of every original member.

@@ -1,0 +1,740 @@
+# Microbial fuel cells/MFC: coherent whole-device habitat with unverified original configurations
+
+- Review: 20261009T113629Z-microbial_fuel_cells_mfc
+- Repository: CultureBotAI/HabitatMech
+- Started UTC: 2026-10-09T11:31:16Z
+- Finished UTC: 2026-10-09T11:36:29Z
+- Reviewer: codex-gpt-5 (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Reviewed the complete MFC record, exact GOLD route and bioreactor genus. The whole-device interpretation, retained mint, parent, three-node provenance, zero-count omission and CLASS/SEEDED lifecycle are coherent at the source-qualified class level. No supported finding is established. Experimental devices are contextual evidence, not a crosswalk to original GOLD configurations or permission to import organisms, materials or operating conditions.
+
+## Scope And Provenance
+
+Whole generated microbial_fuel_cells_mfc.yaml and sole GOLD contribution. Parent bioreactor identity/definition and source attestation were inspected as hierarchy context, not a full parent audit. Descendant records are outside this target.
+
+Selection: PATHS.tsv:2804, habitatmech:GOLD.cdf0160423, exact Engineered &gt; Bioreactor &gt; Microbial fuel cells/MFC path.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 4ad2058873bd936baa7cba619e5fed8233cf92bb.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| habitatmech:GOLD.cdf0160423 | data/habitats/engineered/microbial_fuel_cells_mfc.yaml | generated | Microbial fuel cells/MFC |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Pre-assessment target and context capture | passed | True | habitatmech:GOLD.cdf0160423 | 37 input hashes captured at 4ad205887; complete target read. |
+| Target LinkML validation | passed | True | habitatmech:GOLD.cdf0160423 | No issues found. |
+| Target closed-schema validation | passed | True | habitatmech:GOLD.cdf0160423 | One file, zero errors. |
+| All-fourteen-inventory exact-field scan | passed | True | habitatmech:GOLD.cdf0160423 | Needles include exact path, mint and all three node IDs derived from the source row. Only the aggregate GOLD path matches. All counters are zero; no direct target biosample, study, complete triad, taxon or parameter row in these committed tables. |
+| Source resolution and complete document reproduction | passed | True | habitatmech:GOLD.cdf0160423 | Gold-unmatched target remains minted and CLASS-confirmed; one source, zero ITEM-reviewed. Whole document equals disk. Parent GOLD source resolves separately to ENVO:00002123. No exact tested label/alias candidate emitted from the complete committed ontology scan. |
+| Ignored-inclusive ownership and prior-review search | passed | True | habitatmech:GOLD.cdf0160423 | Found CLASS decision1139, path lock2804 and descendant-context mentions. No target definition, target causal overlay, target-owned native session or earlier whole-MFC review recovered in the named roots. Child reports are not target verdicts. |
+| Current GOLD/ontology classification and article identity | passed | True | habitatmech:GOLD.cdf0160423 | Current workbook row116 confirms terminal7653; rows112-115 are separate descendants. Active ENVO:00002123 matches. Bounded ENVO search returns numFound0. Europe PMC verifies Bond/Lovley2003 DOI and PMID12620842/PMC150094. |
+| Full corpus reproduction | passed | True | habitatmech:GOLD.cdf0160423 | 3208 expected and found; zero missing, extra or differing records. |
+| Native curation history | passed | True | habitatmech:GOLD.cdf0160423 | 219 native histories valid. |
+| Raw inventory provenance | passed | True | habitatmech:GOLD.cdf0160423 | 14 committed inventories and two GOLD source snapshots current. |
+| Parent, status and reference regressions | passed | True | habitatmech:GOLD.cdf0160423 | 6 passed, 33 deselected. Deterministic integrity is not scientific proof. |
+| Exact-baseline full QC receipt | passed | True | habitatmech:GOLD.cdf0160423 | Freshly queried SUCCESS at 4ad205887. The log read in the preceding publication turn records 645 passed, 3 skipped and all native gates. No new local full-QC run in this review. |
+| Exact-baseline ontology-label receipt | passed | True | habitatmech:GOLD.cdf0160423 | Freshly queried SUCCESS at 4ad205887. Configured ontology coverage and accepted exceptions do not establish source meaning. |
+| Scientific-input equivalence | passed | True | habitatmech:GOLD.cdf0160423 | Scientific inputs and generated records unchanged from the exact verified base. |
+| Original GOLD device/member detail | unavailable | False | habitatmech:GOLD.cdf0160423 | Public browser read of ecosystem7651 failed. No original device configuration or member crosswalk was recovered. A current classification and laboratory example do not supply it. |
+| Causal and expression adapters | not_applicable | False | habitatmech:GOLD.cdf0160423 | Target asserts no genes, proteins, regulators, organisms, expression dataset or causal graph. The paper's organism and electrode-respiration results are background, not target molecular claims; iModulonDB is not applicable. |
+
+## Scientific And Domain Assessments
+
+### Whole device rather than component or process
+
+identity: supported. Targets: habitatmech:GOLD.cdf0160423.
+
+Source-qualified whole MFC is a plausible microbial habitat device, distinct from the intervention label assessed in MEOR and from its own electrodes/biofilms.
+
+### Bioreactor genus
+
+graph: supported. Targets: habitatmech:GOLD.cdf0160423.
+
+The retained parent matches the whole culture-supporting device at this source-qualified class level. Component-versus-whole exclusions on descendants cannot be inherited as a defect here.
+
+### Mint retained without a near-match identity
+
+grounding: supported. Targets: habitatmech:GOLD.cdf0160423.
+
+No tested exact candidate was found in the committed slice or bounded live ENVO query. The broader bioreactor remains a parent, not a claimed exact MFC identity.
+
+### Original variants and members
+
+scope: unknown. Targets: habitatmech:GOLD.cdf0160423.
+
+Specific GOLD devices, organisms and configurations are unverified. The record asserts none of the experimental paper's taxa, electrode compositions, chamber counts, electron donors or rates.
+
+### Three nodes and zero counters
+
+quantity: supported. Targets: habitatmech:GOLD.cdf0160423.
+
+Count/unit omission and three-node provenance reproduce. The absence of direct rows is bounded to the committed inventories and not microbial absence.
+
+### CLASS status and source independence
+
+consistency: supported. Targets: habitatmech:GOLD.cdf0160423.
+
+One source with zero ITEM decisions correctly remains SEEDED. Parent source ITEM review and this scientific report do not promote target native status.
+
+### No unsupported biological enrichment
+
+completeness: supported. Targets: habitatmech:GOLD.cdf0160423.
+
+There is no target-specific basis for transferring parent taxa/parameters or descendant/paper-specific biological observations. Missing optional fields are not defects.
+
+### Whole-document integrity
+
+schema: supported. Targets: habitatmech:GOLD.cdf0160423.
+
+The complete generated target equals disk and native gates pass. Any future definition or grounding belongs in maintained inputs and normal curation, not direct record editing.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/habitats/engineered/microbial_fuel_cells_mfc.yaml; Entire YAML and both history events | supports | ENGINEERED, UNGROUNDED/SEEDED; whole MFC label under bioreactor, no chemical/electrode/biofilm identity claim, no definition or specific operational claim. |
+| decision | curation/decisions.tsv; Row1139 and full target/parent source resolution | supports | CLASS confirmation retains minted identity without ITEM promotion. The source-parent GOLD.a6d15fca9f separately resolves to ENVO:00002123; parent review status is not inherited. |
+| source | data/raw/gold_ecosystem_paths.tsv; Row1196; all fourteen committed inventories exact-field scan | supports | Depth3 path collapses nodes7651/7652/7653 with all counters zero. First-node display, three-node note and count/unit omission agree. Descendant rows are not target observations. |
+| ontology | https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms?obo_id=ENVO%3A00002123; Active term; matching parent YAML identity/definition and source attestation at lines1-33 | supports | Bioreactor denotes a unit containing environmental material and maintaining conditions for organisms' metabolic activity. This is a defensible broader class for the whole-device source qualified under Bioreactor, not for its component electrodes or biofilms. |
+| primary | https://journals.asm.org/doi/10.1128/AEM.69.3.1548-1555.2003; Bond and Lovley2003, abstract and Materials and methods: Electrodes and electrode chambers, lines83-119; PMID12620842 | supports | The inspected experiment distinguishes the assembled fuel-cell system, culture-containing chambers, electrodes and attached cells. It supports the device/material distinction and microbial-habitat plausibility, not universal construction details or an original GOLD member match. |
+| gold | https://gold.jgi.doe.gov/download?mode=ecosystempaths; Current site data row116; rows112-115 inspected only as descendant context | supports | Terminal7653 remains Engineered/Bioreactor/Microbial fuel cells-MFC with unclassified lower levels. Anode, cathode and biofilm terminal rows are separate classifications, not evidence to transfer into the whole-device record. |
+| descendant_context | curation/gold_parent_exclusions.tsv; Rows37,39,52,57 surfaced by exact MFC query | context_only | Existing exclusions concern descendant component-to-whole or material-to-substrate edges. They do not remove or invalidate the target's own bioreactor parent. No descendant finding disposition is made. |
+| search | curation; Exact ID/label/slug/node and MFC/microbial-fuel queries | context_only | No target-owned definition, causal overlay, native session or earlier individual whole-device review recovered. The complete committed lexical scan and bounded current ENVO query found no tested identity match. |
+| unavailable | https://gold.jgi.doe.gov/ecosystem/7651; Current browser retrieval failure | unknown | Original member/configuration details remain unavailable. Failure does not show the source ID invalid or establish biological absence. |
+| gates | https://github.com/CultureBotAI/HabitatMech/actions/runs/37922005631; Exact4ad205887 baseline and label run37922005635; fresh local target checks | supports | Native deterministic gates pass with unchanged scientific inputs; not universal scientific certification. |
+
+## Limits And Additional Notes
+
+- One of3208 records reviewed here; full-corpus completion is not established.
+- Original GOLD device configurations and members are unavailable. Class-level device plausibility is not a specimen crosswalk or a claim that every environmental fuel-cell deployment has identical containment or architecture.
+- Parent record inspection in this review was limited to hierarchy-relevant identity, definition and source attestation; parent taxa, parameters and causal claims were not endorsed.
+- Descendant report hits are contextual leads, not additional completed reviews. No prior finding is closed or reclassified.
+- Native CLASS/SEEDED status is preserved. Optional fields are not populated from the laboratory example or source-parent record.
+- Exact-baseline fullQC and ontology-label receipts are reused with unchanged-input verification; no fresh global ontology refresh and three baseline tests remain skipped.
+- Only review artifacts are written. No scientific input change, native history/status mutation, GitHub mutation, publication or SSSOM/KGX readiness assessment.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261009T113629Z-microbial_fuel_cells_mfc
+kind: record
+repository: CultureBotAI/HabitatMech
+title: 'Microbial fuel cells/MFC: coherent whole-device habitat with unverified original
+  configurations'
+started_at: '2026-10-09T11:31:16Z'
+finished_at: '2026-10-09T11:36:29Z'
+reviewer:
+  identity: codex-gpt-5
+  kind: agent
+  model: gpt-5
+  independence: self_review
+  independence_basis: Same agent continuing individual record assessment; not independent
+    approval.
+skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: Reviewed the complete MFC record, exact GOLD route and bioreactor genus.
+  The whole-device interpretation, retained mint, parent, three-node provenance, zero-count
+  omission and CLASS/SEEDED lifecycle are coherent at the source-qualified class level.
+  No supported finding is established. Experimental devices are contextual evidence,
+  not a crosswalk to original GOLD configurations or permission to import organisms,
+  materials or operating conditions.
+source:
+  git_revision: 4ad2058873bd936baa7cba619e5fed8233cf92bb
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: curation/decisions.tsv
+    sha256: 0602cca13e6495da256a6f1cfd5897462f73f9739a729447862017d93c148efd
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: 9d2324647d0a0ddeccc2f7836811872e112af208bb1b8f7decb332c00f17d12b
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 3efdac153ccd40f518458a9dc5360e09dd660c3a42fbd06bfc57f3b2f707ece7
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: b59b9e800a918135e3915145d4d8098bb48dcea36a312b3004c594a57d221ae9
+    role: context
+  - path: data/habitats/RETIRED.tsv
+    sha256: 41beffc45aabdf304de633c21200b375d7f01d1cb2e036d4a026961d545a35e5
+    role: context
+  - path: data/habitats/engineered/bioreactor.yaml
+    sha256: c0a5f4d06130d949810c29b15f5874b4e9673b23dc188161d699412c2bea0c02
+    role: context
+  - path: data/habitats/engineered/microbial_fuel_cells_mfc.yaml
+    sha256: c912d03e1802cffb93f49b0f4c3a7a88c6896fe0530098bae0bc92c6c8f3a614
+    role: target
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: 36df8306394c06c352b73e0bf7b47a2858784cedac7389a24d0b78f593ece646
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: f7aa39ee762d94f1902d9f08f328cb897bc543e4e226057eb4770d24bfcc6eb5
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 52d2a22309a1f4a10728a663560bb4d918346c292221fd34139b99b4159d3fe5
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 92adf631fa099120a497ff7001473e659347d23ac9b418f04cd341ddad5d2a89
+    role: context
+targets:
+- target_id: habitatmech:GOLD.cdf0160423
+  path: data/habitats/engineered/microbial_fuel_cells_mfc.yaml
+  label: Microbial fuel cells/MFC
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Source identity and review-depth decision
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Future supported device-class definition
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Exact source-path hierarchy contribution
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/gold_ecosystem_paths.tsv
+    role: Source nodes and count snapshot
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Generated representation
+scope:
+  description: Whole generated microbial_fuel_cells_mfc.yaml and sole GOLD contribution.
+    Parent bioreactor identity/definition and source attestation were inspected as
+    hierarchy context, not a full parent audit. Descendant records are outside this
+    target.
+  selection: PATHS.tsv:2804, habitatmech:GOLD.cdf0160423, exact Engineered > Bioreactor
+    > Microbial fuel cells/MFC path.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - habitatmech:GOLD.cdf0160423
+checks:
+- check_id: capture
+  name: Pre-assessment target and context capture
+  command: env UV_CACHE_DIR=build/uv-cache uv run python scripts/record_review.py
+    inspect --targets /private/tmp/habitatmech-mfc-targets-20261009T113116Z.json --input
+    CLAUDE.md --input justfile --input docs/CURATION.md --input docs/HARMONIZATION.md
+    --input docs/RESEARCH.md --input docs/record-review-profile.md --input docs/record-reviews.md
+    --input .claude/skills/review-yaml-record/SKILL.md --input .claude/skills/curate-yaml-record/references/review-checklist.md
+    --input schema/record_review.yaml --input src/habitatmech/schema/habitatmech.yaml
+    --input src/habitatmech/seed.py --input curation/decisions.tsv --input curation/gold_parent_exclusions.tsv
+    --input curation/term_requests.tsv --input curation/term_requests_excluded.tsv
+    --input data/habitats/PATHS.tsv --input data/habitats/RETIRED.tsv --input data/raw/ontology_terms.tsv
+    --input data/raw/ontology_subclass_edges.tsv --input data/raw/isolation_source_groundings.tsv
+    --input data/raw/gold_ecosystem_paths.tsv --input data/raw/gold_path_biosamples.tsv
+    --input data/raw/gold_path_triads.tsv --input data/raw/gold_studies.tsv --input
+    data/raw/prego_habitats.tsv --input data/raw/prego_habitat_taxa.tsv --input data/raw/bacdive_isolation_sources.tsv
+    --input data/raw/bacdive_source_taxa.tsv --input data/raw/madin_habitats.tsv --input
+    data/raw/madin_habitat_taxa.tsv --input data/raw/environment_parameters.tsv --input
+    data/raw/MANIFEST.yaml --input data/raw/GOLD_MANIFEST.yaml --input data/habitats/engineered/bioreactor.yaml
+    --input conf/id_label_targets.yaml
+  summary: 37 input hashes captured at 4ad205887; complete target read.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.cdf0160423
+- check_id: schema
+  name: Target LinkML validation
+  command: env UV_CACHE_DIR=build/uv-cache just validate data/habitats/engineered/microbial_fuel_cells_mfc.yaml
+  summary: No issues found.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.cdf0160423
+- check_id: strict
+  name: Target closed-schema validation
+  command: env UV_CACHE_DIR=build/uv-cache just validate-strict data/habitats/engineered/microbial_fuel_cells_mfc.yaml
+  summary: One file, zero errors.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.cdf0160423
+- check_id: raw
+  name: All-fourteen-inventory exact-field scan
+  command: "env UV_CACHE_DIR=build/uv-cache uv run python - <<'PY'\nfrom pathlib import\
+    \ Path\nimport csv,json\npath='Engineered > Bioreactor > Microbial fuel cells/MFC'\n\
+    with Path('data/raw/gold_ecosystem_paths.tsv').open() as h:\n    source=next(r\
+    \ for r in csv.DictReader(h,delimiter='\\t') if r['canonical_path']==path)\nneedles={'habitatmech:GOLD.cdf0160423',path,*source['gold_node_ids'].split('|')}\n\
+    for p in sorted(Path('data/raw').glob('*.tsv')):\n    hits=[]\n    with p.open()\
+    \ as h:\n        for n,row in enumerate(csv.DictReader(h,delimiter='\\t'),2):\n\
+    \            values=[v for x in row.values() for v in (x if isinstance(x,list)\
+    \ else [x]) if v]\n            if any(v in needles or needles.intersection(v.split('|'))\
+    \ for v in values):hits.append({'line':n,'row':row})\n    print(p.name,json.dumps(hits))\n\
+    PY"
+  summary: Needles include exact path, mint and all three node IDs derived from the
+    source row. Only the aggregate GOLD path matches. All counters are zero; no direct
+    target biosample, study, complete triad, taxon or parameter row in these committed
+    tables.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.cdf0160423
+- check_id: route
+  name: Source resolution and complete document reproduction
+  command: "env UV_CACHE_DIR=build/uv-cache uv run python - <<'PY'\nfrom habitatmech\
+    \ import seed as s\nfrom dataclasses import asdict\nfrom pathlib import Path\n\
+    import json,yaml\nrows=s.read_tsv('gold_ecosystem_paths.tsv')\nont=s.OntologyIndex(s.read_tsv('ontology_terms.tsv'),s.read_tsv('ontology_subclass_edges.tsv'))\n\
+    d=s.load_decisions(s.DECISIONS_PATH)\nmapping={}\nfor row in s.read_tsv('isolation_source_groundings.tsv'):\n\
+    \    for key in (s.norm_label(row['subject_label']),s.norm_label(row['subject_label_normalized'])):\n\
+    \        if key:mapping.setdefault(key,row)\nfor path in ['Engineered > Bioreactor\
+    \ > Microbial fuel cells/MFC','Engineered > Bioreactor']:\n    row=next(r for\
+    \ r in rows if r['canonical_path']==path)\n    ident=s.mint('GOLD',path)\n   \
+    \ auto=s.resolve_gold(row,ont,mapping,s.leaf_claimants(rows),s.composed_claimants(rows))\n\
+    \    print(json.dumps({'path':path,'mint':ident,'automatic':asdict(auto),'final':asdict(s.apply_decision(auto,ident,d))}))\n\
+    c=next(c for c in s.build_corpus().concepts if c.identifier=='habitatmech:GOLD.cdf0160423')\n\
+    assert s.build_document(c)==yaml.safe_load(Path('data/habitats/engineered/microbial_fuel_cells_mfc.yaml').read_text())\n\
+    print('Whole document equal; sources',c.source_concepts,'reviewed',c.reviewed_sources)\n\
+    needles={s.norm_label(x) for x in ['microbial fuel cells/MFC','microbial fuel\
+    \ cell','microbial fuel cells','MFC']}\nfor ident,row in ont.terms.items():\n\
+    \    if needles.intersection({s.norm_label(row['label']),*(s.norm_label(v) for\
+    \ v in row.get('synonyms','').split('|'))}):print('EXACT_CANDIDATE',ident,row)\n\
+    PY"
+  summary: Gold-unmatched target remains minted and CLASS-confirmed; one source, zero
+    ITEM-reviewed. Whole document equals disk. Parent GOLD source resolves separately
+    to ENVO:00002123. No exact tested label/alias candidate emitted from the complete
+    committed ontology scan.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.cdf0160423
+- check_id: search
+  name: Ignored-inclusive ownership and prior-review search
+  command: rg --no-ignore --hidden -n 'GOLD\.cdf0160423|Microbial fuel cells|microbial_fuel_cells_mfc|gold.ecosystem:7651'
+    curation history research reports reviews data/habitats/PATHS.tsv
+  summary: Found CLASS decision1139, path lock2804 and descendant-context mentions.
+    No target definition, target causal overlay, target-owned native session or earlier
+    whole-MFC review recovered in the named roots. Child reports are not target verdicts.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.cdf0160423
+- check_id: external
+  name: Current GOLD/ontology classification and article identity
+  command: "env UV_CACHE_DIR=build/uv-cache uv run python - <<'PY'\nimport urllib.request,urllib.parse,io,json,hashlib\n\
+    from openpyxl import load_workbook\nu='https://gold.jgi.doe.gov/download?mode=ecosystempaths'\n\
+    b=urllib.request.urlopen(u,timeout=60).read();ws=load_workbook(io.BytesIO(b),read_only=True,data_only=True)['site\
+    \ data'];ws.reset_dimensions()\nprint('GOLD',len(b),hashlib.sha256(b).hexdigest())\n\
+    for n,row in enumerate(ws.iter_rows(values_only=True),1):\n    if 'Microbial fuel\
+    \ cells/MFC' in row:print('GOLD_ROW',n,row)\nurls=[('PARENT','https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms?obo_id=ENVO%3A00002123'),('CANDIDATES','https://www.ebi.ac.uk/ols4/api/search?'+urllib.parse.urlencode({'q':'microbial\
+    \ fuel cell','ontology':'envo','rows':20})),('PAPER','https://www.ebi.ac.uk/europepmc/webservices/rest/search?'+urllib.parse.urlencode({'query':'DOI:10.1128/AEM.69.3.1548-1555.2003','format':'json'}))]\n\
+    for name,url in urls:\n    b=urllib.request.urlopen(url,timeout=60).read();print(name,len(b),hashlib.sha256(b).hexdigest(),b.decode())\n\
+    PY"
+  summary: Current workbook row116 confirms terminal7653; rows112-115 are separate
+    descendants. Active ENVO:00002123 matches. Bounded ENVO search returns numFound0.
+    Europe PMC verifies Bond/Lovley2003 DOI and PMID12620842/PMC150094.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.cdf0160423
+- check_id: corpus
+  name: Full corpus reproduction
+  command: env UV_CACHE_DIR=build/uv-cache just verify-corpus
+  summary: 3208 expected and found; zero missing, extra or differing records.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.cdf0160423
+- check_id: history
+  name: Native curation history
+  command: env UV_CACHE_DIR=build/uv-cache just validate-history
+  summary: 219 native histories valid.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.cdf0160423
+- check_id: provenance
+  name: Raw inventory provenance
+  command: env UV_CACHE_DIR=build/uv-cache just provenance-check
+  summary: 14 committed inventories and two GOLD source snapshots current.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.cdf0160423
+- check_id: references
+  name: Parent, status and reference regressions
+  command: env UV_CACHE_DIR=build/uv-cache uv run pytest -q tests/test_corpus_integrity.py
+    -k 'parent or reviewed_records or history or causal_edges_reference'
+  summary: 6 passed, 33 deselected. Deterministic integrity is not scientific proof.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.cdf0160423
+- check_id: qc_receipt
+  name: Exact-baseline full QC receipt
+  command: gh run view 37922005631 --json status,conclusion,headSha,url
+  summary: Freshly queried SUCCESS at 4ad205887. The log read in the preceding publication
+    turn records 645 passed, 3 skipped and all native gates. No new local full-QC
+    run in this review.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.cdf0160423
+- check_id: label_receipt
+  name: Exact-baseline ontology-label receipt
+  command: gh run view 37922005635 --json status,conclusion,headSha,url
+  summary: Freshly queried SUCCESS at 4ad205887. Configured ontology coverage and
+    accepted exceptions do not establish source meaning.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.cdf0160423
+- check_id: unchanged
+  name: Scientific-input equivalence
+  command: git diff --exit-code 4ad2058873bd936baa7cba619e5fed8233cf92bb -- data curation
+    src scripts tests docs conf schema CLAUDE.md justfile
+  summary: Scientific inputs and generated records unchanged from the exact verified
+    base.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.cdf0160423
+- check_id: original_source
+  name: Original GOLD device/member detail
+  status: unavailable
+  required: false
+  target_ids:
+  - habitatmech:GOLD.cdf0160423
+  summary: Public browser read of ecosystem7651 failed. No original device configuration
+    or member crosswalk was recovered. A current classification and laboratory example
+    do not supply it.
+- check_id: molecular
+  name: Causal and expression adapters
+  status: not_applicable
+  required: false
+  target_ids:
+  - habitatmech:GOLD.cdf0160423
+  summary: Target asserts no genes, proteins, regulators, organisms, expression dataset
+    or causal graph. The paper's organism and electrode-respiration results are background,
+    not target molecular claims; iModulonDB is not applicable.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/habitats/engineered/microbial_fuel_cells_mfc.yaml
+  locator: Entire YAML and both history events
+  support: supports
+  summary: ENGINEERED, UNGROUNDED/SEEDED; whole MFC label under bioreactor, no chemical/electrode/biofilm
+    identity claim, no definition or specific operational claim.
+  accessed_at: '2026-10-09T11:36:29Z'
+- evidence_id: decision
+  kind: record_content
+  reference: curation/decisions.tsv
+  locator: Row1139 and full target/parent source resolution
+  support: supports
+  summary: CLASS confirmation retains minted identity without ITEM promotion. The
+    source-parent GOLD.a6d15fca9f separately resolves to ENVO:00002123; parent review
+    status is not inherited.
+  accessed_at: '2026-10-09T11:36:29Z'
+- evidence_id: source
+  kind: record_content
+  reference: data/raw/gold_ecosystem_paths.tsv
+  locator: Row1196; all fourteen committed inventories exact-field scan
+  support: supports
+  summary: Depth3 path collapses nodes7651/7652/7653 with all counters zero. First-node
+    display, three-node note and count/unit omission agree. Descendant rows are not
+    target observations.
+  accessed_at: '2026-10-09T11:36:29Z'
+- evidence_id: ontology
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms?obo_id=ENVO%3A00002123
+  locator: Active term; matching parent YAML identity/definition and source attestation
+    at lines1-33
+  support: supports
+  summary: Bioreactor denotes a unit containing environmental material and maintaining
+    conditions for organisms' metabolic activity. This is a defensible broader class
+    for the whole-device source qualified under Bioreactor, not for its component
+    electrodes or biofilms.
+  accessed_at: '2026-10-09T11:36:29Z'
+  snapshot_sha256: 8f7c3379944640eb70f93693d820615909a14836e136ebae89b43bb6a196efc8
+- evidence_id: primary
+  kind: primary_source
+  reference: https://journals.asm.org/doi/10.1128/AEM.69.3.1548-1555.2003
+  locator: 'Bond and Lovley2003, abstract and Materials and methods: Electrodes and
+    electrode chambers, lines83-119; PMID12620842'
+  support: supports
+  summary: The inspected experiment distinguishes the assembled fuel-cell system,
+    culture-containing chambers, electrodes and attached cells. It supports the device/material
+    distinction and microbial-habitat plausibility, not universal construction details
+    or an original GOLD member match.
+  accessed_at: '2026-10-09T11:36:29Z'
+- evidence_id: gold
+  kind: database
+  reference: https://gold.jgi.doe.gov/download?mode=ecosystempaths
+  locator: Current site data row116; rows112-115 inspected only as descendant context
+  support: supports
+  summary: Terminal7653 remains Engineered/Bioreactor/Microbial fuel cells-MFC with
+    unclassified lower levels. Anode, cathode and biofilm terminal rows are separate
+    classifications, not evidence to transfer into the whole-device record.
+  accessed_at: '2026-10-09T11:36:29Z'
+  snapshot_sha256: 3933e5f0664915c1bbfa00212e17d013da360fb33dd52e509254050813135396
+- evidence_id: descendant_context
+  kind: record_content
+  reference: curation/gold_parent_exclusions.tsv
+  locator: Rows37,39,52,57 surfaced by exact MFC query
+  support: context_only
+  summary: Existing exclusions concern descendant component-to-whole or material-to-substrate
+    edges. They do not remove or invalidate the target's own bioreactor parent. No
+    descendant finding disposition is made.
+  accessed_at: '2026-10-09T11:36:29Z'
+- evidence_id: search
+  kind: search
+  reference: curation
+  locator: Exact ID/label/slug/node and MFC/microbial-fuel queries
+  support: context_only
+  summary: No target-owned definition, causal overlay, native session or earlier individual
+    whole-device review recovered. The complete committed lexical scan and bounded
+    current ENVO query found no tested identity match.
+  accessed_at: '2026-10-09T11:36:29Z'
+  search_scope: rg --no-ignore --hidden covered curation,history,research,reports,reviews
+    and PATHS.tsv; secondary aliases covered microbial[- ]fuel, microbial_fuel_cells
+    and MFC. Historical descendant reports were search context, not fully rereviewed.
+    Current OLS query q=microbial fuel cell,ontology=envo,rows=20 returned numFound0;
+    no global ontology-absence claim.
+- evidence_id: unavailable
+  kind: database
+  reference: https://gold.jgi.doe.gov/ecosystem/7651
+  locator: Current browser retrieval failure
+  support: unknown
+  summary: Original member/configuration details remain unavailable. Failure does
+    not show the source ID invalid or establish biological absence.
+  accessed_at: '2026-10-09T11:36:29Z'
+- evidence_id: gates
+  kind: validation
+  reference: https://github.com/CultureBotAI/HabitatMech/actions/runs/37922005631
+  locator: Exact4ad205887 baseline and label run37922005635; fresh local target checks
+  support: supports
+  summary: Native deterministic gates pass with unchanged scientific inputs; not universal
+    scientific certification.
+  accessed_at: '2026-10-09T11:36:29Z'
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Whole device rather than component or process
+  outcome: supported
+  summary: Source-qualified whole MFC is a plausible microbial habitat device, distinct
+    from the intervention label assessed in MEOR and from its own electrodes/biofilms.
+  evidence_ids:
+  - record
+  - gold
+  - primary
+  target_ids:
+  - habitatmech:GOLD.cdf0160423
+- assessment_id: parent
+  area: graph
+  topic: Bioreactor genus
+  outcome: supported
+  summary: The retained parent matches the whole culture-supporting device at this
+    source-qualified class level. Component-versus-whole exclusions on descendants
+    cannot be inherited as a defect here.
+  evidence_ids:
+  - record
+  - ontology
+  - primary
+  - descendant_context
+  target_ids:
+  - habitatmech:GOLD.cdf0160423
+- assessment_id: grounding
+  area: grounding
+  topic: Mint retained without a near-match identity
+  outcome: supported
+  summary: No tested exact candidate was found in the committed slice or bounded live
+    ENVO query. The broader bioreactor remains a parent, not a claimed exact MFC identity.
+  evidence_ids:
+  - decision
+  - search
+  - ontology
+  target_ids:
+  - habitatmech:GOLD.cdf0160423
+- assessment_id: scope
+  area: scope
+  topic: Original variants and members
+  outcome: unknown
+  summary: Specific GOLD devices, organisms and configurations are unverified. The
+    record asserts none of the experimental paper's taxa, electrode compositions,
+    chamber counts, electron donors or rates.
+  evidence_ids:
+  - unavailable
+  - primary
+  - record
+  target_ids:
+  - habitatmech:GOLD.cdf0160423
+- assessment_id: counts
+  area: quantity
+  topic: Three nodes and zero counters
+  outcome: supported
+  summary: Count/unit omission and three-node provenance reproduce. The absence of
+    direct rows is bounded to the committed inventories and not microbial absence.
+  evidence_ids:
+  - source
+  - record
+  target_ids:
+  - habitatmech:GOLD.cdf0160423
+- assessment_id: lifecycle
+  area: consistency
+  topic: CLASS status and source independence
+  outcome: supported
+  summary: One source with zero ITEM decisions correctly remains SEEDED. Parent source
+    ITEM review and this scientific report do not promote target native status.
+  evidence_ids:
+  - decision
+  - record
+  target_ids:
+  - habitatmech:GOLD.cdf0160423
+- assessment_id: optional
+  area: completeness
+  topic: No unsupported biological enrichment
+  outcome: supported
+  summary: There is no target-specific basis for transferring parent taxa/parameters
+    or descendant/paper-specific biological observations. Missing optional fields
+    are not defects.
+  evidence_ids:
+  - source
+  - record
+  - primary
+  target_ids:
+  - habitatmech:GOLD.cdf0160423
+- assessment_id: reproduction
+  area: schema
+  topic: Whole-document integrity
+  outcome: supported
+  summary: The complete generated target equals disk and native gates pass. Any future
+    definition or grounding belongs in maintained inputs and normal curation, not
+    direct record editing.
+  evidence_ids:
+  - gates
+  - decision
+  - record
+  target_ids:
+  - habitatmech:GOLD.cdf0160423
+findings: []
+actions: []
+limitations:
+- One of3208 records reviewed here; full-corpus completion is not established.
+- Original GOLD device configurations and members are unavailable. Class-level device
+  plausibility is not a specimen crosswalk or a claim that every environmental fuel-cell
+  deployment has identical containment or architecture.
+- Parent record inspection in this review was limited to hierarchy-relevant identity,
+  definition and source attestation; parent taxa, parameters and causal claims were
+  not endorsed.
+- Descendant report hits are contextual leads, not additional completed reviews. No
+  prior finding is closed or reclassified.
+- Native CLASS/SEEDED status is preserved. Optional fields are not populated from
+  the laboratory example or source-parent record.
+- Exact-baseline fullQC and ontology-label receipts are reused with unchanged-input
+  verification; no fresh global ontology refresh and three baseline tests remain skipped.
+- Only review artifacts are written. No scientific input change, native history/status
+  mutation, GitHub mutation, publication or SSSOM/KGX readiness assessment.
+```

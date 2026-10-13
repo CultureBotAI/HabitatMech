@@ -3,8 +3,6 @@ label: Adjacent soil
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.09350714a0
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6352
@@ -24,3 +22,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.09350714a0
+    for habitatmech:GOLD.245555f695 (Environmental > Aquatic > Thermal springs > Runoff
+    channel > Adjacent soil). ITEM hierarchy assessment for https://github.com/CultureBotAI/HabitatMech/issues/1971
+    (review 20261011T212823Z-adjacent_soil): Later exact-path Gb0306907-09 explicitly
+    identify soil adjacent to a hot-spring runoff channel. Spatial adjacency does
+    not make the soil a runoff channel. The frozen zero-count source and existing
+    identity can remain while excluding only the channel-context parent. Exclude only
+    this guarded GOLD source-parent contribution. Preserve independent parents, source
+    identity/count units or omissions, ontology definition, and native lifecycle;
+    later source examples do not reconstruct frozen membership. Shared synonym1249
+    and endpoint1398 issues remain separate.'

@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:01000008
-- habitatmech:GOLD.2a6cc2b868
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7989
@@ -18,3 +17,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution habitatmech:GOLD.2a6cc2b868
+    for habitatmech:GOLD.9b3b1cd806 (Environmental > Aquatic > Acidic > Acidic hypersaline
+    lake > Microbial mat). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1397
+    (20261012T054257Z-microbial_mat__54ad7767 F1). The acidic-hypersaline-lake mat
+    is a setting-specific microbial mat, not an entire lake. Preserve its minted identity
+    and microbial-mat parent; do not import a salinity measurement from a path qualifier
+    or infer no samples from the omitted direct count. Its NARROW endpoint contract
+    remains unresolved. Exclude only the immediate GOLD contribution named here. Preserve
+    source identity, node/path provenance, counts/units, native status and independent
+    parents. Unresolved source identity, genus, synonym and mapping-endpoint findings
+    remain separate.

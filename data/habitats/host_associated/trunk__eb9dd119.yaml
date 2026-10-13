@@ -12,7 +12,7 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: UBERON
 - synonym_text: Torso
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: BacDive
 - synonym_text: thoracolumbar region
   synonym_type: EXACT_SYNONYM
@@ -62,3 +62,9 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained BacDive label ''Torso'' as RELATED_SYNONYM: a CLOSE source mapping
+    does not establish exact lexical equivalence. Independent ontology synonyms and
+    verbatim attestations are preserved (#1459).'

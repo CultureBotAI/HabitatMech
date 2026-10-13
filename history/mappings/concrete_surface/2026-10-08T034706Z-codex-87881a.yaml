@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: concrete_surface
+session:
+  id: 2026-10-08T034706Z-codex-87881a
+  timestamp: '2026-10-08T03:47:06Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/282
+events:
+- type: GENERAL
+  outcome: no_change
+  sections:
+  - provenance
+  summary: Correct scaffolder default actor attribution for concrete-surface session
+  details: 'Actor attribution correction for history/mappings/concrete_surface/2026-10-08T034505Z-claude-code-abf648.yaml:
+    the scaffolder defaulted the actor name to claude-code because actor-name was omitted.
+    This session was performed by Codex, model gpt-5, agent-tool codex, not Claude Code or
+    the user. The preceding record remains immutable; its described curation and validation
+    are unchanged.'

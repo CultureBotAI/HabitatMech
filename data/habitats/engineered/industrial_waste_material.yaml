@@ -8,14 +8,13 @@ grounding_status: CLOSE
 mapping_status: REVIEWED
 synonyms:
 - synonym_text: Industrial waste
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: industrial waste
   synonym_type: EXACT_SYNONYM
   source: ENVO
 parent_habitats:
 - ENVO:00002264
-- mesh:D062611
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4937
@@ -37,3 +36,21 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: CLOSE.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Industrial waste'' as RELATED_SYNONYM: a CLOSE source
+    mapping does not establish exact lexical equivalence. Independent ontology synonyms
+    and verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution mesh:D062611 for habitatmech:GOLD.8faa599672
+    (Engineered > Solid waste > Industrial waste). Bounded hierarchy correction (#1937;
+    20261011T135442Z-industrial_waste_material F1): adopted ENVO:00002267 includes
+    liquid, solid and gaseous manufacturing wastes, whereas MeSH Solid Waste excludes
+    materials dissolved in industrial discharges (https://id.nlm.nih.gov/mesh/M0568791).
+    This is not a claim that all liquids are excluded from solid waste. Exclude only
+    this source-context contribution; retain ENVO:00002264, identity, all three source
+    nodes, nine ORGANISM assertions and CLOSE/REVIEWED status. Current GOLD members
+    do not narrow the adopted ontology class. Typed-synonym issue #1249 remains open.'

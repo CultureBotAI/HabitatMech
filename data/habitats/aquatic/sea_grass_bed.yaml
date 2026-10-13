@@ -9,7 +9,7 @@ grounding_status: EXACT
 mapping_status: REVIEWED
 synonyms:
 - synonym_text: Seagrass bed
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: sea grass beds
   synonym_type: RELATED_SYNONYM
@@ -22,7 +22,6 @@ synonyms:
   source: ENVO
 parent_habitats:
 - ENVO:01001378
-- habitatmech:GOLD.115edc36f8
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7940
@@ -187,3 +186,24 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Seagrass bed'' as RELATED_SYNONYM: a CLOSE source
+    mapping does not establish exact lexical equivalence. Independent ontology synonyms
+    and verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution habitatmech:GOLD.115edc36f8
+    for habitatmech:GOLD.664fc4e207 (Environmental > Aquatic > Marine > Intertidal
+    zone > Seagrass bed). Exact source-context correction https://github.com/CultureBotAI/HabitatMech/issues/1470
+    (20261012T111111Z-sea_grass_bed). The ENVO seagrass-covered marine-bed identity
+    and marine-bed genus are supported. Generic seagrass beds are not restricted to
+    intertidal areas; NOAA explicitly describes shallow subtidal beds. The GOLD intertidal
+    contribution therefore overconstrains the merged generic class. Current NCBI resolves
+    all retained source taxa, including many nonmicrobial taxa with omitted labels;
+    those associations must remain observational and cannot be rejected on names alone.
+    Suppress only this immediate GOLD contribution; preserve identity, source paths/nodes/counts/units,
+    omitted counts and independent genera. Original occurrence membership remains
+    unavailable. No source-scope, endpoint or SSSOM/KGX certification is implied.

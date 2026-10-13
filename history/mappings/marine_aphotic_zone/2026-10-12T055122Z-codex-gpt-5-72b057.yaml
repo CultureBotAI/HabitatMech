@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: marine_aphotic_zone
+session:
+  id: 2026-10-12T055122Z-codex-gpt-5-72b057
+  timestamp: '2026-10-12T05:51:22Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1273
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct bounded aquatic hierarchy or marine mechanism for marine_aphotic_zone
+  details: Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1273
+    (20261012T054251Z-marine_aphotic_zone F1). The generic light-limited marine layer is supported
+    by ENVO and PREGO. GOLD Oceanic/Aphotic contributes an off-continental-shelf restriction
+    that is not a universal genus of this class. BAS documents deep continental shelves. Preserve
+    146 ORGANISM and 13 TAXON assertions separately; reassess qualified source equivalence
+    without replacing ENVO functional depth conventions by NOAA light-zone conventions. Exclude
+    only the immediate GOLD contribution named here. Preserve source identity, node/path provenance,
+    counts/units, native status and independent parents. Unresolved source identity, genus,
+    synonym and mapping-endpoint findings remain separate. User authorized remediation and
+    publication. Dry seeding and all-overlay validation passed; final generated corpus, regressions,
+    map/site and full QC are pending at event creation. Actual completion results belong in
+    PR 2003 and successor observations. No scientific status promotion; unresolved findings
+    remain open.

@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: composting__f25ec0d0
+session:
+  id: 2026-10-11T071814Z-codex-gpt-5-bf6347
+  timestamp: '2026-10-11T07:18:14Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1692
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude edible plant-part context from vegetable-composting source parents
+  details: 'Implements only F2 in reviews/structured/20261011T071256Z-composting__f25ec0d0/review.yaml.
+    All eight later exact GOLD organism names/sites were inspected: seven describe mushroom
+    compost or mushroom-production compost; one says compost. Retained export SHA256 5f48b2f50fb2a9257754960a0f0e12dc6e8fa121e97c3e9f4497249e5fe6e439.
+    Current OLS FOODON:00003816 defines an edible anatomical plant part, not cultivation substrate.
+    The exact source-mint/path/expected-parent guard suppresses only that contribution. Preserve
+    generic compost parent, eight ORGANISM assertions, nodes4933/4934, full path and NARROW/SEEDED.
+    New whole-corpus differential regression failed before both exclusions and passes after
+    them; dry seed and forced canary completed and generated target was inspected. Full publication
+    gates follow separately. F1 and issue1692 remain open; no replacement identity, status
+    promotion or SSSOM/KGX certification.'

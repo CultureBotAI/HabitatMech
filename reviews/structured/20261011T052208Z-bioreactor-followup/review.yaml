@@ -1,0 +1,449 @@
+schema_version: 1.0.0
+review_id: 20261011T052208Z-bioreactor-followup
+kind: record
+repository: culturebotai/HabitatMech
+title: 'Bounded correction follow-up: bioreactor'
+started_at: '2026-10-11T05:21:41.229764Z'
+finished_at: '2026-10-11T05:22:08.912076Z'
+reviewer:
+  identity: codex-gpt-5
+  kind: agent
+  model: gpt-5
+  independence: self_review
+  independence_basis: Same agent performed curation; not independent scientific approval.
+skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'Conditional operating-mode scope, explicit COMMUNITY entity typing and hydrogen/carbon
+  wording resolve F1-F3. F4 remains open: not all detailed claims have inspected claim-level
+  locators. All identity and source observations are unchanged.'
+source:
+  git_revision: 34085e4cd2153e2c1273e0a5172ba48aae55312c
+  state: working_tree
+  inputs:
+  - path: curation/causal_graphs/bioreactor.yaml
+    sha256: 170d1134c3de38348844e45dbf6d87663dd4a0d1f33fd9e441a4352b6e277583
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: 4a8150d842452267f80310ea3974346c0a01a9c432273d409cc68499a51b30e8
+    role: context
+  - path: data/habitats/engineered/bioreactor.yaml
+    sha256: e16c558a11a93aee99cb6d3fc40b2892697dee2597015de4ec7d3b2dda3b632d
+    role: target
+  - path: docs/CURATION.md
+    sha256: 36df8306394c06c352b73e0bf7b47a2858784cedac7389a24d0b78f593ece646
+    role: context
+  - path: reviews/structured/20261011T051118Z-bioreactor/review.yaml
+    sha256: 76dd3eebbb2c386ef83cbf079cc15d086f7404e89f81594260fd3cc70eb573f7
+    role: context
+  - path: scripts/mechanism_graph.py
+    sha256: 20684d7982b8e44ca2a64c8c697fde3cac192325b235a4109f60632314846592
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 7e3cda3dadb9c7462498e5014bf38ef730068212f8f9cb131e3fce383c21d10e
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 4adf105e23d75c3563a516a0c160623d1065df7fcb2f31b7a0a0a8303d0401be
+    role: context
+  - path: tests/test_biomass_bioreactor_review_fixes.py
+    sha256: bc9421da3893b3440df219f0dd324a5c16bf0dbf758cef74bfa216e42066ada6
+    role: context
+targets:
+- target_id: ENVO:00002123
+  path: data/habitats/engineered/bioreactor.yaml
+  label: bioreactor
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: culturebotai/HabitatMech
+    path: curation/decisions.tsv
+    role: Exact source-concept identity and grounding decisions
+  - repository: culturebotai/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Guarded immediate GOLD context-parent exclusions
+  - repository: culturebotai/HabitatMech
+    path: curation/term_requests.tsv
+    role: Authored habitat definitions and genus
+  - repository: culturebotai/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained harmonization and generation
+  - repository: culturebotai/HabitatMech
+    path: data/raw/gold_ecosystem_paths.tsv
+    role: Frozen GOLD concepts and ORGANISM counts
+  - repository: culturebotai/HabitatMech
+    path: data/raw/prego_habitats.tsv
+    role: PREGO vocabulary and association pool
+  - repository: culturebotai/HabitatMech
+    path: data/raw/prego_habitat_taxa.tsv
+    role: PREGO ranked source associations
+  - repository: culturebotai/HabitatMech
+    path: curation/causal_graphs/bioreactor.yaml
+    role: Maintained causal graph and edge evidence
+  - repository: culturebotai/HabitatMech
+    path: data/raw/madin_habitats.tsv
+    role: Madin source concept and taxon pool
+  - repository: culturebotai/HabitatMech
+    path: data/raw/madin_habitat_taxa.tsv
+    role: Selected Madin associations
+  - repository: culturebotai/HabitatMech
+    path: data/raw/environment_parameters.tsv
+    role: Source-attributed qualitative bands
+scope:
+  description: Reassess all predecessor findings after a bounded correction; preserve
+    prior scope limits.
+  selection: Exact corrected target in PR1906, not a new corpus sample.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - ENVO:00002123
+  exclusions:
+  - target: Unchanged record biology and other 3207 records
+    reason: Compared for preservation; not independently re-certified scientifically.
+checks:
+- check_id: C0
+  name: Post-correction native check
+  command: just validate data/habitats/engineered/biomass__9d8a5aca.yaml
+  status: passed
+  required: true
+  exit_code: 0
+  summary: Started 2026-10-11T05:21:47.193471+00:00; completed 2026-10-11T05:21:50.412721+00:00.
+    No issues found
+  target_ids:
+  - ENVO:00002123
+- check_id: C1
+  name: Post-correction native check
+  command: just validate data/habitats/engineered/bioreactor.yaml
+  status: passed
+  required: true
+  exit_code: 0
+  summary: Started 2026-10-11T05:21:50.412808+00:00; completed 2026-10-11T05:21:53.542733+00:00.
+    No issues found
+  target_ids:
+  - ENVO:00002123
+- check_id: C2
+  name: Post-correction native check
+  command: just validate-causal curation/causal_graphs/bioreactor.yaml
+  status: passed
+  required: true
+  exit_code: 0
+  summary: Started 2026-10-11T05:21:53.542814+00:00; completed 2026-10-11T05:21:56.180790+00:00.
+    No issues found
+  target_ids:
+  - ENVO:00002123
+- check_id: C3
+  name: Post-correction native check
+  command: .venv/bin/pytest -q tests/test_biomass_bioreactor_review_fixes.py tests/test_causal_graph_curations.py
+    tests/test_mechanism_graph.py
+  status: passed
+  required: true
+  exit_code: 0
+  summary: 'Started 2026-10-11T05:21:56.180852+00:00; completed 2026-10-11T05:22:03.383669+00:00.
+    .................                                                        [100%]
+
+    17 passed in 6.16s'
+  target_ids:
+  - ENVO:00002123
+evidence:
+- evidence_id: CURRENT
+  kind: record_content
+  reference: data/habitats/engineered/bioreactor.yaml
+  locator: Complete post-correction record and diff against c287909e97d2953317a72ec85ec77dc5a43b7ea3
+  summary: 'Conditional operating-mode scope, explicit COMMUNITY entity typing and
+    hydrogen/carbon wording resolve F1-F3. F4 remains open: not all detailed claims
+    have inspected claim-level locators. All identity and source observations are
+    unchanged.'
+  accessed_at: '2026-10-11T05:22:08.912076Z'
+  support: supports
+- evidence_id: PRIOR
+  kind: prior_review
+  reference: reviews/structured/20261011T051118Z-bioreactor/review.yaml
+  locator: All findings; original evidence and limitations
+  summary: Immutable predecessor; original broad assessment is not relabeled as a
+    fresh full-record review.
+  accessed_at: '2026-10-11T05:22:08.912076Z'
+  support: supports
+- evidence_id: FIX
+  kind: record_content
+  reference: curation/causal_graphs/bioreactor.yaml
+  locator: Exact target-owned changes
+  summary: Maintained inputs preserve unrelated source claims. Generated target differs
+    only in graph/parent and appended audit events.
+  accessed_at: '2026-10-11T05:22:08.912076Z'
+  support: supports
+- evidence_id: RULES
+  kind: record_content
+  reference: src/habitatmech/schema/habitatmech.yaml
+  locator: CausalNodeTypeEnum; SourceAttestation.mapping_predicate; docs/CURATION.md
+    strict parent rule
+  summary: COMMUNITY is an assemblage, TAXON an organism/clade, COMMUNITY_PROCESS
+    an activity; parent_habitats means is-a and source mappings require explicit endpoint
+    semantics.
+  accessed_at: '2026-10-11T05:22:08.912076Z'
+  support: supports
+- evidence_id: TEST
+  kind: validation
+  reference: tests/test_biomass_bioreactor_review_fixes.py
+  locator: All four tests, plus 13 graph/renderer tests
+  summary: '17 focused tests pass: full-corpus hierarchy isolation, preserved source
+    fields/status, community renderer/schema acceptance, conditional operating scope
+    and carbon/electron roles. Fresh strict, reproduction, overlay and history checks
+    also passed before saving; final map/site/QC results are reported on the PR.'
+  accessed_at: '2026-10-11T05:22:08.912076Z'
+  support: supports
+- evidence_id: ONTOLOGY
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms?obo_id=ENVO%3A00002123
+  locator: Retained official response from 2026-10-11, definition
+  summary: Reinspected containment/metabolic-activity definition does not require
+    liquid medium or continuous flow.
+  accessed_at: '2026-10-11T05:22:08.912076Z'
+  support: supports
+- evidence_id: HATTORI
+  kind: primary_source
+  reference: https://www.jstage.jst.go.jp/article/jsme2/23/2/23_2_118/_pdf/-char/en
+  locator: Hattori 2008 pp118-120, Introduction and Table1
+  summary: Reinspected acetate cleavage, hydrogen-dependent CO2 reduction and formate-linked
+    cooperation. Hydrogen is the electron donor, not carbon; this does not reverse
+    the broader acetate-producing food web.
+  accessed_at: '2026-10-11T05:22:08.912076Z'
+  support: supports
+assessments:
+- assessment_id: A1
+  area: graph
+  topic: Bounded corrected semantics
+  outcome: supported
+  summary: 'Conditional operating-mode scope, explicit COMMUNITY entity typing and
+    hydrogen/carbon wording resolve F1-F3. F4 remains open: not all detailed claims
+    have inspected claim-level locators. All identity and source observations are
+    unchanged.'
+  target_ids:
+  - ENVO:00002123
+  evidence_ids:
+  - CURRENT
+  - PRIOR
+  - FIX
+  - RULES
+  - TEST
+  - ONTOLOGY
+  - HATTORI
+- assessment_id: A2
+  area: evidence
+  topic: Remaining finding
+  outcome: concern
+  summary: One predecessor finding remains open; deterministic gates do not settle
+    it.
+  target_ids:
+  - ENVO:00002123
+  evidence_ids:
+  - PRIOR
+  - CURRENT
+  - RULES
+findings:
+- finding_id: F1
+  issue_key: envo-00002123-graph-operating-mode-scope
+  category: scope
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Narrow operating modes are presented at the generic reactor root
+  description: 'Conditional operating-mode scope, explicit COMMUNITY entity typing
+    and hydrogen/carbon wording resolve F1-F3. F4 remains open: not all detailed claims
+    have inspected claim-level locators. All identity and source observations are
+    unchanged.'
+  target_ids:
+  - ENVO:00002123
+  field_paths:
+  - causal_graphs[0].description
+  - causal_graphs[0].edges
+  evidence_ids:
+  - CURRENT
+  - PRIOR
+  - FIX
+  - RULES
+  - TEST
+  - ONTOLOGY
+  - HATTORI
+  rule_id: docs/CURATION.md; docs/record-review-profile.md
+  native_severity: major
+  normalization_reason: Material semantic or evidence defect requiring maintained-input
+    correction.
+  owner_paths:
+  - repository: culturebotai/HabitatMech
+    path: curation/causal_graphs/bioreactor.yaml
+    role: Maintained causal graph and edge evidence
+  previous_occurrences:
+  - repository: culturebotai/HabitatMech
+    review_id: 20261011T051118Z-bioreactor
+    finding_id: F1
+  disposition_reason: 'Conditional operating-mode scope, explicit COMMUNITY entity
+    typing and hydrogen/carbon wording resolve F1-F3. F4 remains open: not all detailed
+    claims have inspected claim-level locators. All identity and source observations
+    are unchanged.'
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1638
+- finding_id: F2
+  issue_key: envo-00002123-community-node-typed-taxon
+  category: representation
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Mixed retained microbiome is typed as an organism or clade
+  description: 'Conditional operating-mode scope, explicit COMMUNITY entity typing
+    and hydrogen/carbon wording resolve F1-F3. F4 remains open: not all detailed claims
+    have inspected claim-level locators. All identity and source observations are
+    unchanged.'
+  target_ids:
+  - ENVO:00002123
+  field_paths:
+  - causal_graphs[0].nodes[retained_microbiome].node_type
+  evidence_ids:
+  - CURRENT
+  - PRIOR
+  - FIX
+  - RULES
+  - TEST
+  - ONTOLOGY
+  - HATTORI
+  rule_id: docs/CURATION.md; docs/record-review-profile.md
+  native_severity: major
+  normalization_reason: Material semantic or evidence defect requiring maintained-input
+    correction.
+  owner_paths:
+  - repository: culturebotai/HabitatMech
+    path: curation/causal_graphs/bioreactor.yaml
+    role: Maintained causal graph and edge evidence
+  - repository: culturebotai/HabitatMech
+    path: src/habitatmech/schema/habitatmech.yaml
+    role: Node-type contract
+  previous_occurrences:
+  - repository: culturebotai/HabitatMech
+    review_id: 20261011T051118Z-bioreactor
+    finding_id: F2
+  disposition_reason: 'Conditional operating-mode scope, explicit COMMUNITY entity
+    typing and hydrogen/carbon wording resolve F1-F3. F4 remains open: not all detailed
+    claims have inspected claim-level locators. All identity and source observations
+    are unchanged.'
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1638
+- finding_id: F3
+  issue_key: envo-00002123-methanogen-substrate-wording
+  category: graph
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: Hydrogen is grouped with reduced one-carbon intermediates
+  description: 'Conditional operating-mode scope, explicit COMMUNITY entity typing
+    and hydrogen/carbon wording resolve F1-F3. F4 remains open: not all detailed claims
+    have inspected claim-level locators. All identity and source observations are
+    unchanged.'
+  target_ids:
+  - ENVO:00002123
+  field_paths:
+  - causal_graphs[0].edges[methanogens_convert_intermediates_to_methane].description
+  evidence_ids:
+  - CURRENT
+  - PRIOR
+  - FIX
+  - RULES
+  - TEST
+  - ONTOLOGY
+  - HATTORI
+  rule_id: docs/CURATION.md; docs/record-review-profile.md
+  native_severity: minor
+  normalization_reason: Bounded wording or evidence-localization defect; no demonstrated
+    wrong habitat identity.
+  owner_paths:
+  - repository: culturebotai/HabitatMech
+    path: curation/causal_graphs/bioreactor.yaml
+    role: Maintained causal graph and edge evidence
+  previous_occurrences:
+  - repository: culturebotai/HabitatMech
+    review_id: 20261011T051118Z-bioreactor
+    finding_id: F3
+  disposition_reason: 'Conditional operating-mode scope, explicit COMMUNITY entity
+    typing and hydrogen/carbon wording resolve F1-F3. F4 remains open: not all detailed
+    claims have inspected claim-level locators. All identity and source observations
+    are unchanged.'
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1638
+- finding_id: F4
+  issue_key: envo-00002123-graph-evidence-locators
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Title fragments do not localize several detailed causal claims
+  description: The references resolve, but many snippets are titles or short topic
+    phrases. Detailed flow/attachment claims and the extension from oxygen transfer
+    to community selection are not verified by those snippets. The oxygen-transfer
+    snippet omits rate relative to the inspected title; occurrence in unavailable
+    full text is unknown, not disproven. Add inspected claim-bearing passages and
+    mark inference rather than claiming fabricated references or certifying full-text
+    support from abstracts.
+  target_ids:
+  - ENVO:00002123
+  field_paths:
+  - causal_graphs[0].edges[*].evidence
+  evidence_ids:
+  - CURRENT
+  - PRIOR
+  - FIX
+  - RULES
+  - TEST
+  - ONTOLOGY
+  - HATTORI
+  rule_id: docs/CURATION.md; docs/record-review-profile.md
+  native_severity: minor
+  normalization_reason: Bounded wording or evidence-localization defect; no demonstrated
+    wrong habitat identity.
+  owner_paths:
+  - repository: culturebotai/HabitatMech
+    path: curation/causal_graphs/bioreactor.yaml
+    role: Maintained causal graph and edge evidence
+  previous_occurrences:
+  - repository: culturebotai/HabitatMech
+    review_id: 20261011T051118Z-bioreactor
+    finding_id: F4
+  disposition_reason: The bounded correction does not resolve this finding; retain
+    the original scope and uncertainty.
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1638
+actions:
+- action_id: A1
+  description: 'Retrieve and inspect claim-level flow and community-selection evidence;
+    replace title-only snippets, qualify inference or remove unsupported edges. Do
+    not close #1638 merely because syntax and conditional scope pass.'
+  finding_ids:
+  - F4
+  target_ids:
+  - ENVO:00002123
+  owner_paths:
+  - repository: culturebotai/HabitatMech
+    path: curation/causal_graphs/bioreactor.yaml
+    role: Maintained causal graph and edge evidence
+  - repository: culturebotai/HabitatMech
+    path: src/habitatmech/schema/habitatmech.yaml
+    role: Node semantics and validation
+  acceptance_checks:
+  - Save linked successor dispositions with inspected evidence.
+  - Run relevant native schema, reproduction, graph and export tests before closing
+    findings.
+limitations:
+- Adversarial self-review, not independent approval.
+- Original frozen GOLD membership remains unreconstructed; later snapshots are not
+  a replacement.
+- Ontology label checks retain no-adapter skips. No SSSOM/KGX readiness claim.
+- Full publication QC and map/site validation are reported separately on PR1906.
+- 'Detailed graph evidence is not fully resolved under #1638.'
+related_reviews:
+- repository: culturebotai/HabitatMech
+  review_id: 20261011T051118Z-bioreactor
+  relationship: Reassesses all findings and resolves only the explicitly corrected
+    subset
+links:
+- https://github.com/CultureBotAI/HabitatMech/pull/1906
+tags:
+- followup
+- scientific-review
+- engineered

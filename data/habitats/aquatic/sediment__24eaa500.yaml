@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002007
-- ENVO:01000125
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7908
@@ -17,3 +16,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:01000125 for habitatmech:GOLD.da1b16a895
+    (Environmental > Aquatic > Marine > Littoral zone > Sediment). Exact source-context
+    correction https://github.com/CultureBotAI/HabitatMech/issues/1483 (20261012T111116Z-sediment__24eaa500).
+    The marine littoral-qualified sediment mint retains a defensible sediment genus.
+    The marine littoral zone is a spatial region, not particulate material. No exact-path
+    sample or organism examples were found in the later export; current classification
+    and frozen source path still support retained qualification, not a positive assertion
+    of absence. Suppress only this immediate GOLD contribution; preserve identity,
+    source paths/nodes/counts/units, omitted counts and independent genera. Original
+    occurrence membership remains unavailable. No source-scope, endpoint or SSSOM/KGX
+    certification is implied.

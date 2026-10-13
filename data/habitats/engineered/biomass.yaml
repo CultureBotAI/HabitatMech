@@ -4,7 +4,6 @@ habitat_category: ENGINEERED
 grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
-- ENVO:00002126
 - ENVO:01000155
 source_attestations:
 - source: GOLD
@@ -18,3 +17,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00002126 for habitatmech:GOLD.262a789a98
+    (Engineered > Bioreactor > SSF (Solid state fermentation) > Aerobic > Biomass).
+    ITEM hierarchy assessment (#1635): Organic biomass material is not a kind of its
+    aerobic SSF reactor. Arora et al. 2018 (https://pubmed.ncbi.nlm.nih.gov/29564535/)
+    (DOI:10.1007/s00449-018-1923-2) distinguishes cell biomass, solid substrate and
+    the containing SSF apparatus. Exclude only this GOLD context contribution; retain
+    independent ENVO:01000155, qualified mint, all source IDs and paths, count/unit
+    omissions or values, collapsed-node notes, skos:narrowMatch and existing NARROW/SEEDED
+    status. No new identity endorsement, experimental condition, taxon or causal claim
+    is inferred.'

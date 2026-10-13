@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: biofilm__3aa782aa
+session:
+  id: 2026-10-07T093837Z-claude-code-0726bf
+  timestamp: '2026-10-07T09:38:37Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1631
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude the biocathode substrate from biofilm genus hierarchy
+  details: Add one exact source/path/expected-parent GOLD exclusion for habitatmech:GOLD.5eaebd18a7.
+    Nevin et al. 2010 PMID:20714445 DOI:10.1128/mBio.00103-10 distinguishes biofilms from
+    their cathode surfaces; it is not a crosswalk to GOLD5682 or Gs0133134. Preserve ENVO:00002034,
+    industrial-product path, minted identity, zero-count omissions, skos:narrowMatch and NARROW/SEEDED
+    status. The new full-corpus differential regression failed before correction because the
+    exclusion was absent. Dry seed and the inspected target canary passed. Focused tests,
+    full corpus/map refresh, rendered-link regression, history/OAK validation and full QC
+    are required before merge. No organism, electrode chemistry, causal mechanism or identity-review
+    endorsement is added.

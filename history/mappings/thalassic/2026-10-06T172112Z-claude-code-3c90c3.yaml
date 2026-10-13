@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: thalassic
+session:
+  id: 2026-10-06T172112Z-claude-code-3c90c3
+  timestamp: '2026-10-06T17:21:12Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1572
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  summary: Retain the Thalassic source habitat with a quality xref
+  details: 'Official ENVO a2455d1a77e46bb8a664d65a157166b539269042 defines ENVO:01001667 as
+    physical quality. GOLD3976 and its one ORGANISM assertion, full saline-environment path
+    and one lagoon triad support retaining the habitat under GOLD.3fece6dbf7, not discarding
+    it or guessing a whole-water-body genus. Added ITEM CONFIRM_UNGROUNDED/xref and an exact-path/expected-parent
+    exclusion in curation/gold_parent_exclusions.tsv. Baseline was automatic gold_leaf_label,
+    ENVO:01001667/EXACT/SEEDED. Old generated seed summary: Seeded from data/raw/ inventories;
+    attested by GOLD. Grounding: EXACT. The rebuilt deterministic seed event describes current
+    UNGROUNDED status; this append-only history preserves the superseded interpretation. Baseline
+    review 20261006T170039Z-thalassic.md unchanged. Dry seed, inspected forced canary and
+    26 focused tests passed. Authentic map/site, URL continuity, labels and full QC are required
+    before merge; terminal results in PR #1571.'

@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: water_ice_core
+session:
+  id: 2026-10-06T214359Z-codex-gpt-5-256e83
+  timestamp: '2026-10-06T21:43:59Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1590
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1589
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: Exclude saline-lake context parent from water ice core
+  details: 'Added one guarded exclusion for habitatmech:GOLD.d023ed65ca and its exact Ice
+    core path, expected parent ENVO:00000019. Official ENVO a2455d1a77e46bb8a664d65a157166b539269042
+    distinguishes the drilled ice mass from the whole saline lake; retained independent ENVO:01000293.
+    Dry seed and exact forced canary were run. The full-corpus regression compares builds
+    with and without only this row and requires identical membership, exactly one changed
+    document, unchanged source/status/old history, and only the parent removal plus appended
+    exclusion event. Full validation and real semantic-map/site rebuilding are required before
+    merge; completion is recorded in the PR audit, not asserted here. Preserved GOLD7982,
+    full source path, absent count/unit, CLOSE, closeMatch and existing REVIEWED provenance.
+    Multi-year source identity remains unresolved, and typed broad synonyms remain #1249.
+    The baseline review report is preserved unchanged.'

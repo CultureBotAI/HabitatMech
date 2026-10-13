@@ -1,0 +1,784 @@
+schema_version: 1.0.0
+review_id: 20261009T062254Z-manure__6288a86d
+kind: record
+repository: CultureBotAI/HabitatMech
+title: 'Manure under Animal waste: identity, quantitative provenance and mapping endpoints'
+started_at: '2026-10-09T06:18:06Z'
+finished_at: '2026-10-09T06:22:54Z'
+reviewer:
+  identity: codex-gpt-5
+  kind: agent
+  model: gpt-5
+  independence: self_review
+  independence_basis: Same agent continuing the corpus review; not an independent
+    second reviewer. Exact target and source inputs inspected for this observation.
+skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Reviewed the entire animal-waste GOLD Manure record. One confirmed major
+  finding reproduces the shared source-attestation/grounding-status endpoint mismatch.
+  Minted identity, source-specific separation, animal-waste parent, ENGINEERED/SEEDED
+  state, 124 ORGANISM assertions and audit event are supported. The broader ENVO manure
+  genus is plausible but its fertilizer-use restriction was not independently established
+  for all source members; retained as a limitation, not a demonstrated additional
+  defect.
+source:
+  git_revision: 5519228b8fe7d87c22bd04f4e0f078f2fe013c69
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: curation/decisions.tsv
+    sha256: 0602cca13e6495da256a6f1cfd5897462f73f9739a729447862017d93c148efd
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: f3f6d18ad763698231d10a95d037b8bb6f943af5d32f8290b10b7eea8f63b3dd
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 3efdac153ccd40f518458a9dc5360e09dd660c3a42fbd06bfc57f3b2f707ece7
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: b59b9e800a918135e3915145d4d8098bb48dcea36a312b3004c594a57d221ae9
+    role: context
+  - path: data/habitats/RETIRED.tsv
+    sha256: 41beffc45aabdf304de633c21200b375d7f01d1cb2e036d4a026961d545a35e5
+    role: context
+  - path: data/habitats/engineered/animal_waste_material.yaml
+    sha256: 2ad8d7faa1132d2403bc1d7596521fb659304ff5013b808249bc1fe5b35404c6
+    role: context
+  - path: data/habitats/engineered/manure.yaml
+    sha256: 5abbcdffe09572cb4ef5ecfc784c2fc173c8b631525c881dad66dccd80f925a1
+    role: context
+  - path: data/habitats/engineered/manure__6288a86d.yaml
+    sha256: a2ad0bce3e5a2ba8ba42636161539b0f56b6ae31577c0f8eefb2e424530d5e62
+    role: target
+  - path: data/habitats/engineered/manure__c8feb3ee.yaml
+    sha256: 94b174065554d2bea60afcdff8ba46e90cb36dbb5c5deddc1892b1ca75f055d1
+    role: context
+  - path: data/habitats/engineered/manure_slurry.yaml
+    sha256: ff9bcce236ca13243b7ef4a315701e29e78e618fd3262f4a5515ac7f8c65ad69
+    role: context
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: 36df8306394c06c352b73e0bf7b47a2858784cedac7389a24d0b78f593ece646
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: f7aa39ee762d94f1902d9f08f328cb897bc543e4e226057eb4770d24bfcc6eb5
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reports/yaml_record_review/20260924T110722Z-manure.md
+    sha256: 2d9996c47b336623b7a0e07f8ae1be9919e7aef502e25bfbbc35f2d312b95495
+    role: context
+  - path: reports/yaml_record_review/20260925T155233Z-manure__c8feb3ee.md
+    sha256: 66013d3914fa7f349034844bc53382116b3446e1e42135963c07a2716355d9e8
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 52d2a22309a1f4a10728a663560bb4d918346c292221fd34139b99b4159d3fe5
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 92adf631fa099120a497ff7001473e659347d23ac9b418f04cd341ddad5d2a89
+    role: context
+targets:
+- target_id: habitatmech:GOLD.7d30100f56
+  path: data/habitats/engineered/manure__6288a86d.yaml
+  label: Manure
+  record_class: HabitatRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/gold_ecosystem_paths.tsv
+    role: Exact source path and collapsed node/count provenance.
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Source-specific identity and review-depth decisions.
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Exact guarded immediate GOLD context-parent contribution.
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Evidence-backed source definition, if justified.
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Grounding route, source predicates/status, generated record and audit.
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/schema/habitatmech.yaml
+    role: Explicit SourceAttestation and GroundingStatus endpoint contracts.
+scope:
+  description: One exact generated Manure record, including both parent contributions,
+    one source attestation and all generated fields.
+  selection: data/habitats/engineered/manure__6288a86d.yaml; identifier GOLD.7d30100f56,
+    PATHS.tsv:2210 and full GOLD path distinguish this target.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - habitatmech:GOLD.7d30100f56
+  exclusions:
+  - target: Generic ENVO manure and anaerobic-bioreactor Manure
+    reason: Read as context only, not merged with this target and not counted as freshly
+      reviewed.
+  - target: Animal waste material and Manure slurry
+    reason: Contextual parent/sibling records only; their taxa, synonyms, native review
+      states and findings do not transfer.
+  - target: Other 3207 current records
+    reason: Not counted as individually reviewed by this observation; full-corpus
+      completion remains unproven.
+checks:
+- check_id: C1
+  name: Target LinkML validation
+  status: passed
+  required: true
+  command: env UV_CACHE_DIR=build/uv-cache just validate data/habitats/engineered/manure__6288a86d.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.7d30100f56
+  summary: No issues found.
+- check_id: C2
+  name: Target closed-schema validation
+  status: passed
+  required: true
+  command: env UV_CACHE_DIR=build/uv-cache just validate-strict data/habitats/engineered/manure__6288a86d.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.7d30100f56
+  summary: One file scanned, zero errors.
+- check_id: C3
+  name: Full corpus reproduction receipt
+  status: passed
+  required: true
+  command: env UV_CACHE_DIR=build/uv-cache just verify-corpus
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.7d30100f56
+  summary: 3208 expected/found, zero missing, extra or differing records.
+  scope_note: Executed in the preceding Leachate review of this same unchanged 5519228
+    baseline during this goal turn; no scientific inputs changed. Reused receipt,
+    not a second command run.
+- check_id: C4
+  name: History validation receipt
+  status: passed
+  required: true
+  command: env UV_CACHE_DIR=build/uv-cache just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.7d30100f56
+  summary: 213 native history records valid.
+  scope_note: Executed in the preceding Leachate review of this same unchanged 5519228
+    baseline during this goal turn; no scientific inputs changed. Reused receipt,
+    not a second command run.
+- check_id: C5
+  name: Raw provenance receipt
+  status: passed
+  required: true
+  command: env UV_CACHE_DIR=build/uv-cache just provenance-check
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.7d30100f56
+  summary: 14 committed inventories and two GOLD sources current.
+  scope_note: Executed in the preceding Leachate review of this same unchanged 5519228
+    baseline during this goal turn; no scientific inputs changed. Reused receipt,
+    not a second command run.
+- check_id: C6
+  name: Actual target resolution and whole-document regeneration
+  status: passed
+  required: true
+  command: "env UV_CACHE_DIR=build/uv-cache uv run python -c 'from habitatmech import\
+    \ seed as s\nfrom dataclasses import asdict\nimport json\nont=s.OntologyIndex(s.read_tsv(\"\
+    ontology_terms.tsv\"),s.read_tsv(\"ontology_subclass_edges.tsv\"))\nrows=s.read_tsv(\"\
+    gold_ecosystem_paths.tsv\"); claims=s.leaf_claimants(rows); composed=s.composed_claimants(rows)\n\
+    mapping={}\nfor m in s.read_tsv(\"isolation_source_groundings.tsv\"):\n for key\
+    \ in (s.norm_label(m[\"subject_label\"]),s.norm_label(m[\"subject_label_normalized\"\
+    ])):\n  if key: mapping.setdefault(key,m)\ndecs=s.load_decisions(s.DECISIONS_PATH)\n\
+    for row in rows:\n if row[\"canonical_path\"] in {\"Engineered > Solid waste >\
+    \ Animal waste > Manure\",\"Engineered > Solid waste > Animal waste\"}:\n  ident=s.mint(\"\
+    GOLD\",row[\"canonical_path\"])\n  auto=s.resolve_gold(row,ont,mapping,claims,composed)\n\
+    \  print(json.dumps({\"id\":ident,\"row\":row,\"automatic\":asdict(auto),\"applied\"\
+    :asdict(s.apply_decision(auto,ident,decs))},default=str))\nprint(\"manure_claimant\"\
+    ,claims[\"manure\"])\nprint(\"same_leaf_paths\",[(r[\"canonical_path\"],r[\"depth\"\
+    ]) for r in rows if s.norm_label(r[\"leaf_label\"])==\"manure\"])\nfor ident in\
+    \ [\"ENVO:03501300\",\"ENVO:00002276\",\"ENVO:00002873\"]:\n print(\"ontology\"\
+    ,ident,ont.terms[ident],\"parents\",ont.direct_parents(ident))\n'\nenv UV_CACHE_DIR=build/uv-cache\
+    \ uv run python -c 'from habitatmech.seed import build_corpus,build_document\n\
+    from pathlib import Path\nimport yaml\nc=next(c for c in build_corpus().concepts\
+    \ if c.identifier==\"habitatmech:GOLD.7d30100f56\")\nprint(\"source_concepts\"\
+    ,c.source_concepts,\"reviewed_sources\",c.reviewed_sources)\nprint(\"build_document_equals_yaml\"\
+    ,build_document(c)==yaml.safe_load(Path(\"data/habitats/engineered/manure__6288a86d.yaml\"\
+    ).read_text()))\n'"
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.7d30100f56
+  summary: No shallower Manure claimant; actual route gold_narrower_than_leaf_match;
+    one source, zero reviewed; build_document equals the entire stored YAML.
+  evidence_ids:
+  - E3
+  - E4
+- check_id: C7
+  name: Exact-baseline authoritative CI QC receipt
+  status: passed
+  required: true
+  command: gh run view 37891213365 --json headSha,status,conclusion,jobs,url; gh run
+    view 37891213365 --log | rg 'passed|skipped|records|No issues|corpus reproduces|current:|terms|All
+    QC|QC passed'
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.7d30100f56
+  summary: 'Completed SUCCESS at 5519228b8fe7d87c22bd04f4e0f078f2fe013c69: 637 tests
+    passed, 3 skipped; four dedicated review-contract tests passed; all HabitatMech
+    quality gates passed.'
+  scope_note: Freshly inspected existing main CI, not a new local full-QC run. git
+    diff --exit-code against this baseline over data/curation/src/scripts/tests/docs/conf/CLAUDE.md/justfile/schema/.github
+    returned 0. New review bundle validated separately. Receipt inspected during the
+    immediately preceding record in this goal turn; unchanged baseline.
+  evidence_ids:
+  - E10
+- check_id: C8
+  name: Exact-baseline ontology label CI receipt
+  status: passed
+  required: true
+  command: gh run view 37891213368 --json headSha,status,conclusion,jobs,url
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.7d30100f56
+  summary: Completed SUCCESS at the same baseline; Enforce id<->label correspondence
+    step passed.
+  scope_note: Existing CI within configured adapter/exception scope, not evidence
+    of minted habitat semantics. A supplemental log keyword filter returned no matches
+    (exit 1), so no label-count totals are asserted. Receipt inspected during the
+    immediately preceding record in this goal turn; unchanged baseline.
+  evidence_ids:
+  - E10
+- check_id: C9
+  name: Original source-study retrieval
+  status: unavailable
+  required: false
+  target_ids:
+  - habitatmech:GOLD.7d30100f56
+  command: web open https://gold.jgi.doe.gov/ecosystem/4915, https://gold.jgi.doe.gov/study?id=Gs0128737
+    and https://gold.jgi.doe.gov/study?id=Gs0150278; three quoted-accession OR web
+    queries covering all ten source study IDs
+  summary: Three direct pages returned Internal Error. Indexed accession searches
+    found no results. No original study/sample methods inspected, and no accession
+    declared absent.
+  evidence_ids:
+  - E8
+- check_id: C10
+  name: Current GOLD workbook path cross-check
+  status: passed
+  required: false
+  command: "env UV_CACHE_DIR=build/uv-cache uv run python -c 'from urllib.request\
+    \ import urlopen\nfrom io import BytesIO\nimport hashlib,json,openpyxl\nurl=\"\
+    https://gold.jgi.doe.gov/download?mode=ecosystempaths\"\ndata=urlopen(url,timeout=60).read()\n\
+    print(json.dumps({\"url\":url,\"bytes\":len(data),\"sha256\":hashlib.sha256(data).hexdigest()}))\n\
+    wb=openpyxl.load_workbook(BytesIO(data),read_only=True,data_only=True)\nfor ws\
+    \ in wb:\n ws.reset_dimensions()\n for n,row in enumerate(ws.iter_rows(values_only=True),1):\n\
+    \  if any(\"manure\" in str(v).lower() for v in row): print(json.dumps({\"sheet\"\
+    :ws.title,\"row\":n,\"cells\":row},default=str))\n'"
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.7d30100f56
+  summary: Workbook row 376 confirms node 4916 and exact source path; sibling rows
+    remain distinct. Style warning only.
+  evidence_ids:
+  - E7
+- check_id: C11
+  name: Causal and iModulon applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - habitatmech:GOLD.7d30100f56
+  summary: No target graph or molecular/strain/taxon claim and no target overlay found
+    in ignored-inclusive local search. No iModulon query or target causal validation
+    needed.
+  evidence_ids:
+  - E1
+  - E5
+evidence:
+- evidence_id: E1
+  kind: record_content
+  reference: data/habitats/engineered/manure__6288a86d.yaml
+  locator: Entire file and PATHS.tsv:2210
+  accessed_at: '2026-10-09T06:22:54Z'
+  support: supports
+  summary: GOLD.7d30100f56, Manure, ENGINEERED/NARROW/SEEDED; parents ENVO:00002276
+    and ENVO:03501300; one GOLD source, 124 ORGANISM assertions, narrowMatch and collapsed-node
+    note; one seed event. Optional definition, taxa, parameters, synonyms, xrefs,
+    graphs, datasets and discussions are absent.
+- evidence_id: E2
+  kind: database
+  reference: data/raw/gold_ecosystem_paths.tsv
+  locator: Row 174; gold_path_biosamples.tsv:190; gold_studies.tsv:1460,1697,1698,3102,3444,3662,3671,3914,4198,4472
+  accessed_at: '2026-10-09T06:22:54Z'
+  support: supports
+  summary: 'Depth-four exact path, two nodes 4915|4916, organism_count/total_assertions
+    124, tree study_count/biosample_count zero. Separate biosample inventory has 129
+    at node 4916. Ten distinct study rows carry this path: Gs0128737, Gs0132919, Gs0132920,
+    Gs0150278, Gs0150631, Gs0153746, Gs0153755, Gs0154218, Gs0159101, Gs0161509. Five
+    have additional source paths. No target-specific triad, parameter or other raw
+    inventory match in the exact scan.'
+  search_scope: Structured csv.DictReader exact-field/pipe-member scan over all 14
+    raw TSVs, including overflow values, for full path, minted ID and both full node
+    IDs. Adjacent paths in multi-path studies are context, not target attributes.
+- evidence_id: E3
+  kind: record_content
+  reference: src/habitatmech/seed.py
+  locator: resolve_gold/ingest_gold/build_corpus/build_document executed for exact
+    target and Animal waste parent path
+  accessed_at: '2026-10-09T06:22:54Z'
+  support: supports
+  summary: Two depth-four Manure leaves tie; no claimant of the generic term. Target
+    remains minted via gold_narrower_than_leaf_match with ENVO:03501300 as extra parent,
+    NARROW/narrowMatch and no applied decision. Immediate Animal waste resolves to
+    ENVO:00002276 by synonym with ITEM REVIEW; its parent contribution is independent
+    of the leaf-match parent. Full target document reproduces exactly, one contributing
+    source and zero reviewed sources.
+- evidence_id: E4
+  kind: record_content
+  reference: src/habitatmech/schema/habitatmech.yaml
+  locator: SourceAttestation.mapping_predicate; GroundingStatusEnum; docs/CURATION.md
+  accessed_at: '2026-10-09T06:22:54Z'
+  support: refutes
+  summary: The attestation contract describes source -> record identifier and omission
+    when source identity is retained. NARROW compares record identifier against source.
+    Actual route instead compares retained source identity with generic ontology parent.
+    Shape validation does not reconcile those endpoints. Parents must be strictly
+    broader.
+- evidence_id: E5
+  kind: search
+  reference: Ignored-inclusive local target and label search
+  locator: curation, history, research, conf, tests, docs, reviews, reports/yaml_record_review,
+    PATHS.tsv and RETIRED.tsv
+  accessed_at: '2026-10-09T06:22:54Z'
+  support: context_only
+  summary: No exact-target ITEM decision, authored definition, source-parent exclusion,
+    causal overlay, native history or prior individual report found in these bounds.
+    Parent and sibling reports/decisions exist; mentioning this source in another
+    report is not its completed review.
+  search_scope: rg --no-ignore --hidden exact ID/slug/full path/nodes4915-4916 and
+    case-insensitive manure label; hidden and ignored files included. Label hits used
+    as leads and inspected only where stated, not assumed to support this target.
+- evidence_id: E6
+  kind: authority
+  reference: https://raw.githubusercontent.com/EnvironmentOntology/envo/a2455d1a77e46bb8a664d65a157166b539269042/envo.owl
+  locator: Whole XML classes ENVO_03501300, ENVO_00002276, ENVO_00002873; matching
+    inventory rows/edges
+  accessed_at: '2026-10-09T06:22:54Z'
+  support: partial
+  summary: Animal waste material is under organic waste material; its editorial note
+    concerns animal-metabolism-associated waste. ENVO manure denotes plant/animal
+    organic material used agriculturally as fertilizer and is an environmental material.
+    Animal manure is a narrow synonym, not an exact synonym in the primary XML. This
+    supports a candidate broader manure genus but does not establish fertilizer use
+    for every GOLD member.
+  snapshot_sha256: a0b919065d33a9cf975b74cadd16c75f32f512d17f4f6d5999b74216701df54c
+- evidence_id: E7
+  kind: database
+  reference: https://gold.jgi.doe.gov/download?mode=ecosystempaths
+  locator: site data row376, plus contextual rows82,372,374,375,1048
+  accessed_at: '2026-10-09T06:22:54Z'
+  support: supports
+  summary: Current node4916 path is Engineered > Solid waste > Animal waste > Manure
+    > Unclassified. Anaerobic Manure, Fresh manure, Manure slurry, Liquid manure and
+    Manure-fertilized soil are separate entries. Presence is not a strict scope proof,
+    a count refresh or evidence for a same-as merge.
+  snapshot_sha256: 3933e5f0664915c1bbfa00212e17d013da360fb33dd52e509254050813135396
+- evidence_id: E8
+  kind: search
+  reference: https://gold.jgi.doe.gov/study?id=Gs0128737
+  locator: ecosystem/4915 and Gs0128737/Gs0150278 direct pages; indexed search covering
+    all ten study accessions
+  accessed_at: '2026-10-09T06:22:54Z'
+  support: unknown
+  summary: Direct requests failed and accession searches had no result. These observations
+    do not refute the committed study rows or establish that the original records
+    are missing.
+  search_scope: 'Three direct URLs; three OR queries of quoted IDs: Gs0128737/Gs0132919/Gs0132920;
+    Gs0150278/Gs0150631/Gs0153746; Gs0153755/Gs0154218/Gs0159101/Gs0161509. Original
+    crosswalks unavailable.'
+- evidence_id: E9
+  kind: authority
+  reference: https://www.epa.gov/agstar/frequent-questions-about-livestock-biogas-projects
+  locator: Anaerobic Digestion questions1-2, lines37-45
+  accessed_at: '2026-10-09T06:22:54Z'
+  support: context_only
+  summary: EPA treats animal manure as an organic waste feedstock and distinguishes
+    it from post-digestion digestate, which has several possible uses. This confirms
+    a material interpretation and cautions against inferring digestion or fertilizer
+    use solely from a manure label. It is not evidence about the ten exact GOLD studies.
+- evidence_id: E10
+  kind: validation
+  reference: https://github.com/CultureBotAI/HabitatMech/actions/runs/37891213365
+  locator: Exact baseline 5519228b8fe7d87c22bd04f4e0f078f2fe013c69; label run37891213368
+  accessed_at: '2026-10-09T06:22:54Z'
+  support: supports
+  summary: 'Previously completed main QC and labels inspected earlier in this same
+    goal turn: 637 passed/3 skipped, four dedicated review-contract tests passed,
+    all native quality gates passed and label enforcement passed. Data/code/config
+    remained unchanged; fresh target checks pass.'
+- evidence_id: E11
+  kind: authority
+  reference: https://www.w3.org/TR/skos-reference/#mapping
+  locator: Section10.3 S41/S43 and10.6.4 inspected earlier in this goal turn
+  accessed_at: '2026-10-09T06:22:54Z'
+  support: context_only
+  summary: Mapping direction depends on endpoints; narrowMatch and broadMatch are
+    inverses. SKOS mapping properties are not irreflexive, so no formal self-link
+    ban is claimed.
+- evidence_id: E12
+  kind: record_content
+  reference: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  locator: Current OPEN body and acceptance criteria read earlier in same goal turn
+  accessed_at: '2026-10-09T06:22:54Z'
+  support: context_only
+  summary: Shared endpoint-contract issue already tracks this route using other witnesses
+    and requires schema/route/actual-consumer reconciliation. No issue mutation occurred.
+- evidence_id: E13
+  kind: prior_review
+  reference: reports/yaml_record_review/20260925T155233Z-manure__c8feb3ee.md
+  locator: Entire sibling report and entire 20260924T110722Z-manure.md generic report
+  accessed_at: '2026-10-09T06:22:54Z'
+  support: context_only
+  summary: Neither is an individual review of this target. Their broad-parent plausibility
+    claims are not fresh primary proof, and old suggestions to use REPLACE or call
+    missing ITEM review itself a major defect are not adopted. No finding disposition
+    in either historical report is changed here.
+- evidence_id: E14
+  kind: authority
+  reference: https://www.epa.gov/agstar/anaerobic-digestion-right-your-farm
+  locator: Types of Manure table, lines40-46
+  accessed_at: '2026-10-09T06:22:54Z'
+  support: context_only
+  summary: EPA distinguishes liquid, slurry, semi-solid and solid manure handling
+    forms. Thus the source's Solid waste branch does not alone justify assigning a
+    solids threshold, dryness, freshness or liquid state to this target. No table
+    thresholds are imported as target parameters.
+assessments:
+- assessment_id: A1
+  area: identity
+  topic: Exact source concept and distinct siblings
+  outcome: supported
+  summary: Minted ID, label, full path, slug, source node pair and ENGINEERED category
+    agree. The record is animal-waste-context manure, not the generic plant-or-animal
+    fertilizer ontology class, a particular microbial taxon or the anaerobic-bioreactor
+    sibling.
+  target_ids:
+  - habitatmech:GOLD.7d30100f56
+  evidence_ids:
+  - E1
+  - E2
+  - E3
+  - E7
+- assessment_id: A2
+  area: graph
+  topic: Animal-waste material parent
+  outcome: supported
+  summary: The full source path names animal waste, and ENVO:00002276 denotes that
+    material category. Unlike a container/process parent, this is a defensible material-to-material
+    genus; the parent's other fields and taxa do not become target claims.
+  target_ids:
+  - habitatmech:GOLD.7d30100f56
+  evidence_ids:
+  - E1
+  - E3
+  - E6
+  - E9
+- assessment_id: A3
+  area: grounding
+  topic: ENVO manure genus and role-dependent scope
+  outcome: unknown
+  summary: Animal manure is a narrower lexical concept within ENVO's broad manure
+    usage, so the parent is plausible. The primary definition includes agricultural
+    fertilizer use, while GOLD's exact inventory lacks that role and original methods
+    could not be recovered. This limits sign-off but does not demonstrate that the
+    parent is false. Resolve source scope before any stronger identity assertion or
+    removal.
+  target_ids:
+  - habitatmech:GOLD.7d30100f56
+  evidence_ids:
+  - E2
+  - E6
+  - E8
+  - E9
+- assessment_id: A4
+  area: representation
+  topic: Mapping and status endpoints
+  outcome: concern
+  summary: Executed NARROW/narrowMatch describes retained source identity relative
+    to the ontology parent, not the source-to-record link declared by the schema.
+    Another confirmed witness of shared issue1398; not a global predicate-direction
+    repair.
+  target_ids:
+  - habitatmech:GOLD.7d30100f56
+  evidence_ids:
+  - E1
+  - E3
+  - E4
+  - E11
+  - E12
+- assessment_id: A5
+  area: quantity
+  topic: Assertion units and separate snapshots
+  outcome: supported
+  summary: 124 is the organism assertion count in the provenance-pinned source tree
+    and is correctly labeled ORGANISM. The later 129-biosample row and ten study rows
+    are separate scopes/units, not alternative organism counts. None identifies 124
+    taxa or supports characteristic presence.
+  target_ids:
+  - habitatmech:GOLD.7d30100f56
+  evidence_ids:
+  - E1
+  - E2
+  - E3
+- assessment_id: A6
+  area: provenance
+  topic: Study associations versus habitat-wide evidence
+  outcome: unknown
+  summary: All ten committed study accessions and exact path memberships were read,
+    including five multi-path studies. Current workbook validates the leaf path, but
+    original pages/methods remain unavailable; neighboring bioreactor, rumen-fluid,
+    soil or wastewater paths do not characterize all target material.
+  target_ids:
+  - habitatmech:GOLD.7d30100f56
+  evidence_ids:
+  - E2
+  - E7
+  - E8
+- assessment_id: A7
+  area: consistency
+  topic: Native review status and history
+  outcome: supported
+  summary: One source, zero ITEM decisions, SEEDED and one seed event agree. Scientific
+    review persistence neither promotes status nor creates a native curation event.
+    No major finding is based solely on being unreviewed.
+  target_ids:
+  - habitatmech:GOLD.7d30100f56
+  evidence_ids:
+  - E1
+  - E3
+  - E4
+- assessment_id: A8
+  area: completeness
+  topic: Optional evidence, parameters and taxa
+  outcome: supported
+  summary: No unsupported biological detail is asserted. Do not copy generic-parent
+    PREGO taxa, anaerobic sibling conditions, enzyme/mechanism claims or solids thresholds
+    into optional fields. No iModulonDB target applies.
+  target_ids:
+  - habitatmech:GOLD.7d30100f56
+  evidence_ids:
+  - E1
+  - E2
+  - E5
+  - E14
+- assessment_id: A9
+  area: schema
+  topic: Deterministic validity and fix ownership
+  outcome: supported
+  summary: Native schema/strict checks pass and the exact full record regenerates.
+    Shared endpoint changes belong in maintained schema/seeder/consumers; source-specific
+    curation requires independently supported inputs and native gates.
+  target_ids:
+  - habitatmech:GOLD.7d30100f56
+  evidence_ids:
+  - E3
+  - E4
+  - E10
+findings:
+- finding_id: F1
+  issue_key: gold-7d30100f56-mapping-endpoint-contract
+  category: representation
+  severity: major
+  status: open
+  certainty: confirmed
+  title: NARROW/narrowMatch compares the retained source concept with an implicit
+    ontology parent
+  description: 'The exact source path mints GOLD.7d30100f56, which remains the record
+    identity. resolve_gold nevertheless returns NARROW/skos:narrowMatch because ENVO:03501300
+    is broader, and ingest_gold copies the generated predicate into SourceAttestation.
+    The declared mapping endpoints are source -> record identifier, with omission
+    for retained source identity; GroundingStatusEnum compares that same identifier
+    to its sources. ENVO:03501300 is not the declared mapping target. This is the
+    application-contract mismatch in #1398, not proof that SKOS self-links are forbidden
+    or that all downstream consumers emit a wrong triple.'
+  target_ids:
+  - habitatmech:GOLD.7d30100f56
+  field_paths:
+  - grounding_status
+  - source_attestations[0].mapping_predicate
+  evidence_ids:
+  - E1
+  - E2
+  - E3
+  - E4
+  - E11
+  - E12
+  rule_id: SourceAttestation.mapping_predicate; GroundingStatusEnum endpoint contracts
+  native_severity: major
+  normalization_reason: Reproduced shared generation/representation defect; mechanical
+    validity does not make implicit endpoints semantically consistent.
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Separate source-to-record identity and record-to-ontology-parent comparisons.
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/schema/habitatmech.yaml
+    role: Declare endpoint/status meanings unambiguously.
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1398
+actions:
+- action_id: ACT1
+  description: Reconcile shared issue1398 across schema, actual routes and real consumers
+    with explicit endpoints. Include this exact Manure route as a regression witness
+    and retain source identity, valid parents and source counts.
+  finding_ids:
+  - F1
+  target_ids:
+  - habitatmech:GOLD.7d30100f56
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Grounding and emission.
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/schema/habitatmech.yaml
+    role: Endpoint/status contract.
+  acceptance_checks:
+  - Test subject, predicate, object and status meaning for minted, exact, broader
+    and narrower routes; include this target.
+  - Do not globally invert predicates, merge context-specific manure records or alter
+    legitimate imported source mappings.
+  - Audit actual SSSOM/KGX triples against current kg-microbe modeling before claiming
+    compatibility.
+  - For separately authorized implementation append history, regenerate through the
+    validated writer, run strict/history/provenance/full corpus and full QC plus export/consumer
+    tests.
+  generator: scripts/seed_from_sources.py and actual mapping/export consumers
+- action_id: ACT2
+  description: 'Bounded source-scope follow-up: recover original study/sample metadata
+    and determine whether the GOLD bin''s material scope supports the agricultural-fertilizer
+    restriction of ENVO:03501300. Preserve uncertainty until evidence resolves it;
+    do not edit merely because the original page could not be retrieved.'
+  finding_ids: []
+  target_ids:
+  - habitatmech:GOLD.7d30100f56
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Evidence-backed source identity and parent decisions, if warranted.
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Optional supported definition, not a prerequisite imposed on all seeded
+      records.
+  acceptance_checks:
+  - Keep all ten study IDs and their multi-path memberships distinct, with original
+    sample crosswalks before any generalized role assertion.
+  - Document whether the broader ENVO genus is retained, changed or remains unresolved,
+    and why; do not infer absence from retrieval failures.
+  - Do not treat missing ITEM review or optional definition alone as a defect or merge
+    the animal-waste and anaerobic sibling records by label.
+  - Any authorized curation must canary this exact identifier, preserve the 124 ORGANISM
+    provenance, append history and pass native gates.
+limitations:
+- One record reviewed; parent and sibling context reads do not count as whole-record
+  coverage.
+- Original GOLD node and sampled study URLs failed; indexed searches for all ten study
+  IDs returned no results. No original study methods or per-organism taxonomy crosswalk
+  was available.
+- The fertilizer-use restriction of the ENVO genus remains unresolved for the full
+  GOLD bin. No demonstrated second major hierarchy defect is claimed.
+- The pinned ENVO snapshot was SHA-256 verified, not claimed to be today's latest
+  release. Ontology synonym scope errors in context records are not silently transferred
+  into this target.
+- Full QC/label and same-turn corpus/history/provenance receipts are explicitly reused
+  at the unchanged baseline; no fresh local full-QC invocation for this record. Three
+  CI tests remain skipped.
+- No consumer/export audit, paid research, habitat curation, GitHub mutation or publication
+  performed.
+notes:
+- Historical sibling reports are context, not replacements for target assessment or
+  fresh primary evidence.
+- All new output is an immutable review pair. The shared whole-corpus goal remains
+  active.
+tags:
+- habitat
+- GOLD
+- manure
+- mapping-contract

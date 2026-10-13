@@ -12,6 +12,8 @@ from pathlib import Path
 
 import yaml
 
+from habitatmech.ontology_labels import apply_label_refresh, load_receipt
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 RAW_DIR = REPO_ROOT / "data" / "raw"
 KG_MANIFEST = RAW_DIR / "MANIFEST.yaml"
@@ -55,6 +57,13 @@ def _missing(entry: dict, fields: tuple[str, ...]) -> list[str]:
 def manifest_contract_problems(kg: dict, gold: dict) -> list[str]:
     """Reject metadata deletion before optional-looking checks weaken QC."""
     failures = []
+    if kg.get("ontology_label_refresh") != "../ontology_label_refresh.json":
+        failures.append("kg-microbe manifest: missing ontology label refresh provenance")
+    if kg.get("ontology_label_note") != (
+        "reviewed rdfs:label updates replayed after the kg-microbe slice; "
+        "other ontology fields retain the kg-microbe snapshot."
+    ):
+        failures.append("kg-microbe manifest: missing ontology label refresh scope")
     if gold.get("manifest_version") != 1:
         failures.append("GOLD manifest: manifest_version must be 1")
     if not COMMIT_RE.fullmatch(str(gold.get("pipeline_commit", ""))):
@@ -131,6 +140,14 @@ def tracked_raw_tsvs() -> set[str]:
 def problems() -> list[str]:
     kg, gold = load_manifests()
     failures = manifest_contract_problems(kg, gold)
+    try:
+        receipt = load_receipt()
+        with (RAW_DIR / "ontology_terms.tsv").open(newline="", encoding="utf-8") as handle:
+            terms = list(csv.DictReader(handle, delimiter="\t"))
+        if apply_label_refresh(terms, receipt) != terms:
+            failures.append("ontology canonical-label refresh has not been applied")
+    except (OSError, ValueError, KeyError) as error:
+        failures.append(f"ontology label refresh: {error}")
     outputs = combined_outputs(kg, gold)
     tracked = tracked_raw_tsvs()
     uncovered = sorted(tracked - outputs.keys())

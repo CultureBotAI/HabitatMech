@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002034
-- ENVO:00002124
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8156
@@ -18,3 +17,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00002124 for habitatmech:GOLD.6c12d05420
+    (Engineered > Bioreactor > Anaerobic > Biofilm). Bounded hierarchy correction
+    (#1902; review 20261011T041059Z-biofilm__b4a8654c F1): attached microbial material
+    is not the anaerobic bioreactor containing it. ENVO distinguishes ENVO:00002034
+    biofilm from ENVO:00002124 anaerobic bioreactor. Later exact-path samples Gb0182937-Gb0182939
+    and study Gs0133417 distinguish packed reactor media and attached communities.
+    Preserve biofilm genus, source mint, both frozen node references, path, zero-count
+    omission and NARROW/SEEDED status. No universal physiology is asserted; mapping-endpoint
+    issue #1398 remains open.'

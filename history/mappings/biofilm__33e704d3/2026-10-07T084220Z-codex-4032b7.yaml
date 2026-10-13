@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: biofilm__33e704d3
+session:
+  id: 2026-10-07T084220Z-codex-4032b7
+  timestamp: '2026-10-07T08:42:20Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1628
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1626
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: Remove the MFC cathode context parent from qualified Biofilm
+  details: 'Exact source habitatmech:GOLD.b77f846671 / Engineered > Bioreactor > Microbial
+    fuel cells/MFC > Cathode > Biofilm excludes habitatmech:GOLD.5d36b86f15 only. ENVO biofilm
+    genus and inspected PMID:20714445 distinguish biofilms on cathode surfaces from the substrate.
+    The paper is adjacent electrosynthesis evidence, not an identified GOLD MFC experiment.
+    Preserve ENVO:00002034, GOLD7659, count omissions and NARROW/SEEDED; do not transfer organisms,
+    electrode material or redox mechanism. A failing-before/passing-after full-corpus regression
+    proves only the two reviewed biofilms'' parent and audit fields change; all 33 exclusion
+    tests and dry seed passed. Target canaries are inspected before publication. Full corpus/history/OAK/QC,
+    genuine map regeneration and required PR/queue gates must complete; terminal receipts
+    belong on PR #1626. Original reports remain pre-fix assessments.'

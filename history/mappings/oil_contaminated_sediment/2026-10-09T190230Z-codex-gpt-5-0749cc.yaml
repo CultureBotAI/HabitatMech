@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: oil_contaminated_sediment
+session:
+  id: 2026-10-09T190230Z-codex-gpt-5-0749cc
+  timestamp: '2026-10-09T19:02:30Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1812
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude refinery-building context from oil-contaminated sediment hierarchy
+  details: The exact source path for habitatmech:GOLD.6e0c4e4356 denotes sediment material,
+    whereas active ENVO:03600078 denotes an industrial building. Added only the guarded GOLD
+    context-parent exclusion. Evidence is the immutable 20261009T185455Z-oil_contaminated_sediment
+    review F1 and current ENVO definition. The new full-corpus regression passed and proves
+    only this record changes, only its parent and appended exclusion event differ, and only
+    its semantic-map text changes. Frozen nodes5765/5766, 14 ORGANISM, mint, source path,
+    CLASS decision and UNGROUNDED/SEEDED remain intact. Later public membership heterogeneity
+    and original frozen membership uncertainty are unresolved. Dry seed, canary, strict validation
+    and exact 3208-record reproduction passed; map/site regeneration and final quality gates
+    follow in PR1811. No replacement identity, genus, biological trait or ITEM promotion is
+    asserted.

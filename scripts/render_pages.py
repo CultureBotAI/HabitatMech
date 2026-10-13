@@ -31,8 +31,10 @@ import yaml
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 if __package__:
+    from .build_term_requests import excluded as excluded_term_requests
     from .mechanism_graph import graph_svg
 else:
+    from build_term_requests import excluded as excluded_term_requests
     from mechanism_graph import graph_svg
 
 from habitatmech.text_map_site import PreparedTextMap, prepare_text_map
@@ -123,6 +125,8 @@ def _slice_labels() -> list[dict]:
 
 def term_iri(curie: str) -> str | None:
     prefix, _, local = curie.partition(":")
+    if prefix.lower() == "mesh" and re.fullmatch(r"[DC]\d+", local):
+        return f"https://id.nlm.nih.gov/mesh/{local}.html"
     if prefix in OBO_PREFIXES:
         return f"http://purl.obolibrary.org/obo/{prefix}_{local}"
     return None
@@ -188,11 +192,12 @@ def build(out_dir: Path) -> None:
 
 def _build(out_dir: Path, text_map: PreparedTextMap | None) -> None:
     if text_map is not None:
-        text_map.stage(out_dir)
+        text_map.stage(out_dir, directory="text-map-source")
     records = load_records()
     if not records:
         raise SystemExit(f"no records under {HABITATS_DIR}; run `just seed-apply` first")
     decisions = load_decisions()
+    excluded_requests = excluded_term_requests()
 
     env = Environment(
         loader=FileSystemLoader(str(TEMPLATES_DIR)),
@@ -355,13 +360,16 @@ def _build(out_dir: Path, text_map: PreparedTextMap | None) -> None:
             decision = decisions.get(identifier, {})
             depth = (decision.get("review_depth") or "ITEM").upper()
             if doc.get("mapping_status") == "REVIEWED" and depth == "ITEM":
+                # Deliberately excluded item reviews are neither requests nor sweeps.
+                if identifier in excluded_requests:
+                    continue
                 term_requests.append(
                     {
                         "label": doc["label"],
                         "slug": slug_of[identifier],
                         "assertions": assertions,
                         "sources": sources,
-                        "note": decision.get("notes", "")[:220],
+                        "note": decision.get("notes", ""),
                     }
                 )
             else:
@@ -539,9 +547,15 @@ def _build(out_dir: Path, text_map: PreparedTextMap | None) -> None:
                 retired_written.add(stub)
 
     (out_dir / "404.html").write_text(
-        env.get_template("not_found.html").render(root="", stats=stats),
+        env.get_template("not_found.html").render(root=SITE_BASE, stats=stats),
         encoding="utf-8",
     )
+
+    if text_map is not None:
+        (out_dir / "text-map").mkdir(exist_ok=True)
+        (out_dir / "text-map" / "index.html").write_text(
+            env.get_template("text_map.html").render(root="../", stats=stats),
+            encoding="utf-8")
 
     # Remove pages for records that no longer exist. Curation splits records as
     # well as merging them, so the set shrinks too; without this the site keeps
@@ -554,7 +568,9 @@ def _build(out_dir: Path, text_map: PreparedTextMap | None) -> None:
     }
     written |= retired_written
     if text_map is not None:
-        written |= {out_dir / "text-map" / name for name in ("index.html", "points.json", "manifest.json")}
+        written |= {out_dir / "text-map-source" / name
+                    for name in ("index.html", "points.json", "manifest.json")}
+        written.add(out_dir / "text-map" / "index.html")
     written |= {out_dir / "habitats" / f"{slug}.html" for slug in slug_of.values()}
     written |= {out_dir / name for name in category_pages}
     written |= {out_dir / "category" / f"{c['slug']}.json" for c in categories}
@@ -585,6 +601,8 @@ def main(argv: list[str] | None = None) -> int:
 
     if not args.check:
         build(args.out)
+        if args.out.resolve() == PAGES_DIR.resolve():
+            shutil.copyfile(args.out / "404.html", REPO_ROOT / "404.html")
         return 0
 
     import tempfile
@@ -599,6 +617,9 @@ def main(argv: list[str] | None = None) -> int:
             committed = PAGES_DIR / rendered.relative_to(target)
             if not committed.exists() or not filecmp.cmp(rendered, committed, shallow=False):
                 stale.append(str(rendered.relative_to(target)))
+        root_404 = REPO_ROOT / "404.html"
+        if not root_404.exists() or root_404.read_bytes() != (target / "404.html").read_bytes():
+            stale.append("../404.html")
         extra = [
             str(p.relative_to(PAGES_DIR))
             for p in sorted(PAGES_DIR.rglob("*"))

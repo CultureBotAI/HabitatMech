@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: microbial_mat__fc2dbb7f
+session:
+  id: 2026-10-12T055156Z-codex-gpt-5-d85209
+  timestamp: '2026-10-12T05:51:56Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1397
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct bounded aquatic hierarchy or marine mechanism for microbial_mat__fc2dbb7f
+  details: Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1397
+    (20261012T054258Z-microbial_mat__fc2dbb7f F1). The acidic-lake microbial mat retains its
+    source-specific identity and general microbial-mat genus. Acidic lake is a containing
+    setting, not a superclass. Neither an exact pH value nor ecological absence can be derived
+    from the path and omitted count; reconcile NARROW endpoints separately. Exclude only the
+    immediate GOLD contribution named here. Preserve source identity, node/path provenance,
+    counts/units, native status and independent parents. Unresolved source identity, genus,
+    synonym and mapping-endpoint findings remain separate. User authorized remediation and
+    publication. Dry seeding and all-overlay validation passed; final generated corpus, regressions,
+    map/site and full QC are pending at event creation. Actual completion results belong in
+    PR 2003 and successor observations. No scientific status promotion; unresolved findings
+    remain open.

@@ -3,8 +3,6 @@ label: Sieved
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:04000007
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7860
@@ -23,3 +21,18 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:04000007 for habitatmech:GOLD.0bab26d396
+    (Engineered > Artificial ecosystem > Mesocosm > Lake water > Sieved). Bounded
+    hierarchy correction (https://github.com/CultureBotAI/HabitatMech/issues/1942;
+    20261011T155209Z-sieved F1). Committed GOLD study Gs0159294 crosswalks to the
+    official study description: lake water passed through a coarse sieve into LEAP
+    pond mesocosms. McGill describes separately situated tanks supplied from Lake
+    Hertel (https://gault.mcgill.ca/en/news/detail/scientists-replicate-freshwater-ecosystems-to-detect-impacts-of-common-pesticides/).
+    This is ex-situ material, not water still part of a lake. Do not infer a replacement
+    genus or resolve generic lake-water scope #1771. Exclude only this immediate GOLD
+    contribution; preserve source identity, node/path provenance, counts/units, native
+    status and independent parents. Current source evidence is not reconstruction
+    of every original member.'

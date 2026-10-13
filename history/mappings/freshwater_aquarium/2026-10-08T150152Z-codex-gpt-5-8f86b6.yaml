@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: freshwater_aquarium
+session:
+  id: 2026-10-08T150152Z-codex-gpt-5-8f86b6
+  timestamp: '2026-10-08T15:01:52Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: GPT-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1733
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1730
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  - source_attestations
+  summary: Ground freshwater aquarium to the existing ENVO enclosure concept
+  details: 'ITEM assessment replaces the historical CLASS lexical miss for GOLD.772964032b
+    with EXACT ENVO:00002198. Inspected official ENVO a2455d1a77e46bb8a664d65a157166b539269042
+    OWL (SHA256 a0b919065d33a9cf975b74cadd16c75f32f512d17f4f6d5999b74216701df54c) and GOLD
+    ecosystem workbook retrieved 2026-10-08 (SHA256 f8e4cb5cf89ecc88d3cf28170cfc3a1cf47daed8218408a52914c53667dfd3d4):
+    the setting is the freshwater-containing aquarium, not water or sediment material. Preserve
+    two ORGANISM assertions and both collapsed source nodes. No historical organism joins
+    reconstructed. Regression was observed failing before regeneration; dry seed passed. Canary,
+    focused regressions, history/label validation, redirects, semantic-map freshness and full
+    QC are required before merge; their final results belong to the PR receipt. Historical
+    review reports remain unchanged.'

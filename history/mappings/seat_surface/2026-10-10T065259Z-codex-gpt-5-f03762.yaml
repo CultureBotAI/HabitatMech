@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: seat_surface
+session:
+  id: 2026-10-10T065259Z-codex-gpt-5-f03762
+  timestamp: '2026-10-10T06:52:59Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1866
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude source context from strict parentage of seat_surface
+  details: 'Reviewed hierarchy exclusion (#1866; structured review 20261010T063411Z-seat_surface
+    F1): a seating contact surface is not a kind of stadium venue. The source path describes
+    location, not strict subsumption. DOI:10.1128/AEM.01825-06 distinguishes plastic arena
+    seats as sampled surface materials; that controlled inoculation experiment is not asserted
+    as GOLD membership or natural colonization. Preserve the distinct stadium-surface mint,
+    node 8306, path, zero-count omission and CLASS/SEEDED state; do not merge with train seating
+    or invent a replacement genus. The entire target and canary diffs were inspected. Dry-run
+    seeding and the sand-filter and sand-microcosm canaries passed; two new focused regression
+    tests compare all 3208 records with the named changes disabled, proving exact scope. Generated
+    record history reflects current decisions; prior CLASS decisions remain in Git and the
+    immutable original reviews. Semantic-map/site regeneration, label correspondence and full
+    QC remain required publication gates.'

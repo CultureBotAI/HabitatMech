@@ -38,6 +38,12 @@ just new-history --kind mapping --path curation/decisions.tsv --slug fecal_envir
   --details "What was done, what evidence was used, how it was validated."
 ```
 
+Set `--actor-name` explicitly when using a different agent (for example,
+`--actor-name codex-gpt-5 --model gpt-5 --agent-tool codex`). Setting the model
+and tool does not override the scaffold's default actor name. Inspect the
+generated `session.actors` before publication; correct a saved attribution
+mistake with a new linked event, never by rewriting the original.
+
 Use `--slug` for the habitat the row concerns so records about one habitat land
 in one directory. A term request targets `curation/term_requests.tsv` the same
 way; a causal-graph curation targets its file under `curation/causal_graphs/`;

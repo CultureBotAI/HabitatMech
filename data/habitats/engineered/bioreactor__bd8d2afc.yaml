@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002123
-- habitatmech:GOLD.143ceb8669
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4873
@@ -17,3 +16,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.143ceb8669
+    for habitatmech:GOLD.00fe86978b (Engineered > Solid waste > Grass > Composting
+    > Bioreactor). ITEM hierarchy assessment (#1635): A containment device is not
+    a kind of compost material, the current ENVO:00002170 genus of the immediate parent.
+    Suzuki et al. 2004 (https://pubmed.ncbi.nlm.nih.gov/15246435/) (DOI:10.1016/j.biortech.2004.02.020)
+    supports only the device/material distinction; do not transfer the study''s wood
+    feedstock to the grass source. Reassess if the parent is independently reinterpreted.
+    Exclude only this GOLD context contribution; retain independent ENVO:00002123,
+    qualified mint, all source IDs and paths, count/unit omissions or values, collapsed-node
+    notes, skos:narrowMatch and existing NARROW/SEEDED status. No new identity endorsement,
+    experimental condition, taxon or causal claim is inferred.'

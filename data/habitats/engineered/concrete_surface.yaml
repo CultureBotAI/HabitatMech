@@ -3,8 +3,6 @@ label: Concrete surface
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.961229841c
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5465
@@ -23,3 +21,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-08T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.961229841c
+    for habitatmech:GOLD.d4694eed69 (Engineered > Built environment > City > Subway
+    > Concrete surface). ITEM hierarchy assessment (concrete-only part of #282): a
+    local concrete surface is not a kind of the whole subway environment defined in
+    curation/term_requests.tsv. Gohli et al. DOI:10.1186/s40168-019-0772-9 distinguishes
+    sampled surfaces from the enclosing subway; it does not establish concrete composition
+    or an original GOLD sample crosswalk. Exclude only this location-context contribution.
+    Preserve GOLD5465, full path, mint, zero-count omissions, UNGROUNDED/SEEDED status
+    and CLASS identity provenance. No replacement genus, floor/wall identity, definition,
+    taxa or sibling corrections are inferred. Evidence: reports/yaml_record_review/20261008T031853Z-concrete_surface.md.'

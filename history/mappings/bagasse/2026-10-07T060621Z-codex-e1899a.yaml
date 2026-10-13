@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: bagasse
+session:
+  id: 2026-10-07T060621Z-codex-e1899a
+  timestamp: '2026-10-07T06:06:21Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: codex-gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1620
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1616
+events:
+- type: AUDIT
+  outcome: changed
+  sections:
+  - session.actors
+  summary: Correct the recorded actor name for the preceding session
+  details: Append-only provenance correction to history/mappings/bagasse/2026-10-07T060448Z-claude-code-d7fe9f.yaml.
+    The scaffold defaulted session.actors[0].name to claude-code because --actor-name was
+    omitted. The actual actor was Codex, using model codex-gpt-5 and agent tool codex as already
+    correctly recorded. The original history remains unchanged; scientific edits, evidence
+    and validation statements are unaffected. This record explicitly supplies --actor-name
+    Codex and corrects only that actor attribution.

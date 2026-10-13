@@ -3,8 +3,6 @@ label: Benzene
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.e77998b825
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3863
@@ -23,3 +21,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.e77998b825
+    for habitatmech:GOLD.d6979edc0e (Engineered > Bioremediation > Hydrocarbon > Benzene).
+    ITEM hierarchy assessment (#1622): the immediate Hydrocarbon source is explicitly
+    ITEM NOT_APPLICABLE with CHEBI:24632 retained only as a chemical xref. ChEBI (https://www.ebi.ac.uk/chebi/CHEBI:24632)
+    confirms a compound class, not a broader habitat. Exclude only this GOLD context-parent
+    contribution; preserve GOLD3863, the full source path, mint, zero-count omission,
+    UNGROUNDED/CLASS/SEEDED provenance and previous events. This does not establish
+    whether Benzene denotes a remediation material, setting or chemical; no replacement
+    parent, definition, treatment matrix or identity-review promotion is inferred.'

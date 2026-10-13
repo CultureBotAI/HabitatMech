@@ -10,6 +10,8 @@ barn. The category prefix is trimmed off it, and the identifier lives on each
 record's own page — the link already carries it.</p>
 <input class="searchbox" id="q" type="search" data-index="{{ index_url }}" data-total="{{ total }}" placeholder="Filter all {{ total }} records…" aria-label="Filter records">
 <p class="meta" id="count" aria-live="polite"></p>
+<button type="button" id="show-more" hidden>Show more matches</button>
+<button type="button" id="clear-filter" hidden>Clear filter</button>
 <div class="table-scroll" role="region" tabindex="0" aria-label="{{ category }} habitats">
 <table id="tbl">
   <caption>{{ category }} habitats</caption>
@@ -31,7 +33,7 @@ record's own page — the link already carries it.</p>
 <nav class="pager" aria-label="Pages">
   {% for pg in pager %}{% if pg.n == page %}<span class="pill plain" aria-current="page">{{ pg.n }}</span>{% else %}<a href="{{ pg.href }}">{{ pg.n }}</a>{% endif %} {% endfor %}
 </nav>
-<p class="meta">Showing {{ records|length }} of {{ total }}. The filter searches all
+<p class="meta" id="unfiltered-count">Showing {{ records|length }} of {{ total }}. The filter searches all
 {{ total }}, not just this page.</p>
 {% endif %}
 <script>
@@ -39,7 +41,11 @@ record's own page — the link already carries it.</p>
   var box = document.getElementById('q'), out = document.getElementById('count');
   var body = document.querySelector('#tbl tbody');
   var original = body.innerHTML;
-  var index = null, pending = null;
+  var index = null, pending = null, resultLimit = 300;
+  var more = document.getElementById('show-more');
+  var clear = document.getElementById('clear-filter');
+  var pager = document.querySelector('.pager');
+  var unfilteredCount = document.getElementById('unfiltered-count');
 
   function esc(t) {
     return String(t).replace(/[&<>"]/g, function (c) {
@@ -61,16 +67,21 @@ record's own page — the link already carries it.</p>
   }
   function apply() {
     pending = null;
-    var raw = box.value.toLowerCase();
-    if (!raw) { body.innerHTML = original; out.textContent = ''; return; }
+    var raw = box.value.trim().toLowerCase();
+    if (pager) pager.hidden = !!raw;
+    if (unfilteredCount) unfilteredCount.hidden = !!raw;
+    clear.hidden = !raw;
+    if (!raw) { body.innerHTML = original; out.textContent = ''; more.hidden = true; return; }
     var slugged = raw.replace(/[^a-z0-9]+/g, '-');
     var hits = index.filter(function (r) {
       var k = (r[0] + ' ' + r[2] + ' ' + r[1] + ' ' + r[5]).toLowerCase();
       return k.indexOf(raw) !== -1 || k.indexOf(slugged) !== -1;
     });
-    draw(hits.slice(0, 500));
-    out.textContent = hits.length + ' of ' + box.getAttribute('data-total') +
-      ' match' + (hits.length > 500 ? ' (first 500 shown)' : '');
+    draw(hits.slice(0, resultLimit));
+    var visible = Math.min(resultLimit, hits.length);
+    more.hidden = visible >= hits.length;
+    out.textContent = (visible ? 'Showing 1–' + visible : 'Showing 0') +
+      ' of ' + hits.length + ' matching records (' + box.getAttribute('data-total') + ' in category)';
   }
   // When the page already holds every record there is nothing to fetch, and
   // fetching would make filtering depend on a network round trip that can fail
@@ -86,17 +97,20 @@ record's own page — the link already carries it.</p>
   }
 
   box.addEventListener('input', function () {
+    resultLimit = 300;
     if (index === null) {
       // Fetched once, on the first keystroke — a reader who only browses never
       // pays for it.
       out.textContent = 'loading…';
-      fetch(box.getAttribute('data-index')).then(function (r) { return r.json(); })
+      fetch(box.getAttribute('data-index')).then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
         .then(function (data) { index = data; apply(); })
         .catch(function () { out.textContent = 'filter unavailable'; });
       return;
     }
     if (pending === null) { pending = requestAnimationFrame(apply); }
   });
+  more.addEventListener('click', function () { resultLimit += 300; apply(); });
+  clear.addEventListener('click', function () { box.value = ''; resultLimit = 300; apply(); box.focus(); });
 })();
 </script>
 {% endblock %}

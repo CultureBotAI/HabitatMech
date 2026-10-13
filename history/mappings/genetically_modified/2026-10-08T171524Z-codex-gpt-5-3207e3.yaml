@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: genetically_modified
+session:
+  id: 2026-10-08T171524Z-codex-gpt-5-3207e3
+  timestamp: '2026-10-08T17:15:24Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1741
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1736
+events:
+- type: GENERAL
+  outcome: changed
+  sections:
+  - provenance
+  summary: Correct scaffolded actor name without rewriting session history
+  details: 'Correction to history/mappings/genetically_modified/2026-10-08T171406Z-claude-code-5078b1.yaml:
+    the scaffolder defaulted actors.name and the session filename component to claude-code
+    because actor-name was omitted. The actual actor was codex-gpt-5, using model gpt-5 and
+    agent_tool codex as already recorded. No Claude Code session performed this curation.
+    Preserve the original append-only record, its scientific account and timestamps; this
+    entry corrects attribution only. The full-corpus before/after regression passed and all
+    3207 records regenerated without failure. Full QC remains to be run.'

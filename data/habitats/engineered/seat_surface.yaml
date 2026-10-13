@@ -3,8 +3,6 @@ label: Seat surface
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.2d40c87aeb
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8306
@@ -23,3 +21,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.2d40c87aeb
+    for habitatmech:GOLD.2934cf4eee (Engineered > Built environment > City > Stadium
+    > Seat surface). Reviewed hierarchy exclusion (#1866; structured review 20261010T063411Z-seat_surface
+    F1): a seating contact surface is not a kind of stadium venue. The source path
+    describes location, not strict subsumption. DOI:10.1128/AEM.01825-06 distinguishes
+    plastic arena seats as sampled surface materials; that controlled inoculation
+    experiment is not asserted as GOLD membership or natural colonization. Preserve
+    the distinct stadium-surface mint, node 8306, path, zero-count omission and CLASS/SEEDED
+    state; do not merge with train seating or invent a replacement genus.'

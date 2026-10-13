@@ -1,0 +1,980 @@
+# Leachate under Municipal landfill: source scope, hierarchy and mapping endpoints
+
+- Review: 20261009T061718Z-leachate__2f66e051
+- Repository: CultureBotAI/HabitatMech
+- Started UTC: 2026-10-09T06:12:04Z
+- Finished UTC: 2026-10-09T06:17:18Z
+- Reviewer: codex-gpt-5 (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Reviewed the entire municipal-landfill GOLD Leachate record, its maintained inputs, exact regeneration route, ontology genus and source-path context. Two major findings: the immediate Municipal landfill is-a parent lacks resolved material-versus-site scope, and the emitted NARROW/narrowMatch fields compare a different pair of concepts than their schema declares. Minted identity, ENGINEERED category, source provenance, count omission and SEEDED status are supported. No habitat data, native status, history or GitHub state changed.
+
+## Scope And Provenance
+
+One resolved generated HabitatRecord. All fields assessed; context records do not receive new individual reviews in this bundle.
+
+Selection: Exact path data/habitats/engineered/leachate__2f66e051.yaml, resolved by identifier, full GOLD path and PATHS.tsv.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 5519228b8fe7d87c22bd04f4e0f078f2fe013c69.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| habitatmech:GOLD.6898d82b83 | data/habitats/engineered/leachate__2f66e051.yaml | generated | Leachate |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Target LinkML validation | passed | True | habitatmech:GOLD.6898d82b83 | No issues found. |
+| Target closed-schema validation | passed | True | habitatmech:GOLD.6898d82b83 | One file, zero errors. |
+| Full corpus reproduction | passed | True | habitatmech:GOLD.6898d82b83 | 3208 expected and found, zero missing, extra or differing records. Reproduction is not scientific approval. |
+| History validation | passed | True | habitatmech:GOLD.6898d82b83 | 213 append-only history records valid. |
+| Raw-inventory provenance | passed | True | habitatmech:GOLD.6898d82b83 | 14 committed inventories and two GOLD sources current. |
+| Actual target resolution and regeneration | passed | True | habitatmech:GOLD.6898d82b83 | gold_narrower_than_leaf_match retains this source's minted ID and adds ENVO:00002141; one contributing source, zero reviewed; build_document equals the entire on-disk YAML. |
+| Exact-baseline authoritative CI QC receipt | passed | True | habitatmech:GOLD.6898d82b83 | Completed SUCCESS at 5519228b8fe7d87c22bd04f4e0f078f2fe013c69: 637 tests passed, 3 skipped; four dedicated review-contract tests passed; all HabitatMech quality gates passed. |
+| Exact-baseline ontology label CI receipt | passed | True | habitatmech:GOLD.6898d82b83 | Completed SUCCESS at the same baseline; Enforce id&lt;-&gt;label correspondence step passed. |
+| Original GOLD study and ecosystem page access | unavailable | False | habitatmech:GOLD.6898d82b83 | Both pages returned Internal Error; bounded indexed search returned no results. No sample crosswalk, study methods or molecular observations inspected. |
+| Current GOLD ecosystem workbook | passed | False | habitatmech:GOLD.6898d82b83 | Read-only workbook parse with reset_dimensions recovered node 5667 and its exact path; style warning only. |
+| Target causal overlay and iModulon applicability | not_applicable | False | habitatmech:GOLD.6898d82b83 | No target graph, molecular accession, named taxon, regulator, gene or expression claim; no corresponding overlay found in ignored-inclusive local search. No iModulon query or target causal validation needed; absence is not negative biological evidence. |
+
+## Scientific And Domain Assessments
+
+### Source identity and same-label distinctions
+
+identity: supported. Targets: habitatmech:GOLD.6898d82b83.
+
+Hash mint, slug and full path resolve one municipal-landfill Leachate concept. Retaining that identity avoids conflation with the generic or anaerobic-bioreactor concepts; this is not a newly endorsed exact ontology equivalence.
+
+### Broader leachate material genus
+
+grounding: supported. Targets: habitatmech:GOLD.6898d82b83.
+
+ENVO:00002141 has the correct canonical label and a material meaning broad enough for this landfill-context leachate. Retain it as genus; no purity, landfill-wide microbiology or industrial-process assertion is inferred.
+
+### Immediate GOLD parent contribution
+
+graph: concern. Targets: habitatmech:GOLD.6898d82b83.
+
+Municipal landfill is unresolved between a site and a metonymic wastewater bin. Liquid leachate is not a subtype of a physical landfill. A wastewater-bin interpretation could differ, so the available evidence fails to justify this strict parent without proving every interpretation false.
+
+### Mapping predicate and grounding-status endpoints
+
+representation: concern. Targets: habitatmech:GOLD.6898d82b83.
+
+NARROW/narrowMatch arise from comparison with ENVO leachate, but the published contract concerns source versus retained record identity. The endpoint is implicit and inconsistent; no global predicate inversion is justified.
+
+### Source counts and units
+
+quantity: supported. Targets: habitatmech:GOLD.6898d82b83.
+
+Omitting assertion_count/assertion_unit is consistent with organism_count zero. The distinct biosample_count one and one study row remain contextual; neither is an organism assertion or evidence of characteristic taxa.
+
+### Source accession and original study boundary
+
+provenance: unknown. Targets: habitatmech:GOLD.6898d82b83.
+
+Committed provenance and current workbook corroborate the path. Original study/node pages remain inaccessible, so the actual sample's collection context is unresolved, not disproved.
+
+### Generated category, status and history
+
+consistency: supported. Targets: habitatmech:GOLD.6898d82b83.
+
+ENGINEERED follows the exact source ecosystem; it is not contradicted by a liquid genus. One source and zero ITEM-reviewed contributions correctly yield SEEDED and the single generated seed event. No status promotion follows from this review.
+
+### Optional biological fields and adapters
+
+completeness: supported. Targets: habitatmech:GOLD.6898d82b83.
+
+No target taxa, molecular identifiers, environmental parameters or mechanism edges are asserted. Empty optional slots are appropriate without target evidence; no generic PREGO taxa, anaerobic-sibling conditions or iModulon inference should be copied in.
+
+### Validation and generated ownership
+
+schema: supported. Targets: habitatmech:GOLD.6898d82b83.
+
+Native shape, provenance, history and full-corpus reproduction checks pass. Future changes belong to exact maintained curation inputs or the shared seeder/schema contract, not generated YAML or pages.
+
+## Findings
+
+### F1: Municipal landfill is not yet justified as a strictly broader habitat
+
+major / open / provisional; issue key: gold-6898d82b83-source-context-parent.
+
+parent_habitats includes habitatmech:GOLD.0f40aa60ce solely from the immediate GOLD path. The parent has no authored definition and only CLASS-level confirmation; its Wastewater placement permits a metonymic liquid-bin interpretation. ENVO and EPA distinguish the produced liquid from a physical landfill, so the plain site interpretation is not an is-a parent of Leachate. No inspected target source settles the alternative bin meaning. Resolve that scope before retaining this strict relation; do not ground the minted parent to ENVO landfill by label or assume all interpretations are false.
+
+### F2: Generated NARROW/narrowMatch uses the ontology parent instead of the declared mapping endpoint
+
+major / open / confirmed; issue key: gold-6898d82b83-mapping-endpoint-contract.
+
+Executed resolve_gold retains the path's own minted identity while comparing it with generic ENVO:00002141, returns NARROW/skos:narrowMatch, then ingest_gold copies that predicate to the source attestation. SourceAttestation defines source -&gt; record identifier, absent when the record is the source; GroundingStatusEnum also compares record identifier and source. The source row supplies no such predicate. This reproducibly violates the native endpoint/status description. It is not evidence that SKOS forbids hierarchical self-links, that broadMatch is the one-line fix, or that every consumer necessarily emits a wrong triple; actual consumer/export behavior was not audited here.
+
+## Recommended Actions And Acceptance Checks
+
+### ACT1
+
+Recover original study/sample context for Gs0153853 and node 5667, and resolve the Municipal landfill parent's meaning. If the edge is contextual, add the exact GOLD.6898d82b83 / Engineered &gt; Wastewater &gt; Municipal landfill &gt; Leachate / GOLD.0f40aa60ce guarded exclusion. Preserve minted target identity, ENVO:00002141 material genus, verbatim source provenance, count omission and native status. A supported metonymic broader-material reading must be documented rather than assumed.
+
+- Document source-specific site/material distinction or supported strict broader material meaning; do not infer it from the hierarchy alone.
+- For separately authorized curation: just seed; just seed-canary habitatmech:GOLD.6898d82b83 --force; inspect the canary and source-parent event; regenerate through validated writer only.
+- Append native session history; pass target schema/strict, history, corpus, provenance, label and full QC; compare semantic-map inputs and rebuild only affected products as required.
+- Verify generic and anaerobic/industrial siblings are not merged or modified inadvertently, and that organism counts remain distinct from biosample/study counts.
+
+### ACT2
+
+Address shared issue #1398 with an explicit source-to-record versus record-to-ontology-parent contract and endpoint-aware regressions. Include this actual Leachate route as a witness; reconcile schema, generator and real consumers rather than globally swapping predicates.
+
+- Assert subject, predicate, object and status meaning across minted, exact, broader and narrower routes, including this target and #1398 witnesses.
+- Preserve source-specific identity, valid parent and original imported mappings; do not claim SKOS self-links are formally forbidden.
+- Inspect and validate actual SSSOM/KGX products against current kg-microbe modeling before claiming downstream compatibility; no such audit was completed here.
+- For authorized implementation append required history, regenerate governed artifacts, run consumer/export regressions plus exact corpus reproduction and full QC.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| E1 | data/habitats/engineered/leachate__2f66e051.yaml; Entire file; PATHS.tsv:2051 | supports | Minted GOLD.6898d82b83, Leachate, ENGINEERED/NARROW/SEEDED; two parents, one GOLD attestation, one seed event. No definition, synonyms, xrefs, taxa, parameters, graph, datasets or discussions. |
+| E2 | data/raw/gold_ecosystem_paths.tsv; Row 1408; gold_path_biosamples.tsv:961; gold_studies.tsv:3766 | supports | The depth-4 path collapses nodes 5666 and 5667, all four tree counters zero. Separate later biosample inventory records one biosample at 5667; one study row Gs0153853 has only this path. These units/snapshots must not be conflated. Exact-field/pipe-member scan of all 14 raw TSVs found these three matching rows and no other direct target matches. |
+| E3 | src/habitatmech/seed.py; resolve_gold, ingest_gold, build_corpus, build_document; executed target route | supports | Two same-label Leachate paths tie at depth four, so leaf_claimants['leachate'] is None. Target route is gold_narrower_than_leaf_match: minted ID, NARROW, skos:narrowMatch, extra parent ENVO:00002141, reviewed false and no decision. Full generation equals disk, with one source and zero reviewed. Separate GOLD immediate-parent contribution adds GOLD.0f40aa60ce. |
+| E4 | src/habitatmech/schema/habitatmech.yaml; SourceAttestation.mapping_predicate; GroundingStatusEnum; docs/CURATION.md hierarchy and exclusion rules | refutes | The schema defines source concept -&gt; record identifier and omission when the record IS the source. NARROW means record identifier narrower than source. This route instead retains source identity and compares it to an ontology parent. Native parent_habitats requires a strictly broader habitat, not mere source-path context. |
+| E5 | Local maintained-input and review search; curation, history, research, conf, tests, docs, reviews, reports/yaml_record_review, PATHS.tsv and RETIRED.tsv | context_only | No exact-target ITEM decision, authored definition, exclusion, causal overlay, history session or prior individual review found in these bounds. Label-level search found historical sibling/generic/industrial-leachate discussions, not a completed target review. Parent has CLASS CONFIRM_UNGROUNDED at decisions.tsv:187. |
+| E6 | https://raw.githubusercontent.com/EnvironmentOntology/envo/a2455d1a77e46bb8a664d65a157166b539269042/envo.owl; Complete XML classes ENVO_00002141, ENVO_00002006, ENVO_00000533; matching vendored terms and direct edges | supports | Leachate is percolation-produced liquid and has liquid water as parent; that genus permits dissolved or suspended material. Landfill is a physical depression containing discarded material. This supports the leachate genus and a site/material distinction, but does not identify the minted Municipal landfill bin with ENVO landfill. |
+| E7 | https://www.epa.gov/landfills/municipal-solid-waste-landfills; What is a Municipal Solid Waste Landfill? definition and leachate collection/removal bullets; updated 2026-07-16 | partial | EPA distinguishes the land area/excavation receiving waste from leachate removed from it. That supports a site-versus-produced-liquid distinction, not proof of the intended semantics of every GOLD hierarchy bin. |
+| E8 | https://gold.jgi.doe.gov/download?mode=ecosystempaths; Worksheet site data, row 452; contextual rows 81 and 435 | supports | Current workbook row 452: 5667, Engineered, Wastewater, Municipal landfill, Leachate, Unclassified. It retains a distinct anaerobic-bioreactor branch (5669) and industrial-wastewater Landfill leachate branch (4269). Supports source-path existence, not current organism/sample counts, all collapsed historical nodes, strict is-a semantics or a same-as merge. |
+| E9 | https://gold.jgi.doe.gov/study?id=Gs0153853; Study page and ecosystem/5666 page retrieval; exact accession web search | unknown | Direct source pages could not be retrieved; no study methods or biosample descriptions recovered. Exact indexed search yielded no result, not proof that the study is absent or retired. |
+| E10 | https://github.com/CultureBotAI/HabitatMech/actions/runs/37891213365; QC and four contract tests at exact 5519228 baseline; labels run 37891213368 | supports | Existing completed main workflows inspected during this review: all native QC gates passed, 637 tests passed/3 skipped; label enforcement passed. Fresh local target/schema/corpus/history/provenance checks also passed. These checks verify representation and reproduction, not the two scientific/application-contract findings. |
+| E11 | https://www.w3.org/TR/skos-reference/#mapping; Section 10.3 S41/S43 and section 10.6.4 | context_only | narrowMatch specializes narrower and is inverse to broadMatch. Mapping properties are not declared irreflexive. The finding is therefore an application endpoint/status mismatch, not a formal SKOS self-link inconsistency; swapping broadMatch and narrowMatch does not resolve the endpoint ambiguity. |
+| E12 | https://github.com/CultureBotAI/HabitatMech/issues/1398; Read-only current issue title, body, state and acceptance criteria | context_only | Existing OPEN shared issue describes the same endpoint-contract defect using other GOLD witnesses. It requires explicit mapping endpoints, schema/routes/consumer reconciliation and actual SSSOM/KGX audit. This target is another reproduced witness; no issue was created or changed. |
+| E13 | reports/yaml_record_review/20260925T152935Z-leachate__6407848f.md; Entire historical sibling report; entire 20261003T160204Z-leachate.md generic report | context_only | Sibling and generic reports locate related concepts but do not review the current target. Their old recommendations are not inherited: merely SEEDED or lacking an optional definition is not itself a major finding, and a guarded source-parent exclusion is preferred over inventing a REPLACE definition just to suppress one edge. |
+
+## Limits And Additional Notes
+
+- One of 3208 current records is assessed here; this does not establish full-corpus review coverage.
+- Original GOLD study and node pages were unavailable. Workbook confirms the path but not all original sample descriptions or count snapshots.
+- The pinned ENVO OWL snapshot was re-read and SHA-256 verified; this is not a claim that it is today's latest ontology release.
+- Exact-baseline completed CI supplies full QC and label receipts; a new local full-QC run was not performed for this read-only review. CI's three skipped tests remain skips, not passes.
+- No SSSOM/KGX consumer or emitted-triple audit was performed; issue #1398 remains open. No paid research, native data curation, GitHub mutation or publication occurred.
+- Historical same-label reports remain immutable and do not count as fresh whole-record reviews here.
+- Source.state working_tree captures an input-byte attestation at durable main baseline 5519228b8fe7d87c22bd04f4e0f078f2fe013c69, not proof of scientific correctness.
+- Original pre-publication Leachate investigation was not saved. This fresh post-publication observation recaptured the unchanged baseline and reran checks.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261009T061718Z-leachate__2f66e051
+kind: record
+repository: CultureBotAI/HabitatMech
+title: 'Leachate under Municipal landfill: source scope, hierarchy and mapping endpoints'
+started_at: '2026-10-09T06:12:04Z'
+finished_at: '2026-10-09T06:17:18Z'
+reviewer:
+  identity: codex-gpt-5
+  kind: agent
+  model: gpt-5
+  independence: self_review
+  independence_basis: Same agent continuing the repository review and publication
+    workflow; not an independent second reviewer. Current record and inputs were reinspected
+    after the publication interruption.
+skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'Reviewed the entire municipal-landfill GOLD Leachate record, its maintained
+  inputs, exact regeneration route, ontology genus and source-path context. Two major
+  findings: the immediate Municipal landfill is-a parent lacks resolved material-versus-site
+  scope, and the emitted NARROW/narrowMatch fields compare a different pair of concepts
+  than their schema declares. Minted identity, ENGINEERED category, source provenance,
+  count omission and SEEDED status are supported. No habitat data, native status,
+  history or GitHub state changed.'
+source:
+  git_revision: 5519228b8fe7d87c22bd04f4e0f078f2fe013c69
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: curation/decisions.tsv
+    sha256: 0602cca13e6495da256a6f1cfd5897462f73f9739a729447862017d93c148efd
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: f3f6d18ad763698231d10a95d037b8bb6f943af5d32f8290b10b7eea8f63b3dd
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 3efdac153ccd40f518458a9dc5360e09dd660c3a42fbd06bfc57f3b2f707ece7
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: b59b9e800a918135e3915145d4d8098bb48dcea36a312b3004c594a57d221ae9
+    role: context
+  - path: data/habitats/RETIRED.tsv
+    sha256: 41beffc45aabdf304de633c21200b375d7f01d1cb2e036d4a026961d545a35e5
+    role: context
+  - path: data/habitats/aquatic/leachate.yaml
+    sha256: 227bab7c81ea9d0a653727009669c39ea9758e0872541046d788bd2ff3de43f4
+    role: context
+  - path: data/habitats/engineered/leachate__2f66e051.yaml
+    sha256: 9b3e23c370a16d705c0677be5e8bd84dff2d3b86e894d0815b1ce0b7b085dd8a
+    role: target
+  - path: data/habitats/engineered/leachate__6407848f.yaml
+    sha256: 6de8d590f15ffec2a490f1a10ee4409128da50a51f32b790cf78ab2aeba54f6e
+    role: context
+  - path: data/habitats/engineered/municipal_landfill.yaml
+    sha256: d09b552a447d578c19002615cf1f8dcfc58abf9e9422f53566ecae252c3095ad
+    role: context
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: 36df8306394c06c352b73e0bf7b47a2858784cedac7389a24d0b78f593ece646
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: f7aa39ee762d94f1902d9f08f328cb897bc543e4e226057eb4770d24bfcc6eb5
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reports/yaml_record_review/20260925T152935Z-leachate__6407848f.md
+    sha256: 3da370f5789e839df6e7747246e4ef50faedb5107308abcfdfe7dd0800d53dfe
+    role: context
+  - path: reports/yaml_record_review/20261003T160204Z-leachate.md
+    sha256: f546ae2932bda234ec64a5a5007527ec992d8688348265af666a147213d9eb68
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 52d2a22309a1f4a10728a663560bb4d918346c292221fd34139b99b4159d3fe5
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 92adf631fa099120a497ff7001473e659347d23ac9b418f04cd341ddad5d2a89
+    role: context
+targets:
+- target_id: habitatmech:GOLD.6898d82b83
+  path: data/habitats/engineered/leachate__2f66e051.yaml
+  label: Leachate
+  record_class: HabitatRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/gold_ecosystem_paths.tsv
+    role: Exact source path and collapsed node/count provenance.
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Source-specific identity and review-depth decisions.
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Exact guarded immediate GOLD context-parent contribution.
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Evidence-backed source definition, if justified.
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Grounding route, source predicates/status, generated record and audit.
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/schema/habitatmech.yaml
+    role: Explicit SourceAttestation and GroundingStatus endpoint contracts.
+scope:
+  description: One resolved generated HabitatRecord. All fields assessed; context
+    records do not receive new individual reviews in this bundle.
+  selection: Exact path data/habitats/engineered/leachate__2f66e051.yaml, resolved
+    by identifier, full GOLD path and PATHS.tsv.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - habitatmech:GOLD.6898d82b83
+  exclusions:
+  - target: Other 3207 current HabitatRecords
+    reason: Not counted as reviewed here. The all-records objective remains incomplete.
+  - target: Generic ENVO leachate, anaerobic-bioreactor Leachate, industrial-wastewater
+      Landfill leachate and Municipal landfill
+    reason: Context only; not interchangeable with this target or freshly reviewed
+      as whole records.
+checks:
+- check_id: C1
+  name: Target LinkML validation
+  status: passed
+  required: true
+  command: env UV_CACHE_DIR=build/uv-cache just validate data/habitats/engineered/leachate__2f66e051.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.6898d82b83
+  summary: No issues found.
+- check_id: C2
+  name: Target closed-schema validation
+  status: passed
+  required: true
+  command: env UV_CACHE_DIR=build/uv-cache just validate-strict data/habitats/engineered/leachate__2f66e051.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.6898d82b83
+  summary: One file, zero errors.
+- check_id: C3
+  name: Full corpus reproduction
+  status: passed
+  required: true
+  command: env UV_CACHE_DIR=build/uv-cache just verify-corpus
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.6898d82b83
+  summary: 3208 expected and found, zero missing, extra or differing records. Reproduction
+    is not scientific approval.
+- check_id: C4
+  name: History validation
+  status: passed
+  required: true
+  command: env UV_CACHE_DIR=build/uv-cache just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.6898d82b83
+  summary: 213 append-only history records valid.
+- check_id: C5
+  name: Raw-inventory provenance
+  status: passed
+  required: true
+  command: env UV_CACHE_DIR=build/uv-cache just provenance-check
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.6898d82b83
+  summary: 14 committed inventories and two GOLD sources current.
+- check_id: C6
+  name: Actual target resolution and regeneration
+  status: passed
+  required: true
+  command: "env UV_CACHE_DIR=build/uv-cache uv run python -c 'from habitatmech import\
+    \ seed as s\nfrom dataclasses import asdict\nimport json\nont=s.OntologyIndex(s.read_tsv(\"\
+    ontology_terms.tsv\"),s.read_tsv(\"ontology_subclass_edges.tsv\"))\nrows=s.read_tsv(\"\
+    gold_ecosystem_paths.tsv\"); claims=s.leaf_claimants(rows); composed=s.composed_claimants(rows)\n\
+    mapping={}\nfor m in s.read_tsv(\"isolation_source_groundings.tsv\"):\n for key\
+    \ in (s.norm_label(m[\"subject_label\"]),s.norm_label(m[\"subject_label_normalized\"\
+    ])):\n  if key: mapping.setdefault(key,m)\ndecs=s.load_decisions(s.DECISIONS_PATH)\n\
+    for row in rows:\n if row[\"canonical_path\"] in {\"Engineered > Wastewater >\
+    \ Municipal landfill > Leachate\",\"Engineered > Wastewater > Municipal landfill\"\
+    }:\n  ident=s.mint(\"GOLD\",row[\"canonical_path\"])\n  auto=s.resolve_gold(row,ont,mapping,claims,composed)\n\
+    \  print(json.dumps({\"id\":ident,\"row\":row,\"automatic\":asdict(auto),\"applied\"\
+    :asdict(s.apply_decision(auto,ident,decs))},default=str))\nprint(\"leachate_claimant\"\
+    ,claims[\"leachate\"])\nprint(\"same_leaf_paths\",[(r[\"canonical_path\"],r[\"\
+    depth\"]) for r in rows if s.norm_label(r[\"leaf_label\"])==\"leachate\"])\nfor\
+    \ ident in [\"ENVO:00002141\",\"ENVO:00002006\",\"ENVO:00000533\"]:\n print(\"\
+    ontology\",ident,ont.terms[ident],\"parents\",ont.direct_parents(ident))\n'\n\
+    env UV_CACHE_DIR=build/uv-cache uv run python -c 'from habitatmech.seed import\
+    \ build_corpus,build_document\nfrom pathlib import Path\nimport yaml\nc=next(c\
+    \ for c in build_corpus().concepts if c.identifier==\"habitatmech:GOLD.6898d82b83\"\
+    )\nprint(\"source_concepts\",c.source_concepts,\"reviewed_sources\",c.reviewed_sources)\n\
+    print(\"build_document_equals_yaml\",build_document(c)==yaml.safe_load(Path(\"\
+    data/habitats/engineered/leachate__2f66e051.yaml\").read_text()))\n'"
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.6898d82b83
+  summary: gold_narrower_than_leaf_match retains this source's minted ID and adds
+    ENVO:00002141; one contributing source, zero reviewed; build_document equals the
+    entire on-disk YAML.
+  evidence_ids:
+  - E3
+  - E4
+- check_id: C7
+  name: Exact-baseline authoritative CI QC receipt
+  status: passed
+  required: true
+  command: gh run view 37891213365 --json headSha,status,conclusion,jobs,url; gh run
+    view 37891213365 --log | rg 'passed|skipped|records|No issues|corpus reproduces|current:|terms|All
+    QC|QC passed'
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.6898d82b83
+  summary: 'Completed SUCCESS at 5519228b8fe7d87c22bd04f4e0f078f2fe013c69: 637 tests
+    passed, 3 skipped; four dedicated review-contract tests passed; all HabitatMech
+    quality gates passed.'
+  scope_note: Freshly inspected existing main CI, not a new local full-QC run. git
+    diff --exit-code against this baseline over data/curation/src/scripts/tests/docs/conf/CLAUDE.md/justfile/schema/.github
+    returned 0. New review bundle validated separately.
+  evidence_ids:
+  - E10
+- check_id: C8
+  name: Exact-baseline ontology label CI receipt
+  status: passed
+  required: true
+  command: gh run view 37891213368 --json headSha,status,conclusion,jobs,url
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.6898d82b83
+  summary: Completed SUCCESS at the same baseline; Enforce id<->label correspondence
+    step passed.
+  scope_note: Existing CI within configured adapter/exception scope, not evidence
+    of minted habitat semantics. A supplemental log keyword filter returned no matches
+    (exit 1), so no label-count totals are asserted.
+  evidence_ids:
+  - E10
+- check_id: C9
+  name: Original GOLD study and ecosystem page access
+  status: unavailable
+  required: false
+  command: web open https://gold.jgi.doe.gov/ecosystem/5666 and https://gold.jgi.doe.gov/study?id=Gs0153853;
+    exact quoted web search Gs0153853
+  target_ids:
+  - habitatmech:GOLD.6898d82b83
+  summary: Both pages returned Internal Error; bounded indexed search returned no
+    results. No sample crosswalk, study methods or molecular observations inspected.
+  evidence_ids:
+  - E9
+- check_id: C10
+  name: Current GOLD ecosystem workbook
+  status: passed
+  required: false
+  command: "env UV_CACHE_DIR=build/uv-cache uv run python -c 'from urllib.request\
+    \ import urlopen\nfrom io import BytesIO\nimport hashlib,json,openpyxl\nurl=\"\
+    https://gold.jgi.doe.gov/download?mode=ecosystempaths\"\ndata=urlopen(url,timeout=60).read()\n\
+    print(json.dumps({\"url\":url,\"bytes\":len(data),\"sha256\":hashlib.sha256(data).hexdigest()}))\n\
+    wb=openpyxl.load_workbook(BytesIO(data),read_only=True,data_only=True)\nfor ws\
+    \ in wb:\n ws.reset_dimensions()\n for n,row in enumerate(ws.iter_rows(values_only=True),1):\n\
+    \  if any(\"leachate\" in str(v).lower() for v in row): print(json.dumps({\"sheet\"\
+    :ws.title,\"row\":n,\"cells\":row},default=str))\n'"
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.6898d82b83
+  summary: Read-only workbook parse with reset_dimensions recovered node 5667 and
+    its exact path; style warning only.
+  evidence_ids:
+  - E8
+- check_id: C11
+  name: Target causal overlay and iModulon applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - habitatmech:GOLD.6898d82b83
+  summary: No target graph, molecular accession, named taxon, regulator, gene or expression
+    claim; no corresponding overlay found in ignored-inclusive local search. No iModulon
+    query or target causal validation needed; absence is not negative biological evidence.
+  evidence_ids:
+  - E1
+  - E5
+evidence:
+- evidence_id: E1
+  kind: record_content
+  reference: data/habitats/engineered/leachate__2f66e051.yaml
+  locator: Entire file; PATHS.tsv:2051
+  accessed_at: '2026-10-09T06:17:18Z'
+  support: supports
+  summary: Minted GOLD.6898d82b83, Leachate, ENGINEERED/NARROW/SEEDED; two parents,
+    one GOLD attestation, one seed event. No definition, synonyms, xrefs, taxa, parameters,
+    graph, datasets or discussions.
+- evidence_id: E2
+  kind: database
+  reference: data/raw/gold_ecosystem_paths.tsv
+  locator: Row 1408; gold_path_biosamples.tsv:961; gold_studies.tsv:3766
+  accessed_at: '2026-10-09T06:17:18Z'
+  support: supports
+  summary: The depth-4 path collapses nodes 5666 and 5667, all four tree counters
+    zero. Separate later biosample inventory records one biosample at 5667; one study
+    row Gs0153853 has only this path. These units/snapshots must not be conflated.
+    Exact-field/pipe-member scan of all 14 raw TSVs found these three matching rows
+    and no other direct target matches.
+  search_scope: All 14 data/raw/*.tsv parsed with csv.DictReader, including overflow
+    values. Exact full path, minted ID, both full node IDs and study accession; not
+    an unrestricted semantic synonym search.
+- evidence_id: E3
+  kind: record_content
+  reference: src/habitatmech/seed.py
+  locator: resolve_gold, ingest_gold, build_corpus, build_document; executed target
+    route
+  accessed_at: '2026-10-09T06:17:18Z'
+  support: supports
+  summary: 'Two same-label Leachate paths tie at depth four, so leaf_claimants[''leachate'']
+    is None. Target route is gold_narrower_than_leaf_match: minted ID, NARROW, skos:narrowMatch,
+    extra parent ENVO:00002141, reviewed false and no decision. Full generation equals
+    disk, with one source and zero reviewed. Separate GOLD immediate-parent contribution
+    adds GOLD.0f40aa60ce.'
+- evidence_id: E4
+  kind: record_content
+  reference: src/habitatmech/schema/habitatmech.yaml
+  locator: SourceAttestation.mapping_predicate; GroundingStatusEnum; docs/CURATION.md
+    hierarchy and exclusion rules
+  accessed_at: '2026-10-09T06:17:18Z'
+  support: refutes
+  summary: The schema defines source concept -> record identifier and omission when
+    the record IS the source. NARROW means record identifier narrower than source.
+    This route instead retains source identity and compares it to an ontology parent.
+    Native parent_habitats requires a strictly broader habitat, not mere source-path
+    context.
+- evidence_id: E5
+  kind: search
+  reference: Local maintained-input and review search
+  locator: curation, history, research, conf, tests, docs, reviews, reports/yaml_record_review,
+    PATHS.tsv and RETIRED.tsv
+  accessed_at: '2026-10-09T06:17:18Z'
+  support: context_only
+  summary: No exact-target ITEM decision, authored definition, exclusion, causal overlay,
+    history session or prior individual review found in these bounds. Label-level
+    search found historical sibling/generic/industrial-leachate discussions, not a
+    completed target review. Parent has CLASS CONFIRM_UNGROUNDED at decisions.tsv:187.
+  search_scope: rg --no-ignore --hidden for target ID, slug, full path, Gs0153853,
+    Leachate label, nodes 5666/5667 and parent ID. Hidden and ignored files included.
+    Contextual hits are not treated as unseen full-source evidence or as target review
+    coverage.
+- evidence_id: E6
+  kind: authority
+  reference: https://raw.githubusercontent.com/EnvironmentOntology/envo/a2455d1a77e46bb8a664d65a157166b539269042/envo.owl
+  locator: Complete XML classes ENVO_00002141, ENVO_00002006, ENVO_00000533; matching
+    vendored terms and direct edges
+  accessed_at: '2026-10-09T06:17:18Z'
+  support: supports
+  summary: Leachate is percolation-produced liquid and has liquid water as parent;
+    that genus permits dissolved or suspended material. Landfill is a physical depression
+    containing discarded material. This supports the leachate genus and a site/material
+    distinction, but does not identify the minted Municipal landfill bin with ENVO
+    landfill.
+  snapshot_sha256: a0b919065d33a9cf975b74cadd16c75f32f512d17f4f6d5999b74216701df54c
+- evidence_id: E7
+  kind: authority
+  reference: https://www.epa.gov/landfills/municipal-solid-waste-landfills
+  locator: What is a Municipal Solid Waste Landfill? definition and leachate collection/removal
+    bullets; updated 2026-07-16
+  accessed_at: '2026-10-09T06:17:18Z'
+  support: partial
+  summary: EPA distinguishes the land area/excavation receiving waste from leachate
+    removed from it. That supports a site-versus-produced-liquid distinction, not
+    proof of the intended semantics of every GOLD hierarchy bin.
+- evidence_id: E8
+  kind: database
+  reference: https://gold.jgi.doe.gov/download?mode=ecosystempaths
+  locator: Worksheet site data, row 452; contextual rows 81 and 435
+  accessed_at: '2026-10-09T06:17:18Z'
+  support: supports
+  summary: 'Current workbook row 452: 5667, Engineered, Wastewater, Municipal landfill,
+    Leachate, Unclassified. It retains a distinct anaerobic-bioreactor branch (5669)
+    and industrial-wastewater Landfill leachate branch (4269). Supports source-path
+    existence, not current organism/sample counts, all collapsed historical nodes,
+    strict is-a semantics or a same-as merge.'
+  snapshot_sha256: 3933e5f0664915c1bbfa00212e17d013da360fb33dd52e509254050813135396
+- evidence_id: E9
+  kind: search
+  reference: https://gold.jgi.doe.gov/study?id=Gs0153853
+  locator: Study page and ecosystem/5666 page retrieval; exact accession web search
+  accessed_at: '2026-10-09T06:17:18Z'
+  support: unknown
+  summary: Direct source pages could not be retrieved; no study methods or biosample
+    descriptions recovered. Exact indexed search yielded no result, not proof that
+    the study is absent or retired.
+  search_scope: Two exact GOLD URLs through web open; one quoted Gs0153853 search.
+    No paid provider, credentials or alternate sample identities inferred.
+- evidence_id: E10
+  kind: validation
+  reference: https://github.com/CultureBotAI/HabitatMech/actions/runs/37891213365
+  locator: QC and four contract tests at exact 5519228 baseline; labels run 37891213368
+  accessed_at: '2026-10-09T06:17:18Z'
+  support: supports
+  summary: 'Existing completed main workflows inspected during this review: all native
+    QC gates passed, 637 tests passed/3 skipped; label enforcement passed. Fresh local
+    target/schema/corpus/history/provenance checks also passed. These checks verify
+    representation and reproduction, not the two scientific/application-contract findings.'
+- evidence_id: E11
+  kind: authority
+  reference: https://www.w3.org/TR/skos-reference/#mapping
+  locator: Section 10.3 S41/S43 and section 10.6.4
+  accessed_at: '2026-10-09T06:17:18Z'
+  support: context_only
+  summary: narrowMatch specializes narrower and is inverse to broadMatch. Mapping
+    properties are not declared irreflexive. The finding is therefore an application
+    endpoint/status mismatch, not a formal SKOS self-link inconsistency; swapping
+    broadMatch and narrowMatch does not resolve the endpoint ambiguity.
+- evidence_id: E12
+  kind: record_content
+  reference: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  locator: Read-only current issue title, body, state and acceptance criteria
+  accessed_at: '2026-10-09T06:17:18Z'
+  support: context_only
+  summary: Existing OPEN shared issue describes the same endpoint-contract defect
+    using other GOLD witnesses. It requires explicit mapping endpoints, schema/routes/consumer
+    reconciliation and actual SSSOM/KGX audit. This target is another reproduced witness;
+    no issue was created or changed.
+- evidence_id: E13
+  kind: prior_review
+  reference: reports/yaml_record_review/20260925T152935Z-leachate__6407848f.md
+  locator: Entire historical sibling report; entire 20261003T160204Z-leachate.md generic
+    report
+  accessed_at: '2026-10-09T06:17:18Z'
+  support: context_only
+  summary: 'Sibling and generic reports locate related concepts but do not review
+    the current target. Their old recommendations are not inherited: merely SEEDED
+    or lacking an optional definition is not itself a major finding, and a guarded
+    source-parent exclusion is preferred over inventing a REPLACE definition just
+    to suppress one edge.'
+assessments:
+- assessment_id: A1
+  area: identity
+  topic: Source identity and same-label distinctions
+  outcome: supported
+  summary: Hash mint, slug and full path resolve one municipal-landfill Leachate concept.
+    Retaining that identity avoids conflation with the generic or anaerobic-bioreactor
+    concepts; this is not a newly endorsed exact ontology equivalence.
+  target_ids:
+  - habitatmech:GOLD.6898d82b83
+  evidence_ids:
+  - E1
+  - E2
+  - E3
+  - E8
+- assessment_id: A2
+  area: grounding
+  topic: Broader leachate material genus
+  outcome: supported
+  summary: ENVO:00002141 has the correct canonical label and a material meaning broad
+    enough for this landfill-context leachate. Retain it as genus; no purity, landfill-wide
+    microbiology or industrial-process assertion is inferred.
+  target_ids:
+  - habitatmech:GOLD.6898d82b83
+  evidence_ids:
+  - E1
+  - E6
+  - E7
+- assessment_id: A3
+  area: graph
+  topic: Immediate GOLD parent contribution
+  outcome: concern
+  summary: Municipal landfill is unresolved between a site and a metonymic wastewater
+    bin. Liquid leachate is not a subtype of a physical landfill. A wastewater-bin
+    interpretation could differ, so the available evidence fails to justify this strict
+    parent without proving every interpretation false.
+  target_ids:
+  - habitatmech:GOLD.6898d82b83
+  evidence_ids:
+  - E1
+  - E3
+  - E4
+  - E5
+  - E6
+  - E7
+- assessment_id: A4
+  area: representation
+  topic: Mapping predicate and grounding-status endpoints
+  outcome: concern
+  summary: NARROW/narrowMatch arise from comparison with ENVO leachate, but the published
+    contract concerns source versus retained record identity. The endpoint is implicit
+    and inconsistent; no global predicate inversion is justified.
+  target_ids:
+  - habitatmech:GOLD.6898d82b83
+  evidence_ids:
+  - E3
+  - E4
+  - E11
+  - E12
+- assessment_id: A5
+  area: quantity
+  topic: Source counts and units
+  outcome: supported
+  summary: Omitting assertion_count/assertion_unit is consistent with organism_count
+    zero. The distinct biosample_count one and one study row remain contextual; neither
+    is an organism assertion or evidence of characteristic taxa.
+  target_ids:
+  - habitatmech:GOLD.6898d82b83
+  evidence_ids:
+  - E1
+  - E2
+  - E3
+- assessment_id: A6
+  area: provenance
+  topic: Source accession and original study boundary
+  outcome: unknown
+  summary: Committed provenance and current workbook corroborate the path. Original
+    study/node pages remain inaccessible, so the actual sample's collection context
+    is unresolved, not disproved.
+  target_ids:
+  - habitatmech:GOLD.6898d82b83
+  evidence_ids:
+  - E2
+  - E8
+  - E9
+- assessment_id: A7
+  area: consistency
+  topic: Generated category, status and history
+  outcome: supported
+  summary: ENGINEERED follows the exact source ecosystem; it is not contradicted by
+    a liquid genus. One source and zero ITEM-reviewed contributions correctly yield
+    SEEDED and the single generated seed event. No status promotion follows from this
+    review.
+  target_ids:
+  - habitatmech:GOLD.6898d82b83
+  evidence_ids:
+  - E1
+  - E2
+  - E3
+  - E4
+- assessment_id: A8
+  area: completeness
+  topic: Optional biological fields and adapters
+  outcome: supported
+  summary: No target taxa, molecular identifiers, environmental parameters or mechanism
+    edges are asserted. Empty optional slots are appropriate without target evidence;
+    no generic PREGO taxa, anaerobic-sibling conditions or iModulon inference should
+    be copied in.
+  target_ids:
+  - habitatmech:GOLD.6898d82b83
+  evidence_ids:
+  - E1
+  - E2
+  - E5
+- assessment_id: A9
+  area: schema
+  topic: Validation and generated ownership
+  outcome: supported
+  summary: Native shape, provenance, history and full-corpus reproduction checks pass.
+    Future changes belong to exact maintained curation inputs or the shared seeder/schema
+    contract, not generated YAML or pages.
+  target_ids:
+  - habitatmech:GOLD.6898d82b83
+  evidence_ids:
+  - E3
+  - E4
+  - E10
+findings:
+- finding_id: F1
+  issue_key: gold-6898d82b83-source-context-parent
+  category: graph
+  severity: major
+  status: open
+  certainty: provisional
+  title: Municipal landfill is not yet justified as a strictly broader habitat
+  description: parent_habitats includes habitatmech:GOLD.0f40aa60ce solely from the
+    immediate GOLD path. The parent has no authored definition and only CLASS-level
+    confirmation; its Wastewater placement permits a metonymic liquid-bin interpretation.
+    ENVO and EPA distinguish the produced liquid from a physical landfill, so the
+    plain site interpretation is not an is-a parent of Leachate. No inspected target
+    source settles the alternative bin meaning. Resolve that scope before retaining
+    this strict relation; do not ground the minted parent to ENVO landfill by label
+    or assume all interpretations are false.
+  target_ids:
+  - habitatmech:GOLD.6898d82b83
+  field_paths:
+  - parent_habitats[1]
+  evidence_ids:
+  - E1
+  - E3
+  - E4
+  - E5
+  - E6
+  - E7
+  - E9
+  rule_id: HabitatMech parent_habitats strictly broader; GOLD context-parent exclusions
+  native_severity: major
+  normalization_reason: Materially unsupported hierarchy claim, not merely absent
+    optional annotation. Exact intended parent semantics remain provisional.
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Exact guarded source-parent suppression if context-only is confirmed.
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: ITEM-level source scope assessment if a decision is warranted.
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Definition only when supported, not as an edge-deletion workaround.
+- finding_id: F2
+  issue_key: gold-6898d82b83-mapping-endpoint-contract
+  category: representation
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Generated NARROW/narrowMatch uses the ontology parent instead of the declared
+    mapping endpoint
+  description: Executed resolve_gold retains the path's own minted identity while
+    comparing it with generic ENVO:00002141, returns NARROW/skos:narrowMatch, then
+    ingest_gold copies that predicate to the source attestation. SourceAttestation
+    defines source -> record identifier, absent when the record is the source; GroundingStatusEnum
+    also compares record identifier and source. The source row supplies no such predicate.
+    This reproducibly violates the native endpoint/status description. It is not evidence
+    that SKOS forbids hierarchical self-links, that broadMatch is the one-line fix,
+    or that every consumer necessarily emits a wrong triple; actual consumer/export
+    behavior was not audited here.
+  target_ids:
+  - habitatmech:GOLD.6898d82b83
+  field_paths:
+  - grounding_status
+  - source_attestations[0].mapping_predicate
+  evidence_ids:
+  - E1
+  - E2
+  - E3
+  - E4
+  - E11
+  - E12
+  rule_id: SourceAttestation.mapping_predicate and GroundingStatusEnum endpoint definitions
+  native_severity: major
+  normalization_reason: Confirmed shared source-generation/application contract defect;
+    schema validity does not establish semantic endpoint agreement.
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Separate source identity and ontology-parent relations in actual grounding/emission
+      routes.
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/schema/habitatmech.yaml
+    role: Define comparison endpoints and grounding-status meaning explicitly.
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1398
+actions:
+- action_id: ACT1
+  description: Recover original study/sample context for Gs0153853 and node 5667,
+    and resolve the Municipal landfill parent's meaning. If the edge is contextual,
+    add the exact GOLD.6898d82b83 / Engineered > Wastewater > Municipal landfill >
+    Leachate / GOLD.0f40aa60ce guarded exclusion. Preserve minted target identity,
+    ENVO:00002141 material genus, verbatim source provenance, count omission and native
+    status. A supported metonymic broader-material reading must be documented rather
+    than assumed.
+  finding_ids:
+  - F1
+  target_ids:
+  - habitatmech:GOLD.6898d82b83
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Guarded immediate-parent contribution.
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Evidence-backed source scope.
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Optional supported definition.
+  acceptance_checks:
+  - Document source-specific site/material distinction or supported strict broader
+    material meaning; do not infer it from the hierarchy alone.
+  - 'For separately authorized curation: just seed; just seed-canary habitatmech:GOLD.6898d82b83
+    --force; inspect the canary and source-parent event; regenerate through validated
+    writer only.'
+  - Append native session history; pass target schema/strict, history, corpus, provenance,
+    label and full QC; compare semantic-map inputs and rebuild only affected products
+    as required.
+  - Verify generic and anaerobic/industrial siblings are not merged or modified inadvertently,
+    and that organism counts remain distinct from biosample/study counts.
+  generator: scripts/seed_from_sources.py
+- action_id: ACT2
+  description: 'Address shared issue #1398 with an explicit source-to-record versus
+    record-to-ontology-parent contract and endpoint-aware regressions. Include this
+    actual Leachate route as a witness; reconcile schema, generator and real consumers
+    rather than globally swapping predicates.'
+  finding_ids:
+  - F2
+  target_ids:
+  - habitatmech:GOLD.6898d82b83
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Route and emission fix.
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/schema/habitatmech.yaml
+    role: Endpoint/status contract.
+  acceptance_checks:
+  - 'Assert subject, predicate, object and status meaning across minted, exact, broader
+    and narrower routes, including this target and #1398 witnesses.'
+  - Preserve source-specific identity, valid parent and original imported mappings;
+    do not claim SKOS self-links are formally forbidden.
+  - Inspect and validate actual SSSOM/KGX products against current kg-microbe modeling
+    before claiming downstream compatibility; no such audit was completed here.
+  - For authorized implementation append required history, regenerate governed artifacts,
+    run consumer/export regressions plus exact corpus reproduction and full QC.
+  generator: scripts/seed_from_sources.py and actual mapping/export consumers after
+    explicit contract audit
+limitations:
+- One of 3208 current records is assessed here; this does not establish full-corpus
+  review coverage.
+- Original GOLD study and node pages were unavailable. Workbook confirms the path
+  but not all original sample descriptions or count snapshots.
+- The pinned ENVO OWL snapshot was re-read and SHA-256 verified; this is not a claim
+  that it is today's latest ontology release.
+- Exact-baseline completed CI supplies full QC and label receipts; a new local full-QC
+  run was not performed for this read-only review. CI's three skipped tests remain
+  skips, not passes.
+- 'No SSSOM/KGX consumer or emitted-triple audit was performed; issue #1398 remains
+  open. No paid research, native data curation, GitHub mutation or publication occurred.'
+notes:
+- Historical same-label reports remain immutable and do not count as fresh whole-record
+  reviews here.
+- Source.state working_tree captures an input-byte attestation at durable main baseline
+  5519228b8fe7d87c22bd04f4e0f078f2fe013c69, not proof of scientific correctness.
+- Original pre-publication Leachate investigation was not saved. This fresh post-publication
+  observation recaptured the unchanged baseline and reran checks.
+tags:
+- habitat
+- GOLD
+- leachate
+- hierarchy
+- mapping-contract
+```

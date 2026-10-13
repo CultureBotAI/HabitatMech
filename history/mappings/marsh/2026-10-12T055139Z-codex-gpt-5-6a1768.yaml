@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: marsh
+session:
+  id: 2026-10-12T055139Z-codex-gpt-5-6a1768
+  timestamp: '2026-10-12T05:51:39Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1302
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct bounded aquatic hierarchy or marine mechanism for marsh
+  details: Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1302
+    (20261012T054256Z-marsh F1). Generic marsh is a herbaceous wetland ecosystem, not the
+    overlapping wetland area. The GOLD Freshwater/Wetlands/Marsh source is narrower than generic
+    marsh; freshwater marsh ENVO:00000053 already exists. Preserve generic MADIN/PREGO evidence
+    and the 4 ORGANISM, 9 TAXON and 4 TAXON units without transferring all observations to
+    freshwater marsh. Ontology synonym scope and malformed PREGO variants require separate
+    attention. Exclude only the immediate GOLD contribution named here. Preserve source identity,
+    node/path provenance, counts/units, native status and independent parents. Unresolved
+    source identity, genus, synonym and mapping-endpoint findings remain separate. User authorized
+    remediation and publication. Dry seeding and all-overlay validation passed; final generated
+    corpus, regressions, map/site and full QC are pending at event creation. Actual completion
+    results belong in PR 2003 and successor observations. No scientific status promotion;
+    unresolved findings remain open.

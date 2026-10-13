@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: REVIEWED
 parent_habitats:
 - ENVO:01000008
-- habitatmech:GOLD.09350714a0
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8265
@@ -27,3 +26,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.09350714a0
+    for habitatmech:GOLD.bef53c8bcc (Environmental > Aquatic > Thermal springs > Runoff
+    channel > Microbial mats). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1397
+    (20261012T073236Z-microbial_mats__42c901d2). Thermal runoff-channel mat: later
+    Mushroom Spring samples explicitly distinguish a mat core from its runoff channel.
+    The channel is context, not a mat genus. Suppress only this exact GOLD context
+    contribution. Preserve source path/nodes/counts/units and independent justified
+    parents. Source-identity questions and mapping-endpoint semantics remain separate;
+    this does not certify SSSOM/KGX.'

@@ -1,0 +1,1065 @@
+# Metallic material: retain material superclass, exclude bioremediation context
+
+- Review: 20261009T095212Z-metallic_material
+- Repository: CultureBotAI/HabitatMech
+- Started UTC: 2026-10-09T09:44:10Z
+- Finished UTC: 2026-10-09T09:52:12Z
+- Reviewer: codex-gpt-5 (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Reviewed the complete metallic-material record and its sole GOLD contribution. One confirmed major finding: the inherited Bioremediation parent is context, not a superclass of generic metallic material. Current ENVO supports the independent environmental-material parent and canonical definition. The13ORGANISM count, three-node note, CLOSE/REVIEWED lifecycle and source-scoped synonyms reproduce. Original source members remain unavailable, so the prior ITEM endorsement is not treated as new proof that this remediation bin denotes bulk metallic material. No curation was written.
+
+## Scope And Provenance
+
+Whole metallic_material.yaml and the exact GOLD.76a710ae9c source contribution. Complete parent records inform target edges only; their taxa, source counts and findings are not transferred.
+
+Selection: ENVO:01001069 at PATHS.tsv:880; Engineered &gt; Bioremediation &gt; Metal; source nodes3529/3868/4306.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 966ccfe5a59b8d741f942f5d6924b4949d897430.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| ENVO:01001069 | data/habitats/engineered/metallic_material.yaml | generated | metallic material |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Current target and context capture | passed | True | ENVO:01001069 | 47 inputs captured at966ccfe5a; added current Metal surface review pair as search context while preserving all45earlier hashes. This is a working-tree attestation; the new contextual review pair is not in the captured base commit. |
+| Target LinkML validation | passed | True | ENVO:01001069 | No issues found. |
+| Target closed-schema validation | passed | True | ENVO:01001069 | One file, zero errors. |
+| Fourteen-inventory exact-field scan | passed | True | ENVO:01001069 | Direct target hits are the aggregate GOLD path, ontology definition and subclass edge only. No target biosample, study, triad, taxon or parameter row in these committed inventories. |
+| Full source resolution and document reproduction | passed | True | ENVO:01001069 | gold_leaf_synonym CLOSE/skos:closeMatch, endorsed by ITEM REVIEW. One contributor and one reviewed contributor yield REVIEWED. Whole generated document equals disk. Bioremediation remains a separate CLASS-confirmed minted source. |
+| Ignored-inclusive maintained-input and prior-review search | passed | True | ENVO:01001069 | Exact ITEM row and path lock found. No target definition, source-parent exclusion, causal overlay, native session history or prior target-owned individual review in named roots. The new Metal surface review contains only a neighboring-candidate mention. |
+| Current ontology and GOLD structured sources | passed | False | ENVO:01001069 | Active target, environmental-material superclass and synonym agree with the record. Current workbook confirms terminal node4306; historical3529/3868 member details are not established. |
+| Initial exact-source issue search | failed | False | ENVO:01001069 | Sandbox network connection failed; permitted read succeeded on retry. |
+| Bounded exact-source issue search | passed | False | ENVO:01001069 | GitHub search returned no results for this exact minted suffix across states. This is not an exhaustive issue-queue absence claim; no issue was created. |
+| Initial historical issue12 read | failed | False | ENVO:01001069 | Sandbox network connection failed; permitted read succeeded. |
+| Historical issue12 reference | passed | False | ENVO:01001069 | Issue12 exists and is OPEN; its title describes the seeded curation backlog. Metadata verifies the audit reference, not this record's scientific identity. |
+| Initial synonym issue1459 read | failed | False | ENVO:01001069 | Sandbox network connection failed; permitted read succeeded. |
+| Historical synonym issue1459 reference | passed | False | ENVO:01001069 | Issue1459 exists and is CLOSED, titled Do not promote close-mapped source labels to exact synonyms. No issue state changed. |
+| Read-only source-parent exclusion isolation | passed | True | ENVO:01001069 | Across3208documents, only ENVO:01001069 changes: Bioremediation parent removed, ENVO:00010483 retained and one SOURCE_PARENT_EXCLUDED audit added. All other fields, previous events and records remain identical; no file written. |
+| Full corpus reproduction | passed | True | ENVO:01001069 | 3208 expected and found; zero missing, extra or differing records. Shared unchanged-scientific-input check from this review session. |
+| Native curation history | passed | True | ENVO:01001069 | 217 histories valid. Shared unchanged-scientific-input check from this review session. |
+| Raw inventory provenance | passed | True | ENVO:01001069 | 14 committed inventories and two GOLD sources current. Shared unchanged-scientific-input check from this review session. |
+| Parent, status and reference regressions | passed | True | ENVO:01001069 | 6 passed, 33 deselected; deterministic integrity is not scientific proof. Shared unchanged-scientific-input check from this review session. |
+| Exact-baseline full quality-gate receipt | passed | True | ENVO:01001069 | Freshly queried successful run at captured 966ccfe5a: 639 passed, 3 skipped, four dedicated contract tests, 217 histories, 3208 records and all native gates. No fresh local full-QC run claimed. Shared unchanged-scientific-input check from this review session. |
+| Exact-baseline ontology label receipt | passed | True | ENVO:01001069 | Completed SUCCESS at captured revision; configured ontology coverage and exceptions are not proof of source semantics. Shared unchanged-scientific-input check from this review session. |
+| Scientific-input equivalence | passed | True | ENVO:01001069 | No differences from the checked base; only new review artifacts are written. Shared unchanged-scientific-input check from this review session. |
+| Original GOLD node/member details | unavailable | False | ENVO:01001069 | Browser retrieval of ecosystem3529 failed. No original study or member crosswalk recovered for the13organism assertions; current workbook is classification evidence only. |
+| Expression and causal adapters | not_applicable | False | ENVO:01001069 | No target gene, regulator, transcriptomics or causal assertion. No target overlay found in ignored-inclusive roots; iModulonDB is not applicable. Parent taxa do not become target taxa. |
+
+## Scientific And Domain Assessments
+
+### Canonical metallic-material meaning
+
+identity: supported. Targets: ENVO:01001069.
+
+Identifier, canonical definition and independent ENVO synonym agree on a metallic material class. The record does not assert a particular alloy, metal pollutant, contaminated soil or dissolved-metal solution.
+
+### Scope of historical CLOSE endorsement
+
+grounding: unknown. Targets: ENVO:01001069.
+
+Native ITEM review explains the status, but raw source membership is unavailable. Generic Metal terminology in remediation can involve chemically different media; neither the current workbook nor historical lexical endorsement resolves original specimen identity. No replacement mapping is inferred.
+
+### Environmental material is a genuine superclass
+
+graph: supported. Targets: ENVO:01001069.
+
+Current parent API and committed subclass edge independently support ENVO:00010483, which must survive any source-parent correction.
+
+### Bioremediation is not a material genus
+
+graph: concern. Targets: ENVO:01001069.
+
+The extra parent is generated from source classification context. Generic metallic material is not a kind of bioremediation technology or remediated setting; a source's use in remediation does not establish subsumption.
+
+### Source-specific synonym strength
+
+nomenclature: supported. Targets: ENVO:01001069.
+
+GOLD Metal is RELATED_SYNONYM under the CLOSE mapping; ENVO metal is independently exact. Case overlap does not warrant deleting the valid ontology synonym or re-promoting the GOLD label.
+
+### Thirteen organism assertions and three source nodes
+
+quantity: supported. Targets: ENVO:01001069.
+
+The count/unit and collapsed-node note reproduce exactly. Parent counts, taxon rankings and unavailable studies are not borrowed.
+
+### Reviewed source and generated audit
+
+consistency: supported. Targets: ENVO:01001069.
+
+One ITEM-reviewed contributor yields REVIEWED. REVIEW, seed and source-synonym-scoping events reproduce. Hierarchy correction alone does not rewrite historical identity endorsement.
+
+### No unsupported biological enrichment
+
+completeness: supported. Targets: ENVO:01001069.
+
+The exact-target raw scan supplies no taxa, parameters or causal assertions; optional slots need not be filled by parent biology or generic remediation mechanisms.
+
+### Minimal maintained-input change
+
+ownership: supported. Targets: ENVO:01001069.
+
+The existing guarded exclusion mechanism can remove only the source-context contribution and append its audit, without changing the canonical genus, synonym policy or other records.
+
+### Deterministic representation
+
+schema: supported. Targets: ENVO:01001069.
+
+Target schema, native reproduction and references pass. These do not resolve source membership or justify the false hierarchy.
+
+## Findings
+
+### F1: Generic metallic material is incorrectly classified under Bioremediation
+
+major / open / confirmed; issue key: gold-76a710ae9c-bioremediation-context-parent.
+
+The record's canonical class denotes material primarily composed of metals, but parent_habitats additionally asserts sourceGOLD.5f0e9e816a Bioremediation as a superclass. The relation is introduced solely by the GOLD prefix and expresses treatment/application context, not a broader material type. ENVO independently supplies ENVO:00010483 and no Bioremediation superclass. The false parent is established under the currently retained identity; original source-equivalence reassessment remains separate.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+In separately authorized curation, exclude only sourceGOLD.76a710ae9c's exact Engineered &gt; Bioremediation &gt; Metal contribution to parentGOLD.5f0e9e816a. Keep ENVO:00010483, and do not change the canonical identity or reinterpret the original13organisms without primary source evidence.
+
+- Whole-corpus regression shows only the target parent list and appended SOURCE_PARENT_EXCLUDED audit changing for this repair. Retain independent ENVO:00010483 and reject a stale source-path/parent guard.
+- Preserve canonical ID/label/definition, sourceGOLD.76a710ae9c, nodes3529/3868/4306,13ORGANISM count, CLOSE/skos:closeMatch, historical REVIEWED status, both source-scoped synonyms and earlier events.
+- Do not delete the independently valid ENVO exact synonym metal, re-promote GOLD Metal to exact, add parent taxa or substitute a contaminated-matrix definition without original-source evidence.
+- Append native history only during the authorized fix; pass target schema/strict, corpus, provenance, history, configured ontology labels, fullQC and applicable generated-page/map checks.
+- Record any resolution in a new linked immutable review. Parent, Hydrocarbon and other sibling findings are not closed by this target-only correction.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/habitats/engineered/metallic_material.yaml; Whole YAML, two synonyms, two parents, sole attestation and three history events | supports | Record denotes canonical metallic material with a CLOSE source mapping; GOLD Metal is related while ENVO metal remains exact. Native REVIEWED status records the earlier ITEM decision. |
+| source | data/raw/gold_ecosystem_paths.tsv; Row484; exact Bioremediation &gt; Metal path | supports | Depth3 bin collapses3529&#124;3868&#124;4306 and has13ORGANISM assertions, zero other aggregate counters. No direct exact-target study/biosample/triad/taxon/parameter rows in the14-inventory scan; no ecological absence inference. |
+| ontology | https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms?obo_id=ENVO%3A01001069; Current active term and synonym; committed ontology_terms.tsv:8558 | supports | Definition denotes material primarily composed of pure metals and showing their properties, allowing some nonmetal contamination. It does not define all metal-containing remediation matrices. Response3705bytes; SHA2561e847ab1e9c64d5f09a9c16b2d22bfaff49dedd9241b1b79e843b1f912a28ab7. |
+| ontology_parent | https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_01001069/parents; Sole direct parent ENVO:00010483; local subclass row6877; parent term query | supports | Independent material genus is environmental material. Parents SHA2567c54fe3be9f0eb42486db2cd4084386335a70aa13f81517d920a2b8485f805dd; active parent response5001bytes, SHA256fa24c0a4f711b8323e348ead85df9b8f2344dfba4e3725c227784edcfe20364b. Complete parent YAML read for context only; its1509TAXON pool and25ranked taxa are not target observations. |
+| gold | https://gold.jgi.doe.gov/download?mode=ecosystempaths; Workbook site data row150 | supports | Node4306 is Engineered/Bioremediation/Metal/Unclassified/Unclassified. This confirms source category context, not the original material composition or13members. Workbook84174bytes; SHA2563933e5f0664915c1bbfa00212e17d013da360fb33dd52e509254050813135396. |
+| decision | curation/decisions.tsv; Target1698; parent585; actual full-index resolution | supports | ITEM REVIEW endorses the lexical gold_leaf_synonym route and explains native REVIEWED. The inherited parent has CLASS confirmation only. Historical endorsement does not supply original specimen evidence, and CLOSE is not exact source equivalence. |
+| parent | data/habitats/engineered/bioremediation__2261f921.yaml; Whole current YAML and historical parent report20260924T163652Z read in full | refutes | The GOLD parent is the generic bioremediation source grouping, with no maintained definition making generic metallic material a subtype. Whether read as remediation technology or its treated setting, this is source context rather than a genus of every metallic material. Parent6ORGANISM count and own study context are not target observations. |
+| epa | https://www.epa.gov/sites/default/files/2015-04/documents/introductiontoinsitubioremediationofgroundwater_dec2013.pdf; EPA542-R-13-018, executive summary ES-1 lines7-13; section2.3.1.6 printedp32/PDFindex41 lines1237-1253 | context_only | Agency technical prose distinguishes remediation technology, treated media and dissolved-metal contaminants. This supports the process/material distinction and cautions against equating all remediation Metal usage with bulk metallic material. No figure, operating prescription, regulatory claim, target mechanism or sample crosswalk is adopted. |
+| precedent | curation/gold_parent_exclusions.tsv; Hydrocarbon source row9; corresponding regression around tests/test_gold_parent_exclusions.py:668; helper module | context_only | The same Bioremediation prefix is already excluded for independently reviewed Hydrocarbon. That precedent identifies the mechanism, not proof by sibling analogy. Current metallic-material semantics independently establish the target edge defect. |
+| counterfactual | src/habitatmech/curate/gold_parent_exclusions.py; In-memory exact source/path/parent exclusion and full-corpus comparison | supports | Only metallic_material changes, keeping ENVO:00010483 and all other fields. Native audit append is simulated in memory, not written. |
+| scope | curation; Ignored-inclusive exact mint/CURIE/slug/label searches plus bounded GitHub query | context_only | No target source-parent exclusion, definition, overlay, native session history or earlier individual target review in local search bounds. New Metal surface bundle mentions this only as a candidate term; it is captured as working-tree context, not an earlier assessment of this record. |
+| references | https://github.com/CultureBotAI/HabitatMech/issues/1459; Fresh metadata reads of1459 and12 | supports | Both native-history issue references resolve. The synonym issue is closed; backlog12 remains open. No independent scientific approval or closure of this new finding follows. |
+| unavailable | https://gold.jgi.doe.gov/ecosystem/3529; Fresh browser retrieval failure | unknown | Historical3529/3868 node details and original members are not independently recovered; no evidence establishes a specific dissolved-metal matrix or bulk-metal substrate for this source. |
+| gates | https://github.com/CultureBotAI/HabitatMech/actions/runs/37910149298; Exact966ccfe5a baseline; label run37910149233; shared fresh local native checks | supports | Deterministic gates pass while the false source-context edge reproduces. No scientific-input drift occurred. |
+
+## Limits And Additional Notes
+
+- One exact target reviewed; full3208-record completion remains unproven.
+- Original13source members and historical3529/3868 details remain unavailable; current4306classification is not specimen-level verification. Source-identity reassessment is unresolved separately from the confirmed hierarchy defect.
+- EPA prose is contextual scientific terminology only. No experimental mechanism, treatment recommendation, regulation, exposure or health claim is attributed to this GOLD source.
+- Complete parent files and historical Bioremediation report were read as context; parent taxa/counts and existing findings remain out of scope. Hydrocarbon/Thiocyanate excerpts and Metal surface candidate mention are not new whole-record reviews.
+- Shared fresh local native checks and exact-baseline fullQC/label receipts were reused with unchanged scientific inputs. No new local fullQC; three native tests remain skipped.
+- No maintained-input change, native status/history promotion, GitHub mutation, publication or SSSOM/KGX readiness assessment.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261009T095212Z-metallic_material
+kind: record
+repository: CultureBotAI/HabitatMech
+title: 'Metallic material: retain material superclass, exclude bioremediation context'
+started_at: '2026-10-09T09:44:10Z'
+finished_at: '2026-10-09T09:52:12Z'
+reviewer:
+  identity: codex-gpt-5
+  kind: agent
+  model: gpt-5
+  independence: self_review
+  independence_basis: Same agent continuing the corpus review. Fresh target and source
+    assessment; not independent approval.
+skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'Reviewed the complete metallic-material record and its sole GOLD contribution.
+  One confirmed major finding: the inherited Bioremediation parent is context, not
+  a superclass of generic metallic material. Current ENVO supports the independent
+  environmental-material parent and canonical definition. The13ORGANISM count, three-node
+  note, CLOSE/REVIEWED lifecycle and source-scoped synonyms reproduce. Original source
+  members remain unavailable, so the prior ITEM endorsement is not treated as new
+  proof that this remediation bin denotes bulk metallic material. No curation was
+  written.'
+source:
+  git_revision: 966ccfe5a59b8d741f942f5d6924b4949d897430
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: curation/decisions.tsv
+    sha256: 0602cca13e6495da256a6f1cfd5897462f73f9739a729447862017d93c148efd
+    role: context
+  - path: curation/definition_source_label_exclusions.tsv
+    sha256: cc4da2e7e5e8750e6c023683014aa37a909230280f231eec5be7c71795340312
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: c741b54ba1c39872afaf090422d274a123e308f15eba480639c702eddab60a3d
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 3efdac153ccd40f518458a9dc5360e09dd660c3a42fbd06bfc57f3b2f707ece7
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: b59b9e800a918135e3915145d4d8098bb48dcea36a312b3004c594a57d221ae9
+    role: context
+  - path: data/habitats/RETIRED.tsv
+    sha256: 41beffc45aabdf304de633c21200b375d7f01d1cb2e036d4a026961d545a35e5
+    role: context
+  - path: data/habitats/engineered/bioremediation__2261f921.yaml
+    sha256: 27f30d5edd1aff037b5cc0c1391cc78f27bb5619266e3570a612940b59cd63bd
+    role: context
+  - path: data/habitats/engineered/metallic_material.yaml
+    sha256: ef3765e82665e25e699e0024ada11a896a568b7590bbc4f110e0faaa632e6488
+    role: target
+  - path: data/habitats/other/environmental_material.yaml
+    sha256: f3916c9c17060dbb92c026d8e340be9478c37409361279bbb639642cdae29fe7
+    role: context
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: 36df8306394c06c352b73e0bf7b47a2858784cedac7389a24d0b78f593ece646
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: f7aa39ee762d94f1902d9f08f328cb897bc543e4e226057eb4770d24bfcc6eb5
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/mappings/hydrocarbon__e596377f/2026-10-08T201838Z-claude-code-916e99.yaml
+    sha256: 360814621b8d25c23b02bbf63cdc7bb0a067443f3931c063beb3c70f7b552286
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reports/yaml_record_review/20260924T155643Z-thiocyanate.md
+    sha256: 61e9efd0a3ad82ac9cfb753eb9bef1425537dbec93c3a5e1630380ec49652ebb
+    role: context
+  - path: reports/yaml_record_review/20260924T163652Z-bioremediation__2261f921.md
+    sha256: 4de179bdf0ff196173f99e1c4a76d61ae24b1c82b69c1572717dedfa5d0baddf
+    role: context
+  - path: reports/yaml_record_review/20261008T200652Z-hydrocarbon__e596377f.md
+    sha256: e7abc595802aef7d63c05faf4fcc584f7001a8634e805bc3a9b1dc336436254e
+    role: context
+  - path: reviews/structured/20261009T094348Z-metal_surface/review.md
+    sha256: a2b982b1658e34fa7978e7afa3d5196c16cfac2c38b94a32240f2193d27a2727
+    role: context
+  - path: reviews/structured/20261009T094348Z-metal_surface/review.yaml
+    sha256: bacc75ead4aeb25cda74b54fa17ca1956f3d8acec4b4e5f70a36dfe701a4f462
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/habitatmech/curate/gold_parent_exclusions.py
+    sha256: 044d8277509a9b1f6e4f2d7ea1fb82319b41e09ffef7788738a0f4ed0d0b63af
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 52d2a22309a1f4a10728a663560bb4d918346c292221fd34139b99b4159d3fe5
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 92adf631fa099120a497ff7001473e659347d23ac9b418f04cd341ddad5d2a89
+    role: context
+  - path: tests/test_gold_parent_exclusions.py
+    sha256: c561499386bd092f37f5901ad2ca985c1bd620211113800762ed432554c39f38
+    role: context
+targets:
+- target_id: ENVO:01001069
+  path: data/habitats/engineered/metallic_material.yaml
+  label: metallic material
+  record_class: HabitatRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: SourceGOLD.76a710ae9c reviewed close grounding; identity or mapping changes.
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Guarded source-only context-parent removal if supported.
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Any evidence-backed source-specific definition and genus.
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/gold_ecosystem_paths.tsv
+    role: Exact Bioremediation > Metal source path, counts and node collapse.
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_terms.tsv
+    role: Canonical material definition and independent ontology synonym.
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_subclass_edges.tsv
+    role: Independent ENVO superclass.
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Source resolution, hierarchy, scoped synonym and lifecycle generation.
+scope:
+  description: Whole metallic_material.yaml and the exact GOLD.76a710ae9c source contribution.
+    Complete parent records inform target edges only; their taxa, source counts and
+    findings are not transferred.
+  selection: ENVO:01001069 at PATHS.tsv:880; Engineered > Bioremediation > Metal;
+    source nodes3529/3868/4306.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - ENVO:01001069
+  exclusions:
+  - target: Bioremediation, environmental material, Hydrocarbon, Thiocyanate and Metal
+      surface records
+    reason: Parent context, implementation precedent or a candidate-term search hit
+      only; no whole-record verdict or closure for these targets.
+checks:
+- check_id: capture
+  name: Current target and context capture
+  status: passed
+  required: true
+  summary: 47 inputs captured at966ccfe5a; added current Metal surface review pair
+    as search context while preserving all45earlier hashes. This is a working-tree
+    attestation; the new contextual review pair is not in the captured base commit.
+  target_ids:
+  - ENVO:01001069
+  command: env UV_CACHE_DIR=build/uv-cache uv run python scripts/record_review.py
+    inspect --targets /private/tmp/habitatmech-metallic-material-targets-20261009T094410Z.json
+    --input CLAUDE.md --input justfile --input docs/CURATION.md --input docs/HARMONIZATION.md
+    --input docs/RESEARCH.md --input docs/record-review-profile.md --input docs/record-reviews.md
+    --input .claude/skills/review-yaml-record/SKILL.md --input .claude/skills/curate-yaml-record/references/review-checklist.md
+    --input schema/record_review.yaml --input src/habitatmech/schema/habitatmech.yaml
+    --input src/habitatmech/seed.py --input curation/decisions.tsv --input curation/gold_parent_exclusions.tsv
+    --input curation/term_requests.tsv --input curation/term_requests_excluded.tsv
+    --input data/habitats/PATHS.tsv --input data/habitats/RETIRED.tsv --input data/raw/ontology_terms.tsv
+    --input data/raw/ontology_subclass_edges.tsv --input data/raw/isolation_source_groundings.tsv
+    --input data/raw/gold_ecosystem_paths.tsv --input data/raw/gold_path_biosamples.tsv
+    --input data/raw/gold_path_triads.tsv --input data/raw/gold_studies.tsv --input
+    data/raw/prego_habitats.tsv --input data/raw/prego_habitat_taxa.tsv --input data/raw/bacdive_isolation_sources.tsv
+    --input data/raw/bacdive_source_taxa.tsv --input data/raw/madin_habitats.tsv --input
+    data/raw/madin_habitat_taxa.tsv --input data/raw/environment_parameters.tsv --input
+    data/raw/MANIFEST.yaml --input data/raw/GOLD_MANIFEST.yaml --input tests/test_gold_parent_exclusions.py
+    --input history/mappings/hydrocarbon__e596377f/2026-10-08T201838Z-claude-code-916e99.yaml
+    --input reports/yaml_record_review/20260924T163652Z-bioremediation__2261f921.md
+    --input reports/yaml_record_review/20261008T200652Z-hydrocarbon__e596377f.md --input
+    reports/yaml_record_review/20260924T155643Z-thiocyanate.md --input curation/definition_source_label_exclusions.tsv
+    --input conf/id_label_targets.yaml --input data/habitats/engineered/bioremediation__2261f921.yaml
+    --input data/habitats/other/environmental_material.yaml --input src/habitatmech/curate/gold_parent_exclusions.py
+    --input reviews/structured/20261009T094348Z-metal_surface/review.yaml --input
+    reviews/structured/20261009T094348Z-metal_surface/review.md
+  exit_code: 0
+- check_id: schema
+  name: Target LinkML validation
+  status: passed
+  required: true
+  summary: No issues found.
+  target_ids:
+  - ENVO:01001069
+  command: env UV_CACHE_DIR=build/uv-cache just validate data/habitats/engineered/metallic_material.yaml
+  exit_code: 0
+- check_id: strict
+  name: Target closed-schema validation
+  status: passed
+  required: true
+  summary: One file, zero errors.
+  target_ids:
+  - ENVO:01001069
+  command: env UV_CACHE_DIR=build/uv-cache just validate-strict data/habitats/engineered/metallic_material.yaml
+  exit_code: 0
+- check_id: raw
+  name: Fourteen-inventory exact-field scan
+  status: passed
+  required: true
+  summary: Direct target hits are the aggregate GOLD path, ontology definition and
+    subclass edge only. No target biosample, study, triad, taxon or parameter row
+    in these committed inventories.
+  target_ids:
+  - ENVO:01001069
+  command: "env UV_CACHE_DIR=build/uv-cache uv run python - <<'PY'\nimport csv,json\n\
+    from pathlib import Path\npath='Engineered > Bioremediation > Metal'\nwith open('data/raw/gold_ecosystem_paths.tsv')\
+    \ as h:\n    row=next(r for r in csv.DictReader(h,delimiter='\\t') if r['canonical_path']==path)\n\
+    needles={'ENVO:01001069','habitatmech:GOLD.76a710ae9c',path,*row['gold_node_ids'].split('|')}\n\
+    for p in sorted(Path('data/raw').glob('*.tsv')):\n    hits=[]\n    with p.open()\
+    \ as h:\n        for n,r in enumerate(csv.DictReader(h,delimiter='\\t'),2):\n\
+    \            vals=[v for x in r.values() for v in (x if isinstance(x,list) else\
+    \ [x]) if v]\n            if any(v in needles or needles.intersection(v.split('|'))\
+    \ for v in vals):hits.append({'line':n,'row':r})\n    print(p.name,json.dumps(hits))\n\
+    PY"
+  exit_code: 0
+- check_id: route
+  name: Full source resolution and document reproduction
+  status: passed
+  required: true
+  summary: gold_leaf_synonym CLOSE/skos:closeMatch, endorsed by ITEM REVIEW. One contributor
+    and one reviewed contributor yield REVIEWED. Whole generated document equals disk.
+    Bioremediation remains a separate CLASS-confirmed minted source.
+  target_ids:
+  - ENVO:01001069
+  command: "env UV_CACHE_DIR=build/uv-cache uv run python - <<'PY'\nfrom habitatmech\
+    \ import seed as s\nfrom dataclasses import asdict\nfrom pathlib import Path\n\
+    import json,yaml\nrows=s.read_tsv('gold_ecosystem_paths.tsv');ont=s.OntologyIndex(s.read_tsv('ontology_terms.tsv'),s.read_tsv('ontology_subclass_edges.tsv'));d=s.load_decisions(s.DECISIONS_PATH);mapping={}\n\
+    for r in s.read_tsv('isolation_source_groundings.tsv'):\n    for key in (s.norm_label(r['subject_label']),s.norm_label(r['subject_label_normalized'])):\n\
+    \        if key:mapping.setdefault(key,r)\nfor path in ['Engineered > Bioremediation\
+    \ > Metal','Engineered > Bioremediation']:\n    r=next(r for r in rows if r['canonical_path']==path);ident=s.mint('GOLD',path);auto=s.resolve_gold(r,ont,mapping,s.leaf_claimants(rows),s.composed_claimants(rows))\n\
+    \    print(json.dumps({'path':path,'mint':ident,'automatic':asdict(auto),'final':asdict(s.apply_decision(auto,ident,d))}))\n\
+    c=next(c for c in s.build_corpus().concepts if c.identifier=='ENVO:01001069')\n\
+    assert s.build_document(c)==yaml.safe_load(Path('data/habitats/engineered/metallic_material.yaml').read_text())\n\
+    print('Whole document equal; sources',c.source_concepts,'reviewed',c.reviewed_sources)\n\
+    for ident in ['ENVO:01001069','ENVO:00010483']:\n    print('TERM',ident,json.dumps(ont.terms[ident]),'parents',sorted(ont.direct_parents(ident)))\n\
+    PY"
+  exit_code: 0
+- check_id: search
+  name: Ignored-inclusive maintained-input and prior-review search
+  status: passed
+  required: true
+  summary: Exact ITEM row and path lock found. No target definition, source-parent
+    exclusion, causal overlay, native session history or prior target-owned individual
+    review in named roots. The new Metal surface review contains only a neighboring-candidate
+    mention.
+  target_ids:
+  - ENVO:01001069
+  command: rg --no-ignore --hidden -n 'ENVO:01001069|GOLD.76a710ae9c|metallic_material|metallic
+    material' curation history research conf tests docs reviews reports/yaml_record_review
+    data/habitats/PATHS.tsv data/habitats/RETIRED.tsv
+  exit_code: 0
+- check_id: external
+  name: Current ontology and GOLD structured sources
+  status: passed
+  required: false
+  summary: Active target, environmental-material superclass and synonym agree with
+    the record. Current workbook confirms terminal node4306; historical3529/3868 member
+    details are not established.
+  target_ids:
+  - ENVO:01001069
+  command: "env UV_CACHE_DIR=build/uv-cache uv run python - <<'PY'\nimport json,urllib.request,hashlib,io\n\
+    from openpyxl import load_workbook\nfor ident in ['ENVO:01001069','ENVO:00010483']:\n\
+    \    u='https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms?obo_id='+ident.replace(':','%3A');b=urllib.request.urlopen(u,timeout=45).read();j=json.loads(b)\n\
+    \    print('TERM',ident,len(b),hashlib.sha256(b).hexdigest())\n    for t in j.get('_embedded',{}).get('terms',[]):\n\
+    \        print(json.dumps({k:t.get(k) for k in ['obo_id','label','description','synonyms','annotation','is_obsolete']}))\n\
+    \        if ident=='ENVO:01001069':\n            u=t['_links']['parents']['href'].replace('http://','https://',1);b=urllib.request.urlopen(u,timeout=45).read();p=json.loads(b)\n\
+    \            print('PARENTS',u,hashlib.sha256(b).hexdigest(),[(x['obo_id'],x['label'])\
+    \ for x in p['_embedded']['terms']])\nu='https://gold.jgi.doe.gov/download?mode=ecosystempaths';b=urllib.request.urlopen(u,timeout=45).read();w=load_workbook(io.BytesIO(b),read_only=True,data_only=True);s=w['site\
+    \ data'];s.reset_dimensions();print('WORKBOOK',len(b),hashlib.sha256(b).hexdigest())\n\
+    for n,r in enumerate(s.iter_rows(values_only=True),1):\n    if 'Bioremediation'\
+    \ in r and 'Metal' in r:print(n,r)\nPY"
+  exit_code: 0
+- check_id: issue_search_initial
+  name: Initial exact-source issue search
+  status: failed
+  required: false
+  summary: Sandbox network connection failed; permitted read succeeded on retry.
+  target_ids:
+  - ENVO:01001069
+  command: gh issue list --state all --search '"76a710ae9c"' --limit 100 --json number,title,state,body,url
+  exit_code: 1
+- check_id: issue_search
+  name: Bounded exact-source issue search
+  status: passed
+  required: false
+  summary: GitHub search returned no results for this exact minted suffix across states.
+    This is not an exhaustive issue-queue absence claim; no issue was created.
+  target_ids:
+  - ENVO:01001069
+  command: gh issue list --state all --search '"76a710ae9c"' --limit 100 --json number,title,state,body,url
+  exit_code: 0
+- check_id: history_issue12_initial
+  name: Initial historical issue12 read
+  status: failed
+  required: false
+  summary: Sandbox network connection failed; permitted read succeeded.
+  target_ids:
+  - ENVO:01001069
+  command: gh issue view 12 --json number,title,state,url
+  exit_code: 1
+- check_id: history_issue12
+  name: Historical issue12 reference
+  status: passed
+  required: false
+  summary: Issue12 exists and is OPEN; its title describes the seeded curation backlog.
+    Metadata verifies the audit reference, not this record's scientific identity.
+  target_ids:
+  - ENVO:01001069
+  command: gh issue view 12 --json number,title,state,url
+  exit_code: 0
+- check_id: history_issue1459_initial
+  name: Initial synonym issue1459 read
+  status: failed
+  required: false
+  summary: Sandbox network connection failed; permitted read succeeded.
+  target_ids:
+  - ENVO:01001069
+  command: gh issue view 1459 --json number,title,state,url
+  exit_code: 1
+- check_id: history_issue1459
+  name: Historical synonym issue1459 reference
+  status: passed
+  required: false
+  summary: Issue1459 exists and is CLOSED, titled Do not promote close-mapped source
+    labels to exact synonyms. No issue state changed.
+  target_ids:
+  - ENVO:01001069
+  command: gh issue view 1459 --json number,title,state,url
+  exit_code: 0
+- check_id: counterfactual
+  name: Read-only source-parent exclusion isolation
+  status: passed
+  required: true
+  summary: 'Across3208documents, only ENVO:01001069 changes: Bioremediation parent
+    removed, ENVO:00010483 retained and one SOURCE_PARENT_EXCLUDED audit added. All
+    other fields, previous events and records remain identical; no file written.'
+  target_ids:
+  - ENVO:01001069
+  command: "env UV_CACHE_DIR=build/uv-cache uv run python - <<'PY'\nfrom dataclasses\
+    \ import replace\nfrom unittest.mock import patch\nfrom habitatmech import seed\
+    \ as s\nsource='habitatmech:GOLD.76a710ae9c';target='ENVO:01001069';parent='habitatmech:GOLD.5f0e9e816a';path='Engineered\
+    \ > Bioremediation > Metal'\nbefore={c.identifier:s.build_document(c) for c in\
+    \ s.build_corpus().concepts}\nexclusions=s.load_gold_parent_exclusions(s.GOLD_PARENT_EXCLUSIONS_PATH)\n\
+    assert source not in exclusions\nexclusions[source]=replace(exclusions['habitatmech:GOLD.e77998b825'],identifier=source,source_path=path,date='2026-10-09',curator='codex-gpt-5',notes='Read-only\
+    \ counterfactual: generic metallic material is not a kind of bioremediation process\
+    \ or setting. No maintained curation is written.')\nwith patch.object(s,'load_gold_parent_exclusions',return_value=exclusions):\n\
+    \    after={c.identifier:s.build_document(c) for c in s.build_corpus().concepts}\n\
+    assert before.keys()==after.keys()\nchanged={k for k in before if before[k]!=after[k]};assert\
+    \ changed=={target},changed\nold,new=before[target],after[target]\nassert old['parent_habitats']==['ENVO:00010483',parent]\n\
+    assert new['parent_habitats']==['ENVO:00010483']\nassert new['curation_history'][:-1]==old['curation_history']\n\
+    assert new['curation_history'][-1]['action']=='SOURCE_PARENT_EXCLUDED'\nfor field\
+    \ in (old.keys()|new.keys())-{'parent_habitats','curation_history'}:assert old.get(field)==new.get(field),field\n\
+    print('In-memory only:',len(before),'documents;',changed,'alone changes. Independent\
+    \ ENVO parent retained; only source-context parent and appended audit differ.\
+    \ No file written.')\nPY"
+  exit_code: 0
+- check_id: corpus
+  name: Full corpus reproduction
+  status: passed
+  required: true
+  summary: 3208 expected and found; zero missing, extra or differing records. Shared
+    unchanged-scientific-input check from this review session.
+  target_ids:
+  - ENVO:01001069
+  command: env UV_CACHE_DIR=build/uv-cache just verify-corpus
+  exit_code: 0
+- check_id: history
+  name: Native curation history
+  status: passed
+  required: true
+  summary: 217 histories valid. Shared unchanged-scientific-input check from this
+    review session.
+  target_ids:
+  - ENVO:01001069
+  command: env UV_CACHE_DIR=build/uv-cache just validate-history
+  exit_code: 0
+- check_id: provenance
+  name: Raw inventory provenance
+  status: passed
+  required: true
+  summary: 14 committed inventories and two GOLD sources current. Shared unchanged-scientific-input
+    check from this review session.
+  target_ids:
+  - ENVO:01001069
+  command: env UV_CACHE_DIR=build/uv-cache just provenance-check
+  exit_code: 0
+- check_id: integrity
+  name: Parent, status and reference regressions
+  status: passed
+  required: true
+  summary: 6 passed, 33 deselected; deterministic integrity is not scientific proof.
+    Shared unchanged-scientific-input check from this review session.
+  target_ids:
+  - ENVO:01001069
+  command: env UV_CACHE_DIR=build/uv-cache uv run pytest -q tests/test_corpus_integrity.py
+    -k 'parent or reviewed_records or history or causal_edges_reference'
+  exit_code: 0
+- check_id: ci_qc
+  name: Exact-baseline full quality-gate receipt
+  status: passed
+  required: true
+  summary: 'Freshly queried successful run at captured 966ccfe5a: 639 passed, 3 skipped,
+    four dedicated contract tests, 217 histories, 3208 records and all native gates.
+    No fresh local full-QC run claimed. Shared unchanged-scientific-input check from
+    this review session.'
+  target_ids:
+  - ENVO:01001069
+  command: gh run view 37910149298 --log | rg 'passed|skipped|history record|files
+    scanned|corpus reproduces|All HabitatMech quality gates'
+  exit_code: 0
+- check_id: ci_labels
+  name: Exact-baseline ontology label receipt
+  status: passed
+  required: true
+  summary: Completed SUCCESS at captured revision; configured ontology coverage and
+    exceptions are not proof of source semantics. Shared unchanged-scientific-input
+    check from this review session.
+  target_ids:
+  - ENVO:01001069
+  command: gh run view 37910149233 --json status,conclusion,headSha,url
+  exit_code: 0
+- check_id: unchanged
+  name: Scientific-input equivalence
+  status: passed
+  required: true
+  summary: No differences from the checked base; only new review artifacts are written.
+    Shared unchanged-scientific-input check from this review session.
+  target_ids:
+  - ENVO:01001069
+  command: git diff --exit-code 966ccfe5a59b8d741f942f5d6924b4949d897430 -- data curation
+    src scripts tests docs conf schema CLAUDE.md justfile
+  exit_code: 0
+- check_id: source_members
+  name: Original GOLD node/member details
+  status: unavailable
+  required: false
+  summary: Browser retrieval of ecosystem3529 failed. No original study or member
+    crosswalk recovered for the13organism assertions; current workbook is classification
+    evidence only.
+  target_ids:
+  - ENVO:01001069
+- check_id: molecular
+  name: Expression and causal adapters
+  status: not_applicable
+  required: false
+  summary: No target gene, regulator, transcriptomics or causal assertion. No target
+    overlay found in ignored-inclusive roots; iModulonDB is not applicable. Parent
+    taxa do not become target taxa.
+  target_ids:
+  - ENVO:01001069
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/habitats/engineered/metallic_material.yaml
+  locator: Whole YAML, two synonyms, two parents, sole attestation and three history
+    events
+  accessed_at: '2026-10-09T09:50:04Z'
+  support: supports
+  summary: Record denotes canonical metallic material with a CLOSE source mapping;
+    GOLD Metal is related while ENVO metal remains exact. Native REVIEWED status records
+    the earlier ITEM decision.
+- evidence_id: source
+  kind: database
+  reference: data/raw/gold_ecosystem_paths.tsv
+  locator: Row484; exact Bioremediation > Metal path
+  accessed_at: '2026-10-09T09:50:04Z'
+  support: supports
+  summary: Depth3 bin collapses3529|3868|4306 and has13ORGANISM assertions, zero other
+    aggregate counters. No direct exact-target study/biosample/triad/taxon/parameter
+    rows in the14-inventory scan; no ecological absence inference.
+- evidence_id: ontology
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms?obo_id=ENVO%3A01001069
+  locator: Current active term and synonym; committed ontology_terms.tsv:8558
+  accessed_at: '2026-10-09T09:50:04Z'
+  support: supports
+  summary: Definition denotes material primarily composed of pure metals and showing
+    their properties, allowing some nonmetal contamination. It does not define all
+    metal-containing remediation matrices. Response3705bytes; SHA2561e847ab1e9c64d5f09a9c16b2d22bfaff49dedd9241b1b79e843b1f912a28ab7.
+- evidence_id: ontology_parent
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_01001069/parents
+  locator: Sole direct parent ENVO:00010483; local subclass row6877; parent term query
+  accessed_at: '2026-10-09T09:50:04Z'
+  support: supports
+  summary: Independent material genus is environmental material. Parents SHA2567c54fe3be9f0eb42486db2cd4084386335a70aa13f81517d920a2b8485f805dd;
+    active parent response5001bytes, SHA256fa24c0a4f711b8323e348ead85df9b8f2344dfba4e3725c227784edcfe20364b.
+    Complete parent YAML read for context only; its1509TAXON pool and25ranked taxa
+    are not target observations.
+- evidence_id: gold
+  kind: database
+  reference: https://gold.jgi.doe.gov/download?mode=ecosystempaths
+  locator: Workbook site data row150
+  accessed_at: '2026-10-09T09:50:04Z'
+  support: supports
+  summary: Node4306 is Engineered/Bioremediation/Metal/Unclassified/Unclassified.
+    This confirms source category context, not the original material composition or13members.
+    Workbook84174bytes; SHA2563933e5f0664915c1bbfa00212e17d013da360fb33dd52e509254050813135396.
+- evidence_id: decision
+  kind: record_content
+  reference: curation/decisions.tsv
+  locator: Target1698; parent585; actual full-index resolution
+  accessed_at: '2026-10-09T09:50:04Z'
+  support: supports
+  summary: ITEM REVIEW endorses the lexical gold_leaf_synonym route and explains native
+    REVIEWED. The inherited parent has CLASS confirmation only. Historical endorsement
+    does not supply original specimen evidence, and CLOSE is not exact source equivalence.
+- evidence_id: parent
+  kind: record_content
+  reference: data/habitats/engineered/bioremediation__2261f921.yaml
+  locator: Whole current YAML and historical parent report20260924T163652Z read in
+    full
+  accessed_at: '2026-10-09T09:50:04Z'
+  support: refutes
+  summary: The GOLD parent is the generic bioremediation source grouping, with no
+    maintained definition making generic metallic material a subtype. Whether read
+    as remediation technology or its treated setting, this is source context rather
+    than a genus of every metallic material. Parent6ORGANISM count and own study context
+    are not target observations.
+- evidence_id: epa
+  kind: primary_source
+  reference: https://www.epa.gov/sites/default/files/2015-04/documents/introductiontoinsitubioremediationofgroundwater_dec2013.pdf
+  locator: EPA542-R-13-018, executive summary ES-1 lines7-13; section2.3.1.6 printedp32/PDFindex41
+    lines1237-1253
+  accessed_at: '2026-10-09T09:50:04Z'
+  support: context_only
+  summary: Agency technical prose distinguishes remediation technology, treated media
+    and dissolved-metal contaminants. This supports the process/material distinction
+    and cautions against equating all remediation Metal usage with bulk metallic material.
+    No figure, operating prescription, regulatory claim, target mechanism or sample
+    crosswalk is adopted.
+- evidence_id: precedent
+  kind: record_content
+  reference: curation/gold_parent_exclusions.tsv
+  locator: Hydrocarbon source row9; corresponding regression around tests/test_gold_parent_exclusions.py:668;
+    helper module
+  accessed_at: '2026-10-09T09:50:04Z'
+  support: context_only
+  summary: The same Bioremediation prefix is already excluded for independently reviewed
+    Hydrocarbon. That precedent identifies the mechanism, not proof by sibling analogy.
+    Current metallic-material semantics independently establish the target edge defect.
+- evidence_id: counterfactual
+  kind: validation
+  reference: src/habitatmech/curate/gold_parent_exclusions.py
+  locator: In-memory exact source/path/parent exclusion and full-corpus comparison
+  accessed_at: '2026-10-09T09:50:04Z'
+  support: supports
+  summary: Only metallic_material changes, keeping ENVO:00010483 and all other fields.
+    Native audit append is simulated in memory, not written.
+- evidence_id: scope
+  kind: search
+  reference: curation
+  locator: Ignored-inclusive exact mint/CURIE/slug/label searches plus bounded GitHub
+    query
+  accessed_at: '2026-10-09T09:50:04Z'
+  support: context_only
+  summary: No target source-parent exclusion, definition, overlay, native session
+    history or earlier individual target review in local search bounds. New Metal
+    surface bundle mentions this only as a candidate term; it is captured as working-tree
+    context, not an earlier assessment of this record.
+  search_scope: rg --no-ignore --hidden across curation, history, research, conf,
+    tests, docs, reviews, reports/yaml_record_review and PATHS/RETIRED using ENVO:01001069,
+    GOLD.76a710ae9c, metallic_material and metallic material. Includes ignored and
+    hidden files. GitHub all-state exact-suffix search returned zero; it is bounded,
+    not exhaustive backlog triage.
+- evidence_id: references
+  kind: validation
+  reference: https://github.com/CultureBotAI/HabitatMech/issues/1459
+  locator: Fresh metadata reads of1459 and12
+  accessed_at: '2026-10-09T09:50:04Z'
+  support: supports
+  summary: Both native-history issue references resolve. The synonym issue is closed;
+    backlog12 remains open. No independent scientific approval or closure of this
+    new finding follows.
+- evidence_id: unavailable
+  kind: database
+  reference: https://gold.jgi.doe.gov/ecosystem/3529
+  locator: Fresh browser retrieval failure
+  accessed_at: '2026-10-09T09:50:04Z'
+  support: unknown
+  summary: Historical3529/3868 node details and original members are not independently
+    recovered; no evidence establishes a specific dissolved-metal matrix or bulk-metal
+    substrate for this source.
+- evidence_id: gates
+  kind: validation
+  reference: https://github.com/CultureBotAI/HabitatMech/actions/runs/37910149298
+  locator: Exact966ccfe5a baseline; label run37910149233; shared fresh local native
+    checks
+  accessed_at: '2026-10-09T09:50:04Z'
+  support: supports
+  summary: Deterministic gates pass while the false source-context edge reproduces.
+    No scientific-input drift occurred.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Canonical metallic-material meaning
+  outcome: supported
+  summary: Identifier, canonical definition and independent ENVO synonym agree on
+    a metallic material class. The record does not assert a particular alloy, metal
+    pollutant, contaminated soil or dissolved-metal solution.
+  target_ids:
+  - ENVO:01001069
+  evidence_ids:
+  - record
+  - ontology
+- assessment_id: source_grounding
+  area: grounding
+  topic: Scope of historical CLOSE endorsement
+  outcome: unknown
+  summary: Native ITEM review explains the status, but raw source membership is unavailable.
+    Generic Metal terminology in remediation can involve chemically different media;
+    neither the current workbook nor historical lexical endorsement resolves original
+    specimen identity. No replacement mapping is inferred.
+  target_ids:
+  - ENVO:01001069
+  evidence_ids:
+  - source
+  - gold
+  - decision
+  - ontology
+  - epa
+  - unavailable
+- assessment_id: hierarchy_ontology
+  area: graph
+  topic: Environmental material is a genuine superclass
+  outcome: supported
+  summary: Current parent API and committed subclass edge independently support ENVO:00010483,
+    which must survive any source-parent correction.
+  target_ids:
+  - ENVO:01001069
+  evidence_ids:
+  - ontology_parent
+  - ontology
+- assessment_id: hierarchy_source
+  area: graph
+  topic: Bioremediation is not a material genus
+  outcome: concern
+  summary: The extra parent is generated from source classification context. Generic
+    metallic material is not a kind of bioremediation technology or remediated setting;
+    a source's use in remediation does not establish subsumption.
+  target_ids:
+  - ENVO:01001069
+  evidence_ids:
+  - parent
+  - source
+  - ontology
+  - epa
+  - counterfactual
+- assessment_id: synonyms
+  area: nomenclature
+  topic: Source-specific synonym strength
+  outcome: supported
+  summary: GOLD Metal is RELATED_SYNONYM under the CLOSE mapping; ENVO metal is independently
+    exact. Case overlap does not warrant deleting the valid ontology synonym or re-promoting
+    the GOLD label.
+  target_ids:
+  - ENVO:01001069
+  evidence_ids:
+  - record
+  - ontology
+  - references
+- assessment_id: counts
+  area: quantity
+  topic: Thirteen organism assertions and three source nodes
+  outcome: supported
+  summary: The count/unit and collapsed-node note reproduce exactly. Parent counts,
+    taxon rankings and unavailable studies are not borrowed.
+  target_ids:
+  - ENVO:01001069
+  evidence_ids:
+  - source
+  - record
+  - ontology_parent
+- assessment_id: lifecycle
+  area: consistency
+  topic: Reviewed source and generated audit
+  outcome: supported
+  summary: One ITEM-reviewed contributor yields REVIEWED. REVIEW, seed and source-synonym-scoping
+    events reproduce. Hierarchy correction alone does not rewrite historical identity
+    endorsement.
+  target_ids:
+  - ENVO:01001069
+  evidence_ids:
+  - decision
+  - record
+- assessment_id: completeness
+  area: completeness
+  topic: No unsupported biological enrichment
+  outcome: supported
+  summary: The exact-target raw scan supplies no taxa, parameters or causal assertions;
+    optional slots need not be filled by parent biology or generic remediation mechanisms.
+  target_ids:
+  - ENVO:01001069
+  evidence_ids:
+  - source
+  - record
+  - scope
+- assessment_id: repair
+  area: ownership
+  topic: Minimal maintained-input change
+  outcome: supported
+  summary: The existing guarded exclusion mechanism can remove only the source-context
+    contribution and append its audit, without changing the canonical genus, synonym
+    policy or other records.
+  target_ids:
+  - ENVO:01001069
+  evidence_ids:
+  - counterfactual
+  - precedent
+- assessment_id: validation
+  area: schema
+  topic: Deterministic representation
+  outcome: supported
+  summary: Target schema, native reproduction and references pass. These do not resolve
+    source membership or justify the false hierarchy.
+  target_ids:
+  - ENVO:01001069
+  evidence_ids:
+  - gates
+  - references
+  - decision
+findings:
+- finding_id: F1
+  issue_key: gold-76a710ae9c-bioremediation-context-parent
+  category: graph
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Generic metallic material is incorrectly classified under Bioremediation
+  description: The record's canonical class denotes material primarily composed of
+    metals, but parent_habitats additionally asserts sourceGOLD.5f0e9e816a Bioremediation
+    as a superclass. The relation is introduced solely by the GOLD prefix and expresses
+    treatment/application context, not a broader material type. ENVO independently
+    supplies ENVO:00010483 and no Bioremediation superclass. The false parent is established
+    under the currently retained identity; original source-equivalence reassessment
+    remains separate.
+  target_ids:
+  - ENVO:01001069
+  field_paths:
+  - parent_habitats
+  evidence_ids:
+  - record
+  - ontology
+  - ontology_parent
+  - source
+  - parent
+  - epa
+  - decision
+  - counterfactual
+  rule_id: 'CLAUDE.md: parent_habitats means strictly broader for ontology, source-path
+    and curator contributions'
+  native_severity: major
+  normalization_reason: Material-versus-remediation scope violation changes scientific
+    graph meaning. It is not a finding merely because the parent is CLASS-reviewed
+    or optional definition/evidence is absent.
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Guarded source-only context-parent removal if supported.
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Source resolution, hierarchy, scoped synonym and lifecycle generation.
+actions:
+- action_id: A1
+  description: In separately authorized curation, exclude only sourceGOLD.76a710ae9c's
+    exact Engineered > Bioremediation > Metal contribution to parentGOLD.5f0e9e816a.
+    Keep ENVO:00010483, and do not change the canonical identity or reinterpret the
+    original13organisms without primary source evidence.
+  finding_ids:
+  - F1
+  target_ids:
+  - ENVO:01001069
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Guarded source-only context-parent removal if supported.
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Source resolution, hierarchy, scoped synonym and lifecycle generation.
+  generator: Existing seeder after dry seed, inspected target canary and validated
+    generation; no generated output written by this review.
+  acceptance_checks:
+  - Whole-corpus regression shows only the target parent list and appended SOURCE_PARENT_EXCLUDED
+    audit changing for this repair. Retain independent ENVO:00010483 and reject a
+    stale source-path/parent guard.
+  - Preserve canonical ID/label/definition, sourceGOLD.76a710ae9c, nodes3529/3868/4306,13ORGANISM
+    count, CLOSE/skos:closeMatch, historical REVIEWED status, both source-scoped synonyms
+    and earlier events.
+  - Do not delete the independently valid ENVO exact synonym metal, re-promote GOLD
+    Metal to exact, add parent taxa or substitute a contaminated-matrix definition
+    without original-source evidence.
+  - Append native history only during the authorized fix; pass target schema/strict,
+    corpus, provenance, history, configured ontology labels, fullQC and applicable
+    generated-page/map checks.
+  - Record any resolution in a new linked immutable review. Parent, Hydrocarbon and
+    other sibling findings are not closed by this target-only correction.
+limitations:
+- One exact target reviewed; full3208-record completion remains unproven.
+- Original13source members and historical3529/3868 details remain unavailable; current4306classification
+  is not specimen-level verification. Source-identity reassessment is unresolved separately
+  from the confirmed hierarchy defect.
+- EPA prose is contextual scientific terminology only. No experimental mechanism,
+  treatment recommendation, regulation, exposure or health claim is attributed to
+  this GOLD source.
+- Complete parent files and historical Bioremediation report were read as context;
+  parent taxa/counts and existing findings remain out of scope. Hydrocarbon/Thiocyanate
+  excerpts and Metal surface candidate mention are not new whole-record reviews.
+- Shared fresh local native checks and exact-baseline fullQC/label receipts were reused
+  with unchanged scientific inputs. No new local fullQC; three native tests remain
+  skipped.
+- No maintained-input change, native status/history promotion, GitHub mutation, publication
+  or SSSOM/KGX readiness assessment.
+tags:
+- habitat
+- engineered
+- metallic-material
+- GOLD
+- source-parent
+```

@@ -16,6 +16,7 @@ source_attestations:
 - source: PREGO
   source_id: ENVO:00002002
   source_label: ENVO:00002002
+  mapping_predicate: skos:exactMatch
   assertion_count: 21
   assertion_unit: TAXON
   score: 4.0
@@ -157,3 +158,8 @@ curation_history:
     by this FOODON term of the same label, in the ontology that owns food matrices.
     PREGO's taxon assertions describe food products and carry over unchanged. (source
     concept habitatmech:PREGO.1b1cde4e30)
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_ATTESTATION_CORRECTED
+  changes: Preserved curated PREGO source-to-record mapping ENVO:00002002 skos:exactMatch
+    FOODON:00001002; source counts and taxa are unchanged (#1888).

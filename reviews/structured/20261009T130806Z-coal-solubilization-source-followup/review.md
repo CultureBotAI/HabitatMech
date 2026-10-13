@@ -1,0 +1,705 @@
+# Coal-solubilization follow-up: recover current GOLD members without inventing habitat scope
+
+- Review: 20261009T130806Z-coal-solubilization-source-followup
+- Repository: CultureBotAI/HabitatMech
+- Started UTC: 2026-10-09T13:02:36Z
+- Finished UTC: 2026-10-09T13:08:06Z
+- Reviewer: codex-gpt-5 (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Recovered three current GOLD biosample/project/study links from a fresh public bulk export and verified the German member through ENA. Current members are two Alberta coal-bed specimens and one German soft-coal-slag specimen; the latter is a composite sample. This addresses the current-member discovery step of issue1796, not the unresolved class identity and parent interpretation. The original major finding remains provisional and open. No habitat or curation input changed.
+
+## Scope And Provenance
+
+Bounded follow-up of the exact source-member gap and its effect on the prior identity finding. Whole unchanged target was read; not a fresh review of every original literature claim.
+
+Selection: Successor to 20261009T124901Z-microbial_solubilization_of_coal finding process_habitat_scope during requested PR1795 review.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base cb98a92e1ba0c278d754343d308171decc6fca44.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| habitatmech:GOLD.3892ec1c72 | data/habitats/engineered/microbial_solubilization_of_coal.yaml | generated | Microbial solubilization of coal |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Exact local-input capture | passed | True | habitatmech:GOLD.3892ec1c72 | Captured 41 unchanged local inputs at cb98a92e1 before the follow-up assessment, including original immutable review and bulk-export reader. |
+| Target LinkML validation | passed | True | habitatmech:GOLD.3892ec1c72 | No issues found. |
+| Target closed-schema validation | passed | True | habitatmech:GOLD.3892ec1c72 | One file scanned, zero errors. |
+| Public current GOLD export | passed | True | habitatmech:GOLD.3892ec1c72 | Downloaded 238974789 bytes. Streaming the Biosample, Study and Sequencing Project sheets with the inspected native reader completed successfully: three target biosamples and three exact project joins. No contacts retained in the review. |
+| Structured accession verification | passed | True | habitatmech:GOLD.3892ec1c72 | Europe PMC resolves PMID23889694 and DOI10.1021/es4020184. ENA XML verifies SAMN06835213, SRX2765951 and PRJNA384362 and their relationships. Article registry metadata only: no new mechanism or full-text experimental claim. |
+| Scientific-input preservation | passed | True | habitatmech:GOLD.3892ec1c72 | No scientific-input or generated-record changes from the original main base. |
+| Exact-base PR gates | passed | True | habitatmech:GOLD.3892ec1c72 | At cb98a92e1, qc, label-correspondence and vendored-sync all passed. Actual QC log read:646 passed,3 skipped;220 histories;3208 strict-valid/reproduced records;32 overlays and remaining native gates pass. This new follow-up pair was not yet part of that run. |
+| Prior bundle integrity at trusted main base | passed | True | habitatmech:GOLD.3892ec1c72 | 23 prior bundles valid;4 contract tests pass. The new pair must be validated and checked after saving. |
+| Durable follow-up provenance | passed | True | habitatmech:GOLD.3892ec1c72 | Remote annotated tag object6863f709eb760ece900d2b9bf179214b46527cd6 peels to cb98a92e1ba0c278d754343d308171decc6fca44. Preserve this non-release tag after branch cleanup. |
+| August export member equivalence | unavailable | False | habitatmech:GOLD.3892ec1c72 | The manifest's August20 export is a different snapshot (222850238 bytes,SHA2566797471982570ed145f81aef966c1ff5398dc4d35287a01faefaf80ac5311fea). Fresh current membership and equal count do not prove historical specimen identity. No source cache matched the exact filenames in the bounded ignored-inclusive Mechs search (excluding .git,.venv,node_modules). |
+
+## Scientific And Domain Assessments
+
+### Current source-member chain recovered
+
+provenance: supported. Targets: habitatmech:GOLD.3892ec1c72.
+
+Three current GOLD biosample/project/study chains are explicit; ENA corroborates the German sample, experiment and project. This materially advances issue1796 without claiming the old export is identical.
+
+### Physical specimens do not alone define the source class
+
+identity: concern. Targets: habitatmech:GOLD.3892ec1c72.
+
+The identified members are physical environmental specimens, so name-only process exclusion or a universal cultured-reactor interpretation is not justified. The class-wide referent and strict Biotransformation parent remain unassessed by an ITEM decision.
+
+### GOLD records, composite samples and snapshots
+
+quantity: supported. Targets: habitatmech:GOLD.3892ec1c72.
+
+The current three GOLD records must not be multiplied by the German composite's constituent count or substituted for the older zero-count classification source. No counts or units were edited.
+
+### No transfer of project context or metagenomic claims
+
+scope: supported. Targets: habitatmech:GOLD.3892ec1c72.
+
+A sample's material and sequencing metadata do not populate the full habitat category with organisms, mechanisms, temperatures or cultivation conditions. Publication metadata is only a verified lead. Native status and all scientific inputs remain unchanged.
+
+## Findings
+
+### process_habitat_scope: Coal-solubilization class scope remains unresolved after current member recovery
+
+major / open / provisional; issue key: microbial-solubilization-of-coal-process-habitat-scope.
+
+The current public GOLD export identifies two Alberta coal-bed specimens and one German soft-coal-slag specimen under path4312. ENA confirms an environmental slag metagenome for the German member. This replaces the earlier current-member access gap with specific evidence, but does not define a coherent class-wide physical habitat or establish strict subsumption under the undefined Biotransformation parent. Do not classify the whole source as a non-habitat process from its name, map it to generic coal, or infer an engineered reactor for all members.
+
+## Recommended Actions And Acceptance Checks
+
+### resolve_scope
+
+Use the recovered current member chain to complete a source-level ITEM interpretation. Reconcile original snapshot membership where available, inspect the Alberta sample compartments and cited study, distinguish sampled coal-bearing environments and slag from process or culture settings, and assess a supported genus/definition or source partition without inferring it from sample names alone.
+
+- Keep issue1796 and the exact prior finding open until class scope and parent interpretation have evidence-backed dispositions; current member discovery alone is not closure.
+- Use the current member matrix above as a dated source witness, not an unreviewed replacement for committed inventories or a universal habitat definition.
+- Preserve provenance, source nodes/path, count units/snapshots and native status. Do not import composite constituent counts, study-wide biology or library-preparation settings.
+- Any justified curation must use maintained inputs, native history, dry seed/canary, focused regressions, applicable labels, corpus/site checks and full QC.
+- Retain both immutable observations and exact finding lineage; do not rewrite the earlier access limitation as though the new bulk discovery had already been available.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/habitats/engineered/microbial_solubilization_of_coal.yaml; Entire YAML, current decisions.tsv row406 and Biotransformation parent | context_only | UNCHANGED UNGROUNDED/SEEDED target; CLASS decision does not endorse habitat meaning. No new native status or scientific fields. |
+| prior | reviews/structured/20261009T124901Z-microbial_solubilization_of_coal/review.yaml; process_habitat_scope; microbial-solubilization-of-coal-process-habitat-scope | context_only | Original process/material/setting distinction and scope uncertainty preserved. Only the current member-access limitation is narrowed by this follow-up. |
+| bulk | https://gold.jgi.doe.gov/download?mode=site_excel; 2026-10-09 download; Biosample rows2109,2404,88416; Study rows12191,41148; Sequencing Project rows38065,38360,325899 | supports | All three current biosamples are on4312. Gb0053499 -&gt; Gp0053499 -&gt; Gs0047444: Alberta Coal Bed Trident_1560D; Gb0053978 -&gt; Gp0053978 -&gt; Gs0047444: Alberta coal bed methane well; Gb0241881 -&gt; Gp0455744 -&gt; Gs0144661: German soft coal slag RH1_MG. First two project rows list PMID23889694; the third lists PRJNA384362,SAMN06835213,SRX2765951. Full scanned sheet row totals including headers:244951,63806,636914. Current source hash differs from the committed August export; no automatic refresh performed. |
+| sample | https://www.ebi.ac.uk/ena/browser/api/xml/SAMN06835213; Identifiers,title,description,sample attributes | supports | RH1_MG is soft coal slag collected below a removed surface layer in the stated German location. The source describes a combination of three constituent BioSamples, not three extra GOLD biosample records. Constituent metadata was not individually assessed. |
+| experiment | https://www.ebi.ac.uk/ena/browser/api/xml/SRX2765951; Identifiers,study reference,sample descriptor,design | supports | Experiment links SAMN06835213/SRS2150038 to PRJNA384362/SRP105273 and describes shotgun metagenomic library preparation. Sequencing preparation is not evidence for a coal-solubilization culture setting. |
+| study | https://www.ebi.ac.uk/ena/browser/api/xml/PRJNA384362; Title,description,identifiers | supports | Project concerns microbial communities in soft coal slags from historical industrial mineral leaching across three sites. That broader project scope is not transferred to the one GOLD target member. |
+| publication | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:23889694%20AND%20SRC:MED&amp;format=json; Result PMID23889694,PMCIDPMC3864245,DOI10.1021/es4020184 | context_only | Registry metadata identifies An et al.2013, Metagenomics of hydrocarbon resource environments indicates aerobic taxa and genes to be unexpectedly common. This verifies the export's citation identifier and provides a source lead only; no full-text result or mechanism is newly endorsed. |
+| snapshots | data/raw/GOLD_MANIFEST.yaml; Entire manifest and gold_path_biosamples.tsv row816; gold_studies.tsv rows143,2566 | context_only | Older retained snapshots, current bulk membership, composite source samples and study-wide path sets remain distinct. Equal count3 does not prove identical historical membership. |
+| gates | https://github.com/CultureBotAI/HabitatMech/actions/runs/37933350253; cb98a92e1 PR QC plus label run37933350259 | context_only | All PR gates passed on the prior bundle and unchanged scientific inputs; this follow-up still needs its own publication gates. |
+
+## Limits And Additional Notes
+
+- This is a bounded member-evidence follow-up for one record; the full-corpus review goal remains incomplete.
+- Current export differs from the August manifest. Same count and stable classification do not establish historical specimen equivalence.
+- No source-wide physical habitat definition, strict parent decision, full Alberta compartment assessment or new primary-article experimental review was completed.
+- Only the German pooled sample itself was verified; its individual constituent sample records were not reviewed and are not additional GOLD target records.
+- Original public GOLD study pages returned403 and terminal4312 returned404, but the public bulk export succeeded. The earlier lack of a current member crosswalk is no longer a blanket limitation.
+- Full local QC was still finishing at save preparation; exact-base CI passed. New follow-up contract and final PR/queue gates must run after saving.
+- No habitat curation, generated scientific-product change, native status promotion or SSSOM/KGX readiness certification. The branch-only base is retained by the verified non-release provenance tag.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261009T130806Z-coal-solubilization-source-followup
+kind: record
+repository: CultureBotAI/HabitatMech
+title: 'Coal-solubilization follow-up: recover current GOLD members without inventing
+  habitat scope'
+started_at: '2026-10-09T13:02:36Z'
+finished_at: '2026-10-09T13:08:06Z'
+reviewer:
+  identity: codex-gpt-5
+  kind: agent
+  model: gpt-5
+  independence: self_review
+  independence_basis: Same agent publishing and adversarially reassessing its record
+    review; not independent scientific approval.
+skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Recovered three current GOLD biosample/project/study links from a fresh public
+  bulk export and verified the German member through ENA. Current members are two
+  Alberta coal-bed specimens and one German soft-coal-slag specimen; the latter is
+  a composite sample. This addresses the current-member discovery step of issue1796,
+  not the unresolved class identity and parent interpretation. The original major
+  finding remains provisional and open. No habitat or curation input changed.
+source:
+  git_revision: cb98a92e1ba0c278d754343d308171decc6fca44
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/record_review.yaml
+    sha256: c2f5d0eb4c5744f5fe354c92184ddab144dc2688dba952b032b4f3d597bc08d6
+    role: context
+  - path: curation/decisions.tsv
+    sha256: 0602cca13e6495da256a6f1cfd5897462f73f9739a729447862017d93c148efd
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: 9d2324647d0a0ddeccc2f7836811872e112af208bb1b8f7decb332c00f17d12b
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 9977e384b79128d6e89c85f28e35c77d29644d503dea6d53c12628599e33f7f3
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: b59b9e800a918135e3915145d4d8098bb48dcea36a312b3004c594a57d221ae9
+    role: context
+  - path: data/habitats/RETIRED.tsv
+    sha256: 41beffc45aabdf304de633c21200b375d7f01d1cb2e036d4a026961d545a35e5
+    role: context
+  - path: data/habitats/engineered/biotransformation.yaml
+    sha256: 29a10b179946d78e3602358ae15db297b66e8bafe198e3892cc47aa6e97dcf30
+    role: context
+  - path: data/habitats/engineered/microbial_solubilization_of_coal.yaml
+    sha256: 2a2ac42d48646696165492828d9d1fdae12471f4063b26de102d99d824f80ea7
+    role: target
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: 36df8306394c06c352b73e0bf7b47a2858784cedac7389a24d0b78f593ece646
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: f7aa39ee762d94f1902d9f08f328cb897bc543e4e226057eb4770d24bfcc6eb5
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reports/yaml_record_review/20261007T115519Z-biotransformation.md
+    sha256: 6b7680d3a9b0ba6d1ff30bd08455e034b7bdf2b7cc87c1962fb54da0922972f3
+    role: context
+  - path: reports/yaml_record_review/20261007T204718Z-coal.md
+    sha256: e82011e9e538afe5f5fbd6d3cf11bacde4d3eec2c9ff94f594704d9725560e3a
+    role: context
+  - path: reviews/structured/20261009T124901Z-microbial_solubilization_of_coal/review.yaml
+    sha256: 6553047f7f5cc25059732698b156477e9e5eb83c9a6337f3ff35d3917f204137
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/extract_gold_biosamples.py
+    sha256: b6a2773c86fe718e1ca0b1d7b32709f0eee491ac813655e310aa0817c0fec31b
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 52d2a22309a1f4a10728a663560bb4d918346c292221fd34139b99b4159d3fe5
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 92adf631fa099120a497ff7001473e659347d23ac9b418f04cd341ddad5d2a89
+    role: context
+targets:
+- target_id: habitatmech:GOLD.3892ec1c72
+  path: data/habitats/engineered/microbial_solubilization_of_coal.yaml
+  label: Microbial solubilization of coal
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Source identity and CLASS/ITEM decision
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Evidence-backed habitat definition if warranted
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Exact source-context parent contribution
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/gold_ecosystem_paths.tsv
+    role: Source classification and count snapshot
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Source resolution and generated representation
+scope:
+  description: Bounded follow-up of the exact source-member gap and its effect on
+    the prior identity finding. Whole unchanged target was read; not a fresh review
+    of every original literature claim.
+  selection: Successor to 20261009T124901Z-microbial_solubilization_of_coal finding
+    process_habitat_scope during requested PR1795 review.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - habitatmech:GOLD.3892ec1c72
+  exclusions:
+  - target: Other 3207 records, including Coal and Biotransformation
+    reason: No scientific disposition; parent scope remains separately tracked in
+      issue1636.
+  - target: All constituent samples and all projects in the two studies
+    reason: Only the three current target GOLD biosamples and their exact project
+      links were traced. The German composite's constituent accessions were not individually
+      reviewed.
+checks:
+- check_id: capture
+  name: Exact local-input capture
+  command: env UV_CACHE_DIR=build/uv-cache uv run python scripts/record_review.py
+    inspect --targets /private/tmp/habitatmech-pr1795-followup-targets.json --input
+    .claude/skills/curate-yaml-record/references/review-checklist.md --input .claude/skills/review-yaml-record/SKILL.md
+    --input CLAUDE.md --input conf/record_review.yaml --input curation/decisions.tsv
+    --input curation/gold_parent_exclusions.tsv --input curation/term_requests.tsv
+    --input curation/term_requests_excluded.tsv --input data/habitats/PATHS.tsv --input
+    data/habitats/RETIRED.tsv --input data/habitats/engineered/biotransformation.yaml
+    --input data/habitats/engineered/microbial_solubilization_of_coal.yaml --input
+    data/raw/GOLD_MANIFEST.yaml --input data/raw/MANIFEST.yaml --input data/raw/bacdive_isolation_sources.tsv
+    --input data/raw/bacdive_source_taxa.tsv --input data/raw/environment_parameters.tsv
+    --input data/raw/gold_ecosystem_paths.tsv --input data/raw/gold_path_biosamples.tsv
+    --input data/raw/gold_path_triads.tsv --input data/raw/gold_studies.tsv --input
+    data/raw/isolation_source_groundings.tsv --input data/raw/madin_habitat_taxa.tsv
+    --input data/raw/madin_habitats.tsv --input data/raw/ontology_subclass_edges.tsv
+    --input data/raw/ontology_terms.tsv --input data/raw/prego_habitat_taxa.tsv --input
+    data/raw/prego_habitats.tsv --input docs/CURATION.md --input docs/HARMONIZATION.md
+    --input docs/RESEARCH.md --input docs/record-review-profile.md --input docs/record-reviews.md
+    --input justfile --input reports/yaml_record_review/20261007T115519Z-biotransformation.md
+    --input reports/yaml_record_review/20261007T204718Z-coal.md --input schema/record_review.yaml
+    --input src/habitatmech/schema/habitatmech.yaml --input src/habitatmech/seed.py
+    --input reviews/structured/20261009T124901Z-microbial_solubilization_of_coal/review.yaml
+    --input scripts/extract_gold_biosamples.py
+  summary: Captured 41 unchanged local inputs at cb98a92e1 before the follow-up assessment,
+    including original immutable review and bulk-export reader.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.3892ec1c72
+- check_id: schema
+  name: Target LinkML validation
+  command: env UV_CACHE_DIR=build/uv-cache just validate data/habitats/engineered/microbial_solubilization_of_coal.yaml
+  summary: No issues found.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.3892ec1c72
+- check_id: strict
+  name: Target closed-schema validation
+  command: env UV_CACHE_DIR=build/uv-cache just validate-strict data/habitats/engineered/microbial_solubilization_of_coal.yaml
+  summary: One file scanned, zero errors.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.3892ec1c72
+- check_id: download
+  name: Public current GOLD export
+  command: curl --fail --location --silent --show-error --max-time 180 --output /private/tmp/habitatmech-20261009h-goldData.xlsx
+    'https://gold.jgi.doe.gov/download?mode=site_excel'
+  summary: 'Downloaded 238974789 bytes. Streaming the Biosample, Study and Sequencing
+    Project sheets with the inspected native reader completed successfully: three
+    target biosamples and three exact project joins. No contacts retained in the review.'
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.3892ec1c72
+- check_id: adapters
+  name: Structured accession verification
+  command: "env UV_CACHE_DIR=build/uv-cache uv run python -u - <<'PY'\nimport hashlib,json,urllib.request,xml.etree.ElementTree\
+    \ as ET\nurls=[('publication','https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:23889694%20AND%20SRC:MED&format=json'),('sample','https://www.ebi.ac.uk/ena/browser/api/xml/SAMN06835213'),('experiment','https://www.ebi.ac.uk/ena/browser/api/xml/SRX2765951'),('study','https://www.ebi.ac.uk/ena/browser/api/xml/PRJNA384362')]\n\
+    for kind,url in urls:\n    try:\n        data=urllib.request.urlopen(url,timeout=35).read()\n\
+    \        print('SOURCE',kind,url,len(data),hashlib.sha256(data).hexdigest())\n\
+    \        if kind=='publication':\n            print(json.dumps(json.loads(data)['resultList']['result']))\n\
+    \        else:\n            root=ET.fromstring(data)\n            for tag in ['IDENTIFIERS','TITLE','DESCRIPTION','SAMPLE_NAME','SAMPLE_ATTRIBUTES','STUDY_REF','SAMPLE_DESCRIPTOR','DESIGN','STUDY_TITLE','STUDY_ABSTRACT']:\n\
+    \                for element in root.findall('.//'+tag):\n                   \
+    \ print(tag,ET.tostring(element,encoding='unicode')[:12000])\n    except Exception\
+    \ as exc:\n        print('UNAVAILABLE',kind,type(exc).__name__,str(exc))\nPY"
+  summary: 'Europe PMC resolves PMID23889694 and DOI10.1021/es4020184. ENA XML verifies
+    SAMN06835213, SRX2765951 and PRJNA384362 and their relationships. Article registry
+    metadata only: no new mechanism or full-text experimental claim.'
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.3892ec1c72
+- check_id: unchanged
+  name: Scientific-input preservation
+  command: git diff --exit-code a5ae2879303b3bedaf42115a6a003a4afc3b16da -- data curation
+    src scripts tests docs conf schema CLAUDE.md justfile
+  summary: No scientific-input or generated-record changes from the original main
+    base.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.3892ec1c72
+- check_id: ci
+  name: Exact-base PR gates
+  command: gh pr checks 1795 --required
+  summary: At cb98a92e1, qc, label-correspondence and vendored-sync all passed. Actual
+    QC log read:646 passed,3 skipped;220 histories;3208 strict-valid/reproduced records;32
+    overlays and remaining native gates pass. This new follow-up pair was not yet
+    part of that run.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.3892ec1c72
+- check_id: contract
+  name: Prior bundle integrity at trusted main base
+  command: env UV_CACHE_DIR=build/uv-cache RECORD_REVIEW_BASE=a5ae2879303b3bedaf42115a6a003a4afc3b16da
+    just review-check
+  summary: 23 prior bundles valid;4 contract tests pass. The new pair must be validated
+    and checked after saving.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.3892ec1c72
+- check_id: tag
+  name: Durable follow-up provenance
+  command: git ls-remote --tags origin 'refs/tags/record-review-base/cb98a92e1ba0c278d754343d308171decc6fca44*'
+  summary: Remote annotated tag object6863f709eb760ece900d2b9bf179214b46527cd6 peels
+    to cb98a92e1ba0c278d754343d308171decc6fca44. Preserve this non-release tag after
+    branch cleanup.
+  status: passed
+  required: true
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.3892ec1c72
+- check_id: historical_members
+  name: August export member equivalence
+  status: unavailable
+  required: false
+  target_ids:
+  - habitatmech:GOLD.3892ec1c72
+  summary: The manifest's August20 export is a different snapshot (222850238 bytes,SHA2566797471982570ed145f81aef966c1ff5398dc4d35287a01faefaf80ac5311fea).
+    Fresh current membership and equal count do not prove historical specimen identity.
+    No source cache matched the exact filenames in the bounded ignored-inclusive Mechs
+    search (excluding .git,.venv,node_modules).
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/habitats/engineered/microbial_solubilization_of_coal.yaml
+  locator: Entire YAML, current decisions.tsv row406 and Biotransformation parent
+  summary: UNCHANGED UNGROUNDED/SEEDED target; CLASS decision does not endorse habitat
+    meaning. No new native status or scientific fields.
+  support: context_only
+  accessed_at: '2026-10-09T13:08:06Z'
+- evidence_id: prior
+  kind: prior_review
+  reference: reviews/structured/20261009T124901Z-microbial_solubilization_of_coal/review.yaml
+  locator: process_habitat_scope; microbial-solubilization-of-coal-process-habitat-scope
+  summary: Original process/material/setting distinction and scope uncertainty preserved.
+    Only the current member-access limitation is narrowed by this follow-up.
+  support: context_only
+  accessed_at: '2026-10-09T13:08:06Z'
+- evidence_id: bulk
+  kind: database
+  reference: https://gold.jgi.doe.gov/download?mode=site_excel
+  locator: 2026-10-09 download; Biosample rows2109,2404,88416; Study rows12191,41148;
+    Sequencing Project rows38065,38360,325899
+  summary: 'All three current biosamples are on4312. Gb0053499 -> Gp0053499 -> Gs0047444:
+    Alberta Coal Bed Trident_1560D; Gb0053978 -> Gp0053978 -> Gs0047444: Alberta coal
+    bed methane well; Gb0241881 -> Gp0455744 -> Gs0144661: German soft coal slag RH1_MG.
+    First two project rows list PMID23889694; the third lists PRJNA384362,SAMN06835213,SRX2765951.
+    Full scanned sheet row totals including headers:244951,63806,636914. Current source
+    hash differs from the committed August export; no automatic refresh performed.'
+  support: supports
+  accessed_at: '2026-10-09T13:08:06Z'
+  snapshot_sha256: 5f48b2f50fb2a9257754960a0f0e12dc6e8fa121e97c3e9f4497249e5fe6e439
+- evidence_id: sample
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/browser/api/xml/SAMN06835213
+  locator: Identifiers,title,description,sample attributes
+  summary: RH1_MG is soft coal slag collected below a removed surface layer in the
+    stated German location. The source describes a combination of three constituent
+    BioSamples, not three extra GOLD biosample records. Constituent metadata was not
+    individually assessed.
+  support: supports
+  accessed_at: '2026-10-09T13:08:06Z'
+  snapshot_sha256: eaba4b69c1e8e23baa1146f9f7868365a846371be47cbb8936bc6d0fee9043d5
+- evidence_id: experiment
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/browser/api/xml/SRX2765951
+  locator: Identifiers,study reference,sample descriptor,design
+  summary: Experiment links SAMN06835213/SRS2150038 to PRJNA384362/SRP105273 and describes
+    shotgun metagenomic library preparation. Sequencing preparation is not evidence
+    for a coal-solubilization culture setting.
+  support: supports
+  accessed_at: '2026-10-09T13:08:06Z'
+  snapshot_sha256: 08bf2517ca824e122861a8dc10a843413af3fc84a7ac96c0c84c916b0827295c
+- evidence_id: study
+  kind: database
+  reference: https://www.ebi.ac.uk/ena/browser/api/xml/PRJNA384362
+  locator: Title,description,identifiers
+  summary: Project concerns microbial communities in soft coal slags from historical
+    industrial mineral leaching across three sites. That broader project scope is
+    not transferred to the one GOLD target member.
+  support: supports
+  accessed_at: '2026-10-09T13:08:06Z'
+  snapshot_sha256: b3fc2319d97975cc46d7a897de4c80ba6d00cde106e614d758db3edbc22a171e
+- evidence_id: publication
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:23889694%20AND%20SRC:MED&format=json
+  locator: Result PMID23889694,PMCIDPMC3864245,DOI10.1021/es4020184
+  summary: Registry metadata identifies An et al.2013, Metagenomics of hydrocarbon
+    resource environments indicates aerobic taxa and genes to be unexpectedly common.
+    This verifies the export's citation identifier and provides a source lead only;
+    no full-text result or mechanism is newly endorsed.
+  support: context_only
+  accessed_at: '2026-10-09T13:08:06Z'
+  snapshot_sha256: f081e0d86300199c2d9b315bee71443fb91d6d1622a4136b34065c3d2e4853e4
+- evidence_id: snapshots
+  kind: record_content
+  reference: data/raw/GOLD_MANIFEST.yaml
+  locator: Entire manifest and gold_path_biosamples.tsv row816; gold_studies.tsv rows143,2566
+  summary: Older retained snapshots, current bulk membership, composite source samples
+    and study-wide path sets remain distinct. Equal count3 does not prove identical
+    historical membership.
+  support: context_only
+  accessed_at: '2026-10-09T13:08:06Z'
+- evidence_id: gates
+  kind: validation
+  reference: https://github.com/CultureBotAI/HabitatMech/actions/runs/37933350253
+  locator: cb98a92e1 PR QC plus label run37933350259
+  summary: All PR gates passed on the prior bundle and unchanged scientific inputs;
+    this follow-up still needs its own publication gates.
+  support: context_only
+  accessed_at: '2026-10-09T13:08:06Z'
+assessments:
+- assessment_id: crosswalk
+  area: provenance
+  topic: Current source-member chain recovered
+  outcome: supported
+  summary: Three current GOLD biosample/project/study chains are explicit; ENA corroborates
+    the German sample, experiment and project. This materially advances issue1796
+    without claiming the old export is identical.
+  target_ids:
+  - habitatmech:GOLD.3892ec1c72
+  evidence_ids:
+  - bulk
+  - sample
+  - experiment
+  - study
+  - snapshots
+- assessment_id: identity
+  area: identity
+  topic: Physical specimens do not alone define the source class
+  outcome: concern
+  summary: The identified members are physical environmental specimens, so name-only
+    process exclusion or a universal cultured-reactor interpretation is not justified.
+    The class-wide referent and strict Biotransformation parent remain unassessed
+    by an ITEM decision.
+  target_ids:
+  - habitatmech:GOLD.3892ec1c72
+  evidence_ids:
+  - record
+  - prior
+  - bulk
+  - sample
+  - study
+- assessment_id: counts
+  area: quantity
+  topic: GOLD records, composite samples and snapshots
+  outcome: supported
+  summary: The current three GOLD records must not be multiplied by the German composite's
+    constituent count or substituted for the older zero-count classification source.
+    No counts or units were edited.
+  target_ids:
+  - habitatmech:GOLD.3892ec1c72
+  evidence_ids:
+  - record
+  - bulk
+  - sample
+  - snapshots
+- assessment_id: limits
+  area: scope
+  topic: No transfer of project context or metagenomic claims
+  outcome: supported
+  summary: A sample's material and sequencing metadata do not populate the full habitat
+    category with organisms, mechanisms, temperatures or cultivation conditions. Publication
+    metadata is only a verified lead. Native status and all scientific inputs remain
+    unchanged.
+  target_ids:
+  - habitatmech:GOLD.3892ec1c72
+  evidence_ids:
+  - record
+  - publication
+  - sample
+  - experiment
+  - study
+  - gates
+findings:
+- finding_id: process_habitat_scope
+  issue_key: microbial-solubilization-of-coal-process-habitat-scope
+  category: identity
+  severity: major
+  status: open
+  certainty: provisional
+  title: Coal-solubilization class scope remains unresolved after current member recovery
+  description: The current public GOLD export identifies two Alberta coal-bed specimens
+    and one German soft-coal-slag specimen under path4312. ENA confirms an environmental
+    slag metagenome for the German member. This replaces the earlier current-member
+    access gap with specific evidence, but does not define a coherent class-wide physical
+    habitat or establish strict subsumption under the undefined Biotransformation
+    parent. Do not classify the whole source as a non-habitat process from its name,
+    map it to generic coal, or infer an engineered reactor for all members.
+  target_ids:
+  - habitatmech:GOLD.3892ec1c72
+  field_paths:
+  - label
+  - grounding_status
+  - parent_habitats
+  evidence_ids:
+  - record
+  - prior
+  - bulk
+  - sample
+  - experiment
+  - study
+  rule_id: docs/CURATION.md#decision-model
+  native_severity: major
+  normalization_reason: Potential process-versus-habitat mismatch affects central
+    identity. Provisional because original source intent is unresolved; missing optional
+    fields or CLASS membership alone is not the finding.
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Source identity and CLASS/ITEM decision
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Evidence-backed habitat definition if warranted
+  previous_occurrences:
+  - repository: CultureBotAI/HabitatMech
+    review_id: 20261009T124901Z-microbial_solubilization_of_coal
+    finding_id: process_habitat_scope
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1796
+actions:
+- action_id: resolve_scope
+  description: Use the recovered current member chain to complete a source-level ITEM
+    interpretation. Reconcile original snapshot membership where available, inspect
+    the Alberta sample compartments and cited study, distinguish sampled coal-bearing
+    environments and slag from process or culture settings, and assess a supported
+    genus/definition or source partition without inferring it from sample names alone.
+  finding_ids:
+  - process_habitat_scope
+  target_ids:
+  - habitatmech:GOLD.3892ec1c72
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Source identity and CLASS/ITEM decision
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Evidence-backed habitat definition if warranted
+  generator: 'Authorized native curation only: dry seed, target canary, append new
+    session history, regenerate affected artifacts.'
+  acceptance_checks:
+  - Keep issue1796 and the exact prior finding open until class scope and parent interpretation
+    have evidence-backed dispositions; current member discovery alone is not closure.
+  - Use the current member matrix above as a dated source witness, not an unreviewed
+    replacement for committed inventories or a universal habitat definition.
+  - Preserve provenance, source nodes/path, count units/snapshots and native status.
+    Do not import composite constituent counts, study-wide biology or library-preparation
+    settings.
+  - Any justified curation must use maintained inputs, native history, dry seed/canary,
+    focused regressions, applicable labels, corpus/site checks and full QC.
+  - Retain both immutable observations and exact finding lineage; do not rewrite the
+    earlier access limitation as though the new bulk discovery had already been available.
+limitations:
+- This is a bounded member-evidence follow-up for one record; the full-corpus review
+  goal remains incomplete.
+- Current export differs from the August manifest. Same count and stable classification
+  do not establish historical specimen equivalence.
+- No source-wide physical habitat definition, strict parent decision, full Alberta
+  compartment assessment or new primary-article experimental review was completed.
+- Only the German pooled sample itself was verified; its individual constituent sample
+  records were not reviewed and are not additional GOLD target records.
+- Original public GOLD study pages returned403 and terminal4312 returned404, but the
+  public bulk export succeeded. The earlier lack of a current member crosswalk is
+  no longer a blanket limitation.
+- Full local QC was still finishing at save preparation; exact-base CI passed. New
+  follow-up contract and final PR/queue gates must run after saving.
+- No habitat curation, generated scientific-product change, native status promotion
+  or SSSOM/KGX readiness certification. The branch-only base is retained by the verified
+  non-release provenance tag.
+related_reviews:
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261009T124901Z-microbial_solubilization_of_coal
+  relationship: Adds current member evidence and retains process_habitat_scope as
+    provisional/open; does not resolve or rewrite the original observation.
+links:
+- https://github.com/CultureBotAI/HabitatMech/pull/1795
+- https://github.com/CultureBotAI/HabitatMech/issues/1796
+```

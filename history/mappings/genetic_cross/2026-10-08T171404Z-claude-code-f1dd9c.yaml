@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: genetic_cross
+session:
+  id: 2026-10-08T171404Z-claude-code-f1dd9c
+  timestamp: '2026-10-08T17:14:04Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1737
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: Suppress unsupported genetic-cross laboratory context parent
+  details: Added exact source/path/expected-parent exclusion for habitatmech:GOLD.ba9317369a.
+    Reviewed the full target, parent and report 20261008T164340Z; MGI cross glossary distinguishes
+    experimental provenance from the ENVO building-bounded laboratory environment. The inherited
+    positive genus is unsupported; no NOT_APPLICABLE decision or replacement genus is inferred.
+    Preserve all three source nodes, 100 ORGANISM assertions, minted identity and CLASS/SEEDED
+    status. Exact member scope remains issue 1740. Dry seed and the full-corpus before/after
+    regression passed; the genetically-modified canary was inspected before full regeneration.
+    Full QC will run after regeneration.

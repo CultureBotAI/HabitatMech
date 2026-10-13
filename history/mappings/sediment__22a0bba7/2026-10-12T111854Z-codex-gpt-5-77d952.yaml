@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: sediment__22a0bba7
+session:
+  id: 2026-10-12T111854Z-codex-gpt-5-77d952
+  timestamp: '2026-10-12T11:18:54Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/pull/2023
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed saline or sediment habitat scope for sediment__22a0bba7
+  details: 'Exact source-context correction https://github.com/CultureBotAI/HabitatMech/issues/1483
+    (20261012T111115Z-sediment__22a0bba7). The hypersaline-qualified sediment mint correctly
+    retains generic sediment, but its extra parent denotes an environmental system determined
+    by hypersaline water, not a sediment genus. Later examples include salt-lake mud, evaporite
+    and bottom water, so do not manufacture a uniform accession-level sediment cohort from
+    a path label. The hierarchy defect and original source-membership uncertainty are distinct.
+    Suppress only this immediate GOLD contribution; preserve identity, source paths/nodes/counts/units,
+    omitted counts and independent genera. Original occurrence membership remains unavailable.
+    No source-scope, endpoint or SSSOM/KGX certification is implied. User authorized remediation
+    and publication. Dry seed and 36 focused regressions passed; generated record/map/site
+    and final gates remain pending at event creation. Three CLASS decisions receive individually
+    assessed ITEM genus rulings; salt-crust and salt-pond scopes remain unpromoted. Existing
+    reviews and historical session events are preserved; endpoint #1398 remains open.'

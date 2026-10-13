@@ -10,7 +10,7 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: ENVO
 - synonym_text: Lake
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: freshwater lakes
   synonym_type: RELATED_SYNONYM
@@ -65,12 +65,22 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
     EXACT.'
-- timestamp: '2026-10-03T00:00:00Z'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Lake'' as RELATED_SYNONYM, not exact: its canonical
+    ontology identity ENVO:00000020 is a strict ancestor of ENVO:00000021. Source
+    attestation remains verbatim (#1459).'
+- timestamp: '2026-10-12T00:00:00Z'
   curator: codex-gpt-5
   action: SOURCE_PARENT_EXCLUDED
-  changes: 'Excluded GOLD source-path parent contribution ENVO:00002011 for habitatmech:GOLD.d14ddff103
-    (Environmental > Aquatic > Freshwater > Lake). Issue #1220: ENVO:00000021 freshwater
-    lake is a water body containing low-salinity water, not a subclass of its water
-    material. Preserve the ENVO lake and fresh-water-body parents, GOLD and PREGO
-    attestations, taxon association, and existing review status; exclude only the
-    GOLD fresh-water-material parent contribution.'
+  changes: Excluded GOLD source-path parent contribution ENVO:00002011 for habitatmech:GOLD.d14ddff103
+    (Environmental > Aquatic > Freshwater > Lake). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1994
+    (20261012T015212Z-freshwater_lake F1). The lake and freshwater-water-body genera
+    agree with a lake containing low-salt water. Liquid fresh water is its material,
+    not a superclass of the lake. Later exact members include Lake Magadi and bloom-material
+    samples, illustrating source membership noise without invalidating the canonical
+    ENVO lake identity or licensing bulk relabeling. Exclude only the immediate GOLD
+    contribution named here. Preserve source identity, node/path provenance, counts/units,
+    native status and independent parents; separate decision and graph changes are
+    recorded in their own owners.

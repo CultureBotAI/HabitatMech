@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: foodon_beverage_pastry_scope
+session:
+  id: 2026-10-08T034738Z-codex-4bb239
+  timestamp: '2026-10-08T03:47:38Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1690
+  urls:
+  - https://raw.githubusercontent.com/FoodOntology/foodon/cd73540243a84bcd511a500d9a497d12d7dc02f6/foodon.owl
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - identity
+  - grounding
+  - provenance
+  summary: Retain beverage identity and reject generic Pastry wheat-only grounding
+  details: Inspected pinned official RDF/XML (SHA256 b897bf64c1b265c422db9ee01e1235c10c0b809e7f02326ef810a52068347edf),
+    complete source records and exact raw source paths. The beverage term retains its liquid-consumption
+    definition, exact synonym and named parents; updated its checked label and attribution/date.
+    Wheat is a defining ingredient of the old pastry identity but is not supported by generic
+    GOLD Pastry or the 17-path study. Retained the source mint without a wheat identity/parent;
+    20 BIOSAMPLE observations remain distinct from organism counts. Current generic pastry,
+    dough and pastry-containing-product candidates were inspected, are outside the committed
+    slice and need separate source-scope assessment/import; no global ontology-absence claim
+    is intended. Original GOLD pages were unavailable. Dry seed, forced canaries and 54 focused
+    tests passed after correcting a test fixture ID. No hand-edited generated record or label-check
+    exception. Full QC, labels, history, redirect and semantic/site refresh remain publication
+    gates.

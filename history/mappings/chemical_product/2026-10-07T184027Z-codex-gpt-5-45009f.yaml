@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: chemical_product
+session:
+  id: 2026-10-07T184027Z-codex-gpt-5-45009f
+  timestamp: '2026-10-07T18:40:27Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1655
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1654
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: Exclude industrial-production context from chemical product parents
+  details: Applied the one-source exclusion for habitatmech:GOLD.413b4cb862 at the exact Engineered
+    > Industrial production > Chemical products path, guarded against resolved parent habitatmech:GOLD.a744ade0d8.
+    The individual report reports/yaml_record_review/20261007T181850Z-chemical_product.md
+    and a fresh structured inspection of current official ENVO a2455d1a77e46bb8a664d65a157166b539269042
+    distinguish the manufactured product from its production process/context. Retained independent
+    ENVO:00003074, ENVO:2000000 identity, definition, synonym, three GOLD node IDs, ten ORGANISM
+    assertions, full path, exact predicate and EXACT/REVIEWED provenance. No other scientific
+    input or record changed. The new whole-corpus differential regression failed before the
+    fix, then passed with all 37 focused exclusion tests. Dry seed passed; one-target canary
+    was generated and read completely; strict target validation had zero errors and all 3207
+    records reproduced exactly. Full QC and map/site refresh are pending and will be reported
+    separately; this event does not claim they passed. No new identity endorsement or descendant
+    biological inference.

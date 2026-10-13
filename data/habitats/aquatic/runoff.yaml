@@ -15,7 +15,6 @@ synonyms:
   source: ENVO
 parent_habitats:
 - ENVO:00002006
-- habitatmech:GOLD.452a98786f
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8075
@@ -27,3 +26,18 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution habitatmech:GOLD.452a98786f
+    for habitatmech:GOLD.56bd7c491e (Environmental > Aquatic > Freshwater > Simulated
+    rainfall > Runoff). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1441
+    (20261012T091848Z-runoff). Runoff is liquid water flowing over land; both ENVO
+    exact synonyms and liquid-water genus are retained. Simulated rainfall describes
+    the experimental origin, not a genus of runoff water. Later field samples explicitly
+    say simulated-rainfall runoff. The inherited definition also contains the minor
+    typo materials if flows, which is present in official ENVO rather than generated
+    drift. Exclude only this exact GOLD context contribution. Preserve qualified identity,
+    source nodes/path/counts/units and independently justified parents. Original occurrence
+    membership remains unrecovered. Shared mapping endpoints and typed ontology synonyms
+    are separate open work, not SSSOM/KGX certification.

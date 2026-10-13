@@ -3,8 +3,6 @@ label: Hypoxic zone
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:00001999
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5350
@@ -24,3 +22,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00001999 for habitatmech:GOLD.fa45416ff4
+    (Environmental > Aquatic > Marine > Hypoxic zone). Bounded hierarchy correction
+    https://github.com/CultureBotAI/HabitatMech/issues/1245 (20261012T035124Z-hypoxic_zone
+    F1). GOLD.fa45416ff4 denotes an oxygen-depleted marine region, not an entire marine
+    water body. Later samples span multiple depths in the Manzanillo oxygen-minimum-zone
+    study. They do not justify inventing a universal oxygen threshold or borrowing
+    the marine-parent organism count. Exclude only the immediate GOLD contribution
+    named here. Preserve source identity, node/path provenance, counts/units, native
+    status and independent parents; separate decision and graph changes are recorded
+    in their own owners.

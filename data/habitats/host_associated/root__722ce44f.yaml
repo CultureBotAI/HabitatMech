@@ -75,6 +75,15 @@ curation_history:
     to PO, the authoritative plant anatomy ontology, now that it is vendored (#10).
     Re-grounded from BTO:0001188 to PO:0009005 now that PO is vendored (#10). (source
     concept habitatmech:GOLD.7c6b8ca314)
+- timestamp: '2026-08-15T00:00:00Z'
+  curator: claude-opus-5
+  action: GROUND
+  changes: 'Grounded to PO:0009005 ''root'' (EXACT). Co-attestor review (#12): kg-microbe''s
+    environments.csv maps ''host_plant_root-associated'' to NCBITaxon:1, whose label
+    is ''root'' — the root of the TAXONOMY, not a plant root. The seeder''s non-habitat-prefix
+    guard drops the row, so the parameter bands for a real habitat were being lost
+    silently rather than misattributed. PO:0009005 ''root'' is the term meant. Reported
+    upstream. (source concept habitatmech:ENVIRONMENTS_TABLE.58c6c839f8)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES

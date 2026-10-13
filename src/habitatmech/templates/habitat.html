@@ -15,8 +15,7 @@
   <span class="meta">— {{ r.definition_source }}</span>{% endif %}</p>{% endif %}
 
 {% if r.status == 'SEEDED' %}
-<div class="note warn"><p>Machine-generated and unreviewed. Its grounding comes
-from the seeder's rules, not from a curator.</p></div>
+<div class="note warn"><p>SEEDED workflow status. The source-seeding rules supplied this record; consult its curation history for later attributed changes. This status does not establish human review.</p></div>
 {% endif %}
 
 <h2>Source attestations</h2>
@@ -143,7 +142,7 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill{{ ' plain' if d.class_level else '' }}">{{ d.action }}</span>
     <span class="meta">{{ d.date }} · {{ d.curator }}{% if d.class_level %} ·
     class-level sweep, not an individual judgement{% endif %}</span>
-    <p>{{ d.changes }}</p>
+    <p>{{ d.changes|urlize(target="_blank", rel="noopener noreferrer") }}</p>
   </li>
   {% endfor %}
 </ol>

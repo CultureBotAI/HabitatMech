@@ -3,8 +3,6 @@ label: Chloroethene
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.063960efcc
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3862
@@ -25,3 +23,19 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.063960efcc
+    for habitatmech:GOLD.9c0c555f09 (Engineered > Bioremediation > Tetrachloroethylene
+    and derivatives > Chloroethene). ITEM hierarchy assessment (#1657): this chemical-indexed
+    source path does not establish strict habitat subsumption. Both Chloroethene and
+    its Tetrachloroethylene and derivatives parent have only CLASS lexical screening
+    and no established habitat definition. ChEBI:28509 and NIST CAS 75-01-4 establish
+    chemical identity, not a habitat genus; EPA542-R-13-018 distinguishes contaminants,
+    environmental media and treatment systems. Suppress only this unsupported GOLD
+    contribution pending source-scope recovery (#1636). Preserve the mint, full path,
+    both nodes 3862/4298, collapse note, zero-count omissions, ENGINEERED category,
+    UNGROUNDED/SEEDED status and previous events. Do not infer NOT_APPLICABLE, a chemical
+    grounding, a reactor definition or child-derived biosample counts. The child Bioreactor
+    and the parent record remain unchanged. Evidence: reports/yaml_record_review/20261007T192856Z-chloroethene.md.'

@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: solid_animal_waste
+session:
+  id: 2026-10-07T050147Z-codex-62186b
+  timestamp: '2026-10-07T05:01:47Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: codex-gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1615
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1611
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  summary: Separate prose punctuation from the USDA evidence URL
+  details: Adversarial inspection found that the new parenthesized query URL was rendered
+    with a trailing closing parenthesis and semicolon in its query value. The exact rendered-href
+    regression failed on that page. Moved the source URL to a whitespace-delimited position
+    in the maintained decision note without changing its claim, mapping or evidence. This
+    supplements history/mappings/solid_animal_waste/2026-10-07T045341Z-codex-fdebce.yaml;
+    that committed session and individual reports remain untouched. Regenerate via the seeder
+    and renderer, verify the exact href and byte-identical semantic inputs, then complete
+    full QC. No template refactor or broader linkification repair is claimed.

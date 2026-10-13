@@ -21,7 +21,6 @@ synonyms:
 parent_habitats:
 - ENVO:00001996
 - ENVO:01000964
-- habitatmech:GOLD.7f8e268653
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4164
@@ -104,3 +103,19 @@ curation_history:
     two branches. Grounding merges them, which is right — unlike the Sediment cases,
     this is a specific kind of place rather than a material that occurs in many settings.
     (source concept habitatmech:GOLD.d727388954)'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.7f8e268653
+    for habitatmech:GOLD.d727388954 (Environmental > Aquatic > Freshwater > Groundwater
+    > Acid Mine Drainage). ITEM hierarchy assessment for https://github.com/CultureBotAI/HabitatMech/issues/1971
+    (review 20261011T212749Z-acid_mine_drainage): The ENVO acidic mine-drainage identity
+    is supported by two GOLD paths and PREGO, with separate18 and16 ORGANISM counts
+    and three TAXON associations. The14-study local-scale consensus is evidence for
+    place identity, not equivalence of every triad role. Generic acid mine drainage
+    is not restricted to fresh groundwater; the merged parent imports one source context.
+    ENVO types acid rock drainage as related, not exact. Exclude only this guarded
+    GOLD source-parent contribution. Preserve independent parents, source identity/count
+    units or omissions, ontology definition, and native lifecycle; later source examples
+    do not reconstruct frozen membership. Shared synonym1249 and endpoint1398 issues
+    remain separate.'

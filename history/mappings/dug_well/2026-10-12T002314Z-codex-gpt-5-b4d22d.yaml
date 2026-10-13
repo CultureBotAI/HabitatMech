@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: dug_well
+session:
+  id: 2026-10-12T002314Z-codex-gpt-5-b4d22d
+  timestamp: '2026-10-12T00:23:14Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1987
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude reviewed GOLD context parents from dug_well
+  details: 'ITEM hierarchy assessment: https://github.com/CultureBotAI/HabitatMech/issues/1987
+    (20261012T001754Z-dug_well). A dug well is a constructed excavation, not groundwater material.
+    Later well-flow isolates describe sampled contents, not an is-a relation from the structure
+    to water. Preserve the separate source identity and frozen organism count. Exclude only
+    this guarded GOLD source-parent contribution. Preserve independent parents, frozen source
+    identity/counts/units or omissions and native lifecycle. Later examples do not reconstruct
+    frozen membership; shared synonym and endpoint issues remain separate. Authorized by user
+    publication/remediation request. Baseline 47 native checks and exact main CI 827 passed/3
+    skipped succeeded. Post-fix tests, canary, regeneration and full QC pending at event creation;
+    outcomes will be retained in PR and successor reviews.'

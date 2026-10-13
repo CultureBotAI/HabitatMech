@@ -7,10 +7,6 @@ definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
-synonyms:
-- synonym_text: Persistent organic pollutants (POP)
-  synonym_type: EXACT_SYNONYM
-  source: HabitatMech curation
 parent_habitats:
 - ENVO:00010483
 - habitatmech:GOLD.5f0e9e816a
@@ -55,3 +51,18 @@ curation_history:
     persistent organic pollutants instead of the current Stockholm Convention list
     because PAHs sit under this source path in GOLD and are covered by CLRTAP rather
     than Stockholm.
+- timestamp: '2026-10-09T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Persistent organic
+    pollutants (POP)'' when defining habitatmech:GOLD.1a78606807 as ''persistent organic
+    pollutant bioremediation material''. Verbatim source attestations are preserved.
+    Reviewed alias exclusion (#1824; structured review 20261009T212636Z-persistent_organic_pollutants_pop
+    F1): the GOLD label names the pollutants, not environmental material containing
+    them. The authored term-request row leaves exact_synonym empty; suppress only
+    automatic retention of the displaced label. Preserve the verbatim GOLD source_label/path,
+    all three source nodes, nine ORGANISM assertions, authored definition, both parents
+    and ITEM/REVIEWED state. Current CHEBI:77853 and ENVO:00010483 distinguish the
+    contaminants from environmental material; the EPA POP reservoirs description makes
+    the same distinction. This does not settle the separate definition and Bioremediation-parent
+    scope question (#1825).'

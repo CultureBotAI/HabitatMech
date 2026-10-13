@@ -31,8 +31,7 @@
 </p>
 
 <p>A farm which produces milk or products derived from milk.  <span class="meta">— ENVO</span></p>
-<div class="note warn"><p>Machine-generated and unreviewed. Its grounding comes
-from the seeder's rules, not from a curator.</p></div>
+<div class="note warn"><p>SEEDED workflow status. The source-seeding rules supplied this record; consult its curation history for later attributed changes. This status does not establish human review.</p></div>
 
 <h2>Source attestations</h2>
 <p class="meta">Each upstream vocabulary's own account of this habitat. Assertion
@@ -54,13 +53,22 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="../habitats/farm-envo-00000078.html">farm</a>      <code class="curie">ENVO:00000078</code></li>
-  <li><a href="../habitats/industrial-wastewater-envo-01000964.html">industrial wastewater</a>      <code class="curie">ENVO:01000964</code></li>
 </ul>
 
 
 
 
 
+<h2>Curation</h2>
+<p class="meta">What a curator decided about this record, and why. A record built
+from several source concepts can carry one decision per concept.</p>
+<ol class="events">
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-11 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution ENVO:01000964 for habitatmech:GOLD.2a19ce80e2 (Engineered &gt; Wastewater &gt; Industrial wastewater &gt; Dairy farm). Bounded context exclusion (#1916; 20261011T082550Z-dairy_farm F1): the current ENVO:03501120 farm identity is not a subtype of industrial wastewater. All eight later exact-path GOLD BioSamples describe farm-flushing wastewater and all five organism records say dairy sewage; retained export SHA256 5f48b2f50fb2a9257754960a0f0e12dc6e8fa121e97c3e9f4497249e5fe6e439. Remove only the immediate source-context contribution; preserve independent ENVO:00000078 genus, nodes 5513/5514, exact path, five ORGANISM assertions and EXACT/SEEDED status. This does not endorse the source-to-facility mapping, which remains unresolved in F2 and #1918, or assume the chemical-contaminant composition required by industrial wastewater. No generated identity or native status is promoted.</p>
+  </li>
+</ol>
 
 <h2>Provenance</h2>
 <p class="meta">
@@ -76,11 +84,11 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
     on 2026-08-16. Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party terms apply.
   </p>
   <p>
-    <strong>Most of this corpus is machine-generated and unreviewed.</strong>
+    <strong>Workflow status does not establish human review.</strong>
     Grounding is by lexical match against ontology labels except where a curation
     decision says otherwise; treat any record marked
     <span class="pill plain">SEEDED</span> as a starting point, not a citable
-    claim. <a href="../index.html">Current review counts</a>.
+    claim. <a href="../index.html">Current workflow counts</a>.
   </p>
 </footer>
 </div>

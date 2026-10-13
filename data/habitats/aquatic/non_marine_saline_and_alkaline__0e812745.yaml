@@ -11,15 +11,6 @@ synonyms:
 - synonym_text: Non-marine Saline and Alkaline
   synonym_type: EXACT_SYNONYM
   source: HabitatMech curation
-- synonym_text: continental saline waters
-  synonym_type: EXACT_SYNONYM
-  source: HabitatMech curation
-- synonym_text: inland saline waters
-  synonym_type: EXACT_SYNONYM
-  source: HabitatMech curation
-- synonym_text: saline inland waters
-  synonym_type: EXACT_SYNONYM
-  source: HabitatMech curation
 parent_habitats:
 - ENVO:01000317
 source_attestations:
@@ -219,7 +210,7 @@ curation_history:
     and fracking water. The node is disjunctive — saline OR alkaline OR both — and
     descendants that leak outside the intended inland scope remain independently curated.
     (source concept habitatmech:GOLD.ce244e62cd)'
-- timestamp: '2026-08-25T00:00:00Z'
+- timestamp: '2026-10-12T00:00:00Z'
   curator: codex-gpt-5
   action: DEFINED
   changes: 'Defined as ''inland saline or alkaline aquatic environment'' under ENVO:01000317
@@ -237,4 +228,7 @@ curation_history:
     only in punctuation. Both source labels survive on the record''s source_attestations,
     where they identify which source said what; as a pair of EXACT synonyms they would
     read to an ENVO editor as the same string written twice. Found by the guard added
-    for this issue, not by the review that filed it.'
+    for this issue, not by the review that filed it. Scope correction #1415: remove
+    the three saline-only exact aliases because they omit the alkaline-only arm. Preserve
+    the disjunctive definition, aquatic-environment REPLACE mode, reviewed source
+    merge and separate assertion units.'

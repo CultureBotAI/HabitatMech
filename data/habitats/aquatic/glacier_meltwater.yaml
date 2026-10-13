@@ -16,24 +16,31 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
-- timestamp: '2026-10-03T00:00:00Z'
+- timestamp: '2026-10-12T00:00:00Z'
   curator: codex-gpt-5
   action: GROUND_AS_PARENT
   changes: 'ENVO:01000722 ''meltwater'' attached as a parent, not adopted as the identity
-    (NARROW). Issue #1223: glacier-origin meltwater is narrower than ENVO:01000722
-    meltwater, whose verified definition includes liquid released by melting glacial
-    ice as well as other ice and snow. GOLD node 7784 and the six-sample, one-study
-    medium annotation corroborate this reading; broad lake-biome and local glacial-lake
-    slots remain context. Preserve the minted identity and distinct source counters,
-    and exclude the frozen-precursor GOLD parent separately. Do not merge the separate
-    Glacier > Meltwater source. Path: Environmental > Aquatic > Freshwater > Ice >
-    Glacier meltwater (source concept habitatmech:GOLD.f3dc60ff11)'
-- timestamp: '2026-10-03T00:00:00Z'
+    (NARROW). Issue #1223, PR #1218 reassessment: glacier-origin meltwater is narrower
+    than ENVO:01000722 meltwater, whose current official definition includes water
+    released by melting glacial ice as well as snow and other ice. The source label
+    and GOLD node 7784 identify the glacier-specific material; six frozen API samples
+    from one study Gs0118069 unanimously annotate the medium as meltwater, providing
+    limited corroboration rather than exact equivalence. Broad lake-biome and local
+    glacial-lake slots remain context. Preserve the minted identity and omitted direct
+    assertion counts; do not transfer the separate bulk/API counts into the attestation.
+    The frozen-precursor exclusion is already maintained independently. Do not merge
+    the distinct Glacier > Meltwater source. Path: Environmental > Aquatic > Freshwater
+    > Ice > Glacier meltwater (source concept habitatmech:GOLD.f3dc60ff11)'
+- timestamp: '2026-10-12T00:00:00Z'
   curator: codex-gpt-5
   action: SOURCE_PARENT_EXCLUDED
-  changes: 'Excluded GOLD source-path parent contribution ENVO:01001511 for habitatmech:GOLD.f3dc60ff11
-    (Environmental > Aquatic > Freshwater > Ice > Glacier meltwater). Issue #1223:
-    glacier meltwater is liquid released by melting glacial ice, not a subclass of
-    its frozen precursor. Preserve the independently curated broader ENVO meltwater
-    parent and exact source path; the six-sample one-study medium annotation corroborates
-    meltwater without making it equivalent to all meltwater.'
+  changes: Excluded GOLD source-path parent contribution ENVO:01001511 for habitatmech:GOLD.f3dc60ff11
+    (Environmental > Aquatic > Freshwater > Ice > Glacier meltwater). Bounded hierarchy
+    correction https://github.com/CultureBotAI/HabitatMech/issues/1994 (20261012T015233Z-glacier_meltwater
+    F1). This ungrounded source names liquid water produced from glacial ice. Later
+    Lake Fryxell water-filter samples support a water setting, not a solid-ice superclass.
+    Do not infer that an empty displayed direct count means no BioSamples, or that
+    a class-level sweep has already established a novel-term definition. Exclude only
+    the immediate GOLD contribution named here. Preserve source identity, node/path
+    provenance, counts/units, native status and independent parents; separate decision
+    and graph changes are recorded in their own owners.

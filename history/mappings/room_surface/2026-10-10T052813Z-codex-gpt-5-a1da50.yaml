@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: room_surface
+session:
+  id: 2026-10-10T052813Z-codex-gpt-5-a1da50
+  timestamp: '2026-10-10T05:28:13Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1860
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude source context from strict parentage of room_surface
+  details: 'Reviewed hierarchy exclusion (#1860; structured review 20261010T045310Z-room_surface
+    F1): a sampled contact surface is not a kind of the whole hospital bedroom. PMID:32514171
+    sampling methods distinguish swabbed objects and wet sites from the rooms containing them;
+    the exact later GOLD study joins PRJEB31632. Exclude only this exact GOLD location-context
+    contribution; preserve node 5490, full source path, mint, zero-organism-count omission,
+    UNGROUNDED and CLASS/SEEDED status and all prior events. No floor identity, replacement
+    parent, characteristic taxon or mechanism is asserted, and later biosample/project counts
+    do not replace frozen ORGANISM provenance. Complete target and generated diff inspected.
+    Dry-run seeding and three forced canaries passed; 49 focused hierarchy regression tests
+    passed. The regression compares all 3208 records and their semantic text and preserves
+    every other claim. Map/site and full QC remain publication gates.'

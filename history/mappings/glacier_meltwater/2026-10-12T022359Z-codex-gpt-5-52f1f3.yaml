@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: glacier_meltwater
+session:
+  id: 2026-10-12T022359Z-codex-gpt-5-52f1f3
+  timestamp: '2026-10-12T02:23:59Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1994
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed hierarchy or mechanism for glacier_meltwater
+  details: 'Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1994
+    (20261012T015233Z-glacier_meltwater F1). This ungrounded source names liquid water produced
+    from glacial ice. Later Lake Fryxell water-filter samples support a water setting, not
+    a solid-ice superclass. Do not infer that an empty displayed direct count means no BioSamples,
+    or that a class-level sweep has already established a novel-term definition. Exclude only
+    the immediate GOLD contribution named here. Preserve source identity, node/path provenance,
+    counts/units, native status and independent parents; separate decision and graph changes
+    are recorded in their own owners. User authorized publication and remediation. Dry seed,
+    sediment canary inspection and full seeding passed. Post-fix regression, labels, map/site
+    and full QC are pending at event creation; actual outcomes will be recorded in PR #1993.
+    No scientific status promotion is claimed.'

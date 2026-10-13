@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: sediment__e51105ff
+session:
+  id: 2026-10-12T125511Z-codex-gpt-5-af8692
+  timestamp: '2026-10-12T12:55:11Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1524
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - grounding
+  summary: Replace whole-lake genus with conservative sediment genus
+  details: 'ITEM reassessment of GOLD.faaf9502b6, node 7889: sediment material is not saline
+    lake. Current official ENVO defines ENVO:00002209 as lake-bottom sediment and gives soda
+    lake sediment only a RELATED alias; later GOLD examples include shoreline material, so
+    use broader ENVO:00002007 without exact merge. The prior 2026-08-13 claude-opus-5 decision
+    chose ENVO:00000019 saline lake with whole-soda-lake rationale; its complete bytes and
+    generated event remain preserved in main b02596a4 and immutable review 20261012T125039Z-sediment__e51105ff.
+    Generated decision history is reconstructed and will replace that active decision event,
+    not silently retain it as a current assertion. The independent GOLD Soda lake parent is
+    excluded separately. Two counterfactual corpus regressions and dry seed passed; guarded
+    regeneration, labels, map/site and full QC follow. Preserve mint, 91 ORGANISM and REVIEWED/NARROW
+    status. Endpoint #1398 remains open.'

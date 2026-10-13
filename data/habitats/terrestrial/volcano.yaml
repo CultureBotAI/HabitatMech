@@ -201,6 +201,14 @@ curation_history:
   curator: claude-opus-5
   action: REVIEW
   changes: 'Reviewed and endorsed the seeder''s own resolution. Risky-grounding review
+    (#12): the flag is lexical and unavoidable here: the source label is a snake_case
+    vocabulary key from the environments table, not an English label, so it can never
+    share a word with an ontology label. The concept it names is the term, and independent
+    sources attest the same term under its plain-English name. (source concept habitatmech:ENVIRONMENTS_TABLE.379cdef0ac)'
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: REVIEW
+  changes: 'Reviewed and endorsed the seeder''s own resolution. Risky-grounding review
     (#12), co-attestor pass: this source concept feeds a record whose grounding was
     flagged and reviewed, and the record could not reach REVIEWED until every source
     feeding it was decided. This one is a self-grounding: the source vocabulary names

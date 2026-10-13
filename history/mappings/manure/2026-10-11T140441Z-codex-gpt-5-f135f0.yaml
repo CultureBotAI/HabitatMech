@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: manure
+session:
+  id: 2026-10-11T140441Z-codex-gpt-5-f135f0
+  timestamp: '2026-10-11T14:04:41Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1937
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: Exclude unsupported GOLD context parent from manure
+  details: 'Bounded hierarchy correction (#1937; 20261011T135548Z-manure F1): adopted generic
+    ENVO:03501300 includes plant and non-slurry fertilizer material and is not a subclass
+    of the narrower animal manure slurry context. Three later liquid-dairy-manure samples
+    do not narrow the adopted ENVO class. Remove only this GOLD contribution; retain independent
+    ENVO:00010483, identity, node 8076, exact path, count omissions and CLOSE/REVIEWED status.
+    Typed-synonym issue #1249 remains open. Exact five-target whole-corpus differential regression
+    passed; removing those five guards in a temporary input made that regression fail as expected.
+    Dry seed and forced industrial-waste canary completed and the entire canary record was
+    inspected before full forced regeneration. All other fields and records are preserved
+    by the regression. Post-correction labels, strict validation, reproduction, history, full
+    QC and map/site checks remain required before merge. This session does not resolve original
+    membership or shared synonym/mapping-endpoint findings.'

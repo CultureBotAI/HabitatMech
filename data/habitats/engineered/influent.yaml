@@ -3,8 +3,6 @@ label: Influent
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:00002043
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6077
@@ -23,3 +21,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-09T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00002043 for habitatmech:GOLD.2bf3ab7d2f
+    (Engineered > WWTP > Influent). Reviewed hierarchy exclusion (#1760): EPA Primer
+    for Wastewater Treatment (July 1980, terminology p.19; https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=200044GQ.TXT)
+    identifies influent as liquid entering a receiving basin, reservoir, plant or
+    unit, not the facility itself. Official ENVO a2455d1a77e46bb8a664d65a157166b539269042
+    identifies ENVO:00002043 as wastewater treatment plant. Exclude only this GOLD
+    facility-context parent contribution; preserve the native mint, node 6077, full
+    path, zero-count omissions, absent mapping predicate, UNGROUNDED/SEEDED state
+    and prior events. No replacement definition, material genus, exact identity or
+    ITEM identity approval is inferred. Evidence: reports/yaml_record_review/20261009T001109Z-influent.md.'

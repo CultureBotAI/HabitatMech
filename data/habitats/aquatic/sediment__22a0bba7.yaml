@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002007
-- ENVO:01001043
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3980
@@ -20,3 +19,18 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:01001043 for habitatmech:GOLD.56919b89d6
+    (Environmental > Aquatic > Non-marine Saline and Alkaline > Hypersaline > Sediment).
+    Exact source-context correction https://github.com/CultureBotAI/HabitatMech/issues/1483
+    (20261012T111115Z-sediment__22a0bba7). The hypersaline-qualified sediment mint
+    correctly retains generic sediment, but its extra parent denotes an environmental
+    system determined by hypersaline water, not a sediment genus. Later examples include
+    salt-lake mud, evaporite and bottom water, so do not manufacture a uniform accession-level
+    sediment cohort from a path label. The hierarchy defect and original source-membership
+    uncertainty are distinct. Suppress only this immediate GOLD contribution; preserve
+    identity, source paths/nodes/counts/units, omitted counts and independent genera.
+    Original occurrence membership remains unavailable. No source-scope, endpoint
+    or SSSOM/KGX certification is implied.

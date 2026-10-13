@@ -21,11 +21,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
-- timestamp: '2026-10-03T00:00:00Z'
+- timestamp: '2026-10-12T00:00:00Z'
   curator: codex-gpt-5
   action: SOURCE_PARENT_EXCLUDED
-  changes: 'Excluded GOLD source-path parent contribution ENVO:00001999 for habitatmech:GOLD.88e2b29307
-    (Environmental > Aquatic > Marine > Fossil). Issue #1215: GOLD places Fossil in
-    marine context, but fossil/remains substrate is not a marine water body. Its Whale
-    fall child does not establish mineralized fossil material. Preserve the source
-    path without an is-a edge; leave identity and definition unresolved.'
+  changes: Excluded GOLD source-path parent contribution ENVO:00001999 for habitatmech:GOLD.88e2b29307
+    (Environmental > Aquatic > Marine > Fossil). Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1994
+    (20261012T015156Z-fossil F1). The Marine > Fossil source remains an ungrounded
+    mint after a class-level sweep. Fossil material may host microbes; the label alone
+    does not justify NOT_APPLICABLE. It is nevertheless not a marine water body. No
+    exact later members were found, so a more precise source definition or replacement
+    grounding remains unestablished. Exclude only the immediate GOLD contribution
+    named here. Preserve source identity, node/path provenance, counts/units, native
+    status and independent parents; separate decision and graph changes are recorded
+    in their own owners.

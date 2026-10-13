@@ -4,8 +4,7 @@ habitat_category: AQUATIC
 grounding_status: NARROW
 mapping_status: REVIEWED
 parent_habitats:
-- ENVO:00000019
-- habitatmech:GOLD.b11bdfbd7c
+- ENVO:00002007
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7889
@@ -16,15 +15,36 @@ source_attestations:
   assertion_count: 91
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-13T00:00:00Z'
-  curator: claude-opus-5
-  action: GROUND_AS_PARENT
-  changes: 'ENVO:00000019 ''saline lake'' attached as a parent, not adopted as the
-    identity (NARROW). A soda lake is a specific alkaline saline lake; merging it
-    into saline lake loses the distinction and ENVO has no soda-lake term. Path: Environmental
-    > Aquatic > Non-marine Saline and Alkaline > Soda lake > Sedimen (source concept
-    habitatmech:GOLD.faaf9502b6)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: GROUND_AS_PARENT
+  changes: 'ENVO:00002007 ''sediment'' attached as a parent, not adopted as the identity
+    (NARROW). Sediment-specific ITEM reassessment (#1524). The GOLD leaf denotes sediment
+    material, not its containing saline lake ENVO:00000019. Retain the qualified source
+    mint with the conservative sediment genus ENVO:00002007. Current ENVO:00002209
+    saline lake sediment has a bottom-covering depositional definition and only a
+    RELATED soda lake sediment alias; original accession membership is unavailable
+    and later examples include shoreline material, so neither exact identity nor that
+    narrower genus is established for the entire source. Exclude the independent Soda
+    lake context contribution separately. Preserve GOLD 7889, 91 ORGANISM, category
+    and ITEM-derived status. The superseded 2026-08-13 decision remains preserved
+    in Git and the immutable review/session evidence; generated decision history reflects
+    this replacement. Shared mapping endpoints remain #1398. Path: Environmental >
+    Aquatic > Non-marine Saline and Alkaline > Soda lake > Sediment (source concept
+    habitatmech:GOLD.faaf9502b6)'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.b11bdfbd7c
+    for habitatmech:GOLD.faaf9502b6 (Environmental > Aquatic > Non-marine Saline and
+    Alkaline > Soda lake > Sediment). Exact sediment context correction (#1524). Soda-lake
+    sediment is material, not the containing Soda lake. Remove only this GOLD hierarchy
+    contribution; the separately corrected ITEM decision supplies ENVO:00002007 sediment.
+    Preserve the source mint, GOLD 7889, 91 ORGANISM and native status. Current ENVO
+    material/feature definitions and immutable review 20261012T125039Z-sediment__e51105ff
+    support the role distinction; no universal lake-bottom deposition, salinity measurement
+    or exact ontology identity is inferred. Mapping endpoints remain #1398.'

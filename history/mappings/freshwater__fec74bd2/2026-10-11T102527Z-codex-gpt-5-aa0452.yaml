@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: freshwater__fec74bd2
+session:
+  id: 2026-10-11T102527Z-codex-gpt-5-aa0452
+  timestamp: '2026-10-11T10:25:27Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1925
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1924
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - curation_history
+  summary: Exclude the reviewed containing-room or experimental-enclosure parent
+  details: 'Applied the exact-source-path and expected-parent guarded row justified by the
+    immutable freshwater__fec74bd2 review in PR1924 and its inspected GOLD/ENVO/primary evidence.
+    Only the context parent and one appended record event change; identities, independent
+    water genus, source nodes, counts, units, statuses and prior history remain intact. The
+    five-target whole-corpus differential regression passed: 1 passed, 52 deselected. Dry
+    seed passed; forced canary regeneration, native checks, map/site regeneration and final
+    QC are separate publication gates and no future success is asserted here. Mapping endpoint
+    issue1398 and original-source membership limitations remain unresolved. Same-agent assessment,
+    not independent approval.'

@@ -4,7 +4,6 @@ habitat_category: AQUATIC
 grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
-- ENVO:00000043
 - ENVO:00002007
 source_attestations:
 - source: GOLD
@@ -19,3 +18,14 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00000043 for habitatmech:GOLD.98d936714f
+    (Environmental > Aquatic > Freshwater > Wetlands > Sediment). Freshwater sediment
+    witness of #1480. Sediment material is not the wetland area ENVO:00000043; retain
+    the independent sediment genus ENVO:00002007. Suppress only this exact source-context
+    contribution, preserving GOLD 4183, 20 ORGANISM, source path and SEEDED/NARROW
+    status. Current ENVO material/area definitions and immutable review 20261012T125038Z-sediment__bbedc720
+    support the distinction. This repair does not resolve the separate freshwater-soil
+    witness or shared endpoint #1398.'

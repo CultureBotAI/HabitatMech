@@ -12,7 +12,7 @@
     <a class="stat" href="browse.html"><b>{{ stats.total }}</b><span>habitat records</span></a>
     <a class="stat" href="index.html#grounding-status"><b>{{ stats.grounded }}</b><span>ontology-grounded</span></a>
     <a class="stat" href="index.html#source-corroboration"><b>{{ stats.multi_source }}</b><span>corroborated by 2+ sources</span></a>
-    <a class="stat" href="index.html#review-status"><b>{{ stats.reviewed }}</b><span>curator-reviewed</span></a>
+    <a class="stat" href="index.html#review-status"><b>{{ stats.reviewed }}</b><span>REVIEWED status</span></a>
   </div>
 </div>
 
@@ -63,7 +63,7 @@ than the concept.</p>
 <h2 id="grounding-status">What the grounding status means</h2>
 <p>
   Every record says how well its identifier fits the source concept, separately
-  from whether a human has checked it. A record can be reviewed and still
+  from the recorded curation workflow status. A record can be reviewed and still
   honestly ungrounded — that combination is a well-formed request for a new
   ontology term, and there are
   <a href="term-requests.html">{{ stats.term_requests }} of them</a>.
@@ -81,8 +81,9 @@ than the concept.</p>
 
 <div class="note warn" id="review-status">
   <p><strong>This corpus is machine-generated.</strong> {{ stats.seeded }} of
-  {{ stats.total }} records have had no human review. The harmonization rules are
+  {{ stats.total }} records have the SEEDED workflow status. The harmonization rules are
   documented and tested, but a lexical match between a source label and an
   ontology label is a plausible grounding, not a verified one.</p>
+  <p>REVIEWED records carry a recorded workflow decision, including agent-assisted curation. These counts do not establish human review. Consult the attributed curation events on each record for its provenance.</p>
 </div>
 {% endblock %}

@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: plumbing_fixture
+session:
+  id: 2026-10-10T001653Z-codex-gpt-5-40f946
+  timestamp: '2026-10-10T00:16:53Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1836
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude the GOLD building context from plumbing-fixture ancestry
+  details: Added exact source habitatmech:GOLD.e4509f5b53 and expected parent ENVO:00000073
+    exclusion. Official OLS distinguishes the plumbing device from building; SAMN08109791
+    is a sink swab. Retained ENVO:00003074, BROAD/skos:broadMatch, RELATED Sink, 1 ORGANISM,
+    nodes 8365/8366, path, ITEM/REVIEWED and prior events. Whole-corpus regression passed
+    (1 test in 7.24s); forced canary wrote one validated record, inspected in full. Full QC
+    remains a pre-merge gate, with actual outcome to be recorded in the successor review.
+    No narrower exact identity or original member reconstruction is claimed.

@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: continental_margin
+session:
+  id: 2026-10-12T002252Z-codex-gpt-5-58242a
+  timestamp: '2026-10-12T00:22:52Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1987
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude reviewed GOLD context parents from continental_margin
+  details: 'ITEM hierarchy assessment: https://github.com/CultureBotAI/HabitatMech/issues/1987
+    (20261012T001646Z-continental_margin). ENVO identifies the submerged continental-margin
+    slope. Slope is a defensible genus; the surrounding marine water body is not. No original
+    members are inferred from the absence of later exact workbook matches. Exclude only this
+    guarded GOLD source-parent contribution. Preserve independent parents, frozen source identity/counts/units
+    or omissions and native lifecycle. Later examples do not reconstruct frozen membership;
+    shared synonym and endpoint issues remain separate. Authorized by user publication/remediation
+    request. Baseline 47 native checks and exact main CI 827 passed/3 skipped succeeded. Post-fix
+    tests, canary, regeneration and full QC pending at event creation; outcomes will be retained
+    in PR and successor reviews.'

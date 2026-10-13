@@ -3,8 +3,6 @@ label: Digestate
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:00002124
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8153
@@ -24,3 +22,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-08T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00002124 for habitatmech:GOLD.3b22aa41ac
+    (Engineered > Bioreactor > SSF (Solid state fermentation) > Anaerobic > Digestate).
+    ITEM hierarchy assessment (#1709): anaerobic solid-state-fermentation digestate
+    is residual material, not a kind of its containing bioreactor. EPA AgSTAR (https://www.epa.gov/agstar/how-does-anaerobic-digestion-work)
+    and official ENVO OWL (SHA256 a0b919065d33a9cf975b74cadd16c75f32f512d17f4f6d5999b74216701df54c)
+    distinguish the material from ENVO:00002124, a containment unit under ENVO:00002123.
+    Exclude only this source-parent contribution. Preserve GOLD8153, full SSF path,
+    source mint, absent organism count/unit and CLASS/SEEDED provenance. No replacement
+    genus, definition, sibling merge, sample-count transfer or parent-derived taxa
+    are inferred. Evidence: reports/yaml_record_review/20261008T084643Z-digestate__e3669430.md.'

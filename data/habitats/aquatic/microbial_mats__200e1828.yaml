@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: REVIEWED
 parent_habitats:
 - ENVO:01000008
-- ENVO:01000297
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5347
@@ -28,3 +27,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:01000297 for habitatmech:GOLD.ff22e48912
+    (Environmental > Aquatic > Freshwater > River > Microbial mats). Bounded hierarchy
+    correction https://github.com/CultureBotAI/HabitatMech/issues/1397 (20261012T054258Z-microbial_mats__200e1828
+    F1). The river microbial mats source has an ITEM GROUND_AS_PARENT decision and
+    one ORGANISM assertion. Keep its separate mint and microbial-mat genus; freshwater
+    river is the setting, not an is-a superclass. Do not collapse it into other mats
+    or treat the one organism as the later BioSample census. Exclude only the immediate
+    GOLD contribution named here. Preserve source identity, node/path provenance,
+    counts/units, native status and independent parents. Unresolved source identity,
+    genus, synonym and mapping-endpoint findings remain separate.

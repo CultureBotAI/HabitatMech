@@ -4,7 +4,6 @@ habitat_category: AQUATIC
 grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
-- ENVO:00002150
 - ENVO:01000017
 source_attestations:
 - source: GOLD
@@ -19,3 +18,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00002150 for habitatmech:GOLD.9f9173804a
+    (Environmental > Aquatic > Marine > Coastal > Sand). Exact source-context correction
+    https://github.com/CultureBotAI/HabitatMech/issues/1468 (20261012T111110Z-sand__41bd3609).
+    The marine coastal Sand mint names a particulate sand material. Sand ENVO:01000017
+    is a supported genus, whereas coastal sea water is not. The later organism record
+    explicitly describes beach sand at Sweetings Cay. The qualified mint and original
+    count remain independent of the seven later sequencing-project joins; no count
+    substitution or identity collapse is justified. Suppress only this immediate GOLD
+    contribution; preserve identity, source paths/nodes/counts/units, omitted counts
+    and independent genera. Original occurrence membership remains unavailable. No
+    source-scope, endpoint or SSSOM/KGX certification is implied.

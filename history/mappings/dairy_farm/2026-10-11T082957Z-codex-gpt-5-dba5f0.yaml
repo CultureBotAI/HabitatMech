@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: dairy_farm
+session:
+  id: 2026-10-11T082957Z-codex-gpt-5-dba5f0
+  timestamp: '2026-10-11T08:29:57Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1916
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude industrial-wastewater context from dairy-farm strict parents
+  details: 'ENVO dairy farm is a farm, not an industrial-wastewater subtype. All eight exact
+    later GOLD BioSamples describe farm-flushing wastewater and all five organisms describe
+    dairy sewage. Added only the source-mint/path/parent-guarded exclusion; preserve the farm
+    genus, original nodes/count/unit, identity and SEEDED lifecycle. This does not endorse
+    the source-to-facility exact mapping, which remains open in #1918, or infer industrial
+    chemical contamination. Whole-corpus differential regression failed before this input
+    change and passed afterward; dry seed passed. Generated outputs and remaining publication
+    gates are checked separately.'

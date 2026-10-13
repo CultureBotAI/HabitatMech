@@ -8,10 +8,10 @@ grounding_status: EXACT
 mapping_status: REVIEWED
 synonyms:
 - synonym_text: Decomposing-plant
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: BacDive
 - synonym_text: Litterfall
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: duff
   synonym_type: EXACT_SYNONYM
@@ -552,6 +552,14 @@ curation_history:
   curator: claude-opus-5
   action: REVIEW
   changes: 'Reviewed and endorsed the seeder''s own resolution. Risky-grounding review
+    (#12): the flag is lexical and unavoidable here: the source label is a snake_case
+    vocabulary key from the environments table, not an English label, so it can never
+    share a word with an ontology label. The concept it names is the term, and independent
+    sources attest the same term under its plain-English name. (source concept habitatmech:ENVIRONMENTS_TABLE.1d608ee45b)'
+- timestamp: '2026-08-16T00:00:00Z'
+  curator: claude-opus-5
+  action: REVIEW
+  changes: 'Reviewed and endorsed the seeder''s own resolution. Risky-grounding review
     (#12): the flag is lexical: the term''s label spells out a qualifier that the
     GOLD path supplies positionally rather than in the leaf. The path pins the sense,
     and it is the term''s. (source concept habitatmech:GOLD.0d89d93335)'
@@ -587,3 +595,15 @@ curation_history:
     DOI:10.1007/s11284-007-0390-z, PMID:35523988, PMID:23051693, PMID:22402400, PMID:17089664,
     PMID:27543318, and PMID:27357176.
   llm_assisted: true
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained BacDive label ''Decomposing-plant'' as RELATED_SYNONYM: a CLOSE
+    source mapping does not establish exact lexical equivalence. Independent ontology
+    synonyms and verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Litterfall'' as RELATED_SYNONYM: a CLOSE source
+    mapping does not establish exact lexical equivalence. Independent ontology synonyms
+    and verbatim attestations are preserved (#1459).'

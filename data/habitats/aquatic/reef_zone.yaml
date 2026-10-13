@@ -3,8 +3,6 @@ label: Reef zone
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:00002150
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7949
@@ -24,3 +22,18 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00002150 for habitatmech:GOLD.dfb551a1fb
+    (Environmental > Aquatic > Marine > Neritic zone/Coastal water > Reef zone). Bounded
+    hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1431 (20261012T091846Z-reef_zone).
+    The minted source denotes a reef-associated zone; the sole coastal-seawater material
+    parent is not established as its genus. Later seawater samples from a reef zone
+    establish sampled medium, not automatic identity of the zone with that medium.
+    Retain uncertainty between reef feature, water layer and associated environment
+    until the exact source is ITEM-defined. Exclude only this exact GOLD context contribution.
+    Preserve qualified identity, source nodes/path/counts/units and independently
+    justified parents. Original occurrence membership remains unrecovered. Shared
+    mapping endpoints and typed ontology synonyms are separate open work, not SSSOM/KGX
+    certification.

@@ -3,8 +3,6 @@ label: Demersal zone
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:00001999
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7902
@@ -24,3 +22,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00001999 for habitatmech:GOLD.615df5f198
+    (Environmental > Aquatic > Marine > Demersal zone). ITEM hierarchy assessment:
+    https://github.com/CultureBotAI/HabitatMech/issues/1987 (20261012T001725Z-demersal_zone).
+    A demersal zone is a near-bottom region, not an entire marine water body. The
+    retained source mint is preferable to an unsupported exact grounding; no universal
+    numerical depth is inferred. Exclude only this guarded GOLD source-parent contribution.
+    Preserve independent parents, frozen source identity/counts/units or omissions
+    and native lifecycle. Later examples do not reconstruct frozen membership; shared
+    synonym and endpoint issues remain separate.'

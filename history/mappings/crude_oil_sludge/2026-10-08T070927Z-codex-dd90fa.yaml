@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: crude_oil_sludge
+session:
+  id: 2026-10-08T070927Z-codex-dd90fa
+  timestamp: '2026-10-08T07:09:27Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1703
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1702
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude refinery building context from crude-oil sludge parentage
+  details: 'Added one guarded exact-path exclusion for habitatmech:GOLD.808ed1c989 and ENVO:03600078.
+    The complete baseline record, GOLD path and primary ENVO industrial-building definition
+    were inspected in the individual review; sludge material is not a refinery building subtype.
+    Preserved source mint, GOLD4867, path, zero-count omissions, original events and CLASS/SEEDED
+    identity provenance. The new material regression failed before correction and passed afterward,
+    comparing all corpus documents and full-context semantic text; only the two intended material
+    parents and appended events differ, with all neighbors unchanged. Dry seed passed and
+    this canary was inspected. Shared exclusion/regression suite: 39 passed. Map refresh and
+    publication gates will be recorded in the PR receipt. No replacement identity or definition,
+    source assertion or raw inventory edit was made.'

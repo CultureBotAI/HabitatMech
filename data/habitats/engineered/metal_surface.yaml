@@ -3,8 +3,6 @@ label: Metal surface
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.961229841c
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5462
@@ -23,3 +21,18 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-09T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.961229841c
+    for habitatmech:GOLD.2082ed6ba7 (Engineered > Built environment > City > Subway
+    > Metal surface). Reviewed hierarchy exclusion (#282): the maintained Subway definition
+    denotes the enclosing transit environment, not a broader class of localized metal
+    surface. Gohli et al. (https://doi.org/10.1186/s40168-019-0772-9, Surface sampling)
+    distinguish localized surfaces from the station environment; this is contextual
+    evidence, not a crosswalk to GOLD study Gs0118444 or proof of metal composition.
+    Exclude only this exact source-location contribution. Preserve the mint, node5462,
+    full path, count/unit and predicate omissions, UNGROUNDED/SEEDED state and prior
+    events. No replacement genus, definition or ITEM identity approval; other subway
+    leaves remain separately tracked. Evidence: reviews/structured/20261009T094348Z-metal_surface/review.yaml,
+    F1.'

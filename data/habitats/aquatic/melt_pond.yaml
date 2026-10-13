@@ -19,7 +19,6 @@ synonyms:
   source: ENVO
 parent_habitats:
 - ENVO:00000063
-- ENVO:00002200
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5628
@@ -31,3 +30,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00002200 for habitatmech:GOLD.4020effdf7
+    (Environmental > Aquatic > Marine > Sea ice > Melt pond). Bounded hierarchy correction
+    https://github.com/CultureBotAI/HabitatMech/issues/1223 (20261012T054256Z-melt_pond
+    F1). A melt pond is liquid water accumulated in a melt cavity on glacier or sea
+    ice. Its water-body genus is supported; sea ice is the frozen substrate, not a
+    superclass of the pond. Preserve the exact Marine/Sea ice/Melt pond source context
+    and do not infer occurrence absence from its omitted direct count or promote its
+    context to a universal material identity. Exclude only the immediate GOLD contribution
+    named here. Preserve source identity, node/path provenance, counts/units, native
+    status and independent parents. Unresolved source identity, genus, synonym and
+    mapping-endpoint findings remain separate.

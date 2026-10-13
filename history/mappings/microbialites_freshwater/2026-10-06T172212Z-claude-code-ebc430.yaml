@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: microbialites_freshwater
+session:
+  id: 2026-10-06T172212Z-claude-code-ebc430
+  timestamp: '2026-10-06T17:22:12Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1406
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  summary: Correct freshwater microbialite ancestry without changing its thrombolite child
+  details: 'Only freshwater case of #1406: excluded GOLD.e53e2c6e8e -> ENVO:00002011 with
+    exact-path/expected-parent guard. Official ENVO distinguishes microbialite rock from fresh
+    water; White et al. 2016 DOI:10.3389/fmicb.2015.01531 distinguishes structures from surrounding
+    water and sediment. Retained ENVO:03600064, both GOLD3798/4191 nodes and collapse note,
+    absent count, ITEM provenance and narrow mapping pending separate #1398. GOLD.b8b289be4a
+    and its valid child edge remain byte-identical. Other three #1406 cases remain open. Baseline
+    review 20261006T170758Z-thrombolites__e9a8231c.md unchanged. Dry seed, inspected forced
+    canary and 26 focused tests including descendant/exact-scope checks passed. Authentic
+    map/site refresh and full QC required before merge; terminal results in PR #1571.'

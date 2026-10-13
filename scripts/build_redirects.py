@@ -38,6 +38,7 @@ import re
 import subprocess
 import sys
 from collections import Counter
+from collections.abc import Iterator
 from pathlib import Path
 
 import yaml
@@ -273,6 +274,18 @@ def committed_redirect_slugs() -> set[str]:
     }
 
 
+def _record_changes(*filters: str) -> Iterator[tuple[str, str, str]]:
+    commit = ""
+    for line in git("log", *filters, "--name-status", "--format=%H",
+                    "--", "data/habitats").splitlines():
+        if line and "\t" not in line:
+            commit = line.strip()
+            continue
+        parts = line.split("\t")
+        if len(parts) >= 2 and commit and parts[1].endswith(".yaml"):
+            yield commit, parts[0], parts[1]
+
+
 def retired_record_details() -> tuple[dict[str, set[str]], dict[str, str]]:
     """Every retired record's identifier -> the source ids it carried.
 
@@ -280,22 +293,20 @@ def retired_record_details() -> tuple[dict[str, set[str]], dict[str, str]]:
     merge that the record identifier did not — they are what links a dead record
     to the live one that absorbed it.
 
-    Built in a single pass over the deletions rather than by searching history
-    per identifier: the corpus is 3200 records over dozens of commits, and the
-    naive form is thousands of `git show` calls.
+    In-place changes are filtered to diffs touching an identifier, avoiding
+    blob reads for ordinary record edits. Deletions and renames retain their
+    historical coverage, including labels recorded before a pure path move.
     """
     found: dict[str, set[str]] = {}
     labels: dict[str, str] = {}
-    commit = ""
-    for line in git("log", "--diff-filter=DR", "--name-status", "--format=%H",
-                    "--", "data/habitats").splitlines():
-        if line and "\t" not in line:
-            commit = line.strip()
+    identity_changes = {
+        (commit, path) for commit, _, path in
+        _record_changes("--diff-filter=M", "-G", "^identifier:")
+    }
+    for commit, status, path in _record_changes("--diff-filter=DMR"):
+        if status == "M" and (commit, path) not in identity_changes:
             continue
-        parts = line.split("\t")
-        if len(parts) < 2 or not commit or not parts[1].endswith(".yaml"):
-            continue
-        blob = blob_at(f"{commit}^", parts[1])
+        blob = blob_at(f"{commit}^", path)
         if not blob:
             continue
         try:
@@ -304,6 +315,11 @@ def retired_record_details() -> tuple[dict[str, set[str]], dict[str, str]]:
             continue
         if not isinstance(doc, dict) or "identifier" not in doc:
             continue
+        if status == "M":
+            current_blob = blob_at(commit, path)
+            current = yaml.safe_load(current_blob) if current_blob else None
+            if isinstance(current, dict) and current.get("identifier") == doc["identifier"]:
+                continue
         source_ids = {
             a.get("source_id") for a in (doc.get("source_attestations") or [])
             if a.get("source_id")

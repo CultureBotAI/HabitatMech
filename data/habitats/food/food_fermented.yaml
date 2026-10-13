@@ -7,10 +7,10 @@ grounding_status: CLOSE
 mapping_status: REVIEWED
 synonyms:
 - synonym_text: Fermented
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: BacDive
 - synonym_text: Fermented beverages
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 parent_habitats:
 - FOODON:00002501
@@ -23,8 +23,9 @@ source_attestations:
   mapping_predicate: skos:broadMatch
   assertion_count: 242
   assertion_unit: STRAIN
-  notes: kg-microbe's isolation-source mapping table has a row for this source with
-    no ontology target; treated as ungrounded rather than re-grounded by lexical match.
+  notes: kg-microbe's isolation-source mapping table has no ontology target for this
+    source; the automatic route leaves it ungrounded. The explicit curator decision
+    GROUND overrides that route; this source is emitted on FOODON:00001258.
 - source: GOLD
   source_id: gold.ecosystem:3504
   source_label: Fermented beverages
@@ -318,3 +319,20 @@ curation_history:
     an isolation source, and over-covers it with malted barley and vinegar pickles.
     ENVO is not an option here at all — it obsoleted its food branch and redirects
     to FoodOn. (source concept habitatmech:BACDIVE.2b1959f1f0)'
+- timestamp: '2026-10-09T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained BacDive label ''Fermented'' as RELATED_SYNONYM: a BROAD source
+    mapping does not establish exact lexical equivalence. Independent ontology synonyms
+    and verbatim attestations are preserved (#1769).'
+- timestamp: '2026-10-09T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Fermented beverages'' as RELATED_SYNONYM: a BROAD
+    source mapping does not establish exact lexical equivalence. Independent ontology
+    synonyms and verbatim attestations are preserved (#1769).'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_ATTESTATION_CORRECTED
+  changes: Corrected bacdive.isolation_source:fermented provenance wording to distinguish
+    the declined automatic mapping from the final curator override (#1889).

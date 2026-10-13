@@ -3,8 +3,6 @@ label: Oil-contaminated sediment
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:03600078
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5765
@@ -26,3 +24,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-09T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:03600078 for habitatmech:GOLD.6e0c4e4356
+    (Engineered > Built environment > Oil refinery > Oil-contaminated sediment). Reviewed
+    hierarchy exclusion (#1812): oil-contaminated sediment is material, not a subtype
+    of the industrial building defined by active ENVO:03600078 (https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms?obo_id=ENVO:03600078).
+    Exclude only this exact GOLD source-context contribution; preserve the mint, nodes5765/5766,
+    full path, 14 ORGANISM, UNGROUNDED/SEEDED and prior events. No replacement genus,
+    source merge or ITEM identity endorsement is asserted. The later public GOLD membership
+    includes sand and seawater examples and does not reconstruct the frozen 14 organisms;
+    source-scope uncertainty is not resolved by this edge correction. Evidence: reviews/structured/20261009T185455Z-oil_contaminated_sediment/review.yaml
+    F1.'

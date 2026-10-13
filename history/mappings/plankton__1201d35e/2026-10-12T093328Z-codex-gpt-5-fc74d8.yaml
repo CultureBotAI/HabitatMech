@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: plankton__1201d35e
+session:
+  id: 2026-10-12T093328Z-codex-gpt-5-fc74d8
+  timestamp: '2026-10-12T09:33:28Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/pull/2015
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed aquatic habitat scope for plankton__1201d35e
+  details: 'Bounded hierarchy correction https://github.com/CultureBotAI/HabitatMech/issues/1425
+    (20261012T091843Z-plankton__1201d35e). The oceanic plankton source is maintained as a
+    qualified planktonic material. Oceanic zone is a marine layer/water mass and does not
+    follow as its genus from location. Later plankton-associated isolates and fractionated
+    plankton samples support biological material, not exact generic plankton identity or universal
+    sampling gear. Retain source-specific scope and 14 ORGANISM assertions. Exclude only this
+    exact GOLD context contribution. Preserve qualified identity, source nodes/path/counts/units
+    and independently justified parents. Original occurrence membership remains unrecovered.
+    Shared mapping endpoints and typed ontology synonyms are separate open work, not SSSOM/KGX
+    certification. User authorized remediation/publication. Dry seeding and 35 focused regressions
+    passed; generated records, real map/site refresh and final gates remain pending at event
+    creation. Nine previously unreviewed decisions become ITEM through individual evidence
+    assessment; no other status promotion. Shared endpoint issue #1398 remains open.'

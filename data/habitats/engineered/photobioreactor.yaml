@@ -11,7 +11,6 @@ synonyms:
   source: GOLD
 parent_habitats:
 - ENVO:00002123
-- habitatmech:GOLD.0287e1b2a9
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5844
@@ -33,7 +32,7 @@ curation_history:
   action: GROUND
   changes: 'Grounded to ENVO:03600077 ''photobioreactor'' (EXACT). Parenthetical is
     just the acronym. Path: Engineered > Artificial ecosystem > Aquaculture > Photobioreactor
-    (PBR (source concept habitatmech:GOLD.96bbd55dce)'
+    (PBR) (source concept habitatmech:GOLD.96bbd55dce)'
 - timestamp: '2026-08-12T00:00:00Z'
   curator: claude-opus-5
   action: GROUND
@@ -44,3 +43,19 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-09T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.0287e1b2a9
+    for habitatmech:GOLD.96bbd55dce (Engineered > Artificial ecosystem > Aquaculture
+    > Photobioreactor (PBR)). Reviewed hierarchy exclusion (#1830; structured review
+    20261009T225120Z-photobioreactor F1): ENVO:03600077 denotes a light-driven cultivation
+    device, not a kind of agricultural aquatic ecosystem. Official ENVO retains ENVO:00002123
+    bioreactor as its genus; PMID:31405172 (DOI:10.3390/microorganisms7080252), inspected
+    methods, describes wastewater biofilms cultured in illuminated flow-lane devices
+    outside the asserted aquaculture genus. Exclude only this GOLD aquaculture-context
+    contribution to the merged generic record. Preserve both source paths, nodes 5844/8184/8185
+    and 7996/7997, the first path''s one ORGANISM assertion and the second path''s
+    zero-count omission, exact mappings, acronym synonym and existing ITEM/REVIEWED
+    status. No source-member equivalence, replacement identity, characteristic taxon
+    or mechanism is inferred.'

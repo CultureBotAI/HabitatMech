@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002007
-- habitatmech:GOLD.9dbf296a4a
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5377
@@ -19,3 +18,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution habitatmech:GOLD.9dbf296a4a
+    for habitatmech:GOLD.6fbf5be0b3 (Environmental > Aquatic > Marine > Mud volcano
+    > Sediment). Exact source-context correction https://github.com/CultureBotAI/HabitatMech/issues/1487
+    (20261012T111119Z-sediment__3f324bf4). Marine mud-volcano sediment is material,
+    not the whole volcano. The qualified parent retains a mud-volcano feature genus,
+    so the mismatch is explicit. Later Gulf of Cadiz and Haakon Mosby samples and
+    the S4BF isolate support the sediment-versus-feature distinction without establishing
+    one universal fluid chemistry or depth. Suppress only this immediate GOLD contribution;
+    preserve identity, source paths/nodes/counts/units, omitted counts and independent
+    genera. Original occurrence membership remains unavailable. No source-scope, endpoint
+    or SSSOM/KGX certification is implied.

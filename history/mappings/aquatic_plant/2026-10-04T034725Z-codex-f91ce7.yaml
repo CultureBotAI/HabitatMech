@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: aquatic_plant
+session:
+  id: 2026-10-04T034725Z-codex-f91ce7
+  timestamp: '2026-10-04T03:47:25Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: codex-gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1343
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - provenance
+  summary: Correct actor attribution for aquatic-plant rationale session
+  details: 'Supersedes only session.actors[0].name in history/mappings/aquatic_plant/2026-10-04T034451Z-claude-code-2a7f5e.yaml:
+    the actual actor was Codex, not claude-code. The prior model codex-gpt-5 and agent_tool
+    codex are correct, and the rationale correction, evidence and validation statements remain
+    unchanged. The earlier scaffold inherited the CLI default because --actor-name was omitted;
+    this fresh session explicitly supplies --actor-name codex. Preserve the prior record without
+    edits under append-only history policy. This correction addresses the adversarial self-review
+    provenance finding #1343, a new session-specific recurrence of closed #1305. Full history
+    validation and local/CI QC must pass before merge; this attribution-only correction changes
+    no generated habitat fields.'

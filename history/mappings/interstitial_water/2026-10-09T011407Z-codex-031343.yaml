@@ -1,0 +1,37 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: interstitial_water
+session:
+  id: 2026-10-09T011407Z-codex-031343
+  timestamp: '2026-10-09T01:14:07Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1762
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1761
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude denitrification context from interstitial-water hierarchy
+  details: 'Added one exact-source GOLD parent exclusion for habitatmech:GOLD.b099e463e2 and
+    its Engineered > Bioreactor > Sulphur Autotrophic Denitrification > Interstitial water
+    path, guarded against resolved parent habitatmech:GOLD.f07ee97491. Inspected official
+    ENVO a2455d1a77e46bb8a664d65a157166b539269042 (SHA256 a0b919065d33a9cf975b74cadd16c75f32f512d17f4f6d5999b74216701df54c):
+    ENVO:03600009 is liquid material with independent ENVO:00002006 genus, not a denitrification
+    process or bioreactor containment unit. Preserve identity, definition, source nodes 5661/5662,
+    full path, count omissions, EXACT/SEEDED state and old events. The historical review reports/yaml_record_review/20261009T010147Z-interstitial_water.md
+    records the evidence and unresolved original-sample scope; no source join to Burns et
+    al. 2018 is asserted. Original-source exact equivalence remains #1764. Focused full-corpus
+    and exclusion tests passed (43 tests); dry seed passed. A forced target canary, strict
+    validation, generated-product and genuine semantic-map rebuild, history/provenance and
+    full QC are required before merge; their final receipts will be recorded on PR #1761.
+    No generated habitat was hand-edited.'

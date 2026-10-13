@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: seawater
+session:
+  id: 2026-10-10T083021Z-codex-gpt-5-d86337
+  timestamp: '2026-10-10T08:30:21Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1869
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  summary: Apply scoped reviewed parent correction for seawater
+  details: 'Partial hierarchy correction (#1869; structured review 20261010T082307Z-seawater
+    F1): exclude the immediate GOLD mesocosm context contribution. ENVO:01000620 denotes a
+    vivarium embedded in a natural environment, not its water material; the exact linked PRJNA521532
+    study DOI:10.1038/s41396-020-00748-2 used laboratory chamber carboys. Later exact-path
+    GOLD members include water and plastic/glass biofilm samples, so neither a water-only
+    identity nor a replacement system genus is established for the entire bin. Preserve the
+    source mint, nodes 6459/6460, full path, omitted zero count and existing sea-water decision
+    without endorsing that remaining genus; #1869 stays open for material/system scope adjudication.
+    The separate mapping endpoint defect remains #1398. Dry-run seeding passed, and seawater
+    and aquarium canary YAML diffs were inspected. Four exclusion rows and two ITEM decisions
+    are covered by focused full-corpus before/after regressions. Full QC, label validation,
+    generated-site/map checks and immutable follow-up reviews remain required before merge.
+    Generated current-decision history is not append-only; prior CLASS decisions are retained
+    in Git and immutable reviews. No SSSOM/KGX readiness claim is made; #1398 remains open,
+    and #1869 remains open after partial correction.'

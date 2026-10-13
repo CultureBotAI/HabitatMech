@@ -25,8 +25,10 @@ curation_history:
 - timestamp: '2026-08-12T00:00:00Z'
   curator: claude-opus-5
   action: GROUND
-  changes: 'Grounded to ENVO:01000257 ''white smoker'' (EXACT). Leaf label equals
-    the ENVO label exactly and no other source concept claims it. Path: Environmental
+  changes: 'Grounded to ENVO:01000257 ''white smoker'' (EXACT). The plural source
+    label is curator-recognized as equivalent to the singular ENVO label in this marine
+    hydrothermal context; normalized labels are not equal and the automatic route
+    is gold_unmatched. No other source concept claims this leaf. Path: Environmental
     > Aquatic > Marine > Hydrothermal vents > White smokers (source concept habitatmech:GOLD.d28b62ff00)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources

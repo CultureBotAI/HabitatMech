@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: src/habitatmech/seed.py
+  slug: air_conditioning_unit
+session:
+  id: 2026-10-10T230638Z-codex-gpt-5-b8fb2d
+  timestamp: '2026-10-10T23:06:38Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1889
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - source_attestations
+  summary: Correct scoped aerobic and algal review findings
+  details: Follow-up to 20261010T225032Z-air_conditioning_unit. Distinguish declined BacDive
+    automatic mapping from an explicit override. Do not describe a subsequently grounded source
+    as finally ungrounded, and do not report SAME_AS transient grounding as survivor status.
+    Preserve the old note for unchanged automatic outcomes. Add deterministic correction events
+    without altering identity or taxa. Dry run and inspected validated agricultural-waste
+    canary precede bulk regeneration. Focused regression tests, exact blast-radius comparison,
+    corpus/label/history checks, semantic-map/site regeneration and full native CI are required
+    before publication. Original review files are immutable; linked successor observations
+    will report verified dispositions. No SSSOM/KGX readiness certification is implied.

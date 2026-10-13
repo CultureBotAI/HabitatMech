@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002034
-- ENVO:03600003
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5701
@@ -18,3 +17,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:03600003 for habitatmech:GOLD.4788e5d28f
+    (Engineered > Built environment > Pipeline > Drinking water pipeline > Biofilm).
+    Bounded hierarchy correction (#1902; review 20261011T041037Z-biofilm__3952f25d
+    F1): attached biofilm material is not a kind of drinking-water pipeline network.
+    ENVO:00002034 is the independent biofilm genus; ENVO:03600003 denotes the surrounding
+    infrastructure. The committed triad and retained later exact-path sample Gb0124218
+    support a pipeline-biofilm location, not identity with the network. Exclude only
+    this GOLD parent contribution; preserve qualified mint, path, node 5701, zero-count
+    omission and NARROW/SEEDED status. Later metadata does not reconstruct original
+    frozen membership; mapping-endpoint issue #1398 remains open.'

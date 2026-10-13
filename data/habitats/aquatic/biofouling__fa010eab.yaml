@@ -3,8 +3,6 @@ label: Biofouling
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
-parent_habitats:
-- ENVO:00001999
 xrefs:
 - ENVO:06105023
 source_attestations:
@@ -38,3 +36,16 @@ curation_history:
     to ENVO:00002034 ''biofilm'' either: biofouling includes macrofouling such as
     barnacles and tube worms, so biofilm is narrower than the concept rather than
     broader. (source concept habitatmech:GOLD.4bd2954af9)'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:00001999 for habitatmech:GOLD.4bd2954af9
+    (Environmental > Aquatic > Marine > Biofouling). ITEM hierarchy assessment: https://github.com/CultureBotAI/HabitatMech/issues/1979
+    (20261011T225603Z-biofouling__fa010eab). The marine Biofouling decision denotes
+    the biological fouling layer rather than the process or a whole marine water body.
+    Its unused grouping-bin status does not make the contextual water-body parent
+    a true genus. Biofilm remains narrower than the broad layer interpretation. Exclude
+    only this guarded GOLD source-parent contribution. Preserve independent parents,
+    frozen source identity/counts/units or omissions and native lifecycle. Later examples
+    do not reconstruct frozen membership; shared synonym and endpoint issues remain
+    separate.'

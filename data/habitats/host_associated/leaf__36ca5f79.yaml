@@ -7,13 +7,13 @@ grounding_status: EXACT
 mapping_status: SEEDED
 synonyms:
 - synonym_text: Leaf-Phyllosphere
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: BacDive
 - synonym_text: Phylloplane/Leaf
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: Phylloplane/Leaf surface
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: hoja (Spanish, exact)
   synonym_type: EXACT_SYNONYM
@@ -32,8 +32,9 @@ source_attestations:
   mapping_predicate: skos:broadMatch
   assertion_count: 500
   assertion_unit: STRAIN
-  notes: kg-microbe's isolation-source mapping table has a row for this source with
-    no ontology target; treated as ungrounded rather than re-grounded by lexical match.
+  notes: kg-microbe's isolation-source mapping table has no ontology target for this
+    source; the automatic route leaves it ungrounded. The explicit curator decision
+    GROUND overrides that route; this source is emitted on PO:0025034.
 - source: ENVIRONMENTS_TABLE
   source_id: host_plant_leaf-associated
   source_label: host_plant_leaf-associated
@@ -532,3 +533,27 @@ curation_history:
   changes: Added a leaf phyllosphere water-nutrient-stress graph backed by PMID:23154261,
     PMID:12676659, PMID:24124501, PMID:14665692, PMID:28068611, and PMID:19805315.
   llm_assisted: true
+- timestamp: '2026-10-09T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained BacDive label ''Leaf-Phyllosphere'' as RELATED_SYNONYM: a BROAD
+    source mapping does not establish exact lexical equivalence. Independent ontology
+    synonyms and verbatim attestations are preserved (#1769).'
+- timestamp: '2026-10-09T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Phylloplane/Leaf'' as RELATED_SYNONYM: a BROAD source
+    mapping does not establish exact lexical equivalence. Independent ontology synonyms
+    and verbatim attestations are preserved (#1769).'
+- timestamp: '2026-10-09T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Phylloplane/Leaf surface'' as RELATED_SYNONYM: a
+    BROAD source mapping does not establish exact lexical equivalence. Independent
+    ontology synonyms and verbatim attestations are preserved (#1769).'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_ATTESTATION_CORRECTED
+  changes: Corrected bacdive.isolation_source:leaf-phyllosphere provenance wording
+    to distinguish the declined automatic mapping from the final curator override
+    (#1889).

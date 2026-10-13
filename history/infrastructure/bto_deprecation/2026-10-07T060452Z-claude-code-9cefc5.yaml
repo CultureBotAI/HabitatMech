@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: src/habitatmech/extract.py
+  slug: bto_deprecation
+session:
+  id: 2026-10-07T060452Z-claude-code-9cefc5
+  timestamp: '2026-10-07T06:04:52Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: codex-gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1618
+  prs:
+  - https://github.com/CultureBotAI/HabitatMech/pull/1616
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - ontology_extraction
+  - tests
+  summary: Preserve BTO owl:deprecated literals from semsql
+  details: 'Read owl:deprecated literals for labeled BTO subjects without inferring a replacement
+    or changing labels, definitions or hierarchy. Five regression cases failed before and
+    passed after the fix (true, false, 1, 0 and whitespace); absent metadata, unrelated/unlabeled
+    subjects and missing database are tested. Primary BTO OWL confirms BTO:0000316 obsolete
+    and BTO:0002233 narrower, not an exact replacement. No raw inventory/manifest is patched:
+    original bto.db and source ontology dumps were not found in ignored-inclusive bounded
+    searches. Governed refresh and all dependent culture-medium mappings remain #1619. Full
+    focused suite 36 passed; final QC follows.'

@@ -12,7 +12,7 @@ synonyms:
   source: ENVO
 - synonym_text: Creek
   synonym_type: RELATED_SYNONYM
-  source: PREGO
+  source: GOLD
 - synonym_text: Creeks
   synonym_type: RELATED_SYNONYM
   source: PREGO
@@ -310,3 +310,9 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-10-07T00:00:00Z'
+  curator: seed_from_sources
+  action: SOURCE_SYNONYM_SCOPED
+  changes: 'Retained GOLD label ''Creek'' as RELATED_SYNONYM: a CLOSE source mapping
+    does not establish exact lexical equivalence. Independent ontology synonyms and
+    verbatim attestations are preserved (#1459).'

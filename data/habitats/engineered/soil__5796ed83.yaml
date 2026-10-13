@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00001998
-- ENVO:01000621
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8234
@@ -18,3 +17,14 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-11T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:01000621 for habitatmech:GOLD.b1d707114a
+    (Engineered > Artificial ecosystem > Microcosm > Soil). ITEM hierarchy assessment
+    (#1955; 20261011T182918Z-soil__5796ed83 F1): Soil material within a microcosm
+    is not the containing vivarium; later exact GOLD descriptions explicitly name
+    incubated soil. Preserve the independent soil genus. Exclude only this guarded
+    source-path contribution. Preserve other fields, frozen source nodes/count units
+    or omissions, independent parents and native lifecycle. Later source examples
+    do not reconstruct original membership; shared endpoint #1398 is unchanged.'

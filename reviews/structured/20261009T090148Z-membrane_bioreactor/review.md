@@ -1,0 +1,807 @@
+# Membrane bioreactor: supported apparatus identity and superclass with source-detail limitations
+
+- Review: 20261009T090148Z-membrane_bioreactor
+- Repository: CultureBotAI/HabitatMech
+- Started UTC: 2026-10-09T08:56:20Z
+- Finished UTC: 2026-10-09T09:01:48Z
+- Reviewer: codex-gpt-5 (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+One exact membrane-bioreactor record reviewed. Current ontology metadata, the source classification and ITEM decision support its apparatus identity, definition, acronym synonym and bioreactor superclass. Zero-counter omissions and two-node provenance reproduce. No corrective finding established. Historical source-node/member detail is unavailable; adjacent sludge and reactor records are not cleared by this assessment.
+
+## Scope And Provenance
+
+Whole generated membrane_bioreactor.yaml and its sole source contribution. Parent identity and search hits for adjacent records provide context only.
+
+Selection: ENVO:03600010, PATHS.tsv:930, source concept GOLD.c770d96590 and exact MBR path.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f66fec904fffef115c04cf1e5d5d4fc59771fde2.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| ENVO:03600010 | data/habitats/engineered/membrane_bioreactor.yaml | generated | membrane bioreactor |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Current target and input capture | passed | True | ENVO:03600010 | Captured 42 inputs at f66fec904fffef115c04cf1e5d5d4fc59771fde2. Added context files preserve all earlier hashes; prior unfinished investigation is not a saved review. |
+| Target LinkML validation | passed | True | ENVO:03600010 | No issues found. |
+| Target closed-schema validation | passed | True | ENVO:03600010 | One file, zero errors. |
+| Complete resolution and document reproduction | passed | True | ENVO:03600010 | Full normalized mapping and claimant indexes: default gold_unmatched, then ITEM GROUND to ENVO:03600010 with EXACT/skos:exactMatch. Whole document equals disk; one source, one reviewed source. Parent path separately resolves to ENVO:00002123. |
+| Fourteen-inventory exact-field scan | passed | True | ENVO:03600010 | Only GOLD path, ontology term and subclass edge match the exact path, mint, CURIE or two source nodes. No direct target study, biosample, triad, parameter or taxon row in these inventories. |
+| Ignored-inclusive maintained-input and prior-review search | passed | True | ENVO:03600010 | Decision and path lock found; other hits concern adjacent records. No target-specific definition, exclusion, causal overlay, native session history or earlier individual MBR review in these named bounds. Initial attempt also named nonexistent root yaml_record_review and returned2; successful rerun uses the actual reports/yaml_record_review root. |
+| Current primary structured source checks | passed | False | ENVO:03600010 | GOLD workbook and three OLS responses retrieved and parsed. Workbook default-style warning is non-fatal; reset_dimensions exposes all rows. |
+| Full corpus reproduction | passed | True | ENVO:03600010 | 3208 expected and found; zero missing, extra or differing records. |
+| Native history validation | passed | True | ENVO:03600010 | 217 valid history records. |
+| Raw provenance | passed | True | ENVO:03600010 | 14 committed inventories and two GOLD sources current. |
+| Parent, status and reference regressions | passed | True | ENVO:03600010 | 6 passed, 33 deselected. These checks do not establish scientific meaning. |
+| Exact-baseline full QC receipt | passed | True | ENVO:03600010 | Completed SUCCESS at exact captured f66fec904: 639 passed, 3 skipped, four dedicated contract tests, 217 histories, 3208 closed-schema records and all native gates. No fresh local full-QC run claimed. |
+| Exact-baseline label-correspondence receipt | passed | True | ENVO:03600010 | Completed SUCCESS at exact captured base; configured adapters and exceptions do not prove every current ontology axiom. |
+| Scientific inputs unchanged from checked base | passed | True | ENVO:03600010 | No differences. New review artifacts are checked separately. |
+| Original source node and members | unavailable | False | ENVO:03600010 | Fresh browser attempt at GOLD ecosystem5504 is inaccessible. Workbook confirms the MBR category through descendants, not the historical5504/7736 nodes or original sample membership. |
+| Causal and expression adapters | not_applicable | False | ENVO:03600010 | No target causal graph, gene, regulator, pathway, taxon or transcriptomics claim. No target overlay found in the ignored-inclusive search; iModulonDB is not applicable. |
+| Initial structured draft validation | failed | False | ENVO:03600010 | Search evidence had bounded prose in its locator but lacked the required search_scope attribute. Corrected the unsaved draft; scientific assessment unchanged. |
+| Refused initial save attempt | failed | False | ENVO:03600010 | Save was invoked before the failed validation had been handled and independently rejected the same missing search_scope field. No bundle was written. Subsequent successful validation must complete before retrying save. |
+
+## Scientific And Domain Assessments
+
+### Generic membrane-bioreactor apparatus
+
+identity: supported. Targets: ENVO:03600010.
+
+The source's explicit acronym expansion, generic Bioreactor path and current ontology definition denote a membrane-equipped bioreactor, not sludge or the membrane material alone.
+
+### Item-level exact identity
+
+grounding: supported. Targets: ENVO:03600010.
+
+The explicit ITEM decision supports exact identity; no narrower contextual modifier in the source category is erased. The default lexical miss was correctly overridden.
+
+### Bioreactor is strictly broader
+
+graph: supported. Targets: ENVO:03600010.
+
+Independent current ENVO parents, committed subclass edge and GOLD parent path agree. This is a true apparatus superclass, not merely a containing environment.
+
+### Acronym expansion
+
+nomenclature: supported. Targets: ENVO:03600010.
+
+MBR (Membrane bioreactor) expresses the full term rather than an unqualified broader name; exact synonym scope is coherent for this source class.
+
+### Zero direct assertions
+
+quantity: supported. Targets: ENVO:03600010.
+
+Count/unit omission and two-node provenance reproduce. No parent or descendant counts, operating parameters or taxa are imported.
+
+### Native status and audit
+
+consistency: supported. Targets: ENVO:03600010.
+
+One ITEM-reviewed source gives REVIEWED; GROUND and seed events reproduce without promoting an unreviewed merged contributor.
+
+### No unsupported biological enrichment
+
+completeness: supported. Targets: ENVO:03600010.
+
+Optional taxa,parameters,graphs,citations and datasets are not mandatory for this apparatus class, and the direct raw scan supplies none for the exact source bin.
+
+### Historical source membership
+
+scope: unknown. Targets: ENVO:03600010.
+
+Current classification does not verify original5504/7736member metadata. No specific source-study mechanism or sample characterization is endorsed.
+
+### Reproduction and owners
+
+schema: supported. Targets: ENVO:03600010.
+
+Target, corpus, history and source validation pass; future changes belong in maintained decisions/inventories rather than generated YAML.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/habitats/engineered/membrane_bioreactor.yaml; Whole YAML and both generated history events | supports | ENGINEERED, EXACT and REVIEWED; one exact GOLD attestation, one acronym expansion synonym, ENVO definition and one bioreactor parent. No count/unit, biological, mechanism or performance claim is asserted. |
+| source | data/raw/gold_ecosystem_paths.tsv; Row1189; exact-field and pipe-member scan of all14rawTSVs | supports | Depth3 MBR category collapses nodes5504&#124;7736. All frozen organism,study,biosample,total counters are zero, so omitted count/unit and the two-node note are faithful. Descendant samples and parent604organisms are not target observations. |
+| decision | curation/decisions.tsv; Row1110; PATHS.tsv:930; actual resolve_gold/apply_decision/build_document | supports | ITEM GROUND overrides unmatched lexical resolution to ENVO:03600010. One contributing source and one reviewed source justify REVIEWED. The predicate compares the source concept with its exact ontology record identity; no narrower-parent endpoint route is present. |
+| ontology | https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms?obo_id=ENVO%3A03600010; Active term, label and definition; local ontology_terms.tsv:10053; response SHA256648337f1fe6beea634206a1b8cd6d13a1da996edd8a880bd29dcd515ac631f9e | supports | Current generic membrane-bioreactor term agrees with the target and does not add an anaerobic, sludge-only or wastewater-only identity restriction. |
+| parent | https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_03600010/parents; Exact parents API; local subclass row8454; bioreactor.yaml lines1-32 only | supports | Sole current superclass is ENVO:00002123; parents response SHA25648c19467fdda808dc6d3aa6e4e83afb99214cf4dea65c49465baa8bd565143eb. Active parent definition describes a unit sustaining organisms and their metabolism; term response SHA2568f7c3379944640eb70f93693d820615909a14836e136ebae89b43bb6a196efc8. The full parent record was not reviewed. |
+| gold | https://gold.jgi.doe.gov/download?mode=ecosystempaths; Workbook site data rows105-111; in-memory read-only parsing | supports | The current workbook retains MBR under Bioreactor via seven descendant classifications. This confirms category context, not historical parent node IDs or target counts. 84174bytes; SHA2563933e5f0664915c1bbfa00212e17d013da360fb33dd52e509254050813135396. |
+| epa | https://www.epa.gov/sites/production/files/2019-08/documents/membrane_bioreactor_fact_sheet_p100il7g.pdf; Introduction p1 lines10-22 and membrane-location prose p4 lines175-179; no figure-specific claim | context_only | EPA's technical fact sheet uses MBR for a biological reactor combined with membrane filtration and discusses immersed or separate-vessel configurations. This supports apparatus identity and acronym usage, not universal composition, operating conditions, costs or performance for the GOLD class. |
+| scope | curation; Ignored-inclusive exact CURIE/mint/slug/label search across curation,history,research,conf,tests,docs,reviews,reports/yaml_record_review and PATHS/RETIRED | context_only | Only the target decision/path lock and contextual neighboring-record hits were recovered. Child-report and research excerpts were located, not fully reassessed; no parent/child finding is inherited or closed. Absence claims are bounded to these local roots. |
+| unavailable | https://gold.jgi.doe.gov/ecosystem/5504; Fresh browser retrieval failure | unknown | Original member details are not independently recovered. An inaccessible URL is not evidence that the source node is invalid or that the habitat lacks microbes. |
+| gates | https://github.com/CultureBotAI/HabitatMech/actions/runs/37907085290; Exact captured revision, label run37907085295 and fresh local checks | supports | Available required gates pass on unchanged scientific inputs. Deterministic success is not independent scientific endorsement. |
+
+## Limits And Additional Notes
+
+- One exact target reviewed; completion of the full3208-record objective remains unproven.
+- Original GOLD node/member details unavailable. Current workbook verifies the MBR classification through descendants, not historical5504/7736 rows or counts.
+- Only the parent identity/definition excerpt was read. Neighboring source scopes, counts, graphs and historical findings remain outside this target review.
+- EPA technical prose supplies contextual apparatus/acronym support only. No figure, operating recommendation, regulatory claim or sample-specific performance is adopted.
+- Exact-baseline CI receipts reused with explicit input equivalence; no fresh local fullQC or global ontology refresh. Three tests are skipped by native configuration.
+- No SSSOM/KGX compatibility assessment, scientific-input change, native status/history change, GitHub mutation or publication.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261009T090148Z-membrane_bioreactor
+kind: record
+repository: CultureBotAI/HabitatMech
+title: 'Membrane bioreactor: supported apparatus identity and superclass with source-detail
+  limitations'
+started_at: '2026-10-09T08:56:20Z'
+finished_at: '2026-10-09T09:01:48Z'
+reviewer:
+  identity: codex-gpt-5
+  kind: agent
+  model: gpt-5
+  independence: self_review
+  independence_basis: Same agent continuing the corpus review, with fresh current-state
+    capture and source checks; not independent approval.
+skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: One exact membrane-bioreactor record reviewed. Current ontology metadata,
+  the source classification and ITEM decision support its apparatus identity, definition,
+  acronym synonym and bioreactor superclass. Zero-counter omissions and two-node provenance
+  reproduce. No corrective finding established. Historical source-node/member detail
+  is unavailable; adjacent sludge and reactor records are not cleared by this assessment.
+source:
+  git_revision: f66fec904fffef115c04cf1e5d5d4fc59771fde2
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: curation/decisions.tsv
+    sha256: 0602cca13e6495da256a6f1cfd5897462f73f9739a729447862017d93c148efd
+    role: context
+  - path: curation/definition_source_label_exclusions.tsv
+    sha256: cc4da2e7e5e8750e6c023683014aa37a909230280f231eec5be7c71795340312
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: c741b54ba1c39872afaf090422d274a123e308f15eba480639c702eddab60a3d
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 3efdac153ccd40f518458a9dc5360e09dd660c3a42fbd06bfc57f3b2f707ece7
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: b59b9e800a918135e3915145d4d8098bb48dcea36a312b3004c594a57d221ae9
+    role: context
+  - path: data/habitats/RETIRED.tsv
+    sha256: 41beffc45aabdf304de633c21200b375d7f01d1cb2e036d4a026961d545a35e5
+    role: context
+  - path: data/habitats/engineered/bioreactor.yaml
+    sha256: c0a5f4d06130d949810c29b15f5874b4e9673b23dc188161d699412c2bea0c02
+    role: context
+  - path: data/habitats/engineered/membrane_bioreactor.yaml
+    sha256: 89d8964bce58cdeac9c2d3cc6db41e3cab4ef5ef6a6f2e312deaf115306c77fe
+    role: target
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: 36df8306394c06c352b73e0bf7b47a2858784cedac7389a24d0b78f593ece646
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: f7aa39ee762d94f1902d9f08f328cb897bc543e4e226057eb4770d24bfcc6eb5
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reports/yaml_record_review/20260923T122241Z-activated_sludge__f920b67e.md
+    sha256: b7d1ae386041b72a83d96f33c870d4d2274eb7fa975dfc82906fe1d1d28c62b9
+    role: context
+  - path: reports/yaml_record_review/20260925T175134Z-anaerobic_bioreactor.md
+    sha256: 502a8829e51a6d1068094e9acb5bb48f063ced491f061afd90d6c1b246b45c59
+    role: context
+  - path: reports/yaml_record_review/20260926T184452Z-produced_water_flow_back.md
+    sha256: 2b4f9a63a46af58281960d0f5fc9d98a568aab08d30be9d33e25aced33567926
+    role: context
+  - path: research/habitats/engineered/dissolved-organics-anaerobic-habitatmech-gold-bb0eb00ccb-deep-research-claude_code.md
+    sha256: 8d01ee8d97912ffeaa49d2091766972b09c91b18e181a9c9f1d866572e5fe7c6
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 52d2a22309a1f4a10728a663560bb4d918346c292221fd34139b99b4159d3fe5
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 92adf631fa099120a497ff7001473e659347d23ac9b418f04cd341ddad5d2a89
+    role: context
+targets:
+- target_id: ENVO:03600010
+  path: data/habitats/engineered/membrane_bioreactor.yaml
+  label: membrane bioreactor
+  record_class: HabitatRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Source-keyed GOLD.c770d96590 exact grounding and ITEM review.
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/gold_ecosystem_paths.tsv
+    role: Exact source path, node collapse and count provenance.
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_terms.tsv
+    role: Canonical ENVO definition and label.
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_subclass_edges.tsv
+    role: Ontology superclass evidence.
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Any later evidence-backed source definition.
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Guarded source-only hierarchy changes if justified.
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Validated resolution, merging, source predicate and lifecycle generation.
+scope:
+  description: Whole generated membrane_bioreactor.yaml and its sole source contribution.
+    Parent identity and search hits for adjacent records provide context only.
+  selection: ENVO:03600010, PATHS.tsv:930, source concept GOLD.c770d96590 and exact
+    MBR path.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - ENVO:03600010
+  exclusions:
+  - target: ENVO:00002123 and MBR descendants
+    reason: Parent identity excerpt and contextual search hits only; no whole-record
+      assessment or closure of their findings.
+checks:
+- check_id: capture
+  name: Current target and input capture
+  status: passed
+  required: true
+  command: env UV_CACHE_DIR=build/uv-cache uv run python scripts/record_review.py
+    inspect --targets /private/tmp/habitatmech-mbr-targets-20261009T085620Z.json --input
+    CLAUDE.md --input justfile --input docs/CURATION.md --input docs/HARMONIZATION.md
+    --input docs/RESEARCH.md --input docs/record-review-profile.md --input docs/record-reviews.md
+    --input .claude/skills/review-yaml-record/SKILL.md --input .claude/skills/curate-yaml-record/references/review-checklist.md
+    --input schema/record_review.yaml --input src/habitatmech/schema/habitatmech.yaml
+    --input src/habitatmech/seed.py --input curation/decisions.tsv --input curation/gold_parent_exclusions.tsv
+    --input curation/term_requests.tsv --input curation/term_requests_excluded.tsv
+    --input data/habitats/PATHS.tsv --input data/habitats/RETIRED.tsv --input data/raw/ontology_terms.tsv
+    --input data/raw/ontology_subclass_edges.tsv --input data/raw/isolation_source_groundings.tsv
+    --input data/raw/gold_ecosystem_paths.tsv --input data/raw/gold_path_biosamples.tsv
+    --input data/raw/gold_path_triads.tsv --input data/raw/gold_studies.tsv --input
+    data/raw/prego_habitats.tsv --input data/raw/prego_habitat_taxa.tsv --input data/raw/bacdive_isolation_sources.tsv
+    --input data/raw/bacdive_source_taxa.tsv --input data/raw/madin_habitats.tsv --input
+    data/raw/madin_habitat_taxa.tsv --input data/raw/environment_parameters.tsv --input
+    data/raw/MANIFEST.yaml --input data/raw/GOLD_MANIFEST.yaml --input curation/definition_source_label_exclusions.tsv
+    --input data/habitats/engineered/bioreactor.yaml --input conf/id_label_targets.yaml
+    --input reports/yaml_record_review/20260923T122241Z-activated_sludge__f920b67e.md
+    --input reports/yaml_record_review/20260925T175134Z-anaerobic_bioreactor.md --input
+    reports/yaml_record_review/20260926T184452Z-produced_water_flow_back.md --input
+    research/habitats/engineered/dissolved-organics-anaerobic-habitatmech-gold-bb0eb00ccb-deep-research-claude_code.md
+  exit_code: 0
+  summary: Captured 42 inputs at f66fec904fffef115c04cf1e5d5d4fc59771fde2. Added context
+    files preserve all earlier hashes; prior unfinished investigation is not a saved
+    review.
+  target_ids:
+  - ENVO:03600010
+- check_id: schema
+  name: Target LinkML validation
+  status: passed
+  required: true
+  command: env UV_CACHE_DIR=build/uv-cache just validate data/habitats/engineered/membrane_bioreactor.yaml
+  exit_code: 0
+  summary: No issues found.
+  target_ids:
+  - ENVO:03600010
+- check_id: strict
+  name: Target closed-schema validation
+  status: passed
+  required: true
+  command: env UV_CACHE_DIR=build/uv-cache just validate-strict data/habitats/engineered/membrane_bioreactor.yaml
+  exit_code: 0
+  summary: One file, zero errors.
+  target_ids:
+  - ENVO:03600010
+- check_id: route
+  name: Complete resolution and document reproduction
+  status: passed
+  required: true
+  command: "env UV_CACHE_DIR=build/uv-cache uv run python - <<'PY'\nfrom habitatmech\
+    \ import seed as s\nfrom dataclasses import asdict\nfrom pathlib import Path\n\
+    import json,yaml\nont=s.OntologyIndex(s.read_tsv('ontology_terms.tsv'),s.read_tsv('ontology_subclass_edges.tsv'));rows=s.read_tsv('gold_ecosystem_paths.tsv');mapping={}\n\
+    for r in s.read_tsv('isolation_source_groundings.tsv'):\n for key in (s.norm_label(r['subject_label']),s.norm_label(r['subject_label_normalized'])):\n\
+    \  if key:mapping.setdefault(key,r)\nd=s.load_decisions(s.DECISIONS_PATH)\nfor\
+    \ path in ['Engineered > Bioreactor > MBR (Membrane bioreactor)','Engineered >\
+    \ Bioreactor']:\n r=next(r for r in rows if r['canonical_path']==path);ident=s.mint('GOLD',path);auto=s.resolve_gold(r,ont,mapping,s.leaf_claimants(rows),s.composed_claimants(rows))\n\
+    \ print(json.dumps({'id':ident,'automatic':asdict(auto),'applied':asdict(s.apply_decision(auto,ident,d))}))\n\
+    c=next(c for c in s.build_corpus().concepts if c.identifier=='ENVO:03600010')\n\
+    assert s.build_document(c)==yaml.safe_load(Path('data/habitats/engineered/membrane_bioreactor.yaml').read_text())\n\
+    print('Complete document equal; source concepts',c.source_concepts,'reviewed',c.reviewed_sources)\n\
+    for ident in ['ENVO:03600010','ENVO:00002123']:\n print('TERM',ident,json.dumps(ont.terms.get(ident)),\
+    \ 'parents',sorted(ont.direct_parents(ident)))\nprint('LABEL CANDIDATES',[(i,r['label'])\
+    \ for i,r in ont.terms.items() if any(t in r['label'].casefold() for t in ['membrane\
+    \ bioreactor'])])\nPY"
+  exit_code: 0
+  summary: 'Full normalized mapping and claimant indexes: default gold_unmatched,
+    then ITEM GROUND to ENVO:03600010 with EXACT/skos:exactMatch. Whole document equals
+    disk; one source, one reviewed source. Parent path separately resolves to ENVO:00002123.'
+  target_ids:
+  - ENVO:03600010
+- check_id: raw
+  name: Fourteen-inventory exact-field scan
+  status: passed
+  required: true
+  command: "env UV_CACHE_DIR=build/uv-cache uv run python - <<'PY'\nimport csv,json\n\
+    from pathlib import Path\nterms={'ENVO:03600010','habitatmech:GOLD.c770d96590','Engineered\
+    \ > Bioreactor > MBR (Membrane bioreactor)','gold.ecosystem:5504','gold.ecosystem:7736'}\n\
+    for p in sorted(Path('data/raw').glob('*.tsv')):\n out=[]\n with p.open() as f:\n\
+    \  for n,r in enumerate(csv.DictReader(f,delimiter='\\t'),2):\n   vals=[v for\
+    \ x in r.values() for v in (x if isinstance(x,list) else [x]) if v]\n   if any(v\
+    \ in terms or terms.intersection(v.split('|')) for v in vals):out.append({'line':n,'row':r})\n\
+    \ print(p.name,json.dumps(out))\nPY"
+  exit_code: 0
+  summary: Only GOLD path, ontology term and subclass edge match the exact path, mint,
+    CURIE or two source nodes. No direct target study, biosample, triad, parameter
+    or taxon row in these inventories.
+  target_ids:
+  - ENVO:03600010
+- check_id: local_search
+  name: Ignored-inclusive maintained-input and prior-review search
+  status: passed
+  required: true
+  command: rg --no-ignore --hidden -n -i 'ENVO:03600010|GOLD.c770d96590|membrane_bioreactor|MBR
+    \(Membrane bioreactor\)' curation history research conf tests docs reviews reports/yaml_record_review
+    data/habitats/PATHS.tsv data/habitats/RETIRED.tsv
+  exit_code: 0
+  summary: Decision and path lock found; other hits concern adjacent records. No target-specific
+    definition, exclusion, causal overlay, native session history or earlier individual
+    MBR review in these named bounds. Initial attempt also named nonexistent root
+    yaml_record_review and returned2; successful rerun uses the actual reports/yaml_record_review
+    root.
+  target_ids:
+  - ENVO:03600010
+- check_id: external
+  name: Current primary structured source checks
+  status: passed
+  required: false
+  command: "env UV_CACHE_DIR=build/uv-cache uv run python - <<'PY'\nimport urllib.request,json,hashlib,io\n\
+    from openpyxl import load_workbook\nu='https://gold.jgi.doe.gov/download?mode=ecosystempaths';b=urllib.request.urlopen(u,timeout=45).read();w=load_workbook(io.BytesIO(b),read_only=True,data_only=True);s=w['site\
+    \ data'];s.reset_dimensions()\nprint('WORKBOOK',len(b),hashlib.sha256(b).hexdigest())\n\
+    for n,r in enumerate(s.iter_rows(values_only=True),1):\n if 'MBR (Membrane bioreactor)'\
+    \ in r:print(n,r)\nfor ident in ['ENVO:03600010','ENVO:00002123']:\n u='https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms?obo_id='+ident.replace(':','%3A');b=urllib.request.urlopen(u,timeout=45).read();j=json.loads(b)\n\
+    \ print('ONTOLOGY',ident,len(b),hashlib.sha256(b).hexdigest())\n for t in j.get('_embedded',{}).get('terms',[]):\n\
+    \  print(json.dumps({k:t.get(k) for k in ['obo_id','label','description','is_obsolete','_links']}))\n\
+    \  if ident=='ENVO:03600010':\n   u=t['_links']['parents']['href'].replace('http://','https://',1);b=urllib.request.urlopen(u,timeout=45).read();p=json.loads(b)\n\
+    \   print('PARENTS',u,len(b),hashlib.sha256(b).hexdigest(),[(x.get('obo_id'),x.get('label'))\
+    \ for x in p.get('_embedded',{}).get('terms',[])])\nPY"
+  exit_code: 0
+  summary: GOLD workbook and three OLS responses retrieved and parsed. Workbook default-style
+    warning is non-fatal; reset_dimensions exposes all rows.
+  target_ids:
+  - ENVO:03600010
+- check_id: corpus
+  name: Full corpus reproduction
+  status: passed
+  required: true
+  command: env UV_CACHE_DIR=build/uv-cache just verify-corpus
+  exit_code: 0
+  summary: 3208 expected and found; zero missing, extra or differing records.
+  target_ids:
+  - ENVO:03600010
+- check_id: history
+  name: Native history validation
+  status: passed
+  required: true
+  command: env UV_CACHE_DIR=build/uv-cache just validate-history
+  exit_code: 0
+  summary: 217 valid history records.
+  target_ids:
+  - ENVO:03600010
+- check_id: provenance
+  name: Raw provenance
+  status: passed
+  required: true
+  command: env UV_CACHE_DIR=build/uv-cache just provenance-check
+  exit_code: 0
+  summary: 14 committed inventories and two GOLD sources current.
+  target_ids:
+  - ENVO:03600010
+- check_id: integrity
+  name: Parent, status and reference regressions
+  status: passed
+  required: true
+  command: env UV_CACHE_DIR=build/uv-cache uv run pytest -q tests/test_corpus_integrity.py
+    -k 'parent or reviewed_records or history or causal_edges_reference'
+  exit_code: 0
+  summary: 6 passed, 33 deselected. These checks do not establish scientific meaning.
+  target_ids:
+  - ENVO:03600010
+- check_id: ci_qc
+  name: Exact-baseline full QC receipt
+  status: passed
+  required: true
+  command: gh run view 37907085290 --log | rg 'passed|skipped|history record|files
+    scanned|corpus reproduces|All HabitatMech quality gates'
+  exit_code: 0
+  summary: 'Completed SUCCESS at exact captured f66fec904: 639 passed, 3 skipped,
+    four dedicated contract tests, 217 histories, 3208 closed-schema records and all
+    native gates. No fresh local full-QC run claimed.'
+  target_ids:
+  - ENVO:03600010
+- check_id: ci_labels
+  name: Exact-baseline label-correspondence receipt
+  status: passed
+  required: true
+  command: gh run view 37907085295 --json status,conclusion,headSha,url
+  exit_code: 0
+  summary: Completed SUCCESS at exact captured base; configured adapters and exceptions
+    do not prove every current ontology axiom.
+  target_ids:
+  - ENVO:03600010
+- check_id: unchanged
+  name: Scientific inputs unchanged from checked base
+  status: passed
+  required: true
+  command: git diff --exit-code f66fec904fffef115c04cf1e5d5d4fc59771fde2 -- data curation
+    src scripts tests docs conf schema CLAUDE.md justfile
+  exit_code: 0
+  summary: No differences. New review artifacts are checked separately.
+  target_ids:
+  - ENVO:03600010
+- check_id: node_detail
+  name: Original source node and members
+  status: unavailable
+  required: false
+  target_ids:
+  - ENVO:03600010
+  summary: Fresh browser attempt at GOLD ecosystem5504 is inaccessible. Workbook confirms
+    the MBR category through descendants, not the historical5504/7736 nodes or original
+    sample membership.
+- check_id: molecular
+  name: Causal and expression adapters
+  status: not_applicable
+  required: false
+  target_ids:
+  - ENVO:03600010
+  summary: No target causal graph, gene, regulator, pathway, taxon or transcriptomics
+    claim. No target overlay found in the ignored-inclusive search; iModulonDB is
+    not applicable.
+- check_id: draft_validation
+  name: Initial structured draft validation
+  status: failed
+  required: false
+  target_ids:
+  - ENVO:03600010
+  command: env UV_CACHE_DIR=build/uv-cache uv run python scripts/record_review.py
+    validate /private/tmp/habitatmech-mbr-review-20261009T090043Z-membrane_bioreactor.json
+  exit_code: 1
+  summary: Search evidence had bounded prose in its locator but lacked the required
+    search_scope attribute. Corrected the unsaved draft; scientific assessment unchanged.
+- check_id: premature_save
+  name: Refused initial save attempt
+  status: failed
+  required: false
+  target_ids:
+  - ENVO:03600010
+  command: env UV_CACHE_DIR=build/uv-cache uv run python scripts/record_review.py
+    save --content /private/tmp/habitatmech-mbr-review-20261009T090043Z-membrane_bioreactor.json
+  exit_code: 1
+  summary: Save was invoked before the failed validation had been handled and independently
+    rejected the same missing search_scope field. No bundle was written. Subsequent
+    successful validation must complete before retrying save.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/habitats/engineered/membrane_bioreactor.yaml
+  locator: Whole YAML and both generated history events
+  accessed_at: '2026-10-09T09:00:43Z'
+  support: supports
+  summary: ENGINEERED, EXACT and REVIEWED; one exact GOLD attestation, one acronym
+    expansion synonym, ENVO definition and one bioreactor parent. No count/unit, biological,
+    mechanism or performance claim is asserted.
+- evidence_id: source
+  kind: database
+  reference: data/raw/gold_ecosystem_paths.tsv
+  locator: Row1189; exact-field and pipe-member scan of all14rawTSVs
+  accessed_at: '2026-10-09T09:00:43Z'
+  support: supports
+  summary: Depth3 MBR category collapses nodes5504|7736. All frozen organism,study,biosample,total
+    counters are zero, so omitted count/unit and the two-node note are faithful. Descendant
+    samples and parent604organisms are not target observations.
+- evidence_id: decision
+  kind: record_content
+  reference: curation/decisions.tsv
+  locator: Row1110; PATHS.tsv:930; actual resolve_gold/apply_decision/build_document
+  accessed_at: '2026-10-09T09:00:43Z'
+  support: supports
+  summary: ITEM GROUND overrides unmatched lexical resolution to ENVO:03600010. One
+    contributing source and one reviewed source justify REVIEWED. The predicate compares
+    the source concept with its exact ontology record identity; no narrower-parent
+    endpoint route is present.
+- evidence_id: ontology
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms?obo_id=ENVO%3A03600010
+  locator: Active term, label and definition; local ontology_terms.tsv:10053; response
+    SHA256648337f1fe6beea634206a1b8cd6d13a1da996edd8a880bd29dcd515ac631f9e
+  accessed_at: '2026-10-09T09:00:43Z'
+  support: supports
+  summary: Current generic membrane-bioreactor term agrees with the target and does
+    not add an anaerobic, sludge-only or wastewater-only identity restriction.
+- evidence_id: parent
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_03600010/parents
+  locator: Exact parents API; local subclass row8454; bioreactor.yaml lines1-32 only
+  accessed_at: '2026-10-09T09:00:43Z'
+  support: supports
+  summary: Sole current superclass is ENVO:00002123; parents response SHA25648c19467fdda808dc6d3aa6e4e83afb99214cf4dea65c49465baa8bd565143eb.
+    Active parent definition describes a unit sustaining organisms and their metabolism;
+    term response SHA2568f7c3379944640eb70f93693d820615909a14836e136ebae89b43bb6a196efc8.
+    The full parent record was not reviewed.
+- evidence_id: gold
+  kind: database
+  reference: https://gold.jgi.doe.gov/download?mode=ecosystempaths
+  locator: Workbook site data rows105-111; in-memory read-only parsing
+  accessed_at: '2026-10-09T09:00:43Z'
+  support: supports
+  summary: The current workbook retains MBR under Bioreactor via seven descendant
+    classifications. This confirms category context, not historical parent node IDs
+    or target counts. 84174bytes; SHA2563933e5f0664915c1bbfa00212e17d013da360fb33dd52e509254050813135396.
+- evidence_id: epa
+  kind: primary_source
+  reference: https://www.epa.gov/sites/production/files/2019-08/documents/membrane_bioreactor_fact_sheet_p100il7g.pdf
+  locator: Introduction p1 lines10-22 and membrane-location prose p4 lines175-179;
+    no figure-specific claim
+  accessed_at: '2026-10-09T09:00:43Z'
+  support: context_only
+  summary: EPA's technical fact sheet uses MBR for a biological reactor combined with
+    membrane filtration and discusses immersed or separate-vessel configurations.
+    This supports apparatus identity and acronym usage, not universal composition,
+    operating conditions, costs or performance for the GOLD class.
+- evidence_id: scope
+  kind: search
+  reference: curation
+  locator: Ignored-inclusive exact CURIE/mint/slug/label search across curation,history,research,conf,tests,docs,reviews,reports/yaml_record_review
+    and PATHS/RETIRED
+  accessed_at: '2026-10-09T09:00:43Z'
+  support: context_only
+  summary: Only the target decision/path lock and contextual neighboring-record hits
+    were recovered. Child-report and research excerpts were located, not fully reassessed;
+    no parent/child finding is inherited or closed. Absence claims are bounded to
+    these local roots.
+  search_scope: Exact ENVO:03600010, GOLD.c770d96590, membrane_bioreactor and MBR
+    (Membrane bioreactor) searches across curation, history, research, conf, tests,
+    docs, reviews, reports/yaml_record_review, PATHS.tsv and RETIRED.tsv; rg --no-ignore
+    --hidden includes ignored and hidden files. Search-hit excerpts in neighboring
+    reports are context, not complete target reviews.
+- evidence_id: unavailable
+  kind: database
+  reference: https://gold.jgi.doe.gov/ecosystem/5504
+  locator: Fresh browser retrieval failure
+  accessed_at: '2026-10-09T09:00:43Z'
+  support: unknown
+  summary: Original member details are not independently recovered. An inaccessible
+    URL is not evidence that the source node is invalid or that the habitat lacks
+    microbes.
+- evidence_id: gates
+  kind: validation
+  reference: https://github.com/CultureBotAI/HabitatMech/actions/runs/37907085290
+  locator: Exact captured revision, label run37907085295 and fresh local checks
+  accessed_at: '2026-10-09T09:00:43Z'
+  support: supports
+  summary: Available required gates pass on unchanged scientific inputs. Deterministic
+    success is not independent scientific endorsement.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Generic membrane-bioreactor apparatus
+  outcome: supported
+  summary: The source's explicit acronym expansion, generic Bioreactor path and current
+    ontology definition denote a membrane-equipped bioreactor, not sludge or the membrane
+    material alone.
+  target_ids:
+  - ENVO:03600010
+  evidence_ids:
+  - record
+  - source
+  - ontology
+  - epa
+- assessment_id: grounding
+  area: grounding
+  topic: Item-level exact identity
+  outcome: supported
+  summary: The explicit ITEM decision supports exact identity; no narrower contextual
+    modifier in the source category is erased. The default lexical miss was correctly
+    overridden.
+  target_ids:
+  - ENVO:03600010
+  evidence_ids:
+  - decision
+  - ontology
+  - gold
+- assessment_id: hierarchy
+  area: graph
+  topic: Bioreactor is strictly broader
+  outcome: supported
+  summary: Independent current ENVO parents, committed subclass edge and GOLD parent
+    path agree. This is a true apparatus superclass, not merely a containing environment.
+  target_ids:
+  - ENVO:03600010
+  evidence_ids:
+  - parent
+  - source
+  - decision
+- assessment_id: alias
+  area: nomenclature
+  topic: Acronym expansion
+  outcome: supported
+  summary: MBR (Membrane bioreactor) expresses the full term rather than an unqualified
+    broader name; exact synonym scope is coherent for this source class.
+  target_ids:
+  - ENVO:03600010
+  evidence_ids:
+  - record
+  - source
+  - epa
+- assessment_id: counts
+  area: quantity
+  topic: Zero direct assertions
+  outcome: supported
+  summary: Count/unit omission and two-node provenance reproduce. No parent or descendant
+    counts, operating parameters or taxa are imported.
+  target_ids:
+  - ENVO:03600010
+  evidence_ids:
+  - source
+  - record
+- assessment_id: lifecycle
+  area: consistency
+  topic: Native status and audit
+  outcome: supported
+  summary: One ITEM-reviewed source gives REVIEWED; GROUND and seed events reproduce
+    without promoting an unreviewed merged contributor.
+  target_ids:
+  - ENVO:03600010
+  evidence_ids:
+  - decision
+  - record
+- assessment_id: complete
+  area: completeness
+  topic: No unsupported biological enrichment
+  outcome: supported
+  summary: Optional taxa,parameters,graphs,citations and datasets are not mandatory
+    for this apparatus class, and the direct raw scan supplies none for the exact
+    source bin.
+  target_ids:
+  - ENVO:03600010
+  evidence_ids:
+  - record
+  - source
+  - scope
+- assessment_id: limits
+  area: scope
+  topic: Historical source membership
+  outcome: unknown
+  summary: Current classification does not verify original5504/7736member metadata.
+    No specific source-study mechanism or sample characterization is endorsed.
+  target_ids:
+  - ENVO:03600010
+  evidence_ids:
+  - gold
+  - unavailable
+- assessment_id: schema
+  area: schema
+  topic: Reproduction and owners
+  outcome: supported
+  summary: Target, corpus, history and source validation pass; future changes belong
+    in maintained decisions/inventories rather than generated YAML.
+  target_ids:
+  - ENVO:03600010
+  evidence_ids:
+  - gates
+  - decision
+findings: []
+actions: []
+limitations:
+- One exact target reviewed; completion of the full3208-record objective remains unproven.
+- Original GOLD node/member details unavailable. Current workbook verifies the MBR
+  classification through descendants, not historical5504/7736 rows or counts.
+- Only the parent identity/definition excerpt was read. Neighboring source scopes,
+  counts, graphs and historical findings remain outside this target review.
+- EPA technical prose supplies contextual apparatus/acronym support only. No figure,
+  operating recommendation, regulatory claim or sample-specific performance is adopted.
+- Exact-baseline CI receipts reused with explicit input equivalence; no fresh local
+  fullQC or global ontology refresh. Three tests are skipped by native configuration.
+- No SSSOM/KGX compatibility assessment, scientific-input change, native status/history
+  change, GitHub mutation or publication.
+tags:
+- habitat
+- engineered
+- membrane-bioreactor
+- GOLD
+```

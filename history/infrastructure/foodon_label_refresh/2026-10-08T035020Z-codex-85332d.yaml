@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: conf/ontology_label_refresh.yaml
+  slug: foodon_label_refresh
+session:
+  id: 2026-10-08T035020Z-codex-85332d
+  timestamp: '2026-10-08T03:50:20Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1690
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - provenance
+  - extraction
+  summary: Add pinned source-verified canonical-label refresh and replay guards
+  details: Added a reviewed two-term plan for official FOODON cd73540243a84bcd511a500d9a497d12d7dc02f6,
+    verified the downloaded RDF/XML hash b897bf64c1b265c422db9ee01e1235c10c0b809e7f02326ef810a52068347edf
+    and active unambiguous labels, and generated a receipt plus exactly two label-cell updates.
+    Other ontology fields, raw counts and source timestamps remain from the original snapshot.
+    The extractor replays guarded updates and records local inputs; provenance validates the
+    receipt, plan and resulting labels. This is not a full ontology or typed-synonym refresh.
+    Tests reject bad hashes, unpinned sources, ambiguous/missing/obsolete targets, missing
+    and duplicate inventory terms, unexpected drift and receipt tampering; idempotence and
+    unchanged other fields are tested. A separate decision handles changed Pastry scope. Source
+    reproduction check, lint, provenance and focused tests passed; full publication gates
+    follow.

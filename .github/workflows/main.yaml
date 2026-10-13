@@ -19,6 +19,8 @@ concurrency:
 jobs:
   qc:
     runs-on: ubuntu-latest
+    env:
+      RECORD_REVIEW_BASE: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event_name == 'merge_group' && github.event.merge_group.base_sha || github.event_name == 'push' && github.event.before }}
 
     steps:
       - name: Check out repository
@@ -41,6 +43,12 @@ jobs:
       # Keep one executable definition of QC. This includes lint, tests,
       # closed-schema validation, corpus/site/redirect/term-request drift
       # checks, documentation statistics and the corpus report.
+      - name: Validate structured review contract
+        run: |
+          test -n "$RECORD_REVIEW_BASE"
+          git cat-file -e "$RECORD_REVIEW_BASE^{commit}"
+          uv run pytest -q tests/test_record_review_contract.py
+
       - name: Run the authoritative quality gate
         run: uv run python scripts/run_qc.py
 

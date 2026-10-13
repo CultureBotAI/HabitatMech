@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002131
-- ENVO:01000617
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4177
@@ -19,3 +18,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-12T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution ENVO:01000617 for habitatmech:GOLD.7b556045ad
+    (Environmental > Aquatic > Freshwater > Lentic > Epilimnion). ITEM hierarchy assessment:
+    https://github.com/CultureBotAI/HabitatMech/issues/1987 (20261012T001806Z-epilimnion__7dae03ad).
+    The lentic-source epilimnion is a layer, not the whole lentic water body. The
+    independent epilimnion genus is plausible; later reservoir/lake descriptions do
+    not prove precise stratification for each original isolate. Preserve its mint
+    and flag the mapping endpoint contract. Exclude only this guarded GOLD source-parent
+    contribution. Preserve independent parents, frozen source identity/counts/units
+    or omissions and native lifecycle. Later examples do not reconstruct frozen membership;
+    shared synonym and endpoint issues remain separate.'

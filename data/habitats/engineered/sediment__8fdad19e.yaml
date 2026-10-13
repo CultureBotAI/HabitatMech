@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:00002007
-- habitatmech:GOLD.a904b6974e
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8016
@@ -18,3 +17,18 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-10T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.a904b6974e
+    for habitatmech:GOLD.f18dafe21d (Engineered > Artificial ecosystem > Aquaculture
+    > Crustaceans raceway > Sediment). Reviewed hierarchy exclusion (#1877; structured
+    review 20261010T200656Z-sediment__8fdad19e F1): Crustacean-raceway sediment denotes
+    deposited material in a flow-through culture setting. FAO distinguishes a raceway
+    structure from sedimentation within it; no raceway dimensions, hydraulic regime
+    or organism physiology is a property of this whole sediment class. The exact GOLD
+    path supplies context, while official ENVO:00002007 supplies the independent sediment-material
+    genus. Exclude only this source-parent contribution; preserve the qualified mint,
+    node/path, frozen ORGANISM counts or zero omission, NARROW/SEEDED state and unrelated
+    claims. No definition, taxon or parameter is inferred. Shared mapping endpoint
+    issue #1398 remains open.'
