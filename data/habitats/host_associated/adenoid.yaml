@@ -1,7 +1,7 @@
-identifier: BTO:0000777
-label: adenoid
-definition: An enlarged mass of lymphoid tissue at the back of the pharynx characteristically
-  obstructing breathing.
+identifier: BTO:0004715
+label: nasopharyngeal tonsil
+definition: The human palatine tonsils and the nasopharyngeal tonsil are lymphoepithelial
+  tissues located in strategic areas of the oropharynx and nasopharynx.
 definition_source: BTO
 habitat_category: HOST_ASSOCIATED
 grounding_status: EXACT
@@ -11,7 +11,6 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: GOLD
 parent_habitats:
-- BTO:0000753
 - BTO:0001387
 source_attestations:
 - source: GOLD
@@ -20,13 +19,20 @@ source_attestations:
   source_path: 'Host-associated > Mammals: Human > Lymphatic system > Tonsils > Adenoid/Pharyngeal'
   mapping_predicate: skos:exactMatch
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: GROUND
-  changes: 'Grounded to BTO:0000777 ''adenoid'' (EXACT). Slash alternative; the pharyngeal
-    tonsil is the adenoid. Path: Host-associated > Mammals: Human > Lymphatic system
-    > Tonsils > Adenoi (source concept habitatmech:GOLD.b21e68a415)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: GROUND
+  changes: 'Grounded to BTO:0004715 ''nasopharyngeal tonsil'' (EXACT). ITEM anatomy
+    review #2133 and provenance correction #2134: the pharyngeal/adenoid source denotes
+    nasopharyngeal tonsil anatomy. Adopt active, already-vendored BTO:0004715 nasopharyngeal
+    tonsil instead of BTO:0000777 adenoid, whose definition requires enlarged obstructive
+    tissue. NLM D000234/M0000365 and UBERON:0001732 corroborate the anatomy without
+    obligatory hypertrophy. BTO:0001387 tonsil is the verified genus. Preserve the
+    verbatim GOLD node/path and zero-count omission. This is a source-specific mapping
+    correction, not a silent ontology refresh. https://id.nlm.nih.gov/mesh/D000234
+    https://purl.obolibrary.org/obo/UBERON_0001732 Path: Host-associated > Mammals:
+    Human > Lymphatic system > Tonsils > Adenoid/Pharyngeal (source concept habitatmech:GOLD.b21e68a415)'

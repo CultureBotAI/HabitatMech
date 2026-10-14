@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: adipose_tissue__9969df64
+session:
+  id: 2026-10-14T220119Z-codex-gpt-5-94d8a7
+  timestamp: '2026-10-14T22:01:19Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2139
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  - definition
+  - synonyms
+  summary: Repair reviewed source scope for adipose_tissue__9969df64
+  details: 'Review #2139: adipose tissue is a connective tissue, not the entire integumental
+    system. UBERON:0001013 and UBERON:0002416 definitions distinguish these entities. Exclude
+    only the exact GOLD context-parent contribution; preserve host-scoped minted identity,
+    generic adipose genus, verbatim path/node IDs and ORGANISM count semantics. https://purl.obolibrary.org/obo/UBERON_0001013
+    https://purl.obolibrary.org/obo/UBERON_0002416 Required checks: dry seed, inspected canary,
+    exact full-corpus counterfactual, native validators, generated mappings/site and final
+    protected QC. These checks are not predeclared successful. Append-only history and saved
+    reviews remain unchanged.'

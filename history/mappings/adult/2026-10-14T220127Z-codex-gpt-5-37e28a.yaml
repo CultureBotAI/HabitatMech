@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: adult
+session:
+  id: 2026-10-14T220127Z-codex-gpt-5-37e28a
+  timestamp: '2026-10-14T22:01:27Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2141
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  - definition
+  - synonyms
+  summary: Repair reviewed source scope for adult
+  details: 'ITEM host-stage review #2141, also resolving #2142: PREGO adult is interpreted
+    as the environment associated with an organism at its adult stage, not as an organism-form
+    identity. Keep the stable source mint and BTO:0001043 adult only as a related stage xref.
+    Do not infer a host species, body site, resident microbiome or characteristic taxa from
+    the top-25 associations. Preserve original PREGO BTO source ID, 378 TAXON count, scores,
+    ranks and candidate pools; 387 direct assertions are a different source metric. The authored
+    definition supplies ENVO:01001000 as environment genus, not BTO:0000284 organism form.
+    https://purl.obolibrary.org/obo/BTO_0001043 https://purl.obolibrary.org/obo/ENVO_01001000
+    Required checks: dry seed, inspected canary, exact full-corpus counterfactual, native
+    validators, generated mappings/site and final protected QC. These checks are not predeclared
+    successful. Append-only history and saved reviews remain unchanged.'
