@@ -12,7 +12,6 @@ synonyms:
   source: GOLD
 parent_habitats:
 - FOODON:00002456
-- FOODON:03530206
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5282
@@ -40,3 +39,15 @@ curation_history:
   changes: 'Retained GOLD label ''Bread production'' as RELATED_SYNONYM: a CLOSE source
     mapping does not establish exact lexical equivalence. Independent ontology synonyms
     and verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution FOODON:03530206 for habitatmech:GOLD.b37828b7b3
+    (Engineered > Food production > Bread production). Scoped hierarchy correction
+    https://github.com/CultureBotAI/HabitatMech/issues/2042: under the current bread-food-product
+    identity, food production is a process rather than a strictly broader food material.
+    Exclude only this source-context edge, preserving the baked-food ontology genus,
+    three nodes, 380 ORGANISM assertions and existing CLOSE/REVIEWED status. This
+    does not endorse or resolve the separate unsupported source-to-product identity
+    tracked in https://github.com/CultureBotAI/HabitatMech/issues/2044; reassess this
+    exclusion when that identity changes. Original study memberships were unavailable.'

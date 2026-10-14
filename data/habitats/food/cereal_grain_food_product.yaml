@@ -9,7 +9,6 @@ synonyms:
   source: GOLD
 parent_habitats:
 - FOODON:00001173
-- FOODON:03530206
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5927
@@ -39,3 +38,14 @@ curation_history:
   changes: 'Retained GOLD label ''Grains/Grain products'' as RELATED_SYNONYM: a CLOSE
     source mapping does not establish exact lexical equivalence. Independent ontology
     synonyms and verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution FOODON:03530206 for habitatmech:GOLD.c25f588dad
+    (Engineered > Food production > Grains/Grain products). Food record review https://github.com/CultureBotAI/HabitatMech/issues/2042:
+    cereal-grain foods are material, not a planned food-production process. Preserve
+    the plant-seed-food genus, conservative CLOSE mapping, RELATED source alias, ITEM
+    status, three nodes and omitted organism counter. The pinned ontology includes
+    unprocessed cereal grain under the food-product class; do not infer a raw-grain
+    exclusion from its label. The separate 71 bulk biosamples do not replace organism
+    assertions.'

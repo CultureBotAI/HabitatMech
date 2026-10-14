@@ -52,7 +52,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="http://purl.obolibrary.org/obo/FOODON_00001173">plant seed food product</a>      <code class="curie">FOODON:00001173</code></li>
-  <li><a href="../habitats/food-production-foodon-03530206.html">food production</a>      <code class="curie">FOODON:03530206</code></li>
 </ul>
 
 
@@ -75,6 +74,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">SOURCE_SYNONYM_SCOPED</span>
     <span class="meta">2026-10-07 · seed_from_sources</span>
     <p>Retained GOLD label &#39;Grains/Grain products&#39; as RELATED_SYNONYM: a CLOSE source mapping does not establish exact lexical equivalence. Independent ontology synonyms and verbatim attestations are preserved (#1459).</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-14 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution FOODON:03530206 for habitatmech:GOLD.c25f588dad (Engineered &gt; Food production &gt; Grains/Grain products). Food record review <a href="https://github.com/CultureBotAI/HabitatMech/issues/2042:" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2042:</a> cereal-grain foods are material, not a planned food-production process. Preserve the plant-seed-food genus, conservative CLOSE mapping, RELATED source alias, ITEM status, three nodes and omitted organism counter. The pinned ontology includes unprocessed cereal grain under the food-product class; do not infer a raw-grain exclusion from its label. The separate 71 bulk biosamples do not replace organism assertions.</p>
   </li>
 </ol>
 
