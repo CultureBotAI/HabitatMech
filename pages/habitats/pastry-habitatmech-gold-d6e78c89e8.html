@@ -49,10 +49,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 </table>
 </div>
 
-<h2>Broader habitats</h2>
-<ul class="plain">
-  <li><a href="../habitats/food-production-foodon-03530206.html">food production</a>      <code class="curie">FOODON:03530206</code></li>
-</ul>
 
 
 
@@ -66,6 +62,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">CONFIRM_UNGROUNDED</span>
     <span class="meta">2026-10-08 · codex-gpt-5</span>
     <p>Confirmed UNGROUNDED: no ontology term fits this concept. Scope reassessment (#1690): GOLD names generic Pastry within food production, with nodes 5942/5943/5944 and 20 separate BIOSAMPLE observations; its multi-path study Gs0154282 supplies no wheat-specific constraint. Pinned FOODON cd73540243a84bcd511a500d9a497d12d7dc02f6 identifies FOODON:03315272 as &#39;wheat pastry&#39;, with wheat a defining ingredient and the wheat-based parent FOODON:00002350. Reject that narrower identity and its wheat-specific hierarchy, retain the generic food habitat under its minted source identity, and do not invent a flour composition or definition. UNGROUNDED means no verified identity in the committed slice, not that current FOODON lacks generic pastry candidates: the inspected release distinguishes generic pastry, pastry dough and pastry-containing products, which need a separately sourced scope comparison and governed term import. Original GOLD category pages were unavailable; no accession-to-recipe crosswalk or exact match to those candidates is claimed. Path: Engineered &gt; Food production &gt; Pastry (source concept habitatmech:GOLD.d6e78c89e8)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-14 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution FOODON:03530206 for habitatmech:GOLD.d6e78c89e8 (Engineered &gt; Food production &gt; Pastry). Scientific review #2084 (20261014T155020Z-pastry F1): pastry material is not a subtype of the planned production process FOODON:03530206 in pinned FoodOn cd73540243a84bcd511a500d9a497d12d7dc02f6. Exclude only the immediate source-context contribution; preserve generic native identity, nodes5942/5943/5944, omitted organism count/unit and UNGROUNDED/REVIEWED status. Do not reinstate the rejected wheat-only identity. Current generic pastry candidates and the term-request exclusion remain governed by open #1694.</p>
   </li>
 </ol>
 
