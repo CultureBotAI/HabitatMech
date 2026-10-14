@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: pastry
+session:
+  id: 2026-10-14T155327Z-codex-gpt-5-e19417
+  timestamp: '2026-10-14T15:53:27Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2084
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude unsupported immediate GOLD parent from Pastry
+  details: Exact source-path/expected-parent exclusion based on 20261014T155020Z-pastry F1.
+    The sole parent FOODON:03530206 is a process, not a pastry-material genus. Removing it
+    must not reinstate the rejected wheat identity or erase the generic pastry candidate follow-up.
+    Preserve source identity, count/unit, native status and independent parents. Dry seed,
+    canary, exact five-record counterfactual regression and full regenerated-product checks
+    are required; this event does not predeclare their success. Pit-mud category and shared
+    raw-milk mapping endpoints remain separate follow-ups.

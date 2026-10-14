@@ -152,7 +152,7 @@ def test_current_foodon_labels_do_not_make_generic_pastry_wheat_only():
     assert pastry["habitat_category"] == "FOOD"
     assert pastry["grounding_status"] == "UNGROUNDED"
     assert pastry["mapping_status"] == "REVIEWED"
-    assert pastry["parent_habitats"] == ["FOODON:03530206"]
+    assert pastry.get("parent_habitats", []) == []
     assert "synonyms" not in pastry
     assert "definition" not in pastry
     assert pastry["source_attestations"] == [{
@@ -227,6 +227,6 @@ def test_foodon_refresh_changes_only_the_two_intended_records(monkeypatch):
     old_source = old["source_attestations"][0].copy()
     assert old_source.pop("mapping_predicate") == "skos:exactMatch"
     assert new["source_attestations"] == [old_source]
-    assert new["parent_habitats"] == [
+    assert new.get("parent_habitats", []) == [
         p for p in old["parent_habitats"] if p != "FOODON:00002350"
     ]

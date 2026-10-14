@@ -17,7 +17,6 @@ synonyms:
   source: FOODON
 parent_habitats:
 - FOODON:00001172
-- FOODON:03530206
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5939
@@ -45,3 +44,14 @@ curation_history:
   changes: 'Retained GOLD label ''Nuts'' as RELATED_SYNONYM: a CLOSE source mapping
     does not establish exact lexical equivalence. Independent ontology synonyms and
     verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution FOODON:03530206 for habitatmech:GOLD.84d2657848
+    (Engineered > Food production > Nuts). Scientific review #2083 (20261014T155015Z-nut_whole_or_pieces
+    F1): pinned FoodOn cd73540243a84bcd511a500d9a497d12d7dc02f6 defines FOODON:03530206
+    as a planned production process, not a nut-material genus. Exclude only this immediate
+    GOLD contribution; retain independent FOODON:00001172, ontology identity/definition/synonyms,
+    RELATED source alias, nodes5939/5940/5941, 80 ORGANISM assertions and CLOSE/REVIEWED
+    status. Separate BIOSAMPLE counts are not additive and original member composition
+    remains unavailable.'

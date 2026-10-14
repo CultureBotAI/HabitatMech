@@ -3,8 +3,6 @@ label: Pit mud
 habitat_category: FOOD
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.0d60ee305c
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5633
@@ -26,3 +24,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.0d60ee305c
+    for habitatmech:GOLD.30043c5bd8 (Engineered > Food production > Fermentation cellar
+    > Pit mud). Scientific review #2085 (20261014T155024Z-pit_mud F1): pit-lining
+    mud is material, not a kind of its containing Fermentation cellar. PMID:34160281
+    / DOI:10.1128/AEM.00885-21 distinguishes pit mud from grain substrates and describes
+    wall/bottom mud sampling; it does not reconstruct GOLD members. Exclude only this
+    immediate contribution; preserve source mint, nodes5633/5634, 22 ORGANISM assertions
+    and UNGROUNDED/SEEDED status. Do not merge distinct habitatmech:GOLD.cdf0825f85
+    or add an unverified genus. FOOD category remains open in #2086.'

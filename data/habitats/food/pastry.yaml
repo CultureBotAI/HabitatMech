@@ -3,8 +3,6 @@ label: Pastry
 habitat_category: FOOD
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
-parent_habitats:
-- FOODON:03530206
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5942
@@ -33,3 +31,14 @@ curation_history:
     comparison and governed term import. Original GOLD category pages were unavailable;
     no accession-to-recipe crosswalk or exact match to those candidates is claimed.
     Path: Engineered > Food production > Pastry (source concept habitatmech:GOLD.d6e78c89e8)'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution FOODON:03530206 for habitatmech:GOLD.d6e78c89e8
+    (Engineered > Food production > Pastry). Scientific review #2084 (20261014T155020Z-pastry
+    F1): pastry material is not a subtype of the planned production process FOODON:03530206
+    in pinned FoodOn cd73540243a84bcd511a500d9a497d12d7dc02f6. Exclude only the immediate
+    source-context contribution; preserve generic native identity, nodes5942/5943/5944,
+    omitted organism count/unit and UNGROUNDED/REVIEWED status. Do not reinstate the
+    rejected wheat-only identity. Current generic pastry candidates and the term-request
+    exclusion remain governed by open #1694.'
