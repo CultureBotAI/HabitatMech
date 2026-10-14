@@ -1,0 +1,1178 @@
+# Scientific follow-up: food (fermented)
+
+- Review: 20261014T130432Z-food_fermented-followup
+- Repository: CultureBotAI/HabitatMech
+- Started UTC: 2026-10-14T12:44:59.423568Z
+- Finished UTC: 2026-10-14T13:04:32.020750Z
+- Reviewer: OpenAI Codex (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The exact immediate GOLD process-parent contribution is excluded. Native identity/status, source paths/counts/units, all taxon associations and any independently supported ontology genera remain unchanged. Nonfood indigo fermentation and the 6Ac wastewater association remain unresolved in #2067/#2068. This parent repair does not endorse those source interpretations; the record still needs curation.
+
+## Scope And Provenance
+
+Complete corrected record and every exact predecessor finding.
+
+Selection: Explicit correction follow-up, one resolved target; not sampling.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 695ca9db651a5767689087dccb82252a525ba072.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| FOODON:00001258 | data/habitats/food/food_fermented.yaml | generated | food (fermented) |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| just validate | passed | True | FOODON:00001258 | Executed 2026-10-14T12:43:21.513378Z to 2026-10-14T12:43:23.430033Z. No issues found |
+| just validate-strict | passed | True | FOODON:00001258 | Executed 2026-10-14T12:43:27.110789Z to 2026-10-14T12:43:30.770987Z. uv run python scripts/validate_strict.py data/habitats/food/fish_products.yaml data/habitats/food/food_fermented.yaml data/habitats/food/food_preserved.yaml data/habitats/food/food_sample.yaml<br>Validating 4 files with 15 workers; schema=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/src/habitatmech/schema/habitatmech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      4<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                reports/instance_validation_failures.tsv |
+| just validate-history | passed | True | FOODON:00001258 | Executed 2026-10-14T12:43:30.771562Z to 2026-10-14T12:43:37.169730Z. No issues found<br>670 history record(s) valid against src/habitatmech/schema/history.yaml |
+| just provenance-check | passed | True | FOODON:00001258 | Executed 2026-10-14T12:43:37.170213Z to 2026-10-14T12:43:37.641764Z. provenance current: 14 committed inventories, 2 GOLD sources |
+| just verify-corpus | passed | True | FOODON:00001258 | Executed 2026-10-14T12:43:37.642175Z to 2026-10-14T12:43:50.090325Z. expected 3208 records, found 3208 on disk<br>  missing:   0<br>  extra:     0<br>  differing: 0<br><br>corpus reproduces exactly from data/raw/ |
+| just validate-causal-all | passed | True | FOODON:00001258 | Executed 2026-10-14T12:43:50.090923Z to 2026-10-14T12:43:53.427113Z. validated 32 causal-graph curation file(s) with 32 graph(s) |
+| just term-requests-check | passed | True | FOODON:00001258 | Executed 2026-10-14T12:43:53.427679Z to 2026-10-14T12:44:06.487598Z. term-request table is current (109 terms) |
+| just validate-products | passed | True | FOODON:00001258 | Executed 2026-10-14T12:44:06.488195Z to 2026-10-14T12:44:45.130418Z. id↔label correspondence summary:<br>          OK_CANONICAL: 1176<br>            OK_SYNONYM: 1<br>          OK_EXCEPTION: 5<br>    SKIPPED_NO_ADAPTER: 2059<br><br>✅ All id↔label pairs correspond. |
+| uv run | passed | True | FOODON:00001258 | Executed 2026-10-14T12:44:45.131035Z to 2026-10-14T12:46:10.101602Z. ........................................................................ [ 73%]<br>..........................                                               [100%]<br>98 passed in 84.13s (0:01:24) |
+| uv run | passed | True | FOODON:00001258 | Executed 2026-10-14T12:46:10.102250Z to 2026-10-14T12:46:10.316865Z. All checks passed! |
+| Exact corrected-base authoritative QC | passed | True | FOODON:00001258 | Verified exact corrected base; new reports require post-save checks. |
+| Original member reconstruction | unavailable | False | FOODON:00001258 | No recovered member dump or join; predecessor GOLD requests returned 403. |
+| Expression evidence applicability | not_applicable | False | FOODON:00001258 | No gene/regulator/protein/transcriptomics claim is introduced. |
+
+## Scientific And Domain Assessments
+
+### Scoped correction and exact finding lineage
+
+grounding: supported. Targets: FOODON:00001258.
+
+The exact immediate GOLD process-parent contribution is excluded. Native identity/status, source paths/counts/units, all taxon associations and any independently supported ontology genera remain unchanged. Nonfood indigo fermentation and the 6Ac wastewater association remain unresolved in #2067/#2068. This parent repair does not endorse those source interpretations; the record still needs curation.
+
+### Source claims, scope and native status
+
+evidence: concern. Targets: FOODON:00001258.
+
+Complete current record reread. BacDive isolation row 51 has 242 STRAIN assertions and a 203-taxon pool; upstream mapping row 113 declined grounding, overridden by ITEM BROAD decision 38. GOLD row 56 has nodes 3504/3825/4252 and 645 ORGANISM assertions; ITEM BROAD decision 1014. MADIN row 28 has 173 TAXON assertions; ITEM CLOSE decision 1575. All three ITEM decisions mechanically support REVIEWED, not biological endorsement. The 25 BacDive and 25 MADIN top-ranked rows overlap at taxids 1004261 and 1007676, yielding 48 displayed associations with preserved fields. Corroboration is source agreement, not independent isolation proof. Eight parameter rows 541-548 have empty term_ids and are correctly not emitted. Bulk row 84 has 392 BIOSAMPLE observations. Triad rows 89-91 cover five samples/four studies: manufactured product broad scale, alcohol fermentation pit local scale, fermentation starter medium; roles do not establish whole-class identity. Seventeen own-path study rows include multipath Gs0154282; no counts are summed. Original source observations are preserved, not promoted to characteristic presence or biological causation. Only F1 receives a resolved disposition.
+
+### Unavailable original members and broader identity audit
+
+completeness: unknown. Targets: FOODON:00001258.
+
+Original joins remain unavailable. Current strain examples do not reconstruct frozen membership. Food production identity #2070 and fermented-food #2067/#2068 remain open; no global ontology or SSSOM/KGX certification is claimed.
+
+## Findings
+
+### F1: Production process is not a strict material genus
+
+major / resolved / confirmed; issue key: food-fermented-food-production-process-parent.
+
+The immediate GOLD source-path parent resolves to FOODON:03530206, a production process. The target denotes food material or a food-source sample, not a kind of that process. Preserve independent material parents and source classification without promoting context to subclass.
+
+Disposition: Confirmed the exact maintained-input fix and generated claim preservation. The exact immediate GOLD process-parent contribution is excluded. Native identity/status, source paths/counts/units, all taxon associations and any independently supported ontology genera remain unchanged. Nonfood indigo fermentation and the 6Ac wastewater association remain unresolved in #2067/#2068. This parent repair does not endorse those source interpretations; the record still needs curation.
+
+### F2: Fermented source bin includes nonfood indigo fermentation
+
+major / open / confirmed; issue key: food-fermented-bacdive-nonfood-fermentation.
+
+BacDive categorizes taxid1004261/A21 as Fermented, but both its isolation text and primary study identify indigo dye liquor. This contradicts the maintained claim that the bin is wholly food material. Original frozen strain membership is unavailable, so the current example does not prove which historical count-one member was joined, or absence of all food occurrences.
+
+Disposition: No original member evidence has been recovered; the scoped hierarchy fix does not resolve this source interpretation. The exact immediate GOLD process-parent contribution is excluded. Native identity/status, source paths/counts/units, all taxon associations and any independently supported ontology genera remain unchanged. Nonfood indigo fermentation and the 6Ac wastewater association remain unresolved in #2067/#2068. This parent repair does not endorse those source interpretations; the record still needs curation.
+
+### F3: The 6Ac association lacks food-matrix support
+
+major / open / confirmed; issue key: food-fermented-madin-6ac-wastewater-association.
+
+The MADIN association for NCBITaxon:1110509 is presented within fermented food, while the primary isolation study explicitly places strain 6Ac in brewery-wastewater treatment. The original MADIN join and any alternative food isolation evidence remain unavailable. Confirmed evidence conflict does not prove a particular text-classification bug or that the organism never occurs in food.
+
+Disposition: No original member evidence has been recovered; the scoped hierarchy fix does not resolve this source interpretation. The exact immediate GOLD process-parent contribution is excluded. Native identity/status, source paths/counts/units, all taxon associations and any independently supported ontology genera remain unchanged. Nonfood indigo fermentation and the 6Ac wastewater association remain unresolved in #2067/#2068. This parent repair does not endorse those source interpretations; the record still needs curation.
+
+## Recommended Actions And Acceptance Checks
+
+### A2
+
+Reassess BacDive mint habitatmech:BACDIVE.556e1e04f8 and obtain original member evidence; retain native or qualified source scope rather than silently treating all fermentation as food. Do not delete historical count-one data from a current example alone.
+
+- Change maintained owners, never hand-edit generated YAML or raw frozen assertions.
+- Preserve exact source identity, counts/units, taxon fields and status unless separately justified.
+- Dry seed, inspect exact canary, focused regressions, schema, strict, history, provenance, label, corpus/site and authoritative QC gates.
+- Save immutable successor with stable issue key and exact previous occurrence for disposition.
+
+### A3
+
+Recover original member provenance and qualify or correct the food interpretation through a maintained, evidence-backed mechanism. Preserve the frozen 173-TAXON aggregate and strain identity until that source reconstruction is possible.
+
+- Change maintained owners, never hand-edit generated YAML or raw frozen assertions.
+- Preserve exact source identity, counts/units, taxon fields and status unless separately justified.
+- Dry seed, inspect exact canary, focused regressions, schema, strict, history, provenance, label, corpus/site and authoritative QC gates.
+- Save immutable successor with stable issue key and exact previous occurrence for disposition.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| CURRENT | data/habitats/food/food_fermented.yaml | supports | Re-read the complete regenerated YAML and exact predecessor diff. The exact immediate GOLD process-parent contribution is excluded. Native identity/status, source paths/counts/units, all taxon associations and any independently supported ontology genera remain unchanged. Nonfood indigo fermentation and the 6Ac wastewater association remain unresolved in #2067/#2068. This parent repair does not endorse those source interpretations; the record still needs curation. |
+| OWNERS | curation/gold_parent_exclusions.tsv; curation/record_annotation_corrections.tsv | supports | Read exact added rows and four append-only session histories. Source mint/path/expected parent or record/source/text/old-scope preconditions guard each correction. No raw inventory, manifest, identity decision or optional scientific claim changed. |
+| REGRESSION | tests/test_food_material_review_fixes.py; tests/test_record_annotation_corrections.py; tests/test_fermented_food_review_fixes.py | supports | Counterfactual full-corpus build changes exactly four records. Three change only parent/history and one only synonym/history. All source fields, native status, taxa, ranks, counts and scores remain semantically identical. The prior starter test now disables only its own two corrections, preserving unrelated overlays. |
+| PREVIOUS | reviews/structured/20261014T123755Z-food_fermented/review.yaml | context_only | Inspected immutable complete predecessor. Its input row numbers and old parent/synonym values are historical; evidence limits are retained, not silently closed. |
+| QC | https://github.com/CultureBotAI/HabitatMech/actions/runs/38566768650 | supports | Authoritative hosted QC passed exact corrected base 695ca9db651a5767689087dccb82252a525ba072. Newly authored successor bundles still require final archive and publication gates. |
+| RULES | docs/CURATION.md; docs/HARMONIZATION.md; docs/record-review-profile.md | supports | Retained inspected predecessor evidence, not a new retrieval or current annotation value. Applied habitat-versus-process identity, strict genus, exact source units, MIxS roles, optional-field and all-source ITEM rules. |
+| FOODON | https://raw.githubusercontent.com/FoodOntology/foodon/cd73540243a84bcd511a500d9a497d12d7dc02f6/foodon.owl | supports | Retained inspected predecessor evidence, not a new retrieval or current annotation value. Pinned full RDF/XML inspected for definitions, named parents, restrictions and synonym predicates. FOODON:00001258 denotes fermented food material. Its named ontology parents FOODON:00002501 and FOODON:00002645 are supported by pinned FoodOn, including the fermentation-output restriction. The additional production-process parent is not a strict genus. BacDive Fermented and MADIN food_fermented also contain nonfood fermentation context, so their merger needs source-specific reassessment. Download SHA256 b897bf64c1b265c422db9ee01e1235c10c0b809e7f02326ef810a52068347edf. |
+| ENVO | https://raw.githubusercontent.com/EnvironmentOntology/envo/a2455d1a77e46bb8a664d65a157166b539269042/envo.owl | supports | Retained inspected predecessor evidence, not a new retrieval or current annotation value. Pinned full ENVO inspected: obsolete ENVO:00002002 has replacement FOODON:00001002. Fermentation starter, manufactured product and alcohol fermentation pit are distinct material/context concepts; triad roles must not be collapsed. Download SHA256 a0b919065d33a9cf975b74cadd16c75f32f512d17f4f6d5999b74216701df54c. |
+| AVAILABILITY | conf/sources.yaml | supports | Retained inspected predecessor evidence, not a new retrieval or current annotation value. Ignored-inclusive enumeration covered 41379 files in repository and configured kg-microbe data root. Original GOLD/BacDive/PREGO/MADIN member dumps were not located within these roots. Frozen aggregates are available; no global absence claim. |
+| GOLD_ACCESS | https://gold.jgi.doe.gov/ | supports | Retained inspected predecessor evidence, not a new retrieval or current annotation value. All 24 requested exact own-path study URLs returned HTTP 403. No original members or page contents inferred. {"Gs0053258": {"accessed_at": "2026-10-14T12:24:46.231486Z", "error": "HTTP Error 403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0053258"}, "Gs0111475": {"accessed_at": "2026-10-14T12:24:46.356130Z", "error": "HTTP Error 403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0111475"}, "Gs0114546": {"accessed_at": "2026-10-14T12:24:46.386520Z", "error": "HTTP Error 403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0114546"}, "Gs0114789": {"accessed_at": "2026-10-14T12:24:46.418493Z", "error": "HTTP Error 403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0114789"}, "Gs0118570": {"accessed_at": "2026-10-14T12:24:46.467904Z", "error": "HTTP Error 403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0118570"}, "Gs0132984": {"accessed_at": "2026-10-14T12:24:46.503783Z", "error": "HTTP Error 403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0132984"}, "Gs0133014": {"accessed_at": "2026-10-14T12:24:46.542534Z", "error": "HTTP Error 403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0133014"}, "Gs0133290": {"accessed_at": "2026-10-14T12:24:46.572104Z", "error": "HTTP Error 403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0133290"}, "Gs0133298": {"accessed_at": "2026-10-14T12:24:46.613460Z", "error": "HTTP Error 403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0133298"}, "Gs0134604": {"accessed_at": "2026-10-14T12:24:46.727244Z", "error": "HTTP Error 403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0134604"}, "Gs0135060": {"accessed_at": "2026-10-14T12:24:46.849688Z", "error": "HTTP Error 403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0135060"}, "Gs0141928": {"accessed_at": "2026-10-14T12:24:46.883936Z", "error": "HTTP Error 403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0141928"}, "Gs0142247": {"accessed_at": "2026-10-14T12:24:46.926691Z", "error": "HTTP Error 403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0142247"}, "Gs0142315": {"accessed_at": "2026-10-14T12:24:46.971280Z", "error": "HTTP Error 403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0142315"}, "Gs0150392": {"accessed_at": "2026-10-14T12:24:47.022306Z", "error": "HTTP Error 403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0150392"}, "Gs0150427": {"accessed_at": "2026-10-14T12:24:47.054567Z", "error": "HTTP Error 403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0150427"}, "Gs0150438": {"accessed_at": "2026-10-14T12:24:47.084254Z", "error": "HTTP Error 403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0150438"}, "Gs0150695": {"accessed_at": "2026-10-14T12:24:47.127172Z", "error": "HTTP Error 403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0150695"}, "Gs0150720": {"accessed_at": "2026-10-14T12:24:47.170716Z", "error": "HTTP Error 403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0150720"}, "Gs0153815": {"accessed_at": "2026-10-14T12:24:47.207422Z", "error": "HTTP Error 403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0153815"}, "Gs0153827": {"accessed_at": "2026-10-14T12:24:47.249405Z", "error": "HTTP Error 403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0153827"}, "Gs0153978": {"accessed_at": "2026-10-14T12:24:47.381357Z", "error": "HTTP Error 403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0153978"}, "Gs0154236": {"accessed_at": "2026-10-14T12:24:47.424245Z", "error": "HTTP Error 403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0154236"}, "Gs0154282": {"accessed_at": "2026-10-14T12:24:47.454274Z", "error": "HTTP Error 403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0154282"}} |
+| TAXONOMY | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;retmode=xml&amp;id=1004261,1007676,104097,104099,104101,1045004,1045854,104955,1050107,1051653,1051659,1054041,1074467,1076596,1089442,1091038,1110509,1114972,1121126,1121295,1121312,1121314,1121384,1121941,1122129,1122147,1122148,1122149,1122150,1122151,1122211,1122219,1122618,1123359,1123500,1123687,113557,114090,115541,1167631,120045,1202668,1206774,1220595,1247,1255632,1281,1307912,1405,1408434,1423830,1580,1588,1590,1591,1614,1629,174587,176292,1896336,214326,2338647,261164,2748,28038,282669,291615,292,36987,42895,438,442,457427,47714,51663,53444,545534,549,577,600645,615,61646,647,651,795797,865,86956 | supports | Retained inspected predecessor evidence, not a new retrieval or current annotation value. All 87 unique IDs across 88 displayed entries resolve in current NCBI. Historical genus names do not imply different taxa. Food-product 1121384/1408434 merge to the same current strain; 36987 is a termite. All preserved/spoiled labels agree. Full raw-field audit for this target: {"all_displayed_fields_match_raw": true, "by_source": {"BACDIVE": 25, "MADIN": 23}, "displayed": 48, "source_rows": {"BACDIVE": 25, "MADIN": 25}, "taxa": [{"corroborated_by": ["MADIN"], "count": 1, "identifier": "NCBITaxon:1004261", "label": "Oceanobacillus indicireducens", "pool": 203, "rank": 21, "score": null, "source": "BACDIVE"}, {"corroborated_by": ["MADIN"], "count": 1, "identifier": "NCBITaxon:1007676", "label": "Companilactobacillus ginsenosidimutans", "pool": 203, "rank": 22, "score": null, "source": "BACDIVE"}, {"corroborated_by": [], "count": 6, "identifier": "NCBITaxon:1580", "label": "Levilactobacillus brevis", "pool": 203, "rank": 1, "score": null, "source": "BACDIVE"}, {"corroborated_by": [], "count": 5, "identifier": "NCBITaxon:1591", "label": "Lactobacillus sp.", "pool": 203, "rank": 2, "score": null, "source": "BACDIVE"}, {"corroborated_by": [], "count": 5, "identifier": "NCBITaxon:865", "label": "Pectinatus frisingensis", "pool": 203, "rank": 3, "score": null, "source": "BACDIVE"}, {"corroborated_by": [], "count": 4, "identifier": "NCBITaxon:86956", "label": "Pectinatus cerevisiiphilus", "pool": 203, "rank": 4, "score": null, "source": "BACDIVE"}, {"corroborated_by": [], "count": 3, "identifier": "NCBITaxon:1590", "label": "Lactiplantibacillus plantarum", "pool": 203, "rank": 5, "score": null, "source": "BACDIVE"}, {"corroborated_by": [], "count": 3, "identifier": "NCBITaxon:1614", "label": "Fructilactobacillus fructivorans", "pool": 203, "rank": 6, "score": null, "source": "BACDIVE"}, {"corroborated_by": [], "count": 3, "identifier": "NCBITaxon:176292", "label": "Secundilactobacillus malefermentans", "pool": 203, "rank": 7, "score": null, "source": "BACDIVE"}, {"corroborated_by": [], "count": 3, "identifier": "NCBITaxon:28038", "label": "Latilactobacillus curvatus", "pool": 203, "rank": 8, "score": null, "source": "BACDIVE"}, {"corroborated_by": [], "count": 3, "identifier": "NCBITaxon:442", "label": "Gluconobacter oxydans", "pool": 203, "rank": 9, "score": null, "source": "BACDIVE"}, {"corroborated_by": [], "count": 3, "identifier": "NCBITaxon:51663", "label": "Pediococcus damnosus", "pool": 203, "rank": 10, "score": null, "source": "BACDIVE"}, {"corroborated_by": [], "count": 3, "identifier": "NCBITaxon:53444", "label": "Fructilactobacillus lindneri", "pool": 203, "rank": 11, "score": null, "source": "BACDIVE"}, {"corroborated_by": [], "count": 2, "identifier": "NCBITaxon:1247", "label": "Oenococcus oeni", "pool": 203, "rank": 12, "score": null, "source": "BACDIVE"}, {"corroborated_by": [], "count": 2, "identifier": "NCBITaxon:1281", "label": "Staphylococcus carnosus", "pool": 203, "rank": 13, "score": null, "source": "BACDIVE"}, {"corroborated_by": [], "count": 2, "identifier": "NCBITaxon:1307912", "label": "Acetobacter oeni LMG 21952", "pool": 203, "rank": 14, "score": null, "source": "BACDIVE"}, {"corroborated_by": [], "count": 2, "identifier": "NCBITaxon:1588", "label": "Lentilactobacillus hilgardii", "pool": 203, "rank": 15, "score": null, "source": "BACDIVE"}, {"corroborated_by": [], "count": 2, "identifier": "NCBITaxon:214326", "label": "Latilactobacillus sakei subsp. sakei", "pool": 203, "rank": 16, "score": null, "source": "BACDIVE"}, {"corroborated_by": [], "count": 2, "identifier": "NCBITaxon:261164", "label": "Psychrobacter alimentarius", "pool": 203, "rank": 17, "score": null, "source": "BACDIVE"}, {"corroborated_by": [], "count": 2, "identifier": "NCBITaxon:282669", "label": "Psychrobacter cibarius", "pool": 203, "rank": 18, "score": null, "source": "BACDIVE"}, {"corroborated_by": [], "count": 2, "identifier": "NCBITaxon:438", "label": "Acetobacter pasteurianus", "pool": 203, "rank": 19, "score": null, "source": "BACDIVE"}, {"corroborated_by": [], "count": 2, "identifier": "NCBITaxon:47714", "label": "Lacticaseibacillus paracasei subsp. paracasei", "pool": 203, "rank": 20, "score": null, "source": "BACDIVE"}, {"corroborated_by": [], "count": 1, "identifier": "NCBITaxon:104097", "label": "Acetobacter estunensis", "pool": 203, "rank": 23, "score": null, "source": "BACDIVE"}, {"corroborated_by": [], "count": 1, "identifier": "NCBITaxon:104101", "label": "Acetobacter indonesiensis", "pool": 203, "rank": 24, "score": null, "source": "BACDIVE"}, {"corroborated_by": [], "count": 1, "identifier": "NCBITaxon:1050107", "label": "Lactobacillus delbrueckii subsp. allosunkii", "pool": 203, "rank": 25, "score": null, "source": "BACDIVE"}, {"corroborated_by": [], "count": null, "identifier": "NCBITaxon:104099", "label": "acetobacter_mesoxydans", "pool": 173, "rank": null, "score": null, "source": "MADIN"}, {"corroborated_by": [], "count": null, "identifier": "NCBITaxon:1045004", "label": "Oenococcus kitaharae NRIC 0645, DSM 17330", "pool": 173, "rank": null, "score": null, "source": "MADIN"}, {"corroborated_by": [], "count": null, "identifier": "NCBITaxon:1045854", "label": "Weissella koreensis KACC 15510", "pool": 173, "rank": null, "score": null, "source": "MADIN"}, {"corroborated_by": [], "count": null, "identifier": "NCBITaxon:104955", "label": "Lactobacillus frumenti", "pool": 173, "rank": null, "score": null, "source": "MADIN"}, {"corroborated_by": [], "count": null, "identifier": "NCBITaxon:1051653", "label": "Lactobacillus casei A2-362", "pool": 173, "rank": null, "score": null, "source": "MADIN"}, {"corroborated_by": [], "count": null, "identifier": "NCBITaxon:1051659", "label": "Lactobacillus casei UCD174", "pool": 173, "rank": null, "score": null, "source": "MADIN"}, {"corroborated_by": [], "count": null, "identifier": "NCBITaxon:1054041", "label": "Lactobacillus yonginensis", "pool": 173, "rank": null, "score": null, "source": "MADIN"}, {"corroborated_by": [], "count": null, "identifier": "NCBITaxon:1074467", "label": "Lactobacillus heilongjiangensis", "pool": 173, "rank": null, "score": null, "source": "MADIN"}, {"corroborated_by": [], "count": null, "identifier": "NCBITaxon:1076596", "label": "Acetobacter persici", "pool": 173, "rank": null, "score": null, "source": "MADIN"}, {"corroborated_by": [], "count": null, "identifier": "NCBITaxon:1089442", "label": "Pediococcus damnosus 9-6b", "pool": 173, "rank": null, "score": null, "source": "MADIN"}, {"corroborated_by": [], "count": null, "identifier": "NCBITaxon:1110509", "label": "Methanosaeta harundinacea 6Ac", "pool": 173, "rank": null, "score": null, "source": "MADIN"}, {"corroborated_by": [], "count": null, "identifier": "NCBITaxon:1122148", "label": "Lactobacillus lindneri DSM 20690", "pool": 173, "rank": null, "score": null, "source": "MADIN"}, {"corroborated_by": [], "count": null, "identifier": "NCBITaxon:1122149", "label": "Lactobacillus malefermentans KCTC 3548", "pool": 173, "rank": null, "score": null, "source": "MADIN"}, {"corroborated_by": [], "count": null, "identifier": "NCBITaxon:1122150", "label": "Lactobacillus nagelii DSM 13675", "pool": 173, "rank": null, "score": null, "source": "MADIN"}, {"corroborated_by": [], "count": null, "identifier": "NCBITaxon:1122219", "label": "Megasphaera cerevisiae DSM 20462", "pool": 173, "rank": null, "score": null, "source": "MADIN"}, {"corroborated_by": [], "count": null, "identifier": "NCBITaxon:1122618", "label": "Oenococcus oeni DSM 20252", "pool": 173, "rank": null, "score": null, "source": "MADIN"}, {"corroborated_by": [], "count": null, "identifier": "NCBITaxon:1123687", "label": "Lactobacillus porcinae", "pool": 173, "rank": null, "score": null, "source": "MADIN"}, {"corroborated_by": [], "count": null, "identifier": "NCBITaxon:114090", "label": "pediococcus_inopinatus", "pool": 173, "rank": null, "score": null, "source": "MADIN"}, {"corroborated_by": [], "count": null, "identifier": "NCBITaxon:115541", "label": "Lactobacillus coryniformis subsp. coryniformis", "pool": 173, "rank": null, "score": null, "source": "MADIN"}, {"corroborated_by": [], "count": null, "identifier": "NCBITaxon:1167631", "label": "Oenococcus oeni AWRIB318", "pool": 173, "rank": null, "score": null, "source": "MADIN"}, {"corroborated_by": [], "count": null, "identifier": "NCBITaxon:120045", "label": "Zymomonas mobilis subsp. mobilis", "pool": 173, "rank": null, "score": null, "source": "MADIN"}, {"corroborated_by": [], "count": null, "identifier": "NCBITaxon:1202668", "label": "Lactobacillus oryzae", "pool": 173, "rank": null, "score": null, "source": "MADIN"}, {"corroborated_by": [], "count": null, "identifier": "NCBITaxon:1206774", "label": "Oenococcus oeni AWRIB568", "pool": 173, "rank": null, "score": null, "source": "MADIN"}]} Download SHA256 1d7925cd89404cfa893114d28979276fe1b7291cf4f91ea6b7f69f433ab3c04e. |
+| INDIGO | https://pubmed.ncbi.nlm.nih.gov/22843722/ | supports | Retained inspected predecessor evidence, not a new retrieval or current annotation value. PMID 22843722; DOI 10.1099/ijs.0.034579-0. Inspected abstract identifies A21/JCM17251/NCIMB14685 from laboratory-prepared Polygonum indigo dye liquor. This is nonfood fermentation, not a food-isolation demonstration. Download SHA256 94818fe6d34848e371784cc161e61d47aa4a50bb81a2235d204e226699d22aa9. |
+| BACDIVE | https://bacdive.dsmz.de/strain/23737 | supports | Retained inspected predecessor evidence, not a new retrieval or current annotation value. BacDive 23737 ties taxid 1004261 to A21/DSM28042/JCM17251/NCIMB14685 and indigo liquor isolation, despite Fermented/Beverage source categories. The disagreement is explicit; the original frozen count-one join remains unavailable. Download SHA256 c07ffddc2a170ad80f6737a84dde220f00ffaf7d7b04758a904d000411f8ce9c. |
+| WASTEWATER | https://pubmed.ncbi.nlm.nih.gov/16403877/ | supports | Retained inspected predecessor evidence, not a new retrieval or current annotation value. PMID 16403877; DOI 10.1099/ijs.0.63887-0. Inspected abstract explicitly identifies both 6Ac and 8Ac from a UASB reactor treating brewery wastewater. NCBITaxon:1110509 is 6Ac; evidence is not transferred from only the 8Ac type strain. Wastewater origin does not prove no later food occurrence. Download SHA256 94818fe6d34848e371784cc161e61d47aa4a50bb81a2235d204e226699d22aa9. |
+| MADIN | https://raw.githubusercontent.com/bacteria-archaea-traits/bacteria-archaea-traits/d1a0a2ef4003d9940752524ca7151e62ee74a4bc/data/conversion_tables/renaming_isolation_source.csv | supports | Retained inspected predecessor evidence, not a new retrieval or current annotation value. Parsed all 3153 source renaming rows, including all 86 food_fermented rows: waste-corn fermentation, malted barley and food preparations share a bin. This supports heterogeneity, but does not prove the original string or classification mechanism for strain 6Ac. Download SHA256 62425f9b6cb450a3b7d8521d25bb494f11739ac14d47e8ec70997f03f6740579. |
+
+## Limits And Additional Notes
+
+- Same-agent review, not independent approval.
+- No original member reconstruction, native status promotion or automatic neighboring-finding closure.
+- The preserved synonym correction repairs output scope; it does not refresh the frozen ontology lexical index.
+- Four scoped fixes do not resolve source reconstruction or process identity issues #2067/#2068/#2070.
+- Corrected-base QC predates these reports; final archive and publication checks remain required.
+- Initial corrected-input capture 2026-10-14T12:44:59.423568Z; final reinspection proves captured input bytes unchanged.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261014T130432Z-food_fermented-followup
+kind: record
+repository: CultureBotAI/HabitatMech
+title: 'Scientific follow-up: food (fermented)'
+started_at: '2026-10-14T12:44:59.423568Z'
+finished_at: '2026-10-14T13:04:32.020750Z'
+reviewer:
+  identity: OpenAI Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent participated in repository work; not independent
+    approval.
+skill: .claude/skills/curate-yaml-record/SKILL.md
+completion: completed
+scientific_review: true
+verdict: needs_curation
+summary: 'The exact immediate GOLD process-parent contribution is excluded. Native
+  identity/status, source paths/counts/units, all taxon associations and any independently
+  supported ontology genera remain unchanged. Nonfood indigo fermentation and the
+  6Ac wastewater association remain unresolved in #2067/#2068. This parent repair
+  does not endorse those source interpretations; the record still needs curation.'
+source:
+  git_revision: 695ca9db651a5767689087dccb82252a525ba072
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: conf/record_review.yaml
+    sha256: c2f5d0eb4c5744f5fe354c92184ddab144dc2688dba952b032b4f3d597bc08d6
+    role: context
+  - path: conf/sources.yaml
+    sha256: a8e069f9278068b57fa234f43e03c8d893f857827b83fd10cfa92d6815aed642
+    role: context
+  - path: curation/decisions.tsv
+    sha256: 05aee2989e186bba8ae0ecb5eca6c1f2ad3c1e6977c3aaf0aea6977bccd6f900
+    role: context
+  - path: curation/definition_source_label_exclusions.tsv
+    sha256: 2d41fc93db4939122b3909f2a412b84b679703948b10d9f02e12021442f71407
+    role: context
+  - path: curation/external_xrefs.tsv
+    sha256: cf8394a6ab22e35efd9e252aef422018226280830bf816a39bf4f2256ff75ad5
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: 3c84f75cdc8fa1bc5544692938c2408ba36bae96272552ed9007090c60accff1
+    role: context
+  - path: curation/record_annotation_corrections.tsv
+    sha256: 5142ff999a3111139f88bca11dab485b18b01773a52f43ae9557239eb2029210
+    role: context
+  - path: curation/redirects_retracted.tsv
+    sha256: 0f1e9af8881f5a5db19f87de06b3b3d1800cfac8101699b380388c0a1a1e9a19
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 331a7d9eb8a8909fc37402c0a776838979a8065644504d5c4f2a1c39bce5c24d
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: 3781420be8a7a6de4f44c9be1bc3a0d256824fb44b8dbbb56c6b3c99e21a6014
+    role: context
+  - path: data/habitats/engineered/engineered__900b76ad.yaml
+    sha256: 85154c9542e8e033e17cf631b06a462612229f3bcfdc1cdca0fc6cf73b9b9364
+    role: context
+  - path: data/habitats/food/fish_products.yaml
+    sha256: acfda4de9940c1d1debc932bea029f0db5f6b61a171972d94dc18c19f42a6a31
+    role: context
+  - path: data/habitats/food/food_fermented.yaml
+    sha256: 91efcb97c4ecd67344797aa798d8e6f1cad0434a5ef55d0171dd8a501d95c40a
+    role: target
+  - path: data/habitats/food/food_preserved.yaml
+    sha256: 6ae4523cd0a116290eabd2df3880d4c2543a05a6b9221d1ebe35aa398c527a3b
+    role: context
+  - path: data/habitats/food/food_product.yaml
+    sha256: 244ae56ce8ff1aa6d066888dd63679f55a604b803758908955c1f3a90d1389de
+    role: context
+  - path: data/habitats/food/food_production.yaml
+    sha256: b0fce7af2cc321a0979ce4d3bfec5e2d4383410ae8e62172b006073afb783ab7
+    role: context
+  - path: data/habitats/food/food_sample.yaml
+    sha256: 6e616c3e10b5dc77306e94c2da153b8319b3b309a8d4918af0c552f0496b765e
+    role: context
+  - path: data/habitats/food/food_spoiled.yaml
+    sha256: bd94c0154eef2116da13a5a39e74af4f14f5b17ae5a4f68f9fa6d69aa19756f1
+    role: context
+  - path: data/habitats/food/frozen_seafood.yaml
+    sha256: 93677d5139e32554b0263678305c5cf15151268a9374ed5e0332a15241420e8c
+    role: context
+  - path: data/habitats/food/seafood_product.yaml
+    sha256: 92fe9e0cd56a12671fb144cacdc1a0f1475a0eb8dfb9e3a2a0c1594f95538c84
+    role: context
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: f3f5d3d033fa7e7c1d78571959fc2e62e0b0a625f47dba1413657e8cf944b322
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 105b3c8e10f43ce689b05d3089d3a8be1d713a98dd6806e11be37ebd85b10590
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/mappings/fish_products/2026-10-14T124304Z-codex-gpt-5-7869cb.yaml
+    sha256: 66f0e97d7e788e12bd685ac636dd4c37865ac7b9999c3756b0d6d78027fa4ef9
+    role: context
+  - path: history/mappings/food_fermented/2026-10-14T124304Z-codex-gpt-5-5301a9.yaml
+    sha256: 343a739c917a655e13349c0d0db373a95400252e3ef52691d696610f2dad66e6
+    role: context
+  - path: history/mappings/food_preserved/2026-10-14T124305Z-codex-gpt-5-a1513f.yaml
+    sha256: 8a032109d9d92c37dc949a3b62c92b4d78be4525bb9ce8a131bf4011b856b0f7
+    role: context
+  - path: history/mappings/food_sample/2026-10-14T124306Z-codex-gpt-5-a1465f.yaml
+    sha256: e2175375ce945e1aec5c107401572633a08e01001f24976b1b991dc12b9cbe54
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reports/yaml_record_review/20260926T153031Z-food_sample.md
+    sha256: 7104d8fc86e95fdd7f54be1ff2b6d8cb43b15d11e3f2e87855797e066bde49b4
+    role: context
+  - path: reports/yaml_record_review/20260929T023519Z-food_product.md
+    sha256: e58254f6987489cd482d9d4a390c1ba8c50c5b2983bef74e506911f505df2d96
+    role: context
+  - path: reports/yaml_record_review/20260929T030651Z-food_production.md
+    sha256: 8e8b30e0bfe4849c96aec02bec10e0ef0970da582375e62f1068e9446a1cae4a
+    role: context
+  - path: research/habitats/food/food-fermented-habitatmech-bacdive-2b1959f1f0-deep-research-claude_code.md
+    sha256: 83872dd2ca3dda125ef5cb8b8820b050e29e95bbd3d20bc3d96511c21381a4df
+    role: context
+  - path: reviews/structured/20261014T123755Z-food_fermented/review.yaml
+    sha256: 0a10af93bb5120872d7bb22ce2cc15afc596a2b442b02fa382a8c42dd8fa4179
+    role: context
+  - path: scripts/aggregate_gold_triads.py
+    sha256: 0e25179dbecd7c73cbedd99a0ae44e56e4992afb9e1ec02d2411439f643b8e54
+    role: context
+  - path: scripts/extract_gold_biosamples.py
+    sha256: b6a2773c86fe718e1ca0b1d7b32709f0eee491ac813655e310aa0817c0fec31b
+    role: context
+  - path: src/habitatmech/curate/record_annotation_corrections.py
+    sha256: 15bad3d40fd95e2acc72d3ff3c74289c15fb8a1775adc523b3575c3ea8487033
+    role: context
+  - path: src/habitatmech/extract.py
+    sha256: 4d9397bda649381a5daf81937369531c6dc8b4518d6c7047e6f3f14e605bf860
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 7e3cda3dadb9c7462498e5014bf38ef730068212f8f9cb131e3fce383c21d10e
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
+    role: context
+  - path: tests/test_curation_floor.py
+    sha256: a07e4b4282ffd482e2b2bbf637e6e57f0fd727aaadea8f0c3b296454e43d7840
+    role: context
+  - path: tests/test_fermented_food_review_fixes.py
+    sha256: 625ff4977d6b69236889ddf8b77ead9376b015568e8a7117439e70241d94bf53
+    role: context
+  - path: tests/test_food_material_review_fixes.py
+    sha256: b9dad3c1c27d037dd40450f4e081381bc3d9860243d661e4e7cdc48b759d64ae
+    role: context
+  - path: tests/test_record_annotation_corrections.py
+    sha256: af02b2a45e608f8dd816bcb9b659490385fbf3d78405e188342be56433f18425
+    role: context
+targets:
+- target_id: FOODON:00001258
+  path: data/habitats/food/food_fermented.yaml
+  label: food (fermented)
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or transform; never hand-edit generated record
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or transform; never hand-edit generated record
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or transform; never hand-edit generated record
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or transform; never hand-edit generated record
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_terms.tsv
+    role: Maintained input or transform; never hand-edit generated record
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/gold_ecosystem_paths.tsv
+    role: Maintained input or transform; never hand-edit generated record
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/bacdive_source_taxa.tsv
+    role: Maintained input or transform; never hand-edit generated record
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/madin_habitat_taxa.tsv
+    role: Maintained input or transform; never hand-edit generated record
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/prego_habitat_taxa.tsv
+    role: Maintained input or transform; never hand-edit generated record
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or transform; never hand-edit generated record
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Maintained input or transform; never hand-edit generated record
+scope:
+  description: Complete corrected record and every exact predecessor finding.
+  selection: Explicit correction follow-up, one resolved target; not sampling.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - FOODON:00001258
+evidence:
+- evidence_id: CURRENT
+  kind: record_content
+  reference: data/habitats/food/food_fermented.yaml
+  accessed_at: '2026-10-14T13:04:32.019908Z'
+  support: supports
+  summary: 'Re-read the complete regenerated YAML and exact predecessor diff. The
+    exact immediate GOLD process-parent contribution is excluded. Native identity/status,
+    source paths/counts/units, all taxon associations and any independently supported
+    ontology genera remain unchanged. Nonfood indigo fermentation and the 6Ac wastewater
+    association remain unresolved in #2067/#2068. This parent repair does not endorse
+    those source interpretations; the record still needs curation.'
+- evidence_id: OWNERS
+  kind: record_content
+  reference: curation/gold_parent_exclusions.tsv; curation/record_annotation_corrections.tsv
+  accessed_at: '2026-10-14T13:04:32.019908Z'
+  support: supports
+  summary: Read exact added rows and four append-only session histories. Source mint/path/expected
+    parent or record/source/text/old-scope preconditions guard each correction. No
+    raw inventory, manifest, identity decision or optional scientific claim changed.
+- evidence_id: REGRESSION
+  kind: validation
+  reference: tests/test_food_material_review_fixes.py; tests/test_record_annotation_corrections.py;
+    tests/test_fermented_food_review_fixes.py
+  accessed_at: '2026-10-14T13:04:32.019908Z'
+  support: supports
+  summary: Counterfactual full-corpus build changes exactly four records. Three change
+    only parent/history and one only synonym/history. All source fields, native status,
+    taxa, ranks, counts and scores remain semantically identical. The prior starter
+    test now disables only its own two corrections, preserving unrelated overlays.
+- evidence_id: PREVIOUS
+  kind: prior_review
+  reference: reviews/structured/20261014T123755Z-food_fermented/review.yaml
+  accessed_at: '2026-10-14T13:04:32.019908Z'
+  support: context_only
+  summary: Inspected immutable complete predecessor. Its input row numbers and old
+    parent/synonym values are historical; evidence limits are retained, not silently
+    closed.
+- evidence_id: QC
+  kind: validation
+  reference: https://github.com/CultureBotAI/HabitatMech/actions/runs/38566768650
+  accessed_at: '2026-10-14T13:04:32.019908Z'
+  support: supports
+  summary: Authoritative hosted QC passed exact corrected base 695ca9db651a5767689087dccb82252a525ba072.
+    Newly authored successor bundles still require final archive and publication gates.
+- evidence_id: RULES
+  kind: authority
+  reference: docs/CURATION.md; docs/HARMONIZATION.md; docs/record-review-profile.md
+  summary: Retained inspected predecessor evidence, not a new retrieval or current
+    annotation value. Applied habitat-versus-process identity, strict genus, exact
+    source units, MIxS roles, optional-field and all-source ITEM rules.
+  accessed_at: '2026-10-14T12:37:55.928672Z'
+  support: supports
+- evidence_id: FOODON
+  kind: database
+  reference: https://raw.githubusercontent.com/FoodOntology/foodon/cd73540243a84bcd511a500d9a497d12d7dc02f6/foodon.owl
+  summary: Retained inspected predecessor evidence, not a new retrieval or current
+    annotation value. Pinned full RDF/XML inspected for definitions, named parents,
+    restrictions and synonym predicates. FOODON:00001258 denotes fermented food material.
+    Its named ontology parents FOODON:00002501 and FOODON:00002645 are supported by
+    pinned FoodOn, including the fermentation-output restriction. The additional production-process
+    parent is not a strict genus. BacDive Fermented and MADIN food_fermented also
+    contain nonfood fermentation context, so their merger needs source-specific reassessment.
+    Download SHA256 b897bf64c1b265c422db9ee01e1235c10c0b809e7f02326ef810a52068347edf.
+  accessed_at: '2026-10-14T12:27:42.074174Z'
+  support: supports
+- evidence_id: ENVO
+  kind: database
+  reference: https://raw.githubusercontent.com/EnvironmentOntology/envo/a2455d1a77e46bb8a664d65a157166b539269042/envo.owl
+  summary: 'Retained inspected predecessor evidence, not a new retrieval or current
+    annotation value. Pinned full ENVO inspected: obsolete ENVO:00002002 has replacement
+    FOODON:00001002. Fermentation starter, manufactured product and alcohol fermentation
+    pit are distinct material/context concepts; triad roles must not be collapsed.
+    Download SHA256 a0b919065d33a9cf975b74cadd16c75f32f512d17f4f6d5999b74216701df54c.'
+  accessed_at: '2026-10-14T12:27:44.541645Z'
+  support: supports
+- evidence_id: AVAILABILITY
+  kind: search
+  reference: conf/sources.yaml
+  summary: Retained inspected predecessor evidence, not a new retrieval or current
+    annotation value. Ignored-inclusive enumeration covered 41379 files in repository
+    and configured kg-microbe data root. Original GOLD/BacDive/PREGO/MADIN member
+    dumps were not located within these roots. Frozen aggregates are available; no
+    global absence claim.
+  accessed_at: '2026-10-14T12:37:55.928703Z'
+  support: supports
+  search_scope: Ignored/hidden-inclusive rg and structured TSV/review parsing of the
+    named repository roots; original source search limited to repository and configured
+    kg-microbe data root, not all disks.
+- evidence_id: GOLD_ACCESS
+  kind: database
+  reference: https://gold.jgi.doe.gov/
+  summary: 'Retained inspected predecessor evidence, not a new retrieval or current
+    annotation value. All 24 requested exact own-path study URLs returned HTTP 403.
+    No original members or page contents inferred. {"Gs0053258": {"accessed_at": "2026-10-14T12:24:46.231486Z",
+    "error": "HTTP Error 403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0053258"},
+    "Gs0111475": {"accessed_at": "2026-10-14T12:24:46.356130Z", "error": "HTTP Error
+    403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0111475"}, "Gs0114546":
+    {"accessed_at": "2026-10-14T12:24:46.386520Z", "error": "HTTP Error 403: Forbidden",
+    "url": "https://gold.jgi.doe.gov/study?id=Gs0114546"}, "Gs0114789": {"accessed_at":
+    "2026-10-14T12:24:46.418493Z", "error": "HTTP Error 403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0114789"},
+    "Gs0118570": {"accessed_at": "2026-10-14T12:24:46.467904Z", "error": "HTTP Error
+    403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0118570"}, "Gs0132984":
+    {"accessed_at": "2026-10-14T12:24:46.503783Z", "error": "HTTP Error 403: Forbidden",
+    "url": "https://gold.jgi.doe.gov/study?id=Gs0132984"}, "Gs0133014": {"accessed_at":
+    "2026-10-14T12:24:46.542534Z", "error": "HTTP Error 403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0133014"},
+    "Gs0133290": {"accessed_at": "2026-10-14T12:24:46.572104Z", "error": "HTTP Error
+    403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0133290"}, "Gs0133298":
+    {"accessed_at": "2026-10-14T12:24:46.613460Z", "error": "HTTP Error 403: Forbidden",
+    "url": "https://gold.jgi.doe.gov/study?id=Gs0133298"}, "Gs0134604": {"accessed_at":
+    "2026-10-14T12:24:46.727244Z", "error": "HTTP Error 403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0134604"},
+    "Gs0135060": {"accessed_at": "2026-10-14T12:24:46.849688Z", "error": "HTTP Error
+    403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0135060"}, "Gs0141928":
+    {"accessed_at": "2026-10-14T12:24:46.883936Z", "error": "HTTP Error 403: Forbidden",
+    "url": "https://gold.jgi.doe.gov/study?id=Gs0141928"}, "Gs0142247": {"accessed_at":
+    "2026-10-14T12:24:46.926691Z", "error": "HTTP Error 403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0142247"},
+    "Gs0142315": {"accessed_at": "2026-10-14T12:24:46.971280Z", "error": "HTTP Error
+    403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0142315"}, "Gs0150392":
+    {"accessed_at": "2026-10-14T12:24:47.022306Z", "error": "HTTP Error 403: Forbidden",
+    "url": "https://gold.jgi.doe.gov/study?id=Gs0150392"}, "Gs0150427": {"accessed_at":
+    "2026-10-14T12:24:47.054567Z", "error": "HTTP Error 403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0150427"},
+    "Gs0150438": {"accessed_at": "2026-10-14T12:24:47.084254Z", "error": "HTTP Error
+    403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0150438"}, "Gs0150695":
+    {"accessed_at": "2026-10-14T12:24:47.127172Z", "error": "HTTP Error 403: Forbidden",
+    "url": "https://gold.jgi.doe.gov/study?id=Gs0150695"}, "Gs0150720": {"accessed_at":
+    "2026-10-14T12:24:47.170716Z", "error": "HTTP Error 403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0150720"},
+    "Gs0153815": {"accessed_at": "2026-10-14T12:24:47.207422Z", "error": "HTTP Error
+    403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0153815"}, "Gs0153827":
+    {"accessed_at": "2026-10-14T12:24:47.249405Z", "error": "HTTP Error 403: Forbidden",
+    "url": "https://gold.jgi.doe.gov/study?id=Gs0153827"}, "Gs0153978": {"accessed_at":
+    "2026-10-14T12:24:47.381357Z", "error": "HTTP Error 403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0153978"},
+    "Gs0154236": {"accessed_at": "2026-10-14T12:24:47.424245Z", "error": "HTTP Error
+    403: Forbidden", "url": "https://gold.jgi.doe.gov/study?id=Gs0154236"}, "Gs0154282":
+    {"accessed_at": "2026-10-14T12:24:47.454274Z", "error": "HTTP Error 403: Forbidden",
+    "url": "https://gold.jgi.doe.gov/study?id=Gs0154282"}}'
+  accessed_at: '2026-10-14T12:37:55.928929Z'
+  support: supports
+- evidence_id: TAXONOMY
+  kind: database
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&retmode=xml&id=1004261,1007676,104097,104099,104101,1045004,1045854,104955,1050107,1051653,1051659,1054041,1074467,1076596,1089442,1091038,1110509,1114972,1121126,1121295,1121312,1121314,1121384,1121941,1122129,1122147,1122148,1122149,1122150,1122151,1122211,1122219,1122618,1123359,1123500,1123687,113557,114090,115541,1167631,120045,1202668,1206774,1220595,1247,1255632,1281,1307912,1405,1408434,1423830,1580,1588,1590,1591,1614,1629,174587,176292,1896336,214326,2338647,261164,2748,28038,282669,291615,292,36987,42895,438,442,457427,47714,51663,53444,545534,549,577,600645,615,61646,647,651,795797,865,86956
+  summary: 'Retained inspected predecessor evidence, not a new retrieval or current
+    annotation value. All 87 unique IDs across 88 displayed entries resolve in current
+    NCBI. Historical genus names do not imply different taxa. Food-product 1121384/1408434
+    merge to the same current strain; 36987 is a termite. All preserved/spoiled labels
+    agree. Full raw-field audit for this target: {"all_displayed_fields_match_raw":
+    true, "by_source": {"BACDIVE": 25, "MADIN": 23}, "displayed": 48, "source_rows":
+    {"BACDIVE": 25, "MADIN": 25}, "taxa": [{"corroborated_by": ["MADIN"], "count":
+    1, "identifier": "NCBITaxon:1004261", "label": "Oceanobacillus indicireducens",
+    "pool": 203, "rank": 21, "score": null, "source": "BACDIVE"}, {"corroborated_by":
+    ["MADIN"], "count": 1, "identifier": "NCBITaxon:1007676", "label": "Companilactobacillus
+    ginsenosidimutans", "pool": 203, "rank": 22, "score": null, "source": "BACDIVE"},
+    {"corroborated_by": [], "count": 6, "identifier": "NCBITaxon:1580", "label": "Levilactobacillus
+    brevis", "pool": 203, "rank": 1, "score": null, "source": "BACDIVE"}, {"corroborated_by":
+    [], "count": 5, "identifier": "NCBITaxon:1591", "label": "Lactobacillus sp.",
+    "pool": 203, "rank": 2, "score": null, "source": "BACDIVE"}, {"corroborated_by":
+    [], "count": 5, "identifier": "NCBITaxon:865", "label": "Pectinatus frisingensis",
+    "pool": 203, "rank": 3, "score": null, "source": "BACDIVE"}, {"corroborated_by":
+    [], "count": 4, "identifier": "NCBITaxon:86956", "label": "Pectinatus cerevisiiphilus",
+    "pool": 203, "rank": 4, "score": null, "source": "BACDIVE"}, {"corroborated_by":
+    [], "count": 3, "identifier": "NCBITaxon:1590", "label": "Lactiplantibacillus
+    plantarum", "pool": 203, "rank": 5, "score": null, "source": "BACDIVE"}, {"corroborated_by":
+    [], "count": 3, "identifier": "NCBITaxon:1614", "label": "Fructilactobacillus
+    fructivorans", "pool": 203, "rank": 6, "score": null, "source": "BACDIVE"}, {"corroborated_by":
+    [], "count": 3, "identifier": "NCBITaxon:176292", "label": "Secundilactobacillus
+    malefermentans", "pool": 203, "rank": 7, "score": null, "source": "BACDIVE"},
+    {"corroborated_by": [], "count": 3, "identifier": "NCBITaxon:28038", "label":
+    "Latilactobacillus curvatus", "pool": 203, "rank": 8, "score": null, "source":
+    "BACDIVE"}, {"corroborated_by": [], "count": 3, "identifier": "NCBITaxon:442",
+    "label": "Gluconobacter oxydans", "pool": 203, "rank": 9, "score": null, "source":
+    "BACDIVE"}, {"corroborated_by": [], "count": 3, "identifier": "NCBITaxon:51663",
+    "label": "Pediococcus damnosus", "pool": 203, "rank": 10, "score": null, "source":
+    "BACDIVE"}, {"corroborated_by": [], "count": 3, "identifier": "NCBITaxon:53444",
+    "label": "Fructilactobacillus lindneri", "pool": 203, "rank": 11, "score": null,
+    "source": "BACDIVE"}, {"corroborated_by": [], "count": 2, "identifier": "NCBITaxon:1247",
+    "label": "Oenococcus oeni", "pool": 203, "rank": 12, "score": null, "source":
+    "BACDIVE"}, {"corroborated_by": [], "count": 2, "identifier": "NCBITaxon:1281",
+    "label": "Staphylococcus carnosus", "pool": 203, "rank": 13, "score": null, "source":
+    "BACDIVE"}, {"corroborated_by": [], "count": 2, "identifier": "NCBITaxon:1307912",
+    "label": "Acetobacter oeni LMG 21952", "pool": 203, "rank": 14, "score": null,
+    "source": "BACDIVE"}, {"corroborated_by": [], "count": 2, "identifier": "NCBITaxon:1588",
+    "label": "Lentilactobacillus hilgardii", "pool": 203, "rank": 15, "score": null,
+    "source": "BACDIVE"}, {"corroborated_by": [], "count": 2, "identifier": "NCBITaxon:214326",
+    "label": "Latilactobacillus sakei subsp. sakei", "pool": 203, "rank": 16, "score":
+    null, "source": "BACDIVE"}, {"corroborated_by": [], "count": 2, "identifier":
+    "NCBITaxon:261164", "label": "Psychrobacter alimentarius", "pool": 203, "rank":
+    17, "score": null, "source": "BACDIVE"}, {"corroborated_by": [], "count": 2, "identifier":
+    "NCBITaxon:282669", "label": "Psychrobacter cibarius", "pool": 203, "rank": 18,
+    "score": null, "source": "BACDIVE"}, {"corroborated_by": [], "count": 2, "identifier":
+    "NCBITaxon:438", "label": "Acetobacter pasteurianus", "pool": 203, "rank": 19,
+    "score": null, "source": "BACDIVE"}, {"corroborated_by": [], "count": 2, "identifier":
+    "NCBITaxon:47714", "label": "Lacticaseibacillus paracasei subsp. paracasei", "pool":
+    203, "rank": 20, "score": null, "source": "BACDIVE"}, {"corroborated_by": [],
+    "count": 1, "identifier": "NCBITaxon:104097", "label": "Acetobacter estunensis",
+    "pool": 203, "rank": 23, "score": null, "source": "BACDIVE"}, {"corroborated_by":
+    [], "count": 1, "identifier": "NCBITaxon:104101", "label": "Acetobacter indonesiensis",
+    "pool": 203, "rank": 24, "score": null, "source": "BACDIVE"}, {"corroborated_by":
+    [], "count": 1, "identifier": "NCBITaxon:1050107", "label": "Lactobacillus delbrueckii
+    subsp. allosunkii", "pool": 203, "rank": 25, "score": null, "source": "BACDIVE"},
+    {"corroborated_by": [], "count": null, "identifier": "NCBITaxon:104099", "label":
+    "acetobacter_mesoxydans", "pool": 173, "rank": null, "score": null, "source":
+    "MADIN"}, {"corroborated_by": [], "count": null, "identifier": "NCBITaxon:1045004",
+    "label": "Oenococcus kitaharae NRIC 0645, DSM 17330", "pool": 173, "rank": null,
+    "score": null, "source": "MADIN"}, {"corroborated_by": [], "count": null, "identifier":
+    "NCBITaxon:1045854", "label": "Weissella koreensis KACC 15510", "pool": 173, "rank":
+    null, "score": null, "source": "MADIN"}, {"corroborated_by": [], "count": null,
+    "identifier": "NCBITaxon:104955", "label": "Lactobacillus frumenti", "pool": 173,
+    "rank": null, "score": null, "source": "MADIN"}, {"corroborated_by": [], "count":
+    null, "identifier": "NCBITaxon:1051653", "label": "Lactobacillus casei A2-362",
+    "pool": 173, "rank": null, "score": null, "source": "MADIN"}, {"corroborated_by":
+    [], "count": null, "identifier": "NCBITaxon:1051659", "label": "Lactobacillus
+    casei UCD174", "pool": 173, "rank": null, "score": null, "source": "MADIN"}, {"corroborated_by":
+    [], "count": null, "identifier": "NCBITaxon:1054041", "label": "Lactobacillus
+    yonginensis", "pool": 173, "rank": null, "score": null, "source": "MADIN"}, {"corroborated_by":
+    [], "count": null, "identifier": "NCBITaxon:1074467", "label": "Lactobacillus
+    heilongjiangensis", "pool": 173, "rank": null, "score": null, "source": "MADIN"},
+    {"corroborated_by": [], "count": null, "identifier": "NCBITaxon:1076596", "label":
+    "Acetobacter persici", "pool": 173, "rank": null, "score": null, "source": "MADIN"},
+    {"corroborated_by": [], "count": null, "identifier": "NCBITaxon:1089442", "label":
+    "Pediococcus damnosus 9-6b", "pool": 173, "rank": null, "score": null, "source":
+    "MADIN"}, {"corroborated_by": [], "count": null, "identifier": "NCBITaxon:1110509",
+    "label": "Methanosaeta harundinacea 6Ac", "pool": 173, "rank": null, "score":
+    null, "source": "MADIN"}, {"corroborated_by": [], "count": null, "identifier":
+    "NCBITaxon:1122148", "label": "Lactobacillus lindneri DSM 20690", "pool": 173,
+    "rank": null, "score": null, "source": "MADIN"}, {"corroborated_by": [], "count":
+    null, "identifier": "NCBITaxon:1122149", "label": "Lactobacillus malefermentans
+    KCTC 3548", "pool": 173, "rank": null, "score": null, "source": "MADIN"}, {"corroborated_by":
+    [], "count": null, "identifier": "NCBITaxon:1122150", "label": "Lactobacillus
+    nagelii DSM 13675", "pool": 173, "rank": null, "score": null, "source": "MADIN"},
+    {"corroborated_by": [], "count": null, "identifier": "NCBITaxon:1122219", "label":
+    "Megasphaera cerevisiae DSM 20462", "pool": 173, "rank": null, "score": null,
+    "source": "MADIN"}, {"corroborated_by": [], "count": null, "identifier": "NCBITaxon:1122618",
+    "label": "Oenococcus oeni DSM 20252", "pool": 173, "rank": null, "score": null,
+    "source": "MADIN"}, {"corroborated_by": [], "count": null, "identifier": "NCBITaxon:1123687",
+    "label": "Lactobacillus porcinae", "pool": 173, "rank": null, "score": null, "source":
+    "MADIN"}, {"corroborated_by": [], "count": null, "identifier": "NCBITaxon:114090",
+    "label": "pediococcus_inopinatus", "pool": 173, "rank": null, "score": null, "source":
+    "MADIN"}, {"corroborated_by": [], "count": null, "identifier": "NCBITaxon:115541",
+    "label": "Lactobacillus coryniformis subsp. coryniformis", "pool": 173, "rank":
+    null, "score": null, "source": "MADIN"}, {"corroborated_by": [], "count": null,
+    "identifier": "NCBITaxon:1167631", "label": "Oenococcus oeni AWRIB318", "pool":
+    173, "rank": null, "score": null, "source": "MADIN"}, {"corroborated_by": [],
+    "count": null, "identifier": "NCBITaxon:120045", "label": "Zymomonas mobilis subsp.
+    mobilis", "pool": 173, "rank": null, "score": null, "source": "MADIN"}, {"corroborated_by":
+    [], "count": null, "identifier": "NCBITaxon:1202668", "label": "Lactobacillus
+    oryzae", "pool": 173, "rank": null, "score": null, "source": "MADIN"}, {"corroborated_by":
+    [], "count": null, "identifier": "NCBITaxon:1206774", "label": "Oenococcus oeni
+    AWRIB568", "pool": 173, "rank": null, "score": null, "source": "MADIN"}]} Download
+    SHA256 1d7925cd89404cfa893114d28979276fe1b7291cf4f91ea6b7f69f433ab3c04e.'
+  accessed_at: '2026-10-14T12:24:15.991594Z'
+  support: supports
+- evidence_id: INDIGO
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/22843722/
+  summary: Retained inspected predecessor evidence, not a new retrieval or current
+    annotation value. PMID 22843722; DOI 10.1099/ijs.0.034579-0. Inspected abstract
+    identifies A21/JCM17251/NCIMB14685 from laboratory-prepared Polygonum indigo dye
+    liquor. This is nonfood fermentation, not a food-isolation demonstration. Download
+    SHA256 94818fe6d34848e371784cc161e61d47aa4a50bb81a2235d204e226699d22aa9.
+  accessed_at: '2026-10-14T12:27:45.266611Z'
+  support: supports
+- evidence_id: BACDIVE
+  kind: database
+  reference: https://bacdive.dsmz.de/strain/23737
+  summary: Retained inspected predecessor evidence, not a new retrieval or current
+    annotation value. BacDive 23737 ties taxid 1004261 to A21/DSM28042/JCM17251/NCIMB14685
+    and indigo liquor isolation, despite Fermented/Beverage source categories. The
+    disagreement is explicit; the original frozen count-one join remains unavailable.
+    Download SHA256 c07ffddc2a170ad80f6737a84dde220f00ffaf7d7b04758a904d000411f8ce9c.
+  accessed_at: '2026-10-14T12:27:45.624979Z'
+  support: supports
+- evidence_id: WASTEWATER
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/16403877/
+  summary: Retained inspected predecessor evidence, not a new retrieval or current
+    annotation value. PMID 16403877; DOI 10.1099/ijs.0.63887-0. Inspected abstract
+    explicitly identifies both 6Ac and 8Ac from a UASB reactor treating brewery wastewater.
+    NCBITaxon:1110509 is 6Ac; evidence is not transferred from only the 8Ac type strain.
+    Wastewater origin does not prove no later food occurrence. Download SHA256 94818fe6d34848e371784cc161e61d47aa4a50bb81a2235d204e226699d22aa9.
+  accessed_at: '2026-10-14T12:27:45.266611Z'
+  support: supports
+- evidence_id: MADIN
+  kind: database
+  reference: https://raw.githubusercontent.com/bacteria-archaea-traits/bacteria-archaea-traits/d1a0a2ef4003d9940752524ca7151e62ee74a4bc/data/conversion_tables/renaming_isolation_source.csv
+  summary: 'Retained inspected predecessor evidence, not a new retrieval or current
+    annotation value. Parsed all 3153 source renaming rows, including all 86 food_fermented
+    rows: waste-corn fermentation, malted barley and food preparations share a bin.
+    This supports heterogeneity, but does not prove the original string or classification
+    mechanism for strain 6Ac. Download SHA256 62425f9b6cb450a3b7d8521d25bb494f11739ac14d47e8ec70997f03f6740579.'
+  accessed_at: '2026-10-14T12:30:08.124228Z'
+  support: supports
+checks:
+- check_id: C1
+  name: just validate
+  status: passed
+  required: true
+  target_ids:
+  - FOODON:00001258
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate data/habitats/food/food_fermented.yaml
+  exit_code: 0
+  summary: Executed 2026-10-14T12:43:21.513378Z to 2026-10-14T12:43:23.430033Z. No
+    issues found
+- check_id: C4
+  name: just validate-strict
+  status: passed
+  required: true
+  target_ids:
+  - FOODON:00001258
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-strict
+    data/habitats/food/fish_products.yaml data/habitats/food/food_fermented.yaml data/habitats/food/food_preserved.yaml
+    data/habitats/food/food_sample.yaml
+  exit_code: 0
+  summary: "Executed 2026-10-14T12:43:27.110789Z to 2026-10-14T12:43:30.770987Z. uv\
+    \ run python scripts/validate_strict.py data/habitats/food/fish_products.yaml\
+    \ data/habitats/food/food_fermented.yaml data/habitats/food/food_preserved.yaml\
+    \ data/habitats/food/food_sample.yaml\nValidating 4 files with 15 workers; schema=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/src/habitatmech/schema/habitatmech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      4\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                reports/instance_validation_failures.tsv"
+- check_id: C5
+  name: just validate-history
+  status: passed
+  required: true
+  target_ids:
+  - FOODON:00001258
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-history
+  exit_code: 0
+  summary: 'Executed 2026-10-14T12:43:30.771562Z to 2026-10-14T12:43:37.169730Z. No
+    issues found
+
+    670 history record(s) valid against src/habitatmech/schema/history.yaml'
+- check_id: C6
+  name: just provenance-check
+  status: passed
+  required: true
+  target_ids:
+  - FOODON:00001258
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just provenance-check
+  exit_code: 0
+  summary: 'Executed 2026-10-14T12:43:37.170213Z to 2026-10-14T12:43:37.641764Z. provenance
+    current: 14 committed inventories, 2 GOLD sources'
+- check_id: C7
+  name: just verify-corpus
+  status: passed
+  required: true
+  target_ids:
+  - FOODON:00001258
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just verify-corpus
+  exit_code: 0
+  summary: "Executed 2026-10-14T12:43:37.642175Z to 2026-10-14T12:43:50.090325Z. expected\
+    \ 3208 records, found 3208 on disk\n  missing:   0\n  extra:     0\n  differing:\
+    \ 0\n\ncorpus reproduces exactly from data/raw/"
+- check_id: C8
+  name: just validate-causal-all
+  status: passed
+  required: true
+  target_ids:
+  - FOODON:00001258
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-causal-all
+  exit_code: 0
+  summary: Executed 2026-10-14T12:43:50.090923Z to 2026-10-14T12:43:53.427113Z. validated
+    32 causal-graph curation file(s) with 32 graph(s)
+- check_id: C9
+  name: just term-requests-check
+  status: passed
+  required: true
+  target_ids:
+  - FOODON:00001258
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just term-requests-check
+  exit_code: 0
+  summary: Executed 2026-10-14T12:43:53.427679Z to 2026-10-14T12:44:06.487598Z. term-request
+    table is current (109 terms)
+- check_id: C10
+  name: just validate-products
+  status: passed
+  required: true
+  target_ids:
+  - FOODON:00001258
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-products
+  exit_code: 0
+  summary: "Executed 2026-10-14T12:44:06.488195Z to 2026-10-14T12:44:45.130418Z. id↔label\
+    \ correspondence summary:\n          OK_CANONICAL: 1176\n            OK_SYNONYM:\
+    \ 1\n          OK_EXCEPTION: 5\n    SKIPPED_NO_ADAPTER: 2059\n\n✅ All id↔label\
+    \ pairs correspond."
+- check_id: C11
+  name: uv run
+  status: passed
+  required: true
+  target_ids:
+  - FOODON:00001258
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache uv run pytest -q tests/test_food_material_review_fixes.py
+    tests/test_fermented_food_review_fixes.py tests/test_record_annotation_corrections.py
+    tests/test_curation_floor.py tests/test_gold_parent_exclusions.py
+  exit_code: 0
+  summary: 'Executed 2026-10-14T12:44:45.131035Z to 2026-10-14T12:46:10.101602Z. ........................................................................
+    [ 73%]
+
+    ..........................                                               [100%]
+
+    98 passed in 84.13s (0:01:24)'
+- check_id: C12
+  name: uv run
+  status: passed
+  required: true
+  target_ids:
+  - FOODON:00001258
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache uv run ruff check .
+  exit_code: 0
+  summary: Executed 2026-10-14T12:46:10.102250Z to 2026-10-14T12:46:10.316865Z. All
+    checks passed!
+- check_id: QC
+  name: Exact corrected-base authoritative QC
+  status: passed
+  required: true
+  target_ids:
+  - FOODON:00001258
+  command: gh run view 38566768650 --repo CultureBotAI/HabitatMech --json status,conclusion,headSha,url
+  exit_code: 0
+  summary: Verified exact corrected base; new reports require post-save checks.
+  evidence_ids:
+  - QC
+- check_id: MEMBERS
+  name: Original member reconstruction
+  status: unavailable
+  required: false
+  target_ids:
+  - FOODON:00001258
+  summary: No recovered member dump or join; predecessor GOLD requests returned 403.
+  evidence_ids:
+  - AVAILABILITY
+  - GOLD_ACCESS
+- check_id: IMODULON
+  name: Expression evidence applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - FOODON:00001258
+  summary: No gene/regulator/protein/transcriptomics claim is introduced.
+assessments:
+- assessment_id: FIX
+  area: grounding
+  topic: Scoped correction and exact finding lineage
+  outcome: supported
+  target_ids:
+  - FOODON:00001258
+  evidence_ids:
+  - CURRENT
+  - OWNERS
+  - REGRESSION
+  - PREVIOUS
+  - QC
+  - RULES
+  - FOODON
+  - ENVO
+  - AVAILABILITY
+  - GOLD_ACCESS
+  - TAXONOMY
+  - INDIGO
+  - BACDIVE
+  - WASTEWATER
+  - MADIN
+  summary: 'The exact immediate GOLD process-parent contribution is excluded. Native
+    identity/status, source paths/counts/units, all taxon associations and any independently
+    supported ontology genera remain unchanged. Nonfood indigo fermentation and the
+    6Ac wastewater association remain unresolved in #2067/#2068. This parent repair
+    does not endorse those source interpretations; the record still needs curation.'
+- assessment_id: SOURCE
+  area: evidence
+  topic: Source claims, scope and native status
+  outcome: concern
+  target_ids:
+  - FOODON:00001258
+  evidence_ids:
+  - CURRENT
+  - OWNERS
+  - REGRESSION
+  - PREVIOUS
+  - QC
+  - RULES
+  - FOODON
+  - ENVO
+  - AVAILABILITY
+  - GOLD_ACCESS
+  - TAXONOMY
+  - INDIGO
+  - BACDIVE
+  - WASTEWATER
+  - MADIN
+  summary: 'Complete current record reread. BacDive isolation row 51 has 242 STRAIN
+    assertions and a 203-taxon pool; upstream mapping row 113 declined grounding,
+    overridden by ITEM BROAD decision 38. GOLD row 56 has nodes 3504/3825/4252 and
+    645 ORGANISM assertions; ITEM BROAD decision 1014. MADIN row 28 has 173 TAXON
+    assertions; ITEM CLOSE decision 1575. All three ITEM decisions mechanically support
+    REVIEWED, not biological endorsement. The 25 BacDive and 25 MADIN top-ranked rows
+    overlap at taxids 1004261 and 1007676, yielding 48 displayed associations with
+    preserved fields. Corroboration is source agreement, not independent isolation
+    proof. Eight parameter rows 541-548 have empty term_ids and are correctly not
+    emitted. Bulk row 84 has 392 BIOSAMPLE observations. Triad rows 89-91 cover five
+    samples/four studies: manufactured product broad scale, alcohol fermentation pit
+    local scale, fermentation starter medium; roles do not establish whole-class identity.
+    Seventeen own-path study rows include multipath Gs0154282; no counts are summed.
+    Original source observations are preserved, not promoted to characteristic presence
+    or biological causation. Only F1 receives a resolved disposition.'
+- assessment_id: LIMITS
+  area: completeness
+  topic: Unavailable original members and broader identity audit
+  outcome: unknown
+  target_ids:
+  - FOODON:00001258
+  evidence_ids:
+  - PREVIOUS
+  - AVAILABILITY
+  - GOLD_ACCESS
+  summary: 'Original joins remain unavailable. Current strain examples do not reconstruct
+    frozen membership. Food production identity #2070 and fermented-food #2067/#2068
+    remain open; no global ontology or SSSOM/KGX certification is claimed.'
+findings:
+- finding_id: F1
+  issue_key: food-fermented-food-production-process-parent
+  category: grounding
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Production process is not a strict material genus
+  description: The immediate GOLD source-path parent resolves to FOODON:03530206,
+    a production process. The target denotes food material or a food-source sample,
+    not a kind of that process. Preserve independent material parents and source classification
+    without promoting context to subclass.
+  target_ids:
+  - FOODON:00001258
+  field_paths:
+  - parent_habitats
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or transform; never hand-edit generated record
+  evidence_ids:
+  - CURRENT
+  - OWNERS
+  - REGRESSION
+  - PREVIOUS
+  - QC
+  - RULES
+  - FOODON
+  - ENVO
+  - AVAILABILITY
+  - GOLD_ACCESS
+  - TAXONOMY
+  - INDIGO
+  - BACDIVE
+  - WASTEWATER
+  - MADIN
+  rule_id: Native habitat identity, strict genus and evidence-scope rules
+  native_severity: major
+  normalization_reason: Materially unsupported genus, synonym scope or habitat interpretation
+    requires source-level curation.
+  previous_occurrences:
+  - repository: CultureBotAI/HabitatMech
+    review_id: 20261014T123755Z-food_fermented
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2066
+  disposition_reason: 'Confirmed the exact maintained-input fix and generated claim
+    preservation. The exact immediate GOLD process-parent contribution is excluded.
+    Native identity/status, source paths/counts/units, all taxon associations and
+    any independently supported ontology genera remain unchanged. Nonfood indigo fermentation
+    and the 6Ac wastewater association remain unresolved in #2067/#2068. This parent
+    repair does not endorse those source interpretations; the record still needs curation.'
+- finding_id: F2
+  issue_key: food-fermented-bacdive-nonfood-fermentation
+  category: scope
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Fermented source bin includes nonfood indigo fermentation
+  description: BacDive categorizes taxid1004261/A21 as Fermented, but both its isolation
+    text and primary study identify indigo dye liquor. This contradicts the maintained
+    claim that the bin is wholly food material. Original frozen strain membership
+    is unavailable, so the current example does not prove which historical count-one
+    member was joined, or absence of all food occurrences.
+  target_ids:
+  - FOODON:00001258
+  field_paths:
+  - source_attestations
+  - characteristic_taxa[taxon_id=NCBITaxon:1004261]
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or transform; never hand-edit generated record
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Maintained input or transform; never hand-edit generated record
+  evidence_ids:
+  - CURRENT
+  - OWNERS
+  - REGRESSION
+  - PREVIOUS
+  - QC
+  - RULES
+  - FOODON
+  - ENVO
+  - AVAILABILITY
+  - GOLD_ACCESS
+  - TAXONOMY
+  - INDIGO
+  - BACDIVE
+  - WASTEWATER
+  - MADIN
+  rule_id: Native habitat identity, strict genus and evidence-scope rules
+  native_severity: major
+  normalization_reason: Materially unsupported genus, synonym scope or habitat interpretation
+    requires source-level curation.
+  previous_occurrences:
+  - repository: CultureBotAI/HabitatMech
+    review_id: 20261014T123755Z-food_fermented
+    finding_id: F2
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2067
+  disposition_reason: 'No original member evidence has been recovered; the scoped
+    hierarchy fix does not resolve this source interpretation. The exact immediate
+    GOLD process-parent contribution is excluded. Native identity/status, source paths/counts/units,
+    all taxon associations and any independently supported ontology genera remain
+    unchanged. Nonfood indigo fermentation and the 6Ac wastewater association remain
+    unresolved in #2067/#2068. This parent repair does not endorse those source interpretations;
+    the record still needs curation.'
+- finding_id: F3
+  issue_key: food-fermented-madin-6ac-wastewater-association
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: The 6Ac association lacks food-matrix support
+  description: The MADIN association for NCBITaxon:1110509 is presented within fermented
+    food, while the primary isolation study explicitly places strain 6Ac in brewery-wastewater
+    treatment. The original MADIN join and any alternative food isolation evidence
+    remain unavailable. Confirmed evidence conflict does not prove a particular text-classification
+    bug or that the organism never occurs in food.
+  target_ids:
+  - FOODON:00001258
+  field_paths:
+  - characteristic_taxa[taxon_id=NCBITaxon:1110509]
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or transform; never hand-edit generated record
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Maintained input or transform; never hand-edit generated record
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/madin_habitat_taxa.tsv
+    role: Maintained input or transform; never hand-edit generated record
+  evidence_ids:
+  - CURRENT
+  - OWNERS
+  - REGRESSION
+  - PREVIOUS
+  - QC
+  - RULES
+  - FOODON
+  - ENVO
+  - AVAILABILITY
+  - GOLD_ACCESS
+  - TAXONOMY
+  - INDIGO
+  - BACDIVE
+  - WASTEWATER
+  - MADIN
+  rule_id: Native habitat identity, strict genus and evidence-scope rules
+  native_severity: major
+  normalization_reason: Materially unsupported genus, synonym scope or habitat interpretation
+    requires source-level curation.
+  previous_occurrences:
+  - repository: CultureBotAI/HabitatMech
+    review_id: 20261014T123755Z-food_fermented
+    finding_id: F3
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2068
+  disposition_reason: 'No original member evidence has been recovered; the scoped
+    hierarchy fix does not resolve this source interpretation. The exact immediate
+    GOLD process-parent contribution is excluded. Native identity/status, source paths/counts/units,
+    all taxon associations and any independently supported ontology genera remain
+    unchanged. Nonfood indigo fermentation and the 6Ac wastewater association remain
+    unresolved in #2067/#2068. This parent repair does not endorse those source interpretations;
+    the record still needs curation.'
+actions:
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - FOODON:00001258
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or transform; never hand-edit generated record
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Maintained input or transform; never hand-edit generated record
+  description: Reassess BacDive mint habitatmech:BACDIVE.556e1e04f8 and obtain original
+    member evidence; retain native or qualified source scope rather than silently
+    treating all fermentation as food. Do not delete historical count-one data from
+    a current example alone.
+  generator: src/habitatmech/seed.py
+  acceptance_checks:
+  - Change maintained owners, never hand-edit generated YAML or raw frozen assertions.
+  - Preserve exact source identity, counts/units, taxon fields and status unless separately
+    justified.
+  - Dry seed, inspect exact canary, focused regressions, schema, strict, history,
+    provenance, label, corpus/site and authoritative QC gates.
+  - Save immutable successor with stable issue key and exact previous occurrence for
+    disposition.
+- action_id: A3
+  finding_ids:
+  - F3
+  target_ids:
+  - FOODON:00001258
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or transform; never hand-edit generated record
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Maintained input or transform; never hand-edit generated record
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/madin_habitat_taxa.tsv
+    role: Maintained input or transform; never hand-edit generated record
+  description: Recover original member provenance and qualify or correct the food
+    interpretation through a maintained, evidence-backed mechanism. Preserve the frozen
+    173-TAXON aggregate and strain identity until that source reconstruction is possible.
+  generator: src/habitatmech/seed.py
+  acceptance_checks:
+  - Change maintained owners, never hand-edit generated YAML or raw frozen assertions.
+  - Preserve exact source identity, counts/units, taxon fields and status unless separately
+    justified.
+  - Dry seed, inspect exact canary, focused regressions, schema, strict, history,
+    provenance, label, corpus/site and authoritative QC gates.
+  - Save immutable successor with stable issue key and exact previous occurrence for
+    disposition.
+limitations:
+- Same-agent review, not independent approval.
+- No original member reconstruction, native status promotion or automatic neighboring-finding
+  closure.
+- The preserved synonym correction repairs output scope; it does not refresh the frozen
+  ontology lexical index.
+- 'Four scoped fixes do not resolve source reconstruction or process identity issues
+  #2067/#2068/#2070.'
+- Corrected-base QC predates these reports; final archive and publication checks remain
+  required.
+related_reviews:
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261014T123755Z-food_fermented
+  relationship: Exact predecessor reassessed without altering immutable reports.
+notes:
+- Initial corrected-input capture 2026-10-14T12:44:59.423568Z; final reinspection
+  proves captured input bytes unchanged.
+tags:
+- habitatmech
+- record-review
+- food
+- followup
+```
