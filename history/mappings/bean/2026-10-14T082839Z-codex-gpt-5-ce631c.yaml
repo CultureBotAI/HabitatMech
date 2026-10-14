@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: bean
+session:
+  id: 2026-10-14T082839Z-codex-gpt-5-ce631c
+  timestamp: '2026-10-14T08:28:39Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2042
+  urls:
+  - https://raw.githubusercontent.com/FoodOntology/foodon/cd73540243a84bcd511a500d9a497d12d7dc02f6/foodon.owl
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  - provenance
+  summary: Remove food-production process context parent
+  details: 'Excluded only the exact immediate GOLD Food production path contribution: the
+    frozen and pinned FoodOn definitions identify a planned process, not a material genus.
+    Preserved independent ontology parents, identity, status, all observations and prior events.
+    This does not resolve Bread production identity (#2044) or the broader Food production
+    root; original GOLD memberships were unavailable. Predecessor scientific observation 20261014T082129Z-bean.
+    Same-agent GPT-5 assessment. Dry seed and 28 focused food/ontology-label tests passed;
+    raw-chop and beverage canaries were inspected before full generation. Full QC, label,
+    map/site and immutable successor gates remain required before publication.'

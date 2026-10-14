@@ -3,8 +3,6 @@ label: Baby formula
 habitat_category: FOOD
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- FOODON:03530206
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5625
@@ -26,3 +24,14 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution FOODON:03530206 for habitatmech:GOLD.6d46057e78
+    (Engineered > Food production > Baby formula). Food record review https://github.com/CultureBotAI/HabitatMech/issues/2042:
+    the source names food material; the frozen and pinned FoodOn definitions of the
+    immediate parent name a planned process. Exclude only that context edge, preserving
+    the source mint, CLASS decision, SEEDED status, three nodes and 27 ORGANISM assertions.
+    The separate 31 BIOSAMPLE observations are not additive. An infant-formula candidate
+    outside the committed slice needs a governed import and separate ITEM assessment;
+    no global ontology-absence claim is made.'

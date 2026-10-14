@@ -13,7 +13,6 @@ synonyms:
 parent_habitats:
 - FOODON:00001635
 - FOODON:03310646
-- FOODON:03530206
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5933
@@ -32,3 +31,13 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution FOODON:03530206 for habitatmech:GOLD.effa0d6ca3
+    (Engineered > Food production > Beans). Food record review https://github.com/CultureBotAI/HabitatMech/issues/2042:
+    bean is food material, not a planned food-production process. Exclude only the
+    immediate GOLD process contribution and preserve both independent frozen food-material
+    parents, exact identity, ITEM status, three source nodes and omitted organism
+    counter. The 26 bulk biosamples remain a separate source inventory; no source
+    membership or latest ontology hierarchy refresh is asserted.'

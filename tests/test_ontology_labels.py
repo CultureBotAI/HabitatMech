@@ -167,7 +167,7 @@ def test_current_foodon_labels_do_not_make_generic_pastry_wheat_only():
     assert beverage["grounding_status"] == "EXACT"
     assert beverage["mapping_status"] == "REVIEWED"
     assert beverage["parent_habitats"] == [
-        "FOODON:03301977", "FOODON:03430130", "FOODON:03530206",
+        "FOODON:03301977", "FOODON:03430130",
     ]
     assert beverage["source_attestations"] == [{
         "source": "GOLD", "source_id": "gold.ecosystem:5924", "source_label": "Beverages",

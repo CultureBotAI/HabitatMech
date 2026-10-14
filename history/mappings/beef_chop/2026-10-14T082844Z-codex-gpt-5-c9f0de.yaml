@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: beef_chop
+session:
+  id: 2026-10-14T082844Z-codex-gpt-5-c9f0de
+  timestamp: '2026-10-14T08:28:44Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2043
+  urls:
+  - https://raw.githubusercontent.com/FoodOntology/foodon/cd73540243a84bcd511a500d9a497d12d7dc02f6/foodon.owl
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  - provenance
+  summary: Preserve raw beef source scope
+  details: Item-reviewed the full Raw meat > Beef chop source path and pinned FoodOn generic/raw
+    subclass distinction. Retained the source mint with generic beef chop as a strictly broader
+    parent, not exact identity; preserved node 6425, raw-material parent and omission of organism
+    counts. The separate 17 biosamples and facility triads are not identity evidence. No new
+    ontology import or source-membership assertion. Predecessor scientific observation 20261014T082137Z-beef_chop.
+    Same-agent GPT-5 assessment. Dry seed and 28 focused food/ontology-label tests passed;
+    raw-chop and beverage canaries were inspected before full generation. Full QC, label,
+    map/site and immutable successor gates remain required before publication.

@@ -15,7 +15,6 @@ synonyms:
 parent_habitats:
 - FOODON:03301977
 - FOODON:03430130
-- FOODON:03530206
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5924
@@ -42,3 +41,13 @@ curation_history:
     the 2026-08-12 checked-label decision without claiming new organism or sample
     evidence. The separate 127 BIOSAMPLE observations are not added to the organism
     count. Path: Engineered > Food production > Beverages (source concept habitatmech:GOLD.96754211ed)'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution FOODON:03530206 for habitatmech:GOLD.96754211ed
+    (Engineered > Food production > Beverages). Food record review https://github.com/CultureBotAI/HabitatMech/issues/2042:
+    beverage liquid is not a kind of planned food-production process. Preserve both
+    independent ontology parents, the canonical liquid label and definition, exact
+    source mapping, ITEM status, three nodes and 96 ORGANISM assertions. Suppress
+    only the source-context process edge; 127 separate bulk biosamples are not added
+    to the count.'

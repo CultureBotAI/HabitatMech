@@ -1,29 +1,33 @@
-identifier: FOODON:02020979
-label: beef chop
-definition: A retail cut of meat from a beef that is perpendicular to the spine, and
-  usually containing a rib or riblet part of a vertebra.
-definition_source: FOODON
+identifier: habitatmech:GOLD.413b64dcc1
+label: Beef chop
 habitat_category: FOOD
-grounding_status: EXACT
-mapping_status: SEEDED
-synonyms:
-- synonym_text: beef meat chop
-  synonym_type: EXACT_SYNONYM
-  source: FOODON
-- synonym_text: cow chop
-  synonym_type: EXACT_SYNONYM
-  source: FOODON
+grounding_status: NARROW
+mapping_status: REVIEWED
 parent_habitats:
-- FOODON:00004478
+- FOODON:02020979
 - habitatmech:GOLD.43005e4de2
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6425
   source_label: Beef chop
   source_path: Engineered > Food production > Meat products > Raw meat > Beef chop
-  mapping_predicate: skos:exactMatch
+  mapping_predicate: skos:narrowMatch
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: GROUND_AS_PARENT
+  changes: 'FOODON:02020979 ''beef chop'' attached as a parent, not adopted as the
+    identity (NARROW). Raw-source scope review (#2043): the full GOLD path explicitly
+    places Beef chop under Raw meat. The pinned official FoodOn snapshot distinguishes
+    a raw-chop subclass from generic FOODON:02020979 ''beef chop''; the raw candidate
+    is outside the committed slice. Retain this source mint and attach the verified
+    generic chop only as a broader parent, preserving the independent Raw meat source
+    parent. Do not make generic beef chop raw-only or import an unverified identity.
+    Preserve node 6425 and omission of organism count; the separate 17 bulk biosamples
+    and facility-valued triads are not identity evidence or organism assertions. Path:
+    Engineered > Food production > Meat products > Raw meat > Beef chop (source concept
+    habitatmech:GOLD.413b64dcc1)'
