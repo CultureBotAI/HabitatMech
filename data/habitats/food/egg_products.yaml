@@ -3,8 +3,6 @@ label: Egg products
 habitat_category: FOOD
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- FOODON:03530206
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5886
@@ -26,3 +24,13 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution FOODON:03530206 for habitatmech:GOLD.363486c188
+    (Engineered > Food production > Egg products). Scientific review #2052: Egg products
+    names food material, not a production process. Exclude only the immediate GOLD
+    process contribution while retaining the mint, CLASS/SEEDED status, three nodes
+    and nine ORGANISM assertions. Twenty later bulk BIOSAMPLE observations are separate.
+    This does not establish an exact ontology mapping or equivalence to the distinct
+    BacDive Egg host-product category.'

@@ -1,23 +1,12 @@
-identifier: FOODON:00001274
-label: egg food product
-definition: A food consisting of a round or oval body laid by the female of many animals,
-  consisting of an ovum surrounded by layers of membranes and an outer casing, which
-  acts to nourish and protect a developing embryo and its nutrient reserves.
-definition_source: FOODON
-habitat_category: FOOD
-grounding_status: CLOSE
+identifier: habitatmech:BACDIVE.d48ce9485d
+label: Egg
+habitat_category: HOST_ASSOCIATED
+grounding_status: UNGROUNDED
 mapping_status: REVIEWED
-synonyms:
-- synonym_text: Egg
-  synonym_type: RELATED_SYNONYM
-  source: BacDive
-parent_habitats:
-- FOODON:00001092
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:egg
   source_label: Egg
-  mapping_predicate: skos:closeMatch
   assertion_count: 35
   assertion_unit: STRAIN
 characteristic_taxa:
@@ -172,22 +161,24 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 30
 curation_history:
-- timestamp: '2026-08-16T00:00:00Z'
-  curator: claude-opus-5
-  action: REVIEW
-  changes: 'Reviewed and endorsed the seeder''s own resolution. Risky-grounding review
-    (#12): the flag is a narrowing one: FOODON''s label adds the food-product framing
-    that BacDive''s bare category leaves implicit. BacDive''s isolation sources in
-    this part of the vocabulary are foods, so the framing is right, and the grounding
-    is recorded as CLOSE rather than EXACT to keep that a visible approximation. (source
-    concept habitatmech:BACDIVE.d48ce9485d)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: CLOSE.'
-- timestamp: '2026-10-07T00:00:00Z'
-  curator: seed_from_sources
-  action: SOURCE_SYNONYM_SCOPED
-  changes: 'Retained BacDive label ''Egg'' as RELATED_SYNONYM: a CLOSE source mapping
-    does not establish exact lexical equivalence. Independent ontology synonyms and
-    verbatim attestations are preserved (#1459).'
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Source-identity
+    correction (#2051): BacDive Egg is a host-body-product isolation category, not
+    a food-only vocabulary branch. Exact stored strain DSM 19883 (BacDive https://bacdive.dsmz.de/strain/7355)
+    was isolated from a chironomid egg mass in a waste-stabilization pond; DSM 18103
+    (https://bacdive.dsmz.de/strain/5652) from halibut egg epiflora. Both explicitly
+    carry Host Body Product > Urogenital tract > Egg. Reject FOODON:00001274 ''egg
+    food product'' and its vertebrate-food restriction; retain the native source habitat
+    with HOST_ASSOCIATED coarse placement, not whole-organism ontology identity or
+    NOT_APPLICABLE. No verified exact identity for this source scope is established
+    in the committed slice; this is not global ontology absence. Preserve all 35 STRAIN-unit
+    source assertions and all 25 displayed taxon observations/ranks from the 30-taxon
+    pool. Two exact-strain witnesses do not reconstruct every original member or justify
+    a source split, characteristic-presence claim or merger with GOLD Egg products.
+    (source concept habitatmech:BACDIVE.d48ce9485d)'

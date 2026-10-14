@@ -18,7 +18,6 @@ synonyms:
 parent_habitats:
 - FOODON:00001092
 - FOODON:00005501
-- FOODON:03530206
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3505
@@ -39,3 +38,14 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution FOODON:03530206 for habitatmech:GOLD.c6aaede3c0
+    (Engineered > Food production > Dairy products). Scientific review #2050: dairy
+    food product is milk-derived food material; the frozen and pinned FoodOn definitions
+    of the immediate GOLD parent describe a planned production process, not a material
+    genus. Exclude only that context contribution while retaining both independent
+    ontology parents, exact identity, ITEM/REVIEWED status, three nodes and 1319 ORGANISM
+    assertions. The 551 bulk BIOSAMPLE observations remain separate and are not added
+    to the organism count.'

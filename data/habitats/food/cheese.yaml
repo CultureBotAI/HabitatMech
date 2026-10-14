@@ -7,7 +7,6 @@ grounding_status: EXACT
 mapping_status: SEEDED
 parent_habitats:
 - FOODON:00001013
-- habitatmech:GOLD.4a2834cfef
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5509
@@ -22,3 +21,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.4a2834cfef
+    for habitatmech:GOLD.58a308b569 (Engineered > Food production > Dairy products
+    > Fermented dairy products > Cheese). Scientific review #2048: generic FOODON:03000287
+    cheese is defined by casein coagulation, not necessarily fermentation. FAO https://www.fao.org/4/t0251e/T0251E12.htm
+    describes industrial paneer using heat and citric-acid coagulation without fermentation;
+    unripened alone is not the argument. Exclude only the GOLD fermentation-context
+    parent from the generic ontology class and retain its independent cheese-food-product
+    genus, source path, node 5509 and 582 ORGANISM assertions. This does not settle
+    whether the GOLD bin itself has narrower fermented-only scope; original membership
+    remains unavailable. No source identity or status promotion is performed.'

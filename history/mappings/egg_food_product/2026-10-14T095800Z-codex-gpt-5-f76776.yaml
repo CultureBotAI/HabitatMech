@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: egg_food_product
+session:
+  id: 2026-10-14T095800Z-codex-gpt-5-f76776
+  timestamp: '2026-10-14T09:58:00Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2051
+  urls:
+  - https://bacdive.dsmz.de/strain/7355
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  - provenance
+  summary: Preserve BacDive Egg host-product source identity
+  details: Replaced the unsupported food-only REVIEW endorsement with an ITEM CONFIRM_UNGROUNDED
+    decision retaining the BacDive source mint and HOST_ASSOCIATED coarse category. Exact
+    DSM 19883 and DSM 18103 source pages identify insect egg-mass and fish-egg epiflora habitats
+    and explicitly label the Egg host-product category. Preserve 35 STRAIN-unit assertions,
+    25 displayed taxa, ranks and 30-taxon pool. Do not infer all original members, invent
+    a definition or merge with GOLD Egg products. The former ontology record remains in Git
+    and the immutable predecessor, not falsely described as byte-identical native history.
+    Scientific observation 20261014T095321Z-egg_food_product; same-agent GPT-5 assessment.
+    Dry seed succeeded. Focused regressions, full generation, history/schema/labels, map/site,
+    immutable successor and full QC checks are required before publication.
