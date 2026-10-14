@@ -49,10 +49,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 </table>
 </div>
 
-<h2>Broader habitats</h2>
-<ul class="plain">
-  <li><a href="../habitats/skin-habitatmech-gold-4b37ab4b76.html">Skin</a>      <code class="curie">habitatmech:GOLD.4b37ab4b76</code></li>
-</ul>
 
 
 
@@ -66,6 +62,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">NOT_APPLICABLE</span>
     <span class="meta">2026-08-12 · claude-opus-5</span>
     <p>Marked NOT_APPLICABLE: the source concept does not denote a habitat. &#39;Abscess: Pilonidal sinus&#39; names a disease, an intervention, a sampling artefact or a no-value filler rather than a place. Pulled out of the class-level sweep and decided individually. (source concept habitatmech:GOLD.628407fcc7)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-14 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.4b37ab4b76 for habitatmech:GOLD.628407fcc7 (Host-associated &gt; Mammals: Human &gt; Integumentary system &gt; Skin &gt; Abscess: Pilonidal sinus). Scientific review #2127 (20261014T200255Z-abscess_pilonidal_sinus F1): The localized lesion or purulent collection is not a kind of skin. Preserve any independent broader abscess genus; no new lesion subsite is inferred. <a href="https://meshb.nlm.nih.gov/record/ui?ui=D000038" rel="noopener noreferrer" target="_blank">https://meshb.nlm.nih.gov/record/ui?ui=D000038</a> The disease-versus-physical-specimen question remains provisional under #220; this parent correction does not change the current disposition. Exclude only this exact immediate GOLD source-path contribution with expected-parent guard; retain source nodes, verbatim path, count/unit semantics and unrelated parents.</p>
   </li>
 </ol>
 

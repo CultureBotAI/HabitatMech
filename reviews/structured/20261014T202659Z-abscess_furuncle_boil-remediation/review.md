@@ -1,0 +1,863 @@
+# Remediation review: Abscess: Furuncle/Boil
+
+- Review: 20261014T202659Z-abscess_furuncle_boil-remediation
+- Repository: CultureBotAI/HabitatMech
+- Started UTC: 2026-10-14T20:15:10Z
+- Finished UTC: 2026-10-14T20:26:59Z
+- Reviewer: codex-gpt-5 (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Removed the guarded source-context parent; preserved independent valid genus, source path/nodes/count units, and native status except the separately justified abdominal ITEM identity correction. The full-corpus counterfactual proves exactly twelve changed source records and no unrelated scientific changes. The non-habitat disposition question remains provisional and deferred under #220; current NOT_APPLICABLE is not promoted or silently certified.
+
+## Scope And Provenance
+
+Focused remediation of exact prior findings; the complete current generated target and its diff were read.
+
+Selection: Explicit successor to 20261014T200255Z-abscess_furuncle_boil
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: git_commit at Git base d06b07858f327a88516ae44df4d0092ebd6a5fab.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| habitatmech:GOLD.ef667faebd | data/habitats/host_associated/abscess_furuncle_boil.yaml | generated | Abscess: Furuncle/Boil |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native validate | passed | True | habitatmech:GOLD.ef667faebd | Executed 2026-10-14T20:14:18Z to 2026-10-14T20:14:22Z. No issues found |
+| Native validate-strict | passed | True | habitatmech:GOLD.ef667faebd | Executed 2026-10-14T20:14:37Z to 2026-10-14T20:14:48Z. files scanned:      12<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                reports/instance_validation_failures.tsv |
+| Native validate-history | passed | True | habitatmech:GOLD.ef667faebd | Executed 2026-10-14T20:14:48Z to 2026-10-14T20:15:03Z. No issues found<br>708 history record(s) valid against src/habitatmech/schema/history.yaml |
+| Native provenance-check | passed | True | habitatmech:GOLD.ef667faebd | Executed 2026-10-14T20:15:03Z to 2026-10-14T20:15:04Z. provenance current: 14 committed inventories, 2 GOLD sources |
+| Native verify-corpus | passed | True | habitatmech:GOLD.ef667faebd | Executed 2026-10-14T20:15:04Z to 2026-10-14T20:15:39Z. expected 3208 records, found 3208 on disk<br>  missing:   0<br>  extra:     0<br>  differing: 0<br><br>corpus reproduces exactly from data/raw/ |
+| Native validate-causal-all | passed | True | habitatmech:GOLD.ef667faebd | Executed 2026-10-14T20:15:39Z to 2026-10-14T20:15:48Z. validated 32 causal-graph curation file(s) with 32 graph(s) |
+| Native term-requests-check | passed | True | habitatmech:GOLD.ef667faebd | Executed 2026-10-14T20:15:48Z to 2026-10-14T20:16:37Z. term-request table is current (109 terms) |
+| Native validate-products | passed | True | habitatmech:GOLD.ef667faebd | Executed 2026-10-14T20:16:37Z to 2026-10-14T20:20:40Z. id↔label correspondence summary:<br>          OK_CANONICAL: 1175<br>            OK_SYNONYM: 1<br>          OK_EXCEPTION: 5<br>    SKIPPED_NO_ADAPTER: 2060<br><br>✅ All id↔label pairs correspond. |
+| Focused parent-exclusion regressions | passed | True | habitatmech:GOLD.ef667faebd | Executed 2026-10-14T20:20:40Z to 2026-10-14T20:24:30Z. ........................................................                 [100%]<br>56 passed in 227.79s (0:03:47) |
+| Repository lint | passed | True | habitatmech:GOLD.ef667faebd | Executed 2026-10-14T20:24:30Z to 2026-10-14T20:24:30Z. All checks passed! |
+| Tracked diff whitespace | passed | True | habitatmech:GOLD.ef667faebd | Executed 2026-10-14T20:24:30Z to 2026-10-14T20:24:31Z.  |
+| Original GOLD member recovery | unavailable | False | habitatmech:GOLD.ef667faebd | Original GOLD individual specimens remain unrecovered. Source aggregate rows are not specimen membership or prevalence. |
+| Final publication gates | unavailable | False | habitatmech:GOLD.ef667faebd | Final immutable archive validation and protected final-head QC remain mandatory before merge; not predeclared successful in this focused observation. |
+
+## Scientific And Domain Assessments
+
+### Scoped maintained-input repair
+
+grounding: supported. Targets: habitatmech:GOLD.ef667faebd.
+
+Removed the guarded source-context parent; preserved independent valid genus, source path/nodes/count units, and native status except the separately justified abdominal ITEM identity correction. The full-corpus counterfactual proves exactly twelve changed source records and no unrelated scientific changes. The non-habitat disposition question remains provisional and deferred under #220; current NOT_APPLICABLE is not promoted or silently certified.
+
+### Native review status and source meaning
+
+consistency: concern. Targets: habitatmech:GOLD.ef667faebd.
+
+The native status is REVIEWED/NOT_APPLICABLE. Only the abdominal source receives a new ITEM decision; saved scientific reviews never promote status. The source-specific disease-versus-specimen question remains unresolved.
+
+## Findings
+
+### F1: Source context is emitted as a false genus
+
+major / resolved / confirmed; issue key: abscess_furuncle_boil-source-context-parent.
+
+Pre-fix observation: The source-specific lesion/collection is located in or associated with skin, not a subtype of skin. The generated parent habitatmech:GOLD.4b37ab4b76 denotes the anatomical site itself. Source-path containment does not satisfy the strict parent_habitats contract, even for NOT_APPLICABLE records.
+
+Disposition: Removed the guarded source-context parent; preserved independent valid genus, source path/nodes/count units, and native status except the separately justified abdominal ITEM identity correction. The full-corpus counterfactual proves exactly twelve changed source records and no unrelated scientific changes. The non-habitat disposition question remains provisional and deferred under #220; current NOT_APPLICABLE is not promoted or silently certified.
+
+### F2: Disease-only exclusion needs source-specific reassessment
+
+major / deferred / provisional; issue key: abscess_furuncle_boil-non-habitat-disposition.
+
+Pre-fix observation: The existing generic ITEM note does not resolve disease versus physical lesion/tract. Inspected primary evidence establishes a physical microbial specimen under this name, but does not recover the original GOLD member or prove which reading the zero-assertion source intended. The previous ad hoc major finding remains unresolved.
+
+Disposition: Original source usage is still unavailable; primary lesion specimens do not establish the intended reading of this exact GOLD zero-assertion source. Retain current status pending the source-specific review tracked in #220.
+
+## Recommended Actions And Acceptance Checks
+
+### A2
+
+Recover source usage or author an evidence-backed definition that distinguishes disease metadata from the sampled lesion or contents. Either retain NOT_APPLICABLE with a specific reason or curate a bounded physical habitat; do not automatically flip status or merge with a generic disease or abscess term.
+
+- Cite evidence for the exact source meaning and relation; retain unresolved scope explicitly.
+- Use maintained inputs, append native curation history, dry-seed and inspect a single-record canary; never hand-edit generated YAML.
+- Prove the intended corpus delta; preserve source paths, node IDs, counts/units, valid independent parents and unrelated records.
+- Run schema, strict, history, corpus, product and site/QC gates; save a linked immutable successor with exact previous occurrences.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| PREVIOUS | reviews/structured/20261014T200255Z-abscess_furuncle_boil/review.yaml | supports | Immutable pre-fix claim-specific primary evidence and access limitations; not overwritten or represented as independent approval. |
+| PATCH | curation/decisions.tsv; curation/gold_parent_exclusions.tsv; curation/term_requests.tsv; data/habitats/host_associated/abscess_furuncle_boil.yaml | supports | Removed the guarded source-context parent; preserved independent valid genus, source path/nodes/count units, and native status except the separately justified abdominal ITEM identity correction. The full-corpus counterfactual proves exactly twelve changed source records and no unrelated scientific changes. The non-habitat disposition question remains provisional and deferred under #220; current NOT_APPLICABLE is not promoted or silently certified. Current parents: []. Native status: REVIEWED/NOT_APPLICABLE. |
+| TESTS | tests/test_abscess_and_gland_repairs.py | supports | Reconstructs old decision/definition/parent contributions in memory, asserts exact twelve-source delta, preserved provenance and counts, narrow abdominal identity, developmental definition and unchanged provisional dispositions. |
+
+## Limits And Additional Notes
+
+- Same-agent remediation review, not independent approval.
+- Original source-member access limitations remain; no whole-corpus or SSSOM/KGX readiness certification.
+- Final archive and protected publication gates are pending at this immutable assessment.
+- The major provisional non-habitat disposition finding remains deferred under #220.
+- Fresh native inspection after committing maintained repairs; every input hash was verified against the declared Git tree.
+- All original history and review bundles remain immutable. Generated per-record audit events reproduce from current maintained rows.
+- An initial history scaffold invocation lacked CLAW_SRC; no history was written by that failed invocation. The successful retry used ../../culturebotai-claw/src with explicit codex-gpt-5 actor.
+- Preserve the off-main input base with an annotated provenance tag before squash and branch deletion.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261014T202659Z-abscess_furuncle_boil-remediation
+kind: record
+repository: CultureBotAI/HabitatMech
+title: 'Remediation review: Abscess: Furuncle/Boil'
+started_at: '2026-10-14T20:15:10Z'
+finished_at: '2026-10-14T20:26:59Z'
+reviewer:
+  identity: codex-gpt-5
+  kind: agent
+  model: gpt-5
+  independence: self_review
+  independence_basis: Same-agent review in the existing repository workflow; prior
+    Codex/Claude curation is not independent approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+scientific_review: true
+verdict: needs_curation
+summary: 'Removed the guarded source-context parent; preserved independent valid genus,
+  source path/nodes/count units, and native status except the separately justified
+  abdominal ITEM identity correction. The full-corpus counterfactual proves exactly
+  twelve changed source records and no unrelated scientific changes. The non-habitat
+  disposition question remains provisional and deferred under #220; current NOT_APPLICABLE
+  is not promoted or silently certified.'
+source:
+  git_revision: d06b07858f327a88516ae44df4d0092ebd6a5fab
+  state: git_commit
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: conf/record_review.yaml
+    sha256: c2f5d0eb4c5744f5fe354c92184ddab144dc2688dba952b032b4f3d597bc08d6
+    role: context
+  - path: curation/decisions.tsv
+    sha256: 82b51cd6ebc6f22aa5e6f67fb1202c7fdb574013aafb692779466ca2f7108a62
+    role: context
+  - path: curation/definition_source_label_exclusions.tsv
+    sha256: 2d41fc93db4939122b3909f2a412b84b679703948b10d9f02e12021442f71407
+    role: context
+  - path: curation/external_xrefs.tsv
+    sha256: cf8394a6ab22e35efd9e252aef422018226280830bf816a39bf4f2256ff75ad5
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: 717cdadc8ac4f7ae0c67c228278b6081cdf141082e62d9903fe4a3b17ab88b1f
+    role: context
+  - path: curation/record_annotation_corrections.tsv
+    sha256: 11f153cc7f19333dc89a9019ef59c33b210bbebb44dd4e84b11166be3dd3927f
+    role: context
+  - path: curation/redirects_retracted.tsv
+    sha256: 0f1e9af8881f5a5db19f87de06b3b3d1800cfac8101699b380388c0a1a1e9a19
+    role: context
+  - path: curation/samples/narrow-20260814.tsv
+    sha256: 4d91c76ad5e0a46442075c7b9f882637130bacdfaedb25fbe7922f169d35051c
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: ac7bfb1d309f66d89b9180e77b5c7ae6ec4c96568edea9b72da1db88e9dac310
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: 1a9576ea20f669a599b2b5ce64138b221df03c5eb051b8499ce35c33be825008
+    role: context
+  - path: data/habitats/host_associated/abscess.yaml
+    sha256: a237a4e64bf42c192f74281e9f5b647178a9fe3f97fa4c6c569831c7590f51b7
+    role: context
+  - path: data/habitats/host_associated/abscess__0f7f7357.yaml
+    sha256: 43e3946ccd635323a57059a5b8b71e4b1b96cd1d3c6c1953f2d6788e33e59fbb
+    role: context
+  - path: data/habitats/host_associated/abscess__17940af6.yaml
+    sha256: e65f35f299f7fe0003f8d2442f17fb396c1cc72c8567154fb83a45ce889f3aa3
+    role: context
+  - path: data/habitats/host_associated/abscess__35b7623f.yaml
+    sha256: 03516b29368f82be74ac22efc20131081fc4cd31eda2125680a512d7dc679c35
+    role: context
+  - path: data/habitats/host_associated/abscess__6d58b5f6.yaml
+    sha256: f1dbeee197a982fc51f1991879e3952fdb8eb5cdbf5e601eaaba10d9e0be7afe
+    role: context
+  - path: data/habitats/host_associated/abscess__ba7e182d.yaml
+    sha256: 6b8861dd20aea6e1a0931f3c3a93730d9b37c6f0aa8f17b82a6a03a5c6cba904
+    role: context
+  - path: data/habitats/host_associated/abscess__c48fc20f.yaml
+    sha256: 82a451934634d5a8ea6b52d72db69e82848f8eab58cdece79826837cc27ce89c
+    role: context
+  - path: data/habitats/host_associated/abscess_furuncle_boil.yaml
+    sha256: 534c3429ba8a7f63abae5a501bbae8865a5012facf5bbd55ed04e08dbb802339
+    role: target
+  - path: data/habitats/host_associated/abscess_pilonidal_sinus.yaml
+    sha256: 77cef51d2d0ae5d6f5293b56cf436ea4a58bfbfd4cae64fdee94d9f747329aae
+    role: context
+  - path: data/habitats/host_associated/accessory_nidamental_gland_ang.yaml
+    sha256: eda246aa8e5a2efdb5ac7f88ad12847648743db08c5b12d11d09eebc84d3e5ae
+    role: context
+  - path: data/habitats/host_associated/acne_vulgaris.yaml
+    sha256: 992bc0bb6173053e34c2227cc56d4760aa9c5bdfeba5cc518aa1ca225b2ddabe
+    role: context
+  - path: data/habitats/host_associated/actinic_keratosis.yaml
+    sha256: 9ff128b5dfcc60a64bd91545b126da7174bb9dfd869935d4f85ca4ead8924094
+    role: context
+  - path: data/habitats/host_associated/brain__7bf4166c.yaml
+    sha256: 47e0501e35801fb51e95adb6f2ad2d876716c32cc6aac0cc034d9e5dee88e203
+    role: context
+  - path: data/habitats/host_associated/carcinoma.yaml
+    sha256: 7eae8fe197c614d3c985fd20ee22c71f561c209433bf33c544a774ddb37b8fe8
+    role: context
+  - path: data/habitats/host_associated/joint_capsule__3bc01568.yaml
+    sha256: 802e4a9c2667dd9fc0e58b065db5fae6878d245688079eabb6e2353c39e2e2d3
+    role: context
+  - path: data/habitats/host_associated/nasal_cavity__ae9d5dba.yaml
+    sha256: 116dfa610057a262f4cb5e1de5cebde11dcc291bc821e56202c64fff1424dca8
+    role: context
+  - path: data/habitats/host_associated/peritoneal_cavity.yaml
+    sha256: e7fb9d2dc97f555a4b7e7a035ee0601bf8b86b48fbd876f2e43baa6db2a8275e
+    role: context
+  - path: data/habitats/host_associated/reproductive_system__54f3b564.yaml
+    sha256: b6dc373c96016f71bbeea057817b9d773fd275bc5f5a489b78c297c06d875dc5
+    role: context
+  - path: data/habitats/host_associated/skin__621b7871.yaml
+    sha256: f12724659d174beaa094e833cb08c0d39c695e0ac9be63f4f072ae4c32a62ebf
+    role: context
+  - path: data/habitats/host_associated/soft_tissues.yaml
+    sha256: 210469daa05be872f8468cbf969edca514227a82d7905b3b0382f1bcd8632a0d
+    role: context
+  - path: data/habitats/host_associated/spinal_cord__94bcf122.yaml
+    sha256: 2176b761a5d241c80a93bb0529fcb4e8011b514da124ddfab492f4d4a591d18d
+    role: context
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: f3f5d3d033fa7e7c1d78571959fc2e62e0b0a625f47dba1413657e8cf944b322
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 105b3c8e10f43ce689b05d3089d3a8be1d713a98dd6806e11be37ebd85b10590
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/mappings/abscess_furuncle_boil/2026-10-14T201110Z-codex-gpt-5-57fe41.yaml
+    sha256: f2e46c1465b1f1e650e55aa6da19f1618b2261994a59c79536a87103b5e3cd9f
+    role: context
+  - path: history/mappings/accessory_nidamental_gland_ang/2026-09-10T065330Z-claude-code-d1b120.yaml
+    sha256: 7d5763fa1e34db3c41755a2ee8dd46b3a2d1f4856d32413f27d332d6e8296d96
+    role: context
+  - path: history/mappings/accessory_nidamental_gland_ang/2026-09-10T122814Z-claude-code-112950.yaml
+    sha256: 4a0f185205d4e0f7da51734e76e7e9d818e7758e6fe70966203e644d56c35e11
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reports/yaml_record_review/20260922T224542Z-abscess.md
+    sha256: 272169e60c35c9a518b48cd5d06f3c5130ab3fbd8e7c4d3914015dbc640b17b1
+    role: context
+  - path: reports/yaml_record_review/20260922T230518Z-abscess__0f7f7357.md
+    sha256: 3c682e3b4767f0b2a2a66443e75df5c5e978fc5a1848bb79f180b365677d7f9f
+    role: context
+  - path: reports/yaml_record_review/20260922T232553Z-abscess__17940af6.md
+    sha256: 02c399e9dd6a9c59b457f05bafa255b4b4fc59e1b4d7d666b85139fce98bee4b
+    role: context
+  - path: reports/yaml_record_review/20260922T234511Z-abscess__35b7623f.md
+    sha256: ea5a421ce85f4a0fe245801eec2ae852474f712290695f13e6a20cf19d2846f8
+    role: context
+  - path: reports/yaml_record_review/20260923T000734Z-abscess__6d58b5f6.md
+    sha256: 1d3b60ce22867fa3a66ec287fa35e1fbe33f92eab768d06307a0988f3e071d73
+    role: context
+  - path: reports/yaml_record_review/20260923T002826Z-abscess__ba7e182d.md
+    sha256: 4a484023738888e8c97c13f4fe7dd3319e3bc362e478663aeb6d2772c07b9440
+    role: context
+  - path: reports/yaml_record_review/20260923T005759Z-abscess__c48fc20f.md
+    sha256: 36ee9a2f2301bcf42459c0b1467564f15e2b65193eeed66f8843d54d4a2ab562
+    role: context
+  - path: reports/yaml_record_review/20260923T012616Z-abscess_furuncle_boil.md
+    sha256: fd7fd9d2387fe1e6c0cae7a3557c479267cfa39a3275f6f41e80385441bc25e1
+    role: context
+  - path: reports/yaml_record_review/20260923T014706Z-abscess_pilonidal_sinus.md
+    sha256: df759fdaa1e423e7039145d9f320de6e9896b0bad0f181f07c0f54c6283ad392
+    role: context
+  - path: reports/yaml_record_review/20260923T021036Z-accessory_nidamental_gland_ang.md
+    sha256: 72e4eb30e0a95f68bdf12e3625b33fea953d03ae367348744880dc82e1ece6d8
+    role: context
+  - path: reports/yaml_record_review/20260923T043247Z-acne_vulgaris.md
+    sha256: 3bdd31f3a96c9cc44904603227623c99aaeee65e8c95178dd8c534e33038ce08
+    role: context
+  - path: reports/yaml_record_review/20260923T045424Z-actinic_keratosis.md
+    sha256: e30064ec222c797b50be9e9a85b30c29f2afa58abf898521df0022e74568a5c1
+    role: context
+  - path: research/habitats/host_associated/accessory-nidamental-gland-ang-habitatmech-gold-453b1756ab-deep-research-claude_code.md
+    sha256: d01a2b2f07c9b875701542ec41fd8e037fe10bdfdfa772c78296b2255a3c9a86
+    role: context
+  - path: reviews/structured/20261014T200255Z-abscess_furuncle_boil/review.md
+    sha256: 02a8e6408c668b7b500abaa180d52983aac3010b56bc1bcc556a402673550a1d
+    role: context
+  - path: reviews/structured/20261014T200255Z-abscess_furuncle_boil/review.yaml
+    sha256: 1840a698738dac6a0f340890dd9aedac811dae03370c5cb3a7f248f9190c2854
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: src/habitatmech/curate/decisions.py
+    sha256: f33d3e9dc95bb428e63e640d48d4074cf15e90ea666603fb16fb651d591e3f02
+    role: context
+  - path: src/habitatmech/curate/definitions.py
+    sha256: decd02eea029e884ab1a8bbb51dd870edb5544906b3ddd39598147b27ce572c9
+    role: context
+  - path: src/habitatmech/curate/external_xrefs.py
+    sha256: 8b90ec049887d3aa67e31cce7f7a04d7300421c6fedb833cc66e5d5f5f181694
+    role: context
+  - path: src/habitatmech/curate/gold_parent_exclusions.py
+    sha256: 044d8277509a9b1f6e4f2d7ea1fb82319b41e09ffef7788738a0f4ed0d0b63af
+    role: context
+  - path: src/habitatmech/curate/record_annotation_corrections.py
+    sha256: 15bad3d40fd95e2acc72d3ff3c74289c15fb8a1775adc523b3575c3ea8487033
+    role: context
+  - path: src/habitatmech/extract.py
+    sha256: 4d9397bda649381a5daf81937369531c6dc8b4518d6c7047e6f3f14e605bf860
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 7e3cda3dadb9c7462498e5014bf38ef730068212f8f9cb131e3fce383c21d10e
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
+    role: context
+  - path: tests/test_abscess_and_gland_repairs.py
+    sha256: 06cb01994e6fd5d45791ac147ced958709f4ad56c4269ca590f4d240cec97b36
+    role: context
+targets:
+- target_id: habitatmech:GOLD.ef667faebd
+  path: data/habitats/host_associated/abscess_furuncle_boil.yaml
+  label: 'Abscess: Furuncle/Boil'
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained source, curation input, or generator; target YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained source, curation input, or generator; target YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: curation/external_xrefs.tsv
+    role: Maintained source, curation input, or generator; target YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained source, curation input, or generator; target YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained source, curation input, or generator; target YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: curation/redirects_retracted.tsv
+    role: Maintained source, curation input, or generator; target YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained source, curation input, or generator; target YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests_excluded.tsv
+    role: Maintained source, curation input, or generator; target YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/bacdive_isolation_sources.tsv
+    role: Maintained source, curation input, or generator; target YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/bacdive_source_taxa.tsv
+    role: Maintained source, curation input, or generator; target YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/environment_parameters.tsv
+    role: Maintained source, curation input, or generator; target YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/gold_ecosystem_paths.tsv
+    role: Maintained source, curation input, or generator; target YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/gold_path_biosamples.tsv
+    role: Maintained source, curation input, or generator; target YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/gold_path_triads.tsv
+    role: Maintained source, curation input, or generator; target YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/gold_studies.tsv
+    role: Maintained source, curation input, or generator; target YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/isolation_source_groundings.tsv
+    role: Maintained source, curation input, or generator; target YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/madin_habitat_taxa.tsv
+    role: Maintained source, curation input, or generator; target YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/madin_habitats.tsv
+    role: Maintained source, curation input, or generator; target YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_subclass_edges.tsv
+    role: Maintained source, curation input, or generator; target YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_terms.tsv
+    role: Maintained source, curation input, or generator; target YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/prego_habitat_taxa.tsv
+    role: Maintained source, curation input, or generator; target YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/prego_habitats.tsv
+    role: Maintained source, curation input, or generator; target YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained source, curation input, or generator; target YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Maintained source, curation input, or generator; target YAML is read-only
+scope:
+  description: Focused remediation of exact prior findings; the complete current generated
+    target and its diff were read.
+  selection: Explicit successor to 20261014T200255Z-abscess_furuncle_boil
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - habitatmech:GOLD.ef667faebd
+checks:
+- check_id: FIX7
+  name: Native validate
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate data/habitats/host_associated/abscess_furuncle_boil.yaml
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.ef667faebd
+  summary: Executed 2026-10-14T20:14:18Z to 2026-10-14T20:14:22Z. No issues found
+  scope_note: Schema exact target; strict twelve records; focused regressions and
+    documented full-corpus gates. Publication map/site/archive/final QC checks are
+    separate.
+- check_id: FIX12
+  name: Native validate-strict
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-strict
+    data/habitats/host_associated/abscess.yaml data/habitats/host_associated/abscess__0f7f7357.yaml
+    data/habitats/host_associated/abscess__17940af6.yaml data/habitats/host_associated/abscess__35b7623f.yaml
+    data/habitats/host_associated/abscess__6d58b5f6.yaml data/habitats/host_associated/abscess__ba7e182d.yaml
+    data/habitats/host_associated/abscess__c48fc20f.yaml data/habitats/host_associated/abscess_furuncle_boil.yaml
+    data/habitats/host_associated/abscess_pilonidal_sinus.yaml data/habitats/host_associated/accessory_nidamental_gland_ang.yaml
+    data/habitats/host_associated/acne_vulgaris.yaml data/habitats/host_associated/actinic_keratosis.yaml
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.ef667faebd
+  summary: "Executed 2026-10-14T20:14:37Z to 2026-10-14T20:14:48Z. files scanned:\
+    \      12\n  files with ERROR:   0\n  total ERROR rows:   0\n  TSV:          \
+    \      reports/instance_validation_failures.tsv"
+  scope_note: Schema exact target; strict twelve records; focused regressions and
+    documented full-corpus gates. Publication map/site/archive/final QC checks are
+    separate.
+- check_id: FIX13
+  name: Native validate-history
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-history
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.ef667faebd
+  summary: 'Executed 2026-10-14T20:14:48Z to 2026-10-14T20:15:03Z. No issues found
+
+    708 history record(s) valid against src/habitatmech/schema/history.yaml'
+  scope_note: Schema exact target; strict twelve records; focused regressions and
+    documented full-corpus gates. Publication map/site/archive/final QC checks are
+    separate.
+- check_id: FIX14
+  name: Native provenance-check
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just provenance-check
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.ef667faebd
+  summary: 'Executed 2026-10-14T20:15:03Z to 2026-10-14T20:15:04Z. provenance current:
+    14 committed inventories, 2 GOLD sources'
+  scope_note: Schema exact target; strict twelve records; focused regressions and
+    documented full-corpus gates. Publication map/site/archive/final QC checks are
+    separate.
+- check_id: FIX15
+  name: Native verify-corpus
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just verify-corpus
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.ef667faebd
+  summary: "Executed 2026-10-14T20:15:04Z to 2026-10-14T20:15:39Z. expected 3208 records,\
+    \ found 3208 on disk\n  missing:   0\n  extra:     0\n  differing: 0\n\ncorpus\
+    \ reproduces exactly from data/raw/"
+  scope_note: Schema exact target; strict twelve records; focused regressions and
+    documented full-corpus gates. Publication map/site/archive/final QC checks are
+    separate.
+- check_id: FIX16
+  name: Native validate-causal-all
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-causal-all
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.ef667faebd
+  summary: Executed 2026-10-14T20:15:39Z to 2026-10-14T20:15:48Z. validated 32 causal-graph
+    curation file(s) with 32 graph(s)
+  scope_note: Schema exact target; strict twelve records; focused regressions and
+    documented full-corpus gates. Publication map/site/archive/final QC checks are
+    separate.
+- check_id: FIX17
+  name: Native term-requests-check
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just term-requests-check
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.ef667faebd
+  summary: Executed 2026-10-14T20:15:48Z to 2026-10-14T20:16:37Z. term-request table
+    is current (109 terms)
+  scope_note: Schema exact target; strict twelve records; focused regressions and
+    documented full-corpus gates. Publication map/site/archive/final QC checks are
+    separate.
+- check_id: FIX18
+  name: Native validate-products
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-products
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.ef667faebd
+  summary: "Executed 2026-10-14T20:16:37Z to 2026-10-14T20:20:40Z. id↔label correspondence\
+    \ summary:\n          OK_CANONICAL: 1175\n            OK_SYNONYM: 1\n        \
+    \  OK_EXCEPTION: 5\n    SKIPPED_NO_ADAPTER: 2060\n\n✅ All id↔label pairs correspond."
+  scope_note: Schema exact target; strict twelve records; focused regressions and
+    documented full-corpus gates. Publication map/site/archive/final QC checks are
+    separate.
+- check_id: FIX19
+  name: Focused parent-exclusion regressions
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/.venv/bin/python
+    -m pytest -q tests/test_abscess_and_gland_repairs.py tests/test_gold_parent_exclusions.py
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.ef667faebd
+  summary: 'Executed 2026-10-14T20:20:40Z to 2026-10-14T20:24:30Z. ........................................................                 [100%]
+
+    56 passed in 227.79s (0:03:47)'
+  scope_note: Schema exact target; strict twelve records; focused regressions and
+    documented full-corpus gates. Publication map/site/archive/final QC checks are
+    separate.
+- check_id: FIX20
+  name: Repository lint
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/.venv/bin/python
+    -m ruff check .
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.ef667faebd
+  summary: Executed 2026-10-14T20:24:30Z to 2026-10-14T20:24:30Z. All checks passed!
+  scope_note: Schema exact target; strict twelve records; focused regressions and
+    documented full-corpus gates. Publication map/site/archive/final QC checks are
+    separate.
+- check_id: FIX21
+  name: Tracked diff whitespace
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache git diff --check 14de981b6b5f71b4bb5512eb31db0e01f54678d1
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.ef667faebd
+  summary: 'Executed 2026-10-14T20:24:30Z to 2026-10-14T20:24:31Z. '
+  scope_note: Schema exact target; strict twelve records; focused regressions and
+    documented full-corpus gates. Publication map/site/archive/final QC checks are
+    separate.
+- check_id: MEMBERS
+  name: Original GOLD member recovery
+  required: false
+  status: unavailable
+  target_ids:
+  - habitatmech:GOLD.ef667faebd
+  summary: Original GOLD individual specimens remain unrecovered. Source aggregate
+    rows are not specimen membership or prevalence.
+- check_id: PUBLICATION
+  name: Final publication gates
+  required: false
+  status: unavailable
+  target_ids:
+  - habitatmech:GOLD.ef667faebd
+  summary: Final immutable archive validation and protected final-head QC remain mandatory
+    before merge; not predeclared successful in this focused observation.
+evidence:
+- evidence_id: PREVIOUS
+  kind: prior_review
+  reference: reviews/structured/20261014T200255Z-abscess_furuncle_boil/review.yaml
+  summary: Immutable pre-fix claim-specific primary evidence and access limitations;
+    not overwritten or represented as independent approval.
+  accessed_at: '2026-10-14T20:26:01Z'
+  support: supports
+- evidence_id: PATCH
+  kind: record_content
+  reference: curation/decisions.tsv; curation/gold_parent_exclusions.tsv; curation/term_requests.tsv;
+    data/habitats/host_associated/abscess_furuncle_boil.yaml
+  summary: 'Removed the guarded source-context parent; preserved independent valid
+    genus, source path/nodes/count units, and native status except the separately
+    justified abdominal ITEM identity correction. The full-corpus counterfactual proves
+    exactly twelve changed source records and no unrelated scientific changes. The
+    non-habitat disposition question remains provisional and deferred under #220;
+    current NOT_APPLICABLE is not promoted or silently certified. Current parents:
+    []. Native status: REVIEWED/NOT_APPLICABLE.'
+  accessed_at: '2026-10-14T20:26:01Z'
+  support: supports
+- evidence_id: TESTS
+  kind: validation
+  reference: tests/test_abscess_and_gland_repairs.py
+  summary: Reconstructs old decision/definition/parent contributions in memory, asserts
+    exact twelve-source delta, preserved provenance and counts, narrow abdominal identity,
+    developmental definition and unchanged provisional dispositions.
+  accessed_at: '2026-10-14T20:26:01Z'
+  support: supports
+assessments:
+- assessment_id: REPAIR
+  area: grounding
+  topic: Scoped maintained-input repair
+  outcome: supported
+  target_ids:
+  - habitatmech:GOLD.ef667faebd
+  evidence_ids:
+  - PREVIOUS
+  - PATCH
+  - TESTS
+  summary: 'Removed the guarded source-context parent; preserved independent valid
+    genus, source path/nodes/count units, and native status except the separately
+    justified abdominal ITEM identity correction. The full-corpus counterfactual proves
+    exactly twelve changed source records and no unrelated scientific changes. The
+    non-habitat disposition question remains provisional and deferred under #220;
+    current NOT_APPLICABLE is not promoted or silently certified.'
+- assessment_id: STATUS
+  area: consistency
+  topic: Native review status and source meaning
+  outcome: concern
+  target_ids:
+  - habitatmech:GOLD.ef667faebd
+  evidence_ids:
+  - PREVIOUS
+  - PATCH
+  summary: The native status is REVIEWED/NOT_APPLICABLE. Only the abdominal source
+    receives a new ITEM decision; saved scientific reviews never promote status. The
+    source-specific disease-versus-specimen question remains unresolved.
+  dimensions:
+  - name: mapping_status
+    value: REVIEWED
+    definition: Native generated status, independent of the saved scientific review
+      verdict.
+    evidence_ids:
+    - PATCH
+  - name: grounding_status
+    value: NOT_APPLICABLE
+    definition: Native generated status, independent of the saved scientific review
+      verdict.
+    evidence_ids:
+    - PATCH
+findings:
+- finding_id: F1
+  issue_key: abscess_furuncle_boil-source-context-parent
+  category: grounding
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Source context is emitted as a false genus
+  description: 'Pre-fix observation: The source-specific lesion/collection is located
+    in or associated with skin, not a subtype of skin. The generated parent habitatmech:GOLD.4b37ab4b76
+    denotes the anatomical site itself. Source-path containment does not satisfy the
+    strict parent_habitats contract, even for NOT_APPLICABLE records.'
+  target_ids:
+  - habitatmech:GOLD.ef667faebd
+  field_paths:
+  - parent_habitats
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained curation input or source transform; never hand-edit generated
+      habitats
+  evidence_ids:
+  - PREVIOUS
+  - PATCH
+  - TESTS
+  rule_id: HM-STRICT-GENUS-AND-SOURCE-SCOPE
+  native_severity: major
+  normalization_reason: Materially false hierarchy, unsupported exclusion, or definition
+    scope
+  previous_occurrences:
+  - repository: CultureBotAI/HabitatMech
+    review_id: 20261014T200255Z-abscess_furuncle_boil
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2126
+  disposition_reason: 'Removed the guarded source-context parent; preserved independent
+    valid genus, source path/nodes/count units, and native status except the separately
+    justified abdominal ITEM identity correction. The full-corpus counterfactual proves
+    exactly twelve changed source records and no unrelated scientific changes. The
+    non-habitat disposition question remains provisional and deferred under #220;
+    current NOT_APPLICABLE is not promoted or silently certified.'
+- finding_id: F2
+  issue_key: abscess_furuncle_boil-non-habitat-disposition
+  category: scope
+  severity: major
+  status: deferred
+  certainty: provisional
+  title: Disease-only exclusion needs source-specific reassessment
+  description: 'Pre-fix observation: The existing generic ITEM note does not resolve
+    disease versus physical lesion/tract. Inspected primary evidence establishes a
+    physical microbial specimen under this name, but does not recover the original
+    GOLD member or prove which reading the zero-assertion source intended. The previous
+    ad hoc major finding remains unresolved.'
+  target_ids:
+  - habitatmech:GOLD.ef667faebd
+  field_paths:
+  - grounding_status
+  - curation_history
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained curation input or source transform; never hand-edit generated
+      habitats
+  evidence_ids:
+  - PREVIOUS
+  - PATCH
+  - TESTS
+  rule_id: HM-STRICT-GENUS-AND-SOURCE-SCOPE
+  native_severity: major
+  normalization_reason: Materially false hierarchy, unsupported exclusion, or definition
+    scope
+  previous_occurrences:
+  - repository: CultureBotAI/HabitatMech
+    review_id: 20261014T200255Z-abscess_furuncle_boil
+    finding_id: F2
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/220
+  disposition_reason: 'Original source usage is still unavailable; primary lesion
+    specimens do not establish the intended reading of this exact GOLD zero-assertion
+    source. Retain current status pending the source-specific review tracked in #220.'
+actions:
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - habitatmech:GOLD.ef667faebd
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained curation input or source transform; never hand-edit generated
+      habitats
+  description: Recover source usage or author an evidence-backed definition that distinguishes
+    disease metadata from the sampled lesion or contents. Either retain NOT_APPLICABLE
+    with a specific reason or curate a bounded physical habitat; do not automatically
+    flip status or merge with a generic disease or abscess term.
+  generator: src/habitatmech/seed.py
+  acceptance_checks:
+  - Cite evidence for the exact source meaning and relation; retain unresolved scope
+    explicitly.
+  - Use maintained inputs, append native curation history, dry-seed and inspect a
+    single-record canary; never hand-edit generated YAML.
+  - Prove the intended corpus delta; preserve source paths, node IDs, counts/units,
+    valid independent parents and unrelated records.
+  - Run schema, strict, history, corpus, product and site/QC gates; save a linked
+    immutable successor with exact previous occurrences.
+limitations:
+- Same-agent remediation review, not independent approval.
+- Original source-member access limitations remain; no whole-corpus or SSSOM/KGX readiness
+  certification.
+- Final archive and protected publication gates are pending at this immutable assessment.
+- 'The major provisional non-habitat disposition finding remains deferred under #220.'
+notes:
+- Fresh native inspection after committing maintained repairs; every input hash was
+  verified against the declared Git tree.
+- All original history and review bundles remain immutable. Generated per-record audit
+  events reproduce from current maintained rows.
+- An initial history scaffold invocation lacked CLAW_SRC; no history was written by
+  that failed invocation. The successful retry used ../../culturebotai-claw/src with
+  explicit codex-gpt-5 actor.
+- Preserve the off-main input base with an annotated provenance tag before squash
+  and branch deletion.
+tags:
+- habitatmech
+- record-review
+- host-associated
+related_reviews:
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261014T200255Z-abscess_furuncle_boil
+  relationship: Explicit remediation successor with exact predecessor finding occurrences
+```

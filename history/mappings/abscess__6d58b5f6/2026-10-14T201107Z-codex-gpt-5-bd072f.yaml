@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: abscess__6d58b5f6
+session:
+  id: 2026-10-14T201107Z-codex-gpt-5-bd072f
+  timestamp: '2026-10-14T20:11:07Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2123
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  - definition
+  summary: Repair reviewed source scope for abscess__6d58b5f6
+  details: 'Scientific review #2123 (20261014T200254Z-abscess__6d58b5f6 F1): The localized
+    lesion or purulent collection is not a kind of spinal cord. Preserve any independent broader
+    abscess genus; no new lesion subsite is inferred. https://meshb.nlm.nih.gov/record/ui?ui=D000038
+    Exclude only this exact immediate GOLD source-path contribution with expected-parent guard;
+    retain source nodes, verbatim path, count/unit semantics and unrelated parents. Required
+    validation: dry seed, inspected canary, exact full-corpus counterfactual, native validators,
+    regenerated semantic map/site and final protected QC. These checks are not predeclared
+    successful. The abdominal source retains its pinned YAML slug; source-based published
+    URL redirects are regenerated after commit.'

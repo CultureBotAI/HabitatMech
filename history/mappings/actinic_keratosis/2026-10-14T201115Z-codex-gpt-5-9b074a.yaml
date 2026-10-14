@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: actinic_keratosis
+session:
+  id: 2026-10-14T201115Z-codex-gpt-5-9b074a
+  timestamp: '2026-10-14T20:11:15Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2131
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  - definition
+  summary: Repair reviewed source scope for actinic_keratosis
+  details: 'Scientific review #2131 (20261014T200256Z-actinic_keratosis F1): Potential progression
+    to carcinoma does not establish an is-a relation to carcinoma. Retain the existing non-habitat
+    disposition; separate bulk BIOSAMPLE counts do not establish identity. https://www.cancer.gov/publications/dictionaries/cancer-terms/def/actinic-keratosis
+    Exclude only this exact immediate GOLD source-path contribution with expected-parent guard;
+    retain source nodes, verbatim path, count/unit semantics and unrelated parents. Required
+    validation: dry seed, inspected canary, exact full-corpus counterfactual, native validators,
+    regenerated semantic map/site and final protected QC. These checks are not predeclared
+    successful. The abdominal source retains its pinned YAML slug; source-based published
+    URL redirects are regenerated after commit.'
