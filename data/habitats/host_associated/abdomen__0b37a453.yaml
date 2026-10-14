@@ -1,17 +1,15 @@
 identifier: habitatmech:GOLD.c6b0b54290
 label: Abdomen
 habitat_category: HOST_ASSOCIATED
-grounding_status: NARROW
-mapping_status: SEEDED
+grounding_status: UNGROUNDED
+mapping_status: REVIEWED
 parent_habitats:
-- UBERON:0000916
 - habitatmech:GOLD.dba2a83b95
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7090
   source_label: Abdomen
   source_path: 'Host-associated > Arthropoda: Insects > Abdomen'
-  mapping_predicate: skos:narrowMatch
   assertion_count: 3
   assertion_unit: ORGANISM
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
@@ -19,4 +17,18 @@ curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM anatomy
+    review #2107 (20261014T184105Z-abdomen__0b37a453 F1): Uberon release 2026-10-01
+    defines UBERON:0000916 as vertebrate abdomen, has an in-taxon vertebrate restriction,
+    and explicitly distinguishes arthropod abdomen in its editor note. This insect
+    or crustacean source is not that identity or a subtype of it. Preserve the native
+    source habitat without inventing an exact replacement term or definition; BTO
+    abdomen is broader and not automatically adopted. Retain valid independent source
+    context; the crustacean whole-body containment contribution is separately excluded.
+    This decision removes only the wrong lexical/curated vertebrate mapping, not source
+    nodes or counts. https://purl.obolibrary.org/obo/uberon/releases/2026-10-01/uberon-base.obo
+    Path: Host-associated > Arthropoda: Insects > Abdomen (source concept habitatmech:GOLD.c6b0b54290)'

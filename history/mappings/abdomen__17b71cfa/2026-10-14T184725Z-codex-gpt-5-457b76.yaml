@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: abdomen__17b71cfa
+session:
+  id: 2026-10-14T184725Z-codex-gpt-5-457b76
+  timestamp: '2026-10-14T18:47:25Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2110
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  - synonyms
+  summary: Correct reviewed anatomy or synonym scope for abdomen__17b71cfa
+  details: 'Maintained-row remediation following 20261014T184115Z-abdomen__17b71cfa F2. Scientific
+    review #2110 (20261014T184115Z-abdomen__17b71cfa F2): Pleon is an anatomical part of the
+    crustacean, not a whole body. Restore its native identity through the separate ITEM decision;
+    do not inherit the whole-body superclass. Exclude only this exact immediate GOLD source-path
+    contribution with expected-parent guard; preserve source path, nodes, omitted count, independent
+    parents and native status. https://purl.obolibrary.org/obo/uberon/releases/2026-10-01/uberon-base.obo
+    Required validation: dry seed and inspected canary, whole-corpus counterfactual regression,
+    schema/history/provenance/reproduction/product gates, refreshed semantic map/site, and
+    protected PR QC. These required checks are not predeclared successful. Original PREGO
+    pair-evidence issues remain separate and unchanged.'

@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: abdomen__0eb11b74
+session:
+  id: 2026-10-14T184724Z-codex-gpt-5-a6a53b
+  timestamp: '2026-10-14T18:47:24Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2108
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  - synonyms
+  summary: Correct reviewed anatomy or synonym scope for abdomen__0eb11b74
+  details: 'Maintained-row remediation following 20261014T184110Z-abdomen__0eb11b74 F1. ITEM
+    anatomy review #2108 (20261014T184110Z-abdomen__0eb11b74 F1): the source path names lymph
+    nodes in an abdominal location. A lymph node is not a kind of the vertebrate body subdivision
+    UBERON:0000916; remove that ambiguous-leaf parent and retain only the verified broader
+    UBERON:0000029 lymph node genus. Current Uberon distinguishes abdominal lymph node with
+    a part-of location definition, but that candidate is outside the committed slice and is
+    not imported here. Preserve the native source identity, two ORGANISM assertions and exact
+    path; do not exact-merge into generic lymph node. Path: Host-associated > Mammals > Lymphatic
+    system > Lymph nodes > Abdomen Required validation: dry seed and inspected canary, whole-corpus
+    counterfactual regression, schema/history/provenance/reproduction/product gates, refreshed
+    semantic map/site, and protected PR QC. These required checks are not predeclared successful.
+    Original PREGO pair-evidence issues remain separate and unchanged.'

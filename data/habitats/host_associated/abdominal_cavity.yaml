@@ -8,7 +8,7 @@ grounding_status: EXACT
 mapping_status: SEEDED
 synonyms:
 - synonym_text: cavitas abdominis
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: UBERON
 - synonym_text: cavity of abdominal compartment
   synonym_type: EXACT_SYNONYM
@@ -33,3 +33,13 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: ANNOTATION_CORRECTED
+  changes: 'Corrected synonym_type for ''cavitas abdominis'' (UBERON) from ''EXACT_SYNONYM''
+    to ''RELATED_SYNONYM''. Evidence: https://purl.obolibrary.org/obo/uberon/releases/2026-10-01/uberon-base.obo.
+    Uberon release2026-10-01 marks this exact alias RELATED, while the frozen flat
+    inventory/seeder promoted it to EXACT. Restore only this record/source/text/old-value
+    scope, preserving spelling, canonical source-label grounding, identity, source
+    attestations and native status. Broader extractor issue #1249 remains open. https://github.com/CultureBotAI/HabitatMech/issues/2113;
+    review 20261014T184137Z-abdominal_cavity F1.'

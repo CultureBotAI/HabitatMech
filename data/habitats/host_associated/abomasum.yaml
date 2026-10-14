@@ -10,23 +10,22 @@ grounding_status: EXACT
 mapping_status: SEEDED
 synonyms:
 - synonym_text: fourth stomach
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: UBERON
 - synonym_text: maw
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: UBERON
 - synonym_text: read
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: UBERON
 - synonym_text: rennet-bag
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: UBERON
 - synonym_text: ruminant true stomach
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: UBERON
 parent_habitats:
 - UBERON:0011953
-- habitatmech:GOLD.d3869ad37f
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6391
@@ -38,3 +37,65 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.d3869ad37f
+    for habitatmech:GOLD.6c776ebafd (Host-associated > Mammals > Digestive system
+    > Stomach > Abomasum). Scientific review #2114 (20261014T184142Z-abomasum F1):
+    Uberon release2026-10-01 states that abomasum is a stomach glandular region and
+    part of ruminant stomach. UMN veterinary embryology independently distinguishes
+    stomach compartments. A compartment is not the whole Stomach source genus; retain
+    UBERON:0011953. Exclude only this exact immediate GOLD source-path contribution
+    with expected-parent guard; preserve source path, nodes, omitted count, independent
+    parents and native status. https://purl.obolibrary.org/obo/uberon/releases/2026-10-01/uberon-base.obo'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: ANNOTATION_CORRECTED
+  changes: 'Corrected synonym_type for ''fourth stomach'' (UBERON) from ''EXACT_SYNONYM''
+    to ''RELATED_SYNONYM''. Evidence: https://purl.obolibrary.org/obo/uberon/releases/2026-10-01/uberon-base.obo.
+    Uberon release2026-10-01 marks this exact alias RELATED, while the frozen flat
+    inventory/seeder promoted it to EXACT. Restore only this record/source/text/old-value
+    scope, preserving spelling, canonical source-label grounding, identity, source
+    attestations and native status. Broader extractor issue #1249 remains open. https://github.com/CultureBotAI/HabitatMech/issues/2115;
+    review 20261014T184142Z-abomasum F2.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: ANNOTATION_CORRECTED
+  changes: 'Corrected synonym_type for ''maw'' (UBERON) from ''EXACT_SYNONYM'' to
+    ''RELATED_SYNONYM''. Evidence: https://purl.obolibrary.org/obo/uberon/releases/2026-10-01/uberon-base.obo.
+    Uberon release2026-10-01 marks this exact alias RELATED, while the frozen flat
+    inventory/seeder promoted it to EXACT. Restore only this record/source/text/old-value
+    scope, preserving spelling, canonical source-label grounding, identity, source
+    attestations and native status. Broader extractor issue #1249 remains open. https://github.com/CultureBotAI/HabitatMech/issues/2115;
+    review 20261014T184142Z-abomasum F2.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: ANNOTATION_CORRECTED
+  changes: 'Corrected synonym_type for ''read'' (UBERON) from ''EXACT_SYNONYM'' to
+    ''RELATED_SYNONYM''. Evidence: https://purl.obolibrary.org/obo/uberon/releases/2026-10-01/uberon-base.obo.
+    Uberon release2026-10-01 marks this exact alias RELATED, while the frozen flat
+    inventory/seeder promoted it to EXACT. Restore only this record/source/text/old-value
+    scope, preserving spelling, canonical source-label grounding, identity, source
+    attestations and native status. Broader extractor issue #1249 remains open. https://github.com/CultureBotAI/HabitatMech/issues/2115;
+    review 20261014T184142Z-abomasum F2.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: ANNOTATION_CORRECTED
+  changes: 'Corrected synonym_type for ''rennet-bag'' (UBERON) from ''EXACT_SYNONYM''
+    to ''RELATED_SYNONYM''. Evidence: https://purl.obolibrary.org/obo/uberon/releases/2026-10-01/uberon-base.obo.
+    Uberon release2026-10-01 marks this exact alias RELATED, while the frozen flat
+    inventory/seeder promoted it to EXACT. Restore only this record/source/text/old-value
+    scope, preserving spelling, canonical source-label grounding, identity, source
+    attestations and native status. Broader extractor issue #1249 remains open. https://github.com/CultureBotAI/HabitatMech/issues/2115;
+    review 20261014T184142Z-abomasum F2.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: ANNOTATION_CORRECTED
+  changes: 'Corrected synonym_type for ''ruminant true stomach'' (UBERON) from ''EXACT_SYNONYM''
+    to ''RELATED_SYNONYM''. Evidence: https://purl.obolibrary.org/obo/uberon/releases/2026-10-01/uberon-base.obo.
+    Uberon release2026-10-01 marks this exact alias RELATED, while the frozen flat
+    inventory/seeder promoted it to EXACT. Restore only this record/source/text/old-value
+    scope, preserving spelling, canonical source-label grounding, identity, source
+    attestations and native status. Broader extractor issue #1249 remains open. https://github.com/CultureBotAI/HabitatMech/issues/2115;
+    review 20261014T184142Z-abomasum F2.'
