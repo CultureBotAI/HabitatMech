@@ -53,7 +53,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <ul class="plain">
   <li><a href="http://purl.obolibrary.org/obo/FOODON_00001092">vertebrate food product</a>      <code class="curie">FOODON:00001092</code></li>
   <li><a href="http://purl.obolibrary.org/obo/FOODON_00005501">mammal material</a>      <code class="curie">FOODON:00005501</code></li>
-  <li><a href="../habitats/food-production-foodon-03530206.html">food production</a>      <code class="curie">FOODON:03530206</code></li>
 </ul>
 
 
@@ -71,6 +70,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">GROUND</span>
     <span class="meta">2026-08-12 · claude-opus-5</span>
     <p>Grounded to FOODON:00001256 &#39;dairy food product&#39; (EXACT). GOLD&#39;s Food production &gt; Dairy products maps exactly onto the FOODON dairy food product class. (source concept habitatmech:GOLD.c6aaede3c0)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-14 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution FOODON:03530206 for habitatmech:GOLD.c6aaede3c0 (Engineered &gt; Food production &gt; Dairy products). Scientific review #2050: dairy food product is milk-derived food material; the frozen and pinned FoodOn definitions of the immediate GOLD parent describe a planned production process, not a material genus. Exclude only that context contribution while retaining both independent ontology parents, exact identity, ITEM/REVIEWED status, three nodes and 1319 ORGANISM assertions. The 551 bulk BIOSAMPLE observations remain separate and are not added to the organism count.</p>
   </li>
 </ol>
 
