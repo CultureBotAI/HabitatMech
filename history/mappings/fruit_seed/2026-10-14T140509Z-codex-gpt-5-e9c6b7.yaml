@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: fruit_seed
+session:
+  id: 2026-10-14T140509Z-codex-gpt-5-e9c6b7
+  timestamp: '2026-10-14T14:05:09Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2073
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - habitat_category
+  - parent_habitats
+  - provenance
+  summary: Remove unsupported food-only interpretation
+  details: Immutable predecessor 20261014T135448Z-fruit_seed F1. Remove the unsupported plant-food
+    genus and FOOD override; retain native fruit-or-seed identity and ITEM status with conservative
+    OTHER, UNGROUNDED. No seed-only remap or exact frozen-member reconstruction. BacDive21361
+    is current context, not proof of frozen membership. Dry seed and Fruit-Seed canary inspected;
+    two focused regression tests passed, including full-corpus counterfactual proving exactly
+    four affected identifiers. Generated curation history reflects current decisions; prior
+    scientific observations and committed session histories are preserved. Full QC and publication
+    checks remain required. Same-agent GPT-5 assessment, not independent approval.

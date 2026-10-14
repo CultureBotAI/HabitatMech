@@ -1,0 +1,900 @@
+# Scientific record review: juice
+
+- Review: 20261014T135501Z-juice
+- Repository: CultureBotAI/HabitatMech
+- Started UTC: 2026-10-14T13:43:28.902028Z
+- Finished UTC: 2026-10-14T13:55:01.450023Z
+- Reviewer: OpenAI Codex (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+BTO:0000659 denotes a general extractable tissue fluid, not necessarily a prepared beverage. PREGO uses that BTO identity directly, whereas GOLD specifies Juice under Beverages. The two ITEM REVIEW decisions do not establish exact source equivalence; the resulting beverage superclass restricts the broader BTO identity incorrectly.
+
+## Scope And Provenance
+
+Entire resolved record and every contributing source concept; one individual scientific review.
+
+Selection: Next unreviewed Food records by path after an ignored-inclusive census of 999/3208 current records reviewed, Food31/60. This bundle covers one exact target, not a cohort sample or corpus certification.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 72a79e3782e2657aab8507b45ec9b49ac95bcf13.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| BTO:0000659 | data/habitats/food/juice.yaml | generated | juice |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native validate | passed | True | BTO:0000659 | Executed 2026-10-14T13:43:43.159420Z to 2026-10-14T13:43:45.116345Z. No issues found |
+| Native validate-strict | passed | True | BTO:0000659 | Executed 2026-10-14T13:43:50.998179Z to 2026-10-14T13:43:55.575800Z. uv run python scripts/validate_strict.py data/habitats/food/frozen_shrimp.yaml data/habitats/food/fruit_seed.yaml data/habitats/food/heroin.yaml data/habitats/food/ice_cream.yaml data/habitats/food/juice.yaml data/habitats/food/mammalian_meat_food_product.yaml data/habitats/food/meat_trimming.yaml data/habitats/food/morphine.yaml<br>Validating 8 files with 15 workers; schema=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/src/habitatmech/schema/habitatmech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      8<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                reports/instance_validation_failures.tsv |
+| Native validate-history | passed | True | BTO:0000659 | Executed 2026-10-14T13:43:55.576413Z to 2026-10-14T13:44:01.983391Z. No issues found<br>670 history record(s) valid against src/habitatmech/schema/history.yaml |
+| Native provenance-check | passed | True | BTO:0000659 | Executed 2026-10-14T13:44:01.984106Z to 2026-10-14T13:44:02.463384Z. provenance current: 14 committed inventories, 2 GOLD sources |
+| Native verify-corpus | passed | True | BTO:0000659 | Executed 2026-10-14T13:44:02.463929Z to 2026-10-14T13:44:15.660795Z. expected 3208 records, found 3208 on disk<br>  missing:   0<br>  extra:     0<br>  differing: 0<br><br>corpus reproduces exactly from data/raw/ |
+| Native validate-causal-all | passed | True | BTO:0000659 | Executed 2026-10-14T13:44:15.661664Z to 2026-10-14T13:44:19.221370Z. validated 32 causal-graph curation file(s) with 32 graph(s) |
+| Native term-requests-check | passed | True | BTO:0000659 | Executed 2026-10-14T13:44:19.222000Z to 2026-10-14T13:44:33.161959Z. term-request table is current (109 terms) |
+| Native validate-products | passed | True | BTO:0000659 | Executed 2026-10-14T13:44:33.162696Z to 2026-10-14T13:45:13.853367Z. id↔label correspondence summary:<br>          OK_CANONICAL: 1176<br>            OK_SYNONYM: 1<br>          OK_EXCEPTION: 5<br>    SKIPPED_NO_ADAPTER: 2059<br><br>✅ All id↔label pairs correspond. |
+| Exact-base authoritative QC | passed | True | BTO:0000659 | Hosted QC on the exact unchanged scientific-input commit passed. New review archive validation is separate. |
+| Original source-member reconstruction | unavailable | False | BTO:0000659 | Bounded ignored-inclusive search did not locate original joins. Nine exact GOLD study page requests across this review set returned HTTP403. |
+| Expression-module applicability | not_applicable | False | BTO:0000659 | No gene, regulator, protein or transcriptomic mechanism is asserted. Occurrence records are not expression-module claims. |
+
+## Scientific And Domain Assessments
+
+### Habitat/source identity and exact scope
+
+identity: concern. Targets: BTO:0000659.
+
+BTO:0000659 denotes a general extractable tissue fluid, not necessarily a prepared beverage. PREGO uses that BTO identity directly, whereas GOLD specifies Juice under Beverages. The two ITEM REVIEW decisions do not establish exact source equivalence; the resulting beverage superclass restricts the broader BTO identity incorrectly.
+
+### Ontology genus versus source context
+
+grounding: concern. Targets: BTO:0000659.
+
+Current BTO retains the same fluid definition, with emulsin and fruit juice as children; its parents endpoint returns no named parent, consistent with the slice. FOODON:00003202 is a prepared liquid for consumption, contributed here by the GOLD path. FOODON:03315552 is a relevant juice-beverage candidate, but its current label differs from the frozen slice and any adoption needs governed verification. Two inspected strain-source examples support juice associations, not whole-class beverage equivalence.
+
+### Source assertions, units and native gates
+
+provenance: supported. Targets: BTO:0000659.
+
+GOLD row 230 has nodes 7105/7106 and 77 ORGANISM assertions. PREGO aggregate row 388 has five TAXON associations, five direct edges, max score 3 and annotated_genomes_isolates channel. Taxon rows 1045-1049 reproduce all five IDs/labels, score 3, ranks 1-5 and pool 5. All resolve in NCBI, including three strain-rank and two species-rank IDs. ITEM decisions 217/1511 explain EXACT/REVIEWED mechanically. Different source counts are not summed.
+
+### Parameters, taxa, causal evidence and discussion
+
+completeness: supported. Targets: BTO:0000659.
+
+No environmental parameter, causal graph, cited mechanism, dataset or discussion claim is present to validate. Optional absence is not itself a defect. Displayed taxa, where present, remain source associations without characteristic flags; counts/ranks are not prevalence or mechanism evidence.
+
+### Independent membership and unavailable source context
+
+evidence: unknown. Targets: BTO:0000659.
+
+The review assesses every present record claim, but original member-level provenance is unavailable in the bounded roots. Current source examples do not prove original membership, and missing rows or zero counts do not prove environmental absence.
+
+## Findings
+
+### F1: Beverage source is exactly merged into a broader tissue-fluid class
+
+major / open / confirmed; issue key: juice-beverage-source-conflation.
+
+GOLD Beverages &gt; Juice is given exact identity BTO:0000659, whose definition is not restricted to consumable liquids. The source-specific scope is lost when merged with the PREGO BTO term. Two positive juice strain examples do not establish equivalence of these source classes.
+
+### F2: General tissue fluid is made a beverage subtype
+
+major / open / confirmed; issue key: juice-beverage-context-parent.
+
+FOODON:00003202 is not strictly broader than BTO:0000659. This edge comes from GOLD source context, not BTO ontology hierarchy. Keeping a source path must not narrow the meaning of the BTO class.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Reassess GOLD mint habitatmech:GOLD.15460dfe60 separately from PREGO mint habitatmech:PREGO.dc6efaf40a. Preserve PREGO counts/taxa on their proper source scope, and retain a native beverage-juice identity or verify a fitting FoodOn term. FOODON:03315552 is only a candidate; its changed label requires a governed check. Audit existing natural/fruit-juice children.
+
+- Edit maintained decisions or exact guarded overlays only; preserve frozen raw inventories and never hand-edit generated records.
+- Preserve source identifiers, source paths, count units, taxon metrics and honest native status unless separately evidence-backed.
+- Dry seed, inspect target canary and full before/after corpus delta; run schema, strict, history, provenance, corpus, site, label and authoritative QC gates.
+- Save a new immutable follow-up with this stable issue key and exact previous occurrence; do not rewrite this report.
+
+### A2
+
+Coordinate with source-scope repair: remove only the unsupported GOLD beverage-parent contribution from the generic BTO record, or remap the source so its valid beverage parent remains on a beverage-specific record. Do not leave a stale exclusion after identity changes.
+
+- Edit maintained decisions or exact guarded overlays only; preserve frozen raw inventories and never hand-edit generated records.
+- Preserve source identifiers, source paths, count units, taxon metrics and honest native status unless separately evidence-backed.
+- Dry seed, inspect target canary and full before/after corpus delta; run schema, strict, history, provenance, corpus, site, label and authoritative QC gates.
+- Save a new immutable follow-up with this stable issue key and exact previous occurrence; do not rewrite this report.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| RECORD | data/habitats/food/juice.yaml | supports | Entire target YAML, all source attestations, optional claims and curation events read before judgment. |
+| RULES | docs/CURATION.md; docs/HARMONIZATION.md; src/habitatmech/schema/habitatmech.yaml | supports | Native exact identity, strict superclass, source-unit, MIxS-role, optional-field and all-source ITEM rules applied. FOOD is a coarse layout/reporting bucket for food and beverage matrices, not an identity axiom. |
+| ROWS | data/raw/; curation/decisions.tsv | supports | GOLD row 230 has nodes 7105/7106 and 77 ORGANISM assertions. PREGO aggregate row 388 has five TAXON associations, five direct edges, max score 3 and annotated_genomes_isolates channel. Taxon rows 1045-1049 reproduce all five IDs/labels, score 3, ranks 1-5 and pool 5. All resolve in NCBI, including three strain-rank and two species-rank IDs. ITEM decisions 217/1511 explain EXACT/REVIEWED mechanically. Different source counts are not summed. Parsed row locators, including neighboring comparison rows: {"curation/decisions.tsv": [217, 876, 1511, 1542], "data/raw/gold_ecosystem_paths.tsv": [230], "data/raw/isolation_source_groundings.tsv": [34], "data/raw/ontology_subclass_edges.tsv": [252, 2864, 8879, 8880], "data/raw/ontology_terms.tsv": [660, 10584, 10659], "data/raw/prego_habitat_taxa.tsv": [1045, 1046, 1047, 1048, 1049], "data/raw/prego_habitats.tsv": [388]} |
+| TRANSFORMS | src/habitatmech/seed.py; src/habitatmech/extract.py | supports | Inspected source resolution, immediate GOLD parent contributions, synonym scoping, taxon ranks/units and singleton-term parameter gating. GROUND replaces the identifier even when status is NARROW; status does not undo a merge. Deterministic reproduction does not establish scientific correctness. |
+| SEARCH | curation/; history/; research/; reviews/structured/; data/raw/; reports/yaml_record_review/; tests/ | supports | All matching source/decision rows inspected. No earlier structured declaration of these eight targets or collision for the nine issue keys among 1428 bundles. No target-specific causal overlay or authored definition was located within the named roots. Exact target ID, slug, source labels and mints were searched, including ignored files. Command: rg --no-ignore --hidden -l -i -F -e BTO:0000659 -e Engineered &gt; Food production &gt; Beverages &gt; Juice -e FOODON:00003202 -e Juice -e gold.ecosystem:7105 -e habitatmech:GOLD.15460dfe60 -e habitatmech:PREGO.dc6efaf40a -e juice curation history research conf reviews/structured reports/yaml_record_review data/raw tests |
+| MEMBERS | conf/sources.yaml; data/raw/MANIFEST.yaml; data/raw/GOLD_MANIFEST.yaml | supports | Original GOLD nodes/edges, BacDive and PREGO nodes/edges, goldData.xlsx and gold_biosample_triads.tsv were not located by named-file enumeration of 39439 files under /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech; /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data. Ignored/hidden files included; .git internals excluded and symlinks not traversed. Frozen inventories remain available. No global absence or exact frozen member reconstruction is claimed. |
+| FOODON | https://raw.githubusercontent.com/FoodOntology/foodon/cd73540243a84bcd511a500d9a497d12d7dc02f6/foodon.owl | supports | Full pinned RDF/XML class definitions, synonym predicates, named parents and restrictions re-inspected at 2026-10-14T13:45:26.271013Z. Current BTO retains the same fluid definition, with emulsin and fruit juice as children; its parents endpoint returns no named parent, consistent with the slice. FOODON:00003202 is a prepared liquid for consumption, contributed here by the GOLD path. FOODON:03315552 is a relevant juice-beverage candidate, but its current label differs from the frozen slice and any adoption needs governed verification. Two inspected strain-source examples support juice associations, not whole-class beverage equivalence. Retrieved bytes SHA256 b897bf64c1b265c422db9ee01e1235c10c0b809e7f02326ef810a52068347edf. |
+| BTO | https://www.ebi.ac.uk/ols4/api/ontologies/bto/terms?obo_id=BTO:0000659 | supports | BTO:0000659 remains active with a tissue-fluid definition. Current linked hierarchy endpoints were inspected: no named parent returned; children BTO:0000384 emulsin and BTO:0004057 fruit juice. This does not assert a digestive-juice subclass. Retrieved bytes SHA256 03e6b2d010d66a3942447836265eb33b3628db8630cbe8609f941f7b3e4b4115. |
+| APPLE | https://www.ncbi.nlm.nih.gov/biosample/SAMN02369460 | supports | SAMN02369460 identifies DSM20444 / NCBITaxon1046596 and apple juice from a cider press as its isolation source. Supports this strain association, not the entire merged BTO/GOLD identity. Retrieved bytes SHA256 1fd1881ee96b4e27448c751d5211b057b7ec60e4f1d90ca37dc1b3f4e98ed7ce. |
+| CANE | https://bacdive.dsmz.de/strain/6833 | supports | BacDive6833 lists KCTC3652 among the type-strain identifiers and cane-juice isolation. Supports that exact strain example, not all five historical PREGO edges or a beverage restriction on BTO. Retrieved bytes SHA256 e3aa8a75c219f3ab26eb4fdaffb01f1f7be2cf12f3fc1b7808c21a56ea5dacd0. |
+| TAXONOMY | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;retmode=xml&amp;id=1046596,106592,1247,1327988,1364,1428,1517,152682,153721,1580,1588,176292,184914,1931,2371,28447,298,317,33,339,442,51663,54,556,56,562,71864,83451,84032,935295 | supports | Every displayed ID resolves and its stored label equals current NCBI. Local exact raw-field comparison: {"displayed": 5, "observations": [{"metric": 3.0, "rank": 1, "raw_row": 1045, "taxon": "NCBITaxon:1046596"}, {"metric": 3.0, "rank": 2, "raw_row": 1046, "taxon": "NCBITaxon:1327988"}, {"metric": 3.0, "rank": 3, "raw_row": 1047, "taxon": "NCBITaxon:1364"}, {"metric": 3.0, "rank": 4, "raw_row": 1048, "taxon": "NCBITaxon:562"}, {"metric": 3.0, "rank": 5, "raw_row": 1049, "taxon": "NCBITaxon:935295"}], "pool": 5}. NCBI verifies identity, not habitat specificity. No is_characteristic or corroborated_by assertion is present. Retrieved bytes SHA256 32bb186f9b3a0f4b1eaf0d57090eee36f4679eb3f9ad6a2840cea466f0ba316d. |
+| BASE_QC | https://github.com/CultureBotAI/HabitatMech/actions/runs/38570802819 | supports | Exact scientific-input base 72a79e3782e2657aab8507b45ec9b49ac95bcf13: authoritative merge-queue QC passed, with 1112 tests passed and three skipped; four review contract tests passed. This predates the new review bundles and cannot substitute for their post-save validation. |
+
+## Limits And Additional Notes
+
+- Same-agent review; no independent approval or native status promotion.
+- Original source joins were unavailable in bounded searches; exact source counts are preserved without claims of deduplicated biological prevalence.
+- Pinned ontology and current NCBI/source pages support bounded interpretations, not an automatic release refresh or whole-population reassessment.
+- No scientific input, generated record, history, page, GitHub issue or PR was changed. Actions are proposals only.
+- Exact-base QC predates the new review bundles; immutable saver validation and post-save archive checks are separately required.
+- No SSSOM/KGX readiness or whole-corpus scientific pass is claimed.
+- Original captured input hashes rechecked unchanged before extended inspection at 2026-10-14T13:52:44.686618Z.
+- All present identifiers and source references were traced to inspected inventory/ontology/taxonomy evidence; unresolvable live GOLD access is explicitly recorded.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261014T135501Z-juice
+kind: record
+repository: CultureBotAI/HabitatMech
+title: 'Scientific record review: juice'
+started_at: '2026-10-14T13:43:28.902028Z'
+finished_at: '2026-10-14T13:55:01.450023Z'
+reviewer:
+  identity: OpenAI Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent has participated in HabitatMech curation and publication;
+    not independent approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+scientific_review: true
+verdict: needs_curation
+summary: BTO:0000659 denotes a general extractable tissue fluid, not necessarily a
+  prepared beverage. PREGO uses that BTO identity directly, whereas GOLD specifies
+  Juice under Beverages. The two ITEM REVIEW decisions do not establish exact source
+  equivalence; the resulting beverage superclass restricts the broader BTO identity
+  incorrectly.
+source:
+  git_revision: 72a79e3782e2657aab8507b45ec9b49ac95bcf13
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: conf/record_review.yaml
+    sha256: c2f5d0eb4c5744f5fe354c92184ddab144dc2688dba952b032b4f3d597bc08d6
+    role: context
+  - path: conf/sources.yaml
+    sha256: a8e069f9278068b57fa234f43e03c8d893f857827b83fd10cfa92d6815aed642
+    role: context
+  - path: curation/decisions.tsv
+    sha256: 05aee2989e186bba8ae0ecb5eca6c1f2ad3c1e6977c3aaf0aea6977bccd6f900
+    role: context
+  - path: curation/definition_source_label_exclusions.tsv
+    sha256: 2d41fc93db4939122b3909f2a412b84b679703948b10d9f02e12021442f71407
+    role: context
+  - path: curation/external_xrefs.tsv
+    sha256: cf8394a6ab22e35efd9e252aef422018226280830bf816a39bf4f2256ff75ad5
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: 3c84f75cdc8fa1bc5544692938c2408ba36bae96272552ed9007090c60accff1
+    role: context
+  - path: curation/record_annotation_corrections.tsv
+    sha256: 5142ff999a3111139f88bca11dab485b18b01773a52f43ae9557239eb2029210
+    role: context
+  - path: curation/redirects_retracted.tsv
+    sha256: 0f1e9af8881f5a5db19f87de06b3b3d1800cfac8101699b380388c0a1a1e9a19
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 331a7d9eb8a8909fc37402c0a776838979a8065644504d5c4f2a1c39bce5c24d
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: 3781420be8a7a6de4f44c9be1bc3a0d256824fb44b8dbbb56c6b3c99e21a6014
+    role: context
+  - path: data/habitats/food/beverage.yaml
+    sha256: b5d70ad5849c891fd01efe9f27abe3e6df8a74abc70fc212482dcdc61c842003
+    role: context
+  - path: data/habitats/food/butchery_cut_of_beef.yaml
+    sha256: 837d45cc3f7fb377199b254fffe21a366d1312b13e5fd2232b987c136ffc33bb
+    role: context
+  - path: data/habitats/food/dairy_food_product.yaml
+    sha256: 36c6b5dde12d0d75eca04ac0f91200e839763e14e2ff813ebb85fb7242fb3001
+    role: context
+  - path: data/habitats/food/food_production.yaml
+    sha256: b0fce7af2cc321a0979ce4d3bfec5e2d4383410ae8e62172b006073afb783ab7
+    role: context
+  - path: data/habitats/food/frozen_seafood.yaml
+    sha256: 93677d5139e32554b0263678305c5cf15151268a9374ed5e0332a15241420e8c
+    role: context
+  - path: data/habitats/food/juice.yaml
+    sha256: 372bf743d024de9c46ede511ecb274f351d3cb33151ed27b65e86fb263a6b464
+    role: target
+  - path: data/habitats/food/morphine.yaml
+    sha256: a1f55ea3d879d5f3f83f7433700fe238539e5ac408ac1cd86c79503178d61eee
+    role: context
+  - path: data/habitats/food/plant_products.yaml
+    sha256: 84f11abc0ccc2a67ac560189589126c2ab43fe1d0e9655280f5424fc30d2e018
+    role: context
+  - path: data/habitats/food/raw_meat.yaml
+    sha256: e45e1d71102c32bc410ff08a2175fcd645de883da0d4682f8acfaf0b04b0564d
+    role: context
+  - path: data/habitats/host_associated/fruit_juice.yaml
+    sha256: 1ae7408229392df98be954513b3a820c24d5d39c486f3aae00f59816e2faa439
+    role: context
+  - path: data/habitats/other/juice_natural.yaml
+    sha256: d6dfcee1e355e5673087a1ab439db05b0f655d639c62284a33899ae7aa9db1f5
+    role: context
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: f3f5d3d033fa7e7c1d78571959fc2e62e0b0a625f47dba1413657e8cf944b322
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 105b3c8e10f43ce689b05d3089d3a8be1d713a98dd6806e11be37ebd85b10590
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/aggregate_gold_triads.py
+    sha256: 0e25179dbecd7c73cbedd99a0ae44e56e4992afb9e1ec02d2411439f643b8e54
+    role: context
+  - path: scripts/extract_gold_biosamples.py
+    sha256: b6a2773c86fe718e1ca0b1d7b32709f0eee491ac813655e310aa0817c0fec31b
+    role: context
+  - path: src/habitatmech/curate/record_annotation_corrections.py
+    sha256: 15bad3d40fd95e2acc72d3ff3c74289c15fb8a1775adc523b3575c3ea8487033
+    role: context
+  - path: src/habitatmech/extract.py
+    sha256: 4d9397bda649381a5daf81937369531c6dc8b4518d6c7047e6f3f14e605bf860
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 7e3cda3dadb9c7462498e5014bf38ef730068212f8f9cb131e3fce383c21d10e
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
+    role: context
+targets:
+- target_id: BTO:0000659
+  path: data/habitats/food/juice.yaml
+  label: juice
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained owner; generated habitat YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained owner; generated habitat YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained owner; generated habitat YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained owner; generated habitat YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/gold_ecosystem_paths.tsv
+    role: Maintained owner; generated habitat YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/isolation_source_groundings.tsv
+    role: Maintained owner; generated habitat YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_subclass_edges.tsv
+    role: Maintained owner; generated habitat YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_terms.tsv
+    role: Maintained owner; generated habitat YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/prego_habitat_taxa.tsv
+    role: Maintained owner; generated habitat YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/prego_habitats.tsv
+    role: Maintained owner; generated habitat YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Maintained owner; generated habitat YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained owner; generated habitat YAML is read-only
+scope:
+  description: Entire resolved record and every contributing source concept; one individual
+    scientific review.
+  selection: Next unreviewed Food records by path after an ignored-inclusive census
+    of 999/3208 current records reviewed, Food31/60. This bundle covers one exact
+    target, not a cohort sample or corpus certification.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - BTO:0000659
+checks:
+- check_id: C4
+  name: Native validate
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate data/habitats/food/juice.yaml
+  exit_code: 0
+  target_ids:
+  - BTO:0000659
+  summary: Executed 2026-10-14T13:43:43.159420Z to 2026-10-14T13:43:45.116345Z. No
+    issues found
+  scope_note: Schema targets this record; strict covers these eight; history/provenance/corpus/causal/term/label
+    checks use their documented full scope. Label gate intentionally skips 2059 unsupported-prefix
+    pairs. Not scientific approval.
+- check_id: C8
+  name: Native validate-strict
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-strict
+    data/habitats/food/frozen_shrimp.yaml data/habitats/food/fruit_seed.yaml data/habitats/food/heroin.yaml
+    data/habitats/food/ice_cream.yaml data/habitats/food/juice.yaml data/habitats/food/mammalian_meat_food_product.yaml
+    data/habitats/food/meat_trimming.yaml data/habitats/food/morphine.yaml
+  exit_code: 0
+  target_ids:
+  - BTO:0000659
+  summary: "Executed 2026-10-14T13:43:50.998179Z to 2026-10-14T13:43:55.575800Z. uv\
+    \ run python scripts/validate_strict.py data/habitats/food/frozen_shrimp.yaml\
+    \ data/habitats/food/fruit_seed.yaml data/habitats/food/heroin.yaml data/habitats/food/ice_cream.yaml\
+    \ data/habitats/food/juice.yaml data/habitats/food/mammalian_meat_food_product.yaml\
+    \ data/habitats/food/meat_trimming.yaml data/habitats/food/morphine.yaml\nValidating\
+    \ 8 files with 15 workers; schema=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/src/habitatmech/schema/habitatmech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      8\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                reports/instance_validation_failures.tsv"
+  scope_note: Schema targets this record; strict covers these eight; history/provenance/corpus/causal/term/label
+    checks use their documented full scope. Label gate intentionally skips 2059 unsupported-prefix
+    pairs. Not scientific approval.
+- check_id: C9
+  name: Native validate-history
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-history
+  exit_code: 0
+  target_ids:
+  - BTO:0000659
+  summary: 'Executed 2026-10-14T13:43:55.576413Z to 2026-10-14T13:44:01.983391Z. No
+    issues found
+
+    670 history record(s) valid against src/habitatmech/schema/history.yaml'
+  scope_note: Schema targets this record; strict covers these eight; history/provenance/corpus/causal/term/label
+    checks use their documented full scope. Label gate intentionally skips 2059 unsupported-prefix
+    pairs. Not scientific approval.
+- check_id: C10
+  name: Native provenance-check
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just provenance-check
+  exit_code: 0
+  target_ids:
+  - BTO:0000659
+  summary: 'Executed 2026-10-14T13:44:01.984106Z to 2026-10-14T13:44:02.463384Z. provenance
+    current: 14 committed inventories, 2 GOLD sources'
+  scope_note: Schema targets this record; strict covers these eight; history/provenance/corpus/causal/term/label
+    checks use their documented full scope. Label gate intentionally skips 2059 unsupported-prefix
+    pairs. Not scientific approval.
+- check_id: C11
+  name: Native verify-corpus
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just verify-corpus
+  exit_code: 0
+  target_ids:
+  - BTO:0000659
+  summary: "Executed 2026-10-14T13:44:02.463929Z to 2026-10-14T13:44:15.660795Z. expected\
+    \ 3208 records, found 3208 on disk\n  missing:   0\n  extra:     0\n  differing:\
+    \ 0\n\ncorpus reproduces exactly from data/raw/"
+  scope_note: Schema targets this record; strict covers these eight; history/provenance/corpus/causal/term/label
+    checks use their documented full scope. Label gate intentionally skips 2059 unsupported-prefix
+    pairs. Not scientific approval.
+- check_id: C12
+  name: Native validate-causal-all
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-causal-all
+  exit_code: 0
+  target_ids:
+  - BTO:0000659
+  summary: Executed 2026-10-14T13:44:15.661664Z to 2026-10-14T13:44:19.221370Z. validated
+    32 causal-graph curation file(s) with 32 graph(s)
+  scope_note: Schema targets this record; strict covers these eight; history/provenance/corpus/causal/term/label
+    checks use their documented full scope. Label gate intentionally skips 2059 unsupported-prefix
+    pairs. Not scientific approval.
+- check_id: C13
+  name: Native term-requests-check
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just term-requests-check
+  exit_code: 0
+  target_ids:
+  - BTO:0000659
+  summary: Executed 2026-10-14T13:44:19.222000Z to 2026-10-14T13:44:33.161959Z. term-request
+    table is current (109 terms)
+  scope_note: Schema targets this record; strict covers these eight; history/provenance/corpus/causal/term/label
+    checks use their documented full scope. Label gate intentionally skips 2059 unsupported-prefix
+    pairs. Not scientific approval.
+- check_id: C14
+  name: Native validate-products
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-products
+  exit_code: 0
+  target_ids:
+  - BTO:0000659
+  summary: "Executed 2026-10-14T13:44:33.162696Z to 2026-10-14T13:45:13.853367Z. id↔label\
+    \ correspondence summary:\n          OK_CANONICAL: 1176\n            OK_SYNONYM:\
+    \ 1\n          OK_EXCEPTION: 5\n    SKIPPED_NO_ADAPTER: 2059\n\n✅ All id↔label\
+    \ pairs correspond."
+  scope_note: Schema targets this record; strict covers these eight; history/provenance/corpus/causal/term/label
+    checks use their documented full scope. Label gate intentionally skips 2059 unsupported-prefix
+    pairs. Not scientific approval.
+- check_id: QC
+  name: Exact-base authoritative QC
+  required: true
+  status: passed
+  command: gh run view 38570802819 --repo CultureBotAI/HabitatMech --json headSha,status,conclusion,url
+  exit_code: 0
+  target_ids:
+  - BTO:0000659
+  evidence_ids:
+  - BASE_QC
+  summary: Hosted QC on the exact unchanged scientific-input commit passed. New review
+    archive validation is separate.
+- check_id: ORIGINAL
+  name: Original source-member reconstruction
+  required: false
+  status: unavailable
+  target_ids:
+  - BTO:0000659
+  evidence_ids:
+  - MEMBERS
+  summary: Bounded ignored-inclusive search did not locate original joins. Nine exact
+    GOLD study page requests across this review set returned HTTP403.
+- check_id: IMODULON
+  name: Expression-module applicability
+  required: false
+  status: not_applicable
+  target_ids:
+  - BTO:0000659
+  summary: No gene, regulator, protein or transcriptomic mechanism is asserted. Occurrence
+    records are not expression-module claims.
+evidence:
+- evidence_id: RECORD
+  kind: record_content
+  reference: data/habitats/food/juice.yaml
+  summary: Entire target YAML, all source attestations, optional claims and curation
+    events read before judgment.
+  accessed_at: '2026-10-14T13:55:01.449453Z'
+  support: supports
+- evidence_id: RULES
+  kind: authority
+  reference: docs/CURATION.md; docs/HARMONIZATION.md; src/habitatmech/schema/habitatmech.yaml
+  summary: Native exact identity, strict superclass, source-unit, MIxS-role, optional-field
+    and all-source ITEM rules applied. FOOD is a coarse layout/reporting bucket for
+    food and beverage matrices, not an identity axiom.
+  accessed_at: '2026-10-14T13:55:01.449476Z'
+  support: supports
+- evidence_id: ROWS
+  kind: record_content
+  reference: data/raw/; curation/decisions.tsv
+  summary: 'GOLD row 230 has nodes 7105/7106 and 77 ORGANISM assertions. PREGO aggregate
+    row 388 has five TAXON associations, five direct edges, max score 3 and annotated_genomes_isolates
+    channel. Taxon rows 1045-1049 reproduce all five IDs/labels, score 3, ranks 1-5
+    and pool 5. All resolve in NCBI, including three strain-rank and two species-rank
+    IDs. ITEM decisions 217/1511 explain EXACT/REVIEWED mechanically. Different source
+    counts are not summed. Parsed row locators, including neighboring comparison rows:
+    {"curation/decisions.tsv": [217, 876, 1511, 1542], "data/raw/gold_ecosystem_paths.tsv":
+    [230], "data/raw/isolation_source_groundings.tsv": [34], "data/raw/ontology_subclass_edges.tsv":
+    [252, 2864, 8879, 8880], "data/raw/ontology_terms.tsv": [660, 10584, 10659], "data/raw/prego_habitat_taxa.tsv":
+    [1045, 1046, 1047, 1048, 1049], "data/raw/prego_habitats.tsv": [388]}'
+  accessed_at: '2026-10-14T13:55:01.449549Z'
+  support: supports
+- evidence_id: TRANSFORMS
+  kind: record_content
+  reference: src/habitatmech/seed.py; src/habitatmech/extract.py
+  summary: Inspected source resolution, immediate GOLD parent contributions, synonym
+    scoping, taxon ranks/units and singleton-term parameter gating. GROUND replaces
+    the identifier even when status is NARROW; status does not undo a merge. Deterministic
+    reproduction does not establish scientific correctness.
+  accessed_at: '2026-10-14T13:55:01.449556Z'
+  support: supports
+- evidence_id: SEARCH
+  kind: search
+  reference: curation/; history/; research/; reviews/structured/; data/raw/; reports/yaml_record_review/;
+    tests/
+  summary: 'All matching source/decision rows inspected. No earlier structured declaration
+    of these eight targets or collision for the nine issue keys among 1428 bundles.
+    No target-specific causal overlay or authored definition was located within the
+    named roots. Exact target ID, slug, source labels and mints were searched, including
+    ignored files. Command: rg --no-ignore --hidden -l -i -F -e BTO:0000659 -e Engineered
+    > Food production > Beverages > Juice -e FOODON:00003202 -e Juice -e gold.ecosystem:7105
+    -e habitatmech:GOLD.15460dfe60 -e habitatmech:PREGO.dc6efaf40a -e juice curation
+    history research conf reviews/structured reports/yaml_record_review data/raw tests'
+  accessed_at: '2026-10-14T13:55:01.449565Z'
+  support: supports
+  search_scope: Ignored/hidden-inclusive structured parsing and rg within the explicitly
+    named roots; not an all-disk absence claim.
+- evidence_id: MEMBERS
+  kind: search
+  reference: conf/sources.yaml; data/raw/MANIFEST.yaml; data/raw/GOLD_MANIFEST.yaml
+  summary: Original GOLD nodes/edges, BacDive and PREGO nodes/edges, goldData.xlsx
+    and gold_biosample_triads.tsv were not located by named-file enumeration of 39439
+    files under /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech;
+    /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe/data. Ignored/hidden
+    files included; .git internals excluded and symlinks not traversed. Frozen inventories
+    remain available. No global absence or exact frozen member reconstruction is claimed.
+  accessed_at: '2026-10-14T13:55:01.449577Z'
+  support: supports
+  search_scope: Ignored/hidden-inclusive structured parsing and rg within the explicitly
+    named roots; not an all-disk absence claim.
+- evidence_id: FOODON
+  kind: database
+  reference: https://raw.githubusercontent.com/FoodOntology/foodon/cd73540243a84bcd511a500d9a497d12d7dc02f6/foodon.owl
+  summary: Full pinned RDF/XML class definitions, synonym predicates, named parents
+    and restrictions re-inspected at 2026-10-14T13:45:26.271013Z. Current BTO retains
+    the same fluid definition, with emulsin and fruit juice as children; its parents
+    endpoint returns no named parent, consistent with the slice. FOODON:00003202 is
+    a prepared liquid for consumption, contributed here by the GOLD path. FOODON:03315552
+    is a relevant juice-beverage candidate, but its current label differs from the
+    frozen slice and any adoption needs governed verification. Two inspected strain-source
+    examples support juice associations, not whole-class beverage equivalence. Retrieved
+    bytes SHA256 b897bf64c1b265c422db9ee01e1235c10c0b809e7f02326ef810a52068347edf.
+  accessed_at: '2026-10-14T12:27:42.074174Z'
+  support: supports
+- evidence_id: BTO
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/bto/terms?obo_id=BTO:0000659
+  summary: 'BTO:0000659 remains active with a tissue-fluid definition. Current linked
+    hierarchy endpoints were inspected: no named parent returned; children BTO:0000384
+    emulsin and BTO:0004057 fruit juice. This does not assert a digestive-juice subclass.
+    Retrieved bytes SHA256 03e6b2d010d66a3942447836265eb33b3628db8630cbe8609f941f7b3e4b4115.'
+  accessed_at: '2026-10-14T13:45:29.792816Z'
+  support: supports
+- evidence_id: APPLE
+  kind: database
+  reference: https://www.ncbi.nlm.nih.gov/biosample/SAMN02369460
+  summary: SAMN02369460 identifies DSM20444 / NCBITaxon1046596 and apple juice from
+    a cider press as its isolation source. Supports this strain association, not the
+    entire merged BTO/GOLD identity. Retrieved bytes SHA256 1fd1881ee96b4e27448c751d5211b057b7ec60e4f1d90ca37dc1b3f4e98ed7ce.
+  accessed_at: '2026-10-14T13:48:41.347639Z'
+  support: supports
+- evidence_id: CANE
+  kind: database
+  reference: https://bacdive.dsmz.de/strain/6833
+  summary: BacDive6833 lists KCTC3652 among the type-strain identifiers and cane-juice
+    isolation. Supports that exact strain example, not all five historical PREGO edges
+    or a beverage restriction on BTO. Retrieved bytes SHA256 e3aa8a75c219f3ab26eb4fdaffb01f1f7be2cf12f3fc1b7808c21a56ea5dacd0.
+  accessed_at: '2026-10-14T13:48:42.028752Z'
+  support: supports
+- evidence_id: TAXONOMY
+  kind: database
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&retmode=xml&id=1046596,106592,1247,1327988,1364,1428,1517,152682,153721,1580,1588,176292,184914,1931,2371,28447,298,317,33,339,442,51663,54,556,56,562,71864,83451,84032,935295
+  summary: 'Every displayed ID resolves and its stored label equals current NCBI.
+    Local exact raw-field comparison: {"displayed": 5, "observations": [{"metric":
+    3.0, "rank": 1, "raw_row": 1045, "taxon": "NCBITaxon:1046596"}, {"metric": 3.0,
+    "rank": 2, "raw_row": 1046, "taxon": "NCBITaxon:1327988"}, {"metric": 3.0, "rank":
+    3, "raw_row": 1047, "taxon": "NCBITaxon:1364"}, {"metric": 3.0, "rank": 4, "raw_row":
+    1048, "taxon": "NCBITaxon:562"}, {"metric": 3.0, "rank": 5, "raw_row": 1049, "taxon":
+    "NCBITaxon:935295"}], "pool": 5}. NCBI verifies identity, not habitat specificity.
+    No is_characteristic or corroborated_by assertion is present. Retrieved bytes
+    SHA256 32bb186f9b3a0f4b1eaf0d57090eee36f4679eb3f9ad6a2840cea466f0ba316d.'
+  accessed_at: '2026-10-14T13:43:40.739429Z'
+  support: supports
+- evidence_id: BASE_QC
+  kind: validation
+  reference: https://github.com/CultureBotAI/HabitatMech/actions/runs/38570802819
+  summary: 'Exact scientific-input base 72a79e3782e2657aab8507b45ec9b49ac95bcf13:
+    authoritative merge-queue QC passed, with 1112 tests passed and three skipped;
+    four review contract tests passed. This predates the new review bundles and cannot
+    substitute for their post-save validation.'
+  accessed_at: '2026-10-14T13:48:45.905464Z'
+  support: supports
+assessments:
+- assessment_id: IDENTITY
+  area: identity
+  topic: Habitat/source identity and exact scope
+  outcome: concern
+  target_ids:
+  - BTO:0000659
+  evidence_ids:
+  - RECORD
+  - RULES
+  - ROWS
+  - TRANSFORMS
+  - SEARCH
+  - MEMBERS
+  - FOODON
+  - BTO
+  - APPLE
+  - CANE
+  - TAXONOMY
+  - BASE_QC
+  summary: BTO:0000659 denotes a general extractable tissue fluid, not necessarily
+    a prepared beverage. PREGO uses that BTO identity directly, whereas GOLD specifies
+    Juice under Beverages. The two ITEM REVIEW decisions do not establish exact source
+    equivalence; the resulting beverage superclass restricts the broader BTO identity
+    incorrectly.
+- assessment_id: HIERARCHY
+  area: grounding
+  topic: Ontology genus versus source context
+  outcome: concern
+  target_ids:
+  - BTO:0000659
+  evidence_ids:
+  - RECORD
+  - RULES
+  - ROWS
+  - TRANSFORMS
+  - SEARCH
+  - MEMBERS
+  - FOODON
+  - BTO
+  - APPLE
+  - CANE
+  - TAXONOMY
+  - BASE_QC
+  summary: Current BTO retains the same fluid definition, with emulsin and fruit juice
+    as children; its parents endpoint returns no named parent, consistent with the
+    slice. FOODON:00003202 is a prepared liquid for consumption, contributed here
+    by the GOLD path. FOODON:03315552 is a relevant juice-beverage candidate, but
+    its current label differs from the frozen slice and any adoption needs governed
+    verification. Two inspected strain-source examples support juice associations,
+    not whole-class beverage equivalence.
+- assessment_id: PROVENANCE
+  area: provenance
+  topic: Source assertions, units and native gates
+  outcome: supported
+  target_ids:
+  - BTO:0000659
+  evidence_ids:
+  - RECORD
+  - ROWS
+  - TRANSFORMS
+  summary: GOLD row 230 has nodes 7105/7106 and 77 ORGANISM assertions. PREGO aggregate
+    row 388 has five TAXON associations, five direct edges, max score 3 and annotated_genomes_isolates
+    channel. Taxon rows 1045-1049 reproduce all five IDs/labels, score 3, ranks 1-5
+    and pool 5. All resolve in NCBI, including three strain-rank and two species-rank
+    IDs. ITEM decisions 217/1511 explain EXACT/REVIEWED mechanically. Different source
+    counts are not summed.
+- assessment_id: OPTIONAL
+  area: completeness
+  topic: Parameters, taxa, causal evidence and discussion
+  outcome: supported
+  target_ids:
+  - BTO:0000659
+  evidence_ids:
+  - RECORD
+  - ROWS
+  - SEARCH
+  - RULES
+  summary: No environmental parameter, causal graph, cited mechanism, dataset or discussion
+    claim is present to validate. Optional absence is not itself a defect. Displayed
+    taxa, where present, remain source associations without characteristic flags;
+    counts/ranks are not prevalence or mechanism evidence.
+- assessment_id: LIMITS
+  area: evidence
+  topic: Independent membership and unavailable source context
+  outcome: unknown
+  target_ids:
+  - BTO:0000659
+  evidence_ids:
+  - MEMBERS
+  summary: The review assesses every present record claim, but original member-level
+    provenance is unavailable in the bounded roots. Current source examples do not
+    prove original membership, and missing rows or zero counts do not prove environmental
+    absence.
+findings:
+- finding_id: F1
+  issue_key: juice-beverage-source-conflation
+  title: Beverage source is exactly merged into a broader tissue-fluid class
+  description: GOLD Beverages > Juice is given exact identity BTO:0000659, whose definition
+    is not restricted to consumable liquids. The source-specific scope is lost when
+    merged with the PREGO BTO term. Two positive juice strain examples do not establish
+    equivalence of these source classes.
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  target_ids:
+  - BTO:0000659
+  field_paths:
+  - source_attestations[source=GOLD].mapping_predicate
+  - identifier
+  - habitat_category
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained owner; generated habitat YAML is read-only
+  evidence_ids:
+  - ROWS
+  - BTO
+  - FOODON
+  - APPLE
+  - CANE
+  - RULES
+  rule_id: Habitat identity, strict genus and source-specific scope
+  native_severity: major
+  normalization_reason: Unsupported identity equivalence or strict superclass materially
+    changes the source meaning.
+- finding_id: F2
+  issue_key: juice-beverage-context-parent
+  title: General tissue fluid is made a beverage subtype
+  description: FOODON:00003202 is not strictly broader than BTO:0000659. This edge
+    comes from GOLD source context, not BTO ontology hierarchy. Keeping a source path
+    must not narrow the meaning of the BTO class.
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  target_ids:
+  - BTO:0000659
+  field_paths:
+  - parent_habitats
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained owner; generated habitat YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained owner; generated habitat YAML is read-only
+  evidence_ids:
+  - ROWS
+  - BTO
+  - FOODON
+  - TRANSFORMS
+  - RULES
+  rule_id: Habitat identity, strict genus and source-specific scope
+  native_severity: major
+  normalization_reason: Unsupported identity equivalence or strict superclass materially
+    changes the source meaning.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - BTO:0000659
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained owner; generated habitat YAML is read-only
+  description: Reassess GOLD mint habitatmech:GOLD.15460dfe60 separately from PREGO
+    mint habitatmech:PREGO.dc6efaf40a. Preserve PREGO counts/taxa on their proper
+    source scope, and retain a native beverage-juice identity or verify a fitting
+    FoodOn term. FOODON:03315552 is only a candidate; its changed label requires a
+    governed check. Audit existing natural/fruit-juice children.
+  generator: src/habitatmech/seed.py
+  acceptance_checks:
+  - Edit maintained decisions or exact guarded overlays only; preserve frozen raw
+    inventories and never hand-edit generated records.
+  - Preserve source identifiers, source paths, count units, taxon metrics and honest
+    native status unless separately evidence-backed.
+  - Dry seed, inspect target canary and full before/after corpus delta; run schema,
+    strict, history, provenance, corpus, site, label and authoritative QC gates.
+  - Save a new immutable follow-up with this stable issue key and exact previous occurrence;
+    do not rewrite this report.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - BTO:0000659
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained owner; generated habitat YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained owner; generated habitat YAML is read-only
+  description: 'Coordinate with source-scope repair: remove only the unsupported GOLD
+    beverage-parent contribution from the generic BTO record, or remap the source
+    so its valid beverage parent remains on a beverage-specific record. Do not leave
+    a stale exclusion after identity changes.'
+  generator: src/habitatmech/seed.py
+  acceptance_checks:
+  - Edit maintained decisions or exact guarded overlays only; preserve frozen raw
+    inventories and never hand-edit generated records.
+  - Preserve source identifiers, source paths, count units, taxon metrics and honest
+    native status unless separately evidence-backed.
+  - Dry seed, inspect target canary and full before/after corpus delta; run schema,
+    strict, history, provenance, corpus, site, label and authoritative QC gates.
+  - Save a new immutable follow-up with this stable issue key and exact previous occurrence;
+    do not rewrite this report.
+limitations:
+- Same-agent review; no independent approval or native status promotion.
+- Original source joins were unavailable in bounded searches; exact source counts
+  are preserved without claims of deduplicated biological prevalence.
+- Pinned ontology and current NCBI/source pages support bounded interpretations, not
+  an automatic release refresh or whole-population reassessment.
+- No scientific input, generated record, history, page, GitHub issue or PR was changed.
+  Actions are proposals only.
+- Exact-base QC predates the new review bundles; immutable saver validation and post-save
+  archive checks are separately required.
+- No SSSOM/KGX readiness or whole-corpus scientific pass is claimed.
+notes:
+- Original captured input hashes rechecked unchanged before extended inspection at
+  2026-10-14T13:52:44.686618Z.
+- All present identifiers and source references were traced to inspected inventory/ontology/taxonomy
+  evidence; unresolvable live GOLD access is explicitly recorded.
+tags:
+- habitatmech
+- record-review
+- food
+```

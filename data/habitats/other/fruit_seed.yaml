@@ -1,15 +1,12 @@
 identifier: habitatmech:BACDIVE.ba016fe448
 label: Fruit-Seed
-habitat_category: FOOD
-grounding_status: NARROW
+habitat_category: OTHER
+grounding_status: UNGROUNDED
 mapping_status: REVIEWED
-parent_habitats:
-- FOODON:00001015
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:fruit-seed
   source_label: Fruit-Seed
-  mapping_predicate: skos:narrowMatch
   assertion_count: 228
   assertion_unit: STRAIN
 characteristic_taxa:
@@ -164,21 +161,21 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 157
 curation_history:
-- timestamp: '2026-08-16T00:00:00Z'
-  curator: claude-opus-5
-  action: GROUND_AS_PARENT
-  changes: 'FOODON:00001015 ''plant food product'' attached as a parent, not adopted
-    as the identity (NARROW). CLOSE-grounding review (#12): the seeder read BacDive''s
-    ''Fruit-Seed'' as the compound noun ''fruit seed'' and grounded it to FOODON:03420295
-    ''fruit seed (anatomical part)'', the seed inside a fruit. BacDive''s hyphen is
-    a disjunction here, as in River-Creek, Mud-Sludge, Wetland-Swamp, Root-Rhizome
-    and Root-Tooth: the category is fruit OR seed. Reading it as a compound files
-    228 strains isolated from fruit under a term for seeds. No single term covers
-    the disjunction, so the broader FOODON:00001015 ''plant food product'' is attached
-    as a parent and the concept keeps its own identity. Category pinned: the record
-    was FOOD via the FOODON term, and fruit and seed are foods whichever term ends
-    up on it. (source concept habitatmech:BACDIVE.ba016fe448)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: NARROW.'
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Scientific review
+    #2073 (20261014T135448Z-fruit_seed F1): retain the native fruit-or-seed source
+    habitat, not a seed-only identity. FOODON:00001015 ''plant food product'' requires
+    a food product; plant anatomy alone does not establish consumability. BacDive
+    https://bacdive.dsmz.de/strain/21361 classifies a humus/fruit-peel/soil isolation
+    under Fruit (Seed), supporting non-food context without proving exact frozen membership.
+    Remove the unsupported food parent and use conservative OTHER rather than asserting
+    every source member is food or a living-host site. Preserve all 228 STRAIN-unit
+    source edges and 25 displayed taxa from the 157-taxon pool; no exact fitting identity
+    is established in the inspected evidence. Existing ITEM review remains ITEM, not
+    a new status promotion. (source concept habitatmech:BACDIVE.ba016fe448)'

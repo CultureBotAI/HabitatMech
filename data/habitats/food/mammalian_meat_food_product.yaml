@@ -14,7 +14,6 @@ synonyms:
 parent_habitats:
 - FOODON:00001092
 - FOODON:00005501
-- FOODON:03530206
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4486
@@ -36,3 +35,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution FOODON:03530206 for habitatmech:GOLD.0347e0d978
+    (Engineered > Food production > Meat products). Scientific review #2079 (20261014T135505Z-mammalian_meat_food_product
+    F2): pinned FoodOn cd73540243a84bcd511a500d9a497d12d7dc02f6 defines FOODON:03530206
+    as a planned production process, not a meat-material genus. Exclude only this
+    immediate GOLD contribution; preserve independent material parents FOODON:00001092
+    and FOODON:00005501, source nodes/path, 1916 ORGANISM assertions and native status.
+    Generic GOLD Meat products versus mammalian identity remains unresolved in #2078;
+    this parent repair neither certifies that equivalence nor reconstructs original
+    member species.'

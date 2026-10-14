@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: mammalian_meat_food_product
+session:
+  id: 2026-10-14T140512Z-codex-gpt-5-cbae1f
+  timestamp: '2026-10-14T14:05:12Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2079
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - provenance
+  summary: Exclude unsupported immediate GOLD superclass
+  details: Immutable predecessor 20261014T135505Z-mammalian_meat_food_product F2. Exclude
+    only the exact source mint/path/expected-parent contribution. Preserve identity, mapping
+    status, counts, units, all taxon metrics and independently supported genera. Source identity/category
+    questions remain open; no neighboring source remap is implied. Dry seed and Fruit-Seed
+    canary inspected; two focused regression tests passed, including full-corpus counterfactual
+    proving exactly four affected identifiers. Generated curation history reflects current
+    decisions; prior scientific observations and committed session histories are preserved.
+    Full QC and publication checks remain required. Same-agent GPT-5 assessment, not independent
+    approval.
