@@ -6,7 +6,6 @@ habitat_category: AQUATIC
 grounding_status: EXACT
 mapping_status: SEEDED
 parent_habitats:
-- ENVO:00002011
 - ENVO:00003074
 source_attestations:
 - source: GOLD
@@ -22,3 +21,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00002011 for habitatmech:GOLD.1c5da9f7f3
+    (Environmental > Aquatic > Freshwater > Water tank). Exact-source hierarchy assessment
+    https://github.com/CultureBotAI/HabitatMech/issues/2039 (20261014T053403Z-water_tank).
+    ENVO:03501254 is a container for storing water, not the fresh-water material it
+    contains. Exclude only the immediate GOLD Freshwater contribution, preserving
+    the independent ENVO:00003074 manufactured-product parent, container identity,
+    nodes 5209/5210, 36 ORGANISM assertions, source path and EXACT/SEEDED status.
+    Modal lake triads describe sampling context or contents and do not redefine the
+    container.

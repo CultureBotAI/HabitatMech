@@ -3,8 +3,6 @@ label: Waste
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- ENVO:00001999
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8417
@@ -26,3 +24,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00001999 for habitatmech:GOLD.cea7ead8dd
+    (Environmental > Aquatic > Marine > Waste). Exact-source hierarchy assessment
+    https://github.com/CultureBotAI/HabitatMech/issues/2039 (20261014T053402Z-waste__ae37fc5e).
+    Marine is collection context, not evidence that waste is an entire lentic marine
+    water body. Remove only this unsupported GOLD contribution. Preserve the qualified
+    mint, nodes 8417/8420, five ORGANISM assertions, source path, CLASS decision and
+    UNGROUNDED/SEEDED status. The precise material or site scope and original membership
+    remain unresolved; do not invent a replacement genus or definition, merge generic
+    Waste labels, or promote scientific review status.
