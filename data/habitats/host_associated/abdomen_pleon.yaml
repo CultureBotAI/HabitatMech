@@ -1,0 +1,42 @@
+identifier: habitatmech:GOLD.1e0a05a113
+label: Abdomen/Pleon
+habitat_category: HOST_ASSOCIATED
+grounding_status: UNGROUNDED
+mapping_status: REVIEWED
+source_attestations:
+- source: GOLD
+  source_id: gold.ecosystem:7308
+  source_label: Abdomen/Pleon
+  source_path: 'Host-associated > Arthropoda: Crustaceans > Whole body > Abdomen/Pleon'
+  notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
+curation_history:
+- timestamp: '2026-08-16T05:58:02Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM anatomy
+    review #2109 (20261014T184115Z-abdomen__17b71cfa F1): Uberon release 2026-10-01
+    defines UBERON:0000916 as vertebrate abdomen, has an in-taxon vertebrate restriction,
+    and explicitly distinguishes arthropod abdomen in its editor note. This insect
+    or crustacean source is not that identity or a subtype of it. Preserve the native
+    source habitat without inventing an exact replacement term or definition; BTO
+    abdomen is broader and not automatically adopted. Retain valid independent source
+    context; the crustacean whole-body containment contribution is separately excluded.
+    This decision removes only the wrong lexical/curated vertebrate mapping, not source
+    nodes or counts. https://purl.obolibrary.org/obo/uberon/releases/2026-10-01/uberon-base.obo
+    Path: Host-associated > Arthropoda: Crustaceans > Whole body > Abdomen/Pleon (source
+    concept habitatmech:GOLD.1e0a05a113)'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.bd9662fadb
+    for habitatmech:GOLD.1e0a05a113 (Host-associated > Arthropoda: Crustaceans > Whole
+    body > Abdomen/Pleon). Scientific review #2110 (20261014T184115Z-abdomen__17b71cfa
+    F2): Pleon is an anatomical part of the crustacean, not a whole body. Restore
+    its native identity through the separate ITEM decision; do not inherit the whole-body
+    superclass. Exclude only this exact immediate GOLD source-path contribution with
+    expected-parent guard; preserve source path, nodes, omitted count, independent
+    parents and native status. https://purl.obolibrary.org/obo/uberon/releases/2026-10-01/uberon-base.obo'

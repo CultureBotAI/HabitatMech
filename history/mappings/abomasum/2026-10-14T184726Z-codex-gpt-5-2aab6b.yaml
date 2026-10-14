@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: abomasum
+session:
+  id: 2026-10-14T184726Z-codex-gpt-5-2aab6b
+  timestamp: '2026-10-14T18:47:26Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2114
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  - synonyms
+  summary: Correct reviewed anatomy or synonym scope for abomasum
+  details: 'Maintained-row remediation following 20261014T184142Z-abomasum F1. Scientific
+    review #2114 (20261014T184142Z-abomasum F1): Uberon release2026-10-01 states that abomasum
+    is a stomach glandular region and part of ruminant stomach. UMN veterinary embryology
+    independently distinguishes stomach compartments. A compartment is not the whole Stomach
+    source genus; retain UBERON:0011953. Exclude only this exact immediate GOLD source-path
+    contribution with expected-parent guard; preserve source path, nodes, omitted count, independent
+    parents and native status. https://purl.obolibrary.org/obo/uberon/releases/2026-10-01/uberon-base.obo
+    Required validation: dry seed and inspected canary, whole-corpus counterfactual regression,
+    schema/history/provenance/reproduction/product gates, refreshed semantic map/site, and
+    protected PR QC. These required checks are not predeclared successful. Original PREGO
+    pair-evidence issues remain separate and unchanged.'

@@ -27,11 +27,10 @@
   <code class="curie">habitatmech:GOLD.1743ebf24f</code>
   <span class="sep">·</span><a href="../category/host-associated.html">HOST_ASSOCIATED</a>
   <span class="sep">·</span><span class="pill">NARROW</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 
-<div class="note warn"><p>SEEDED workflow status. The source-seeding rules supplied this record; consult its curation history for later attributed changes. This status does not establish human review.</p></div>
 
 <h2>Source attestations</h2>
 <p class="meta">Each upstream vocabulary's own account of this habitat. Assertion
@@ -53,13 +52,22 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="../habitats/lymph-node-uberon-0000029.html">lymph node</a>      <code class="curie">UBERON:0000029</code></li>
-  <li><a href="../habitats/abdomen-uberon-0000916.html">abdomen</a>      <code class="curie">UBERON:0000916</code></li>
 </ul>
 
 
 
 
 
+<h2>Curation</h2>
+<p class="meta">What a curator decided about this record, and why. A record built
+from several source concepts can carry one decision per concept.</p>
+<ol class="events">
+  <li>
+    <span class="pill">GROUND_AS_PARENT</span>
+    <span class="meta">2026-10-14 · codex-gpt-5</span>
+    <p>UBERON:0000029 &#39;lymph node&#39; attached as a parent, not adopted as the identity (NARROW). ITEM anatomy review #2108 (20261014T184110Z-abdomen__0eb11b74 F1): the source path names lymph nodes in an abdominal location. A lymph node is not a kind of the vertebrate body subdivision UBERON:0000916; remove that ambiguous-leaf parent and retain only the verified broader UBERON:0000029 lymph node genus. Current Uberon distinguishes abdominal lymph node with a part-of location definition, but that candidate is outside the committed slice and is not imported here. Preserve the native source identity, two ORGANISM assertions and exact path; do not exact-merge into generic lymph node. Path: Host-associated &gt; Mammals &gt; Lymphatic system &gt; Lymph nodes &gt; Abdomen (source concept habitatmech:GOLD.1743ebf24f)</p>
+  </li>
+</ol>
 
 <h2>Provenance</h2>
 <p class="meta">

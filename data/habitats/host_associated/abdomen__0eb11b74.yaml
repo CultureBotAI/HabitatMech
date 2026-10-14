@@ -2,10 +2,9 @@ identifier: habitatmech:GOLD.1743ebf24f
 label: Abdomen
 habitat_category: HOST_ASSOCIATED
 grounding_status: NARROW
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
 - UBERON:0000029
-- UBERON:0000916
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6763
@@ -19,3 +18,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: GROUND_AS_PARENT
+  changes: 'UBERON:0000029 ''lymph node'' attached as a parent, not adopted as the
+    identity (NARROW). ITEM anatomy review #2108 (20261014T184110Z-abdomen__0eb11b74
+    F1): the source path names lymph nodes in an abdominal location. A lymph node
+    is not a kind of the vertebrate body subdivision UBERON:0000916; remove that ambiguous-leaf
+    parent and retain only the verified broader UBERON:0000029 lymph node genus. Current
+    Uberon distinguishes abdominal lymph node with a part-of location definition,
+    but that candidate is outside the committed slice and is not imported here. Preserve
+    the native source identity, two ORGANISM assertions and exact path; do not exact-merge
+    into generic lymph node. Path: Host-associated > Mammals > Lymphatic system >
+    Lymph nodes > Abdomen (source concept habitatmech:GOLD.1743ebf24f)'

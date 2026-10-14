@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/record_annotation_corrections.tsv
+  slug: abdominal_cavity
+session:
+  id: 2026-10-14T184727Z-codex-gpt-5-a0f27a
+  timestamp: '2026-10-14T18:47:27Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2113
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  - synonyms
+  summary: Correct reviewed anatomy or synonym scope for abdominal_cavity
+  details: 'Maintained-row remediation following 20261014T184137Z-abdominal_cavity F1. Uberon
+    release2026-10-01 marks this exact alias RELATED, while the frozen flat inventory/seeder
+    promoted it to EXACT. Restore only this record/source/text/old-value scope, preserving
+    spelling, canonical source-label grounding, identity, source attestations and native status.
+    Broader extractor issue #1249 remains open. https://github.com/CultureBotAI/HabitatMech/issues/2113;
+    review 20261014T184137Z-abdominal_cavity F1. Required validation: dry seed and inspected
+    canary, whole-corpus counterfactual regression, schema/history/provenance/reproduction/product
+    gates, refreshed semantic map/site, and protected PR QC. These required checks are not
+    predeclared successful. Original PREGO pair-evidence issues remain separate and unchanged.'

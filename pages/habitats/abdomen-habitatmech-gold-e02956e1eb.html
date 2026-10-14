@@ -26,12 +26,11 @@
 <p class="meta">
   <code class="curie">habitatmech:GOLD.e02956e1eb</code>
   <span class="sep">·</span><a href="../category/host-associated.html">HOST_ASSOCIATED</a>
-  <span class="sep">·</span><span class="pill">NARROW</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="sep">·</span><span class="pill warn">UNGROUNDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 
-<div class="note warn"><p>SEEDED workflow status. The source-seeding rules supplied this record; consult its curation history for later attributed changes. This status does not establish human review.</p></div>
 
 <h2>Source attestations</h2>
 <p class="meta">Each upstream vocabulary's own account of this habitat. Assertion
@@ -52,7 +51,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 <h2>Broader habitats</h2>
 <ul class="plain">
-  <li><a href="../habitats/abdomen-uberon-0000916.html">abdomen</a>      <code class="curie">UBERON:0000916</code></li>
   <li><a href="../habitats/insect-larva-associated-environment-habitatmech-gold-1cbfc76870.html">insect larva-associated environment</a>      <code class="curie">habitatmech:GOLD.1cbfc76870</code></li>
 </ul>
 
@@ -60,6 +58,16 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 
 
+<h2>Curation</h2>
+<p class="meta">What a curator decided about this record, and why. A record built
+from several source concepts can carry one decision per concept.</p>
+<ol class="events">
+  <li>
+    <span class="pill">CONFIRM_UNGROUNDED</span>
+    <span class="meta">2026-10-14 · codex-gpt-5</span>
+    <p>Confirmed UNGROUNDED: no ontology term fits this concept. ITEM anatomy review #2111 (20261014T184119Z-abdomen__7e80ff1c F1): Uberon release 2026-10-01 defines UBERON:0000916 as vertebrate abdomen, has an in-taxon vertebrate restriction, and explicitly distinguishes arthropod abdomen in its editor note. This insect or crustacean source is not that identity or a subtype of it. Preserve the native source habitat without inventing an exact replacement term or definition; BTO abdomen is broader and not automatically adopted. Retain valid independent source context; the crustacean whole-body containment contribution is separately excluded. This decision removes only the wrong lexical/curated vertebrate mapping, not source nodes or counts. <a href="https://purl.obolibrary.org/obo/uberon/releases/2026-10-01/uberon-base.obo" rel="noopener noreferrer" target="_blank">https://purl.obolibrary.org/obo/uberon/releases/2026-10-01/uberon-base.obo</a> Path: Host-associated &gt; Arthropoda: Insects &gt; Larva &gt; Abdomen (source concept habitatmech:GOLD.e02956e1eb)</p>
+  </li>
+</ol>
 
 <h2>Provenance</h2>
 <p class="meta">

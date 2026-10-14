@@ -1,0 +1,37 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: abdomen__7e80ff1c
+session:
+  id: 2026-10-14T184722Z-codex-gpt-5-b6a1a4
+  timestamp: '2026-10-14T18:47:22Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2111
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  - synonyms
+  summary: Correct reviewed anatomy or synonym scope for abdomen__7e80ff1c
+  details: 'Maintained-row remediation following 20261014T184119Z-abdomen__7e80ff1c F1. ITEM
+    anatomy review #2111 (20261014T184119Z-abdomen__7e80ff1c F1): Uberon release 2026-10-01
+    defines UBERON:0000916 as vertebrate abdomen, has an in-taxon vertebrate restriction,
+    and explicitly distinguishes arthropod abdomen in its editor note. This insect or crustacean
+    source is not that identity or a subtype of it. Preserve the native source habitat without
+    inventing an exact replacement term or definition; BTO abdomen is broader and not automatically
+    adopted. Retain valid independent source context; the crustacean whole-body containment
+    contribution is separately excluded. This decision removes only the wrong lexical/curated
+    vertebrate mapping, not source nodes or counts. https://purl.obolibrary.org/obo/uberon/releases/2026-10-01/uberon-base.obo
+    Path: Host-associated > Arthropoda: Insects > Larva > Abdomen Required validation: dry
+    seed and inspected canary, whole-corpus counterfactual regression, schema/history/provenance/reproduction/product
+    gates, refreshed semantic map/site, and protected PR QC. These required checks are not
+    predeclared successful. Original PREGO pair-evidence issues remain separate and unchanged.'
