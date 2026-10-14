@@ -55,10 +55,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 </table>
 </div>
 
-<h2>Broader habitats</h2>
-<ul class="plain">
-  <li><a href="../habitats/beverage-liquid-foodon-00003202.html">beverage (liquid)</a>      <code class="curie">FOODON:00003202</code></li>
-</ul>
 
 
 <h2>Associated taxa</h2>
@@ -126,6 +122,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">REVIEW</span>
     <span class="meta">2026-08-13 · claude-opus-5</span>
     <p>Reviewed and endorsed the seeder&#39;s own resolution. Multi-source review pass: this record is attested by more than one independent vocabulary, and this source&#39;s label or path was read against the record&#39;s ontology term to check the merge is right. It agrees. Source concepts in the same pass whose labels did not agree were re-decided rather than endorsed; see the pass&#39;s other decisions of the same date. (source concept habitatmech:PREGO.dc6efaf40a)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-14 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution FOODON:00003202 for habitatmech:GOLD.15460dfe60 (Engineered &gt; Food production &gt; Beverages &gt; Juice). Scientific review #2077 (20261014T135501Z-juice F2): BTO:0000659 denotes extractable cellular or tissue fluid, not exclusively a liquid prepared for consumption. FOODON:00003202 is a beverage class in pinned FoodOn cd73540243a84bcd511a500d9a497d12d7dc02f6 and is not a strict superclass of general juice. Exclude only the immediate GOLD contribution; retain the verbatim beverage source path, all GOLD and PREGO counts/units/taxa, identity and native status. Exact GOLD-to-BTO conflation remains open in #2076. Reassess this expected-parent guard when that source is remapped; do not discard valid beverage context from a future beverage-specific record.</p>
   </li>
 </ol>
 
