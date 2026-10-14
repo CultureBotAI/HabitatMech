@@ -3,8 +3,6 @@ label: Warm (34-42C)
 habitat_category: AQUATIC
 grounding_status: NOT_APPLICABLE
 mapping_status: REVIEWED
-parent_habitats:
-- ENVO:00000051
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3759
@@ -25,3 +23,14 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NOT_APPLICABLE.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution ENVO:00000051 for habitatmech:GOLD.486b52b120
+    (Environmental > Aquatic > Thermal springs > Warm (34-42C)). Exact-source hierarchy
+    assessment https://github.com/CultureBotAI/HabitatMech/issues/2039 (20261014T053401Z-warm_34_42c).
+    The maintained ITEM decision treats this source as a temperature qualifier, not
+    a spring. Exclude only the contradictory immediate GOLD hot-spring parent, preserving
+    NOT_APPLICABLE/REVIEWED, nodes 3759/3986, the path, one ORGANISM assertion and
+    earlier history. This is not a minimum-temperature argument or a decision about
+    adjacent bins; ENVO defines hot spring by geothermal origin.

@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: waste__ae37fc5e
+session:
+  id: 2026-10-14T055235Z-codex-gpt-5-0bb4ac
+  timestamp: '2026-10-14T05:52:35Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2039
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Remove whole-water-body superclass from marine Waste source context
+  details: 'Bounded hierarchy assessment of the exact Marine > Waste source establishes that
+    collection context does not entail a whole lentic marine-water-body genus. Evidence: 20261014T053402Z-waste__ae37fc5e,
+    GOLD classification guidance and the current ENVO marine water body definition. Preserve
+    nodes 8417/8420, five ORGANISM assertions, path, qualified mint, CLASS decision and UNGROUNDED/SEEDED.
+    Detailed material or site scope and original members remain unresolved; no replacement
+    genus, definition, merge or status upgrade is inferred. Dry run, canary and full generation
+    passed; only the expected parent and exclusion event changed. Focused regressions and
+    corpus/site/map/QC gates are being run and will be reported separately.'

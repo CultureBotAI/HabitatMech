@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: warm_34_42c
+session:
+  id: 2026-10-14T055234Z-codex-gpt-5-de3568
+  timestamp: '2026-10-14T05:52:34Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2039
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Remove hot-spring superclass from an ITEM-reviewed temperature qualifier
+  details: 'The exact-source exclusion reconciles parent_habitats with the existing NOT_APPLICABLE
+    ITEM decision. Evidence: 20261014T053401Z-warm_34_42c and the current ENVO definition
+    of hot spring by geothermal origin, not a minimum temperature threshold. Nodes 3759/3986,
+    one ORGANISM assertion, source path, mint, NOT_APPLICABLE/REVIEWED and previous history
+    remain unchanged. Dry run, water-tank canary and full generation passed; the three-target
+    corpus diff contains only parent removals and exclusion history. Focused regressions,
+    labels, corpus/site/map and authoritative QC are in progress and will be reported separately.
+    No adjacent temperature-bin classification or scientific-status promotion is implied.'

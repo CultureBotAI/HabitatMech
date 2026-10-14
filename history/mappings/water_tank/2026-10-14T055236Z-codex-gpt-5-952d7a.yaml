@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: water_tank
+session:
+  id: 2026-10-14T055236Z-codex-gpt-5-952d7a
+  timestamp: '2026-10-14T05:52:36Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2039
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Preserve water-tank container genus and exclude its fresh-water contents parent
+  details: 'Evidence: 20261014T053403Z-water_tank, pinned official ENVO a2455d1a77e46bb8a664d65a157166b539269042,
+    and GOLD classification context. ENVO:03501254 denotes a water-storage container with
+    ENVO:00003074 manufactured-product genus, not ENVO:00002011 fresh-water material. Exclude
+    only the exact GOLD source contribution for mint GOLD.1c5da9f7f3. Preserve nodes 5209/5210,
+    36 ORGANISM assertions, source path, ontology identity, exact mapping, SEEDED status and
+    old history. Dry run, inspected canary and full generation passed; the true manufactured-product
+    parent remains. Further focused/corpus/site/map/QC checks are in progress and will be
+    reported separately. Lake triads are context or contents, not container identity.'
