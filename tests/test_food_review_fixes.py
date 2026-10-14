@@ -8,11 +8,23 @@ PROCESS = "FOODON:03530206"
 RAW_CHOP = "habitatmech:GOLD.413b64dcc1"
 GENERIC_CHOP = "FOODON:02020979"
 CASES = {
-    "habitatmech:GOLD.6d46057e78": ("Baby formula", "habitatmech:GOLD.6d46057e78", [], 27, "UNGROUNDED", "SEEDED"),
-    "FOODON:00002753": ("Beans", "habitatmech:GOLD.effa0d6ca3", ["FOODON:00001635", "FOODON:03310646"], 0, "EXACT", "REVIEWED"),
-    "FOODON:00003202": ("Beverages", "habitatmech:GOLD.96754211ed", ["FOODON:03301977", "FOODON:03430130"], 96, "EXACT", "REVIEWED"),
-    "FOODON:00001183": ("Bread production", "habitatmech:GOLD.b37828b7b3", ["FOODON:00002456"], 380, "CLOSE", "REVIEWED"),
-    "FOODON:00001093": ("Grains/Grain products", "habitatmech:GOLD.c25f588dad", ["FOODON:00001173"], 0, "CLOSE", "REVIEWED"),
+    "habitatmech:GOLD.6d46057e78": (
+        "Baby formula", "habitatmech:GOLD.6d46057e78", [], 27, "UNGROUNDED", "SEEDED",
+    ),
+    "FOODON:00002753": (
+        "Beans", "habitatmech:GOLD.effa0d6ca3", ["FOODON:00001635", "FOODON:03310646"],
+        0, "EXACT", "REVIEWED",
+    ),
+    "FOODON:00003202": (
+        "Beverages", "habitatmech:GOLD.96754211ed", ["FOODON:03301977", "FOODON:03430130"],
+        96, "EXACT", "REVIEWED",
+    ),
+    "FOODON:00001183": (
+        "Bread production", "habitatmech:GOLD.b37828b7b3", ["FOODON:00002456"], 380, "CLOSE", "REVIEWED",
+    ),
+    "FOODON:00001093": (
+        "Grains/Grain products", "habitatmech:GOLD.c25f588dad", ["FOODON:00001173"], 0, "CLOSE", "REVIEWED",
+    ),
 }
 
 
