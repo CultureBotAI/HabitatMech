@@ -2,7 +2,10 @@
 
 from dataclasses import replace
 
+import pytest
+
 from habitatmech import seed
+from habitatmech.curate.decisions import DecisionError, validate_decisions
 
 ADENOID = "habitatmech:GOLD.b21e68a415"
 ADULT = "habitatmech:PREGO.57e0a5faae"
@@ -106,3 +109,33 @@ def test_anatomy_repairs_change_only_seven_source_records(monkeypatch):
     assert adenoma == before["habitatmech:GOLD.5dd1030108"]
     assert adenoma["mapping_status"] == "SEEDED"
     assert adenoma["grounding_status"] == "UNGROUNDED"
+
+
+def test_adenoid_external_evidence_registration_does_not_change_records(monkeypatch):
+    term = "UBERON:0001732"
+    external = seed.load_external_xrefs(seed.EXTERNAL_XREFS_PATH)
+    assert external[term].label == "pharyngeal tonsil"
+    assert external[term].source_status == "active_unvendored"
+    decisions = seed.load_decisions(seed.DECISIONS_PATH)
+    assert term in decisions[ADENOID].notes
+    assert decisions[ADENOID].object_id == "BTO:0004715"
+    labels = {key: row.label for key, row in external.items()}
+    for decision, grounding_status, relation in [
+        ("GROUND", "EXACT", "parent"),
+        ("GROUND_AS_PARENT", "NARROW", "xref"),
+        ("CONFIRM_UNGROUNDED", "", "parent"),
+    ]:
+        candidate = replace(
+            decisions[ADENOID], object_id=term, object_label=external[term].label,
+            decision=decision, grounding_status=grounding_status, relation=relation,
+        )
+        with pytest.raises(DecisionError, match="external xref"):
+            validate_decisions({ADENOID: candidate}, {}, external_xref_labels=labels)
+
+    registered = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    monkeypatch.setattr(seed, "load_external_xrefs", lambda _: {
+        key: row for key, row in external.items() if key != term
+    })
+    unregistered = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
+    assert registered == unregistered
+    assert term not in registered
