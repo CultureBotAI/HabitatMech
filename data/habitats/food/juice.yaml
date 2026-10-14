@@ -9,8 +9,6 @@ synonyms:
 - synonym_text: juices
   synonym_type: RELATED_SYNONYM
   source: PREGO
-parent_habitats:
-- FOODON:00003202
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7105
@@ -82,3 +80,16 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution FOODON:00003202 for habitatmech:GOLD.15460dfe60
+    (Engineered > Food production > Beverages > Juice). Scientific review #2077 (20261014T135501Z-juice
+    F2): BTO:0000659 denotes extractable cellular or tissue fluid, not exclusively
+    a liquid prepared for consumption. FOODON:00003202 is a beverage class in pinned
+    FoodOn cd73540243a84bcd511a500d9a497d12d7dc02f6 and is not a strict superclass
+    of general juice. Exclude only the immediate GOLD contribution; retain the verbatim
+    beverage source path, all GOLD and PREGO counts/units/taxa, identity and native
+    status. Exact GOLD-to-BTO conflation remains open in #2076. Reassess this expected-parent
+    guard when that source is remapped; do not discard valid beverage context from
+    a future beverage-specific record.'

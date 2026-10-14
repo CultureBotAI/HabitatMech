@@ -3,8 +3,6 @@ label: Heroin
 habitat_category: FOOD
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.40c1d45ca3
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8247
@@ -23,3 +21,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.40c1d45ca3
+    for habitatmech:GOLD.76339b995e (Engineered > Food production > Plant products
+    > Morphine > Heroin). Scientific review #2074 (20261014T135452Z-heroin F1): ChEBI
+    https://www.ebi.ac.uk/chebi/CHEBI:27808 distinguishes functional parent morphine
+    from is-a. The GOLD path supplies classification context, not evidence that this
+    unresolved preparation or material is a subtype of Morphine. Exclude only this
+    immediate GOLD contribution; preserve native identity, source node8247/path, omitted
+    occurrence counts and UNGROUNDED/SEEDED status. No chemical identity or replacement
+    genus is adopted. Food-category and source-meaning uncertainty remain open in
+    #2075.'
