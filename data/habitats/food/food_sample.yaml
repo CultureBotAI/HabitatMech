@@ -3,8 +3,6 @@ label: Food sample
 habitat_category: FOOD
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- FOODON:03530206
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5921
@@ -26,3 +24,13 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution FOODON:03530206 for habitatmech:GOLD.2aeb0d8390
+    (Engineered > Food production > Food sample). Scientific review #2071 (20261014T123813Z-food_sample
+    F1): a food sample is not a kind of the planned production process FOODON:03530206.
+    Exclude only this immediate GOLD source contribution; preserve minted identity,
+    source path/nodes, three ORGANISM assertions and UNGROUNDED/SEEDED status. Material-versus-sample-artifact
+    ambiguity remains; no definition, replacement parent or NOT_APPLICABLE decision
+    is inferred from missing original members.'

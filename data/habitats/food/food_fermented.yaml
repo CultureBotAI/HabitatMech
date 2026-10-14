@@ -15,7 +15,6 @@ synonyms:
 parent_habitats:
 - FOODON:00002501
 - FOODON:00002645
-- FOODON:03530206
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:fermented
@@ -336,3 +335,15 @@ curation_history:
   action: SOURCE_ATTESTATION_CORRECTED
   changes: Corrected bacdive.isolation_source:fermented provenance wording to distinguish
     the declined automatic mapping from the final curator override (#1889).
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution FOODON:03530206 for habitatmech:GOLD.b2c3ae1ed5
+    (Engineered > Food production > Fermented beverages). Scientific review #2066
+    (20261014T123755Z-food_fermented F1): fermented food material is not a subclass
+    of the planned production process FOODON:03530206. Exclude only this immediate
+    GOLD source contribution; retain independently supported FOODON:00002501 and FOODON:00002645,
+    all three source attestations, their distinct units, 48 taxon associations and
+    CLOSE/REVIEWED status. Nonfood fermentation and wastewater association findings
+    #2067 and #2068 remain unresolved; this hierarchy repair does not endorse those
+    associations.'

@@ -3,8 +3,6 @@ label: Fish products
 habitat_category: FOOD
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- FOODON:03530206
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5889
@@ -26,3 +24,13 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution FOODON:03530206 for habitatmech:GOLD.f6b4333781
+    (Engineered > Food production > Fish products). Scientific review #2065 (20261014T123751Z-fish_products
+    F1): fish food material is not a subclass of the planned production process FOODON:03530206,
+    verified in pinned FoodOn cd73540243a84bcd511a500d9a497d12d7dc02f6. Exclude only
+    this immediate GOLD source contribution; preserve minted identity, source nodes/path,
+    69 ORGANISM assertions and UNGROUNDED/SEEDED status. No replacement genus or definition
+    is invented and later BIOSAMPLE counts are not substituted.'

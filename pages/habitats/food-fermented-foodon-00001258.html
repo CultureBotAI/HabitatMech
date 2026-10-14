@@ -65,7 +65,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <ul class="plain">
   <li><a href="http://purl.obolibrary.org/obo/FOODON_00002501">multi-component food</a>      <code class="curie">FOODON:00002501</code></li>
   <li><a href="http://purl.obolibrary.org/obo/FOODON_00002645">food material by process</a>      <code class="curie">FOODON:00002645</code></li>
-  <li><a href="../habitats/food-production-foodon-03530206.html">food production</a>      <code class="curie">FOODON:03530206</code></li>
 </ul>
 
 
@@ -294,6 +293,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">SOURCE_ATTESTATION_CORRECTED</span>
     <span class="meta">2026-10-10 · seed_from_sources</span>
     <p>Corrected bacdive.isolation_source:fermented provenance wording to distinguish the declined automatic mapping from the final curator override (#1889).</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-14 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution FOODON:03530206 for habitatmech:GOLD.b2c3ae1ed5 (Engineered &gt; Food production &gt; Fermented beverages). Scientific review #2066 (20261014T123755Z-food_fermented F1): fermented food material is not a subclass of the planned production process FOODON:03530206. Exclude only this immediate GOLD source contribution; retain independently supported FOODON:00002501 and FOODON:00002645, all three source attestations, their distinct units, 48 taxon associations and CLOSE/REVIEWED status. Nonfood fermentation and wastewater association findings #2067 and #2068 remain unresolved; this hierarchy repair does not endorse those associations.</p>
   </li>
 </ol>
 
