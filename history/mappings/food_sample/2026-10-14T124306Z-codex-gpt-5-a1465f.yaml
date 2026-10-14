@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: food_sample
+session:
+  id: 2026-10-14T124306Z-codex-gpt-5-a1465f
+  timestamp: '2026-10-14T12:43:06Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2071
+  urls:
+  - https://raw.githubusercontent.com/FoodOntology/foodon/cd73540243a84bcd511a500d9a497d12d7dc02f6/foodon.owl
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - provenance
+  summary: Exclude process-valued immediate GOLD parent
+  details: 'Exact maintained-input repair under immutable predecessor 20261014T123813Z-food_sample
+    F1. The immediate GOLD source-path parent resolves to FOODON:03530206, a production process.
+    The target denotes food material or a food-source sample, not a kind of that process.
+    Preserve independent material parents and source classification without promoting context
+    to subclass. Preserves raw inventories, all source IDs/counts/units, all taxa/ranks/scores,
+    identity and native status. No missing optional biology is invented. Dry seed, inspected
+    preserved-food canary and 31 focused tests passed. Full-corpus counterfactual changes
+    exactly four records, only reviewed parent/synonym fields plus deterministic events. Separate
+    #2067, #2068 and #2070 remain unresolved; no source-member split or process-identity remap
+    is claimed. Broader gates and final PR checks remain required. Same-agent GPT-5 assessment.'

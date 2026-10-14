@@ -21,7 +21,11 @@ def test_exact_corpus_change_scope_and_claim_preservation(monkeypatch):
     monkeypatch.setattr(seed, "load_gold_parent_exclusions", lambda _: {
         key: item for key, item in exclusions.items() if key not in sources
     })
-    monkeypatch.setattr(seed, "load_record_annotation_corrections", lambda _: [])
+    annotations = seed.load_record_annotation_corrections(seed.RECORD_ANNOTATION_CORRECTIONS_PATH)
+    repaired = {"fermentation-starter-daqu-exact-synonym", "fermentation-starter-ncbitaxon-86957-label"}
+    monkeypatch.setattr(seed, "load_record_annotation_corrections", lambda _: [
+        row for row in annotations if row.correction_id not in repaired
+    ])
     before = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
     assert before.keys() == after.keys()
     assert {key for key in before if before[key] != after[key]} == CASES.keys()
