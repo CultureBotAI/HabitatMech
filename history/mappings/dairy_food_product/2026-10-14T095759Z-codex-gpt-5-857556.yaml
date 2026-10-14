@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: dairy_food_product
+session:
+  id: 2026-10-14T095759Z-codex-gpt-5-857556
+  timestamp: '2026-10-14T09:57:59Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2050
+  urls:
+  - https://raw.githubusercontent.com/FoodOntology/foodon/cd73540243a84bcd511a500d9a497d12d7dc02f6/foodon.owl
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  - provenance
+  summary: Remove unsupported source parent contribution
+  details: Excluded only the exact GOLD immediate-parent contribution identified in the review.
+    Preserve independent ontology parents, identities, source observations, original events
+    and native status. No guessed replacement genus or neighboring record correction. Cheese
+    source membership and fermentation-context identity remain uncertain; the supported correction
+    is the invalid universal parent. Cooked meat is not proven mammalian-only by the parent
+    source decision. Dairy and Egg products are materials, not processes. Scientific observation
+    20261014T095316Z-dairy_food_product; same-agent GPT-5 assessment. Dry seed succeeded.
+    Focused regressions, full generation, history/schema/labels, map/site, immutable successor
+    and full QC checks are required before publication.
