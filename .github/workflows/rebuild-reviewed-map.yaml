@@ -29,7 +29,7 @@ jobs:
           python-version: "3.13"
       - uses: actions/download-artifact@v4
         with:
-          name: reviewed-record-map-acf3f2eb1dd946cfa0de215c627f6b962f2bcb12
+          name: reviewed-record-map-09bb13f857d3e634f4a8cb295d7b847b10612a4b
           run-id: 38546447027
           github-token: ${{ github.token }}
           path: build/prior-map
