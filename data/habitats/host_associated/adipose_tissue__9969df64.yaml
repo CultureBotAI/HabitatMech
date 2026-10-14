@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - UBERON:0001013
-- habitatmech:GOLD.56e0776270
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6738
@@ -18,3 +17,13 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.56e0776270
+    for habitatmech:GOLD.6fe7c283e0 (Host-associated > Mammals > Integumentary system
+    > Adipose tissue). Review #2139: adipose tissue is a connective tissue, not the
+    entire integumental system. UBERON:0001013 and UBERON:0002416 definitions distinguish
+    these entities. Exclude only the exact GOLD context-parent contribution; preserve
+    host-scoped minted identity, generic adipose genus, verbatim path/node IDs and
+    ORGANISM count semantics. https://purl.obolibrary.org/obo/UBERON_0001013 https://purl.obolibrary.org/obo/UBERON_0002416'

@@ -1,10 +1,11 @@
-identifier: BTO:0001043
-label: adult
-definition: 'Fully developed and mature: GROWN-UP.'
-definition_source: BTO
+identifier: habitatmech:PREGO.57e0a5faae
+label: adult-associated environment
+definition: An environmental system determined by a living organism that has reached
+  its adult stage.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
-grounding_status: EXACT
-mapping_status: SEEDED
+grounding_status: UNGROUNDED
+mapping_status: REVIEWED
 synonyms:
 - synonym_text: adult stage
   synonym_type: RELATED_SYNONYM
@@ -16,7 +17,9 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: PREGO
 parent_habitats:
-- BTO:0000284
+- ENVO:01001000
+xrefs:
+- BTO:0001043
 source_attestations:
 - source: PREGO
   source_id: BTO:0001043
@@ -178,4 +181,40 @@ curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT.'
+  changes: 'Seeded from data/raw/ inventories; attested by PREGO. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. BTO:0001043
+    ''adult'' kept as an xref. ITEM host-stage review #2141, also resolving #2142:
+    PREGO adult is interpreted as the environment associated with an organism at its
+    adult stage, not as an organism-form identity. Keep the stable source mint and
+    BTO:0001043 adult only as a related stage xref. Do not infer a host species, body
+    site, resident microbiome or characteristic taxa from the top-25 associations.
+    Preserve original PREGO BTO source ID, 378 TAXON count, scores, ranks and candidate
+    pools; 387 direct assertions are a different source metric. The authored definition
+    supplies ENVO:01001000 as environment genus, not BTO:0000284 organism form. https://purl.obolibrary.org/obo/BTO_0001043
+    https://purl.obolibrary.org/obo/ENVO_01001000 (source concept habitatmech:PREGO.57e0a5faae)'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: DEFINED
+  changes: 'Defined as ''adult-associated environment'' under ENVO:01001000 ''environmental
+    system determined by an organism''. Review #2141: define only the organism-determined
+    environmental system and adult-stage restriction supported by ENVO:01001000 and
+    BTO:0001043. This is a curator-authored interpretation of PREGO host-stage context,
+    not a newly discovered body-site class or a claim that every retained association
+    is valid. The organism-form identity and parent are not inherited after the explicit
+    source decision; ADD preserves any independently valid parents. Bare adult is
+    deliberately not an exact environment synonym; use the guarded source-label exclusion.
+    Source pair-level references remain unavailable. https://purl.obolibrary.org/obo/ENVO_01001000
+    https://purl.obolibrary.org/obo/BTO_0001043'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''adult'' when defining
+    habitatmech:PREGO.57e0a5faae as ''adult-associated environment''. Verbatim source
+    attestations are preserved. Review #2141: adult names the organism at a stage,
+    not the environment associated with it. Suppress only automatic exact-synonym
+    retention of that displaced label; preserve the verbatim PREGO attestation and
+    related source aliases. The stage stays an xref and the authored environment label
+    and definition remain unchanged.'

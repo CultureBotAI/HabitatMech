@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: adenoid
+session:
+  id: 2026-10-14T220125Z-codex-gpt-5-664f96
+  timestamp: '2026-10-14T22:01:25Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2133
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  - definition
+  - synonyms
+  summary: Repair reviewed source scope for adenoid
+  details: 'ITEM anatomy review #2133 and provenance correction #2134: the pharyngeal/adenoid
+    source denotes nasopharyngeal tonsil anatomy. Adopt active, already-vendored BTO:0004715
+    nasopharyngeal tonsil instead of BTO:0000777 adenoid, whose definition requires enlarged
+    obstructive tissue. NLM D000234/M0000365 and UBERON:0001732 corroborate the anatomy without
+    obligatory hypertrophy. BTO:0001387 tonsil is the verified genus. Preserve the verbatim
+    GOLD node/path and zero-count omission. This is a source-specific mapping correction,
+    not a silent ontology refresh. https://id.nlm.nih.gov/mesh/D000234 https://purl.obolibrary.org/obo/UBERON_0001732
+    Path: Host-associated > Mammals: Human > Lymphatic system > Tonsils > Adenoid/Pharyngeal
+    Required checks: dry seed, inspected canary, exact full-corpus counterfactual, native
+    validators, generated mappings/site and final protected QC. These checks are not predeclared
+    successful. Append-only history and saved reviews remain unchanged.'

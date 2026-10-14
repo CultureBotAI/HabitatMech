@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: adrenal_gland
+session:
+  id: 2026-10-14T220121Z-codex-gpt-5-f91ee8
+  timestamp: '2026-10-14T22:01:21Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2140
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  - definition
+  - synonyms
+  summary: Repair reviewed source scope for adrenal_gland
+  details: 'Review #2140: a human or mammalian source context is not a universal genus of
+    the merged generic BTO adrenal-gland identity. PMID:40173051 (DOI:10.1093/mam/ozaf018)
+    explicitly studies avian adrenal glands without claiming mammal/avian organization is
+    identical. Preserve independent BTO:0001488 endocrine gland and BTO:0001491 viscus parents,
+    all three source attestations and PREGO taxa. Exclude only this guarded immediate GOLD
+    contribution; no strain-occurrence correction is inferred. Required checks: dry seed,
+    inspected canary, exact full-corpus counterfactual, native validators, generated mappings/site
+    and final protected QC. These checks are not predeclared successful. Append-only history
+    and saved reviews remain unchanged.'
