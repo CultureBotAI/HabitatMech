@@ -1,0 +1,761 @@
+# Scientific record review: tidal mudflat
+
+- Review: 20261014T044032Z-tidal_mudflat
+- Repository: CultureBotAI/HabitatMech
+- Started UTC: 2026-10-14T04:26:34.294735Z
+- Finished UTC: 2026-10-14T04:40:32.940048Z
+- Reviewer: OpenAI Codex (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The active mudflat identity, source counters, 27 associations and corrected parent ancestry reproduce. A confirmed major synonym defect remains: current ENVO types wetland broad, while the record emits it exact. Original PREGO occurrence keys and sandy-versus-muddy source scope remain unresolved limitations.
+
+## Scope And Provenance
+
+One entire generated HabitatRecord and all contributing source concepts; parent records are bounded hierarchy context, not additional review targets.
+
+Selection: Next eight uncovered aquatic paths in stable path order; this bundle assesses exactly one target.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base db6301fe65eb3f419dfb2338f029ca2c269cdbef.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| ENVO:00000241 | data/habitats/aquatic/tidal_mudflat.yaml | generated | tidal mudflat |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native validation | passed | True | ENVO:00000241 | Actual exit 0 from 2026-10-14T04:28:59.046852Z to 2026-10-14T04:29:09.569427Z; record-specific or corpus-wide scope retained. |
+| Native validation | passed | True | ENVO:00000241 | Actual exit 0 from 2026-10-14T04:29:09.570404Z to 2026-10-14T04:29:24.781105Z; record-specific or corpus-wide scope retained. |
+| Native validation | passed | True | ENVO:00000241 | Actual exit 0 from 2026-10-14T04:29:41.570709Z to 2026-10-14T04:29:58.524103Z; record-specific or corpus-wide scope retained. |
+| Native validation | passed | True | ENVO:00000241 | Actual exit 0 from 2026-10-14T04:29:58.525052Z to 2026-10-14T04:29:59.690953Z; record-specific or corpus-wide scope retained. |
+| Native validation | passed | True | ENVO:00000241 | Actual exit 0 from 2026-10-14T04:29:59.691992Z to 2026-10-14T04:30:56.467533Z; record-specific or corpus-wide scope retained. |
+| Native validation | passed | True | ENVO:00000241 | Actual exit 0 from 2026-10-14T04:30:56.468642Z to 2026-10-14T04:31:07.015136Z; record-specific or corpus-wide scope retained. |
+| Native validation | passed | True | ENVO:00000241 | Actual exit 0 from 2026-10-14T04:31:07.016135Z to 2026-10-14T04:31:55.507763Z; record-specific or corpus-wide scope retained. |
+| Native ontology label correspondence | passed | True | ENVO:00000241 | Executed during this assessment: 1178 canonical, 1 synonym, 5 accepted exceptions, 2057 configured no-adapter skips. The gate does not assess occurrence, source labels or NCBI pairs; those are separately scoped. |
+| Complete target-document equality and captured hash checks | passed | True | ENVO:00000241 | Compared native build_corpus/build_document with each complete target and rechecked captured hashes; this is a diagnostic complement to the native whole-corpus reproduction gate. |
+| Exact-base authoritative hosted QC | passed | True | ENVO:00000241 | Verified successful authoritative CI on the exact unchanged scientific-input base; not a new local full-QC run or validation of these newly saved bundles. |
+| Expression-module adapter | not_applicable | False | ENVO:00000241 | No gene, regulator, protein or expression-module assertion occurs in this target. iModulonDB is not applicable; non-use is not negative evidence. |
+
+## Scientific And Domain Assessments
+
+### Exact entity and strictly broader hierarchy
+
+identity: supported. Targets: ENVO:00000241.
+
+ENVO:00000241 and its definition match the current ontology; ENVO:00000192 mudflat is its true named genus. The GOLD intertidal parent now leads only to ENVO:00000316, with the former marine-water-body contribution excluded. Three ITEM rows 58/1027/1423 explain REVIEWED, but BacDive and GOLD remain closeMatch rather than exact. Generic tidal-flat labels can cover sand as well as mud; the stored CLOSE relation preserves uncertainty rather than proving merged-source equivalence. Source synonyms are already related. ENVO FLAT and tidal flat are genuinely exact; wetland is broad.
+
+### Source units, membership, MIxS roles and status
+
+provenance: supported. Targets: ENVO:00000241.
+
+BacDive row 50 has 246 STRAIN and 237 taxa; GOLD row 116 has 218 ORGANISM; PREGO row 517 has 2 TAXON and 2 direct score 3 isolate-channel assertions. Separate GOLD bulk row 312 has 65 biosamples; triad rows 569-571 cover 19 samples from 3 studies, with modal marine-biome/lagoon/microbial-mat-material terms at 0.89 share and one agreeing study. Study rows 2465/4305/4390/4578 contain four path memberships, not four independent triad cohorts. Counts with different units remain separate.
+
+### Bounded scientific support and optional content
+
+evidence: supported. Targets: ENVO:00000241.
+
+All 27 NCBI identifiers and labels resolve, including class, domain, species and strain entries. The two PREGO and 25 BacDive rows reproduce with their distinct ranking/count/pool fields. Kangiella koreensis DSM 16069 is a corroborated PREGO entry; full-pool overlap can exist outside the displayed BacDive top 25. DSMZ supports a bounded tidal-flat seawater origin. Conversely the original DRI-13 description places Thermanaerosceptrum fracticalcis in a deep carbonate aquifer at Yucca Flat, not a tidal flat. Its original PREGO evidence key is still needed: this conflict does not prove species-wide absence or establish a place-name matching bug. No is_characteristic claim is made.
+
+### Broad wetland synonym is emitted as exact equivalence
+
+grounding: concern. Targets: ENVO:00000241.
+
+Official ENVO OWL and OLS type wetland as hasBroadSynonym of ENVO:00000241; generated YAML publishes EXACT_SYNONYM. ontology_terms row 6824 retains only an untyped pipe, and ConceptStore.get promotes every spelling to exact. Independent exact FLAT and tidal flat entries are supported and must not be globally downgraded. The corrected GOLD/BacDive source-synonym route does not repair this ontology-source defect.
+
+## Findings
+
+### F1: Broad wetland synonym is emitted as exact equivalence
+
+major / open / confirmed; issue key: envo-00000241-synonym-scope.
+
+Official ENVO OWL and OLS type wetland as hasBroadSynonym of ENVO:00000241; generated YAML publishes EXACT_SYNONYM. ontology_terms row 6824 retains only an untyped pipe, and ConceptStore.get promotes every spelling to exact. Independent exact FLAT and tidal flat entries are supported and must not be globally downgraded. The corrected GOLD/BacDive source-synonym route does not repair this ontology-source defect.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Preserve typed ontology synonym assertions through governed extraction and generation, then regenerate wetland with broad scope.
+
+- Test exact/broad/narrow/related and unknown input scope, including multiple assertions for a spelling. Retain verified exact FLAT/tidal flat and source-scoped PREGO/GOLD/BacDive synonyms.
+- Refresh the ontology source contract and provenance reproducibly; do not hand-patch generated YAML or checksum manifests.
+- Preserve source IDs, counts/units, taxon ranking and true hierarchy. Reassess original PREGO occurrence evidence separately rather than deleting a taxon based only on type-strain origin.
+- Use native writers and append required curation history. Inspect canaries and pass labels, schema, provenance, reproduction, site and full QC; assess actual map-input changes. Preserve immutable reviews and use a linked successor for any finding disposition.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| RECORD | data/habitats/aquatic/tidal_mudflat.yaml | supports | Entire YAML inspected, including all sources, associations and historical events. The active mudflat identity, source counters, 27 associations and corrected parent ancestry reproduce. A confirmed major synonym defect remains: current ENVO types wetland broad, while the record emits it exact. Original PREGO occurrence keys and sandy-versus-muddy source scope remain unresolved limitations. |
+| RAW | data/raw/gold_ecosystem_paths.tsv:116; data/raw/prego_habitat_taxa.tsv:4361,4362; data/raw/prego_habitats.tsv:517; data/raw/gold_path_triads.tsv:569,570,571; data/raw/gold_path_biosamples.tsv:312; data/raw/gold_studies.tsv:2465,4305,4390,4578; data/raw/bacdive_source_taxa.tsv:2809,2810,2811,2812,2813,2814,2815,2816,2817,2818,2819,2820,2821,2822,2823,2824,2825,2826,2827,2828,2829,2830,2831,2832,2833; data/raw/bacdive_isolation_sources.tsv:50; data/raw/ontology_subclass_edges.tsv:4824,4873; data/raw/ontology_terms.tsv:6776,6824; curation/decisions.tsv:58,1027,1423 | supports | BacDive row 50 has 246 STRAIN and 237 taxa; GOLD row 116 has 218 ORGANISM; PREGO row 517 has 2 TAXON and 2 direct score 3 isolate-channel assertions. Separate GOLD bulk row 312 has 65 biosamples; triad rows 569-571 cover 19 samples from 3 studies, with modal marine-biome/lagoon/microbial-mat-material terms at 0.89 share and one agreeing study. Study rows 2465/4305/4390/4578 contain four path memberships, not four independent triad cohorts. Counts with different units remain separate. |
+| OWNERS | curation/decisions.tsv; curation/gold_parent_exclusions.tsv; curation/term_requests.tsv; src/habitatmech/seed.py; src/habitatmech/extract.py | supports | Inspected maintained rows and source construction, ontology-synonym promotion, source counts, ranking and lifecycle. Full build_corpus/build_document equality passed for this record; every captured input hash was rechecked unchanged. Reproduction is not scientific approval. |
+| RULES | docs/CURATION.md; docs/HARMONIZATION.md; docs/RESEARCH.md; docs/record-review-profile.md; src/habitatmech/schema/habitatmech.yaml | supports | Applied the native record rubric: entity identity, strictly broader genus, typed synonyms, source/count units, MIxS roles, taxon association versus characteristic presence, and ITEM versus CLASS lifecycle. |
+| SEARCH | curation; history; research; conf; reviews/structured; reports/yaml_record_review; data/raw | supports | Bounded rg --no-ignore --hidden searches used exact identifier, source IDs/mints, label and slug. Structured TSV and recursive review inventories are also gitignore-independent. Legacy reports were read as leads and compared against current maintained changes; no legacy finding is silently retired by this new observation. Original source membership matrices were not reconstructed, and no global absence claim is made. |
+| ENVO | https://raw.githubusercontent.com/EnvironmentOntology/envo/a2455d1a77e46bb8a664d65a157166b539269042/envo.owl; Named classes ENVO:00000241, ENVO:00000192, ENVO:00000316 | supports | Official current envo.owl file commit a2455d1a77e46bb8a664d65a157166b539269042, SHA256 a0b919065d33a9cf975b74cadd16c75f32f512d17f4f6d5999b74216701df54c. Inspected active class definitions against the assessments, named parents and typed synonyms. Relevant labels and scoped aliases: {"ENVO:00000241": {"label": "tidal mudflat", "synonyms": {"hasExactSynonym": ["FLAT", "tidal flat"], "hasBroadSynonym": ["wetland"], "hasNarrowSynonym": [], "hasRelatedSynonym": []}, "parents": ["http://purl.obolibrary.org/obo/ENVO_00000192"]}, "ENVO:00000192": {"label": "mudflat", "synonyms": {"hasExactSynonym": ["mud flat"], "hasBroadSynonym": ["wetland"], "hasNarrowSynonym": [], "hasRelatedSynonym": ["mud flat"]}, "parents": ["http://purl.obolibrary.org/obo/ENVO_00000230"]}, "ENVO:00000316": {"label": "intertidal zone", "synonyms": {"hasExactSynonym": ["IntertidalZone"], "hasBroadSynonym": ["coastal zone"], "hasNarrowSynonym": [], "hasRelatedSynonym": ["littoral zone"]}, "parents": ["http://purl.obolibrary.org/obo/ENVO_01001201"]}} |
+| BASE_QC | https://github.com/CultureBotAI/HabitatMech/actions/runs/38341318428 | supports | Fresh gh run view confirmed success on exact unchanged base db6301fe65eb3f419dfb2338f029ca2c269cdbef. Its actual log records 1060 tests passed, 3 skipped and all native quality gates. This existing run checks the captured scientific inputs, not the new review files; full QC was not rerun locally for review-only additions. |
+| GOLD | https://gold.jgi.doe.gov/download?mode=ecosystempaths; Workbook row741 | supports | Fresh complete workbook parsed with incorrect worksheet dimensions reset;2422 rows including header. Exact path row: ["6937", "Environmental", "Aquatic", "Marine", "Intertidal zone", "Tidal flats"]. SHA256 f13652be516a0f1482bf0abbb44d7d8e9acb17c5d401cd7e0474af949b447611. A terminal-path listing verifies this vocabulary row, not every collapsed historical internal node, sample count or ecological property. |
+| GOLD_SCOPE | https://gold.jgi.doe.gov/ecosystem_classification; Classification purpose and five-level descriptions | context_only | GOLD describes sample surroundings using a sample-driven classification. Source path depth alone does not establish a strict ontology subclass or exact habitat equivalence. |
+| TAXA | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;retmode=xml&amp;id=2,1085,28185,28211,34101,58314,83428,226506,267135,523791,1005926,1005928,1028742,1028750,1049582,1049583,1110545,1117316,1120953,1120954,1120956,1120965,1121005,1121909,1121935,1122134,1156985,1712410 | supports | Official NCBI taxonomy XML resolved all 27 target taxon IDs to their stored scientific names. This verifies identity, not occurrence or characteristic presence. |
+| DSMZ | https://www.dsmz.de/collection/catalogue/details/culture/DSM-16069; Identity and Isolated from fields | context_only | DSM 16069 is Kangiella koreensis SW-125, isolated from tidal-flat seawater. This supports one bounded occurrence, not every stored association. |
+| DRI13 | https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2019.02224/pdf; DOI:10.3389/fmicb.2019.02224, pp1-2 abstract and Field Site and Sample Collection | context_only | DRI-13 was isolated from a confined deep carbonate aquifer, 863-923 m below land surface, at Yucca Flat. The paper does not validate the PREGO tidal-flat association; the original evidence crosswalk remains unresolved. |
+| IMPORTED_MAP | data/raw/isolation_source_groundings.tsv; row317, Tidal-flat | supports | The imported mapping names ENVO:00000241 tidal mudflat with skos:closeMatch, medium confidence and lexical-matching provenance, verified 2026-05-01. Its predicate is retained, not strengthened to exact or inverted. It does not establish mud-specific ecology for every source strain. |
+
+## Limits And Additional Notes
+
+- Same-agent review, not independent approval or full-corpus certification.
+- Original upstream source membership matrices and study-to-sample crosswalks were not reconstructed. Frozen source counters reproduce; live taxonomy verifies identity, not occurrence. Public GOLD terminal paths do not independently verify every historical internal node.
+- Native label validation retains 5 configured accepted exceptions and 2057 no-adapter skips; these are not scientific approvals.
+- Parent records are inspected for relevant hierarchy/interpretation only. Their unrelated taxa, parameters and causal evidence are not inherited or re-reviewed here.
+- Legacy reports are historical leads, not structured disposition lineage. Corrected hierarchy findings are described as current state without silently closing old findings.
+- PMC browser challenge and intermittent publisher HTML errors were encountered; primary-paper PDFs or publisher/institutional text were inspected instead. GOLD resources URL was inaccessible; the classification page and workbook were accessible.
+- No habitat, decision, source, history, scientific status, generated page or map is changed. Browser visual QA and SSSOM/KGX conformance are outside this record review.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261014T044032Z-tidal_mudflat
+kind: record
+repository: CultureBotAI/HabitatMech
+title: 'Scientific record review: tidal mudflat'
+started_at: '2026-10-14T04:26:34.294735Z'
+finished_at: '2026-10-14T04:40:32.940048Z'
+reviewer:
+  identity: OpenAI Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent participated in repository work; this is not independent
+    approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+scientific_review: true
+verdict: needs_curation
+summary: 'The active mudflat identity, source counters, 27 associations and corrected
+  parent ancestry reproduce. A confirmed major synonym defect remains: current ENVO
+  types wetland broad, while the record emits it exact. Original PREGO occurrence
+  keys and sandy-versus-muddy source scope remain unresolved limitations.'
+source:
+  git_revision: db6301fe65eb3f419dfb2338f029ca2c269cdbef
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: conf/sources.yaml
+    sha256: a8e069f9278068b57fa234f43e03c8d893f857827b83fd10cfa92d6815aed642
+    role: context
+  - path: curation/decisions.tsv
+    sha256: eb82cec48508912622b452ae78bb1ad199c93cb0591ce534bb8f25273da4e220
+    role: context
+  - path: curation/definition_source_label_exclusions.tsv
+    sha256: 2d41fc93db4939122b3909f2a412b84b679703948b10d9f02e12021442f71407
+    role: context
+  - path: curation/external_xrefs.tsv
+    sha256: cf8394a6ab22e35efd9e252aef422018226280830bf816a39bf4f2256ff75ad5
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: c7017ce7889ebfce889eb6f2c6a6c12510428be4b8a4370e2e4e165231e1af25
+    role: context
+  - path: curation/redirects_retracted.tsv
+    sha256: 0f1e9af8881f5a5db19f87de06b3b3d1800cfac8101699b380388c0a1a1e9a19
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 331a7d9eb8a8909fc37402c0a776838979a8065644504d5c4f2a1c39bce5c24d
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: b59b9e800a918135e3915145d4d8098bb48dcea36a312b3004c594a57d221ae9
+    role: context
+  - path: data/habitats/aquatic/fresh_water.yaml
+    sha256: 99bd93c6173c2ccf7b59645a131ae41c88c45246b45265034a8275053b3745b7
+    role: context
+  - path: data/habitats/aquatic/hot_42_90c.yaml
+    sha256: 3e065fa083097833b536fdd2172e5eba3b92d9fbfd27801530cb3dd3025f25e7
+    role: context
+  - path: data/habitats/aquatic/hot_spring.yaml
+    sha256: ffee4f6aa076c707582be0110182034054f2fc53c481d18bcc866254080e2ad4
+    role: context
+  - path: data/habitats/aquatic/intertidal_zone__2f295854.yaml
+    sha256: e1539f56318f217f73b976e738d5fd560935e613a5cfd7a954eaaa3f0ccb53f2
+    role: context
+  - path: data/habitats/aquatic/microbial_mat__2020a793.yaml
+    sha256: 527a3d31661b1b6d7e4892eede7ec18ca327f1b5bb07536cc7101b2a48c235b1
+    role: context
+  - path: data/habitats/aquatic/microbialites__a38bc21d.yaml
+    sha256: db0f4de03cb1b4555d87f4085f319fa9e8d7f2228f963bc482bf5ec9588a972b
+    role: context
+  - path: data/habitats/aquatic/near_boiling_90c__f7b76591.yaml
+    sha256: 289ecf5ddd0e6989c0f62b2d467e9a1ccf6eb8b0fbe3706277ed8af8b7fabe0f
+    role: context
+  - path: data/habitats/aquatic/tidal_mudflat.yaml
+    sha256: 800d36252aebfc08fac48d5a03a6a374015e53306884a35e1294d7e3f9d1ef5d
+    role: target
+  - path: data/habitats/aquatic/warm_34_42c.yaml
+    sha256: 04b990970bc30486accf32ec76eddc261f5f738d31296265e70a3d350a816625
+    role: context
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: 36df8306394c06c352b73e0bf7b47a2858784cedac7389a24d0b78f593ece646
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 105b3c8e10f43ce689b05d3089d3a8be1d713a98dd6806e11be37ebd85b10590
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/mappings/thalassic/2026-10-06T172112Z-claude-code-3c90c3.yaml
+    sha256: b5ab5b115c4e7832f5c8f7ba402dc681b7ddd3dd39832d1c325815fb1050bdea
+    role: context
+  - path: history/mappings/thrombolites/2026-10-06T172127Z-claude-code-8f8722.yaml
+    sha256: a4b965be126acc17504f89ab930126bb518f64162215138e42d59a2a4a92f252
+    role: context
+  - path: history/mappings/transient_pool/2026-10-06T183149Z-codex-gpt-5-00b35f.yaml
+    sha256: b632d9ad96f91a96f80b7fccdb7a26442a880426efb98493b2bfacc2639e8156
+    role: context
+  - path: history/other/thalassic_thrombolites_actor_correction/2026-10-06T172327Z-codex-gpt-5-76d614.yaml
+    sha256: 8dad97f34fdf44f976be30e563b73c14e82e085737bb020ad8756abe303e83c9
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reports/yaml_record_review/20261006T180914Z-tidal_mudflat.md
+    sha256: 89c10e84d8d94337662699f0baa0870101dc0d70f0b091b0882499eea0d0e1a6
+    role: context
+  - path: src/habitatmech/extract.py
+    sha256: 4d9397bda649381a5daf81937369531c6dc8b4518d6c7047e6f3f14e605bf860
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 7e3cda3dadb9c7462498e5014bf38ef730068212f8f9cb131e3fce383c21d10e
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 4adf105e23d75c3563a516a0c160623d1065df7fcb2f31b7a0a0a8303d0401be
+    role: context
+targets:
+- target_id: ENVO:00000241
+  path: data/habitats/aquatic/tidal_mudflat.yaml
+  label: tidal mudflat
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Grounding and ITEM review
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Authored definition and genus
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Exact source context-parent exclusions
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_terms.tsv
+    role: Pinned ontology term assertions
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/ontology_subclass_edges.tsv
+    role: Pinned ontology hierarchy
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Record generation and source harmonization
+scope:
+  description: One entire generated HabitatRecord and all contributing source concepts;
+    parent records are bounded hierarchy context, not additional review targets.
+  selection: Next eight uncovered aquatic paths in stable path order; this bundle
+    assesses exactly one target.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - ENVO:00000241
+checks:
+- check_id: C0
+  name: Native validation
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00000241
+  command: just validate data/habitats/aquatic/tidal_mudflat.yaml
+  exit_code: 0
+  summary: Actual exit 0 from 2026-10-14T04:28:59.046852Z to 2026-10-14T04:29:09.569427Z;
+    record-specific or corpus-wide scope retained.
+- check_id: C1
+  name: Native validation
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00000241
+  command: just validate-strict data/habitats/aquatic/tidal_mudflat.yaml
+  exit_code: 0
+  summary: Actual exit 0 from 2026-10-14T04:29:09.570404Z to 2026-10-14T04:29:24.781105Z;
+    record-specific or corpus-wide scope retained.
+- check_id: C2
+  name: Native validation
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00000241
+  command: just validate-history
+  exit_code: 0
+  summary: Actual exit 0 from 2026-10-14T04:29:41.570709Z to 2026-10-14T04:29:58.524103Z;
+    record-specific or corpus-wide scope retained.
+- check_id: C3
+  name: Native validation
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00000241
+  command: just provenance-check
+  exit_code: 0
+  summary: Actual exit 0 from 2026-10-14T04:29:58.525052Z to 2026-10-14T04:29:59.690953Z;
+    record-specific or corpus-wide scope retained.
+- check_id: C4
+  name: Native validation
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00000241
+  command: just verify-corpus
+  exit_code: 0
+  summary: Actual exit 0 from 2026-10-14T04:29:59.691992Z to 2026-10-14T04:30:56.467533Z;
+    record-specific or corpus-wide scope retained.
+- check_id: C5
+  name: Native validation
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00000241
+  command: just validate-causal-all
+  exit_code: 0
+  summary: Actual exit 0 from 2026-10-14T04:30:56.468642Z to 2026-10-14T04:31:07.015136Z;
+    record-specific or corpus-wide scope retained.
+- check_id: C6
+  name: Native validation
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00000241
+  command: just term-requests-check
+  exit_code: 0
+  summary: Actual exit 0 from 2026-10-14T04:31:07.016135Z to 2026-10-14T04:31:55.507763Z;
+    record-specific or corpus-wide scope retained.
+- check_id: LABELS
+  name: Native ontology label correspondence
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00000241
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-products
+  exit_code: 0
+  summary: 'Executed during this assessment: 1178 canonical, 1 synonym, 5 accepted
+    exceptions, 2057 configured no-adapter skips. The gate does not assess occurrence,
+    source labels or NCBI pairs; those are separately scoped.'
+- check_id: REPRO
+  name: Complete target-document equality and captured hash checks
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00000241
+  command: .venv/bin/python /private/tmp/habitatmech-review-bk.py crosscheck
+  exit_code: 0
+  summary: Compared native build_corpus/build_document with each complete target and
+    rechecked captured hashes; this is a diagnostic complement to the native whole-corpus
+    reproduction gate.
+- check_id: QC
+  name: Exact-base authoritative hosted QC
+  required: true
+  status: passed
+  target_ids:
+  - ENVO:00000241
+  command: gh run view 38341318428 --json headSha,conclusion,status,url,jobs
+  exit_code: 0
+  evidence_ids:
+  - BASE_QC
+  summary: Verified successful authoritative CI on the exact unchanged scientific-input
+    base; not a new local full-QC run or validation of these newly saved bundles.
+- check_id: IMOD
+  name: Expression-module adapter
+  required: false
+  status: not_applicable
+  target_ids:
+  - ENVO:00000241
+  summary: No gene, regulator, protein or expression-module assertion occurs in this
+    target. iModulonDB is not applicable; non-use is not negative evidence.
+evidence:
+- evidence_id: RECORD
+  kind: record_content
+  reference: data/habitats/aquatic/tidal_mudflat.yaml
+  accessed_at: '2026-10-14T04:40:32.939536Z'
+  support: supports
+  summary: 'Entire YAML inspected, including all sources, associations and historical
+    events. The active mudflat identity, source counters, 27 associations and corrected
+    parent ancestry reproduce. A confirmed major synonym defect remains: current ENVO
+    types wetland broad, while the record emits it exact. Original PREGO occurrence
+    keys and sandy-versus-muddy source scope remain unresolved limitations.'
+- evidence_id: RAW
+  kind: record_content
+  reference: data/raw/gold_ecosystem_paths.tsv:116; data/raw/prego_habitat_taxa.tsv:4361,4362;
+    data/raw/prego_habitats.tsv:517; data/raw/gold_path_triads.tsv:569,570,571; data/raw/gold_path_biosamples.tsv:312;
+    data/raw/gold_studies.tsv:2465,4305,4390,4578; data/raw/bacdive_source_taxa.tsv:2809,2810,2811,2812,2813,2814,2815,2816,2817,2818,2819,2820,2821,2822,2823,2824,2825,2826,2827,2828,2829,2830,2831,2832,2833;
+    data/raw/bacdive_isolation_sources.tsv:50; data/raw/ontology_subclass_edges.tsv:4824,4873;
+    data/raw/ontology_terms.tsv:6776,6824; curation/decisions.tsv:58,1027,1423
+  accessed_at: '2026-10-14T04:40:32.939536Z'
+  support: supports
+  summary: BacDive row 50 has 246 STRAIN and 237 taxa; GOLD row 116 has 218 ORGANISM;
+    PREGO row 517 has 2 TAXON and 2 direct score 3 isolate-channel assertions. Separate
+    GOLD bulk row 312 has 65 biosamples; triad rows 569-571 cover 19 samples from
+    3 studies, with modal marine-biome/lagoon/microbial-mat-material terms at 0.89
+    share and one agreeing study. Study rows 2465/4305/4390/4578 contain four path
+    memberships, not four independent triad cohorts. Counts with different units remain
+    separate.
+- evidence_id: OWNERS
+  kind: record_content
+  reference: curation/decisions.tsv; curation/gold_parent_exclusions.tsv; curation/term_requests.tsv;
+    src/habitatmech/seed.py; src/habitatmech/extract.py
+  accessed_at: '2026-10-14T04:40:32.939536Z'
+  support: supports
+  summary: Inspected maintained rows and source construction, ontology-synonym promotion,
+    source counts, ranking and lifecycle. Full build_corpus/build_document equality
+    passed for this record; every captured input hash was rechecked unchanged. Reproduction
+    is not scientific approval.
+- evidence_id: RULES
+  kind: record_content
+  reference: docs/CURATION.md; docs/HARMONIZATION.md; docs/RESEARCH.md; docs/record-review-profile.md;
+    src/habitatmech/schema/habitatmech.yaml
+  accessed_at: '2026-10-14T04:40:32.939536Z'
+  support: supports
+  summary: 'Applied the native record rubric: entity identity, strictly broader genus,
+    typed synonyms, source/count units, MIxS roles, taxon association versus characteristic
+    presence, and ITEM versus CLASS lifecycle.'
+- evidence_id: SEARCH
+  kind: record_content
+  reference: curation; history; research; conf; reviews/structured; reports/yaml_record_review;
+    data/raw
+  accessed_at: '2026-10-14T04:26:15.233516Z'
+  support: supports
+  summary: Bounded rg --no-ignore --hidden searches used exact identifier, source
+    IDs/mints, label and slug. Structured TSV and recursive review inventories are
+    also gitignore-independent. Legacy reports were read as leads and compared against
+    current maintained changes; no legacy finding is silently retired by this new
+    observation. Original source membership matrices were not reconstructed, and no
+    global absence claim is made.
+- evidence_id: ENVO
+  kind: database
+  reference: https://raw.githubusercontent.com/EnvironmentOntology/envo/a2455d1a77e46bb8a664d65a157166b539269042/envo.owl
+  accessed_at: '2026-10-14T04:28:47.463855Z'
+  locator: Named classes ENVO:00000241, ENVO:00000192, ENVO:00000316
+  support: supports
+  summary: 'Official current envo.owl file commit a2455d1a77e46bb8a664d65a157166b539269042,
+    SHA256 a0b919065d33a9cf975b74cadd16c75f32f512d17f4f6d5999b74216701df54c. Inspected
+    active class definitions against the assessments, named parents and typed synonyms.
+    Relevant labels and scoped aliases: {"ENVO:00000241": {"label": "tidal mudflat",
+    "synonyms": {"hasExactSynonym": ["FLAT", "tidal flat"], "hasBroadSynonym": ["wetland"],
+    "hasNarrowSynonym": [], "hasRelatedSynonym": []}, "parents": ["http://purl.obolibrary.org/obo/ENVO_00000192"]},
+    "ENVO:00000192": {"label": "mudflat", "synonyms": {"hasExactSynonym": ["mud flat"],
+    "hasBroadSynonym": ["wetland"], "hasNarrowSynonym": [], "hasRelatedSynonym": ["mud
+    flat"]}, "parents": ["http://purl.obolibrary.org/obo/ENVO_00000230"]}, "ENVO:00000316":
+    {"label": "intertidal zone", "synonyms": {"hasExactSynonym": ["IntertidalZone"],
+    "hasBroadSynonym": ["coastal zone"], "hasNarrowSynonym": [], "hasRelatedSynonym":
+    ["littoral zone"]}, "parents": ["http://purl.obolibrary.org/obo/ENVO_01001201"]}}'
+- evidence_id: BASE_QC
+  kind: record_content
+  reference: https://github.com/CultureBotAI/HabitatMech/actions/runs/38341318428
+  accessed_at: '2026-10-14T04:40:32.939536Z'
+  support: supports
+  summary: Fresh gh run view confirmed success on exact unchanged base db6301fe65eb3f419dfb2338f029ca2c269cdbef.
+    Its actual log records 1060 tests passed, 3 skipped and all native quality gates.
+    This existing run checks the captured scientific inputs, not the new review files;
+    full QC was not rerun locally for review-only additions.
+- evidence_id: GOLD
+  kind: database
+  reference: https://gold.jgi.doe.gov/download?mode=ecosystempaths
+  accessed_at: '2026-10-14T04:31:31.245568Z'
+  locator: Workbook row741
+  support: supports
+  summary: 'Fresh complete workbook parsed with incorrect worksheet dimensions reset;2422
+    rows including header. Exact path row: ["6937", "Environmental", "Aquatic", "Marine",
+    "Intertidal zone", "Tidal flats"]. SHA256 f13652be516a0f1482bf0abbb44d7d8e9acb17c5d401cd7e0474af949b447611.
+    A terminal-path listing verifies this vocabulary row, not every collapsed historical
+    internal node, sample count or ecological property.'
+- evidence_id: GOLD_SCOPE
+  kind: database
+  reference: https://gold.jgi.doe.gov/ecosystem_classification
+  accessed_at: '2026-10-14T04:40:32.939536Z'
+  support: context_only
+  locator: Classification purpose and five-level descriptions
+  summary: GOLD describes sample surroundings using a sample-driven classification.
+    Source path depth alone does not establish a strict ontology subclass or exact
+    habitat equivalence.
+- evidence_id: TAXA
+  kind: database
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&retmode=xml&id=2,1085,28185,28211,34101,58314,83428,226506,267135,523791,1005926,1005928,1028742,1028750,1049582,1049583,1110545,1117316,1120953,1120954,1120956,1120965,1121005,1121909,1121935,1122134,1156985,1712410
+  accessed_at: '2026-10-14T04:26:12.585294Z'
+  support: supports
+  summary: Official NCBI taxonomy XML resolved all 27 target taxon IDs to their stored
+    scientific names. This verifies identity, not occurrence or characteristic presence.
+- evidence_id: DSMZ
+  kind: database
+  reference: https://www.dsmz.de/collection/catalogue/details/culture/DSM-16069
+  locator: Identity and Isolated from fields
+  accessed_at: '2026-10-14T04:40:32.939536Z'
+  support: context_only
+  summary: DSM 16069 is Kangiella koreensis SW-125, isolated from tidal-flat seawater.
+    This supports one bounded occurrence, not every stored association.
+- evidence_id: DRI13
+  kind: primary_source
+  reference: https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2019.02224/pdf
+  locator: DOI:10.3389/fmicb.2019.02224, pp1-2 abstract and Field Site and Sample
+    Collection
+  accessed_at: '2026-10-14T04:40:32.939536Z'
+  support: context_only
+  summary: DRI-13 was isolated from a confined deep carbonate aquifer, 863-923 m below
+    land surface, at Yucca Flat. The paper does not validate the PREGO tidal-flat
+    association; the original evidence crosswalk remains unresolved.
+- evidence_id: IMPORTED_MAP
+  kind: record_content
+  reference: data/raw/isolation_source_groundings.tsv
+  locator: row317, Tidal-flat
+  accessed_at: '2026-10-14T04:40:32.939536Z'
+  support: supports
+  summary: The imported mapping names ENVO:00000241 tidal mudflat with skos:closeMatch,
+    medium confidence and lexical-matching provenance, verified 2026-05-01. Its predicate
+    is retained, not strengthened to exact or inverted. It does not establish mud-specific
+    ecology for every source strain.
+assessments:
+- assessment_id: IDENTITY
+  area: identity
+  topic: Exact entity and strictly broader hierarchy
+  outcome: supported
+  target_ids:
+  - ENVO:00000241
+  evidence_ids:
+  - RECORD
+  - RAW
+  - RULES
+  - ENVO
+  summary: ENVO:00000241 and its definition match the current ontology; ENVO:00000192
+    mudflat is its true named genus. The GOLD intertidal parent now leads only to
+    ENVO:00000316, with the former marine-water-body contribution excluded. Three
+    ITEM rows 58/1027/1423 explain REVIEWED, but BacDive and GOLD remain closeMatch
+    rather than exact. Generic tidal-flat labels can cover sand as well as mud; the
+    stored CLOSE relation preserves uncertainty rather than proving merged-source
+    equivalence. Source synonyms are already related. ENVO FLAT and tidal flat are
+    genuinely exact; wetland is broad.
+- assessment_id: SOURCES
+  area: provenance
+  topic: Source units, membership, MIxS roles and status
+  outcome: supported
+  target_ids:
+  - ENVO:00000241
+  evidence_ids:
+  - RAW
+  - OWNERS
+  - SEARCH
+  summary: BacDive row 50 has 246 STRAIN and 237 taxa; GOLD row 116 has 218 ORGANISM;
+    PREGO row 517 has 2 TAXON and 2 direct score 3 isolate-channel assertions. Separate
+    GOLD bulk row 312 has 65 biosamples; triad rows 569-571 cover 19 samples from
+    3 studies, with modal marine-biome/lagoon/microbial-mat-material terms at 0.89
+    share and one agreeing study. Study rows 2465/4305/4390/4578 contain four path
+    memberships, not four independent triad cohorts. Counts with different units remain
+    separate.
+- assessment_id: SCIENCE
+  area: evidence
+  topic: Bounded scientific support and optional content
+  outcome: supported
+  target_ids:
+  - ENVO:00000241
+  evidence_ids:
+  - RECORD
+  - RAW
+  - ENVO
+  - DSMZ
+  - DRI13
+  - TAXA
+  summary: 'All 27 NCBI identifiers and labels resolve, including class, domain, species
+    and strain entries. The two PREGO and 25 BacDive rows reproduce with their distinct
+    ranking/count/pool fields. Kangiella koreensis DSM 16069 is a corroborated PREGO
+    entry; full-pool overlap can exist outside the displayed BacDive top 25. DSMZ
+    supports a bounded tidal-flat seawater origin. Conversely the original DRI-13
+    description places Thermanaerosceptrum fracticalcis in a deep carbonate aquifer
+    at Yucca Flat, not a tidal flat. Its original PREGO evidence key is still needed:
+    this conflict does not prove species-wide absence or establish a place-name matching
+    bug. No is_characteristic claim is made.'
+- assessment_id: FINDING
+  area: grounding
+  topic: Broad wetland synonym is emitted as exact equivalence
+  outcome: concern
+  target_ids:
+  - ENVO:00000241
+  evidence_ids:
+  - RECORD
+  - RAW
+  - OWNERS
+  - RULES
+  - ENVO
+  summary: Official ENVO OWL and OLS type wetland as hasBroadSynonym of ENVO:00000241;
+    generated YAML publishes EXACT_SYNONYM. ontology_terms row 6824 retains only an
+    untyped pipe, and ConceptStore.get promotes every spelling to exact. Independent
+    exact FLAT and tidal flat entries are supported and must not be globally downgraded.
+    The corrected GOLD/BacDive source-synonym route does not repair this ontology-source
+    defect.
+findings:
+- finding_id: F1
+  issue_key: envo-00000241-synonym-scope
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Broad wetland synonym is emitted as exact equivalence
+  description: Official ENVO OWL and OLS type wetland as hasBroadSynonym of ENVO:00000241;
+    generated YAML publishes EXACT_SYNONYM. ontology_terms row 6824 retains only an
+    untyped pipe, and ConceptStore.get promotes every spelling to exact. Independent
+    exact FLAT and tidal flat entries are supported and must not be globally downgraded.
+    The corrected GOLD/BacDive source-synonym route does not repair this ontology-source
+    defect.
+  target_ids:
+  - ENVO:00000241
+  field_paths:
+  - synonyms
+  evidence_ids:
+  - RECORD
+  - RAW
+  - OWNERS
+  - RULES
+  - ENVO
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Maintained owner for a separately authorized fix
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained owner for a separately authorized fix
+  rule_id: docs/CURATION.md; docs/record-review-profile.md
+  native_severity: major
+  normalization_reason: Material entity/scope question or semantic representation
+    defect, not style; provisional certainty retains the unresolved alternative rather
+    than claiming a wrong-identity blocker.
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1249
+actions:
+- action_id: A1
+  description: Preserve typed ontology synonym assertions through governed extraction
+    and generation, then regenerate wetland with broad scope.
+  finding_ids:
+  - F1
+  target_ids:
+  - ENVO:00000241
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Maintained owner for a separately authorized fix
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained owner for a separately authorized fix
+  generator: src/habitatmech/seed.py
+  acceptance_checks:
+  - Test exact/broad/narrow/related and unknown input scope, including multiple assertions
+    for a spelling. Retain verified exact FLAT/tidal flat and source-scoped PREGO/GOLD/BacDive
+    synonyms.
+  - Refresh the ontology source contract and provenance reproducibly; do not hand-patch
+    generated YAML or checksum manifests.
+  - Preserve source IDs, counts/units, taxon ranking and true hierarchy. Reassess
+    original PREGO occurrence evidence separately rather than deleting a taxon based
+    only on type-strain origin.
+  - Use native writers and append required curation history. Inspect canaries and
+    pass labels, schema, provenance, reproduction, site and full QC; assess actual
+    map-input changes. Preserve immutable reviews and use a linked successor for any
+    finding disposition.
+limitations:
+- Same-agent review, not independent approval or full-corpus certification.
+- Original upstream source membership matrices and study-to-sample crosswalks were
+  not reconstructed. Frozen source counters reproduce; live taxonomy verifies identity,
+  not occurrence. Public GOLD terminal paths do not independently verify every historical
+  internal node.
+- Native label validation retains 5 configured accepted exceptions and 2057 no-adapter
+  skips; these are not scientific approvals.
+- Parent records are inspected for relevant hierarchy/interpretation only. Their unrelated
+  taxa, parameters and causal evidence are not inherited or re-reviewed here.
+- Legacy reports are historical leads, not structured disposition lineage. Corrected
+  hierarchy findings are described as current state without silently closing old findings.
+- PMC browser challenge and intermittent publisher HTML errors were encountered; primary-paper
+  PDFs or publisher/institutional text were inspected instead. GOLD resources URL
+  was inaccessible; the classification page and workbook were accessible.
+- No habitat, decision, source, history, scientific status, generated page or map
+  is changed. Browser visual QA and SSSOM/KGX conformance are outside this record
+  review.
+tags:
+- habitatmech
+- record-review
+- aquatic
+```
