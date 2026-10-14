@@ -59,7 +59,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="http://purl.obolibrary.org/obo/ENVO_00003074">manufactured product</a>      <code class="curie">ENVO:00003074</code></li>
-  <li><a href="../habitats/food-production-foodon-03530206.html">food production</a>      <code class="curie">FOODON:03530206</code></li>
 </ul>
 
 
@@ -171,7 +170,7 @@ second, independent source are listed first.</p>
     <td></td>
   </tr>
   <tr>
-    <td><em>Schleiferibacter lactififex</em> <code class="curie">NCBITaxon:86957</code></td>
+    <td><em>Schleiferibacter lacticifex</em> <code class="curie">NCBITaxon:86957</code></td>
     <td><span class="pill plain">BACDIVE</span></td>
     <td class="num">15</td>
     <td class="num">15</td>
@@ -193,6 +192,21 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">GROUND</span>
     <span class="meta">2026-09-06 · codex-gpt-5</span>
     <p>Grounded to ENVO:03600040 &#39;fermentation starter&#39; (EXACT). BacDive&#39;s Starter-culture isolation-source category denotes microbial inocula for food and alcoholic-drink fermentations; the committed starter-culture report verified BacDive pitching-yeast strains and lactic-acid-bacteria starters, and ENVO:03600040 &#39;fermentation starter&#39; is already in the slice for GOLD&#39;s Engineered &gt; Food production &gt; Fermentation starter source. FOODON:03544454 remains a false food-classification target, but the newer ENVO term names the sampled starter material. Path: Starter-culture (source concept habitatmech:BACDIVE.9eabedc3a1)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-14 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution FOODON:03530206 for habitatmech:GOLD.814fb91f0e (Engineered &gt; Food production &gt; Fermentation starter). Scientific review #2056 (20261014T111500Z-fermentation_starter): ENVO:03600040 denotes a manufactured fermentation inoculum, not the planned food-production process FOODON:03530206. Suppress only this immediate GOLD contribution; retain ENVO:00003074, both GOLD and BacDive attestations with distinct units, 15 taxon observations, identity and SEEDED status. Synonym and taxon spelling corrections are separate annotations, not source membership reconstruction.</p>
+  </li>
+  <li>
+    <span class="pill">ANNOTATION_CORRECTED</span>
+    <span class="meta">2026-10-14 · codex-gpt-5</span>
+    <p>Corrected synonym_type for &#39;Daqu&#39; (ENVO) from &#39;EXACT_SYNONYM&#39; to &#39;NARROW_SYNONYM&#39;. Evidence: <a href="https://pubmed.ncbi.nlm.nih.gov/24863368/" rel="noopener noreferrer" target="_blank">https://pubmed.ncbi.nlm.nih.gov/24863368/</a>. Local reviewed disagreement with ENVO hasExactSynonym (revision a2455d1a77e46bb8a664d65a157166b539269042): Daqu is a cereal-pulse solid-state starter for liquor/vinegar, whereas the generic class also includes independently inspected brewing and dairy inocula (<a href="https://bacdive.dsmz.de/strain/17184" rel="noopener noreferrer" target="_blank">https://bacdive.dsmz.de/strain/17184</a> and <a href="https://bacdive.dsmz.de/strain/14691" rel="noopener noreferrer" target="_blank">https://bacdive.dsmz.de/strain/14691</a>). Retain the term as a narrower synonym, not a claim that all starters are Daqu. Original inventory, generic identity, source attestations and status remain unchanged. <a href="https://github.com/CultureBotAI/HabitatMech/issues/2057;" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2057;</a> review 20261014T111500Z-fermentation_starter F2.</p>
+  </li>
+  <li>
+    <span class="pill">ANNOTATION_CORRECTED</span>
+    <span class="meta">2026-10-14 · codex-gpt-5</span>
+    <p>Corrected taxon_label for &#39;NCBITaxon:86957&#39; (BACDIVE) from &#39;Schleiferibacter lactififex&#39; to &#39;Schleiferibacter lacticifex&#39;. Evidence: <a href="https://lpsn.dsmz.de/species/schleiferibacter-lacticifex" rel="noopener noreferrer" target="_blank">https://lpsn.dsmz.de/species/schleiferibacter-lacticifex</a>. NCBI taxid 86957 and LPSN independently confirm lacticifex. BacDive DSM 20757 still uses the homotypic basonym Selenomonas lacticifex (<a href="https://bacdive.dsmz.de/strain/17160);" rel="noopener noreferrer" target="_blank">https://bacdive.dsmz.de/strain/17160);</a> it does not support the lactififex spelling. Correct only this record&#39;s imported label; preserve stable taxid, source, count, rank, pool, raw inventory and manifest. <a href="https://github.com/CultureBotAI/HabitatMech/issues/2058;" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2058;</a> review 20261014T111500Z-fermentation_starter F3.</p>
   </li>
 </ol>
 

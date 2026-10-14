@@ -11,7 +11,6 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: GOLD
 parent_habitats:
-- FOODON:00001006
 - FOODON:00001258
 source_attestations:
 - source: GOLD
@@ -33,3 +32,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution FOODON:00001006 for habitatmech:GOLD.5b7d7e2e70
+    (Engineered > Food production > Meat products > Fermented meat products). Scientific
+    review #2060 (20261014T111521Z-fermented_meat_product): the GOLD Meat products
+    mapping explicitly admits poultry/fish and does not establish a mammalian strict
+    superclass for this child. Frozen subclass edges and pinned FoodOn cd73540243a84bcd511a500d9a497d12d7dc02f6
+    retain only FOODON:00001258 as the named parent; derives_from some mammalian meat
+    is not a subclass edge. Suppress only this GOLD contribution and retain the fermented-food
+    genus, six ORGANISM assertions and native status. Separate exact-source identity
+    uncertainty remains open in #2061; no nonmammalian member is asserted.'

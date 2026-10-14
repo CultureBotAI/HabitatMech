@@ -3,8 +3,6 @@ label: Fermentation cellar
 habitat_category: FOOD
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- FOODON:03530206
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5632
@@ -24,3 +22,14 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution FOODON:03530206 for habitatmech:GOLD.0d60ee305c
+    (Engineered > Food production > Fermentation cellar). Scientific review #2055
+    (20261014T111454Z-fermentation_cellar): a cellar denotes a place or vessel, not
+    the planned food-production process defined by FOODON:03530206. PMID:37768045
+    supports the vessel distinction without equating every source cellar with a baijiu
+    pit. Suppress only this immediate GOLD contribution; preserve source nodes/path,
+    omitted counts, identity and native status. Do not invent a replacement genus
+    or transfer Pit mud counts.'

@@ -3,8 +3,6 @@ label: Fermented food
 habitat_category: FOOD
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- FOODON:03530206
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5597
@@ -26,3 +24,13 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution FOODON:03530206 for habitatmech:GOLD.8f5ec46a28
+    (Engineered > Food production > Fermented food). Scientific review #2059 (20261014T111516Z-fermented_food):
+    fermented food material is not a subclass of the planned food-production process
+    FOODON:03530206. Suppress only this immediate GOLD contribution; preserve the
+    native mint, path, 221 ORGANISM assertions and status. An existing fermented-food
+    ontology record contains other merged sources; this exclusion is not authorization
+    to merge them or sum separate BIOSAMPLE counts.'
