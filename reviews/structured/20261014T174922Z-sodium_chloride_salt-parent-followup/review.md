@@ -1,0 +1,649 @@
+# Parent-remediation review: sodium chloride salt
+
+- Review: 20261014T174922Z-sodium_chloride_salt-parent-followup
+- Repository: CultureBotAI/HabitatMech
+- Started UTC: 2026-10-14T17:39:16Z
+- Finished UTC: 2026-10-14T17:49:22Z
+- Reviewer: codex-gpt-5 (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Resolved only the exact GOLD production-process parent contribution; preserved independent parents, source claims and native status. Original identity/member limitations remain. The whole-corpus counterfactual regression proves exactly seven identifiers differ, only in parent_habitats and one generated audit event each.
+
+## Scope And Provenance
+
+Focused remediation review of the parent finding plus complete generated-record diff; not a new full literature audit.
+
+Selection: Explicit follow-up to 20261014T172815Z-sodium_chloride_salt
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: git_commit at Git base 414579d4481fcd36561d4c335b0093170d730db9.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| ENVO:01000681 | data/habitats/food/sodium_chloride_salt.yaml | generated | sodium chloride salt |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Post-fix validate-strict data/habitats/food/seafood_product.yaml | passed | True | ENVO:01000681 | Executed 2026-10-14T17:36:49Z to 2026-10-14T17:36:55Z. uv run python scripts/validate_strict.py data/habitats/food/seafood_product.yaml data/habitats/food/seafood_product_eurofir.yaml data/habitats/food/sodium_chloride_salt.yaml data/habitats/food/sourdough.yaml data/habitats/food/spice.yaml data/habitats/food/sweets.yaml data/habitats/food/utensil.yaml<br>Validating 7 files with 15 workers; schema=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/src/habitatmech/schema/habitatmech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      7<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                reports/instance_validation_failures.tsv |
+| Post-fix validate-history | passed | True | ENVO:01000681 | Executed 2026-10-14T17:36:55Z to 2026-10-14T17:37:05Z. No issues found<br>686 history record(s) valid against src/habitatmech/schema/history.yaml |
+| Post-fix provenance-check | passed | True | ENVO:01000681 | Executed 2026-10-14T17:37:05Z to 2026-10-14T17:37:06Z. provenance current: 14 committed inventories, 2 GOLD sources |
+| Post-fix verify-corpus | passed | True | ENVO:01000681 | Executed 2026-10-14T17:37:06Z to 2026-10-14T17:37:24Z. expected 3208 records, found 3208 on disk<br>  missing:   0<br>  extra:     0<br>  differing: 0<br><br>corpus reproduces exactly from data/raw/ |
+| Post-fix validate-causal-all | passed | True | ENVO:01000681 | Executed 2026-10-14T17:37:24Z to 2026-10-14T17:37:28Z. validated 32 causal-graph curation file(s) with 32 graph(s) |
+| Post-fix term-requests-check | passed | True | ENVO:01000681 | Executed 2026-10-14T17:37:28Z to 2026-10-14T17:37:45Z. term-request table is current (109 terms) |
+| Post-fix validate-products | passed | True | ENVO:01000681 | Executed 2026-10-14T17:37:45Z to 2026-10-14T17:38:34Z. id↔label correspondence summary:<br>          OK_CANONICAL: 1176<br>            OK_SYNONYM: 1<br>          OK_EXCEPTION: 5<br>    SKIPPED_NO_ADAPTER: 2059<br><br>✅ All id↔label pairs correspond. |
+| Post-fix -m pytest | passed | True | ENVO:01000681 | Executed 2026-10-14T17:38:34Z to 2026-10-14T17:48:17Z. ...........................................................              [100%]<br>59 passed in 581.79s (0:09:41) |
+| Post-fix -m ruff | passed | True | ENVO:01000681 | Executed 2026-10-14T17:48:17Z to 2026-10-14T17:48:17Z. All checks passed! |
+| Post-fix scripts/render_pages.py --check | passed | True | ENVO:01000681 | Executed 2026-10-14T17:48:17Z to 2026-10-14T17:48:48Z. rendered 3208 habitat pages, 254 redirect stubs, 8 categories, 117 term requests -&gt; /var/folders/lm/hg0p5znd1hd5yc5lml35j6lh0000gn/T/tmp5zggo3vj/site<br>pages/ is in step with the corpus |
+| Post-fix diff --check | passed | True | ENVO:01000681 | Executed 2026-10-14T17:48:48Z to 2026-10-14T17:48:48Z.  |
+| Original source joins | unavailable | False | ENVO:01000681 | Predecessor bounded search/access limitations remain; this parent repair does not reconstruct original member joins. |
+| Expression-module applicability | not_applicable | False | ENVO:01000681 | No gene/regulator/transcriptomic mechanism claim requires this adapter. |
+
+## Scientific And Domain Assessments
+
+### Exact source-context remediation
+
+grounding: supported. Targets: ENVO:01000681.
+
+Resolved only the exact GOLD production-process parent contribution; preserved independent parents, source claims and native status. Original identity/member limitations remain. The whole-corpus counterfactual regression proves exactly seven identifiers differ, only in parent_habitats and one generated audit event each.
+
+### Unresolved claims remain separate
+
+scope: unknown. Targets: ENVO:01000681.
+
+No original-member reconstruction, identity remap, synonym change, taxon reclassification or native status promotion. Earlier limitations remain; 0 local findings remain open.
+
+## Findings
+
+### F1: Production process is not a material or tool genus
+
+major / resolved / confirmed; issue key: sodium-chloride-salt-food-production-process-parent.
+
+FOODON:03530206 denotes a planned process. This exact immediate GOLD contribution is not a strictly broader material/tool parent. ENVO:01000508 mineral material is a valid independent parent. FOODON:03530206 is a planned process, not a mineral-material genus.
+
+Disposition: Resolved only the exact GOLD production-process parent contribution; preserved independent parents, source claims and native status. Original identity/member limitations remain. The whole-corpus counterfactual regression proves exactly seven identifiers differ, only in parent_habitats and one generated audit event each.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| PREVIOUS | reviews/structured/20261014T172815Z-sodium_chloride_salt/review.yaml | supports | Immutable pre-fix scientific observation; its original external-source access times are retained there. Unresolved scope findings are carried forward, not closed. |
+| PATCH | curation/gold_parent_exclusions.tsv; data/habitats/food/sodium_chloride_salt.yaml; tests/test_remaining_food_parent_repairs.py | supports | Resolved only the exact GOLD production-process parent contribution; preserved independent parents, source claims and native status. Original identity/member limitations remain. The whole-corpus counterfactual regression proves exactly seven identifiers differ, only in parent_habitats and one generated audit event each. Current retained parents: ['ENVO:01000508']. |
+| CHECKS | tests/test_remaining_food_parent_repairs.py | supports | Actual post-fix command receipts are preserved in checks, including corpus reproduction, history, site, label correspondence and counterfactual assertions. |
+
+## Limits And Additional Notes
+
+- Original member joins remain unavailable and scientific scope findings remain open where listed.
+- This focused repair does not certify SSSOM/KGX readiness or whole-corpus scientific completeness.
+- No independent approval; source counts, identity, status and all unrelated claims are intentionally unchanged.
+- Same-agent remediation review of exact corrected Git commit 414579d4481fcd36561d4c335b0093170d730db9. Final-head hosted QC is still a publication gate; local native checks predate this newly saved bundle.
+- The initial working-tree capture was superseded after commit by a fresh native inspection and byte-for-byte comparison with tracked blobs. All scientific input changes were explicitly reassessed through the exclusion and generated-record diff. Later map/site products do not change these captured scientific inputs.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261014T174922Z-sodium_chloride_salt-parent-followup
+kind: record
+repository: CultureBotAI/HabitatMech
+title: 'Parent-remediation review: sodium chloride salt'
+started_at: '2026-10-14T17:39:16Z'
+finished_at: '2026-10-14T17:49:22Z'
+reviewer:
+  identity: codex-gpt-5
+  kind: agent
+  model: gpt-5
+  independence: self_review
+  independence_basis: Same agent maintains and reviews HabitatMech; not independent
+    approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+scientific_review: true
+verdict: pass_with_limitations
+summary: Resolved only the exact GOLD production-process parent contribution; preserved
+  independent parents, source claims and native status. Original identity/member limitations
+  remain. The whole-corpus counterfactual regression proves exactly seven identifiers
+  differ, only in parent_habitats and one generated audit event each.
+source:
+  git_revision: 414579d4481fcd36561d4c335b0093170d730db9
+  state: git_commit
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: conf/record_review.yaml
+    sha256: c2f5d0eb4c5744f5fe354c92184ddab144dc2688dba952b032b4f3d597bc08d6
+    role: context
+  - path: conf/sources.yaml
+    sha256: a8e069f9278068b57fa234f43e03c8d893f857827b83fd10cfa92d6815aed642
+    role: context
+  - path: curation/decisions.tsv
+    sha256: 927e6d2c66b371c80639059b70665d0069e7a03ac32ed1620b94b36da289a982
+    role: context
+  - path: curation/definition_source_label_exclusions.tsv
+    sha256: 2d41fc93db4939122b3909f2a412b84b679703948b10d9f02e12021442f71407
+    role: context
+  - path: curation/external_xrefs.tsv
+    sha256: cf8394a6ab22e35efd9e252aef422018226280830bf816a39bf4f2256ff75ad5
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: 35e30ae1a461383bbc04e108ba9877adb342640c7c3c59f44db12b8891f4b97e
+    role: context
+  - path: curation/record_annotation_corrections.tsv
+    sha256: 5142ff999a3111139f88bca11dab485b18b01773a52f43ae9557239eb2029210
+    role: context
+  - path: curation/redirects_retracted.tsv
+    sha256: 0f1e9af8881f5a5db19f87de06b3b3d1800cfac8101699b380388c0a1a1e9a19
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 331a7d9eb8a8909fc37402c0a776838979a8065644504d5c4f2a1c39bce5c24d
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: 3781420be8a7a6de4f44c9be1bc3a0d256824fb44b8dbbb56c6b3c99e21a6014
+    role: context
+  - path: data/habitats/food/fermentation_starter.yaml
+    sha256: 7233bb5a0fdbe4e6e70fac3941d3eb1bb70cb7555658dd95f39e3c1cc1116ef7
+    role: context
+  - path: data/habitats/food/fermented_food.yaml
+    sha256: 7eee668ff9ba018c8a8d8ea6832f18ec8e3efbbd09ead7f850c9f77c115666ef
+    role: context
+  - path: data/habitats/food/food_fermented.yaml
+    sha256: 91efcb97c4ecd67344797aa798d8e6f1cad0434a5ef55d0171dd8a501d95c40a
+    role: context
+  - path: data/habitats/food/food_production.yaml
+    sha256: b0fce7af2cc321a0979ce4d3bfec5e2d4383410ae8e62172b006073afb783ab7
+    role: context
+  - path: data/habitats/food/seafood_product.yaml
+    sha256: 8bbef6a8ffb975208244ebfc964469824b911630b68fa7ce9d497ddbbc4c14a4
+    role: context
+  - path: data/habitats/food/seafood_product_eurofir.yaml
+    sha256: 9578c3f82bc68128beee78f32e1a65d628e03259216a315fb5ce436e2477100b
+    role: context
+  - path: data/habitats/food/silage_fermentation.yaml
+    sha256: d22e9c959cbc581797163d5584738a575c57a9be23bca542f4a4dd16af6d3aba
+    role: context
+  - path: data/habitats/food/sodium_chloride_salt.yaml
+    sha256: 8cd0be4d9547156453bfc0fbbad35a329de99be22949df28c144f251cdec8d32
+    role: target
+  - path: data/habitats/food/solar_salt.yaml
+    sha256: c07dfe07ee688011a64c1d6aef28550e5c204036dd5d8783413c12a411f3a705
+    role: context
+  - path: data/habitats/food/sourdough.yaml
+    sha256: 14d2a4caa1d590a40fd96a4c8bebe2a7e6a5b5d612b49b7153404b4011ee95d0
+    role: context
+  - path: data/habitats/food/soy_sauce.yaml
+    sha256: 74bc4bec93bfbc648a8281e94cd574d4c5da5861486e6e197885953486ed0a87
+    role: context
+  - path: data/habitats/food/soybean_paste.yaml
+    sha256: 14b87d00f2ded098d53c80382e15d7773c98cd780bdc2fee53c4e6c3f383d621
+    role: context
+  - path: data/habitats/food/spice.yaml
+    sha256: 907bafb5aeed784b4cfad14852cccc827ad03c2f26a4d778c0fbca1ade5a5c6c
+    role: context
+  - path: data/habitats/food/sweets.yaml
+    sha256: 741198cb798c75cd8db019333d602d948312bbb3be145251378b8a94cbb15650
+    role: context
+  - path: data/habitats/food/utensil.yaml
+    sha256: ff91c15097b9976dd433b696b7f286f581f0a9bd2fa02ae9a5e9721a81caa977
+    role: context
+  - path: data/habitats/food/vegetable_oil_food_product.yaml
+    sha256: a2e8e59261b2907bbdd7a7f76a5e99862b651b3995dc1c0926d01ce6589eecf9
+    role: context
+  - path: data/habitats/food/vinegar.yaml
+    sha256: f41ed38ff6fefe105ba9c75fdc3b1e84359574e577c61990b14278a100d94c48
+    role: context
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: f3f5d3d033fa7e7c1d78571959fc2e62e0b0a625f47dba1413657e8cf944b322
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 105b3c8e10f43ce689b05d3089d3a8be1d713a98dd6806e11be37ebd85b10590
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/mappings/sodium_chloride_salt/2026-10-14T173321Z-codex-gpt-5-1ae55c.yaml
+    sha256: d5e04a7562f324e8290b7a6778aba860a3a5ef5a9114c3742517ada5a6b64cec
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reviews/structured/20261014T172815Z-sodium_chloride_salt/review.md
+    sha256: 1d2061ef83381e0c1e8eca0d375f3bf39519348a330b991301dca41f7cc82fa3
+    role: context
+  - path: reviews/structured/20261014T172815Z-sodium_chloride_salt/review.yaml
+    sha256: 34d48fd55be52af1095506e3aa4b536fb8ca6ceff1d4cb4010ba06e6ebb9ca4a
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/aggregate_gold_triads.py
+    sha256: 0e25179dbecd7c73cbedd99a0ae44e56e4992afb9e1ec02d2411439f643b8e54
+    role: context
+  - path: scripts/extract_gold_biosamples.py
+    sha256: b6a2773c86fe718e1ca0b1d7b32709f0eee491ac813655e310aa0817c0fec31b
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: src/habitatmech/curate/record_annotation_corrections.py
+    sha256: 15bad3d40fd95e2acc72d3ff3c74289c15fb8a1775adc523b3575c3ea8487033
+    role: context
+  - path: src/habitatmech/extract.py
+    sha256: 4d9397bda649381a5daf81937369531c6dc8b4518d6c7047e6f3f14e605bf860
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 7e3cda3dadb9c7462498e5014bf38ef730068212f8f9cb131e3fce383c21d10e
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
+    role: context
+  - path: tests/test_remaining_food_parent_repairs.py
+    sha256: 23f32e1e4531242054ae97c9934149111ccd6ee726957e3b737742d91195df44
+    role: context
+targets:
+- target_id: ENVO:01000681
+  path: data/habitats/food/sodium_chloride_salt.yaml
+  label: sodium chloride salt
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Source identity, relation and native status
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Authored habitat definitions
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Exact source-path hierarchy exclusions
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Guarded imported annotation corrections
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw
+    role: Manifest-bound inventories; refresh only through governed extraction
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Generated record owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Source transform owner
+scope:
+  description: Focused remediation review of the parent finding plus complete generated-record
+    diff; not a new full literature audit.
+  selection: Explicit follow-up to 20261014T172815Z-sodium_chloride_salt
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - ENVO:01000681
+checks:
+- check_id: FIX0
+  name: Post-fix validate-strict data/habitats/food/seafood_product.yaml
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache RECORD_REVIEW_BASE=ab46b9d651f5c4212d0b8b26fd420b6cc12efeba
+    just validate-strict data/habitats/food/seafood_product.yaml data/habitats/food/seafood_product_eurofir.yaml
+    data/habitats/food/sodium_chloride_salt.yaml data/habitats/food/sourdough.yaml
+    data/habitats/food/spice.yaml data/habitats/food/sweets.yaml data/habitats/food/utensil.yaml
+  exit_code: 0
+  target_ids:
+  - ENVO:01000681
+  summary: "Executed 2026-10-14T17:36:49Z to 2026-10-14T17:36:55Z. uv run python scripts/validate_strict.py\
+    \ data/habitats/food/seafood_product.yaml data/habitats/food/seafood_product_eurofir.yaml\
+    \ data/habitats/food/sodium_chloride_salt.yaml data/habitats/food/sourdough.yaml\
+    \ data/habitats/food/spice.yaml data/habitats/food/sweets.yaml data/habitats/food/utensil.yaml\n\
+    Validating 7 files with 15 workers; schema=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/src/habitatmech/schema/habitatmech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      7\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                reports/instance_validation_failures.tsv"
+  scope_note: Strict7; focused tests and documented full-scope native gates. Final-head
+    hosted QC remains required after adding this successor bundle.
+- check_id: FIX1
+  name: Post-fix validate-history
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache RECORD_REVIEW_BASE=ab46b9d651f5c4212d0b8b26fd420b6cc12efeba
+    just validate-history
+  exit_code: 0
+  target_ids:
+  - ENVO:01000681
+  summary: 'Executed 2026-10-14T17:36:55Z to 2026-10-14T17:37:05Z. No issues found
+
+    686 history record(s) valid against src/habitatmech/schema/history.yaml'
+  scope_note: Strict7; focused tests and documented full-scope native gates. Final-head
+    hosted QC remains required after adding this successor bundle.
+- check_id: FIX2
+  name: Post-fix provenance-check
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache RECORD_REVIEW_BASE=ab46b9d651f5c4212d0b8b26fd420b6cc12efeba
+    just provenance-check
+  exit_code: 0
+  target_ids:
+  - ENVO:01000681
+  summary: 'Executed 2026-10-14T17:37:05Z to 2026-10-14T17:37:06Z. provenance current:
+    14 committed inventories, 2 GOLD sources'
+  scope_note: Strict7; focused tests and documented full-scope native gates. Final-head
+    hosted QC remains required after adding this successor bundle.
+- check_id: FIX3
+  name: Post-fix verify-corpus
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache RECORD_REVIEW_BASE=ab46b9d651f5c4212d0b8b26fd420b6cc12efeba
+    just verify-corpus
+  exit_code: 0
+  target_ids:
+  - ENVO:01000681
+  summary: "Executed 2026-10-14T17:37:06Z to 2026-10-14T17:37:24Z. expected 3208 records,\
+    \ found 3208 on disk\n  missing:   0\n  extra:     0\n  differing: 0\n\ncorpus\
+    \ reproduces exactly from data/raw/"
+  scope_note: Strict7; focused tests and documented full-scope native gates. Final-head
+    hosted QC remains required after adding this successor bundle.
+- check_id: FIX4
+  name: Post-fix validate-causal-all
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache RECORD_REVIEW_BASE=ab46b9d651f5c4212d0b8b26fd420b6cc12efeba
+    just validate-causal-all
+  exit_code: 0
+  target_ids:
+  - ENVO:01000681
+  summary: Executed 2026-10-14T17:37:24Z to 2026-10-14T17:37:28Z. validated 32 causal-graph
+    curation file(s) with 32 graph(s)
+  scope_note: Strict7; focused tests and documented full-scope native gates. Final-head
+    hosted QC remains required after adding this successor bundle.
+- check_id: FIX5
+  name: Post-fix term-requests-check
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache RECORD_REVIEW_BASE=ab46b9d651f5c4212d0b8b26fd420b6cc12efeba
+    just term-requests-check
+  exit_code: 0
+  target_ids:
+  - ENVO:01000681
+  summary: Executed 2026-10-14T17:37:28Z to 2026-10-14T17:37:45Z. term-request table
+    is current (109 terms)
+  scope_note: Strict7; focused tests and documented full-scope native gates. Final-head
+    hosted QC remains required after adding this successor bundle.
+- check_id: FIX6
+  name: Post-fix validate-products
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache RECORD_REVIEW_BASE=ab46b9d651f5c4212d0b8b26fd420b6cc12efeba
+    just validate-products
+  exit_code: 0
+  target_ids:
+  - ENVO:01000681
+  summary: "Executed 2026-10-14T17:37:45Z to 2026-10-14T17:38:34Z. id↔label correspondence\
+    \ summary:\n          OK_CANONICAL: 1176\n            OK_SYNONYM: 1\n        \
+    \  OK_EXCEPTION: 5\n    SKIPPED_NO_ADAPTER: 2059\n\n✅ All id↔label pairs correspond."
+  scope_note: Strict7; focused tests and documented full-scope native gates. Final-head
+    hosted QC remains required after adding this successor bundle.
+- check_id: FIX7
+  name: Post-fix -m pytest
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache RECORD_REVIEW_BASE=ab46b9d651f5c4212d0b8b26fd420b6cc12efeba
+    /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/.venv/bin/python
+    -m pytest -q tests/test_remaining_food_parent_repairs.py tests/test_food_context_parent_repairs.py
+    tests/test_gold_parent_exclusions.py tests/test_record_review_publication.py
+  exit_code: 0
+  target_ids:
+  - ENVO:01000681
+  summary: 'Executed 2026-10-14T17:38:34Z to 2026-10-14T17:48:17Z. ...........................................................              [100%]
+
+    59 passed in 581.79s (0:09:41)'
+  scope_note: Strict7; focused tests and documented full-scope native gates. Final-head
+    hosted QC remains required after adding this successor bundle.
+- check_id: FIX8
+  name: Post-fix -m ruff
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache RECORD_REVIEW_BASE=ab46b9d651f5c4212d0b8b26fd420b6cc12efeba
+    /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/.venv/bin/python
+    -m ruff check .
+  exit_code: 0
+  target_ids:
+  - ENVO:01000681
+  summary: Executed 2026-10-14T17:48:17Z to 2026-10-14T17:48:17Z. All checks passed!
+  scope_note: Strict7; focused tests and documented full-scope native gates. Final-head
+    hosted QC remains required after adding this successor bundle.
+- check_id: FIX9
+  name: Post-fix scripts/render_pages.py --check
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache RECORD_REVIEW_BASE=ab46b9d651f5c4212d0b8b26fd420b6cc12efeba
+    /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/.venv/bin/python
+    scripts/render_pages.py --check
+  exit_code: 0
+  target_ids:
+  - ENVO:01000681
+  summary: 'Executed 2026-10-14T17:48:17Z to 2026-10-14T17:48:48Z. rendered 3208 habitat
+    pages, 254 redirect stubs, 8 categories, 117 term requests -> /var/folders/lm/hg0p5znd1hd5yc5lml35j6lh0000gn/T/tmp5zggo3vj/site
+
+    pages/ is in step with the corpus'
+  scope_note: Strict7; focused tests and documented full-scope native gates. Final-head
+    hosted QC remains required after adding this successor bundle.
+- check_id: FIX10
+  name: Post-fix diff --check
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache RECORD_REVIEW_BASE=ab46b9d651f5c4212d0b8b26fd420b6cc12efeba
+    git diff --check ab46b9d651f5c4212d0b8b26fd420b6cc12efeba
+  exit_code: 0
+  target_ids:
+  - ENVO:01000681
+  summary: 'Executed 2026-10-14T17:48:48Z to 2026-10-14T17:48:48Z. '
+  scope_note: Strict7; focused tests and documented full-scope native gates. Final-head
+    hosted QC remains required after adding this successor bundle.
+- check_id: ORIGINAL
+  name: Original source joins
+  required: false
+  status: unavailable
+  target_ids:
+  - ENVO:01000681
+  evidence_ids:
+  - PREVIOUS
+  summary: Predecessor bounded search/access limitations remain; this parent repair
+    does not reconstruct original member joins.
+- check_id: IMODULON
+  name: Expression-module applicability
+  required: false
+  status: not_applicable
+  target_ids:
+  - ENVO:01000681
+  summary: No gene/regulator/transcriptomic mechanism claim requires this adapter.
+evidence:
+- evidence_id: PREVIOUS
+  kind: prior_review
+  reference: reviews/structured/20261014T172815Z-sodium_chloride_salt/review.yaml
+  summary: Immutable pre-fix scientific observation; its original external-source
+    access times are retained there. Unresolved scope findings are carried forward,
+    not closed.
+  accessed_at: '2026-10-14T17:49:22Z'
+  support: supports
+- evidence_id: PATCH
+  kind: record_content
+  reference: curation/gold_parent_exclusions.tsv; data/habitats/food/sodium_chloride_salt.yaml;
+    tests/test_remaining_food_parent_repairs.py
+  summary: 'Resolved only the exact GOLD production-process parent contribution; preserved
+    independent parents, source claims and native status. Original identity/member
+    limitations remain. The whole-corpus counterfactual regression proves exactly
+    seven identifiers differ, only in parent_habitats and one generated audit event
+    each. Current retained parents: [''ENVO:01000508''].'
+  accessed_at: '2026-10-14T17:49:22Z'
+  support: supports
+- evidence_id: CHECKS
+  kind: validation
+  reference: tests/test_remaining_food_parent_repairs.py
+  summary: Actual post-fix command receipts are preserved in checks, including corpus
+    reproduction, history, site, label correspondence and counterfactual assertions.
+  accessed_at: '2026-10-14T17:49:22Z'
+  support: supports
+assessments:
+- assessment_id: PARENT
+  area: grounding
+  topic: Exact source-context remediation
+  outcome: supported
+  target_ids:
+  - ENVO:01000681
+  evidence_ids:
+  - PREVIOUS
+  - PATCH
+  - CHECKS
+  summary: Resolved only the exact GOLD production-process parent contribution; preserved
+    independent parents, source claims and native status. Original identity/member
+    limitations remain. The whole-corpus counterfactual regression proves exactly
+    seven identifiers differ, only in parent_habitats and one generated audit event
+    each.
+- assessment_id: UNCHANGED
+  area: scope
+  topic: Unresolved claims remain separate
+  outcome: unknown
+  target_ids:
+  - ENVO:01000681
+  evidence_ids:
+  - PREVIOUS
+  - PATCH
+  summary: No original-member reconstruction, identity remap, synonym change, taxon
+    reclassification or native status promotion. Earlier limitations remain; 0 local
+    findings remain open.
+findings:
+- finding_id: F1
+  issue_key: sodium-chloride-salt-food-production-process-parent
+  title: Production process is not a material or tool genus
+  description: FOODON:03530206 denotes a planned process. This exact immediate GOLD
+    contribution is not a strictly broader material/tool parent. ENVO:01000508 mineral
+    material is a valid independent parent. FOODON:03530206 is a planned process,
+    not a mineral-material genus.
+  category: grounding
+  severity: major
+  status: resolved
+  certainty: confirmed
+  target_ids:
+  - ENVO:01000681
+  field_paths:
+  - parent_habitats
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; never hand-edit generated records
+  evidence_ids:
+  - PREVIOUS
+  - PATCH
+  - CHECKS
+  rule_id: Exact source identity and strictly broader habitat parents
+  native_severity: major
+  normalization_reason: Materially unsupported identity or genus.
+  previous_occurrences:
+  - repository: CultureBotAI/HabitatMech
+    review_id: 20261014T172815Z-sodium_chloride_salt
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2095
+  disposition_reason: Resolved only the exact GOLD production-process parent contribution;
+    preserved independent parents, source claims and native status. Original identity/member
+    limitations remain. The whole-corpus counterfactual regression proves exactly
+    seven identifiers differ, only in parent_habitats and one generated audit event
+    each.
+actions: []
+limitations:
+- Original member joins remain unavailable and scientific scope findings remain open
+  where listed.
+- This focused repair does not certify SSSOM/KGX readiness or whole-corpus scientific
+  completeness.
+- No independent approval; source counts, identity, status and all unrelated claims
+  are intentionally unchanged.
+notes:
+- Same-agent remediation review of exact corrected Git commit 414579d4481fcd36561d4c335b0093170d730db9.
+  Final-head hosted QC is still a publication gate; local native checks predate this
+  newly saved bundle.
+- The initial working-tree capture was superseded after commit by a fresh native inspection
+  and byte-for-byte comparison with tracked blobs. All scientific input changes were
+  explicitly reassessed through the exclusion and generated-record diff. Later map/site
+  products do not change these captured scientific inputs.
+tags:
+- habitatmech
+- record-review
+- food
+related_reviews:
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261014T172815Z-sodium_chloride_salt
+  relationship: Focused successor resolving only the production-process parent finding
+```
