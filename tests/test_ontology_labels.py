@@ -177,7 +177,13 @@ def test_current_foodon_labels_do_not_make_generic_pastry_wheat_only():
         "notes": "3 GOLD ecosystem node ids share this path; first shown. "
                  "See data/raw/gold_ecosystem_paths.tsv.",
     }]
-    assert "FOODON:00003202" in documents["BTO:0000659"]["parent_habitats"]
+    juice = documents["BTO:0000659"]
+    assert juice["definition"] == "The extractable fluid contents of cells or tissues."
+    assert "FOODON:00003202" not in juice.get("parent_habitats", [])
+    gold = next(a for a in juice["source_attestations"] if a["source"] == "GOLD")
+    assert gold["source_path"] == "Engineered > Food production > Beverages > Juice"
+    assert gold["assertion_count"] == 77
+    assert gold["assertion_unit"] == "ORGANISM"
 
 
 def test_foodon_refresh_changes_only_the_two_intended_records(monkeypatch):
