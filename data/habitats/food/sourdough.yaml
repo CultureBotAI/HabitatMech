@@ -31,7 +31,6 @@ synonyms:
   source: HabitatMech curation
 parent_habitats:
 - ENVO:03600040
-- FOODON:03530206
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5327
@@ -71,3 +70,13 @@ curation_history:
     over-claim relative to GOLD's Sourdough source. ENVO:03600040 'fermentation starter'
     is the tightest vendored genus and keeps Sourdough under GOLD's Fermentation starter
     sibling.
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution FOODON:03530206 for habitatmech:GOLD.3153798c1a
+    (Engineered > Food production > Sourdough). Scientific review #2096 (20261014T172827Z-sourdough
+    F1): pinned FoodOn cd73540243a84bcd511a500d9a497d12d7dc02f6 defines FOODON:03530206
+    as a planned production process, not a material or tool genus. Exclude only this
+    immediate GOLD source contribution; preserve independent parents, identity, definition/synonyms,
+    all source paths/nodes/counts/units, taxon associations and native status. No
+    replacement genus or original-member reconstruction is inferred.'

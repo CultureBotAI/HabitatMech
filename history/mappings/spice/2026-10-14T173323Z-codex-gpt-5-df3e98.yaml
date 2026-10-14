@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: spice
+session:
+  id: 2026-10-14T173323Z-codex-gpt-5-df3e98
+  timestamp: '2026-10-14T17:33:23Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2098
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude immediate GOLD production-process parent from spice
+  details: 'Exact path/expected-parent exclusion following 20261014T172846Z-spice F1. Pinned
+    FoodOn defines FOODON:03530206 as a planned process, not the material/tool genus. Preserve
+    every independent parent, identifier, source claim and native status. Required verification:
+    dry seed, inspected canary, seven-record whole-corpus counterfactual regression, regenerated
+    site and full QC. This event does not predeclare those results. Source-identity/category
+    issues remain separate and are not closed by the parent exclusion.'
