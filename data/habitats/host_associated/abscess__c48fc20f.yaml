@@ -4,7 +4,6 @@ habitat_category: HOST_ASSOCIATED
 grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
-- habitatmech:GOLD.e7296678c2
 - mesh:D000038
 source_attestations:
 - source: GOLD
@@ -20,3 +19,14 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.e7296678c2
+    for habitatmech:GOLD.9c459b5a33 (Host-associated > Mammals: Human > Skeletal system
+    > Joint capsule > Abscess). Scientific review #2125 (20261014T200254Z-abscess__c48fc20f
+    F1): The localized lesion or purulent collection is not a kind of joint capsule.
+    Preserve any independent broader abscess genus; no new lesion subsite is inferred.
+    https://meshb.nlm.nih.gov/record/ui?ui=D000038 Exclude only this exact immediate
+    GOLD source-path contribution with expected-parent guard; retain source nodes,
+    verbatim path, count/unit semantics and unrelated parents.'

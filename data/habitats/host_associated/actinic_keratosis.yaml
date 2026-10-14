@@ -3,8 +3,6 @@ label: Actinic keratosis
 habitat_category: HOST_ASSOCIATED
 grounding_status: NOT_APPLICABLE
 mapping_status: REVIEWED
-parent_habitats:
-- habitatmech:GOLD.9bb307824f
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6193
@@ -23,3 +21,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NOT_APPLICABLE.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.9bb307824f
+    for habitatmech:GOLD.9c17a8a454 (Host-associated > Mammals: Human > Malignant
+    tumor > Carcinoma > Actinic keratosis). Scientific review #2131 (20261014T200256Z-actinic_keratosis
+    F1): Potential progression to carcinoma does not establish an is-a relation to
+    carcinoma. Retain the existing non-habitat disposition; separate bulk BIOSAMPLE
+    counts do not establish identity. https://www.cancer.gov/publications/dictionaries/cancer-terms/def/actinic-keratosis
+    Exclude only this exact immediate GOLD source-path contribution with expected-parent
+    guard; retain source nodes, verbatim path, count/unit semantics and unrelated
+    parents.'

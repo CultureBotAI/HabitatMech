@@ -3,8 +3,6 @@ label: Acne vulgaris
 habitat_category: HOST_ASSOCIATED
 grounding_status: NOT_APPLICABLE
 mapping_status: REVIEWED
-parent_habitats:
-- habitatmech:GOLD.4b37ab4b76
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7011
@@ -25,3 +23,14 @@ curation_history:
     screen review (#108): Acne vulgaris is a disease state, not the skin, follicle,
     or sebum that a microbe inhabits. An external disease term corroborates the call
     but is external to the committed slice. (source concept habitatmech:GOLD.70fd1acd87)'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.4b37ab4b76
+    for habitatmech:GOLD.70fd1acd87 (Host-associated > Mammals: Human > Integumentary
+    system > Skin > Acne vulgaris). Scientific review #2130 (20261014T200256Z-acne_vulgaris
+    F1): Acne vulgaris is a disease affecting skin and follicles, not a kind of skin.
+    Retain the supported ITEM NOT_APPLICABLE disposition. https://www.niams.nih.gov/health-topics/acne
+    Exclude only this exact immediate GOLD source-path contribution with expected-parent
+    guard; retain source nodes, verbatim path, count/unit semantics and unrelated
+    parents.'

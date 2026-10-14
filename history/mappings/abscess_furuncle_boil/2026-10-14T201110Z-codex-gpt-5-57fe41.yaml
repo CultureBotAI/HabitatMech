@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: abscess_furuncle_boil
+session:
+  id: 2026-10-14T201110Z-codex-gpt-5-57fe41
+  timestamp: '2026-10-14T20:11:10Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2126
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  - definition
+  summary: Repair reviewed source scope for abscess_furuncle_boil
+  details: 'Scientific review #2126 (20261014T200255Z-abscess_furuncle_boil F1): The localized
+    lesion or purulent collection is not a kind of skin. Preserve any independent broader
+    abscess genus; no new lesion subsite is inferred. https://meshb.nlm.nih.gov/record/ui?ui=D000038
+    The disease-versus-physical-specimen question remains provisional under #220; this parent
+    correction does not change the current disposition. Exclude only this exact immediate
+    GOLD source-path contribution with expected-parent guard; retain source nodes, verbatim
+    path, count/unit semantics and unrelated parents. Required validation: dry seed, inspected
+    canary, exact full-corpus counterfactual, native validators, regenerated semantic map/site
+    and final protected QC. These checks are not predeclared successful. The abdominal source
+    retains its pinned YAML slug; source-based published URL redirects are regenerated after
+    commit.'

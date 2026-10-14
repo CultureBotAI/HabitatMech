@@ -3,8 +3,6 @@ label: 'Abscess: Furuncle/Boil'
 habitat_category: HOST_ASSOCIATED
 grounding_status: NOT_APPLICABLE
 mapping_status: REVIEWED
-parent_habitats:
-- habitatmech:GOLD.4b37ab4b76
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7010
@@ -23,3 +21,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NOT_APPLICABLE.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.4b37ab4b76
+    for habitatmech:GOLD.ef667faebd (Host-associated > Mammals: Human > Integumentary
+    system > Skin > Abscess: Furuncle/Boil). Scientific review #2126 (20261014T200255Z-abscess_furuncle_boil
+    F1): The localized lesion or purulent collection is not a kind of skin. Preserve
+    any independent broader abscess genus; no new lesion subsite is inferred. https://meshb.nlm.nih.gov/record/ui?ui=D000038
+    The disease-versus-physical-specimen question remains provisional under #220;
+    this parent correction does not change the current disposition. Exclude only this
+    exact immediate GOLD source-path contribution with expected-parent guard; retain
+    source nodes, verbatim path, count/unit semantics and unrelated parents.'
