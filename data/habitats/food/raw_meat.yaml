@@ -3,8 +3,6 @@ label: Raw meat
 habitat_category: FOOD
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- FOODON:00001006
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6424
@@ -26,3 +24,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution FOODON:00001006 for habitatmech:GOLD.43005e4de2
+    (Engineered > Food production > Meat products > Raw meat). Scientific review #2088
+    (20261014T155038Z-raw_meat F1): generic Raw meat has no verified mammalian restriction;
+    its Meat products parent decision explicitly chooses a narrower mammalian class.
+    A particular beef child does not establish the whole source scope. Exclude only
+    this immediate FOODON:00001006 contribution; preserve the raw-qualified native
+    mint, nodes6424/6463, 189 ORGANISM assertions, children and UNGROUNDED/SEEDED
+    status. No original poultry/fish membership is asserted. Reassess this expected-parent
+    guard during the separate parent identity repair #2078; do not conceal Meat trimming
+    scope #2080.'

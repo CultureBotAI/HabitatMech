@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: nut_whole_or_pieces
+session:
+  id: 2026-10-14T155324Z-codex-gpt-5-d5c277
+  timestamp: '2026-10-14T15:53:24Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2083
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude unsupported immediate GOLD parent from nut (whole or pieces)
+  details: Exact source-path/expected-parent exclusion based on 20261014T155015Z-nut_whole_or_pieces
+    F1. FOODON:00001172 is a supported nut-food-product genus. FOODON:03530206 denotes a planned
+    production process, not a nut-material superclass. The latter is introduced by the immediate
+    GOLD path. Preserve source identity, count/unit, native status and independent parents.
+    Dry seed, canary, exact five-record counterfactual regression and full regenerated-product
+    checks are required; this event does not predeclare their success. Pit-mud category and
+    shared raw-milk mapping endpoints remain separate follow-ups.

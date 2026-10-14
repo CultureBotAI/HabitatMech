@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: pit_mud
+session:
+  id: 2026-10-14T155329Z-codex-gpt-5-f00d87
+  timestamp: '2026-10-14T15:53:29Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2085
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude unsupported immediate GOLD parent from Pit mud
+  details: Exact source-path/expected-parent exclusion based on 20261014T155024Z-pit_mud F1.
+    The immediate parent habitatmech:GOLD.0d60ee305c is the containing Fermentation cellar,
+    not a strictly broader mud genus. PMC8357292 supports the material/site distinction, not
+    the original 22-member reconstruction. The separate FOOD category finding is not part
+    of this hierarchy finding. Preserve source identity, count/unit, native status and independent
+    parents. Dry seed, canary, exact five-record counterfactual regression and full regenerated-product
+    checks are required; this event does not predeclare their success. Pit-mud category and
+    shared raw-milk mapping endpoints remain separate follow-ups.
