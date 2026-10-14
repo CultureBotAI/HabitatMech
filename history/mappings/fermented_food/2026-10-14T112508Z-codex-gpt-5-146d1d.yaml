@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: fermented_food
+session:
+  id: 2026-10-14T112508Z-codex-gpt-5-146d1d
+  timestamp: '2026-10-14T11:25:08Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2059
+  urls:
+  - https://raw.githubusercontent.com/FoodOntology/foodon/cd73540243a84bcd511a500d9a497d12d7dc02f6/foodon.owl
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - provenance
+  summary: Remove unsupported GOLD source-parent contribution
+  details: 'Excluded only the reviewed immediate GOLD source-parent contribution. Preserve
+    independent ontology genera, all source identities/counts/units, native status and prior
+    events. No replacement genus or original-member split is invented. Fermented-meat exact-source
+    identity remains unresolved in #2061. Evidence and scope: Immediate GOLD path contribution
+    FOODON:03530206 is a planned production process in both the frozen definition and inspected
+    full FoodOn. The target denotes a site or food/inoculum material, not a kind of that process.
+    Source hierarchy placement does not establish subclass identity. Immutable review 20261014T111516Z-fermented_food.
+    Dry seed and 42 focused correction/curation-floor tests passed; the starter canary was
+    inspected. Full generation, schema/history/provenance/labels, corpus/site and authoritative
+    QC are required before merge. Same-agent GPT-5 assessment.'

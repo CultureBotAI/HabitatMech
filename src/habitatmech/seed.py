@@ -106,6 +106,11 @@ from habitatmech.curate.gold_parent_exclusions import (  # noqa: E402
     GoldParentExclusionError,
     load_gold_parent_exclusions,
 )
+from habitatmech.curate.record_annotation_corrections import (  # noqa: E402
+    RecordAnnotationCorrection,
+    apply_record_annotation_corrections,
+    load_record_annotation_corrections,
+)
 from habitatmech.labels import norm_label  # noqa: E402
 from habitatmech.validation.write_validated import (  # noqa: E402
     ValidationFailedError,
@@ -118,6 +123,7 @@ DECISIONS_PATH = REPO_ROOT / "curation" / "decisions.tsv"
 CURATED_DEFINITIONS_PATH = REPO_ROOT / "curation" / "term_requests.tsv"
 EXTERNAL_XREFS_PATH = REPO_ROOT / "curation" / "external_xrefs.tsv"
 GOLD_PARENT_EXCLUSIONS_PATH = REPO_ROOT / "curation" / "gold_parent_exclusions.tsv"
+RECORD_ANNOTATION_CORRECTIONS_PATH = REPO_ROOT / "curation" / "record_annotation_corrections.tsv"
 DEFINITION_SOURCE_LABEL_EXCLUSIONS_PATH = (
     REPO_ROOT / "curation" / "definition_source_label_exclusions.tsv"
 )
@@ -370,6 +376,7 @@ class Concept:
     decisions_applied: list[Decision] = field(default_factory=list)
     definitions_applied: list[CuratedDefinition] = field(default_factory=list)
     gold_parent_exclusions_applied: list[GoldParentExclusion] = field(default_factory=list)
+    annotation_corrections_applied: list[RecordAnnotationCorrection] = field(default_factory=list)
     gold_broader_synonyms: set[tuple[str, str]] = field(default_factory=set)
     close_source_synonyms: set[tuple[str, str]] = field(default_factory=set)
     broad_source_synonyms: set[tuple[str, str]] = field(default_factory=set)
@@ -1588,6 +1595,20 @@ def build_document(concept: Concept) -> dict[str, Any]:
             ),
             timestamp=f"{exclusion.date}T00:00:00Z",
         )
+    for correction in sorted(
+        concept.annotation_corrections_applied, key=lambda item: (item.date, item.correction_id)
+    ):
+        record_curation_event(
+            doc,
+            curator=correction.curator,
+            action="ANNOTATION_CORRECTED",
+            changes=(
+                f"Corrected {correction.field} for {correction.item!r} ({correction.source}) "
+                f"from {correction.expected!r} to {correction.replacement!r}. "
+                f"Evidence: {correction.evidence}. {correction.notes}"
+            ),
+            timestamp=f"{correction.date}T00:00:00Z",
+        )
     for text, ancestor in sorted(concept.gold_broader_synonyms):
         record_curation_event(
             doc,
@@ -2052,6 +2073,10 @@ def build_corpus(
     apply_curated_definitions(store, definitions, source_label_exclusions)
     stats["curated_definitions_loaded"] = len(definitions)
     stats["curated_definition_source_label_exclusions_loaded"] = len(source_label_exclusions)
+
+    annotation_corrections = load_record_annotation_corrections(RECORD_ANNOTATION_CORRECTIONS_PATH)
+    apply_record_annotation_corrections(store.concepts, annotation_corrections)
+    stats["record_annotation_corrections_loaded"] = len(annotation_corrections)
 
     causal_graph_curations = load_causal_graph_curations(causal_graphs_root)
     validate_causal_graph_curations(

@@ -139,6 +139,18 @@ def test_an_unresolvable_base_is_reported_not_silently_clean(repo):
     assert "not checked" in done.stdout, done.stdout
 
 
+def test_annotation_correction_ids_are_protected(repo):
+    cwd, _ = repo
+    path = cwd / "curation" / "record_annotation_corrections.tsv"
+    path.write_text("correction_id\nreviewed-annotation\n", encoding="utf-8")
+    subprocess.run(["git", "add", str(path)], cwd=cwd, check=True)
+    subprocess.run(["git", "commit", "-qm", "add annotation correction"], cwd=cwd, check=True)
+    path.write_text("correction_id\n", encoding="utf-8")
+    done = run(cwd, "--base", "HEAD")
+    assert done.returncode == 1
+    assert "reviewed-annotation" in done.stderr
+
+
 def test_the_union_of_bases_is_the_floor(repo):
     """The #219 loss was of rows that existed on the branch and never on the
     trunk, so a single-base check reported clean. Both parents of a merge have

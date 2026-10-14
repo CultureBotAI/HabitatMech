@@ -220,3 +220,24 @@ they append a deterministic `SOURCE_PARENT_EXCLUDED` event to affected records.
 They do not assert a replacement relation or settle an unresolved definition.
 Run `just seed`, inspect `just seed-canary <IDENTIFIER> --force`, add session
 history targeting this table, then regenerate and run the normal QC gates.
+
+### Correcting imported record annotations
+
+`curation/record_annotation_corrections.tsv` holds reviewed, record-scoped
+corrections to an ontology synonym's `synonym_type` or an imported taxon's
+`taxon_label`. It is not a general YAML patch mechanism. Each row pins a stable
+`correction_id`, generated record `identifier`, `field`, exact `item` (synonym
+text or NCBITaxon CURIE), `source`, `expected` old value, `replacement`, curator,
+ISO date, evidence URL and rationale. Record upstream disagreements explicitly.
+
+Missing tables, malformed or duplicate rows, missing records and stale or
+conflicting annotations stop regeneration before corrections are applied.
+Corrections preserve raw inventories and manifests, identity, attestations,
+taxon metrics and review status. Each adds a deterministic `ANNOTATION_CORRECTED`
+event; the curation-floor check protects correction IDs against row loss.
+
+This bounded output correction does not refresh an ontology, change the lexical
+grounding index or repair other records. Before correcting synonym scope, check
+whether a source label actually grounds through that alias; any such identity
+needs its own decision. Append session history targeting this table, inspect a
+canary and run focused regressions plus the normal corpus/site gates.

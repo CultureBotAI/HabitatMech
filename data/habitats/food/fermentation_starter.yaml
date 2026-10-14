@@ -8,14 +8,13 @@ grounding_status: EXACT
 mapping_status: SEEDED
 synonyms:
 - synonym_text: Daqu
-  synonym_type: EXACT_SYNONYM
+  synonym_type: NARROW_SYNONYM
   source: ENVO
 - synonym_text: Starter-culture
   synonym_type: EXACT_SYNONYM
   source: BacDive
 parent_habitats:
 - ENVO:00003074
-- FOODON:03530206
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:starter-culture
@@ -118,7 +117,7 @@ characteristic_taxa:
   candidate_pool: 15
 - taxon_id: NCBITaxon:86957
   source: BACDIVE
-  taxon_label: Schleiferibacter lactififex
+  taxon_label: Schleiferibacter lacticifex
   association_count: 1
   rank: 15
   candidate_pool: 15
@@ -139,3 +138,37 @@ curation_history:
     starter source. FOODON:03544454 remains a false food-classification target, but
     the newer ENVO term names the sampled starter material. Path: Starter-culture
     (source concept habitatmech:BACDIVE.9eabedc3a1)'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution FOODON:03530206 for habitatmech:GOLD.814fb91f0e
+    (Engineered > Food production > Fermentation starter). Scientific review #2056
+    (20261014T111500Z-fermentation_starter): ENVO:03600040 denotes a manufactured
+    fermentation inoculum, not the planned food-production process FOODON:03530206.
+    Suppress only this immediate GOLD contribution; retain ENVO:00003074, both GOLD
+    and BacDive attestations with distinct units, 15 taxon observations, identity
+    and SEEDED status. Synonym and taxon spelling corrections are separate annotations,
+    not source membership reconstruction.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: ANNOTATION_CORRECTED
+  changes: 'Corrected synonym_type for ''Daqu'' (ENVO) from ''EXACT_SYNONYM'' to ''NARROW_SYNONYM''.
+    Evidence: https://pubmed.ncbi.nlm.nih.gov/24863368/. Local reviewed disagreement
+    with ENVO hasExactSynonym (revision a2455d1a77e46bb8a664d65a157166b539269042):
+    Daqu is a cereal-pulse solid-state starter for liquor/vinegar, whereas the generic
+    class also includes independently inspected brewing and dairy inocula (https://bacdive.dsmz.de/strain/17184
+    and https://bacdive.dsmz.de/strain/14691). Retain the term as a narrower synonym,
+    not a claim that all starters are Daqu. Original inventory, generic identity,
+    source attestations and status remain unchanged. https://github.com/CultureBotAI/HabitatMech/issues/2057;
+    review 20261014T111500Z-fermentation_starter F2.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: ANNOTATION_CORRECTED
+  changes: 'Corrected taxon_label for ''NCBITaxon:86957'' (BACDIVE) from ''Schleiferibacter
+    lactififex'' to ''Schleiferibacter lacticifex''. Evidence: https://lpsn.dsmz.de/species/schleiferibacter-lacticifex.
+    NCBI taxid 86957 and LPSN independently confirm lacticifex. BacDive DSM 20757
+    still uses the homotypic basonym Selenomonas lacticifex (https://bacdive.dsmz.de/strain/17160);
+    it does not support the lactififex spelling. Correct only this record''s imported
+    label; preserve stable taxid, source, count, rank, pool, raw inventory and manifest.
+    https://github.com/CultureBotAI/HabitatMech/issues/2058; review 20261014T111500Z-fermentation_starter
+    F3.'

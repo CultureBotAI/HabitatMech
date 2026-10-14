@@ -46,6 +46,7 @@ INPUTS = {
     "curation/definition_source_label_exclusions.tsv": "identifier",
     "curation/external_xrefs.tsv": "term_id",
     "curation/gold_parent_exclusions.tsv": "identifier",
+    "curation/record_annotation_corrections.tsv": "correction_id",
     "curation/term_requests.tsv": "identifier",
     "curation/term_requests_excluded.tsv": "identifier",
     "curation/redirects_retracted.tsv": "retired_slug",

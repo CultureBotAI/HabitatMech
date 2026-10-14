@@ -3,8 +3,6 @@ label: Fermented vegetables
 habitat_category: FOOD
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- FOODON:03530206
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3501
@@ -26,3 +24,14 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution FOODON:03530206 for habitatmech:GOLD.2a0aafbf59
+    (Engineered > Food production > Fermented vegetables). Scientific review #2063
+    (20261014T111532Z-fermented_vegetables): fermented vegetable material is not the
+    planned food-production process FOODON:03530206. Suppress only this immediate
+    GOLD contribution; preserve native identity, path, 216 ORGANISM assertions and
+    status. One vegetable-pickle environmental triad is contextual and does not establish
+    universal fermentation identity; keep its denominator separate from 217 bulk BIOSAMPLE
+    observations.'

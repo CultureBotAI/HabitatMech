@@ -3,8 +3,6 @@ label: Fermented seafood
 habitat_category: FOOD
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- FOODON:03530206
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3503
@@ -26,3 +24,12 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-14T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution FOODON:03530206 for habitatmech:GOLD.4f8bcf2e70
+    (Engineered > Food production > Fermented seafood). Scientific review #2062 (20261014T111526Z-fermented_seafood):
+    fermented seafood material is not a kind of the planned production process FOODON:03530206.
+    Suppress only the immediate GOLD contribution; preserve native identity, path,
+    74 ORGANISM assertions and status. Do not infer salinity, shellfish coverage,
+    a substitute FoodOn identity or original members from labels alone.'
