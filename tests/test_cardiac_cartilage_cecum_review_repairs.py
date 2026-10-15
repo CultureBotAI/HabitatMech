@@ -74,6 +74,11 @@ def test_reviewed_input_guards_and_public_links():
     assert decisions[MOLLUSC].notes.endswith(
         "Path: Host-associated > Mollusca > Digestive system > Hindgut > Cecum/Intestinal cecum"
     )
+    for key, pmid in [(STOMACH, "29989069"), (MOLLUSC, "39140156"), (CECA, "39140156")]:
+        note = decisions[key].notes
+        url = f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/"
+        assert url in note and "PMID:" not in note
+        assert f'href="{url}"' in template.render(notes=note)
 
 
 def source_multiset(documents):

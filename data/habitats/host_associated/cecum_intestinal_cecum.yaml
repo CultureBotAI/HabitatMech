@@ -21,12 +21,12 @@ curation_history:
     https://github.com/CultureBotAI/HabitatMech/issues/2208 : This molluscan source
     does not denote the vertebrate ileocecal or large-intestinal anatomy of UBERON:0001153
     or BTO:0000166. Current OLS definitions and Uberon taxon notes distinguish invertebrate
-    homonyms; octopus dissection (PMID:39140156; DOI:10.1242/bio.060429) is a bounded
-    anatomical witness, not identification of the exact GOLD specimen. Retain the
-    source mint UNGROUNDED without inventing an alternative genus. Separate only this
-    GOLD source from PREGO BTO:0000166; retain PREGO identity, 549-taxon pool and
-    displayed associations unchanged. This supersedes the 2026-08-12 grounding and
-    its truncated path; the prior decision is preserved in Git, immutable baseline
+    homonyms; octopus dissection (https://pubmed.ncbi.nlm.nih.gov/39140156/ ; DOI:10.1242/bio.060429)
+    is a bounded anatomical witness, not identification of the exact GOLD specimen.
+    Retain the source mint UNGROUNDED without inventing an alternative genus. Separate
+    only this GOLD source from PREGO BTO:0000166; retain PREGO identity, 549-taxon
+    pool and displayed associations unchanged. This supersedes the 2026-08-12 grounding
+    and its truncated path; the prior decision is preserved in Git, immutable baseline
     review and the regression fixture. The whole-organ context contribution is excluded
     under #2206. Path: Host-associated > Mollusca > Digestive system > Hindgut > Cecum/Intestinal
     cecum (source concept habitatmech:GOLD.37d9cdc188)'

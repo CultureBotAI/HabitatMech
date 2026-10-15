@@ -20,12 +20,13 @@ curation_history:
   changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM reassessment
     https://github.com/CultureBotAI/HabitatMech/issues/2207 : UBERON:0008250 denotes
     the eversible starfish organ, not this crustacean foregut chamber. Current OLS
-    identity/taxon context and primary crab histology (PMID:29989069; DOI:10.1186/s12983-018-0271-z)
-    distinguish the cardiac chamber with gastric mill from that organ. Retain the
-    source mint UNGROUNDED; no exact replacement identity or genus was verified. Do
-    not inherit the starfish definition or genus. The whole-organ context contribution
-    is excluded under #2206. Path: Host-associated > Arthropoda: Crustaceans > Digestive
-    system > Foregut > Cardiac stomach (source concept habitatmech:GOLD.34dfea04f9)'
+    identity/taxon context and primary crab histology (https://pubmed.ncbi.nlm.nih.gov/29989069/
+    ; DOI:10.1186/s12983-018-0271-z) distinguish the cardiac chamber with gastric
+    mill from that organ. Retain the source mint UNGROUNDED; no exact replacement
+    identity or genus was verified. Do not inherit the starfish definition or genus.
+    The whole-organ context contribution is excluded under #2206. Path: Host-associated
+    > Arthropoda: Crustaceans > Digestive system > Foregut > Cardiac stomach (source
+    concept habitatmech:GOLD.34dfea04f9)'
 - timestamp: '2026-10-15T00:00:00Z'
   curator: codex-gpt-5
   action: SOURCE_PARENT_EXCLUDED
