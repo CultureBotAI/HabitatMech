@@ -1,0 +1,1063 @@
+# Record review: area of moss-dominated vegetation (ENVO:01000890)
+
+- Review: 20261015T062607Z-area_of_moss_dominated_vegetation-record
+- Repository: CultureBotAI/HabitatMech
+- Started UTC: 2026-10-15T06:07:06Z
+- Finished UTC: 2026-10-15T06:26:07Z
+- Reviewer: codex-gpt-5 (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Blocker: GOLD moss-host and BacDive moss-bin evidence have been adopted as a planetary vegetation-area identity. CLOSE does not undo that identifier-level conflation. The BacDive bin also includes exact liverwort isolates, so simply renaming the merged record to a moss-only host environment would retain a second scope error.
+
+## Scope And Provenance
+
+Individual scientific assessment of the exact generated target at the captured main revision.
+
+Selection: Resolved identifier and source path in the next sixteen unreviewed records in corpus path order; this document assesses only its single target.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: git_commit at Git base d255ab29c86291d2166fcf22219c10a9edb136c9.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| ENVO:01000890 | data/habitats/host_associated/area_of_moss_dominated_vegetation.yaml | generated | area of moss-dominated vegetation |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| validate | passed | True | ENVO:01000890 | Actual exit 0 at 2026-10-15T06:07:06Z. No issues found<br> uv run linkml-validate -s src/habitatmech/schema/habitatmech.yaml --target-class HabitatRecord data/habitats/host_associated/area_of_moss_dominated_vegetation.yaml |
+| validate-strict | passed | True | ENVO:01000890 | Actual exit 0 at 2026-10-15T06:07:14Z. uv run python scripts/validate_strict.py data/habitats/host_associated/anterior_nares.yaml data/habitats/host_associated/anterior_nares__14fc5dcc.yaml data/habitats/host_associated/anther.yaml data/habitats/host_associated/anthosphere.yaml data/habitats/host_associated/antler.yaml data/habitats/host_associated/aortic_valve.yaml data/habitats/host_associated/apocrine_sweat_gland.yaml data/habitats/host_associated/apoeccrine_sweat_glands.yaml data/habitats/host_associated/appendix.yaml data/habitats/host_associated/appendix__8f7f5041.yaml data/habitats/host_associated/appendix_abscess.yaml data/habitats/host_associated/appressorium.yaml data/habitats/host_associated/aquatic_mammal.yaml data/habitats/host_associated/aquatic_plant.yaml data/habitats/host_associated/aqueous_humor_of_eyeball.yaml data/habitats/host_associated/area_of_moss_dominated_vegetation.yaml<br>Validating 16 files with 15 workers; schema=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/src/habitatmech/schema/habitatmech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      16<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                reports/instance_validation_failures.tsv |
+| validate-history | passed | True | ENVO:01000890 | Actual exit 0 at 2026-10-15T06:07:22Z. No issues found<br>746 history record(s) valid against src/habitatmech/schema/history.yaml |
+| provenance-check | passed | True | ENVO:01000890 | Actual exit 0 at 2026-10-15T06:07:23Z. provenance current: 14 committed inventories, 2 GOLD sources<br> uv run python scripts/check_provenance.py |
+| verify-corpus | passed | True | ENVO:01000890 | Actual exit 0 at 2026-10-15T06:07:39Z. expected 3208 records, found 3208 on disk<br>  missing:   0<br>  extra:     0<br>  differing: 0<br><br>corpus reproduces exactly from data/raw/<br> uv run python scripts/verify_corpus.py |
+| validate-causal-all | passed | True | ENVO:01000890 | Actual exit 0 at 2026-10-15T06:07:43Z. validated 32 causal-graph curation file(s) with 32 graph(s)<br> uv run python scripts/validate_causal_graph_curations.py |
+| term-requests-check | passed | True | ENVO:01000890 | Actual exit 0 at 2026-10-15T06:08:00Z. term-request table is current (110 terms)<br> uv run python scripts/build_term_requests.py --check |
+| validate-products | passed | True | ENVO:01000890 | Actual exit 0 at 2026-10-15T06:08:42Z. id↔label correspondence summary:<br>          OK_CANONICAL: 1174<br>            OK_SYNONYM: 1<br>          OK_EXCEPTION: 5<br>    SKIPPED_NO_ADAPTER: 2061<br><br>✅ All id↔label pairs correspond.<br> uv run python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml |
+
+## Scientific And Domain Assessments
+
+### Native structural and reproduction checks
+
+schema: supported. Targets: ENVO:01000890.
+
+Recorded gates passed: schema, strict sixteen-target validation, 746 history records, exact 3,208-record reproduction, 32 causal graphs and 110 term requests. These are not scientific proof.
+
+### Habitat identity and full source scope
+
+identity: concern. Targets: ENVO:01000890.
+
+Blocker: GOLD moss-host and BacDive moss-bin evidence have been adopted as a planetary vegetation-area identity. CLOSE does not undo that identifier-level conflation. The BacDive bin also includes exact liverwort isolates, so simply renaming the merged record to a moss-only host environment would retain a second scope error.
+
+### Source counts, units and retained taxon observations
+
+quantity: supported. Targets: ENVO:01000890.
+
+Exact contributing source rows, emitted counts/units, taxon labels/ranks and source scores were compared. [{"source": "BACDIVE", "count": 59, "unit": "STRAIN"}, {"source": "GOLD", "count": 0, "unit": "ORGANISM"}]. 25 retained taxon IDs match current NCBI names. Zero counts are omitted, and later bulk biosamples/studies are not added to frozen ORGANISM counts. Source pools are not prevalence denominators.
+
+### Parameters, causal claims and optional evidence
+
+completeness: not_applicable. Targets: ENVO:01000890.
+
+No target causal graph, environmental-parameter, mechanism or characteristic-presence assertion requires expansion. No absent optional field is populated for coverage. Parent-record mechanisms are not inherited as evidence for this target.
+
+## Findings
+
+### F1: Moss source bins are conflated with a planetary vegetation area
+
+blocker / open / confirmed; issue key: area-of-moss-dominated-vegetation-moss-host-landscape-identity.
+
+Re-decide both source keys independently. Reject ENVO:01000890 as host-site identity, but do not merge all BacDive associations into a moss-only habitat: R33 and R55 are exact liverwort witnesses. Preserve source totals and distinct GOLD scope; a governed split or association qualification must audit descendants, definitions, aliases and retired URLs before regeneration.
+
+## Recommended Actions And Acceptance Checks
+
+### ACT1
+
+Re-decide both source keys independently. Reject ENVO:01000890 as host-site identity, but do not merge all BacDive associations into a moss-only habitat: R33 and R55 are exact liverwort witnesses. Preserve source totals and distinct GOLD scope; a governed split or association qualification must audit descendants, definitions, aliases and retired URLs before regeneration. Use maintained owners, not generated YAML edits.
+
+- Regress the exact target and preserve independently valid source identities, counts/units, taxa, status and parents.
+- Append session history; run strict schema, history, provenance, reproduction, configured label and full QC gates.
+- Save a successor with exact finding lineage; do not rewrite this observation or claim broader export conformance.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| E1 | data/habitats/host_associated/area_of_moss_dominated_vegetation.yaml; Entire YAML | supports | All target fields and generated history were read. |
+| ERULE | docs/CURATION.md; Hosts, anatomy, strict broader hierarchy and input ownership | supports | Anatomy may identify a microbial site; host taxa are not environment identities; every parent must be strictly broader. |
+| ESCHEMA | src/habitatmech/schema/habitatmech.yaml; SourceAttestation.mapping_predicate and taxon fields | supports | Mapping endpoint is the emitted record; association metrics and characteristic flags are separate. |
+| ESEED | src/habitatmech/seed.py; resolve_gold, resolve_bacdive, ingest_prego, apply_decision and apply_curated_definitions | supports | All contributing native resolution routes executed with complete claimant and mapping pools; final identifier/status/predicate agree: [{"automatic": {"category": null, "contributes_grounding": true, "decision": null, "extra_parents": [], "extra_xrefs": [], "grounding_status": "CLOSE", "identifier": "ENVO:01000890", "mapping_predicate": "skos:closeMatch", "reviewed": false, "route": "bacdive_mapping_table"}, "final": {"category": null, "contributes_grounding": true, "decision": {"category": "", "curator": "claude-opus-5", "date": "2026-08-13", "decision": "REVIEW", "grounding_status": "", "identifier": "habitatmech:BACDIVE.6946e653a5", "notes": "Multi-source review pass: this record is attested by more than one independent vocabulary, and this source's label or path was read against the record's ontology term to check the merge is right. It agrees. Source concepts in the same pass whose labels did not agree were re-decided rather than endorsed; see the pass's other decisions of the same date.", "object_id": "", "object_label": "", "relation": "parent", "review_depth": "ITEM"}, "extra_parents": [], "extra_xrefs": [], "grounding_status": "CLOSE", "identifier": "ENVO:01000890", "mapping_predicate": "skos:closeMatch", "reviewed": true, "route": "curated_review_of_bacdive_mapping_table"}, "mint": "habitatmech:BACDIVE.6946e653a5", "source": "BACDIVE"}, {"automatic": {"category": null, "contributes_grounding": true, "decision": null, "extra_parents": [], "extra_xrefs": [], "grounding_status": "CLOSE", "identifier": "ENVO:01000890", "mapping_predicate": "skos:closeMatch", "reviewed": false, "route": "gold_mapping_table"}, "final": {"category": null, "contributes_grounding": true, "decision": {"category": "", "curator": "claude-opus-5", "date": "2026-08-13", "decision": "REVIEW", "grounding_status": "", "identifier": "habitatmech:GOLD.82644ed4d2", "notes": "Multi-source review pass: this record is attested by more than one independent vocabulary, and this source's label or path was read against the record's ontology term to check the merge is right. It agrees. Source concepts in the same pass whose labels did not agree were re-decided rather than endorsed; see the pass's other decisions of the same date.", "object_id": "", "object_label": "", "relation": "parent", "review_depth": "ITEM"}, "extra_parents": [], "extra_xrefs": [], "grounding_status": "CLOSE", "identifier": "ENVO:01000890", "mapping_predicate": "skos:closeMatch", "reviewed": true, "route": "curated_review_of_gold_mapping_table"}, "mint": "habitatmech:GOLD.82644ed4d2", "source": "GOLD"}] |
+| ET4 | data/raw/gold_ecosystem_paths.tsv; TSV rows 2508 | supports | [{"data": {"biosample_count": "0", "canonical_path": "Host-associated &gt; Plants &gt; Bryophytes &gt; Moss", "depth": "4", "ecosystem": "Host-associated", "ecosystem_category": "Plants", "ecosystem_subtype": "Moss", "ecosystem_type": "Bryophytes", "gold_node_count": "2", "gold_node_ids": "gold.ecosystem:8110&#124;gold.ecosystem:8111", "leaf_label": "Moss", "organism_count": "0", "specific_ecosystem": "", "study_count": "0", "total_assertions": "0"}, "row": 2508}] |
+| ET5 | data/raw/bacdive_source_taxa.tsv; TSV rows 1913,1914,1915,1916,1917,1918,1919,1920,1921,1922,1923,1924,1925,1926,1927,1928,1929,1930,1931,1932,1933,1934,1935,1936,1937 | supports | [{"data": {"bacdive_id": "bacdive.isolation_source:moss", "corroborated_by": "", "rank": "1", "strain_count": "10", "taxon_id": "NCBITaxon:420952", "taxon_label": "Paraburkholderia bryophila"}, "row": 1913}, {"data": {"bacdive_id": "bacdive.isolation_source:moss", "corroborated_by": "", "rank": "2", "strain_count": "4", "taxon_id": "NCBITaxon:184914", "taxon_label": "Corallococcus coralloides"}, "row": 1914}, {"data": {"bacdive_id": "bacdive.isolation_source:moss", "corroborated_by": "", "rank": "3", "strain_count": "4", "taxon_id": "NCBITaxon:409", "taxon_label": "Methylobacterium sp."}, "row": 1915}, {"data": {"bacdive_id": "bacdive.isolation_source:moss", "corroborated_by": "", "rank": "4", "strain_count": "3", "taxon_id": "NCBITaxon:420953", "taxon_label": "Paraburkholderia megapolitana"}, "row": 1916}, {"data": {"bacdive_id": "bacdive.isolation_source:moss", "corroborated_by": "", "rank": "5", "strain_count": "2", "taxon_id": "NCBITaxon:1872627", "taxon_label": "Archangium sp."}, "row": 1917}, {"data": {"bacdive_id": "bacdive.isolation_source:moss", "corroborated_by": "", "rank": "6", "strain_count": "2", "taxon_id": "NCBITaxon:33", "taxon_label": "Myxococcus fulvus"}, "row": 1918}, {"data": {"bacdive_id": "bacdive.isolation_source:moss", "corroborated_by": "", "rank": "7", "strain_count": "2", "taxon_id": "NCBITaxon:83456", "taxon_label": "Myxococcus virescens"}, "row": 1919}, {"data": {"bacdive_id": "bacdive.isolation_source:moss", "corroborated_by": "", "rank": "8", "strain_count": "1", "taxon_id": "NCBITaxon:1071679", "taxon_label": "Caballeronia grimmiae"}, "row": 1920}, {"data": {"bacdive_id": "bacdive.isolation_source:moss", "corroborated_by": "", "rank": "9", "strain_count": "1", "taxon_id": "NCBITaxon:1123255", "taxon_label": "Simplicispira psychrophila DSM 11588"}, "row": 1921}, {"data": {"bacdive_id": "bacdive.isolation_source:moss", "corroborated_by": "", "rank": "10", "strain_count": "1", "taxon_id": "NCBITaxon:1176176", "taxon_label": "Methylobacterium haplocladii"}, "row": 1922}, {"data": {"bacdive_id": "bacdive.isolation_source:moss", "corroborated_by": "", "rank": "11", "strain_count": "1", "taxon_id": "NCBITaxon:1176177", "taxon_label": "Methylobacterium brachythecii"}, "row": 1923}, {"data": {"bacdive_id": "bacdive.isolation_source:moss", "corroborated_by": "", "rank": "12", "strain_count": "1", "taxon_id": "NCBITaxon:1302685", "taxon_label": "Chryseobacterium takakiae"}, "row": 1924}, {"data": {"bacdive_id": "bacdive.isolation_source:moss", "corroborated_by": "", "rank": "13", "strain_count": "1", "taxon_id": "NCBITaxon:1302687", "taxon_label": "Chryseobacterium polytrichastri"}, "row": 1925}, {"data": {"bacdive_id": "bacdive.isolation_source:moss", "corroborated_by": "", "rank": "14", "strain_count": "1", "taxon_id": "NCBITaxon:1302689", "taxon_label": "Mucilaginibacter polytrichastri"}, "row": 1926}, {"data": {"bacdive_id": "bacdive.isolation_source:moss", "corroborated_by": "", "rank": "15", "strain_count": "1", "taxon_id": "NCBITaxon:1302690", "taxon_label": "Cnuella takakiae"}, "row": 1927}, {"data": {"bacdive_id": "bacdive.isolation_source:moss", "corroborated_by": "", "rank": "16", "strain_count": "1", "taxon_id": "NCBITaxon:1307457", "taxon_label": "Kineosporia mikuniensis JCM 9961"}, "row": 1928}, {"data": {"bacdive_id": "bacdive.isolation_source:moss", "corroborated_by": "", "rank": "17", "strain_count": "1", "taxon_id": "NCBITaxon:1387353", "taxon_label": "Paludisphaera borealis"}, "row": 1929}, {"data": {"bacdive_id": "bacdive.isolation_source:moss", "corroborated_by": "", "rank": "18", "strain_count": "1", "taxon_id": "NCBITaxon:1436133", "taxon_label": "Actinacidiphila bryophytorum"}, "row": 1930}, {"data": {"bacdive_id": "bacdive.isolation_source:moss", "corroborated_by": "", "rank": "19", "strain_count": "1", "taxon_id": "NCBITaxon:1460882", "taxon_label": "Microbispora bryophytorum"}, "row": 1931}, {"data": {"bacdive_id": "bacdive.isolation_source:moss", "corroborated_by": "", "rank": "20", "strain_count": "1", "taxon_id": "NCBITaxon:1490222", "taxon_label": "Actinoallomurus bryophytorum"}, "row": 1932}, {"data": {"bacdive_id": "bacdive.isolation_source:moss", "corroborated_by": "", "rank": "21", "strain_count": "1", "taxon_id": "NCBITaxon:1577474", "taxon_label": "Raineyella antarctica"}, "row": 1933}, {"data": {"bacdive_id": "bacdive.isolation_source:moss", "corroborated_by": "", "rank": "22", "strain_count": "1", "taxon_id": "NCBITaxon:1612308", "taxon_label": "Methylocapsa palsarum"}, "row": 1934}, {"data": {"bacdive_id": "bacdive.isolation_source:moss", "corroborated_by": "", "rank": "23", "strain_count": "1", "taxon_id": "NCBITaxon:1619308", "taxon_label": "Cnuibacter physcomitrellae"}, "row": 1935}, {"data": {"bacdive_id": "bacdive.isolation_source:moss", "corroborated_by": "", "rank": "24", "strain_count": "1", "taxon_id": "NCBITaxon:1619309", "taxon_label": "Paenibacillus herberti"}, "row": 1936}, {"data": {"bacdive_id": "bacdive.isolation_source:moss", "corroborated_by": "", "rank": "25", "strain_count": "1", "taxon_id": "NCBITaxon:1619310", "taxon_label": "Paenibacillus marchantiophytorum"}, "row": 1937}] |
+| ET6 | data/raw/isolation_source_groundings.tsv; TSV rows 206 | supports | [{"data": {"confidence": "medium", "curator": "ols4_auto", "mapping_justification": "semapv:LexicalMatching", "object_id": "ENVO:01000890", "object_label": "area of moss-dominated vegetation", "object_source": "ENVO", "predicate_id": "skos:closeMatch", "source_dataset": "bacdive", "subject_label": "Moss", "subject_label_normalized": "moss", "verified_date": "2026-05-01"}, "row": 206}] |
+| ET7 | data/raw/bacdive_isolation_sources.tsv; TSV rows 89 | supports | [{"data": {"bacdive_id": "bacdive.isolation_source:moss", "label": "Moss", "source_slug": "moss", "strain_count": "59", "taxon_count": "39"}, "row": 89}] |
+| ET8 | data/raw/ontology_subclass_edges.tsv; TSV rows 6676,7153 | supports | [{"data": {"object": "ENVO:01001305", "predicate": "rdfs:subClassOf", "subject": "ENVO:01000890"}, "row": 6676}, {"data": {"object": "ENVO:01001199", "predicate": "rdfs:subClassOf", "subject": "ENVO:01001305"}, "row": 7153}] |
+| ET9 | data/raw/ontology_terms.tsv; TSV rows 8379,8793 | supports | [{"data": {"definition": "An area of a planet's surface which is primarily covered by mosses and which is in contact with an atmospheric column extending from the planetary boundary layer to the planet's exosphere with little to no physical obstruction.", "deprecated": "", "directly_referenced": "TRUE", "label": "area of moss-dominated vegetation", "label_only": "FALSE", "ontology": "ENVO", "synonyms": "", "term_id": "ENVO:01000890"}, "row": 8379}, {"data": {"definition": "A vegetated area is a geographic feature which has ground cover dominated by plant communities.", "deprecated": "", "directly_referenced": "FALSE", "label": "vegetated area", "label_only": "FALSE", "ontology": "ENVO", "synonyms": "", "term_id": "ENVO:01001305"}, "row": 8793}] |
+| ET10 | curation/decisions.tsv; TSV rows 52,778 | supports | [{"data": {"category": "", "curator": "claude-opus-5", "date": "2026-08-13", "decision": "REVIEW", "grounding_status": "", "identifier": "habitatmech:BACDIVE.6946e653a5", "notes": "Multi-source review pass: this record is attested by more than one independent vocabulary, and this source's label or path was read against the record's ontology term to check the merge is right. It agrees. Source concepts in the same pass whose labels did not agree were re-decided rather than endorsed; see the pass's other decisions of the same date.", "object_id": "", "object_label": "", "relation": "", "review_depth": "ITEM"}, "row": 52}, {"data": {"category": "", "curator": "claude-opus-5", "date": "2026-08-13", "decision": "REVIEW", "grounding_status": "", "identifier": "habitatmech:GOLD.82644ed4d2", "notes": "Multi-source review pass: this record is attested by more than one independent vocabulary, and this source's label or path was read against the record's ontology term to check the merge is right. It agrees. Source concepts in the same pass whose labels did not agree were re-decided rather than endorsed; see the pass's other decisions of the same date.", "object_id": "", "object_label": "", "relation": "", "review_depth": "ITEM"}, "row": 778}] |
+| EP11 | data/habitats/host_associated/bryophytes.yaml; Direct-parent identity, definition, parent and source fields | supports | Inspected parent meaning: {"grounding_status": "UNGROUNDED", "identifier": "habitatmech:GOLD.35beb98884", "label": "Bryophytes", "parent_habitats": ["ENVO:01001001"], "source_attestations": [{"notes": "3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id": "gold.ecosystem:8107", "source_label": "Bryophytes", "source_path": "Host-associated &gt; Plants &gt; Bryophytes"}]} |
+| EX1 | https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_01000890; Target term or typed outgoing relations; primary abstract; exact strain identity and isolation-source fields as described | supports | Active authoritative ENVO:01000890 area of moss-dominated vegetation; definition and typed scope compared with the frozen source and local parent meaning. Obsolete=False. |
+| EX2 | https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_01000890/graph; Target term or typed outgoing relations; primary abstract; exact strain identity and isolation-source fields as described | supports | Inspected typed outgoing relations: [{"label": "subClassOf", "source": "http://purl.obolibrary.org/obo/ENVO_01000890", "target": "http://purl.obolibrary.org/obo/ENVO_01001305", "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf"}, {"label": "adjacent to", "source": "http://purl.obolibrary.org/obo/ENVO_01000890", "target": "http://purl.obolibrary.org/obo/ENVO_01000323", "uri": "http://purl.obolibrary.org/obo/RO_0002220"}]. Partonomy and connectivity remain distinct from subclassing. |
+| EX3 | https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_01001305; Target term or typed outgoing relations; primary abstract; exact strain identity and isolation-source fields as described | supports | Active authoritative ENVO:01001305 vegetated area; definition and typed scope compared with the frozen source and local parent meaning. Obsolete=False. |
+| EX4 | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=1006155,1042321,1044,1071679,108028,109472,1114878,1121336,1121355,1121467,1122146,1122599,1123255,1130046,1176176,1176177,119224,1206817,1210932,1216006,1235440,1260928,1278303,1278307,1278309,1278310,1278312,1302685,1302687,1302689,1302690,1307457,131112,1324766,1336234,1346,137733,138563,1387353,1411316,1423,1436133,1460882,1490222,156892,1577474,157842,1612308,1619308,1619309,1619310,1799789,1834927,1843580,1843581,184914,1862160,1869227,1871086,1872412,1872627,1872635,1873466,1965234,2108,269621,269666,33,34,395087,409,420952,420953,53344,53364,83456&amp;retmode=xml; Target term or typed outgoing relations; primary abstract; exact strain identity and isolation-source fields as described | supports | All 25 retained taxon IDs resolve directly with matching preferred names: [{"direct_name_match": true, "id": "NCBITaxon:420952", "label": "Paraburkholderia bryophila", "rank": "species"}, {"direct_name_match": true, "id": "NCBITaxon:184914", "label": "Corallococcus coralloides", "rank": "species"}, {"direct_name_match": true, "id": "NCBITaxon:409", "label": "Methylobacterium sp.", "rank": "species"}, {"direct_name_match": true, "id": "NCBITaxon:420953", "label": "Paraburkholderia megapolitana", "rank": "species"}, {"direct_name_match": true, "id": "NCBITaxon:1872627", "label": "Archangium sp.", "rank": "species"}, {"direct_name_match": true, "id": "NCBITaxon:33", "label": "Myxococcus fulvus", "rank": "species"}, {"direct_name_match": true, "id": "NCBITaxon:83456", "label": "Myxococcus virescens", "rank": "species"}, {"direct_name_match": true, "id": "NCBITaxon:1071679", "label": "Caballeronia grimmiae", "rank": "species"}, {"direct_name_match": true, "id": "NCBITaxon:1123255", "label": "Simplicispira psychrophila DSM 11588", "rank": "strain"}, {"direct_name_match": true, "id": "NCBITaxon:1176176", "label": "Methylobacterium haplocladii", "rank": "species"}, {"direct_name_match": true, "id": "NCBITaxon:1176177", "label": "Methylobacterium brachythecii", "rank": "species"}, {"direct_name_match": true, "id": "NCBITaxon:1302685", "label": "Chryseobacterium takakiae", "rank": "species"}, {"direct_name_match": true, "id": "NCBITaxon:1302687", "label": "Chryseobacterium polytrichastri", "rank": "species"}, {"direct_name_match": true, "id": "NCBITaxon:1302689", "label": "Mucilaginibacter polytrichastri", "rank": "species"}, {"direct_name_match": true, "id": "NCBITaxon:1302690", "label": "Cnuella takakiae", "rank": "species"}, {"direct_name_match": true, "id": "NCBITaxon:1307457", "label": "Kineosporia mikuniensis JCM 9961", "rank": "strain"}, {"direct_name_match": true, "id": "NCBITaxon:1387353", "label": "Paludisphaera borealis", "rank": "species"}, {"direct_name_match": true, "id": "NCBITaxon:1436133", "label": "Actinacidiphila bryophytorum", "rank": "species"}, {"direct_name_match": true, "id": "NCBITaxon:1460882", "label": "Microbispora bryophytorum", "rank": "species"}, {"direct_name_match": true, "id": "NCBITaxon:1490222", "label": "Actinoallomurus bryophytorum", "rank": "species"}, {"direct_name_match": true, "id": "NCBITaxon:1577474", "label": "Raineyella antarctica", "rank": "species"}, {"direct_name_match": true, "id": "NCBITaxon:1612308", "label": "Methylocapsa palsarum", "rank": "species"}, {"direct_name_match": true, "id": "NCBITaxon:1619308", "label": "Cnuibacter physcomitrellae", "rank": "species"}, {"direct_name_match": true, "id": "NCBITaxon:1619309", "label": "Paenibacillus herberti", "rank": "species"}, {"direct_name_match": true, "id": "NCBITaxon:1619310", "label": "Paenibacillus marchantiophytorum", "rank": "species"}] |
+| EX5 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:17911288%20AND%20SRC:MED&amp;format=json&amp;resultType=core; Target term or typed outgoing relations; primary abstract; exact strain identity and isolation-source fields as described | supports | The primary description distinguishes moss-gametophyte isolates and their named host species from other soil isolates; A3 = LMG23650 = CCUG53006 came from Aulacomnium palustre. Verified PMID 17911288 and DOI 10.1099/ijs.0.65142-0. |
+| EX6 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:26155771%20AND%20SRC:MED&amp;format=json&amp;resultType=core; Target term or typed outgoing relations; primary abstract; exact strain identity and isolation-source fields as described | supports | The primary description identifies R33 = DSM29849 = CGMCC1.15042 as an endophyte recovered from Herbertus sendtneri. Verified PMID 26155771 and DOI 10.1007/s10482-015-0514-3. |
+| EX7 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:26597860%20AND%20SRC:MED&amp;format=json&amp;resultType=core; Target term or typed outgoing relations; primary abstract; exact strain identity and isolation-source fields as described | supports | The primary description explicitly identifies R55 = DSM29850 = CGMCC1.15043 as isolated from the liverwort Herbertus sendtneri, not a moss. Verified PMID 26597860 and DOI 10.1099/ijsem.0.000789. |
+| EX8 | https://bacdive.dsmz.de/strain/1979; Target term or typed outgoing relations; primary abstract; exact strain identity and isolation-source fields as described | supports | Exact A3/DSM23488/LMG23650 entry gives Aulacomnium palustre isolation, a moss-host witness rather than a landscape-area identity. |
+| EX9 | https://bacdive.dsmz.de/strain/131388; Target term or typed outgoing relations; primary abstract; exact strain identity and isolation-source fields as described | supports | Exact R33/DSM29849/CGMCC1.15042 entry carries Moss categorization while identifying Herbertus sendtneri as the source. |
+| EX10 | https://bacdive.dsmz.de/strain/132390; Target term or typed outgoing relations; primary abstract; exact strain identity and isolation-source fields as described | supports | Exact R55/DSM29850/CGMCC1.15043 entry identifies a surface-disinfected liverwort while retaining Moss categorization. |
+| ESEARCH | Local scientific-input and saved-review traversal; rg --no-ignore --hidden -l -F -e ENVO:01000890 -e 'area of moss-dominated vegetation' -e area_of_moss_dominated_vegetation -e habitatmech:BACDIVE.6946e653a5 -e habitatmech:GOLD.82644ed4d2 curation history research reports data/raw build reviews | context_only | Ignored-inclusive source ID/label/slug search plus exact parsed table matches and complete structured-target traversal. No structured predecessor targets this record. |
+
+## Limits And Additional Notes
+
+- Frozen source-bin membership is not a complete audit of original specimens. Only the exact external source witnesses described here were independently inspected.
+- Taxon associations are observational. PREGO score and BacDive strain counts do not prove prevalence, mechanism or characteristic presence.
+- The configured label gate skipped 2,061 no-adapter pairs. Ontology semantics and retained taxon identities were separately assessed.
+- The full archive and just qc are publication gates to run after saving; these pre-fix observations do not claim their future results.
+- Historical reports and history prose are search leads, not independent approval. Historical neighboring claims and every legacy citation were not re-reviewed.
+- iModulonDB is not applicable: these targets assert no gene, regulator or transcriptomic mechanism. No paid research was used.
+- All captured local input bytes were rechecked unchanged against the working tree and exact Git blobs.
+- Ignored-inclusive structured archive traversal found no earlier structured review targeting this record. Historical reports and GitHub issues are retained as contextual leads.
+- This is a pre-fix observation; separately authorized curation requires new successor observations.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261015T062607Z-area_of_moss_dominated_vegetation-record
+repository: CultureBotAI/HabitatMech
+kind: record
+title: 'Record review: area of moss-dominated vegetation (ENVO:01000890)'
+started_at: '2026-10-15T06:07:06Z'
+finished_at: '2026-10-15T06:26:07Z'
+reviewer:
+  identity: codex-gpt-5
+  kind: agent
+  model: gpt-5
+  independence: self_review
+  independence_basis: Same agent assessed full records and primary evidence. This
+    is not independent human or second-agent approval.
+skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'Blocker: GOLD moss-host and BacDive moss-bin evidence have been adopted
+  as a planetary vegetation-area identity. CLOSE does not undo that identifier-level
+  conflation. The BacDive bin also includes exact liverwort isolates, so simply renaming
+  the merged record to a moss-only host environment would retain a second scope error.'
+source:
+  git_revision: d255ab29c86291d2166fcf22219c10a9edb136c9
+  state: git_commit
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: conf/record_review.yaml
+    sha256: c2f5d0eb4c5744f5fe354c92184ddab144dc2688dba952b032b4f3d597bc08d6
+    role: context
+  - path: conf/sources.yaml
+    sha256: a8e069f9278068b57fa234f43e03c8d893f857827b83fd10cfa92d6815aed642
+    role: context
+  - path: curation/decisions.tsv
+    sha256: ca42d86b6040df1c0c6e6ed36573bb51975a5e8daade262113bce547f1b6fd8b
+    role: context
+  - path: curation/definition_source_label_exclusions.tsv
+    sha256: a3e2880134344406dd3239ee041076df64c76407d311b71a16f2382c4146a177
+    role: context
+  - path: curation/external_xrefs.tsv
+    sha256: f289c938b0c70d6f2bfb231bf137edf1c862bbda9143d9b6eae9e3fdd587703c
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: 761c1c1c60358c6c24e4d797637a12bdde6f8541e568914b404bffd1e0dd57ec
+    role: context
+  - path: curation/record_annotation_corrections.tsv
+    sha256: ea37676f1a16dd05fbfbb6c394b3f14b42ea93b763fb257043b817a4f10d3612
+    role: context
+  - path: curation/redirects_retracted.tsv
+    sha256: 0f1e9af8881f5a5db19f87de06b3b3d1800cfac8101699b380388c0a1a1e9a19
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 2144d43ab4e106ff820da87c348f673d16cb8ea30d5a565f12e156af598f85ad
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: b0135af0aa4deed0f3824a2f491d5a742c1b7de4775c533f283761d22e805821
+    role: context
+  - path: data/habitats/RETIRED.tsv
+    sha256: a2a0496837ea75e487d7fc5d35317a890262a941d8fffe9babcd39f2f332c6db
+    role: context
+  - path: data/habitats/host_associated/area_of_moss_dominated_vegetation.yaml
+    sha256: a52c635630077a391160742c533af7e5fb0eaaf2f5c5da7779e9d66b203eb243
+    role: target
+  - path: data/habitats/host_associated/bryophytes.yaml
+    sha256: 1824dccd4cb9689fcdd6cadb71ebf018d950f0ea7195ffb013ec863bdf6d3b90
+    role: context
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: f3f5d3d033fa7e7c1d78571959fc2e62e0b0a625f47dba1413657e8cf944b322
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 105b3c8e10f43ce689b05d3089d3a8be1d713a98dd6806e11be37ebd85b10590
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reports/yaml_record_review/20261004T042321Z-area_of_moss_dominated_vegetation.md
+    sha256: 1a32bcec894c431e9ae2f5d8eb774cc3c9d1544a49bc638981061491ed9be03c
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: src/habitatmech/curate/__init__.py
+    sha256: d9837c29dc61d8c9245fdb471a68a109cea31b131cdbc0c4d51d23a8d013ce12
+    role: context
+  - path: src/habitatmech/curate/causal_graphs.py
+    sha256: d1884374263ed7926292c52a58742c614e75628d78ff50fe688e6abc0ddf9c1c
+    role: context
+  - path: src/habitatmech/curate/curation_event.py
+    sha256: 08c774d309fe988c468097518d346f07a653b283cb9b9b51c7fe79fa0af785a9
+    role: context
+  - path: src/habitatmech/curate/decisions.py
+    sha256: f33d3e9dc95bb428e63e640d48d4074cf15e90ea666603fb16fb651d591e3f02
+    role: context
+  - path: src/habitatmech/curate/definition_source_label_exclusions.py
+    sha256: 0c13e83fe17613e8b9f5b346d1259104172f8c1de42f911625579b903707625d
+    role: context
+  - path: src/habitatmech/curate/definitions.py
+    sha256: decd02eea029e884ab1a8bbb51dd870edb5544906b3ddd39598147b27ce572c9
+    role: context
+  - path: src/habitatmech/curate/external_xrefs.py
+    sha256: 8b90ec049887d3aa67e31cce7f7a04d7300421c6fedb833cc66e5d5f5f181694
+    role: context
+  - path: src/habitatmech/curate/gold_parent_exclusions.py
+    sha256: 044d8277509a9b1f6e4f2d7ea1fb82319b41e09ffef7788738a0f4ed0d0b63af
+    role: context
+  - path: src/habitatmech/curate/record_annotation_corrections.py
+    sha256: 15bad3d40fd95e2acc72d3ff3c74289c15fb8a1775adc523b3575c3ea8487033
+    role: context
+  - path: src/habitatmech/labels.py
+    sha256: eb6986c3a9c7d5a3e4651b639351f1f2d3e12d74c4bfaa92899205a1f9df0977
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 7e3cda3dadb9c7462498e5014bf38ef730068212f8f9cb131e3fce383c21d10e
+    role: context
+  - path: src/habitatmech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+  - path: src/habitatmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
+    role: context
+targets:
+- target_id: ENVO:01000890
+  path: data/habitats/host_associated/area_of_moss_dominated_vegetation.yaml
+  label: area of moss-dominated vegetation
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+scope:
+  description: Individual scientific assessment of the exact generated target at the
+    captured main revision.
+  selection: Resolved identifier and source path in the next sixteen unreviewed records
+    in corpus path order; this document assesses only its single target.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - ENVO:01000890
+  exclusions:
+  - target: Other habitats and SSSOM/KGX products
+    reason: Direct parents are contextual dependencies, not additional completed reviews;
+      no export compatibility certification.
+checks:
+- check_id: C1
+  name: validate
+  status: passed
+  required: true
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate data/habitats/host_associated/area_of_moss_dominated_vegetation.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - ENVO:01000890
+  summary: "Actual exit 0 at 2026-10-15T06:07:06Z. No issues found\n uv run linkml-validate\
+    \ -s src/habitatmech/schema/habitatmech.yaml --target-class HabitatRecord data/habitats/host_associated/area_of_moss_dominated_vegetation.yaml"
+  scope_note: Individual schema; strict command covers sixteen targets; other named
+    native gates have whole-corpus scope.
+- check_id: C2
+  name: validate-strict
+  status: passed
+  required: true
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-strict
+    data/habitats/host_associated/anterior_nares.yaml data/habitats/host_associated/anterior_nares__14fc5dcc.yaml
+    data/habitats/host_associated/anther.yaml data/habitats/host_associated/anthosphere.yaml
+    data/habitats/host_associated/antler.yaml data/habitats/host_associated/aortic_valve.yaml
+    data/habitats/host_associated/apocrine_sweat_gland.yaml data/habitats/host_associated/apoeccrine_sweat_glands.yaml
+    data/habitats/host_associated/appendix.yaml data/habitats/host_associated/appendix__8f7f5041.yaml
+    data/habitats/host_associated/appendix_abscess.yaml data/habitats/host_associated/appressorium.yaml
+    data/habitats/host_associated/aquatic_mammal.yaml data/habitats/host_associated/aquatic_plant.yaml
+    data/habitats/host_associated/aqueous_humor_of_eyeball.yaml data/habitats/host_associated/area_of_moss_dominated_vegetation.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - ENVO:01000890
+  summary: "Actual exit 0 at 2026-10-15T06:07:14Z. uv run python scripts/validate_strict.py\
+    \ data/habitats/host_associated/anterior_nares.yaml data/habitats/host_associated/anterior_nares__14fc5dcc.yaml\
+    \ data/habitats/host_associated/anther.yaml data/habitats/host_associated/anthosphere.yaml\
+    \ data/habitats/host_associated/antler.yaml data/habitats/host_associated/aortic_valve.yaml\
+    \ data/habitats/host_associated/apocrine_sweat_gland.yaml data/habitats/host_associated/apoeccrine_sweat_glands.yaml\
+    \ data/habitats/host_associated/appendix.yaml data/habitats/host_associated/appendix__8f7f5041.yaml\
+    \ data/habitats/host_associated/appendix_abscess.yaml data/habitats/host_associated/appressorium.yaml\
+    \ data/habitats/host_associated/aquatic_mammal.yaml data/habitats/host_associated/aquatic_plant.yaml\
+    \ data/habitats/host_associated/aqueous_humor_of_eyeball.yaml data/habitats/host_associated/area_of_moss_dominated_vegetation.yaml\n\
+    Validating 16 files with 15 workers; schema=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/src/habitatmech/schema/habitatmech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      16\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                reports/instance_validation_failures.tsv"
+  scope_note: Individual schema; strict command covers sixteen targets; other named
+    native gates have whole-corpus scope.
+- check_id: C3
+  name: validate-history
+  status: passed
+  required: true
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - ENVO:01000890
+  summary: 'Actual exit 0 at 2026-10-15T06:07:22Z. No issues found
+
+    746 history record(s) valid against src/habitatmech/schema/history.yaml'
+  scope_note: Individual schema; strict command covers sixteen targets; other named
+    native gates have whole-corpus scope.
+- check_id: C4
+  name: provenance-check
+  status: passed
+  required: true
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just provenance-check
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - ENVO:01000890
+  summary: "Actual exit 0 at 2026-10-15T06:07:23Z. provenance current: 14 committed\
+    \ inventories, 2 GOLD sources\n uv run python scripts/check_provenance.py"
+  scope_note: Individual schema; strict command covers sixteen targets; other named
+    native gates have whole-corpus scope.
+- check_id: C5
+  name: verify-corpus
+  status: passed
+  required: true
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just verify-corpus
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - ENVO:01000890
+  summary: "Actual exit 0 at 2026-10-15T06:07:39Z. expected 3208 records, found 3208\
+    \ on disk\n  missing:   0\n  extra:     0\n  differing: 0\n\ncorpus reproduces\
+    \ exactly from data/raw/\n uv run python scripts/verify_corpus.py"
+  scope_note: Individual schema; strict command covers sixteen targets; other named
+    native gates have whole-corpus scope.
+- check_id: C6
+  name: validate-causal-all
+  status: passed
+  required: true
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-causal-all
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - ENVO:01000890
+  summary: "Actual exit 0 at 2026-10-15T06:07:43Z. validated 32 causal-graph curation\
+    \ file(s) with 32 graph(s)\n uv run python scripts/validate_causal_graph_curations.py"
+  scope_note: Individual schema; strict command covers sixteen targets; other named
+    native gates have whole-corpus scope.
+- check_id: C7
+  name: term-requests-check
+  status: passed
+  required: true
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just term-requests-check
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - ENVO:01000890
+  summary: "Actual exit 0 at 2026-10-15T06:08:00Z. term-request table is current (110\
+    \ terms)\n uv run python scripts/build_term_requests.py --check"
+  scope_note: Individual schema; strict command covers sixteen targets; other named
+    native gates have whole-corpus scope.
+- check_id: C8
+  name: validate-products
+  status: passed
+  required: true
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - ENVO:01000890
+  summary: "Actual exit 0 at 2026-10-15T06:08:42Z. id↔label correspondence summary:\n\
+    \          OK_CANONICAL: 1174\n            OK_SYNONYM: 1\n          OK_EXCEPTION:\
+    \ 5\n    SKIPPED_NO_ADAPTER: 2061\n\n✅ All id↔label pairs correspond.\n uv run\
+    \ python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml"
+  scope_note: Individual schema; strict command covers sixteen targets; other named
+    native gates have whole-corpus scope.
+evidence:
+- evidence_id: E1
+  kind: record_content
+  reference: data/habitats/host_associated/area_of_moss_dominated_vegetation.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-15T06:26:07Z'
+  support: supports
+  summary: All target fields and generated history were read.
+  snapshot_sha256: a52c635630077a391160742c533af7e5fb0eaaf2f5c5da7779e9d66b203eb243
+- evidence_id: ERULE
+  kind: authority
+  reference: docs/CURATION.md
+  locator: Hosts, anatomy, strict broader hierarchy and input ownership
+  accessed_at: '2026-10-15T06:26:07Z'
+  support: supports
+  summary: Anatomy may identify a microbial site; host taxa are not environment identities;
+    every parent must be strictly broader.
+  snapshot_sha256: f3f5d3d033fa7e7c1d78571959fc2e62e0b0a625f47dba1413657e8cf944b322
+- evidence_id: ESCHEMA
+  kind: authority
+  reference: src/habitatmech/schema/habitatmech.yaml
+  locator: SourceAttestation.mapping_predicate and taxon fields
+  accessed_at: '2026-10-15T06:26:07Z'
+  support: supports
+  summary: Mapping endpoint is the emitted record; association metrics and characteristic
+    flags are separate.
+  snapshot_sha256: 7e3cda3dadb9c7462498e5014bf38ef730068212f8f9cb131e3fce383c21d10e
+- evidence_id: ESEED
+  kind: record_content
+  reference: src/habitatmech/seed.py
+  locator: resolve_gold, resolve_bacdive, ingest_prego, apply_decision and apply_curated_definitions
+  accessed_at: '2026-10-15T06:26:07Z'
+  support: supports
+  summary: 'All contributing native resolution routes executed with complete claimant
+    and mapping pools; final identifier/status/predicate agree: [{"automatic": {"category":
+    null, "contributes_grounding": true, "decision": null, "extra_parents": [], "extra_xrefs":
+    [], "grounding_status": "CLOSE", "identifier": "ENVO:01000890", "mapping_predicate":
+    "skos:closeMatch", "reviewed": false, "route": "bacdive_mapping_table"}, "final":
+    {"category": null, "contributes_grounding": true, "decision": {"category": "",
+    "curator": "claude-opus-5", "date": "2026-08-13", "decision": "REVIEW", "grounding_status":
+    "", "identifier": "habitatmech:BACDIVE.6946e653a5", "notes": "Multi-source review
+    pass: this record is attested by more than one independent vocabulary, and this
+    source''s label or path was read against the record''s ontology term to check
+    the merge is right. It agrees. Source concepts in the same pass whose labels did
+    not agree were re-decided rather than endorsed; see the pass''s other decisions
+    of the same date.", "object_id": "", "object_label": "", "relation": "parent",
+    "review_depth": "ITEM"}, "extra_parents": [], "extra_xrefs": [], "grounding_status":
+    "CLOSE", "identifier": "ENVO:01000890", "mapping_predicate": "skos:closeMatch",
+    "reviewed": true, "route": "curated_review_of_bacdive_mapping_table"}, "mint":
+    "habitatmech:BACDIVE.6946e653a5", "source": "BACDIVE"}, {"automatic": {"category":
+    null, "contributes_grounding": true, "decision": null, "extra_parents": [], "extra_xrefs":
+    [], "grounding_status": "CLOSE", "identifier": "ENVO:01000890", "mapping_predicate":
+    "skos:closeMatch", "reviewed": false, "route": "gold_mapping_table"}, "final":
+    {"category": null, "contributes_grounding": true, "decision": {"category": "",
+    "curator": "claude-opus-5", "date": "2026-08-13", "decision": "REVIEW", "grounding_status":
+    "", "identifier": "habitatmech:GOLD.82644ed4d2", "notes": "Multi-source review
+    pass: this record is attested by more than one independent vocabulary, and this
+    source''s label or path was read against the record''s ontology term to check
+    the merge is right. It agrees. Source concepts in the same pass whose labels did
+    not agree were re-decided rather than endorsed; see the pass''s other decisions
+    of the same date.", "object_id": "", "object_label": "", "relation": "parent",
+    "review_depth": "ITEM"}, "extra_parents": [], "extra_xrefs": [], "grounding_status":
+    "CLOSE", "identifier": "ENVO:01000890", "mapping_predicate": "skos:closeMatch",
+    "reviewed": true, "route": "curated_review_of_gold_mapping_table"}, "mint": "habitatmech:GOLD.82644ed4d2",
+    "source": "GOLD"}]'
+  snapshot_sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
+- evidence_id: ET4
+  kind: database
+  reference: data/raw/gold_ecosystem_paths.tsv
+  locator: TSV rows 2508
+  accessed_at: '2026-10-15T06:26:07Z'
+  support: supports
+  summary: '[{"data": {"biosample_count": "0", "canonical_path": "Host-associated
+    > Plants > Bryophytes > Moss", "depth": "4", "ecosystem": "Host-associated", "ecosystem_category":
+    "Plants", "ecosystem_subtype": "Moss", "ecosystem_type": "Bryophytes", "gold_node_count":
+    "2", "gold_node_ids": "gold.ecosystem:8110|gold.ecosystem:8111", "leaf_label":
+    "Moss", "organism_count": "0", "specific_ecosystem": "", "study_count": "0", "total_assertions":
+    "0"}, "row": 2508}]'
+  snapshot_sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+- evidence_id: ET5
+  kind: database
+  reference: data/raw/bacdive_source_taxa.tsv
+  locator: TSV rows 1913,1914,1915,1916,1917,1918,1919,1920,1921,1922,1923,1924,1925,1926,1927,1928,1929,1930,1931,1932,1933,1934,1935,1936,1937
+  accessed_at: '2026-10-15T06:26:07Z'
+  support: supports
+  summary: '[{"data": {"bacdive_id": "bacdive.isolation_source:moss", "corroborated_by":
+    "", "rank": "1", "strain_count": "10", "taxon_id": "NCBITaxon:420952", "taxon_label":
+    "Paraburkholderia bryophila"}, "row": 1913}, {"data": {"bacdive_id": "bacdive.isolation_source:moss",
+    "corroborated_by": "", "rank": "2", "strain_count": "4", "taxon_id": "NCBITaxon:184914",
+    "taxon_label": "Corallococcus coralloides"}, "row": 1914}, {"data": {"bacdive_id":
+    "bacdive.isolation_source:moss", "corroborated_by": "", "rank": "3", "strain_count":
+    "4", "taxon_id": "NCBITaxon:409", "taxon_label": "Methylobacterium sp."}, "row":
+    1915}, {"data": {"bacdive_id": "bacdive.isolation_source:moss", "corroborated_by":
+    "", "rank": "4", "strain_count": "3", "taxon_id": "NCBITaxon:420953", "taxon_label":
+    "Paraburkholderia megapolitana"}, "row": 1916}, {"data": {"bacdive_id": "bacdive.isolation_source:moss",
+    "corroborated_by": "", "rank": "5", "strain_count": "2", "taxon_id": "NCBITaxon:1872627",
+    "taxon_label": "Archangium sp."}, "row": 1917}, {"data": {"bacdive_id": "bacdive.isolation_source:moss",
+    "corroborated_by": "", "rank": "6", "strain_count": "2", "taxon_id": "NCBITaxon:33",
+    "taxon_label": "Myxococcus fulvus"}, "row": 1918}, {"data": {"bacdive_id": "bacdive.isolation_source:moss",
+    "corroborated_by": "", "rank": "7", "strain_count": "2", "taxon_id": "NCBITaxon:83456",
+    "taxon_label": "Myxococcus virescens"}, "row": 1919}, {"data": {"bacdive_id":
+    "bacdive.isolation_source:moss", "corroborated_by": "", "rank": "8", "strain_count":
+    "1", "taxon_id": "NCBITaxon:1071679", "taxon_label": "Caballeronia grimmiae"},
+    "row": 1920}, {"data": {"bacdive_id": "bacdive.isolation_source:moss", "corroborated_by":
+    "", "rank": "9", "strain_count": "1", "taxon_id": "NCBITaxon:1123255", "taxon_label":
+    "Simplicispira psychrophila DSM 11588"}, "row": 1921}, {"data": {"bacdive_id":
+    "bacdive.isolation_source:moss", "corroborated_by": "", "rank": "10", "strain_count":
+    "1", "taxon_id": "NCBITaxon:1176176", "taxon_label": "Methylobacterium haplocladii"},
+    "row": 1922}, {"data": {"bacdive_id": "bacdive.isolation_source:moss", "corroborated_by":
+    "", "rank": "11", "strain_count": "1", "taxon_id": "NCBITaxon:1176177", "taxon_label":
+    "Methylobacterium brachythecii"}, "row": 1923}, {"data": {"bacdive_id": "bacdive.isolation_source:moss",
+    "corroborated_by": "", "rank": "12", "strain_count": "1", "taxon_id": "NCBITaxon:1302685",
+    "taxon_label": "Chryseobacterium takakiae"}, "row": 1924}, {"data": {"bacdive_id":
+    "bacdive.isolation_source:moss", "corroborated_by": "", "rank": "13", "strain_count":
+    "1", "taxon_id": "NCBITaxon:1302687", "taxon_label": "Chryseobacterium polytrichastri"},
+    "row": 1925}, {"data": {"bacdive_id": "bacdive.isolation_source:moss", "corroborated_by":
+    "", "rank": "14", "strain_count": "1", "taxon_id": "NCBITaxon:1302689", "taxon_label":
+    "Mucilaginibacter polytrichastri"}, "row": 1926}, {"data": {"bacdive_id": "bacdive.isolation_source:moss",
+    "corroborated_by": "", "rank": "15", "strain_count": "1", "taxon_id": "NCBITaxon:1302690",
+    "taxon_label": "Cnuella takakiae"}, "row": 1927}, {"data": {"bacdive_id": "bacdive.isolation_source:moss",
+    "corroborated_by": "", "rank": "16", "strain_count": "1", "taxon_id": "NCBITaxon:1307457",
+    "taxon_label": "Kineosporia mikuniensis JCM 9961"}, "row": 1928}, {"data": {"bacdive_id":
+    "bacdive.isolation_source:moss", "corroborated_by": "", "rank": "17", "strain_count":
+    "1", "taxon_id": "NCBITaxon:1387353", "taxon_label": "Paludisphaera borealis"},
+    "row": 1929}, {"data": {"bacdive_id": "bacdive.isolation_source:moss", "corroborated_by":
+    "", "rank": "18", "strain_count": "1", "taxon_id": "NCBITaxon:1436133", "taxon_label":
+    "Actinacidiphila bryophytorum"}, "row": 1930}, {"data": {"bacdive_id": "bacdive.isolation_source:moss",
+    "corroborated_by": "", "rank": "19", "strain_count": "1", "taxon_id": "NCBITaxon:1460882",
+    "taxon_label": "Microbispora bryophytorum"}, "row": 1931}, {"data": {"bacdive_id":
+    "bacdive.isolation_source:moss", "corroborated_by": "", "rank": "20", "strain_count":
+    "1", "taxon_id": "NCBITaxon:1490222", "taxon_label": "Actinoallomurus bryophytorum"},
+    "row": 1932}, {"data": {"bacdive_id": "bacdive.isolation_source:moss", "corroborated_by":
+    "", "rank": "21", "strain_count": "1", "taxon_id": "NCBITaxon:1577474", "taxon_label":
+    "Raineyella antarctica"}, "row": 1933}, {"data": {"bacdive_id": "bacdive.isolation_source:moss",
+    "corroborated_by": "", "rank": "22", "strain_count": "1", "taxon_id": "NCBITaxon:1612308",
+    "taxon_label": "Methylocapsa palsarum"}, "row": 1934}, {"data": {"bacdive_id":
+    "bacdive.isolation_source:moss", "corroborated_by": "", "rank": "23", "strain_count":
+    "1", "taxon_id": "NCBITaxon:1619308", "taxon_label": "Cnuibacter physcomitrellae"},
+    "row": 1935}, {"data": {"bacdive_id": "bacdive.isolation_source:moss", "corroborated_by":
+    "", "rank": "24", "strain_count": "1", "taxon_id": "NCBITaxon:1619309", "taxon_label":
+    "Paenibacillus herberti"}, "row": 1936}, {"data": {"bacdive_id": "bacdive.isolation_source:moss",
+    "corroborated_by": "", "rank": "25", "strain_count": "1", "taxon_id": "NCBITaxon:1619310",
+    "taxon_label": "Paenibacillus marchantiophytorum"}, "row": 1937}]'
+  snapshot_sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+- evidence_id: ET6
+  kind: database
+  reference: data/raw/isolation_source_groundings.tsv
+  locator: TSV rows 206
+  accessed_at: '2026-10-15T06:26:07Z'
+  support: supports
+  summary: '[{"data": {"confidence": "medium", "curator": "ols4_auto", "mapping_justification":
+    "semapv:LexicalMatching", "object_id": "ENVO:01000890", "object_label": "area
+    of moss-dominated vegetation", "object_source": "ENVO", "predicate_id": "skos:closeMatch",
+    "source_dataset": "bacdive", "subject_label": "Moss", "subject_label_normalized":
+    "moss", "verified_date": "2026-05-01"}, "row": 206}]'
+  snapshot_sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+- evidence_id: ET7
+  kind: database
+  reference: data/raw/bacdive_isolation_sources.tsv
+  locator: TSV rows 89
+  accessed_at: '2026-10-15T06:26:07Z'
+  support: supports
+  summary: '[{"data": {"bacdive_id": "bacdive.isolation_source:moss", "label": "Moss",
+    "source_slug": "moss", "strain_count": "59", "taxon_count": "39"}, "row": 89}]'
+  snapshot_sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+- evidence_id: ET8
+  kind: database
+  reference: data/raw/ontology_subclass_edges.tsv
+  locator: TSV rows 6676,7153
+  accessed_at: '2026-10-15T06:26:07Z'
+  support: supports
+  summary: '[{"data": {"object": "ENVO:01001305", "predicate": "rdfs:subClassOf",
+    "subject": "ENVO:01000890"}, "row": 6676}, {"data": {"object": "ENVO:01001199",
+    "predicate": "rdfs:subClassOf", "subject": "ENVO:01001305"}, "row": 7153}]'
+  snapshot_sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+- evidence_id: ET9
+  kind: database
+  reference: data/raw/ontology_terms.tsv
+  locator: TSV rows 8379,8793
+  accessed_at: '2026-10-15T06:26:07Z'
+  support: supports
+  summary: '[{"data": {"definition": "An area of a planet''s surface which is primarily
+    covered by mosses and which is in contact with an atmospheric column extending
+    from the planetary boundary layer to the planet''s exosphere with little to no
+    physical obstruction.", "deprecated": "", "directly_referenced": "TRUE", "label":
+    "area of moss-dominated vegetation", "label_only": "FALSE", "ontology": "ENVO",
+    "synonyms": "", "term_id": "ENVO:01000890"}, "row": 8379}, {"data": {"definition":
+    "A vegetated area is a geographic feature which has ground cover dominated by
+    plant communities.", "deprecated": "", "directly_referenced": "FALSE", "label":
+    "vegetated area", "label_only": "FALSE", "ontology": "ENVO", "synonyms": "", "term_id":
+    "ENVO:01001305"}, "row": 8793}]'
+  snapshot_sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+- evidence_id: ET10
+  kind: database
+  reference: curation/decisions.tsv
+  locator: TSV rows 52,778
+  accessed_at: '2026-10-15T06:26:07Z'
+  support: supports
+  summary: '[{"data": {"category": "", "curator": "claude-opus-5", "date": "2026-08-13",
+    "decision": "REVIEW", "grounding_status": "", "identifier": "habitatmech:BACDIVE.6946e653a5",
+    "notes": "Multi-source review pass: this record is attested by more than one independent
+    vocabulary, and this source''s label or path was read against the record''s ontology
+    term to check the merge is right. It agrees. Source concepts in the same pass
+    whose labels did not agree were re-decided rather than endorsed; see the pass''s
+    other decisions of the same date.", "object_id": "", "object_label": "", "relation":
+    "", "review_depth": "ITEM"}, "row": 52}, {"data": {"category": "", "curator":
+    "claude-opus-5", "date": "2026-08-13", "decision": "REVIEW", "grounding_status":
+    "", "identifier": "habitatmech:GOLD.82644ed4d2", "notes": "Multi-source review
+    pass: this record is attested by more than one independent vocabulary, and this
+    source''s label or path was read against the record''s ontology term to check
+    the merge is right. It agrees. Source concepts in the same pass whose labels did
+    not agree were re-decided rather than endorsed; see the pass''s other decisions
+    of the same date.", "object_id": "", "object_label": "", "relation": "", "review_depth":
+    "ITEM"}, "row": 778}]'
+  snapshot_sha256: ca42d86b6040df1c0c6e6ed36573bb51975a5e8daade262113bce547f1b6fd8b
+- evidence_id: EP11
+  kind: record_content
+  reference: data/habitats/host_associated/bryophytes.yaml
+  locator: Direct-parent identity, definition, parent and source fields
+  accessed_at: '2026-10-15T06:26:07Z'
+  support: supports
+  summary: 'Inspected parent meaning: {"grounding_status": "UNGROUNDED", "identifier":
+    "habitatmech:GOLD.35beb98884", "label": "Bryophytes", "parent_habitats": ["ENVO:01001001"],
+    "source_attestations": [{"notes": "3 GOLD ecosystem node ids share this path;
+    first shown. See data/raw/gold_ecosystem_paths.tsv.", "source": "GOLD", "source_id":
+    "gold.ecosystem:8107", "source_label": "Bryophytes", "source_path": "Host-associated
+    > Plants > Bryophytes"}]}'
+  snapshot_sha256: 1824dccd4cb9689fcdd6cadb71ebf018d950f0ea7195ffb013ec863bdf6d3b90
+- evidence_id: EX1
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_01000890
+  locator: Target term or typed outgoing relations; primary abstract; exact strain
+    identity and isolation-source fields as described
+  accessed_at: '2026-10-15T06:17:59Z'
+  support: supports
+  summary: Active authoritative ENVO:01000890 area of moss-dominated vegetation; definition
+    and typed scope compared with the frozen source and local parent meaning. Obsolete=False.
+  snapshot_sha256: b022e87eb04051e83848be543d6f38403b8ce7539fc58752c2321a1863d62d4e
+- evidence_id: EX2
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_01000890/graph
+  locator: Target term or typed outgoing relations; primary abstract; exact strain
+    identity and isolation-source fields as described
+  accessed_at: '2026-10-15T06:18:00Z'
+  support: supports
+  summary: 'Inspected typed outgoing relations: [{"label": "subClassOf", "source":
+    "http://purl.obolibrary.org/obo/ENVO_01000890", "target": "http://purl.obolibrary.org/obo/ENVO_01001305",
+    "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf"}, {"label": "adjacent
+    to", "source": "http://purl.obolibrary.org/obo/ENVO_01000890", "target": "http://purl.obolibrary.org/obo/ENVO_01000323",
+    "uri": "http://purl.obolibrary.org/obo/RO_0002220"}]. Partonomy and connectivity
+    remain distinct from subclassing.'
+  snapshot_sha256: b4d87b7eab280d73bb592f41cbb98a5d83ca7b4970b05bdfdf66d4528ca5bbb8
+- evidence_id: EX3
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_01001305
+  locator: Target term or typed outgoing relations; primary abstract; exact strain
+    identity and isolation-source fields as described
+  accessed_at: '2026-10-15T06:18:05Z'
+  support: supports
+  summary: Active authoritative ENVO:01001305 vegetated area; definition and typed
+    scope compared with the frozen source and local parent meaning. Obsolete=False.
+  snapshot_sha256: 347adcbc48b52ec39881cc0713816b632d1c90e70459fb95e42a4a7154f1b8c4
+- evidence_id: EX4
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=1006155,1042321,1044,1071679,108028,109472,1114878,1121336,1121355,1121467,1122146,1122599,1123255,1130046,1176176,1176177,119224,1206817,1210932,1216006,1235440,1260928,1278303,1278307,1278309,1278310,1278312,1302685,1302687,1302689,1302690,1307457,131112,1324766,1336234,1346,137733,138563,1387353,1411316,1423,1436133,1460882,1490222,156892,1577474,157842,1612308,1619308,1619309,1619310,1799789,1834927,1843580,1843581,184914,1862160,1869227,1871086,1872412,1872627,1872635,1873466,1965234,2108,269621,269666,33,34,395087,409,420952,420953,53344,53364,83456&retmode=xml
+  locator: Target term or typed outgoing relations; primary abstract; exact strain
+    identity and isolation-source fields as described
+  accessed_at: '2026-10-15T06:19:30Z'
+  support: supports
+  summary: 'All 25 retained taxon IDs resolve directly with matching preferred names:
+    [{"direct_name_match": true, "id": "NCBITaxon:420952", "label": "Paraburkholderia
+    bryophila", "rank": "species"}, {"direct_name_match": true, "id": "NCBITaxon:184914",
+    "label": "Corallococcus coralloides", "rank": "species"}, {"direct_name_match":
+    true, "id": "NCBITaxon:409", "label": "Methylobacterium sp.", "rank": "species"},
+    {"direct_name_match": true, "id": "NCBITaxon:420953", "label": "Paraburkholderia
+    megapolitana", "rank": "species"}, {"direct_name_match": true, "id": "NCBITaxon:1872627",
+    "label": "Archangium sp.", "rank": "species"}, {"direct_name_match": true, "id":
+    "NCBITaxon:33", "label": "Myxococcus fulvus", "rank": "species"}, {"direct_name_match":
+    true, "id": "NCBITaxon:83456", "label": "Myxococcus virescens", "rank": "species"},
+    {"direct_name_match": true, "id": "NCBITaxon:1071679", "label": "Caballeronia
+    grimmiae", "rank": "species"}, {"direct_name_match": true, "id": "NCBITaxon:1123255",
+    "label": "Simplicispira psychrophila DSM 11588", "rank": "strain"}, {"direct_name_match":
+    true, "id": "NCBITaxon:1176176", "label": "Methylobacterium haplocladii", "rank":
+    "species"}, {"direct_name_match": true, "id": "NCBITaxon:1176177", "label": "Methylobacterium
+    brachythecii", "rank": "species"}, {"direct_name_match": true, "id": "NCBITaxon:1302685",
+    "label": "Chryseobacterium takakiae", "rank": "species"}, {"direct_name_match":
+    true, "id": "NCBITaxon:1302687", "label": "Chryseobacterium polytrichastri", "rank":
+    "species"}, {"direct_name_match": true, "id": "NCBITaxon:1302689", "label": "Mucilaginibacter
+    polytrichastri", "rank": "species"}, {"direct_name_match": true, "id": "NCBITaxon:1302690",
+    "label": "Cnuella takakiae", "rank": "species"}, {"direct_name_match": true, "id":
+    "NCBITaxon:1307457", "label": "Kineosporia mikuniensis JCM 9961", "rank": "strain"},
+    {"direct_name_match": true, "id": "NCBITaxon:1387353", "label": "Paludisphaera
+    borealis", "rank": "species"}, {"direct_name_match": true, "id": "NCBITaxon:1436133",
+    "label": "Actinacidiphila bryophytorum", "rank": "species"}, {"direct_name_match":
+    true, "id": "NCBITaxon:1460882", "label": "Microbispora bryophytorum", "rank":
+    "species"}, {"direct_name_match": true, "id": "NCBITaxon:1490222", "label": "Actinoallomurus
+    bryophytorum", "rank": "species"}, {"direct_name_match": true, "id": "NCBITaxon:1577474",
+    "label": "Raineyella antarctica", "rank": "species"}, {"direct_name_match": true,
+    "id": "NCBITaxon:1612308", "label": "Methylocapsa palsarum", "rank": "species"},
+    {"direct_name_match": true, "id": "NCBITaxon:1619308", "label": "Cnuibacter physcomitrellae",
+    "rank": "species"}, {"direct_name_match": true, "id": "NCBITaxon:1619309", "label":
+    "Paenibacillus herberti", "rank": "species"}, {"direct_name_match": true, "id":
+    "NCBITaxon:1619310", "label": "Paenibacillus marchantiophytorum", "rank": "species"}]'
+  snapshot_sha256: 74da4de2673092fd0e7d34e23be448eb9bd1ff410a532286c0fbfd597d0fc88e
+- evidence_id: EX5
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:17911288%20AND%20SRC:MED&format=json&resultType=core
+  locator: Target term or typed outgoing relations; primary abstract; exact strain
+    identity and isolation-source fields as described
+  accessed_at: '2026-10-15T06:21:13Z'
+  support: supports
+  summary: The primary description distinguishes moss-gametophyte isolates and their
+    named host species from other soil isolates; A3 = LMG23650 = CCUG53006 came from
+    Aulacomnium palustre. Verified PMID 17911288 and DOI 10.1099/ijs.0.65142-0.
+  snapshot_sha256: fbcb91c5a80b88df83669f202c4f4960703aabdfc7fdb7e832a4041423c89371
+- evidence_id: EX6
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:26155771%20AND%20SRC:MED&format=json&resultType=core
+  locator: Target term or typed outgoing relations; primary abstract; exact strain
+    identity and isolation-source fields as described
+  accessed_at: '2026-10-15T06:21:12Z'
+  support: supports
+  summary: The primary description identifies R33 = DSM29849 = CGMCC1.15042 as an
+    endophyte recovered from Herbertus sendtneri. Verified PMID 26155771 and DOI 10.1007/s10482-015-0514-3.
+  snapshot_sha256: f81ed9e0f52468111c4158be2f12b23d9ffd9245baf81321d179eecce5ec7cc1
+- evidence_id: EX7
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:26597860%20AND%20SRC:MED&format=json&resultType=core
+  locator: Target term or typed outgoing relations; primary abstract; exact strain
+    identity and isolation-source fields as described
+  accessed_at: '2026-10-15T06:21:13Z'
+  support: supports
+  summary: The primary description explicitly identifies R55 = DSM29850 = CGMCC1.15043
+    as isolated from the liverwort Herbertus sendtneri, not a moss. Verified PMID
+    26597860 and DOI 10.1099/ijsem.0.000789.
+  snapshot_sha256: fea68f9f1d6f382e4e151cf893deb0957f246897ceca01aa0c18b2e2263478de
+- evidence_id: EX8
+  kind: authority
+  reference: https://bacdive.dsmz.de/strain/1979
+  locator: Target term or typed outgoing relations; primary abstract; exact strain
+    identity and isolation-source fields as described
+  accessed_at: '2026-10-15T06:21:16Z'
+  support: supports
+  summary: Exact A3/DSM23488/LMG23650 entry gives Aulacomnium palustre isolation,
+    a moss-host witness rather than a landscape-area identity.
+  snapshot_sha256: 0e377ae73a30e2d6d63cca1173117a18cfe50d3a7b152ab9ae634d7995846e5e
+- evidence_id: EX9
+  kind: authority
+  reference: https://bacdive.dsmz.de/strain/131388
+  locator: Target term or typed outgoing relations; primary abstract; exact strain
+    identity and isolation-source fields as described
+  accessed_at: '2026-10-15T06:21:16Z'
+  support: supports
+  summary: Exact R33/DSM29849/CGMCC1.15042 entry carries Moss categorization while
+    identifying Herbertus sendtneri as the source.
+  snapshot_sha256: d6794f83d87beabbd21b3ec86c8bc86a126d8a9b9e25196d3c15ece1de6c2cb3
+- evidence_id: EX10
+  kind: authority
+  reference: https://bacdive.dsmz.de/strain/132390
+  locator: Target term or typed outgoing relations; primary abstract; exact strain
+    identity and isolation-source fields as described
+  accessed_at: '2026-10-15T06:21:17Z'
+  support: supports
+  summary: Exact R55/DSM29850/CGMCC1.15043 entry identifies a surface-disinfected
+    liverwort while retaining Moss categorization.
+  snapshot_sha256: 6b695aeed3fb21fa8fab494c3df5b83bc5a7d03b618f157bfc3a54f804ff2187
+- evidence_id: ESEARCH
+  kind: search
+  reference: Local scientific-input and saved-review traversal
+  locator: rg --no-ignore --hidden -l -F -e ENVO:01000890 -e 'area of moss-dominated
+    vegetation' -e area_of_moss_dominated_vegetation -e habitatmech:BACDIVE.6946e653a5
+    -e habitatmech:GOLD.82644ed4d2 curation history research reports data/raw build
+    reviews
+  accessed_at: '2026-10-15T06:17:29Z'
+  support: context_only
+  summary: Ignored-inclusive source ID/label/slug search plus exact parsed table matches
+    and complete structured-target traversal. No structured predecessor targets this
+    record.
+  search_scope: Hidden and ignored files included under curation, history, research,
+    reports, data/raw, build and reviews; all structured review.yaml files traversed
+    irrespective of gitignore. Not a global absence or original-member claim.
+assessments:
+- assessment_id: A1
+  area: schema
+  topic: Native structural and reproduction checks
+  outcome: supported
+  summary: 'Recorded gates passed: schema, strict sixteen-target validation, 746 history
+    records, exact 3,208-record reproduction, 32 causal graphs and 110 term requests.
+    These are not scientific proof.'
+  target_ids:
+  - ENVO:01000890
+  evidence_ids:
+  - E1
+  - ERULE
+- assessment_id: A2
+  area: identity
+  topic: Habitat identity and full source scope
+  outcome: concern
+  summary: 'Blocker: GOLD moss-host and BacDive moss-bin evidence have been adopted
+    as a planetary vegetation-area identity. CLOSE does not undo that identifier-level
+    conflation. The BacDive bin also includes exact liverwort isolates, so simply
+    renaming the merged record to a moss-only host environment would retain a second
+    scope error.'
+  target_ids:
+  - ENVO:01000890
+  evidence_ids:
+  - E1
+  - ERULE
+  - ESEED
+  - EX1
+  - EX2
+  - EX3
+  - EX4
+  - EX5
+  - EX6
+  - EX7
+  - EX8
+  - EX9
+  - EX10
+- assessment_id: A3
+  area: quantity
+  topic: Source counts, units and retained taxon observations
+  outcome: supported
+  summary: 'Exact contributing source rows, emitted counts/units, taxon labels/ranks
+    and source scores were compared. [{"source": "BACDIVE", "count": 59, "unit": "STRAIN"},
+    {"source": "GOLD", "count": 0, "unit": "ORGANISM"}]. 25 retained taxon IDs match
+    current NCBI names. Zero counts are omitted, and later bulk biosamples/studies
+    are not added to frozen ORGANISM counts. Source pools are not prevalence denominators.'
+  target_ids:
+  - ENVO:01000890
+  evidence_ids:
+  - E1
+  - ESEED
+  - ESEARCH
+  - EX1
+  - EX2
+  - EX3
+  - EX4
+  - EX5
+  - EX6
+  - EX7
+  - EX8
+  - EX9
+  - EX10
+- assessment_id: A4
+  area: completeness
+  topic: Parameters, causal claims and optional evidence
+  outcome: not_applicable
+  summary: No target causal graph, environmental-parameter, mechanism or characteristic-presence
+    assertion requires expansion. No absent optional field is populated for coverage.
+    Parent-record mechanisms are not inherited as evidence for this target.
+  target_ids:
+  - ENVO:01000890
+  evidence_ids:
+  - E1
+findings:
+- finding_id: F1
+  issue_key: area-of-moss-dominated-vegetation-moss-host-landscape-identity
+  category: identity
+  severity: blocker
+  status: open
+  certainty: confirmed
+  title: Moss source bins are conflated with a planetary vegetation area
+  description: 'Re-decide both source keys independently. Reject ENVO:01000890 as
+    host-site identity, but do not merge all BacDive associations into a moss-only
+    habitat: R33 and R55 are exact liverwort witnesses. Preserve source totals and
+    distinct GOLD scope; a governed split or association qualification must audit
+    descendants, definitions, aliases and retired URLs before regeneration.'
+  target_ids:
+  - ENVO:01000890
+  field_paths:
+  - identifier
+  - definition
+  - source_attestations
+  - parent_habitats
+  - characteristic_taxa
+  evidence_ids:
+  - E1
+  - ERULE
+  - ESEED
+  - EX1
+  - EX2
+  - EX3
+  - EX4
+  - EX5
+  - EX6
+  - EX7
+  - EX8
+  - EX9
+  - EX10
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained curation input or generator
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained curation input or generator
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Maintained curation input or generator
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained curation input or generator
+  - repository: CultureBotAI/HabitatMech
+    path: data/habitats/PATHS.tsv
+    role: Maintained curation input or generator
+  rule_id: docs/CURATION.md and native record-review checklist
+  native_severity: blocker
+  normalization_reason: Material semantic claim unsupported by the inspected source
+    scope; deterministic validity is insufficient.
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1346
+actions:
+- action_id: ACT1
+  finding_ids:
+  - F1
+  target_ids:
+  - ENVO:01000890
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained curation input or generator
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained curation input or generator
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Maintained curation input or generator
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained curation input or generator
+  - repository: CultureBotAI/HabitatMech
+    path: data/habitats/PATHS.tsv
+    role: Maintained curation input or generator
+  description: 'Re-decide both source keys independently. Reject ENVO:01000890 as
+    host-site identity, but do not merge all BacDive associations into a moss-only
+    habitat: R33 and R55 are exact liverwort witnesses. Preserve source totals and
+    distinct GOLD scope; a governed split or association qualification must audit
+    descendants, definitions, aliases and retired URLs before regeneration. Use maintained
+    owners, not generated YAML edits.'
+  generator: just seed; inspect just seed-canary; just seed-apply; supported semantic
+    map, term-request, site and redirect regeneration when inputs change
+  acceptance_checks:
+  - Regress the exact target and preserve independently valid source identities, counts/units,
+    taxa, status and parents.
+  - Append session history; run strict schema, history, provenance, reproduction,
+    configured label and full QC gates.
+  - Save a successor with exact finding lineage; do not rewrite this observation or
+    claim broader export conformance.
+limitations:
+- Frozen source-bin membership is not a complete audit of original specimens. Only
+  the exact external source witnesses described here were independently inspected.
+- Taxon associations are observational. PREGO score and BacDive strain counts do not
+  prove prevalence, mechanism or characteristic presence.
+- The configured label gate skipped 2,061 no-adapter pairs. Ontology semantics and
+  retained taxon identities were separately assessed.
+- The full archive and just qc are publication gates to run after saving; these pre-fix
+  observations do not claim their future results.
+- Historical reports and history prose are search leads, not independent approval.
+  Historical neighboring claims and every legacy citation were not re-reviewed.
+- 'iModulonDB is not applicable: these targets assert no gene, regulator or transcriptomic
+  mechanism. No paid research was used.'
+notes:
+- All captured local input bytes were rechecked unchanged against the working tree
+  and exact Git blobs.
+- Ignored-inclusive structured archive traversal found no earlier structured review
+  targeting this record. Historical reports and GitHub issues are retained as contextual
+  leads.
+- This is a pre-fix observation; separately authorized curation requires new successor
+  observations.
+tags:
+- individual-scientific-review
+- host-associated
+```
