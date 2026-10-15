@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: trachea__4ac9ebc1
+session:
+  id: 2026-10-15T011335Z-codex-gpt-5-f549be
+  timestamp: '2026-10-15T01:13:35Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/293
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  - synonyms
+  summary: Repair reviewed airway or host-name scope for trachea__4ac9ebc1
+  details: 'ITEM anatomy correction #293: this insect respiratory branch denotes an open-system
+    tracheal airway, not the vertebrate windpipe UBERON:0003126 selected by an ambiguous bare
+    label. UBERON:0003127 is a respiratory airway part of an open tracheal system and supplies
+    a broader genus without claiming all invertebrate tracheae are this insect-qualified source.
+    Retain the mint and source path; do not equate its dilated insect air-sac child with bird
+    air sacs or impose the tubular insect-trachea candidate UBERON:6005043 on that child.
+    The whole respiratory system is a container and is separately excluded. Shared mapping
+    endpoint issue #1398 remains unresolved. https://purl.obolibrary.org/obo/UBERON_0003127
+    Path: Host-associated > Arthropoda: Insects > Respiratory system > Trachea Exact five-record
+    full-corpus counterfactual passed. Dry seed passed; native canaries, corpus/site/map regeneration
+    and protected final QC remain required, not predeclared successful. No raw inventories
+    or committed immutable review/history bytes are changed.'

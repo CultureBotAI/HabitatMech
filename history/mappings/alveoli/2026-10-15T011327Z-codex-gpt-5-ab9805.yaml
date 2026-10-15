@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: alveoli
+session:
+  id: 2026-10-15T011327Z-codex-gpt-5-ab9805
+  timestamp: '2026-10-15T01:13:27Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1315
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  - synonyms
+  summary: Repair reviewed airway or host-name scope for alveoli
+  details: 'Scoped anatomy correction #1315 (20261015T005517Z-alveoli-record F1): a pulmonary
+    alveolus is part of a lung, not a subtype of the whole mammal lung. Current typed UBERON:0002299
+    distinguishes subclass alveolus from part_of lung. Exclude only the immediate source-container
+    contribution. Preserve minted identity, UBERON:0002299 parent, node/path, zero ORGANISM
+    omission and NARROW/SEEDED status; later BioSample totals do not replace frozen organism
+    assertions. Mapping endpoint issue #1398 remains open. https://purl.obolibrary.org/obo/UBERON_0002299
+    Exact five-record full-corpus counterfactual passed. Dry seed passed; native canaries,
+    corpus/site/map regeneration and protected final QC remain required, not predeclared successful.
+    No raw inventories or committed immutable review/history bytes are changed.'
