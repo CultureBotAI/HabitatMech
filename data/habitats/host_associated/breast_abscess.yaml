@@ -3,8 +3,6 @@ label: Breast abscess
 habitat_category: HOST_ASSOCIATED
 grounding_status: NOT_APPLICABLE
 mapping_status: REVIEWED
-parent_habitats:
-- habitatmech:GOLD.89cf14e129
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6322
@@ -25,3 +23,13 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NOT_APPLICABLE.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.89cf14e129
+    for habitatmech:GOLD.0e7950bba4 (Host-associated > Mammals: Human > Integumentary
+    system > Mammary gland > Breast abscess). Review https://github.com/CultureBotAI/HabitatMech/issues/2190
+    : A component, cell or lesion is not a subtype of its whole containing organ or
+    system. Exclude only this exact GOLD contribution; retain independent genera,
+    source observations and native status. This does not settle source-material scope
+    or mapping endpoint #1398.'
