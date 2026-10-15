@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - UBERON:0005928
-- habitatmech:GOLD.bcb2f8b7f3
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6091
@@ -20,3 +19,14 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.bcb2f8b7f3
+    for habitatmech:GOLD.cdc9731b44 (Host-associated > Mammals: Human > Respiratory
+    system > Nasal cavity > Anterior nares). Scientific review #1334: The human external
+    opening is not a subtype of the nasal cavity it connects. Suppress only this exact
+    immediate GOLD context contribution; preserve independent ontology parents, source
+    ID/path/count/unit, identity and native status. Primary typed ontology and source
+    evidence is recorded in the immutable individual review. Shared endpoint #1398
+    and abscess-disposition #220 are separate findings.'

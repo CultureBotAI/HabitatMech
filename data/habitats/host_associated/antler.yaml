@@ -11,8 +11,6 @@ synonyms:
 - synonym_text: Antlers
   synonym_type: EXACT_SYNONYM
   source: GOLD
-parent_habitats:
-- habitatmech:GOLD.56e0776270
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6728
@@ -31,3 +29,14 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.56e0776270
+    for habitatmech:GOLD.30303e874d (Host-associated > Mammals > Integumentary system
+    > Antlers). Scientific review #1337: A deciduous bony appendage is not a whole
+    integumentary system. Suppress only this exact immediate GOLD context contribution;
+    preserve independent ontology parents, source ID/path/count/unit, identity and
+    native status. Primary typed ontology and source evidence is recorded in the immutable
+    individual review. Shared endpoint #1398 and abscess-disposition #220 are separate
+    findings.'

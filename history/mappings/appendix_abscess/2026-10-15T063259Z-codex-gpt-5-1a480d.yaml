@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: appendix_abscess
+session:
+  id: 2026-10-15T063259Z-codex-gpt-5-1a480d
+  timestamp: '2026-10-15T06:32:59Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1327
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed parent_habitats claim for appendix_abscess
+  details: Neither a disease descriptor nor a localized purulent collection is a subtype of
+    the whole large intestine. Added exact source-path and expected-parent guards; retained
+    other parents and original source metadata. The complete-corpus counterfactual regression
+    passed; canary, generated product and full publication gates are subsequent checks, not
+    claimed here as completed.
