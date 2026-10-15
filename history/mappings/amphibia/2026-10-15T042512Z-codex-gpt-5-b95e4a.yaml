@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: amphibia
+session:
+  id: 2026-10-15T042512Z-codex-gpt-5-b95e4a
+  timestamp: '2026-10-15T04:25:12Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2157
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - synonyms
+  summary: Remove host-taxon exact alias from amphibia environment
+  details: Cleared only the authored exact synonym. NCBI identifies the old alias as the host
+    taxon, not the associated environment. The matching taxon-xref decision prevents fallback
+    from restoring it. Existing definition/date/curator/notes and generated DEFINED event
+    are unchanged; this new session attributes the synonym correction. The focused corpus-scope
+    regression passed (1 test), and the seeder dry run preserved all 3,208 identities. Full
+    publication QC, canary inspection and generated-product checks follow; this history does
+    not claim their future result.

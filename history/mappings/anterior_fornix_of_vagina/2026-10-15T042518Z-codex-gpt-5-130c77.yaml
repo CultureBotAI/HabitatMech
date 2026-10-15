@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/record_annotation_corrections.tsv
+  slug: anterior_fornix_of_vagina
+session:
+  id: 2026-10-15T042518Z-codex-gpt-5-130c77
+  timestamp: '2026-10-15T04:25:18Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2158
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - synonyms
+  summary: Restore broad scope of imported anterior fornix synonym
+  details: 'Uberon 2026-10-01 exact target stanza marks anterior fornix BROAD. Guarded correction
+    preserves the two exact aliases, GOLD RELATED alias and full-path-supported CLOSE identity.
+    Shared extraction issue #1249 remains open. The focused corpus-scope regression passed
+    (1 test), and the seeder dry run preserved all 3,208 identities. Full publication QC,
+    canary inspection and generated-product checks follow; this history does not claim their
+    future result.'

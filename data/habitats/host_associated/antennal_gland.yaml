@@ -15,7 +15,6 @@ synonyms:
   source: UBERON
 parent_habitats:
 - UBERON:0009962
-- habitatmech:GOLD.d0a97e09fe
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7330
@@ -38,3 +37,13 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.d0a97e09fe
+    for habitatmech:GOLD.cb3fda7227 (Host-associated > Arthropoda: Crustaceans > Excretory
+    system > Antennal/Green glands). Scientific review #1328: antennal gland is an
+    excretory gland; the gland is part_of excretory system, not a subtype of the whole
+    system. Exclude only this GOLD contribution. Preserve UBERON:0009963 identity,
+    UBERON:0009962 superclass, both source nodes 7330/7331, zero-count omission and
+    EXACT/REVIEWED state. Do not expand crustacean scope to insects. https://purl.obolibrary.org/obo/UBERON_0009963'

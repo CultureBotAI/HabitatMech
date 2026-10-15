@@ -49,10 +49,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 </table>
 </div>
 
-<h2>Broader habitats</h2>
-<ul class="plain">
-  <li><a href="../habitats/large-intestine-habitatmech-gold-5b0aa7456c.html">Large intestine</a>      <code class="curie">habitatmech:GOLD.5b0aa7456c</code></li>
-</ul>
 
 
 
@@ -66,6 +62,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">NOT_APPLICABLE</span>
     <span class="meta">2026-08-12 · claude-opus-5</span>
     <p>Marked NOT_APPLICABLE: the source concept does not denote a habitat. &#39;Anorectal abscess&#39; names a disease, an intervention, a sampling artefact or a no-value filler rather than a place. Pulled out of the class-level sweep and decided individually. (source concept habitatmech:GOLD.aaf13396b6)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-15 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.5b0aa7456c for habitatmech:GOLD.aaf13396b6 (Host-associated &gt; Mammals: Human &gt; Digestive system &gt; Large intestine &gt; Anorectal abscess). Scientific review #1327: an excluded source or a localized purulent lesion is not a subtype of whole large intestine under either interpretation. MeSH abscess and HP:0033150 support the localized-collection distinction, not a replacement habitat identity. Exclude only this context parent; preserve node 6341, three ORGANISM assertions, full path and current disposition. Source-specific disease-versus-site issue #220 remains open. <a href="https://id.nlm.nih.gov/mesh/M0000059.json" rel="noopener noreferrer" target="_blank">https://id.nlm.nih.gov/mesh/M0000059.json</a></p>
   </li>
 </ol>
 

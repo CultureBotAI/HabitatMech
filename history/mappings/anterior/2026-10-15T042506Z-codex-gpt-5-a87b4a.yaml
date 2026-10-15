@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: anterior
+session:
+  id: 2026-10-15T042506Z-codex-gpt-5-a87b4a
+  timestamp: '2026-10-15T04:25:06Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1331
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude unsupported GOLD context parent for anterior
+  details: An anterior region of an insect hindgut is not a subtype of the whole hindgut.
+    Added an exact source-path and expected-parent guard; preserved original source fields
+    and independent valid ontology parents. The focused corpus-scope regression passed (1
+    test), and the seeder dry run preserved all 3,208 identities. Full publication QC, canary
+    inspection and generated-product checks follow; this history does not claim their future
+    result.

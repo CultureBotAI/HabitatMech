@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: anterior_chamber
+session:
+  id: 2026-10-15T050035Z-codex-gpt-5-06460b
+  timestamp: '2026-10-15T05:00:35Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2159
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - notes
+  summary: Use publication URL in anterior-chamber decision note
+  details: CI run 38682928036 classified PMID:30564048 in the decision note as an ontology
+    identifier. Following the established citation convention in issues 1868 and 1884, replace
+    only that spelling with https://pubmed.ncbi.nlm.nih.gov/30564048/. The inspected paper,
+    DOI, scientific decision, scope and all finding dispositions are unchanged. No validator
+    or ontology inventory is modified. Regeneration, semantic-input equality, focused tests
+    and full CI follow; this entry does not claim their future results.

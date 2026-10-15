@@ -3,8 +3,6 @@ label: Anterior
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.50722c7871
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7206
@@ -24,3 +22,14 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.50722c7871
+    for habitatmech:GOLD.9d219f6fdc (Host-associated > Arthropoda: Insects > Digestive
+    system > Hindgut > Anterior). Scientific review #1331: an anterior insect-hindgut
+    region is not a kind of whole hindgut. UBERON:0001046 denotes the complete digestive-tract
+    subdivision; PMID:33355113 dissects a bounded anterior region in dung beetles,
+    not all GOLD specimens. Exclude only this GOLD context contribution; preserve
+    node 7206, full path, zero tree-count omission and CLASS-derived UNGROUNDED/SEEDED
+    status. No replacement genus or universal regional microbiome is asserted. https://pubmed.ncbi.nlm.nih.gov/33355113/'
