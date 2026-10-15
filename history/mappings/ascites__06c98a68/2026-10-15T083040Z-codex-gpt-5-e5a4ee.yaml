@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: ascites__06c98a68
+session:
+  id: 2026-10-15T083040Z-codex-gpt-5-e5a4ee
+  timestamp: '2026-10-15T08:30:40Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1358
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed parent_habitats claim for ascites__06c98a68
+  details: A fluid accumulation is not its containing peritoneal space. The whole-corpus counterfactual
+    regression passed. Canary, regeneration, publication and full CI are subsequent gates,
+    not claimed here as already completed. No native scientific status is promoted.

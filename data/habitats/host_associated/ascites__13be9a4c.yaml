@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - BTO:0000091
-- habitatmech:GOLD.f9f745629a
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5053
@@ -20,3 +19,13 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.f9f745629a
+    for habitatmech:GOLD.b19b7cb64a (Host-associated > Fish > Abdomen > Ascites).
+    Review #1358: A fish fluid accumulation is not a body-region subtype. This extends
+    the separately documented human case. Exclude only the exact immediate GOLD context
+    contribution; preserve independent ontology genera, source identity/path/count/unit,
+    native status and prior history. Typed ontology and primary evidence are retained
+    in the immutable individual review. Shared mapping endpoint #1398 is separate.'

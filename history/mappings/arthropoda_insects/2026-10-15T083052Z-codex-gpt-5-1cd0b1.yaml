@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/definition_source_label_exclusions.tsv
+  slug: arthropoda_insects
+session:
+  id: 2026-10-15T083052Z-codex-gpt-5-1cd0b1
+  timestamp: '2026-10-15T08:30:52Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2162
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - synonyms
+  summary: Correct reviewed synonyms claim for arthropoda_insects
+  details: Remove only the whole-host exact alias and guard old-label fallback; retain valid
+    environment-form aliases and source provenance. The whole-corpus counterfactual regression
+    passed. Canary, regeneration, publication and full CI are subsequent gates, not claimed
+    here as already completed. No native scientific status is promoted.

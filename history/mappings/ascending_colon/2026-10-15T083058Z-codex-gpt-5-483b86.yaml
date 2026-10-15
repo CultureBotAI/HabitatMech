@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/record_annotation_corrections.tsv
+  slug: ascending_colon
+session:
+  id: 2026-10-15T083058Z-codex-gpt-5-483b86
+  timestamp: '2026-10-15T08:30:58Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1249
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - synonyms
+  summary: Correct reviewed synonyms claim for ascending_colon
+  details: Restore spiral colon to the current typed RELATED scope; preserve exact colon ascendens
+    and canonical-label grounding. Global typed extraction remains unresolved. The whole-corpus
+    counterfactual regression passed. Canary, regeneration, publication and full CI are subsequent
+    gates, not claimed here as already completed. No native scientific status is promoted.

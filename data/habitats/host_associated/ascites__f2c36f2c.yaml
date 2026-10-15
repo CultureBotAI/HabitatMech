@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - BTO:0000091
-- UBERON:0003684
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6745
@@ -18,3 +17,13 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution UBERON:0003684 for habitatmech:GOLD.f3fef23d8d
+    (Host-associated > Mammals > Abdominal cavity > Ascites). Review #1358: Accumulated
+    fluid is not an anatomical space. This extends the separately documented human
+    case. Exclude only the exact immediate GOLD context contribution; preserve independent
+    ontology genera, source identity/path/count/unit, native status and prior history.
+    Typed ontology and primary evidence are retained in the immutable individual review.
+    Shared mapping endpoint #1398 is separate.'

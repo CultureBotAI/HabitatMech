@@ -65,9 +65,6 @@ a grounding.</p>
   <li><a href="http://purl.obolibrary.org/obo/NCBITaxon_6656">Arthropoda</a><code class="curie">NCBITaxon:6656</code></li>
 </ul>
 
-<h2>Also called</h2>
-<ul class="plain">
-<li>Arthropoda: Chelicerates <span class="meta">— HabitatMech curation</span></li></ul>
 
 <h2>Curation</h2>
 <p class="meta">What a curator decided about this record, and why. A record built
@@ -82,6 +79,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">DEFINED</span>
     <span class="meta">2026-08-22 · codex-gpt-5</span>
     <p>Defined as &#39;chelicerate-associated environment&#39; under ENVO:01001002 &#39;animal-associated environment&#39;. Definition curated from the committed deep-research report. Parented to animal-associated environment rather than the broader organism-determined root; the existing NCBITaxon:6656 reference is deliberately retained only as a broader taxonomic xref because it denotes all arthropods, not this habitat.</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_SYNONYM_EXCLUDED</span>
+    <span class="meta">2026-10-15 · codex-gpt-5</span>
+    <p>Omitted automatic retention of displaced source label &#39;Arthropoda: Chelicerates&#39; when defining habitatmech:GOLD.44a2cbbd60 as &#39;chelicerate-associated environment&#39;. Verbatim source attestations are preserved. Review #2162: the displaced source label denotes the host, not its associated environment. Remove only that authored exact alias and suppress old-label fallback; preserve environmental definition, genus, valid environment-form synonyms, original source path/label/count/unit, taxonomic xrefs, native status and prior definition history.</p>
   </li>
 </ol>
 
