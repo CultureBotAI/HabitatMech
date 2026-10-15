@@ -12,7 +12,6 @@ synonyms:
   source: ENVO
 parent_habitats:
 - ENVO:01001311
-- habitatmech:GOLD.02383c20a7
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5813
@@ -25,3 +24,13 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.02383c20a7
+    for habitatmech:GOLD.5766ea07fe (Host-associated > Algae > Biocrust). Review https://github.com/CultureBotAI/HabitatMech/issues/2177
+    : Generic biocrust material is not necessarily a living-alga-associated environment;
+    source scope and category remain separately unresolved. Suppress only the exact
+    GOLD context contribution. Preserve independent parents, identity, source path/node/count/unit,
+    taxa, native status and prior history. No source-scope or mapping-endpoint certification
+    is implied.'

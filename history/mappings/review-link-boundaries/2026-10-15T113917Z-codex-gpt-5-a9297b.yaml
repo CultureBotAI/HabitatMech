@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: review-link-boundaries
+session:
+  id: 2026-10-15T113917Z-codex-gpt-5-a9297b
+  timestamp: '2026-10-15T11:39:17Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2179
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  summary: Separate issue URL punctuation in eighteen newly reviewed notes
+  details: 'Adversarial rendered-page inspection found colon-suffixed issue hrefs in fourteen
+    parent-exclusion, two definition-source-label-exclusion and two annotation-correction
+    notes. The publication regression reproduced the failure before correction. Insert only
+    whitespace before those colons in the three maintained TSV owners, then regenerate the
+    fifteen affected targets and pages. Preserve all scientific fields, prior immutable reviews
+    and session history. Whole-record and semantic-input comparisons and native validation
+    are subsequent publication gates; the shared renderer issue #2046 is not closed.'
