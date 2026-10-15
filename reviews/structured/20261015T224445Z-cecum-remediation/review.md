@@ -1,0 +1,1610 @@
+# Remediation review: cecum
+
+- Review: 20261015T224445Z-cecum-remediation
+- Repository: CultureBotAI/HabitatMech
+- Started UTC: 2026-10-15T22:25:05Z
+- Finished UTC: 2026-10-15T22:44:45Z
+- Reviewer: codex-gpt-5 (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Excluded only the exact GOLD containing-anatomy contribution habitatmech:GOLD.c336fb0bb7; independent valid genera and source paths remain. Separated the molluscan GOLD source into habitatmech:GOLD.37d9cdc188. The original BTO:0000166 record now contains only its PREGO source, with the same 549-taxon pool and unchanged displayed taxa. No replacement ontology identity is invented. The superseding ITEM decision carries the complete Cecum/Intestinal cecum path, current attribution and date. The old decision remains in Git and the regression fixture; immutable review/session files are not rewritten. Generated history is a current-input projection, not the append-only session archive. Original source observations, counts, units and taxa are preserved. No unresolved predecessor finding remains within this scope; biological evidence limits still apply.
+
+## Scope And Provenance
+
+Full regenerated target assessment and explicit disposition of every predecessor finding; identity replacement or source split includes all affected current identities and the retired predecessor.
+
+Selection: One of fifteen repaired baseline targets in the 24-record carcinoid-through-cecum cohort; no new cohort sampling.
+Coverage: full; 2 reviewed / 2 in the declared population.
+Source: git_commit at Git base b5659e0d8bed801c41745839d9a2b69095aa9f4e.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| BTO:0000166 | data/habitats/host_associated/cecum.yaml | generated | cecum |
+| habitatmech:GOLD.37d9cdc188 | data/habitats/host_associated/cecum_intestinal_cecum.yaml | generated | Cecum/Intestinal cecum |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| just validate data/habitats/host_associated/cecum.yaml | passed | True | BTO:0000166, habitatmech:GOLD.37d9cdc188 | Executed 2026-10-15T21:45:25Z through 2026-10-15T21:45:28Z. No issues found<br> uv run linkml-validate -s src/habitatmech/schema/habitatmech.yaml --target-class HabitatRecord data/habitats/host_associated/cecum.yaml |
+| just validate data/habitats/host_associated/cecum_intestinal_cecum.yaml | passed | True | BTO:0000166, habitatmech:GOLD.37d9cdc188 | Executed 2026-10-15T21:45:30Z through 2026-10-15T21:45:33Z. No issues found<br> uv run linkml-validate -s src/habitatmech/schema/habitatmech.yaml --target-class HabitatRecord data/habitats/host_associated/cecum_intestinal_cecum.yaml |
+| just validate-strict data/habitats/host_associated/carcinoid.yaml data/habitats/host_associated/carcinoma.yaml data/habitats/host_associated/carcinoma_cell.yaml data/habitats/host_associated/carcinosarcoma.yaml data/habitats/host_associated/cardiac_atrium.yaml data/habitats/host_associated/cardiac_septum.yaml data/habitats/host_associated/cardiac_skeleton.yaml data/habitats/host_associated/cardiac_stomach.yaml data/habitats/host_associated/cardiovascular_system.yaml data/habitats/host_associated/carposphere.yaml data/habitats/host_associated/cartilage.yaml data/habitats/host_associated/cartilage__bd8c407c.yaml data/habitats/host_associated/cartilage__c54322c6.yaml data/habitats/host_associated/caryopsis.yaml data/habitats/host_associated/caski.yaml data/habitats/host_associated/catarrh.yaml data/habitats/host_associated/catarrh__1e78e51c.yaml data/habitats/host_associated/caulosphere.yaml data/habitats/host_associated/ceca.yaml data/habitats/host_associated/ceca__2f9665ca.yaml data/habitats/host_associated/ceca__d15faa5d.yaml data/habitats/host_associated/cecotropes_night_fecs.yaml data/habitats/host_associated/cecum.yaml data/habitats/host_associated/cecum__79e270ae.yaml data/habitats/host_associated/cecum_intestinal_cecum.yaml | passed | True | BTO:0000166, habitatmech:GOLD.37d9cdc188 | Executed 2026-10-15T21:45:33Z through 2026-10-15T21:45:42Z. uv run python scripts/validate_strict.py data/habitats/host_associated/carcinoid.yaml data/habitats/host_associated/carcinoma.yaml data/habitats/host_associated/carcinoma_cell.yaml data/habitats/host_associated/carcinosarcoma.yaml data/habitats/host_associated/cardiac_atrium.yaml data/habitats/host_associated/cardiac_septum.yaml data/habitats/host_associated/cardiac_skeleton.yaml data/habitats/host_associated/cardiac_stomach.yaml data/habitats/host_associated/cardiovascular_system.yaml data/habitats/host_associated/carposphere.yaml data/habitats/host_associated/cartilage.yaml data/habitats/host_associated/cartilage__bd8c407c.yaml data/habitats/host_associated/cartilage__c54322c6.yaml data/habitats/host_associated/caryopsis.yaml data/habitats/host_associated/caski.yaml data/habitats/host_associated/catarrh.yaml data/habitats/host_associated/catarrh__1e78e51c.yaml data/habitats/host_associated/caulosphere.yaml data/habitats/host_associated/ceca.yaml data/habitats/host_associated/ceca__2f9665ca.yaml data/habitats/host_associated/ceca__d15faa5d.yaml data/habitats/host_associated/cecotropes_night_fecs.yaml data/habitats/host_associated/cecum.yaml data/habitats/host_associated/cecum__79e270ae.yaml data/habitats/host_associated/cecum_intestinal_cecum.yaml<br>Validating 25 files with 15 workers; schema=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/src/habitatmech/schema/habitatmech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      25<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                reports/instance_validation_failures.tsv |
+| just validate-history | passed | True | BTO:0000166, habitatmech:GOLD.37d9cdc188 | Executed 2026-10-15T21:45:43Z through 2026-10-15T21:45:53Z. No issues found<br>828 history record(s) valid against src/habitatmech/schema/history.yaml |
+| just provenance-check | passed | True | BTO:0000166, habitatmech:GOLD.37d9cdc188 | Executed 2026-10-15T21:45:53Z through 2026-10-15T21:45:54Z. provenance current: 14 committed inventories, 2 GOLD sources<br> uv run python scripts/check_provenance.py |
+| just verify-corpus | passed | True | BTO:0000166, habitatmech:GOLD.37d9cdc188 | Executed 2026-10-15T21:45:54Z through 2026-10-15T21:46:11Z. expected 3209 records, found 3209 on disk<br>  missing:   0<br>  extra:     0<br>  differing: 0<br><br>corpus reproduces exactly from data/raw/<br> uv run python scripts/verify_corpus.py |
+| just validate-causal-all | passed | True | BTO:0000166, habitatmech:GOLD.37d9cdc188 | Executed 2026-10-15T21:46:11Z through 2026-10-15T21:46:15Z. validated 32 causal-graph curation file(s) with 32 graph(s)<br> uv run python scripts/validate_causal_graph_curations.py |
+| just term-requests-check | passed | True | BTO:0000166, habitatmech:GOLD.37d9cdc188 | Executed 2026-10-15T21:46:15Z through 2026-10-15T21:46:38Z. term-request table is current (110 terms)<br> uv run python scripts/build_term_requests.py --check |
+| just validate-products | passed | True | BTO:0000166, habitatmech:GOLD.37d9cdc188 | Executed 2026-10-15T21:46:38Z through 2026-10-15T21:47:36Z. id↔label correspondence summary:<br>          OK_CANONICAL: 1173<br>            OK_SYNONYM: 1<br>          OK_EXCEPTION: 5<br>    SKIPPED_NO_ADAPTER: 2063<br><br>✅ All id↔label pairs correspond.<br> uv run python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/.venv/bin/python -m pytest -q tests/test_cardiac_cartilage_cecum_review_repairs.py | passed | True | BTO:0000166, habitatmech:GOLD.37d9cdc188 | Executed 2026-10-15T21:47:36Z through 2026-10-15T21:47:44Z. ..                                                                       [100%]<br>2 passed in 6.45s |
+| git diff --check 62952fb7cdf223af9d1ffbf1cc2f556b22f7ee6b | passed | True | BTO:0000166, habitatmech:GOLD.37d9cdc188 | Executed 2026-10-15T21:47:44Z through 2026-10-15T21:47:44Z.  |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/.venv/bin/python -m pytest -q tests/test_cardiac_cartilage_cecum_review_repairs.py | passed | True | BTO:0000166, habitatmech:GOLD.37d9cdc188 | Executed 2026-10-15T21:58:55Z through 2026-10-15T21:59:03Z. ..                                                                       [100%]<br>2 passed in 6.82s |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/.venv/bin/python -m pytest -q tests/test_decisions.py tests/test_cardiac_cartilage_cecum_review_repairs.py | passed | True | BTO:0000166, habitatmech:GOLD.37d9cdc188 | Executed 2026-10-15T22:16:03Z through 2026-10-15T22:19:46Z. ........................................................................ [100%]<br>72 passed in 221.76s (0:03:41) |
+| just lint | passed | True | BTO:0000166, habitatmech:GOLD.37d9cdc188 | Executed 2026-10-15T22:19:50Z through 2026-10-15T22:19:51Z. All checks passed!<br> uv run ruff check  . |
+| just validate-strict data/habitats/host_associated/cardiac_stomach.yaml data/habitats/host_associated/ceca__2f9665ca.yaml data/habitats/host_associated/cecum_intestinal_cecum.yaml | passed | True | BTO:0000166, habitatmech:GOLD.37d9cdc188 | Executed 2026-10-15T22:19:51Z through 2026-10-15T22:19:58Z. uv run python scripts/validate_strict.py data/habitats/host_associated/cardiac_stomach.yaml data/habitats/host_associated/ceca__2f9665ca.yaml data/habitats/host_associated/cecum_intestinal_cecum.yaml<br>Validating 3 files with 15 workers; schema=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/src/habitatmech/schema/habitatmech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      3<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                reports/instance_validation_failures.tsv |
+| just validate-history | passed | True | BTO:0000166, habitatmech:GOLD.37d9cdc188 | Executed 2026-10-15T22:19:58Z through 2026-10-15T22:20:11Z. No issues found<br>829 history record(s) valid against src/habitatmech/schema/history.yaml |
+| just verify-corpus | passed | True | BTO:0000166, habitatmech:GOLD.37d9cdc188 | Executed 2026-10-15T22:20:11Z through 2026-10-15T22:20:40Z. expected 3209 records, found 3209 on disk<br>  missing:   0<br>  extra:     0<br>  differing: 0<br><br>corpus reproduces exactly from data/raw/<br> uv run python scripts/verify_corpus.py |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/.venv/bin/python scripts/embedding_pipeline.py check --output data/text_map --input /private/tmp/habitatmech-review-cn-20261015-citation-map-inputs.jsonl --cache build/review-cn-map/download/build/text-map/vectors.sqlite | passed | True | BTO:0000166, habitatmech:GOLD.37d9cdc188 | Executed 2026-10-15T22:20:40Z through 2026-10-15T22:20:43Z. {<br>  "coverage": {<br>    "displayed": 3209,<br>    "eligible": 3209,<br>    "maximum": 50000,<br>    "omitted": 0,<br>    "selection": "bottom-k-sha256(seed,identifier)",<br>    "total": 3209<br>  },<br>  "encoder": {<br>    "dimension": 1024,<br>    "dtype": "float32-le",<br>    "format_version": 1,<br>    "inference_device": "cpu",<br>    "library_versions": {<br>      "numpy": "2.3.5",<br>      "sentence-transformers": "6.0.0",<br>      "tokenizers": "0.23.2",<br>      "torch": "2.14.0",<br>      "transformers": "5.17.0"<br>    },<br>    "max_seq_length": 512,<br>    "model": "BAAI/bge-large-en-v1.5",<br>    "normalized": true,<br>    "pooling": "sentence-transformers-model",<br>    "query_instruction": null,<br>    "revision": "d4aa6901d3a41ba39fb536a557fa166f842b0e09",<br>    "truncation": "tail",<br>    "weight_dtype": "torch.float32"<br>  },<br>  "encoder_profile_sha256": "15d9788b0f2912b22721f35398583eddad76f135f66de223319930f9d6013c6f",<br>  "files": {<br>    "index.html": "9af3cd50170b152332bde16c94f94e2d461b947dc07f03701dd288e9e66e0176",<br>    "points.json": "5f7c46b8701863a95b2021e4745ceaed5819e24c19dc522e052228d27ee7f22e"<br>  },<br>  "format_version": 1,<br>  "generated_at_utc": "2026-10-15T21:47:31.472391+00:00",<br>  "inputs": {<br>    "adapter_version": "habitatmech-semantic-v1",<br>    "categories": {<br>      "AIR": 7,<br>      "AQUATIC": 468,<br>      "CLINICAL": 4,<br>      "ENGINEERED": 488,<br>      "FOOD": 59,<br>      "HOST_ASSOCIATED": 1651,<br>      "OTHER": 179,<br>      "TERRESTRIAL": 353<br>    },<br>    "corpus_sha256": "9d77fbd6ae91b5b9403004cc4d0320a245ff4bb563c35547436ccb1a7ef431c8",<br>    "count": 3209,<br>    "input_sha256": "2e8d2ce36bbfede1123feb802a5653ae86926c2c83d924ef70ce3245c9018d5f",<br>    "records_sha256": "6f1e9d175eeb857b0fc52ea2ea3e98a617b9995baf321b0ffbeb77978eb0f024"<br>  },<br>  "projection": {<br>    "FP_ratio": 2.0,<br>    "MN_ratio": 0.5,<br>    "apply_pca": true,<br>    "dimensions": 2,<br>    "distance": "euclidean",<br>    "effective_pairs": {<br>      "further": 30,<br>      "mid_near": 8,<br>      "neighbors": 15<br>    },<br>    "implementation": "pacmap.PaCMAP",<br>    "initialization": "pca",<br>    "iterations": [<br>      100,<br>      100,<br>      250<br>    ],<br>    "knn_backend": "faiss",<br>    "learning_rate": 1.0,<br>    "library_versions": {<br>      "faiss-cpu": "1.15.0",<br>      "numba": "0.63.1",<br>      "numpy": "2.3.5",<br>      "pacmap": "0.9.1",<br>      "scikit-learn": "1.8.0"<br>    },<br>    "method": "pacmap",<br>    "neighbors": 15,<br>    "requested_neighbors": 15,<br>    "seed": 42<br>  },<br>  "representation": "semantic-text",<br>  "source_vectors": {<br>    "dtype": "float32-le",<br>    "order": "points.json",<br>    "sha256": "2fcf746746be1500ba74869a480d83a616377bc2ddff79fc354d4af39f8fefd5",<br>    "shape": [<br>      3209,<br>      1024<br>    ],<br>    "storage": "local-profile-bound-cache"<br>  }<br>} |
+| /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/.venv/bin/python scripts/render_pages.py --check | passed | True | BTO:0000166, habitatmech:GOLD.37d9cdc188 | Executed 2026-10-15T22:20:43Z through 2026-10-15T22:21:37Z. rendered 3209 habitat pages, 259 redirect stubs, 8 categories, 129 term requests -&gt; /var/folders/lm/hg0p5znd1hd5yc5lml35j6lh0000gn/T/tmpf4m4_epj/site<br>pages/ is in step with the corpus |
+| git diff --check 62952fb7cdf223af9d1ffbf1cc2f556b22f7ee6b | passed | True | BTO:0000166, habitatmech:GOLD.37d9cdc188 | Executed 2026-10-15T22:21:37Z through 2026-10-15T22:21:38Z.  |
+| Exact-revision full QC and structured archive contract | passed | True | BTO:0000166, habitatmech:GOLD.37d9cdc188 | Verified 2026-10-15T22:43:10Z https://github.com/CultureBotAI/HabitatMech/actions/runs/38816416003 |
+
+## Scientific And Domain Assessments
+
+### Correction and preservation
+
+consistency: supported. Targets: BTO:0000166, habitatmech:GOLD.37d9cdc188.
+
+Excluded only the exact GOLD containing-anatomy contribution habitatmech:GOLD.c336fb0bb7; independent valid genera and source paths remain. Separated the molluscan GOLD source into habitatmech:GOLD.37d9cdc188. The original BTO:0000166 record now contains only its PREGO source, with the same 549-taxon pool and unchanged displayed taxa. No replacement ontology identity is invented. The superseding ITEM decision carries the complete Cecum/Intestinal cecum path, current attribution and date. The old decision remains in Git and the regression fixture; immutable review/session files are not rewritten. Generated history is a current-input projection, not the append-only session archive. Original source observations, counts, units and taxa are preserved. No unresolved predecessor finding remains within this scope; biological evidence limits still apply.
+
+### Current identities, definition scope and strict ancestry
+
+identity: supported. Targets: BTO:0000166, habitatmech:GOLD.37d9cdc188.
+
+BTO:0000166: cecum, EXACT/REVIEWED, parents []. habitatmech:GOLD.37d9cdc188: Cecum/Intestinal cecum, UNGROUNDED/REVIEWED, parents []. The bounded source identity is retained without inventing a missing genus or optional definition.
+
+### Frozen source counts, units, scores and taxa
+
+quantity: supported. Targets: BTO:0000166, habitatmech:GOLD.37d9cdc188.
+
+Source-specific nonadditive observations are retained. The split does not duplicate PREGO associations onto the new molluscan record. [[{"source": "PREGO", "source_id": "BTO:0000166", "source_label": "cecum", "assertion_count": 549, "assertion_unit": "TAXON", "score": 4.0, "evidence_channels": "annotated_genomes_isolates&#124;environmental_samples"}], [{"source": "GOLD", "source_id": "gold.ecosystem:7832", "source_label": "Cecum/Intestinal cecum", "source_path": "Host-associated &gt; Mollusca &gt; Digestive system &gt; Hindgut &gt; Cecum/Intestinal cecum"}]]
+
+### Exact predecessor lineage and remaining findings
+
+representation: supported. Targets: BTO:0000166, habitatmech:GOLD.37d9cdc188.
+
+Every predecessor finding and affected target identity is retained. This scoped review does not certify exports.
+
+## Findings
+
+### F1: Containing anatomy is emitted as a broader habitat class
+
+major / resolved / confirmed; issue key: cecum-context-parent.
+
+Corrected through maintained inputs and native regeneration. Excluded only the exact GOLD containing-anatomy contribution habitatmech:GOLD.c336fb0bb7; independent valid genera and source paths remain.
+
+Disposition: Excluded only the exact GOLD containing-anatomy contribution habitatmech:GOLD.c336fb0bb7; independent valid genera and source paths remain.
+
+### F2: Molluscan cecum is merged into incompatible large-intestinal anatomy
+
+blocker / resolved / confirmed; issue key: cecum-molluscan-vertebrate-cecum-merge.
+
+Corrected through maintained inputs and native regeneration. Separated the molluscan GOLD source into habitatmech:GOLD.37d9cdc188. The original BTO:0000166 record now contains only its PREGO source, with the same 549-taxon pool and unchanged displayed taxa. No replacement ontology identity is invented.
+
+Disposition: Separated the molluscan GOLD source into habitatmech:GOLD.37d9cdc188. The original BTO:0000166 record now contains only its PREGO source, with the same 549-taxon pool and unchanged displayed taxa. No replacement ontology identity is invented.
+
+### F3: Maintained grounding note truncates the source name
+
+minor / resolved / confirmed; issue key: cecum-decision-note-truncated-path.
+
+Corrected through maintained inputs and native regeneration. The superseding ITEM decision carries the complete Cecum/Intestinal cecum path, current attribution and date. The old decision remains in Git and the regression fixture; immutable review/session files are not rewritten. Generated history is a current-input projection, not the append-only session archive.
+
+Disposition: The superseding ITEM decision carries the complete Cecum/Intestinal cecum path, current attribution and date. The old decision remains in Git and the regression fixture; immutable review/session files are not rewritten. Generated history is a current-input projection, not the append-only session archive.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+- split: BTO:0000166, habitatmech:GOLD.37d9cdc188. The prior mixed record conflated incompatible source anatomy; retain PREGO BTO identity and a separate molluscan GOLD mint without copying observations.
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| EX1 | https://www.ebi.ac.uk/ols4/api/ontologies/bto/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FBTO_0000166/graph; BTO_0000166-graph.json | context_only | Typed outgoing ontology edges: [{"source": "http://purl.obolibrary.org/obo/BTO_0000166", "target": "http://purl.obolibrary.org/obo/BTO_0000706", "uri": "http://purl.obolibrary.org/obo/BFO_0000050", "label": "part of"}, {"source": "http://purl.obolibrary.org/obo/BTO_0000166", "target": "http://purl.obolibrary.org/obo/BTO_0002273", "uri": "http://purl.obolibrary.org/obo/BFO_0000050", "label": "part of"}] |
+| EX2 | https://www.ebi.ac.uk/ols4/api/ontologies/bto/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FBTO_0000166; BTO_0000166.json | context_only | Current term identity, active status and definition: {"obo_id": "BTO:0000166", "label": "cecum", "is_obsolete": false, "description": ["The first part of the large intestine, forming a dilated pouch into which open the ileum, colon, and appendix vermiformis."]} |
+| EX3 | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11413930/fullTextXML; PMC11413930.xml | context_only | PMID:39140156, DOI:10.1242/bio.060429. Octopus maya dissection methods inspected: digestive juice was obtained in the region between distal cecum and crop, with separate digestive-gland sampling. This is a bounded nonvertebrate anatomical witness, not identification of the particular GOLD mollusc or a proposed replacement ontology term. |
+| EX4 | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8879827/fullTextXML; PMC8879827.xml | context_only | PMID:35208748, DOI:10.3390/microorganisms10020293. PREGO methods 2.3 and source-channel/score paragraphs inspected. BioProject-associated abstract mining yields score-three associations; genomic metadata and environmental channels have different scoring. The source channel and score are not proof of direct localization, characteristic presence or prevalence. This does not establish the exact extraction route of any individual retained pair. |
+| EX5 | https://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FUBERON_0001046/graph; UBERON_0001046-graph.json | context_only | Typed outgoing ontology edges: [{"source": "http://purl.obolibrary.org/obo/UBERON_0001046", "target": "http://purl.obolibrary.org/obo/UBERON_0004921", "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf", "label": "subClassOf"}, {"source": "http://purl.obolibrary.org/obo/UBERON_0001046", "target": "http://purl.obolibrary.org/obo/RO_0002577", "uri": "http://purl.obolibrary.org/obo/BFO_0000050", "label": "part of"}, {"source": "http://purl.obolibrary.org/obo/UBERON_0001046", "target": "http://purl.obolibrary.org/obo/UBERON_0001045", "uri": "http://purl.obolibrary.org/obo/uberon/core#proximally_connected_to", "label": "proximally connected to"}, {"source": "http://purl.obolibrary.org/obo/UBERON_0001046", "target": "http://purl.obolibrary.org/obo/UBERON_0003104", "uri": "http://purl.obolibrary.org/obo/RO_0002202", "label": "develops from"}] |
+| EX6 | https://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FUBERON_0001046; UBERON_0001046.json | context_only | Current term identity, active status and definition: {"obo_id": "UBERON:0001046", "label": "hindgut", "is_obsolete": false, "description": ["The caudalmost subdivision of a digestive tract."]} |
+| EX7 | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=100176,100883,102106,102234,1032526,1091138,109326,1117,113286,1150864,117563,118747,119852,1249,1253,1263,1265,1266,1268,1269,1276220,1276221,1279,1280,1282,128827,1296,1300,1329250&amp;retmode=xml; taxonomy.xml | context_only | Current NCBI identities and source-label comparisons: [{"id": "NCBITaxon:100176", "source": "PREGO", "label": "Papillibacter cinnamivorans", "current_id": "100176", "current_name": "Papillibacter cinnamivorans", "rank": "species", "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:100883", "source": "PREGO", "label": "Coprobacillus", "current_id": "100883", "current_name": "Coprobacillus", "rank": "genus", "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:102106", "source": "PREGO", "label": "Collinsella", "current_id": "102106", "current_name": "Collinsella", "rank": "genus", "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:102234", "source": "PREGO", "label": "Cyanobacterium", "current_id": "102234", "current_name": "Cyanobacterium", "rank": "genus", "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:1032526", "source": "PREGO", "label": "Pedosphaera", "current_id": "1032526", "current_name": "Pedosphaera", "rank": "genus", "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:1091138", "source": "PREGO", "label": null, "current_id": "1091138", "current_name": "Lawsonia", "rank": "genus", "direct_match": false, "recognized_alias": false}, {"id": "NCBITaxon:109326", "source": "PREGO", "label": "Anaerovorax", "current_id": "109326", "current_name": "Anaerovorax", "rank": "genus", "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:1117", "source": "PREGO", "label": "Cyanobacteriota", "current_id": "1117", "current_name": "Cyanobacteriota", "rank": "phylum", "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:113286", "source": "PREGO", "label": "Pseudoramibacter", "current_id": "113286", "current_name": "Pseudoramibacter", "rank": "genus", "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:117563", "source": "PREGO", "label": "Granulicatella", "current_id": "117563", "current_name": "Granulicatella", "rank": "genus", "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:118747", "source": "PREGO", "label": "Bulleidia", "current_id": "118747", "current_name": "Bulleidia", "rank": "genus", "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:119852", "source": "PREGO", "label": "Oscillospira", "current_id": "119852", "current_name": "Oscillospira", "rank": "genus", "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:1249", "source": "PREGO", "label": "Weissella paramesenteroides", "current_id": "1249", "current_name": "Weissella paramesenteroides", "rank": "species", "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:1253", "source": "PREGO", "label": "Pediococcus", "current_id": "1253", "current_name": "Pediococcus", "rank": "genus", "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:1263", "source": "PREGO", "label": "Ruminococcus", "current_id": "1263", "current_name": "Ruminococcus", "rank": "genus", "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:1265", "source": "PREGO", "label": "Ruminococcus flavefaciens", "current_id": "1265", "current_name": "Ruminococcus flavefaciens", "rank": "species", "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:1266", "source": "PREGO", "label": "Sarcina", "current_id": "1266", "current_name": "Sarcina", "rank": "genus", "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:1268", "source": "PREGO", "label": "Micrococcaceae", "current_id": "1268", "current_name": "Micrococcaceae", "rank": "family", "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:1269", "source": "PREGO", "label": "Micrococcus", "current_id": "1269", "current_name": "Micrococcus", "rank": "genus", "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:1279", "source": "PREGO", "label": "Staphylococcus", "current_id": "1279", "current_name": "Staphylococcus", "rank": "genus", "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:1280", "source": "PREGO", "label": "Staphylococcus aureus", "current_id": "1280", "current_name": "Staphylococcus aureus", "rank": "species", "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:1282", "source": "PREGO", "label": "Staphylococcus epidermidis", "current_id": "1282", "current_name": "Staphylococcus epidermidis", "rank": "species", "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:128827", "source": "PREGO", "label": "Erysipelotrichaceae", "current_id": "128827", "current_name": "Erysipelotrichaceae", "rank": "family", "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:1296", "source": "PREGO", "label": "Mammaliicoccus sciuri", "current_id": "1296", "current_name": "Mammaliicoccus sciuri", "rank": "species", "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:1300", "source": "PREGO", "label": "Streptococcaceae", "current_id": "1300", "current_name": "Streptococcaceae", "rank": "family", "direct_match": true, "recognized_alias": true}] |
+| EAFTER0 | data/habitats/host_associated/cecum.yaml; Entire regenerated target | supports | {"identifier": "BTO:0000166", "label": "cecum", "definition": "The first part of the large intestine, forming a dilated pouch into which open the ileum, colon, and appendix vermiformis.", "definition_source": "BTO", "habitat_category": "HOST_ASSOCIATED", "grounding_status": "EXACT", "mapping_status": "REVIEWED", "synonyms": [{"synonym_text": "blind intestine", "synonym_type": "RELATED_SYNONYM", "source": "PREGO"}, {"synonym_text": "blind intestines", "synonym_type": "RELATED_SYNONYM", "source": "PREGO"}, {"synonym_text": "blind intestinous", "synonym_type": "RELATED_SYNONYM", "source": "PREGO"}, {"synonym_text": "blindgut", "synonym_type": "RELATED_SYNONYM", "source": "PREGO"}, {"synonym_text": "blindguts", "synonym_type": "RELATED_SYNONYM", "source": "PREGO"}, {"synonym_text": "caeca", "synonym_type": "RELATED_SYNONYM", "source": "PREGO"}, {"synonym_text": "caecal", "synonym_type": "RELATED_SYNONYM", "source": "PREGO"}, {"synonym_text": "caecum", "synonym_type": "RELATED_SYNONYM", "source": "PREGO"}, {"synonym_text": "caecums", "synonym_type": "RELATED_SYNONYM", "source": "PREGO"}, {"synonym_text": "ceca", "synonym_type": "RELATED_SYNONYM", "source": "PREGO"}, {"synonym_text": "cecal", "synonym_type": "RELATED_SYNONYM", "source": "PREGO"}, {"synonym_text": "cecums", "synonym_type": "RELATED_SYNONYM", "source": "PREGO"}, {"synonym_text": "intestinum caeca", "synonym_type": "RELATED_SYNONYM", "source": "PREGO"}, {"synonym_text": "intestinum caecal", "synonym_type": "RELATED_SYNONYM", "source": "PREGO"}, {"synonym_text": "intestinum caecum", "synonym_type": "RELATED_SYNONYM", "source": "PREGO"}, {"synonym_text": "intestinum caecums", "synonym_type": "RELATED_SYNONYM", "source": "PREGO"}, {"synonym_text": "intestinum crassum caeca", "synonym_type": "RELATED_SYNONYM", "source": "PREGO"}, {"synonym_text": "intestinum crassum caecal", "synonym_type": "RELATED_SYNONYM", "source": "PREGO"}, {"synonym_text": "intestinum crassum caecum", "synonym_type": "RELATED_SYNONYM", "source": "PREGO"}, {"synonym_text": "intestinum crassum caecums", "synonym_type": "RELATED_SYNONYM", "source": "PREGO"}, {"synonym_text": "intestinum crassum ceca", "synonym_type": "RELATED_SYNONYM", "source": "PREGO"}, {"synonym_text": "intestinum crassum cecal", "synonym_type": "RELATED_SYNONYM", "source": "PREGO"}, {"synonym_text": "intestinum crassum cecum", "synonym_type": "RELATED_SYNONYM", "source": "PREGO"}, {"synonym_text": "intestinum crassum cecums", "synonym_type": "RELATED_SYNONYM", "source": "PREGO"}], "source_attestations": [{"source": "PREGO", "source_id": "BTO:0000166", "source_label": "cecum", "assertion_count": 549, "assertion_unit": "TAXON", "score": 4.0, "evidence_channels": "annotated_genomes_isolates&#124;environmental_samples"}], "characteristic_taxa": [{"taxon_id": "NCBITaxon:100176", "source": "PREGO", "taxon_label": "Papillibacter cinnamivorans", "score": 4.0, "rank": 1, "candidate_pool": 549}, {"taxon_id": "NCBITaxon:100883", "source": "PREGO", "taxon_label": "Coprobacillus", "score": 4.0, "rank": 2, "candidate_pool": 549}, {"taxon_id": "NCBITaxon:102106", "source": "PREGO", "taxon_label": "Collinsella", "score": 4.0, "rank": 3, "candidate_pool": 549}, {"taxon_id": "NCBITaxon:102234", "source": "PREGO", "taxon_label": "Cyanobacterium", "score": 4.0, "rank": 4, "candidate_pool": 549}, {"taxon_id": "NCBITaxon:1032526", "source": "PREGO", "taxon_label": "Pedosphaera", "score": 4.0, "rank": 5, "candidate_pool": 549}, {"taxon_id": "NCBITaxon:1091138", "source": "PREGO", "score": 4.0, "rank": 6, "candidate_pool": 549}, {"taxon_id": "NCBITaxon:109326", "source": "PREGO", "taxon_label": "Anaerovorax", "score": 4.0, "rank": 7, "candidate_pool": 549}, {"taxon_id": "NCBITaxon:1117", "source": "PREGO", "taxon_label": "Cyanobacteriota", "score": 4.0, "rank": 8, "candidate_pool": 549}, {"taxon_id": "NCBITaxon:113286", "source": "PREGO", "taxon_label": "Pseudoramibacter", "score": 4.0, "rank": 9, "candidate_pool": 549}, {"taxon_id": "NCBITaxon:117563", "source": "PREGO", "taxon_label": "Granulicatella", "score": 4.0, "rank": 10, "candidate_pool": 549}, {"taxon_id": "NCBITaxon:118747", "source": "PREGO", "taxon_label": "Bulleidia", "score": 4.0, "rank": 11, "candidate_pool": 549}, {"taxon_id": "NCBITaxon:119852", "source": "PREGO", "taxon_label": "Oscillospira", "score": 4.0, "rank": 12, "candidate_pool": 549}, {"taxon_id": "NCBITaxon:1249", "source": "PREGO", "taxon_label": "Weissella paramesenteroides", "score": 4.0, "rank": 13, "candidate_pool": 549}, {"taxon_id": "NCBITaxon:1253", "source": "PREGO", "taxon_label": "Pediococcus", "score": 4.0, "rank": 14, "candidate_pool": 549}, {"taxon_id": "NCBITaxon:1263", "source": "PREGO", "taxon_label": "Ruminococcus", "score": 4.0, "rank": 15, "candidate_pool": 549}, {"taxon_id": "NCBITaxon:1265", "source": "PREGO", "taxon_label": "Ruminococcus flavefaciens", "score": 4.0, "rank": 16, "candidate_pool": 549}, {"taxon_id": "NCBITaxon:1266", "source": "PREGO", "taxon_label": "Sarcina", "score": 4.0, "rank": 17, "candidate_pool": 549}, {"taxon_id": "NCBITaxon:1268", "source": "PREGO", "taxon_label": "Micrococcaceae", "score": 4.0, "rank": 18, "candidate_pool": 549}, {"taxon_id": "NCBITaxon:1269", "source": "PREGO", "taxon_label": "Micrococcus", "score": 4.0, "rank": 19, "candidate_pool": 549}, {"taxon_id": "NCBITaxon:1279", "source": "PREGO", "taxon_label": "Staphylococcus", "score": 4.0, "rank": 20, "candidate_pool": 549}, {"taxon_id": "NCBITaxon:1280", "source": "PREGO", "taxon_label": "Staphylococcus aureus", "score": 4.0, "rank": 21, "candidate_pool": 549}, {"taxon_id": "NCBITaxon:1282", "source": "PREGO", "taxon_label": "Staphylococcus epidermidis", "score": 4.0, "rank": 22, "candidate_pool": 549}, {"taxon_id": "NCBITaxon:128827", "source": "PREGO", "taxon_label": "Erysipelotrichaceae", "score": 4.0, "rank": 23, "candidate_pool": 549}, {"taxon_id": "NCBITaxon:1296", "source": "PREGO", "taxon_label": "Mammaliicoccus sciuri", "score": 4.0, "rank": 24, "candidate_pool": 549}, {"taxon_id": "NCBITaxon:1300", "source": "PREGO", "taxon_label": "Streptococcaceae", "score": 4.0, "rank": 25, "candidate_pool": 549}], "curation_history": [{"timestamp": "2026-08-13T00:00:00Z", "curator": "claude-opus-5", "action": "REVIEW", "changes": "Reviewed and endorsed the seeder's own resolution. Multi-source review pass: this record is attested by more than one independent vocabulary, and this source's label or path was read against the record's ontology term to check the merge is right. It agrees. Source concepts in the same pass whose labels did not agree were re-decided rather than endorsed; see the pass's other decisions of the same date. (source concept habitatmech:PREGO.35b3d0b858)"}, {"timestamp": "2026-08-16T05:58:02Z", "curator": "seed_from_sources", "action": "SEEDED_FROM_SOURCES", "changes": "Seeded from data/raw/ inventories; attested by PREGO. Grounding: EXACT."}]} |
+| EAFTER1 | data/habitats/host_associated/cecum_intestinal_cecum.yaml; Entire regenerated target | supports | {"identifier": "habitatmech:GOLD.37d9cdc188", "label": "Cecum/Intestinal cecum", "habitat_category": "HOST_ASSOCIATED", "grounding_status": "UNGROUNDED", "mapping_status": "REVIEWED", "source_attestations": [{"source": "GOLD", "source_id": "gold.ecosystem:7832", "source_label": "Cecum/Intestinal cecum", "source_path": "Host-associated &gt; Mollusca &gt; Digestive system &gt; Hindgut &gt; Cecum/Intestinal cecum"}], "curation_history": [{"timestamp": "2026-08-16T05:58:02Z", "curator": "seed_from_sources", "action": "SEEDED_FROM_SOURCES", "changes": "Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED."}, {"timestamp": "2026-10-15T00:00:00Z", "curator": "codex-gpt-5", "action": "CONFIRM_UNGROUNDED", "changes": "Confirmed UNGROUNDED: no ontology term fits this concept. ITEM reassessment https://github.com/CultureBotAI/HabitatMech/issues/2208 : This molluscan source does not denote the vertebrate ileocecal or large-intestinal anatomy of UBERON:0001153 or BTO:0000166. Current OLS definitions and Uberon taxon notes distinguish invertebrate homonyms; octopus dissection (https://pubmed.ncbi.nlm.nih.gov/39140156/ ; DOI:10.1242/bio.060429) is a bounded anatomical witness, not identification of the exact GOLD specimen. Retain the source mint UNGROUNDED without inventing an alternative genus. Separate only this GOLD source from PREGO BTO:0000166; retain PREGO identity, 549-taxon pool and displayed associations unchanged. This supersedes the 2026-08-12 grounding and its truncated path; the prior decision is preserved in Git, immutable baseline review and the regression fixture. The whole-organ context contribution is excluded under #2206. Path: Host-associated &gt; Mollusca &gt; Digestive system &gt; Hindgut &gt; Cecum/Intestinal cecum (source concept habitatmech:GOLD.37d9cdc188)"}, {"timestamp": "2026-10-15T00:00:00Z", "curator": "codex-gpt-5", "action": "SOURCE_PARENT_EXCLUDED", "changes": "Excluded GOLD source-path parent contribution habitatmech:GOLD.c336fb0bb7 for habitatmech:GOLD.37d9cdc188 (Host-associated &gt; Mollusca &gt; Digestive system &gt; Hindgut &gt; Cecum/Intestinal cecum). Review https://github.com/CultureBotAI/HabitatMech/issues/2206 : This anatomical component or derived material is not a subtype of the containing organ or system. Exclude only the exact GOLD contribution; retain independent valid genera and original source observations. This does not resolve the separate catarrh condition/material scope or shared mapping endpoint #1398."}]} |
+| EPREV | reviews/structured/20261015T212554Z-cecum-record/review.yaml; Exact predecessor, all findings and source evidence | supports | Baseline observation retained byte-identically. Every finding retains its exact predecessor identity and issue key. |
+| ETEST | tests/test_cardiac_cartilage_cecum_review_repairs.py; Full-corpus counterfactual, exact source partition, taxonomy preservation and public URL rendering | supports | Exactly fourteen shared record identities change, one incompatible ontology identity is removed and two minted source identities become records. Entire source-attestation multiset excluding only mapping predicates and all taxon-bearing records remain identical. Other identities remain byte-equivalent as generated documents. |
+| EFIXTURE | tests/data/cardiac_cartilage_cecum_prior_decisions.json; Loader-normalized prior molluscan cecum decision | supports | Earlier effective decision content retained with loader defaults; original bytes remain in the baseline Git revision. |
+| ERULE | docs/CURATION.md; Strict hierarchy, source identity and evidence rules | supports | Containment is not is-a; lexical homonyms do not establish cross-host anatomical equivalence. |
+| EHISTORY | history/README.md; Generated audit trail versus immutable sessions | supports | Superseding a maintained decision regenerates its projection while saved session history and reviews remain append-only. |
+| EI14 | curation/gold_parent_exclusions.tsv; Exact keyed rows 15 | supports | [[15, "habitatmech:GOLD.37d9cdc188\tHost-associated &gt; Mollusca &gt; Digestive system &gt; Hindgut &gt; Cecum/Intestinal cecum\thabitatmech:GOLD.c336fb0bb7\tcodex-gpt-5\t2026-10-15\tReview https://github.com/CultureBotAI/HabitatMech/issues/2206 : This anatomical component or derived material is not a subtype of the containing organ or system. Exclude only the exact GOLD contribution; retain independent valid genera and original source observations. This does not resolve the separate catarrh condition/material scope or shared mapping endpoint #1398."]] |
+| EI15 | curation/decisions.tsv; Exact keyed rows 413 | supports | [[413, "habitatmech:GOLD.37d9cdc188\tCONFIRM_UNGROUNDED\t\t\t\tcodex-gpt-5\t2026-10-15\tITEM reassessment https://github.com/CultureBotAI/HabitatMech/issues/2208 : This molluscan source does not denote the vertebrate ileocecal or large-intestinal anatomy of UBERON:0001153 or BTO:0000166. Current OLS definitions and Uberon taxon notes distinguish invertebrate homonyms; octopus dissection (https://pubmed.ncbi.nlm.nih.gov/39140156/ ; DOI:10.1242/bio.060429) is a bounded anatomical witness, not identification of the exact GOLD specimen. Retain the source mint UNGROUNDED without inventing an alternative genus. Separate only this GOLD source from PREGO BTO:0000166; retain PREGO identity, 549-taxon pool and displayed associations unchanged. This supersedes the 2026-08-12 grounding and its truncated path; the prior decision is preserved in Git, immutable baseline review and the regression fixture. The whole-organ context contribution is excluded under #2206. Path: Host-associated &gt; Mollusca &gt; Digestive system &gt; Hindgut &gt; Cecum/Intestinal cecum\tITEM\t\tparent"]] |
+
+## Limits And Additional Notes
+
+- Individual source specimens and all original pair-level citations have not been independently reconstructed. Counts, ranks and source scores are not prevalence or characteristic presence.
+- iModulonDB is not applicable to target claims: no gene, regulator, expression module or causal mechanism is asserted. Papers mentioning genes are used only for source context. No paid research was used.
+- Original PREGO pair-level exports are unavailable locally. Inspected primary witnesses do not reconstruct every original pair or establish its exact extraction route.
+- Same-agent adversarial review, not independent approval. Original inspected primary-source and specimen-level limits remain; no prevalence, characteristic presence or mechanism is inferred.
+- Configured label validation has no-adapter skips, reported in the actual check result. No all-prefix identity or SSSOM/KGX conformance certification is made.
+- Final-head checks must validate this new immutable successor. Recorded full QC covers the exact repaired scientific-input revision.
+- Explicit identity-transition batch under docs/record-review-profile.md; every affected predecessor and current target is assessed, not counted as an individual-kind review.
+- The retained 2026-08-13 PREGO decision has historical multi-source wording. It is not evidence that the rejected GOLD equivalence was correct. This successor separately assesses the direct PREGO BTO identity and the split source partition.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261015T224445Z-cecum-remediation
+repository: CultureBotAI/HabitatMech
+kind: batch
+title: 'Remediation review: cecum'
+started_at: '2026-10-15T22:25:05Z'
+finished_at: '2026-10-15T22:44:45Z'
+reviewer:
+  identity: codex-gpt-5
+  kind: agent
+  model: gpt-5
+  independence: self_review
+  independence_basis: Same agent assesses target and evidence; not independent reviewer
+    approval.
+skill: .claude/skills/review-yaml-category/SKILL.md@2.0.0
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: Excluded only the exact GOLD containing-anatomy contribution habitatmech:GOLD.c336fb0bb7;
+  independent valid genera and source paths remain. Separated the molluscan GOLD source
+  into habitatmech:GOLD.37d9cdc188. The original BTO:0000166 record now contains only
+  its PREGO source, with the same 549-taxon pool and unchanged displayed taxa. No
+  replacement ontology identity is invented. The superseding ITEM decision carries
+  the complete Cecum/Intestinal cecum path, current attribution and date. The old
+  decision remains in Git and the regression fixture; immutable review/session files
+  are not rewritten. Generated history is a current-input projection, not the append-only
+  session archive. Original source observations, counts, units and taxa are preserved.
+  No unresolved predecessor finding remains within this scope; biological evidence
+  limits still apply.
+source:
+  git_revision: b5659e0d8bed801c41745839d9a2b69095aa9f4e
+  state: git_commit
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-category/SKILL.md
+    sha256: 4a43388a0a8863b06c66cef795db0b9cc12c1507af727f2f672fd97f18309e0e
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: conf/record_review.yaml
+    sha256: c2f5d0eb4c5744f5fe354c92184ddab144dc2688dba952b032b4f3d597bc08d6
+    role: context
+  - path: conf/sources.yaml
+    sha256: a8e069f9278068b57fa234f43e03c8d893f857827b83fd10cfa92d6815aed642
+    role: context
+  - path: curation/decisions.tsv
+    sha256: e5cb2e09f72dd4b18e069c0e2576e25e13e56c9991f4eb5ae47416345e247578
+    role: context
+  - path: curation/definition_source_label_exclusions.tsv
+    sha256: 37dc4b40642d19e7b5c3262f368d12daa82e03115e7731a2326ae88785ceff5b
+    role: context
+  - path: curation/external_xrefs.tsv
+    sha256: f289c938b0c70d6f2bfb231bf137edf1c862bbda9143d9b6eae9e3fdd587703c
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: 7158cb696b7e2ac84a8d594a03015711424ff56e21c07a4648ffc6fb2e84a107
+    role: context
+  - path: curation/record_annotation_corrections.tsv
+    sha256: a56f07a45fb743fb7b0e61f83ef70fa5ed61a3c892cfaf36e3428967c548dc5e
+    role: context
+  - path: curation/redirects_retracted.tsv
+    sha256: 0f1e9af8881f5a5db19f87de06b3b3d1800cfac8101699b380388c0a1a1e9a19
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: bc7a13d922c179cd9bcd4d37b348bc90a39b08a4dafba7af4ed0039ad99621c3
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: ee559f7b45b4af2d72a078c45d1a3b676785d34305f286e9738f95771dbaccfd
+    role: context
+  - path: data/habitats/RETIRED.tsv
+    sha256: 747e6a5612dc0b7ed881b9fb323fd57ab3c75794d9ee5ebb9d59b2be57dbf8cd
+    role: context
+  - path: data/habitats/host_associated/cecum.yaml
+    sha256: 1933b2697d1cf64714fad794b252918daf26d248da8a3c682356b7806864e2ba
+    role: target
+  - path: data/habitats/host_associated/cecum_intestinal_cecum.yaml
+    sha256: cbbd708e719fba4e5dc123f4ea0fe9860bad218bb3b338d74f909dd4c7a4dbec
+    role: target
+  - path: data/habitats/host_associated/hindgut__baf4e5ab.yaml
+    sha256: 6e72dd4a24120d31e4146a5f1a827adea23d1867f3325fe729c485f5e0084154
+    role: context
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: f3f5d3d033fa7e7c1d78571959fc2e62e0b0a625f47dba1413657e8cf944b322
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 105b3c8e10f43ce689b05d3089d3a8be1d713a98dd6806e11be37ebd85b10590
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/README.md
+    sha256: 819361a711697f96ff9c1aa0b27e94302547970b3b54777d67ec1449db5e543a
+    role: context
+  - path: history/mappings/cardiac_cartilage_cecum_review/2026-10-15T214400Z-codex-gpt-5-909775.yaml
+    sha256: 98f4d839aa9a9361d5167448a3425842998d8b1d3de14f11af61df5ce0657b52
+    role: context
+  - path: history/mappings/cardiac_molluscan_citation_format/2026-10-15T221623Z-codex-gpt-5-cea5ff.yaml
+    sha256: 66ff55b4feec04542c81ca5b3ba004d2966dd915c1331a0e1901478d2e25b967
+    role: context
+  - path: history/mappings/cardiac_stomach/2026-10-15T214401Z-codex-gpt-5-ac65b1.yaml
+    sha256: ca808e9e8293f2a2794605c6bb0459ced388b0b8f5e21cab7f8a4c6450aad762
+    role: context
+  - path: history/mappings/ceca__2f9665ca/2026-10-15T214402Z-codex-gpt-5-f5ef14.yaml
+    sha256: 83f828ff3a626f06ada6e1f1cd260ff10046bd6f9abd06155ceaa8aeb7301c41
+    role: context
+  - path: history/mappings/cecum/2026-10-15T214403Z-codex-gpt-5-cf5c53.yaml
+    sha256: 58234fcca34d0117048ee812c4319ed63453aa6add6d158ba89a41baefee9104
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reports/yaml_record_review/20261002T213538Z-cecum.md
+    sha256: aa685ea691fab134ed520e1446b7f273a8f1440329e75d876afdf9cc8721aca5
+    role: context
+  - path: reviews/structured/20261015T212554Z-cecum-record/review.yaml
+    sha256: ce6688cc01e0c16662b8eeae6908c3a6b8087c769b4d3224a231c2433fb073e4
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: src/habitatmech/curate/__init__.py
+    sha256: d9837c29dc61d8c9245fdb471a68a109cea31b131cdbc0c4d51d23a8d013ce12
+    role: context
+  - path: src/habitatmech/curate/causal_graphs.py
+    sha256: d1884374263ed7926292c52a58742c614e75628d78ff50fe688e6abc0ddf9c1c
+    role: context
+  - path: src/habitatmech/curate/curation_event.py
+    sha256: 08c774d309fe988c468097518d346f07a653b283cb9b9b51c7fe79fa0af785a9
+    role: context
+  - path: src/habitatmech/curate/decisions.py
+    sha256: f33d3e9dc95bb428e63e640d48d4074cf15e90ea666603fb16fb651d591e3f02
+    role: context
+  - path: src/habitatmech/curate/definition_source_label_exclusions.py
+    sha256: 0c13e83fe17613e8b9f5b346d1259104172f8c1de42f911625579b903707625d
+    role: context
+  - path: src/habitatmech/curate/definitions.py
+    sha256: decd02eea029e884ab1a8bbb51dd870edb5544906b3ddd39598147b27ce572c9
+    role: context
+  - path: src/habitatmech/curate/external_xrefs.py
+    sha256: 8b90ec049887d3aa67e31cce7f7a04d7300421c6fedb833cc66e5d5f5f181694
+    role: context
+  - path: src/habitatmech/curate/gold_parent_exclusions.py
+    sha256: 044d8277509a9b1f6e4f2d7ea1fb82319b41e09ffef7788738a0f4ed0d0b63af
+    role: context
+  - path: src/habitatmech/curate/record_annotation_corrections.py
+    sha256: 15bad3d40fd95e2acc72d3ff3c74289c15fb8a1775adc523b3575c3ea8487033
+    role: context
+  - path: src/habitatmech/extract.py
+    sha256: 4d9397bda649381a5daf81937369531c6dc8b4518d6c7047e6f3f14e605bf860
+    role: context
+  - path: src/habitatmech/labels.py
+    sha256: eb6986c3a9c7d5a3e4651b639351f1f2d3e12d74c4bfaa92899205a1f9df0977
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 7e3cda3dadb9c7462498e5014bf38ef730068212f8f9cb131e3fce383c21d10e
+    role: context
+  - path: src/habitatmech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+  - path: src/habitatmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
+    role: context
+  - path: tests/data/cardiac_cartilage_cecum_prior_decisions.json
+    sha256: 7266598936ff8418d36a26c8e0086c570dbf7706813d92981642c5e33dc8d256
+    role: context
+  - path: tests/test_cardiac_cartilage_cecum_review_repairs.py
+    sha256: 1ca96d2b8fcf3d5016f8831dd3f3a1c51358e4ad752aa9237358259eb5583528
+    role: context
+targets:
+- target_id: BTO:0000166
+  path: data/habitats/host_associated/cecum.yaml
+  label: cecum
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+- target_id: habitatmech:GOLD.37d9cdc188
+  path: data/habitats/host_associated/cecum_intestinal_cecum.yaml
+  label: Cecum/Intestinal cecum
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+scope:
+  description: Full regenerated target assessment and explicit disposition of every
+    predecessor finding; identity replacement or source split includes all affected
+    current identities and the retired predecessor.
+  selection: One of fifteen repaired baseline targets in the 24-record carcinoid-through-cecum
+    cohort; no new cohort sampling.
+  coverage: full
+  population_size: 2
+  reviewed_target_ids:
+  - BTO:0000166
+  - habitatmech:GOLD.37d9cdc188
+  exclusions:
+  - target: Other habitats and export compatibility
+    reason: No full-corpus scientific sign-off or SSSOM/KGX certification. Original
+      PREGO pair evidence remains bounded.
+checks:
+- check_id: C13
+  name: just validate data/habitats/host_associated/cecum.yaml
+  status: passed
+  required: true
+  command: just validate data/habitats/host_associated/cecum.yaml
+  exit_code: 0
+  target_ids:
+  - BTO:0000166
+  - habitatmech:GOLD.37d9cdc188
+  summary: "Executed 2026-10-15T21:45:25Z through 2026-10-15T21:45:28Z. No issues\
+    \ found\n uv run linkml-validate -s src/habitatmech/schema/habitatmech.yaml --target-class\
+    \ HabitatRecord data/habitats/host_associated/cecum.yaml"
+  scope_note: Ordinary schema for the sixteen changed current records; strict for
+    all 25 current cohort records; other checks retain documented full-corpus scope.
+    Historical identity disposition is checked through the source-partition regression,
+    not validation as a live habitat. Historical intermediate-repair execution, before
+    the later lint/citation corrections; retained as executed evidence, not asserted
+    to have been rerun at the current revision. Later focused checks and exact-revision
+    CI cover the corrected inputs.
+- check_id: C15
+  name: just validate data/habitats/host_associated/cecum_intestinal_cecum.yaml
+  status: passed
+  required: true
+  command: just validate data/habitats/host_associated/cecum_intestinal_cecum.yaml
+  exit_code: 0
+  target_ids:
+  - BTO:0000166
+  - habitatmech:GOLD.37d9cdc188
+  summary: "Executed 2026-10-15T21:45:30Z through 2026-10-15T21:45:33Z. No issues\
+    \ found\n uv run linkml-validate -s src/habitatmech/schema/habitatmech.yaml --target-class\
+    \ HabitatRecord data/habitats/host_associated/cecum_intestinal_cecum.yaml"
+  scope_note: Ordinary schema for the sixteen changed current records; strict for
+    all 25 current cohort records; other checks retain documented full-corpus scope.
+    Historical identity disposition is checked through the source-partition regression,
+    not validation as a live habitat. Historical intermediate-repair execution, before
+    the later lint/citation corrections; retained as executed evidence, not asserted
+    to have been rerun at the current revision. Later focused checks and exact-revision
+    CI cover the corrected inputs.
+- check_id: C16
+  name: just validate-strict data/habitats/host_associated/carcinoid.yaml data/habitats/host_associated/carcinoma.yaml
+    data/habitats/host_associated/carcinoma_cell.yaml data/habitats/host_associated/carcinosarcoma.yaml
+    data/habitats/host_associated/cardiac_atrium.yaml data/habitats/host_associated/cardiac_septum.yaml
+    data/habitats/host_associated/cardiac_skeleton.yaml data/habitats/host_associated/cardiac_stomach.yaml
+    data/habitats/host_associated/cardiovascular_system.yaml data/habitats/host_associated/carposphere.yaml
+    data/habitats/host_associated/cartilage.yaml data/habitats/host_associated/cartilage__bd8c407c.yaml
+    data/habitats/host_associated/cartilage__c54322c6.yaml data/habitats/host_associated/caryopsis.yaml
+    data/habitats/host_associated/caski.yaml data/habitats/host_associated/catarrh.yaml
+    data/habitats/host_associated/catarrh__1e78e51c.yaml data/habitats/host_associated/caulosphere.yaml
+    data/habitats/host_associated/ceca.yaml data/habitats/host_associated/ceca__2f9665ca.yaml
+    data/habitats/host_associated/ceca__d15faa5d.yaml data/habitats/host_associated/cecotropes_night_fecs.yaml
+    data/habitats/host_associated/cecum.yaml data/habitats/host_associated/cecum__79e270ae.yaml
+    data/habitats/host_associated/cecum_intestinal_cecum.yaml
+  status: passed
+  required: true
+  command: just validate-strict data/habitats/host_associated/carcinoid.yaml data/habitats/host_associated/carcinoma.yaml
+    data/habitats/host_associated/carcinoma_cell.yaml data/habitats/host_associated/carcinosarcoma.yaml
+    data/habitats/host_associated/cardiac_atrium.yaml data/habitats/host_associated/cardiac_septum.yaml
+    data/habitats/host_associated/cardiac_skeleton.yaml data/habitats/host_associated/cardiac_stomach.yaml
+    data/habitats/host_associated/cardiovascular_system.yaml data/habitats/host_associated/carposphere.yaml
+    data/habitats/host_associated/cartilage.yaml data/habitats/host_associated/cartilage__bd8c407c.yaml
+    data/habitats/host_associated/cartilage__c54322c6.yaml data/habitats/host_associated/caryopsis.yaml
+    data/habitats/host_associated/caski.yaml data/habitats/host_associated/catarrh.yaml
+    data/habitats/host_associated/catarrh__1e78e51c.yaml data/habitats/host_associated/caulosphere.yaml
+    data/habitats/host_associated/ceca.yaml data/habitats/host_associated/ceca__2f9665ca.yaml
+    data/habitats/host_associated/ceca__d15faa5d.yaml data/habitats/host_associated/cecotropes_night_fecs.yaml
+    data/habitats/host_associated/cecum.yaml data/habitats/host_associated/cecum__79e270ae.yaml
+    data/habitats/host_associated/cecum_intestinal_cecum.yaml
+  exit_code: 0
+  target_ids:
+  - BTO:0000166
+  - habitatmech:GOLD.37d9cdc188
+  summary: "Executed 2026-10-15T21:45:33Z through 2026-10-15T21:45:42Z. uv run python\
+    \ scripts/validate_strict.py data/habitats/host_associated/carcinoid.yaml data/habitats/host_associated/carcinoma.yaml\
+    \ data/habitats/host_associated/carcinoma_cell.yaml data/habitats/host_associated/carcinosarcoma.yaml\
+    \ data/habitats/host_associated/cardiac_atrium.yaml data/habitats/host_associated/cardiac_septum.yaml\
+    \ data/habitats/host_associated/cardiac_skeleton.yaml data/habitats/host_associated/cardiac_stomach.yaml\
+    \ data/habitats/host_associated/cardiovascular_system.yaml data/habitats/host_associated/carposphere.yaml\
+    \ data/habitats/host_associated/cartilage.yaml data/habitats/host_associated/cartilage__bd8c407c.yaml\
+    \ data/habitats/host_associated/cartilage__c54322c6.yaml data/habitats/host_associated/caryopsis.yaml\
+    \ data/habitats/host_associated/caski.yaml data/habitats/host_associated/catarrh.yaml\
+    \ data/habitats/host_associated/catarrh__1e78e51c.yaml data/habitats/host_associated/caulosphere.yaml\
+    \ data/habitats/host_associated/ceca.yaml data/habitats/host_associated/ceca__2f9665ca.yaml\
+    \ data/habitats/host_associated/ceca__d15faa5d.yaml data/habitats/host_associated/cecotropes_night_fecs.yaml\
+    \ data/habitats/host_associated/cecum.yaml data/habitats/host_associated/cecum__79e270ae.yaml\
+    \ data/habitats/host_associated/cecum_intestinal_cecum.yaml\nValidating 25 files\
+    \ with 15 workers; schema=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/src/habitatmech/schema/habitatmech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      25\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                reports/instance_validation_failures.tsv"
+  scope_note: Ordinary schema for the sixteen changed current records; strict for
+    all 25 current cohort records; other checks retain documented full-corpus scope.
+    Historical identity disposition is checked through the source-partition regression,
+    not validation as a live habitat. Historical intermediate-repair execution, before
+    the later lint/citation corrections; retained as executed evidence, not asserted
+    to have been rerun at the current revision. Later focused checks and exact-revision
+    CI cover the corrected inputs.
+- check_id: C17
+  name: just validate-history
+  status: passed
+  required: true
+  command: just validate-history
+  exit_code: 0
+  target_ids:
+  - BTO:0000166
+  - habitatmech:GOLD.37d9cdc188
+  summary: 'Executed 2026-10-15T21:45:43Z through 2026-10-15T21:45:53Z. No issues
+    found
+
+    828 history record(s) valid against src/habitatmech/schema/history.yaml'
+  scope_note: Ordinary schema for the sixteen changed current records; strict for
+    all 25 current cohort records; other checks retain documented full-corpus scope.
+    Historical identity disposition is checked through the source-partition regression,
+    not validation as a live habitat. Historical intermediate-repair execution, before
+    the later lint/citation corrections; retained as executed evidence, not asserted
+    to have been rerun at the current revision. Later focused checks and exact-revision
+    CI cover the corrected inputs.
+- check_id: C18
+  name: just provenance-check
+  status: passed
+  required: true
+  command: just provenance-check
+  exit_code: 0
+  target_ids:
+  - BTO:0000166
+  - habitatmech:GOLD.37d9cdc188
+  summary: "Executed 2026-10-15T21:45:53Z through 2026-10-15T21:45:54Z. provenance\
+    \ current: 14 committed inventories, 2 GOLD sources\n uv run python scripts/check_provenance.py"
+  scope_note: Ordinary schema for the sixteen changed current records; strict for
+    all 25 current cohort records; other checks retain documented full-corpus scope.
+    Historical identity disposition is checked through the source-partition regression,
+    not validation as a live habitat. Historical intermediate-repair execution, before
+    the later lint/citation corrections; retained as executed evidence, not asserted
+    to have been rerun at the current revision. Later focused checks and exact-revision
+    CI cover the corrected inputs.
+- check_id: C19
+  name: just verify-corpus
+  status: passed
+  required: true
+  command: just verify-corpus
+  exit_code: 0
+  target_ids:
+  - BTO:0000166
+  - habitatmech:GOLD.37d9cdc188
+  summary: "Executed 2026-10-15T21:45:54Z through 2026-10-15T21:46:11Z. expected 3209\
+    \ records, found 3209 on disk\n  missing:   0\n  extra:     0\n  differing: 0\n\
+    \ncorpus reproduces exactly from data/raw/\n uv run python scripts/verify_corpus.py"
+  scope_note: Ordinary schema for the sixteen changed current records; strict for
+    all 25 current cohort records; other checks retain documented full-corpus scope.
+    Historical identity disposition is checked through the source-partition regression,
+    not validation as a live habitat. Historical intermediate-repair execution, before
+    the later lint/citation corrections; retained as executed evidence, not asserted
+    to have been rerun at the current revision. Later focused checks and exact-revision
+    CI cover the corrected inputs.
+- check_id: C20
+  name: just validate-causal-all
+  status: passed
+  required: true
+  command: just validate-causal-all
+  exit_code: 0
+  target_ids:
+  - BTO:0000166
+  - habitatmech:GOLD.37d9cdc188
+  summary: "Executed 2026-10-15T21:46:11Z through 2026-10-15T21:46:15Z. validated\
+    \ 32 causal-graph curation file(s) with 32 graph(s)\n uv run python scripts/validate_causal_graph_curations.py"
+  scope_note: Ordinary schema for the sixteen changed current records; strict for
+    all 25 current cohort records; other checks retain documented full-corpus scope.
+    Historical identity disposition is checked through the source-partition regression,
+    not validation as a live habitat. Historical intermediate-repair execution, before
+    the later lint/citation corrections; retained as executed evidence, not asserted
+    to have been rerun at the current revision. Later focused checks and exact-revision
+    CI cover the corrected inputs.
+- check_id: C21
+  name: just term-requests-check
+  status: passed
+  required: true
+  command: just term-requests-check
+  exit_code: 0
+  target_ids:
+  - BTO:0000166
+  - habitatmech:GOLD.37d9cdc188
+  summary: "Executed 2026-10-15T21:46:15Z through 2026-10-15T21:46:38Z. term-request\
+    \ table is current (110 terms)\n uv run python scripts/build_term_requests.py\
+    \ --check"
+  scope_note: Ordinary schema for the sixteen changed current records; strict for
+    all 25 current cohort records; other checks retain documented full-corpus scope.
+    Historical identity disposition is checked through the source-partition regression,
+    not validation as a live habitat. Historical intermediate-repair execution, before
+    the later lint/citation corrections; retained as executed evidence, not asserted
+    to have been rerun at the current revision. Later focused checks and exact-revision
+    CI cover the corrected inputs.
+- check_id: C22
+  name: just validate-products
+  status: passed
+  required: true
+  command: just validate-products
+  exit_code: 0
+  target_ids:
+  - BTO:0000166
+  - habitatmech:GOLD.37d9cdc188
+  summary: "Executed 2026-10-15T21:46:38Z through 2026-10-15T21:47:36Z. id↔label correspondence\
+    \ summary:\n          OK_CANONICAL: 1173\n            OK_SYNONYM: 1\n        \
+    \  OK_EXCEPTION: 5\n    SKIPPED_NO_ADAPTER: 2063\n\n✅ All id↔label pairs correspond.\n\
+    \ uv run python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml"
+  scope_note: Ordinary schema for the sixteen changed current records; strict for
+    all 25 current cohort records; other checks retain documented full-corpus scope.
+    Historical identity disposition is checked through the source-partition regression,
+    not validation as a live habitat. Historical intermediate-repair execution, before
+    the later lint/citation corrections; retained as executed evidence, not asserted
+    to have been rerun at the current revision. Later focused checks and exact-revision
+    CI cover the corrected inputs.
+- check_id: C23
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/.venv/bin/python
+    -m pytest -q tests/test_cardiac_cartilage_cecum_review_repairs.py
+  status: passed
+  required: true
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/.venv/bin/python
+    -m pytest -q tests/test_cardiac_cartilage_cecum_review_repairs.py
+  exit_code: 0
+  target_ids:
+  - BTO:0000166
+  - habitatmech:GOLD.37d9cdc188
+  summary: 'Executed 2026-10-15T21:47:36Z through 2026-10-15T21:47:44Z. ..                                                                       [100%]
+
+    2 passed in 6.45s'
+  scope_note: Ordinary schema for the sixteen changed current records; strict for
+    all 25 current cohort records; other checks retain documented full-corpus scope.
+    Historical identity disposition is checked through the source-partition regression,
+    not validation as a live habitat. Historical intermediate-repair execution, before
+    the later lint/citation corrections; retained as executed evidence, not asserted
+    to have been rerun at the current revision. Later focused checks and exact-revision
+    CI cover the corrected inputs.
+- check_id: C24
+  name: git diff --check 62952fb7cdf223af9d1ffbf1cc2f556b22f7ee6b
+  status: passed
+  required: true
+  command: git diff --check 62952fb7cdf223af9d1ffbf1cc2f556b22f7ee6b
+  exit_code: 0
+  target_ids:
+  - BTO:0000166
+  - habitatmech:GOLD.37d9cdc188
+  summary: 'Executed 2026-10-15T21:47:44Z through 2026-10-15T21:47:44Z. '
+  scope_note: Ordinary schema for the sixteen changed current records; strict for
+    all 25 current cohort records; other checks retain documented full-corpus scope.
+    Historical identity disposition is checked through the source-partition regression,
+    not validation as a live habitat. Historical intermediate-repair execution, before
+    the later lint/citation corrections; retained as executed evidence, not asserted
+    to have been rerun at the current revision. Later focused checks and exact-revision
+    CI cover the corrected inputs.
+- check_id: C25
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/.venv/bin/python
+    -m pytest -q tests/test_cardiac_cartilage_cecum_review_repairs.py
+  status: passed
+  required: true
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/.venv/bin/python
+    -m pytest -q tests/test_cardiac_cartilage_cecum_review_repairs.py
+  exit_code: 0
+  target_ids:
+  - BTO:0000166
+  - habitatmech:GOLD.37d9cdc188
+  summary: 'Executed 2026-10-15T21:58:55Z through 2026-10-15T21:59:03Z. ..                                                                       [100%]
+
+    2 passed in 6.82s'
+  scope_note: Ordinary schema for the sixteen changed current records; strict for
+    all 25 current cohort records; other checks retain documented full-corpus scope.
+    Historical identity disposition is checked through the source-partition regression,
+    not validation as a live habitat. Historical intermediate-repair execution, before
+    the later lint/citation corrections; retained as executed evidence, not asserted
+    to have been rerun at the current revision. Later focused checks and exact-revision
+    CI cover the corrected inputs.
+- check_id: C26
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/.venv/bin/python
+    -m pytest -q tests/test_decisions.py tests/test_cardiac_cartilage_cecum_review_repairs.py
+  status: passed
+  required: true
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/.venv/bin/python
+    -m pytest -q tests/test_decisions.py tests/test_cardiac_cartilage_cecum_review_repairs.py
+  exit_code: 0
+  target_ids:
+  - BTO:0000166
+  - habitatmech:GOLD.37d9cdc188
+  summary: 'Executed 2026-10-15T22:16:03Z through 2026-10-15T22:19:46Z. ........................................................................
+    [100%]
+
+    72 passed in 221.76s (0:03:41)'
+  scope_note: Ordinary schema for the sixteen changed current records; strict for
+    all 25 current cohort records; other checks retain documented full-corpus scope.
+    Historical identity disposition is checked through the source-partition regression,
+    not validation as a live habitat.
+- check_id: C27
+  name: just lint
+  status: passed
+  required: true
+  command: just lint
+  exit_code: 0
+  target_ids:
+  - BTO:0000166
+  - habitatmech:GOLD.37d9cdc188
+  summary: "Executed 2026-10-15T22:19:50Z through 2026-10-15T22:19:51Z. All checks\
+    \ passed!\n uv run ruff check  ."
+  scope_note: Ordinary schema for the sixteen changed current records; strict for
+    all 25 current cohort records; other checks retain documented full-corpus scope.
+    Historical identity disposition is checked through the source-partition regression,
+    not validation as a live habitat.
+- check_id: C28
+  name: just validate-strict data/habitats/host_associated/cardiac_stomach.yaml data/habitats/host_associated/ceca__2f9665ca.yaml
+    data/habitats/host_associated/cecum_intestinal_cecum.yaml
+  status: passed
+  required: true
+  command: just validate-strict data/habitats/host_associated/cardiac_stomach.yaml
+    data/habitats/host_associated/ceca__2f9665ca.yaml data/habitats/host_associated/cecum_intestinal_cecum.yaml
+  exit_code: 0
+  target_ids:
+  - BTO:0000166
+  - habitatmech:GOLD.37d9cdc188
+  summary: "Executed 2026-10-15T22:19:51Z through 2026-10-15T22:19:58Z. uv run python\
+    \ scripts/validate_strict.py data/habitats/host_associated/cardiac_stomach.yaml\
+    \ data/habitats/host_associated/ceca__2f9665ca.yaml data/habitats/host_associated/cecum_intestinal_cecum.yaml\n\
+    Validating 3 files with 15 workers; schema=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/src/habitatmech/schema/habitatmech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      3\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                reports/instance_validation_failures.tsv"
+  scope_note: Ordinary schema for the sixteen changed current records; strict for
+    all 25 current cohort records; other checks retain documented full-corpus scope.
+    Historical identity disposition is checked through the source-partition regression,
+    not validation as a live habitat.
+- check_id: C29
+  name: just validate-history
+  status: passed
+  required: true
+  command: just validate-history
+  exit_code: 0
+  target_ids:
+  - BTO:0000166
+  - habitatmech:GOLD.37d9cdc188
+  summary: 'Executed 2026-10-15T22:19:58Z through 2026-10-15T22:20:11Z. No issues
+    found
+
+    829 history record(s) valid against src/habitatmech/schema/history.yaml'
+  scope_note: Ordinary schema for the sixteen changed current records; strict for
+    all 25 current cohort records; other checks retain documented full-corpus scope.
+    Historical identity disposition is checked through the source-partition regression,
+    not validation as a live habitat.
+- check_id: C30
+  name: just verify-corpus
+  status: passed
+  required: true
+  command: just verify-corpus
+  exit_code: 0
+  target_ids:
+  - BTO:0000166
+  - habitatmech:GOLD.37d9cdc188
+  summary: "Executed 2026-10-15T22:20:11Z through 2026-10-15T22:20:40Z. expected 3209\
+    \ records, found 3209 on disk\n  missing:   0\n  extra:     0\n  differing: 0\n\
+    \ncorpus reproduces exactly from data/raw/\n uv run python scripts/verify_corpus.py"
+  scope_note: Ordinary schema for the sixteen changed current records; strict for
+    all 25 current cohort records; other checks retain documented full-corpus scope.
+    Historical identity disposition is checked through the source-partition regression,
+    not validation as a live habitat.
+- check_id: C31
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/.venv/bin/python
+    scripts/embedding_pipeline.py check --output data/text_map --input /private/tmp/habitatmech-review-cn-20261015-citation-map-inputs.jsonl
+    --cache build/review-cn-map/download/build/text-map/vectors.sqlite
+  status: passed
+  required: true
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/.venv/bin/python
+    scripts/embedding_pipeline.py check --output data/text_map --input /private/tmp/habitatmech-review-cn-20261015-citation-map-inputs.jsonl
+    --cache build/review-cn-map/download/build/text-map/vectors.sqlite
+  exit_code: 0
+  target_ids:
+  - BTO:0000166
+  - habitatmech:GOLD.37d9cdc188
+  summary: "Executed 2026-10-15T22:20:40Z through 2026-10-15T22:20:43Z. {\n  \"coverage\"\
+    : {\n    \"displayed\": 3209,\n    \"eligible\": 3209,\n    \"maximum\": 50000,\n\
+    \    \"omitted\": 0,\n    \"selection\": \"bottom-k-sha256(seed,identifier)\"\
+    ,\n    \"total\": 3209\n  },\n  \"encoder\": {\n    \"dimension\": 1024,\n   \
+    \ \"dtype\": \"float32-le\",\n    \"format_version\": 1,\n    \"inference_device\"\
+    : \"cpu\",\n    \"library_versions\": {\n      \"numpy\": \"2.3.5\",\n      \"\
+    sentence-transformers\": \"6.0.0\",\n      \"tokenizers\": \"0.23.2\",\n     \
+    \ \"torch\": \"2.14.0\",\n      \"transformers\": \"5.17.0\"\n    },\n    \"max_seq_length\"\
+    : 512,\n    \"model\": \"BAAI/bge-large-en-v1.5\",\n    \"normalized\": true,\n\
+    \    \"pooling\": \"sentence-transformers-model\",\n    \"query_instruction\"\
+    : null,\n    \"revision\": \"d4aa6901d3a41ba39fb536a557fa166f842b0e09\",\n   \
+    \ \"truncation\": \"tail\",\n    \"weight_dtype\": \"torch.float32\"\n  },\n \
+    \ \"encoder_profile_sha256\": \"15d9788b0f2912b22721f35398583eddad76f135f66de223319930f9d6013c6f\"\
+    ,\n  \"files\": {\n    \"index.html\": \"9af3cd50170b152332bde16c94f94e2d461b947dc07f03701dd288e9e66e0176\"\
+    ,\n    \"points.json\": \"5f7c46b8701863a95b2021e4745ceaed5819e24c19dc522e052228d27ee7f22e\"\
+    \n  },\n  \"format_version\": 1,\n  \"generated_at_utc\": \"2026-10-15T21:47:31.472391+00:00\"\
+    ,\n  \"inputs\": {\n    \"adapter_version\": \"habitatmech-semantic-v1\",\n  \
+    \  \"categories\": {\n      \"AIR\": 7,\n      \"AQUATIC\": 468,\n      \"CLINICAL\"\
+    : 4,\n      \"ENGINEERED\": 488,\n      \"FOOD\": 59,\n      \"HOST_ASSOCIATED\"\
+    : 1651,\n      \"OTHER\": 179,\n      \"TERRESTRIAL\": 353\n    },\n    \"corpus_sha256\"\
+    : \"9d77fbd6ae91b5b9403004cc4d0320a245ff4bb563c35547436ccb1a7ef431c8\",\n    \"\
+    count\": 3209,\n    \"input_sha256\": \"2e8d2ce36bbfede1123feb802a5653ae86926c2c83d924ef70ce3245c9018d5f\"\
+    ,\n    \"records_sha256\": \"6f1e9d175eeb857b0fc52ea2ea3e98a617b9995baf321b0ffbeb77978eb0f024\"\
+    \n  },\n  \"projection\": {\n    \"FP_ratio\": 2.0,\n    \"MN_ratio\": 0.5,\n\
+    \    \"apply_pca\": true,\n    \"dimensions\": 2,\n    \"distance\": \"euclidean\"\
+    ,\n    \"effective_pairs\": {\n      \"further\": 30,\n      \"mid_near\": 8,\n\
+    \      \"neighbors\": 15\n    },\n    \"implementation\": \"pacmap.PaCMAP\",\n\
+    \    \"initialization\": \"pca\",\n    \"iterations\": [\n      100,\n      100,\n\
+    \      250\n    ],\n    \"knn_backend\": \"faiss\",\n    \"learning_rate\": 1.0,\n\
+    \    \"library_versions\": {\n      \"faiss-cpu\": \"1.15.0\",\n      \"numba\"\
+    : \"0.63.1\",\n      \"numpy\": \"2.3.5\",\n      \"pacmap\": \"0.9.1\",\n   \
+    \   \"scikit-learn\": \"1.8.0\"\n    },\n    \"method\": \"pacmap\",\n    \"neighbors\"\
+    : 15,\n    \"requested_neighbors\": 15,\n    \"seed\": 42\n  },\n  \"representation\"\
+    : \"semantic-text\",\n  \"source_vectors\": {\n    \"dtype\": \"float32-le\",\n\
+    \    \"order\": \"points.json\",\n    \"sha256\": \"2fcf746746be1500ba74869a480d83a616377bc2ddff79fc354d4af39f8fefd5\"\
+    ,\n    \"shape\": [\n      3209,\n      1024\n    ],\n    \"storage\": \"local-profile-bound-cache\"\
+    \n  }\n}"
+  scope_note: Ordinary schema for the sixteen changed current records; strict for
+    all 25 current cohort records; other checks retain documented full-corpus scope.
+    Historical identity disposition is checked through the source-partition regression,
+    not validation as a live habitat.
+- check_id: C32
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/.venv/bin/python
+    scripts/render_pages.py --check
+  status: passed
+  required: true
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/.venv/bin/python
+    scripts/render_pages.py --check
+  exit_code: 0
+  target_ids:
+  - BTO:0000166
+  - habitatmech:GOLD.37d9cdc188
+  summary: 'Executed 2026-10-15T22:20:43Z through 2026-10-15T22:21:37Z. rendered 3209
+    habitat pages, 259 redirect stubs, 8 categories, 129 term requests -> /var/folders/lm/hg0p5znd1hd5yc5lml35j6lh0000gn/T/tmpf4m4_epj/site
+
+    pages/ is in step with the corpus'
+  scope_note: Ordinary schema for the sixteen changed current records; strict for
+    all 25 current cohort records; other checks retain documented full-corpus scope.
+    Historical identity disposition is checked through the source-partition regression,
+    not validation as a live habitat.
+- check_id: C33
+  name: git diff --check 62952fb7cdf223af9d1ffbf1cc2f556b22f7ee6b
+  status: passed
+  required: true
+  command: git diff --check 62952fb7cdf223af9d1ffbf1cc2f556b22f7ee6b
+  exit_code: 0
+  target_ids:
+  - BTO:0000166
+  - habitatmech:GOLD.37d9cdc188
+  summary: 'Executed 2026-10-15T22:21:37Z through 2026-10-15T22:21:38Z. '
+  scope_note: Ordinary schema for the sixteen changed current records; strict for
+    all 25 current cohort records; other checks retain documented full-corpus scope.
+    Historical identity disposition is checked through the source-partition regression,
+    not validation as a live habitat.
+- check_id: CCI
+  name: Exact-revision full QC and structured archive contract
+  status: passed
+  required: true
+  command: gh run view 38816416003 --json status,conclusion,headSha,url,jobs
+  exit_code: 0
+  target_ids:
+  - BTO:0000166
+  - habitatmech:GOLD.37d9cdc188
+  summary: Verified 2026-10-15T22:43:10Z https://github.com/CultureBotAI/HabitatMech/actions/runs/38816416003
+  scope_note: Exact repaired scientific-input revision, before this successor is saved.
+    Final-head checks remain mandatory.
+evidence:
+- evidence_id: EX1
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/bto/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FBTO_0000166/graph
+  locator: BTO_0000166-graph.json
+  accessed_at: '2026-10-15T21:13:52Z'
+  support: context_only
+  summary: 'Typed outgoing ontology edges: [{"source": "http://purl.obolibrary.org/obo/BTO_0000166",
+    "target": "http://purl.obolibrary.org/obo/BTO_0000706", "uri": "http://purl.obolibrary.org/obo/BFO_0000050",
+    "label": "part of"}, {"source": "http://purl.obolibrary.org/obo/BTO_0000166",
+    "target": "http://purl.obolibrary.org/obo/BTO_0002273", "uri": "http://purl.obolibrary.org/obo/BFO_0000050",
+    "label": "part of"}]'
+  snapshot_sha256: 5a3b1f1eca1553a995153a1970d6cdf6e439879e0efa6f51d18c3d534a131cd9
+- evidence_id: EX2
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/bto/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FBTO_0000166
+  locator: BTO_0000166.json
+  accessed_at: '2026-10-15T21:13:51Z'
+  support: context_only
+  summary: 'Current term identity, active status and definition: {"obo_id": "BTO:0000166",
+    "label": "cecum", "is_obsolete": false, "description": ["The first part of the
+    large intestine, forming a dilated pouch into which open the ileum, colon, and
+    appendix vermiformis."]}'
+  snapshot_sha256: a1996ad92a59beb60230672c36476edd1ef43af133fc7a65b57dc75b2eb965b8
+- evidence_id: EX3
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11413930/fullTextXML
+  locator: PMC11413930.xml
+  accessed_at: '2026-10-15T21:21:13Z'
+  support: context_only
+  summary: 'PMID:39140156, DOI:10.1242/bio.060429. Octopus maya dissection methods
+    inspected: digestive juice was obtained in the region between distal cecum and
+    crop, with separate digestive-gland sampling. This is a bounded nonvertebrate
+    anatomical witness, not identification of the particular GOLD mollusc or a proposed
+    replacement ontology term.'
+  snapshot_sha256: 704feed586f3c8185b5884f39407ecd5c8c3ec73e8c736f79b673bb7f5268be5
+- evidence_id: EX4
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8879827/fullTextXML
+  locator: PMC8879827.xml
+  accessed_at: '2026-10-15T21:15:53Z'
+  support: context_only
+  summary: PMID:35208748, DOI:10.3390/microorganisms10020293. PREGO methods 2.3 and
+    source-channel/score paragraphs inspected. BioProject-associated abstract mining
+    yields score-three associations; genomic metadata and environmental channels have
+    different scoring. The source channel and score are not proof of direct localization,
+    characteristic presence or prevalence. This does not establish the exact extraction
+    route of any individual retained pair.
+  snapshot_sha256: 375f0fde4d07bb823cb9106aa4567bc0ef03c2866af0b2a7740b543f50687c25
+- evidence_id: EX5
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FUBERON_0001046/graph
+  locator: UBERON_0001046-graph.json
+  accessed_at: '2026-10-15T21:14:10Z'
+  support: context_only
+  summary: 'Typed outgoing ontology edges: [{"source": "http://purl.obolibrary.org/obo/UBERON_0001046",
+    "target": "http://purl.obolibrary.org/obo/UBERON_0004921", "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+    "label": "subClassOf"}, {"source": "http://purl.obolibrary.org/obo/UBERON_0001046",
+    "target": "http://purl.obolibrary.org/obo/RO_0002577", "uri": "http://purl.obolibrary.org/obo/BFO_0000050",
+    "label": "part of"}, {"source": "http://purl.obolibrary.org/obo/UBERON_0001046",
+    "target": "http://purl.obolibrary.org/obo/UBERON_0001045", "uri": "http://purl.obolibrary.org/obo/uberon/core#proximally_connected_to",
+    "label": "proximally connected to"}, {"source": "http://purl.obolibrary.org/obo/UBERON_0001046",
+    "target": "http://purl.obolibrary.org/obo/UBERON_0003104", "uri": "http://purl.obolibrary.org/obo/RO_0002202",
+    "label": "develops from"}]'
+  snapshot_sha256: b2d6340b12c64d11d629c3bf222b46c51c5c6bcd4e68fa064f912bd198968e5e
+- evidence_id: EX6
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FUBERON_0001046
+  locator: UBERON_0001046.json
+  accessed_at: '2026-10-15T21:14:09Z'
+  support: context_only
+  summary: 'Current term identity, active status and definition: {"obo_id": "UBERON:0001046",
+    "label": "hindgut", "is_obsolete": false, "description": ["The caudalmost subdivision
+    of a digestive tract."]}'
+  snapshot_sha256: f65ee5feea5c3a4fcfb07e6bc51713bd73c261363eaf039b32068d5a620d6fd9
+- evidence_id: EX7
+  kind: database
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=100176,100883,102106,102234,1032526,1091138,109326,1117,113286,1150864,117563,118747,119852,1249,1253,1263,1265,1266,1268,1269,1276220,1276221,1279,1280,1282,128827,1296,1300,1329250&retmode=xml
+  locator: taxonomy.xml
+  accessed_at: '2026-10-15T21:14:28Z'
+  support: context_only
+  summary: 'Current NCBI identities and source-label comparisons: [{"id": "NCBITaxon:100176",
+    "source": "PREGO", "label": "Papillibacter cinnamivorans", "current_id": "100176",
+    "current_name": "Papillibacter cinnamivorans", "rank": "species", "direct_match":
+    true, "recognized_alias": true}, {"id": "NCBITaxon:100883", "source": "PREGO",
+    "label": "Coprobacillus", "current_id": "100883", "current_name": "Coprobacillus",
+    "rank": "genus", "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:102106",
+    "source": "PREGO", "label": "Collinsella", "current_id": "102106", "current_name":
+    "Collinsella", "rank": "genus", "direct_match": true, "recognized_alias": true},
+    {"id": "NCBITaxon:102234", "source": "PREGO", "label": "Cyanobacterium", "current_id":
+    "102234", "current_name": "Cyanobacterium", "rank": "genus", "direct_match": true,
+    "recognized_alias": true}, {"id": "NCBITaxon:1032526", "source": "PREGO", "label":
+    "Pedosphaera", "current_id": "1032526", "current_name": "Pedosphaera", "rank":
+    "genus", "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:1091138",
+    "source": "PREGO", "label": null, "current_id": "1091138", "current_name": "Lawsonia",
+    "rank": "genus", "direct_match": false, "recognized_alias": false}, {"id": "NCBITaxon:109326",
+    "source": "PREGO", "label": "Anaerovorax", "current_id": "109326", "current_name":
+    "Anaerovorax", "rank": "genus", "direct_match": true, "recognized_alias": true},
+    {"id": "NCBITaxon:1117", "source": "PREGO", "label": "Cyanobacteriota", "current_id":
+    "1117", "current_name": "Cyanobacteriota", "rank": "phylum", "direct_match": true,
+    "recognized_alias": true}, {"id": "NCBITaxon:113286", "source": "PREGO", "label":
+    "Pseudoramibacter", "current_id": "113286", "current_name": "Pseudoramibacter",
+    "rank": "genus", "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:117563",
+    "source": "PREGO", "label": "Granulicatella", "current_id": "117563", "current_name":
+    "Granulicatella", "rank": "genus", "direct_match": true, "recognized_alias": true},
+    {"id": "NCBITaxon:118747", "source": "PREGO", "label": "Bulleidia", "current_id":
+    "118747", "current_name": "Bulleidia", "rank": "genus", "direct_match": true,
+    "recognized_alias": true}, {"id": "NCBITaxon:119852", "source": "PREGO", "label":
+    "Oscillospira", "current_id": "119852", "current_name": "Oscillospira", "rank":
+    "genus", "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:1249",
+    "source": "PREGO", "label": "Weissella paramesenteroides", "current_id": "1249",
+    "current_name": "Weissella paramesenteroides", "rank": "species", "direct_match":
+    true, "recognized_alias": true}, {"id": "NCBITaxon:1253", "source": "PREGO", "label":
+    "Pediococcus", "current_id": "1253", "current_name": "Pediococcus", "rank": "genus",
+    "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:1263", "source":
+    "PREGO", "label": "Ruminococcus", "current_id": "1263", "current_name": "Ruminococcus",
+    "rank": "genus", "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:1265",
+    "source": "PREGO", "label": "Ruminococcus flavefaciens", "current_id": "1265",
+    "current_name": "Ruminococcus flavefaciens", "rank": "species", "direct_match":
+    true, "recognized_alias": true}, {"id": "NCBITaxon:1266", "source": "PREGO", "label":
+    "Sarcina", "current_id": "1266", "current_name": "Sarcina", "rank": "genus", "direct_match":
+    true, "recognized_alias": true}, {"id": "NCBITaxon:1268", "source": "PREGO", "label":
+    "Micrococcaceae", "current_id": "1268", "current_name": "Micrococcaceae", "rank":
+    "family", "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:1269",
+    "source": "PREGO", "label": "Micrococcus", "current_id": "1269", "current_name":
+    "Micrococcus", "rank": "genus", "direct_match": true, "recognized_alias": true},
+    {"id": "NCBITaxon:1279", "source": "PREGO", "label": "Staphylococcus", "current_id":
+    "1279", "current_name": "Staphylococcus", "rank": "genus", "direct_match": true,
+    "recognized_alias": true}, {"id": "NCBITaxon:1280", "source": "PREGO", "label":
+    "Staphylococcus aureus", "current_id": "1280", "current_name": "Staphylococcus
+    aureus", "rank": "species", "direct_match": true, "recognized_alias": true}, {"id":
+    "NCBITaxon:1282", "source": "PREGO", "label": "Staphylococcus epidermidis", "current_id":
+    "1282", "current_name": "Staphylococcus epidermidis", "rank": "species", "direct_match":
+    true, "recognized_alias": true}, {"id": "NCBITaxon:128827", "source": "PREGO",
+    "label": "Erysipelotrichaceae", "current_id": "128827", "current_name": "Erysipelotrichaceae",
+    "rank": "family", "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:1296",
+    "source": "PREGO", "label": "Mammaliicoccus sciuri", "current_id": "1296", "current_name":
+    "Mammaliicoccus sciuri", "rank": "species", "direct_match": true, "recognized_alias":
+    true}, {"id": "NCBITaxon:1300", "source": "PREGO", "label": "Streptococcaceae",
+    "current_id": "1300", "current_name": "Streptococcaceae", "rank": "family", "direct_match":
+    true, "recognized_alias": true}]'
+  snapshot_sha256: c551a5443e12b82516bb46ffbdca086137c0079452de57edc2884a991cd694a2
+- evidence_id: EAFTER0
+  kind: record_content
+  reference: data/habitats/host_associated/cecum.yaml
+  locator: Entire regenerated target
+  accessed_at: '2026-10-15T22:44:45Z'
+  support: supports
+  summary: '{"identifier": "BTO:0000166", "label": "cecum", "definition": "The first
+    part of the large intestine, forming a dilated pouch into which open the ileum,
+    colon, and appendix vermiformis.", "definition_source": "BTO", "habitat_category":
+    "HOST_ASSOCIATED", "grounding_status": "EXACT", "mapping_status": "REVIEWED",
+    "synonyms": [{"synonym_text": "blind intestine", "synonym_type": "RELATED_SYNONYM",
+    "source": "PREGO"}, {"synonym_text": "blind intestines", "synonym_type": "RELATED_SYNONYM",
+    "source": "PREGO"}, {"synonym_text": "blind intestinous", "synonym_type": "RELATED_SYNONYM",
+    "source": "PREGO"}, {"synonym_text": "blindgut", "synonym_type": "RELATED_SYNONYM",
+    "source": "PREGO"}, {"synonym_text": "blindguts", "synonym_type": "RELATED_SYNONYM",
+    "source": "PREGO"}, {"synonym_text": "caeca", "synonym_type": "RELATED_SYNONYM",
+    "source": "PREGO"}, {"synonym_text": "caecal", "synonym_type": "RELATED_SYNONYM",
+    "source": "PREGO"}, {"synonym_text": "caecum", "synonym_type": "RELATED_SYNONYM",
+    "source": "PREGO"}, {"synonym_text": "caecums", "synonym_type": "RELATED_SYNONYM",
+    "source": "PREGO"}, {"synonym_text": "ceca", "synonym_type": "RELATED_SYNONYM",
+    "source": "PREGO"}, {"synonym_text": "cecal", "synonym_type": "RELATED_SYNONYM",
+    "source": "PREGO"}, {"synonym_text": "cecums", "synonym_type": "RELATED_SYNONYM",
+    "source": "PREGO"}, {"synonym_text": "intestinum caeca", "synonym_type": "RELATED_SYNONYM",
+    "source": "PREGO"}, {"synonym_text": "intestinum caecal", "synonym_type": "RELATED_SYNONYM",
+    "source": "PREGO"}, {"synonym_text": "intestinum caecum", "synonym_type": "RELATED_SYNONYM",
+    "source": "PREGO"}, {"synonym_text": "intestinum caecums", "synonym_type": "RELATED_SYNONYM",
+    "source": "PREGO"}, {"synonym_text": "intestinum crassum caeca", "synonym_type":
+    "RELATED_SYNONYM", "source": "PREGO"}, {"synonym_text": "intestinum crassum caecal",
+    "synonym_type": "RELATED_SYNONYM", "source": "PREGO"}, {"synonym_text": "intestinum
+    crassum caecum", "synonym_type": "RELATED_SYNONYM", "source": "PREGO"}, {"synonym_text":
+    "intestinum crassum caecums", "synonym_type": "RELATED_SYNONYM", "source": "PREGO"},
+    {"synonym_text": "intestinum crassum ceca", "synonym_type": "RELATED_SYNONYM",
+    "source": "PREGO"}, {"synonym_text": "intestinum crassum cecal", "synonym_type":
+    "RELATED_SYNONYM", "source": "PREGO"}, {"synonym_text": "intestinum crassum cecum",
+    "synonym_type": "RELATED_SYNONYM", "source": "PREGO"}, {"synonym_text": "intestinum
+    crassum cecums", "synonym_type": "RELATED_SYNONYM", "source": "PREGO"}], "source_attestations":
+    [{"source": "PREGO", "source_id": "BTO:0000166", "source_label": "cecum", "assertion_count":
+    549, "assertion_unit": "TAXON", "score": 4.0, "evidence_channels": "annotated_genomes_isolates|environmental_samples"}],
+    "characteristic_taxa": [{"taxon_id": "NCBITaxon:100176", "source": "PREGO", "taxon_label":
+    "Papillibacter cinnamivorans", "score": 4.0, "rank": 1, "candidate_pool": 549},
+    {"taxon_id": "NCBITaxon:100883", "source": "PREGO", "taxon_label": "Coprobacillus",
+    "score": 4.0, "rank": 2, "candidate_pool": 549}, {"taxon_id": "NCBITaxon:102106",
+    "source": "PREGO", "taxon_label": "Collinsella", "score": 4.0, "rank": 3, "candidate_pool":
+    549}, {"taxon_id": "NCBITaxon:102234", "source": "PREGO", "taxon_label": "Cyanobacterium",
+    "score": 4.0, "rank": 4, "candidate_pool": 549}, {"taxon_id": "NCBITaxon:1032526",
+    "source": "PREGO", "taxon_label": "Pedosphaera", "score": 4.0, "rank": 5, "candidate_pool":
+    549}, {"taxon_id": "NCBITaxon:1091138", "source": "PREGO", "score": 4.0, "rank":
+    6, "candidate_pool": 549}, {"taxon_id": "NCBITaxon:109326", "source": "PREGO",
+    "taxon_label": "Anaerovorax", "score": 4.0, "rank": 7, "candidate_pool": 549},
+    {"taxon_id": "NCBITaxon:1117", "source": "PREGO", "taxon_label": "Cyanobacteriota",
+    "score": 4.0, "rank": 8, "candidate_pool": 549}, {"taxon_id": "NCBITaxon:113286",
+    "source": "PREGO", "taxon_label": "Pseudoramibacter", "score": 4.0, "rank": 9,
+    "candidate_pool": 549}, {"taxon_id": "NCBITaxon:117563", "source": "PREGO", "taxon_label":
+    "Granulicatella", "score": 4.0, "rank": 10, "candidate_pool": 549}, {"taxon_id":
+    "NCBITaxon:118747", "source": "PREGO", "taxon_label": "Bulleidia", "score": 4.0,
+    "rank": 11, "candidate_pool": 549}, {"taxon_id": "NCBITaxon:119852", "source":
+    "PREGO", "taxon_label": "Oscillospira", "score": 4.0, "rank": 12, "candidate_pool":
+    549}, {"taxon_id": "NCBITaxon:1249", "source": "PREGO", "taxon_label": "Weissella
+    paramesenteroides", "score": 4.0, "rank": 13, "candidate_pool": 549}, {"taxon_id":
+    "NCBITaxon:1253", "source": "PREGO", "taxon_label": "Pediococcus", "score": 4.0,
+    "rank": 14, "candidate_pool": 549}, {"taxon_id": "NCBITaxon:1263", "source": "PREGO",
+    "taxon_label": "Ruminococcus", "score": 4.0, "rank": 15, "candidate_pool": 549},
+    {"taxon_id": "NCBITaxon:1265", "source": "PREGO", "taxon_label": "Ruminococcus
+    flavefaciens", "score": 4.0, "rank": 16, "candidate_pool": 549}, {"taxon_id":
+    "NCBITaxon:1266", "source": "PREGO", "taxon_label": "Sarcina", "score": 4.0, "rank":
+    17, "candidate_pool": 549}, {"taxon_id": "NCBITaxon:1268", "source": "PREGO",
+    "taxon_label": "Micrococcaceae", "score": 4.0, "rank": 18, "candidate_pool": 549},
+    {"taxon_id": "NCBITaxon:1269", "source": "PREGO", "taxon_label": "Micrococcus",
+    "score": 4.0, "rank": 19, "candidate_pool": 549}, {"taxon_id": "NCBITaxon:1279",
+    "source": "PREGO", "taxon_label": "Staphylococcus", "score": 4.0, "rank": 20,
+    "candidate_pool": 549}, {"taxon_id": "NCBITaxon:1280", "source": "PREGO", "taxon_label":
+    "Staphylococcus aureus", "score": 4.0, "rank": 21, "candidate_pool": 549}, {"taxon_id":
+    "NCBITaxon:1282", "source": "PREGO", "taxon_label": "Staphylococcus epidermidis",
+    "score": 4.0, "rank": 22, "candidate_pool": 549}, {"taxon_id": "NCBITaxon:128827",
+    "source": "PREGO", "taxon_label": "Erysipelotrichaceae", "score": 4.0, "rank":
+    23, "candidate_pool": 549}, {"taxon_id": "NCBITaxon:1296", "source": "PREGO",
+    "taxon_label": "Mammaliicoccus sciuri", "score": 4.0, "rank": 24, "candidate_pool":
+    549}, {"taxon_id": "NCBITaxon:1300", "source": "PREGO", "taxon_label": "Streptococcaceae",
+    "score": 4.0, "rank": 25, "candidate_pool": 549}], "curation_history": [{"timestamp":
+    "2026-08-13T00:00:00Z", "curator": "claude-opus-5", "action": "REVIEW", "changes":
+    "Reviewed and endorsed the seeder''s own resolution. Multi-source review pass:
+    this record is attested by more than one independent vocabulary, and this source''s
+    label or path was read against the record''s ontology term to check the merge
+    is right. It agrees. Source concepts in the same pass whose labels did not agree
+    were re-decided rather than endorsed; see the pass''s other decisions of the same
+    date. (source concept habitatmech:PREGO.35b3d0b858)"}, {"timestamp": "2026-08-16T05:58:02Z",
+    "curator": "seed_from_sources", "action": "SEEDED_FROM_SOURCES", "changes": "Seeded
+    from data/raw/ inventories; attested by PREGO. Grounding: EXACT."}]}'
+  snapshot_sha256: 1933b2697d1cf64714fad794b252918daf26d248da8a3c682356b7806864e2ba
+- evidence_id: EAFTER1
+  kind: record_content
+  reference: data/habitats/host_associated/cecum_intestinal_cecum.yaml
+  locator: Entire regenerated target
+  accessed_at: '2026-10-15T22:44:45Z'
+  support: supports
+  summary: '{"identifier": "habitatmech:GOLD.37d9cdc188", "label": "Cecum/Intestinal
+    cecum", "habitat_category": "HOST_ASSOCIATED", "grounding_status": "UNGROUNDED",
+    "mapping_status": "REVIEWED", "source_attestations": [{"source": "GOLD", "source_id":
+    "gold.ecosystem:7832", "source_label": "Cecum/Intestinal cecum", "source_path":
+    "Host-associated > Mollusca > Digestive system > Hindgut > Cecum/Intestinal cecum"}],
+    "curation_history": [{"timestamp": "2026-08-16T05:58:02Z", "curator": "seed_from_sources",
+    "action": "SEEDED_FROM_SOURCES", "changes": "Seeded from data/raw/ inventories;
+    attested by GOLD. Grounding: UNGROUNDED."}, {"timestamp": "2026-10-15T00:00:00Z",
+    "curator": "codex-gpt-5", "action": "CONFIRM_UNGROUNDED", "changes": "Confirmed
+    UNGROUNDED: no ontology term fits this concept. ITEM reassessment https://github.com/CultureBotAI/HabitatMech/issues/2208
+    : This molluscan source does not denote the vertebrate ileocecal or large-intestinal
+    anatomy of UBERON:0001153 or BTO:0000166. Current OLS definitions and Uberon taxon
+    notes distinguish invertebrate homonyms; octopus dissection (https://pubmed.ncbi.nlm.nih.gov/39140156/
+    ; DOI:10.1242/bio.060429) is a bounded anatomical witness, not identification
+    of the exact GOLD specimen. Retain the source mint UNGROUNDED without inventing
+    an alternative genus. Separate only this GOLD source from PREGO BTO:0000166; retain
+    PREGO identity, 549-taxon pool and displayed associations unchanged. This supersedes
+    the 2026-08-12 grounding and its truncated path; the prior decision is preserved
+    in Git, immutable baseline review and the regression fixture. The whole-organ
+    context contribution is excluded under #2206. Path: Host-associated > Mollusca
+    > Digestive system > Hindgut > Cecum/Intestinal cecum (source concept habitatmech:GOLD.37d9cdc188)"},
+    {"timestamp": "2026-10-15T00:00:00Z", "curator": "codex-gpt-5", "action": "SOURCE_PARENT_EXCLUDED",
+    "changes": "Excluded GOLD source-path parent contribution habitatmech:GOLD.c336fb0bb7
+    for habitatmech:GOLD.37d9cdc188 (Host-associated > Mollusca > Digestive system
+    > Hindgut > Cecum/Intestinal cecum). Review https://github.com/CultureBotAI/HabitatMech/issues/2206
+    : This anatomical component or derived material is not a subtype of the containing
+    organ or system. Exclude only the exact GOLD contribution; retain independent
+    valid genera and original source observations. This does not resolve the separate
+    catarrh condition/material scope or shared mapping endpoint #1398."}]}'
+  snapshot_sha256: cbbd708e719fba4e5dc123f4ea0fe9860bad218bb3b338d74f909dd4c7a4dbec
+- evidence_id: EPREV
+  kind: prior_review
+  reference: reviews/structured/20261015T212554Z-cecum-record/review.yaml
+  locator: Exact predecessor, all findings and source evidence
+  accessed_at: '2026-10-15T22:44:45Z'
+  support: supports
+  summary: Baseline observation retained byte-identically. Every finding retains its
+    exact predecessor identity and issue key.
+  snapshot_sha256: ce6688cc01e0c16662b8eeae6908c3a6b8087c769b4d3224a231c2433fb073e4
+- evidence_id: ETEST
+  kind: record_content
+  reference: tests/test_cardiac_cartilage_cecum_review_repairs.py
+  locator: Full-corpus counterfactual, exact source partition, taxonomy preservation
+    and public URL rendering
+  accessed_at: '2026-10-15T22:44:45Z'
+  support: supports
+  summary: Exactly fourteen shared record identities change, one incompatible ontology
+    identity is removed and two minted source identities become records. Entire source-attestation
+    multiset excluding only mapping predicates and all taxon-bearing records remain
+    identical. Other identities remain byte-equivalent as generated documents.
+  snapshot_sha256: 1ca96d2b8fcf3d5016f8831dd3f3a1c51358e4ad752aa9237358259eb5583528
+- evidence_id: EFIXTURE
+  kind: record_content
+  reference: tests/data/cardiac_cartilage_cecum_prior_decisions.json
+  locator: Loader-normalized prior molluscan cecum decision
+  accessed_at: '2026-10-15T22:44:45Z'
+  support: supports
+  summary: Earlier effective decision content retained with loader defaults; original
+    bytes remain in the baseline Git revision.
+  snapshot_sha256: 7266598936ff8418d36a26c8e0086c570dbf7706813d92981642c5e33dc8d256
+- evidence_id: ERULE
+  kind: authority
+  reference: docs/CURATION.md
+  locator: Strict hierarchy, source identity and evidence rules
+  accessed_at: '2026-10-15T22:44:45Z'
+  support: supports
+  summary: Containment is not is-a; lexical homonyms do not establish cross-host anatomical
+    equivalence.
+  snapshot_sha256: f3f5d3d033fa7e7c1d78571959fc2e62e0b0a625f47dba1413657e8cf944b322
+- evidence_id: EHISTORY
+  kind: authority
+  reference: history/README.md
+  locator: Generated audit trail versus immutable sessions
+  accessed_at: '2026-10-15T22:44:45Z'
+  support: supports
+  summary: Superseding a maintained decision regenerates its projection while saved
+    session history and reviews remain append-only.
+  snapshot_sha256: 819361a711697f96ff9c1aa0b27e94302547970b3b54777d67ec1449db5e543a
+- evidence_id: EI14
+  kind: record_content
+  reference: curation/gold_parent_exclusions.tsv
+  locator: Exact keyed rows 15
+  accessed_at: '2026-10-15T22:44:45Z'
+  support: supports
+  summary: '[[15, "habitatmech:GOLD.37d9cdc188\tHost-associated > Mollusca > Digestive
+    system > Hindgut > Cecum/Intestinal cecum\thabitatmech:GOLD.c336fb0bb7\tcodex-gpt-5\t2026-10-15\tReview
+    https://github.com/CultureBotAI/HabitatMech/issues/2206 : This anatomical component
+    or derived material is not a subtype of the containing organ or system. Exclude
+    only the exact GOLD contribution; retain independent valid genera and original
+    source observations. This does not resolve the separate catarrh condition/material
+    scope or shared mapping endpoint #1398."]]'
+  snapshot_sha256: 7158cb696b7e2ac84a8d594a03015711424ff56e21c07a4648ffc6fb2e84a107
+- evidence_id: EI15
+  kind: record_content
+  reference: curation/decisions.tsv
+  locator: Exact keyed rows 413
+  accessed_at: '2026-10-15T22:44:45Z'
+  support: supports
+  summary: '[[413, "habitatmech:GOLD.37d9cdc188\tCONFIRM_UNGROUNDED\t\t\t\tcodex-gpt-5\t2026-10-15\tITEM
+    reassessment https://github.com/CultureBotAI/HabitatMech/issues/2208 : This molluscan
+    source does not denote the vertebrate ileocecal or large-intestinal anatomy of
+    UBERON:0001153 or BTO:0000166. Current OLS definitions and Uberon taxon notes
+    distinguish invertebrate homonyms; octopus dissection (https://pubmed.ncbi.nlm.nih.gov/39140156/
+    ; DOI:10.1242/bio.060429) is a bounded anatomical witness, not identification
+    of the exact GOLD specimen. Retain the source mint UNGROUNDED without inventing
+    an alternative genus. Separate only this GOLD source from PREGO BTO:0000166; retain
+    PREGO identity, 549-taxon pool and displayed associations unchanged. This supersedes
+    the 2026-08-12 grounding and its truncated path; the prior decision is preserved
+    in Git, immutable baseline review and the regression fixture. The whole-organ
+    context contribution is excluded under #2206. Path: Host-associated > Mollusca
+    > Digestive system > Hindgut > Cecum/Intestinal cecum\tITEM\t\tparent"]]'
+  snapshot_sha256: e5cb2e09f72dd4b18e069c0e2576e25e13e56c9991f4eb5ae47416345e247578
+assessments:
+- assessment_id: A0
+  area: consistency
+  topic: Correction and preservation
+  outcome: supported
+  summary: Excluded only the exact GOLD containing-anatomy contribution habitatmech:GOLD.c336fb0bb7;
+    independent valid genera and source paths remain. Separated the molluscan GOLD
+    source into habitatmech:GOLD.37d9cdc188. The original BTO:0000166 record now contains
+    only its PREGO source, with the same 549-taxon pool and unchanged displayed taxa.
+    No replacement ontology identity is invented. The superseding ITEM decision carries
+    the complete Cecum/Intestinal cecum path, current attribution and date. The old
+    decision remains in Git and the regression fixture; immutable review/session files
+    are not rewritten. Generated history is a current-input projection, not the append-only
+    session archive. Original source observations, counts, units and taxa are preserved.
+    No unresolved predecessor finding remains within this scope; biological evidence
+    limits still apply.
+  target_ids:
+  - BTO:0000166
+  - habitatmech:GOLD.37d9cdc188
+  evidence_ids:
+  - EX1
+  - EX2
+  - EX3
+  - EX4
+  - EX5
+  - EX6
+  - EX7
+  - EAFTER0
+  - EAFTER1
+  - EPREV
+  - ETEST
+  - EFIXTURE
+  - ERULE
+  - EHISTORY
+  - EI14
+  - EI15
+- assessment_id: A1
+  area: identity
+  topic: Current identities, definition scope and strict ancestry
+  outcome: supported
+  summary: 'BTO:0000166: cecum, EXACT/REVIEWED, parents []. habitatmech:GOLD.37d9cdc188:
+    Cecum/Intestinal cecum, UNGROUNDED/REVIEWED, parents []. The bounded source identity
+    is retained without inventing a missing genus or optional definition.'
+  target_ids:
+  - BTO:0000166
+  - habitatmech:GOLD.37d9cdc188
+  evidence_ids:
+  - EX1
+  - EX2
+  - EX3
+  - EX4
+  - EX5
+  - EX6
+  - EX7
+  - EAFTER0
+  - EAFTER1
+  - EPREV
+  - ETEST
+  - EFIXTURE
+  - ERULE
+  - EHISTORY
+  - EI14
+  - EI15
+  dimensions:
+  - name: native_status
+    value: '{"BTO:0000166": "EXACT/REVIEWED", "habitatmech:GOLD.37d9cdc188": "UNGROUNDED/REVIEWED"}'
+    definition: Native current states, distinct from scientific review verdict; a
+      retired identity has no current native status.
+    evidence_ids:
+    - EX1
+    - EX2
+    - EX3
+    - EX4
+    - EX5
+    - EX6
+    - EX7
+    - EAFTER0
+    - EAFTER1
+    - EPREV
+    - ETEST
+    - EFIXTURE
+    - ERULE
+    - EHISTORY
+    - EI14
+    - EI15
+- assessment_id: A2
+  area: quantity
+  topic: Frozen source counts, units, scores and taxa
+  outcome: supported
+  summary: 'Source-specific nonadditive observations are retained. The split does
+    not duplicate PREGO associations onto the new molluscan record. [[{"source": "PREGO",
+    "source_id": "BTO:0000166", "source_label": "cecum", "assertion_count": 549, "assertion_unit":
+    "TAXON", "score": 4.0, "evidence_channels": "annotated_genomes_isolates|environmental_samples"}],
+    [{"source": "GOLD", "source_id": "gold.ecosystem:7832", "source_label": "Cecum/Intestinal
+    cecum", "source_path": "Host-associated > Mollusca > Digestive system > Hindgut
+    > Cecum/Intestinal cecum"}]]'
+  target_ids:
+  - BTO:0000166
+  - habitatmech:GOLD.37d9cdc188
+  evidence_ids:
+  - EX1
+  - EX2
+  - EX3
+  - EX4
+  - EX5
+  - EX6
+  - EX7
+  - EAFTER0
+  - EAFTER1
+  - EPREV
+  - ETEST
+  - EFIXTURE
+  - ERULE
+  - EHISTORY
+  - EI14
+  - EI15
+- assessment_id: A3
+  area: representation
+  topic: Exact predecessor lineage and remaining findings
+  outcome: supported
+  summary: Every predecessor finding and affected target identity is retained. This
+    scoped review does not certify exports.
+  target_ids:
+  - BTO:0000166
+  - habitatmech:GOLD.37d9cdc188
+  evidence_ids:
+  - EX1
+  - EX2
+  - EX3
+  - EX4
+  - EX5
+  - EX6
+  - EX7
+  - EAFTER0
+  - EAFTER1
+  - EPREV
+  - ETEST
+  - EFIXTURE
+  - ERULE
+  - EHISTORY
+  - EI14
+  - EI15
+findings:
+- finding_id: F1
+  issue_key: cecum-context-parent
+  category: grounding
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Containing anatomy is emitted as a broader habitat class
+  description: Corrected through maintained inputs and native regeneration. Excluded
+    only the exact GOLD containing-anatomy contribution habitatmech:GOLD.c336fb0bb7;
+    independent valid genera and source paths remain.
+  target_ids:
+  - BTO:0000166
+  field_paths:
+  - parent_habitats
+  evidence_ids:
+  - EX1
+  - EX2
+  - EX3
+  - EX4
+  - EX5
+  - EX6
+  - EX7
+  - EAFTER0
+  - EAFTER1
+  - EPREV
+  - ETEST
+  - EFIXTURE
+  - ERULE
+  - EHISTORY
+  - EI14
+  - EI15
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; never patch generated habitat YAML
+  rule_id: docs/CURATION.md and native record-review checklist
+  native_severity: major
+  normalization_reason: Materially unsupported hierarchy, mapping or source-evidence
+    semantics; correct deterministic reproduction does not establish scientific support.
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2206
+  previous_occurrences:
+  - repository: CultureBotAI/HabitatMech
+    review_id: 20261015T212554Z-cecum-record
+    finding_id: F1
+  disposition_reason: Excluded only the exact GOLD containing-anatomy contribution
+    habitatmech:GOLD.c336fb0bb7; independent valid genera and source paths remain.
+- finding_id: F2
+  issue_key: cecum-molluscan-vertebrate-cecum-merge
+  category: identity
+  severity: blocker
+  status: resolved
+  certainty: confirmed
+  title: Molluscan cecum is merged into incompatible large-intestinal anatomy
+  description: Corrected through maintained inputs and native regeneration. Separated
+    the molluscan GOLD source into habitatmech:GOLD.37d9cdc188. The original BTO:0000166
+    record now contains only its PREGO source, with the same 549-taxon pool and unchanged
+    displayed taxa. No replacement ontology identity is invented.
+  target_ids:
+  - BTO:0000166
+  field_paths:
+  - identifier
+  - definition
+  - synonyms
+  - source_attestations
+  evidence_ids:
+  - EX1
+  - EX2
+  - EX3
+  - EX4
+  - EX5
+  - EX6
+  - EX7
+  - EAFTER0
+  - EAFTER1
+  - EPREV
+  - ETEST
+  - EFIXTURE
+  - ERULE
+  - EHISTORY
+  - EI14
+  - EI15
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; never patch generated habitat YAML
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; never patch generated habitat YAML
+  rule_id: docs/CURATION.md and native record-review checklist
+  native_severity: blocker
+  normalization_reason: Incompatible anatomical identities are treated as exact equivalents,
+    causing a source concept to denote the wrong thing.
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2208
+  previous_occurrences:
+  - repository: CultureBotAI/HabitatMech
+    review_id: 20261015T212554Z-cecum-record
+    finding_id: F2
+  disposition_reason: Separated the molluscan GOLD source into habitatmech:GOLD.37d9cdc188.
+    The original BTO:0000166 record now contains only its PREGO source, with the same
+    549-taxon pool and unchanged displayed taxa. No replacement ontology identity
+    is invented.
+- finding_id: F3
+  issue_key: cecum-decision-note-truncated-path
+  category: provenance
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: Maintained grounding note truncates the source name
+  description: Corrected through maintained inputs and native regeneration. The superseding
+    ITEM decision carries the complete Cecum/Intestinal cecum path, current attribution
+    and date. The old decision remains in Git and the regression fixture; immutable
+    review/session files are not rewritten. Generated history is a current-input projection,
+    not the append-only session archive.
+  target_ids:
+  - BTO:0000166
+  field_paths:
+  - curation_history
+  evidence_ids:
+  - EX1
+  - EX2
+  - EX3
+  - EX4
+  - EX5
+  - EX6
+  - EX7
+  - EAFTER0
+  - EAFTER1
+  - EPREV
+  - ETEST
+  - EFIXTURE
+  - ERULE
+  - EHISTORY
+  - EI14
+  - EI15
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; never patch generated habitat YAML
+  rule_id: docs/CURATION.md and native record-review checklist
+  native_severity: minor
+  normalization_reason: Bounded maintained-provenance wording error; the full source
+    path is retained elsewhere.
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2208
+  previous_occurrences:
+  - repository: CultureBotAI/HabitatMech
+    review_id: 20261015T212554Z-cecum-record
+    finding_id: F3
+  disposition_reason: The superseding ITEM decision carries the complete Cecum/Intestinal
+    cecum path, current attribution and date. The old decision remains in Git and
+    the regression fixture; immutable review/session files are not rewritten. Generated
+    history is a current-input projection, not the append-only session archive.
+actions: []
+limitations:
+- Individual source specimens and all original pair-level citations have not been
+  independently reconstructed. Counts, ranks and source scores are not prevalence
+  or characteristic presence.
+- 'iModulonDB is not applicable to target claims: no gene, regulator, expression module
+  or causal mechanism is asserted. Papers mentioning genes are used only for source
+  context. No paid research was used.'
+- Original PREGO pair-level exports are unavailable locally. Inspected primary witnesses
+  do not reconstruct every original pair or establish its exact extraction route.
+- Same-agent adversarial review, not independent approval. Original inspected primary-source
+  and specimen-level limits remain; no prevalence, characteristic presence or mechanism
+  is inferred.
+- Configured label validation has no-adapter skips, reported in the actual check result.
+  No all-prefix identity or SSSOM/KGX conformance certification is made.
+- Final-head checks must validate this new immutable successor. Recorded full QC covers
+  the exact repaired scientific-input revision.
+notes:
+- Explicit identity-transition batch under docs/record-review-profile.md; every affected
+  predecessor and current target is assessed, not counted as an individual-kind review.
+- The retained 2026-08-13 PREGO decision has historical multi-source wording. It is
+  not evidence that the rejected GOLD equivalence was correct. This successor separately
+  assesses the direct PREGO BTO identity and the split source partition.
+tags:
+- individual-scientific-review
+- host-associated
+boundary_decisions:
+- action: split
+  target_ids:
+  - BTO:0000166
+  - habitatmech:GOLD.37d9cdc188
+  rationale: The prior mixed record conflated incompatible source anatomy; retain
+    PREGO BTO identity and a separate molluscan GOLD mint without copying observations.
+  evidence_ids:
+  - EX1
+  - EX2
+  - EX3
+  - EX4
+  - EX5
+  - EX6
+  - EX7
+  - EAFTER0
+  - EAFTER1
+  - EPREV
+  - ETEST
+  - EFIXTURE
+  - ERULE
+  - EHISTORY
+  - EI14
+  - EI15
+  proposed_groups:
+  - label: cecum (BTO:0000166)
+    target_ids:
+    - BTO:0000166
+  - label: Cecum/Intestinal cecum (habitatmech:GOLD.37d9cdc188)
+    target_ids:
+    - habitatmech:GOLD.37d9cdc188
+related_reviews:
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261015T212554Z-cecum-record
+  relationship: Exact predecessor; every finding and affected target is explicitly
+    reconciled.
+```
