@@ -215,7 +215,7 @@
     <td><a href="habitats/brown-alga-associated-environment-habitatmech-gold-3e4ecbed63.html">brown-alga-associated environment</a></td>
     <td class="num">231</td>
     <td class="meta">GOLD</td>
-    <td class="meta">Non-habitat screen (#12): grounded EXACT to FOODON:03412395 &#39;brown algae&#39;, which FOODON uses for the TAXON — red algae is defined there as &#39;one of the oldest groups of eukaryotic algae, and one of the largest phyla&#39; — not for a habitat. An organism group is not a place, and the GOLD path says host-associated, so the concept is the environment the alga provides. Same family as the sponge, nematode and reptile requests. The FOODON term is kept as an xref (#99), which records what the label matched without asserting the record is a phylum.</td>
+    <td class="meta">ITEM rationale correction https://github.com/CultureBotAI/HabitatMech/issues/2201 : FOODON:03412395 is the brown-algae organism/source class; its current OLS entry has no textual definition. The earlier rationale explicitly quoted the red-algae sibling, which does not define this target. Retain the brown-alga-associated environment under its own minted identity, with FOODON retained only as host-context xref and the existing environmental genera unchanged. This supersedes only the explanation and attribution of the 2026-08-16 decision; prior reasoning remains in Git and immutable review/session evidence. Path: Host-associated &gt; Algae &gt; Brown Algae</td>
   </tr>
   <tr>
     <td><a href="habitats/fruit-seed-habitatmech-bacdive-ba016fe448.html">Fruit-Seed</a></td>
@@ -462,6 +462,12 @@
     <td class="num">9</td>
     <td class="meta">GOLD</td>
     <td class="meta">Variant-match review (#12): the variant route strips GOLD&#39;s parenthetical and reaches UBERON:0002622 &#39;preoptic periventricular nucleus&#39;, a structure in the BRAIN, for a class of industrial chemicals. The path is Engineered &gt; Bioremediation &gt; Persistent organic pollutants (POP), so the habitat is the contaminated material being remediated; the pollutants themselves are chemicals rather than places, and no term in the slice names the habitat. Path: Engineered &gt; Bioremediation &gt; Persistent organic pollutants (POP)</td>
+  </tr>
+  <tr>
+    <td><a href="habitats/caeca-bacteriome-habitatmech-gold-2d506b9526.html">Caeca: Bacteriome</a></td>
+    <td class="num">5</td>
+    <td class="meta">GOLD</td>
+    <td class="meta">ITEM reassessment https://github.com/CultureBotAI/HabitatMech/issues/2200 : This exact invertebrate midgut source does not denote the vertebrate ileocecal anatomy of UBERON:0001153 or BTO:0000166. Their inspected OLS definitions specify large-intestinal anatomy, not these insect or crustacean structures. Retain this distinct minted habitat UNGROUNDED; no fitting identity or strictly broader regional genus was verified. Remove the unsupported narrowMatch, not the source assertions. The separate GOLD whole-midgut contribution is excluded under #2198. This supersedes the 2026-08-12 GROUND_AS_PARENT decision and corrects its truncated path under #2201; the prior decision remains in Git, the immutable baseline review and append-only session history. Path: Host-associated &gt; Arthropoda: Insects &gt; Digestive system &gt; Midgut &gt; Caeca: Bacteriome</td>
   </tr>
   <tr>
     <td><a href="habitats/leaf-or-stem-spot-lesion-environment-habitatmech-bacdive-31392c69b9.html">leaf-or-stem spot lesion environment</a></td>
@@ -720,6 +726,18 @@
     <td class="num">0</td>
     <td class="meta">GOLD</td>
     <td class="meta">Disjoint-grounding review (#62): was UBERON:0002960 &#39;central oculomotor nucleus&#39;, a brainstem structure. Same as C2 — the path is Digestive system &gt; Stomach &gt; C3, a camelid stomach compartment. Path: Host-associated &gt; Mammals &gt; Digestive system &gt; Stomach &gt; C3</td>
+  </tr>
+  <tr>
+    <td><a href="habitats/caeca-habitatmech-gold-15af5884e8.html">Caeca</a></td>
+    <td class="num">0</td>
+    <td class="meta">GOLD</td>
+    <td class="meta">ITEM reassessment https://github.com/CultureBotAI/HabitatMech/issues/2200 : This exact invertebrate midgut source does not denote the vertebrate ileocecal anatomy of UBERON:0001153 or BTO:0000166. Their inspected OLS definitions specify large-intestinal anatomy, not these insect or crustacean structures. Retain this distinct minted habitat UNGROUNDED; no fitting identity or strictly broader regional genus was verified. Remove the unsupported narrowMatch, not the source assertions. The separate GOLD whole-midgut contribution is excluded under #2198. Path: Host-associated &gt; Arthropoda: Crustaceans &gt; Digestive system &gt; Midgut &gt; Caeca</td>
+  </tr>
+  <tr>
+    <td><a href="habitats/caeca-habitatmech-gold-ca7333c915.html">Caeca</a></td>
+    <td class="num">0</td>
+    <td class="meta">GOLD</td>
+    <td class="meta">ITEM reassessment https://github.com/CultureBotAI/HabitatMech/issues/2200 : This exact invertebrate midgut source does not denote the vertebrate ileocecal anatomy of UBERON:0001153 or BTO:0000166. Their inspected OLS definitions specify large-intestinal anatomy, not these insect or crustacean structures. Retain this distinct minted habitat UNGROUNDED; no fitting identity or strictly broader regional genus was verified. Remove the unsupported narrowMatch, not the source assertions. The separate GOLD whole-midgut contribution is excluded under #2198. Path: Host-associated &gt; Arthropoda: Insects &gt; Digestive system &gt; Midgut &gt; Caeca</td>
   </tr>
   <tr>
     <td><a href="habitats/fish-embryo-associated-environment-habitatmech-gold-9f162205a6.html">fish embryo-associated environment</a></td>
