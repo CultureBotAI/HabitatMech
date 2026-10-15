@@ -58,9 +58,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 
 
-<h2>Also called</h2>
-<ul class="plain">
-<li>Arthropoda: Crustaceans <span class="meta">— HabitatMech curation</span></li></ul>
 
 <h2>Curation</h2>
 <p class="meta">What a curator decided about this record, and why. A record built
@@ -75,6 +72,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">DEFINED</span>
     <span class="meta">2026-08-16 · claude-opus-5</span>
     <p>Defined as &#39;crustacean-associated environment&#39; under ENVO:01001002 &#39;animal-associated environment&#39;. The habitat is the host clade, and it is the entire content of the concept: GOLD and BacDive both organise host-associated isolates by host, and every downstream anatomical path hangs off it. HabitatMech deliberately does not ground these to animal-associated environment, because every clade would then merge onto one record and the distinction the sources are making would be lost. ENVO already has this shape at plant-, animal- and fungi-associated environment; this asks for the same pattern one level down.</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_SYNONYM_EXCLUDED</span>
+    <span class="meta">2026-10-15 · codex-gpt-5</span>
+    <p>Omitted automatic retention of displaced source label &#39;Arthropoda: Crustaceans&#39; when defining habitatmech:GOLD.2959225799 as &#39;crustacean-associated environment&#39;. Verbatim source attestations are preserved. Review #2162: the displaced source label denotes the host, not its associated environment. Remove only that authored exact alias and suppress old-label fallback; preserve environmental definition, genus, valid environment-form synonyms, original source path/label/count/unit, taxonomic xrefs, native status and prior definition history.</p>
   </li>
 </ol>
 

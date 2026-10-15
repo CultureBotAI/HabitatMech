@@ -52,7 +52,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="../habitats/blood-bto-0000089.html">blood</a>      <code class="curie">BTO:0000089</code></li>
-  <li><a href="../habitats/blood-habitatmech-gold-6c6aab19d3.html">Blood</a>      <code class="curie">habitatmech:GOLD.6c6aab19d3</code></li>
 </ul>
 
 
@@ -70,6 +69,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">GROUND</span>
     <span class="meta">2026-08-16 · claude-opus-5</span>
     <p>Grounded to BTO:0006188 &#39;arterial blood&#39; (EXACT). Compound-path screen (#12): every search route reads the GOLD leaf alone, but the leaf is only the last step of the path — &#39;Arterial&#39; under &#39;Blood&#39; means &#39;arterial blood&#39;. Searched on its own it matches nothing (or the wrong sense entirely: &#39;Hyaline&#39; finds PATO&#39;s transparent), which is why the class-level sweep recorded no match. The compound names BTO:0006188 &#39;arterial blood&#39; exactly. Read against the full path before deciding. (source concept habitatmech:GOLD.b183820c16)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-15 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.6c6aab19d3 for habitatmech:GOLD.b183820c16 (Host-associated &gt; Mammals &gt; Circulatory system &gt; Blood &gt; Arterial). Review #1348: Generic arterial blood includes nonmammalian vertebrates; mammal Blood is not a broader class. Exclude only the exact immediate GOLD context contribution; preserve independent ontology genera, source identity/path/count/unit, native status and prior history. Typed ontology and primary evidence are retained in the immutable individual review. Shared mapping endpoint #1398 is separate.</p>
   </li>
 </ol>
 
