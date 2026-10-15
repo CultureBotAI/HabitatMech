@@ -26,7 +26,7 @@
 <p class="meta">
   <code class="curie">habitatmech:GOLD.2d506b9526</code>
   <span class="sep">·</span><a href="../category/host-associated.html">HOST_ASSOCIATED</a>
-  <span class="sep">·</span><span class="pill">NARROW</span>
+  <span class="sep">·</span><span class="pill warn">UNGROUNDED</span>
   <span class="pill">REVIEWED</span>
 </p>
 
@@ -49,11 +49,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 </table>
 </div>
 
-<h2>Broader habitats</h2>
-<ul class="plain">
-  <li><a href="../habitats/cecum-bto-0000166.html">cecum</a>      <code class="curie">BTO:0000166</code></li>
-  <li><a href="../habitats/midgut-habitatmech-gold-67c565f695.html">Midgut</a>      <code class="curie">habitatmech:GOLD.67c565f695</code></li>
-</ul>
 
 
 
@@ -64,9 +59,14 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 from several source concepts can carry one decision per concept.</p>
 <ol class="events">
   <li>
-    <span class="pill">GROUND_AS_PARENT</span>
-    <span class="meta">2026-08-12 · claude-opus-5</span>
-    <p>BTO:0000166 &#39;cecum&#39; attached as a parent, not adopted as the identity (NARROW). A bacteriome is a specialised symbiont-housing organ associated with the caeca. Path: Host-associated &gt; Arthropoda: Insects &gt; Digestive system &gt; Midgut &gt; Ca (source concept habitatmech:GOLD.2d506b9526)</p>
+    <span class="pill">CONFIRM_UNGROUNDED</span>
+    <span class="meta">2026-10-15 · codex-gpt-5</span>
+    <p>Confirmed UNGROUNDED: no ontology term fits this concept. ITEM reassessment <a href="https://github.com/CultureBotAI/HabitatMech/issues/2200" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2200</a> : This exact invertebrate midgut source does not denote the vertebrate ileocecal anatomy of UBERON:0001153 or BTO:0000166. Their inspected OLS definitions specify large-intestinal anatomy, not these insect or crustacean structures. Retain this distinct minted habitat UNGROUNDED; no fitting identity or strictly broader regional genus was verified. Remove the unsupported narrowMatch, not the source assertions. The separate GOLD whole-midgut contribution is excluded under #2198. This supersedes the 2026-08-12 GROUND_AS_PARENT decision and corrects its truncated path under #2201; the prior decision remains in Git, the immutable baseline review and append-only session history. Path: Host-associated &gt; Arthropoda: Insects &gt; Digestive system &gt; Midgut &gt; Caeca: Bacteriome (source concept habitatmech:GOLD.2d506b9526)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-15 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.67c565f695 for habitatmech:GOLD.2d506b9526 (Host-associated &gt; Arthropoda: Insects &gt; Digestive system &gt; Midgut &gt; Caeca: Bacteriome). Review <a href="https://github.com/CultureBotAI/HabitatMech/issues/2198" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2198</a> : A component, derived sample fraction or distinct anatomical structure is not a subtype of this containing or neighboring source context. Exclude only this exact GOLD contribution; retain independent valid genera and source observations. This does not resolve C1 source scope or shared mapping endpoint #1398.</p>
   </li>
 </ol>
 

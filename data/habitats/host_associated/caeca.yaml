@@ -1,20 +1,38 @@
 identifier: habitatmech:GOLD.15af5884e8
 label: Caeca
 habitat_category: HOST_ASSOCIATED
-grounding_status: NARROW
-mapping_status: SEEDED
-parent_habitats:
-- UBERON:0001153
-- habitatmech:GOLD.5c1b0d44e2
+grounding_status: UNGROUNDED
+mapping_status: REVIEWED
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7322
   source_label: Caeca
   source_path: 'Host-associated > Arthropoda: Crustaceans > Digestive system > Midgut
     > Caeca'
-  mapping_predicate: skos:narrowMatch
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM reassessment
+    https://github.com/CultureBotAI/HabitatMech/issues/2200 : This exact invertebrate
+    midgut source does not denote the vertebrate ileocecal anatomy of UBERON:0001153
+    or BTO:0000166. Their inspected OLS definitions specify large-intestinal anatomy,
+    not these insect or crustacean structures. Retain this distinct minted habitat
+    UNGROUNDED; no fitting identity or strictly broader regional genus was verified.
+    Remove the unsupported narrowMatch, not the source assertions. The separate GOLD
+    whole-midgut contribution is excluded under #2198. Path: Host-associated > Arthropoda:
+    Crustaceans > Digestive system > Midgut > Caeca (source concept habitatmech:GOLD.15af5884e8)'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.5c1b0d44e2
+    for habitatmech:GOLD.15af5884e8 (Host-associated > Arthropoda: Crustaceans > Digestive
+    system > Midgut > Caeca). Review https://github.com/CultureBotAI/HabitatMech/issues/2198
+    : A component, derived sample fraction or distinct anatomical structure is not
+    a subtype of this containing or neighboring source context. Exclude only this
+    exact GOLD contribution; retain independent valid genera and source observations.
+    This does not resolve C1 source scope or shared mapping endpoint #1398.'

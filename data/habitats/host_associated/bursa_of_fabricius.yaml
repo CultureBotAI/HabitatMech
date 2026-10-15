@@ -16,7 +16,6 @@ parent_habitats:
 - UBERON:0004177
 - UBERON:0011510
 - UBERON:0013765
-- habitatmech:GOLD.f65007e88e
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7474
@@ -29,3 +28,13 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.f65007e88e
+    for habitatmech:GOLD.dfef770cb8 (Host-associated > Birds > Lymphatic system >
+    Bursa of Fabricius). Review https://github.com/CultureBotAI/HabitatMech/issues/2198
+    : A component, derived sample fraction or distinct anatomical structure is not
+    a subtype of this containing or neighboring source context. Exclude only this
+    exact GOLD contribution; retain independent valid genera and source observations.
+    This does not resolve C1 source scope or shared mapping endpoint #1398.'

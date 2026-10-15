@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: buccal_camelid_caeca_review
+session:
+  id: 2026-10-15T194811Z-codex-gpt-5-a1906b
+  timestamp: '2026-10-15T19:48:11Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2198
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Remove thirteen source-context parent contributions
+  details: 'Inspected exact GOLD paths and BTO/UBERON authorities distinguish containing anatomy,
+    derived blood fraction and rhizome context from strictly broader habitat classes. Add
+    thirteen guarded exclusions; preserve independent valid genera and source IDs/counts/units/taxa.
+    C1 scope and shared mapping endpoint #1398 remain unresolved. The focused counterfactual
+    test failed before repair and passed after it; changed canaries were inspected. Full native
+    QC, label correspondence, corpus reproduction and regenerated map/site remain publication
+    gates.'

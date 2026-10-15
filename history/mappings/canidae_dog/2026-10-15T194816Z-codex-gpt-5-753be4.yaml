@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: canidae_dog
+session:
+  id: 2026-10-15T194816Z-codex-gpt-5-753be4
+  timestamp: '2026-10-15T19:48:16Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2199
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - synonyms
+  summary: Remove whole-host exact alias from associated environment
+  details: Clear only the authored exact alias Canidae-Dog and add its guarded definition_source_label_exclusions
+    row. Preserve verbatim source labels, definitions, environmental genera, counts and taxa.
+    Keep original definition attribution/date/notes unchanged. The focused counterfactual
+    test failed before repair and passed after it; changed canaries were inspected. Full native
+    QC, label correspondence, corpus reproduction and regenerated map/site remain publication
+    gates.

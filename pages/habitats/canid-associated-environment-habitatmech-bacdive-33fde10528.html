@@ -250,9 +250,6 @@ a grounding.</p>
   <li><a href="http://purl.obolibrary.org/obo/NCBITaxon_9608">Canidae</a><code class="curie">NCBITaxon:9608</code></li>
 </ul>
 
-<h2>Also called</h2>
-<ul class="plain">
-<li>Canidae-Dog <span class="meta">— HabitatMech curation</span></li></ul>
 
 <h2>Curation</h2>
 <p class="meta">What a curator decided about this record, and why. A record built
@@ -267,6 +264,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">DEFINED</span>
     <span class="meta">2026-08-26 · claude-opus-5</span>
     <p>Defined as &#39;canid-associated environment&#39; under ENVO:01001002 &#39;animal-associated environment&#39;. Definition follows the established &lt;clade&gt;-associated environment family for BacDive host buckets, whose naming rule the corpus already fixes: a -inae source label yields -ine (Bovinae-Cow,-Cattle -&gt; bovine) and a -idae source label yields -id (Equidae-Horse -&gt; equid, Leporidae-Rabbit/Hare -&gt; leporid, Suidae-Pig,Swine -&gt; suid). No deep-research run was commissioned: the genus, the wording pattern and the near-miss reasoning are already settled by those five siblings and by NCBITaxon, so a billed report would add nothing this slice turns on. Worded like the equid sibling because the source label names one vernacular host inside a wider family: NCBITaxon:9608 &#39;Canidae&#39; also covers foxes, wolves and jackals, so the definition must not silently narrow to the dog.</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_SYNONYM_EXCLUDED</span>
+    <span class="meta">2026-10-15 · codex-gpt-5</span>
+    <p>Omitted automatic retention of displaced source label &#39;Canidae-Dog&#39; when defining habitatmech:BACDIVE.33fde10528 as &#39;canid-associated environment&#39;. Verbatim source attestations are preserved. Review <a href="https://github.com/CultureBotAI/HabitatMech/issues/2199" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2199</a> : The displaced label names the determining hosts, not their associated environment. Suppress exact-alias fallback; preserve verbatim source provenance, definition, genus and native status.</p>
   </li>
 </ol>
 
