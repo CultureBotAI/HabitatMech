@@ -5,10 +5,6 @@ definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
-synonyms:
-- synonym_text: Birds
-  synonym_type: EXACT_SYNONYM
-  source: HabitatMech curation
 parent_habitats:
 - ENVO:01001000
 - ENVO:01001002
@@ -44,3 +40,12 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Birds'' when defining
+    habitatmech:GOLD.47e603cf4f as ''bird-associated environment''. Verbatim source
+    attestations are preserved. Review https://github.com/CultureBotAI/HabitatMech/issues/2173:
+    The displaced label names whole host organisms, not their environment. Remove
+    only the authored exact alias and guard fallback; preserve environmental definition/genera,
+    verbatim source label/path/count/unit and native status.'

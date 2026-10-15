@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - UBERON:0001173
-- habitatmech:GOLD.bcbf6eec9b
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6952
@@ -17,3 +16,13 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.bcbf6eec9b
+    for habitatmech:GOLD.6ee20226a2 (Host-associated > Amphibia > Digestive system
+    > Biliary tract). Review https://github.com/CultureBotAI/HabitatMech/issues/2177:
+    A biliary subsystem is not the whole digestive system. Suppress only the exact
+    GOLD context contribution. Preserve independent parents, identity, source path/node/count/unit,
+    taxa, native status and prior history. No source-scope or mapping-endpoint certification
+    is implied.'

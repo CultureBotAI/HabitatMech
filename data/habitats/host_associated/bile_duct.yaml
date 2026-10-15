@@ -24,8 +24,6 @@ synonyms:
 - synonym_text: gall ducts
   synonym_type: RELATED_SYNONYM
   source: PREGO
-parent_habitats:
-- habitatmech:GOLD.de5efc0eb8
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6719
@@ -68,3 +66,13 @@ curation_history:
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD, PREGO. Grounding:
     EXACT.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.de5efc0eb8
+    for habitatmech:GOLD.ce334980d0 (Host-associated > Mammals > Digestive system
+    > Biliary tract > Bile ducts). Review https://github.com/CultureBotAI/HabitatMech/issues/2177:
+    A duct is part of, not a kind of, the whole mammal biliary tract. Suppress only
+    the exact GOLD context contribution. Preserve independent parents, identity, source
+    path/node/count/unit, taxa, native status and prior history. No source-scope or
+    mapping-endpoint certification is implied.'
