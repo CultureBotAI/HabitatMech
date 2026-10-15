@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: appendix
+session:
+  id: 2026-10-15T063256Z-codex-gpt-5-2fe892
+  timestamp: '2026-10-15T06:32:56Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1325
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed parent_habitats claim for appendix
+  details: The mammal vermiform appendix is a regional organ part, not a subtype of the whole
+    large intestine. Added exact source-path and expected-parent guards; retained other parents
+    and original source metadata. The complete-corpus counterfactual regression passed; canary,
+    generated product and full publication gates are subsequent checks, not claimed here as
+    completed.

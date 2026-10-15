@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - UBERON:0001154
-- habitatmech:GOLD.5b0aa7456c
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6437
@@ -20,3 +19,14 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.5b0aa7456c
+    for habitatmech:GOLD.e68ce62892 (Host-associated > Mammals: Human > Digestive
+    system > Large intestine > Appendix). Scientific review #1325: The human vermiform
+    appendix is a regional organ part, not a subtype of the whole large intestine.
+    Suppress only this exact immediate GOLD context contribution; preserve independent
+    ontology parents, source ID/path/count/unit, identity and native status. Primary
+    typed ontology and source evidence is recorded in the immutable individual review.
+    Shared endpoint #1398 and abscess-disposition #220 are separate findings.'

@@ -6,10 +6,6 @@ definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
-synonyms:
-- synonym_text: Aquatic-plant
-  synonym_type: EXACT_SYNONYM
-  source: HabitatMech curation
 parent_habitats:
 - ENVO:01001000
 source_attestations:
@@ -201,3 +197,13 @@ curation_history:
     This wording correction does not resolve the digester and field-water source-scope
     finding in #1341 or endorse those associations as living-host observations. No
     new paid research was commissioned.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Aquatic-plant''
+    when defining habitatmech:BACDIVE.38260eea00 as ''aquatic macrophyte-associated
+    environment''. Verbatim source attestations are preserved. Review #2160: the displaced
+    source label names a host, not the environment determined by it. Clear its authored
+    exact alias and suppress automatic old-label retention. Preserve verbatim BacDive
+    provenance, definition/genus, all observed taxa and count/pool semantics, original
+    DEFINED event and REVIEWED status. This does not resolve source-bin scope #1340/#1341.'

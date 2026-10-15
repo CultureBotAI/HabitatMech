@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: aqueous_humor_of_eyeball
+session:
+  id: 2026-10-15T063300Z-codex-gpt-5-f65981
+  timestamp: '2026-10-15T06:33:00Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1345
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed parent_habitats claim for aqueous_humor_of_eyeball
+  details: A refractive fluid is not a kind of the ciliary-body structure; production and
+    containment do not establish subclassing. Added exact source-path and expected-parent
+    guards; retained other parents and original source metadata. The complete-corpus counterfactual
+    regression passed; canary, generated product and full publication gates are subsequent
+    checks, not claimed here as completed.
