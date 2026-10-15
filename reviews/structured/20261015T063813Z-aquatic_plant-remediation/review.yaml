@@ -1,0 +1,884 @@
+schema_version: 1.0.0
+review_id: 20261015T063813Z-aquatic_plant-remediation
+repository: CultureBotAI/HabitatMech
+kind: record
+title: 'Remediation review: aquatic macrophyte-associated environment (habitatmech:BACDIVE.38260eea00)'
+started_at: '2026-10-15T06:36:44Z'
+finished_at: '2026-10-15T06:38:13Z'
+reviewer:
+  identity: codex-gpt-5
+  kind: agent
+  model: gpt-5
+  independence: self_review
+  independence_basis: Same agent assessed full records and primary evidence. This
+    is not independent human or second-agent approval.
+skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 1 predecessor finding(s) resolved; 1 remain open. Complete current record
+  and exact maintained owners agree. Source identity, provenance and independently
+  supported claims are preserved.
+source:
+  git_revision: 326a1a2193aa97fb995f8d7be083ec4e7677d1b2
+  state: git_commit
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: conf/record_review.yaml
+    sha256: c2f5d0eb4c5744f5fe354c92184ddab144dc2688dba952b032b4f3d597bc08d6
+    role: context
+  - path: conf/sources.yaml
+    sha256: a8e069f9278068b57fa234f43e03c8d893f857827b83fd10cfa92d6815aed642
+    role: context
+  - path: curation/decisions.tsv
+    sha256: ca42d86b6040df1c0c6e6ed36573bb51975a5e8daade262113bce547f1b6fd8b
+    role: context
+  - path: curation/definition_source_label_exclusions.tsv
+    sha256: 899c716d42cc7b2ddf9b78c7f2ba3838f5ec613faae838f87c586fc28bafc442
+    role: context
+  - path: curation/external_xrefs.tsv
+    sha256: f289c938b0c70d6f2bfb231bf137edf1c862bbda9143d9b6eae9e3fdd587703c
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: 4fc09b29ddff99e935fc7a6eeb3ded377ad5cd0210c3664ba11b8a92d08bbd19
+    role: context
+  - path: curation/record_annotation_corrections.tsv
+    sha256: ea37676f1a16dd05fbfbb6c394b3f14b42ea93b763fb257043b817a4f10d3612
+    role: context
+  - path: curation/redirects_retracted.tsv
+    sha256: 0f1e9af8881f5a5db19f87de06b3b3d1800cfac8101699b380388c0a1a1e9a19
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: a87b2918b082a8661f85dc1a2fa24f59ec65717d11edf07e5cc1cb3f0834a0fe
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: b0135af0aa4deed0f3824a2f491d5a742c1b7de4775c533f283761d22e805821
+    role: context
+  - path: data/habitats/RETIRED.tsv
+    sha256: a2a0496837ea75e487d7fc5d35317a890262a941d8fffe9babcd39f2f332c6db
+    role: context
+  - path: data/habitats/host_associated/aquatic_plant.yaml
+    sha256: 5a5c69a3a24ed191bb975902228f3a0685d2f2615c7994011a854825a17f9057
+    role: target
+  - path: data/habitats/host_associated/environmental_system_determined_by_an_organism.yaml
+    sha256: d3b79ef9436a87fbce8e6b204b0113e170fa758e4a66efb592543bf934c67270
+    role: context
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: f3f5d3d033fa7e7c1d78571959fc2e62e0b0a625f47dba1413657e8cf944b322
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 105b3c8e10f43ce689b05d3089d3a8be1d713a98dd6806e11be37ebd85b10590
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/mappings/aquatic_plant/2026-10-04T034451Z-claude-code-2a7f5e.yaml
+    sha256: 7b1ff6049ee5053509d2bf7e91859df6634f0dbddb0dd186076e1ed1f5dd7417
+    role: context
+  - path: history/mappings/aquatic_plant/2026-10-04T034725Z-codex-f91ce7.yaml
+    sha256: 9ac1d8738836a198382382fc85c1973b6b78447d0b00c3afad1b70d80df43f2c
+    role: context
+  - path: history/mappings/aquatic_plant/2026-10-15T063304Z-codex-gpt-5-0c1f29.yaml
+    sha256: db7a72244f481205805072a6b77925588a8714b2913fb0b0e49b3d8e1d9631e8
+    role: context
+  - path: history/mappings/aquatic_plant/2026-10-15T063305Z-codex-gpt-5-3eb71b.yaml
+    sha256: 36e9d295d8e1edf6b5e1b69b5d5aa73857e407cff1d50f062d10e0f6e7607782
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reports/yaml_record_review/20261004T034129Z-aquatic_plant.md
+    sha256: 2700a0bb2b6259795789f8a87ea5cf6eb7f16f88ceb25ffc8dca1b7ca3d94057
+    role: context
+  - path: reviews/structured/20261015T062606Z-aquatic_plant-record/review.yaml
+    sha256: 4bf115a70cd20e0371290ea981a60f4298b94a466ea64f420ed810437106d6fb
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: src/habitatmech/curate/__init__.py
+    sha256: d9837c29dc61d8c9245fdb471a68a109cea31b131cdbc0c4d51d23a8d013ce12
+    role: context
+  - path: src/habitatmech/curate/causal_graphs.py
+    sha256: d1884374263ed7926292c52a58742c614e75628d78ff50fe688e6abc0ddf9c1c
+    role: context
+  - path: src/habitatmech/curate/curation_event.py
+    sha256: 08c774d309fe988c468097518d346f07a653b283cb9b9b51c7fe79fa0af785a9
+    role: context
+  - path: src/habitatmech/curate/decisions.py
+    sha256: f33d3e9dc95bb428e63e640d48d4074cf15e90ea666603fb16fb651d591e3f02
+    role: context
+  - path: src/habitatmech/curate/definition_source_label_exclusions.py
+    sha256: 0c13e83fe17613e8b9f5b346d1259104172f8c1de42f911625579b903707625d
+    role: context
+  - path: src/habitatmech/curate/definitions.py
+    sha256: decd02eea029e884ab1a8bbb51dd870edb5544906b3ddd39598147b27ce572c9
+    role: context
+  - path: src/habitatmech/curate/external_xrefs.py
+    sha256: 8b90ec049887d3aa67e31cce7f7a04d7300421c6fedb833cc66e5d5f5f181694
+    role: context
+  - path: src/habitatmech/curate/gold_parent_exclusions.py
+    sha256: 044d8277509a9b1f6e4f2d7ea1fb82319b41e09ffef7788738a0f4ed0d0b63af
+    role: context
+  - path: src/habitatmech/curate/record_annotation_corrections.py
+    sha256: 15bad3d40fd95e2acc72d3ff3c74289c15fb8a1775adc523b3575c3ea8487033
+    role: context
+  - path: src/habitatmech/labels.py
+    sha256: eb6986c3a9c7d5a3e4651b639351f1f2d3e12d74c4bfaa92899205a1f9df0977
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 7e3cda3dadb9c7462498e5014bf38ef730068212f8f9cb131e3fce383c21d10e
+    role: context
+  - path: src/habitatmech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+  - path: src/habitatmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
+    role: context
+  - path: tests/test_nares_aquatic_review_repairs.py
+    sha256: 4a75a44d28f8369f4dd7149886cf4610ff3bddbcb8472a0fbd530842b6bedfe9
+    role: context
+targets:
+- target_id: habitatmech:BACDIVE.38260eea00
+  path: data/habitats/host_associated/aquatic_plant.yaml
+  label: aquatic macrophyte-associated environment
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained curation input or generator
+scope:
+  description: Complete current record re-read with scoped remediation of every predecessor
+    finding.
+  selection: One exact repaired record from the sixteen-record PR cohort.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - habitatmech:BACDIVE.38260eea00
+  exclusions:
+  - target: Global source-bin and endpoint modeling, other records, SSSOM/KGX conformance
+    reason: Only exact parent and host-alias witnesses are repaired.
+checks:
+- check_id: C1
+  name: just validate-strict data/habitats/host_associated/anterior_nares.yaml data/habitats/host_associated/anterior_nares__14fc5dcc.yaml
+    data/habitats/host_associated/anther.yaml data/habitats/host_associated/anthosphere.yaml
+    data/habitats/host_associated/antler.yaml data/habitats/host_associated/aortic_valve.yaml
+    data/habitats/host_associated/apocrine_sweat_gland.yaml data/habitats/host_associated/apoeccrine_sweat_glands.yaml
+    data/habitats/host_associated/appendix.yaml data/habitats/host_associated/appendix__8f7f5041.yaml
+    data/habitats/host_associated/appendix_abscess.yaml data/habitats/host_associated/appressorium.yaml
+    data/habitats/host_associated/aquatic_mammal.yaml data/habitats/host_associated/aquatic_plant.yaml
+    data/habitats/host_associated/aqueous_humor_of_eyeball.yaml data/habitats/host_associated/area_of_moss_dominated_vegetation.yaml
+  status: passed
+  required: true
+  command: just validate-strict data/habitats/host_associated/anterior_nares.yaml
+    data/habitats/host_associated/anterior_nares__14fc5dcc.yaml data/habitats/host_associated/anther.yaml
+    data/habitats/host_associated/anthosphere.yaml data/habitats/host_associated/antler.yaml
+    data/habitats/host_associated/aortic_valve.yaml data/habitats/host_associated/apocrine_sweat_gland.yaml
+    data/habitats/host_associated/apoeccrine_sweat_glands.yaml data/habitats/host_associated/appendix.yaml
+    data/habitats/host_associated/appendix__8f7f5041.yaml data/habitats/host_associated/appendix_abscess.yaml
+    data/habitats/host_associated/appressorium.yaml data/habitats/host_associated/aquatic_mammal.yaml
+    data/habitats/host_associated/aquatic_plant.yaml data/habitats/host_associated/aqueous_humor_of_eyeball.yaml
+    data/habitats/host_associated/area_of_moss_dominated_vegetation.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:BACDIVE.38260eea00
+  summary: "Actual execution 2026-10-15T06:34:13Z through 2026-10-15T06:34:22Z. uv\
+    \ run python scripts/validate_strict.py data/habitats/host_associated/anterior_nares.yaml\
+    \ data/habitats/host_associated/anterior_nares__14fc5dcc.yaml data/habitats/host_associated/anther.yaml\
+    \ data/habitats/host_associated/anthosphere.yaml data/habitats/host_associated/antler.yaml\
+    \ data/habitats/host_associated/aortic_valve.yaml data/habitats/host_associated/apocrine_sweat_gland.yaml\
+    \ data/habitats/host_associated/apoeccrine_sweat_glands.yaml data/habitats/host_associated/appendix.yaml\
+    \ data/habitats/host_associated/appendix__8f7f5041.yaml data/habitats/host_associated/appendix_abscess.yaml\
+    \ data/habitats/host_associated/appressorium.yaml data/habitats/host_associated/aquatic_mammal.yaml\
+    \ data/habitats/host_associated/aquatic_plant.yaml data/habitats/host_associated/aqueous_humor_of_eyeball.yaml\
+    \ data/habitats/host_associated/area_of_moss_dominated_vegetation.yaml\nValidating\
+    \ 16 files with 15 workers; schema=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/src/habitatmech/schema/habitatmech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      16\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                reports/instance_validation_failures.tsv"
+  scope_note: Strict command covers sixteen targets; history, corpus, causal, term
+    and label gates cover their native full-corpus scopes; pytest is the focused counterfactual.
+- check_id: C2
+  name: just validate-history
+  status: passed
+  required: true
+  command: just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:BACDIVE.38260eea00
+  summary: 'Actual execution 2026-10-15T06:34:22Z through 2026-10-15T06:34:33Z. No
+    issues found
+
+    759 history record(s) valid against src/habitatmech/schema/history.yaml'
+  scope_note: Strict command covers sixteen targets; history, corpus, causal, term
+    and label gates cover their native full-corpus scopes; pytest is the focused counterfactual.
+- check_id: C3
+  name: just provenance-check
+  status: passed
+  required: true
+  command: just provenance-check
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:BACDIVE.38260eea00
+  summary: "Actual execution 2026-10-15T06:34:33Z through 2026-10-15T06:34:34Z. provenance\
+    \ current: 14 committed inventories, 2 GOLD sources\n uv run python scripts/check_provenance.py"
+  scope_note: Strict command covers sixteen targets; history, corpus, causal, term
+    and label gates cover their native full-corpus scopes; pytest is the focused counterfactual.
+- check_id: C4
+  name: just verify-corpus
+  status: passed
+  required: true
+  command: just verify-corpus
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:BACDIVE.38260eea00
+  summary: "Actual execution 2026-10-15T06:34:34Z through 2026-10-15T06:34:53Z. expected\
+    \ 3208 records, found 3208 on disk\n  missing:   0\n  extra:     0\n  differing:\
+    \ 0\n\ncorpus reproduces exactly from data/raw/\n uv run python scripts/verify_corpus.py"
+  scope_note: Strict command covers sixteen targets; history, corpus, causal, term
+    and label gates cover their native full-corpus scopes; pytest is the focused counterfactual.
+- check_id: C5
+  name: just validate-causal-all
+  status: passed
+  required: true
+  command: just validate-causal-all
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:BACDIVE.38260eea00
+  summary: "Actual execution 2026-10-15T06:34:53Z through 2026-10-15T06:34:58Z. validated\
+    \ 32 causal-graph curation file(s) with 32 graph(s)\n uv run python scripts/validate_causal_graph_curations.py"
+  scope_note: Strict command covers sixteen targets; history, corpus, causal, term
+    and label gates cover their native full-corpus scopes; pytest is the focused counterfactual.
+- check_id: C6
+  name: just term-requests-check
+  status: passed
+  required: true
+  command: just term-requests-check
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:BACDIVE.38260eea00
+  summary: "Actual execution 2026-10-15T06:34:58Z through 2026-10-15T06:35:17Z. term-request\
+    \ table is current (110 terms)\n uv run python scripts/build_term_requests.py\
+    \ --check"
+  scope_note: Strict command covers sixteen targets; history, corpus, causal, term
+    and label gates cover their native full-corpus scopes; pytest is the focused counterfactual.
+- check_id: C7
+  name: just validate-products
+  status: passed
+  required: true
+  command: just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:BACDIVE.38260eea00
+  summary: "Actual execution 2026-10-15T06:35:17Z through 2026-10-15T06:36:28Z. id↔label\
+    \ correspondence summary:\n          OK_CANONICAL: 1174\n            OK_SYNONYM:\
+    \ 1\n          OK_EXCEPTION: 5\n    SKIPPED_NO_ADAPTER: 2061\n\n✅ All id↔label\
+    \ pairs correspond.\n uv run python scripts/validate_id_label_correspondence.py\
+    \ -c conf/id_label_targets.yaml"
+  scope_note: Strict command covers sixteen targets; history, corpus, causal, term
+    and label gates cover their native full-corpus scopes; pytest is the focused counterfactual.
+- check_id: C8
+  name: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/.venv/bin/python
+    -m pytest -q tests/test_nares_aquatic_review_repairs.py
+  status: passed
+  required: true
+  command: /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/.venv/bin/python
+    -m pytest -q tests/test_nares_aquatic_review_repairs.py
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:BACDIVE.38260eea00
+  summary: 'Actual execution 2026-10-15T06:36:28Z through 2026-10-15T06:36:38Z. .                                                                        [100%]
+
+    1 passed in 9.22s'
+  scope_note: Strict command covers sixteen targets; history, corpus, causal, term
+    and label gates cover their native full-corpus scopes; pytest is the focused counterfactual.
+- check_id: C9
+  name: git diff --check d255ab29c86291d2166fcf22219c10a9edb136c9
+  status: passed
+  required: true
+  command: git diff --check d255ab29c86291d2166fcf22219c10a9edb136c9
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - habitatmech:BACDIVE.38260eea00
+  summary: 'Actual execution 2026-10-15T06:36:38Z through 2026-10-15T06:36:39Z. '
+  scope_note: Strict command covers sixteen targets; history, corpus, causal, term
+    and label gates cover their native full-corpus scopes; pytest is the focused counterfactual.
+evidence:
+- evidence_id: EX1
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_01001000
+  locator: Target term or typed outgoing relations; primary abstract; exact strain
+    identity and isolation-source fields as described
+  accessed_at: '2026-10-15T06:18:01Z'
+  support: supports
+  summary: Active authoritative ENVO:01001000 environmental system determined by an
+    organism; definition and typed scope compared with the frozen source and local
+    parent meaning. Obsolete=False.
+  snapshot_sha256: 8bd797929d18bf28171af7fd10f358db9b093f752d20b99f665779bb2e6b504e
+- evidence_id: EX2
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_01001001
+  locator: Target term or typed outgoing relations; primary abstract; exact strain
+    identity and isolation-source fields as described
+  accessed_at: '2026-10-15T06:21:11Z'
+  support: supports
+  summary: Active authoritative ENVO:01001001 plant-associated environment; definition
+    and typed scope compared with the frozen source and local parent meaning. Obsolete=False.
+  snapshot_sha256: b1623e2f33257c2fadc5bf06670bcc7e95384c210301e901f7faa8059c5ed815
+- evidence_id: EX3
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=1006155,1042321,1044,1071679,108028,109472,1114878,1121336,1121355,1121467,1122146,1122599,1123255,1130046,1176176,1176177,119224,1206817,1210932,1216006,1235440,1260928,1278303,1278307,1278309,1278310,1278312,1302685,1302687,1302689,1302690,1307457,131112,1324766,1336234,1346,137733,138563,1387353,1411316,1423,1436133,1460882,1490222,156892,1577474,157842,1612308,1619308,1619309,1619310,1799789,1834927,1843580,1843581,184914,1862160,1869227,1871086,1872412,1872627,1872635,1873466,1965234,2108,269621,269666,33,34,395087,409,420952,420953,53344,53364,83456&retmode=xml
+  locator: Target term or typed outgoing relations; primary abstract; exact strain
+    identity and isolation-source fields as described
+  accessed_at: '2026-10-15T06:19:30Z'
+  support: supports
+  summary: 'All 25 retained taxon IDs resolve directly with matching preferred names:
+    [{"direct_name_match": true, "id": "NCBITaxon:34", "label": "Myxococcus xanthus",
+    "rank": "species"}, {"direct_name_match": true, "id": "NCBITaxon:1006155", "label":
+    "Paenilisteria weihenstephanensis", "rank": "species"}, {"direct_name_match":
+    true, "id": "NCBITaxon:184914", "label": "Corallococcus coralloides", "rank":
+    "species"}, {"direct_name_match": true, "id": "NCBITaxon:33", "label": "Myxococcus
+    fulvus", "rank": "species"}, {"direct_name_match": true, "id": "NCBITaxon:1044",
+    "label": "Erythrobacter longus", "rank": "species"}, {"direct_name_match": true,
+    "id": "NCBITaxon:1114878", "label": "Geomobilimonas luticola", "rank": "species"},
+    {"direct_name_match": true, "id": "NCBITaxon:1121336", "label": "Thermoclostridium
+    stercorarium subsp. thermolacticum DSM 2910", "rank": "strain"}, {"direct_name_match":
+    true, "id": "NCBITaxon:1121467", "label": "Maridesulfovibrio zosterae DSM 11974",
+    "rank": "strain"}, {"direct_name_match": true, "id": "NCBITaxon:1206817", "label":
+    "Allorhizobium paknamense", "rank": "species"}, {"direct_name_match": true, "id":
+    "NCBITaxon:1210932", "label": "Peteryoungia ipomoeae", "rank": "species"}, {"direct_name_match":
+    true, "id": "NCBITaxon:1216006", "label": "Vibrio aerogenes CECT 7868", "rank":
+    "strain"}, {"direct_name_match": true, "id": "NCBITaxon:1260928", "label": "Geobacter
+    sulfurreducens subsp. ethanolicus", "rank": "subspecies"}, {"direct_name_match":
+    true, "id": "NCBITaxon:1324766", "label": "Rothia endophytica", "rank": "species"},
+    {"direct_name_match": true, "id": "NCBITaxon:1411316", "label": "Pedobacter sp.",
+    "rank": "species"}, {"direct_name_match": true, "id": "NCBITaxon:157842", "label":
+    "Desulfofaba hansenii", "rank": "species"}, {"direct_name_match": true, "id":
+    "NCBITaxon:1799789", "label": "Paraglaciecola hydrolytica", "rank": "species"},
+    {"direct_name_match": true, "id": "NCBITaxon:1834927", "label": "Kordia zosterae",
+    "rank": "species"}, {"direct_name_match": true, "id": "NCBITaxon:1843580", "label":
+    "Xanthomonas floridensis", "rank": "species"}, {"direct_name_match": true, "id":
+    "NCBITaxon:1843581", "label": "Xanthomonas nasturtii", "rank": "species"}, {"direct_name_match":
+    true, "id": "NCBITaxon:1862160", "label": "Marinirhabdus citrea", "rank": "species"},
+    {"direct_name_match": true, "id": "NCBITaxon:1869227", "label": "bacterium", "rank":
+    "species"}, {"direct_name_match": true, "id": "NCBITaxon:1871086", "label": "Brevundimonas
+    sp.", "rank": "species"}, {"direct_name_match": true, "id": "NCBITaxon:1872412",
+    "label": "Agarivorans sp.", "rank": "species"}, {"direct_name_match": true, "id":
+    "NCBITaxon:1872635", "label": "Arenimonas sp.", "rank": "species"}, {"direct_name_match":
+    true, "id": "NCBITaxon:1873466", "label": "Modestobacter sp.", "rank": "species"}]'
+  snapshot_sha256: 74da4de2673092fd0e7d34e23be448eb9bd1ff410a532286c0fbfd597d0fc88e
+- evidence_id: EX4
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:26739022%20AND%20SRC:MED&format=json&resultType=core
+  locator: Target term or typed outgoing relations; primary abstract; exact strain
+    identity and isolation-source fields as described
+  accessed_at: '2026-10-15T06:19:37Z'
+  support: supports
+  summary: The original species description identifies shin9-1 = LMG27163 = KCTC32148
+    as a water sample from a water-convolvulus field, not a tissue isolate. Verified
+    PMID 26739022 and DOI 10.1099/ijsem.0.000875.
+  snapshot_sha256: 570cec00c5a1a48b6aef885802867544464bbd9f8528dd71c6a4c5f8e5d66d91
+- evidence_id: EX5
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:23710050%20AND%20SRC:MED&format=json&resultType=core
+  locator: Target term or typed outgoing relations; primary abstract; exact strain
+    identity and isolation-source fields as described
+  accessed_at: '2026-10-15T06:19:38Z'
+  support: supports
+  summary: The primary description identifies YIM67072 = DSM26247 as an endophytic
+    isolate from healthy Dysophylla roots, a genuine host-derived control. Verified
+    PMID 23710050 and DOI 10.1099/ijs.0.052522-0.
+  snapshot_sha256: 4671b860c8d118d542b28e9fed91e2351f47d75b7c1c00b6c55adde6994d44a1
+- evidence_id: EX6
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:10319511%20AND%20SRC:MED&format=json&resultType=core
+  locator: Target term or typed outgoing relations; primary abstract; exact strain
+    identity and isolation-source fields as described
+  accessed_at: '2026-10-15T06:19:38Z'
+  support: supports
+  summary: The primary description links strain lac = DSM11974 to surface-sterilized
+    Zostera roots, a genuine host-derived control. Verified PMID 10319511 and DOI
+    10.1099/00207713-49-2-859.
+  snapshot_sha256: 4631b00f39b367ad79641d55a3ebfac54aa7b0baed1942fa8896b8f0c965998c
+- evidence_id: EX7
+  kind: authority
+  reference: https://bacdive.dsmz.de/strain/2733
+  locator: Target term or typed outgoing relations; primary abstract; exact strain
+    identity and isolation-source fields as described
+  accessed_at: '2026-10-15T06:19:41Z'
+  support: supports
+  summary: Exact DSM2910/ATCC43739/TX41 entry describes a mesophilic digester fed
+    with Lemna minor while retaining aquatic-plant source categorization.
+  snapshot_sha256: fc26e1aa870a485d1771189ded83d61696be2f4c18ea1d226a431484b70760fc
+- evidence_id: EX8
+  kind: authority
+  reference: https://bacdive.dsmz.de/strain/140867
+  locator: Target term or typed outgoing relations; primary abstract; exact strain
+    identity and isolation-source fields as described
+  accessed_at: '2026-10-15T06:19:42Z'
+  support: supports
+  summary: Exact shin9-1/LMG27163/KCTC32148 entry supplies the field-water isolate
+    identity used to compare the source category with the primary description.
+  snapshot_sha256: 78af80629b7b03dd5cc445a6ac8ba29fe58e03c84161611714fd6968fccaf90f
+- evidence_id: EX9
+  kind: authority
+  reference: https://bacdive.dsmz.de/strain/158685
+  locator: Target term or typed outgoing relations; primary abstract; exact strain
+    identity and isolation-source fields as described
+  accessed_at: '2026-10-15T06:19:44Z'
+  support: supports
+  summary: The source retains an unidentified seaweed context; this does not establish
+    that all aquatic macrophytes fall outside plants or that bryophytes are nonplants.
+  snapshot_sha256: 84bc7dab9262eadb38e06a5ff1d096395d9ef959d03e6ea37aed50850cbe6baf
+- evidence_id: EAFTER
+  kind: record_content
+  reference: data/habitats/host_associated/aquatic_plant.yaml
+  locator: Entire current generated YAML
+  accessed_at: '2026-10-15T06:38:13Z'
+  support: supports
+  summary: 'Complete post-fix record read: {"characteristic_taxa": [{"association_count":
+    5, "candidate_pool": 59, "rank": 1, "source": "BACDIVE", "taxon_id": "NCBITaxon:34",
+    "taxon_label": "Myxococcus xanthus"}, {"association_count": 2, "candidate_pool":
+    59, "rank": 2, "source": "BACDIVE", "taxon_id": "NCBITaxon:1006155", "taxon_label":
+    "Paenilisteria weihenstephanensis"}, {"association_count": 2, "candidate_pool":
+    59, "rank": 3, "source": "BACDIVE", "taxon_id": "NCBITaxon:184914", "taxon_label":
+    "Corallococcus coralloides"}, {"association_count": 2, "candidate_pool": 59, "rank":
+    4, "source": "BACDIVE", "taxon_id": "NCBITaxon:33", "taxon_label": "Myxococcus
+    fulvus"}, {"association_count": 1, "candidate_pool": 59, "rank": 5, "source":
+    "BACDIVE", "taxon_id": "NCBITaxon:1044", "taxon_label": "Erythrobacter longus"},
+    {"association_count": 1, "candidate_pool": 59, "rank": 6, "source": "BACDIVE",
+    "taxon_id": "NCBITaxon:1114878", "taxon_label": "Geomobilimonas luticola"}, {"association_count":
+    1, "candidate_pool": 59, "rank": 7, "source": "BACDIVE", "taxon_id": "NCBITaxon:1121336",
+    "taxon_label": "Thermoclostridium stercorarium subsp. thermolacticum DSM 2910"},
+    {"association_count": 1, "candidate_pool": 59, "rank": 8, "source": "BACDIVE",
+    "taxon_id": "NCBITaxon:1121467", "taxon_label": "Maridesulfovibrio zosterae DSM
+    11974"}, {"association_count": 1, "candidate_pool": 59, "rank": 9, "source": "BACDIVE",
+    "taxon_id": "NCBITaxon:1206817", "taxon_label": "Allorhizobium paknamense"}, {"association_count":
+    1, "candidate_pool": 59, "rank": 10, "source": "BACDIVE", "taxon_id": "NCBITaxon:1210932",
+    "taxon_label": "Peteryoungia ipomoeae"}, {"association_count": 1, "candidate_pool":
+    59, "rank": 11, "source": "BACDIVE", "taxon_id": "NCBITaxon:1216006", "taxon_label":
+    "Vibrio aerogenes CECT 7868"}, {"association_count": 1, "candidate_pool": 59,
+    "rank": 12, "source": "BACDIVE", "taxon_id": "NCBITaxon:1260928", "taxon_label":
+    "Geobacter sulfurreducens subsp. ethanolicus"}, {"association_count": 1, "candidate_pool":
+    59, "rank": 13, "source": "BACDIVE", "taxon_id": "NCBITaxon:1324766", "taxon_label":
+    "Rothia endophytica"}, {"association_count": 1, "candidate_pool": 59, "rank":
+    14, "source": "BACDIVE", "taxon_id": "NCBITaxon:1411316", "taxon_label": "Pedobacter
+    sp."}, {"association_count": 1, "candidate_pool": 59, "rank": 15, "source": "BACDIVE",
+    "taxon_id": "NCBITaxon:157842", "taxon_label": "Desulfofaba hansenii"}, {"association_count":
+    1, "candidate_pool": 59, "rank": 16, "source": "BACDIVE", "taxon_id": "NCBITaxon:1799789",
+    "taxon_label": "Paraglaciecola hydrolytica"}, {"association_count": 1, "candidate_pool":
+    59, "rank": 17, "source": "BACDIVE", "taxon_id": "NCBITaxon:1834927", "taxon_label":
+    "Kordia zosterae"}, {"association_count": 1, "candidate_pool": 59, "rank": 18,
+    "source": "BACDIVE", "taxon_id": "NCBITaxon:1843580", "taxon_label": "Xanthomonas
+    floridensis"}, {"association_count": 1, "candidate_pool": 59, "rank": 19, "source":
+    "BACDIVE", "taxon_id": "NCBITaxon:1843581", "taxon_label": "Xanthomonas nasturtii"},
+    {"association_count": 1, "candidate_pool": 59, "rank": 20, "source": "BACDIVE",
+    "taxon_id": "NCBITaxon:1862160", "taxon_label": "Marinirhabdus citrea"}, {"association_count":
+    1, "candidate_pool": 59, "rank": 21, "source": "BACDIVE", "taxon_id": "NCBITaxon:1869227",
+    "taxon_label": "bacterium"}, {"association_count": 1, "candidate_pool": 59, "rank":
+    22, "source": "BACDIVE", "taxon_id": "NCBITaxon:1871086", "taxon_label": "Brevundimonas
+    sp."}, {"association_count": 1, "candidate_pool": 59, "rank": 23, "source": "BACDIVE",
+    "taxon_id": "NCBITaxon:1872412", "taxon_label": "Agarivorans sp."}, {"association_count":
+    1, "candidate_pool": 59, "rank": 24, "source": "BACDIVE", "taxon_id": "NCBITaxon:1872635",
+    "taxon_label": "Arenimonas sp."}, {"association_count": 1, "candidate_pool": 59,
+    "rank": 25, "source": "BACDIVE", "taxon_id": "NCBITaxon:1873466", "taxon_label":
+    "Modestobacter sp."}], "curation_history": [{"action": "CONFIRM_UNGROUNDED", "changes":
+    "Confirmed UNGROUNDED: no ontology term fits this concept. Grounding-cohort review
+    (#62): was FOODON:03401156 ''50122200 - aquatic plants prepared/processed (gs1
+    gpc)'', a UNSPSC commodity code for prepared food. An aquatic plant as an isolation
+    source is a living host, not a prepared foodstuff, and no term in the slice names
+    it. Category set to HOST_ASSOCIATED (#110): the curated definition parents this
+    to ENVO:01001000 ''environmental system determined by an organism'' - a living
+    macrophyte host - and 31 of the 33 records under that parent are HOST_ASSOCIATED.
+    (source concept habitatmech:BACDIVE.38260eea00)", "curator": "claude-opus-5",
+    "timestamp": "2026-08-14T00:00:00Z"}, {"action": "SEEDED_FROM_SOURCES", "changes":
+    "Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.",
+    "curator": "seed_from_sources", "timestamp": "2026-08-16T05:58:02Z"}, {"action":
+    "DEFINED", "changes": "Defined as ''aquatic macrophyte-associated environment''
+    under ENVO:01001000 ''environmental system determined by an organism''. Rationale
+    corrected under #1342; definition, label, synonym and genus retained from claude-opus-5''s
+    2026-08-28 curation based on the committed deep-research report, read in full.
+    Aquatic bryophytes are plants: NCBITaxon:3208 (Bryophyta) lies within Viridiplantae
+    and Embryophyta (https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=3208).
+    Green algae are also Viridiplantae; macroalgae must not all be described as non-plants.
+    Retain ENVO:01001000 rather than narrow to ENVO:01001001 ''plant-associated environment''
+    because the source includes seaweed without an identified algal lineage (https://bacdive.dsmz.de/strain/158685);
+    that evidence does not establish that every macrophyte host is a green plant.
+    This wording correction does not resolve the digester and field-water source-scope
+    finding in #1341 or endorse those associations as living-host observations. No
+    new paid research was commissioned.", "curator": "codex-gpt-5", "timestamp": "2026-10-04T00:00:00Z"},
+    {"action": "SOURCE_SYNONYM_EXCLUDED", "changes": "Omitted automatic retention
+    of displaced source label ''Aquatic-plant'' when defining habitatmech:BACDIVE.38260eea00
+    as ''aquatic macrophyte-associated environment''. Verbatim source attestations
+    are preserved. Review #2160: the displaced source label names a host, not the
+    environment determined by it. Clear its authored exact alias and suppress automatic
+    old-label retention. Preserve verbatim BacDive provenance, definition/genus, all
+    observed taxa and count/pool semantics, original DEFINED event and REVIEWED status.
+    This does not resolve source-bin scope #1340/#1341.", "curator": "codex-gpt-5",
+    "timestamp": "2026-10-15T00:00:00Z"}], "definition": "An environmental system
+    determined by an aquatic macrophyte, or by a part of an aquatic macrophyte.",
+    "definition_source": "HabitatMech", "grounding_status": "UNGROUNDED", "habitat_category":
+    "HOST_ASSOCIATED", "identifier": "habitatmech:BACDIVE.38260eea00", "label": "aquatic
+    macrophyte-associated environment", "mapping_status": "REVIEWED", "parent_habitats":
+    ["ENVO:01001000"], "source_attestations": [{"assertion_count": 66, "assertion_unit":
+    "STRAIN", "source": "BACDIVE", "source_id": "bacdive.isolation_source:aquatic-plant",
+    "source_label": "Aquatic-plant"}]}'
+  snapshot_sha256: 5a5c69a3a24ed191bb975902228f3a0685d2f2615c7994011a854825a17f9057
+- evidence_id: EPREV
+  kind: prior_review
+  reference: reviews/structured/20261015T062606Z-aquatic_plant-record/review.yaml
+  locator: Immutable predecessor, all findings and scoped evidence
+  accessed_at: '2026-10-15T06:38:13Z'
+  support: supports
+  summary: The original scientific observation remains unchanged.
+  snapshot_sha256: 4bf115a70cd20e0371290ea981a60f4298b94a466ea64f420ed810437106d6fb
+- evidence_id: ETEST
+  kind: record_content
+  reference: tests/test_nares_aquatic_review_repairs.py
+  locator: Complete corpus counterfactual regression
+  accessed_at: '2026-10-15T06:38:13Z'
+  support: supports
+  summary: Restores pre-fix rules in memory; proves exactly eleven changed records,
+    preserved unrelated fields, retained valid parents, guarded alias fallback and
+    reproducibility.
+  snapshot_sha256: 4a75a44d28f8369f4dd7149886cf4610ff3bddbcb8472a0fbd530842b6bedfe9
+- evidence_id: EI0
+  kind: record_content
+  reference: curation/gold_parent_exclusions.tsv
+  locator: Exact source key(s) habitatmech:BACDIVE.38260eea00
+  accessed_at: '2026-10-15T06:38:13Z'
+  support: supports
+  summary: Current maintained rows match the bounded generated delta; source inventories
+    and generator behavior are otherwise unchanged.
+  snapshot_sha256: 4fc09b29ddff99e935fc7a6eeb3ded377ad5cd0210c3664ba11b8a92d08bbd19
+- evidence_id: EI1
+  kind: record_content
+  reference: curation/term_requests.tsv
+  locator: Exact source key(s) habitatmech:BACDIVE.38260eea00
+  accessed_at: '2026-10-15T06:38:13Z'
+  support: supports
+  summary: Current maintained rows match the bounded generated delta; source inventories
+    and generator behavior are otherwise unchanged.
+  snapshot_sha256: a87b2918b082a8661f85dc1a2fa24f59ec65717d11edf07e5cc1cb3f0834a0fe
+- evidence_id: EI2
+  kind: record_content
+  reference: curation/definition_source_label_exclusions.tsv
+  locator: Exact source key(s) habitatmech:BACDIVE.38260eea00
+  accessed_at: '2026-10-15T06:38:13Z'
+  support: supports
+  summary: Current maintained rows match the bounded generated delta; source inventories
+    and generator behavior are otherwise unchanged.
+  snapshot_sha256: 899c716d42cc7b2ddf9b78c7f2ba3838f5ec613faae838f87c586fc28bafc442
+assessments:
+- assessment_id: A1
+  area: consistency
+  topic: Scoped corrections and complete-record preservation
+  outcome: supported
+  summary: Counterfactual regression and full generated-record comparison establish
+    only the intended parent or alias change plus appended deterministic history.
+    No source member, count/unit, rank/pool, definition, independent genus, identifier
+    or native status is altered.
+  target_ids:
+  - habitatmech:BACDIVE.38260eea00
+  evidence_ids:
+  - EAFTER
+  - EPREV
+  - ETEST
+  - EI0
+  - EI1
+  - EI2
+- assessment_id: A2
+  area: evidence
+  topic: Retained scientific scope
+  outcome: supported
+  summary: Current target claims were rechecked against the predecessor ontology,
+    taxonomy and bounded primary-source evidence. Source observations remain distinct
+    from prevalence or universal habitat membership. Optional mechanism fields are
+    not filled speculatively.
+  target_ids:
+  - habitatmech:BACDIVE.38260eea00
+  evidence_ids:
+  - EAFTER
+  - EPREV
+  - EX1
+  - EX2
+  - EX3
+  - EX4
+  - EX5
+  - EX6
+  - EX7
+  - EX8
+  - EX9
+- assessment_id: A3
+  area: representation
+  topic: Unresolved predecessor findings
+  outcome: concern
+  summary: Living-host interpretation exceeds source association scope
+  target_ids:
+  - habitatmech:BACDIVE.38260eea00
+  evidence_ids:
+  - EAFTER
+  - EPREV
+findings:
+- finding_id: F1
+  issue_key: aquatic-plant-host-name-exact-synonym
+  category: nomenclature
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Whole-host source name is an exact environment synonym
+  description: Remove only the authored host-name exact alias from term_requests.tsv
+    and add the guarded definition_source_label_exclusions.tsv row so automatic old-label
+    fallback cannot restore it. Preserve verbatim source labels, definitions, source
+    totals and organism xrefs; do not claim this resolves the separate source-bin
+    scope finding.
+  target_ids:
+  - habitatmech:BACDIVE.38260eea00
+  field_paths:
+  - synonyms
+  evidence_ids:
+  - EAFTER
+  - EPREV
+  - ETEST
+  - EI0
+  - EI1
+  - EI2
+  - EX1
+  - EX2
+  - EX3
+  - EX4
+  - EX5
+  - EX6
+  - EX7
+  - EX8
+  - EX9
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained curation input or generator
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained curation input or generator
+  rule_id: docs/CURATION.md and native record-review checklist
+  native_severity: major
+  normalization_reason: Material semantic claim unsupported by the inspected source
+    scope; deterministic validity is insufficient.
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2160
+  previous_occurrences:
+  - repository: CultureBotAI/HabitatMech
+    review_id: 20261015T062606Z-aquatic_plant-record
+    finding_id: F1
+  disposition_reason: The authored host alias is removed and exact-label fallback
+    is suppressed through the guarded exclusion table. Definitions, genus, original
+    history, verbatim source labels/counts, all 25 observed taxa and native status
+    are unchanged.
+- finding_id: F2
+  issue_key: aquatic-plant-source-bin-host-scope
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Living-host interpretation exceeds source association scope
+  description: DSM2910 derives from a Lemna-fed digester and shin9-1 from field water,
+    while genuine root-derived controls are also present. A source category alone
+    cannot classify all associations as living macrophyte sites. Resolve the category-versus-associated-environment
+    model with governed association-level context; preserve original source totals,
+    exact strain evidence and valid host controls. Do not globally exclude entire
+    species or silently filter the raw observations.
+  target_ids:
+  - habitatmech:BACDIVE.38260eea00
+  field_paths:
+  - definition
+  - parent_habitats
+  - characteristic_taxa
+  evidence_ids:
+  - EAFTER
+  - EPREV
+  - ETEST
+  - EI0
+  - EI1
+  - EI2
+  - EX1
+  - EX2
+  - EX3
+  - EX4
+  - EX5
+  - EX6
+  - EX7
+  - EX8
+  - EX9
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained curation input or generator
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained curation input or generator
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Maintained curation input or generator
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained curation input or generator
+  rule_id: docs/CURATION.md and native record-review checklist
+  native_severity: major
+  normalization_reason: Material semantic claim unsupported by the inspected source
+    scope; deterministic validity is insufficient.
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1341
+  previous_occurrences:
+  - repository: CultureBotAI/HabitatMech
+    review_id: 20261015T062606Z-aquatic_plant-record
+    finding_id: F2
+  disposition_reason: Rechecked and still present. This bounded repair does not supply
+    missing original source intent or revise the shared source-to-record endpoint
+    contract.
+actions:
+- action_id: ACT2
+  finding_ids:
+  - F2
+  target_ids:
+  - habitatmech:BACDIVE.38260eea00
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained curation input or generator
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained curation input or generator
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Maintained curation input or generator
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained curation input or generator
+  description: DSM2910 derives from a Lemna-fed digester and shin9-1 from field water,
+    while genuine root-derived controls are also present. A source category alone
+    cannot classify all associations as living macrophyte sites. Resolve the category-versus-associated-environment
+    model with governed association-level context; preserve original source totals,
+    exact strain evidence and valid host controls. Do not globally exclude entire
+    species or silently filter the raw observations. Use maintained owners, not generated
+    YAML edits.
+  generator: just seed; inspect just seed-canary; just seed-apply; supported semantic
+    map, term-request, site and redirect regeneration when inputs change
+  acceptance_checks:
+  - Regress the exact target and preserve independently valid source identities, counts/units,
+    taxa, status and parents.
+  - Append session history; run strict schema, history, provenance, reproduction,
+    configured label and full QC gates.
+  - Save a successor with exact finding lineage; do not rewrite this observation or
+    claim broader export conformance.
+limitations:
+- Same-agent review is not independent approval. Native scientific status is not promoted
+  by the shared review.
+- Original-member and primary-source limitations of the predecessor remain; no new
+  prevalence, mechanism, or characteristic-taxon claim is added.
+- Full QC, archive integrity and map/site publication are separate subsequent gates,
+  not asserted as already passed in this observation.
+- 'Global endpoint #1398, aquatic source scopes #1340/#1341, moss identity #1346 and
+  abscess disposition #220 are not resolved by local parent/alias repairs.'
+- No paid research or transcriptomic inference was used; iModulonDB is not applicable.
+related_reviews:
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261015T062606Z-aquatic_plant-record
+  relationship: Exact predecessor; every finding identity retained.
+tags:
+- individual-scientific-review
+- remediation
+- host-associated
