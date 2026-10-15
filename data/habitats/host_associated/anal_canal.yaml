@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - UBERON:0000159
-- habitatmech:GOLD.5b0aa7456c
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6285
@@ -20,3 +19,14 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.5b0aa7456c
+    for habitatmech:GOLD.a2d2eb3d96 (Host-associated > Mammals: Human > Digestive
+    system > Large intestine > Anal canal). Scientific review #1325: the human anal
+    canal is part of the large intestine, not a kind of whole large intestine. Current
+    UBERON:0000159 positively distinguishes part_of from subClassOf anatomical conduit.
+    Exclude only this source-parent contribution; retain independent UBERON:0000159,
+    node 6285, one ORGANISM assertion, full path and NARROW/SEEDED state. Shared mapping-endpoint
+    issue #1398 remains open. https://purl.obolibrary.org/obo/UBERON_0000159'

@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - UBERON:0003342
-- habitatmech:GOLD.5b0aa7456c
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6311
@@ -20,3 +19,14 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.5b0aa7456c
+    for habitatmech:GOLD.e45d906034 (Host-associated > Mammals: Human > Digestive
+    system > Large intestine > Anal canal mucosa). Scientific review #1325: human
+    anal-canal mucosa is a tissue layer, not a kind of whole large intestine. Current
+    UBERON:0003342 is part_of anal canal and subClassOf large-intestine mucosa. Exclude
+    only this source-parent contribution; retain independent UBERON:0003342, node
+    6311, one ORGANISM assertion, full path and NARROW/SEEDED state. Shared mapping-endpoint
+    issue #1398 remains open. https://purl.obolibrary.org/obo/UBERON_0003342'

@@ -1,30 +1,42 @@
 identifier: habitatmech:GOLD.53e4290463
 label: Anterior chamber
 habitat_category: HOST_ASSOCIATED
-grounding_status: NARROW
+grounding_status: UNGROUNDED
 mapping_status: REVIEWED
-parent_habitats:
-- BTO:0000510
-- habitatmech:GOLD.19840c718e
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7325
   source_label: Anterior chamber
   source_path: 'Host-associated > Arthropoda: Crustaceans > Digestive system > Hindgut
     > Anterior chamber'
-  mapping_predicate: skos:narrowMatch
 curation_history:
-- timestamp: '2026-08-16T00:00:00Z'
-  curator: claude-opus-5
-  action: GROUND_AS_PARENT
-  changes: 'BTO:0000510 ''hindgut'' attached as a parent, not adopted as the identity
-    (NARROW). Risky-grounding review (#12): the seeder grounded ''Arthropoda: Crustaceans
-    > Digestive system > Hindgut > Anterior chamber'' to UBERON:0001766 ''anterior
-    chamber of eyeball''. The path says hindgut; the term is an eye structure. The
-    leaf label matched a term from an entirely different organ. Attached to BTO:0000510
-    ''hindgut'' as a parent, since the anterior chamber of the crustacean hindgut
-    has no term of its own in the slice. (source concept habitatmech:GOLD.53e4290463)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM reassessment
+    #1332: this source is the anterior chamber of a crustacean hindgut, not the eye
+    chamber UBERON:0001766. BTO:0000510 explicitly denotes vertebrate embryonic hindgut
+    and cannot subsume it. Bogataj et al. distinguish anterior chamber and papillate
+    region in Porcellio scaber (PMID:30564048; DOI:10.3897/zookeys.801.22395). Retain
+    the minted regional habitat UNGROUNDED because no fitting identity or strictly
+    broader regional term was verified; whole UBERON:0001046 hindgut is not a compartment
+    superclass. The independent GOLD whole-hindgut context parent is excluded under
+    #1331. Preserve node 7325 and the full source path; no universal crustacean microbiome
+    or sample identity is inferred. This supersedes the 2026-08-16 GROUND_AS_PARENT
+    decision, retained in Git and append-only session history. (source concept habitatmech:GOLD.53e4290463)'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.19840c718e
+    for habitatmech:GOLD.53e4290463 (Host-associated > Arthropoda: Crustaceans > Digestive
+    system > Hindgut > Anterior chamber). Scientific review #1331: a crustacean anterior
+    hindgut chamber is a compartment, not a subtype of whole hindgut. Bogataj et al.
+    distinguish this region from the papillate region in Porcellio scaber (PMID:30564048).
+    Exclude only this exact GOLD contribution, preserving node 7325 and full source
+    path. The independent vertebrate-embryonic BTO:0000510 decision is corrected under
+    #1332; do not replace it with whole UBERON:0001046 or the eye-chamber homonym.
+    https://pubmed.ncbi.nlm.nih.gov/30564048/'

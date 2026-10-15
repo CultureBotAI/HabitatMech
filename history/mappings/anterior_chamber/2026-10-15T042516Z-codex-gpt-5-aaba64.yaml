@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: anterior_chamber
+session:
+  id: 2026-10-15T042516Z-codex-gpt-5-aaba64
+  timestamp: '2026-10-15T04:25:16Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1332
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  summary: Retain crustacean anterior chamber explicitly ungrounded
+  details: Supersedes the 2026-08-16 GROUND_AS_PARENT BTO:0000510 decision. Current BTO restricts
+    that term to vertebrate embryonic hindgut; PMID:30564048 distinguishes the isopod anterior
+    compartment from the whole hindgut. The eye-chamber homonym remains rejected. No verified
+    regional genus was found, so retain minted UNGROUNDED/REVIEWED with no invented xref.
+    Old decision bytes remain at ea0bf6a2629ffcd2ed086310a5eee162d4f11cae and in the pre-fix
+    review. The focused corpus-scope regression passed (1 test), and the seeder dry run preserved
+    all 3,208 identities. Full publication QC, canary inspection and generated-product checks
+    follow; this history does not claim their future result.

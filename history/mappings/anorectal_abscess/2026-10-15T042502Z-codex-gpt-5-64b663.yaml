@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: anorectal_abscess
+session:
+  id: 2026-10-15T042502Z-codex-gpt-5-64b663
+  timestamp: '2026-10-15T04:25:02Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1327
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude unsupported GOLD context parent for anorectal_abscess
+  details: A localized purulent collection is not a subtype of the whole large intestine,
+    even if a future source review retains it as a habitat. Added an exact source-path and
+    expected-parent guard; preserved original source fields and independent valid ontology
+    parents. The focused corpus-scope regression passed (1 test), and the seeder dry run preserved
+    all 3,208 identities. Full publication QC, canary inspection and generated-product checks
+    follow; this history does not claim their future result.

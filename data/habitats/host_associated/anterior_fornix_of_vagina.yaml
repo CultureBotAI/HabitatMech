@@ -11,7 +11,7 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: anterior fornix
-  synonym_type: EXACT_SYNONYM
+  synonym_type: BROAD_SYNONYM
   source: UBERON
 - synonym_text: anterior part of fornix of vagina
   synonym_type: EXACT_SYNONYM
@@ -21,7 +21,6 @@ synonyms:
   source: UBERON
 parent_habitats:
 - UBERON:0000051
-- habitatmech:GOLD.1daee83236
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6560
@@ -47,3 +46,27 @@ curation_history:
   changes: 'Retained GOLD label ''Anterior fornix'' as RELATED_SYNONYM: a CLOSE source
     mapping does not establish exact lexical equivalence. Independent ontology synonyms
     and verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.1daee83236
+    for habitatmech:GOLD.c3e9d3ce0b (Host-associated > Mammals: Human > Reproductive
+    system > Vagina > Anterior fornix). Scientific review #1333: anterior vaginal
+    fornix is a subtype of fornix of vagina, whose relation to vagina is part_of.
+    The recess is not a kind of whole fibromuscular tract. Exclude only this GOLD
+    contribution; retain UBERON:0016487, valid UBERON:0000051 superclass, node 6560,
+    full path, zero-count omission and CLOSE/REVIEWED status. The separate imported
+    broad-synonym scope is corrected under #2158. https://purl.obolibrary.org/obo/UBERON_0016487'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: ANNOTATION_CORRECTED
+  changes: 'Corrected synonym_type for ''anterior fornix'' (UBERON) from ''EXACT_SYNONYM''
+    to ''BROAD_SYNONYM''. Evidence: https://purl.obolibrary.org/obo/uberon/releases/2026-10-01/uberon.obo.
+    The current release explicitly marks anterior fornix BROAD in the UBERON:0016487
+    stanza; restore only this imported record/source/text/old-value scope. Preserve
+    the two independent exact UBERON aliases and GOLD Anterior fornix RELATED alias.
+    The full human reproductive-system/vagina source path independently supports the
+    existing conservative CLOSE/REVIEWED identity; the standalone broader alias is
+    not sufficient evidence. Preserve inventories, definition, source node/path and
+    valid fornix superclass. Scoped issue #2158; global typed-synonym extraction #1249
+    remains open.'

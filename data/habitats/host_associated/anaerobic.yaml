@@ -3,8 +3,6 @@ label: Anaerobic
 habitat_category: HOST_ASSOCIATED
 grounding_status: NOT_APPLICABLE
 mapping_status: REVIEWED
-parent_habitats:
-- habitatmech:GOLD.2173317f9c
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7280
@@ -23,3 +21,14 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NOT_APPLICABLE.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.2173317f9c
+    for habitatmech:GOLD.9e917ffe11 (Host-associated > Protists > Excavata > Parabasalids
+    > Anaerobic). Scientific review #1324: the ITEM-excluded oxygen-preference quality
+    is not a subtype of a parabasalid-associated habitat. PATO:0001456 is a quality,
+    not the rejected ENVO:00002124 reactor. Exclude only this exact GOLD context contribution;
+    preserve node 7280, verbatim path, zero tree-count omission and NOT_APPLICABLE/REVIEWED
+    disposition. Later biosample/study data do not establish original member meaning.
+    https://purl.obolibrary.org/obo/PATO_0001456'
