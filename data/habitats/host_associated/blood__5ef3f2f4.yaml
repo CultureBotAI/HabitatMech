@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - UBERON:0000178
-- habitatmech:GOLD.0635cc88f0
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3693
@@ -20,3 +19,12 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.0635cc88f0
+    for habitatmech:GOLD.d25ff4a586 (Host-associated > Mammals: Human > Circulatory
+    system > Blood). Review https://github.com/CultureBotAI/HabitatMech/issues/2186.
+    Blood is a fluid, not a kind of the whole circulatory system. Exclude only this
+    exact source-path/expected-parent contribution; preserve independent ontology
+    genera, source observations and native status.'
