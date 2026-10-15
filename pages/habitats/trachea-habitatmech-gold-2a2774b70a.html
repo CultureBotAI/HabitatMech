@@ -27,11 +27,10 @@
   <code class="curie">habitatmech:GOLD.2a2774b70a</code>
   <span class="sep">·</span><a href="../category/host-associated.html">HOST_ASSOCIATED</a>
   <span class="sep">·</span><span class="pill">NARROW</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 
-<div class="note warn"><p>SEEDED workflow status. The source-seeding rules supplied this record; consult its curation history for later attributed changes. This status does not establish human review.</p></div>
 
 <h2>Source attestations</h2>
 <p class="meta">Each upstream vocabulary's own account of this habitat. Assertion
@@ -52,14 +51,28 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 <h2>Broader habitats</h2>
 <ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/UBERON_0003126">trachea</a>      <code class="curie">UBERON:0003126</code></li>
-  <li><a href="../habitats/respiratory-system-habitatmech-gold-867362bd5a.html">Respiratory system</a>      <code class="curie">habitatmech:GOLD.867362bd5a</code></li>
+  <li><a href="http://purl.obolibrary.org/obo/UBERON_0003127">open tracheal system trachea</a>      <code class="curie">UBERON:0003127</code></li>
 </ul>
 
 
 
 
 
+<h2>Curation</h2>
+<p class="meta">What a curator decided about this record, and why. A record built
+from several source concepts can carry one decision per concept.</p>
+<ol class="events">
+  <li>
+    <span class="pill">GROUND_AS_PARENT</span>
+    <span class="meta">2026-10-15 · codex-gpt-5</span>
+    <p>UBERON:0003127 &#39;open tracheal system trachea&#39; attached as a parent, not adopted as the identity (NARROW). ITEM anatomy correction #293: this insect respiratory branch denotes an open-system tracheal airway, not the vertebrate windpipe UBERON:0003126 selected by an ambiguous bare label. UBERON:0003127 is a respiratory airway part of an open tracheal system and supplies a broader genus without claiming all invertebrate tracheae are this insect-qualified source. Retain the mint and source path; do not equate its dilated insect air-sac child with bird air sacs or impose the tubular insect-trachea candidate UBERON:6005043 on that child. The whole respiratory system is a container and is separately excluded. Shared mapping endpoint issue #1398 remains unresolved. <a href="https://purl.obolibrary.org/obo/UBERON_0003127" rel="noopener noreferrer" target="_blank">https://purl.obolibrary.org/obo/UBERON_0003127</a> Path: Host-associated &gt; Arthropoda: Insects &gt; Respiratory system &gt; Trachea (source concept habitatmech:GOLD.2a2774b70a)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-15 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.867362bd5a for habitatmech:GOLD.2a2774b70a (Host-associated &gt; Arthropoda: Insects &gt; Respiratory system &gt; Trachea). Scoped anatomy correction #293: an insect open-system tracheal airway is part of the respiratory system, not a subtype of the whole system. UBERON:0003127 defines a respiratory airway part of an open tracheal system. Suppress only this source-container contribution alongside the reviewed windpipe-homonym correction; preserve the insect-qualified mint, two collapsed source nodes, full path and zero ORGANISM omission. Do not infer a universal microbial community or merge the child insect air sac with avian sacs. <a href="https://purl.obolibrary.org/obo/UBERON_0003127" rel="noopener noreferrer" target="_blank">https://purl.obolibrary.org/obo/UBERON_0003127</a></p>
+  </li>
+</ol>
 
 <h2>Provenance</h2>
 <p class="meta">
