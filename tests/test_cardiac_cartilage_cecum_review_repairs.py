@@ -91,7 +91,7 @@ def test_repairs_preserve_full_corpus_and_exact_source_partition(monkeypatch):
     ).read_text())
     parent_keys = {seed.mint("GOLD", path) for path in PARENT_PATHS}
     assert parent_keys <= parents.keys()
-    assert REDECIDED <= decisions.keys()
+    assert decisions.keys() >= REDECIDED
     after = {c.identifier: seed.build_document(c) for c in seed.build_corpus().concepts}
     with monkeypatch.context() as old:
         old.setattr(seed, "load_gold_parent_exclusions", lambda _: {
@@ -114,7 +114,7 @@ def test_repairs_preserve_full_corpus_and_exact_source_partition(monkeypatch):
         k: v.get("characteristic_taxa") for k, v in after.items()
         if v.get("characteristic_taxa")
     }
-    for path, (key, parent) in PARENT_PATHS.items():
+    for key, parent in PARENT_PATHS.values():
         newkey = STOMACH if key == OLD_STOMACH else key
         removed = {parent}
         if key == CECA:
