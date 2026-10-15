@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: caeca
+session:
+  id: 2026-10-15T194820Z-codex-gpt-5-79516a
+  timestamp: '2026-10-15T19:48:20Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2200
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  - source_attestations
+  summary: Reject vertebrate caecum grounding for invertebrate source
+  details: Current OLS UBERON:0001153 and BTO:0000166 definitions specify vertebrate ileocecal/large-intestinal
+    anatomy, not this exact insect or crustacean source. Use CONFIRM_UNGROUNDED at ITEM depth
+    with no invented replacement genus or xref. This removes the local unsupported narrowMatch,
+    not source membership. Preserve distinct identity and counts/units/taxa. For bacteriome
+    this supersedes the 2026-08-12 GROUND_AS_PARENT decision and its truncated path; prior
+    decision bytes are retained in Git base a073f8e821a7c095f35501982930cc5a156835c0, the
+    immutable predecessor review and tests/data/buccal_camelid_caeca_prior_decisions.json.
+    Generated history reflects the current decision, not a claim that older reasoning never
+    existed. The focused counterfactual test failed before repair and passed after it; changed
+    canaries were inspected. Full native QC, label correspondence, corpus reproduction and
+    regenerated map/site remain publication gates.

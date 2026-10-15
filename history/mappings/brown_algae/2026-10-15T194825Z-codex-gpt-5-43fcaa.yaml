@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: brown_algae
+session:
+  id: 2026-10-15T194825Z-codex-gpt-5-43fcaa
+  timestamp: '2026-10-15T19:48:25Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2201
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  summary: Correct brown-algae decision rationale without changing disposition
+  details: The actual FOODON:03412395 entry has no textual definition and is an organism/source
+    class. Replace the earlier red-algae sibling quotation as rationale while preserving CONFIRM_UNGROUNDED
+    and the host-context xref. Date and attribute the new ITEM rationale to codex-gpt-5. The
+    2026-08-16 explanation remains in Git base a073f8e821a7c095f35501982930cc5a156835c0, the
+    immutable predecessor review and tests/data/buccal_camelid_caeca_prior_decisions.json;
+    the generated event is a current-decision projection. No committed history or review file
+    is edited. The focused counterfactual test failed before repair and passed after it; changed
+    canaries were inspected. Full native QC, label correspondence, corpus reproduction and
+    regenerated map/site remain publication gates.

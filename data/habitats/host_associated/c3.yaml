@@ -13,7 +13,6 @@ synonyms:
   source: HabitatMech curation
 parent_habitats:
 - UBERON:0009870
-- habitatmech:GOLD.d3869ad37f
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6701
@@ -48,3 +47,13 @@ curation_history:
     candidate ruminant stomach compartments assert the wrong Ruminantia clade. ADD
     preserves GOLD's source-derived Stomach parent while adding the neutral stomach-division
     genus.
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.d3869ad37f
+    for habitatmech:GOLD.5f6ed7c41e (Host-associated > Mammals > Digestive system
+    > Stomach > C3). Review https://github.com/CultureBotAI/HabitatMech/issues/2198
+    : A component, derived sample fraction or distinct anatomical structure is not
+    a subtype of this containing or neighboring source context. Exclude only this
+    exact GOLD contribution; retain independent valid genera and source observations.
+    This does not resolve C1 source scope or shared mapping endpoint #1398.'

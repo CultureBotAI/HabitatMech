@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - UBERON:0006956
-- habitatmech:GOLD.92d1e65695
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4110
@@ -20,3 +19,13 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.92d1e65695
+    for habitatmech:GOLD.4caaf1fb4f (Host-associated > Mammals > Digestive system
+    > Oral cavity > Buccal mucosa). Review https://github.com/CultureBotAI/HabitatMech/issues/2198
+    : A component, derived sample fraction or distinct anatomical structure is not
+    a subtype of this containing or neighboring source context. Exclude only this
+    exact GOLD contribution; retain independent valid genera and source observations.
+    This does not resolve C1 source scope or shared mapping endpoint #1398.'

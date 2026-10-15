@@ -1,0 +1,28 @@
+{
+  "habitatmech:GOLD.3e4ecbed63": {
+    "identifier": "habitatmech:GOLD.3e4ecbed63",
+    "decision": "CONFIRM_UNGROUNDED",
+    "object_id": "FOODON:03412395",
+    "object_label": "brown algae",
+    "grounding_status": "",
+    "curator": "claude-opus-5",
+    "date": "2026-08-16",
+    "notes": "Non-habitat screen (#12): grounded EXACT to FOODON:03412395 'brown algae', which FOODON uses for the TAXON \u2014 red algae is defined there as 'one of the oldest groups of eukaryotic algae, and one of the largest phyla' \u2014 not for a habitat. An organism group is not a place, and the GOLD path says host-associated, so the concept is the environment the alga provides. Same family as the sponge, nematode and reptile requests. The FOODON term is kept as an xref (#99), which records what the label matched without asserting the record is a phylum.",
+    "review_depth": "ITEM",
+    "category": "",
+    "relation": "xref"
+  },
+  "habitatmech:GOLD.2d506b9526": {
+    "identifier": "habitatmech:GOLD.2d506b9526",
+    "decision": "GROUND_AS_PARENT",
+    "object_id": "BTO:0000166",
+    "object_label": "cecum",
+    "grounding_status": "NARROW",
+    "curator": "claude-opus-5",
+    "date": "2026-08-12",
+    "notes": "A bacteriome is a specialised symbiont-housing organ associated with the caeca. Path: Host-associated > Arthropoda: Insects > Digestive system > Midgut > Ca",
+    "review_depth": "ITEM",
+    "category": "",
+    "relation": "parent"
+  }
+}

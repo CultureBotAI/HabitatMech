@@ -6,10 +6,6 @@ definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
-synonyms:
-- synonym_text: Canidae-Dog
-  synonym_type: EXACT_SYNONYM
-  source: HabitatMech curation
 parent_habitats:
 - ENVO:01001002
 xrefs:
@@ -207,3 +203,12 @@ curation_history:
     the equid sibling because the source label names one vernacular host inside a
     wider family: NCBITaxon:9608 ''Canidae'' also covers foxes, wolves and jackals,
     so the definition must not silently narrow to the dog.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Canidae-Dog''
+    when defining habitatmech:BACDIVE.33fde10528 as ''canid-associated environment''.
+    Verbatim source attestations are preserved. Review https://github.com/CultureBotAI/HabitatMech/issues/2199
+    : The displaced label names the determining hosts, not their associated environment.
+    Suppress exact-alias fallback; preserve verbatim source provenance, definition,
+    genus and native status.'

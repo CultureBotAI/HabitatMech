@@ -6,10 +6,6 @@ definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
-synonyms:
-- synonym_text: Brown Algae
-  synonym_type: EXACT_SYNONYM
-  source: HabitatMech curation
 parent_habitats:
 - ENVO:01001000
 - habitatmech:GOLD.02383c20a7
@@ -24,18 +20,6 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-16T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. FOODON:03412395
-    ''brown algae'' kept as an xref. Non-habitat screen (#12): grounded EXACT to FOODON:03412395
-    ''brown algae'', which FOODON uses for the TAXON — red algae is defined there
-    as ''one of the oldest groups of eukaryotic algae, and one of the largest phyla''
-    — not for a habitat. An organism group is not a place, and the GOLD path says
-    host-associated, so the concept is the environment the alga provides. Same family
-    as the sponge, nematode and reptile requests. The FOODON term is kept as an xref
-    (#99), which records what the label matched without asserting the record is a
-    phylum. (source concept habitatmech:GOLD.3e4ecbed63)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
@@ -50,3 +34,25 @@ curation_history:
     batch and does not exist yet; editors should re-parent it if both are minted.
     Not parented to plant-associated environment: brown algae are stramenopiles, not
     green plants.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. FOODON:03412395
+    ''brown algae'' kept as an xref. ITEM rationale correction https://github.com/CultureBotAI/HabitatMech/issues/2201
+    : FOODON:03412395 is the brown-algae organism/source class; its current OLS entry
+    has no textual definition. The earlier rationale explicitly quoted the red-algae
+    sibling, which does not define this target. Retain the brown-alga-associated environment
+    under its own minted identity, with FOODON retained only as host-context xref
+    and the existing environmental genera unchanged. This supersedes only the explanation
+    and attribution of the 2026-08-16 decision; prior reasoning remains in Git and
+    immutable review/session evidence. Path: Host-associated > Algae > Brown Algae
+    (source concept habitatmech:GOLD.3e4ecbed63)'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Brown Algae''
+    when defining habitatmech:GOLD.3e4ecbed63 as ''brown-alga-associated environment''.
+    Verbatim source attestations are preserved. Review https://github.com/CultureBotAI/HabitatMech/issues/2199
+    : The displaced label names the determining hosts, not their associated environment.
+    Suppress exact-alias fallback; preserve verbatim source provenance, definition,
+    genus and native status.'
