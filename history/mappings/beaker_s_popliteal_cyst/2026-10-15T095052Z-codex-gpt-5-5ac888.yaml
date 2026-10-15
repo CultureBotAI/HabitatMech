@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: beaker_s_popliteal_cyst
+session:
+  id: 2026-10-15T095052Z-codex-gpt-5-5ac888
+  timestamp: '2026-10-15T09:50:52Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2169
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed parent_habitats claim for beaker_s_popliteal_cyst
+  details: A fluid-filled popliteal cyst is not a subtype of the joint capsule; anatomical
+    communication is not is-a. The focused whole-corpus counterfactual passed. Canary, regeneration
+    and final QC are subsequent gates, not claimed already complete. No scientific status
+    is promoted.

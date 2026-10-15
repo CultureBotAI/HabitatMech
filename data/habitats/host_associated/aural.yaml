@@ -3,8 +3,6 @@ label: Aural
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- BTO:0006350
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6650
@@ -23,3 +21,12 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution BTO:0006350 for habitatmech:GOLD.b3344a5da2
+    (Host-associated > Mammals: Human > Benign tumor > Polyps > Aural). Review #2166:
+    A human aural-polyp context is not a cnidarian body form. The parent grounding
+    remains separately unresolved. Exclude only this exact immediate GOLD context
+    contribution; preserve independent parents, source identity/path/count/unit, native
+    status and prior history. Evidence is retained in the immutable individual review.'

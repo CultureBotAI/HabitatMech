@@ -11,7 +11,7 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: GOLD
 - synonym_text: paw pad
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: UBERON
 parent_habitats:
 - UBERON:0015790
@@ -42,3 +42,13 @@ curation_history:
   changes: 'Retained GOLD label ''Paw pad'' as RELATED_SYNONYM: a CLOSE source mapping
     does not establish exact lexical equivalence. Independent ontology synonyms and
     verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: ANNOTATION_CORRECTED
+  changes: 'Corrected synonym_type for ''paw pad'' (UBERON) from ''EXACT_SYNONYM''
+    to ''RELATED_SYNONYM''. Evidence: https://purl.obolibrary.org/obo/uberon/uberon-base.owl.
+    Review #1249 scoped witness: official Uberon OWL types this annotation as related,
+    not exact. Restore only the pinned record/source/text/old-value scope; preserve
+    canonical identity, independent exact synonyms, source metadata and native status.
+    This does not repair the global untyped extraction contract or infer a different
+    source grounding.'
