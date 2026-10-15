@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: anterior_chamber
+session:
+  id: 2026-10-15T050513Z-codex-gpt-5-56cab7
+  timestamp: '2026-10-15T05:05:13Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2159
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - notes
+  summary: Keep citation punctuation outside the rendered PubMed URL
+  details: Rendered-page inspection of the preceding citation-format correction found that
+    the semicolon immediately after the PubMed URL was included in the href by the existing
+    linkifier. Remove only that delimiter, retaining whitespace before the DOI. This follows
+    history/mappings/anterior_chamber/2026-10-15T050035Z-codex-gpt-5-06460b.yaml without rewriting
+    it. Paper identity, DOI, scientific decisions and finding dispositions remain unchanged.
+    Verify the exact rendered href and rerun the bounded publication gates before merge.
