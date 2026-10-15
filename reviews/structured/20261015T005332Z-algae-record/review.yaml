@@ -1,0 +1,1073 @@
+schema_version: 1.0.0
+review_id: 20261015T005332Z-algae-record
+kind: record
+repository: CultureBotAI/HabitatMech
+title: 'Record review: alga-associated environment'
+started_at: '2026-10-15T00:43:36Z'
+finished_at: '2026-10-15T00:53:32Z'
+reviewer:
+  identity: codex-gpt-5
+  kind: agent
+  model: gpt-5
+  independence: self_review
+  independence_basis: Continuing review agent; current claims and historical leads
+    were reassessed against primary evidence. No independent approval is claimed.
+skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The minted living-alga-associated environment, ENVO:01001000 genus and FOODON
+  organism-group xref preserve the host-versus-habitat distinction. Both source ITEM
+  decisions explain REVIEWED, but that workflow status does not validate unconditional
+  source equivalence. The obsolete ENVO:02500019 identifier is retained as Madin provenance,
+  not as active grounding. The pinned Madin release contains 100 host_algae observations
+  for 88 distinct IDs, including every displayed ID. Its conversion table maps 38
+  source strings, including decomposing scum, algal mats, algae-bearing sediment and
+  lichen-colonized rock. This mixed scope is not unconditionally the living-host environment.
+  Separately, Algae denotes the organism group and should not be an exact synonym
+  of its associated environment.
+source:
+  git_revision: b09f0b8718528ce9b5853f3a809d2e1846499f99
+  state: git_commit
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: conf/record_review.yaml
+    sha256: c2f5d0eb4c5744f5fe354c92184ddab144dc2688dba952b032b4f3d597bc08d6
+    role: context
+  - path: conf/sources.yaml
+    sha256: a8e069f9278068b57fa234f43e03c8d893f857827b83fd10cfa92d6815aed642
+    role: context
+  - path: curation/decisions.tsv
+    sha256: 3072cbab4fc5f9241e595a681b0f9095ae0942c9dba6502fb01afc52fe67d919
+    role: context
+  - path: curation/definition_source_label_exclusions.tsv
+    sha256: 505e6efc536392c9f6ce77fd4a70284392166269713189ff53e40367256d2899
+    role: context
+  - path: curation/external_xrefs.tsv
+    sha256: f289c938b0c70d6f2bfb231bf137edf1c862bbda9143d9b6eae9e3fdd587703c
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: 77240ee178c7374a1d872a4226cd7c05916097b9b1d78679ae921666feead297
+    role: context
+  - path: curation/record_annotation_corrections.tsv
+    sha256: 11f153cc7f19333dc89a9019ef59c33b210bbebb44dd4e84b11166be3dd3927f
+    role: context
+  - path: curation/redirects_retracted.tsv
+    sha256: 0f1e9af8881f5a5db19f87de06b3b3d1800cfac8101699b380388c0a1a1e9a19
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 8d4ce33422cf749d02b43d734fdcbefeb5dd04b79ef8574cc361548a112da0b8
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: b0135af0aa4deed0f3824a2f491d5a742c1b7de4775c533f283761d22e805821
+    role: context
+  - path: data/habitats/host_associated/algae.yaml
+    sha256: 4f0e2a7831cfe18c6e0a9430a12132626923df8f9dca3604bfffa8244cbd27fe
+    role: target
+  - path: data/habitats/host_associated/environmental_system_determined_by_an_organism.yaml
+    sha256: d3b79ef9436a87fbce8e6b204b0113e170fa758e4a66efb592543bf934c67270
+    role: context
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: f3f5d3d033fa7e7c1d78571959fc2e62e0b0a625f47dba1413657e8cf944b322
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 105b3c8e10f43ce689b05d3089d3a8be1d713a98dd6806e11be37ebd85b10590
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reports/yaml_record_review/20261003T221216Z-algae.md
+    sha256: a04e507bd94034dbccead13ec666fb60fa97f0852e68b820d2da7817724f210d
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: src/habitatmech/curate/decisions.py
+    sha256: f33d3e9dc95bb428e63e640d48d4074cf15e90ea666603fb16fb651d591e3f02
+    role: context
+  - path: src/habitatmech/curate/definitions.py
+    sha256: decd02eea029e884ab1a8bbb51dd870edb5544906b3ddd39598147b27ce572c9
+    role: context
+  - path: src/habitatmech/curate/gold_parent_exclusions.py
+    sha256: 044d8277509a9b1f6e4f2d7ea1fb82319b41e09ffef7788738a0f4ed0d0b63af
+    role: context
+  - path: src/habitatmech/curate/record_annotation_corrections.py
+    sha256: 15bad3d40fd95e2acc72d3ff3c74289c15fb8a1775adc523b3575c3ea8487033
+    role: context
+  - path: src/habitatmech/extract.py
+    sha256: 4d9397bda649381a5daf81937369531c6dc8b4518d6c7047e6f3f14e605bf860
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 7e3cda3dadb9c7462498e5014bf38ef730068212f8f9cb131e3fce383c21d10e
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
+    role: context
+targets:
+- target_id: habitatmech:GOLD.02383c20a7
+  path: data/habitats/host_associated/algae.yaml
+  label: alga-associated environment
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained source, curation input, or generator; target YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained source, curation input, or generator; target YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/curate/definitions.py
+    role: Maintained source, curation input, or generator; target YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Maintained source, curation input, or generator; target YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained source, curation input, or generator; target YAML is read-only
+scope:
+  description: One complete generated record and all contributing source concepts;
+    referenced parents are bounded context checks.
+  selection: Next exact unreviewed identifier in the full-corpus inventory; one separate
+    individual review, not a sampled category verdict.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - habitatmech:GOLD.02383c20a7
+checks:
+- check_id: C3
+  name: validate
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.02383c20a7
+  exit_code: 0
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate data/habitats/host_associated/algae.yaml
+  summary: Executed 2026-10-15T00:44:26Z to 2026-10-15T00:44:32Z. Exact target passes
+    LinkML validation.
+- check_id: C9
+  name: validate-strict
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.02383c20a7
+  exit_code: 0
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-strict
+    data/habitats/host_associated/air_breathing_organ.yaml data/habitats/host_associated/air_sac.yaml
+    data/habitats/host_associated/air_sacs__d20658f1.yaml data/habitats/host_associated/algae.yaml
+    data/habitats/host_associated/alimentary_canal.yaml data/habitats/host_associated/alveolar_bone.yaml
+    data/habitats/host_associated/alveoli.yaml data/habitats/host_associated/alveoli__5d35ddee.yaml
+    data/habitats/host_associated/alveolus.yaml
+  summary: Executed 2026-10-15T00:45:14Z to 2026-10-15T00:45:31Z. Nine enumerated
+    targets pass closed-schema validation with zero errors.
+- check_id: C10
+  name: validate-history
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.02383c20a7
+  exit_code: 0
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-history
+  summary: Executed 2026-10-15T00:45:32Z to 2026-10-15T00:45:56Z. All 718 native history
+    records validate.
+- check_id: C11
+  name: provenance-check
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.02383c20a7
+  exit_code: 0
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just provenance-check
+  summary: Executed 2026-10-15T00:45:56Z to 2026-10-15T00:45:58Z. Fourteen committed
+    inventories and two GOLD sources match their manifests.
+- check_id: C12
+  name: verify-corpus
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.02383c20a7
+  exit_code: 0
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just verify-corpus
+  summary: 'Executed 2026-10-15T00:45:58Z to 2026-10-15T00:47:11Z. All 3208 records
+    reproduce exactly: zero missing, extra or differing.'
+- check_id: C13
+  name: validate-causal-all
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.02383c20a7
+  exit_code: 0
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-causal-all
+  summary: Executed 2026-10-15T00:47:11Z to 2026-10-15T00:47:32Z. All 32 overlays
+    and 32 causal graphs validate; this target has no graph.
+- check_id: C14
+  name: term-requests-check
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.02383c20a7
+  exit_code: 0
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just term-requests-check
+  summary: Executed 2026-10-15T00:47:32Z to 2026-10-15T00:48:41Z. The generated 110-term
+    request table is current.
+- check_id: C15
+  name: validate-products
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.02383c20a7
+  exit_code: 0
+  command: env UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-products
+  summary: Executed 2026-10-15T00:48:41Z to 2026-10-15T00:51:02Z. 1174 canonical labels,
+    one synonym and five configured exceptions pass; 2061 identifiers without adapters
+    are skipped.
+- check_id: structured_audit
+  name: Exact source and taxonomy comparison
+  status: passed
+  required: true
+  target_ids:
+  - habitatmech:GOLD.02383c20a7
+  exit_code: 0
+  command: .venv/bin/python /private/tmp/habitatmech-review-bz-work.py audit
+  summary: Read-only structured audit checked 54 retained taxon rows, all target source
+    rows, both actual alveoli resolution routes, the pinned Madin pool and retained
+    workbook hashes. Completed 2026-10-15T00:47:57Z.
+- check_id: original_payload
+  name: Original frozen upstream member/pair recovery
+  status: unavailable
+  required: false
+  target_ids:
+  - habitatmech:GOLD.02383c20a7
+  summary: Ignored-inclusive find over the configured kg-microbe data/ and kg_microbe/
+    trees returned no PREGO-, Madin- or goldData-named files. Original member-level
+    inputs and PREGO pair references were not recovered there; this is not global
+    absence. Pinned transformations, committed inventories and later source exports
+    do not substitute for the missing original payload.
+- check_id: molecular
+  name: iModulonDB and molecular adapters
+  status: not_applicable
+  required: false
+  target_ids:
+  - habitatmech:GOLD.02383c20a7
+  summary: The target asserts no gene, regulator, expression module or molecular mechanism
+    requiring these adapters.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/habitats/host_associated/algae.yaml
+  locator: Complete YAML at b09f0b8718528ce9b5853f3a809d2e1846499f99
+  summary: The minted living-alga-associated environment, ENVO:01001000 genus and
+    FOODON organism-group xref preserve the host-versus-habitat distinction. Both
+    source ITEM decisions explain REVIEWED, but that workflow status does not validate
+    unconditional source equivalence. The obsolete ENVO:02500019 identifier is retained
+    as Madin provenance, not as active grounding. The pinned Madin release contains
+    100 host_algae observations for 88 distinct IDs, including every displayed ID.
+    Its conversion table maps 38 source strings, including decomposing scum, algal
+    mats, algae-bearing sediment and lichen-colonized rock. This mixed scope is not
+    unconditionally the living-host environment. Separately, Algae denotes the organism
+    group and should not be an exact synonym of its associated environment.
+  support: supports
+  accessed_at: '2026-10-15T00:53:32Z'
+- evidence_id: raw
+  kind: record_content
+  reference: data/raw/; data/habitats/PATHS.tsv
+  locator: 'data/raw/gold_ecosystem_paths.tsv: rows 79,112,118,185,245,645,675,729,730,829,830,1007,1332,1333,1723,1724,1725,1726,1727,1728,1729,1730,1731,1732,1733;
+    data/raw/environment_parameters.tsv: rows 326,327,328,329,330,331,332,333; data/raw/gold_path_triads.tsv:
+    rows 1244,1266,1274,1277,1286,1289,1292,1299,1301,1304,1310,1337,1343,1349,1355,1367,1370,1373,1379,1385,1388,1397,1400,1406,1409,1412,1415,1427,1439,1442,1445,1448,1454,1457,1460,1463,1467,1472,1475,1478,1490,1493,1580,1586;
+    data/raw/gold_path_biosamples.tsv: rows 409; data/raw/gold_studies.tsv: rows 803,1500,2460;
+    data/raw/madin_habitats.tsv: rows 38; data/raw/isolation_source_groundings.tsv:
+    rows 11; data/raw/ontology_subclass_edges.tsv: rows 6795,6796,6797,6840,9005,9017,9026,9028,9029;
+    data/raw/ontology_terms.tsv: rows 8489,10683; curation/term_requests.tsv: rows
+    2,16,17,27,28,34,40,43,56,57,60,66,79,80,107; curation/decisions.tsv: rows 79,1176,1687,1786'
+  summary: 'Exact source identifiers, nodes/paths, source counts/units, retained taxon
+    fields and ontology rows were compared with the entire generated record. Structured
+    source details: {"source_rows": [{"biosample_count": "0", "canonical_path": "Host-associated
+    > Algae", "depth": "2", "ecosystem": "Host-associated", "ecosystem_category":
+    "Algae", "ecosystem_subtype": "", "ecosystem_type": "", "gold_node_count": "4",
+    "gold_node_ids": "gold.ecosystem:3387|gold.ecosystem:3618|gold.ecosystem:3742|gold.ecosystem:3957",
+    "leaf_label": "Algae", "organism_count": "394", "specific_ecosystem": "", "study_count":
+    "0", "total_assertions": "394"}], "taxa": [{"current_taxonomy": {"canonical":
+    "102127", "label": "Baaleninema simplex PCC 7105", "lineage": "cellular organisms;
+    Bacteria; Bacillati; Cyanobacteriota/Melainabacteria group; Cyanobacteriota; Cyanophyceae;
+    Oscillatoriophycideae; Oscillatoriales; Oscillatoriaceae; Baaleninema; Baaleninema
+    simplex", "rank": "strain"}, "source": {"corroborated_by": "", "madin_id": "ENVO:02500019",
+    "taxon_id": "NCBITaxon:102127", "taxon_label": "Geitlerinema sp. ATCC 29120"}},
+    {"current_taxonomy": {"canonical": "104269", "label": "Tenacibaculum amylolyticum",
+    "lineage": "cellular organisms; Bacteria; Pseudomonadati; FCB group; Bacteroidota/Chlorobiota
+    group; Bacteroidota; Flavobacteriia; Flavobacteriales; Flavobacteriaceae; Tenacibaculum",
+    "rank": "species"}, "source": {"corroborated_by": "", "madin_id": "ENVO:02500019",
+    "taxon_id": "NCBITaxon:104269", "taxon_label": "tenacibaculum_amylolyticum"}},
+    {"current_taxonomy": {"canonical": "1044", "label": "Erythrobacter longus", "lineage":
+    "cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+    Sphingomonadales; Erythrobacteraceae; Erythrobacter/Porphyrobacter group; Erythrobacter",
+    "rank": "species"}, "source": {"corroborated_by": "", "madin_id": "ENVO:02500019",
+    "taxon_id": "NCBITaxon:1044", "taxon_label": "erythrobacter_longus"}}, {"current_taxonomy":
+    {"canonical": "1087449", "label": "Aquimarina agarilytica", "lineage": "cellular
+    organisms; Bacteria; Pseudomonadati; FCB group; Bacteroidota/Chlorobiota group;
+    Bacteroidota; Flavobacteriia; Flavobacteriales; Flavobacteriaceae; Aquimarina",
+    "rank": "species"}, "source": {"corroborated_by": "", "madin_id": "ENVO:02500019",
+    "taxon_id": "NCBITaxon:1087449", "taxon_label": "aquimarina_agarilytica"}}, {"current_taxonomy":
+    {"canonical": "1121011", "label": "Arenibacter certesii DSM 19833", "lineage":
+    "cellular organisms; Bacteria; Pseudomonadati; FCB group; Bacteroidota/Chlorobiota
+    group; Bacteroidota; Flavobacteriia; Flavobacteriales; Flavobacteriaceae; Arenibacter;
+    Arenibacter certesii", "rank": "strain"}, "source": {"corroborated_by": "", "madin_id":
+    "ENVO:02500019", "taxon_id": "NCBITaxon:1121011", "taxon_label": "Arenibacter
+    certesii DSM 19833"}}, {"current_taxonomy": {"canonical": "1122135", "label":
+    "Kiloniella laminariae DSM 19542", "lineage": "cellular organisms; Bacteria; Pseudomonadati;
+    Pseudomonadota; Alphaproteobacteria; Rhodospirillales; Kiloniellaceae; Kiloniella;
+    Kiloniella laminariae", "rank": "strain"}, "source": {"corroborated_by": "", "madin_id":
+    "ENVO:02500019", "taxon_id": "NCBITaxon:1122135", "taxon_label": "Kiloniella laminariae
+    DSM 19542"}}, {"current_taxonomy": {"canonical": "1122191", "label": "Maribacter
+    antarcticus DSM 21422", "lineage": "cellular organisms; Bacteria; Pseudomonadati;
+    FCB group; Bacteroidota/Chlorobiota group; Bacteroidota; Flavobacteriia; Flavobacteriales;
+    Flavobacteriaceae; Maribacter; Maribacter antarcticus", "rank": "strain"}, "source":
+    {"corroborated_by": "", "madin_id": "ENVO:02500019", "taxon_id": "NCBITaxon:1122191",
+    "taxon_label": "Maribacter antarcticus DSM 21422"}}, {"current_taxonomy": {"canonical":
+    "1128113", "label": "Algimonas porphyrae", "lineage": "cellular organisms; Bacteria;
+    Pseudomonadati; Pseudomonadota; Alphaproteobacteria; Maricaulales; Robiginitomaculaceae;
+    Algimonas", "rank": "species"}, "source": {"corroborated_by": "", "madin_id":
+    "ENVO:02500019", "taxon_id": "NCBITaxon:1128113", "taxon_label": "Algimonas porphyrae"}},
+    {"current_taxonomy": {"canonical": "113355", "label": "Geminocystis herdmanii
+    PCC 6308", "lineage": "cellular organisms; Bacteria; Bacillati; Cyanobacteriota/Melainabacteria
+    group; Cyanobacteriota; Cyanophyceae; Oscillatoriophycideae; Chroococcales; Geminocystaceae;
+    Geminocystis; Geminocystis herdmanii", "rank": "strain"}, "source": {"corroborated_by":
+    "", "madin_id": "ENVO:02500019", "taxon_id": "NCBITaxon:113355", "taxon_label":
+    "Geminocystis herdmanii PCC 6308"}}, {"current_taxonomy": {"canonical": "1137780",
+    "label": "Polaribacter porphyrae", "lineage": "cellular organisms; Bacteria; Pseudomonadati;
+    FCB group; Bacteroidota/Chlorobiota group; Bacteroidota; Flavobacteriia; Flavobacteriales;
+    Flavobacteriaceae; Polaribacter", "rank": "species"}, "source": {"corroborated_by":
+    "", "madin_id": "ENVO:02500019", "taxon_id": "NCBITaxon:1137780", "taxon_label":
+    "Polaribacter porphyrae"}}, {"current_taxonomy": {"canonical": "1141221", "label":
+    "Chryseobacterium taihuense", "lineage": "cellular organisms; Bacteria; Pseudomonadati;
+    FCB group; Bacteroidota/Chlorobiota group; Bacteroidota; Flavobacteriia; Flavobacteriales;
+    Weeksellaceae; Chryseobacterium group; Chryseobacterium", "rank": "species"},
+    "source": {"corroborated_by": "", "madin_id": "ENVO:02500019", "taxon_id": "NCBITaxon:1141221",
+    "taxon_label": "Chryseobacterium taihuense"}}, {"current_taxonomy": {"canonical":
+    "1142394", "label": "Phycisphaera mikurensis NBRC 102666", "lineage": "cellular
+    organisms; Bacteria; Pseudomonadati; PVC group; Planctomycetota; Phycisphaerae;
+    Phycisphaerales; Phycisphaeraceae; Phycisphaera; Phycisphaera mikurensis", "rank":
+    "strain"}, "source": {"corroborated_by": "", "madin_id": "ENVO:02500019", "taxon_id":
+    "NCBITaxon:1142394", "taxon_label": "Phycisphaera mikurensis NBRC 102666"}}, {"current_taxonomy":
+    {"canonical": "1154763", "label": "Oceanicaulis sp. NGOC", "lineage": "cellular
+    organisms; Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria; Maricaulales;
+    Maricaulaceae; Oceanicaulis; unclassified Oceanicaulis", "rank": "species"}, "source":
+    {"corroborated_by": "", "madin_id": "ENVO:02500019", "taxon_id": "NCBITaxon:1154763",
+    "taxon_label": "Oceanicaulis sp. NGOC"}}, {"current_taxonomy": {"canonical": "1156985",
+    "label": "Epibacterium ulvae", "lineage": "cellular organisms; Bacteria; Pseudomonadati;
+    Pseudomonadota; Alphaproteobacteria; Rhodobacterales; Roseobacteraceae; Epibacterium",
+    "rank": "species"}, "source": {"corroborated_by": "", "madin_id": "ENVO:02500019",
+    "taxon_id": "NCBITaxon:1156985", "taxon_label": "epibacterium_ulvae"}}, {"current_taxonomy":
+    {"canonical": "1158132", "label": "Bordetella sp. NGBO", "lineage": "cellular
+    organisms; Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria; Burkholderiales;
+    Alcaligenaceae; Bordetella; unclassified Bordetella", "rank": "species"}, "source":
+    {"corroborated_by": "", "madin_id": "ENVO:02500019", "taxon_id": "NCBITaxon:1158132",
+    "taxon_label": "Bordetella sp. NGBO"}}, {"current_taxonomy": {"canonical": "1158134",
+    "label": "Roseobacter sp. NGRO", "lineage": "cellular organisms; Bacteria; Pseudomonadati;
+    Pseudomonadota; Alphaproteobacteria; Rhodobacterales; Roseobacteraceae; Roseobacter;
+    unclassified Roseobacter", "rank": "species"}, "source": {"corroborated_by": "",
+    "madin_id": "ENVO:02500019", "taxon_id": "NCBITaxon:1158134", "taxon_label": "Roseobacter
+    sp. NGRO"}}, {"current_taxonomy": {"canonical": "1170562", "label": "Calothrix
+    sp. PCC 6303", "lineage": "cellular organisms; Bacteria; Bacillati; Cyanobacteriota/Melainabacteria
+    group; Cyanobacteriota; Cyanophyceae; Nostocales; Calotrichaceae; Calothrix; unclassified
+    Calothrix", "rank": "species"}, "source": {"corroborated_by": "", "madin_id":
+    "ENVO:02500019", "taxon_id": "NCBITaxon:1170562", "taxon_label": "Calothrix sp.
+    PCC 6303"}}, {"current_taxonomy": {"canonical": "1236544", "label": "Shewanella
+    algae JCM 21037 = NBRC 103173", "lineage": "cellular organisms; Bacteria; Pseudomonadati;
+    Pseudomonadota; Gammaproteobacteria; Alteromonadales; Shewanellaceae; Shewanella;
+    Shewanella algae", "rank": "strain"}, "source": {"corroborated_by": "", "madin_id":
+    "ENVO:02500019", "taxon_id": "NCBITaxon:1236544", "taxon_label": "Shewanella algae
+    NBRC 103173"}}, {"current_taxonomy": {"canonical": "1279017", "label": "Microbulbifer
+    variabilis ATCC 700307", "lineage": "cellular organisms; Bacteria; Pseudomonadati;
+    Pseudomonadota; Gammaproteobacteria; Cellvibrionales; Microbulbiferaceae; Microbulbifer;
+    Microbulbifer variabilis", "rank": "strain"}, "source": {"corroborated_by": "",
+    "madin_id": "ENVO:02500019", "taxon_id": "NCBITaxon:1279017", "taxon_label": "Microbulbifer
+    variabilis ATCC 700307"}}, {"current_taxonomy": {"canonical": "1314", "label":
+    "Streptococcus pyogenes", "lineage": "cellular organisms; Bacteria; Bacillati;
+    Bacillota; Bacilli; Lactobacillales; Streptococcaceae; Streptococcus", "rank":
+    "species"}, "source": {"corroborated_by": "", "madin_id": "ENVO:02500019", "taxon_id":
+    "NCBITaxon:1314", "taxon_label": "Streptococcus pyogenes"}}, {"current_taxonomy":
+    {"canonical": "152297", "label": "Pseudoalteromonas issachenkonii", "lineage":
+    "cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+    Alteromonadales; Pseudoalteromonadaceae; Pseudoalteromonas", "rank": "species"},
+    "source": {"corroborated_by": "", "madin_id": "ENVO:02500019", "taxon_id": "NCBITaxon:152297",
+    "taxon_label": "pseudoalteromonas_issachenkonii"}}, {"current_taxonomy": {"canonical":
+    "1842533", "label": "Acidovorax sp. RAC01", "lineage": "cellular organisms; Bacteria;
+    Pseudomonadati; Pseudomonadota; Betaproteobacteria; Burkholderiales; Comamonadaceae;
+    Acidovorax; unclassified Acidovorax", "rank": "species"}, "source": {"corroborated_by":
+    "", "madin_id": "ENVO:02500019", "taxon_id": "NCBITaxon:1842533", "taxon_label":
+    "Acidovorax sp. RAC01"}}, {"current_taxonomy": {"canonical": "1842534", "label":
+    "Sinorhizobium sp. RAC02", "lineage": "cellular organisms; Bacteria; Pseudomonadati;
+    Pseudomonadota; Alphaproteobacteria; Hyphomicrobiales; Rhizobiaceae; Sinorhizobium/Ensifer
+    group; Sinorhizobium; unclassified Sinorhizobium", "rank": "species"}, "source":
+    {"corroborated_by": "", "madin_id": "ENVO:02500019", "taxon_id": "NCBITaxon:1842534",
+    "taxon_label": "Sinorhizobium sp. RAC02"}}, {"current_taxonomy": {"canonical":
+    "1842535", "label": "Blastomonas sp. RAC04", "lineage": "cellular organisms; Bacteria;
+    Pseudomonadati; Pseudomonadota; Alphaproteobacteria; Sphingomonadales; Blastomonadaceae;
+    Blastomonas; unclassified Blastomonas", "rank": "species"}, "source": {"corroborated_by":
+    "", "madin_id": "ENVO:02500019", "taxon_id": "NCBITaxon:1842535", "taxon_label":
+    "Blastomonas sp. RAC04"}}, {"current_taxonomy": {"canonical": "1842536", "label":
+    "Agrobacterium sp. RAC06", "lineage": "cellular organisms; Bacteria; Pseudomonadati;
+    Pseudomonadota; Alphaproteobacteria; Hyphomicrobiales; Rhizobiaceae; Rhizobium/Agrobacterium
+    group; Agrobacterium; unclassified Agrobacterium", "rank": "species"}, "source":
+    {"corroborated_by": "", "madin_id": "ENVO:02500019", "taxon_id": "NCBITaxon:1842536",
+    "taxon_label": "Agrobacterium sp. RAC06"}}]}'
+  support: supports
+  accessed_at: '2026-10-15T00:53:32Z'
+- evidence_id: owners
+  kind: record_content
+  reference: curation/decisions.tsv; curation/term_requests.tsv; curation/gold_parent_exclusions.tsv;
+    curation/record_annotation_corrections.tsv
+  locator: Exact source mints habitatmech:GOLD.02383c20a7, habitatmech:MADIN.5eeeec4db2;
+    row locations in raw evidence
+  summary: 'All contributing decisions and definition rows were inspected. ITEM depth,
+    not a saved review, controls REVIEWED. Owner rows: {"curation/decisions.tsv":
+    [{"data": {"category": "", "curator": "claude-opus-5", "date": "2026-08-16", "decision":
+    "GROUND", "grounding_status": "EXACT", "identifier": "habitatmech:BACDIVE.baf38460e6",
+    "notes": "Term-request re-check (#12): this was recorded as an ENVO term request
+    on the premise that \"ENVO has only plant-associated and animal-associated environment
+    with no shared parent\". That premise is false. ENVO:01001000 ''environmental
+    system determined by an organism'' is that shared parent \u2014 the vendored subclass
+    edges show plant-associated (ENVO:01001001), animal-associated (ENVO:01001002)
+    and fungi-associated (ENVO:01001041) environment all asserted under it \u2014
+    and it has been in the slice the whole time. Its definition, ''an environmental
+    system which is determined by a living organism'', is exactly what this top-level
+    bin means: an isolate whose habitat is a living host. Grounded EXACT. The claim
+    was made by hand and never machine-rechecked, which is the same staleness the
+    class-level sweeps have a gate for and individually-decided records did not.",
+    "object_id": "ENVO:01001000", "object_label": "environmental system determined
+    by an organism", "relation": "", "review_depth": "ITEM"}, "row": 79}, {"data":
+    {"category": "", "curator": "claude-opus-5", "date": "2026-08-16", "decision":
+    "GROUND", "grounding_status": "EXACT", "identifier": "habitatmech:GOLD.d3b891e82e",
+    "notes": "Term-request re-check (#12): this was recorded as an ENVO term request
+    on the premise that \"ENVO has only plant-associated and animal-associated environment
+    with no shared parent\". That premise is false. ENVO:01001000 ''environmental
+    system determined by an organism'' is that shared parent \u2014 the vendored subclass
+    edges show plant-associated (ENVO:01001001), animal-associated (ENVO:01001002)
+    and fungi-associated (ENVO:01001041) environment all asserted under it \u2014
+    and it has been in the slice the whole time. Its definition, ''an environmental
+    system which is determined by a living organism'', is exactly what this top-level
+    bin means: an isolate whose habitat is a living host. Grounded EXACT. The claim
+    was made by hand and never machine-rechecked, which is the same staleness the
+    class-level sweeps have a gate for and individually-decided records did not.",
+    "object_id": "ENVO:01001000", "object_label": "environmental system determined
+    by an organism", "relation": "", "review_depth": "ITEM"}, "row": 1176}, {"data":
+    {"category": "HOST_ASSOCIATED", "curator": "codex-gpt-5", "date": "2026-08-24",
+    "decision": "SAME_AS", "grounding_status": "", "identifier": "habitatmech:MADIN.5eeeec4db2",
+    "notes": "Novel-concept merge (#183): Madin''s host_algae category and GOLD''s
+    Host-associated > Algae node denote the same broad habitat, an alga acting as
+    microbial host. Keeping both split Madin''s 88 TAXON assertions from the already-defined
+    GOLD record. Madin''s flat category includes unresolved algal lineages and laboratory
+    cultures, so its evidence remains a separate source attestation and is not pushed
+    down to a GOLD child. The category override records Madin''s own Host_associated
+    classification rather than the seeder''s prior OTHER fallback.", "object_id":
+    "habitatmech:GOLD.02383c20a7", "object_label": "Algae", "relation": "parent",
+    "review_depth": "ITEM"}, "row": 1687}, {"data": {"category": "", "curator": "claude-opus-5",
+    "date": "2026-08-16", "decision": "CONFIRM_UNGROUNDED", "grounding_status": "",
+    "identifier": "habitatmech:GOLD.02383c20a7", "notes": "Non-habitat screen (#12):
+    ''Host-associated > Algae'' was grounded EXACT to FOODON:03411301 ''algae'', which
+    FOODON defines as ''an informal term for a large, diverse group of photosynthetic
+    eukaryotic ORGANISMS''. An organism is not a habitat, and because the seeder derives
+    a GOLD child''s parent from its path node, that identity also became the parent_habitats
+    entry of 14 records under Host-associated > Algae \u2014 publishing ''is-a algae
+    the organism group'' as a broader-habitat claim 14 times over. The existing organism-identity
+    screen could not see it: it tests ancestry against NCIT and mesh roots, and FOODON
+    files both the organism and the material under one ''organism material'' root,
+    so there is no structural signal to test. The concept itself is real \u2014 algae
+    as host \u2014 and is the same family as the sponge, nematode and reptile requests,
+    so it becomes a term request with the FOODON term kept as an xref (#99) rather
+    than an identity.", "object_id": "FOODON:03411301", "object_label": "algae", "relation":
+    "xref", "review_depth": "ITEM"}, "row": 1786}], "curation/term_requests.tsv":
+    [{"data": {"curator": "codex-gpt-5", "date": "2026-10-14", "definition": "An environmental
+    system determined by a living organism that has reached its adult stage.", "exact_synonym":
+    "", "identifier": "habitatmech:PREGO.57e0a5faae", "notes": "Review #2141: define
+    only the organism-determined environmental system and adult-stage restriction
+    supported by ENVO:01001000 and BTO:0001043. This is a curator-authored interpretation
+    of PREGO host-stage context, not a newly discovered body-site class or a claim
+    that every retained association is valid. The organism-form identity and parent
+    are not inherited after the explicit source decision; ADD preserves any independently
+    valid parents. Bare adult is deliberately not an exact environment synonym; use
+    the guarded source-label exclusion. Source pair-level references remain unavailable.
+    https://purl.obolibrary.org/obo/ENVO_01001000 https://purl.obolibrary.org/obo/BTO_0001043",
+    "parent_class": "ENVO:01001000", "parent_label": "environmental system determined
+    by an organism", "parent_mode": "ADD", "requested_label": "adult-associated environment"},
+    "row": 2}, {"data": {"curator": "claude-opus-5", "date": "2026-08-16", "definition":
+    "An environmental system determined by a microorganism.", "exact_synonym": "Microbial",
+    "identifier": "habitatmech:GOLD.184623c963", "notes": "The habitat is the host
+    clade, and it is the entire content of the concept: GOLD organises host-associated
+    isolates by host and every anatomical path hangs off it. Not grounded to the parent,
+    because every clade would then merge onto one record. Same pattern ENVO already
+    has at plant-, animal- and fungi-associated environment. A microorganism as host
+    for another microbe. ENVO''s organism-determined branch has plant, animal and
+    fungi children but nothing for a microbial host, which is the commonest host of
+    all in this corpus''s sources.", "parent_class": "ENVO:01001000", "parent_label":
+    "environmental system determined by an organism", "parent_mode": "ADD", "requested_label":
+    "microbe-associated environment"}, "row": 16}, {"data": {"curator": "claude-opus-5",
+    "date": "2026-08-16", "definition": "An environmental system determined by a bacterium.",
+    "exact_synonym": "Bacteria", "identifier": "habitatmech:GOLD.029baaef9e", "notes":
+    "The habitat is the host clade, and it is the entire content of the concept: GOLD
+    organises host-associated isolates by host and every anatomical path hangs off
+    it. Not grounded to the parent, because every clade would then merge onto one
+    record. Same pattern ENVO already has at plant-, animal- and fungi-associated
+    environment. GOLD''s child of Microbial. Parented to the organism root here because
+    its natural parent, microbe-associated environment, is requested in this same
+    batch and does not exist yet \u2014 editors should re-parent it if both are minted.",
+    "parent_class": "ENVO:01001000", "parent_label": "environmental system determined
+    by an organism", "parent_mode": "ADD", "requested_label": "bacterium-associated
+    environment"}, "row": 17}, {"data": {"curator": "claude-opus-5", "date": "2026-08-17",
+    "definition": "An environmental system determined by an organism which is determined
+    by a protozoan.", "exact_synonym": "Protozoa", "identifier": "habitatmech:GOLD.f3d8c3793f",
+    "notes": "Definition drafted from the record''s deep-research report under research/habitats/
+    and read against it; the report''s proposed wording, genus and near-miss table
+    are the evidence. Parented to the organism root rather than the animal one: a
+    protozoan is not an animal.", "parent_class": "ENVO:01001000", "parent_label":
+    "environmental system determined by an organism", "parent_mode": "ADD", "requested_label":
+    "protozoan-associated environment"}, "row": 27}, {"data": {"curator": "claude-opus-5",
+    "date": "2026-08-17", "definition": "An environmental system determined by an
+    organism which is determined by an alga or by a part of an alga.", "exact_synonym":
+    "Algae", "identifier": "habitatmech:GOLD.02383c20a7", "notes": "Definition drafted
+    from the record''s deep-research report under research/habitats/ and read against
+    it; the report''s proposed wording, genus and near-miss table are the evidence.
+    Parented to the organism root rather than the plant one: algae are polyphyletic
+    and not all of them are green plants.", "parent_class": "ENVO:01001000", "parent_label":
+    "environmental system determined by an organism", "parent_mode": "ADD", "requested_label":
+    "alga-associated environment"}, "row": 28}, {"data": {"curator": "claude-opus-5",
+    "date": "2026-08-17", "definition": "An environmental system determined by an
+    organism which is determined by a brown alga.", "exact_synonym": "Brown Algae",
+    "identifier": "habitatmech:GOLD.3e4ecbed63", "notes": "Definition drafted from
+    the record''s deep-research report under research/habitats/ and read against it.
+    Parented to the organism root rather than to alga-associated environment, which
+    is requested in this same batch and does not exist yet; editors should re-parent
+    it if both are minted. Not parented to plant-associated environment: brown algae
+    are stramenopiles, not green plants.", "parent_class": "ENVO:01001000", "parent_label":
+    "environmental system determined by an organism", "parent_mode": "ADD", "requested_label":
+    "brown-alga-associated environment"}, "row": 34}, {"data": {"curator": "codex-gpt-5",
+    "date": "2026-08-22", "definition": "An environmental system determined by an
+    organism which is determined by a red alga or by a part of a red alga.", "exact_synonym":
+    "Red algae", "identifier": "habitatmech:GOLD.e789c273d0", "notes": "Definition
+    curated from the committed deep-research report. Parented to the organism-determined
+    root because red algae are not green plants; the GOLD hierarchy separately preserves
+    alga-associated environment as the immediate HabitatMech parent, and the FOODON
+    taxon term remains an xref.", "parent_class": "ENVO:01001000", "parent_label":
+    "environmental system determined by an organism", "parent_mode": "ADD", "requested_label":
+    "red-alga-associated environment"}, "row": 40}, {"data": {"curator": "codex-gpt-5",
+    "date": "2026-08-24", "definition": "An environmental system determined by an
+    organism which is determined by a diatom or by a part of a diatom.", "exact_synonym":
+    "Diatoms|diatom host environment", "identifier": "habitatmech:GOLD.1276bea544",
+    "notes": "Definition curated from the committed alga-associated research report
+    and cross-checked against its green- and brown-alga sibling reports. Diatoms are
+    the 218-assertion GOLD child of Algae; ENVO has no diatom- or general alga-associated
+    environment, plant-associated environment excludes Bacillariophyta, and the Bacillariophyta
+    taxon remains an xref rather than a habitat identity. The GOLD hierarchy separately
+    preserves alga-associated environment as the immediate HabitatMech parent.", "parent_class":
+    "ENVO:01001000", "parent_label": "environmental system determined by an organism",
+    "parent_mode": "ADD", "requested_label": "diatom-associated environment"}, "row":
+    43}, {"data": {"curator": "codex-gpt-5", "date": "2026-10-04", "definition": "An
+    environmental system determined by an aquatic macrophyte, or by a part of an aquatic
+    macrophyte.", "exact_synonym": "Aquatic-plant", "identifier": "habitatmech:BACDIVE.38260eea00",
+    "notes": "Rationale corrected under #1342; definition, label, synonym and genus
+    retained from claude-opus-5''s 2026-08-28 curation based on the committed deep-research
+    report, read in full. Aquatic bryophytes are plants: NCBITaxon:3208 (Bryophyta)
+    lies within Viridiplantae and Embryophyta (https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=3208).
+    Green algae are also Viridiplantae; macroalgae must not all be described as non-plants.
+    Retain ENVO:01001000 rather than narrow to ENVO:01001001 ''plant-associated environment''
+    because the source includes seaweed without an identified algal lineage (https://bacdive.dsmz.de/strain/158685);
+    that evidence does not establish that every macrophyte host is a green plant.
+    This wording correction does not resolve the digester and field-water source-scope
+    finding in #1341 or endorse those associations as living-host observations. No
+    new paid research was commissioned.", "parent_class": "ENVO:01001000", "parent_label":
+    "environmental system determined by an organism", "parent_mode": "ADD", "requested_label":
+    "aquatic macrophyte-associated environment"}, "row": 56}, {"data": {"curator":
+    "claude-opus-5", "date": "2026-08-31", "definition": "An environmental system
+    determined by an organism which is a brown alga between fertilisation and the
+    differentiated juvenile thallus, attached to a hard marine substratum by self-secreted
+    adhesive.", "exact_synonym": "Embryo|Phaeophyceae embryo", "identifier": "habitatmech:GOLD.32330da5da",
+    "notes": "Definition authored from the record''s committed deep-research report
+    under research/habitats/, read in full; the report''s proposed sentence, genus
+    and near-miss table are the evidence. No new research was commissioned. Labelled
+    ''brown algal embryo'' and not ''embryo'' on the report''s explicit instruction:
+    the bare label must not be the definiendum, because in GOLD ''Embryo'' is a reusable
+    life-stage slot - the same thing MIxS models as host_life_stage - and two sibling
+    nodes carry it under Red algae and under Fish. This is the #161 case where two
+    records share a source label and are NOT the same concept: the differentia is
+    already in the path, so each gets its own label and no shared-term mechanism is
+    needed. Genus is ENVO:01001000 rather than the plant or animal branch because
+    a brown alga is a stramenopile, neither plant nor animal; the report notes ENVO
+    has no algae-associated environment class at all, which is the real gap here.",
+    "parent_class": "ENVO:01001000", "parent_label": "environmental system determined
+    by an organism", "parent_mode": "ADD", "requested_label": "brown algal embryo"},
+    "row": 57}, {"data": {"curator": "codex-gpt-5", "date": "2026-09-07", "definition":
+    "An environmental system determined by a dinoflagellate.", "exact_synonym": "Dinoflagellates",
+    "identifier": "habitatmech:GOLD.94019ddb33", "notes": "Definition curated from
+    existing item-level #108 and #161 decisions plus the committed alga- and microbe-associated
+    reports; no new paid research was commissioned. GOLD files the asserted Dinoflagellates
+    host paths under both Protists and Algae, with a zero-count duplicate under Microbial
+    merged by #258; all three denote a dinoflagellate host as a microbial habitat.
+    ENVO has no dinoflagellate-, protist-, alga-, or microbe-associated environment,
+    so ENVO:01001000 is the tightest existing ontology parent and NCBITaxon:2864 remains
+    an xref rather than the habitat identity.", "parent_class": "ENVO:01001000", "parent_label":
+    "environmental system determined by an organism", "parent_mode": "ADD", "requested_label":
+    "dinoflagellate-associated environment"}, "row": 60}, {"data": {"curator": "codex-gpt-5",
+    "date": "2026-09-10", "definition": "An environmental system determined by an
+    amoebozoan.", "exact_synonym": "Amoebozoa", "identifier": "habitatmech:GOLD.6a7bcba80d",
+    "notes": "Definition authored from the existing item-level #108 decision; no new
+    paid research was commissioned. GOLD''s Host-associated > Amoebozoa source denotes
+    amoebozoans acting as microbial hosts and carries 13 organism assertions, and
+    the zero-assertion Host-associated > Protists > Amoebozoa sibling was merged into
+    the same habitat after #286 item-level review. ENVO:01001000 is the tightest vendored
+    ontology genus because amoebozoans are eukaryotes outside the existing animal-,
+    plant- and fungi-associated environment branches; the source-inherited protist-associated
+    environment parent preserves the narrower GOLD host grouping separately.", "parent_class":
+    "ENVO:01001000", "parent_label": "environmental system determined by an organism",
+    "parent_mode": "ADD", "requested_label": "amoebozoan-associated environment"},
+    "row": 66}, {"data": {"curator": "codex-gpt-5", "date": "2026-09-10", "definition":
+    "An environmental system which is determined by a unicellular, colonial, or structurally
+    simple eukaryotic organism that is neither an animal, a land plant, nor a fungus.",
+    "exact_synonym": "Protists|Protist", "identifier": "habitatmech:GOLD.eee7408afd",
+    "notes": "Definition authored from the BacDive Protist committed deep-research
+    report under research/habitats/, read in full; no new paid research was commissioned.
+    GOLD''s Host-associated > Protists node is the surviving identity because it has
+    the higher-volume explicit host-associated path; BacDive''s Protist bucket was
+    merged into it with SAME_AS. ENVO:01001000 is the tightest vendored genus because
+    ENVO lacks a protist-associated child alongside plant-, animal-, and fungi-associated
+    environment. NCIT:C77914 ''Protista'' remains an xref because it is a legacy taxon,
+    not a habitat, and the definition excludes amoebal co-culture cases where a protist
+    is used as laboratory isolation apparatus rather than functioning as the sampled
+    natural host.", "parent_class": "ENVO:01001000", "parent_label": "environmental
+    system determined by an organism", "parent_mode": "ADD", "requested_label": "protist-associated
+    environment"}, "row": 79}, {"data": {"curator": "codex-gpt-5", "date": "2026-09-10",
+    "definition": "An environmental system which is determined by an oomycete or by
+    a part of an oomycete.", "exact_synonym": "Oomycetes", "identifier": "habitatmech:GOLD.a233293e47",
+    "notes": "Definition authored from the existing item-level #108 decision; no new
+    paid research was commissioned. GOLD''s Host-associated > Protists > Oomycetes
+    source denotes oomycetes acting as microbial hosts and carries 2 organism assertions
+    across 3 GOLD ecosystem node ids. ENVO:01001000 is the tightest vendored ontology
+    genus because the ontology lacks oomycete- or protist-associated environment classes;
+    the source-inherited protist-associated environment parent preserves the narrower
+    GOLD host grouping separately; NCBITaxon:4762 remains an xref rather than a habitat
+    identity.", "parent_class": "ENVO:01001000", "parent_label": "environmental system
+    determined by an organism", "parent_mode": "ADD", "requested_label": "oomycete-associated
+    environment"}, "row": 80}, {"data": {"curator": "codex-gpt-5", "date": "2026-09-18",
+    "definition": "An environmental system determined by an organism which comprises
+    the cytoplasm, periplasm, or outer cell surface of a bacterial cell that is itself
+    an endosymbiont inside another organism, as inhabited by other, taxonomically
+    distinct microorganisms.", "exact_synonym": "", "identifier": "habitatmech:GOLD.a89688e0ba",
+    "notes": "Definition authored from the existing item-level #114 decision, GOLD''s
+    Host-associated > Endosymbionts > Bacteria source path, the committed Bacteria
+    deep-research report under research/habitats/, the GOLD OLS path at https://w3id.org/gold.path/4732,
+    and MIxS-SA''s treatment of symbionts as hosts (DOI:10.1038/s43705-022-00092-w).
+    The requested label is scoped to the Endosymbionts branch because GOLD also has
+    a distinct Host-associated > Microbial > Bacteria record already requested as
+    bacterium-associated environment. Issue #350 clarified this as a bacterial host-cell
+    habitat to avoid conflating the term with ordinary animal-associated bacterial
+    endosymbionts in which the bacterium is the occupant rather than the host. ENVO:01001000
+    is the tightest vendored genus until bacterium-associated and endosymbiont-associated
+    environment intermediates exist; NCBITaxon:2 remains an xref, not a habitat identity.
+    No exact synonym was authored because GOLD''s Bacteria label is broad and ambiguous.",
+    "parent_class": "ENVO:01001000", "parent_label": "environmental system determined
+    by an organism", "parent_mode": "ADD", "requested_label": "endosymbiotic bacterium-associated
+    environment"}, "row": 107}]}'
+  support: supports
+  accessed_at: '2026-10-15T00:53:32Z'
+- evidence_id: rules
+  kind: record_content
+  reference: docs/CURATION.md; docs/HARMONIZATION.md; src/habitatmech/schema/habitatmech.yaml;
+    src/habitatmech/seed.py; src/habitatmech/extract.py
+  locator: Native checklist, source-to-record predicate contract, strict parents,
+    source-unit counts and taxon ranking
+  summary: Parent_habitats asserts strictly broader classes, not anatomical containment.
+    Source association is not characteristic prevalence. PREGO retains best scores,
+    direct flags and channel unions, sorting by score/direct flag/ID; taxonomy ranks
+    differ from displayed source rank.
+  support: supports
+  accessed_at: '2026-10-15T00:53:32Z'
+- evidence_id: legacy
+  kind: prior_review
+  reference: reports/yaml_record_review/20261003T221216Z-algae.md
+  locator: Historical ad hoc target reports, findings and evidence leads
+  summary: Legacy reports were rechecked against current files and inspected primary
+    evidence. Their stable finding keys are retained when applicable; they are not
+    native structured predecessors, and no previous_occurrences is fabricated.
+  support: supports
+  accessed_at: '2026-10-15T00:53:32Z'
+- evidence_id: search
+  kind: search
+  reference: curation/; history/; research/; reports/; data/raw/; build/; reviews/
+  locator: Identifier, label, slug and source-mint search using rg --no-ignore --hidden
+    -l -F
+  summary: Ignored files were included. The current nine-target search exited 0 with
+    6837 matching files. Exact matching tables and native review census were then
+    parsed. No prior native individual bundle was found for these nine IDs; related
+    mentions and legacy reports are not counted as completed individual coverage.
+  support: supports
+  accessed_at: '2026-10-15T00:53:32Z'
+  search_scope: curation/; history/; research/; reports/; data/raw/; build/; reviews/;
+    ignored and hidden files included; exact identifier, label, slug and source-mint
+    strings; results refined by structured table and review parsing.
+- evidence_id: parent
+  kind: record_content
+  reference: data/habitats/host_associated/environmental_system_determined_by_an_organism.yaml
+  locator: Complete directly referenced parent records
+  summary: Parent meanings and any relevant inherited anatomical ancestor were read
+    separately; this is not a complete independent review of each parent.
+  support: supports
+  accessed_at: '2026-10-15T00:53:32Z'
+- evidence_id: taxonomy
+  kind: primary_source
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=102127,104269,1044,1087449,1121011,1122135,1122191,1128113,113355,1137780,1141221,1142394,1154763,1156985,1158132,1158134,1170562,1204724,1219065,1219071,1236544,1263,1265,1279017,1304,1314,1347420,1380,1408286,1433126,1437605,1485,152297,1679001,171549,1842533,1842534,1842535,1842536,185761,186802,186803,1869227,2,214092,28211,31979,33042,475609,541000,629395,766,830,84107
+  locator: All 25 displayed taxon IDs; ScientificName, Rank, Lineage and AkaTaxIds
+  summary: Every displayed identifier resolves directly or via an explicit alias.
+    Current names/ranks are retained in the raw audit evidence; name equivalence is
+    not evidence of habitat occurrence.
+  support: supports
+  accessed_at: '2026-10-14T23:43:53Z'
+  snapshot_sha256: 847965140998633d95fde21a1f24a9615a400e89edb6093af10a6a2209620697
+- evidence_id: genus
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_01001000
+  locator: Active definition
+  summary: The genus requires a living-organism-determined environment.
+  support: supports
+  accessed_at: '2026-10-14T23:43:43Z'
+  snapshot_sha256: 8bd797929d18bf28171af7fd10f358db9b093f752d20b99f665779bb2e6b504e
+- evidence_id: host
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/foodon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FFOODON_03411301
+  locator: Active definition
+  summary: Algae names a polyphyletic group of organisms, not the environment they
+    determine.
+  support: supports
+  accessed_at: '2026-10-14T23:43:45Z'
+  snapshot_sha256: be7df22e1413ccbcb6f03453af8b4fdc4661e8d71f82f494976ddc684f747ec5
+- evidence_id: obsolete
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_02500019
+  locator: Obsolescence flag
+  summary: The Madin source identifier is obsolete; this does not invalidate a historical
+    provenance key.
+  support: supports
+  accessed_at: '2026-10-14T23:43:44Z'
+  snapshot_sha256: ba6c56c196306da6d673938433fef9f90a0a0e587df6888ece9450c2c0691b33
+- evidence_id: conversion
+  kind: database
+  reference: https://raw.githubusercontent.com/bacteria-archaea-traits/bacteria-archaea-traits/86dbbbcea2cfd7a3be7003fc556a3ec21b969186/data/conversion_tables/renaming_isolation_source.csv
+  locator: Pinned 86dbbbcea2cfd7a3be7003fc556a3ec21b969186; 38 host_algae rows, notably
+    558, 847, 1040, 1315, 1745, 2982
+  summary: The same category combines living-host, material and community contexts.
+  support: supports
+  accessed_at: '2026-10-15T00:45:09Z'
+  snapshot_sha256: 62425f9b6cb450a3b7d8521d25bb494f11739ac14d47e8ec70997f03f6740579
+- evidence_id: condensed
+  kind: database
+  reference: https://raw.githubusercontent.com/bacteria-archaea-traits/bacteria-archaea-traits/86dbbbcea2cfd7a3be7003fc556a3ec21b969186/output/condensed_traits_NCBI.csv
+  locator: 159181 data rows; all 100 host_algae rows, including physical rows 15714
+    and 79112
+  summary: There are 88 distinct tax_ids and all 25 retained taxa occur. Chryseobacterium
+    taihuense is attributed to fierer/ref 1319; the unexpected S. pyogenes M3-b observation
+    is already in gold/ref 12331 and was not invented locally.
+  support: supports
+  accessed_at: '2026-10-15T00:45:08Z'
+  snapshot_sha256: 92edd6e59687cdb832dfc926bf1e9263978b43120ccea664e42347890e0b6b20
+- evidence_id: environments
+  kind: database
+  reference: https://raw.githubusercontent.com/bacteria-archaea-traits/bacteria-archaea-traits/86dbbbcea2cfd7a3be7003fc556a3ec21b969186/data/conversion_tables/environments.csv
+  locator: SHA-256 matches data/raw/MANIFEST.yaml
+  summary: The pinned environment mapping bytes equal the recorded manifest hash;
+    this does not prove complete equality with the unavailable original KGX pool.
+  support: supports
+  accessed_at: '2026-10-15T00:45:09Z'
+  snapshot_sha256: 99299fe635159712f95568783ad3b484230fb31781262f1f6f8bd84db4bc3048
+- evidence_id: scum
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1099/ijs.0.040337-0&format=json&resultType=core
+  locator: Primary species-description abstract, type strain THMBM1
+  summary: The type strain was isolated from decomposing algal bloom scum. This supports
+    the material-context witness, not a universal negative about living-host association.
+  support: supports
+  accessed_at: '2026-10-15T00:44:18Z'
+  snapshot_sha256: 6afb083259e3a8bbef75cbac83b1f3d8f531816868c08512a281c098b609186f
+- evidence_id: thallus
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1099/ijs.0.041434-0&format=json&resultType=core
+  locator: Primary abstract, Polaribacter porphyrae isolates
+  summary: The isolates came from red-algal thalli, a positive host-associated witness.
+  support: supports
+  accessed_at: '2026-10-15T00:44:18Z'
+  snapshot_sha256: 427d4763ac16f6cbfb7605cbd31aa3c68486c1920a1ff014014487f71fac9791
+- evidence_id: coculture
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5095461/fullTextXML
+  locator: Genome announcement body and Table 1
+  summary: RAC01, RAC02, RAC04 and RAC06 were recovered from laboratory Chrysochromulina
+    tobin coculture. Coculture is not universal natural prevalence or demonstrated
+    nutrient transfer.
+  support: supports
+  accessed_at: '2026-10-15T00:44:17Z'
+  snapshot_sha256: 26ecaed8c6c5cd3cd77dec31a5cd4119d493671abac3118e5fe47d6e0fcb6eee
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Complete identity and source grounding
+  outcome: supported
+  target_ids:
+  - habitatmech:GOLD.02383c20a7
+  evidence_ids:
+  - record
+  - raw
+  - owners
+  summary: The minted living-alga-associated environment, ENVO:01001000 genus and
+    FOODON organism-group xref preserve the host-versus-habitat distinction. Both
+    source ITEM decisions explain REVIEWED, but that workflow status does not validate
+    unconditional source equivalence. The obsolete ENVO:02500019 identifier is retained
+    as Madin provenance, not as active grounding.
+- assessment_id: scientific_scope
+  area: scope
+  topic: Anatomical, synonym and occurrence claim scope
+  outcome: concern
+  target_ids:
+  - habitatmech:GOLD.02383c20a7
+  evidence_ids:
+  - record
+  - rules
+  - genus
+  - host
+  - obsolete
+  - conversion
+  - condensed
+  - environments
+  - scum
+  - thallus
+  - coculture
+  summary: The pinned Madin release contains 100 host_algae observations for 88 distinct
+    IDs, including every displayed ID. Its conversion table maps 38 source strings,
+    including decomposing scum, algal mats, algae-bearing sediment and lichen-colonized
+    rock. This mixed scope is not unconditionally the living-host environment. Separately,
+    Algae denotes the organism group and should not be an exact synonym of its associated
+    environment.
+- assessment_id: source_fidelity
+  area: provenance
+  topic: Counts, ranks, statuses and generated audit
+  outcome: supported
+  target_ids:
+  - habitatmech:GOLD.02383c20a7
+  evidence_ids:
+  - raw
+  - owners
+  - rules
+  summary: The displayed fields reproduce their maintained inputs. Counts retain source-specific
+    units; max scores and display ranking are not prevalence, confidence probabilities
+    or taxonomy ranks. No source unit is combined with another.
+- assessment_id: optional
+  area: completeness
+  topic: Optional enrichment and evidence limits
+  outcome: supported
+  target_ids:
+  - habitatmech:GOLD.02383c20a7
+  evidence_ids:
+  - record
+  - search
+  - rules
+  summary: No causal graph or parameter ranges are asserted in the complete target.
+    Optional absence is not a defect or evidence of ecological absence. Research hypotheses
+    and parent biology were not imported. Scientific concerns are recorded separately
+    rather than concealed by deterministic success.
+findings:
+- issue_key: HM-ALGAE-001
+  category: scope
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Mixed Madin category is merged as one living-host environment
+  description: The pinned Madin release contains 100 host_algae observations for 88
+    distinct IDs, including every displayed ID. Its conversion table maps 38 source
+    strings, including decomposing scum, algal mats, algae-bearing sediment and lichen-colonized
+    rock. This mixed scope is not unconditionally the living-host environment.
+  field_paths:
+  - source_attestations
+  - characteristic_taxa
+  - curation_history
+  evidence_ids:
+  - owners
+  - conversion
+  - condensed
+  - environments
+  - scum
+  - thallus
+  - coculture
+  - legacy
+  rule_id: HabitatMech:claim-scope-and-strict-broader-identity
+  native_severity: major
+  normalization_reason: The finding changes the scientific interpretation of an anatomical
+    relation, identity or occurrence claim, rather than style. Provisional findings
+    require original source evidence before correction.
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained source, curation input, or generator; target YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Maintained source, curation input, or generator; target YAML is read-only
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1307
+  finding_id: F1
+  target_ids:
+  - habitatmech:GOLD.02383c20a7
+- issue_key: gold-02383c20a7-host-name-exact-synonym
+  category: scope
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Organism-group name is an exact synonym of its environment
+  description: Algae denotes the organism group and should not be an exact synonym
+    of its associated environment.
+  field_paths:
+  - synonyms
+  evidence_ids:
+  - record
+  - owners
+  - host
+  - genus
+  rule_id: HabitatMech:claim-scope-and-strict-broader-identity
+  native_severity: major
+  normalization_reason: The finding changes the scientific interpretation of an anatomical
+    relation, identity or occurrence claim, rather than style. Provisional findings
+    require original source evidence before correction.
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained source, curation input, or generator; target YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/curate/definitions.py
+    role: Maintained source, curation input, or generator; target YAML is read-only
+  finding_id: F2
+  target_ids:
+  - habitatmech:GOLD.02383c20a7
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  - F2
+  target_ids:
+  - habitatmech:GOLD.02383c20a7
+  description: Reassess the Madin SAME_AS decision using original observation contexts.
+    Preserve supported thallus/coculture associations, separate material/community
+    contexts, and remove the host-name exact synonym from the authored term request
+    while preserving the source label in provenance. The existing annotation-correction
+    table only handles ontology synonyms, so do not misuse it for this curated synonym;
+    a new typed authored-synonym capability would need its own design. Review the
+    eight unrouted parameter rows only after source scope is resolved; do not attach
+    them by lexical match.
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained source, curation input, or generator; target YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained source, curation input, or generator; target YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/curate/definitions.py
+    role: Maintained source, curation input, or generator; target YAML is read-only
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Maintained source, curation input, or generator; target YAML is read-only
+  generator: src/habitatmech/seed.py
+  acceptance_checks:
+  - Resolve source scope and relation endpoints with inspected primary or original
+    source evidence; retain explicit uncertainty until then.
+  - Make any separately authorized correction in maintained inputs, append native
+    history, run just seed and inspect affected just seed-canary output before regeneration.
+  - Add focused regressions for the supported and rejected scopes; run strict/schema,
+    provenance, history, corpus reproduction, causal, term-request and configured
+    label gates, followed by just qc.
+  - Inspect actual downstream mappings and generated pages/redirects after any identity
+    or relation change; deterministic record checks do not certify SSSOM/KGX compatibility.
+  - Save an immutable successor with these exact finding identities; do not rewrite
+    this observation or promote scientific status by review alone.
+limitations:
+- All 25 displayed taxon identities and raw rows were checked, but the ecology of
+  all 88 source taxa was not independently reviewed. Original Madin KGX membership
+  equality is not established by matching counts. No deletion is proposed merely because
+  S. pyogenes looks unexpected.
+- This review assesses exact committed input bytes at b09f0b8718528ce9b5853f3a809d2e1846499f99,
+  also verified unchanged on disk at drafting. It does not change curation, history,
+  generated products or GitHub.
+- Configured label correspondence skips identifiers without adapters; the actual result
+  below must not be read as full identifier or biological validation.
+- Original upstream payloads remain unavailable in the bounded configured-checkout
+  search. Selected primary witnesses do not establish ecological support for every
+  source member.
+- No SSSOM/KGX product audit or compatibility certification was performed. No paid
+  research was run.
