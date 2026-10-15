@@ -3,8 +3,6 @@ label: Bowens disease/Squamous cell carcinoma in situ
 habitat_category: HOST_ASSOCIATED
 grounding_status: NOT_APPLICABLE
 mapping_status: REVIEWED
-parent_habitats:
-- habitatmech:GOLD.9bb307824f
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6196
@@ -23,3 +21,12 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NOT_APPLICABLE.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.9bb307824f
+    for habitatmech:GOLD.acd58e051d (Host-associated > Mammals: Human > Malignant
+    tumor > Carcinoma > Bowens disease/Squamous cell carcinoma in situ). Review https://github.com/CultureBotAI/HabitatMech/issues/2190
+    : Disease classification is not broader habitat ancestry. Exclude only this exact
+    GOLD contribution; retain independent genera, source observations and native status.
+    This does not settle source-material scope or mapping endpoint #1398.'
