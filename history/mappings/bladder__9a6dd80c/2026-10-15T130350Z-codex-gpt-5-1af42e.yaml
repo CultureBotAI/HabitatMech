@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: bladder__9a6dd80c
+session:
+  id: 2026-10-15T130350Z-codex-gpt-5-1af42e
+  timestamp: '2026-10-15T13:03:50Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2184
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  summary: Separate bladder-polyp issue URL from prose punctuation
+  details: 'Adversarial PR review reproduced a Jinja urlize href ending in a colon. Added
+    a real-renderer regression and separated punctuation from the exact #2181 URL in maintained
+    decision notes. Scientific identity, source observations, statuses and hierarchy are unchanged
+    by this formatting correction; regenerate derived history and site and require full QC.'

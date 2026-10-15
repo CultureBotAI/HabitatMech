@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: bladder_review_links
+session:
+  id: 2026-10-15T130351Z-codex-gpt-5-e878c5
+  timestamp: '2026-10-15T13:03:51Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2184
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - curation_history
+  summary: Separate bladder hierarchy issue URLs from prose punctuation
+  details: 'Adversarial PR review reproduced malformed Jinja urlize hrefs for the two newly
+    curated parent-exclusion notes. Separated punctuation from exact #2181 and #2182 URLs
+    and added actual-renderer tests covering these notes plus the bladder-polyp decision.
+    No scientific fields or source observations change; generated history/pages require normal
+    regeneration and full QC.'
