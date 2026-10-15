@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: amniotic_fluid__8d4e7d01
+session:
+  id: 2026-10-15T030401Z-codex-gpt-5-5154a4
+  timestamp: '2026-10-15T03:04:01Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1318
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - synonyms
+  summary: Repair reviewed fluid hierarchy or host-name synonym for amniotic_fluid__8d4e7d01
+  details: 'Scoped anatomy correction #1318 (20261015T024348Z-amniotic_fluid__8d4e7d01-record
+    F1): amniotic fluid is a body substance, not a kind of fetal tissue. Current UBERON:0000173
+    and UBERON:0000479 definitions distinguish fluid from organized tissue; GOLD nesting supplies
+    context, not is-a. Exclude only this guarded source-parent contribution. Preserve the
+    source mint, independent UBERON:0000173 genus, node 7618, full path, zero ORGANISM omission
+    and NARROW/SEEDED status. Mapping endpoint issue #1398 remains open. https://purl.obolibrary.org/obo/UBERON_0000173
+    The initial regression reproduced missing guards before curation. Native canaries, full-corpus
+    counterfactual, corpus/site/map regeneration and protected final QC are required separately,
+    not predeclared successful. No raw inventory or saved review/history is edited.'

@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: amniotic_fluid__ff65cb2e
+session:
+  id: 2026-10-15T030403Z-codex-gpt-5-6dc50b
+  timestamp: '2026-10-15T03:04:03Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1318
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - synonyms
+  summary: Repair reviewed fluid hierarchy or host-name synonym for amniotic_fluid__ff65cb2e
+  details: 'Scoped anatomy correction #1318 (20261015T024348Z-amniotic_fluid__ff65cb2e-record
+    F1): contained amniotic fluid is not a subtype of its sac, whether the source means the
+    enclosing membrane or cavity. Current UBERON:0000173, UBERON:0000305 and UBERON:0000301
+    distinguish those entities and typed location from subclass. Exclude only the guarded
+    source-container contribution; retain the distinct mint, fluid genus, node 6329, full
+    path, three ORGANISM assertions and NARROW/SEEDED status. Do not merge source concepts
+    or resolve sac scope by this edit. Mapping endpoint issue #1398 remains open. https://purl.obolibrary.org/obo/UBERON_0000173
+    The initial regression reproduced missing guards before curation. Native canaries, full-corpus
+    counterfactual, corpus/site/map regeneration and protected final QC are required separately,
+    not predeclared successful. No raw inventory or saved review/history is edited.'

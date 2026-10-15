@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/definition_source_label_exclusions.tsv
+  slug: amoebozoa__291e8086
+session:
+  id: 2026-10-15T030405Z-codex-gpt-5-b25eb3
+  timestamp: '2026-10-15T03:04:05Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2154
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - synonyms
+  summary: Repair reviewed fluid hierarchy or host-name synonym for amoebozoa__291e8086
+  details: 'Review #2154 (20261015T024351Z-amoebozoa__291e8086-record F1): Amoebozoa names
+    the host clade, not the environmental system determined by it. Remove the authored exact
+    alias and suppress automatic retention of this displaced label. Preserve both verbatim
+    GOLD attestations, their 13 ORGANISM versus zero-count omission, the supported definition/genus
+    and protist-associated parent, source merge and ITEM/REVIEWED state. Existing definition-event
+    bytes are preserved; the distinct historical rewrite defect #297 remains open. https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=554915
+    The initial regression reproduced missing guards before curation. Native canaries, full-corpus
+    counterfactual, corpus/site/map regeneration and protected final QC are required separately,
+    not predeclared successful. No raw inventory or saved review/history is edited.'
