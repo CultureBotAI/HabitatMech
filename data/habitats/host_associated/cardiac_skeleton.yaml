@@ -36,7 +36,6 @@ synonyms:
   source: UBERON
 parent_habitats:
 - UBERON:0003837
-- habitatmech:GOLD.805ee181bd
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6613
@@ -49,3 +48,13 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.805ee181bd
+    for habitatmech:GOLD.23d305e1fa (Host-associated > Mammals: Human > Circulatory
+    system > Heart > Cardiac skeleton). Review https://github.com/CultureBotAI/HabitatMech/issues/2206
+    : This anatomical component or derived material is not a subtype of the containing
+    organ or system. Exclude only the exact GOLD contribution; retain independent
+    valid genera and original source observations. This does not resolve the separate
+    catarrh condition/material scope or shared mapping endpoint #1398.'

@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: cardiac_molluscan_citation_format
+session:
+  id: 2026-10-15T221623Z-codex-gpt-5-cea5ff
+  timestamp: '2026-10-15T22:16:23Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2212
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - notes
+  - curation_history
+  summary: Use exact PubMed URLs for three inspected publications
+  details: 'QC run 38813949938 passed the structured review contract but failed the note evidence
+    guard because PMID citations were parsed as ontology terms (1139 passed, 1 failed, 3 skipped).
+    Follow established issues #2159 and #1884: replace PMID:29989069 and PMID:39140156 with
+    exact PubMed URLs and a separated punctuation delimiter in only three maintained GOLD
+    decisions. Retain the inspected papers, DOIs and scientific decisions. Regenerate only
+    their current record/history projections and the native site. Verify exact rendered hrefs,
+    unchanged scientific fields and full semantic-map input bytes. The ontology-reference
+    gate and all saved reviews remain unchanged. Recapture unsaved successor assessments against
+    the corrected commit; native full QC and merge-queue checks remain required.'

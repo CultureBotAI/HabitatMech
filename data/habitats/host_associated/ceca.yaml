@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - UBERON:0001153
-- habitatmech:GOLD.fb6caa2908
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6989
@@ -20,3 +19,13 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.fb6caa2908
+    for habitatmech:GOLD.2629408066 (Host-associated > Birds > Digestive system >
+    Ceca). Review https://github.com/CultureBotAI/HabitatMech/issues/2206 : This anatomical
+    component or derived material is not a subtype of the containing organ or system.
+    Exclude only the exact GOLD contribution; retain independent valid genera and
+    original source observations. This does not resolve the separate catarrh condition/material
+    scope or shared mapping endpoint #1398.'

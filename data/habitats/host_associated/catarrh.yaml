@@ -3,8 +3,6 @@ label: Catarrh
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- UBERON:0000341
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6831
@@ -23,3 +21,12 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution UBERON:0000341 for habitatmech:GOLD.62dfa9436e
+    (Host-associated > Mammals > Respiratory system > Pharynx/Throat > Catarrh). Review
+    https://github.com/CultureBotAI/HabitatMech/issues/2206 : Neither the condition
+    nor accumulated mucus is a subtype of the whole source anatomical region. Exclude
+    only this exact GOLD contribution without deciding which meaning the source intended.
+    Preserve source observations; condition/material scope remains open under #2210.'
