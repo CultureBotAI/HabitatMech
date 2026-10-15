@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - UBERON:0002299
-- habitatmech:GOLD.0d343fdd03
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6376
@@ -17,3 +16,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.0d343fdd03
+    for habitatmech:GOLD.9a9d51388c (Host-associated > Mammals > Respiratory system
+    > Lung > Alveoli). Scoped anatomy correction #1315 (20261015T005517Z-alveoli-record
+    F1): a pulmonary alveolus is part of a lung, not a subtype of the whole mammal
+    lung. Current typed UBERON:0002299 distinguishes subclass alveolus from part_of
+    lung. Exclude only the immediate source-container contribution. Preserve minted
+    identity, UBERON:0002299 parent, node/path, zero ORGANISM omission and NARROW/SEEDED
+    status; later BioSample totals do not replace frozen organism assertions. Mapping
+    endpoint issue #1398 remains open. https://purl.obolibrary.org/obo/UBERON_0002299'

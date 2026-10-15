@@ -11,14 +11,13 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: GOLD
 - synonym_text: psotcranial air sac
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: UBERON
 - synonym_text: sacci pneumatici
   synonym_type: EXACT_SYNONYM
   source: UBERON
 parent_habitats:
 - UBERON:0010000
-- habitatmech:GOLD.0c74807e42
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7442
@@ -40,3 +39,26 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.0c74807e42
+    for habitatmech:GOLD.1dec05f10e (Host-associated > Birds > Respiratory system
+    > Air sacs). Scoped anatomy correction #2147 (20261015T005253Z-air_sac-record
+    F1): UBERON:0009060 air sac is part of the respiratory system, not a kind of system.
+    Current typed UBERON graph distinguishes its UBERON:0010000 superclass from the
+    BFO:0000050 containment relation. Suppress only the exact GOLD container contribution.
+    Preserve avian identity, independent ontology genus, both source nodes, full path,
+    zero-count omission and EXACT/REVIEWED status. https://purl.obolibrary.org/obo/UBERON_0009060'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: ANNOTATION_CORRECTED
+  changes: 'Corrected synonym_type for ''psotcranial air sac'' (UBERON) from ''EXACT_SYNONYM''
+    to ''RELATED_SYNONYM''. Evidence: https://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FUBERON_0009060.
+    Current UBERON obo_synonym types this exact source spelling as hasRelatedSynonym;
+    the frozen flat inventory promoted it to exact. Correct only this record/source/text/old-value
+    scope, retaining the source spelling, exact sacci pneumatici and GOLD Air sacs
+    aliases, avian identity, attestations and native status. The source grounds via
+    its ITEM canonical-label decision, not this related alias. Broader extractor issue
+    #1249 remains open. https://github.com/CultureBotAI/HabitatMech/issues/2148; review
+    20261015T005253Z-air_sac-record F2.'

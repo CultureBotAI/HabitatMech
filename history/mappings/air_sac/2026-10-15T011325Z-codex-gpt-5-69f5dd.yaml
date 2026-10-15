@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: air_sac
+session:
+  id: 2026-10-15T011325Z-codex-gpt-5-69f5dd
+  timestamp: '2026-10-15T01:13:25Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2147
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  - synonyms
+  summary: Repair reviewed airway or host-name scope for air_sac
+  details: 'Scoped anatomy correction #2147 (20261015T005253Z-air_sac-record F1): UBERON:0009060
+    air sac is part of the respiratory system, not a kind of system. Current typed UBERON
+    graph distinguishes its UBERON:0010000 superclass from the BFO:0000050 containment relation.
+    Suppress only the exact GOLD container contribution. Preserve avian identity, independent
+    ontology genus, both source nodes, full path, zero-count omission and EXACT/REVIEWED status.
+    https://purl.obolibrary.org/obo/UBERON_0009060 Exact five-record full-corpus counterfactual
+    passed. Dry seed passed; native canaries, corpus/site/map regeneration and protected final
+    QC remain required, not predeclared successful. No raw inventories or committed immutable
+    review/history bytes are changed.'

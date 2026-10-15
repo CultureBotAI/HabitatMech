@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: algae
+session:
+  id: 2026-10-15T011337Z-codex-gpt-5-0745f0
+  timestamp: '2026-10-15T01:13:37Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2149
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  - synonyms
+  summary: Repair reviewed airway or host-name scope for algae
+  details: 'Remove only authored exact synonym Algae from the alga-associated environment.
+    The host organism name is not equivalent to its environment. The existing FOODON:03411301
+    xref guard prevents automatic reintroduction; source labels remain verbatim. Preserve
+    the original definition, genus, curator/date and generated DEFINED event, all taxa and
+    source counts. The separate mixed Madin source merge #1307 remains unresolved. Exact five-record
+    full-corpus counterfactual passed. Dry seed passed; native canaries, corpus/site/map regeneration
+    and protected final QC remain required, not predeclared successful. No raw inventories
+    or committed immutable review/history bytes are changed.'
