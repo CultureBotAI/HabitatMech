@@ -1,0 +1,946 @@
+# Record review: Urinary Bladder Stone (NCIT:C26707)
+
+- Review: 20261015T125453Z-bladder_stone-record
+- Repository: CultureBotAI/HabitatMech
+- Started UTC: 2026-10-15T12:40:47Z
+- Finished UTC: 2026-10-15T12:54:53Z
+- Reviewer: codex-gpt-5 (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+NCIT identifies a physical urinary-bladder concretion and its broader urinary-stone class. The GOLD anatomical container is not a broader stone class. The independent BacDive seven-strain and GOLD one-organism counts must remain separate.
+
+## Scope And Provenance
+
+Scientific review of one exact target at 68ceabb7039a537f65be44ac6aaa913116a154f5.
+
+Selection: First seven records in the prepared next-twenty path-ordered cohort; this bundle assesses exactly one resolved identifier.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: git_commit at Git base 68ceabb7039a537f65be44ac6aaa913116a154f5.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| NCIT:C26707 | data/habitats/host_associated/bladder_stone.yaml | generated | Urinary Bladder Stone |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| validate | passed | True | NCIT:C26707 | Completed 2026-10-15T12:40:50Z. No issues found<br> uv run linkml-validate -s src/habitatmech/schema/habitatmech.yaml --target-class HabitatRecord data/habitats/host_associated/bladder_stone.yaml |
+| validate-strict | passed | True | NCIT:C26707 | Completed 2026-10-15T12:41:35Z. uv run python scripts/validate_strict.py data/habitats/host_associated/bl_3_cell.yaml data/habitats/host_associated/bladder.yaml data/habitats/host_associated/bladder__9a6dd80c.yaml data/habitats/host_associated/bladder_stone.yaml data/habitats/host_associated/blade.yaml data/habitats/host_associated/blade__f83a64ca.yaml data/habitats/host_associated/blast_cell.yaml data/habitats/host_associated/blood.yaml data/habitats/host_associated/blood__070ce7aa.yaml data/habitats/host_associated/blood__5ca8064f.yaml data/habitats/host_associated/blood__5ef3f2f4.yaml data/habitats/host_associated/blood__c1b484fe.yaml data/habitats/host_associated/blood__d6f5ae05.yaml data/habitats/host_associated/blood_plasma.yaml data/habitats/host_associated/blood_plasma__00b70c6a.yaml data/habitats/host_associated/blood_serum.yaml data/habitats/host_associated/blood_vessel.yaml data/habitats/host_associated/bone.yaml data/habitats/host_associated/bone__169c3d9e.yaml data/habitats/host_associated/bone__234001be.yaml<br>Validating 20 files with 15 workers; schema=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/src/habitatmech/schema/habitatmech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      20<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                reports/instance_validation_failures.tsv |
+| validate-history | passed | True | NCIT:C26707 | Completed 2026-10-15T12:41:43Z. No issues found<br>808 history record(s) valid against src/habitatmech/schema/history.yaml |
+| provenance-check | passed | True | NCIT:C26707 | Completed 2026-10-15T12:41:44Z. provenance current: 14 committed inventories, 2 GOLD sources<br> uv run python scripts/check_provenance.py |
+| verify-corpus | passed | True | NCIT:C26707 | Completed 2026-10-15T12:41:58Z. expected 3208 records, found 3208 on disk<br>  missing:   0<br>  extra:     0<br>  differing: 0<br><br>corpus reproduces exactly from data/raw/<br> uv run python scripts/verify_corpus.py |
+| validate-causal-all | passed | True | NCIT:C26707 | Completed 2026-10-15T12:42:02Z. validated 32 causal-graph curation file(s) with 32 graph(s)<br> uv run python scripts/validate_causal_graph_curations.py |
+| term-requests-check | passed | True | NCIT:C26707 | Completed 2026-10-15T12:42:18Z. term-request table is current (110 terms)<br> uv run python scripts/build_term_requests.py --check |
+| validate-products | passed | True | NCIT:C26707 | Completed 2026-10-15T12:42:59Z. id↔label correspondence summary:<br>          OK_CANONICAL: 1174<br>            OK_SYNONYM: 1<br>          OK_EXCEPTION: 5<br>    SKIPPED_NO_ADAPTER: 2061<br><br>✅ All id↔label pairs correspond.<br> uv run python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml |
+| Exact-revision baseline full QC | passed | True | NCIT:C26707 | Verified 2026-10-15T12:40:46Z: https://github.com/CultureBotAI/HabitatMech/actions/runs/38733485444 |
+
+## Scientific And Domain Assessments
+
+### Native validation and reproduction
+
+schema: supported. Targets: NCIT:C26707.
+
+Schema, strict, history, provenance, 3,208-record reproduction, causal overlays, term requests and configured labels passed. These establish deterministic fidelity, not scientific support.
+
+### Identity, hierarchy and nomenclature
+
+identity: concern. Targets: NCIT:C26707.
+
+NCIT identifies a physical urinary-bladder concretion and its broader urinary-stone class. The GOLD anatomical container is not a broader stone class. The independent BacDive seven-strain and GOLD one-organism counts must remain separate.
+
+### Source count, unit and ranking
+
+quantity: supported. Targets: NCIT:C26707.
+
+Exact source projections retain [{"source": "BACDIVE", "source_id": "bacdive.isolation_source:bladder-stone", "source_label": "Bladder-stone", "mapping_predicate": "skos:closeMatch", "assertion_count": 7, "assertion_unit": "STRAIN"}, {"source": "GOLD", "source_id": "gold.ecosystem:6297", "source_label": "Bladder stones", "source_path": "Host-associated &gt; Mammals: Human &gt; Urinary system &gt; Urinary bladder &gt; Bladder stones", "mapping_predicate": "skos:closeMatch", "assertion_count": 1, "assertion_unit": "ORGANISM"}]. All 7 displayed taxa were resolved against current NCBI IDs/labels. Ranks and candidate pools are source-specific; unlike units are never summed.
+
+### Native status and optional fields
+
+completeness: supported. Targets: NCIT:C26707.
+
+Executed source decisions reproduce CLOSE/REVIEWED. No causal mechanism or is_characteristic assertion is present. Missing optional fields or SEEDED status are not automatic scientific defects.
+
+## Findings
+
+### F1: Urinary bladder is not a broader stone class
+
+major / open / confirmed; issue key: bladder-stone-container-context-parent.
+
+Exclude only the immediate GOLD parent habitatmech:GOLD.20fae79b01 for source habitatmech:GOLD.c245efd1e3. Preserve NCIT:C26905, both independently reviewed source concepts, related source aliases, seven STRAIN and one ORGANISM attestations, and all taxa.
+
+## Recommended Actions And Acceptance Checks
+
+### ACT1
+
+Exclude only the immediate GOLD parent habitatmech:GOLD.20fae79b01 for source habitatmech:GOLD.c245efd1e3. Preserve NCIT:C26905, both independently reviewed source concepts, related source aliases, seven STRAIN and one ORGANISM attestations, and all taxa. No repair is performed by this review.
+
+- Regress the exact reported claim and preserve independently valid identifiers, source counts/units, raw provenance, native status and history. Do not change source totals by hand.
+- Append the authorized curation history and require schema, strict, provenance, history, corpus, label, site and full QC gates.
+- Reassess the changed record in an immutable successor retaining this issue key and exact predecessor lineage.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| E1 | data/habitats/host_associated/bladder_stone.yaml; Entire target YAML | supports | Read the full target including source paths, taxa, hierarchy and history. |
+| ERULE | docs/CURATION.md; Identity, broader-parent and ownership rules | supports | Context, containment and whole-host identity differ from strictly broader habitat ancestry. |
+| ESCHEMA | src/habitatmech/schema/habitatmech.yaml; SourceAttestation and CharacteristicTaxon | supports | Mapping endpoints, assertion units and association versus characteristic-presence semantics. |
+| ESEED | src/habitatmech/seed.py; Executed native source resolution | supports | Exact routes: [{"source": "BACDIVE", "mint": "habitatmech:BACDIVE.343f1d3ee2", "automatic": {"identifier": "NCIT:C26707", "grounding_status": "CLOSE", "mapping_predicate": "skos:closeMatch", "contributes_grounding": true, "extra_parents": [], "extra_xrefs": [], "route": "bacdive_mapping_table", "category": null, "reviewed": false, "decision": null}, "final": {"identifier": "NCIT:C26707", "grounding_status": "CLOSE", "mapping_predicate": "skos:closeMatch", "contributes_grounding": true, "extra_parents": [], "extra_xrefs": [], "route": "curated_review_of_bacdive_mapping_table", "category": null, "reviewed": true, "decision": {"identifier": "habitatmech:BACDIVE.343f1d3ee2", "decision": "REVIEW", "object_id": "", "object_label": "", "grounding_status": "", "curator": "claude-opus-5", "date": "2026-08-14", "notes": "Narrowed-grounding review (#67): 'urinary' is added, but a bladder stone is urinary by definition \u2014 the gallbladder equivalent is a gallstone and has its own term. Correct as seeded.", "review_depth": "ITEM", "category": "", "relation": "parent"}}}, {"source": "GOLD", "mint": "habitatmech:GOLD.c245efd1e3", "automatic": {"identifier": "habitatmech:GOLD.c245efd1e3", "grounding_status": "UNGROUNDED", "mapping_predicate": null, "contributes_grounding": true, "extra_parents": [], "extra_xrefs": [], "route": "gold_unmatched", "category": null, "reviewed": false, "decision": null}, "final": {"identifier": "NCIT:C26707", "grounding_status": "CLOSE", "mapping_predicate": "skos:closeMatch", "contributes_grounding": true, "extra_parents": [], "extra_xrefs": [], "route": "curated_ground_from_gold_unmatched", "category": null, "reviewed": true, "decision": {"identifier": "habitatmech:GOLD.c245efd1e3", "decision": "GROUND", "object_id": "NCIT:C26707", "object_label": "Urinary Bladder Stone", "grounding_status": "CLOSE", "curator": "codex-gpt-5", "date": "2026-08-21", "notes": "Non-habitat screen review (#108): Bladder stones are physical calculi that microbes can inhabit. NCIT's Urinary Bladder Stone names the same concept with explicit urinary framing; CLOSE matches the existing reviewed BacDive Bladder-stone record and merges their evidence.", "review_depth": "ITEM", "category": "", "relation": "parent"}}}] |
+| EEXTRACT | src/habitatmech/extract.py; extract_prego | supports | Projection preserves distinct-taxon totals and score/channel ranking but not original pair citations. |
+| ET5 | data/raw/gold_ecosystem_paths.tsv; Physical TSV rows 1095 | supports | [{"row": 1095, "data": {"canonical_path": "Host-associated &gt; Mammals: Human &gt; Urinary system &gt; Urinary bladder &gt; Bladder stones", "ecosystem": "Host-associated", "ecosystem_category": "Mammals: Human", "ecosystem_type": "Urinary system", "ecosystem_subtype": "Urinary bladder", "specific_ecosystem": "Bladder stones", "leaf_label": "Bladder stones", "depth": "5", "gold_node_count": "1", "organism_count": "1", "study_count": "0", "biosample_count": "0", "total_assertions": "1", "gold_node_ids": "gold.ecosystem:6297"}}] |
+| ET6 | data/raw/bacdive_source_taxa.tsv; Physical TSV rows 289,290,291,292,293,294,295 | supports | [{"row": 289, "data": {"bacdive_id": "bacdive.isolation_source:bladder-stone", "rank": "1", "taxon_id": "NCBITaxon:1282", "taxon_label": "Staphylococcus epidermidis", "strain_count": "1", "corroborated_by": ""}}, {"row": 290, "data": {"bacdive_id": "bacdive.isolation_source:bladder-stone", "rank": "2", "taxon_id": "NCBITaxon:2702", "taxon_label": "Gardnerella vaginalis", "strain_count": "1", "corroborated_by": ""}}, {"row": 291, "data": {"bacdive_id": "bacdive.isolation_source:bladder-stone", "rank": "3", "taxon_id": "NCBITaxon:43771", "taxon_label": "Corynebacterium urealyticum", "strain_count": "1", "corroborated_by": ""}}, {"row": 292, "data": {"bacdive_id": "bacdive.isolation_source:bladder-stone", "rank": "4", "taxon_id": "NCBITaxon:504474", "taxon_label": "Corynebacterium urealyticum DSM 7109", "strain_count": "1", "corroborated_by": ""}}, {"row": 293, "data": {"bacdive_id": "bacdive.isolation_source:bladder-stone", "rank": "5", "taxon_id": "NCBITaxon:508451", "taxon_label": "Lactobacillus taiwanensis", "strain_count": "1", "corroborated_by": ""}}, {"row": 294, "data": {"bacdive_id": "bacdive.isolation_source:bladder-stone", "rank": "6", "taxon_id": "NCBITaxon:588", "taxon_label": "Providencia stuartii", "strain_count": "1", "corroborated_by": ""}}, {"row": 295, "data": {"bacdive_id": "bacdive.isolation_source:bladder-stone", "rank": "7", "taxon_id": "NCBITaxon:827", "taxon_label": "Campylobacter ureolyticus", "strain_count": "1", "corroborated_by": ""}}] |
+| ET7 | data/raw/bacdive_isolation_sources.tsv; Physical TSV rows 132 | supports | [{"row": 132, "data": {"bacdive_id": "bacdive.isolation_source:bladder-stone", "label": "Bladder-stone", "source_slug": "bladder-stone", "strain_count": "7", "taxon_count": "7"}}] |
+| ET8 | data/raw/ontology_subclass_edges.tsv; Physical TSV rows 9089,9090 | supports | [{"row": 9089, "data": {"subject": "NCIT:C26707", "predicate": "rdfs:subClassOf", "object": "NCIT:C26905"}}, {"row": 9090, "data": {"subject": "NCIT:C26905", "predicate": "rdfs:subClassOf", "object": "NCIT:C35708"}}] |
+| ET9 | data/raw/ontology_terms.tsv; Physical TSV rows 10798,10799 | supports | [{"row": 10798, "data": {"term_id": "NCIT:C26707", "ontology": "NCIT", "label": "Urinary Bladder Stone", "definition": "", "synonyms": "", "deprecated": "", "directly_referenced": "TRUE", "label_only": "FALSE"}}, {"row": 10799, "data": {"term_id": "NCIT:C26905", "ontology": "NCIT", "label": "Urinary Stone", "definition": "", "synonyms": "", "deprecated": "", "directly_referenced": "FALSE", "label_only": "FALSE"}}] |
+| ET10 | curation/decisions.tsv; Physical TSV rows 1095,1590 | supports | [{"row": 1095, "data": {"identifier": "habitatmech:GOLD.c245efd1e3", "decision": "GROUND", "object_id": "NCIT:C26707", "object_label": "Urinary Bladder Stone", "grounding_status": "CLOSE", "curator": "codex-gpt-5", "date": "2026-08-21", "notes": "Non-habitat screen review (#108): Bladder stones are physical calculi that microbes can inhabit. NCIT's Urinary Bladder Stone names the same concept with explicit urinary framing; CLOSE matches the existing reviewed BacDive Bladder-stone record and merges their evidence.", "review_depth": "ITEM", "category": null, "relation": null}}, {"row": 1590, "data": {"identifier": "habitatmech:BACDIVE.343f1d3ee2", "decision": "REVIEW", "object_id": "", "object_label": "", "grounding_status": "", "curator": "claude-opus-5", "date": "2026-08-14", "notes": "Narrowed-grounding review (#67): 'urinary' is added, but a bladder stone is urinary by definition \u2014 the gallbladder equivalent is a gallstone and has its own term. Correct as seeded.", "review_depth": "ITEM", "category": "", "relation": ""}}] |
+| EP11 | data/habitats/host_associated/urinary_bladder.yaml; Entire parent read for scope, not additional review coverage | supports | {"identifier": "habitatmech:GOLD.20fae79b01", "label": "Urinary bladder", "habitat_category": "HOST_ASSOCIATED", "grounding_status": "NARROW", "mapping_status": "SEEDED", "parent_habitats": ["UBERON:0001255", "habitatmech:GOLD.282ecbaf3b"], "source_attestations": [{"source": "GOLD", "source_id": "gold.ecosystem:6296", "source_label": "Urinary bladder", "source_path": "Host-associated &gt; Mammals: Human &gt; Urinary system &gt; Urinary bladder", "mapping_predicate": "skos:narrowMatch", "notes": "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv."}], "curation_history": [{"timestamp": "2026-08-16T05:58:02Z", "curator": "seed_from_sources", "action": "SEEDED_FROM_SOURCES", "changes": "Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW."}]} |
+| EX12 | https://www.ebi.ac.uk/ols4/api/ontologies/ncit/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FNCIT_C26707/graph; NCIT_C26707-graph.json | context_only | Inspected outgoing typed ontology relations: [{"source": "http://purl.obolibrary.org/obo/NCIT_C26707", "target": "http://purl.obolibrary.org/obo/NCIT_C26905", "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf", "label": "subClassOf"}] |
+| EX13 | https://www.ebi.ac.uk/ols4/api/ontologies/ncit/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FNCIT_C26707?lang=en; NCIT_C26707.json | context_only | Inspected current identifier, label, active status and full definition for the scope assessment: {"obo_id": "NCIT:C26707", "label": "Urinary Bladder Stone", "is_obsolete": false} |
+| EX14 | https://www.ebi.ac.uk/ols4/api/ontologies/ncit/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FNCIT_C26905/graph; NCIT_C26905-graph.json | context_only | Inspected outgoing typed ontology relations: [{"source": "http://purl.obolibrary.org/obo/NCIT_C26905", "target": "http://purl.obolibrary.org/obo/NCIT_C35708", "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf", "label": "subClassOf"}] |
+| EX15 | https://www.ebi.ac.uk/ols4/api/ontologies/ncit/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FNCIT_C26905?lang=en; NCIT_C26905.json | context_only | Inspected current identifier, label, active status and full definition for the scope assessment: {"obo_id": "NCIT:C26905", "label": "Urinary Stone", "is_obsolete": false} |
+| EX16 | https://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FUBERON_0001255/graph; UBERON_0001255-graph.json | context_only | Inspected outgoing typed ontology relations: [{"source": "http://purl.obolibrary.org/obo/UBERON_0001255", "target": "http://purl.obolibrary.org/obo/UBERON_0002075", "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf", "label": "subClassOf"}, {"source": "http://purl.obolibrary.org/obo/UBERON_0001255", "target": "http://purl.obolibrary.org/obo/UBERON_0004120", "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf", "label": "subClassOf"}, {"source": "http://purl.obolibrary.org/obo/UBERON_0001255", "target": "http://purl.obolibrary.org/obo/UBERON_0018707", "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf", "label": "subClassOf"}, {"source": "http://purl.obolibrary.org/obo/UBERON_0001255", "target": "http://purl.obolibrary.org/obo/UBERON_0000164", "uri": "http://purl.obolibrary.org/obo/RO_0002202", "label": "develops from"}, {"source": "http://purl.obolibrary.org/obo/UBERON_0001255", "target": "http://purl.obolibrary.org/obo/UBERON_0001556", "uri": "http://purl.obolibrary.org/obo/BFO_0000050", "label": "part of"}, {"source": "http://purl.obolibrary.org/obo/UBERON_0001255", "target": "http://purl.obolibrary.org/obo/UBERON_0002323", "uri": "http://purl.obolibrary.org/obo/RO_0001025", "label": "located in"}] |
+| EX17 | https://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FUBERON_0001255?lang=en; UBERON_0001255.json | context_only | Inspected current identifier, label, active status and full definition for the scope assessment: {"obo_id": "UBERON:0001255", "label": "urinary bladder", "is_obsolete": false} |
+| EX18 | https://www.culturecollections.org.uk/nop/product/corynebacterium-urealyticum; nctc12011.html | context_only | NCTC 12011 collection record identifies Corynebacterium urealyticum DSM 7109/ATCC 43042 with bladder-stone provenance. This is a specific physical-site witness for the displayed taxon, not independent verification of all seven frozen BacDive assignments. |
+| EX19 | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=1123383,1123384,1189612,1206108,1282,1286329,1286330,1286331,1286332,1286333,1286334,1286335,1286336,1286337,1286338,1286339,1286340,1286341,1286342,1286343,1286344,1286345,1286346,1286347,1286348,1286350,1286351,1286352,1286353,1322346,1408159,1408160,1497681,1552123,1585974,187452,240427,2702,375175,43771,478010,504474,508451,51663,53444,562,574375,582,588,758793,827&amp;retmode=xml; taxonomy.xml | context_only | All displayed taxon identifiers and labels resolve to current NCBI identities: [{"record_id": "1282", "current_id": "1282", "record_label": "Staphylococcus epidermidis", "current_label": "Staphylococcus epidermidis", "rank": "species"}, {"record_id": "2702", "current_id": "2702", "record_label": "Gardnerella vaginalis", "current_label": "Gardnerella vaginalis", "rank": "species"}, {"record_id": "43771", "current_id": "43771", "record_label": "Corynebacterium urealyticum", "current_label": "Corynebacterium urealyticum", "rank": "species"}, {"record_id": "504474", "current_id": "504474", "record_label": "Corynebacterium urealyticum DSM 7109", "current_label": "Corynebacterium urealyticum DSM 7109", "rank": "strain"}, {"record_id": "508451", "current_id": "508451", "record_label": "Lactobacillus taiwanensis", "current_label": "Lactobacillus taiwanensis", "rank": "species"}, {"record_id": "588", "current_id": "588", "record_label": "Providencia stuartii", "current_label": "Providencia stuartii", "rank": "species"}, {"record_id": "827", "current_id": "827", "record_label": "Campylobacter ureolyticus", "current_label": "Campylobacter ureolyticus", "rank": "species"}] |
+| ESEARCH | Local maintained inputs and structured archive; rg --no-ignore --hidden -l -F -e NCIT:C26707 -e 'Urinary Bladder Stone' -e bladder_stone -e habitatmech:BACDIVE.343f1d3ee2 -e habitatmech:GOLD.c245efd1e3 curation history research reports data/raw build reviews | context_only | Ignored-inclusive search plus exact TSV parsing identified the stated source rows and no structured predecessor. |
+
+## Limits And Additional Notes
+
+- Every historical specimen and original PREGO pair has not been independently reidentified. Counts/scores/ranks are not prevalence, viability or characteristic presence.
+- Configured label checks skip 2,061 pairs without adapters; deterministic validity does not certify biological semantics.
+- Full baseline QC is verified remote evidence at the captured revision, not a new local execution. Post-save archive and publication gates are subsequent.
+- iModulonDB is not applicable: the target asserts no gene, regulator or expression module. No paid research was performed.
+- All captured local input hashes were rechecked against both the working tree and exact Git revision. No input bytes were silently refreshed.
+- Ignored-inclusive archive traversal found no structured predecessor for this target; legacy Markdown is context, not independent approval or successor lineage.
+- This observation precedes separately authorized curation/publication and does not claim a repair.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261015T125453Z-bladder_stone-record
+repository: CultureBotAI/HabitatMech
+kind: record
+title: 'Record review: Urinary Bladder Stone (NCIT:C26707)'
+started_at: '2026-10-15T12:40:47Z'
+finished_at: '2026-10-15T12:54:53Z'
+reviewer:
+  identity: codex-gpt-5
+  kind: agent
+  model: gpt-5
+  independence: self_review
+  independence_basis: Same agent inspected the record and evidence; not independent
+    human or second-agent approval.
+skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: NCIT identifies a physical urinary-bladder concretion and its broader urinary-stone
+  class. The GOLD anatomical container is not a broader stone class. The independent
+  BacDive seven-strain and GOLD one-organism counts must remain separate.
+source:
+  git_revision: 68ceabb7039a537f65be44ac6aaa913116a154f5
+  state: git_commit
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: conf/record_review.yaml
+    sha256: c2f5d0eb4c5744f5fe354c92184ddab144dc2688dba952b032b4f3d597bc08d6
+    role: context
+  - path: conf/sources.yaml
+    sha256: a8e069f9278068b57fa234f43e03c8d893f857827b83fd10cfa92d6815aed642
+    role: context
+  - path: curation/decisions.tsv
+    sha256: ca42d86b6040df1c0c6e6ed36573bb51975a5e8daade262113bce547f1b6fd8b
+    role: context
+  - path: curation/definition_source_label_exclusions.tsv
+    sha256: 6d5cbfd0f5ad911fbb074ee8ec253625d1fa13d94117759b1f25a1cd2e6576bc
+    role: context
+  - path: curation/external_xrefs.tsv
+    sha256: f289c938b0c70d6f2bfb231bf137edf1c862bbda9143d9b6eae9e3fdd587703c
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: a92f9003cc5f57c397ab5118474318f216077a8e9f90564d21dfa8089477a2eb
+    role: context
+  - path: curation/record_annotation_corrections.tsv
+    sha256: a56f07a45fb743fb7b0e61f83ef70fa5ed61a3c892cfaf36e3428967c548dc5e
+    role: context
+  - path: curation/redirects_retracted.tsv
+    sha256: 0f1e9af8881f5a5db19f87de06b3b3d1800cfac8101699b380388c0a1a1e9a19
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: dfde49f64273cb94b4162170a5542c94880fa36015ccaac6edfa248820492a23
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: b0135af0aa4deed0f3824a2f491d5a742c1b7de4775c533f283761d22e805821
+    role: context
+  - path: data/habitats/RETIRED.tsv
+    sha256: a2a0496837ea75e487d7fc5d35317a890262a941d8fffe9babcd39f2f332c6db
+    role: context
+  - path: data/habitats/host_associated/bladder_stone.yaml
+    sha256: 572428b12f9fe8e8826e5e7c6b2d8f8643c8ae53701f1d240bf5d1c49715c706
+    role: target
+  - path: data/habitats/host_associated/urinary_bladder.yaml
+    sha256: 7a4234f789234d5489875bede9db072d3930b6dfb355e3007697853fe9e7534e
+    role: context
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: f3f5d3d033fa7e7c1d78571959fc2e62e0b0a625f47dba1413657e8cf944b322
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 105b3c8e10f43ce689b05d3089d3a8be1d713a98dd6806e11be37ebd85b10590
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: src/habitatmech/curate/__init__.py
+    sha256: d9837c29dc61d8c9245fdb471a68a109cea31b131cdbc0c4d51d23a8d013ce12
+    role: context
+  - path: src/habitatmech/curate/causal_graphs.py
+    sha256: d1884374263ed7926292c52a58742c614e75628d78ff50fe688e6abc0ddf9c1c
+    role: context
+  - path: src/habitatmech/curate/curation_event.py
+    sha256: 08c774d309fe988c468097518d346f07a653b283cb9b9b51c7fe79fa0af785a9
+    role: context
+  - path: src/habitatmech/curate/decisions.py
+    sha256: f33d3e9dc95bb428e63e640d48d4074cf15e90ea666603fb16fb651d591e3f02
+    role: context
+  - path: src/habitatmech/curate/definition_source_label_exclusions.py
+    sha256: 0c13e83fe17613e8b9f5b346d1259104172f8c1de42f911625579b903707625d
+    role: context
+  - path: src/habitatmech/curate/definitions.py
+    sha256: decd02eea029e884ab1a8bbb51dd870edb5544906b3ddd39598147b27ce572c9
+    role: context
+  - path: src/habitatmech/curate/external_xrefs.py
+    sha256: 8b90ec049887d3aa67e31cce7f7a04d7300421c6fedb833cc66e5d5f5f181694
+    role: context
+  - path: src/habitatmech/curate/gold_parent_exclusions.py
+    sha256: 044d8277509a9b1f6e4f2d7ea1fb82319b41e09ffef7788738a0f4ed0d0b63af
+    role: context
+  - path: src/habitatmech/curate/record_annotation_corrections.py
+    sha256: 15bad3d40fd95e2acc72d3ff3c74289c15fb8a1775adc523b3575c3ea8487033
+    role: context
+  - path: src/habitatmech/labels.py
+    sha256: eb6986c3a9c7d5a3e4651b639351f1f2d3e12d74c4bfaa92899205a1f9df0977
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 7e3cda3dadb9c7462498e5014bf38ef730068212f8f9cb131e3fce383c21d10e
+    role: context
+  - path: src/habitatmech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+  - path: src/habitatmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
+    role: context
+  - path: src/habitatmech/extract.py
+    sha256: 4d9397bda649381a5daf81937369531c6dc8b4518d6c7047e6f3f14e605bf860
+    role: context
+targets:
+- target_id: NCIT:C26707
+  path: data/habitats/host_associated/bladder_stone.yaml
+  label: Urinary Bladder Stone
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+scope:
+  description: Scientific review of one exact target at 68ceabb7039a537f65be44ac6aaa913116a154f5.
+  selection: First seven records in the prepared next-twenty path-ordered cohort;
+    this bundle assesses exactly one resolved identifier.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - NCIT:C26707
+  exclusions:
+  - target: Other records and SSSOM/KGX products
+    reason: Parent context is not additional reviewed coverage. Export readiness is
+      not certified.
+checks:
+- check_id: C1
+  name: validate
+  status: passed
+  required: true
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate data/habitats/host_associated/bladder_stone.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - NCIT:C26707
+  summary: "Completed 2026-10-15T12:40:50Z. No issues found\n uv run linkml-validate\
+    \ -s src/habitatmech/schema/habitatmech.yaml --target-class HabitatRecord data/habitats/host_associated/bladder_stone.yaml"
+  scope_note: Individual schema; strict run includes all twenty prepared targets;
+    other gates are full-corpus as documented.
+- check_id: C2
+  name: validate-strict
+  status: passed
+  required: true
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-strict
+    data/habitats/host_associated/bl_3_cell.yaml data/habitats/host_associated/bladder.yaml
+    data/habitats/host_associated/bladder__9a6dd80c.yaml data/habitats/host_associated/bladder_stone.yaml
+    data/habitats/host_associated/blade.yaml data/habitats/host_associated/blade__f83a64ca.yaml
+    data/habitats/host_associated/blast_cell.yaml data/habitats/host_associated/blood.yaml
+    data/habitats/host_associated/blood__070ce7aa.yaml data/habitats/host_associated/blood__5ca8064f.yaml
+    data/habitats/host_associated/blood__5ef3f2f4.yaml data/habitats/host_associated/blood__c1b484fe.yaml
+    data/habitats/host_associated/blood__d6f5ae05.yaml data/habitats/host_associated/blood_plasma.yaml
+    data/habitats/host_associated/blood_plasma__00b70c6a.yaml data/habitats/host_associated/blood_serum.yaml
+    data/habitats/host_associated/blood_vessel.yaml data/habitats/host_associated/bone.yaml
+    data/habitats/host_associated/bone__169c3d9e.yaml data/habitats/host_associated/bone__234001be.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - NCIT:C26707
+  summary: "Completed 2026-10-15T12:41:35Z. uv run python scripts/validate_strict.py\
+    \ data/habitats/host_associated/bl_3_cell.yaml data/habitats/host_associated/bladder.yaml\
+    \ data/habitats/host_associated/bladder__9a6dd80c.yaml data/habitats/host_associated/bladder_stone.yaml\
+    \ data/habitats/host_associated/blade.yaml data/habitats/host_associated/blade__f83a64ca.yaml\
+    \ data/habitats/host_associated/blast_cell.yaml data/habitats/host_associated/blood.yaml\
+    \ data/habitats/host_associated/blood__070ce7aa.yaml data/habitats/host_associated/blood__5ca8064f.yaml\
+    \ data/habitats/host_associated/blood__5ef3f2f4.yaml data/habitats/host_associated/blood__c1b484fe.yaml\
+    \ data/habitats/host_associated/blood__d6f5ae05.yaml data/habitats/host_associated/blood_plasma.yaml\
+    \ data/habitats/host_associated/blood_plasma__00b70c6a.yaml data/habitats/host_associated/blood_serum.yaml\
+    \ data/habitats/host_associated/blood_vessel.yaml data/habitats/host_associated/bone.yaml\
+    \ data/habitats/host_associated/bone__169c3d9e.yaml data/habitats/host_associated/bone__234001be.yaml\n\
+    Validating 20 files with 15 workers; schema=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/src/habitatmech/schema/habitatmech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      20\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                reports/instance_validation_failures.tsv"
+  scope_note: Individual schema; strict run includes all twenty prepared targets;
+    other gates are full-corpus as documented.
+- check_id: C3
+  name: validate-history
+  status: passed
+  required: true
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - NCIT:C26707
+  summary: 'Completed 2026-10-15T12:41:43Z. No issues found
+
+    808 history record(s) valid against src/habitatmech/schema/history.yaml'
+  scope_note: Individual schema; strict run includes all twenty prepared targets;
+    other gates are full-corpus as documented.
+- check_id: C4
+  name: provenance-check
+  status: passed
+  required: true
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just provenance-check
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - NCIT:C26707
+  summary: "Completed 2026-10-15T12:41:44Z. provenance current: 14 committed inventories,\
+    \ 2 GOLD sources\n uv run python scripts/check_provenance.py"
+  scope_note: Individual schema; strict run includes all twenty prepared targets;
+    other gates are full-corpus as documented.
+- check_id: C5
+  name: verify-corpus
+  status: passed
+  required: true
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just verify-corpus
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - NCIT:C26707
+  summary: "Completed 2026-10-15T12:41:58Z. expected 3208 records, found 3208 on disk\n\
+    \  missing:   0\n  extra:     0\n  differing: 0\n\ncorpus reproduces exactly from\
+    \ data/raw/\n uv run python scripts/verify_corpus.py"
+  scope_note: Individual schema; strict run includes all twenty prepared targets;
+    other gates are full-corpus as documented.
+- check_id: C6
+  name: validate-causal-all
+  status: passed
+  required: true
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-causal-all
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - NCIT:C26707
+  summary: "Completed 2026-10-15T12:42:02Z. validated 32 causal-graph curation file(s)\
+    \ with 32 graph(s)\n uv run python scripts/validate_causal_graph_curations.py"
+  scope_note: Individual schema; strict run includes all twenty prepared targets;
+    other gates are full-corpus as documented.
+- check_id: C7
+  name: term-requests-check
+  status: passed
+  required: true
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just term-requests-check
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - NCIT:C26707
+  summary: "Completed 2026-10-15T12:42:18Z. term-request table is current (110 terms)\n\
+    \ uv run python scripts/build_term_requests.py --check"
+  scope_note: Individual schema; strict run includes all twenty prepared targets;
+    other gates are full-corpus as documented.
+- check_id: C8
+  name: validate-products
+  status: passed
+  required: true
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - NCIT:C26707
+  summary: "Completed 2026-10-15T12:42:59Z. id↔label correspondence summary:\n   \
+    \       OK_CANONICAL: 1174\n            OK_SYNONYM: 1\n          OK_EXCEPTION:\
+    \ 5\n    SKIPPED_NO_ADAPTER: 2061\n\n✅ All id↔label pairs correspond.\n uv run\
+    \ python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml"
+  scope_note: Individual schema; strict run includes all twenty prepared targets;
+    other gates are full-corpus as documented.
+- check_id: CCI
+  name: Exact-revision baseline full QC
+  status: passed
+  required: true
+  command: gh run view 38733485444 --json status,conclusion,headSha,url,jobs
+  exit_code: 0
+  target_ids:
+  - NCIT:C26707
+  summary: 'Verified 2026-10-15T12:40:46Z: https://github.com/CultureBotAI/HabitatMech/actions/runs/38733485444'
+  scope_note: Remote full-QC execution at the exact unchanged scientific baseline;
+    new review outputs are not yet covered.
+evidence:
+- evidence_id: E1
+  kind: record_content
+  reference: data/habitats/host_associated/bladder_stone.yaml
+  locator: Entire target YAML
+  accessed_at: '2026-10-15T12:54:53Z'
+  support: supports
+  summary: Read the full target including source paths, taxa, hierarchy and history.
+  snapshot_sha256: 572428b12f9fe8e8826e5e7c6b2d8f8643c8ae53701f1d240bf5d1c49715c706
+- evidence_id: ERULE
+  kind: authority
+  reference: docs/CURATION.md
+  locator: Identity, broader-parent and ownership rules
+  accessed_at: '2026-10-15T12:54:53Z'
+  support: supports
+  summary: Context, containment and whole-host identity differ from strictly broader
+    habitat ancestry.
+  snapshot_sha256: f3f5d3d033fa7e7c1d78571959fc2e62e0b0a625f47dba1413657e8cf944b322
+- evidence_id: ESCHEMA
+  kind: authority
+  reference: src/habitatmech/schema/habitatmech.yaml
+  locator: SourceAttestation and CharacteristicTaxon
+  accessed_at: '2026-10-15T12:54:53Z'
+  support: supports
+  summary: Mapping endpoints, assertion units and association versus characteristic-presence
+    semantics.
+  snapshot_sha256: 7e3cda3dadb9c7462498e5014bf38ef730068212f8f9cb131e3fce383c21d10e
+- evidence_id: ESEED
+  kind: record_content
+  reference: src/habitatmech/seed.py
+  locator: Executed native source resolution
+  accessed_at: '2026-10-15T12:54:53Z'
+  support: supports
+  summary: 'Exact routes: [{"source": "BACDIVE", "mint": "habitatmech:BACDIVE.343f1d3ee2",
+    "automatic": {"identifier": "NCIT:C26707", "grounding_status": "CLOSE", "mapping_predicate":
+    "skos:closeMatch", "contributes_grounding": true, "extra_parents": [], "extra_xrefs":
+    [], "route": "bacdive_mapping_table", "category": null, "reviewed": false, "decision":
+    null}, "final": {"identifier": "NCIT:C26707", "grounding_status": "CLOSE", "mapping_predicate":
+    "skos:closeMatch", "contributes_grounding": true, "extra_parents": [], "extra_xrefs":
+    [], "route": "curated_review_of_bacdive_mapping_table", "category": null, "reviewed":
+    true, "decision": {"identifier": "habitatmech:BACDIVE.343f1d3ee2", "decision":
+    "REVIEW", "object_id": "", "object_label": "", "grounding_status": "", "curator":
+    "claude-opus-5", "date": "2026-08-14", "notes": "Narrowed-grounding review (#67):
+    ''urinary'' is added, but a bladder stone is urinary by definition \u2014 the
+    gallbladder equivalent is a gallstone and has its own term. Correct as seeded.",
+    "review_depth": "ITEM", "category": "", "relation": "parent"}}}, {"source": "GOLD",
+    "mint": "habitatmech:GOLD.c245efd1e3", "automatic": {"identifier": "habitatmech:GOLD.c245efd1e3",
+    "grounding_status": "UNGROUNDED", "mapping_predicate": null, "contributes_grounding":
+    true, "extra_parents": [], "extra_xrefs": [], "route": "gold_unmatched", "category":
+    null, "reviewed": false, "decision": null}, "final": {"identifier": "NCIT:C26707",
+    "grounding_status": "CLOSE", "mapping_predicate": "skos:closeMatch", "contributes_grounding":
+    true, "extra_parents": [], "extra_xrefs": [], "route": "curated_ground_from_gold_unmatched",
+    "category": null, "reviewed": true, "decision": {"identifier": "habitatmech:GOLD.c245efd1e3",
+    "decision": "GROUND", "object_id": "NCIT:C26707", "object_label": "Urinary Bladder
+    Stone", "grounding_status": "CLOSE", "curator": "codex-gpt-5", "date": "2026-08-21",
+    "notes": "Non-habitat screen review (#108): Bladder stones are physical calculi
+    that microbes can inhabit. NCIT''s Urinary Bladder Stone names the same concept
+    with explicit urinary framing; CLOSE matches the existing reviewed BacDive Bladder-stone
+    record and merges their evidence.", "review_depth": "ITEM", "category": "", "relation":
+    "parent"}}}]'
+  snapshot_sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
+- evidence_id: EEXTRACT
+  kind: record_content
+  reference: src/habitatmech/extract.py
+  locator: extract_prego
+  accessed_at: '2026-10-15T12:54:53Z'
+  support: supports
+  summary: Projection preserves distinct-taxon totals and score/channel ranking but
+    not original pair citations.
+  snapshot_sha256: 4d9397bda649381a5daf81937369531c6dc8b4518d6c7047e6f3f14e605bf860
+- evidence_id: ET5
+  kind: database
+  reference: data/raw/gold_ecosystem_paths.tsv
+  locator: Physical TSV rows 1095
+  accessed_at: '2026-10-15T12:54:53Z'
+  support: supports
+  summary: '[{"row": 1095, "data": {"canonical_path": "Host-associated > Mammals:
+    Human > Urinary system > Urinary bladder > Bladder stones", "ecosystem": "Host-associated",
+    "ecosystem_category": "Mammals: Human", "ecosystem_type": "Urinary system", "ecosystem_subtype":
+    "Urinary bladder", "specific_ecosystem": "Bladder stones", "leaf_label": "Bladder
+    stones", "depth": "5", "gold_node_count": "1", "organism_count": "1", "study_count":
+    "0", "biosample_count": "0", "total_assertions": "1", "gold_node_ids": "gold.ecosystem:6297"}}]'
+  snapshot_sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+- evidence_id: ET6
+  kind: database
+  reference: data/raw/bacdive_source_taxa.tsv
+  locator: Physical TSV rows 289,290,291,292,293,294,295
+  accessed_at: '2026-10-15T12:54:53Z'
+  support: supports
+  summary: '[{"row": 289, "data": {"bacdive_id": "bacdive.isolation_source:bladder-stone",
+    "rank": "1", "taxon_id": "NCBITaxon:1282", "taxon_label": "Staphylococcus epidermidis",
+    "strain_count": "1", "corroborated_by": ""}}, {"row": 290, "data": {"bacdive_id":
+    "bacdive.isolation_source:bladder-stone", "rank": "2", "taxon_id": "NCBITaxon:2702",
+    "taxon_label": "Gardnerella vaginalis", "strain_count": "1", "corroborated_by":
+    ""}}, {"row": 291, "data": {"bacdive_id": "bacdive.isolation_source:bladder-stone",
+    "rank": "3", "taxon_id": "NCBITaxon:43771", "taxon_label": "Corynebacterium urealyticum",
+    "strain_count": "1", "corroborated_by": ""}}, {"row": 292, "data": {"bacdive_id":
+    "bacdive.isolation_source:bladder-stone", "rank": "4", "taxon_id": "NCBITaxon:504474",
+    "taxon_label": "Corynebacterium urealyticum DSM 7109", "strain_count": "1", "corroborated_by":
+    ""}}, {"row": 293, "data": {"bacdive_id": "bacdive.isolation_source:bladder-stone",
+    "rank": "5", "taxon_id": "NCBITaxon:508451", "taxon_label": "Lactobacillus taiwanensis",
+    "strain_count": "1", "corroborated_by": ""}}, {"row": 294, "data": {"bacdive_id":
+    "bacdive.isolation_source:bladder-stone", "rank": "6", "taxon_id": "NCBITaxon:588",
+    "taxon_label": "Providencia stuartii", "strain_count": "1", "corroborated_by":
+    ""}}, {"row": 295, "data": {"bacdive_id": "bacdive.isolation_source:bladder-stone",
+    "rank": "7", "taxon_id": "NCBITaxon:827", "taxon_label": "Campylobacter ureolyticus",
+    "strain_count": "1", "corroborated_by": ""}}]'
+  snapshot_sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+- evidence_id: ET7
+  kind: database
+  reference: data/raw/bacdive_isolation_sources.tsv
+  locator: Physical TSV rows 132
+  accessed_at: '2026-10-15T12:54:53Z'
+  support: supports
+  summary: '[{"row": 132, "data": {"bacdive_id": "bacdive.isolation_source:bladder-stone",
+    "label": "Bladder-stone", "source_slug": "bladder-stone", "strain_count": "7",
+    "taxon_count": "7"}}]'
+  snapshot_sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+- evidence_id: ET8
+  kind: database
+  reference: data/raw/ontology_subclass_edges.tsv
+  locator: Physical TSV rows 9089,9090
+  accessed_at: '2026-10-15T12:54:53Z'
+  support: supports
+  summary: '[{"row": 9089, "data": {"subject": "NCIT:C26707", "predicate": "rdfs:subClassOf",
+    "object": "NCIT:C26905"}}, {"row": 9090, "data": {"subject": "NCIT:C26905", "predicate":
+    "rdfs:subClassOf", "object": "NCIT:C35708"}}]'
+  snapshot_sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+- evidence_id: ET9
+  kind: database
+  reference: data/raw/ontology_terms.tsv
+  locator: Physical TSV rows 10798,10799
+  accessed_at: '2026-10-15T12:54:53Z'
+  support: supports
+  summary: '[{"row": 10798, "data": {"term_id": "NCIT:C26707", "ontology": "NCIT",
+    "label": "Urinary Bladder Stone", "definition": "", "synonyms": "", "deprecated":
+    "", "directly_referenced": "TRUE", "label_only": "FALSE"}}, {"row": 10799, "data":
+    {"term_id": "NCIT:C26905", "ontology": "NCIT", "label": "Urinary Stone", "definition":
+    "", "synonyms": "", "deprecated": "", "directly_referenced": "FALSE", "label_only":
+    "FALSE"}}]'
+  snapshot_sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+- evidence_id: ET10
+  kind: database
+  reference: curation/decisions.tsv
+  locator: Physical TSV rows 1095,1590
+  accessed_at: '2026-10-15T12:54:53Z'
+  support: supports
+  summary: '[{"row": 1095, "data": {"identifier": "habitatmech:GOLD.c245efd1e3", "decision":
+    "GROUND", "object_id": "NCIT:C26707", "object_label": "Urinary Bladder Stone",
+    "grounding_status": "CLOSE", "curator": "codex-gpt-5", "date": "2026-08-21", "notes":
+    "Non-habitat screen review (#108): Bladder stones are physical calculi that microbes
+    can inhabit. NCIT''s Urinary Bladder Stone names the same concept with explicit
+    urinary framing; CLOSE matches the existing reviewed BacDive Bladder-stone record
+    and merges their evidence.", "review_depth": "ITEM", "category": null, "relation":
+    null}}, {"row": 1590, "data": {"identifier": "habitatmech:BACDIVE.343f1d3ee2",
+    "decision": "REVIEW", "object_id": "", "object_label": "", "grounding_status":
+    "", "curator": "claude-opus-5", "date": "2026-08-14", "notes": "Narrowed-grounding
+    review (#67): ''urinary'' is added, but a bladder stone is urinary by definition
+    \u2014 the gallbladder equivalent is a gallstone and has its own term. Correct
+    as seeded.", "review_depth": "ITEM", "category": "", "relation": ""}}]'
+  snapshot_sha256: ca42d86b6040df1c0c6e6ed36573bb51975a5e8daade262113bce547f1b6fd8b
+- evidence_id: EP11
+  kind: record_content
+  reference: data/habitats/host_associated/urinary_bladder.yaml
+  locator: Entire parent read for scope, not additional review coverage
+  accessed_at: '2026-10-15T12:54:53Z'
+  support: supports
+  summary: '{"identifier": "habitatmech:GOLD.20fae79b01", "label": "Urinary bladder",
+    "habitat_category": "HOST_ASSOCIATED", "grounding_status": "NARROW", "mapping_status":
+    "SEEDED", "parent_habitats": ["UBERON:0001255", "habitatmech:GOLD.282ecbaf3b"],
+    "source_attestations": [{"source": "GOLD", "source_id": "gold.ecosystem:6296",
+    "source_label": "Urinary bladder", "source_path": "Host-associated > Mammals:
+    Human > Urinary system > Urinary bladder", "mapping_predicate": "skos:narrowMatch",
+    "notes": "2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv."}],
+    "curation_history": [{"timestamp": "2026-08-16T05:58:02Z", "curator": "seed_from_sources",
+    "action": "SEEDED_FROM_SOURCES", "changes": "Seeded from data/raw/ inventories;
+    attested by GOLD. Grounding: NARROW."}]}'
+  snapshot_sha256: 7a4234f789234d5489875bede9db072d3930b6dfb355e3007697853fe9e7534e
+- evidence_id: EX12
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/ncit/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FNCIT_C26707/graph
+  locator: NCIT_C26707-graph.json
+  accessed_at: '2026-10-15T12:47:00Z'
+  support: context_only
+  summary: 'Inspected outgoing typed ontology relations: [{"source": "http://purl.obolibrary.org/obo/NCIT_C26707",
+    "target": "http://purl.obolibrary.org/obo/NCIT_C26905", "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+    "label": "subClassOf"}]'
+  snapshot_sha256: f8b392b9411fed559883fa3170c6a5ac8f1d431fc125b629f5f88b508c8181da
+- evidence_id: EX13
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/ncit/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FNCIT_C26707?lang=en
+  locator: NCIT_C26707.json
+  accessed_at: '2026-10-15T12:46:59Z'
+  support: context_only
+  summary: 'Inspected current identifier, label, active status and full definition
+    for the scope assessment: {"obo_id": "NCIT:C26707", "label": "Urinary Bladder
+    Stone", "is_obsolete": false}'
+  snapshot_sha256: 9373035547f82027e79ea4a37407a067e357044f1ce6eb0ffd052b9eb056f5f2
+- evidence_id: EX14
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/ncit/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FNCIT_C26905/graph
+  locator: NCIT_C26905-graph.json
+  accessed_at: '2026-10-15T12:47:02Z'
+  support: context_only
+  summary: 'Inspected outgoing typed ontology relations: [{"source": "http://purl.obolibrary.org/obo/NCIT_C26905",
+    "target": "http://purl.obolibrary.org/obo/NCIT_C35708", "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+    "label": "subClassOf"}]'
+  snapshot_sha256: 8b50285df54e16bc6d5e0efa4f12f154930668a6516c1c99b454981bd90a55e1
+- evidence_id: EX15
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/ncit/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FNCIT_C26905?lang=en
+  locator: NCIT_C26905.json
+  accessed_at: '2026-10-15T12:47:01Z'
+  support: context_only
+  summary: 'Inspected current identifier, label, active status and full definition
+    for the scope assessment: {"obo_id": "NCIT:C26905", "label": "Urinary Stone",
+    "is_obsolete": false}'
+  snapshot_sha256: 6fbd03a775c3845c14463464953f4ad2aae54bb4680cecf3a868bef7691e4f85
+- evidence_id: EX16
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FUBERON_0001255/graph
+  locator: UBERON_0001255-graph.json
+  accessed_at: '2026-10-15T12:47:04Z'
+  support: context_only
+  summary: 'Inspected outgoing typed ontology relations: [{"source": "http://purl.obolibrary.org/obo/UBERON_0001255",
+    "target": "http://purl.obolibrary.org/obo/UBERON_0002075", "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+    "label": "subClassOf"}, {"source": "http://purl.obolibrary.org/obo/UBERON_0001255",
+    "target": "http://purl.obolibrary.org/obo/UBERON_0004120", "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+    "label": "subClassOf"}, {"source": "http://purl.obolibrary.org/obo/UBERON_0001255",
+    "target": "http://purl.obolibrary.org/obo/UBERON_0018707", "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+    "label": "subClassOf"}, {"source": "http://purl.obolibrary.org/obo/UBERON_0001255",
+    "target": "http://purl.obolibrary.org/obo/UBERON_0000164", "uri": "http://purl.obolibrary.org/obo/RO_0002202",
+    "label": "develops from"}, {"source": "http://purl.obolibrary.org/obo/UBERON_0001255",
+    "target": "http://purl.obolibrary.org/obo/UBERON_0001556", "uri": "http://purl.obolibrary.org/obo/BFO_0000050",
+    "label": "part of"}, {"source": "http://purl.obolibrary.org/obo/UBERON_0001255",
+    "target": "http://purl.obolibrary.org/obo/UBERON_0002323", "uri": "http://purl.obolibrary.org/obo/RO_0001025",
+    "label": "located in"}]'
+  snapshot_sha256: ff5e9d29907843cdcb80b8a7574112f3a344ef8c623d501b50ac0a43ae13d69f
+- evidence_id: EX17
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FUBERON_0001255?lang=en
+  locator: UBERON_0001255.json
+  accessed_at: '2026-10-15T12:47:04Z'
+  support: context_only
+  summary: 'Inspected current identifier, label, active status and full definition
+    for the scope assessment: {"obo_id": "UBERON:0001255", "label": "urinary bladder",
+    "is_obsolete": false}'
+  snapshot_sha256: 8520adccd22e2c33e22f4bdab14e87519c4750c7759e1c0e55813299c4e0a16a
+- evidence_id: EX18
+  kind: database
+  reference: https://www.culturecollections.org.uk/nop/product/corynebacterium-urealyticum
+  locator: nctc12011.html
+  accessed_at: '2026-10-15T12:49:30Z'
+  support: context_only
+  summary: NCTC 12011 collection record identifies Corynebacterium urealyticum DSM
+    7109/ATCC 43042 with bladder-stone provenance. This is a specific physical-site
+    witness for the displayed taxon, not independent verification of all seven frozen
+    BacDive assignments.
+  snapshot_sha256: 46fc1e3f61c0ff9cca5ddf211f592779bd7741604e3b7fc3660232c4be0b1228
+- evidence_id: EX19
+  kind: database
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=1123383,1123384,1189612,1206108,1282,1286329,1286330,1286331,1286332,1286333,1286334,1286335,1286336,1286337,1286338,1286339,1286340,1286341,1286342,1286343,1286344,1286345,1286346,1286347,1286348,1286350,1286351,1286352,1286353,1322346,1408159,1408160,1497681,1552123,1585974,187452,240427,2702,375175,43771,478010,504474,508451,51663,53444,562,574375,582,588,758793,827&retmode=xml
+  locator: taxonomy.xml
+  accessed_at: '2026-10-15T12:47:05Z'
+  support: context_only
+  summary: 'All displayed taxon identifiers and labels resolve to current NCBI identities:
+    [{"record_id": "1282", "current_id": "1282", "record_label": "Staphylococcus epidermidis",
+    "current_label": "Staphylococcus epidermidis", "rank": "species"}, {"record_id":
+    "2702", "current_id": "2702", "record_label": "Gardnerella vaginalis", "current_label":
+    "Gardnerella vaginalis", "rank": "species"}, {"record_id": "43771", "current_id":
+    "43771", "record_label": "Corynebacterium urealyticum", "current_label": "Corynebacterium
+    urealyticum", "rank": "species"}, {"record_id": "504474", "current_id": "504474",
+    "record_label": "Corynebacterium urealyticum DSM 7109", "current_label": "Corynebacterium
+    urealyticum DSM 7109", "rank": "strain"}, {"record_id": "508451", "current_id":
+    "508451", "record_label": "Lactobacillus taiwanensis", "current_label": "Lactobacillus
+    taiwanensis", "rank": "species"}, {"record_id": "588", "current_id": "588", "record_label":
+    "Providencia stuartii", "current_label": "Providencia stuartii", "rank": "species"},
+    {"record_id": "827", "current_id": "827", "record_label": "Campylobacter ureolyticus",
+    "current_label": "Campylobacter ureolyticus", "rank": "species"}]'
+  snapshot_sha256: f8419452b360c25eb644e679b18e320a164cb1dadcd7177218469368fe9cd7dd
+- evidence_id: ESEARCH
+  kind: search
+  reference: Local maintained inputs and structured archive
+  locator: rg --no-ignore --hidden -l -F -e NCIT:C26707 -e 'Urinary Bladder Stone'
+    -e bladder_stone -e habitatmech:BACDIVE.343f1d3ee2 -e habitatmech:GOLD.c245efd1e3
+    curation history research reports data/raw build reviews
+  accessed_at: '2026-10-15T12:45:44Z'
+  support: context_only
+  summary: Ignored-inclusive search plus exact TSV parsing identified the stated source
+    rows and no structured predecessor.
+  search_scope: curation, history, research, reports, data/raw, build and reviews,
+    including ignored and hidden files; pathlib traversal of all structured review.yaml
+    files.
+assessments:
+- assessment_id: A1
+  area: schema
+  topic: Native validation and reproduction
+  outcome: supported
+  summary: Schema, strict, history, provenance, 3,208-record reproduction, causal
+    overlays, term requests and configured labels passed. These establish deterministic
+    fidelity, not scientific support.
+  target_ids:
+  - NCIT:C26707
+  evidence_ids:
+  - E1
+  - ERULE
+- assessment_id: A2
+  area: identity
+  topic: Identity, hierarchy and nomenclature
+  outcome: concern
+  summary: NCIT identifies a physical urinary-bladder concretion and its broader urinary-stone
+    class. The GOLD anatomical container is not a broader stone class. The independent
+    BacDive seven-strain and GOLD one-organism counts must remain separate.
+  target_ids:
+  - NCIT:C26707
+  evidence_ids:
+  - E1
+  - ERULE
+  - ESEED
+  - EX12
+  - EX13
+  - EX14
+  - EX15
+  - EX16
+  - EX17
+  - EX18
+  - EX19
+- assessment_id: A3
+  area: quantity
+  topic: Source count, unit and ranking
+  outcome: supported
+  summary: 'Exact source projections retain [{"source": "BACDIVE", "source_id": "bacdive.isolation_source:bladder-stone",
+    "source_label": "Bladder-stone", "mapping_predicate": "skos:closeMatch", "assertion_count":
+    7, "assertion_unit": "STRAIN"}, {"source": "GOLD", "source_id": "gold.ecosystem:6297",
+    "source_label": "Bladder stones", "source_path": "Host-associated > Mammals: Human
+    > Urinary system > Urinary bladder > Bladder stones", "mapping_predicate": "skos:closeMatch",
+    "assertion_count": 1, "assertion_unit": "ORGANISM"}]. All 7 displayed taxa were
+    resolved against current NCBI IDs/labels. Ranks and candidate pools are source-specific;
+    unlike units are never summed.'
+  target_ids:
+  - NCIT:C26707
+  evidence_ids:
+  - E1
+  - ESEED
+  - EEXTRACT
+  - EX12
+  - EX13
+  - EX14
+  - EX15
+  - EX16
+  - EX17
+  - EX18
+  - EX19
+- assessment_id: A4
+  area: completeness
+  topic: Native status and optional fields
+  outcome: supported
+  summary: Executed source decisions reproduce CLOSE/REVIEWED. No causal mechanism
+    or is_characteristic assertion is present. Missing optional fields or SEEDED status
+    are not automatic scientific defects.
+  target_ids:
+  - NCIT:C26707
+  evidence_ids:
+  - E1
+  - ESEED
+  - ESCHEMA
+findings:
+- finding_id: F1
+  issue_key: bladder-stone-container-context-parent
+  category: representation
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Urinary bladder is not a broader stone class
+  description: Exclude only the immediate GOLD parent habitatmech:GOLD.20fae79b01
+    for source habitatmech:GOLD.c245efd1e3. Preserve NCIT:C26905, both independently
+    reviewed source concepts, related source aliases, seven STRAIN and one ORGANISM
+    attestations, and all taxa.
+  target_ids:
+  - NCIT:C26707
+  field_paths:
+  - parent_habitats
+  evidence_ids:
+  - E1
+  - ERULE
+  - ESEED
+  - EX12
+  - EX13
+  - EX14
+  - EX15
+  - EX16
+  - EX17
+  - EX18
+  - EX19
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; never patch generated habitat YAML
+  rule_id: docs/CURATION.md and native record-review checklist
+  native_severity: major
+  normalization_reason: Materially unsupported semantic or source-evidence claim;
+    deterministic validity does not establish scientific support.
+  external_issues: []
+actions:
+- action_id: ACT1
+  finding_ids:
+  - F1
+  target_ids:
+  - NCIT:C26707
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; never patch generated habitat YAML
+  description: Exclude only the immediate GOLD parent habitatmech:GOLD.20fae79b01
+    for source habitatmech:GOLD.c245efd1e3. Preserve NCIT:C26905, both independently
+    reviewed source concepts, related source aliases, seven STRAIN and one ORGANISM
+    attestations, and all taxa. No repair is performed by this review.
+  generator: Controlled source refresh when required, then just seed, guarded just
+    seed-canary, just seed-apply, and dependent term-request/map/site/redirect regeneration.
+  acceptance_checks:
+  - Regress the exact reported claim and preserve independently valid identifiers,
+    source counts/units, raw provenance, native status and history. Do not change
+    source totals by hand.
+  - Append the authorized curation history and require schema, strict, provenance,
+    history, corpus, label, site and full QC gates.
+  - Reassess the changed record in an immutable successor retaining this issue key
+    and exact predecessor lineage.
+limitations:
+- Every historical specimen and original PREGO pair has not been independently reidentified.
+  Counts/scores/ranks are not prevalence, viability or characteristic presence.
+- Configured label checks skip 2,061 pairs without adapters; deterministic validity
+  does not certify biological semantics.
+- Full baseline QC is verified remote evidence at the captured revision, not a new
+  local execution. Post-save archive and publication gates are subsequent.
+- 'iModulonDB is not applicable: the target asserts no gene, regulator or expression
+  module. No paid research was performed.'
+notes:
+- All captured local input hashes were rechecked against both the working tree and
+  exact Git revision. No input bytes were silently refreshed.
+- Ignored-inclusive archive traversal found no structured predecessor for this target;
+  legacy Markdown is context, not independent approval or successor lineage.
+- This observation precedes separately authorized curation/publication and does not
+  claim a repair.
+tags:
+- individual-scientific-review
+- host-associated
+```
