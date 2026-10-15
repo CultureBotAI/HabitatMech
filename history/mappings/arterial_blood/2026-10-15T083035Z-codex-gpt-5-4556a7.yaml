@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: arterial_blood
+session:
+  id: 2026-10-15T083035Z-codex-gpt-5-4556a7
+  timestamp: '2026-10-15T08:30:35Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1348
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed parent_habitats claim for arterial_blood
+  details: Generic arterial blood includes nonmammalian vertebrates; mammal Blood is not a
+    broader class. The whole-corpus counterfactual regression passed. Canary, regeneration,
+    publication and full CI are subsequent gates, not claimed here as already completed. No
+    native scientific status is promoted.

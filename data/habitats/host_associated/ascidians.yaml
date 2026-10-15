@@ -7,9 +7,6 @@ habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
 synonyms:
-- synonym_text: Ascidians
-  synonym_type: EXACT_SYNONYM
-  source: HabitatMech curation
 - synonym_text: sea squirt-associated environment
   synonym_type: EXACT_SYNONYM
   source: HabitatMech curation
@@ -58,3 +55,13 @@ curation_history:
     - is asserted under ENVO:01001002 ALONE, and ENVO:01001176 has no children in
     the slice at all. Not carried as an xref: it is genuinely broader, so recording
     it would re-import the ancestry this declines.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Ascidians'' when
+    defining habitatmech:GOLD.34c28836da as ''ascidian-associated environment''. Verbatim
+    source attestations are preserved. Review #2162: the displaced source label denotes
+    the host, not its associated environment. Remove only that authored exact alias
+    and suppress old-label fallback; preserve environmental definition, genus, valid
+    environment-form synonyms, original source path/label/count/unit, taxonomic xrefs,
+    native status and prior definition history.'

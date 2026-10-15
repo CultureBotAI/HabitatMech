@@ -10,11 +10,10 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: UBERON
 - synonym_text: spiral colon
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: UBERON
 parent_habitats:
 - UBERON:0000168
-- habitatmech:GOLD.5b0aa7456c
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6106
@@ -27,3 +26,24 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.5b0aa7456c
+    for habitatmech:GOLD.0d9cfc05b6 (Host-associated > Mammals: Human > Digestive
+    system > Large intestine > Ascending colon). Review #1325: A regional colon subdivision
+    is not a kind of the whole large intestine. Exclude only the exact immediate GOLD
+    context contribution; preserve independent ontology genera, source identity/path/count/unit,
+    native status and prior history. Typed ontology and primary evidence are retained
+    in the immutable individual review. Shared mapping endpoint #1398 is separate.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: ANNOTATION_CORRECTED
+  changes: 'Corrected synonym_type for ''spiral colon'' (UBERON) from ''EXACT_SYNONYM''
+    to ''RELATED_SYNONYM''. Evidence: https://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FUBERON_0001156.
+    Review #1249 scoped witness: current Uberon explicitly types spiral colon as related
+    with taxonomic disambiguation, while colon ascendens remains exact. Restore only
+    this record/source/text/old-value scope. The GOLD Ascending colon path resolves
+    by its canonical label, not this alias. Preserve spelling, canonical identity,
+    source provenance, native status and the independent exact synonym. The global
+    typed ontology extraction issue remains open.'

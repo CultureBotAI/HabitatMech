@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: articular_cartilage
+session:
+  id: 2026-10-15T083036Z-codex-gpt-5-71a226
+  timestamp: '2026-10-15T08:30:36Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1354
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed parent_habitats claim for articular_cartilage
+  details: Cartilage on the articular surface of a human bone is not the hard mineralized
+    bone tissue. The whole-corpus counterfactual regression passed. Canary, regeneration,
+    publication and full CI are subsequent gates, not claimed here as already completed. No
+    native scientific status is promoted.

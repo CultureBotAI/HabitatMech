@@ -5,10 +5,6 @@ definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
-synonyms:
-- synonym_text: 'Arthropoda: Crustaceans'
-  synonym_type: EXACT_SYNONYM
-  source: HabitatMech curation
 parent_habitats:
 - ENVO:01001000
 - ENVO:01001002
@@ -44,3 +40,13 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Arthropoda: Crustaceans''
+    when defining habitatmech:GOLD.2959225799 as ''crustacean-associated environment''.
+    Verbatim source attestations are preserved. Review #2162: the displaced source
+    label denotes the host, not its associated environment. Remove only that authored
+    exact alias and suppress old-label fallback; preserve environmental definition,
+    genus, valid environment-form synonyms, original source path/label/count/unit,
+    taxonomic xrefs, native status and prior definition history.'
