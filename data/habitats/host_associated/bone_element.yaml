@@ -24,7 +24,6 @@ synonyms:
 parent_habitats:
 - FOODON:03420168
 - UBERON:0004765
-- habitatmech:GOLD.3756d4bb39
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:bone
@@ -225,3 +224,12 @@ curation_history:
   changes: 'Retained GOLD label ''Bones'' as RELATED_SYNONYM: a CLOSE source mapping
     does not establish exact lexical equivalence. Independent ontology synonyms and
     verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution habitatmech:GOLD.3756d4bb39
+    for habitatmech:GOLD.6296c1e38f (Host-associated > Birds > Skeletal system > Bones).
+    Review https://github.com/CultureBotAI/HabitatMech/issues/2186. A generic bone
+    element is not a kind of the whole avian skeletal system. Exclude only this exact
+    source-path/expected-parent contribution; preserve independent ontology genera,
+    source observations and native status.

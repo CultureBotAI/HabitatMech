@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: blood_bone_review
+session:
+  id: 2026-10-15T150651Z-codex-gpt-5-902c84
+  timestamp: '2026-10-15T15:06:51Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2186
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Remove sixteen context-only GOLD parent contributions from thirteen blood and bone
+    habitats
+  details: 'Exact GOLD paths and current BTO/UBERON definitions and typed relations distinguish
+    blood from circulatory systems, plasma/serum from whole blood, bone from whole skeletal
+    systems/decomposed bodies, and marrow from mineralized bone. Add sixteen source-path/expected-parent
+    exclusions across blood__070ce7aa, blood__5ca8064f, blood__5ef3f2f4, blood__c1b484fe,
+    blood_plasma__00b70c6a, blood_serum, bone__169c3d9e, bone__234001be, bone__8d0df242, bone__b47efce2,
+    bone_element, bone_marrow__9387f1a6, bone_marrow__c1fc5dec. Preserve all identifiers,
+    counts, units, taxa, mappings, native statuses and independent ontology parents. Do not
+    change fossil/skeletonized-remains material ancestry or unresolved PREGO pairs. Shared
+    endpoint contract #1398 remains open. Whole-corpus counterfactual regression, guarded
+    canary, regeneration, map/site publication and final QC verify this session.'

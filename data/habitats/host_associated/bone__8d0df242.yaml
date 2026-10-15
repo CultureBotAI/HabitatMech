@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - BTO:0000140
-- habitatmech:GOLD.092eae5cd7
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6373
@@ -18,3 +17,12 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: Excluded GOLD source-path parent contribution habitatmech:GOLD.092eae5cd7
+    for habitatmech:GOLD.28cfbd7dee (Host-associated > Mammals > Skeletal system >
+    Bone). Review https://github.com/CultureBotAI/HabitatMech/issues/2186. Bone is
+    part of a skeletal system, not a subtype of the whole skeletal system. Exclude
+    only this exact source-path/expected-parent contribution; preserve independent
+    ontology genera, source observations and native status.
