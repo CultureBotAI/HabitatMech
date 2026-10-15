@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: bladder_stone
+session:
+  id: 2026-10-15T130110Z-codex-gpt-5-7e4bb8
+  timestamp: '2026-10-15T13:01:10Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2182
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed bladder hierarchy for bladder_stone
+  details: Current BTO/UBERON/NCIT definitions and exact source paths support the bounded
+    correction. Whole-corpus counterfactual proves exactly two target records change; source
+    identities, paths, counts, units and taxa remain. The bladder-polyp decision changes NARROW
+    to UNGROUNDED and retains REVIEWED with the organ as xref; its obsolete generated decision
+    summary is replaced, with original evidence retained in the immutable predecessor. Stone
+    keeps CLOSE/REVIEWED and its valid NCIT genus. Guarded regeneration and final QC follow.

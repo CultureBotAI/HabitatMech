@@ -12,7 +12,6 @@ synonyms:
   source: BacDive
 parent_habitats:
 - NCIT:C26905
-- habitatmech:GOLD.20fae79b01
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:bladder-stone
@@ -104,3 +103,12 @@ curation_history:
   changes: 'Retained GOLD label ''Bladder stones'' as RELATED_SYNONYM: a CLOSE source
     mapping does not establish exact lexical equivalence. Independent ontology synonyms
     and verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.20fae79b01
+    for habitatmech:GOLD.c245efd1e3 (Host-associated > Mammals: Human > Urinary system
+    > Urinary bladder > Bladder stones). Review https://github.com/CultureBotAI/HabitatMech/issues/2182
+    : A urinary bladder stone is a concretion, not a kind of its containing anatomical
+    organ. Exclude only this exact source-path/expected-parent contribution. Preserve
+    independent parents and source observations.'

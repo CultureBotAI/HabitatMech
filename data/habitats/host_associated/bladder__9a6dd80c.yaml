@@ -1,26 +1,36 @@
 identifier: habitatmech:GOLD.2c26547de4
 label: Bladder
 habitat_category: HOST_ASSOCIATED
-grounding_status: NARROW
+grounding_status: UNGROUNDED
 mapping_status: REVIEWED
-parent_habitats:
-- BTO:0006350
+xrefs:
 - UBERON:0001255
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6653
   source_label: Bladder
   source_path: 'Host-associated > Mammals: Human > Benign tumor > Polyps > Bladder'
-  mapping_predicate: skos:narrowMatch
 curation_history:
-- timestamp: '2026-08-13T00:00:00Z'
-  curator: claude-opus-5
-  action: GROUND_AS_PARENT
-  changes: 'UBERON:0001255 ''urinary bladder'' attached as a parent, not adopted as
-    the identity (NARROW). A bladder polyp, not the bladder. GOLD''s path places it
-    under Benign tumor. Path: Host-associated > Mammals: Human > Benign tumor > Polyps
-    > Bladder (source concept habitatmech:GOLD.2c26547de4)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. UBERON:0001255
+    ''urinary bladder'' kept as an xref. Review https://github.com/CultureBotAI/HabitatMech/issues/2181
+    : Retain this human bladder-polyp source context as minted. A polyp is not a kind
+    of whole urinary bladder; preserve UBERON:0001255 only as contextual xref, not
+    identity or superclass. The human path cannot inherit BTO:0006350 cnidarian polyp.
+    No exact lesion ontology identity or unsupported definition is asserted; original
+    decision evidence remains in immutable review/history. Shared mapping contract
+    #1398 and parent identity #2171 remain separate. (source concept habitatmech:GOLD.2c26547de4)'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution BTO:0006350 for habitatmech:GOLD.2c26547de4
+    (Host-associated > Mammals: Human > Benign tumor > Polyps > Bladder). Review https://github.com/CultureBotAI/HabitatMech/issues/2181
+    : Human bladder-polyp context is not a cnidarian body form; parent identity remains
+    tracked separately in #2171. Exclude only this exact source-path/expected-parent
+    contribution. Preserve independent parents and source observations.'
