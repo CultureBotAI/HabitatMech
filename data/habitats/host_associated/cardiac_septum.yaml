@@ -28,7 +28,6 @@ synonyms:
 parent_habitats:
 - UBERON:0003037
 - UBERON:0004120
-- habitatmech:GOLD.805ee181bd
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6612
@@ -53,3 +52,13 @@ curation_history:
   changes: 'Retained GOLD label ''Septum'' as RELATED_SYNONYM, not exact: its canonical
     ontology identity UBERON:0003037 is a strict ancestor of UBERON:0002099. Source
     attestation remains verbatim (#1459).'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.805ee181bd
+    for habitatmech:GOLD.5ae87cb2a9 (Host-associated > Mammals: Human > Circulatory
+    system > Heart > Septum). Review https://github.com/CultureBotAI/HabitatMech/issues/2206
+    : This anatomical component or derived material is not a subtype of the containing
+    organ or system. Exclude only the exact GOLD contribution; retain independent
+    valid genera and original source observations. This does not resolve the separate
+    catarrh condition/material scope or shared mapping endpoint #1398.'

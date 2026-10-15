@@ -30,7 +30,6 @@ synonyms:
 parent_habitats:
 - UBERON:0004120
 - UBERON:0004151
-- habitatmech:GOLD.805ee181bd
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6609
@@ -56,3 +55,13 @@ curation_history:
   changes: 'Retained GOLD label ''Atria'' as RELATED_SYNONYM: a CLOSE source mapping
     does not establish exact lexical equivalence. Independent ontology synonyms and
     verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.805ee181bd
+    for habitatmech:GOLD.c0b85aab63 (Host-associated > Mammals: Human > Circulatory
+    system > Heart > Atria). Review https://github.com/CultureBotAI/HabitatMech/issues/2206
+    : This anatomical component or derived material is not a subtype of the containing
+    organ or system. Exclude only the exact GOLD contribution; retain independent
+    valid genera and original source observations. This does not resolve the separate
+    catarrh condition/material scope or shared mapping endpoint #1398.'

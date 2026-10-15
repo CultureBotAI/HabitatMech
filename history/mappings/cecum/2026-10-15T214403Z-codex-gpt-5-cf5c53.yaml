@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: cecum
+session:
+  id: 2026-10-15T214403Z-codex-gpt-5-cf5c53
+  timestamp: '2026-10-15T21:44:03Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2208
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding
+  - parent_habitats
+  - source_attestations
+  summary: Reject cross-host homonymous anatomical grounding
+  details: 'Blocker/major: GOLD molluscan cecum habitatmech:GOLD.37d9cdc188 is merged into
+    BTO:0000166 with PREGO; GOLD molluscan ceca habitatmech:GOLD.8c5f1eb1b0 inherits UBERON:0001153.
+    The inspected ontology definitions specify vertebrate ileocecal/large-intestinal anatomy,
+    not these molluscan sources. Reject only the unsupported GOLD equivalences/genera with
+    ITEM decisions. Preserve the PREGO BTO identity, its 549 associations and top-25 taxa
+    unchanged. Correct the superseded truncated Cecum/Intest note without rewriting immutable
+    history. Audit new minted identity, source partition and redirects. Add or supersede only
+    the exact GOLD ITEM decision as CONFIRM_UNGROUNDED, retaining the source mint. No replacement
+    ontology identity is asserted. The prior molluscan cecum decision remains in Git base
+    62952fb7cdf223af9d1ffbf1cc2f556b22f7ee6b, the immutable baseline review, and tests/data/cardiac_cartilage_cecum_prior_decisions.json.
+    Generated curation_history reflects the current decision; committed history/reviews remain
+    immutable. The focused counterfactual regression failed before repair and passed after
+    repair. Canaries were inspected before full regeneration. Full native QC, configured labels,
+    corpus/site reproduction and immutable successor dispositions remain publication gates.'
