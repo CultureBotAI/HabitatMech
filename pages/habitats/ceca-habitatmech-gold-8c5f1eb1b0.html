@@ -26,12 +26,11 @@
 <p class="meta">
   <code class="curie">habitatmech:GOLD.8c5f1eb1b0</code>
   <span class="sep">·</span><a href="../category/host-associated.html">HOST_ASSOCIATED</a>
-  <span class="sep">·</span><span class="pill">NARROW</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="sep">·</span><span class="pill warn">UNGROUNDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 
-<div class="note warn"><p>SEEDED workflow status. The source-seeding rules supplied this record; consult its curation history for later attributed changes. This status does not establish human review.</p></div>
 
 <h2>Source attestations</h2>
 <p class="meta">Each upstream vocabulary's own account of this habitat. Assertion
@@ -50,16 +49,26 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 </table>
 </div>
 
-<h2>Broader habitats</h2>
-<ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/UBERON_0001153">caecum</a>      <code class="curie">UBERON:0001153</code></li>
-  <li><a href="../habitats/digestive-system-habitatmech-gold-3baeffe4f8.html">Digestive system</a>      <code class="curie">habitatmech:GOLD.3baeffe4f8</code></li>
-</ul>
 
 
 
 
 
+<h2>Curation</h2>
+<p class="meta">What a curator decided about this record, and why. A record built
+from several source concepts can carry one decision per concept.</p>
+<ol class="events">
+  <li>
+    <span class="pill">CONFIRM_UNGROUNDED</span>
+    <span class="meta">2026-10-15 · codex-gpt-5</span>
+    <p>Confirmed UNGROUNDED: no ontology term fits this concept. ITEM reassessment <a href="https://github.com/CultureBotAI/HabitatMech/issues/2208" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2208</a> : This molluscan source does not denote the vertebrate ileocecal or large-intestinal anatomy of UBERON:0001153 or BTO:0000166. Current OLS definitions and Uberon taxon notes distinguish invertebrate homonyms; octopus dissection (PMID:39140156; DOI:10.1242/bio.060429) is a bounded anatomical witness, not identification of the exact GOLD specimen. Retain the source mint UNGROUNDED without inventing an alternative genus. The whole-organ context contribution is excluded under #2206. Path: Host-associated &gt; Mollusca &gt; Digestive system &gt; Ceca (source concept habitatmech:GOLD.8c5f1eb1b0)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-15 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.3baeffe4f8 for habitatmech:GOLD.8c5f1eb1b0 (Host-associated &gt; Mollusca &gt; Digestive system &gt; Ceca). Review <a href="https://github.com/CultureBotAI/HabitatMech/issues/2206" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2206</a> : This anatomical component or derived material is not a subtype of the containing organ or system. Exclude only the exact GOLD contribution; retain independent valid genera and original source observations. This does not resolve the separate catarrh condition/material scope or shared mapping endpoint #1398.</p>
+  </li>
+</ol>
 
 <h2>Provenance</h2>
 <p class="meta">
