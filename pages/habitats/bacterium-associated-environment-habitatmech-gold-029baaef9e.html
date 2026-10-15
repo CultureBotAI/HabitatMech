@@ -58,9 +58,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 
 
 
-<h2>Also called</h2>
-<ul class="plain">
-<li>Bacteria <span class="meta">— HabitatMech curation</span></li></ul>
 
 <h2>Curation</h2>
 <p class="meta">What a curator decided about this record, and why. A record built
@@ -75,6 +72,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">DEFINED</span>
     <span class="meta">2026-08-16 · claude-opus-5</span>
     <p>Defined as &#39;bacterium-associated environment&#39; under ENVO:01001000 &#39;environmental system determined by an organism&#39;. The habitat is the host clade, and it is the entire content of the concept: GOLD organises host-associated isolates by host and every anatomical path hangs off it. Not grounded to the parent, because every clade would then merge onto one record. Same pattern ENVO already has at plant-, animal- and fungi-associated environment. GOLD&#39;s child of Microbial. Parented to the organism root here because its natural parent, microbe-associated environment, is requested in this same batch and does not exist yet — editors should re-parent it if both are minted.</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_SYNONYM_EXCLUDED</span>
+    <span class="meta">2026-10-15 · codex-gpt-5</span>
+    <p>Omitted automatic retention of displaced source label &#39;Bacteria&#39; when defining habitatmech:GOLD.029baaef9e as &#39;bacterium-associated environment&#39;. Verbatim source attestations are preserved. Review #2167: Bacteria denotes the host organisms, not their associated environment. Remove only this authored exact alias and suppress old-label fallback; retain the environmental definition, genera, verbatim source label/path/count/unit, native status and prior history.</p>
   </li>
 </ol>
 

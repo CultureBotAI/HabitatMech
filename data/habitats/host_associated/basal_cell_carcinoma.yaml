@@ -3,8 +3,6 @@ label: Basal cell carcinoma
 habitat_category: HOST_ASSOCIATED
 grounding_status: NOT_APPLICABLE
 mapping_status: REVIEWED
-parent_habitats:
-- habitatmech:GOLD.9bb307824f
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6176
@@ -23,3 +21,13 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NOT_APPLICABLE.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.9bb307824f
+    for habitatmech:GOLD.17b7f17bc1 (Host-associated > Mammals: Human > Malignant
+    tumor > Carcinoma > Basal cell carcinoma). Review #1372: Retain the existing non-habitat
+    clinical disposition and source classification without asserting a broader habitat.
+    Exclude only this exact immediate GOLD context contribution; preserve independent
+    parents, source identity/path/count/unit, native status and prior history. Evidence
+    is retained in the immutable individual review.'

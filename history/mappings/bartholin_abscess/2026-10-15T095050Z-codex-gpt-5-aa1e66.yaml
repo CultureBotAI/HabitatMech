@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: bartholin_abscess
+session:
+  id: 2026-10-15T095050Z-codex-gpt-5-aa1e66
+  timestamp: '2026-10-15T09:50:50Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/1371
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Correct reviewed parent_habitats claim for bartholin_abscess
+  details: Neither a disease grouping nor a physical abscess is a subtype of the whole vagina;
+    source disease-versus-site disposition remains unresolved. The focused whole-corpus counterfactual
+    passed. Canary, regeneration and final QC are subsequent gates, not claimed already complete.
+    No scientific status is promoted.

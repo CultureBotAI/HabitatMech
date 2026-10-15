@@ -3,8 +3,6 @@ label: Attached/Keratinized gingiva
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.99880772e1
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3910
@@ -24,3 +22,13 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.99880772e1
+    for habitatmech:GOLD.1b82504233 (Host-associated > Mammals: Human > Digestive
+    system > Oral cavity > Attached/Keratinized gingiva). Review #1363: Gingival tissue
+    is not a kind of the whole oral cavity. Exclude only this exact immediate GOLD
+    context contribution; preserve independent parents, source identity/path/count/unit,
+    native status and prior history. Evidence is retained in the immutable individual
+    review.'
