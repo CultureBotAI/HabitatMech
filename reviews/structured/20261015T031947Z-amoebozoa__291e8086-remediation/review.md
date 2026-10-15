@@ -1,0 +1,659 @@
+# Remediation review: amoebozoan-associated environment
+
+- Review: 20261015T031947Z-amoebozoa__291e8086-remediation
+- Repository: CultureBotAI/HabitatMech
+- Started UTC: 2026-10-15T03:09:36Z
+- Finished UTC: 2026-10-15T03:19:47Z
+- Reviewer: codex-gpt-5 (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The authored Amoebozoa exact synonym is removed and the guarded source-label exclusion prevents automatic recreation. The environmental definition, both supported parents, two GOLD attestations, 13 ORGANISM versus zero-count omission, source merge and UNGROUNDED/REVIEWED state remain intact. All prior generated events are preserved. The separate historical DEFINED-event replacement remains minor/open under #297; this correction does not restore the older event or fix the shared historical design.
+
+## Scope And Provenance
+
+Complete current target reread and exact finding reassessment after scoped maintained-input remediation; not a new source-member reconstruction.
+
+Selection: Exact successor to 20261015T024351Z-amoebozoa__291e8086-record
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: git_commit at Git base b35a65277f6fa952ffad11b1c642a9655074a40f.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| habitatmech:GOLD.6a7bcba80d | data/habitats/host_associated/amoebozoa__291e8086.yaml | generated | amoebozoan-associated environment |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Post-remediation just validate data/habitats/host_associated/amoebozoa__291e8086.yaml | passed | True | habitatmech:GOLD.6a7bcba80d | Executed 2026-10-15T03:08:26Z to 2026-10-15T03:08:37Z. No issues found |
+| Post-remediation just validate-strict data/habitats/host_associated/amniotic_fluid__8d4e7d01.yaml | passed | True | habitatmech:GOLD.6a7bcba80d | Executed 2026-10-15T03:08:37Z to 2026-10-15T03:08:57Z. files scanned:      3<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                reports/instance_validation_failures.tsv |
+| Post-remediation just validate-history | passed | True | habitatmech:GOLD.6a7bcba80d | Executed 2026-10-15T03:08:57Z to 2026-10-15T03:09:25Z. No issues found<br>730 history record(s) valid against src/habitatmech/schema/history.yaml |
+| Post-remediation just provenance-check | passed | True | habitatmech:GOLD.6a7bcba80d | Executed 2026-10-15T03:09:25Z to 2026-10-15T03:09:26Z. provenance current: 14 committed inventories, 2 GOLD sources |
+| Post-remediation just verify-corpus | passed | True | habitatmech:GOLD.6a7bcba80d | Executed 2026-10-15T03:09:26Z to 2026-10-15T03:10:09Z. expected 3208 records, found 3208 on disk<br>  missing:   0<br>  extra:     0<br>  differing: 0<br><br>corpus reproduces exactly from data/raw/ |
+| Post-remediation just validate-causal-all | passed | True | habitatmech:GOLD.6a7bcba80d | Executed 2026-10-15T03:10:09Z to 2026-10-15T03:10:20Z. validated 32 causal-graph curation file(s) with 32 graph(s) |
+| Post-remediation just term-requests-check | passed | True | habitatmech:GOLD.6a7bcba80d | Executed 2026-10-15T03:10:20Z to 2026-10-15T03:11:11Z. term-request table is current (110 terms) |
+| Post-remediation just validate-products | passed | True | habitatmech:GOLD.6a7bcba80d | Executed 2026-10-15T03:11:11Z to 2026-10-15T03:13:13Z. id↔label correspondence summary:<br>          OK_CANONICAL: 1174<br>            OK_SYNONYM: 1<br>          OK_EXCEPTION: 5<br>    SKIPPED_NO_ADAPTER: 2061<br><br>✅ All id↔label pairs correspond. |
+| Post-remediation /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/.venv/bin/python -m pytest | passed | True | habitatmech:GOLD.6a7bcba80d | Executed 2026-10-15T03:13:13Z to 2026-10-15T03:18:17Z. ........................................................................ [ 80%]<br>..................                                                       [100%]<br>90 passed in 301.90s (0:05:01) |
+| Post-remediation /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/.venv/bin/python -m ruff | passed | True | habitatmech:GOLD.6a7bcba80d | Executed 2026-10-15T03:18:17Z to 2026-10-15T03:18:17Z. All checks passed! |
+| Post-remediation git diff --check | passed | True | habitatmech:GOLD.6a7bcba80d | Executed 2026-10-15T03:18:17Z to 2026-10-15T03:18:19Z. |
+| Original source-member recovery | unavailable | False | habitatmech:GOLD.6a7bcba80d | Original GOLD member roles remain uncertified. Hierarchy and synonym correction is not proof of taxon occurrence, healthy prenatal microbiome or original study membership. |
+| Final publication gates | unavailable | False | habitatmech:GOLD.6a7bcba80d | Final retained-archive verification, semantic map/site freshness and protected final-head QC are publication requirements reported separately. They are not predeclared successful here. |
+| iModulonDB applicability | not_applicable | False | habitatmech:GOLD.6a7bcba80d | The record has no gene, regulator or expression claim; no molecular adapter query is needed. |
+
+## Scientific And Domain Assessments
+
+### Supported correction through guarded maintained input
+
+nomenclature: supported. Targets: habitatmech:GOLD.6a7bcba80d.
+
+The authored Amoebozoa exact synonym is removed and the guarded source-label exclusion prevents automatic recreation. The environmental definition, both supported parents, two GOLD attestations, 13 ORGANISM versus zero-count omission, source merge and UNGROUNDED/REVIEWED state remain intact. All prior generated events are preserved. The separate historical DEFINED-event replacement remains minor/open under #297; this correction does not restore the older event or fix the shared historical design.
+
+### Complete-record identity, source evidence and native status
+
+consistency: supported. Targets: habitatmech:GOLD.6a7bcba80d.
+
+The complete target was re-read. All fields outside the tested correction and appended history event match the prior record. Exact source identity, raw rows, definition and independently supported parents remain as assessed in the predecessor. No optional parameters, causal edges, characteristic taxa or biological claims are added.
+
+### Separate unresolved predecessor finding
+
+provenance: concern. Targets: habitatmech:GOLD.6a7bcba80d.
+
+The record still has the original DEFINED-event replacement tracked by #297. Preserving the current bytes prevents a new rewrite, but does not repair the historical one.
+
+## Findings
+
+### F1: Host clade is asserted as an exact habitat synonym
+
+major / resolved / confirmed; issue key: gold-6a7bcba80d-host-name-exact-synonym.
+
+Pre-fix observation: Amoebozoa is a host-clade name, not an exact synonym of the environmental system defined here. Removing only the authored alias is insufficient because apply_curated_definitions can automatically re-add the old source label; the record has no matching organism xref decision to suppress that fallback.
+
+Disposition: The authored Amoebozoa exact synonym is removed and the guarded source-label exclusion prevents automatic recreation. The environmental definition, both supported parents, two GOLD attestations, 13 ORGANISM versus zero-count omission, source merge and UNGROUNDED/REVIEWED state remain intact. All prior generated events are preserved. The separate historical DEFINED-event replacement remains minor/open under #297; this correction does not restore the older event or fix the shared historical design.
+
+### F2: Later notes update replaces the original generated definition event
+
+minor / open / confirmed; issue key: HM-AMOEBOZOA-001.
+
+Pre-fix observation: The current DEFINED event reports the later source-merge date and rationale instead of retaining the original definition event. Separate append-only session records preserve the actual timeline, so this is a bounded provenance defect rather than a wrong biological identity or invalid merge.
+
+Disposition: The separate confirmed contract or historical provenance defect remains; the scoped parent/synonym correction does not repair it.
+
+## Recommended Actions And Acceptance Checks
+
+### ACT2
+
+Resolve #297 by separating immutable definition-event provenance from current term-request export notes. Recover the original event from inspected history and represent the later merge/notes update separately; do not merely backdate current merge-aware prose.
+
+- Test a later SAME_AS notes update with unchanged definition/genus and require original event preservation, separate later event and byte-identical repeated seeding.
+- Preserve exact source IDs, paths, counts and units; compare affected descendants and unrelated records, not only the target label.
+- Append a new session history for any separately authorized curation; never rewrite saved reviews or previous session records.
+- Run schema/strict, history, provenance, exact corpus reproduction, causal, term-request and configured label gates, then just qc.
+- Check actual semantic-input changes and regenerate map/site/redirect products through supported tooling when required; save an immutable successor with exact finding lineage.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| PREVIOUS | reviews/structured/20261015T024351Z-amoebozoa__291e8086-record/review.yaml | supports | Exact predecessor contains the inspected primary ontology, taxonomy and source evidence, original response hashes and access limitations. Reused scientific context, not independent approval or a claim of fresh external downloads. |
+| PATCH | curation/gold_parent_exclusions.tsv; curation/definition_source_label_exclusions.tsv; curation/term_requests.tsv; data/habitats/host_associated/amoebozoa__291e8086.yaml | supports | The authored Amoebozoa exact synonym is removed and the guarded source-label exclusion prevents automatic recreation. The environmental definition, both supported parents, two GOLD attestations, 13 ORGANISM versus zero-count omission, source merge and UNGROUNDED/REVIEWED state remain intact. All prior generated events are preserved. The separate historical DEFINED-event replacement remains minor/open under #297; this correction does not restore the older event or fix the shared historical design. |
+| REGRESSION | tests/test_amniotic_amoebozoan_repairs.py | supports | Complete-corpus counterfactual reconstructs former inputs and proves exactly three changed records, no changed IDs, preserved attestations/counts/statuses and prior events. Removing only the authored alias reproduces the automatic fallback. Repeated corpus construction is identical. |
+| SOURCE | data/raw/gold_ecosystem_paths.tsv; curation/decisions.tsv; src/habitatmech/schema/habitatmech.yaml | supports | The current complete target still matches its exact frozen source paths, collapsed nodes and ORGANISM count semantics; none of the decisions or source rows changed. Source-to-record mapping endpoint semantics and immutable definition-history concerns remain distinct from the repaired fields. |
+
+## Limits And Additional Notes
+
+- Same-agent scientific reassessment, not independent approval.
+- Original source-member evidence remains unavailable; no full-corpus, species-occurrence or SSSOM/KGX readiness certification.
+- Configured label correspondence skips 2061 no-adapter pairs. Final retained-archive and protected publication gates are pending at this observation.
+- The unresolved F2 finding remains open; this is not a clean-record verdict.
+- The native inspector captured current inputs after remediation; each hash was verified against exact committed blobs and disk bytes before saving. This is a review of that exact commit. Preserve its off-main base with an annotated remote provenance tag before squash and branch deletion.
+- All original review and history files remain immutable. New curation events and four session histories document the bounded changes; no status is promoted by review.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261015T031947Z-amoebozoa__291e8086-remediation
+kind: record
+repository: CultureBotAI/HabitatMech
+title: 'Remediation review: amoebozoan-associated environment'
+started_at: '2026-10-15T03:09:36Z'
+finished_at: '2026-10-15T03:19:47Z'
+reviewer:
+  identity: codex-gpt-5
+  kind: agent
+  model: gpt-5
+  independence: self_review
+  independence_basis: Continuing review agent. Complete target and maintained inputs
+    were independently reassessed from historical leads, but this is not independent
+    human or second-agent approval.
+skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'The authored Amoebozoa exact synonym is removed and the guarded source-label
+  exclusion prevents automatic recreation. The environmental definition, both supported
+  parents, two GOLD attestations, 13 ORGANISM versus zero-count omission, source merge
+  and UNGROUNDED/REVIEWED state remain intact. All prior generated events are preserved.
+  The separate historical DEFINED-event replacement remains minor/open under #297;
+  this correction does not restore the older event or fix the shared historical design.'
+source:
+  git_revision: b35a65277f6fa952ffad11b1c642a9655074a40f
+  state: git_commit
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/record_review.yaml
+    sha256: c2f5d0eb4c5744f5fe354c92184ddab144dc2688dba952b032b4f3d597bc08d6
+    role: context
+  - path: curation/decisions.tsv
+    sha256: d9c76d275d61b7fef860179b6d0472e54e15b2b027022d7a125a19f03881fd8e
+    role: context
+  - path: curation/definition_source_label_exclusions.tsv
+    sha256: a3e2880134344406dd3239ee041076df64c76407d311b71a16f2382c4146a177
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: be17ead1dfa258599ee8c31af96143b6415c059a3f0a48ac92ba6afa5c590831
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: 1a03f5fb7ade4232aadf5ad248c87da894a67e90ef3eab513849982429a9155e
+    role: context
+  - path: data/habitats/host_associated/amoebozoa__291e8086.yaml
+    sha256: 770afeef2886c11f83a173dd6ef1777eda9a672fb6ecab52effcdd7212602cb8
+    role: target
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: docs/CURATION.md
+    sha256: f3f5d3d033fa7e7c1d78571959fc2e62e0b0a625f47dba1413657e8cf944b322
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 105b3c8e10f43ce689b05d3089d3a8be1d713a98dd6806e11be37ebd85b10590
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/mappings/amoebozoa__291e8086/2026-10-15T030405Z-codex-gpt-5-b25eb3.yaml
+    sha256: bbcbd99ad1313f499434aa4434c241a8fb6e0ba112d58ac07df49fd48d25a11b
+    role: context
+  - path: history/mappings/amoebozoa__291e8086/2026-10-15T030408Z-codex-gpt-5-785be8.yaml
+    sha256: 12c129ac4eb78b6342d4b1f54e6ea9e9704d71502998115a099b987c93e67efc
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reviews/structured/20261015T024351Z-amoebozoa__291e8086-record/review.md
+    sha256: f9b2762c2827976a8f68c3aedb4bc4554ba4fca696d8f2735c449908af2cc5f3
+    role: context
+  - path: reviews/structured/20261015T024351Z-amoebozoa__291e8086-record/review.yaml
+    sha256: 1b44141f49f84cc24aee958a4bacb7fd7e67964162b6f7537e862b3ac2593c38
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: src/habitatmech/curate/definition_source_label_exclusions.py
+    sha256: 0c13e83fe17613e8b9f5b346d1259104172f8c1de42f911625579b903707625d
+    role: context
+  - path: src/habitatmech/curate/gold_parent_exclusions.py
+    sha256: 044d8277509a9b1f6e4f2d7ea1fb82319b41e09ffef7788738a0f4ed0d0b63af
+    role: context
+  - path: src/habitatmech/extract.py
+    sha256: 4d9397bda649381a5daf81937369531c6dc8b4518d6c7047e6f3f14e605bf860
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 7e3cda3dadb9c7462498e5014bf38ef730068212f8f9cb131e3fce383c21d10e
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
+    role: context
+  - path: tests/test_amniotic_amoebozoan_repairs.py
+    sha256: 07de38a179f078286a7830c5951c5ad84ca93e6110e33bea6c555663033d2be8
+    role: context
+targets:
+- target_id: habitatmech:GOLD.6a7bcba80d
+  path: data/habitats/host_associated/amoebozoa__291e8086.yaml
+  label: amoebozoan-associated environment
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained curation input or implementation; never patch generated habitat
+      YAML
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained curation input or implementation; never patch generated habitat
+      YAML
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Maintained curation input or implementation; never patch generated habitat
+      YAML
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained curation input or implementation; never patch generated habitat
+      YAML
+scope:
+  description: Complete current target reread and exact finding reassessment after
+    scoped maintained-input remediation; not a new source-member reconstruction.
+  selection: Exact successor to 20261015T024351Z-amoebozoa__291e8086-record
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - habitatmech:GOLD.6a7bcba80d
+checks:
+- check_id: FIX2
+  name: Post-remediation just validate data/habitats/host_associated/amoebozoa__291e8086.yaml
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate data/habitats/host_associated/amoebozoa__291e8086.yaml
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.6a7bcba80d
+  summary: Executed 2026-10-15T03:08:26Z to 2026-10-15T03:08:37Z. No issues found
+- check_id: FIX3
+  name: Post-remediation just validate-strict data/habitats/host_associated/amniotic_fluid__8d4e7d01.yaml
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-strict
+    data/habitats/host_associated/amniotic_fluid__8d4e7d01.yaml data/habitats/host_associated/amniotic_fluid__ff65cb2e.yaml
+    data/habitats/host_associated/amoebozoa__291e8086.yaml
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.6a7bcba80d
+  summary: "Executed 2026-10-15T03:08:37Z to 2026-10-15T03:08:57Z. files scanned:\
+    \      3\n  files with ERROR:   0\n  total ERROR rows:   0\n  TSV:           \
+    \     reports/instance_validation_failures.tsv"
+- check_id: FIX4
+  name: Post-remediation just validate-history
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-history
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.6a7bcba80d
+  summary: 'Executed 2026-10-15T03:08:57Z to 2026-10-15T03:09:25Z. No issues found
+
+    730 history record(s) valid against src/habitatmech/schema/history.yaml'
+- check_id: FIX5
+  name: Post-remediation just provenance-check
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just provenance-check
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.6a7bcba80d
+  summary: 'Executed 2026-10-15T03:09:25Z to 2026-10-15T03:09:26Z. provenance current:
+    14 committed inventories, 2 GOLD sources'
+- check_id: FIX6
+  name: Post-remediation just verify-corpus
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just verify-corpus
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.6a7bcba80d
+  summary: "Executed 2026-10-15T03:09:26Z to 2026-10-15T03:10:09Z. expected 3208 records,\
+    \ found 3208 on disk\n  missing:   0\n  extra:     0\n  differing: 0\n\ncorpus\
+    \ reproduces exactly from data/raw/"
+- check_id: FIX7
+  name: Post-remediation just validate-causal-all
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-causal-all
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.6a7bcba80d
+  summary: Executed 2026-10-15T03:10:09Z to 2026-10-15T03:10:20Z. validated 32 causal-graph
+    curation file(s) with 32 graph(s)
+- check_id: FIX8
+  name: Post-remediation just term-requests-check
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just term-requests-check
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.6a7bcba80d
+  summary: Executed 2026-10-15T03:10:20Z to 2026-10-15T03:11:11Z. term-request table
+    is current (110 terms)
+- check_id: FIX9
+  name: Post-remediation just validate-products
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-products
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.6a7bcba80d
+  summary: "Executed 2026-10-15T03:11:11Z to 2026-10-15T03:13:13Z. id↔label correspondence\
+    \ summary:\n          OK_CANONICAL: 1174\n            OK_SYNONYM: 1\n        \
+    \  OK_EXCEPTION: 5\n    SKIPPED_NO_ADAPTER: 2061\n\n✅ All id↔label pairs correspond."
+- check_id: FIX10
+  name: Post-remediation /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/.venv/bin/python
+    -m pytest
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/.venv/bin/python
+    -m pytest -q tests/test_amniotic_amoebozoan_repairs.py tests/test_definition_source_label_exclusions.py
+    tests/test_gold_parent_exclusions.py tests/test_curated_definitions.py
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.6a7bcba80d
+  summary: 'Executed 2026-10-15T03:13:13Z to 2026-10-15T03:18:17Z. ........................................................................
+    [ 80%]
+
+    ..................                                                       [100%]
+
+    90 passed in 301.90s (0:05:01)'
+- check_id: FIX11
+  name: Post-remediation /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/.venv/bin/python
+    -m ruff
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/.venv/bin/python
+    -m ruff check .
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.6a7bcba80d
+  summary: Executed 2026-10-15T03:18:17Z to 2026-10-15T03:18:17Z. All checks passed!
+- check_id: FIX12
+  name: Post-remediation git diff --check
+  required: true
+  status: passed
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache git diff --check 45c39c0ae63d7825c13b586b8e99e68a396af394
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.6a7bcba80d
+  summary: Executed 2026-10-15T03:18:17Z to 2026-10-15T03:18:19Z.
+- check_id: MEMBERS
+  name: Original source-member recovery
+  required: false
+  status: unavailable
+  target_ids:
+  - habitatmech:GOLD.6a7bcba80d
+  summary: Original GOLD member roles remain uncertified. Hierarchy and synonym correction
+    is not proof of taxon occurrence, healthy prenatal microbiome or original study
+    membership.
+- check_id: PUBLICATION
+  name: Final publication gates
+  required: false
+  status: unavailable
+  target_ids:
+  - habitatmech:GOLD.6a7bcba80d
+  summary: Final retained-archive verification, semantic map/site freshness and protected
+    final-head QC are publication requirements reported separately. They are not predeclared
+    successful here.
+- check_id: MOLECULAR
+  name: iModulonDB applicability
+  required: false
+  status: not_applicable
+  target_ids:
+  - habitatmech:GOLD.6a7bcba80d
+  summary: The record has no gene, regulator or expression claim; no molecular adapter
+    query is needed.
+evidence:
+- evidence_id: PREVIOUS
+  kind: prior_review
+  reference: reviews/structured/20261015T024351Z-amoebozoa__291e8086-record/review.yaml
+  accessed_at: '2026-10-15T03:19:47Z'
+  support: supports
+  summary: Exact predecessor contains the inspected primary ontology, taxonomy and
+    source evidence, original response hashes and access limitations. Reused scientific
+    context, not independent approval or a claim of fresh external downloads.
+- evidence_id: PATCH
+  kind: record_content
+  reference: curation/gold_parent_exclusions.tsv; curation/definition_source_label_exclusions.tsv;
+    curation/term_requests.tsv; data/habitats/host_associated/amoebozoa__291e8086.yaml
+  accessed_at: '2026-10-15T03:19:47Z'
+  support: supports
+  summary: 'The authored Amoebozoa exact synonym is removed and the guarded source-label
+    exclusion prevents automatic recreation. The environmental definition, both supported
+    parents, two GOLD attestations, 13 ORGANISM versus zero-count omission, source
+    merge and UNGROUNDED/REVIEWED state remain intact. All prior generated events
+    are preserved. The separate historical DEFINED-event replacement remains minor/open
+    under #297; this correction does not restore the older event or fix the shared
+    historical design.'
+- evidence_id: REGRESSION
+  kind: validation
+  reference: tests/test_amniotic_amoebozoan_repairs.py
+  accessed_at: '2026-10-15T03:19:47Z'
+  support: supports
+  summary: Complete-corpus counterfactual reconstructs former inputs and proves exactly
+    three changed records, no changed IDs, preserved attestations/counts/statuses
+    and prior events. Removing only the authored alias reproduces the automatic fallback.
+    Repeated corpus construction is identical.
+- evidence_id: SOURCE
+  kind: record_content
+  reference: data/raw/gold_ecosystem_paths.tsv; curation/decisions.tsv; src/habitatmech/schema/habitatmech.yaml
+  accessed_at: '2026-10-15T03:19:47Z'
+  support: supports
+  summary: The current complete target still matches its exact frozen source paths,
+    collapsed nodes and ORGANISM count semantics; none of the decisions or source
+    rows changed. Source-to-record mapping endpoint semantics and immutable definition-history
+    concerns remain distinct from the repaired fields.
+assessments:
+- assessment_id: REPAIR
+  area: nomenclature
+  topic: Supported correction through guarded maintained input
+  outcome: supported
+  target_ids:
+  - habitatmech:GOLD.6a7bcba80d
+  evidence_ids:
+  - PREVIOUS
+  - PATCH
+  - REGRESSION
+  summary: 'The authored Amoebozoa exact synonym is removed and the guarded source-label
+    exclusion prevents automatic recreation. The environmental definition, both supported
+    parents, two GOLD attestations, 13 ORGANISM versus zero-count omission, source
+    merge and UNGROUNDED/REVIEWED state remain intact. All prior generated events
+    are preserved. The separate historical DEFINED-event replacement remains minor/open
+    under #297; this correction does not restore the older event or fix the shared
+    historical design.'
+- assessment_id: PRESERVATION
+  area: consistency
+  topic: Complete-record identity, source evidence and native status
+  outcome: supported
+  target_ids:
+  - habitatmech:GOLD.6a7bcba80d
+  evidence_ids:
+  - PREVIOUS
+  - REGRESSION
+  - SOURCE
+  summary: The complete target was re-read. All fields outside the tested correction
+    and appended history event match the prior record. Exact source identity, raw
+    rows, definition and independently supported parents remain as assessed in the
+    predecessor. No optional parameters, causal edges, characteristic taxa or biological
+    claims are added.
+- assessment_id: OPEN
+  area: provenance
+  topic: Separate unresolved predecessor finding
+  outcome: concern
+  target_ids:
+  - habitatmech:GOLD.6a7bcba80d
+  evidence_ids:
+  - PREVIOUS
+  - PATCH
+  - SOURCE
+  summary: 'The record still has the original DEFINED-event replacement tracked by
+    #297. Preserving the current bytes prevents a new rewrite, but does not repair
+    the historical one.'
+findings:
+- finding_id: F1
+  issue_key: gold-6a7bcba80d-host-name-exact-synonym
+  category: nomenclature
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Host clade is asserted as an exact habitat synonym
+  description: 'Pre-fix observation: Amoebozoa is a host-clade name, not an exact
+    synonym of the environmental system defined here. Removing only the authored alias
+    is insufficient because apply_curated_definitions can automatically re-add the
+    old source label; the record has no matching organism xref decision to suppress
+    that fallback.'
+  target_ids:
+  - habitatmech:GOLD.6a7bcba80d
+  field_paths:
+  - synonyms[0]
+  evidence_ids:
+  - PREVIOUS
+  - PATCH
+  - REGRESSION
+  - SOURCE
+  rule_id: Host/environment identity distinction and exact synonym scope
+  native_severity: major
+  normalization_reason: Native severity agrees with the shared record-review rubric.
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained curation input or implementation; never patch generated habitat
+      YAML
+  - repository: CultureBotAI/HabitatMech
+    path: curation/definition_source_label_exclusions.tsv
+    role: Maintained curation input or implementation; never patch generated habitat
+      YAML
+  previous_occurrences:
+  - repository: CultureBotAI/HabitatMech
+    review_id: 20261015T024351Z-amoebozoa__291e8086-record
+    finding_id: F1
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2154
+  disposition_reason: 'The authored Amoebozoa exact synonym is removed and the guarded
+    source-label exclusion prevents automatic recreation. The environmental definition,
+    both supported parents, two GOLD attestations, 13 ORGANISM versus zero-count omission,
+    source merge and UNGROUNDED/REVIEWED state remain intact. All prior generated
+    events are preserved. The separate historical DEFINED-event replacement remains
+    minor/open under #297; this correction does not restore the older event or fix
+    the shared historical design.'
+- finding_id: F2
+  issue_key: HM-AMOEBOZOA-001
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Later notes update replaces the original generated definition event
+  description: 'Pre-fix observation: The current DEFINED event reports the later source-merge
+    date and rationale instead of retaining the original definition event. Separate
+    append-only session records preserve the actual timeline, so this is a bounded
+    provenance defect rather than a wrong biological identity or invalid merge.'
+  target_ids:
+  - habitatmech:GOLD.6a7bcba80d
+  field_paths:
+  - curation_history[action=DEFINED]
+  evidence_ids:
+  - PREVIOUS
+  - PATCH
+  - REGRESSION
+  - SOURCE
+  rule_id: Curation history preservation
+  native_severity: minor
+  normalization_reason: Native severity agrees with the shared record-review rubric.
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained curation input or implementation; never patch generated habitat
+      YAML
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained curation input or implementation; never patch generated habitat
+      YAML
+  external_issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/297
+  previous_occurrences:
+  - repository: CultureBotAI/HabitatMech
+    review_id: 20261015T024351Z-amoebozoa__291e8086-record
+    finding_id: F2
+  disposition_reason: The separate confirmed contract or historical provenance defect
+    remains; the scoped parent/synonym correction does not repair it.
+actions:
+- action_id: ACT2
+  description: 'Resolve #297 by separating immutable definition-event provenance from
+    current term-request export notes. Recover the original event from inspected history
+    and represent the later merge/notes update separately; do not merely backdate
+    current merge-aware prose.'
+  finding_ids:
+  - F2
+  target_ids:
+  - habitatmech:GOLD.6a7bcba80d
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained curation input or implementation; never patch generated habitat
+      YAML
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained curation input or implementation; never patch generated habitat
+      YAML
+  acceptance_checks:
+  - Test a later SAME_AS notes update with unchanged definition/genus and require
+    original event preservation, separate later event and byte-identical repeated
+    seeding.
+  - Preserve exact source IDs, paths, counts and units; compare affected descendants
+    and unrelated records, not only the target label.
+  - Append a new session history for any separately authorized curation; never rewrite
+    saved reviews or previous session records.
+  - Run schema/strict, history, provenance, exact corpus reproduction, causal, term-request
+    and configured label gates, then just qc.
+  - Check actual semantic-input changes and regenerate map/site/redirect products
+    through supported tooling when required; save an immutable successor with exact
+    finding lineage.
+  generator: just seed; inspect the affected just seed-canary output before authorized
+    regeneration
+limitations:
+- Same-agent scientific reassessment, not independent approval.
+- Original source-member evidence remains unavailable; no full-corpus, species-occurrence
+  or SSSOM/KGX readiness certification.
+- Configured label correspondence skips 2061 no-adapter pairs. Final retained-archive
+  and protected publication gates are pending at this observation.
+- The unresolved F2 finding remains open; this is not a clean-record verdict.
+notes:
+- The native inspector captured current inputs after remediation; each hash was verified
+  against exact committed blobs and disk bytes before saving. This is a review of
+  that exact commit. Preserve its off-main base with an annotated remote provenance
+  tag before squash and branch deletion.
+- All original review and history files remain immutable. New curation events and
+  four session histories document the bounded changes; no status is promoted by review.
+tags:
+- individual-scientific-review
+- host-associated
+- read-only
+related_reviews:
+- repository: CultureBotAI/HabitatMech
+  review_id: 20261015T024351Z-amoebozoa__291e8086-record
+  relationship: Exact finding remediation successor retaining every affected predecessor
+    target
+```

@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: amoebozoa__291e8086
+session:
+  id: 2026-10-15T030408Z-codex-gpt-5-785be8
+  timestamp: '2026-10-15T03:04:08Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2154
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  - synonyms
+  summary: Repair reviewed fluid hierarchy or host-name synonym for amoebozoa__291e8086
+  details: 'Remove only the authored Amoebozoa exact synonym from the associated environment.
+    The guarded source-label exclusion prevents automatic reintroduction. The host clade and
+    its environment are distinct. Preserve the definition, genus, date, notes, original generated
+    events, both GOLD attestations and native status. Existing issue #297 remains open. The
+    initial regression reproduced missing guards before curation. Native canaries, full-corpus
+    counterfactual, corpus/site/map regeneration and protected final QC are required separately,
+    not predeclared successful. No raw inventory or saved review/history is edited.'

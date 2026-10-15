@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - UBERON:0000173
-- habitatmech:GOLD.433d96f0dd
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6329
@@ -20,3 +19,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.433d96f0dd
+    for habitatmech:GOLD.73051a70cb (Host-associated > Mammals: Human > Fetus > Amniotic
+    sac > Amniotic fluid). Scoped anatomy correction #1318 (20261015T024348Z-amniotic_fluid__ff65cb2e-record
+    F1): contained amniotic fluid is not a subtype of its sac, whether the source
+    means the enclosing membrane or cavity. Current UBERON:0000173, UBERON:0000305
+    and UBERON:0000301 distinguish those entities and typed location from subclass.
+    Exclude only the guarded source-container contribution; retain the distinct mint,
+    fluid genus, node 6329, full path, three ORGANISM assertions and NARROW/SEEDED
+    status. Do not merge source concepts or resolve sac scope by this edit. Mapping
+    endpoint issue #1398 remains open. https://purl.obolibrary.org/obo/UBERON_0000173'
