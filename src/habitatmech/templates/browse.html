@@ -1,20 +1,228 @@
 {% extends "base.html" %}
+{% block wrapclass %} wide{% endblock %}
 {% block title %}Browse — HabitatMech{% endblock %}
 {% block content %}
 <h1>Browse</h1>
 <p class="lede">{{ stats.total }} habitat records across {{ categories|length }} categories.</p>
-<div class="table-scroll" role="region" tabindex="0" aria-label="Habitat categories">
-<table>
-  <caption>Habitat categories</caption>
-  <thead><tr><th scope="col">Category</th><th scope="col" class="num">Records</th><th scope="col" class="num">Grounded</th><th scope="col">What it holds</th></tr></thead>
-  {% for c in categories %}
-  <tr>
-    <td><a href="category/{{ c.slug }}.html">{{ c.label }}</a></td>
-    <td class="num">{{ c.count }}</td>
-    <td class="num">{{ c.grounded }}</td>
-    <td class="meta">{{ c.description }}</td>
-  </tr>
-  {% endfor %}
-</table>
+
+<div class="browse-layout">
+  <aside class="facet-sidebar" aria-label="Filter habitats">
+    <h2>Filter habitats</h2>
+    <div class="facet-group">
+      <label class="facet-label" for="browse-q">Search corpus</label>
+      <input id="browse-q" class="facet-input" type="search" placeholder="Name, path, source, or category…" aria-label="Search habitats across all categories">
+    </div>
+    <div class="facet-group">
+      <label class="facet-label" for="browse-grounding">Grounding status</label>
+      <select id="browse-grounding" class="facet-select" name="grounding" aria-label="Filter by grounding status">
+        <option value="">All grounding statuses</option>
+        {% for g in groundings | default([]) %}
+        <option value="{{ g.name }}">{{ g.name }} ({{ g.count }})</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="facet-group">
+      <label class="facet-label" for="browse-sort">Sort order</label>
+      <select id="browse-sort" class="facet-select" name="sort" aria-label="Sort habitat records and categories">
+        <option value="assertions-desc">Assertions / Records (high–low)</option>
+        <option value="assertions-asc">Assertions / Records (low–high)</option>
+        <option value="name-asc">Name (A–Z)</option>
+        <option value="name-desc">Name (Z–A)</option>
+        <option value="grounding-asc">Grounding status (A–Z)</option>
+      </select>
+    </div>
+    <div class="facet-group">
+      <span class="facet-label">Categories</span>
+      <div class="facet-pills">
+        {% for c in categories %}
+        <a class="facet-pill" href="category/{{ c.slug }}.html">
+          <span>{{ c.label }}</span>
+          <span class="facet-count">{{ c.count }}</span>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="facet-group">
+      <button type="button" id="browse-reset" class="facet-reset">Reset filters</button>
+    </div>
+    <p class="meta" id="browse-count" aria-live="polite"></p>
+  </aside>
+
+  <div class="browse-main">
+    <div class="table-scroll" role="region" tabindex="0" aria-label="Habitat categories">
+    <table id="cat-tbl">
+      <caption>Habitat categories</caption>
+      <thead><tr><th scope="col">Category</th><th scope="col" class="num">Records</th><th scope="col" class="num">Grounded</th><th scope="col">What it holds</th></tr></thead>
+      <tbody>
+      {% for c in categories %}
+      <tr data-slug="{{ c.slug }}" data-label="{{ c.label }}" data-count="{{ c.count }}" data-grounded="{{ c.grounded }}">
+        <td><a href="category/{{ c.slug }}.html">{{ c.label }}</a></td>
+        <td class="num">{{ c.count }}</td>
+        <td class="num">{{ c.grounded }}</td>
+        <td class="meta">{{ c.description }}</td>
+      </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    </div>
+
+    <div class="table-scroll" role="region" tabindex="0" aria-label="Matching habitat records" id="global-hits-wrap" hidden>
+    <table id="global-hits">
+      <caption>Matching habitat records across all categories</caption>
+      <thead><tr><th scope="col">Habitat</th><th scope="col">Category</th><th scope="col">Source path</th><th scope="col">Grounding</th><th scope="col" class="num">Assertions</th><th scope="col">Sources</th></tr></thead>
+      <tbody></tbody>
+    </table>
+    </div>
+  </div>
 </div>
+
+<script>
+(function () {
+  var qInput = document.getElementById('browse-q');
+  var gSelect = document.getElementById('browse-grounding');
+  var sSelect = document.getElementById('browse-sort');
+  var resetBtn = document.getElementById('browse-reset');
+  var countEl = document.getElementById('browse-count');
+  var catBody = document.querySelector('#cat-tbl tbody');
+  var catRows = Array.prototype.slice.call(document.querySelectorAll('#cat-tbl tbody tr'));
+  var hitsWrap = document.getElementById('global-hits-wrap');
+  var hitsBody = document.querySelector('#global-hits tbody');
+  var allRecords = null;
+  var loading = false;
+
+  function esc(t) {
+    return String(t).replace(/[&<>"]/g, function (c) {
+      return {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c];
+    });
+  }
+
+  function syncUrl(q, g, s) {
+    if (!window.history || !window.history.replaceState) return;
+    var url = new URL(window.location.href);
+    if (q) url.searchParams.set('q', q);
+    else url.searchParams.delete('q');
+    if (g) url.searchParams.set('grounding', g);
+    else url.searchParams.delete('grounding');
+    if (s && s !== 'assertions-desc') url.searchParams.set('sort', s);
+    else url.searchParams.delete('sort');
+    window.history.replaceState(null, '', url.toString());
+  }
+
+  function sortCatRows(mode) {
+    if (!catBody) return;
+    var sorted = catRows.slice().sort(function (a, b) {
+      var la = (a.getAttribute('data-label') || '').toLowerCase();
+      var lb = (b.getAttribute('data-label') || '').toLowerCase();
+      var ca = parseInt(a.getAttribute('data-count') || '0', 10);
+      var cb = parseInt(b.getAttribute('data-count') || '0', 10);
+      if (mode === 'name-asc') return la.localeCompare(lb);
+      if (mode === 'name-desc') return lb.localeCompare(la);
+      if (mode === 'assertions-asc') return (ca - cb) || la.localeCompare(lb);
+      return (cb - ca) || la.localeCompare(lb);
+    });
+    sorted.forEach(function (tr) { catBody.appendChild(tr); });
+  }
+
+  function loadAllCategories(cb) {
+    if (allRecords !== null) { cb(); return; }
+    if (loading) return;
+    loading = true;
+    countEl.textContent = 'Loading category indexes…';
+    var cats = catRows.map(function (tr) {
+      return { slug: tr.getAttribute('data-slug'), label: tr.getAttribute('data-label') };
+    });
+    Promise.all(cats.map(function (c) {
+      return fetch('category/' + c.slug + '.json')
+        .then(function (r) { return r.ok ? r.json() : []; })
+        .then(function (rows) {
+          return rows.map(function (r) { return { catSlug: c.slug, catLabel: c.label, row: r }; });
+        })
+        .catch(function () { return []; });
+    })).then(function (chunks) {
+      allRecords = [].concat.apply([], chunks);
+      loading = false;
+      cb();
+    });
+  }
+
+  function apply() {
+    var q = qInput.value.trim().toLowerCase();
+    var g = gSelect.value;
+    var s = sSelect ? sSelect.value : 'assertions-desc';
+    syncUrl(qInput.value.trim(), g, s);
+    sortCatRows(s);
+
+    catRows.forEach(function (tr) {
+      var text = tr.textContent.toLowerCase();
+      var show = !q || text.indexOf(q) !== -1;
+      tr.classList.toggle('is-hidden', !show);
+    });
+
+    if (!q && !g) {
+      hitsWrap.hidden = true;
+      hitsBody.innerHTML = '';
+      countEl.textContent = '';
+      return;
+    }
+
+    loadAllCategories(function () {
+      var slugged = q.replace(/[^a-z0-9]+/g, '-');
+      var matches = (allRecords || []).filter(function (item) {
+        var r = item.row;
+        if (g && r[3] !== g) return false;
+        if (!q) return true;
+        var hay = (r[0] + ' ' + r[2] + ' ' + r[1] + ' ' + r[5] + ' ' + item.catLabel).toLowerCase();
+        return hay.indexOf(q) !== -1 || hay.indexOf(slugged) !== -1;
+      });
+      matches.sort(function (a, b) {
+        var ra = a.row, rb = b.row;
+        if (s === 'name-asc') return String(ra[0]).localeCompare(String(rb[0]));
+        if (s === 'name-desc') return String(rb[0]).localeCompare(String(ra[0]));
+        if (s === 'grounding-asc') return String(ra[3]).localeCompare(String(rb[3])) || (Number(rb[4]) - Number(ra[4]));
+        if (s === 'assertions-asc') return (Number(ra[4]) - Number(rb[4])) || String(ra[0]).localeCompare(String(rb[0]));
+        return (Number(rb[4]) - Number(ra[4])) || String(ra[0]).localeCompare(String(rb[0]));
+      });
+      var shown = matches.slice(0, 200);
+      hitsBody.innerHTML = shown.map(function (item) {
+        var r = item.row;
+        var warn = (r[3] === 'UNGROUNDED' || r[3] === 'NOT_APPLICABLE') ? ' warn' : '';
+        return '<tr><td><a href="habitats/' + esc(r[1]) + '.html">' + esc(r[0]) + '</a></td>' +
+               '<td><a href="category/' + esc(item.catSlug) + '.html">' + esc(item.catLabel) + '</a></td>' +
+               '<td class="meta">' + esc(r[2]) + '</td>' +
+               '<td><span class="pill' + warn + '">' + esc(r[3]) + '</span></td>' +
+               '<td class="num">' + esc(r[4]) + '</td>' +
+               '<td class="meta">' + esc(r[5]) + '</td></tr>';
+      }).join('');
+      hitsWrap.hidden = false;
+      countEl.textContent = 'Showing ' + shown.length + ' of ' + matches.length + ' matching habitats';
+      if (q && catRows.every(function (tr) { return tr.classList.contains('is-hidden'); })) {
+        catRows.forEach(function (tr) { tr.classList.remove('is-hidden'); });
+      }
+    });
+  }
+
+  qInput.addEventListener('input', apply);
+  gSelect.addEventListener('change', apply);
+  if (sSelect) sSelect.addEventListener('change', apply);
+  resetBtn.addEventListener('click', function () {
+    qInput.value = '';
+    gSelect.value = '';
+    if (sSelect) sSelect.value = 'assertions-desc';
+    apply();
+    qInput.focus();
+  });
+
+  var params = new URLSearchParams(window.location.search);
+  var initialQ = params.get('q');
+  var initialG = params.get('grounding');
+  var initialS = params.get('sort');
+  if (initialQ) qInput.value = initialQ;
+  if (initialG && gSelect) gSelect.value = initialG;
+  if (initialS && sSelect) sSelect.value = initialS;
+  if (initialQ || initialG || initialS) {
+    apply();
+  }
+})();
+</script>
 {% endblock %}
+

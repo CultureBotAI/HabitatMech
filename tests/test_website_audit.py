@@ -89,3 +89,27 @@ def test_map_shell_keeps_site_navigation_and_unchanged_bundle_destination():
 def test_custom_404_links_recover_from_nested_missing_paths():
     html = environment().get_template('not_found.html').render(root=site.SITE_BASE, stats={})
     assert f'href="{site.SITE_BASE}browse.html"' in html
+
+
+def test_unified_facets_search_and_theme_toggle_present():
+    env = environment()
+    index_html = env.get_template('index.html').render(stats={'total': 3209}, root='')
+    assert 'class="hero-search"' in index_html
+    assert 'theme-toggle.js' in index_html
+
+    browse_html = env.get_template('browse.html').render(stats={'total': 3209}, categories=[], root='')
+    assert 'class="browse-layout"' in browse_html
+    assert 'class="facet-sidebar"' in browse_html
+
+    cat_html = env.get_template('category.html').render(
+        category='AQUATIC', description='', records=[], total=0,
+        page=1, pager=[], index_url='aquatic.json', root='../', stats={}
+    )
+    assert 'class="browse-layout"' in cat_html
+    assert 'class="facet-sidebar"' in cat_html
+    assert 'class="page-search"' in cat_html
+
+    map_html = env.get_template('text_map.html').render(root='../', stats={}, text_map_enabled=True)
+    assert 'class="browse-layout"' in map_html
+    assert 'class="facet-sidebar"' in map_html
+

@@ -2,12 +2,114 @@
 {% block title %}Semantic text map — HabitatMech{% endblock %}
 {% block wrapclass %} wide{% endblock %}
 {% block content %}
+<div class="page-top-bar">
+  <div class="breadcrumbs"><a href="../browse.html">Browse</a> · <strong>Semantic text map</strong></div>
+  <form class="page-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all habitats…" aria-label="Search all habitat records">
+    <button type="submit">Search</button>
+  </form>
+</div>
+
 <h1>Semantic text map</h1>
-<p>The map below uses the shared, validated record-description projection. <a href="../text-map-source/index.html">Open the map on its own</a>.</p>
-<iframe id="text-map-view" title="Explore HabitatMech records by semantic similarity" src="../text-map-source/index.html" style="width:100%;height:80vh;min-height:38rem;border:1px solid var(--rule)"></iframe>
+<p>The map below uses the shared, validated record-description projection (<code>BAAI/bge-large-en-v1.5</code> + PaCMAP). <a href="../text-map-source/index.html">Open the map on its own</a>.</p>
+
+<div class="browse-layout">
+  <aside class="facet-sidebar" aria-label="Filter semantic text map">
+    <h2>Filter map</h2>
+    <div class="facet-group">
+      <label class="facet-label" for="map-q">Search points</label>
+      <input id="map-q" class="facet-input" type="search" placeholder="Name or identifier…" aria-label="Search points on the semantic text map">
+    </div>
+    <div class="facet-group">
+      <span class="facet-label">Namespace prefix</span>
+      <div class="facet-pills" id="prefix-pills">
+        <button type="button" class="facet-pill" data-prefix="" aria-pressed="true"><span>All prefixes</span></button>
+        <button type="button" class="facet-pill" data-prefix="ENVO:" aria-pressed="false"><span>ENVO</span></button>
+        <button type="button" class="facet-pill" data-prefix="UBERON:" aria-pressed="false"><span>UBERON</span></button>
+        <button type="button" class="facet-pill" data-prefix="BTO:" aria-pressed="false"><span>BTO</span></button>
+        <button type="button" class="facet-pill" data-prefix="FOODON:" aria-pressed="false"><span>FOODON</span></button>
+        <button type="button" class="facet-pill" data-prefix="PO:" aria-pressed="false"><span>PO</span></button>
+        <button type="button" class="facet-pill" data-prefix="habitatmech:" aria-pressed="false"><span>habitatmech</span></button>
+      </div>
+    </div>
+    {% if categories | default([]) %}
+    <div class="facet-group">
+      <span class="facet-label">Browse category tables</span>
+      <div class="facet-pills">
+        {% for c in categories %}
+        <a class="facet-pill" href="../category/{{ c.slug }}.html">
+          <span>{{ c.label }}</span>
+          <span class="facet-count">{{ c.count }}</span>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+    <div class="facet-group">
+      <button type="button" id="map-reset" class="facet-reset">Reset map filter</button>
+    </div>
+    <p class="meta" id="map-status" aria-live="polite"></p>
+  </aside>
+
+  <div class="browse-main">
+    <iframe id="text-map-view" title="Explore HabitatMech records by semantic similarity" src="../text-map-source/index.html" style="width:100%;height:80vh;min-height:38rem;border:1px solid var(--rule);border-radius:6px;background:#fff"></iframe>
+  </div>
+</div>
+
 <script>
 (function () {
   var frame = document.getElementById('text-map-view');
+  var qInput = document.getElementById('map-q');
+  var resetBtn = document.getElementById('map-reset');
+  var statusEl = document.getElementById('map-status');
+  var prefixBtns = Array.prototype.slice.call(document.querySelectorAll('#prefix-pills .facet-pill'));
+
+  function syncUrl(q) {
+    if (!window.history || !window.history.replaceState) return;
+    var url = new URL(window.location.href);
+    if (q) url.searchParams.set('q', q);
+    else url.searchParams.delete('q');
+    window.history.replaceState(null, '', url.toString());
+  }
+
+  function pushToFrame(val) {
+    syncUrl(val);
+    if (!frame.contentDocument) return;
+    var innerSearch = frame.contentDocument.getElementById('search');
+    var innerCount = frame.contentDocument.getElementById('match-count');
+    if (innerSearch) {
+      innerSearch.value = val;
+      innerSearch.dispatchEvent(new Event('input'));
+    }
+    if (innerCount && statusEl) {
+      statusEl.textContent = innerCount.textContent;
+    }
+  }
+
+  qInput.addEventListener('input', function () {
+    pushToFrame(qInput.value.trim());
+  });
+
+  prefixBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var p = btn.getAttribute('data-prefix') || '';
+      prefixBtns.forEach(function (b) {
+        b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+      });
+      qInput.value = p;
+      pushToFrame(p);
+    });
+  });
+
+  resetBtn.addEventListener('click', function () {
+    qInput.value = '';
+    prefixBtns.forEach(function (b) {
+      b.setAttribute('aria-pressed', b.getAttribute('data-prefix') === '' ? 'true' : 'false');
+    });
+    pushToFrame('');
+    qInput.focus();
+  });
+
   frame.addEventListener('load', function () {
     // The immutable shared page remains byte-identical. Record navigation
     // leaves the frame so readers retain normal full-page history and links.
@@ -17,7 +119,17 @@
         anchor.target = '_top';
       }
     });
+    var params = new URLSearchParams(window.location.search);
+    var initialQ = params.get('q');
+    if (initialQ) {
+      qInput.value = initialQ;
+      pushToFrame(initialQ);
+    } else {
+      var innerCount = frame.contentDocument.getElementById('match-count');
+      if (innerCount && statusEl) statusEl.textContent = innerCount.textContent;
+    }
   });
 })();
 </script>
 {% endblock %}
+

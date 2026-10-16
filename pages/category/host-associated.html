@@ -6,6 +6,7 @@
 <title>HOST_ASSOCIATED — HabitatMech</title>
 <meta name="description" content="Microbial habitats harmonized from GOLD, BacDive, PREGO and Madin et al., grounded in ENVO/UBERON/FOODON/BTO/PO.">
 <link rel="stylesheet" href="../style.css">
+<script src="../theme-toggle.js"></script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -17,2136 +18,2231 @@
     <a href="../index.html">Overview</a>
     <a href="../browse.html">Browse</a>
     <a href="../term-requests.html">ENVO term requests</a>
+    <a href="../index.html#downloads">Downloads &amp; Schema</a>
     <a href="https://github.com/CultureBotAI/HabitatMech">Source</a>
     <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
 <main id="main-content" tabindex="-1">
+<div class="page-top-bar">
+  <div class="breadcrumbs"><a href="../browse.html">Browse</a> · <strong>HOST_ASSOCIATED</strong></div>
+  <form class="page-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all categories…" aria-label="Search all habitat categories">
+    <button type="submit">Search</button>
+  </form>
+</div>
+
 <h1>HOST_ASSOCIATED</h1>
 <p class="lede">1651 habitat records. Habitats defined by a living host, including anatomical sites.</p>
 <p class="meta">The source path is shown because a record's label is only the last
 step of it: "Cattle barn" under Air is the air sampled in a cattle barn, not the
 barn. The category prefix is trimmed off it, and the identifier lives on each
 record's own page — the link already carries it.</p>
-<input class="searchbox" id="q" type="search" data-index="host-associated.json" data-total="1651" placeholder="Filter all 1651 records…" aria-label="Filter records">
-<p class="meta" id="count" aria-live="polite"></p>
-<button type="button" id="show-more" hidden>Show more matches</button>
-<button type="button" id="clear-filter" hidden>Clear filter</button>
-<div class="table-scroll" role="region" tabindex="0" aria-label="HOST_ASSOCIATED habitats">
-<table id="tbl">
-  <caption>HOST_ASSOCIATED habitats</caption>
-  <thead><tr><th scope="col">Habitat</th><th scope="col">Source path</th><th scope="col">Grounding</th><th scope="col" class="num">Assertions</th><th scope="col">Sources</th></tr></thead>
-  <tbody>
-  <tr>
-    <td><a href="../habitats/human-associated-environment-habitatmech-gold-cd0b0940e5.html">human-associated environment</a></td>
-    <td class="meta">Human</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">52129</td>
-    <td class="meta">BACDIVE, GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/environmental-system-determined-by-an-organism-envo-01001000.html">environmental system determined by an organism</a></td>
-    <td class="meta">Host</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">28888</td>
-    <td class="meta">BACDIVE, GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/feces-uberon-0001988.html">feces</a></td>
-    <td class="meta">Feces-Stool</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">22184</td>
-    <td class="meta">BACDIVE, GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/plant-associated-environment-envo-01001001.html">plant-associated environment</a></td>
-    <td class="meta">Herbaceous-plants-Grass,Crops</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">16295</td>
-    <td class="meta">BACDIVE, ENVIRONMENTS_TABLE, GOLD, MADIN</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/blood-habitatmech-gold-d25ff4a586.html">Blood</a></td>
-    <td class="meta">Mammals: Human &gt; Circulatory system &gt; Blood</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">7375</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/mammal-associated-environment-habitatmech-gold-e889967f4f.html">mammal-associated environment</a></td>
-    <td class="meta">Mammals</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">6104</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/endothermic-animal-associated-environment-habitatmech-bacdive-3d543e6b49.html">endothermic-animal-associated environment</a></td>
-    <td class="meta">host_animal_endotherm</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">5130</td>
-    <td class="meta">MADIN</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/nasopharynx-habitatmech-gold-6d36ab6e3c.html">Nasopharynx</a></td>
-    <td class="meta">Mammals: Human &gt; Respiratory system &gt; Pharynx/Throat &gt; Nasopharynx</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">5080</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/rumen-habitatmech-gold-c1f33a02a6.html">Rumen</a></td>
-    <td class="meta">Mammals &gt; Digestive system &gt; Foregut &gt; Rumen</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">4989</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/sputum-uberon-0007311.html">sputum</a></td>
-    <td class="meta">Mammals: Human &gt; Respiratory system &gt; Sputum/Phlegm</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">4968</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/plant-bto-0001481.html">plant</a></td>
-    <td class="meta">plant</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">3150</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/bacterium-associated-environment-habitatmech-gold-029baaef9e.html">bacterium-associated environment</a></td>
-    <td class="meta">Microbial &gt; Bacteria</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">3017</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/leaf-po-0025034.html">leaf</a></td>
-    <td class="meta">Leaf-Phyllosphere</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">2868</td>
-    <td class="meta">BACDIVE, ENVIRONMENTS_TABLE, GOLD, MADIN</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/root-po-0009005.html">root</a></td>
-    <td class="meta">host_plant_root-associated</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">2809</td>
-    <td class="meta">ENVIRONMENTS_TABLE, GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/respiratory-system-habitatmech-gold-e36ba981d1.html">Respiratory system</a></td>
-    <td class="meta">Mammals: Human &gt; Respiratory system</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">2496</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/urine-habitatmech-gold-253304a381.html">Urine</a></td>
-    <td class="meta">Mammals: Human &gt; Urinary system &gt; Urine</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">2290</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/rhizosphere-envo-00005801.html">rhizosphere</a></td>
-    <td class="meta">Plants &gt; Roots &gt; Rhizosphere</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">2130</td>
-    <td class="meta">GOLD, PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/bird-associated-environment-habitatmech-gold-47e603cf4f.html">bird-associated environment</a></td>
-    <td class="meta">Birds</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">1848</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/insect-associated-environment-habitatmech-gold-dba2a83b95.html">insect-associated environment</a></td>
-    <td class="meta">Arthropoda: Insects</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">1833</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/digestive-system-habitatmech-gold-f6720bccf0.html">Digestive system</a></td>
-    <td class="meta">Mammals: Human &gt; Digestive system</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">1443</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/nodule-habitatmech-gold-fe59a0bfb1.html">Nodule</a></td>
-    <td class="meta">Plants &gt; Roots &gt; Nodule</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">1422</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/fish-associated-environment-habitatmech-gold-3d529a667e.html">fish-associated environment</a></td>
-    <td class="meta">Fish</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">1350</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/skin-bto-0001253.html">skin</a></td>
-    <td class="meta">skin</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">1116</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/oral-cavity-habitatmech-gold-99880772e1.html">Oral cavity</a></td>
-    <td class="meta">Mammals: Human &gt; Digestive system &gt; Oral cavity</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">1032</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/gut-bto-0000545.html">gut</a></td>
-    <td class="meta">gut</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">1005</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/ectothermic-animal-associated-environment-habitatmech-bacdive-e68bf42dcb.html">ectothermic-animal-associated environment</a></td>
-    <td class="meta">host_animal_ectotherm</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">999</td>
-    <td class="meta">MADIN</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/stomach-habitatmech-gold-6d0c170e7a.html">Stomach</a></td>
-    <td class="meta">Mammals: Human &gt; Digestive system &gt; Stomach</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">886</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/tree-associated-environment-habitatmech-bacdive-3192a0f47e.html">tree-associated environment</a></td>
-    <td class="meta">Tree</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">872</td>
-    <td class="meta">BACDIVE</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/milk-uberon-0001913.html">milk</a></td>
-    <td class="meta">milk</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">813</td>
-    <td class="meta">ENVIRONMENTS_TABLE, GOLD, MADIN</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/root-bto-0001188.html">root</a></td>
-    <td class="meta">root</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">794</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/mollusc-associated-environment-habitatmech-gold-6acc0797e9.html">mollusc-associated environment</a></td>
-    <td class="meta">Mollusca</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">784</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/skin-habitatmech-gold-4b37ab4b76.html">Skin</a></td>
-    <td class="meta">Mammals: Human &gt; Integumentary system &gt; Skin</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">754</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/gut-habitatmech-gold-617e6352cb.html">Gut</a></td>
-    <td class="meta">Arthropoda: Insects &gt; Digestive system &gt; Gut</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">742</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/respiratory-tract-uberon-0000065.html">respiratory tract</a></td>
-    <td class="meta">respiratory tract</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">735</td>
-    <td class="meta">MADIN</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/digestive-system-habitatmech-gold-c8e85f3c84.html">Digestive system</a></td>
-    <td class="meta">Mammals &gt; Digestive system</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">681</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/fungi-associated-environment-envo-01001041.html">fungi-associated environment</a></td>
-    <td class="meta">host_fungus</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">673</td>
-    <td class="meta">ENVIRONMENTS_TABLE, GOLD, MADIN</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/wood-bto-0005516.html">wood</a></td>
-    <td class="meta">Timber</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">624</td>
-    <td class="meta">BACDIVE, PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/invertebrate-associated-environment-habitatmech-gold-4d792ac724.html">invertebrate-associated environment</a></td>
-    <td class="meta">Invertebrates</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">621</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/bovine-associated-environment-habitatmech-bacdive-a4a67c4a7f.html">bovine-associated environment</a></td>
-    <td class="meta">Bovinae-Cow,-Cattle</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">619</td>
-    <td class="meta">BACDIVE</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/soil-habitatmech-gold-067f7f5e2a.html">Soil</a></td>
-    <td class="meta">Plants &gt; Roots &gt; Rhizosphere &gt; Soil</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">614</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/inflorescence-bto-0000628.html">inflorescence</a></td>
-    <td class="meta">inflorescence</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">607</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/rectum-habitatmech-gold-b6d84c219e.html">Rectum</a></td>
-    <td class="meta">Mammals: Human &gt; Digestive system &gt; Large intestine &gt; Rectum</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">602</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/crustacean-associated-environment-habitatmech-gold-2959225799.html">crustacean-associated environment</a></td>
-    <td class="meta">Arthropoda: Crustaceans</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">598</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/seed-po-0009010.html">seed</a></td>
-    <td class="meta">Plants &gt; Seeds</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">573</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/myriapod-associated-environment-habitatmech-gold-2333d6225a.html">myriapod-associated environment</a></td>
-    <td class="meta">Arthropoda: Myriapoda</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">569</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/cecum-bto-0000166.html">cecum</a></td>
-    <td class="meta">cecum</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">549</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/hemolymph-bto-0000572.html">hemolymph</a></td>
-    <td class="meta">hemolymph</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">540</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/suid-associated-environment-habitatmech-bacdive-3a13ee8a57.html">suid-associated environment</a></td>
-    <td class="meta">Suidae-Pig,Swine</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">521</td>
-    <td class="meta">BACDIVE</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/sponge-associated-environment-habitatmech-gold-64acf9132c.html">sponge-associated environment</a></td>
-    <td class="meta">Porifera-Sponges</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">499</td>
-    <td class="meta">BACDIVE, GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/stem-bto-0001300.html">stem</a></td>
-    <td class="meta">Plants &gt; Phyllosphere &gt; Stem</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">491</td>
-    <td class="meta">GOLD, PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/alga-associated-environment-habitatmech-gold-02383c20a7.html">alga-associated environment</a></td>
-    <td class="meta">Algae</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">482</td>
-    <td class="meta">GOLD, MADIN</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/vagina-habitatmech-gold-1daee83236.html">Vagina</a></td>
-    <td class="meta">Mammals: Human &gt; Reproductive system &gt; Vagina</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">475</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/microbe-associated-environment-habitatmech-gold-184623c963.html">microbe-associated environment</a></td>
-    <td class="meta">Microbial</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">465</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/rumen-habitatmech-gold-99bf401d4c.html">Rumen</a></td>
-    <td class="meta">Mammals &gt; Digestive system &gt; Stomach &gt; Rumen</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">450</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/blood-uberon-0000178.html">blood</a></td>
-    <td class="meta">host_animal_endotherm_blood</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">440</td>
-    <td class="meta">ENVIRONMENTS_TABLE, MADIN</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/mouth-bto-0001090.html">mouth</a></td>
-    <td class="meta">mouth</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">428</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/caprine-associated-environment-habitatmech-bacdive-4d3086a839.html">caprine-associated environment</a></td>
-    <td class="meta">Caprinae-Sheep/Goat</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">412</td>
-    <td class="meta">BACDIVE</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/root-nodule-envo-01000164.html">root nodule</a></td>
-    <td class="meta">host_plant_rootnodule</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">409</td>
-    <td class="meta">ENVIRONMENTS_TABLE, GOLD, MADIN</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/ceca-habitatmech-gold-d1f4d0cde1.html">Ceca</a></td>
-    <td class="meta">Birds &gt; Digestive system &gt; Large intestine &gt; Ceca</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">407</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/forearm-bto-0001447.html">forearm</a></td>
-    <td class="meta">forearm</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">404</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/intestine-bto-0000648.html">intestine</a></td>
-    <td class="meta">intestine</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">404</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/mammary-gland-habitatmech-gold-1a6a558ccf.html">Mammary gland</a></td>
-    <td class="meta">Mammals &gt; Integumentary system &gt; Mammary gland</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">400</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/hand-bto-0004668.html">hand</a></td>
-    <td class="meta">hand</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">392</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/coral-habitatmech-gold-a12eda25e9.html">Coral</a></td>
-    <td class="meta">Invertebrates &gt; Cnidaria &gt; Coral</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">382</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/adult-associated-environment-habitatmech-prego-57e0a5faae.html">adult-associated environment</a></td>
-    <td class="meta">adult</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">378</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/rumen-uberon-0007365.html">rumen</a></td>
-    <td class="meta">host_animal_endotherm_rumen</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">363</td>
-    <td class="meta">MADIN, PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/throat-uberon-0000341.html">throat</a></td>
-    <td class="meta">Mammals: Human &gt; Respiratory system &gt; Pharynx/Throat</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">358</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/urine-bto-0001419.html">urine</a></td>
-    <td class="meta">urine</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">345</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/canid-associated-environment-habitatmech-bacdive-33fde10528.html">canid-associated environment</a></td>
-    <td class="meta">Canidae-Dog</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">344</td>
-    <td class="meta">BACDIVE</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/leaf-bto-0000713.html">leaf</a></td>
-    <td class="meta">leaf</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">342</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/internal-tissue-environment-of-an-endothermic-animal-habitatmech-bacdive-319ac5f8f8.html">internal tissue environment of an endothermic animal</a></td>
-    <td class="meta">host_animal_endotherm_intratissue</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">341</td>
-    <td class="meta">MADIN</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/tonsil-bto-0001387.html">tonsil</a></td>
-    <td class="meta">Mammals: Human &gt; Lymphatic system &gt; Tonsils</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">328</td>
-    <td class="meta">GOLD, PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/lung-habitatmech-gold-0d343fdd03.html">Lung</a></td>
-    <td class="meta">Mammals &gt; Respiratory system &gt; Lung</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">326</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/murid-associated-environment-habitatmech-bacdive-ab17ecb10f.html">murid-associated environment</a></td>
-    <td class="meta">Muridae-Mouse/Rat</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">325</td>
-    <td class="meta">BACDIVE</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/ceca-habitatmech-gold-2629408066.html">Ceca</a></td>
-    <td class="meta">Birds &gt; Digestive system &gt; Ceca</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">315</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/cloaca-habitatmech-gold-037d4112ea.html">Cloaca</a></td>
-    <td class="meta">Birds &gt; Digestive system &gt; Large intestine &gt; Cloaca</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">309</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/sgs-cell-bto-0001210.html">SGS cell</a></td>
-    <td class="meta">SGS cell</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">307</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/vagina-uberon-0000996.html">vagina</a></td>
-    <td class="meta">host_animal_endotherm_vagina</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">304</td>
-    <td class="meta">ENVIRONMENTS_TABLE, MADIN</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/nematode-associated-environment-habitatmech-gold-45a8229be1.html">nematode-associated environment</a></td>
-    <td class="meta">Invertebrates &gt; Nematoda</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">300</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/urethra-habitatmech-gold-9f2dc7145e.html">Urethra</a></td>
-    <td class="meta">Mammals: Human &gt; Urinary system &gt; Urethra</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">295</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/saliva-bto-0001202.html">saliva</a></td>
-    <td class="meta">saliva</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">283</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/dorsum-bto-0001713.html">dorsum</a></td>
-    <td class="meta">dorsum</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">278</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/cnidarian-associated-environment-envo-01001179.html">cnidarian-associated environment</a></td>
-    <td class="meta">Cnidaria-Corals</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">272</td>
-    <td class="meta">BACDIVE, GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/oral-cavity-habitatmech-gold-92d1e65695.html">Oral cavity</a></td>
-    <td class="meta">Mammals &gt; Digestive system &gt; Oral cavity</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">270</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/equid-associated-environment-habitatmech-bacdive-09c3544e85.html">equid-associated environment</a></td>
-    <td class="meta">Equidae-Horse</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">269</td>
-    <td class="meta">BACDIVE</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/mycelium-bto-0001436.html">mycelium</a></td>
-    <td class="meta">Fungi &gt; Mycelium</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">260</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/skin-of-body-uberon-0002097.html">skin of body</a></td>
-    <td class="meta">Skin,-Nail,-Hair</td>
-    <td><span class="pill">BROAD</span></td>
-    <td class="num">260</td>
-    <td class="meta">BACDIVE</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/lung-habitatmech-gold-5bbc13545b.html">Lung</a></td>
-    <td class="meta">Mammals: Human &gt; Respiratory system &gt; Lung</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">258</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/oil-secretion-bto-0005373.html">oil secretion</a></td>
-    <td class="meta">oil secretion</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">256</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/gastric-mucosa-habitatmech-gold-0847225245.html">Gastric mucosa</a></td>
-    <td class="meta">Mammals: Human &gt; Digestive system &gt; Stomach &gt; Gastric mucosa</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">251</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/nasal-cavity-habitatmech-gold-bcb2f8b7f3.html">Nasal cavity</a></td>
-    <td class="meta">Mammals: Human &gt; Respiratory system &gt; Nasal cavity</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">251</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/column-bto-0005692.html">column</a></td>
-    <td class="meta">column</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">246</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/tongue-bto-0001385.html">tongue</a></td>
-    <td class="meta">tongue</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">245</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/whole-body-habitatmech-gold-d438ab5070.html">Whole body</a></td>
-    <td class="meta">Arthropoda: Chelicerates &gt; Whole body</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">244</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/immune-system-bto-0005810.html">immune system</a></td>
-    <td class="meta">immune system</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">241</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/rectum-habitatmech-gold-22ea687641.html">Rectum</a></td>
-    <td class="meta">Mammals &gt; Digestive system &gt; Large intestine &gt; Rectum</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">239</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/style-bto-0001313.html">style</a></td>
-    <td class="meta">style</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">239</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/brown-alga-associated-environment-habitatmech-gold-3e4ecbed63.html">brown-alga-associated environment</a></td>
-    <td class="meta">Algae &gt; Brown Algae</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">231</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/seedling-bto-0001228.html">seedling</a></td>
-    <td class="meta">seedling</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">228</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/spike-bto-0001278.html">spike</a></td>
-    <td class="meta">spike</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">228</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/nectar-bto-0000537.html">nectar</a></td>
-    <td class="meta">Plants &gt; Phyllosphere &gt; Anthosphere &gt; Nectar</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">227</td>
-    <td class="meta">GOLD, PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/crop-bto-0000301.html">crop</a></td>
-    <td class="meta">crop</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">218</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/diatom-associated-environment-habitatmech-gold-1276bea544.html">diatom-associated environment</a></td>
-    <td class="meta">Algae &gt; Diatoms</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">218</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/vagina-bto-0000243.html">vagina</a></td>
-    <td class="meta">vagina</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">218</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/leporid-associated-environment-habitatmech-bacdive-82dc7d11b9.html">leporid-associated environment</a></td>
-    <td class="meta">Leporidae-Rabbit/Hare</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">217</td>
-    <td class="meta">BACDIVE</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/ileum-bto-0000620.html">ileum</a></td>
-    <td class="meta">ileum</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">216</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/trachea-habitatmech-gold-8e47fd50d1.html">Trachea</a></td>
-    <td class="meta">Mammals: Human &gt; Respiratory system &gt; Trachea</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">213</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/vaginal-fluid-bto-0003084.html">vaginal fluid</a></td>
-    <td class="meta">vaginal fluid</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">213</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/blood-bto-0000089.html">blood</a></td>
-    <td class="meta">blood</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">206</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/digestive-system-habitatmech-gold-d7cff86ce8.html">Digestive system</a></td>
-    <td class="meta">Arthropoda: Insects &gt; Digestive system</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">203</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/unspecified-tissue-habitatmech-gold-77889da10a.html">Unspecified tissue</a></td>
-    <td class="meta">Mammals &gt; Unspecified system &gt; Unspecified organ &gt; Unspecified tissue</td>
-    <td><span class="pill warn">NOT_APPLICABLE</span></td>
-    <td class="num">201</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/nasopharynx-habitatmech-gold-c42160d113.html">Nasopharynx</a></td>
-    <td class="meta">Mammals &gt; Respiratory system &gt; Pharynx/Throat &gt; Nasopharynx</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">194</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/biofilm-bto-0002690.html">biofilm</a></td>
-    <td class="meta">biofilm</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">188</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/digestive-system-habitatmech-gold-fb6caa2908.html">Digestive system</a></td>
-    <td class="meta">Birds &gt; Digestive system</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">186</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/trachea-bto-0001388.html">trachea</a></td>
-    <td class="meta">trachea</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">186</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/nasal-cavity-habitatmech-gold-c9756cb050.html">Nasal cavity</a></td>
-    <td class="meta">Mammals &gt; Respiratory system &gt; Nasal cavity</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">184</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/mucosa-bto-0000886.html">mucosa</a></td>
-    <td class="meta">mucosa</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">184</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/cerebrospinal-fluid-habitatmech-gold-fe4f95287e.html">Cerebrospinal fluid</a></td>
-    <td class="meta">Mammals: Human &gt; Nervous system &gt; Subarachnoid space &gt; Cerebrospinal fluid</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">174</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/chelicerate-associated-environment-habitatmech-gold-44a2cbbd60.html">chelicerate-associated environment</a></td>
-    <td class="meta">Arthropoda: Chelicerates</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">169</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/brain-habitatmech-gold-752ac1c5aa.html">Brain</a></td>
-    <td class="meta">Mammals: Human &gt; Nervous system &gt; Brain</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">167</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/cecum-habitatmech-gold-a8f8c792c1.html">Cecum</a></td>
-    <td class="meta">Mammals &gt; Digestive system &gt; Large intestine &gt; Cecum</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">164</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/pitcher-bto-0001069.html">pitcher</a></td>
-    <td class="meta">Plants &gt; Pitcher</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">161</td>
-    <td class="meta">GOLD, PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/blood-habitatmech-gold-6c6aab19d3.html">Blood</a></td>
-    <td class="meta">Mammals &gt; Circulatory system &gt; Blood</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">160</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/oropharynx-habitatmech-gold-0fe2a08dac.html">Oropharynx</a></td>
-    <td class="meta">Mammals: Human &gt; Digestive system &gt; Pharynx/Throat &gt; Oropharynx</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">159</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/lymph-node-uberon-0000029.html">lymph node</a></td>
-    <td class="meta">Mammals &gt; Lymphatic system &gt; Lymph nodes</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">154</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/wood-habitatmech-gold-24903b113a.html">Wood</a></td>
-    <td class="meta">Plants &gt; Wood</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">153</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/respiratory-system-habitatmech-gold-fac4f63f3b.html">Respiratory system</a></td>
-    <td class="meta">Mammals &gt; Respiratory system</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">151</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/juvenile-bto-0002168.html">juvenile</a></td>
-    <td class="meta">juvenile</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">151</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/annelid-associated-environment-habitatmech-gold-6e10201167.html">annelid-associated environment</a></td>
-    <td class="meta">Annelida</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">150</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/stomach-bto-0001307.html">stomach</a></td>
-    <td class="meta">stomach</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">150</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/phyllosphere-habitatmech-gold-7406232b7e.html">Phyllosphere</a></td>
-    <td class="meta">Plants &gt; Phyllosphere</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">149</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/endophytes-habitatmech-gold-9731c6bb13.html">Endophytes</a></td>
-    <td class="meta">Plants &gt; Roots &gt; Rhizoplane &gt; Endophytes</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">148</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/fruiting-body-habitatmech-gold-92cbc36828.html">Fruiting body</a></td>
-    <td class="meta">Fungi &gt; Fruiting body</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">140</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/flagellum-bto-0002292.html">flagellum</a></td>
-    <td class="meta">flagellum</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">140</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/spore-bto-0001171.html">spore</a></td>
-    <td class="meta">Fungi &gt; Spore</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">135</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/reptile-associated-environment-habitatmech-gold-1b11698aaa.html">reptile-associated environment</a></td>
-    <td class="meta">Reptilia</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">133</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/bark-habitatmech-gold-0f6b0e6bf3.html">Bark</a></td>
-    <td class="meta">Plants &gt; Phyllosphere &gt; Caulosphere &gt; Bark</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">131</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/dental-plaque-habitatmech-gold-e287a243a5.html">Dental plaque</a></td>
-    <td class="meta">Mammals: Human &gt; Digestive system &gt; Oral cavity &gt; Dental plaque</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">130</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/rhizome-bto-0001181.html">rhizome</a></td>
-    <td class="meta">Plants &gt; Rhizome</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">130</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/leaf-surface-habitatmech-gold-82f62476b8.html">Leaf surface</a></td>
-    <td class="meta">Plants &gt; Phyllosphere &gt; Phylloplane/Leaf &gt; Leaf surface</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">128</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/urinary-system-habitatmech-gold-282ecbaf3b.html">Urinary system</a></td>
-    <td class="meta">Mammals: Human &gt; Urinary system</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">127</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/gastrointestinal-tract-bto-0000511.html">gastrointestinal tract</a></td>
-    <td class="meta">gastrointestinal tract</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">127</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/saliva-habitatmech-gold-a747c6ab38.html">Saliva</a></td>
-    <td class="meta">Mammals: Human &gt; Digestive system &gt; Oral cavity &gt; Saliva</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">125</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/bone-element-uberon-0001474.html">bone element</a></td>
-    <td class="meta">Bone</td>
-    <td><span class="pill">CLOSE</span></td>
-    <td class="num">125</td>
-    <td class="meta">BACDIVE, GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/trunk-bto-0001493.html">trunk</a></td>
-    <td class="meta">trunk</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">125</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/digestive-system-habitatmech-gold-8a68d0f6f5.html">Digestive system</a></td>
-    <td class="meta">Fish &gt; Digestive system</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">121</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/skin-habitatmech-gold-c896f9520f.html">Skin</a></td>
-    <td class="meta">Mammals &gt; Integumentary system &gt; Skin</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">121</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/alimentary-canal-bto-0000058.html">alimentary canal</a></td>
-    <td class="meta">alimentary canal</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">114</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/foot-bto-0000476.html">foot</a></td>
-    <td class="meta">Foot</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">114</td>
-    <td class="meta">BACDIVE</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/subgingival-plaque-habitatmech-gold-506abc1148.html">Subgingival plaque</a></td>
-    <td class="meta">Mammals: Human &gt; Digestive system &gt; Oral cavity &gt; Subgingival plaque</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">113</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/green-alga-associated-environment-habitatmech-gold-184cc9e802.html">green-alga-associated environment</a></td>
-    <td class="meta">Algae &gt; Green algae</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">108</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/dental-plaque-uberon-0016482.html">dental plaque</a></td>
-    <td class="meta">Plaque</td>
-    <td><span class="pill">CLOSE</span></td>
-    <td class="num">106</td>
-    <td class="meta">BACDIVE</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/regurgitated-nectar-habitatmech-gold-92b07790d7.html">Regurgitated nectar</a></td>
-    <td class="meta">Arthropoda: Insects &gt; Digestive system &gt; Foregut &gt; Regurgitated nectar</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">103</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/respiratory-system-bto-0000203.html">respiratory system</a></td>
-    <td class="meta">respiratory system</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">100</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/tissue-habitatmech-gold-95969208cd.html">Tissue</a></td>
-    <td class="meta">Plants &gt; Tissue</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">98</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/rodentia-other-habitatmech-bacdive-745e245512.html">Rodentia-Other</a></td>
-    <td class="meta">Rodentia-Other</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">97</td>
-    <td class="meta">BACDIVE</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/scale-bto-0005055.html">scale</a></td>
-    <td class="meta">scale</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">97</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/larva-bto-0000707.html">larva</a></td>
-    <td class="meta">larva</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">96</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/spinal-column-bto-0000818.html">spinal column</a></td>
-    <td class="meta">spinal column</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">96</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/felid-associated-environment-habitatmech-bacdive-e6b73de092.html">felid-associated environment</a></td>
-    <td class="meta">Felidae-Cat</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">95</td>
-    <td class="meta">BACDIVE</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/brain-habitatmech-gold-6bdd76cda3.html">Brain</a></td>
-    <td class="meta">Mammals &gt; Nervous system &gt; Brain</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">94</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/insect-larva-associated-environment-habitatmech-gold-1cbfc76870.html">insect larva-associated environment</a></td>
-    <td class="meta">Arthropoda: Insects &gt; Larva</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">94</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/large-intestine-bto-0000706.html">large intestine</a></td>
-    <td class="meta">large intestine</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">93</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/foregut-bto-0000507.html">foregut</a></td>
-    <td class="meta">foregut</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">92</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/lung-bto-0000763.html">lung</a></td>
-    <td class="meta">lung</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">92</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/root-nodule-bto-0001190.html">root nodule</a></td>
-    <td class="meta">root nodule</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">91</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/fecal-habitatmech-gold-e381535c08.html">Fecal</a></td>
-    <td class="meta">Arthropoda: Insects &gt; Digestive system &gt; Hindgut &gt; Fecal</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">87</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/bark-bto-0001301.html">bark</a></td>
-    <td class="meta">Plants &gt; Tissue &gt; Bark</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">86</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/human-skin-lesion-environment-habitatmech-gold-5caa9dd47f.html">human skin lesion environment</a></td>
-    <td class="meta">Mammals: Human &gt; Integumentary system &gt; Skin &gt; Lesion</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">81</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/ascidian-associated-environment-habitatmech-gold-34c28836da.html">ascidian-associated environment</a></td>
-    <td class="meta">Tunicates &gt; Ascidians</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">79</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/neonate-bto-0001762.html">neonate</a></td>
-    <td class="meta">neonate</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">78</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/liver-habitatmech-gold-fab3524f06.html">Liver</a></td>
-    <td class="meta">Mammals &gt; Digestive system &gt; Biliary tract &gt; Liver</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">77</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/ileum-habitatmech-gold-59c60b0d02.html">Ileum</a></td>
-    <td class="meta">Birds &gt; Digestive system &gt; Small intestine &gt; Ileum</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">75</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/gastric-mucosa-bto-0001308.html">gastric mucosa</a></td>
-    <td class="meta">gastric mucosa</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">73</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/red-alga-associated-environment-habitatmech-gold-e789c273d0.html">red-alga-associated environment</a></td>
-    <td class="meta">Algae &gt; Red algae</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">73</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/respiratory-airway-uberon-0001005.html">respiratory airway</a></td>
-    <td class="meta">Airways</td>
-    <td><span class="pill">CLOSE</span></td>
-    <td class="num">73</td>
-    <td class="meta">BACDIVE</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/decayed-wood-habitatmech-gold-d27bcd61e0.html">Decayed wood</a></td>
-    <td class="meta">Plants &gt; Wood &gt; Decayed wood</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">72</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/urine-habitatmech-gold-887aa665a2.html">Urine</a></td>
-    <td class="meta">Mammals &gt; Urinary system &gt; Urine</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">70</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/endosphere-habitatmech-gold-af0c4ac629.html">Endosphere</a></td>
-    <td class="meta">Plants &gt; Roots &gt; Endosphere</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">69</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/aquatic-mammal-associated-environment-habitatmech-bacdive-15180e7ff9.html">aquatic mammal-associated environment</a></td>
-    <td class="meta">Aquatic-mammal</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">69</td>
-    <td class="meta">BACDIVE</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/small-intestine-bto-0000651.html">small intestine</a></td>
-    <td class="meta">small intestine</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">69</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/fecal-habitatmech-gold-db419db455.html">Fecal</a></td>
-    <td class="meta">Amphibia &gt; Digestive system &gt; Intestine &gt; Fecal</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">67</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/tissue-habitatmech-gold-bbdf359c41.html">Tissue</a></td>
-    <td class="meta">Invertebrates &gt; Cnidaria &gt; Coral &gt; Tissue</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">67</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/aquatic-macrophyte-associated-environment-habitatmech-bacdive-38260eea00.html">aquatic macrophyte-associated environment</a></td>
-    <td class="meta">Aquatic-plant</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">66</td>
-    <td class="meta">BACDIVE</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/lichen-associated-environment-habitatmech-gold-5e1a5d695c.html">lichen-associated environment</a></td>
-    <td class="meta">Fungi &gt; Lichen</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">66</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/urinary-tract-bto-0001244.html">urinary tract</a></td>
-    <td class="meta">urinary tract</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">66</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/lower-gastrointestinal-tract-habitatmech-gold-6451c3f0ac.html">Lower gastrointestinal tract</a></td>
-    <td class="meta">Mammals &gt; Digestive system &gt; Lower gastrointestinal tract</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">65</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/inner-tissue-habitatmech-gold-0353227a54.html">Inner tissue</a></td>
-    <td class="meta">Fungi &gt; Fruiting body &gt; Inner tissue</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">63</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/integumentary-system-habitatmech-gold-56e0776270.html">Integumentary system</a></td>
-    <td class="meta">Mammals &gt; Integumentary system</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">63</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/multiple-systems-habitatmech-gold-68a62625da.html">Multiple systems</a></td>
-    <td class="meta">Mammals &gt; Multiple systems</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">63</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/colon-bto-0000269.html">colon</a></td>
-    <td class="meta">colon</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">62</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/oyster-associated-environment-habitatmech-gold-fd2443a2c3.html">oyster-associated environment</a></td>
-    <td class="meta">Mollusca &gt; Oyster</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">61</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/remains-habitatmech-gold-07c6babcdb.html">Remains</a></td>
-    <td class="meta">Birds &gt; Remains</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">60</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/reproductive-system-habitatmech-gold-abc827a582.html">Reproductive system</a></td>
-    <td class="meta">Mammals: Human &gt; Reproductive system</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">60</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/whole-body-habitatmech-gold-45bab6af2d.html">Whole body</a></td>
-    <td class="meta">Arthropoda: Insects &gt; Whole body</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">60</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/area-of-moss-dominated-vegetation-envo-01000890.html">area of moss-dominated vegetation</a></td>
-    <td class="meta">Moss</td>
-    <td><span class="pill">CLOSE</span></td>
-    <td class="num">59</td>
-    <td class="meta">BACDIVE, GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/bivalve-associated-environment-habitatmech-gold-59e8d1205d.html">bivalve-associated environment</a></td>
-    <td class="meta">Mollusca &gt; Bivalves</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">59</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/reproductive-system-habitatmech-gold-29feb6867b.html">Reproductive system</a></td>
-    <td class="meta">Mammals &gt; Reproductive system</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">58</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/intestine-habitatmech-gold-523d63f6f3.html">Intestine</a></td>
-    <td class="meta">Fish &gt; Digestive system &gt; Intestine</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">57</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/middle-ear-habitatmech-gold-51e593a6a4.html">Middle ear</a></td>
-    <td class="meta">Mammals: Human &gt; Auditory/Hearing system &gt; Middle ear</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">55</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/skin-tissue-habitatmech-gold-1cb5947f90.html">Skin tissue</a></td>
-    <td class="meta">Mammals: Human &gt; Integumentary system &gt; Skin &gt; Skin tissue</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">54</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/respiratory-system-habitatmech-gold-0c74807e42.html">Respiratory system</a></td>
-    <td class="meta">Birds &gt; Respiratory system</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">53</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/cecum-mucosa-bto-0000213.html">cecum mucosa</a></td>
-    <td class="meta">cecum mucosa</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">53</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/sea-urchin-associated-environment-habitatmech-gold-b19422ad27.html">sea urchin-associated environment</a></td>
-    <td class="meta">Invertebrates &gt; Echinodermata &gt; Sea Urchin</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">53</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/digital-dermatitis-habitatmech-gold-f93dba43d8.html">Digital dermatitis</a></td>
-    <td class="meta">Mammals &gt; Integumentary system &gt; Skin &gt; Digital dermatitis</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">52</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/skin-habitatmech-gold-92e3c832eb.html">Skin</a></td>
-    <td class="meta">Fish &gt; Integumentary system &gt; Skin</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">52</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/head-bto-0000282.html">head</a></td>
-    <td class="meta">head</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">48</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/liver-habitatmech-gold-21e97f08ee.html">Liver</a></td>
-    <td class="meta">Birds &gt; Digestive system &gt; Biliary tract &gt; Liver</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">46</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/sputum-bto-0001297.html">sputum</a></td>
-    <td class="meta">sputum</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">45</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/protist-associated-environment-habitatmech-gold-eee7408afd.html">protist-associated environment</a></td>
-    <td class="meta">Protist</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">43</td>
-    <td class="meta">BACDIVE, GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/biofilm-habitatmech-gold-f1e0d494f8.html">Biofilm</a></td>
-    <td class="meta">Plants &gt; Phyllosphere &gt; Phylloplane/Leaf surface &gt; Biofilm</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">42</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/fruit-bto-0000486.html">fruit</a></td>
-    <td class="meta">fruit</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">42</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/gastric-mucosa-habitatmech-gold-c4fc259b25.html">Gastric mucosa</a></td>
-    <td class="meta">Mammals &gt; Digestive system &gt; Stomach &gt; Gastric mucosa</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">41</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/amphibian-associated-environment-habitatmech-gold-0cd585a031.html">amphibian-associated environment</a></td>
-    <td class="meta">Amphibia</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">41</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/germ-bto-0000514.html">germ</a></td>
-    <td class="meta">germ</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">41</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/kidney-uberon-0002113.html">kidney</a></td>
-    <td class="meta">Fish &gt; Urinary system &gt; Kidneys</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">41</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/brain-bto-0000142.html">brain</a></td>
-    <td class="meta">brain</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">40</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/spleen-habitatmech-gold-0770f3f3ed.html">Spleen</a></td>
-    <td class="meta">Mammals &gt; Lymphatic system &gt; Spleen</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">39</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/atherosclerotic-plaque-bto-0003120.html">atherosclerotic plaque</a></td>
-    <td class="meta">atherosclerotic plaque</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">39</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/lymphoid-tissue-bto-0000753.html">lymphoid tissue</a></td>
-    <td class="meta">lymphoid tissue</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">39</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/bile-habitatmech-gold-94d216ff38.html">Bile</a></td>
-    <td class="meta">Mammals: Human &gt; Digestive system &gt; Biliary tract &gt; Bile</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">38</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/dental-plaque-habitatmech-gold-26b1d1137f.html">Dental plaque</a></td>
-    <td class="meta">Mammals &gt; Digestive system &gt; Oral cavity &gt; Dental plaque</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">38</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/cerebrospinal-fluid-bto-0000237.html">cerebrospinal fluid</a></td>
-    <td class="meta">cerebrospinal fluid</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">38</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/external-soft-tissue-zone-uberon-0034929.html">external soft tissue zone</a></td>
-    <td class="meta">Mammals &gt; Multiple systems &gt; Soft tissue</td>
-    <td><span class="pill">CLOSE</span></td>
-    <td class="num">38</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/brain-habitatmech-gold-a220aa6bb0.html">Brain</a></td>
-    <td class="meta">Fish &gt; Nervous system &gt; Brain</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">37</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/large-intestine-habitatmech-gold-6bda0871e2.html">Large intestine</a></td>
-    <td class="meta">Mammals &gt; Digestive system &gt; Large intestine</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">37</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/skin-habitatmech-gold-52d3212a6a.html">Skin</a></td>
-    <td class="meta">Birds &gt; Integumentary system &gt; Skin</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">37</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/leukocyte-bto-0000751.html">leukocyte</a></td>
-    <td class="meta">leukocyte</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">37</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/egg-habitatmech-bacdive-d48ce9485d.html">Egg</a></td>
-    <td class="meta">Egg</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">35</td>
-    <td class="meta">BACDIVE</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/epithelium-bto-0000416.html">epithelium</a></td>
-    <td class="meta">epithelium</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">35</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/kidney-habitatmech-gold-9987a3e1d2.html">Kidney</a></td>
-    <td class="meta">Mammals &gt; Urinary system &gt; Kidney</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">34</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/placenta-habitatmech-gold-b81b7f9eeb.html">Placenta</a></td>
-    <td class="meta">Mammals &gt; Fetus &gt; Fetal tissue &gt; Placenta</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">34</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/intestinal-epithelium-bto-0000781.html">intestinal epithelium</a></td>
-    <td class="meta">intestinal epithelium</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">34</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/pseudostem-bto-0005992.html">pseudostem</a></td>
-    <td class="meta">pseudostem</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">34</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/joint-bto-0001686.html">joint</a></td>
-    <td class="meta">joint</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">33</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/subgingival-dental-plaque-uberon-0016484.html">subgingival dental plaque</a></td>
-    <td class="meta">Subgingival-plaque</td>
-    <td><span class="pill">CLOSE</span></td>
-    <td class="num">33</td>
-    <td class="meta">BACDIVE</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/t-lymphocyte-bto-0000782.html">T-lymphocyte</a></td>
-    <td class="meta">T-lymphocyte</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">32</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/bladder-bto-0000123.html">bladder</a></td>
-    <td class="meta">bladder</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">32</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/intestinal-epithelial-cell-bto-0005937.html">intestinal epithelial cell</a></td>
-    <td class="meta">intestinal epithelial cell</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">32</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/protozoan-associated-environment-habitatmech-gold-f3d8c3793f.html">protozoan-associated environment</a></td>
-    <td class="meta">Protozoa</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">32</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/carposphere-habitatmech-gold-e898437067.html">Carposphere</a></td>
-    <td class="meta">Plants &gt; Phyllosphere &gt; Carposphere</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">31</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/liver-bto-0000759.html">liver</a></td>
-    <td class="meta">liver</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">31</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/mucilage-bto-0004617.html">mucilage</a></td>
-    <td class="meta">Plants &gt; Roots &gt; Aerial root &gt; Mucilage</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">31</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/blood-habitatmech-gold-f46a5017f9.html">Blood</a></td>
-    <td class="meta">Birds &gt; Circulatory system &gt; Blood</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">30</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/fecal-habitatmech-gold-ee5582c64e.html">Fecal</a></td>
-    <td class="meta">Reptilia &gt; Digestive system &gt; Large intestine &gt; Fecal</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">30</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/gills-habitatmech-gold-b0721b9326.html">Gills</a></td>
-    <td class="meta">Fish &gt; Respiratory system &gt; Gills</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">30</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/gut-habitatmech-gold-f7cbad92b8.html">Gut</a></td>
-    <td class="meta">Arthropoda: Crustaceans &gt; Digestive system &gt; Gut</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">30</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/kidney-bto-0000671.html">kidney</a></td>
-    <td class="meta">kidney</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">30</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/bone-habitatmech-gold-67f49f8b15.html">Bone</a></td>
-    <td class="meta">Mammals: Human &gt; Skeletal system &gt; Bone</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">29</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/uterus-habitatmech-gold-4a65869529.html">Uterus</a></td>
-    <td class="meta">Mammals &gt; Reproductive system &gt; Uterus</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">29</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/adipose-tissue-bto-0001487.html">adipose tissue</a></td>
-    <td class="meta">adipose tissue</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">29</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/cervix-habitatmech-gold-c15e1115f3.html">Cervix</a></td>
-    <td class="meta">Mammals: Human &gt; Reproductive system &gt; Uterus &gt; Cervix</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">28</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/endosphere-habitatmech-gold-bfe3e11951.html">Endosphere</a></td>
-    <td class="meta">Plants &gt; Endosphere</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">28</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/bronchiole-bto-0002375.html">bronchiole</a></td>
-    <td class="meta">Mammals: Human &gt; Respiratory system &gt; Lung &gt; Bronchioles</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">28</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/nasal-cavity-habitatmech-gold-f3560ae8d1.html">Nasal cavity</a></td>
-    <td class="meta">Birds &gt; Respiratory system &gt; Nasal cavity</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">27</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/vagina-habitatmech-gold-3feaca4b1b.html">Vagina</a></td>
-    <td class="meta">Mammals &gt; Reproductive system &gt; Vagina</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">27</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/throat-bto-0000828.html">throat</a></td>
-    <td class="meta">throat</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">27</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/cornea-habitatmech-gold-5068cb6b3d.html">Cornea</a></td>
-    <td class="meta">Mammals: Human &gt; Visual system &gt; Eye &gt; Cornea</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">26</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/gingiva-habitatmech-gold-2530583ff3.html">Gingiva</a></td>
-    <td class="meta">Mammals: Human &gt; Digestive system &gt; Oral cavity &gt; Gingiva</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">26</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/midgut-habitatmech-gold-67c565f695.html">Midgut</a></td>
-    <td class="meta">Arthropoda: Insects &gt; Digestive system &gt; Midgut</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">26</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/head-uberon-0000033.html">head</a></td>
-    <td class="meta">Arthropoda: Insects &gt; Head</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">26</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/uroepithelium-bto-0003906.html">uroepithelium</a></td>
-    <td class="meta">uroepithelium</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">26</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/peritoneal-fluid-habitatmech-gold-ca3269e5e5.html">Peritoneal fluid</a></td>
-    <td class="meta">Mammals: Human &gt; Abdominal/Peritoneal cavity &gt; Peritoneal fluid</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">25</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/trachea-habitatmech-gold-308a1c6b2e.html">Trachea</a></td>
-    <td class="meta">Birds &gt; Respiratory system &gt; Trachea</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">25</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/urogenital-system-bto-0003091.html">urogenital system</a></td>
-    <td class="meta">urogenital system</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">25</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/circulatory-system-habitatmech-gold-0552e4fd8a.html">Circulatory system</a></td>
-    <td class="meta">Birds &gt; Circulatory system</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">24</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/malpighian-tubule-bto-0000810.html">malpighian tubule</a></td>
-    <td class="meta">Arthropoda: Insects &gt; Excretory system &gt; Malpighian tubules</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">24</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/gut-habitatmech-gold-e6828b88f2.html">Gut</a></td>
-    <td class="meta">Arthropoda: Myriapoda &gt; Digestive system &gt; Gut</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">23</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/small-intestine-habitatmech-gold-d3160a0c40.html">Small intestine</a></td>
-    <td class="meta">Mammals &gt; Digestive system &gt; Small intestine</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">23</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/th17-cell-bto-0005655.html">Th17 cell</a></td>
-    <td class="meta">Th17 cell</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">23</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/fish-skin-lesion-environment-habitatmech-gold-be021eb56c.html">fish skin lesion environment</a></td>
-    <td class="meta">Fish &gt; Integumentary system &gt; Skin &gt; Lesion</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">23</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/tunicate-associated-environment-habitatmech-gold-78c645fff9.html">tunicate-associated environment</a></td>
-    <td class="meta">Tunicates</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">23</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/large-intestine-habitatmech-gold-b091b80314.html">Large intestine</a></td>
-    <td class="meta">Birds &gt; Digestive system &gt; Large intestine</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">22</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/larvae-habitatmech-gold-bcd41f1c5d.html">Larvae</a></td>
-    <td class="meta">Mollusca &gt; Larvae</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">22</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/wood-decay-habitatmech-gold-728316b889.html">Wood decay</a></td>
-    <td class="meta">Plants &gt; Phyllosphere &gt; Stem &gt; Wood decay</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">22</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/macrophage-bto-0000801.html">macrophage</a></td>
-    <td class="meta">macrophage</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">22</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/gut-habitatmech-gold-d4e02cf775.html">Gut</a></td>
-    <td class="meta">Arthropoda: Insects &gt; Larva &gt; Gut</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">21</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/periodontal-pocket-mesh-d010514.html">Periodontal Pocket</a></td>
-    <td class="meta">Mammals: Human &gt; Digestive system &gt; Oral cavity &gt; Periodontal pockets</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">21</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/reproductive-system-habitatmech-gold-6cd556290d.html">Reproductive system</a></td>
-    <td class="meta">Birds &gt; Reproductive system</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">21</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/rumen-fluid-habitatmech-gold-409867a634.html">Rumen fluid</a></td>
-    <td class="meta">Mammals &gt; Digestive system &gt; Stomach &gt; Rumen fluid</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">21</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/stem-tuber-habitatmech-gold-f164f72e65.html">Stem tuber</a></td>
-    <td class="meta">Plants &gt; Rhizome &gt; Stem tuber</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">21</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/echinoderm-associated-environment-habitatmech-gold-e1f435d44b.html">echinoderm-associated environment</a></td>
-    <td class="meta">Invertebrates &gt; Echinodermata</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">21</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/spleen-bto-0001281.html">spleen</a></td>
-    <td class="meta">spleen</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">21</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/syrinx-organ-uberon-0009074.html">syrinx organ</a></td>
-    <td class="meta">Birds &gt; Respiratory system &gt; Trachea &gt; Syrinx</td>
-    <td><span class="pill">CLOSE</span></td>
-    <td class="num">21</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/conjunctiva-habitatmech-gold-539290062d.html">Conjunctiva</a></td>
-    <td class="meta">Mammals: Human &gt; Visual system &gt; Conjunctiva</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">20</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/heart-habitatmech-gold-693be63c1c.html">Heart</a></td>
-    <td class="meta">Mammals &gt; Circulatory system &gt; Heart</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">20</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/hindgut-habitatmech-gold-50722c7871.html">Hindgut</a></td>
-    <td class="meta">Arthropoda: Insects &gt; Digestive system &gt; Hindgut</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">20</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/large-intestine-habitatmech-gold-5b0aa7456c.html">Large intestine</a></td>
-    <td class="meta">Mammals: Human &gt; Digestive system &gt; Large intestine</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">20</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/lower-gastrointestinal-tract-habitatmech-gold-8c0dd5714b.html">Lower gastrointestinal tract</a></td>
-    <td class="meta">Mammals: Human &gt; Digestive system &gt; Lower gastrointestinal tract</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">20</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/stomach-habitatmech-gold-d3869ad37f.html">Stomach</a></td>
-    <td class="meta">Mammals &gt; Digestive system &gt; Stomach</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">20</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/visual-system-habitatmech-gold-020f82703b.html">Visual system</a></td>
-    <td class="meta">Mammals: Human &gt; Visual system</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">20</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/epithelial-cell-bto-0000414.html">epithelial cell</a></td>
-    <td class="meta">epithelial cell</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">20</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/filament-bto-0000463.html">filament</a></td>
-    <td class="meta">filament</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">20</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/eggs-habitatmech-gold-7b8cf8839b.html">Eggs</a></td>
-    <td class="meta">Arthropoda: Insects &gt; Ootheca/Egg mass &gt; Eggs</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">19</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/gut-habitatmech-gold-fe0f5e3f09.html">Gut</a></td>
-    <td class="meta">Mollusca &gt; Digestive system &gt; Gut</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">19</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/ht-29-cell-bto-0000182.html">HT-29 cell</a></td>
-    <td class="meta">HT-29 cell</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">19</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/dinoflagellate-associated-environment-habitatmech-gold-94019ddb33.html">dinoflagellate-associated environment</a></td>
-    <td class="meta">Microbial &gt; Dinoflagellates</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">19</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/heart-bto-0000562.html">heart</a></td>
-    <td class="meta">heart</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">19</td>
-    <td class="meta">PREGO</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/rhizoplane-envo-01001181.html">rhizoplane</a></td>
-    <td class="meta">Plants &gt; Roots &gt; Rhizoplane</td>
-    <td><span class="pill">EXACT</span></td>
-    <td class="num">19</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/trachea-habitatmech-gold-bc91213af9.html">Trachea</a></td>
-    <td class="meta">Mammals &gt; Respiratory system &gt; Trachea</td>
-    <td><span class="pill">NARROW</span></td>
-    <td class="num">18</td>
-    <td class="meta">GOLD</td>
-  </tr>
-  </tbody>
-</table>
+
+<div class="browse-layout">
+  <aside class="facet-sidebar" aria-label="Filter HOST_ASSOCIATED habitats">
+    <h2>Filter HOST_ASSOCIATED</h2>
+    <div class="facet-group">
+      <label class="facet-label" for="q">Search category</label>
+      <input class="facet-input searchbox" id="q" type="search" data-index="host-associated.json" data-total="1651" placeholder="Filter all 1651 records…" aria-label="Filter records">
+    </div>
+    <div class="facet-group">
+      <label class="facet-label" for="grounding-filter">Grounding status</label>
+      <select id="grounding-filter" class="facet-select" aria-label="Filter by grounding status">
+        <option value="">All grounding statuses</option>
+        <option value="EXACT">EXACT</option>
+        <option value="BROAD">BROAD</option>
+        <option value="CLOSE">CLOSE</option>
+        <option value="NARROW">NARROW</option>
+        <option value="UNGROUNDED">UNGROUNDED</option>
+        <option value="NOT_APPLICABLE">NOT_APPLICABLE</option>
+      </select>
+    </div>
+    <div class="facet-group">
+      <label class="facet-label" for="source-filter">Source vocabulary</label>
+      <select id="source-filter" class="facet-select" name="source" aria-label="Filter by source vocabulary">
+        <option value="">All sources</option>
+        <option value="GOLD">GOLD</option>
+        <option value="BacDive">BacDive</option>
+        <option value="PREGO">PREGO</option>
+        <option value="Madin">Madin</option>
+      </select>
+    </div>
+    <div class="facet-group">
+      <label class="facet-label" for="sort-select">Sort order</label>
+      <select id="sort-select" class="facet-select" name="sort" aria-label="Sort habitat records">
+        <option value="assertions-desc">Assertions (high–low)</option>
+        <option value="assertions-asc">Assertions (low–high)</option>
+        <option value="label-asc">Habitat name (A–Z)</option>
+        <option value="label-desc">Habitat name (Z–A)</option>
+        <option value="grounding-asc">Grounding status (A–Z)</option>
+      </select>
+    </div>
+    <div class="facet-group">
+      <span class="facet-label">Switch category</span>
+      <div class="facet-pills">
+        <a class="facet-pill is-active" href="host-associated.html">
+          <span>HOST_ASSOCIATED</span>
+          <span class="facet-count">1651</span>
+        </a>
+        <a class="facet-pill" href="engineered.html">
+          <span>ENGINEERED</span>
+          <span class="facet-count">488</span>
+        </a>
+        <a class="facet-pill" href="aquatic.html">
+          <span>AQUATIC</span>
+          <span class="facet-count">468</span>
+        </a>
+        <a class="facet-pill" href="terrestrial.html">
+          <span>TERRESTRIAL</span>
+          <span class="facet-count">353</span>
+        </a>
+        <a class="facet-pill" href="other.html">
+          <span>OTHER</span>
+          <span class="facet-count">179</span>
+        </a>
+        <a class="facet-pill" href="food.html">
+          <span>FOOD</span>
+          <span class="facet-count">59</span>
+        </a>
+        <a class="facet-pill" href="air.html">
+          <span>AIR</span>
+          <span class="facet-count">7</span>
+        </a>
+        <a class="facet-pill" href="clinical.html">
+          <span>CLINICAL</span>
+          <span class="facet-count">4</span>
+        </a>
+      </div>
+    </div>
+    <div class="facet-group">
+      <button type="button" id="clear-filter" class="facet-reset" hidden>Clear filter</button>
+    </div>
+    <p class="meta" id="count" aria-live="polite"></p>
+  </aside>
+
+  <div class="browse-main">
+    <button type="button" id="show-more" hidden>Show more matches</button>
+    <div class="table-scroll" role="region" tabindex="0" aria-label="HOST_ASSOCIATED habitats">
+    <table id="tbl">
+      <caption>HOST_ASSOCIATED habitats</caption>
+      <thead><tr><th scope="col">Habitat</th><th scope="col">Source path</th><th scope="col">Grounding</th><th scope="col" class="num">Assertions</th><th scope="col">Sources</th></tr></thead>
+      <tbody>
+      <tr>
+        <td><a href="../habitats/human-associated-environment-habitatmech-gold-cd0b0940e5.html">human-associated environment</a></td>
+        <td class="meta">Human</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">52129</td>
+        <td class="meta">BACDIVE, GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/environmental-system-determined-by-an-organism-envo-01001000.html">environmental system determined by an organism</a></td>
+        <td class="meta">Host</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">28888</td>
+        <td class="meta">BACDIVE, GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/feces-uberon-0001988.html">feces</a></td>
+        <td class="meta">Feces-Stool</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">22184</td>
+        <td class="meta">BACDIVE, GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/plant-associated-environment-envo-01001001.html">plant-associated environment</a></td>
+        <td class="meta">Herbaceous-plants-Grass,Crops</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">16295</td>
+        <td class="meta">BACDIVE, ENVIRONMENTS_TABLE, GOLD, MADIN</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/blood-habitatmech-gold-d25ff4a586.html">Blood</a></td>
+        <td class="meta">Mammals: Human &gt; Circulatory system &gt; Blood</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">7375</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/mammal-associated-environment-habitatmech-gold-e889967f4f.html">mammal-associated environment</a></td>
+        <td class="meta">Mammals</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">6104</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/endothermic-animal-associated-environment-habitatmech-bacdive-3d543e6b49.html">endothermic-animal-associated environment</a></td>
+        <td class="meta">host_animal_endotherm</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">5130</td>
+        <td class="meta">MADIN</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/nasopharynx-habitatmech-gold-6d36ab6e3c.html">Nasopharynx</a></td>
+        <td class="meta">Mammals: Human &gt; Respiratory system &gt; Pharynx/Throat &gt; Nasopharynx</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">5080</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/rumen-habitatmech-gold-c1f33a02a6.html">Rumen</a></td>
+        <td class="meta">Mammals &gt; Digestive system &gt; Foregut &gt; Rumen</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">4989</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/sputum-uberon-0007311.html">sputum</a></td>
+        <td class="meta">Mammals: Human &gt; Respiratory system &gt; Sputum/Phlegm</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">4968</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/plant-bto-0001481.html">plant</a></td>
+        <td class="meta">plant</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">3150</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/bacterium-associated-environment-habitatmech-gold-029baaef9e.html">bacterium-associated environment</a></td>
+        <td class="meta">Microbial &gt; Bacteria</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">3017</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/leaf-po-0025034.html">leaf</a></td>
+        <td class="meta">Leaf-Phyllosphere</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">2868</td>
+        <td class="meta">BACDIVE, ENVIRONMENTS_TABLE, GOLD, MADIN</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/root-po-0009005.html">root</a></td>
+        <td class="meta">host_plant_root-associated</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">2809</td>
+        <td class="meta">ENVIRONMENTS_TABLE, GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/respiratory-system-habitatmech-gold-e36ba981d1.html">Respiratory system</a></td>
+        <td class="meta">Mammals: Human &gt; Respiratory system</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">2496</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/urine-habitatmech-gold-253304a381.html">Urine</a></td>
+        <td class="meta">Mammals: Human &gt; Urinary system &gt; Urine</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">2290</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/rhizosphere-envo-00005801.html">rhizosphere</a></td>
+        <td class="meta">Plants &gt; Roots &gt; Rhizosphere</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">2130</td>
+        <td class="meta">GOLD, PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/bird-associated-environment-habitatmech-gold-47e603cf4f.html">bird-associated environment</a></td>
+        <td class="meta">Birds</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">1848</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/insect-associated-environment-habitatmech-gold-dba2a83b95.html">insect-associated environment</a></td>
+        <td class="meta">Arthropoda: Insects</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">1833</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/digestive-system-habitatmech-gold-f6720bccf0.html">Digestive system</a></td>
+        <td class="meta">Mammals: Human &gt; Digestive system</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">1443</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/nodule-habitatmech-gold-fe59a0bfb1.html">Nodule</a></td>
+        <td class="meta">Plants &gt; Roots &gt; Nodule</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">1422</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/fish-associated-environment-habitatmech-gold-3d529a667e.html">fish-associated environment</a></td>
+        <td class="meta">Fish</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">1350</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/skin-bto-0001253.html">skin</a></td>
+        <td class="meta">skin</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">1116</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/oral-cavity-habitatmech-gold-99880772e1.html">Oral cavity</a></td>
+        <td class="meta">Mammals: Human &gt; Digestive system &gt; Oral cavity</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">1032</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/gut-bto-0000545.html">gut</a></td>
+        <td class="meta">gut</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">1005</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/ectothermic-animal-associated-environment-habitatmech-bacdive-e68bf42dcb.html">ectothermic-animal-associated environment</a></td>
+        <td class="meta">host_animal_ectotherm</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">999</td>
+        <td class="meta">MADIN</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/stomach-habitatmech-gold-6d0c170e7a.html">Stomach</a></td>
+        <td class="meta">Mammals: Human &gt; Digestive system &gt; Stomach</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">886</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/tree-associated-environment-habitatmech-bacdive-3192a0f47e.html">tree-associated environment</a></td>
+        <td class="meta">Tree</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">872</td>
+        <td class="meta">BACDIVE</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/milk-uberon-0001913.html">milk</a></td>
+        <td class="meta">milk</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">813</td>
+        <td class="meta">ENVIRONMENTS_TABLE, GOLD, MADIN</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/root-bto-0001188.html">root</a></td>
+        <td class="meta">root</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">794</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/mollusc-associated-environment-habitatmech-gold-6acc0797e9.html">mollusc-associated environment</a></td>
+        <td class="meta">Mollusca</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">784</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/skin-habitatmech-gold-4b37ab4b76.html">Skin</a></td>
+        <td class="meta">Mammals: Human &gt; Integumentary system &gt; Skin</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">754</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/gut-habitatmech-gold-617e6352cb.html">Gut</a></td>
+        <td class="meta">Arthropoda: Insects &gt; Digestive system &gt; Gut</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">742</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/respiratory-tract-uberon-0000065.html">respiratory tract</a></td>
+        <td class="meta">respiratory tract</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">735</td>
+        <td class="meta">MADIN</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/digestive-system-habitatmech-gold-c8e85f3c84.html">Digestive system</a></td>
+        <td class="meta">Mammals &gt; Digestive system</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">681</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/fungi-associated-environment-envo-01001041.html">fungi-associated environment</a></td>
+        <td class="meta">host_fungus</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">673</td>
+        <td class="meta">ENVIRONMENTS_TABLE, GOLD, MADIN</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/wood-bto-0005516.html">wood</a></td>
+        <td class="meta">Timber</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">624</td>
+        <td class="meta">BACDIVE, PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/invertebrate-associated-environment-habitatmech-gold-4d792ac724.html">invertebrate-associated environment</a></td>
+        <td class="meta">Invertebrates</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">621</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/bovine-associated-environment-habitatmech-bacdive-a4a67c4a7f.html">bovine-associated environment</a></td>
+        <td class="meta">Bovinae-Cow,-Cattle</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">619</td>
+        <td class="meta">BACDIVE</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/soil-habitatmech-gold-067f7f5e2a.html">Soil</a></td>
+        <td class="meta">Plants &gt; Roots &gt; Rhizosphere &gt; Soil</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">614</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/inflorescence-bto-0000628.html">inflorescence</a></td>
+        <td class="meta">inflorescence</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">607</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/rectum-habitatmech-gold-b6d84c219e.html">Rectum</a></td>
+        <td class="meta">Mammals: Human &gt; Digestive system &gt; Large intestine &gt; Rectum</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">602</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/crustacean-associated-environment-habitatmech-gold-2959225799.html">crustacean-associated environment</a></td>
+        <td class="meta">Arthropoda: Crustaceans</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">598</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/seed-po-0009010.html">seed</a></td>
+        <td class="meta">Plants &gt; Seeds</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">573</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/myriapod-associated-environment-habitatmech-gold-2333d6225a.html">myriapod-associated environment</a></td>
+        <td class="meta">Arthropoda: Myriapoda</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">569</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/cecum-bto-0000166.html">cecum</a></td>
+        <td class="meta">cecum</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">549</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/hemolymph-bto-0000572.html">hemolymph</a></td>
+        <td class="meta">hemolymph</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">540</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/suid-associated-environment-habitatmech-bacdive-3a13ee8a57.html">suid-associated environment</a></td>
+        <td class="meta">Suidae-Pig,Swine</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">521</td>
+        <td class="meta">BACDIVE</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/sponge-associated-environment-habitatmech-gold-64acf9132c.html">sponge-associated environment</a></td>
+        <td class="meta">Porifera-Sponges</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">499</td>
+        <td class="meta">BACDIVE, GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/stem-bto-0001300.html">stem</a></td>
+        <td class="meta">Plants &gt; Phyllosphere &gt; Stem</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">491</td>
+        <td class="meta">GOLD, PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/alga-associated-environment-habitatmech-gold-02383c20a7.html">alga-associated environment</a></td>
+        <td class="meta">Algae</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">482</td>
+        <td class="meta">GOLD, MADIN</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/vagina-habitatmech-gold-1daee83236.html">Vagina</a></td>
+        <td class="meta">Mammals: Human &gt; Reproductive system &gt; Vagina</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">475</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/microbe-associated-environment-habitatmech-gold-184623c963.html">microbe-associated environment</a></td>
+        <td class="meta">Microbial</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">465</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/rumen-habitatmech-gold-99bf401d4c.html">Rumen</a></td>
+        <td class="meta">Mammals &gt; Digestive system &gt; Stomach &gt; Rumen</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">450</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/blood-uberon-0000178.html">blood</a></td>
+        <td class="meta">host_animal_endotherm_blood</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">440</td>
+        <td class="meta">ENVIRONMENTS_TABLE, MADIN</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/mouth-bto-0001090.html">mouth</a></td>
+        <td class="meta">mouth</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">428</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/caprine-associated-environment-habitatmech-bacdive-4d3086a839.html">caprine-associated environment</a></td>
+        <td class="meta">Caprinae-Sheep/Goat</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">412</td>
+        <td class="meta">BACDIVE</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/root-nodule-envo-01000164.html">root nodule</a></td>
+        <td class="meta">host_plant_rootnodule</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">409</td>
+        <td class="meta">ENVIRONMENTS_TABLE, GOLD, MADIN</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/ceca-habitatmech-gold-d1f4d0cde1.html">Ceca</a></td>
+        <td class="meta">Birds &gt; Digestive system &gt; Large intestine &gt; Ceca</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">407</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/forearm-bto-0001447.html">forearm</a></td>
+        <td class="meta">forearm</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">404</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/intestine-bto-0000648.html">intestine</a></td>
+        <td class="meta">intestine</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">404</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/mammary-gland-habitatmech-gold-1a6a558ccf.html">Mammary gland</a></td>
+        <td class="meta">Mammals &gt; Integumentary system &gt; Mammary gland</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">400</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/hand-bto-0004668.html">hand</a></td>
+        <td class="meta">hand</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">392</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/coral-habitatmech-gold-a12eda25e9.html">Coral</a></td>
+        <td class="meta">Invertebrates &gt; Cnidaria &gt; Coral</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">382</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/adult-associated-environment-habitatmech-prego-57e0a5faae.html">adult-associated environment</a></td>
+        <td class="meta">adult</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">378</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/rumen-uberon-0007365.html">rumen</a></td>
+        <td class="meta">host_animal_endotherm_rumen</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">363</td>
+        <td class="meta">MADIN, PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/throat-uberon-0000341.html">throat</a></td>
+        <td class="meta">Mammals: Human &gt; Respiratory system &gt; Pharynx/Throat</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">358</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/urine-bto-0001419.html">urine</a></td>
+        <td class="meta">urine</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">345</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/canid-associated-environment-habitatmech-bacdive-33fde10528.html">canid-associated environment</a></td>
+        <td class="meta">Canidae-Dog</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">344</td>
+        <td class="meta">BACDIVE</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/leaf-bto-0000713.html">leaf</a></td>
+        <td class="meta">leaf</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">342</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/internal-tissue-environment-of-an-endothermic-animal-habitatmech-bacdive-319ac5f8f8.html">internal tissue environment of an endothermic animal</a></td>
+        <td class="meta">host_animal_endotherm_intratissue</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">341</td>
+        <td class="meta">MADIN</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/tonsil-bto-0001387.html">tonsil</a></td>
+        <td class="meta">Mammals: Human &gt; Lymphatic system &gt; Tonsils</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">328</td>
+        <td class="meta">GOLD, PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/lung-habitatmech-gold-0d343fdd03.html">Lung</a></td>
+        <td class="meta">Mammals &gt; Respiratory system &gt; Lung</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">326</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/murid-associated-environment-habitatmech-bacdive-ab17ecb10f.html">murid-associated environment</a></td>
+        <td class="meta">Muridae-Mouse/Rat</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">325</td>
+        <td class="meta">BACDIVE</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/ceca-habitatmech-gold-2629408066.html">Ceca</a></td>
+        <td class="meta">Birds &gt; Digestive system &gt; Ceca</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">315</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/cloaca-habitatmech-gold-037d4112ea.html">Cloaca</a></td>
+        <td class="meta">Birds &gt; Digestive system &gt; Large intestine &gt; Cloaca</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">309</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/sgs-cell-bto-0001210.html">SGS cell</a></td>
+        <td class="meta">SGS cell</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">307</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/vagina-uberon-0000996.html">vagina</a></td>
+        <td class="meta">host_animal_endotherm_vagina</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">304</td>
+        <td class="meta">ENVIRONMENTS_TABLE, MADIN</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/nematode-associated-environment-habitatmech-gold-45a8229be1.html">nematode-associated environment</a></td>
+        <td class="meta">Invertebrates &gt; Nematoda</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">300</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/urethra-habitatmech-gold-9f2dc7145e.html">Urethra</a></td>
+        <td class="meta">Mammals: Human &gt; Urinary system &gt; Urethra</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">295</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/saliva-bto-0001202.html">saliva</a></td>
+        <td class="meta">saliva</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">283</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/dorsum-bto-0001713.html">dorsum</a></td>
+        <td class="meta">dorsum</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">278</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/cnidarian-associated-environment-envo-01001179.html">cnidarian-associated environment</a></td>
+        <td class="meta">Cnidaria-Corals</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">272</td>
+        <td class="meta">BACDIVE, GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/oral-cavity-habitatmech-gold-92d1e65695.html">Oral cavity</a></td>
+        <td class="meta">Mammals &gt; Digestive system &gt; Oral cavity</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">270</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/equid-associated-environment-habitatmech-bacdive-09c3544e85.html">equid-associated environment</a></td>
+        <td class="meta">Equidae-Horse</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">269</td>
+        <td class="meta">BACDIVE</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/mycelium-bto-0001436.html">mycelium</a></td>
+        <td class="meta">Fungi &gt; Mycelium</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">260</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/skin-of-body-uberon-0002097.html">skin of body</a></td>
+        <td class="meta">Skin,-Nail,-Hair</td>
+        <td><span class="pill">BROAD</span></td>
+        <td class="num">260</td>
+        <td class="meta">BACDIVE</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/lung-habitatmech-gold-5bbc13545b.html">Lung</a></td>
+        <td class="meta">Mammals: Human &gt; Respiratory system &gt; Lung</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">258</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/oil-secretion-bto-0005373.html">oil secretion</a></td>
+        <td class="meta">oil secretion</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">256</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/gastric-mucosa-habitatmech-gold-0847225245.html">Gastric mucosa</a></td>
+        <td class="meta">Mammals: Human &gt; Digestive system &gt; Stomach &gt; Gastric mucosa</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">251</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/nasal-cavity-habitatmech-gold-bcb2f8b7f3.html">Nasal cavity</a></td>
+        <td class="meta">Mammals: Human &gt; Respiratory system &gt; Nasal cavity</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">251</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/column-bto-0005692.html">column</a></td>
+        <td class="meta">column</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">246</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/tongue-bto-0001385.html">tongue</a></td>
+        <td class="meta">tongue</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">245</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/whole-body-habitatmech-gold-d438ab5070.html">Whole body</a></td>
+        <td class="meta">Arthropoda: Chelicerates &gt; Whole body</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">244</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/immune-system-bto-0005810.html">immune system</a></td>
+        <td class="meta">immune system</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">241</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/rectum-habitatmech-gold-22ea687641.html">Rectum</a></td>
+        <td class="meta">Mammals &gt; Digestive system &gt; Large intestine &gt; Rectum</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">239</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/style-bto-0001313.html">style</a></td>
+        <td class="meta">style</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">239</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/brown-alga-associated-environment-habitatmech-gold-3e4ecbed63.html">brown-alga-associated environment</a></td>
+        <td class="meta">Algae &gt; Brown Algae</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">231</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/seedling-bto-0001228.html">seedling</a></td>
+        <td class="meta">seedling</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">228</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/spike-bto-0001278.html">spike</a></td>
+        <td class="meta">spike</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">228</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/nectar-bto-0000537.html">nectar</a></td>
+        <td class="meta">Plants &gt; Phyllosphere &gt; Anthosphere &gt; Nectar</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">227</td>
+        <td class="meta">GOLD, PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/crop-bto-0000301.html">crop</a></td>
+        <td class="meta">crop</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">218</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/diatom-associated-environment-habitatmech-gold-1276bea544.html">diatom-associated environment</a></td>
+        <td class="meta">Algae &gt; Diatoms</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">218</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/vagina-bto-0000243.html">vagina</a></td>
+        <td class="meta">vagina</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">218</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/leporid-associated-environment-habitatmech-bacdive-82dc7d11b9.html">leporid-associated environment</a></td>
+        <td class="meta">Leporidae-Rabbit/Hare</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">217</td>
+        <td class="meta">BACDIVE</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/ileum-bto-0000620.html">ileum</a></td>
+        <td class="meta">ileum</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">216</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/trachea-habitatmech-gold-8e47fd50d1.html">Trachea</a></td>
+        <td class="meta">Mammals: Human &gt; Respiratory system &gt; Trachea</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">213</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/vaginal-fluid-bto-0003084.html">vaginal fluid</a></td>
+        <td class="meta">vaginal fluid</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">213</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/blood-bto-0000089.html">blood</a></td>
+        <td class="meta">blood</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">206</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/digestive-system-habitatmech-gold-d7cff86ce8.html">Digestive system</a></td>
+        <td class="meta">Arthropoda: Insects &gt; Digestive system</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">203</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/unspecified-tissue-habitatmech-gold-77889da10a.html">Unspecified tissue</a></td>
+        <td class="meta">Mammals &gt; Unspecified system &gt; Unspecified organ &gt; Unspecified tissue</td>
+        <td><span class="pill warn">NOT_APPLICABLE</span></td>
+        <td class="num">201</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/nasopharynx-habitatmech-gold-c42160d113.html">Nasopharynx</a></td>
+        <td class="meta">Mammals &gt; Respiratory system &gt; Pharynx/Throat &gt; Nasopharynx</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">194</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/biofilm-bto-0002690.html">biofilm</a></td>
+        <td class="meta">biofilm</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">188</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/digestive-system-habitatmech-gold-fb6caa2908.html">Digestive system</a></td>
+        <td class="meta">Birds &gt; Digestive system</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">186</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/trachea-bto-0001388.html">trachea</a></td>
+        <td class="meta">trachea</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">186</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/nasal-cavity-habitatmech-gold-c9756cb050.html">Nasal cavity</a></td>
+        <td class="meta">Mammals &gt; Respiratory system &gt; Nasal cavity</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">184</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/mucosa-bto-0000886.html">mucosa</a></td>
+        <td class="meta">mucosa</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">184</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/cerebrospinal-fluid-habitatmech-gold-fe4f95287e.html">Cerebrospinal fluid</a></td>
+        <td class="meta">Mammals: Human &gt; Nervous system &gt; Subarachnoid space &gt; Cerebrospinal fluid</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">174</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/chelicerate-associated-environment-habitatmech-gold-44a2cbbd60.html">chelicerate-associated environment</a></td>
+        <td class="meta">Arthropoda: Chelicerates</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">169</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/brain-habitatmech-gold-752ac1c5aa.html">Brain</a></td>
+        <td class="meta">Mammals: Human &gt; Nervous system &gt; Brain</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">167</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/cecum-habitatmech-gold-a8f8c792c1.html">Cecum</a></td>
+        <td class="meta">Mammals &gt; Digestive system &gt; Large intestine &gt; Cecum</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">164</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/pitcher-bto-0001069.html">pitcher</a></td>
+        <td class="meta">Plants &gt; Pitcher</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">161</td>
+        <td class="meta">GOLD, PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/blood-habitatmech-gold-6c6aab19d3.html">Blood</a></td>
+        <td class="meta">Mammals &gt; Circulatory system &gt; Blood</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">160</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/oropharynx-habitatmech-gold-0fe2a08dac.html">Oropharynx</a></td>
+        <td class="meta">Mammals: Human &gt; Digestive system &gt; Pharynx/Throat &gt; Oropharynx</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">159</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/lymph-node-uberon-0000029.html">lymph node</a></td>
+        <td class="meta">Mammals &gt; Lymphatic system &gt; Lymph nodes</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">154</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/wood-habitatmech-gold-24903b113a.html">Wood</a></td>
+        <td class="meta">Plants &gt; Wood</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">153</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/respiratory-system-habitatmech-gold-fac4f63f3b.html">Respiratory system</a></td>
+        <td class="meta">Mammals &gt; Respiratory system</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">151</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/juvenile-bto-0002168.html">juvenile</a></td>
+        <td class="meta">juvenile</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">151</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/annelid-associated-environment-habitatmech-gold-6e10201167.html">annelid-associated environment</a></td>
+        <td class="meta">Annelida</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">150</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/stomach-bto-0001307.html">stomach</a></td>
+        <td class="meta">stomach</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">150</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/phyllosphere-habitatmech-gold-7406232b7e.html">Phyllosphere</a></td>
+        <td class="meta">Plants &gt; Phyllosphere</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">149</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/endophytes-habitatmech-gold-9731c6bb13.html">Endophytes</a></td>
+        <td class="meta">Plants &gt; Roots &gt; Rhizoplane &gt; Endophytes</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">148</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/fruiting-body-habitatmech-gold-92cbc36828.html">Fruiting body</a></td>
+        <td class="meta">Fungi &gt; Fruiting body</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">140</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/flagellum-bto-0002292.html">flagellum</a></td>
+        <td class="meta">flagellum</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">140</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/spore-bto-0001171.html">spore</a></td>
+        <td class="meta">Fungi &gt; Spore</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">135</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/reptile-associated-environment-habitatmech-gold-1b11698aaa.html">reptile-associated environment</a></td>
+        <td class="meta">Reptilia</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">133</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/bark-habitatmech-gold-0f6b0e6bf3.html">Bark</a></td>
+        <td class="meta">Plants &gt; Phyllosphere &gt; Caulosphere &gt; Bark</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">131</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/dental-plaque-habitatmech-gold-e287a243a5.html">Dental plaque</a></td>
+        <td class="meta">Mammals: Human &gt; Digestive system &gt; Oral cavity &gt; Dental plaque</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">130</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/rhizome-bto-0001181.html">rhizome</a></td>
+        <td class="meta">Plants &gt; Rhizome</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">130</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/leaf-surface-habitatmech-gold-82f62476b8.html">Leaf surface</a></td>
+        <td class="meta">Plants &gt; Phyllosphere &gt; Phylloplane/Leaf &gt; Leaf surface</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">128</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/urinary-system-habitatmech-gold-282ecbaf3b.html">Urinary system</a></td>
+        <td class="meta">Mammals: Human &gt; Urinary system</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">127</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/gastrointestinal-tract-bto-0000511.html">gastrointestinal tract</a></td>
+        <td class="meta">gastrointestinal tract</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">127</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/saliva-habitatmech-gold-a747c6ab38.html">Saliva</a></td>
+        <td class="meta">Mammals: Human &gt; Digestive system &gt; Oral cavity &gt; Saliva</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">125</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/bone-element-uberon-0001474.html">bone element</a></td>
+        <td class="meta">Bone</td>
+        <td><span class="pill">CLOSE</span></td>
+        <td class="num">125</td>
+        <td class="meta">BACDIVE, GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/trunk-bto-0001493.html">trunk</a></td>
+        <td class="meta">trunk</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">125</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/digestive-system-habitatmech-gold-8a68d0f6f5.html">Digestive system</a></td>
+        <td class="meta">Fish &gt; Digestive system</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">121</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/skin-habitatmech-gold-c896f9520f.html">Skin</a></td>
+        <td class="meta">Mammals &gt; Integumentary system &gt; Skin</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">121</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/alimentary-canal-bto-0000058.html">alimentary canal</a></td>
+        <td class="meta">alimentary canal</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">114</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/foot-bto-0000476.html">foot</a></td>
+        <td class="meta">Foot</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">114</td>
+        <td class="meta">BACDIVE</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/subgingival-plaque-habitatmech-gold-506abc1148.html">Subgingival plaque</a></td>
+        <td class="meta">Mammals: Human &gt; Digestive system &gt; Oral cavity &gt; Subgingival plaque</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">113</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/green-alga-associated-environment-habitatmech-gold-184cc9e802.html">green-alga-associated environment</a></td>
+        <td class="meta">Algae &gt; Green algae</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">108</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/dental-plaque-uberon-0016482.html">dental plaque</a></td>
+        <td class="meta">Plaque</td>
+        <td><span class="pill">CLOSE</span></td>
+        <td class="num">106</td>
+        <td class="meta">BACDIVE</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/regurgitated-nectar-habitatmech-gold-92b07790d7.html">Regurgitated nectar</a></td>
+        <td class="meta">Arthropoda: Insects &gt; Digestive system &gt; Foregut &gt; Regurgitated nectar</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">103</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/respiratory-system-bto-0000203.html">respiratory system</a></td>
+        <td class="meta">respiratory system</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">100</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/tissue-habitatmech-gold-95969208cd.html">Tissue</a></td>
+        <td class="meta">Plants &gt; Tissue</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">98</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/rodentia-other-habitatmech-bacdive-745e245512.html">Rodentia-Other</a></td>
+        <td class="meta">Rodentia-Other</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">97</td>
+        <td class="meta">BACDIVE</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/scale-bto-0005055.html">scale</a></td>
+        <td class="meta">scale</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">97</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/larva-bto-0000707.html">larva</a></td>
+        <td class="meta">larva</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">96</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/spinal-column-bto-0000818.html">spinal column</a></td>
+        <td class="meta">spinal column</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">96</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/felid-associated-environment-habitatmech-bacdive-e6b73de092.html">felid-associated environment</a></td>
+        <td class="meta">Felidae-Cat</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">95</td>
+        <td class="meta">BACDIVE</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/brain-habitatmech-gold-6bdd76cda3.html">Brain</a></td>
+        <td class="meta">Mammals &gt; Nervous system &gt; Brain</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">94</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/insect-larva-associated-environment-habitatmech-gold-1cbfc76870.html">insect larva-associated environment</a></td>
+        <td class="meta">Arthropoda: Insects &gt; Larva</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">94</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/large-intestine-bto-0000706.html">large intestine</a></td>
+        <td class="meta">large intestine</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">93</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/foregut-bto-0000507.html">foregut</a></td>
+        <td class="meta">foregut</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">92</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/lung-bto-0000763.html">lung</a></td>
+        <td class="meta">lung</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">92</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/root-nodule-bto-0001190.html">root nodule</a></td>
+        <td class="meta">root nodule</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">91</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/fecal-habitatmech-gold-e381535c08.html">Fecal</a></td>
+        <td class="meta">Arthropoda: Insects &gt; Digestive system &gt; Hindgut &gt; Fecal</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">87</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/bark-bto-0001301.html">bark</a></td>
+        <td class="meta">Plants &gt; Tissue &gt; Bark</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">86</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/human-skin-lesion-environment-habitatmech-gold-5caa9dd47f.html">human skin lesion environment</a></td>
+        <td class="meta">Mammals: Human &gt; Integumentary system &gt; Skin &gt; Lesion</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">81</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/ascidian-associated-environment-habitatmech-gold-34c28836da.html">ascidian-associated environment</a></td>
+        <td class="meta">Tunicates &gt; Ascidians</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">79</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/neonate-bto-0001762.html">neonate</a></td>
+        <td class="meta">neonate</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">78</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/liver-habitatmech-gold-fab3524f06.html">Liver</a></td>
+        <td class="meta">Mammals &gt; Digestive system &gt; Biliary tract &gt; Liver</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">77</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/ileum-habitatmech-gold-59c60b0d02.html">Ileum</a></td>
+        <td class="meta">Birds &gt; Digestive system &gt; Small intestine &gt; Ileum</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">75</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/gastric-mucosa-bto-0001308.html">gastric mucosa</a></td>
+        <td class="meta">gastric mucosa</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">73</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/red-alga-associated-environment-habitatmech-gold-e789c273d0.html">red-alga-associated environment</a></td>
+        <td class="meta">Algae &gt; Red algae</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">73</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/respiratory-airway-uberon-0001005.html">respiratory airway</a></td>
+        <td class="meta">Airways</td>
+        <td><span class="pill">CLOSE</span></td>
+        <td class="num">73</td>
+        <td class="meta">BACDIVE</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/decayed-wood-habitatmech-gold-d27bcd61e0.html">Decayed wood</a></td>
+        <td class="meta">Plants &gt; Wood &gt; Decayed wood</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">72</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/urine-habitatmech-gold-887aa665a2.html">Urine</a></td>
+        <td class="meta">Mammals &gt; Urinary system &gt; Urine</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">70</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/endosphere-habitatmech-gold-af0c4ac629.html">Endosphere</a></td>
+        <td class="meta">Plants &gt; Roots &gt; Endosphere</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">69</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/aquatic-mammal-associated-environment-habitatmech-bacdive-15180e7ff9.html">aquatic mammal-associated environment</a></td>
+        <td class="meta">Aquatic-mammal</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">69</td>
+        <td class="meta">BACDIVE</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/small-intestine-bto-0000651.html">small intestine</a></td>
+        <td class="meta">small intestine</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">69</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/fecal-habitatmech-gold-db419db455.html">Fecal</a></td>
+        <td class="meta">Amphibia &gt; Digestive system &gt; Intestine &gt; Fecal</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">67</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/tissue-habitatmech-gold-bbdf359c41.html">Tissue</a></td>
+        <td class="meta">Invertebrates &gt; Cnidaria &gt; Coral &gt; Tissue</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">67</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/aquatic-macrophyte-associated-environment-habitatmech-bacdive-38260eea00.html">aquatic macrophyte-associated environment</a></td>
+        <td class="meta">Aquatic-plant</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">66</td>
+        <td class="meta">BACDIVE</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/lichen-associated-environment-habitatmech-gold-5e1a5d695c.html">lichen-associated environment</a></td>
+        <td class="meta">Fungi &gt; Lichen</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">66</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/urinary-tract-bto-0001244.html">urinary tract</a></td>
+        <td class="meta">urinary tract</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">66</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/lower-gastrointestinal-tract-habitatmech-gold-6451c3f0ac.html">Lower gastrointestinal tract</a></td>
+        <td class="meta">Mammals &gt; Digestive system &gt; Lower gastrointestinal tract</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">65</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/inner-tissue-habitatmech-gold-0353227a54.html">Inner tissue</a></td>
+        <td class="meta">Fungi &gt; Fruiting body &gt; Inner tissue</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">63</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/integumentary-system-habitatmech-gold-56e0776270.html">Integumentary system</a></td>
+        <td class="meta">Mammals &gt; Integumentary system</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">63</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/multiple-systems-habitatmech-gold-68a62625da.html">Multiple systems</a></td>
+        <td class="meta">Mammals &gt; Multiple systems</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">63</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/colon-bto-0000269.html">colon</a></td>
+        <td class="meta">colon</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">62</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/oyster-associated-environment-habitatmech-gold-fd2443a2c3.html">oyster-associated environment</a></td>
+        <td class="meta">Mollusca &gt; Oyster</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">61</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/remains-habitatmech-gold-07c6babcdb.html">Remains</a></td>
+        <td class="meta">Birds &gt; Remains</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">60</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/reproductive-system-habitatmech-gold-abc827a582.html">Reproductive system</a></td>
+        <td class="meta">Mammals: Human &gt; Reproductive system</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">60</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/whole-body-habitatmech-gold-45bab6af2d.html">Whole body</a></td>
+        <td class="meta">Arthropoda: Insects &gt; Whole body</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">60</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/area-of-moss-dominated-vegetation-envo-01000890.html">area of moss-dominated vegetation</a></td>
+        <td class="meta">Moss</td>
+        <td><span class="pill">CLOSE</span></td>
+        <td class="num">59</td>
+        <td class="meta">BACDIVE, GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/bivalve-associated-environment-habitatmech-gold-59e8d1205d.html">bivalve-associated environment</a></td>
+        <td class="meta">Mollusca &gt; Bivalves</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">59</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/reproductive-system-habitatmech-gold-29feb6867b.html">Reproductive system</a></td>
+        <td class="meta">Mammals &gt; Reproductive system</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">58</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/intestine-habitatmech-gold-523d63f6f3.html">Intestine</a></td>
+        <td class="meta">Fish &gt; Digestive system &gt; Intestine</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">57</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/middle-ear-habitatmech-gold-51e593a6a4.html">Middle ear</a></td>
+        <td class="meta">Mammals: Human &gt; Auditory/Hearing system &gt; Middle ear</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">55</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/skin-tissue-habitatmech-gold-1cb5947f90.html">Skin tissue</a></td>
+        <td class="meta">Mammals: Human &gt; Integumentary system &gt; Skin &gt; Skin tissue</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">54</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/respiratory-system-habitatmech-gold-0c74807e42.html">Respiratory system</a></td>
+        <td class="meta">Birds &gt; Respiratory system</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">53</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/cecum-mucosa-bto-0000213.html">cecum mucosa</a></td>
+        <td class="meta">cecum mucosa</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">53</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/sea-urchin-associated-environment-habitatmech-gold-b19422ad27.html">sea urchin-associated environment</a></td>
+        <td class="meta">Invertebrates &gt; Echinodermata &gt; Sea Urchin</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">53</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/digital-dermatitis-habitatmech-gold-f93dba43d8.html">Digital dermatitis</a></td>
+        <td class="meta">Mammals &gt; Integumentary system &gt; Skin &gt; Digital dermatitis</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">52</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/skin-habitatmech-gold-92e3c832eb.html">Skin</a></td>
+        <td class="meta">Fish &gt; Integumentary system &gt; Skin</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">52</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/head-bto-0000282.html">head</a></td>
+        <td class="meta">head</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">48</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/liver-habitatmech-gold-21e97f08ee.html">Liver</a></td>
+        <td class="meta">Birds &gt; Digestive system &gt; Biliary tract &gt; Liver</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">46</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/sputum-bto-0001297.html">sputum</a></td>
+        <td class="meta">sputum</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">45</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/protist-associated-environment-habitatmech-gold-eee7408afd.html">protist-associated environment</a></td>
+        <td class="meta">Protist</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">43</td>
+        <td class="meta">BACDIVE, GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/biofilm-habitatmech-gold-f1e0d494f8.html">Biofilm</a></td>
+        <td class="meta">Plants &gt; Phyllosphere &gt; Phylloplane/Leaf surface &gt; Biofilm</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">42</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/fruit-bto-0000486.html">fruit</a></td>
+        <td class="meta">fruit</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">42</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/gastric-mucosa-habitatmech-gold-c4fc259b25.html">Gastric mucosa</a></td>
+        <td class="meta">Mammals &gt; Digestive system &gt; Stomach &gt; Gastric mucosa</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">41</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/amphibian-associated-environment-habitatmech-gold-0cd585a031.html">amphibian-associated environment</a></td>
+        <td class="meta">Amphibia</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">41</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/germ-bto-0000514.html">germ</a></td>
+        <td class="meta">germ</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">41</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/kidney-uberon-0002113.html">kidney</a></td>
+        <td class="meta">Fish &gt; Urinary system &gt; Kidneys</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">41</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/brain-bto-0000142.html">brain</a></td>
+        <td class="meta">brain</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">40</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/spleen-habitatmech-gold-0770f3f3ed.html">Spleen</a></td>
+        <td class="meta">Mammals &gt; Lymphatic system &gt; Spleen</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">39</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/atherosclerotic-plaque-bto-0003120.html">atherosclerotic plaque</a></td>
+        <td class="meta">atherosclerotic plaque</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">39</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/lymphoid-tissue-bto-0000753.html">lymphoid tissue</a></td>
+        <td class="meta">lymphoid tissue</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">39</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/bile-habitatmech-gold-94d216ff38.html">Bile</a></td>
+        <td class="meta">Mammals: Human &gt; Digestive system &gt; Biliary tract &gt; Bile</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">38</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/dental-plaque-habitatmech-gold-26b1d1137f.html">Dental plaque</a></td>
+        <td class="meta">Mammals &gt; Digestive system &gt; Oral cavity &gt; Dental plaque</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">38</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/cerebrospinal-fluid-bto-0000237.html">cerebrospinal fluid</a></td>
+        <td class="meta">cerebrospinal fluid</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">38</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/external-soft-tissue-zone-uberon-0034929.html">external soft tissue zone</a></td>
+        <td class="meta">Mammals &gt; Multiple systems &gt; Soft tissue</td>
+        <td><span class="pill">CLOSE</span></td>
+        <td class="num">38</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/brain-habitatmech-gold-a220aa6bb0.html">Brain</a></td>
+        <td class="meta">Fish &gt; Nervous system &gt; Brain</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">37</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/large-intestine-habitatmech-gold-6bda0871e2.html">Large intestine</a></td>
+        <td class="meta">Mammals &gt; Digestive system &gt; Large intestine</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">37</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/skin-habitatmech-gold-52d3212a6a.html">Skin</a></td>
+        <td class="meta">Birds &gt; Integumentary system &gt; Skin</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">37</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/leukocyte-bto-0000751.html">leukocyte</a></td>
+        <td class="meta">leukocyte</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">37</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/egg-habitatmech-bacdive-d48ce9485d.html">Egg</a></td>
+        <td class="meta">Egg</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">35</td>
+        <td class="meta">BACDIVE</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/epithelium-bto-0000416.html">epithelium</a></td>
+        <td class="meta">epithelium</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">35</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/kidney-habitatmech-gold-9987a3e1d2.html">Kidney</a></td>
+        <td class="meta">Mammals &gt; Urinary system &gt; Kidney</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">34</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/placenta-habitatmech-gold-b81b7f9eeb.html">Placenta</a></td>
+        <td class="meta">Mammals &gt; Fetus &gt; Fetal tissue &gt; Placenta</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">34</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/intestinal-epithelium-bto-0000781.html">intestinal epithelium</a></td>
+        <td class="meta">intestinal epithelium</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">34</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/pseudostem-bto-0005992.html">pseudostem</a></td>
+        <td class="meta">pseudostem</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">34</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/joint-bto-0001686.html">joint</a></td>
+        <td class="meta">joint</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">33</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/subgingival-dental-plaque-uberon-0016484.html">subgingival dental plaque</a></td>
+        <td class="meta">Subgingival-plaque</td>
+        <td><span class="pill">CLOSE</span></td>
+        <td class="num">33</td>
+        <td class="meta">BACDIVE</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/t-lymphocyte-bto-0000782.html">T-lymphocyte</a></td>
+        <td class="meta">T-lymphocyte</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">32</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/bladder-bto-0000123.html">bladder</a></td>
+        <td class="meta">bladder</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">32</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/intestinal-epithelial-cell-bto-0005937.html">intestinal epithelial cell</a></td>
+        <td class="meta">intestinal epithelial cell</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">32</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/protozoan-associated-environment-habitatmech-gold-f3d8c3793f.html">protozoan-associated environment</a></td>
+        <td class="meta">Protozoa</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">32</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/carposphere-habitatmech-gold-e898437067.html">Carposphere</a></td>
+        <td class="meta">Plants &gt; Phyllosphere &gt; Carposphere</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">31</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/liver-bto-0000759.html">liver</a></td>
+        <td class="meta">liver</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">31</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/mucilage-bto-0004617.html">mucilage</a></td>
+        <td class="meta">Plants &gt; Roots &gt; Aerial root &gt; Mucilage</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">31</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/blood-habitatmech-gold-f46a5017f9.html">Blood</a></td>
+        <td class="meta">Birds &gt; Circulatory system &gt; Blood</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">30</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/fecal-habitatmech-gold-ee5582c64e.html">Fecal</a></td>
+        <td class="meta">Reptilia &gt; Digestive system &gt; Large intestine &gt; Fecal</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">30</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/gills-habitatmech-gold-b0721b9326.html">Gills</a></td>
+        <td class="meta">Fish &gt; Respiratory system &gt; Gills</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">30</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/gut-habitatmech-gold-f7cbad92b8.html">Gut</a></td>
+        <td class="meta">Arthropoda: Crustaceans &gt; Digestive system &gt; Gut</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">30</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/kidney-bto-0000671.html">kidney</a></td>
+        <td class="meta">kidney</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">30</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/bone-habitatmech-gold-67f49f8b15.html">Bone</a></td>
+        <td class="meta">Mammals: Human &gt; Skeletal system &gt; Bone</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">29</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/uterus-habitatmech-gold-4a65869529.html">Uterus</a></td>
+        <td class="meta">Mammals &gt; Reproductive system &gt; Uterus</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">29</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/adipose-tissue-bto-0001487.html">adipose tissue</a></td>
+        <td class="meta">adipose tissue</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">29</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/cervix-habitatmech-gold-c15e1115f3.html">Cervix</a></td>
+        <td class="meta">Mammals: Human &gt; Reproductive system &gt; Uterus &gt; Cervix</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">28</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/endosphere-habitatmech-gold-bfe3e11951.html">Endosphere</a></td>
+        <td class="meta">Plants &gt; Endosphere</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">28</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/bronchiole-bto-0002375.html">bronchiole</a></td>
+        <td class="meta">Mammals: Human &gt; Respiratory system &gt; Lung &gt; Bronchioles</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">28</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/nasal-cavity-habitatmech-gold-f3560ae8d1.html">Nasal cavity</a></td>
+        <td class="meta">Birds &gt; Respiratory system &gt; Nasal cavity</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">27</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/vagina-habitatmech-gold-3feaca4b1b.html">Vagina</a></td>
+        <td class="meta">Mammals &gt; Reproductive system &gt; Vagina</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">27</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/throat-bto-0000828.html">throat</a></td>
+        <td class="meta">throat</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">27</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/cornea-habitatmech-gold-5068cb6b3d.html">Cornea</a></td>
+        <td class="meta">Mammals: Human &gt; Visual system &gt; Eye &gt; Cornea</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">26</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/gingiva-habitatmech-gold-2530583ff3.html">Gingiva</a></td>
+        <td class="meta">Mammals: Human &gt; Digestive system &gt; Oral cavity &gt; Gingiva</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">26</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/midgut-habitatmech-gold-67c565f695.html">Midgut</a></td>
+        <td class="meta">Arthropoda: Insects &gt; Digestive system &gt; Midgut</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">26</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/head-uberon-0000033.html">head</a></td>
+        <td class="meta">Arthropoda: Insects &gt; Head</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">26</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/uroepithelium-bto-0003906.html">uroepithelium</a></td>
+        <td class="meta">uroepithelium</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">26</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/peritoneal-fluid-habitatmech-gold-ca3269e5e5.html">Peritoneal fluid</a></td>
+        <td class="meta">Mammals: Human &gt; Abdominal/Peritoneal cavity &gt; Peritoneal fluid</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">25</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/trachea-habitatmech-gold-308a1c6b2e.html">Trachea</a></td>
+        <td class="meta">Birds &gt; Respiratory system &gt; Trachea</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">25</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/urogenital-system-bto-0003091.html">urogenital system</a></td>
+        <td class="meta">urogenital system</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">25</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/circulatory-system-habitatmech-gold-0552e4fd8a.html">Circulatory system</a></td>
+        <td class="meta">Birds &gt; Circulatory system</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">24</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/malpighian-tubule-bto-0000810.html">malpighian tubule</a></td>
+        <td class="meta">Arthropoda: Insects &gt; Excretory system &gt; Malpighian tubules</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">24</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/gut-habitatmech-gold-e6828b88f2.html">Gut</a></td>
+        <td class="meta">Arthropoda: Myriapoda &gt; Digestive system &gt; Gut</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">23</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/small-intestine-habitatmech-gold-d3160a0c40.html">Small intestine</a></td>
+        <td class="meta">Mammals &gt; Digestive system &gt; Small intestine</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">23</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/th17-cell-bto-0005655.html">Th17 cell</a></td>
+        <td class="meta">Th17 cell</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">23</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/fish-skin-lesion-environment-habitatmech-gold-be021eb56c.html">fish skin lesion environment</a></td>
+        <td class="meta">Fish &gt; Integumentary system &gt; Skin &gt; Lesion</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">23</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/tunicate-associated-environment-habitatmech-gold-78c645fff9.html">tunicate-associated environment</a></td>
+        <td class="meta">Tunicates</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">23</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/large-intestine-habitatmech-gold-b091b80314.html">Large intestine</a></td>
+        <td class="meta">Birds &gt; Digestive system &gt; Large intestine</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">22</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/larvae-habitatmech-gold-bcd41f1c5d.html">Larvae</a></td>
+        <td class="meta">Mollusca &gt; Larvae</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">22</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/wood-decay-habitatmech-gold-728316b889.html">Wood decay</a></td>
+        <td class="meta">Plants &gt; Phyllosphere &gt; Stem &gt; Wood decay</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">22</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/macrophage-bto-0000801.html">macrophage</a></td>
+        <td class="meta">macrophage</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">22</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/gut-habitatmech-gold-d4e02cf775.html">Gut</a></td>
+        <td class="meta">Arthropoda: Insects &gt; Larva &gt; Gut</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">21</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/periodontal-pocket-mesh-d010514.html">Periodontal Pocket</a></td>
+        <td class="meta">Mammals: Human &gt; Digestive system &gt; Oral cavity &gt; Periodontal pockets</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">21</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/reproductive-system-habitatmech-gold-6cd556290d.html">Reproductive system</a></td>
+        <td class="meta">Birds &gt; Reproductive system</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">21</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/rumen-fluid-habitatmech-gold-409867a634.html">Rumen fluid</a></td>
+        <td class="meta">Mammals &gt; Digestive system &gt; Stomach &gt; Rumen fluid</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">21</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/stem-tuber-habitatmech-gold-f164f72e65.html">Stem tuber</a></td>
+        <td class="meta">Plants &gt; Rhizome &gt; Stem tuber</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">21</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/echinoderm-associated-environment-habitatmech-gold-e1f435d44b.html">echinoderm-associated environment</a></td>
+        <td class="meta">Invertebrates &gt; Echinodermata</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">21</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/spleen-bto-0001281.html">spleen</a></td>
+        <td class="meta">spleen</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">21</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/syrinx-organ-uberon-0009074.html">syrinx organ</a></td>
+        <td class="meta">Birds &gt; Respiratory system &gt; Trachea &gt; Syrinx</td>
+        <td><span class="pill">CLOSE</span></td>
+        <td class="num">21</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/conjunctiva-habitatmech-gold-539290062d.html">Conjunctiva</a></td>
+        <td class="meta">Mammals: Human &gt; Visual system &gt; Conjunctiva</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">20</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/heart-habitatmech-gold-693be63c1c.html">Heart</a></td>
+        <td class="meta">Mammals &gt; Circulatory system &gt; Heart</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">20</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/hindgut-habitatmech-gold-50722c7871.html">Hindgut</a></td>
+        <td class="meta">Arthropoda: Insects &gt; Digestive system &gt; Hindgut</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">20</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/large-intestine-habitatmech-gold-5b0aa7456c.html">Large intestine</a></td>
+        <td class="meta">Mammals: Human &gt; Digestive system &gt; Large intestine</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">20</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/lower-gastrointestinal-tract-habitatmech-gold-8c0dd5714b.html">Lower gastrointestinal tract</a></td>
+        <td class="meta">Mammals: Human &gt; Digestive system &gt; Lower gastrointestinal tract</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">20</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/stomach-habitatmech-gold-d3869ad37f.html">Stomach</a></td>
+        <td class="meta">Mammals &gt; Digestive system &gt; Stomach</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">20</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/visual-system-habitatmech-gold-020f82703b.html">Visual system</a></td>
+        <td class="meta">Mammals: Human &gt; Visual system</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">20</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/epithelial-cell-bto-0000414.html">epithelial cell</a></td>
+        <td class="meta">epithelial cell</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">20</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/filament-bto-0000463.html">filament</a></td>
+        <td class="meta">filament</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">20</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/eggs-habitatmech-gold-7b8cf8839b.html">Eggs</a></td>
+        <td class="meta">Arthropoda: Insects &gt; Ootheca/Egg mass &gt; Eggs</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">19</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/gut-habitatmech-gold-fe0f5e3f09.html">Gut</a></td>
+        <td class="meta">Mollusca &gt; Digestive system &gt; Gut</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">19</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/ht-29-cell-bto-0000182.html">HT-29 cell</a></td>
+        <td class="meta">HT-29 cell</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">19</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/dinoflagellate-associated-environment-habitatmech-gold-94019ddb33.html">dinoflagellate-associated environment</a></td>
+        <td class="meta">Microbial &gt; Dinoflagellates</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">19</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/heart-bto-0000562.html">heart</a></td>
+        <td class="meta">heart</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">19</td>
+        <td class="meta">PREGO</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/rhizoplane-envo-01001181.html">rhizoplane</a></td>
+        <td class="meta">Plants &gt; Roots &gt; Rhizoplane</td>
+        <td><span class="pill">EXACT</span></td>
+        <td class="num">19</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/trachea-habitatmech-gold-bc91213af9.html">Trachea</a></td>
+        <td class="meta">Mammals &gt; Respiratory system &gt; Trachea</td>
+        <td><span class="pill">NARROW</span></td>
+        <td class="num">18</td>
+        <td class="meta">GOLD</td>
+      </tr>
+      </tbody>
+    </table>
+    </div>
+    <nav class="pager" aria-label="Pages">
+<span class="pill plain" aria-current="page">1</span> <a href="host-associated-2.html">2</a> <a href="host-associated-3.html">3</a> <a href="host-associated-4.html">4</a> <a href="host-associated-5.html">5</a> <a href="host-associated-6.html">6</a>     </nav>
+    <p class="meta" id="unfiltered-count">Showing 300 of 1651. The filter searches all
+    1651, not just this page.</p>
+  </div>
 </div>
-<nav class="pager" aria-label="Pages">
-<span class="pill plain" aria-current="page">1</span> <a href="host-associated-2.html">2</a> <a href="host-associated-3.html">3</a> <a href="host-associated-4.html">4</a> <a href="host-associated-5.html">5</a> <a href="host-associated-6.html">6</a> </nav>
-<p class="meta" id="unfiltered-count">Showing 300 of 1651. The filter searches all
-1651, not just this page.</p>
 <script>
 (function () {
   var box = document.getElementById('q'), out = document.getElementById('count');
+  var gFilter = document.getElementById('grounding-filter');
+  var sFilter = document.getElementById('source-filter');
+  var sortSelect = document.getElementById('sort-select');
   var body = document.querySelector('#tbl tbody');
   var original = body.innerHTML;
   var index = null, pending = null, resultLimit = 300;
@@ -2159,6 +2255,19 @@ record's own page — the link already carries it.</p>
     return String(t).replace(/[&<>"]/g, function (c) {
       return {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c];
     });
+  }
+  function syncUrl(q, g, s, sort) {
+    if (!window.history || !window.history.replaceState) return;
+    var url = new URL(window.location.href);
+    if (q) url.searchParams.set('q', q);
+    else url.searchParams.delete('q');
+    if (g) url.searchParams.set('grounding', g);
+    else url.searchParams.delete('grounding');
+    if (s) url.searchParams.set('source', s);
+    else url.searchParams.delete('source');
+    if (sort && sort !== 'assertions-desc') url.searchParams.set('sort', sort);
+    else url.searchParams.delete('sort');
+    window.history.replaceState(null, '', url.toString());
   }
   // Rows are rebuilt from the index rather than hidden in place, because the
   // page only holds its own slice — hiding would filter 300 records and call
@@ -2176,15 +2285,32 @@ record's own page — the link already carries it.</p>
   function apply() {
     pending = null;
     var raw = box.value.trim().toLowerCase();
-    if (pager) pager.hidden = !!raw;
-    if (unfilteredCount) unfilteredCount.hidden = !!raw;
-    clear.hidden = !raw;
-    if (!raw) { body.innerHTML = original; out.textContent = ''; more.hidden = true; return; }
+    var gVal = gFilter ? gFilter.value : '';
+    var sVal = sFilter ? sFilter.value.toLowerCase() : '';
+    var sortVal = sortSelect ? sortSelect.value : 'assertions-desc';
+    var active = !!(raw || gVal || sVal || (sortVal && sortVal !== 'assertions-desc'));
+    syncUrl(box.value.trim(), gVal, sFilter ? sFilter.value : '', sortVal);
+    if (pager) pager.hidden = active;
+    if (unfilteredCount) unfilteredCount.hidden = active;
+    clear.hidden = !active;
+    if (!active) { body.innerHTML = original; out.textContent = ''; more.hidden = true; return; }
     var slugged = raw.replace(/[^a-z0-9]+/g, '-');
     var hits = index.filter(function (r) {
+      if (gVal && r[3] !== gVal) return false;
+      if (sVal && String(r[5]).toLowerCase().indexOf(sVal) === -1) return false;
+      if (!raw) return true;
       var k = (r[0] + ' ' + r[2] + ' ' + r[1] + ' ' + r[5]).toLowerCase();
       return k.indexOf(raw) !== -1 || k.indexOf(slugged) !== -1;
     });
+    if (sortVal && sortVal !== 'assertions-desc') {
+      hits.sort(function (a, b) {
+        if (sortVal === 'label-asc') return String(a[0]).localeCompare(String(b[0]));
+        if (sortVal === 'label-desc') return String(b[0]).localeCompare(String(a[0]));
+        if (sortVal === 'grounding-asc') return String(a[3]).localeCompare(String(b[3])) || (Number(b[4]) - Number(a[4]));
+        if (sortVal === 'assertions-asc') return (Number(a[4]) - Number(b[4])) || String(a[0]).localeCompare(String(b[0]));
+        return 0;
+      });
+    }
     draw(hits.slice(0, resultLimit));
     var visible = Math.min(resultLimit, hits.length);
     more.hidden = visible >= hits.length;
@@ -2204,7 +2330,7 @@ record's own page — the link already carries it.</p>
     });
   }
 
-  box.addEventListener('input', function () {
+  function triggerFilter() {
     resultLimit = 300;
     if (index === null) {
       // Fetched once, on the first keystroke — a reader who only browses never
@@ -2216,9 +2342,35 @@ record's own page — the link already carries it.</p>
       return;
     }
     if (pending === null) { pending = requestAnimationFrame(apply); }
-  });
+  }
+
+  box.addEventListener('input', triggerFilter);
+  if (gFilter) gFilter.addEventListener('change', triggerFilter);
+  if (sFilter) sFilter.addEventListener('change', triggerFilter);
+  if (sortSelect) sortSelect.addEventListener('change', triggerFilter);
   more.addEventListener('click', function () { resultLimit += 300; apply(); });
-  clear.addEventListener('click', function () { box.value = ''; resultLimit = 300; apply(); box.focus(); });
+  clear.addEventListener('click', function () {
+    box.value = '';
+    if (gFilter) gFilter.value = '';
+    if (sFilter) sFilter.value = '';
+    if (sortSelect) sortSelect.value = 'assertions-desc';
+    resultLimit = 300;
+    apply();
+    box.focus();
+  });
+
+  var params = new URLSearchParams(window.location.search);
+  var initialQ = params.get('q');
+  var initialG = params.get('grounding');
+  var initialS = params.get('source');
+  var initialSort = params.get('sort');
+  if (initialQ) box.value = initialQ;
+  if (initialG && gFilter) gFilter.value = initialG;
+  if (initialS && sFilter) sFilter.value = initialS;
+  if (initialSort && sortSelect) sortSelect.value = initialSort;
+  if (initialQ || initialG || initialS || initialSort) {
+    triggerFilter();
+  }
 })();
 </script>
 </main>
@@ -2226,7 +2378,7 @@ record's own page — the link already carries it.</p>
   <p>
     Generated from
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a>
-    on 2026-08-16. Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party terms apply.
+    on 2026-08-16. Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/src/habitatmech/schema/habitatmech.yaml">LinkML Schema</a> · <a href="../index.html#downloads">Downloads</a>. Third-party terms apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

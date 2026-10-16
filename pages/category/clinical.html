@@ -6,6 +6,7 @@
 <title>CLINICAL — HabitatMech</title>
 <meta name="description" content="Microbial habitats harmonized from GOLD, BacDive, PREGO and Madin et al., grounded in ENVO/UBERON/FOODON/BTO/PO.">
 <link rel="stylesheet" href="../style.css">
+<script src="../theme-toggle.js"></script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -17,60 +18,155 @@
     <a href="../index.html">Overview</a>
     <a href="../browse.html">Browse</a>
     <a href="../term-requests.html">ENVO term requests</a>
+    <a href="../index.html#downloads">Downloads &amp; Schema</a>
     <a href="https://github.com/CultureBotAI/HabitatMech">Source</a>
     <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
 <main id="main-content" tabindex="-1">
+<div class="page-top-bar">
+  <div class="breadcrumbs"><a href="../browse.html">Browse</a> · <strong>CLINICAL</strong></div>
+  <form class="page-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all categories…" aria-label="Search all habitat categories">
+    <button type="submit">Search</button>
+  </form>
+</div>
+
 <h1>CLINICAL</h1>
 <p class="lede">4 habitat records. Clinical and diagnostic sample contexts.</p>
 <p class="meta">The source path is shown because a record's label is only the last
 step of it: "Cattle barn" under Air is the air sampled in a cattle barn, not the
 barn. The category prefix is trimmed off it, and the identifier lives on each
 record's own page — the link already carries it.</p>
-<input class="searchbox" id="q" type="search" data-index="clinical.json" data-total="4" placeholder="Filter all 4 records…" aria-label="Filter records">
-<p class="meta" id="count" aria-live="polite"></p>
-<button type="button" id="show-more" hidden>Show more matches</button>
-<button type="button" id="clear-filter" hidden>Clear filter</button>
-<div class="table-scroll" role="region" tabindex="0" aria-label="CLINICAL habitats">
-<table id="tbl">
-  <caption>CLINICAL habitats</caption>
-  <thead><tr><th scope="col">Habitat</th><th scope="col">Source path</th><th scope="col">Grounding</th><th scope="col" class="num">Assertions</th><th scope="col">Sources</th></tr></thead>
-  <tbody>
-  <tr>
-    <td><a href="../habitats/medical-environment-habitatmech-bacdive-5e52ea1bba.html">Medical-environment</a></td>
-    <td class="meta">Medical-environment</td>
-    <td><span class="pill warn">UNGROUNDED</span></td>
-    <td class="num">438</td>
-    <td class="meta">BACDIVE</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/biopsy-habitatmech-bacdive-3d4fdc29fb.html">Biopsy</a></td>
-    <td class="meta">Biopsy</td>
-    <td><span class="pill warn">NOT_APPLICABLE</span></td>
-    <td class="num">95</td>
-    <td class="meta">BACDIVE</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/catheter-device-ncit-c50344.html">Catheter Device</a></td>
-    <td class="meta">Catheter</td>
-    <td><span class="pill">CLOSE</span></td>
-    <td class="num">75</td>
-    <td class="meta">BACDIVE</td>
-  </tr>
-  <tr>
-    <td><a href="../habitats/endotracheal-fluid-ncit-c171504.html">Endotracheal Fluid</a></td>
-    <td class="meta">Tracheal-aspirate</td>
-    <td><span class="pill">CLOSE</span></td>
-    <td class="num">3</td>
-    <td class="meta">BACDIVE</td>
-  </tr>
-  </tbody>
-</table>
+
+<div class="browse-layout">
+  <aside class="facet-sidebar" aria-label="Filter CLINICAL habitats">
+    <h2>Filter CLINICAL</h2>
+    <div class="facet-group">
+      <label class="facet-label" for="q">Search category</label>
+      <input class="facet-input searchbox" id="q" type="search" data-index="clinical.json" data-total="4" placeholder="Filter all 4 records…" aria-label="Filter records">
+    </div>
+    <div class="facet-group">
+      <label class="facet-label" for="grounding-filter">Grounding status</label>
+      <select id="grounding-filter" class="facet-select" aria-label="Filter by grounding status">
+        <option value="">All grounding statuses</option>
+        <option value="EXACT">EXACT</option>
+        <option value="BROAD">BROAD</option>
+        <option value="CLOSE">CLOSE</option>
+        <option value="NARROW">NARROW</option>
+        <option value="UNGROUNDED">UNGROUNDED</option>
+        <option value="NOT_APPLICABLE">NOT_APPLICABLE</option>
+      </select>
+    </div>
+    <div class="facet-group">
+      <label class="facet-label" for="source-filter">Source vocabulary</label>
+      <select id="source-filter" class="facet-select" name="source" aria-label="Filter by source vocabulary">
+        <option value="">All sources</option>
+        <option value="GOLD">GOLD</option>
+        <option value="BacDive">BacDive</option>
+        <option value="PREGO">PREGO</option>
+        <option value="Madin">Madin</option>
+      </select>
+    </div>
+    <div class="facet-group">
+      <label class="facet-label" for="sort-select">Sort order</label>
+      <select id="sort-select" class="facet-select" name="sort" aria-label="Sort habitat records">
+        <option value="assertions-desc">Assertions (high–low)</option>
+        <option value="assertions-asc">Assertions (low–high)</option>
+        <option value="label-asc">Habitat name (A–Z)</option>
+        <option value="label-desc">Habitat name (Z–A)</option>
+        <option value="grounding-asc">Grounding status (A–Z)</option>
+      </select>
+    </div>
+    <div class="facet-group">
+      <span class="facet-label">Switch category</span>
+      <div class="facet-pills">
+        <a class="facet-pill" href="host-associated.html">
+          <span>HOST_ASSOCIATED</span>
+          <span class="facet-count">1651</span>
+        </a>
+        <a class="facet-pill" href="engineered.html">
+          <span>ENGINEERED</span>
+          <span class="facet-count">488</span>
+        </a>
+        <a class="facet-pill" href="aquatic.html">
+          <span>AQUATIC</span>
+          <span class="facet-count">468</span>
+        </a>
+        <a class="facet-pill" href="terrestrial.html">
+          <span>TERRESTRIAL</span>
+          <span class="facet-count">353</span>
+        </a>
+        <a class="facet-pill" href="other.html">
+          <span>OTHER</span>
+          <span class="facet-count">179</span>
+        </a>
+        <a class="facet-pill" href="food.html">
+          <span>FOOD</span>
+          <span class="facet-count">59</span>
+        </a>
+        <a class="facet-pill" href="air.html">
+          <span>AIR</span>
+          <span class="facet-count">7</span>
+        </a>
+        <a class="facet-pill is-active" href="clinical.html">
+          <span>CLINICAL</span>
+          <span class="facet-count">4</span>
+        </a>
+      </div>
+    </div>
+    <div class="facet-group">
+      <button type="button" id="clear-filter" class="facet-reset" hidden>Clear filter</button>
+    </div>
+    <p class="meta" id="count" aria-live="polite"></p>
+  </aside>
+
+  <div class="browse-main">
+    <button type="button" id="show-more" hidden>Show more matches</button>
+    <div class="table-scroll" role="region" tabindex="0" aria-label="CLINICAL habitats">
+    <table id="tbl">
+      <caption>CLINICAL habitats</caption>
+      <thead><tr><th scope="col">Habitat</th><th scope="col">Source path</th><th scope="col">Grounding</th><th scope="col" class="num">Assertions</th><th scope="col">Sources</th></tr></thead>
+      <tbody>
+      <tr>
+        <td><a href="../habitats/medical-environment-habitatmech-bacdive-5e52ea1bba.html">Medical-environment</a></td>
+        <td class="meta">Medical-environment</td>
+        <td><span class="pill warn">UNGROUNDED</span></td>
+        <td class="num">438</td>
+        <td class="meta">BACDIVE</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/biopsy-habitatmech-bacdive-3d4fdc29fb.html">Biopsy</a></td>
+        <td class="meta">Biopsy</td>
+        <td><span class="pill warn">NOT_APPLICABLE</span></td>
+        <td class="num">95</td>
+        <td class="meta">BACDIVE</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/catheter-device-ncit-c50344.html">Catheter Device</a></td>
+        <td class="meta">Catheter</td>
+        <td><span class="pill">CLOSE</span></td>
+        <td class="num">75</td>
+        <td class="meta">BACDIVE</td>
+      </tr>
+      <tr>
+        <td><a href="../habitats/endotracheal-fluid-ncit-c171504.html">Endotracheal Fluid</a></td>
+        <td class="meta">Tracheal-aspirate</td>
+        <td><span class="pill">CLOSE</span></td>
+        <td class="num">3</td>
+        <td class="meta">BACDIVE</td>
+      </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
 </div>
 <script>
 (function () {
   var box = document.getElementById('q'), out = document.getElementById('count');
+  var gFilter = document.getElementById('grounding-filter');
+  var sFilter = document.getElementById('source-filter');
+  var sortSelect = document.getElementById('sort-select');
   var body = document.querySelector('#tbl tbody');
   var original = body.innerHTML;
   var index = null, pending = null, resultLimit = 300;
@@ -83,6 +179,19 @@ record's own page — the link already carries it.</p>
     return String(t).replace(/[&<>"]/g, function (c) {
       return {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c];
     });
+  }
+  function syncUrl(q, g, s, sort) {
+    if (!window.history || !window.history.replaceState) return;
+    var url = new URL(window.location.href);
+    if (q) url.searchParams.set('q', q);
+    else url.searchParams.delete('q');
+    if (g) url.searchParams.set('grounding', g);
+    else url.searchParams.delete('grounding');
+    if (s) url.searchParams.set('source', s);
+    else url.searchParams.delete('source');
+    if (sort && sort !== 'assertions-desc') url.searchParams.set('sort', sort);
+    else url.searchParams.delete('sort');
+    window.history.replaceState(null, '', url.toString());
   }
   // Rows are rebuilt from the index rather than hidden in place, because the
   // page only holds its own slice — hiding would filter 300 records and call
@@ -100,15 +209,32 @@ record's own page — the link already carries it.</p>
   function apply() {
     pending = null;
     var raw = box.value.trim().toLowerCase();
-    if (pager) pager.hidden = !!raw;
-    if (unfilteredCount) unfilteredCount.hidden = !!raw;
-    clear.hidden = !raw;
-    if (!raw) { body.innerHTML = original; out.textContent = ''; more.hidden = true; return; }
+    var gVal = gFilter ? gFilter.value : '';
+    var sVal = sFilter ? sFilter.value.toLowerCase() : '';
+    var sortVal = sortSelect ? sortSelect.value : 'assertions-desc';
+    var active = !!(raw || gVal || sVal || (sortVal && sortVal !== 'assertions-desc'));
+    syncUrl(box.value.trim(), gVal, sFilter ? sFilter.value : '', sortVal);
+    if (pager) pager.hidden = active;
+    if (unfilteredCount) unfilteredCount.hidden = active;
+    clear.hidden = !active;
+    if (!active) { body.innerHTML = original; out.textContent = ''; more.hidden = true; return; }
     var slugged = raw.replace(/[^a-z0-9]+/g, '-');
     var hits = index.filter(function (r) {
+      if (gVal && r[3] !== gVal) return false;
+      if (sVal && String(r[5]).toLowerCase().indexOf(sVal) === -1) return false;
+      if (!raw) return true;
       var k = (r[0] + ' ' + r[2] + ' ' + r[1] + ' ' + r[5]).toLowerCase();
       return k.indexOf(raw) !== -1 || k.indexOf(slugged) !== -1;
     });
+    if (sortVal && sortVal !== 'assertions-desc') {
+      hits.sort(function (a, b) {
+        if (sortVal === 'label-asc') return String(a[0]).localeCompare(String(b[0]));
+        if (sortVal === 'label-desc') return String(b[0]).localeCompare(String(a[0]));
+        if (sortVal === 'grounding-asc') return String(a[3]).localeCompare(String(b[3])) || (Number(b[4]) - Number(a[4]));
+        if (sortVal === 'assertions-asc') return (Number(a[4]) - Number(b[4])) || String(a[0]).localeCompare(String(b[0]));
+        return 0;
+      });
+    }
     draw(hits.slice(0, resultLimit));
     var visible = Math.min(resultLimit, hits.length);
     more.hidden = visible >= hits.length;
@@ -128,7 +254,7 @@ record's own page — the link already carries it.</p>
     });
   }
 
-  box.addEventListener('input', function () {
+  function triggerFilter() {
     resultLimit = 300;
     if (index === null) {
       // Fetched once, on the first keystroke — a reader who only browses never
@@ -140,9 +266,35 @@ record's own page — the link already carries it.</p>
       return;
     }
     if (pending === null) { pending = requestAnimationFrame(apply); }
-  });
+  }
+
+  box.addEventListener('input', triggerFilter);
+  if (gFilter) gFilter.addEventListener('change', triggerFilter);
+  if (sFilter) sFilter.addEventListener('change', triggerFilter);
+  if (sortSelect) sortSelect.addEventListener('change', triggerFilter);
   more.addEventListener('click', function () { resultLimit += 300; apply(); });
-  clear.addEventListener('click', function () { box.value = ''; resultLimit = 300; apply(); box.focus(); });
+  clear.addEventListener('click', function () {
+    box.value = '';
+    if (gFilter) gFilter.value = '';
+    if (sFilter) sFilter.value = '';
+    if (sortSelect) sortSelect.value = 'assertions-desc';
+    resultLimit = 300;
+    apply();
+    box.focus();
+  });
+
+  var params = new URLSearchParams(window.location.search);
+  var initialQ = params.get('q');
+  var initialG = params.get('grounding');
+  var initialS = params.get('source');
+  var initialSort = params.get('sort');
+  if (initialQ) box.value = initialQ;
+  if (initialG && gFilter) gFilter.value = initialG;
+  if (initialS && sFilter) sFilter.value = initialS;
+  if (initialSort && sortSelect) sortSelect.value = initialSort;
+  if (initialQ || initialG || initialS || initialSort) {
+    triggerFilter();
+  }
 })();
 </script>
 </main>
@@ -150,7 +302,7 @@ record's own page — the link already carries it.</p>
   <p>
     Generated from
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a>
-    on 2026-08-16. Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party terms apply.
+    on 2026-08-16. Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/src/habitatmech/schema/habitatmech.yaml">LinkML Schema</a> · <a href="../index.html#downloads">Downloads</a>. Third-party terms apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

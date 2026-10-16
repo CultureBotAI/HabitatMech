@@ -405,19 +405,24 @@ def _build(out_dir: Path, text_map: PreparedTextMap | None) -> None:
         stats["novel"] = 0
     assert stats["seeded"] == status_counts.get("SEEDED", 0)
 
-    categories = []
+    groundings = [
+        {"name": name, "count": count, "meaning": GROUNDING_MEANING.get(name, "")}
+        for name, count in grounding_counts.most_common()
+    ]
+
+    categories = [
+        {
+            "label": name,
+            "slug": slugify(name),
+            "count": len(items),
+            "pct": round(100 * len(items) / len(records)),
+            "grounded": sum(1 for i in items if i["grounding"] not in ("UNGROUNDED", "NOT_APPLICABLE")),
+            "description": CATEGORY_BLURB.get(name, ""),
+        }
+        for name, items in sorted(by_category.items(), key=lambda kv: -len(kv[1]))
+    ]
     category_pages: list[str] = []
     for name, items in sorted(by_category.items(), key=lambda kv: -len(kv[1])):
-        categories.append(
-            {
-                "label": name,
-                "slug": slugify(name),
-                "count": len(items),
-                "pct": round(100 * len(items) / len(records)),
-                "grounded": sum(1 for i in items if i["grounding"] not in ("UNGROUNDED", "NOT_APPLICABLE")),
-                "description": CATEGORY_BLURB.get(name, ""),
-            }
-        )
         ordered = sorted(items, key=lambda r: (-r["assertions"], r["label"]))
         slug = slugify(name)
         # Paginated because 99% of a category page is its table body, and the
@@ -442,6 +447,8 @@ def _build(out_dir: Path, text_map: PreparedTextMap | None) -> None:
                     index_url=f"{slug}.json",
                     root="../",
                     stats=stats,
+                    categories=categories,
+                    groundings=groundings,
                 ),
                 encoding="utf-8",
             )
@@ -458,11 +465,6 @@ def _build(out_dir: Path, text_map: PreparedTextMap | None) -> None:
             encoding="utf-8",
         )
 
-    groundings = [
-        {"name": name, "count": count, "meaning": GROUNDING_MEANING.get(name, "")}
-        for name, count in grounding_counts.most_common()
-    ]
-
     (out_dir / "index.html").write_text(
         env.get_template("index.html").render(
             stats=stats, categories=categories, groundings=groundings,
@@ -471,7 +473,9 @@ def _build(out_dir: Path, text_map: PreparedTextMap | None) -> None:
         encoding="utf-8",
     )
     (out_dir / "browse.html").write_text(
-        env.get_template("browse.html").render(stats=stats, categories=categories, root=""),
+        env.get_template("browse.html").render(
+            stats=stats, categories=categories, groundings=groundings, root=""
+        ),
         encoding="utf-8",
     )
     (out_dir / "term-requests.html").write_text(
@@ -484,6 +488,7 @@ def _build(out_dir: Path, text_map: PreparedTextMap | None) -> None:
         encoding="utf-8",
     )
     shutil.copyfile(TEMPLATES_DIR / "style.css", out_dir / "style.css")
+    shutil.copyfile(TEMPLATES_DIR / "theme-toggle.js", out_dir / "theme-toggle.js")
     # Without this, Pages runs Jekyll over the site and silently drops any path
     # beginning with an underscore — a 404 rather than a visible error. Slugs
     # come from habitat labels, so that is not guaranteed to stay impossible
@@ -554,7 +559,9 @@ def _build(out_dir: Path, text_map: PreparedTextMap | None) -> None:
     if text_map is not None:
         (out_dir / "text-map").mkdir(exist_ok=True)
         (out_dir / "text-map" / "index.html").write_text(
-            env.get_template("text_map.html").render(root="../", stats=stats),
+            env.get_template("text_map.html").render(
+                root="../", stats=stats, categories=categories, groundings=groundings
+            ),
             encoding="utf-8")
 
     # Remove pages for records that no longer exist. Curation splits records as
@@ -563,8 +570,8 @@ def _build(out_dir: Path, text_map: PreparedTextMap | None) -> None:
     # as orphaned forever. Same reason the seeder has --prune.
     written = {
         out_dir / "index.html", out_dir / "browse.html", out_dir / "term-requests.html",
-        out_dir / "style.css", out_dir / ".nojekyll", out_dir / "sitemap.xml",
-        out_dir / "robots.txt", out_dir / "404.html",
+        out_dir / "style.css", out_dir / "theme-toggle.js", out_dir / ".nojekyll",
+        out_dir / "sitemap.xml", out_dir / "robots.txt", out_dir / "404.html",
     }
     written |= retired_written
     if text_map is not None:
