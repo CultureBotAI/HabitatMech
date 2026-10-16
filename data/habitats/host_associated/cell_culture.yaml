@@ -8,7 +8,6 @@ grounding_status: EXACT
 mapping_status: SEEDED
 parent_habitats:
 - ENVO:01000155
-- habitatmech:GOLD.cd0b0940e5
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6252
@@ -21,3 +20,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.cd0b0940e5
+    for habitatmech:GOLD.66d6a3a57a (Host-associated > Mammals: Human > Cell culture).
+    Review https://github.com/CultureBotAI/HabitatMech/issues/2214 : ENVO cell culture
+    denotes cells grown in vitro in artificial medium, with a valid organic-material
+    genus. The additional human-associated-environment superclass is false for this
+    generic identity, which includes nonhuman cultures. The native shallow-leaf exact
+    grounding is reproduced, but the single human GOLD source path cannot restrict
+    the ontology class itself. Exclude the source-specific parent without inventing
+    specimen observations. Exclude only this exact source contribution; preserve independent
+    valid genera and source observations. Mapping endpoint #1398, Ceros source meaning
+    #325 and upstream Polyps identity #2171 are not resolved by this hierarchy guard.'

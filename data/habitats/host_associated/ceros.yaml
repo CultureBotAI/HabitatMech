@@ -3,8 +3,6 @@ label: Ceros
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
-parent_habitats:
-- habitatmech:GOLD.56e0776270
 xrefs:
 - UBERON:0006967
 source_attestations:
@@ -30,3 +28,18 @@ curation_history:
     a living bony core if Ceros instead denotes rhinoceros horn, so the horn term
     is retained only as an xref. Path: Host-associated > Mammals > Integumentary system
     > Ceros (source concept habitatmech:GOLD.98bf2e4e7d)'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.56e0776270
+    for habitatmech:GOLD.98bf2e4e7d (Host-associated > Mammals > Integumentary system
+    > Ceros). Review https://github.com/CultureBotAI/HabitatMech/issues/2214 : Ceros
+    remains an unresolved GOLD source meaning, correctly minted UNGROUNDED/REVIEWED
+    with horn only as an xref and an explicit term-request exclusion. Current horn
+    ontology requires a bony core, while primary rhinoceros-horn histology supports
+    a different composition. Neither known horn reading supports a whole-integumentary-system
+    genus. Source intent still needs confirmation under #325; current public GOLD
+    pages are accessible, so historical HTTP failures are not current proof of unavailability.
+    Exclude only this exact source contribution; preserve independent valid genera
+    and source observations. Mapping endpoint #1398, Ceros source meaning #325 and
+    upstream Polyps identity #2171 are not resolved by this hierarchy guard.'

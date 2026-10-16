@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - UBERON:0001359
-- habitatmech:GOLD.54eda01cf1
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6774
@@ -20,3 +19,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.54eda01cf1
+    for habitatmech:GOLD.2777b651ed (Host-associated > Mammals > Nervous system >
+    Subarachnoid space > Cerebrospinal fluid). Review https://github.com/CultureBotAI/HabitatMech/issues/2214
+    : Mammal cerebrospinal fluid retains a valid generic CSF genus and one ORGANISM
+    assertion. The subarachnoid space is a containing site, not a broader fluid class.
+    Preserve the host-specific mint and independent genus while addressing that parent
+    and the separate narrowMatch endpoint contract. Exclude only this exact source
+    contribution; preserve independent valid genera and source observations. Mapping
+    endpoint #1398, Ceros source meaning #325 and upstream Polyps identity #2171 are
+    not resolved by this hierarchy guard.'

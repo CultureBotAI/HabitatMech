@@ -3,8 +3,6 @@ label: Cellulitis
 habitat_category: HOST_ASSOCIATED
 grounding_status: NOT_APPLICABLE
 mapping_status: REVIEWED
-parent_habitats:
-- habitatmech:GOLD.4b37ab4b76
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6355
@@ -24,3 +22,17 @@ curation_history:
     screen review (#108): Cellulitis names an inflammatory disease of skin and subcutaneous
     tissue, not the tissue itself. An external phenotype term corroborates the disease/phenotype
     reading but is not in the committed slice. (source concept habitatmech:GOLD.6a1f882bb7)'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.4b37ab4b76
+    for habitatmech:GOLD.6a1f882bb7 (Host-associated > Mammals: Human > Integumentary
+    system > Skin > Cellulitis). Review https://github.com/CultureBotAI/HabitatMech/issues/2214
+    : The maintained NOT_APPLICABLE/REVIEWED decision correctly treats cellulitis
+    as a condition, not physical habitat material. The remaining human Skin superclass
+    contradicts that distinction: cellulitis is an infection involving skin and underlying
+    tissue, not a subtype of the organ. Preserve the one source ORGANISM assertion
+    and condition decision while suppressing only the unsupported parent. Exclude
+    only this exact source contribution; preserve independent valid genera and source
+    observations. Mapping endpoint #1398, Ceros source meaning #325 and upstream Polyps
+    identity #2171 are not resolved by this hierarchy guard.'
