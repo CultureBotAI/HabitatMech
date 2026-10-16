@@ -48,8 +48,8 @@ parameters rather than flattening them into one unsupported claim.
 | Category | Records | | Grounding | Records |
 |---|---:|---|---|---:|
 | HOST_ASSOCIATED | 1,651 | | EXACT | 1,054 |
-| ENGINEERED | 488 | | UNGROUNDED | 947 |
-| AQUATIC | 468 | | NARROW | 999 |
+| ENGINEERED | 488 | | UNGROUNDED | 948 |
+| AQUATIC | 468 | | NARROW | 998 |
 | TERRESTRIAL | 353 | | NOT_APPLICABLE | 105 |
 | OTHER | 179 | | CLOSE | 92 |
 | FOOD | 59 | | BROAD | 12 |
@@ -58,7 +58,7 @@ parameters rather than flattening them into one unsupported claim.
 
 175 records are attested by at least two sources; 16 are attested by four or more.
 
-**729 records (22.7%) are `REVIEWED`;** the remaining 2,480 are `SEEDED`.
+**730 records (22.7%) are `REVIEWED`;** the remaining 2,479 are `SEEDED`.
 <!-- END GENERATED CORPUS STATS -->
 
 Run `just report` for the detailed live report. Class-level decisions deliberately

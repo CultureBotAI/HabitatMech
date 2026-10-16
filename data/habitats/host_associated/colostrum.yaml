@@ -9,7 +9,6 @@ grounding_status: EXACT
 mapping_status: SEEDED
 parent_habitats:
 - UBERON:0006539
-- habitatmech:GOLD.1a6a558ccf
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6366
@@ -22,3 +21,13 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-16T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.1a6a558ccf
+    for habitatmech:GOLD.d7a86e335f (Host-associated > Mammals > Integumentary system
+    > Mammary gland > Colostrum). Review https://github.com/CultureBotAI/HabitatMech/issues/2221
+    : Colostrum is a mammary secretion, not a type of the entire gland. Current Uberon
+    distinguishes produced_by from subclass_of. Preserve its mammary-gland-fluid genus,
+    identity, source observations and native status; exclude only this exact GOLD
+    contribution.'

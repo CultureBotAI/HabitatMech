@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - UBERON:0001155
-- habitatmech:GOLD.b091b80314
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6890
@@ -17,3 +16,13 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-16T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.b091b80314
+    for habitatmech:GOLD.195d07bc47 (Host-associated > Birds > Digestive system >
+    Large intestine > Colon). Review https://github.com/CultureBotAI/HabitatMech/issues/2221
+    : Avian colon is an anatomical compartment, not a type of whole avian large intestine.
+    Retain the generic vertebrate colon genus, distinct source mint, observations
+    and native status. Exclude only this guarded source-context parent; shared mapping
+    endpoints remain unresolved.'
