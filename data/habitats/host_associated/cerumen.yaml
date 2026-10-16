@@ -18,7 +18,6 @@ synonyms:
   source: UBERON
 parent_habitats:
 - UBERON:0001089
-- UBERON:0013211
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7025
@@ -40,3 +39,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution UBERON:0013211 for habitatmech:GOLD.aea4a5fe91
+    (Host-associated > Mammals: Human > Integumentary system > Ceruminous glands >
+    Cerumen/Earwax). Review https://github.com/CultureBotAI/HabitatMech/issues/2214
+    : UBERON cerumen denotes earwax with supported sweat genus. It is a product of
+    glands, not a subtype of the cerumen gland. Keep the reviewed ITEM identity, aliases
+    and independent genus; exclude only the GOLD gland context contribution. No source
+    observations or universal chemical measurements should be invented. Exclude only
+    this exact source contribution; preserve independent valid genera and source observations.
+    Mapping endpoint #1398, Ceros source meaning #325 and upstream Polyps identity
+    #2171 are not resolved by this hierarchy guard.'

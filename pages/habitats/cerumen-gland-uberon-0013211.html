@@ -52,7 +52,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="http://purl.obolibrary.org/obo/UBERON_0000382">apocrine sweat gland</a>      <code class="curie">UBERON:0000382</code></li>
-  <li><a href="../habitats/integumentary-system-habitatmech-gold-dc86c8917c.html">Integumentary system</a>      <code class="curie">habitatmech:GOLD.dc86c8917c</code></li>
 </ul>
 
 
@@ -70,6 +69,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">GROUND</span>
     <span class="meta">2026-08-16 · claude-opus-5</span>
     <p>Grounded to UBERON:0013211 &#39;cerumen gland&#39; (EXACT). Variant-match review (#12): the seeder grounds on exact labels only, so GOLD&#39;s slash and plural conventions hid a term that says exactly this. The gland that produces the cerumen above; UBERON names it cerumen gland where GOLD says ceruminous. Path: Host-associated &gt; Mammals: Human &gt; Integumentary system &gt; Ceruminous glands (source concept habitatmech:GOLD.77cb05c27a)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-15 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.dc86c8917c for habitatmech:GOLD.77cb05c27a (Host-associated &gt; Mammals: Human &gt; Integumentary system &gt; Ceruminous glands). Review <a href="https://github.com/CultureBotAI/HabitatMech/issues/2214" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2214</a> : The cerumen-gland identity has a supported apocrine-sweat-gland genus. A gland is not a subtype of the whole human integumentary system. Suppress only that source-context parent while retaining ontology identity, genus, aliases and the zero-count attestation. Exclude only this exact source contribution; preserve independent valid genera and source observations. Mapping endpoint #1398, Ceros source meaning #325 and upstream Polyps identity #2171 are not resolved by this hierarchy guard.</p>
   </li>
 </ol>
 

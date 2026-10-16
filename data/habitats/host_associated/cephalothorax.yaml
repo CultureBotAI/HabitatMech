@@ -8,7 +8,6 @@ mapping_status: SEEDED
 parent_habitats:
 - BTO:0000282
 - BTO:0001368
-- habitatmech:GOLD.bd9662fadb
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7310
@@ -21,3 +20,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.bd9662fadb
+    for habitatmech:GOLD.60a0f24d46 (Host-associated > Arthropoda: Crustaceans > Whole
+    body > Cephalothorax). Review https://github.com/CultureBotAI/HabitatMech/issues/2214
+    : BTO cephalothorax denotes united head and thorax, coherent with the crustacean
+    source. Current BTO itself asserts head and thorax as subclass parents; this is
+    not an importer conversion of part_of edges. The independent GOLD whole-Body superclass
+    is unsupported. Remove only that source contribution, preserving the ontology-owned
+    parents and zero-count semantics. Exclude only this exact source contribution;
+    preserve independent valid genera and source observations. Mapping endpoint #1398,
+    Ceros source meaning #325 and upstream Polyps identity #2171 are not resolved
+    by this hierarchy guard.'

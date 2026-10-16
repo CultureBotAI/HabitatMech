@@ -21,7 +21,6 @@ synonyms:
   source: UBERON
 parent_habitats:
 - UBERON:0007779
-- habitatmech:GOLD.feecbcaf98
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5287
@@ -34,3 +33,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-15T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.feecbcaf98
+    for habitatmech:GOLD.cf49d42b99 (Host-associated > Fish > Nervous system > Cerebrospinal
+    fluid). Review https://github.com/CultureBotAI/HabitatMech/issues/2214 : UBERON
+    cerebrospinal fluid has the supported transudate genus; it is not a subtype of
+    the complete fish nervous system. The native exact-leaf identity does not turn
+    that source context into a genus. Seven supplemental biosamples and one study
+    membership are not additions to the zero frozen ORGANISM count. Exclude only this
+    exact source contribution; preserve independent valid genera and source observations.
+    Mapping endpoint #1398, Ceros source meaning #325 and upstream Polyps identity
+    #2171 are not resolved by this hierarchy guard.'

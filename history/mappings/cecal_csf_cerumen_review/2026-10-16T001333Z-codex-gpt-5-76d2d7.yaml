@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: cecal_csf_cerumen_review
+session:
+  id: 2026-10-16T001333Z-codex-gpt-5-76d2d7
+  timestamp: '2026-10-16T00:13:33Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2214
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude twelve unsupported GOLD context-parent contributions
+  details: 'Individual scientific reviews trace exact source paths and current ontology/primary
+    evidence. Remove only twelve guarded context contributions: containment, generic-to-host
+    scope inflation, disease-to-organ and clinical-to-cnidarian ancestry. Preserve all independent
+    genera, identities, statuses, source counts/units and taxa. Ceros meaning #325, upstream
+    Polyps identity #2171, shared mapping endpoints #1398 and provisional PREGO evidence questions
+    remain open. The focused counterfactual test failed before repair and passed after it.
+    Native canary, regeneration, immutable successor review and final QC are required publication
+    gates.'
