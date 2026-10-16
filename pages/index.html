@@ -6,6 +6,7 @@
 <title>HabitatMech — microbial habitats, harmonized</title>
 <meta name="description" content="Microbial habitats harmonized from GOLD, BacDive, PREGO and Madin et al., grounded in ENVO/UBERON/FOODON/BTO/PO.">
 <link rel="stylesheet" href="style.css">
+<script src="theme-toggle.js"></script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -17,6 +18,7 @@
     <a href="index.html">Overview</a>
     <a href="browse.html">Browse</a>
     <a href="term-requests.html">ENVO term requests</a>
+    <a href="index.html#downloads">Downloads &amp; Schema</a>
     <a href="https://github.com/CultureBotAI/HabitatMech">Source</a>
     <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
@@ -29,6 +31,10 @@
     it. HabitatMech resolves them onto one ontology-grounded record and keeps
     every source's own account of it.
   </p>
+  <form class="hero-search" action="browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search 3209 habitat records by name, CURIE, or category…" aria-label="Search habitat records">
+    <button type="submit">Search</button>
+  </form>
   <div class="stats">
     <a class="stat" href="browse.html"><b>3209</b><span>habitat records</span></a>
     <a class="stat" href="index.html#grounding-status"><b>2157</b><span>ontology-grounded</span></a>
@@ -150,12 +156,23 @@ than the concept.</p>
   ontology label is a plausible grounding, not a verified one.</p>
   <p>REVIEWED records carry a recorded workflow decision, including agent-assisted curation. These counts do not establish human review. Consult the attributed curation events on each record for its provenance.</p>
 </div>
+
+<h2 id="downloads">Data downloads &amp; LinkML schema</h2>
+<p>All HabitatMech records, category search indexes, semantic embedding coordinates, and schema definitions are openly available:</p>
+<ul>
+  <li><strong>LinkML Schema:</strong> <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/src/habitatmech/schema/habitatmech.yaml"><code>src/habitatmech/schema/habitatmech.yaml</code></a> (core habitat &amp; causal graph schema), <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/src/habitatmech/schema/mech_shared.yaml"><code>src/habitatmech/schema/mech_shared.yaml</code></a>, and <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/src/habitatmech/schema/history.yaml"><code>src/habitatmech/schema/history.yaml</code></a></li>
+  <li><strong>Category JSON Indexes:</strong>
+<a href="category/host-associated.json"><code>host-associated.json</code></a> (1651), <a href="category/engineered.json"><code>engineered.json</code></a> (488), <a href="category/aquatic.json"><code>aquatic.json</code></a> (468), <a href="category/terrestrial.json"><code>terrestrial.json</code></a> (353), <a href="category/other.json"><code>other.json</code></a> (179), <a href="category/food.json"><code>food.json</code></a> (59), <a href="category/air.json"><code>air.json</code></a> (7), <a href="category/clinical.json"><code>clinical.json</code></a> (4)  </li>
+  <li><strong>Semantic Embedding Map Data:</strong> <a href="text-map-source/points.json"><code>text-map-source/points.json</code></a> and <a href="text-map-source/manifest.json"><code>text-map-source/manifest.json</code></a></li>
+  <li><strong>YAML Corpus &amp; Term Requests:</strong> <a href="https://github.com/CultureBotAI/HabitatMech/tree/main/data/habitats"><code>data/habitats/</code></a> (3209 YAML records) and <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/data/term_requests.tsv"><code>data/term_requests.tsv</code></a></li>
+  <li><strong>Connected X-Mech Knowledge Bases:</strong> <a href="https://culturebotai.github.io/TaxonMech/">TaxonMech</a> (reported microbial taxa), <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> (ecological communities), <a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> (growth media), <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> (environmental stress &amp; physiological traits), and <a href="https://culturebotai.github.io/mechs/">X-Mech Suite</a></li>
+</ul>
 </main>
 <footer class="site">
   <p>
     Generated from
     <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a>
-    on 2026-08-16. Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Third-party terms apply.
+    on 2026-08-16. Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/LICENSE-CODE">BSD-3-Clause</a> · <a href="https://github.com/CultureBotAI/HabitatMech/blob/main/src/habitatmech/schema/habitatmech.yaml">LinkML Schema</a> · <a href="index.html#downloads">Downloads</a>. Third-party terms apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

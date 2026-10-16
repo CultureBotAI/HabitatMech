@@ -2,6 +2,13 @@
 {% block wrapclass %} wide{% endblock %}
 {% block title %}ENVO term requests — HabitatMech{% endblock %}
 {% block content %}
+<div class="page-top-bar">
+  <div class="breadcrumbs"><a href="browse.html">Browse</a> · <strong>ENVO term requests</strong></div>
+  <form class="page-search" action="browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all habitats…" aria-label="Search all habitat records">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>ENVO term requests</h1>
 <p class="lede">
   Habitats that real data is attached to, that a curator has examined, and that
@@ -13,21 +20,100 @@
   these are not the bulk-swept remainder. The largest is the single biggest
   ungrounded concept in the corpus.</p>
 </div>
-<div class="table-scroll" role="region" tabindex="0" aria-label="Habitats with no fitting ontology term">
-<table>
-  <caption>Habitats with no fitting ontology term</caption>
-  <thead><tr><th scope="col">Habitat</th><th scope="col" class="num">Upstream assertions</th><th scope="col">Sources</th><th scope="col">Why no term fits</th></tr></thead>
-  {% for r in requests %}
-  <tr>
-    <td><a href="habitats/{{ r.slug }}.html">{{ r.label }}</a></td>
-    <td class="num">{{ r.assertions }}</td>
-    <td class="meta">{{ r.sources|join(', ') }}</td>
-    <td class="meta">{{ r.note }}</td>
-  </tr>
-  {% endfor %}
-</table>
+
+<div class="browse-layout">
+  <aside class="facet-sidebar" aria-label="Filter term requests">
+    <h2>Filter term requests</h2>
+    <div class="facet-group">
+      <label class="facet-label" for="tr-q">Search requests</label>
+      <input id="tr-q" class="facet-input" type="search" placeholder="Filter by habitat or note…" aria-label="Filter term requests">
+    </div>
+    <div class="facet-group">
+      <label class="facet-label" for="tr-source">Source vocabulary</label>
+      <select id="tr-source" class="facet-select" aria-label="Filter by source vocabulary">
+        <option value="">All sources</option>
+        <option value="GOLD">GOLD</option>
+        <option value="BacDive">BacDive</option>
+        <option value="PREGO">PREGO</option>
+        <option value="Madin">Madin</option>
+      </select>
+    </div>
+    <div class="facet-group">
+      <button type="button" id="tr-reset" class="facet-reset">Reset filters</button>
+    </div>
+    <p class="meta" id="tr-count" aria-live="polite"></p>
+  </aside>
+
+  <div class="browse-main">
+    <div class="table-scroll" role="region" tabindex="0" aria-label="Habitats with no fitting ontology term">
+    <table id="tr-tbl">
+      <caption>Habitats with no fitting ontology term</caption>
+      <thead><tr><th scope="col">Habitat</th><th scope="col" class="num">Upstream assertions</th><th scope="col">Sources</th><th scope="col">Why no term fits</th></tr></thead>
+      <tbody>
+      {% for r in requests %}
+      <tr data-sources="{{ r.sources|join(', ') }}">
+        <td><a href="habitats/{{ r.slug }}.html">{{ r.label }}</a></td>
+        <td class="num">{{ r.assertions }}</td>
+        <td class="meta">{{ r.sources|join(', ') }}</td>
+        <td class="meta">{{ r.note }}</td>
+      </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    </div>
+    <p class="meta">{{ swept }} further ungrounded records were decided by a
+    mechanical sweep rather than examined individually, and are not listed here —
+    they are candidates for this list, not members of it.</p>
+  </div>
 </div>
-<p class="meta">{{ swept }} further ungrounded records were decided by a
-mechanical sweep rather than examined individually, and are not listed here —
-they are candidates for this list, not members of it.</p>
+
+<script>
+(function () {
+  var qInput = document.getElementById('tr-q');
+  var sSelect = document.getElementById('tr-source');
+  var resetBtn = document.getElementById('tr-reset');
+  var countEl = document.getElementById('tr-count');
+  var rows = Array.prototype.slice.call(document.querySelectorAll('#tr-tbl tbody tr'));
+
+  function syncUrl(q) {
+    if (!window.history || !window.history.replaceState) return;
+    var url = new URL(window.location.href);
+    if (q) url.searchParams.set('q', q);
+    else url.searchParams.delete('q');
+    window.history.replaceState(null, '', url.toString());
+  }
+
+  function apply() {
+    var q = qInput.value.trim().toLowerCase();
+    var s = sSelect.value.toLowerCase();
+    syncUrl(qInput.value.trim());
+    var shown = 0;
+    rows.forEach(function (tr) {
+      var srcs = (tr.getAttribute('data-sources') || '').toLowerCase();
+      var text = tr.textContent.toLowerCase();
+      var match = (!s || srcs.indexOf(s) !== -1) && (!q || text.indexOf(q) !== -1);
+      tr.classList.toggle('is-hidden', !match);
+      if (match) shown++;
+    });
+    countEl.textContent = (q || s) ? ('Showing ' + shown + ' of ' + rows.length + ' requests') : '';
+  }
+
+  qInput.addEventListener('input', apply);
+  sSelect.addEventListener('change', apply);
+  resetBtn.addEventListener('click', function () {
+    qInput.value = '';
+    sSelect.value = '';
+    apply();
+    qInput.focus();
+  });
+
+  var params = new URLSearchParams(window.location.search);
+  var initialQ = params.get('q');
+  if (initialQ) {
+    qInput.value = initialQ;
+    apply();
+  }
+})();
+</script>
 {% endblock %}
+

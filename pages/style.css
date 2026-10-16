@@ -3,12 +3,16 @@
    CI, so every kilobyte of framework is paid for thousands of times, and a
    corpus browser is almost entirely tables and definition lists anyway. */
 
-:root {
-  color-scheme: light dark;
+:root,
+:root[data-theme="light"] {
+  color-scheme: light;
   --bg: #ffffff;
   --fg: #1a1d21;
+  --ink: #1a1d21;
+  --card: #f8faf9;
   --muted: #5b6470;
   --line: #dfe3e8;
+  --rule: #dfe3e8;
   --accent: #2b6a4d;
   --accent-soft: #e8f1ec;
   --code-bg: #f4f6f8;
@@ -16,12 +20,32 @@
   --warn-soft: #fdf4e3;
 }
 
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #14171a;
+  --fg: #e6e9ec;
+  --ink: #e6e9ec;
+  --card: #1c2126;
+  --muted: #9aa4b0;
+  --line: #2b3138;
+  --rule: #2b3138;
+  --accent: #7fc9a3;
+  --accent-soft: #1b2a23;
+  --code-bg: #1c2126;
+  --warn: #e0b361;
+  --warn-soft: #2a2113;
+}
+
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
     --bg: #14171a;
     --fg: #e6e9ec;
+    --ink: #e6e9ec;
+    --card: #1c2126;
     --muted: #9aa4b0;
     --line: #2b3138;
+    --rule: #2b3138;
     --accent: #7fc9a3;
     --accent-soft: #1b2a23;
     --code-bg: #1c2126;
@@ -187,3 +211,203 @@ caption {
 main h1, main p, main li, main dd { overflow-wrap: anywhere; }
 
 [hidden] { display: none !important; }
+
+/* Theme toggle button */
+.theme-toggle {
+  background: var(--card);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.82rem;
+  font-family: inherit;
+  cursor: pointer;
+}
+.theme-toggle:hover {
+  border-color: var(--accent);
+}
+
+/* Hero search form */
+.hero-search {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  max-width: 38rem;
+}
+.hero-search input[type="search"] {
+  flex: 1;
+  padding: 0.65rem 0.85rem;
+  font-size: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--ink);
+}
+.hero-search button {
+  padding: 0.65rem 1.1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  background: var(--accent);
+  color: #ffffff;
+  cursor: pointer;
+}
+:root[data-theme="dark"] .hero-search button {
+  color: #14171a;
+}
+
+/* Downstream page top bar with breadcrumbs + search */
+.page-top-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+.breadcrumbs {
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+.page-search {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+.page-search input[type="search"] {
+  padding: 0.38rem 0.65rem;
+  font-size: 0.88rem;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: var(--bg);
+  color: var(--ink);
+  min-width: 14rem;
+}
+.page-search button {
+  padding: 0.38rem 0.7rem;
+  font-size: 0.84rem;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: var(--card);
+  color: var(--ink);
+  cursor: pointer;
+}
+.page-search button:hover {
+  border-color: var(--accent);
+}
+
+/* Unified 2-column browse / map layout with left-hand facet sidebar */
+.browse-layout {
+  display: grid;
+  grid-template-columns: 270px minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+.facet-sidebar {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1rem;
+  position: sticky;
+  top: 1rem;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+}
+.facet-sidebar h2 {
+  font-size: 0.95rem;
+  margin: 0 0 0.75rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--line);
+}
+.facet-group {
+  margin-bottom: 1rem;
+}
+.facet-group:last-child {
+  margin-bottom: 0;
+}
+.facet-label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin-bottom: 0.35rem;
+}
+.facet-input,
+.facet-select {
+  width: 100%;
+  padding: 0.45rem 0.6rem;
+  font-size: 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: var(--bg);
+  color: var(--ink);
+}
+.facet-pills {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  max-height: 15rem;
+  overflow-y: auto;
+}
+.facet-pill {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.83rem;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  font-family: inherit;
+  text-decoration: none;
+}
+.facet-pill:hover {
+  background: var(--code-bg);
+  text-decoration: none;
+}
+.facet-pill[aria-pressed="true"],
+.facet-pill.is-active {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-color: var(--accent);
+  font-weight: 600;
+}
+.facet-pill .facet-count {
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.facet-reset {
+  width: 100%;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.84rem;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: var(--bg);
+  color: var(--ink);
+  cursor: pointer;
+}
+.facet-reset:hover {
+  border-color: var(--accent);
+}
+.browse-main {
+  min-width: 0;
+}
+
+@media (max-width: 860px) {
+  .browse-layout {
+    grid-template-columns: 1fr;
+  }
+  .facet-sidebar {
+    position: static;
+    max-height: none;
+  }
+}
+
