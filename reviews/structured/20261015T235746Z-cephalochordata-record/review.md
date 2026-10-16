@@ -1,0 +1,947 @@
+# Record review: Cephalochordata (habitatmech:GOLD.46c43fd62c)
+
+- Review: 20261015T235746Z-cephalochordata-record
+- Repository: CultureBotAI/HabitatMech
+- Started UTC: 2026-10-15T23:40:12Z
+- Finished UTC: 2026-10-15T23:57:46Z
+- Reviewer: codex-gpt-5 (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+The source mint represents a Cephalochordata-associated habitat bin under animal-associated environment, not the identity of a whole lancelet. Current NCBITaxon:7735 confirms the host category. Eleven frozen ORGANISM assertions, two later biosamples and one study membership remain nonadditive. Conservative CLASS/SEEDED status and absent optional definition do not authorize inventing a genus, mechanism or exact new term.
+
+## Scope And Provenance
+
+Full field-by-field scientific assessment of this exact generated target at 0eb609a7ddb34925067116af806e26c165e10678.
+
+Selection: Stale cecum individual observation plus the next 23 identifiers lacking completed individual-kind reviews in the ignored-inclusive 3209-record census. This bundle assesses one resolved record; previous batch reviews remain valid history.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: git_commit at Git base 0eb609a7ddb34925067116af806e26c165e10678.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| habitatmech:GOLD.46c43fd62c | data/habitats/host_associated/cephalochordata.yaml | generated | Cephalochordata |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| validate | passed | True | habitatmech:GOLD.46c43fd62c | Finished 2026-10-15T23:45:03Z. No issues found<br> uv run linkml-validate -s src/habitatmech/schema/habitatmech.yaml --target-class HabitatRecord data/habitats/host_associated/cephalochordata.yaml |
+| validate-strict | passed | True | habitatmech:GOLD.46c43fd62c | Finished 2026-10-15T23:45:51Z. uv run python scripts/validate_strict.py data/habitats/host_associated/cecum.yaml data/habitats/host_associated/cardiac_stomach.yaml data/habitats/host_associated/cecum__d677e5d7.yaml data/habitats/host_associated/cecum_intestinal_cecum.yaml data/habitats/host_associated/cecum_mucosa.yaml data/habitats/host_associated/cell_culture.yaml data/habitats/host_associated/cell_line.yaml data/habitats/host_associated/cell_line__59b8224e.yaml data/habitats/host_associated/cell_line__d7fc8c60.yaml data/habitats/host_associated/cellulitis.yaml data/habitats/host_associated/central_nervous_system.yaml data/habitats/host_associated/cephalochordata.yaml data/habitats/host_associated/cephalothorax.yaml data/habitats/host_associated/cerebellum.yaml data/habitats/host_associated/cerebrospinal_fluid.yaml data/habitats/host_associated/cerebrospinal_fluid__93998265.yaml data/habitats/host_associated/cerebrospinal_fluid__b2fc1889.yaml data/habitats/host_associated/cerebrospinal_fluid__e3d236b3.yaml data/habitats/host_associated/cerebrospinal_fluid__f9e9497c.yaml data/habitats/host_associated/ceros.yaml data/habitats/host_associated/cerumen.yaml data/habitats/host_associated/cerumen_gland.yaml data/habitats/host_associated/cervical.yaml data/habitats/host_associated/cervical_adenocarcinoma_cell.yaml<br>Validating 24 files with 15 workers; schema=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/src/habitatmech/schema/habitatmech.yaml<br><br>=== validate-strict summary ===<br>  files scanned:      24<br>  files with ERROR:   0<br>  total ERROR rows:   0<br>  TSV:                reports/instance_validation_failures.tsv |
+| validate-history | passed | True | habitatmech:GOLD.46c43fd62c | Finished 2026-10-15T23:46:04Z. No issues found<br>829 history record(s) valid against src/habitatmech/schema/history.yaml |
+| provenance-check | passed | True | habitatmech:GOLD.46c43fd62c | Finished 2026-10-15T23:46:05Z. provenance current: 14 committed inventories, 2 GOLD sources<br> uv run python scripts/check_provenance.py |
+| verify-corpus | passed | True | habitatmech:GOLD.46c43fd62c | Finished 2026-10-15T23:46:28Z. expected 3209 records, found 3209 on disk<br>  missing:   0<br>  extra:     0<br>  differing: 0<br><br>corpus reproduces exactly from data/raw/<br> uv run python scripts/verify_corpus.py |
+| validate-causal-all | passed | True | habitatmech:GOLD.46c43fd62c | Finished 2026-10-15T23:46:34Z. validated 32 causal-graph curation file(s) with 32 graph(s)<br> uv run python scripts/validate_causal_graph_curations.py |
+| term-requests-check | passed | True | habitatmech:GOLD.46c43fd62c | Finished 2026-10-15T23:46:59Z. term-request table is current (110 terms)<br> uv run python scripts/build_term_requests.py --check |
+| validate-products | passed | True | habitatmech:GOLD.46c43fd62c | Finished 2026-10-15T23:48:03Z. id↔label correspondence summary:<br>          OK_CANONICAL: 1173<br>            OK_SYNONYM: 1<br>          OK_EXCEPTION: 5<br>    SKIPPED_NO_ADAPTER: 2063<br><br>✅ All id↔label pairs correspond.<br> uv run python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml |
+| Exact-baseline native QC | passed | True | habitatmech:GOLD.46c43fd62c | Verified 2026-10-15T23:55:08Z https://github.com/CultureBotAI/HabitatMech/actions/runs/38822113212 |
+| Standalone evidence-reference validator applicability | not_applicable | False | habitatmech:GOLD.46c43fd62c | No standalone citation/reference validator is documented for these evidence-free generated records. Target EvidenceItems and causal edges are absent. Stable source and ontology/taxon references were checked manually and with documented native gates; current-decision primary citations were separately verified where present. |
+
+## Scientific And Domain Assessments
+
+### Identity, definition, category, aliases and hierarchy
+
+identity: supported. Targets: habitatmech:GOLD.46c43fd62c.
+
+The source mint represents a Cephalochordata-associated habitat bin under animal-associated environment, not the identity of a whole lancelet. Current NCBITaxon:7735 confirms the host category. Eleven frozen ORGANISM assertions, two later biosamples and one study membership remain nonadditive. Conservative CLASS/SEEDED status and absent optional definition do not authorize inventing a genus, mechanism or exact new term.
+
+### Source assertions, pools, ranks and supplementary context
+
+quantity: supported. Targets: habitatmech:GOLD.46c43fd62c.
+
+All emitted counts/units, labels, ranks, scores and candidate pools match exact frozen rows. [{"source": "GOLD", "count": 11, "unit": "ORGANISM"}]. Zero tree counts are omitted; later biosamples and study memberships are not added. Current taxonomy resolves displayed identifiers including explicit aliases.
+
+### Biological support and bounded source uncertainty
+
+evidence: supported. Targets: habitatmech:GOLD.46c43fd62c.
+
+The source mint represents a Cephalochordata-associated habitat bin under animal-associated environment, not the identity of a whole lancelet. Current NCBITaxon:7735 confirms the host category. Eleven frozen ORGANISM assertions, two later biosamples and one study membership remain nonadditive. Conservative CLASS/SEEDED status and absent optional definition do not authorize inventing a genus, mechanism or exact new term.
+
+### Native status, optional parameters and causal mechanisms
+
+completeness: supported. Targets: habitatmech:GOLD.46c43fd62c.
+
+Executed native resolution reproduces UNGROUNDED/SEEDED. No environmental parameters, causal graphs, discussions, datasets or is_characteristic=true claims are present. Missing optional fields and SEEDED status alone are not defects; parent mechanisms are not inherited.
+
+### Native validation and reproduction
+
+schema: supported. Targets: habitatmech:GOLD.46c43fd62c.
+
+Target schema/strict checks, 829 histories, source provenance, exact 3209-record reproduction, 32 causal overlays, 110 term requests and configured label checks passed. Exact-base remote full QC passed. Deterministic validity is separate from scientific support; reference-check applicability is stated explicitly.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| E1 | data/habitats/host_associated/cephalochordata.yaml; Entire target YAML | supports | All fields, attestations, taxa and generated history read. |
+| ERULE | docs/CURATION.md; Identity, strict broader hierarchy and evidence rules | supports | Organism, disease, material and habitat identities remain distinct. Parents must be strictly broader, not merely containing sites. |
+| ESCHEMA | src/habitatmech/schema/habitatmech.yaml; HabitatRecord, SourceAttestation and TaxonAssociation | supports | Mapping predicate endpoint is source-to-record; source association is weaker than characteristic presence. Optional fields and native review status have distinct contracts. |
+| ESEED | src/habitatmech/seed.py; Executed native source routes and complete document reproduction | supports | [{"mint": "habitatmech:GOLD.46c43fd62c", "automatic": {"identifier": "habitatmech:GOLD.46c43fd62c", "grounding_status": "UNGROUNDED", "mapping_predicate": null, "contributes_grounding": true, "extra_parents": [], "extra_xrefs": [], "route": "gold_unmatched", "category": null, "reviewed": false, "decision": null}, "final": {"identifier": "habitatmech:GOLD.46c43fd62c", "grounding_status": "UNGROUNDED", "mapping_predicate": null, "contributes_grounding": true, "extra_parents": [], "extra_xrefs": [], "route": "curated_confirm_ungrounded_from_gold_unmatched", "category": null, "reviewed": false, "decision": {"identifier": "habitatmech:GOLD.46c43fd62c", "decision": "CONFIRM_UNGROUNDED", "object_id": "", "object_label": "", "grounding_status": "", "curator": "claude-opus-5", "date": "2026-08-12", "notes": "Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the vendored slice matched this label by any search route. Whether the concept is a habitat at all was NOT assessed, so this is not yet a term-request candidate.", "review_depth": "CLASS", "category": "", "relation": "parent"}}}] |
+| EEXTRACT | src/habitatmech/extract.py; Source counts, channels and taxon ranking | supports | Exact frozen rows reproduce counts/units and ranked taxon scores. The committed projection does not retain original PREGO pair citation links. |
+| ET5 | data/raw/gold_ecosystem_paths.tsv; Physical TSV rows 510 | supports | [{"row": 510, "data": {"canonical_path": "Host-associated &gt; Cephalochordata", "ecosystem": "Host-associated", "ecosystem_category": "Cephalochordata", "ecosystem_type": "", "ecosystem_subtype": "", "specific_ecosystem": "", "leaf_label": "Cephalochordata", "depth": "2", "gold_node_count": "4", "organism_count": "11", "study_count": "0", "biosample_count": "0", "total_assertions": "11", "gold_node_ids": "gold.ecosystem:4958&#124;gold.ecosystem:5171&#124;gold.ecosystem:5172&#124;gold.ecosystem:5173"}}] |
+| ET6 | data/raw/gold_path_biosamples.tsv; Physical TSV rows 915 | supports | [{"row": 915, "data": {"canonical_path": "Host-associated &gt; Cephalochordata", "ecosystem_path_id": "5173", "biosample_count": "2"}}] |
+| ET7 | data/raw/gold_studies.tsv; Physical TSV rows 3045 | supports | [{"row": 3045, "data": {"study_gold_id": "Gs0150218", "path_count": "12", "paths": "Host-associated &gt; Amphibia &gt; Digestive system&#124;Host-associated &gt; Amphibia &gt; Digestive system &gt; Biliary tract &gt; Liver&#124;Host-associated &gt; Amphibia &gt; Respiratory system &gt; Lung&#124;Host-associated &gt; Cephalochordata&#124;Host-associated &gt; Fish &gt; Digestive system &gt; Biliary tract &gt; Liver&#124;Host-associated &gt; Fish &gt; Digestive system &gt; Intestine&#124;Host-associated &gt; Fish &gt; Multiple systems &gt; Multiple organs&#124;Host-associated &gt; Fish &gt; Respiratory system &gt; Gills&#124;Host-associated &gt; Fish &gt; Respiratory system &gt; Lung&#124;Host-associated &gt; Reptilia &gt; Digestive system&#124;Host-associated &gt; Reptilia &gt; Digestive system &gt; Biliary tract &gt; Liver&#124;Host-associated &gt; Reptilia &gt; Respiratory system &gt; Lung"}}] |
+| ET8 | data/raw/ontology_subclass_edges.tsv; Physical TSV rows 6795 | supports | [{"row": 6795, "data": {"subject": "ENVO:01001000", "predicate": "rdfs:subClassOf", "object": "ENVO:01000254"}}] |
+| ET9 | data/raw/ontology_terms.tsv; Physical TSV rows 8489 | supports | [{"row": 8489, "data": {"term_id": "ENVO:01001000", "ontology": "ENVO", "label": "environmental system determined by an organism", "definition": "An environmental system which is determined by a living organism.", "synonyms": "host-associated environment", "deprecated": "", "directly_referenced": "FALSE", "label_only": "FALSE"}}] |
+| ET10 | curation/decisions.tsv; Physical TSV rows 487 | supports | [{"row": 487, "data": {"identifier": "habitatmech:GOLD.46c43fd62c", "decision": "CONFIRM_UNGROUNDED", "object_id": "", "object_label": "", "grounding_status": "", "curator": "claude-opus-5", "date": "2026-08-12", "notes": "Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the vendored slice matched this label by any search route. Whether the concept is a habitat at all was NOT assessed, so this is not yet a term-request candidate.", "review_depth": "CLASS", "category": "", "relation": ""}}] |
+| EP11 | data/habitats/host_associated/environmental_system_determined_by_an_organism.yaml; Full immediate-parent record; context only | supports | {"identifier": "ENVO:01001000", "label": "environmental system determined by an organism", "definition": "An environmental system which is determined by a living organism.", "definition_source": "ENVO", "habitat_category": "HOST_ASSOCIATED", "grounding_status": "EXACT", "mapping_status": "REVIEWED", "synonyms": [{"synonym_text": "Host", "synonym_type": "EXACT_SYNONYM", "source": "BacDive"}, {"synonym_text": "Host-associated", "synonym_type": "EXACT_SYNONYM", "source": "GOLD"}, {"synonym_text": "host-associated environment", "synonym_type": "EXACT_SYNONYM", "source": "ENVO"}], "parent_habitats": ["ENVO:01000254"], "source_attestations": [{"source": "BACDIVE", "source_id": "bacdive.isolation_source:host", "source_label": "Host", "mapping_predicate": "skos:exactMatch", "assertion_count": 25581, "assertion_unit": "STRAIN", "notes": "kg-microbe's isolation-source mapping table has no ontology target for this source; the automatic route leaves it ungrounded. The explicit curator decision GROUND overrides that route; this source is emitted on ENVO:01001000."}, {"source": "GOLD", "source_id": "gold.ecosystem:3373", "source_label": "Host-associated", "source_path": "Host-associated", "mapping_predicate": "skos:exactMatch", "assertion_count": 3307, "assertion_unit": "ORGANISM", "notes": "5 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv."}], "characteristic_taxa": [{"taxon_id": "NCBITaxon:56", "source": "BACDIVE", "taxon_label": "Sorangium cellulosum", "association_count": 1338, "rank": 1, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:184914", "source": "BACDIVE", "taxon_label": "Corallococcus coralloides", "association_count": 1126, "rank": 2, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:54", "source": "BACDIVE", "taxon_label": "Nannocystis exedens", "association_count": 785, "rank": 3, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:33", "source": "BACDIVE", "taxon_label": "Myxococcus fulvus", "association_count": 326, "rank": 4, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:562", "source": "BACDIVE", "taxon_label": "Escherichia coli", "association_count": 278, "rank": 5, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:1872627", "source": "BACDIVE", "taxon_label": "Archangium sp.", "association_count": 250, "rank": 6, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:197", "source": "BACDIVE", "taxon_label": "Campylobacter jejuni", "association_count": 243, "rank": 7, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:1313", "source": "BACDIVE", "taxon_label": "Streptococcus pneumoniae", "association_count": 198, "rank": 8, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:71864", "source": "BACDIVE", "taxon_label": "Herpetosiphon sp.", "association_count": 184, "rank": 9, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:2", "source": "BACDIVE", "taxon_label": "Bacteria", "association_count": 180, "rank": 10, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:83456", "source": "BACDIVE", "taxon_label": "Myxococcus virescens", "association_count": 178, "rank": 11, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:1280", "source": "BACDIVE", "taxon_label": "Staphylococcus aureus", "association_count": 170, "rank": 12, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:1328", "source": "BACDIVE", "taxon_label": "Streptococcus anginosus", "association_count": 155, "rank": 13, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:730", "source": "BACDIVE", "taxon_label": "[Haemophilus] ducreyi", "association_count": 125, "rank": 14, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:287", "source": "BACDIVE", "taxon_label": "Pseudomonas aeruginosa", "association_count": 120, "rank": 15, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:28188", "source": "BACDIVE", "taxon_label": "Capnocytophaga canimorsus", "association_count": 119, "rank": 16, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:34", "source": "BACDIVE", "taxon_label": "Myxococcus xanthus", "association_count": 111, "rank": 17, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:57", "source": "BACDIVE", "association_count": 111, "rank": 18, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:1656", "source": "BACDIVE", "taxon_label": "Actinomyces viscosus", "association_count": 110, "rank": 19, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:727", "source": "BACDIVE", "taxon_label": "Haemophilus influenzae", "association_count": 110, "rank": 20, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:1352", "source": "BACDIVE", "taxon_label": "Enterococcus faecium", "association_count": 108, "rank": 21, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:47715", "source": "BACDIVE", "taxon_label": "Lacticaseibacillus rhamnosus", "association_count": 105, "rank": 22, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:2702", "source": "BACDIVE", "taxon_label": "Gardnerella vaginalis", "association_count": 95, "rank": 23, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:28901", "source": "BACDIVE", "taxon_label": "Salmonella enterica", "association_count": 95, "rank": 24, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:83428", "source": "BACDIVE", "taxon_label": "uncultured Bacillus sp.", "association_count": 94, "rank": 25, "candidate_pool": 6801}], "curation_history": [{"timestamp": "2026-08-16T00:00:00Z", "curator": "claude-opus-5", "action": "GROUND", "changes": "Grounded to ENVO:01001000 'environmental system determined by an organism' (EXACT). Term-request re-check (#12): this was recorded as an ENVO term request on the premise that \"ENVO has only plant-associated and animal-associated environment with no shared parent\". That premise is false. ENVO:01001000 'environmental system determined by an organism' is that shared parent \u2014 the vendored subclass edges show plant-associated (ENVO:01001001), animal-associated (ENVO:01001002) and fungi-associated (ENVO:01001041) environment all asserted under it \u2014 and it has been in the slice the whole time. Its definition, 'an environmental system which is determined by a living organism', is exactly what this top-level bin means: an isolate whose habitat is a living host. Grounded EXACT. The claim was made by hand and never machine-rechecked, which is the same staleness the class-level sweeps have a gate for and individually-decided records did not. (source concept habitatmech:BACDIVE.baf38460e6)"}, {"timestamp": "2026-08-16T00:00:00Z", "curator": "claude-opus-5", "action": "GROUND", "changes": "Grounded to ENVO:01001000 'environmental system determined by an organism' (EXACT). Term-request re-check (#12): this was recorded as an ENVO term request on the premise that \"ENVO has only plant-associated and animal-associated environment with no shared parent\". That premise is false. ENVO:01001000 'environmental system determined by an organism' is that shared parent \u2014 the vendored subclass edges show plant-associated (ENVO:01001001), animal-associated (ENVO:01001002) and fungi-associated (ENVO:01001041) environment all asserted under it \u2014 and it has been in the slice the whole time. Its definition, 'an environmental system which is determined by a living organism', is exactly what this top-level bin means: an isolate whose habitat is a living host. Grounded EXACT. The claim was made by hand and never machine-rechecked, which is the same staleness the class-level sweeps have a gate for and individually-decided records did not. (source concept habitatmech:GOLD.d3b891e82e)"}, {"timestamp": "2026-08-16T05:58:02Z", "curator": "seed_from_sources", "action": "SEEDED_FROM_SOURCES", "changes": "Seeded from data/raw/ inventories; attested by BACDIVE, GOLD. Grounding: EXACT."}, {"timestamp": "2026-10-10T00:00:00Z", "curator": "seed_from_sources", "action": "SOURCE_ATTESTATION_CORRECTED", "changes": "Corrected bacdive.isolation_source:host provenance wording to distinguish the declined automatic mapping from the final curator override (#1889)."}]} |
+| EH12 | reports/yaml_record_review/20260927T203542Z-cephalochordata.md; Historical context; not independent primary evidence | supports | Inspected history, research or prior assessment informs provenance only. Historical unavailability and broad negative claims are not adopted as current facts. No previous finding is closed or narrowed by this new individual observation. |
+| EX1 | https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_01000254/graph; ENVO_01000254-graph.json | context_only | Typed outgoing ontology edges: [{"source": "http://purl.obolibrary.org/obo/ENVO_01000254", "target": "http://purl.obolibrary.org/obo/RO_0002577", "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf", "label": "subClassOf"}] |
+| EX2 | https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_01000254; ENVO_01000254.json | context_only | Current term identity, active status and definition: {"obo_id": "ENVO:01000254", "label": "environmental system", "is_obsolete": false, "description": ["In ENVO's alignment with the Basic Formal Ontology, this class is being considered as a subclass of a proposed BFO class \"system\". The relation \"environed_by\" is also under development. Roughly, a system which includes a material entity (at least partially) within its site and causally influences that entity may be considered to environ it. Following the completion of this alignment, this class' definition and the definitions of its subclasses will be revised.", "A system which has the disposition to environ one or more material entities."]} |
+| EX3 | https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_01001000/graph; ENVO_01001000-graph.json | context_only | Typed outgoing ontology edges: [{"source": "http://purl.obolibrary.org/obo/ENVO_01001000", "target": "http://purl.obolibrary.org/obo/ENVO_01000254", "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf", "label": "subClassOf"}, {"source": "http://purl.obolibrary.org/obo/ENVO_01001000", "target": "http://purl.obolibrary.org/obo/NCBITaxon_131567", "uri": "http://purl.obolibrary.org/obo/BFO_0000050", "label": "part of"}] |
+| EX4 | https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_01001000; ENVO_01001000.json | context_only | Current term identity, active status and definition: {"obo_id": "ENVO:01001000", "label": "environmental system determined by an organism", "is_obsolete": false, "description": ["An environmental system which is determined by a living organism."]} |
+| EX5 | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=7735&amp;retmode=xml; cephalochordata.xml | context_only | NCBITaxon:7735 current identity and lineage inspected: Cephalochordata, lancelets. This resolves the host category, not an environmental ontology identity. |
+| ESEARCH | Local maintained inputs and review archive; rg --no-ignore --hidden -l -F -e habitatmech:GOLD.46c43fd62c -e Cephalochordata -e cephalochordata -e habitatmech:GOLD.46c43fd62c curation history research reports data/raw build reviews | context_only | Identifier/label/slug search and full structured-YAML traversal; exact TSV rows were parsed separately. Broad search matches are leads, not all independently reviewed. |
+
+## Limits And Additional Notes
+
+- Source counts, ranks and scores do not establish prevalence, viability or characteristic presence. Original specimen-level evidence for every source member has not been reconstructed.
+- Configured label validation skipped 2063 no-adapter pairs; displayed TaxIds were separately resolved against current NCBI including aliases.
+- Exact-base full QC was verified remotely, not newly executed locally. New saved bundles require a separate archive check.
+- iModulonDB is not applicable: target assertions contain no gene, regulator or expression-module claim. No paid research or native status promotion was performed.
+- Captured input hashes match both working bytes and exact committed base blobs.
+- This observation proposes curation but does not itself mutate inputs. The separately authorized PR workflow may address supported findings in later commits.
+- Ignored-inclusive archive traversal found no earlier structured target observation. Historical prose does not count as a formal predecessor.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261015T235746Z-cephalochordata-record
+repository: CultureBotAI/HabitatMech
+kind: record
+title: 'Record review: Cephalochordata (habitatmech:GOLD.46c43fd62c)'
+started_at: '2026-10-15T23:40:12Z'
+finished_at: '2026-10-15T23:57:46Z'
+reviewer:
+  identity: codex-gpt-5
+  kind: agent
+  model: gpt-5
+  independence: self_review
+  independence_basis: Same agent inspected record and sources; not independent human
+    or second-agent approval.
+skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: The source mint represents a Cephalochordata-associated habitat bin under
+  animal-associated environment, not the identity of a whole lancelet. Current NCBITaxon:7735
+  confirms the host category. Eleven frozen ORGANISM assertions, two later biosamples
+  and one study membership remain nonadditive. Conservative CLASS/SEEDED status and
+  absent optional definition do not authorize inventing a genus, mechanism or exact
+  new term.
+source:
+  git_revision: 0eb609a7ddb34925067116af806e26c165e10678
+  state: git_commit
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: conf/record_review.yaml
+    sha256: c2f5d0eb4c5744f5fe354c92184ddab144dc2688dba952b032b4f3d597bc08d6
+    role: context
+  - path: conf/sources.yaml
+    sha256: a8e069f9278068b57fa234f43e03c8d893f857827b83fd10cfa92d6815aed642
+    role: context
+  - path: curation/decisions.tsv
+    sha256: e5cb2e09f72dd4b18e069c0e2576e25e13e56c9991f4eb5ae47416345e247578
+    role: context
+  - path: curation/definition_source_label_exclusions.tsv
+    sha256: 37dc4b40642d19e7b5c3262f368d12daa82e03115e7731a2326ae88785ceff5b
+    role: context
+  - path: curation/external_xrefs.tsv
+    sha256: f289c938b0c70d6f2bfb231bf137edf1c862bbda9143d9b6eae9e3fdd587703c
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: 7158cb696b7e2ac84a8d594a03015711424ff56e21c07a4648ffc6fb2e84a107
+    role: context
+  - path: curation/record_annotation_corrections.tsv
+    sha256: a56f07a45fb743fb7b0e61f83ef70fa5ed61a3c892cfaf36e3428967c548dc5e
+    role: context
+  - path: curation/redirects_retracted.tsv
+    sha256: 0f1e9af8881f5a5db19f87de06b3b3d1800cfac8101699b380388c0a1a1e9a19
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: bc7a13d922c179cd9bcd4d37b348bc90a39b08a4dafba7af4ed0039ad99621c3
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: ee559f7b45b4af2d72a078c45d1a3b676785d34305f286e9738f95771dbaccfd
+    role: context
+  - path: data/habitats/RETIRED.tsv
+    sha256: 747e6a5612dc0b7ed881b9fb323fd57ab3c75794d9ee5ebb9d59b2be57dbf8cd
+    role: context
+  - path: data/habitats/host_associated/cephalochordata.yaml
+    sha256: cc6064cd579dff2b924662485987c5f2c605d0debb72abba1352bd32e8051621
+    role: target
+  - path: data/habitats/host_associated/environmental_system_determined_by_an_organism.yaml
+    sha256: d3b79ef9436a87fbce8e6b204b0113e170fa758e4a66efb592543bf934c67270
+    role: context
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: f3f5d3d033fa7e7c1d78571959fc2e62e0b0a625f47dba1413657e8cf944b322
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 105b3c8e10f43ce689b05d3089d3a8be1d713a98dd6806e11be37ebd85b10590
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: reports/yaml_record_review/20260927T203542Z-cephalochordata.md
+    sha256: 32650eb5483960fe89d1aa2052de7608de4e9b5a6a0f57844cbbf517b567d8e5
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: src/habitatmech/curate/__init__.py
+    sha256: d9837c29dc61d8c9245fdb471a68a109cea31b131cdbc0c4d51d23a8d013ce12
+    role: context
+  - path: src/habitatmech/curate/causal_graphs.py
+    sha256: d1884374263ed7926292c52a58742c614e75628d78ff50fe688e6abc0ddf9c1c
+    role: context
+  - path: src/habitatmech/curate/curation_event.py
+    sha256: 08c774d309fe988c468097518d346f07a653b283cb9b9b51c7fe79fa0af785a9
+    role: context
+  - path: src/habitatmech/curate/decisions.py
+    sha256: f33d3e9dc95bb428e63e640d48d4074cf15e90ea666603fb16fb651d591e3f02
+    role: context
+  - path: src/habitatmech/curate/definition_source_label_exclusions.py
+    sha256: 0c13e83fe17613e8b9f5b346d1259104172f8c1de42f911625579b903707625d
+    role: context
+  - path: src/habitatmech/curate/definitions.py
+    sha256: decd02eea029e884ab1a8bbb51dd870edb5544906b3ddd39598147b27ce572c9
+    role: context
+  - path: src/habitatmech/curate/external_xrefs.py
+    sha256: 8b90ec049887d3aa67e31cce7f7a04d7300421c6fedb833cc66e5d5f5f181694
+    role: context
+  - path: src/habitatmech/curate/gold_parent_exclusions.py
+    sha256: 044d8277509a9b1f6e4f2d7ea1fb82319b41e09ffef7788738a0f4ed0d0b63af
+    role: context
+  - path: src/habitatmech/curate/record_annotation_corrections.py
+    sha256: 15bad3d40fd95e2acc72d3ff3c74289c15fb8a1775adc523b3575c3ea8487033
+    role: context
+  - path: src/habitatmech/extract.py
+    sha256: 4d9397bda649381a5daf81937369531c6dc8b4518d6c7047e6f3f14e605bf860
+    role: context
+  - path: src/habitatmech/labels.py
+    sha256: eb6986c3a9c7d5a3e4651b639351f1f2d3e12d74c4bfaa92899205a1f9df0977
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 7e3cda3dadb9c7462498e5014bf38ef730068212f8f9cb131e3fce383c21d10e
+    role: context
+  - path: src/habitatmech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+  - path: src/habitatmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
+    role: context
+targets:
+- target_id: habitatmech:GOLD.46c43fd62c
+  path: data/habitats/host_associated/cephalochordata.yaml
+  label: Cephalochordata
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+scope:
+  description: Full field-by-field scientific assessment of this exact generated target
+    at 0eb609a7ddb34925067116af806e26c165e10678.
+  selection: Stale cecum individual observation plus the next 23 identifiers lacking
+    completed individual-kind reviews in the ignored-inclusive 3209-record census.
+    This bundle assesses one resolved record; previous batch reviews remain valid
+    history.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - habitatmech:GOLD.46c43fd62c
+  exclusions:
+  - target: Other records, original source specimens and SSSOM/KGX products
+    reason: Parent and source context do not add reviewed targets; exports and every
+      original source specimen are not certified.
+checks:
+- check_id: C1
+  name: validate
+  status: passed
+  required: true
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate data/habitats/host_associated/cephalochordata.yaml
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.46c43fd62c
+  summary: "Finished 2026-10-15T23:45:03Z. No issues found\n uv run linkml-validate\
+    \ -s src/habitatmech/schema/habitatmech.yaml --target-class HabitatRecord data/habitats/host_associated/cephalochordata.yaml"
+  scope_note: Individual schema; strict check covers all 24 named targets; other native
+    checks have full-corpus scope.
+- check_id: C2
+  name: validate-strict
+  status: passed
+  required: true
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-strict
+    data/habitats/host_associated/cecum.yaml data/habitats/host_associated/cardiac_stomach.yaml
+    data/habitats/host_associated/cecum__d677e5d7.yaml data/habitats/host_associated/cecum_intestinal_cecum.yaml
+    data/habitats/host_associated/cecum_mucosa.yaml data/habitats/host_associated/cell_culture.yaml
+    data/habitats/host_associated/cell_line.yaml data/habitats/host_associated/cell_line__59b8224e.yaml
+    data/habitats/host_associated/cell_line__d7fc8c60.yaml data/habitats/host_associated/cellulitis.yaml
+    data/habitats/host_associated/central_nervous_system.yaml data/habitats/host_associated/cephalochordata.yaml
+    data/habitats/host_associated/cephalothorax.yaml data/habitats/host_associated/cerebellum.yaml
+    data/habitats/host_associated/cerebrospinal_fluid.yaml data/habitats/host_associated/cerebrospinal_fluid__93998265.yaml
+    data/habitats/host_associated/cerebrospinal_fluid__b2fc1889.yaml data/habitats/host_associated/cerebrospinal_fluid__e3d236b3.yaml
+    data/habitats/host_associated/cerebrospinal_fluid__f9e9497c.yaml data/habitats/host_associated/ceros.yaml
+    data/habitats/host_associated/cerumen.yaml data/habitats/host_associated/cerumen_gland.yaml
+    data/habitats/host_associated/cervical.yaml data/habitats/host_associated/cervical_adenocarcinoma_cell.yaml
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.46c43fd62c
+  summary: "Finished 2026-10-15T23:45:51Z. uv run python scripts/validate_strict.py\
+    \ data/habitats/host_associated/cecum.yaml data/habitats/host_associated/cardiac_stomach.yaml\
+    \ data/habitats/host_associated/cecum__d677e5d7.yaml data/habitats/host_associated/cecum_intestinal_cecum.yaml\
+    \ data/habitats/host_associated/cecum_mucosa.yaml data/habitats/host_associated/cell_culture.yaml\
+    \ data/habitats/host_associated/cell_line.yaml data/habitats/host_associated/cell_line__59b8224e.yaml\
+    \ data/habitats/host_associated/cell_line__d7fc8c60.yaml data/habitats/host_associated/cellulitis.yaml\
+    \ data/habitats/host_associated/central_nervous_system.yaml data/habitats/host_associated/cephalochordata.yaml\
+    \ data/habitats/host_associated/cephalothorax.yaml data/habitats/host_associated/cerebellum.yaml\
+    \ data/habitats/host_associated/cerebrospinal_fluid.yaml data/habitats/host_associated/cerebrospinal_fluid__93998265.yaml\
+    \ data/habitats/host_associated/cerebrospinal_fluid__b2fc1889.yaml data/habitats/host_associated/cerebrospinal_fluid__e3d236b3.yaml\
+    \ data/habitats/host_associated/cerebrospinal_fluid__f9e9497c.yaml data/habitats/host_associated/ceros.yaml\
+    \ data/habitats/host_associated/cerumen.yaml data/habitats/host_associated/cerumen_gland.yaml\
+    \ data/habitats/host_associated/cervical.yaml data/habitats/host_associated/cervical_adenocarcinoma_cell.yaml\n\
+    Validating 24 files with 15 workers; schema=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/src/habitatmech/schema/habitatmech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      24\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                reports/instance_validation_failures.tsv"
+  scope_note: Individual schema; strict check covers all 24 named targets; other native
+    checks have full-corpus scope.
+- check_id: C3
+  name: validate-history
+  status: passed
+  required: true
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-history
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.46c43fd62c
+  summary: 'Finished 2026-10-15T23:46:04Z. No issues found
+
+    829 history record(s) valid against src/habitatmech/schema/history.yaml'
+  scope_note: Individual schema; strict check covers all 24 named targets; other native
+    checks have full-corpus scope.
+- check_id: C4
+  name: provenance-check
+  status: passed
+  required: true
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just provenance-check
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.46c43fd62c
+  summary: "Finished 2026-10-15T23:46:05Z. provenance current: 14 committed inventories,\
+    \ 2 GOLD sources\n uv run python scripts/check_provenance.py"
+  scope_note: Individual schema; strict check covers all 24 named targets; other native
+    checks have full-corpus scope.
+- check_id: C5
+  name: verify-corpus
+  status: passed
+  required: true
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just verify-corpus
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.46c43fd62c
+  summary: "Finished 2026-10-15T23:46:28Z. expected 3209 records, found 3209 on disk\n\
+    \  missing:   0\n  extra:     0\n  differing: 0\n\ncorpus reproduces exactly from\
+    \ data/raw/\n uv run python scripts/verify_corpus.py"
+  scope_note: Individual schema; strict check covers all 24 named targets; other native
+    checks have full-corpus scope.
+- check_id: C6
+  name: validate-causal-all
+  status: passed
+  required: true
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-causal-all
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.46c43fd62c
+  summary: "Finished 2026-10-15T23:46:34Z. validated 32 causal-graph curation file(s)\
+    \ with 32 graph(s)\n uv run python scripts/validate_causal_graph_curations.py"
+  scope_note: Individual schema; strict check covers all 24 named targets; other native
+    checks have full-corpus scope.
+- check_id: C7
+  name: term-requests-check
+  status: passed
+  required: true
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just term-requests-check
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.46c43fd62c
+  summary: "Finished 2026-10-15T23:46:59Z. term-request table is current (110 terms)\n\
+    \ uv run python scripts/build_term_requests.py --check"
+  scope_note: Individual schema; strict check covers all 24 named targets; other native
+    checks have full-corpus scope.
+- check_id: C8
+  name: validate-products
+  status: passed
+  required: true
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-products
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.46c43fd62c
+  summary: "Finished 2026-10-15T23:48:03Z. id↔label correspondence summary:\n    \
+    \      OK_CANONICAL: 1173\n            OK_SYNONYM: 1\n          OK_EXCEPTION:\
+    \ 5\n    SKIPPED_NO_ADAPTER: 2063\n\n✅ All id↔label pairs correspond.\n uv run\
+    \ python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml"
+  scope_note: Individual schema; strict check covers all 24 named targets; other native
+    checks have full-corpus scope.
+- check_id: CCI
+  name: Exact-baseline native QC
+  status: passed
+  required: true
+  command: gh run view 38822113212 --repo CultureBotAI/HabitatMech --json headSha,conclusion,url,jobs
+  exit_code: 0
+  target_ids:
+  - habitatmech:GOLD.46c43fd62c
+  summary: Verified 2026-10-15T23:55:08Z https://github.com/CultureBotAI/HabitatMech/actions/runs/38822113212
+  scope_note: Unchanged committed scientific-input baseline; new output bundles are
+    outside this run.
+- check_id: CREF
+  name: Standalone evidence-reference validator applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - habitatmech:GOLD.46c43fd62c
+  summary: No standalone citation/reference validator is documented for these evidence-free
+    generated records. Target EvidenceItems and causal edges are absent. Stable source
+    and ontology/taxon references were checked manually and with documented native
+    gates; current-decision primary citations were separately verified where present.
+  scope_note: No command or exit code is invented for an unavailable/nonapplicable
+    checker. Full-corpus causal validation ran separately.
+evidence:
+- evidence_id: E1
+  kind: record_content
+  reference: data/habitats/host_associated/cephalochordata.yaml
+  locator: Entire target YAML
+  accessed_at: '2026-10-15T23:57:46Z'
+  support: supports
+  summary: All fields, attestations, taxa and generated history read.
+  snapshot_sha256: cc6064cd579dff2b924662485987c5f2c605d0debb72abba1352bd32e8051621
+- evidence_id: ERULE
+  kind: authority
+  reference: docs/CURATION.md
+  locator: Identity, strict broader hierarchy and evidence rules
+  accessed_at: '2026-10-15T23:57:46Z'
+  support: supports
+  summary: Organism, disease, material and habitat identities remain distinct. Parents
+    must be strictly broader, not merely containing sites.
+  snapshot_sha256: f3f5d3d033fa7e7c1d78571959fc2e62e0b0a625f47dba1413657e8cf944b322
+- evidence_id: ESCHEMA
+  kind: authority
+  reference: src/habitatmech/schema/habitatmech.yaml
+  locator: HabitatRecord, SourceAttestation and TaxonAssociation
+  accessed_at: '2026-10-15T23:57:46Z'
+  support: supports
+  summary: Mapping predicate endpoint is source-to-record; source association is weaker
+    than characteristic presence. Optional fields and native review status have distinct
+    contracts.
+  snapshot_sha256: 7e3cda3dadb9c7462498e5014bf38ef730068212f8f9cb131e3fce383c21d10e
+- evidence_id: ESEED
+  kind: record_content
+  reference: src/habitatmech/seed.py
+  locator: Executed native source routes and complete document reproduction
+  accessed_at: '2026-10-15T23:57:46Z'
+  support: supports
+  summary: '[{"mint": "habitatmech:GOLD.46c43fd62c", "automatic": {"identifier": "habitatmech:GOLD.46c43fd62c",
+    "grounding_status": "UNGROUNDED", "mapping_predicate": null, "contributes_grounding":
+    true, "extra_parents": [], "extra_xrefs": [], "route": "gold_unmatched", "category":
+    null, "reviewed": false, "decision": null}, "final": {"identifier": "habitatmech:GOLD.46c43fd62c",
+    "grounding_status": "UNGROUNDED", "mapping_predicate": null, "contributes_grounding":
+    true, "extra_parents": [], "extra_xrefs": [], "route": "curated_confirm_ungrounded_from_gold_unmatched",
+    "category": null, "reviewed": false, "decision": {"identifier": "habitatmech:GOLD.46c43fd62c",
+    "decision": "CONFIRM_UNGROUNDED", "object_id": "", "object_label": "", "grounding_status":
+    "", "curator": "claude-opus-5", "date": "2026-08-12", "notes": "Class-level sweep
+    (see docs/HARMONIZATION.md#class-level-sweep): no term in the vendored slice matched
+    this label by any search route. Whether the concept is a habitat at all was NOT
+    assessed, so this is not yet a term-request candidate.", "review_depth": "CLASS",
+    "category": "", "relation": "parent"}}}]'
+  snapshot_sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
+- evidence_id: EEXTRACT
+  kind: record_content
+  reference: src/habitatmech/extract.py
+  locator: Source counts, channels and taxon ranking
+  accessed_at: '2026-10-15T23:57:46Z'
+  support: supports
+  summary: Exact frozen rows reproduce counts/units and ranked taxon scores. The committed
+    projection does not retain original PREGO pair citation links.
+  snapshot_sha256: 4d9397bda649381a5daf81937369531c6dc8b4518d6c7047e6f3f14e605bf860
+- evidence_id: ET5
+  kind: database
+  reference: data/raw/gold_ecosystem_paths.tsv
+  locator: Physical TSV rows 510
+  accessed_at: '2026-10-15T23:57:46Z'
+  support: supports
+  summary: '[{"row": 510, "data": {"canonical_path": "Host-associated > Cephalochordata",
+    "ecosystem": "Host-associated", "ecosystem_category": "Cephalochordata", "ecosystem_type":
+    "", "ecosystem_subtype": "", "specific_ecosystem": "", "leaf_label": "Cephalochordata",
+    "depth": "2", "gold_node_count": "4", "organism_count": "11", "study_count": "0",
+    "biosample_count": "0", "total_assertions": "11", "gold_node_ids": "gold.ecosystem:4958|gold.ecosystem:5171|gold.ecosystem:5172|gold.ecosystem:5173"}}]'
+  snapshot_sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+- evidence_id: ET6
+  kind: database
+  reference: data/raw/gold_path_biosamples.tsv
+  locator: Physical TSV rows 915
+  accessed_at: '2026-10-15T23:57:46Z'
+  support: supports
+  summary: '[{"row": 915, "data": {"canonical_path": "Host-associated > Cephalochordata",
+    "ecosystem_path_id": "5173", "biosample_count": "2"}}]'
+  snapshot_sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+- evidence_id: ET7
+  kind: database
+  reference: data/raw/gold_studies.tsv
+  locator: Physical TSV rows 3045
+  accessed_at: '2026-10-15T23:57:46Z'
+  support: supports
+  summary: '[{"row": 3045, "data": {"study_gold_id": "Gs0150218", "path_count": "12",
+    "paths": "Host-associated > Amphibia > Digestive system|Host-associated > Amphibia
+    > Digestive system > Biliary tract > Liver|Host-associated > Amphibia > Respiratory
+    system > Lung|Host-associated > Cephalochordata|Host-associated > Fish > Digestive
+    system > Biliary tract > Liver|Host-associated > Fish > Digestive system > Intestine|Host-associated
+    > Fish > Multiple systems > Multiple organs|Host-associated > Fish > Respiratory
+    system > Gills|Host-associated > Fish > Respiratory system > Lung|Host-associated
+    > Reptilia > Digestive system|Host-associated > Reptilia > Digestive system >
+    Biliary tract > Liver|Host-associated > Reptilia > Respiratory system > Lung"}}]'
+  snapshot_sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+- evidence_id: ET8
+  kind: database
+  reference: data/raw/ontology_subclass_edges.tsv
+  locator: Physical TSV rows 6795
+  accessed_at: '2026-10-15T23:57:46Z'
+  support: supports
+  summary: '[{"row": 6795, "data": {"subject": "ENVO:01001000", "predicate": "rdfs:subClassOf",
+    "object": "ENVO:01000254"}}]'
+  snapshot_sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+- evidence_id: ET9
+  kind: database
+  reference: data/raw/ontology_terms.tsv
+  locator: Physical TSV rows 8489
+  accessed_at: '2026-10-15T23:57:46Z'
+  support: supports
+  summary: '[{"row": 8489, "data": {"term_id": "ENVO:01001000", "ontology": "ENVO",
+    "label": "environmental system determined by an organism", "definition": "An environmental
+    system which is determined by a living organism.", "synonyms": "host-associated
+    environment", "deprecated": "", "directly_referenced": "FALSE", "label_only":
+    "FALSE"}}]'
+  snapshot_sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+- evidence_id: ET10
+  kind: database
+  reference: curation/decisions.tsv
+  locator: Physical TSV rows 487
+  accessed_at: '2026-10-15T23:57:46Z'
+  support: supports
+  summary: '[{"row": 487, "data": {"identifier": "habitatmech:GOLD.46c43fd62c", "decision":
+    "CONFIRM_UNGROUNDED", "object_id": "", "object_label": "", "grounding_status":
+    "", "curator": "claude-opus-5", "date": "2026-08-12", "notes": "Class-level sweep
+    (see docs/HARMONIZATION.md#class-level-sweep): no term in the vendored slice matched
+    this label by any search route. Whether the concept is a habitat at all was NOT
+    assessed, so this is not yet a term-request candidate.", "review_depth": "CLASS",
+    "category": "", "relation": ""}}]'
+  snapshot_sha256: e5cb2e09f72dd4b18e069c0e2576e25e13e56c9991f4eb5ae47416345e247578
+- evidence_id: EP11
+  kind: record_content
+  reference: data/habitats/host_associated/environmental_system_determined_by_an_organism.yaml
+  locator: Full immediate-parent record; context only
+  accessed_at: '2026-10-15T23:57:46Z'
+  support: supports
+  summary: '{"identifier": "ENVO:01001000", "label": "environmental system determined
+    by an organism", "definition": "An environmental system which is determined by
+    a living organism.", "definition_source": "ENVO", "habitat_category": "HOST_ASSOCIATED",
+    "grounding_status": "EXACT", "mapping_status": "REVIEWED", "synonyms": [{"synonym_text":
+    "Host", "synonym_type": "EXACT_SYNONYM", "source": "BacDive"}, {"synonym_text":
+    "Host-associated", "synonym_type": "EXACT_SYNONYM", "source": "GOLD"}, {"synonym_text":
+    "host-associated environment", "synonym_type": "EXACT_SYNONYM", "source": "ENVO"}],
+    "parent_habitats": ["ENVO:01000254"], "source_attestations": [{"source": "BACDIVE",
+    "source_id": "bacdive.isolation_source:host", "source_label": "Host", "mapping_predicate":
+    "skos:exactMatch", "assertion_count": 25581, "assertion_unit": "STRAIN", "notes":
+    "kg-microbe''s isolation-source mapping table has no ontology target for this
+    source; the automatic route leaves it ungrounded. The explicit curator decision
+    GROUND overrides that route; this source is emitted on ENVO:01001000."}, {"source":
+    "GOLD", "source_id": "gold.ecosystem:3373", "source_label": "Host-associated",
+    "source_path": "Host-associated", "mapping_predicate": "skos:exactMatch", "assertion_count":
+    3307, "assertion_unit": "ORGANISM", "notes": "5 GOLD ecosystem node ids share
+    this path; first shown. See data/raw/gold_ecosystem_paths.tsv."}], "characteristic_taxa":
+    [{"taxon_id": "NCBITaxon:56", "source": "BACDIVE", "taxon_label": "Sorangium cellulosum",
+    "association_count": 1338, "rank": 1, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:184914",
+    "source": "BACDIVE", "taxon_label": "Corallococcus coralloides", "association_count":
+    1126, "rank": 2, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:54", "source":
+    "BACDIVE", "taxon_label": "Nannocystis exedens", "association_count": 785, "rank":
+    3, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:33", "source": "BACDIVE",
+    "taxon_label": "Myxococcus fulvus", "association_count": 326, "rank": 4, "candidate_pool":
+    6801}, {"taxon_id": "NCBITaxon:562", "source": "BACDIVE", "taxon_label": "Escherichia
+    coli", "association_count": 278, "rank": 5, "candidate_pool": 6801}, {"taxon_id":
+    "NCBITaxon:1872627", "source": "BACDIVE", "taxon_label": "Archangium sp.", "association_count":
+    250, "rank": 6, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:197", "source":
+    "BACDIVE", "taxon_label": "Campylobacter jejuni", "association_count": 243, "rank":
+    7, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:1313", "source": "BACDIVE",
+    "taxon_label": "Streptococcus pneumoniae", "association_count": 198, "rank": 8,
+    "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:71864", "source": "BACDIVE",
+    "taxon_label": "Herpetosiphon sp.", "association_count": 184, "rank": 9, "candidate_pool":
+    6801}, {"taxon_id": "NCBITaxon:2", "source": "BACDIVE", "taxon_label": "Bacteria",
+    "association_count": 180, "rank": 10, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:83456",
+    "source": "BACDIVE", "taxon_label": "Myxococcus virescens", "association_count":
+    178, "rank": 11, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:1280", "source":
+    "BACDIVE", "taxon_label": "Staphylococcus aureus", "association_count": 170, "rank":
+    12, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:1328", "source": "BACDIVE",
+    "taxon_label": "Streptococcus anginosus", "association_count": 155, "rank": 13,
+    "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:730", "source": "BACDIVE", "taxon_label":
+    "[Haemophilus] ducreyi", "association_count": 125, "rank": 14, "candidate_pool":
+    6801}, {"taxon_id": "NCBITaxon:287", "source": "BACDIVE", "taxon_label": "Pseudomonas
+    aeruginosa", "association_count": 120, "rank": 15, "candidate_pool": 6801}, {"taxon_id":
+    "NCBITaxon:28188", "source": "BACDIVE", "taxon_label": "Capnocytophaga canimorsus",
+    "association_count": 119, "rank": 16, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:34",
+    "source": "BACDIVE", "taxon_label": "Myxococcus xanthus", "association_count":
+    111, "rank": 17, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:57", "source":
+    "BACDIVE", "association_count": 111, "rank": 18, "candidate_pool": 6801}, {"taxon_id":
+    "NCBITaxon:1656", "source": "BACDIVE", "taxon_label": "Actinomyces viscosus",
+    "association_count": 110, "rank": 19, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:727",
+    "source": "BACDIVE", "taxon_label": "Haemophilus influenzae", "association_count":
+    110, "rank": 20, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:1352", "source":
+    "BACDIVE", "taxon_label": "Enterococcus faecium", "association_count": 108, "rank":
+    21, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:47715", "source": "BACDIVE",
+    "taxon_label": "Lacticaseibacillus rhamnosus", "association_count": 105, "rank":
+    22, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:2702", "source": "BACDIVE",
+    "taxon_label": "Gardnerella vaginalis", "association_count": 95, "rank": 23, "candidate_pool":
+    6801}, {"taxon_id": "NCBITaxon:28901", "source": "BACDIVE", "taxon_label": "Salmonella
+    enterica", "association_count": 95, "rank": 24, "candidate_pool": 6801}, {"taxon_id":
+    "NCBITaxon:83428", "source": "BACDIVE", "taxon_label": "uncultured Bacillus sp.",
+    "association_count": 94, "rank": 25, "candidate_pool": 6801}], "curation_history":
+    [{"timestamp": "2026-08-16T00:00:00Z", "curator": "claude-opus-5", "action": "GROUND",
+    "changes": "Grounded to ENVO:01001000 ''environmental system determined by an
+    organism'' (EXACT). Term-request re-check (#12): this was recorded as an ENVO
+    term request on the premise that \"ENVO has only plant-associated and animal-associated
+    environment with no shared parent\". That premise is false. ENVO:01001000 ''environmental
+    system determined by an organism'' is that shared parent \u2014 the vendored subclass
+    edges show plant-associated (ENVO:01001001), animal-associated (ENVO:01001002)
+    and fungi-associated (ENVO:01001041) environment all asserted under it \u2014
+    and it has been in the slice the whole time. Its definition, ''an environmental
+    system which is determined by a living organism'', is exactly what this top-level
+    bin means: an isolate whose habitat is a living host. Grounded EXACT. The claim
+    was made by hand and never machine-rechecked, which is the same staleness the
+    class-level sweeps have a gate for and individually-decided records did not. (source
+    concept habitatmech:BACDIVE.baf38460e6)"}, {"timestamp": "2026-08-16T00:00:00Z",
+    "curator": "claude-opus-5", "action": "GROUND", "changes": "Grounded to ENVO:01001000
+    ''environmental system determined by an organism'' (EXACT). Term-request re-check
+    (#12): this was recorded as an ENVO term request on the premise that \"ENVO has
+    only plant-associated and animal-associated environment with no shared parent\".
+    That premise is false. ENVO:01001000 ''environmental system determined by an organism''
+    is that shared parent \u2014 the vendored subclass edges show plant-associated
+    (ENVO:01001001), animal-associated (ENVO:01001002) and fungi-associated (ENVO:01001041)
+    environment all asserted under it \u2014 and it has been in the slice the whole
+    time. Its definition, ''an environmental system which is determined by a living
+    organism'', is exactly what this top-level bin means: an isolate whose habitat
+    is a living host. Grounded EXACT. The claim was made by hand and never machine-rechecked,
+    which is the same staleness the class-level sweeps have a gate for and individually-decided
+    records did not. (source concept habitatmech:GOLD.d3b891e82e)"}, {"timestamp":
+    "2026-08-16T05:58:02Z", "curator": "seed_from_sources", "action": "SEEDED_FROM_SOURCES",
+    "changes": "Seeded from data/raw/ inventories; attested by BACDIVE, GOLD. Grounding:
+    EXACT."}, {"timestamp": "2026-10-10T00:00:00Z", "curator": "seed_from_sources",
+    "action": "SOURCE_ATTESTATION_CORRECTED", "changes": "Corrected bacdive.isolation_source:host
+    provenance wording to distinguish the declined automatic mapping from the final
+    curator override (#1889)."}]}'
+  snapshot_sha256: d3b79ef9436a87fbce8e6b204b0113e170fa758e4a66efb592543bf934c67270
+- evidence_id: EH12
+  kind: record_content
+  reference: reports/yaml_record_review/20260927T203542Z-cephalochordata.md
+  locator: Historical context; not independent primary evidence
+  accessed_at: '2026-10-15T23:57:46Z'
+  support: supports
+  summary: Inspected history, research or prior assessment informs provenance only.
+    Historical unavailability and broad negative claims are not adopted as current
+    facts. No previous finding is closed or narrowed by this new individual observation.
+  snapshot_sha256: 32650eb5483960fe89d1aa2052de7608de4e9b5a6a0f57844cbbf517b567d8e5
+- evidence_id: EX1
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_01000254/graph
+  locator: ENVO_01000254-graph.json
+  accessed_at: '2026-10-15T23:42:28Z'
+  support: context_only
+  summary: 'Typed outgoing ontology edges: [{"source": "http://purl.obolibrary.org/obo/ENVO_01000254",
+    "target": "http://purl.obolibrary.org/obo/RO_0002577", "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+    "label": "subClassOf"}]'
+  snapshot_sha256: 743ecf3c761bfce55781906b57a31602e2f4366b29232406d53b40aaf75fcb78
+- evidence_id: EX2
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_01000254
+  locator: ENVO_01000254.json
+  accessed_at: '2026-10-15T23:42:28Z'
+  support: context_only
+  summary: 'Current term identity, active status and definition: {"obo_id": "ENVO:01000254",
+    "label": "environmental system", "is_obsolete": false, "description": ["In ENVO''s
+    alignment with the Basic Formal Ontology, this class is being considered as a
+    subclass of a proposed BFO class \"system\". The relation \"environed_by\" is
+    also under development. Roughly, a system which includes a material entity (at
+    least partially) within its site and causally influences that entity may be considered
+    to environ it. Following the completion of this alignment, this class'' definition
+    and the definitions of its subclasses will be revised.", "A system which has the
+    disposition to environ one or more material entities."]}'
+  snapshot_sha256: 6400120603ffe93953d6ea567a86900fc6692a8538ed015eb299135e2a98dd8b
+- evidence_id: EX3
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_01001000/graph
+  locator: ENVO_01001000-graph.json
+  accessed_at: '2026-10-15T23:42:30Z'
+  support: context_only
+  summary: 'Typed outgoing ontology edges: [{"source": "http://purl.obolibrary.org/obo/ENVO_01001000",
+    "target": "http://purl.obolibrary.org/obo/ENVO_01000254", "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+    "label": "subClassOf"}, {"source": "http://purl.obolibrary.org/obo/ENVO_01001000",
+    "target": "http://purl.obolibrary.org/obo/NCBITaxon_131567", "uri": "http://purl.obolibrary.org/obo/BFO_0000050",
+    "label": "part of"}]'
+  snapshot_sha256: e11b34dbd0a626083d5d0bbbb364469ef95831fb61cb81da5377d59715b272ca
+- evidence_id: EX4
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_01001000
+  locator: ENVO_01001000.json
+  accessed_at: '2026-10-15T23:42:29Z'
+  support: context_only
+  summary: 'Current term identity, active status and definition: {"obo_id": "ENVO:01001000",
+    "label": "environmental system determined by an organism", "is_obsolete": false,
+    "description": ["An environmental system which is determined by a living organism."]}'
+  snapshot_sha256: 8bd797929d18bf28171af7fd10f358db9b093f752d20b99f665779bb2e6b504e
+- evidence_id: EX5
+  kind: database
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=7735&retmode=xml
+  locator: cephalochordata.xml
+  accessed_at: '2026-10-15T23:50:05Z'
+  support: context_only
+  summary: 'NCBITaxon:7735 current identity and lineage inspected: Cephalochordata,
+    lancelets. This resolves the host category, not an environmental ontology identity.'
+  snapshot_sha256: e7a0f7a7134b923c9c27d6e545c2cdfa1b79237d047647e48e182144b9a5940c
+- evidence_id: ESEARCH
+  kind: search
+  reference: Local maintained inputs and review archive
+  locator: rg --no-ignore --hidden -l -F -e habitatmech:GOLD.46c43fd62c -e Cephalochordata
+    -e cephalochordata -e habitatmech:GOLD.46c43fd62c curation history research reports
+    data/raw build reviews
+  accessed_at: '2026-10-15T23:41:33Z'
+  support: context_only
+  summary: Identifier/label/slug search and full structured-YAML traversal; exact
+    TSV rows were parsed separately. Broad search matches are leads, not all independently
+    reviewed.
+  search_scope: curation, history, research, reports, data/raw, build and reviews,
+    including hidden/ignored content; structured traversal independent of gitignore.
+assessments:
+- assessment_id: A1
+  area: identity
+  topic: Identity, definition, category, aliases and hierarchy
+  outcome: supported
+  summary: The source mint represents a Cephalochordata-associated habitat bin under
+    animal-associated environment, not the identity of a whole lancelet. Current NCBITaxon:7735
+    confirms the host category. Eleven frozen ORGANISM assertions, two later biosamples
+    and one study membership remain nonadditive. Conservative CLASS/SEEDED status
+    and absent optional definition do not authorize inventing a genus, mechanism or
+    exact new term.
+  target_ids:
+  - habitatmech:GOLD.46c43fd62c
+  evidence_ids:
+  - E1
+  - ERULE
+  - ESCHEMA
+  - ESEED
+  - ET5
+  - ET6
+  - ET7
+  - ET8
+  - ET9
+  - ET10
+  - EP11
+  - EX1
+  - EX2
+  - EX3
+  - EX4
+  - EX5
+- assessment_id: A2
+  area: quantity
+  topic: Source assertions, pools, ranks and supplementary context
+  outcome: supported
+  summary: 'All emitted counts/units, labels, ranks, scores and candidate pools match
+    exact frozen rows. [{"source": "GOLD", "count": 11, "unit": "ORGANISM"}]. Zero
+    tree counts are omitted; later biosamples and study memberships are not added.
+    Current taxonomy resolves displayed identifiers including explicit aliases.'
+  target_ids:
+  - habitatmech:GOLD.46c43fd62c
+  evidence_ids:
+  - E1
+  - EEXTRACT
+  - ESEED
+  - EX1
+  - EX2
+  - EX3
+  - EX4
+  - EX5
+- assessment_id: A3
+  area: evidence
+  topic: Biological support and bounded source uncertainty
+  outcome: supported
+  summary: The source mint represents a Cephalochordata-associated habitat bin under
+    animal-associated environment, not the identity of a whole lancelet. Current NCBITaxon:7735
+    confirms the host category. Eleven frozen ORGANISM assertions, two later biosamples
+    and one study membership remain nonadditive. Conservative CLASS/SEEDED status
+    and absent optional definition do not authorize inventing a genus, mechanism or
+    exact new term.
+  target_ids:
+  - habitatmech:GOLD.46c43fd62c
+  evidence_ids:
+  - E1
+  - ERULE
+  - ESCHEMA
+  - ESEED
+  - ET5
+  - ET6
+  - ET7
+  - ET8
+  - ET9
+  - ET10
+  - EP11
+  - EX1
+  - EX2
+  - EX3
+  - EX4
+  - EX5
+- assessment_id: A4
+  area: completeness
+  topic: Native status, optional parameters and causal mechanisms
+  outcome: supported
+  summary: Executed native resolution reproduces UNGROUNDED/SEEDED. No environmental
+    parameters, causal graphs, discussions, datasets or is_characteristic=true claims
+    are present. Missing optional fields and SEEDED status alone are not defects;
+    parent mechanisms are not inherited.
+  target_ids:
+  - habitatmech:GOLD.46c43fd62c
+  evidence_ids:
+  - E1
+  - ESCHEMA
+  - ESEED
+- assessment_id: A5
+  area: schema
+  topic: Native validation and reproduction
+  outcome: supported
+  summary: Target schema/strict checks, 829 histories, source provenance, exact 3209-record
+    reproduction, 32 causal overlays, 110 term requests and configured label checks
+    passed. Exact-base remote full QC passed. Deterministic validity is separate from
+    scientific support; reference-check applicability is stated explicitly.
+  target_ids:
+  - habitatmech:GOLD.46c43fd62c
+  evidence_ids:
+  - E1
+  - ERULE
+findings: []
+actions: []
+limitations:
+- Source counts, ranks and scores do not establish prevalence, viability or characteristic
+  presence. Original specimen-level evidence for every source member has not been
+  reconstructed.
+- Configured label validation skipped 2063 no-adapter pairs; displayed TaxIds were
+  separately resolved against current NCBI including aliases.
+- Exact-base full QC was verified remotely, not newly executed locally. New saved
+  bundles require a separate archive check.
+- 'iModulonDB is not applicable: target assertions contain no gene, regulator or expression-module
+  claim. No paid research or native status promotion was performed.'
+notes:
+- Captured input hashes match both working bytes and exact committed base blobs.
+- This observation proposes curation but does not itself mutate inputs. The separately
+  authorized PR workflow may address supported findings in later commits.
+- Ignored-inclusive archive traversal found no earlier structured target observation.
+  Historical prose does not count as a formal predecessor.
+tags:
+- individual-scientific-review
+- host-associated
+```
