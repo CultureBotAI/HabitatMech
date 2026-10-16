@@ -1,21 +1,41 @@
 identifier: habitatmech:GOLD.c859639497
 label: Cuticle
 habitat_category: HOST_ASSOCIATED
-grounding_status: NARROW
-mapping_status: SEEDED
-parent_habitats:
-- UBERON:0001002
-- habitatmech:GOLD.dd76069e56
+grounding_status: UNGROUNDED
+mapping_status: REVIEWED
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8187
   source_label: Cuticle
   source_path: 'Host-associated > Arthropoda: Crustaceans > Integumentary system >
     Cuticle'
-  mapping_predicate: skos:narrowMatch
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-16T00:00:00Z'
+  curator: codex-gpt-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM reassessment
+    https://github.com/CultureBotAI/HabitatMech/issues/2236 : UBERON:0001002 explicitly
+    restricts cuticle to non-mineral coverings, whereas this unrestricted host-group
+    source includes mineralized examples (https://pubmed.ncbi.nlm.nih.gov/15670859/
+    for millipedes; https://pubmed.ncbi.nlm.nih.gov/18550385/ for isopods). Retain
+    the source mint UNGROUNDED pending a verified genus or upstream definition repair;
+    this is not proof that no suitable ontology term exists. Preserve all source observations.
+    Whole-organ context is excluded separately. Path: Host-associated > Arthropoda:
+    Crustaceans > Integumentary system > Cuticle (source concept habitatmech:GOLD.c859639497)'
+- timestamp: '2026-10-16T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.dd76069e56
+    for habitatmech:GOLD.c859639497 (Host-associated > Arthropoda: Crustaceans > Integumentary
+    system > Cuticle). Review https://github.com/CultureBotAI/HabitatMech/issues/2235
+    : Maxillary gland is not the entire excretory system; cud is not the stomach;
+    cuticle is not the whole integument, integumentary system or skin; abscess, calculus
+    and plaque are not the whole oral cavity. Exclude only exact guarded GOLD source-path
+    contributions, preserving independent genera and all source observations. Exact
+    target habitatmech:GOLD.c859639497. Other identity, status and mapping findings
+    remain separate.'
