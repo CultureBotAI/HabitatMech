@@ -16,8 +16,6 @@ synonyms:
   source: GOLD
 parent_habitats:
 - BTO:0001492
-- habitatmech:GOLD.56e0776270
-- habitatmech:GOLD.968051b240
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6724
@@ -48,3 +46,23 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-16T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.56e0776270
+    for habitatmech:GOLD.85999f8943 (Host-associated > Mammals > Integumentary system
+    > Claws). Review https://github.com/CultureBotAI/HabitatMech/issues/2221 : A mammalian
+    claw is an anatomical structure, not a kind of whole integumentary system. Exclude
+    only this exact GOLD contribution. Preserve source identity, observations and
+    independently imported ontology parents; the separate BTO limb-class conflict
+    remains unresolved.'
+- timestamp: '2026-10-16T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.968051b240
+    for habitatmech:GOLD.efa84cfb9b (Host-associated > Birds > Integumentary system
+    > Claws/Talon). Review https://github.com/CultureBotAI/HabitatMech/issues/2221
+    : An avian claw or talon is an anatomical structure, not a kind of whole integumentary
+    system. Exclude only this exact GOLD contribution. Preserve source identity, observations
+    and independently imported ontology parents; the separate BTO limb-class conflict
+    remains unresolved.'

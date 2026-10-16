@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: claw_colon_review_insect
+session:
+  id: 2026-10-16T040312Z-codex-gpt-5-7927d3
+  timestamp: '2026-10-16T04:03:12Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2223
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding_status
+  summary: Retain insect colon as an honestly ungrounded habitat
+  details: 'UBERON:0001155 is vertebrate colon; the GOLD source explicitly identifies insects.
+    The Manduca anatomical atlas DOI:10.1016/j.isci.2023.106801 identifies a separate insect
+    hindgut compartment. Retain the mint with an ITEM CONFIRM_UNGROUNDED decision; no replacement
+    identity or genus has been verified. Remove the misleading narrow mapping as part of this
+    scoped repair, without claiming the shared #1398 contract is fixed. Regression is required
+    to constrain the complete corpus delta to ten records and their explicit fields and deterministic
+    events. Preserve immutable baseline reviews; regenerate records, map, pages and term products,
+    validate native gates, and save successor dispositions. No unsupported association removal
+    or global mapping-contract claim.'

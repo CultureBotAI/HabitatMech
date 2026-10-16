@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - UBERON:0000162
-- habitatmech:GOLD.6bda0871e2
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6708
@@ -19,3 +18,13 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-16T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.6bda0871e2
+    for habitatmech:GOLD.cdfe01fc7e (Host-associated > Mammals > Digestive system
+    > Large intestine > Cloaca). Review https://github.com/CultureBotAI/HabitatMech/issues/2221
+    : The mammalian cloacal chamber is not a type of whole large intestine. Retain
+    the generic cloaca genus, distinct source mint, all counts and native status.
+    Exclude only the exact source-context parent; shared mapping endpoints remain
+    unresolved.'

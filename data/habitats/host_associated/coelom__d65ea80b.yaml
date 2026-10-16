@@ -11,10 +11,10 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: UBERON
 - synonym_text: coelomic cavity
-  synonym_type: EXACT_SYNONYM
+  synonym_type: RELATED_SYNONYM
   source: UBERON
 - synonym_text: enterocoelom
-  synonym_type: EXACT_SYNONYM
+  synonym_type: NARROW_SYNONYM
   source: UBERON
 - synonym_text: haemocoelom
   synonym_type: EXACT_SYNONYM
@@ -24,7 +24,6 @@ synonyms:
   source: UBERON
 parent_habitats:
 - UBERON:0000481
-- habitatmech:GOLD.6e10201167
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8446
@@ -37,3 +36,31 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-16T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.6e10201167
+    for habitatmech:GOLD.2b136a90dd (Host-associated > Annelida > Coelom). Review
+    https://github.com/CultureBotAI/HabitatMech/issues/2221 : Generic UBERON coelom
+    is not restricted to annelid-associated environments. Keep the generic anatomical
+    identity and multi-tissue-structure genus, with the annelid context preserved
+    verbatim in the source path. Exclude only this source-specific superclass contribution;
+    do not merge the separate BTO coelom record.'
+- timestamp: '2026-10-16T00:00:00Z'
+  curator: codex-gpt-5
+  action: ANNOTATION_CORRECTED
+  changes: 'Corrected synonym_type for ''coelomic cavity'' (UBERON) from ''EXACT_SYNONYM''
+    to ''RELATED_SYNONYM''. Evidence: https://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FUBERON_0011997.
+    Review https://github.com/CultureBotAI/HabitatMech/issues/2222 : Current typed
+    Uberon annotation supports this exact scope. Preserve other aliases, canonical
+    identity, source labels, counts and status. No GOLD source grounds through these
+    aliases. Global typed extraction #1249 remains open.'
+- timestamp: '2026-10-16T00:00:00Z'
+  curator: codex-gpt-5
+  action: ANNOTATION_CORRECTED
+  changes: 'Corrected synonym_type for ''enterocoelom'' (UBERON) from ''EXACT_SYNONYM''
+    to ''NARROW_SYNONYM''. Evidence: https://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FUBERON_0011997.
+    Review https://github.com/CultureBotAI/HabitatMech/issues/2222 : Current typed
+    Uberon annotation supports this exact scope. Preserve other aliases, canonical
+    identity, source labels, counts and status. No GOLD source grounds through these
+    aliases. Global typed extraction #1249 remains open.'
