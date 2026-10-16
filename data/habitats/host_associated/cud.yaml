@@ -12,7 +12,6 @@ synonyms:
   source: UBERON
 parent_habitats:
 - UBERON:0036017
-- habitatmech:GOLD.d3869ad37f
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6696
@@ -24,3 +23,14 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-16T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.d3869ad37f
+    for habitatmech:GOLD.f43331961c (Host-associated > Mammals > Digestive system
+    > Stomach > Cud). Review https://github.com/CultureBotAI/HabitatMech/issues/2235
+    : Maxillary gland is not the entire excretory system; cud is not the stomach;
+    cuticle is not the whole integument, integumentary system or skin; abscess, calculus
+    and plaque are not the whole oral cavity. Exclude only exact guarded GOLD source-path
+    contributions, preserving independent genera and all source observations. Exact
+    target UBERON:0012114. Other identity, status and mapping findings remain separate.'
