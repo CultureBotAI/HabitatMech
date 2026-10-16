@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: claw_colon_review_parents
+session:
+  id: 2026-10-16T040310Z-codex-gpt-5-5f2ade
+  timestamp: '2026-10-16T04:03:10Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2221
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude eleven unsupported context-parent contributions
+  details: Ten target records contain eleven context-only GOLD parent contributions. Claw
+    has two whole-system parents; cloaca, colon and mucosa have whole-organ parents; generic
+    coelom is incorrectly restricted to an annelid-associated environment; colostrum is incorrectly
+    a kind of mammary gland. Apply only exact source-path and expected-parent exclusions,
+    retaining independent genera and all observations. Regression is required to constrain
+    the complete corpus delta to ten records and their explicit fields and deterministic events.
+    Preserve immutable baseline reviews; regenerate records, map, pages and term products,
+    validate native gates, and save successor dispositions. No unsupported association removal
+    or global mapping-contract claim.

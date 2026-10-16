@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: cuticle_dental_review_mineral
+session:
+  id: 2026-10-16T074759Z-codex-gpt-5-d2d9db
+  timestamp: '2026-10-16T07:47:59Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2236
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding_status
+  summary: Retain unrestricted arthropod cuticle sources without a non-mineral genus
+  details: The UBERON:0001002 definition explicitly says non-mineral, but the source bins
+    impose no mineralization restriction. Primary millipede measurements (PMID:15670859) and
+    isopod microscopy/Raman analysis (PMID:18550385) demonstrate mineralized examples. Preserve
+    each mint with an ITEM CONFIRM_UNGROUNDED decision pending a justified genus or upstream
+    definition repair. This does not imply all cuticle is mineralized or that no suitable
+    ontology concept exists. Full-corpus counterfactual regression constrains the delta to
+    ten documents and explicitly allowed fields. Regenerate through validated writers and
+    save successor reviews. No source deletion, ontology refresh, identity migration or shared
+    mapping-contract repair.

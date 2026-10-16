@@ -35,12 +35,11 @@
 <p class="meta">
   <code class="curie">habitatmech:GOLD.c484d9a195</code>
   <span class="sep">·</span><a href="../category/host-associated.html">HOST_ASSOCIATED</a>
-  <span class="sep">·</span><span class="pill">NARROW</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="sep">·</span><span class="pill warn">UNGROUNDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 
-<div class="note warn"><p>SEEDED workflow status. The source-seeding rules supplied this record; consult its curation history for later attributed changes. This status does not establish human review.</p></div>
 
 <h2>Source attestations</h2>
 <p class="meta">Each upstream vocabulary's own account of this habitat. Assertion
@@ -59,16 +58,26 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 </table>
 </div>
 
-<h2>Broader habitats</h2>
-<ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/UBERON_0001155">colon</a>      <code class="curie">UBERON:0001155</code></li>
-  <li><a href="../habitats/hindgut-habitatmech-gold-50722c7871.html">Hindgut</a>      <code class="curie">habitatmech:GOLD.50722c7871</code></li>
-</ul>
 
 
 
 
 
+<h2>Curation</h2>
+<p class="meta">What a curator decided about this record, and why. A record built
+from several source concepts can carry one decision per concept.</p>
+<ol class="events">
+  <li>
+    <span class="pill">CONFIRM_UNGROUNDED</span>
+    <span class="meta">2026-10-16 · codex-gpt-5</span>
+    <p>Confirmed UNGROUNDED: no ontology term fits this concept. ITEM reassessment <a href="https://github.com/CultureBotAI/HabitatMech/issues/2223" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2223</a> : UBERON:0001155 denotes vertebrate colon, not this insect hindgut compartment. Current typed Uberon taxon constraint and primary Manduca anatomy (<a href="https://pubmed.ncbi.nlm.nih.gov/37378344/" rel="noopener noreferrer" target="_blank">https://pubmed.ncbi.nlm.nih.gov/37378344/</a> ; DOI:10.1016/j.isci.2023.106801) distinguish insect colon from vertebrate large-intestinal anatomy. Retain the source mint UNGROUNDED; no fitting identity or strictly broader genus was verified. Remove the unsupported narrow mapping without deleting source observations. The whole-hindgut context contribution is excluded separately. Path: Host-associated &gt; Arthropoda: Insects &gt; Digestive system &gt; Hindgut &gt; Colon (source concept habitatmech:GOLD.c484d9a195)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-16 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.50722c7871 for habitatmech:GOLD.c484d9a195 (Host-associated &gt; Arthropoda: Insects &gt; Digestive system &gt; Hindgut &gt; Colon). Review <a href="https://github.com/CultureBotAI/HabitatMech/issues/2221" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2221</a> : Insect colon is a compartment of the hindgut, not a type of the entire hindgut (DOI:10.1016/j.isci.2023.106801). Exclude only this guarded context contribution. Preserve the source mint and observations; the separate ITEM decision removes the unsupported vertebrate genus without guessing a replacement.</p>
+  </li>
+</ol>
 
 <h2>Explore across X-Mech</h2>
 <p class="meta">Explore related organisms, microbial communities, growth media, and environmental traits across the CultureBotAI suite:</p>

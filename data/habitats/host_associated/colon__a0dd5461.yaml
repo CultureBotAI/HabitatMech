@@ -1,20 +1,39 @@
 identifier: habitatmech:GOLD.c484d9a195
 label: Colon
 habitat_category: HOST_ASSOCIATED
-grounding_status: NARROW
-mapping_status: SEEDED
-parent_habitats:
-- UBERON:0001155
-- habitatmech:GOLD.50722c7871
+grounding_status: UNGROUNDED
+mapping_status: REVIEWED
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7204
   source_label: Colon
   source_path: 'Host-associated > Arthropoda: Insects > Digestive system > Hindgut
     > Colon'
-  mapping_predicate: skos:narrowMatch
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-16T00:00:00Z'
+  curator: codex-gpt-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM reassessment
+    https://github.com/CultureBotAI/HabitatMech/issues/2223 : UBERON:0001155 denotes
+    vertebrate colon, not this insect hindgut compartment. Current typed Uberon taxon
+    constraint and primary Manduca anatomy (https://pubmed.ncbi.nlm.nih.gov/37378344/
+    ; DOI:10.1016/j.isci.2023.106801) distinguish insect colon from vertebrate large-intestinal
+    anatomy. Retain the source mint UNGROUNDED; no fitting identity or strictly broader
+    genus was verified. Remove the unsupported narrow mapping without deleting source
+    observations. The whole-hindgut context contribution is excluded separately. Path:
+    Host-associated > Arthropoda: Insects > Digestive system > Hindgut > Colon (source
+    concept habitatmech:GOLD.c484d9a195)'
+- timestamp: '2026-10-16T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.50722c7871
+    for habitatmech:GOLD.c484d9a195 (Host-associated > Arthropoda: Insects > Digestive
+    system > Hindgut > Colon). Review https://github.com/CultureBotAI/HabitatMech/issues/2221
+    : Insect colon is a compartment of the hindgut, not a type of the entire hindgut
+    (DOI:10.1016/j.isci.2023.106801). Exclude only this guarded context contribution.
+    Preserve the source mint and observations; the separate ITEM decision removes
+    the unsupported vertebrate genus without guessing a replacement.'

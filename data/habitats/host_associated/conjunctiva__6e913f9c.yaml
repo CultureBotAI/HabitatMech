@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - UBERON:0001811
-- habitatmech:GOLD.4166733314
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6855
@@ -20,3 +19,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-16T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.4166733314
+    for habitatmech:GOLD.fd0221f092 (Host-associated > Mammals > Visual system > Conjunctiva).
+    Review https://github.com/CultureBotAI/HabitatMech/issues/2229 : Conjunctiva is
+    not an entire visual system; cornea is not an entire eye; cortex is not an entire
+    root; crop is not an entire digestive system, esophagus or foregut; crop contents
+    are not an esophagus. Exclude only exact guarded source-path contributions, retaining
+    independent genera and source observations. This does not settle generic cortex
+    identity or equivalent avian crop sources. Exact target habitatmech:GOLD.fd0221f092.
+    Other identity and mapping findings remain separate.'

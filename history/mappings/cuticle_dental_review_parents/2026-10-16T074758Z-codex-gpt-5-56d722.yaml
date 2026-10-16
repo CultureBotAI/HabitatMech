@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: cuticle_dental_review_parents
+session:
+  id: 2026-10-16T074758Z-codex-gpt-5-56d722
+  timestamp: '2026-10-16T07:47:58Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2235
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude ten cuticle and dental cohort context-only parents
+  details: Maxillary gland is not the entire excretory system; cud is not the stomach; cuticle
+    is not the whole integument, integumentary system or skin; abscess, calculus and plaque
+    are not the whole oral cavity. Exclude only exact guarded GOLD source-path contributions,
+    preserving independent genera and all source observations. Full-corpus counterfactual
+    regression constrains the delta to ten documents and explicitly allowed fields. Regenerate
+    through validated writers and save successor reviews. No source deletion, ontology refresh,
+    identity migration or shared mapping-contract repair.

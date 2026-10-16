@@ -1,0 +1,1675 @@
+schema_version: 1.0.0
+review_id: 20261016T035436Z-cnidarian_associated_environment-record
+repository: CultureBotAI/HabitatMech
+kind: record
+title: 'Record review: cnidarian-associated environment (ENVO:01001179)'
+started_at: '2026-10-16T03:35:18Z'
+finished_at: '2026-10-16T03:54:36Z'
+reviewer:
+  identity: codex-gpt-5
+  kind: agent
+  model: gpt-5
+  independence: self_review
+  independence_basis: Same agent assessed all evidence and target; not independent
+    reviewer approval.
+skill: .claude/skills/review-yaml-record/SKILL.md@2.0.0
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'The two GOLD Cnidaria bins plausibly denote cnidarian-associated environments,
+  with valid animal/organism-determined and invertebrate-environment genera. The latter
+  parent is an associated environment, not a whole animal. The BacDive Cnidaria-Corals
+  bin needs finer scope assessment: inspected primary papers include genuine coral
+  and jellyfish isolates, but also exact S304 from hydrothermal coral-reef sediment
+  and V. astriarenae from reef seawater. Those environmental settings do not alone
+  establish determination by a living cnidarian. Preserve the native 75 STRAIN, 95
+  and 102 ORGANISM counts separately and the top 25 of 73 taxa; do not remove associations
+  or globally narrow the bin from a few witnesses.'
+source:
+  git_revision: 67cde35918d7361de3a1164fb22756cba5d20e30
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 4544b5d2c11fbbb3a46cd8a65f7e664363df78c1000c590aab533219f9eec59b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: d429c8bb74f521df9a77a90b216a44fc6959ee28efb1fa17a93582536caa8bce
+    role: context
+  - path: CLAUDE.md
+    sha256: 98d95f910ff5160bc5b2ff572766785519dacdba487700bebaa6dbf96d071fd9
+    role: context
+  - path: conf/id_label_targets.yaml
+    sha256: e100d84aabccaeb00c1a60246142b3cafcec009dbfba58f5cc319c35adddb633
+    role: context
+  - path: conf/record_review.yaml
+    sha256: c2f5d0eb4c5744f5fe354c92184ddab144dc2688dba952b032b4f3d597bc08d6
+    role: context
+  - path: conf/sources.yaml
+    sha256: a8e069f9278068b57fa234f43e03c8d893f857827b83fd10cfa92d6815aed642
+    role: context
+  - path: curation/decisions.tsv
+    sha256: e5cb2e09f72dd4b18e069c0e2576e25e13e56c9991f4eb5ae47416345e247578
+    role: context
+  - path: curation/definition_source_label_exclusions.tsv
+    sha256: 37dc4b40642d19e7b5c3262f368d12daa82e03115e7731a2326ae88785ceff5b
+    role: context
+  - path: curation/external_xrefs.tsv
+    sha256: f289c938b0c70d6f2bfb231bf137edf1c862bbda9143d9b6eae9e3fdd587703c
+    role: context
+  - path: curation/gold_parent_exclusions.tsv
+    sha256: 04ba048af6f93b69c127bc3d47e2403dbe153452c75f9e26939188fc5daa52d7
+    role: context
+  - path: curation/record_annotation_corrections.tsv
+    sha256: a56f07a45fb743fb7b0e61f83ef70fa5ed61a3c892cfaf36e3428967c548dc5e
+    role: context
+  - path: curation/redirects_retracted.tsv
+    sha256: 0f1e9af8881f5a5db19f87de06b3b3d1800cfac8101699b380388c0a1a1e9a19
+    role: context
+  - path: curation/term_requests.tsv
+    sha256: bc7a13d922c179cd9bcd4d37b348bc90a39b08a4dafba7af4ed0039ad99621c3
+    role: context
+  - path: curation/term_requests_excluded.tsv
+    sha256: 36bc332b2b699c23df6de1006c591a822f8571d130173e84454a35dafd18fde0
+    role: context
+  - path: data/habitats/PATHS.tsv
+    sha256: ee559f7b45b4af2d72a078c45d1a3b676785d34305f286e9738f95771dbaccfd
+    role: context
+  - path: data/habitats/RETIRED.tsv
+    sha256: 747e6a5612dc0b7ed881b9fb323fd57ab3c75794d9ee5ebb9d59b2be57dbf8cd
+    role: context
+  - path: data/habitats/host_associated/cnidarian_associated_environment.yaml
+    sha256: 89a86d0b96bbc29b7bc9b40caceaf294637cd8c380499ea41160cf4e0062524a
+    role: target
+  - path: data/habitats/host_associated/environmental_system_determined_by_an_organism.yaml
+    sha256: d3b79ef9436a87fbce8e6b204b0113e170fa758e4a66efb592543bf934c67270
+    role: context
+  - path: data/habitats/host_associated/invertebrates.yaml
+    sha256: c59c31e2f2e591167a1008f0fc67b6d8a4c7ca3cda46a22d79af28e6cf6358f8
+    role: context
+  - path: data/habitats/other/animal_associated_environment.yaml
+    sha256: a1cf41f43f9bece44dfb3e5d6ab0ca86858df67b88ee25d6ada260cccac69e16
+    role: context
+  - path: data/raw/GOLD_MANIFEST.yaml
+    sha256: 99ec487ae02d512cfb75440685f927abe907effe52cb755feb095631e8841489
+    role: context
+  - path: data/raw/MANIFEST.yaml
+    sha256: 4657672d429be35e551ceef4a1204ab0a8120558ce63e2a2b74188eee94b8480
+    role: context
+  - path: data/raw/bacdive_isolation_sources.tsv
+    sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+    role: context
+  - path: data/raw/bacdive_source_taxa.tsv
+    sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+    role: context
+  - path: data/raw/environment_parameters.tsv
+    sha256: a75d0f565d8ee2498188ff98b17d0ab325ae4f782601bf4414eff6e86c13e0f9
+    role: context
+  - path: data/raw/gold_ecosystem_paths.tsv
+    sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+    role: context
+  - path: data/raw/gold_path_biosamples.tsv
+    sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+    role: context
+  - path: data/raw/gold_path_triads.tsv
+    sha256: b1717bd8fc4fdcd6a1a132f4eb32df3638b01ddf7d78f9a5797f110ee2b1e8d6
+    role: context
+  - path: data/raw/gold_studies.tsv
+    sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+    role: context
+  - path: data/raw/isolation_source_groundings.tsv
+    sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+    role: context
+  - path: data/raw/madin_habitat_taxa.tsv
+    sha256: d30854cfcffca0405914d04071ac47053938d354d5df250125843131b7c91fd7
+    role: context
+  - path: data/raw/madin_habitats.tsv
+    sha256: 2ae1756f40242600365c49bfbdada4bce5fc8b86630426bb34892f055e5a5c93
+    role: context
+  - path: data/raw/ontology_subclass_edges.tsv
+    sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+    role: context
+  - path: data/raw/ontology_terms.tsv
+    sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+    role: context
+  - path: data/raw/prego_habitat_taxa.tsv
+    sha256: 26c121b5ec8ac25a637b33f988d15a4db5165cc6fd17c14a2b69003b614d8ce6
+    role: context
+  - path: data/raw/prego_habitats.tsv
+    sha256: 07dd724817bec360d8971509c68ec14c39925fc5eb9db32f99fcfaa2c052dd06
+    role: context
+  - path: docs/CURATION.md
+    sha256: f3f5d3d033fa7e7c1d78571959fc2e62e0b0a625f47dba1413657e8cf944b322
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: ee39d3cd29115ee14f5e7386169c76c47d471ebdc2502c008c49d30fb44918f1
+    role: context
+  - path: docs/RESEARCH.md
+    sha256: 82c5471890d310bf8fd33141d5596f847bfc1eb6091c2db6f485388435e067af
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 105b3c8e10f43ce689b05d3089d3a8be1d713a98dd6806e11be37ebd85b10590
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: e9b0ba6704eab8f68570a9b7d592d4b82fc719792b0fec04240ae1b52f862b14
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: src/habitatmech/curate/__init__.py
+    sha256: d9837c29dc61d8c9245fdb471a68a109cea31b131cdbc0c4d51d23a8d013ce12
+    role: context
+  - path: src/habitatmech/curate/causal_graphs.py
+    sha256: d1884374263ed7926292c52a58742c614e75628d78ff50fe688e6abc0ddf9c1c
+    role: context
+  - path: src/habitatmech/curate/curation_event.py
+    sha256: 08c774d309fe988c468097518d346f07a653b283cb9b9b51c7fe79fa0af785a9
+    role: context
+  - path: src/habitatmech/curate/decisions.py
+    sha256: f33d3e9dc95bb428e63e640d48d4074cf15e90ea666603fb16fb651d591e3f02
+    role: context
+  - path: src/habitatmech/curate/definition_source_label_exclusions.py
+    sha256: 0c13e83fe17613e8b9f5b346d1259104172f8c1de42f911625579b903707625d
+    role: context
+  - path: src/habitatmech/curate/definitions.py
+    sha256: decd02eea029e884ab1a8bbb51dd870edb5544906b3ddd39598147b27ce572c9
+    role: context
+  - path: src/habitatmech/curate/external_xrefs.py
+    sha256: 8b90ec049887d3aa67e31cce7f7a04d7300421c6fedb833cc66e5d5f5f181694
+    role: context
+  - path: src/habitatmech/curate/gold_parent_exclusions.py
+    sha256: 044d8277509a9b1f6e4f2d7ea1fb82319b41e09ffef7788738a0f4ed0d0b63af
+    role: context
+  - path: src/habitatmech/curate/record_annotation_corrections.py
+    sha256: 15bad3d40fd95e2acc72d3ff3c74289c15fb8a1775adc523b3575c3ea8487033
+    role: context
+  - path: src/habitatmech/extract.py
+    sha256: 4d9397bda649381a5daf81937369531c6dc8b4518d6c7047e6f3f14e605bf860
+    role: context
+  - path: src/habitatmech/labels.py
+    sha256: eb6986c3a9c7d5a3e4651b639351f1f2d3e12d74c4bfaa92899205a1f9df0977
+    role: context
+  - path: src/habitatmech/schema/habitatmech.yaml
+    sha256: 7e3cda3dadb9c7462498e5014bf38ef730068212f8f9cb131e3fce383c21d10e
+    role: context
+  - path: src/habitatmech/schema/history.yaml
+    sha256: b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d
+    role: context
+  - path: src/habitatmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/habitatmech/seed.py
+    sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
+    role: context
+targets:
+- target_id: ENVO:01001179
+  path: data/habitats/host_associated/cnidarian_associated_environment.yaml
+  label: cnidarian-associated environment
+  kind: generated
+  record_class: HabitatRecord
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/term_requests.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/gold_parent_exclusions.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: curation/record_annotation_corrections.tsv
+    role: Maintained input or generator; generated YAML is not an edit owner
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/seed.py
+    role: Maintained input or generator; generated YAML is not an edit owner
+scope:
+  description: Full field-by-field assessment of this one resolved generated record.
+  selection: One of the next 24 unreviewed records selected in deterministic path
+    order from the ignored-inclusive 3209-record census. This bundle assesses exactly
+    one target, not a proxy sample.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - ENVO:01001179
+  exclusions:
+  - target: Other records, individual source specimens and SSSOM/KGX products
+    reason: Parent context is not additional review coverage; original specimens and
+      exports are not certified.
+checks:
+- check_id: C1
+  name: validate
+  status: passed
+  required: true
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate data/habitats/host_associated/cnidarian_associated_environment.yaml
+  exit_code: 0
+  target_ids:
+  - ENVO:01001179
+  summary: "Finished 2026-10-16T03:35:50Z. No issues found\n uv run linkml-validate\
+    \ -s src/habitatmech/schema/habitatmech.yaml --target-class HabitatRecord data/habitats/host_associated/cnidarian_associated_environment.yaml"
+  scope_note: Individual schema; strict covers the 24-record cohort; history, provenance,
+    reproduction, causal, term and configured label checks are full-corpus.
+- check_id: C2
+  name: validate-strict
+  status: passed
+  required: true
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-strict
+    data/habitats/host_associated/clasper.yaml data/habitats/host_associated/claw.yaml
+    data/habitats/host_associated/cloaca.yaml data/habitats/host_associated/cloaca__f527d4ff.yaml
+    data/habitats/host_associated/cnidarian_associated_environment.yaml data/habitats/host_associated/cob.yaml
+    data/habitats/host_associated/cocoon.yaml data/habitats/host_associated/coelom.yaml
+    data/habitats/host_associated/coelom__d65ea80b.yaml data/habitats/host_associated/colon.yaml
+    data/habitats/host_associated/colon__a0dd5461.yaml data/habitats/host_associated/colon__ff534087.yaml
+    data/habitats/host_associated/colon_cancer.yaml data/habitats/host_associated/colon_mucosa.yaml
+    data/habitats/host_associated/colon_mucosa__7a8e4588.yaml data/habitats/host_associated/colon_mucosa__b687aead.yaml
+    data/habitats/host_associated/colon_mucosa__de31f03f.yaml data/habitats/host_associated/colonic.yaml
+    data/habitats/host_associated/colonic_cancer_cell.yaml data/habitats/host_associated/colonic_epithelium.yaml
+    data/habitats/host_associated/colonic_mucosa.yaml data/habitats/host_associated/colorectal_polyps.yaml
+    data/habitats/host_associated/colorectum.yaml data/habitats/host_associated/colostrum.yaml
+  exit_code: 0
+  target_ids:
+  - ENVO:01001179
+  summary: "Finished 2026-10-16T03:36:32Z. uv run python scripts/validate_strict.py\
+    \ data/habitats/host_associated/clasper.yaml data/habitats/host_associated/claw.yaml\
+    \ data/habitats/host_associated/cloaca.yaml data/habitats/host_associated/cloaca__f527d4ff.yaml\
+    \ data/habitats/host_associated/cnidarian_associated_environment.yaml data/habitats/host_associated/cob.yaml\
+    \ data/habitats/host_associated/cocoon.yaml data/habitats/host_associated/coelom.yaml\
+    \ data/habitats/host_associated/coelom__d65ea80b.yaml data/habitats/host_associated/colon.yaml\
+    \ data/habitats/host_associated/colon__a0dd5461.yaml data/habitats/host_associated/colon__ff534087.yaml\
+    \ data/habitats/host_associated/colon_cancer.yaml data/habitats/host_associated/colon_mucosa.yaml\
+    \ data/habitats/host_associated/colon_mucosa__7a8e4588.yaml data/habitats/host_associated/colon_mucosa__b687aead.yaml\
+    \ data/habitats/host_associated/colon_mucosa__de31f03f.yaml data/habitats/host_associated/colonic.yaml\
+    \ data/habitats/host_associated/colonic_cancer_cell.yaml data/habitats/host_associated/colonic_epithelium.yaml\
+    \ data/habitats/host_associated/colonic_mucosa.yaml data/habitats/host_associated/colorectal_polyps.yaml\
+    \ data/habitats/host_associated/colorectum.yaml data/habitats/host_associated/colostrum.yaml\n\
+    Validating 24 files with 15 workers; schema=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/HabitatMech/src/habitatmech/schema/habitatmech.yaml\n\
+    \n=== validate-strict summary ===\n  files scanned:      24\n  files with ERROR:\
+    \   0\n  total ERROR rows:   0\n  TSV:                reports/instance_validation_failures.tsv"
+  scope_note: Individual schema; strict covers the 24-record cohort; history, provenance,
+    reproduction, causal, term and configured label checks are full-corpus.
+- check_id: C3
+  name: validate-history
+  status: passed
+  required: true
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-history
+  exit_code: 0
+  target_ids:
+  - ENVO:01001179
+  summary: 'Finished 2026-10-16T03:36:40Z. No issues found
+
+    831 history record(s) valid against src/habitatmech/schema/history.yaml'
+  scope_note: Individual schema; strict covers the 24-record cohort; history, provenance,
+    reproduction, causal, term and configured label checks are full-corpus.
+- check_id: C4
+  name: provenance-check
+  status: passed
+  required: true
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just provenance-check
+  exit_code: 0
+  target_ids:
+  - ENVO:01001179
+  summary: "Finished 2026-10-16T03:36:40Z. provenance current: 14 committed inventories,\
+    \ 2 GOLD sources\n uv run python scripts/check_provenance.py"
+  scope_note: Individual schema; strict covers the 24-record cohort; history, provenance,
+    reproduction, causal, term and configured label checks are full-corpus.
+- check_id: C5
+  name: verify-corpus
+  status: passed
+  required: true
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just verify-corpus
+  exit_code: 0
+  target_ids:
+  - ENVO:01001179
+  summary: "Finished 2026-10-16T03:37:54Z. expected 3209 records, found 3209 on disk\n\
+    \  missing:   0\n  extra:     0\n  differing: 0\n\ncorpus reproduces exactly from\
+    \ data/raw/\n uv run python scripts/verify_corpus.py"
+  scope_note: Individual schema; strict covers the 24-record cohort; history, provenance,
+    reproduction, causal, term and configured label checks are full-corpus.
+- check_id: C6
+  name: validate-causal-all
+  status: passed
+  required: true
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-causal-all
+  exit_code: 0
+  target_ids:
+  - ENVO:01001179
+  summary: "Finished 2026-10-16T03:38:04Z. validated 32 causal-graph curation file(s)\
+    \ with 32 graph(s)\n uv run python scripts/validate_causal_graph_curations.py"
+  scope_note: Individual schema; strict covers the 24-record cohort; history, provenance,
+    reproduction, causal, term and configured label checks are full-corpus.
+- check_id: C7
+  name: term-requests-check
+  status: passed
+  required: true
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just term-requests-check
+  exit_code: 0
+  target_ids:
+  - ENVO:01001179
+  summary: "Finished 2026-10-16T03:38:23Z. term-request table is current (110 terms)\n\
+    \ uv run python scripts/build_term_requests.py --check"
+  scope_note: Individual schema; strict covers the 24-record cohort; history, provenance,
+    reproduction, causal, term and configured label checks are full-corpus.
+- check_id: C8
+  name: validate-products
+  status: passed
+  required: true
+  command: UV_CACHE_DIR=/private/tmp/habitatmech-bk-uv-cache just validate-products
+  exit_code: 0
+  target_ids:
+  - ENVO:01001179
+  summary: "Finished 2026-10-16T03:39:05Z. id↔label correspondence summary:\n    \
+    \      OK_CANONICAL: 1173\n            OK_SYNONYM: 1\n          OK_EXCEPTION:\
+    \ 5\n    SKIPPED_NO_ADAPTER: 2063\n\n✅ All id↔label pairs correspond.\n uv run\
+    \ python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml"
+  scope_note: Individual schema; strict covers the 24-record cohort; history, provenance,
+    reproduction, causal, term and configured label checks are full-corpus.
+- check_id: CCI
+  name: Exact-base hosted native QC
+  status: passed
+  required: true
+  command: gh run view 38843593114 --repo CultureBotAI/HabitatMech --json headSha,conclusion,url,jobs
+  exit_code: 0
+  target_ids:
+  - ENVO:01001179
+  summary: Verified 2026-10-16T03:43:47Z https://github.com/CultureBotAI/HabitatMech/actions/runs/38843593114
+  scope_note: Unchanged scientific-input base only. Not a claim that the new output
+    bundles were part of the earlier run.
+- check_id: CPOOL
+  name: Displayed candidate-pool correspondence
+  status: passed
+  required: false
+  command: .venv/bin/python /private/tmp/habitatmech-review-cq-author.py pool_check
+  exit_code: 0
+  target_ids:
+  - ENVO:01001179
+  summary: Finished 2026-10-16T03:54:30Z. All 60 displayed candidate pools equal exact
+    source taxon totals.
+  scope_note: Supplemental mechanical cross-check of all 60 displayed taxon entries;
+    not a replacement for native validators or scientific evidence.
+- check_id: CREF
+  name: Standalone citation validation applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - ENVO:01001179
+  summary: No standalone citation checker is documented for these evidence-free generated
+    targets. Stable references were checked with native gates and current authorities;
+    causal validation ran globally.
+evidence:
+- evidence_id: E1
+  kind: record_content
+  reference: data/habitats/host_associated/cnidarian_associated_environment.yaml
+  locator: Entire generated target YAML
+  accessed_at: '2026-10-16T03:54:36Z'
+  support: supports
+  summary: All fields, source attestations, displayed taxa, aliases and complete generated
+    history read.
+  snapshot_sha256: 89a86d0b96bbc29b7bc9b40caceaf294637cd8c380499ea41160cf4e0062524a
+- evidence_id: ERULE
+  kind: authority
+  reference: docs/CURATION.md
+  locator: Identity, evidence and strictly broader parents
+  accessed_at: '2026-10-16T03:54:36Z'
+  support: supports
+  summary: All parent contributions must be strictly broader; source context, anatomy,
+    host and diagnosis are distinct. Optional absence is not a required-field defect.
+  snapshot_sha256: f3f5d3d033fa7e7c1d78571959fc2e62e0b0a625f47dba1413657e8cf944b322
+- evidence_id: ESCHEMA
+  kind: authority
+  reference: src/habitatmech/schema/habitatmech.yaml
+  locator: SourceAttestation and GroundingStatusEnum
+  accessed_at: '2026-10-16T03:54:36Z'
+  support: supports
+  summary: The mapping contract compares source concept to record identifier; source-is-record
+    omits the predicate. Native status and association rules are preserved.
+  snapshot_sha256: 7e3cda3dadb9c7462498e5014bf38ef730068212f8f9cb131e3fce383c21d10e
+- evidence_id: ESEED
+  kind: record_content
+  reference: src/habitatmech/seed.py
+  locator: Executed source routes and entire document reproduction
+  accessed_at: '2026-10-16T03:54:36Z'
+  support: supports
+  summary: '[{"mint": "habitatmech:BACDIVE.ef2153283d", "automatic": {"identifier":
+    "mesh:D037421", "grounding_status": "CLOSE", "mapping_predicate": "skos:closeMatch",
+    "contributes_grounding": true, "extra_parents": [], "extra_xrefs": [], "route":
+    "bacdive_mapping_table", "category": null, "reviewed": false, "decision": null},
+    "final": {"identifier": "ENVO:01001179", "grounding_status": "EXACT", "mapping_predicate":
+    "skos:exactMatch", "contributes_grounding": true, "extra_parents": [], "extra_xrefs":
+    [], "route": "curated_ground_from_bacdive_mapping_table", "category": null, "reviewed":
+    true, "decision": {"identifier": "habitatmech:BACDIVE.ef2153283d", "decision":
+    "GROUND", "object_id": "ENVO:01001179", "object_label": "cnidarian-associated
+    environment", "grounding_status": "EXACT", "curator": "claude-opus-5", "date":
+    "2026-08-17", "notes": "Adversarial review of #120 (#123): #114 correctly reversed
+    this from NOT_APPLICABLE \u2014 a cnidarian host is a habitat \u2014 but overshot
+    by making it a term-request candidate. The term already exists: ENVO:01001179
+    ''cnidarian-associated environment'', ''an environmental system determined by
+    a cnidarian or part of a cnidarian'', present in the vendored slice with that
+    exact label. Requesting it would have been requesting a duplicate. Grounded EXACT.
+    Note that GROUND does not carry an xref the way NOT_APPLICABLE and CONFIRM_UNGROUNDED
+    do, so the taxon link (mesh:D003063 / mesh:D037421) is not retained on the record;
+    the upstream mapping remains in data/raw/. Found by the deep research run in #120,
+    which is the point of running it.", "review_depth": "ITEM", "category": "", "relation":
+    "parent"}}}, {"mint": "habitatmech:GOLD.00086e0958", "automatic": {"identifier":
+    "habitatmech:GOLD.00086e0958", "grounding_status": "UNGROUNDED", "mapping_predicate":
+    null, "contributes_grounding": true, "extra_parents": [], "extra_xrefs": [], "route":
+    "gold_unmatched", "category": null, "reviewed": false, "decision": null}, "final":
+    {"identifier": "ENVO:01001179", "grounding_status": "EXACT", "mapping_predicate":
+    "skos:exactMatch", "contributes_grounding": true, "extra_parents": [], "extra_xrefs":
+    [], "route": "curated_ground_from_gold_unmatched", "category": null, "reviewed":
+    true, "decision": {"identifier": "habitatmech:GOLD.00086e0958", "decision": "GROUND",
+    "object_id": "ENVO:01001179", "object_label": "cnidarian-associated environment",
+    "grounding_status": "EXACT", "curator": "claude-opus-5", "date": "2026-08-17",
+    "notes": "Adversarial review of #120 (#123): #114 correctly reversed this from
+    NOT_APPLICABLE \u2014 a cnidarian host is a habitat \u2014 but overshot by making
+    it a term-request candidate. The term already exists: ENVO:01001179 ''cnidarian-associated
+    environment'', ''an environmental system determined by a cnidarian or part of
+    a cnidarian'', present in the vendored slice with that exact label. Requesting
+    it would have been requesting a duplicate. Grounded EXACT. Note that GROUND does
+    not carry an xref the way NOT_APPLICABLE and CONFIRM_UNGROUNDED do, so the taxon
+    link (mesh:D003063 / mesh:D037421) is not retained on the record; the upstream
+    mapping remains in data/raw/. Found by the deep research run in #120, which is
+    the point of running it.", "review_depth": "ITEM", "category": "", "relation":
+    "parent"}}}, {"mint": "habitatmech:GOLD.e3fede2aea", "automatic": {"identifier":
+    "habitatmech:GOLD.e3fede2aea", "grounding_status": "UNGROUNDED", "mapping_predicate":
+    null, "contributes_grounding": true, "extra_parents": [], "extra_xrefs": [], "route":
+    "gold_unmatched", "category": null, "reviewed": false, "decision": null}, "final":
+    {"identifier": "ENVO:01001179", "grounding_status": "EXACT", "mapping_predicate":
+    "skos:exactMatch", "contributes_grounding": true, "extra_parents": [], "extra_xrefs":
+    [], "route": "curated_ground_from_gold_unmatched", "category": null, "reviewed":
+    true, "decision": {"identifier": "habitatmech:GOLD.e3fede2aea", "decision": "GROUND",
+    "object_id": "ENVO:01001179", "object_label": "cnidarian-associated environment",
+    "grounding_status": "EXACT", "curator": "claude-opus-5", "date": "2026-08-17",
+    "notes": "Adversarial review of #120 (#123): #114 correctly reversed this from
+    NOT_APPLICABLE \u2014 a cnidarian host is a habitat \u2014 but overshot by making
+    it a term-request candidate. The term already exists: ENVO:01001179 ''cnidarian-associated
+    environment'', ''an environmental system determined by a cnidarian or part of
+    a cnidarian'', present in the vendored slice with that exact label. Requesting
+    it would have been requesting a duplicate. Grounded EXACT. Note that GROUND does
+    not carry an xref the way NOT_APPLICABLE and CONFIRM_UNGROUNDED do, so the taxon
+    link (mesh:D003063 / mesh:D037421) is not retained on the record; the upstream
+    mapping remains in data/raw/. Found by the deep research run in #120, which is
+    the point of running it.", "review_depth": "ITEM", "category": "", "relation":
+    "parent"}}}]'
+  snapshot_sha256: 35ab365591562452b7ce268a3cc8e9b3b0b4461362f2f872c674838dcdb6f021
+- evidence_id: EEXTRACT
+  kind: record_content
+  reference: src/habitatmech/extract.py
+  locator: Source counts, source-strain-taxon join and PREGO scoring/ranking
+  accessed_at: '2026-10-16T03:54:36Z'
+  support: supports
+  summary: Inspected native projections. Original BacDive source-strain join and PREGO
+    pair citation evidence are not retained in the compact per-habitat taxon tables.
+  snapshot_sha256: 4d9397bda649381a5daf81937369531c6dc8b4518d6c7047e6f3f14e605bf860
+- evidence_id: ET5
+  kind: database
+  reference: data/raw/gold_ecosystem_paths.tsv
+  locator: Physical TSV rows 195,207
+  accessed_at: '2026-10-16T03:54:36Z'
+  support: supports
+  summary: '[{"row": 195, "data": {"canonical_path": "Host-associated > Invertebrates
+    > Cnidaria", "ecosystem": "Host-associated", "ecosystem_category": "Invertebrates",
+    "ecosystem_type": "Cnidaria", "ecosystem_subtype": "", "specific_ecosystem": "",
+    "leaf_label": "Cnidaria", "depth": "3", "gold_node_count": "3", "organism_count":
+    "102", "study_count": "0", "biosample_count": "0", "total_assertions": "102",
+    "gold_node_ids": "gold.ecosystem:3564|gold.ecosystem:4800|gold.ecosystem:4801"}},
+    {"row": 207, "data": {"canonical_path": "Host-associated > Cnidaria", "ecosystem":
+    "Host-associated", "ecosystem_category": "Cnidaria", "ecosystem_type": "", "ecosystem_subtype":
+    "", "specific_ecosystem": "", "leaf_label": "Cnidaria", "depth": "2", "gold_node_count":
+    "4", "organism_count": "95", "study_count": "0", "biosample_count": "0", "total_assertions":
+    "95", "gold_node_ids": "gold.ecosystem:3383|gold.ecosystem:3602|gold.ecosystem:3718|gold.ecosystem:5281"}}]'
+  snapshot_sha256: 5e4ede39caec9598dc6e1b8f34a292cc758c9837a963d825af1f58d295163b5d
+- evidence_id: ET6
+  kind: database
+  reference: data/raw/gold_path_biosamples.tsv
+  locator: Physical TSV rows 111
+  accessed_at: '2026-10-16T03:54:36Z'
+  support: supports
+  summary: '[{"row": 111, "data": {"canonical_path": "Host-associated > Invertebrates
+    > Cnidaria", "ecosystem_path_id": "4801", "biosample_count": "272"}}]'
+  snapshot_sha256: 97cd7c8d0e731d07a85db6986dbcf9e49096a3c7988bd90a855599f492fe619e
+- evidence_id: ET7
+  kind: database
+  reference: data/raw/gold_studies.tsv
+  locator: Physical TSV rows 223,276,299,512,567,571,738,926,929,951,1185,1257,1526,1570,1615,1914,2023,2150,2205,2500
+  accessed_at: '2026-10-16T03:54:36Z'
+  support: supports
+  summary: '[{"row": 223, "data": {"study_gold_id": "Gs0055728", "path_count": "1",
+    "paths": "Host-associated > Invertebrates > Cnidaria"}}, {"row": 276, "data":
+    {"study_gold_id": "Gs0059069", "path_count": "1", "paths": "Host-associated >
+    Invertebrates > Cnidaria"}}, {"row": 299, "data": {"study_gold_id": "Gs0060784",
+    "path_count": "1", "paths": "Host-associated > Invertebrates > Cnidaria"}}, {"row":
+    512, "data": {"study_gold_id": "Gs0096888", "path_count": "1", "paths": "Host-associated
+    > Invertebrates > Cnidaria"}}, {"row": 567, "data": {"study_gold_id": "Gs0110123",
+    "path_count": "1", "paths": "Host-associated > Invertebrates > Cnidaria"}}, {"row":
+    571, "data": {"study_gold_id": "Gs0110137", "path_count": "1", "paths": "Host-associated
+    > Invertebrates > Cnidaria"}}, {"row": 738, "data": {"study_gold_id": "Gs0113397",
+    "path_count": "1", "paths": "Host-associated > Invertebrates > Cnidaria"}}, {"row":
+    926, "data": {"study_gold_id": "Gs0116328", "path_count": "1", "paths": "Host-associated
+    > Invertebrates > Cnidaria"}}, {"row": 929, "data": {"study_gold_id": "Gs0116711",
+    "path_count": "1", "paths": "Host-associated > Invertebrates > Cnidaria"}}, {"row":
+    951, "data": {"study_gold_id": "Gs0117432", "path_count": "2", "paths": "Host-associated
+    > Invertebrates > Cnidaria|Host-associated > Invertebrates > Cnidaria > Coral"}},
+    {"row": 1185, "data": {"study_gold_id": "Gs0118633", "path_count": "1", "paths":
+    "Host-associated > Invertebrates > Cnidaria"}}, {"row": 1257, "data": {"study_gold_id":
+    "Gs0120461", "path_count": "2", "paths": "Host-associated > Invertebrates > Cnidaria|Host-associated
+    > Invertebrates > Cnidaria > Coral > Surface"}}, {"row": 1526, "data": {"study_gold_id":
+    "Gs0128996", "path_count": "1", "paths": "Host-associated > Invertebrates > Cnidaria"}},
+    {"row": 1570, "data": {"study_gold_id": "Gs0129099", "path_count": "1", "paths":
+    "Host-associated > Invertebrates > Cnidaria"}}, {"row": 1615, "data": {"study_gold_id":
+    "Gs0130375", "path_count": "1", "paths": "Host-associated > Invertebrates > Cnidaria"}},
+    {"row": 1914, "data": {"study_gold_id": "Gs0133328", "path_count": "1", "paths":
+    "Host-associated > Invertebrates > Cnidaria"}}, {"row": 2023, "data": {"study_gold_id":
+    "Gs0134347", "path_count": "1", "paths": "Host-associated > Invertebrates > Cnidaria"}},
+    {"row": 2150, "data": {"study_gold_id": "Gs0135780", "path_count": "1", "paths":
+    "Host-associated > Invertebrates > Cnidaria"}}, {"row": 2205, "data": {"study_gold_id":
+    "Gs0136079", "path_count": "2", "paths": "Environmental > Aquatic > Marine|Host-associated
+    > Invertebrates > Cnidaria"}}, {"row": 2500, "data": {"study_gold_id": "Gs0144583",
+    "path_count": "1", "paths": "Host-associated > Invertebrates > Cnidaria"}}]'
+  snapshot_sha256: fa7aaa46f288d10c453bb723e6cf486cde646a003559414b5523cc3883a84c8c
+- evidence_id: ET8
+  kind: database
+  reference: data/raw/bacdive_source_taxa.tsv
+  locator: Physical TSV rows 517,518,519,520,521,522,523,524,525,526,527,528,529,530,531,532,533,534,535,536,537,538,539,540,541
+  accessed_at: '2026-10-16T03:54:36Z'
+  support: supports
+  summary: '[{"row": 517, "data": {"bacdive_id": "bacdive.isolation_source:cnidaria-corals",
+    "rank": "1", "taxon_id": "NCBITaxon:1449351", "taxon_label": "Roseivivax isoporae
+    LMG 25204", "strain_count": "2", "corroborated_by": ""}}, {"row": 518, "data":
+    {"bacdive_id": "bacdive.isolation_source:cnidaria-corals", "rank": "2", "taxon_id":
+    "NCBITaxon:560080", "taxon_label": "Shewanella corallii", "strain_count": "2",
+    "corroborated_by": ""}}, {"row": 519, "data": {"bacdive_id": "bacdive.isolation_source:cnidaria-corals",
+    "rank": "3", "taxon_id": "NCBITaxon:1027273", "taxon_label": "Endozoicomonas montiporae",
+    "strain_count": "1", "corroborated_by": ""}}, {"row": 520, "data": {"bacdive_id":
+    "bacdive.isolation_source:cnidaria-corals", "rank": "4", "taxon_id": "NCBITaxon:1048357",
+    "taxon_label": "Nocardiopsis coralliicola", "strain_count": "1", "corroborated_by":
+    ""}}, {"row": 521, "data": {"bacdive_id": "bacdive.isolation_source:cnidaria-corals",
+    "rank": "5", "taxon_id": "NCBITaxon:1069963", "taxon_label": "Janibacter alkaliphilus",
+    "strain_count": "1", "corroborated_by": ""}}, {"row": 522, "data": {"bacdive_id":
+    "bacdive.isolation_source:cnidaria-corals", "rank": "6", "taxon_id": "NCBITaxon:1074311",
+    "taxon_label": "Vibrio alfacsensis", "strain_count": "1", "corroborated_by": ""}},
+    {"row": 523, "data": {"bacdive_id": "bacdive.isolation_source:cnidaria-corals",
+    "rank": "7", "taxon_id": "NCBITaxon:1120968", "taxon_label": "Algoriphagus vanfongensis
+    DSM 17529", "strain_count": "1", "corroborated_by": ""}}, {"row": 524, "data":
+    {"bacdive_id": "bacdive.isolation_source:cnidaria-corals", "rank": "8", "taxon_id":
+    "NCBITaxon:1120983", "taxon_label": "Amorphus coralli DSM 19760", "strain_count":
+    "1", "corroborated_by": ""}}, {"row": 525, "data": {"bacdive_id": "bacdive.isolation_source:cnidaria-corals",
+    "rank": "9", "taxon_id": "NCBITaxon:1121027", "taxon_label": "Aurantimonas coralicida
+    DSM 14790", "strain_count": "1", "corroborated_by": ""}}, {"row": 526, "data":
+    {"bacdive_id": "bacdive.isolation_source:cnidaria-corals", "rank": "10", "taxon_id":
+    "NCBITaxon:1173995", "taxon_label": "Parvularcula dongshanensis", "strain_count":
+    "1", "corroborated_by": ""}}, {"row": 527, "data": {"bacdive_id": "bacdive.isolation_source:cnidaria-corals",
+    "rank": "11", "taxon_id": "NCBITaxon:1216969", "taxon_label": "Janibacter corallicola
+    NBRC 107790", "strain_count": "1", "corroborated_by": ""}}, {"row": 528, "data":
+    {"bacdive_id": "bacdive.isolation_source:cnidaria-corals", "rank": "12", "taxon_id":
+    "NCBITaxon:1224163", "taxon_label": "Corynebacterium maris DSM 45190", "strain_count":
+    "1", "corroborated_by": ""}}, {"row": 529, "data": {"bacdive_id": "bacdive.isolation_source:cnidaria-corals",
+    "rank": "13", "taxon_id": "NCBITaxon:1234143", "taxon_label": "Endozoicomonas
+    euniceicola", "strain_count": "1", "corroborated_by": ""}}, {"row": 530, "data":
+    {"bacdive_id": "bacdive.isolation_source:cnidaria-corals", "rank": "14", "taxon_id":
+    "NCBITaxon:1234144", "taxon_label": "Endozoicomonas gorgoniicola", "strain_count":
+    "1", "corroborated_by": ""}}, {"row": 531, "data": {"bacdive_id": "bacdive.isolation_source:cnidaria-corals",
+    "rank": "15", "taxon_id": "NCBITaxon:1280004", "taxon_label": "Vibrio owensii
+    LMG 25430", "strain_count": "1", "corroborated_by": ""}}, {"row": 532, "data":
+    {"bacdive_id": "bacdive.isolation_source:cnidaria-corals", "rank": "16", "taxon_id":
+    "NCBITaxon:1342794", "taxon_label": "Photobacterium sanctipauli", "strain_count":
+    "1", "corroborated_by": ""}}, {"row": 533, "data": {"bacdive_id": "bacdive.isolation_source:cnidaria-corals",
+    "rank": "17", "taxon_id": "NCBITaxon:1342818", "taxon_label": "Vibrio madracius",
+    "strain_count": "1", "corroborated_by": ""}}, {"row": 534, "data": {"bacdive_id":
+    "bacdive.isolation_source:cnidaria-corals", "rank": "18", "taxon_id": "NCBITaxon:1348114",
+    "taxon_label": "Pseudoalteromonas piratica", "strain_count": "1", "corroborated_by":
+    ""}}, {"row": 535, "data": {"bacdive_id": "bacdive.isolation_source:cnidaria-corals",
+    "rank": "19", "taxon_id": "NCBITaxon:1385512", "taxon_label": "Pontibacillus litoralis
+    JSM 072002", "strain_count": "1", "corroborated_by": ""}}, {"row": 536, "data":
+    {"bacdive_id": "bacdive.isolation_source:cnidaria-corals", "rank": "20", "taxon_id":
+    "NCBITaxon:1401264", "taxon_label": "Prauserella coralliicola", "strain_count":
+    "1", "corroborated_by": ""}}, {"row": 537, "data": {"bacdive_id": "bacdive.isolation_source:cnidaria-corals",
+    "rank": "21", "taxon_id": "NCBITaxon:141693", "taxon_label": "Nocardiopsis kunsanensis",
+    "strain_count": "1", "corroborated_by": ""}}, {"row": 538, "data": {"bacdive_id":
+    "bacdive.isolation_source:cnidaria-corals", "rank": "22", "taxon_id": "NCBITaxon:1452538",
+    "taxon_label": "Microbacterium aureliae", "strain_count": "1", "corroborated_by":
+    ""}}, {"row": 539, "data": {"bacdive_id": "bacdive.isolation_source:cnidaria-corals",
+    "rank": "23", "taxon_id": "NCBITaxon:1453497", "taxon_label": "Kosmotoga arenicorallina
+    S304", "strain_count": "1", "corroborated_by": ""}}, {"row": 540, "data": {"bacdive_id":
+    "bacdive.isolation_source:cnidaria-corals", "rank": "24", "taxon_id": "NCBITaxon:1479025",
+    "taxon_label": "Myceligenerans cantabricum", "strain_count": "1", "corroborated_by":
+    ""}}, {"row": 541, "data": {"bacdive_id": "bacdive.isolation_source:cnidaria-corals",
+    "rank": "25", "taxon_id": "NCBITaxon:1481923", "taxon_label": "Vibrio astriarenae",
+    "strain_count": "1", "corroborated_by": ""}}]'
+  snapshot_sha256: 08471c12f887882e2a6af8f078166b1f59ed7e2b24eb7edbe43a7fc77dfbad44
+- evidence_id: ET9
+  kind: database
+  reference: data/raw/isolation_source_groundings.tsv
+  locator: Physical TSV rows 67
+  accessed_at: '2026-10-16T03:54:36Z'
+  support: supports
+  summary: '[{"row": 67, "data": {"subject_label": "Cnidaria-Corals", "subject_label_normalized":
+    "cnidaria corals", "object_id": "mesh:D037421", "object_label": "Anthozoa", "object_source":
+    "mesh", "predicate_id": "skos:closeMatch", "confidence": "medium", "mapping_justification":
+    "semapv:LexicalMatching", "curator": "ols4_search_synonym", "source_dataset":
+    "bacdive", "verified_date": "2026-05-01"}}]'
+  snapshot_sha256: ab6a997359aab961c40928f9b13e06adb6dc43124fa3de821819570dd87f43b8
+- evidence_id: ET10
+  kind: database
+  reference: data/raw/bacdive_isolation_sources.tsv
+  locator: Physical TSV rows 79
+  accessed_at: '2026-10-16T03:54:36Z'
+  support: supports
+  summary: '[{"row": 79, "data": {"bacdive_id": "bacdive.isolation_source:cnidaria-corals",
+    "label": "Cnidaria-Corals", "source_slug": "cnidaria-corals", "strain_count":
+    "75", "taxon_count": "73"}}]'
+  snapshot_sha256: fb1645dd899a43130be9cf38b0e8b27ffbaa0175306917bff20e20ee225875fc
+- evidence_id: ET11
+  kind: database
+  reference: data/raw/ontology_subclass_edges.tsv
+  locator: Physical TSV rows 6795,6797,6996
+  accessed_at: '2026-10-16T03:54:36Z'
+  support: supports
+  summary: '[{"row": 6795, "data": {"subject": "ENVO:01001000", "predicate": "rdfs:subClassOf",
+    "object": "ENVO:01000254"}}, {"row": 6797, "data": {"subject": "ENVO:01001002",
+    "predicate": "rdfs:subClassOf", "object": "ENVO:01001000"}}, {"row": 6996, "data":
+    {"subject": "ENVO:01001179", "predicate": "rdfs:subClassOf", "object": "ENVO:01001002"}}]'
+  snapshot_sha256: b06a709f4e47abf0417e5a8907b671dc057dd4b5ca10518d3f60c043911d65a3
+- evidence_id: ET12
+  kind: database
+  reference: data/raw/ontology_terms.tsv
+  locator: Physical TSV rows 8489,8491,8667
+  accessed_at: '2026-10-16T03:54:36Z'
+  support: supports
+  summary: '[{"row": 8489, "data": {"term_id": "ENVO:01001000", "ontology": "ENVO",
+    "label": "environmental system determined by an organism", "definition": "An environmental
+    system which is determined by a living organism.", "synonyms": "host-associated
+    environment", "deprecated": "", "directly_referenced": "FALSE", "label_only":
+    "FALSE"}}, {"row": 8491, "data": {"term_id": "ENVO:01001002", "ontology": "ENVO",
+    "label": "animal-associated environment", "definition": "An environmental system
+    determined by an animal.", "synonyms": "Metazoan-associated environment|animal
+    environment", "deprecated": "", "directly_referenced": "TRUE", "label_only": "FALSE"}},
+    {"row": 8667, "data": {"term_id": "ENVO:01001179", "ontology": "ENVO", "label":
+    "cnidarian-associated environment", "definition": "An environmental system determined
+    by a cnidarian or part of a cnidarian.", "synonyms": "", "deprecated": "", "directly_referenced":
+    "TRUE", "label_only": "FALSE"}}]'
+  snapshot_sha256: 7508afaa249de34fd877f6d168391cfce36030f067f169752562db987fb5d348
+- evidence_id: ET13
+  kind: database
+  reference: curation/decisions.tsv
+  locator: Physical TSV rows 1547,1622,1623
+  accessed_at: '2026-10-16T03:54:36Z'
+  support: supports
+  summary: '[{"row": 1547, "data": {"identifier": "habitatmech:BACDIVE.ef2153283d",
+    "decision": "GROUND", "object_id": "ENVO:01001179", "object_label": "cnidarian-associated
+    environment", "grounding_status": "EXACT", "curator": "claude-opus-5", "date":
+    "2026-08-17", "notes": "Adversarial review of #120 (#123): #114 correctly reversed
+    this from NOT_APPLICABLE \u2014 a cnidarian host is a habitat \u2014 but overshot
+    by making it a term-request candidate. The term already exists: ENVO:01001179
+    ''cnidarian-associated environment'', ''an environmental system determined by
+    a cnidarian or part of a cnidarian'', present in the vendored slice with that
+    exact label. Requesting it would have been requesting a duplicate. Grounded EXACT.
+    Note that GROUND does not carry an xref the way NOT_APPLICABLE and CONFIRM_UNGROUNDED
+    do, so the taxon link (mesh:D003063 / mesh:D037421) is not retained on the record;
+    the upstream mapping remains in data/raw/. Found by the deep research run in #120,
+    which is the point of running it.", "review_depth": "ITEM", "category": "", "relation":
+    ""}}, {"row": 1622, "data": {"identifier": "habitatmech:GOLD.00086e0958", "decision":
+    "GROUND", "object_id": "ENVO:01001179", "object_label": "cnidarian-associated
+    environment", "grounding_status": "EXACT", "curator": "claude-opus-5", "date":
+    "2026-08-17", "notes": "Adversarial review of #120 (#123): #114 correctly reversed
+    this from NOT_APPLICABLE \u2014 a cnidarian host is a habitat \u2014 but overshot
+    by making it a term-request candidate. The term already exists: ENVO:01001179
+    ''cnidarian-associated environment'', ''an environmental system determined by
+    a cnidarian or part of a cnidarian'', present in the vendored slice with that
+    exact label. Requesting it would have been requesting a duplicate. Grounded EXACT.
+    Note that GROUND does not carry an xref the way NOT_APPLICABLE and CONFIRM_UNGROUNDED
+    do, so the taxon link (mesh:D003063 / mesh:D037421) is not retained on the record;
+    the upstream mapping remains in data/raw/. Found by the deep research run in #120,
+    which is the point of running it.", "review_depth": "ITEM", "category": "", "relation":
+    ""}}, {"row": 1623, "data": {"identifier": "habitatmech:GOLD.e3fede2aea", "decision":
+    "GROUND", "object_id": "ENVO:01001179", "object_label": "cnidarian-associated
+    environment", "grounding_status": "EXACT", "curator": "claude-opus-5", "date":
+    "2026-08-17", "notes": "Adversarial review of #120 (#123): #114 correctly reversed
+    this from NOT_APPLICABLE \u2014 a cnidarian host is a habitat \u2014 but overshot
+    by making it a term-request candidate. The term already exists: ENVO:01001179
+    ''cnidarian-associated environment'', ''an environmental system determined by
+    a cnidarian or part of a cnidarian'', present in the vendored slice with that
+    exact label. Requesting it would have been requesting a duplicate. Grounded EXACT.
+    Note that GROUND does not carry an xref the way NOT_APPLICABLE and CONFIRM_UNGROUNDED
+    do, so the taxon link (mesh:D003063 / mesh:D037421) is not retained on the record;
+    the upstream mapping remains in data/raw/. Found by the deep research run in #120,
+    which is the point of running it.", "review_depth": "ITEM", "category": "", "relation":
+    ""}}]'
+  snapshot_sha256: e5cb2e09f72dd4b18e069c0e2576e25e13e56c9991f4eb5ae47416345e247578
+- evidence_id: EP14
+  kind: record_content
+  reference: data/habitats/host_associated/environmental_system_determined_by_an_organism.yaml
+  locator: Immediate parent record, context only
+  accessed_at: '2026-10-16T03:54:36Z'
+  support: supports
+  summary: '{"identifier": "ENVO:01001000", "label": "environmental system determined
+    by an organism", "definition": "An environmental system which is determined by
+    a living organism.", "definition_source": "ENVO", "habitat_category": "HOST_ASSOCIATED",
+    "grounding_status": "EXACT", "mapping_status": "REVIEWED", "synonyms": [{"synonym_text":
+    "Host", "synonym_type": "EXACT_SYNONYM", "source": "BacDive"}, {"synonym_text":
+    "Host-associated", "synonym_type": "EXACT_SYNONYM", "source": "GOLD"}, {"synonym_text":
+    "host-associated environment", "synonym_type": "EXACT_SYNONYM", "source": "ENVO"}],
+    "parent_habitats": ["ENVO:01000254"], "source_attestations": [{"source": "BACDIVE",
+    "source_id": "bacdive.isolation_source:host", "source_label": "Host", "mapping_predicate":
+    "skos:exactMatch", "assertion_count": 25581, "assertion_unit": "STRAIN", "notes":
+    "kg-microbe''s isolation-source mapping table has no ontology target for this
+    source; the automatic route leaves it ungrounded. The explicit curator decision
+    GROUND overrides that route; this source is emitted on ENVO:01001000."}, {"source":
+    "GOLD", "source_id": "gold.ecosystem:3373", "source_label": "Host-associated",
+    "source_path": "Host-associated", "mapping_predicate": "skos:exactMatch", "assertion_count":
+    3307, "assertion_unit": "ORGANISM", "notes": "5 GOLD ecosystem node ids share
+    this path; first shown. See data/raw/gold_ecosystem_paths.tsv."}], "characteristic_taxa":
+    [{"taxon_id": "NCBITaxon:56", "source": "BACDIVE", "taxon_label": "Sorangium cellulosum",
+    "association_count": 1338, "rank": 1, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:184914",
+    "source": "BACDIVE", "taxon_label": "Corallococcus coralloides", "association_count":
+    1126, "rank": 2, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:54", "source":
+    "BACDIVE", "taxon_label": "Nannocystis exedens", "association_count": 785, "rank":
+    3, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:33", "source": "BACDIVE",
+    "taxon_label": "Myxococcus fulvus", "association_count": 326, "rank": 4, "candidate_pool":
+    6801}, {"taxon_id": "NCBITaxon:562", "source": "BACDIVE", "taxon_label": "Escherichia
+    coli", "association_count": 278, "rank": 5, "candidate_pool": 6801}, {"taxon_id":
+    "NCBITaxon:1872627", "source": "BACDIVE", "taxon_label": "Archangium sp.", "association_count":
+    250, "rank": 6, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:197", "source":
+    "BACDIVE", "taxon_label": "Campylobacter jejuni", "association_count": 243, "rank":
+    7, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:1313", "source": "BACDIVE",
+    "taxon_label": "Streptococcus pneumoniae", "association_count": 198, "rank": 8,
+    "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:71864", "source": "BACDIVE",
+    "taxon_label": "Herpetosiphon sp.", "association_count": 184, "rank": 9, "candidate_pool":
+    6801}, {"taxon_id": "NCBITaxon:2", "source": "BACDIVE", "taxon_label": "Bacteria",
+    "association_count": 180, "rank": 10, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:83456",
+    "source": "BACDIVE", "taxon_label": "Myxococcus virescens", "association_count":
+    178, "rank": 11, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:1280", "source":
+    "BACDIVE", "taxon_label": "Staphylococcus aureus", "association_count": 170, "rank":
+    12, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:1328", "source": "BACDIVE",
+    "taxon_label": "Streptococcus anginosus", "association_count": 155, "rank": 13,
+    "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:730", "source": "BACDIVE", "taxon_label":
+    "[Haemophilus] ducreyi", "association_count": 125, "rank": 14, "candidate_pool":
+    6801}, {"taxon_id": "NCBITaxon:287", "source": "BACDIVE", "taxon_label": "Pseudomonas
+    aeruginosa", "association_count": 120, "rank": 15, "candidate_pool": 6801}, {"taxon_id":
+    "NCBITaxon:28188", "source": "BACDIVE", "taxon_label": "Capnocytophaga canimorsus",
+    "association_count": 119, "rank": 16, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:34",
+    "source": "BACDIVE", "taxon_label": "Myxococcus xanthus", "association_count":
+    111, "rank": 17, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:57", "source":
+    "BACDIVE", "association_count": 111, "rank": 18, "candidate_pool": 6801}, {"taxon_id":
+    "NCBITaxon:1656", "source": "BACDIVE", "taxon_label": "Actinomyces viscosus",
+    "association_count": 110, "rank": 19, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:727",
+    "source": "BACDIVE", "taxon_label": "Haemophilus influenzae", "association_count":
+    110, "rank": 20, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:1352", "source":
+    "BACDIVE", "taxon_label": "Enterococcus faecium", "association_count": 108, "rank":
+    21, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:47715", "source": "BACDIVE",
+    "taxon_label": "Lacticaseibacillus rhamnosus", "association_count": 105, "rank":
+    22, "candidate_pool": 6801}, {"taxon_id": "NCBITaxon:2702", "source": "BACDIVE",
+    "taxon_label": "Gardnerella vaginalis", "association_count": 95, "rank": 23, "candidate_pool":
+    6801}, {"taxon_id": "NCBITaxon:28901", "source": "BACDIVE", "taxon_label": "Salmonella
+    enterica", "association_count": 95, "rank": 24, "candidate_pool": 6801}, {"taxon_id":
+    "NCBITaxon:83428", "source": "BACDIVE", "taxon_label": "uncultured Bacillus sp.",
+    "association_count": 94, "rank": 25, "candidate_pool": 6801}], "curation_history":
+    [{"timestamp": "2026-08-16T00:00:00Z", "curator": "claude-opus-5", "action": "GROUND",
+    "changes": "Grounded to ENVO:01001000 ''environmental system determined by an
+    organism'' (EXACT). Term-request re-check (#12): this was recorded as an ENVO
+    term request on the premise that \"ENVO has only plant-associated and animal-associated
+    environment with no shared parent\". That premise is false. ENVO:01001000 ''environmental
+    system determined by an organism'' is that shared parent \u2014 the vendored subclass
+    edges show plant-associated (ENVO:01001001), animal-associated (ENVO:01001002)
+    and fungi-associated (ENVO:01001041) environment all asserted under it \u2014
+    and it has been in the slice the whole time. Its definition, ''an environmental
+    system which is determined by a living organism'', is exactly what this top-level
+    bin means: an isolate whose habitat is a living host. Grounded EXACT. The claim
+    was made by hand and never machine-rechecked, which is the same staleness the
+    class-level sweeps have a gate for and individually-decided records did not. (source
+    concept habitatmech:BACDIVE.baf38460e6)"}, {"timestamp": "2026-08-16T00:00:00Z",
+    "curator": "claude-opus-5", "action": "GROUND", "changes": "Grounded to ENVO:01001000
+    ''environmental system determined by an organism'' (EXACT). Term-request re-check
+    (#12): this was recorded as an ENVO term request on the premise that \"ENVO has
+    only plant-associated and animal-associated environment with no shared parent\".
+    That premise is false. ENVO:01001000 ''environmental system determined by an organism''
+    is that shared parent \u2014 the vendored subclass edges show plant-associated
+    (ENVO:01001001), animal-associated (ENVO:01001002) and fungi-associated (ENVO:01001041)
+    environment all asserted under it \u2014 and it has been in the slice the whole
+    time. Its definition, ''an environmental system which is determined by a living
+    organism'', is exactly what this top-level bin means: an isolate whose habitat
+    is a living host. Grounded EXACT. The claim was made by hand and never machine-rechecked,
+    which is the same staleness the class-level sweeps have a gate for and individually-decided
+    records did not. (source concept habitatmech:GOLD.d3b891e82e)"}, {"timestamp":
+    "2026-08-16T05:58:02Z", "curator": "seed_from_sources", "action": "SEEDED_FROM_SOURCES",
+    "changes": "Seeded from data/raw/ inventories; attested by BACDIVE, GOLD. Grounding:
+    EXACT."}, {"timestamp": "2026-10-10T00:00:00Z", "curator": "seed_from_sources",
+    "action": "SOURCE_ATTESTATION_CORRECTED", "changes": "Corrected bacdive.isolation_source:host
+    provenance wording to distinguish the declined automatic mapping from the final
+    curator override (#1889)."}]}'
+  snapshot_sha256: d3b79ef9436a87fbce8e6b204b0113e170fa758e4a66efb592543bf934c67270
+- evidence_id: EP15
+  kind: record_content
+  reference: data/habitats/other/animal_associated_environment.yaml
+  locator: Immediate parent record, context only
+  accessed_at: '2026-10-16T03:54:36Z'
+  support: supports
+  summary: '{"identifier": "ENVO:01001002", "label": "animal-associated environment",
+    "definition": "An environmental system determined by an animal.", "definition_source":
+    "ENVO", "habitat_category": "OTHER", "grounding_status": "EXACT", "mapping_status":
+    "SEEDED", "synonyms": [{"synonym_text": "Metazoan-associated environment", "synonym_type":
+    "EXACT_SYNONYM", "source": "ENVO"}, {"synonym_text": "animal environment", "synonym_type":
+    "EXACT_SYNONYM", "source": "ENVO"}], "parent_habitats": ["ENVO:01001000"], "source_attestations":
+    [{"source": "ENVIRONMENTS_TABLE", "source_id": "host_animal", "source_label":
+    "host_animal", "notes": "Physicochemical parameter bands from kg-microbe''s environment
+    table."}, {"source": "MADIN", "source_id": "ENVO:01001002", "source_label": "animal-associated
+    environment", "assertion_count": 144, "assertion_unit": "TAXON"}], "environmental_parameters":
+    [{"parameter": "PRESSURE", "qualitative_value": "low", "source": "kg-microbe environments.csv
+    (host_animal)"}, {"parameter": "TEMPERATURE_VARIABILITY", "qualitative_value":
+    "low", "source": "kg-microbe environments.csv (host_animal)"}], "characteristic_taxa":
+    [{"taxon_id": "NCBITaxon:1001", "source": "MADIN", "taxon_label": "flexibacter_polymorphus",
+    "candidate_pool": 144}, {"taxon_id": "NCBITaxon:1001732", "source": "MADIN", "taxon_label":
+    "Mycobacterium abscessus 5S-0921", "candidate_pool": 144}, {"taxon_id": "NCBITaxon:1004165",
+    "source": "MADIN", "taxon_label": "Photorhabdus luminescens caribbeanensis HG29",
+    "candidate_pool": 144}, {"taxon_id": "NCBITaxon:1004166", "source": "MADIN", "taxon_label":
+    "Photorhabdus luminescens hainanensis C8404", "candidate_pool": 144}, {"taxon_id":
+    "NCBITaxon:102862", "source": "MADIN", "taxon_label": "proteus_penneri", "candidate_pool":
+    144}, {"taxon_id": "NCBITaxon:1028805", "source": "MADIN", "taxon_label": "Haemophilus
+    haemolyticus M21621", "candidate_pool": 144}, {"taxon_id": "NCBITaxon:1049564",
+    "source": "MADIN", "taxon_label": "endosymbiont of Tevnia jerichonana (vent Tica)",
+    "candidate_pool": 144}, {"taxon_id": "NCBITaxon:1084229", "source": "MADIN", "taxon_label":
+    "Yersinia pestis bv. Orientalis BA200901703", "candidate_pool": 144}, {"taxon_id":
+    "NCBITaxon:110933", "source": "MADIN", "taxon_label": "leifsonia_poae", "candidate_pool":
+    144}, {"taxon_id": "NCBITaxon:1123042", "source": "MADIN", "taxon_label": "Photorhabdus
+    temperata stackebrandtii GPS11", "candidate_pool": 144}, {"taxon_id": "NCBITaxon:1123520",
+    "source": "MADIN", "taxon_label": "Neisseria meningitidis DE9686", "candidate_pool":
+    144}, {"taxon_id": "NCBITaxon:1123521", "source": "MADIN", "taxon_label": "Neisseria
+    meningitidis DE9622", "candidate_pool": 144}, {"taxon_id": "NCBITaxon:1123522",
+    "source": "MADIN", "taxon_label": "Neisseria meningitidis DE9938", "candidate_pool":
+    144}, {"taxon_id": "NCBITaxon:1125973", "source": "MADIN", "taxon_label": "Bosea
+    sp. 117", "candidate_pool": 144}, {"taxon_id": "NCBITaxon:1128912", "source":
+    "MADIN", "taxon_label": "Paraglaciecola mesophila KMM 241", "candidate_pool":
+    144}, {"taxon_id": "NCBITaxon:1136416", "source": "MADIN", "taxon_label": "Salinispora
+    pacifica CNT001", "candidate_pool": 144}, {"taxon_id": "NCBITaxon:1137251", "source":
+    "MADIN", "taxon_label": "Salinispora arenicola CNH905", "candidate_pool": 144},
+    {"taxon_id": "NCBITaxon:1137255", "source": "MADIN", "taxon_label": "Salinispora
+    arenicola CNT005", "candidate_pool": 144}, {"taxon_id": "NCBITaxon:1137257", "source":
+    "MADIN", "taxon_label": "Salinispora arenicola CNX508", "candidate_pool": 144},
+    {"taxon_id": "NCBITaxon:1156842", "source": "MADIN", "taxon_label": "Streptomyces
+    sp. LaPpAH-180", "candidate_pool": 144}, {"taxon_id": "NCBITaxon:115862", "source":
+    "MADIN", "taxon_label": "mycobacterium_caprae", "candidate_pool": 144}, {"taxon_id":
+    "NCBITaxon:1159489", "source": "MADIN", "taxon_label": "Cronobacter sakazakii
+    2151", "candidate_pool": 144}, {"taxon_id": "NCBITaxon:1187845", "source": "MADIN",
+    "taxon_label": "Vibrio genomosp. F10 9ZB36", "candidate_pool": 144}, {"taxon_id":
+    "NCBITaxon:1187846", "source": "MADIN", "taxon_label": "Vibrio genomosp. F10 9ZD137",
+    "candidate_pool": 144}, {"taxon_id": "NCBITaxon:1187847", "source": "MADIN", "taxon_label":
+    "Vibrio genomosp. F10 9ZC157", "candidate_pool": 144}], "curation_history": [{"timestamp":
+    "2026-08-16T05:58:02Z", "curator": "seed_from_sources", "action": "SEEDED_FROM_SOURCES",
+    "changes": "Seeded from data/raw/ inventories; attested by ENVIRONMENTS_TABLE,
+    MADIN. Grounding: EXACT."}]}'
+  snapshot_sha256: a1cf41f43f9bece44dfb3e5d6ab0ca86858df67b88ee25d6ada260cccac69e16
+- evidence_id: EP16
+  kind: record_content
+  reference: data/habitats/host_associated/invertebrates.yaml
+  locator: Immediate parent record, context only
+  accessed_at: '2026-10-16T03:54:36Z'
+  support: supports
+  summary: '{"identifier": "habitatmech:GOLD.4d792ac724", "label": "invertebrate-associated
+    environment", "definition": "An environmental system determined by an invertebrate.",
+    "definition_source": "HabitatMech", "habitat_category": "HOST_ASSOCIATED", "grounding_status":
+    "UNGROUNDED", "mapping_status": "REVIEWED", "synonyms": [{"synonym_text": "Invertebrates",
+    "synonym_type": "EXACT_SYNONYM", "source": "HabitatMech curation"}], "parent_habitats":
+    ["ENVO:01001000", "ENVO:01001002"], "source_attestations": [{"source": "GOLD",
+    "source_id": "gold.ecosystem:3374", "source_label": "Invertebrates", "source_path":
+    "Host-associated > Invertebrates", "assertion_count": 621, "assertion_unit": "ORGANISM",
+    "notes": "4 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv."}],
+    "curation_history": [{"timestamp": "2026-08-12T00:00:00Z", "curator": "claude-opus-5",
+    "action": "CONFIRM_UNGROUNDED", "changes": "Confirmed UNGROUNDED: no ontology
+    term fits this concept. Nearest broader term ENVO:01001002 ''animal-associated
+    environment'' attached as a parent. Invertebrates as host. Parented to animal-associated
+    environment; not grounded there because every host clade would merge onto one
+    record. ENVO term request. (source concept habitatmech:GOLD.4d792ac724)"}, {"timestamp":
+    "2026-08-16T00:00:00Z", "curator": "claude-opus-5", "action": "DEFINED", "changes":
+    "Defined as ''invertebrate-associated environment'' under ENVO:01001002 ''animal-associated
+    environment''. The habitat is the host clade, and it is the entire content of
+    the concept: GOLD and BacDive both organise host-associated isolates by host,
+    and every downstream anatomical path hangs off it. HabitatMech deliberately does
+    not ground these to animal-associated environment, because every clade would then
+    merge onto one record and the distinction the sources are making would be lost.
+    ENVO already has this shape at plant-, animal- and fungi-associated environment;
+    this asks for the same pattern one level down. Invertebrate is a grade rather
+    than a clade, but it is the grouping both sources use and the request records
+    that rather than inventing a taxonomy they do not have."}, {"timestamp": "2026-08-16T05:58:02Z",
+    "curator": "seed_from_sources", "action": "SEEDED_FROM_SOURCES", "changes": "Seeded
+    from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED."}]}'
+  snapshot_sha256: c59c31e2f2e591167a1008f0fc67b6d8a4c7ca3cda46a22d79af28e6cf6358f8
+- evidence_id: EX17
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_01000254/graph
+  locator: ENVO_01000254-graph.json
+  accessed_at: '2026-10-16T03:37:02Z'
+  support: context_only
+  summary: 'Current typed outgoing ontology edges: [{"source": "http://purl.obolibrary.org/obo/ENVO_01000254",
+    "target": "http://purl.obolibrary.org/obo/RO_0002577", "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+    "label": "subClassOf"}]'
+  snapshot_sha256: 743ecf3c761bfce55781906b57a31602e2f4366b29232406d53b40aaf75fcb78
+- evidence_id: EX18
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_01000254
+  locator: ENVO_01000254.json
+  accessed_at: '2026-10-16T03:37:01Z'
+  support: context_only
+  summary: 'Current identity, active status, definition and typed synonyms: {"obo_id":
+    "ENVO:01000254", "label": "environmental system", "is_obsolete": false, "description":
+    ["In ENVO''s alignment with the Basic Formal Ontology, this class is being considered
+    as a subclass of a proposed BFO class \"system\". The relation \"environed_by\"
+    is also under development. Roughly, a system which includes a material entity
+    (at least partially) within its site and causally influences that entity may be
+    considered to environ it. Following the completion of this alignment, this class''
+    definition and the definitions of its subclasses will be revised.", "A system
+    which has the disposition to environ one or more material entities."], "obo_synonym":
+    null, "annotation": {"creation_date": ["2013-09-23T16:04:08Z"], "database_cross_reference":
+    ["EcoLexicon:environment"]}}'
+  snapshot_sha256: 6400120603ffe93953d6ea567a86900fc6692a8538ed015eb299135e2a98dd8b
+- evidence_id: EX19
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_01001000/graph
+  locator: ENVO_01001000-graph.json
+  accessed_at: '2026-10-16T03:37:03Z'
+  support: context_only
+  summary: 'Current typed outgoing ontology edges: [{"source": "http://purl.obolibrary.org/obo/ENVO_01001000",
+    "target": "http://purl.obolibrary.org/obo/ENVO_01000254", "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+    "label": "subClassOf"}, {"source": "http://purl.obolibrary.org/obo/ENVO_01001000",
+    "target": "http://purl.obolibrary.org/obo/NCBITaxon_131567", "uri": "http://purl.obolibrary.org/obo/BFO_0000050",
+    "label": "part of"}]'
+  snapshot_sha256: e11b34dbd0a626083d5d0bbbb364469ef95831fb61cb81da5377d59715b272ca
+- evidence_id: EX20
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_01001000
+  locator: ENVO_01001000.json
+  accessed_at: '2026-10-16T03:37:02Z'
+  support: context_only
+  summary: 'Current identity, active status, definition and typed synonyms: {"obo_id":
+    "ENVO:01001000", "label": "environmental system determined by an organism", "is_obsolete":
+    false, "description": ["An environmental system which is determined by a living
+    organism."], "obo_synonym": null, "annotation": {}}'
+  snapshot_sha256: 8bd797929d18bf28171af7fd10f358db9b093f752d20b99f665779bb2e6b504e
+- evidence_id: EX21
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_01001002/graph
+  locator: ENVO_01001002-graph.json
+  accessed_at: '2026-10-16T03:37:06Z'
+  support: context_only
+  summary: 'Current typed outgoing ontology edges: [{"source": "http://purl.obolibrary.org/obo/ENVO_01001002",
+    "target": "http://purl.obolibrary.org/obo/ENVO_01001000", "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+    "label": "subClassOf"}, {"source": "http://purl.obolibrary.org/obo/ENVO_01001002",
+    "target": "http://purl.obolibrary.org/obo/NCBITaxon_33208", "uri": "http://purl.obolibrary.org/obo/BFO_0000050",
+    "label": "part of"}]'
+  snapshot_sha256: 882375d994d0dea7166097328c56e0e22362848e68aba0125d1b128a24ebf1b0
+- evidence_id: EX22
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_01001002
+  locator: ENVO_01001002.json
+  accessed_at: '2026-10-16T03:37:05Z'
+  support: context_only
+  summary: 'Current identity, active status, definition and typed synonyms: {"obo_id":
+    "ENVO:01001002", "label": "animal-associated environment", "is_obsolete": false,
+    "description": ["An environmental system determined by an animal."], "obo_synonym":
+    null, "annotation": {"alternative label": ["Animal"]}}'
+  snapshot_sha256: c3c90d5e91cc85727658222c907f7747f34861ad80bf1ceac5ce209f7e170907
+- evidence_id: EX23
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_01001179/graph
+  locator: ENVO_01001179-graph.json
+  accessed_at: '2026-10-16T03:37:07Z'
+  support: context_only
+  summary: 'Current typed outgoing ontology edges: [{"source": "http://purl.obolibrary.org/obo/ENVO_01001179",
+    "target": "http://purl.obolibrary.org/obo/ENVO_01001002", "uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+    "label": "subClassOf"}]'
+  snapshot_sha256: 7d620bad5f1672b07b4d54f47cadfba16d097d63a69aefb177ad5b21cc746f6a
+- evidence_id: EX24
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_01001179
+  locator: ENVO_01001179.json
+  accessed_at: '2026-10-16T03:37:07Z'
+  support: context_only
+  summary: 'Current identity, active status, definition and typed synonyms: {"obo_id":
+    "ENVO:01001179", "label": "cnidarian-associated environment", "is_obsolete": false,
+    "description": ["An environmental system determined by a cnidarian or part of
+    a cnidarian."], "obo_synonym": null, "annotation": {}}'
+  snapshot_sha256: 967b0dc5b61ac3206f724734a4c631bbc02b5d025c7f4093f374cae3b7b07e12
+- evidence_id: EX25
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4911487/fullTextXML
+  locator: PMC4911487.xml
+  accessed_at: '2026-10-16T03:46:30Z'
+  support: context_only
+  summary: 'PMID:27313308; DOI:10.1128/genomeA.00570-16. Genome announcement and origin
+    paragraphs inspected: exact S304 is from hydrothermal sediment and obtained from
+    DSMZ. Its neighboring DU53 oil-reservoir origin is not assigned to S304.'
+  snapshot_sha256: cef04bfedfa7efb81f937305662dfe2cde75bab6cb47d26ffdc2a1df28195cfd
+- evidence_id: EX26
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=TITLE%3A%22Nocardiopsis%20coralliicola%22%20OR%20TITLE%3A%22Janibacter%20alkaliphilus%22%20OR%20TITLE%3A%22Vibrio%20astriarenae%22&format=json&resultType=core&pageSize=20
+  locator: paper-cnidarian-sand.json
+  accessed_at: '2026-10-16T03:45:16Z'
+  support: context_only
+  summary: Primary abstracts PMID:22456792 and PMID:21890725 give gorgonian coral
+    origins for J. alkaliphilus and N. coralliicola; PMID:26313925 (DOI:10.1371/journal.pone.0136279)
+    instead describes V. astriarenae C7/C20 from coral-reef seawater. HN897 is a different
+    strain and is not substituted for the frozen source pair.
+  snapshot_sha256: 97e2dc097fec1fb59d2f8455269c6983b71f146857031251e751cbb586449dd0
+- evidence_id: EX27
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=TITLE%3A%22Kosmotoga%20arenicorallina%22&format=json&resultType=core&pageSize=20
+  locator: paper-kosmotoga.json
+  accessed_at: '2026-10-16T03:45:15Z'
+  support: context_only
+  summary: Primary abstract PMID:20694719; DOI:10.1007/s00203-010-0611-7 identifies
+    S304 with DSM22549/JCM15790 and a shallow submarine hydrothermal field within
+    a coral reef. Reef setting alone does not establish association with a living
+    cnidarian.
+  snapshot_sha256: 7dfb45aa697a2e3c2406089ee0cf0e125e4d7c4d9fa951526620f167a579692d
+- evidence_id: EX28
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=TITLE%3A%22Microbacterium%20aureliae%22&format=json&resultType=core&pageSize=20
+  locator: paper-microbacterium.json
+  accessed_at: '2026-10-16T03:45:16Z'
+  support: context_only
+  summary: Primary abstract PMID:27506590; DOI:10.1099/ijsem.0.001407 identifies M.
+    aureliae JF-6 from Aurelia aurita. This is positive cnidarian-host context, not
+    evidence that the entire BacDive bin consists only of corals.
+  snapshot_sha256: 079c840a955406853fba40c0a65a0cd264db13cdd88ed1f1b377154aa9a720c3
+- evidence_id: EX29
+  kind: database
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=102234,1027273,1048357,1069963,1074311,1110509,1117,1120968,1120983,1121027,1150864,1173995,119852,1216969,1224163,1234143,1234144,1245026,1263,1280004,1292046,1297579,1342794,1342818,1348114,1385512,1401264,141693,1449351,1452538,1453497,1479025,1481923,1485,1578,1590,171549,171550,171552,186802,186803,189330,248039,31979,33038,33042,375288,384676,411459,411460,444103,51514,541000,560080,572511,816,830,838,85831,872&retmode=xml
+  locator: taxonomy.xml
+  accessed_at: '2026-10-16T03:37:40Z'
+  support: context_only
+  summary: 'Current exact TaxId resolutions, including merged IDs and labels: [{"id":
+    "NCBITaxon:1449351", "source": "BACDIVE", "label": "Roseivivax isoporae LMG 25204",
+    "current_id": "1449351", "current_name": "Roseivivax isoporae LMG 25204", "rank":
+    "strain", "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:560080",
+    "source": "BACDIVE", "label": "Shewanella corallii", "current_id": "560080", "current_name":
+    "Shewanella corallii", "rank": "species", "direct_match": true, "recognized_alias":
+    true}, {"id": "NCBITaxon:1027273", "source": "BACDIVE", "label": "Endozoicomonas
+    montiporae", "current_id": "1027273", "current_name": "Endozoicomonas montiporae",
+    "rank": "species", "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:1048357",
+    "source": "BACDIVE", "label": "Nocardiopsis coralliicola", "current_id": "1048357",
+    "current_name": "Nocardiopsis coralliicola", "rank": "species", "direct_match":
+    true, "recognized_alias": true}, {"id": "NCBITaxon:1069963", "source": "BACDIVE",
+    "label": "Janibacter alkaliphilus", "current_id": "1069963", "current_name": "Janibacter
+    alkaliphilus", "rank": "species", "direct_match": true, "recognized_alias": true},
+    {"id": "NCBITaxon:1074311", "source": "BACDIVE", "label": "Vibrio alfacsensis",
+    "current_id": "1074311", "current_name": "Vibrio alfacsensis", "rank": "species",
+    "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:1120968", "source":
+    "BACDIVE", "label": "Algoriphagus vanfongensis DSM 17529", "current_id": "1120968",
+    "current_name": "Algoriphagus vanfongensis DSM 17529", "rank": "strain", "direct_match":
+    true, "recognized_alias": true}, {"id": "NCBITaxon:1120983", "source": "BACDIVE",
+    "label": "Amorphus coralli DSM 19760", "current_id": "1120983", "current_name":
+    "Amorphus coralli DSM 19760", "rank": "strain", "direct_match": true, "recognized_alias":
+    true}, {"id": "NCBITaxon:1121027", "source": "BACDIVE", "label": "Aurantimonas
+    coralicida DSM 14790", "current_id": "1121027", "current_name": "Aurantimonas
+    coralicida DSM 14790", "rank": "strain", "direct_match": true, "recognized_alias":
+    true}, {"id": "NCBITaxon:1173995", "source": "BACDIVE", "label": "Parvularcula
+    dongshanensis", "current_id": "1173995", "current_name": "Parvularcula dongshanensis",
+    "rank": "species", "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:1216969",
+    "source": "BACDIVE", "label": "Janibacter corallicola NBRC 107790", "current_id":
+    "1216969", "current_name": "Janibacter corallicola NBRC 107790", "rank": "strain",
+    "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:1224163", "source":
+    "BACDIVE", "label": "Corynebacterium maris DSM 45190", "current_id": "1224163",
+    "current_name": "Corynebacterium maris DSM 45190", "rank": "strain", "direct_match":
+    true, "recognized_alias": true}, {"id": "NCBITaxon:1234143", "source": "BACDIVE",
+    "label": "Endozoicomonas euniceicola", "current_id": "1234143", "current_name":
+    "Endozoicomonas euniceicola", "rank": "species", "direct_match": true, "recognized_alias":
+    true}, {"id": "NCBITaxon:1234144", "source": "BACDIVE", "label": "Endozoicomonas
+    gorgoniicola", "current_id": "1234144", "current_name": "Endozoicomonas gorgoniicola",
+    "rank": "species", "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:1280004",
+    "source": "BACDIVE", "label": "Vibrio owensii LMG 25430", "current_id": "1280004",
+    "current_name": "Vibrio owensii LMG 25430", "rank": "strain", "direct_match":
+    true, "recognized_alias": true}, {"id": "NCBITaxon:1342794", "source": "BACDIVE",
+    "label": "Photobacterium sanctipauli", "current_id": "1342794", "current_name":
+    "Photobacterium sanctipauli", "rank": "species", "direct_match": true, "recognized_alias":
+    true}, {"id": "NCBITaxon:1342818", "source": "BACDIVE", "label": "Vibrio madracius",
+    "current_id": "1342818", "current_name": "Vibrio madracius", "rank": "species",
+    "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:1348114", "source":
+    "BACDIVE", "label": "Pseudoalteromonas piratica", "current_id": "1348114", "current_name":
+    "Pseudoalteromonas piratica", "rank": "species", "direct_match": true, "recognized_alias":
+    true}, {"id": "NCBITaxon:1385512", "source": "BACDIVE", "label": "Pontibacillus
+    litoralis JSM 072002", "current_id": "1385512", "current_name": "Pontibacillus
+    litoralis JSM 072002", "rank": "strain", "direct_match": true, "recognized_alias":
+    true}, {"id": "NCBITaxon:1401264", "source": "BACDIVE", "label": "Prauserella
+    coralliicola", "current_id": "1401264", "current_name": "Prauserella coralliicola",
+    "rank": "species", "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:141693",
+    "source": "BACDIVE", "label": "Nocardiopsis kunsanensis", "current_id": "141693",
+    "current_name": "Nocardiopsis kunsanensis", "rank": "species", "direct_match":
+    true, "recognized_alias": true}, {"id": "NCBITaxon:1452538", "source": "BACDIVE",
+    "label": "Microbacterium aureliae", "current_id": "1452538", "current_name": "Microbacterium
+    aureliae", "rank": "species", "direct_match": true, "recognized_alias": true},
+    {"id": "NCBITaxon:1453497", "source": "BACDIVE", "label": "Kosmotoga arenicorallina
+    S304", "current_id": "1453497", "current_name": "Kosmotoga arenicorallina S304",
+    "rank": "strain", "direct_match": true, "recognized_alias": true}, {"id": "NCBITaxon:1479025",
+    "source": "BACDIVE", "label": "Myceligenerans cantabricum", "current_id": "1479025",
+    "current_name": "Myceligenerans cantabricum", "rank": "species", "direct_match":
+    true, "recognized_alias": true}, {"id": "NCBITaxon:1481923", "source": "BACDIVE",
+    "label": "Vibrio astriarenae", "current_id": "1481923", "current_name": "Vibrio
+    astriarenae", "rank": "species", "direct_match": true, "recognized_alias": true}]'
+  snapshot_sha256: 8cc30a816c5940897a93cd10094f921f070f1378c3dab63db865fd736db4f15b
+- evidence_id: ESEARCH
+  kind: search
+  reference: Local source/curation/review corpus
+  locator: rg --no-ignore --hidden -l -F -e ENVO:01001179 -e 'cnidarian-associated
+    environment' -e cnidarian_associated_environment -e habitatmech:BACDIVE.ef2153283d
+    -e habitatmech:GOLD.00086e0958 -e habitatmech:GOLD.e3fede2aea curation history
+    research reports data/raw build reviews
+  accessed_at: '2026-10-16T03:36:40Z'
+  support: context_only
+  summary: Source rows were parsed by exact keys; broad name hits were leads, not
+    all inspected. No formal structured target predecessor.
+  search_scope: curation, history, research, reports, data/raw, build and reviews
+    including hidden/ignored files; structured YAML archive parsed independently of
+    gitignore.
+- evidence_id: EAVAIL
+  kind: search
+  reference: Configured kg-microbe checkout
+  locator: find /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/kg-microbe
+    -type f '(' -ipath '*prego*' -o -ipath '*bacdive*' ')'
+  accessed_at: '2026-10-16T03:46:37Z'
+  support: context_only
+  summary: Search found BacDive notebooks and Git metadata, but no manifest-matching
+    BacDive/PREGO transformed node/edge exports. No claim of global absence.
+  search_scope: find across the configured checkout, including hidden and ignored
+    files.
+assessments:
+- assessment_id: A1
+  area: identity
+  topic: Identity, grounding, aliases and strictly broader hierarchy
+  outcome: supported
+  summary: 'The two GOLD Cnidaria bins plausibly denote cnidarian-associated environments,
+    with valid animal/organism-determined and invertebrate-environment genera. The
+    latter parent is an associated environment, not a whole animal. The BacDive Cnidaria-Corals
+    bin needs finer scope assessment: inspected primary papers include genuine coral
+    and jellyfish isolates, but also exact S304 from hydrothermal coral-reef sediment
+    and V. astriarenae from reef seawater. Those environmental settings do not alone
+    establish determination by a living cnidarian. Preserve the native 75 STRAIN,
+    95 and 102 ORGANISM counts separately and the top 25 of 73 taxa; do not remove
+    associations or globally narrow the bin from a few witnesses.'
+  target_ids:
+  - ENVO:01001179
+  evidence_ids:
+  - E1
+  - ERULE
+  - ESCHEMA
+  - ESEED
+  - EEXTRACT
+  - ET5
+  - ET6
+  - ET7
+  - ET8
+  - ET9
+  - ET10
+  - ET11
+  - ET12
+  - ET13
+  - EP14
+  - EP15
+  - EP16
+  - EX17
+  - EX18
+  - EX19
+  - EX20
+  - EX21
+  - EX22
+  - EX23
+  - EX24
+  - EX25
+  - EX26
+  - EX27
+  - EX28
+  - EX29
+- assessment_id: A2
+  area: quantity
+  topic: Native source units, ranks, scores and candidate pools
+  outcome: supported
+  summary: 'Exact source rows reproduce every emitted count/unit and displayed taxon
+    rank/score/pool. Zero tree counts are omitted; supplemental biosamples, study
+    memberships and triads are nonadditive. {"assertions": [{"source": "BACDIVE",
+    "count": 75, "unit": "STRAIN", "row": {"row": 79, "data": {"bacdive_id": "bacdive.isolation_source:cnidaria-corals",
+    "label": "Cnidaria-Corals", "source_slug": "cnidaria-corals", "strain_count":
+    "75", "taxon_count": "73"}}}, {"source": "GOLD", "count": 95, "unit": "ORGANISM",
+    "row": {"row": 207, "data": {"canonical_path": "Host-associated > Cnidaria", "ecosystem":
+    "Host-associated", "ecosystem_category": "Cnidaria", "ecosystem_type": "", "ecosystem_subtype":
+    "", "specific_ecosystem": "", "leaf_label": "Cnidaria", "depth": "2", "gold_node_count":
+    "4", "organism_count": "95", "study_count": "0", "biosample_count": "0", "total_assertions":
+    "95", "gold_node_ids": "gold.ecosystem:3383|gold.ecosystem:3602|gold.ecosystem:3718|gold.ecosystem:5281"}}},
+    {"source": "GOLD", "count": 102, "unit": "ORGANISM", "row": {"row": 195, "data":
+    {"canonical_path": "Host-associated > Invertebrates > Cnidaria", "ecosystem":
+    "Host-associated", "ecosystem_category": "Invertebrates", "ecosystem_type": "Cnidaria",
+    "ecosystem_subtype": "", "specific_ecosystem": "", "leaf_label": "Cnidaria", "depth":
+    "3", "gold_node_count": "3", "organism_count": "102", "study_count": "0", "biosample_count":
+    "0", "total_assertions": "102", "gold_node_ids": "gold.ecosystem:3564|gold.ecosystem:4800|gold.ecosystem:4801"}}}],
+    "taxa": [{"id": "NCBITaxon:1449351", "source": "BACDIVE", "label": "Roseivivax
+    isoporae LMG 25204", "current_id": "1449351", "current_name": "Roseivivax isoporae
+    LMG 25204", "rank": "strain", "direct_match": true, "recognized_alias": true,
+    "other_names": ["Roseivivax isoporae sw-2", "Roseivivax sp. sw-2"], "source_row":
+    {"row": 517, "data": {"bacdive_id": "bacdive.isolation_source:cnidaria-corals",
+    "rank": "1", "taxon_id": "NCBITaxon:1449351", "taxon_label": "Roseivivax isoporae
+    LMG 25204", "strain_count": "2", "corroborated_by": ""}}}, {"id": "NCBITaxon:560080",
+    "source": "BACDIVE", "label": "Shewanella corallii", "current_id": "560080", "current_name":
+    "Shewanella corallii", "rank": "species", "direct_match": true, "recognized_alias":
+    true, "other_names": ["Alteromonadales bacterium fav-2-10-05", "\n            ",
+    "\n            ", "\n            ", "\n            ", "\n            ", "\n            ",
+    "\n            ", "\n            "], "source_row": {"row": 518, "data": {"bacdive_id":
+    "bacdive.isolation_source:cnidaria-corals", "rank": "2", "taxon_id": "NCBITaxon:560080",
+    "taxon_label": "Shewanella corallii", "strain_count": "2", "corroborated_by":
+    ""}}}, {"id": "NCBITaxon:1027273", "source": "BACDIVE", "label": "Endozoicomonas
+    montiporae", "current_id": "1027273", "current_name": "Endozoicomonas montiporae",
+    "rank": "species", "direct_match": true, "recognized_alias": true, "other_names":
+    ["\n            ", "\n            ", "\n            ", "\n            ", "\n            ",
+    "\n            ", "\n            ", "\n            "], "source_row": {"row": 519,
+    "data": {"bacdive_id": "bacdive.isolation_source:cnidaria-corals", "rank": "3",
+    "taxon_id": "NCBITaxon:1027273", "taxon_label": "Endozoicomonas montiporae", "strain_count":
+    "1", "corroborated_by": ""}}}, {"id": "NCBITaxon:1048357", "source": "BACDIVE",
+    "label": "Nocardiopsis coralliicola", "current_id": "1048357", "current_name":
+    "Nocardiopsis coralliicola", "rank": "species", "direct_match": true, "recognized_alias":
+    true, "other_names": ["Nocardiopsis sp. SCSIO 10427", "\n            ", "\n            ",
+    "\n            ", "\n            ", "\n            ", "\n            ", "\n            ",
+    "\n            ", "\n            ", "\n            ", "\n            ", "\n            ",
+    "\n            ", "\n            "], "source_row": {"row": 520, "data": {"bacdive_id":
+    "bacdive.isolation_source:cnidaria-corals", "rank": "4", "taxon_id": "NCBITaxon:1048357",
+    "taxon_label": "Nocardiopsis coralliicola", "strain_count": "1", "corroborated_by":
+    ""}}}, {"id": "NCBITaxon:1069963", "source": "BACDIVE", "label": "Janibacter alkaliphilus",
+    "current_id": "1069963", "current_name": "Janibacter alkaliphilus", "rank": "species",
+    "direct_match": true, "recognized_alias": true, "other_names": ["Janibacter sp.
+    SCSIO 10480", "\n            ", "\n            ", "\n            ", "\n            ",
+    "\n            ", "\n            ", "\n            ", "\n            ", "\n            "],
+    "source_row": {"row": 521, "data": {"bacdive_id": "bacdive.isolation_source:cnidaria-corals",
+    "rank": "5", "taxon_id": "NCBITaxon:1069963", "taxon_label": "Janibacter alkaliphilus",
+    "strain_count": "1", "corroborated_by": ""}}}, {"id": "NCBITaxon:1074311", "source":
+    "BACDIVE", "label": "Vibrio alfacsensis", "current_id": "1074311", "current_name":
+    "Vibrio alfacsensis", "rank": "species", "direct_match": true, "recognized_alias":
+    true, "other_names": ["Vibrio sp. CAIM 1294", "Vibrio sp. CAIM 1831", "Vibrio
+    sp. CAIM 1832", "Vibrio sp. CAIM 1833", "Vibrio sp. CAIM 1834", "Vibrio sp. CAIM
+    1835", "Vibrio sp. CAIM 1836", "Vibrio sp. CAIM 404", "\n            ", "\n            ",
+    "\n            ", "\n            ", "\n            ", "\n            ", "\n            ",
+    "\n            "], "source_row": {"row": 522, "data": {"bacdive_id": "bacdive.isolation_source:cnidaria-corals",
+    "rank": "6", "taxon_id": "NCBITaxon:1074311", "taxon_label": "Vibrio alfacsensis",
+    "strain_count": "1", "corroborated_by": ""}}}, {"id": "NCBITaxon:1120968", "source":
+    "BACDIVE", "label": "Algoriphagus vanfongensis DSM 17529", "current_id": "1120968",
+    "current_name": "Algoriphagus vanfongensis DSM 17529", "rank": "strain", "direct_match":
+    true, "recognized_alias": true, "other_names": [], "source_row": {"row": 523,
+    "data": {"bacdive_id": "bacdive.isolation_source:cnidaria-corals", "rank": "7",
+    "taxon_id": "NCBITaxon:1120968", "taxon_label": "Algoriphagus vanfongensis DSM
+    17529", "strain_count": "1", "corroborated_by": ""}}}, {"id": "NCBITaxon:1120983",
+    "source": "BACDIVE", "label": "Amorphus coralli DSM 19760", "current_id": "1120983",
+    "current_name": "Amorphus coralli DSM 19760", "rank": "strain", "direct_match":
+    true, "recognized_alias": true, "other_names": [], "source_row": {"row": 524,
+    "data": {"bacdive_id": "bacdive.isolation_source:cnidaria-corals", "rank": "8",
+    "taxon_id": "NCBITaxon:1120983", "taxon_label": "Amorphus coralli DSM 19760",
+    "strain_count": "1", "corroborated_by": ""}}}, {"id": "NCBITaxon:1121027", "source":
+    "BACDIVE", "label": "Aurantimonas coralicida DSM 14790", "current_id": "1121027",
+    "current_name": "Aurantimonas coralicida DSM 14790", "rank": "strain", "direct_match":
+    true, "recognized_alias": true, "other_names": ["Aurantimonas coralicida NBRC
+    107846", "Aurantimonas coralicida WP1"], "source_row": {"row": 525, "data": {"bacdive_id":
+    "bacdive.isolation_source:cnidaria-corals", "rank": "9", "taxon_id": "NCBITaxon:1121027",
+    "taxon_label": "Aurantimonas coralicida DSM 14790", "strain_count": "1", "corroborated_by":
+    ""}}}, {"id": "NCBITaxon:1173995", "source": "BACDIVE", "label": "Parvularcula
+    dongshanensis", "current_id": "1173995", "current_name": "Parvularcula dongshanensis",
+    "rank": "species", "direct_match": true, "recognized_alias": true, "other_names":
+    ["Parvularcula sp. SH25", "\n            ", "\n            ", "\n            ",
+    "\n            ", "\n            ", "\n            ", "\n            ", "\n            ",
+    "\n            ", "\n            ", "\n            ", "\n            ", "\n            "],
+    "source_row": {"row": 526, "data": {"bacdive_id": "bacdive.isolation_source:cnidaria-corals",
+    "rank": "10", "taxon_id": "NCBITaxon:1173995", "taxon_label": "Parvularcula dongshanensis",
+    "strain_count": "1", "corroborated_by": ""}}}, {"id": "NCBITaxon:1216969", "source":
+    "BACDIVE", "label": "Janibacter corallicola NBRC 107790", "current_id": "1216969",
+    "current_name": "Janibacter corallicola NBRC 107790", "rank": "strain", "direct_match":
+    true, "recognized_alias": true, "other_names": [], "source_row": {"row": 527,
+    "data": {"bacdive_id": "bacdive.isolation_source:cnidaria-corals", "rank": "11",
+    "taxon_id": "NCBITaxon:1216969", "taxon_label": "Janibacter corallicola NBRC 107790",
+    "strain_count": "1", "corroborated_by": ""}}}, {"id": "NCBITaxon:1224163", "source":
+    "BACDIVE", "label": "Corynebacterium maris DSM 45190", "current_id": "1224163",
+    "current_name": "Corynebacterium maris DSM 45190", "rank": "strain", "direct_match":
+    true, "recognized_alias": true, "other_names": ["Corynebacterium maris Coryn-1",
+    "Corynebacterium sp. Coryn-1"], "source_row": {"row": 528, "data": {"bacdive_id":
+    "bacdive.isolation_source:cnidaria-corals", "rank": "12", "taxon_id": "NCBITaxon:1224163",
+    "taxon_label": "Corynebacterium maris DSM 45190", "strain_count": "1", "corroborated_by":
+    ""}}}, {"id": "NCBITaxon:1234143", "source": "BACDIVE", "label": "Endozoicomonas
+    euniceicola", "current_id": "1234143", "current_name": "Endozoicomonas euniceicola",
+    "rank": "species", "direct_match": true, "recognized_alias": true, "other_names":
+    ["Endozoicomonas sp. EF212", "\n            ", "\n            ", "\n            ",
+    "\n            ", "\n            ", "\n            ", "\n            ", "\n            "],
+    "source_row": {"row": 529, "data": {"bacdive_id": "bacdive.isolation_source:cnidaria-corals",
+    "rank": "13", "taxon_id": "NCBITaxon:1234143", "taxon_label": "Endozoicomonas
+    euniceicola", "strain_count": "1", "corroborated_by": ""}}}, {"id": "NCBITaxon:1234144",
+    "source": "BACDIVE", "label": "Endozoicomonas gorgoniicola", "current_id": "1234144",
+    "current_name": "Endozoicomonas gorgoniicola", "rank": "species", "direct_match":
+    true, "recognized_alias": true, "other_names": ["Endozoicomonas sp. PS125", "\n            ",
+    "\n            ", "\n            ", "\n            ", "\n            ", "\n            ",
+    "\n            ", "\n            ", "\n            "], "source_row": {"row": 530,
+    "data": {"bacdive_id": "bacdive.isolation_source:cnidaria-corals", "rank": "14",
+    "taxon_id": "NCBITaxon:1234144", "taxon_label": "Endozoicomonas gorgoniicola",
+    "strain_count": "1", "corroborated_by": ""}}}, {"id": "NCBITaxon:1280004", "source":
+    "BACDIVE", "label": "Vibrio owensii LMG 25430", "current_id": "1280004", "current_name":
+    "Vibrio owensii LMG 25430", "rank": "strain", "direct_match": true, "recognized_alias":
+    true, "other_names": [], "source_row": {"row": 531, "data": {"bacdive_id": "bacdive.isolation_source:cnidaria-corals",
+    "rank": "15", "taxon_id": "NCBITaxon:1280004", "taxon_label": "Vibrio owensii
+    LMG 25430", "strain_count": "1", "corroborated_by": ""}}}, {"id": "NCBITaxon:1342794",
+    "source": "BACDIVE", "label": "Photobacterium sanctipauli", "current_id": "1342794",
+    "current_name": "Photobacterium sanctipauli", "rank": "species", "direct_match":
+    true, "recognized_alias": true, "other_names": ["Photobacterium sp. A-373", "Photobacterium
+    sp. A-379", "Photobacterium sp. A-394", "Photobacterium sp. A-397", "Photobacterium
+    sp. A-398", "\n            ", "\n            ", "\n            ", "\n            ",
+    "\n            ", "\n            ", "\n            ", "\n            ", "\n            ",
+    "\n            ", "\n            "], "source_row": {"row": 532, "data": {"bacdive_id":
+    "bacdive.isolation_source:cnidaria-corals", "rank": "16", "taxon_id": "NCBITaxon:1342794",
+    "taxon_label": "Photobacterium sanctipauli", "strain_count": "1", "corroborated_by":
+    ""}}}, {"id": "NCBITaxon:1342818", "source": "BACDIVE", "label": "Vibrio madracius",
+    "current_id": "1342818", "current_name": "Vibrio madracius", "rank": "species",
+    "direct_match": true, "recognized_alias": true, "other_names": ["Vibrio sp. A-328",
+    "Vibrio sp. A-354", "Vibrio sp. A-384", "\n            ", "\n            ", "\n            ",
+    "\n            ", "\n            ", "\n            ", "\n            ", "\n            ",
+    "\n            ", "\n            "], "source_row": {"row": 533, "data": {"bacdive_id":
+    "bacdive.isolation_source:cnidaria-corals", "rank": "17", "taxon_id": "NCBITaxon:1342818",
+    "taxon_label": "Vibrio madracius", "strain_count": "1", "corroborated_by": ""}}},
+    {"id": "NCBITaxon:1348114", "source": "BACDIVE", "label": "Pseudoalteromonas piratica",
+    "current_id": "1348114", "current_name": "Pseudoalteromonas piratica", "rank":
+    "species", "direct_match": true, "recognized_alias": true, "other_names": ["Pseudoalteromonas
+    sp. OCN003", "\n            ", "\n            ", "\n            ", "\n            ",
+    "\n            ", "\n            ", "\n            ", "\n            "], "source_row":
+    {"row": 534, "data": {"bacdive_id": "bacdive.isolation_source:cnidaria-corals",
+    "rank": "18", "taxon_id": "NCBITaxon:1348114", "taxon_label": "Pseudoalteromonas
+    piratica", "strain_count": "1", "corroborated_by": ""}}}, {"id": "NCBITaxon:1385512",
+    "source": "BACDIVE", "label": "Pontibacillus litoralis JSM 072002", "current_id":
+    "1385512", "current_name": "Pontibacillus litoralis JSM 072002", "rank": "strain",
+    "direct_match": true, "recognized_alias": true, "other_names": ["Pontibacillus
+    sp. JSM 072002"], "source_row": {"row": 535, "data": {"bacdive_id": "bacdive.isolation_source:cnidaria-corals",
+    "rank": "19", "taxon_id": "NCBITaxon:1385512", "taxon_label": "Pontibacillus litoralis
+    JSM 072002", "strain_count": "1", "corroborated_by": ""}}}, {"id": "NCBITaxon:1401264",
+    "source": "BACDIVE", "label": "Prauserella coralliicola", "current_id": "1401264",
+    "current_name": "Prauserella coralliicola", "rank": "species", "direct_match":
+    true, "recognized_alias": true, "other_names": ["Prauserella sp. SCSIO 11529",
+    "\n            ", "\n            ", "\n            ", "\n            ", "\n            ",
+    "\n            ", "\n            ", "\n            "], "source_row": {"row": 536,
+    "data": {"bacdive_id": "bacdive.isolation_source:cnidaria-corals", "rank": "20",
+    "taxon_id": "NCBITaxon:1401264", "taxon_label": "Prauserella coralliicola", "strain_count":
+    "1", "corroborated_by": ""}}}, {"id": "NCBITaxon:141693", "source": "BACDIVE",
+    "label": "Nocardiopsis kunsanensis", "current_id": "141693", "current_name": "Nocardiopsis
+    kunsanensis", "rank": "species", "direct_match": true, "recognized_alias": true,
+    "other_names": ["Nocardiopsis litoralis", "Nocardiopsis sp. JSM 073097", "\n            ",
+    "\n            ", "\n            ", "\n            ", "\n            ", "\n            ",
+    "\n            ", "\n            ", "\n            ", "\n            ", "\n            ",
+    "\n            ", "\n            ", "\n            ", "\n            ", "\n            ",
+    "\n            ", "\n            ", "\n            ", "\n            ", "\n            "],
+    "source_row": {"row": 537, "data": {"bacdive_id": "bacdive.isolation_source:cnidaria-corals",
+    "rank": "21", "taxon_id": "NCBITaxon:141693", "taxon_label": "Nocardiopsis kunsanensis",
+    "strain_count": "1", "corroborated_by": ""}}}, {"id": "NCBITaxon:1452538", "source":
+    "BACDIVE", "label": "Microbacterium aureliae", "current_id": "1452538", "current_name":
+    "Microbacterium aureliae", "rank": "species", "direct_match": true, "recognized_alias":
+    true, "other_names": ["Microbacterium sp. JF-6", "\n            ", "\n            ",
+    "\n            ", "\n            ", "\n            ", "\n            ", "\n            ",
+    "\n            ", "\n            ", "\n            "], "source_row": {"row": 538,
+    "data": {"bacdive_id": "bacdive.isolation_source:cnidaria-corals", "rank": "22",
+    "taxon_id": "NCBITaxon:1452538", "taxon_label": "Microbacterium aureliae", "strain_count":
+    "1", "corroborated_by": ""}}}, {"id": "NCBITaxon:1453497", "source": "BACDIVE",
+    "label": "Kosmotoga arenicorallina S304", "current_id": "1453497", "current_name":
+    "Kosmotoga arenicorallina S304", "rank": "strain", "direct_match": true, "recognized_alias":
+    true, "other_names": ["Kosmotoga arenicorallina DSM 22549", "Kosmotoga arenicorallina
+    JCM 15790", "Kosmotoga sp. S304"], "source_row": {"row": 539, "data": {"bacdive_id":
+    "bacdive.isolation_source:cnidaria-corals", "rank": "23", "taxon_id": "NCBITaxon:1453497",
+    "taxon_label": "Kosmotoga arenicorallina S304", "strain_count": "1", "corroborated_by":
+    ""}}}, {"id": "NCBITaxon:1479025", "source": "BACDIVE", "label": "Myceligenerans
+    cantabricum", "current_id": "1479025", "current_name": "Myceligenerans cantabricum",
+    "rank": "species", "direct_match": true, "recognized_alias": true, "other_names":
+    ["Myceligenerans sp. M-201", "\n            ", "\n            ", "\n            ",
+    "\n            ", "\n            ", "\n            ", "\n            ", "\n            ",
+    "\n            ", "\n            ", "\n            ", "\n            "], "source_row":
+    {"row": 540, "data": {"bacdive_id": "bacdive.isolation_source:cnidaria-corals",
+    "rank": "24", "taxon_id": "NCBITaxon:1479025", "taxon_label": "Myceligenerans
+    cantabricum", "strain_count": "1", "corroborated_by": ""}}}, {"id": "NCBITaxon:1481923",
+    "source": "BACDIVE", "label": "Vibrio astriarenae", "current_id": "1481923", "current_name":
+    "Vibrio astriarenae", "rank": "species", "direct_match": true, "recognized_alias":
+    true, "other_names": ["Vibrio sp. C20", "Vibrio sp. C7", "Vibrio sp. C7(2015)",
+    "Vibrio sp. JCM 19233", "\n            ", "\n            ", "\n            ",
+    "\n            ", "\n            ", "\n            ", "\n            ", "\n            ",
+    "\n            ", "\n            ", "\n            "], "source_row": {"row": 541,
+    "data": {"bacdive_id": "bacdive.isolation_source:cnidaria-corals", "rank": "25",
+    "taxon_id": "NCBITaxon:1481923", "taxon_label": "Vibrio astriarenae", "strain_count":
+    "1", "corroborated_by": ""}}}]}'
+  target_ids:
+  - ENVO:01001179
+  evidence_ids:
+  - E1
+  - ERULE
+  - ESCHEMA
+  - ESEED
+  - EEXTRACT
+  - ET5
+  - ET6
+  - ET7
+  - ET8
+  - ET9
+  - ET10
+  - ET11
+  - ET12
+  - ET13
+  - EP14
+  - EP15
+  - EP16
+  - EX17
+  - EX18
+  - EX19
+  - EX20
+  - EX21
+  - EX22
+  - EX23
+  - EX24
+  - EX25
+  - EX26
+  - EX27
+  - EX28
+  - EX29
+- assessment_id: A3
+  area: evidence
+  topic: Association evidence and claim scope
+  outcome: concern
+  summary: 'Current ontology/TaxId identities and source attestations were verified.
+    The two GOLD Cnidaria bins plausibly denote cnidarian-associated environments,
+    with valid animal/organism-determined and invertebrate-environment genera. The
+    latter parent is an associated environment, not a whole animal. The BacDive Cnidaria-Corals
+    bin needs finer scope assessment: inspected primary papers include genuine coral
+    and jellyfish isolates, but also exact S304 from hydrothermal coral-reef sediment
+    and V. astriarenae from reef seawater. Those environmental settings do not alone
+    establish determination by a living cnidarian. Preserve the native 75 STRAIN,
+    95 and 102 ORGANISM counts separately and the top 25 of 73 taxa; do not remove
+    associations or globally narrow the bin from a few witnesses. Individual papers
+    support only the stated scope; original source pairs were not exhaustively reconstructed.'
+  target_ids:
+  - ENVO:01001179
+  evidence_ids:
+  - E1
+  - ERULE
+  - ESCHEMA
+  - ESEED
+  - EEXTRACT
+  - ET5
+  - ET6
+  - ET7
+  - ET8
+  - ET9
+  - ET10
+  - ET11
+  - ET12
+  - ET13
+  - EP14
+  - EP15
+  - EP16
+  - EX17
+  - EX18
+  - EX19
+  - EX20
+  - EX21
+  - EX22
+  - EX23
+  - EX24
+  - EX25
+  - EX26
+  - EX27
+  - EX28
+  - EX29
+- assessment_id: A4
+  area: completeness
+  topic: Native lifecycle, optional content and mechanism limits
+  outcome: supported
+  summary: Executed native routes reproduce EXACT/REVIEWED. Required content is present.
+    No optional environmental parameters, causal graph, discussion, dataset or characteristic-presence
+    claim is fabricated. Missing ITEM status alone is not a defect; no status or history
+    promotion is performed.
+  target_ids:
+  - ENVO:01001179
+  evidence_ids:
+  - E1
+  - ESCHEMA
+  - ESEED
+- assessment_id: A5
+  area: schema
+  topic: Native validation and reproducibility
+  outcome: supported
+  summary: '31 baseline commands passed: target schema, cohort strict, 831 histories,
+    source provenance, exact 3209-record reproduction, 32 causal overlays, 110 term
+    requests and configured labels. Exact-base hosted QC passed. Deterministic validity
+    is not scientific approval.'
+  target_ids:
+  - ENVO:01001179
+  evidence_ids:
+  - E1
+  - ERULE
+  - ESCHEMA
+findings:
+- finding_id: F1
+  issue_key: cnidarian-associated-environment-bacdive-source-scope
+  category: evidence
+  severity: major
+  status: open
+  certainty: provisional
+  title: Cnidarian host and reef-setting evidence need separation
+  description: 'The two GOLD Cnidaria bins plausibly denote cnidarian-associated environments,
+    with valid animal/organism-determined and invertebrate-environment genera. The
+    latter parent is an associated environment, not a whole animal. The BacDive Cnidaria-Corals
+    bin needs finer scope assessment: inspected primary papers include genuine coral
+    and jellyfish isolates, but also exact S304 from hydrothermal coral-reef sediment
+    and V. astriarenae from reef seawater. Those environmental settings do not alone
+    establish determination by a living cnidarian. Preserve the native 75 STRAIN,
+    95 and 102 ORGANISM counts separately and the top 25 of 73 taxa; do not remove
+    associations or globally narrow the bin from a few witnesses. Recover exact source-strain
+    assignments and isolation metadata before endorsing the entire BacDive bin as
+    EXACT or changing individual associations. Positive coral/jellyfish witnesses
+    must be preserved alongside the sediment/seawater cases.'
+  target_ids:
+  - ENVO:01001179
+  field_paths:
+  - source_attestations
+  - characteristic_taxa
+  evidence_ids:
+  - E1
+  - ERULE
+  - ESCHEMA
+  - ESEED
+  - EEXTRACT
+  - ET5
+  - ET6
+  - ET7
+  - ET8
+  - ET9
+  - ET10
+  - ET11
+  - ET12
+  - ET13
+  - EP14
+  - EP15
+  - EP16
+  - EX17
+  - EX18
+  - EX19
+  - EX20
+  - EX21
+  - EX22
+  - EX23
+  - EX24
+  - EX25
+  - EX26
+  - EX27
+  - EX28
+  - EX29
+  - EAVAIL
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; never hand-edit generated habitat YAML
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Maintained input or generator; never hand-edit generated habitat YAML
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/MANIFEST.yaml
+    role: Maintained input or generator; never hand-edit generated habitat YAML
+  rule_id: docs/CURATION.md and native field-by-field review checklist
+  native_severity: major
+  normalization_reason: Material hierarchy, grounding, representation or pair-evidence
+    mismatch. Source reproduction alone does not establish scientific support.
+  external_issues: []
+actions:
+- action_id: ACT1
+  finding_ids:
+  - F1
+  target_ids:
+  - ENVO:01001179
+  owner_paths:
+  - repository: CultureBotAI/HabitatMech
+    path: curation/decisions.tsv
+    role: Maintained input or generator; never hand-edit generated habitat YAML
+  - repository: CultureBotAI/HabitatMech
+    path: src/habitatmech/extract.py
+    role: Maintained input or generator; never hand-edit generated habitat YAML
+  - repository: CultureBotAI/HabitatMech
+    path: data/raw/MANIFEST.yaml
+    role: Maintained input or generator; never hand-edit generated habitat YAML
+  description: 'The two GOLD Cnidaria bins plausibly denote cnidarian-associated environments,
+    with valid animal/organism-determined and invertebrate-environment genera. The
+    latter parent is an associated environment, not a whole animal. The BacDive Cnidaria-Corals
+    bin needs finer scope assessment: inspected primary papers include genuine coral
+    and jellyfish isolates, but also exact S304 from hydrothermal coral-reef sediment
+    and V. astriarenae from reef seawater. Those environmental settings do not alone
+    establish determination by a living cnidarian. Preserve the native 75 STRAIN,
+    95 and 102 ORGANISM counts separately and the top 25 of 73 taxa; do not remove
+    associations or globally narrow the bin from a few witnesses. Recover exact source-strain
+    assignments and isolation metadata before endorsing the entire BacDive bin as
+    EXACT or changing individual associations. Positive coral/jellyfish witnesses
+    must be preserved alongside the sediment/seawater cases. Proposed work only; no
+    repair or status promotion is performed by this review.'
+  generator: Controlled source/input correction, just seed, inspected just seed-canary,
+    guarded just seed-apply, and dependent term-request/map/site/redirect regeneration
+    where required.
+  acceptance_checks:
+  - Regress the exact target claim and preserve valid genera, identifiers, source
+    counts/units and taxon associations. Recover original evidence before deleting
+    a provisional pair; do not decrement frozen totals by hand.
+  - Record authorized curation history; require schema, strict, provenance, history,
+    label, corpus, site and full QC gates.
+  - Save an immutable successor with the same issue key and exact predecessor finding
+    identity.
+limitations:
+- Original specimen-level evidence and every pair-level citation were not exhaustively
+  reconstructed. Source associations, counts, ranks and scores are not prevalence,
+  viability or characteristic presence.
+- Configured label validation skips 2063 no-adapter pairs; target TaxIds were separately
+  resolved with current NCBI.
+- Exact-base hosted QC covers unchanged scientific inputs, not a new local full-QC
+  execution or these new review files. Each new bundle requires native validation/save
+  and the subsequent archive check.
+- 'iModulonDB is not applicable: no gene, regulator or expression-module claim is
+  asserted. Cited experiments are used only for identity and context, not imported
+  causal mechanisms.'
+- Original source-strain or PREGO pair exports were unavailable in the configured
+  checkout; no uncertain association is removed or source count rewritten.
+notes:
+- Captured working_tree provenance is retained. All local input hashes were additionally
+  checked against exact base 67cde35918d7361de3a1164fb22756cba5d20e30.
+- 'Read-only review: no source, curation, generated record, status or history edit;
+  no GitHub mutation or paid research.'
+- Ignored-inclusive structured archive traversal found no previous structured target
+  review. Legacy prose is contextual evidence, not formal predecessor lineage or issue
+  closure.
+tags:
+- individual-scientific-review
+- host-associated
