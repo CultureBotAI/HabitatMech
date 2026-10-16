@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: conjunctiva_crop_review_parents
+session:
+  id: 2026-10-16T054552Z-codex-gpt-5-b09465
+  timestamp: '2026-10-16T05:45:52Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2229
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude ten reviewed GOLD context-only parents
+  details: Conjunctiva is not an entire visual system; cornea is not an entire eye; cortex
+    is not an entire root; crop is not an entire digestive system, esophagus or foregut; crop
+    contents are not an esophagus. Exclude only exact guarded source-path contributions, retaining
+    independent genera and source observations. This does not settle generic cortex identity
+    or equivalent avian crop sources. Whole-corpus counterfactual regression constrains the
+    delta to ten documents and exact allowed fields. Regenerate native records/products and
+    save successor reviews. No speculative association deletion, ontology refresh or global
+    mapping-contract repair.

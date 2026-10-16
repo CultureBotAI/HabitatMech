@@ -26,12 +26,11 @@
 <p class="meta">
   <code class="curie">habitatmech:GOLD.57011086ca</code>
   <span class="sep">·</span><a href="../category/host-associated.html">HOST_ASSOCIATED</a>
-  <span class="sep">·</span><span class="pill">NARROW</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="sep">·</span><span class="pill warn">UNGROUNDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 
-<div class="note warn"><p>SEEDED workflow status. The source-seeding rules supplied this record; consult its curation history for later attributed changes. This status does not establish human review.</p></div>
 
 <h2>Source attestations</h2>
 <p class="meta">Each upstream vocabulary's own account of this habitat. Assertion
@@ -50,16 +49,26 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 </table>
 </div>
 
-<h2>Broader habitats</h2>
-<ul class="plain">
-  <li><a href="http://purl.obolibrary.org/obo/UBERON_0007356">crop</a>      <code class="curie">UBERON:0007356</code></li>
-  <li><a href="../habitats/foregut-habitatmech-gold-bd1664969c.html">Foregut</a>      <code class="curie">habitatmech:GOLD.bd1664969c</code></li>
-</ul>
 
 
 
 
 
+<h2>Curation</h2>
+<p class="meta">What a curator decided about this record, and why. A record built
+from several source concepts can carry one decision per concept.</p>
+<ol class="events">
+  <li>
+    <span class="pill">CONFIRM_UNGROUNDED</span>
+    <span class="meta">2026-10-16 · codex-gpt-5</span>
+    <p>Confirmed UNGROUNDED: no ontology term fits this concept. ITEM reassessment <a href="https://github.com/CultureBotAI/HabitatMech/issues/2230" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2230</a> : Current UBERON:0007356 has in-taxon Aves scope (<a href="https://www.ebi.ac.uk/ols4/ontologies/uberon/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FUBERON_0007356" rel="noopener noreferrer" target="_blank">https://www.ebi.ac.uk/ols4/ontologies/uberon/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FUBERON_0007356</a>). This source is non-avian; no replacement genus or exact identity was verified. Retain its mint UNGROUNDED, source observations and native units. Whole-organ context is excluded separately. Path: Host-associated &gt; Arthropoda: Insects &gt; Digestive system &gt; Foregut &gt; Crop (source concept habitatmech:GOLD.57011086ca)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-16 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.bd1664969c for habitatmech:GOLD.57011086ca (Host-associated &gt; Arthropoda: Insects &gt; Digestive system &gt; Foregut &gt; Crop). Review <a href="https://github.com/CultureBotAI/HabitatMech/issues/2229" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2229</a> : Conjunctiva is not an entire visual system; cornea is not an entire eye; cortex is not an entire root; crop is not an entire digestive system, esophagus or foregut; crop contents are not an esophagus. Exclude only exact guarded source-path contributions, retaining independent genera and source observations. This does not settle generic cortex identity or equivalent avian crop sources. Exact target habitatmech:GOLD.57011086ca. Other identity and mapping findings remain separate.</p>
+  </li>
+</ol>
 
 <h2>Provenance</h2>
 <p class="meta">
