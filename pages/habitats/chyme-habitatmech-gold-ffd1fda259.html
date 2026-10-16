@@ -53,13 +53,22 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="http://purl.obolibrary.org/obo/UBERON_0000910">chyme</a>      <code class="curie">UBERON:0000910</code></li>
-  <li><a href="../habitats/stomach-habitatmech-gold-6d0c170e7a.html">Stomach</a>      <code class="curie">habitatmech:GOLD.6d0c170e7a</code></li>
 </ul>
 
 
 
 
 
+<h2>Curation</h2>
+<p class="meta">What a curator decided about this record, and why. A record built
+from several source concepts can carry one decision per concept.</p>
+<ol class="events">
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-16 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.6d0c170e7a for habitatmech:GOLD.ffd1fda259 (Host-associated &gt; Mammals: Human &gt; Digestive system &gt; Stomach &gt; Chyme). Review <a href="https://github.com/CultureBotAI/HabitatMech/issues/2217" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2217</a> : Human chyme is digestive material, not the entire human stomach. The generic chyme genus is supported, while the GOLD stomach parent incorrectly turns location into is-a. The zero source count is correctly omitted. Do not merge host scopes or change mapping predicates as a side effect of this hierarchy repair. Exclude only this exact GOLD contribution; preserve all independent genera, source observations and native status. Shared mapping endpoints #1398 remain unresolved.</p>
+  </li>
+</ol>
 
 <h2>Provenance</h2>
 <p class="meta">

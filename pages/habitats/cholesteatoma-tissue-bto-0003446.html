@@ -49,10 +49,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 </table>
 </div>
 
-<h2>Broader habitats</h2>
-<ul class="plain">
-  <li><a href="../habitats/benign-tumor-habitatmech-gold-333c18201f.html">Benign tumor</a>      <code class="curie">habitatmech:GOLD.333c18201f</code></li>
-</ul>
 
 
 
@@ -74,6 +70,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">SOURCE_SYNONYM_SCOPED</span>
     <span class="meta">2026-10-07 · seed_from_sources</span>
     <p>Retained GOLD label &#39;Cholesteatoma&#39; as RELATED_SYNONYM: a CLOSE source mapping does not establish exact lexical equivalence. Independent ontology synonyms and verbatim attestations are preserved (#1459).</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-16 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.333c18201f for habitatmech:GOLD.1c429bbeae (Host-associated &gt; Mammals: Human &gt; Benign tumor &gt; Cholesteatoma). Review <a href="https://github.com/CultureBotAI/HabitatMech/issues/2217" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2217</a> : The maintained CLOSE decision explicitly interprets the human Cholesteatoma source as physical lesion tissue rather than an exact disease identity. Primary surgical histology describes non-neoplastic keratinizing tissue and samples its matrix and perimatrix. Benign tumor is an excluded diagnostic grouping here, not a supported tissue superclass. Retain the source attestation and CLOSE identity while removing that context-only parent. The inherited BTO definition needs separate upstream wording scrutiny; this review does not infer that biochemical cholesterol is universally absent. Exclude only this exact GOLD contribution; preserve all independent genera, source observations and native status. Shared mapping endpoints #1398 remain unresolved.</p>
   </li>
 </ol>
 
