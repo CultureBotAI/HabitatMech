@@ -3,8 +3,6 @@ label: Cibarium/Preoral cavity
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: SEEDED
-parent_habitats:
-- habitatmech:GOLD.bd1664969c
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7386
@@ -24,3 +22,17 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-16T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.bd1664969c
+    for habitatmech:GOLD.5a9d059298 (Host-associated > Arthropoda: Insects > Digestive
+    system > Foregut > Cibarium/Preoral cavity). Review https://github.com/CultureBotAI/HabitatMech/issues/2217
+    : The insect cibarium/preoral-cavity source names a compartment, not a type of
+    complete foregut. Primary sharpshooter dissection separates cibarium and precibarium
+    within the functional anterior foregut and studies their microbial context. This
+    supports physical habitat meaning and a part/whole distinction, not the identity
+    of any GOLD specimen or universal residence of all sequenced taxa. Remove only
+    the whole-foregut source parent. Exclude only this exact GOLD contribution; preserve
+    all independent genera, source observations and native status. Shared mapping
+    endpoints #1398 remain unresolved.'

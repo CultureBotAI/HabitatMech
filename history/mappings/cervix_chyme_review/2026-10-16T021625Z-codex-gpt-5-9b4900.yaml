@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/gold_parent_exclusions.tsv
+  slug: cervix_chyme_review
+session:
+  id: 2026-10-16T021625Z-codex-gpt-5-9b4900
+  timestamp: '2026-10-16T02:16:25Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2217
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - parent_habitats
+  summary: Exclude six unsupported GOLD context-parent contributions
+  details: Individual reviews identify cervix versus whole uterus, chyme versus stomach, cibarium
+    versus whole foregut, and physical cholesteatoma tissue versus benign tumor. Current ontology
+    and primary anatomy/histology evidence support six exact source-path/expected-parent exclusions.
+    Preserve independent genera, all source observations, native identity/status and prior
+    history. Focused counterfactual regression failed before repair and passed after it. Original
+    PREGO pair evidence, ciliate equivalence and shared mapping endpoints remain unresolved.
+    Canary, full regeneration, semantic map rebuild, successor reviews and native QC are required
+    before publication.
