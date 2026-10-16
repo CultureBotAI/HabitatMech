@@ -1,17 +1,13 @@
 identifier: habitatmech:GOLD.5446ce4c6d
 label: Crop
 habitat_category: HOST_ASSOCIATED
-grounding_status: NARROW
-mapping_status: SEEDED
-parent_habitats:
-- UBERON:0007356
-- habitatmech:GOLD.d011f4b43c
+grounding_status: UNGROUNDED
+mapping_status: REVIEWED
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5069
   source_label: Crop
   source_path: Host-associated > Annelida > Digestive system > Crop
-  mapping_predicate: skos:narrowMatch
   assertion_count: 2
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
@@ -19,4 +15,26 @@ curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
-  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+  changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-16T00:00:00Z'
+  curator: codex-gpt-5
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM reassessment
+    https://github.com/CultureBotAI/HabitatMech/issues/2230 : Current UBERON:0007356
+    has in-taxon Aves scope (https://www.ebi.ac.uk/ols4/ontologies/uberon/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FUBERON_0007356).
+    This source is non-avian; no replacement genus or exact identity was verified.
+    Retain its mint UNGROUNDED, source observations and native units. Whole-organ
+    context is excluded separately. Path: Host-associated > Annelida > Digestive system
+    > Crop (source concept habitatmech:GOLD.5446ce4c6d)'
+- timestamp: '2026-10-16T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.d011f4b43c
+    for habitatmech:GOLD.5446ce4c6d (Host-associated > Annelida > Digestive system
+    > Crop). Review https://github.com/CultureBotAI/HabitatMech/issues/2229 : Conjunctiva
+    is not an entire visual system; cornea is not an entire eye; cortex is not an
+    entire root; crop is not an entire digestive system, esophagus or foregut; crop
+    contents are not an esophagus. Exclude only exact guarded source-path contributions,
+    retaining independent genera and source observations. This does not settle generic
+    cortex identity or equivalent avian crop sources. Exact target habitatmech:GOLD.5446ce4c6d.
+    Other identity and mapping findings remain separate.'

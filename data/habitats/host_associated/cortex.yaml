@@ -10,7 +10,6 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: UBERON
 parent_habitats:
-- PO:0009005
 - UBERON:0000064
 source_attestations:
 - source: GOLD
@@ -24,3 +23,14 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-16T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution PO:0009005 for habitatmech:GOLD.994d82c95b
+    (Host-associated > Plants > Roots > Cortex). Review https://github.com/CultureBotAI/HabitatMech/issues/2229
+    : Conjunctiva is not an entire visual system; cornea is not an entire eye; cortex
+    is not an entire root; crop is not an entire digestive system, esophagus or foregut;
+    crop contents are not an esophagus. Exclude only exact guarded source-path contributions,
+    retaining independent genera and source observations. This does not settle generic
+    cortex identity or equivalent avian crop sources. Exact target UBERON:0001851.
+    Other identity and mapping findings remain separate.'

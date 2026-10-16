@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: conjunctiva_crop_review_nonavian
+session:
+  id: 2026-10-16T054553Z-codex-gpt-5-64c4ba
+  timestamp: '2026-10-16T05:45:53Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2230
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - grounding_status
+  summary: Retain non-avian crop sources without an avian genus
+  details: 'Current UBERON:0007356 has an explicit in-taxon Aves restriction. The two exact
+    source paths are Annelida and Arthropoda: Insects. Keep each source mint with an ITEM
+    CONFIRM_UNGROUNDED decision rather than a guessed anatomical identity. Preserve two and
+    one ORGANISM assertions respectively; do not remove source evidence. Scope does not include
+    avian crop identity consolidation. Whole-corpus counterfactual regression constrains the
+    delta to ten documents and exact allowed fields. Regenerate native records/products and
+    save successor reviews. No speculative association deletion, ontology refresh or global
+    mapping-contract repair.'
