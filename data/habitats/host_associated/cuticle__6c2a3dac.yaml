@@ -20,11 +20,12 @@ curation_history:
   changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM reassessment
     https://github.com/CultureBotAI/HabitatMech/issues/2236 : UBERON:0001002 explicitly
     restricts cuticle to non-mineral coverings, whereas this unrestricted host-group
-    source includes mineralized examples (PMID:15670859 for millipedes; PMID:18550385
-    for isopods). Retain the source mint UNGROUNDED pending a verified genus or upstream
-    definition repair; this is not proof that no suitable ontology term exists. Preserve
-    all source observations. Whole-organ context is excluded separately. Path: Host-associated
-    > Arthropoda: Myriapoda > Integumentary system > Cuticle (source concept habitatmech:GOLD.9ad201f9cc)'
+    source includes mineralized examples (https://pubmed.ncbi.nlm.nih.gov/15670859/
+    for millipedes; https://pubmed.ncbi.nlm.nih.gov/18550385/ for isopods). Retain
+    the source mint UNGROUNDED pending a verified genus or upstream definition repair;
+    this is not proof that no suitable ontology term exists. Preserve all source observations.
+    Whole-organ context is excluded separately. Path: Host-associated > Arthropoda:
+    Myriapoda > Integumentary system > Cuticle (source concept habitatmech:GOLD.9ad201f9cc)'
 - timestamp: '2026-10-16T00:00:00Z'
   curator: codex-gpt-5
   action: SOURCE_PARENT_EXCLUDED

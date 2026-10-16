@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/decisions.tsv
+  slug: cuticle_dental_review_citations
+session:
+  id: 2026-10-16T083223Z-codex-gpt-5-c42651
+  timestamp: '2026-10-16T08:32:23Z'
+  actors:
+  - type: ai_agent
+    name: codex-gpt-5
+    model: gpt-5
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2240
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - notes
+  summary: Use publication URLs in three arthropod cuticle decisions
+  details: Correct the citation representation recorded by session history/mappings/cuticle_dental_review_mineral/2026-10-16T074759Z-codex-gpt-5-d2d9db.yaml,
+    which remains unchanged. Replace PMID CURIE strings with their verified PubMed URLs for
+    15670859 and 18550385 in exactly three ITEM notes. The ontology-note validator must not
+    interpret publication identifiers as ontology claims. Preserve all scientific decisions,
+    identities, parents, source units/counts and original evidence; regenerate through validated
+    writers. Verify the previously failing test, scoped preservation regressions, native gates,
+    rendered pages and exact semantic-map input equality before publication.

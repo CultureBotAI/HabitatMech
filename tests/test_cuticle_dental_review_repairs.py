@@ -81,6 +81,10 @@ def test_reviewed_guards_and_public_evidence_links():
         assert not decision.object_id and not decision.object_label
         assert not decision.grounding_status and not decision.category
         assert "not proof that no suitable ontology term exists" in decision.notes
+        assert "PMID:" not in decision.notes
+        for pmid in ("15670859", "18550385"):
+            url = f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/"
+            assert url in decision.notes
         rows.append(decision)
     template = Environment(autoescape=True).from_string("{{ notes|urlize }}")
     for row in rows:
