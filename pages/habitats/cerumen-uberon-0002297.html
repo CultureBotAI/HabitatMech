@@ -52,7 +52,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="http://purl.obolibrary.org/obo/UBERON_0001089">sweat</a>      <code class="curie">UBERON:0001089</code></li>
-  <li><a href="../habitats/cerumen-gland-uberon-0013211.html">cerumen gland</a>      <code class="curie">UBERON:0013211</code></li>
 </ul>
 
 
@@ -70,6 +69,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">GROUND</span>
     <span class="meta">2026-08-16 · claude-opus-5</span>
     <p>Grounded to UBERON:0002297 &#39;cerumen&#39; (EXACT). Variant-match review (#12): the seeder grounds on exact labels only, so GOLD&#39;s slash and plural conventions hid a term that says exactly this. Cerumen is earwax, defined by UBERON as the waxy secretion of the external auditory canal. Path: Host-associated &gt; Mammals: Human &gt; Integumentary system &gt; Ceruminous glands &gt; Cerumen/Earwax (source concept habitatmech:GOLD.aea4a5fe91)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-15 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution UBERON:0013211 for habitatmech:GOLD.aea4a5fe91 (Host-associated &gt; Mammals: Human &gt; Integumentary system &gt; Ceruminous glands &gt; Cerumen/Earwax). Review <a href="https://github.com/CultureBotAI/HabitatMech/issues/2214" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2214</a> : UBERON cerumen denotes earwax with supported sweat genus. It is a product of glands, not a subtype of the cerumen gland. Keep the reviewed ITEM identity, aliases and independent genus; exclude only the GOLD gland context contribution. No source observations or universal chemical measurements should be invented. Exclude only this exact source contribution; preserve independent valid genera and source observations. Mapping endpoint #1398, Ceros source meaning #325 and upstream Polyps identity #2171 are not resolved by this hierarchy guard.</p>
   </li>
 </ol>
 

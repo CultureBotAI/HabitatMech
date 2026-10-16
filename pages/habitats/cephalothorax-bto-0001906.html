@@ -54,13 +54,22 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <ul class="plain">
   <li><a href="../habitats/head-bto-0000282.html">head</a>      <code class="curie">BTO:0000282</code></li>
   <li><a href="../habitats/thorax-bto-0001368.html">thorax</a>      <code class="curie">BTO:0001368</code></li>
-  <li><a href="../habitats/whole-body-habitatmech-gold-bd9662fadb.html">Whole body</a>      <code class="curie">habitatmech:GOLD.bd9662fadb</code></li>
 </ul>
 
 
 
 
 
+<h2>Curation</h2>
+<p class="meta">What a curator decided about this record, and why. A record built
+from several source concepts can carry one decision per concept.</p>
+<ol class="events">
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-15 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.bd9662fadb for habitatmech:GOLD.60a0f24d46 (Host-associated &gt; Arthropoda: Crustaceans &gt; Whole body &gt; Cephalothorax). Review <a href="https://github.com/CultureBotAI/HabitatMech/issues/2214" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2214</a> : BTO cephalothorax denotes united head and thorax, coherent with the crustacean source. Current BTO itself asserts head and thorax as subclass parents; this is not an importer conversion of part_of edges. The independent GOLD whole-Body superclass is unsupported. Remove only that source contribution, preserving the ontology-owned parents and zero-count semantics. Exclude only this exact source contribution; preserve independent valid genera and source observations. Mapping endpoint #1398, Ceros source meaning #325 and upstream Polyps identity #2171 are not resolved by this hierarchy guard.</p>
+  </li>
+</ol>
 
 <h2>Provenance</h2>
 <p class="meta">

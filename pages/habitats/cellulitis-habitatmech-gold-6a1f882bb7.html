@@ -49,10 +49,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 </table>
 </div>
 
-<h2>Broader habitats</h2>
-<ul class="plain">
-  <li><a href="../habitats/skin-habitatmech-gold-4b37ab4b76.html">Skin</a>      <code class="curie">habitatmech:GOLD.4b37ab4b76</code></li>
-</ul>
 
 
 
@@ -66,6 +62,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">NOT_APPLICABLE</span>
     <span class="meta">2026-08-21 · codex-gpt-5</span>
     <p>Marked NOT_APPLICABLE: the source concept does not denote a habitat. Non-habitat screen review (#108): Cellulitis names an inflammatory disease of skin and subcutaneous tissue, not the tissue itself. An external phenotype term corroborates the disease/phenotype reading but is not in the committed slice. (source concept habitatmech:GOLD.6a1f882bb7)</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-15 · codex-gpt-5</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.4b37ab4b76 for habitatmech:GOLD.6a1f882bb7 (Host-associated &gt; Mammals: Human &gt; Integumentary system &gt; Skin &gt; Cellulitis). Review <a href="https://github.com/CultureBotAI/HabitatMech/issues/2214" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2214</a> : The maintained NOT_APPLICABLE/REVIEWED decision correctly treats cellulitis as a condition, not physical habitat material. The remaining human Skin superclass contradicts that distinction: cellulitis is an infection involving skin and underlying tissue, not a subtype of the organ. Preserve the one source ORGANISM assertion and condition decision while suppressing only the unsupported parent. Exclude only this exact source contribution; preserve independent valid genera and source observations. Mapping endpoint #1398, Ceros source meaning #325 and upstream Polyps identity #2171 are not resolved by this hierarchy guard.</p>
   </li>
 </ol>
 
