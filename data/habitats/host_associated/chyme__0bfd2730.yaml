@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - UBERON:0000910
-- habitatmech:GOLD.6d0c170e7a
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6432
@@ -17,3 +16,15 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-16T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.6d0c170e7a
+    for habitatmech:GOLD.ffd1fda259 (Host-associated > Mammals: Human > Digestive
+    system > Stomach > Chyme). Review https://github.com/CultureBotAI/HabitatMech/issues/2217
+    : Human chyme is digestive material, not the entire human stomach. The generic
+    chyme genus is supported, while the GOLD stomach parent incorrectly turns location
+    into is-a. The zero source count is correctly omitted. Do not merge host scopes
+    or change mapping predicates as a side effect of this hierarchy repair. Exclude
+    only this exact GOLD contribution; preserve all independent genera, source observations
+    and native status. Shared mapping endpoints #1398 remain unresolved.'

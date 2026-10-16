@@ -5,7 +5,6 @@ grounding_status: NARROW
 mapping_status: SEEDED
 parent_habitats:
 - UBERON:0000002
-- habitatmech:GOLD.4a65869529
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6377
@@ -17,3 +16,16 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NARROW.'
+- timestamp: '2026-10-16T00:00:00Z'
+  curator: codex-gpt-5
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.4a65869529
+    for habitatmech:GOLD.c7a7c79455 (Host-associated > Mammals > Reproductive system
+    > Uterus > Cervix). Review https://github.com/CultureBotAI/HabitatMech/issues/2217
+    : The mammalian source is a host-scoped uterine cervix, not the complete uterus.
+    Its generic cervix genus is supported, but the separate GOLD whole-uterus parent
+    confuses containment with is-a. Zero tree assertions and ten supplemental biosamples
+    from one study are distinct measures. The mucus medium does not replace anatomical
+    identity. Exclude only this exact GOLD contribution; preserve all independent
+    genera, source observations and native status. Shared mapping endpoints #1398
+    remain unresolved.'
