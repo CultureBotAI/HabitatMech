@@ -12,7 +12,6 @@ synonyms:
   source: HabitatMech curation
 parent_habitats:
 - ENVO:01001055
-- habitatmech:GOLD.d3f9c0123c
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7341
@@ -40,4 +39,5 @@ curation_history:
     with an animal part or small animal''. ITEM curation: GOLD ''Host-associated >
     Arthropoda: Crustaceans > Reproductive system > Gonopore'' denotes the external
     reproductive opening (gonopore) of a crustacean (PMID 22134646; DOI:10.1371/journal.pone.0027492).
-    Path: Host-associated > Arthropoda: Crustaceans > Reproductive system > Gonopore'
+    Path: Host-associated > Arthropoda: Crustaceans > Reproductive system > Gonopore;
+    parent_mode REPLACE excludes containing organ/organ-system GOLD parent.'

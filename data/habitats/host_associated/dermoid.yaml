@@ -13,7 +13,6 @@ synonyms:
   source: HabitatMech curation
 parent_habitats:
 - BTO:0000320
-- habitatmech:GOLD.333c18201f
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6991
@@ -36,7 +35,8 @@ curation_history:
   action: DEFINED
   changes: Defined as 'human dermoid cyst' under BTO:0000320 'cyst'. Defined human
     dermoid cyst under BTO:0000320 'cyst'; supported by infected dermoid cyst clinical
-    microbiology (PMID 25841008).
+    microbiology (PMID 25841008); parent_mode REPLACE excludes NOT_APPLICABLE GOLD
+    parent Benign tumor.
 - timestamp: '2026-10-17T00:00:00Z'
   curator: antigravity
   action: SOURCE_SYNONYM_EXCLUDED

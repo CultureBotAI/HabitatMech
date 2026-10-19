@@ -17,7 +17,6 @@ synonyms:
   source: HabitatMech curation
 parent_habitats:
 - ENVO:2100000
-- habitatmech:GOLD.98b91970cd
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6334
@@ -44,7 +43,8 @@ curation_history:
     environment''. ITEM curation: GOLD ''Host-associated > Mammals: Human > Urinary
     system > Kidney > Kidney stones'' denotes human renal calculi (PMID 26243914;
     DOI:10.1038/nrurol.2015.141). Path: Host-associated > Mammals: Human > Urinary
-    system > Kidney > Kidney stones'
+    system > Kidney > Kidney stones; parent_mode REPLACE excludes containing organ/organ-system
+    GOLD parent.'
 - timestamp: '2026-10-17T00:00:00Z'
   curator: antigravity
   action: SOURCE_SYNONYM_EXCLUDED

@@ -1,8 +1,8 @@
 identifier: habitatmech:GOLD.6fadcc4c14
 label: human adenomatous colorectal polyp
-definition: A polyp arising from glandular epithelium of the human colon or rectum,
-  whose mucosal surface frequently harbors Fusobacterium nucleatum, enterotoxigenic
-  Bacteroides fragilis, and biofilm-forming gut bacteria.
+definition: A lesion consisting of an adenomatous polyp arising from glandular epithelium
+  of the human colon or rectum, whose mucosal surface frequently harbors Fusobacterium
+  nucleatum, enterotoxigenic Bacteroides fragilis, and biofilm-forming gut bacteria.
 definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
@@ -15,8 +15,7 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: HabitatMech curation
 parent_habitats:
-- BTO:0006350
-- habitatmech:GOLD.5dd1030108
+- NCIT:C3824
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6649
@@ -32,11 +31,14 @@ curation_history:
   curator: antigravity
   action: CONFIRM_UNGROUNDED
   changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Defined human
-    adenomatous colorectal polyp under BTO:0006350 ''polyp''; supported by colorectal
-    polyp mucosal microbiome studies (PMID 25404569). (source concept habitatmech:GOLD.6fadcc4c14)'
+    adenomatous colorectal polyp under NCIT:C3824 ''Lesion'' (replacing NOT_APPLICABLE
+    GOLD parent Adenoma and avoiding BTO:0006350 ''polyp'' cnidarian body-form homonym);
+    supported by colorectal polyp mucosal microbiome studies (PMID 25404569). (source
+    concept habitatmech:GOLD.6fadcc4c14)'
 - timestamp: '2026-10-17T00:00:00Z'
   curator: antigravity
   action: DEFINED
-  changes: Defined as 'human adenomatous colorectal polyp' under BTO:0006350 'polyp'.
-    Defined human adenomatous colorectal polyp under BTO:0006350 'polyp'; supported
-    by colorectal polyp mucosal microbiome studies (PMID 25404569).
+  changes: Defined as 'human adenomatous colorectal polyp' under NCIT:C3824 'Lesion'.
+    Defined human adenomatous colorectal polyp under NCIT:C3824 'Lesion' with parent_mode
+    REPLACE to exclude NOT_APPLICABLE GOLD parent Adenoma; supported by colorectal
+    polyp mucosal microbiome studies (PMID 25404569).

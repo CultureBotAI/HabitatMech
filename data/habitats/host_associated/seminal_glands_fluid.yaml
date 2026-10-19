@@ -13,7 +13,6 @@ synonyms:
   source: HabitatMech curation
 parent_habitats:
 - UBERON:0006314
-- habitatmech:GOLD.f33cee3a15
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6566
@@ -41,4 +40,5 @@ curation_history:
     fluid''. ITEM curation: GOLD ''Host-associated > Mammals: Human > Reproductive
     system > Seminal glands > Seminal glands fluid'' denotes fluid secreted by the
     human seminal vesicles (PMID 28539915; DOI:10.3389/fmicb.2017.00881). Path: Host-associated
-    > Mammals: Human > Reproductive system > Seminal glands > Seminal glands fluid'
+    > Mammals: Human > Reproductive system > Seminal glands > Seminal glands fluid;
+    parent_mode REPLACE excludes containing organ/organ-system GOLD parent.'

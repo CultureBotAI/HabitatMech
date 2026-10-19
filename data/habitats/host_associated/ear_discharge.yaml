@@ -12,7 +12,6 @@ synonyms:
   source: HabitatMech curation
 parent_habitats:
 - UBERON:0006314
-- habitatmech:GOLD.1821934761
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6305
@@ -45,7 +44,8 @@ curation_history:
     outer ear rather than the outer ear organ. Define under UBERON:0006314 (bodily
     fluid) and exclude bare ''Ear discharge'' because GOLD also has a non-human mammalian
     ''Ear discharge'' node (PMID 21998422; DOI:10.1128/JCM.05321-11). Path: Host-associated
-    > Mammals: Human > Auditory/Hearing system > Outer ear > Ear discharge'
+    > Mammals: Human > Auditory/Hearing system > Outer ear > Ear discharge; parent_mode
+    REPLACE excludes containing organ/organ-system GOLD parent.'
 - timestamp: '2026-10-17T00:00:00Z'
   curator: antigravity
   action: SOURCE_SYNONYM_EXCLUDED

@@ -25,13 +25,19 @@ ontology evidence. Follow the complete workflow in
    standalone YAML records in `data/habitats/<category>/<slug>.yaml`.
 3. **Author native HabitatMech microbial habitat definitions** in
    `curation/term_requests.tsv` (`definition_source: HabitatMech`) with a
-   verified ontology genus (`proposed_parent_id` in `data/raw/ontology_terms.tsv`),
-   explicit `parent_mode` (`ADD` or `REPLACE`), and literature-backed
-   genus-differentia definitions ending in `.`.
+   verified ontology genus (`parent_id` in `data/raw/ontology_terms.tsv`),
+   explicit `parent_mode` (`ADD` or `REPLACE` when inherited GOLD parents are
+   diagnostic groupings or containing organs/organ systems rather than `is_a`
+   superclasses), and literature-backed genus-differentia definitions ending in `.`.
+   Never use organism life stages (`UBERON:0000468` descendants such as
+   `UBERON:0002548` `larva` — use `ENVO:01001055` `environment associated with an animal part or small animal`
+   with `UBERON:0002548` as `xref`) or cross-domain homonyms (`BTO:0006350`
+   `polyp` cnidarian body form instead of `NCIT:C3824` `Lesion`) as `parent_id`.
 4. **Exclude ambiguous renamed source labels** in
    `curation/definition_source_label_exclusions.tsv` and context-only GOLD
    parents in `curation/gold_parent_exclusions.tsv` when needed.
 5. **Regenerate and verify** with `scripts/seed_from_sources.py --apply --force --prune`,
    `scripts/build_term_requests.py`, `scripts/build_redirects.py`,
    `scripts/render_pages.py`, `scripts/check_docs.py --write`, and
-   `scripts/run_qc.py`.
+   `scripts/run_qc.py` (plus `scripts/habitat_report.py` to confirm zero
+   non-habitat parent warnings).

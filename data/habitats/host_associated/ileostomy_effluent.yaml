@@ -12,7 +12,6 @@ synonyms:
   source: HabitatMech curation
 parent_habitats:
 - UBERON:0006314
-- habitatmech:GOLD.f131dcac3d
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6255
@@ -41,4 +40,5 @@ curation_history:
     > Small intestine > Ileostomy effluent'' denotes small-intestinal digesta collected
     from a human ileostomy. Define under UBERON:0006314 (bodily fluid) (PMID 22570464;
     DOI:10.1038/ismej.2012.39). Path: Host-associated > Mammals: Human > Digestive
-    system > Small intestine > Ileostomy effluent'
+    system > Small intestine > Ileostomy effluent; parent_mode REPLACE excludes containing
+    organ/organ-system GOLD parent.'

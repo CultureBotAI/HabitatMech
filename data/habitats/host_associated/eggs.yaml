@@ -14,7 +14,6 @@ synonyms:
   source: HabitatMech curation
 parent_habitats:
 - BTO:0000369
-- habitatmech:GOLD.3d3b1950ad
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7573
@@ -42,7 +41,8 @@ curation_history:
     GOLD ''Host-associated > Fish > Reproductive system > Ovaries > Eggs'' denotes
     fish eggs (roe) in the ovary. Define under BTO:0000369 (egg) and exclude bare
     ''Eggs'' (PMID 27150643; DOI:10.3389/fmicb.2016.00612). Path: Host-associated
-    > Fish > Reproductive system > Ovaries > Eggs'
+    > Fish > Reproductive system > Ovaries > Eggs; parent_mode REPLACE excludes containing
+    organ/organ-system GOLD parent.'
 - timestamp: '2026-10-17T00:00:00Z'
   curator: antigravity
   action: SOURCE_SYNONYM_EXCLUDED

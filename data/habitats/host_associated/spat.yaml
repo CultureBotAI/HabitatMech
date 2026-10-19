@@ -1,24 +1,24 @@
 identifier: habitatmech:GOLD.cfec381b0d
-label: bivalve mollusc spat
-definition: A larva or newly settled juvenile post-metamorphic stage of a bivalve
-  mollusc (such as an oyster, mussel, or scallop) that has attached to a solid substrate.
+label: bivalve spat-associated environment
+definition: An environment associated with an animal part or small animal comprising
+  newly settled post-metamorphic juvenile bivalve mollusc spat attached to a solid
+  substrate.
 definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
 mapping_status: REVIEWED
 synonyms:
-- synonym_text: Spat
+- synonym_text: bivalve mollusc spat-associated environment
   synonym_type: EXACT_SYNONYM
   source: HabitatMech curation
-- synonym_text: oyster spat
-  synonym_type: EXACT_SYNONYM
-  source: HabitatMech curation
-- synonym_text: settled bivalve larva
+- synonym_text: oyster spat-associated environment
   synonym_type: EXACT_SYNONYM
   source: HabitatMech curation
 parent_habitats:
-- UBERON:0002548
+- ENVO:01001055
 - habitatmech:GOLD.bcd41f1c5d
+xrefs:
+- UBERON:0002548
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7864
@@ -33,14 +33,29 @@ curation_history:
 - timestamp: '2026-10-17T00:00:00Z'
   curator: antigravity
   action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
-    GOLD ''Host-associated > Mollusca > Larvae > Spat'' denotes settled juvenile bivalve
-    larvae (spat). Define under UBERON:0002548 (larva) (PMID 29487366; DOI:10.3389/fmicb.2018.00286).
-    Path: Host-associated > Mollusca > Larvae > Spat (source concept habitatmech:GOLD.cfec381b0d)'
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. UBERON:0002548
+    ''larva'' kept as an xref. ITEM curation: GOLD ''Host-associated > Mollusca >
+    Larvae > Spat'' denotes the host-associated environment of settled juvenile bivalve
+    spat; keep UBERON:0002548 (larva) as xref and define under ENVO:01001055 (environment
+    associated with an animal part or small animal), excluding bare ''Spat'' (PMID
+    29487366; DOI:10.3389/fmicb.2018.00286). Path: Host-associated > Mollusca > Larvae
+    > Spat (source concept habitatmech:GOLD.cfec381b0d)'
 - timestamp: '2026-10-17T00:00:00Z'
   curator: antigravity
   action: DEFINED
-  changes: 'Defined as ''bivalve mollusc spat'' under UBERON:0002548 ''larva''. ITEM
-    curation: GOLD ''Host-associated > Mollusca > Larvae > Spat'' denotes settled
-    juvenile bivalve larvae (spat). Define under UBERON:0002548 (larva) (PMID 29487366;
-    DOI:10.3389/fmicb.2018.00286). Path: Host-associated > Mollusca > Larvae > Spat'
+  changes: 'Defined as ''bivalve spat-associated environment'' under ENVO:01001055
+    ''environment associated with an animal part or small animal''. ITEM curation:
+    GOLD ''Host-associated > Mollusca > Larvae > Spat'' denotes the host-associated
+    environment of settled juvenile bivalve spat; define under ENVO:01001055 (environment
+    associated with an animal part or small animal) and exclude bare ''Spat'' (PMID
+    29487366; DOI:10.3389/fmicb.2018.00286). Path: Host-associated > Mollusca > Larvae
+    > Spat'
+- timestamp: '2026-10-18T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Spat' when defining
+    habitatmech:GOLD.cfec381b0d as 'bivalve spat-associated environment'. Verbatim
+    source attestations are preserved. Displaced GOLD source label 'Spat' in path
+    'Host-associated > Mollusca > Larvae > Spat' names the juvenile bivalve organism
+    stage rather than the defined habitat 'bivalve spat-associated environment'; suppress
+    automatic exact-synonym retention while preserving verbatim source provenance.

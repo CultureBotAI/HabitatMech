@@ -15,7 +15,6 @@ synonyms:
   source: HabitatMech curation
 parent_habitats:
 - BTO:0000320
-- habitatmech:GOLD.bcb2f8b7f3
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7002
@@ -38,4 +37,5 @@ curation_history:
   action: DEFINED
   changes: Defined as 'human paranasal sinus cyst' under BTO:0000320 'cyst'. Defined
     human paranasal sinus cyst under BTO:0000320 'cyst'; supported by paranasal sinus
-    cyst microbiology (PMID 25841008).
+    cyst microbiology (PMID 25841008); parent_mode REPLACE excludes containing organ/organ-system
+    GOLD parent.

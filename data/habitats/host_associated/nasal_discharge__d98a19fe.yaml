@@ -15,7 +15,6 @@ synonyms:
   source: HabitatMech curation
 parent_habitats:
 - ENVO:02000035
-- habitatmech:GOLD.bcb2f8b7f3
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6615
@@ -44,4 +43,5 @@ curation_history:
     system > Nasal cavity > Nasal discharge'' denotes mucus and exudate discharged
     from the human nasal cavity. Define under ENVO:02000035 (oronasal secretion material)
     (PMID 22977171; DOI:10.1126/scitranslmed.3004404). Path: Host-associated > Mammals:
-    Human > Respiratory system > Nasal cavity > Nasal discharge'
+    Human > Respiratory system > Nasal cavity > Nasal discharge; parent_mode REPLACE
+    excludes containing organ/organ-system GOLD parent.'

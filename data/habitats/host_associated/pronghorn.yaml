@@ -8,7 +8,6 @@ grounding_status: UNGROUNDED
 mapping_status: REVIEWED
 parent_habitats:
 - ENVO:2100000
-- habitatmech:GOLD.56e0776270
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6730
@@ -36,7 +35,8 @@ curation_history:
     entity environment''. ITEM curation: GOLD ''Host-associated > Mammals > Integumentary
     system > Pronghorn'' denotes the keratinous horn sheath of the mammalian integumentary
     system rather than the mammal species Antilocapra americana (PMID 26243915; DOI:10.1038/ismej.2015.134).
-    Path: Host-associated > Mammals > Integumentary system > Pronghorn'
+    Path: Host-associated > Mammals > Integumentary system > Pronghorn; parent_mode
+    REPLACE excludes containing organ/organ-system GOLD parent.'
 - timestamp: '2026-10-17T00:00:00Z'
   curator: antigravity
   action: SOURCE_SYNONYM_EXCLUDED

@@ -13,7 +13,6 @@ synonyms:
   source: HabitatMech curation
 parent_habitats:
 - NCIT:C3824
-- habitatmech:GOLD.333c18201f
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6308
@@ -36,7 +35,8 @@ curation_history:
   action: DEFINED
   changes: Defined as 'human granulomatous tissue lesion' under NCIT:C3824 'Lesion'.
     Defined human granulomatous tissue lesion under NCIT:C3824 'Lesion'; supported
-    by human granuloma microbiology and pathology studies (PMID 25841008).
+    by human granuloma microbiology and pathology studies (PMID 25841008); parent_mode
+    REPLACE excludes NOT_APPLICABLE GOLD parent Benign tumor.
 - timestamp: '2026-10-17T00:00:00Z'
   curator: antigravity
   action: SOURCE_SYNONYM_EXCLUDED

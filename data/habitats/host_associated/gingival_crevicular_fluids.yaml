@@ -13,7 +13,6 @@ synonyms:
   source: HabitatMech curation
 parent_habitats:
 - UBERON:0006314
-- habitatmech:GOLD.99880772e1
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6445
@@ -46,7 +45,8 @@ curation_history:
     (bodily fluid) and exclude bare ''Gingival crevicular fluids'' because GOLD also
     has a general mammalian node with the same label (PMID 22699609; DOI:10.1038/nature11234).
     Path: Host-associated > Mammals: Human > Digestive system > Oral cavity > Gingival
-    crevicular fluids'
+    crevicular fluids; parent_mode REPLACE excludes containing organ/organ-system
+    GOLD parent.'
 - timestamp: '2026-10-17T00:00:00Z'
   curator: antigravity
   action: SOURCE_SYNONYM_EXCLUDED

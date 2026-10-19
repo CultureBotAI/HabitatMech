@@ -12,7 +12,6 @@ synonyms:
   source: HabitatMech curation
 parent_habitats:
 - UBERON:0006314
-- habitatmech:GOLD.9f2dc7145e
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6275
@@ -42,7 +41,8 @@ curation_history:
     > Urethra > Discharge'' denotes exudate discharged from the human urethra. Define
     under UBERON:0006314 (bodily fluid) and exclude bare ''Discharge'' (PMID 26931546;
     DOI:10.1128/JCM.03192-15). Path: Host-associated > Mammals: Human > Urinary system
-    > Urethra > Discharge'
+    > Urethra > Discharge; parent_mode REPLACE excludes containing organ/organ-system
+    GOLD parent.'
 - timestamp: '2026-10-17T00:00:00Z'
   curator: antigravity
   action: SOURCE_SYNONYM_EXCLUDED

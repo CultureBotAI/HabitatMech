@@ -1,7 +1,8 @@
 identifier: habitatmech:GOLD.9f2762bd0f
 label: human paranasal sinus catarrhal exudate
-definition: A paranasal sinus inflammatory mucopurulent exudate accumulated within
-  the human sinonasal cavities during acute or chronic rhinosinusitis.
+definition: An oronasal secretion material consisting of inflammatory mucopurulent
+  catarrhal exudate accumulated within the human paranasal sinus cavities during acute
+  or chronic rhinosinusitis.
 definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
@@ -14,8 +15,7 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: HabitatMech curation
 parent_habitats:
-- UBERON:0001825
-- habitatmech:GOLD.bcb2f8b7f3
+- ENVO:02000035
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6621
@@ -31,13 +31,14 @@ curation_history:
   curator: antigravity
   action: CONFIRM_UNGROUNDED
   changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Defined human
-    paranasal sinus catarrhal exudate under UBERON:0001825 ''paranasal sinus''; supported
-    by human rhinosinusitis exudate microbiome studies (PMID 27512056). (source concept
-    habitatmech:GOLD.9f2762bd0f)'
+    paranasal sinus catarrhal exudate under ENVO:02000035 ''oronasal secretion material''
+    (replacing containing cavity parent Nasal cavity); supported by human rhinosinusitis
+    exudate microbiome studies (PMID 27512056). (source concept habitatmech:GOLD.9f2762bd0f)'
 - timestamp: '2026-10-17T00:00:00Z'
   curator: antigravity
   action: DEFINED
-  changes: Defined as 'human paranasal sinus catarrhal exudate' under UBERON:0001825
-    'paranasal sinus'. Defined human paranasal sinus catarrhal exudate under UBERON:0001825
-    'paranasal sinus'; supported by human rhinosinusitis exudate microbiome studies
-    (PMID 27512056).
+  changes: Defined as 'human paranasal sinus catarrhal exudate' under ENVO:02000035
+    'oronasal secretion material'. Defined human paranasal sinus catarrhal exudate
+    under ENVO:02000035 'oronasal secretion material' with parent_mode REPLACE to
+    exclude containing cavity GOLD parent Nasal cavity; supported by human rhinosinusitis
+    exudate microbiome studies (PMID 27512056).

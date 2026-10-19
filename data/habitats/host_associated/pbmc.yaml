@@ -15,7 +15,6 @@ synonyms:
   source: HabitatMech curation
 parent_habitats:
 - BTO:0000751
-- habitatmech:GOLD.d25ff4a586
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6217
@@ -41,4 +40,5 @@ curation_history:
     ''leukocyte''. ITEM curation: GOLD ''Host-associated > Mammals: Human > Circulatory
     system > Blood > PBMC'' denotes human peripheral blood mononuclear cells. Define
     under BTO:0000751 (leukocyte) (PMID 28507537; DOI:10.1128/JCM.00298-17). Path:
-    Host-associated > Mammals: Human > Circulatory system > Blood > PBMC'
+    Host-associated > Mammals: Human > Circulatory system > Blood > PBMC; parent_mode
+    REPLACE excludes containing organ/organ-system GOLD parent.'

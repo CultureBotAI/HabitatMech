@@ -16,7 +16,6 @@ synonyms:
   source: HabitatMech curation
 parent_habitats:
 - BTO:0000320
-- habitatmech:GOLD.98b91970cd
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7001
@@ -39,4 +38,5 @@ curation_history:
   action: DEFINED
   changes: Defined as 'human renal cyst' under BTO:0000320 'cyst'. Defined human renal
     cyst under BTO:0000320 'cyst'; supported by infected renal cyst clinical microbiology
-    (PMID 25841008).
+    (PMID 25841008); parent_mode REPLACE excludes containing organ/organ-system GOLD
+    parent.

@@ -16,7 +16,6 @@ synonyms:
   source: HabitatMech curation
 parent_habitats:
 - BTO:0002120
-- habitatmech:GOLD.8a68d0f6f5
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7529
@@ -43,4 +42,5 @@ curation_history:
     ITEM curation: GOLD ''Host-associated > Fish > Digestive system > Pyloric ceca''
     denotes teleost fish pyloric ceca (scoped to fish, whereas BTO:0002120 is general).
     Define under BTO:0002120 (pyloric cecum) (PMID 26696324; DOI:10.3389/fmicb.2015.01362).
-    Path: Host-associated > Fish > Digestive system > Pyloric ceca'
+    Path: Host-associated > Fish > Digestive system > Pyloric ceca; parent_mode REPLACE
+    excludes containing organ/organ-system GOLD parent.'

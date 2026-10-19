@@ -13,7 +13,6 @@ synonyms:
   source: HabitatMech curation
 parent_habitats:
 - ENVO:2100000
-- habitatmech:GOLD.a792be9b27
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6535
@@ -41,7 +40,8 @@ curation_history:
     entity environment''. ITEM curation: GOLD ''Host-associated > Mammals: Human >
     Lymphatic system > Tertiary lymphoid organ'' denotes a human tertiary lymphoid
     organ (PMID 26905466; DOI:10.1038/nri.2016.6). Path: Host-associated > Mammals:
-    Human > Lymphatic system > Tertiary lymphoid organ'
+    Human > Lymphatic system > Tertiary lymphoid organ; parent_mode REPLACE excludes
+    containing organ/organ-system GOLD parent.'
 - timestamp: '2026-10-17T00:00:00Z'
   curator: antigravity
   action: SOURCE_SYNONYM_EXCLUDED

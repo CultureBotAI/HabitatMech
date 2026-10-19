@@ -12,7 +12,6 @@ synonyms:
   source: HabitatMech curation
 parent_habitats:
 - UBERON:0006314
-- habitatmech:GOLD.e36ba981d1
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6622
@@ -44,4 +43,4 @@ curation_history:
     system > Respiratory tract fluid'' denotes fluid from the human respiratory tract.
     Define under UBERON:0006314 (bodily fluid) (PMID 26139134; DOI:10.1038/nrmicro3488).
     Path: Host-associated > Mammals: Human > Respiratory system > Respiratory tract
-    fluid'
+    fluid; parent_mode REPLACE excludes containing organ/organ-system GOLD parent.'

@@ -12,7 +12,6 @@ synonyms:
   source: HabitatMech curation
 parent_habitats:
 - UBERON:0006314
-- habitatmech:GOLD.1930d3bfbc
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6406
@@ -39,7 +38,8 @@ curation_history:
     fluid''. ITEM curation: GOLD ''Host-associated > Mammals > Auditory/Hearing system
     > Outer ear > Ear discharge'' denotes ear discharge from the mammalian outer ear
     (PMID 28855508; DOI:10.1038/s41598-017-09965-w). Path: Host-associated > Mammals
-    > Auditory/Hearing system > Outer ear > Ear discharge'
+    > Auditory/Hearing system > Outer ear > Ear discharge; parent_mode REPLACE excludes
+    containing organ/organ-system GOLD parent.'
 - timestamp: '2026-10-17T00:00:00Z'
   curator: antigravity
   action: SOURCE_SYNONYM_EXCLUDED

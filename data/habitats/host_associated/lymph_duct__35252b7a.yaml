@@ -8,7 +8,6 @@ grounding_status: UNGROUNDED
 mapping_status: REVIEWED
 parent_habitats:
 - ENVO:2100000
-- habitatmech:GOLD.be39fe9a0e
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6771
@@ -33,7 +32,8 @@ curation_history:
   changes: 'Defined as ''mammalian lymphatic duct'' under ENVO:2100000 ''anatomical
     entity environment''. ITEM curation: GOLD ''Host-associated > Mammals > Lymphatic
     system > Lymph duct'' denotes a mammalian lymphatic duct (PMID 29643885; DOI:10.3389/fimmu.2018.00682).
-    Path: Host-associated > Mammals > Lymphatic system > Lymph duct'
+    Path: Host-associated > Mammals > Lymphatic system > Lymph duct; parent_mode REPLACE
+    excludes containing organ/organ-system GOLD parent.'
 - timestamp: '2026-10-17T00:00:00Z'
   curator: antigravity
   action: SOURCE_SYNONYM_EXCLUDED

@@ -15,7 +15,6 @@ synonyms:
   source: HabitatMech curation
 parent_habitats:
 - ENVO:2100000
-- habitatmech:GOLD.ea67ca30cb
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6256
@@ -47,4 +46,5 @@ curation_history:
     Skeletal system > Periprosthetic joint'' denotes the tissue and implant interface
     around a prosthetic joint sampled for periprosthetic joint infection (PJI). Define
     under ENVO:2100000 (anatomical entity environment) (PMID 17700072; DOI:10.1056/NEJMoa061588).
-    Path: Host-associated > Mammals: Human > Skeletal system > Periprosthetic joint'
+    Path: Host-associated > Mammals: Human > Skeletal system > Periprosthetic joint;
+    parent_mode REPLACE excludes containing organ/organ-system GOLD parent.'

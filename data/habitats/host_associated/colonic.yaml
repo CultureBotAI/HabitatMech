@@ -1,8 +1,8 @@
 identifier: habitatmech:GOLD.79a47a53e7
 label: human colonic hyperplastic or inflammatory polyp
-definition: A polyp of hyperplastic or post-inflammatory non-neoplastic mucosal architecture
-  projecting into the lumen of the human colon, colonized by mucosa-associated gut
-  bacteria.
+definition: A lesion consisting of a polyp of hyperplastic or post-inflammatory non-neoplastic
+  mucosal architecture projecting into the lumen of the human colon, colonized by
+  mucosa-associated gut bacteria.
 definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
@@ -15,7 +15,7 @@ synonyms:
   synonym_type: EXACT_SYNONYM
   source: HabitatMech curation
 parent_habitats:
-- BTO:0006350
+- NCIT:C3824
 - habitatmech:GOLD.9452677923
 source_attestations:
 - source: GOLD
@@ -32,14 +32,17 @@ curation_history:
   curator: antigravity
   action: CONFIRM_UNGROUNDED
   changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Defined human
-    colonic hyperplastic or inflammatory polyp under BTO:0006350 ''polyp''; supported
-    by colonic polyp microbiome studies (PMID 25404569). (source concept habitatmech:GOLD.79a47a53e7)'
+    colonic hyperplastic or inflammatory polyp under NCIT:C3824 ''Lesion'' (avoiding
+    BTO:0006350 ''polyp'' cnidarian body-form homonym while retaining broader mucosal
+    polyp parent); supported by colonic polyp microbiome studies (PMID 25404569).
+    (source concept habitatmech:GOLD.79a47a53e7)'
 - timestamp: '2026-10-17T00:00:00Z'
   curator: antigravity
   action: DEFINED
-  changes: Defined as 'human colonic hyperplastic or inflammatory polyp' under BTO:0006350
-    'polyp'. Defined human colonic hyperplastic or inflammatory polyp under BTO:0006350
-    'polyp'; supported by colonic polyp microbiome studies (PMID 25404569).
+  changes: Defined as 'human colonic hyperplastic or inflammatory polyp' under NCIT:C3824
+    'Lesion'. Defined human colonic hyperplastic or inflammatory polyp under NCIT:C3824
+    'Lesion' (retaining broader GOLD parent human hyperplastic or inflammatory mucosal
+    polyp); supported by colonic polyp microbiome studies (PMID 25404569).
 - timestamp: '2026-10-17T00:00:00Z'
   curator: antigravity
   action: SOURCE_SYNONYM_EXCLUDED

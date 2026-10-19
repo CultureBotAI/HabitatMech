@@ -12,7 +12,6 @@ synonyms:
   source: HabitatMech curation
 parent_habitats:
 - UBERON:0006314
-- habitatmech:GOLD.e43dc204ff
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6290
@@ -42,4 +41,5 @@ curation_history:
     ITEM curation: GOLD ''Host-associated > Mammals: Human > Lymphatic system > Spleen
     > Splenic aspirate'' denotes fluid aspirated from the human spleen. Define under
     UBERON:0006314 (bodily fluid) (PMID 19643979; DOI:10.4269/ajtmh.2009.81.277).
-    Path: Host-associated > Mammals: Human > Lymphatic system > Spleen > Splenic aspirate'
+    Path: Host-associated > Mammals: Human > Lymphatic system > Spleen > Splenic aspirate;
+    parent_mode REPLACE excludes containing organ/organ-system GOLD parent.'

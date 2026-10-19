@@ -16,7 +16,6 @@ synonyms:
   source: HabitatMech curation
 parent_habitats:
 - ENVO:2100003
-- habitatmech:GOLD.333c18201f
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6231
@@ -39,4 +38,5 @@ curation_history:
   action: DEFINED
   changes: Defined as 'human acrochordons skin tag' under ENVO:2100003 'skin environment'.
     Defined human acrochordons skin tag under ENVO:2100003 'skin environment'; supported
-    by intertriginous skin lesion microbiology (PMID 26829725).
+    by intertriginous skin lesion microbiology (PMID 26829725); parent_mode REPLACE
+    excludes NOT_APPLICABLE GOLD parent Benign tumor.

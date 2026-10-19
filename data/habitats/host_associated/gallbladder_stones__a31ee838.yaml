@@ -17,7 +17,6 @@ synonyms:
   source: HabitatMech curation
 parent_habitats:
 - ENVO:2100000
-- habitatmech:GOLD.133311ddf9
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6294
@@ -44,7 +43,8 @@ curation_history:
     environment''. ITEM curation: GOLD ''Host-associated > Mammals: Human > Digestive
     system > Biliary tract > Gallbladder stones'' denotes human gallstones (PMID 24391632;
     DOI:10.1371/journal.pone.0082692). Path: Host-associated > Mammals: Human > Digestive
-    system > Biliary tract > Gallbladder stones'
+    system > Biliary tract > Gallbladder stones; parent_mode REPLACE excludes containing
+    organ/organ-system GOLD parent.'
 - timestamp: '2026-10-17T00:00:00Z'
   curator: antigravity
   action: SOURCE_SYNONYM_EXCLUDED

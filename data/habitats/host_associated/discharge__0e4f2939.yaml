@@ -12,7 +12,6 @@ synonyms:
   source: HabitatMech curation
 parent_habitats:
 - UBERON:0006314
-- habitatmech:GOLD.89cf14e129
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6506
@@ -39,7 +38,8 @@ curation_history:
     fluid''. ITEM curation: GOLD ''Host-associated > Mammals: Human > Integumentary
     system > Mammary gland > Discharge'' denotes human mammary gland / nipple discharge
     (PMID 24848255; DOI:10.1126/scitranslmed.3008599). Path: Host-associated > Mammals:
-    Human > Integumentary system > Mammary gland > Discharge'
+    Human > Integumentary system > Mammary gland > Discharge; parent_mode REPLACE
+    excludes containing organ/organ-system GOLD parent.'
 - timestamp: '2026-10-17T00:00:00Z'
   curator: antigravity
   action: SOURCE_SYNONYM_EXCLUDED

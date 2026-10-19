@@ -15,7 +15,6 @@ synonyms:
   source: HabitatMech curation
 parent_habitats:
 - NCIT:C3824
-- habitatmech:GOLD.333c18201f
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6997
@@ -38,4 +37,5 @@ curation_history:
   action: DEFINED
   changes: Defined as 'human pyogenic granuloma lesion' under NCIT:C3824 'Lesion'.
     Defined human pyogenic granuloma lesion under NCIT:C3824 'Lesion'; supported by
-    oral and cutaneous pyogenic granuloma lesion microbiology (PMID 25841008).
+    oral and cutaneous pyogenic granuloma lesion microbiology (PMID 25841008); parent_mode
+    REPLACE excludes NOT_APPLICABLE GOLD parent Benign tumor.

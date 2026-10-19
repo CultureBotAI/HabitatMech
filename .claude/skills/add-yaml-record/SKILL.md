@@ -89,10 +89,18 @@ Respect prior review dispositions in `reports/yaml_record_review/` and
 2. **Verify ontology candidates against `data/raw/ontology_terms.tsv`.**
    - A `GROUND` or `GROUND_AS_PARENT` target must exist in
      `data/raw/ontology_terms.tsv` with `label_only != TRUE`.
-   - Confirm the target is not a whole organism/taxon (`ORGANISM_TERMS` or
-     `ORGANISM_ROOTS` in `src/habitatmech/seed.py`), biological process
+   - Confirm the target is not a whole organism/taxon or organism life stage
+     (`ORGANISM_TERMS` or `ORGANISM_ROOTS` in `src/habitatmech/seed.py` and
+     `src/habitatmech/report.py`, including `UBERON:0000468` `multicellular organism`
+     descendants such as `UBERON:0002548` `larva` — use `ENVO:01001055`
+     `environment associated with an animal part or small animal` as `parent_id`
+     and keep `UBERON:0002548` as `object_disposition: xref`), biological process
      (`ENVO:02500000` subtree), quality (`PATO:*`), chemical (`CHEBI:*`), or
      disease (`MONDO:*`, `DOID:*`).
+   - Guard against ontology label homonyms by inspecting the target's ancestors in
+     `data/raw/ontology_terms.tsv` (for example, `BTO:0006350` `polyp` is the
+     sessile cnidarian animal body form, whereas a clinical mucosal polyp must
+     use `NCIT:C3824` `Lesion`).
    - External ontology terms not in `data/raw/ontology_terms.tsv` may only be
      attached as `relation: xref` alongside `CONFIRM_UNGROUNDED` or
      `NOT_APPLICABLE`, with their exact canonical label registered in
@@ -144,8 +152,12 @@ and `tests/test_term_requests.py`:
 - `parent_class` and `parent_label` must match an entry in
   `data/raw/ontology_terms.tsv` with `label_only != TRUE`.
 - `parent_mode` must be `ADD` (default; retains valid source-derived parents and
-  adds the ontology genus) or `REPLACE` (used only when item-level review proves
-  every inherited source parent is false for the concept, documented in `notes`).
+  adds the ontology genus) or `REPLACE` (used when item-level review proves
+  the inherited source parent is not a true `is_a` habitat superclass — such as a
+  `NOT_APPLICABLE` diagnostic grouping like `Benign tumor` / `Adenoma`, or a
+  containing organ/organ system like `Spleen`, `Kidney`, `Biliary tract`,
+  `Nasal cavity`, or `Lymphatic system` on a bodily fluid, calculus, cyst, egg,
+  or distinct anatomical structure — documented in `notes`).
   When keeping a valid GOLD parent while excluding a false context-only GOLD
   parent on an ontology-grounded or ungrounded concept, use
   `curation/gold_parent_exclusions.tsv`.
