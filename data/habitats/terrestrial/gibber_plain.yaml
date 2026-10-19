@@ -1,25 +1,50 @@
 identifier: habitatmech:GOLD.1ae8ae7f23
-label: Gibber plain
+label: gibber plain desert soil
+definition: A soil from an arid desert gibber plain (stony desert pavement armored
+  by wind-polished silcrete or ironstone pebbles), inhabited by xerotolerant and lithobiontic
+  desert soil microorganisms.
+definition_source: HabitatMech
 habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: gibber desert soil
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- habitatmech:GOLD.e2cd238930
+- ENVO:00001998
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8082
   source_label: Gibber plain
   source_path: Environmental > Terrestrial > Soil > Desert > Gibber plain
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.1ae8ae7f23)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Terrestrial > Soil > Desert > Gibber plain'' denotes arid
+    soil from a stony gibber plain desert (PMID 26785172; DOI:10.1038/ismej.2015.239).
+    Path: Environmental > Terrestrial > Soil > Desert > Gibber plain (source concept
+    habitatmech:GOLD.1ae8ae7f23)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''gibber plain desert soil'' under ENVO:00001998 ''soil''.
+    ITEM curation: GOLD ''Environmental > Terrestrial > Soil > Desert > Gibber plain''
+    denotes arid soil from a stony gibber plain desert (PMID 26785172; DOI:10.1038/ismej.2015.239).
+    Path: Environmental > Terrestrial > Soil > Desert > Gibber plain'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Gibber plain' when
+    defining habitatmech:GOLD.1ae8ae7f23 as 'gibber plain desert soil'. Verbatim source
+    attestations are preserved. Displaced GOLD source label 'Gibber plain' in path
+    'Environmental > Terrestrial > Soil > Desert > Gibber plain' is context-dependent,
+    ambiguous, or names a host/disease/process rather than the defined habitat 'gibber
+    plain desert soil'; suppress automatic exact-synonym retention while preserving
+    verbatim source provenance.

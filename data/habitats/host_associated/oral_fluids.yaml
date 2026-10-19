@@ -1,10 +1,24 @@
 identifier: habitatmech:GOLD.f2a79661c0
-label: Oral fluids
+label: insect oral secretion
+definition: An environmental material consisting of regurgitated foregut fluid and
+  salivary secretions released from the mouthparts of an insect during feeding or
+  defense.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Oral fluids
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: insect oral fluid
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: insect regurgitant
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- habitatmech:GOLD.bd1664969c
+- ENVO:00010483
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7388
@@ -12,15 +26,27 @@ source_attestations:
   source_path: 'Host-associated > Arthropoda: Insects > Digestive system > Foregut
     > Oral fluids'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.f2a79661c0)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Arthropoda: Insects > Digestive system > Foregut > Oral
+    fluids'' denotes oral regurgitant and salivary secretions of insects rather than
+    the foregut organ. Define under ENVO:00010483 (environmental material) with parent_mode
+    REPLACE (PMID 24096815; DOI:10.1111/1574-6941.12221). Path: Host-associated >
+    Arthropoda: Insects > Digestive system > Foregut > Oral fluids (source concept
+    habitatmech:GOLD.f2a79661c0)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''insect oral secretion'' under ENVO:00010483 ''environmental
+    material''. ITEM curation: GOLD ''Host-associated > Arthropoda: Insects > Digestive
+    system > Foregut > Oral fluids'' denotes oral regurgitant and salivary secretions
+    of insects rather than the foregut organ. Define under ENVO:00010483 (environmental
+    material) with parent_mode REPLACE (PMID 24096815; DOI:10.1111/1574-6941.12221).
+    Path: Host-associated > Arthropoda: Insects > Digestive system > Foregut > Oral
+    fluids'

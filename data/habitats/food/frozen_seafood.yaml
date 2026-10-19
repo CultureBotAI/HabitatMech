@@ -1,25 +1,39 @@
 identifier: habitatmech:GOLD.39a9e4ecb4
-label: Frozen seafood
+label: frozen seafood product
+definition: A manufactured product consisting of marine or freshwater seafood preserved
+  by freezing and cold storage, harboring psychrotolerant marine and food-processing
+  microorganisms.
+definition_source: HabitatMech
 habitat_category: FOOD
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Frozen seafood
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- habitatmech:GOLD.62a92ea437
+- ENVO:00003074
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7231
   source_label: Frozen seafood
   source_path: Engineered > Food production > Seafood product > Frozen seafood
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.39a9e4ecb4)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Engineered > Food production > Seafood product > Frozen seafood'' denotes
+    frozen seafood (PMID 31555246; DOI:10.3389/fmicb.2019.02104). Path: Engineered
+    > Food production > Seafood product > Frozen seafood (source concept habitatmech:GOLD.39a9e4ecb4)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''frozen seafood product'' under ENVO:00003074 ''manufactured
+    product''. ITEM curation: GOLD ''Engineered > Food production > Seafood product
+    > Frozen seafood'' denotes frozen seafood (PMID 31555246; DOI:10.3389/fmicb.2019.02104).
+    Path: Engineered > Food production > Seafood product > Frozen seafood'

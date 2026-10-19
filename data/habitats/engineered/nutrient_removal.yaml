@@ -1,8 +1,15 @@
 identifier: habitatmech:GOLD.a18a70ae30
-label: Nutrient removal
+label: biological nutrient removal wastewater
+definition: A waste water undergoing biological nitrogen and phosphorus removal (BNR)
+  by nitrifying, denitrifying, anammox, and polyphosphate-accumulating microorganisms.
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: BNR wastewater
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:00002001
 source_attestations:
@@ -12,15 +19,31 @@ source_attestations:
   source_path: Engineered > Wastewater > Nutrient removal
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.a18a70ae30)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Engineered > Wastewater > Nutrient removal'' denotes biological nutrient
+    removal (BNR) wastewater (PMID 25852659; DOI:10.3389/fmicb.2015.00232). Path:
+    Engineered > Wastewater > Nutrient removal (source concept habitatmech:GOLD.a18a70ae30)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''biological nutrient removal wastewater'' under ENVO:00002001
+    ''waste water''. ITEM curation: GOLD ''Engineered > Wastewater > Nutrient removal''
+    denotes biological nutrient removal (BNR) wastewater (PMID 25852659; DOI:10.3389/fmicb.2015.00232).
+    Path: Engineered > Wastewater > Nutrient removal'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Nutrient removal'
+    when defining habitatmech:GOLD.a18a70ae30 as 'biological nutrient removal wastewater'.
+    Verbatim source attestations are preserved. Displaced GOLD source label 'Nutrient
+    removal' in path 'Engineered > Wastewater > Nutrient removal' is context-dependent,
+    ambiguous, or names a host/disease/process rather than the defined habitat 'biological
+    nutrient removal wastewater'; suppress automatic exact-synonym retention while
+    preserving verbatim source provenance.

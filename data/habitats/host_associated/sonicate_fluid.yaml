@@ -1,9 +1,14 @@
 identifier: habitatmech:GOLD.8000febe33
-label: Sonicate fluid
+label: knee prosthesis sonicate fluid
+definition: An environmental material consisting of the fluid suspension obtained
+  by ultrasonic bath sonication of an explanted human knee joint prosthesis to dislodge
+  adherent periprosthetic biofilm microorganisms.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
+- ENVO:00010483
 - habitatmech:GOLD.89edd438c6
 source_attestations:
 - source: GOLD
@@ -12,15 +17,37 @@ source_attestations:
   source_path: 'Host-associated > Mammals: Human > Skeletal system > Periprosthetic
     joint: Knee > Sonicate fluid'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.8000febe33)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals: Human > Skeletal system > Periprosthetic joint:
+    Knee > Sonicate fluid'' denotes fluid obtained by ultrasonicating an explanted
+    knee prosthesis. Define under ENVO:00010483 (environmental material) and exclude
+    bare ''Sonicate fluid'' (PMID 17700072; DOI:10.1056/NEJMoa061588). Path: Host-associated
+    > Mammals: Human > Skeletal system > Periprosthetic joint: Knee > Sonicate fluid
+    (source concept habitatmech:GOLD.8000febe33)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''knee prosthesis sonicate fluid'' under ENVO:00010483 ''environmental
+    material''. ITEM curation: GOLD ''Host-associated > Mammals: Human > Skeletal
+    system > Periprosthetic joint: Knee > Sonicate fluid'' denotes fluid obtained
+    by ultrasonicating an explanted knee prosthesis. Define under ENVO:00010483 (environmental
+    material) and exclude bare ''Sonicate fluid'' (PMID 17700072; DOI:10.1056/NEJMoa061588).
+    Path: Host-associated > Mammals: Human > Skeletal system > Periprosthetic joint:
+    Knee > Sonicate fluid'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Sonicate fluid''
+    when defining habitatmech:GOLD.8000febe33 as ''knee prosthesis sonicate fluid''.
+    Verbatim source attestations are preserved. Displaced GOLD source label ''Sonicate
+    fluid'' in path ''Host-associated > Mammals: Human > Skeletal system > Periprosthetic
+    joint: Knee > Sonicate fluid'' is context-dependent, ambiguous, or names a host/disease/process
+    rather than the defined habitat ''knee prosthesis sonicate fluid''; suppress automatic
+    exact-synonym retention while preserving verbatim source provenance.'

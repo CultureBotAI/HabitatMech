@@ -1,8 +1,19 @@
 identifier: habitatmech:GOLD.b5081d36b9
-label: EBPR
+label: enhanced biological phosphorus removal bioreactor
+definition: A bioreactor configured with alternating anaerobic and aerobic phases
+  to enrich polyphosphate-accumulating organisms (such as Candidatus Accumulibacter)
+  for enhanced biological phosphorus removal from wastewater.
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: EBPR
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: EBPR bioreactor
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:00002123
 source_attestations:
@@ -12,15 +23,22 @@ source_attestations:
   source_path: Engineered > Bioreactor > EBPR
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.b5081d36b9)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Engineered > Bioreactor > EBPR'' denotes an enhanced biological phosphorus
+    removal (EBPR) bioreactor. Define under ENVO:00002123 (bioreactor) (PMID 16998470;
+    DOI:10.1038/nbt1247). Path: Engineered > Bioreactor > EBPR (source concept habitatmech:GOLD.b5081d36b9)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''enhanced biological phosphorus removal bioreactor'' under
+    ENVO:00002123 ''bioreactor''. ITEM curation: GOLD ''Engineered > Bioreactor >
+    EBPR'' denotes an enhanced biological phosphorus removal (EBPR) bioreactor. Define
+    under ENVO:00002123 (bioreactor) (PMID 16998470; DOI:10.1038/nbt1247). Path: Engineered
+    > Bioreactor > EBPR'

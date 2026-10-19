@@ -1,8 +1,15 @@
 identifier: habitatmech:GOLD.a3ca3bd7a0
-label: Proglacial area
+label: proglacial soil
+definition: A soil located in the proglacial zone immediately in front of a glacier
+  margin, shaped by glacial meltwater, freeze-thaw cycles, and recent ice retreat.
+definition_source: HabitatMech
 habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: proglacial zone soil
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:00001998
 source_attestations:
@@ -11,15 +18,32 @@ source_attestations:
   source_label: Proglacial area
   source_path: Environmental > Terrestrial > Soil > Proglacial area
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.a3ca3bd7a0)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Terrestrial > Soil > Proglacial area'' denotes soil in
+    a proglacial zone rather than the proglacial landform itself. Define under ENVO:00001998
+    (soil) and exclude bare ''Proglacial area'' (PMID 22851598; DOI:10.1038/ismej.2012.88).
+    Path: Environmental > Terrestrial > Soil > Proglacial area (source concept habitatmech:GOLD.a3ca3bd7a0)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''proglacial soil'' under ENVO:00001998 ''soil''. ITEM curation:
+    GOLD ''Environmental > Terrestrial > Soil > Proglacial area'' denotes soil in
+    a proglacial zone rather than the proglacial landform itself. Define under ENVO:00001998
+    (soil) and exclude bare ''Proglacial area'' (PMID 22851598; DOI:10.1038/ismej.2012.88).
+    Path: Environmental > Terrestrial > Soil > Proglacial area'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Proglacial area'
+    when defining habitatmech:GOLD.a3ca3bd7a0 as 'proglacial soil'. Verbatim source
+    attestations are preserved. Displaced GOLD source label 'Proglacial area' in path
+    'Environmental > Terrestrial > Soil > Proglacial area' is context-dependent, ambiguous,
+    or names a host/disease/process rather than the defined habitat 'proglacial soil';
+    suppress automatic exact-synonym retention while preserving verbatim source provenance.

@@ -1,25 +1,53 @@
 identifier: habitatmech:GOLD.41da7f710b
-label: E horizon/Subsurface
+label: temperate forest soil E horizon
+definition: A soil horizon forming the eluviated subsurface mineral (E) layer of a
+  temperate forest soil profile, depleted of silicate clay, iron, or aluminum.
+definition_source: HabitatMech
 habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: temperate forest eluvial soil horizon
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:01001805
+- ENVO:03600030
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6009
   source_label: E horizon/Subsurface
   source_path: Environmental > Terrestrial > Soil > Temperate forest > E horizon/Subsurface
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.41da7f710b)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Terrestrial > Soil > Temperate forest > E horizon/Subsurface''
+    denotes the eluvial E horizon of a temperate forest soil. Define under ENVO:03600030
+    (soil horizon) and exclude bare ''E horizon/Subsurface'' (PMID 27528554; DOI:10.1038/ismej.2016.107).
+    Path: Environmental > Terrestrial > Soil > Temperate forest > E horizon/Subsurface
+    (source concept habitatmech:GOLD.41da7f710b)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''temperate forest soil E horizon'' under ENVO:03600030 ''soil
+    horizon''. ITEM curation: GOLD ''Environmental > Terrestrial > Soil > Temperate
+    forest > E horizon/Subsurface'' denotes the eluvial E horizon of a temperate forest
+    soil. Define under ENVO:03600030 (soil horizon) and exclude bare ''E horizon/Subsurface''
+    (PMID 27528554; DOI:10.1038/ismej.2016.107). Path: Environmental > Terrestrial
+    > Soil > Temperate forest > E horizon/Subsurface'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'E horizon/Subsurface'
+    when defining habitatmech:GOLD.41da7f710b as 'temperate forest soil E horizon'.
+    Verbatim source attestations are preserved. Displaced GOLD source label 'E horizon/Subsurface'
+    in path 'Environmental > Terrestrial > Soil > Temperate forest > E horizon/Subsurface'
+    is context-dependent, ambiguous, or names a host/disease/process rather than the
+    defined habitat 'temperate forest soil E horizon'; suppress automatic exact-synonym
+    retention while preserving verbatim source provenance.

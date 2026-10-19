@@ -1,9 +1,17 @@
 identifier: habitatmech:GOLD.299b3cf670
-label: 'Paranasal sinuses: Ethmoiddal'
+label: human ethmoidal sinus
+definition: A paranasal sinus comprising the air cells within the ethmoidal labyrinth
+  of the human ethmoid bone between the nasal cavity and the orbit.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: human ethmoid sinus
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- UBERON:0001825
 - habitatmech:GOLD.bcb2f8b7f3
 source_attestations:
 - source: GOLD
@@ -12,15 +20,38 @@ source_attestations:
   source_path: 'Host-associated > Mammals: Human > Respiratory system > Nasal cavity
     > Paranasal sinuses: Ethmoiddal'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.299b3cf670)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals: Human > Respiratory system > Nasal cavity >
+    Paranasal sinuses: Ethmoiddal'' (with upstream spelling ''Ethmoiddal'') denotes
+    the human ethmoidal sinus. Define under UBERON:0001825 (paranasal sinus) and exclude
+    typo source label ''Paranasal sinuses: Ethmoiddal'' (PMID 22977171; DOI:10.1126/scitranslmed.3004404).
+    Path: Host-associated > Mammals: Human > Respiratory system > Nasal cavity > Paranasal
+    sinuses: Ethmoiddal (source concept habitatmech:GOLD.299b3cf670)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''human ethmoidal sinus'' under UBERON:0001825 ''paranasal
+    sinus''. ITEM curation: GOLD ''Host-associated > Mammals: Human > Respiratory
+    system > Nasal cavity > Paranasal sinuses: Ethmoiddal'' (with upstream spelling
+    ''Ethmoiddal'') denotes the human ethmoidal sinus. Define under UBERON:0001825
+    (paranasal sinus) and exclude typo source label ''Paranasal sinuses: Ethmoiddal''
+    (PMID 22977171; DOI:10.1126/scitranslmed.3004404). Path: Host-associated > Mammals:
+    Human > Respiratory system > Nasal cavity > Paranasal sinuses: Ethmoiddal'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Paranasal sinuses:
+    Ethmoiddal'' when defining habitatmech:GOLD.299b3cf670 as ''human ethmoidal sinus''.
+    Verbatim source attestations are preserved. Displaced GOLD source label ''Paranasal
+    sinuses: Ethmoiddal'' in path ''Host-associated > Mammals: Human > Respiratory
+    system > Nasal cavity > Paranasal sinuses: Ethmoiddal'' is context-dependent,
+    ambiguous, or names a host/disease/process rather than the defined habitat ''human
+    ethmoidal sinus''; suppress automatic exact-synonym retention while preserving
+    verbatim source provenance.'

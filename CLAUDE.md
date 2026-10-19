@@ -15,6 +15,11 @@ Read these before changing domain behavior:
 - [docs/HARMONIZATION.md](docs/HARMONIZATION.md) — identity, merging and seeding design.
 - [docs/CURATION.md](docs/CURATION.md) — decision semantics and habitat rules.
 - [docs/RESEARCH.md](docs/RESEARCH.md) — model-assisted definition research.
+- [.claude/skills/add-yaml-record/SKILL.md](.claude/skills/add-yaml-record/SKILL.md)
+  (and alias [.claude/skills/add-record/SKILL.md](.claude/skills/add-record/SKILL.md))
+  — add, un-merge, ground, or author a native HabitatMech definition for a
+  microbial habitat record through authoritative curation tables and literature
+  evidence.
 - [.claude/skills/curate-yaml-record/SKILL.md](.claude/skills/curate-yaml-record/SKILL.md)
   — audit or improve one habitat through authoritative decisions, definitions,
   and source inputs; generated habitat YAML remains read-only.
@@ -26,6 +31,20 @@ Read these before changing domain behavior:
 - [.claude/skills/review-open-issues/SKILL.md](.claude/skills/review-open-issues/SKILL.md)
   — perform a read-only, evidence-backed sweep of the complete open issue
   queue when backlog triage or prioritization is requested.
+- [.claude/skills/audit-schema-gaps/SKILL.md](.claude/skills/audit-schema-gaps/SKILL.md)
+  — audit the LinkML schema, YAML corpus, and generators for schema drift or gaps.
+- [.claude/skills/fetch-source/SKILL.md](.claude/skills/fetch-source/SKILL.md)
+  — add or harden validated upstream bulk release download recipes.
+- [.claude/skills/id-label-correspondence/SKILL.md](.claude/skills/id-label-correspondence/SKILL.md)
+  — validate ontology ID-to-label correspondence across records and products.
+- [.claude/skills/manage-identifiers/SKILL.md](.claude/skills/manage-identifiers/SKILL.md)
+  — assign, mint, and audit record identifiers and hygiene checks.
+- [.claude/skills/next-tasks/SKILL.md](.claude/skills/next-tasks/SKILL.md)
+  — assess and maintain the repository backlog and surface actionable work.
+- [.claude/skills/schema-gap-analysis/SKILL.md](.claude/skills/schema-gap-analysis/SKILL.md)
+  — analyze structural drift between schema, records, and curation tooling.
+- [.claude/skills/stats-report/SKILL.md](.claude/skills/stats-report/SKILL.md)
+  — generate reproducible corpus, source, grounding, and data-quality statistics.
 
 Sibling repositories use similar conventions: TraitMech, CultureMech,
 MediaIngredientMech and CommunityMech. The upstream pattern is

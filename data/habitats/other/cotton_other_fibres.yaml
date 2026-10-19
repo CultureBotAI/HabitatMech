@@ -1,8 +1,18 @@
 identifier: habitatmech:BACDIVE.009b89b30a
-label: Cotton-other-fibres
+label: cotton or natural textile fiber
+definition: A textile material composed of cellulosic cotton lint, flax, hemp, or
+  other natural fibers that serves as a substrate for cellulolytic and fiber-colonizing
+  microorganisms.
+definition_source: HabitatMech
 habitat_category: OTHER
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: cotton and plant textile fibers
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+parent_habitats:
+- ENVO:02000001
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:cotton-other-fibres
@@ -31,15 +41,29 @@ characteristic_taxa:
   rank: 3
   candidate_pool: 3
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:BACDIVE.009b89b30a)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Defined cotton
+    or natural textile fiber under ENVO:02000001 ''textile''; supported by textile
+    fiber biodeterioration and microbiome studies (PMID 25288649). (source concept
+    habitatmech:BACDIVE.009b89b30a)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: Defined as 'cotton or natural textile fiber' under ENVO:02000001 'textile'.
+    Defined cotton or natural textile fiber under ENVO:02000001 'textile'; supported
+    by textile fiber biodeterioration and microbiome studies (PMID 25288649).
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Cotton-other-fibres'
+    when defining habitatmech:BACDIVE.009b89b30a as 'cotton or natural textile fiber'.
+    Verbatim source attestations are preserved. Displaced GOLD source label 'Cotton-other-fibres'
+    in path 'Cotton-other-fibres' is context-dependent, ambiguous, or names a host/disease/process
+    rather than the defined habitat 'cotton or natural textile fiber'; suppress automatic
+    exact-synonym retention while preserving verbatim source provenance.

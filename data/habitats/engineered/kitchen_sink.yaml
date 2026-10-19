@@ -1,25 +1,41 @@
 identifier: habitatmech:GOLD.9139219efd
-label: Kitchen sink
+label: kitchen sink fixture
+definition: A sink fixture installed in a domestic or commercial kitchen for food
+  preparation and dishwashing, whose basin, strainer, and drain trap harbor moist
+  domestic biofilms.
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Kitchen sink
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- ENVO:01000989
+- ENVO:01000990
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8367
   source_label: Kitchen sink
   source_path: Engineered > Built environment > Building > Sink > Kitchen sink
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.9139219efd)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Engineered > Built environment > Building > Sink > Kitchen sink'' denotes
+    a kitchen sink plumbing fixture. Define under ENVO:01000990 (sink fixture) with
+    parent_mode REPLACE (PMID 25852665; DOI:10.1128/AEM.00062-15). Path: Engineered
+    > Built environment > Building > Sink > Kitchen sink (source concept habitatmech:GOLD.9139219efd)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''kitchen sink fixture'' under ENVO:01000990 ''sink fixture''.
+    ITEM curation: GOLD ''Engineered > Built environment > Building > Sink > Kitchen
+    sink'' denotes a kitchen sink plumbing fixture. Define under ENVO:01000990 (sink
+    fixture) with parent_mode REPLACE (PMID 25852665; DOI:10.1128/AEM.00062-15). Path:
+    Engineered > Built environment > Building > Sink > Kitchen sink'

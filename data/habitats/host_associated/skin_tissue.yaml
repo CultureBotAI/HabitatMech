@@ -1,10 +1,13 @@
 identifier: habitatmech:GOLD.1cb5947f90
-label: Skin tissue
+label: human skin tissue
+definition: A tissue that is part of the human cutaneous integument, comprising epidermal,
+  dermal, or adnexal skin tissue layers inhabited by skin-associated microorganisms.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
-- habitatmech:GOLD.4b37ab4b76
+- UBERON:0000479
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6218
@@ -14,15 +17,36 @@ source_attestations:
   assertion_count: 54
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.1cb5947f90)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals: Human > Integumentary system > Skin > Skin tissue''
+    denotes human cutaneous tissue (such as dermal/epidermal biopsy tissue) rather
+    than the whole skin organ. Define under UBERON:0000479 (tissue) with parent_mode
+    REPLACE and exclude bare ''Skin tissue'' (PMID 23385763; DOI:10.1038/ncomms2441).
+    Path: Host-associated > Mammals: Human > Integumentary system > Skin > Skin tissue
+    (source concept habitatmech:GOLD.1cb5947f90)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''human skin tissue'' under UBERON:0000479 ''tissue''. ITEM
+    curation: GOLD ''Host-associated > Mammals: Human > Integumentary system > Skin
+    > Skin tissue'' denotes human cutaneous tissue (such as dermal/epidermal biopsy
+    tissue) rather than the whole skin organ. Define under UBERON:0000479 (tissue)
+    with parent_mode REPLACE and exclude bare ''Skin tissue'' (PMID 23385763; DOI:10.1038/ncomms2441).
+    Path: Host-associated > Mammals: Human > Integumentary system > Skin > Skin tissue'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Skin tissue''
+    when defining habitatmech:GOLD.1cb5947f90 as ''human skin tissue''. Verbatim source
+    attestations are preserved. Displaced GOLD source label ''Skin tissue'' in path
+    ''Host-associated > Mammals: Human > Integumentary system > Skin > Skin tissue''
+    is context-dependent, ambiguous, or names a host/disease/process rather than the
+    defined habitat ''human skin tissue''; suppress automatic exact-synonym retention
+    while preserving verbatim source provenance.'

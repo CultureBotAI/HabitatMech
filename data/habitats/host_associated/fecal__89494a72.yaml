@@ -1,10 +1,12 @@
 identifier: habitatmech:GOLD.ee5582c64e
-label: Fecal
+label: reptile feces
+definition: A feces that is excreted from the digestive tract of a reptile.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
-- habitatmech:GOLD.5661c0fd2b
+- UBERON:0001988
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4693
@@ -13,15 +15,34 @@ source_attestations:
   assertion_count: 30
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.ee5582c64e)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Reptilia > Digestive system > Large intestine > Fecal''
+    denotes reptile fecal material rather than the reptile large intestine organ.
+    Define under UBERON:0001988 (feces) with parent_mode REPLACE and exclude bare
+    ''Fecal'' (PMID 28073165; DOI:10.1111/mec.13921). Path: Host-associated > Reptilia
+    > Digestive system > Large intestine > Fecal (source concept habitatmech:GOLD.ee5582c64e)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''reptile feces'' under UBERON:0001988 ''feces''. ITEM curation:
+    GOLD ''Host-associated > Reptilia > Digestive system > Large intestine > Fecal''
+    denotes reptile fecal material rather than the reptile large intestine organ.
+    Define under UBERON:0001988 (feces) with parent_mode REPLACE and exclude bare
+    ''Fecal'' (PMID 28073165; DOI:10.1111/mec.13921). Path: Host-associated > Reptilia
+    > Digestive system > Large intestine > Fecal'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Fecal' when defining
+    habitatmech:GOLD.ee5582c64e as 'reptile feces'. Verbatim source attestations are
+    preserved. Displaced GOLD source label 'Fecal' in path 'Host-associated > Reptilia
+    > Digestive system > Large intestine > Fecal' is context-dependent, ambiguous,
+    or names a host/disease/process rather than the defined habitat 'reptile feces';
+    suppress automatic exact-synonym retention while preserving verbatim source provenance.

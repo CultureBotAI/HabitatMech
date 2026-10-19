@@ -1,9 +1,21 @@
 identifier: habitatmech:GOLD.3811a2ed25
-label: Udder dermatitis
+label: mammalian udder cleft dermatitis lesion
+definition: A skin environment on the mammary gland or fore-udder cleft of a ruminant
+  affected by ulcerative or exudative dermatitis, colonized by treponemes and opportunistic
+  anaerobic bacteria.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Udder dermatitis
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: bovine udder dermatitis lesion
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:2100003
 - habitatmech:GOLD.c896f9520f
 source_attestations:
 - source: GOLD
@@ -11,15 +23,21 @@ source_attestations:
   source_label: Udder dermatitis
   source_path: Host-associated > Mammals > Integumentary system > Skin > Udder dermatitis
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.3811a2ed25)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Defined mammalian
+    udder cleft dermatitis lesion under ENVO:2100003 ''skin environment''; supported
+    by bovine udder cleft dermatitis microbiome studies (PMID 30425695). (source concept
+    habitatmech:GOLD.3811a2ed25)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: Defined as 'mammalian udder cleft dermatitis lesion' under ENVO:2100003
+    'skin environment'. Defined mammalian udder cleft dermatitis lesion under ENVO:2100003
+    'skin environment'; supported by bovine udder cleft dermatitis microbiome studies
+    (PMID 30425695).

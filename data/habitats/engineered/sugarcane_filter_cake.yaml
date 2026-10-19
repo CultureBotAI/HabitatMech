@@ -1,9 +1,21 @@
 identifier: habitatmech:GOLD.1eb00167ac
-label: Sugarcane filter cake
+label: sugarcane filter cake
+definition: An agricultural waste material (press mud) precipitated during the clarification
+  of sugarcane juice in sugar milling, rich in organic carbon, calcium, phosphorus,
+  and lignocellulolytic microorganisms.
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: filter press cake
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: sugarcane press mud
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:01000371
 - habitatmech:GOLD.e979bbb99c
 source_attestations:
 - source: GOLD
@@ -12,15 +24,25 @@ source_attestations:
   source_path: Engineered > Solid waste > Agricultural waste > Composting > Sugarcane
     filter cake
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.1eb00167ac)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Engineered > Solid waste > Agricultural waste > Composting > Sugarcane
+    filter cake'' denotes filter cake (press mud) from sugarcane processing. Define
+    under ENVO:01000371 (agricultural waste material) (PMID 28629972; DOI:10.1016/j.biortech.2017.06.041).
+    Path: Engineered > Solid waste > Agricultural waste > Composting > Sugarcane filter
+    cake (source concept habitatmech:GOLD.1eb00167ac)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''sugarcane filter cake'' under ENVO:01000371 ''agricultural
+    waste material''. ITEM curation: GOLD ''Engineered > Solid waste > Agricultural
+    waste > Composting > Sugarcane filter cake'' denotes filter cake (press mud) from
+    sugarcane processing. Define under ENVO:01000371 (agricultural waste material)
+    (PMID 28629972; DOI:10.1016/j.biortech.2017.06.041). Path: Engineered > Solid
+    waste > Agricultural waste > Composting > Sugarcane filter cake'

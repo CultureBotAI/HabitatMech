@@ -1,9 +1,20 @@
 identifier: habitatmech:GOLD.230a05ae80
-label: 'Beehive: Brood combs'
+label: beehive brood comb
+definition: An animal habitation component consisting of hexagonal beeswax cells within
+  a honeybee hive where the queen lays eggs and worker bees rear larvae and pupae.
+definition_source: HabitatMech
 habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: 'Beehive: Brood combs'
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: honeybee brood comb
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:00005803
 - habitatmech:GOLD.076eb28273
 source_attestations:
 - source: GOLD
@@ -12,15 +23,23 @@ source_attestations:
   source_path: 'Environmental > Terrestrial > Nest > Insects nest > Beehive: Brood
     combs'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.230a05ae80)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Terrestrial > Nest > Insects nest > Beehive: Brood combs''
+    denotes the wax brood comb of a honeybee hive. Define under ENVO:00005803 (animal
+    habitation) (PMID 24086674; DOI:10.1038/ismej.2013.173). Path: Environmental >
+    Terrestrial > Nest > Insects nest > Beehive: Brood combs (source concept habitatmech:GOLD.230a05ae80)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''beehive brood comb'' under ENVO:00005803 ''animal habitation''.
+    ITEM curation: GOLD ''Environmental > Terrestrial > Nest > Insects nest > Beehive:
+    Brood combs'' denotes the wax brood comb of a honeybee hive. Define under ENVO:00005803
+    (animal habitation) (PMID 24086674; DOI:10.1038/ismej.2013.173). Path: Environmental
+    > Terrestrial > Nest > Insects nest > Beehive: Brood combs'

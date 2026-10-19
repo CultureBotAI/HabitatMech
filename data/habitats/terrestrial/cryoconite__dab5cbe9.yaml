@@ -1,9 +1,14 @@
 identifier: habitatmech:GOLD.69fe6ee47b
-label: Cryoconite
+label: glacier forefield cryoconite soil
+definition: A cryoconite deposit sampled within the glacier-soil transition zone where
+  supraglacial cryoconite granules contribute organo-mineral material to nascent glacial
+  soils.
+definition_source: HabitatMech
 habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
+- ENVO:03000038
 - habitatmech:GOLD.72c624d166
 source_attestations:
 - source: GOLD
@@ -11,15 +16,35 @@ source_attestations:
   source_label: Cryoconite
   source_path: Environmental > Terrestrial > Soil > Glacier > Cryoconite
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.69fe6ee47b)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Terrestrial > Soil > Glacier > Cryoconite'' denotes cryoconite
+    material in the glacier soil branch (distinct from GOLD ''Terrestrial > Glacier
+    > Cryoconite''). Define under ENVO:03000038 (cryoconite deposit) and exclude bare
+    ''Cryoconite'' (PMID 22851598; DOI:10.1038/ismej.2012.88). Path: Environmental
+    > Terrestrial > Soil > Glacier > Cryoconite (source concept habitatmech:GOLD.69fe6ee47b)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''glacier forefield cryoconite soil'' under ENVO:03000038 ''cryoconite
+    deposit''. ITEM curation: GOLD ''Environmental > Terrestrial > Soil > Glacier
+    > Cryoconite'' denotes cryoconite material in the glacier soil branch (distinct
+    from GOLD ''Terrestrial > Glacier > Cryoconite''). Define under ENVO:03000038
+    (cryoconite deposit) and exclude bare ''Cryoconite'' (PMID 22851598; DOI:10.1038/ismej.2012.88).
+    Path: Environmental > Terrestrial > Soil > Glacier > Cryoconite'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Cryoconite' when
+    defining habitatmech:GOLD.69fe6ee47b as 'glacier forefield cryoconite soil'. Verbatim
+    source attestations are preserved. Displaced GOLD source label 'Cryoconite' in
+    path 'Environmental > Terrestrial > Soil > Glacier > Cryoconite' is context-dependent,
+    ambiguous, or names a host/disease/process rather than the defined habitat 'glacier
+    forefield cryoconite soil'; suppress automatic exact-synonym retention while preserving
+    verbatim source provenance.

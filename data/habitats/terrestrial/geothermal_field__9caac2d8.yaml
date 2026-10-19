@@ -1,8 +1,16 @@
 identifier: habitatmech:GOLD.df411b28d5
-label: Geothermal field
+label: geothermal field soil
+definition: A soil located within a terrestrial geothermal field that is heated by
+  subsurface volcanic or hydrothermal activity and exposed to geothermal steam and
+  acidic gases.
+definition_source: HabitatMech
 habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: geothermally heated soil
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:00001998
 source_attestations:
@@ -14,15 +22,34 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.df411b28d5)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Terrestrial > Soil > Geothermal field'' denotes geothermally
+    heated soil rather than the whole geothermal field landform. Define under ENVO:00001998
+    (soil) and exclude bare ''Geothermal field'' (PMID 25609811; DOI:10.1038/ismej.2014.254).
+    Path: Environmental > Terrestrial > Soil > Geothermal field (source concept habitatmech:GOLD.df411b28d5)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''geothermal field soil'' under ENVO:00001998 ''soil''. ITEM
+    curation: GOLD ''Environmental > Terrestrial > Soil > Geothermal field'' denotes
+    geothermally heated soil rather than the whole geothermal field landform. Define
+    under ENVO:00001998 (soil) and exclude bare ''Geothermal field'' (PMID 25609811;
+    DOI:10.1038/ismej.2014.254). Path: Environmental > Terrestrial > Soil > Geothermal
+    field'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Geothermal field'
+    when defining habitatmech:GOLD.df411b28d5 as 'geothermal field soil'. Verbatim
+    source attestations are preserved. Displaced GOLD source label 'Geothermal field'
+    in path 'Environmental > Terrestrial > Soil > Geothermal field' is context-dependent,
+    ambiguous, or names a host/disease/process rather than the defined habitat 'geothermal
+    field soil'; suppress automatic exact-synonym retention while preserving verbatim
+    source provenance.

@@ -1,10 +1,13 @@
 identifier: habitatmech:GOLD.ff82e6ad1b
-label: Mineral soil
+label: temperate forest mineral soil
+definition: A soil that forms the inorganic mineral horizon beneath the organic forest
+  floor (litter and humus layers) in a temperate forest ecosystem.
+definition_source: HabitatMech
 habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
-- ENVO:01001805
+- ENVO:00001998
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6013
@@ -13,15 +16,37 @@ source_attestations:
   assertion_count: 9
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.ff82e6ad1b)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Terrestrial > Soil > Temperate forest > Mineral soil''
+    denotes the mineral soil horizon of a temperate forest rather than the whole temperate
+    forest ecosystem (ENVO:01001805) or generic mineral soil outside temperate forests.
+    Define under ENVO:00001998 (soil) with parent_mode REPLACE and exclude bare ''Mineral
+    soil'' (PMID 23418476; DOI:10.1371/journal.pone.0055929). Path: Environmental
+    > Terrestrial > Soil > Temperate forest > Mineral soil (source concept habitatmech:GOLD.ff82e6ad1b)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''temperate forest mineral soil'' under ENVO:00001998 ''soil''.
+    ITEM curation: GOLD ''Environmental > Terrestrial > Soil > Temperate forest >
+    Mineral soil'' denotes the mineral soil horizon of a temperate forest rather than
+    the whole temperate forest ecosystem (ENVO:01001805) or generic mineral soil outside
+    temperate forests. Define under ENVO:00001998 (soil) with parent_mode REPLACE
+    and exclude bare ''Mineral soil'' (PMID 23418476; DOI:10.1371/journal.pone.0055929).
+    Path: Environmental > Terrestrial > Soil > Temperate forest > Mineral soil'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Mineral soil' when
+    defining habitatmech:GOLD.ff82e6ad1b as 'temperate forest mineral soil'. Verbatim
+    source attestations are preserved. Displaced GOLD source label 'Mineral soil'
+    in path 'Environmental > Terrestrial > Soil > Temperate forest > Mineral soil'
+    is context-dependent, ambiguous, or names a host/disease/process rather than the
+    defined habitat 'temperate forest mineral soil'; suppress automatic exact-synonym
+    retention while preserving verbatim source provenance.

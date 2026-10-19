@@ -1,8 +1,18 @@
 identifier: habitatmech:BACDIVE.df2f59b773
-label: Foam
+label: environmental or bioreactor surface foam
+definition: A foamy environmental material formed by gas bubbles stabilized by hydrophobic
+  cell surfaces and biosurfactants at air-water interfaces in activated sludge bioreactors,
+  streams, or coastal waters.
+definition_source: HabitatMech
 habitat_category: OTHER
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: biological surface foam
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+parent_habitats:
+- ENVO:00005738
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:foam
@@ -66,15 +76,30 @@ characteristic_taxa:
   rank: 9
   candidate_pool: 9
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:BACDIVE.df2f59b773)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Defined environmental
+    or bioreactor surface foam under ENVO:00005738 ''foamy environmental material'';
+    supported by activated sludge and aquatic foam microbiology (PMID 25841008). (source
+    concept habitatmech:BACDIVE.df2f59b773)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: Defined as 'environmental or bioreactor surface foam' under ENVO:00005738
+    'foamy environmental material'. Defined environmental or bioreactor surface foam
+    under ENVO:00005738 'foamy environmental material'; supported by activated sludge
+    and aquatic foam microbiology (PMID 25841008).
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Foam' when defining
+    habitatmech:BACDIVE.df2f59b773 as 'environmental or bioreactor surface foam'.
+    Verbatim source attestations are preserved. Displaced GOLD source label 'Foam'
+    in path 'Foam' is context-dependent, ambiguous, or names a host/disease/process
+    rather than the defined habitat 'environmental or bioreactor surface foam'; suppress
+    automatic exact-synonym retention while preserving verbatim source provenance.

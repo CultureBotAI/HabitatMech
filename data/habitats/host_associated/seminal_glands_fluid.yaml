@@ -1,10 +1,18 @@
 identifier: habitatmech:GOLD.6498d1e9a2
-label: Seminal glands fluid
+label: human seminal vesicle fluid
+definition: A bodily fluid secreted by the human seminal vesicles (seminal glands)
+  that is rich in fructose, prostaglandins, and semenogelins and forms the major liquid
+  fraction of human ejaculate.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Seminal glands fluid
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- habitatmech:GOLD.f33cee3a15
+- UBERON:0006314
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6566
@@ -12,15 +20,25 @@ source_attestations:
   source_path: 'Host-associated > Mammals: Human > Reproductive system > Seminal glands
     > Seminal glands fluid'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.6498d1e9a2)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals: Human > Reproductive system > Seminal glands
+    > Seminal glands fluid'' denotes fluid secreted by the human seminal vesicles
+    (PMID 28539915; DOI:10.3389/fmicb.2017.00881). Path: Host-associated > Mammals:
+    Human > Reproductive system > Seminal glands > Seminal glands fluid (source concept
+    habitatmech:GOLD.6498d1e9a2)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''human seminal vesicle fluid'' under UBERON:0006314 ''bodily
+    fluid''. ITEM curation: GOLD ''Host-associated > Mammals: Human > Reproductive
+    system > Seminal glands > Seminal glands fluid'' denotes fluid secreted by the
+    human seminal vesicles (PMID 28539915; DOI:10.3389/fmicb.2017.00881). Path: Host-associated
+    > Mammals: Human > Reproductive system > Seminal glands > Seminal glands fluid;
+    parent_mode REPLACE excludes containing organ/organ-system GOLD parent.'

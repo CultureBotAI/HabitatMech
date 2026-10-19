@@ -1,9 +1,19 @@
 identifier: habitatmech:GOLD.6efc037b2d
-label: Sea Star
+label: sea star-associated environment
+definition: An animal-associated environment determined by a sea star (class Asteroidea).
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: asteroid-associated environment
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: starfish-associated environment
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:01001002
 - habitatmech:GOLD.e1f435d44b
 source_attestations:
 - source: GOLD
@@ -14,15 +24,37 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.6efc037b2d)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Invertebrates > Echinodermata > Sea Star'' denotes the
+    host-associated environment of a sea star (Asteroidea). Define under ENVO:01001002
+    (animal-associated environment) with parent_mode ADD preserving echinoderm-associated
+    environment, and exclude bare host name ''Sea Star'' (PMID 30150973; DOI:10.3389/fmicb.2018.01829).
+    Path: Host-associated > Invertebrates > Echinodermata > Sea Star (source concept
+    habitatmech:GOLD.6efc037b2d)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''sea star-associated environment'' under ENVO:01001002 ''animal-associated
+    environment''. ITEM curation: GOLD ''Host-associated > Invertebrates > Echinodermata
+    > Sea Star'' denotes the host-associated environment of a sea star (Asteroidea).
+    Define under ENVO:01001002 (animal-associated environment) with parent_mode ADD
+    preserving echinoderm-associated environment, and exclude bare host name ''Sea
+    Star'' (PMID 30150973; DOI:10.3389/fmicb.2018.01829). Path: Host-associated >
+    Invertebrates > Echinodermata > Sea Star'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Sea Star' when defining
+    habitatmech:GOLD.6efc037b2d as 'sea star-associated environment'. Verbatim source
+    attestations are preserved. Displaced GOLD source label 'Sea Star' in path 'Host-associated
+    > Invertebrates > Echinodermata > Sea Star' is context-dependent, ambiguous, or
+    names a host/disease/process rather than the defined habitat 'sea star-associated
+    environment'; suppress automatic exact-synonym retention while preserving verbatim
+    source provenance.

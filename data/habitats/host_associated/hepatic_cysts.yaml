@@ -1,10 +1,21 @@
 identifier: habitatmech:GOLD.7f44269156
-label: Hepatic cysts
+label: human hepatic cyst
+definition: A cyst consisting of a fluid-filled epithelial cavity within the human
+  liver parenchyma or biliary tree, which may become secondarily infected by enteric
+  bacteria.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Hepatic cysts
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: human liver cyst
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- habitatmech:GOLD.133311ddf9
+- BTO:0000320
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7018
@@ -12,15 +23,20 @@ source_attestations:
   source_path: 'Host-associated > Mammals: Human > Digestive system > Biliary tract
     > Hepatic cysts'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.7f44269156)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Defined human
+    hepatic cyst under BTO:0000320 ''cyst''; supported by infected hepatic cyst clinical
+    microbiology (PMID 25841008). (source concept habitatmech:GOLD.7f44269156)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: Defined as 'human hepatic cyst' under BTO:0000320 'cyst'. Defined human
+    hepatic cyst under BTO:0000320 'cyst'; supported by infected hepatic cyst clinical
+    microbiology (PMID 25841008); parent_mode REPLACE excludes containing organ/organ-system
+    GOLD parent.

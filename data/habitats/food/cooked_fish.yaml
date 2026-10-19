@@ -1,10 +1,18 @@
 identifier: habitatmech:GOLD.662b88f6fc
-label: Cooked fish
+label: cooked fish food product
+definition: A manufactured product consisting of a fish food product that has undergone
+  thermal cooking treatment, which eliminates heat-sensitive vegetative microbiota
+  while selecting for heat-resistant spores or post-cooking colonizers.
+definition_source: HabitatMech
 habitat_category: FOOD
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Cooked fish
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- habitatmech:GOLD.f6b4333781
+- ENVO:00003074
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6973
@@ -12,15 +20,21 @@ source_attestations:
   source_path: Engineered > Food production > Fish products > Cooked fish
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.662b88f6fc)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Engineered > Food production > Fish products > Cooked fish'' denotes cooked
+    fish food product (PMID 27158006; DOI:10.1128/AEM.00734-16). Path: Engineered
+    > Food production > Fish products > Cooked fish (source concept habitatmech:GOLD.662b88f6fc)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''cooked fish food product'' under ENVO:00003074 ''manufactured
+    product''. ITEM curation: GOLD ''Engineered > Food production > Fish products
+    > Cooked fish'' denotes cooked fish food product (PMID 27158006; DOI:10.1128/AEM.00734-16).
+    Path: Engineered > Food production > Fish products > Cooked fish'

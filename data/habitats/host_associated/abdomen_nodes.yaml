@@ -1,8 +1,15 @@
 identifier: habitatmech:GOLD.2e3f6a8ccd
-label: Abdomen nodes
+label: human abdominal lymph node
+definition: A lymph node located within the human abdominal cavity (including visceral
+  mesenteric, celiac, and parietal para-aortic lymph nodes).
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Abdomen nodes
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - UBERON:0000029
 source_attestations:
@@ -12,15 +19,23 @@ source_attestations:
   source_path: 'Host-associated > Mammals: Human > Lymphatic system > Lymph nodes
     > Abdomen nodes'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.2e3f6a8ccd)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals: Human > Lymphatic system > Lymph nodes > Abdomen
+    nodes'' denotes human abdominal lymph nodes (PMID 29643885; DOI:10.3389/fimmu.2018.00682).
+    Path: Host-associated > Mammals: Human > Lymphatic system > Lymph nodes > Abdomen
+    nodes (source concept habitatmech:GOLD.2e3f6a8ccd)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''human abdominal lymph node'' under UBERON:0000029 ''lymph
+    node''. ITEM curation: GOLD ''Host-associated > Mammals: Human > Lymphatic system
+    > Lymph nodes > Abdomen nodes'' denotes human abdominal lymph nodes (PMID 29643885;
+    DOI:10.3389/fimmu.2018.00682). Path: Host-associated > Mammals: Human > Lymphatic
+    system > Lymph nodes > Abdomen nodes'

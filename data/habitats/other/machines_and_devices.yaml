@@ -1,8 +1,21 @@
 identifier: habitatmech:BACDIVE.1dbb2b0c6f
-label: Machines-and-devices
+label: machine or technical device surface
+definition: A manufactured product comprising mechanical, electronic, or household
+  appliances and industrial machinery whose internal conduits, seals, and surfaces
+  support biofilm-forming and extremotolerant microorganisms.
+definition_source: HabitatMech
 habitat_category: OTHER
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: appliance or machine surface
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: technical device habitat
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+parent_habitats:
+- ENVO:00003074
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:machines-and-devices
@@ -157,15 +170,30 @@ characteristic_taxa:
   rank: 24
   candidate_pool: 24
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:BACDIVE.1dbb2b0c6f)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Defined machine
+    or technical device surface under ENVO:00003074 ''manufactured product''; supported
+    by household and industrial machine microbiome studies (PMID 26598557). (source
+    concept habitatmech:BACDIVE.1dbb2b0c6f)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: Defined as 'machine or technical device surface' under ENVO:00003074 'manufactured
+    product'. Defined machine or technical device surface under ENVO:00003074 'manufactured
+    product'; supported by household and industrial machine microbiome studies (PMID
+    26598557).
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Machines-and-devices'
+    when defining habitatmech:BACDIVE.1dbb2b0c6f as 'machine or technical device surface'.
+    Verbatim source attestations are preserved. Displaced GOLD source label 'Machines-and-devices'
+    in path 'Machines-and-devices' is context-dependent, ambiguous, or names a host/disease/process
+    rather than the defined habitat 'machine or technical device surface'; suppress
+    automatic exact-synonym retention while preserving verbatim source provenance.

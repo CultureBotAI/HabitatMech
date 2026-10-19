@@ -1,10 +1,21 @@
 identifier: habitatmech:GOLD.c9f6be7c10
-label: Marine debries
+label: marine solid waste debris
+definition: A waste material consisting of anthropogenic litter and debris floating
+  in seawater or deposited on shorelines and the seafloor, providing solid surfaces
+  for marine microbial biofilm attachment.
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: marine anthropogenic litter
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: marine debris
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- habitatmech:GOLD.4e8bd5f6aa
+- ENVO:00002264
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8349
@@ -12,15 +23,31 @@ source_attestations:
   source_path: Engineered > Solid waste > Debries > Marine debries
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.c9f6be7c10)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Engineered > Solid waste > Debries > Marine debries'' denotes anthropogenic
+    marine debris (PMID 23769458; DOI:10.1021/es401288x). Path: Engineered > Solid
+    waste > Debries > Marine debries (source concept habitatmech:GOLD.c9f6be7c10)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''marine solid waste debris'' under ENVO:00002264 ''waste material''.
+    ITEM curation: GOLD ''Engineered > Solid waste > Debries > Marine debries'' denotes
+    anthropogenic marine debris (PMID 23769458; DOI:10.1021/es401288x). Path: Engineered
+    > Solid waste > Debries > Marine debries'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Marine debries'
+    when defining habitatmech:GOLD.c9f6be7c10 as 'marine solid waste debris'. Verbatim
+    source attestations are preserved. Displaced GOLD source label 'Marine debries'
+    in path 'Engineered > Solid waste > Debries > Marine debries' is context-dependent,
+    ambiguous, or names a host/disease/process rather than the defined habitat 'marine
+    solid waste debris'; suppress automatic exact-synonym retention while preserving
+    verbatim source provenance.

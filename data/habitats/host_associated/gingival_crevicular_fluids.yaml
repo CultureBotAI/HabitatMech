@@ -1,10 +1,18 @@
 identifier: habitatmech:GOLD.31f0f33f09
-label: Gingival crevicular fluids
+label: human gingival crevicular fluid
+definition: A bodily fluid consisting of serum transudate or inflammatory exudate
+  present in the human gingival sulcus (crevice) between the tooth surface and marginal
+  gingiva.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: human GCF
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- habitatmech:GOLD.99880772e1
+- UBERON:0006314
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6445
@@ -12,15 +20,41 @@ source_attestations:
   source_path: 'Host-associated > Mammals: Human > Digestive system > Oral cavity
     > Gingival crevicular fluids'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.31f0f33f09)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals: Human > Digestive system > Oral cavity > Gingival
+    crevicular fluids'' denotes human gingival crevicular fluid (UBERON term 0007778
+    is not in the vendored slice). Define under UBERON:0006314 (bodily fluid) and
+    exclude bare ''Gingival crevicular fluids'' because GOLD also has a general mammalian
+    node with the same label (PMID 22699609; DOI:10.1038/nature11234). Path: Host-associated
+    > Mammals: Human > Digestive system > Oral cavity > Gingival crevicular fluids
+    (source concept habitatmech:GOLD.31f0f33f09)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''human gingival crevicular fluid'' under UBERON:0006314 ''bodily
+    fluid''. ITEM curation: GOLD ''Host-associated > Mammals: Human > Digestive system
+    > Oral cavity > Gingival crevicular fluids'' denotes human gingival crevicular
+    fluid (UBERON term 0007778 is not in the vendored slice). Define under UBERON:0006314
+    (bodily fluid) and exclude bare ''Gingival crevicular fluids'' because GOLD also
+    has a general mammalian node with the same label (PMID 22699609; DOI:10.1038/nature11234).
+    Path: Host-associated > Mammals: Human > Digestive system > Oral cavity > Gingival
+    crevicular fluids; parent_mode REPLACE excludes containing organ/organ-system
+    GOLD parent.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Gingival crevicular
+    fluids'' when defining habitatmech:GOLD.31f0f33f09 as ''human gingival crevicular
+    fluid''. Verbatim source attestations are preserved. Displaced GOLD source label
+    ''Gingival crevicular fluids'' in path ''Host-associated > Mammals: Human > Digestive
+    system > Oral cavity > Gingival crevicular fluids'' is context-dependent, ambiguous,
+    or names a host/disease/process rather than the defined habitat ''human gingival
+    crevicular fluid''; suppress automatic exact-synonym retention while preserving
+    verbatim source provenance.'

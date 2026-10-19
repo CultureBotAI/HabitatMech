@@ -1,9 +1,23 @@
 identifier: habitatmech:GOLD.07c6babcdb
-label: Remains
+label: avian carcass
+definition: A carcass consisting of the post-mortem body or physical remains of a
+  bird undergoing microbial decomposition.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: avian remains
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: bird carcass
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: bird remains
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:00002033
 - habitatmech:GOLD.47e603cf4f
 source_attestations:
 - source: GOLD
@@ -14,15 +28,31 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.07c6babcdb)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Birds > Remains'' denotes post-mortem bird remains (carcass).
+    Define under ENVO:00002033 (carcass) and exclude bare ''Remains'' (PMID 29024921;
+    DOI:10.7717/peerj.3931). Path: Host-associated > Birds > Remains (source concept
+    habitatmech:GOLD.07c6babcdb)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''avian carcass'' under ENVO:00002033 ''carcass''. ITEM curation:
+    GOLD ''Host-associated > Birds > Remains'' denotes post-mortem bird remains (carcass).
+    Define under ENVO:00002033 (carcass) and exclude bare ''Remains'' (PMID 29024921;
+    DOI:10.7717/peerj.3931). Path: Host-associated > Birds > Remains'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Remains' when defining
+    habitatmech:GOLD.07c6babcdb as 'avian carcass'. Verbatim source attestations are
+    preserved. Displaced GOLD source label 'Remains' in path 'Host-associated > Birds
+    > Remains' is context-dependent, ambiguous, or names a host/disease/process rather
+    than the defined habitat 'avian carcass'; suppress automatic exact-synonym retention
+    while preserving verbatim source provenance.

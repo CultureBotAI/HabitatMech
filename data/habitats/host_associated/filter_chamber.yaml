@@ -1,9 +1,21 @@
 identifier: habitatmech:GOLD.6e59a6cbb1
-label: Filter chamber
+label: hemipteran midgut filter chamber
+definition: A midgut anatomical specialization in sap-feeding hemipteran insects in
+  which the anterior midgut, posterior midgut, and proximal Malpighian tubules are
+  enclosed within a common sheath to bypass excess dietary water directly to the hindgut.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Filter chamber
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: insect filter chamber
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- UBERON:0001045
 - habitatmech:GOLD.67c565f695
 source_attestations:
 - source: GOLD
@@ -12,15 +24,25 @@ source_attestations:
   source_path: 'Host-associated > Arthropoda: Insects > Digestive system > Midgut
     > Filter chamber'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.6e59a6cbb1)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Arthropoda: Insects > Digestive system > Midgut > Filter
+    chamber'' denotes the filter chamber specialization of sap-feeding insect midguts.
+    Define under UBERON:0001045 (midgut) (PMID 24096815; DOI:10.1111/1574-6941.12221).
+    Path: Host-associated > Arthropoda: Insects > Digestive system > Midgut > Filter
+    chamber (source concept habitatmech:GOLD.6e59a6cbb1)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''hemipteran midgut filter chamber'' under UBERON:0001045 ''midgut''.
+    ITEM curation: GOLD ''Host-associated > Arthropoda: Insects > Digestive system
+    > Midgut > Filter chamber'' denotes the filter chamber specialization of sap-feeding
+    insect midguts. Define under UBERON:0001045 (midgut) (PMID 24096815; DOI:10.1111/1574-6941.12221).
+    Path: Host-associated > Arthropoda: Insects > Digestive system > Midgut > Filter
+    chamber'

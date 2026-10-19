@@ -1,9 +1,21 @@
 identifier: habitatmech:GOLD.c517e7bd22
-label: Poultry processing wastewater
+label: poultry processing wastewater
+definition: An industrial wastewater generated during poultry slaughtering, scalding,
+  defeathering, evisceration, and carcass chilling, containing high loads of proteins,
+  lipids, blood, and enteric bacteria.
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: poultry abattoir wastewater
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: poultry slaughterhouse effluent
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:01000964
 - habitatmech:GOLD.f20c790f66
 source_attestations:
 - source: GOLD
@@ -12,15 +24,27 @@ source_attestations:
   source_path: Engineered > Wastewater > Industrial wastewater > Meat/Poultry processing
     plant > Poultry processing wastewater
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.c517e7bd22)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Engineered > Wastewater > Industrial wastewater > Meat/Poultry processing
+    plant > Poultry processing wastewater'' denotes effluent from poultry slaughter
+    and processing plants. Define under ENVO:01000964 (industrial wastewater) (PMID
+    29127029; DOI:10.1016/j.scitotenv.2017.10.299). Path: Engineered > Wastewater
+    > Industrial wastewater > Meat/Poultry processing plant > Poultry processing wastewater
+    (source concept habitatmech:GOLD.c517e7bd22)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''poultry processing wastewater'' under ENVO:01000964 ''industrial
+    wastewater''. ITEM curation: GOLD ''Engineered > Wastewater > Industrial wastewater
+    > Meat/Poultry processing plant > Poultry processing wastewater'' denotes effluent
+    from poultry slaughter and processing plants. Define under ENVO:01000964 (industrial
+    wastewater) (PMID 29127029; DOI:10.1016/j.scitotenv.2017.10.299). Path: Engineered
+    > Wastewater > Industrial wastewater > Meat/Poultry processing plant > Poultry
+    processing wastewater'

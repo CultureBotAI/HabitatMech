@@ -1,9 +1,21 @@
 identifier: habitatmech:GOLD.aa58263542
-label: Heart wall
+label: human heart wall
+definition: 'A heart tissue structure comprising the three concentric layers of the
+  human cardiac wall: the inner endocardium, the middle contractile myocardium, and
+  the outer epicardium.'
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Heart wall
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: human cardiac wall
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- UBERON:0000948
 - habitatmech:GOLD.805ee181bd
 source_attestations:
 - source: GOLD
@@ -12,15 +24,22 @@ source_attestations:
   source_path: 'Host-associated > Mammals: Human > Circulatory system > Heart > Heart
     wall'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.aa58263542)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals: Human > Circulatory system > Heart > Heart wall''
+    denotes the wall of the human heart (PMID 29643885; DOI:10.3389/fimmu.2018.00682).
+    Path: Host-associated > Mammals: Human > Circulatory system > Heart > Heart wall
+    (source concept habitatmech:GOLD.aa58263542)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''human heart wall'' under UBERON:0000948 ''heart''. ITEM curation:
+    GOLD ''Host-associated > Mammals: Human > Circulatory system > Heart > Heart wall''
+    denotes the wall of the human heart (PMID 29643885; DOI:10.3389/fimmu.2018.00682).
+    Path: Host-associated > Mammals: Human > Circulatory system > Heart > Heart wall'

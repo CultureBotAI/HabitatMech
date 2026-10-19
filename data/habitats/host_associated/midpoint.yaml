@@ -1,9 +1,21 @@
 identifier: habitatmech:GOLD.00152db20e
-label: Midpoint
+label: mid-vaginal wall environment
+definition: A vagina environment located at the anatomical midpoint of the human vaginal
+  canal lumen and mucosal wall, commonly sampled by mid-vaginal swab for vaginal microbiome
+  characterization.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: human mid-vaginal canal
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: mid-vagina
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- UBERON:0000996
 - habitatmech:GOLD.1daee83236
 source_attestations:
 - source: GOLD
@@ -14,15 +26,35 @@ source_attestations:
   assertion_count: 7
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.00152db20e)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals: Human > Reproductive system > Vagina > Midpoint''
+    denotes the mid-vaginal sampling site of the human vagina. Define under UBERON:0000996
+    (vagina) and exclude bare ''Midpoint'' (PMID 20534435; DOI:10.1073/pnas.1002611107).
+    Path: Host-associated > Mammals: Human > Reproductive system > Vagina > Midpoint
+    (source concept habitatmech:GOLD.00152db20e)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''mid-vaginal wall environment'' under UBERON:0000996 ''vagina''.
+    ITEM curation: GOLD ''Host-associated > Mammals: Human > Reproductive system >
+    Vagina > Midpoint'' denotes the mid-vaginal sampling site of the human vagina.
+    Define under UBERON:0000996 (vagina) and exclude bare ''Midpoint'' (PMID 20534435;
+    DOI:10.1073/pnas.1002611107). Path: Host-associated > Mammals: Human > Reproductive
+    system > Vagina > Midpoint'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Midpoint'' when
+    defining habitatmech:GOLD.00152db20e as ''mid-vaginal wall environment''. Verbatim
+    source attestations are preserved. Displaced GOLD source label ''Midpoint'' in
+    path ''Host-associated > Mammals: Human > Reproductive system > Vagina > Midpoint''
+    is context-dependent, ambiguous, or names a host/disease/process rather than the
+    defined habitat ''mid-vaginal wall environment''; suppress automatic exact-synonym
+    retention while preserving verbatim source provenance.'

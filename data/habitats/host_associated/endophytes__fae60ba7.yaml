@@ -1,9 +1,18 @@
 identifier: habitatmech:GOLD.9731c6bb13
-label: Endophytes
+label: root endophyte environment
+definition: An environment associated with a plant part or small plant comprising
+  the internal root tissues and intercellular spaces colonized by root-associated
+  endophytic microorganisms entering via the rhizoplane.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: root endosphere
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:01001057
 - ENVO:01001181
 source_attestations:
 - source: GOLD
@@ -13,15 +22,36 @@ source_attestations:
   assertion_count: 148
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.9731c6bb13)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Plants > Roots > Rhizoplane > Endophytes'' denotes the
+    internal root habitat colonized by endophytes rather than the organisms themselves.
+    Define under ENVO:01001057 and exclude bare ''Endophytes'' (PMID 26213366; DOI:10.1016/j.tim.2015.07.004;
+    PMID 22850869; DOI:10.1038/nature11336). Path: Host-associated > Plants > Roots
+    > Rhizoplane > Endophytes (source concept habitatmech:GOLD.9731c6bb13)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''root endophyte environment'' under ENVO:01001057 ''environment
+    associated with a plant part or small plant''. ITEM curation: GOLD ''Host-associated
+    > Plants > Roots > Rhizoplane > Endophytes'' denotes the internal root habitat
+    colonized by endophytes rather than the organisms themselves. Define under ENVO:01001057
+    and exclude bare ''Endophytes'' (PMID 26213366; DOI:10.1016/j.tim.2015.07.004;
+    PMID 22850869; DOI:10.1038/nature11336). Path: Host-associated > Plants > Roots
+    > Rhizoplane > Endophytes'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Endophytes' when
+    defining habitatmech:GOLD.9731c6bb13 as 'root endophyte environment'. Verbatim
+    source attestations are preserved. Displaced GOLD source label 'Endophytes' in
+    path 'Host-associated > Plants > Roots > Rhizoplane > Endophytes' is context-dependent,
+    ambiguous, or names a host/disease/process rather than the defined habitat 'root
+    endophyte environment'; suppress automatic exact-synonym retention while preserving
+    verbatim source provenance.

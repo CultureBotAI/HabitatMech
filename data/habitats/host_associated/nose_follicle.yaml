@@ -1,10 +1,21 @@
 identifier: habitatmech:GOLD.ff35dc2e13
-label: Nose follicle
+label: human nasal skin hair follicle
+definition: A hair follicle or pilosebaceous unit in the skin of the human external
+  nose or nasal vestibule (vibrissae follicle), densely colonized by lipophilic Cutibacterium,
+  Staphylococcus, and Corynebacterium species.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Nose follicle
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: human nasal hair follicle
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- habitatmech:GOLD.4b37ab4b76
+- UBERON:0002073
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7064
@@ -12,15 +23,23 @@ source_attestations:
   source_path: 'Host-associated > Mammals: Human > Integumentary system > Skin > Nose
     follicle'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.ff35dc2e13)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals: Human > Integumentary system > Skin > Nose follicle''
+    denotes hair follicles of the human nose skin (PMID 22685195; DOI:10.1038/ismej.2012.56).
+    Path: Host-associated > Mammals: Human > Integumentary system > Skin > Nose follicle
+    (source concept habitatmech:GOLD.ff35dc2e13)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''human nasal skin hair follicle'' under UBERON:0002073 ''hair
+    follicle''. ITEM curation: GOLD ''Host-associated > Mammals: Human > Integumentary
+    system > Skin > Nose follicle'' denotes hair follicles of the human nose skin
+    (PMID 22685195; DOI:10.1038/ismej.2012.56). Path: Host-associated > Mammals: Human
+    > Integumentary system > Skin > Nose follicle'

@@ -1,10 +1,21 @@
 identifier: habitatmech:GOLD.d43c16754a
-label: Fecal
+label: myriapod feces
+definition: A feces excreted from the hindgut of a myriapod, such as a millipede or
+  centipede, composed of compacted soil and leaf-litter detritus enriched in hindgut
+  microorganisms.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: millipede fecal pellet
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: myriapod fecal material
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- habitatmech:GOLD.38f60a7f52
+- UBERON:0001988
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4955
@@ -14,15 +25,35 @@ source_attestations:
   assertion_count: 2
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.d43c16754a)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Arthropoda: Myriapoda > Digestive system > Hindgut >
+    Fecal'' denotes myriapod fecal pellets rather than the hindgut organ. Define under
+    UBERON:0001988 (feces) with parent_mode REPLACE and exclude bare ''Fecal'' (PMID
+    21317325; DOI:10.1128/AEM.02419-10). Path: Host-associated > Arthropoda: Myriapoda
+    > Digestive system > Hindgut > Fecal (source concept habitatmech:GOLD.d43c16754a)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''myriapod feces'' under UBERON:0001988 ''feces''. ITEM curation:
+    GOLD ''Host-associated > Arthropoda: Myriapoda > Digestive system > Hindgut >
+    Fecal'' denotes myriapod fecal pellets rather than the hindgut organ. Define under
+    UBERON:0001988 (feces) with parent_mode REPLACE and exclude bare ''Fecal'' (PMID
+    21317325; DOI:10.1128/AEM.02419-10). Path: Host-associated > Arthropoda: Myriapoda
+    > Digestive system > Hindgut > Fecal'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Fecal'' when defining
+    habitatmech:GOLD.d43c16754a as ''myriapod feces''. Verbatim source attestations
+    are preserved. Displaced GOLD source label ''Fecal'' in path ''Host-associated
+    > Arthropoda: Myriapoda > Digestive system > Hindgut > Fecal'' is context-dependent,
+    ambiguous, or names a host/disease/process rather than the defined habitat ''myriapod
+    feces''; suppress automatic exact-synonym retention while preserving verbatim
+    source provenance.'

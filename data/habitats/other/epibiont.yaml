@@ -1,8 +1,21 @@
 identifier: habitatmech:BACDIVE.f4eb470a03
-label: Epibiont
+label: epibiotic host-associated environment
+definition: An environmental system determined by an organism consisting of the external
+  body surface, carapace, integument, or cell wall of a basibiont host colonized by
+  attached epibiotic microorganisms.
+definition_source: HabitatMech
 habitat_category: OTHER
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: basibiont surface environment
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: epibiont habitat
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+parent_habitats:
+- ENVO:01001000
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:epibiont
@@ -61,15 +74,30 @@ characteristic_taxa:
   rank: 8
   candidate_pool: 8
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:BACDIVE.f4eb470a03)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Defined epibiotic
+    host-associated environment under ENVO:01001000 ''environmental system determined
+    by an organism''; supported by marine and freshwater epibiont ecology (PMID 22629830).
+    (source concept habitatmech:BACDIVE.f4eb470a03)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: Defined as 'epibiotic host-associated environment' under ENVO:01001000
+    'environmental system determined by an organism'. Defined epibiotic host-associated
+    environment under ENVO:01001000 'environmental system determined by an organism';
+    supported by marine and freshwater epibiont ecology (PMID 22629830).
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Epibiont' when defining
+    habitatmech:BACDIVE.f4eb470a03 as 'epibiotic host-associated environment'. Verbatim
+    source attestations are preserved. Displaced GOLD source label 'Epibiont' in path
+    'Epibiont' is context-dependent, ambiguous, or names a host/disease/process rather
+    than the defined habitat 'epibiotic host-associated environment'; suppress automatic
+    exact-synonym retention while preserving verbatim source provenance.

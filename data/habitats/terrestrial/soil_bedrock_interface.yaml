@@ -1,10 +1,18 @@
 identifier: habitatmech:GOLD.1d9982b7bf
-label: Soil-bedrock interface
+label: soil-bedrock interface
+definition: An environmental system located at the critical-zone boundary where the
+  base of the soil profile contacts underlying unweathered or incipiently weathered
+  bedrock.
+definition_source: HabitatMech
 habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: soil-rock interface
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- ENVO:00000446
+- ENVO:01000254
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6081
@@ -12,15 +20,25 @@ source_attestations:
   source_path: Environmental > Terrestrial > Soil-bedrock interface
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.1d9982b7bf)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Terrestrial > Soil-bedrock interface'' denotes the critical-zone
+    contact between soil and bedrock rather than a terrestrial biome (ENVO:00000446).
+    Define under ENVO:01000254 (environmental system) with parent_mode REPLACE (PMID
+    27528551; DOI:10.1038/ismej.2016.103). Path: Environmental > Terrestrial > Soil-bedrock
+    interface (source concept habitatmech:GOLD.1d9982b7bf)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''soil-bedrock interface'' under ENVO:01000254 ''environmental
+    system''. ITEM curation: GOLD ''Environmental > Terrestrial > Soil-bedrock interface''
+    denotes the critical-zone contact between soil and bedrock rather than a terrestrial
+    biome (ENVO:00000446). Define under ENVO:01000254 (environmental system) with
+    parent_mode REPLACE (PMID 27528551; DOI:10.1038/ismej.2016.103). Path: Environmental
+    > Terrestrial > Soil-bedrock interface'

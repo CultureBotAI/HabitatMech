@@ -1,9 +1,18 @@
 identifier: habitatmech:GOLD.949bdcdb77
-label: Epiphytes
+label: fruit surface epiphyte environment
+definition: An environment associated with a plant part or small plant comprising
+  the external cuticular surface (exocarp) of a plant fruit colonized by epiphytic
+  bacteria, yeasts, and filamentous fungi.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: carposphere epiphyte habitat
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:01001057
 - habitatmech:GOLD.e898437067
 source_attestations:
 - source: GOLD
@@ -11,15 +20,35 @@ source_attestations:
   source_label: Epiphytes
   source_path: Host-associated > Plants > Phyllosphere > Carposphere > Epiphytes
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.949bdcdb77)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Plants > Phyllosphere > Carposphere > Epiphytes'' denotes
+    the epiphytic microbial habitat on fruit surfaces. Define under ENVO:01001057
+    and exclude bare ''Epiphytes'' (PMID 32346039; DOI:10.1186/s40168-020-00830-z).
+    Path: Host-associated > Plants > Phyllosphere > Carposphere > Epiphytes (source
+    concept habitatmech:GOLD.949bdcdb77)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''fruit surface epiphyte environment'' under ENVO:01001057
+    ''environment associated with a plant part or small plant''. ITEM curation: GOLD
+    ''Host-associated > Plants > Phyllosphere > Carposphere > Epiphytes'' denotes
+    the epiphytic microbial habitat on fruit surfaces. Define under ENVO:01001057
+    and exclude bare ''Epiphytes'' (PMID 32346039; DOI:10.1186/s40168-020-00830-z).
+    Path: Host-associated > Plants > Phyllosphere > Carposphere > Epiphytes'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Epiphytes' when
+    defining habitatmech:GOLD.949bdcdb77 as 'fruit surface epiphyte environment'.
+    Verbatim source attestations are preserved. Displaced GOLD source label 'Epiphytes'
+    in path 'Host-associated > Plants > Phyllosphere > Carposphere > Epiphytes' is
+    context-dependent, ambiguous, or names a host/disease/process rather than the
+    defined habitat 'fruit surface epiphyte environment'; suppress automatic exact-synonym
+    retention while preserving verbatim source provenance.

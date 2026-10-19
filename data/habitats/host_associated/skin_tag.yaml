@@ -1,10 +1,21 @@
 identifier: habitatmech:GOLD.dfaa49c534
-label: Skin tag
+label: human acrochordons skin tag
+definition: A skin environment consisting of a benign pedunculated fibroepithelial
+  polyp (acrochordon or skin tag) projecting from intertriginous human skin folds
+  such as the neck, axilla, or groin.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Skin tag
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: human acrochordon
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- habitatmech:GOLD.333c18201f
+- ENVO:2100003
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6231
@@ -12,15 +23,20 @@ source_attestations:
   source_path: 'Host-associated > Mammals: Human > Benign tumor > Skin tag'
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.dfaa49c534)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Defined human
+    acrochordons skin tag under ENVO:2100003 ''skin environment''; supported by intertriginous
+    skin lesion microbiology (PMID 26829725). (source concept habitatmech:GOLD.dfaa49c534)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: Defined as 'human acrochordons skin tag' under ENVO:2100003 'skin environment'.
+    Defined human acrochordons skin tag under ENVO:2100003 'skin environment'; supported
+    by intertriginous skin lesion microbiology (PMID 26829725); parent_mode REPLACE
+    excludes NOT_APPLICABLE GOLD parent Benign tumor.

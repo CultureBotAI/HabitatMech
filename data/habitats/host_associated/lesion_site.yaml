@@ -1,9 +1,17 @@
 identifier: habitatmech:GOLD.2f12ab3480
-label: Lesion site
+label: human arterial ulcer lesion site
+definition: An ulcer tissue site at an ischemic arterial ulcer on a human lower extremity,
+  characterized by tissue hypoxia and chronic polymicrobial wound biofilm colonization.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: arterial ulcer wound bed
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- BTO:0004570
 - habitatmech:GOLD.03b138e563
 source_attestations:
 - source: GOLD
@@ -12,15 +20,29 @@ source_attestations:
   source_path: 'Host-associated > Mammals: Human > Multisystem conditions > Arterial
     ulcer > Lesion site'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.2f12ab3480)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Defined human
+    arterial ulcer lesion site under BTO:0004570 ''ulcer tissue''; supported by chronic
+    lower-extremity ulcer microbiome studies (PMID 27080909). (source concept habitatmech:GOLD.2f12ab3480)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: Defined as 'human arterial ulcer lesion site' under BTO:0004570 'ulcer
+    tissue'. Defined human arterial ulcer lesion site under BTO:0004570 'ulcer tissue';
+    supported by chronic lower-extremity ulcer microbiome studies (PMID 27080909).
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Lesion site''
+    when defining habitatmech:GOLD.2f12ab3480 as ''human arterial ulcer lesion site''.
+    Verbatim source attestations are preserved. Displaced GOLD source label ''Lesion
+    site'' in path ''Host-associated > Mammals: Human > Multisystem conditions > Arterial
+    ulcer > Lesion site'' is context-dependent, ambiguous, or names a host/disease/process
+    rather than the defined habitat ''human arterial ulcer lesion site''; suppress
+    automatic exact-synonym retention while preserving verbatim source provenance.'

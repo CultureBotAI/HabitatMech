@@ -1,10 +1,15 @@
 identifier: habitatmech:GOLD.356adc0d4d
-label: Endosphere
+label: leaf endosphere
+definition: An environment associated with a plant part or small plant that comprises
+  the internal tissues of a plant leaf (including mesophyll, intercellular apoplastic
+  spaces, and leaf vasculature) interior to the epidermis, inhabited by foliar endophytic
+  microorganisms.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
-- PO:0025034
+- ENVO:01001057
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5990
@@ -13,15 +18,35 @@ source_attestations:
   assertion_count: 5
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.356adc0d4d)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Plants > Phyllosphere > Phylloplane/Leaf > Endosphere''
+    denotes the internal leaf endosphere compartment rather than the whole leaf organ
+    (PO:0025034). Define under ENVO:01001057 with parent_mode REPLACE and exclude
+    bare ''Endosphere'' (PMID 25972004; DOI:10.1128/MMBR.00050-14). Path: Host-associated
+    > Plants > Phyllosphere > Phylloplane/Leaf > Endosphere (source concept habitatmech:GOLD.356adc0d4d)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''leaf endosphere'' under ENVO:01001057 ''environment associated
+    with a plant part or small plant''. ITEM curation: GOLD ''Host-associated > Plants
+    > Phyllosphere > Phylloplane/Leaf > Endosphere'' denotes the internal leaf endosphere
+    compartment rather than the whole leaf organ (PO:0025034). Define under ENVO:01001057
+    with parent_mode REPLACE and exclude bare ''Endosphere'' (PMID 25972004; DOI:10.1128/MMBR.00050-14).
+    Path: Host-associated > Plants > Phyllosphere > Phylloplane/Leaf > Endosphere'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Endosphere' when
+    defining habitatmech:GOLD.356adc0d4d as 'leaf endosphere'. Verbatim source attestations
+    are preserved. Displaced GOLD source label 'Endosphere' in path 'Host-associated
+    > Plants > Phyllosphere > Phylloplane/Leaf > Endosphere' is context-dependent,
+    ambiguous, or names a host/disease/process rather than the defined habitat 'leaf
+    endosphere'; suppress automatic exact-synonym retention while preserving verbatim
+    source provenance.

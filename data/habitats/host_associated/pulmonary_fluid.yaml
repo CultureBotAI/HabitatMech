@@ -1,10 +1,14 @@
 identifier: habitatmech:GOLD.226fcf3880
-label: Pulmonary fluid
+label: human pulmonary fluid
+definition: A bodily fluid present in or recovered from the lower respiratory tract
+  or alveolar spaces of the human lung, such as epithelial lining fluid or bronchoalveolar
+  fluid.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
-- habitatmech:GOLD.5bbc13545b
+- UBERON:0006314
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5252
@@ -14,15 +18,37 @@ source_attestations:
   assertion_count: 10
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.226fcf3880)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals: Human > Respiratory system > Lung > Pulmonary
+    fluid'' denotes fluid from the human lung rather than the whole lung organ. Define
+    under UBERON:0006314 (bodily fluid) with parent_mode REPLACE and exclude bare
+    ''Pulmonary fluid'' (PMID 25078910; DOI:10.1128/JCM.01028-14; PMID 25803243; DOI:10.1513/AnnalsATS.201501-029OC).
+    Path: Host-associated > Mammals: Human > Respiratory system > Lung > Pulmonary
+    fluid (source concept habitatmech:GOLD.226fcf3880)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''human pulmonary fluid'' under UBERON:0006314 ''bodily fluid''.
+    ITEM curation: GOLD ''Host-associated > Mammals: Human > Respiratory system >
+    Lung > Pulmonary fluid'' denotes fluid from the human lung rather than the whole
+    lung organ. Define under UBERON:0006314 (bodily fluid) with parent_mode REPLACE
+    and exclude bare ''Pulmonary fluid'' (PMID 25078910; DOI:10.1128/JCM.01028-14;
+    PMID 25803243; DOI:10.1513/AnnalsATS.201501-029OC). Path: Host-associated > Mammals:
+    Human > Respiratory system > Lung > Pulmonary fluid'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Pulmonary fluid''
+    when defining habitatmech:GOLD.226fcf3880 as ''human pulmonary fluid''. Verbatim
+    source attestations are preserved. Displaced GOLD source label ''Pulmonary fluid''
+    in path ''Host-associated > Mammals: Human > Respiratory system > Lung > Pulmonary
+    fluid'' is context-dependent, ambiguous, or names a host/disease/process rather
+    than the defined habitat ''human pulmonary fluid''; suppress automatic exact-synonym
+    retention while preserving verbatim source provenance.'

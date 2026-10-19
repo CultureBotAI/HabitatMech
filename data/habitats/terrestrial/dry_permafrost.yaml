@@ -1,10 +1,15 @@
 identifier: habitatmech:GOLD.52092cfbb2
-label: Dry permafrost
+label: dry permafrost
+definition: A permafrost containing negligible ice cement and extremely low liquid
+  water availability (characteristic of hyperarid polar cold deserts such as the McMurdo
+  Dry Valleys), where ice-free pore spaces create cold, hyperarid conditions for cryophilic
+  microorganisms.
+definition_source: HabitatMech
 habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
-- habitatmech:GOLD.e2cd238930
+- ENVO:00000134
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7967
@@ -13,15 +18,25 @@ source_attestations:
   assertion_count: 1
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.52092cfbb2)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Terrestrial > Soil > Desert > Dry permafrost'' denotes
+    ice-free dry permafrost soil/ground rather than a whole desert biome. Define under
+    ENVO:00000134 (permafrost) with parent_mode REPLACE (PMID 26785172; DOI:10.1038/ismej.2015.239).
+    Path: Environmental > Terrestrial > Soil > Desert > Dry permafrost (source concept
+    habitatmech:GOLD.52092cfbb2)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''dry permafrost'' under ENVO:00000134 ''permafrost''. ITEM
+    curation: GOLD ''Environmental > Terrestrial > Soil > Desert > Dry permafrost''
+    denotes ice-free dry permafrost soil/ground rather than a whole desert biome.
+    Define under ENVO:00000134 (permafrost) with parent_mode REPLACE (PMID 26785172;
+    DOI:10.1038/ismej.2015.239). Path: Environmental > Terrestrial > Soil > Desert
+    > Dry permafrost'

@@ -1,9 +1,13 @@
 identifier: habitatmech:GOLD.e3bc9d4cff
-label: Small intestine content
+label: mummified human small intestine content
+definition: An anatomical entity environment consisting of preserved luminal digesta
+  recovered from the small intestine of mummified archaeological human remains.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
+- ENVO:2100000
 - habitatmech:GOLD.7c194a46ba
 source_attestations:
 - source: GOLD
@@ -12,15 +16,36 @@ source_attestations:
   source_path: 'Host-associated > Mammals: Human > Remains > Mummified remains > Small
     intestine content'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.e3bc9d4cff)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals: Human > Remains > Mummified remains > Small
+    intestine content'' denotes preserved small intestine contents from mummified
+    human remains (PMID 26744406; DOI:10.1126/science.aad2545). Path: Host-associated
+    > Mammals: Human > Remains > Mummified remains > Small intestine content (source
+    concept habitatmech:GOLD.e3bc9d4cff)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''mummified human small intestine content'' under ENVO:2100000
+    ''anatomical entity environment''. ITEM curation: GOLD ''Host-associated > Mammals:
+    Human > Remains > Mummified remains > Small intestine content'' denotes preserved
+    small intestine contents from mummified human remains (PMID 26744406; DOI:10.1126/science.aad2545).
+    Path: Host-associated > Mammals: Human > Remains > Mummified remains > Small intestine
+    content'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Small intestine
+    content'' when defining habitatmech:GOLD.e3bc9d4cff as ''mummified human small
+    intestine content''. Verbatim source attestations are preserved. Displaced GOLD
+    source label ''Small intestine content'' in path ''Host-associated > Mammals:
+    Human > Remains > Mummified remains > Small intestine content'' is context-dependent,
+    ambiguous, or names a host/disease/process rather than the defined habitat ''mummified
+    human small intestine content''; suppress automatic exact-synonym retention while
+    preserving verbatim source provenance.'

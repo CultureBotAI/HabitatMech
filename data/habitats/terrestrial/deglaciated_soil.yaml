@@ -1,9 +1,21 @@
 identifier: habitatmech:GOLD.8fb6349ffa
-label: Deglaciated soil
+label: deglaciated soil
+definition: A soil recently exposed by glacier retreat that is undergoing primary
+  pedogenesis and microbial succession from pioneer lithotrophs and diazotrophs to
+  vegetated soil communities.
+definition_source: HabitatMech
 habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: glacier retreat soil
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: post-glacial soil
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:00001998
 - habitatmech:GOLD.72c624d166
 source_attestations:
 - source: GOLD
@@ -11,15 +23,23 @@ source_attestations:
   source_label: Deglaciated soil
   source_path: Environmental > Terrestrial > Soil > Glacier > Deglaciated soil
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.8fb6349ffa)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Terrestrial > Soil > Glacier > Deglaciated soil'' denotes
+    nascent soil exposed following glacier retreat. Define under ENVO:00001998 (soil)
+    (PMID 22851598; DOI:10.1038/ismej.2012.88). Path: Environmental > Terrestrial
+    > Soil > Glacier > Deglaciated soil (source concept habitatmech:GOLD.8fb6349ffa)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''deglaciated soil'' under ENVO:00001998 ''soil''. ITEM curation:
+    GOLD ''Environmental > Terrestrial > Soil > Glacier > Deglaciated soil'' denotes
+    nascent soil exposed following glacier retreat. Define under ENVO:00001998 (soil)
+    (PMID 22851598; DOI:10.1038/ismej.2012.88). Path: Environmental > Terrestrial
+    > Soil > Glacier > Deglaciated soil'

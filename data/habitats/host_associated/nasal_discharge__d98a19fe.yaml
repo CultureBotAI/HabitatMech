@@ -1,10 +1,20 @@
 identifier: habitatmech:GOLD.9e30d15bf0
-label: Nasal discharge
+label: human nasal discharge
+definition: An oronasal secretion material consisting of mucus, serous fluid, leukocytes,
+  and epithelial debris discharged from the human nasal cavity (rhinorrhea).
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Nasal discharge
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: human rhinorrhea fluid
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- habitatmech:GOLD.bcb2f8b7f3
+- ENVO:02000035
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6615
@@ -12,15 +22,26 @@ source_attestations:
   source_path: 'Host-associated > Mammals: Human > Respiratory system > Nasal cavity
     > Nasal discharge'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.9e30d15bf0)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals: Human > Respiratory system > Nasal cavity >
+    Nasal discharge'' denotes mucus and exudate discharged from the human nasal cavity.
+    Define under ENVO:02000035 (oronasal secretion material) (PMID 22977171; DOI:10.1126/scitranslmed.3004404).
+    Path: Host-associated > Mammals: Human > Respiratory system > Nasal cavity > Nasal
+    discharge (source concept habitatmech:GOLD.9e30d15bf0)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''human nasal discharge'' under ENVO:02000035 ''oronasal secretion
+    material''. ITEM curation: GOLD ''Host-associated > Mammals: Human > Respiratory
+    system > Nasal cavity > Nasal discharge'' denotes mucus and exudate discharged
+    from the human nasal cavity. Define under ENVO:02000035 (oronasal secretion material)
+    (PMID 22977171; DOI:10.1126/scitranslmed.3004404). Path: Host-associated > Mammals:
+    Human > Respiratory system > Nasal cavity > Nasal discharge; parent_mode REPLACE
+    excludes containing organ/organ-system GOLD parent.'

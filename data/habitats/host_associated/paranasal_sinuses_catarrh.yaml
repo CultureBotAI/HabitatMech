@@ -1,10 +1,21 @@
 identifier: habitatmech:GOLD.9f2762bd0f
-label: 'Paranasal sinuses: Catarrh'
+label: human paranasal sinus catarrhal exudate
+definition: An oronasal secretion material consisting of inflammatory mucopurulent
+  catarrhal exudate accumulated within the human paranasal sinus cavities during acute
+  or chronic rhinosinusitis.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: 'Paranasal sinuses: Catarrh'
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: human sinus catarrh exudate
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- habitatmech:GOLD.bcb2f8b7f3
+- ENVO:02000035
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6621
@@ -12,15 +23,22 @@ source_attestations:
   source_path: 'Host-associated > Mammals: Human > Respiratory system > Nasal cavity
     > Paranasal sinuses: Catarrh'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.9f2762bd0f)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Defined human
+    paranasal sinus catarrhal exudate under ENVO:02000035 ''oronasal secretion material''
+    (replacing containing cavity parent Nasal cavity); supported by human rhinosinusitis
+    exudate microbiome studies (PMID 27512056). (source concept habitatmech:GOLD.9f2762bd0f)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: Defined as 'human paranasal sinus catarrhal exudate' under ENVO:02000035
+    'oronasal secretion material'. Defined human paranasal sinus catarrhal exudate
+    under ENVO:02000035 'oronasal secretion material' with parent_mode REPLACE to
+    exclude containing cavity GOLD parent Nasal cavity; supported by human rhinosinusitis
+    exudate microbiome studies (PMID 27512056).

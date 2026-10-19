@@ -1,25 +1,45 @@
 identifier: habitatmech:GOLD.aa6bf27e0e
-label: Trees stand
+label: riparian tree stand soil
+definition: A soil beneath a wooded stand of riparian trees along a riverbank or stream
+  corridor, influenced by alluvial water tables and tree root litter.
+definition_source: HabitatMech
 habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
-- habitatmech:GOLD.e87336ed95
+- ENVO:00001998
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7682
   source_label: Trees stand
   source_path: Environmental > Terrestrial > Soil > Riparian zone > Trees stand
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.aa6bf27e0e)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Terrestrial > Soil > Riparian zone > Trees stand'' denotes
+    soil under a riparian tree stand (PMID 28658250; DOI:10.1371/journal.pone.0179652).
+    Path: Environmental > Terrestrial > Soil > Riparian zone > Trees stand (source
+    concept habitatmech:GOLD.aa6bf27e0e)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''riparian tree stand soil'' under ENVO:00001998 ''soil''.
+    ITEM curation: GOLD ''Environmental > Terrestrial > Soil > Riparian zone > Trees
+    stand'' denotes soil under a riparian tree stand (PMID 28658250; DOI:10.1371/journal.pone.0179652).
+    Path: Environmental > Terrestrial > Soil > Riparian zone > Trees stand'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Trees stand' when
+    defining habitatmech:GOLD.aa6bf27e0e as 'riparian tree stand soil'. Verbatim source
+    attestations are preserved. Displaced GOLD source label 'Trees stand' in path
+    'Environmental > Terrestrial > Soil > Riparian zone > Trees stand' is context-dependent,
+    ambiguous, or names a host/disease/process rather than the defined habitat 'riparian
+    tree stand soil'; suppress automatic exact-synonym retention while preserving
+    verbatim source provenance.

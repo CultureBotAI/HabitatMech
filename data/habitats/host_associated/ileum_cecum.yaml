@@ -1,9 +1,17 @@
 identifier: habitatmech:GOLD.f5c2a31934
-label: Ileum-cecum
+label: mammalian ileocecal region
+definition: A lower digestive tract region spanning the distal ileum, ileocecal junction,
+  and cecum of a mammal.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: ileum-cecum region
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- UBERON:0004907
 - habitatmech:GOLD.6451c3f0ac
 source_attestations:
 - source: GOLD
@@ -14,15 +22,33 @@ source_attestations:
   assertion_count: 2
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.f5c2a31934)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals > Digestive system > Lower gastrointestinal tract
+    > Ileum-cecum'' denotes the mammalian ileocecal region (PMID 26261039; DOI:10.1038/ismej.2015.146).
+    Path: Host-associated > Mammals > Digestive system > Lower gastrointestinal tract
+    > Ileum-cecum (source concept habitatmech:GOLD.f5c2a31934)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''mammalian ileocecal region'' under UBERON:0004907 ''lower
+    digestive tract''. ITEM curation: GOLD ''Host-associated > Mammals > Digestive
+    system > Lower gastrointestinal tract > Ileum-cecum'' denotes the mammalian ileocecal
+    region (PMID 26261039; DOI:10.1038/ismej.2015.146). Path: Host-associated > Mammals
+    > Digestive system > Lower gastrointestinal tract > Ileum-cecum'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Ileum-cecum' when
+    defining habitatmech:GOLD.f5c2a31934 as 'mammalian ileocecal region'. Verbatim
+    source attestations are preserved. Displaced GOLD source label 'Ileum-cecum' in
+    path 'Host-associated > Mammals > Digestive system > Lower gastrointestinal tract
+    > Ileum-cecum' is context-dependent, ambiguous, or names a host/disease/process
+    rather than the defined habitat 'mammalian ileocecal region'; suppress automatic
+    exact-synonym retention while preserving verbatim source provenance.

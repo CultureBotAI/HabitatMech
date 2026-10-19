@@ -1,8 +1,17 @@
 identifier: habitatmech:GOLD.0a69f87c03
-label: Extracellular
+label: annelid egg capsule albuminous fluid
+definition: An egg capsule compartment consisting of the extracellular nutritive albuminous
+  fluid inside an annelid cocoon (such as an earthworm or leech egg capsule), where
+  vertically transmitted bacterial symbionts proliferate before colonizing developing
+  embryos.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: earthworm cocoon extracellular fluid
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - UBERON:3010636
 source_attestations:
@@ -11,15 +20,33 @@ source_attestations:
   source_label: Extracellular
   source_path: Host-associated > Annelida > Reproductive system > Egg capsule > Extracellular
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.0a69f87c03)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Annelida > Reproductive system > Egg capsule > Extracellular''
+    denotes the extracellular fluid compartment inside an annelid egg capsule/cocoon
+    (PMID 18480259; DOI:10.1128/AEM.00126-08). Path: Host-associated > Annelida >
+    Reproductive system > Egg capsule > Extracellular (source concept habitatmech:GOLD.0a69f87c03)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''annelid egg capsule albuminous fluid'' under UBERON:3010636
+    ''egg capsule''. ITEM curation: GOLD ''Host-associated > Annelida > Reproductive
+    system > Egg capsule > Extracellular'' denotes the extracellular fluid compartment
+    inside an annelid egg capsule/cocoon (PMID 18480259; DOI:10.1128/AEM.00126-08).
+    Path: Host-associated > Annelida > Reproductive system > Egg capsule > Extracellular'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Extracellular' when
+    defining habitatmech:GOLD.0a69f87c03 as 'annelid egg capsule albuminous fluid'.
+    Verbatim source attestations are preserved. Displaced GOLD source label 'Extracellular'
+    in path 'Host-associated > Annelida > Reproductive system > Egg capsule > Extracellular'
+    is context-dependent, ambiguous, or names a host/disease/process rather than the
+    defined habitat 'annelid egg capsule albuminous fluid'; suppress automatic exact-synonym
+    retention while preserving verbatim source provenance.

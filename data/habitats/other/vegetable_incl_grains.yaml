@@ -1,8 +1,18 @@
 identifier: habitatmech:BACDIVE.d843032e51
-label: Vegetable-incl.-Grains
+label: vegetable or grain food product
+definition: A vegetable food product comprising harvested culinary vegetables or cereal
+  grains that serve as substrates for epiphytic, post-harvest spoilage, or food-borne
+  microorganisms.
+definition_source: HabitatMech
 habitat_category: OTHER
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: vegetables and grains
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+parent_habitats:
+- FOODON:00001261
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:vegetable-incl.-grains
@@ -163,15 +173,30 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 49
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:BACDIVE.d843032e51)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Defined vegetable
+    or grain food product under FOODON:00001261 ''vegetable food product''; supported
+    by fresh produce and cereal grain microbiome studies (PMID 31806838). (source
+    concept habitatmech:BACDIVE.d843032e51)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: Defined as 'vegetable or grain food product' under FOODON:00001261 'vegetable
+    food product'. Defined vegetable or grain food product under FOODON:00001261 'vegetable
+    food product'; supported by fresh produce and cereal grain microbiome studies
+    (PMID 31806838).
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Vegetable-incl.-Grains'
+    when defining habitatmech:BACDIVE.d843032e51 as 'vegetable or grain food product'.
+    Verbatim source attestations are preserved. Displaced GOLD source label 'Vegetable-incl.-Grains'
+    in path 'Vegetable-incl.-Grains' is context-dependent, ambiguous, or names a host/disease/process
+    rather than the defined habitat 'vegetable or grain food product'; suppress automatic
+    exact-synonym retention while preserving verbatim source provenance.

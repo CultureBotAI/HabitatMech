@@ -1,8 +1,16 @@
 identifier: habitatmech:GOLD.8258aa29fb
-label: Nasolacrimal canal
+label: human nasolacrimal duct
+definition: A lacrimal apparatus conduit that drains tear fluid from the lacrimal
+  sac through the bony nasolacrimal canal into the inferior meatus of the human nasal
+  cavity, bridging ocular surface and nasal mucosal microbiota.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Nasolacrimal canal
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - UBERON:0001750
 source_attestations:
@@ -12,15 +20,23 @@ source_attestations:
   source_path: 'Host-associated > Mammals: Human > Integumentary system > Lacrimal
     apparatus > Nasolacrimal canal'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.8258aa29fb)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals: Human > Integumentary system > Lacrimal apparatus
+    > Nasolacrimal canal'' denotes the human nasolacrimal canal/duct (PMID 22977171;
+    DOI:10.1126/scitranslmed.3004404). Path: Host-associated > Mammals: Human > Integumentary
+    system > Lacrimal apparatus > Nasolacrimal canal (source concept habitatmech:GOLD.8258aa29fb)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''human nasolacrimal duct'' under UBERON:0001750 ''lacrimal
+    apparatus''. ITEM curation: GOLD ''Host-associated > Mammals: Human > Integumentary
+    system > Lacrimal apparatus > Nasolacrimal canal'' denotes the human nasolacrimal
+    canal/duct (PMID 22977171; DOI:10.1126/scitranslmed.3004404). Path: Host-associated
+    > Mammals: Human > Integumentary system > Lacrimal apparatus > Nasolacrimal canal'

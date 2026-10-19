@@ -1,10 +1,21 @@
 identifier: habitatmech:GOLD.151ba43519
-label: Deep subsurface
+label: deep terrestrial subsurface environment
+definition: An environmental system located deep within the continental crust below
+  the soil and shallow regolith zones, where lithoautotrophic and heterotrophic microorganisms
+  inhabit rock fractures, pore spaces, and deep aquifers.
+definition_source: HabitatMech
 habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: continental deep subsurface
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: deep terrestrial subsurface
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- ENVO:00000446
+- ENVO:01000254
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:3497
@@ -14,15 +25,37 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.151ba43519)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Terrestrial > Deep subsurface'' denotes the deep continental
+    subsurface biosphere rather than a surface terrestrial biome (ENVO:00000446).
+    Define under ENVO:01000254 (environmental system) with parent_mode REPLACE and
+    exclude bare ''Deep subsurface'' (PMID 30250253; DOI:10.1038/s41561-018-0221-6;
+    PMID 26860613; DOI:10.1038/NMICROBIOL.2015.2). Path: Environmental > Terrestrial
+    > Deep subsurface (source concept habitatmech:GOLD.151ba43519)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''deep terrestrial subsurface environment'' under ENVO:01000254
+    ''environmental system''. ITEM curation: GOLD ''Environmental > Terrestrial >
+    Deep subsurface'' denotes the deep continental subsurface biosphere rather than
+    a surface terrestrial biome (ENVO:00000446). Define under ENVO:01000254 (environmental
+    system) with parent_mode REPLACE and exclude bare ''Deep subsurface'' (PMID 30250253;
+    DOI:10.1038/s41561-018-0221-6; PMID 26860613; DOI:10.1038/NMICROBIOL.2015.2).
+    Path: Environmental > Terrestrial > Deep subsurface'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Deep subsurface'
+    when defining habitatmech:GOLD.151ba43519 as 'deep terrestrial subsurface environment'.
+    Verbatim source attestations are preserved. Displaced GOLD source label 'Deep
+    subsurface' in path 'Environmental > Terrestrial > Deep subsurface' is context-dependent,
+    ambiguous, or names a host/disease/process rather than the defined habitat 'deep
+    terrestrial subsurface environment'; suppress automatic exact-synonym retention
+    while preserving verbatim source provenance.

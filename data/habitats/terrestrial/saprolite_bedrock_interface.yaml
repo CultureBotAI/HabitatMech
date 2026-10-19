@@ -1,25 +1,43 @@
 identifier: habitatmech:GOLD.e69b79f3ef
-label: Saprolite–Bedrock interface
+label: saprolite-bedrock interface
+definition: An environmental system located at the deep critical-zone weathering front
+  where chemically weathered saprolite transitions into coherent parent bedrock, supporting
+  chemolithoautotrophic iron- and sulfur-oxidizing microorganisms.
+definition_source: HabitatMech
 habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: bedrock-saprolite weathering front
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- ENVO:00000446
+- ENVO:01000254
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6084
   source_label: Saprolite–Bedrock interface
   source_path: Environmental > Terrestrial > Saprolite–Bedrock interface
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.e69b79f3ef)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Terrestrial > Saprolite–Bedrock interface'' denotes the
+    deep weathering front between saprolite and bedrock rather than a surface terrestrial
+    biome (ENVO:00000446). Define under ENVO:01000254 (environmental system) with
+    parent_mode REPLACE (PMID 27528551; DOI:10.1038/ismej.2016.103). Path: Environmental
+    > Terrestrial > Saprolite–Bedrock interface (source concept habitatmech:GOLD.e69b79f3ef)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''saprolite-bedrock interface'' under ENVO:01000254 ''environmental
+    system''. ITEM curation: GOLD ''Environmental > Terrestrial > Saprolite–Bedrock
+    interface'' denotes the deep weathering front between saprolite and bedrock rather
+    than a surface terrestrial biome (ENVO:00000446). Define under ENVO:01000254 (environmental
+    system) with parent_mode REPLACE (PMID 27528551; DOI:10.1038/ismej.2016.103).
+    Path: Environmental > Terrestrial > Saprolite–Bedrock interface'

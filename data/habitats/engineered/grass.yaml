@@ -1,25 +1,50 @@
 identifier: habitatmech:GOLD.29c6aa959b
-label: Grass
+label: grass clippings solid waste
+definition: A waste material composed of mowed turfgrass clippings and herbaceous
+  grass residues collected as yard or agricultural green waste.
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: grass waste
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: lawn clippings waste
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- mesh:D062611
+- ENVO:00002264
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4871
   source_label: Grass
   source_path: Engineered > Solid waste > Grass
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.29c6aa959b)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Engineered > Solid waste > Grass'' denotes grass clippings solid waste
+    (PMID 27006046; DOI:10.1016/j.biortech.2016.03.053). Path: Engineered > Solid
+    waste > Grass (source concept habitatmech:GOLD.29c6aa959b)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''grass clippings solid waste'' under ENVO:00002264 ''waste
+    material''. ITEM curation: GOLD ''Engineered > Solid waste > Grass'' denotes grass
+    clippings solid waste (PMID 27006046; DOI:10.1016/j.biortech.2016.03.053). Path:
+    Engineered > Solid waste > Grass'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Grass' when defining
+    habitatmech:GOLD.29c6aa959b as 'grass clippings solid waste'. Verbatim source
+    attestations are preserved. Displaced GOLD source label 'Grass' in path 'Engineered
+    > Solid waste > Grass' is context-dependent, ambiguous, or names a host/disease/process
+    rather than the defined habitat 'grass clippings solid waste'; suppress automatic
+    exact-synonym retention while preserving verbatim source provenance.

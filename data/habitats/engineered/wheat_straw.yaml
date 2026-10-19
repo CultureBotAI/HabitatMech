@@ -1,10 +1,14 @@
 identifier: habitatmech:GOLD.dc36405736
-label: Wheat straw
+label: wheat straw mushroom cultivation substrate
+definition: A manufactured product composed of composted or pasteurized wheat straw
+  used in a mushroom farm as a lignocellulosic substrate for cultivating edible fungi
+  (such as Agaricus bisporus or Pleurotus ostreatus).
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
-- habitatmech:GOLD.083ab65161
+- ENVO:00003074
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7853
@@ -12,15 +16,33 @@ source_attestations:
   source_path: Engineered > Built environment > Mushroom farm > Cultivation substrate
     > Wheat straw
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.dc36405736)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Engineered > Built environment > Mushroom farm > Cultivation substrate
+    > Wheat straw'' denotes wheat straw mushroom cultivation substrate (PMID 29021210;
+    DOI:10.1073/pnas.1709016114). Path: Engineered > Built environment > Mushroom
+    farm > Cultivation substrate > Wheat straw (source concept habitatmech:GOLD.dc36405736)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''wheat straw mushroom cultivation substrate'' under ENVO:00003074
+    ''manufactured product''. ITEM curation: GOLD ''Engineered > Built environment
+    > Mushroom farm > Cultivation substrate > Wheat straw'' denotes wheat straw mushroom
+    cultivation substrate (PMID 29021210; DOI:10.1073/pnas.1709016114). Path: Engineered
+    > Built environment > Mushroom farm > Cultivation substrate > Wheat straw'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Wheat straw' when
+    defining habitatmech:GOLD.dc36405736 as 'wheat straw mushroom cultivation substrate'.
+    Verbatim source attestations are preserved. Displaced GOLD source label 'Wheat
+    straw' in path 'Engineered > Built environment > Mushroom farm > Cultivation substrate
+    > Wheat straw' is context-dependent, ambiguous, or names a host/disease/process
+    rather than the defined habitat 'wheat straw mushroom cultivation substrate';
+    suppress automatic exact-synonym retention while preserving verbatim source provenance.

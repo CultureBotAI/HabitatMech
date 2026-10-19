@@ -1,9 +1,17 @@
 identifier: habitatmech:GOLD.81aa9dc62f
-label: Auditory/Hearing system
+label: mammalian auditory system environment
+definition: A sensory system anatomical environment comprising the external ear canal,
+  tympanic membrane, middle ear cavity, and inner ear of a mammalian host.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: mammalian ear and auditory system
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- UBERON:0001032
 - habitatmech:GOLD.e889967f4f
 source_attestations:
 - source: GOLD
@@ -11,15 +19,31 @@ source_attestations:
   source_label: Auditory/Hearing system
   source_path: Host-associated > Mammals > Auditory/Hearing system
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.81aa9dc62f)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Defined mammalian
+    auditory system environment under UBERON:0001032 ''sensory system''; supported
+    by mammalian ear canal and otitis microbiome studies (PMID 28529509). (source
+    concept habitatmech:GOLD.81aa9dc62f)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: Defined as 'mammalian auditory system environment' under UBERON:0001032
+    'sensory system'. Defined mammalian auditory system environment under UBERON:0001032
+    'sensory system'; supported by mammalian ear canal and otitis microbiome studies
+    (PMID 28529509).
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Auditory/Hearing
+    system' when defining habitatmech:GOLD.81aa9dc62f as 'mammalian auditory system
+    environment'. Verbatim source attestations are preserved. Displaced GOLD source
+    label 'Auditory/Hearing system' in path 'Host-associated > Mammals > Auditory/Hearing
+    system' is context-dependent, ambiguous, or names a host/disease/process rather
+    than the defined habitat 'mammalian auditory system environment'; suppress automatic
+    exact-synonym retention while preserving verbatim source provenance.

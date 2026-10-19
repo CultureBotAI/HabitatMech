@@ -1,9 +1,18 @@
 identifier: habitatmech:GOLD.891c734288
-label: Wall surface
+label: cave wall surface
+definition: A cave environment comprising the exposed rock wall and speleothem surfaces
+  inside a subterranean cave, often colonized by oligotrophic actinobacterial, nitrospirae,
+  and fungal biofilms.
+definition_source: HabitatMech
 habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: subterranean cave wall
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:00000067
 - habitatmech:GOLD.46abb9a153
 source_attestations:
 - source: GOLD
@@ -11,15 +20,33 @@ source_attestations:
   source_label: Wall surface
   source_path: Environmental > Terrestrial > Deep subsurface > Cave > Wall surface
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.891c734288)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Terrestrial > Deep subsurface > Cave > Wall surface'' denotes
+    the rock wall surface of a subterranean cave. Define under ENVO:00000067 (cave)
+    and exclude bare ''Wall surface'' (PMID 26283365; DOI:10.3389/fmicb.2015.00802).
+    Path: Environmental > Terrestrial > Deep subsurface > Cave > Wall surface (source
+    concept habitatmech:GOLD.891c734288)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''cave wall surface'' under ENVO:00000067 ''cave''. ITEM curation:
+    GOLD ''Environmental > Terrestrial > Deep subsurface > Cave > Wall surface'' denotes
+    the rock wall surface of a subterranean cave. Define under ENVO:00000067 (cave)
+    and exclude bare ''Wall surface'' (PMID 26283365; DOI:10.3389/fmicb.2015.00802).
+    Path: Environmental > Terrestrial > Deep subsurface > Cave > Wall surface'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Wall surface' when
+    defining habitatmech:GOLD.891c734288 as 'cave wall surface'. Verbatim source attestations
+    are preserved. Displaced GOLD source label 'Wall surface' in path 'Environmental
+    > Terrestrial > Deep subsurface > Cave > Wall surface' is context-dependent, ambiguous,
+    or names a host/disease/process rather than the defined habitat 'cave wall surface';
+    suppress automatic exact-synonym retention while preserving verbatim source provenance.

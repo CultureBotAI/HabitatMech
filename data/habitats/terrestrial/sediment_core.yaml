@@ -1,25 +1,47 @@
 identifier: habitatmech:GOLD.04bff31353
-label: Sediment core
+label: terrestrial geologic sediment core
+definition: A sediment recovered as a depth-stratified cylindrical core from a terrestrial
+  geologic deposit, preserving vertical redox and diagenetic gradients inhabited by
+  subsurface microorganisms.
+definition_source: HabitatMech
 habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
-- habitatmech:GOLD.eac5ec40c9
+- ENVO:00002007
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5919
   source_label: Sediment core
   source_path: Environmental > Terrestrial > Geologic > Sediment > Sediment core
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.04bff31353)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Terrestrial > Geologic > Sediment > Sediment core'' denotes
+    a terrestrial geologic sediment core (PMID 27002060; DOI:10.1038/nmicrobiol.2016.35).
+    Path: Environmental > Terrestrial > Geologic > Sediment > Sediment core (source
+    concept habitatmech:GOLD.04bff31353)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''terrestrial geologic sediment core'' under ENVO:00002007
+    ''sediment''. ITEM curation: GOLD ''Environmental > Terrestrial > Geologic > Sediment
+    > Sediment core'' denotes a terrestrial geologic sediment core (PMID 27002060;
+    DOI:10.1038/nmicrobiol.2016.35). Path: Environmental > Terrestrial > Geologic
+    > Sediment > Sediment core'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Sediment core' when
+    defining habitatmech:GOLD.04bff31353 as 'terrestrial geologic sediment core'.
+    Verbatim source attestations are preserved. Displaced GOLD source label 'Sediment
+    core' in path 'Environmental > Terrestrial > Geologic > Sediment > Sediment core'
+    is context-dependent, ambiguous, or names a host/disease/process rather than the
+    defined habitat 'terrestrial geologic sediment core'; suppress automatic exact-synonym
+    retention while preserving verbatim source provenance.

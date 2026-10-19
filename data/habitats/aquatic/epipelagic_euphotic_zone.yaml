@@ -1,8 +1,19 @@
 identifier: habitatmech:GOLD.b88a94c4f7
-label: Epipelagic/Euphotic zone
+label: marine epipelagic zone
+definition: A marine pelagic zone extending from the sea surface to approximately
+  200 meters depth where solar irradiance supports oxygenic photosynthesis by marine
+  phytoplankton and bacterioplankton.
+definition_source: HabitatMech
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Epipelagic/Euphotic zone
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: marine euphotic zone
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:00000208
 source_attestations:
@@ -14,15 +25,25 @@ source_attestations:
   assertion_count: 8
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.b88a94c4f7)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Aquatic > Marine > Pelagic zone > Epipelagic/Euphotic zone''
+    denotes the sunlit marine epipelagic zone (ENVO:00000209 is absent from the vendored
+    slice). Define under ENVO:00000208 (marine pelagic zone) (PMID 26000478; DOI:10.1126/science.1261359).
+    Path: Environmental > Aquatic > Marine > Pelagic zone > Epipelagic/Euphotic zone
+    (source concept habitatmech:GOLD.b88a94c4f7)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''marine epipelagic zone'' under ENVO:00000208 ''marine pelagic
+    zone''. ITEM curation: GOLD ''Environmental > Aquatic > Marine > Pelagic zone
+    > Epipelagic/Euphotic zone'' denotes the sunlit marine epipelagic zone (ENVO:00000209
+    is absent from the vendored slice). Define under ENVO:00000208 (marine pelagic
+    zone) (PMID 26000478; DOI:10.1126/science.1261359). Path: Environmental > Aquatic
+    > Marine > Pelagic zone > Epipelagic/Euphotic zone'

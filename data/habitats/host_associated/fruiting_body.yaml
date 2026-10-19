@@ -1,8 +1,19 @@
 identifier: habitatmech:GOLD.92cbc36828
-label: Fruiting body
+label: fungal fruiting body
+definition: A fungi-associated environment composed of a multicellular spore-producing
+  structure (sporocarp) formed by a fungus, such as a basidiocarp or ascocarp, that
+  hosts associated microbial communities.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: fungal sporocarp
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: sporocarp
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:01001041
 source_attestations:
@@ -14,15 +25,39 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.92cbc36828)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Fungi > Fruiting body'' denotes the fungal sporocarp
+    (basidiocarp or ascocarp) as a microbial habitat. Define under ENVO:01001041 (fungi-associated
+    environment) supported by fungal fruiting body microbiome studies (PMID 28539921;
+    DOI:10.3389/fmicb.2017.00836; PMID 32433550; DOI:10.1038/s41396-020-0673-9). Exclude
+    bare ''Fruiting body'' as an exact synonym because slime molds and myxobacteria
+    also form fruiting bodies. Path: Host-associated > Fungi > Fruiting body (source
+    concept habitatmech:GOLD.92cbc36828)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''fungal fruiting body'' under ENVO:01001041 ''fungi-associated
+    environment''. ITEM curation: GOLD ''Host-associated > Fungi > Fruiting body''
+    denotes the fungal sporocarp (basidiocarp or ascocarp) as a microbial habitat.
+    Define under ENVO:01001041 (fungi-associated environment) supported by fungal
+    fruiting body microbiome studies (PMID 28539921; DOI:10.3389/fmicb.2017.00836;
+    PMID 32433550; DOI:10.1038/s41396-020-0673-9). Exclude bare ''Fruiting body''
+    as an exact synonym because slime molds and myxobacteria also form fruiting bodies.
+    Path: Host-associated > Fungi > Fruiting body'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Fruiting body' when
+    defining habitatmech:GOLD.92cbc36828 as 'fungal fruiting body'. Verbatim source
+    attestations are preserved. Displaced GOLD source label 'Fruiting body' in path
+    'Host-associated > Fungi > Fruiting body' is context-dependent, ambiguous, or
+    names a host/disease/process rather than the defined habitat 'fungal fruiting
+    body'; suppress automatic exact-synonym retention while preserving verbatim source
+    provenance.

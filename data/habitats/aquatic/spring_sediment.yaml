@@ -1,9 +1,17 @@
 identifier: habitatmech:GOLD.883be78511
-label: Spring sediment
+label: spring sediment
+definition: A sediment deposited at the orifice or outflow basin of a groundwater
+  spring.
+definition_source: HabitatMech
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: groundwater spring sediment
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:00002007
 - habitatmech:GOLD.22a80cbd14
 source_attestations:
 - source: GOLD
@@ -13,15 +21,23 @@ source_attestations:
   assertion_count: 1
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.883be78511)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Aquatic > Deep subsurface > Groundwater > Spring sediment''
+    denotes sediment at a groundwater spring discharge zone. Define under ENVO:00002007
+    (sediment) (PMID 25609815; DOI:10.3389/fmicb.2014.00741). Path: Environmental
+    > Aquatic > Deep subsurface > Groundwater > Spring sediment (source concept habitatmech:GOLD.883be78511)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''spring sediment'' under ENVO:00002007 ''sediment''. ITEM
+    curation: GOLD ''Environmental > Aquatic > Deep subsurface > Groundwater > Spring
+    sediment'' denotes sediment at a groundwater spring discharge zone. Define under
+    ENVO:00002007 (sediment) (PMID 25609815; DOI:10.3389/fmicb.2014.00741). Path:
+    Environmental > Aquatic > Deep subsurface > Groundwater > Spring sediment'

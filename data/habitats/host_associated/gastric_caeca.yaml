@@ -1,9 +1,21 @@
 identifier: habitatmech:GOLD.8f1269c14c
-label: Gastric caeca
+label: insect midgut gastric cecum
+definition: A midgut diverticulum (gastric cecum) projecting from the anterior or
+  posterior insect midgut that increases absorptive surface area and frequently houses
+  specialized extracellular bacterial symbionts.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: enteric caeca
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: insect gastric caeca
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- UBERON:0001045
 - habitatmech:GOLD.67c565f695
 source_attestations:
 - source: GOLD
@@ -12,15 +24,37 @@ source_attestations:
   source_path: 'Host-associated > Arthropoda: Insects > Digestive system > Midgut
     > Gastric caeca'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.8f1269c14c)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Arthropoda: Insects > Digestive system > Midgut > Gastric
+    caeca'' denotes the gastric ceca diverticula of the insect midgut. Define under
+    UBERON:0001045 (midgut) and exclude bare ''Gastric caeca'' because GOLD also has
+    an insect larva gastric caeca node (PMID 24096815; DOI:10.1111/1574-6941.12221).
+    Path: Host-associated > Arthropoda: Insects > Digestive system > Midgut > Gastric
+    caeca (source concept habitatmech:GOLD.8f1269c14c)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''insect midgut gastric cecum'' under UBERON:0001045 ''midgut''.
+    ITEM curation: GOLD ''Host-associated > Arthropoda: Insects > Digestive system
+    > Midgut > Gastric caeca'' denotes the gastric ceca diverticula of the insect
+    midgut. Define under UBERON:0001045 (midgut) and exclude bare ''Gastric caeca''
+    because GOLD also has an insect larva gastric caeca node (PMID 24096815; DOI:10.1111/1574-6941.12221).
+    Path: Host-associated > Arthropoda: Insects > Digestive system > Midgut > Gastric
+    caeca'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Gastric caeca''
+    when defining habitatmech:GOLD.8f1269c14c as ''insect midgut gastric cecum''.
+    Verbatim source attestations are preserved. Displaced GOLD source label ''Gastric
+    caeca'' in path ''Host-associated > Arthropoda: Insects > Digestive system > Midgut
+    > Gastric caeca'' is context-dependent, ambiguous, or names a host/disease/process
+    rather than the defined habitat ''insect midgut gastric cecum''; suppress automatic
+    exact-synonym retention while preserving verbatim source provenance.'

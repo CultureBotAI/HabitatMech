@@ -1,8 +1,21 @@
 identifier: habitatmech:BACDIVE.0bfb662164
-label: Painting
+label: painted artwork surface
+definition: A manufactured product consisting of pigment and organic or inorganic
+  binders applied to canvas, wood, wall plaster, or stone, which can be colonized
+  by xerophilic and biodeteriorative fungi and bacteria.
+definition_source: HabitatMech
 habitat_category: OTHER
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: easel painting
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: mural painting surface
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+parent_habitats:
+- ENVO:00003074
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:painting
@@ -163,15 +176,28 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 38
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:BACDIVE.0bfb662164)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Defined painted
+    artwork surface under ENVO:00003074 ''manufactured product''; supported by cultural
+    heritage painting microbiome studies (PMID 30487788). (source concept habitatmech:BACDIVE.0bfb662164)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: Defined as 'painted artwork surface' under ENVO:00003074 'manufactured
+    product'. Defined painted artwork surface under ENVO:00003074 'manufactured product';
+    supported by cultural heritage painting microbiome studies (PMID 30487788).
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Painting' when defining
+    habitatmech:BACDIVE.0bfb662164 as 'painted artwork surface'. Verbatim source attestations
+    are preserved. Displaced GOLD source label 'Painting' in path 'Painting' is context-dependent,
+    ambiguous, or names a host/disease/process rather than the defined habitat 'painted
+    artwork surface'; suppress automatic exact-synonym retention while preserving
+    verbatim source provenance.

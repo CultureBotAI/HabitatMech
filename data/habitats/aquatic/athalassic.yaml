@@ -1,8 +1,16 @@
 identifier: habitatmech:GOLD.06e9da107b
-label: Athalassic
+label: athalassic saline water body
+definition: A saline water body of non-marine origin whose dissolved salts derive
+  from continental rock weathering and evaporative concentration rather than seawater
+  intrusion.
+definition_source: HabitatMech
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: athalassohaline water body
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:01001319
 source_attestations:
@@ -12,15 +20,35 @@ source_attestations:
   source_path: Environmental > Aquatic > Non-marine Saline and Alkaline > Saline >
     Athalassic
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.06e9da107b)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Aquatic > Non-marine Saline and Alkaline > Saline > Athalassic''
+    denotes non-marine continental saline waters. Define under ENVO:01001319 (saline
+    water body) and exclude bare adjective ''Athalassic'' (PMID 25120536; DOI:10.3389/fmicb.2014.00399).
+    Path: Environmental > Aquatic > Non-marine Saline and Alkaline > Saline > Athalassic
+    (source concept habitatmech:GOLD.06e9da107b)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''athalassic saline water body'' under ENVO:01001319 ''saline
+    water body''. ITEM curation: GOLD ''Environmental > Aquatic > Non-marine Saline
+    and Alkaline > Saline > Athalassic'' denotes non-marine continental saline waters.
+    Define under ENVO:01001319 (saline water body) and exclude bare adjective ''Athalassic''
+    (PMID 25120536; DOI:10.3389/fmicb.2014.00399). Path: Environmental > Aquatic >
+    Non-marine Saline and Alkaline > Saline > Athalassic'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Athalassic' when
+    defining habitatmech:GOLD.06e9da107b as 'athalassic saline water body'. Verbatim
+    source attestations are preserved. Displaced GOLD source label 'Athalassic' in
+    path 'Environmental > Aquatic > Non-marine Saline and Alkaline > Saline > Athalassic'
+    is context-dependent, ambiguous, or names a host/disease/process rather than the
+    defined habitat 'athalassic saline water body'; suppress automatic exact-synonym
+    retention while preserving verbatim source provenance.

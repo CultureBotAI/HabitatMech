@@ -1,25 +1,50 @@
 identifier: habitatmech:GOLD.e5e577a249
-label: Vernal pools
+label: freshwater vernal pool
+definition: A pond that forms seasonally in a shallow depression filled by winter
+  or spring precipitation and snowmelt and dries completely during summer, supporting
+  ephemeral freshwater microbial and invertebrate communities.
+definition_source: HabitatMech
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: vernal pool
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- ENVO:00000043
+- ENVO:00000033
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8552
   source_label: Vernal pools
   source_path: Environmental > Aquatic > Freshwater > Wetlands > Vernal pools
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.e5e577a249)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Aquatic > Freshwater > Wetlands > Vernal pools'' denotes
+    the seasonal freshwater body of a vernal pool (PMID 25084274; DOI:10.1007/s00248-014-0468-0).
+    Path: Environmental > Aquatic > Freshwater > Wetlands > Vernal pools (source concept
+    habitatmech:GOLD.e5e577a249)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''freshwater vernal pool'' under ENVO:00000033 ''pond''. ITEM
+    curation: GOLD ''Environmental > Aquatic > Freshwater > Wetlands > Vernal pools''
+    denotes the seasonal freshwater body of a vernal pool (PMID 25084274; DOI:10.1007/s00248-014-0468-0).
+    Path: Environmental > Aquatic > Freshwater > Wetlands > Vernal pools'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Vernal pools' when
+    defining habitatmech:GOLD.e5e577a249 as 'freshwater vernal pool'. Verbatim source
+    attestations are preserved. Displaced GOLD source label 'Vernal pools' in path
+    'Environmental > Aquatic > Freshwater > Wetlands > Vernal pools' is context-dependent,
+    ambiguous, or names a host/disease/process rather than the defined habitat 'freshwater
+    vernal pool'; suppress automatic exact-synonym retention while preserving verbatim
+    source provenance.

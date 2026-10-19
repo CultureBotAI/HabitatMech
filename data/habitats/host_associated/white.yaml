@@ -1,9 +1,18 @@
 identifier: habitatmech:GOLD.3135685b09
-label: White
+label: fish fast-twitch white skeletal muscle
+definition: An anatomical entity environment consisting of the anaerobic, glycolytic
+  fast-twitch white myotomal skeletal muscle tissue of a teleost or cartilaginous
+  fish.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: fish white muscle
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:2100000
 - habitatmech:GOLD.e3a7e22343
 source_attestations:
 - source: GOLD
@@ -11,15 +20,32 @@ source_attestations:
   source_label: White
   source_path: Host-associated > Fish > Muscular system > Muscles > White
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.3135685b09)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Fish > Muscular system > Muscles > White'' denotes fish
+    white myotomal muscle tissue (PMID 28507537; DOI:10.3389/fmicb.2017.00816). Path:
+    Host-associated > Fish > Muscular system > Muscles > White (source concept habitatmech:GOLD.3135685b09)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''fish fast-twitch white skeletal muscle'' under ENVO:2100000
+    ''anatomical entity environment''. ITEM curation: GOLD ''Host-associated > Fish
+    > Muscular system > Muscles > White'' denotes fish white myotomal muscle tissue
+    (PMID 28507537; DOI:10.3389/fmicb.2017.00816). Path: Host-associated > Fish >
+    Muscular system > Muscles > White'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'White' when defining
+    habitatmech:GOLD.3135685b09 as 'fish fast-twitch white skeletal muscle'. Verbatim
+    source attestations are preserved. Displaced GOLD source label 'White' in path
+    'Host-associated > Fish > Muscular system > Muscles > White' is context-dependent,
+    ambiguous, or names a host/disease/process rather than the defined habitat 'fish
+    fast-twitch white skeletal muscle'; suppress automatic exact-synonym retention
+    while preserving verbatim source provenance.

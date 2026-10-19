@@ -1,10 +1,17 @@
 identifier: habitatmech:GOLD.ef5dde6aea
-label: Ear discharge
+label: mammalian external ear discharge
+definition: A bodily fluid consisting of serous, mucoid, or purulent exudate (otorrhea)
+  draining from the external auditory canal of a non-human mammal.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: mammalian otorrhea fluid
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- habitatmech:GOLD.1930d3bfbc
+- UBERON:0006314
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6406
@@ -12,15 +19,34 @@ source_attestations:
   source_path: Host-associated > Mammals > Auditory/Hearing system > Outer ear > Ear
     discharge
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.ef5dde6aea)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals > Auditory/Hearing system > Outer ear > Ear discharge''
+    denotes ear discharge from the mammalian outer ear (PMID 28855508; DOI:10.1038/s41598-017-09965-w).
+    Path: Host-associated > Mammals > Auditory/Hearing system > Outer ear > Ear discharge
+    (source concept habitatmech:GOLD.ef5dde6aea)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''mammalian external ear discharge'' under UBERON:0006314 ''bodily
+    fluid''. ITEM curation: GOLD ''Host-associated > Mammals > Auditory/Hearing system
+    > Outer ear > Ear discharge'' denotes ear discharge from the mammalian outer ear
+    (PMID 28855508; DOI:10.1038/s41598-017-09965-w). Path: Host-associated > Mammals
+    > Auditory/Hearing system > Outer ear > Ear discharge; parent_mode REPLACE excludes
+    containing organ/organ-system GOLD parent.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Ear discharge' when
+    defining habitatmech:GOLD.ef5dde6aea as 'mammalian external ear discharge'. Verbatim
+    source attestations are preserved. Displaced GOLD source label 'Ear discharge'
+    in path 'Host-associated > Mammals > Auditory/Hearing system > Outer ear > Ear
+    discharge' is context-dependent, ambiguous, or names a host/disease/process rather
+    than the defined habitat 'mammalian external ear discharge'; suppress automatic
+    exact-synonym retention while preserving verbatim source provenance.

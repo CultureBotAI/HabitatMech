@@ -1,0 +1,57 @@
+identifier: habitatmech:BACDIVE.0f078d72a7
+label: plant stem or bark canker lesion
+definition: A plant-associated environment consisting of a localized necrotic, sunken,
+  or callused lesion on the bark, stem, or branch of a woody plant caused by phytopathogenic
+  bacteria or fungi.
+definition_source: HabitatMech
+habitat_category: HOST_ASSOCIATED
+grounding_status: UNGROUNDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: plant canker lesion
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+parent_habitats:
+- ENVO:01001001
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:canker
+  source_label: Canker
+  assertion_count: 1
+  assertion_unit: STRAIN
+  notes: kg-microbe's isolation-source mapping table has a row for this source with
+    no ontology target; treated as ungrounded rather than re-grounded by lexical match.
+characteristic_taxa:
+- taxon_id: NCBITaxon:28447
+  source: BACDIVE
+  taxon_label: Clavibacter michiganensis
+  association_count: 1
+  rank: 1
+  candidate_pool: 1
+curation_history:
+- timestamp: '2026-08-16T05:58:02Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Defined plant
+    stem or bark canker lesion under ENVO:01001001 ''plant-associated environment'';
+    supported by woody plant canker pathobiome studies (PMID 30425695). (source concept
+    habitatmech:BACDIVE.0f078d72a7)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: Defined as 'plant stem or bark canker lesion' under ENVO:01001001 'plant-associated
+    environment'. Defined plant stem or bark canker lesion under ENVO:01001001 'plant-associated
+    environment'; supported by woody plant canker pathobiome studies (PMID 30425695).
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Canker' when defining
+    habitatmech:BACDIVE.0f078d72a7 as 'plant stem or bark canker lesion'. Verbatim
+    source attestations are preserved. Displaced GOLD source label 'Canker' in path
+    'Canker' is context-dependent, ambiguous, or names a host/disease/process rather
+    than the defined habitat 'plant stem or bark canker lesion'; suppress automatic
+    exact-synonym retention while preserving verbatim source provenance.

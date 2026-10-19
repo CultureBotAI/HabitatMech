@@ -1,9 +1,14 @@
 identifier: habitatmech:GOLD.8a86b174ba
-label: Amniotic sac
+label: mammalian amniotic sac
+definition: An anatomical entity environment consisting of the extraembryonic membranous
+  sac (amnion and chorion) that encloses the developing fetus and amniotic fluid in
+  a placental mammal.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
+- ENVO:2100000
 - habitatmech:GOLD.baffd7f6c7
 source_attestations:
 - source: GOLD
@@ -11,15 +16,33 @@ source_attestations:
   source_label: Amniotic sac
   source_path: Host-associated > Mammals > Fetus > Fetal tissue > Amniotic sac
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.8a86b174ba)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals > Fetus > Fetal tissue > Amniotic sac'' denotes
+    the mammalian amniotic sac (PMID 24848255; DOI:10.1126/scitranslmed.3008599).
+    Path: Host-associated > Mammals > Fetus > Fetal tissue > Amniotic sac (source
+    concept habitatmech:GOLD.8a86b174ba)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''mammalian amniotic sac'' under ENVO:2100000 ''anatomical
+    entity environment''. ITEM curation: GOLD ''Host-associated > Mammals > Fetus
+    > Fetal tissue > Amniotic sac'' denotes the mammalian amniotic sac (PMID 24848255;
+    DOI:10.1126/scitranslmed.3008599). Path: Host-associated > Mammals > Fetus > Fetal
+    tissue > Amniotic sac'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Amniotic sac' when
+    defining habitatmech:GOLD.8a86b174ba as 'mammalian amniotic sac'. Verbatim source
+    attestations are preserved. Displaced GOLD source label 'Amniotic sac' in path
+    'Host-associated > Mammals > Fetus > Fetal tissue > Amniotic sac' is context-dependent,
+    ambiguous, or names a host/disease/process rather than the defined habitat 'mammalian
+    amniotic sac'; suppress automatic exact-synonym retention while preserving verbatim
+    source provenance.

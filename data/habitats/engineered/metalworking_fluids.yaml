@@ -1,8 +1,19 @@
 identifier: habitatmech:GOLD.245b61d15e
-label: Metalworking fluids
+label: metalworking fluid
+definition: A chemical product consisting of an oil-water emulsion or synthetic fluid
+  used to cool and lubricate metal machining operations, frequently colonized by Mycobacterium
+  immunogenum and Pseudomonas biofilms.
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Metalworking fluids
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: cutting fluid
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:2000000
 source_attestations:
@@ -13,15 +24,24 @@ source_attestations:
     fluids
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.245b61d15e)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Engineered > Industrial production > Chemical products > Metalworking fluids''
+    denotes industrial metalworking and cutting fluids. Define under ENVO:2000000
+    (chemical product) (PMID 11526033; DOI:10.1128/AEM.67.9.4226-4232.2001). Path:
+    Engineered > Industrial production > Chemical products > Metalworking fluids (source
+    concept habitatmech:GOLD.245b61d15e)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''metalworking fluid'' under ENVO:2000000 ''chemical product''.
+    ITEM curation: GOLD ''Engineered > Industrial production > Chemical products >
+    Metalworking fluids'' denotes industrial metalworking and cutting fluids. Define
+    under ENVO:2000000 (chemical product) (PMID 11526033; DOI:10.1128/AEM.67.9.4226-4232.2001).
+    Path: Engineered > Industrial production > Chemical products > Metalworking fluids'

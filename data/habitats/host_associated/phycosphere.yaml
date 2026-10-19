@@ -1,9 +1,14 @@
 identifier: habitatmech:GOLD.be387c9aa8
-label: Phycosphere
+label: diatom phycosphere
+definition: An environmental system determined by an organism comprising the diffusive
+  boundary layer and extracellular polymeric microenvironment immediately surrounding
+  a diatom cell where algal exudates shape associated bacterial communities.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
+- ENVO:01001000
 - habitatmech:GOLD.1276bea544
 source_attestations:
 - source: GOLD
@@ -14,15 +19,34 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.be387c9aa8)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Algae > Diatoms > Phycosphere'' denotes the phycosphere
+    microenvironment surrounding a diatom cell. Define under ENVO:01001000 and exclude
+    bare ''Phycosphere'' because non-diatom algae also form phycospheres (PMID 27197225;
+    DOI:10.1038/nmicrobiol.2016.49). Path: Host-associated > Algae > Diatoms > Phycosphere
+    (source concept habitatmech:GOLD.be387c9aa8)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''diatom phycosphere'' under ENVO:01001000 ''environmental
+    system determined by an organism''. ITEM curation: GOLD ''Host-associated > Algae
+    > Diatoms > Phycosphere'' denotes the phycosphere microenvironment surrounding
+    a diatom cell. Define under ENVO:01001000 and exclude bare ''Phycosphere'' because
+    non-diatom algae also form phycospheres (PMID 27197225; DOI:10.1038/nmicrobiol.2016.49).
+    Path: Host-associated > Algae > Diatoms > Phycosphere'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Phycosphere' when
+    defining habitatmech:GOLD.be387c9aa8 as 'diatom phycosphere'. Verbatim source
+    attestations are preserved. Displaced GOLD source label 'Phycosphere' in path
+    'Host-associated > Algae > Diatoms > Phycosphere' is context-dependent, ambiguous,
+    or names a host/disease/process rather than the defined habitat 'diatom phycosphere';
+    suppress automatic exact-synonym retention while preserving verbatim source provenance.

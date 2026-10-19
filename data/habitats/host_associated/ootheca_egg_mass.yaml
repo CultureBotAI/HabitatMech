@@ -1,9 +1,21 @@
 identifier: habitatmech:GOLD.d23207689e
-label: Ootheca/Egg mass
+label: insect ootheca
+definition: An egg capsule or frothy proteinaceous egg mass secreted by female insects
+  (such as cockroaches, mantises, or beetles) that encloses and protects a clutch
+  of eggs and transmits maternal symbionts.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Ootheca/Egg mass
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: insect egg mass
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- UBERON:3010636
 - habitatmech:GOLD.dba2a83b95
 source_attestations:
 - source: GOLD
@@ -12,15 +24,23 @@ source_attestations:
   source_path: 'Host-associated > Arthropoda: Insects > Ootheca/Egg mass'
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.d23207689e)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Arthropoda: Insects > Ootheca/Egg mass'' denotes an insect
+    ootheca or egg mass capsule. Define under UBERON:3010636 (egg capsule) (PMID 25085349;
+    DOI:10.1038/ismej.2014.129). Path: Host-associated > Arthropoda: Insects > Ootheca/Egg
+    mass (source concept habitatmech:GOLD.d23207689e)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''insect ootheca'' under UBERON:3010636 ''egg capsule''. ITEM
+    curation: GOLD ''Host-associated > Arthropoda: Insects > Ootheca/Egg mass'' denotes
+    an insect ootheca or egg mass capsule. Define under UBERON:3010636 (egg capsule)
+    (PMID 25085349; DOI:10.1038/ismej.2014.129). Path: Host-associated > Arthropoda:
+    Insects > Ootheca/Egg mass'

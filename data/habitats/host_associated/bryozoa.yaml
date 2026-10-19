@@ -1,10 +1,14 @@
 identifier: habitatmech:GOLD.dfaedfff09
-label: Bryozoa
+label: bryozoan colony environment
+definition: An animal-associated environment determined by a colonial aquatic invertebrate
+  of the phylum Bryozoa (Ectoprocta).
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
 - ENVO:01001000
+- ENVO:01001002
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5180
@@ -12,15 +16,30 @@ source_attestations:
   source_path: Host-associated > Bryozoa
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.dfaedfff09)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Bryozoa'' denotes the host environment of a bryozoan
+    colony (PMID 11520690; DOI:10.1128/AEM.67.9.3875-3881.2001). Path: Host-associated
+    > Bryozoa (source concept habitatmech:GOLD.dfaedfff09)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''bryozoan colony environment'' under ENVO:01001002 ''animal-associated
+    environment''. ITEM curation: GOLD ''Host-associated > Bryozoa'' denotes the host
+    environment of a bryozoan colony (PMID 11520690; DOI:10.1128/AEM.67.9.3875-3881.2001).
+    Path: Host-associated > Bryozoa'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Bryozoa' when defining
+    habitatmech:GOLD.dfaedfff09 as 'bryozoan colony environment'. Verbatim source
+    attestations are preserved. Displaced GOLD source label 'Bryozoa' in path 'Host-associated
+    > Bryozoa' is context-dependent, ambiguous, or names a host/disease/process rather
+    than the defined habitat 'bryozoan colony environment'; suppress automatic exact-synonym
+    retention while preserving verbatim source provenance.

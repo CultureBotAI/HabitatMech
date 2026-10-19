@@ -1,25 +1,44 @@
 identifier: habitatmech:GOLD.05855906cb
-label: PBMC
+label: human peripheral blood mononuclear cell
+definition: A leukocyte isolated from human peripheral blood that possesses a single
+  round nucleus, including lymphocytes, monocytes, and dendritic cells.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: PBMC
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: human PBMC
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- habitatmech:GOLD.d25ff4a586
+- BTO:0000751
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6217
   source_label: PBMC
   source_path: 'Host-associated > Mammals: Human > Circulatory system > Blood > PBMC'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.05855906cb)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals: Human > Circulatory system > Blood > PBMC''
+    denotes human peripheral blood mononuclear cells. Define under BTO:0000751 (leukocyte)
+    (PMID 28507537; DOI:10.1128/JCM.00298-17). Path: Host-associated > Mammals: Human
+    > Circulatory system > Blood > PBMC (source concept habitatmech:GOLD.05855906cb)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''human peripheral blood mononuclear cell'' under BTO:0000751
+    ''leukocyte''. ITEM curation: GOLD ''Host-associated > Mammals: Human > Circulatory
+    system > Blood > PBMC'' denotes human peripheral blood mononuclear cells. Define
+    under BTO:0000751 (leukocyte) (PMID 28507537; DOI:10.1128/JCM.00298-17). Path:
+    Host-associated > Mammals: Human > Circulatory system > Blood > PBMC; parent_mode
+    REPLACE excludes containing organ/organ-system GOLD parent.'

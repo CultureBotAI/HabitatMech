@@ -1,10 +1,14 @@
 identifier: habitatmech:GOLD.f93dba43d8
-label: Digital dermatitis
+label: mammalian digital dermatitis lesion
+definition: A skin environment consisting of an ulcerative or papillomatous cutaneous
+  lesion on the digital skin of a mammal, typically near the coronary band or interdigital
+  cleft of ruminants, colonized by polymicrobial spirochete-rich consortia.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
-- habitatmech:GOLD.c896f9520f
+- ENVO:2100003
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6415
@@ -13,15 +17,37 @@ source_attestations:
   assertion_count: 52
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.f93dba43d8)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals > Integumentary system > Skin > Digital dermatitis''
+    denotes a mammalian digital dermatitis skin lesion rather than the disease process
+    or the whole skin organ. Define under ENVO:2100003 (skin environment) with parent_mode
+    REPLACE and exclude bare ''Digital dermatitis'' (PMID 24867017; DOI:10.1128/IAI.02077-14;
+    PMID 25756752; DOI:10.1371/journal.pone.0120504). Path: Host-associated > Mammals
+    > Integumentary system > Skin > Digital dermatitis (source concept habitatmech:GOLD.f93dba43d8)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''mammalian digital dermatitis lesion'' under ENVO:2100003
+    ''skin environment''. ITEM curation: GOLD ''Host-associated > Mammals > Integumentary
+    system > Skin > Digital dermatitis'' denotes a mammalian digital dermatitis skin
+    lesion rather than the disease process or the whole skin organ. Define under ENVO:2100003
+    (skin environment) with parent_mode REPLACE and exclude bare ''Digital dermatitis''
+    (PMID 24867017; DOI:10.1128/IAI.02077-14; PMID 25756752; DOI:10.1371/journal.pone.0120504).
+    Path: Host-associated > Mammals > Integumentary system > Skin > Digital dermatitis'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Digital dermatitis'
+    when defining habitatmech:GOLD.f93dba43d8 as 'mammalian digital dermatitis lesion'.
+    Verbatim source attestations are preserved. Displaced GOLD source label 'Digital
+    dermatitis' in path 'Host-associated > Mammals > Integumentary system > Skin >
+    Digital dermatitis' is context-dependent, ambiguous, or names a host/disease/process
+    rather than the defined habitat 'mammalian digital dermatitis lesion'; suppress
+    automatic exact-synonym retention while preserving verbatim source provenance.

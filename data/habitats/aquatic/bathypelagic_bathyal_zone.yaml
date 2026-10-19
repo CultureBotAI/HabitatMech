@@ -1,10 +1,17 @@
 identifier: habitatmech:GOLD.ebabcbea1e
-label: Bathypelagic/Bathyal zone
+label: marine bathyal pelagic zone
+definition: A marine bathypelagic zone extending between 1000 and 4000 meters ocean
+  depth in aphotic open-ocean waters.
+definition_source: HabitatMech
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Bathypelagic/Bathyal zone
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- ENVO:00000208
+- ENVO:00000211
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7899
@@ -12,15 +19,25 @@ source_attestations:
   source_path: Environmental > Aquatic > Marine > Pelagic zone > Bathypelagic/Bathyal
     zone
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.ebabcbea1e)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Aquatic > Marine > Pelagic zone > Bathypelagic/Bathyal
+    zone'' denotes the marine bathypelagic water column. Define under ENVO:00000211
+    (marine bathypelagic zone) with parent_mode REPLACE (PMID 26000478; DOI:10.1126/science.1261359).
+    Path: Environmental > Aquatic > Marine > Pelagic zone > Bathypelagic/Bathyal zone
+    (source concept habitatmech:GOLD.ebabcbea1e)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''marine bathyal pelagic zone'' under ENVO:00000211 ''marine
+    bathypelagic zone''. ITEM curation: GOLD ''Environmental > Aquatic > Marine >
+    Pelagic zone > Bathypelagic/Bathyal zone'' denotes the marine bathypelagic water
+    column. Define under ENVO:00000211 (marine bathypelagic zone) with parent_mode
+    REPLACE (PMID 26000478; DOI:10.1126/science.1261359). Path: Environmental > Aquatic
+    > Marine > Pelagic zone > Bathypelagic/Bathyal zone'

@@ -1,10 +1,17 @@
 identifier: habitatmech:GOLD.3b12885ee1
-label: Plastic waste
+label: plastic waste
+definition: A waste material composed of discarded synthetic polymer plastics that
+  provides a hydrophobic surface (plastisphere) for microbial colonization and biodegradation.
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: discarded plastic waste
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- mesh:D062611
+- ENVO:00002264
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8368
@@ -14,15 +21,23 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.3b12885ee1)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Engineered > Solid waste > Plastic waste'' denotes discarded synthetic
+    plastic waste. Define under ENVO:00002264 (waste material) with parent_mode REPLACE
+    to drop mesh:D062611 (PMID 23770615; DOI:10.1021/es401488a). Path: Engineered
+    > Solid waste > Plastic waste (source concept habitatmech:GOLD.3b12885ee1)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''plastic waste'' under ENVO:00002264 ''waste material''. ITEM
+    curation: GOLD ''Engineered > Solid waste > Plastic waste'' denotes discarded
+    synthetic plastic waste. Define under ENVO:00002264 (waste material) with parent_mode
+    REPLACE to drop mesh:D062611 (PMID 23770615; DOI:10.1021/es401488a). Path: Engineered
+    > Solid waste > Plastic waste'

@@ -1,8 +1,19 @@
 identifier: habitatmech:GOLD.3a1e1f8fd7
-label: Abyssopelagic/Abyssal zone
+label: marine abyssopelagic zone
+definition: A marine pelagic zone extending between approximately 4000 and 6000 meters
+  ocean depth, characterized by near-freezing temperatures, darkness, and high hydrostatic
+  pressure.
+definition_source: HabitatMech
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Abyssopelagic/Abyssal zone
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: abyssal pelagic zone
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:00000208
 source_attestations:
@@ -14,15 +25,25 @@ source_attestations:
   assertion_count: 1
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.3a1e1f8fd7)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Aquatic > Marine > Pelagic zone > Abyssopelagic/Abyssal
+    zone'' denotes the abyssopelagic water column (ENVO:00000212 is absent from the
+    vendored slice). Define under ENVO:00000208 (marine pelagic zone) (PMID 26000478;
+    DOI:10.1126/science.1261359). Path: Environmental > Aquatic > Marine > Pelagic
+    zone > Abyssopelagic/Abyssal zone (source concept habitatmech:GOLD.3a1e1f8fd7)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''marine abyssopelagic zone'' under ENVO:00000208 ''marine
+    pelagic zone''. ITEM curation: GOLD ''Environmental > Aquatic > Marine > Pelagic
+    zone > Abyssopelagic/Abyssal zone'' denotes the abyssopelagic water column (ENVO:00000212
+    is absent from the vendored slice). Define under ENVO:00000208 (marine pelagic
+    zone) (PMID 26000478; DOI:10.1126/science.1261359). Path: Environmental > Aquatic
+    > Marine > Pelagic zone > Abyssopelagic/Abyssal zone'

@@ -1,8 +1,12 @@
 identifier: habitatmech:GOLD.797c5e7dbb
-label: Ciliophora
+label: ciliophoran-associated environment
+definition: An environmental system determined by a ciliate protozoan of the phylum
+  Ciliophora, which frequently harbors intracellular bacterial or methanogenic archaeal
+  endosymbionts and surface epibionts.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
 - ENVO:01001000
 source_attestations:
@@ -11,15 +15,31 @@ source_attestations:
   source_label: Ciliophora
   source_path: Host-associated > Ciliophora
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.797c5e7dbb)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Ciliophora'' denotes the host environment of a ciliophoran
+    protist (PMID 27595405; DOI:10.1038/ismej.2016.118). Path: Host-associated > Ciliophora
+    (source concept habitatmech:GOLD.797c5e7dbb)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''ciliophoran-associated environment'' under ENVO:01001000
+    ''environmental system determined by an organism''. ITEM curation: GOLD ''Host-associated
+    > Ciliophora'' denotes the host environment of a ciliophoran protist (PMID 27595405;
+    DOI:10.1038/ismej.2016.118). Path: Host-associated > Ciliophora'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Ciliophora' when
+    defining habitatmech:GOLD.797c5e7dbb as 'ciliophoran-associated environment'.
+    Verbatim source attestations are preserved. Displaced GOLD source label 'Ciliophora'
+    in path 'Host-associated > Ciliophora' is context-dependent, ambiguous, or names
+    a host/disease/process rather than the defined habitat 'ciliophoran-associated
+    environment'; suppress automatic exact-synonym retention while preserving verbatim
+    source provenance.

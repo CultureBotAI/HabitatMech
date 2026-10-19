@@ -1,8 +1,18 @@
 identifier: habitatmech:GOLD.46f26d1e8c
-label: Groin nodes
+label: human inguinal lymph node
+definition: A lymph node located in the human inguinal (groin) region that drains
+  lymph from the lower limb, external genitalia, and lower abdominal wall.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Groin nodes
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: human groin lymph node
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - UBERON:0000029
 source_attestations:
@@ -14,15 +24,25 @@ source_attestations:
   assertion_count: 16
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.46f26d1e8c)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals: Human > Lymphatic system > Lymph nodes > Groin
+    nodes'' denotes human inguinal lymph nodes (UBERON term 0001536 is not in the
+    vendored slice). Define under UBERON:0000029 (lymph node) (PMID 29643885; DOI:10.3389/fimmu.2018.00682).
+    Path: Host-associated > Mammals: Human > Lymphatic system > Lymph nodes > Groin
+    nodes (source concept habitatmech:GOLD.46f26d1e8c)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''human inguinal lymph node'' under UBERON:0000029 ''lymph
+    node''. ITEM curation: GOLD ''Host-associated > Mammals: Human > Lymphatic system
+    > Lymph nodes > Groin nodes'' denotes human inguinal lymph nodes (UBERON term
+    0001536 is not in the vendored slice). Define under UBERON:0000029 (lymph node)
+    (PMID 29643885; DOI:10.3389/fimmu.2018.00682). Path: Host-associated > Mammals:
+    Human > Lymphatic system > Lymph nodes > Groin nodes'

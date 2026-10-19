@@ -1,8 +1,18 @@
 identifier: habitatmech:GOLD.55488bc6a7
-label: Arm nodes
+label: human upper-limb lymph node
+definition: A lymph node located in the human upper extremity (such as epitrochlear,
+  cubital, or deltopectoral lymph nodes) draining the hand and forearm.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Arm nodes
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: human arm lymph node
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - UBERON:0000029
 source_attestations:
@@ -12,15 +22,23 @@ source_attestations:
   source_path: 'Host-associated > Mammals: Human > Lymphatic system > Lymph nodes
     > Arm nodes'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.55488bc6a7)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals: Human > Lymphatic system > Lymph nodes > Arm
+    nodes'' denotes lymph nodes of the human arm (PMID 29643885; DOI:10.3389/fimmu.2018.00682).
+    Path: Host-associated > Mammals: Human > Lymphatic system > Lymph nodes > Arm
+    nodes (source concept habitatmech:GOLD.55488bc6a7)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''human upper-limb lymph node'' under UBERON:0000029 ''lymph
+    node''. ITEM curation: GOLD ''Host-associated > Mammals: Human > Lymphatic system
+    > Lymph nodes > Arm nodes'' denotes lymph nodes of the human arm (PMID 29643885;
+    DOI:10.3389/fimmu.2018.00682). Path: Host-associated > Mammals: Human > Lymphatic
+    system > Lymph nodes > Arm nodes'

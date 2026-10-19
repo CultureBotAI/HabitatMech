@@ -1,10 +1,22 @@
 identifier: habitatmech:GOLD.ddb34837bf
-label: Kidney stones
+label: human renal calculus
+definition: An anatomical entity environment consisting of a mineralized concretion
+  (kidney stone or nephrolith, composed of calcium oxalate, struvite, uric acid, or
+  apatite) formed in the human renal pelvis or calyces, often associated with urease-producing
+  or biofilm-forming uropathogenic bacteria.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: human kidney stone
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: human nephrolith
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- habitatmech:GOLD.98b91970cd
+- ENVO:2100000
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6334
@@ -12,15 +24,34 @@ source_attestations:
   source_path: 'Host-associated > Mammals: Human > Urinary system > Kidney > Kidney
     stones'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.ddb34837bf)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals: Human > Urinary system > Kidney > Kidney stones''
+    denotes human renal calculi (PMID 26243914; DOI:10.1038/nrurol.2015.141). Path:
+    Host-associated > Mammals: Human > Urinary system > Kidney > Kidney stones (source
+    concept habitatmech:GOLD.ddb34837bf)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''human renal calculus'' under ENVO:2100000 ''anatomical entity
+    environment''. ITEM curation: GOLD ''Host-associated > Mammals: Human > Urinary
+    system > Kidney > Kidney stones'' denotes human renal calculi (PMID 26243914;
+    DOI:10.1038/nrurol.2015.141). Path: Host-associated > Mammals: Human > Urinary
+    system > Kidney > Kidney stones; parent_mode REPLACE excludes containing organ/organ-system
+    GOLD parent.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Kidney stones''
+    when defining habitatmech:GOLD.ddb34837bf as ''human renal calculus''. Verbatim
+    source attestations are preserved. Displaced GOLD source label ''Kidney stones''
+    in path ''Host-associated > Mammals: Human > Urinary system > Kidney > Kidney
+    stones'' is context-dependent, ambiguous, or names a host/disease/process rather
+    than the defined habitat ''human renal calculus''; suppress automatic exact-synonym
+    retention while preserving verbatim source provenance.'

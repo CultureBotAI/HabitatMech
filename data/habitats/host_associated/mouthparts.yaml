@@ -1,10 +1,18 @@
 identifier: habitatmech:GOLD.6b14ba242d
-label: Mouthparts
+label: insect mouthparts
+definition: An environment associated with an animal part or small animal comprising
+  the external feeding appendages (mandibles, maxillae, labium, labrum, or stylets)
+  of an insect.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: insect feeding appendages
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- habitatmech:GOLD.bd1664969c
+- ENVO:01001055
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7189
@@ -14,15 +22,36 @@ source_attestations:
   assertion_count: 1
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.6b14ba242d)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Arthropoda: Insects > Digestive system > Foregut > Mouthparts''
+    denotes insect feeding appendages (UBERON:0000166 is not in the vendored slice).
+    Define under ENVO:01001055 with parent_mode REPLACE and exclude bare ''Mouthparts''
+    (PMID 25085349; DOI:10.1038/ismej.2014.129). Path: Host-associated > Arthropoda:
+    Insects > Digestive system > Foregut > Mouthparts (source concept habitatmech:GOLD.6b14ba242d)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''insect mouthparts'' under ENVO:01001055 ''environment associated
+    with an animal part or small animal''. ITEM curation: GOLD ''Host-associated >
+    Arthropoda: Insects > Digestive system > Foregut > Mouthparts'' denotes insect
+    feeding appendages (UBERON:0000166 is not in the vendored slice). Define under
+    ENVO:01001055 with parent_mode REPLACE and exclude bare ''Mouthparts'' (PMID 25085349;
+    DOI:10.1038/ismej.2014.129). Path: Host-associated > Arthropoda: Insects > Digestive
+    system > Foregut > Mouthparts'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Mouthparts'' when
+    defining habitatmech:GOLD.6b14ba242d as ''insect mouthparts''. Verbatim source
+    attestations are preserved. Displaced GOLD source label ''Mouthparts'' in path
+    ''Host-associated > Arthropoda: Insects > Digestive system > Foregut > Mouthparts''
+    is context-dependent, ambiguous, or names a host/disease/process rather than the
+    defined habitat ''insect mouthparts''; suppress automatic exact-synonym retention
+    while preserving verbatim source provenance.'

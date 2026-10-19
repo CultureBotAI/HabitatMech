@@ -1,8 +1,21 @@
 identifier: habitatmech:BACDIVE.a2edc55556
-label: Defined-media
+label: chemically defined culture medium
+definition: A culture medium formulated from purified chemical compounds in known
+  concentrations to support the axenic or enrichment cultivation of microorganisms
+  with specific nutritional requirements.
+definition_source: HabitatMech
 habitat_category: OTHER
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: defined growth medium
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: synthetic culture medium
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+parent_habitats:
+- BTO:0000316
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:defined-media
@@ -163,15 +176,28 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 28
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:BACDIVE.a2edc55556)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Defined chemically
+    defined culture medium under BTO:0000316 ''culture medium''; supported by microbial
+    cultivation literature (PMID 27512056). (source concept habitatmech:BACDIVE.a2edc55556)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: Defined as 'chemically defined culture medium' under BTO:0000316 'culture
+    medium'. Defined chemically defined culture medium under BTO:0000316 'culture
+    medium'; supported by microbial cultivation literature (PMID 27512056).
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Defined-media' when
+    defining habitatmech:BACDIVE.a2edc55556 as 'chemically defined culture medium'.
+    Verbatim source attestations are preserved. Displaced GOLD source label 'Defined-media'
+    in path 'Defined-media' is context-dependent, ambiguous, or names a host/disease/process
+    rather than the defined habitat 'chemically defined culture medium'; suppress
+    automatic exact-synonym retention while preserving verbatim source provenance.

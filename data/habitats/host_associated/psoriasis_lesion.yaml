@@ -1,9 +1,21 @@
 identifier: habitatmech:GOLD.5716362057
-label: Psoriasis lesion
+label: human psoriatic skin lesion
+definition: A skin environment comprising a well-demarcated erythematous, hyperkeratotic
+  plaque on human skin affected by psoriasis, exhibiting altered Staphylococcus, Corynebacterium,
+  and Cutibacterium community structure.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Psoriasis lesion
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: psoriatic skin plaque
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:2100003
 - habitatmech:GOLD.4b37ab4b76
 source_attestations:
 - source: GOLD
@@ -12,15 +24,19 @@ source_attestations:
   source_path: 'Host-associated > Mammals: Human > Integumentary system > Skin > Psoriasis
     lesion'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.5716362057)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Defined human
+    psoriatic skin lesion under ENVO:2100003 ''skin environment''; supported by psoriasis
+    skin lesion microbiome studies (PMID 24192044). (source concept habitatmech:GOLD.5716362057)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: Defined as 'human psoriatic skin lesion' under ENVO:2100003 'skin environment'.
+    Defined human psoriatic skin lesion under ENVO:2100003 'skin environment'; supported
+    by psoriasis skin lesion microbiome studies (PMID 24192044).

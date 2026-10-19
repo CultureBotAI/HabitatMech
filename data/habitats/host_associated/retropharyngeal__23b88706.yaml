@@ -1,8 +1,12 @@
 identifier: habitatmech:GOLD.9469437e27
-label: Retropharyngeal
+label: human retropharyngeal lymph node
+definition: A lymph node situated in the human retropharyngeal space between the posterior
+  pharyngeal wall and the prevertebral fascia, draining the nasopharynx, paranasal
+  sinuses, and middle ear.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
 - UBERON:0000029
 source_attestations:
@@ -12,15 +16,33 @@ source_attestations:
   source_path: 'Host-associated > Mammals: Human > Lymphatic system > Lymph nodes
     > Retropharyngeal'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.9469437e27)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals: Human > Lymphatic system > Lymph nodes > Retropharyngeal''
+    denotes human retropharyngeal lymph nodes (PMID 29643885; DOI:10.3389/fimmu.2018.00682).
+    Path: Host-associated > Mammals: Human > Lymphatic system > Lymph nodes > Retropharyngeal
+    (source concept habitatmech:GOLD.9469437e27)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''human retropharyngeal lymph node'' under UBERON:0000029 ''lymph
+    node''. ITEM curation: GOLD ''Host-associated > Mammals: Human > Lymphatic system
+    > Lymph nodes > Retropharyngeal'' denotes human retropharyngeal lymph nodes (PMID
+    29643885; DOI:10.3389/fimmu.2018.00682). Path: Host-associated > Mammals: Human
+    > Lymphatic system > Lymph nodes > Retropharyngeal'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Retropharyngeal''
+    when defining habitatmech:GOLD.9469437e27 as ''human retropharyngeal lymph node''.
+    Verbatim source attestations are preserved. Displaced GOLD source label ''Retropharyngeal''
+    in path ''Host-associated > Mammals: Human > Lymphatic system > Lymph nodes >
+    Retropharyngeal'' is context-dependent, ambiguous, or names a host/disease/process
+    rather than the defined habitat ''human retropharyngeal lymph node''; suppress
+    automatic exact-synonym retention while preserving verbatim source provenance.'
