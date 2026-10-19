@@ -1,9 +1,17 @@
 identifier: habitatmech:GOLD.0df80d2d2b
-label: Fermentation
+label: fermented grass waste
+definition: A waste material consisting of cut grass biomass undergoing anaerobic
+  lactic acid or acidogenic microbial fermentation.
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: fermenting grass waste
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:00002264
 - habitatmech:GOLD.29c6aa959b
 source_attestations:
 - source: GOLD
@@ -11,15 +19,31 @@ source_attestations:
   source_label: Fermentation
   source_path: Engineered > Solid waste > Grass > Fermentation
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.0df80d2d2b)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Engineered > Solid waste > Grass > Fermentation'' denotes fermenting grass
+    solid waste (PMID 29180744; DOI:10.1038/s41598-017-16626-x). Path: Engineered
+    > Solid waste > Grass > Fermentation (source concept habitatmech:GOLD.0df80d2d2b)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''fermented grass waste'' under ENVO:00002264 ''waste material''.
+    ITEM curation: GOLD ''Engineered > Solid waste > Grass > Fermentation'' denotes
+    fermenting grass solid waste (PMID 29180744; DOI:10.1038/s41598-017-16626-x).
+    Path: Engineered > Solid waste > Grass > Fermentation'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Fermentation' when
+    defining habitatmech:GOLD.0df80d2d2b as 'fermented grass waste'. Verbatim source
+    attestations are preserved. Displaced GOLD source label 'Fermentation' in path
+    'Engineered > Solid waste > Grass > Fermentation' is context-dependent, ambiguous,
+    or names a host/disease/process rather than the defined habitat 'fermented grass
+    waste'; suppress automatic exact-synonym retention while preserving verbatim source
+    provenance.

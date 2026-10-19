@@ -1,10 +1,13 @@
 identifier: habitatmech:GOLD.d97254fc6a
-label: P1 segment
+label: myriapod hindgut anterior P1 segment
+definition: A hindgut compartment comprising the anterior P1 segment of a millipede
+  or other myriapod hindgut.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
-- habitatmech:GOLD.38f60a7f52
+- UBERON:0001046
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4068
@@ -12,15 +15,33 @@ source_attestations:
   source_path: 'Host-associated > Arthropoda: Myriapoda > Digestive system > Hindgut
     > P1 segment'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.d97254fc6a)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Arthropoda: Myriapoda > Digestive system > Hindgut >
+    P1 segment'' denotes the P1 segment of a myriapod hindgut (PMID 33055096; DOI:10.1128/AEM.01687-20).
+    Path: Host-associated > Arthropoda: Myriapoda > Digestive system > Hindgut > P1
+    segment (source concept habitatmech:GOLD.d97254fc6a)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''myriapod hindgut anterior P1 segment'' under UBERON:0001046
+    ''hindgut''. ITEM curation: GOLD ''Host-associated > Arthropoda: Myriapoda > Digestive
+    system > Hindgut > P1 segment'' denotes the P1 segment of a myriapod hindgut (PMID
+    33055096; DOI:10.1128/AEM.01687-20). Path: Host-associated > Arthropoda: Myriapoda
+    > Digestive system > Hindgut > P1 segment'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''P1 segment'' when
+    defining habitatmech:GOLD.d97254fc6a as ''myriapod hindgut anterior P1 segment''.
+    Verbatim source attestations are preserved. Displaced GOLD source label ''P1 segment''
+    in path ''Host-associated > Arthropoda: Myriapoda > Digestive system > Hindgut
+    > P1 segment'' is context-dependent, ambiguous, or names a host/disease/process
+    rather than the defined habitat ''myriapod hindgut anterior P1 segment''; suppress
+    automatic exact-synonym retention while preserving verbatim source provenance.'

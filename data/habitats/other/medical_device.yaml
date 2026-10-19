@@ -1,8 +1,14 @@
 identifier: habitatmech:BACDIVE.7ea89610a2
-label: Medical-device
+label: medical device environment
+definition: A manufactured product consisting of a clinical or surgical instrument,
+  implant, catheter, or prosthetic device whose surfaces or lumens can be colonized
+  by biofilm-forming microorganisms.
+definition_source: HabitatMech
 habitat_category: OTHER
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+parent_habitats:
+- ENVO:00003074
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:medical-device
@@ -163,15 +169,34 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 95
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:BACDIVE.7ea89610a2)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    BacDive ''Medical-device'' denotes clinical devices and implants sampled for device-associated
+    microbial colonization and biofilms. Define under ENVO:00003074 (manufactured
+    product) and exclude hyphenated ''Medical-device'' (PMID 11821846; DOI:10.1128/CMR.15.2.167-193.2002;
+    PMID 29789617; DOI:10.1038/s41579-018-0019-y). Path: Medical-device (source concept
+    habitatmech:BACDIVE.7ea89610a2)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''medical device environment'' under ENVO:00003074 ''manufactured
+    product''. ITEM curation: BacDive ''Medical-device'' denotes clinical devices
+    and implants sampled for device-associated microbial colonization and biofilms.
+    Define under ENVO:00003074 (manufactured product) and exclude hyphenated ''Medical-device''
+    (PMID 11821846; DOI:10.1128/CMR.15.2.167-193.2002; PMID 29789617; DOI:10.1038/s41579-018-0019-y).
+    Path: Medical-device'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Medical-device'
+    when defining habitatmech:BACDIVE.7ea89610a2 as 'medical device environment'.
+    Verbatim source attestations are preserved. Displaced GOLD source label 'Medical-device'
+    in path 'Medical-device' is context-dependent, ambiguous, or names a host/disease/process
+    rather than the defined habitat 'medical device environment'; suppress automatic
+    exact-synonym retention while preserving verbatim source provenance.

@@ -1,8 +1,19 @@
 identifier: habitatmech:GOLD.f3de85dd9b
-label: SBR-EBPR
+label: sequencing batch enhanced biological phosphorus removal bioreactor
+definition: A bioreactor operated as a sequencing batch reactor (SBR) cycling through
+  fill, anaerobic, aerobic, settle, and decant phases to achieve enhanced biological
+  phosphorus removal (EBPR).
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: EBPR sequencing batch reactor
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: SBR-EBPR
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:00002123
 source_attestations:
@@ -11,15 +22,23 @@ source_attestations:
   source_label: SBR-EBPR
   source_path: Engineered > Bioreactor > SBR-EBPR
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.f3de85dd9b)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Engineered > Bioreactor > SBR-EBPR'' denotes a sequencing batch reactor
+    configured for enhanced biological phosphorus removal. Define under ENVO:00002123
+    (bioreactor) (PMID 16998470; DOI:10.1038/nbt1247). Path: Engineered > Bioreactor
+    > SBR-EBPR (source concept habitatmech:GOLD.f3de85dd9b)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''sequencing batch enhanced biological phosphorus removal bioreactor''
+    under ENVO:00002123 ''bioreactor''. ITEM curation: GOLD ''Engineered > Bioreactor
+    > SBR-EBPR'' denotes a sequencing batch reactor configured for enhanced biological
+    phosphorus removal. Define under ENVO:00002123 (bioreactor) (PMID 16998470; DOI:10.1038/nbt1247).
+    Path: Engineered > Bioreactor > SBR-EBPR'

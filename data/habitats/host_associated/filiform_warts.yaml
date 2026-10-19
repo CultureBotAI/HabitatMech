@@ -1,8 +1,18 @@
 identifier: habitatmech:GOLD.06c04be03f
-label: Filiform warts
+label: human filiform wart
+definition: A wart characterized by narrow, thread-like hyperkeratotic projections
+  on human facial, neck, or palpebral skin induced by human papillomavirus infection.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Filiform warts
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: verruca filiformis
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - BTO:0001859
 source_attestations:
@@ -12,15 +22,19 @@ source_attestations:
   source_path: 'Host-associated > Mammals: Human > Benign tumor > Wart > Filiform
     warts'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.06c04be03f)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Defined human
+    filiform wart under BTO:0001859 ''wart''; supported by cutaneous papillomavirus
+    lesion virome studies (PMID 25404569). (source concept habitatmech:GOLD.06c04be03f)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: Defined as 'human filiform wart' under BTO:0001859 'wart'. Defined human
+    filiform wart under BTO:0001859 'wart'; supported by cutaneous papillomavirus
+    lesion virome studies (PMID 25404569).

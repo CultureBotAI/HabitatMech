@@ -1,9 +1,21 @@
 identifier: habitatmech:GOLD.1e479a90dd
-label: Cutaneous leishmaniasis
+label: human cutaneous leishmaniasis lesion
+definition: A skin environment comprising a papular or ulcerative cutaneous lesion
+  on human skin caused by intracellular Leishmania protozoan infection and co-colonized
+  by dysbiotic skin bacteria.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Cutaneous leishmaniasis
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: cutaneous leishmaniasis ulcer
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:2100003
 - habitatmech:GOLD.4b37ab4b76
 source_attestations:
 - source: GOLD
@@ -12,15 +24,21 @@ source_attestations:
   source_path: 'Host-associated > Mammals: Human > Integumentary system > Skin > Cutaneous
     leishmaniasis'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.1e479a90dd)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Defined human
+    cutaneous leishmaniasis lesion under ENVO:2100003 ''skin environment''; supported
+    by cutaneous leishmaniasis lesion microbiome studies (PMID 29187526). (source
+    concept habitatmech:GOLD.1e479a90dd)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: Defined as 'human cutaneous leishmaniasis lesion' under ENVO:2100003 'skin
+    environment'. Defined human cutaneous leishmaniasis lesion under ENVO:2100003
+    'skin environment'; supported by cutaneous leishmaniasis lesion microbiome studies
+    (PMID 29187526).

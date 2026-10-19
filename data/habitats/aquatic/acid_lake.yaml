@@ -1,8 +1,19 @@
 identifier: habitatmech:GOLD.21e53e7981
-label: Acid lake
+label: geothermal acid lake
+definition: A hot spring environment consisting of a volcanically or hydrothermally
+  heated lake or crater pool acidified by magmatic sulfur dioxide, hydrogen sulfide
+  oxidation, and hydrochloric acid.
+definition_source: HabitatMech
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Acid lake
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: volcanic acid lake
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:00000051
 source_attestations:
@@ -12,15 +23,23 @@ source_attestations:
   source_path: Environmental > Aquatic > Thermal springs > Acid lake
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.21e53e7981)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Aquatic > Thermal springs > Acid lake'' denotes a geothermally
+    heated acidic crater lake or thermal acid pool. Define under ENVO:00000051 (hot
+    spring) (PMID 25609811; DOI:10.1038/ismej.2014.254). Path: Environmental > Aquatic
+    > Thermal springs > Acid lake (source concept habitatmech:GOLD.21e53e7981)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''geothermal acid lake'' under ENVO:00000051 ''hot spring''.
+    ITEM curation: GOLD ''Environmental > Aquatic > Thermal springs > Acid lake''
+    denotes a geothermally heated acidic crater lake or thermal acid pool. Define
+    under ENVO:00000051 (hot spring) (PMID 25609811; DOI:10.1038/ismej.2014.254).
+    Path: Environmental > Aquatic > Thermal springs > Acid lake'

@@ -1,9 +1,20 @@
 identifier: habitatmech:GOLD.72719ea056
-label: Produced water
+label: oil reservoir produced water
+definition: A waste water consisting of formation brine and injected water co-produced
+  with crude oil and natural gas from a subterranean petroleum reservoir.
+definition_source: HabitatMech
 habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: oilfield produced water
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: petroleum produced water
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:00002001
 - ENVO:00002185
 source_attestations:
 - source: GOLD
@@ -14,15 +25,36 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.72719ea056)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Terrestrial > Oil reservoir > Produced water'' denotes
+    formation brine co-produced from an oil reservoir. Define under ENVO:00002001
+    (waste water) and exclude bare ''Produced water'' because GOLD also has mine-water
+    and shale-gas produced water nodes (PMID 28539913; DOI:10.3389/fmicb.2017.00856).
+    Path: Environmental > Terrestrial > Oil reservoir > Produced water (source concept
+    habitatmech:GOLD.72719ea056)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''oil reservoir produced water'' under ENVO:00002001 ''waste
+    water''. ITEM curation: GOLD ''Environmental > Terrestrial > Oil reservoir > Produced
+    water'' denotes formation brine co-produced from an oil reservoir. Define under
+    ENVO:00002001 (waste water) and exclude bare ''Produced water'' because GOLD also
+    has mine-water and shale-gas produced water nodes (PMID 28539913; DOI:10.3389/fmicb.2017.00856).
+    Path: Environmental > Terrestrial > Oil reservoir > Produced water'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Produced water'
+    when defining habitatmech:GOLD.72719ea056 as 'oil reservoir produced water'. Verbatim
+    source attestations are preserved. Displaced GOLD source label 'Produced water'
+    in path 'Environmental > Terrestrial > Oil reservoir > Produced water' is context-dependent,
+    ambiguous, or names a host/disease/process rather than the defined habitat 'oil
+    reservoir produced water'; suppress automatic exact-synonym retention while preserving
+    verbatim source provenance.

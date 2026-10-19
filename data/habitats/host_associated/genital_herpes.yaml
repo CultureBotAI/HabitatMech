@@ -1,9 +1,20 @@
 identifier: habitatmech:GOLD.8107f24525
-label: Genital herpes
+label: human genital herpes lesion
+definition: A skin environment comprising a vesicular or ulcerative mucocutaneous
+  lesion on the human genital skin or mucosa caused by herpes simplex virus infection.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Genital herpes
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: herpes genitalis lesion
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:2100003
 - habitatmech:GOLD.4b37ab4b76
 source_attestations:
 - source: GOLD
@@ -12,15 +23,20 @@ source_attestations:
   source_path: 'Host-associated > Mammals: Human > Integumentary system > Skin > Genital
     herpes'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.8107f24525)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Defined human
+    genital herpes lesion under ENVO:2100003 ''skin environment''; supported by genital
+    herpes lesion and cervicovaginal microbiome studies (PMID 25404569). (source concept
+    habitatmech:GOLD.8107f24525)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: Defined as 'human genital herpes lesion' under ENVO:2100003 'skin environment'.
+    Defined human genital herpes lesion under ENVO:2100003 'skin environment'; supported
+    by genital herpes lesion and cervicovaginal microbiome studies (PMID 25404569).

@@ -1,9 +1,18 @@
 identifier: habitatmech:GOLD.5ea906ceb2
-label: Ciliates
+label: ciliate-associated environment
+definition: An environmental system determined by an organism consisting of a ciliated
+  protozoan host (phylum Ciliophora) that harbors cytoplasmic, macronuclear, or ectosymbiotic
+  bacteria and methanogenic archaea.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: ciliate protist host environment
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:01001000
 - habitatmech:GOLD.797c5e7dbb
 source_attestations:
 - source: GOLD
@@ -12,15 +21,30 @@ source_attestations:
   source_path: Host-associated > Ciliophora > Ciliates
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.5ea906ceb2)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Defined ciliate-associated
+    environment under ENVO:01001000 ''environmental system determined by an organism'';
+    supported by ciliate endosymbiont and methanogen symbiome studies (PMID 26000478).
+    (source concept habitatmech:GOLD.5ea906ceb2)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: Defined as 'ciliate-associated environment' under ENVO:01001000 'environmental
+    system determined by an organism'. Defined ciliate-associated environment under
+    ENVO:01001000 'environmental system determined by an organism'; supported by ciliate
+    endosymbiont and methanogen symbiome studies (PMID 26000478).
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Ciliates' when defining
+    habitatmech:GOLD.5ea906ceb2 as 'ciliate-associated environment'. Verbatim source
+    attestations are preserved. Displaced GOLD source label 'Ciliates' in path 'Host-associated
+    > Ciliophora > Ciliates' is context-dependent, ambiguous, or names a host/disease/process
+    rather than the defined habitat 'ciliate-associated environment'; suppress automatic
+    exact-synonym retention while preserving verbatim source provenance.

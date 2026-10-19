@@ -1,8 +1,19 @@
 identifier: habitatmech:GOLD.e8d7f5a282
-label: Granular sludge
+label: anaerobic granular sludge
+definition: An anaerobic sludge composed of dense, self-immobilized spherical microbial
+  granules formed in upflow anaerobic sludge blanket (UASB) and expanded granular
+  sludge bed (EGSB) bioreactors.
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Granular sludge
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: UASB granular sludge
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:00002129
 source_attestations:
@@ -11,15 +22,23 @@ source_attestations:
   source_label: Granular sludge
   source_path: Engineered > Bioreactor > Anaerobic > Sludge > Granular sludge
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.e8d7f5a282)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Engineered > Bioreactor > Anaerobic > Sludge > Granular sludge'' denotes
+    self-aggregated anaerobic granular sludge in UASB bioreactors. Define under ENVO:00002129
+    (anaerobic sludge) (PMID 28533490; DOI:10.1038/ncomms15468). Path: Engineered
+    > Bioreactor > Anaerobic > Sludge > Granular sludge (source concept habitatmech:GOLD.e8d7f5a282)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''anaerobic granular sludge'' under ENVO:00002129 ''anaerobic
+    sludge''. ITEM curation: GOLD ''Engineered > Bioreactor > Anaerobic > Sludge >
+    Granular sludge'' denotes self-aggregated anaerobic granular sludge in UASB bioreactors.
+    Define under ENVO:00002129 (anaerobic sludge) (PMID 28533490; DOI:10.1038/ncomms15468).
+    Path: Engineered > Bioreactor > Anaerobic > Sludge > Granular sludge'

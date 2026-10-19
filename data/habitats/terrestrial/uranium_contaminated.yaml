@@ -1,8 +1,15 @@
 identifier: habitatmech:GOLD.d722422e31
-label: Uranium contaminated
+label: uranium-contaminated soil
+definition: A contaminated soil containing elevated concentrations of uranium radionuclides
+  and uranyl ions derived from uranium mining, milling, or nuclear processing.
+definition_source: HabitatMech
 habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: uranium-polluted soil
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:00002116
 source_attestations:
@@ -13,15 +20,35 @@ source_attestations:
   assertion_count: 3
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.d722422e31)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Terrestrial > Soil > Contaminated > Uranium contaminated''
+    denotes soil contaminated with uranium. Define under ENVO:00002116 (contaminated
+    soil) and exclude bare adjective ''Uranium contaminated'' (PMID 25852656; DOI:10.3389/fmicb.2015.00258).
+    Path: Environmental > Terrestrial > Soil > Contaminated > Uranium contaminated
+    (source concept habitatmech:GOLD.d722422e31)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''uranium-contaminated soil'' under ENVO:00002116 ''contaminated
+    soil''. ITEM curation: GOLD ''Environmental > Terrestrial > Soil > Contaminated
+    > Uranium contaminated'' denotes soil contaminated with uranium. Define under
+    ENVO:00002116 (contaminated soil) and exclude bare adjective ''Uranium contaminated''
+    (PMID 25852656; DOI:10.3389/fmicb.2015.00258). Path: Environmental > Terrestrial
+    > Soil > Contaminated > Uranium contaminated'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Uranium contaminated'
+    when defining habitatmech:GOLD.d722422e31 as 'uranium-contaminated soil'. Verbatim
+    source attestations are preserved. Displaced GOLD source label 'Uranium contaminated'
+    in path 'Environmental > Terrestrial > Soil > Contaminated > Uranium contaminated'
+    is context-dependent, ambiguous, or names a host/disease/process rather than the
+    defined habitat 'uranium-contaminated soil'; suppress automatic exact-synonym
+    retention while preserving verbatim source provenance.

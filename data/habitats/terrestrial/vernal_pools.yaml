@@ -1,25 +1,49 @@
 identifier: habitatmech:GOLD.30027d024a
-label: Vernal pools
+label: vernal pool wetland soil
+definition: A soil from the basin of a seasonal vernal pool wetland that undergoes
+  annual cycles of winter-spring inundation and summer-autumn desiccation.
+definition_source: HabitatMech
 habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: vernal pool soil
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- ENVO:00000043
+- ENVO:00001998
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8553
   source_label: Vernal pools
   source_path: Environmental > Terrestrial > Soil > Wetlands > Vernal pools
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.30027d024a)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Terrestrial > Soil > Wetlands > Vernal pools'' denotes
+    soil of a seasonal vernal pool basin (PMID 25084274; DOI:10.1007/s00248-014-0468-0).
+    Path: Environmental > Terrestrial > Soil > Wetlands > Vernal pools (source concept
+    habitatmech:GOLD.30027d024a)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''vernal pool wetland soil'' under ENVO:00001998 ''soil''.
+    ITEM curation: GOLD ''Environmental > Terrestrial > Soil > Wetlands > Vernal pools''
+    denotes soil of a seasonal vernal pool basin (PMID 25084274; DOI:10.1007/s00248-014-0468-0).
+    Path: Environmental > Terrestrial > Soil > Wetlands > Vernal pools'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Vernal pools' when
+    defining habitatmech:GOLD.30027d024a as 'vernal pool wetland soil'. Verbatim source
+    attestations are preserved. Displaced GOLD source label 'Vernal pools' in path
+    'Environmental > Terrestrial > Soil > Wetlands > Vernal pools' is context-dependent,
+    ambiguous, or names a host/disease/process rather than the defined habitat 'vernal
+    pool wetland soil'; suppress automatic exact-synonym retention while preserving
+    verbatim source provenance.

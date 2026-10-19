@@ -1,8 +1,12 @@
 identifier: habitatmech:GOLD.732b4ad2e0
-label: Tubal
+label: human tubal tonsil
+definition: A tonsil of Waldeyer's pharyngeal ring located in the submucosa of the
+  human nasopharynx immediately posterior to the torus tubarius of the auditory (Eustachian)
+  tube.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
 - BTO:0001387
 source_attestations:
@@ -11,15 +15,32 @@ source_attestations:
   source_label: Tubal
   source_path: 'Host-associated > Mammals: Human > Lymphatic system > Tonsils > Tubal'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.732b4ad2e0)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals: Human > Lymphatic system > Tonsils > Tubal''
+    denotes the human tubal tonsil (PMID 22685195; DOI:10.1038/ismej.2012.56). Path:
+    Host-associated > Mammals: Human > Lymphatic system > Tonsils > Tubal (source
+    concept habitatmech:GOLD.732b4ad2e0)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''human tubal tonsil'' under BTO:0001387 ''tonsil''. ITEM curation:
+    GOLD ''Host-associated > Mammals: Human > Lymphatic system > Tonsils > Tubal''
+    denotes the human tubal tonsil (PMID 22685195; DOI:10.1038/ismej.2012.56). Path:
+    Host-associated > Mammals: Human > Lymphatic system > Tonsils > Tubal'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Tubal'' when defining
+    habitatmech:GOLD.732b4ad2e0 as ''human tubal tonsil''. Verbatim source attestations
+    are preserved. Displaced GOLD source label ''Tubal'' in path ''Host-associated
+    > Mammals: Human > Lymphatic system > Tonsils > Tubal'' is context-dependent,
+    ambiguous, or names a host/disease/process rather than the defined habitat ''human
+    tubal tonsil''; suppress automatic exact-synonym retention while preserving verbatim
+    source provenance.'

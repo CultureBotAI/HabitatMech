@@ -1,9 +1,21 @@
 identifier: habitatmech:GOLD.45106d469c
-label: Paleofeces
+label: human paleofeces
+definition: A feces of ancient human origin preserved by desiccation or freezing in
+  archaeological caves, rock shelters, or latrines, retaining ancient human gut microbiome
+  DNA and parasites.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Paleofeces
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: ancient human feces
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- UBERON:0001988
 - habitatmech:GOLD.f1a2eca320
 source_attestations:
 - source: GOLD
@@ -12,15 +24,24 @@ source_attestations:
   source_path: 'Host-associated > Mammals: Human > Remains > Fossilized remains >
     Paleofeces'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.45106d469c)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals: Human > Remains > Fossilized remains > Paleofeces''
+    denotes ancient desiccated human feces. Define under UBERON:0001988 (feces) (PMID
+    22575917; DOI:10.1371/journal.pone.0036407; PMID 34001891; DOI:10.1038/s41586-021-03532-0).
+    Path: Host-associated > Mammals: Human > Remains > Fossilized remains > Paleofeces
+    (source concept habitatmech:GOLD.45106d469c)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''human paleofeces'' under UBERON:0001988 ''feces''. ITEM curation:
+    GOLD ''Host-associated > Mammals: Human > Remains > Fossilized remains > Paleofeces''
+    denotes ancient desiccated human feces. Define under UBERON:0001988 (feces) (PMID
+    22575917; DOI:10.1371/journal.pone.0036407; PMID 34001891; DOI:10.1038/s41586-021-03532-0).
+    Path: Host-associated > Mammals: Human > Remains > Fossilized remains > Paleofeces'

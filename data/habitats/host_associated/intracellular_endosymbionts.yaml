@@ -1,9 +1,14 @@
 identifier: habitatmech:GOLD.7d68a6a275
-label: Intracellular endosymbionts
+label: annelid intracellular endosymbiont environment
+definition: An environment associated with an animal part or small animal comprising
+  specialized bacteriocyte cells or trophosome tissues of an annelid worm (such as
+  gutless oligochaetes or siboglinid tubeworms) housing intracellular bacterial endosymbionts.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
+- ENVO:01001055
 - habitatmech:GOLD.6e10201167
 source_attestations:
 - source: GOLD
@@ -11,15 +16,33 @@ source_attestations:
   source_label: Intracellular endosymbionts
   source_path: Host-associated > Annelida > Intracellular endosymbionts
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.7d68a6a275)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Annelida > Intracellular endosymbionts'' denotes the
+    intracellular bacteriocyte/endosymbiont compartment of an annelid (PMID 17108962;
+    DOI:10.1038/nature05249). Path: Host-associated > Annelida > Intracellular endosymbionts
+    (source concept habitatmech:GOLD.7d68a6a275)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''annelid intracellular endosymbiont environment'' under ENVO:01001055
+    ''environment associated with an animal part or small animal''. ITEM curation:
+    GOLD ''Host-associated > Annelida > Intracellular endosymbionts'' denotes the
+    intracellular bacteriocyte/endosymbiont compartment of an annelid (PMID 17108962;
+    DOI:10.1038/nature05249). Path: Host-associated > Annelida > Intracellular endosymbionts'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Intracellular endosymbionts'
+    when defining habitatmech:GOLD.7d68a6a275 as 'annelid intracellular endosymbiont
+    environment'. Verbatim source attestations are preserved. Displaced GOLD source
+    label 'Intracellular endosymbionts' in path 'Host-associated > Annelida > Intracellular
+    endosymbionts' is context-dependent, ambiguous, or names a host/disease/process
+    rather than the defined habitat 'annelid intracellular endosymbiont environment';
+    suppress automatic exact-synonym retention while preserving verbatim source provenance.

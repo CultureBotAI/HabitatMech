@@ -1,9 +1,20 @@
 identifier: habitatmech:GOLD.78df62bc49
-label: Primary
+label: human primary mainstem bronchus
+definition: A bronchus forming the right or left primary (mainstem) airway branch
+  arising directly from the tracheal bifurcation at the carina to enter the lung hilum.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: human main bronchus
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: human primary bronchus
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- UBERON:0002185
 - habitatmech:GOLD.67ad6b3f36
 source_attestations:
 - source: GOLD
@@ -12,15 +23,33 @@ source_attestations:
   source_path: 'Host-associated > Mammals: Human > Respiratory system > Bronchi >
     Primary'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.78df62bc49)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals: Human > Respiratory system > Bronchi > Primary''
+    denotes the human primary (mainstem) bronchus (PMID 25803243; DOI:10.1513/AnnalsATS.201501-029OC).
+    Path: Host-associated > Mammals: Human > Respiratory system > Bronchi > Primary
+    (source concept habitatmech:GOLD.78df62bc49)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''human primary mainstem bronchus'' under UBERON:0002185 ''bronchus''.
+    ITEM curation: GOLD ''Host-associated > Mammals: Human > Respiratory system >
+    Bronchi > Primary'' denotes the human primary (mainstem) bronchus (PMID 25803243;
+    DOI:10.1513/AnnalsATS.201501-029OC). Path: Host-associated > Mammals: Human >
+    Respiratory system > Bronchi > Primary'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Primary'' when
+    defining habitatmech:GOLD.78df62bc49 as ''human primary mainstem bronchus''. Verbatim
+    source attestations are preserved. Displaced GOLD source label ''Primary'' in
+    path ''Host-associated > Mammals: Human > Respiratory system > Bronchi > Primary''
+    is context-dependent, ambiguous, or names a host/disease/process rather than the
+    defined habitat ''human primary mainstem bronchus''; suppress automatic exact-synonym
+    retention while preserving verbatim source provenance.'

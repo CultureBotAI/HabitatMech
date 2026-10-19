@@ -1,10 +1,21 @@
 identifier: habitatmech:GOLD.168f298608
-label: Mesopelagic/Twilight zone
+label: marine twilight mesopelagic zone
+definition: A marine mesopelagic zone extending from 200 to 1000 meters depth where
+  attenuated sunlight penetrates without supporting net photosynthesis, characterized
+  by vertical organic matter flux remineralization.
+definition_source: HabitatMech
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Mesopelagic/Twilight zone
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: oceanic twilight zone
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- ENVO:00000208
+- ENVO:00000213
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7898
@@ -12,15 +23,25 @@ source_attestations:
   source_path: Environmental > Aquatic > Marine > Pelagic zone > Mesopelagic/Twilight
     zone
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.168f298608)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Aquatic > Marine > Pelagic zone > Mesopelagic/Twilight
+    zone'' denotes the marine mesopelagic (twilight) zone. Define under ENVO:00000213
+    (marine mesopelagic zone) with parent_mode REPLACE (PMID 26000478; DOI:10.1126/science.1261359).
+    Path: Environmental > Aquatic > Marine > Pelagic zone > Mesopelagic/Twilight zone
+    (source concept habitatmech:GOLD.168f298608)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''marine twilight mesopelagic zone'' under ENVO:00000213 ''marine
+    mesopelagic zone''. ITEM curation: GOLD ''Environmental > Aquatic > Marine > Pelagic
+    zone > Mesopelagic/Twilight zone'' denotes the marine mesopelagic (twilight) zone.
+    Define under ENVO:00000213 (marine mesopelagic zone) with parent_mode REPLACE
+    (PMID 26000478; DOI:10.1126/science.1261359). Path: Environmental > Aquatic >
+    Marine > Pelagic zone > Mesopelagic/Twilight zone'

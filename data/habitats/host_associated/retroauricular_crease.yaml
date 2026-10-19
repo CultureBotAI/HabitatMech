@@ -1,9 +1,21 @@
 identifier: habitatmech:GOLD.21e57b5d40
-label: Retroauricular crease
+label: human retroauricular crease skin
+definition: A skin environment located in the sebaceous skin fold behind the pinna
+  of the human external ear (retroauricular crease), densely colonized by lipophilic
+  Cutibacterium and Corynebacterium species.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Retroauricular crease
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: postauricular crease skin
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:2100003
 - habitatmech:GOLD.4b37ab4b76
 source_attestations:
 - source: GOLD
@@ -12,15 +24,26 @@ source_attestations:
   source_path: 'Host-associated > Mammals: Human > Integumentary system > Skin > Retroauricular
     crease'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.21e57b5d40)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals: Human > Integumentary system > Skin > Retroauricular
+    crease'' denotes the sebaceous skin fold behind the human ear, a canonical Human
+    Microbiome Project sampling site. Define under ENVO:2100003 (skin environment)
+    (PMID 22699609; DOI:10.1038/nature11234). Path: Host-associated > Mammals: Human
+    > Integumentary system > Skin > Retroauricular crease (source concept habitatmech:GOLD.21e57b5d40)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''human retroauricular crease skin'' under ENVO:2100003 ''skin
+    environment''. ITEM curation: GOLD ''Host-associated > Mammals: Human > Integumentary
+    system > Skin > Retroauricular crease'' denotes the sebaceous skin fold behind
+    the human ear, a canonical Human Microbiome Project sampling site. Define under
+    ENVO:2100003 (skin environment) (PMID 22699609; DOI:10.1038/nature11234). Path:
+    Host-associated > Mammals: Human > Integumentary system > Skin > Retroauricular
+    crease'

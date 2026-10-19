@@ -1,10 +1,17 @@
 identifier: habitatmech:GOLD.46c43fd62c
-label: Cephalochordata
+label: cephalochordate-associated environment
+definition: An animal-associated environment determined by a cephalochordate (amphioxus
+  or lancelet) in the subphylum Cephalochordata.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: amphioxus-associated environment
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- ENVO:01001000
+- ENVO:01001002
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4958
@@ -14,15 +21,35 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 4 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.46c43fd62c)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Cephalochordata'' denotes the host environment of cephalochordates
+    rather than the taxon itself. Define under ENVO:01001002 (animal-associated environment)
+    with parent_mode REPLACE and exclude taxon name ''Cephalochordata'' (PMID 26961630;
+    DOI:10.1038/srep22684). Path: Host-associated > Cephalochordata (source concept
+    habitatmech:GOLD.46c43fd62c)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''cephalochordate-associated environment'' under ENVO:01001002
+    ''animal-associated environment''. ITEM curation: GOLD ''Host-associated > Cephalochordata''
+    denotes the host environment of cephalochordates rather than the taxon itself.
+    Define under ENVO:01001002 (animal-associated environment) with parent_mode REPLACE
+    and exclude taxon name ''Cephalochordata'' (PMID 26961630; DOI:10.1038/srep22684).
+    Path: Host-associated > Cephalochordata'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Cephalochordata'
+    when defining habitatmech:GOLD.46c43fd62c as 'cephalochordate-associated environment'.
+    Verbatim source attestations are preserved. Displaced GOLD source label 'Cephalochordata'
+    in path 'Host-associated > Cephalochordata' is context-dependent, ambiguous, or
+    names a host/disease/process rather than the defined habitat 'cephalochordate-associated
+    environment'; suppress automatic exact-synonym retention while preserving verbatim
+    source provenance.

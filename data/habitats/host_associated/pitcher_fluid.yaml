@@ -1,10 +1,22 @@
 identifier: habitatmech:GOLD.57ff7fe01d
-label: Pitcher fluid
+label: carnivorous plant pitcher fluid
+definition: An environment associated with a plant part or small plant consisting
+  of the digestive aqueous fluid pooled inside the modified ascidiate leaf trap (pitcher)
+  of a carnivorous pitcher plant, inhabited by a specialized phytotelmata food web
+  and digestive microbiome.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Pitcher fluid
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: pitcher plant digestive fluid
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- PO:0025034
+- ENVO:01001057
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8200
@@ -12,15 +24,25 @@ source_attestations:
   source_path: Host-associated > Plants > Phyllosphere > Phylloplane/Leaf > Pitcher
     fluid
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.57ff7fe01d)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Plants > Phyllosphere > Phylloplane/Leaf > Pitcher fluid''
+    denotes the liquid pool inside a carnivorous pitcher leaf rather than the leaf
+    organ (PO:0025034). Define under ENVO:01001057 with parent_mode REPLACE (PMID
+    29643888; DOI:10.1038/s41559-018-0519-1). Path: Host-associated > Plants > Phyllosphere
+    > Phylloplane/Leaf > Pitcher fluid (source concept habitatmech:GOLD.57ff7fe01d)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''carnivorous plant pitcher fluid'' under ENVO:01001057 ''environment
+    associated with a plant part or small plant''. ITEM curation: GOLD ''Host-associated
+    > Plants > Phyllosphere > Phylloplane/Leaf > Pitcher fluid'' denotes the liquid
+    pool inside a carnivorous pitcher leaf rather than the leaf organ (PO:0025034).
+    Define under ENVO:01001057 with parent_mode REPLACE (PMID 29643888; DOI:10.1038/s41559-018-0519-1).
+    Path: Host-associated > Plants > Phyllosphere > Phylloplane/Leaf > Pitcher fluid'

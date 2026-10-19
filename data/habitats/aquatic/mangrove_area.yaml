@@ -1,9 +1,18 @@
 identifier: habitatmech:GOLD.56113a85e1
-label: Mangrove area
+label: intertidal mangrove environment
+definition: An intertidal zone environment within a tropical or subtropical coastal
+  mangrove ecosystem, characterized by tidal inundation, organic-rich anoxic sediments,
+  and mangrove-associated microbial communities.
+definition_source: HabitatMech
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: intertidal mangrove habitat
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:00000316
 - habitatmech:GOLD.115edc36f8
 source_attestations:
 - source: GOLD
@@ -11,15 +20,33 @@ source_attestations:
   source_label: Mangrove area
   source_path: Environmental > Aquatic > Marine > Intertidal zone > Mangrove area
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.56113a85e1)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Aquatic > Marine > Intertidal zone > Mangrove area'' denotes
+    an intertidal coastal mangrove habitat (PMID 20814482; DOI:10.1371/journal.pone.0012060).
+    Path: Environmental > Aquatic > Marine > Intertidal zone > Mangrove area (source
+    concept habitatmech:GOLD.56113a85e1)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''intertidal mangrove environment'' under ENVO:00000316 ''intertidal
+    zone''. ITEM curation: GOLD ''Environmental > Aquatic > Marine > Intertidal zone
+    > Mangrove area'' denotes an intertidal coastal mangrove habitat (PMID 20814482;
+    DOI:10.1371/journal.pone.0012060). Path: Environmental > Aquatic > Marine > Intertidal
+    zone > Mangrove area'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Mangrove area' when
+    defining habitatmech:GOLD.56113a85e1 as 'intertidal mangrove environment'. Verbatim
+    source attestations are preserved. Displaced GOLD source label 'Mangrove area'
+    in path 'Environmental > Aquatic > Marine > Intertidal zone > Mangrove area' is
+    context-dependent, ambiguous, or names a host/disease/process rather than the
+    defined habitat 'intertidal mangrove environment'; suppress automatic exact-synonym
+    retention while preserving verbatim source provenance.

@@ -1,9 +1,18 @@
 identifier: habitatmech:GOLD.25fd1f31a1
-label: Dermatitis
+label: mammalian dermatitis skin lesion
+definition: A skin environment on a mammalian host affected by epidermal and dermal
+  inflammation (dermatitis), often exhibiting barrier disruption and Staphylococcus
+  or Malassezia overgrowth.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: dermatitic mammalian skin
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:2100003
 - habitatmech:GOLD.c896f9520f
 source_attestations:
 - source: GOLD
@@ -11,15 +20,31 @@ source_attestations:
   source_label: Dermatitis
   source_path: Host-associated > Mammals > Integumentary system > Skin > Dermatitis
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.25fd1f31a1)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Defined mammalian
+    dermatitis skin lesion under ENVO:2100003 ''skin environment''; supported by mammalian
+    and canine dermatitis skin microbiome studies (PMID 27512056). (source concept
+    habitatmech:GOLD.25fd1f31a1)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: Defined as 'mammalian dermatitis skin lesion' under ENVO:2100003 'skin
+    environment'. Defined mammalian dermatitis skin lesion under ENVO:2100003 'skin
+    environment'; supported by mammalian and canine dermatitis skin microbiome studies
+    (PMID 27512056).
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Dermatitis' when
+    defining habitatmech:GOLD.25fd1f31a1 as 'mammalian dermatitis skin lesion'. Verbatim
+    source attestations are preserved. Displaced GOLD source label 'Dermatitis' in
+    path 'Host-associated > Mammals > Integumentary system > Skin > Dermatitis' is
+    context-dependent, ambiguous, or names a host/disease/process rather than the
+    defined habitat 'mammalian dermatitis skin lesion'; suppress automatic exact-synonym
+    retention while preserving verbatim source provenance.

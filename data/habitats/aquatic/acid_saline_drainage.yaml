@@ -1,9 +1,18 @@
 identifier: habitatmech:GOLD.4d8430a3ad
-label: Acid-saline drainage
+label: acid-saline groundwater drainage
+definition: A groundwater characterized by both low pH and high dissolved salt concentration
+  resulting from sulfide mineral oxidation coupled with evaporite dissolution or arid-zone
+  evaporative concentration.
+definition_source: HabitatMech
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Acid-saline drainage
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:01001004
 - habitatmech:GOLD.22a80cbd14
 source_attestations:
 - source: GOLD
@@ -12,15 +21,23 @@ source_attestations:
   source_path: Environmental > Aquatic > Deep subsurface > Groundwater > Acid-saline
     drainage
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.4d8430a3ad)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Aquatic > Deep subsurface > Groundwater > Acid-saline drainage''
+    denotes acidic hypersaline groundwater drainage. Define under ENVO:01001004 (groundwater)
+    (PMID 25120545; DOI:10.3389/fmicb.2014.00401). Path: Environmental > Aquatic >
+    Deep subsurface > Groundwater > Acid-saline drainage (source concept habitatmech:GOLD.4d8430a3ad)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''acid-saline groundwater drainage'' under ENVO:01001004 ''groundwater''.
+    ITEM curation: GOLD ''Environmental > Aquatic > Deep subsurface > Groundwater
+    > Acid-saline drainage'' denotes acidic hypersaline groundwater drainage. Define
+    under ENVO:01001004 (groundwater) (PMID 25120545; DOI:10.3389/fmicb.2014.00401).
+    Path: Environmental > Aquatic > Deep subsurface > Groundwater > Acid-saline drainage'

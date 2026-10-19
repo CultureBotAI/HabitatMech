@@ -1,9 +1,15 @@
 identifier: habitatmech:GOLD.157d3ec756
-label: Subcuticular space
+label: annelid subcuticular space
+definition: An environment associated with an animal part or small animal comprising
+  the extracellular space between the outer collagenous cuticle and the underlying
+  epidermal cells of an annelid worm, frequently inhabited by chemoautotrophic or
+  heterotrophic bacterial symbionts.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
+- ENVO:01001055
 - habitatmech:GOLD.8f7b1d316e
 source_attestations:
 - source: GOLD
@@ -12,15 +18,35 @@ source_attestations:
   source_path: Host-associated > Annelida > Integument > Subcuticular space
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.157d3ec756)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Annelida > Integument > Subcuticular space'' denotes
+    the subcuticular space beneath the annelid cuticle where extracellular symbionts
+    reside. Define under ENVO:01001055 and exclude bare ''Subcuticular space'' (PMID
+    16971946; DOI:10.1038/nature05192). Path: Host-associated > Annelida > Integument
+    > Subcuticular space (source concept habitatmech:GOLD.157d3ec756)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''annelid subcuticular space'' under ENVO:01001055 ''environment
+    associated with an animal part or small animal''. ITEM curation: GOLD ''Host-associated
+    > Annelida > Integument > Subcuticular space'' denotes the subcuticular space
+    beneath the annelid cuticle where extracellular symbionts reside. Define under
+    ENVO:01001055 and exclude bare ''Subcuticular space'' (PMID 16971946; DOI:10.1038/nature05192).
+    Path: Host-associated > Annelida > Integument > Subcuticular space'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Subcuticular space'
+    when defining habitatmech:GOLD.157d3ec756 as 'annelid subcuticular space'. Verbatim
+    source attestations are preserved. Displaced GOLD source label 'Subcuticular space'
+    in path 'Host-associated > Annelida > Integument > Subcuticular space' is context-dependent,
+    ambiguous, or names a host/disease/process rather than the defined habitat 'annelid
+    subcuticular space'; suppress automatic exact-synonym retention while preserving
+    verbatim source provenance.

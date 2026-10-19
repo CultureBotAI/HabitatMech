@@ -1,9 +1,20 @@
 identifier: habitatmech:GOLD.e5e6c7a719
-label: Municipal and sewage
+label: raw municipal sewage
+definition: A sewage consisting of untreated domestic and municipal wastewater entering
+  a wastewater treatment plant via a municipal sewer system.
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: raw municipal wastewater
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: untreated municipal sewage
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:00002018
 - habitatmech:GOLD.df0ebca6c0
 source_attestations:
 - source: GOLD
@@ -13,15 +24,34 @@ source_attestations:
   assertion_count: 15
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.e5e6c7a719)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Engineered > WWTP > Influent > Raw wastewater > Municipal and sewage''
+    denotes untreated municipal sewage influent. Define under ENVO:00002018 (sewage)
+    and exclude elliptical ''Municipal and sewage'' (PMID 25698586; DOI:10.1038/ismej.2015.13).
+    Path: Engineered > WWTP > Influent > Raw wastewater > Municipal and sewage (source
+    concept habitatmech:GOLD.e5e6c7a719)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''raw municipal sewage'' under ENVO:00002018 ''sewage''. ITEM
+    curation: GOLD ''Engineered > WWTP > Influent > Raw wastewater > Municipal and
+    sewage'' denotes untreated municipal sewage influent. Define under ENVO:00002018
+    (sewage) and exclude elliptical ''Municipal and sewage'' (PMID 25698586; DOI:10.1038/ismej.2015.13).
+    Path: Engineered > WWTP > Influent > Raw wastewater > Municipal and sewage'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Municipal and sewage'
+    when defining habitatmech:GOLD.e5e6c7a719 as 'raw municipal sewage'. Verbatim
+    source attestations are preserved. Displaced GOLD source label 'Municipal and
+    sewage' in path 'Engineered > WWTP > Influent > Raw wastewater > Municipal and
+    sewage' is context-dependent, ambiguous, or names a host/disease/process rather
+    than the defined habitat 'raw municipal sewage'; suppress automatic exact-synonym
+    retention while preserving verbatim source provenance.

@@ -1,9 +1,17 @@
 identifier: habitatmech:GOLD.f9bc260cd7
-label: Commercial compost
+label: commercial compost
+definition: A compost produced at an industrial or municipal composting facility from
+  mixed organic feedstocks for agricultural or horticultural soil amendment.
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: industrial mixed-feedstock compost
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:00002170
 - habitatmech:GOLD.753da37dcf
 source_attestations:
 - source: GOLD
@@ -12,15 +20,24 @@ source_attestations:
   source_path: Engineered > Solid waste > Mixed feedstock > Composting > Commercial
     compost
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.f9bc260cd7)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Engineered > Solid waste > Mixed feedstock > Composting > Commercial compost''
+    denotes commercially produced mixed-feedstock compost. Define under ENVO:00002170
+    (compost) (PMID 27006046; DOI:10.1016/j.biortech.2016.03.053). Path: Engineered
+    > Solid waste > Mixed feedstock > Composting > Commercial compost (source concept
+    habitatmech:GOLD.f9bc260cd7)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''commercial compost'' under ENVO:00002170 ''compost''. ITEM
+    curation: GOLD ''Engineered > Solid waste > Mixed feedstock > Composting > Commercial
+    compost'' denotes commercially produced mixed-feedstock compost. Define under
+    ENVO:00002170 (compost) (PMID 27006046; DOI:10.1016/j.biortech.2016.03.053). Path:
+    Engineered > Solid waste > Mixed feedstock > Composting > Commercial compost'

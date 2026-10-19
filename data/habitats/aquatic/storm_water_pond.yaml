@@ -1,8 +1,18 @@
 identifier: habitatmech:GOLD.2d1d06f93f
-label: Storm water pond
+label: stormwater retention pond
+definition: A pond engineered to collect, detain, and settle urban or suburban stormwater
+  runoff.
+definition_source: HabitatMech
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Storm water pond
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: stormwater detention pond
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:00000033
 source_attestations:
@@ -11,15 +21,23 @@ source_attestations:
   source_label: Storm water pond
   source_path: Environmental > Aquatic > Freshwater > Pond > Storm water pond
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.2d1d06f93f)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Aquatic > Freshwater > Pond > Storm water pond'' denotes
+    an urban stormwater retention/detention pond. Define under ENVO:00000033 (pond)
+    (PMID 29127029; DOI:10.1016/j.scitotenv.2017.10.299). Path: Environmental > Aquatic
+    > Freshwater > Pond > Storm water pond (source concept habitatmech:GOLD.2d1d06f93f)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''stormwater retention pond'' under ENVO:00000033 ''pond''.
+    ITEM curation: GOLD ''Environmental > Aquatic > Freshwater > Pond > Storm water
+    pond'' denotes an urban stormwater retention/detention pond. Define under ENVO:00000033
+    (pond) (PMID 29127029; DOI:10.1016/j.scitotenv.2017.10.299). Path: Environmental
+    > Aquatic > Freshwater > Pond > Storm water pond'

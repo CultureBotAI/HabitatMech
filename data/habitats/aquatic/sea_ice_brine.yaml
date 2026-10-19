@@ -1,10 +1,19 @@
 identifier: habitatmech:GOLD.003cf7aab1
-label: Sea-ice brine
+label: sea-ice brine
+definition: A saline water body consisting of hypersaline liquid brine concentrated
+  within interstitial channels and pockets of marine sea ice during freezing, inhabited
+  by psychrophilic and halotolerant microorganisms.
+definition_source: HabitatMech
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: sea ice brine channel fluid
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:00002150
+- ENVO:01001319
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8061
@@ -12,15 +21,25 @@ source_attestations:
   source_path: Environmental > Aquatic > Marine > Neritic zone/Coastal water > Sea-ice
     brine
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.003cf7aab1)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Aquatic > Marine > Neritic zone/Coastal water > Sea-ice
+    brine'' denotes hypersaline brine within sea-ice channels (ENVO:01001781 is absent
+    from the vendored slice). Define under ENVO:01001319 (saline water body) (PMID
+    22851598; DOI:10.1038/ismej.2012.88). Path: Environmental > Aquatic > Marine >
+    Neritic zone/Coastal water > Sea-ice brine (source concept habitatmech:GOLD.003cf7aab1)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''sea-ice brine'' under ENVO:01001319 ''saline water body''.
+    ITEM curation: GOLD ''Environmental > Aquatic > Marine > Neritic zone/Coastal
+    water > Sea-ice brine'' denotes hypersaline brine within sea-ice channels (ENVO:01001781
+    is absent from the vendored slice). Define under ENVO:01001319 (saline water body)
+    (PMID 22851598; DOI:10.1038/ismej.2012.88). Path: Environmental > Aquatic > Marine
+    > Neritic zone/Coastal water > Sea-ice brine'

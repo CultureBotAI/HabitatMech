@@ -1,9 +1,18 @@
 identifier: habitatmech:GOLD.6c54e5b602
-label: Poultry litter bioaerosol
+label: poultry litter bioaerosol
+definition: An aerosol suspended in poultry house air that consists of airborne particulate
+  matter, bacteria, fungi, and endotoxins aerosolized from poultry bedding litter
+  and droppings.
+definition_source: HabitatMech
 habitat_category: AIR
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: poultry house bioaerosol
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:00010505
 - habitatmech:GOLD.8a960b7130
 source_attestations:
 - source: GOLD
@@ -11,15 +20,24 @@ source_attestations:
   source_label: Poultry litter bioaerosol
   source_path: Environmental > Air > Indoor Air > Poultry farm > Poultry litter bioaerosol
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.6c54e5b602)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Air > Indoor Air > Poultry farm > Poultry litter bioaerosol''
+    denotes bioaerosols generated from poultry litter in indoor farm air. Define under
+    ENVO:00010505 (aerosol) (PMID 29342921; DOI:10.1016/j.envpol.2017.12.094). Path:
+    Environmental > Air > Indoor Air > Poultry farm > Poultry litter bioaerosol (source
+    concept habitatmech:GOLD.6c54e5b602)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''poultry litter bioaerosol'' under ENVO:00010505 ''aerosol''.
+    ITEM curation: GOLD ''Environmental > Air > Indoor Air > Poultry farm > Poultry
+    litter bioaerosol'' denotes bioaerosols generated from poultry litter in indoor
+    farm air. Define under ENVO:00010505 (aerosol) (PMID 29342921; DOI:10.1016/j.envpol.2017.12.094).
+    Path: Environmental > Air > Indoor Air > Poultry farm > Poultry litter bioaerosol'

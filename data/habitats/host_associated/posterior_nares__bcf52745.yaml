@@ -1,9 +1,21 @@
 identifier: habitatmech:GOLD.ff83a59297
-label: Posterior nares
+label: mammalian posterior nares
+definition: A nasal cavity region comprising the paired internal nasal apertures (posterior
+  nares or choanae) that open from the posterior nasal cavity into the nasopharynx
+  of a non-human mammal.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Posterior nares
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: mammalian choanae
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- UBERON:0001707
 - habitatmech:GOLD.c9756cb050
 source_attestations:
 - source: GOLD
@@ -12,15 +24,23 @@ source_attestations:
   source_path: Host-associated > Mammals > Respiratory system > Nasal cavity > Posterior
     nares
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.ff83a59297)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals > Respiratory system > Nasal cavity > Posterior
+    nares'' denotes the posterior nares (choanae) of a mammal (PMID 22977171; DOI:10.1126/scitranslmed.3004404).
+    Path: Host-associated > Mammals > Respiratory system > Nasal cavity > Posterior
+    nares (source concept habitatmech:GOLD.ff83a59297)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''mammalian posterior nares'' under UBERON:0001707 ''nasal
+    cavity''. ITEM curation: GOLD ''Host-associated > Mammals > Respiratory system
+    > Nasal cavity > Posterior nares'' denotes the posterior nares (choanae) of a
+    mammal (PMID 22977171; DOI:10.1126/scitranslmed.3004404). Path: Host-associated
+    > Mammals > Respiratory system > Nasal cavity > Posterior nares'

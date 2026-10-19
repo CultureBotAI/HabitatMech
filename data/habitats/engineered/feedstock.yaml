@@ -1,8 +1,15 @@
 identifier: habitatmech:GOLD.77f9ebdc4d
-label: Feedstock
+label: solid waste bioprocess feedstock
+definition: A Solid Waste organic material prepared as raw input substrate for composting,
+  anaerobic digestion, or bioenergy conversion.
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: solid waste feedstock
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - mesh:D062611
 source_attestations:
@@ -11,15 +18,30 @@ source_attestations:
   source_label: Feedstock
   source_path: Engineered > Solid waste > Feedstock
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.77f9ebdc4d)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Defined solid
+    waste bioprocess feedstock under mesh:D062611 ''Solid Waste''; supported by organic
+    waste feedstock digestion microbiome studies (PMID 29563585). (source concept
+    habitatmech:GOLD.77f9ebdc4d)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: Defined as 'solid waste bioprocess feedstock' under mesh:D062611 'Solid
+    Waste'. Defined solid waste bioprocess feedstock under mesh:D062611 'Solid Waste';
+    supported by organic waste feedstock digestion microbiome studies (PMID 29563585).
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Feedstock' when
+    defining habitatmech:GOLD.77f9ebdc4d as 'solid waste bioprocess feedstock'. Verbatim
+    source attestations are preserved. Displaced GOLD source label 'Feedstock' in
+    path 'Engineered > Solid waste > Feedstock' is context-dependent, ambiguous, or
+    names a host/disease/process rather than the defined habitat 'solid waste bioprocess
+    feedstock'; suppress automatic exact-synonym retention while preserving verbatim
+    source provenance.

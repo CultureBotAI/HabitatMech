@@ -1,9 +1,18 @@
 identifier: habitatmech:GOLD.f278a2544f
-label: Chlorinated
+label: chlorinated drinking water
+definition: A drinking water disinfected with free chlorine or hypochlorite that maintains
+  a residual oxidant concentration shaping chlorine-tolerant potable water biofilms
+  and planktonic communities.
+definition_source: HabitatMech
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: chlorine-disinfected drinking water
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:00003064
 - habitatmech:GOLD.99a88ecb51
 source_attestations:
 - source: GOLD
@@ -13,15 +22,35 @@ source_attestations:
   assertion_count: 1
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.f278a2544f)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Aquatic > Freshwater > Drinking water > Chlorinated'' denotes
+    chlorine-disinfected potable water. Define under ENVO:00003064 (drinking water)
+    and exclude bare adjective ''Chlorinated'' (PMID 27129706; DOI:10.1038/nmicrobiol.2016.14).
+    Path: Environmental > Aquatic > Freshwater > Drinking water > Chlorinated (source
+    concept habitatmech:GOLD.f278a2544f)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''chlorinated drinking water'' under ENVO:00003064 ''drinking
+    water''. ITEM curation: GOLD ''Environmental > Aquatic > Freshwater > Drinking
+    water > Chlorinated'' denotes chlorine-disinfected potable water. Define under
+    ENVO:00003064 (drinking water) and exclude bare adjective ''Chlorinated'' (PMID
+    27129706; DOI:10.1038/nmicrobiol.2016.14). Path: Environmental > Aquatic > Freshwater
+    > Drinking water > Chlorinated'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Chlorinated' when
+    defining habitatmech:GOLD.f278a2544f as 'chlorinated drinking water'. Verbatim
+    source attestations are preserved. Displaced GOLD source label 'Chlorinated' in
+    path 'Environmental > Aquatic > Freshwater > Drinking water > Chlorinated' is
+    context-dependent, ambiguous, or names a host/disease/process rather than the
+    defined habitat 'chlorinated drinking water'; suppress automatic exact-synonym
+    retention while preserving verbatim source provenance.

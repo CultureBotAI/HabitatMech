@@ -1,10 +1,17 @@
 identifier: habitatmech:GOLD.15771ec9ef
-label: Oceanarium
+label: oceanarium
+definition: An aquarium consisting of a large-scale marine vivarium tank system maintained
+  with natural or artificial seawater for housing pelagic and benthic marine organisms.
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: marine oceanarium
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- ENVO:00010622
+- ENVO:00002196
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8031
@@ -12,15 +19,23 @@ source_attestations:
   source_path: Engineered > Artificial ecosystem > Vivarium > Oceanarium
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.15771ec9ef)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Engineered > Artificial ecosystem > Vivarium > Oceanarium'' denotes a large-scale
+    marine aquarium system. Define under ENVO:00002196 (aquarium) with parent_mode
+    REPLACE (PMID 28855512; DOI:10.1128/AEM.01245-17). Path: Engineered > Artificial
+    ecosystem > Vivarium > Oceanarium (source concept habitatmech:GOLD.15771ec9ef)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''oceanarium'' under ENVO:00002196 ''aquarium''. ITEM curation:
+    GOLD ''Engineered > Artificial ecosystem > Vivarium > Oceanarium'' denotes a large-scale
+    marine aquarium system. Define under ENVO:00002196 (aquarium) with parent_mode
+    REPLACE (PMID 28855512; DOI:10.1128/AEM.01245-17). Path: Engineered > Artificial
+    ecosystem > Vivarium > Oceanarium'

@@ -1,25 +1,52 @@
 identifier: habitatmech:GOLD.fe6a2e45f2
-label: Sargassum
+label: stranded Sargassum wrack environment
+definition: An environmental system determined by an organism of the brown macroalgal
+  genus Sargassum deposited onshore in a coastal terrestrial beach wrack zone, where
+  decomposing macroalgal biomass supports halotolerant, alginate-degrading, and sulfate-reducing
+  microorganisms.
+definition_source: HabitatMech
 habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Sargassum beach wrack
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- ENVO:00000446
+- ENVO:01001000
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7120
   source_label: Sargassum
   source_path: Environmental > Terrestrial > Sargassum
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.fe6a2e45f2)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Terrestrial > Sargassum'' denotes terrestrial beach-stranded
+    Sargassum macroalgal wrack rather than the algal taxon itself (PMID 25624136;
+    DOI:10.3389/fmicb.2015.00018). Path: Environmental > Terrestrial > Sargassum (source
+    concept habitatmech:GOLD.fe6a2e45f2)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''stranded Sargassum wrack environment'' under ENVO:01001000
+    ''environmental system determined by an organism''. ITEM curation: GOLD ''Environmental
+    > Terrestrial > Sargassum'' denotes terrestrial beach-stranded Sargassum macroalgal
+    wrack rather than the algal taxon itself (PMID 25624136; DOI:10.3389/fmicb.2015.00018).
+    Path: Environmental > Terrestrial > Sargassum'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Sargassum' when
+    defining habitatmech:GOLD.fe6a2e45f2 as 'stranded Sargassum wrack environment'.
+    Verbatim source attestations are preserved. Displaced GOLD source label 'Sargassum'
+    in path 'Environmental > Terrestrial > Sargassum' is context-dependent, ambiguous,
+    or names a host/disease/process rather than the defined habitat 'stranded Sargassum
+    wrack environment'; suppress automatic exact-synonym retention while preserving
+    verbatim source provenance.

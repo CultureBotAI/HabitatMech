@@ -1,23 +1,41 @@
 identifier: habitatmech:GOLD.61d10c8224
-label: Low land river systems
+label: lowland river system
+definition: A river system flowing across low-gradient alluvial plains at low elevation,
+  characterized by meandering channels, fine-grained sediment transport, floodplain
+  connectivity, and high residence-time potamoplankton communities.
+definition_source: HabitatMech
 habitat_category: OTHER
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Low land river systems
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: lowland river
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+parent_habitats:
+- ENVO:00000022
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4163
   source_label: Low land river systems
   source_path: Low land river systems
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.61d10c8224)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Low land river systems'' denotes a low-gradient lowland river system (PMID
+    25609815; DOI:10.3389/fmicb.2014.00741). Path: Low land river systems (source
+    concept habitatmech:GOLD.61d10c8224)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''lowland river system'' under ENVO:00000022 ''river''. ITEM
+    curation: GOLD ''Low land river systems'' denotes a low-gradient lowland river
+    system (PMID 25609815; DOI:10.3389/fmicb.2014.00741). Path: Low land river systems'

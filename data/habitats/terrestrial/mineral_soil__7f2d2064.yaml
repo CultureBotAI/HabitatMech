@@ -1,9 +1,17 @@
 identifier: habitatmech:GOLD.cf61f100c6
-label: Mineral soil
+label: boreal forest mineral soil
+definition: A soil comprising the mineral horizons beneath the surface organic (O)
+  peat or litter layer in a boreal forest (taiga) ecosystem.
+definition_source: HabitatMech
 habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: taiga mineral soil
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:00001998
 - ENVO:01000250
 source_attestations:
 - source: GOLD
@@ -12,15 +20,34 @@ source_attestations:
   source_path: Environmental > Terrestrial > Soil > Boreal forest/Taiga > Mineral
     soil
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.cf61f100c6)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Terrestrial > Soil > Boreal forest/Taiga > Mineral soil''
+    denotes mineral soil in a boreal forest. Define under ENVO:00001998 (soil) and
+    exclude bare ''Mineral soil'' (PMID 26283369; DOI:10.1038/ismej.2015.145). Path:
+    Environmental > Terrestrial > Soil > Boreal forest/Taiga > Mineral soil (source
+    concept habitatmech:GOLD.cf61f100c6)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''boreal forest mineral soil'' under ENVO:00001998 ''soil''.
+    ITEM curation: GOLD ''Environmental > Terrestrial > Soil > Boreal forest/Taiga
+    > Mineral soil'' denotes mineral soil in a boreal forest. Define under ENVO:00001998
+    (soil) and exclude bare ''Mineral soil'' (PMID 26283369; DOI:10.1038/ismej.2015.145).
+    Path: Environmental > Terrestrial > Soil > Boreal forest/Taiga > Mineral soil'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Mineral soil' when
+    defining habitatmech:GOLD.cf61f100c6 as 'boreal forest mineral soil'. Verbatim
+    source attestations are preserved. Displaced GOLD source label 'Mineral soil'
+    in path 'Environmental > Terrestrial > Soil > Boreal forest/Taiga > Mineral soil'
+    is context-dependent, ambiguous, or names a host/disease/process rather than the
+    defined habitat 'boreal forest mineral soil'; suppress automatic exact-synonym
+    retention while preserving verbatim source provenance.

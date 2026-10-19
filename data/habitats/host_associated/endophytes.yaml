@@ -1,9 +1,21 @@
 identifier: habitatmech:GOLD.89d01f437a
-label: Endophytes
+label: fruit endophyte environment
+definition: An environment associated with a plant part or small plant comprising
+  the internal pericarp and pulp tissues of a plant fruit colonized by endophytic
+  microorganisms.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: carposphere endosphere
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: fruit endosphere
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:01001057
 - habitatmech:GOLD.e898437067
 source_attestations:
 - source: GOLD
@@ -13,15 +25,35 @@ source_attestations:
   assertion_count: 3
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.89d01f437a)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Plants > Phyllosphere > Carposphere > Endophytes'' denotes
+    the internal fruit tissue habitat of endophytes. Define under ENVO:01001057 and
+    exclude bare ''Endophytes'' (PMID 32346039; DOI:10.1186/s40168-020-00830-z). Path:
+    Host-associated > Plants > Phyllosphere > Carposphere > Endophytes (source concept
+    habitatmech:GOLD.89d01f437a)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''fruit endophyte environment'' under ENVO:01001057 ''environment
+    associated with a plant part or small plant''. ITEM curation: GOLD ''Host-associated
+    > Plants > Phyllosphere > Carposphere > Endophytes'' denotes the internal fruit
+    tissue habitat of endophytes. Define under ENVO:01001057 and exclude bare ''Endophytes''
+    (PMID 32346039; DOI:10.1186/s40168-020-00830-z). Path: Host-associated > Plants
+    > Phyllosphere > Carposphere > Endophytes'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Endophytes' when
+    defining habitatmech:GOLD.89d01f437a as 'fruit endophyte environment'. Verbatim
+    source attestations are preserved. Displaced GOLD source label 'Endophytes' in
+    path 'Host-associated > Plants > Phyllosphere > Carposphere > Endophytes' is context-dependent,
+    ambiguous, or names a host/disease/process rather than the defined habitat 'fruit
+    endophyte environment'; suppress automatic exact-synonym retention while preserving
+    verbatim source provenance.

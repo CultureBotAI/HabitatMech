@@ -1,10 +1,23 @@
 identifier: habitatmech:GOLD.6cb602e8f8
-label: Mantle fluid
+label: mollusc mantle cavity fluid
+definition: A bodily fluid or pallial cavity fluid held within the mantle cavity of
+  a bivalve or gastropod mollusc.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Mantle fluid
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: mollusc pallial cavity fluid
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: pallial fluid
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- UBERON:0006575
+- UBERON:0006314
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7841
@@ -12,15 +25,25 @@ source_attestations:
   source_path: Host-associated > Mollusca > Integumentary system > Mantle > Mantle
     fluid
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.6cb602e8f8)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mollusca > Integumentary system > Mantle > Mantle fluid''
+    denotes fluid within the molluscan mantle/pallial cavity rather than the mantle
+    tissue itself (UBERON:0006575). Define under UBERON:0006314 (bodily fluid) with
+    parent_mode REPLACE (PMID 29487366; DOI:10.3389/fmicb.2018.00286). Path: Host-associated
+    > Mollusca > Integumentary system > Mantle > Mantle fluid (source concept habitatmech:GOLD.6cb602e8f8)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''mollusc mantle cavity fluid'' under UBERON:0006314 ''bodily
+    fluid''. ITEM curation: GOLD ''Host-associated > Mollusca > Integumentary system
+    > Mantle > Mantle fluid'' denotes fluid within the molluscan mantle/pallial cavity
+    rather than the mantle tissue itself (UBERON:0006575). Define under UBERON:0006314
+    (bodily fluid) with parent_mode REPLACE (PMID 29487366; DOI:10.3389/fmicb.2018.00286).
+    Path: Host-associated > Mollusca > Integumentary system > Mantle > Mantle fluid'

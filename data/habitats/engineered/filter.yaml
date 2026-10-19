@@ -1,9 +1,18 @@
 identifier: habitatmech:GOLD.866567ca49
-label: Filter
+label: engineered filtration medium
+definition: A manufactured product consisting of a porous air, water, or fluid filtration
+  membrane or cartridge on which suspended microorganisms, particles, and biofilms
+  accumulate.
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: engineered filter medium
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:00003074
 - habitatmech:GOLD.74bb2a619a
 source_attestations:
 - source: GOLD
@@ -11,15 +20,33 @@ source_attestations:
   source_label: Filter
   source_path: Engineered > Industrial production > Engineered product > Filter
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.866567ca49)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Engineered > Industrial production > Engineered product > Filter'' denotes
+    an engineered filter product colonized by captured or biofilm microorganisms (PMID
+    28119674; DOI:10.3389/fmicb.2016.02133). Path: Engineered > Industrial production
+    > Engineered product > Filter (source concept habitatmech:GOLD.866567ca49)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''engineered filtration medium'' under ENVO:00003074 ''manufactured
+    product''. ITEM curation: GOLD ''Engineered > Industrial production > Engineered
+    product > Filter'' denotes an engineered filter product colonized by captured
+    or biofilm microorganisms (PMID 28119674; DOI:10.3389/fmicb.2016.02133). Path:
+    Engineered > Industrial production > Engineered product > Filter'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Filter' when defining
+    habitatmech:GOLD.866567ca49 as 'engineered filtration medium'. Verbatim source
+    attestations are preserved. Displaced GOLD source label 'Filter' in path 'Engineered
+    > Industrial production > Engineered product > Filter' is context-dependent, ambiguous,
+    or names a host/disease/process rather than the defined habitat 'engineered filtration
+    medium'; suppress automatic exact-synonym retention while preserving verbatim
+    source provenance.

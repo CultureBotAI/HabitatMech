@@ -1,10 +1,14 @@
 identifier: habitatmech:GOLD.19733b3f98
-label: Thermokarst pond
+label: thermokarst pond
+definition: A pond formed in a depression resulting from the thawing and subsidence
+  of ice-rich permafrost (frequently within peatland terrain), characterized by high
+  dissolved organic carbon and active methanogenic and methanotrophic microbial communities.
+definition_source: HabitatMech
 habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
-- ENVO:00005774
+- ENVO:00000033
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5818
@@ -13,15 +17,24 @@ source_attestations:
   assertion_count: 7
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.19733b3f98)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Terrestrial > Soil > Peat > Thermokarst pond'' denotes
+    a thaw pond water body rather than peat soil (ENVO:00005774). Define under ENVO:00000033
+    (pond) with parent_mode REPLACE (PMID 25852654; DOI:10.3389/fmicb.2015.00192).
+    Path: Environmental > Terrestrial > Soil > Peat > Thermokarst pond (source concept
+    habitatmech:GOLD.19733b3f98)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''thermokarst pond'' under ENVO:00000033 ''pond''. ITEM curation:
+    GOLD ''Environmental > Terrestrial > Soil > Peat > Thermokarst pond'' denotes
+    a thaw pond water body rather than peat soil (ENVO:00005774). Define under ENVO:00000033
+    (pond) with parent_mode REPLACE (PMID 25852654; DOI:10.3389/fmicb.2015.00192).
+    Path: Environmental > Terrestrial > Soil > Peat > Thermokarst pond'

@@ -1,9 +1,20 @@
 identifier: habitatmech:GOLD.02cd19a432
-label: 'Paranasal sinuses: Sphenoidal'
+label: human sphenoidal sinus
+definition: A paranasal sinus located within the body of the human sphenoid bone posterior
+  to the nasal cavity.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: 'Paranasal sinuses: Sphenoidal'
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: human sphenoid sinus
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- UBERON:0001825
 - habitatmech:GOLD.bcb2f8b7f3
 source_attestations:
 - source: GOLD
@@ -12,15 +23,26 @@ source_attestations:
   source_path: 'Host-associated > Mammals: Human > Respiratory system > Nasal cavity
     > Paranasal sinuses: Sphenoidal'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.02cd19a432)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals: Human > Respiratory system > Nasal cavity >
+    Paranasal sinuses: Sphenoidal'' denotes the human sphenoidal sinus (UBERON term
+    0001724 is not in the vendored slice). Define under UBERON:0001825 (paranasal
+    sinus) (PMID 22977171; DOI:10.1126/scitranslmed.3004404). Path: Host-associated
+    > Mammals: Human > Respiratory system > Nasal cavity > Paranasal sinuses: Sphenoidal
+    (source concept habitatmech:GOLD.02cd19a432)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''human sphenoidal sinus'' under UBERON:0001825 ''paranasal
+    sinus''. ITEM curation: GOLD ''Host-associated > Mammals: Human > Respiratory
+    system > Nasal cavity > Paranasal sinuses: Sphenoidal'' denotes the human sphenoidal
+    sinus (UBERON term 0001724 is not in the vendored slice). Define under UBERON:0001825
+    (paranasal sinus) (PMID 22977171; DOI:10.1126/scitranslmed.3004404). Path: Host-associated
+    > Mammals: Human > Respiratory system > Nasal cavity > Paranasal sinuses: Sphenoidal'

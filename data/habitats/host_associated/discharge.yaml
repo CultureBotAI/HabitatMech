@@ -1,9 +1,17 @@
 identifier: habitatmech:GOLD.944486580a
-label: Discharge
+label: human urethral discharge
+definition: A bodily fluid consisting of mucopurulent or serous exudate discharged
+  from the human urethra.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: urethral exudate
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- UBERON:0006314
 - habitatmech:GOLD.9f2dc7145e
 source_attestations:
 - source: GOLD
@@ -13,15 +21,35 @@ source_attestations:
   assertion_count: 2
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.944486580a)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals: Human > Urinary system > Urethra > Discharge''
+    denotes exudate discharged from the human urethra. Define under UBERON:0006314
+    (bodily fluid) and exclude bare ''Discharge'' (PMID 26931546; DOI:10.1128/JCM.03192-15).
+    Path: Host-associated > Mammals: Human > Urinary system > Urethra > Discharge
+    (source concept habitatmech:GOLD.944486580a)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''human urethral discharge'' under UBERON:0006314 ''bodily
+    fluid''. ITEM curation: GOLD ''Host-associated > Mammals: Human > Urinary system
+    > Urethra > Discharge'' denotes exudate discharged from the human urethra. Define
+    under UBERON:0006314 (bodily fluid) and exclude bare ''Discharge'' (PMID 26931546;
+    DOI:10.1128/JCM.03192-15). Path: Host-associated > Mammals: Human > Urinary system
+    > Urethra > Discharge'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Discharge'' when
+    defining habitatmech:GOLD.944486580a as ''human urethral discharge''. Verbatim
+    source attestations are preserved. Displaced GOLD source label ''Discharge'' in
+    path ''Host-associated > Mammals: Human > Urinary system > Urethra > Discharge''
+    is context-dependent, ambiguous, or names a host/disease/process rather than the
+    defined habitat ''human urethral discharge''; suppress automatic exact-synonym
+    retention while preserving verbatim source provenance.'

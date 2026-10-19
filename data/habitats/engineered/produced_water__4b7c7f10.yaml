@@ -1,10 +1,13 @@
 identifier: habitatmech:GOLD.e860ad4c9d
-label: Produced water
+label: mine produced water
+definition: An industrial wastewater consisting of subsurface formation water co-produced
+  and pumped out during underground mining or coalbed extraction operations.
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
-- habitatmech:GOLD.6a0644fced
+- ENVO:01000964
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7738
@@ -12,15 +15,33 @@ source_attestations:
   source_path: Engineered > Wastewater > Industrial wastewater > Mine water > Produced
     water
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.e860ad4c9d)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Engineered > Wastewater > Industrial wastewater > Mine water > Produced
+    water'' denotes produced water from mining operations (PMID 27582239; DOI:10.1038/nmicrobiol.2016.146).
+    Path: Engineered > Wastewater > Industrial wastewater > Mine water > Produced
+    water (source concept habitatmech:GOLD.e860ad4c9d)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''mine produced water'' under ENVO:01000964 ''industrial wastewater''.
+    ITEM curation: GOLD ''Engineered > Wastewater > Industrial wastewater > Mine water
+    > Produced water'' denotes produced water from mining operations (PMID 27582239;
+    DOI:10.1038/nmicrobiol.2016.146). Path: Engineered > Wastewater > Industrial wastewater
+    > Mine water > Produced water'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Produced water'
+    when defining habitatmech:GOLD.e860ad4c9d as 'mine produced water'. Verbatim source
+    attestations are preserved. Displaced GOLD source label 'Produced water' in path
+    'Engineered > Wastewater > Industrial wastewater > Mine water > Produced water'
+    is context-dependent, ambiguous, or names a host/disease/process rather than the
+    defined habitat 'mine produced water'; suppress automatic exact-synonym retention
+    while preserving verbatim source provenance.

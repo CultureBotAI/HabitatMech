@@ -1,9 +1,21 @@
 identifier: habitatmech:GOLD.78396d6d7d
-label: Mine pit pond
+label: mine pit pond
+definition: A pond or pit lake that forms when an abandoned open-pit surface mine
+  fills with groundwater and surface runoff, often exhibiting acidic and metal-rich
+  water chemistry.
+definition_source: HabitatMech
 habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: mine pit lake
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: open-pit mine pond
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:00000033
 - habitatmech:GOLD.e00433021f
 source_attestations:
 - source: GOLD
@@ -11,15 +23,21 @@ source_attestations:
   source_label: Mine pit pond
   source_path: Environmental > Terrestrial > Geologic > Mine pit pond
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.78396d6d7d)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Terrestrial > Geologic > Mine pit pond'' denotes a water-filled
+    open-pit mine pond. Define under ENVO:00000033 (pond) (PMID 25120545; DOI:10.3389/fmicb.2014.00401).
+    Path: Environmental > Terrestrial > Geologic > Mine pit pond (source concept habitatmech:GOLD.78396d6d7d)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''mine pit pond'' under ENVO:00000033 ''pond''. ITEM curation:
+    GOLD ''Environmental > Terrestrial > Geologic > Mine pit pond'' denotes a water-filled
+    open-pit mine pond. Define under ENVO:00000033 (pond) (PMID 25120545; DOI:10.3389/fmicb.2014.00401).
+    Path: Environmental > Terrestrial > Geologic > Mine pit pond'

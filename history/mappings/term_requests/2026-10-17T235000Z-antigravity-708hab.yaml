@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: term_requests
+session:
+  id: 2026-10-17T235000Z-antigravity-708hab
+  timestamp: '2026-10-17T23:50:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: gemini-2.5-pro
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - label
+  - definition
+  - parent_habitats
+  - curation_history
+  summary: Author literature-backed microbial habitat definitions and item-level decisions for 515 ungrounded habitats across the corpus
+  details: 'Authored Aristotelean genus-differentia definitions, ENVO/FOODON/UBERON/PO parent_class attachments, exact synonyms, source-label exclusions, and item-level CONFIRM_UNGROUNDED rationales with PubMed/DOI literature citations for 515 eligible ungrounded microbial habitat concepts across GOLD, BacDive, MADIN, and PREGO in curation/term_requests.tsv, curation/decisions.tsv, and curation/definition_source_label_exclusions.tsv.'

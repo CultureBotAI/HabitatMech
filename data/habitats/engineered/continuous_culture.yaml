@@ -1,8 +1,19 @@
 identifier: habitatmech:GOLD.deb06c4e48
-label: Continuous culture
+label: continuous culture bioreactor
+definition: A bioreactor operated as a chemostat, turbidostat, or continuous-flow
+  culture system in which fresh medium is continuously supplied and culture fluid
+  is removed at a steady dilution rate.
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Continuous culture
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: chemostat bioreactor
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:00002123
 source_attestations:
@@ -14,15 +25,23 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.deb06c4e48)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Engineered > Bioreactor > Continuous culture'' denotes a continuous-flow
+    bioreactor or chemostat. Define under ENVO:00002123 (bioreactor) (PMID 26905468;
+    DOI:10.1038/ismej.2016.6). Path: Engineered > Bioreactor > Continuous culture
+    (source concept habitatmech:GOLD.deb06c4e48)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''continuous culture bioreactor'' under ENVO:00002123 ''bioreactor''.
+    ITEM curation: GOLD ''Engineered > Bioreactor > Continuous culture'' denotes a
+    continuous-flow bioreactor or chemostat. Define under ENVO:00002123 (bioreactor)
+    (PMID 26905468; DOI:10.1038/ismej.2016.6). Path: Engineered > Bioreactor > Continuous
+    culture'

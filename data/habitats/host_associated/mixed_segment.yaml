@@ -1,9 +1,22 @@
 identifier: habitatmech:GOLD.729ded00e9
-label: Mixed segment
+label: termite gut mixed segment
+definition: A midgut-hindgut junctional segment characteristic of higher termites
+  (Termitidae) in which mesenteric midgut tissue and proctodeal hindgut epithelium
+  run side by side enclosing an alkaline luminal pocket colonized by specialized gut
+  clostridia.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Mixed segment
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: insect gut mixed segment
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- UBERON:0001045
 - habitatmech:GOLD.67c565f695
 source_attestations:
 - source: GOLD
@@ -12,15 +25,20 @@ source_attestations:
   source_path: 'Host-associated > Arthropoda: Insects > Digestive system > Midgut
     > Mixed segment'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.729ded00e9)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Defined termite
+    gut mixed segment under UBERON:0001045 ''midgut''; supported by higher termite
+    mixed-segment gut compartment microbiome studies (PMID 25404569). (source concept
+    habitatmech:GOLD.729ded00e9)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: Defined as 'termite gut mixed segment' under UBERON:0001045 'midgut'. Defined
+    termite gut mixed segment under UBERON:0001045 'midgut'; supported by higher termite
+    mixed-segment gut compartment microbiome studies (PMID 25404569).

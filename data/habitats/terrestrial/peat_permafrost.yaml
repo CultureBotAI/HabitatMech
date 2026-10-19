@@ -1,9 +1,20 @@
 identifier: habitatmech:GOLD.78b905bd97
-label: Peat permafrost
+label: palsa peat permafrost
+definition: A permafrost layer composed of perennially frozen histic peat within the
+  core of a subarctic palsa mire mound.
+definition_source: HabitatMech
 habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Peat permafrost
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: frozen palsa peat
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:00000134
 - ENVO:00000489
 source_attestations:
 - source: GOLD
@@ -11,15 +22,23 @@ source_attestations:
   source_label: Peat permafrost
   source_path: Environmental > Terrestrial > Soil > Palsa > Peat permafrost
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.78b905bd97)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Terrestrial > Soil > Palsa > Peat permafrost'' denotes
+    perennially frozen peat within a palsa mound. Define under ENVO:00000134 (permafrost)
+    (PMID 24603570; DOI:10.1038/nature13164). Path: Environmental > Terrestrial >
+    Soil > Palsa > Peat permafrost (source concept habitatmech:GOLD.78b905bd97)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''palsa peat permafrost'' under ENVO:00000134 ''permafrost''.
+    ITEM curation: GOLD ''Environmental > Terrestrial > Soil > Palsa > Peat permafrost''
+    denotes perennially frozen peat within a palsa mound. Define under ENVO:00000134
+    (permafrost) (PMID 24603570; DOI:10.1038/nature13164). Path: Environmental > Terrestrial
+    > Soil > Palsa > Peat permafrost'

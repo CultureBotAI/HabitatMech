@@ -1,8 +1,16 @@
 identifier: habitatmech:GOLD.e00433021f
-label: Geologic
+label: terrestrial geological environment
+definition: A terrestrial biome environment determined by solid geological formations,
+  rock outcrops, mineral deposits, or lithic substrates that host lithobiontic and
+  mineral-weathering microbial communities.
+definition_source: HabitatMech
 habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: geological terrestrial habitat
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:00000446
 source_attestations:
@@ -14,15 +22,29 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.e00433021f)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Defined terrestrial
+    geological environment under ENVO:00000446 ''terrestrial biome''; supported by
+    geomicrobiology literature (PMID 26396045). (source concept habitatmech:GOLD.e00433021f)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: Defined as 'terrestrial geological environment' under ENVO:00000446 'terrestrial
+    biome'. Defined terrestrial geological environment under ENVO:00000446 'terrestrial
+    biome'; supported by geomicrobiology literature (PMID 26396045).
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Geologic' when defining
+    habitatmech:GOLD.e00433021f as 'terrestrial geological environment'. Verbatim
+    source attestations are preserved. Displaced GOLD source label 'Geologic' in path
+    'Environmental > Terrestrial > Geologic' is context-dependent, ambiguous, or names
+    a host/disease/process rather than the defined habitat 'terrestrial geological
+    environment'; suppress automatic exact-synonym retention while preserving verbatim
+    source provenance.

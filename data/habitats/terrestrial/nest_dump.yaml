@@ -1,9 +1,21 @@
 identifier: habitatmech:GOLD.08b797ed27
-label: Nest dump
+label: insect nest refuse dump
+definition: An animal habitation component consisting of a refuse chamber or external
+  waste pile accumulated by social insects, such as leaf-cutter ants, composed of
+  spent fungal substrate, dead workers, and nest debris.
+definition_source: HabitatMech
 habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Nest dump
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: ant refuse dump
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:00005803
 - habitatmech:GOLD.076eb28273
 source_attestations:
 - source: GOLD
@@ -11,15 +23,23 @@ source_attestations:
   source_label: Nest dump
   source_path: Environmental > Terrestrial > Nest > Insects nest > Nest dump
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.08b797ed27)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Terrestrial > Nest > Insects nest > Nest dump'' denotes
+    the refuse dump chamber or pile of an insect nest. Define under ENVO:00005803
+    (animal habitation) (PMID 20581837; DOI:10.1038/ismej.2010.91). Path: Environmental
+    > Terrestrial > Nest > Insects nest > Nest dump (source concept habitatmech:GOLD.08b797ed27)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''insect nest refuse dump'' under ENVO:00005803 ''animal habitation''.
+    ITEM curation: GOLD ''Environmental > Terrestrial > Nest > Insects nest > Nest
+    dump'' denotes the refuse dump chamber or pile of an insect nest. Define under
+    ENVO:00005803 (animal habitation) (PMID 20581837; DOI:10.1038/ismej.2010.91).
+    Path: Environmental > Terrestrial > Nest > Insects nest > Nest dump'

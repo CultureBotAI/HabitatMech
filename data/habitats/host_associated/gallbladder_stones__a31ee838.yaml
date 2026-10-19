@@ -1,9 +1,22 @@
 identifier: habitatmech:GOLD.97738241e1
-label: Gallbladder stones
+label: human gallstone
+definition: An anatomical entity environment consisting of a cholesterol, pigment,
+  or mixed biliary calculus (cholelith) in the human gallbladder or biliary tract,
+  whose surface and interior can harbor chronic biofilm-forming enteric bacteria such
+  as Salmonella enterica serovar Typhi.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: human cholelith
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: human gallbladder stone
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:2100000
 - habitatmech:GOLD.133311ddf9
 source_attestations:
 - source: GOLD
@@ -12,15 +25,33 @@ source_attestations:
   source_path: 'Host-associated > Mammals: Human > Digestive system > Biliary tract
     > Gallbladder stones'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.97738241e1)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals: Human > Digestive system > Biliary tract > Gallbladder
+    stones'' denotes human gallstones (PMID 24391632; DOI:10.1371/journal.pone.0082692).
+    Path: Host-associated > Mammals: Human > Digestive system > Biliary tract > Gallbladder
+    stones (source concept habitatmech:GOLD.97738241e1)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''human gallstone'' under ENVO:2100000 ''anatomical entity
+    environment''. ITEM curation: GOLD ''Host-associated > Mammals: Human > Digestive
+    system > Biliary tract > Gallbladder stones'' denotes human gallstones (PMID 24391632;
+    DOI:10.1371/journal.pone.0082692). Path: Host-associated > Mammals: Human > Digestive
+    system > Biliary tract > Gallbladder stones'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Gallbladder stones''
+    when defining habitatmech:GOLD.97738241e1 as ''human gallstone''. Verbatim source
+    attestations are preserved. Displaced GOLD source label ''Gallbladder stones''
+    in path ''Host-associated > Mammals: Human > Digestive system > Biliary tract
+    > Gallbladder stones'' is context-dependent, ambiguous, or names a host/disease/process
+    rather than the defined habitat ''human gallstone''; suppress automatic exact-synonym
+    retention while preserving verbatim source provenance.'

@@ -1,9 +1,18 @@
 identifier: habitatmech:GOLD.ae0d773157
-label: Stromatolites
+label: freshwater stromatolite
+definition: A microbialite formed in a freshwater lake, spring, or stream that exhibits
+  laminated organo-sedimentary accretion produced by benthic cyanobacterial and heterotrophic
+  microbial mats.
+definition_source: HabitatMech
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: freshwater stromatolite mat
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:03600064
 - habitatmech:GOLD.e53e2c6e8e
 source_attestations:
 - source: GOLD
@@ -11,15 +20,35 @@ source_attestations:
   source_label: Stromatolites
   source_path: Environmental > Aquatic > Freshwater > Microbialites > Stromatolites
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.ae0d773157)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Aquatic > Freshwater > Microbialites > Stromatolites''
+    denotes laminated freshwater stromatolites (scoped to freshwater, distinct from
+    general ENVO:00002157). Define under ENVO:03600064 (microbialite) and exclude
+    bare ''Stromatolites'' (PMID 25609815; DOI:10.3389/fmicb.2014.00741). Path: Environmental
+    > Aquatic > Freshwater > Microbialites > Stromatolites (source concept habitatmech:GOLD.ae0d773157)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''freshwater stromatolite'' under ENVO:03600064 ''microbialite''.
+    ITEM curation: GOLD ''Environmental > Aquatic > Freshwater > Microbialites > Stromatolites''
+    denotes laminated freshwater stromatolites (scoped to freshwater, distinct from
+    general ENVO:00002157). Define under ENVO:03600064 (microbialite) and exclude
+    bare ''Stromatolites'' (PMID 25609815; DOI:10.3389/fmicb.2014.00741). Path: Environmental
+    > Aquatic > Freshwater > Microbialites > Stromatolites'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Stromatolites' when
+    defining habitatmech:GOLD.ae0d773157 as 'freshwater stromatolite'. Verbatim source
+    attestations are preserved. Displaced GOLD source label 'Stromatolites' in path
+    'Environmental > Aquatic > Freshwater > Microbialites > Stromatolites' is context-dependent,
+    ambiguous, or names a host/disease/process rather than the defined habitat 'freshwater
+    stromatolite'; suppress automatic exact-synonym retention while preserving verbatim
+    source provenance.

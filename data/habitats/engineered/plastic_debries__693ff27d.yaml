@@ -1,25 +1,50 @@
 identifier: habitatmech:GOLD.b39df834b2
-label: Plastic debries
+label: freshwater plastic debris
+definition: A piece of plastic litter in a river, lake, or freshwater stream whose
+  polymer surface is colonized by freshwater plastisphere microbial biofilms.
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: freshwater plastic litter
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- habitatmech:GOLD.4b4124c98a
+- ENVO:01000776
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8354
   source_label: Plastic debries
   source_path: Engineered > Solid waste > Debries > Freshwater debries > Plastic debries
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.b39df834b2)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Engineered > Solid waste > Debries > Freshwater debries > Plastic debries''
+    denotes freshwater plastic debris (PMID 25229597; DOI:10.1021/es502263j). Path:
+    Engineered > Solid waste > Debries > Freshwater debries > Plastic debries (source
+    concept habitatmech:GOLD.b39df834b2)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''freshwater plastic debris'' under ENVO:01000776 ''piece of
+    plastic''. ITEM curation: GOLD ''Engineered > Solid waste > Debries > Freshwater
+    debries > Plastic debries'' denotes freshwater plastic debris (PMID 25229597;
+    DOI:10.1021/es502263j). Path: Engineered > Solid waste > Debries > Freshwater
+    debries > Plastic debries'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Plastic debries'
+    when defining habitatmech:GOLD.b39df834b2 as 'freshwater plastic debris'. Verbatim
+    source attestations are preserved. Displaced GOLD source label 'Plastic debries'
+    in path 'Engineered > Solid waste > Debries > Freshwater debries > Plastic debries'
+    is context-dependent, ambiguous, or names a host/disease/process rather than the
+    defined habitat 'freshwater plastic debris'; suppress automatic exact-synonym
+    retention while preserving verbatim source provenance.

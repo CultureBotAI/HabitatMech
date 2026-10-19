@@ -1,10 +1,14 @@
 identifier: habitatmech:GOLD.a7d8777e98
-label: Air-breathing organ
+label: fish intestinal air-breathing organ
+definition: An organ derived from a vascularized region of the gastrointestinal tract
+  in bimodal air-breathing fishes (such as armoured catfishes or loaches) used for
+  accessory aerial gas exchange alongside intestinal microbiota.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
-- habitatmech:GOLD.c2a1b0b268
+- UBERON:0000062
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7536
@@ -12,15 +16,34 @@ source_attestations:
   source_path: 'Host-associated > Fish > Digestive system > Intestine: Anterior >
     Air-breathing organ'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.a7d8777e98)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Fish > Digestive system > Intestine: Anterior > Air-breathing
+    organ'' denotes the intestinal air-breathing organ of a fish (PMID 28507537; DOI:10.3389/fmicb.2017.00816).
+    Path: Host-associated > Fish > Digestive system > Intestine: Anterior > Air-breathing
+    organ (source concept habitatmech:GOLD.a7d8777e98)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''fish intestinal air-breathing organ'' under UBERON:0000062
+    ''organ''. ITEM curation: GOLD ''Host-associated > Fish > Digestive system > Intestine:
+    Anterior > Air-breathing organ'' denotes the intestinal air-breathing organ of
+    a fish (PMID 28507537; DOI:10.3389/fmicb.2017.00816). Path: Host-associated >
+    Fish > Digestive system > Intestine: Anterior > Air-breathing organ'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Air-breathing
+    organ'' when defining habitatmech:GOLD.a7d8777e98 as ''fish intestinal air-breathing
+    organ''. Verbatim source attestations are preserved. Displaced GOLD source label
+    ''Air-breathing organ'' in path ''Host-associated > Fish > Digestive system >
+    Intestine: Anterior > Air-breathing organ'' is context-dependent, ambiguous, or
+    names a host/disease/process rather than the defined habitat ''fish intestinal
+    air-breathing organ''; suppress automatic exact-synonym retention while preserving
+    verbatim source provenance.'

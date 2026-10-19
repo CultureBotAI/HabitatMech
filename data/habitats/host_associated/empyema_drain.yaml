@@ -1,10 +1,20 @@
 identifier: habitatmech:GOLD.1ce5b3ff1a
-label: Empyema drain
+label: pleural empyema drainage fluid
+definition: A bodily fluid consisting of purulent pleural exudate drained from a human
+  pleural cavity affected by empyema.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Empyema drain
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: empyema chest drain fluid
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- UBERON:0002402
+- UBERON:0006314
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6303
@@ -14,15 +24,27 @@ source_attestations:
   assertion_count: 1
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.1ce5b3ff1a)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals: Human > Respiratory system > Pleural space/cavity
+    > Empyema drain'' denotes purulent fluid drained from a pleural empyema rather
+    than the pleural cavity organ (UBERON:0002402). Define under UBERON:0006314 (bodily
+    fluid) with parent_mode REPLACE (PMID 31558513; DOI:10.1128/JCM.00856-19). Path:
+    Host-associated > Mammals: Human > Respiratory system > Pleural space/cavity >
+    Empyema drain (source concept habitatmech:GOLD.1ce5b3ff1a)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''pleural empyema drainage fluid'' under UBERON:0006314 ''bodily
+    fluid''. ITEM curation: GOLD ''Host-associated > Mammals: Human > Respiratory
+    system > Pleural space/cavity > Empyema drain'' denotes purulent fluid drained
+    from a pleural empyema rather than the pleural cavity organ (UBERON:0002402).
+    Define under UBERON:0006314 (bodily fluid) with parent_mode REPLACE (PMID 31558513;
+    DOI:10.1128/JCM.00856-19). Path: Host-associated > Mammals: Human > Respiratory
+    system > Pleural space/cavity > Empyema drain'

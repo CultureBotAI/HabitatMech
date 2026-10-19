@@ -1,10 +1,13 @@
 identifier: habitatmech:GOLD.728316b889
-label: Wood decay
+label: decaying wood
+definition: A wood that is undergoing microbial decomposition (such as white rot,
+  brown rot, or soft rot) by wood-decay fungi and xylophagous or saprotrophic bacteria.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
-- BTO:0001300
+- ENVO:00002040
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7754
@@ -13,15 +16,35 @@ source_attestations:
   assertion_count: 22
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.728316b889)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Plants > Phyllosphere > Stem > Wood decay'' denotes decaying
+    wood substrate rather than the wood-decay process or an intact living stem (BTO:0001300).
+    Define under ENVO:00002040 (wood) with parent_mode REPLACE and exclude bare ''Wood
+    decay'' (PMID 33436512; DOI:10.1128/msystems.01078-20; PMID 30476081; DOI:10.1093/femsec/fiy225).
+    Path: Host-associated > Plants > Phyllosphere > Stem > Wood decay (source concept
+    habitatmech:GOLD.728316b889)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''decaying wood'' under ENVO:00002040 ''wood''. ITEM curation:
+    GOLD ''Host-associated > Plants > Phyllosphere > Stem > Wood decay'' denotes decaying
+    wood substrate rather than the wood-decay process or an intact living stem (BTO:0001300).
+    Define under ENVO:00002040 (wood) with parent_mode REPLACE and exclude bare ''Wood
+    decay'' (PMID 33436512; DOI:10.1128/msystems.01078-20; PMID 30476081; DOI:10.1093/femsec/fiy225).
+    Path: Host-associated > Plants > Phyllosphere > Stem > Wood decay'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Wood decay' when
+    defining habitatmech:GOLD.728316b889 as 'decaying wood'. Verbatim source attestations
+    are preserved. Displaced GOLD source label 'Wood decay' in path 'Host-associated
+    > Plants > Phyllosphere > Stem > Wood decay' is context-dependent, ambiguous,
+    or names a host/disease/process rather than the defined habitat 'decaying wood';
+    suppress automatic exact-synonym retention while preserving verbatim source provenance.

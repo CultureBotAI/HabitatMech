@@ -1,0 +1,69 @@
+identifier: habitatmech:BACDIVE.4c48b5114d
+label: wilted plant vascular tissue environment
+definition: A plant-associated environment comprising xylem vessels and vascular tissues
+  of a host plant affected by bacterial or fungal vascular wilt disease.
+definition_source: HabitatMech
+habitat_category: HOST_ASSOCIATED
+grounding_status: UNGROUNDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: vascular wilt lesion environment
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+parent_habitats:
+- ENVO:01001001
+source_attestations:
+- source: BACDIVE
+  source_id: bacdive.isolation_source:wilt
+  source_label: Wilt
+  assertion_count: 3
+  assertion_unit: STRAIN
+  notes: kg-microbe's isolation-source mapping table has a row for this source with
+    no ontology target; treated as ungrounded rather than re-grounded by lexical match.
+characteristic_taxa:
+- taxon_id: NCBITaxon:2035
+  source: BACDIVE
+  taxon_label: Curtobacterium flaccumfaciens
+  association_count: 1
+  rank: 1
+  candidate_pool: 3
+- taxon_id: NCBITaxon:47879
+  source: BACDIVE
+  taxon_label: Pseudomonas corrugata
+  association_count: 1
+  rank: 2
+  candidate_pool: 3
+- taxon_id: NCBITaxon:554
+  source: BACDIVE
+  taxon_label: Pectobacterium carotovorum
+  association_count: 1
+  rank: 3
+  candidate_pool: 3
+curation_history:
+- timestamp: '2026-08-16T05:58:02Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Defined wilted
+    plant vascular tissue environment under ENVO:01001001 ''plant-associated environment'';
+    supported by bacterial wilt microbiome studies (PMID 29563585). (source concept
+    habitatmech:BACDIVE.4c48b5114d)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: Defined as 'wilted plant vascular tissue environment' under ENVO:01001001
+    'plant-associated environment'. Defined wilted plant vascular tissue environment
+    under ENVO:01001001 'plant-associated environment'; supported by bacterial wilt
+    microbiome studies (PMID 29563585).
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Wilt' when defining
+    habitatmech:BACDIVE.4c48b5114d as 'wilted plant vascular tissue environment'.
+    Verbatim source attestations are preserved. Displaced GOLD source label 'Wilt'
+    in path 'Wilt' is context-dependent, ambiguous, or names a host/disease/process
+    rather than the defined habitat 'wilted plant vascular tissue environment'; suppress
+    automatic exact-synonym retention while preserving verbatim source provenance.

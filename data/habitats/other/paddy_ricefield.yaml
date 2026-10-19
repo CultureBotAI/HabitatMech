@@ -1,8 +1,21 @@
 identifier: habitatmech:BACDIVE.6e3154acd8
-label: Paddy-Ricefield
+label: rice paddy environment
+definition: An anthropogenic environment consisting of an irrigated or flooded arable
+  field cultivated for wetland rice production, characterized by oxic-anoxic redox
+  gradients across floodwater, rhizosphere, and paddy soil.
+definition_source: HabitatMech
 habitat_category: OTHER
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Paddy-Ricefield
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: paddy field environment
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+parent_habitats:
+- ENVO:01000313
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:paddy-ricefield
@@ -37,15 +50,21 @@ characteristic_taxa:
   rank: 4
   candidate_pool: 4
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:BACDIVE.6e3154acd8)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    BacDive ''Paddy-Ricefield'' denotes a flooded rice field agricultural habitat.
+    Define under ENVO:01000313 (anthropogenic environment) (PMID 19684584; DOI:10.1038/nrmicro2209).
+    Path: Paddy-Ricefield (source concept habitatmech:BACDIVE.6e3154acd8)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''rice paddy environment'' under ENVO:01000313 ''anthropogenic
+    environment''. ITEM curation: BacDive ''Paddy-Ricefield'' denotes a flooded rice
+    field agricultural habitat. Define under ENVO:01000313 (anthropogenic environment)
+    (PMID 19684584; DOI:10.1038/nrmicro2209). Path: Paddy-Ricefield'

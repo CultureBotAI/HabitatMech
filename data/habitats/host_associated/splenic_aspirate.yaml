@@ -1,9 +1,17 @@
 identifier: habitatmech:GOLD.6c8cf86bde
-label: Splenic aspirate
+label: splenic aspirate
+definition: A bodily fluid specimen obtained by needle aspiration of the human spleen
+  for clinical or microbiological diagnosis of splenic infection.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: spleen aspirate
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- UBERON:0006314
 - habitatmech:GOLD.e43dc204ff
 source_attestations:
 - source: GOLD
@@ -14,15 +22,24 @@ source_attestations:
   assertion_count: 16
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.6c8cf86bde)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals: Human > Lymphatic system > Spleen > Splenic
+    aspirate'' denotes fluid aspirated from the human spleen. Define under UBERON:0006314
+    (bodily fluid) (PMID 19643979; DOI:10.4269/ajtmh.2009.81.277). Path: Host-associated
+    > Mammals: Human > Lymphatic system > Spleen > Splenic aspirate (source concept
+    habitatmech:GOLD.6c8cf86bde)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''splenic aspirate'' under UBERON:0006314 ''bodily fluid''.
+    ITEM curation: GOLD ''Host-associated > Mammals: Human > Lymphatic system > Spleen
+    > Splenic aspirate'' denotes fluid aspirated from the human spleen. Define under
+    UBERON:0006314 (bodily fluid) (PMID 19643979; DOI:10.4269/ajtmh.2009.81.277).
+    Path: Host-associated > Mammals: Human > Lymphatic system > Spleen > Splenic aspirate'

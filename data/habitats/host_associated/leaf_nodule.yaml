@@ -1,10 +1,15 @@
 identifier: habitatmech:GOLD.3988adca86
-label: Leaf nodule
+label: leaf nodule
+definition: An environment associated with a plant part or small plant consisting
+  of a specialized symbiotic nodule or gland structure within the lamina of a plant
+  leaf (as in Psychotria, Pavetta, Ardisia, or Dioscorea) that houses obligate bacterial
+  leaf endophytes.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
-- PO:0025034
+- ENVO:01001057
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5274
@@ -13,15 +18,26 @@ source_attestations:
   assertion_count: 1
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.3988adca86)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Plants > Phyllosphere > Phylloplane/Leaf > Leaf nodule''
+    denotes a specialized symbiotic leaf nodule rather than a whole leaf organ (PO:0025034).
+    Define under ENVO:01001057 with parent_mode REPLACE (PMID 22805494; DOI:10.1111/j.1462-2920.2012.02763.x;
+    PMID 26853112; DOI:10.1111/1462-2920.13184). Path: Host-associated > Plants >
+    Phyllosphere > Phylloplane/Leaf > Leaf nodule (source concept habitatmech:GOLD.3988adca86)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''leaf nodule'' under ENVO:01001057 ''environment associated
+    with a plant part or small plant''. ITEM curation: GOLD ''Host-associated > Plants
+    > Phyllosphere > Phylloplane/Leaf > Leaf nodule'' denotes a specialized symbiotic
+    leaf nodule rather than a whole leaf organ (PO:0025034). Define under ENVO:01001057
+    with parent_mode REPLACE (PMID 22805494; DOI:10.1111/j.1462-2920.2012.02763.x;
+    PMID 26853112; DOI:10.1111/1462-2920.13184). Path: Host-associated > Plants >
+    Phyllosphere > Phylloplane/Leaf > Leaf nodule'

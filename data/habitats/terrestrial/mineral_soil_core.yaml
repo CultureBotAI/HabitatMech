@@ -1,25 +1,45 @@
 identifier: habitatmech:GOLD.d732aac660
-label: Mineral soil core
+label: palsa mineral soil core
+definition: A soil sampled as a core from the frozen or thawing mineral soil underlying
+  the peat cap of a subarctic palsa mire mound.
+definition_source: HabitatMech
 habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
-- ENVO:00000489
+- ENVO:00001998
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7691
   source_label: Mineral soil core
   source_path: Environmental > Terrestrial > Soil > Palsa > Mineral soil core
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.d732aac660)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Terrestrial > Soil > Palsa > Mineral soil core'' denotes
+    mineral soil beneath a permafrost palsa mound (PMID 24614055; DOI:10.1038/nature13005).
+    Path: Environmental > Terrestrial > Soil > Palsa > Mineral soil core (source concept
+    habitatmech:GOLD.d732aac660)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''palsa mineral soil core'' under ENVO:00001998 ''soil''. ITEM
+    curation: GOLD ''Environmental > Terrestrial > Soil > Palsa > Mineral soil core''
+    denotes mineral soil beneath a permafrost palsa mound (PMID 24614055; DOI:10.1038/nature13005).
+    Path: Environmental > Terrestrial > Soil > Palsa > Mineral soil core'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Mineral soil core'
+    when defining habitatmech:GOLD.d732aac660 as 'palsa mineral soil core'. Verbatim
+    source attestations are preserved. Displaced GOLD source label 'Mineral soil core'
+    in path 'Environmental > Terrestrial > Soil > Palsa > Mineral soil core' is context-dependent,
+    ambiguous, or names a host/disease/process rather than the defined habitat 'palsa
+    mineral soil core'; suppress automatic exact-synonym retention while preserving
+    verbatim source provenance.

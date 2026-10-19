@@ -1,8 +1,15 @@
 identifier: habitatmech:GOLD.0aa4d00c98
-label: Gonopodium
+label: gonopodium
+definition: An intromittent organ of a male poeciliid or related live-bearing fish
+  formed by the developmental modification of the anal fin rays for internal fertilization.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: fish gonopodium
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - UBERON:0008811
 source_attestations:
@@ -12,15 +19,25 @@ source_attestations:
   source_path: Host-associated > Fish > Reproductive system > Intromittent organ >
     Gonopodium
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.0aa4d00c98)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Fish > Reproductive system > Intromittent organ > Gonopodium''
+    denotes the modified anal-fin intromittent organ of live-bearing fishes (UBERON
+    term 2001701 is not in the vendored slice). Define under UBERON:0008811 (intromittent
+    organ) (PMID 27150643; DOI:10.3389/fmicb.2016.00612). Path: Host-associated >
+    Fish > Reproductive system > Intromittent organ > Gonopodium (source concept habitatmech:GOLD.0aa4d00c98)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''gonopodium'' under UBERON:0008811 ''intromittent organ''.
+    ITEM curation: GOLD ''Host-associated > Fish > Reproductive system > Intromittent
+    organ > Gonopodium'' denotes the modified anal-fin intromittent organ of live-bearing
+    fishes (UBERON term 2001701 is not in the vendored slice). Define under UBERON:0008811
+    (intromittent organ) (PMID 27150643; DOI:10.3389/fmicb.2016.00612). Path: Host-associated
+    > Fish > Reproductive system > Intromittent organ > Gonopodium'

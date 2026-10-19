@@ -1,8 +1,21 @@
 identifier: habitatmech:BACDIVE.f655f51b59
-label: Sulfuric
+label: sulfur-rich environment
+definition: An environmental system determined by a material that is enriched in elemental
+  sulfur, sulfide, or sulfate compounds, such as solfataras, sulfidic springs, or
+  acid sulfate environments supporting sulfur-oxidizing and sulfate-reducing microorganisms.
+definition_source: HabitatMech
 habitat_category: OTHER
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: sulfur-enriched habitat
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: sulfuric environment
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+parent_habitats:
+- ENVO:01000998
 source_attestations:
 - source: BACDIVE
   source_id: bacdive.isolation_source:sulfuric
@@ -163,15 +176,29 @@ characteristic_taxa:
   rank: 25
   candidate_pool: 95
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:BACDIVE.f655f51b59)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by BACDIVE. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Defined sulfur-rich
+    environment under ENVO:01000998 ''environmental system determined by a material'';
+    supported by microbial sulfur cycle ecology (PMID 29892060). (source concept habitatmech:BACDIVE.f655f51b59)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: Defined as 'sulfur-rich environment' under ENVO:01000998 'environmental
+    system determined by a material'. Defined sulfur-rich environment under ENVO:01000998
+    'environmental system determined by a material'; supported by microbial sulfur
+    cycle ecology (PMID 29892060).
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Sulfuric' when defining
+    habitatmech:BACDIVE.f655f51b59 as 'sulfur-rich environment'. Verbatim source attestations
+    are preserved. Displaced GOLD source label 'Sulfuric' in path 'Sulfuric' is context-dependent,
+    ambiguous, or names a host/disease/process rather than the defined habitat 'sulfur-rich
+    environment'; suppress automatic exact-synonym retention while preserving verbatim
+    source provenance.

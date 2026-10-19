@@ -1,9 +1,20 @@
 identifier: habitatmech:GOLD.c5545d6102
-label: Forefield soil
+label: proglacial forefield soil
+definition: A soil developing along a chronosequence in a glacier forefield between
+  the retreating ice terminus and the terminal moraine.
+definition_source: HabitatMech
 habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Forefield soil
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: deglaciated forefield soil
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:00001998
 - habitatmech:GOLD.a3ca3bd7a0
 source_attestations:
 - source: GOLD
@@ -11,15 +22,23 @@ source_attestations:
   source_label: Forefield soil
   source_path: Environmental > Terrestrial > Soil > Proglacial area > Forefield soil
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.c5545d6102)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Terrestrial > Soil > Proglacial area > Forefield soil''
+    denotes soil in a glacier forefield chronosequence. Define under ENVO:00001998
+    (soil) (PMID 22851598; DOI:10.1038/ismej.2012.88). Path: Environmental > Terrestrial
+    > Soil > Proglacial area > Forefield soil (source concept habitatmech:GOLD.c5545d6102)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''proglacial forefield soil'' under ENVO:00001998 ''soil''.
+    ITEM curation: GOLD ''Environmental > Terrestrial > Soil > Proglacial area > Forefield
+    soil'' denotes soil in a glacier forefield chronosequence. Define under ENVO:00001998
+    (soil) (PMID 22851598; DOI:10.1038/ismej.2012.88). Path: Environmental > Terrestrial
+    > Soil > Proglacial area > Forefield soil'

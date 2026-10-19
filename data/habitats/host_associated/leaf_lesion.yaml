@@ -1,10 +1,14 @@
 identifier: habitatmech:GOLD.c7c15bc976
-label: Leaf lesion
+label: leaf lesion environment
+definition: An environment associated with a plant part or small plant that is determined
+  by a localized necrotic, chlorotic, or blighted lesion on a plant leaf colonized
+  by pathogenic and secondary leaf-associated microorganisms.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
-- PO:0025034
+- ENVO:01001057
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5321
@@ -13,15 +17,38 @@ source_attestations:
   assertion_count: 11
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.c7c15bc976)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Plants > Phyllosphere > Phylloplane/Leaf > Leaf lesion''
+    denotes the diseased or damaged lesion microenvironment on a leaf rather than
+    the whole leaf organ (PO:0025034). Define under ENVO:01001057 with parent_mode
+    REPLACE and exclude bare ''Leaf lesion'' (PMID 31086633; DOI:10.1186/s13568-019-0800-y;
+    PMID 34567554; DOI:10.3389/fmicb.2021.699699). Path: Host-associated > Plants
+    > Phyllosphere > Phylloplane/Leaf > Leaf lesion (source concept habitatmech:GOLD.c7c15bc976)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''leaf lesion environment'' under ENVO:01001057 ''environment
+    associated with a plant part or small plant''. ITEM curation: GOLD ''Host-associated
+    > Plants > Phyllosphere > Phylloplane/Leaf > Leaf lesion'' denotes the diseased
+    or damaged lesion microenvironment on a leaf rather than the whole leaf organ
+    (PO:0025034). Define under ENVO:01001057 with parent_mode REPLACE and exclude
+    bare ''Leaf lesion'' (PMID 31086633; DOI:10.1186/s13568-019-0800-y; PMID 34567554;
+    DOI:10.3389/fmicb.2021.699699). Path: Host-associated > Plants > Phyllosphere
+    > Phylloplane/Leaf > Leaf lesion'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Leaf lesion' when
+    defining habitatmech:GOLD.c7c15bc976 as 'leaf lesion environment'. Verbatim source
+    attestations are preserved. Displaced GOLD source label 'Leaf lesion' in path
+    'Host-associated > Plants > Phyllosphere > Phylloplane/Leaf > Leaf lesion' is
+    context-dependent, ambiguous, or names a host/disease/process rather than the
+    defined habitat 'leaf lesion environment'; suppress automatic exact-synonym retention
+    while preserving verbatim source provenance.

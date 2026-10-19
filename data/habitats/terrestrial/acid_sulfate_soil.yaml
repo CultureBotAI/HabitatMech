@@ -1,25 +1,43 @@
 identifier: habitatmech:GOLD.6d518b2c16
-label: Acid sulfate soil
+label: coastal acid sulfate soil
+definition: A soil in a coastal lowland or estuarine plain rich in iron sulfide minerals
+  (pyrite) that generates sulfuric acid and extreme soil acidity when drained or exposed
+  to atmospheric oxygen.
+definition_source: HabitatMech
 habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Acid sulfate soil
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:00000303
+- ENVO:00001998
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7792
   source_label: Acid sulfate soil
   source_path: Environmental > Terrestrial > Soil > Coastal area > Acid sulfate soil
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.6d518b2c16)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Terrestrial > Soil > Coastal area > Acid sulfate soil''
+    denotes pyritic coastal acid sulfate soil (ENVO:00002226 is not in the vendored
+    slice). Define under ENVO:00001998 (soil) (PMID 25852656; DOI:10.3389/fmicb.2015.00258).
+    Path: Environmental > Terrestrial > Soil > Coastal area > Acid sulfate soil (source
+    concept habitatmech:GOLD.6d518b2c16)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''coastal acid sulfate soil'' under ENVO:00001998 ''soil''.
+    ITEM curation: GOLD ''Environmental > Terrestrial > Soil > Coastal area > Acid
+    sulfate soil'' denotes pyritic coastal acid sulfate soil (ENVO:00002226 is not
+    in the vendored slice). Define under ENVO:00001998 (soil) (PMID 25852656; DOI:10.3389/fmicb.2015.00258).
+    Path: Environmental > Terrestrial > Soil > Coastal area > Acid sulfate soil'

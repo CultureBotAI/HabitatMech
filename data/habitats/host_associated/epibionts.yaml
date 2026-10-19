@@ -1,25 +1,47 @@
 identifier: habitatmech:GOLD.d0cebee7db
-label: Epibionts
+label: annelid cuticle epibiont environment
+definition: An environment associated with an animal part or small animal located
+  on the external epidermal cuticle of an annelid worm (such as Alvinella or stilbonematine-like
+  marine worms) colonized by filamentous sulfur-oxidizing epibiotic bacteria.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
-- habitatmech:GOLD.3d911344b7
+- ENVO:01001055
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4337
   source_label: Epibionts
   source_path: Host-associated > Annelida > Integument > Cuticle > Epibionts
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.d0cebee7db)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Annelida > Integument > Cuticle > Epibionts'' denotes
+    the epibiont-colonized cuticle surface of an annelid (PMID 24324609; DOI:10.1371/journal.pone.0081694).
+    Path: Host-associated > Annelida > Integument > Cuticle > Epibionts (source concept
+    habitatmech:GOLD.d0cebee7db)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''annelid cuticle epibiont environment'' under ENVO:01001055
+    ''environment associated with an animal part or small animal''. ITEM curation:
+    GOLD ''Host-associated > Annelida > Integument > Cuticle > Epibionts'' denotes
+    the epibiont-colonized cuticle surface of an annelid (PMID 24324609; DOI:10.1371/journal.pone.0081694).
+    Path: Host-associated > Annelida > Integument > Cuticle > Epibionts'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Epibionts' when
+    defining habitatmech:GOLD.d0cebee7db as 'annelid cuticle epibiont environment'.
+    Verbatim source attestations are preserved. Displaced GOLD source label 'Epibionts'
+    in path 'Host-associated > Annelida > Integument > Cuticle > Epibionts' is context-dependent,
+    ambiguous, or names a host/disease/process rather than the defined habitat 'annelid
+    cuticle epibiont environment'; suppress automatic exact-synonym retention while
+    preserving verbatim source provenance.

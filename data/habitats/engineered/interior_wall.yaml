@@ -1,9 +1,14 @@
 identifier: habitatmech:GOLD.6ade183144
-label: Interior wall
+label: monument interior wall surface
+definition: A construction surface comprising the stone, mortar, or painted plaster
+  interior wall of a cultural heritage monument or tomb, colonized by epilithic and
+  biodeteriorative microorganisms.
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
+- ENVO:01001813
 - habitatmech:GOLD.a8b8ee2424
 source_attestations:
 - source: GOLD
@@ -12,15 +17,32 @@ source_attestations:
   source_path: Engineered > Built environment > Monument > Interior wall
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.6ade183144)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Engineered > Built environment > Monument > Interior wall'' denotes the
+    interior wall surface of a heritage monument (PMID 28119674; DOI:10.3389/fmicb.2016.02133).
+    Path: Engineered > Built environment > Monument > Interior wall (source concept
+    habitatmech:GOLD.6ade183144)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''monument interior wall surface'' under ENVO:01001813 ''construction''.
+    ITEM curation: GOLD ''Engineered > Built environment > Monument > Interior wall''
+    denotes the interior wall surface of a heritage monument (PMID 28119674; DOI:10.3389/fmicb.2016.02133).
+    Path: Engineered > Built environment > Monument > Interior wall'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Interior wall' when
+    defining habitatmech:GOLD.6ade183144 as 'monument interior wall surface'. Verbatim
+    source attestations are preserved. Displaced GOLD source label 'Interior wall'
+    in path 'Engineered > Built environment > Monument > Interior wall' is context-dependent,
+    ambiguous, or names a host/disease/process rather than the defined habitat 'monument
+    interior wall surface'; suppress automatic exact-synonym retention while preserving
+    verbatim source provenance.

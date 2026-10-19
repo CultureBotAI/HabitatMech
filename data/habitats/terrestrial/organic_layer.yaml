@@ -1,25 +1,52 @@
 identifier: habitatmech:GOLD.9c5489a2c7
-label: Organic layer
+label: tundra soil organic horizon
+definition: A soil horizon forming the surface organic (O) layer of an Arctic or alpine
+  tundra soil above the mineral active layer and permafrost.
+definition_source: HabitatMech
 habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: tundra soil organic layer
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:00000112
+- ENVO:03600030
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7801
   source_label: Organic layer
   source_path: Environmental > Terrestrial > Soil > Tundra > Organic layer
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.9c5489a2c7)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Terrestrial > Soil > Tundra > Organic layer'' denotes the
+    surface organic horizon of a tundra soil. Define under ENVO:03600030 (soil horizon)
+    and exclude bare ''Organic layer'' (PMID 24603570; DOI:10.1038/nature13164). Path:
+    Environmental > Terrestrial > Soil > Tundra > Organic layer (source concept habitatmech:GOLD.9c5489a2c7)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''tundra soil organic horizon'' under ENVO:03600030 ''soil
+    horizon''. ITEM curation: GOLD ''Environmental > Terrestrial > Soil > Tundra >
+    Organic layer'' denotes the surface organic horizon of a tundra soil. Define under
+    ENVO:03600030 (soil horizon) and exclude bare ''Organic layer'' (PMID 24603570;
+    DOI:10.1038/nature13164). Path: Environmental > Terrestrial > Soil > Tundra >
+    Organic layer'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Organic layer' when
+    defining habitatmech:GOLD.9c5489a2c7 as 'tundra soil organic horizon'. Verbatim
+    source attestations are preserved. Displaced GOLD source label 'Organic layer'
+    in path 'Environmental > Terrestrial > Soil > Tundra > Organic layer' is context-dependent,
+    ambiguous, or names a host/disease/process rather than the defined habitat 'tundra
+    soil organic horizon'; suppress automatic exact-synonym retention while preserving
+    verbatim source provenance.

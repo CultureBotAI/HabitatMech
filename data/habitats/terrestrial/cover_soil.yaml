@@ -1,10 +1,14 @@
 identifier: habitatmech:GOLD.9585ae445d
-label: Cover soil
+label: landfill cover soil
+definition: A soil applied as a cap or cover layer over compacted solid waste in a
+  landfill, characterized by steep methane and oxygen gradients that support methanotrophic
+  microbial communities.
+definition_source: HabitatMech
 habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
-- habitatmech:GOLD.de8a7c8184
+- ENVO:00001998
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8240
@@ -13,15 +17,37 @@ source_attestations:
   assertion_count: 1
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.9585ae445d)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Terrestrial > Soil > Landfill > Cover soil'' denotes the
+    soil cover layer of a landfill rather than the whole landfill facility or generic
+    cover soil. Define under ENVO:00001998 (soil) with parent_mode REPLACE and exclude
+    bare ''Cover soil'' (PMID 17764491; DOI:10.1111/j.1574-6941.2007.00368.x; PMID
+    18043685; DOI:10.1038/ismej.2007.66). Path: Environmental > Terrestrial > Soil
+    > Landfill > Cover soil (source concept habitatmech:GOLD.9585ae445d)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''landfill cover soil'' under ENVO:00001998 ''soil''. ITEM
+    curation: GOLD ''Environmental > Terrestrial > Soil > Landfill > Cover soil''
+    denotes the soil cover layer of a landfill rather than the whole landfill facility
+    or generic cover soil. Define under ENVO:00001998 (soil) with parent_mode REPLACE
+    and exclude bare ''Cover soil'' (PMID 17764491; DOI:10.1111/j.1574-6941.2007.00368.x;
+    PMID 18043685; DOI:10.1038/ismej.2007.66). Path: Environmental > Terrestrial >
+    Soil > Landfill > Cover soil'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Cover soil' when
+    defining habitatmech:GOLD.9585ae445d as 'landfill cover soil'. Verbatim source
+    attestations are preserved. Displaced GOLD source label 'Cover soil' in path 'Environmental
+    > Terrestrial > Soil > Landfill > Cover soil' is context-dependent, ambiguous,
+    or names a host/disease/process rather than the defined habitat 'landfill cover
+    soil'; suppress automatic exact-synonym retention while preserving verbatim source
+    provenance.

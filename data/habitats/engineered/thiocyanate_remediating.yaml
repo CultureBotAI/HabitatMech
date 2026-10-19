@@ -1,8 +1,16 @@
 identifier: habitatmech:GOLD.7a8691bc23
-label: Thiocyanate-remediating
+label: thiocyanate-remediating bioreactor
+definition: A bioreactor engineered for the biological degradation of thiocyanate
+  and cyanide in gold-mining tailings or coking wastewater by chemolithoautotrophic
+  and heterotrophic bacterial consortia.
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: thiocyanate biodegradation bioreactor
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:00002123
 source_attestations:
@@ -11,15 +19,33 @@ source_attestations:
   source_label: Thiocyanate-remediating
   source_path: Engineered > Bioreactor > Thiocyanate-remediating
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.7a8691bc23)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Engineered > Bioreactor > Thiocyanate-remediating'' denotes a bioreactor
+    degrading thiocyanate effluent. Define under ENVO:00002123 (bioreactor) and exclude
+    bare adjective ''Thiocyanate-remediating'' (PMID 27908688; DOI:10.1186/s40168-016-0207-y).
+    Path: Engineered > Bioreactor > Thiocyanate-remediating (source concept habitatmech:GOLD.7a8691bc23)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''thiocyanate-remediating bioreactor'' under ENVO:00002123
+    ''bioreactor''. ITEM curation: GOLD ''Engineered > Bioreactor > Thiocyanate-remediating''
+    denotes a bioreactor degrading thiocyanate effluent. Define under ENVO:00002123
+    (bioreactor) and exclude bare adjective ''Thiocyanate-remediating'' (PMID 27908688;
+    DOI:10.1186/s40168-016-0207-y). Path: Engineered > Bioreactor > Thiocyanate-remediating'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Thiocyanate-remediating'
+    when defining habitatmech:GOLD.7a8691bc23 as 'thiocyanate-remediating bioreactor'.
+    Verbatim source attestations are preserved. Displaced GOLD source label 'Thiocyanate-remediating'
+    in path 'Engineered > Bioreactor > Thiocyanate-remediating' is context-dependent,
+    ambiguous, or names a host/disease/process rather than the defined habitat 'thiocyanate-remediating
+    bioreactor'; suppress automatic exact-synonym retention while preserving verbatim
+    source provenance.

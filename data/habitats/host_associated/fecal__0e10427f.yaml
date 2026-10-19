@@ -1,10 +1,19 @@
 identifier: habitatmech:GOLD.51a8d52cec
-label: Fecal
+label: cephalochordate feces
+definition: A feces excreted from the intestine of a cephalochordate (lancelet / amphioxus).
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: amphioxus feces
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: lancelet feces
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- habitatmech:GOLD.cbd89e2939
+- UBERON:0001988
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4963
@@ -12,15 +21,31 @@ source_attestations:
   source_path: Host-associated > Cephalochordata > Digestive system > Intestine >
     Fecal
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.51a8d52cec)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Cephalochordata > Digestive system > Intestine > Fecal''
+    denotes lancelet feces (PMID 27288332; DOI:10.1038/srep27570). Path: Host-associated
+    > Cephalochordata > Digestive system > Intestine > Fecal (source concept habitatmech:GOLD.51a8d52cec)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''cephalochordate feces'' under UBERON:0001988 ''feces''. ITEM
+    curation: GOLD ''Host-associated > Cephalochordata > Digestive system > Intestine
+    > Fecal'' denotes lancelet feces (PMID 27288332; DOI:10.1038/srep27570). Path:
+    Host-associated > Cephalochordata > Digestive system > Intestine > Fecal'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Fecal' when defining
+    habitatmech:GOLD.51a8d52cec as 'cephalochordate feces'. Verbatim source attestations
+    are preserved. Displaced GOLD source label 'Fecal' in path 'Host-associated >
+    Cephalochordata > Digestive system > Intestine > Fecal' is context-dependent,
+    ambiguous, or names a host/disease/process rather than the defined habitat 'cephalochordate
+    feces'; suppress automatic exact-synonym retention while preserving verbatim source
+    provenance.

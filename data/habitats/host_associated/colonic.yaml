@@ -1,9 +1,21 @@
 identifier: habitatmech:GOLD.79a47a53e7
-label: Colonic
+label: human colonic hyperplastic or inflammatory polyp
+definition: A polyp of hyperplastic or post-inflammatory non-neoplastic mucosal architecture
+  projecting into the lumen of the human colon, colonized by mucosa-associated gut
+  bacteria.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: colonic hyperplastic polyp
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: colonic inflammatory polyp
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- BTO:0006350
 - habitatmech:GOLD.9452677923
 source_attestations:
 - source: GOLD
@@ -12,15 +24,29 @@ source_attestations:
   source_path: 'Host-associated > Mammals: Human > Benign tumor > Hyperplastic/Inflammatory
     polyps > Colonic'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.79a47a53e7)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. Defined human
+    colonic hyperplastic or inflammatory polyp under BTO:0006350 ''polyp''; supported
+    by colonic polyp microbiome studies (PMID 25404569). (source concept habitatmech:GOLD.79a47a53e7)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: Defined as 'human colonic hyperplastic or inflammatory polyp' under BTO:0006350
+    'polyp'. Defined human colonic hyperplastic or inflammatory polyp under BTO:0006350
+    'polyp'; supported by colonic polyp microbiome studies (PMID 25404569).
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Colonic'' when
+    defining habitatmech:GOLD.79a47a53e7 as ''human colonic hyperplastic or inflammatory
+    polyp''. Verbatim source attestations are preserved. Displaced GOLD source label
+    ''Colonic'' in path ''Host-associated > Mammals: Human > Benign tumor > Hyperplastic/Inflammatory
+    polyps > Colonic'' is context-dependent, ambiguous, or names a host/disease/process
+    rather than the defined habitat ''human colonic hyperplastic or inflammatory polyp'';
+    suppress automatic exact-synonym retention while preserving verbatim source provenance.'

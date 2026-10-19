@@ -1,25 +1,54 @@
 identifier: habitatmech:GOLD.b220a9866e
-label: O horizen/Organic layer
+label: pasture soil O horizon
+definition: A soil horizon forming the surface organic (O) layer of a grazed or managed
+  pasture soil profile, composed of grass thatch, root detritus, and herbivore manure
+  inputs.
+definition_source: HabitatMech
 habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: pasture organic soil horizon
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:00000266
+- ENVO:03600030
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:8077
   source_label: O horizen/Organic layer
   source_path: Environmental > Terrestrial > Soil > Pasture > O horizen/Organic layer
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.b220a9866e)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Terrestrial > Soil > Pasture > O horizen/Organic layer''
+    (with upstream spelling ''horizen'') denotes the O horizon of a pasture soil.
+    Define under ENVO:03600030 (soil horizon) and exclude typo source label ''O horizen/Organic
+    layer'' (PMID 28855505; DOI:10.1038/s41598-017-09961-0). Path: Environmental >
+    Terrestrial > Soil > Pasture > O horizen/Organic layer (source concept habitatmech:GOLD.b220a9866e)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''pasture soil O horizon'' under ENVO:03600030 ''soil horizon''.
+    ITEM curation: GOLD ''Environmental > Terrestrial > Soil > Pasture > O horizen/Organic
+    layer'' (with upstream spelling ''horizen'') denotes the O horizon of a pasture
+    soil. Define under ENVO:03600030 (soil horizon) and exclude typo source label
+    ''O horizen/Organic layer'' (PMID 28855505; DOI:10.1038/s41598-017-09961-0). Path:
+    Environmental > Terrestrial > Soil > Pasture > O horizen/Organic layer'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'O horizen/Organic
+    layer' when defining habitatmech:GOLD.b220a9866e as 'pasture soil O horizon'.
+    Verbatim source attestations are preserved. Displaced GOLD source label 'O horizen/Organic
+    layer' in path 'Environmental > Terrestrial > Soil > Pasture > O horizen/Organic
+    layer' is context-dependent, ambiguous, or names a host/disease/process rather
+    than the defined habitat 'pasture soil O horizon'; suppress automatic exact-synonym
+    retention while preserving verbatim source provenance.

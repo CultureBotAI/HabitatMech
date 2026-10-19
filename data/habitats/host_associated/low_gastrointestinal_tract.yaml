@@ -1,9 +1,13 @@
 identifier: habitatmech:GOLD.c8a794ce91
-label: Low gastrointestinal tract
+label: mummified human lower gastrointestinal tract
+definition: A lower digestive tract tissue and luminal environment preserved within
+  mummified archaeological human remains.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
+- UBERON:0004907
 - habitatmech:GOLD.7c194a46ba
 source_attestations:
 - source: GOLD
@@ -12,15 +16,36 @@ source_attestations:
   source_path: 'Host-associated > Mammals: Human > Remains > Mummified remains > Low
     gastrointestinal tract'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.c8a794ce91)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals: Human > Remains > Mummified remains > Low gastrointestinal
+    tract'' denotes the preserved lower gastrointestinal tract of mummified human
+    remains (PMID 26744406; DOI:10.1126/science.aad2545). Path: Host-associated >
+    Mammals: Human > Remains > Mummified remains > Low gastrointestinal tract (source
+    concept habitatmech:GOLD.c8a794ce91)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''mummified human lower gastrointestinal tract'' under UBERON:0004907
+    ''lower digestive tract''. ITEM curation: GOLD ''Host-associated > Mammals: Human
+    > Remains > Mummified remains > Low gastrointestinal tract'' denotes the preserved
+    lower gastrointestinal tract of mummified human remains (PMID 26744406; DOI:10.1126/science.aad2545).
+    Path: Host-associated > Mammals: Human > Remains > Mummified remains > Low gastrointestinal
+    tract'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Low gastrointestinal
+    tract'' when defining habitatmech:GOLD.c8a794ce91 as ''mummified human lower gastrointestinal
+    tract''. Verbatim source attestations are preserved. Displaced GOLD source label
+    ''Low gastrointestinal tract'' in path ''Host-associated > Mammals: Human > Remains
+    > Mummified remains > Low gastrointestinal tract'' is context-dependent, ambiguous,
+    or names a host/disease/process rather than the defined habitat ''mummified human
+    lower gastrointestinal tract''; suppress automatic exact-synonym retention while
+    preserving verbatim source provenance.'

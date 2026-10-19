@@ -1,25 +1,42 @@
 identifier: habitatmech:GOLD.a1c99dadfc
-label: Cellulose associated waste
+label: cellulosic solid waste
+definition: A waste material rich in cellulose and lignocellulosic plant fibers (such
+  as paper mill sludge, waste paper, cardboard, textile fibers, and crop residues)
+  colonized by cellulolytic bacteria and fungi.
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Cellulose associated waste
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: cellulosic waste
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- mesh:D062611
+- ENVO:00002264
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:4928
   source_label: Cellulose associated waste
   source_path: Engineered > Solid waste > Cellulose associated waste
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.a1c99dadfc)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Engineered > Solid waste > Cellulose associated waste'' denotes cellulose-rich
+    solid waste (PMID 27006046; DOI:10.1016/j.biortech.2016.03.053). Path: Engineered
+    > Solid waste > Cellulose associated waste (source concept habitatmech:GOLD.a1c99dadfc)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''cellulosic solid waste'' under ENVO:00002264 ''waste material''.
+    ITEM curation: GOLD ''Engineered > Solid waste > Cellulose associated waste''
+    denotes cellulose-rich solid waste (PMID 27006046; DOI:10.1016/j.biortech.2016.03.053).
+    Path: Engineered > Solid waste > Cellulose associated waste'

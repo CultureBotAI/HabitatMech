@@ -1,9 +1,20 @@
 identifier: habitatmech:GOLD.b40f9c3903
-label: Skin surface
+label: human skin surface environment
+definition: A skin environment comprising the superficial stratum corneum and hydrolipid
+  film of the human skin surface colonized by cutaneous microorganisms.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Skin surface
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: human cutaneous surface
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- ENVO:2100003
 - habitatmech:GOLD.4b37ab4b76
 source_attestations:
 - source: GOLD
@@ -14,15 +25,24 @@ source_attestations:
   assertion_count: 1
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.b40f9c3903)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals: Human > Integumentary system > Skin > Skin surface''
+    denotes the superficial human skin surface habitat. Define under ENVO:2100003
+    (skin environment) (PMID 29340590; DOI:10.1038/nrmicro.2017.157). Path: Host-associated
+    > Mammals: Human > Integumentary system > Skin > Skin surface (source concept
+    habitatmech:GOLD.b40f9c3903)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''human skin surface environment'' under ENVO:2100003 ''skin
+    environment''. ITEM curation: GOLD ''Host-associated > Mammals: Human > Integumentary
+    system > Skin > Skin surface'' denotes the superficial human skin surface habitat.
+    Define under ENVO:2100003 (skin environment) (PMID 29340590; DOI:10.1038/nrmicro.2017.157).
+    Path: Host-associated > Mammals: Human > Integumentary system > Skin > Skin surface'

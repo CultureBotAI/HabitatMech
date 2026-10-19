@@ -1,8 +1,19 @@
 identifier: habitatmech:GOLD.1f80141d6a
-label: Hadopelagic zone/Ocean trenches
+label: marine hadopelagic zone
+definition: A marine pelagic zone located within deep oceanic trenches at water depths
+  exceeding 6000 meters, characterized by extreme hydrostatic pressure and piezophilic
+  microbial communities.
+definition_source: HabitatMech
 habitat_category: AQUATIC
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Hadopelagic zone/Ocean trenches
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: hadal pelagic zone
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:00000208
 source_attestations:
@@ -14,15 +25,26 @@ source_attestations:
   assertion_count: 4
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.1f80141d6a)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Aquatic > Marine > Pelagic zone > Hadopelagic zone/Ocean
+    trenches'' denotes the hadal pelagic water column in ocean trenches (ENVO:00000214
+    is absent from the vendored slice). Define under ENVO:00000208 (marine pelagic
+    zone) (PMID 25722405; DOI:10.1073/pnas.1423854112). Path: Environmental > Aquatic
+    > Marine > Pelagic zone > Hadopelagic zone/Ocean trenches (source concept habitatmech:GOLD.1f80141d6a)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''marine hadopelagic zone'' under ENVO:00000208 ''marine pelagic
+    zone''. ITEM curation: GOLD ''Environmental > Aquatic > Marine > Pelagic zone
+    > Hadopelagic zone/Ocean trenches'' denotes the hadal pelagic water column in
+    ocean trenches (ENVO:00000214 is absent from the vendored slice). Define under
+    ENVO:00000208 (marine pelagic zone) (PMID 25722405; DOI:10.1073/pnas.1423854112).
+    Path: Environmental > Aquatic > Marine > Pelagic zone > Hadopelagic zone/Ocean
+    trenches'

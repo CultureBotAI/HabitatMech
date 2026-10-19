@@ -1,8 +1,11 @@
 identifier: habitatmech:GOLD.87ed015f0c
-label: Laryngopharyngeal
+label: mammalian laryngopharyngeal lymph node
+definition: A lymph node draining the laryngopharyngeal and laryngeal mucosa of a
+  non-human mammal.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
 parent_habitats:
 - UBERON:0000029
 source_attestations:
@@ -11,15 +14,33 @@ source_attestations:
   source_label: Laryngopharyngeal
   source_path: Host-associated > Mammals > Lymphatic system > Lymph nodes > Laryngopharyngeal
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.87ed015f0c)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals > Lymphatic system > Lymph nodes > Laryngopharyngeal''
+    denotes mammalian laryngopharyngeal lymph nodes (PMID 29643885; DOI:10.3389/fimmu.2018.00682).
+    Path: Host-associated > Mammals > Lymphatic system > Lymph nodes > Laryngopharyngeal
+    (source concept habitatmech:GOLD.87ed015f0c)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''mammalian laryngopharyngeal lymph node'' under UBERON:0000029
+    ''lymph node''. ITEM curation: GOLD ''Host-associated > Mammals > Lymphatic system
+    > Lymph nodes > Laryngopharyngeal'' denotes mammalian laryngopharyngeal lymph
+    nodes (PMID 29643885; DOI:10.3389/fimmu.2018.00682). Path: Host-associated > Mammals
+    > Lymphatic system > Lymph nodes > Laryngopharyngeal'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Laryngopharyngeal'
+    when defining habitatmech:GOLD.87ed015f0c as 'mammalian laryngopharyngeal lymph
+    node'. Verbatim source attestations are preserved. Displaced GOLD source label
+    'Laryngopharyngeal' in path 'Host-associated > Mammals > Lymphatic system > Lymph
+    nodes > Laryngopharyngeal' is context-dependent, ambiguous, or names a host/disease/process
+    rather than the defined habitat 'mammalian laryngopharyngeal lymph node'; suppress
+    automatic exact-synonym retention while preserving verbatim source provenance.

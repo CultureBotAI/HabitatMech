@@ -1,9 +1,20 @@
 identifier: habitatmech:GOLD.23ff94c519
-label: Lateral fornices
+label: human lateral vaginal fornix
+definition: A vagina anatomical region comprising the lateral recesses of the upper
+  human vaginal vault surrounding the ectocervix.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Lateral fornices
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: lateral fornix of vagina
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
+- UBERON:0000996
 - habitatmech:GOLD.1daee83236
 source_attestations:
 - source: GOLD
@@ -12,15 +23,25 @@ source_attestations:
   source_path: 'Host-associated > Mammals: Human > Reproductive system > Vagina >
     Lateral fornices'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.23ff94c519)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals: Human > Reproductive system > Vagina > Lateral
+    fornices'' denotes the lateral vaginal fornices of the human vagina. Define under
+    UBERON:0000996 (vagina) (PMID 20534435; DOI:10.1073/pnas.1002611107). Path: Host-associated
+    > Mammals: Human > Reproductive system > Vagina > Lateral fornices (source concept
+    habitatmech:GOLD.23ff94c519)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''human lateral vaginal fornix'' under UBERON:0000996 ''vagina''.
+    ITEM curation: GOLD ''Host-associated > Mammals: Human > Reproductive system >
+    Vagina > Lateral fornices'' denotes the lateral vaginal fornices of the human
+    vagina. Define under UBERON:0000996 (vagina) (PMID 20534435; DOI:10.1073/pnas.1002611107).
+    Path: Host-associated > Mammals: Human > Reproductive system > Vagina > Lateral
+    fornices'

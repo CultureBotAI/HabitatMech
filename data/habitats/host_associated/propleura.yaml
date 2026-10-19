@@ -1,8 +1,19 @@
 identifier: habitatmech:GOLD.c0ce593089
-label: Propleura
+label: insect propleuron
+definition: An insect prothoracic segment region comprising the lateral sclerite (propleuron)
+  of the insect prothorax, which in attine fungus-growing ants bears cuticular crypts
+  housing mutualistic Pseudonocardia actinobacteria.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Propleura
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: propleural plate
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - UBERON:6000017
 source_attestations:
@@ -11,15 +22,25 @@ source_attestations:
   source_label: Propleura
   source_path: 'Host-associated > Arthropoda: Insects > Thorax > Prothorax > Propleura'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.c0ce593089)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Arthropoda: Insects > Thorax > Prothorax > Propleura''
+    denotes the propleural region of the insect prothorax (UBERON term 6000072 is
+    not in the vendored slice). Define under UBERON:6000017 (insect prothoracic segment)
+    (PMID 16397302; DOI:10.1126/science.1120919). Path: Host-associated > Arthropoda:
+    Insects > Thorax > Prothorax > Propleura (source concept habitatmech:GOLD.c0ce593089)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''insect propleuron'' under UBERON:6000017 ''insect prothoracic
+    segment''. ITEM curation: GOLD ''Host-associated > Arthropoda: Insects > Thorax
+    > Prothorax > Propleura'' denotes the propleural region of the insect prothorax
+    (UBERON term 6000072 is not in the vendored slice). Define under UBERON:6000017
+    (insect prothoracic segment) (PMID 16397302; DOI:10.1126/science.1120919). Path:
+    Host-associated > Arthropoda: Insects > Thorax > Prothorax > Propleura'

@@ -1,10 +1,18 @@
 identifier: habitatmech:GOLD.da4109db9e
-label: Dental calculus
+label: skeletonized human remains dental calculus
+definition: A biofilm consisting of mineralized dental plaque (dental calculus) preserved
+  on the teeth of ancient or archaeological skeletonized human remains, which entraps
+  and preserves ancient oral microbiome DNA and dietary microfossils.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: archaeological human dental calculus
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- habitatmech:GOLD.2f62ba7993
+- ENVO:00002034
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6136
@@ -12,15 +20,34 @@ source_attestations:
   source_path: 'Host-associated > Mammals: Human > Remains > Skeletonized remains
     > Dental calculus'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.da4109db9e)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Mammals: Human > Remains > Skeletonized remains > Dental
+    calculus'' denotes mineralized dental calculus on skeletonized human remains (PMID
+    24562188; DOI:10.1038/ng.2906). Path: Host-associated > Mammals: Human > Remains
+    > Skeletonized remains > Dental calculus (source concept habitatmech:GOLD.da4109db9e)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''skeletonized human remains dental calculus'' under ENVO:00002034
+    ''biofilm''. ITEM curation: GOLD ''Host-associated > Mammals: Human > Remains
+    > Skeletonized remains > Dental calculus'' denotes mineralized dental calculus
+    on skeletonized human remains (PMID 24562188; DOI:10.1038/ng.2906). Path: Host-associated
+    > Mammals: Human > Remains > Skeletonized remains > Dental calculus'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''Dental calculus''
+    when defining habitatmech:GOLD.da4109db9e as ''skeletonized human remains dental
+    calculus''. Verbatim source attestations are preserved. Displaced GOLD source
+    label ''Dental calculus'' in path ''Host-associated > Mammals: Human > Remains
+    > Skeletonized remains > Dental calculus'' is context-dependent, ambiguous, or
+    names a host/disease/process rather than the defined habitat ''skeletonized human
+    remains dental calculus''; suppress automatic exact-synonym retention while preserving
+    verbatim source provenance.'

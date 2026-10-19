@@ -1,10 +1,22 @@
 identifier: habitatmech:GOLD.98c192f558
-label: Fungus garden/Fungus gallery
+label: insect fungus garden
+definition: An environmental system determined by an organism that consists of a substrate
+  structure or gallery cultivated by fungicultural insects, such as leaf-cutter ants,
+  fungus-growing termites, or ambrosia beetles, to farm symbiotic fungi and associated
+  microbial consortia.
+definition_source: HabitatMech
 habitat_category: TERRESTRIAL
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Fungus garden/Fungus gallery
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: fungus garden
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- habitatmech:GOLD.076eb28273
+- ENVO:01001000
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7274
@@ -14,15 +26,27 @@ source_attestations:
   assertion_count: 77
   assertion_unit: ORGANISM
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.98c192f558)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Environmental > Terrestrial > Nest > Insects nest > Fungus garden/Fungus
+    gallery'' denotes the cultivated fungal substrate/gallery of fungicultural insects
+    rather than a whole insect nest. Define under ENVO:01001000 with parent_mode REPLACE
+    (PMID 22378535; DOI:10.1038/ismej.2012.10; PMID 25468744; DOI:10.1128/mBio.02077-14).
+    Path: Environmental > Terrestrial > Nest > Insects nest > Fungus garden/Fungus
+    gallery (source concept habitatmech:GOLD.98c192f558)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''insect fungus garden'' under ENVO:01001000 ''environmental
+    system determined by an organism''. ITEM curation: GOLD ''Environmental > Terrestrial
+    > Nest > Insects nest > Fungus garden/Fungus gallery'' denotes the cultivated
+    fungal substrate/gallery of fungicultural insects rather than a whole insect nest.
+    Define under ENVO:01001000 with parent_mode REPLACE (PMID 22378535; DOI:10.1038/ismej.2012.10;
+    PMID 25468744; DOI:10.1128/mBio.02077-14). Path: Environmental > Terrestrial >
+    Nest > Insects nest > Fungus garden/Fungus gallery'

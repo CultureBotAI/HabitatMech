@@ -1,10 +1,17 @@
 identifier: habitatmech:GOLD.7da758d9a6
-label: P5 segment
+label: insect hindgut P5 rectum segment
+definition: A hindgut compartment comprising the terminal P5 (rectum) proctodeal segment
+  of a higher termite or scarabaeid insect hindgut.
+definition_source: HabitatMech
 habitat_category: HOST_ASSOCIATED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: termite hindgut P5 segment
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- habitatmech:GOLD.50722c7871
+- UBERON:0001046
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7394
@@ -12,15 +19,33 @@ source_attestations:
   source_path: 'Host-associated > Arthropoda: Insects > Digestive system > Hindgut
     > P5 segment'
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.7da758d9a6)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Host-associated > Arthropoda: Insects > Digestive system > Hindgut > P5
+    segment'' denotes the P5 rectum segment of an insect hindgut (PMID 22570635; DOI:10.1128/AEM.00523-12).
+    Path: Host-associated > Arthropoda: Insects > Digestive system > Hindgut > P5
+    segment (source concept habitatmech:GOLD.7da758d9a6)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''insect hindgut P5 rectum segment'' under UBERON:0001046 ''hindgut''.
+    ITEM curation: GOLD ''Host-associated > Arthropoda: Insects > Digestive system
+    > Hindgut > P5 segment'' denotes the P5 rectum segment of an insect hindgut (PMID
+    22570635; DOI:10.1128/AEM.00523-12). Path: Host-associated > Arthropoda: Insects
+    > Digestive system > Hindgut > P5 segment'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: 'Omitted automatic retention of displaced source label ''P5 segment'' when
+    defining habitatmech:GOLD.7da758d9a6 as ''insect hindgut P5 rectum segment''.
+    Verbatim source attestations are preserved. Displaced GOLD source label ''P5 segment''
+    in path ''Host-associated > Arthropoda: Insects > Digestive system > Hindgut >
+    P5 segment'' is context-dependent, ambiguous, or names a host/disease/process
+    rather than the defined habitat ''insect hindgut P5 rectum segment''; suppress
+    automatic exact-synonym retention while preserving verbatim source provenance.'

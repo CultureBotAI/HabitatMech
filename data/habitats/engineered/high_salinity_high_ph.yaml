@@ -1,8 +1,16 @@
 identifier: habitatmech:GOLD.7038eb7dcc
-label: High-salinity/high-pH
+label: haloalkaliphilic bioreactor
+definition: A bioreactor operated under combined high-salinity and alkaline-pH conditions
+  using haloalkaliphilic microbial consortia (such as biodesulfurization or saline
+  wastewater reactors).
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: high-salinity high-pH bioreactor
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
 - ENVO:00002123
 source_attestations:
@@ -12,15 +20,31 @@ source_attestations:
   source_path: Engineered > Bioreactor > High-salinity/high-pH
   notes: 3 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.7038eb7dcc)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM curation:
+    GOLD ''Engineered > Bioreactor > High-salinity/high-pH'' denotes a haloalkaliphilic
+    bioreactor (PMID 18641122; DOI:10.1128/AEM.00839-08). Path: Engineered > Bioreactor
+    > High-salinity/high-pH (source concept habitatmech:GOLD.7038eb7dcc)'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: 'Defined as ''haloalkaliphilic bioreactor'' under ENVO:00002123 ''bioreactor''.
+    ITEM curation: GOLD ''Engineered > Bioreactor > High-salinity/high-pH'' denotes
+    a haloalkaliphilic bioreactor (PMID 18641122; DOI:10.1128/AEM.00839-08). Path:
+    Engineered > Bioreactor > High-salinity/high-pH'
+- timestamp: '2026-10-17T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'High-salinity/high-pH'
+    when defining habitatmech:GOLD.7038eb7dcc as 'haloalkaliphilic bioreactor'. Verbatim
+    source attestations are preserved. Displaced GOLD source label 'High-salinity/high-pH'
+    in path 'Engineered > Bioreactor > High-salinity/high-pH' is context-dependent,
+    ambiguous, or names a host/disease/process rather than the defined habitat 'haloalkaliphilic
+    bioreactor'; suppress automatic exact-synonym retention while preserving verbatim
+    source provenance.
