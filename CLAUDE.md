@@ -23,6 +23,12 @@ Read these before changing domain behavior:
 - [.claude/skills/curate-yaml-record/SKILL.md](.claude/skills/curate-yaml-record/SKILL.md)
   — audit or improve one habitat through authoritative decisions, definitions,
   and source inputs; generated habitat YAML remains read-only.
+- [.claude/skills/curate-causal-graphs/SKILL.md](.claude/skills/curate-causal-graphs/SKILL.md)
+  — review and curate evidence-backed HabitatMech causal mechanism overlays in
+  `curation/causal_graphs/*.yaml`, then regenerate and verify habitat records.
+- [.claude/skills/add-uniprot-protein-examples/SKILL.md](.claude/skills/add-uniprot-protein-examples/SKILL.md)
+  — audit HabitatMech gene/protein mechanism nodes and add verified protein
+  references where the native overlay schema preserves their identity and evidence.
 - [.claude/skills/review-yaml-record/SKILL.md](.claude/skills/review-yaml-record/SKILL.md)
   — audit one habitat record without editing it or mutating GitHub.
 - [.claude/skills/review-yaml-category/SKILL.md](.claude/skills/review-yaml-category/SKILL.md)
