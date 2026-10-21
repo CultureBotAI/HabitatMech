@@ -12,13 +12,13 @@ causal_graphs:
     grounding: ENVO:00002044
   - node_id: activated_sludge_flocs
     label: activated sludge flocs
-    node_type: STATE
+    node_type: HABITAT
   - node_id: extracellular_polymeric_substances
     label: extracellular polymeric substances
     node_type: CHEMICAL
   - node_id: heterogeneous_floc_matrix
     label: heterogeneous floc matrix
-    node_type: STATE
+    node_type: ENVIRONMENTAL_FACTOR
   - node_id: bulk_dissolved_oxygen
     label: bulk dissolved oxygen
     node_type: ENVIRONMENTAL_PARAMETER
@@ -27,10 +27,10 @@ causal_graphs:
     node_type: ENVIRONMENTAL_PARAMETER
   - node_id: oxic_floc_zones
     label: oxic floc zones
-    node_type: ENVIRONMENTAL_PARAMETER
+    node_type: HABITAT
   - node_id: anoxic_floc_zones
     label: anoxic floc zones
-    node_type: ENVIRONMENTAL_PARAMETER
+    node_type: HABITAT
   - node_id: nitrification
     label: nitrification
     node_type: BIOLOGICAL_PROCESS
@@ -165,4 +165,11 @@ curation_history:
   action: ADD_CAUSAL_GRAPH
   changes: Added a sludge floc oxygen-partitioning graph backed by
     PMID:12926675 and PMID:12827702.
+  llm_assisted: true
+- timestamp: '2026-10-20T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Retyped activated_sludge_flocs, oxic_floc_zones, and anoxic_floc_zones
+    to HABITAT and heterogeneous_floc_matrix from STATE to ENVIRONMENTAL_FACTOR while
+    retaining stable node and edge IDs.
   llm_assisted: true

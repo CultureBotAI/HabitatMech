@@ -46,13 +46,13 @@ causal_graphs:
     node_type: ENVIRONMENTAL_FACTOR
   - node_id: rhizosphere_bacteria
     label: rhizosphere bacteria
-    node_type: TAXON
+    node_type: COMMUNITY
   - node_id: saprotrophic_fungi
     label: saprotrophic fungi
-    node_type: TAXON
+    node_type: COMMUNITY
   - node_id: extracellular_enzymes
     label: extracellular enzymes
-    node_type: TRAIT
+    node_type: MOLECULAR_FUNCTION
   - node_id: soil_organic_matter
     label: soil organic matter
     node_type: CHEMICAL
@@ -92,8 +92,8 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1139/cjb-2013-0225
       snippet: plant roots
-      notes: Badri and Vivanco reviewed root-secreted metabolites as drivers of
-        root-microbiome communication and rhizosphere selection.
+      notes: Huang and colleagues (2014) reviewed root-secreted metabolites as
+        drivers of root-microbiome communication and rhizosphere selection.
   - edge_id: root_exudates_select_rhizosphere_bacteria
     subject: root_exudates
     predicate: selects for
@@ -151,8 +151,8 @@ causal_graphs:
     evidence:
     - reference: PMID:22402400
       snippet: metaproteomics
-      notes: Schneider and colleagues detected fungal and bacterial extracellular
-        enzymes during leaf litter decomposition.
+      notes: Schneider and colleagues detected fungal extracellular hydrolytic
+        enzymes during beech leaf litter decomposition.
   - edge_id: extracellular_enzymes_generate_soil_organic_matter
     subject: extracellular_enzymes
     predicate: contributes to
@@ -287,4 +287,12 @@ curation_history:
     PMID:27856492, DOI:10.1007/s11284-007-0390-z, PMID:22402400,
     PMID:23055998, PMID:28824177, DOI:10.1146/annurev-ecolsys-110617-062614,
     PMID:28753209, and PMID:24639507.
+  llm_assisted: true
+- timestamp: '2026-10-20T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Retyped rhizosphere_bacteria and saprotrophic_fungi from TAXON to COMMUNITY
+    and extracellular_enzymes from TRAIT to MOLECULAR_FUNCTION; corrected DOI:10.1139/cjb-2013-0225
+    author attribution to Huang et al. (2014) and refined PMID:22402400 notes on
+    saprotrophic_fungi_express_extracellular_enzymes.
   llm_assisted: true

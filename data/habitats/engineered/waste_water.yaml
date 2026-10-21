@@ -379,19 +379,19 @@ causal_graphs:
     node_type: ENVIRONMENTAL_PARAMETER
   - node_id: anoxic_zones
     label: anoxic zones
-    node_type: STATE
+    node_type: HABITAT
   - node_id: heterotrophic_bacteria
     label: heterotrophic bacteria
-    node_type: TAXON
+    node_type: COMMUNITY
   - node_id: ammonia_oxidizing_bacteria
     label: ammonia-oxidizing bacteria
-    node_type: TAXON
+    node_type: COMMUNITY
   - node_id: nitrite_oxidizing_bacteria
     label: nitrite-oxidizing bacteria
-    node_type: TAXON
+    node_type: COMMUNITY
   - node_id: denitrifying_bacteria
     label: denitrifying bacteria
-    node_type: TAXON
+    node_type: COMMUNITY
   - node_id: aerobic_organic_oxidation
     label: aerobic organic oxidation
     node_type: PATHWAY
@@ -611,4 +611,11 @@ curation_history:
   action: ADD_CAUSAL_GRAPH
   changes: Added a wastewater organic-nitrogen biotreatment graph backed by PMID:12180096,
     PMID:27453679, PMID:15276744, PMID:19515200, PMID:17391331, and PMID:18811652.
+  llm_assisted: true
+- timestamp: '2026-10-20T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Retyped anoxic_zones from STATE to HABITAT and retyped heterotrophic_bacteria,
+    ammonia_oxidizing_bacteria, nitrite_oxidizing_bacteria, and denitrifying_bacteria
+    from TAXON to COMMUNITY while retaining stable node and edge IDs.
   llm_assisted: true

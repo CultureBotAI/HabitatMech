@@ -385,10 +385,10 @@ causal_graphs:
     node_type: HABITAT
   - node_id: photic_zone
     label: photic zone
-    node_type: ENVIRONMENTAL_FACTOR
+    node_type: HABITAT
   - node_id: photosynthetic_microbes
     label: photosynthetic microbes
-    node_type: TAXON
+    node_type: COMMUNITY
   - node_id: oxygenic_photosynthesis
     label: oxygenic photosynthesis
     node_type: PATHWAY
@@ -406,7 +406,7 @@ causal_graphs:
     node_type: CHEMICAL
   - node_id: heterotrophic_bacteria
     label: heterotrophic bacteria
-    node_type: TAXON
+    node_type: COMMUNITY
   - node_id: aerobic_respiration
     label: aerobic respiration
     node_type: PATHWAY
@@ -661,3 +661,10 @@ curation_history:
   changes: 'Retained GOLD label ''Aquatic'' as RELATED_SYNONYM: a CLOSE source mapping
     does not establish exact lexical equivalence. Independent ontology synonyms and
     verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-20T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Retyped photic_zone from ENVIRONMENTAL_FACTOR to HABITAT and retyped photosynthetic_microbes
+    and heterotrophic_bacteria from TAXON to COMMUNITY to match CausalNodeType definitions
+    while retaining stable node and edge IDs.
+  llm_assisted: true

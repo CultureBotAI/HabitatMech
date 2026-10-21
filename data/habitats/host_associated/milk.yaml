@@ -200,7 +200,7 @@ causal_graphs:
     grounding: UBERON:0001911
   - node_id: aqueous_emulsion
     label: aqueous fat-protein emulsion
-    node_type: STATE
+    node_type: ENVIRONMENTAL_FACTOR
   - node_id: lactose
     label: lactose
     node_type: CHEMICAL
@@ -218,10 +218,10 @@ causal_graphs:
     node_type: CHEMICAL
   - node_id: milk_microbiota
     label: milk microbiota
-    node_type: COMMUNITY_PROCESS
+    node_type: COMMUNITY
   - node_id: lactic_acid_bacteria
     label: lactic-acid bacteria
-    node_type: TAXON
+    node_type: COMMUNITY
   - node_id: bifidobacteria
     label: bifidobacteria
     node_type: TAXON
@@ -462,4 +462,11 @@ curation_history:
   action: ADD_CAUSAL_GRAPH
   changes: Added a milk carbohydrate lactic-acid assembly graph backed by PMID:21695057,
     PMID:23808865, PMID:21175746, PMID:19033196, PMID:33643310, and PMID:14657823.
+  llm_assisted: true
+- timestamp: '2026-10-20T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Retyped aqueous_emulsion from STATE to ENVIRONMENTAL_FACTOR, milk_microbiota
+    from COMMUNITY_PROCESS to COMMUNITY, and lactic_acid_bacteria from TAXON to COMMUNITY
+    while retaining stable node and edge IDs.
   llm_assisted: true

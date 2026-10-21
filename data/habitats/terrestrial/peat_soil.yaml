@@ -360,7 +360,7 @@ causal_graphs:
     node_type: ENVIRONMENTAL_PARAMETER
   - node_id: vertical_peat_stratification
     label: vertical peat stratification
-    node_type: STATE
+    node_type: ENVIRONMENTAL_FACTOR
   - node_id: carbohydrate_degradation
     label: carbohydrate degradation
     node_type: PATHWAY
@@ -369,7 +369,7 @@ causal_graphs:
     node_type: CHEMICAL
   - node_id: acid_tolerant_methanogens
     label: acid-tolerant methanogens
-    node_type: TAXON
+    node_type: COMMUNITY
   - node_id: hydrogenotrophic_methanogenesis
     label: hydrogenotrophic methanogenesis
     node_type: PATHWAY
@@ -378,7 +378,7 @@ causal_graphs:
     node_type: CHEMICAL
   - node_id: acidophilic_methanotrophs
     label: acidophilic methanotrophs
-    node_type: TAXON
+    node_type: COMMUNITY
   - node_id: methane_oxidation
     label: methane oxidation
     node_type: PATHWAY
@@ -585,3 +585,10 @@ curation_history:
   changes: 'Retained GOLD label ''Peat'' as RELATED_SYNONYM: a CLOSE source mapping
     does not establish exact lexical equivalence. Independent ontology synonyms and
     verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-20T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Retyped vertical_peat_stratification from STATE to ENVIRONMENTAL_FACTOR
+    and retyped acid_tolerant_methanogens and acidophilic_methanotrophs from TAXON
+    to COMMUNITY while retaining stable node and edge IDs.
+  llm_assisted: true

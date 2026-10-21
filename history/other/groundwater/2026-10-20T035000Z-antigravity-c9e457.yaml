@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/causal_graphs/groundwater.yaml
+  slug: groundwater
+session:
+  id: 2026-10-20T035000Z-antigravity-c9e457
+  timestamp: '2026-10-20T03:50:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+events:
+- type: CREATE
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Author groundwater subsurface fermentation and redox-handoff causal graph
+  details: Authored curation/causal_graphs/groundwater.yaml for ENVO:01001004 (the
+    highest-opportunity uncurated record in the corpus at opportunity_score=100)
+    backed by primary metagenomic and cryo-TEM evidence from Luef et al. 2015
+    (PMID:26121419), Wrighton et al. 2012 (PMID:23019650), and Anantharaman et al.
+    2016 (PMID:27779183), explicitly bounding the Rifle aquifer genomic scope.

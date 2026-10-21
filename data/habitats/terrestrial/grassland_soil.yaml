@@ -341,7 +341,7 @@ causal_graphs:
     node_type: CHEMICAL
   - node_id: rhizosphere_bacteria
     label: rhizosphere bacteria
-    node_type: TAXON
+    node_type: COMMUNITY
   - node_id: arbuscular_mycorrhizal_fungi
     label: arbuscular mycorrhizal fungi
     node_type: TAXON
@@ -368,7 +368,7 @@ causal_graphs:
     node_type: CHEMICAL
   - node_id: drought_resistant_microbes
     label: drought-resistant microbes
-    node_type: TAXON
+    node_type: COMMUNITY
   edges:
   - edge_id: grassland_soil_determined_by_plant_cover
     subject: grassland_soil
@@ -410,7 +410,7 @@ causal_graphs:
     description: Root-derived carbon favors bacteria that can exploit fresh rhizodeposits
       near grassland roots.
     evidence:
-    - reference: DOI:10.3389/fpls.2018.01593
+    - reference: PMID:30464767
       snippet: Post-drought Recovery of Microbes
       notes: The mountain-grassland pulse-labeling study linked root exudates to bacterial
         and fungal microbial recovery after drought.
@@ -521,7 +521,7 @@ causal_graphs:
     description: Drought allows root-derived soluble carbon to accumulate in soil
       before rapid use after water returns.
     evidence:
-    - reference: DOI:10.3389/fpls.2018.01593
+    - reference: PMID:30464767
       snippet: root exudates supports post-drought recovery
       notes: Karlowsky and colleagues found drought accumulation of root exudates
         that supported microbial recovery after rewetting.
@@ -554,7 +554,7 @@ causal_graphs:
     description: A drying-rewetting pulse changes the abundance and activity of microbial
       nitrogen-cycling guilds in grassland soil.
     evidence:
-    - reference: DOI:10.1128/msystems.00247-22
+    - reference: PMID:35762785
       snippet: Drying-Rewetting Cycle
       notes: Wang and colleagues found that a drying-rewetting cycle shifted grassland
         soil microbial communities more strongly than reduced precipitation alone.
@@ -570,4 +570,11 @@ curation_history:
   changes: Added a grassland soil root drought carbon pulses graph backed by DOI:10.1007/s10705-009-9314-3,
     PMID:30464767, DOI:10.3389/fpls.2018.01593, DOI:10.1111/1365-2745.13521, DOI:10.1016/j.soilbio.2013.03.034,
     PMID:35762785, and DOI:10.1128/msystems.00247-22.
+  llm_assisted: true
+- timestamp: '2026-10-20T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Retyped rhizosphere_bacteria and drought_resistant_microbes from TAXON
+    to COMMUNITY and consolidated duplicate DOI/PMID citations for PMID:30464767 and
+    PMID:35762785 while retaining stable node and edge IDs.
   llm_assisted: true

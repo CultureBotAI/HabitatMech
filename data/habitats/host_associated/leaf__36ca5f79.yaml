@@ -349,10 +349,10 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
   - node_id: nutrient_hotspots
     label: nutrient hotspots
-    node_type: STATE
+    node_type: ENVIRONMENTAL_FACTOR
   - node_id: epiphytic_bacterial_aggregates
     label: epiphytic bacterial aggregates
-    node_type: COMMUNITY_PROCESS
+    node_type: COMMUNITY
   - node_id: extracellular_polysaccharide
     label: extracellular polysaccharide
     node_type: CHEMICAL
@@ -557,3 +557,9 @@ curation_history:
   changes: Corrected bacdive.isolation_source:leaf-phyllosphere provenance wording
     to distinguish the declined automatic mapping from the final curator override
     (#1889).
+- timestamp: '2026-10-20T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Retyped nutrient_hotspots from STATE to ENVIRONMENTAL_FACTOR and epiphytic_bacterial_aggregates
+    from COMMUNITY_PROCESS to COMMUNITY while preserving stable node and edge IDs.
+  llm_assisted: true

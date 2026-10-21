@@ -375,7 +375,7 @@ causal_graphs:
     node_type: ENVIRONMENTAL_PARAMETER
   - node_id: obligate_anaerobe_dominance
     label: obligate anaerobe dominance
-    node_type: COMMUNITY_PROCESS
+    node_type: COMMUNITY
   - node_id: dietary_fiber
     label: dietary fiber
     node_type: CHEMICAL
@@ -490,4 +490,11 @@ curation_history:
   action: ADD_CAUSAL_GRAPH
   changes: Added a mammalian intestinal anaerobic glycan-fermentation graph backed
     by PMID:28798125, PMID:30498100, PMID:37442097, and PMID:29902436.
+  llm_assisted: true
+- timestamp: '2026-10-20T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Retyped obligate_anaerobe_dominance from COMMUNITY_PROCESS to COMMUNITY
+    to match the obligate-anaerobe community selected by low luminal oxygen while
+    retaining stable node and edge IDs.
   llm_assisted: true

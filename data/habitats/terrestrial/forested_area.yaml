@@ -408,7 +408,7 @@ causal_graphs:
     node_type: CHEMICAL
   - node_id: ectomycorrhizal_fungi
     label: ectomycorrhizal fungi
-    node_type: TAXON
+    node_type: COMMUNITY
   - node_id: forest_litter
     label: forest litter
     node_type: HABITAT
@@ -423,10 +423,10 @@ causal_graphs:
     node_type: CHEMICAL
   - node_id: saprotrophic_fungi
     label: saprotrophic fungi
-    node_type: TAXON
+    node_type: COMMUNITY
   - node_id: forest_soil_bacteria
     label: forest soil bacteria
-    node_type: TAXON
+    node_type: COMMUNITY
   - node_id: litter_decomposition
     label: litter decomposition
     node_type: COMMUNITY_PROCESS
@@ -488,9 +488,9 @@ causal_graphs:
       root zones hotspots for forest microbial activity.
     evidence:
     - reference: DOI:10.1139/cjb-2013-0225
-      snippet: root exudation and rhizosphere biology
-      notes: Badri and colleagues reviewed how plant root exudates supply carbon and
-        signals that shape root-associated microbial communities.
+      snippet: release a broad variety of chemical compounds
+      notes: Huang and colleagues (2014) reviewed how plant roots release chemical
+        exudates that attract and shape root-associated microbial communities.
   - edge_id: root_exudates_select_forest_bacteria
     subject: root_exudates
     predicate: selects for
@@ -542,7 +542,7 @@ causal_graphs:
     description: Leaf and needle litter contain cellulose, hemicellulose, and lignin
       polymers that shape decomposer succession.
     evidence:
-    - reference: PMID:22402400
+    - reference: DOI:10.1111/j.1574-6941.2012.01343.x
       snippet: Cellulose utilization in forest litter and soil
       notes: Stursova and colleagues tracked cellulose-responsive bacterial and fungal
         decomposers in forest litter and soil.
@@ -553,7 +553,7 @@ causal_graphs:
     description: Recalcitrant lignocellulose in forest litter favors fungi with extracellular
       enzyme systems for polymer decay.
     evidence:
-    - reference: PMID:22402400
+    - reference: DOI:10.1111/j.1574-6941.2012.01343.x
       snippet: forest litter and soil
       notes: Cellulose addition in a forest system identified fungi and bacteria that
         actively use plant structural polysaccharides.
@@ -564,7 +564,7 @@ causal_graphs:
     description: Saprotrophic fungi mineralize litter polymers and drive turnover
       of fallen plant material on the forest floor.
     evidence:
-    - reference: DOI:10.1093/femsre/fuw040
+    - reference: PMID:27856492
       snippet: Forest microbiome
       notes: Baldrian reviewed saprotrophic fungal decomposition as a central forest
         carbon-cycling process.
@@ -586,7 +586,7 @@ causal_graphs:
     description: Branch and trunk mortality create coarse woody debris as a long-lived
       habitat within forests.
     evidence:
-    - reference: DOI:10.1093/femsre/fuw040
+    - reference: PMID:27856492
       snippet: diversity, complexity and dynamics
       notes: The forest-microbiome review treats deadwood as a persistent microbial
         substrate produced by trees.
@@ -608,7 +608,7 @@ causal_graphs:
     description: Woody polymers favor fungi that initiate deadwood decay and open
       the substrate to bacterial metabolisms.
     evidence:
-    - reference: DOI:10.1128/mSystems.01078-20
+    - reference: PMID:33436515
       snippet: Complementary Roles
       notes: Tlaskal and colleagues found complementary fungal and bacterial roles
         in deadwood decomposition.
@@ -634,7 +634,7 @@ causal_graphs:
       snippet: Forest Soil Bacteria
       notes: Llado and colleagues reviewed forest bacterial participation in organic-matter
         decomposition and nutrient cycling.
-    - reference: PMID:22402400
+    - reference: DOI:10.1111/j.1574-6941.2012.01343.x
       snippet: Cellulose utilization
       notes: Stursova and colleagues detected cellulose-utilizing bacterial populations
         in forest litter and soil.
@@ -690,3 +690,12 @@ curation_history:
   changes: 'Retained GOLD label ''Forest'' as RELATED_SYNONYM: a CLOSE source mapping
     does not establish exact lexical equivalence. Independent ontology synonyms and
     verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-20T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Retyped ectomycorrhizal_fungi, saprotrophic_fungi, and forest_soil_bacteria
+    from TAXON to COMMUNITY; corrected mis-cited PMID:22402400 (Schneider et al. 2012)
+    on Stursova et al. 2012 evidence items to DOI:10.1111/j.1574-6941.2012.01343.x;
+    corrected DOI:10.1139/cjb-2013-0225 snippet and author attribution to Huang et
+    al. (2014); consolidated duplicate DOI/PMID citations for PMID:27856492 and PMID:33436515.
+  llm_assisted: true

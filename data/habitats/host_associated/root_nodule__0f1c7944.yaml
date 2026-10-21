@@ -186,7 +186,7 @@ causal_graphs:
     node_type: CHEMICAL
   - node_id: rhizobia
     label: rhizobia
-    node_type: TAXON
+    node_type: COMMUNITY
   - node_id: frankia
     label: Frankia
     node_type: TAXON
@@ -210,7 +210,7 @@ causal_graphs:
     node_type: HABITAT
   - node_id: bacteroids
     label: bacteroids
-    node_type: TAXON
+    node_type: COMMUNITY
   - node_id: plant_dicarboxylates
     label: plant dicarboxylates
     node_type: CHEMICAL
@@ -219,7 +219,7 @@ causal_graphs:
     node_type: CHEMICAL
   - node_id: low_oxygen_cytoplasm
     label: low-oxygen nodule cytoplasm
-    node_type: STATE
+    node_type: ENVIRONMENTAL_PARAMETER
   - node_id: nitrogenase
     label: nitrogenase
     node_type: GENE_OR_PROTEIN
@@ -270,7 +270,7 @@ causal_graphs:
     description: Compatible rhizobia respond to host signals by producing lipochitooligosaccharide
       Nod factors.
     evidence:
-    - reference: DOI:10.1128/MMBR.68.2.280-300.2004
+    - reference: PMID:15187185
       snippet: Nod factors
       notes: Gage reviewed how rhizobial Nod factors trigger host root-hair and cortical
         responses in temperate legumes.
@@ -303,7 +303,7 @@ causal_graphs:
     description: Root-hair infection produces infection threads that conduct rhizobia
       through the host root tissue.
     evidence:
-    - reference: DOI:10.1128/MMBR.68.2.280-300.2004
+    - reference: PMID:15187185
       snippet: infection threads
       notes: The rhizobial infection review describes infection-thread growth from
         curled root hairs into developing nodules.
@@ -358,7 +358,7 @@ causal_graphs:
     description: Host nodule cells provide C4-dicarboxylate carbon sources that fuel
       bacteroid energy metabolism.
     evidence:
-    - reference: DOI:10.1126/sciadv.abh2433
+    - reference: PMID:34330708
       snippet: dicarboxylates
       notes: Schulte and colleagues showed that plant control of dicarboxylate supply
         is central to rhizobial nitrogen-fixation metabolism.
@@ -391,7 +391,7 @@ causal_graphs:
     description: Leghemoglobin buffers free oxygen in infected cells, preserving a
       low-oxygen state around bacteroids.
     evidence:
-    - reference: DOI:10.1016/bs.ampbs.2019.08.001
+    - reference: PMID:31655741
       snippet: Oxygen regulatory mechanisms
       notes: The rhizobial oxygen-regulation review describes the low-oxygen nodule
         environment that permits microaerobic respiration and nitrogenase activity.
@@ -424,7 +424,7 @@ causal_graphs:
     description: Nitrogenase catalyzes biological reduction of atmospheric N2 within
       infected nodule cells.
     evidence:
-    - reference: DOI:10.1126/sciadv.abh2433
+    - reference: PMID:34330708
       snippet: Metabolic control of nitrogen fixation
       notes: Schulte and colleagues studied rhizobial nitrogenase activity as the
         terminal sink for carbon and reductant supplied by the host.
@@ -457,7 +457,7 @@ causal_graphs:
     description: Frankia in actinorhizal nodules protects nitrogenase inside specialized
       infected cells or vesicles.
     evidence:
-    - reference: DOI:10.1046/j.1469-8137.1997.00755.x
+    - reference: PMID:33863007
       snippet: nodules; oxygen
       notes: The actinorhizal review describes Frankia vesicles and host adaptations
         that balance oxygen tension near nitrogenase.
@@ -501,4 +501,12 @@ curation_history:
   changes: Added a root nodule symbiotic nitrogen fixation graph backed by PMID:33526611,
     PMID:15187185, DOI:10.1128/MMBR.68.2.280-300.2004, PMID:34330708, DOI:10.1126/sciadv.abh2433,
     PMID:31655741, DOI:10.1016/bs.ampbs.2019.08.001, PMID:33863007, and DOI:10.1046/j.1469-8137.1997.00755.x.
+  llm_assisted: true
+- timestamp: '2026-10-20T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Retyped rhizobia and bacteroids from TAXON to COMMUNITY, and low_oxygen_cytoplasm
+    from STATE to ENVIRONMENTAL_PARAMETER; consolidated duplicate DOI/PMID citations
+    for PMID:15187185, PMID:34330708, PMID:31655741, and PMID:33863007 while retaining
+    stable node and edge IDs.
   llm_assisted: true

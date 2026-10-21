@@ -336,7 +336,7 @@ causal_graphs:
     node_type: COMMUNITY_PROCESS
   - node_id: plant_beneficial_functions
     label: plant-beneficial functions
-    node_type: BIOLOGICAL_PROCESS
+    node_type: COMMUNITY_PROCESS
   edges:
   - edge_id: plant_roots_release_exudates
     subject: plant_associated_environment
@@ -386,8 +386,8 @@ causal_graphs:
     subject: salicylic_acid_signaling
     predicate: modulates
     object: root_bacterial_colonization
-    description: Plant immune signaling through salicylic acid modulates which bacterial
-      taxa colonize roots.
+    description: In model plant systems such as Arabidopsis thaliana, host immune
+      signaling through salicylic acid modulates which bacterial taxa colonize roots.
     evidence:
     - reference: PMID:26184915
       snippet: colonization of the root microbiome
@@ -453,3 +453,10 @@ curation_history:
   changes: Corrected bacdive.isolation_source:herbaceous-plants-grass,crops provenance
     wording to distinguish the declined automatic mapping from the final curator override
     (#1889).
+- timestamp: '2026-10-20T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Retyped plant_beneficial_functions from BIOLOGICAL_PROCESS to COMMUNITY_PROCESS
+    and explicitly bounded the Arabidopsis salicylic-acid root colonization edge (PMID:26184915)
+    while retaining stable node and edge IDs.
+  llm_assisted: true

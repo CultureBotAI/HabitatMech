@@ -315,6 +315,104 @@ characteristic_taxa:
   source: MADIN
   taxon_label: Hyphomicrobium sp. 802
   candidate_pool: 331
+causal_graphs:
+- graph_id: groundwater_subsurface_fermentation_handoffs
+  title: Groundwater subsurface fermentation and redox handoffs
+  description: Saturated subsurface aquifers host ultra-small candidate-phyla bacteria
+    and coexisting groundwater consortia that couple anaerobic fermentation to inter-organism
+    interactions and sequential redox metabolic handoffs; genomic evidence is drawn
+    primarily from alluvial aquifer groundwater studies (Rifle, Colorado).
+  nodes:
+  - node_id: groundwater
+    label: groundwater
+    node_type: HABITAT
+    grounding: ENVO:01001004
+  - node_id: subsurface_aquifer_matrix
+    label: saturated subsurface aquifer
+    node_type: ENVIRONMENTAL_FACTOR
+  - node_id: ultra_small_candidate_phyla_bacteria
+    label: ultra-small candidate-phyla bacteria
+    node_type: COMMUNITY
+  - node_id: anaerobic_fermentation
+    label: anaerobic fermentation
+    node_type: BIOLOGICAL_PROCESS
+  - node_id: interorganism_metabolic_interactions
+    label: pili-mediated inter-organism interactions
+    node_type: COMMUNITY_PROCESS
+  - node_id: sequential_redox_handoffs
+    label: sequential redox metabolic handoffs
+    node_type: COMMUNITY_PROCESS
+  edges:
+  - edge_id: groundwater_occupies_subsurface_aquifer
+    subject: groundwater
+    predicate: has condition
+    object: subsurface_aquifer_matrix
+    description: Groundwater ecosystems occupy saturated subsurface aquifers that
+      host subterranean microbial communities driving biogeochemical transformations.
+    evidence:
+    - reference: PMID:27779183
+      snippet: Here we apply terabase-scale cultivation-independent metagenomics to
+        aquifer sediments and groundwater
+      notes: Anantharaman and colleagues sample groundwater and aquifer sediments
+        to characterize subterranean aquifer microbial communities and their biogeochemical
+        pathways.
+  - edge_id: subsurface_aquifer_hosts_ultra_small_candidate_phyla
+    subject: subsurface_aquifer_matrix
+    predicate: selects for
+    object: ultra_small_candidate_phyla_bacteria
+    description: Subsurface aquifer groundwater harbors diverse ultra-small candidate-phyla
+      bacteria (including WWE3, OP11/Microgenomates, and OD1/Parcubacteria) with minimized
+      cell volume and genome size.
+    evidence:
+    - reference: PMID:26121419
+      snippet: Metagenomic analysis of groundwater that passed through a ~0.2-μm filter
+        reveals a wide diversity of bacteria from the WWE3, OP11 and OD1 candidate
+        phyla.
+      notes: Luef and colleagues demonstrate by cryo-TEM and metagenomics that groundwater
+        filtrates contain diverse ultra-small WWE3, OP11, and OD1 bacterial cells.
+  - edge_id: ultra_small_bacteria_perform_anaerobic_fermentation
+    subject: ultra_small_candidate_phyla_bacteria
+    predicate: performs
+    object: anaerobic_fermentation
+    description: Uncultivated candidate-phyla bacteria (BD1-5, OP11, OD1, and PER)
+      recovered from acetate-amended aquifer groundwater operate as nonrespiring anaerobes
+      predicted to ferment organic substrates.
+    evidence:
+    - reference: PMID:23019650
+      snippet: All organisms were nonrespiring anaerobes predicted to ferment.
+      notes: Wrighton and colleagues reconstructed 49 genomes of BD1-5, OP11, OD1,
+        and PER bacteria from an acetate-amended aquifer and showed that they lack
+        respiratory chains and rely on fermentation.
+  - edge_id: ultra_small_bacteria_engage_in_interorganism_interactions
+    subject: ultra_small_candidate_phyla_bacteria
+    predicate: drives
+    object: interorganism_metabolic_interactions
+    description: Ultra-small groundwater bacteria with reduced genomes form cell-surface
+      pili-like structures that support inter-organism interactions compensating for
+      missing biosynthetic pathways.
+    evidence:
+    - reference: PMID:26121419
+      snippet: a variety of pililike structures that might enable interorganism interactions
+        that compensate for biosynthetic capacities inferred to be missing from genomic
+        data.
+      notes: Luef and colleagues observed abundant cell-surface pili on ultra-small
+        groundwater cells and linked them to metabolic dependence on coexisting aquifer
+        organisms.
+  - edge_id: anaerobic_fermentation_drives_sequential_redox_handoffs
+    subject: anaerobic_fermentation
+    predicate: supports
+    object: sequential_redox_handoffs
+    description: Fermentation products and redox intermediates in groundwater aquifer
+      consortia feed sequential redox transformations partitioned across coexisting
+      microbial populations via metabolic handoffs.
+    evidence:
+    - reference: PMID:27779183
+      snippet: Consistent with prior findings indicating metabolic handoffs in simple
+        consortia, we find that few organisms within the community can conduct multiple
+        sequential redox transformations.
+      notes: Anantharaman and colleagues show across 2,540 aquifer genomes that biogeochemical
+        pathways in groundwater and aquifer sediments rely on inter-organism metabolic
+        handoffs across sequential redox steps.
 curation_history:
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
@@ -333,3 +431,9 @@ curation_history:
   action: SOURCE_ATTESTATION_CORRECTED
   changes: Preserved curated PREGO source-to-record mapping ENVO:00002041 skos:exactMatch
     ENVO:01001004; source counts and taxa are unchanged (#1888).
+- timestamp: '2026-10-20T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: ADD_CAUSAL_GRAPH
+  changes: Added a groundwater subsurface fermentation and redox-handoff causal graph
+    for ENVO:01001004 backed by PMID:26121419, PMID:23019650, and PMID:27779183.
+  llm_assisted: true
