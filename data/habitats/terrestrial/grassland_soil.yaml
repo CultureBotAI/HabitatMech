@@ -351,6 +351,10 @@ causal_graphs:
   - node_id: extracellular_enzymes
     label: extracellular enzymes
     node_type: GENE_OR_PROTEIN
+    description: Multispecies soil community pool of secreted hydrolytic and oxidative
+      enzymes (such as beta-glucosidase, cellobiohydrolase, N-acetylglucosaminidase,
+      acid phosphatase, and polyphenol oxidase assayed at bulk soil level in DOI:10.1016/j.soilbio.2013.03.034)
+      without an organism-specific UniProtKB sequence assignment.
   - node_id: polymer_decomposition
     label: polymer decomposition
     node_type: COMMUNITY_PROCESS
@@ -577,4 +581,10 @@ curation_history:
   changes: Retyped rhizosphere_bacteria and drought_resistant_microbes from TAXON
     to COMMUNITY and consolidated duplicate DOI/PMID citations for PMID:30464767 and
     PMID:35762785 while retaining stable node and edge IDs.
+  llm_assisted: true
+- timestamp: '2026-10-21T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Documented bulk soil community-enzyme pool scope and source-level absence
+    of an organism-specific UniProtKB sequence on extracellular_enzymes.
   llm_assisted: true

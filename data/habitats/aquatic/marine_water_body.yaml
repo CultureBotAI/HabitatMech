@@ -384,6 +384,10 @@ causal_graphs:
   - node_id: extracellular_enzymes
     label: extracellular enzymes
     node_type: GENE_OR_PROTEIN
+    description: Multispecies particle-associated bacterial pool of secreted hydrolytic
+      ectoenzymes that cleave high-molecular-weight organic matter into transportable
+      substrates (DOI:10.1038/ngeo1921; PMID:21329211) without identifying a single
+      organism-specific UniProtKB polypeptide.
   - node_id: dissolved_organic_matter
     label: dissolved organic matter
     node_type: CHEMICAL
@@ -635,4 +639,10 @@ curation_history:
     gene products in PR 2003. Preserved every graph, node and edge ID, edge description
     and evidence item; this does not reopen the resolved citation corrections in issue
     1301.
+  llm_assisted: true
+- timestamp: '2026-10-21T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Documented particle-associated community ectoenzyme pool scope and source-level
+    absence of an organism-specific UniProtKB sequence on extracellular_enzymes.
   llm_assisted: true

@@ -53,13 +53,28 @@ causal_graphs:
     node_type: CHEMICAL
   - node_id: leghemoglobin
     label: leghemoglobin
-    node_type: CHEMICAL
+    node_type: GENE_OR_PROTEIN
+    description: Symbiotic plant oxygen-binding hemoprotein expressed in infected
+      legume root nodule cells (exemplified in Pisum sativum, NCBITaxon:3888, by
+      Leghemoglobin-1 UniProtKB:P02233 / LGB1_PEA, 148 aa, alongside nodule
+      isoproteins UniProtKB:O48668 / LGB2_PEA and UniProtKB:O80405 / LGB3_PEA);
+      isoprotein family node not grounded to a single accession pending typed
+      protein_examples support (#2250).
   - node_id: low_oxygen_cytoplasm
     label: low-oxygen nodule cytoplasm
     node_type: ENVIRONMENTAL_PARAMETER
   - node_id: nitrogenase
     label: nitrogenase
     node_type: GENE_OR_PROTEIN
+    description: Multisubunit molybdenum-iron nitrogenase complex (NifHDK) shared
+      across legume-nodulating rhizobial bacteroids (exemplified in Rhizobium
+      leguminosarum bv. viciae 3841, NCBITaxon:216596, by NifH UniProtKB:Q1M7Z2 /
+      pRL100162, NifD UniProtKB:Q1M7Z3 / pRL100161, and NifK UniProtKB:Q1M7Z4 /
+      pRL100160) and actinorhizal Frankia (exemplified in Frankia alni ACN14a,
+      NCBITaxon:326424, by NifH UniProtKB:Q0RAV4 / FRAAL6813, NifD UniProtKB:Q0RAV5 /
+      FRAAL6812, and NifK UniProtKB:Q0RAV6 / FRAAL6811); complex node not grounded
+      to a single subunit or organism accession pending typed protein_examples
+      support (#2250).
   - node_id: biological_nitrogen_fixation
     label: biological nitrogen fixation
     node_type: PATHWAY
@@ -219,8 +234,10 @@ causal_graphs:
     evidence:
     - reference: PMID:31655741
       snippet: Oxygen regulatory mechanisms
-      notes: Rutten and Poole reviewed the oxygen paradox of root nodules and
-        mechanisms that maintain respiration while protecting nitrogenase.
+      notes: Rutten and Poole reviewed the oxygen paradox of legume root nodules
+        and plant leghemoglobin oxygen buffering (exemplified in Pisum sativum,
+        NCBITaxon:3888, by Leghemoglobin-1 UniProtKB:P02233 / LGB1_PEA) that
+        maintains respiration while protecting nitrogenase.
   - edge_id: leghemoglobin_maintains_low_oxygen
     subject: leghemoglobin
     predicate: maintains
@@ -264,8 +281,11 @@ causal_graphs:
     evidence:
     - reference: PMID:34330708
       snippet: Metabolic control of nitrogen fixation
-      notes: Schulte and colleagues studied rhizobial nitrogenase activity as
-        the terminal sink for carbon and reductant supplied by the host.
+      notes: Schulte and colleagues studied rhizobial nitrogenase activity in
+        pea nodules infected by Rhizobium leguminosarum bv. viciae 3841
+        (NCBITaxon:216596; NifHDK subunits UniProtKB:Q1M7Z2 / pRL100162,
+        UniProtKB:Q1M7Z3 / pRL100161, and UniProtKB:Q1M7Z4 / pRL100160) as the
+        terminal sink for carbon and reductant supplied by the host.
   - edge_id: fixation_produces_ammonia
     subject: biological_nitrogen_fixation
     predicate: produces
@@ -299,7 +319,10 @@ causal_graphs:
     - reference: PMID:33863007
       snippet: nodules; oxygen
       notes: The actinorhizal review describes Frankia vesicles and host
-        adaptations that balance oxygen tension near nitrogenase.
+        adaptations that balance oxygen tension near nitrogenase (exemplified in
+        Frankia alni ACN14a, NCBITaxon:326424, by NifHDK subunits
+        UniProtKB:Q0RAV4 / FRAAL6813, UniProtKB:Q0RAV5 / FRAAL6812, and
+        UniProtKB:Q0RAV6 / FRAAL6811).
 curation_history:
 - timestamp: '2026-09-04T00:00:00Z'
   curator: codex
@@ -317,4 +340,15 @@ curation_history:
     from STATE to ENVIRONMENTAL_PARAMETER; consolidated duplicate DOI/PMID citations
     for PMID:15187185, PMID:34330708, PMID:31655741, and PMID:33863007 while retaining
     stable node and edge IDs.
+  llm_assisted: true
+- timestamp: '2026-10-21T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Retyped leghemoglobin from CHEMICAL to GENE_OR_PROTEIN and added
+    organism- and subunit-scoped UniProtKB exemplar descriptions and edge notes
+    for Pisum sativum leghemoglobin (UniProtKB:P02233, UniProtKB:O48668,
+    UniProtKB:O80405), Rhizobium leguminosarum bv. viciae 3841 NifHDK
+    (UniProtKB:Q1M7Z2, UniProtKB:Q1M7Z3, UniProtKB:Q1M7Z4), and Frankia alni
+    ACN14a NifHDK (UniProtKB:Q0RAV4, UniProtKB:Q0RAV5, UniProtKB:Q0RAV6);
+    recorded typed protein_examples schema blocker in #2250.
   llm_assisted: true
