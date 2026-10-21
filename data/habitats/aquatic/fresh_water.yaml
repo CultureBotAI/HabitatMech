@@ -394,6 +394,12 @@ causal_graphs:
   - node_id: mechanosensitive_channels
     label: mechanosensitive channels
     node_type: GENE_OR_PROTEIN
+    description: Bacterial mechanosensitive solute-release channel families (MscS
+      and MscL) gated by cytoplasmic membrane tension during hypoosmotic downshock
+      (exemplified in Escherichia coli str. K-12, NCBITaxon:83333, by MscS UniProtKB:P0C0S1
+      / MSCS_ECOLI / b2924, 286 aa, and MscL UniProtKB:P0A742 / MSCL_ECOLI / b3291,
+      136 aa); multi-family node not grounded to a single paralog or strain accession
+      pending typed protein_examples support (#2250).
   - node_id: cytoplasmic_solute_release
     label: cytoplasmic solute release
     node_type: BIOLOGICAL_PROCESS
@@ -455,8 +461,10 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1085/jgp.201411296
       snippet: release solutes from the cytoplasm
-      notes: Wood summarizes bacterial MscS and MscL channels as release routes for
-        cytoplasmic solutes after osmotic down-shock.
+      notes: Wood summarizes bacterial MscS and MscL channels (exemplified in Escherichia
+        coli str. K-12, NCBITaxon:83333, by MscS UniProtKB:P0C0S1 / MSCS_ECOLI / b2924
+        and MscL UniProtKB:P0A742 / MSCL_ECOLI / b3291) as release routes for cytoplasmic
+        solutes after osmotic down-shock.
 curation_history:
 - timestamp: '2026-08-13T00:00:00Z'
   curator: claude-opus-5
@@ -514,4 +522,12 @@ curation_history:
     the graph as osmotic downshock and distinguish lipid-bilayer channel gating from
     wall strain. Stable node and edge IDs are retained. Evidence: DOI:10.1017/qrd.2022.3
     and DOI:10.1085/jgp.201411296; issue #1995.'
+  llm_assisted: true
+- timestamp: '2026-10-21T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: 'Added organism- and family-scoped UniProtKB exemplar description and edge
+    note for Escherichia coli K-12 (NCBITaxon:83333) MscS (UniProtKB:P0C0S1) and MscL
+    (UniProtKB:P0A742) on mechanosensitive_channels; recorded typed protein_examples
+    schema blocker in #2250.'
   llm_assisted: true

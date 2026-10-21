@@ -392,6 +392,14 @@ causal_graphs:
   - node_id: nutrient_transport_systems
     label: nutrient transport systems
     node_type: GENE_OR_PROTEIN
+    description: Bacterial nutrient uptake transporter classes (contrasting high-affinity
+      ATP-binding cassette solute-binding systems with phosphotransferase systems
+      in the Norris transport/proteome model; exemplified in Candidatus Pelagibacter
+      ubique HTCC1062, NCBITaxon:335992, by periplasmic ABC solute-binding proteins
+      ProX UniProtKB:Q4FMH4 / SAR11_0797, PotD UniProtKB:Q4FKZ8 / SAR11_1336, YhdW
+      UniProtKB:Q4FM26 / SAR11_0953, and UniProtKB:Q4FMK2 / SAR11_0769); plural system
+      class node not grounded to a single subunit accession pending typed protein_examples
+      support (#2250).
   - node_id: dilute_nutrient_uptake
     label: dilute nutrient uptake
     node_type: BIOLOGICAL_PROCESS
@@ -464,7 +472,10 @@ causal_graphs:
     - reference: PMID:34010286
       snippet: rely on ATP-binding cassette (ABC) transporters
       notes: Norris and colleagues contrast SAR11-like oligotrophs with copiotrophs
-        that encode phosphotransferase systems.
+        that encode phosphotransferase systems (exemplified in Candidatus Pelagibacter
+        ubique HTCC1062, NCBITaxon:335992, from PMID:16109880 by periplasmic ABC solute-binding
+        proteins ProX UniProtKB:Q4FMH4 / SAR11_0797, PotD UniProtKB:Q4FKZ8 / SAR11_1336,
+        YhdW UniProtKB:Q4FM26 / SAR11_0953, and UniProtKB:Q4FMK2 / SAR11_0769).
   - edge_id: dilute_uptake_enables_dom_cycling
     subject: dilute_nutrient_uptake
     predicate: enables
@@ -511,4 +522,13 @@ curation_history:
     graph/node/edge IDs and all four publication references; separated the Pelagibacter
     example, comparative strategy evidence, modeled transport and inferred community-level
     linkage. No taxonomic grounding was invented.'
+  llm_assisted: true
+- timestamp: '2026-10-21T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: 'Added organism- and subunit-scoped UniProtKB exemplar description and
+    edge note on nutrient_transport_systems for Candidatus Pelagibacter ubique HTCC1062
+    (NCBITaxon:335992) periplasmic ABC solute-binding proteins (UniProtKB:Q4FMH4,
+    UniProtKB:Q4FKZ8, UniProtKB:Q4FM26, UniProtKB:Q4FMK2); recorded typed protein_examples
+    schema blocker in #2250.'
   llm_assisted: true

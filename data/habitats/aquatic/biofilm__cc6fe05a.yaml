@@ -362,6 +362,10 @@ causal_graphs:
   - node_id: extracellular_enzymes
     label: extracellular enzymes
     node_type: GENE_OR_PROTEIN
+    description: Multispecies community-level pool of secreted hydrolytic and oxidative
+      enzymes retained in the biofilm matrix; PMID:20676145 reviews the matrix as
+      an external digestive system without identifying a single organism-specific
+      UniProtKB polypeptide.
   - node_id: external_digestive_system
     label: matrix-localized external digestion
     node_type: COMMUNITY_PROCESS
@@ -648,4 +652,10 @@ curation_history:
     because they denote assemblages rather than organismal clades. Stable graph identifiers
     and evidence are unchanged. Surface-attachment, detailed mechanism support and
     stress-selection scope remain unresolved.
+  llm_assisted: true
+- timestamp: '2026-10-21T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Documented community-pool scope and source-level absence of an organism-specific
+    UniProtKB polypeptide on extracellular_enzymes.
   llm_assisted: true
