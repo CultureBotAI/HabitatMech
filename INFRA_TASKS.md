@@ -54,7 +54,7 @@ tasks:
 - **Desired outcome:**
   1. Add a structured `ProteinExample` class and multivalued `protein_examples` slot on `CausalNode` in `src/habitatmech/schema/habitatmech.yaml` capturing `accession` (`UniProtKB:...`), `entry_name`, `recommended_name`, `gene_symbol`, `locus_tag`, `taxon_id` (`NCBITaxon:...`), `taxon_name`, `role_in_node` (`subunit`, `family_member`, `strain_exemplar`, `isoprotein`), `sequence_length`, `crc64`, and `evidence` (`EvidenceItem` list).
   2. Update `scripts/validate_causal_graph_curations.py`, `scripts/seed_from_sources.py`, and `scripts/render_pages.py` to validate, propagate, and render `protein_examples` on `CausalNode`.
-  3. Backfill the 14 verified active UniProtKB protein exemplars audited during Stage 3 (`UniProtKB:P0C0S1`, `UniProtKB:P0A742`, `UniProtKB:Q1M7Z2`, `UniProtKB:Q1M7Z3`, `UniProtKB:Q1M7Z4`, `UniProtKB:Q0RAV4`, `UniProtKB:Q0RAV5`, `UniProtKB:Q0RAV6`, `UniProtKB:P02233`, `UniProtKB:O48668`, `UniProtKB:O80405`, `UniProtKB:Q4FMH4`, `UniProtKB:Q4FKZ8`, `UniProtKB:Q4FM26`, `UniProtKB:Q4FMK2`) into structured `protein_examples` entries on `fresh_water.yaml`, `root_nodule.yaml`, and `sea_water.yaml`.
+  3. Backfill the 15 verified active UniProtKB protein exemplars audited during Stage 3 (`UniProtKB:P0C0S1`, `UniProtKB:P0A742`, `UniProtKB:Q1M7Z2`, `UniProtKB:Q1M7Z3`, `UniProtKB:Q1M7Z4`, `UniProtKB:Q0RAV4`, `UniProtKB:Q0RAV5`, `UniProtKB:Q0RAV6`, `UniProtKB:P02233`, `UniProtKB:O48668`, `UniProtKB:O80405`, `UniProtKB:Q4FMH4`, `UniProtKB:Q4FKZ8`, `UniProtKB:Q4FM26`, `UniProtKB:Q4FMK2`) into structured `protein_examples` entries on `fresh_water.yaml`, `root_nodule.yaml`, and `sea_water.yaml`.
 - **Evidence paths:**
   - `src/habitatmech/schema/habitatmech.yaml`
   - `conf/id_label_targets.yaml`
