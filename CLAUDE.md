@@ -51,6 +51,9 @@ Read these before changing domain behavior:
   — analyze structural drift between schema, records, and curation tooling.
 - [.claude/skills/stats-report/SKILL.md](.claude/skills/stats-report/SKILL.md)
   — generate reproducible corpus, source, grounding, and data-quality statistics.
+- [.claude/skills/habitatmech-evolve-workflow/SKILL.md](.claude/skills/habitatmech-evolve-workflow/SKILL.md)
+  — adapt and maintain HabitatMech's recurring goal-cycle workflow profile and
+  infrastructure task ledger (`INFRA_TASKS.md`).
 
 Sibling repositories use similar conventions: TraitMech, CultureMech,
 MediaIngredientMech and CommunityMech. The upstream pattern is
