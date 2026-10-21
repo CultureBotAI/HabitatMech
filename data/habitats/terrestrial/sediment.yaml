@@ -365,10 +365,10 @@ causal_graphs:
     node_type: ENVIRONMENTAL_PARAMETER
   - node_id: redox_zonation
     label: redox zonation
-    node_type: STATE
+    node_type: ENVIRONMENTAL_FACTOR
   - node_id: terminal_electron_acceptor_ladder
     label: terminal electron acceptor ladder
-    node_type: STATE
+    node_type: ENVIRONMENTAL_FACTOR
   - node_id: sulfate_reduction
     label: sulfate reduction
     node_type: PATHWAY
@@ -380,10 +380,10 @@ causal_graphs:
     node_type: CHEMICAL
   - node_id: sulfate_reducing_microorganisms
     label: sulfate-reducing microorganisms
-    node_type: TAXON
+    node_type: COMMUNITY
   - node_id: methanogenic_archaea
     label: methanogenic archaea
-    node_type: TAXON
+    node_type: COMMUNITY
   edges:
   - edge_id: sediment_accumulates_particles
     subject: sediment
@@ -516,4 +516,11 @@ curation_history:
   action: ADD_CAUSAL_GRAPH
   changes: Added a sediment porewater redox-ladder graph backed by PMID:31388058,
     PMID:15618510, and PMID:35308366.
+  llm_assisted: true
+- timestamp: '2026-10-20T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Retyped redox_zonation and terminal_electron_acceptor_ladder from STATE
+    to ENVIRONMENTAL_FACTOR and retyped sulfate_reducing_microorganisms and methanogenic_archaea
+    from TAXON to COMMUNITY while retaining stable node and edge IDs.
   llm_assisted: true

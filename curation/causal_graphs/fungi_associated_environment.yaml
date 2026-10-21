@@ -18,7 +18,7 @@ causal_graphs:
     node_type: HABITAT
   - node_id: fungal_hyphae
     label: fungal hyphae
-    node_type: ENVIRONMENTAL_FACTOR
+    node_type: HABITAT
   - node_id: hyphal_exudates
     label: hyphal exudates
     node_type: CHEMICAL
@@ -33,10 +33,10 @@ causal_graphs:
     node_type: HABITAT
   - node_id: mycosphere_bacteria
     label: mycosphere bacteria
-    node_type: TAXON
+    node_type: COMMUNITY
   - node_id: motile_bacteria
     label: motile bacteria
-    node_type: TAXON
+    node_type: COMMUNITY
   - node_id: flagellar_motility
     label: flagellar motility
     node_type: TRAIT
@@ -45,7 +45,7 @@ causal_graphs:
     node_type: COMMUNITY_PROCESS
   - node_id: chitinolytic_bacteria
     label: chitinolytic bacteria
-    node_type: TAXON
+    node_type: COMMUNITY
   - node_id: mycophagy
     label: bacterial mycophagy
     node_type: PATHWAY
@@ -54,7 +54,7 @@ causal_graphs:
     node_type: CHEMICAL
   - node_id: endofungal_bacteria
     label: endofungal bacteria
-    node_type: TAXON
+    node_type: COMMUNITY
   edges:
   - edge_id: fungi_environment_determined_by_structure
     subject: fungi_associated_environment
@@ -227,4 +227,11 @@ curation_history:
   changes: Added a fungi-associated hyphae mycosphere dispersal graph backed by
     PMID:16102603, PMID:19286795, PMID:16047804, PMID:23995942, PMID:15143036,
     DOI:10.1186/s12864-015-2289-3, PMID:21614084, and PMID:17978222.
+  llm_assisted: true
+- timestamp: '2026-10-20T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Retyped fungal_hyphae from ENVIRONMENTAL_FACTOR to HABITAT and retyped
+    mycosphere_bacteria, motile_bacteria, chitinolytic_bacteria, and endofungal_bacteria
+    from TAXON to COMMUNITY while retaining stable node and edge IDs.
   llm_assisted: true

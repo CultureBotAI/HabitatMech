@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/causal_graphs
+  slug: causal_graphs
+session:
+  id: 2026-10-20T035001Z-antigravity-c9e457
+  timestamp: '2026-10-20T03:50:01Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  summary: Audit and revise 18 unreviewed causal-graph overlays for node typing and citation accuracy
+  details: Audited all 32 existing causal-graph overlays during Stage 2 causal_graphs
+    goal execution. Confirmed 14 previously reviewed overlays as already_sufficient
+    and revised all 18 single-event overlays (agricultural_soil, aquatic_biome,
+    forest_soil, forested_area, fungi_associated_environment, grassland_soil,
+    intestine_environment, leaf, milk, peat_soil, plant_associated_environment,
+    plant_litter, root_nodule, sediment, sludge, soil, terrestrial_biome, and
+    waste_water) to align node_type semantics (retyping guild/functional assemblages
+    to COMMUNITY, microhabitats/compartments to HABITAT, and measured parameters to
+    ENVIRONMENTAL_PARAMETER), fix mis-cited PMID:22402400 references on Štursová et
+    al. 2012 edges in forested_area.yaml, correct DOI:10.1139/cjb-2013-0225 author
+    attribution and snippet, and consolidate duplicate DOI/PMID evidence items.

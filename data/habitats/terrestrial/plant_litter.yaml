@@ -342,10 +342,10 @@ causal_graphs:
     node_type: CHEMICAL
   - node_id: saprotrophic_fungi
     label: saprotrophic fungi
-    node_type: TAXON
+    node_type: COMMUNITY
   - node_id: fungal_extracellular_enzymes
     label: fungal extracellular enzymes
-    node_type: TRAIT
+    node_type: MOLECULAR_FUNCTION
   - node_id: lignin_depolymerization
     label: lignin depolymerization
     node_type: PATHWAY
@@ -354,13 +354,13 @@ causal_graphs:
     node_type: PATHWAY
   - node_id: cellulolytic_bacteria
     label: cellulolytic bacteria
-    node_type: TAXON
+    node_type: COMMUNITY
   - node_id: fungal_mycelium_consumers
     label: fungal-mycelium consumers
-    node_type: TAXON
+    node_type: COMMUNITY
   - node_id: microbial_succession
     label: microbial succession
-    node_type: STATE
+    node_type: COMMUNITY_PROCESS
   - node_id: litter_carbon_mineralization
     label: litter carbon mineralization
     node_type: COMMUNITY_PROCESS
@@ -424,8 +424,8 @@ causal_graphs:
     evidence:
     - reference: PMID:22402400
       snippet: Metaproteomics reveals major microbial players
-      notes: Schneider and colleagues used metaproteomics to identify fungal and bacterial
-        enzymes active during leaf litter decomposition.
+      notes: Schneider and colleagues used metaproteomics to show that fungi produced
+        all detected extracellular hydrolytic enzymes during beech leaf litter decomposition.
   - edge_id: fungal_enzymes_depolymerize_cellulose
     subject: fungal_extracellular_enzymes
     predicate: drives
@@ -607,3 +607,12 @@ curation_history:
   changes: 'Retained GOLD label ''Litterfall'' as RELATED_SYNONYM: a CLOSE source
     mapping does not establish exact lexical equivalence. Independent ontology synonyms
     and verbatim attestations are preserved (#1459).'
+- timestamp: '2026-10-20T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Retyped saprotrophic_fungi, cellulolytic_bacteria, and fungal_mycelium_consumers
+    from TAXON to COMMUNITY, fungal_extracellular_enzymes from TRAIT to MOLECULAR_FUNCTION,
+    and microbial_succession from STATE to COMMUNITY_PROCESS; refined PMID:22402400
+    notes on saprotrophic_fungi_secrete_enzymes to reflect fungal-specific extracellular
+    hydrolase detection in beech leaf litter.
+  llm_assisted: true

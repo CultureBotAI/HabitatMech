@@ -315,6 +315,11 @@ def test_record_pages_render_curated_causal_graphs(repo_root):
             "drought_followed_by_rewetting",
             "PMID:35762785",
         ),
+        "groundwater-envo-01001004.html": (
+            "Groundwater subsurface fermentation and redox handoffs",
+            "subsurface_aquifer_hosts_ultra_small_candidate_phyla",
+            "PMID:26121419",
+        ),
     }
 
     for filename, needles in expected.items():

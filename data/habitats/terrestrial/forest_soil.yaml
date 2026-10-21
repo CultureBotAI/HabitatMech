@@ -331,10 +331,10 @@ causal_graphs:
     node_type: ENVIRONMENTAL_FACTOR
   - node_id: organic_forest_floor
     label: organic forest floor
-    node_type: STATE
+    node_type: HABITAT
   - node_id: saprotrophic_fungi
     label: saprotrophic fungi
-    node_type: TAXON
+    node_type: COMMUNITY
   - node_id: lignocellulolytic_enzymes
     label: lignocellulolytic enzymes
     node_type: MOLECULAR_FUNCTION
@@ -349,7 +349,7 @@ causal_graphs:
     node_type: CHEMICAL
   - node_id: ectomycorrhizal_fungi
     label: ectomycorrhizal fungi
-    node_type: TAXON
+    node_type: COMMUNITY
   - node_id: organic_nitrogen_mining
     label: organic nitrogen mining
     node_type: BIOLOGICAL_PROCESS
@@ -524,4 +524,11 @@ curation_history:
   action: ADD_CAUSAL_GRAPH
   changes: Added a forest-soil root-litter fungal-cycling graph backed by PMID:27856492,
     PMID:21776033, PMID:23539604, PMID:26365785, and PMID:29880913.
+  llm_assisted: true
+- timestamp: '2026-10-20T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Retyped organic_forest_floor from STATE to HABITAT and retyped saprotrophic_fungi
+    and ectomycorrhizal_fungi from TAXON to COMMUNITY while retaining stable node
+    and edge IDs.
   llm_assisted: true

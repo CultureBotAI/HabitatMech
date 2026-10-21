@@ -18,7 +18,7 @@ causal_graphs:
     node_type: ENVIRONMENTAL_PARAMETER
   - node_id: microbial_dispersal_constraints
     label: microbial dispersal constraints
-    node_type: STATE
+    node_type: ENVIRONMENTAL_FACTOR
   - node_id: patchy_organic_resources
     label: patchy organic resources
     node_type: ENVIRONMENTAL_PARAMETER
@@ -30,7 +30,7 @@ causal_graphs:
     node_type: ENVIRONMENTAL_FACTOR
   - node_id: organic_matter_access
     label: organic-matter access
-    node_type: STATE
+    node_type: ENVIRONMENTAL_FACTOR
   - node_id: extracellular_enzyme_activity
     label: extracellular enzyme activity
     node_type: MOLECULAR_FUNCTION
@@ -131,4 +131,10 @@ curation_history:
   action: ADD_CAUSAL_GRAPH
   changes: Added a soil pore and organic-matter microhabitat graph backed by
     PMID:28961933 and PMID:23055998.
+  llm_assisted: true
+- timestamp: '2026-10-20T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Retyped microbial_dispersal_constraints and organic_matter_access from
+    STATE to ENVIRONMENTAL_FACTOR while retaining stable node and edge IDs.
   llm_assisted: true
