@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/definition_source_label_exclusions.tsv
+  slug: definition_source_label_exclusions
+session:
+  id: 2026-10-22T124310Z-antigravity-020102
+  timestamp: '2026-10-22T12:43:10Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition_source_label_exclusions
+  - term_requests
+  summary: Guard 6 displaced context-dependent or host-clade GOLD source labels from automatic exact-synonym retention
+  details: 'Cycle 2 Stage 1 (add_records): Added 6 rows to curation/definition_source_label_exclusions.tsv (habitatmech:GOLD.2173317f9c Parabasalids -> parabasalid-associated environment; habitatmech:GOLD.433d96f0dd Amniotic sac -> human amniotic sac; habitatmech:GOLD.867abac275 Decomposed body -> decomposing human corpse; habitatmech:GOLD.8eba55841e Paranasal sinuses -> mammalian paranasal sinus; habitatmech:GOLD.baffd7f6c7 Fetal tissue -> mammalian fetal tissue; habitatmech:GOLD.df1d688f27 Produced water -> membrane bioreactor-treated produced water) so that displaced context-dependent or bare host-clade source labels are not automatically promoted to exact habitat synonyms while preserving verbatim source provenance.'

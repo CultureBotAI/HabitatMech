@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: mapping
+  path: curation/term_requests.tsv
+  slug: term_requests
+session:
+  id: 2026-10-22T124300Z-antigravity-020101
+  timestamp: '2026-10-22T12:43:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - label
+  - definition
+  - parent_habitats
+  - curation_history
+  summary: Author literature-backed microbial habitat definitions and item-level decisions for 33 admissible unscreened GOLD habitats
+  details: 'Cycle 2 Stage 1 (add_records): Exhausted the remaining bounded frontier of CLASS-swept unscreened GOLD records by authoring Aristotelean genus-differentia definitions, ENVO/UBERON parent_class attachments, exact synonyms, and item-level CONFIRM_UNGROUNDED rationales with PubMed/DOI literature citations for all 33 admissible microbial habitat records (aquaculture facilities, bioreactors, bioelectrochemical electrodes, coastal lagoon, hypersaline soda lake, manure slurry, brown organic waste, mine water, urban wastewater, MBR-treated produced water, mushroom farm, town canal, soil microcosm, plant growth chamber, parabasalid-associated environment, human amniotic sac, decomposing human corpse, mammalian paranasal sinus, and mammalian fetal tissue) in curation/term_requests.tsv and curation/decisions.tsv.'

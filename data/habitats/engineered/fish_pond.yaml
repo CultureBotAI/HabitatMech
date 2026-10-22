@@ -1,10 +1,20 @@
 identifier: habitatmech:GOLD.f0461d363e
-label: Fish pond
+label: aquaculture fish pond
+definition: A fishpond constructed and managed within an aquaculture facility for
+  stocking, feeding, and harvesting finfish.
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: Fish pond
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: finfish aquaculture pond
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- habitatmech:GOLD.0287e1b2a9
+- ENVO:00000056
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:7998
@@ -14,15 +24,24 @@ source_attestations:
   assertion_unit: ORGANISM
   notes: 2 GOLD ecosystem node ids share this path; first shown. See data/raw/gold_ecosystem_paths.tsv.
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.f0461d363e)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-22T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM review
+    of unscreened GOLD concept (Engineered > Artificial ecosystem > Aquaculture >
+    Fish pond): no exact ontology match in ENVO/UBERON/FOODON/PO/BTO/NCIT; confirmed
+    distinct microbial habitat and authored genus-differentia definition as ''aquaculture
+    fish pond'' under ENVO:00000056 ''fishpond'' (PMID 30050516; DOI:10.3389/fmicb.2018.01524).
+    Path: Engineered > Artificial ecosystem > Aquaculture > Fish pond (source concept
+    habitatmech:GOLD.f0461d363e)'
+- timestamp: '2026-10-22T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: Defined as 'aquaculture fish pond' under ENVO:00000056 'fishpond'. Defined
+    aquaculture fish pond under ENVO:00000056 'fishpond' (parent_mode REPLACE) for
+    GOLD path 'Engineered > Artificial ecosystem > Aquaculture > Fish pond'; supported
+    by microbial ecology literature (PMID 30050516; DOI:10.3389/fmicb.2018.01524).
