@@ -199,7 +199,7 @@ The following domain constraints were inherited from the previous inspected
 workflow and must be rechecked against current source before changing a binding:
 
 - Never hand-edit generated data/habitats: decisions, term_requests and curation/causal_graphs overlays are authoritative.
-- GENE_OR_PROTEIN nodes support grounding/xrefs but no typed ProteinExample slot. Add only exact source-scoped protein references supported by native schema; retain organism/evidence context and do not collapse family/complex identity to one accession.
+- GENE_OR_PROTEIN nodes support grounding, xrefs, description, and typed `protein_examples` (`ProteinExample` with `accession`, `entry_name`, `recommended_name`, `gene_symbol`, `locus_tag`, `taxon_id`, `taxon_name`, `role_in_node`, `sequence_length`, `crc64`, and `evidence`). Keep semantic family/complex identity in `grounding`/`xrefs` and record verified strain/subunit/isoprotein/family exemplars in `protein_examples`.
 
 Verified local inspection: 1fee13bb7d64805ab6477f812cb2b2d0c711ba90. This records an inspected
 local revision, not a claim about the current published default branch.

@@ -154,3 +154,76 @@ def test_validate_causal_graph_cli_uses_requested_root(tmp_path, monkeypatch):
 
     assert validate_causal_graphs_cli.main(["--root", str(root)]) == 0
     assert seen == {"causal_graphs_root": root}
+
+
+def _protein_example(accession: str = "UniProtKB:P0C0S1") -> dict:
+    return {
+        "accession": accession,
+        "entry_name": "MSCL_ECOLI",
+        "recommended_name": "Large-conductance mechanosensitive channel",
+        "gene_symbol": "mscL",
+        "locus_tag": "b3291",
+        "taxon_id": "NCBITaxon:83333",
+        "taxon_name": "Escherichia coli (strain K12)",
+        "role_in_node": "family_member",
+        "sequence_length": 136,
+        "crc64": "EEAC91AE3AC8ECBB",
+        "evidence": [
+            {
+                "reference": "PMID:10491782",
+                "snippet": "MscL and MscS are required for hypoosmotic shock survival.",
+            }
+        ],
+    }
+
+
+def test_protein_examples_allowed_on_gene_or_protein_node(tmp_path):
+    doc = _overlay()
+    doc["causal_graphs"][0]["nodes"][1]["node_type"] = "GENE_OR_PROTEIN"
+    doc["causal_graphs"][0]["nodes"][1]["protein_examples"] = [_protein_example()]
+
+    curations = load_causal_graph_curation_files([_write(tmp_path, doc)])
+    ex = curations["ENVO:00002012"].causal_graphs[0]["nodes"][1]["protein_examples"][0]
+    assert ex["accession"] == "UniProtKB:P0C0S1"
+    assert ex["role_in_node"] == "family_member"
+
+
+def test_protein_examples_rejected_on_non_gene_or_protein_node(tmp_path):
+    doc = _overlay()
+    doc["causal_graphs"][0]["nodes"][1]["protein_examples"] = [_protein_example()]
+
+    with pytest.raises(
+        CausalGraphCurationError,
+        match="with protein_examples must have node_type 'GENE_OR_PROTEIN'",
+    ):
+        load_causal_graph_curation_files([_write(tmp_path, doc)])
+
+
+def test_duplicate_protein_example_accession_on_same_node_is_rejected(tmp_path):
+    doc = _overlay()
+    doc["causal_graphs"][0]["nodes"][1]["node_type"] = "GENE_OR_PROTEIN"
+    doc["causal_graphs"][0]["nodes"][1]["protein_examples"] = [
+        _protein_example("UniProtKB:P0C0S1"),
+        _protein_example("UniProtKB:P0C0S1"),
+    ]
+
+    with pytest.raises(
+        CausalGraphCurationError,
+        match="duplicate protein_examples accession 'UniProtKB:P0C0S1'",
+    ):
+        load_causal_graph_curation_files([_write(tmp_path, doc)])
+
+
+def test_protein_example_without_evidence_is_rejected(tmp_path):
+    doc = _overlay()
+    doc["causal_graphs"][0]["nodes"][1]["node_type"] = "GENE_OR_PROTEIN"
+    bad_example = _protein_example()
+    bad_example["evidence"] = []
+    doc["causal_graphs"][0]["nodes"][1]["protein_examples"] = [bad_example]
+
+    with pytest.raises(
+        CausalGraphCurationError,
+        match="must include evidence",
+    ):
+        load_causal_graph_curation_files([_write(tmp_path, doc)])
+

@@ -23,3 +23,26 @@ entries:
     pr_number: 2253
     status: merged
     verified_at: '2026-10-22T06:21:09.105638+00:00'
+- cycle: 1
+  goal_evidence:
+    path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/evidence.yaml
+    sha256: be7de2fea3faa43d37e1fe3c67db6a7f91068d2569e00d73b513aa680febc98d
+  receipt_sha256: 8625133d0753882e6ae5ae949b66df063b95fbcc24a5114144917422a8319b36
+  stage: 5
+  verification:
+    checks:
+    - bucket: pass
+      name: qc
+      state: SUCCESS
+    - bucket: pass
+      name: label-correspondence
+      state: SUCCESS
+    - bucket: pass
+      name: vendored-sync
+      state: SUCCESS
+    head_sha: d771ea1a31bc6592be96717e334cc6512b9754b5
+    merge_commit_sha: 40309c4c50113f19c66dcf385025e40304cc004f
+    merged_at: '2026-10-22T10:12:34Z'
+    pr_number: 2257
+    status: merged
+    verified_at: '2026-10-22T10:20:24.460317+00:00'

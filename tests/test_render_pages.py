@@ -894,3 +894,32 @@ def test_category_pages_are_paginated_and_the_index_covers_the_whole_category(re
             assert (repo_root / "pages" / "habitats" / f"{slug}.html").exists(), (
                 f"{index.name} points at a record page that does not exist: {slug}"
             )
+
+
+def test_protein_examples_render_on_causal_graph_pages(repo_root):
+    """Typed ProteinExample rows on GENE_OR_PROTEIN nodes must render with
+    resolvable UniProtKB links on the generated habitat pages (#2250)."""
+    assert render_pages.term_iri("UniProtKB:P0C0S1") == "https://www.uniprot.org/uniprotkb/P0C0S1/entry"
+    fresh_water_page = (repo_root / "pages/habitats/fresh-water-envo-00002011.html").read_text(
+        encoding="utf-8"
+    )
+    assert "verified UniProtKB protein examples" in fresh_water_page
+    assert 'href="https://www.uniprot.org/uniprotkb/P0C0S1/entry"' in fresh_water_page
+    assert "MSCL_ECOLI" in fresh_water_page
+    assert "136 aa" in fresh_water_page
+
+    root_nodule_page = (repo_root / "pages/habitats/root-nodule-envo-01000164.html").read_text(
+        encoding="utf-8"
+    )
+    assert "verified UniProtKB protein examples" in root_nodule_page
+    assert 'href="https://www.uniprot.org/uniprotkb/P02233/entry"' in root_nodule_page
+    assert 'href="https://www.uniprot.org/uniprotkb/Q1M7Z2/entry"' in root_nodule_page
+    assert 'href="https://www.uniprot.org/uniprotkb/Q0RAV4/entry"' in root_nodule_page
+
+    sea_water_page = (repo_root / "pages/habitats/sea-water-envo-00002149.html").read_text(
+        encoding="utf-8"
+    )
+    assert "verified UniProtKB protein examples" in sea_water_page
+    assert 'href="https://www.uniprot.org/uniprotkb/Q4FMH4/entry"' in sea_water_page
+    assert 'href="https://www.uniprot.org/uniprotkb/Q4FMK2/entry"' in sea_water_page
+

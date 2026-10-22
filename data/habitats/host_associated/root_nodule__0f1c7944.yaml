@@ -221,7 +221,50 @@ causal_graphs:
       legume root nodule cells (exemplified in Pisum sativum, NCBITaxon:3888, by Leghemoglobin-1
       UniProtKB:P02233 / LGB1_PEA, 148 aa, alongside nodule isoproteins UniProtKB:O48668
       / LGB2_PEA and UniProtKB:O80405 / LGB3_PEA); isoprotein family node not grounded
-      to a single accession pending typed protein_examples support (#2250).
+      to a single accession.
+    protein_examples:
+    - accession: UniProtKB:P02233
+      entry_name: LGB1_PEA
+      recommended_name: Leghemoglobin-1
+      gene_symbol: LGB1
+      taxon_id: NCBITaxon:3888
+      taxon_name: Pisum sativum
+      role_in_node: isoprotein
+      sequence_length: 148
+      crc64: 99AC581EE4E1ECAE
+      evidence:
+      - reference: PMID:31655741
+        snippet: Oxygen regulatory mechanisms
+        notes: Rutten and Poole reviewed plant leghemoglobin oxygen buffering in infected
+          legume root nodule cells (exemplified in pea, Pisum sativum, by Leghemoglobin-1).
+    - accession: UniProtKB:O48668
+      entry_name: LGB2_PEA
+      recommended_name: Leghemoglobin-2
+      gene_symbol: LGB2
+      taxon_id: NCBITaxon:3888
+      taxon_name: Pisum sativum
+      role_in_node: isoprotein
+      sequence_length: 146
+      crc64: 26397A82C775E7AE
+      evidence:
+      - reference: PMID:31655741
+        snippet: Oxygen regulatory mechanisms
+        notes: Rutten and Poole reviewed plant leghemoglobin oxygen buffering in infected
+          legume root nodule cells (exemplified in pea, Pisum sativum, by Leghemoglobin-2).
+    - accession: UniProtKB:O80405
+      entry_name: LGB3_PEA
+      recommended_name: Leghemoglobin-3
+      gene_symbol: LGB3
+      taxon_id: NCBITaxon:3888
+      taxon_name: Pisum sativum
+      role_in_node: isoprotein
+      sequence_length: 146
+      crc64: F634A0AC635A6EA9
+      evidence:
+      - reference: PMID:31655741
+        snippet: Oxygen regulatory mechanisms
+        notes: Rutten and Poole reviewed plant leghemoglobin oxygen buffering in infected
+          legume root nodule cells (exemplified in pea, Pisum sativum, by Leghemoglobin-3).
   - node_id: low_oxygen_cytoplasm
     label: low-oxygen nodule cytoplasm
     node_type: ENVIRONMENTAL_PARAMETER
@@ -234,8 +277,98 @@ causal_graphs:
       UniProtKB:Q1M7Z3 / pRL100161, and NifK UniProtKB:Q1M7Z4 / pRL100160) and actinorhizal
       Frankia (exemplified in Frankia alni ACN14a, NCBITaxon:326424, by NifH UniProtKB:Q0RAV4
       / FRAAL6813, NifD UniProtKB:Q0RAV5 / FRAAL6812, and NifK UniProtKB:Q0RAV6 /
-      FRAAL6811); complex node not grounded to a single subunit or organism accession
-      pending typed protein_examples support (#2250).
+      FRAAL6811); complex node not grounded to a single subunit or organism accession.
+    protein_examples:
+    - accession: UniProtKB:Q1M7Z2
+      entry_name: Q1M7Z2_RHIL3
+      recommended_name: Nitrogenase iron protein
+      gene_symbol: nifH
+      locus_tag: pRL100162
+      taxon_id: NCBITaxon:216596
+      taxon_name: Rhizobium leguminosarum bv. viciae (strain 3841)
+      role_in_node: subunit
+      sequence_length: 296
+      crc64: 1EBAA75E8591294E
+      evidence:
+      - reference: PMID:34330708
+        snippet: Metabolic control of nitrogen fixation
+        notes: Schulte and colleagues studied nitrogenase activity in pea nodules
+          infected by Rhizobium leguminosarum bv. viciae 3841 (NifH iron protein subunit).
+    - accession: UniProtKB:Q1M7Z3
+      entry_name: Q1M7Z3_RHIL3
+      recommended_name: Nitrogenase molybdenum-iron protein alpha chain
+      gene_symbol: nifD
+      locus_tag: pRL100161
+      taxon_id: NCBITaxon:216596
+      taxon_name: Rhizobium leguminosarum bv. viciae (strain 3841)
+      role_in_node: subunit
+      sequence_length: 500
+      crc64: 5A7716E1AC908E4B
+      evidence:
+      - reference: PMID:34330708
+        snippet: Metabolic control of nitrogen fixation
+        notes: Schulte and colleagues studied nitrogenase activity in pea nodules
+          infected by Rhizobium leguminosarum bv. viciae 3841 (NifD MoFe alpha subunit).
+    - accession: UniProtKB:Q1M7Z4
+      entry_name: Q1M7Z4_RHIL3
+      recommended_name: Nitrogenase molybdenum-iron protein beta chain
+      gene_symbol: nifK
+      locus_tag: pRL100160
+      taxon_id: NCBITaxon:216596
+      taxon_name: Rhizobium leguminosarum bv. viciae (strain 3841)
+      role_in_node: subunit
+      sequence_length: 518
+      crc64: DDEFB48C09B1FBC3
+      evidence:
+      - reference: PMID:34330708
+        snippet: Metabolic control of nitrogen fixation
+        notes: Schulte and colleagues studied nitrogenase activity in pea nodules
+          infected by Rhizobium leguminosarum bv. viciae 3841 (NifK MoFe beta subunit).
+    - accession: UniProtKB:Q0RAV4
+      entry_name: NIFH_FRAAA
+      recommended_name: Nitrogenase iron protein
+      gene_symbol: nifH
+      locus_tag: FRAAL6813
+      taxon_id: NCBITaxon:326424
+      taxon_name: Frankia alni (strain ACN14a)
+      role_in_node: subunit
+      sequence_length: 287
+      crc64: 80D580241A1556DA
+      evidence:
+      - reference: PMID:33863007
+        snippet: nodules; oxygen
+        notes: Huss-Danell reviewed actinorhizal root nodule nitrogenase expression
+          in Frankia (exemplified in Frankia alni ACN14a by NifH iron protein subunit).
+    - accession: UniProtKB:Q0RAV5
+      entry_name: NIFD_FRAAA
+      recommended_name: Nitrogenase molybdenum-iron protein alpha chain
+      gene_symbol: nifD
+      locus_tag: FRAAL6812
+      taxon_id: NCBITaxon:326424
+      taxon_name: Frankia alni (strain ACN14a)
+      role_in_node: subunit
+      sequence_length: 482
+      crc64: EBC27A37178B899B
+      evidence:
+      - reference: PMID:33863007
+        snippet: nodules; oxygen
+        notes: Huss-Danell reviewed actinorhizal root nodule nitrogenase expression
+          in Frankia (exemplified in Frankia alni ACN14a by NifD MoFe alpha subunit).
+    - accession: UniProtKB:Q0RAV6
+      entry_name: NIFK_FRAAA
+      recommended_name: Nitrogenase molybdenum-iron protein beta chain
+      gene_symbol: nifK
+      locus_tag: FRAAL6811
+      taxon_id: NCBITaxon:326424
+      taxon_name: Frankia alni (strain ACN14a)
+      role_in_node: subunit
+      sequence_length: 526
+      crc64: 7A39A79144EB7E5C
+      evidence:
+      - reference: PMID:33863007
+        snippet: nodules; oxygen
+        notes: Huss-Danell reviewed actinorhizal root nodule nitrogenase expression
+          in Frankia (exemplified in Frankia alni ACN14a by NifK MoFe beta subunit).
   - node_id: biological_nitrogen_fixation
     label: biological nitrogen fixation
     node_type: PATHWAY
@@ -539,4 +672,11 @@ curation_history:
     leguminosarum bv. viciae 3841 NifHDK (UniProtKB:Q1M7Z2, UniProtKB:Q1M7Z3, UniProtKB:Q1M7Z4),
     and Frankia alni ACN14a NifHDK (UniProtKB:Q0RAV4, UniProtKB:Q0RAV5, UniProtKB:Q0RAV6);
     recorded typed protein_examples schema blocker in #2250.'
+  llm_assisted: true
+- timestamp: '2026-10-22T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Populated typed protein_examples on leghemoglobin (UniProtKB:P02233, UniProtKB:O48668,
+    UniProtKB:O80405) and nitrogenase (UniProtKB:Q1M7Z2, UniProtKB:Q1M7Z3, UniProtKB:Q1M7Z4,
+    UniProtKB:Q0RAV4, UniProtKB:Q0RAV5, UniProtKB:Q0RAV6) (#2250).
   llm_assisted: true

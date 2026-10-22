@@ -36,8 +36,9 @@ schema_version: '1.0.0'
 tasks:
 - task_id: habitatmech-infra-0001
   summary: Add typed protein_examples slot on CausalNode and UniProtKB validator/renderer support so organism- and role-scoped UniProtKB exemplars can be attached without conflating subunit/ortholog exemplars with node equivalence.
-  status: open
+  status: resolved
   issue_url: https://github.com/CultureBotAI/HabitatMech/issues/2250
+  disposition: Implemented ProteinExample and ProteinExampleRoleEnum in src/habitatmech/schema/habitatmech.yaml, added GENE_OR_PROTEIN and uniqueness/evidence validation in src/habitatmech/curate/causal_graphs.py, added HTML rendering in scripts/render_pages.py and src/habitatmech/templates/habitat.html, and populated all 15 verified UniProtKB protein exemplars across curation/causal_graphs/fresh_water.yaml, curation/causal_graphs/root_nodule.yaml, and curation/causal_graphs/sea_water.yaml (#2250).
 ```
 <!-- mech-infra-tasks:end -->
 
@@ -46,10 +47,12 @@ tasks:
 ### `habitatmech-infra-0001` — Typed `protein_examples` representation on `CausalNode`
 
 - **Originating run / cycle / stage:** `mech-goal-sequence-20261019`, cycle `1`, stage `3` (`protein_examples`)
-- **Status:** `open`
+- **Resolved in run / cycle / stage:** `mech-goal-sequence-20261019`, cycle `1`, stage `6` (`infrastructure`)
+- **Status:** `resolved`
 - **Issue URL:** https://github.com/CultureBotAI/HabitatMech/issues/2250
 - **Priority:** `high`
 - **Dependencies:** `none`
+- **Disposition:** Resolved in Stage 6 (#2250) by adding `ProteinExample`, `ProteinExampleRoleEnum`, and `CausalNode.protein_examples` to `src/habitatmech/schema/habitatmech.yaml`, enforcing `GENE_OR_PROTEIN` node-type and accession uniqueness in `src/habitatmech/curate/causal_graphs.py`, rendering a dedicated Protein examples table in `scripts/render_pages.py` and `src/habitatmech/templates/habitat.html`, and backfilling all 15 verified UniProtKB exemplars into `fresh_water.yaml`, `root_nodule.yaml`, and `sea_water.yaml`.
 - **Observation:** `CausalNode` in `src/habitatmech/schema/habitatmech.yaml` currently only provides `node_id`, `label`, `node_type`, `grounding` (single CURIE), `xrefs` (untyped flat string list), and `description`. In HabitatMech's 33 causal-graph overlays, `GENE_OR_PROTEIN` nodes represent multisubunit protein complexes (`nitrogenase` in `root_nodule.yaml`), multi-family channel classes (`mechanosensitive_channels` in `fresh_water.yaml`), host-plant hemoprotein isoprotein families (`leghemoglobin` in `root_nodule.yaml`), multi-transporter functional classes (`nutrient_transport_systems` in `sea_water.yaml`), or community-level secreted enzyme pools (`extracellular_enzymes` in `biofilm.yaml`, `grassland_soil.yaml`, and `marine_water_body.yaml`). Placing a single subunit or organism ortholog CURIE in `grounding` or untyped `xrefs` would violate `.claude/skills/add-uniprot-protein-examples/SKILL.md` ("Never insert a sibling's unsupported fields or represent a family/complex by one member... Do not use an untyped xref to smuggle in a related ortholog as equivalence") and break `conf/id_label_targets.yaml` (`grounded_causal_nodes` enforces exact `grounding` -> `label` correspondence and has no `UniProtKB:` OAK adapter).
 - **Desired outcome:**
   1. Add a structured `ProteinExample` class and multivalued `protein_examples` slot on `CausalNode` in `src/habitatmech/schema/habitatmech.yaml` capturing `accession` (`UniProtKB:...`), `entry_name`, `recommended_name`, `gene_symbol`, `locus_tag`, `taxon_id` (`NCBITaxon:...`), `taxon_name`, `role_in_node` (`subunit`, `family_member`, `strain_exemplar`, `isoprotein`), `sequence_length`, `crc64`, and `evidence` (`EvidenceItem` list).

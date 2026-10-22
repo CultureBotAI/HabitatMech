@@ -92,6 +92,29 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
   {% endfor %}
 </table>
 </div>
+{% if g.protein_examples %}
+<div class="table-scroll" role="region" tabindex="0" aria-label="{{ g.graph_id }} protein examples">
+<table>
+  <caption>{{ g.graph_id }} verified UniProtKB protein examples</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">UniProtKB</th><th scope="col">Protein / gene</th><th scope="col">Organism</th><th scope="col">Role</th><th scope="col">Sequence</th><th scope="col">Evidence</th></tr></thead>
+  {% for p in g.protein_examples %}
+  <tr>
+    <td>{{ p.node_label }} <code class="curie">{{ p.node_id }}</code></td>
+    <td>{% if p.uniprot_url %}<a href="{{ p.uniprot_url }}"><code class="curie">{{ p.accession }}</code></a>{% else %}<code class="curie">{{ p.accession }}</code>{% endif %}<br><span class="meta">{{ p.entry_name }}</span></td>
+    <td>{{ p.recommended_name }}{% if p.gene_symbol or p.locus_tag %}<br><span class="meta">{% if p.gene_symbol %}gene: <code>{{ p.gene_symbol }}</code>{% endif %}{% if p.gene_symbol and p.locus_tag %} · {% endif %}{% if p.locus_tag %}locus: <code>{{ p.locus_tag }}</code>{% endif %}</span>{% endif %}</td>
+    <td><em>{{ p.taxon_name }}</em> <code class="curie">{{ p.taxon_id }}</code></td>
+    <td><span class="pill plain">{{ p.role_in_node }}</span></td>
+    <td><span class="meta">{{ p.sequence_length }} aa · CRC64 <code>{{ p.crc64 }}</code></span></td>
+    <td>
+      {% for ev in p.evidence %}
+      <code class="curie">{{ ev.reference }}</code>{% if ev.notes %}<br><span class="meta">{{ ev.notes }}</span>{% endif %}
+      {% endfor %}
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+</div>
+{% endif %}
 {% endfor %}
 {% endif %}
 
