@@ -1,0 +1,415 @@
+schema_version: 1.0.0
+repository_key: habitatmech
+github_repository: CultureBotAI/HabitatMech
+run_id: mech-goal-sequence-20261019
+cycle: 1
+stage: 5
+revision: 1
+outcome: completed
+summary: 'Grouped all 22 carried-forward Stage 4 review findings from dental_plaque__8396e8ec
+  through digestive_system__780e5b67 into 3 real GitHub issue groups (#2255, #2256,
+  #1398); resolved 12 actionable curation findings (11 GOLD context-parent exclusions
+  in #2255 and 1 exact-synonym defect in #2256) through native curation tables and
+  writers, saved 12 fresh structured remediation review bundles in reviews/structured/,
+  and deferred 10 systemic #1398 mapping-endpoint contract findings.'
+source_revision: 2ec3d103f44a563f8cc4562f33e82d364039fa81
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/issue_map.md
+  sha256: 216c579a948b0c0aa18a99c233c187915a1a03f80680715a7c4d29cb0a7502e2
+  kind: issue_map
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/validation.md
+  sha256: b26200aecf5a93f84e337f77f911e372fa01e27fa3fed2043c91afecc5f5847c
+  kind: validation
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/remediation_reviews.json
+  sha256: 8ab3cf2b8e84c7c0fcd0f8cbe35bd4272d386beb98b225f9fd966321fad8e014
+  kind: supporting
+findings:
+- finding_id: dental-plaque--8396e8ec-context-parent
+  carried_from: dental-plaque--8396e8ec-context-parent
+  status: resolved
+  group_id: G-gold-context-parent-exclusions
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/2255
+  summary: 'data/habitats/host_associated/dental_plaque__8396e8ec.yaml (habitatmech:GOLD.26b1d1137f):
+    Containing anatomy is asserted as a dental plaque superclass — Exclude only the
+    guarded GOLD source-path parent contribution habitatmech:GOLD.92d1e65695 (Oral
+    cavity in Host-associated > Mammals > Digestive system > Oral cavity > Dental
+    plaque) from dental_plaque__8396e8ec.yaml; dental plaque is a tooth biofilm located
+    within the oral cavity, not a kind of oral cavity. Preserve the minted mammalian
+    record, broader ontology parent UBERON:0016482, and 38 ORGANISM assertions.'
+  disposition: 'Resolved in Issue #2255 via guarded parent exclusion in curation/gold_parent_exclusions.tsv,
+    synchronized curation/term_requests.tsv, regenerated habitat YAML, and verified
+    in fresh structured review bundle reviews/structured/20261022T065801Z-dental_plaque__8396e8ec-remediation/review.yaml.'
+- finding_id: dental-plaque--8396e8ec-mapping-endpoint-contract
+  carried_from: dental-plaque--8396e8ec-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/dental_plaque__8396e8ec.yaml (habitatmech:GOLD.26b1d1137f):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology parent UBERON:0016482 (dental plaque) rather
+    than the minted record identifier habitatmech:GOLD.26b1d1137f.'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: dentin-mapping-endpoint-contract
+  carried_from: dentin-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/dentin.yaml (habitatmech:GOLD.0433dc9a8f):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology parent BTO:0003453 (dentin) rather than the
+    minted record identifier habitatmech:GOLD.0433dc9a8f.'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: dentin--be69daef-context-parent
+  carried_from: dentin--be69daef-context-parent
+  status: resolved
+  group_id: G-gold-context-parent-exclusions
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/2255
+  summary: 'data/habitats/host_associated/dentin__be69daef.yaml (habitatmech:GOLD.7ec36a9a02):
+    Bone-tissue skeletonized remains parent is asserted as a dentin superclass — Exclude
+    the guarded GOLD source-path parent contribution habitatmech:GOLD.2f62ba7993 (human
+    skeletonized remains, defined as a bone tissue assemblage under UBERON:0002481
+    bone tissue) from dentin__be69daef.yaml; dentin is calcified tooth tissue from
+    skeletal/dental remains, not a subtype of bone tissue. Preserve the minted record,
+    broader ontology parent BTO:0003453, and source attestation (total_assertions:
+    0 in GOLD).'
+  disposition: 'Resolved in Issue #2255 via guarded parent exclusion in curation/gold_parent_exclusions.tsv,
+    synchronized curation/term_requests.tsv, regenerated habitat YAML, and verified
+    in fresh structured review bundle reviews/structured/20261022T065802Z-dentin__be69daef-remediation/review.yaml.'
+- finding_id: dentin--be69daef-mapping-endpoint-contract
+  carried_from: dentin--be69daef-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/dentin__be69daef.yaml (habitatmech:GOLD.7ec36a9a02):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology parent BTO:0003453 (dentin) rather than the
+    minted record identifier habitatmech:GOLD.7ec36a9a02.'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: dentition-context-parent
+  carried_from: dentition-context-parent
+  status: resolved
+  group_id: G-gold-context-parent-exclusions
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/2255
+  summary: 'data/habitats/host_associated/dentition.yaml (UBERON:0003672): Oral cavity
+    is asserted as a superclass of dentition — Exclude only the guarded GOLD source-path
+    parent contribution UBERON:0000167 (oral cavity from Host-associated > Fish >
+    Digestive system > Oral/Buccal cavity > Teeth) from dentition.yaml while preserving
+    the valid ontology superclass UBERON:0034925 (anatomical collection), CLOSE/REVIEWED
+    status, and GOLD source attestation (total_assertions: 0).'
+  disposition: 'Resolved in Issue #2255 via guarded parent exclusion in curation/gold_parent_exclusions.tsv,
+    synchronized curation/term_requests.tsv, regenerated habitat YAML, and verified
+    in fresh structured review bundle reviews/structured/20261022T065803Z-dentition-remediation/review.yaml.'
+- finding_id: dermal-papilla-context-parent
+  carried_from: dermal-papilla-context-parent
+  status: resolved
+  group_id: G-gold-context-parent-exclusions
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/2255
+  summary: 'data/habitats/host_associated/dermal_papilla.yaml (UBERON:0000412): Whole
+    human skin is asserted as a superclass of dermal papilla — Exclude only the guarded
+    GOLD source-path parent contribution habitatmech:GOLD.4b37ab4b76 (Skin in Host-associated
+    > Mammals: Human > Integumentary system > Skin > Dermal papilla) from dermal_papilla.yaml
+    while preserving the valid ontology superclass UBERON:0000479 (tissue) and source
+    attestation.'
+  disposition: 'Resolved in Issue #2255 via guarded parent exclusion in curation/gold_parent_exclusions.tsv,
+    synchronized curation/term_requests.tsv, regenerated habitat YAML, and verified
+    in fresh structured review bundle reviews/structured/20261022T065804Z-dermal_papilla-remediation/review.yaml.'
+- finding_id: dermatitis-context-parent
+  carried_from: dermatitis-context-parent
+  status: resolved
+  group_id: G-gold-context-parent-exclusions
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/2255
+  summary: 'data/habitats/host_associated/dermatitis.yaml (habitatmech:GOLD.25fd1f31a1):
+    Whole mammalian skin is asserted as a superclass of mammalian dermatitis skin
+    lesion — Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.c896f9520f
+    (Skin in Host-associated > Mammals > Integumentary system > Skin > Dermatitis)
+    from dermatitis.yaml while preserving the curated parent ENVO:2100003 (skin environment),
+    UNGROUNDED/REVIEWED status, and GOLD source attestation (total_assertions: 0).'
+  disposition: 'Resolved in Issue #2255 via guarded parent exclusion in curation/gold_parent_exclusions.tsv,
+    synchronized curation/term_requests.tsv, regenerated habitat YAML, and verified
+    in fresh structured review bundle reviews/structured/20261022T065805Z-dermatitis-remediation/review.yaml.'
+- finding_id: dermatitis--d991f62d-context-parent
+  carried_from: dermatitis--d991f62d-context-parent
+  status: resolved
+  group_id: G-gold-context-parent-exclusions
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/2255
+  summary: 'data/habitats/host_associated/dermatitis__d991f62d.yaml (habitatmech:GOLD.fdd6965162):
+    Human skin habitat is asserted as a superclass of NOT_APPLICABLE disease record
+    Dermatitis — Exclude the guarded GOLD source-path parent contribution habitatmech:GOLD.4b37ab4b76
+    (Skin in Host-associated > Mammals: Human > Integumentary system > Skin > Dermatitis)
+    from dermatitis__d991f62d.yaml so the NOT_APPLICABLE disease concept does not
+    claim to be a subclass of human skin. Preserve NOT_APPLICABLE/REVIEWED status
+    and 1 ORGANISM assertion.'
+  disposition: 'Resolved in Issue #2255 via guarded parent exclusion in curation/gold_parent_exclusions.tsv,
+    synchronized curation/term_requests.tsv, regenerated habitat YAML, and verified
+    in fresh structured review bundle reviews/structured/20261022T065806Z-dermatitis__d991f62d-remediation/review.yaml.'
+- finding_id: dermis-context-parent
+  carried_from: dermis-context-parent
+  status: resolved
+  group_id: G-gold-context-parent-exclusions
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/2255
+  summary: 'data/habitats/host_associated/dermis.yaml (UBERON:0002067): Whole human
+    skin is asserted as a superclass of dermis — Exclude only the guarded GOLD source-path
+    parent contribution habitatmech:GOLD.4b37ab4b76 (Skin in Host-associated > Mammals:
+    Human > Integumentary system > Skin > Dermis) from dermis.yaml while preserving
+    the valid ontology superclasses (including UBERON:0013754 integumentary system
+    layer) and GOLD source attestation (total_assertions: 0).'
+  disposition: 'Resolved in Issue #2255 via guarded parent exclusion in curation/gold_parent_exclusions.tsv,
+    synchronized curation/term_requests.tsv, regenerated habitat YAML, and verified
+    in fresh structured review bundle reviews/structured/20261022T065807Z-dermis-remediation/review.yaml.'
+- finding_id: descending-colon-context-parent
+  carried_from: descending-colon-context-parent
+  status: resolved
+  group_id: G-gold-context-parent-exclusions
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/2255
+  summary: 'data/habitats/host_associated/descending_colon.yaml (UBERON:0001158):
+    Whole human large intestine is asserted as a superclass of descending colon —
+    Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.5b0aa7456c
+    (Large intestine in Host-associated > Mammals: Human > Digestive system > Large
+    intestine > Descending colon) from descending_colon.yaml while preserving the
+    valid ontology superclass UBERON:0000168 (proximal-distal subdivision of colon)
+    and 3 ORGANISM assertions.'
+  disposition: 'Resolved in Issue #2255 via guarded parent exclusion in curation/gold_parent_exclusions.tsv,
+    synchronized curation/term_requests.tsv, regenerated habitat YAML, and verified
+    in fresh structured review bundle reviews/structured/20261022T065808Z-descending_colon-remediation/review.yaml.'
+- finding_id: diabetic-foot-ulcer-dfu-context-parent
+  carried_from: diabetic-foot-ulcer-dfu-context-parent
+  status: resolved
+  group_id: G-gold-context-parent-exclusions
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/2255
+  summary: 'data/habitats/host_associated/diabetic_foot_ulcer_dfu.yaml (habitatmech:GOLD.1219b1a720):
+    Human skin habitat is asserted as a superclass of NOT_APPLICABLE record Diabetic
+    foot ulcer (DFU) — Exclude the guarded GOLD source-path parent contribution habitatmech:GOLD.4b37ab4b76
+    (Skin in Host-associated > Mammals: Human > Integumentary system > Skin > Diabetic
+    foot ulcer (DFU)) from diabetic_foot_ulcer_dfu.yaml while preserving NOT_APPLICABLE/REVIEWED
+    status and GOLD source attestation (total_assertions: 0).'
+  disposition: 'Resolved in Issue #2255 via guarded parent exclusion in curation/gold_parent_exclusions.tsv,
+    synchronized curation/term_requests.tsv, regenerated habitat YAML, and verified
+    in fresh structured review bundle reviews/structured/20261022T065809Z-diabetic_foot_ulcer_dfu-remediation/review.yaml.'
+- finding_id: diaphragm--3c058609-context-parent
+  carried_from: diaphragm--3c058609-context-parent
+  status: resolved
+  group_id: G-gold-context-parent-exclusions
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/2255
+  summary: 'data/habitats/host_associated/diaphragm__3c058609.yaml (habitatmech:GOLD.a287a77880):
+    Whole human respiratory system is asserted as a superclass of human diaphragm
+    — Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.e36ba981d1
+    (Respiratory system in Host-associated > Mammals: Human > Respiratory system >
+    Diaphragm) from diaphragm__3c058609.yaml; the diaphragm is an organ/muscle within
+    the respiratory system, not a subtype of the whole respiratory system.'
+  disposition: 'Resolved in Issue #2255 via guarded parent exclusion in curation/gold_parent_exclusions.tsv,
+    synchronized curation/term_requests.tsv, regenerated habitat YAML, and verified
+    in fresh structured review bundle reviews/structured/20261022T065810Z-diaphragm__3c058609-remediation/review.yaml.'
+- finding_id: diaphragm--3c058609-mapping-endpoint-contract
+  carried_from: diaphragm--3c058609-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/diaphragm__3c058609.yaml (habitatmech:GOLD.a287a77880):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology parent UBERON:0001103 (diaphragm) rather
+    than the minted record identifier habitatmech:GOLD.a287a77880.'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: diaphragm--fbd202d9-context-parent
+  carried_from: diaphragm--fbd202d9-context-parent
+  status: resolved
+  group_id: G-gold-context-parent-exclusions
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/2255
+  summary: 'data/habitats/host_associated/diaphragm__fbd202d9.yaml (habitatmech:GOLD.c84e967b80):
+    Whole mammalian respiratory system is asserted as a superclass of mammalian diaphragm
+    — Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.fac4f63f3b
+    (Respiratory system in Host-associated > Mammals > Respiratory system > Diaphragm)
+    from diaphragm__fbd202d9.yaml; the diaphragm is an organ/muscle within the respiratory
+    system, not a subtype of the whole respiratory system.'
+  disposition: 'Resolved in Issue #2255 via guarded parent exclusion in curation/gold_parent_exclusions.tsv,
+    synchronized curation/term_requests.tsv, regenerated habitat YAML, and verified
+    in fresh structured review bundle reviews/structured/20261022T065811Z-diaphragm__fbd202d9-remediation/review.yaml.'
+- finding_id: diaphragm--fbd202d9-mapping-endpoint-contract
+  carried_from: diaphragm--fbd202d9-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/diaphragm__fbd202d9.yaml (habitatmech:GOLD.c84e967b80):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology parent UBERON:0001103 (diaphragm) rather
+    than the minted record identifier habitatmech:GOLD.c84e967b80.'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: diatoms-host-name-exact-synonym
+  carried_from: diatoms-host-name-exact-synonym
+  status: resolved
+  group_id: G-diatoms-host-name-exact-synonym
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/2256
+  summary: 'data/habitats/host_associated/diatoms.yaml (habitatmech:GOLD.1276bea544):
+    Host clade label ''Diatoms'' is asserted as an exact environment synonym — Remove
+    only the bare host taxon alias ''Diatoms'' from exact_synonym in curation/term_requests.tsv
+    (retaining ''diatom host environment'') and add a guarded row in curation/definition_source_label_exclusions.tsv
+    for habitatmech:GOLD.1276bea544 so ''Diatoms'' is scoped as RELATED_SYNONYM from
+    GOLD rather than EXACT_SYNONYM.'
+  disposition: 'Resolved in Issue #2256 via curation/term_requests.tsv and guarded
+    row in curation/definition_source_label_exclusions.tsv, regenerated data/habitats/host_associated/diatoms.yaml,
+    and verified in fresh structured review bundle reviews/structured/20261022T065812Z-diatoms-remediation/review.yaml.'
+- finding_id: digestive-system-mapping-endpoint-contract
+  carried_from: digestive-system-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/digestive_system.yaml (habitatmech:GOLD.26a84185d3):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology parent UBERON:0001007 (digestive system)
+    rather than the minted record identifier habitatmech:GOLD.26a84185d3.'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: digestive-system--2589c8ce-mapping-endpoint-contract
+  carried_from: digestive-system--2589c8ce-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/digestive_system__2589c8ce.yaml (habitatmech:GOLD.6eecdf150d):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology parent UBERON:0001007 (digestive system)
+    rather than the minted record identifier habitatmech:GOLD.6eecdf150d.'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: digestive-system--46d403bb-mapping-endpoint-contract
+  carried_from: digestive-system--46d403bb-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/digestive_system__46d403bb.yaml (habitatmech:GOLD.d7cff86ce8):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology parent UBERON:0001007 (digestive system)
+    rather than the minted record identifier habitatmech:GOLD.d7cff86ce8.'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: digestive-system--4f205b4d-mapping-endpoint-contract
+  carried_from: digestive-system--4f205b4d-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/digestive_system__4f205b4d.yaml (habitatmech:GOLD.8a68d0f6f5):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology parent UBERON:0001007 (digestive system)
+    rather than the minted record identifier habitatmech:GOLD.8a68d0f6f5.'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+- finding_id: digestive-system--780e5b67-mapping-endpoint-contract
+  carried_from: digestive-system--780e5b67-mapping-endpoint-contract
+  status: deferred
+  group_id: G-source-attestation-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  summary: 'data/habitats/host_associated/digestive_system__780e5b67.yaml (habitatmech:GOLD.c1d7082e4b):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology parent UBERON:0001007 (digestive system)
+    rather than the minted record identifier habitatmech:GOLD.c1d7082e4b.'
+  disposition: 'Deferred under open repository architecture Issue #1398 (Reconcile
+    GOLD narrow-match output with source-attestation endpoint contract); requires
+    corpus-wide SourceAttestation schema/generator remediation rather than per-record
+    curation edits.'
+groups:
+- group_id: G-gold-context-parent-exclusions
+  finding_ids:
+  - dental-plaque--8396e8ec-context-parent
+  - dentin--be69daef-context-parent
+  - dentition-context-parent
+  - dermal-papilla-context-parent
+  - dermatitis-context-parent
+  - dermatitis--d991f62d-context-parent
+  - dermis-context-parent
+  - descending-colon-context-parent
+  - diabetic-foot-ulcer-dfu-context-parent
+  - diaphragm--3c058609-context-parent
+  - diaphragm--fbd202d9-context-parent
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/2255
+  status: resolved
+  summary: Remove eleven GOLD whole-organ, whole-system, bone-remains, and disease-to-anatomy
+    context parents across dental_plaque__8396e8ec through diaphragm__fbd202d9 via
+    guarded rows in curation/gold_parent_exclusions.tsv and synchronized curation/term_requests.tsv.
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/remediation_reviews.json
+  disposition: 'Resolved all 11 context-parent findings under Issue #2255, rebuilt
+    derived artifacts, added tests/test_dental_to_diaphragm_review_repairs.py, and
+    recorded 11 fresh structured remediation review bundles in reviews/structured/.'
+- group_id: G-diatoms-host-name-exact-synonym
+  finding_ids:
+  - diatoms-host-name-exact-synonym
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/2256
+  status: resolved
+  summary: Remove bare host-clade label 'Diatoms' from exact_synonyms on data/habitats/host_associated/diatoms.yaml
+    (habitatmech:GOLD.1276bea544) while retaining it as a GOLD-scoped RELATED_SYNONYM.
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/remediation_reviews.json
+  disposition: 'Resolved under Issue #2256 via curation/term_requests.tsv and curation/definition_source_label_exclusions.tsv,
+    rebuilt derived artifacts, added counterfactual regression coverage, and recorded
+    fresh structured remediation review bundle 20261022T065812Z-diatoms-remediation.'
+- group_id: G-source-attestation-mapping-endpoint-contract
+  finding_ids:
+  - dental-plaque--8396e8ec-mapping-endpoint-contract
+  - dentin-mapping-endpoint-contract
+  - dentin--be69daef-mapping-endpoint-contract
+  - diaphragm--3c058609-mapping-endpoint-contract
+  - diaphragm--fbd202d9-mapping-endpoint-contract
+  - digestive-system-mapping-endpoint-contract
+  - digestive-system--2589c8ce-mapping-endpoint-contract
+  - digestive-system--46d403bb-mapping-endpoint-contract
+  - digestive-system--4f205b4d-mapping-endpoint-contract
+  - digestive-system--780e5b67-mapping-endpoint-contract
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+  status: deferred
+  summary: Systemic source_attestations[].mapping_predicate endpoint contract where
+    skos:narrowMatch from curation/decisions.tsv is emitted on SourceAttestation of
+    a minted habitatmech:GOLD.* record identifier.
+  disposition: 'Explicitly deferred and carried forward under open repository architecture
+    Issue #1398; requires corpus-wide SourceAttestation schema/writer design change
+    rather than record-local curation edits.'
+carry_forward_ids:
+- dental-plaque--8396e8ec-mapping-endpoint-contract
+- dentin-mapping-endpoint-contract
+- dentin--be69daef-mapping-endpoint-contract
+- diaphragm--3c058609-mapping-endpoint-contract
+- diaphragm--fbd202d9-mapping-endpoint-contract
+- digestive-system-mapping-endpoint-contract
+- digestive-system--2589c8ce-mapping-endpoint-contract
+- digestive-system--46d403bb-mapping-endpoint-contract
+- digestive-system--4f205b4d-mapping-endpoint-contract
+- digestive-system--780e5b67-mapping-endpoint-contract
+infra_tasks: []
+scope_frozen_at: '2026-10-22T06:21:22.673036Z'
+previous_evidence:
+  path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/evidence.yaml
+  sha256: 0b8231a897d2228981ae4a43a4ed60ea08bb109736dbf772a5a533c24ee5ecea

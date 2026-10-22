@@ -3,8 +3,6 @@ label: Diabetic foot ulcer (DFU)
 habitat_category: HOST_ASSOCIATED
 grounding_status: NOT_APPLICABLE
 mapping_status: REVIEWED
-parent_habitats:
-- habitatmech:GOLD.4b37ab4b76
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:6164
@@ -23,3 +21,19 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: NOT_APPLICABLE.'
+- timestamp: '2026-10-22T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.4b37ab4b76
+    for habitatmech:GOLD.1219b1a720 (Host-associated > Mammals: Human > Integumentary
+    system > Skin > Diabetic foot ulcer (DFU)). Review https://github.com/CultureBotAI/HabitatMech/issues/2255
+    : Dental plaque is a tooth-surface biofilm deposit, not the entire mammalian oral
+    cavity; post-mortem dentin is calcified tooth tissue, not an entire skeletonized
+    remains assemblage; dentition is a tooth assemblage, not the whole oral cavity;
+    dermal papilla and dermis are skin layers/structures and dermatitis and diabetic
+    foot ulcer are cutaneous lesions/conditions, not subtypes of the whole skin organ;
+    descending colon is a colonic segment, not the entire large intestine; diaphragm
+    is a muscular partition, not the entire respiratory system. Exclude only exact
+    guarded GOLD source-path contributions, preserving independent genera and all
+    source observations. Exact target habitatmech:GOLD.1219b1a720. Shared mapping
+    endpoints #1398 remain separate.'

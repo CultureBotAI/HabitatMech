@@ -61,7 +61,6 @@ GOLD counts organisms, BacDive strains, PREGO taxa.</p>
 <h2>Broader habitats</h2>
 <ul class="plain">
   <li><a href="../habitats/skin-environment-envo-2100003.html">skin environment</a>      <code class="curie">ENVO:2100003</code></li>
-  <li><a href="../habitats/skin-habitatmech-gold-c896f9520f.html">Skin</a>      <code class="curie">habitatmech:GOLD.c896f9520f</code></li>
 </ul>
 
 
@@ -89,6 +88,11 @@ from several source concepts can carry one decision per concept.</p>
     <span class="pill">SOURCE_SYNONYM_EXCLUDED</span>
     <span class="meta">2026-10-17 · antigravity</span>
     <p>Omitted automatic retention of displaced source label &#39;Dermatitis&#39; when defining habitatmech:GOLD.25fd1f31a1 as &#39;mammalian dermatitis skin lesion&#39;. Verbatim source attestations are preserved. Displaced GOLD source label &#39;Dermatitis&#39; in path &#39;Host-associated &gt; Mammals &gt; Integumentary system &gt; Skin &gt; Dermatitis&#39; is context-dependent, ambiguous, or names a host/disease/process rather than the defined habitat &#39;mammalian dermatitis skin lesion&#39;; suppress automatic exact-synonym retention while preserving verbatim source provenance.</p>
+  </li>
+  <li>
+    <span class="pill">SOURCE_PARENT_EXCLUDED</span>
+    <span class="meta">2026-10-22 · antigravity</span>
+    <p>Excluded GOLD source-path parent contribution habitatmech:GOLD.c896f9520f for habitatmech:GOLD.25fd1f31a1 (Host-associated &gt; Mammals &gt; Integumentary system &gt; Skin &gt; Dermatitis). Review <a href="https://github.com/CultureBotAI/HabitatMech/issues/2255" rel="noopener noreferrer" target="_blank">https://github.com/CultureBotAI/HabitatMech/issues/2255</a> : Dental plaque is a tooth-surface biofilm deposit, not the entire mammalian oral cavity; post-mortem dentin is calcified tooth tissue, not an entire skeletonized remains assemblage; dentition is a tooth assemblage, not the whole oral cavity; dermal papilla and dermis are skin layers/structures and dermatitis and diabetic foot ulcer are cutaneous lesions/conditions, not subtypes of the whole skin organ; descending colon is a colonic segment, not the entire large intestine; diaphragm is a muscular partition, not the entire respiratory system. Exclude only exact guarded GOLD source-path contributions, preserving independent genera and all source observations. Exact target habitatmech:GOLD.25fd1f31a1. Shared mapping endpoints #1398 remain separate.</p>
   </li>
 </ol>
 

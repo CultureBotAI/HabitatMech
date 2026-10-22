@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: other
+  path: curation/definition_source_label_exclusions.tsv
+  slug: definition_source_label_exclusions
+session:
+  id: 2026-10-22T063710Z-antigravity-225601
+  timestamp: '2026-10-22T06:37:10Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/HabitatMech/issues/2256
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - definition_source_label_exclusions
+  - term_requests
+  summary: Remove bare host-clade exact alias Diatoms from diatom-associated environment
+    (habitatmech:GOLD.1276bea544)
+  details: 'Stage 5 (resolve_review_findings) remediation of G-diatoms-host-name-exact-synonym
+    (diatoms-host-name-exact-synonym from Stage 4 record review 20261022T014526Z-diatoms-record).
+    Updated curation/term_requests.tsv row for habitatmech:GOLD.1276bea544 (diatom-associated
+    environment) to remove bare Diatoms from exact_synonyms while retaining diatom
+    host environment, rebuilt curation/term_requests/envo_robot_template.tsv via
+    scripts/build_term_requests.py, and added habitatmech:GOLD.1276bea544 (Diatoms
+    -> diatom-associated environment) to curation/definition_source_label_exclusions.tsv
+    to suppress displaced-source-label exact-synonym fallback while preserving the
+    verbatim GOLD source attestation, definition text, NCBITaxon:2836 xref, and ENVO:01001000
+    / OMRSE:00000109 parents.'
