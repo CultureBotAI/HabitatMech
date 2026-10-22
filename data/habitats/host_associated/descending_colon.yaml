@@ -13,7 +13,6 @@ synonyms:
   source: UBERON
 parent_habitats:
 - UBERON:0000168
-- habitatmech:GOLD.5b0aa7456c
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5028
@@ -28,3 +27,19 @@ curation_history:
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: EXACT.'
+- timestamp: '2026-10-22T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_PARENT_EXCLUDED
+  changes: 'Excluded GOLD source-path parent contribution habitatmech:GOLD.5b0aa7456c
+    for habitatmech:GOLD.8634c1815d (Host-associated > Mammals: Human > Digestive
+    system > Large intestine > Descending colon). Review https://github.com/CultureBotAI/HabitatMech/issues/2255
+    : Dental plaque is a tooth-surface biofilm deposit, not the entire mammalian oral
+    cavity; post-mortem dentin is calcified tooth tissue, not an entire skeletonized
+    remains assemblage; dentition is a tooth assemblage, not the whole oral cavity;
+    dermal papilla and dermis are skin layers/structures and dermatitis and diabetic
+    foot ulcer are cutaneous lesions/conditions, not subtypes of the whole skin organ;
+    descending colon is a colonic segment, not the entire large intestine; diaphragm
+    is a muscular partition, not the entire respiratory system. Exclude only exact
+    guarded GOLD source-path contributions, preserving independent genera and all
+    source observations. Exact target UBERON:0001158. Shared mapping endpoints #1398
+    remain separate.'

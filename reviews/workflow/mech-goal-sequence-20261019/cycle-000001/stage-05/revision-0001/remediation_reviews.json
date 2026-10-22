@@ -1,0 +1,220 @@
+{
+  "curation_surfaces": [
+    {
+      "path": "curation/gold_parent_exclusions.tsv",
+      "sha256": "391fd3abe12d609d5d15fc8cff56d87c0278a4056c1231a251253227e9da1cb9"
+    },
+    {
+      "path": "curation/term_requests.tsv",
+      "sha256": "e020f95fc67252b97da96abe39c7b1228ec161055cd0221499e2d12a33cf9aa0"
+    },
+    {
+      "path": "curation/term_requests/envo_robot_template.tsv",
+      "sha256": "278717b4f9987e1555aa4689e1f6086236b09732a572cbf868c9816bd20d0bb3"
+    },
+    {
+      "path": "curation/definition_source_label_exclusions.tsv",
+      "sha256": "fbcc0deac2c94eadaa3629647605a09deed534460300386bb097cd013ac90c96"
+    },
+    {
+      "path": "history/other/gold_parent_exclusions/2026-10-22T063700Z-antigravity-225501.yaml",
+      "sha256": "237789a50d728b2c30e35190ba4ef7d30047fc212a21e67885f1e3e037343045"
+    },
+    {
+      "path": "history/other/definition_source_label_exclusions/2026-10-22T063710Z-antigravity-225601.yaml",
+      "sha256": "473b98692d4e7067042014a59dc192e330765b61adde491247e5f71547f3cfb3"
+    },
+    {
+      "path": "tests/test_dental_to_diaphragm_review_repairs.py",
+      "sha256": "63b86fb79148e60c7bdde0ac5c861fc7bc8a800d99a9608f1105aad2ad919451"
+    }
+  ],
+  "cycle": 1,
+  "remediation_reviews": [
+    {
+      "finding_id": "dental-plaque--8396e8ec-context-parent",
+      "group_id": "G-gold-context-parent-exclusions",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2255",
+      "post_remediation_record_status": "pass",
+      "predecessor_review_id": "20261022T014510Z-dental_plaque__8396e8ec-record",
+      "record_id": "habitatmech:GOLD.26b1d1137f",
+      "record_path": "data/habitats/host_associated/dental_plaque__8396e8ec.yaml",
+      "record_sha256": "b313b0e3063cdd7db54bb23e6dfb5ab54049e13a917c6709cb0941c63b5a9787",
+      "remediation_report_md_path": "reviews/structured/20261022T065801Z-dental_plaque__8396e8ec-remediation/review.md",
+      "remediation_report_md_sha256": "afe6e6910ee86810fff54092bbd292baa185929c2d341ffe31192b63ea9b3d2a",
+      "remediation_review_id": "20261022T065801Z-dental_plaque__8396e8ec-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261022T065801Z-dental_plaque__8396e8ec-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "7ac7ef624a385b41b35a3523261b93bb7c15a393f0fc3a6177e181c9ac6c5915"
+    },
+    {
+      "finding_id": "dentin--be69daef-context-parent",
+      "group_id": "G-gold-context-parent-exclusions",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2255",
+      "post_remediation_record_status": "pass",
+      "predecessor_review_id": "20261022T014514Z-dentin__be69daef-record",
+      "record_id": "habitatmech:GOLD.7ec36a9a02",
+      "record_path": "data/habitats/host_associated/dentin__be69daef.yaml",
+      "record_sha256": "5e0ceacafada540359da1655f6dc0345dfefba6ef8513f6c5f49fc3adb153c9a",
+      "remediation_report_md_path": "reviews/structured/20261022T065802Z-dentin__be69daef-remediation/review.md",
+      "remediation_report_md_sha256": "3f4155e45d0dca3802c0b8da21c5151060200e92e0f739038c48b401262bda28",
+      "remediation_review_id": "20261022T065802Z-dentin__be69daef-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261022T065802Z-dentin__be69daef-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "f9af66387b416963e34d6a57c71f75efabf282c2312e108e6a0394c469ede470"
+    },
+    {
+      "finding_id": "dentition-context-parent",
+      "group_id": "G-gold-context-parent-exclusions",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2255",
+      "post_remediation_record_status": "pass",
+      "predecessor_review_id": "20261022T014515Z-dentition-record",
+      "record_id": "UBERON:0003672",
+      "record_path": "data/habitats/host_associated/dentition.yaml",
+      "record_sha256": "4e60501e6652eadf39b3c8f095daf38b200e6ebeae90e6c56442c06c383784c6",
+      "remediation_report_md_path": "reviews/structured/20261022T065803Z-dentition-remediation/review.md",
+      "remediation_report_md_sha256": "eac59e3ef64ccb2f3ca6c46e4974d1e9941bba27f370dda069f2d28aee50e2d1",
+      "remediation_review_id": "20261022T065803Z-dentition-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261022T065803Z-dentition-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "e5a6069730458c5bb93a1b3530102c699ad219e76ae3099b06d51476bee741da"
+    },
+    {
+      "finding_id": "dermal-papilla-context-parent",
+      "group_id": "G-gold-context-parent-exclusions",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2255",
+      "post_remediation_record_status": "pass",
+      "predecessor_review_id": "20261022T014516Z-dermal_papilla-record",
+      "record_id": "UBERON:0000412",
+      "record_path": "data/habitats/host_associated/dermal_papilla.yaml",
+      "record_sha256": "25418d60f31cc19daa854310d67d27210b45cb6890f8b9c82b0579ea47e4383d",
+      "remediation_report_md_path": "reviews/structured/20261022T065804Z-dermal_papilla-remediation/review.md",
+      "remediation_report_md_sha256": "e5edddad4bde2b1cb43ce8ef5e286f875aa962756be5298d24c7adc013016e03",
+      "remediation_review_id": "20261022T065804Z-dermal_papilla-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261022T065804Z-dermal_papilla-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "abfa4be8066204e3d153b4b750466232bda59f3b86c6e73558953b33df022fc8"
+    },
+    {
+      "finding_id": "dermatitis-context-parent",
+      "group_id": "G-gold-context-parent-exclusions",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2255",
+      "post_remediation_record_status": "pass",
+      "predecessor_review_id": "20261022T014517Z-dermatitis-record",
+      "record_id": "habitatmech:GOLD.25fd1f31a1",
+      "record_path": "data/habitats/host_associated/dermatitis.yaml",
+      "record_sha256": "d1e0d7b857e2fa4c1a892cb36b7b3b687ef462696565f7af229d0ed74217df45",
+      "remediation_report_md_path": "reviews/structured/20261022T065805Z-dermatitis-remediation/review.md",
+      "remediation_report_md_sha256": "759199aee5119c6b73ddfd49862fa036cf54144c7339f2f5baf79a813882c960",
+      "remediation_review_id": "20261022T065805Z-dermatitis-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261022T065805Z-dermatitis-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "9a5c8a503bb35dc21d422bdb36be14f71d739e8a90e3ca40c7c69efb4bf5e283"
+    },
+    {
+      "finding_id": "dermatitis--d991f62d-context-parent",
+      "group_id": "G-gold-context-parent-exclusions",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2255",
+      "post_remediation_record_status": "pass",
+      "predecessor_review_id": "20261022T014518Z-dermatitis__d991f62d-record",
+      "record_id": "habitatmech:GOLD.fdd6965162",
+      "record_path": "data/habitats/host_associated/dermatitis__d991f62d.yaml",
+      "record_sha256": "a8c81164a677fdefd7ff02e500d07ed71afac896bee6eb58fe185e50f82768ae",
+      "remediation_report_md_path": "reviews/structured/20261022T065806Z-dermatitis__d991f62d-remediation/review.md",
+      "remediation_report_md_sha256": "d9f794d72a2ed7047c6bf03d9ef71301d092150e2262989a4a91aa1353f3da06",
+      "remediation_review_id": "20261022T065806Z-dermatitis__d991f62d-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261022T065806Z-dermatitis__d991f62d-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "cf5ff1a930d432fabfa3f8f9ee6660212cb2d0890b784935742be4417b040262"
+    },
+    {
+      "finding_id": "dermis-context-parent",
+      "group_id": "G-gold-context-parent-exclusions",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2255",
+      "post_remediation_record_status": "pass",
+      "predecessor_review_id": "20261022T014519Z-dermis-record",
+      "record_id": "UBERON:0002067",
+      "record_path": "data/habitats/host_associated/dermis.yaml",
+      "record_sha256": "4b67981540622715421b8359d1161570ae566ce4bd11b18a1a9ad22e34eb8a94",
+      "remediation_report_md_path": "reviews/structured/20261022T065807Z-dermis-remediation/review.md",
+      "remediation_report_md_sha256": "e810925fe492b07c8c0f8231faa0faf40e21301840011babdf87096b984de413",
+      "remediation_review_id": "20261022T065807Z-dermis-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261022T065807Z-dermis-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "8468a8ff07d326f0772af9a36fdb891f81e39cdfc08860835511641d717c61f1"
+    },
+    {
+      "finding_id": "descending-colon-context-parent",
+      "group_id": "G-gold-context-parent-exclusions",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2255",
+      "post_remediation_record_status": "pass",
+      "predecessor_review_id": "20261022T014521Z-descending_colon-record",
+      "record_id": "UBERON:0001158",
+      "record_path": "data/habitats/host_associated/descending_colon.yaml",
+      "record_sha256": "041061de33db743b6024e855d8be8a4a4aef335009e7a269363fa632b1215d00",
+      "remediation_report_md_path": "reviews/structured/20261022T065808Z-descending_colon-remediation/review.md",
+      "remediation_report_md_sha256": "da96d552c8205782a70ef9733a25da33afffa64fc4e709668f46eed12f7fcc58",
+      "remediation_review_id": "20261022T065808Z-descending_colon-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261022T065808Z-descending_colon-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "dffef50b32eeaa86c24759b80438388f7ef7b5dc45e6935f28bd3285d1a14177"
+    },
+    {
+      "finding_id": "diabetic-foot-ulcer-dfu-context-parent",
+      "group_id": "G-gold-context-parent-exclusions",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2255",
+      "post_remediation_record_status": "pass",
+      "predecessor_review_id": "20261022T014522Z-diabetic_foot_ulcer_dfu-record",
+      "record_id": "habitatmech:GOLD.1219b1a720",
+      "record_path": "data/habitats/host_associated/diabetic_foot_ulcer_dfu.yaml",
+      "record_sha256": "588771a4b76744e673f200822764b7f0f7c384a0a75c442e59f879b52a4c9131",
+      "remediation_report_md_path": "reviews/structured/20261022T065809Z-diabetic_foot_ulcer_dfu-remediation/review.md",
+      "remediation_report_md_sha256": "a08666353b9195d1ad94c581f79aa72e4489a9cb01cea255e81e9abb600ad5cd",
+      "remediation_review_id": "20261022T065809Z-diabetic_foot_ulcer_dfu-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261022T065809Z-diabetic_foot_ulcer_dfu-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "d8ec194515566fd0e4945861db222b9ac49421263202be1fe3cb5334f8063d54"
+    },
+    {
+      "finding_id": "diaphragm--3c058609-context-parent",
+      "group_id": "G-gold-context-parent-exclusions",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2255",
+      "post_remediation_record_status": "needs_curation",
+      "predecessor_review_id": "20261022T014525Z-diaphragm__3c058609-record",
+      "record_id": "habitatmech:GOLD.a287a77880",
+      "record_path": "data/habitats/host_associated/diaphragm__3c058609.yaml",
+      "record_sha256": "196ceb37db93b60f6ebdbed0635075bc06dafa3d07010679ee06546572946bb1",
+      "remediation_report_md_path": "reviews/structured/20261022T065810Z-diaphragm__3c058609-remediation/review.md",
+      "remediation_report_md_sha256": "b58e104258b6d51b599c9df554533eb43666c981f277e0a8b34d0731612a126a",
+      "remediation_review_id": "20261022T065810Z-diaphragm__3c058609-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261022T065810Z-diaphragm__3c058609-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "19ed6acf9b5eb1ebbf7b6b832f18ff9dbb698927c1c89eb31a3cadafda1618a4"
+    },
+    {
+      "finding_id": "diaphragm--fbd202d9-context-parent",
+      "group_id": "G-gold-context-parent-exclusions",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2255",
+      "post_remediation_record_status": "needs_curation",
+      "predecessor_review_id": "20261022T014526Z-diaphragm__fbd202d9-record",
+      "record_id": "habitatmech:GOLD.c84e967b80",
+      "record_path": "data/habitats/host_associated/diaphragm__fbd202d9.yaml",
+      "record_sha256": "612570d44a476d2bd21384a2a905799a3cf6f1f25ff246bccb4de930006666d5",
+      "remediation_report_md_path": "reviews/structured/20261022T065811Z-diaphragm__fbd202d9-remediation/review.md",
+      "remediation_report_md_sha256": "0e37f1ee75970407525838f422bcb2008eff56aa85a60cc16243a78501448ed8",
+      "remediation_review_id": "20261022T065811Z-diaphragm__fbd202d9-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261022T065811Z-diaphragm__fbd202d9-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "4c9e817d6c9742debed7e99690711e06ad2b4c5ff5bde4871dfc1c2c9ad2c3ff"
+    },
+    {
+      "finding_id": "diatoms-host-name-exact-synonym",
+      "group_id": "G-diatoms-host-name-exact-synonym",
+      "issue_url": "https://github.com/CultureBotAI/HabitatMech/issues/2256",
+      "post_remediation_record_status": "pass",
+      "predecessor_review_id": "20261022T014527Z-diatoms-record",
+      "record_id": "habitatmech:GOLD.1276bea544",
+      "record_path": "data/habitats/host_associated/diatoms.yaml",
+      "record_sha256": "8c87e227ed42f7def7256d395c606974dc41136d41be20cdae8d33bb1f8d000f",
+      "remediation_report_md_path": "reviews/structured/20261022T065812Z-diatoms-remediation/review.md",
+      "remediation_report_md_sha256": "e3408f39b77d9770e857eb007b951c7d0adfe775f58b70c3b41eb829162af302",
+      "remediation_review_id": "20261022T065812Z-diatoms-remediation",
+      "remediation_review_yaml_path": "reviews/structured/20261022T065812Z-diatoms-remediation/review.yaml",
+      "remediation_review_yaml_sha256": "0cc099d82d40593dffd795eb4ed72046a967ea7f7a49bb2f9c2edbddf1e1b7de"
+    }
+  ],
+  "revision": 1,
+  "run_id": "mech-goal-sequence-20261019",
+  "schema_version": "1.0.0",
+  "source_revision": "2ec3d103f44a563f8cc4562f33e82d364039fa81",
+  "stage": 5
+}
