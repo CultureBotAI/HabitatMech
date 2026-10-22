@@ -10,19 +10,25 @@ description: Audit HabitatMech gene/protein mechanism nodes and add exact verifi
 Read [the schema](../../../src/habitatmech/schema/habitatmech.yaml) and
 [causal overlay workflow](../curate-causal-graphs/SKILL.md). Inventory generated
 habitat records and their maintained `curation/causal_graphs/*.yaml` owners.
-`CausalNode` supports `GENE_OR_PROTEIN`, `grounding`, `xrefs` and `description`;
-it does **not** currently define a typed `protein_examples` field. Never insert a
-sibling's unsupported fields or represent a family/complex by one member.
+`CausalNode` supports `GENE_OR_PROTEIN`, `grounding`, `xrefs`, `description`,
+and the typed `protein_examples` slot (`ProteinExample`). Never insert a
+sibling's unsupported fields or represent a family/complex by one member in
+`grounding` or `xrefs`.
 
 For a node explicitly denoting one exact protein, use a verified UniProtKB
-reference only if it accurately denotes that node. For an abstract family or
-complex, keep its semantic grounding; use a native reference only when the
-source context and description unambiguously preserve example/subunit scope.
+reference only if it accurately denotes that node. For an abstract family,
+complex, or isoprotein group on a `GENE_OR_PROTEIN` node, keep its semantic
+grounding and record verified sequence exemplars in `protein_examples` with
+explicit `accession`, `entry_name`, `recommended_name`, `gene_symbol`,
+`locus_tag`, `taxon_id`, `taxon_name`, `role_in_node` (`subunit`,
+`family_member`, `strain_exemplar`, or `isoprotein`), `sequence_length`,
+`crc64`, and primary `evidence` while preserving narrative scope in
+`description`.
 Do not use an untyped xref to smuggle in a related ortholog as equivalence. If the
 native model cannot preserve required example/taxon/role distinctions, retain a
 candidate and propose the missing representation; do not label it enriched.
-Attach inspected role evidence to the supported edge, preserving organism and
-experimental context in the native graph/description/evidence fields.
+Attach inspected role evidence to both `protein_examples` and the supported edge,
+preserving organism and experimental context in the native graph/description/evidence fields.
 
 All changes belong to overlays and use the causal skill's validate-causal,
 canary, regeneration, history and verify-corpus gates. No generated-record edit

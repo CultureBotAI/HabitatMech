@@ -127,6 +127,8 @@ def term_iri(curie: str) -> str | None:
     prefix, _, local = curie.partition(":")
     if prefix.lower() == "mesh" and re.fullmatch(r"[DC]\d+", local):
         return f"https://id.nlm.nih.gov/mesh/{local}.html"
+    if prefix == "UniProtKB" and local:
+        return f"https://www.uniprot.org/uniprotkb/{local}/entry"
     if prefix in OBO_PREFIXES:
         return f"http://purl.obolibrary.org/obo/{prefix}_{local}"
     return None
@@ -153,6 +155,28 @@ def render_graphs(graphs: list[dict]) -> list[dict]:
     out = []
     for graph in graphs:
         labels = {node["node_id"]: node["label"] for node in graph.get("nodes") or []}
+        protein_examples = []
+        for node in graph.get("nodes") or []:
+            for ex in node.get("protein_examples") or []:
+                accession = ex.get("accession", "")
+                protein_examples.append(
+                    {
+                        "node_id": node.get("node_id", ""),
+                        "node_label": node.get("label", ""),
+                        "accession": accession,
+                        "uniprot_url": term_iri(accession) or "",
+                        "entry_name": ex.get("entry_name", ""),
+                        "recommended_name": ex.get("recommended_name", ""),
+                        "gene_symbol": ex.get("gene_symbol", ""),
+                        "locus_tag": ex.get("locus_tag", ""),
+                        "taxon_id": ex.get("taxon_id", ""),
+                        "taxon_name": ex.get("taxon_name", ""),
+                        "role_in_node": ex.get("role_in_node", ""),
+                        "sequence_length": ex.get("sequence_length", ""),
+                        "crc64": ex.get("crc64", ""),
+                        "evidence": ex.get("evidence") or [],
+                    }
+                )
         out.append(
             {
                 "source_graph": graph,
@@ -170,6 +194,7 @@ def render_graphs(graphs: list[dict]) -> list[dict]:
                     }
                     for edge in graph.get("edges") or []
                 ],
+                "protein_examples": protein_examples,
             }
         )
     return out

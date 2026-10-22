@@ -1,0 +1,33 @@
+schema_version: 1.0.0
+repository_key: habitatmech
+github_repository: CultureBotAI/HabitatMech
+run_id: mech-goal-sequence-20261019
+cycle: 1
+stage: 6
+revision: 1
+outcome: completed
+summary: Froze INFRA_TASKS.md at 2026-10-22T10:20:24Z (1 open task, habitatmech-infra-0001 / #2250), implemented ProteinExample and ProteinExampleRoleEnum on CausalNode.protein_examples in src/habitatmech/schema/habitatmech.yaml, added GENE_OR_PROTEIN node-type and accession uniqueness/evidence validation in src/habitatmech/curate/causal_graphs.py, added HTML rendering in scripts/render_pages.py and src/habitatmech/templates/habitat.html, and populated all 15 verified UniProtKB protein exemplars across fresh_water.yaml, root_nodule.yaml, and sea_water.yaml.
+source_revision: 40309c4c50113f19c66dcf385025e40304cc004f
+scope_frozen_at: '2026-10-22T10:20:24Z'
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/infra_snapshot.md
+  sha256: fd06c4fb4c51aeea1a85ebe400d80a5c106b1c9a93555f9d5c25370ec1a9de0c
+  kind: infra_snapshot
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/implementation_plan.md
+  sha256: 33f866135518d10c4cc864181e54e4ed7d135d45971ad00ef5d20df966e3ee75
+  kind: implementation_plan
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/validation.md
+  sha256: 16d7a7081490ba028a510a4bd4fb8f1fc46ed81b9c3c739c44648b9084975f8f
+  kind: validation
+findings: []
+groups: []
+carry_forward_ids: []
+infra_tasks:
+- task_id: habitatmech-infra-0001
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/2250
+  status: resolved
+  summary: Add typed protein_examples slot on CausalNode and UniProtKB validator/renderer support so organism- and role-scoped UniProtKB exemplars can be attached without conflating subunit/ortholog exemplars with node equivalence.
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/implementation_plan.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/validation.md
+  disposition: Implemented ProteinExample and ProteinExampleRoleEnum in src/habitatmech/schema/habitatmech.yaml, enforced GENE_OR_PROTEIN node-type and accession uniqueness in src/habitatmech/curate/causal_graphs.py, added HTML rendering in scripts/render_pages.py and src/habitatmech/templates/habitat.html, and populated all 15 verified UniProtKB protein exemplars across fresh_water.yaml, root_nodule.yaml, and sea_water.yaml (#2250).

@@ -62,6 +62,13 @@ def test_corpus_uses_only_declared_enum_values(schema_path, records):
          lambda d: [p.get("parameter") for p in d.get("environmental_parameters") or []]),
         ("synonym_type", "SynonymTypeEnum",
          lambda d: [s.get("synonym_type") for s in d.get("synonyms") or []]),
+        ("role_in_node", "ProteinExampleRoleEnum",
+         lambda d: [
+             ex.get("role_in_node")
+             for g in d.get("causal_graphs") or []
+             for n in g.get("nodes") or []
+             for ex in n.get("protein_examples") or []
+         ]),
     ]
     for field, enum_name, extract in checks:
         allowed = _permissible(view, enum_name)
@@ -96,5 +103,10 @@ def test_schema_prefixes_cover_every_identifier_in_the_corpus(schema_path, recor
             used.add(parent.split(":", 1)[0])
         for xref in doc.get("xrefs") or []:
             used.add(xref.split(":", 1)[0])
+        for graph in doc.get("causal_graphs") or []:
+            for node in graph.get("nodes") or []:
+                for ex in node.get("protein_examples") or []:
+                    used.add(ex["accession"].split(":", 1)[0])
+                    used.add(ex["taxon_id"].split(":", 1)[0])
     missing = used - declared
     assert not missing, f"prefixes used in the corpus but undeclared in the schema: {sorted(missing)}"

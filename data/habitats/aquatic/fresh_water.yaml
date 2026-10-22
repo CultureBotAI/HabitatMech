@@ -398,8 +398,40 @@ causal_graphs:
       and MscL) gated by cytoplasmic membrane tension during hypoosmotic downshock
       (exemplified in Escherichia coli str. K-12, NCBITaxon:83333, by MscS UniProtKB:P0C0S1
       / MSCS_ECOLI / b2924, 286 aa, and MscL UniProtKB:P0A742 / MSCL_ECOLI / b3291,
-      136 aa); multi-family node not grounded to a single paralog or strain accession
-      pending typed protein_examples support (#2250).
+      136 aa); multi-family node not grounded to a single paralog or strain accession.
+    protein_examples:
+    - accession: UniProtKB:P0C0S1
+      entry_name: MSCS_ECOLI
+      recommended_name: Small-conductance mechanosensitive channel
+      gene_symbol: mscS
+      locus_tag: b2924
+      taxon_id: NCBITaxon:83333
+      taxon_name: Escherichia coli (strain K12)
+      role_in_node: family_member
+      sequence_length: 286
+      crc64: D98856BCBE17DFC7
+      evidence:
+      - reference: DOI:10.1085/jgp.201411296
+        snippet: release solutes from the cytoplasm
+        notes: Wood summarizes Escherichia coli MscS as a bacterial small-conductance
+          mechanosensitive channel that releases cytoplasmic solutes after osmotic
+          down-shock.
+    - accession: UniProtKB:P0A742
+      entry_name: MSCL_ECOLI
+      recommended_name: Large-conductance mechanosensitive channel
+      gene_symbol: mscL
+      locus_tag: b3291
+      taxon_id: NCBITaxon:83333
+      taxon_name: Escherichia coli (strain K12)
+      role_in_node: family_member
+      sequence_length: 136
+      crc64: 59C23143BC0BAFA4
+      evidence:
+      - reference: DOI:10.1085/jgp.201411296
+        snippet: release solutes from the cytoplasm
+        notes: Wood summarizes Escherichia coli MscL as a bacterial large-conductance
+          mechanosensitive channel that releases cytoplasmic solutes after osmotic
+          down-shock.
   - node_id: cytoplasmic_solute_release
     label: cytoplasmic solute release
     node_type: BIOLOGICAL_PROCESS
@@ -530,4 +562,11 @@ curation_history:
     note for Escherichia coli K-12 (NCBITaxon:83333) MscS (UniProtKB:P0C0S1) and MscL
     (UniProtKB:P0A742) on mechanosensitive_channels; recorded typed protein_examples
     schema blocker in #2250.'
+  llm_assisted: true
+- timestamp: '2026-10-22T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: Populated typed protein_examples on mechanosensitive_channels for Escherichia
+    coli K-12 (NCBITaxon:83333) MscS (UniProtKB:P0C0S1) and MscL (UniProtKB:P0A742)
+    (#2250).
   llm_assisted: true

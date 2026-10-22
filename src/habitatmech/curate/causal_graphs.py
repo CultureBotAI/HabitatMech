@@ -115,6 +115,50 @@ def _validate_graph_integrity(path: Path, identifier: str, graphs: Iterable[dict
                 problems.append(f"{path}: {graph_id}: duplicate node_id {node_id!r}")
             node_ids.add(node_id)
 
+            protein_examples = node.get("protein_examples") or []
+            if protein_examples and node.get("node_type") != "GENE_OR_PROTEIN":
+                problems.append(
+                    f"{path}: {graph_id}: node {node_id!r} with protein_examples "
+                    f"must have node_type 'GENE_OR_PROTEIN', got {node.get('node_type')!r}"
+                )
+            seen_accessions: set[str] = set()
+            for j, example in enumerate(protein_examples, start=1):
+                accession = str(example.get("accession") or f"<missing-{j}>")
+                for field in (
+                    "accession",
+                    "entry_name",
+                    "recommended_name",
+                    "taxon_id",
+                    "taxon_name",
+                    "role_in_node",
+                    "crc64",
+                ):
+                    _require_nonempty(
+                        example.get(field),
+                        path,
+                        f"{graph_id}: node {node_id!r} protein_examples {j} {field}",
+                        problems,
+                    )
+                if accession in seen_accessions:
+                    problems.append(
+                        f"{path}: {graph_id}: node {node_id!r} has duplicate "
+                        f"protein_examples accession {accession!r}"
+                    )
+                seen_accessions.add(accession)
+                example_evidence = example.get("evidence") or []
+                if not example_evidence:
+                    problems.append(
+                        f"{path}: {graph_id}: node {node_id!r} protein_examples "
+                        f"{accession!r} must include evidence"
+                    )
+                for k, ev in enumerate(example_evidence, start=1):
+                    _require_nonempty(
+                        ev.get("reference"),
+                        path,
+                        f"{graph_id}: node {node_id!r} protein_examples {accession!r} evidence {k} reference",
+                        problems,
+                    )
+
         edge_ids: set[str] = set()
         referenced_node_ids: set[str] = set()
         for edge in edges:

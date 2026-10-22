@@ -30,8 +30,87 @@ causal_graphs:
       by periplasmic ABC solute-binding proteins ProX UniProtKB:Q4FMH4 /
       SAR11_0797, PotD UniProtKB:Q4FKZ8 / SAR11_1336, YhdW UniProtKB:Q4FM26 /
       SAR11_0953, and UniProtKB:Q4FMK2 / SAR11_0769); plural system class node
-      not grounded to a single subunit accession pending typed protein_examples
-      support (#2250).
+      not grounded to a single subunit accession.
+    protein_examples:
+    - accession: UniProtKB:Q4FMH4
+      entry_name: Q4FMH4_PELUB
+      recommended_name: ABC-type proline/glycine betaine transport system, periplasmic component
+      gene_symbol: proX
+      locus_tag: SAR11_0797
+      taxon_id: NCBITaxon:335992
+      taxon_name: Candidatus Pelagibacter ubique (strain HTCC1062)
+      role_in_node: subunit
+      sequence_length: 342
+      crc64: B6D94B1C4E738282
+      evidence:
+      - reference: PMID:16109880
+        snippet: Genome streamlining in a cosmopolitan oceanic bacterium
+        notes: Giovannoni and colleagues annotated periplasmic ABC solute-binding
+          proteins in Candidatus Pelagibacter ubique HTCC1062 supporting dilute
+          substrate uptake.
+      - reference: PMID:34010286
+        snippet: rely on ATP-binding cassette (ABC) transporters
+        notes: Norris and colleagues model SAR11-like oligotroph reliance on
+          high-affinity ABC solute-binding transport systems.
+    - accession: UniProtKB:Q4FKZ8
+      entry_name: Q4FKZ8_PELUB
+      recommended_name: Spermidine/putrescine ABC transporter, periplasmic spermidine/putrescine-binding protein
+      gene_symbol: potD
+      locus_tag: SAR11_1336
+      taxon_id: NCBITaxon:335992
+      taxon_name: Candidatus Pelagibacter ubique (strain HTCC1062)
+      role_in_node: subunit
+      sequence_length: 356
+      crc64: 38CE69E5CA33EB1D
+      evidence:
+      - reference: PMID:16109880
+        snippet: Genome streamlining in a cosmopolitan oceanic bacterium
+        notes: Giovannoni and colleagues annotated periplasmic ABC solute-binding
+          proteins in Candidatus Pelagibacter ubique HTCC1062 supporting dilute
+          substrate uptake.
+      - reference: PMID:34010286
+        snippet: rely on ATP-binding cassette (ABC) transporters
+        notes: Norris and colleagues model SAR11-like oligotroph reliance on
+          high-affinity ABC solute-binding transport systems.
+    - accession: UniProtKB:Q4FM26
+      entry_name: Q4FM26_PELUB
+      recommended_name: General L-amino acid transport system, periplasmic binding protein
+      gene_symbol: yhdW
+      locus_tag: SAR11_0953
+      taxon_id: NCBITaxon:335992
+      taxon_name: Candidatus Pelagibacter ubique (strain HTCC1062)
+      role_in_node: subunit
+      sequence_length: 355
+      crc64: 5831BD58A28F18F6
+      evidence:
+      - reference: PMID:16109880
+        snippet: Genome streamlining in a cosmopolitan oceanic bacterium
+        notes: Giovannoni and colleagues annotated periplasmic ABC solute-binding
+          proteins in Candidatus Pelagibacter ubique HTCC1062 supporting dilute
+          substrate uptake.
+      - reference: PMID:34010286
+        snippet: rely on ATP-binding cassette (ABC) transporters
+        notes: Norris and colleagues model SAR11-like oligotroph reliance on
+          high-affinity ABC solute-binding transport systems.
+    - accession: UniProtKB:Q4FMK2
+      entry_name: Q4FMK2_PELUB
+      recommended_name: ABC-type branched-chain amino acid transport systems, periplasmic component
+      locus_tag: SAR11_0769
+      taxon_id: NCBITaxon:335992
+      taxon_name: Candidatus Pelagibacter ubique (strain HTCC1062)
+      role_in_node: subunit
+      sequence_length: 384
+      crc64: 9AC671CA91CF9F7A
+      evidence:
+      - reference: PMID:16109880
+        snippet: Genome streamlining in a cosmopolitan oceanic bacterium
+        notes: Giovannoni and colleagues annotated periplasmic ABC solute-binding
+          proteins in Candidatus Pelagibacter ubique HTCC1062 supporting dilute
+          substrate uptake.
+      - reference: PMID:34010286
+        snippet: rely on ATP-binding cassette (ABC) transporters
+        notes: Norris and colleagues model SAR11-like oligotroph reliance on
+          high-affinity ABC solute-binding transport systems.
   - node_id: dilute_nutrient_uptake
     label: dilute nutrient uptake
     node_type: BIOLOGICAL_PROCESS
@@ -163,4 +242,12 @@ curation_history:
     HTCC1062 (NCBITaxon:335992) periplasmic ABC solute-binding proteins
     (UniProtKB:Q4FMH4, UniProtKB:Q4FKZ8, UniProtKB:Q4FM26, UniProtKB:Q4FMK2);
     recorded typed protein_examples schema blocker in #2250.'
+  llm_assisted: true
+- timestamp: '2026-10-22T00:00:00Z'
+  curator: antigravity-claude-opus-4-6
+  action: REVISE_CAUSAL_GRAPH
+  changes: 'Populated typed protein_examples on nutrient_transport_systems for
+    Candidatus Pelagibacter ubique HTCC1062 (NCBITaxon:335992) periplasmic ABC
+    solute-binding proteins (UniProtKB:Q4FMH4, UniProtKB:Q4FKZ8, UniProtKB:Q4FM26,
+    UniProtKB:Q4FMK2) (#2250).'
   llm_assisted: true
