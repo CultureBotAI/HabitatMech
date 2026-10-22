@@ -1,25 +1,55 @@
 identifier: habitatmech:GOLD.df1d688f27
-label: Produced water
+label: membrane bioreactor-treated produced water
+definition: A waste water consisting of oilfield or gas-field produced water undergoing
+  biological treatment in a membrane bioreactor.
+definition_source: HabitatMech
 habitat_category: ENGINEERED
 grounding_status: UNGROUNDED
-mapping_status: SEEDED
+mapping_status: REVIEWED
+synonyms:
+- synonym_text: MBR produced water
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
+- synonym_text: membrane bioreactor produced water
+  synonym_type: EXACT_SYNONYM
+  source: HabitatMech curation
 parent_habitats:
-- ENVO:03600010
+- ENVO:00002001
 source_attestations:
 - source: GOLD
   source_id: gold.ecosystem:5505
   source_label: Produced water
   source_path: Engineered > Bioreactor > MBR (Membrane bioreactor) > Produced water
 curation_history:
-- timestamp: '2026-08-12T00:00:00Z'
-  curator: claude-opus-5
-  action: CONFIRM_UNGROUNDED
-  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. [CLASS-level]
-    Class-level sweep (see docs/HARMONIZATION.md#class-level-sweep): no term in the
-    vendored slice matched this label by any search route. Whether the concept is
-    a habitat at all was NOT assessed, so this is not yet a term-request candidate.
-    (source concept habitatmech:GOLD.df1d688f27)'
 - timestamp: '2026-08-16T05:58:02Z'
   curator: seed_from_sources
   action: SEEDED_FROM_SOURCES
   changes: 'Seeded from data/raw/ inventories; attested by GOLD. Grounding: UNGROUNDED.'
+- timestamp: '2026-10-22T00:00:00Z'
+  curator: antigravity
+  action: CONFIRM_UNGROUNDED
+  changes: 'Confirmed UNGROUNDED: no ontology term fits this concept. ITEM review
+    of unscreened GOLD concept (Engineered > Bioreactor > MBR (Membrane bioreactor)
+    > Produced water): no exact ontology match in ENVO/UBERON/FOODON/PO/BTO/NCIT;
+    confirmed distinct microbial habitat and authored genus-differentia definition
+    as ''membrane bioreactor-treated produced water'' under ENVO:00002001 ''waste
+    water'' (PMID 28624722; DOI:10.1016/j.biortech.2017.06.031). Path: Engineered
+    > Bioreactor > MBR (Membrane bioreactor) > Produced water (source concept habitatmech:GOLD.df1d688f27)'
+- timestamp: '2026-10-22T00:00:00Z'
+  curator: antigravity
+  action: DEFINED
+  changes: Defined as 'membrane bioreactor-treated produced water' under ENVO:00002001
+    'waste water'. Defined membrane bioreactor-treated produced water under ENVO:00002001
+    'waste water' (parent_mode REPLACE) for GOLD path 'Engineered > Bioreactor > MBR
+    (Membrane bioreactor) > Produced water'; supported by microbial ecology literature
+    (PMID 28624722; DOI:10.1016/j.biortech.2017.06.031).
+- timestamp: '2026-10-22T00:00:00Z'
+  curator: antigravity
+  action: SOURCE_SYNONYM_EXCLUDED
+  changes: Omitted automatic retention of displaced source label 'Produced water'
+    when defining habitatmech:GOLD.df1d688f27 as 'membrane bioreactor-treated produced
+    water'. Verbatim source attestations are preserved. Displaced GOLD source label
+    'Produced water' in path 'Engineered > Bioreactor > MBR (Membrane bioreactor)
+    > Produced water' is context-dependent, ambiguous, or names a host clade rather
+    than the defined habitat 'membrane bioreactor-treated produced water'; suppress
+    automatic exact-synonym retention while preserving verbatim source provenance.

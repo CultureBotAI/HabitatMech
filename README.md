@@ -58,7 +58,7 @@ parameters rather than flattening them into one unsupported claim.
 
 175 records are attested by at least two sources; 16 are attested by four or more.
 
-**1,250 records (39.0%) are `REVIEWED`;** the remaining 1,959 are `SEEDED`.
+**1,283 records (40.0%) are `REVIEWED`;** the remaining 1,926 are `SEEDED`.
 <!-- END GENERATED CORPUS STATS -->
 
 Run `just report` for the detailed live report. Class-level decisions deliberately
