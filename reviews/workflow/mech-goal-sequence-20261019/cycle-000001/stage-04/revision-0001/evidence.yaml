@@ -1,0 +1,275 @@
+schema_version: 1.0.0
+repository_key: habitatmech
+github_repository: CultureBotAI/HabitatMech
+run_id: mech-goal-sequence-20261019
+cycle: 1
+stage: 4
+revision: 1
+outcome: completed
+summary: 'Completed Stage 4 record and category cohort review for frozen 24-record
+  lexical slice data/habitats/dental_plaque__8396e8ec.yaml through data/habitats/digestive_system__780e5b67.yaml
+  at commit 56904acf1cf24914a262495568ecd63a67f5d9c7; saved 24 kind: record bundles
+  and 1 kind: category bundle in reviews/structured/ and recorded 22 open findings
+  (11 GOLD context-parent exclusions, 1 nomenclature exact_synonyms defect, and 10
+  #1398 mapping-endpoint contract defects) for Stage 5 remediation.'
+source_revision: 56904acf1cf24914a262495568ecd63a67f5d9c7
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/review_report.md
+  sha256: c3ee7249a5da3835d19f5afc65cf37ba92b1aa5334361e2234bd2a26512fe80d
+  kind: review_report
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/review_findings.yaml
+  sha256: 07670b40dd2f5d7606a2e95d711511c06657a7a3833aff5370dd15d729cff4eb
+  kind: review_findings
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/coverage.json
+  sha256: cbae78937bd163f27056a461b2e46677f3a554202cae59a25ed82defcbfd4a05
+  kind: supporting
+findings:
+- finding_id: dental-plaque--8396e8ec-context-parent
+  status: open
+  summary: 'data/habitats/host_associated/dental_plaque__8396e8ec.yaml (habitatmech:GOLD.26b1d1137f):
+    Containing anatomy is asserted as a dental plaque superclass — Exclude only the
+    guarded GOLD source-path parent contribution habitatmech:GOLD.92d1e65695 (Oral
+    cavity in Host-associated > Mammals > Digestive system > Oral cavity > Dental
+    plaque) from dental_plaque__8396e8ec.yaml; dental plaque is a tooth biofilm located
+    within the oral cavity, not a kind of oral cavity. Preserve the minted mammalian
+    record, xref UBERON:0016482, and 11 ORGANISM assertions.'
+  disposition: Carry forward as open major grounding finding from 20261022T014510Z-dental_plaque__8396e8ec-record
+    (F1) for Stage 5 grouped remediation.
+- finding_id: dental-plaque--8396e8ec-mapping-endpoint-contract
+  status: open
+  summary: 'data/habitats/host_associated/dental_plaque__8396e8ec.yaml (habitatmech:GOLD.26b1d1137f):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology target UBERON:0016482 (dental plaque) rather
+    than the minted record identifier habitatmech:GOLD.26b1d1137f.'
+  disposition: Carry forward as open major representation finding from 20261022T014510Z-dental_plaque__8396e8ec-record
+    (F2) for Stage 5 grouped remediation.
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+- finding_id: dentin-mapping-endpoint-contract
+  status: open
+  summary: 'data/habitats/host_associated/dentin.yaml (habitatmech:GOLD.0433dc9a8f):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology target BTO:0003453 (dentin) rather than the
+    minted record identifier habitatmech:GOLD.0433dc9a8f.'
+  disposition: Carry forward as open major representation finding from 20261022T014513Z-dentin-record
+    (F1) for Stage 5 grouped remediation.
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+- finding_id: dentin--be69daef-context-parent
+  status: open
+  summary: 'data/habitats/host_associated/dentin__be69daef.yaml (habitatmech:GOLD.7ec36a9a02):
+    Bone-tissue skeletonized remains parent is asserted as a dentin superclass — Exclude
+    the guarded GOLD source-path parent contribution habitatmech:GOLD.2f62ba7993 (human
+    skeletonized remains, defined as a bone tissue assemblage under UBERON:0002481
+    bone tissue) from dentin__be69daef.yaml; dentin is calcified tooth tissue from
+    skeletal/dental remains, not a subtype of bone tissue. Preserve the minted record,
+    xref BTO:0003453, and 54 BIOSAMPLE / 1 STUDY assertions.'
+  disposition: Carry forward as open major grounding finding from 20261022T014514Z-dentin__be69daef-record
+    (F1) for Stage 5 grouped remediation.
+- finding_id: dentin--be69daef-mapping-endpoint-contract
+  status: open
+  summary: 'data/habitats/host_associated/dentin__be69daef.yaml (habitatmech:GOLD.7ec36a9a02):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology target BTO:0003453 (dentin) rather than the
+    minted record identifier habitatmech:GOLD.7ec36a9a02.'
+  disposition: Carry forward as open major representation finding from 20261022T014514Z-dentin__be69daef-record
+    (F2) for Stage 5 grouped remediation.
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+- finding_id: dentition-context-parent
+  status: open
+  summary: 'data/habitats/host_associated/dentition.yaml (UBERON:0003672): Oral cavity
+    is asserted as a superclass of dentition — Exclude only the guarded GOLD source-path
+    parent contribution UBERON:0000167 (oral cavity from Host-associated > Fish >
+    Digestive system > Oral/Buccal cavity > Teeth) from dentition.yaml while preserving
+    the valid ontology superclass UBERON:0034925 (anatomical collection), CLOSE/REVIEWED
+    status, and 1 ORGANISM assertion.'
+  disposition: Carry forward as open major grounding finding from 20261022T014515Z-dentition-record
+    (F1) for Stage 5 grouped remediation.
+- finding_id: dermal-papilla-context-parent
+  status: open
+  summary: 'data/habitats/host_associated/dermal_papilla.yaml (UBERON:0000412): Whole
+    human skin is asserted as a superclass of dermal papilla — Exclude only the guarded
+    GOLD source-path parent contribution habitatmech:GOLD.4b37ab4b76 (Skin in Host-associated
+    > Mammals: Human > Integumentary system > Skin > Dermal papilla) from dermal_papilla.yaml
+    while preserving the valid ontology superclass UBERON:0000479 (tissue) and source
+    attestation.'
+  disposition: Carry forward as open major grounding finding from 20261022T014516Z-dermal_papilla-record
+    (F1) for Stage 5 grouped remediation.
+- finding_id: dermatitis-context-parent
+  status: open
+  summary: 'data/habitats/host_associated/dermatitis.yaml (habitatmech:GOLD.25fd1f31a1):
+    Whole mammalian skin is asserted as a superclass of mammalian dermatitis skin
+    lesion — Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.c896f9520f
+    (Skin in Host-associated > Mammals > Integumentary system > Skin > Dermatitis)
+    from dermatitis.yaml while preserving the curated parent ENVO:2100003 (skin environment),
+    UNGROUNDED/REVIEWED status, and 7 ORGANISM assertions.'
+  disposition: Carry forward as open major grounding finding from 20261022T014517Z-dermatitis-record
+    (F1) for Stage 5 grouped remediation.
+- finding_id: dermatitis--d991f62d-context-parent
+  status: open
+  summary: 'data/habitats/host_associated/dermatitis__d991f62d.yaml (habitatmech:GOLD.fdd6965162):
+    Human skin habitat is asserted as a superclass of NOT_APPLICABLE disease record
+    Dermatitis — Exclude the guarded GOLD source-path parent contribution habitatmech:GOLD.4b37ab4b76
+    (Skin in Host-associated > Mammals: Human > Integumentary system > Skin > Dermatitis)
+    from dermatitis__d991f62d.yaml so the NOT_APPLICABLE disease concept does not
+    claim to be a subclass of human skin. Preserve NOT_APPLICABLE/REVIEWED status
+    and source counts.'
+  disposition: Carry forward as open major grounding finding from 20261022T014518Z-dermatitis__d991f62d-record
+    (F1) for Stage 5 grouped remediation.
+- finding_id: dermis-context-parent
+  status: open
+  summary: 'data/habitats/host_associated/dermis.yaml (UBERON:0002067): Whole human
+    skin is asserted as a superclass of dermis — Exclude only the guarded GOLD source-path
+    parent contribution habitatmech:GOLD.4b37ab4b76 (Skin in Host-associated > Mammals:
+    Human > Integumentary system > Skin > Dermis) from dermis.yaml while preserving
+    the valid ontology superclass UBERON:0013754 (integumentary system layer) and
+    11 BIOSAMPLE / 1 STUDY assertions.'
+  disposition: Carry forward as open major grounding finding from 20261022T014519Z-dermis-record
+    (F1) for Stage 5 grouped remediation.
+- finding_id: descending-colon-context-parent
+  status: open
+  summary: 'data/habitats/host_associated/descending_colon.yaml (UBERON:0001158):
+    Whole human large intestine is asserted as a superclass of descending colon —
+    Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.5b0aa7456c
+    (Large intestine in Host-associated > Mammals: Human > Digestive system > Large
+    intestine > Descending colon) from descending_colon.yaml while preserving the
+    valid ontology superclass UBERON:0000168 (proximal-distal subdivision of colon)
+    and all source assertions.'
+  disposition: Carry forward as open major grounding finding from 20261022T014521Z-descending_colon-record
+    (F1) for Stage 5 grouped remediation.
+- finding_id: diabetic-foot-ulcer-dfu-context-parent
+  status: open
+  summary: 'data/habitats/host_associated/diabetic_foot_ulcer_dfu.yaml (habitatmech:GOLD.1219b1a720):
+    Human skin habitat is asserted as a superclass of NOT_APPLICABLE record Diabetic
+    foot ulcer (DFU) — Exclude the guarded GOLD source-path parent contribution habitatmech:GOLD.4b37ab4b76
+    (Skin in Host-associated > Mammals: Human > Integumentary system > Skin > Diabetic
+    foot ulcer (DFU)) from diabetic_foot_ulcer_dfu.yaml while preserving NOT_APPLICABLE/REVIEWED
+    status and all source counts.'
+  disposition: Carry forward as open major grounding finding from 20261022T014522Z-diabetic_foot_ulcer_dfu-record
+    (F1) for Stage 5 grouped remediation.
+- finding_id: diaphragm--3c058609-context-parent
+  status: open
+  summary: 'data/habitats/host_associated/diaphragm__3c058609.yaml (habitatmech:GOLD.a287a77880):
+    Whole human respiratory system is asserted as a superclass of human diaphragm
+    — Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.e36ba981d1
+    (Respiratory system in Host-associated > Mammals: Human > Respiratory system >
+    Diaphragm) from diaphragm__3c058609.yaml; the diaphragm is an organ/muscle within
+    the respiratory system, not a subtype of the whole respiratory system.'
+  disposition: Carry forward as open major grounding finding from 20261022T014525Z-diaphragm__3c058609-record
+    (F1) for Stage 5 grouped remediation.
+- finding_id: diaphragm--3c058609-mapping-endpoint-contract
+  status: open
+  summary: 'data/habitats/host_associated/diaphragm__3c058609.yaml (habitatmech:GOLD.a287a77880):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology target UBERON:0001103 (diaphragm) rather
+    than the minted record identifier habitatmech:GOLD.a287a77880.'
+  disposition: Carry forward as open major representation finding from 20261022T014525Z-diaphragm__3c058609-record
+    (F2) for Stage 5 grouped remediation.
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+- finding_id: diaphragm--fbd202d9-context-parent
+  status: open
+  summary: 'data/habitats/host_associated/diaphragm__fbd202d9.yaml (habitatmech:GOLD.c84e967b80):
+    Whole mammalian respiratory system is asserted as a superclass of mammalian diaphragm
+    — Exclude only the guarded GOLD source-path parent contribution habitatmech:GOLD.fac4f63f3b
+    (Respiratory system in Host-associated > Mammals > Respiratory system > Diaphragm)
+    from diaphragm__fbd202d9.yaml; the diaphragm is an organ/muscle within the respiratory
+    system, not a subtype of the whole respiratory system.'
+  disposition: Carry forward as open major grounding finding from 20261022T014526Z-diaphragm__fbd202d9-record
+    (F1) for Stage 5 grouped remediation.
+- finding_id: diaphragm--fbd202d9-mapping-endpoint-contract
+  status: open
+  summary: 'data/habitats/host_associated/diaphragm__fbd202d9.yaml (habitatmech:GOLD.c84e967b80):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology target UBERON:0001103 (diaphragm) rather
+    than the minted record identifier habitatmech:GOLD.c84e967b80.'
+  disposition: Carry forward as open major representation finding from 20261022T014526Z-diaphragm__fbd202d9-record
+    (F2) for Stage 5 grouped remediation.
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+- finding_id: diatoms-host-name-exact-synonym
+  status: open
+  summary: 'data/habitats/host_associated/diatoms.yaml (habitatmech:GOLD.1276bea544):
+    Host clade label ''Diatoms'' is asserted as an exact environment synonym — Remove
+    only the bare host taxon alias ''Diatoms'' from exact_synonym in curation/term_requests.tsv
+    (retaining ''diatom host environment'') and add a guarded row in curation/definition_source_label_exclusions.tsv
+    for habitatmech:GOLD.1276bea544 so ''Diatoms'' is scoped as RELATED_SYNONYM from
+    GOLD rather than EXACT_SYNONYM.'
+  disposition: Carry forward as open major nomenclature finding from 20261022T014527Z-diatoms-record
+    (F1) for Stage 5 grouped remediation.
+- finding_id: digestive-system-mapping-endpoint-contract
+  status: open
+  summary: 'data/habitats/host_associated/digestive_system.yaml (habitatmech:GOLD.26a84185d3):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology target UBERON:0001007 (digestive system)
+    rather than the minted record identifier habitatmech:GOLD.26a84185d3.'
+  disposition: Carry forward as open major representation finding from 20261022T014529Z-digestive_system-record
+    (F1) for Stage 5 grouped remediation.
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+- finding_id: digestive-system--2589c8ce-mapping-endpoint-contract
+  status: open
+  summary: 'data/habitats/host_associated/digestive_system__2589c8ce.yaml (habitatmech:GOLD.6eecdf150d):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology target UBERON:0001007 (digestive system)
+    rather than the minted record identifier habitatmech:GOLD.6eecdf150d.'
+  disposition: Carry forward as open major representation finding from 20261022T014530Z-digestive_system__2589c8ce-record
+    (F1) for Stage 5 grouped remediation.
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+- finding_id: digestive-system--46d403bb-mapping-endpoint-contract
+  status: open
+  summary: 'data/habitats/host_associated/digestive_system__46d403bb.yaml (habitatmech:GOLD.d7cff86ce8):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology target UBERON:0001007 (digestive system)
+    rather than the minted record identifier habitatmech:GOLD.d7cff86ce8.'
+  disposition: Carry forward as open major representation finding from 20261022T014531Z-digestive_system__46d403bb-record
+    (F1) for Stage 5 grouped remediation.
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+- finding_id: digestive-system--4f205b4d-mapping-endpoint-contract
+  status: open
+  summary: 'data/habitats/host_associated/digestive_system__4f205b4d.yaml (habitatmech:GOLD.8a68d0f6f5):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology target UBERON:0001007 (digestive system)
+    rather than the minted record identifier habitatmech:GOLD.8a68d0f6f5.'
+  disposition: Carry forward as open major representation finding from 20261022T014532Z-digestive_system__4f205b4d-record
+    (F1) for Stage 5 grouped remediation.
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+- finding_id: digestive-system--780e5b67-mapping-endpoint-contract
+  status: open
+  summary: 'data/habitats/host_associated/digestive_system__780e5b67.yaml (habitatmech:GOLD.c1d7082e4b):
+    Narrow mapping predicate points to a minted source-path record — Resolve the mapping_predicate
+    endpoint contract so skos:narrowMatch expresses the relation between the GOLD
+    source path and the broader ontology target UBERON:0001007 (digestive system)
+    rather than the minted record identifier habitatmech:GOLD.c1d7082e4b.'
+  disposition: Carry forward as open major representation finding from 20261022T014533Z-digestive_system__780e5b67-record
+    (F1) for Stage 5 grouped remediation.
+  issue_url: https://github.com/CultureBotAI/HabitatMech/issues/1398
+groups: []
+carry_forward_ids:
+- dental-plaque--8396e8ec-context-parent
+- dental-plaque--8396e8ec-mapping-endpoint-contract
+- dentin-mapping-endpoint-contract
+- dentin--be69daef-context-parent
+- dentin--be69daef-mapping-endpoint-contract
+- dentition-context-parent
+- dermal-papilla-context-parent
+- dermatitis-context-parent
+- dermatitis--d991f62d-context-parent
+- dermis-context-parent
+- descending-colon-context-parent
+- diabetic-foot-ulcer-dfu-context-parent
+- diaphragm--3c058609-context-parent
+- diaphragm--3c058609-mapping-endpoint-contract
+- diaphragm--fbd202d9-context-parent
+- diaphragm--fbd202d9-mapping-endpoint-contract
+- diatoms-host-name-exact-synonym
+- digestive-system-mapping-endpoint-contract
+- digestive-system--2589c8ce-mapping-endpoint-contract
+- digestive-system--46d403bb-mapping-endpoint-contract
+- digestive-system--4f205b4d-mapping-endpoint-contract
+- digestive-system--780e5b67-mapping-endpoint-contract
+infra_tasks: []
