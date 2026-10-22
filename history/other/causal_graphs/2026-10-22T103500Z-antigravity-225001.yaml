@@ -19,12 +19,12 @@ events:
   outcome: changed
   sections:
   - causal_graphs
-  summary: Populate typed ProteinExample records on 6 GENE_OR_PROTEIN nodes across fresh_water,
+  summary: Populate typed ProteinExample records on 4 GENE_OR_PROTEIN nodes across fresh_water,
     root_nodule, and sea_water causal-graph overlays (#2250)
   details: 'Implemented Stage 6 infrastructure task habitatmech-infra-0001 (#2250) by adding
     typed ProteinExample entries to CausalNode.protein_examples across fresh_water.yaml (mechanosensitive_channels:
     UniProtKB:P0C0S1, UniProtKB:P0A742), root_nodule.yaml (leghemoglobin: UniProtKB:P02233,
-    UniProtKB:O48668, UniProtKB:O80405; nitrogenase_complex: UniProtKB:Q1M7Z2, UniProtKB:Q1M7Z3,
+    UniProtKB:O48668, UniProtKB:O80405; nitrogenase: UniProtKB:Q1M7Z2, UniProtKB:Q1M7Z3,
     UniProtKB:Q1M7Z4, UniProtKB:Q0RAV4, UniProtKB:Q0RAV5, UniProtKB:Q0RAV6), and sea_water.yaml
-    (compatible_solute_transporter: UniProtKB:Q4FMH4, UniProtKB:Q4FKZ8, UniProtKB:Q4FM26;
-    proteorhodopsin: UniProtKB:Q4FMK2).'
+    (nutrient_transport_systems: UniProtKB:Q4FMH4, UniProtKB:Q4FKZ8, UniProtKB:Q4FM26,
+    UniProtKB:Q4FMK2).'
